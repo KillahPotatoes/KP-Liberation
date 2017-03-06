@@ -116,7 +116,7 @@ class Missions
 };
 ```
 
-## Join us on discord
+## Join us on Discord
 [Click to join the Killah Potatoes Discord Server](https://discord.gg/bpPUU48)
 
 ## Media
