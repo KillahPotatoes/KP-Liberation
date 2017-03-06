@@ -5,6 +5,7 @@
 ## Current version : 0.93
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
+
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
 
 ## Overview
