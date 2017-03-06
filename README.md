@@ -30,6 +30,7 @@ Things that were added since GreuhZbugs 0.924
 * Added BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
 * Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
 * Removed Farooq's Revive
+* Added the ability to blacklist arsenal items
 
 ## Needed Mods
 * Although it's a common basic for everyone, you need [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
