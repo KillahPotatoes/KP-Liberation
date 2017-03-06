@@ -33,7 +33,7 @@ class RscTitles
 		w = 0.4 * safezoneW;
 		y = 0.65 * safezoneH + safezoneY;
 		h = 0.1 * safezoneH;
-		text = "[GREUH] and the Killah Potatoes presents";
+		text = "[GREUH] and the Killah Potatoes present";
 		shadow = 1;
 	  };
 	  class GenericLabelShadow : GenericLabel2{
