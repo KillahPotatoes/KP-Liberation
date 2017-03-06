@@ -19,7 +19,7 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 * Accomplish meaningful secondary objectives that will benefit your progression,
 * Never lose your progress with the built-in server-side save system.
 
-Things that where added since GreuhZbugs 0.924
+Things that were added since GreuhZbugs 0.924
 * Added the kp_liberation_config.sqf with some additional config values
 * Added ACE support
 * Added [fuel consumption script](https://forums.bistudio.com/topic/201953-kp-fuel-consumption-script/)
