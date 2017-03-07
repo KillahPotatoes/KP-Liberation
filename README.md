@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.93
+## Current version : 0.931
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
@@ -31,11 +31,22 @@ Things that were added since GreuhZbugs 0.924
 * Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
 * Removed Farooq's Revive
 * Added the ability to blacklist arsenal items
+* Split scriptpart from missionpart, so it's easier to provide different maps
 
 ## Needed Mods
-* Although it's a common basic for everyone, you need [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-* To start from an LHD at Altis, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
-
+* Altis
+	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+* Takistan
+	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+	* [CUP Terrains - CWA](http://steamcommunity.com/sharedfiles/filedetails/?id=853743366)
+	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
+	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+	
 ## Recommended Mods
 This Mods would greatly increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
@@ -45,25 +56,17 @@ This Mods would greatly increase your gaming experience:
 * [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
 * [Arma Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
 * [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
-* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 * [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
 * [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
 * [JSRS SOUNDMOD - Additional](http://steamcommunity.com/sharedfiles/filedetails/?id=863393819)
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
-* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 
 Also you should think about using this mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
 * [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
-
-## Needed Mods for other maps than vanilla ArmA 3 maps
-* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-* [CUP Terrains - CWA](http://steamcommunity.com/sharedfiles/filedetails/?id=853743366)
-* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 
 ## ACE Serverside Settings
 I've provided our community serverconfig.hpp for the [usage with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.

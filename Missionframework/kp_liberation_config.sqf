@@ -17,7 +17,8 @@ KP_liberation_medical_vehicles = [
 // Which units preset should be used?
 // 0 = Vanilla
 // 1 = custom (edit the custom.sqf in the presets folder to your likings)
-// 2 = RHS, BW Mod and Project OPFOR Takistan Setting
+// 2 = RHS and Project OPFOR Takistan Setting
+// 3 = RHS Setting
 KP_liberation_preset = 0;
 
 // Fuel Consumption

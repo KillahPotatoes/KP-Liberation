@@ -12,7 +12,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 			_nextsector = _x;
 			_acceptsector = true;
 			{
-				if ( ( ( markerPos _nextsector ) distance ( markerPos _x ) ) < 1600 ) then {
+				if ( ( ( markerPos _nextsector ) distance ( markerPos _x ) ) < 800 ) then {
 					_acceptsector = false;
 				};
 			} foreach sectors_allSectors;

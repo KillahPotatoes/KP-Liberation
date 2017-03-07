@@ -2,7 +2,7 @@
 // If you want more modifications to be supported by this file, let's discuss it on the forums.
 
 // REQUIRED MODS FOR THIS PRESET:
-// BWMod
+// CBA A3
 // FA-18 Super Hornet
 // Project OPFOR
 // RHS: Armed Forces of the Russian Federation
@@ -21,9 +21,9 @@ huron_typename = "RHS_CH_47F_10";					// Default "B_Heli_Transport_03_unarmed_F"
 ammobox_b_typename = "Box_NATO_AmmoVeh_F";				// Default "Box_NATO_AmmoVeh_F";
 ammobox_o_typename = "Box_East_AmmoVeh_F";				// Default "Box_East_AmmoVeh_F";
 opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = "BWA3_Officer_Tropen";				// Default "B_officer_F"
-crewman_classname = "BWA3_Crew_Tropen";				// Default "B_crew_F";
-pilot_classname = "BWA3_Helipilot";					// Default "B_Helipilot_F";
+commander_classname = "B_officer_F";				// Default "B_officer_F"
+crewman_classname = "B_crew_F";				// Default "B_crew_F";
+pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 
 
 
@@ -39,22 +39,19 @@ pilot_classname = "BWA3_Helipilot";					// Default "B_Helipilot_F";
 // Useful for total conversions to RHS and such, without having to alter the original file.
 infantry_units_overwrite = true;
 infantry_units_extension = [
-	["BWA3_Rifleman_Tropen",2,0,0],
-	["BWA3_Grenadier_Tropen",3,0,0],
-	["BWA3_Autorifleman_Tropen",3,0,0],
-	["BWA3_CombatLifeSaver_Tropen",3,0,0],
-	["BWA3_Marksman_Tropen",3,0,0],
-	["BWA3_Engineer_Tropen",3,0,0],
-	["BWA3_RiflemanAT_RGW90_Tropen",4,0,0],
-	["BWA3_AutoriflemanMG5_Tropen",5,0,0],
-	["BWA3_recon_Tropen",4,0,0],
-	["BWA3_recon_Medic_Tropen",4,0,0],
-	["BWA3_recon_Marksman_Tropen",5,0,0],
-	["BWA3_RiflemanAA_Fliegerfaust_Tropen",5,10,0],
-	["BWA3_RiflemanAT_Pzf3_Tropen",5,10,0],
-	["BWA3_SniperG82_Tropen",10,0,0],
-	["BWA3_Crew_Tropen",1,0,0],
-	["BWA3_Helipilot",1,0,0]
+	["rhsusf_army_ocp_rifleman",2,0,0],
+	["rhsusf_army_ocp_grenadier",3,0,0],
+	["rhsusf_army_ocp_autorifleman",3,0,0],
+	["rhsusf_army_ocp_medic",3,0,0],
+	["rhsusf_army_ocp_marksman",3,0,0],
+	["rhsusf_army_ocp_engineer",3,0,0],
+	["rhsusf_army_ocp_javelin",4,0,0],
+	["rhsusf_army_ocp_machinegunner",5,0,0],
+	["rhsusf_usmc_recon_marpat_d_rifleman",4,0,0],
+	["rhsusf_usmc_recon_marpat_d_sniper_M107",5,0,0],
+	["rhsusf_army_ocp_aa",5,10,0],
+	["rhsusf_army_ocp_crewman",1,0,0],
+	["rhsusf_army_ocp_helipilot",1,0,0]
 ];
 
 light_vehicles_overwrite = true;
@@ -72,14 +69,11 @@ heavy_vehicles_overwrite = true;
 heavy_vehicles_extension = [
 	["rhsusf_m113d_usarmy",0,120,8],
 	["rhsusf_m113d_usarmy_MK19",0,160,8],
-	["rhsusf_m113d_usarmy_medical",10,0,5],
 	["RHS_M6",0,200,15],
 	["RHS_M2A2",0,220,15],
 	["RHS_M2A3_BUSKIII",0,240,15],
-	["BWA3_Puma_Tropen",0,240,15],
 	["rhsusf_m1a2sep1d_usarmy",0,400,20],
-	["rhsusf_m1a2sep1tuskiid_usarmy",0,450,25],
-	["BWA3_Leopard2A6M_Tropen",0,500,25],
+	["rhsusf_m1a2sep1tuskiid_usarmy",0,500,25],
 	["rhsusf_m109d_usarmy",0,2500,30]
 ];
 
@@ -89,17 +83,23 @@ air_vehicles_extension = [
 	["RHS_MELB_AH6M_L",0,160,10],
 	["RHS_UH60M_MEV2",15,0,15],
 	["RHS_UH60M",0,360,12],
-	["RHS_AH64D",0,1000,30],
-	["BWA3_Tiger_RMK_Universal",0,1200,40],
+	["RHS_AH1Z",0,1000,30],
+	["RHS_AH64D",0,1200,40],
 	["RHS_A10",0,2000,50],
 	["JS_JC_FA18E",0,3000,50],
 	["JS_JC_FA18F",0,3200,50],
-	["B_UAV_02_CAS_F",0,250,20]
+	["B_UAV_02_CAS_F",0,1000,20]
 ];
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-
+	["B_HMG_01_F",0,10,0],
+	["B_HMG_01_high_F",0,10,0],
+	["B_GMG_01_F",0,20,0],
+	["B_GMG_01_high_F",0,20,0],
+	["B_static_AA_F",0,25,0],
+	["B_static_AT_F",0,30,0],
+	["B_Mortar_01_F",0,150,0]
 ];
 
 buildings_overwrite = true;
@@ -149,20 +149,21 @@ buildings_extension = [
 
 support_vehicles_overwrite = true;		// If you're going to overwrite this, make sure you have at least Arsenal_typename, Respawn_truck_typename, FOB_box_typename and FOB_truck_typename in there
 support_vehicles_extension = [
+	[Arsenal_typename,10,0,0],
+	[Respawn_truck_typename,20,0,5],
 	[FOB_box_typename,30,400,0],
 	[FOB_truck_typename,30,400,5],
-	["B_supplyCrate_F",5,0,0],
 	["ACE_medicalSupplyCrate_advanced",5,0,0],
 	["ACE_Box_82mm_Mo_HE",5,40,0],
 	["ACE_Box_82mm_Mo_Smoke",5,10,0],
 	["ACE_Box_82mm_Mo_Illum",5,10,0],
 	["B_APC_Tracked_01_CRV_F",0,30,10],
-	["B_Truck_01_Repair_F",10,0,5],
-	["B_Truck_01_fuel_F",10,0,5],
-	["B_Truck_01_ammo_F",10,0,5],
+	["rhsusf_M977A4_REPAIR_usarmy_d",10,0,5],
+	["rhsusf_M978A4_usarmy_d",10,0,5],
+	["rhsusf_M977A4_AMMO_usarmy_d",10,100,5],
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,0],
-	["B_Slingload_01_Ammo_F",5,0,0],
+	["B_Slingload_01_Ammo_F",5,100,0],
 	["Box_NATO_AmmoVeh_F",0,154,0],
 	["Box_East_AmmoVeh_F",0,115,0]
 ];
@@ -176,76 +177,76 @@ uavs = [
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
 // Light infantry squad
 blufor_squad_inf_light = [
-	"BWA3_SL_Tropen",
-	"BWA3_TL_Tropen",
-	"BWA3_Grenadier_Tropen",
-	"BWA3_Autorifleman_Tropen",
-	"BWA3_Grenadier_Tropen",
-	"BWA3_CombatLifeSaver_Tropen",
-	"BWA3_RiflemanAT_RGW90_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen"
+	"rhsusf_army_ocp_squadleader",
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_grenadier",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_grenadier",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_rifleman"
 ];
 
 // Heavy infantry squad
 blufor_squad_inf = [
-	"BWA3_SL_Tropen",
-	"BWA3_TL_Tropen",
-	"BWA3_Autorifleman_Tropen",
-	"BWA3_AutoriflemanMG5_Tropen",
-	"BWA3_CombatLifeSaver_Tropen",
-	"BWA3_Grenadier_Tropen",
-	"BWA3_RiflemanAT_RGW90_Tropen",
-	"BWA3_RiflemanAT_RGW90_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_SniperG82_Tropen"
+	"rhsusf_army_ocp_squadleader",
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_machinegunner",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_grenadier",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_marksman"
 ];
 
 // AT specialists squad
 blufor_squad_at = [
-	"BWA3_SL_Tropen",
-	"BWA3_RiflemanAT_Pzf3_Tropen",
-	"BWA3_RiflemanAT_Pzf3_Tropen",
-	"BWA3_RiflemanAT_Pzf3_Tropen",
-	"BWA3_CombatLifeSaver_Tropen",
-	"BWA3_Rifleman_Tropen"
+	"rhsusf_army_ocp_squadleader",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_rifleman"
 ];
 
 // AA specialists squad
 blufor_squad_aa = [
-	"BWA3_SL_Tropen",
-	"BWA3_RiflemanAA_Fliegerfaust_Tropen",
-	"BWA3_RiflemanAA_Fliegerfaust_Tropen",
-	"BWA3_RiflemanAA_Fliegerfaust_Tropen",
-	"BWA3_CombatLifeSaver_Tropen",
-	"BWA3_Rifleman_Tropen"
+	"rhsusf_army_ocp_squadleader",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_rifleman"
 ];
 
 // Force recon squad
 blufor_squad_recon = [
-	"BWA3_recon_TL_Tropen",
-	"BWA3_recon_Tropen",
-	"BWA3_recon_Pioneer_Tropen",
-	"BWA3_recon_Medic_Tropen",
-	"BWA3_recon_LAT_Tropen",
-	"BWA3_recon_LAT_Tropen",
-	"BWA3_recon_Marksman_Tropen",
-	"BWA3_SniperG82_Tropen",
-	"BWA3_recon_Tropen"
+	"rhsusf_usmc_recon_marpat_d_teamleader_lite",
+	"rhsusf_usmc_recon_marpat_d_rifleman_lite",
+	"rhsusf_usmc_recon_marpat_d_rifleman_lite",
+	"rhsusf_usmc_recon_marpat_d_autorifleman_lite",
+	"rhsusf_usmc_recon_marpat_d_machinegunner_m249_lite",
+	"rhsusf_usmc_recon_marpat_d_rifleman_lite",
+	"rhsusf_usmc_recon_marpat_d_marksman_lite",
+	"rhsusf_usmc_recon_marpat_d_marksman_lite",
+	"rhsusf_usmc_recon_marpat_d_rifleman_lite"
 ];
 
 // Paratroopers squad
 blufor_squad_para = [
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen",
-	"BWA3_Rifleman_Tropen"
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st"
 ];
 
 
@@ -421,32 +422,32 @@ civilian_vehicles_extension = [
 
 // Everything the AI troups should be able to resupply from
 ai_resupply_sources_extension = [
-	
+	"rhsusf_M977A4_AMMO_usarmy_d"
 ];
 
 // Everything that can resupply other vehicles
 vehicle_repair_sources_extension = [
-	
+	"rhsusf_M977A4_REPAIR_usarmy_d"
 ];
 vehicle_rearm_sources_extension = [
-
+	"rhsusf_M977A4_AMMO_usarmy_d"
 ];
 vehicle_refuel_sources_extension = [
-
+	"rhsusf_M978A4_usarmy_d"
 ];
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles_extension = [
 	"RHS_M2A3_BUSKIII",
-	"BWA3_Puma_Tropen",
+	"rhsusf_m1a2sep1d_usarmy",
 	"rhsusf_m1a2sep1tuskiid_usarmy",
-	"BWA3_Leopard2A6M_Tropen",
 	"rhsusf_m109d_usarmy",
+	"RHS_AH1Z",
 	"RHS_AH64D",
-	"BWA3_Tiger_RMK_Universal",
 	"RHS_A10",
 	"JS_JC_FA18E",
-	"JS_JC_FA18F"
+	"JS_JC_FA18F",
+	"B_UAV_02_CAS_F"
 ];
 
 // Blacklisted arsenal items such as deployable weapons  that should be bought instead
