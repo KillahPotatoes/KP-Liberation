@@ -144,7 +144,7 @@ class Params
 		isGlobal = 1;
 		values[] = {-100,0,1,2};
 		texts[] = {$STR_A3_MissionDefault,$STR_A3_None,$STR_A3_Medikit,$STR_A3_FirstAidKitOrMedikit};
-		default = 2;
+		default = 1;
 		function = "bis_fnc_paramReviveRequiredItems";
 	};
 	class ReviveRequiredItemsFakConsumed
