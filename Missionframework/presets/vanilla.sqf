@@ -7,19 +7,19 @@
 
 // Setting a value here will overwrite the original value found from the mission. Do that if you're doing a total conversion.
 // Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not. Just don't try.
-FOB_typename = nil;						// Default "Land_Cargo_HQ_V1_F";
-FOB_box_typename = nil;					// Default "B_Slingload_01_Cargo_F";
-FOB_truck_typename = nil;				// Default "B_Truck_01_box_F";
-Arsenal_typename = nil;					// Default "B_supplyCrate_F";
-Respawn_truck_typename = nil;			// Default "B_Truck_01_medical_F";
-huron_typename = nil;					// Default "B_Heli_Transport_03_unarmed_F";
-ammobox_b_typename = nil;				// Default "Box_NATO_AmmoVeh_F";
-ammobox_o_typename = nil;				// Default "Box_East_AmmoVeh_F";
-opfor_ammobox_transport = nil;			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = nil;				// Default "B_officer_F"
-crewman_classname = nil;				// Default "B_crew_F";
-pilot_classname = nil;					// Default "B_Helipilot_F";
-
+FOB_typename = nil;							// Default "Land_Cargo_HQ_V1_F";
+FOB_box_typename = nil;						// Default "B_Slingload_01_Cargo_F";
+FOB_truck_typename = nil;					// Default "B_Truck_01_box_F";
+Arsenal_typename = nil;						// Default "B_supplyCrate_F";
+Respawn_truck_typename = nil;				// Default "B_Truck_01_medical_F";
+huron_typename = nil;						// Default "B_Heli_Transport_03_unarmed_F";
+ammobox_b_typename = nil;					// Default "Box_NATO_AmmoVeh_F";
+ammobox_o_typename = nil;					// Default "Box_East_AmmoVeh_F";
+opfor_ammobox_transport = nil;				// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
+commander_classname = nil;					// Default "B_officer_F"
+crewman_classname = nil;					// Default "B_crew_F";
+pilot_classname = nil;						// Default "B_Helipilot_F";
+KP_liberation_little_bird_classname = nil;	// Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
 
 
 

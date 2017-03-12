@@ -1,7 +1,7 @@
 if ( isServer ) then {
 	_isAtlas = isClass ( configFile / "cfgVehicles" / "ATLAS_B_LHD_helper" );
 
-	if ( _isAtlas ) then {
+	if (_isAtlas && (worldName != "Takistan")) then {
 
 		[ lhd, [ 'ATLAS_LHD_1','ATLAS_LHD_2','ATLAS_LHD_3','ATLAS_LHD_4','ATLAS_LHD_5','ATLAS_LHD_5a',
 		'ATLAS_LHD_6','ATLAS_LHD_7','ATLAS_LHD_house_1','ATLAS_LHD_house_2','ATLAS_LHD_elev_1',

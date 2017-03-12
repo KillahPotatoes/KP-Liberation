@@ -26,7 +26,7 @@ while { true } do {
 			huron = huron_typename createVehicle ( getpos huronspawn );
 			huron allowdamage false;
 			huron setpos ( getpos huronspawn );
-			huron setDir 0;
+			huron setDir (getDir huronspawn);
 		};
 	};
 

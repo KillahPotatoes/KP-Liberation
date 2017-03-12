@@ -23,7 +23,7 @@ opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_tra
 commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
-
+KP_liberation_little_bird_classname = "RHS_MELB_MH6M"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
 
 
 

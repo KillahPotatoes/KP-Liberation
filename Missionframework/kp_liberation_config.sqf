@@ -22,8 +22,7 @@ KP_liberation_medical_vehicles = [
 // 4 = RHS with BW Mod Setting
 KP_liberation_preset = 0;
 
-// Little Bird starting helicopters on LHD
-KP_liberation_little_bird_classname = "B_Heli_Light_01_F";
+// Little Bird placement positions on LHD
 KP_liberation_little_bird_positions = [
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 116, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 97, 16.75],

@@ -18,6 +18,7 @@ if ( isNil "opfor_ammobox_transport" ) then { opfor_ammobox_transport = "O_Truck
 if ( isNil "commander_classname" ) then { commander_classname = "B_officer_F"; };
 if ( isNil "crewman_classname" ) then { crewman_classname = "B_crew_F" };
 if ( isNil "pilot_classname" ) then { pilot_classname = "B_Helipilot_F" };
+if ( isNil "KP_liberation_little_bird_classname" ) then { KP_liberation_little_bird_classname = "B_Heli_Light_01_F" };
 
 infantry_units = [
 	["B_soldier_F",2,0,0],
