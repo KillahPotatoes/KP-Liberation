@@ -40,7 +40,6 @@ Things that were added since GreuhZbugs 0.924
 * Chernarus
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - CWA](http://steamcommunity.com/sharedfiles/filedetails/?id=853743366)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 	* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
@@ -51,7 +50,6 @@ Things that were added since GreuhZbugs 0.924
 * Takistan
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - CWA](http://steamcommunity.com/sharedfiles/filedetails/?id=853743366)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
