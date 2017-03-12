@@ -1,12 +1,11 @@
 if ( isMultiplayer ) then {
-	GRLIB_difficulty_modifier = ["Difficulty",1] call bis_fnc_getParamValue;
+	GRLIB_difficulty_modifier = ["Difficulty",2] call bis_fnc_getParamValue;
 	GRLIB_time_factor = ["DayDuration",12] call bis_fnc_getParamValue;
-	GRLIB_resources_multiplier = ["ResourcesMultiplier",1] call bis_fnc_getParamValue;
+	GRLIB_resources_multiplier = ["ResourcesMultiplier",3] call bis_fnc_getParamValue;
 	GRLIB_fatigue = ["Fatigue",1] call bis_fnc_getParamValue;
-	GRLIB_revive = ["Revive",3] call bis_fnc_getParamValue;
 	GRLIB_introduction = ["Introduction",1] call bis_fnc_getParamValue;
 	GRLIB_deployment_cinematic = ["DeploymentCinematic",1] call bis_fnc_getParamValue;
-	GRLIB_unitcap = ["Unitcap",1] call bis_fnc_getParamValue;
+	GRLIB_unitcap = ["Unitcap",2] call bis_fnc_getParamValue;
 	GRLIB_adaptive_opfor = ["AdaptToPlayercount",1] call bis_fnc_getParamValue;
 	GRLIB_civilian_activity = ["civilians",1] call bis_fnc_getParamValue;
 	GRLIB_teamkill_penalty = ["TeamkillPenalty",0] call bis_fnc_getParamValue;
@@ -18,11 +17,11 @@ if ( isMultiplayer ) then {
 	GRLIB_halo_param = ["HaloJump",1] call bis_fnc_getParamValue;
 	GRLIB_use_whitelist = ["Whitelist",0] call bis_fnc_getParamValue;
 	GRLIB_cleanup_vehicles = ["CleanupVehicles",2] call bis_fnc_getParamValue;
-	GRLIB_csat_aggressivity = ["Aggressivity",1] call bis_fnc_getParamValue;
+	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_ammo_bounties = [ "AmmoBounties",0] call bis_fnc_getParamValue;
-	GRLIB_civ_penalties = [ "CivPenalties",0] call bis_fnc_getParamValue;
+	GRLIB_ammo_bounties = [ "AmmoBounties",1] call bis_fnc_getParamValue;
+	GRLIB_civ_penalties = [ "CivPenalties",1] call bis_fnc_getParamValue;
 	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
@@ -32,15 +31,14 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilerespawn = ["MobileRespawn",0] call bis_fnc_getParamValue;
 	KP_liberation_mobilearsenal = ["MobileArsenal",0] call bis_fnc_getParamValue;
 } else {
-	GRLIB_difficulty_modifier = 1;
+	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
-	GRLIB_resources_multiplier = 1;
+	GRLIB_resources_multiplier = 3;
 	GRLIB_fatigue = 1;
-	GRLIB_revive = 3;
 	GRLIB_introduction = 0;
 	GRLIB_deployment_cinematic = 0;
 	GRLIB_adaptive_opfor = 1;
-	GRLIB_unitcap = 1;
+	GRLIB_unitcap = 2;
 	GRLIB_civilian_activity = 1;
 	GRLIB_teamkill_penalty = 0;
 	GRLIB_build_first_fob = 0;
@@ -51,7 +49,7 @@ if ( isMultiplayer ) then {
 	GRLIB_halo_param = 1;
 	GRLIB_use_whitelist = 0;
 	GRLIB_cleanup_vehicles = 2;
-	GRLIB_csat_aggressivity = 1;
+	GRLIB_csat_aggressivity = 2;
 	GRLIB_weather_param = 3;
 	GRLIB_shorter_nights = 0;
 	GRLIB_ammo_bounties = 1;
@@ -83,3 +81,59 @@ if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autod
 if ( KP_liberation_mapmarkers == 1 ) then { GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true } else { GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false };
 if ( KP_liberation_mobilerespawn == 1 ) then { KP_liberation_mobilerespawn = true } else { KP_liberation_mobilerespawn = false };
 if ( KP_liberation_mobilearsenal == 1 ) then { KP_liberation_mobilearsenal = true } else { KP_liberation_mobilearsenal = false };
+
+// Fix for not working float values in mission params
+switch (GRLIB_unitcap) do {
+	case 0: {GRLIB_unitcap = 0.5;};
+	case 1: {GRLIB_unitcap = 0.75;};
+	case 2: {GRLIB_unitcap = 1;};
+	case 3: {GRLIB_unitcap = 1.25;};
+	case 4: {GRLIB_unitcap = 1.5;};
+	case 5: {GRLIB_unitcap = 2;};
+	default {GRLIB_unitcap = 1;};
+};
+
+switch (GRLIB_difficulty_modifier) do {
+	case 0: {GRLIB_difficulty_modifier = 0.5;};
+	case 1: {GRLIB_difficulty_modifier = 0.75;};
+	case 2: {GRLIB_difficulty_modifier = 1;};
+	case 3: {GRLIB_difficulty_modifier = 1.25;};
+	case 4: {GRLIB_difficulty_modifier = 1.5;};
+	case 5: {GRLIB_difficulty_modifier = 2;};
+	case 6: {GRLIB_difficulty_modifier = 4;};
+	case 7: {GRLIB_difficulty_modifier = 10;};
+	default {GRLIB_difficulty_modifier = 1;};
+};
+
+switch (GRLIB_csat_aggressivity) do {
+	case 0: {GRLIB_csat_aggressivity = 0.25;};
+	case 1: {GRLIB_csat_aggressivity = 0.5;};
+	case 2: {GRLIB_csat_aggressivity = 1;};
+	case 3: {GRLIB_csat_aggressivity = 2;};
+	case 4: {GRLIB_csat_aggressivity = 4;};
+	default {GRLIB_csat_aggressivity = 1;};
+};
+
+switch (GRLIB_civilian_activity) do {
+	case 0: {GRLIB_civilian_activity = 0;};
+	case 1: {GRLIB_civilian_activity = 0.5;};
+	case 2: {GRLIB_civilian_activity = 1;};
+	case 3: {GRLIB_civilian_activity = 2;};
+	default {GRLIB_csat_aggressivity = 1;};
+};
+
+switch (GRLIB_resources_multiplier) do {
+	case 0: {GRLIB_resources_multiplier = 0.25;};
+	case 1: {GRLIB_resources_multiplier = 0.5;};
+	case 2: {GRLIB_resources_multiplier = 0.75;};
+	case 3: {GRLIB_resources_multiplier = 1;};
+	case 4: {GRLIB_resources_multiplier = 1.25;};
+	case 5: {GRLIB_resources_multiplier = 1.5;};
+	case 6: {GRLIB_resources_multiplier = 2;};
+	case 7: {GRLIB_resources_multiplier = 3;};
+	case 8: {GRLIB_resources_multiplier = 5;};
+	case 9: {GRLIB_resources_multiplier = 10;};
+	case 10: {GRLIB_resources_multiplier = 20;};
+	case 11: {GRLIB_resources_multiplier = 50;};
+	default {GRLIB_resources_multiplier = 1;};
+};
