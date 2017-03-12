@@ -22,6 +22,16 @@ KP_liberation_medical_vehicles = [
 // 4 = RHS with BW Mod Setting
 KP_liberation_preset = 0;
 
+// Little Bird starting helicopters on LHD
+KP_liberation_little_bird_classname = "B_Heli_Light_01_F";
+KP_liberation_little_bird_positions = [
+	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 116, 16.75],
+	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 97, 16.75],
+	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 83, 16.75],
+	[(getpos lhd select 0) + 9, (getpos lhd select 1) - 56, 16.75],
+	[(getpos lhd select 0) + 9, (getpos lhd select 1) - 71, 16.75]
+];
+
 // Fuel Consumption
 // Time in Minutes till a full tank depletes when the vehicle is standing with running engine
 KP_liberation_fuel_neutral = 180;
