@@ -10,7 +10,7 @@ This mission is only a continued project based on the original, but most likely 
 
 ## Overview
 The area has fallen to the OPFOR, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
-* Experience a massive CTI campaign with over 150 different capturable settlements across the entire area,
+* Experience a massive CTI campaign with over 100 different capturable settlements across the entire area,
 * Cooperate with 0 to 34 other players, with a commander role and recruitable AI troops to fill the gaps,
 * Buy troops and vehicles using three different types of resources,
 * Build the FOB of your dreams with an ingame "what you see is what you get" system,
@@ -32,26 +32,25 @@ Things that were added since GreuhZbugs 0.924
 * Removed Farooq's Revive
 * Added the ability to blacklist arsenal items
 * Split scriptpart from missionpart, so it's easier to provide different maps
+* Support for multiple maps
 
 ## Needed Mods
+This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
+You can play every map without any mods (only the maps themself) if you set the preset to vanilla in `kp_liberation_config`.
 * Altis
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Chernarus
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
-	* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
-	* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+	* Recommended for more enterable buildings on Chernarus
+		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
@@ -65,6 +64,7 @@ This Mods would greatly increase your gaming experience:
 * [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
 * [Arma Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
 * [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 * [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
 * [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
 * [JSRS SOUNDMOD - Additional](http://steamcommunity.com/sharedfiles/filedetails/?id=863393819)
