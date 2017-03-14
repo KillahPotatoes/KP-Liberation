@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.931
+## Current version : 0.94
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
@@ -19,21 +19,6 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 * Accomplish meaningful secondary objectives that will benefit your progression,
 * Never lose your progress with the built-in server-side save system.
 
-Things that were added since GreuhZbugs 0.924
-* Added the kp_liberation_config.sqf with some additional config values
-* Added ACE support
-* Added [fuel consumption script](https://forums.bistudio.com/topic/201953-kp-fuel-consumption-script/)
-* Moved the classnames_extension.sqf to a preset system
-* Added preset system (will grow with more maps) to choose between different classnames_extension presets
-* Added a custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
-* Tweaked the player group organisation (group changing via extended options ingame still enabled)
-* Added BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
-* Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
-* Removed Farooq's Revive
-* Added the ability to blacklist arsenal items
-* Split scriptpart from missionpart, so it's easier to provide different maps
-* Support for multiple maps
-
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to vanilla in `kp_liberation_config`.
@@ -47,6 +32,8 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* Recommended for more enterable buildings on Chernarus
 		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
+	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+* Tanoa
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
@@ -135,3 +122,34 @@ class Missions
 ## Media
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
+## Changelog
+
+### 0.94
+* Added Tanoa missionfile and vanilla apex preset
+* Replaced old hostile markers (exclamation marks) with a unit count sensitive areal marking system
+* Removed dependencies on Takistan missionfile
+* Fixed falling Little Birds on LHD
+
+### 0.931
+* Fixed BI Revive Error
+* Added Takistan Missionfile
+* Added Chernarus Missionfile
+* Added RHS Takistan Classnames Preset (desert camo)
+* Added RHS Classnames Preset (woodland camo)
+* Added a RHS / BW Mod Classnames Preset (woodland camo)
+* Fixed issue where a prebuild FOB on Takistan throw errors
+* Update "Needed Mods" section in readme
+
+### 0.93
+* Added the kp_liberation_config.sqf with some additional config values
+* Added ACE support
+* Added fuel consumption script
+* Moved the classnames_extension.sqf to a preset system
+* Added preset system (will grow with more maps) to choose between different classnames_extension presets
+* Added a custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
+* Tweaked the player group organisation (group changing via extended options ingame still enabled)
+* Added BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
+* Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
+* Removed Farooq's Revive
+* Added the ability to blacklist arsenal items
+* Split scriptpart from missionpart, so it's easier to provide different maps
