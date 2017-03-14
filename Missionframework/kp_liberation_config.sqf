@@ -20,6 +20,7 @@ KP_liberation_medical_vehicles = [
 // 2 = RHS and Project OPFOR Takistan Setting
 // 3 = RHS Setting
 // 4 = RHS with BW Mod Setting
+// 5 = Vanilla Apex Tanoa
 KP_liberation_preset = 0;
 
 // Little Bird placement positions on LHD
