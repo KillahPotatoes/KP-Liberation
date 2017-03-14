@@ -126,6 +126,7 @@ class Missions
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
+* Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
 * Replaced old hostile markers (exclamation marks) with a unit count sensitive areal marking system
 * Removed dependencies on Takistan missionfile
 * Fixed falling Little Birds on LHD
