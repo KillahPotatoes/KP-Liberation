@@ -33,14 +33,22 @@ You can play every map without any mods (only the maps themself) if you set the 
 		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
-* Tanoa
-	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+* Tanoa
+	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+* Taunus (very resource-intensive map)
+	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 	
 ## Recommended Mods
 This Mods would greatly increase your gaming experience:
@@ -50,7 +58,6 @@ This Mods would greatly increase your gaming experience:
 * [ACE3 - BWMOD Compatibility](http://steamcommunity.com/sharedfiles/filedetails/?id=870313336)
 * [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
 * [Arma Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
-* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
 * [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 * [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
 * [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
@@ -127,8 +134,14 @@ class Missions
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
 * Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
+* Added X-Cam-Taunus missionfile
+* Added custom made Chimera Base for X-Cam-Taunus. Thanks to jus61 for building it
 * Replaced old hostile markers (exclamation marks) with a unit count sensitive areal marking system
 * Removed dependencies on Takistan missionfile
+* Tweaked the presets
+	* custom.sqf is now default (vanilla is a kind of legacy now)
+	* Vehicle ammo prices are raised to make them more valuable
+	* Provided custom.sqf now adapt automaticly to installed mods
 * Fixed falling Little Birds on LHD
 
 ### 0.931

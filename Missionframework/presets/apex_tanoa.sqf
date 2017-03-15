@@ -55,65 +55,91 @@ infantry_units_extension = [
 
 light_vehicles_overwrite = true;
 light_vehicles_extension = [
-	["B_T_Quadbike_01_F",0,0,1],
-	["B_T_MRAP_01_F",0,0,2],
-	["I_MRAP_03_F",0,0,2],
-	["B_T_LSV_01_unarmed_F",0,0,2],
-	["B_T_MRAP_01_hmg_F",0,10,2],
-	["B_T_LSV_01_armed_F",0,10,2],
-	["I_MRAP_03_hmg_F",0,10,2],
-	["B_T_MRAP_01_gmg_F",0,20,2],
-	["I_MRAP_03_gmg_F",0,20,2],
-	["B_T_Truck_01_transport_F",0,0,5],
-	["B_T_Truck_01_covered_F",0,0,5],
-	["B_UGV_01_F",0,0,5],
-	["B_UGV_01_rcws_F",0,50,5],
-	["B_T_Boat_Transport_01_F",0,0,2],
-	["B_T_Boat_Armed_01_minigun_F",0,30,10]
+	["B_Quadbike_01_F",0,0,2],
+	["B_MRAP_01_F",0,0,5],
+	["I_MRAP_03_F",0,0,5],
+	["B_T_LSV_01_unarmed_F",0,0,5],
+	["rhsusf_m1025_w",0,0,5],
+	["B_MRAP_01_hmg_F",0,40,5],
+	["I_MRAP_03_hmg_F",0,40,5],
+	["B_T_LSV_01_armed_F",0,40,5],
+	["rhsusf_m1025_w_m2",0,40,5],
+	["B_MRAP_01_gmg_F",0,60,5],
+	["I_MRAP_03_gmg_F",0,60,5],
+	["rhsusf_m1025_w_mk19",0,60,5],
+	["B_Truck_01_transport_F",0,0,8],
+	["B_Truck_01_covered_F",0,0,8],
+	["B_UGV_01_F",0,0,8],
+	["B_UGV_01_rcws_F",0,50,8],
+	["B_Boat_Transport_01_F",0,0,5],
+	["B_Boat_Armed_01_minigun_F",0,80,15]
 ];
 
 heavy_vehicles_overwrite = true;
 heavy_vehicles_extension = [
-	["B_T_APC_Wheeled_01_cannon_F",0,30,8],
-	["I_APC_Wheeled_03_cannon_F",0,30,8],
-	["B_T_APC_Tracked_01_rcws_F",0,30,15],
-	["I_APC_tracked_03_cannon_F",0,30,15],
-	["B_T_APC_Tracked_01_AA_F",0,40,15],
-	["B_T_MBT_01_cannon_F",0,75,20],
-	["I_MBT_03_cannon_F",0,75,20],
-	["B_T_MBT_01_TUSK_F",0,100,25],
-	["B_T_MBT_01_arty_F",0,750,30],
-	["B_T_MBT_01_mlrs_F",0,2500,100]
+	["rhsusf_m113_usarmy",0,70,10],
+	["rhsusf_m113_usarmy_MK19",0,90,10],
+	["B_APC_Wheeled_01_cannon_F",0,100,10],
+	["I_APC_Wheeled_03_cannon_F",0,100,10],
+	["B_APC_Tracked_01_rcws_F",0,180,15],
+	["I_APC_tracked_03_cannon_F",0,180,15],
+	["RHS_M2A2_wd",0,220,15],
+	["RHS_M2A3_BUSKIII_wd",0,240,15],
+	["BWA3_Puma_Fleck",0,280,15],
+	["B_APC_Tracked_01_AA_F",0,150,15],
+	["RHS_M6_wd",0,200,15],
+	["B_MBT_01_cannon_F",0,350,20],
+	["I_MBT_03_cannon_F",0,350,25],
+	["rhsusf_m1a2sep1wd_usarmy",0,400,20],
+	["B_MBT_01_TUSK_F",0,450,25],
+	["rhsusf_m1a2sep1tuskiiwd_usarmy",0,500,25],
+	["BWA3_Leopard2A6M_Fleck",0,550,25],
+	["B_MBT_01_arty_F",0,1500,30],
+	["rhsusf_m109_usarmy",0,2000,30],
+	["B_MBT_01_mlrs_F",0,2500,100]
 ];
 
 air_vehicles_overwrite = true;
 air_vehicles_extension = [
 	["B_Heli_Light_01_F",0,0,10],
-	["B_Heli_Light_01_armed_F",0,40,10],
-	["I_Heli_light_03_unarmed_F",0,0,15],
-	["B_Heli_Transport_01_camo_F",0,25,15],
-	["B_Heli_Transport_03_F",0,25,20],
+	["RHS_MELB_MH6M",0,0,10],
+	["I_Heli_light_03_unarmed_F",0,0,12],
+	["B_Heli_Light_01_armed_F",0,150,10],
+	["RHS_MELB_AH6M_L",0,160,10],
+	["RHS_UH60M_MEV2",15,0,15],
+	["B_Heli_Transport_01_F",0,100,12],
+	["B_Heli_Transport_01_camo_F",0,100,12],
+	["RHS_UH60M",0,120,12],
+	["B_Heli_Transport_03_F",0,80,15],
 	["B_T_VTOL_01_infantry_F",0,100,30],
 	["B_T_VTOL_01_vehicle_F",0,100,30],
-	["B_Heli_Attack_01_F",0,150,30],
-	["I_Plane_Fighter_03_CAS_F",0,400,50],
-	["B_Plane_CAS_01_F",0,500,50],
-	["B_T_VTOL_01_armed_F",0,750,50],
+	["I_Heli_light_03_F",0,500,20],
+	["B_Heli_Attack_01_F",0,800,30],
+	["RHS_AH1Z",0,1000,30],
+	["RHS_AH64D_wd",0,1200,40],
+	["BWA3_Tiger_RMK_Universal",0,1500,40],
+	["B_T_VTOL_01_armed_F",0,1600,50],
+	["I_Plane_Fighter_03_AA_F",0,1600,50],
+	["I_Plane_Fighter_03_CAS_F",0,1800,50],
+	["B_Plane_CAS_01_F",0,1800,50],
+	["RHS_A10",0,2000,50],
+	["JS_JC_FA18E",0,3000,50],
+	["JS_JC_FA18F",0,3200,50],
 	["B_UAV_01_F",0,0,5],
-	["B_UAV_02_F",0,250,20],
-	["B_UAV_02_CAS_F",0,250,20],
-	["B_T_UAV_03_F",0,250,20]
+	["B_UAV_02_F",0,500,20],
+	["B_UAV_02_CAS_F",0,600,20],
+	["B_T_UAV_03_F",0,600,20]
 ];
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-	["B_HMG_01_F",0,10,0],
-	["B_HMG_01_high_F",0,10,0],
-	["B_GMG_01_F",0,20,0],
-	["B_GMG_01_high_F",0,20,0],
-	["B_static_AA_F",0,25,0],
-	["B_static_AT_F",0,30,0],
-	["B_Mortar_01_F",0,50,0]
+	["B_HMG_01_F",0,20,0],
+	["B_HMG_01_high_F",0,20,0],
+	["B_GMG_01_F",0,40,0],
+	["B_GMG_01_high_F",0,40,0],
+	["B_static_AA_F",0,50,0],
+	["B_static_AT_F",0,60,0],
+	["B_Mortar_01_F",0,120,0]
 ];
 
 buildings_overwrite = true;
@@ -138,6 +164,8 @@ buildings_extension = [
 	["Land_Cargo_House_V4_F",0,0,0],
 	["Land_Cargo_Patrol_V4_F",0,0,0],
 	["Flag_NATO_F",0,0,0],
+	["Flag_RedCrystal_F",0,0,0],
+	["Flag_White_F",0,0,0],
 	["Land_HelipadSquare_F",0,0,0],
 	["Land_Razorwire_F",0,0,0],
 	["Land_BagFence_01_round_green_F",0,0,0],
@@ -184,9 +212,9 @@ uavs = [
 	"B_UAV_01_F",
 	"B_UAV_02_F",
 	"B_UAV_02_CAS_F",
+	"B_T_UAV_03_F",
 	"B_UGV_01_F",
 	"B_UGV_01_rcws_F"
-	"B_T_UAV_03_F"
 ];
 
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
@@ -464,14 +492,23 @@ vehicle_refuel_sources_extension = [
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles_extension = [
-	"B_UGV_01_rcws_F",
+	"BWA3_Puma_Fleck",
 	"B_T_MBT_01_TUSK_F",
+	"rhsusf_m1a2sep1tuskiiwd_usarmy",
+	"BWA3_Leopard2A6M_Fleck",
 	"B_T_MBT_01_arty_F",
+	"rhsusf_m109_usarmy",
 	"B_T_MBT_01_mlrs_F",
 	"B_Heli_Attack_01_F",
+	"RHS_AH1Z",
+	"RHS_AH64D_wd",
+	"BWA3_Tiger_RMK_Universal",
+	"B_T_VTOL_01_armed_F",
 	"I_Plane_Fighter_03_CAS_F",
 	"B_Plane_CAS_01_F",
-	"B_T_VTOL_01_armed_F",
+	"RHS_A10",
+	"JS_JC_FA18E",
+	"JS_JC_FA18F",
 	"B_UAV_02_F",
 	"B_UAV_02_CAS_F",
 	"B_T_UAV_03_F"

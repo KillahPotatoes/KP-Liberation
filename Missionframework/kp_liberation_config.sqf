@@ -15,13 +15,13 @@ KP_liberation_medical_vehicles = [
 ];
 
 // Which units preset should be used?
-// 0 = Vanilla
-// 1 = custom (edit the custom.sqf in the presets folder to your likings)
+// 0 = Vanilla (a zbug legacy preset)
+// 1 = default (edit the custom.sqf in the presets folder to change things)
 // 2 = RHS and Project OPFOR Takistan Setting
 // 3 = RHS Setting
 // 4 = RHS with BW Mod Setting
 // 5 = Vanilla Apex Tanoa
-KP_liberation_preset = 0;
+KP_liberation_preset = 1;
 
 // Little Bird placement positions on LHD
 KP_liberation_little_bird_positions = [

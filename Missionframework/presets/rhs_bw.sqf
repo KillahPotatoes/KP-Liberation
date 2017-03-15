@@ -59,29 +59,29 @@ infantry_units_extension = [
 
 light_vehicles_overwrite = true;
 light_vehicles_extension = [
-	["B_Quadbike_01_F",0,0,1],
-	["rhsusf_m1025_w",0,0,2],
-	["rhsusf_m1025_w_m2",0,40,2],
-	["rhsusf_m1025_w_mk19",0,60,2],
-	["B_Truck_01_transport_F",0,0,5],
-	["B_Truck_01_covered_F",0,0,5],
-	["B_Truck_01_medical_F",5,0,5],
+	["B_Quadbike_01_F",0,0,2],
+	["rhsusf_m1025_w",0,0,5],
+	["rhsusf_m1025_w_m2",0,40,5],
+	["rhsusf_m1025_w_mk19",0,60,5],
+	["B_Truck_01_transport_F",0,0,8],
+	["B_Truck_01_covered_F",0,0,8],
+	["B_Truck_01_medical_F",5,0,8],
 	["B_Boat_Transport_01_F",0,0,5],
 	["B_Boat_Armed_01_minigun_F",0,80,15]
 ];
 
 heavy_vehicles_overwrite = true;
 heavy_vehicles_extension = [
-	["rhsusf_m113_usarmy",0,120,8],
-	["rhsusf_m113_usarmy_MK19",0,160,8],
+	["rhsusf_m113_usarmy",0,70,10],
+	["rhsusf_m113_usarmy_MK19",0,90,10],
 	["RHS_M6_wd",0,200,15],
 	["RHS_M2A2_wd",0,220,15],
 	["RHS_M2A3_BUSKIII_wd",0,240,15],
 	["BWA3_Puma_Fleck",0,280,15],
 	["rhsusf_m1a2sep1wd_usarmy",0,400,20],
-	["rhsusf_m1a2sep1tuskiiwd_usarmy",0,450,25],
-	["BWA3_Leopard2A6M_Fleck",0,500,25],
-	["rhsusf_m109_usarmy",0,2500,30]
+	["rhsusf_m1a2sep1tuskiiwd_usarmy",0,500,25],
+	["BWA3_Leopard2A6M_Fleck",0,550,25],
+	["rhsusf_m109_usarmy",0,2000,30]
 ];
 
 air_vehicles_overwrite = true;
@@ -89,7 +89,7 @@ air_vehicles_extension = [
 	["RHS_MELB_MH6M",0,0,10],
 	["RHS_MELB_AH6M_L",0,160,10],
 	["RHS_UH60M_MEV2",15,0,15],
-	["RHS_UH60M",0,360,12],
+	["RHS_UH60M",0,120,12],
 	["RHS_AH1Z",0,1000,30],
 	["RHS_AH64D_wd",0,1200,40],
 	["BWA3_Tiger_RMK_Universal",0,1500,40],
@@ -98,18 +98,18 @@ air_vehicles_extension = [
 	["JS_JC_FA18F",0,3200,50],
 	["B_UAV_01_F",0,0,5],
 	["B_UAV_02_F",0,500,20],
-	["B_UAV_02_CAS_F",0,1000,20]
+	["B_UAV_02_CAS_F",0,600,20]
 ];
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-	["B_HMG_01_F",0,10,0],
-	["B_HMG_01_high_F",0,10,0],
-	["B_GMG_01_F",0,20,0],
-	["B_GMG_01_high_F",0,20,0],
-	["B_static_AA_F",0,25,0],
-	["B_static_AT_F",0,30,0],
-	["B_Mortar_01_F",0,150,0]
+	["B_HMG_01_F",0,20,0],
+	["B_HMG_01_high_F",0,20,0],
+	["B_GMG_01_F",0,40,0],
+	["B_GMG_01_high_F",0,40,0],
+	["B_static_AA_F",0,50,0],
+	["B_static_AT_F",0,60,0],
+	["B_Mortar_01_F",0,120,0]
 ];
 
 buildings_overwrite = true;
@@ -134,6 +134,8 @@ buildings_extension = [
 	["Land_Cargo_House_V1_F",0,0,0],
 	["Land_Cargo_Patrol_V1_F",0,0,0],
 	["Flag_NATO_F",0,0,0],
+	["Flag_RedCrystal_F",0,0,0],
+	["Flag_White_F",0,0,0],
 	["Land_HelipadSquare_F",0,0,0],
 	["Land_Razorwire_F",0,0,0],
 	["Land_BagFence_Round_F",0,0,0],
@@ -442,8 +444,8 @@ vehicle_refuel_sources_extension = [
 elite_vehicles_extension = [
 	"RHS_M2A3_BUSKIII_wd",
 	"rhsusf_m1a2sep1wd_usarmy",
-	"rhsusf_m1a2sep1tuskiiwd_usarmy",
 	"BWA3_Puma_Fleck",
+	"rhsusf_m1a2sep1tuskiiwd_usarmy",
 	"BWA3_Leopard2A6M_Fleck",
 	"rhsusf_m109_usarmy",
 	"RHS_AH1Z",
@@ -453,7 +455,7 @@ elite_vehicles_extension = [
 	"JS_JC_FA18E",
 	"JS_JC_FA18F",
 	"B_UAV_02_F",
-	"B_UAV_02_CAS_F"
+	"B_UAV_02_CAS_F",
 ];
 
 // Blacklisted arsenal items such as deployable weapons  that should be bought instead

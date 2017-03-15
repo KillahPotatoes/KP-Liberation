@@ -65,6 +65,9 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 				if ( _classnamevar == FOB_truck_typename ) then {
 					_entrytext = localize "STR_FOBTRUCK";
 				};
+				if ( _classnamevar == "Flag_White_F" ) then {
+					_entrytext = "KP Flag";
+				};
 				((findDisplay 5501) displayCtrl (110)) lnbAddRow [ _entrytext, format [ "%1" ,_x select 1], format [ "%1" ,_x select 2], format [ "%1" ,_x select 3]];
 
 				_icon = getText ( _cfg >> (_x select 0) >> "icon");

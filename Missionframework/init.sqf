@@ -8,12 +8,13 @@ enableSaving [ false, false ];
 [] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
 
 switch (KP_liberation_preset) do {
+	case 0: {[] call compileFinal preprocessFileLineNumbers "presets\vanilla.sqf";};
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\vanilla.sqf";};
+	default {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
 };
 
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames.sqf";
