@@ -96,6 +96,8 @@ air_vehicles_extension = [
 	["RHS_A10",0,2000,50],
 	["JS_JC_FA18E",0,3000,50],
 	["JS_JC_FA18F",0,3200,50],
+	["B_UAV_01_F",0,0,5],
+	["B_UAV_02_F",0,500,20],
 	["B_UAV_02_CAS_F",0,1000,20]
 ];
 
@@ -179,6 +181,7 @@ support_vehicles_extension = [
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.
 uavs = [
 	"B_UAV_01_F",
+	"B_UAV_02_F",
 	"B_UAV_02_CAS_F"
 ];
 
@@ -449,6 +452,7 @@ elite_vehicles_extension = [
 	"RHS_A10",
 	"JS_JC_FA18E",
 	"JS_JC_FA18F",
+	"B_UAV_02_F",
 	"B_UAV_02_CAS_F"
 ];
 

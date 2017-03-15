@@ -57,7 +57,7 @@ light_vehicles_overwrite = true;
 light_vehicles_extension = [
 	["B_T_Quadbike_01_F",0,0,1],
 	["B_T_MRAP_01_F",0,0,2],
-	["I_MRAP_03_F",0,0,2]],
+	["I_MRAP_03_F",0,0,2],
 	["B_T_LSV_01_unarmed_F",0,0,2],
 	["B_T_MRAP_01_hmg_F",0,10,2],
 	["B_T_LSV_01_armed_F",0,10,2],
@@ -90,7 +90,7 @@ air_vehicles_overwrite = true;
 air_vehicles_extension = [
 	["B_Heli_Light_01_F",0,0,10],
 	["B_Heli_Light_01_armed_F",0,40,10],
-	["I_Heli_light_03_unarmed_F",0,0,15]
+	["I_Heli_light_03_unarmed_F",0,0,15],
 	["B_Heli_Transport_01_camo_F",0,25,15],
 	["B_Heli_Transport_03_F",0,25,20],
 	["B_T_VTOL_01_infantry_F",0,100,30],
