@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=236;
+		nextID=295;
 	};
 	class Camera
 	{
@@ -64,7 +64,6 @@ addons[]=
 	"A3_Structures_F_Ind_Transmitter_Tower",
 	"A3_Structures_F_Research",
 	"A3_Structures_F_Civ_Accessories",
-	"cba_xeh",
 	"A3_Structures_F_Wrecks",
 	"A3_Structures_F_Civ_Constructions",
 	"A3_Structures_F_Exp_Industrial_Materials",
@@ -30838,7 +30837,7 @@ class Mission
 			};
 			id=4397;
 			type="Campfire_burning_F";
-			atlOffset=-0.015999794;
+			atlOffset=-0.015957355;
 		};
 	};
 	class Connections
