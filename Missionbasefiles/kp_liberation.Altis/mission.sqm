@@ -4391,6 +4391,7 @@ class Mission
 			};
 			id=399;
 			type="Land_HelipadCircle_F";
+			atlOffset=-7.6293945e-006;
 		};
 		class Item395
 		{

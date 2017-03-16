@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1131;
+		nextID=1209;
 	};
 	class Camera
 	{
@@ -36732,7 +36732,7 @@ class Mission
 			description="Spectator";
 			id=4277;
 			type="VirtualSpectator_F";
-			atlOffset=99.843834;
+			atlOffset=99.843842;
 			class CustomAttributes
 			{
 				class Attribute0
