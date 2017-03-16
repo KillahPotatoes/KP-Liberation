@@ -88,7 +88,7 @@ class Params
 		title = $STR_PARAMS_RESOURCESMULTIPLIER;
 		values[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
 		texts[] = { "x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3","x5","x10","x20","x50" };
-		default = 1;
+		default = 3;
 	};
 	class Spacer1 {
 		title = "";

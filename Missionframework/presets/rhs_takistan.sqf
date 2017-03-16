@@ -24,7 +24,7 @@ opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_tra
 commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
-
+KP_liberation_little_bird_classname = "RHS_MELB_MH6M"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
 
 
 
@@ -56,25 +56,25 @@ infantry_units_extension = [
 
 light_vehicles_overwrite = true;
 light_vehicles_extension = [
-	["B_Quadbike_01_F",0,0,1],
-	["rhsusf_m1025_d",0,0,2],
-	["rhsusf_m1025_d_m2",0,40,2],
-	["rhsusf_m1025_d_Mk19",0,60,2],
-	["B_Truck_01_transport_F",0,0,5],
-	["B_Truck_01_covered_F",0,0,5],
-	["B_Truck_01_medical_F",5,0,5]	
+	["B_Quadbike_01_F",0,0,2],
+	["rhsusf_m1025_d",0,0,5],
+	["rhsusf_m1025_d_m2",0,40,5],
+	["rhsusf_m1025_d_Mk19",0,60,5],
+	["B_Truck_01_transport_F",0,0,8],
+	["B_Truck_01_covered_F",0,0,8],
+	["B_Truck_01_medical_F",5,0,8]	
 ];
 
 heavy_vehicles_overwrite = true;
 heavy_vehicles_extension = [
-	["rhsusf_m113d_usarmy",0,120,8],
-	["rhsusf_m113d_usarmy_MK19",0,160,8],
+	["rhsusf_m113d_usarmy",0,70,10],
+	["rhsusf_m113d_usarmy_MK19",0,90,10],
 	["RHS_M6",0,200,15],
 	["RHS_M2A2",0,220,15],
 	["RHS_M2A3_BUSKIII",0,240,15],
 	["rhsusf_m1a2sep1d_usarmy",0,400,20],
 	["rhsusf_m1a2sep1tuskiid_usarmy",0,500,25],
-	["rhsusf_m109d_usarmy",0,2500,30]
+	["rhsusf_m109d_usarmy",0,2000,30]
 ];
 
 air_vehicles_overwrite = true;
@@ -82,24 +82,26 @@ air_vehicles_extension = [
 	["RHS_MELB_MH6M",0,0,10],
 	["RHS_MELB_AH6M_L",0,160,10],
 	["RHS_UH60M_MEV2",15,0,15],
-	["RHS_UH60M",0,360,12],
+	["RHS_UH60M",0,120,12],
 	["RHS_AH1Z",0,1000,30],
 	["RHS_AH64D",0,1200,40],
 	["RHS_A10",0,2000,50],
 	["JS_JC_FA18E",0,3000,50],
 	["JS_JC_FA18F",0,3200,50],
-	["B_UAV_02_CAS_F",0,1000,20]
+	["B_UAV_01_F",0,0,5],
+	["B_UAV_02_F",0,500,20],
+	["B_UAV_02_CAS_F",0,250,20]
 ];
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-	["B_HMG_01_F",0,10,0],
-	["B_HMG_01_high_F",0,10,0],
-	["B_GMG_01_F",0,20,0],
-	["B_GMG_01_high_F",0,20,0],
-	["B_static_AA_F",0,25,0],
-	["B_static_AT_F",0,30,0],
-	["B_Mortar_01_F",0,150,0]
+	["B_HMG_01_F",0,20,0],
+	["B_HMG_01_high_F",0,20,0],
+	["B_GMG_01_F",0,40,0],
+	["B_GMG_01_high_F",0,40,0],
+	["B_static_AA_F",0,50,0],
+	["B_static_AT_F",0,60,0],
+	["B_Mortar_01_F",0,120,0]
 ];
 
 buildings_overwrite = true;
@@ -121,9 +123,11 @@ buildings_extension = [
 	["Land_PortableLight_double_F",0,0,0],
 	["CamoNet_BLUFOR_open_F",0,0,0],
 	["CamoNet_BLUFOR_big_F",0,0,0],
-	["Land_Cargo_House_V1_F",0,0,0],
-	["Land_Cargo_Patrol_V1_F",0,0,0],
+	["Land_Cargo_House_V3_F",0,0,0],
+	["Land_Cargo_Patrol_V2_F",0,0,0],
 	["Flag_NATO_F",0,0,0],
+	["Flag_RedCrystal_F",0,0,0],
+	["Flag_White_F",0,0,0],
 	["Land_HelipadSquare_F",0,0,0],
 	["Land_Razorwire_F",0,0,0],
 	["Land_BagFence_Round_F",0,0,0],
@@ -171,6 +175,7 @@ support_vehicles_extension = [
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.
 uavs = [
 	"B_UAV_01_F",
+	"B_UAV_02_F",
 	"B_UAV_02_CAS_F"
 ];
 
@@ -447,6 +452,7 @@ elite_vehicles_extension = [
 	"RHS_A10",
 	"JS_JC_FA18E",
 	"JS_JC_FA18F",
+	"B_UAV_02_F",
 	"B_UAV_02_CAS_F"
 ];
 

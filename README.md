@@ -2,7 +2,11 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.931
+## Current version : 0.94
+
+[BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
+
+[Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
@@ -10,7 +14,7 @@ This mission is only a continued project based on the original, but most likely 
 
 ## Overview
 The area has fallen to the OPFOR, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
-* Experience a massive CTI campaign with over 150 different capturable settlements across the entire area,
+* Experience a massive CTI campaign with over 100 different capturable settlements across the entire area,
 * Cooperate with 0 to 34 other players, with a commander role and recruitable AI troops to fill the gaps,
 * Buy troops and vehicles using three different types of resources,
 * Build the FOB of your dreams with an ingame "what you see is what you get" system,
@@ -19,42 +23,36 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 * Accomplish meaningful secondary objectives that will benefit your progression,
 * Never lose your progress with the built-in server-side save system.
 
-Things that were added since GreuhZbugs 0.924
-* Added the kp_liberation_config.sqf with some additional config values
-* Added ACE support
-* Added [fuel consumption script](https://forums.bistudio.com/topic/201953-kp-fuel-consumption-script/)
-* Moved the classnames_extension.sqf to a preset system
-* Added preset system (will grow with more maps) to choose between different classnames_extension presets
-* Added a custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
-* Tweaked the player group organisation (group changing via extended options ingame still enabled)
-* Added BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
-* Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
-* Removed Farooq's Revive
-* Added the ability to blacklist arsenal items
-* Split scriptpart from missionpart, so it's easier to provide different maps
-
 ## Needed Mods
+This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
+You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
 * Altis
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Chernarus
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
-	* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
-	* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+	* Recommended for more enterable buildings on Chernarus
+		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+* Tanoa
+	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+* Taunus (very resource-intensive map)
+	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 	
 ## Recommended Mods
 This Mods would greatly increase your gaming experience:
@@ -64,7 +62,7 @@ This Mods would greatly increase your gaming experience:
 * [ACE3 - BWMOD Compatibility](http://steamcommunity.com/sharedfiles/filedetails/?id=870313336)
 * [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
 * [Arma Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
-* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 * [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
 * [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
 * [JSRS SOUNDMOD - Additional](http://steamcommunity.com/sharedfiles/filedetails/?id=863393819)
@@ -135,3 +133,48 @@ class Missions
 ## Media
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
+## Changelog
+
+### 0.94
+* Added Tanoa missionfile and vanilla apex preset
+* Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
+* Added X-Cam-Taunus missionfile
+* Added custom made Chimera Base for X-Cam-Taunus. Thanks to jus61 for building it
+* Added arsenal whitelist preset system (change via kp_liberation_config.sqf)
+	* Use blacklist from unit preset (default)
+	* custom whitelist file
+	* KP Community Selection
+	* RHS USAF
+	* RHS USAF with ACE3
+	* RHS USAF with ACE3 and ACRE2
+* Replaced old hostile markers (exclamation marks) with a unit count sensitive area marking system
+* Removed dependencies on Takistan missionfile
+* Tweaked the presets
+	* custom.sqf is now default (vanilla is a kind of legacy now)
+	* Vehicle ammo prices are raised to make them more valuable
+	* Provided custom.sqf now adapt automaticly to installed mods
+* Fixed falling Little Birds on LHD
+
+### 0.931
+* Fixed BI Revive Error
+* Added Takistan Missionfile
+* Added Chernarus Missionfile
+* Added RHS Takistan Classnames Preset (desert camo)
+* Added RHS Classnames Preset (woodland camo)
+* Added a RHS / BW Mod Classnames Preset (woodland camo)
+* Fixed issue where a prebuild FOB on Takistan throw errors
+* Update "Needed Mods" section in readme
+
+### 0.93
+* Added the kp_liberation_config.sqf with some additional config values
+* Added ACE support
+* Added fuel consumption script
+* Moved the classnames_extension.sqf to a preset system
+* Added preset system (will grow with more maps) to choose between different classnames_extension presets
+* Added a custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
+* Tweaked the player group organisation (group changing via extended options ingame still enabled)
+* Added BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
+* Added an option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
+* Removed Farooq's Revive
+* Added the ability to blacklist arsenal items
+* Split scriptpart from missionpart, so it's easier to provide different maps

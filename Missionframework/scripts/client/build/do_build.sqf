@@ -261,6 +261,10 @@ while { true } do {
 					_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];
 				};
 				
+				if (_classname == "Flag_White_F") then {
+					_vehicle setFlagTexture "res\kpflag.jpg";
+				};
+				
 				sleep 0.3;
 				_vehicle allowDamage true;
 				_vehicle setDamage 0;

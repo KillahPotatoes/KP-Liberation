@@ -7,19 +7,19 @@
 
 // Setting a value here will overwrite the original value found from the mission. Do that if you're doing a total conversion.
 // Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not. Just don't try.
-FOB_typename = nil;						// Default "Land_Cargo_HQ_V1_F";
-FOB_box_typename = nil;					// Default "B_Slingload_01_Cargo_F";
-FOB_truck_typename = nil;				// Default "B_Truck_01_box_F";
-Arsenal_typename = nil;					// Default "B_supplyCrate_F";
-Respawn_truck_typename = nil;			// Default "B_Truck_01_medical_F";
-huron_typename = nil;					// Default "B_Heli_Transport_03_unarmed_F";
-ammobox_b_typename = nil;				// Default "Box_NATO_AmmoVeh_F";
-ammobox_o_typename = nil;				// Default "Box_East_AmmoVeh_F";
-opfor_ammobox_transport = nil;			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = nil;				// Default "B_officer_F"
-crewman_classname = nil;				// Default "B_crew_F";
-pilot_classname = nil;					// Default "B_Helipilot_F";
-
+FOB_typename = nil;							// Default "Land_Cargo_HQ_V1_F";
+FOB_box_typename = nil;						// Default "B_Slingload_01_Cargo_F";
+FOB_truck_typename = nil;					// Default "B_Truck_01_box_F";
+Arsenal_typename = nil;						// Default "B_supplyCrate_F";
+Respawn_truck_typename = nil;				// Default "B_Truck_01_medical_F";
+huron_typename = nil;						// Default "B_Heli_Transport_03_unarmed_F";
+ammobox_b_typename = nil;					// Default "Box_NATO_AmmoVeh_F";
+ammobox_o_typename = nil;					// Default "Box_East_AmmoVeh_F";
+opfor_ammobox_transport = nil;				// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
+commander_classname = nil;					// Default "B_officer_F"
+crewman_classname = nil;					// Default "B_crew_F";
+pilot_classname = nil;						// Default "B_Helipilot_F";
+KP_liberation_little_bird_classname = nil;	// Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
 
 
 
@@ -39,13 +39,13 @@ infantry_units_extension = [
 
 light_vehicles_overwrite = false;
 light_vehicles_extension = [
-	["rhsusf_m998_w_4dr",0,0,2],
-	["rhsusf_rg33_m2_d",0,10,3],
+	["rhsusf_m998_w_4dr",0,0,5],
+	["rhsusf_rg33_m2_d",0,40,5],
 	["fsf_fnk_norm_ce",0,0,3],
 	["greuh_fnk_norm_ce",0,0,3],
-	["I_MRAP_03_F",0,0,3],
-	["I_MRAP_03_hmg_F",0,10,3],
-	["I_MRAP_03_gmg_F",0,20,3],
+	["I_MRAP_03_F",0,0,5],
+	["I_MRAP_03_hmg_F",0,40,5],
+	["I_MRAP_03_gmg_F",0,60,5],
 	["fsf_fnk_hmg_ce",0,10,3],
 	["greuh_fnk_hmg_ce",0,10,3],
 	["greuh_fnk_hmg_dsrt",0,10,3]
@@ -53,15 +53,15 @@ light_vehicles_extension = [
 
 heavy_vehicles_overwrite = false;
 heavy_vehicles_extension = [
-	["I_APC_Wheeled_03_cannon_F",0,50,10],
+	["I_APC_Wheeled_03_cannon_F",0,100,10],
 	["greuh_pandur_wdld",0,50,10],
-	["I_APC_tracked_03_cannon_F",0,40,15],
+	["I_APC_tracked_03_cannon_F",0,180,15],
 	["greuh_fv510_wdld",0,40,15],
 	["greuh_fv510_dsrt",0,40,15],
-	["RHS_M2A3_BUSKIII_wd",0,55,15],
+	["RHS_M2A3_BUSKIII_wd",0,240,15],
 	["Steve_MBT_Kuma",0,100,25],
-	["I_MBT_03_cannon_F",0,100,25],
-	["rhsusf_m1a2sep1tuskiid_usarmy",0,100,25],
+	["I_MBT_03_cannon_F",0,350,25],
+	["rhsusf_m1a2sep1tuskiid_usarmy",0,500,25],
 	["Burnes_FV4034_01",0,250,40]
 ];
 
@@ -69,26 +69,26 @@ air_vehicles_overwrite = false;
 air_vehicles_extension = [
 	["greuh_aw159_t",0,0,12],
 	["greuh_aw159_a",0,50,12],
-	["I_Heli_light_03_unarmed_F",0,0,12],
-	["I_Heli_light_03_F",0,50,12],
+	["I_Heli_light_03_unarmed_F",0,0,10],
+	["I_Heli_light_03_F",0,500,10],
 	["JNS_Skycrane_BLU_Black",0,0,18],
-	["RHS_CH_47F",0,20,20],
+	["RHS_CH_47F",0,80,20],
 	["greuh_eh101_gr",0,0,25],
 	["I_Heli_Transport_02_F",0,0,25],
 	["MV22",0,0,25],
-	["RHS_AH1Z_wd_GS",0,175,30],
+	["RHS_AH1Z_wd_GS",0,1000,30],
 	["H_RAH66",0,200,30],
-	["RHS_AH64D_wd",0,400,50],
+	["RHS_AH64D_wd",0,1200,50],
 	["FIR_F16C",0,100,30],
 	["FIR_F15E",0,200,50],
-	["JS_JC_FA18E",0,350,40],
-	["JS_JC_FA18F",0,350,40],
+	["JS_JC_FA18E",0,3000,40],
+	["JS_JC_FA18F",0,3200,40],
 	["sab_C130_CSP",0,0,30],
 	["sab_C130_J",0,0,30],
-	["usaf_f22",0,500,75],
-	["USAF_F35A",0,600,75],
-	["I_Plane_Fighter_03_AA_F",0,50,30],
-	["I_Plane_Fighter_03_CAS_F",0,100,30]
+	["usaf_f22",0,2800,75],
+	["USAF_F35A",0,2800,75],
+	["I_Plane_Fighter_03_AA_F",0,1600,50],
+	["I_Plane_Fighter_03_CAS_F",0,1800,50]
 ];
 
 static_vehicles_overwrite = false;
