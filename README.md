@@ -4,6 +4,9 @@
 
 ## Current version : 0.94
 
+[BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
+[Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
+
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
