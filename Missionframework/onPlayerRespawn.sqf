@@ -6,7 +6,9 @@ if ( isNil "GRLIB_respawn_loadout" ) then {
 	removeBackpack player;
 	removeHeadgear player;
 	removeGoggles player;
-	player linkItem "NVGoggles";
+	player linkItem "ItemMap";
+	player linkItem "ItemCompass";
+	player linkItem "ItemWatch";
 } else {
 	sleep 4;
 	[ player, GRLIB_respawn_loadout ] call F_setLoadout;

@@ -385,7 +385,7 @@ opfor_battlegroup_vehicles_extension = [
 	"O_T_LSV_02_armed_F",
 	"O_T_LSV_02_armed_F",
 	"O_T_MRAP_02_hmg_ghex_F",
-	"O_T_MRAP_02_gmg_ghex_F"
+	"O_T_MRAP_02_gmg_ghex_F",
 	"O_T_APC_Tracked_02_cannon_ghex_F",
 	"O_T_APC_Wheeled_02_rcws_ghex_F",
 	"O_T_Truck_03_covered_ghex_F",
@@ -406,7 +406,7 @@ opfor_battlegroup_vehicles_low_intensity_extension = [
 	"O_T_LSV_02_armed_F",
 	"O_T_LSV_02_armed_F",
 	"O_T_MRAP_02_hmg_ghex_F",
-	"O_T_MRAP_02_gmg_ghex_F"
+	"O_T_MRAP_02_gmg_ghex_F",
 	"O_T_Truck_03_covered_ghex_F",
 	"O_Heli_Transport_04_bench_F",
 	"O_T_Truck_03_transport_ghex_F"

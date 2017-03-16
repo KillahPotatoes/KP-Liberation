@@ -455,7 +455,7 @@ elite_vehicles_extension = [
 	"JS_JC_FA18E",
 	"JS_JC_FA18F",
 	"B_UAV_02_F",
-	"B_UAV_02_CAS_F",
+	"B_UAV_02_CAS_F"
 ];
 
 // Blacklisted arsenal items such as deployable weapons  that should be bought instead
