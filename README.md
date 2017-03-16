@@ -21,7 +21,7 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
-You can play every map without any mods (only the maps themself) if you set the preset to vanilla in `kp_liberation_config`.
+You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
 * Altis
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Chernarus
@@ -136,6 +136,13 @@ class Missions
 * Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
 * Added X-Cam-Taunus missionfile
 * Added custom made Chimera Base for X-Cam-Taunus. Thanks to jus61 for building it
+* Added arsenal whitelist preset system (change via kp_liberation_config.sqf)
+	* Use blacklist from unit preset (default)
+	* custom whitelist file
+	* KP Community Selection
+	* RHS USAF
+	* RHS USAF with ACE3
+	* RHS USAF with ACE3 and ACRE2
 * Replaced old hostile markers (exclamation marks) with a unit count sensitive area marking system
 * Removed dependencies on Takistan missionfile
 * Tweaked the presets
