@@ -136,7 +136,7 @@ class Missions
 * Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
 * Added X-Cam-Taunus missionfile
 * Added custom made Chimera Base for X-Cam-Taunus. Thanks to jus61 for building it
-* Replaced old hostile markers (exclamation marks) with a unit count sensitive areal marking system
+* Replaced old hostile markers (exclamation marks) with a unit count sensitive area marking system
 * Removed dependencies on Takistan missionfile
 * Tweaked the presets
 	* custom.sqf is now default (vanilla is a kind of legacy now)
