@@ -137,9 +137,10 @@ class Missions
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
-* Added custom made Chimera Base for Tanoa. Thanks to jus61 for building it
+* Added custom made Chimera Base for Tanoa. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
 * Added X-Cam-Taunus missionfile
-* Added custom made Chimera Base for X-Cam-Taunus. Thanks to jus61 for building it
+* Added custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
+* Added custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
 * Added arsenal whitelist preset system (change via kp_liberation_config.sqf)
 	* Use blacklist from unit preset (default)
 	* custom whitelist file
