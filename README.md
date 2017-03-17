@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.94
+## Current version : 0.95
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -134,6 +134,8 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
 ## Changelog
+
+### 0.95
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
