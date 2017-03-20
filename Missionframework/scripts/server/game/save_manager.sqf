@@ -201,6 +201,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
+			
+			if (_nextclass == "Flag_White_F") then {
+				_nextbuilding setFlagTexture "res\kpflag.jpg";
+			};
 		};
 
 	} foreach buildings_to_save;
