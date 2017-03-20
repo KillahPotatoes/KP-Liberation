@@ -150,11 +150,14 @@ class Missions
 	* RHS USAF with ACE3 and ACRE2
 * Replaced old hostile markers (exclamation marks) with a unit count sensitive area marking system
 * Removed dependencies on Takistan missionfile
+* Removed Apex dependencies on Chernarus missionfile (custom chimera base had two apex rocks)
 * Tweaked the presets
 	* custom.sqf is now default (vanilla is a kind of legacy now)
 	* Vehicle ammo prices are raised to make them more valuable
 	* Provided custom.sqf now adapt automaticly to installed mods
 * Fixed falling Little Birds on LHD
+* Fixed custom flag texture not applied after savegame load
+* Fixed Mapmarker disable won't work
 
 ### 0.931
 * Fixed BI Revive Error

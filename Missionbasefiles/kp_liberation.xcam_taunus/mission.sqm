@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=485;
+		nextID=539;
 	};
 	class Camera
 	{
@@ -32218,6 +32218,7 @@ class Mission
 					};
 					id=4769;
 					type="Land_Cargo_HQ_V3_F";
+					atlOffset=0.16000366;
 				};
 				class Item1
 				{
@@ -32253,7 +32254,7 @@ class Mission
 					};
 					id=4771;
 					type="Land_BagFence_Round_F";
-					atlOffset=0.037612915;
+					atlOffset=0.19761658;
 				};
 				class Item3
 				{
@@ -32272,6 +32273,7 @@ class Mission
 					};
 					id=4772;
 					type="Land_BagFence_Round_F";
+					atlOffset=0.16000366;
 				};
 				class Item4
 				{
@@ -32290,6 +32292,7 @@ class Mission
 					};
 					id=4773;
 					type="Land_BagFence_Round_F";
+					atlOffset=0.16000366;
 				};
 				class Item5
 				{
@@ -32308,6 +32311,7 @@ class Mission
 					};
 					id=4774;
 					type="Land_BagFence_Long_F";
+					atlOffset=0.16000366;
 				};
 				class Item6
 				{
@@ -32326,6 +32330,7 @@ class Mission
 					};
 					id=4775;
 					type="Land_BagFence_Short_F";
+					atlOffset=0.16000366;
 				};
 				class Item7
 				{
@@ -32343,6 +32348,7 @@ class Mission
 					};
 					id=4776;
 					type="Land_IronPipes_F";
+					atlOffset=0.16000366;
 				};
 				class Item8
 				{
@@ -32622,7 +32628,7 @@ class Mission
 					};
 					id=4793;
 					type="Land_HelipadCircle_F";
-					atlOffset=0.088119507;
+					atlOffset=0.24812317;
 				};
 				class Item24
 				{
@@ -32640,6 +32646,7 @@ class Mission
 					};
 					id=4794;
 					type="Land_CratesWooden_F";
+					atlOffset=0.16000366;
 				};
 				class Item25
 				{
@@ -32658,6 +32665,7 @@ class Mission
 					};
 					id=4795;
 					type="Land_BagFence_Long_F";
+					atlOffset=0.16000366;
 				};
 				class Item26
 				{
@@ -32676,6 +32684,7 @@ class Mission
 					};
 					id=4796;
 					type="Land_BagFence_Long_F";
+					atlOffset=0.16000366;
 				};
 				class Item27
 				{
@@ -32694,6 +32703,7 @@ class Mission
 					};
 					id=4797;
 					type="Land_BagFence_Long_F";
+					atlOffset=0.16000366;
 				};
 				class Item28
 				{
@@ -32712,6 +32722,7 @@ class Mission
 					};
 					id=4798;
 					type="Land_BagFence_Long_F";
+					atlOffset=0.16000366;
 				};
 				class Item29
 				{
@@ -32730,6 +32741,7 @@ class Mission
 					};
 					id=4799;
 					type="Land_PaperBox_closed_F";
+					atlOffset=0.16000366;
 				};
 				class Item30
 				{
@@ -32748,6 +32760,7 @@ class Mission
 					};
 					id=4800;
 					type="Land_PaperBox_closed_F";
+					atlOffset=0.16000366;
 				};
 				class Item31
 				{
@@ -32766,6 +32779,7 @@ class Mission
 					};
 					id=4801;
 					type="Land_BagFence_Short_F";
+					atlOffset=0.16000366;
 				};
 				class Item32
 				{
@@ -32784,6 +32798,7 @@ class Mission
 					};
 					id=4802;
 					type="Land_BagFence_End_F";
+					atlOffset=0.16000366;
 				};
 				class Item33
 				{
@@ -32802,6 +32817,7 @@ class Mission
 					};
 					id=4803;
 					type="Land_BagFence_End_F";
+					atlOffset=0.16000366;
 				};
 				class Item34
 				{
@@ -32819,6 +32835,7 @@ class Mission
 					};
 					id=4804;
 					type="MetalBarrel_burning_F";
+					atlOffset=0.16000366;
 				};
 				class Item35
 				{
