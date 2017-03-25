@@ -2750,5 +2750,39 @@
 						<Original>Mobile arsenal</Original>
 						<German>Mobiles Arsenal</German>
 				</Key>
+				
+				<!-- Added in v0.95 -->
+				<Key ID="STR_INDIV_FLAG">
+						<Original>Killah Potatoes flag</Original>
+						<German>Killah Potatoes Flagge</German>
+				</Key>
+				<Key ID="STR_SUPP_STORAGE">
+						<Original>Supply storage</Original>
+						<German>Vorratslager</German>
+				</Key>
+				<Key ID="STR_AMMO_STORAGE">
+						<Original>Ammo storage</Original>
+						<German>Munitionslager</German>
+				</Key>
+				<Key ID="STR_FUEL_STORAGE">
+						<Original>Fuel storage</Original>
+						<German>Kraftstofflager</German>
+				</Key>
+				<Key ID="STR_RECYCLE_BUILDING">
+						<Original>Dismantling building</Original>
+						<German>Demontageeinrichtung</German>
+				</Key>
+				<Key ID="STR_HELI_BUILDING">
+						<Original>Air Traffic Control</Original>
+						<German>Luftraumüberwachungsstation</German>
+				</Key>
+				<Key ID="STR_HELI_SLOT">
+						<Original>Helipad</Original>
+						<German>Helikopterlandeplatz</German>
+				</Key>
+				<Key ID="STR_PLANE_SLOT">
+						<Original>Tent Plane Hangar</Original>
+						<German>Hangarzelt</German>
+				</Key>
 		</Package>
 </Project>
