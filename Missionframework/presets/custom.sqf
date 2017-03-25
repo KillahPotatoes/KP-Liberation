@@ -19,13 +19,13 @@ commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
-KP_liberation_supplies_storage_building = "ContainmentArea_02_sand_F";
-KP_liberation_ammo_storage_building = "ContainmentArea_01_forest_F";
-KP_liberation_fuel_storage_building = "ContainmentArea_01_sand_F";
-KP_liberation_recycle_building = "Land_CarService_F";
-KP_liberation_air_vehicle_building = "Land_Radar_Small_F";
-KP_liberation_heli_slot_building = "Land_HelipadSquare_F";
-KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";
+KP_liberation_supplies_storage_building = "ContainmentArea_02_sand_F";	// Default "ContainmentArea_02_sand_F"
+KP_liberation_ammo_storage_building = "ContainmentArea_01_forest_F";		// Default "ContainmentArea_01_forest_F"
+KP_liberation_fuel_storage_building = "ContainmentArea_01_sand_F";		// Default "ContainmentArea_01_sand_F"
+KP_liberation_recycle_building = "Land_CarService_F";			// Default "Land_CarService_F"
+KP_liberation_air_vehicle_building = "Land_Radar_Small_F";		// Default "Land_Radar_Small_F"
+KP_liberation_heli_slot_building = "Land_HelipadSquare_F";			// Default "Land_HelipadSquare_F"
+KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";		// Default "Land_TentHangar_V1_F"
 
 
 // *** FRIENDLIES ***
