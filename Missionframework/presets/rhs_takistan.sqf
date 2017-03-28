@@ -18,20 +18,20 @@ FOB_truck_typename = "rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy";				// Default "B
 Arsenal_typename = "B_supplyCrate_F";					// Default "B_supplyCrate_F";
 Respawn_truck_typename = "rhsusf_m113d_usarmy_medical";			// Default "B_Truck_01_medical_F";
 huron_typename = "RHS_CH_47F_10";					// Default "B_Heli_Transport_03_unarmed_F";
-ammobox_b_typename = "Box_NATO_AmmoVeh_F";				// Default "Box_NATO_AmmoVeh_F";
-ammobox_o_typename = "Box_East_AmmoVeh_F";				// Default "Box_East_AmmoVeh_F";
 opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
 commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = "RHS_MELB_MH6M"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
-KP_liberation_supplies_storage_building = "ContainmentArea_02_sand_F";	// Default "ContainmentArea_02_sand_F"
-KP_liberation_ammo_storage_building = "ContainmentArea_01_forest_F";		// Default "ContainmentArea_01_forest_F"
-KP_liberation_fuel_storage_building = "ContainmentArea_01_sand_F";		// Default "ContainmentArea_01_sand_F"
+KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";	// Default "ContainmentArea_02_sand_F"
+KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// Default "ContainmentArea_01_sand_F"
 KP_liberation_recycle_building = "Land_CarService_F";			// Default "Land_CarService_F"
 KP_liberation_air_vehicle_building = "Land_Radar_Small_F";		// Default "Land_Radar_Small_F"
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";			// Default "Land_HelipadSquare_F"
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";		// Default "Land_TentHangar_V1_F"
+KP_liberation_supply_crate = "CargoNet_01_box_F";				// Default "CargoNet_01_box_F"
+KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";					// Default "B_CargoNet_01_ammo_F"
+KP_liberation_fuel_crate = "CargoNet_01_barrels_F";					// Default "CargoNet_01_barrels_F"
 
 
 // *** FRIENDLIES ***
@@ -161,9 +161,8 @@ support_vehicles_extension = [
 	[Respawn_truck_typename,20,0,5],
 	[FOB_box_typename,30,400,0],
 	[FOB_truck_typename,30,400,5],
-	[KP_liberation_supplies_storage_building,0,0,0],
-	[KP_liberation_ammo_storage_building,0,0,0],
-	[KP_liberation_fuel_storage_building,0,0,0],
+	[KP_liberation_small_storage_building,0,0,0],
+	[KP_liberation_large_storage_building,0,0,0],
 	[KP_liberation_recycle_building,0,0,0],
 	[KP_liberation_air_vehicle_building,0,0,0],
 	[KP_liberation_heli_slot_building,0,0,0],
@@ -179,8 +178,7 @@ support_vehicles_extension = [
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,0],
 	["B_Slingload_01_Ammo_F",5,100,0],
-	["Box_NATO_AmmoVeh_F",0,154,0],
-	["Box_East_AmmoVeh_F",0,115,0]
+	[KP_liberation_ammo_crate,0,154,0]
 ];
 
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.

@@ -12,20 +12,20 @@ if ( isNil "FOB_truck_typename" ) then { FOB_truck_typename = "B_Truck_01_box_F"
 if ( isNil "Arsenal_typename" ) then { Arsenal_typename = "B_supplyCrate_F"; };
 if ( isNil "Respawn_truck_typename" ) then { Respawn_truck_typename = "B_Truck_01_medical_F"; };
 if ( isNil "huron_typename" ) then { huron_typename = "B_Heli_Transport_03_unarmed_F"; };
-if ( isNil "ammobox_b_typename" ) then { ammobox_b_typename = "Box_NATO_AmmoVeh_F"; };
-if ( isNil "ammobox_o_typename" ) then { ammobox_o_typename = "Box_East_AmmoVeh_F"; };
 if ( isNil "opfor_ammobox_transport" ) then { opfor_ammobox_transport = "O_Truck_03_transport_F"; };
 if ( isNil "commander_classname" ) then { commander_classname = "B_officer_F"; };
 if ( isNil "crewman_classname" ) then { crewman_classname = "B_crew_F" };
 if ( isNil "pilot_classname" ) then { pilot_classname = "B_Helipilot_F" };
 if ( isNil "KP_liberation_little_bird_classname" ) then { KP_liberation_little_bird_classname = "B_Heli_Light_01_F" };
-if ( isNil "KP_liberation_supplies_storage_building" ) then { KP_liberation_supplies_storage_building = "ContainmentArea_02_sand_F" };
-if ( isNil "KP_liberation_ammo_storage_building" ) then { KP_liberation_ammo_storage_building = "ContainmentArea_01_forest_F" };
-if ( isNil "KP_liberation_fuel_storage_building" ) then { KP_liberation_fuel_storage_building = "ContainmentArea_01_sand_F" };
+if ( isNil "KP_liberation_small_storage_building" ) then { KP_liberation_small_storage_building = "ContainmentArea_02_sand_F" };
+if ( isNil "KP_liberation_large_storage_building" ) then { KP_liberation_large_storage_building = "ContainmentArea_01_sand_F" };
 if ( isNil "KP_liberation_recycle_building" ) then { KP_liberation_recycle_building = "Land_CarService_F" };
 if ( isNil "KP_liberation_air_vehicle_building" ) then { KP_liberation_air_vehicle_building = "Land_Radar_Small_F" };
 if ( isNil "KP_liberation_heli_slot_building" ) then { KP_liberation_heli_slot_building = "Land_HelipadSquare_F" };
 if ( isNil "KP_liberation_plane_slot_building" ) then { KP_liberation_plane_slot_building = "Land_TentHangar_V1_F" };
+if ( isNil "KP_liberation_supply_crate" ) then { KP_liberation_supply_crate = "CargoNet_01_box_F" };
+if ( isNil "KP_liberation_ammo_crate" ) then { KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F" };
+if ( isNil "KP_liberation_fuel_crate" ) then { KP_liberation_fuel_crate = "CargoNet_01_barrels_F" };
 
 infantry_units = [
 	["B_soldier_F",2,0,0],
@@ -157,9 +157,8 @@ support_vehicles = [
 	[Respawn_truck_typename,20,0,8],
 	[FOB_box_typename,30,400,0],
 	[FOB_truck_typename,30,400,10],
-	[KP_liberation_supplies_storage_building,0,0,0],
-	[KP_liberation_ammo_storage_building,0,0,0],
-	[KP_liberation_fuel_storage_building,0,0,0],
+	[KP_liberation_small_storage_building,0,0,0],
+	[KP_liberation_large_storage_building,0,0,0],
 	[KP_liberation_recycle_building,0,0,0],
 	[KP_liberation_air_vehicle_building,0,0,0],
 	[KP_liberation_heli_slot_building,0,0,0],
@@ -172,8 +171,7 @@ support_vehicles = [
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,20],
 	["B_Slingload_01_Ammo_F",5,80,0],
-	["Box_NATO_AmmoVeh_F",0,154,0],
-	["Box_East_AmmoVeh_F",0,115,0]
+	[KP_liberation_ammo_crate,0,154,0]
 ];
 if ( isNil "support_vehicles_extension" ) then { support_vehicles_extension = [] };
 if ( isNil "support_vehicles_overwrite" ) then { support_vehicles_overwrite = false };
@@ -455,6 +453,8 @@ support_vehicles = [ support_vehicles ] call F_filterMods;
 static_vehicles = [ static_vehicles ] call F_filterMods;
 buildings = [ buildings ] call F_filterMods;
 build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,static_vehicles,buildings,support_vehicles,squads];
+KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];
+KP_liberation_crates = [KP_liberation_supply_crate,KP_liberation_ammo_crate,KP_liberation_fuel_crate];
 militia_squad = [ militia_squad , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 militia_vehicles = [ militia_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 opfor_vehicles = [ opfor_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;

@@ -11,7 +11,7 @@ while { true } do {
 
 	if ( [ player, 5 ] call F_fetchPermission ) then {
 
-		_nearammoboxes = ((getpos player) nearEntities [ [ ammobox_b_typename, ammobox_o_typename ] ,10]);
+		_nearammoboxes = ((getpos player) nearEntities [ [ KP_liberation_ammo_crate ] ,10]);
 		_neartransporttrucks = ((getpos player) nearEntities [ ammobox_transports_typenames ,10]);
 
 		_checked_trucks = [];

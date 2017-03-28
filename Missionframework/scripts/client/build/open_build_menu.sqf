@@ -68,14 +68,11 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 				if ( _classnamevar == "Flag_White_F" ) then {
 					_entrytext = localize "STR_INDIV_FLAG";
 				};
-				if ( _classnamevar == KP_liberation_supplies_storage_building ) then {
-					_entrytext = localize "STR_SUPP_STORAGE";
+				if ( _classnamevar == KP_liberation_small_storage_building ) then {
+					_entrytext = localize "STR_SMALL_STORAGE";
 				};
-				if ( _classnamevar == KP_liberation_ammo_storage_building ) then {
-					_entrytext = localize "STR_AMMO_STORAGE";
-				};
-				if ( _classnamevar == KP_liberation_fuel_storage_building ) then {
-					_entrytext = localize "STR_FUEL_STORAGE";
+				if ( _classnamevar == KP_liberation_large_storage_building ) then {
+					_entrytext = localize "STR_LARGE_STORAGE";
 				};
 				if ( _classnamevar == KP_liberation_recycle_building ) then {
 					_entrytext = localize "STR_RECYCLE_BUILDING";

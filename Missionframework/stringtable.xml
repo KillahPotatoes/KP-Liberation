@@ -2,12 +2,12 @@
 <Project name="Liberation">
 		<Package name="Liberation">
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation Altis v0.94</Original>
-						<German>KP Liberation Altis v0.94</German>
+						<Original>KP Liberation Altis v0.95</Original>
+						<German>KP Liberation Altis v0.95</German>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.94</Original>
-						<German>v0.94</German>
+						<Original>v0.95</Original>
+						<German>v0.95</German>
 				</Key>
 				<Key ID="STR_MISSION_DESCRIPTION">
 						<Original>Free Altis from the OPFOR forces with the power of freedom and democracy.</Original>
@@ -2756,17 +2756,13 @@
 						<Original>Killah Potatoes flag</Original>
 						<German>Killah Potatoes Flagge</German>
 				</Key>
-				<Key ID="STR_SUPP_STORAGE">
-						<Original>Supply storage</Original>
-						<German>Vorratslager</German>
+				<Key ID="STR_SMALL_STORAGE">
+						<Original>Small storage area</Original>
+						<German>Kleine Lagerfläche</German>
 				</Key>
-				<Key ID="STR_AMMO_STORAGE">
-						<Original>Ammo storage</Original>
-						<German>Munitionslager</German>
-				</Key>
-				<Key ID="STR_FUEL_STORAGE">
-						<Original>Fuel storage</Original>
-						<German>Kraftstofflager</German>
+				<Key ID="STR_LARGE_STORAGE">
+						<Original>Large storage area</Original>
+						<German>Große Lagerfläche</German>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
 						<Original>Dismantling building</Original>

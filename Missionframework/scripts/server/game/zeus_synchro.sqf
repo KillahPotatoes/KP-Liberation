@@ -19,7 +19,7 @@ while { true } do {
 	} foreach allUnits;
 
 	{
-		if ((typeof _x in _vehicleClassnames ) && (typeof _x != ammobox_o_typename) && (( _x distance lhd > 1000 ) || (typeof _x == huron_typename)) && alive _x ) then {
+		if ((typeof _x in _vehicleClassnames ) && (typeof _x != KP_liberation_ammo_crate) && (( _x distance lhd > 1000 ) || (typeof _x == huron_typename)) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach vehicles;

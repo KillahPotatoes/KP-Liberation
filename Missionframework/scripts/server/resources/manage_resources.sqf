@@ -35,7 +35,7 @@ while { GRLIB_endgame == 0 } do {
 
 			} else {
 
-				if ( ( { typeof _x == ammobox_b_typename } count vehicles ) <= ( ceil ( ( count _blufor_mil_sectors ) * 1.3 ) ) ) then {
+				if ( ( { typeof _x == KP_liberation_ammo_crate } count vehicles ) <= ( ceil ( ( count _blufor_mil_sectors ) * 1.3 ) ) ) then {
 
 					_spawnsector = ( _blufor_mil_sectors call BIS_fnc_selectRandom );
 					_spawnpos = zeropos;
@@ -44,7 +44,7 @@ while { GRLIB_endgame == 0 } do {
 						if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
 					};
 
-					_newbox = ammobox_b_typename createVehicle _spawnpos;
+					_newbox = KP_liberation_ammo_crate createVehicle _spawnpos;
 					_newbox setpos _spawnpos;
 					_newbox setdir (random 360);
 					clearWeaponCargoGlobal _newbox;

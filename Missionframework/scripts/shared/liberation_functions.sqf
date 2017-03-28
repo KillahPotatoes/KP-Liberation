@@ -49,3 +49,5 @@ F_forceBluforCrew = compileFinal preprocessFileLineNumbers "scripts\shared\funct
 F_getCorrectedSectorRange = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getCorrectedSectorRange.sqf";
 F_getLocationName = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getLocationName.sqf";
 F_correctLaserBatteries = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_correctLaserBatteries.sqf";
+F_crateToStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_to_storage.sqf";
+F_crateFromStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_from_storage.sqf";

@@ -35,7 +35,7 @@ if ( !( _sector in GRLIB_military_sectors_already_activated )) then {
 
 		for [ {_i=0}, {_i < (_crates_amount + 1) }, {_i=_i+1} ] do {
 
-			_spawnclass = ammobox_o_typename;
+			_spawnclass = KP_liberation_ammo_crate;
 			if ( _i == 0 ) then {
 				_spawnclass = opfor_ammobox_transport;
 			};
