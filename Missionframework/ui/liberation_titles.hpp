@@ -146,7 +146,7 @@ class RscTitles
 	  BGPictureSector,CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint, LabelCombatReadiness, CentralShadow, CentralLabel, ActiveSectors,
 	  AlertBGPicture, AlertLabel, AlertTimer };
 	  class BGPicture {
-	  	idc = -1;
+	  	idc = 758012;
 		type =  CT_STATIC;
 		style = ST_PICTURE;
 		colorText[] = {0.8,0.8,0.8,0.9};
@@ -209,18 +209,22 @@ class RscTitles
 		h = 0.0213333333 * safezoneH;
 	  };
 	 class PictureManpower : GenericPicture69 {
+		idc = 758001;
 		y = (0.4 + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
 		text = "res\ui_manpo.paa";
 	  };
 	  class PictureAmmo : GenericPicture69 {
+		idc = 758002;
 		y = (0.4 + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
 		text = "res\ui_ammo.paa";
 	  };
 	  class PictureFuel : GenericPicture69 {
+		idc = 758003;
 		y = (0.4 + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
 		text = "res\ui_fuel.paa";
 	  };
 	  class PictureCap : GenericPicture69 {
+		idc = 758004;
 		y = (0.4 + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
 		text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
 	  };
@@ -230,37 +234,43 @@ class RscTitles
 		text = "\A3\ui_f\data\map\markers\handdrawn\warning_CA.paa";
 	  };
 	  class PictureIntel : GenericPicture69 {
+		idc = 758005;
 	  	colorText[] = {0,0.45,0.95,1};
 		y = (0.4 + ( ICONE_SPACY * 5 ) - 0.0025) * safezoneH + safezoneY;
 		text = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 	  };
 	  class PictureManpowerShadow : PictureManpower {
+		idc = 758006;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};
 	  };
 	  class PictureAmmoShadow : PictureAmmo {
+		idc = 758007;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};
 	  };
 	  class PictureFuelShadow : PictureFuel {
+		idc = 758008;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};
 	  };
 	  class PictureCapShadow : PictureCap {
+		idc = 758009;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};
 	  };
 	  class PictureCombatReadinessShadow : PictureCombatReadiness {
-	  	idc = -1;
+	  	idc = 758010;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};
 	  };
 	  class PictureIntelShadow : PictureIntel {
+		idc = 758011;
 		y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 5 ) - 0.0025 ) * safezoneH + safezoneY;
 		x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 		colorText[] = {0,0,0,0.7};

@@ -1,11 +1,14 @@
 disableSerialization;
 
-private [ "_overlayshown", "_sectorcontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_first_iteration" ];
+private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_first_iteration", "_distfob", "_nearfob", "_fobdistance", "_resources", "_notNearFOB"];
 
 _overlayshown = false;
 _sectorcontrols = [201,202,203,244,205];
+_resourcescontrols = [101,102,103,104,105,106,135,758001,758002,758003,758004,758005,758006,758007,758008,758009,758010,758011,758012];
 _active_sectors_hint = false;
 _first_iteration = true;
+_distfob = 100;
+_notNearFOB = false;
 GRLIB_ui_notif = "";
 
 _uiticks = 0;
@@ -34,7 +37,20 @@ while { true } do {
 		_overlayshown = false;
 		_first_iteration = true;
 	};
-	if ( _overlayshown ) then {
+	
+	_nearfob = [] call F_getNearestFob;
+	_fobdistance = 9999;
+	if ( count _nearfob == 3 ) then {
+		_fobdistance = player distance _nearfob;
+	};
+	
+	if (_fobdistance < _distfob) then {
+		_resources = true;
+	} else {
+		_resources = false;
+	};
+	
+	if ( _overlayshown) then {
 
 		((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
 		((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
@@ -53,27 +69,37 @@ while { true } do {
 			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (403)) ctrlSetText "";
 		};
 
+		if (_resources) then {
+			if (_notNearFOB) then {
+				{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
+			};
+			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
-		if ( _uiticks % 5 == 0 ) then {
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1/%2", (floor resources_infantry),infantry_cap ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor resources_ammo) ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1/%2", (floor resources_fuel),fuel_cap ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format [ "%1/%2", unitcap,([] call F_localCap) ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format [ "%1%2", round(combat_readiness),"%" ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format [ "%1", round(resources_intel) ];
 
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1/%2", (floor resources_infantry),infantry_cap ];
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor resources_ammo) ];
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1/%2", (floor resources_fuel),fuel_cap ];
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format [ "%1/%2", unitcap,([] call F_localCap) ];
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format [ "%1%2", round(combat_readiness),"%" ];
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format [ "%1", round(resources_intel) ];
+				_color_readiness = [0.8,0.8,0.8,1];
+				if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
+				if ( combat_readiness >= 50 ) then { _color_readiness = [0.8,0.6,0,1] };
+				if ( combat_readiness >= 75 ) then { _color_readiness = [0.8,0.3,0,1] };
+				if ( combat_readiness >= 100 ) then { _color_readiness = [0.8,0,0,1] };
 
-			_color_readiness = [0.8,0.8,0.8,1];
-			if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
-			if ( combat_readiness >= 50 ) then { _color_readiness = [0.8,0.6,0,1] };
-			if ( combat_readiness >= 75 ) then { _color_readiness = [0.8,0.3,0,1] };
-			if ( combat_readiness >= 100 ) then { _color_readiness = [0.8,0,0,1] };
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetTextColor _color_readiness;
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (135)) ctrlSetTextColor _color_readiness;
+				_notNearFOB = false;
 
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetTextColor _color_readiness;
-			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (135)) ctrlSetTextColor _color_readiness;
-
+			};
+		} else {
+			if (!_notNearFOB) then {
+				{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
+				_notNearFOB = true;
+			};
 		};
-
+		
 		if ( _uiticks % 25 == 0 ) then {
 
 			if (!isNil "active_sectors" && ( [] call F_opforCap >= GRLIB_sector_cap)) then {
