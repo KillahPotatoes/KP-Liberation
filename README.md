@@ -23,6 +23,18 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 * Accomplish meaningful secondary objectives that will benefit your progression,
 * Never lose your progress with the built-in server-side save system.
 
+## Public Servers
+
+### KP Liberation v0.94 by www.killahpotatoes.de
+* IP: 213.133.110.170
+* Port: 2302
+* Needed Mods: None
+
+### KP Liberation Taunus v0.94 by www.killahpotatoes.de
+* IP: 213.133.110.170
+* Port: 2332
+* Needed Mods: CUP Terrains - Core, CUP Terrains - Maps, X-Cam-Taunus (Version 1.1)
+
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
