@@ -65,7 +65,9 @@ infantry_units_extension = [
 light_vehicles_overwrite = true;
 light_vehicles_extension = [
 	["B_Quadbike_01_F",0,0,2],
+	["BWA3_Eagle_Fleck",0,0,5],
 	["rhsusf_m1025_w",0,0,5],
+	["BWA3_Eagle_FLW100_Fleck",0,40,5],
 	["rhsusf_m1025_w_m2",0,40,5],
 	["rhsusf_m1025_w_mk19",0,60,5],
 	["B_Truck_01_transport_F",0,0,8],

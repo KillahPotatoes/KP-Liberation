@@ -12,7 +12,7 @@ _this select 0 - STRING - Crate type
 _this select 1 - OBJECT - Storage
 */
 
-private ["_storage_positions","_unload_distance","_unload_pos","_i","_unloaded","_current_pos"];
+private ["_storage_positions","_unload_distance","_unload_pos","_i","_unloaded","_stored_crates","_height"];
 
 switch (typeOf (_this select 1)) do {
 	case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions; _unload_distance = 4;};
@@ -20,9 +20,9 @@ switch (typeOf (_this select 1)) do {
 	default {_storage_positions = KP_liberation_large_storage_positions; _unload_distance = 6.5;};
 };
 
-reverse _storage_positions;
-_unload_pos = [(_this select 1), _unload_distance, (getDir (_this select 1)) - 180] call BIS_fnc_relPos;
 _i = 0;
+_unload_pos = [(_this select 1), _unload_distance, (getDir (_this select 1)) - 180] call BIS_fnc_relPos;
+
 while {!((nearestObjects [_unload_pos,KP_liberation_crates,1]) isEqualTo [])} do {
 	_i = _i + 1;
 	_unload_pos = [(_this select 1), _unload_distance + _i * 1.8, (getDir (_this select 1)) - 180] call BIS_fnc_relPos;
@@ -31,22 +31,35 @@ while {!((nearestObjects [_unload_pos,KP_liberation_crates,1]) isEqualTo [])} do
 sleep 0.5;
 
 _unloaded = false;
-{
-	_current_pos = [(_this select 1), (_x select 0), (_x select 1) + (getDir (_this select 1))] call BIS_fnc_relPos;
-	
-	_crate = (nearestObjects [_current_pos,[_this select 0],1]) select 0;
-	
-	if (!(isNil "_crate")) then {
+_stored_crates = attachedObjects (_this select 1);
+reverse _stored_crates;
 
-		clearWeaponCargoGlobal _crate;
-		clearMagazineCargoGlobal _crate;
-		clearBackpackCargoGlobal _crate;
-		clearItemCargoGlobal _crate;
+{
+	if (typeOf _x == (_this select 0)) then {
+		detach _x;
 		
-		_crate setPos _unload_pos;
-		sleep 0.5;
-		_crate enableSimulationGlobal true;
+		clearWeaponCargoGlobal _x;
+		clearMagazineCargoGlobal _x;
+		clearBackpackCargoGlobal _x;
+		clearItemCargoGlobal _x;
+		
+		_x setPos _unload_pos;
 		_unloaded = true;
 	};
-	if (_unloaded) exitWith {reverse _storage_positions;};
-} forEach _storage_positions;
+	if (_unloaded) exitWith {
+		//reverse _stored_crates;
+		_i = 0;
+		{
+			_height = 0.6;
+			switch (typeOf _x) do {
+				case KP_liberation_supply_crate: {_height = 0.4;};
+				case KP_liberation_ammo_crate: {_height = 0.6;};
+				case KP_liberation_fuel_crate: {_height = 0.3;};
+				default {_height = 0.6;};
+			};
+			detach _x;
+			_x attachTo [(_this select 1), [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
+			_i = _i + 1;
+		} forEach attachedObjects (_this select 1);
+	};
+} forEach _stored_crates;
