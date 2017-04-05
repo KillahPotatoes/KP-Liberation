@@ -100,13 +100,13 @@ air_vehicles_extension = [
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-	["B_HMG_01_F",0,20,0],
-	["B_HMG_01_high_F",0,20,0],
-	["B_GMG_01_F",0,40,0],
-	["B_GMG_01_high_F",0,40,0],
-	["B_static_AA_F",0,50,0],
-	["B_static_AT_F",0,60,0],
-	["B_Mortar_01_F",0,120,0]
+	["RHS_M2StaticMG_MiniTripod_D",0,20,0],
+	["RHS_M2StaticMG_D",0,20,0],
+	["RHS_MK19_TriPod_D",0,40,0],
+	["RHS_Stinger_AA_pod_D",0,50,0],
+	["RHS_TOW_TriPod_D",0,60,0],
+	["RHS_M252_D",0,120,0],
+	["RHS_M119_D",0,220,0]
 ];
 
 buildings_overwrite = true;
@@ -462,7 +462,8 @@ elite_vehicles_extension = [
 	"JS_JC_FA18E",
 	"JS_JC_FA18F",
 	"B_UAV_02_F",
-	"B_UAV_02_CAS_F"
+	"B_UAV_02_CAS_F",
+	"RHS_M119_D"
 ];
 
 // Blacklisted arsenal items such as deployable weapons  that should be bought instead
