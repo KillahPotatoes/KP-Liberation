@@ -43,7 +43,11 @@ if ( isServer ) then {
 		if ( air_weight < 0 ) then { air_weight = 0 };
 	};
 
-	if ( isPlayer _unit ) then { stats_player_deaths = stats_player_deaths + 1 };
+	if ( isPlayer _unit ) then { 
+		stats_player_deaths = stats_player_deaths + 1;	
+		// Disconnect UAV from player on death
+		_unit connectTerminalToUAV objNull;
+	};
 
 	if ( _unit isKindOf "Man" ) then {
 		if ( side (group _unit) == GRLIB_side_civilian ) then {
