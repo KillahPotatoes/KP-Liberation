@@ -15,7 +15,6 @@ if ( isNil "huron_typename" ) then { huron_typename = "B_Heli_Transport_03_unarm
 if ( isNil "ammobox_b_typename" ) then { ammobox_b_typename = "Box_NATO_AmmoVeh_F"; };
 if ( isNil "ammobox_o_typename" ) then { ammobox_o_typename = "Box_East_AmmoVeh_F"; };
 if ( isNil "opfor_ammobox_transport" ) then { opfor_ammobox_transport = "O_Truck_03_transport_F"; };
-if ( isNil "commander_classname" ) then { commander_classname = "B_officer_F"; };
 if ( isNil "crewman_classname" ) then { crewman_classname = "B_crew_F" };
 if ( isNil "pilot_classname" ) then { pilot_classname = "B_Helipilot_F" };
 if ( isNil "KP_liberation_little_bird_classname" ) then { KP_liberation_little_bird_classname = "B_Heli_Light_01_F" };

@@ -16,7 +16,6 @@ huron_typename = "B_Heli_Transport_03_unarmed_F";					// Default "B_Heli_Transpo
 ammobox_b_typename = "Box_NATO_AmmoVeh_F";				// Default "Box_NATO_AmmoVeh_F";
 ammobox_o_typename = "Box_East_AmmoVeh_F";				// Default "Box_East_AmmoVeh_F";
 opfor_ammobox_transport = "O_T_Truck_03_transport_ghex_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
