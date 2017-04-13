@@ -14,7 +14,6 @@ Arsenal_typename = nil;							// Default "B_supplyCrate_F";
 Respawn_truck_typename = nil;					// Default "B_Truck_01_medical_F";
 huron_typename = nil;							// Default "B_Heli_Transport_03_unarmed_F";
 opfor_ammobox_transport = nil;					// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = nil;						// Default "B_officer_F"
 crewman_classname = nil;						// Default "B_crew_F";
 pilot_classname = nil;							// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = nil;		// Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
@@ -27,8 +26,6 @@ KP_liberation_plane_slot_building = nil;		// Default "Land_TentHangar_V1_F"
 KP_liberation_supply_crate = nil;				// Default "CargoNet_01_box_F"
 KP_liberation_ammo_crate = nil;					// Default "B_CargoNet_01_ammo_F"
 KP_liberation_fuel_crate = nil;					// Default "CargoNet_01_barrels_F"
-
-
 
 
 // *** FRIENDLIES ***
@@ -158,11 +155,6 @@ blufor_squad_para = [
 ];
 
 
-
-
-
-
-
 // *** BADDIES ***
 
 // All OPFOR infantry. Defining a value here will replace the default value from the original mission.
@@ -256,11 +248,6 @@ opfor_air_overwrite = false;
 opfor_air_extension = [
 
 ];
-
-
-
-
-
 
 
 // Other stuff

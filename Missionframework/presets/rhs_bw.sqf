@@ -19,7 +19,6 @@ Arsenal_typename = "B_supplyCrate_F";					// Default "B_supplyCrate_F";
 Respawn_truck_typename = "rhsusf_m113_usarmy_medical";			// Default "B_Truck_01_medical_F";
 huron_typename = "RHS_CH_47F";					// Default "B_Heli_Transport_03_unarmed_F";
 opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
-commander_classname = "B_officer_F";				// Default "B_officer_F"
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = "RHS_MELB_MH6M"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
@@ -274,11 +273,6 @@ blufor_squad_para = [
 ];
 
 
-
-
-
-
-
 // *** BADDIES ***
 
 // All OPFOR infantry. Defining a value here will replace the default value from the original mission.
@@ -414,11 +408,6 @@ opfor_air_overwrite = true;
 opfor_air_extension = [
 	"RHS_Su25SM_KH29_vvsc"
 ];
-
-
-
-
-
 
 
 // Other stuff

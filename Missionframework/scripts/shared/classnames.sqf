@@ -13,7 +13,6 @@ if ( isNil "Arsenal_typename" ) then { Arsenal_typename = "B_supplyCrate_F"; };
 if ( isNil "Respawn_truck_typename" ) then { Respawn_truck_typename = "B_Truck_01_medical_F"; };
 if ( isNil "huron_typename" ) then { huron_typename = "B_Heli_Transport_03_unarmed_F"; };
 if ( isNil "opfor_ammobox_transport" ) then { opfor_ammobox_transport = "O_Truck_03_transport_F"; };
-if ( isNil "commander_classname" ) then { commander_classname = "B_officer_F"; };
 if ( isNil "crewman_classname" ) then { crewman_classname = "B_crew_F" };
 if ( isNil "pilot_classname" ) then { pilot_classname = "B_Helipilot_F" };
 if ( isNil "KP_liberation_little_bird_classname" ) then { KP_liberation_little_bird_classname = "B_Heli_Light_01_F" };
