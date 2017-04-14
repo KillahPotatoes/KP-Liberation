@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Liberation">
 		<Package name="Liberation">
+				<!-- French localization made by zbug: https://github.com/GreuhZbug -->
+				<!-- German localization made by Wyqer: https://github.com/Wyqer -->
+				<!-- Italian localization made by kaso2mod: https://github.com/kaso2mod -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation Altis v0.94</Original>
 						<German>KP Liberation Altis v0.94</German>
-						<Italian>KP Liberation Altis v0.94</Italian><!-- Italian translation made by kaso2mod for info,tips,issue casinilorenzo@protonmail.com -->
+						<Italian>KP Liberation Altis v0.94</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
 						<Original>v0.94</Original>
@@ -100,9 +103,9 @@
 						<Italian>Costruisci</Italian>
 				</Key>
 				<Key ID="STR_MANPOWER">
-						<Original>Manpower</Original>
+						<Original>Supplies</Original>
 						<French>Effectifs</French>
-						<German>Besatzung</German>
+						<German>Nachschub</German>
 						<Spanish>Efectivos</Spanish>
 						<Russian>Персонал</Russian>
 						<Italian>Personale</Italian>
@@ -118,7 +121,7 @@
 				<Key ID="STR_FUEL">
 						<Original>Fuel</Original>
 						<French>Carburant</French>
-						<German>Treibstoff</German>
+						<German>Kraftstoff</German>
 						<Spanish>Combustible</Spanish>
 						<Russian>Топливо</Russian>
 						<Italian>Carburante</Italian>
@@ -212,20 +215,20 @@
 						<Italian>-- ARSENALE --</Italian>
 				</Key>
 				<Key ID="STR_ACTION_LOAD_BOX">
-						<Original>-- LOAD AMMO BOX</Original>
+						<Original>-- LOAD CRATE</Original>
 						<French>-- CHARGER MUNITIONS</French>
-						<German>-- MUNITIONSKISTE AUFLADEN</German>
+						<German>-- KISTE AUFLADEN</German>
 						<Spanish>-- CARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
-						<Italian>-- CARICA CASSA MUNIZIONI</Italian>
+						<Italian>-- CARICA CASSA</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNLOAD_BOX">
-						<Original>-- UNLOAD AMMO BOXES</Original>
+						<Original>-- UNLOAD CRATES</Original>
 						<French>-- DECHARGER MUNITIONS</French>
-						<German>-- MUNITIONSKISTE ABLADEN</German>
+						<German>-- KISTEN ABLADEN</German>
 						<Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
-						<Italian>-- SCARICA CASSA MUNIZIONI</Italian>
+						<Italian>-- SCARICA CASSA</Italian>
 				</Key>
 				<Key ID="STR_BOX_LOADED">
 						<Original>Ammo box successfully loaded on the transport vehicle.</Original>
@@ -3183,6 +3186,56 @@
 						<Original>Mobile arsenal</Original>
 						<German>Mobiles Arsenal</German>
 						<Italian>Arsenale Mobile</Italian>
+				</Key>
+				
+				<!-- Added in v0.95 -->
+				<Key ID="STR_INDIV_FLAG">
+						<Original>Killah Potatoes flag</Original>
+						<German>Killah Potatoes Flagge</German>
+				</Key>
+				<Key ID="STR_SMALL_STORAGE">
+						<Original>Small storage area</Original>
+						<German>Kleine Lagerfläche</German>
+				</Key>
+				<Key ID="STR_LARGE_STORAGE">
+						<Original>Large storage area</Original>
+						<German>Große Lagerfläche</German>
+				</Key>
+				<Key ID="STR_RECYCLE_BUILDING">
+						<Original>Dismantling building</Original>
+						<German>Demontageeinrichtung</German>
+				</Key>
+				<Key ID="STR_HELI_BUILDING">
+						<Original>Air Traffic Control</Original>
+						<German>Luftraumüberwachungsstation</German>
+				</Key>
+				<Key ID="STR_HELI_SLOT">
+						<Original>Helipad</Original>
+						<German>Helikopterlandeplatz</German>
+				</Key>
+				<Key ID="STR_PLANE_SLOT">
+						<Original>Tent Plane Hangar</Original>
+						<German>Hangarzelt</German>
+				</Key>
+				<Key ID="STR_BOX_CANTSTORE">
+						<Original>There is no free storage area nearby.</Original>
+						<German>Keine freie Lagerfläche in der Nähe.</German>
+				</Key>
+				<Key ID="STR_ACTION_STORE_CRATE">
+						<Original>-- STORE CRATE</Original>
+						<German>-- KISTE EINLAGERN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
+						<Original>-- UNLOAD SUPPLY CRATE</Original>
+						<German>-- NACHSCHUB ABLADEN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_AMMO">
+						<Original>-- UNLOAD AMMO CRATE</Original>
+						<German>-- MUNITION ABLADEN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_FUEL">
+						<Original>-- UNLOAD FUEL CRATE</Original>
+						<German>-- KRAFTSTOFF ABLADEN</German>
 				</Key>
 		</Package>
 </Project>
