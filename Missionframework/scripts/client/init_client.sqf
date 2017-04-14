@@ -67,3 +67,5 @@ player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\mis
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\intro.sqf";
 
 [] execVM "onPlayerRespawn.sqf";
+
+[player] joinSilent (createGroup GRLIB_side_friendly);
