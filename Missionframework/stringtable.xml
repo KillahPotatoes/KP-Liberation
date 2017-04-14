@@ -4,7 +4,7 @@
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation Altis v0.94</Original>
 						<German>KP Liberation Altis v0.94</German>
-						<Italian>KP Liberation Altis v0.94</Italian><!-- Italian translation made by kaso2mod for info and tips casinilorenzo@protonmail.com -->
+						<Italian>KP Liberation Altis v0.94</Italian><!-- Italian translation made by kaso2mod for info,tips,issue casinilorenzo@protonmail.com -->
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
 						<Original>v0.94</Original>
@@ -336,7 +336,7 @@
 						<German>Einsetzen</German>
 						<Spanish>Desplegar</Spanish>
 						<Russian>РАЗМЕСТИТЬ</Russian>
-						<Italian>Schiera</Italian>
+						<Italian>Schierati</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_ACTION">
 						<Original>-- REDEPLOY --</Original>
@@ -2749,7 +2749,7 @@
 						<Italian>&lt;br/&gt;
 						Per costruire una nuova FOB, andare nel menu di costruzione, nella scheda della logistica, e costruire un container FOB o un camion FOB (la stessa cosa, solo con le ruote).&lt;br/&gt; &lt;br/&gt;
 						Quindi è possibile spostare il container FOB dove si desidera creare la nuova FOB. Tuttavia bisogna essere consapevoli che non si può costruire una FOB all'interno di un settore di controllo, o nel raggio di 2 KM da qualsiasi altra FOB.&lt;br/&gt; &lt;br/&gt;
-						<Iitalian>
+					  </Iitalian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE9">
 						<Original>9. Secondary objectives</Original>
