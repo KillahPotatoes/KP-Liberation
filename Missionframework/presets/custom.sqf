@@ -219,8 +219,7 @@ support_vehicles_extension = [
 	["rhsusf_M977A4_AMMO_usarmy_wd",10,100,10],
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,20],
-	["B_Slingload_01_Ammo_F",5,80,0],
-	[KP_liberation_ammo_crate,0,154,0]
+	["B_Slingload_01_Ammo_F",5,80,0]
 ];
 
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Liberation">
 		<Package name="Liberation">
+				<!-- French localization made by zbug: https://github.com/GreuhZbug -->
+				<!-- German localization made by Wyqer: https://github.com/Wyqer -->
+				<!-- Italian localization made by kaso2mod: https://github.com/kaso2mod -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation Altis v0.95</Original>
 						<German>KP Liberation Altis v0.95</German>
+						<Italian>KP Liberation Altis v0.95</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
 						<Original>v0.95</Original>
 						<German>v0.95</German>
+						<Italian>v0.95</Italian>
 				</Key>
 				<Key ID="STR_MISSION_DESCRIPTION">
 						<Original>Free Altis from the OPFOR forces with the power of freedom and democracy.</Original>
@@ -15,6 +20,7 @@
 						<German>Befreie Altis von der OPFOR-Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
 						<Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
 						<Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
+						<Italian>Libera Altis dagli OPFOR con il potere della libertà e della democrazia.</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -22,6 +28,7 @@
 						<German>Bereitstellen</German>
 						<Spanish>Despliegue</Spanish>
 						<Russian>Развёртывание</Russian>
+						<Italian>Schierati</Italian>
 				</Key>
 				<Key ID="STR_Deploy_InProgress">
 						<Original>Deployment in progress ...</Original>
@@ -29,6 +36,7 @@
 						<German>Bereitstellung in Arbeit</German>
 						<Spanish>Despliegue en curso ...</Spanish>
 						<Russian>Развёртывание в процессе ...</Russian>
+						<Italian>Schieramento in Corso ...</Italian>
 				</Key>
 				<Key ID="STR_CLOSE">
 						<Original>Close</Original>
@@ -36,6 +44,7 @@
 						<German>Schliessen</German>
 						<Spanish>Cerca</Spanish>
 						<Russian>Закрыть</Russian>
+						<Italian>Chiudi</Italian>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic1">
 						<Original>I need a medic!</Original>
@@ -43,6 +52,7 @@
 						<German>Ich brauche einen Sanitäter!</German>
 						<Spanish>¡Necesito un médico!</Spanish>
 						<Russian>Мне нужен медик!</Russian>
+						<Italian>Ho bisogno di un medico!</Italian>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic2">
 						<Original>I'm hit! Medic!</Original>
@@ -50,6 +60,7 @@
 						<German>Wurde getroffen! Sanitäter!</German>
 						<Spanish>Herido! Médico!</Spanish>
 						<Russian>Меня подстрелили! Медик!</Russian>
+						<Italian>Mi hanno colpito! Medico!</Italian>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic3">
 						<Original>I'm down! Medic!</Original>
@@ -57,6 +68,7 @@
 						<German>Ich bin gefallen! Sanitäter!</German>
 						<Spanish>Estoy abatido! Médico!</Spanish>
 						<Russian>Я ранен! Медик!</Russian>
+						<Italian>Sono a terra! Medico!</Italian>
 				</Key>
 				<Key ID="STR_REVIVE_LABEL">
 						<Original>YOU ARE WOUNDED</Original>
@@ -64,6 +76,7 @@
 						<German>DU BIST VERWUNDET</German>
 						<Spanish>ESTAS HERIDO</Spanish>
 						<Russian>ВЫ БЕЗ СОЗНАНИЯ</Russian>
+						<Italian>SEI STATO UCCISO</Italian>
 				</Key>
 				<Key ID="STR_BUILD_ACTION">
 						<Original>-- BUILD --</Original>
@@ -71,6 +84,7 @@
 						<German>-- BAUEN --</German>
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
+						<Italian>-- COSTRUISCI --</Italian>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
@@ -78,6 +92,7 @@
 						<German>BAUMENUE</German>
 						<Spanish>MENU DE CONSTRUCCIÓN</Spanish>
 						<Russian>ОБЕСПЕЧЕНИЕ</Russian>
+						<Italian>MENU COSTRUZIONI</Italian>
 				</Key>
 				<Key ID="STR_BUILD_BUTTON">
 						<Original>Build</Original>
@@ -85,13 +100,15 @@
 						<German>Bauen</German>
 						<Spanish>Construir</Spanish>
 						<Russian>Построить</Russian>
+						<Italian>Costruisci</Italian>
 				</Key>
 				<Key ID="STR_MANPOWER">
-						<Original>Manpower</Original>
+						<Original>Supplies</Original>
 						<French>Effectifs</French>
-						<German>Besatzung</German>
+						<German>Nachschub</German>
 						<Spanish>Efectivos</Spanish>
 						<Russian>Персонал</Russian>
+						<Italian>Personale</Italian>
 				</Key>
 				<Key ID="STR_AMMO">
 						<Original>Ammunition</Original>
@@ -99,13 +116,15 @@
 						<German>Munition</German>
 						<Spanish>Munición</Spanish>
 						<Russian>Вооружение</Russian>
+						<Italian>Munizioni</Italian>
 				</Key>
 				<Key ID="STR_FUEL">
 						<Original>Fuel</Original>
 						<French>Carburant</French>
-						<German>Treibstoff</German>
+						<German>Kraftstoff</German>
 						<Spanish>Combustible</Spanish>
 						<Russian>Топливо</Russian>
+						<Italian>Carburante</Italian>
 				</Key>
 				<Key ID="STR_BLEEDOUT_MESSAGE">
 						<Original>Bleedout in %1 seconds</Original>
@@ -113,6 +132,7 @@
 						<German>Ausbluten in %1 Sekunden</German>
 						<Spanish>Desangrado en %1 segundos</Spanish>
 						<Russian>Вы умрёте через %1 секунд</Russian>
+						<Italian>Morte per dissanguamento fra %1 secondi</Italian>
 				</Key>
 				<Key ID="STR_BLEEDOUT_STABILIZED">
 						<Original>Stabilized</Original>
@@ -120,6 +140,7 @@
 						<German>Stabilisiert</German>
 						<Spanish>Estabilizado</Spanish>
 						<Russian>Стабильно</Russian>
+						<Italian>Stabilizzato</Italian>
 				</Key>
 				<Key ID="STR_ROTATION">
 						<Original>-- Rotation</Original>
@@ -127,6 +148,7 @@
 						<German>-- Rotieren</German>
 						<Spanish>-- Rotación</Spanish>
 						<Russian>-- Вращать</Russian>
+					  <Italian>-- Ruota</Italian>
 				</Key>
 				<Key ID="STR_PLACEMENT">
 						<Original>-- Build</Original>
@@ -134,6 +156,7 @@
 						<German>-- Bauen</German>
 						<Spanish>-- Construir</Spanish>
 						<Russian>-- Поставить</Russian>
+						<Italian>-- Costruisci</Italian>
 				</Key>
 				<Key ID="STR_PLACEMENT_BIS">
 						<Original>-- Build and Repeat</Original>
@@ -141,6 +164,7 @@
 						<German>-- Bauen und Wiederholen</German>
 						<Spanish>-- Construir y repetir</Spanish>
 						<Russian>-- Поставить и повторить</Russian>
+						<Italian>-- Costruisci e Ripeti</Italian>
 				</Key>
 				<Key ID="STR_CANCEL">
 						<Original>-- Cancel</Original>
@@ -148,6 +172,7 @@
 						<German>-- Abbrechen</German>
 						<Spanish>-- Cancelar</Spanish>
 						<Russian>-- Отмена</Russian>
+						<Italian>-- Annulla</Italian>
 				</Key>
 				<Key ID="STR_CANCEL_HINT">
 						<Original>Building canceled.</Original>
@@ -155,6 +180,7 @@
 						<German>Bauen abgebrochen.</German>
 						<Spanish>Construcción cancelada</Spanish>
 						<Russian>Постройка отменена</Russian>
+						<Italian>Costruzione cancellata.</Italian>
 				</Key>
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
@@ -162,6 +188,7 @@
 						<German>Bauen bestaetigt.</German>
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
+						<Italian>Costruzione confermata.</Italian>
 				</Key>
 				<Key ID="STR_PLACEMENT_IMPOSSIBLE">
 						<Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -169,6 +196,7 @@
 						<German>Kann hier nicht platziert werden: %1 Objekt(e) innerhalb von %2 Meter der Position</German>
 						<Spanish>Imposible de colocar aqui: hay 1% objeto(s) a %2 metros de la posición del objeto</Spanish>
 						<Russian>Нельзя разместить здесь:  в %2 метрах есть 1% объект(а).</Russian>
+						<Italian>impossibile piazzare qui: ci sono %1 oggetti vicini %2 metri dalla posizione dell'oggetto in costruzione</Italian>
 				</Key>
 				<Key ID="STR_PLACEMENT_POSSIBLE">
 						<Original>This position is valid.</Original>
@@ -176,6 +204,7 @@
 						<German>Diese Position ist gültig.</German>
 						<Spanish>Esta posición es válida</Spanish>
 						<Russian>Это место подходит.</Russian>
+						<Italian>Questa posizione è valida</Italian>
 				</Key>
 				<Key ID="STR_ARSENAL_ACTION">
 						<Original>-- ARSENAL --</Original>
@@ -183,20 +212,23 @@
 						<German>-- ARSENAL --</German>
 						<Spanish>-- ARSENAL --</Spanish>
 						<Russian>-- АРСЕНАЛ --</Russian>
+						<Italian>-- ARSENALE --</Italian>
 				</Key>
 				<Key ID="STR_ACTION_LOAD_BOX">
-						<Original>-- LOAD AMMO BOX</Original>
+						<Original>-- LOAD CRATE</Original>
 						<French>-- CHARGER MUNITIONS</French>
-						<German>-- MUNITIONSKISTE AUFLADEN</German>
+						<German>-- KISTE AUFLADEN</German>
 						<Spanish>-- CARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
+						<Italian>-- CARICA CASSA</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNLOAD_BOX">
-						<Original>-- UNLOAD AMMO BOXES</Original>
+						<Original>-- UNLOAD CRATES</Original>
 						<French>-- DECHARGER MUNITIONS</French>
-						<German>-- MUNITIONSKISTE ABLADEN</German>
+						<German>-- KISTEN ABLADEN</German>
 						<Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
+						<Italian>-- SCARICA CASSA</Italian>
 				</Key>
 				<Key ID="STR_BOX_LOADED">
 						<Original>Ammo box successfully loaded on the transport vehicle.</Original>
@@ -204,6 +236,7 @@
 						<German>Munitionskiste erfolgreich auf das Transportfahrzeug aufgeladen.</German>
 						<Spanish>Caja de munición cargada correctamente en el vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами загружен в транспортное средство</Russian>
+						<Italian>Cassa munizioni correttamente caricata sul camion da trasporto</Italian>
 				</Key>
 				<Key ID="STR_BOX_UNLOADED">
 						<Original>Ammo box successfully unloaded from the transport vehicle.</Original>
@@ -211,6 +244,7 @@
 						<German>Munitionskiste erfolgreich vom Transportfahrzeug abgeladen.</German>
 						<Spanish>Caja de munición descargada correctamente del vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами выгружен из транспортного средства</Russian>
+						<Italian>Cassa munizioni correttamente scaricata dal camion da trasporto</Italian>
 				</Key>
 				<Key ID="STR_BOX_CANTLOAD">
 						<Original>There is no nearby vehicle capable of carrying the ammo box.</Original>
@@ -218,6 +252,7 @@
 						<German>Kein Fahrzeug in der Nähe, das die Munitionskiste tragen kann.</German>
 						<Spanish>No hay ningún vehículo cercano capaz de cagar la caja de munición</Spanish>
 						<Russian>Рядом нет техники способной перевозить ящики с боеприпасами.</Russian>
+						<Italian>Non ci sono veicoli vicino alla cassa munizioni capaci di caricarla</Italian>
 				</Key>
 				<Key ID="STR_FOB_ACTION">
 						<Original>-- DEPLOY FOB --</Original>
@@ -225,6 +260,7 @@
 						<German>-- FOB Bereitstellen --</German>
 						<Spanish>-- DESPLEGAR FOB --</Spanish>
 						<Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
+						<Italian>-- COSTRUISCI FOB --</Italian>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
@@ -232,6 +268,7 @@
 						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das naechste FOB ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
+						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
@@ -239,6 +276,7 @@
 						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die naechste Zone ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшиая зона в %2 метрах.</Russian>
+						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
 				</Key>
 				<Key ID="STR_BUILD_ERROR_WATER">
 						<Original>Can't build on water.</Original>
@@ -246,6 +284,7 @@
 						<German>Kann nicht auf Wasser gebaut werden.</German>
 						<Spanish>Imposible construir sobre el agua.</Spanish>
 						<Russian>Нельзя построить в воде.</Russian>
+						<Italian>Impossibile costruire sull'acqua.</Italian>
 				</Key>
 				<Key ID="STR_BUILD_ERROR_DISTANCE">
 						<Original>Can't build further than %1 meters away from the FOB.</Original>
@@ -253,6 +292,7 @@
 						<German>Kann nicht weiter als %1 Meter von der FOB entfernt sein.</German>
 						<Spanish>Imposible construir más lejos de %1 metros de la FOB</Spanish>
 						<Russian>Нельзя построить дальше чем  в %1 метрах от FOB.</Russian>
+						<Italian>Impossibile costruire a più di %1 metri dalla FOB.</Italian>
 				</Key>
 				<Key ID="STR_FOBBOX">
 						<Original>FOB Container</Original>
@@ -267,6 +307,7 @@
 						<German>FOB Lastwagen</German>
 						<Spanish>Camión de FOB</Spanish>
 						<Russian>FOB грузовик </Russian>
+						<Italian>Camion FOB</Italian>
 				</Key>
 				<Key ID="STR_RESPAWN_TRUCK">
 						<Original>Mobile respawn</Original>
@@ -274,6 +315,7 @@
 						<German>Mobiler Respawn</German>
 						<Spanish>Respawn móvil</Spanish>
 						<Russian>Мобильная КШМ</Russian>
+						<Italian>Respawn Mobile</Italian>
 				</Key>
 				<Key ID="STR_ARSENAL_BOX">
 						<Original>Arsenal box</Original>
@@ -281,6 +323,7 @@
 						<German>Arsenalkiste</German>
 						<Spanish>Caja de Arsenal</Spanish>
 						<Russian>Ящик с арсеналом</Russian>
+						<Italian>Cassa Arsenale</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_TITLE">
 						<Original>DEPLOYMENT</Original>
@@ -288,6 +331,7 @@
 						<German>EINSATZ</German>
 						<Spanish>DESPLIEGUE</Spanish>
 						<Russian>ДИСЛОКАЦИЯ</Russian>
+						<Italian>SCHIERAMENTO</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_BUTTON">
 						<Original>Deploy</Original>
@@ -295,6 +339,7 @@
 						<German>Einsetzen</German>
 						<Spanish>Desplegar</Spanish>
 						<Russian>РАЗМЕСТИТЬ</Russian>
+						<Italian>Schierati</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_ACTION">
 						<Original>-- REDEPLOY --</Original>
@@ -302,6 +347,7 @@
 						<German>-- NEU EINSETZEN --</German>
 						<Spanish>-- REDESPLEGAR --</Spanish>
 						<Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
+						<Italian>-- RISCHIERAMENTO --</Italian>
 				</Key>
 				<Key ID="STR_BUILD_CREW">
 						<Original>Build (Crew)</Original>
@@ -309,6 +355,7 @@
 						<German>Bauen (Besatzung)</German>
 						<Spanish>Construir (Equipo)</Spanish>
 						<Russian>Создать (Экипаж)</Russian>
+						<Italian>Crea Equipaggio</Italian>
 				</Key>
 				<Key ID="STR_LIGHT_RIFLE_SQUAD">
 						<Original>Light Rifle Squad</Original>
@@ -316,7 +363,7 @@
 						<German>Leichter Waffentrupp</German>
 						<Spanish>Escuadra de fusileros ligeros</Spanish>
 						<Russian>Легкий Стрелковый Отряд</Russian>
-
+						<Italian>Squadra Fucilieri Leggeri</Italian>
 						</Key>
 				<Key ID="STR_RIFLE_SQUAD">
 						<Original>Heavy Rifle Squad</Original>
@@ -324,6 +371,7 @@
 						<German>Schwerer Waffentrupp</German>
 						<Spanish>Escuadra de fusileros pesados</Spanish>
 						<Russian>Тяжёлый Стрелковый Отряд</Russian>
+						<Italian>Squadra Fucilieri Pesanti</Italian>
 				</Key>
 				<Key ID="STR_AT_SQUAD">
 						<Original>AT Squad</Original>
@@ -331,6 +379,7 @@
 						<German>Panzerbekaempfungstrupp</German>
 						<Spanish>Escuadra Antitanque</Spanish>
 						<Russian>Отряд ПТ</Russian>
+						<Italian>Squadra Anticarro</Italian>
 				</Key>
 				<Key ID="STR_AA_SQUAD">
 						<Original>AA Squad</Original>
@@ -338,6 +387,7 @@
 						<German>Luftabwehrtrupp</German>
 						<Spanish>Escuadra Antiaérea</Spanish>
 						<Russian>Отряд ПВО</Russian>
+						<Italian>Squadra Antiaerea</Italian>
 				</Key>
 				<Key ID="STR_RECON_SQUAD">
 						<Original>Recon Squad</Original>
@@ -345,6 +395,7 @@
 						<German>Aufklaerungstrupp</German>
 						<Spanish>Escuadra de reconocimiento</Spanish>
 						<Russian>Отряд Разведчиков</Russian>
+						<Italian>Squadra Ricognitori</Italian>
 				</Key>
 				<Key ID="STR_PARA_SQUAD">
 						<Original>Paratroopers Squad</Original>
@@ -352,6 +403,7 @@
 						<German>Fallschirmjaegertrupp</German>
 						<Spanish>Escuadra de paracaidistas</Spanish>
 						<Russian>Отряд Десантников</Russian>
+						<Italian>Squadra Paracadutisti</Italian>
 				</Key>
 				<Key ID="STR_UNITCAP">
 						<Original>Unit cap</Original>
@@ -359,6 +411,7 @@
 						<German>Einheitenbegrenzung</German>
 						<Spanish>Límite de unidades</Spanish>
 						<Russian>Мобилизованных</Russian>
+						<Italian>Limite delle Unità</Italian>
 				</Key>
 				<Key ID="STR_WIPE_TITLE">
 						<Original>Wipe savegame</Original>
@@ -366,6 +419,7 @@
 						<German>Spielstand loeschen</German>
 						<Spanish>Borrar partida guardada</Spanish>
 						<Russian>Удалить сохранённый прогресс</Russian>
+						<Italian>Elimina Salvataggi</Italian>
 				</Key>
 				<Key ID="STR_WIPE_TITLE_2">
 						<Original>Confirm : wipe savegame</Original>
@@ -373,6 +427,7 @@
 						<German>Bestätige: Spielstand loeschen</German>
 						<Spanish>Confirmar : Borrar partida guardada</Spanish>
 						<Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
+						<Italian>Confermare : Elimina Salvataggi</Italian>
 				</Key>
 				<Key ID="STR_WIPE_NO">
 						<Original>No</Original>
@@ -380,6 +435,7 @@
 						<German>Nein</German>
 						<Spanish>No</Spanish>
 						<Russian>Нет</Russian>
+						<Italian>No</Italian>
 				</Key>
 				<Key ID="STR_WIPE_YES">
 						<Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
@@ -387,6 +443,7 @@
 						<German>!! SPIELSTAND WIRD GELOESCHT, KEIN WIEDERHERSTELLEN MOEGLICH !!</German>
 						<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
 						<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
+						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO</Italian>
 				</Key>
 				<Key ID="STR_UNFLIP">
 						<Original>-- UNFLIP</Original>
@@ -394,6 +451,7 @@
 						<German>-- UMDREHEN</German>
 						<Spanish>-- RECOLOCAR VEHÍCULO</Spanish>
 						<Russian>-- ПЕРЕВЕРНУТЬ</Russian>
+						<Italian>-- RIADDRIZZA</Italian>
 				</Key>
 				<Key ID="STR_GRID">
 						<Original>-- Grid mode</Original>
@@ -401,6 +459,7 @@
 						<German>-- Rastermodus</German>
 						<Spanish>-- Modo rejilla</Spanish>
 						<Russian>-- Режим сетки</Russian>
+						<Italian>-- Modalità Griglia</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_CAPTURE">
 						<Original>-- CAPTURE</Original>
@@ -408,6 +467,7 @@
 						<German>-- GEFANGENNEHMEN</German>
 						<Spanish>-- CAPTURAR</Spanish>
 						<Russian>-- ЗАХВАТИТЬ</Russian>
+						<Italian>-- CATTURA</Italian>
 				</Key>
 				<Key ID="STR_SQUAD_MEMBER">
 						<Original>Squad member</Original>
@@ -415,6 +475,7 @@
 						<German>Truppenmitglieder</German>
 						<Spanish>Miembro de escuadra</Spanish>
 						<Russian>Член отряда</Russian>
+						<Italian>Membri Squadra</Italian>
 				</Key>
 				<Key ID="STR_SPAWN_NEAR">
 						<Original>Near</Original>
@@ -422,6 +483,7 @@
 						<German>Nah</German>
 						<Spanish>Cerca</Spanish>
 						<Russian>Рядом</Russian>
+						<Italian>Vicino</Italian>
 				</Key>
 				<Key ID="STR_RECYCLE">
 						<Original>-- RECYCLE</Original>
@@ -429,6 +491,7 @@
 						<German>-- WIEDERVERWERTEN</German>
 						<Spanish>-- RECICLAR</Spanish>
 						<Russian>-- УТИЛИЗИРОВАТЬ</Russian>
+						<Italian>-- RICICLA</Italian>
 				</Key>
 				<Key ID="STR_RECYCLING">
 						<Original>Recycling</Original>
@@ -436,6 +499,7 @@
 						<German>Wiederverwerten</German>
 						<Spanish>Reciclando</Spanish>
 						<Russian>Утилизация</Russian>
+						<Italian>Riciclando</Italian>
 				</Key>
 				<Key ID="STR_RECYCLING_YIELD">
 						<Original>Recycling this %1 will yield:</Original>
@@ -443,6 +507,7 @@
 						<German>Das Wiederverwerten wird dir %1 erstatten:</German>
 						<Spanish>Reciclando este %1 obtienes:</Spanish>
 						<Russian>Утилизируя %1 получим </Russian>
+						<Italian>Riciclando questo %1 otterrai:</Italian>
 				</Key>
 				<Key ID="STR_RECYCLING_PROCEED">
 						<Original>Recycle</Original>
@@ -450,6 +515,7 @@
 						<German>Wiederverwerten</German>
 						<Spanish>Reciclar</Spanish>
 						<Russian>Утилизировать</Russian>
+						<Italian>Riciclato</Italian>
 
 				</Key>
 				<Key ID="STR_RECYCLING_CANCEL">
@@ -458,6 +524,7 @@
 						<German>Abbrechen</German>
 						<Spanish>Cancelar</Spanish>
 						<Russian>Отмена</Russian>
+						<Italian>Annulla</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORCAPTURED_TITLE">
 						<Original>SECTOR CAPTURED</Original>
@@ -465,6 +532,7 @@
 						<German>SEKTOR EINGENOMMEN</German>
 						<Spanish>SECTOR CAPTURADO</Spanish>
 						<Russian>ЗОНА ЗАХВАЧЕНА</Russian>
+						<Italian>SETTORE CATTURATO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORCAPTURED_TEXT">
 						<Original>Our forces have captured %1.</Original>
@@ -472,6 +540,7 @@
 						<German>Unsere Truppen haben %1 eingenommen.</German>
 						<Spanish>Nuestras fuerzas han capturado %1</Spanish>
 						<Russian>Наши войска захватили %1.</Russian>
+						<Italian>Le nostre unità hanno catturato %1</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORATTACKED_TITLE">
 						<Original>SECTOR ATTACKED</Original>
@@ -479,6 +548,7 @@
 						<German>SEKTOR ANGEGRIFFEN</German>
 						<Spanish>SECTOR ATACADO</Spanish>
 						<Russian>ЗОНА АТАКОВАНА</Russian>
+						<Italian>SETTORE SOTTO ATTACCO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORATTACKED_TEXT">
 						<Original>Hostiles forces are attacking %1!</Original>
@@ -486,6 +556,7 @@
 						<German>Gegnerische Truppen greifen %1 an!</German>
 						<Spanish>Fuerzas hostiles están atacando %1</Spanish>
 						<Russian>Вражеские силы атакуют %1!</Russian>
+						<Italian>Forze ostili attaccano %1!</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORLOST_TITLE">
 						<Original>SECTOR LOST</Original>
@@ -493,6 +564,7 @@
 						<German>SEKTOR VERLOREN</German>
 						<Spanish>SECTOR PERDIDO</Spanish>
 						<Russian>ЗОНА ПОТЕРЯНА</Russian>
+						<Italian>SETTORE PERSO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORLOST_TEXT">
 						<Original>We have lost control over %1!</Original>
@@ -500,6 +572,7 @@
 						<German>Wir haben die Kontrolle ueber %1 verloren!</German>
 						<Spanish>Hemos perdido el control sobre %1!</Spanish>
 						<Russian>Мы потеряли контроль над %1!</Russian>
+						<Italian>Abbiamo perso il controllo di %1!</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORSAFE_TITLE">
 						<Original>SECTOR SAFE</Original>
@@ -507,6 +580,7 @@
 						<German>SEKTOR SICHER</German>
 						<Spanish>SECTOR SEGURO</Spanish>
 						<Russian>ЗОНА В БЕЗОПАСНОСТИ</Russian>
+						<Italian>SETTORE AL SICURO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORSAFE_TEXT">
 						<Original>%1 is no longer under threat.</Original>
@@ -514,6 +588,7 @@
 						<German>%1 ist ausser Gefahr.</German>
 						<Spanish>%1 ya no está bajo amenaza.</Spanish>
 						<Russian>%1 больше не под угрозой.</Russian>
+						<Italian>%1 non è più sotto attacco.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBBUILT_TITLE">
 						<Original>NEW FOB BUILT</Original>
@@ -521,6 +596,7 @@
 						<German>NEUE FOB GEBAUT</German>
 						<Spanish>NUEVA FOB CONSTRUIDA</Spanish>
 						<Russian>НОВАЯ FOB ПОСТРОЕНА</Russian>
+						<Italian>NUOVA FOB COSTRUITA</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBBUILT_TEXT">
 						<Original>FOB %1 is now operational.</Original>
@@ -528,6 +604,7 @@
 						<German>FOB %1 nun funktionsfähig.</German>
 						<Spanish>La FOB %1 es operacional</Spanish>
 						<Russian>FOB %1 сейчас действует.</Russian>
+						<Italian>La FOB %1 è operativa.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBSAFE_TITLE">
 						<Original>FOB SAFE</Original>
@@ -535,6 +612,7 @@
 						<German>FOB SICHER</German>
 						<Spanish>FOB SEGURA</Spanish>
 						<Russian>FOB В БЕЗОПАСНОСТИ</Russian>
+						<Italian>FOB AL SICURO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBSAFE_TEXT">
 						<Original>FOB %1 is no longer under threat.</Original>
@@ -542,6 +620,7 @@
 						<German>FOB %1 ist ausser Gefahr.</German>
 						<Spanish>FOB %1 ya no está bajo amenaza</Spanish>
 						<Russian>FOB %1 больше не находится под угрозой.</Russian>
+						<Italian>La FOB %1 non è più in pericolo.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBATTACKED_TITLE">
 						<Original>FOB ATTACKED</Original>
@@ -549,6 +628,7 @@
 						<German>FOB ANGEGRIFFEN</German>
 						<Spanish>FOB ATACADA</Spanish>
 						<Russian>FOB АТАКОВАНА</Russian>
+						<Italian>FOB SOTTO ATTACCO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBATTACKED_TEXT">
 						<Original>FOB %1 is under attack!</Original>
@@ -556,6 +636,7 @@
 						<German>FOB %1 wird angegriffen !</German>
 						<Spanish>FOB %1 está bajo ataque!</Spanish>
 						<Russian>FOB %1 атакована!</Russian>
+						<Italian>la FOB %1 è sotto attacco!</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBLOST_TITLE">
 						<Original>FOB DESTROYED</Original>
@@ -563,6 +644,7 @@
 						<German>FOB ZERSTOERT</German>
 						<Spanish>FOB DESTRUIDA</Spanish>
 						<Russian>FOB УНИЧТОЖЕНА</Russian>
+						<Italian>FOB DISTRUTTA</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBLOST_TEXT">
 						<Original>FOB %1 has been destroyed!</Original>
@@ -570,6 +652,7 @@
 						<German>FOB %1 wurde zerstoert!</German>
 						<Spanish>La FOB %1 ha sido destruida!</Spanish>
 						<Russian>FOB %1 была уничтожена!</Russian>
+						<Italian>La FOB %1 è stata distrutta!</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_BATTLEGROUP_TITLE">
 						<Original>HOSTILE FORCES INCOMING</Original>
@@ -577,6 +660,7 @@
 						<German>GEGNERISCHE TRUPPEN TREFFEN EIN</German>
 						<Spanish>FUERZAS HOSTILES ACERCÁNDOSE</Spanish>
 						<Russian>ПОДХОДЯТ ВРАЖЕСКИЕ СИЛЫ</Russian>
+						<Italian>FORZE OSTILI IN ARRIVO</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_BATTLEGROUP_TEXT">
 						<Original>Hostile forces spotted near %1.</Original>
@@ -584,6 +668,7 @@
 						<German>Gegnerische Truppen nahe %1 gesichtet.</German>
 						<Spanish>Fuerzas hosstiles avistadas cerca de %1</Spanish>
 						<Russian>Вражеские силы замечены рядом с %1.</Russian>
+						<Italian>Forze ostili avvistate vicino %1</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_INTEL_TITLE">
 						<Original>NEW INTELLIGENCE</Original>
@@ -591,6 +676,7 @@
 						<German>NEUE INFORMATIONEN</German>
 						<Spanish>NUEVA INTELIGENCIA</Spanish>
 						<Russian>НОВЫЕ РАЗВЕДДАННЫЕ</Russian>
+						<Italian>NUOVO INTEL</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOB_TEXT">
 						<Original>Hostile FOB near %1.</Original>
@@ -598,6 +684,7 @@
 						<German>Gegnerische FOB nahe %1.</German>
 						<Spanish>FOB hostil cerca de %1</Spanish>
 						<Russian>Вражеская FOB рядом %1.</Russian>
+						<Italian>FOB ostile vicino %1.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_PRISONER_TEXT">
 						<Original>We have interrogated a prisoner.</Original>
@@ -605,6 +692,7 @@
 						<German>Wir haben einen Gefangenen verhört.</German>
 						<Spanish>Hemos interrogado a un prisionero.</Spanish>
 						<Russian>Мы можем допросить пленного.</Russian>
+						<Italian>Abbiamo interrogato il prigioniero.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_DOCUMENT_TEXT">
 						<Original>We have found secret documents.</Original>
@@ -612,6 +700,7 @@
 						<German>Wir haben geheime Dokumente gefunden.</German>
 						<Spanish>Hemos encontrado documentos secretos</Spanish>
 						<Russian>Мы нашли секретные документы.</Russian>
+						<Italian>Abbiamo trovato dei documenti segreti.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECONDARY_TITLE">
 						<Original>SECONDARY OBJECTIVE</Original>
@@ -619,6 +708,7 @@
 						<German>SEKUNDAERZIEL</German>
 						<Spanish>OBJETIVO SECUNDARIO</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА</Russian>
+						<Italian>OBIETTIVI SECONDARI</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
 						<Original>Hostile FOB destroyed</Original>
@@ -626,6 +716,7 @@
 						<German>Gegnerische FOB zerstoert.</German>
 						<Spanish>FOB hostil destruída</Spanish>
 						<Russian>Вражеская FOB уничтожена</Russian>
+						<Italian>FOB ostile distrutta.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TITLE">
 						<Original>HOSTILE REINFORCEMENTS</Original>
@@ -633,6 +724,7 @@
 						<German>GEGNERISCHER NACHSCHUB</German>
 						<Spanish>REFUERZOS HOSTILES</Spanish>
 						<Russian>ВРАЖЕСКОЕ ПОДКРЕПЛЕНИЕ</Russian>
+						<Italian>RINFORZI OSTILI</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TEXT">
 						<Original>Hostile forces reinforcing %1.</Original>
@@ -640,6 +732,7 @@
 						<German>Gegnerische Truppen verstaerken %1.</German>
 						<Spanish>Fuerzas hostiles reforzando %1</Spanish>
 						<Russian>Вражеские подкрепления подходят в %1.</Russian>
+						<Italian>Forze ostili rinforzano le truppe su %1</Italian>
 				</Key>
 				<Key ID="STR_VICTORY_TITLE">
 						<Original>BLUFOR VICTORY</Original>
@@ -647,13 +740,15 @@
 						<German>BLUFOR SIEGREICH</German>
 						<Spanish>VICTORIA DE BLUFOR</Spanish>
 						<Russian>СИНИЕ ПОБЕДИЛИ</Russian>
+						<Italian>VITTORIA PER I BLUFOR</Italian>
 				</Key>
 				<Key ID="STR_VICTORY_TEXT">
-						<Original>You have liberated Altis from the OPFOR oppression.</Original>
+						<Original>You have liberated the island from the OPFOR oppression.</Original>
 						<French>Vous avez libéré Altis de l'oppression de l'OPFOR.</French>
 						<German>Du hast Altis von der OPFOR Besatzung befreit.</German>
 						<Spanish>Has liberado a Altis de la opresión del OPFOR</Spanish>
 						<Russian>Вы освободили Алтис от оккупации OPFOR.</Russian>
+						<Italian>Siete riusciti a liberare l'isola dall'oppressione degli OPFOR</Italian>
 				</Key>
 				<Key ID="STR_STATS_DAY">
 						<Original>days</Original>
@@ -661,6 +756,7 @@
 						<German>Tage</German>
 						<Spanish>días</Spanish>
 						<Russian>дней</Russian>
+						<Italian>Giorni</Italian>
 				</Key>
 				<Key ID="STR_STATS_HOURS">
 						<Original>hours</Original>
@@ -668,6 +764,7 @@
 						<German>Stunden</German>
 						<Spanish>horas</Spanish>
 						<Russian>часов</Russian>
+						<Italian>Ore</Italian>
 				</Key>
 				<Key ID="STR_STATS_MINUTES">
 						<Original>minutes</Original>
@@ -675,6 +772,7 @@
 						<German>Minuten</German>
 						<Spanish>minutos</Spanish>
 						<Russian>минут</Russian>
+						<Italian>Minuti</Italian>
 				</Key>
 				<Key ID="STR_STATS_SECONDS">
 						<Original>seconds</Original>
@@ -682,6 +780,7 @@
 						<German>Sekunden</German>
 						<Spanish>segundos</Spanish>
 						<Russian>секунд</Russian>
+						<Italian>Secondi</Italian>
 				</Key>
 				<Key ID="STR_STATS_PLAYTIME">
 						<Original>Playtime:</Original>
@@ -689,6 +788,7 @@
 						<German>Spielzeit:</German>
 						<Spanish>Tiempo de juego:</Spanish>
 						<Russian>Игрового времени:</Russian>
+						<Italian>tempo di Gioco:</Italian>
 				</Key>
 				<Key ID="STR_STATS_1">
 						<Original>OPFOR infantry killed:</Original>
@@ -696,6 +796,7 @@
 						<German>OPFOR Einheit getoetet:</German>
 						<Spanish>Infantería OPFOR eliminada:</Spanish>
 						<Russian>OPFOR пехоты убито:</Russian>
+						<Italian>Fanteria OPFOR ha ucciso:</Italian>
 				</Key>
 				<Key ID="STR_STATS_2">
 						<Original>OPFOR infantry killed by players:</Original>
@@ -703,6 +804,7 @@
 						<German>OPFOR Infanterie von Spielern getoetet:</German>
 						<Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
 						<Russian>OPFOR пехоты убито игроками:</Russian>
+						<Italian>Fanteria OPFOR uccisa da:</Italian>
 				</Key>
 				<Key ID="STR_STATS_3">
 						<Original>BLUFOR infantry killed:</Original>
@@ -710,6 +812,7 @@
 						<German>BLUFOR Einheiten getoetet:</German>
 						<Spanish>Infantería BLUFOR eliminada:</Spanish>
 						<Russian>BLUFOR пехоты убито:</Russian>
+						<Italian>Fanteria BLUFOR ha ucciso:</Italian>
 				</Key>
 				<Key ID="STR_STATS_4">
 						<Original>Civilians killed:</Original>
@@ -717,6 +820,7 @@
 						<German>Zivilisten getoetet:</German>
 						<Spanish>Civiles asesinados:</Spanish>
 						<Russian>Гражданских убито:</Russian>
+						<Italian>Civile ha ucciso:</Italian>
 				</Key>
 				<Key ID="STR_STATS_5">
 						<Original>Civilians killed by players:</Original>
@@ -724,6 +828,7 @@
 						<German>Zivilisten von Spielern getoetet:</German>
 						<Spanish>Civiles asesinados por jugadores:</Spanish>
 						<Russian>Гражданских убито игроками:</Russian>
+						<Italian>Civile ucciso da:</Italian>
 				</Key>
 				<Key ID="STR_STATS_6">
 						<Original>BLUFOR friendly fire incidents:</Original>
@@ -731,6 +836,7 @@
 						<German>BLUFOR Verbuendetenbeschuss Faelle:</German>
 						<Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
 						<Russian>BLUFOR дружественный огонь:</Russian>
+						<Italian>Fuoco amico tra i BLUFOR:</Italian>
 				</Key>
 				<Key ID="STR_STATS_7">
 						<Original>OPFOR vehicles destroyed:</Original>
@@ -738,6 +844,7 @@
 						<German>OPFOR Fahrzeuge zerstoert:</German>
 						<Spanish>Vehículos OPFOR destruídos:</Spanish>
 						<Russian>OPFOR техники уничтожено:</Russian>
+						<Italian>Veicolo OPFOR distrutto:</Italian>
 				</Key>
 				<Key ID="STR_STATS_8">
 						<Original>OPFOR vehicles destroyed by players:</Original>
@@ -745,6 +852,7 @@
 						<German>OPFOR Fahrzeuge von Spielern zerstoert:</German>
 						<Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
 						<Russian>OPFOR техники уничтожено игроками:</Russian>
+						<Italian>Veicolo OPFOR distrutto da:</Italian>
 				</Key>
 				<Key ID="STR_STATS_9">
 						<Original>BLUFOR vehicles destroyed:</Original>
@@ -752,6 +860,7 @@
 						<German>BLUFOR Fahrzeuge zerstoert:</German>
 						<Spanish>Vehículos BLUFOR destruídos:</Spanish>
 						<Russian>BLUFOR техники уничтожено:</Russian>
+						<Italian>Veicolo BLUFOR distrutto:</Italian>
 				</Key>
 				<Key ID="STR_STATS_10">
 						<Original>BLUFOR vehicles built:</Original>
@@ -759,6 +868,7 @@
 						<German>BLUFOR Fahrzeuge gebaut:</German>
 						<Spanish>Vehículos BLUFOR construidos:</Spanish>
 						<Russian>BLUFOR техники построено:</Russian>
+						<Italian>Veicolo BLUFOR creato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_11">
 						<Original>Vehicles recycled:</Original>
@@ -766,6 +876,7 @@
 						<German>Fahrzeuge wiederaufbereitet:</German>
 						<Spanish>Vehículos reciclados:</Spanish>
 						<Russian>Техники утилизировано:</Russian>
+						<Italian>Veicolo riciclato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_12">
 						<Original>Ammunition units spent:</Original>
@@ -773,6 +884,7 @@
 						<German>Munitionseinheiten verbraucht:</German>
 						<Spanish>Unidades de munición gastadas:</Spanish>
 						<Russian>Единиц боеприпасов потрачено:</Russian>
+						<Italian>Punti munizione spesi:</Italian>
 				</Key>
 				<Key ID="STR_STATS_13">
 						<Original>Sectors liberated:</Original>
@@ -780,6 +892,7 @@
 						<German>Sektoren befreit:</German>
 						<Spanish>Sectores liberados:</Spanish>
 						<Russian>Зон освобождено:</Russian>
+						<Italian>Settore liberato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_14">
 						<Original>Sectors lost:</Original>
@@ -787,7 +900,7 @@
 						<German>Sektoren verloren:</German>
 						<Spanish>Sectores perdidos:</Spanish>
 						<Russian>Зон потеряно:</Russian>
-
+						<Italian>Settore perso:</Italian>
 				</Key>
 				<Key ID="STR_STATS_15">
 						<Original>FOBs built:</Original>
@@ -795,6 +908,7 @@
 						<German>FOBs gebaut:</German>
 						<Spanish>FOBs construídas:</Spanish>
 						<Russian>FOB построено:</Russian>
+						<Italian>FOB costruita:</Italian>
 				</Key>
 				<Key ID="STR_STATS_16">
 						<Original>FOBs lost:</Original>
@@ -802,6 +916,7 @@
 						<German>FOBs verloren:</German>
 						<Spanish>FOB perdidas:</Spanish>
 						<Russian>FOB потеряно:</Russian>
+						<Italian>FOB persa:</Italian>
 				</Key>
 				<Key ID="STR_STATS_17">
 						<Original>Secondary objectives accomplished:</Original>
@@ -809,6 +924,7 @@
 						<German>Sekundaerziele erreicht:</German>
 						<Spanish>Objetivos secundarios conseguidos:</Spanish>
 						<Russian>Вторичных заданий выполнено:</Russian>
+						<Italian>Obiettivo secondario completato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_18">
 						<Original>Prisonners captured:</Original>
@@ -816,6 +932,7 @@
 						<German>Gefangene gefasst:</German>
 						<Spanish>Prisioneros capturados:</Spanish>
 						<Russian>Пленных захвачено:</Russian>
+						<Italian>Prigionieri catturati:</Italian>
 				</Key>
 				<Key ID="STR_STATS_19">
 						<Original>Hostile battlegroups called:</Original>
@@ -823,7 +940,7 @@
 						<German>Gegnerische Truppen gerufen:</German>
 						<Spanish>Grupos hostiles de combate llamados:</Spanish>
 						<Russian>Вражеских боевых групп вызвано:</Russian>
-
+						<Italian>Battaglione ostile contattato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_20">
 						<Original>Hostile reinforcements called:</Original>
@@ -831,6 +948,7 @@
 						<German>Gegnerischen Nachschub gerufen:</German>
 						<Spanish>Refuerzos hostiles llamados:</Spanish>
 						<Russian>Враждебных подкреплений вызвано:</Russian>
+						<Italian>Chiamati rinforzi ostili:</Italian>
 				</Key>
 				<Key ID="STR_STATS_21">
 						<Original>Total combat readiness raised:</Original>
@@ -838,6 +956,7 @@
 						<German>Gesamte Kampfbereitschaft erhoeht:</German>
 						<Spanish>Disposición de combate total recaudada:</Spanish>
 						<Russian>Всего войск поднято по тревоге:</Russian>
+						<Italian>Disposizione al combattimento recuperata:</Italian>
 				</Key>
 				<Key ID="STR_STATS_22">
 						<Original>IEDs detonated:</Original>
@@ -845,6 +964,7 @@
 						<German>IEDs zur Explosion gebracht:</German>
 						<Spanish>IEDs detonados:</Spanish>
 						<Russian>Фугасов взорвано:</Russian>
+						<Italian>IED detonato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_23">
 						<Original>Number of Spartan 01 losses:</Original>
@@ -852,6 +972,7 @@
 						<German>Hoehe der Spartan 01 Verluste:</German>
 						<Spanish>Número de pérdidas de Spartan 01:</Spanish>
 						<Russian>Количество потерянных Spartan 01:</Russian>
+						<Italian>Numero di Spartan 01 persi :</Italian>
 				</Key>
 				<Key ID="STR_STATS_24">
 						<Original>Player deaths:</Original>
@@ -859,6 +980,7 @@
 						<German>Spielertode:</German>
 						<Spanish>Muertes del jugador:</Spanish>
 						<Russian>Смертей игрока:</Russian>
+						<Italian>Giocatori Deceduti:</Italian>
 				</Key>
 				<Key ID="STR_STATS_25">
 						<Original>Rabbits killed:</Original>
@@ -866,6 +988,7 @@
 						<German>Hasen getoetet:</German>
 						<Spanish>Conejos asesinados:</Spanish>
 						<Russian>Кроликов убито:</Russian>
+						<Italian>Conigli uccisi:</Italian>
 				</Key>
 				<Key ID="STR_STATS_26">
 						<Original>Many thanks for playing LIBERATION!</Original>
@@ -873,6 +996,7 @@
 						<German>Vielen Dank fuers spielen von LIBERATION!</German>
 						<Spanish>¡Muchas gracias por jugar LIBERATION!</Spanish>
 						<Russian>Большое спасибо за то что играли в LIBERATION!</Russian>
+						<Italian>Mille Grazie per aver giocato LIBERATION!:</Italian>
 				</Key>
 				<Key ID="STR_STATS_27">
 						<Original>BLUFOR soldiers recruited:</Original>
@@ -880,6 +1004,7 @@
 						<German>BLUFOR Soldaten rekrutiert:</German>
 						<Spanish>Soldados BLUFOR reclutados:</Spanish>
 						<Russian>BLUFOR солдат призвано:</Russian>
+						<Italian>Soldato BLUFOR reclutato:</Italian>
 				</Key>
 				<Key ID="STR_STATS_28">
 						<Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
@@ -887,6 +1012,7 @@
 						<German>Wir hoffen du hast es genossen zu spielen, wie wir genossen haben zu entwickeln.</German>
 						<Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
 						<Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
+						<Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
 				</Key>
 				<Key ID="STR_STATS_29">
 						<Original>(Press ESC to exit)</Original>
@@ -894,6 +1020,7 @@
 						<German>(Drücke ESC zum Abbrechen)</German>
 						<Spanish>(Pulsa ESC para salir)</Spanish>
 						<Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
+						<Italian>(Premi ESC per uscire)</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MISSIONOPTIONS">
 						<Original>== MISSION OPTIONS ==</Original>
@@ -901,14 +1028,17 @@
 						<German>== Missionseinstellungen ==</German>
 						<Spanish>== OPCIONES DE MISIÓN ==</Spanish>
 						<Russian>== ОПЦИИ МИССИИ ==</Russian>
+						<Italian>== OPZIONI MISSIONE ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVEOPTIONS">
 						<Original>== REVIVE OPTIONS (Enable it, if you play without ACE) ==</Original>
 						<German>== Wiederbelebungseinstellungen (Aktivieren, wenn kein ACE genutzt) ==</German>
+						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
 						<Original>== GAMEPLAY OPTIONS ==</Original>
 						<German>== Spieleinstellungen ==</German>
+						<Italian>==OPZIONI DI GIOCO ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_TECHNICALOPTIONS">
 						<Original>== TECHNICAL OPTIONS ==</Original>
@@ -916,6 +1046,7 @@
 						<German>== Technische Einstellungen ==</German>
 						<Spanish>== OPCIONES TÉCNICAS ==</Spanish>
 						<Russian>== ТЕХНИЧЕСКИЕ ОПЦИИ ==</Russian>
+						<Italian>==OPZIONI TECNICHE ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DAYDURATION">
 						<Original>Day duration (hours)</Original>
@@ -923,6 +1054,7 @@
 						<German>Länge eines Tages (Stunden)</German>
 						<Spanish>Duración del día (horas)</Spanish>
 						<Russian>Продолжительность дня (часов)</Russian>
+						<Italian>Durata del giorno (In ore)</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY">
 						<Original>Difficulty</Original>
@@ -930,6 +1062,7 @@
 						<German>Schwierigkeit</German>
 						<Spanish>Dificultad</Spanish>
 						<Russian>Сложность</Russian>
+						<Italian>Difficoltà:</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY1">
 						<Original>Tourist</Original>
@@ -937,6 +1070,7 @@
 						<German>Tourist</German>
 						<Spanish>Turista</Spanish>
 						<Russian>Турист</Russian>
+						<Italian>Turista</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY2">
 						<Original>Easy</Original>
@@ -944,6 +1078,7 @@
 						<German>Einfach</German>
 						<Spanish>Fácil</Spanish>
 						<Russian>Легко</Russian>
+						<Italian>Facile</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY3">
 						<Original>Normal</Original>
@@ -951,6 +1086,7 @@
 						<German>Normal</German>
 						<Spanish>Normal</Spanish>
 						<Russian>Нормально</Russian>
+						<Italian>Normale</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY4">
 						<Original>Moderate</Original>
@@ -958,6 +1094,7 @@
 						<German>Moderat</German>
 						<Spanish>Moderado</Spanish>
 						<Russian>Посложнее</Russian>
+						<Italian>Moderato</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY5">
 						<Original>Hard</Original>
@@ -965,6 +1102,7 @@
 						<German>Schwer</German>
 						<Spanish>Difícil</Spanish>
 						<Russian>Сложно</Russian>
+						<Italian>Difficile</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY6">
 						<Original>Extreme</Original>
@@ -972,6 +1110,7 @@
 						<German>Schwer</German>
 						<Spanish>Extremo</Spanish>
 						<Russian>Экстремально</Russian>
+						<Italian>Estremo</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY7">
 						<Original>Ludicrous</Original>
@@ -979,6 +1118,7 @@
 						<German>grotesk</German>
 						<Spanish>Ridículo</Spanish>
 						<Russian>Весело</Russian>
+						<Italian>Ridicolo</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY8">
 						<Original>Oh god oh god we're all gonna die</Original>
@@ -986,6 +1126,7 @@
 						<German>Mein Gott, wir werden alle sterben!</German>
 						<Spanish>Oh dios mío, vamos a morir!</Spanish>
 						<Russian>Боже мой, мы все умрём!</Russian>
+						<Italian>Oh dio, stiamo per morire!</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
 						<Original>Resources multiplier</Original>
@@ -993,6 +1134,7 @@
 						<German>Ressourcenmultiplikator</German>
 						<Spanish>Multiplicador de recursos</Spanish>
 						<Russian>Множитель ресурсов</Russian>
+						<Italian>Moltiplicatore di risorse</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE">
 						<Original>Stamina</Original>
@@ -1000,6 +1142,7 @@
 						<German>Ausdauer</German>
 						<Spanish>Estamina</Spanish>
 						<Russian>Усталость</Russian>
+						<Italian>Stamina</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE1">
 						<Original>Reduced - 4 times more stamina</Original>
@@ -1007,6 +1150,7 @@
 						<German>Reduziert - 4-mal mehr Ausdauer</German>
 						<Spanish>Reducido - 4 veces más estamina</Spanish>
 						<Russian>Понизить - в 4 раза усталость</Russian>
+						<Italian>Ridotto - 4 volte più stamina</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE2">
 						<Original>Reduced - 3 times more stamina</Original>
@@ -1014,6 +1158,7 @@
 						<German>Reduziert - 3-mal mehr Ausdauer</German>
 						<Spanish>Reducido - 3 veces más estamina</Spanish>
 						<Russian>Понизить - в 3 раза усталость</Russian>
+						<Italian>Ridotto - 3 volte più stamina</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE3">
 						<Original>Reduced - 2 times more stamina</Original>
@@ -1021,6 +1166,7 @@
 						<German>Reduziert - 2-mal mehr Ausdauer</German>
 						<Spanish>Reducido - 2 veces más estamina</Spanish>
 						<Russian>Понизить - в 2 раза усталость</Russian>
+						<Italian>Ridotto - 2 volte più stamina</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE4">
 						<Original>Reduced - 1.5 times more stamina</Original>
@@ -1028,12 +1174,14 @@
 						<German>Reduziert - 1,5-mal mehr Ausdauer</German>
 						<Spanish>Reducido - 1,5 veces más estamina</Spanish>
 						<Russian>Понизить - в 1.5 раза усталость</Russian>
+						<Italian>Ridotto - 1.5 volte più stamina</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVE">
 						<Original>FAR Revive</Original>
 						<German>FAR Revive (Wiederbelebungen)</German>
 						<Spanish>FAR Revive</Spanish>
 						<Russian>FAR Возрождение</Russian>
+						<Italian>FAR Revive</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVE1">
 						<Original>Enabled - Only medics can revive</Original>
@@ -1041,6 +1189,7 @@
 						<German>Aktiv - Nur Sanitäter können wiederbeleben</German>
 						<Spanish>Activado - Sólo los médicos pueden revivir</Spanish>
 						<Russian>Включено - Только медики могут возрождать</Russian>
+						<Italian>Attivato - Solo i medici possono rianimare</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVE2">
 						<Original>Enabled - Everyone can revive using a FAK</Original>
@@ -1048,6 +1197,7 @@
 						<German>Aktiv - Jeder  mit einem Erste-Hilfe-Kasten kann wiederbeleben</German>
 						<Spanish>Activado - Cualquiera puede revivir usando un Kit de primeros auxilios</Spanish>
 						<Russian>Включено - Любой может возродить с помощью пакета первой помощи</Russian>
+						<Italian>Attivato - Tutti possono rianimare con un kit di primo soccorso</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVE3">
 						<Original>Enabled - Everyone can revive using a MedKit</Original>
@@ -1055,6 +1205,7 @@
 						<German>Jeder mit einem Verbandskasten kann wiederbeleben</German>
 						<Spanish>Activado - Cualquiera puede revivir usando un Botiquín</Spanish>
 						<Russian>Включено - Любой может возродить используя медицинскую аптечку</Russian>
+						<Italian>Attivato - Tutti possono rianimare con un kit Medico</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_INTRO">
 						<Original>Introduction</Original>
@@ -1062,6 +1213,7 @@
 						<German>Einführung</German>
 						<Spanish>Introducción</Spanish>
 						<Russian>Введение</Russian>
+						<Italian>Introduzione</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DEPLOYMENTCAMERA">
 						<Original>Deployment cinematic</Original>
@@ -1069,6 +1221,7 @@
 						<German>Zwischensequenz bei Einsatz</German>
 						<Spanish>Cinemática de comienzo</Spanish>
 						<Russian>Кино во время размещения</Russian>
+						<Italian>Filmato di Schieramento</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_ENABLED">
 						<Original>Enabled</Original>
@@ -1076,6 +1229,7 @@
 						<German>Aktiviert</German>
 						<Spanish>Activado</Spanish>
 						<Russian>Вкл</Russian>
+						<Italian>Attivo</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DISABLED">
 						<Original>Disabled</Original>
@@ -1083,6 +1237,7 @@
 						<German>Deaktiviert</German>
 						<Spanish>Desactivado</Spanish>
 						<Russian>Выкл</Russian>
+						<Italian>Disattivato</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_FIRSTFOB">
 						<Original>Start the campaign with the first FOB already built</Original>
@@ -1090,6 +1245,7 @@
 						<German>Starte die Kampagne mit einer bereits gebauten FOB</German>
 						<Spanish>Comenzar la campaña con la primera FOB ya construída</Spanish>
 						<Russian>Начать кампанию, когда первая FOB размещена</Russian>
+						<Italian>Comincia la campagna costruendo la prima FOB</Italian>
 				</Key>
 				<Key ID="STR_YES">
 						<Original>Yes</Original>
@@ -1097,6 +1253,7 @@
 						<German>Ja</German>
 						<Spanish>Si</Spanish>
 						<Russian>Да</Russian>
+						<Italian>Si</Italian>
 				</Key>
 				<Key ID="STR_NO">
 						<Original>No</Original>
@@ -1104,6 +1261,7 @@
 						<German>Nein</German>
 						<Spanish>No</Spanish>
 						<Russian>Нет</Russian>
+						<Italian>NO</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP">
 						<Original>Maximum amount of AI units</Original>
@@ -1111,6 +1269,7 @@
 						<German>Maximale Anzahl KI-Einheiten</German>
 						<Spanish>Cantidad máxima de unidades de IA</Spanish>
 						<Russian>Максимальное количество единиц AI</Russian>
+						<Italian>Numero massimo di unità AI</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP1">
 						<Original>50% - Recommended for local hosting</Original>
@@ -1118,6 +1277,7 @@
 						<German>50 % - Empfohlen für lokal gehostete Spiele</German>
 						<Spanish>50% - Recomendado para host local</Spanish>
 						<Russian>50% - Рекомендуется для локального хостинга</Russian>
+						<Italian>50% - Raccomandato per host locali</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP2">
 						<Original>75% - Dedicated server recommended</Original>
@@ -1125,6 +1285,7 @@
 						<German>75 % - Dezidierter Server empfohlen</German>
 						<Spanish>75% - Recomendado para servidor dedicado</Spanish>
 						<Russian>75% - Выделенный сервер рекомендуется</Russian>
+						<Italian>75% - Raccomandato per server dedicati</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP3">
 						<Original>100% - Dedicated server recommended</Original>
@@ -1132,6 +1293,7 @@
 						<German>100 % - Dezidierter Server empfohlen</German>
 						<Spanish>100% - Recomendado para servidor dedicado</Spanish>
 						<Russian>100% - Выделенный сервер рекомендуется</Russian>
+						<Italian>100% - Raccomandato per server dedicati</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP4">
 						<Original>125% - Dedicated server with headless client recommended</Original>
@@ -1139,6 +1301,7 @@
 						<German>125 % - Dezidierter Server mit Headless Client empfohlen</German>
 						<Spanish>125% - Recomendado para servidor dedicado con cliente descabezado</Spanish>
 						<Russian>125% - Выделенный сервер вместе с headless client рекомендуется</Russian>
+						<Italian>125% - Raccomandato per server dedicati con headless client</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP5">
 						<Original>150% - Dedicated server with multiple headless clients recommended</Original>
@@ -1146,6 +1309,7 @@
 						<German>150 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
 						<Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
 						<Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+						<Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP6">
 						<Original>200% - Dedicated server with multiple headless clients recommended</Original>
@@ -1153,6 +1317,7 @@
 						<German>200 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
 						<Spanish>200% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
 						<Russian>200% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+						<Italian>200% - Raccomandato per server dedicati con tanti headless client</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS">
 						<Original>Civilian activity</Original>
@@ -1160,6 +1325,7 @@
 						<German>Zivile Aktivität</German>
 						<Spanish>Actividad civil</Spanish>
 						<Russian>Гражданская активность</Russian>
+						<Italian>Attività dei civili</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS1">
 						<Original>None</Original>
@@ -1167,6 +1333,7 @@
 						<German>Keine</German>
 						<Spanish>Ninguna</Spanish>
 						<Russian>Нету</Russian>
+						<Italian>Nessuna</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS2">
 						<Original>Reduced</Original>
@@ -1174,6 +1341,7 @@
 						<German>Reduziert</German>
 						<Spanish>Reducida</Spanish>
 						<Russian>Снижена</Russian>
+						<Italian>Ridotta</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS3">
 						<Original>Normal</Original>
@@ -1181,6 +1349,7 @@
 						<German>Normal</German>
 						<Spanish>Normal</Spanish>
 						<Russian>Нормальная</Russian>
+						<Italian>Normale</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS4">
 						<Original>Increased</Original>
@@ -1188,6 +1357,7 @@
 						<German>Erhöht</German>
 						<Spanish>Aumentada</Spanish>
 						<Russian>Увеличенная</Russian>
+						<Italian>Aumentata</Italian>
 				</Key>
 				<Key ID="STR_FRIENDLY_FIRE">
 						<Original>Warning: friendly fire</Original>
@@ -1195,6 +1365,7 @@
 						<German>Achtung: Eigenbeschuss</German>
 						<Spanish>Atención: fuego amigo</Spanish>
 						<Russian>Предупреждение: дружественный огонь</Russian>
+						<Italian>Attenzione: fuoco amico</Italian>
 				</Key>
 				<Key ID="STR_PARAM_TEAMKILL_PENALTY">
 						<Original>Teamkill penalty</Original>
@@ -1202,6 +1373,7 @@
 						<German>Strafe für das Töten von Verbündeten</German>
 						<Spanish>Penalización por fuego amigo</Spanish>
 						<Russian>Штраф за убийство своего</Russian>
+						<Italian>Penalità se si uccide un compagno di squadra</Italian>
 				</Key>
 				<Key ID="STR_PARAM_ADAPT_TO_PLAYERCOUNT">
 						<Original>Hostile presence adapts to player count</Original>
@@ -1209,6 +1381,7 @@
 						<German>Feindpräsenz passt sich der Spielerzahl an</German>
 						<Spanish>Adaptar presencia hostil según la cantidad de jugadores</Spanish>
 						<Russian>Вражеские силы адаптируются к количеству игроков</Russian>
+						<Italian>presenza ostile adattata al numero dei giocatori</Italian>
 				</Key>
 				<Key ID="STR_PARAM_PASSIVE_INCOME">
 						<Original>Replace ammo boxes spawns with passive income</Original>
@@ -1216,6 +1389,7 @@
 						<German>Ersetzt Munitionskisten durch passives Einkommen</German>
 						<Spanish>Reemplazar cajas de munición por ingresos pasivos</Spanish>
 						<Russian>Заменяет ящики с боеприпасами пассивным доходом</Russian>
+						<Italian>Rimpiazzare casse munizioni con reddito passivo</Italian>0
 				</Key>
 				<Key ID="STR_BUILD1">
 						<Original>Infantry units</Original>
@@ -1223,6 +1397,7 @@
 						<German>Infanterie</German>
 						<Spanish>Unidades de infantería</Spanish>
 						<Russian>Пехотинцы</Russian>
+						<Italian>Unità di fanteria</Italian>
 				</Key>
 				<Key ID="STR_BUILD2">
 						<Original>Light vehicles</Original>
@@ -1230,6 +1405,7 @@
 						<German>Leichte Fahrzeuge</German>
 						<Spanish>Vehículos ligeros</Spanish>
 						<Russian>Легкая техника</Russian>
+						<Italian>Veicoli Leggeri</Italian>
 				</Key>
 				<Key ID="STR_BUILD3">
 						<Original>Armored vehicles</Original>
@@ -1237,6 +1413,7 @@
 						<German>Gepanzerte Fahrzeuge</German>
 						<Spanish>Vehículos blindados</Spanish>
 						<Russian>Бронетехника</Russian>
+						<Italian>Veicoli Blindati</Italian>
 				</Key>
 				<Key ID="STR_BUILD4">
 						<Original>Air vehicles</Original>
@@ -1244,6 +1421,7 @@
 						<German>Luftfahrzeuge</German>
 						<Spanish>Vehículos aéreos</Spanish>
 						<Russian>Авиационная техника</Russian>
+						<Italian>Veicoli Aerei</Italian>
 				</Key>
 				<Key ID="STR_BUILD5">
 						<Original>Static defenses</Original>
@@ -1251,6 +1429,7 @@
 						<German>Statische Verteidigung</German>
 						<Spanish>Defensas estáticas</Spanish>
 						<Russian>Стационары</Russian>
+						<Italian>Difese statiche</Italian>
 				</Key>
 				<Key ID="STR_BUILD6">
 						<Original>Buildings</Original>
@@ -1258,6 +1437,7 @@
 						<German>Gebäude</German>
 						<Spanish>Edificios</Spanish>
 						<Russian>Постройки</Russian>
+						<Italian>Edifici</Italian>
 				</Key>
 				<Key ID="STR_BUILD7">
 						<Original>Logistics</Original>
@@ -1265,6 +1445,7 @@
 						<German>Logistik</German>
 						<Spanish>Logística</Spanish>
 						<Russian>Снабжение</Russian>
+						<Italian>Logistica</Italian>
 				</Key>
 				<Key ID="STR_BUILD8">
 						<Original>Infantry squads</Original>
@@ -1272,6 +1453,7 @@
 						<German>Infanteriegruppen</German>
 						<Spanish>Escuadras de infantería</Spanish>
 						<Russian>Пехотные отделения</Russian>
+						<Italian>Squadra Fanteria</Italian>
 				</Key>
 				<Key ID="STR_ACTIVE_SECTORS">
 						<Original>Active Sectors:</Original>
@@ -1279,6 +1461,7 @@
 						<German>Aktive Sektoren:</German>
 						<Spanish>Sectores activos:</Spanish>
 						<Russian>Активные Зоны:</Russian>
+						<Italian>Settori Attivi:</Italian>
 				</Key>
 				<Key ID="STR_OVERLOAD_HINT">
 						<Original>The unitcap setting has been exceeded and further sector activation is temporarily halted. You can now see the list of currently active sectors where you shall concentrate your efforts.</Original>
@@ -1286,6 +1469,7 @@
 						<German>Maximale Anzahl KI-Einheiten erreicht. Es können keine weitere Zonen aktiviert werden. Du kannst nun die Liste der aktiven Gebiete sehen, auf die du deine Kraft fokussieren solltest.</German>
 						<Spanish>El límite de unidades activas se ha excedido, por lo que la activación de sectores queda temporalmente paralizada. Ahora puedes ver la lista de sectores activos donde concentrar tus esfuerzos</Spanish>
 						<Russian>Превышено ограничение по количеству ботов в настройках миссии и активация зон временно приостановлена. Теперь вы можете увидеть список активных в данный момент зон, где вы должны сконцентрировать свои усилия.</Russian>
+						<Italian>L'impostazione unitcap è stata superata e l'attivazione di ulteriori settori è interrotta temporaneamente. Ora è possibile visualizzare l'elenco dei settori attualmente attivi in ​​cui si devono concentrare i vostri sforzi.</Italian>
 				</Key>
 				<Key ID="STR_VEHICLE_LOCKED">
 						<Original>LOCKED BY</Original>
@@ -1293,6 +1477,7 @@
 						<German>VERSCHLOSSEN VON</German>
 						<Spanish>BLOQUEADO POR</Spanish>
 						<Russian>ЗАБЛОКИРОВАНО</Russian>
+						<Italian>BLOCCATO DA</Italian>
 				</Key>
 				<Key ID="STR_VEHICLE_UNLOCKED">
 						<Original>UNLOCKED BY</Original>
@@ -1300,6 +1485,7 @@
 						<German>GEÖFFNET VON</German>
 						<Spanish>DESBLOQUEADO POR</Spanish>
 						<Russian>РАЗБЛОКИРОВАНО</Russian>
+						<Italian>SBLOCCATO DA</Italian>
 				</Key>
 				<Key ID="STR_SQUAD_MANAGEMENT">
 						<Original>SQUAD MANAGEMENT</Original>
@@ -1307,6 +1493,7 @@
 						<German>GRUPPENVERWALTUNG</German>
 						<Spanish>GESTIÓN DE ESCUADRA</Spanish>
 						<Russian>УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
+						<Italian>GESTIONE SQUADRA</Italian>
 				</Key>
 				<Key ID="STR_SQUAD_MANAGEMENT_ACTION">
 						<Original>-- SQUAD MANAGEMENT</Original>
@@ -1314,6 +1501,7 @@
 						<German>-- GRUPPENVERWALTUNG</German>
 						<Spanish>-- GESTIÓN DE ESCUADRA</Spanish>
 						<Russian>-- УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
+						<Italian>-- GESTIONE SQUADRA</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_ON_MEMBER">
 						<Original>Replace</Original>
@@ -1321,6 +1509,7 @@
 						<German>Ersetzen</German>
 						<Spanish>Reemplazar</Spanish>
 						<Russian>Заменить</Russian>
+						<Italian>Sostituisci</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
 						<Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
@@ -1328,6 +1517,7 @@
 						<German>Du wirst das ausgewählte Gruppenmitglied ersetzen, während du deine Ausrüstung behältst.</German>
 						<Spanish>Reaparecerás en el miembro de la escuadra seleccionado, manteniendo tu equipación actual</Spanish>
 						<Russian>Вы будете развёрнуты на выбранном AI-солдате группы, и замените его, сохранив текущее снаряжение.</Russian>
+						<Italian>Verrai schierato sul membro della squadra selezionata e lo rimpiazzerai mantenendo il loadout corrente.</Italian>
 				</Key>
 				<Key ID="STR_REMOVE_MEMBER">
 						<Original>Remove</Original>
@@ -1335,6 +1525,7 @@
 						<German>Entfernen</German>
 						<Spanish>Suprimir</Spanish>
 						<Russian>Удалить</Russian>
+						<Italian>Rimuovi</Italian>
 				</Key>
 				<Key ID="STR_REMOVE_MEMBER_TOOLTIP">
 						<Original>The selected squad member will be deleted.</Original>
@@ -1342,6 +1533,7 @@
 						<German>Das ausgewählte Gruppenmitglied löschen.</German>
 						<Spanish>El miembro de la escuadra seleccionado será eliminado</Spanish>
 						<Russian>Выбранный член группы будет удалён.</Russian>
+						<Italian>Il soldato attualmente selezionato è stato rimosso</Italian>
 				</Key>
 				<Key ID="STR_RESUPPLY">
 						<Original>Resupply</Original>
@@ -1349,6 +1541,7 @@
 						<German>Versorgen</German>
 						<Spanish>Reabastecer</Spanish>
 						<Russian>Переснарядить</Russian>
+						<Italian>Riapprovvigionamento</Italian>
 				</Key>
 				<Key ID="STR_RESUPPLY_TOOLTIP">
 						<Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
@@ -1356,6 +1549,7 @@
 						<German>Wenn das gewählte Gruppenmitglied nahe genug bei einem Versorgungspunkt (mobiler Spawn oder FOB), erhalten sie eine brandneue, vollständige Ausrüstung</German>
 						<Spanish>Si el miembro de la escuadra se encuentra cerca de un punto de abastecimiento (spawn móvil o FOB) obtendrá el equipamiento completo nuevo</Spanish>
 						<Russian>Если выбранный член группы находится достаточно близко от точки пополнения запасов (мобильный КШМ или FOB), он будет заменён новым, полностью снаряжённым.</Russian>
+						<Italian>Se il membro di una squadra è nei pressi di una FOB o Respwan Mobile potrà ricaricare il suo loadout.</Italian>
 				</Key>
 				<Key ID="STR_CONFIRM">
 						<Original>Confirm</Original>
@@ -1363,6 +1557,7 @@
 						<German>Bestätigen</German>
 						<Spanish>Confirmar</Spanish>
 						<Russian>Подтвердить</Russian>
+						<Italian>Conferma</Italian>
 				</Key>
 				<Key ID="STR_HEALTH">
 						<Original>Health:</Original>
@@ -1370,6 +1565,7 @@
 						<German>Leben:</German>
 						<Spanish>Salud:</Spanish>
 						<Russian>Здоровье:</Russian>
+						<Italian>Salute:</Italian>
 				</Key>
 				<Key ID="STR_DISTANCE">
 						<Original>Distance:</Original>
@@ -1377,6 +1573,7 @@
 						<German>Distanz:</German>
 						<Spanish>Distancia:</Spanish>
 						<Russian>Дистанция:</Russian>
+						<Italian>Distanza:</Italian>
 				</Key>
 				<Key ID="STR_PRIMARY_WEAPON">
 						<Original>Primary</Original>
@@ -1384,6 +1581,7 @@
 						<German>Primär</German>
 						<Spanish>Principal</Spanish>
 						<Russian>Главный</Russian>
+						<Italian>Primaria</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_WEAPON">
 						<Original>Secondary</Original>
@@ -1391,6 +1589,7 @@
 						<German>Sekundär</German>
 						<Spanish>Secundaria</Spanish>
 						<Russian>Подчинённый</Russian>
+						<Italian>Secondaria</Italian>
 				</Key>
 				<Key ID="STR_NONE">
 						<Original>None</Original>
@@ -1398,6 +1597,7 @@
 						<German>Keine</German>
 						<Spanish>Ninguno</Spanish>
 						<Russian>Никто</Russian>
+						<Italian>Nessuno</Italian>
 				</Key>
 				<Key ID="STR_DRIVER">
 						<Original>Driver</Original>
@@ -1405,6 +1605,7 @@
 						<German>Fahrer</German>
 						<Spanish>Conductor</Spanish>
 						<Russian>Водитель</Russian>
+						<Italian>Guidatore</Italian>
 				</Key>
 				<Key ID="STR_GUNNER">
 						<Original>Gunner</Original>
@@ -1412,6 +1613,7 @@
 						<German>Schütze</German>
 						<Spanish>Artillero</Spanish>
 						<Russian>Стрелок</Russian>
+						<Italian>Artigliere</Italian>
 				</Key>
 				<Key ID="STR_COMMANDER">
 						<Original>Commander</Original>
@@ -1419,6 +1621,7 @@
 						<German>Kommandant</German>
 						<Spanish>Comandante</Spanish>
 						<Russian>Командир</Russian>
+						<Italian>Comandante</Italian>
 				</Key>
 				<Key ID="STR_PASSENGER">
 						<Original>Passenger</Original>
@@ -1426,6 +1629,7 @@
 						<German>Passagier</German>
 						<Spanish>Pasajero</Spanish>
 						<Russian>Пассажир</Russian>
+						<Italian>Passeggero</Italian>
 				</Key>
 				<Key ID="STR_SQUAD_DEPLOY">
 						<Original>Squad deploy</Original>
@@ -1433,6 +1637,7 @@
 						<German>Gruppeneinsatz</German>
 						<Spanish>Despliegue de escuadra</Spanish>
 						<Russian>Мобилизовать отряд</Russian>
+						<Italian>Schieramento Squadra</Italian>
 				</Key>
 				<Key ID="STR_REMOVE_OK">
 						<Original>You have deleted the selected squad member.</Original>
@@ -1440,6 +1645,7 @@
 						<German>Du hast das ausgewählte Gruppenmitglied gelöscht.</German>
 						<Spanish>Has eliminado al miebro de la escuadra.</Spanish>
 						<Russian>Вы демобилизовали выбранного члена группы.</Russian>
+						<Italian>Hai eliminato il membro della squadra selezionato.</Italian>
 				</Key>
 				<Key ID="STR_RESUPPLY_OK">
 						<Original>The selected squad member has been resupplied.</Original>
@@ -1447,6 +1653,7 @@
 						<German>Das ausgewählte Gruppenmitglied wurde versorgt.</German>
 						<Spanish>El miembro seleccionado de la escuadra ha sido reamunicionado</Spanish>
 						<Russian>Выбранный член группы был переснаряжён</Russian>
+						<Italian>Il membro della squadra selezionato è stato rifornito</Italian>
 				</Key>
 				<Key ID="STR_RESUPPLY_KO">
 						<Original>The selected squad member isn't close enough from a FOB or mobile spawn.</Original>
@@ -1454,6 +1661,7 @@
 						<German>Das ausgewählte Gruppenmitglied ist nicht nahe genug an einer FOB oder an einem mobilen Spawn.</German>
 						<Spanish>El miembro seleccionado de la escuadra no está suficientemente cerca de una FOB o spawn móvil.</Spanish>
 						<Russian>Выбранный член группы находится далеко от КШМ и FOB</Russian>
+						<Italian>Il membro della squadra non è sufficentemente vicino alla FOB o Respawn Mobile.</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TITLE">
 						<Original>PERMISSIONS MANAGEMENT</Original>
@@ -1461,6 +1669,7 @@
 						<German>Rechteverwaltung</German>
 						<Spanish>GESTIÓN DE PERMISOS</Spanish>
 						<Russian>УПРАВЛЕНИЕ РАЗРЕШЕНИЯМИ</Russian>
+						<Italian>GESTIONE PERMESSI</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_LIGHT">
 						<Original>Light vehicles</Original>
@@ -1468,6 +1677,7 @@
 						<German>Leichte Fahrzeuge</German>
 						<Spanish>Vehículos ligeros</Spanish>
 						<Russian>Лёгкая техника</Russian>
+						<Italian>Veicoli Leggeri</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_ARMORED">
 						<Original>Armored vehicles</Original>
@@ -1475,6 +1685,7 @@
 						<German>Gepanzerte Fahrzeuge</German>
 						<Spanish>Vehículos blindados</Spanish>
 						<Russian>Бронированная техника</Russian>
+						<Italian>veicoli Blindati</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_AIR">
 						<Original>Air vehicles</Original>
@@ -1482,6 +1693,7 @@
 						<German>Luftfahrzeuge</German>
 						<Spanish>Vehículos aéreos</Spanish>
 						<Russian>Авиация</Russian>
+						<Italian>Aerei</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_CONSTRUCTION">
 						<Original>Construction</Original>
@@ -1489,6 +1701,7 @@
 						<German>Konstruktionen</German>
 						<Spanish>Construcción</Spanish>
 						<Russian>Постройка</Russian>
+						<Italian>Costruzione</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_RECYCLING">
 						<Original>Recycling</Original>
@@ -1496,6 +1709,7 @@
 						<German>Wiederverwerten</German>
 						<Spanish>Reciclar</Spanish>
 						<Russian>Утилизация</Russian>
+						<Italian>Riciclaggio</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_MISC">
 						<Original>Others</Original>
@@ -1503,6 +1717,7 @@
 						<German>Andere</German>
 						<Spanish>Otros</Spanish>
 						<Russian>Остальное</Russian>
+						<Italian>Altro</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_ALL">
 						<Original>All</Original>
@@ -1510,6 +1725,7 @@
 						<German>Alle</German>
 						<Spanish>Todos</Spanish>
 						<Russian>Всё</Russian>
+						<Italian>Tutto</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_NONE">
 						<Original>None</Original>
@@ -1517,6 +1733,7 @@
 						<German>Keine</German>
 						<Spanish>Ninguno</Spanish>
 						<Russian>Ничего</Russian>
+						<Italian>Nessuno</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_LIGHT">
 						<Original>Allows the player to operate light vehicles as driver and gunner.</Original>
@@ -1524,6 +1741,7 @@
 						<German>Erlaubt es dem Spieler leichte Fahrzeuge als Fahrer und Schütze zu bedienen.</German>
 						<Spanish>Permite al jugador utilizar vehículos ligeros como conductor y artillero</Spanish>
 						<Russian>Позволить игроку быть водителем и стрелком лёгкой техники.</Russian>
+						<Italian>Permetti al giocatore di entrare nei veicoli leggeri come guidatore e artigliere</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_ARMORED">
 						<Original>Allows the player to operate armored vehicles as driver, gunner and commander.</Original>
@@ -1531,6 +1749,7 @@
 						<German>Erlaubt es dem Spieler gepanzerte Fahrzeuge als Fahrer, Schütze und Kommandant zu bedienen.</German>
 						<Spanish>Permite al jugador utilizar vehículos blindados como conductor, artillero y comandante</Spanish>
 						<Russian>Позволить игроку быть командиром, водителем и стрелком бронированной техники.</Russian>
+						<Italian>Permetti al giocatore di entrare nei veicoli blindati come guidatore e artigliere e comandante</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_AIR">
 						<Original>Allows the player to operate air vehicles as driver and gunner.</Original>
@@ -1538,6 +1757,7 @@
 						<German>Erlaubt es dem Spieler Luftfahrzeuge als Pilot und Schütze zu bedienen.</German>
 						<Spanish>Permite al jugador utilizar vehículos aéreos como conductor y artillero</Spanish>
 						<Russian>Позволить игроку быть пилотом и стрелком авиации.</Russian>
+						<Italian>Permetti al giocatore di entrare negli aerei come guidatore e artigliere</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_CONSTRUCTION">
 						<Original>Allows the player to use the BUILD menu.</Original>
@@ -1545,6 +1765,7 @@
 						<German>Erlaubt es dem Spieler das Baumenü zu benutzen.</German>
 						<Spanish>Permite al jugador utilizar el menú de CONSTRUCCIÓN</Spanish>
 						<Russian>Позволить игроку использовать меню постройки.</Russian>
+						<Italian>Permetti al giocatore di Costruire</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_RECYCLING">
 						<Original>Allows the player to use the RECYCLE action.</Original>
@@ -1552,6 +1773,7 @@
 						<German>Erlaubt es dem Spieler die "WIEDERVERWERTEN"-Aktion zu benutzen.</German>
 						<Spanish>Permite al jugador utilizar la acción de RECICLAR</Spanish>
 						<Russian>Позволить игроку утилизировать постройки и технику.</Russian>
+						<Italian>Permetti al giocatore di Riciclare</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_MISC">
 						<Original>Allows the player to use other actions: unflip, ammo box manipulation, prisoners capture, etc.</Original>
@@ -1559,6 +1781,7 @@
 						<German>Erlaubt es dem Spieler andere Aktionen durchzuführen: Umdrehen, Interaktion mit Munitionskisten, Gefangennahme, usw.</German>
 						<Spanish>Permite al jugador usar otras acciones: Recolocar vehículo, manipulación de cajas de munición, captura de prisioneros, etc.</Spanish>
 						<Russian>Позволить игроку остальные действия: перевернуть, манипуляции с ящиками боеприпасов, захват пленных, итп.</Russian>
+						<Italian>Permetti al giocatore di usare le altre funzioni come , catturare prigionieri,raddrizzare veicoli ecc.</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_ALL">
 						<Original>Gives all permissions to the player.</Original>
@@ -1566,6 +1789,7 @@
 						<German>Gibt dem Spieler alle Rechte</German>
 						<Spanish>Darle todos los permisos al jugador</Spanish>
 						<Russian>Разрешить всё игроку.</Russian>
+						<Italian>Permetti tutto al giocatore.</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_NONE">
 						<Original>Removes all permissions from the player.</Original>
@@ -1573,6 +1797,7 @@
 						<German>Nimmt dem Spieler alle Rechte weg.</German>
 						<Spanish>Quitar todos los permisos al jugador</Spanish>
 						<Russian>Запретить всё игроку.</Russian>
+						<Italian>Rimuovi tutti i permessi al giocatore.</Italian>
 				</Key>
 				<Key ID="STR_COMMANDER_ACTION">
 						<Original>-- PERMISSIONS</Original>
@@ -1580,6 +1805,7 @@
 						<German>-- RECHTE</German>
 						<Spanish>-- PERMISOS</Spanish>
 						<Russian>-- РАЗРЕШЕНИЯ</Russian>
+						<Italian>-- PERMESSI</Italian>
 				</Key>
 				<Key ID="STR_SAVE_CHANGES">
 						<Original>Save Changes</Original>
@@ -1587,6 +1813,7 @@
 						<German>Änderungen speichern</German>
 						<Spanish>Guardar cambios</Spanish>
 						<Russian>Сохранить Изменения</Russian>
+						<Italian>Salva Modifiche</Italian>
 				</Key>
 				<Key ID="STR_PERMISSIONS_PARAM">
 						<Original>Permissions Management</Original>
@@ -1594,6 +1821,7 @@
 						<German>Rechteverwaltung</German>
 						<Spanish>Gestión de permisos</Spanish>
 						<Russian>Управление Разрешениями</Russian>
+						<Italian>Permessi Gestione</Italian>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_LIGHT">
 						<Original>You don't have permission from the commander to use light vehicles.</Original>
@@ -1601,6 +1829,7 @@
 						<German>Du hast keine Rechte zur Nutzung leichter Fahrzeuge.</German>
 						<Spanish>No tienes permiso del comandante para usar vehículos ligeros</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать легкую технику.</Russian>
+						<Italian>Non hai il permesso di usare veicoli leggeri</Italian>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_ARMOR">
 						<Original>You don't have permission from the commander to use armored vehicles.</Original>
@@ -1608,6 +1837,7 @@
 						<German>Du hast keine Rechte zur Nutzung gepanzerter Fahrzeuge</German>
 						<Spanish>No tienes permiso del comandante para usar vehículos blindados</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать бронированную технику.</Russian>
+						<Italian>Non hai il permesso di usare veicoli pesanti</Italian>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_AIR">
 						<Original>You don't have permission from the commander to use air vehicles.</Original>
@@ -1615,6 +1845,7 @@
 						<German>Du hast keine Rechte zur Nutzung von Luftfahrzeugen</German>
 						<Spanish>No tienes permiso del comandante para usar vehículos aéreos</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать авиацию.</Russian>
+						<Italian>Non hai il permesso di usare veivoli</Italian>
 				</Key>
 				<Key ID="STR_PERMISSION_WARNING">
 						<Original>No permissions have been set. The commander must setup the permissions to allow player actions and vehicle usage. Alternatively, the permission system can be disabled from the mission options.</Original>
@@ -1622,6 +1853,7 @@
 						<German>Keine Rechte wurden vergeben. Der Kommandant muss die Rechte verwalten um Spielern Aktionen und die Nutzung von Fahrzeugen zu erlaubne. Alternativ kann das Rechtesystem in den Missionsoptionen deaktiviert werden.</German>
 						<Spanish>No hay permisos definidos. El comandante debe asignar los permisos para permitir a los jugadores el uso de los vehículos y acciones. Alternativamente, puede desactivarse el sistema de permisos desde las opciones de misión</Spanish>
 						<Russian>Разрешения не были даны. Командир должен настроить разрешения, чтобы позволить игроку действия и использование техники. Кроме того, система разрешений может быть отключена в настройках миссии.</Russian>
+						<Italian>I permessi non sono settati.Il comandante deve entrare nel menu e attribuire i permessi ai giocatori.</Italian>
 				</Key>
 				<Key ID="STR_ARSENAL_TITLE">
 						<Original>ARSENAL</Original>
@@ -1629,6 +1861,7 @@
 						<German>ARSENAL</German>
 						<Spanish>ARSENAL</Spanish>
 						<Russian>АРСЕНАЛ</Russian>
+						<Italian>ARSENALE</Italian>
 				</Key>
 				<Key ID="STR_EDIT_LOADOUT">
 						<Original>Edit loadout</Original>
@@ -1636,6 +1869,7 @@
 						<German>Ausrüstung bearbeiten</German>
 						<Spanish>Modificar equipamiento</Spanish>
 						<Russian>Редактировать</Russian>
+						<Italian>Modifica Equipaggiamneto</Italian>
 				</Key>
 				<Key ID="STR_LOAD_LOADOUT">
 						<Original>Take loadout</Original>
@@ -1643,6 +1877,7 @@
 						<German>Ausrüstung laden</German>
 						<Spanish>Coger equipamiento</Spanish>
 						<Russian>Загрузить</Russian>
+						<Italian>Prendi Equipaggiamento</Italian>
 				</Key>
 				<Key ID="STR_DEFAULT">
 						<Original>Default</Original>
@@ -1650,6 +1885,7 @@
 						<German>Standart</German>
 						<Spanish>Por defecto</Spanish>
 						<Russian>Стандартно</Russian>
+						<Italian>Default</Italian>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE">
 						<Original>-- REPACKAGE FOB --</Original>
@@ -1657,6 +1893,7 @@
 						<German>-- FOB EINPACKEN --</German>
 						<Spanish>-- EMPAQUETAR FOB --</Spanish>
 						<Russian>-- СВЕРНУТЬ FOB --</Russian>
+						<Italian>-- SMONTA FOB --</Italian>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_TITLE">
 						<Original>REPACKAGE FOB</Original>
@@ -1664,6 +1901,7 @@
 						<German>FOB EINPACKEN</German>
 						<Spanish>EMPAQUETAR FOB</Spanish>
 						<Russian>СВЕРНУТЬ FOB</Russian>
+						<Italian>SMONTA FOB</Italian>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_CONFIRM">
 						<Original>Are you sure you want to repackage this FOB?</Original>
@@ -1671,6 +1909,7 @@
 						<German>Bist du dir sicher dass du deine FOB einpacken willst?</German>
 						<Spanish>¿Estas seguro de querer reempaquetar esta FOB?</Spanish>
 						<Russian>Ты уверен что хочешь свернуть эту FOB?</Russian>
+						<Italian>Sei sicuro di voler smontare la FOB?</Italian>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_HINT">
 						<Original>FOB repackaged.</Original>
@@ -1678,6 +1917,7 @@
 						<German>FOB eingepackt.</German>
 						<Spanish>FOB reempaquetada</Spanish>
 						<Russian>FOB свёрнута</Russian>
+						<Italian>FOB smontata.</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM">
 						<Original>HALO jump</Original>
@@ -1685,6 +1925,7 @@
 						<German>HALO-Sprung</German>
 						<Spanish>Salto HALO</Spanish>
 						<Russian>HALO прыжок</Russian>
+						<Italian>PARACADUTARSI</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM1">
 						<Original>Enabled - No cooldown</Original>
@@ -1692,6 +1933,7 @@
 						<German>Aktiviert - Keine Abklingzeit</German>
 						<Spanish>Activado - Sin tiempo de espera</Spanish>
 						<Russian>Вкл - без перерыва</Russian>
+						<Italian>Attivato - Senza attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM2">
 						<Original>Enabled - 5 minutes cooldown</Original>
@@ -1699,6 +1941,7 @@
 						<German>Aktiviert - 5 Minuten Abklingzeit</German>
 						<Spanish>Activado - 5 minutos de espera</Spanish>
 						<Russian>Вкл - 5 минут перерыв</Russian>
+						<Italian>Attivato - 5 minuti di attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM3">
 						<Original>Enabled - 10 minutes cooldown</Original>
@@ -1706,6 +1949,7 @@
 						<German>Aktiviert - 10 Minuten Abklingzeit</German>
 						<Spanish>Activado - 10 minutos de espera</Spanish>
 						<Russian>Вкл - 10 минут перерыв</Russian>
+						<Italian>Attivato - 10 minuti di attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM4">
 						<Original>Enabled - 15 minutes cooldown</Original>
@@ -1713,6 +1957,7 @@
 						<German>Aktiviert - 15 Minuten Abklingzeit</German>
 						<Spanish>Activado - 15 minutos de espera</Spanish>
 						<Russian>Вкл - 15 минут перерыв</Russian>
+						<Italian>Attivato - 15 minuti di attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM5">
 						<Original>Enabled - 20 minutes cooldown</Original>
@@ -1720,6 +1965,7 @@
 						<German>Aktiviert - 20 Minuten Abklingzeit</German>
 						<Spanish>Activado - 20 minutos de espera</Spanish>
 						<Russian>Вкл - 20 минут перерыв</Russian>
+						<Italian>Attivato - 20 minuti di attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_PARAM6">
 						<Original>Enabled - 30 minutes cooldown</Original>
@@ -1727,6 +1973,7 @@
 						<German>Aktiviert - 30 Minuten Abklingzeut</German>
 						<Spanish>Activado - 30 minutos de espera</Spanish>
 						<Russian>Вкл - 30 минут перерыв</Russian>
+						<Italian>Attivato - 30 minuti di attesa</Italian>
 				</Key>
 				<Key ID="STR_HALO_DENIED_COOLDOWN">
 						<Original>Can't perform HALO jump, you are on cooldown for %1 more minute(s).</Original>
@@ -1734,6 +1981,7 @@
 						<German>HALO Sprung noch nicht möglich. Verbleibende Abklingzeit von %1 Minuten.</German>
 						<Spanish>No puedes saltar en HALO, te quedan %1 minuto(s) de espera.</Spanish>
 						<Russian>HALO прыжок недоступен, подождите %1 минут</Russian>
+						<Italian>Non puoi paracadutarti, hai un attesa di %1 minuti.</Italian>
 				</Key>
 				<Key ID="STR_HALO_ACTION">
 						<Original>-- HALO JUMP</Original>
@@ -1741,6 +1989,7 @@
 						<German>-- HALO-SPRUNG</German>
 						<Spanish>-- SALTO HALO</Spanish>
 						<Russian>-- HALO прыжок</Russian>
+						<Italian>-- PARACADUTARSI</Italian>
 				</Key>
 				<Key ID="STR_HALO_TITLE">
 						<Original>HALO JUMP</Original>
@@ -1748,6 +1997,7 @@
 						<German>HALO-SPRUNG</German>
 						<Spanish>SALTO HALO</Spanish>
 						<Russian>HALO ПРЫЖОК</Russian>
+						<Italian>PARACADUTARSI</Italian>
 				</Key>
 				<Key ID="STR_DEPLOY_IN_PROGRESS">
 						<Original>Deployment in progress...</Original>
@@ -1755,6 +2005,7 @@
 						<German>Verlegung im Gange</German>
 						<Spanish>Despliegue en curso...</Spanish>
 						<Russian>В процессе выполнения ...</Russian>
+						<Italian>In attesa del lancio ...</Italian>
 				</Key>
 				<Key ID="STR_WHITELIST_PARAM">
 						<Original>Use the commander whitelist</Original>
@@ -1762,12 +2013,14 @@
 						<German>Nutze die Whitelist für den Kommandanten</German>
 						<Spanish>Utilizar la lista blanca para Comandantes</Spanish>
 						<Russian>Использование "белого" списка командиров</Russian>
+						<Italian>Usa la whitelist del comandante</Italian>
 				</Key>
 				<Key ID="STR_WHITELIST_ENABLED">
 						<Original>Enabled - Only use if you have modified your whitelist.sqf!</Original>
 						<French>Activé - A n'utiliser que si vous avez modifié votre whitelist.sqf !</French>
 						<Spanish>Activado - ¡Sólo utilizar si has modificado tu whitelist.sqf</Spanish>
 						<Russian>Вкл - Использовать только если вы редактировали файл whitelist.sqf!</Russian>
+						<Italian>Attiva - Solo se hai modificato la tua whitelist.sqf!</Italian>
 				</Key>
 				<Key ID="STR_BUILD_ENEMIES_NEARBY">
 						<Original>Cannot build: hostile forces nearby.</Original>
@@ -1775,6 +2028,7 @@
 						<German>Kann nicht gebaut werden: Feindkräfte in der Nähe</German>
 						<Spanish>No se puede construir: fuerzas hostiles cercanas</Spanish>
 						<Russian>Постройка невозможна: враги рядом.</Russian>
+						<Italian>Impossibile costruire: forze ostili nelle vicinanze</Italian>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM">
 						<Original>Cleanup abandonned vehicles outside FOBs</Original>
@@ -1782,6 +2036,7 @@
 						<German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
 						<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
 						<Russian>Удаление брошенной техники вне FOB.</Russian>
+						<Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM1">
 						<Original>Enabled - 1 hour delay</Original>
@@ -1789,6 +2044,7 @@
 						<German>Aktiv - 1 Stunde Verzögerung</German>
 						<Spanish>Activado- abandonados durante 1 hora</Spanish>
 						<Russian>Вкл - задержка 1 час</Russian>
+						<Italian>Attivato - eliminazione ogni ora</Italian>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM2">
 						<Original>Enabled - 2 hours delay</Original>
@@ -1796,6 +2052,7 @@
 						<German>Aktiv - 2 Stunde Verzögerung</German>
 						<Spanish>Activado - abandonados durante 2 horas</Spanish>
 						<Russian>Вкл - задержка 2 часа</Russian>
+						<Italian>Attivato - eliminazione ogni 2 ore</Italian>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM3">
 						<Original>Enabled - 4 hours delay</Original>
@@ -1803,6 +2060,7 @@
 						<German>Aktiv - 4 Stunden Verzögerung</German>
 						<Spanish>Activado - abandonados durante 4 horas</Spanish>
 						<Russian>Вкл - задержка 4 часа</Russian>
+						<Italian>Attivato - eliminazione ogni 4 ore</Italian>
 				</Key>
 				<Key ID="STR_SORRY">
 						<Original>Sorry!</Original>
@@ -1810,6 +2068,7 @@
 						<German>Entschuldigung!</German>
 						<Spanish>Lo siento!</Spanish>
 						<Russian>Извини!</Russian>
+						<Italian>Scusa!</Italian>
 				</Key>
 				<Key ID="STR_COMMANDER_NOT_AUTHORIZED">
 						<Original>You are not authorized to use the commander slot on this server.</Original>
@@ -1817,6 +2076,7 @@
 						<German>Du bist auf diesem Server nicht als Kommandant autorisiert.</German>
 						<Spanish>No estás autorizado para usar el slot de comandante en este servidor.</Spanish>
 						<Russian>Вы не авторизованы, чтобы использовать слот коммандира на этом сервере.</Russian>
+						<Italian>Non sei autorizzato ad usare lo slot comandante in questo server.</Italian>
 				</Key>
 				<Key ID="STR_MAKE_RESPAWN_LOADOUT">
 						<Original>Save respawn loadout</Original>
@@ -1824,6 +2084,7 @@
 						<German>Ausrüstung bei Respawn festlegen</German>
 						<Spanish>Guardar el equipamiento para respawn</Spanish>
 						<Russian>Всегда загружать</Russian>
+						<Italian>Salva Equipaggiamento </Italian>
 				</Key>
 				<Key ID="STR_MAKE_RESPAWN_LOADOUT_HINT">
 						<Original>Your current loadout will be restored on every respawn.</Original>
@@ -1831,6 +2092,7 @@
 						<German>Deine Ausrüstung wird bei jedem Respwan wiederhergestellt.</German>
 						<Spanish>Tu actual equipamiento seá mantenido en cada respawn.</Spanish>
 						<Russian>Ваше текущее снаряжение будет загружаться после каждого возраждения</Russian>
+						<Italian>Il tuo equipaggiamneto sarà ricaricato ad ogni respawn</Italian>
 				</Key>
 				<Key ID="STR_LOAD_PLAYER_LOADOUT">
 						<Original>Load from player</Original>
@@ -1838,6 +2100,7 @@
 						<German>Von Spieler laden</German>
 						<Spanish>Cargar desde jugador</Spanish>
 						<Russian>Из игрока</Russian>
+						<Italian>Carica da giocatore</Italian>
 				</Key>
 				<Key ID="STR_LOAD_PLAYER_LOADOUT_HINT">
 						<Original>Successful loadout transfer from %1.</Original>
@@ -1845,6 +2108,7 @@
 						<German>Erfolgreich Ausrüstung von %1 übertragen.</German>
 						<Spanish>Transferencia de equipamiento de %1 terminada.</Spanish>
 						<Russian>Успешная загрузка снаряжения игрока %1</Russian>
+						<Italian>Equipaggiamento traferito correttamente da %1</Italian>
 				</Key>
 				<Key ID="STR_LOADOUT">
 						<Original>Loadout:</Original>
@@ -1852,6 +2116,7 @@
 						<German>Ausrüstung:</German>
 						<Spanish>Equipamiento:</Spanish>
 						<Russian>Снаряжение:</Russian>
+						<Italian>Equipaggiamento:</Italian>
 				</Key>
 				<Key ID="STR_SPAWN_POINT">
 						<Original>Deployment location:</Original>
@@ -1859,6 +2124,7 @@
 						<German>Einsatzposition:</German>
 						<Spanish>Lugar para el despliegue:</Spanish>
 						<Russian>Позиция размешения:</Russian>
+						<Italian>Luogo di Schieramento:</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM">
 						<Original>OPFOR aggressivity</Original>
@@ -1866,6 +2132,7 @@
 						<German>OPFOR Aggressivität</German>
 						<Spanish>Agresividad del OPFOR</Spanish>
 						<Russian>Уровень обеспокоенности OPFOR</Russian>
+						<Italian>Aggressività OPFOR</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM0">
 						<Original>Anemic</Original>
@@ -1873,6 +2140,7 @@
 						<German>Mutlos</German>
 						<Spanish>Anémica</Spanish>
 						<Russian>Вяло</Russian>
+						<Italian>Anemico</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM1">
 						<Original>Weak</Original>
@@ -1880,6 +2148,7 @@
 						<German>Schwacht</German>
 						<Spanish>Floja</Spanish>
 						<Russian>Слабо</Russian>
+						<Italian>Debole</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM2">
 						<Original>Normal</Original>
@@ -1887,6 +2156,7 @@
 						<German>Normal</German>
 						<Spanish>Normal</Spanish>
 						<Russian>Нормально</Russian>
+						<Italian>Normale</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM3">
 						<Original>Strong</Original>
@@ -1894,6 +2164,7 @@
 						<German>Stark</German>
 						<Spanish>Fuerte</Spanish>
 						<Russian>Сильно</Russian>
+						<Italian>Forte</Italian>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM4">
 						<Original>Extreme</Original>
@@ -1901,6 +2172,7 @@
 						<German>Extrem</German>
 						<Spanish>Extrema</Spanish>
 						<Russian>Очень сильно</Russian>
+						<Italian>Estremo</Italian>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM">
 						<Original>Weather</Original>
@@ -1908,6 +2180,7 @@
 						<German>Wetter</German>
 						<Spanish>Clima</Spanish>
 						<Russian>Погода</Russian>
+						<Italian>Meteo</Italian>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM1">
 						<Original>Always sunny</Original>
@@ -1915,6 +2188,7 @@
 						<German>Immer sonnig</German>
 						<Spanish>Siempre soleado</Spanish>
 						<Russian>Всегда солнечно</Russian>
+						<Italian>Semopre Soleggiato</Italian>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM2">
 						<Original>Random without rain</Original>
@@ -1922,6 +2196,7 @@
 						<German>Zufällig ohne Regen</German>
 						<Spanish>Aleatorio sin lluvia</Spanish>
 						<Russian>Случайно, без дождя</Russian>
+						<Italian>Casuale senza pioggia</Italian>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM3">
 						<Original>Random</Original>
@@ -1929,6 +2204,7 @@
 						<German>Zufällig</German>
 						<Spanish>Aleatorio</Spanish>
 						<Russian>Случайно</Russian>
+						<Italian>Casuale</Italian>
 				</Key>
 				<Key ID="STR_SHORTER_NIGHTS_PARAM">
 						<Original>Shorter nights</Original>
@@ -1936,6 +2212,7 @@
 						<German>Kürzere Nächte</German>
 						<Spanish>Noches más cortas</Spanish>
 						<Russian>Короткие ночи</Russian>
+						<Italian>Notte Breve</Italian>
 				</Key>
 				<Key ID="STR_REPAIRING">
 						<Original>Repairing</Original>
@@ -1943,6 +2220,7 @@
 						<German>Repariert</German>
 						<Spanish>Reparando</Spanish>
 						<Russian>Ремонт</Russian>
+						<Italian>Riparazione</Italian>
 				</Key>
 				<Key ID="STR_REARMING">
 						<Original>Rearming in %1s</Original>
@@ -1950,6 +2228,7 @@
 						<German>Aufmunitioniert in %1s</German>
 						<Spanish>Rearmando en %1s</Spanish>
 						<Russian>Перезарядка за %1с</Russian>
+						<Italian>Riarmamento 1%</Italian>
 				</Key>
 				<Key ID="STR_REFUELING">
 						<Original>Refueling</Original>
@@ -1957,6 +2236,7 @@
 						<German>Auftanken</German>
 						<Spanish>Repostando</Spanish>
 						<Russian>Заправка</Russian>
+						<Italian>Rifornimento</Italian>
 				</Key>
 				<Key ID="STR_INTEL">
 						<Original>-- TAKE INTEL</Original>
@@ -1964,6 +2244,7 @@
 						<German>-- GEHEIMDIENSTINFORMATIONEN AUFNEHMEN</German>
 						<Spanish>-- COGER INTELIGENCIA</Spanish>
 						<Russian>-- ПОЛУЧИТЬ РАЗВЕДДАННЫЕ</Russian>
+						<Italian>-- PREDI INTEL</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES">
 						<Original>-- SECONDARY OBJECTIVES</Original>
@@ -1971,6 +2252,7 @@
 						<German>-- SEKUNDÄRE ZIELE</German>
 						<Spanish>-- OBJETIVOS SECUNDARIOS</Spanish>
 						<Russian>-- ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
+						<Italian>-- OBIETTIVI SECONDARI</Italian>
 				</Key>
 				<Key ID="STR_AMMO_BOUNTIES">
 						<Original>Ammunition bounties</Original>
@@ -1978,6 +2260,7 @@
 						<German>Munitionsbelohnung für zerstörte Fahrzeuge</German>
 						<Spanish>Recompensas de munición</Spanish>
 						<Russian>Вознаграждение за уничтожение техники ВООРУЖЕНИЕ</Russian>
+						<Italian>Ricompensa Munizioni</Italian>
 				</Key>
 				<Key ID="STR_BOUNTY_MESSAGE">
 						<Original>Bounty of %1 for a %2 destroyed by %3</Original>
@@ -1985,6 +2268,7 @@
 						<German>Kopfgeld von %1 für die Zerstörung von %2 durch %3</German>
 						<Spanish>Premio de %1 por un %2 destruido por %3</Spanish>
 						<Russian>+%1 едениц ВООРУЖЕНИЯ за %2 уничтоженный игроком %3</Russian>
+						<Italian>Ricompensa di %1 per %2 distrutto da %3</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES_TITLE">
 						<Original>SECONDARY OBJECTIVES</Original>
@@ -1992,6 +2276,7 @@
 						<German>SEKUNDÄRE ZIELE</German>
 						<Spanish>OBJETIVOS SECUNDARIOS</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
+						<Italian>OBIETTIVI SECONDARI</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES_START">
 						<Original>Start</Original>
@@ -1999,6 +2284,7 @@
 						<German>Beginnen</German>
 						<Spanish>Empezar</Spanish>
 						<Russian>Старт</Russian>
+						<Italian>Inizia</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_INTEL">
 						<Original>Current intel: %1</Original>
@@ -2006,6 +2292,7 @@
 						<German>Aktuelle Geheimdienstinformationen: %1</German>
 						<Spanish>Inteligencia actual: %1</Spanish>
 						<Russian>Разведданные: %1</Russian>
+						<Italian>Intel Attuale: %1</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_NOT_ENOUGH_INTEL">
 						<Original>Insufficient intel points</Original>
@@ -2013,6 +2300,7 @@
 						<German>Zu wenig Geheimdienstinformationen</German>
 						<Spanish>Puntos de inteligencia insuficientes</Spanish>
 						<Russian>Недостаточно информации</Russian>
+						<Italian>Punti intel insufficenti</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_IN_PROGRESS">
 						<Original>Secondary mission already in progress</Original>
@@ -2020,36 +2308,42 @@
 						<German>Sekundäre Mission läuft bereits</German>
 						<Spanish>Misión secundaria ya en curso</Spanish>
 						<Russian>Дополнительная задача уже есть</Russian>
+						<Italian>Missione secondaria attualmente in progresso</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_INCOMING_TEXT">
 						<Original>Hostile forces are heading towards %1.</Original>
 						<French>Les forces hostiles se dirigent vers %1.</French>
 						<German>Feindliche Streitkräfte bewegen sich auf %1 zu.</German>
 						<Russian>Замечена вражеская группа рядом с %1</Russian>
+						<Italian>Forze ostili sono in avvicinamento su %1.</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_CSAT_CONVOY">
 						<Original>OPFOR Convoy</Original>
 						<French>Convoi OPFOR</French>
 						<German>OPFOR Konvoi</German>
 						<Russian>Конвой OPFOR</Russian>
+						<Italian>Convoglio OPFOR</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_CSAT_CONVOY_WP">
 						<Original>Waypoint</Original>
 						<French>Point de passage</French>
 						<German>Wegpunkt</German>
 						<Russian>Путевая точка</Russian>
+						<Italian>Punto di Passaggio</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_CONVOY_DESTROYED_TEXT">
 						<Original>OPFOR Convoy neutralized.</Original>
 						<French>Convoi OPFOR neutralisé.</French>
 						<German>OPFOR Konvoi neutralisiert.</German>
 						<Russian>Конвой OPFOR нейтрализован.</Russian>
+						<Italian>Convoglio OPFOR neutralizzato.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_CONVOY_SPOTTED_TEXT">
 						<Original>OPFOR Convoy near %1.</Original>
 						<French>Convoi OPFOR près de %1.</French>
 						<German>OPFOR Konvoi nahe %1.</German>
 						<Russian>Конвой OPFOR рядом с %1.</Russian>
+						<Italian>Convoglio OPFOR vicino %1.</Italian>
 				</Key>
 				<Key ID="STR_TUTO_GOTIT">
 						<Original>Got it!</Original>
@@ -2057,6 +2351,7 @@
 						<German>Verstanden</German>
 						<Spanish>Lo tengo!</Spanish>
 						<Russian>Вас понял!</Russian>
+						<Italian>Ricevuto!</Italian>
 				</Key>
 				<Key ID="STR_TUTO_ACTION">
 						<Original>-- TUTORIAL</Original>
@@ -2078,6 +2373,7 @@
 						<German>1. Einführung</German>
 						<Spanish>1. Introducción</Spanish>
 						<Russian>1. Введение</Russian>
+						<Italian>1. Introduzione</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT1">
 						<Original>
@@ -2130,6 +2426,16 @@
 						Вы будете нуждаться в поддержке местного населения, поэтому всегда убеждайтесь, и дважды проверяйте, в кого собираетесь стрелять. &lt;br/&gt; &lt;br/&gt;
 						Вопросы есть? &lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<Italian>
+							&Lt;br/&gt;
+							Buongiorno signori, e benvenuti sull'isola
+							Le forze OPFOR ci hanno sorpreso con un'offensiva brutale e travolgente. Ora controllano l'intera Isola, ma grazie ai vostri sforzi, non durerà a lungo. &lt;br/&gt; &lt;br/&gt;
+							Il nostro obiettivo è semplice: liberare l'isola &lt;br/&gt; &lt;br/&gt;
+							La strada per la vittoria sarà lunga e pericolosa. Si dovrà conquistare molteplici settori e acquisire le risorse necessarie per migliorare la quantità e la qualità delle forze BLUFOR impegnate in questa campagna. &lt;br/&gt; &lt;br/&gt;
+							Più avanti, le forze OPFOR sicuramente reagiranno alla nostra avanzata. Dovremo impegnarci in operazioni secondarie per indebolire il nemico che ha numeri più alti e migliori attrezzature di noi &lt;br/&gt; &lt;br/&gt;
+							Nei vostri sforzi sarà necessario il sostegno della popolazione locale,assicurarsi sempre di controllare due volte quello a cui stai per sparare. &lt;br/&gt; &lt;br/&gt;
+							Domande?&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE2">
 						<Original>2. Starting the campaign</Original>
@@ -2137,6 +2443,7 @@
 						<German>2. Starten der Kampagne</German>
 						<Spanish>2. Comenzando la campaña</Spanish>
 						<Russian>2. С чего начать</Russian>
+						<Italian>2 .Inizio della Campagna</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT2">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -2174,6 +2481,13 @@
 						В месте развёртывания вы можете выбрать снаряжение в Арсенале. Там же вы найдете вашу первую FOB, упакованную внутри контейнера, Spartan-01 Huron и несколько других транспортных вертолётов.&lt;br/&gt; &lt;br/&gt;
 						Вы должны будете переправить этот контейнер при помощи Huron или Ghosthawk (если вы не выбрали в параметрах, что первая FOB уже развёрнута). Вы можете развернуть эту первую FOB там, где пожелаете, так что от вас зависит выбор правильного места, для началя своей кампании.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						La campagna inizia in una zona sicura che gli OPFOR non oseranno attaccare. La prima scelta è quella di scegliere dove si desidera schierarsi. All'inizio è possibile schierarsi solo alla base di partenza, ma con l'aanzamento del gioco, più opzioni saranno disponibili come FOB e Respawn Mobili.&lt;br/&gt; &lt;br/&gt;
+						Nella base chimera potrai creare il tuo equipaggiamento da un Arsenale fornitissimo. Troverete anche la  prima FOB confezionata all'interno di un container avrete a disposizone lo Spartan-01 Huron e pochi altri elicotteri di trasporto.&lt;br/&gt; &lt;br/&gt;
+						Si dovrà trasportare  il container  con l'Huron o un Ghosthawk (a meno che non si è scelto di iniziare con la prima FOB già costruita). È possibile creare questa prima FOB dove si vuole, quindi tocca a voi scegliere il posto giusto per iniziare la vostra campagna.&lt;br/&gt; &lt;br/&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE3">
 						<Original>3. Objective</Original>
@@ -2181,6 +2495,7 @@
 						<German>3. Ziele</German>
 						<Spanish>3. Objetivo</Spanish>
 						<Russian>3. Цели и задачи</Russian>
+						<Italian>3. Obiettivi</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT3">
 						<Original>&lt;br/&gt;
@@ -2207,6 +2522,11 @@
 						Но эти города будут для вас крепкими орешками, их получится раскусить только ограничив поступление в них подкреплений, силы OPFOR в них очень хорошо организованы.&lt;br/&gt; &lt;br/&gt;
 						Чтобы добиться успеха, вам придется захватить большое количество различных зон, каждая из которых принесёт свой определённый бонус.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<Italian>&lt;br/&gt;
+						L'obiettivo principale della campagna è quello di cacciare gli OPFOR da Altis. Per raggiungere questo obiettivo, si dovrà liberare le 7 principali città dell'isola: Kavala, Athira, Pyrgos, San Dionisio, Zaros, Paros e Molos. Questa è l'unica condizione di vittoria per la campagna.&lt;br/&gt; &lt;br/&gt;
+						Ma quelle città sono gatte da pelare con risorse limitate e un OPFOR ben consolidata. &lt;br/&gt; &lt;br/&gt;
+						Per avere successo, si dovrà catturare un gran numero di settori diversi, ognuno con il proprio scopo.&lt;br/&gt; &lt;br/&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE4">
 						<Original>4. Sectors</Original>
@@ -2214,6 +2534,7 @@
 						<German>4. Sektoren</German>
 						<Spanish>4. Sectores</Spanish>
 						<Russian>4. Зоны</Russian>
+						<Italian>4. Settori</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT4">
 						<Original>&lt;br/&gt;
@@ -2256,6 +2577,14 @@
 						- Радиовышки: под контролем OPFOR они используются для вызова подкрепления в ближайший атакованный сектор. Время подхода подкрепления зависит от дистанции между вышкой и зоной. Когда радиовышки под контролем НАТО, они дают вам полезную информацию, если в непосредственной близости от вышек враг использует для радиопереговоров радиосвязь.&lt;br/&gt; &lt;br/&gt;
 						- Главные населённые пункты: всего их семь: Кавала, Атира, Пиргос, Агиос Дионисиос, Зарос, Парос и Молос. Когда все эти населённые пункты будут под контролем НАТО, вы выиграете.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<Italian>&lt;br/&gt;
+						I settori sono divisi in 5 categorie:&lt;br/&gt; &lt;br/&gt;
+						- Punti di interesse: in genere piccole e medie città, ogni punto di interesse controllato alzerà la capacità di reclutamento delle truppe.&lt;br/&gt; &lt;br/&gt;
+						- Le basi militari: piene di personale OPFOR, se catturate produrranno grandi quantità di munizioni che saranno utili per aggiornare la vostra potenza di fuoco. Tuttavia queste installazioni sono fortemente difese e richiederanno assalti grandi e ben coordinati.&lt;br/&gt; &lt;br/&gt;
+						- Fabbriche: le fabbriche vi daranno il carburante necessario per i veicoli.&lt;br/&gt; &lt;br/&gt;
+						- Torri radio: quando controllate dagli OPFOR,le torri radio saranno utilizzate per chiamare rinforzi, quando un settore vicino viene attaccato. Il tempo di reazione dipende dalla distanza tra la torre e il settore. Quando sotto controllo della NATO, le torri daranno utili informazioni sui movimenti delle truppe nemiche nelle vicinanze utilizzando le loro comunicazioni radio.&lt;br/&gt; &lt;br/&gt;
+						- Grandi città: ce ne sono 7: Kevala, Athira, Pyrgos, San Dionisio, Zaros, Paros e Molos. Quando tutte le città sono sotto il controllo della NATO, avrete il controllo dell'isola.&lt;br/&gt; &lt;br/&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE5">
 						<Original>5. Resources</Original>
@@ -2263,6 +2592,7 @@
 						<German>5. Ressourcen</German>
 						<Spanish>5. Recursos</Spanish>
 						<Russian>5. Ресурсы</Russian>
+						<Italian>5. Risorse</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT5">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -2311,7 +2641,16 @@
 						В этой кампании вы должны управлять тремя типами ресурсов:&lt;br/&gt;&lt;br/&gt;
 						- &lt;t color='#00ff00'&gt;ПЕРСОНАЛ:&lt;/t&gt; связан с количеством точек интереса, которые вы контролируете. Больше ресурса позволяет повысить качество и количество ваших наземных войск. &lt;br/&gt;&lt;br/&gt;
 						- &lt;t color='#ff0000'&gt;ВООРУЖЕНИЕ:&lt;/t&gt; используется для развертывания вооруженных транспортных средств, танков и элитных солдат. Ресурс содержится в ящиках, которые могут быть найдены на военных базах. Эти ящики должны быть перемещены в FOB NATO при помощи наземной и аввиатехники, потом их надо утилизировать, чтобы ваш ресурс пополнился.&lt;br/&gt;&lt;br/&gt;
-						- &lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; используется при создании всех транспортных средств, причём некоторые из них требуют больше ресурса, чем другие. Уровень ресурса зависит от того, сколько заводов контролируются силами НАТО.&lt;br/&gt; &lt;br/&gt;</Russian>
+						- &lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; используется при создании всех транспортных средств, причём некоторые из них требуют больше ресурса, чем другие. Уровень ресурса зависит от того, сколько заводов контролируются силами НАТО.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						In questa campagna hai da gestire 3 tipi di risorse:&lt;br/&gt; &lt;br/&gt;
+						- &lt;t color='#00ff00'&gt;MANPOWER:&lt;/t&gt; Manpower(Lavoratori) è legata al numero di punti di interesse che controlli. Una forza lavoro più grande consente di alzare la qualità e la quantità delle vostre truppe di terra. &lt;br/&gt; &lt;br/&gt;
+						- &lt;t color='#ff0000'&gt;AMMO:&lt;/t&gt; Munizioni vengono usate per creare veicoli armati, carri armati e soldati d'elite.Munizioni è contenuto in scatole che possono essere recuperati da basi militari. Quelle casse devono essere spostate in una FOB con un camion o elicottero, poi riciclata per aumentare la vostra scorta di munizioni.&lt;br/&gt; &lt;br/&gt;
+						- &lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Carburante viene utilizzato da ogni veicolo, alcuni ne consumano di più. I livelli di carburante dipende da quante fabbriche sono controllate da forze NATO.&lt;br/&gt; &lt;br/&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert level</Original>
@@ -2319,6 +2658,7 @@
 						<German>6. Alarmstatus</German>
 						<Spanish>6. Nivel de alerta</Spanish>
 						<Russian>6. Уровень тревоги</Russian>
+						<Italian>6. Livello di Allerta</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT6">
 						<Original>&lt;br/&gt;
@@ -2339,7 +2679,12 @@
 						</Spanish>
 						<Russian>&lt;br/&gt;
 						OPFOR не будут сидеть сложа руки, пока вы будете освобождать все зоны, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt;
-						Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;</Russian>
+						Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;
+						L'OPFOR non ti permetterà di liberare tutto il suo territorio nuovo di zecca senza reagire. Quando si inizia la campagna, le forze ostili saranno composte esclusivamente da presidi all'interno di basi militari. Tuttavia, quando diventerai più minaccioso, l'OPFOR inizierà chiamando rinforzi, uomini e mezzi per contrastarti.&lt;br/&gt; &lt;br/&gt;
+						Per limitare le capacità operative della OPFOR, dovrai completare gli obiettivi secondari che comprendono la distruzione di FOB(Basi Logistiche) nemiche. Ciò non è necessario per vincere la campagna, ma se si ignora il livello di allerta per troppo tempo, ci si trova in un bel po' di guai.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE7">
 						<Original>7. Construction</Original>
@@ -2347,6 +2692,7 @@
 						<German>7. Konstruktion</German>
 						<Spanish>7. Construcción</Spanish>
 						<Russian>7. Строительство</Russian>
+						<Italian>7. Construzioni</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT7">
 						<Original>&lt;br/&gt;
@@ -2367,7 +2713,12 @@
 						</Spanish>
 						<Russian>&lt;br/&gt;
 						Чтобы помочь вам добиться успеха в ваших начинаниях, у вас есть возможность строительства, что позволит вам развернуть личный состав, транспортные средства, защитные укрепления, и так далее. В зависимости от ваших ресурсов, конечно.&lt;br/&gt; &lt;br/&gt;
-						Система строительство будет доступна, когда вы находитесь в 100 метров от штаба FOB. Тогда у вас появится контекстное меню строительства.&lt;br/&gt; &lt;br/&gt;</Russian>
+						Система строительство будет доступна, когда вы находитесь в 100 метров от штаба FOB. Тогда у вас появится контекстное меню строительства.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;
+						Per aiutarvi ad avere successo nei vostri sforzi, si dispone di una capacità di costruzione che consentone di schierare  unità, veicoli, difese, fortificazioni e così via. A seconda delle risorse che conquisterai&lt;br/&gt; &lt;br/&gt;
+						Il sistema di costruzione sarà disponibile quando ci si trova nel raggio di 100 metri da una  FOB. Un'opzione contestuale apparirà nel menu.&lt;br/&gt; &lt;br/&gt;
+					  </Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE8">
 						<Original>8. Deploying another FOB</Original>
@@ -2375,6 +2726,7 @@
 						<German>8. Errichtung einer weiteren FOB</German>
 						<Spanish>8. Desplegar otra FOB</Spanish>
 						<Russian>8. Развёртывание новой FOB</Russian>
+						<Italian>8. Costruire un'altra FOB</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT8">
 						<Original>&lt;br/&gt;
@@ -2395,7 +2747,12 @@
 						</Spanish>
 						<Russian>&lt;br/&gt;
 						Чтобы развернуть новую FOB, перейдите в меню строительства, на вкладку снабжения, и постройте контейнер с FOB или грузовик с FOB (то же самое, только с колесами).&lt;br/&gt; &lt;br/&gt;
-						Затем вы можете переместить этот контейнер или грузовик туда, где вы хотите развернуть новую FOB. Однако следует знать, что вы не можете построить FOB внутри зон, и дальше чем в 2 км от любой другой FOB.&lt;br/&gt; &lt;br/&gt;</Russian>
+						Затем вы можете переместить этот контейнер или грузовик туда, где вы хотите развернуть новую FOB. Однако следует знать, что вы не можете построить FOB внутри зон, и дальше чем в 2 км от любой другой FOB.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;
+						Per costruire una nuova FOB, andare nel menu di costruzione, nella scheda della logistica, e costruire un container FOB o un camion FOB (la stessa cosa, solo con le ruote).&lt;br/&gt; &lt;br/&gt;
+						Quindi è possibile spostare il container FOB dove si desidera creare la nuova FOB. Tuttavia bisogna essere consapevoli che non si può costruire una FOB all'interno di un settore di controllo, o nel raggio di 2 KM da qualsiasi altra FOB.&lt;br/&gt; &lt;br/&gt;
+					  </Iitalian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE9">
 						<Original>9. Secondary objectives</Original>
@@ -2403,6 +2760,7 @@
 						<German>9. Sekundäre Ziele</German>
 						<Spanish>9. Objetivos secundarios</Spanish>
 						<Russian>9. Дополнительные задания</Russian>
+						<Italian>9. Obiettivi Secondari</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT9">
 						<Original>&lt;br/&gt;
@@ -2428,7 +2786,13 @@
 						<Russian>&lt;br/&gt;
 						Когда вы захватите вражескую зону, иногда несколько вражеских солдат могут сдаться в плен. Вы можете захватить пленных, они должны быть переправлены в любую из FOB на допрос.&lt;br/&gt; &lt;br/&gt;
 						Этот допрос, выполненный в соответствии с Женевской конвенцией, позволит вам получить более или менее точную информацию о положении баз снабжения OPFOR.&lt;br/&gt; &lt;br/&gt;
-						Добравшись туда, вы должны будете отискать их точное положение, а затем использовать любые средства в вашем распоряжении, чтобы уничтожить каждое транспортное средство или контейнер, который может быть полезен, чтобы пополнить силы врага. Успех в решении этой задачи позволит снизить уровень тревоги OPFOR, следовательно и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;</Russian>
+						Добравшись туда, вы должны будете отискать их точное положение, а затем использовать любые средства в вашем распоряжении, чтобы уничтожить каждое транспортное средство или контейнер, который может быть полезен, чтобы пополнить силы врага. Успех в решении этой задачи позволит снизить уровень тревоги OPFOR, следовательно и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;
+						Quando si cattura un settore, a volte le poche forze ostili rimaste si arrenderanno. È quindi possibile catturare i prigionieri che devono essere scortati presso una FOB vicina per essere interrogati.&lt;br/&gt; &lt;br/&gt;
+						Questo interrogatorio, eseguito nel massimo rispetto delle Convenzioni di Ginevra, vi permetterà di ottenere più o meno precise informazioni sulla posizione di una base logistica OPFOR.&lt;br/&gt; &lt;br/&gt;
+						In mappa verrà segnalata una posizione approssimativa della FOB nemica è necessario trovare la posizione esatta del bersaglio, quindi utilizzare ogni mezzo a vostra disposizione per distruggere ogni veicolo o contenitore che potrebbe essere utile per ricaricare le forze OPFOR. Riuscendo in questo compito si riduce il livello di allerta, di conseguenza, e con essa l'efficienza di tutte le forze ostili.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE10">
 						<Original>10. Commanding</Original>
@@ -2436,28 +2800,29 @@
 						<German>10. Oberkommando</German>
 						<Spanish>10. Comandancia</Spanish>
 						<Russian>10. Командование</Russian>
+						<Italian>10. Comando</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TEXT10">
 						<Original>&lt;br/&gt;
-						When a player uses the commander slot (the last slot of the list), they get access to a Zeus interface by pressing the corresponding key (U by default).&lt;br/&gt; &lt;br/&gt;
+						When a player uses the commander slot (the last slot of the list), they get access to a Zeus interface by pressing the corresponding key (Y by default).&lt;br/&gt; &lt;br/&gt;
 						This interface allows to command NATO forces in 3d view or map view.&lt;br/&gt; &lt;br/&gt;
 						Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;
 						This role is not mandatory, but strongly recommended for smaller groups of players.&lt;br/&gt; &lt;br/&gt;
 						</Original>
 						<French>&lt;br/&gt;
-						Lorsqu'un joueur prend le rôle de commandant (en dernière position de la liste des rôles), il a accès à une interface Zeus en appuyant sur la touche correspondante (par défaut U).&lt;br/&gt; &lt;br/&gt;
+						Lorsqu'un joueur prend le rôle de commandant (en dernière position de la liste des rôles), il a accès à une interface Zeus en appuyant sur la touche correspondante (par défaut Y).&lt;br/&gt; &lt;br/&gt;
 						Cette interface permet de commander les troupes de l'OTAN en vue 3d ou en vue carte.&lt;br/&gt; &lt;br/&gt;
 						Le commandant dispose par ailleurs d'options de construction supplémentaires pour obtenir des véhicules avec équipage ou des escouades entières pré-définies.&lt;br/&gt; &lt;br/&gt;
 						Ce rôle n'est pas obligatoire, mais fortement recommandé pour les petits groupes de joueurs.&lt;br/&gt; &lt;br/&gt;
 						</French>
 						<German>&lt;br/&gt;
-						Wenn ein Spieler den Commander Slot (der letzte Slot in der Lobby) besetzt, dann bekommt dieser Zugang zur Zeus Oberfläche durch drücken der entsprechenden Taste (normalerweise Z).&lt;br/&gt; &lt;br/&gt;
+						Wenn ein Spieler den Commander Slot (der letzte Slot in der Lobby) besetzt, dann bekommt dieser Zugang zur Zeus Oberfläche durch drücken der entsprechenden Taste (normalerweise Y).&lt;br/&gt; &lt;br/&gt;
 						Diese Oberfläche erlaubt es die NATO Truppen auf einer 3D Ansicht oder der Karte zu kommandieren.&lt;br/&gt; &lt;br/&gt;
 						Zusätzlich erhält der Commander weitere Bauoptionen, welche es ihm erlauben bemannte Fahrzeuge oder komplette Infanteriegruppen anzufordern.&lt;br/&gt; &lt;br/&gt;
 						Dieser Posten ist nicht zwingend notwendig, allerdings ist es sehr empfohlen ihn zu besetzen.&lt;br/&gt; &lt;br/&gt;
 						</German>
 						<Spanish>&lt;br/&gt;
-						Cuando un jugador usa el slot de Comandante (el último de la lista), se tiene acceso a una interfaz Zeus pulsando la tecla correspondiente (tecla U por defecto).&lt;br/&gt; &lt;br/&gt;
+						Cuando un jugador usa el slot de Comandante (el último de la lista), se tiene acceso a una interfaz Zeus pulsando la tecla correspondiente (tecla Y por defecto).&lt;br/&gt; &lt;br/&gt;
 						Esta interfaz te permite comandar a las fuerzas de la OTAN desde un punto de vista en 3D o desde el mapa.&lt;br/&gt; &lt;br/&gt;
 						Es más, el Comandante obtiene opciones adicionales de construcción que le permiten obtener vehículos con tripulación o escuadras enteras predefinidas.&lt;br/&gt; &lt;br/&gt;
 						Este rol no es obligatorio, pero si muy recomendado en el caso de grupos reducidos de jugadores.&lt;br/&gt; &lt;br/&gt;
@@ -2466,7 +2831,14 @@
 						Когда игрок займёт слот командира (последний слот списка), он получит доступ к интерфейсу Зевса, нажав соответствующую клавишу (Y по умолчанию).&lt;br/&gt; &lt;br/&gt;
 						Этот интерфейс позволяет командовать силами НАТО в 3d и при помощи карты.&lt;br/&gt; &lt;br/&gt;
 						Кроме того, командир получает дополнительные опции строительства, что позволит ему мобилизовывать транспортные средства с экипажем или целые готовые отряды.&lt;br/&gt; &lt;br/&gt;
-						Эта роль не является обязательной, но настоятельно рекомендуется если вы играете небольшой группой игроков.&lt;br/&gt; &lt;br/&gt;</Russian>
+						Эта роль не является обязательной, но настоятельно рекомендуется если вы играете небольшой группой игроков.&lt;br/&gt; &lt;br/&gt;
+						</Russian>
+						<Italian>&lt;br/&gt;
+						Quando un giocatore utilizza lo slot comandante (l'ultimo slot della lista), otterrà l'accesso a un'interfaccia Zeus premendo il tasto corrispondente (Y di default).&lt;br/&gt; &lt;br/&gt;
+						Questa interfaccia permette di comandare forze NATO in vista 3D o mappa.&lt;br/&gt; &lt;br/&gt;
+						Inoltre il comandante ottiene opzioni di generazione di approvvigionamenti che permetteranno di ottenere veicoli con equipaggio o intere squadre pre-fatte.&lt;br/&gt; &lt;br/&gt;
+						Questo ruolo non è obbligatorio, ma fortemente consigliato per piccoli gruppi di giocatori.&lt;br/&gt; &lt;br/&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION0">
 						<Original>FOB Hunting</Original>
@@ -2474,6 +2846,7 @@
 						<German>FOB Jagd</German>
 						<Spanish>Caza de FOB</Spanish>
 						<Russian>Охота за вражескими FOB</Russian>
+						<Italian>Caccia alla FOB</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING0">
 						<Original>
@@ -2545,13 +2918,30 @@
 						&lt;br/&gt;
 						&lt;t size='1.15' color='#ffa000'&gt;Награда: уровень тревоги OPFOR уменьшится на 40%&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
-						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Russian>
+						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+						</Russian>
+						<Italian>
+						&lt;t size='1.3' color='#ffa000'&gt;CACCIA ALLA FOB&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Le forze OPFOR utilizzano una serie di piccole basi logistiche situate dietro il fronte. Distruggere tali basi serve ad interrompere le linee di alimentazione OPFOR e mettere in pericolo la loro capacità di reagire alle nostre azioni.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						La vostra missione è di distruggere tutte le attività di approvvigionamento (camion, contenitori) presso l 'obiettivo con ogni mezzo a vostra disposizione. Purtroppo la nostra intelligence non è in grado di fornire una posizione precisa della base, si dovrà individuare l'obiettivo all'interno della zona rossa sulla mappa.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Ricompensa: livello di allerta OPFOR ridotto del 40%&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+					</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION1">
 						<Original>Convoy Hijack</Original>
 						<French>Interception de convoi</French>
 						<German>Konvoi Hinterhalt</German>
 						<Russian>Налёт на конвой врага</Russian>
+						<Italian>Intercetta il Convoglio</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING1">
 						<Original>
@@ -2619,9 +3009,26 @@
 						&lt;br/&gt;
 						&lt;t size='1.15' color='#ffa000'&gt;Вторичная награда: Всё вооружение, которое можно получить за утилизацию груза конвоя.&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
-						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Russian>
+						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+						</Russian>
+						<Italian>
+						&lt;t size='1.3' color='#ffa000'&gt;INTERCETTA IL CONVOGLIO&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Le forze OPFOR utilizzano convogli stradali per rifornire le loro posizioni difensive. Intercettare uno di questi convogli potrebbe effettivamente distruggere le loro linee di rifornimento, e potete sfruttare l'occasione per recuperare una notevole quantità di munizioni.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						La tua missione è quella di fermare il convoglio OPFOR con ogni mezzo necessario. Si può distruggerlo, o dirottarlo e recuperare tutte le munizioni. L'obiettivo sarà evidenziato sulla mappa.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Ricompensa: livello di allerta OPFOR ridotto del 15%&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Seconda ricompensa: è possibile recuperare tutte le munizioni.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+					</Italian>
 				</Key>
-
 
 				<!-- Added in v0.922 -->
 				<Key ID="STR_PARAM_BLUFOR_DEFENDERS">
@@ -2629,35 +3036,41 @@
 						<French>Défenseurs BLUFOR dans les secteurs capturés</French>
 						<German>BLUFOR Verteidiger in besetzten Sektoren</German>
 						<Russian>BLUFOR защитники в захваченных зонах</Russian>
+						<Italian>Trupppe BLUFOR nei settori controllati</Italian>
 				</Key>
 				<Key ID="STR_PARAM_AUTODANGER">
 						<Original>Auto-danger behaviour on BLUFOR forces</Original>
 						<French>Comportement 'danger' automatique sur les forces BLUFOR</French>
 						<German>Auto-Gefahr Verhalten bei BLUFOR Kräften</German>
 						<Russian>Авто-опасность для сил BLUFOR</Russian>
+						<Italian>Comportamento Auto-Allerta per forze BLUFOR</Italian>
 				</Key>
 				<Key ID="STR_PARAM_FOBS_COUNT">
 						<Original>Maximum number of FOBs allowed</Original>
 						<French>Nombre maximal de FOBs autorisé</French>
 						<German>Maximale Anzahl an erlaubten FOBs</German>
 						<Russian>Максимальное количество FOB</Russian>
+						<Italian>Numero massimo di FOB consentite</Italian>
 				</Key>
 				<Key ID="STR_HINT_FOBS_EXCEEDED">
 						<Original>You are not allowed to deploy more than %1 FOBs at the same time.</Original>
 						<French>Vous n'êtes pas autorisé à déployer plus de %1 FOBs en même temps.</French>
 						<German>Sie haben nicht die Erlaubnis mehr als %1 FOBs zur selben Zeit zu errichten.</German>
 						<Russian>Вам не разрешено развертывать более %1 FOB одновременно.</Russian>
+						<Italian>Non sei autorizzato a costruire piè di %1 FOB allo stesso tempo</Italian>
 				</Key>
 				<Key ID="STR_HINT_LOADOUT_LOADED">
 						<Original>%1 loadout successfully loaded.</Original>
 						<French>Equipement %1 chargé avec succès.</French>
 						<German>Ausrüstungsset %1 erfolgreich geladen.</German>
 						<Russian>Снаряжение %1 успешно загружено.</Russian>
+						<Italian>%1 equipaggiamento correttamente caricato</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION2">
 						<Original>Search and Rescue</Original>
 						<French>Recherche et Sauvetage</French>
 						<German>Helikopterbergung</German>
+						<Italian>Cerca e Soccorri</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING2">
 						<Original>
@@ -2705,6 +3118,21 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
 						</German>
+						<Italian>
+						&lt;t size='1.3' color='#ffa000'&gt;CERCA E SOCCORRI&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Abbiamo perso il contatto con un elicottero da ricognizione in missione dietro le linee nemiche. Riteniamo che l'elicottero sia stato abbattuto da forze ostili.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						L'elicottero può essersi schiantato ovunque in una vasta zona attorno alla sua ultima posizione nota. La vostra missione è quella di recuperare l'equipaggio  e la loro preziosa Intel. Forze ostili possono averli trovati prima di voi, quindi è necessario essere rapidi, attenti e pronto a tutto.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;20 Punti Intel (10 per ogni membro in vita).&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+					</Italian>
 				</Key>
 
 				<!-- Added in v0.924 -->
@@ -2712,43 +3140,52 @@
 						<Original>Penalty for killing civilians</Original>
 						<French>Pénalité pour les pertes civiles</French>
 						<German>Strafe für zivile Verluste</German>
+						<Italian>Penalità per l'uccisione di civili</Italian>
 				</Key>
 				<Key ID="STR_CIV_PENALTY_MESSAGE">
 						<Original>Penalty of %1 for killing of civilian named %2 by %3</Original>
 						<French>Penalty de %1 pour avoir tué le civil %2 par %3</French>
 						<German>Strafe von %1 für die Ermordung des Zivilisten %2 durch %3</German>
+						<Italian>Pena di 1% per l'uccisione di civili nome %2 da %3</Italian>
 				</Key>
 				<Key ID="STR_PARAM_SQUAD_SIZE">
 						<Original>AI recruitment limit per squad</Original>
 						<French>Limite de recrutement d'IA par escouade</French>
 						<German>KI Rekrutierungslimit per Squad</German>
+						<Italian>Limite di reclutamento AI per squadra</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_STARTED">
 						<Original>Crashed helicopter near %1.</Original>
 						<French>Helicopter crashé près de %1.</French>
 						<German>Helikopterabsturz in der Nähe von %1</German>
+						<Italian>L'elicottero si è schiantato  nei pressi di %1.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_FAILED">
 						<Original>SAR mission failed, both crew are KIA.</Original>
 						<French>Mission SAR échouée, les deux équipages sont morts.</French>
 						<German>SAR Mission fehlgeschlagen. Beide Crewmitglieder gefallen.</German>
+						<Italian>Missione Cerca e Soccorri FALLITA,l'equipaggio è stato ucciso</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_SUCCESS">
 						<Original>SAR mission succeeded.</Original>
 						<French>Mission SAR réussie.</French>
 						<German>SAR Mission erfolgreich</German>
+						<Italian>Missione Cerca e Soccorri completata con successo</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MAPMARKERS">
 						<Original>Player mapmarkers activation through extended options</Original>
 						<German>Kartenmarkierungen von Spielern über Extended Options aktivierbar</German>
+						<Italian>i mapmarker si attivano dal menu opzioni avanzate</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILERESPAWN">
 						<Original>Mobile respawn</Original>
 						<German>Mobiler Respawn</German>
+						<Italian>Respawn Mobile</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILEARSENAL">
 						<Original>Mobile arsenal</Original>
 						<German>Mobiles Arsenal</German>
+						<Italian>Arsenale Mobile</Italian>
 				</Key>
 				
 				<!-- Added in v0.95 -->
@@ -2779,6 +3216,26 @@
 				<Key ID="STR_PLANE_SLOT">
 						<Original>Tent Plane Hangar</Original>
 						<German>Hangarzelt</German>
+				</Key>
+				<Key ID="STR_BOX_CANTSTORE">
+						<Original>There is no free storage area nearby.</Original>
+						<German>Keine freie Lagerfläche in der Nähe.</German>
+				</Key>
+				<Key ID="STR_ACTION_STORE_CRATE">
+						<Original>-- STORE CRATE</Original>
+						<German>-- KISTE EINLAGERN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
+						<Original>-- UNLOAD SUPPLY CRATE</Original>
+						<German>-- NACHSCHUB ABLADEN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_AMMO">
+						<Original>-- UNLOAD AMMO CRATE</Original>
+						<German>-- MUNITION ABLADEN</German>
+				</Key>
+				<Key ID="STR_ACTION_UNSTORE_FUEL">
+						<Original>-- UNLOAD FUEL CRATE</Original>
+						<German>-- KRAFTSTOFF ABLADEN</German>
 				</Key>
 		</Package>
 </Project>

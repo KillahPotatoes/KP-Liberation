@@ -150,6 +150,13 @@ class Missions
 ## Changelog
 
 ### 0.95
+* Added new resource system (Building WIP at the moment)
+* Added Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
+* Removed resource caps system
+* Removed option for passive income
+* Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset

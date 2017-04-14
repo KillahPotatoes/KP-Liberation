@@ -104,9 +104,9 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 
 			_affordable = true;
 			if(
-				((_x select 1 > 0) && ((_x select 1) > (infantry_cap - resources_infantry))) ||
-				((_x select 2 > 0) && ((_x select 2) > resources_ammo)) ||
-				((_x select 3 > 0) && ((_x select 3) > (fuel_cap - resources_fuel)))
+				((_x select 1 > 0) && ((_x select 1) > KP_liberation_supplies)) ||
+				((_x select 2 > 0) && ((_x select 2) > KP_liberation_ammo)) ||
+				((_x select 3 > 0) && ((_x select 3) > KP_liberation_fuel))
 				) then {
 				_affordable = false;
 			};
@@ -143,9 +143,9 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	if (dobuild == 0 && _selected_item != -1 && (_selected_item < (count _build_list))) then {
 		_build_item = _build_list select _selected_item;
 		if (
-				((_build_item select 1 == 0 ) || ((_build_item select 1) <= (infantry_cap - resources_infantry))) &&
-				((_build_item select 2 == 0 ) || ((_build_item select 2) <= resources_ammo)) &&
-				((_build_item select 3 == 0 ) || ((_build_item select 3) <= (fuel_cap - resources_fuel)))
+				((_build_item select 1 == 0 ) || ((_build_item select 1) <= KP_liberation_supplies)) &&
+				((_build_item select 2 == 0 ) || ((_build_item select 2) <= KP_liberation_ammo)) &&
+				((_build_item select 3 == 0 ) || ((_build_item select 3) <= KP_liberation_fuel))
 		) then {
 			_affordable = true;
 		};
@@ -170,10 +170,10 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	ctrlEnable [ 120, _affordable && _linked_unlocked && !(_squad_full) ];
 	ctrlEnable [ 121, _affordable_crew && _linked_unlocked ];
 
-	ctrlSetText [131, format [ "%1 : %2/%3" , localize "STR_MANPOWER" , (floor resources_infantry), infantry_cap]] ;
-	ctrlSetText [132, format [ "%1 : %2" , localize "STR_AMMO" , (floor resources_ammo)] ];
-	ctrlSetText [133, format [ "%1 : %2/%3" , localize "STR_FUEL" , (floor resources_fuel), fuel_cap] ];
-	ctrlSetText [134, format [ "%1 : %2/%3" , localize "STR_UNITCAP" , unitcap, ([] call F_localCap)] ];
+	ctrlSetText [131, format [ "%1 : %2" , localize "STR_MANPOWER", (floor KP_liberation_supplies)]] ;
+	ctrlSetText [132, format [ "%1 : %2" , localize "STR_AMMO", (floor KP_liberation_ammo)]];
+	ctrlSetText [133, format [ "%1 : %2" , localize "STR_FUEL", (floor KP_liberation_fuel)]];
+	ctrlSetText [134, format [ "%1 : %2/%3" , localize "STR_UNITCAP", unitcap, ([] call F_localCap)]];
 
 	_link_color = "#0040e0";
 	_link_str = localize "STR_VEHICLE_UNLOCKED";

@@ -23,8 +23,16 @@ while { GRLIB_endgame == 0 } do {
 					[ [ _nextsector ] , "manage_one_sector", _hc ] call BIS_fnc_MP;
 				};
 
+				if ( _nextsector in sectors_capture ) then {
+					[ _nextsector ] call manage_supplyboxes;
+				};
+				
 				if ( _nextsector in sectors_military ) then {
 					[ _nextsector ] call manage_ammoboxes;
+				};
+				
+				if ( _nextsector in sectors_factory ) then {
+					[ _nextsector ] call manage_fuelboxes;
 				};
 			};
 		};

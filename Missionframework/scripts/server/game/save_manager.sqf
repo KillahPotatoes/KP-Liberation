@@ -49,6 +49,7 @@ GRLIB_permissions = [];
 ai_groups = [];
 saved_intel_res = 0;
 GRLIB_player_scores = [];
+KP_liberation_storages = [];
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -77,14 +78,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	time_of_day = greuh_liberation_savegame select 3;
 	combat_readiness = greuh_liberation_savegame select 4;
 	saved_ammo_res = greuh_liberation_savegame select 8;
+	KP_liberation_storages = greuh_liberation_savegame select 9;
 
-	if ( "capture_13_1_2_26_25" in blufor_sectors ) then { // Patching Molos Airfield which was a town instead of a factory
-		blufor_sectors = blufor_sectors - [ "capture_13_1_2_26_25" ];
-		blufor_sectors = blufor_sectors + [ "factory666" ];
-	};
-
-	if ( count greuh_liberation_savegame > 9 ) then {
-		_stats = greuh_liberation_savegame select 9;
+	if ( count greuh_liberation_savegame > 10 ) then {
+		_stats = greuh_liberation_savegame select 10;
 		stats_opfor_soldiers_killed = _stats select 0;
 		stats_opfor_killed_by_players = _stats select 1;
 		stats_blufor_soldiers_killed = _stats select 2;
@@ -115,31 +112,31 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		stats_readiness_earned = _stats select 27;
 	};
 
-	if ( count greuh_liberation_savegame > 10 ) then {
-		_weights = greuh_liberation_savegame select 10;
+	if ( count greuh_liberation_savegame > 11 ) then {
+		_weights = greuh_liberation_savegame select 11;
 		infantry_weight = _weights select 0;
 		armor_weight = _weights select 1;
 		air_weight = _weights select 2;
 	};
 
-	if ( count greuh_liberation_savegame > 11 ) then {
-		GRLIB_vehicle_to_military_base_links = greuh_liberation_savegame select 11;
-	};
-
 	if ( count greuh_liberation_savegame > 12 ) then {
-		GRLIB_permissions = greuh_liberation_savegame select 12;
+		GRLIB_vehicle_to_military_base_links = greuh_liberation_savegame select 12;
 	};
 
 	if ( count greuh_liberation_savegame > 13 ) then {
-		ai_groups = greuh_liberation_savegame select 13;
+		GRLIB_permissions = greuh_liberation_savegame select 13;
 	};
 
 	if ( count greuh_liberation_savegame > 14 ) then {
-		saved_intel_res = greuh_liberation_savegame select 14;
+		ai_groups = greuh_liberation_savegame select 14;
 	};
 
 	if ( count greuh_liberation_savegame > 15 ) then {
-		GRLIB_player_scores = greuh_liberation_savegame select 15;
+		saved_intel_res = greuh_liberation_savegame select 15;
+	};
+
+	if ( count greuh_liberation_savegame > 16 ) then {
+		GRLIB_player_scores = greuh_liberation_savegame select 16;
 	};
 
 	setDate [ 2045, 6, 6, time_of_day, 0];
@@ -208,7 +205,67 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 
 	} foreach buildings_to_save;
+	
+	{
+		_nextclass = _x select 0;
 
+		if (_nextclass in _classnames_to_save) then {
+
+			_nextpos = _x select 1;
+			_nextdir = _x select 2;
+
+			_nextbuilding = _nextclass createVehicle _nextpos;
+			_nextbuilding setVectorUp [0,0,1]; // considering maybe setVectorUp surfaceNormal position _nextbuilding; or remove it completely
+			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setdir _nextdir;
+			_nextbuilding setdamage 0;
+			
+			_supplyCrates = floor ((_x select 3) / 100);
+			_ammoCrates = floor ((_x select 4) / 100);
+			_fuelCrates = floor ((_x select 5) / 100);
+			
+			_supplyRemain = floor ((_x select 3) % 100);
+			_ammoRemain = floor ((_x select 4) % 100);
+			_fuelRemain = floor ((_x select 5) % 100);
+			
+			for [{_i=0}, {_i < _supplyCrates}, {_i = _i + 1}] do {
+				_crate = KP_liberation_supply_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+			
+			if (_supplyRemain > 0) then {
+				_crate = KP_liberation_supply_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _supplyRemain, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+			
+			for [{_i=0}, {_i < _ammoCrates}, {_i = _i + 1}] do {
+				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+			
+			if (_ammoRemain > 0) then {
+				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _ammoRemain, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+			
+			for [{_i=0}, {_i < _fuelCrates}, {_i = _i + 1}] do {
+				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+			
+			if (_fuelRemain > 0) then {
+				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _fuelRemain, true];
+				[_crate, _nextbuilding] call F_crateToStorage;
+			};
+		};
+	} forEach KP_liberation_storages;
+	
 	{
 		private [ "_nextgroup", "_grp" ];
 		_nextgroup = _x;
@@ -256,7 +313,7 @@ save_is_loaded = true; publicVariable "save_is_loaded";
 
 while { true } do {
 	waitUntil {
-		sleep 0.3;
+		sleep 0.5;
 		trigger_server_save || GRLIB_endgame == 1;
 	};
 
@@ -268,9 +325,11 @@ while { true } do {
 
 		trigger_server_save = false;
 		buildings_to_save = [];
+		KP_liberation_storages = [];
 		ai_groups = [];
 
 		_all_buildings = [];
+		_all_storages = [];
 		{
 			_fobpos = _x;
 			_nextbuildings = [ _fobpos nearobjects (GRLIB_fob_range * 2), {
@@ -279,10 +338,13 @@ while { true } do {
 				( speed _x < 5 ) &&
 				( isNull  attachedTo _x ) &&
 				(((getpos _x) select 2) < 10 ) &&
-				( getObjectType _x >= 8 )
+				( getObjectType _x >= 8 ) &&
+				!((typeOf _x) in KP_liberation_crates)
  				} ] call BIS_fnc_conditionalSelect;
 
-			_all_buildings = _all_buildings + _nextbuildings;
+			_all_buildings = _all_buildings + [_nextbuildings, {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
+			
+			_all_storages = _all_storages + [_nextbuildings, {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 
 			{
 				_nextgroup = _x;
@@ -329,6 +391,51 @@ while { true } do {
 			};
 			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew ];
 		} foreach _all_buildings;
+		/*
+		ISSUE TO SOLVE AFTER BUILDING A SECOND FOB:
+		Error in expression <savedpos,_nextdir,_hascrew ];
+		} foreach _all_buildings;
+
+		{
+		private _savedpos = [>
+		17:29:27   Error position: <_all_buildings;
+
+		{
+		private _savedpos = [>
+		Error Nicht definierte Variable in Ausdruck: _all_buildings
+		File [...]\scripts\server\game\save_manager.sqf, line 393
+		
+		---
+		[BIS_fnc_conditionalSelect] Error: type OBJECT, expected ARRAY, on index 0, [...]
+		*/
+		
+		{
+			private _savedpos = [];
+			
+			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
+			if (count _savedpos == 0) then {
+				_x setVariable ["GRLIB_saved_pos", getposATL _x, false];
+				_savedpos = getposATL _x;
+			};
+			
+			private _nextclass = typeof _x;
+			private _nextdir = getdir _x;
+			
+			_supplyValue = 0;
+			_ammoValue = 0;
+			_fuelValue = 0;
+			
+			{
+				switch ((typeOf _x)) do {
+					case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable "KP_liberation_crate_value");};
+					case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable "KP_liberation_crate_value");};
+					case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable "KP_liberation_crate_value");};
+					default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+				};
+			} forEach (attachedObjects _x);
+			
+			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue];		
+		} forEach _all_storages;
 
 		time_of_day = date select 3;
 
@@ -383,7 +490,7 @@ while { true } do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness,0,0,0, round resources_ammo, _stats,
+		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness,0,0,0, round resources_ammo, KP_liberation_storages, _stats,
 		[ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links, GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores ];
 
 		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];

@@ -12,7 +12,7 @@ _building_classnames = [];
 {
 	_building_classnames pushBack ( _x select 0 );
 } foreach (buildings);
-_building_classnames = _building_classnames + [ "B_supplyCrate_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F", KP_liberation_ammo_crate ];
+_building_classnames = _building_classnames + [ "B_supplyCrate_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F" ];
 
 waitUntil { sleep 1; !isNil "GRLIB_all_fobs" };
 
@@ -27,8 +27,9 @@ while { true } do {
 							{
 								(((typeof _x in _recycleable_classnames ) &&
 								((count crew _x) == 0 || (typeof _x) in uavs) &&
-								((locked _x == 0 || locked _x == 1))) || ( typeof _x in _building_classnames )) &&
+								((locked _x == 0 || locked _x == 1))) || ( typeof _x in _building_classnames ) || (typeOf _x in KP_liberation_storage_buildings)) &&
 								(alive _x) &&
+								(count(attachedObjects _x) == 0) &&
 								(_x distance lhd > 1000) &&
 								(_x distance ( [] call F_getNearestFob) < GRLIB_fob_range ) &&
 								( getObjectType _x >= 8 ) } ]

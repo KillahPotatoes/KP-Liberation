@@ -29,35 +29,35 @@ if ( !( _sector in GRLIB_military_sectors_already_activated )) then {
 
 	GRLIB_military_sectors_already_activated pushback _sector;
 
-	if ( !GRLIB_passive_income ) then {
-		_crates_amount = ceil (((0.5 * GRLIB_sector_military_value) + (random (0.5 * GRLIB_sector_military_value ))) * GRLIB_resources_multiplier);
-		if ( _crates_amount > 6 ) then { _crates_amount = 6 };
+	_crates_amount = ceil (((0.5 * GRLIB_sector_military_value) + (random (0.5 * GRLIB_sector_military_value ))) * GRLIB_resources_multiplier);
+	if ( _crates_amount > 6 ) then { _crates_amount = 6 };
 
-		for [ {_i=0}, {_i < (_crates_amount + 1) }, {_i=_i+1} ] do {
+	for [ {_i=0}, {_i < (_crates_amount + 1) }, {_i=_i+1} ] do {
 
-			_spawnclass = KP_liberation_ammo_crate;
-			if ( _i == 0 ) then {
-				_spawnclass = opfor_ammobox_transport;
-			};
+		_spawnclass = KP_liberation_ammo_crate;
+		if ( _i == 0 ) then {
+			_spawnclass = opfor_ammobox_transport;
+		};
 
-			_spawnpos = zeropos;
-			while { _spawnpos distance zeropos < 1000 } do {
-				_spawnpos =  ( [ ( markerpos _sector), random 50, random 360 ] call BIS_fnc_relPos ) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
-				if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
-			};
+		_spawnpos = zeropos;
+		while { _spawnpos distance zeropos < 1000 } do {
+			_spawnpos =  ( [ ( markerpos _sector), random 50, random 360 ] call BIS_fnc_relPos ) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
+			if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
+		};
 
-			_newbox = _spawnclass createVehicle _spawnpos;
-			_newbox setpos _spawnpos;
-			_newbox setdir (random 360);
-			clearWeaponCargoGlobal _newbox;
-			clearMagazineCargoGlobal _newbox;
-			clearItemCargoGlobal _newbox;
-			clearBackpackCargoGlobal _newbox;
-			_newbox addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
+		_newbox = _spawnclass createVehicle _spawnpos;
+		_newbox setpos _spawnpos;
+		_newbox setdir (random 360);
+		clearWeaponCargoGlobal _newbox;
+		clearMagazineCargoGlobal _newbox;
+		clearItemCargoGlobal _newbox;
+		clearBackpackCargoGlobal _newbox;
+		_newbox addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
+		
+		_newbox setVariable ["KP_liberation_crate_value", 100, true];
 
-			if ( _i != 0 ) then {
-				[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
-			};
+		if ( _i != 0 ) then {
+			[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
 		};
 	};
 

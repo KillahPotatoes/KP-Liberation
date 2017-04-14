@@ -40,14 +40,22 @@ while { true } do {
 	
 	_nearfob = [] call F_getNearestFob;
 	_fobdistance = 9999;
+	_actual_fob = [];
 	if ( count _nearfob == 3 ) then {
 		_fobdistance = player distance _nearfob;
+		_actual_fob = [KP_liberation_fob_resources, {((_x select 0) distance _nearfob) < GRLIB_fob_range}] call BIS_fnc_conditionalSelect;
 	};
 	
 	if (_fobdistance < _distfob) then {
 		_resources = true;
+		KP_liberation_supplies = ((_actual_fob select 0) select 1);
+		KP_liberation_ammo = ((_actual_fob select 0) select 2);
+		KP_liberation_fuel = ((_actual_fob select 0) select 3);		
 	} else {
 		_resources = false;
+		KP_liberation_supplies = 0;
+		KP_liberation_ammo = 0;
+		KP_liberation_fuel = 0;
 	};
 	
 	if ( _overlayshown) then {
@@ -70,14 +78,13 @@ while { true } do {
 		};
 
 		if (_resources) then {
-			if (_notNearFOB) then {
-				{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
-			};
+			{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
+			
 			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1/%2", (floor resources_infantry),infantry_cap ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor resources_ammo) ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1/%2", (floor resources_fuel),fuel_cap ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1", (floor KP_liberation_supplies)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor KP_liberation_ammo)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1", (floor KP_liberation_fuel)];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format [ "%1/%2", unitcap,([] call F_localCap) ];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format [ "%1%2", round(combat_readiness),"%" ];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format [ "%1", round(resources_intel) ];
@@ -94,10 +101,8 @@ while { true } do {
 
 			};
 		} else {
-			if (!_notNearFOB) then {
-				{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
-				_notNearFOB = true;
-			};
+			{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
+			_notNearFOB = true;
 		};
 		
 		if ( _uiticks % 25 == 0 ) then {

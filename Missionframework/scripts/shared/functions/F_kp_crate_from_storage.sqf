@@ -47,7 +47,6 @@ reverse _stored_crates;
 		_unloaded = true;
 	};
 	if (_unloaded) exitWith {
-		//reverse _stored_crates;
 		_i = 0;
 		{
 			_height = 0.6;

@@ -30,8 +30,10 @@ while { true } do {
 		_classname = FOB_typename;
 	} else {
 		_classname = ((build_lists select buildtype) select buildindex) select 0;
-		_price = ((build_lists select buildtype) select buildindex) select 2;
-		[ [ _price, _classname, buildtype ] , "build_remote_call" ] call BIS_fnc_MP;
+		_price_s = ((build_lists select buildtype) select buildindex) select 1;
+		_price_a = ((build_lists select buildtype) select buildindex) select 2;
+		_price_f = ((build_lists select buildtype) select buildindex) select 3;
+		[[_price_s, _price_a, _price_f, _classname, buildtype], "build_remote_call"] call BIS_fnc_MP;
 	};
 
 	if(buildtype == 1) then {
@@ -222,7 +224,10 @@ while { true } do {
 
 			if ( !alive player || build_confirmed == 3 ) then {
 				deleteVehicle _vehicle;
-				[ [ ((build_lists select buildtype) select buildindex) select 2 ] , "cancel_build_remote_call" ] call BIS_fnc_MP;
+				_price_cs = ((build_lists select buildtype) select buildindex) select 1;
+				_price_ca = ((build_lists select buildtype) select buildindex) select 2;
+				_price_cf = ((build_lists select buildtype) select buildindex) select 3;
+				[[_price_cs, _price_ca, _price_cf] , "cancel_build_remote_call"] call BIS_fnc_MP;
 			};
 
 			if ( build_confirmed == 2 ) then {

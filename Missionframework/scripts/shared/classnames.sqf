@@ -169,8 +169,7 @@ support_vehicles = [
 	["B_Truck_01_ammo_F",10,100,10],
 	["B_Slingload_01_Repair_F",5,0,0],
 	["B_Slingload_01_Fuel_F",5,0,20],
-	["B_Slingload_01_Ammo_F",5,80,0],
-	[KP_liberation_ammo_crate,0,154,0]
+	["B_Slingload_01_Ammo_F",5,80,0]
 ];
 if ( isNil "support_vehicles_extension" ) then { support_vehicles_extension = [] };
 if ( isNil "support_vehicles_overwrite" ) then { support_vehicles_overwrite = false };
