@@ -14,7 +14,7 @@ while { true } do {
 
 		_nearammoboxes = ((getpos player) nearEntities [KP_liberation_crates,10]);
 		_neartransporttrucks = ((getpos player) nearEntities [ammobox_transports_typenames,10]);
-		_nearstorageareas = nearestObjects [player,KP_liberation_storage_buildings,20];
+		_nearstorageareas = nearestObjects [player,KP_liberation_storage_buildings,10];
 
 		_checked_trucks = [];
 

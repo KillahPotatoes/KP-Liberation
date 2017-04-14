@@ -10,6 +10,9 @@ _first_iteration = true;
 _distfob = 100;
 _notNearFOB = false;
 GRLIB_ui_notif = "";
+KP_liberation_supplies = 0;
+KP_liberation_ammo = 0;
+KP_liberation_fuel = 0;
 
 _uiticks = 0;
 
@@ -79,6 +82,10 @@ while { true } do {
 
 		if (_resources) then {
 			{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
+			// Fix for small script error that variables will be "any" for a second after an FOB has been build
+			if (isNil "KP_liberation_supplies") then {KP_liberation_supplies = 0;};
+			if (isNil "KP_liberation_ammo") then {KP_liberation_ammo = 0;};
+			if (isNil "KP_liberation_fuel") then {KP_liberation_fuel = 0;};
 			
 			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 

@@ -341,11 +341,10 @@ while { true } do {
 				( getObjectType _x >= 8 ) &&
 				!((typeOf _x) in KP_liberation_crates)
  				} ] call BIS_fnc_conditionalSelect;
-
-			_all_buildings = _all_buildings + [_nextbuildings, {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
+				
+			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
+			_all_storages = [(_all_storages + _nextbuildings), {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 			
-			_all_storages = _all_storages + [_nextbuildings, {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
-
 			{
 				_nextgroup = _x;
 				if (  side _nextgroup == GRLIB_side_friendly ) then {
@@ -391,24 +390,7 @@ while { true } do {
 			};
 			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew ];
 		} foreach _all_buildings;
-		/*
-		ISSUE TO SOLVE AFTER BUILDING A SECOND FOB:
-		Error in expression <savedpos,_nextdir,_hascrew ];
-		} foreach _all_buildings;
 
-		{
-		private _savedpos = [>
-		17:29:27   Error position: <_all_buildings;
-
-		{
-		private _savedpos = [>
-		Error Nicht definierte Variable in Ausdruck: _all_buildings
-		File [...]\scripts\server\game\save_manager.sqf, line 393
-		
-		---
-		[BIS_fnc_conditionalSelect] Error: type OBJECT, expected ARRAY, on index 0, [...]
-		*/
-		
 		{
 			private _savedpos = [];
 			
