@@ -33,7 +33,10 @@ while { true } do {
 		_price_s = ((build_lists select buildtype) select buildindex) select 1;
 		_price_a = ((build_lists select buildtype) select buildindex) select 2;
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
-		[[_price_s, _price_a, _price_f, _classname, buildtype], "build_remote_call"] call BIS_fnc_MP;
+		
+		_nearfob = [] call F_getNearestFob;
+		
+		[[_price_s, _price_a, _price_f, _classname, buildtype, _nearfob], "build_remote_call"] call BIS_fnc_MP;
 	};
 
 	if(buildtype == 1) then {

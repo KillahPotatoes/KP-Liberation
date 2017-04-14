@@ -3237,5 +3237,13 @@
 						<Original>-- UNLOAD FUEL CRATE</Original>
 						<German>-- KRAFTSTOFF ABLADEN</German>
 				</Key>
+				<Key ID="STR_ACTION_CRATE_VALUE">
+						<Original>-- CHECK CONTENT</Original>
+						<German>-- INHALT PRÜFEN</German>
+				</Key>
+				<Key ID="STR_ACTION_CRATE_VALUE_HINT">
+						<Original>Crate contains %1 resources</Original>
+						<German>Kiste beinhaltet %1 Ressourcen</German>
+				</Key>
 		</Package>
 </Project>

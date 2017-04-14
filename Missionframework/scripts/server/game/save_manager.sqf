@@ -215,7 +215,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextdir = _x select 2;
 
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setVectorUp [0,0,1]; // considering maybe setVectorUp surfaceNormal position _nextbuilding; or remove it completely
+			_nextbuilding setVectorUp surfaceNormal _nextpos;
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
 			_nextbuilding setdamage 0;

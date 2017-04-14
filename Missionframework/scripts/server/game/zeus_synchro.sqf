@@ -1,6 +1,6 @@
 waitUntil { !isNil "huron_typename" };
 
-_vehicleClassnames = [huron_typename];
+_vehicleClassnames = [huron_typename] + KP_liberation_crates;
 
 
 {
@@ -30,7 +30,7 @@ while { true } do {
 
 	_units_to_remove = [];
 	{
-		if ( !(alive _x) ) then {
+		if ( !(alive _x) || !(isNull attachedTo _x)) then {
 			_units_to_remove pushback _x;
 		};
 	} foreach (curatorEditableObjects (allCurators select 0));

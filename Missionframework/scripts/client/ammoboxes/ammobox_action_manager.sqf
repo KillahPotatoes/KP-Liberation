@@ -53,8 +53,10 @@ while { true } do {
 			if ( !(_next_box in _managed_boxes) && ( isNull  attachedTo _next_box )) then {
 				_action_id = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_LOAD_BOX" + "</t>","scripts\client\ammoboxes\do_load_box_action.sqf","",-501,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
 				_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KP_liberation_storage_buildings,10]) select 0] call F_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
-				_next_box setVariable [ "GRLIB_ammo_box_action", _action_id, false ];
-				_next_box setVariable [ "KP_crate_store_action", _action_id2, false ];
+				_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{hint format [localize "STR_ACTION_CRATE_VALUE_HINT", (_this select 0) getVariable "KP_liberation_crate_value"]; uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
+				_next_box setVariable ["GRLIB_ammo_box_action", _action_id, false];
+				_next_box setVariable ["KP_crate_store_action", _action_id2, false];
+				_next_box setVariable ["KP_crate_value_action", _action_id3, false];
 				_managed_boxes pushback _next_box;
 			};
 
@@ -65,8 +67,9 @@ while { true } do {
 			_next_box = _x;
 			if ( !(_next_box in _managed_boxes) || !( isNull  attachedTo _next_box )) then {
 				_managed_boxes = _managed_boxes - [_next_box];
-				_next_box removeAction ( _next_box getVariable ["GRLIB_ammo_box_action", -1] );
-				_next_box removeAction ( _next_box getVariable ["KP_crate_store_action", -1] );
+				_next_box removeAction (_next_box getVariable ["GRLIB_ammo_box_action", -1]);
+				_next_box removeAction (_next_box getVariable ["KP_crate_store_action", -1]);
+				_next_box removeAction (_next_box getVariable ["KP_crate_value_action", -1]);
 			}
 		} foreach _managed_boxes;
 		
