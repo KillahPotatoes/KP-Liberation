@@ -166,9 +166,13 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_hascrew = _x select 3;
 			};
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setVectorUp [0,0,1];
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
+			if (count (_x select 4) == 3) then {
+				_nextbuilding setVectorUp (_x select 4);
+			} else {
+				_nextbuilding setVectorUp [0,0,1];
+			};
 			_nextbuilding setdamage 0;
 
 			if ( _nextclass in _building_classnames ) then {
@@ -215,9 +219,13 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextdir = _x select 2;
 
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setVectorUp surfaceNormal _nextpos;
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
+			if (count (_x select 6) == 3) then {
+				_nextbuilding setVectorUp (_x select 6);
+			} else {
+				_nextbuilding setVectorUp [0,0,1];
+			};
 			_nextbuilding setdamage 0;
 			
 			_supplyCrates = floor ((_x select 3) / 100);
@@ -369,12 +377,16 @@ while { true } do {
 
 		{
 			private _savedpos = [];
+			private _savedvec = [];
 
 			if ( (typeof _x) in _building_classnames ) then {
 				_savedpos = _x getVariable [ "GRLIB_saved_pos", [] ];
-				if ( count _savedpos == 0 ) then {
+				_savedvec = _x getVariable ["KP_saved_vec", []];
+				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
 					_x setVariable [ "GRLIB_saved_pos", getposATL _x, false ];
+					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
 					_savedpos = getposATL _x;
+					_savedvec = vectorUpVisual _x;
 				};
 			} else {
 				_savedpos = getposATL _x;
@@ -388,16 +400,20 @@ while { true } do {
 					_hascrew = true;
 				};
 			};
-			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew ];
+			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew,_savedvec ];
 		} foreach _all_buildings;
 
 		{
 			private _savedpos = [];
+			private _savedvec = [];
 			
 			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
-			if (count _savedpos == 0) then {
+			_savedvec = _x getVariable ["KP_saved_vec", []];
+			if ((count _savedpos == 0) || (count _savedvec == 0)) then {
 				_x setVariable ["GRLIB_saved_pos", getposATL _x, false];
+				_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
 				_savedpos = getposATL _x;
+				_savedvec = vectorUpVisual _x;
 			};
 			
 			private _nextclass = typeof _x;
@@ -416,7 +432,7 @@ while { true } do {
 				};
 			} forEach (attachedObjects _x);
 			
-			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue];		
+			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];		
 		} forEach _all_storages;
 
 		time_of_day = date select 3;

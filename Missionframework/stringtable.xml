@@ -3245,5 +3245,9 @@
 						<Original>Crate contains %1 resources</Original>
 						<German>Kiste beinhaltet %1 Ressourcen</German>
 				</Key>
+				<Key ID="STR_VECACTION">
+						<Original>-- Change alignment</Original>
+						<German>-- Ausrichtung ändern</German>
+				</Key>
 		</Package>
 </Project>

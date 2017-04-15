@@ -35,11 +35,11 @@ do_load_box = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\d
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\build\build_overlay.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\build\do_build.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\commander\enforce_whitelist.sqf";
-if (KP_liberation_mapmarkers == 1) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\empty_vehicles_marker.sqf";};
+if (KP_liberation_mapmarkers) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\empty_vehicles_marker.sqf";};
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\fob_markers.sqf";
-if (KP_liberation_mapmarkers == 1) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\group_icons.sqf";};
+if (KP_liberation_mapmarkers) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\group_icons.sqf";};
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\hostile_groups.sqf";
-if (KP_liberation_mapmarkers == 1) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\huron_marker.sqf";} else {deleteMarker "huronmarker"};
+if (KP_liberation_mapmarkers) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\huron_marker.sqf";} else {deleteMarker "huronmarker"};
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\sector_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\spot_timer.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\broadcast_squad_colors.sqf";
@@ -67,5 +67,3 @@ player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\mis
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\intro.sqf";
 
 [] execVM "onPlayerRespawn.sqf";
-
-[player] joinSilent (createGroup GRLIB_side_friendly);

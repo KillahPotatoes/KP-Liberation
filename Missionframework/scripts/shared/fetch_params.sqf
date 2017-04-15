@@ -75,7 +75,7 @@ if ( GRLIB_ammo_bounties == 1 ) then { GRLIB_ammo_bounties = true } else { GRLIB
 if ( GRLIB_civ_penalties == 1 ) then { GRLIB_civ_penalties = true } else { GRLIB_civ_penalties = false };
 if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
 if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
-if ( KP_liberation_mapmarkers == 1 ) then { GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true } else { GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false };
+if ( KP_liberation_mapmarkers == 1 ) then { KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true } else { KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false };
 if ( KP_liberation_mobilerespawn == 1 ) then { KP_liberation_mobilerespawn = true } else { KP_liberation_mobilerespawn = false };
 if ( KP_liberation_mobilearsenal == 1 ) then { KP_liberation_mobilearsenal = true } else { KP_liberation_mobilearsenal = false };
 

@@ -24,6 +24,7 @@ while { true } do {
 
 	build_confirmed = 1;
 	build_invalid = 0;
+	KP_vector = true;
 	_classname = "";
 	if ( buildtype == 99 ) then {
 		GRLIB_removefobboxes = true;
@@ -73,14 +74,16 @@ while { true } do {
 			_idactcancel = -1;
 			_idactsnap = -1;
 			_idactplacebis = -1;
+			_idactvector = -1;
 			if (buildtype != 99 ) then {
 				_idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>","scripts\client\build\build_cancel.sqf","",-725,false,true,"","build_confirmed == 1"];
 			};
 			if (buildtype == 6 ) then {
 				_idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place_bis.sqf","",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
 			};
-			if (buildtype == 6 || buildtype == 99) then {
+			if (buildtype == 6 || buildtype == 99  || _classname in KP_liberation_storage_buildings) then {
 				_idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>","scripts\client\build\do_grid.sqf","",-735,false,false,"","build_confirmed == 1"];
+				_idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
 			};
 			_idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>","scripts\client\build\build_rotate.sqf","",-750,false,false,"","build_confirmed == 1"];
 			_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
@@ -183,8 +186,12 @@ while { true } do {
 					} else {
 						_vehicle setpos _truepos;
 					};
-					if ( buildtype == 6 || buildtype == 99 ) then {
-						_vehicle setVectorUp [0,0,1];
+					if ( buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings ) then {
+						if (KP_vector) then {
+							_vehicle setVectorUp [0,0,1];
+						} else {
+							_vehicle setVectorUp surfaceNormal position _vehicle;
+						};
 					} else {
 						_vehicle setVectorUp surfaceNormal position _vehicle;
 					};
@@ -248,8 +255,12 @@ while { true } do {
 					clearItemCargoGlobal _vehicle;
 					clearBackpackCargoGlobal _vehicle;
 				};
-				if ( buildtype == 6 || buildtype == 99 ) then {
-					_vehicle setVectorUp [0,0,1];
+				if ( buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings ) then {
+					if (KP_vector) then {
+						_vehicle setVectorUp [0,0,1];
+					} else {
+						_vehicle setVectorUp surfaceNormal position _vehicle;
+					};
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
@@ -296,6 +307,9 @@ while { true } do {
 			};
 			if ( _idactplacebis != -1 ) then {
 				player removeAction _idactplacebis;
+			};
+			if ( _idactvector != -1 ) then {
+				player removeAction _idactvector;
 			};
 			player removeAction _idactrotate;
 			player removeAction _idactplace;

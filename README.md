@@ -8,6 +8,8 @@
 
 [Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
 
+[Discord](https://discord.gg/bpPUU48)
+
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
@@ -141,9 +143,6 @@ class Missions
 };
 ```
 
-## Join us on Discord
-[Click to join the Killah Potatoes Discord Server](https://discord.gg/bpPUU48)
-
 ## Media
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
@@ -152,6 +151,7 @@ class Missions
 ### 0.95
 * Added new resource system (Building WIP at the moment)
 * Added Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
+* Added action to change alignment (up or terrain aligned) during placement of buildings
 * Removed resource caps system
 * Removed option for passive income
 * Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
