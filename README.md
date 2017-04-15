@@ -149,13 +149,14 @@ class Missions
 ## Changelog
 
 ### 0.95
-* Added new resource system (Building WIP at the moment)
+* Added new resource system
 * Added Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
 * Added action to change alignment (up or terrain aligned) during placement of buildings
 * Removed resource caps system
 * Removed option for passive income
 * Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
 
 ### 0.94

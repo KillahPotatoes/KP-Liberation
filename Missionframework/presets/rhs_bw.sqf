@@ -151,7 +151,6 @@ buildings_extension = [
 	["Land_WaterTank_F",0,0,0],
 	["Land_WaterBarrel_F",0,0,0],
 	["Land_MetalCase_01_large_F",0,0,0],
-	["CargoNet_01_box_F",0,0,0],
 	["Land_CampingChair_V1_F",0,0,0],
 	["Land_CampingChair_V2_F",0,0,0],
 	["Land_CampingTable_F",0,0,0],

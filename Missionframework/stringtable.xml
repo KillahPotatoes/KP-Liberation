@@ -3249,5 +3249,9 @@
 						<Original>-- Change alignment</Original>
 						<German>-- Ausrichtung ändern</German>
 				</Key>
+				<Key ID="STR_CANCEL_ERROR">
+						<Original>Not enough free storage space</Original>
+						<German>Nicht genug Lagerkapazität</German>
+				</Key>
 		</Package>
 </Project>

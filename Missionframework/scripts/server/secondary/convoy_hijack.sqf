@@ -5,7 +5,7 @@ while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_marke
 
 private _couldnt_spawn = false;
 { if ( _x == "" ) exitWith { _couldnt_spawn = true; }; } foreach _convoy_destinations_markers;
-if ( _couldnt_spawn ) exitWith { diag_log "Could not find enough map positions for convoy hijack mission"; };
+if ( _couldnt_spawn ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find enough map positions for convoy hijack mission"; };
 
 private _convoy_destinations = [];
 { _convoy_destinations pushback (getMarkerPos _x); } foreach _convoy_destinations_markers;
@@ -22,7 +22,7 @@ private _boxes_amount = 0;
 	if ( _x select 0 == opfor_ammobox_transport ) exitWith { _boxes_amount = (count _x) - 2 };
 } foreach box_transport_config;
 
-if ( _boxes_amount == 0 ) exitWith { diag_log "Opfor ammobox truck classname doesn't allow for ammobox transport, correct your classnames.sqf"; };
+if ( _boxes_amount == 0 ) exitWith { diag_log "[KP LIBERATION] [ERROR] Opfor ammobox truck classname doesn't allow for ammobox transport, correct your classnames.sqf"; };
 
 GRLIB_secondary_in_progress = 1; publicVariable "GRLIB_secondary_in_progress";
 

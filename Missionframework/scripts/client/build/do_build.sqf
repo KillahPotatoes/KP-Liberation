@@ -36,8 +36,9 @@ while { true } do {
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
 		
 		_nearfob = [] call F_getNearestFob;
+		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 		
-		[[_price_s, _price_a, _price_f, _classname, buildtype, _nearfob], "build_remote_call"] call BIS_fnc_MP;
+		[[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas], "build_remote_call"] call BIS_fnc_MP;
 	};
 
 	if(buildtype == 1) then {
@@ -233,11 +234,36 @@ while { true } do {
 			{ _x setpos [ 0,0,0 ] } foreach GRLIB_preview_spheres;
 
 			if ( !alive player || build_confirmed == 3 ) then {
-				deleteVehicle _vehicle;
-				_price_cs = ((build_lists select buildtype) select buildindex) select 1;
-				_price_ca = ((build_lists select buildtype) select buildindex) select 2;
-				_price_cf = ((build_lists select buildtype) select buildindex) select 3;
-				[[_price_cs, _price_ca, _price_cf] , "cancel_build_remote_call"] call BIS_fnc_MP;
+				private ["_price_s", "_price_a", "_price_f", "_nearfob", "_storage_areas"];
+				_price_s = ((build_lists select buildtype) select buildindex) select 1;
+				_price_a = ((build_lists select buildtype) select buildindex) select 2;
+				_price_f = ((build_lists select buildtype) select buildindex) select 3;
+
+				_nearfob = [] call F_getNearestFob;
+				_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+
+				_supplyCrates = ceil (_price_s / 100);
+				_ammoCrates = ceil (_price_a / 100);
+				_fuelCrates = ceil (_price_f / 100);
+				_crateSum = _supplyCrates + _ammoCrates + _fuelCrates;
+
+				_spaceSum = 0;
+
+				{
+					if (typeOf _x == KP_liberation_large_storage_building) then {
+						_spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+					};
+					if (typeOf _x == KP_liberation_small_storage_building) then {
+						_spaceSum = _spaceSum + (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+					};
+				} forEach _storage_areas;
+
+				if (_spaceSum < _crateSum) then {
+					hint localize "STR_CANCEL_ERROR";
+				} else {
+					deleteVehicle _vehicle;
+					[[_price_s, _price_a, _price_f, _storage_areas] , "cancel_build_remote_call"] call BIS_fnc_MP;
+				};
 			};
 
 			if ( build_confirmed == 2 ) then {

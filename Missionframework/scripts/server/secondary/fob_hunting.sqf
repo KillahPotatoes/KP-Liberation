@@ -10,7 +10,7 @@ _fob_templates = [
 ];
 
 _spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
-if ( _spawn_marker == "" ) exitWith { diag_log "Could not find position for fob hunting mission"; };
+if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for fob hunting mission"; };
 
 used_positions = used_positions + [ _spawn_marker ];
 _base_position = markerpos _spawn_marker;

@@ -135,7 +135,6 @@ buildings = [
 	["Land_WaterTank_F",0,0,0],
 	["Land_WaterBarrel_F",0,0,0],
 	["Land_MetalCase_01_large_F",0,0,0],
-	["CargoNet_01_box_F",0,0,0],
 	["Land_CampingChair_V1_F",0,0,0],
 	["Land_CampingChair_V2_F",0,0,0],
 	["Land_CampingTable_F",0,0,0],
@@ -453,6 +452,7 @@ buildings = [ buildings ] call F_filterMods;
 build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,static_vehicles,buildings,support_vehicles,squads];
 KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];
 KP_liberation_crates = [KP_liberation_supply_crate,KP_liberation_ammo_crate,KP_liberation_fuel_crate];
+KP_liberation_upgrade_buildings = [KP_liberation_recycle_building,KP_liberation_air_vehicle_building,KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
 militia_squad = [ militia_squad , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 militia_vehicles = [ militia_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 opfor_vehicles = [ opfor_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;

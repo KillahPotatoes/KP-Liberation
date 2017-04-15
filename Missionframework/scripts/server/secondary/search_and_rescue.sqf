@@ -1,6 +1,6 @@
 
 private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
-if ( _spawn_marker == "" ) exitWith { diag_log "Could not find position for search and rescue mission"; };
+if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
 private _helopos = [ getmarkerpos _spawn_marker, random 200, random 360 ] call BIS_fnc_relPos;

@@ -1,93 +1,82 @@
 if (!isServer) exitWith {};
 
-params ["_price_s", "_price_a", "_price_f", "_typename", "_localtype", "_nearfob"];
+params ["_price_s", "_price_a", "_price_f", "_typename", "_localtype", "_storage_areas"];
 
 if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 	
-	_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
-	
 	{
-		_supplyValue = 0;
-		_ammoValue = 0;
-		_fuelValue = 0;
-		
+		private _storage_positions = [];
+		private _storedCrates = (attachedObjects _x);
+		reverse _storedCrates;
+
 		{
+			_crateValue = _x getVariable "KP_liberation_crate_value";
+
 			switch ((typeOf _x)) do {
-				case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable "KP_liberation_crate_value"); detach _x; deleteVehicle _x;};
-				case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable "KP_liberation_crate_value"); detach _x; deleteVehicle _x;};
-				case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable "KP_liberation_crate_value"); detach _x; deleteVehicle _x;};
+				case KP_liberation_supply_crate: { 
+					if (_price_s > 0) then {
+						if (_crateValue > _price_s) then {
+							_crateValue = _crateValue - _price_s;
+							_x setVariable ["KP_liberation_crate_value", _crateValue, true];
+							_price_s = 0;
+						} else {
+							detach _x;
+							deleteVehicle _x;
+							_price_s = _price_s - _crateValue;
+						};
+					};
+				};
+				case KP_liberation_ammo_crate: {
+					if (_price_a > 0) then {
+						if (_crateValue > _price_a) then {
+							_crateValue = _crateValue - _price_a;
+							_x setVariable ["KP_liberation_crate_value", _crateValue, true];
+							_price_a = 0;
+						} else {
+							detach _x;
+							deleteVehicle _x;
+							_price_a = _price_a - _crateValue;
+						};
+					};
+				};
+				case KP_liberation_fuel_crate: {
+					if (_price_f > 0) then {
+						if (_crateValue > _price_f) then {
+							_crateValue = _crateValue - _price_f;
+							_x setVariable ["KP_liberation_crate_value", _crateValue, true];
+							_price_f = 0;
+						} else {
+							detach _x;
+							deleteVehicle _x;
+							_price_f = _price_f - _crateValue;
+						};
+					};
+				};
 				default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 			};
-		} forEach (attachedObjects _x);
+		} forEach _storedCrates;
 		
-		if (_supplyValue > _price_s) then {
-			_supplyValue = _supplyValue - _price_s;
-			_price_s = 0;
-		} else {
-			_price_s = _price_s - _supplyValue;
-			_supplyValue = 0;
+		switch (typeOf _x) do {
+			case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
+			case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
+			default {_storage_positions = KP_liberation_large_storage_positions;};
 		};
-		
-		if (_ammoValue > _price_a) then {
-			_ammoValue = _ammoValue - _price_a;
-			_price_a = 0;
-		} else {
-			_price_a = _price_a - _ammoValue;
-			_ammoValue = 0;
-		};
-		
-		if (_fuelValue > _price_f) then {
-			_fuelValue = _fuelValue - _price_f;
-			_price_f = 0;
-		} else {
-			_price_f = _price_f - _fuelValue;
-			_fuelValue = 0;
-		};
-		
-		_supplyCrates = floor (_supplyValue / 100);
-		_ammoCrates = floor (_ammoValue / 100);
-		_fuelCrates = floor (_fuelValue / 100);
-		
-		_supplyRemain = floor (_supplyValue % 100);
-		_ammoRemain = floor (_ammoValue % 100);
-		_fuelRemain = floor (_fuelValue % 100);
-		
-		for [{_i=0}, {_i < _supplyCrates}, {_i = _i + 1}] do {
-			_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", 100, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
-		if (_supplyRemain > 0) then {
-			_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", _supplyRemain, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
-		for [{_i=0}, {_i < _ammoCrates}, {_i = _i + 1}] do {
-			_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", 100, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
-		if (_ammoRemain > 0) then {
-			_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", _ammoRemain, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
-		for [{_i=0}, {_i < _fuelCrates}, {_i = _i + 1}] do {
-			_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", 100, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
-		if (_fuelRemain > 0) then {
-			_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-			_crate setVariable ["KP_liberation_crate_value", _fuelRemain, true];
-			[_crate, _x] call F_crateToStorage;
-		};
-		
+
+		private _area = _x;
+		_i = 0;
+		{
+			_height = 0.6;
+			switch (typeOf _x) do {
+				case KP_liberation_supply_crate: {_height = 0.4;};
+				case KP_liberation_ammo_crate: {_height = 0.6;};
+				case KP_liberation_fuel_crate: {_height = 0.3;};
+				default {_height = 0.6;};
+			};
+			detach _x;
+			_x attachTo [_area, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
+			_i = _i + 1;
+		} forEach attachedObjects (_x);
+
 		if ((_price_s == 0) && (_price_a == 0) && (_price_f == 0)) exitWith {};
 		
 	} forEach _storage_areas;

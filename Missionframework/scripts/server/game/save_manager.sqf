@@ -166,7 +166,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_hascrew = _x select 3;
 			};
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setPos _nextpos;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 4) == 3) then {
 				_nextbuilding setVectorUp (_x select 4);
@@ -219,7 +219,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextdir = _x select 2;
 
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setPos _nextpos;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 6) == 3) then {
 				_nextbuilding setVectorUp (_x select 6);
@@ -228,48 +228,50 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 			_nextbuilding setdamage 0;
 			
-			_supplyCrates = floor ((_x select 3) / 100);
-			_ammoCrates = floor ((_x select 4) / 100);
-			_fuelCrates = floor ((_x select 5) / 100);
+			_supply = floor (_x select 3);
+			_ammo = floor (_x select 4);
+			_fuel = floor (_x select 5);
 			
-			_supplyRemain = floor ((_x select 3) % 100);
-			_ammoRemain = floor ((_x select 4) % 100);
-			_fuelRemain = floor ((_x select 5) % 100);
-			
-			for [{_i=0}, {_i < _supplyCrates}, {_i = _i + 1}] do {
-				_crate = KP_liberation_supply_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
+			while {_supply > 0} do {
+				if ((floor (_supply / 100)) > 0) then {
+					_crate = KP_liberation_supply_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_supply = _supply - 100;
+				} else {
+					_crate = KP_liberation_supply_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _supply, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_supply = 0;
+				};
 			};
-			
-			if (_supplyRemain > 0) then {
-				_crate = KP_liberation_supply_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _supplyRemain, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
+
+			while {_ammo > 0} do {
+				if ((floor (_ammo / 100)) > 0) then {
+					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_ammo = _ammo - 100;
+				} else {
+					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _ammo, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_ammo = 0;
+				};
 			};
-			
-			for [{_i=0}, {_i < _ammoCrates}, {_i = _i + 1}] do {
-				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
-			};
-			
-			if (_ammoRemain > 0) then {
-				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _ammoRemain, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
-			};
-			
-			for [{_i=0}, {_i < _fuelCrates}, {_i = _i + 1}] do {
-				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
-			};
-			
-			if (_fuelRemain > 0) then {
-				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _fuelRemain, true];
-				[_crate, _nextbuilding] call F_crateToStorage;
+
+			while {_fuel > 0} do {
+				if ((floor (_fuel / 100)) > 0) then {
+					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_fuel = _fuel - 100;
+				} else {
+					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _fuel, true];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_fuel = 0;
+				};
 			};
 		};
 	} forEach KP_liberation_storages;
@@ -363,7 +365,7 @@ while { true } do {
 								_grouparray = [];
 								{
 									if ( alive _x && (vehicle _x == _x ) ) then {
-										_grouparray pushback [ typeof _x, getPosATL _x, getDir _x ];
+										_grouparray pushback [ typeof _x, getPos _x, getDir _x ];
 									};
 								} foreach (units _nextgroup);
 
@@ -383,13 +385,13 @@ while { true } do {
 				_savedpos = _x getVariable [ "GRLIB_saved_pos", [] ];
 				_savedvec = _x getVariable ["KP_saved_vec", []];
 				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-					_x setVariable [ "GRLIB_saved_pos", getposATL _x, false ];
+					_x setVariable [ "GRLIB_saved_pos", getPos _x, false ];
 					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-					_savedpos = getposATL _x;
+					_savedpos = getPos _x;
 					_savedvec = vectorUpVisual _x;
 				};
 			} else {
-				_savedpos = getposATL _x;
+				_savedpos = getPos _x;
 			};
 
 			private _nextclass = typeof _x;
@@ -410,9 +412,9 @@ while { true } do {
 			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 			_savedvec = _x getVariable ["KP_saved_vec", []];
 			if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-				_x setVariable ["GRLIB_saved_pos", getposATL _x, false];
+				_x setVariable ["GRLIB_saved_pos", getPos _x, false];
 				_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-				_savedpos = getposATL _x;
+				_savedpos = getPos _x;
 				_savedvec = vectorUpVisual _x;
 			};
 			
