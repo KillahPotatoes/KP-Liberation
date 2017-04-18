@@ -42,71 +42,71 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";					// Default "CargoNet_01_
 // Useful for total conversions to RHS and such, without having to alter the original file.
 infantry_units_overwrite = true;
 infantry_units_extension = [
-	["rhsusf_army_ucp_rifleman",2,0,0],
-	["rhsusf_army_ucp_grenadier",3,0,0],
-	["rhsusf_army_ucp_autorifleman",3,0,0],
-	["rhsusf_army_ucp_medic",3,0,0],
-	["rhsusf_army_ucp_marksman",3,0,0],
-	["rhsusf_army_ucp_engineer",3,0,0],
-	["rhsusf_army_ucp_javelin",4,0,0],
-	["rhsusf_army_ucp_machinegunner",5,0,0],
-	["rhsusf_usmc_recon_marpat_wd_rifleman",4,0,0],
-	["rhsusf_usmc_recon_marpat_wd_sniper_M107",5,0,0],
-	["rhsusf_army_ucp_aa",5,10,0],
-	["rhsusf_army_ucp_crewman",1,0,0],
-	["rhsusf_army_ucp_helipilot",1,0,0]
+	["rhsusf_army_ucp_rifleman",25,0,0],
+	["rhsusf_army_ucp_grenadier",30,0,0],
+	["rhsusf_army_ucp_autorifleman",30,0,0],
+	["rhsusf_army_ucp_medic",30,0,0],
+	["rhsusf_army_ucp_marksman",30,0,0],
+	["rhsusf_army_ucp_engineer",30,0,0],
+	["rhsusf_army_ucp_javelin",40,0,0],
+	["rhsusf_army_ucp_machinegunner",50,0,0],
+	["rhsusf_usmc_recon_marpat_wd_rifleman",40,0,0],
+	["rhsusf_usmc_recon_marpat_wd_sniper_M107",50,0,0],
+	["rhsusf_army_ucp_aa",50,10,0],
+	["rhsusf_army_ucp_crewman",10,0,0],
+	["rhsusf_army_ucp_helipilot",10,0,0]
 ];
 
 light_vehicles_overwrite = true;
 light_vehicles_extension = [
-	["B_Quadbike_01_F",0,0,2],
-	["rhsusf_m1025_w",0,0,5],
-	["rhsusf_m1025_w_m2",0,40,5],
-	["rhsusf_m1025_w_mk19",0,60,5],
-	["B_Truck_01_transport_F",0,0,8],
-	["B_Truck_01_covered_F",0,0,8],
-	["B_Truck_01_medical_F",5,0,8],
-	["B_Boat_Transport_01_F",0,0,5],
-	["B_Boat_Armed_01_minigun_F",0,80,15]
+	["B_Quadbike_01_F",40,0,20],
+	["rhsusf_m1025_w",100,0,50],
+	["rhsusf_m1025_w_m2",100,40,50],
+	["rhsusf_m1025_w_mk19",100,60,50],
+	["B_Truck_01_transport_F",160,0,80],
+	["B_Truck_01_covered_F",160,0,80],
+	["B_Truck_01_medical_F",180,0,80],
+	["B_Boat_Transport_01_F",100,0,50],
+	["B_Boat_Armed_01_minigun_F",300,80,150]
 ];
 
 heavy_vehicles_overwrite = true;
 heavy_vehicles_extension = [
-	["rhsusf_m113_usarmy",0,70,10],
-	["rhsusf_m113_usarmy_MK19",0,90,10],
-	["RHS_M6_wd",0,200,15],
-	["RHS_M2A2_wd",0,220,15],
-	["RHS_M2A3_BUSKIII_wd",0,240,15],
-	["rhsusf_m1a2sep1wd_usarmy",0,400,20],
-	["rhsusf_m1a2sep1tuskiiwd_usarmy",0,500,25],
-	["rhsusf_m109_usarmy",0,2000,30]
+	["rhsusf_m113_usarmy",200,70,100],
+	["rhsusf_m113_usarmy_MK19",200,90,100],
+	["RHS_M6_wd",300,200,150],
+	["RHS_M2A2_wd",300,220,150],
+	["RHS_M2A3_BUSKIII_wd",300,240,150],
+	["rhsusf_m1a2sep1wd_usarmy",400,400,200],
+	["rhsusf_m1a2sep1tuskiiwd_usarmy",500,500,250],
+	["rhsusf_m109_usarmy",600,2000,300]
 ];
 
 air_vehicles_overwrite = true;
 air_vehicles_extension = [
-	["RHS_MELB_MH6M",0,0,10],
-	["RHS_MELB_AH6M_L",0,160,10],
-	["RHS_UH60M_MEV2",15,0,15],
-	["RHS_UH60M",0,120,12],
-	["RHS_AH1Z",0,1000,30],
-	["RHS_AH64D_wd",0,1200,40],
-	["RHS_A10",0,2000,50],
-	["JS_JC_FA18E",0,3000,50],
-	["JS_JC_FA18F",0,3200,50],
-	["B_UAV_01_F",0,0,5],
-	["B_UAV_02_F",0,500,20],
-	["B_UAV_02_CAS_F",0,600,20]
+	["RHS_MELB_MH6M",200,0,100],
+	["RHS_MELB_AH6M_L",200,160,100],
+	["RHS_UH60M_MEV2",300,0,150],
+	["RHS_UH60M",240,120,120],
+	["RHS_AH1Z",600,1000,300],
+	["RHS_AH64D_wd",800,1200,400],
+	["RHS_A10",1000,2000,500],
+	["JS_JC_FA18E",1000,3000,500],
+	["JS_JC_FA18F",1000,3200,500],
+	["B_UAV_01_F",100,0,50],
+	["B_UAV_02_F",400,500,200],
+	["B_UAV_02_CAS_F",400,600,200]
 ];
 
 static_vehicles_overwrite = true;
 static_vehicles_extension = [
-	["RHS_M2StaticMG_MiniTripod_WD",0,20,0],
-	["RHS_M2StaticMG_WD",0,20,0],
-	["RHS_MK19_TriPod_WD",0,40,0],
-	["RHS_Stinger_AA_pod_WD",0,50,0],
-	["RHS_TOW_TriPod_WD",0,60,0],
-	["RHS_M252_WD",0,120,0],
-	["RHS_M119_WD",0,220,0]
+	["RHS_M2StaticMG_MiniTripod_WD",20,20,0],
+	["RHS_M2StaticMG_WD",20,20,0],
+	["RHS_MK19_TriPod_WD",20,40,0],
+	["RHS_Stinger_AA_pod_WD",40,50,0],
+	["RHS_TOW_TriPod_WD",40,60,0],
+	["RHS_M252_WD",80,120,0],
+	["RHS_M119_WD",160,220,0]
 ];
 
 buildings_overwrite = true;
@@ -157,26 +157,26 @@ buildings_extension = [
 support_vehicles_overwrite = true;		// If you're going to overwrite this, make sure you have at least Arsenal_typename, Respawn_truck_typename, FOB_box_typename and FOB_truck_typename in there
 support_vehicles_extension = [
 	[Arsenal_typename,10,0,0],
-	[Respawn_truck_typename,20,0,8],
-	[FOB_box_typename,30,400,0],
-	[FOB_truck_typename,30,400,5],
+	[Respawn_truck_typename,20,0,80],
+	[FOB_box_typename,200,400,0],
+	[FOB_truck_typename,200,400,100],
 	[KP_liberation_small_storage_building,0,0,0],
 	[KP_liberation_large_storage_building,0,0,0],
 	[KP_liberation_recycle_building,0,0,0],
 	[KP_liberation_air_vehicle_building,0,0,0],
 	[KP_liberation_heli_slot_building,0,0,0],
 	[KP_liberation_plane_slot_building,0,0,0],
-	["ACE_medicalSupplyCrate_advanced",5,0,0],
-	["ACE_Box_82mm_Mo_HE",5,40,0],
-	["ACE_Box_82mm_Mo_Smoke",5,10,0],
-	["ACE_Box_82mm_Mo_Illum",5,10,0],
-	["B_APC_Tracked_01_CRV_F",0,30,10],
-	["rhsusf_M977A4_REPAIR_usarmy_wd",10,0,5],
-	["rhsusf_M978A4_usarmy_wd",10,0,25],
-	["rhsusf_M977A4_AMMO_usarmy_wd",10,100,5],
-	["B_Slingload_01_Repair_F",5,0,0],
-	["B_Slingload_01_Fuel_F",5,0,20],
-	["B_Slingload_01_Ammo_F",5,80,0]
+	["ACE_medicalSupplyCrate_advanced",50,0,0],
+	["ACE_Box_82mm_Mo_HE",50,40,0],
+	["ACE_Box_82mm_Mo_Smoke",50,10,0],
+	["ACE_Box_82mm_Mo_Illum",50,10,0],
+	["B_APC_Tracked_01_CRV_F",200,30,100],
+	["rhsusf_M977A4_REPAIR_usarmy_wd",250,0,100],
+	["rhsusf_M978A4_usarmy_wd",200,0,250],
+	["rhsusf_M977A4_AMMO_usarmy_wd",200,250,100],
+	["B_Slingload_01_Repair_F",200,0,0],
+	["B_Slingload_01_Fuel_F",150,0,250],
+	["B_Slingload_01_Ammo_F",150,250,0]
 ];
 
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.

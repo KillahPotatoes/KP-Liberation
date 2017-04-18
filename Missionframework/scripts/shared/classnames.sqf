@@ -27,25 +27,25 @@ if ( isNil "KP_liberation_ammo_crate" ) then { KP_liberation_ammo_crate = "B_Car
 if ( isNil "KP_liberation_fuel_crate" ) then { KP_liberation_fuel_crate = "CargoNet_01_barrels_F" };
 
 infantry_units = [
-	["B_soldier_F",2,0,0],
-	["B_soldier_GL_F",3,0,0],
-	["B_soldier_AR_F",3,0,0],
-	["B_medic_F",3,0,0],
-	["B_soldier_M_F",3,0,0],
-	["B_engineer_F",3,0,0],
-	["B_soldier_LAT_F",4,0,0],
-	["B_Sharpshooter_F",5,0,0],
-	["B_HeavyGunner_F",5,0,0],
-	["B_recon_F",4,0,0],
-	["B_recon_medic_F",4,0,0],
-	["B_recon_M_F",5,0,0],
-	["B_Recon_Sharpshooter_F",8,0,0],
-	["B_soldier_AA_F",5,10,0],
-	["B_soldier_AT_F",5,10,0],
-	["B_sniper_F",10,0,0],
-	["B_soldier_PG_F",2,0,0],
-	["B_crew_F",1,0,0],
-	["B_helipilot_F",1,0,0]
+	["B_soldier_F",25,0,0],
+	["B_soldier_GL_F",30,0,0],
+	["B_soldier_AR_F",30,0,0],
+	["B_medic_F",30,0,0],
+	["B_soldier_M_F",30,0,0],
+	["B_engineer_F",30,0,0],
+	["B_soldier_LAT_F",40,0,0],
+	["B_Sharpshooter_F",50,0,0],
+	["B_HeavyGunner_F",50,0,0],
+	["B_recon_F",40,0,0],
+	["B_recon_medic_F",40,0,0],
+	["B_recon_M_F",50,0,0],
+	["B_Recon_Sharpshooter_F",80,0,0],
+	["B_soldier_AA_F",50,10,0],
+	["B_soldier_AT_F",50,10,0],
+	["B_sniper_F",100,0,0],
+	["B_soldier_PG_F",20,0,0],
+	["B_crew_F",10,0,0],
+	["B_helipilot_F",10,0,0]
 ];
 if ( isNil "infantry_units_extension" ) then { infantry_units_extension = [] };
 if ( isNil "infantry_units_overwrite" ) then { infantry_units_overwrite = false };
