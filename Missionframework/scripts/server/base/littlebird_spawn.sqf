@@ -21,6 +21,7 @@ if (GRLIB_isAtlasPresent) then {
 		_KP_liberation_little_bird enableSimulationGlobal true;
 		_KP_liberation_little_bird setDamage 0;
 		_KP_liberation_little_bird allowdamage true;
+		_KP_liberation_little_bird setVariable ["KP_liberation_preplaced", true, true];
 	};
 } else {
 	for [{_i=0}, {!isNil ("kp_chimera_pad_" + str _i)}, {_i = _i + 1}] do {
@@ -32,5 +33,6 @@ if (GRLIB_isAtlasPresent) then {
 		uiSleep 0.5;
 		_KP_liberation_little_bird setDamage 0;
 		_KP_liberation_little_bird allowdamage true;
+		_KP_liberation_little_bird setVariable ["KP_liberation_preplaced", true, true];
 	};
 };

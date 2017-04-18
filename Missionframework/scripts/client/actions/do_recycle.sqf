@@ -19,6 +19,8 @@ while { dialog && (alive player) && dorecycle == 0 } do {
 
 if ( dialog ) then { closeDialog 0 };
 
+if (_vehtorecycle getVariable ["KP_liberation_preplaced", false]) exitWith {hint localize "STR_PREPLACED_ERROR";};
+
 if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 	private ["_price_s", "_price_a", "_price_f", "_nearfob", "_storage_areas", "_supplyCrates", "_ammoCrates", "_fuelCrates", "_crateSum", "_spaceSum"];
 	
