@@ -4,14 +4,17 @@
 				<!-- French localization made by zbug: https://github.com/GreuhZbug -->
 				<!-- German localization made by Wyqer: https://github.com/Wyqer -->
 				<!-- Italian localization made by kaso2mod: https://github.com/kaso2mod -->
+				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation Altis v0.95</Original>
 						<German>KP Liberation Altis v0.95</German>
+						<Spanish>KP Liberation Altis v0.95</Spanish>
 						<Italian>KP Liberation Altis v0.95</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
 						<Original>v0.95</Original>
 						<German>v0.95</German>
+						<Spanish>v0.95</Spanish>
 						<Italian>v0.95</Italian>
 				</Key>
 				<Key ID="STR_MISSION_DESCRIPTION">
@@ -148,7 +151,7 @@
 						<German>-- Rotieren</German>
 						<Spanish>-- Rotación</Spanish>
 						<Russian>-- Вращать</Russian>
-					  <Italian>-- Ruota</Italian>
+					 	<Italian>-- Ruota</Italian>
 				</Key>
 				<Key ID="STR_PLACEMENT">
 						<Original>-- Build</Original>
@@ -1033,11 +1036,13 @@
 				<Key ID="STR_PARAMS_REVIVEOPTIONS">
 						<Original>== REVIVE OPTIONS (Enable it, if you play without ACE) ==</Original>
 						<German>== Wiederbelebungseinstellungen (Aktivieren, wenn kein ACE genutzt) ==</German>
+						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
 						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
 						<Original>== GAMEPLAY OPTIONS ==</Original>
 						<German>== Spieleinstellungen ==</German>
+						<Spanish>== OPCIONES DE JUEGO</Spanish>
 						<Italian>==OPZIONI DI GIOCO ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_TECHNICALOPTIONS">
@@ -2314,6 +2319,7 @@
 						<Original>Hostile forces are heading towards %1.</Original>
 						<French>Les forces hostiles se dirigent vers %1.</French>
 						<German>Feindliche Streitkräfte bewegen sich auf %1 zu.</German>
+						<Spanish>Fuerzas hostiles acercándose a %1.</Spanish>
 						<Russian>Замечена вражеская группа рядом с %1</Russian>
 						<Italian>Forze ostili sono in avvicinamento su %1.</Italian>
 				</Key>
@@ -2321,6 +2327,7 @@
 						<Original>OPFOR Convoy</Original>
 						<French>Convoi OPFOR</French>
 						<German>OPFOR Konvoi</German>
+						<Spanish>Convoy OPFOR</Spanish>
 						<Russian>Конвой OPFOR</Russian>
 						<Italian>Convoglio OPFOR</Italian>
 				</Key>
@@ -2328,6 +2335,7 @@
 						<Original>Waypoint</Original>
 						<French>Point de passage</French>
 						<German>Wegpunkt</German>
+						<Spanish>Punto de ruta</Spanish>
 						<Russian>Путевая точка</Russian>
 						<Italian>Punto di Passaggio</Italian>
 				</Key>
@@ -2335,6 +2343,7 @@
 						<Original>OPFOR Convoy neutralized.</Original>
 						<French>Convoi OPFOR neutralisé.</French>
 						<German>OPFOR Konvoi neutralisiert.</German>
+						<Spanish>Convoy OPFOR neutralizado</Spanish>
 						<Russian>Конвой OPFOR нейтрализован.</Russian>
 						<Italian>Convoglio OPFOR neutralizzato.</Italian>
 				</Key>
@@ -2342,6 +2351,7 @@
 						<Original>OPFOR Convoy near %1.</Original>
 						<French>Convoi OPFOR près de %1.</French>
 						<German>OPFOR Konvoi nahe %1.</German>
+						<Spanish>Convoy OPFOR cerca de 1%</Spanish>
 						<Russian>Конвой OPFOR рядом с %1.</Russian>
 						<Italian>Convoglio OPFOR vicino %1.</Italian>
 				</Key>
@@ -2940,6 +2950,7 @@
 						<Original>Convoy Hijack</Original>
 						<French>Interception de convoi</French>
 						<German>Konvoi Hinterhalt</German>
+						<Spanish>Interceptar el Convoy</Spanish>
 						<Russian>Налёт на конвой врага</Russian>
 						<Italian>Intercetta il Convoglio</Italian>
 				</Key>
@@ -2995,6 +3006,23 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
 						</German>
+						<Spanish>
+						&lt;t size='1.3' color='#ffa000'&gt;INTERCEPTAR EL CONVOY&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Las fuerzas OPFOR utilizan convoys de carretera para reabastecer sus posiciones defensivas. Interceptar uno de estos convoy rompería de forma efectiva sus líneas de suministro, y podríamos aprovechar la ocasión para obtener una buena cantidad de munición.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Tu misión consiste en parar ese convoy por cualquier medio. Puedes destruirlo o capturarlo para capturar toda la munición que sea posible. El objetivo aparecerá marcado en el mapa.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1.15' color='#00a0ff'&gt;Coste: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Recompensa: Nivel de alerta OPFOR reducido 15%&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Recompensa secundaria: Toda la munición que puedas traer.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+						</Spanish>
 						<Russian>&lt;t size='1.3' color='#ffa000'&gt;НАЛЁТ НА КОНВОЙ&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1'&gt;
@@ -3035,6 +3063,7 @@
 						<Original>BLUFOR defenders in owned sectors</Original>
 						<French>Défenseurs BLUFOR dans les secteurs capturés</French>
 						<German>BLUFOR Verteidiger in besetzten Sektoren</German>
+						<Spanish>Defensores BLUFOR en los sectores controlados</Spanish>
 						<Russian>BLUFOR защитники в захваченных зонах</Russian>
 						<Italian>Trupppe BLUFOR nei settori controllati</Italian>
 				</Key>
@@ -3042,6 +3071,7 @@
 						<Original>Auto-danger behaviour on BLUFOR forces</Original>
 						<French>Comportement 'danger' automatique sur les forces BLUFOR</French>
 						<German>Auto-Gefahr Verhalten bei BLUFOR Kräften</German>
+						<Spanish>Comportamiento de Auto-Alerta en las fuerzas BLUFOR</Spanish>
 						<Russian>Авто-опасность для сил BLUFOR</Russian>
 						<Italian>Comportamento Auto-Allerta per forze BLUFOR</Italian>
 				</Key>
@@ -3050,12 +3080,14 @@
 						<French>Nombre maximal de FOBs autorisé</French>
 						<German>Maximale Anzahl an erlaubten FOBs</German>
 						<Russian>Максимальное количество FOB</Russian>
+						<Spanish>Número máximo de FOBs permitidas</Spanish>
 						<Italian>Numero massimo di FOB consentite</Italian>
 				</Key>
 				<Key ID="STR_HINT_FOBS_EXCEEDED">
 						<Original>You are not allowed to deploy more than %1 FOBs at the same time.</Original>
 						<French>Vous n'êtes pas autorisé à déployer plus de %1 FOBs en même temps.</French>
 						<German>Sie haben nicht die Erlaubnis mehr als %1 FOBs zur selben Zeit zu errichten.</German>
+						<Spanish>No se permite desplegar más de %1 FOBs al mismo tiempo</Spanish>
 						<Russian>Вам не разрешено развертывать более %1 FOB одновременно.</Russian>
 						<Italian>Non sei autorizzato a costruire piè di %1 FOB allo stesso tempo</Italian>
 				</Key>
@@ -3063,6 +3095,7 @@
 						<Original>%1 loadout successfully loaded.</Original>
 						<French>Equipement %1 chargé avec succès.</French>
 						<German>Ausrüstungsset %1 erfolgreich geladen.</German>
+						<Spanish>Equipamiento %1 cargado correctamente</Spanish>
 						<Russian>Снаряжение %1 успешно загружено.</Russian>
 						<Italian>%1 equipaggiamento correttamente caricato</Italian>
 				</Key>
@@ -3070,6 +3103,7 @@
 						<Original>Search and Rescue</Original>
 						<French>Recherche et Sauvetage</French>
 						<German>Helikopterbergung</German>
+						<Spanish>Búsqueda y rescate</Spanish>
 						<Italian>Cerca e Soccorri</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING2">
@@ -3118,6 +3152,21 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
 						</German>
+						<Spanish>
+						&lt;t size='1.3' color='#ffa000'&gt;BÚSQUEDA Y RESCATE&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						Hemos perdido contacto con un helicóptero de reconocimiento durante una misión tras las líneas enemigas. Creemos que el helicóptero ha sido derribado por las fuerzas hostiles.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1'&gt;
+						El helicóptero habría aterrizado forzosamente en alguna parte alrededor de su última posición conocida. Tu misión consiste en traer de vuelta a su tripulación y a la preciada información de interligencia que allí se encuentra. Las fuerzas hostiles pueden haberlos encontrado antes, así que hay que ser rápidos, cuidadosos y estar preparados para enfrentarse.&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='1.15' color='#00a0ff'&gt;Coste: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+						&lt;br/&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;Recompensa: 20 puntos de intel (10 por cada tripulante).&lt;/t&gt;
+						&lt;br/&gt;&lt;br/&gt;
+						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+						</Spanish>
 						<Italian>
 						&lt;t size='1.3' color='#ffa000'&gt;CERCA E SOCCORRI&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
@@ -3140,51 +3189,60 @@
 						<Original>Penalty for killing civilians</Original>
 						<French>Pénalité pour les pertes civiles</French>
 						<German>Strafe für zivile Verluste</German>
+						<Spanish>Penalización por matar civiles</Spanish>
 						<Italian>Penalità per l'uccisione di civili</Italian>
 				</Key>
 				<Key ID="STR_CIV_PENALTY_MESSAGE">
 						<Original>Penalty of %1 for killing of civilian named %2 by %3</Original>
 						<French>Penalty de %1 pour avoir tué le civil %2 par %3</French>
 						<German>Strafe von %1 für die Ermordung des Zivilisten %2 durch %3</German>
+						<Spanish>Penalización de %1 por matar a un civil llamado %2 por %3</Spanish>
 						<Italian>Pena di 1% per l'uccisione di civili nome %2 da %3</Italian>
 				</Key>
 				<Key ID="STR_PARAM_SQUAD_SIZE">
 						<Original>AI recruitment limit per squad</Original>
 						<French>Limite de recrutement d'IA par escouade</French>
 						<German>KI Rekrutierungslimit per Squad</German>
+						<Spanish>Límite de reclutamiento IA por escuadra</Spanish>
 						<Italian>Limite di reclutamento AI per squadra</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_STARTED">
 						<Original>Crashed helicopter near %1.</Original>
 						<French>Helicopter crashé près de %1.</French>
 						<German>Helikopterabsturz in der Nähe von %1</German>
+						<Spanish>Helicóptero derribado cerca de %1</Spanish>
 						<Italian>L'elicottero si è schiantato  nei pressi di %1.</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_FAILED">
 						<Original>SAR mission failed, both crew are KIA.</Original>
 						<French>Mission SAR échouée, les deux équipages sont morts.</French>
 						<German>SAR Mission fehlgeschlagen. Beide Crewmitglieder gefallen.</German>
+						<Spanish>Misión de Búsqueda y Rescate fallida, ambos tripulantes están muertos</Spanish>
 						<Italian>Missione Cerca e Soccorri FALLITA,l'equipaggio è stato ucciso</Italian>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_SUCCESS">
 						<Original>SAR mission succeeded.</Original>
 						<French>Mission SAR réussie.</French>
 						<German>SAR Mission erfolgreich</German>
+						<Spanish>Misión de Búsqueda y Rescate completada satisfactoriamente</Spanish>
 						<Italian>Missione Cerca e Soccorri completata con successo</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MAPMARKERS">
 						<Original>Player mapmarkers activation through extended options</Original>
 						<German>Kartenmarkierungen von Spielern über Extended Options aktivierbar</German>
+						<Spanish>Activación de marcas de mapa de jugador a través de opciones extendidas</Spanish>
 						<Italian>i mapmarker si attivano dal menu opzioni avanzate</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILERESPAWN">
 						<Original>Mobile respawn</Original>
 						<German>Mobiler Respawn</German>
+						<Spanish>Respawn Móvil</Spanish>
 						<Italian>Respawn Mobile</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILEARSENAL">
 						<Original>Mobile arsenal</Original>
 						<German>Mobiles Arsenal</German>
+						<Spanish>Arsenal Móvil</Spanish>
 						<Italian>Arsenale Mobile</Italian>
 				</Key>
 				
@@ -3192,14 +3250,17 @@
 				<Key ID="STR_INDIV_FLAG">
 						<Original>Killah Potatoes flag</Original>
 						<German>Killah Potatoes Flagge</German>
+						<Spanish>Bandera de Killah Potatoes</Spanish>
 				</Key>
 				<Key ID="STR_SMALL_STORAGE">
 						<Original>Small storage area</Original>
 						<German>Kleine Lagerfläche</German>
+						<Spanish>Almacén pequeño</Spanish>
 				</Key>
 				<Key ID="STR_LARGE_STORAGE">
 						<Original>Large storage area</Original>
 						<German>Große Lagerfläche</German>
+						<Spanish>Almacén grande</Spanish>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
 						<Original>Dismantling building</Original>
@@ -3208,50 +3269,62 @@
 				<Key ID="STR_HELI_BUILDING">
 						<Original>Air Traffic Control</Original>
 						<German>Luftraumüberwachungsstation</German>
+						<Spanish>Torre de Control Aéreo</Spanish>
 				</Key>
 				<Key ID="STR_HELI_SLOT">
 						<Original>Helipad</Original>
 						<German>Helikopterlandeplatz</German>
+						<Spanish>Helipuerto</Spanish>
 				</Key>
 				<Key ID="STR_PLANE_SLOT">
 						<Original>Tent Plane Hangar</Original>
 						<German>Hangarzelt</German>
+						<Spanish>Hangar de aviones</Spanish>
 				</Key>
 				<Key ID="STR_BOX_CANTSTORE">
 						<Original>There is no free storage area nearby.</Original>
 						<German>Keine freie Lagerfläche in der Nähe.</German>
+						<Spanish>No hay sitio de almacenamiento cercano</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_STORE_CRATE">
 						<Original>-- STORE CRATE</Original>
 						<German>-- KISTE EINLAGERN</German>
+						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
 						<German>-- NACHSCHUB ABLADEN</German>
+						<Spanish>-- DESCARGA CAJA DE SUMINISTRO</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_AMMO">
 						<Original>-- UNLOAD AMMO CRATE</Original>
 						<German>-- MUNITION ABLADEN</German>
+						<Spanish>-- DESCARGA CAJA DE MUNICIÓN</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_FUEL">
 						<Original>-- UNLOAD FUEL CRATE</Original>
 						<German>-- KRAFTSTOFF ABLADEN</German>
+						<Spanish>-- DESCARGA CAJA DE COMBUSTIBLE</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE">
 						<Original>-- CHECK CONTENT</Original>
 						<German>-- INHALT PRÜFEN</German>
+						<Spanish>-- COMPROBAR CONTENIDO</Spanish>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE_HINT">
 						<Original>Crate contains %1 resources</Original>
 						<German>Kiste beinhaltet %1 Ressourcen</German>
+						<Spanish>La caja contiene %1 recursos</Spanish>
 				</Key>
 				<Key ID="STR_VECACTION">
 						<Original>-- Change alignment</Original>
 						<German>-- Ausrichtung ändern</German>
+						<Spanish>-- Cambiar alineación</Spanish>
 				</Key>
 				<Key ID="STR_CANCEL_ERROR">
 						<Original>Not enough free storage space</Original>
 						<German>Nicht genug Lagerkapazität</German>
+						<Spanish>No hay suficiente espacio disponible</Spanish>
 				</Key>
 		</Package>
 </Project>
