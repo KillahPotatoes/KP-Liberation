@@ -3342,5 +3342,9 @@
 						<Spanish>No hay suficiente espacio disponible</Spanish>
 						<Italian>Non c'è abbastanza spazio disponibile</Italian>
 				</Key>
+				<Key ID="STR_PREPLACED_ERROR">
+						<Original>You can't recycle preplaced objects</Original>
+						<German>Vorplatzierte Objekte können nicht recycelt werden</German>
+				</Key>
 		</Package>
 </Project>
