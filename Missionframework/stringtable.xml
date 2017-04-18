@@ -3245,86 +3245,102 @@
 						<Spanish>Arsenal Móvil</Spanish>
 						<Italian>Arsenale Mobile</Italian>
 				</Key>
-				
+
 				<!-- Added in v0.95 -->
 				<Key ID="STR_INDIV_FLAG">
 						<Original>Killah Potatoes flag</Original>
 						<German>Killah Potatoes Flagge</German>
 						<Spanish>Bandera de Killah Potatoes</Spanish>
+						<Italian>Bandiera dei Killah Potatoes</Italian>
 				</Key>
 				<Key ID="STR_SMALL_STORAGE">
 						<Original>Small storage area</Original>
 						<German>Kleine Lagerfläche</German>
 						<Spanish>Almacén pequeño</Spanish>
+						<Italian>Area deposito piccola</Italian>
 				</Key>
 				<Key ID="STR_LARGE_STORAGE">
 						<Original>Large storage area</Original>
 						<German>Große Lagerfläche</German>
 						<Spanish>Almacén grande</Spanish>
+						<Italian>Area deposito grande</Italian>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
 						<Original>Dismantling building</Original>
 						<German>Demontageeinrichtung</German>
+						<Italian>Edificio smaltimento rifiuti</Italian>
 				</Key>
 				<Key ID="STR_HELI_BUILDING">
 						<Original>Air Traffic Control</Original>
 						<German>Luftraumüberwachungsstation</German>
 						<Spanish>Torre de Control Aéreo</Spanish>
+						<Italian>Torre di controllo Aerea</Italian>
 				</Key>
 				<Key ID="STR_HELI_SLOT">
 						<Original>Helipad</Original>
 						<German>Helikopterlandeplatz</German>
 						<Spanish>Helipuerto</Spanish>
+						<Italian>Eliporto</Italian>
 				</Key>
 				<Key ID="STR_PLANE_SLOT">
 						<Original>Tent Plane Hangar</Original>
 						<German>Hangarzelt</German>
 						<Spanish>Hangar de aviones</Spanish>
+						<Italian>Hangar Aereo</Italian>
 				</Key>
 				<Key ID="STR_BOX_CANTSTORE">
 						<Original>There is no free storage area nearby.</Original>
 						<German>Keine freie Lagerfläche in der Nähe.</German>
 						<Spanish>No hay sitio de almacenamiento cercano</Spanish>
+						<Italian>Non c'è un area deposito nelle vicinanze</Italian>
 				</Key>
 				<Key ID="STR_ACTION_STORE_CRATE">
 						<Original>-- STORE CRATE</Original>
 						<German>-- KISTE EINLAGERN</German>
 						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
+						<Italian>-- CONTENITORE</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
 						<German>-- NACHSCHUB ABLADEN</German>
 						<Spanish>-- DESCARGA CAJA DE SUMINISTRO</Spanish>
+						<Italian>-- SCARICA CASSA RIFORNIMENTI</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_AMMO">
 						<Original>-- UNLOAD AMMO CRATE</Original>
 						<German>-- MUNITION ABLADEN</German>
 						<Spanish>-- DESCARGA CAJA DE MUNICIÓN</Spanish>
+						<Italian>-- SCARICA CASSA MUNIZIONI</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_FUEL">
 						<Original>-- UNLOAD FUEL CRATE</Original>
 						<German>-- KRAFTSTOFF ABLADEN</German>
 						<Spanish>-- DESCARGA CAJA DE COMBUSTIBLE</Spanish>
+						<Italian>-- SCARICA CASSA CARBURANTE</Italian>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE">
 						<Original>-- CHECK CONTENT</Original>
 						<German>-- INHALT PRÜFEN</German>
 						<Spanish>-- COMPROBAR CONTENIDO</Spanish>
+						<Italian>-- CONTROLLA CARICO</Italian>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE_HINT">
 						<Original>Crate contains %1 resources</Original>
 						<German>Kiste beinhaltet %1 Ressourcen</German>
 						<Spanish>La caja contiene %1 recursos</Spanish>
+						<Italian>La cassa continene %1 risorse</Italian>
 				</Key>
 				<Key ID="STR_VECACTION">
 						<Original>-- Change alignment</Original>
 						<German>-- Ausrichtung ändern</German>
 						<Spanish>-- Cambiar alineación</Spanish>
+						<Italian>-- Cambia allineamento</Italian>
 				</Key>
 				<Key ID="STR_CANCEL_ERROR">
 						<Original>Not enough free storage space</Original>
 						<German>Nicht genug Lagerkapazität</German>
 						<Spanish>No hay suficiente espacio disponible</Spanish>
+						<Italian>Non c'è abbastanza spazio disponibile</Italian>
 				</Key>
 		</Package>
 </Project>
