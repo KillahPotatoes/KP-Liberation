@@ -1,5 +1,7 @@
 [] spawn {
 	{
+		waitUntil {time > 0};
+		
 		if (!isnil("commandant")) then {
 			if (isnull(getAssignedCuratorLogic commandant)) then {
 				unassignCurator zm1;

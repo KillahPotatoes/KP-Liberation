@@ -22,14 +22,18 @@ if ( dialog ) then { closeDialog 0 };
 if (_vehtorecycle getVariable ["KP_liberation_preplaced", false]) exitWith {hint localize "STR_PREPLACED_ERROR";};
 
 if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
-	private ["_price_s", "_price_a", "_price_f", "_nearfob", "_storage_areas", "_supplyCrates", "_ammoCrates", "_fuelCrates", "_crateSum", "_spaceSum"];
+	private ["_price_s", "_price_a", "_price_f", "_nearfob", "_recycle_building", "_storage_areas", "_supplyCrates", "_ammoCrates", "_fuelCrates", "_crateSum", "_spaceSum"];
 	
 	_price_s = round ((_objectinfo select 1) * GRLIB_recycling_percentage);
 	_price_a = round ((_objectinfo select 2) * GRLIB_recycling_percentage);
 	_price_f = round ((_objectinfo select 3) * GRLIB_recycling_percentage);
 	
 	_nearfob = [] call F_getNearestFob;
-	_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+	_recycle_building = [_nearfob nearobjects GRLIB_fob_range, {(typeOf _x) == KP_liberation_recycle_building}] call BIS_fnc_conditionalSelect;
+
+	if ((count _recycle_building) == 0) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
+
+	_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 
 	_supplyCrates = ceil (_price_s / 100);
 	_ammoCrates = ceil (_price_a / 100);

@@ -171,7 +171,7 @@ support_vehicles_extension = [
 	[FOB_truck_typename,200,400,100],
 	[KP_liberation_small_storage_building,0,0,0],
 	[KP_liberation_large_storage_building,0,0,0],
-	[KP_liberation_recycle_building,0,0,0],
+	[KP_liberation_recycle_building,200,0,0],
 	[KP_liberation_air_vehicle_building,0,0,0],
 	[KP_liberation_heli_slot_building,0,0,0],
 	[KP_liberation_plane_slot_building,0,0,0],

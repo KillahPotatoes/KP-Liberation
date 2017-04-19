@@ -349,7 +349,8 @@ while { true } do {
 				( isNull  attachedTo _x ) &&
 				(((getpos _x) select 2) < 10 ) &&
 				( getObjectType _x >= 8 ) &&
-				!((typeOf _x) in KP_liberation_crates)
+				!((typeOf _x) in KP_liberation_crates) &&
+				!(_x getVariable ["KP_liberation_preplaced", false])
  				} ] call BIS_fnc_conditionalSelect;
 				
 			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;

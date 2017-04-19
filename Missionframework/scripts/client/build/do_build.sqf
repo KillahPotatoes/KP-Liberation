@@ -82,7 +82,7 @@ while { true } do {
 			if (buildtype == 6 ) then {
 				_idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place_bis.sqf","",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
 			};
-			if (buildtype == 6 || buildtype == 99  || _classname in KP_liberation_storage_buildings) then {
+			if (buildtype == 6 || buildtype == 99  || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 				_idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>","scripts\client\build\do_grid.sqf","",-735,false,false,"","build_confirmed == 1"];
 				_idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
 			};
@@ -187,7 +187,7 @@ while { true } do {
 					} else {
 						_vehicle setpos _truepos;
 					};
-					if ( buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings ) then {
+					if (buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 						if (KP_vector) then {
 							_vehicle setVectorUp [0,0,1];
 						} else {
@@ -281,7 +281,7 @@ while { true } do {
 					clearItemCargoGlobal _vehicle;
 					clearBackpackCargoGlobal _vehicle;
 				};
-				if ( buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings ) then {
+				if (buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 					if (KP_vector) then {
 						_vehicle setVectorUp [0,0,1];
 					} else {
