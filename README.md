@@ -154,10 +154,17 @@ class Missions
 * Added action to change alignment (up or terrain aligned) during placement of buildings
 * Removed resource caps system
 * Removed option for passive income
+* Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
+* Removed `gameplay_constants.sqf`
+* Merged `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
+* Updated Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked save manager -> helicopters from the LHD or Chimera won't be saved, as they spawn on every mission start/load
+* Tweaked name for savegame namespace -> adapts automaticly to worldName
 * Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
+* Fixed rare issue that the commander has to respawn first, to get access to the zeus interface
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
