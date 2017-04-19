@@ -11,6 +11,7 @@ _idact_commander = -1;
 _idact_repackage = -1;
 _idact_halo = -1;
 _idact_secondary = -1;
+_idact_zeus = -1;
 _distfob = 100;
 _distarsenal = 5;
 _distbuildfob = 10;
@@ -149,6 +150,17 @@ while { true } do {
 		if ( _idact_secondary != -1 ) then {
 			player removeAction _idact_secondary;
 			_idact_secondary = -1;
+		};
+	};
+
+	if (!isNil("commandant")) then {
+		if ((player == commandant) && (isNull(getAssignedCuratorLogic commandant))) then {
+			if ( _idact_zeus == -1 ) then {
+				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[[],"zeus_remote_call"] call BIS_fnc_MP;},"",-994,false,true,"","build_confirmed == 0"];
+			};
+		} else {
+			player removeAction _idact_zeus;
+			_idact_zeus = -1;
 		};
 	};
 

@@ -152,25 +152,27 @@ class Missions
 * Added new resource system
 * Added Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
 * Added action to change alignment (up or terrain aligned) during placement of buildings
+* Added action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
 * Removed resource caps system
 * Removed option for passive income
 * Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed `gameplay_constants.sqf`
 * Merged `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
+* Replaced manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
 * Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked save manager -> helicopters from the LHD or Chimera won't be saved, as they spawn on every mission start/load
 * Tweaked name for savegame namespace -> adapts automaticly to worldName
 * Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
-* Fixed rare issue that the commander has to respawn first, to get access to the zeus interface
+* Fixed non vanilla paratroopers don't have a parachute
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
-* Added custom made Chimera Base for Tanoa. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
+* Added custom made Chimera Base for Tanoa. Thanks to [jus61](https://github.com/jus61) for building it
 * Added X-Cam-Taunus missionfile
-* Added custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
+* Added custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](https://github.com/jus61) for building it
 * Added custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
 * Added arsenal whitelist preset system (change via kp_liberation_config.sqf)
 	* Use blacklist from unit preset (default)

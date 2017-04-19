@@ -3350,5 +3350,9 @@
 						<Original>No recycle building in FOB area</Original>
 						<German>Keine Demontageeinrichtung im Bereich der FOB</German>
 				</Key>
+				<Key ID="STR_REASSIGN_ZEUS">
+						<Original>-- REASSIGN ZEUS</Original>
+						<German>-- ZEUS NEU ZUWEISEN</German>
+				</Key>
 		</Package>
 </Project>
