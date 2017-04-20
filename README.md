@@ -166,6 +166,7 @@ class Missions
 * Tweaked initialization of the arsenal, which should increase the performance for blacklist using
 * Tweaked save manager -> helicopters from the LHD or Chimera won't be saved, as they spawn on every mission start/load
 * Tweaked name for savegame namespace -> adapts automaticly to worldName
+* Tweaked revive settings: BI Revive is enabled by default. Disable it, when you use ACE
 * Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)

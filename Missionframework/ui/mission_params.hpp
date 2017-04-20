@@ -108,7 +108,7 @@ class Params
 		isGlobal = 1;
 		values[] = {-100,0,1};
 		texts[] = {$STR_A3_MissionDefault, $STR_A3_Disabled, $STR_A3_EnabledForAllPlayers};
-		default = 0;
+		default = 1;
 		function = "bis_fnc_paramReviveMode";
 	};
 	class ReviveDuration
