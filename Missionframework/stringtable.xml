@@ -3307,14 +3307,17 @@
 				<Key ID="STR_PREPLACED_ERROR">
 						<Original>You can't recycle preplaced objects</Original>
 						<German>Vorplatzierte Objekte können nicht recycelt werden</German>
+						<Italian>Non puoi riciclare oggetti statici</Italian>
 				</Key>
 				<Key ID="STR_NORECBUILDING_ERROR">
 						<Original>No recycle building in FOB area</Original>
 						<German>Keine Demontageeinrichtung im Bereich der FOB</German>
+						<Italian>Nessun edificio per il riciclaggio presente nell'area</Italian>
 				</Key>
 				<Key ID="STR_REASSIGN_ZEUS">
 						<Original>-- REASSIGN ZEUS</Original>
 						<German>-- ZEUS NEU ZUWEISEN</German>
+						<Italian>-- RIASSEGNA ZEUS</Italian>
 				</Key>
 		</Package>
 </Project>
