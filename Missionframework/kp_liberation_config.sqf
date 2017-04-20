@@ -25,7 +25,7 @@ KP_liberation_preset = 0;
 
 
 // Which arsenal preset should be used?
-// 0 = use blacklist method from units preset
+// 0 = use blacklist method
 // 1 = custom (edit the custom.sqf in the arsenal_presets folder to change things)
 // 2 = Killah Potatoes Gaming Community
 // 3 = RHS United States Armed Forces Arsenal Preset
@@ -107,8 +107,8 @@ GRLIB_halo_altitude = 4000;
 GRLIB_civ_killing_penalty = 100;
 
 
-// Blacklisted arsenal items such as deployable weapons  that should be bought instead
-// Useless if you're using a predefined arsenal in arsenal.sqf
+// Blacklisted arsenal items such as deployable weapons that should be bought instead
+// Useless if you're using a predefined arsenal in KP_liberation_arsenal
 // REMEMBER: A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 blacklisted_from_arsenal = [
 	"B_Respawn_Sleeping_bag_blue_F",
@@ -172,6 +172,51 @@ box_transport_config = [
 	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0,-1.0,-1]],
 	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
 	["greuh_eh101_gr", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]]
+];
+
+
+// Everything the AI troups should be able to resupply from
+ai_resupply_sources = [
+	"B_Slingload_01_Ammo_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_Truck_01_ammo_F",
+	"B_T_Truck_01_ammo_F",
+	"rhsusf_M977A4_AMMO_usarmy_wd",
+	"rhsusf_M977A4_AMMO_usarmy_d"
+];
+
+// Everything that can resupply other vehicles
+vehicle_repair_sources = [
+	"B_APC_Tracked_01_CRV_F",
+	"C_Offroad_01_repair_F",
+	"B_Truck_01_Repair_F",
+	"B_T_Truck_01_Repair_F",
+	"B_Slingload_01_Repair_F",
+	"rhsusf_M977A4_REPAIR_usarmy_wd",
+	"rhsusf_M977A4_REPAIR_usarmy_d"
+];
+vehicle_rearm_sources = [
+	"B_APC_Tracked_01_CRV_F",
+	"B_Truck_01_ammo_F",
+	"B_T_Truck_01_ammo_F",
+	"B_Slingload_01_Ammo_F",
+	"rhsusf_M977A4_AMMO_usarmy_wd",
+	"rhsusf_M977A4_AMMO_usarmy_d"
+];
+vehicle_refuel_sources = [
+	"B_APC_Tracked_01_CRV_F",
+	"B_Truck_01_fuel_F",
+	"B_T_Truck_01_fuel_F",
+	"B_Slingload_01_Fuel_F",
+	"rhsusf_M978A4_usarmy_wd",
+	"rhsusf_M978A4_usarmy_d"
+];
+
+
+// Classnames of boats, so they can be build on water
+boats_names = [
+	"B_Boat_Transport_01_F",
+	"B_Boat_Armed_01_minigun_F"
 ];
 
 

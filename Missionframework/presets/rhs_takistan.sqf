@@ -1,4 +1,3 @@
-// This file allows you to add content to the mission without conflict issues after each update of the original classnames.sqf
 // If you want more modifications to be supported by this file, let's discuss it on the forums.
 
 // REQUIRED MODS FOR THIS PRESET:
@@ -10,7 +9,6 @@
 
 // *** SUPPORT STUFF ***
 
-// Setting a value here will overwrite the original value found from the mission. Do that if you're doing a total conversion.
 // Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not. Just don't try.
 FOB_typename = "Land_Cargo_HQ_V3_F";						// Default "Land_Cargo_HQ_V1_F";
 FOB_box_typename = "B_Slingload_01_Cargo_F";					// Default "B_Slingload_01_Cargo_F";
@@ -39,10 +37,7 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";					// Default "CargoNet_01_
 // Format : [ "classname", manpower, ammo, fuel ]
 // Example : [ "B_APC_Tracked_01_AA_F", 0, 40, 15 ],
 
-// If overwrite is set to true, then the extension list will entirely replace the original list defined in classnames.sqf. Otherwise it will be appended to it.
-// Useful for total conversions to RHS and such, without having to alter the original file.
-infantry_units_overwrite = true;
-infantry_units_extension = [
+infantry_units = [
 	["rhsusf_army_ocp_rifleman",25,0,0],
 	["rhsusf_army_ocp_grenadier",30,0,0],
 	["rhsusf_army_ocp_autorifleman",30,0,0],
@@ -58,8 +53,7 @@ infantry_units_extension = [
 	["rhsusf_army_ocp_helipilot",10,0,0]
 ];
 
-light_vehicles_overwrite = true;
-light_vehicles_extension = [
+light_vehicles = [
 	["B_Quadbike_01_F",40,0,20],
 	["rhsusf_m1025_d",100,0,50],
 	["rhsusf_m1025_d_m2",100,40,50],
@@ -69,8 +63,7 @@ light_vehicles_extension = [
 	["B_Truck_01_medical_F",180,0,80]	
 ];
 
-heavy_vehicles_overwrite = true;
-heavy_vehicles_extension = [
+heavy_vehicles = [
 	["rhsusf_m113d_usarmy",200,70,100],
 	["rhsusf_m113d_usarmy_MK19",200,90,100],
 	["RHS_M6",300,200,150],
@@ -81,8 +74,7 @@ heavy_vehicles_extension = [
 	["rhsusf_m109d_usarmy",600,2000,300]
 ];
 
-air_vehicles_overwrite = true;
-air_vehicles_extension = [
+air_vehicles = [
 	["RHS_MELB_MH6M",200,0,100],
 	["RHS_MELB_AH6M_L",200,160,100],
 	["RHS_UH60M_MEV2",300,0,150],
@@ -97,8 +89,7 @@ air_vehicles_extension = [
 	["B_UAV_02_CAS_F",400,600,200]
 ];
 
-static_vehicles_overwrite = true;
-static_vehicles_extension = [
+static_vehicles = [
 	["RHS_M2StaticMG_MiniTripod_D",20,20,0],
 	["RHS_M2StaticMG_D",20,20,0],
 	["RHS_MK19_TriPod_D",20,40,0],
@@ -108,8 +99,7 @@ static_vehicles_extension = [
 	["RHS_M119_D",160,220,0]
 ];
 
-buildings_overwrite = true;
-buildings_extension = [
+buildings = [
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
@@ -153,8 +143,7 @@ buildings_extension = [
 	["Land_ClutterCutter_large_F",0,0,0]
 ];
 
-support_vehicles_overwrite = true;		// If you're going to overwrite this, make sure you have at least Arsenal_typename, Respawn_truck_typename, FOB_box_typename and FOB_truck_typename in there
-support_vehicles_extension = [
+support_vehicles = [
 	[Arsenal_typename,10,0,0],
 	[Respawn_truck_typename,20,0,80],
 	[FOB_box_typename,200,400,0],
@@ -294,8 +283,7 @@ opfor_ammo_container = nil;
 opfor_flag = "FlagCarrierTakistan_EP1";
 
 // Militia infantry. Soldier classnames the game will pick from randomly
-militia_squad_overwrite = true;
-militia_squad_extension = [
+militia_squad = [
 	"LOP_AM_OPF_Infantry_SL",
 	"LOP_AM_OPF_Infantry_AR",
 	"LOP_AM_OPF_Infantry_AR_Asst",
@@ -312,16 +300,14 @@ militia_squad_extension = [
 ];
 
 // Militia vehicles to choose from
-militia_vehicles_overwrite = true;
-militia_vehicles_extension = [
+militia_vehicles = [
 	"LOP_AM_OPF_UAZ_DshKM",
 	"LOP_AM_OPF_UAZ_DshKM",
 	"LOP_AM_OPF_UAZ_AGS"
 ];
 
 // All the vehicles that can spawn as sector defenders and patrols
-opfor_vehicles_overwrite = true;
-opfor_vehicles_extension = [
+opfor_vehicles = [
 	"LOP_TKA_BMP2",
 	"LOP_TKA_BTR70",
 	"LOP_TKA_BMP2",
@@ -336,8 +322,7 @@ opfor_vehicles_extension = [
 ];
 
 // Same with lighter choices to be used  when the alert level is low
-opfor_vehicles_low_intensity_overwrite = true;
-opfor_vehicles_low_intensity_extension = [
+opfor_vehicles_low_intensity = [
 	"LOP_TKA_BMP2",
 	"LOP_TKA_BTR70",
 	"LOP_TKA_UAZ_DshKM",
@@ -347,8 +332,7 @@ opfor_vehicles_low_intensity_extension = [
 ];
 
 // All the vehicles that can spawn as battlegroup members
-opfor_battlegroup_vehicles_overwrite = true;
-opfor_battlegroup_vehicles_extension = [
+opfor_battlegroup_vehicles = [
 	"LOP_TKA_UAZ_DshKM",
 	"LOP_TKA_UAZ_AGS",
 	"LOP_TKA_UAZ_SPG",
@@ -364,8 +348,7 @@ opfor_battlegroup_vehicles_extension = [
 ];
 
 // Same with lighter choices to be used  when the alert level is low
-opfor_battlegroup_vehicles_low_intensity_overwrite = true;
-opfor_battlegroup_vehicles_low_intensity_extension = [
+opfor_battlegroup_vehicles_low_intensity = [
 	"LOP_TKA_BMP2",
 	"LOP_TKA_BTR70",
 	"LOP_TKA_UAZ_DshKM",
@@ -379,8 +362,7 @@ opfor_battlegroup_vehicles_low_intensity_extension = [
 
 // All the vehicles that can spawn as battlegroup members (see above) and also hold 8 soldiers as passengers.
 // If something in here can't hold all 8 soldiers then buggy behaviours may occur
-opfor_troup_transports_overwrite = true;
-opfor_troup_transports_extension = [
+opfor_troup_transports = [
 	"LOP_TKA_BMP2",
 	"LOP_TKA_BTR70",
 	"LOP_TKA_Ural",
@@ -388,15 +370,13 @@ opfor_troup_transports_extension = [
 ];
 
 // Battlegroup members that will need to spawn in flight. Should be only helos but, who knows
-opfor_choppers_overwrite = true;
-opfor_choppers_extension = [
+opfor_choppers = [
 	"LOP_TKA_Mi8MT_Cargo",
 	"LOP_TKA_Mi24V_AT"
 ];
 
 // Opfor military aircrafts
-opfor_air_overwrite = true;
-opfor_air_extension = [
+opfor_air = [
 	"RHS_Su25SM_vvsc"
 ];
 
@@ -404,16 +384,14 @@ opfor_air_extension = [
 // Other stuff
 
 // civilians
-civilians_overwrite = true;
-civilians_extension = [
+civilians = [
 	"LOP_Tak_Civ_Man_01",
 	"LOP_Tak_Civ_Man_02",
 	"LOP_Tak_Civ_Man_04"
 ];
 
 // Civilian vehicles
-civilian_vehicles_overwrite = true;
-civilian_vehicles_extension = [
+civilian_vehicles = [
 	"LOP_TAK_Civ_Landrover",
 	"LOP_TAK_Civ_UAZ",
 	"LOP_TAK_Civ_UAZ_Open",
@@ -421,24 +399,8 @@ civilian_vehicles_extension = [
 	"LOP_TAK_Civ_Ural_open"
 ];
 
-// Everything the AI troups should be able to resupply from
-ai_resupply_sources_extension = [
-	"rhsusf_M977A4_AMMO_usarmy_d"
-];
-
-// Everything that can resupply other vehicles
-vehicle_repair_sources_extension = [
-	"rhsusf_M977A4_REPAIR_usarmy_d"
-];
-vehicle_rearm_sources_extension = [
-	"rhsusf_M977A4_AMMO_usarmy_d"
-];
-vehicle_refuel_sources_extension = [
-	"rhsusf_M978A4_usarmy_d"
-];
-
 // Elite vehicles that should be unlocked through military base capture.
-elite_vehicles_extension = [
+elite_vehicles = [
 	"RHS_M2A3_BUSKIII",
 	"rhsusf_m1a2sep1d_usarmy",
 	"rhsusf_m1a2sep1tuskiid_usarmy",
