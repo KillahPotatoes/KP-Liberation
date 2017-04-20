@@ -19,8 +19,6 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_ammo_bounties = [ "AmmoBounties",1] call bis_fnc_getParamValue;
-	GRLIB_civ_penalties = [ "CivPenalties",1] call bis_fnc_getParamValue;
 	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
@@ -50,8 +48,6 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = 2;
 	GRLIB_weather_param = 3;
 	GRLIB_shorter_nights = 0;
-	GRLIB_ammo_bounties = 1;
-	GRLIB_civ_penalties = 1;
 	GRLIB_remote_sensors = 0;
 	GRLIB_blufor_defenders = 1;
 	GRLIB_autodanger = 0;
@@ -71,8 +67,6 @@ if ( GRLIB_adaptive_opfor == 1 ) then { GRLIB_adaptive_opfor = true } else { GRL
 if ( GRLIB_permissions_param == 1 ) then { GRLIB_permissions_param = true } else { GRLIB_permissions_param = false };
 if ( GRLIB_use_whitelist == 1 ) then { GRLIB_use_whitelist = true } else { GRLIB_use_whitelist = false };
 if ( GRLIB_shorter_nights == 1 ) then { GRLIB_shorter_nights = true } else { GRLIB_shorter_nights = false };
-if ( GRLIB_ammo_bounties == 1 ) then { GRLIB_ammo_bounties = true } else { GRLIB_ammo_bounties = false };
-if ( GRLIB_civ_penalties == 1 ) then { GRLIB_civ_penalties = true } else { GRLIB_civ_penalties = false };
 if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
 if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
 if ( KP_liberation_mapmarkers == 1 ) then { KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true } else { KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false };

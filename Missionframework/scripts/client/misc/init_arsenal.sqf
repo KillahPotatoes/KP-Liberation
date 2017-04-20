@@ -1,71 +1,56 @@
-if ( isNil "GRLIB_arsenal_weapons" ) then { GRLIB_arsenal_weapons = [] };
-// Use weapon blacklist when whitelist is empty
-if ( count GRLIB_arsenal_weapons == 0 ) then {
-	private _virtualStuffWeapons = [] call LARs_fnc_addWeapons;
-	private _virtualWeapons = [];
+private ["_virtualCargo", "_virtualWeapons", "_virtualMagazines", "_virtualItems", "_virtualBackpacks"];
+_virtualCargo = [] call LARs_fnc_addAllVirtualCargo;
+_virtualWeapons = [];
+_virtualMagazines = [];
+_virtualItems = [];
+_virtualBackpacks = [];
 
-	// Don't try to filter weapons when blacklist is not defined
-	if ( isNil "blacklisted_from_arsenal_weapons" ) then {
-		_virtualWeapons = _virtualStuffWeapons;
+if (isNil "GRLIB_arsenal_weapons") then {GRLIB_arsenal_weapons = []};
+if (isNil "GRLIB_arsenal_magazines") then {GRLIB_arsenal_magazines = []};
+if (isNil "GRLIB_arsenal_items") then {GRLIB_arsenal_items = []};
+if (isNil "GRLIB_arsenal_backpacks") then {GRLIB_arsenal_backpacks = []};
+if (isNil "blacklisted_from_arsenal") then {blacklisted_from_arsenal = []};
+
+if ((count GRLIB_arsenal_weapons) == 0) then {
+	if ((count blacklisted_from_arsenal) == 0) then {
+		_virtualWeapons = _virtualCargo select 0;
 	} else {
-		{ if ( !(_x in blacklisted_from_arsenal_weapons) ) then { _virtualWeapons pushback _x } } foreach (_virtualStuffWeapons);
+		{if (!(_x in blacklisted_from_arsenal)) then {_virtualWeapons pushBack _x};} forEach (_virtualCargo select 0);
 	};
-	
-	[ missionNamespace, _virtualWeapons ] call BIS_fnc_addVirtualWeaponCargo;
+	[missionNamespace, _virtualWeapons] call BIS_fnc_addVirtualWeaponCargo;
 } else {
-	[ missionNamespace, GRLIB_arsenal_weapons ] call BIS_fnc_addVirtualWeaponCargo;
+	[missionNamespace, GRLIB_arsenal_weapons] call BIS_fnc_addVirtualWeaponCargo;
 };
 
-if ( isNil "GRLIB_arsenal_magazines" ) then { GRLIB_arsenal_magazines = [] };
-// Use magazine blacklist when whitelist is empty
-if ( count GRLIB_arsenal_magazines == 0 ) then {
-	private _virtualStuffMagazines = [] call LARs_fnc_addMagazines;
-	private _virtualMagazines = [];
-	
-	// Don't try to filter magazines when blacklist is not defined
-	if (isNil "blacklisted_from_arsenal_magazines") then {
-		_virtualMagazines = _virtualStuffMagazines;
+if ((count GRLIB_arsenal_magazines) == 0) then {
+	if ((count blacklisted_from_arsenal) == 0) then {
+		_virtualMagazines = _virtualCargo select 1;
 	} else {
-		{ if ( !(_x in blacklisted_from_arsenal_magazines) ) then { _virtualMagazines pushback _x } } foreach (_virtualStuffMagazines);
+		{if (!(_x in blacklisted_from_arsenal)) then {_virtualMagazines pushBack _x};} forEach (_virtualCargo select 1);
 	};
-	
-	[ missionNamespace, _virtualMagazines ] call BIS_fnc_addVirtualMagazineCargo;
+	[missionNamespace, _virtualMagazines] call BIS_fnc_addVirtualMagazineCargo;
 } else {
-	[ missionNamespace, GRLIB_arsenal_magazines ] call BIS_fnc_addVirtualMagazineCargo;
+	[missionNamespace, GRLIB_arsenal_magazines] call BIS_fnc_addVirtualMagazineCargo;
 };
 
-if ( isNil "GRLIB_arsenal_items" ) then { GRLIB_arsenal_items = [] };
-// Use item blacklist when whitelist is empty
-if ( count GRLIB_arsenal_items == 0 ) then {
-	private _virtualStuffItems = [] call LARs_fnc_addItems;
-	private _virtualItems = [];
-	
-	// Don't try to filter items when blacklist is not defined
-	if (isNil "blacklisted_from_arsenal_items") then {
-		_virtualItems = _virtualStuffItems;
+if ((count GRLIB_arsenal_items) == 0) then {
+	if ((count blacklisted_from_arsenal) == 0) then {
+		_virtualItems = _virtualCargo select 2;
 	} else {
-		{ if ( !(_x in blacklisted_from_arsenal_items) ) then { _virtualItems pushback _x } } foreach (_virtualStuffItems);
+		{if (!(_x in blacklisted_from_arsenal)) then {_virtualItems pushBack _x};} forEach (_virtualCargo select 2);
 	};
-	
-	[ missionNamespace, _virtualItems ] call BIS_fnc_addVirtualItemCargo;
+	[missionNamespace, _virtualItems] call BIS_fnc_addVirtualItemCargo;
 } else {
-	[ missionNamespace, GRLIB_arsenal_items ] call BIS_fnc_addVirtualItemCargo;
+	[missionNamespace, GRLIB_arsenal_items] call BIS_fnc_addVirtualItemCargo;
 };
 
-if ( isNil "GRLIB_arsenal_backpacks" ) then { GRLIB_arsenal_backpacks = [] };
-// Use backpack blacklist when whitelist is empty
-if ( count GRLIB_arsenal_backpacks == 0 ) then {
-	private _virtualStuffBackpacks = [] call LARs_fnc_addBackpacks;
-	private _virtualBackpacks = [];
-	
-	// Don't try to filter backpacks when blacklist is not defined
-	if (isNil "GRLIB_blacklisted_from_arsenal") then {
-		_virtualBackpacks = _virtualStuffBackpacks;
+if ((count GRLIB_arsenal_backpacks) == 0) then {
+	if ((count blacklisted_from_arsenal) == 0) then {
+		_virtualBackpacks = _virtualCargo select 3;
 	} else {
-		{ if ( !(_x in GRLIB_blacklisted_from_arsenal) ) then { _virtualBackpacks pushback _x } } foreach (_virtualStuffBackpacks);
+		{if (!(_x in blacklisted_from_arsenal)) then {_virtualBackpacks pushBack _x};} forEach (_virtualCargo select 3);
 	};
-
-	[ missionNamespace, _virtualBackpacks ] call BIS_fnc_addVirtualBackpackCargo;
+	[missionNamespace, _virtualBackpacks] call BIS_fnc_addVirtualBackpackCargo;
 } else {
-	[ missionNamespace, GRLIB_arsenal_backpacks ] call BIS_fnc_addVirtualBackpackCargo;
+	[missionNamespace, GRLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
 };

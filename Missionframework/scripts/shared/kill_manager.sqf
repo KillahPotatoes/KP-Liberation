@@ -54,11 +54,6 @@ if ( isServer ) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
 			if ( isPlayer _killer ) then {
 				stats_civilians_killed_by_players = stats_civilians_killed_by_players + 1;
-
-				if ( GRLIB_civ_penalties ) then {
-					resources_ammo = resources_ammo - GRLIB_civ_killing_penalty;
-					[ [ name _unit, GRLIB_civ_killing_penalty, _killer ] , "remote_call_civ_penalty" ] call BIS_fnc_MP;
-				};
 			};
 		};
 
@@ -83,23 +78,6 @@ if ( isServer ) then {
 			stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 			if ( isplayer _killer ) then {
 				stats_opfor_vehicles_killed_by_players = stats_opfor_vehicles_killed_by_players + 1;
-
-				if ( GRLIB_ammo_bounties ) then {
-					private [ "_bounty" ];
-
-					_bounty = 20;
-					if ( _unit isKindOf "Air" ) then {
-						_bounty = 80;
-					};
-
-					if ( _unit isKindOf "Tank" ) then {
-						_bounty = 40;
-					};
-
-					resources_ammo = resources_ammo + _bounty;
-					[ [ typeOf _unit, _bounty, _killer ] , "remote_call_ammo_bounty" ] call BIS_fnc_MP;
-				};
-
 			};
 		} else {
 			stats_blufor_vehicles_killed = stats_blufor_vehicles_killed + 1;

@@ -1388,14 +1388,6 @@
 						<Russian>Вражеские силы адаптируются к количеству игроков</Russian>
 						<Italian>presenza ostile adattata al numero dei giocatori</Italian>
 				</Key>
-				<Key ID="STR_PARAM_PASSIVE_INCOME">
-						<Original>Replace ammo boxes spawns with passive income</Original>
-						<French>Remplacer les caisses de munitions par un revenu passif</French>
-						<German>Ersetzt Munitionskisten durch passives Einkommen</German>
-						<Spanish>Reemplazar cajas de munición por ingresos pasivos</Spanish>
-						<Russian>Заменяет ящики с боеприпасами пассивным доходом</Russian>
-						<Italian>Rimpiazzare casse munizioni con reddito passivo</Italian>0
-				</Key>
 				<Key ID="STR_BUILD1">
 						<Original>Infantry units</Original>
 						<French>Unités d'infanterie</French>
@@ -2258,22 +2250,6 @@
 						<Spanish>-- OBJETIVOS SECUNDARIOS</Spanish>
 						<Russian>-- ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
 						<Italian>-- OBIETTIVI SECONDARI</Italian>
-				</Key>
-				<Key ID="STR_AMMO_BOUNTIES">
-						<Original>Ammunition bounties</Original>
-						<French>Primes de munitions</French>
-						<German>Munitionsbelohnung für zerstörte Fahrzeuge</German>
-						<Spanish>Recompensas de munición</Spanish>
-						<Russian>Вознаграждение за уничтожение техники ВООРУЖЕНИЕ</Russian>
-						<Italian>Ricompensa Munizioni</Italian>
-				</Key>
-				<Key ID="STR_BOUNTY_MESSAGE">
-						<Original>Bounty of %1 for a %2 destroyed by %3</Original>
-						<French>Prime de %1 pour un %2 détruit par %3</French>
-						<German>Kopfgeld von %1 für die Zerstörung von %2 durch %3</German>
-						<Spanish>Premio de %1 por un %2 destruido por %3</Spanish>
-						<Russian>+%1 едениц ВООРУЖЕНИЯ за %2 уничтоженный игроком %3</Russian>
-						<Italian>Ricompensa di %1 per %2 distrutto da %3</Italian>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES_TITLE">
 						<Original>SECONDARY OBJECTIVES</Original>
@@ -3185,20 +3161,6 @@
 				</Key>
 
 				<!-- Added in v0.924 -->
-				<Key ID="STR_CIV_PENALTIES">
-						<Original>Penalty for killing civilians</Original>
-						<French>Pénalité pour les pertes civiles</French>
-						<German>Strafe für zivile Verluste</German>
-						<Spanish>Penalización por matar civiles</Spanish>
-						<Italian>Penalità per l'uccisione di civili</Italian>
-				</Key>
-				<Key ID="STR_CIV_PENALTY_MESSAGE">
-						<Original>Penalty of %1 for killing of civilian named %2 by %3</Original>
-						<French>Penalty de %1 pour avoir tué le civil %2 par %3</French>
-						<German>Strafe von %1 für die Ermordung des Zivilisten %2 durch %3</German>
-						<Spanish>Penalización de %1 por matar a un civil llamado %2 por %3</Spanish>
-						<Italian>Pena di 1% per l'uccisione di civili nome %2 da %3</Italian>
-				</Key>
 				<Key ID="STR_PARAM_SQUAD_SIZE">
 						<Original>AI recruitment limit per squad</Original>
 						<French>Limite de recrutement d'IA par escouade</French>

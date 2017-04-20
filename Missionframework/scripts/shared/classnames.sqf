@@ -381,67 +381,6 @@ if ( isNil "civilian_vehicles_extension" ) then { civilian_vehicles_extension = 
 if ( isNil "civilian_vehicles_overwrite" ) then { civilian_vehicles_overwrite = false };
 if ( civilian_vehicles_overwrite ) then { civilian_vehicles = civilian_vehicles_extension; } else { civilian_vehicles = civilian_vehicles + civilian_vehicles_extension; };
 
-GRLIB_blacklisted_from_arsenal = [
-	"B_Respawn_Sleeping_bag_blue_F",
-	"B_Respawn_Sleeping_bag_brown_F",
-	"B_Respawn_TentDome_F",
-	"B_Respawn_Sleeping_bag_F",
-	"B_Respawn_TentA_F",
-	"I_GMG_01_A_weapon_F",
-	"O_GMG_01_A_weapon_F",
-	"B_GMG_01_A_weapon_F",
-	"I_HMG_01_A_weapon_F",
-	"B_HMG_01_A_weapon_F",
-	"O_HMG_01_A_weapon_F",
-	"O_HMG_01_weapon_F",
-	"B_HMG_01_weapon_F",
-	"I_HMG_01_weapon_F",
-	"I_HMG_01_high_weapon_F",
-	"O_HMG_01_high_weapon_F",
-	"B_HMG_01_high_weapon_F",
-	"O_GMG_01_weapon_F",
-	"I_GMG_01_weapon_F",
-	"B_GMG_01_weapon_F",
-	"B_GMG_01_high_weapon_F",
-	"I_GMG_01_high_weapon_F",
-	"O_GMG_01_high_weapon_F",
-	"I_Mortar_01_support_F",
-	"B_Mortar_01_support_F",
-	"O_Mortar_01_support_F",
-	"B_Mortar_01_weapon_F",
-	"O_Mortar_01_weapon_F",
-	"I_Mortar_01_weapon_F",
-	"B_HMG_01_support_F",
-	"O_HMG_01_support_F",
-	"I_HMG_01_support_F",
-	"B_HMG_01_support_high_F",
-	"O_HMG_01_support_high_F",
-	"I_HMG_01_support_high_F",
-	"B_AA_01_weapon_F",
-	"O_AA_01_weapon_F",
-	"I_AA_01_weapon_F",
-	"B_AT_01_weapon_F",
-	"O_AT_01_weapon_F",
-	"I_AT_01_weapon_F",
-	"I_UAV_01_backpack_F",
-	"B_UAV_01_backpack_F",
-	"O_UAV_01_backpack_F"
-];
-if ( isNil "blacklisted_from_arsenal_extension" ) then { blacklisted_from_arsenal_extension = [] };
-GRLIB_blacklisted_from_arsenal = [] + blacklisted_from_arsenal_extension + GRLIB_blacklisted_from_arsenal;
-
-box_transport_config = [
-	[ "B_Truck_01_transport_F", -6.5, [0,	-0.4,	0.4], [0,	-2.1,	0.4], [0,	-3.8,	0.4] ],
-	[ "B_Truck_01_covered_F", -6.5, [0,	-0.4,	0.4], [0,	-2.1,	0.4], [0,	-3.8,	0.4] ],
-	[ "O_Truck_03_transport_F", -6.5, [0,	-0.8,	0.4], [0,	-2.4,	0.4], [0,	-4.0,	0.4] ],
-	[ "O_Truck_03_covered_F", -6.5, [0,	-0.8,	0.4], [0,	-2.4,	0.4], [0,	-4.0,	0.4] ],
-	[ "B_Heli_Transport_03_F", -7.5, [0,	2.2,	-1], [0,	0.8,	-1], [0,	-1.0, -1] ],
-	[ "B_Heli_Transport_03_unarmed_F", -7.5, [0,	2.2,	-1], [0,	0.8,	-1], [0,	-1.0, -1] ],
-	[ "I_Heli_Transport_02_F", -6.5, [0,	4.2,	-1.45], [0,	2.5,	-1.45], [0,	0.8, -1.45], [0,	-0.9, -1.45] ]
-];
-if ( isNil "box_transport_config_extension" ) then { box_transport_config_extension = [] };
-box_transport_config = [] + box_transport_config + box_transport_config_extension;
-
 infantry_units = [ infantry_units ] call F_filterMods;
 light_vehicles = [ light_vehicles ] call F_filterMods;
 heavy_vehicles = [ heavy_vehicles ] call F_filterMods;

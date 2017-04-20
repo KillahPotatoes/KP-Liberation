@@ -154,13 +154,16 @@ class Missions
 * Added action to change alignment (up or terrain aligned) during placement of buildings
 * Added action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
 * Removed resource caps system
-* Removed option for passive income
 * Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
+* Removed Passive Income (due to new resource system)
+* Removed Ammo Bounties (due to new resource system)
+* Removed Civilian Penalties (due to new resource system)
 * Removed `gameplay_constants.sqf`
 * Merged `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Replaced manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
 * Tweaked arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked initialization of the arsenal, which should increase the performance for blacklist using
 * Tweaked save manager -> helicopters from the LHD or Chimera won't be saved, as they spawn on every mission start/load
 * Tweaked name for savegame namespace -> adapts automaticly to worldName
 * Fixed UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
