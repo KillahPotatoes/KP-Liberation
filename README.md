@@ -158,6 +158,7 @@ class Missions
 * Removed Passive Income (due to new resource system)
 * Removed Ammo Bounties (due to new resource system)
 * Removed Civilian Penalties (due to new resource system)
+* Removed overwrite functionality for `classnames.sqf`, as it is no longer needed due to the preset system
 * Removed `gameplay_constants.sqf`
 * Merged `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
