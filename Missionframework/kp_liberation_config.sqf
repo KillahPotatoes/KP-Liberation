@@ -10,6 +10,7 @@ KP_liberation_ace = false;
 // Vehicle classnames which should be a medical vehicle (for ACE only)
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
+	"B_T_Truck_01_medical_F",
 	"rhsusf_m113d_usarmy_medical",
 	"RHS_UH60M_MEV2"
 ];
@@ -155,68 +156,85 @@ blacklisted_from_arsenal = [
 	"I_UAV_01_backpack_F",
 	"B_UAV_01_backpack_F",
 	"O_UAV_01_backpack_F",
+	//...add all Apex variant UAV and static bags here maybe, for Apex players using blacklist only.
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
 ];
 
 
-// Configuration for resource crate transport
+// Configuration for resource crate transport.
 // ["classname", distance behind vehicle to unload crate, attachTo positions for each box]
 box_transport_config = [
 	["B_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
+	["B_T_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
+	["B_T_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
+	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0-1.0,-1]],
+	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0-1.0,-1]],
+	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0,-1.0,-1]],
-	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0,-1.0,-1]],
-	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
+	["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
+	["O_T_Truck_03_covered_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["greuh_eh101_gr", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]]
 ];
 
 
-// Everything the AI troups should be able to resupply from
+// Everything the AI troups should be able to resupply from.
 ai_resupply_sources = [
-	"B_Slingload_01_Ammo_F",
-	"B_APC_Tracked_01_CRV_F",
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
+	"B_Slingload_01_Ammo_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_T_APC_Tracked_01_CRV_F",
 	"rhsusf_M977A4_AMMO_usarmy_wd",
 	"rhsusf_M977A4_AMMO_usarmy_d"
 ];
 
-// Everything that can resupply other vehicles
+// Everything that can resupply other vehicles.
 vehicle_repair_sources = [
-	"B_APC_Tracked_01_CRV_F",
 	"C_Offroad_01_repair_F",
 	"B_Truck_01_Repair_F",
 	"B_T_Truck_01_Repair_F",
 	"B_Slingload_01_Repair_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_T_APC_Tracked_01_CRV_F",
 	"rhsusf_M977A4_REPAIR_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_usarmy_d"
 ];
 vehicle_rearm_sources = [
-	"B_APC_Tracked_01_CRV_F",
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
 	"B_Slingload_01_Ammo_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_T_APC_Tracked_01_CRV_F",
 	"rhsusf_M977A4_AMMO_usarmy_wd",
 	"rhsusf_M977A4_AMMO_usarmy_d"
 ];
 vehicle_refuel_sources = [
-	"B_APC_Tracked_01_CRV_F",
+	"C_Van_01_fuel_F",
 	"B_Truck_01_fuel_F",
 	"B_T_Truck_01_fuel_F",
 	"B_Slingload_01_Fuel_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_T_APC_Tracked_01_CRV_F",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_usarmy_d"
 ];
 
 
-// Classnames of boats, so they can be build on water
+// Classnames of boats, so they can be built on water.
 boats_names = [
 	"B_Boat_Transport_01_F",
-	"B_Boat_Armed_01_minigun_F"
+	"B_Boat_Armed_01_minigun_F",
+	"B_T_Boat_Transport_01_F",
+	"B_T_Boat_Armed_01_minigun_F",
+	"O_Boat_Transport_01_F",
+	"O_Boat_Armed_01_hmg_F",
+	"O_T_Boat_Transport_01_F",
+	"O_T_Boat_Armed_01_hmg_F",
+	"rhsusf_mkvsoc"
 ];
 
 
