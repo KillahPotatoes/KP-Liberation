@@ -153,6 +153,7 @@ class Missions
 * Added Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
 * Added action to change alignment (up or terrain aligned) during placement of buildings
 * Added action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
+* Added paradrop of a resource package when first FOB is built
 * Removed resource caps system
 * Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed Passive Income (due to new resource system)

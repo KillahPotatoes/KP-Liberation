@@ -59,4 +59,39 @@ if ( count GRLIB_all_fobs == 0 ) then {
 
 		deleteVehicle _fobbox;
 	};
+
+	waitUntil {sleep 5; (count GRLIB_all_fobs) > 0};
+
+	private ["_crate","_crateArray", "_smoke"];
+
+	diag_log "[KP LIBERATION] [INFO] First FOB built. Sending resource package.";
+
+	_crateArray = [];
+
+	uiSleep 10;
+
+	for [{_i = 0;}, {_i < 6}, {_i = _i + 1;}] do {
+		_crate = createVehicle [
+			(KP_liberation_crates select (_i % 3)),
+			[((GRLIB_all_fobs select 0) select 0), ((GRLIB_all_fobs select 0) select 1), 150],
+			[],
+			80,
+			"FLY"
+		];
+		clearWeaponCargoGlobal _crate;
+		clearMagazineCargoGlobal _crate;
+		clearItemCargoGlobal _crate;
+		clearBackpackCargoGlobal _crate;
+		_crate addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
+		_crate setVariable ["KP_liberation_crate_value", 100, true];
+		[[_crate, 500], "F_setMass"] call BIS_fnc_MP;
+		[objNull, _crate] call BIS_fnc_curatorObjectEdited;
+		_crateArray pushBack _crate;
+	};
+	uiSleep 25;
+	{
+		_smoke = "SmokeShellGreen" createVehicle (getPos _x);
+		_smoke attachTo [_x];
+	} forEach _crateArray
+
 };
