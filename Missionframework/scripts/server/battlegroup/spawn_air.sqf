@@ -9,7 +9,7 @@ _air_grp = createGroup GRLIB_side_enemy;
 for [ {_idx=0},{_idx < _planes_number},{_idx=_idx+1}] do {
 
 	_air_spawnpos = markerpos _air_spawnpoint;
-	_air_spawnpos = [(((_air_spawnpos select 0) + 500) - random 1000),(((_air_spawnpos select 1) + 500) - random 1000),0];
+	_air_spawnpos = [(((_air_spawnpos select 0) + 500) - random 1000),(((_air_spawnpos select 1) + 500) - random 1000),120];
 
 	_newvehicle = createVehicle [_plane_type, _air_spawnpos, [], 0, "FLY"];
 	_newvehicle flyInHeight (120 + (random 180));
