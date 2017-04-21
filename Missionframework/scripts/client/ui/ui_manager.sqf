@@ -4,7 +4,7 @@ private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sec
 
 _overlayshown = false;
 _sectorcontrols = [201,202,203,244,205];
-_resourcescontrols = [101,102,103,104,105,106,135,758001,758002,758003,758004,758005,758006,758007,758008,758009,758010,758011,758012];
+_resourcescontrols = [101,102,103,104,105,106,107,108,135,758001,758002,758003,758004,758005,758006,758007,758008,758009,758010,758011,758012,758020,758021,758022,758023];
 _active_sectors_hint = false;
 _first_iteration = true;
 _distfob = 100;
@@ -89,12 +89,14 @@ while { true } do {
 			
 			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1", (floor KP_liberation_supplies)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor KP_liberation_ammo)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1", (floor KP_liberation_fuel)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format [ "%1/%2", unitcap,([] call F_localCap) ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format [ "%1%2", round(combat_readiness),"%" ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format [ "%1", round(resources_intel) ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format ["%1/%2", unitcap,([] call F_localCap)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format ["%1", round(resources_intel)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (107)) ctrlSetText format ["---"];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (108)) ctrlSetText format ["---"];
 
 				_color_readiness = [0.8,0.8,0.8,1];
 				if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
