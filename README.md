@@ -54,7 +54,6 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
-		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan

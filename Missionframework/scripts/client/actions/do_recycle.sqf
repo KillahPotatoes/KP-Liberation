@@ -29,9 +29,9 @@ if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 	_price_f = round ((_objectinfo select 3) * GRLIB_recycling_percentage);
 	
 	_nearfob = [] call F_getNearestFob;
-	_recycle_building = [_nearfob nearobjects GRLIB_fob_range, {(typeOf _x) == KP_liberation_recycle_building}] call BIS_fnc_conditionalSelect;
+	_recycle_building = [KP_liberation_fob_resources, {((_x select 0) distance _nearfob) < 100}] call BIS_fnc_conditionalSelect;
 
-	if ((count _recycle_building) == 0) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
+	if (!((_recycle_building select 0) select 5)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 
 	_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 

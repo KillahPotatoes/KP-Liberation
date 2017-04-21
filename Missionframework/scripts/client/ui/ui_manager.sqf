@@ -95,8 +95,8 @@ while { true } do {
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format ["%1/%2", unitcap,([] call F_localCap)];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format ["%1", round(resources_intel)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (107)) ctrlSetText format ["---"];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (108)) ctrlSetText format ["---"];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (107)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (108)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
 
 				_color_readiness = [0.8,0.8,0.8,1];
 				if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
