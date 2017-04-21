@@ -184,8 +184,8 @@ buildings = [
 ];
 
 support_vehicles = [
-	[Arsenal_typename,10,0,0],
-	[Respawn_truck_typename,20,0,80],
+	[Arsenal_typename,100,0,0],
+	[Respawn_truck_typename,200,0,80],
 	[FOB_box_typename,200,400,0],
 	[FOB_truck_typename,200,400,100],
 	[KP_liberation_small_storage_building,0,0,0],
