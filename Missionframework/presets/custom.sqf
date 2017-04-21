@@ -9,7 +9,7 @@ FOB_truck_typename = "B_Truck_01_box_F";				// Default "B_Truck_01_box_F";
 Arsenal_typename = "B_supplyCrate_F";					// Default "B_supplyCrate_F";
 Respawn_truck_typename = "B_Truck_01_medical_F";			// Default "B_Truck_01_medical_F";
 huron_typename = "B_Heli_Transport_03_unarmed_F";					// Default "B_Heli_Transport_03_unarmed_F";
-opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config down below) otherwise things will break
+opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config) otherwise things will break
 crewman_classname = "B_crew_F";				// Default "B_crew_F";
 pilot_classname = "B_Helipilot_F";					// Default "B_Helipilot_F";
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; // Default "B_Heli_Light_01_F" // classname of little birds that spawn on the lhd or chimera base
@@ -57,10 +57,12 @@ light_vehicles = [
 	["B_MRAP_01_F",100,0,50],
 	["I_MRAP_03_F",100,0,50],
 	["B_T_LSV_01_unarmed_F",100,0,50],
+	["BWA3_Eagle_Fleck",100,0,50],
 	["rhsusf_m1025_w",100,0,50],
 	["B_MRAP_01_hmg_F",100,40,50],
 	["I_MRAP_03_hmg_F",100,40,50],
 	["B_T_LSV_01_armed_F",100,40,50],
+	["BWA3_Eagle_FLW100_Fleck",100,40,50],
 	["rhsusf_m1025_w_m2",100,40,50],
 	["B_MRAP_01_gmg_F",100,60,50],
 	["I_MRAP_03_gmg_F",100,60,50],
