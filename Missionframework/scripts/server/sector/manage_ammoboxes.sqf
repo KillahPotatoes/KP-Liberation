@@ -32,12 +32,7 @@ if ( !( _sector in GRLIB_military_sectors_already_activated )) then {
 	_crates_amount = ceil (((0.5 * GRLIB_sector_military_value) + (random (0.5 * GRLIB_sector_military_value ))) * GRLIB_resources_multiplier);
 	if ( _crates_amount > 6 ) then { _crates_amount = 6 };
 
-	for [ {_i=0}, {_i < (_crates_amount + 1) }, {_i=_i+1} ] do {
-
-		_spawnclass = KP_liberation_ammo_crate;
-		if ( _i == 0 ) then {
-			_spawnclass = opfor_ammobox_transport;
-		};
+	for [ {_i=0}, {_i < _crates_amount}, {_i=_i+1} ] do {
 
 		_spawnpos = zeropos;
 		while { _spawnpos distance zeropos < 1000 } do {
@@ -45,7 +40,7 @@ if ( !( _sector in GRLIB_military_sectors_already_activated )) then {
 			if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
 		};
 
-		_newbox = _spawnclass createVehicle _spawnpos;
+		_newbox = KP_liberation_ammo_crate createVehicle _spawnpos;
 		_newbox setpos _spawnpos;
 		_newbox setdir (random 360);
 		clearWeaponCargoGlobal _newbox;
@@ -55,10 +50,6 @@ if ( !( _sector in GRLIB_military_sectors_already_activated )) then {
 		_newbox addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
 		
 		_newbox setVariable ["KP_liberation_crate_value", 100, true];
-
-		if ( _i != 0 ) then {
-			[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
-		};
 	};
 
 	_nearbuildings = [ nearestObjects [ markerpos _sector , _compatible_classnames, _intel_range ], { alive _x } ] call BIS_fnc_conditionalSelect;

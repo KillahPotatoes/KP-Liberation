@@ -15,6 +15,14 @@ KP_liberation_medical_vehicles = [
 	"RHS_UH60M_MEV2"
 ];
 
+// Classnames of ACE 3 crates (which have to be in the unit preset as well)
+KP_liberation_ace_crates = [
+	"ACE_Box_82mm_Mo_HE",
+	"ACE_Box_82mm_Mo_Smoke",
+	"ACE_Box_82mm_Mo_Illum",
+	"ACE_medicalSupplyCrate_advanced"
+];
+
 
 // Which units preset should be used?
 // 0 = default (edit the custom.sqf in the presets folder to change things)
