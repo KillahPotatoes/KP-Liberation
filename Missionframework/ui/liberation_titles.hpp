@@ -143,6 +143,7 @@ class RscTitles
 		controls[]= { BGPicture,LabelManpower,LabelAmmo,LabelFuel,LabelCap,PictureManpowerShadow,PictureAmmoShadow, BGPictureActiveSectors,
 		PictureFuelShadow,PictureCapShadow,PictureManpower,PictureAmmo,PictureFuel,PictureCap,PictureCombatReadinessShadow,PictureCombatReadiness,
 		PictureIntelShadow, PictureIntel, LabelIntel, PictureHeliShadow, PictureHeli, LabelHeli, PicturePlaneShadow, PicturePlane, LabelPlane,
+		PictureFOBShadow, PictureFOB, LabelFOB,
 		BGPictureSector,CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint, LabelCombatReadiness, CentralShadow, CentralLabel, ActiveSectors,
 		AlertBGPicture, AlertLabel, AlertTimer };
 		class BGPicture {
@@ -156,7 +157,7 @@ class RscTitles
 			x = 0.95 * safezoneW + safezoneX;
 			w = 0.075 * safezoneW;
 			y = 0.395 * safezoneH + safezoneY;
-			h = 0.205 * safezoneH;
+			h = 0.230 * safezoneH;
 			text = "res\gradient.paa";
 		};
 		class BGPictureSector : BGPicture {
@@ -210,139 +211,156 @@ class RscTitles
 		};
 		class PictureManpower : GenericPicture69 {
 			idc = 758001;
-			y = (0.4 + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
 			text = "res\ui_manpo.paa";
 		};
 		class PictureAmmo : GenericPicture69 {
 			idc = 758002;
-			y = (0.4 + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
 			text = "res\ui_ammo.paa";
 		};
 		class PictureFuel : GenericPicture69 {
 			idc = 758003;
-			y = (0.4 + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
 			text = "res\ui_fuel.paa";
 		};
 		class PictureCap : GenericPicture69 {
 			idc = 758004;
-			y = (0.4 + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
 			text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
 		};
 		class PictureCombatReadiness : GenericPicture69 {
 			idc = 135;
-			y = (0.4 + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
 			text = "\A3\ui_f\data\map\markers\handdrawn\warning_CA.paa";
 		};
 		class PictureIntel : GenericPicture69 {
 			idc = 758005;
 			colorText[] = {0,0.45,0.95,1};
-			y = (0.4 + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 8 ) ) * safezoneH + safezoneY;
 			text = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 		};
 		class PictureManpowerShadow : PictureManpower {
 			idc = 758006;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureAmmoShadow : PictureAmmo {
 			idc = 758007;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureFuelShadow : PictureFuel {
 			idc = 758008;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureCapShadow : PictureCap {
 			idc = 758009;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureCombatReadinessShadow : PictureCombatReadiness {
 			idc = 758010;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureIntelShadow : PictureIntel {
 			idc = 758011;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 8 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PictureHeli : GenericPicture69 {
 			idc = 758020;
-			y = (0.4 + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
 			text = "\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa";
 		};
 		class PictureHeliShadow : PictureHeli {
 			idc = 758021;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class PicturePlane : GenericPicture69 {
 			idc = 758022;
-			y = (0.4 + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
+			y = (0.4 + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
 			text = "\A3\Air_F_EPC\Plane_CAS_01\Data\UI\Map_Plane_CAS_01_CA.paa";
 		};
 		class PicturePlaneShadow : PictureHeli {
-			idc = 758022;
-			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
+			idc = 758023;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
+			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
+			colorText[] = {0,0,0,0.7};
+		};
+		class PictureFOB : GenericPicture69 {
+			idc = 758024;
+			y = (0.4 + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
+			text = "\A3\ui_f\data\map\markers\handdrawn\flag_CA.paa";
+		};
+		class PictureFOBShadow : PictureHeli {
+			idc = 758025;
+			y = (0.4 + SHADOW_Y + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
 			x = (0.985 + SHADOW_X) * safezoneW + safezoneX;
 			colorText[] = {0,0,0,0.7};
 		};
 		class LabelManpower : GenericLabel69 {
 			idc = 101;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
 			colorText[] = {0, 0.75, 0, 1};
 		};
 		class LabelAmmo : GenericLabel69 {
 			idc = 102;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 1 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.75, 0, 0, 1};
 		};
 		class LabelFuel : GenericLabel69 {
 			idc = 103;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 2 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.75, 0.75, 0, 1};
 		};
 		class LabelCap : GenericLabel69 {
 			idc = 104;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 3 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.8, 0.8, 0.8, 1};
 		};
 		class LabelCombatReadiness : GenericLabel69 {
 			idc = 105;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.8, 0.8, 0.8, 1};
 		};
 		class LabelIntel : GenericLabel69 {
 			idc = 106;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 7 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 8 ) ) * safezoneH + safezoneY;
 			colorText[] = {0, 0.45, 0.95, 1};
 		};
 		class LabelHeli : GenericLabel69 {
 			idc = 107;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 4 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.8, 0.8, 0.8, 1};
 		};
 		class LabelPlane : GenericLabel69 {
 			idc = 108;
 			text = "";
-			y = (0.39 + ( ICONE_SPACY * 5 ) ) * safezoneH + safezoneY;
+			y = (0.39 + ( ICONE_SPACY * 6 ) ) * safezoneH + safezoneY;
+			colorText[] = {0.8, 0.8, 0.8, 1};
+		};
+		class LabelFOB : GenericLabel69 {
+			idc = 109;
+			text = "";
+			y = (0.39 + ( ICONE_SPACY * 0 ) ) * safezoneH + safezoneY;
 			colorText[] = {0.8, 0.8, 0.8, 1};
 		};
 		class CaptureFrameStandard {

@@ -1,8 +1,11 @@
 waitUntil { !isNil "save_is_loaded" };
 
-private ["_local_fob_resources", "_local_heli_slots", "_local_plane_slots", "_fob_buildings", "_heliSlots", "_planeSlots", "_hasAirBuilding", "_hasRecBuilding", "_storage_areas", "_supplyValue", "_ammoValue", "_fuelValue"];
+private ["_local_fob_resources", "_local_supplies_global", "_local_ammo_global", "_local_fuel_global", "_local_heli_slots", "_local_plane_slots", "_fob_buildings", "_heliSlots", "_planeSlots", "_hasAirBuilding", "_hasRecBuilding", "_storage_areas", "_supplyValue", "_ammoValue", "_fuelValue"];
 
 KP_liberation_fob_resources = [];
+KP_liberation_supplies_global = 0;
+KP_liberation_ammo_global = 0;
+KP_liberation_fuel_global = 0;
 
 please_recalculate = true;
 
@@ -11,6 +14,9 @@ while { true } do {
 	please_recalculate = false;
 	
 	_local_fob_resources = [];
+	_local_supplies_global = 0;
+	_local_ammo_global = 0;
+	_local_fuel_global = 0;
 	_local_heli_slots = 0;
 	_local_plane_slots = 0;
 	
@@ -40,11 +46,17 @@ while { true } do {
 		} forEach _storage_areas;
 		
 		_local_fob_resources pushBack [_x, _supplyValue, _ammoValue, _fuelValue, _hasAirBuilding, _hasRecBuilding];
+		_local_supplies_global = _local_supplies_global + _supplyValue;
+		_local_ammo_global = _local_ammo_global + _ammoValue;
+		_local_fuel_global = _local_fuel_global + _fuelValue;
 		_local_heli_slots = _local_heli_slots + _heliSlots;
 		_local_plane_slots = _local_plane_slots + _planeSlots;
 	} forEach GRLIB_all_fobs;	
 	
 	KP_liberation_fob_resources = _local_fob_resources;
+	KP_liberation_supplies_global = _local_supplies_global;
+	KP_liberation_ammo_global = _local_ammo_global;
+	KP_liberation_fuel_global = _local_fuel_global;
 	KP_liberation_heli_slots = _local_heli_slots;
 	KP_liberation_plane_slots = _local_plane_slots;
 

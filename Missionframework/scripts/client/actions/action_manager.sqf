@@ -1,5 +1,5 @@
 
-private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_idact_commander" ];
+private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy"];
 
 _idact_build = -1;
 _idact_arsenal = -1;
@@ -12,6 +12,7 @@ _idact_repackage = -1;
 _idact_halo = -1;
 _idact_secondary = -1;
 _idact_zeus = -1;
+_idact_resources = -1;
 _distfob = 100;
 _distarsenal = 5;
 _distbuildfob = 10;
@@ -19,6 +20,7 @@ _distspawn = 10;
 _distredeploy = 20;
 
 GRLIB_removefobboxes = false;
+KP_liberation_resources_global = false;
 
 waitUntil { !isNil "build_confirmed" };
 waitUntil { !isNil "one_synchro_done" };
@@ -161,6 +163,17 @@ while { true } do {
 		} else {
 			player removeAction _idact_zeus;
 			_idact_zeus = -1;
+		};
+	};
+
+	if ( _fobdistance < _distfob && alive player && vehicle player == player) then {
+		if ( _idact_resources == -1 ) then {
+			_idact_resources = player addAction ["<t color='#FFFF00'>" + localize "STR_RESOURCE_GLOBAL_ACTION" + "</t>",{KP_liberation_resources_global = !KP_liberation_resources_global},"",-995,false,true,"","build_confirmed == 0"];
+		};
+	} else {
+		if ( _idact_resources != -1 ) then {
+			player removeAction _idact_resources;
+			_idact_resources = -1;
 		};
 	};
 

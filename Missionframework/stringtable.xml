@@ -3319,5 +3319,13 @@
 						<German>-- ZEUS NEU ZUWEISEN</German>
 						<Italian>-- RIASSEGNA ZEUS</Italian>
 				</Key>
+				<Key ID="STR_RESOURCE_GLOBAL">
+						<Original>GLOBAL</Original>
+						<German>GESAMT</German>
+				</Key>
+				<Key ID="STR_RESOURCE_GLOBAL_ACTION">
+						<Original>-- Switch resource display</Original>
+						<German>-- Ressourcenanzeige wechseln</German>
+				</Key>
 		</Package>
 </Project>
