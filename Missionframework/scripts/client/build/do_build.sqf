@@ -275,7 +275,7 @@ while { true } do {
 				_vehicle allowDamage false;
 				_vehicle setdir _vehdir;
 				_vehicle setpos _truepos;
-				if ( !(_classname == "ACE_Box_82mm_Mo_HE" || _classname == "ACE_Box_82mm_Mo_Smoke" || _classname == "ACE_Box_82mm_Mo_Illum") ) then {
+				if ( !(_classname == "ACE_Box_82mm_Mo_HE" || _classname == "ACE_Box_82mm_Mo_Smoke" || _classname == "ACE_Box_82mm_Mo_Illum" || _classname == "ACE_medicalSupplyCrate_advanced") ) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
 					clearItemCargoGlobal _vehicle;

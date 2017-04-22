@@ -179,6 +179,7 @@ class Missions
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
 * Fixed non vanilla paratroopers don't have a parachute
 * Fixed enemy jets sometimes spawn on the ground instead flying
+* Fixed empty ACE medical crate was empty and couldn't be recycled
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
