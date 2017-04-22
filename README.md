@@ -178,7 +178,7 @@ class Missions
 * Fixed missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
 * Fixed non vanilla paratroopers don't have a parachute
-* Fixed enemy jets spawn on the ground instead flying sometimes
+* Fixed enemy jets sometimes spawn on the ground instead flying
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
