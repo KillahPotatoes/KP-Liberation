@@ -1033,12 +1033,6 @@
 						<Russian>== ОПЦИИ МИССИИ ==</Russian>
 						<Italian>== OPZIONI MISSIONE ==</Italian>
 				</Key>
-				<Key ID="STR_PARAMS_REVIVEOPTIONS">
-						<Original>== REVIVE OPTIONS (Enable it, if you play without ACE) ==</Original>
-						<German>== Wiederbelebungseinstellungen (Aktivieren, wenn kein ACE genutzt) ==</German>
-						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
-						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
-				</Key>
 				<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
 						<Original>== GAMEPLAY OPTIONS ==</Original>
 						<German>== Spieleinstellungen ==</German>
@@ -3208,7 +3202,7 @@
 						<Italian>Arsenale Mobile</Italian>
 				</Key>
 
-				<!-- Added in v0.95 -->
+				<!-- Added or changed in v0.95 -->
 				<Key ID="STR_INDIV_FLAG">
 						<Original>Killah Potatoes flag</Original>
 						<German>Killah Potatoes Flagge</German>
@@ -3326,6 +3320,12 @@
 				<Key ID="STR_RESOURCE_GLOBAL_ACTION">
 						<Original>-- Switch resource display</Original>
 						<German>-- Ressourcenanzeige wechseln</German>
+				</Key>
+				<Key ID="STR_PARAMS_REVIVEOPTIONS">
+						<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
+						<German>== Wiederbelebungseinstellungen (Deaktivieren, wenn ACE genutzt) ==</German>
+						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
+						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
 				</Key>
 		</Package>
 </Project>
