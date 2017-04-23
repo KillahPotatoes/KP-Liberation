@@ -53,39 +53,22 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 			if ( buildtype != 8 ) then {
 				_classnamevar = (_x select 0);
 				_entrytext = getText (_cfg >> _classnamevar >> "displayName");
-				if ( _classnamevar == FOB_box_typename ) then {
-					_entrytext = localize "STR_FOBBOX";
+				
+				switch (_classnamevar) do {
+					case FOB_box_typename: {_entrytext = localize "STR_FOBBOX";};
+					case Arsenal_typename: {if (KP_liberation_mobilearsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
+					case Respawn_truck_typename: {if (KP_liberation_mobilerespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
+					case FOB_truck_typename: {_entrytext = localize "STR_FOBTRUCK";};
+					case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
+					case KP_liberation_small_storage_building: {_entrytext = localize "STR_SMALL_STORAGE";};
+					case KP_liberation_large_storage_building: {_entrytext = localize "STR_LARGE_STORAGE";};
+					case KP_liberation_recycle_building: {_entrytext = localize "STR_RECYCLE_BUILDING";};
+					case KP_liberation_air_vehicle_building: {_entrytext = localize "STR_HELI_BUILDING";};
+					case KP_liberation_heli_slot_building: {_entrytext = localize "STR_HELI_SLOT";};
+					case KP_liberation_plane_slot_building: {_entrytext = localize "STR_PLANE_SLOT";};
+					default {};
 				};
-				if ((_classnamevar == Arsenal_typename) && (KP_liberation_mobilearsenal)) then {
-					_entrytext = localize "STR_ARSENAL_BOX";
-				};
-				if ((_classnamevar == Respawn_truck_typename) && (KP_liberation_mobilerespawn)) then {
-					_entrytext = localize "STR_RESPAWN_TRUCK";
-				};
-				if ( _classnamevar == FOB_truck_typename ) then {
-					_entrytext = localize "STR_FOBTRUCK";
-				};
-				if ( _classnamevar == "Flag_White_F" ) then {
-					_entrytext = localize "STR_INDIV_FLAG";
-				};
-				if ( _classnamevar == KP_liberation_small_storage_building ) then {
-					_entrytext = localize "STR_SMALL_STORAGE";
-				};
-				if ( _classnamevar == KP_liberation_large_storage_building ) then {
-					_entrytext = localize "STR_LARGE_STORAGE";
-				};
-				if ( _classnamevar == KP_liberation_recycle_building ) then {
-					_entrytext = localize "STR_RECYCLE_BUILDING";
-				};
-				if ( _classnamevar == KP_liberation_air_vehicle_building ) then {
-					_entrytext = localize "STR_HELI_BUILDING";
-				};
-				if ( _classnamevar == KP_liberation_heli_slot_building ) then {
-					_entrytext = localize "STR_HELI_SLOT";
-				};
-				if ( _classnamevar == KP_liberation_plane_slot_building ) then {
-					_entrytext = localize "STR_PLANE_SLOT";
-				};
+
 				((findDisplay 5501) displayCtrl (110)) lnbAddRow [ _entrytext, format [ "%1" ,_x select 1], format [ "%1" ,_x select 2], format [ "%1" ,_x select 3]];
 
 				_icon = getText ( _cfg >> (_x select 0) >> "icon");
@@ -109,19 +92,6 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 				((_x select 3 > 0) && ((_x select 3) > KP_liberation_fuel))
 			) then {
 				_affordable = false;
-			} else {
-				if (((_x select 0) in KP_liberation_friendly_air_classnames) &&	!((_x select 0) in uavs)) then {
-					if (!(KP_liberation_air_vehicle_building_near) ||
-						(((_x select 0) isKindOf "Helicopter") && (KP_liberation_heli_count >= KP_liberation_heli_slots)) ||
-						(((_x select 0) isKindOf "Plane") && (KP_liberation_plane_count >= KP_liberation_plane_slots))
-					) then {
-						_affordable = false;
-					};
-				} else {
-					if ((((_x select 0) in KP_liberation_air_slots) && !(KP_liberation_air_vehicle_building_near))) then {
-						_affordable = false;
-					};
-				};
 			};
 
 			if ( _affordable ) then {

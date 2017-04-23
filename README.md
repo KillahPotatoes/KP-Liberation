@@ -31,17 +31,12 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 
 ## Public Servers
 
-### KP Liberation v0.94 by www.killahpotatoes.de
+### KP Liberation by www.killahpotatoes.de
 * IP: 213.133.110.170
 * Port: 2302
 * Needed Mods: None
 * Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
-
-### KP Liberation Taunus v0.94 by www.killahpotatoes.de
-* IP: 213.133.110.170
-* Port: 2332
-* Needed Mods: CUP Terrains - Core, CUP Terrains - Maps, X-Cam-Taunus (Version 1.1)
-* Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
+* Runs the latest stable or, if available, dev version
 
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
