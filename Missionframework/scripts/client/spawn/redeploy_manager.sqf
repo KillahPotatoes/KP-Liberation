@@ -205,7 +205,9 @@ while { true } do {
 	if (({_x in KP_liberation_allowed_items} count _playerItems) != count _playerItems) then {
 		_text = format ["[KP LIBERATION] [INFO] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 		_text remoteExec ["diag_log",2];
-		hint format [localize "STR_BLACKLISTED_ITEM_FOUND", (_playerItems - KP_liberation_allowed_items)];
+		_badItems = "";
+		{_badItems = _badItems + _x + "\n";} forEach (_playerItems - KP_liberation_allowed_items);
+		hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
 		removeAllWeapons player;
 		removeAllItems player;
 		removeAllAssignedItems player;

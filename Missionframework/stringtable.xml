@@ -3328,8 +3328,8 @@
 						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
 				</Key>
 				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
-						<Original>Following items are not allowed: %1</Original>
-						<German>Folgende Gegenstände sind nicht erlaubt: %1</German>
+						<Original>Following items are not allowed:\n%1</Original>
+						<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
 				</Key>
 		</Package>
 </Project>
