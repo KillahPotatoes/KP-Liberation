@@ -3239,7 +3239,7 @@
 						<Italian>Eliporto</Italian>
 				</Key>
 				<Key ID="STR_PLANE_SLOT">
-						<Original>Tent Plane Hangar</Original>
+						<Original>Tent Hangar</Original>
 						<German>Zelthangar</German>
 						<Spanish>Hangar de aviones</Spanish>
 						<Italian>Hangar Aereo</Italian>
@@ -3326,6 +3326,10 @@
 						<German>== Wiederbelebungseinstellungen (Deaktivieren, wenn ACE genutzt) ==</German>
 						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
 						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
+				</Key>
+				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
+						<Original>Following items are not allowed: %1</Original>
+						<German>Folgende Gegenstände sind nicht erlaubt: %1</German>
 				</Key>
 		</Package>
 </Project>
