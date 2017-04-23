@@ -14,6 +14,8 @@ GRLIB_ui_notif = "";
 KP_liberation_supplies = 0;
 KP_liberation_ammo = 0;
 KP_liberation_fuel = 0;
+KP_liberation_air_vehicle_building_near = false;
+KP_liberation_recycle_building_near = false;
 
 _uiticks = 0;
 
@@ -62,12 +64,16 @@ while { true } do {
 			KP_liberation_supplies = ((_actual_fob select 0) select 1);
 			KP_liberation_ammo = ((_actual_fob select 0) select 2);
 			KP_liberation_fuel = ((_actual_fob select 0) select 3);	
-		};	
+		};
+		KP_liberation_air_vehicle_building_near = ((_actual_fob select 0) select 4);
+		KP_liberation_recycle_building_near = ((_actual_fob select 0) select 5);
 	} else {
 		_resources = false;
 		KP_liberation_supplies = 0;
 		KP_liberation_ammo = 0;
 		KP_liberation_fuel = 0;
+		KP_liberation_air_vehicle_building_near = false;
+		KP_liberation_recycle_building_near = false;
 	};
 	
 	if ( _overlayshown) then {

@@ -259,7 +259,9 @@ class liberation_build {
 	};
 	class LabelCap : LabelResource{
 		idc = 134;
-		y = (0.76 * safezoneH + safezoneY);
+		type = CT_STRUCTURED_TEXT;
+		y = (0.78 * safezoneH + safezoneY);
+		size = 0.02 * safezoneH;
 		colorText[] = {0.8, 0.8, 0.8, 1};
 	};
 	class PageLabel : StdText{
