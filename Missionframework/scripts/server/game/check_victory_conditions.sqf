@@ -37,7 +37,7 @@ if ( count _blufor_bigtowns == count sectors_bigtown ) then {
 	publicstats pushback stats_fobs_lost;
 	publicstats pushback (round stats_readiness_earned);
 
-	[ [ publicstats ] , "remote_call_endgame" ] call BIS_fnc_MP;
+	[publicstats] remoteExec ["remote_call_endgame"];
 
 	sleep 20;
 

@@ -36,7 +36,7 @@ if ( (_unit isKindOf "Man") && ( alive _unit ) && (side group _unit == GRLIB_sid
 			_unit enableAI "ANIM";
 			_unit enableAI "MOVE";
 			sleep 1;
-			[ [ _unit ], "remote_call_prisonner", _unit ] call bis_fnc_mp;
+			[_unit] remoteExec ["remote_call_prisonner", _unit];
 		};
 	};
 };

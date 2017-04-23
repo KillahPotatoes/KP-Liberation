@@ -11,7 +11,7 @@ private _convoy_destinations = [];
 { _convoy_destinations pushback (getMarkerPos _x); } foreach _convoy_destinations_markers;
 
 private _spawnpos = _convoy_destinations select 0;
-[ [ 4, _spawnpos ] , "remote_call_intel" ] call BIS_fnc_MP;
+[4, _spawnpos] remoteExec ["remote_call_intel"];
 
 private _scout_vehicle = [ [ _spawnpos, 30, 0 ] call BIS_fnc_relPos, opfor_mrap, true, false, false ] call F_libSpawnVehicle;
 private _escort_vehicle = [ [ _spawnpos, 10, 0 ] call BIS_fnc_relPos, opfor_vehicles_low_intensity call BIS_fnc_selectRandom, true, false, false ] call F_libSpawnVehicle;
@@ -157,7 +157,7 @@ deleteMarker _convoy_marker;
 
 combat_readiness = round (combat_readiness * 0.85);
 stats_secondary_objectives = stats_secondary_objectives + 1;
-[ [ 5 ] , "remote_call_intel" ] call BIS_fnc_MP;
+[5] remoteExec ["remote_call_intel"];
 GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";
 sleep 1;
 trigger_server_save = true;

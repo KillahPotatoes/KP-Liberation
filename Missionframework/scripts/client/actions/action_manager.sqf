@@ -158,7 +158,7 @@ while { true } do {
 	if (!isNil("commandant")) then {
 		if ((player == commandant) && (isNull(getAssignedCuratorLogic commandant))) then {
 			if ( _idact_zeus == -1 ) then {
-				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[[],"zeus_remote_call"] call BIS_fnc_MP;},"",-994,false,true,"","build_confirmed == 0"];
+				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[] remoteExec ["zeus_remote_call",2];},"",-994,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			player removeAction _idact_zeus;

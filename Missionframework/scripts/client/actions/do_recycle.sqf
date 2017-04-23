@@ -53,6 +53,6 @@ if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 	if (_spaceSum < _crateSum) then {
 		hint localize "STR_CANCEL_ERROR";
 	} else {
-		[[_vehtorecycle, _price_s, _price_a, _price_f, _storage_areas] , "recycle_remote_call" ] call BIS_fnc_MP;
+		[_vehtorecycle, _price_s, _price_a, _price_f, _storage_areas] remoteExec ["recycle_remote_call",2];
 	};
 };

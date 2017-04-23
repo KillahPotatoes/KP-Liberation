@@ -20,7 +20,7 @@ while { GRLIB_endgame == 0 } do {
 				if ( isNull _hc ) then {
 					[ _nextsector ] spawn manage_one_sector;
 				} else {
-					[ [ _nextsector ] , "manage_one_sector", _hc ] call BIS_fnc_MP;
+					[_nextsector] remoteExec ["manage_one_sector", _hc];
 				};
 
 				if ( _nextsector in sectors_capture ) then {
