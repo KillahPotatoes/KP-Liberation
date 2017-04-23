@@ -8,9 +8,15 @@
 
 [Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
 
+[Discord](https://discord.gg/bpPUU48)
+
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
+
+If you like the work and think it's worth a small donation, feel free to use the following link:
+
+[Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
 The area has fallen to the OPFOR, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
@@ -25,17 +31,12 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 
 ## Public Servers
 
-### KP Liberation v0.94 by www.killahpotatoes.de
+### KP Liberation by www.killahpotatoes.de
 * IP: 213.133.110.170
 * Port: 2302
 * Needed Mods: None
 * Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
-
-### KP Liberation Taunus v0.94 by www.killahpotatoes.de
-* IP: 213.133.110.170
-* Port: 2332
-* Needed Mods: CUP Terrains - Core, CUP Terrains - Maps, X-Cam-Taunus (Version 1.1)
-* Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
+* Runs the latest stable or, if available, dev version
 
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
@@ -48,7 +49,6 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
-		* [JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
 	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
@@ -141,9 +141,6 @@ class Missions
 };
 ```
 
-## Join us on Discord
-[Click to join the Killah Potatoes Discord Server](https://discord.gg/bpPUU48)
-
 ## Media
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
@@ -151,9 +148,9 @@ class Missions
 
 ### 0.94
 * Added Tanoa missionfile and vanilla apex preset
-* Added custom made Chimera Base for Tanoa. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
+* Added custom made Chimera Base for Tanoa. Thanks to [jus61](https://github.com/jus61) for building it
 * Added X-Cam-Taunus missionfile
-* Added custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](http://steamcommunity.com/id/jus61) for building it
+* Added custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](https://github.com/jus61) for building it
 * Added custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
 * Added arsenal whitelist preset system (change via kp_liberation_config.sqf)
 	* Use blacklist from unit preset (default)
