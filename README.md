@@ -158,7 +158,7 @@ class Missions
 * Added action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
 * Added paradrop of a resource package when first FOB is built
 * Added action to switch between displaying global or local FOB resources
-* Added air vehicle slot system (need air control building to build helipads, hangars and air vehicles)
+* Added air vehicle slot system (need a Flight Control to build helipads, hangars and air vehicles)
 * Removed resource caps system
 * Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed Passive Income (due to new resource system)

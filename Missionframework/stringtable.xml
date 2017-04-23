@@ -3227,8 +3227,8 @@
 						<Italian>Edificio smaltimento rifiuti</Italian>
 				</Key>
 				<Key ID="STR_HELI_BUILDING">
-						<Original>Air Traffic Control</Original>
-						<German>Luftraumüberwachungsstation</German>
+						<Original>Flight Control</Original>
+						<German>Flugkontrolle</German>
 						<Spanish>Torre de Control Aéreo</Spanish>
 						<Italian>Torre di controllo Aerea</Italian>
 				</Key>
