@@ -154,6 +154,7 @@ class Missions
 * Added paradrop of a resource package when first FOB is built
 * Added action to switch between displaying global or local FOB resources
 * Added air vehicle slot system (need a Flight Control to build helipads, hangars and air vehicles)
+* Added blacklist / whitelist filtering for saved loadouts
 * Removed resource caps system
 * Removed old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed Passive Income (due to new resource system)
