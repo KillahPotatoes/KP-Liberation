@@ -1,9 +1,23 @@
-params [ "_targetsector" ];
+/*
+    Original author: GreuhZbug
+
+    Description:
+    Sends paratroopers to _targetsector
+
+    Parameter(s):
+    0: TARGETSECTOR  - destination marker name
+    1: PARADROPALTITUDE - (optional) travel altitude unitl paratroopers will be ejected from transport
+    2: PATROLALTITUDE - (optional) patrol altitude after ejection of paratroopers
+*/
+params [ "_targetsector", [ "_paradropAltitude", 180 ], [ "_patrolAltitude", 100 ] ];
 private _targetpos = getMarkerPos _targetsector;
 private _spawnsector = ( [ sectors_airspawn , [ _targetpos ] , { (markerpos _x) distance _input0 }, "ASCEND"] call BIS_fnc_sortBy ) select 0;
 
 private _chopper_type = opfor_choppers call BIS_fnc_selectRandom;
 private _newvehicle = createVehicle [ _chopper_type, markerpos _spawnsector, [], 0, "FLY"];
+
+private _ejectDistance = 400;
+
 createVehicleCrew _newvehicle;
 sleep 0.1;
 
@@ -26,7 +40,7 @@ sleep 0.2;
 {_x doFollow leader _para_group} foreach units _para_group;
 sleep 0.2;
 
-_newvehicle flyInHeight 100;
+_newvehicle flyInHeight _paradropAltitude;
 
 _waypoint = _pilot_group addWaypoint [ _targetpos, 25];
 _waypoint setWaypointType "MOVE";
@@ -62,21 +76,24 @@ _waypoint setWaypointType "MOVE";
 _waypoint setWaypointCompletionRadius 50;
 _pilot_group setCurrentWaypoint [ _para_group, 1];
 
-_newvehicle flyInHeight 100;
+_newvehicle flyInHeight _paradropAltitude;
 
-waitUntil { sleep 1;
-	!(alive _newvehicle) || (damage _newvehicle > 0.2 ) || (_newvehicle distance _targetpos < 400 )
+// Prevent paratroopers not being ejected forever when _paradropAltitude too high.
+if( _paradropAltitude > 400 ) then {
+	_ejectDistance = _paradropAltitude + 100;
 };
 
-_newvehicle flyInHeight 100;
+// Wait until at destination or damaged.
+waitUntil { sleep 1;
+	!(alive _newvehicle) || (damage _newvehicle > 0.2 ) || ( (_newvehicle distance _targetpos) < _ejectDistance )
+};
 
-{
-	unassignVehicle _x;
-	moveout _x;
-	sleep 0.5;
-} foreach (units _para_group);
+_newvehicle flyInHeight _paradropAltitude;
 
-_newvehicle flyInHeight 100;
+// Eject paratroopers at destination
+[ _newvehicle ] call F_ejectParadrop;
+
+_newvehicle flyInHeight _patrolAltitude;
 
 sleep 0.2;
 while {(count (waypoints _pilot_group)) != 0} do {deleteWaypoint ((waypoints _pilot_group) select 0);};
@@ -86,7 +103,7 @@ sleep 0.2;
 {_x doFollow leader _para_group} foreach units _para_group;
 sleep 0.2;
 
-_newvehicle flyInHeight 100;
+_newvehicle flyInHeight _patrolAltitude;
 
 _waypoint = _pilot_group addWaypoint [ _targetpos, 200];
 _waypoint setWaypointBehaviour "COMBAT";

@@ -49,3 +49,4 @@ F_forceBluforCrew = compileFinal preprocessFileLineNumbers "scripts\shared\funct
 F_getCorrectedSectorRange = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getCorrectedSectorRange.sqf";
 F_getLocationName = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getLocationName.sqf";
 F_correctLaserBatteries = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_correctLaserBatteries.sqf";
+F_ejectParadrop = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_ejectParadrop.sqf";
