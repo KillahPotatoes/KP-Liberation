@@ -28,7 +28,7 @@ while {true} do {
 		_detected_vehicles =	[(getpos player) nearObjects veh_action_distance, {
 									(((typeof _x in _recycleable_classnames ) &&
 									((count crew _x) == 0 || (typeof _x) in uavs) &&
-									((locked _x == 0 || locked _x == 1))) || (typeof _x in _building_classnames) || (typeOf _x in KP_liberation_storage_buildings) || (typeOf _x in KP_liberation_upgrade_buildings) || ((typeOf _x) in KP_liberation_ace_crates)) &&
+									((locked _x == 0 || locked _x == 1))) || ((typeOf _x) in _building_classnames) || ((typeOf _x) in KP_liberation_storage_buildings) || ((typeOf _x) in KP_liberation_upgrade_buildings) || ((typeOf _x) in KP_liberation_ace_crates)) &&
 									(alive _x) &&
 									(count(attachedObjects _x) == 0) &&
 									(_x distance lhd > 1000) &&

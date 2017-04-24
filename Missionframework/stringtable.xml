@@ -507,7 +507,7 @@
 				<Key ID="STR_RECYCLING_YIELD">
 						<Original>Recycling this %1 will yield:</Original>
 						<French>Le recyclage de %1 rapportera :</French>
-						<German>Das Wiederverwerten wird dir %1 erstatten:</German>
+						<German>Die Wiederverwertung von %1 erbringt:</German>
 						<Spanish>Reciclando este %1 obtienes:</Spanish>
 						<Russian>Утилизируя %1 получим </Russian>
 						<Italian>Riciclando questo %1 otterrai:</Italian>
@@ -3222,7 +3222,7 @@
 						<Italian>Area deposito grande</Italian>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
-						<Original>Dismantling building</Original>
+						<Original>Salvage Depot</Original>
 						<German>Demontageeinrichtung</German>
 						<Italian>Edificio smaltimento rifiuti</Italian>
 				</Key>
@@ -3304,8 +3304,8 @@
 						<Italian>Non puoi riciclare oggetti statici</Italian>
 				</Key>
 				<Key ID="STR_NORECBUILDING_ERROR">
-						<Original>No recycle building in FOB area</Original>
-						<German>Keine Demontageeinrichtung im Bereich der FOB</German>
+						<Original>Can't recycle:\nNo Salvage Depot in FOB area</Original>
+						<German>Wiederverwerten nicht möglich:\nKeine Demontageeinrichtung im Bereich der FOB</German>
 						<Italian>Nessun edificio per il riciclaggio presente nell'area</Italian>
 				</Key>
 				<Key ID="STR_REASSIGN_ZEUS">

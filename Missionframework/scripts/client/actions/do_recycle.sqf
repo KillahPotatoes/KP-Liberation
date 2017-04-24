@@ -1,25 +1,36 @@
 params ["_vehtorecycle"];
-private ["_objectinfo", "_cfg", "_dialog", "_currentAmmo", "_allAmmo", "_suppMulti", "_ammoMulti", "_fuelMulti", "_disName", "_price_s", "_price_a", "_price_f", "_nearfob", "_recycle_building", "_storage_areas", "_supplyCrates", "_ammoCrates", "_fuelCrates", "_crateSum", "_spaceSum"];
+private ["_objectinfo", "_cfg", "_dialog", "_building_classnames", "_currentAmmo", "_allAmmo", "_suppMulti", "_ammoMulti", "_fuelMulti", "_disName", "_price_s", "_price_a", "_price_f", "_nearfob", "_recycle_building", "_storage_areas", "_supplyCrates", "_ammoCrates", "_fuelCrates", "_crateSum", "_spaceSum"];
 
 dorecycle = 0;
 
 _cfg = configFile >> "cfgVehicles";
 _dialog = createDialog "liberation_recycle";
 
-_currentAmmo = 0; 
-_allAmmo = 0;
-if (count (magazinesAmmo _vehtorecycle) > 0) then {
-	{ 
-		_currentAmmo = _currentAmmo + (_x select 1); 
-		_allAmmo = _allAmmo + (getNumber(configFile >> "CfgMagazines" >> (_x select 0) >> "count"));
-	} forEach (magazinesAmmo _vehtorecycle); 
-} else {
-	_allAmmo = 1;
-};
+_building_classnames = [];
+{
+	_building_classnames pushBack ( _x select 0 );
+} foreach (buildings);
 
-_suppMulti = (((_vehtorecycle getHitPointDamage "HitEngine") - 1) * -1) * (((_vehtorecycle getHitPointDamage "HitHull") - 1) * -1);
-_ammoMulti = _currentAmmo/_allAmmo;
-_fuelMulti = fuel _vehtorecycle;
+if (((typeOf _vehtorecycle) in _building_classnames) || ((typeOf _vehtorecycle) in KP_liberation_storage_buildings) || ((typeOf _vehtorecycle) in KP_liberation_upgrade_buildings) || ((typeOf _vehtorecycle) in KP_liberation_ace_crates)) then {
+	_suppMulti = 0.5;
+	_ammoMulti = 0.5;
+	_fuelMulti = 0.5;
+} else {
+	_currentAmmo = 0; 
+	_allAmmo = 0;
+	if (count (magazinesAmmo _vehtorecycle) > 0) then {
+		{ 
+			_currentAmmo = _currentAmmo + (_x select 1); 
+			_allAmmo = _allAmmo + (getNumber(configFile >> "CfgMagazines" >> (_x select 0) >> "count"));
+		} forEach (magazinesAmmo _vehtorecycle); 
+	} else {
+		_allAmmo = 1;
+	};
+
+	_suppMulti = (((_vehtorecycle getHitPointDamage "HitEngine") - 1) * -1) * (((_vehtorecycle getHitPointDamage "HitHull") - 1) * -1);
+	_ammoMulti = _currentAmmo/_allAmmo;
+	_fuelMulti = fuel _vehtorecycle;
+};
 
 if ((typeOf _vehtorecycle) in all_hostile_classnames) then {
 	_disName = getText (_cfg >> (typeOf _vehtorecycle) >> "displayName");
@@ -39,7 +50,7 @@ if ((typeOf _vehtorecycle) in all_hostile_classnames) then {
 		_price_f = round (150 * _fuelMulti);
 	};
 } else {
-	_objectinfo = ( [ (light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles + buildings ), { typeof _vehtorecycle == _x select 0 } ] call BIS_fnc_conditionalSelect ) select 0;
+	_objectinfo = ([(light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles + buildings), {(typeOf _vehtorecycle) == (_x select 0)}] call BIS_fnc_conditionalSelect) select 0;
 	_disName = getText (_cfg >> (_objectinfo select 0) >> "displayName");
 	_price_s = round ((_objectinfo select 1) * GRLIB_recycling_percentage * _suppMulti);
 	_price_a = round ((_objectinfo select 2) * GRLIB_recycling_percentage * _ammoMulti);
