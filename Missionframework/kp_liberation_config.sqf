@@ -80,7 +80,7 @@ GRLIB_capture_size = 175;
 // Range of Radio Tower scanning range
 GRLIB_radiotower_size = 2500;
 // Percentage of resources you get back from recycling
-GRLIB_recycling_percentage = 0.25;
+GRLIB_recycling_percentage = 0.5;
 // Time in seconds how long a captured sector is vulnerable to enemy troops
 GRLIB_vulnerability_timer = 1200;
 // Multiplier for defenders in buildings

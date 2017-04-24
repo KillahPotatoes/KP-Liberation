@@ -8,6 +8,8 @@ veh_action_distance = 10;
 	_recycleable_classnames pushBack ( _x select 0 );
 } foreach (light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles);
 
+_recycleable_classnames append all_hostile_classnames;
+
 _building_classnames = [];
 {
 	_building_classnames pushBack ( _x select 0 );
