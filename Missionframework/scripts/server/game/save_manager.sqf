@@ -166,7 +166,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_hascrew = _x select 3;
 			};
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPos _nextpos;
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 4) == 3) then {
 				_nextbuilding setVectorUp (_x select 4);
@@ -219,7 +219,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextdir = _x select 2;
 
 			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPos _nextpos;
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 6) == 3) then {
 				_nextbuilding setVectorUp (_x select 6);
@@ -366,7 +366,7 @@ while { true } do {
 								_grouparray = [];
 								{
 									if ( alive _x && (vehicle _x == _x ) ) then {
-										_grouparray pushback [ typeof _x, getPos _x, getDir _x ];
+										_grouparray pushback [ typeof _x, getPosATL _x, getDir _x ];
 									};
 								} foreach (units _nextgroup);
 
@@ -386,13 +386,13 @@ while { true } do {
 				_savedpos = _x getVariable [ "GRLIB_saved_pos", [] ];
 				_savedvec = _x getVariable ["KP_saved_vec", []];
 				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-					_x setVariable [ "GRLIB_saved_pos", getPos _x, false ];
+					_x setVariable [ "GRLIB_saved_pos", getPosATL _x, false ];
 					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-					_savedpos = getPos _x;
+					_savedpos = getPosATL _x;
 					_savedvec = vectorUpVisual _x;
 				};
 			} else {
-				_savedpos = getPos _x;
+				_savedpos = getPosATL _x;
 			};
 
 			private _nextclass = typeof _x;
@@ -413,9 +413,9 @@ while { true } do {
 			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 			_savedvec = _x getVariable ["KP_saved_vec", []];
 			if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-				_x setVariable ["GRLIB_saved_pos", getPos _x, false];
+				_x setVariable ["GRLIB_saved_pos", getPosATL _x, false];
 				_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-				_savedpos = getPos _x;
+				_savedpos = getPosATL _x;
 				_savedvec = vectorUpVisual _x;
 			};
 			
