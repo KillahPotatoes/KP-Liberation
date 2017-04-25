@@ -56,7 +56,7 @@ while { GRLIB_endgame == 0 } do {
 				
 				_newbox setVariable ["KP_liberation_crate_value", 100, true];
 
-				[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
+				[_newbox, 500] remoteExec ["F_setMass",_newbox];
 
 			};
 		};
@@ -83,7 +83,7 @@ while { GRLIB_endgame == 0 } do {
 				
 				_newbox setVariable ["KP_liberation_crate_value", 100, true];
 
-				[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
+				[_newbox, 500] remoteExec ["F_setMass",_newbox];
 
 			};
 		};
@@ -110,7 +110,7 @@ while { GRLIB_endgame == 0 } do {
 				
 				_newbox setVariable ["KP_liberation_crate_value", 100, true];
 
-				[ [_newbox, 500 ] , "F_setMass" ] call BIS_fnc_MP;
+				[_newbox, 500] remoteExec ["F_setMass",_newbox];
 
 			};
 		};

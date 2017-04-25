@@ -1,14 +1,30 @@
 unitcap = 0;
+KP_liberation_heli_count = 0;
+KP_liberation_plane_count = 0;
+
+private ["_local_unitcap","_local_heli_count","_local_plane_count"];
 
 while { true } do {
-	while { true } do {
-		_local_unitcap = 0;
-		{
-			if ( (side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance lhd) > 250 || (isPlayer _x)) ) then {
-				_local_unitcap = _local_unitcap + 1;
+	_local_unitcap = 0;
+	_local_heli_count = 0;
+	_local_plane_count = 0;
+	{
+		if ( (side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance lhd) > 250 || (isPlayer _x)) ) then {
+			_local_unitcap = _local_unitcap + 1;
+		};
+	} forEach allUnits;
+	{
+		if (((typeOf _x) in KP_liberation_friendly_air_classnames) && (alive _x) && !(_x getVariable ["KP_liberation_preplaced", false])) then {
+			if (_x isKindOf "Helicopter") then {
+				_local_heli_count = _local_heli_count + 1;
 			};
-		} foreach allUnits;
-		unitcap = _local_unitcap;
-		sleep 1.06;
-	};
+			if (_x isKindOf "Plane") then {
+				_local_plane_count = _local_plane_count + 1;
+			};
+		};
+	} forEach vehicles;
+	unitcap = _local_unitcap;
+	KP_liberation_heli_count = _local_heli_count;
+	KP_liberation_plane_count = _local_plane_count;
+	sleep 1;
 };

@@ -15,7 +15,7 @@ while { ( count units _grp != 0 ) && ( GRLIB_endgame == 0 ) } do {
 
 	private _objectivepos = ([getpos (leader _grp)] call F_getNearestBluforObjective) select 0;
 
-	[ [ _objectivepos ] , "remote_call_incoming" ] call BIS_fnc_MP;
+	[_objectivepos] remoteExec ["remote_call_incoming"];
 
 	private _startpos = getpos (leader _grp);
 

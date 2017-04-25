@@ -196,7 +196,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 	sleep 10;
 
 	if ( ( _sector in sectors_factory ) || (_sector in sectors_capture ) || (_sector in sectors_bigtown ) || (_sector in sectors_military ) ) then {
-		[ [ _sector ] , "reinforcements_remote_call" ] call BIS_fnc_MP;
+		[_sector] remoteExec ["reinforcements_remote_call"];
 	};
 
 	diag_log format [ "[KP LIBERATION] [INFO] Sector %2 checkpoint M at %1", time, _sector ];
@@ -210,7 +210,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 			if (isServer) then {
 				[ _sector ] spawn sector_liberated_remote_call;
 			} else {
-				[ [ _sector ] , "sector_liberated_remote_call" ] call BIS_fnc_MP;
+				[_sector] remoteExec ["sector_liberated_remote_call"];
 			};
 
 			_stopit = true;

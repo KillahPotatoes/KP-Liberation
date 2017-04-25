@@ -21,6 +21,7 @@ build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,stat
 KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];
 KP_liberation_crates = [KP_liberation_supply_crate,KP_liberation_ammo_crate,KP_liberation_fuel_crate];
 KP_liberation_upgrade_buildings = [KP_liberation_recycle_building,KP_liberation_air_vehicle_building,KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
+KP_liberation_air_slots = [KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
 militia_squad = [ militia_squad , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 militia_vehicles = [ militia_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 opfor_vehicles = [ opfor_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
@@ -43,7 +44,8 @@ all_resistance_troops = [] + militia_squad;
 all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers + opfor_troup_transports + opfor_vehicles_low_intensity);
 { land_vehicles_classnames pushback (_x select 0); } foreach (heavy_vehicles + light_vehicles);
 air_vehicles_classnames = [] + opfor_choppers;
-{ air_vehicles_classnames pushback (_x select 0); } foreach air_vehicles;
+KP_liberation_friendly_air_classnames = [];
+{air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
 ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
 markers_reset = [99999,99999,0];
 zeropos = [0,0,0];

@@ -17,6 +17,6 @@ if ( _create_fob_building ) then {
 trigger_server_save = true;
 
 sleep 3;
-[ [ _new_fob, 0 ] , "remote_call_fob" ] call BIS_fnc_MP;
+[_new_fob, 0] remoteExec ["remote_call_fob"];
 
 stats_fobs_built = stats_fobs_built + 1;

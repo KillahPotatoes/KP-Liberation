@@ -23,7 +23,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 		} foreach sectors_opfor;
 
 		_spawnplace = _potentialplaces call BIS_fnc_selectRandom;
-		[ [ markerPos _spawnplace, true ] , "build_fob_remote_call" ] call BIS_fnc_MP;
+		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
 
 	} else {
 		while { count GRLIB_all_fobs == 0 } do {
@@ -44,7 +44,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 				_fobbox setdir 215;
 			};
 
-			[ [_fobbox, 3000 ] , "F_setMass" ] call BIS_fnc_MP;
+			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
 
 			sleep 3;
 
@@ -84,7 +84,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 		clearBackpackCargoGlobal _crate;
 		_crate addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
 		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		[[_crate, 500], "F_setMass"] call BIS_fnc_MP;
+		[_crate, 500] remoteExec ["F_setMass",_crate];
 		[objNull, _crate] call BIS_fnc_curatorObjectEdited;
 		_crateArray pushBack _crate;
 	};

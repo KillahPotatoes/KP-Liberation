@@ -507,7 +507,7 @@
 				<Key ID="STR_RECYCLING_YIELD">
 						<Original>Recycling this %1 will yield:</Original>
 						<French>Le recyclage de %1 rapportera :</French>
-						<German>Das Wiederverwerten wird dir %1 erstatten:</German>
+						<German>Die Wiederverwertung von %1 erbringt:</German>
 						<Spanish>Reciclando este %1 obtienes:</Spanish>
 						<Russian>Утилизируя %1 получим </Russian>
 						<Italian>Riciclando questo %1 otterrai:</Italian>
@@ -1032,12 +1032,6 @@
 						<Spanish>== OPCIONES DE MISIÓN ==</Spanish>
 						<Russian>== ОПЦИИ МИССИИ ==</Russian>
 						<Italian>== OPZIONI MISSIONE ==</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_REVIVEOPTIONS">
-						<Original>== REVIVE OPTIONS (Enable it, if you play without ACE) ==</Original>
-						<German>== Wiederbelebungseinstellungen (Aktivieren, wenn kein ACE genutzt) ==</German>
-						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
-						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
 						<Original>== GAMEPLAY OPTIONS ==</Original>
@@ -3208,7 +3202,7 @@
 						<Italian>Arsenale Mobile</Italian>
 				</Key>
 
-				<!-- Added in v0.95 -->
+				<!-- Added or changed in v0.95 -->
 				<Key ID="STR_INDIV_FLAG">
 						<Original>Killah Potatoes flag</Original>
 						<German>Killah Potatoes Flagge</German>
@@ -3228,13 +3222,13 @@
 						<Italian>Area deposito grande</Italian>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
-						<Original>Dismantling building</Original>
+						<Original>Salvage Depot</Original>
 						<German>Demontageeinrichtung</German>
 						<Italian>Edificio smaltimento rifiuti</Italian>
 				</Key>
 				<Key ID="STR_HELI_BUILDING">
-						<Original>Air Traffic Control</Original>
-						<German>Luftraumüberwachungsstation</German>
+						<Original>Flight Control</Original>
+						<German>Flugkontrolle</German>
 						<Spanish>Torre de Control Aéreo</Spanish>
 						<Italian>Torre di controllo Aerea</Italian>
 				</Key>
@@ -3245,8 +3239,8 @@
 						<Italian>Eliporto</Italian>
 				</Key>
 				<Key ID="STR_PLANE_SLOT">
-						<Original>Tent Plane Hangar</Original>
-						<German>Hangarzelt</German>
+						<Original>Tent Hangar</Original>
+						<German>Zelthangar</German>
 						<Spanish>Hangar de aviones</Spanish>
 						<Italian>Hangar Aereo</Italian>
 				</Key>
@@ -3310,14 +3304,32 @@
 						<Italian>Non puoi riciclare oggetti statici</Italian>
 				</Key>
 				<Key ID="STR_NORECBUILDING_ERROR">
-						<Original>No recycle building in FOB area</Original>
-						<German>Keine Demontageeinrichtung im Bereich der FOB</German>
+						<Original>Can't recycle:\nNo Salvage Depot in FOB area</Original>
+						<German>Wiederverwerten nicht möglich:\nKeine Demontageeinrichtung im Bereich der FOB</German>
 						<Italian>Nessun edificio per il riciclaggio presente nell'area</Italian>
 				</Key>
 				<Key ID="STR_REASSIGN_ZEUS">
 						<Original>-- REASSIGN ZEUS</Original>
 						<German>-- ZEUS NEU ZUWEISEN</German>
 						<Italian>-- RIASSEGNA ZEUS</Italian>
+				</Key>
+				<Key ID="STR_RESOURCE_GLOBAL">
+						<Original>GLOBAL</Original>
+						<German>GESAMT</German>
+				</Key>
+				<Key ID="STR_RESOURCE_GLOBAL_ACTION">
+						<Original>-- Switch resource display</Original>
+						<German>-- Ressourcenanzeige wechseln</German>
+				</Key>
+				<Key ID="STR_PARAMS_REVIVEOPTIONS">
+						<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
+						<German>== Wiederbelebungseinstellungen (Deaktivieren, wenn ACE genutzt) ==</German>
+						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
+						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
+				</Key>
+				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
+						<Original>Following items are not allowed:\n%1</Original>
+						<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
 				</Key>
 		</Package>
 </Project>

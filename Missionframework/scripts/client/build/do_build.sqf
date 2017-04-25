@@ -38,7 +38,7 @@ while { true } do {
 		_nearfob = [] call F_getNearestFob;
 		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
 		
-		[[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas], "build_remote_call"] call BIS_fnc_MP;
+		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
 	};
 
 	if(buildtype == 1) then {
@@ -262,7 +262,7 @@ while { true } do {
 					hint localize "STR_CANCEL_ERROR";
 				} else {
 					deleteVehicle _vehicle;
-					[[_price_s, _price_a, _price_f, _storage_areas] , "cancel_build_remote_call"] call BIS_fnc_MP;
+					[_price_s, _price_a, _price_f, _storage_areas] remoteExec ["cancel_build_remote_call",2];
 				};
 			};
 
@@ -275,7 +275,7 @@ while { true } do {
 				_vehicle allowDamage false;
 				_vehicle setdir _vehdir;
 				_vehicle setpos _truepos;
-				if ( !(_classname == "ACE_Box_82mm_Mo_HE" || _classname == "ACE_Box_82mm_Mo_Smoke" || _classname == "ACE_Box_82mm_Mo_Illum") ) then {
+				if (!(_classname in KP_liberation_ace_crates)) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
 					clearItemCargoGlobal _vehicle;
@@ -294,20 +294,16 @@ while { true } do {
 					[ _vehicle ] call F_forceBluforCrew;
 				};
 
-				if ( _classname == FOB_box_typename ) then {
-					[ [_vehicle, 3000 ] , "F_setMass" ] call BIS_fnc_MP;
+				switch (_classname) do {
+					case FOB_box_typename: {[_vehicle, 3000] remoteExec ["F_setMass",_vehicle];};
+					case "Land_Medevac_house_V1_F";
+					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
+					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
+					default {};
 				};
 				
 				if (_classname in KP_liberation_medical_vehicles) then {
 					_vehicle setVariable ["ace_medical_medicClass", 1, true];
-				};
-				
-				if (_classname == "Land_Medevac_house_V1_F" || _classname == "Land_Medevac_HQ_V1_F") then {
-					_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];
-				};
-				
-				if (_classname == "Flag_White_F") then {
-					_vehicle setFlagTexture "res\kpflag.jpg";
 				};
 				
 				sleep 0.3;
@@ -342,7 +338,7 @@ while { true } do {
 
 			if(buildtype == 99) then {
 				_new_fob = getpos player;
-				[ [ _new_fob, false ] , "build_fob_remote_call" ] call BIS_fnc_MP;
+				[_new_fob, false] remoteExec ["build_fob_remote_call",2];
 				buildtype = 1;
 			};
 

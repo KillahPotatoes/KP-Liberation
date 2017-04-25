@@ -36,14 +36,14 @@ while { true } do {
 					_rearmed = true;
 					_rearm_ticker = _rearm_ticker + 1;
 					if ( _rearm_ticker >= _rearm_time ) then {
-						[ [ _veh ], "F_rearmVehicle" ] call bis_fnc_mp;
+						[_veh] remoteExec ["F_rearmVehicle",_veh];
 					};
 				};
 
 				if ( count ( (getpos _veh) nearEntities [ vehicle_refuel_sources , _resupply_dist] ) > 0 ) then {
 					if ( fuel _veh < ( 1 - _refuel_amount ) )  then {
 						_refueled = true;
-						[ [ _veh, (fuel _veh + _refuel_amount) ], "F_setFuel" ] call bis_fnc_mp;
+						[_veh, (fuel _veh + _refuel_amount)] remoteExec ["F_setFuel",_veh];
 					};
 				};
 			} else {

@@ -1,18 +1,21 @@
 disableSerialization;
 
-private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_first_iteration", "_distfob", "_nearfob", "_fobdistance", "_resources", "_notNearFOB"];
+private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_first_iteration", "_distfob", "_nearfob", "_fobdistance", "_resources", "_notNearFOB", "_resource_area"];
 
 _overlayshown = false;
 _sectorcontrols = [201,202,203,244,205];
-_resourcescontrols = [101,102,103,104,105,106,135,758001,758002,758003,758004,758005,758006,758007,758008,758009,758010,758011,758012];
+_resourcescontrols = [101,102,103,104,105,106,107,108,109,135,758001,758002,758003,758004,758005,758006,758007,758008,758009,758010,758011,758012,758020,758021,758022,758023,758024,758025];
 _active_sectors_hint = false;
 _first_iteration = true;
 _distfob = 100;
 _notNearFOB = false;
+_resource_area = "";
 GRLIB_ui_notif = "";
 KP_liberation_supplies = 0;
 KP_liberation_ammo = 0;
 KP_liberation_fuel = 0;
+KP_liberation_air_vehicle_building_near = false;
+KP_liberation_recycle_building_near = false;
 
 _uiticks = 0;
 
@@ -51,14 +54,26 @@ while { true } do {
 	
 	if (_fobdistance < _distfob) then {
 		_resources = true;
-		KP_liberation_supplies = ((_actual_fob select 0) select 1);
-		KP_liberation_ammo = ((_actual_fob select 0) select 2);
-		KP_liberation_fuel = ((_actual_fob select 0) select 3);		
+		if (KP_liberation_resources_global) then {
+			_resource_area = localize "STR_RESOURCE_GLOBAL";
+			KP_liberation_supplies = KP_liberation_supplies_global;
+			KP_liberation_ammo = KP_liberation_ammo_global;
+			KP_liberation_fuel = KP_liberation_fuel_global;	
+		} else {
+			_resource_area = toUpper ([_nearfob] call F_getFobName);
+			KP_liberation_supplies = ((_actual_fob select 0) select 1);
+			KP_liberation_ammo = ((_actual_fob select 0) select 2);
+			KP_liberation_fuel = ((_actual_fob select 0) select 3);	
+		};
+		KP_liberation_air_vehicle_building_near = ((_actual_fob select 0) select 4);
+		KP_liberation_recycle_building_near = ((_actual_fob select 0) select 5);
 	} else {
 		_resources = false;
 		KP_liberation_supplies = 0;
 		KP_liberation_ammo = 0;
 		KP_liberation_fuel = 0;
+		KP_liberation_air_vehicle_building_near = false;
+		KP_liberation_recycle_building_near = false;
 	};
 	
 	if ( _overlayshown) then {
@@ -89,12 +104,15 @@ while { true } do {
 			
 			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format [ "%1", (floor KP_liberation_supplies)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format [ "%1", (floor KP_liberation_ammo)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format [ "%1", (floor KP_liberation_fuel)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format [ "%1/%2", unitcap,([] call F_localCap) ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format [ "%1%2", round(combat_readiness),"%" ];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format [ "%1", round(resources_intel) ];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (101)) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (102)) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (103)) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (104)) ctrlSetText format ["%1/%2", unitcap,([] call F_localCap)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (105)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (106)) ctrlSetText format ["%1", round(resources_intel)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (107)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (108)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (109)) ctrlSetText format ["%1", _resource_area];
 
 				_color_readiness = [0.8,0.8,0.8,1];
 				if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
