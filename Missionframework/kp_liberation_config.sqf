@@ -54,16 +54,16 @@ GRLIB_respawn_marker = "respawn_west";			// Respawn marker name.
 GRLIB_color_friendly = "ColorBLUFOR";			// Friendly side marker color.
 GRLIB_color_enemy = "ColorOPFOR";				// Enemy sector marker color.
 GRLIB_color_enemy_bright = "ColorRED";			// Enemy sector marker color (while activated).
-GRLIB_sector_size = 1000;						// Range to activate a sector
-GRLIB_capture_size = 175;						// Range to capture a sector
-GRLIB_radiotower_size = 2500;					// Range of Radio Tower scanning range
-GRLIB_recycling_percentage = 0.5;				// Percentage of resources you get back from recycling
-GRLIB_vulnerability_timer = 1200;				// Time in seconds how long a captured sector is vulnerable to enemy troops
-GRLIB_defended_buildingpos_part = 0.4;			// Multiplier for defenders in buildings
-GRLIB_sector_capture_value = 3;					// Multiplier for supply crate spawning
-GRLIB_sector_military_value = 3;				// Multiplier for ammo crate spawning
-GRLIB_sector_fuel_value = 3;					// Multiplier for fuel crate spawning
-GRLIB_secondary_objective_impact = 0.6;			// Impact percentage at combat readiness for FOB hunting
+GRLIB_sector_size = 1000;						// Range to activate a sector.
+GRLIB_capture_size = 175;						// Range to capture a sector.
+GRLIB_radiotower_size = 2500;					// Radio Tower scanning range.
+GRLIB_recycling_percentage = 0.5;				// Percentage of resources you get back from recycling.
+GRLIB_vulnerability_timer = 1200;				// Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_defended_buildingpos_part = 0.4;			// Multiplier for defenders in buildings.
+GRLIB_sector_capture_value = 3;					// Multiplier for supply crate spawning.
+GRLIB_sector_military_value = 3;				// Multiplier for ammo crate spawning.
+GRLIB_sector_fuel_value = 3;					// Multiplier for fuel crate spawning.
+GRLIB_secondary_objective_impact = 0.6;			// Impact percentage at combat readiness for FOB hunting.
 
 // Caps (limit) for BLUFOR, sector defenders, enemy battlegroups and patrols.
 GRLIB_blufor_cap = 100							* GRLIB_unitcap;
