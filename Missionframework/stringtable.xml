@@ -3331,5 +3331,13 @@
 						<Original>Following items are not allowed:\n%1</Original>
 						<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
 				</Key>
+				<Key ID="STR_PRODUCTION_ACTION">
+						<Original>-- Production Settings</Original>
+						<German>-- Produktionseinstellungen</German>
+				</Key>
+				<Key ID="STR_PRODUCTION_HEADER">
+						<Original>Production Settings</Original>
+						<German>Produktionseinstellungen</German>
+				</Key>
 		</Package>
 </Project>
