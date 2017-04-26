@@ -3316,10 +3316,12 @@
 				<Key ID="STR_RESOURCE_GLOBAL">
 						<Original>GLOBAL</Original>
 						<German>GESAMT</German>
+						<Italian>GLOBALE</Italian>
 				</Key>
 				<Key ID="STR_RESOURCE_GLOBAL_ACTION">
 						<Original>-- Switch resource display</Original>
 						<German>-- Ressourcenanzeige wechseln</German>
+						<Italian>-- Cambia visualizzazione risorse</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVEOPTIONS">
 						<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
@@ -3330,14 +3332,17 @@
 				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
 						<Original>Following items are not allowed:\n%1</Original>
 						<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
+						<Italian>Questi elementi non sono ammessi:\n%1</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_ACTION">
 						<Original>-- Production Settings</Original>
 						<German>-- Produktionseinstellungen</German>
+						<Italian>-- Impostazioni produzione</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_HEADER">
 						<Original>Production Settings</Original>
 						<German>Produktionseinstellungen</German>
+						<Italian>Impostazioni Produzione</Italian>
 				</Key>
 		</Package>
 </Project>
