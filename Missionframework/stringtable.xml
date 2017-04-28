@@ -3359,6 +3359,14 @@
 					<German>Fabrik</German>
 					<Italian>Fabbrica</Italian>
 				</Key>
+				<Key ID="STR_PRODUCTION_PRODUCING">
+					<Original>Producing:</Original>
+					<German>Produziert:</German>
+				</Key>
+				<Key ID="STR_PRODUCTION_NOTHING">
+					<Original>Nothing</Original>
+					<German>Nichts</German>
+				</Key>
 				<Key ID="STR_PRODUCTION_STORAGE">
 					<Original>Storage:</Original>
 					<German>Lagerbereich:</German>
@@ -3389,11 +3397,6 @@
 					<German>Verfügbare Einrichtungen</German>
 					<Italian>Strutture Disponibili</Italian>
 				</Key>
-				<Key ID="STR_PRODUCTION_PRODUCE">
-					<Original>Production</Original>
-					<German>Produktion</German>
-					<Italian>Produzione</Italian>
-				</Key>
 				<Key ID="STR_PRODUCTION_STORAGEDETAIL">
 					<Original>Stock Overview</Original>
 					<German>Übersicht Lagerbestände</German>
@@ -3418,6 +3421,10 @@
 					<Original>Sector setting saved.</Original>
 					<German>Sektoreinstellung gespeichert.</German>
 					<Italian>Settaggi settore salvati.</Italian>
+				</Key>
+				<Key ID="STR_SECSTORAGEBUILD_ACTION">
+					<Original>-- Build storage --</Original>
+					<German>-- Lagerfläche bauen --</German>
 				</Key>
 	</Package>
 </Project>
