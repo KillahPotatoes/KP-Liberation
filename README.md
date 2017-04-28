@@ -157,7 +157,9 @@ class Missions
 * Added: Air vehicle slot system (need a Flight Control to build helipads, hangars and air vehicles)
 * Added: Blacklist / Whitelist filtering for saved loadouts
 * Added: Recycling of enemy vehicles
-* Added: Recycle value now depends on vehicle damage, remaining ammo and fuel.
+* Added: Recycle value now depends on vehicle damage, remaining ammo and fuel
+* Added: Production system for factories and cities (not capitals). Accessable for the commander if near a FOB
+* Added: Ability to build storage areas at sectors, where produced resources will be stored
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
@@ -165,6 +167,7 @@ class Missions
 * Removed: Civilian Penalties (due to new resource system)
 * Removed: Overwrite functionality for `classnames.sqf`, as it is no longer needed due to the preset system
 * Removed: `gameplay_constants.sqf`
+* Removed: Crate spawn at military bases
 * Merged: `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
@@ -175,6 +178,7 @@ class Missions
 * Tweaked: Name for savegame namespace -> adapts automaticly to worldName
 * Tweaked: Revive settings: BI Revive is enabled by default. Disable it, when you use ACE
 * Tweaked: Config, as some apex classnames were missing. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: If attacking a sector, a random amount of crates with random resources will spawn once.
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
