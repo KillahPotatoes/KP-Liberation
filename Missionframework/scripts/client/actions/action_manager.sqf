@@ -156,7 +156,7 @@ while { true } do {
 		};
 	};
 
-	if ((player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player) then {
+	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
 		if (_idact_production == -1) then {
 			_idact_production = player addAction ["<t color='#FF8000'>" + localize "STR_PRODUCTION_ACTION" + "</t>","scripts\client\commander\open_production.sqf","",-994,false,true,"","build_confirmed == 0"];
 		};

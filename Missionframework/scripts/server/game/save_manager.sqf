@@ -9,10 +9,10 @@ date_year = date select 0;
 date_month = date select 1;
 date_day = date select 2;
 blufor_sectors = [];
+KP_liberation_production = [];
 GRLIB_all_fobs = [];
 buildings_to_save= [];
 combat_readiness = 0;
-saved_ammo_res = 0;
 stats_opfor_soldiers_killed = 0;
 stats_opfor_killed_by_players = 0;
 stats_blufor_soldiers_killed = 0;
@@ -47,7 +47,7 @@ air_weight = 33;
 GRLIB_vehicle_to_military_base_links = [];
 GRLIB_permissions = [];
 ai_groups = [];
-saved_intel_res = 0;
+resources_intel = 0;
 GRLIB_player_scores = [];
 KP_liberation_storages = [];
 
@@ -77,8 +77,8 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	buildings_to_save = greuh_liberation_savegame select 2;
 	time_of_day = greuh_liberation_savegame select 3;
 	combat_readiness = greuh_liberation_savegame select 4;
-	saved_ammo_res = greuh_liberation_savegame select 8;
-	KP_liberation_storages = greuh_liberation_savegame select 9;
+	KP_liberation_storages = greuh_liberation_savegame select 8;
+	KP_liberation_production = greuh_liberation_savegame select 9;
 
 	if ( count greuh_liberation_savegame > 10 ) then {
 		_stats = greuh_liberation_savegame select 10;
@@ -132,7 +132,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	};
 
 	if ( count greuh_liberation_savegame > 15 ) then {
-		saved_intel_res = greuh_liberation_savegame select 15;
+		resources_intel = greuh_liberation_savegame select 15;
 	};
 
 	if ( count greuh_liberation_savegame > 16 ) then {
@@ -236,11 +236,13 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				if ((floor (_supply / 100)) > 0) then {
 					_crate = KP_liberation_supply_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_supply = _supply - 100;
 				} else {
 					_crate = KP_liberation_supply_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", _supply, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_supply = 0;
 				};
@@ -250,11 +252,13 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				if ((floor (_ammo / 100)) > 0) then {
 					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_ammo = _ammo - 100;
 				} else {
 					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", _ammo, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_ammo = 0;
 				};
@@ -264,17 +268,89 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				if ((floor (_fuel / 100)) > 0) then {
 					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_fuel = _fuel - 100;
 				} else {
 					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
 					_crate setVariable ["KP_liberation_crate_value", _fuel, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
 					[_crate, _nextbuilding] call F_crateToStorage;
 					_fuel = 0;
 				};
 			};
 		};
 	} forEach KP_liberation_storages;
+
+	{
+		private ["_storage"];
+		_storage = _x select 3;
+
+		_nextpos = _storage select 0;
+		_nextdir = _storage select 1;
+
+		_nextbuilding = KP_liberation_small_storage_building createVehicle _nextpos;
+		_nextbuilding setPosATL _nextpos;
+		_nextbuilding setdir _nextdir;
+		if (count (_storage select 2) == 3) then {
+			_nextbuilding setVectorUp (_storage select 2);
+		} else {
+			_nextbuilding setVectorUp [0,0,1];
+		};
+		_nextbuilding setdamage 0;
+		
+		_supply = floor (_x select 9);
+		_ammo = floor (_x select 10);
+		_fuel = floor (_x select 11);
+		
+		while {_supply > 0} do {
+			if ((floor (_supply / 100)) > 0) then {
+				_crate = KP_liberation_supply_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_supply = _supply - 100;
+			} else {
+				_crate = KP_liberation_supply_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _supply, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_supply = 0;
+			};
+		};
+
+		while {_ammo > 0} do {
+			if ((floor (_ammo / 100)) > 0) then {
+				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_ammo = _ammo - 100;
+			} else {
+				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _ammo, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_ammo = 0;
+			};
+		};
+
+		while {_fuel > 0} do {
+			if ((floor (_fuel / 100)) > 0) then {
+				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", 100, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_fuel = _fuel - 100;
+			} else {
+				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+				_crate setVariable ["KP_liberation_crate_value", _fuel, true];
+				[_crate, 500] remoteExec ["F_setMass",_crate];
+				[_crate, _nextbuilding] call F_crateToStorage;
+				_fuel = 0;
+			};
+		};
+	} forEach KP_liberation_production;
 	
 	{
 		private [ "_nextgroup", "_grp" ];
@@ -491,8 +567,9 @@ while { true } do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness,0,0,0, round resources_ammo, KP_liberation_storages, _stats,
-		[ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links, GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores ];
+		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness,0,0,0, KP_liberation_storages,
+		KP_liberation_production, _stats, [ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links, GRLIB_permissions,
+		ai_groups, resources_intel, GRLIB_player_scores ];
 
 		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
 		saveProfileNamespace;

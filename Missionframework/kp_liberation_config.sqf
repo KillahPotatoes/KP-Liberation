@@ -85,12 +85,6 @@ GRLIB_recycling_percentage = 0.5;
 GRLIB_vulnerability_timer = 1200;
 // Multiplier for defenders in buildings
 GRLIB_defended_buildingpos_part = 0.4;
-// Multiplier for supply crate spawning
-GRLIB_sector_capture_value = 3;
-// Multiplier for ammo crate spawning
-GRLIB_sector_military_value = 3;
-// Multiplier for fuel crate spawning
-GRLIB_sector_fuel_value = 3;
 // Impact percentage at combat readiness for FOB hunting
 GRLIB_secondary_objective_impact = 0.6;
 // Caps for BLUFOR, sector defenders, enemy battlegroups and patrols
@@ -112,8 +106,8 @@ GRLIB_surrender_chance = 80;
 GRLIB_secondary_missions_costs = [10, 10, 10];
 // Altitude in meters for the HALO jump
 GRLIB_halo_altitude = 4000;
-// Penalty for killing civilians
-GRLIB_civ_killing_penalty = 100;
+// Time in minutes until a production process is finished, when resources multiplier is set to 1
+KP_liberation_production_interval = 60				* GRLIB_resources_multiplier;
 
 
 // Blacklisted arsenal items such as deployable weapons that should be bought instead

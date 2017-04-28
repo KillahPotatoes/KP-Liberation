@@ -34,6 +34,28 @@ if (isServer) then {
 
 	blufor_sectors pushback _liberated_sector; publicVariable "blufor_sectors";
 	stats_sectors_liberated = stats_sectors_liberated + 1;
+	
+	if ((_liberated_sector in sectors_factory) || (_liberated_sector in sectors_capture)) then {
+
+		private ["_sectorType", "_sectorFacilities"];
+
+		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;} else {_sectorType = 0;_sectorFacilities = false;};
+					
+		KP_liberation_production pushBack [
+			(markerText _liberated_sector),
+			_liberated_sector,
+			_sectorType,
+			[],
+			_sectorFacilities,
+			_sectorFacilities,
+			_sectorFacilities,
+			0,
+			KP_liberation_production_interval,
+			0,
+			0,
+			0
+		];
+	};
 
 	[] spawn check_victory_conditions;
 

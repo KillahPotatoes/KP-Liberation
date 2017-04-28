@@ -33,9 +33,7 @@ attack_in_progress_fob = compileFinal preprocessFileLineNumbers "scripts\server\
 attack_in_progress_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_sector.sqf";
 destroy_fob = compileFinal preprocessFileLineNumbers "scripts\server\sector\destroy_fob.sqf";
 ied_manager = compileFinal preprocessFileLineNumbers "scripts\server\sector\ied_manager.sqf";
-manage_supplyboxes = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_supplyboxes.sqf";
-manage_ammoboxes = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_ammoboxes.sqf";
-manage_fuelboxes = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_fuelboxes.sqf";
+manage_captureboxes = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_captureboxes.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 

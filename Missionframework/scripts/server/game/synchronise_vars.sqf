@@ -1,7 +1,8 @@
 sync_vars = []; publicVariable "sync_vars";
 
-waitUntil {!isNil "save_is_loaded"};
+waitUntil{!isNil "save_is_loaded"};
 waitUntil{!isNil "KP_liberation_fob_resources"};
+waitUntil{!isNil "KP_liberation_production"};
 waitUntil{!isNil "KP_liberation_supplies_global"};
 waitUntil{!isNil "KP_liberation_ammo_global"};
 waitUntil{!isNil "KP_liberation_fuel_global"};
@@ -15,6 +16,7 @@ waitUntil{!isNil "resources_intel"};
 waitUntil{!isNil "infantry_cap"};
 
 _KP_liberation_fob_resources_old = [];
+_KP_liberation_production_old = [];
 _KP_liberation_supplies_global_old = -1;
 _KP_liberation_ammo_global_old = -1;
 _KP_liberation_fuel_global_old = -1;
@@ -31,6 +33,7 @@ while {true} do {
 
 	waitUntil {sleep 0.25;
 		!(_KP_liberation_fob_resources_old isEqualTo KP_liberation_fob_resources)
+		|| !(_KP_liberation_production_old isEqualTo KP_liberation_production)
 		|| _KP_liberation_supplies_global_old != KP_liberation_supplies_global
 		|| _KP_liberation_ammo_global_old != KP_liberation_ammo_global
 		|| _KP_liberation_fuel_global_old != KP_liberation_fuel_global
@@ -44,10 +47,11 @@ while {true} do {
 		|| _infantry_cap_old != infantry_cap
 	};
 	sleep 0.25;
-	sync_vars = [KP_liberation_fob_resources,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap];
+	sync_vars = [KP_liberation_fob_resources,KP_liberation_production,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap];
 	publicVariable "sync_vars";
 	
 	_KP_liberation_fob_resources_old = KP_liberation_fob_resources;
+	_KP_liberation_production_old = KP_liberation_production;
 	_KP_liberation_supplies_global_old = KP_liberation_supplies_global;
 	_KP_liberation_ammo_global_old = KP_liberation_ammo_global;
 	_KP_liberation_fuel_global_old = KP_liberation_fuel_global;
