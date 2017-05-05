@@ -81,7 +81,7 @@ GRLIB_capture_size = 175;
 GRLIB_radiotower_size = 2500;
 // Percentage of resources you get back from recycling
 GRLIB_recycling_percentage = 0.5;
-// Time in seconds how long a captured sector is vulnerable to enemy troops
+// Time in seconds how long it takes until enemies captured a sector
 GRLIB_vulnerability_timer = 1200;
 // Multiplier for defenders in buildings
 GRLIB_defended_buildingpos_part = 0.4;

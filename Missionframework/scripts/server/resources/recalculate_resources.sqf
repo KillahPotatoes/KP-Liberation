@@ -22,7 +22,7 @@ while { true } do {
 	
 	{
 		_fob_buildings = _x nearobjects (GRLIB_fob_range * 2);
-		_storage_areas = [_fob_buildings, {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+		_storage_areas = [_fob_buildings, {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 		_heliSlots = {(typeOf _x) == KP_liberation_heli_slot_building;} count _fob_buildings;
 		_planeSlots = {(typeOf _x) == KP_liberation_plane_slot_building;} count _fob_buildings;
 		_hasAirBuilding = {(typeOf _x) == KP_liberation_air_vehicle_building;} count _fob_buildings;

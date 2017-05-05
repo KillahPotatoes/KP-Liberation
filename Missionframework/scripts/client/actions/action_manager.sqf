@@ -15,7 +15,7 @@ _idact_secondary = -1;
 _idact_zeus = -1;
 _idact_resources = -1;
 _idact_sectorstorage = -1;
-_distfob = 100;
+_distfob = (GRLIB_fob_range * 0.8);
 _distarsenal = 5;
 _distbuildfob = 10;
 _distspawn = 10;
@@ -149,7 +149,7 @@ while { true } do {
 	};
 
 	if (_nearest_sector != "") then {
-		if ((_nearest_sector in blufor_sectors) && alive player && vehicle player == player && ((_nearest_sector in sectors_capture) || (_nearest_sector in sectors_factory)) && ((player distance (getMarkerPos _nearest_sector)) < GRLIB_fob_range) && ([player, 3] call F_fetchPermission) && (count (nearestObjects [getMarkerPos _nearest_sector,[KP_liberation_small_storage_building],2*GRLIB_fob_range]) == 0)) then {
+		if ((_nearest_sector in blufor_sectors) && alive player && vehicle player == player && ((_nearest_sector in sectors_capture) || (_nearest_sector in sectors_factory)) && ((player distance (getMarkerPos _nearest_sector)) < _distfob) && ([player, 3] call F_fetchPermission) && ({(_x getVariable ["KP_liberation_storage_type",-1]) == 1} count (nearestObjects [getMarkerPos _nearest_sector,[KP_liberation_small_storage_building],2*GRLIB_fob_range]) == 0)) then {
 			if ( _idact_sectorstorage == -1 ) then {
 				_idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",KP_liberation_small_storage_building,-993,false,true,"","build_confirmed == 0"];
 			};

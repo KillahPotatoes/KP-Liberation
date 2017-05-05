@@ -16,6 +16,7 @@ while {GRLIB_endgame == 0} do {
 			_time = _x select 8;
 
 			_storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
+			_storage = [_storage, {(_x getVariable ["KP_liberation_storage_type",-1]) == 1}] call BIS_fnc_conditionalSelect;
 			if ((count _storage) > 0) then {
 				_storage = (_storage select 0);
 				_storageArray = [(getPosATL _storage),(getDir _storage),(vectorUpVisual _storage)];

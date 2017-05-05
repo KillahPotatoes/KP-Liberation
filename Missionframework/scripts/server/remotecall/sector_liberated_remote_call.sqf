@@ -40,7 +40,11 @@ if (isServer) then {
 		private ["_sectorType", "_sectorFacilities"];
 
 		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;} else {_sectorType = 0;_sectorFacilities = false;};
-					
+
+		{
+			if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
+		} forEach KP_liberation_production;
+
 		KP_liberation_production pushBack [
 			(markerText _liberated_sector),
 			_liberated_sector,

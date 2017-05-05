@@ -227,6 +227,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVectorUp [0,0,1];
 			};
 			_nextbuilding setdamage 0;
+			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
 			
 			_supply = floor (_x select 3);
 			_ammo = floor (_x select 4);
@@ -286,68 +287,71 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		private ["_storage"];
 		_storage = _x select 3;
 
-		_nextpos = _storage select 0;
-		_nextdir = _storage select 1;
+		if ((count _storage) == 3) then {
+			_nextpos = _storage select 0;
+			_nextdir = _storage select 1;
 
-		_nextbuilding = KP_liberation_small_storage_building createVehicle _nextpos;
-		_nextbuilding setPosATL _nextpos;
-		_nextbuilding setdir _nextdir;
-		if (count (_storage select 2) == 3) then {
-			_nextbuilding setVectorUp (_storage select 2);
-		} else {
-			_nextbuilding setVectorUp [0,0,1];
-		};
-		_nextbuilding setdamage 0;
-		
-		_supply = floor (_x select 9);
-		_ammo = floor (_x select 10);
-		_fuel = floor (_x select 11);
-		
-		while {_supply > 0} do {
-			if ((floor (_supply / 100)) > 0) then {
-				_crate = KP_liberation_supply_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_supply = _supply - 100;
+			_nextbuilding = KP_liberation_small_storage_building createVehicle _nextpos;
+			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setdir _nextdir;
+			if (count (_storage select 2) == 3) then {
+				_nextbuilding setVectorUp (_storage select 2);
 			} else {
-				_crate = KP_liberation_supply_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _supply, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_supply = 0;
+				_nextbuilding setVectorUp [0,0,1];
 			};
-		};
-
-		while {_ammo > 0} do {
-			if ((floor (_ammo / 100)) > 0) then {
-				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_ammo = _ammo - 100;
-			} else {
-				_crate = KP_liberation_ammo_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _ammo, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_ammo = 0;
+			_nextbuilding setdamage 0;
+			_nextbuilding setVariable ["KP_liberation_storage_type", 1, true];
+			
+			_supply = floor (_x select 9);
+			_ammo = floor (_x select 10);
+			_fuel = floor (_x select 11);
+			
+			while {_supply > 0} do {
+				if ((floor (_supply / 100)) > 0) then {
+					_crate = KP_liberation_supply_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_supply = _supply - 100;
+				} else {
+					_crate = KP_liberation_supply_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _supply, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_supply = 0;
+				};
 			};
-		};
 
-		while {_fuel > 0} do {
-			if ((floor (_fuel / 100)) > 0) then {
-				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", 100, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_fuel = _fuel - 100;
-			} else {
-				_crate = KP_liberation_fuel_crate createVehicle _nextpos;
-				_crate setVariable ["KP_liberation_crate_value", _fuel, true];
-				[_crate, 500] remoteExec ["F_setMass",_crate];
-				[_crate, _nextbuilding] call F_crateToStorage;
-				_fuel = 0;
+			while {_ammo > 0} do {
+				if ((floor (_ammo / 100)) > 0) then {
+					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_ammo = _ammo - 100;
+				} else {
+					_crate = KP_liberation_ammo_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _ammo, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_ammo = 0;
+				};
+			};
+
+			while {_fuel > 0} do {
+				if ((floor (_fuel / 100)) > 0) then {
+					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", 100, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_fuel = _fuel - 100;
+				} else {
+					_crate = KP_liberation_fuel_crate createVehicle _nextpos;
+					_crate setVariable ["KP_liberation_crate_value", _fuel, true];
+					[_crate, 500] remoteExec ["F_setMass",_crate];
+					[_crate, _nextbuilding] call F_crateToStorage;
+					_fuel = 0;
+				};
 			};
 		};
 	} forEach KP_liberation_production;
@@ -430,7 +434,7 @@ while { true } do {
  				} ] call BIS_fnc_conditionalSelect;
 				
 			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
-			_all_storages = [(_all_storages + _nextbuildings), {(typeOf _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+			_all_storages = [(_all_storages + _nextbuildings), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 			
 			{
 				_nextgroup = _x;

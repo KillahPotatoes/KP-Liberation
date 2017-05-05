@@ -36,7 +36,7 @@ while { true } do {
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
 		
 		_nearfob = [] call F_getNearestFob;
-		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 		
 		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
 	};
@@ -240,7 +240,7 @@ while { true } do {
 				_price_f = ((build_lists select buildtype) select buildindex) select 3;
 
 				_nearfob = [] call F_getNearestFob;
-				_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(typeof _x) in KP_liberation_storage_buildings}] call BIS_fnc_conditionalSelect;
+				_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 
 				_supplyCrates = ceil (_price_s / 100);
 				_ammoCrates = ceil (_price_a / 100);
@@ -299,6 +299,8 @@ while { true } do {
 					case "Land_Medevac_house_V1_F";
 					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
 					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
+					case KP_liberation_small_storage_building;
+					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};
 					default {};
 				};
 				
