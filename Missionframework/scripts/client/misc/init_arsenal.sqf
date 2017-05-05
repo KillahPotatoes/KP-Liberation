@@ -63,3 +63,5 @@ if ((count GRLIB_arsenal_backpacks) == 0) then {
 	[missionNamespace, GRLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
 	KP_liberation_allowed_items append GRLIB_arsenal_backpacks;
 };
+
+KP_liberation_allowed_items append ["ItemRadioAcreFlagged"];
