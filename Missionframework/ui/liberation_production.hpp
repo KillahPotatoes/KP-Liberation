@@ -293,7 +293,7 @@ class liberation_production {
 		strings[] = {$STR_MANPOWER,$STR_AMMO,$STR_FUEL};
 		values[] = {0,1,2};
 
-		onToolBoxSelChanged = "new_production = (_this select 1);"
+		onToolBoxSelChanged = "new_production = (_this select 1)";
 	};
 
 	class ButtonSaveSector : StdButton {
