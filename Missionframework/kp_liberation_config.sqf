@@ -165,6 +165,18 @@ blacklisted_from_arsenal = [
 ];
 
 
+// Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
+KP_liberation_allowed_items_extension = [
+	"ItemRadioAcreFlagged",
+	"rhs_m72a7_mag",
+	"rhsusf_acc_anpeq15_bk_light_h",
+	"rhs_weap_M136_used",
+	"rhs_m136_mag",
+	"rhs_m136_hedp_mag",
+	"rhs_m136_hp_mag"
+];
+
+
 // Configuration for resource crate transport.
 // ["classname", distance behind vehicle to unload crate, attachTo positions for each box]
 box_transport_config = [

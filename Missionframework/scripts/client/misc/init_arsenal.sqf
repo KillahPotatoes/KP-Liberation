@@ -64,4 +64,6 @@ if ((count GRLIB_arsenal_backpacks) == 0) then {
 	KP_liberation_allowed_items append GRLIB_arsenal_backpacks;
 };
 
-KP_liberation_allowed_items append ["ItemRadioAcreFlagged"];
+if ((count KP_liberation_allowed_items_extension) > 0) then {
+	KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
+};
