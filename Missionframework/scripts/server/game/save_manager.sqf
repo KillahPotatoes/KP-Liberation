@@ -508,9 +508,9 @@ while { true } do {
 			
 			{
 				switch ((typeOf _x)) do {
-					case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable "KP_liberation_crate_value");};
-					case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable "KP_liberation_crate_value");};
-					case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable "KP_liberation_crate_value");};
+					case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
+					case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
+					case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
 					default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 				};
 			} forEach (attachedObjects _x);

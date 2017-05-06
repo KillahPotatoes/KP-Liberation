@@ -10,7 +10,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 		reverse _storedCrates;
 
 		{
-			_crateValue = _x getVariable "KP_liberation_crate_value";
+			_crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 			switch ((typeOf _x)) do {
 				case KP_liberation_supply_crate: { 
