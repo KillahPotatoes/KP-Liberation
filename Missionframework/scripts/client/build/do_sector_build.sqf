@@ -1,7 +1,7 @@
 private ["_building"];
 
 if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
-	_building = (_this select 3) createVehicle (getPosATL player);
+	_building = ((_this select 3) select 0) createVehicle (getPosATL player);
 	_building setPosATL (getPosATL player);
 	_building setdir ((getDir player) - 180);
 	_building setVectorUp surfaceNormal position player;
