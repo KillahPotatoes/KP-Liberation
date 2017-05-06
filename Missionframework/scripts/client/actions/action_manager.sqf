@@ -1,5 +1,5 @@
 
-private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_production","_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_idact_sectorstorage", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_nearest_sector"];
+private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_production","_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_idact_sectorstorage", "_idact_supplyfacility", "_idact_ammofacility", "_idact_fuelfacility", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_nearest_sector", "_prod_sector"];
 
 _idact_build = -1;
 _idact_arsenal = -1;
@@ -15,6 +15,9 @@ _idact_secondary = -1;
 _idact_zeus = -1;
 _idact_resources = -1;
 _idact_sectorstorage = -1;
+_idact_supplyfacility = -1;
+_idact_ammofacility = -1;
+_idact_fuelfacility = -1;
 _distfob = (GRLIB_fob_range * 0.8);
 _distarsenal = 5;
 _distbuildfob = 10;
@@ -33,6 +36,10 @@ while { true } do {
 	_nearfob = [] call F_getNearestFob;
 	_fobdistance = 9999;
 	_nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
+	_prod_sector = [];
+	{
+		if ((_x select 1) == _nearest_sector) exitWith {_prod_sector = _x};
+	} forEach KP_liberation_production;
 
 	if ( count _nearfob == 3 ) then {
 		_fobdistance = player distance _nearfob;
@@ -148,27 +155,69 @@ while { true } do {
 		};
 	};
 
-	if (_nearest_sector != "") then {
-		if ((_nearest_sector in blufor_sectors) && alive player && vehicle player == player && ((_nearest_sector in sectors_capture) || (_nearest_sector in sectors_factory)) && ((player distance (getMarkerPos _nearest_sector)) < _distfob) && ([player, 3] call F_fetchPermission) && ({(_x getVariable ["KP_liberation_storage_type",-1]) == 1} count (nearestObjects [getMarkerPos _nearest_sector,[KP_liberation_small_storage_building],2*GRLIB_fob_range]) == 0)) then {
-			if ( _idact_sectorstorage == -1 ) then {
-				_idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",KP_liberation_small_storage_building,-993,false,true,"","build_confirmed == 0"];
+	if ((count _prod_sector) == 12) then {
+		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 0)) then {
+			if (_idact_sectorstorage == -1) then {
+				_idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",[KP_liberation_small_storage_building, _prod_sector],-993,false,true,"","build_confirmed == 0"];
 			};
 		} else {
-			if ( _idact_sectorstorage != -1 ) then {
+			if (_idact_sectorstorage != -1) then {
 				player removeAction _idact_sectorstorage;
 				_idact_sectorstorage = -1;
 			};
 		};
+		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 4)) then {
+			if (_idact_supplyfacility == -1) then {
+				_idact_supplyfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSUPPLYBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["supply", _prod_sector],-994,false,true,"","build_confirmed == 0"];
+			};
+		} else {
+			if (_idact_supplyfacility != -1) then {
+				player removeAction _idact_supplyfacility;
+				_idact_supplyfacility = -1;
+			};
+		};
+		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 5)) then {
+			if (_idact_ammofacility == -1) then {
+				_idact_ammofacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECAMMOBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["ammo", _prod_sector],-995,false,true,"","build_confirmed == 0"];
+			};
+		} else {
+			if (_idact_ammofacility != -1) then {
+				player removeAction _idact_ammofacility;
+				_idact_ammofacility = -1;
+			};
+		};
+		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 6)) then {
+			if (_idact_fuelfacility == -1) then {
+				_idact_fuelfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECFUELBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["fuel", _prod_sector],-996,false,true,"","build_confirmed == 0"];
+			};
+		} else {
+			if (_idact_fuelfacility != -1) then {
+				player removeAction _idact_fuelfacility;
+				_idact_fuelfacility = -1;
+			};
+		};
 	} else {
-		if ( _idact_sectorstorage != -1 ) then {
+		if (_idact_sectorstorage != -1) then {
 			player removeAction _idact_sectorstorage;
 			_idact_sectorstorage = -1;
+		};
+		if (_idact_supplyfacility != -1) then {
+			player removeAction _idact_supplyfacility;
+			_idact_supplyfacility = -1;
+		};
+		if (_idact_ammofacility != -1) then {
+			player removeAction _idact_ammofacility;
+			_idact_ammofacility = -1;
+		};
+		if (_idact_fuelfacility != -1) then {
+			player removeAction _idact_fuelfacility;
+			_idact_fuelfacility = -1;
 		};
 	};
 
 	if ( _fobdistance < _distfob && alive player && vehicle player == player) then {
 		if ( _idact_resources == -1 ) then {
-			_idact_resources = player addAction ["<t color='#FFFF00'>" + localize "STR_RESOURCE_GLOBAL_ACTION" + "</t>",{KP_liberation_resources_global = !KP_liberation_resources_global},"",-994,false,true,"","build_confirmed == 0"];
+			_idact_resources = player addAction ["<t color='#FFFF00'>" + localize "STR_RESOURCE_GLOBAL_ACTION" + "</t>",{KP_liberation_resources_global = !KP_liberation_resources_global},"",-997,false,true,"","build_confirmed == 0"];
 		};
 	} else {
 		if ( _idact_resources != -1 ) then {
@@ -179,7 +228,7 @@ while { true } do {
 
 	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
 		if (_idact_production == -1) then {
-			_idact_production = player addAction ["<t color='#FF8000'>" + localize "STR_PRODUCTION_ACTION" + "</t>","scripts\client\commander\open_production.sqf","",-995,false,true,"","build_confirmed == 0"];
+			_idact_production = player addAction ["<t color='#FF8000'>" + localize "STR_PRODUCTION_ACTION" + "</t>","scripts\client\commander\open_production.sqf","",-998,false,true,"","build_confirmed == 0"];
 		};
 	} else {
 		if (_idact_production != -1) then {
@@ -190,7 +239,7 @@ while { true } do {
 
 	if ( ( player == ( [] call F_getCommander ) || [] call F_isAdmin ) && alive player && vehicle player == player && GRLIB_permissions_param ) then {
 		if ( _idact_commander == -1 ) then {
-			_idact_commander = player addAction ["<t color='#FF8000'>" + localize "STR_COMMANDER_ACTION" + "</t> <img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>","scripts\client\commander\open_permissions.sqf","",-996,false,true,"","build_confirmed == 0"];
+			_idact_commander = player addAction ["<t color='#FF8000'>" + localize "STR_COMMANDER_ACTION" + "</t> <img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>","scripts\client\commander\open_permissions.sqf","",-999,false,true,"","build_confirmed == 0"];
 		};
 	} else {
 		if ( _idact_commander != -1 ) then {
@@ -202,7 +251,7 @@ while { true } do {
 	if (!isNil("commandant")) then {
 		if ((player == commandant) && (isNull(getAssignedCuratorLogic commandant))) then {
 			if ( _idact_zeus == -1 ) then {
-				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[] remoteExec ["zeus_remote_call",2];},"",-997,false,true,"","build_confirmed == 0"];
+				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[] remoteExec ["zeus_remote_call",2];},"",-1000,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			player removeAction _idact_zeus;

@@ -1143,69 +1143,6 @@
 						<Russian>Усталость</Russian>
 						<Italian>Stamina</Italian>
 				</Key>
-				<Key ID="STR_PARAMS_FATIGUE1">
-						<Original>Reduced - 4 times more stamina</Original>
-						<French>Réduits - 4 fois plus de stamina</French>
-						<German>Reduziert - 4-mal mehr Ausdauer</German>
-						<Spanish>Reducido - 4 veces más estamina</Spanish>
-						<Russian>Понизить - в 4 раза усталость</Russian>
-						<Italian>Ridotto - 4 volte più stamina</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_FATIGUE2">
-						<Original>Reduced - 3 times more stamina</Original>
-						<French>Réduits - 3 fois plus de stamina</French>
-						<German>Reduziert - 3-mal mehr Ausdauer</German>
-						<Spanish>Reducido - 3 veces más estamina</Spanish>
-						<Russian>Понизить - в 3 раза усталость</Russian>
-						<Italian>Ridotto - 3 volte più stamina</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_FATIGUE3">
-						<Original>Reduced - 2 times more stamina</Original>
-						<French>Réduits - 2 fois plus de stamina</French>
-						<German>Reduziert - 2-mal mehr Ausdauer</German>
-						<Spanish>Reducido - 2 veces más estamina</Spanish>
-						<Russian>Понизить - в 2 раза усталость</Russian>
-						<Italian>Ridotto - 2 volte più stamina</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_FATIGUE4">
-						<Original>Reduced - 1.5 times more stamina</Original>
-						<French>Réduits - 1,5 fois plus de stamina</French>
-						<German>Reduziert - 1,5-mal mehr Ausdauer</German>
-						<Spanish>Reducido - 1,5 veces más estamina</Spanish>
-						<Russian>Понизить - в 1.5 раза усталость</Russian>
-						<Italian>Ridotto - 1.5 volte più stamina</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_REVIVE">
-						<Original>FAR Revive</Original>
-						<German>FAR Revive (Wiederbelebungen)</German>
-						<Spanish>FAR Revive</Spanish>
-						<Russian>FAR Возрождение</Russian>
-						<Italian>FAR Revive</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_REVIVE1">
-						<Original>Enabled - Only medics can revive</Original>
-						<French>Activé - Seuls les medics peuvent revive</French>
-						<German>Aktiv - Nur Sanitäter können wiederbeleben</German>
-						<Spanish>Activado - Sólo los médicos pueden revivir</Spanish>
-						<Russian>Включено - Только медики могут возрождать</Russian>
-						<Italian>Attivato - Solo i medici possono rianimare</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_REVIVE2">
-						<Original>Enabled - Everyone can revive using a FAK</Original>
-						<French>Activé - Tout le monde peut revive avec un kit premiers soins</French>
-						<German>Aktiv - Jeder  mit einem Erste-Hilfe-Kasten kann wiederbeleben</German>
-						<Spanish>Activado - Cualquiera puede revivir usando un Kit de primeros auxilios</Spanish>
-						<Russian>Включено - Любой может возродить с помощью пакета первой помощи</Russian>
-						<Italian>Attivato - Tutti possono rianimare con un kit di primo soccorso</Italian>
-				</Key>
-				<Key ID="STR_PARAMS_REVIVE3">
-						<Original>Enabled - Everyone can revive using a MedKit</Original>
-						<French>Activé - Tout le monde peut revive avec un kit médical</French>
-						<German>Jeder mit einem Verbandskasten kann wiederbeleben</German>
-						<Spanish>Activado - Cualquiera puede revivir usando un Botiquín</Spanish>
-						<Russian>Включено - Любой может возродить используя медицинскую аптечку</Russian>
-						<Italian>Attivato - Tutti possono rianimare con un kit Medico</Italian>
-				</Key>
 				<Key ID="STR_PARAMS_INTRO">
 						<Original>Introduction</Original>
 						<French>Introduction</French>
@@ -3425,6 +3362,26 @@
 				<Key ID="STR_SECSTORAGEBUILD_ACTION">
 					<Original>-- Build storage --</Original>
 					<German>-- Lagerfläche bauen --</German>
+				</Key>
+				<Key ID="STR_SECSUPPLYBUILD_ACTION">
+					<Original>-- Build supply facility --</Original>
+					<German>-- Nachschubeinrichtung bauen --</German>
+				</Key>
+				<Key ID="STR_SECAMMOBUILD_ACTION">
+					<Original>-- Build ammo facility --</Original>
+					<German>-- Munitionseinrichtung bauen --</German>
+				</Key>
+				<Key ID="STR_SECFUELBUILD_ACTION">
+					<Original>-- Build fuel facility --</Original>
+					<German>-- Kraftstoffeinrichtung bauen --</German>
+				</Key>
+				<Key ID="STR_PRODUCTION_FACFALSE">
+					<Original>Needed facility not built in sector.</Original>
+					<German>Benötigte Einrichtung nicht vorhanden.</German>
+				</Key>
+				<Key ID="STR_PRODUCTION_FACBUILD_ERROR">
+					<Original>Not enough resources.\n\nYou need:\n%1 Supplies\n%2 Ammo\n%3 Fuel</Original>
+					<German>Nicht genug Ressourcen.\n\nDu benötigst:\n%1 Nachschub\n%2 Munition\n%3 Kraftstoff</German>
 				</Key>
 	</Package>
 </Project>

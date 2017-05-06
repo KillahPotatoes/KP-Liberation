@@ -107,7 +107,7 @@ GRLIB_secondary_missions_costs = [10, 10, 10];
 // Altitude in meters for the HALO jump
 GRLIB_halo_altitude = 4000;
 // Time in minutes until a production process is finished, when resources multiplier is set to 1
-KP_liberation_production_interval = 60				/ GRLIB_resources_multiplier;
+KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;
 
 
 // Blacklisted arsenal items such as deployable weapons that should be bought instead

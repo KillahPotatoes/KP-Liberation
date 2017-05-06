@@ -53,7 +53,7 @@ if (isServer) then {
 			_sectorFacilities,
 			_sectorFacilities,
 			_sectorFacilities,
-			0,
+			3,
 			KP_liberation_production_interval,
 			0,
 			0,

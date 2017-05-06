@@ -55,6 +55,7 @@ while {dialog && (alive player)} do {
 		switch (_selectedSector select 7) do {
 			case 1: {_producing = localize "STR_AMMO";};
 			case 2: {_producing = localize "STR_FUEL";};
+			case 3: {_producing = localize "STR_PRODUCTION_NOTHING";};
 			default {_producing = localize "STR_MANPOWER";};
 		};
 
@@ -62,7 +63,11 @@ while {dialog && (alive player)} do {
 		_productiontime = format [localize "STR_PRODUCTION_MINUTES",(_selectedSector select 8)];
 
 		((findDisplay 758001) displayCtrl 7580015) ctrlSetText _producing;
-		((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_neutral;
+		if ((_selectedSector select 7) == 3) then {
+			((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_negative;
+		} else {
+			((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_neutral;
+		};
 		((findDisplay 758001) displayCtrl 7580016) ctrlSetText _storagespace;
 		((findDisplay 758001) displayCtrl 7580016) ctrlSetTextColor _color_actual;
 		((findDisplay 758001) displayCtrl 7580017) ctrlSetText _productiontime;
