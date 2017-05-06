@@ -160,6 +160,7 @@ class Missions
 * Added: Recycle value now depends on vehicle damage, remaining ammo and fuel
 * Added: Production system for factories and cities (not capitals). Accessable for the commander if near a FOB
 * Added: Ability to build storage areas at sectors, where produced resources will be stored
+* Added: Ability to unlock resource facilities in cities, so you can produce that resource there
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)

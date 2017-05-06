@@ -33,6 +33,7 @@ while {GRLIB_endgame == 0} do {
 
 						_crate = _crateType createVehicle (getPosATL _storage);
 						_crate setVariable ["KP_liberation_crate_value", 100, true];
+						[_crate, 500] remoteExec ["F_setMass",_crate];
 						[_crate, _storage] call F_crateToStorage;
 
 					};
