@@ -2,12 +2,11 @@
 CONFIG FILE FOR KP LIBERATION
 */
 
-// Use ACE?
-// true or false
+/* - ACE settings.
+Enable ACE? ("true","false").	*/
 KP_liberation_ace = false;
 
-
-// Vehicle classnames which should be a medical vehicle (for ACE only)
+// Vehicle classnames which also function as ACE medical vehicles.
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"B_T_Truck_01_medical_F",
@@ -15,7 +14,7 @@ KP_liberation_medical_vehicles = [
 	"RHS_UH60M_MEV2"
 ];
 
-// Classnames of ACE 3 crates (which have to be in the unit preset as well)
+// Classnames of ACE3 crates (which have to be in the unit preset as well).
 KP_liberation_ace_crates = [
 	"ACE_Box_82mm_Mo_HE",
 	"ACE_Box_82mm_Mo_Smoke",
@@ -23,96 +22,72 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-
-// Which units preset should be used?
-// 0 = default (edit the custom.sqf in the presets folder to change things)
-// 1 = RHS and Project OPFOR Takistan Setting
-// 2 = RHS Setting
-// 3 = RHS with BW Mod Setting
-// 4 = Vanilla Apex Tanoa
+/* - Custom unit and arsenal preset settings.
+Which units preset should be used?
+0 = Default vanilla, with RHS USAF and BWMod (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
+2 = RHS USAF and RHS AFRF.
+1 = RHS USAF, RHS AFRF and Project OPFOR (Takistan).
+3 = RHS USAF, RHS AFRF and BWMod.
+4 = Vanilla Apex and RHS USAF for Tanoa.	*/
 KP_liberation_preset = 0;
 
-
-// Which arsenal preset should be used?
-// 0 = use blacklist method
-// 1 = custom (edit the custom.sqf in the arsenal_presets folder to change things)
-// 2 = Killah Potatoes Gaming Community
-// 3 = RHS United States Armed Forces Arsenal Preset
-// 4 = RHS United States Armed Forces Arsenal with ACE Preset
-// 5 = RHS United States Armed Forces Arsenal with ACE and ACRE Preset
+/* Which arsenal preset should be used?
+0 = Use the default blacklist method (defined below).
+1 = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks).
+2 = Killah Potatoes Gaming Community arsenal preset.
+3 = RHS United States Armed Forces arsenal preset.
+4 = RHS United States Armed Forces arsenal preset with ACE.
+5 = RHS United States Armed Forces arsenal preset with ACE and ACRE.	*/
 KP_liberation_arsenal = 0;
 
-
-// Fuel Consumption
-// Time in Minutes till a full tank depletes when the vehicle is standing with running engine
+/* - Fuel consumption settings.
+Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine.	*/
 KP_liberation_fuel_neutral = 180;
-// Time in Minutes till a full tank depletes when the vehicle is driving
+// Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
 KP_liberation_fuel_normal = 90;
-// Time in Minutes till a full tank depletes when the vehicle is driving at max speed
+// Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
 KP_liberation_fuel_max = 45;
 
-
-// Gameplay Constants
-// Name of the savegame namespace inside the [ServerProfileName].vars.Arma3Profile
+/* - Gameplay constant settings.
+Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-// Friendly side
-GRLIB_side_friendly = WEST;
-// Enemy side
-GRLIB_side_enemy = EAST;
-// Resistance / Militia side
-GRLIB_side_resistance = RESISTANCE;
-// Civil Side
-GRLIB_side_civilian = CIVILIAN;
-// Respawn marker name
-GRLIB_respawn_marker = "respawn_west";
-// Friendly side marker color
-GRLIB_color_friendly = "ColorBLUFOR";
-// Enemy side marker color
-GRLIB_color_enemy = "ColorOPFOR";
-// Enemy side marker color (activated)
-GRLIB_color_enemy_bright = "ColorRED";
+GRLIB_side_friendly = WEST;																						// Friendly side.
+GRLIB_side_enemy = EAST;																						// Enemy side.
+GRLIB_side_resistance = RESISTANCE;																				// Resistance side.
+GRLIB_side_civilian = CIVILIAN;																					// Civilian side.
+GRLIB_respawn_marker = "respawn_west";																			// Respawn marker name.
 
-// Range to activate a sector
-GRLIB_sector_size = 1000;
-// Range to capture a sector
-GRLIB_capture_size = 175;
-// Range of Radio Tower scanning range
-GRLIB_radiotower_size = 2500;
-// Percentage of resources you get back from recycling
-GRLIB_recycling_percentage = 0.5;
-// Time in seconds how long it takes until enemies captured a sector
-GRLIB_vulnerability_timer = 1200;
-// Multiplier for defenders in buildings
-GRLIB_defended_buildingpos_part = 0.4;
-// Impact percentage at combat readiness for FOB hunting
-GRLIB_secondary_objective_impact = 0.6;
-// Caps for BLUFOR, sector defenders, enemy battlegroups and patrols
-GRLIB_blufor_cap = 100								* GRLIB_unitcap;
-GRLIB_sector_cap = 180								* GRLIB_unitcap;
-GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;
-GRLIB_patrol_cap = 150								* GRLIB_unitcap;
-// Size of enemy battlegroups
-GRLIB_battlegroup_size = 6							* (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);
-// Civilian count multiplier
-GRLIB_civilians_amount = 10 						* GRLIB_civilian_activity;
-// Build range around the FOB building
-GRLIB_fob_range = 125;
-// Time in seconds until bodies of dead soldiers get cleaned up
-GRLIB_cleanup_delay = 1200;
-// Chance that enemies will surrender when heavy losses are encountered
-GRLIB_surrender_chance = 80;
-// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR]
-GRLIB_secondary_missions_costs = [10, 10, 10];
-// Altitude in meters for the HALO jump
-GRLIB_halo_altitude = 4000;
-// Time in minutes until a production process is finished, when resources multiplier is set to 1
-KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;
+GRLIB_color_friendly = "ColorBLUFOR";																			// Friendly sector marker color.
+GRLIB_color_enemy = "ColorOPFOR";																				// Enemy sector marker color.
+GRLIB_color_enemy_bright = "ColorRED";																			// Enemy sector marker color (activated).
 
+GRLIB_fob_range = 125;																							// Build range around the main FOB building.
+GRLIB_halo_altitude = 2500;																						// Altitude in metres for the HALO jump.
+GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
+GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
+GRLIB_recycling_percentage = 0.5;																				// Percentage of resources you get back from recycling.
+KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-// Blacklisted arsenal items such as deployable weapons that should be bought instead
-// Useless if you're using a predefined arsenal in KP_liberation_arsenal
-// REMEMBER: A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
+GRLIB_sector_size = 1000;																						// Range to activate a sector.
+GRLIB_capture_size = 175;																						// Range to capture a sector.
+GRLIB_defended_buildingpos_part = 0.4;																			// Multiplier for defenders in buildings.
+GRLIB_battlegroup_size = 6							* (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);	// Size of enemy battlegroups.
+GRLIB_vulnerability_timer = 1200;																				// Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_radiotower_size = 2500;																					// Radio Tower scanning range.
+GRLIB_surrender_chance = 80;																					// Chance that enemy infantry will surrender after heavy losses are encountered.
+
+GRLIB_civilians_amount = 10 						* GRLIB_civilian_activity;									// Civilian count multiplier.
+GRLIB_cleanup_delay = 1200;																						// Time in seconds until bodies of dead soldiers are cleaned up.
+
+GRLIB_blufor_cap = 100								* GRLIB_unitcap;											// Cap for BLUFOR.
+GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defenders.
+GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
+GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
+
+/* - Default arsenal blacklist method.
+Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
+REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
 blacklisted_from_arsenal = [
 	"B_Respawn_Sleeping_bag_blue_F",
 	"B_Respawn_Sleeping_bag_brown_F",
@@ -164,7 +139,6 @@ blacklisted_from_arsenal = [
 	"optic_tws_mg"
 ];
 
-
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
 KP_liberation_allowed_items_extension = [
 	"ItemRadioAcreFlagged",
@@ -176,17 +150,23 @@ KP_liberation_allowed_items_extension = [
 	"rhs_m136_hp_mag"
 ];
 
-
-// Configuration for resource crate transport.
-// ["classname", distance behind vehicle to unload crate, attachTo positions for each box]
+/* - Configuration settings for crates transported by vehicles.
+Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],	*/
 box_transport_config = [
 	["B_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_T_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_T_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0-1.0,-1]],
-	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.8,-1], [0-1.0,-1]],
+	["rhsusf_M977A4_BKIT_usarmy_d", -6.5, [0,0.4,1.4], [0,-1.3,1.4], [0,-3,1.4]],
+	["rhsusf_M977A4_BKIT_M2_usarmy_d", -6.5, [0,0.4,0.7], [0,-1.3,0.7], [0,-3,0.7]],
+	["rhsusf_M977A4_BKIT_usarmy_wd", -6.5, [0,0.4,1.4], [0,-1.3,1.4], [0,-3,1.4]],
+	["rhsusf_M977A4_BKIT_M2_usarmy_wd", -6.5, [0,0.4,0.7], [0,-1.3,0.7], [0,-3,0.7]],
 	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
+	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
+	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
+	["RHS_CH_47F_10", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
+	["RHS_CH_47F_light", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
+	["RHS_CH_47F", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],	
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
@@ -194,8 +174,8 @@ box_transport_config = [
 	["greuh_eh101_gr", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]]
 ];
 
-
-// Everything the AI troups should be able to resupply from.
+/* Various other settings.
+Everything the AI troups should be able to resupply from.	*/
 ai_resupply_sources = [
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
@@ -217,6 +197,7 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_usarmy_d"
 ];
+
 vehicle_rearm_sources = [
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
@@ -226,6 +207,7 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_usarmy_wd",
 	"rhsusf_M977A4_AMMO_usarmy_d"
 ];
+
 vehicle_refuel_sources = [
 	"C_Van_01_fuel_F",
 	"B_Truck_01_fuel_F",
@@ -236,7 +218,6 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_usarmy_d"
 ];
-
 
 // Classnames of boats, so they can be built on water.
 boats_names = [
@@ -251,8 +232,7 @@ boats_names = [
 	"rhsusf_mkvsoc"
 ];
 
-
-// Little Bird placement positions on LHD
+// Little bird placement positions on LHD.
 KP_liberation_little_bird_positions = [
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 116, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 97, 16.75],
@@ -261,8 +241,7 @@ KP_liberation_little_bird_positions = [
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) - 71, 16.75]
 ];
 
-
-// Large storage area placement position offsets
+// Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
 	[-5.59961,3.60938,0.6],
 	[-3.99902,3.60938,0.6],
@@ -306,8 +285,7 @@ KP_liberation_large_storage_positions = [
 	[5.60059,-3.58984,0.6]
 ];
 
-
-// Small storage area placement position offsets
+// Small storage area placement position offsets.
 KP_liberation_small_storage_positions = [
 	[-2.34961,1.80078,0.6],
 	[-0.75,1.80078,0.6],
@@ -323,10 +301,7 @@ KP_liberation_small_storage_positions = [
 	[2.4502,-1.79883,0.6]
 ];
 
-
-// DONT CHANGE (only if you really know what you're doing)
+// DO NOT CHANGE (unless you know what you are doing).
 GRLIB_endgame = 0;
-
 if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
-
 GRLIB_offload_diag = false;

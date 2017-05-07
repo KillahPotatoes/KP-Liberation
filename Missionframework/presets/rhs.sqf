@@ -57,8 +57,10 @@ light_vehicles = [
 	["rhsusf_m1025_w",100,0,50],
 	["rhsusf_m1025_w_m2",100,40,50],
 	["rhsusf_m1025_w_mk19",100,60,50],
-	["B_Truck_01_transport_F",160,0,80],
-	["B_Truck_01_covered_F",160,0,80],
+	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT (Desert)
+	["rhsusf_M977A4_BKIT_M2_usarmy_d",125,80,75],						//M977A4 BKIT (M2, Desert)	
+	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT (Woodland)
+	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,80,75],						//M977A4 BKIT (M2, Woodland)
 	["B_Truck_01_medical_F",180,0,80],
 	["B_Boat_Transport_01_F",100,0,50],
 	["B_Boat_Armed_01_minigun_F",300,80,150]
