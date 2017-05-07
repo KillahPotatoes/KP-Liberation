@@ -161,6 +161,7 @@ class Missions
 * Added: Production system for factories and cities (not capitals). Accessable for the commander if near a FOB
 * Added: Ability to build storage areas at sectors, where produced resources will be stored
 * Added: Ability to unlock resource facilities in cities, so you can produce that resource there
+* Added: Transport config for RHS trucks and helicopters. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
@@ -180,6 +181,7 @@ class Missions
 * Tweaked: Revive settings: BI Revive is enabled by default. Disable it, when you use ACE
 * Tweaked: Config, as some apex classnames were missing. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: If attacking a sector, a random amount of crates with random resources will spawn once.
+* Tweaked: Better comments in the unit preset files. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
