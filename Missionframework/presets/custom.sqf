@@ -74,8 +74,6 @@ light_vehicles = [
 	["BWA3_Eagle_FLW100_Fleck",100,80,50],								//Eagle IV (FLW 100)
 	["B_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_Truck_01_covered_F",125,0,75],									//HEMTT Transport (Covered)
-	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT (Desert)
-	["rhsusf_M977A4_BKIT_M2_usarmy_d",125,80,75],						//M977A4 BKIT (M2, Desert)	
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT (Woodland)
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,80,75],						//M977A4 BKIT (M2, Woodland)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
