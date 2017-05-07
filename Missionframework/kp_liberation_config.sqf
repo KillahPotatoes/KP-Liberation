@@ -25,8 +25,8 @@ KP_liberation_ace_crates = [
 /* - Custom unit and arsenal preset settings.
 Which units preset should be used?
 0 = Default vanilla, with RHS USAF and BWMod (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
-2 = RHS USAF and RHS AFRF.
-1 = RHS USAF, RHS AFRF and Project OPFOR (Takistan).
+1 = RHS USAF and RHS AFRF.
+2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan).
 3 = RHS USAF, RHS AFRF and BWMod.
 4 = Vanilla Apex and RHS USAF for Tanoa.	*/
 KP_liberation_preset = 0;
