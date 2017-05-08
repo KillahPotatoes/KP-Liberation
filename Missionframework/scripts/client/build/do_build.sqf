@@ -258,10 +258,11 @@ while { true } do {
 					};
 				} forEach _storage_areas;
 
+				deleteVehicle _vehicle;
+
 				if (_spaceSum < _crateSum) then {
 					hint localize "STR_CANCEL_ERROR";
 				} else {
-					deleteVehicle _vehicle;
 					[_price_s, _price_a, _price_f, _storage_areas] remoteExec ["cancel_build_remote_call",2];
 				};
 			};
