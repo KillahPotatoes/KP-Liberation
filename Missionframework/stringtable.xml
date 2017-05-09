@@ -3,7 +3,7 @@
 		<Package name="Liberation">
 				<!-- French localization made by zbug: https://github.com/GreuhZbug -->
 				<!-- German localization made by Wyqer: https://github.com/Wyqer -->
-				<!-- Italian localization made by kaso2mod: https://github.com/kaso2mod -->
+				<!-- Italian localization made by k4s0: https://github.com/k4s0 -->
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation Altis v0.95</Original>
@@ -3299,10 +3299,12 @@
 				<Key ID="STR_PRODUCTION_PRODUCING">
 					<Original>Producing:</Original>
 					<German>Produziert:</German>
+					<Italian>Prodotto:</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_NOTHING">
 					<Original>Nothing</Original>
 					<German>Nichts</German>
+					<Italian>Niente</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_STORAGE">
 					<Original>Storage:</Original>
@@ -3362,26 +3364,32 @@
 				<Key ID="STR_SECSTORAGEBUILD_ACTION">
 					<Original>-- Build storage --</Original>
 					<German>-- Lagerfläche bauen --</German>
+					<Italian>-- Crea area di stoccaggio --</Italian>
 				</Key>
 				<Key ID="STR_SECSUPPLYBUILD_ACTION">
 					<Original>-- Build supply facility --</Original>
 					<German>-- Nachschubeinrichtung bauen --</German>
+					<Italian>-- Crea impianto approvvigionamento --</Italian>
 				</Key>
 				<Key ID="STR_SECAMMOBUILD_ACTION">
 					<Original>-- Build ammo facility --</Original>
 					<German>-- Munitionseinrichtung bauen --</German>
+					<Italian>-- Crea impianto munizioni --</Italian>
 				</Key>
 				<Key ID="STR_SECFUELBUILD_ACTION">
 					<Original>-- Build fuel facility --</Original>
 					<German>-- Kraftstoffeinrichtung bauen --</German>
+					<Italian>-- Crea impianto carburante --</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACFALSE">
 					<Original>Needed facility not built in sector.</Original>
 					<German>Benötigte Einrichtung nicht vorhanden.</German>
+					<Italian>Impianto necessario non costruito nel settore.</Italian>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACBUILD_ERROR">
 					<Original>Not enough resources.\n\nYou need:\n%1 Supplies\n%2 Ammo\n%3 Fuel</Original>
 					<German>Nicht genug Ressourcen.\n\nDu benötigst:\n%1 Nachschub\n%2 Munition\n%3 Kraftstoff</German>
+					<Italian>Risorse insufficenti.\n\nHai bisogno di:\n%1 approvvigionamenti\n%2 Munizioni\n%3 Carburante </Italian>
 				</Key>
 	</Package>
 </Project>

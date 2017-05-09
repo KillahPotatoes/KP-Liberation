@@ -67,7 +67,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
-	
+
 ## Recommended Mods
 This Mods would greatly increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
@@ -149,7 +149,7 @@ class Missions
 
 ### 0.95
 * Added: New resource system
-* Added: Italian localization. Thanks to [kaso2mod](https://github.com/kaso2mod)
+* Added: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Action to change alignment (up or terrain aligned) during placement of buildings
 * Added: Action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
 * Added: Paradrop of a resource package when first FOB is built
@@ -185,7 +185,7 @@ class Missions
 * Tweaked: Better comments in the unit preset files. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
-* Fixed: Enemy weapon dance. Thanks to [kaso2mod](https://github.com/kaso2mod)
+* Fixed: Enemy weapon dance. Thanks to [k4s0](https://github.com/k4s0)
 * Fixed: Non vanilla paratroopers don't have a parachute
 * Fixed: Enemy jets sometimes spawn on the ground instead flying
 * Fixed: ACE medical crate was empty and couldn't be recycled
