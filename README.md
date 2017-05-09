@@ -161,7 +161,8 @@ class Missions
 * Added: Production system for factories and cities (not capitals). Accessable for the commander if near a FOB
 * Added: Ability to build storage areas at sectors, where produced resources will be stored
 * Added: Ability to unlock resource facilities in cities, so you can produce that resource there
-* Added: Transport config for RHS trucks and helicopters. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Added: RHS transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Added: Civilian transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
