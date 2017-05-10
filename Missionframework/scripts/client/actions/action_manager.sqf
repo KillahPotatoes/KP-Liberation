@@ -1,5 +1,5 @@
 
-private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_production","_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_idact_sectorstorage", "_idact_supplyfacility", "_idact_ammofacility", "_idact_fuelfacility", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_nearest_sector", "_prod_sector"];
+private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_production", "_idact_logistic", "_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_idact_sectorstorage", "_idact_supplyfacility", "_idact_ammofacility", "_idact_fuelfacility", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_nearest_sector", "_prod_sector"];
 
 _idact_build = -1;
 _idact_arsenal = -1;
@@ -9,6 +9,7 @@ _idact_tutorial = -1;
 _idact_squad = -1;
 _idact_commander = -1;
 _idact_production = -1;
+_idact_logistic = -1;
 _idact_repackage = -1;
 _idact_halo = -1;
 _idact_secondary = -1;
@@ -237,9 +238,20 @@ while { true } do {
 		};
 	};
 
+	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count GRLIB_all_fobs) > 0) && ((count blufor_sectors) > 0) && KP_liberation_logistics) then {
+		if (_idact_logistic == -1) then {
+			_idact_logistic = player addAction ["<t color='#FF8000'>" + localize "STR_LOGISTIC_ACTION" + "</t>","scripts\client\commander\open_logistic.sqf","",-999,false,true,"","build_confirmed == 0"];
+		};
+	} else {
+		if (_idact_logistic != -1) then {
+			player removeAction _idact_logistic;
+			_idact_logistic = -1;
+		};
+	};
+
 	if ( ( player == ( [] call F_getCommander ) || [] call F_isAdmin ) && alive player && vehicle player == player && GRLIB_permissions_param ) then {
 		if ( _idact_commander == -1 ) then {
-			_idact_commander = player addAction ["<t color='#FF8000'>" + localize "STR_COMMANDER_ACTION" + "</t> <img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>","scripts\client\commander\open_permissions.sqf","",-999,false,true,"","build_confirmed == 0"];
+			_idact_commander = player addAction ["<t color='#FF8000'>" + localize "STR_COMMANDER_ACTION" + "</t> <img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>","scripts\client\commander\open_permissions.sqf","",-1000,false,true,"","build_confirmed == 0"];
 		};
 	} else {
 		if ( _idact_commander != -1 ) then {
@@ -251,7 +263,7 @@ while { true } do {
 	if (!isNil("commandant")) then {
 		if ((player == commandant) && (isNull(getAssignedCuratorLogic commandant))) then {
 			if ( _idact_zeus == -1 ) then {
-				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[] remoteExec ["zeus_remote_call",2];},"",-1000,false,true,"","build_confirmed == 0"];
+				_idact_zeus = player addAction ["<t color='#FF0000'>" + localize "STR_REASSIGN_ZEUS" + "</t>",{[] remoteExec ["zeus_remote_call",2];},"",-1001,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			player removeAction _idact_zeus;

@@ -50,6 +50,7 @@ ai_groups = [];
 resources_intel = 0;
 GRLIB_player_scores = [];
 KP_liberation_storages = [];
+KP_liberation_logistics = [];
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -77,11 +78,12 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	buildings_to_save = greuh_liberation_savegame select 2;
 	time_of_day = greuh_liberation_savegame select 3;
 	combat_readiness = greuh_liberation_savegame select 4;
-	KP_liberation_storages = greuh_liberation_savegame select 8;
-	KP_liberation_production = greuh_liberation_savegame select 9;
+	KP_liberation_storages = greuh_liberation_savegame select 5;
+	KP_liberation_production = greuh_liberation_savegame select 6;
+	KP_liberation_logistics = greuh_liberation_savegame select 7;
 
-	if ( count greuh_liberation_savegame > 10 ) then {
-		_stats = greuh_liberation_savegame select 10;
+	if ( count greuh_liberation_savegame > 8 ) then {
+		_stats = greuh_liberation_savegame select 8;
 		stats_opfor_soldiers_killed = _stats select 0;
 		stats_opfor_killed_by_players = _stats select 1;
 		stats_blufor_soldiers_killed = _stats select 2;
@@ -112,31 +114,31 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		stats_readiness_earned = _stats select 27;
 	};
 
-	if ( count greuh_liberation_savegame > 11 ) then {
-		_weights = greuh_liberation_savegame select 11;
+	if ( count greuh_liberation_savegame > 9 ) then {
+		_weights = greuh_liberation_savegame select 9;
 		infantry_weight = _weights select 0;
 		armor_weight = _weights select 1;
 		air_weight = _weights select 2;
 	};
 
+	if ( count greuh_liberation_savegame > 10 ) then {
+		GRLIB_vehicle_to_military_base_links = greuh_liberation_savegame select 10;
+	};
+
+	if ( count greuh_liberation_savegame > 11 ) then {
+		GRLIB_permissions = greuh_liberation_savegame select 11;
+	};
+
 	if ( count greuh_liberation_savegame > 12 ) then {
-		GRLIB_vehicle_to_military_base_links = greuh_liberation_savegame select 12;
+		ai_groups = greuh_liberation_savegame select 12;
 	};
 
 	if ( count greuh_liberation_savegame > 13 ) then {
-		GRLIB_permissions = greuh_liberation_savegame select 13;
+		resources_intel = greuh_liberation_savegame select 13;
 	};
 
 	if ( count greuh_liberation_savegame > 14 ) then {
-		ai_groups = greuh_liberation_savegame select 14;
-	};
-
-	if ( count greuh_liberation_savegame > 15 ) then {
-		resources_intel = greuh_liberation_savegame select 15;
-	};
-
-	if ( count greuh_liberation_savegame > 16 ) then {
-		GRLIB_player_scores = greuh_liberation_savegame select 16;
+		GRLIB_player_scores = greuh_liberation_savegame select 14;
 	};
 
 	setDate [ 2045, 6, 6, time_of_day, 0];
@@ -571,9 +573,9 @@ while { true } do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness,0,0,0, KP_liberation_storages,
-		KP_liberation_production, _stats, [ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links, GRLIB_permissions,
-		ai_groups, resources_intel, GRLIB_player_scores ];
+		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
+		KP_liberation_production, KP_liberation_logistics, _stats, [ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links,
+		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores ];
 
 		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
 		saveProfileNamespace;

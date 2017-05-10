@@ -21,6 +21,7 @@ while { true } do {
 	combat_readiness = sync_vars select 10;
 	resources_intel = sync_vars select 11;
 	infantry_cap = sync_vars select 12;
+	KP_liberation_logistics = sync_vars select 13;
 	sync_vars = [];
 	one_synchro_done = true;
 	synchro_done = true;

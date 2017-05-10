@@ -14,6 +14,7 @@ waitUntil{!isNil "KP_liberation_heli_slots"};
 waitUntil{!isNil "KP_liberation_plane_slots"};
 waitUntil{!isNil "resources_intel"};
 waitUntil{!isNil "infantry_cap"};
+waitUntil{!isNil "KP_liberation_logistics"};
 
 _KP_liberation_fob_resources_old = [];
 _KP_liberation_production_old = [];
@@ -28,6 +29,7 @@ _KP_liberation_plane_slots_old = -1;
 _combat_readiness_old = -1;
 _resources_intel_old = -999;
 _infantry_cap_old = -999;
+_KP_liberation_logistics_old = [];
 
 while {true} do {
 
@@ -45,9 +47,10 @@ while {true} do {
 		|| _combat_readiness_old != combat_readiness
 		|| _resources_intel_old != resources_intel
 		|| _infantry_cap_old != infantry_cap
+		|| !(_KP_liberation_logistics_old isEqualTo KP_liberation_logistics)
 	};
 	sleep 0.25;
-	sync_vars = [KP_liberation_fob_resources,KP_liberation_production,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap];
+	sync_vars = [KP_liberation_fob_resources,KP_liberation_production,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap,KP_liberation_logistics];
 	publicVariable "sync_vars";
 	
 	_KP_liberation_fob_resources_old = KP_liberation_fob_resources;
@@ -63,5 +66,6 @@ while {true} do {
 	_combat_readiness_old = combat_readiness;
 	_resources_intel_old = resources_intel;
 	_infantry_cap_old = infantry_cap;
+	_KP_liberation_logistics_old = KP_liberation_logistics;
 	
 };

@@ -1,7 +1,6 @@
-private ["_dialog", "_fontSize", "_color_positive", "_color_neutral", "_color_negative", "_color_actual", "_sectorType", "_storage", "_crateCount", "_crateMax", "_producing", "_storagespace", "_productiontime", "_saveChanges", "_listselect", "_selectedSector", "_mapdisplay", "_supplyValue", "_ammoValue", "_fuelValue"];
+private ["_dialog", "_color_positive", "_color_neutral", "_color_negative", "_color_actual", "_sectorType", "_storage", "_crateCount", "_crateMax", "_producing", "_storagespace", "_productiontime", "_saveChanges", "_listselect", "_selectedSector", "_mapdisplay", "_supplyValue", "_ammoValue", "_fuelValue"];
 
 _dialog = createDialog "liberation_production";
-_fontSize = 0.02 * safezoneH;
 saveSectorSetting = 0;
 new_production = 0;
 _color_positive = [0,0.9,0,1];
