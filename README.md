@@ -163,6 +163,8 @@ class Missions
 * Added: Ability to unlock resource facilities in cities, so you can produce that resource there
 * Added: RHS transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Added: Civilian transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Added: Optional AI Logistics module for smaller groups to let AI carry resources from A to B (still WIP atm)
+* Added: Mission parameter to enable or disable AI Logistics (default enabled)
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
