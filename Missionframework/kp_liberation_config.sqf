@@ -24,11 +24,11 @@ KP_liberation_ace_crates = [
 
 /* - Custom unit and arsenal preset settings.
 Which units preset should be used?
-0 = Default vanilla, with RHS USAF and BWMod (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
+0 = Default vanilla with RHS USAF and BWMod, both optional (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
 1 = RHS USAF and RHS AFRF.
-2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan).
+2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
 3 = RHS USAF, RHS AFRF and BWMod.
-4 = Vanilla Apex and RHS USAF for Tanoa.	*/
+4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).	*/
 KP_liberation_preset = 0;
 
 /* Which arsenal preset should be used?
@@ -182,6 +182,10 @@ box_transport_config = [
 	["C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
 	["C_Truck_02_transport_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
 	["C_Truck_02_covered_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
+	["RHS_Ural_Open_Civ_03", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["RHS_Ural_Civ_03", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["LOP_TAK_Civ_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["LOP_TAK_Civ_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
 	["B_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
 	["B_T_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
@@ -251,6 +255,7 @@ vehicle_rearm_sources = [
 
 vehicle_refuel_sources = [
 	"C_Van_01_fuel_F",
+	"C_Truck_02_fuel_F",
 	"B_Truck_01_fuel_F",
 	"B_T_Truck_01_fuel_F",
 	"B_Slingload_01_Fuel_F",
