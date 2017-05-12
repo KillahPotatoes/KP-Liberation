@@ -419,9 +419,7 @@ opfor_vehicles = [
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_MBT_02_cannon_F",												//T-100 Varsuk
-	"O_MBT_02_cannon_F",												//T-100 Varsuk
-	"O_Heli_Light_02_F",												//Po-30 Orca (Armed)
-	"O_Heli_Attack_02_F"												//Mi-48 Kajman
+	"O_MBT_02_cannon_F"												//T-100 Varsuk
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
@@ -431,8 +429,7 @@ opfor_vehicles_low_intensity = [
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
 	"O_Truck_03_transport_F",											//Tempest Transport
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 
-	"O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
-	"O_Heli_Light_02_F"													//Po-30 Orca (Armed)
+	"O_APC_Tracked_02_cannon_F"											//BTR-K Kamysh
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
