@@ -5,6 +5,7 @@
 				<!-- German localization made by Wyqer: https://github.com/Wyqer -->
 				<!-- Italian localization made by k4s0: https://github.com/k4s0 -->
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
+				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation v0.95</Original>
 						<German>KP Liberation v0.95</German>
@@ -3388,7 +3389,7 @@
 				<Key ID="STR_MISSION_DESCRIPTION">
 						<Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
 						<French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
-						<German>Befreie Altis von der OPFOR-Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+						<German>Befreie das Gebiet von der OPFOR-Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
 						<Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
 						<Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
 						<Italian>Libera Altis dagli OPFOR con il potere della libertà e della democrazia.</Italian>

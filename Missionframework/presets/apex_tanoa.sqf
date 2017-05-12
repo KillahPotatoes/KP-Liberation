@@ -120,7 +120,6 @@ air_vehicles = [
 	["RHS_AH1Z",500,500,200],											//AH-1Z (Multi-Role)
 	["RHS_AH64D_wd",750,750,250],										//AH-64D (Multi-Role)
 	["BWA3_Tiger_RMK_Universal",750,500,250],							//UH Tiger RMK (Universal)
-	["BWA3_Tiger_Gunpod_Heavy",750,500,250],							//UH Tiger Gunpod (Heavy)
 	["B_Heli_Transport_01_F",250,80,150],								//UH-80 Ghost Hawk
 	["B_Heli_Transport_01_camo_F",250,80,150],							//UH-80 Ghost Hawk (Camo)
 	["RHS_UH60M",250,80,150],											//UH-60M
@@ -520,14 +519,9 @@ civilian_vehicles = [
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
-	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
-	"B_T_Boat_Armed_01_minigun_F",										//Speedboat Minigun
 	"rhsusf_mkvsoc",													//Mk.V SOCOM
 	"RHS_M2A2_BUSKI_WD",												//M2A2ODS (Busk I)
 	"RHS_M2A3_BUSKIII_wd",												//M2A3 (Busk III)
-	"B_T_APC_Tracked_01_AA_F",											//IFV-6a Cheetah
-	"RHS_M6_wd",														//M6A2
-	"B_T_MBT_01_cannon_F",												//M2A1 Slammer
 	"rhsusf_m1a1aim_tuski_wd",											//M1A1SA (Tusk I)
 	"B_T_MBT_01_TUSK_F",												//M2A4 Slammer UP
 	"rhsusf_m1a2sep1tuskiiwd_usarmy",									//M1A2SEPv1 (Tusk II)
@@ -535,12 +529,9 @@ elite_vehicles = [
 	"B_T_MBT_01_arty_F",												//M4 Scorcher
 	"rhsusf_m109_usarmy",												//M109A6
 	"B_T_MBT_01_mlrs_F",												//M5 Sandstorm MLRS
-	"RHS_MELB_AH6M_M",													//AH-6M-M Little Bird
-	"RHS_MELB_AH6M_H",													//AH-6M-H Little Bird
 	"B_Heli_Attack_01_F",												//AH-99 Blackfoot
 	"RHS_AH64D_wd",														//AH-64D (Multi-Role)
 	"BWA3_Tiger_RMK_Universal",											//UH Tiger RMK (Universal)
-	"BWA3_Tiger_Gunpod_Heavy",											//UH Tiger Gunpod (Heavy)
 	"B_UAV_02_F",														//MQ-4A Greyhawk
 	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
 	"B_T_UAV_03_F",														//MQ-12 Falcon
