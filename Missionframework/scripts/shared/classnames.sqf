@@ -54,22 +54,49 @@ ammobox_transports_typenames = [];
 { ammobox_transports_typenames pushback (_x select 0) } foreach box_transport_config;
 ammobox_transports_typenames = [ ammobox_transports_typenames , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
 elite_vehicles = [ elite_vehicles , { [ _x ] call F_checkClass } ]  call BIS_fnc_conditionalSelect;
-original_resistance = [ "O_G_Soldier_SL_F","O_G_Soldier_A_F","O_G_Soldier_AR_F","O_G_medic_F","O_G_engineer_F","O_G_Soldier_exp_F","O_G_Soldier_GL_F","O_G_Soldier_M_F","O_G_Soldier_F","O_G_Soldier_LAT_F","O_G_Soldier_lite_F","O_G_Sharpshooter_F","O_G_Soldier_TL_F"];
+original_resistance = ["O_G_Soldier_TL_F","O_G_Soldier_SL_F","O_G_Soldier_lite_F","O_G_Soldier_F","O_G_Soldier_F","O_G_Soldier_LAT_F","O_G_Soldier_GL_F","O_G_Soldier_AR_F","O_G_Soldier_AR_F","O_G_Soldier_M_F","O_G_engineer_F","O_G_Soldier_exp_F"];
 opfor_infantry = [opfor_sentry,opfor_rifleman,opfor_grenadier,opfor_squad_leader,opfor_team_leader,opfor_marksman,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_rpg,opfor_at,opfor_aa,opfor_officer,opfor_sharpshooter,opfor_sniper,opfor_engineer];
 GRLIB_intel_table = "Land_CampingTable_small_F";
 GRLIB_intel_chair = "Land_CampingChair_V2_F";
 GRLIB_intel_file = "Land_File1_F";
 GRLIB_intel_laptop = "Land_Laptop_device_F";
-GRLIB_ignore_colisions_when_building = [
-	"Land_Flush_Light_red_F",
-	"Land_Flush_Light_green_F",
-	"Land_Flush_Light_yellow_F",
-	"Land_runway_edgelight",
-	"Land_runway_edgelight_blue_F",
-	"Land_HelipadSquare_F",
-	"Sign_Sphere100cm_F",
-	"TMR_Autorest_Georef",
-	"Land_ClutterCutter_large_F"
-];
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
+
+GRLIB_ignore_colisions_when_building = [
+	"ContainmentArea_02_sand_F",
+	"ContainmentArea_01_sand_F",
+	"Land_CarService_F",
+	"Land_Radar_Small_F",
+	"Land_HelipadSquare_F",
+	"Land_TentHangar_V1_F",
+	"Land_runway_edgelight",
+	"Land_runway_edgelight_blue_F",
+	"Land_Flush_Light_green_F",
+	"Land_Flush_Light_red_F",
+	"Land_Flush_Light_yellow_F",
+	"TMR_Autorest_Georef",
+	"Flag_NATO_F",
+	"Flag_White_F",
+	"Flag_RedCrystal_F",
+	"CamoNet_BLUFOR_F",
+	"CamoNet_BLUFOR_open_F",
+	"CamoNet_BLUFOR_big_F",
+	"Land_PortableLight_single_F",
+	"Land_PortableLight_double_F",
+	"Land_HelipadCircle_F",
+	"PortableHelipadLight_01_blue_F",
+	"PortableHelipadLight_01_green_F",
+	"PortableHelipadLight_01_red_F",
+	"Land_BagFence_Round_F",
+	"Land_BagFence_Short_F",
+	"Land_BagFence_Long_F",
+	"Land_BagFence_Corner_F",
+	"Land_BagFence_End_F",
+	"Land_Sign_WarningMilitaryArea_F",
+	"Land_Sign_WarningMilAreaSmall_F",
+	"Land_Sign_WarningMilitaryVehicles_F",
+	"Land_Razorwire_F",
+	"Sign_Sphere100cm_F",
+	"Land_ClutterCutter_large_F"
+];
