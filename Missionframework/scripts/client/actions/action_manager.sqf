@@ -238,7 +238,7 @@ while { true } do {
 		};
 	};
 
-	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count GRLIB_all_fobs) > 0) && ((count blufor_sectors) > 0) && KP_liberation_logistics) then {
+	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count GRLIB_all_fobs) > 0) && ((count blufor_sectors) > 0) && KP_liberation_ailogistics) then {
 		if (_idact_logistic == -1) then {
 			_idact_logistic = player addAction ["<t color='#FF8000'>" + localize "STR_LOGISTIC_ACTION" + "</t>","scripts\client\commander\open_logistic.sqf","",-999,false,true,"","build_confirmed == 0"];
 		};
