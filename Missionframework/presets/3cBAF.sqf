@@ -188,7 +188,7 @@ buildings = [
 	["Land_Pallet_MilBoxes_F",0,0,0],
 	["Land_PaperBox_open_full_F",0,0,0],
 	["Land_ClutterCutter_large_F",0,0,0],
-	["StorageBladder_01_fuel_sand_F",0,0,0]
+	["StorageBladder_01_fuel_sand_F",0,0,100]
 ];
 
 support_vehicles = [
