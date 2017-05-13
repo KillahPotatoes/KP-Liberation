@@ -28,7 +28,7 @@ Which units preset should be used?
 1 = RHS USAF and RHS AFRF.
 2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
 3 = RHS USAF, RHS AFRF and BWMod.
-4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).	*/
+4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
 5 = 3cbBAF with RHS United Stats Armed Forces arsenal*/
 KP_liberation_preset = 0;
 
