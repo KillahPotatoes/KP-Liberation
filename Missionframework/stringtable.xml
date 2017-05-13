@@ -3420,7 +3420,43 @@
 						<Original>On the way</Original>
 						<German>Unterwegs</German>
 				</Key>
-				
+				<Key ID="STR_LOGISTIC_ABORT">
+						<Original>Aborting mission</Original>
+						<German>Auftragsabbruch</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_NORESSOURCES">
+						<Original>No resources</Original>
+						<German>Keine Ressourcen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_DESTINATION">
+						<Original>Next destination:</Original>
+						<German>Nächster Zielort:</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_LOADEDDETAIL">
+						<Original>Current convoy cargo</Original>
+						<German>Aktuelle Konvoiladung</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TRUCKCOUNT">
+						<Original>Assigned Trucks</Original>
+						<German>Zugeteilte LKWs</German>
+				</Key>
+				<Key ID="STR_LOGSTICS_BUYTRUCK">
+						<Original>Assign Truck</Original>
+						<German>LKW zuteilen</German>
+				</Key>
+				<Key ID="STR_LOGSTICS_SELLTRUCK">
+						<Original>Unassign Truck</Original>
+						<German>LKW abziehen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_CONFIRM">
+						<Original>Confirm mission</Original>
+						<German>Auftrag bestätigen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_CANCEL">
+						<Original>Abort mission</Original>
+						<German>Auftrag abbrechen</German>
+				</Key>
+
 				<!-- English adaptations in v0.95, need translations. -->
 				<Key ID="STR_MISSION_DESCRIPTION">
 						<Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>

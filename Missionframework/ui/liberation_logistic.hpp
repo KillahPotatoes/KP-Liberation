@@ -6,8 +6,9 @@ class liberation_logistic {
 	controls[] = {
 		"OuterBG1", "OuterBG_F1", "InnerBG1", "InnerBG_F1", "InnerBG2", "InnerBG_F2", "InnerBG3", "InnerBG_F3",
 		"Header", "ButtonClose", "LogisticList", "ButtonCreateLogisticGroup", "ButtonDeleteLogisticGroup",
-		"LogisticName", "StatusLabel", "Status",
-		"ButtonSaveLogistic",
+		"LogisticName", "StatusLabel", "Status", "TimeLabel", "Time", "DestinationLabel", "Destination",
+		"LoadedTitle", "TruckCountLabel", "TruckCount", "LoadedSupplyLabel", "LoadedSupply", "LoadedAmmoLabel", "LoadedAmmo", "LoadedFuelLabel", "LoadedFuel", "ButtonBuyTruck", "ButtonSellTruck",
+		"ButtonSaveLogistic", "ButtonAbortLogistic",
 		"LogisticMap", "ButtonClose2"
 	};
 
@@ -134,15 +135,152 @@ class liberation_logistic {
 		text = "";
 	};
 
+	class TimeLabel : StdText {
+		idc = 75808;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (4 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_PRODUCTION_TIMER;
+	};
+	class Time : TimeLabel {
+		idc = 75809;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class DestinationLabel : StdText {
+		idc = 758010;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (6 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_DESTINATION;
+	};
+	class Destination : DestinationLabel {
+		idc = 758011;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class LoadedTitle : StdText {
+		idc = 758012;
+		style = ST_CENTER;
+		colorBackground[] = COLOR_BLACK_ALPHA;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (10 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_LOADEDDETAIL;
+	};
+
+	class TruckCountLabel : StdText {
+		idc = 758013;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (12 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_TRUCKCOUNT;
+	};
+	class TruckCount : TruckCountLabel {
+		idc = 758014;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class LoadedSupplyLabel : StdText {
+		idc = 758015;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (14 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_MANPOWER;
+	};
+	class LoadedSupply : LoadedSupplyLabel {
+		idc = 758016;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class LoadedAmmoLabel : StdText {
+		idc = 758017;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (16 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_AMMO;
+	};
+	class LoadedAmmo : LoadedAmmoLabel {
+		idc = 758018;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class LoadedFuelLabel : StdText {
+		idc = 758019;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (18 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_FUEL;
+	};
+	class LoadedFuel : LoadedFuelLabel {
+		idc = 758020;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
+	class ButtonBuyTruck : StdButton {
+	 	idc = 758021;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
+		w = (0.0725 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = $STR_LOGSTICS_BUYTRUCK;
+		action = "buyLogiTruck = 1";
+	};
+
+	class ButtonSellTRuck : StdButton {
+	 	idc = 758022;
+		x = (0.4185 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
+		w = (0.0725 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = $STR_LOGSTICS_SELLTRUCK;
+		action = "sellLogiTruck = 1";
+	};
+
 	class ButtonSaveLogistic : StdButton {
 	 	idc = 758080;
-		sizeEx = 0.026 * safezoneH;
+		sizeEx = 0.02 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.7128 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
-		h = (0.045 * safezoneH);
-		text = $STR_CONFIRM;
-		action = "saveSectorSetting = 1";
+		h = (0.021 * safezoneH);
+		text = $STR_LOGISTIC_CONFIRM;
+		action = "saveConvoySettings = 1";
+	};
+	class ButtonAbortLogistic : StdButton {
+	 	idc = 758081;
+		sizeEx = 0.02 * safezoneH;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.7368 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.021 * safezoneH);
+		text = $STR_LOGISTIC_CANCEL;
+		action = "convoyStandby = 1";
 	};
 
 	class LogisticMap : kndr_MapControl {
