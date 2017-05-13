@@ -40,11 +40,11 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";					// Default "CargoNet_01_
 infantry_units = [
 	["UK3CB_BAF_Pointman_MTP_H",15,0,0],
 	["UK3CB_BAF_Rifleman_762_MTP_H",15,0,0],
-	["UK3CB_BAF_LAT_ILAW_762_MTP_H",0,0,0],
+	["UK3CB_BAF_LAT_ILAW_762_MTP_H",20,0,0],
 	["UK3CB_BAF_Grenadier_762_MTP_H",20,0,0],
 	["UK3CB_BAF_LSW_MTP_H",20,0,0],
 	["UK3CB_BAF_MGLMG_MTP_H",20,0,0],
-	["UK3CB_BAF_Medic_MTP_H",0,0,0],
+	["UK3CB_BAF_Medic_MTP_H",20,0,0],
 	["UK3CB_BAF_Marksman_MTP_H",20,0,0],
 	["UK3CB_BAF_Sharpshooter_MTP_H",30,0,0],
 	["UK3CB_BAF_Engineer_MTP_H",10,0,0],
