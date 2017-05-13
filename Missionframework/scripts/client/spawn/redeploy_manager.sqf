@@ -203,7 +203,7 @@ while { true } do {
 	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
 	if (({(_x in KP_liberation_allowed_items) || !((_x find "ACRE") == -1)} count _playerItems) != count _playerItems) then {
-		_text = format ["[KP LIBERATION] [INFO] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
+		_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 		_text remoteExec ["diag_log",2];
 		_badItems = "";
 		{_badItems = _badItems + _x + "\n";} forEach (_playerItems - KP_liberation_allowed_items);
