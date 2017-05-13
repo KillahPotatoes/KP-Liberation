@@ -1,5 +1,5 @@
 class liberation_production {
-	idd = 758001;
+	idd = 75801;
 	movingEnable = false;
 	controlsBackground[] = {};
 
@@ -68,7 +68,7 @@ class liberation_production {
 	};
 
 	class ButtonClose : StdButton {
-		idc = 7580011;
+		idc = 75801;
 		x = 0.785 * safezoneW + safezoneX;
 		y = 0.145 * safezoneH + safezoneY;
 		w = 0.015 * safezoneW;
@@ -78,7 +78,7 @@ class liberation_production {
 	};
 
 	class ProductionList : StdListBox {
-		idc = 7580012;
+		idc = 75802;
 		x = (0.2 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.12 * safezoneW) + BORDERSIZE;
@@ -88,7 +88,7 @@ class liberation_production {
 	};
 
 	class SectorName : StdText {
-		idc = 7580013;
+		idc = 75803;
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
@@ -107,7 +107,7 @@ class liberation_production {
 		text = $STR_PRODUCTION_TYPE;
 	};
 	class SectorType : SectorTypeLabel {
-		idc = 7580014;
+		idc = 75804;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -123,7 +123,7 @@ class liberation_production {
 		text = $STR_PRODUCTION_PRODUCING;
 	};
 	class SectorProd : SectorProdLabel {
-		idc = 7580015;
+		idc = 75805;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -139,7 +139,7 @@ class liberation_production {
 		text = $STR_PRODUCTION_STORAGE;
 	};
 	class SectorStorage : SectorStorageLabel {
-		idc = 7580016;
+		idc = 75806;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -155,7 +155,7 @@ class liberation_production {
 		text = $STR_PRODUCTION_TIMER;
 	};
 	class SectorTimer : SectorTimerLabel {
-		idc = 7580017;
+		idc = 75807;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -173,7 +173,7 @@ class liberation_production {
 		text = $STR_PRODUCTION_FACILITIES;
 	};
 	class FacilitiesSupply : StdText {
-		idc = 7580018;
+		idc = 75808;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (14 * ICONE_SPACY);
@@ -182,7 +182,7 @@ class liberation_production {
 		text = $STR_MANPOWER;
 	};
 	class FacilitiesAmmo : StdText {
-		idc = 7580019;
+		idc = 75809;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (16 * ICONE_SPACY);
@@ -191,7 +191,7 @@ class liberation_production {
 		text = $STR_AMMO;
 	};
 	class FacilitiesFuel : StdText {
-		idc = 7580020;
+		idc = 758010;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (18 * ICONE_SPACY);
@@ -220,7 +220,7 @@ class liberation_production {
 		text = $STR_MANPOWER;
 	};
 	class StorageSupply : StorageSupplyLabel {
-		idc = 7580021;
+		idc = 758011;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -236,7 +236,7 @@ class liberation_production {
 		text = $STR_AMMO;
 	};
 	class StorageAmmo : StorageAmmoLabel {
-		idc = 7580022;
+		idc = 758012;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -252,7 +252,7 @@ class liberation_production {
 		text = $STR_FUEL;
 	};
 	class StorageFuel : StorageFuelLabel {
-		idc = 7580023;
+		idc = 758013;
 		style = ST_RIGHT;
 		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		w = (0.08 * safezoneW);
@@ -271,7 +271,7 @@ class liberation_production {
 	};
 
 	class ProduceToolBox {
-		idc = 7580024;
+		idc = 758014;
 		type = CT_TOOLBOX;
 		style = ST_CENTER;
 		font = FontM;
@@ -297,7 +297,7 @@ class liberation_production {
 	};
 
 	class ButtonSaveSector : StdButton {
-	 	idc = 7580025;
+	 	idc = 758015;
 		sizeEx = 0.026 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.7128 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
@@ -308,7 +308,7 @@ class liberation_production {
 	};
 
 	class SectorMap : kndr_MapControl {
-		idc = 7580026;
+		idc = 758016;
 		x = (0.51 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.29 * safezoneW) + BORDERSIZE;
@@ -316,7 +316,7 @@ class liberation_production {
 	};
 
 	 class ButtonClose2 : StdButton {
-	 	idc = 7580027;
+	 	idc = 758017;
 		x = 0.455 * safezoneW + safezoneX;
 		y = 0.77 * safezoneH + safezoneY;
 		w = 0.09 * safezoneW;

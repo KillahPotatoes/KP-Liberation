@@ -14,18 +14,18 @@ disableSerialization;
 
 waitUntil {dialog};
 
-_mapdisplay = ((findDisplay 758001) displayCtrl 7580026);
+_mapdisplay = ((findDisplay 75801) displayCtrl 758016);
 
-lbClear 7580012;
+lbClear 75802;
 {
-	lbAdd [7580012, (_x select 0)];
+	lbAdd [75802, (_x select 0)];
 } forEach KP_liberation_production;
 
 ctrlMapAnimClear _mapdisplay;
 
 while {dialog && (alive player)} do {
-	if ( lbCurSel 7580012 == -1 ) then {
-		lbSetCurSel [7580012,0];
+	if ( lbCurSel 75802 == -1 ) then {
+		lbSetCurSel [75802,0];
 	};
 
 	if (saveSectorSetting == 1) then {
@@ -34,13 +34,13 @@ while {dialog && (alive player)} do {
 		sleep 0.5;
 	};
 
-	_listselect = (lbCurSel 7580012);
+	_listselect = (lbCurSel 75802);
 	_selectedSector = (KP_liberation_production select _listselect);
 
-	((findDisplay 758001) displayCtrl 7580013) ctrlSetText (_selectedSector select 0);
+	ctrlSetText [75803,(_selectedSector select 0)];
 
 	if ((_selectedSector select 2) == 1) then {_sectorType = localize "STR_PRODUCTION_FACTORY";} else {_sectorType = localize "STR_PRODUCTION_CITY";};
-	((findDisplay 758001) displayCtrl 7580014) ctrlSetText _sectorType;
+	ctrlSetText [75804, _sectorType];
 
 	if ((count (_selectedSector select 3)) > 0) then {
 		_storage = ((nearestObjects [((_selectedSector select 3) select 0), [KP_liberation_small_storage_building], 25]) select 0);
@@ -61,42 +61,42 @@ while {dialog && (alive player)} do {
 		_storagespace = format ["%1 / %2",_crateCount,_crateMax];
 		_productiontime = format [localize "STR_PRODUCTION_MINUTES",(_selectedSector select 8)];
 
-		((findDisplay 758001) displayCtrl 7580015) ctrlSetText _producing;
+		ctrlSetText [75805, _producing];
 		if ((_selectedSector select 7) == 3) then {
-			((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_negative;
+			((findDisplay 75801) displayCtrl 75805) ctrlSetTextColor _color_negative;
 		} else {
-			((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_neutral;
+			((findDisplay 75801) displayCtrl 75805) ctrlSetTextColor _color_neutral;
 		};
-		((findDisplay 758001) displayCtrl 7580016) ctrlSetText _storagespace;
-		((findDisplay 758001) displayCtrl 7580016) ctrlSetTextColor _color_actual;
-		((findDisplay 758001) displayCtrl 7580017) ctrlSetText _productiontime;
-		((findDisplay 758001) displayCtrl 7580017) ctrlSetTextColor _color_neutral;
+		ctrlSetText [75806, _storagespace];
+		((findDisplay 75801) displayCtrl 75806) ctrlSetTextColor _color_actual;
+		ctrlSetText [75807, _productiontime];
+		((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_neutral;
 		_color_actual = _color_neutral;
 	} else {
 		_producing = localize "STR_PRODUCTION_NOTHING";
 		_storagespace = localize "STR_PRODUCTION_NOSTORAGE";
 		_productiontime = localize "STR_PRODUCTION_NOTIMER";
-		((findDisplay 758001) displayCtrl 7580015) ctrlSetText _producing;
-		((findDisplay 758001) displayCtrl 7580015) ctrlSetTextColor _color_negative;
-		((findDisplay 758001) displayCtrl 7580016) ctrlSetText _storagespace;
-		((findDisplay 758001) displayCtrl 7580016) ctrlSetTextColor _color_negative;
-		((findDisplay 758001) displayCtrl 7580017) ctrlSetText _productiontime;
-		((findDisplay 758001) displayCtrl 7580017) ctrlSetTextColor _color_negative;
+		ctrlSetText [75805, _producing];
+		((findDisplay 75801) displayCtrl 75805) ctrlSetTextColor _color_negative;
+		ctrlSetText [75806, _storagespace];
+		((findDisplay 75801) displayCtrl 75806) ctrlSetTextColor _color_negative;
+		ctrlSetText [75807, _productiontime];
+		((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_negative;
 	};
 
 	switch (_selectedSector select 2) do {
 		case 1: {
-			((findDisplay 758001) displayCtrl 7580018) ctrlSetTextColor _color_positive;
-			((findDisplay 758001) displayCtrl 7580019) ctrlSetTextColor _color_positive;
-			((findDisplay 758001) displayCtrl 7580020) ctrlSetTextColor _color_positive;
+			((findDisplay 75801) displayCtrl 75808) ctrlSetTextColor _color_positive;
+			((findDisplay 75801) displayCtrl 75809) ctrlSetTextColor _color_positive;
+			((findDisplay 75801) displayCtrl 758010) ctrlSetTextColor _color_positive;
 		};
 		default {
 			if (_selectedSector select 4) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 758001) displayCtrl 7580018) ctrlSetTextColor _color_actual;
+			((findDisplay 75801) displayCtrl 75808) ctrlSetTextColor _color_actual;
 			if (_selectedSector select 5) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 758001) displayCtrl 7580019) ctrlSetTextColor _color_actual;
+			((findDisplay 75801) displayCtrl 75809) ctrlSetTextColor _color_actual;
 			if (_selectedSector select 6) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 758001) displayCtrl 7580020) ctrlSetTextColor _color_actual;
+			((findDisplay 75801) displayCtrl 758010) ctrlSetTextColor _color_actual;
 			_color_actual = _color_neutral;
 		};
 	};
@@ -109,15 +109,15 @@ while {dialog && (alive player)} do {
 	if (_ammoValue == 1) then {_ammoValue = format [localize "STR_PRODUCTION_CRATE", _ammoValue];} else {_ammoValue = format [localize "STR_PRODUCTION_CRATES", _ammoValue];};
 	if (_fuelValue == 1) then {_fuelValue = format [localize "STR_PRODUCTION_CRATE", _fuelValue];} else {_fuelValue = format [localize "STR_PRODUCTION_CRATES", _fuelValue];};
 
-	((findDisplay 758001) displayCtrl 7580021) ctrlSetText _supplyValue;
-	((findDisplay 758001) displayCtrl 7580022) ctrlSetText _ammoValue;
-	((findDisplay 758001) displayCtrl 7580023) ctrlSetText _fuelValue;
+	ctrlSetText [758011, _supplyValue];
+	ctrlSetText [758012, _ammoValue];
+	ctrlSetText [758013, _fuelValue];
 
 	"spawn_marker" setMarkerPosLocal (getMarkerPos (_selectedSector select 1));
 	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(getMarkerPos (_selectedSector select 1))];
 	ctrlMapAnimCommit _mapdisplay;
 
-	waitUntil {!dialog || !(alive player) || (lbCurSel 7580012) != _listselect || saveSectorSetting != 0};
+	waitUntil {!dialog || !(alive player) || (lbCurSel 75802) != _listselect || saveSectorSetting != 0};
 };
 
 "spawn_marker" setMarkerPosLocal markers_reset;

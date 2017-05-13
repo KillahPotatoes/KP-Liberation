@@ -186,6 +186,7 @@ class Missions
 * Tweaked: If attacking a sector, a random amount of crates with random resources will spawn once.
 * Tweaked: Better comments in the unit preset files. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Vehicles with dead crew can now be recycled
+* Tweaked: Altis mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Enemy weapon dance. Thanks to [k4s0](https://github.com/k4s0)

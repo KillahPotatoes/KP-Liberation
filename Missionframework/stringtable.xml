@@ -3396,6 +3396,30 @@
 						<Original>Logistic Overview</Original>
 						<German>Logistikübersicht</German>
 				</Key>
+				<Key ID="STR_ADD">
+						<Original>Add</Original>
+						<German>Hinzfg</German>
+				</Key>
+				<Key ID="STR_DEL">
+						<Original>Del</Original>
+						<German>Entf</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_STATUS">
+						<Original>Status:</Original>
+						<German>Status:</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_STANDBY">
+						<Original>Standby</Original>
+						<German>Bereitschaft</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_LOADING">
+						<Original>Loading</Original>
+						<German>Verladen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TRAVEL">
+						<Original>On the way</Original>
+						<German>Unterwegs</German>
+				</Key>
 				
 				<!-- English adaptations in v0.95, need translations. -->
 				<Key ID="STR_MISSION_DESCRIPTION">

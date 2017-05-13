@@ -1,12 +1,12 @@
 class liberation_logistic {
-	idd = 758002;
+	idd = 75802;
 	movingEnable = false;
 	controlsBackground[] = {};
 
 	controls[] = {
 		"OuterBG1", "OuterBG_F1", "InnerBG1", "InnerBG_F1", "InnerBG2", "InnerBG_F2", "InnerBG3", "InnerBG_F3",
-		"Header", "ButtonClose", "LogisticList", 
-		"LogisticName",
+		"Header", "ButtonClose", "LogisticList", "ButtonCreateLogisticGroup", "ButtonDeleteLogisticGroup",
+		"LogisticName", "StatusLabel", "Status",
 		"ButtonSaveLogistic",
 		"LogisticMap", "ButtonClose2"
 	};
@@ -66,7 +66,7 @@ class liberation_logistic {
 	};
 
 	class ButtonClose : StdButton {
-		idc = 75800201;
+		idc = 75801;
 		x = 0.785 * safezoneW + safezoneX;
 		y = 0.145 * safezoneH + safezoneY;
 		w = 0.015 * safezoneW;
@@ -76,17 +76,39 @@ class liberation_logistic {
 	};
 
 	class LogisticList : StdListBox {
-		idc = 75800202;
+		idc = 75802;
 		x = (0.2 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.12 * safezoneW) + BORDERSIZE;
-		h = (0.55 * safezoneH) + (1.5 * BORDERSIZE);
+		h = (0.50 * safezoneH) + (1.5 * BORDERSIZE);
 		shadow = 2;
 		onLBSelChanged="";
 	};
 
+	class ButtonCreateLogisticGroup : StdButton {
+	 	idc = 75803;
+		sizeEx = 0.026 * safezoneH;
+		x = (0.2 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.7128 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
+		w = (0.055 * safezoneW) + BORDERSIZE;
+		h = (0.045 * safezoneH);
+		text = $STR_ADD;
+		action = "[] remoteExec ['add_logiGroup_remote_call',2]";
+	};
+
+	class ButtonDeleteLogisticGroup : StdButton {
+	 	idc = 75804;
+		sizeEx = 0.026 * safezoneH;
+		x = (0.265 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.7128 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
+		w = (0.055 * safezoneW) + BORDERSIZE;
+		h = (0.045 * safezoneH);
+		text = $STR_DEL;
+		action = "deleteLogiGroup = 1";
+	};
+
 	class LogisticName : StdText {
-		idc = 75800203;
+		idc = 75805;
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
@@ -96,8 +118,24 @@ class liberation_logistic {
 		text = "";
 	};
 
+	class StatusLabel : StdText {
+		idc = 75806;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (2 * ICONE_SPACY);
+		w = (0.07 * safezoneW);
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_STATUS;
+	};
+	class Status : StatusLabel {
+		idc = 75807;
+		style = ST_RIGHT;
+		x = (0.4145 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		w = (0.08 * safezoneW);
+		text = "";
+	};
+
 	class ButtonSaveLogistic : StdButton {
-	 	idc = 75800204;
+	 	idc = 758080;
 		sizeEx = 0.026 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.7128 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
@@ -108,7 +146,7 @@ class liberation_logistic {
 	};
 
 	class LogisticMap : kndr_MapControl {
-		idc = 75800205;
+		idc = 758098;
 		x = (0.51 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.29 * safezoneW) + BORDERSIZE;
@@ -116,7 +154,7 @@ class liberation_logistic {
 	};
 
 	 class ButtonClose2 : StdButton {
-	 	idc = 75800206;
+	 	idc = 758099;
 		x = 0.455 * safezoneW + safezoneX;
 		y = 0.77 * safezoneH + safezoneY;
 		w = 0.09 * safezoneW;
