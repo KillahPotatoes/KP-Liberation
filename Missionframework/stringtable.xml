@@ -3428,6 +3428,10 @@
 						<Original>No resources</Original>
 						<German>Keine Ressourcen</German>
 				</Key>
+				<Key ID="STR_LOGISTIC_NOSPACE">
+						<Original>No storagespace</Original>
+						<German>Kein Lagerplatz</German>
+				</Key>
 				<Key ID="STR_LOGISTIC_DESTINATION">
 						<Original>Next destination:</Original>
 						<German>Nächster Zielort:</German>
@@ -3455,6 +3459,10 @@
 				<Key ID="STR_LOGISTIC_CANCEL">
 						<Original>Abort mission</Original>
 						<German>Auftrag abbrechen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_CANTAFFORD">
+						<Original>Not enough resources</Original>
+						<German>Nicht genug Ressourcen</German>
 				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->

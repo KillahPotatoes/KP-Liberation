@@ -1,10 +1,11 @@
-private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_mapdisplay"];
+private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_mapdisplay"];
 
 _dialog = createDialog "liberation_logistic";
 _logi_count = 0;
 _listselect = -1;
 _selectedGroup = [];
 _detailControls = [75805,75806,75807,75808,75809,758010,758011,758012,758013,758014,758015,758016,758017,758018,758019,758020,758021,758022,758080,758081];
+_nearfob = [] call F_getNearestFob;
 
 deleteLogiGroup = 0;
 buyLogiTruck = 0;
@@ -35,26 +36,26 @@ while {dialog && (alive player)} do {
 
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
-		[_listselect] remoteExec ["add_logiTruck_remote_call",2];
-		sleep 0.5;
+		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
+		sleep 1;
 	};
 
 	if (sellLogiTruck == 1) then {
 		sellLogiTruck = 0;
-		[_listselect] remoteExec ["del_logiTruck_remote_call",2];
-		sleep 0.5;
+		[_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
+		sleep 1;
 	};
 
 	if (saveConvoySettings == 1) then {
 		saveConvoySettings = 0;
-		[_listselect] remoteExec ["save_logi_remote_call",2];
-		sleep 0.5;
+		[_listselect,clientOwner] remoteExec ["save_logi_remote_call",2];
+		sleep 1;
 	};
 
 	if (convoyStandby == 1) then {
 		convoyStandby = 0;
-		[_listselect] remoteExec ["abort_logi_remote_call",2];
-		sleep 0.5;
+		[_listselect,clientOwner] remoteExec ["abort_logi_remote_call",2];
+		sleep 1;
 	};
 
 	if (_logi_count != (count KP_liberation_logistics)) then {
