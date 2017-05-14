@@ -96,4 +96,4 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
 
 please_recalculate = true;
 
-(KP_liberation_logistics select _index) set [1,	((KP_liberation_logistics select _index) select 1) - 1];
+(KP_liberation_logistics select _index) set [1, ((KP_liberation_logistics select _index) select 1) - 1];
