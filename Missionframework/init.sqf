@@ -12,6 +12,7 @@ switch (KP_liberation_preset) do {
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
+	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cBAF.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
 };
 

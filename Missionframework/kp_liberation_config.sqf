@@ -28,7 +28,8 @@ Which units preset should be used?
 1 = RHS USAF and RHS AFRF.
 2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
 3 = RHS USAF, RHS AFRF and BWMod.
-4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).	*/
+4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
+5 = 3cbBAF with RHS United Stats Armed Forces arsenal*/
 KP_liberation_preset = 0;
 
 /* Which arsenal preset should be used?
@@ -37,7 +38,8 @@ KP_liberation_preset = 0;
 2 = Killah Potatoes Gaming Community arsenal preset.
 3 = RHS United States Armed Forces arsenal preset.
 4 = RHS United States Armed Forces arsenal preset with ACE.
-5 = RHS United States Armed Forces arsenal preset with ACE and ACRE.	*/
+5 = RHS United States Armed Forces arsenal preset with ACE and ACRE.	
+6 = 3cbBAF with RHS United Stats Armed Forces arsenal*/
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -220,7 +222,9 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
+	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
 ];
 
 // Everything that can resupply other vehicles.
@@ -236,7 +240,9 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
+	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
 ];
 
 vehicle_rearm_sources = [
@@ -250,7 +256,9 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
+	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
 ];
 
 vehicle_refuel_sources = [
@@ -264,7 +272,9 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_d",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
-	"rhsusf_M978A4_BKIT_usarmy_wd"
+	"rhsusf_M978A4_BKIT_usarmy_wd",
+	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
+	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
 ];
 
 // Classnames of boats, so they can be built on water.

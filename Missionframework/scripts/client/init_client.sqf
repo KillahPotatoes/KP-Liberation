@@ -6,6 +6,7 @@ switch (KP_liberation_arsenal) do {
 	case 3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
+	case 6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\useBlacklist.sqf";};
 };
 
