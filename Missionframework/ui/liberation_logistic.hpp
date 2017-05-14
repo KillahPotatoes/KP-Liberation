@@ -8,6 +8,8 @@ class liberation_logistic {
 		"Header", "ButtonClose", "LogisticList", "ButtonCreateLogisticGroup", "ButtonDeleteLogisticGroup",
 		"LogisticName", "StatusLabel", "Status", "TimeLabel", "Time", "DestinationLabel", "Destination",
 		"LoadedTitle", "TruckCountLabel", "TruckCount", "LoadedSupplyLabel", "LoadedSupply", "LoadedAmmoLabel", "LoadedAmmo", "LoadedFuelLabel", "LoadedFuel", "ButtonBuyTruck", "ButtonSellTruck",
+		"ATitle", "ACombo", "ASupp", "AAmmo", "AFuel",
+		"BTitle", "BCombo", "BSupp", "BAmmo", "BFuel",
 		"ButtonSaveLogistic", "ButtonAbortLogistic",
 		"LogisticMap", "ButtonClose2"
 	};
@@ -94,7 +96,7 @@ class liberation_logistic {
 		w = (0.055 * safezoneW) + BORDERSIZE;
 		h = (0.045 * safezoneH);
 		text = $STR_ADD;
-		action = "[] remoteExec ['add_logiGroup_remote_call',2]";
+		action = "addLogiGroup = 1";
 	};
 
 	class ButtonDeleteLogisticGroup : StdButton {
@@ -248,7 +250,8 @@ class liberation_logistic {
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
 		w = (0.0725 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
-		text = $STR_LOGSTICS_BUYTRUCK;
+		text = $STR_LOGSTIC_BUYTRUCK;
+		tooltip = $STR_LOGISTIC_TT_BUYTRUCK;
 		action = "buyLogiTruck = 1";
 	};
 
@@ -258,8 +261,107 @@ class liberation_logistic {
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
 		w = (0.0725 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
-		text = $STR_LOGSTICS_SELLTRUCK;
+		text = $STR_LOGSTIC_SELLTRUCK;
+		tooltip = $STR_LOGISTIC_TT_SELLTRUCK;
 		action = "sellLogiTruck = 1";
+	};
+
+	class ATitle : StdText {
+		idc = 758023;
+		style = ST_CENTER;
+		colorBackground[] = COLOR_BLACK_ALPHA;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (24 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_LABELA;
+	};
+	class ACombo : StdCombo {
+		idc = 758024;
+		sizeEx = 0.018 * safezoneH;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (26 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+	};
+	class ASupp : StdEdit {
+		idc = 758025;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		w = 0.05 * safezoneW;
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_SUPPLY;
+		action = "";
+		autocomplete = "";
+	};
+	class AAmmo : StdEdit {
+		idc = 758026;
+		x = (0.392 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		w = 0.05 * safezoneW;
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_AMMO;
+		action = "";
+		autocomplete = "";
+	};
+	class AFuel : StdEdit {
+		idc = 758027;
+		x = (0.446 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		w = 0.05 * safezoneW;
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_FUEL;
+		action = "";
+		autocomplete = "";
+	};
+
+	class BTitle : StdText {
+		idc = 758028;
+		style = ST_CENTER;
+		colorBackground[] = COLOR_BLACK_ALPHA;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (30 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = $STR_LOGISTIC_LABELB;
+	};
+	class BCombo : StdCombo {
+		idc = 758029;
+		sizeEx = 0.018 * safezoneH;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (32 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+	};
+	class BSupp : StdEdit {
+		idc = 758030;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		w = 0.05 * safezoneW
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_SUPPLY;
+		action = "";
+		autocomplete = "";
+	};
+	class BAmmo : StdEdit {
+		idc = 758031;
+		x = (0.392 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		w = 0.05 * safezoneW
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_AMMO;
+		action = "";
+		autocomplete = "";
+	};
+	class BFuel : StdEdit {
+		idc = 758032;
+		x = (0.446 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		w = 0.05 * safezoneW
+		text = "";
+		tooltip = $STR_LOGISTIC_TT_FUEL;
+		action = "";
+		autocomplete = "";
 	};
 
 	class ButtonSaveLogistic : StdButton {

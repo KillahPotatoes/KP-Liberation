@@ -97,14 +97,4 @@ if ((_price_s > KP_liberation_supplies) || (_price_a > KP_liberation_ammo) || (_
 
 please_recalculate = true;
 
-KP_liberation_logistics set [_index,[
-	(KP_liberation_logistics select _index) select 0,
-	((KP_liberation_logistics select _index) select 1) + 1,
-	(KP_liberation_logistics select _index) select 2,
-	(KP_liberation_logistics select _index) select 3,
-	(KP_liberation_logistics select _index) select 4,
-	(KP_liberation_logistics select _index) select 5,
-	(KP_liberation_logistics select _index) select 6,
-	(KP_liberation_logistics select _index) select 7,
-	(KP_liberation_logistics select _index) select 8
-]];
+(KP_liberation_logistics select _index) set [1, ((KP_liberation_logistics select _index) select 1) + 1];

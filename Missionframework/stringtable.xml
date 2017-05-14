@@ -3444,13 +3444,21 @@
 						<Original>Assigned Trucks</Original>
 						<German>Zugeteilte LKWs</German>
 				</Key>
-				<Key ID="STR_LOGSTICS_BUYTRUCK">
+				<Key ID="STR_LOGSTIC_BUYTRUCK">
 						<Original>Assign Truck</Original>
 						<German>LKW zuteilen</German>
 				</Key>
-				<Key ID="STR_LOGSTICS_SELLTRUCK">
+				<Key ID="STR_LOGSTIC_SELLTRUCK">
 						<Original>Unassign Truck</Original>
 						<German>LKW abziehen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TT_BUYTRUCK">
+						<Original>Costs: 100 supplies and 100 fuel.</Original>
+						<German>Kosten: 100 Nachschub und 100 Kraftstoff.</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TT_SELLTRUCK">
+						<Original>Gives: 50 supplies and 50 fuel.</Original>
+						<German>Erstattet: 50 Nachschub und 50 Kraftstoff.</German>
 				</Key>
 				<Key ID="STR_LOGISTIC_CONFIRM">
 						<Original>Confirm mission</Original>
@@ -3463,6 +3471,30 @@
 				<Key ID="STR_LOGISTIC_CANTAFFORD">
 						<Original>Not enough resources</Original>
 						<German>Nicht genug Ressourcen</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_ROUTETITLE">
+						<Original>Mission planning</Original>
+						<German>Auftragsplanung</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_LABELA">
+						<Original>Destination A</Original>
+						<German>Ziel A</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_LABELB">
+						<Original>Destination B</Original>
+						<German>Ziel B</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TT_SUPPLY">
+						<Original>Supplies from here to the other destination.</Original>
+						<German>Nachschub von hier zum anderen Ziel.</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TT_AMMO">
+						<Original>Ammo from here to the other destination.</Original>
+						<German>Munition von hier zum anderen Ziel.</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_TT_FUEL">
+						<Original>Fuel from here to the other destination.</Original>
+						<German>Kraftstoff von hier zum anderen Ziel.</German>
 				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->

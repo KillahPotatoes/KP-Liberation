@@ -6,6 +6,8 @@ private ["_storage_areas", "_price_s", "_price_a", "_price_f", "_crateSum", "_sp
 
 logiError = 0;
 
+if (((KP_liberation_logistics select _index) select 1) <= 0) exitWith {logiError = 1; _clientID publicVariableClient "logiError";};
+
 _storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 
 if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
@@ -94,14 +96,4 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
 
 please_recalculate = true;
 
-KP_liberation_logistics set [_index,[
-	(KP_liberation_logistics select _index) select 0,
-	((KP_liberation_logistics select _index) select 1) - 1,
-	(KP_liberation_logistics select _index) select 2,
-	(KP_liberation_logistics select _index) select 3,
-	(KP_liberation_logistics select _index) select 4,
-	(KP_liberation_logistics select _index) select 5,
-	(KP_liberation_logistics select _index) select 6,
-	(KP_liberation_logistics select _index) select 7,
-	(KP_liberation_logistics select _index) select 8
-]];
+(KP_liberation_logistics select _index) set [1,	((KP_liberation_logistics select _index) select 1) - 1];

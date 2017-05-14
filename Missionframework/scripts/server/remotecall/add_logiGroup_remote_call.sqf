@@ -3,11 +3,12 @@ if (!isServer) exitWith {};
 KP_liberation_logistics append [[
 	military_alphabet select (count KP_liberation_logistics), 	// ID
 	0,															// Truck Count
-	[],															// Position Point A
-	[],															// Position Point B
-	[],															// Ressource transport count A -> B [S,A,F]
-	[],															// Ressource transport count B -> A [S,A,F]
+	[0,0,0],													// Position Point A
+	[0,0,0],													// Position Point B
+	[0,0,0],													// Ressource transport count A -> B [S,A,F]
+	[0,0,0],													// Ressource transport count B -> A [S,A,F]
 	[0,0,0],													// Currently loaded [S,A,F]
 	0,															// Status (0 standby, 1 at A, 2 to B, 3 at B, 4 to A, 5 aborting)
-	-1															// Time left in current status
+	-1,															// Time left in current status
+	[]															// Current Position
 ]];

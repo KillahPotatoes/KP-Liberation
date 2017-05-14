@@ -515,3 +515,26 @@ class StdCombo {
 		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
 	};
 };
+
+class StdEdit {
+	idc = -1;
+	access = 0;
+	type = CT_EDIT;
+	style = ST_RIGHT+ST_FRAME;
+	default = false;
+	font = FontM;
+	sizeEx = 0.018 * safezoneH;
+	colorText[] = COLOR_WHITE;
+	colorSelection[] = COLOR_LIGHTGRAY;
+	colorDisabled[] = COLOR_LIGHTGRAY;
+	colorBackground[] = COLOR_GREEN_NOALPHA;
+	colorBackgroundDisabled[] = COLOR_GREEN;
+	colorBackgroundActive[] = COLOR_GREEN_NOALPHA;
+	x = 0;
+	y = 0;
+	w = 0.3;
+	h = (0.02 * safezoneH);
+	text = "";
+	autocomplete = "";
+	shadow = 0;
+};

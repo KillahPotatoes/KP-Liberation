@@ -1,12 +1,28 @@
-private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_mapdisplay"];
+private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_logi_destinations", "_mapdisplay"];
 
 _dialog = createDialog "liberation_logistic";
 _logi_count = 0;
 _listselect = -1;
 _selectedGroup = [];
-_detailControls = [75805,75806,75807,75808,75809,758010,758011,758012,758013,758014,758015,758016,758017,758018,758019,758020,758021,758022,758080,758081];
+_detailControls = [
+	75805,75806,75807,75808,75809,758010,758011,758012,758013,758014,758015,758016,758017,758018,
+	758019,758020,758021,758022,758023,758024,758025,758026,758027,758028,758029,758030,758031,
+	758032,758080,758081
+];
 _nearfob = [] call F_getNearestFob;
+_logi_destinations = [];
 
+{
+	_logi_destinations pushBack [(format ["FOB %1", military_alphabet select _forEachIndex]), _x];
+} forEach GRLIB_all_fobs;
+
+{
+	_logi_destinations pushBack [(markerText _x),(markerPos _x)];
+} forEach (blufor_sectors - sectors_bigtown - sectors_military - sectors_tower);
+
+_logi_destinations sort true;
+
+addLogiGroup = 0;
 deleteLogiGroup = 0;
 buyLogiTruck = 0;
 sellLogiTruck = 0;
@@ -27,13 +43,27 @@ while {dialog && (alive player)} do {
 	ctrlEnable [75804, false];
 	ctrlEnable [758021, false];
 	ctrlEnable [758022, false];
+	ctrlEnable [758024, false];
+	ctrlEnable [758025, false];
+	ctrlEnable [758026, false];
+	ctrlEnable [758027, false];
+	ctrlEnable [758029, false];
+	ctrlEnable [758030, false];
+	ctrlEnable [758031, false];
+	ctrlEnable [758032, false];
 	ctrlEnable [758080, false];
 	ctrlEnable [758081, false];
+
+	if (addLogiGroup == 1) then {
+		addLogiGroup = 0;
+		[_selectedGroup] remoteExec ["add_logiGroup_remote_call",2];
+		waitUntil {sleep 0.5; _logi_count != (count KP_liberation_logistics)};
+	};
 
 	if (deleteLogiGroup == 1) then {
 		deleteLogiGroup = 0;
 		[_selectedGroup] remoteExec ["del_logiGroup_remote_call",2];
-		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect)))};
+		waitUntil {sleep 0.5; _logi_count != (count KP_liberation_logistics)};
 	};
 
 	if (buyLogiTruck == 1) then {
@@ -86,6 +116,14 @@ while {dialog && (alive player)} do {
 		} else {
 			ctrlEnable [758022, true];
 			if ((_selectedGroup select 7) == 0) then {
+				ctrlEnable [758024, true];
+				ctrlEnable [758025, true];
+				ctrlEnable [758026, true];
+				ctrlEnable [758027, true];
+				ctrlEnable [758029, true];
+				ctrlEnable [758030, true];
+				ctrlEnable [758031, true];
+				ctrlEnable [758032, true];
 				ctrlEnable [758080, true];
 			};
 		};
@@ -118,6 +156,35 @@ while {dialog && (alive player)} do {
 		ctrlSetText [758016, (str ((_selectedGroup select 6) select 0))];
 		ctrlSetText [758018, (str ((_selectedGroup select 6) select 1))];
 		ctrlSetText [758020, (str ((_selectedGroup select 6) select 2))];
+
+		lbClear 758024;
+		lbClear 758029;
+		{
+				lbAdd [758024, (_x select 0)];
+				lbAdd [758029, (_x select 0)];
+		} forEach _logi_destinations;
+
+		if (!((_selectedGroup select 2) isEqualTo [0,0,0])) then {
+			{
+				// Why the hell does "if ((_selectedGroup select 2) isEqualTo (_x select 1)) ..." return false? -.-
+				if (((_selectedGroup select 2) distance2D (_x select 1) < 10)) exitWith {lbSetCurSel [758024, _forEachIndex];};
+			} forEach _logi_destinations;
+		};
+
+		if (!((_selectedGroup select 3) isEqualTo [0,0,0])) then {
+			{
+				if (((_selectedGroup select 3) distance2D (_x select 1) < 10)) exitWith {lbSetCurSel [758029, _forEachIndex];};
+			} forEach _logi_destinations;
+		};
+
+		ctrlSetText [758025, (str ((_selectedGroup select 4) select 0))];
+		ctrlSetText [758026, (str ((_selectedGroup select 4) select 1))];
+		ctrlSetText [758027, (str ((_selectedGroup select 4) select 2))];
+
+		ctrlSetText [758030, (str ((_selectedGroup select 5) select 0))];
+		ctrlSetText [758031, (str ((_selectedGroup select 5) select 1))];
+		ctrlSetText [758032, (str ((_selectedGroup select 5) select 2))];
+
 	} else {
 		{ctrlShow [_x, false]} forEach _detailControls;
 		_selectedGroup = [];
@@ -127,7 +194,7 @@ while {dialog && (alive player)} do {
 		!dialog
 		|| !(alive player)
 		|| (lbCurSel 75802) != _listselect
-		|| _logi_count != (count KP_liberation_logistics)
+		|| addLogiGroup != 0
 		|| deleteLogiGroup != 0
 		|| buyLogiTruck != 0
 		|| sellLogiTruck != 0
