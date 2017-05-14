@@ -4,15 +4,17 @@ params ["_index", "_nearfob", "_clientID"];
 
 private ["_storage_areas", "_price_s", "_price_a", "_price_f", "_storage_positions", "_storedCrates", "_crateValue"];
 
+logiError = 0;
+
 _storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 
-if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID];};
+if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 _price_s = 100;
 _price_a = 0;
 _price_f = 100;
 
-if ((_price_s > KP_liberation_supplies) || (_price_a > KP_liberation_ammo) || (_price_f > KP_liberation_fuel)) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID];};
+if ((_price_s > KP_liberation_supplies) || (_price_a > KP_liberation_ammo) || (_price_f > KP_liberation_fuel)) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 {
 	

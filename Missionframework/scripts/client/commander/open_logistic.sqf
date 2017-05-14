@@ -12,6 +12,7 @@ buyLogiTruck = 0;
 sellLogiTruck = 0;
 saveConvoySettings = 0;
 convoyStandby = 0;
+logiError = 0;
 
 disableSerialization;
 
@@ -32,31 +33,34 @@ while {dialog && (alive player)} do {
 	if (deleteLogiGroup == 1) then {
 		deleteLogiGroup = 0;
 		[_selectedGroup] remoteExec ["del_logiGroup_remote_call",2];
+		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect)))};
 	};
 
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
-		sleep 1;
+		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
 	if (sellLogiTruck == 1) then {
 		sellLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
-		sleep 1;
+		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
 	if (saveConvoySettings == 1) then {
 		saveConvoySettings = 0;
-		[_listselect,clientOwner] remoteExec ["save_logi_remote_call",2];
-		sleep 1;
+		[_listselect, clientOwner] remoteExec ["save_logi_remote_call",2];
+		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
 	if (convoyStandby == 1) then {
 		convoyStandby = 0;
-		[_listselect,clientOwner] remoteExec ["abort_logi_remote_call",2];
-		sleep 1;
+		[_listselect, clientOwner] remoteExec ["abort_logi_remote_call",2];
+		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
+
+	logiError = 0;
 
 	if (_logi_count != (count KP_liberation_logistics)) then {
 		_logi_count = (count KP_liberation_logistics);
@@ -77,7 +81,7 @@ while {dialog && (alive player)} do {
 		ctrlEnable [758021, true];
 		_selectedGroup = (KP_liberation_logistics select _listselect);
 
-		if ((_selectedGroup select 1) == 0) then {
+		if ((_selectedGroup select 1) <= 0) then {
 			ctrlEnable [75804, true];
 		} else {
 			ctrlEnable [758022, true];

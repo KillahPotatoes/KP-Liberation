@@ -4,9 +4,11 @@ params ["_index", "_nearfob", "_clientID"];
 
 private ["_storage_areas", "_price_s", "_price_a", "_price_f", "_crateSum", "_spaceSum", "_space", "_crate"];
 
+logiError = 0;
+
 _storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 
-if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID];};
+if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 _price_s = 50;
 _price_a = 0;
@@ -25,7 +27,7 @@ _spaceSum = 0;
 	};
 } forEach _storage_areas;
 
-if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID];};
+if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 {
 	_space = 0;
