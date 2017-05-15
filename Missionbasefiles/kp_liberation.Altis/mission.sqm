@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=528;
+		nextID=568;
 	};
 	class Camera
 	{
-		pos[]={8514.8223,149.35365,25060.34};
-		dir[]={0.028940845,-0.81311929,-0.5814994};
-		up[]={0.040421288,0.58201361,-0.81217492};
-		aside[]={-0.99883616,-1.3282988e-006,-0.049712807};
+		pos[]={17509.904,81.437813,12123.974};
+		dir[]={-0.1377659,-0.76863015,0.62468916};
+		up[]={-0.16553225,0.63969094,0.7505939};
+		aside[]={0.97653711,-8.2101906e-008,0.21536084};
 	};
 };
 binarizationWanted=0;
@@ -540,7 +540,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=3;
 						};
 					};
 				};
@@ -17697,14 +17697,13 @@ class Mission
 		class Item183
 		{
 			dataType="Marker";
-			position[]={17508.959,204.24942,12165.783};
+			position[]={17508.961,0,12165.783};
 			name="tower_2";
 			text="Radio Tower";
 			type="loc_Transmitter";
 			colorName="ColorEAST";
-			angle=129.35959;
 			id=2921;
-			atlOffset=180.38524;
+			atlOffset=-23.864229;
 		};
 		class Item184
 		{

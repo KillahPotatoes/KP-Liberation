@@ -3500,6 +3500,10 @@
 						<Original>Your mission is not possible.</Original>
 						<German>Auftrag nicht möglich.</German>
 				</Key>
+				<Key ID="STR_LOGISTIC_STANDBY_ERROR">
+						<Original>You can't abort this mission at the moment.</Original>
+						<German>Du kannst diesen Auftrag momentan nicht abbrechen.</German>
+				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->
 				<Key ID="STR_MISSION_DESCRIPTION">

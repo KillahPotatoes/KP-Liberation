@@ -10,6 +10,7 @@ class liberation_logistic {
 		"LoadedTitle", "TruckCountLabel", "TruckCount", "LoadedSupplyLabel", "LoadedSupply", "LoadedAmmoLabel", "LoadedAmmo", "LoadedFuelLabel", "LoadedFuel", "ButtonBuyTruck", "ButtonSellTruck",
 		"ATitle", "ACombo", "ASupp", "AAmmo", "AFuel",
 		"BTitle", "BCombo", "BSupp", "BAmmo", "BFuel",
+		"ALabel", "BLabel",
 		"ButtonSaveLogistic", "ButtonAbortLogistic",
 		"LogisticMap", "ButtonClose2"
 	};
@@ -362,6 +363,27 @@ class liberation_logistic {
 		tooltip = $STR_LOGISTIC_TT_FUEL;
 		action = "";
 		autocomplete = "";
+	};
+
+	class ALabel : StdText {
+		idc = 758033;
+		style = ST_CENTER;
+		sizeEx = 0.018 * safezoneH;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (26 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = "";
+	};
+	class BLabel : StdText {
+		idc = 758034;
+		style = ST_CENTER;
+		sizeEx = 0.018 * safezoneH;
+		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
+		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (32 * ICONE_SPACY);
+		w = (0.153 * safezoneW) + BORDERSIZE;
+		h = (0.02 * safezoneH);
+		text = "";
 	};
 
 	class ButtonSaveLogistic : StdButton {

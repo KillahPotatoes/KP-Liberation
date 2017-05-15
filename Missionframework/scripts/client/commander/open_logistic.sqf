@@ -34,12 +34,15 @@ disableSerialization;
 
 waitUntil {dialog};
 
-_mapdisplay = ((findDisplay 758002) displayCtrl 758098);
+_mapdisplay = ((findDisplay 75802) displayCtrl 758098);
 
 ctrlMapAnimClear _mapdisplay;
 
 while {dialog && (alive player)} do {
 
+	"spawn_marker" setMarkerPosLocal markers_reset;
+
+	ctrlEnable [75803, false];
 	ctrlEnable [75804, false];
 	ctrlEnable [758021, false];
 	ctrlEnable [758022, false];
@@ -63,21 +66,20 @@ while {dialog && (alive player)} do {
 	if (deleteLogiGroup == 1) then {
 		deleteLogiGroup = 0;
 		[_selectedGroup] remoteExec ["del_logiGroup_remote_call",2];
+		lbSetCurSel [75802,-1];
 		waitUntil {sleep 0.5; _logi_count != (count KP_liberation_logistics)};
 	};
 
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
-		// Why it gets now stuck here and....
-		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
+		waitUntil {sleep 0.5; ((_selectedGroup select 1) != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
 	if (sellLogiTruck == 1) then {
 		sellLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
-		// here? -.-
-		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
+		waitUntil {sleep 0.5; ((_selectedGroup select 1) != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
 	if (saveConvoySettings == 1) then {
@@ -93,6 +95,7 @@ while {dialog && (alive player)} do {
 	};
 
 	logiError = 0;
+	ctrlEnable [75803, true];
 
 	if (_logi_count != (count KP_liberation_logistics)) then {
 		_logi_count = (count KP_liberation_logistics);
@@ -136,9 +139,9 @@ while {dialog && (alive player)} do {
 
 		switch ((_selectedGroup select 7)) do {
 			case 0: {ctrlSetText[758011, "-"]; ctrlSetText[75807, localize "STR_LOGISTIC_STANDBY"];};
-			case 1: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true];};
+			case 1: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 2);	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 2)]; ctrlMapAnimCommit _mapdisplay;};
 			case 2: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_TRAVEL"]; ctrlEnable [758081, true];};
-			case 3: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true];};
+			case 3: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 3);	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 3)]; ctrlMapAnimCommit _mapdisplay;};
 			case 4: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_TRAVEL"]; ctrlEnable [758081, true];};
 			case 5: {ctrlSetText[758011, "-"]; ctrlSetText[75807, localize "STR_LOGISTIC_ABORT"];};
 		};
@@ -169,16 +172,26 @@ while {dialog && (alive player)} do {
 		} forEach _logi_destinations;
 
 		if (!((_selectedGroup select 2) isEqualTo [0,0,0])) then {
+			ctrlShow [758024,false];
+			ctrlShow [758033,true];
 			{
 				// Why the hell does "if ((_selectedGroup select 2) isEqualTo (_x select 1)) ..." return false? -.-
-				if (((_selectedGroup select 2) distance2D (_x select 1) < 10)) exitWith {lbSetCurSel [758024, _forEachIndex];};
+				if (((_selectedGroup select 2) distance2D (_x select 1) < 10)) exitWith {ctrlSetText [758033, _x select 0];};
 			} forEach _logi_destinations;
+		} else {
+			ctrlShow [758024,true];
+			ctrlShow [758033,false];	
 		};
 
 		if (!((_selectedGroup select 3) isEqualTo [0,0,0])) then {
+			ctrlShow [758029,false];
+			ctrlShow [758034,true];
 			{
-				if (((_selectedGroup select 3) distance2D (_x select 1) < 10)) exitWith {lbSetCurSel [758029, _forEachIndex];};
+				if (((_selectedGroup select 3) distance2D (_x select 1) < 10)) exitWith {ctrlSetText [758034, _x select 0];};
 			} forEach _logi_destinations;
+		} else {
+			ctrlShow [758029,true];
+			ctrlShow [758034,false];	
 		};
 
 		ctrlSetText [758025, (str ((_selectedGroup select 4) select 0))];
@@ -206,3 +219,5 @@ while {dialog && (alive player)} do {
 		|| convoyStandby != 0
 	};
 };
+
+"spawn_marker" setMarkerPosLocal markers_reset;

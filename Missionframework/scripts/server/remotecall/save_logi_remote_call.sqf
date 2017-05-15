@@ -6,8 +6,6 @@ private ["_time"];
 
 logiError = 0;
 
-hint format ["_index: %1\n_dest_a: %2\n_ress_a: %3\n_dest_b: %4\n_ress_b: %5\n_clientID: %6",_index,_dest_a,_ress_a,_dest_b,_ress_b,_clientID];
-
 if ((_ress_a isEqualTo [0,0,0]) && (_ress_b isEqualTo [0,0,0])) then {
 	logiError = 1;
 };
@@ -25,7 +23,13 @@ if (_dest_a isEqualTo _dest_b) then {
 
 if (logiError == 1) exitWith {(localize "STR_LOGISTIC_SAVE_ERROR") remoteExec ["hint",_clientID]; _clientID publicVariableClient "logiError";};
 
-_time = ceil ((_dest_a distance2D _dest_b) / 400);
+_time = ceil (((ceil ((_ress_a select 0) / 100)) + (ceil ((_ress_a select 1) / 100)) + (ceil ((_ress_a select 2) / 100))) / 3);
+
+if (_time > ((KP_liberation_logistics select _index) select 1)) then {
+	_time = ((KP_liberation_logistics select _index) select 1);
+};
+
+_time = _time + 1;
 
 KP_liberation_logistics set [_index,[
 	(KP_liberation_logistics select _index) select 0,
