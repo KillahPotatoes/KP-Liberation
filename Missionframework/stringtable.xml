@@ -3485,16 +3485,20 @@
 						<German>Ziel B</German>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_SUPPLY">
-						<Original>Supplies from here to the other destination.</Original>
-						<German>Nachschub von hier zum anderen Ziel.</German>
+						<Original>Supplies value from here to the other destination. (only whole numbers)</Original>
+						<German>Nachschubmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_AMMO">
-						<Original>Ammo from here to the other destination.</Original>
-						<German>Munition von hier zum anderen Ziel.</German>
+						<Original>Ammo value from here to the other destination. (only whole numbers)</Original>
+						<German>Munitionsmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_FUEL">
-						<Original>Fuel from here to the other destination.</Original>
-						<German>Kraftstoff von hier zum anderen Ziel.</German>
+						<Original>Fuel value from here to the other destination. (only whole numbers)</Original>
+						<German>Kraftstoffmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
+				</Key>
+				<Key ID="STR_LOGISTIC_SAVE_ERROR">
+						<Original>Your mission is not possible.</Original>
+						<German>Auftrag nicht möglich.</German>
 				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->

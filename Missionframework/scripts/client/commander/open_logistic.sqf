@@ -69,18 +69,20 @@ while {dialog && (alive player)} do {
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
+		// Why it gets now stuck here and....
 		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
 	if (sellLogiTruck == 1) then {
 		sellLogiTruck = 0;
 		[_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
+		// here? -.-
 		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
 	if (saveConvoySettings == 1) then {
 		saveConvoySettings = 0;
-		[_listselect, clientOwner] remoteExec ["save_logi_remote_call",2];
+		[_listselect, ((_logi_destinations select lbCurSel 758024) select 1), [parseNumber ctrlText 758025,parseNumber ctrlText 758026,parseNumber ctrlText 758027], ((_logi_destinations select lbCurSel 758029) select 1), [parseNumber ctrlText 758030,parseNumber ctrlText 758031,parseNumber ctrlText 758032], clientOwner] remoteExec ["save_logi_remote_call",2];
 		waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
 	};
 
@@ -108,14 +110,16 @@ while {dialog && (alive player)} do {
 
 	if ((_listselect != -1) && (_logi_count > 0)) then {
 		{ctrlShow [_x, true]} forEach _detailControls;
-		ctrlEnable [758021, true];
+
 		_selectedGroup = (KP_liberation_logistics select _listselect);
 
-		if ((_selectedGroup select 1) <= 0) then {
-			ctrlEnable [75804, true];
-		} else {
-			ctrlEnable [758022, true];
-			if ((_selectedGroup select 7) == 0) then {
+		if ((_selectedGroup select 7) == 0) then {
+			ctrlEnable [758021, true];
+
+			if ((_selectedGroup select 1) <= 0) then {
+				ctrlEnable [75804, true];	
+			} else {
+				ctrlEnable [758022, true];				
 				ctrlEnable [758024, true];
 				ctrlEnable [758025, true];
 				ctrlEnable [758026, true];
