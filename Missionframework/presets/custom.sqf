@@ -484,7 +484,8 @@ opfor_choppers = [
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
-	"O_Plane_CAS_02_F"													//To-199 Neophron (CAS)
+	"O_Plane_CAS_02_F",													//To-199 Neophron (CAS)
+	"O_Plane_Fighter_02_F"												//To-201 Shikra
 ];
 
 /*	- Other various mission classnames.
