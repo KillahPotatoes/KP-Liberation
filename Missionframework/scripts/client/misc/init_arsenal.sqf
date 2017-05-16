@@ -67,3 +67,12 @@ if ((count GRLIB_arsenal_backpacks) == 0) then {
 if ((count KP_liberation_allowed_items_extension) > 0) then {
 	KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 };
+
+{
+	if ((_x find "rhs_acc") == 0) then {
+		KP_liberation_allowed_items append [_x + "_3d", _x + "_pip"];
+	};
+	if ((_x find "rhsusf_acc") == 0) then {
+		KP_liberation_allowed_items append [_x + "_3d", _x + "_pip"];
+	};
+} forEach KP_liberation_allowed_items;
