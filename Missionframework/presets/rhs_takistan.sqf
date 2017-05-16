@@ -82,6 +82,8 @@ air_vehicles = [
 	["RHS_AH1Z",600,1000,300],
 	["RHS_AH64D",800,1200,400],
 	["RHS_A10",1000,2000,500],
+	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (stealth)
 	["JS_JC_FA18E",1000,3000,500],
 	["JS_JC_FA18F",1000,3200,500],
 	["B_UAV_01_F",100,0,50],

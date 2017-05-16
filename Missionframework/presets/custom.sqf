@@ -144,6 +144,8 @@ air_vehicles = [
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
 	["FIR_F15D",1250,1250,450],											//F-15D Eagle
 	["FIR_F15E",1250,1500,450],											//F-15E Strike Eagle
+	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (stealth)
 	["JS_JC_FA18E",1500,1750,450],										//F/A-18 E Super Hornet
 	["JS_JC_FA18F",1500,1750,450],										//F/A-18 F Super Hornet
 	["B_T_VTOL_01_armed_F",750,1500,500],								//V-44 X Blackfish (Armed)
