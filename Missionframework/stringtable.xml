@@ -3387,122 +3387,152 @@
 				<Key ID="STR_PARAMS_AILOGISTICS">
 						<Original>AI Logistics Module</Original>
 						<German>AI Logistik Modul</German>
+						<Italian>AI Logistica</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_ACTION">
 						<Original>-- Logistic Overview</Original>
 						<German>-- Logistikübersicht</German>
+						<Italian>-- Vedi Logistica</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_HEADER">
 						<Original>Logistic Overview</Original>
 						<German>Logistikübersicht</German>
+						<Italian>Vedi Logistica</Italian>
 				</Key>
 				<Key ID="STR_ADD">
 						<Original>Add</Original>
 						<German>Hinzfg</German>
+						<Italian>Aggiungi</Italian>
 				</Key>
 				<Key ID="STR_DEL">
 						<Original>Del</Original>
 						<German>Entf</German>
+						<Italian>Elimina</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_STATUS">
 						<Original>Status:</Original>
 						<German>Status:</German>
+						<Italian>Status:</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_STANDBY">
 						<Original>Standby</Original>
 						<German>Bereitschaft</German>
+						<Italian>In Attesa</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_LOADING">
 						<Original>Loading</Original>
 						<German>Verladen</German>
+						<Italian>Caricamento</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TRAVEL">
 						<Original>On the way</Original>
 						<German>Unterwegs</German>
+						<Italian>In movimento</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_ABORT">
 						<Original>Aborting mission</Original>
 						<German>Auftragsabbruch</German>
+						<Italian>Termina missione</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_NORESSOURCES">
 						<Original>No resources</Original>
 						<German>Keine Ressourcen</German>
+						<Italian>Risorse non avviabili</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_NOSPACE">
 						<Original>No storagespace</Original>
 						<German>Kein Lagerplatz</German>
+						<Italian>Spazio non avviabile</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_DESTINATION">
 						<Original>Next destination:</Original>
 						<German>Nächster Zielort:</German>
+						<Italian>Prossima destinazione:</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_LOADEDDETAIL">
 						<Original>Current convoy cargo</Original>
 						<German>Aktuelle Konvoiladung</German>
+						<Italian>Carico convoglio attuale</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TRUCKCOUNT">
 						<Original>Assigned Trucks</Original>
 						<German>Zugeteilte LKWs</German>
+						<Italian>Camion Assegnati</Italian>
 				</Key>
 				<Key ID="STR_LOGSTIC_BUYTRUCK">
 						<Original>Assign Truck</Original>
 						<German>LKW zuteilen</German>
+						<Italian>Assegna camion</Italian>
 				</Key>
 				<Key ID="STR_LOGSTIC_SELLTRUCK">
 						<Original>Unassign Truck</Original>
 						<German>LKW abziehen</German>
+						<Italian>Rimuovi camion</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_BUYTRUCK">
 						<Original>Costs: 100 supplies and 100 fuel.</Original>
 						<German>Kosten: 100 Nachschub und 100 Kraftstoff.</German>
+						<Italian>Costo: 100 approvvigionamenti e 100 carburante.</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_SELLTRUCK">
 						<Original>Gives: 50 supplies and 50 fuel.</Original>
 						<German>Erstattet: 50 Nachschub und 50 Kraftstoff.</German>
+						<Italian>Rimborso: 50 approvvigionamenti e 50 carburante.</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_CONFIRM">
 						<Original>Confirm mission</Original>
 						<German>Auftrag bestätigen</German>
+						<Italian>Conferma missione</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_CANCEL">
 						<Original>Abort mission</Original>
 						<German>Auftrag abbrechen</German>
+						<Italian>Termina missione</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_CANTAFFORD">
 						<Original>Not enough resources</Original>
 						<German>Nicht genug Ressourcen</German>
+						<Italian>Risorse insufficenti</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_ROUTETITLE">
 						<Original>Mission planning</Original>
 						<German>Auftragsplanung</German>
+						<Italian>Pianificazione degli ordini</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_LABELA">
 						<Original>Destination A</Original>
 						<German>Ziel A</German>
+						<Italian>Destinazione A</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_LABELB">
 						<Original>Destination B</Original>
 						<German>Ziel B</German>
+						<Italian>Destinazione B</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_SUPPLY">
 						<Original>Supplies value from here to the other destination. (only whole numbers)</Original>
 						<German>Nachschubmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
+						<Italian>Valore approvvigionamenti da qui all'altra destinazione. (solo numeri interi)</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_AMMO">
 						<Original>Ammo value from here to the other destination. (only whole numbers)</Original>
 						<German>Munitionsmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
+						<Italian>Valore munizioni da qui all'altra destinazione. (solo numeri interi)</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_TT_FUEL">
 						<Original>Fuel value from here to the other destination. (only whole numbers)</Original>
 						<German>Kraftstoffmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
+						<Italian>Valore carburante da qui all'altra destinazione. (solo numeri interi)</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_SAVE_ERROR">
 						<Original>Your mission is not possible.</Original>
 						<German>Auftrag nicht möglich.</German>
+						<Italian>La tua missione non è possibile.</Italian>
 				</Key>
 				<Key ID="STR_LOGISTIC_STANDBY_ERROR">
 						<Original>You can't abort this mission at the moment.</Original>
 						<German>Du kannst diesen Auftrag momentan nicht abbrechen.</German>
+						<Italian>Non puoi terminare la missione in questo momento.</Italian>
 				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->
@@ -3512,7 +3542,7 @@
 						<German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
 						<Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
 						<Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
-						<Italian>Libera Altis dagli OPFOR con il potere della libertà e della democrazia.</Italian>
+						<Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
 				</Key>
 	</Package>
 </Project>
