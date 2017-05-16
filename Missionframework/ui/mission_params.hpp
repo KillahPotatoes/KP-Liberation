@@ -147,15 +147,6 @@ class Params
 		default = 1;
 		function = "bis_fnc_paramReviveRequiredItems";
 	};
-	class ReviveRequiredItemsFakConsumed
-	{
-		title = $STR_A3_RequiredItems_ConsumeFirstAidKit;
-		isGlobal = 1;
-		values[] = {-100,0,1};
-		texts[] = {$STR_A3_MissionDefault,$STR_lib_info_no,$STR_lib_info_yes};
-		default = 0;
-		function = "bis_fnc_paramReviveRequiredItemsFakConsumed";
-	};
 	class UnconsciousStateMode
 	{
 		title = $STR_A3_IncapacitationMode;
