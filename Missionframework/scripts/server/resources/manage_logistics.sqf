@@ -1,7 +1,7 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
 
-private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toUnload","_space","_nextState","_time"];
+private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toUnload","_currentIndex","_unloaded","_space","_crate","_nextState","_time"];
 
 while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
 
@@ -18,7 +18,8 @@ while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
 					if ((_x select 8) > 1) then {
 						_x set [8,((_x select 8) - 1)];
 						switch (_x select 7) do {case 1: {_locPos = 2; _locRes = 4;}; case 3: {_locPos = 3; _locRes = 5;};};
-						_storage_areas = (_x select _locPos) nearobjects [[KP_liberation_small_storage_building, KP_liberation_large_storage_building],GRLIB_fob_range];
+						switch (_x select 9) do {case 2: {_x set [9,0];}; case 3: {_x set [9,1];};};
+						_storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
 
 						if (((_x select 9) == 0) && !((_x select 6) isEqualTo [0,0,0])) then {
 
@@ -37,7 +38,101 @@ while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
 							} forEach _storage_areas;
 
 							if (_spaceSum < _toUnload) exitWith {_x set [9,2];};
+							
+							_currentIndex = _forEachIndex;
+							_unloaded = 0;
+							while {_unloaded < _toUnload} do {
+								{
+									_space = 0;
+									if (typeOf _x == KP_liberation_large_storage_building) then {
+										_space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+									};
+									if (typeOf _x == KP_liberation_small_storage_building) then {
+										_space = (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+									};
 
+									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
+										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 0) / 100)) > 0) then {
+											_crate = KP_liberation_supply_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", 100, true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0) - 100,
+												(((_tempLogistics select _currentIndex) select 6) select 1),
+												(((_tempLogistics select _currentIndex) select 6) select 2)]
+											];
+										} else {
+											_crate = KP_liberation_supply_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 0), true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[0,
+												(((_tempLogistics select _currentIndex) select 6) select 1),
+												(((_tempLogistics select _currentIndex) select 6) select 2)]
+											];
+										};
+										_unloaded = _unloaded + 1;
+										_space = _space - 1;
+									};
+									if (_unloaded >= _toUnload) exitWith {};
+
+									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 1) > 0)) then {
+										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 1) / 100)) > 0) then {
+											_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", 100, true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												(((_tempLogistics select _currentIndex) select 6) select 1) - 100,
+												(((_tempLogistics select _currentIndex) select 6) select 2)]
+											];
+										} else {
+											_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 1), true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												0,
+												(((_tempLogistics select _currentIndex) select 6) select 2)]
+											];
+										};
+										_unloaded = _unloaded + 1;
+										_space = _space - 1;
+									};
+									if (_unloaded >= _toUnload) exitWith {};
+
+									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 2) > 0)) then {
+										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 2) / 100)) > 0) then {
+											_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", 100, true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												(((_tempLogistics select _currentIndex) select 6) select 1),
+												(((_tempLogistics select _currentIndex) select 6) select 2) - 100]
+											];
+										} else {
+											_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
+											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 2), true];
+											[_crate, 500] remoteExec ["F_setMass",_crate];
+											[_crate, _x] call F_crateToStorage;
+											(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												(((_tempLogistics select _currentIndex) select 6) select 1),
+												0]
+											];
+										};
+										_unloaded = _unloaded + 1;
+										_space = _space - 1;
+									};
+									if (_unloaded >= _toUnload) exitWith {};
+								} forEach _storage_areas;
+							};
 						} else {
 							_x set [9,1];
 						};
@@ -48,6 +143,8 @@ while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
 						};
 					} else {
 						if (((_x select 4) isEqualTo [0,0,0]) && ((_x select 5) isEqualTo [0,0,0]) && ((_x select 6) isEqualTo [0,0,0])) then {
+							_x set [2, [0,0,0]];
+							_x set [3, [0,0,0]];
 							_nextState = 0;
 							_time = -1;
 						} else {
@@ -89,7 +186,119 @@ while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
 					if ((_x select 8) > 1) then {
 						_x set [8,((_x select 8) - 1)];
 						_locPos = switch (_x select 7) do {case 5: {2}; case 6: {3};};
-						// Check if Time <= (loaded crates / 3 + 1), then unload resources.  
+						_x set [9,0];
+						_storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
+
+						if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
+
+						_toUnload = ceil ((ceil (((_x select 6) select 0) / 100)) + (ceil (((_x select 6) select 1) / 100)) + (ceil (((_x select 6) select 2) / 100)));
+						if (_toUnload > 3) then {_toUnload = 3;};
+						_spaceSum = 0;
+						{
+							if (typeOf _x == KP_liberation_large_storage_building) then {
+								_spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+							};
+							if (typeOf _x == KP_liberation_small_storage_building) then {
+								_spaceSum = _spaceSum + (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+							};
+						} forEach _storage_areas;
+
+						if (_spaceSum < _toUnload) exitWith {_x set [9,2];};
+						
+						_currentIndex = _forEachIndex;
+						_unloaded = 0;
+						while {_unloaded < _toUnload} do {
+							{
+								_space = 0;
+								if (typeOf _x == KP_liberation_large_storage_building) then {
+									_space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+								};
+								if (typeOf _x == KP_liberation_small_storage_building) then {
+									_space = (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+								};
+
+								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
+									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 0) / 100)) > 0) then {
+										_crate = KP_liberation_supply_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", 100, true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0) - 100,
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+									} else {
+										_crate = KP_liberation_supply_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 0), true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[0,
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+									};
+									_unloaded = _unloaded + 1;
+									_space = _space - 1;
+								};
+								if (_unloaded >= _toUnload) exitWith {};
+
+								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 1) > 0)) then {
+									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 1) / 100)) > 0) then {
+										_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", 100, true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											(((_tempLogistics select _currentIndex) select 6) select 1) - 100,
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+									} else {
+										_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 1), true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											0,
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+									};
+									_unloaded = _unloaded + 1;
+									_space = _space - 1;
+								};
+								if (_unloaded >= _toUnload) exitWith {};
+
+								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 2) > 0)) then {
+									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 2) / 100)) > 0) then {
+										_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", 100, true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											(((_tempLogistics select _currentIndex) select 6) select 2) - 100]
+										];
+									} else {
+										_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
+										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 2), true];
+										[_crate, 500] remoteExec ["F_setMass",_crate];
+										[_crate, _x] call F_crateToStorage;
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											0]
+										];
+									};
+									_unloaded = _unloaded + 1;
+									_space = _space - 1;
+								};
+								if (_unloaded >= _toUnload) exitWith {};
+							} forEach _storage_areas;
+						};
 					} else {
 						_x set [2,[0,0,0]];
 						_x set [3,[0,0,0]];

@@ -36,5 +36,5 @@ KP_liberation_logistics set [_index,[
 	(KP_liberation_logistics select _index) select 6,
 	_nextState,
 	_time,
-	(KP_liberation_logistics select _index) select 9
+	0
 ]];
