@@ -166,6 +166,7 @@ class Missions
 * Added: Optional AI Logistics module for smaller groups to let AI carry resources from A to B (still WIP atm)
 * Added: Mission parameter to enable or disable AI Logistics (default enabled)
 * Added: [3cb BAF](https://3cbmod.wordpress.com) unit and arsenal preset. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
+* Added: DLC Jets to most presets
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
