@@ -10,5 +10,5 @@ KP_liberation_logistics append [[
 	[0,0,0],													// Currently loaded [S,A,F]
 	0,															// Status (0 standby, 1 at A, 2 to B, 3 at B, 4 to A, 5 aborting to A, 6 aborting to B)
 	-1,															// Time left in current status
-	[]															// Current Position
+	0															// Special Flag (0 unload, 1 load, 2 no storage, 3 no ressources)
 ]];
