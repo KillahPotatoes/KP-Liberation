@@ -14,7 +14,7 @@ FOB_box_typename = "B_Slingload_01_Cargo_F";					// Default "B_Slingload_01_Carg
 FOB_truck_typename = "rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy";				// Default "B_Truck_01_box_F";
 Arsenal_typename = "B_supplyCrate_F";					// Default "B_supplyCrate_F";
 Respawn_truck_typename = "UK3CB_BAF_LandRover_Amb_FFR_Green_A_DPMW";			// Default "B_Truck_01_medical_F";
-huron_typename = "UK3CB_BAF_Merlin_HC3_18_DPMT";					// Default "B_Heli_Transport_03_unarmed_F";
+huron_typename = "RHS_CH_47F";					// Default "B_Heli_Transport_03_unarmed_F";
 opfor_ammobox_transport = "O_Truck_03_transport_F";			// Default "O_Truck_03_transport_F";    // Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config) otherwise things will break
 crewman_classname = "UK3CB_BAF_Crewman_DPMW";				// Default "B_crew_F";
 pilot_classname = "UK3CB_BAF_HeliPilot_RAF_DPMW";					// Default "B_Helipilot_F";
@@ -126,11 +126,14 @@ air_vehicles = [
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
 	["FIR_F15D",1250,1250,450],											//F-15D Eagle
 	["FIR_F15E",1250,1500,450],											//F-15E Strike Eagle
+	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (stealth)
 	["JS_JC_FA18E",1500,1750,450],										//F/A-18 E Super Hornet
 	["JS_JC_FA18F",1500,1750,450],
 	["B_UAV_01_F",75,0,25],
 	["B_UAV_02_F",400,300,200],
-	["B_UAV_02_CAS_F",400,500,200]
+	["B_UAV_02_CAS_F",400,500,200],
+	["B_UAV_05_F",400,500,200]					//New UAV
 ];
 
 static_vehicles = [
@@ -228,7 +231,8 @@ uavs = [
 	"B_UAV_02_F",
 	"B_UAV_02_CAS_F",
 	"B_UGV_01_F",														//UGV Stomper
-	"B_UGV_01_rcws_F"
+	"B_UGV_01_rcws_F",
+	"B_UAV_05_F"
 ];
 
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
