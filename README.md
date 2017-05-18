@@ -163,8 +163,8 @@ class Missions
 * Added: Ability to unlock resource facilities in cities, so you can produce that resource there
 * Added: RHS transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Added: Civilian transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Added: Optional AI Logistics module for smaller groups to let AI carry resources from A to B (still WIP atm)
-* Added: Mission parameter to enable or disable AI Logistics (default enabled)
+* Added: Optional logistics module for smaller groups to enable a automatic logistics system for the commander
+* Added: Mission parameter to enable or disable the logistics system
 * Added: [3cb BAF](https://3cbmod.wordpress.com) unit and arsenal preset. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: DLC Jets to most presets
 * Removed: Resource caps system
