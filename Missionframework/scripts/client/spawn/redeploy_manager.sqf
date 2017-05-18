@@ -47,8 +47,8 @@ while { true } do {
 
 	showCinemaBorder false;
 	camUseNVG false;
-	respawn_camera = "camera" camCreate (getposASLW lhd);
-	respawn_object = "Sign_Arrow_Blue_F" createVehicleLocal (getposASLW lhd);
+	respawn_camera = "camera" camCreate (getposASLW startbase);
+	respawn_object = "Sign_Arrow_Blue_F" createVehicleLocal (getposASLW startbase);
 	respawn_object hideObject true;
 	respawn_camera camSetTarget respawn_object;
 	respawn_camera cameraEffect ["internal","back"];

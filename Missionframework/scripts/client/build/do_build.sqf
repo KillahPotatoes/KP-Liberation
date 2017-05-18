@@ -59,7 +59,11 @@ while { true } do {
 				_unitrank = "private";
 				if(_idx == 0) then { _unitrank = "sergeant"; };
 				if(_idx == 1) then { _unitrank = "corporal"; };
-				_x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, _unitrank];
+				if (_classname isEqualTo blufor_squad_para) then {
+					_x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]; removeBackpackGlobal this; this addBackpackGlobal ""B_parachute""", 0.5, _unitrank];
+				} else {
+					_x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}];", 0.5, _unitrank];
+				};
 				_idx = _idx + 1;
 
 			} foreach _classname;

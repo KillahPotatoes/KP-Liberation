@@ -14,7 +14,7 @@ while { GRLIB_cleanup_vehicles > 0 } do {
 		_nextvehicle = _x;
 		_nearestfob = [ getpos _nextvehicle ] call F_getNearestFob;
 		if ( count _nearestfob == 3 ) then {
-			if ( ( _nextvehicle distance _nearestfob > ( 4 * GRLIB_fob_range ) ) && ( _nextvehicle distance lhd > ( 4 * GRLIB_fob_range ) ) ) then {
+			if ( ( _nextvehicle distance _nearestfob > ( 4 * GRLIB_fob_range ) ) && ( _nextvehicle distance startbase > ( 4 * GRLIB_fob_range ) ) ) then {
 				if ( typeof _nextvehicle in _cleanup_classnames ) then {
 					if ( count ( crew _nextvehicle ) == 0 ) then {
 						_nextvehicle setVariable [ "GRLIB_empty_vehicle_ticker", ( _nextvehicle getVariable [ "GRLIB_empty_vehicle_ticker", 0 ] ) + 1 ];

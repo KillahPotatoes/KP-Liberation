@@ -13,13 +13,13 @@ while { true } do {
 
 	_zeusunits = [];
 	{
-		if ( (side group _x == GRLIB_side_friendly ) && ( _x distance lhd > 1000 ) && alive _x ) then {
+		if ( (side group _x == GRLIB_side_friendly ) && ( _x distance startbase > 1000 ) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach allUnits;
 
 	{
-		if ((typeof _x in _vehicleClassnames ) && (( _x distance lhd > 1000 ) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
+		if ((typeof _x in _vehicleClassnames ) && (( _x distance startbase > 1000 ) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach vehicles;

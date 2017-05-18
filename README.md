@@ -42,7 +42,7 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
 * Altis
-	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+	* Nothing
 * Chernarus
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -50,7 +50,6 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
-	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
 * Takistan
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -58,7 +57,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Tanoa
-	* To start from an LHD, you need the [ATLAS Mod: LHD Plus](http://steamcommunity.com/sharedfiles/filedetails/?id=677642222)
+	* Nothing
 * Taunus (very resource-intensive map)
 	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
@@ -175,13 +174,15 @@ class Missions
 * Removed: Overwrite functionality for `classnames.sqf`, as it is no longer needed due to the preset system
 * Removed: `gameplay_constants.sqf`
 * Removed: Crate spawn at military bases
+* Removed: Chimera Base on maps with a suitable amount of ocean for supporting the Freedom
 * Merged: `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
 * Replaced: Every deprecated BIS_fnc_MP with remoteExec
+* Replaced: ATLAS LHD with USS Freedom
 * Tweaked: Arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Initialization of the arsenal, which should increase the performance for blacklist using
-* Tweaked: Save manager -> helicopters from the LHD or Chimera won't be saved, as they spawn on every mission start/load
+* Tweaked: Save manager -> helicopters from the Freedom or Chimera won't be saved, as they spawn on every mission start/load
 * Tweaked: Name for savegame namespace -> adapts automaticly to worldName
 * Tweaked: Revive settings: BI Revive is enabled by default. Disable it, when you use ACE
 * Tweaked: Config, as some apex classnames were missing. Thanks to [Applejakerie](https://github.com/Applejakerie)
@@ -190,6 +191,7 @@ class Missions
 * Tweaked: Vehicles with dead crew can now be recycled
 * Tweaked: Altis mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Chimera bases on Takistan and Taunus. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: Enemy infantry units will now spawn in initial safe state instead of be directly aware
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Enemy weapon dance. Thanks to [k4s0](https://github.com/k4s0)
@@ -197,6 +199,7 @@ class Missions
 * Fixed: Enemy jets sometimes spawn on the ground instead flying
 * Fixed: ACE medical crate was empty and couldn't be recycled
 * Fixed: Slingloading while transport crates inside a helicopter causes the helicopter to slingload the loaded crates inside
+* Fixed: Some buildable paratroopers from some presets don't had a parachute
 
 ### 0.94
 * Added: Tanoa missionfile and vanilla apex preset

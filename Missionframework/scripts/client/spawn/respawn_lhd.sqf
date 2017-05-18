@@ -15,5 +15,5 @@ if ( GRLIB_isAtlasPresent ) then {
 	player setposasl [ _posx , _posy, _lhd_z ];
 
 } else {
-	player setpos ( [ getpos lhd, random 6, random 360 ] call BIS_fnc_relPos );
+	player setpos ( [ getpos startbase, random 6, random 360 ] call BIS_fnc_relPos );
 };

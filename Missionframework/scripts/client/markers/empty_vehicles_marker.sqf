@@ -24,7 +24,7 @@ while { true } do {
 
 	_markedveh = [];
 	{
-		if ( (alive _x) && ((typeof _x) in _vehtomark) && (count (crew _x) == 0) && (_x distance lhd > 500) ) then {
+		if ( (alive _x) && ((typeof _x) in _vehtomark) && (count (crew _x) == 0) && (_x distance startbase > 500) ) then {
 			_markedveh pushback _x;
 		};
 	} foreach vehicles;

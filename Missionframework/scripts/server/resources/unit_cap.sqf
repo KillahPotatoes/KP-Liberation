@@ -9,7 +9,7 @@ while { true } do {
 	_local_heli_count = 0;
 	_local_plane_count = 0;
 	{
-		if ( (side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance lhd) > 250 || (isPlayer _x)) ) then {
+		if ( (side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance startbase) > 250 || (isPlayer _x)) ) then {
 			_local_unitcap = _local_unitcap + 1;
 		};
 	} forEach allUnits;
