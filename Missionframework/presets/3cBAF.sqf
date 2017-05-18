@@ -128,9 +128,12 @@ air_vehicles = [
 	["FIR_F15E",1250,1500,450],											//F-15E Strike Eagle
 	["JS_JC_FA18E",1500,1750,450],										//F/A-18 E Super Hornet
 	["JS_JC_FA18F",1500,1750,450],
+	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (stealth)
 	["B_UAV_01_F",75,0,25],
 	["B_UAV_02_F",400,300,200],
-	["B_UAV_02_CAS_F",400,500,200]
+	["B_UAV_02_CAS_F",400,500,200],
+	["B_UAV_05_F",400,500,200]		//New Stealth Drone
 ];
 
 static_vehicles = [
@@ -228,7 +231,8 @@ uavs = [
 	"B_UAV_02_F",
 	"B_UAV_02_CAS_F",
 	"B_UGV_01_F",														//UGV Stomper
-	"B_UGV_01_rcws_F"
+	"B_UGV_01_rcws_F",
+	"B_UAV_05_F"
 ];
 
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
