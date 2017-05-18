@@ -149,15 +149,13 @@ while {dialog && (alive player)} do {
 
 		((findDisplay 75802) displayCtrl 75809) ctrlSetTextColor [1,1,1,1];
 		if ((_selectedGroup select 8) != -1) then {
-			ctrlSetText[75809,(format [localize "STR_PRODUCTION_MINUTES",(_selectedGroup select 8)])]
-		} else {
-			if ((_selectedGroup select 7) == 0) then {
-				ctrlSetText[75809, "-"]
-			} else {
-				((findDisplay 75802) displayCtrl 75809) ctrlSetTextColor [0.9,0,0,1];
-				ctrlSetText[75809, localize "STR_LOGISTIC_NORESSOURCES"]
+			switch (_selectedGroup select 9) do {
+				case 2: {((findDisplay 75802) displayCtrl 75809) ctrlSetTextColor [0.9,0,0,1]; ctrlSetText[75809, localize "STR_LOGISTIC_NOSPACE"];};
+				case 3: {((findDisplay 75802) displayCtrl 75809) ctrlSetTextColor [0.9,0,0,1]; ctrlSetText[75809, localize "STR_LOGISTIC_NORESSOURCES"];};
+				default {ctrlSetText[75809,(format [localize "STR_PRODUCTION_MINUTES",(_selectedGroup select 8)])];};
 			};
-			
+		} else {
+				ctrlSetText[75809, "-"];		
 		};
 
 		ctrlSetText [758014, (str (_selectedGroup select 1))];

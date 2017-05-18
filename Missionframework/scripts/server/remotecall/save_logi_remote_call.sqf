@@ -10,6 +10,14 @@ if ((_ress_a isEqualTo [0,0,0]) && (_ress_b isEqualTo [0,0,0])) then {
 	logiError = 1;
 };
 
+if (
+	(((_ress_a select 0) != 0) && ((_ress_b select 0) != 0))
+	|| (((_ress_a select 1) != 0) && ((_ress_b select 1) != 0))
+	|| (((_ress_a select 2) != 0) && ((_ress_b select 2) != 0))
+) then {
+	logiError = 1;
+};
+
 if (_dest_a isEqualTo _dest_b) then {
 	logiError = 1;
 };
