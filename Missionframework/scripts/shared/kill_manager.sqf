@@ -47,6 +47,7 @@ if ( isServer ) then {
 		stats_player_deaths = stats_player_deaths + 1;	
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
+		if (vehicle _unit != _unit) then {moveOut _unit};
 	};
 
 	if ( _unit isKindOf "Man" ) then {
