@@ -29,7 +29,7 @@ while { ( count units _grp != 0 ) && ( GRLIB_endgame == 0 ) } do {
 		private _waypoint = _grp addWaypoint [_objectivepos, 100];
 		_waypoint setWaypointType "MOVE";
 		_waypoint setWaypointSpeed "NORMAL";
-		_waypoint setWaypointBehaviour "AWARE";
+		_waypoint setWaypointBehaviour "SAFE";
 		_waypoint setWaypointCombatMode "YELLOW";
 		_waypoint setWaypointCompletionRadius 30;
 

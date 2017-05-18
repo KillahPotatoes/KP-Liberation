@@ -13,7 +13,7 @@ sleep 1;
 if ( _is_infantry ) then {
 	_waypoint = _grp addWaypoint [_flagpos, 150];
 	_waypoint setWaypointType "MOVE";
-	_waypoint setWaypointBehaviour "AWARE";
+	_waypoint setWaypointBehaviour "SAFE";
 	_waypoint setWaypointCombatMode "GREEN";
 	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint setWaypointCompletionRadius 10;

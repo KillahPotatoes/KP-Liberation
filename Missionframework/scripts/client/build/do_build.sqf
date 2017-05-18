@@ -64,7 +64,7 @@ while { true } do {
 
 			} foreach _classname;
 			_grp setCombatMode "GREEN";
-			_grp setBehaviour "AWARE";
+			_grp setBehaviour "SAFE";
 			build_confirmed = 0;
 		} else {
 			_posfob = getpos player;
