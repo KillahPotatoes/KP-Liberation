@@ -338,7 +338,7 @@ class liberation_logistic {
 		idc = 758030;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
-		w = 0.05 * safezoneW
+		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_SUPPLY;
 		action = "";
@@ -348,7 +348,7 @@ class liberation_logistic {
 		idc = 758031;
 		x = (0.392 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
-		w = 0.05 * safezoneW
+		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_AMMO;
 		action = "";
@@ -358,7 +358,7 @@ class liberation_logistic {
 		idc = 758032;
 		x = (0.446 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
-		w = 0.05 * safezoneW
+		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_FUEL;
 		action = "";
