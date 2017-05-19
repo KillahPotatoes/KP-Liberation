@@ -4,7 +4,6 @@
 // ACE
 // ACRE
 // BWMod
-// FUTARM: Maritime Units Pack
 // RHS AFRF
 // RHS USAF
 
@@ -644,9 +643,13 @@ GRLIB_arsenal_items = [
 	"rhsusf_acc_eotech_xps3",
 	"rhsusf_spc_patchless",
 	"rhsusf_spc_patchless_radio",
-	"FUTARM_U_BASIC_MT",
-	"FUTARM_V_BLACK_MT",
-	"FUTARM_H_MILCAP_MT"
+	"V_DeckCrew_blue_F",
+	"V_DeckCrew_brown_F",
+	"V_DeckCrew_yellow_F",
+	"V_DeckCrew_green_F",
+	"V_DeckCrew_red_F",
+	"V_DeckCrew_violet_F",
+	"V_DeckCrew_white_F"
 ];
 
 GRLIB_arsenal_backpacks = [
