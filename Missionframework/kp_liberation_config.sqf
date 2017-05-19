@@ -25,21 +25,21 @@ KP_liberation_ace_crates = [
 /* - Custom unit and arsenal preset settings.
 Which units preset should be used?
 0 = Default vanilla with RHS USAF and BWMod, both optional (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
-1 = RHS USAF and RHS AFRF.
-2 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
+1 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
+2 = RHS USAF and RHS AFRF.
 3 = RHS USAF, RHS AFRF and BWMod.
-4 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
-5 = 3cbBAF with RHS United States Armed Forces. */
+4 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
+5 = 3cbBAF, RHS USAF and RHS AFRF. */
 KP_liberation_preset = 0;
 
 /* Which arsenal preset should be used?
 0 = Use the default blacklist method (defined below).
 1 = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks).
 2 = Killah Potatoes Gaming Community arsenal preset.
-3 = RHS United States Armed Forces arsenal preset.
-4 = RHS United States Armed Forces arsenal preset with ACE.
-5 = RHS United States Armed Forces arsenal preset with ACE and ACRE.	
-6 = 3cbBAF with RHS United States Armed Forces arsenal. */
+3 = RHS USAF arsenal preset.
+4 = RHS USAF arsenal preset with ACE.
+5 = RHS USAF arsenal preset with ACE and ACRE.	
+6 = 3cbBAF and RHS USAF arsenal preset. */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -203,6 +203,8 @@ box_transport_config = [
 	["RHS_CH_47F_light", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["RHS_CH_47F", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["UK3CB_BAF_Merlin_HC3_18_DPMT", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],

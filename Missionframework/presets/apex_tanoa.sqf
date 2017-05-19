@@ -2,7 +2,7 @@
 
 // Apex DLC will be needed by someone at least to progress gameplay. 
 // RHS USAF, BWMod, F-15C, F/A-18 are optional (just load the mods on server & client).
-// Apex DLC is included but is not required (required to drive/pilot anything Apex or if the Tanoa map is being used).
+// Apex & Jets DLC are also included but not required (required only to drive/pilot anything from each DLC inc/ the Tanoa map).
 
 /* - Support classnames.
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
@@ -15,7 +15,7 @@ huron_typename = "B_Heli_Transport_03_unarmed_F";						// This is Spartan 01, a 
 opfor_ammobox_transport = "O_T_Truck_03_transport_ghex_F";				// Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config.sqf) otherwise things will break!	Default is "O_Truck_03_transport_F".
 crewman_classname = "B_T_crew_F";										// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "B_T_Helipilot_F";									// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
-KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; 				// These are the little birds that spawn at the operation base. 																		Default is "B_Heli_Light_01_F".
+KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; 				// These are the little birds that spawn on the lhd or at Chimera base. 																Default is "B_Heli_Light_01_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -58,7 +58,7 @@ infantry_units = [
 light_vehicles = [
 	["B_T_Quadbike_01_F",50,0,25],										//Quad Bike
 	["B_T_LSV_01_unarmed_F",75,0,50],									//Prowler
-	["B_T_LSV_01_armed_F",75,0,50],										//Prowler (HMG)
+	["B_T_LSV_01_armed_F",75,40,50],									//Prowler (HMG)
 	["B_T_MRAP_01_F",100,0,50],											//Hunter
 	["B_T_MRAP_01_hmg_F",100,40,50],									//Hunter (HMG)
 	["B_T_MRAP_01_gmg_F",100,60,50],									//Hunter (GMG)
@@ -72,13 +72,14 @@ light_vehicles = [
 	["BWA3_Eagle_FLW100_Fleck",100,100,50],								//Eagle IV (FLW 100)
 	["B_T_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_T_Truck_01_covered_F",125,0,75],								//HEMTT Transport (Covered)
-	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT (Woodland)
-	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (M2, Woodland)
+	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
+	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (HMG)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
 	["B_UGV_01_rcws_F",150,40,50],										//UGV Stomper (RCWS)
 	["B_T_Boat_Transport_01_F",100,0,25],								//Assault Boat
 	["B_T_Boat_Armed_01_minigun_F",200,80,75],							//Speedboat Minigun
-	["rhsusf_mkvsoc",250,200,100]										//Mk.V SOCOM
+	["rhsusf_mkvsoc",250,200,100],										//Mk.V SOCOM
+	["B_SDV_01_F",150,0,50]												//SDV
 ];
 
 heavy_vehicles = [
@@ -119,7 +120,7 @@ air_vehicles = [
 	["B_Heli_Attack_01_F",500,400,200],									//AH-99 Blackfoot
 	["RHS_AH1Z",500,500,200],											//AH-1Z (Multi-Role)
 	["RHS_AH64D_wd",750,750,250],										//AH-64D (Multi-Role)
-	["BWA3_Tiger_RMK_Universal",750,500,250],							//UH Tiger RMK (Universal)
+	["BWA3_Tiger_RMK_Universal",750,750,250],							//UH Tiger RMK (Universal)
 	["B_Heli_Transport_01_F",250,80,150],								//UH-80 Ghost Hawk
 	["B_Heli_Transport_01_camo_F",250,80,150],							//UH-80 Ghost Hawk (Camo)
 	["RHS_UH60M",250,80,150],											//UH-60M
@@ -131,6 +132,7 @@ air_vehicles = [
 	["B_UAV_02_F",400,300,200],											//MQ-4A Greyhawk
 	["B_UAV_02_CAS_F",400,500,200],										//MQ-4A Greyhawk (CAS)
 	["B_T_UAV_03_F",450,500,250],										//MQ-12 Falcon
+	["B_UAV_05_F",500,500,200],											//UCAV Sentinel
 	["I_Plane_Fighter_03_AA_F",500,400,350],							//A-143 Buzzard (AA)
 	["I_Plane_Fighter_03_CAS_F",500,400,350],							//A-143 Buzzard (CAS)
 	["B_Plane_CAS_01_F",1000,800,400],									//A-164 Wipeout (CAS)
@@ -138,10 +140,10 @@ air_vehicles = [
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
 	["FIR_F15D",1250,1250,450],											//F-15D Eagle
 	["FIR_F15E",1250,1500,450],											//F-15E Strike Eagle
-	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
-	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (stealth)
 	["JS_JC_FA18E",1500,1750,450],										//F/A-18 E Super Hornet
 	["JS_JC_FA18F",1500,1750,450],										//F/A-18 F Super Hornet
+	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (Stealth)
 	["B_T_VTOL_01_armed_F",750,1500,500],								//V-44 X Blackfish (Armed)
 	["B_T_VTOL_01_infantry_F",750,0,500],								//V-44 X Blackfish (Infantry)
 	["B_T_VTOL_01_vehicle_F",750,0,500]									//V-44 X Blackfish (Vehicle)
@@ -163,6 +165,8 @@ buildings = [
 	["Land_Cargo_Patrol_V4_F",0,0,0],
 	["Land_Cargo_Tower_V4_F",0,0,0],
 	["Flag_NATO_F",0,0,0],
+	["Flag_US_F",0,0,0],
+	["BWA3_Flag_Ger_F",0,0,0],
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
@@ -259,11 +263,12 @@ support_vehicles = [
 // All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.
 uavs = [
 	"B_UAV_01_F",														//AR-2 Darter
+	"B_UGV_01_F",														//UGV Stomper
+	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
 	"B_UAV_02_F",														//MQ-4A Greyhawk
 	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
 	"B_T_UAV_03_F",														//MQ-12 Falcon
-	"B_UGV_01_F",														//UGV Stomper
-	"B_UGV_01_rcws_F"													//UGV Stomper (RCWS)
+	"B_UAV_05_F"														//UCAV Sentinel
 ];
 
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
@@ -400,6 +405,7 @@ militia_squad = [
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
 	"O_G_Offroad_01_F",													//Offroad
+	"O_G_Offroad_01_F",													//Offroad
 	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
 	"O_G_Van_01_transport_F"											//Truck (Transport)
 ];
@@ -534,6 +540,7 @@ elite_vehicles = [
 	"B_UAV_02_F",														//MQ-4A Greyhawk
 	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
 	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_05_F",														//UCAV Sentinel
 	"B_Plane_CAS_01_F",													//A-164 Wipeout (CAS)
 	"RHS_A10",															//A-10A (CAS)
 	"FIR_F15C",															//F-15C Eagle
@@ -542,6 +549,6 @@ elite_vehicles = [
 	"JS_JC_FA18E",														//F/A-18 E Super Hornet
 	"JS_JC_FA18F",														//F/A-18 F Super Hornet
 	"B_Plane_Fighter_01_F",												//F/A-181 Black Wasp II
-	"B_Plane_Fighter_01_Stealth_F",										//F/A-181 Black Wasp II (stealth)
+	"B_Plane_Fighter_01_Stealth_F",										//F/A-181 Black Wasp II (Stealth)
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
