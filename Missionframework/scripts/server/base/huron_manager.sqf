@@ -16,18 +16,11 @@ while { true } do {
 	if ( firstloop && !isNull _savedhuron ) then {
 		huron = _savedhuron;
 	} else {
-		if ( GRLIB_isAtlasPresent ) then {
-			huron = huron_typename createVehicle (getmarkerpos "ghost_spot");
-			huron enableSimulationGlobal false;
-			huron allowdamage false;
-			huron setDir 0;
-			huron setposasl [(getpos lhd select 0) -9, (getpos lhd select 1) + 62, 16.75];
-		} else {
-			huron = huron_typename createVehicle ( getpos huronspawn );
-			huron allowdamage false;
-			huron setpos ( getpos huronspawn );
-			huron setDir (getDir huronspawn);
-		};
+		huron = huron_typename createVehicle (getposATL huronspawn);
+		huron enableSimulationGlobal false;
+		huron allowdamage false;
+		huron setPosATL (getposATL huronspawn);
+		huron setDir (getDir huronspawn);
 	};
 
 	firstloop = false;
@@ -59,7 +52,7 @@ while { true } do {
 
 	};
 
-	if (huron distance lhd < 500) then {
+	if (huron distance startbase < 500) then {
 		deletevehicle huron;
 	};
 	sleep 0.25;

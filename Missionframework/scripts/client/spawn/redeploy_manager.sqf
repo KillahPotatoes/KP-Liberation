@@ -17,12 +17,8 @@ waitUntil { introDone };
 waitUntil { !isNil "cinematic_camera_stop" };
 waitUntil { cinematic_camera_stop };
 
-_basenamestr = "";
-if ( GRLIB_isAtlasPresent ) then {
-	_basenamestr = "BLUFOR LHD";
-} else {
-	_basenamestr = "BASE CHIMERA";
-};
+_basenamestr = "Operation Base";
+
 
 while { true } do {
 	waitUntil {
@@ -47,8 +43,8 @@ while { true } do {
 
 	showCinemaBorder false;
 	camUseNVG false;
-	respawn_camera = "camera" camCreate (getposASLW startbase);
-	respawn_object = "Sign_Arrow_Blue_F" createVehicleLocal (getposASLW startbase);
+	respawn_camera = "camera" camCreate (getposATL startbase);
+	respawn_object = "Sign_Arrow_Blue_F" createVehicleLocal (getposATL startbase);
 	respawn_object hideObject true;
 	respawn_camera camSetTarget respawn_object;
 	respawn_camera cameraEffect ["internal","back"];
@@ -78,7 +74,7 @@ while { true } do {
 	lbSetCurSel [ 203, 0 ];
 
 	while { dialog && alive player && deploy == 0} do {
-		choiceslist = [ [ _basenamestr, getpos lhd ] ];
+		choiceslist = [ [ _basenamestr, getposATL startbase ] ];
 
 		for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
 			choiceslist = choiceslist + [[format [ "FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx) ],GRLIB_all_fobs select _idx]];
@@ -88,7 +84,7 @@ while { true } do {
 			_respawn_trucks = call F_getMobileRespawns;
 
 			for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
-				choiceslist = choiceslist + [[format [ "%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getpos (_respawn_trucks select _idx)) ],getpos (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
+				choiceslist = choiceslist + [[format [ "%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx)) ],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
 			};
 		};
 
@@ -107,16 +103,12 @@ while { true } do {
 			if ( dialog ) then {
 				_objectpos = ((choiceslist select _oldsel) select 1);
 			};
-			if ( surfaceIsWater _objectpos) then {
-				respawn_object setposasl [_objectpos select 0, _objectpos select 1, 15];
-			} else {
-				respawn_object setpos ((choiceslist select _oldsel) select 1);
-			};
+			respawn_object setposATL ((choiceslist select _oldsel) select 1);
 			_startdist = 120;
 			_enddist = 120;
 			_alti = 35;
 			if ( dialog ) then {
-				if (((choiceslist select (lbCurSel 201)) select 0) == "BLUFOR LHD") then {
+				if (((choiceslist select (lbCurSel 201)) select 0) == _basenamestr) then {
 					_startdist = 200;
 					_enddist = 300;
 					_alti = 30;
@@ -157,16 +149,12 @@ while { true } do {
 		_idxchoice = lbCurSel 201;
 		_spawn_str = (choiceslist select _idxchoice) select 0;
 
-		if (((choiceslist select _idxchoice) select 0) == _basenamestr) then {
-			call respawn_lhd;
+		if (count (choiceslist select _idxchoice) == 3) then {
+			_truck = (choiceslist select _idxchoice) select 2;
+			player setposATL ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos)
 		} else {
-			if (count (choiceslist select _idxchoice) == 3) then {
-				_truck = (choiceslist select _idxchoice) select 2;
-				player setpos ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos)
-			} else {
-				_destpos = ((choiceslist select _idxchoice) select 1);
-				player setpos [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),0];
-			};
+			_destpos = ((choiceslist select _idxchoice) select 1);
+			player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
 		};
 
 		if ( (lbCurSel 203) > 0 ) then {

@@ -1,6 +1,5 @@
 enableSaving [ false, false ];
 
-[] call compileFinal preprocessFileLineNumbers "scripts\shared\atlas_manager.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\liberation_functions.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_sectors.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";

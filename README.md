@@ -192,6 +192,7 @@ class Missions
 * Tweaked: Altis mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Chimera bases on Takistan and Taunus. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Enemy infantry units will now spawn in initial safe state instead of be directly aware
+* Tweaked: Chimera / Carrier spawn markers. Removed any dependency, using only invisible grasscutter objects. Makes porting etc. much easier
 * Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Enemy weapon dance. Thanks to [k4s0](https://github.com/k4s0)

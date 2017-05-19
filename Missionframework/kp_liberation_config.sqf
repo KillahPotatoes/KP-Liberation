@@ -292,13 +292,13 @@ boats_names = [
 ];
 
 // Little bird placement positions on LHD.
-KP_liberation_little_bird_positions = [
+/*KP_liberation_little_bird_positions = [
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 116, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 97, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) + 83, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) - 56, 16.75],
 	[(getpos lhd select 0) + 9, (getpos lhd select 1) - 71, 16.75]
-];
+];*/
 
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [

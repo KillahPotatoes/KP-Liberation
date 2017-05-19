@@ -421,7 +421,7 @@ opfor_vehicles = [
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_MBT_02_cannon_F",												//T-100 Varsuk
-	"O_MBT_02_cannon_F"												//T-100 Varsuk
+	"O_MBT_02_cannon_F"													//T-100 Varsuk
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
