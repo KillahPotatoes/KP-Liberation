@@ -403,7 +403,6 @@ civilian_vehicles = [
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
-	"RHS_M2A3_BUSKIII",
 	"rhsusf_m1a2sep1d_usarmy",
 	"rhsusf_m1a2sep1tuskiid_usarmy",
 	"rhsusf_m109d_usarmy",
@@ -414,5 +413,7 @@ elite_vehicles = [
 	"JS_JC_FA18F",
 	"B_UAV_02_F",
 	"B_UAV_02_CAS_F",
-	"RHS_M119_D"
+	"RHS_M119_D",
+	"B_Plane_Fighter_01_F",												//F/A-181 Black Wasp II
+	"B_Plane_Fighter_01_Stealth_F"										//F/A-181 Black Wasp II (stealth)
 ];

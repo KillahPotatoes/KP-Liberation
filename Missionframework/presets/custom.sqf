@@ -525,8 +525,6 @@ civilian_vehicles = [
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
 	"rhsusf_mkvsoc",													//Mk.V SOCOM
-	"RHS_M2A2_BUSKI_WD",												//M2A2ODS (Busk I)
-	"RHS_M2A3_BUSKIII_wd",												//M2A3 (Busk III)
 	"rhsusf_m1a1aim_tuski_wd",											//M1A1SA (Tusk I)
 	"B_MBT_01_TUSK_F",													//M2A4 Slammer UP
 	"rhsusf_m1a2sep1tuskiiwd_usarmy",									//M1A2SEPv1 (Tusk II)
@@ -547,5 +545,7 @@ elite_vehicles = [
 	"FIR_F15E",															//F-15E Strike Eagle
 	"JS_JC_FA18E",														//F/A-18 E Super Hornet
 	"JS_JC_FA18F",														//F/A-18 F Super Hornet
+	"B_Plane_Fighter_01_F",												//F/A-181 Black Wasp II
+	"B_Plane_Fighter_01_Stealth_F",										//F/A-181 Black Wasp II (stealth)
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
