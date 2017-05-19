@@ -223,9 +223,7 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
-	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
 ];
 
 // Everything that can resupply other vehicles.
@@ -241,9 +239,7 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
-	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
-	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
+	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd"
 ];
 
 vehicle_rearm_sources = [
@@ -257,9 +253,7 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
-	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
 ];
 
 vehicle_refuel_sources = [
@@ -273,9 +267,7 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_d",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
-	"rhsusf_M978A4_BKIT_usarmy_wd",
-	"UK3CB_BAF_Coyote_Logistics_L134A1_W_DPMW",
-	"UK3CB_BAF_Coyote_Logistics_L111A1_W_DPMW"
+	"rhsusf_M978A4_BKIT_usarmy_wd"
 ];
 
 // Classnames of boats, so they can be built on water.
