@@ -194,7 +194,7 @@ while { true } do {
 		_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 		_text remoteExec ["diag_log",2];
 		_badItems = "";
-		{_badItems = _badItems + _x + "\n";} forEach (_playerItems - KP_liberation_allowed_items);
+		{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
 		hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
 		removeAllWeapons player;
 		removeAllItems player;

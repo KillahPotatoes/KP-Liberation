@@ -3,7 +3,7 @@ waitUntil {!isNil "KP_liberation_logistics"};
 
 private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
 
-while {(GRLIB_endgame == 0) && KP_liberation_ailogistics} do {
+while {(GRLIB_endgame == 0)} do {
 
 
 	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {

@@ -63,7 +63,7 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\civilian_patrols.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\manage_patrols.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\reinforcements_resetter.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\manage_logistics.sqf";
+if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\manage_logistics.sqf";};
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\manage_resources.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\recalculate_resources.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\recalculate_timer.sqf";
