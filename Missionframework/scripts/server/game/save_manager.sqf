@@ -208,6 +208,13 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			if (_nextclass == "Flag_White_F") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
+
+			if (!(_nextclass in KP_liberation_ace_crates)) then {
+				clearWeaponCargoGlobal _nextclass;
+				clearMagazineCargoGlobal _nextclass;
+				clearBackpackCargoGlobal _nextclass;
+				clearItemCargoGlobal _nextclass;
+			};
 		};
 
 	} foreach buildings_to_save;
