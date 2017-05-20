@@ -1,8 +1,8 @@
 if (!isServer) exitWith {};
 
-params ["_sector", "_fac"];
+params ["_sector", "_fac","_clientID"];
 
-private ["_tempProduction","_checkFor","_price_s","_price_a","_price_f"];
+private ["_tempProduction","_checkFor","_price_s","_price_a","_price_f","_hint"];
 
 _tempProduction = KP_liberation_production;
 
@@ -87,7 +87,8 @@ switch (_fac) do {
 
 			_x set [_checkFor, true];
 		} else {
-			hint format [localize "STR_PRODUCTION_FACBUILD_ERROR",_price_s,_price_a,_price_f];
+			_hint = format [localize "STR_PRODUCTION_FACBUILD_ERROR",_price_s,_price_a,_price_f];
+			_hint remoteExec ["hint",_clientID];
 		};
 	};
 } forEach _tempProduction;
