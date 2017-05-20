@@ -36,7 +36,6 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 * Port: 2302
 * Needed Mods: None
 * Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
-* Runs the latest stable or, if available, dev version
 
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
@@ -50,6 +49,11 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
 		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
+* Sahrani
+	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Takistan
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -166,6 +170,7 @@ class Missions
 * Added: Mission parameter to enable or disable the logistics system
 * Added: [3cb BAF](https://3cbmod.wordpress.com) unit and arsenal preset. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: DLC Jets to most presets
+* Added: Sahrani missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie) for helping with OPFOR Points
 * Removed: Resource caps system
 * Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
 * Removed: Passive Income (due to new resource system)
@@ -179,7 +184,7 @@ class Missions
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
 * Replaced: Every deprecated BIS_fnc_MP with remoteExec
-* Replaced: ATLAS LHD with USS Freedom
+* Replaced: ATLAS LHD with USS Freedom. Thanks to [Applejakerie](https://github.com/Applejakerie) for the immersive clutter on the carrier
 * Tweaked: Arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Initialization of the arsenal, which should increase the performance for blacklist using
 * Tweaked: Save manager -> helicopters from the Freedom or Chimera won't be saved, as they spawn on every mission start/load
