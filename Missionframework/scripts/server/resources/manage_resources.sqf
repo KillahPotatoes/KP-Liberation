@@ -5,6 +5,8 @@ if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] 
 
 while {GRLIB_endgame == 0} do {
 
+	recalculate_sectors = false;
+	
 	if (((count allPlayers) > 0) && ((count KP_liberation_production) > 0)) then {
 		private ["_tempProduction", "_storage", "_storageArray", "_supplyValue", "_ammoValue", "_fuelValue", "_time", "_crateType", "_crate"];
 
@@ -75,5 +77,5 @@ while {GRLIB_endgame == 0} do {
 		KP_liberation_production = _tempProduction;
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource interval finished: %1", time];_text remoteExec ["diag_log",2];};
 	};
-	uiSleep 60;
+	waitUntil {sleep 1; recalculate_sectors};
 };
