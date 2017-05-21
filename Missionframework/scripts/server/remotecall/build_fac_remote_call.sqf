@@ -7,9 +7,9 @@ private ["_tempProduction","_checkFor","_price_s","_price_a","_price_f","_hint"]
 _tempProduction = KP_liberation_production;
 
 switch (_fac) do {
-	case "supply": {_checkFor = 4;_price_s = 100;_price_a = 200;_price_f = 200;};
-	case "ammo": {_checkFor = 5;_price_s = 200;_price_a = 100;_price_f = 200;};
-	case "fuel": {_checkFor = 6;_price_s = 200;_price_a = 200;_price_f = 100;};
+	case "supply": {_checkFor = 4;_price_s = 50;_price_a = 100;_price_f = 100;};
+	case "ammo": {_checkFor = 5;_price_s = 100;_price_a = 50;_price_f = 100;};
+	case "fuel": {_checkFor = 6;_price_s = 100;_price_a = 100;_price_f = 50;};
 };
 
 {

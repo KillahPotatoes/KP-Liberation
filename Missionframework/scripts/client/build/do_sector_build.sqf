@@ -93,5 +93,5 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 
 	build_confirmed = 0;
 } else {
-	[((_this select 3) select 1), ((_this select 3) select 0)] remoteExec ["build_fac_remote_call",2];
+	[((_this select 3) select 1), ((_this select 3) select 0), clientOwner] remoteExec ["build_fac_remote_call",2];
 };
