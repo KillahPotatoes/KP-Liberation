@@ -90,7 +90,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 	player removeAction _idactcancel;
 	player removeAction _idactplace;
 	player removeAction _idactvector;
-	player removeAction ((_this select 3) select 0);
+	player removeAction ((_this select 3) select 2);
 
 	build_confirmed = 0;
 } else {
