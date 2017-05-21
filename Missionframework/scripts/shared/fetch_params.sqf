@@ -33,8 +33,8 @@ if ( isMultiplayer ) then {
 	GRLIB_time_factor = 12;
 	GRLIB_resources_multiplier = 3;
 	GRLIB_fatigue = 1;
-	GRLIB_introduction = 0;
-	GRLIB_deployment_cinematic = 0;
+	GRLIB_introduction = 1;
+	GRLIB_deployment_cinematic = 1;
 	GRLIB_adaptive_opfor = 1;
 	GRLIB_unitcap = 2;
 	GRLIB_civilian_activity = 1;
@@ -42,7 +42,7 @@ if ( isMultiplayer ) then {
 	GRLIB_build_first_fob = 0;
 	GRLIB_param_wipe_savegame_1 = 0;
 	GRLIB_param_wipe_savegame_2 = 0;
-	GRLIB_permissions_param = 1;
+	GRLIB_permissions_param = 0;
 	GRLIB_halo_param = 1;
 	GRLIB_use_whitelist = 0;
 	GRLIB_cleanup_vehicles = 2;
