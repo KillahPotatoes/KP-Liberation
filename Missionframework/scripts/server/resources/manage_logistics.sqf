@@ -1,18 +1,12 @@
-waitUntil {time > 1};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] manage_logistics.sqf started on: %1", (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic management started on: %1", (name player)];_text remoteExec ["diag_log",2];};
 
-private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
-
-while {(GRLIB_endgame == 0)} do {
-
+while {GRLIB_endgame == 0} do {
 
 	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {
+		private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
 		
 		_tempLogistics = KP_liberation_logistics;
 
@@ -454,7 +448,9 @@ while {(GRLIB_endgame == 0)} do {
 			};
 		} forEach _tempLogistics;	
 
-		KP_liberation_logistics = _tempLogistics;	
+		KP_liberation_logistics = _tempLogistics;
+
+		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic interval finished: %1", time];_text remoteExec ["diag_log",2];};
 	};
 	uiSleep 60;
 };

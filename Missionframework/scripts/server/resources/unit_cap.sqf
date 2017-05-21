@@ -4,6 +4,8 @@ KP_liberation_plane_count = 0;
 
 private ["_local_unitcap","_local_heli_count","_local_plane_count"];
 
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unitcap calculation started on: %1", (name player)];_text remoteExec ["diag_log",2];};
+
 while { true } do {
 	_local_unitcap = 0;
 	_local_heli_count = 0;

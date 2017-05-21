@@ -1,3 +1,6 @@
+
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management initializing for: %1", (name player)];_text remoteExec ["diag_log",2];};
+
 private [ "_recycleable_vehicles", "_recycleable_classnames", "_building_classnames", "_detected_vehicles", "_next_vehicle", "_next_vehicle_already_in_list", "_idact_next" ];
 
 _recycleable_vehicles = [];
@@ -17,6 +20,8 @@ _building_classnames = [];
 _building_classnames = _building_classnames + ["B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F"];
 
 waitUntil {sleep 1; !isNil "GRLIB_all_fobs"};
+
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management started for: %1", (name player)];_text remoteExec ["diag_log",2];};
 
 while {true} do {
 

@@ -636,10 +636,7 @@ while { true } do {
 		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
 		saveProfileNamespace;
 
-		if (KP_liberation_debug) then {
-			private _text = format ["[KP LIBERATION] [DEBUG] Saved savegame: %1", greuh_liberation_savegame];
-			_text remoteExec ["diag_log",2];
-		};
+		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
 
 	};
 };

@@ -77,7 +77,4 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 	};
 } foreach allUnits;
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] init_server.sqf done for: %1", (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_server.sqf done for: %1", (name player)];_text remoteExec ["diag_log",2];};
