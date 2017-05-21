@@ -183,7 +183,7 @@ class Missions
 * Removed: Chimera Base on maps with a suitable amount of ocean for supporting the Freedom
 * Merged: `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
-* Updated: InGame Tutorial screen with the latest informations for resource, production and logistic system. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Updated: English InGame Tutorial text with the latest informations for resource, production and logistic system. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
 * Replaced: Every deprecated BIS_fnc_MP with remoteExec
 * Replaced: ATLAS LHD with USS Freedom. Thanks to [Applejakerie](https://github.com/Applejakerie) for the immersive clutter on the carrier
