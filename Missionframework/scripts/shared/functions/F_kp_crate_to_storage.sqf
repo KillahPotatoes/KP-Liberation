@@ -35,7 +35,8 @@ if (!isNull (_this select 1)) then {
 	
 	_crates_count = count (attachedObjects (_this select 1));
 
-	(_this select 0) attachTo [(_this select 1), [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];	
+	(_this select 0) attachTo [(_this select 1), [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
+	(_this select 0) enableRopeAttach false;
 } else {
 	if (!isDedicated) then {
 		hint localize "STR_BOX_CANTSTORE";
