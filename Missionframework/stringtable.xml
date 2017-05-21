@@ -3384,6 +3384,10 @@
 						<German>Nicht genug Ressourcen.\n\nDu benötigst:\n%1 Nachschub\n%2 Munition\n%3 Kraftstoff</German>
 						<Italian>Risorse insufficenti.\n\nHai bisogno di:\n%1 approvvigionamenti\n%2 Munizioni\n%3 Carburante </Italian>
 				</Key>
+				<Key ID="STR_PRODUCTION_FACBUILD_SUCCESS">
+						<Original>Facility established.</Original>
+						<German>Einrichtung etabliert.</German>
+				</Key>
 				<Key ID="STR_PARAMS_AILOGISTICS">
  						<Original>AI Logistics Module</Original>
  						<German>AI Logistik Modul</German>
