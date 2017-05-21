@@ -50,8 +50,3 @@ sectors_airspawn = [];
 		sectors_allSectors pushback _x;
 	};
 } foreach allMapMarkers;
-
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] init_sectors.sqf done for: %1", (name player)];
-	_text remoteExec ["diag_log",2];
-};

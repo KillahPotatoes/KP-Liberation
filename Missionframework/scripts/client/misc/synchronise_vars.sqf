@@ -1,5 +1,11 @@
 one_synchro_done = false;
 synchro_done = false;
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Clientside sync variables starts intitializing on: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};
+
 waitUntil { !isNil "sync_vars" };
 
 if (KP_liberation_debug) then {
