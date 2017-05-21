@@ -7,10 +7,10 @@ if ( isServer ) then {
 	_source = name player;
 };
 
-diag_log (localize "STR_MISSION_TITLE");
+diag_log format ["[KP LIBERATION] [INFO] Missionfile: %1",(localize "STR_MISSION_TITLE")];
 
 while { true } do {
-	diag_log format [ "Source: %1 - Time: %2 - FPS: %3 - Total units: %4 - Hostile units: %5 - Local units: %6 - Vehicles: %7 - Unitcap: %8",
+	diag_log format [ "[KP LIBERATION] [STATS] Source: %1 - Time: %2 - FPS: %3 - Total units: %4 - Hostile units: %5 - Local units: %6 - Vehicles: %7 - Unitcap: %8",
 	_source,
 	time,
 	diag_fps,

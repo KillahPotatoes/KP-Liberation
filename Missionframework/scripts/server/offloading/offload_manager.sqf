@@ -22,7 +22,7 @@ while { GRLIB_endgame == 0 } do {
 
 		if ( count _blufor_ai_groups > 0 ) then {
 			{
-				if ( ( ( leader _x ) distance lhd ) > 500 && ( groupOwner _x != owner _commander ) ) then {
+				if ( ( ( leader _x ) distance startbase ) > 500 && ( groupOwner _x != owner _commander ) ) then {
 					_x setGroupOwner (owner _commander);
 					sleep 1;
 				};

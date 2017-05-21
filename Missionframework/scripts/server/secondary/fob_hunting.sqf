@@ -10,7 +10,7 @@ _fob_templates = [
 ];
 
 _spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
-if ( _spawn_marker == "" ) exitWith { diag_log "Could not find position for fob hunting mission"; };
+if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for fob hunting mission"; };
 
 used_positions = used_positions + [ _spawn_marker ];
 _base_position = markerpos _spawn_marker;
@@ -113,7 +113,7 @@ secondary_objective_position_marker = [(((secondary_objective_position select 0)
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 GRLIB_secondary_in_progress = 0; publicVariable "GRLIB_secondary_in_progress";
-[ [ 2 ] , "remote_call_intel" ] call BIS_fnc_MP;
+[2] remoteExec ["remote_call_intel"];
 
 waitUntil {
 	sleep 5;
@@ -126,6 +126,6 @@ sleep 1;
 trigger_server_save = true;
 sleep 3;
 
-[ [ 3 ] , "remote_call_intel" ] call BIS_fnc_MP;
+[3] remoteExec ["remote_call_intel"];
 
 GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";

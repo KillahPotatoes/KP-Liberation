@@ -15,7 +15,7 @@ sleep 2;
 _unit enableAI "ANIM";
 _unit enableAI "MOVE";
 sleep 2;
-[ [ _unit ], "remote_call_switchmove" ] call bis_fnc_mp;
+[_unit] remoteExec ["remote_call_switchmove"];
 
 if ( typeof _unit == pilot_classname ) exitWith {};
 
@@ -49,8 +49,8 @@ if (alive _unit) then {
 		_unit disableAI "ANIM";
 		_unit disableAI "MOVE";
 		sleep 5;
-		[ [ _unit, "AidlPsitMstpSnonWnonDnon_ground00" ], "remote_call_switchmove" ] call bis_fnc_mp;
-		[ [_unit] , "prisonner_remote_call" ] call BIS_fnc_MP;
+		[_unit, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExec ["remote_call_switchmove"];
+		[_unit] remoteExec ["prisonner_remote_call",2];
 		sleep 600;
 		deleteVehicle _unit;
 

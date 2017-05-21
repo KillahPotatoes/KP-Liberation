@@ -1,6 +1,6 @@
 if ( !isServer ) exitWith {};
 if ( isNil "GRLIB_secondary_starting" ) then { GRLIB_secondary_starting = false; };
-if ( GRLIB_secondary_starting ) exitWith { diag_log "Multiple calls to start secondary mission : shouldn't be possible, isn't allowed"; };
+if ( GRLIB_secondary_starting ) exitWith { diag_log "[KP LIBERATION] [ERROR] Multiple calls to start secondary mission : shouldn't be possible, isn't allowed"; };
 if ( isNil "used_positions" ) then { used_positions = []; };
 
 GRLIB_secondary_starting = true; publicVariable "GRLIB_secondary_starting";

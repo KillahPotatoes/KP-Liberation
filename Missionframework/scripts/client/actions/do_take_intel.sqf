@@ -1,3 +1,3 @@
 params [ "_intel_obj" ];
 
-[ [ _intel_obj ] , "intel_remote_call" ] call BIS_fnc_MP;
+[_intel_obj] remoteExec ["intel_remote_call",2];

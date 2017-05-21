@@ -1,6 +1,6 @@
 waitUntil { !isNil "huron_typename" };
 
-_vehicleClassnames = [huron_typename];
+_vehicleClassnames = [huron_typename] + KP_liberation_crates;
 
 
 {
@@ -13,13 +13,13 @@ while { true } do {
 
 	_zeusunits = [];
 	{
-		if ( (side group _x == GRLIB_side_friendly ) && ( _x distance lhd > 1000 ) && alive _x ) then {
+		if ( (side group _x == GRLIB_side_friendly ) && ( _x distance startbase > 1000 ) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach allUnits;
 
 	{
-		if ((typeof _x in _vehicleClassnames ) && (typeof _x != ammobox_o_typename) && (( _x distance lhd > 1000 ) || (typeof _x == huron_typename)) && alive _x ) then {
+		if ((typeof _x in _vehicleClassnames ) && (( _x distance startbase > 1000 ) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach vehicles;
@@ -30,7 +30,7 @@ while { true } do {
 
 	_units_to_remove = [];
 	{
-		if ( !(alive _x) ) then {
+		if ( !(alive _x) || !(isNull attachedTo _x)) then {
 			_units_to_remove pushback _x;
 		};
 	} foreach (curatorEditableObjects (allCurators select 0));

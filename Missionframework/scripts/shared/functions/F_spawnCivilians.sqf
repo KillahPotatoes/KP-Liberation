@@ -1,4 +1,4 @@
-diag_log format [ "Spawning civilians at %1", time ];
+diag_log format [ "[KP LIBERATION] [INFO] Spawning civilians at %1", time ];
 
 params [ "_sector" ];
 private [ "_sectorpos", "_idx", "_nbcivs", "_spread", "_spawnpos", "_grp", "_createdcivs", "_nextciv" ];
@@ -26,6 +26,6 @@ while { _idx < _nbcivs } do {
 	_idx = _idx + 1;
 };
 
-diag_log format [ "Done Spawning civilians at %1", time ];
+diag_log format [ "[KP LIBERATION] [INFO] Done Spawning civilians at %1", time ];
 
 _createdcivs

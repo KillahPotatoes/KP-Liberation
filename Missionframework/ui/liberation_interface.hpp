@@ -14,3 +14,5 @@
 #include "liberation_repackage_fob.hpp"
 #include "liberation_halo.hpp"
 #include "liberation_secondary.hpp"
+#include "liberation_production.hpp"
+#include "liberation_logistic.hpp"

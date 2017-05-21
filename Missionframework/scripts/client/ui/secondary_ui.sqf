@@ -66,7 +66,7 @@ while { dialog && alive player && dostartsecondary == 0 } do {
 };
 
 if ( dostartsecondary == 1 ) then {
-	[ [ lbCurSel 101 ], "start_secondary_remote_call" ] call BIS_fnc_MP;
+	[lbCurSel 101] remoteExec ["start_secondary_remote_call",2];
 };
 
 if ( dialog ) then {

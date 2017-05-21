@@ -47,6 +47,7 @@ if ( isServer ) then {
 		stats_player_deaths = stats_player_deaths + 1;	
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
+		if (vehicle _unit != _unit) then {moveOut _unit;};
 	};
 
 	if ( _unit isKindOf "Man" ) then {
@@ -54,11 +55,6 @@ if ( isServer ) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
 			if ( isPlayer _killer ) then {
 				stats_civilians_killed_by_players = stats_civilians_killed_by_players + 1;
-
-				if ( GRLIB_civ_penalties ) then {
-					resources_ammo = resources_ammo - GRLIB_civ_killing_penalty;
-					[ [ name _unit, GRLIB_civ_killing_penalty, _killer ] , "remote_call_civ_penalty" ] call BIS_fnc_MP;
-				};
 			};
 		};
 
@@ -83,23 +79,6 @@ if ( isServer ) then {
 			stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 			if ( isplayer _killer ) then {
 				stats_opfor_vehicles_killed_by_players = stats_opfor_vehicles_killed_by_players + 1;
-
-				if ( GRLIB_ammo_bounties ) then {
-					private [ "_bounty" ];
-
-					_bounty = 20;
-					if ( _unit isKindOf "Air" ) then {
-						_bounty = 80;
-					};
-
-					if ( _unit isKindOf "Tank" ) then {
-						_bounty = 40;
-					};
-
-					resources_ammo = resources_ammo + _bounty;
-					[ [ typeOf _unit, _bounty, _killer ] , "remote_call_ammo_bounty" ] call BIS_fnc_MP;
-				};
-
 			};
 		} else {
 			stats_blufor_vehicles_killed = stats_blufor_vehicles_killed + 1;
@@ -108,7 +87,7 @@ if ( isServer ) then {
 };
 
 if( isServer && !isplayer _unit) then {
-	if ( ((typeof _unit) in [ammobox_o_typename, ammobox_b_typename]) && ((getPosATL _unit) select 2 < 10) ) then {
+	if ( ((typeof _unit) == KP_liberation_ammo_crate) && ((getPosATL _unit) select 2 < 10) ) then {
 		( "R_80mm_HE" createVehicle (getPosATL _unit) ) setVelocity [0, 0, -200];
 		deleteVehicle _unit;
 	} else {

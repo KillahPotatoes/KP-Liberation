@@ -12,5 +12,5 @@ if ( isServer ) then {
 	resources_intel = resources_intel + ( _yield + (round (random _yield)));
 	stats_prisonners_captured = stats_prisonners_captured + 1;
 
-	[ [ 0 ] , "remote_call_intel" ] call BIS_fnc_MP;
+	[0] remoteExec ["remote_call_intel"];
 };

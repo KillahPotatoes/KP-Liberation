@@ -1,6 +1,6 @@
 
 private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
-if ( _spawn_marker == "" ) exitWith { diag_log "Could not find position for search and rescue mission"; };
+if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
 private _helopos = [ getmarkerpos _spawn_marker, random 200, random 360 ] call BIS_fnc_relPos;
@@ -78,7 +78,7 @@ secondary_objective_position_marker = [ secondary_objective_position, 800, rando
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 GRLIB_secondary_in_progress = 2; publicVariable "GRLIB_secondary_in_progress";
-[ [ 6 ] , "remote_call_intel" ] call BIS_fnc_MP;
+[6] remoteExec ["remote_call_intel"];
 
 waitUntil {
 	sleep 5;
@@ -89,9 +89,9 @@ sleep 5;
 
 private _alive_crew_count = { alive _x } count _pilotUnits;
 if ( _alive_crew_count == 0 ) then {
-	[ [ 7 ] , "remote_call_intel" ] call BIS_fnc_MP;
+	[7] remoteExec ["remote_call_intel"];
 } else {
-	[ [ 8 ] , "remote_call_intel" ] call BIS_fnc_MP;
+	[8] remoteExec ["remote_call_intel"];
 	private _grp = createGroup GRLIB_side_friendly;
 	{ [_x ] joinSilent _grp; } foreach _pilotUnits;
 	while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};

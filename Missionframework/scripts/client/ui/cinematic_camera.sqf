@@ -3,6 +3,8 @@ private [ "_last_transition", "_last_position", "_cinematic_camera", "_cinematic
 if ( isNil "active_sectors" ) then { active_sectors = [] };
 if ( isNil "GRLIB_all_fobs" ) then { GRLIB_all_fobs = [] };
 
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera started for: %1", (name player)];_text remoteExec ["diag_log",2];};
+
 cinematic_camera_started = true;
 _last_transition = -1;
 _last_position = [ -1, -1, -1 ];
@@ -23,7 +25,7 @@ while { cinematic_camera_started } do {
 	if ( cinematic_camera_started ) then {
 		camUseNVG false;
 
-		_positions = [ getpos lhd ];
+		_positions = [ getpos startbase ];
 		if ( !first_camera_round ) then {
 
 			if ( count GRLIB_all_fobs > 0 ) then {
@@ -58,11 +60,7 @@ while { cinematic_camera_started } do {
 		_nearentities = _position nearEntities [ "Man", 100 ];
 		_camtarget = _cinematic_pointer;
 		if ( first_camera_round ) then {
-			if ( GRLIB_isAtlasPresent ) then {
-				_camtarget = lhdofficer;
-			} else {
-				_camtarget = chimeraofficer;
-			};
+			_camtarget = startbase;
 		} else {
 			if ( count ( [ _nearentities , { alive _x && isPlayer _x } ] call BIS_fnc_conditionalSelect ) != 0 ) then {
 				_camtarget = ( [ _nearentities , { alive _x && isPlayer _x } ] call BIS_fnc_conditionalSelect ) call bis_fnc_selectRandom;
@@ -255,12 +253,8 @@ while { cinematic_camera_started } do {
 				_unitname = "";
 				if ( isPlayer _camtarget ) then { _unitname = name _camtarget };
 				_nearest_sector = "";
-				if ( _position distance lhd < 300 ) then {
-					if ( GRLIB_isAtlasPresent ) then {
-						_nearest_sector = "BLUFOR LHD";
-					} else {
-						_nearest_sector = "BASE CHIMERA";
-					};
+				if ( _position distance startbase < 300 ) then {
+					_nearest_sector = "BEGIN OF OPERATION";
 				} else {
 					_nearest_sector = [300, _position ] call F_getNearestSector;
 					if ( _nearest_sector != "" ) then {
@@ -283,3 +277,8 @@ _cinematic_camera cameraEffect ["Terminate", "BACK"];
 camDestroy _cinematic_camera;
 camUseNVG false;
 cinematic_camera_stop = true;
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera stopped for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

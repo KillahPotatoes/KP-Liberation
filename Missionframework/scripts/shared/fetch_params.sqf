@@ -12,7 +12,6 @@ if ( isMultiplayer ) then {
 	GRLIB_build_first_fob = ["FirstFob",0] call bis_fnc_getParamValue;
 	GRLIB_param_wipe_savegame_1 = ["WipeSave1",0] call bis_fnc_getParamValue;
 	GRLIB_param_wipe_savegame_2 = ["WipeSave2",0] call bis_fnc_getParamValue;
-	GRLIB_passive_income = ["PassiveIncome",0] call bis_fnc_getParamValue;
 	GRLIB_permissions_param = ["Permissions",1] call bis_fnc_getParamValue;
 	GRLIB_halo_param = ["HaloJump",1] call bis_fnc_getParamValue;
 	GRLIB_use_whitelist = ["Whitelist",0] call bis_fnc_getParamValue;
@@ -20,8 +19,6 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_ammo_bounties = [ "AmmoBounties",1] call bis_fnc_getParamValue;
-	GRLIB_civ_penalties = [ "CivPenalties",1] call bis_fnc_getParamValue;
 	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
@@ -30,13 +27,14 @@ if ( isMultiplayer ) then {
 	KP_liberation_mapmarkers = ["MapMarkers",0] call bis_fnc_getParamValue;
 	KP_liberation_mobilerespawn = ["MobileRespawn",0] call bis_fnc_getParamValue;
 	KP_liberation_mobilearsenal = ["MobileArsenal",0] call bis_fnc_getParamValue;
+	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
 	GRLIB_resources_multiplier = 3;
 	GRLIB_fatigue = 1;
-	GRLIB_introduction = 0;
-	GRLIB_deployment_cinematic = 0;
+	GRLIB_introduction = 1;
+	GRLIB_deployment_cinematic = 1;
 	GRLIB_adaptive_opfor = 1;
 	GRLIB_unitcap = 2;
 	GRLIB_civilian_activity = 1;
@@ -44,16 +42,13 @@ if ( isMultiplayer ) then {
 	GRLIB_build_first_fob = 0;
 	GRLIB_param_wipe_savegame_1 = 0;
 	GRLIB_param_wipe_savegame_2 = 0;
-	GRLIB_passive_income = 0;
-	GRLIB_permissions_param = 1;
+	GRLIB_permissions_param = 0;
 	GRLIB_halo_param = 1;
 	GRLIB_use_whitelist = 0;
 	GRLIB_cleanup_vehicles = 2;
 	GRLIB_csat_aggressivity = 2;
 	GRLIB_weather_param = 3;
 	GRLIB_shorter_nights = 0;
-	GRLIB_ammo_bounties = 1;
-	GRLIB_civ_penalties = 1;
 	GRLIB_remote_sensors = 0;
 	GRLIB_blufor_defenders = 1;
 	GRLIB_autodanger = 0;
@@ -62,6 +57,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_mapmarkers = 1;
 	KP_liberation_mobilerespawn = 1;
 	KP_liberation_mobilearsenal = 1;
+	KP_liberation_ailogistics = 1;
 };
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
@@ -70,17 +66,15 @@ if ( GRLIB_deployment_cinematic == 1 ) then { GRLIB_deployment_cinematic = true 
 if ( GRLIB_build_first_fob == 1 ) then { GRLIB_build_first_fob = true } else { GRLIB_build_first_fob = false };
 if ( GRLIB_teamkill_penalty == 1 ) then { GRLIB_teamkill_penalty = true } else { GRLIB_teamkill_penalty = false };
 if ( GRLIB_adaptive_opfor == 1 ) then { GRLIB_adaptive_opfor = true } else { GRLIB_adaptive_opfor = false };
-if ( GRLIB_passive_income == 1 ) then { GRLIB_passive_income = true } else { GRLIB_passive_income = false };
 if ( GRLIB_permissions_param == 1 ) then { GRLIB_permissions_param = true } else { GRLIB_permissions_param = false };
 if ( GRLIB_use_whitelist == 1 ) then { GRLIB_use_whitelist = true } else { GRLIB_use_whitelist = false };
 if ( GRLIB_shorter_nights == 1 ) then { GRLIB_shorter_nights = true } else { GRLIB_shorter_nights = false };
-if ( GRLIB_ammo_bounties == 1 ) then { GRLIB_ammo_bounties = true } else { GRLIB_ammo_bounties = false };
-if ( GRLIB_civ_penalties == 1 ) then { GRLIB_civ_penalties = true } else { GRLIB_civ_penalties = false };
 if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
 if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
-if ( KP_liberation_mapmarkers == 1 ) then { GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true } else { GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false };
-if ( KP_liberation_mobilerespawn == 1 ) then { KP_liberation_mobilerespawn = true } else { KP_liberation_mobilerespawn = false };
-if ( KP_liberation_mobilearsenal == 1 ) then { KP_liberation_mobilearsenal = true } else { KP_liberation_mobilearsenal = false };
+if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true} else {KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false};
+if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
+if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};
+if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else {KP_liberation_ailogistics = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {
@@ -131,9 +125,5 @@ switch (GRLIB_resources_multiplier) do {
 	case 5: {GRLIB_resources_multiplier = 1.5;};
 	case 6: {GRLIB_resources_multiplier = 2;};
 	case 7: {GRLIB_resources_multiplier = 3;};
-	case 8: {GRLIB_resources_multiplier = 5;};
-	case 9: {GRLIB_resources_multiplier = 10;};
-	case 10: {GRLIB_resources_multiplier = 20;};
-	case 11: {GRLIB_resources_multiplier = 50;};
 	default {GRLIB_resources_multiplier = 1;};
 };

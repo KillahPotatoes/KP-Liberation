@@ -29,7 +29,7 @@ if ( _spawn_marker != "" ) then {
 		_selected_opfor_battlegroup pushback (_vehicle_pool call BIS_fnc_selectRandom);
 	};
 
-	[ [ _spawn_marker ] , "remote_call_battlegroup" ] call BIS_fnc_MP;
+	[_spawn_marker] remoteExec ["remote_call_battlegroup"];
 
 	{
 		_nextgrp = createGroup GRLIB_side_enemy;

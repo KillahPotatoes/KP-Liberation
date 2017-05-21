@@ -22,7 +22,7 @@ class Params
 		title = $STR_AGGRESSIVITY_PARAM;
 		values[] = {0,1,2,3,4};
 		texts[] = {$STR_AGGRESSIVITY_PARAM0, $STR_AGGRESSIVITY_PARAM1,$STR_AGGRESSIVITY_PARAM2,$STR_AGGRESSIVITY_PARAM3,$STR_AGGRESSIVITY_PARAM4};
-		default = 1;
+		default = 2;
 	};
 	class AdaptToPlayercount{
 		title = $STR_PARAM_ADAPT_TO_PLAYERCOUNT;
@@ -68,9 +68,9 @@ class Params
 	};
 	class DayDuration {
 		title = $STR_PARAMS_DAYDURATION;
-		values[] = { 48, 24, 16, 12, 9.6, 8, 6.8, 6, 4.8, 4, 3, 2.4, 2, 1.6, 1, 0.66, 0.5, 0.375, 0.25, 0.1875, 0.125, 0.11 };
-		texts[] = { "0.5", "1", "1.5", "2", "2.5", "3","3.5","4","5","6","8","10","12","15","24","36","48","64","96","128","192","240" };
-		default = 8;
+		values[] = {48, 24, 16, 12, 8, 6, 4, 3, 2, 1};
+		texts[] = {"0.5","1","1.5","2","3","4","6","8","12","24"};
+		default = 6;
 	};
 	class ShorterNights {
 		title = $STR_SHORTER_NIGHTS_PARAM;
@@ -86,8 +86,8 @@ class Params
 	};
 	class ResourcesMultiplier {
 		title = $STR_PARAMS_RESOURCESMULTIPLIER;
-		values[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-		texts[] = { "x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3","x5","x10","x20","x50" };
+		values[] = { 0, 1, 2, 3, 4, 5, 6, 7 };
+		texts[] = { "x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3" };
 		default = 3;
 	};
 	class Spacer1 {
@@ -108,7 +108,7 @@ class Params
 		isGlobal = 1;
 		values[] = {-100,0,1};
 		texts[] = {$STR_A3_MissionDefault, $STR_A3_Disabled, $STR_A3_EnabledForAllPlayers};
-		default = 0;
+		default = 1;
 		function = "bis_fnc_paramReviveMode";
 	};
 	class ReviveDuration
@@ -146,15 +146,6 @@ class Params
 		texts[] = {$STR_A3_MissionDefault,$STR_A3_None,$STR_A3_Medikit,$STR_A3_FirstAidKitOrMedikit};
 		default = 1;
 		function = "bis_fnc_paramReviveRequiredItems";
-	};
-	class ReviveRequiredItemsFakConsumed
-	{
-		title = $STR_A3_RequiredItems_ConsumeFirstAidKit;
-		isGlobal = 1;
-		values[] = {-100,0,1};
-		texts[] = {$STR_A3_MissionDefault,$STR_lib_info_no,$STR_lib_info_yes};
-		default = 0;
-		function = "bis_fnc_paramReviveRequiredItemsFakConsumed";
 	};
 	class UnconsciousStateMode
 	{
@@ -219,29 +210,17 @@ class Params
 		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
 		default = 1;
 	};
+	class AiLogistics {
+		title = $STR_PARAMS_AILOGISTICS;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 1;
+	};
 	class TeamkillPenalty{
 		title = $STR_PARAM_TEAMKILL_PENALTY;
 		values[] = {1,0};
 		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
 		default = 0;
-	};
-	class PassiveIncome{
-		title = $STR_PARAM_PASSIVE_INCOME;
-		values[] = {1,0};
-		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 0;
-	};
-	class AmmoBounties{
-		title = $STR_AMMO_BOUNTIES;
-		values[] = {1,0};
-		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 1;
-	};
-	class CivPenalties{
-		title = $STR_CIV_PENALTIES;
-		values[] = {1,0};
-		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 1;
 	};
 	class HaloJump{
 		title = $STR_HALO_PARAM;

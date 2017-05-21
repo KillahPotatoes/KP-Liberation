@@ -7,7 +7,7 @@ while { true } do {
 
 	if ( [ player, 5 ] call F_fetchPermission ) then {
 
-		_detected_vehicles = [ (getpos player) nearEntities [["Tank","APC","IFV","Car"], veh_action_distance] , { (count crew _x) == 0 && ((locked _x == 0 || locked _x == 1)) && (_x distance lhd > 1000) } ] call BIS_fnc_conditionalSelect;
+		_detected_vehicles = [ (getpos player) nearEntities [["Tank","APC","IFV","Car"], veh_action_distance] , { (count crew _x) == 0 && ((locked _x == 0 || locked _x == 1)) && (_x distance startbase > 1000) } ] call BIS_fnc_conditionalSelect;
 
 		{
 			_next_vehicle = _x;

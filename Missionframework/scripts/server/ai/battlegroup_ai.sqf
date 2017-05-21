@@ -15,7 +15,7 @@ while { ( count units _grp != 0 ) && ( GRLIB_endgame == 0 ) } do {
 
 	private _objectivepos = ([getpos (leader _grp)] call F_getNearestBluforObjective) select 0;
 
-	[ [ _objectivepos ] , "remote_call_incoming" ] call BIS_fnc_MP;
+	[_objectivepos] remoteExec ["remote_call_incoming"];
 
 	private _startpos = getpos (leader _grp);
 
@@ -29,7 +29,7 @@ while { ( count units _grp != 0 ) && ( GRLIB_endgame == 0 ) } do {
 		private _waypoint = _grp addWaypoint [_objectivepos, 100];
 		_waypoint setWaypointType "MOVE";
 		_waypoint setWaypointSpeed "NORMAL";
-		_waypoint setWaypointBehaviour "AWARE";
+		_waypoint setWaypointBehaviour "SAFE";
 		_waypoint setWaypointCombatMode "YELLOW";
 		_waypoint setWaypointCompletionRadius 30;
 
