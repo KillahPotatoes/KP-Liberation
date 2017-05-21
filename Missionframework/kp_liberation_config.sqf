@@ -351,3 +351,8 @@ KP_liberation_small_storage_positions = [
 GRLIB_endgame = 0;
 if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
 GRLIB_offload_diag = false;
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

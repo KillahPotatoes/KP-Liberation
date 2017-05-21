@@ -31,6 +31,11 @@ _resources_intel_old = -999;
 _infantry_cap_old = -999;
 _KP_liberation_logistics_old = [];
 
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables intitialized for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};
+
 while {true} do {
 
 	waitUntil {sleep 0.25;

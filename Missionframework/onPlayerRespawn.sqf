@@ -13,3 +13,8 @@ if ( isNil "GRLIB_respawn_loadout" ) then {
 	sleep 4;
 	[ player, GRLIB_respawn_loadout ] call F_setLoadout;
 };
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Respawn script executed for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

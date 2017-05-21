@@ -127,3 +127,8 @@ switch (GRLIB_resources_multiplier) do {
 	case 7: {GRLIB_resources_multiplier = 3;};
 	default {GRLIB_resources_multiplier = 1;};
 };
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Pamaters read by: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

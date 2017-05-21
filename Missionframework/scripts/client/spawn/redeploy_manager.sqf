@@ -26,6 +26,11 @@ while { true } do {
 		( GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50) ) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
+
 	fullmap = 0;
 	_old_fullmap = 0;
 

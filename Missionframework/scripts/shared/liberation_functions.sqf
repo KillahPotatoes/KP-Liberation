@@ -48,3 +48,8 @@ F_getLocationName = compileFinal preprocessFileLineNumbers "scripts\shared\funct
 F_correctLaserBatteries = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_correctLaserBatteries.sqf";
 F_crateToStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_to_storage.sqf";
 F_crateFromStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_from_storage.sqf";
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Liberation Functions initialized for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

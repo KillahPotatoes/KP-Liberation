@@ -76,3 +76,8 @@ if ((count KP_liberation_allowed_items_extension) > 0) then {
 		KP_liberation_allowed_items append [_x + "_3d", _x + "_pip"];
 	};
 } forEach KP_liberation_allowed_items;
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initialized for: %2", KP_liberation_arsenal, (name player)];
+	_text remoteExec ["diag_log",2];
+};

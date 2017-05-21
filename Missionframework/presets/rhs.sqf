@@ -514,3 +514,8 @@ elite_vehicles = [
 	"B_Plane_Fighter_01_Stealth_F",										//F/A-181 Black Wasp II (Stealth)
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];
+	_text remoteExec ["diag_log",2];
+};
