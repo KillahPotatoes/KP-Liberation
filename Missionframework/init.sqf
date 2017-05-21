@@ -35,3 +35,8 @@ if (!isDedicated && hasInterface) then {
 } else {
 	setViewDistance 1600;
 };
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] init.sqf done for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

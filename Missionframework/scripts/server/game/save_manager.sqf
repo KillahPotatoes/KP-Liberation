@@ -2,6 +2,20 @@ if ( !(isNil "GRLIB_param_wipe_savegame_1") && !(isNil "GRLIB_param_wipe_savegam
 	if ( GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1 ) then {
 		profileNamespace setVariable [ GRLIB_save_key,nil ];
 		saveProfileNamespace;
+		if (KP_liberation_debug) then {
+			private _text = format ["[KP LIBERATION] [DEBUG] Save wiped by: %1", (name player)];
+			_text remoteExec ["diag_log",2];
+		};
+	} else {
+		if (KP_liberation_debug) then {
+			private _text = format ["[KP LIBERATION] [DEBUG] No save wipe for: %1", (name player)];
+			_text remoteExec ["diag_log",2];
+		};
+	};
+} else {
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Wipe params where nil for: %1", (name player)];
+		_text remoteExec ["diag_log",2];
 	};
 };
 
@@ -9,10 +23,12 @@ date_year = date select 0;
 date_month = date select 1;
 date_day = date select 2;
 blufor_sectors = [];
-KP_liberation_production = [];
 GRLIB_all_fobs = [];
 buildings_to_save= [];
 combat_readiness = 0;
+KP_liberation_storages = [];
+KP_liberation_production = [];
+KP_liberation_logistics = [];
 stats_opfor_soldiers_killed = 0;
 stats_opfor_killed_by_players = 0;
 stats_blufor_soldiers_killed = 0;
@@ -49,8 +65,6 @@ GRLIB_permissions = [];
 ai_groups = [];
 resources_intel = 0;
 GRLIB_player_scores = [];
-KP_liberation_storages = [];
-KP_liberation_logistics = [];
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -143,6 +157,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 	setDate [ 2045, 6, 6, time_of_day, 0];
 
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Loaded savegame: %1", greuh_liberation_savegame];
+		_text remoteExec ["diag_log",2];
+	};
+
 	_correct_fobs = [];
 	{
 		_next_fob = _x;
@@ -218,6 +237,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 
 	} foreach buildings_to_save;
+
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Saved buildings placed by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
 	
 	{
 		_nextclass = _x select 0;
@@ -292,6 +316,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 	} forEach KP_liberation_storages;
 
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Saved storages placed by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
+
 	{
 		private ["_storage"];
 		_storage = _x select 3;
@@ -364,6 +393,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 		};
 	} forEach KP_liberation_production;
+
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Saved sector storages placed by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
 	
 	{
 		private [ "_nextgroup", "_grp" ];
@@ -381,6 +415,16 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextobj setDir _nextdir;
 		} foreach _nextgroup;
 	} foreach ai_groups;
+
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Save loading finished by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
+} else {
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Save nil for: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
 };
 
 publicVariable "blufor_sectors";
@@ -409,6 +453,11 @@ if ( count GRLIB_vehicle_to_military_base_links == 0 ) then {
 publicVariable "GRLIB_vehicle_to_military_base_links";
 publicVariable "GRLIB_permissions";
 save_is_loaded = true; publicVariable "save_is_loaded";
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] save_manager.sqf done for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};
 
 while { true } do {
 	waitUntil {
@@ -586,6 +635,11 @@ while { true } do {
 
 		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
 		saveProfileNamespace;
+
+		if (KP_liberation_debug) then {
+			private _text = format ["[KP LIBERATION] [DEBUG] Saved savegame: %1", greuh_liberation_savegame];
+			_text remoteExec ["diag_log",2];
+		};
 
 	};
 };

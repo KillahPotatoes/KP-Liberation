@@ -16,3 +16,8 @@ for [{_i=0}, {!isNil ("littlebird_" + str _i)}, {_i = _i + 1}] do {
 	_KP_liberation_little_bird allowdamage true;
 	_KP_liberation_little_bird setVariable ["KP_liberation_preplaced", true, true];
 };
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] Little Bird spawn done by: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

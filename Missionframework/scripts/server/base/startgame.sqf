@@ -25,6 +25,11 @@ if ( count GRLIB_all_fobs == 0 ) then {
 		_spawnplace = _potentialplaces call BIS_fnc_selectRandom;
 		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
 
+		if (KP_liberation_debug) then {
+			private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", (name player)];
+			_text remoteExec ["diag_log",2];
+		};
+
 	} else {
 		while { count GRLIB_all_fobs == 0 } do {
 			_fobbox = FOB_box_typename createVehicle (getposATL base_boxspawn);
@@ -32,6 +37,11 @@ if ( count GRLIB_all_fobs == 0 ) then {
 			_fobbox setdir getDir base_boxspawn;
 
 			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
+
+			if (KP_liberation_debug) then {
+				private _text = format ["[KP LIBERATION] [DEBUG] FOB Box placed by: %1", (name player)];
+				_text remoteExec ["diag_log",2];
+			};
 
 			sleep 3;
 
@@ -79,6 +89,11 @@ if ( count GRLIB_all_fobs == 0 ) then {
 	{
 		_smoke = "SmokeShellGreen" createVehicle (getPos _x);
 		_smoke attachTo [_x];
-	} forEach _crateArray
+	} forEach _crateArray;
+
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] Startresources dropped by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
 
 };

@@ -68,3 +68,8 @@ player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\mis
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\intro.sqf";
 
 [] execVM "onPlayerRespawn.sqf";
+
+if (KP_liberation_debug) then {
+	private _text = format ["[KP LIBERATION] [DEBUG] init_client.sqf done for: %1", (name player)];
+	_text remoteExec ["diag_log",2];
+};

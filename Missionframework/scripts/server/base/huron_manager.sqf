@@ -41,6 +41,11 @@ while { true } do {
 	huron setDamage 0;
 	huron allowdamage true;
 
+	if (KP_liberation_debug) then {
+		private _text = format ["[KP LIBERATION] [DEBUG] huron spawned by: %1", (name player)];
+		_text remoteExec ["diag_log",2];
+	};
+
 	if ( alive huron ) then {
 
 		waitUntil {
