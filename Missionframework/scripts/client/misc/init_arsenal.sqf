@@ -12,6 +12,8 @@ if (isNil "GRLIB_arsenal_items") then {GRLIB_arsenal_items = []};
 if (isNil "GRLIB_arsenal_backpacks") then {GRLIB_arsenal_backpacks = []};
 if (isNil "blacklisted_from_arsenal") then {blacklisted_from_arsenal = []};
 
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initializing for: %2", KP_liberation_arsenal, (name player)];_text remoteExec ["diag_log",2];};
+
 if ((count GRLIB_arsenal_weapons) == 0) then {
 	if ((count blacklisted_from_arsenal) == 0) then {
 		_virtualWeapons = _virtualCargo select 0;
@@ -64,20 +66,17 @@ if ((count GRLIB_arsenal_backpacks) == 0) then {
 	KP_liberation_allowed_items append GRLIB_arsenal_backpacks;
 };
 
+{
+	if ((_x find "rhs_acc") == 0) then {
+		KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+	};
+	if ((_x find "rhsusf_acc") == 0) then {
+		KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+	};
+} forEach KP_liberation_allowed_items;
+
 if ((count KP_liberation_allowed_items_extension) > 0) then {
 	KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 };
 
-{
-	if ((_x find "rhs_acc") == 0) then {
-		KP_liberation_allowed_items append [_x + "_3d", _x + "_pip"];
-	};
-	if ((_x find "rhsusf_acc") == 0) then {
-		KP_liberation_allowed_items append [_x + "_3d", _x + "_pip"];
-	};
-} forEach KP_liberation_allowed_items;
-
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initialized for: %2", KP_liberation_arsenal, (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initialized for: %2", KP_liberation_arsenal, (name player)];_text remoteExec ["diag_log",2];};
