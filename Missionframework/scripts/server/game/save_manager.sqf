@@ -229,10 +229,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 
 			if (!(_nextclass in KP_liberation_ace_crates)) then {
-				clearWeaponCargoGlobal _nextclass;
-				clearMagazineCargoGlobal _nextclass;
-				clearBackpackCargoGlobal _nextclass;
-				clearItemCargoGlobal _nextclass;
+				clearWeaponCargoGlobal _nextbuilding;
+				clearMagazineCargoGlobal _nextbuilding;
+				clearBackpackCargoGlobal _nextbuilding;
+				clearItemCargoGlobal _nextbuilding;
 			};
 		};
 
