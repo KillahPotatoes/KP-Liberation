@@ -26,6 +26,10 @@ while {GRLIB_endgame == 0} do {
 				if ((_nextsector in sectors_factory) || (_nextsector in sectors_capture)) then {
 					[_nextsector] call manage_captureboxes;
 				};
+
+				if (_nextsector in sectors_military) then {
+					[_nextsector] call manage_intel;
+				};
 			};
 		};
 		sleep 0.25;
