@@ -154,6 +154,7 @@ class Missions
 * Tweaked: Syncing between server and clients after building a sector storage
 * Tweaked: Debug info output for sector production and logistic management
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
+* Fixed: No intelobjects spawned at military bases
 
 ### 0.95
 * Added: New resource system
