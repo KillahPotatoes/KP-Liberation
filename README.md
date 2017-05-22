@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.95
+## Current version : 0.951
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -149,6 +149,9 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
 ## Changelog
+
+### 0.951
+* Tweaked: Syncing between server and clients after building a sector storage
 
 ### 0.95
 * Added: New resource system
