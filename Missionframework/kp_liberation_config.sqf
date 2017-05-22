@@ -3,7 +3,7 @@ CONFIG FILE FOR KP LIBERATION
 */
 
 /* - ACE settings.
-Enable ACE? ("true","false").	*/
+Enable ACE? (true,false).	*/
 KP_liberation_ace = false;
 
 // Vehicle classnames which also function as ACE medical vehicles.
