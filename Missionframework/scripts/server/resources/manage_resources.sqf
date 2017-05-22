@@ -8,6 +8,8 @@ while {GRLIB_endgame == 0} do {
 	recalculate_sectors = false;
 	
 	if (((count allPlayers) > 0) && ((count KP_liberation_production) > 0)) then {
+		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource interval started: %1", time];_text remoteExec ["diag_log",2];};
+		
 		private ["_tempProduction", "_storage", "_storageArray", "_supplyValue", "_ammoValue", "_fuelValue", "_time", "_crateType", "_crate"];
 
 		_tempProduction = [];
@@ -69,6 +71,8 @@ while {GRLIB_endgame == 0} do {
 				_ammoValue,
 				_fuelValue
 			];
+
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Sector Production Update: %1", (_tempProduction select _forEachIndex)];_text remoteExec ["diag_log",2];};
 
 		} forEach KP_liberation_production;
 
