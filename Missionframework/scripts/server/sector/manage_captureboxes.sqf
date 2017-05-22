@@ -51,6 +51,8 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 		_newbox setVariable ["KP_liberation_crate_value", 100, true];
 	};
 
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] %1 Crates spawned at %2", _crates_amount, _sector];_text remoteExec ["diag_log",2];};
+
 	if (_sector in sectors_military) then {
 		
 		_nearbuildings = [nearestObjects [markerpos _sector, _compatible_classnames, _intel_range], {alive _x}] call BIS_fnc_conditionalSelect;
@@ -65,6 +67,8 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 			if ((count _building_positions) >= (_nbintel * 4)) then {
 
 				_used_positions = [];
+
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] %1 Intelobjects spawned at %2", _nbintel, _sector];_text remoteExec ["diag_log",2];};
 
 				while {_nbintel > 0} do {
 
