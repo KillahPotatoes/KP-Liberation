@@ -25,6 +25,14 @@ while {true} do {
 				};
 			};
 			
+			// Sahrani Grid Fix
+			if (worldName == "Sara") then {
+				_kp_markers_posy = _kp_markers_posy - 20;
+				if ((_kp_markers_posy + 500) < (_kp_markers_pos select 1)) then {
+					_kp_markers_posy = _kp_markers_posy + 500;
+				};
+			};
+			
 			_kp_markers_name = format["kp_marker_grid_%1_%2", _kp_markers_posx, _kp_markers_posy];
 			_kp_markers_color = format["Color%1", side _x];
 
