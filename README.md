@@ -152,6 +152,7 @@ class Missions
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
+* Added: Transport configs for guerilla offroad and van
 * Tweaked: Syncing between server and clients after building a sector storage
 * Tweaked: Debug info output for sector production and logistic management
 * Tweaked: Production time lowered from 30 to 20 minutes (still testing concerning balancing)
