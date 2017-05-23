@@ -51,26 +51,27 @@ while {dialog && (alive player)} do {
 			_color_actual = _color_negative;
 		};
 
+		_storagespace = format ["%1 / %2",_crateCount,_crateMax];
+		_productiontime = format [localize "STR_PRODUCTION_MINUTES",(_selectedSector select 8)];
+
 		switch (_selectedSector select 7) do {
 			case 1: {_producing = localize "STR_AMMO";};
 			case 2: {_producing = localize "STR_FUEL";};
-			case 3: {_producing = localize "STR_PRODUCTION_NOTHING";};
+			case 3: {_producing = localize "STR_PRODUCTION_NOTHING"; _productiontime = localize "STR_PRODUCTION_NOTIMER";};
 			default {_producing = localize "STR_MANPOWER";};
 		};
-
-		_storagespace = format ["%1 / %2",_crateCount,_crateMax];
-		_productiontime = format [localize "STR_PRODUCTION_MINUTES",(_selectedSector select 8)];
 
 		ctrlSetText [75805, _producing];
 		if ((_selectedSector select 7) == 3) then {
 			((findDisplay 75801) displayCtrl 75805) ctrlSetTextColor _color_negative;
+			((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_negative;
 		} else {
 			((findDisplay 75801) displayCtrl 75805) ctrlSetTextColor _color_neutral;
+			((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_neutral;
 		};
 		ctrlSetText [75806, _storagespace];
 		((findDisplay 75801) displayCtrl 75806) ctrlSetTextColor _color_actual;
 		ctrlSetText [75807, _productiontime];
-		((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_neutral;
 		_color_actual = _color_neutral;
 	} else {
 		_producing = localize "STR_PRODUCTION_NOTHING";
