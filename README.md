@@ -158,7 +158,7 @@ class Missions
 * Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
-* Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for reporting it
+* Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
 
 ### 0.95
 * Added: New resource system
