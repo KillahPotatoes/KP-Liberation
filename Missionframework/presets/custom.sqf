@@ -118,16 +118,16 @@ heavy_vehicles = [
 air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
 	["B_Heli_Light_01_F",200,0,100],									//MH-9 Hummingbird
-	["B_Heli_Light_01_armed_F",200,100,100],							//AH-9 Pawnee
+	["B_Heli_Light_01_dynamicLoadout_F",200,100,100],					//AH-9 Pawnee
 	["RHS_MELB_MH6M",200,0,100],										//AH-6M Little Bird
 	["RHS_MELB_AH6M_L",200,100,100],									//AH-6M-L Little Bird
 	["RHS_MELB_AH6M_M",200,200,100],									//AH-6M-M Little Bird
 	["RHS_MELB_AH6M_H",200,350,100],									//AH-6M-H Little Bird
 	["I_Heli_light_03_unarmed_F",225,0,125],							//WY-55 Hellcat
-	["I_Heli_light_03_F",225,200,125],									//WY-55 Hellcat (Armed)
+	["I_Heli_light_03_dynamicLoadout_F",225,200,125],					//WY-55 Hellcat (Armed)
 	["RHS_UH1Y_UNARMED",225,0,125],										//UH-1Y (Unarmed)
 	["RHS_UH1Y_GS",225,200,125],										//UH-1Y (Ground Suppression)
-	["B_Heli_Attack_01_F",500,400,200],									//AH-99 Blackfoot
+	["B_Heli_Attack_01_dynamicLoadout_F",500,400,200],					//AH-99 Blackfoot
 	["RHS_AH1Z",500,500,200],											//AH-1Z (Multi-Role)
 	["RHS_AH64D_wd",750,750,250],										//AH-64D (Multi-Role)
 	["BWA3_Tiger_RMK_Universal",750,750,250],							//UH Tiger RMK (Universal)
@@ -139,14 +139,13 @@ air_vehicles = [
 	["I_Heli_Transport_02_F",275,0,175],								//CH-49 Mohawk
 	["rhsusf_CH53E_USMC",300,0,175],									//CH-53E Super Stallion
 	["B_Heli_Transport_03_F",300,80,175],								//CH-67 Huron (Armed)
-	["B_UAV_02_F",400,300,200],											//MQ-4A Greyhawk
-	["B_UAV_02_CAS_F",400,500,200],										//MQ-4A Greyhawk (CAS)
-	["B_T_UAV_03_F",450,500,250],										//MQ-12 Falcon
+	["B_UAV_02_dynamicLoadout_F",400,400,200],							//MQ-4A Greyhawk
+	["B_T_UAV_03_dynamicLoadout_F",450,500,250],						//MQ-12 Falcon
 	["B_UAV_05_F",500,500,200],											//UCAV Sentinel
-	["I_Plane_Fighter_03_AA_F",500,400,350],							//A-143 Buzzard (AA)
-	["I_Plane_Fighter_03_CAS_F",500,400,350],							//A-143 Buzzard (CAS)
-	["B_Plane_CAS_01_F",1000,800,400],									//A-164 Wipeout (CAS)
+	["I_Plane_Fighter_03_dynamicLoadout_F",500,400,350],				//A-143 Buzzard
+	["B_Plane_CAS_01_dynamicLoadout_F",1000,800,400],					//A-164 Wipeout (CAS)
 	["RHS_A10",1000,1000,400],											//A-10A (CAS)
+	["I_Plane_Fighter_04_F",1000,1200,400],								//A-149 Gryphon
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
 	["FIR_F15D",1250,1250,450],											//F-15D Eagle
 	["FIR_F15E",1250,1500,450],											//F-15E Strike Eagle
@@ -275,9 +274,8 @@ uavs = [
 	"B_UAV_01_F",														//AR-2 Darter
 	"B_UGV_01_F",														//UGV Stomper
 	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F"														//UCAV Sentinel
 ];
 
@@ -456,10 +454,10 @@ opfor_battlegroup_vehicles = [
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_MBT_02_cannon_F",												//T-100 Varsuk
 	"O_MBT_02_cannon_F",												//T-100 Varsuk
-	"O_Heli_Light_02_F",												//Po-30 Orca (Armed)
-	"O_Heli_Light_02_F",												//Po-30 Orca (Armed)
-	"O_Heli_Attack_02_F",												//Mi-48 Kajman
-	"O_Plane_CAS_02_F",													//To-199 Neophron (CAS)
+	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
+	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
 	"O_Plane_Fighter_02_F"												//To-201 Shikra	
 ];
 
@@ -472,7 +470,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 
 	"O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-	"O_Heli_Light_02_F"													//Po-30 Orca (Armed)
+	"O_Heli_Light_02_dynamicLoadout_F"									//Po-30 Orca (Armed)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
@@ -483,19 +481,19 @@ opfor_troup_transports = [
 	"O_Truck_03_covered_F",												//Tempest Transport (Covered)
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-	"O_Heli_Light_02_F"													//Po-30 Orca (Armed)
+	"O_Heli_Light_02_dynamicLoadout_F"									//Po-30 Orca (Armed)
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-	"O_Heli_Light_02_F",												//Po-30 Orca (Armed)
-	"O_Heli_Attack_02_F"												//Mi-48 Kajman
+	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Attack_02_dynamicLoadout_F"									//Mi-48 Kajman
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
-	"O_Plane_CAS_02_F",													//To-199 Neophron (CAS)
+	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
 	"O_Plane_Fighter_02_F"												//To-201 Shikra
 ];
 
@@ -542,14 +540,14 @@ elite_vehicles = [
 	"B_MBT_01_arty_F",													//M4 Scorcher
 	"rhsusf_m109_usarmy",												//M109A6
 	"B_MBT_01_mlrs_F",													//M5 Sandstorm MLRS
-	"B_Heli_Attack_01_F",												//AH-99 Blackfoot
+	"B_Heli_Attack_01_dynamicLoadout_F",								//AH-99 Blackfoot
 	"RHS_AH64D_wd",														//AH-64D (Multi-Role)
 	"BWA3_Tiger_RMK_Universal",											//UH Tiger RMK (Universal)
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F",														//UCAV Sentinel
-	"B_Plane_CAS_01_F",													//A-164 Wipeout (CAS)
+	"B_Plane_CAS_01_dynamicLoadout_F",									//A-164 Wipeout (CAS)
+	"I_Plane_Fighter_04_F",												//A-149 Gryphon
 	"RHS_A10",															//A-10A (CAS)
 	"FIR_F15C",															//F-15C Eagle
 	"FIR_F15D",															//F-15D Eagle
@@ -561,7 +559,4 @@ elite_vehicles = [
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];_text remoteExec ["diag_log",2];};

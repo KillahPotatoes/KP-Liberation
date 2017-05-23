@@ -105,9 +105,8 @@ air_vehicles = [
 	["RHS_CH_47F_10",275,80,175],										//CH-47 Chinook (Armed)
 	["UK3CB_BAF_Merlin_HC3_32_MTP",300,0,175],							//Merlin HC3 32
 	["UK3CB_BAF_Merlin_HC3_CSAR_MTP",300,80,175],						//Merlin HC3 CSAR (Armed)
-	["B_UAV_02_F",400,300,200],											//MQ-4A Greyhawk
-	["B_UAV_02_CAS_F",400,500,200],										//MQ-4A Greyhawk (CAS)
-	["B_T_UAV_03_F",450,500,250],										//MQ-12 Falcon
+	["B_UAV_02_dynamicLoadout_F",400,300,200],							//MQ-4A Greyhawk
+	["B_T_UAV_03_dynamicLoadout_F",450,500,250],						//MQ-12 Falcon
 	["B_UAV_05_F",500,500,200],											//UCAV Sentinel
 	["RHS_A10",1000,1000,400],											//A-10A (CAS)
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
@@ -240,9 +239,8 @@ uavs = [
 	"B_UAV_01_F",														//AR-2 Darter
 	"B_UGV_01_F",														//UGV Stomper
 	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F"														//UCAV Sentinel
 ];
 
@@ -508,9 +506,8 @@ civilian_vehicles = [
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
 	"rhsusf_mkvsoc",													//Mk.V SOCOM
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F",														//UCAV Sentinel
 	"UK3CB_BAF_Wildcat_AH1_CAS_6C_MTP",									//Wildcat AH1 6 (CAS/AT)
 	"UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP",									//Wildcat AH1 8 (CAS/AT)
@@ -527,7 +524,4 @@ elite_vehicles = [
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];_text remoteExec ["diag_log",2];};
