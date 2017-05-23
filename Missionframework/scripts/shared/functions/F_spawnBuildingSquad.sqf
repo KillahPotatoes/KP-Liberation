@@ -1,4 +1,4 @@
-diag_log format [ "[KP LIBERATION] [INFO] Spawning building squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning building squad at %1", time];_text remoteExec ["diag_log",2];};
 
 params [ "_infsquad", "_building_ai_max", "_buildingpositions", "_sectorpos", [ "_sector", "" ] ];
 private [ "_squadtospawnnn", "_infsquad_classnames", "_usedposits", "_nextposit", "_remainingposits", "_grp", "_everythingspawned", "_nextunit", "_position_indexes", "_position_count", "_idxposit", "_groupunitscount" ];
@@ -12,13 +12,9 @@ if ( _infsquad == "militia" ) then {
 	_infsquad_classnames = ([] call F_getAdaptiveSquadComp);
 };
 
-diag_log format [ "[KP LIBERATION] [INFO] Spawning building squad Checkpoint A at %1", time ];
-
 if ( _building_ai_max > floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)) then { _building_ai_max = floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)};
 _squadtospawnnn = [];
 while { (count _squadtospawnnn) < _building_ai_max } do { _squadtospawnnn pushback ( _infsquad_classnames call BIS_fnc_selectRandom ); };
-
-diag_log format [ "[KP LIBERATION] [INFO] Spawning building squad Checkpoint B at %1", time ];
 
 _position_indexes = [];
 _position_count = count _buildingpositions;
@@ -28,8 +24,6 @@ while { count _position_indexes < count _squadtospawnnn } do {
 		_position_indexes pushback _nextposit;
 	}
 };
-
-diag_log format [ "[KP LIBERATION] [INFO] Spawning building squad Checkpoint C at %1", time ];
 
 _grp = createGroup GRLIB_side_enemy;
 _idxposit = 0;
@@ -57,12 +51,10 @@ _idxposit = 0;
 	};
 } foreach _squadtospawnnn;
 
-diag_log format [ "[KP LIBERATION] [INFO] Spawning building squad Checkpoint D at %1", time ];
-
 if ( !(isNull _grp)) then {
 	_everythingspawned = _everythingspawned + (units _grp);
 };
 
-diag_log format [ "[KP LIBERATION] [INFO] Done Spawning building squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning building squad at %1", time];_text remoteExec ["diag_log",2];};
 
 _everythingspawned

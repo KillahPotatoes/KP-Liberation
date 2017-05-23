@@ -1,4 +1,4 @@
-diag_log format [ "[KP LIBERATION] [INFO] Spawning regular squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning regular squad start at %1", time];_text remoteExec ["diag_log",2];};
 
 params [ "_sector", "_squadies_to_spawn" ];
 private [ "_sectorpos", "_spawnpos", "_grp", "_unitidx", "_corrected_amount" ];
@@ -34,6 +34,6 @@ if ( _sector in sectors_capture ) then {
 	} foreach (units _grp);
 };
 
-diag_log format [ "[KP LIBERATION] [INFO] Done Spawning regular squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning regular squad done at %1", time];_text remoteExec ["diag_log",2];};
 
 _grp;

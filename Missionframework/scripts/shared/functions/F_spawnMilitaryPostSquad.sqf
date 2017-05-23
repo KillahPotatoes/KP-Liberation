@@ -1,4 +1,4 @@
-diag_log format [ "[KP LIBERATION] [INFO] Spawning cargopost squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning cargopost squad start at %1", time];_text remoteExec ["diag_log",2];};
 
 params [ "_squadpos" ];
 private [ "_spawned_units_local", "_allposts", "_grp2", "_building_positions", "_unitclasspost", "_totalx2", "_totaly2", "_avgx2", "_avgy2", "_vd2", "_newdir2" ];
@@ -45,7 +45,7 @@ if ( count _allposts > 0 ) then {
 
 };
 
-diag_log format [ "[KP LIBERATION] [INFO] Done spawning cargopost squad at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning cargopost squad done at %1", time];_text remoteExec ["diag_log",2];};
 
 
 _spawned_units_local

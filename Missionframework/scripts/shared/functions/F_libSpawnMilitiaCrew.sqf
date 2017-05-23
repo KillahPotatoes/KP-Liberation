@@ -1,7 +1,7 @@
 params [ "_vehicle" ];
 private [ "_grp", "_vehcrew" ];
 
-diag_log format [ "[KP LIBERATION] [INFO] Spawning militia crew at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning militia crew at %1", time];_text remoteExec ["diag_log",2];};
 
 _grp = createGroup GRLIB_side_enemy;
 _vehcrew = [];
@@ -21,4 +21,4 @@ while { count units _grp < 3 } do {
 	};
 } foreach (units _grp);
 
-diag_log format [ "[KP LIBERATION] [INFO] Done Spawning militia crew at %1", time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning militia crew at %1", time];_text remoteExec ["diag_log",2];};
