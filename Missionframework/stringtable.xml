@@ -7,16 +7,16 @@
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.95</Original>
-						<German>KP Liberation v0.95</German>
-						<Spanish>KP Liberation v0.95</Spanish>
-						<Italian>KP Liberation v0.95</Italian>
+						<Original>KP Liberation v0.951</Original>
+						<German>KP Liberation v0.951</German>
+						<Spanish>KP Liberation v0.951</Spanish>
+						<Italian>KP Liberation v0.951</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.95</Original>
-						<German>v0.95</German>
-						<Spanish>v0.95</Spanish>
-						<Italian>v0.95</Italian>
+						<Original>v0.951</Original>
+						<German>v0.951</German>
+						<Spanish>v0.951</Spanish>
+						<Italian>v0.951</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
