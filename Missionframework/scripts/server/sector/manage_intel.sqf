@@ -28,6 +28,8 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 
 	KP_military_sectors_already_activated pushback _sector;
 
+	_nearbuildings = [nearestObjects [markerpos _sector, _compatible_classnames, _intel_range], {alive _x}] call BIS_fnc_conditionalSelect;
+
 	if ((count _nearbuildings) > 0) then {
 		_building_positions = [];
 
@@ -39,7 +41,7 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 
 			_used_positions = [];
 
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] %1 Intelobjects spawned at %2", _nbintel, _sector];_text remoteExec ["diag_log",2];};
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] %1 Intelobjects spawned at %2", _nbintel, (markerText _sector)];_text remoteExec ["diag_log",2];};
 
 			while {_nbintel > 0} do {
 

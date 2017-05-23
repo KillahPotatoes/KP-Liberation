@@ -40,7 +40,7 @@ wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\se
 
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\littlebird_spawn.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startvehicle_spawn.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\counter_battlegroup.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\random_battlegroups.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\readiness_increase.sqf";
