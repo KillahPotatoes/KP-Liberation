@@ -163,6 +163,8 @@ class Missions
 * Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
 * Fixed: Production menu showed timer even if nothing is produced
 * Fixed: Production timer displayed as float if using a resource multiplier
+* Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
+* Fixed: FOB Box won't respawn if fallen into the water
 
 ### 0.95
 * Added: New resource system

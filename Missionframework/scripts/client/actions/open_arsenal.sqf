@@ -164,8 +164,3 @@ if ( edit_loadout > 0 ) then {
 		removeGoggles player;
 	};	
 };
-
-
-
-
-

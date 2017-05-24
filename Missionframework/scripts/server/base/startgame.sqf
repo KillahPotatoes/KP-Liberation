@@ -41,11 +41,11 @@ if ( count GRLIB_all_fobs == 0 ) then {
 
 			waitUntil {
 				sleep 1;
-				!(alive _fobbox) || count GRLIB_all_fobs > 0
+				!(alive _fobbox) || ((count GRLIB_all_fobs) > 0) || (((getPosASL _fobbox) select 2) < 0)
 			};
 
 			sleep 15;
-
+			
 		};
 
 		deleteVehicle _fobbox;
