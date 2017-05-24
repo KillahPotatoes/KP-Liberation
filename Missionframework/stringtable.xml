@@ -2914,6 +2914,7 @@
 				<Key ID="STR_PRODUCTION_FACBUILD_SUCCESS">
 						<Original>Facility established.</Original>
 						<German>Einrichtung etabliert.</German>
+						<Italian>Struttura creata.</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_AILOGISTICS">
  						<Original>AI Logistics Module</Original>
@@ -2943,7 +2944,7 @@
  				<Key ID="STR_LOGISTIC_STATUS">
  						<Original>Status:</Original>
  						<German>Status:</German>
-						<Italian>Status:</Italian>
+						<Italian>Stato:</Italian>
  				</Key>
  				<Key ID="STR_LOGISTIC_STANDBY">
  						<Original>Standby</Original>
@@ -3090,8 +3091,16 @@
 						The road to victory will be long and dangerous. You will have to retake many sectors and acquire the necessary resources to improve the quantity and quality of friendly forces engaged in this campaign.&lt;br/&gt; &lt;br/&gt;
 						Moreover, enemy forces will most certainly react to our advance. You will have to engage in secondary operations to weaken a foe that fights with higher numbers and better equipment than you do.&lt;br/&gt; &lt;br/&gt;
 						In your efforts you will need the support of the local population, so always double-check what you're firing at!&lt;br/&gt; &lt;br/&gt;
-						Questions?&lt;br/&gt; &lt;br/&gt;
+						Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Gentili signori e benvenuti nella regione, le forze nemiche ci hanno sorpreso con un'offensiva brutale e schiacciante. Ora hanno il controllo completo ma con i tuoi sforzi, non durerà a lungo.&lt;br/&gt; &lt;br/&gt;
+						Il nostro obiettivo primario è semplice: liberare la regione dal controllo nemico!&lt;br/&gt; &lt;br/&gt;
+						La strada per la vittoria sarà lunga e pericolosa. Dovrai riprendere molti settori e acquisire le risorse necessarie per migliorare la quantità e la qualità delle forze amiche impegnate in questa campagna.&lt;br/&gt; &lt;br/&gt;
+						Inoltre, le forze nemiche risponderanno certamente alla nostra offensiva. Dovrai impegnarti in operazioni secondarie per indebolire un nemico che combatte con numeri più elevati e attrezzature migliori di te.&lt;br/&gt; &lt;br/&gt;
+						Avrai bisogno del sostegno della popolazione locale, quindi controlla sempre quello a cui stai sparando!&lt;br/&gt; &lt;br/&gt;
+						Ci sono domande? HQ chiudo.&lt;br/&gt; &lt;br/&gt;
+						</italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE2">
 						<Original>2. Starting the campaign!</Original>
@@ -3107,6 +3116,11 @@
 						At your starting position you can choose your equipment from a complete Arsenal. You will also find your first FOB packaged inside a container, the Spartan-01 helicopter and a few other small transport helicopters.&lt;br/&gt; &lt;br/&gt;
 						You will have to ferry that container with the Spartan-01 (or choose to start with the first FOB already built). You can deploy this first FOB wherever you want (as long as you're 1km from the starting position and 300m from any sector), so it's up to you to choose the right place to start your campaign offensive.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						La campagna partirà dalla USS Freedom, o dalla base Chimera, sono zone sicure che il nemico non oserà attaccare. Prima di tutto bisogna scegliere dove schierarsi. All'inizio ci si può solo schierare nelle posizioni citate prima, ma mentre si progredisce, saranno disponibili ulteriori opzioni quali FOB e respawn mobili.&lt;br/&gt; &lt;br/&gt;
+						Nella posizione iniziale puoi scegliere la tua attrezzatura da un completo Arsenale. Troverete anche la prima FOB imballata all'interno di un container, l'elicottero Spartan-01 e qualche altro piccolo elicottero da trasporto.&lt;br/&gt; &lt;br/&gt;
+						Dovrete trasportare quel container con lo Spartan-01 (o scegliere di iniziare con la prima FOB già costruita). Puoi costruire la FOB dove vuoi (finché sei a 1 km dalla posizione iniziale e 300 metri da qualsiasi settore), quindi stà a voi scegliere il posto giusto per iniziare l'offensiva della vostra campagna.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE3">
 						<Original>3. Objective</Original>
@@ -3121,6 +3135,10 @@
 						The primary objective of this campaign is to remove enemy forces from the region entirely. To achieve this, you will have to liberate ALL major towns within the region! This is the only victory condition for the campaign but those cities are tough nuts to crack with only limited resources and a well established enemy force. &lt;br/&gt; &lt;br/&gt;
 						To succeed, you will have to capture large number of different sectors, each with their own use.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						L'obiettivo primario di questa campagna è di eliminare interamente le forze nemiche dalla regione. Per raggiungere questo obiettivo, dovrai liberare TUTTE le grandi città della regione! Questa è l'unica condizione di vittoria per la campagna, ma quste città sono difficili da liberare in quanto dovrete aver a disposizione numerose risorse e fronteggiare una forza nemica consolidata. &lt;br/&gt; &lt;br/&gt;
+						Per vincere, dovrai catturare un gran numero di settori diversi, ognuno con il proprio uso.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE4">
 						<Original>4. Sectors</Original>
@@ -3139,6 +3157,14 @@
 						- Radio Towers (RT): When under enemy control, RT will be used to call in reinforcements when a nearby sector is attacked by our own forces. The reaction time will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful map intel on hostile troop movements in the vicinity by intercepting their radio communications.&lt;br/&gt; &lt;br/&gt;
 						- Major Cities: There are several major cities in the region. When all are under friendly control, we will most certainly have beaten back the enemy to a point where they cannot re-establish control. This is your primary objective.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						I settori sono divisi in 5 tipi diversi:&lt;br/&gt; &lt;br/&gt;
+						- Punti di interesse (PDI): generalmente piccoli e medi villaggi, ogni PDI che controlli può essere aggiornato (dopo la costruzione di una zona di stoccaggio) per fornire uno dei tre tipi di risorse necessari per continuare a produrre forze militari e armamenti.&lt;br/&gt; &lt;br/&gt;
+						- Fabbriche: In tutta la regione troverete le fabbriche civili sotto il controllo nemico. Catturatele, in quanto hanno solo bisogno di una zona di archiviazione e possono quindi produrre una delle tre risorse, senza aggiornamento. In quanto Fabbriche sono un primo obiettivo strategico!&lt;br/&gt; &lt;br/&gt;
+						- Basi Militari: Sono piene di grandi quantità di forze armate altamente equipaggiate, queste installazioni sono fortemente difese e richiedono assalti grandi e ben coordinati per avere qualche speranza di catturarle!&lt;br/&gt; &lt;br/&gt;
+						- Torri Radio (TR): Quando sotto controllo nemico, le TR saranno utilizzate per chiamare i rinforzi quando un settore vicino viene attaccato dalle vostre forze. Il tempo di reazione dipenderà dalla distanza tra la torre e il settore. Se conquistate, le torri offriranno utili mappature su movimenti di truppe ostili nelle vicinanze intercettando le loro comunicazioni radio.&lt;br/&gt; &lt;br/&gt;
+						- Città Principali: Ci sono diverse città principali nella regione. Quando sarannno tutte sotto controllo, certamente avremo battuto il nemico in maniera per la quale non riuscirà ristabilire il controllo. Questo è il tuo obiettivo primario.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE5">
 						<Original>5. Resources</Original>
@@ -3150,12 +3176,19 @@
 				</Key>
 				<Key ID="STR_TUTO_TEXT5">
 						<Original>&lt;br/&gt;&lt;br/&gt;
-                        In this campaign you have to manage, store and protect three types of resources:&lt;br/&gt; &lt;br/&gt; 
-						&lt;t color='#00ff00'&gt;SUPPLIES:&lt;/t&gt; These are the most essential. Without supplies, you will be unable to deploy additional soldiers or requisition any military hardware. As such, HQ recommends prioritising these first!&lt;br/&gt; &lt;br/&gt; 
-						&lt;t color='#ff0000'&gt;AMMUNITION:&lt;/t&gt; Used to stock armed vehicles such as APC and MBT as well as elite (and heavily armed) soldiers.&lt;br/&gt; &lt;br/&gt; 
-						&lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Every vehicle needs fuel, some being more thirsty than others.&lt;br/&gt; &lt;br/&gt; 
+                        In this campaign you have to manage, store and protect three types of resources:&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#00ff00'&gt;SUPPLIES:&lt;/t&gt; These are the most essential. Without supplies, you will be unable to deploy additional soldiers or requisition any military hardware. As such, HQ recommends prioritising these first!&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ff0000'&gt;AMMUNITION:&lt;/t&gt; Used to stock armed vehicles such as APC and MBT as well as elite (and heavily armed) soldiers.&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Every vehicle needs fuel, some being more thirsty than others.&lt;br/&gt; &lt;br/&gt;
 						You may come across all three resources in any sector but for a considerable and constant supply, you must capture PoI and Factory sectors! Once captured, both require a storage area (scroll menu action) and then a PoI will also require facility construction (again, scroll menu action). All three facilities may be built in any one PoI but you must supply an initial cost to set these facilities up! This is 50 of the specific resource and 100 of the other two.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+                        In questa campagna è necessario gestire, memorizzare e proteggere tre tipi di risorse:&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#00ff00'&gt;APPROVVIGIONAMENTI:&lt;/t&gt; Questi sono i più essenziali. Senza approvvigionamenti, non sarete in grado di distribuire soldati o richiedere qualsiasi hardware militare. In quanto tale, HQ raccomanda di dare priorità a queste risorse per prime!&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ff0000'&gt;MUNIZIONI:&lt;/t&gt; Utilizzate per lo stoccaggio di veicoli armati come APC e MBT, nonché soldati di élite (e pesantemente armati).&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ffff00'&gt;CARBURANTE:&lt;/t&gt; Ogni veicolo ha bisogno di carburante, alcuni hanno più sete di altri.&lt;br/&gt; &lt;br/&gt;
+						Puoi incontrare tutte e tre le risorse in qualsiasi settore, ma per una fornitura considerevole e costante, devi catturare i PDI e le Fabbriche! Una volta catturati, entrambi richiedono un'area di stoccaggio (menu rotellina) e poi un PDI richiederà anche la costruzione di strutture (nuovamente, menu rotellina). Tutte e tre le strutture possono essere costruite in qualsiasi PDI ma dovete fornire un costo iniziale per impostare queste strutture! Costo 50 della risorsa specifica e 100 delle altre due.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert Level</Original>
@@ -3170,6 +3203,10 @@
 						The enemy won't let you liberate all of its brand new territory without a reaction. When you begin the campaign, hostile forces will only be composed of the garrisons inside military bases. However as you become more threatening by liberating more and more sectors, they will start calling in more reinforcements and equipment to counter you.&lt;br/&gt; &lt;br/&gt;
 						To limit the enemies operational capabilities, you will have to fulfill secondary objectives that will consist of destroying their logistical bases and raiding their convoys. This is not required to win the campaign but if you ignore the alert level for too long, you're in for quite a lot of resistance.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Il nemico non ti permetterà di liberare tutto il suo nuovo territorio senza una reazione. Quando inizierai la campagna, le forze ostili saranno composte solo dalle guarnigioni all'interno delle basi militari. Tuttavia, quando diventerete più minacciosi , inizieranno a chiamare più rinforzi e attrezzature per contrastarvi.&lt;br/&gt; &lt;br/&gt;
+						Per limitare la capacità offensiva dei nemici, dovrete compiere missioni secondarie che consistono nel distruggere le basi logistiche e raidare i loro convogli. Questo non è richiesto per vincere la campagna, ma se ignorate troppo il livello di allarta, sarate pronti a contrastare la risposta?.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE7">
 						<Original>7. Construction</Original>
@@ -3181,10 +3218,15 @@
 				</Key>
 				<Key ID="STR_TUTO_TEXT7">
 						<Original>&lt;br/&gt;&lt;br/&gt;
-						To help you succeed in your endeavors, you have a construction capability at every FOB that allows you to deploy infantry, vehicles, defenses, fortifications and so on to your specific location.&lt;br/&gt; &lt;br/&gt; 
-						Although infantry, vehicles and defenses will cost resources, fortifications such as structures, sandbags and walls will not.&lt;br/&gt; &lt;br/&gt; 
+						To help you succeed in your endeavors, you have a construction capability at every FOB that allows you to deploy infantry, vehicles, defenses, fortifications and so on to your specific location.&lt;br/&gt; &lt;br/&gt;
+						Although infantry, vehicles and defenses will cost resources, fortifications such as structures, sandbags and walls will not.&lt;br/&gt; &lt;br/&gt;
 						The construction system will be available when you are within 100 meters of any FOB.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Per aiutarti a riuscire nella tua missione, ogni FOB ti permette di creare fanteria, veicoli, difese, fortificazioni e così via nella posizione specifica.&lt;br/&gt; &lt;br/&gt;
+						Anche se la fanteria, i veicoli e le difese costano risorse, le fortificazioni come strutture, sandbags e muri non lo faranno.&lt;br/&gt; &lt;br/&gt;
+						Il sistema di costruzione sarà disponibile quando si è a 100 metri da qualsiasi FOB.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE8">
 						<Original>8. Deploying another FOB</Original>
@@ -3196,9 +3238,13 @@
 				</Key>
 				<Key ID="STR_TUTO_TEXT8">
 						<Original>&lt;br/&gt;&lt;br/&gt;
-						To build a brand new FOB, go to the construction menu and then the logistics tab and build a FOB container or a FOB truck (the same thing, only with wheels). Then you can position the FOB container/truck where you want to deploy your shiny new FOB. However, be aware that you can't build a FOB within 1km of your starting position, within 300m of any sector, or within 2km of any other FOB.&lt;br/&gt; &lt;br/&gt; 
+						To build a brand new FOB, go to the construction menu and then the logistics tab and build a FOB container or a FOB truck (the same thing, only with wheels). Then you can position the FOB container/truck where you want to deploy your shiny new FOB. However, be aware that you can't build a FOB within 1km of your starting position, within 300m of any sector, or within 2km of any other FOB.&lt;br/&gt; &lt;br/&gt;
 						That would simply be redundant!&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Per costruire una nuova FOB, vai nel menu di costruzione e poi alla scheda logistica e costruisci un contenitore FOB o un camion FOB (la stessa cosa, solo con ruote). Quindi è possibile posizionare il contenitore / camion FOB. Tuttavia, tenere presente che non è possibile costruire un FOB entro 1 km dalla posizione iniziale, ed entro 300 metri da qualsiasi settore, o entro 2 km da qualsiasi altra FOB.&lt;br/&gt; &lt;br/&gt;
+						Sarebbe semplicemente ridondante!&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE9">
 						<Original>9. Secondary Objectives</Original>
@@ -3214,6 +3260,11 @@
 						That interrogation, executed in the utmost respect of the Geneva convention, will allow you to obtain precise information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;
 						After going there you will need to find the exact position of your target, then use any means at your disposal to complete your objective. Succeeding at this task will be rewarded, reducing the alert level consequently and with it the efficiency of all hostile forces.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Quando catturi i settori, talvolta le forze ostili che restano si arrenderanno. Quindi puoi catturare quei prigionieri e riportarli in una FOB vicina per interrogarli.&lt;br/&gt; &lt;br/&gt;
+						Questa interrogazione, eseguita nel più grande rispetto della Convenzione di Ginevra, ti permetterà di ottenere informazioni precise che possano essere utilizzate per rivelare la posizione rudimentale di una base logistica nemica, di un convoglio nemico o di un salvataggio.&lt;br/&gt; &lt;br/&gt;
+						Dopo essere andato lì dovrai trovare la posizione esatta del tuo bersaglio, quindi utilizzare qualsiasi mezzo a tua disposizione per completare il tuo obiettivo. Eseguire questo compito sarà premiato, riducendo così il livello di allarme e con essa l'efficienza di tutte le forze ostili.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 				<Key ID="STR_TUTO_TITLE10">
 						<Original>10. Commanding</Original>
@@ -3229,6 +3280,11 @@
 						Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;
 						This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by an FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which PoI or Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<Italian>&lt;br/&gt;&lt;br/&gt;
+						Quando un giocatore usa il ruolo del comandante, ottierrà l'accesso all'interfaccia di Zeus premendo il tasto corrispondente (Y per impostazione predefinita). Questa interfaccia consente il comando di forze amiche in visualizzazione 3D o mappa.&lt;br/&gt; &lt;br/&gt;
+						Inoltre il comandante ottiene ulteriori opzioni di costruzione che consentiranno loro di ottenere veicoli con equipaggio o intere squadre pre-fatte.&lt;br/&gt; &lt;br/&gt;
+						Questo ruolo è ora obbligatorio in quanto fornisce accesso diretto alla gestione dei settori produttivi e alla logistica AI. Dato che sei posizionato da una FOB, vedrai le opzioni "Impostazioni di produzione" e "Panoramica logistica".&lt;br/&gt; &lt;br/&gt; Il primo consente di decidere quali PDI o Fabbriche producono  risorse specifiche, così come una panoramica corrente dettagliata.&lt;br/&gt; &lt;br/&gt; Quest'ultimo ti permette di comandare un convoglio logistico di AI, dove puoi "aggiungere" gruppi logistici, acquistare qualsiasi quantità di camion per gruppo e mandarli a spostare determinate risorse in tutta la regione per te.&lt;br/&gt; &lt;br/&gt;
+						</Italian>
 				</Key>
 	</Package>
 </Project>
