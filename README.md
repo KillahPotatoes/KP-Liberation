@@ -167,6 +167,7 @@ class Missions
 * Fixed: Production timer displayed as float if using a resource multiplier
 * Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
 * Fixed: FOB Box won't respawn if fallen into the water
+* Fixed: It was possible to create a logistic mission without defining a A or B destination
 
 ### 0.95
 * Added: New resource system
