@@ -413,7 +413,7 @@ militia_squad = [
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
 	"O_G_Offroad_01_F",													//Offroad
-	"O_G_Offroad_01_F",													//Offroad
+	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
 	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
 	"O_G_Van_01_transport_F"											//Truck (Transport)
 ];
