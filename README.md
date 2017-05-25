@@ -160,6 +160,7 @@ class Missions
 * Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Factories will directly start producing supplies, as soon as a storage area is built
 * Tweaked: General syncing of production and logistic data between client and server
+* Tweaked: Resource amount is now also be displayed in the production dialog, not only crates count
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
 * Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
