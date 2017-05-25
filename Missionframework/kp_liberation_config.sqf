@@ -55,6 +55,7 @@ Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profi
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
 KP_liberation_debug = false;																					// Enables debug messages in the server log
+KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
 
 GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.

@@ -30,9 +30,11 @@ _distredeploy = 20;
 GRLIB_removefobboxes = false;
 KP_liberation_resources_global = false;
 
-waitUntil { !isNil "build_confirmed" };
-waitUntil { !isNil "one_synchro_done" };
-waitUntil { one_synchro_done };
+waitUntil {!isNil "build_confirmed"};
+waitUntil {!isNil "one_synchro_done"};
+waitUntil {!isNil "one_eco_done"};
+waitUntil {one_synchro_done};
+waitUntil {one_eco_done};
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management started for: %1", (name player)];_text remoteExec ["diag_log",2];};
 

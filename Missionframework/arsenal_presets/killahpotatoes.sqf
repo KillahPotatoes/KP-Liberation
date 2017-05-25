@@ -635,6 +635,7 @@ GRLIB_arsenal_items = [
 	"rhsusf_acc_rotex_mp7_aor1",
 	"rhsusf_acc_rotex_mp7_desert",
 	"rhsusf_acc_rotex_mp7_winter",
+	"rhsusf_acc_wmx",
 	"rhs_uniform_cu_ocp",
 	"rhs_uniform_cu_ucp",
 	"rhs_uniform_FROG01_d",

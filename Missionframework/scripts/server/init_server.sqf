@@ -57,6 +57,7 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\save_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\spawn_radio_towers.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\synchronise_vars.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\synchronise_eco.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\zeus_synchro.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\offload_calculation.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\offload_manager.sqf";

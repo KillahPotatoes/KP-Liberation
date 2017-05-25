@@ -153,11 +153,13 @@ class Missions
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Syncing between server and clients after building a sector storage
 * Tweaked: Debug info output for sector production and logistic management
 * Tweaked: Production time lowered from 30 to 20 minutes (still testing concerning balancing)
 * Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Factories will directly start producing supplies, as soon as a storage area is built
+* Tweaked: General syncing of production and logistic data between client and server
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
 * Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
