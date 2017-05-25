@@ -154,6 +154,7 @@ class Missions
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
 * Tweaked: Syncing between server and clients after building a sector storage
 * Tweaked: Debug info output for sector production and logistic management
 * Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
