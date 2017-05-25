@@ -110,9 +110,9 @@ while {dialog && (alive player)} do {
 	if (_ammoValue == 1) then {_ammoValue = format [localize "STR_PRODUCTION_CRATE", _ammoValue];} else {_ammoValue = format [localize "STR_PRODUCTION_CRATES", _ammoValue];};
 	if (_fuelValue == 1) then {_fuelValue = format [localize "STR_PRODUCTION_CRATE", _fuelValue];} else {_fuelValue = format [localize "STR_PRODUCTION_CRATES", _fuelValue];};
 
-	ctrlSetText [758011, _supplyValue];
-	ctrlSetText [758012, _ammoValue];
-	ctrlSetText [758013, _fuelValue];
+	ctrlSetText [758011, (str (_selectedSector select 9)) + " (" + _supplyValue + ")"];
+	ctrlSetText [758012, (str (_selectedSector select 10)) + " (" + _ammoValue + ")"];
+	ctrlSetText [758013, (str (_selectedSector select 11)) + " (" + _fuelValue + ")"];
 
 	"spawn_marker" setMarkerPosLocal (getMarkerPos (_selectedSector select 1));
 	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(getMarkerPos (_selectedSector select 1))];
