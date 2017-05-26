@@ -24,9 +24,10 @@ if ( isMultiplayer ) then {
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
 	GRLIB_maximum_fobs = [ "MaximumFobs",26] call bis_fnc_getParamValue;
 	GRLIB_max_squad_size = ["MaxSquadSize",10] call bis_fnc_getParamValue;
-	KP_liberation_mapmarkers = ["MapMarkers",0] call bis_fnc_getParamValue;
-	KP_liberation_mobilerespawn = ["MobileRespawn",0] call bis_fnc_getParamValue;
-	KP_liberation_mobilearsenal = ["MobileArsenal",0] call bis_fnc_getParamValue;
+	KP_liberation_arsenalUsePreset = ["ArsenalUsePreset",1] call BIS_fnc_getParamValue;
+	KP_liberation_mapmarkers = ["MapMarkers",1] call bis_fnc_getParamValue;
+	KP_liberation_mobilerespawn = ["MobileRespawn",1] call bis_fnc_getParamValue;
+	KP_liberation_mobilearsenal = ["MobileArsenal",1] call bis_fnc_getParamValue;
 	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
@@ -54,6 +55,7 @@ if ( isMultiplayer ) then {
 	GRLIB_autodanger = 0;
 	GRLIB_maximum_fobs = 26;
 	GRLIB_max_squad_size = 10;
+	KP_liberation_arsenalUsePreset = 1;
 	KP_liberation_mapmarkers = 1;
 	KP_liberation_mobilerespawn = 1;
 	KP_liberation_mobilearsenal = 1;
@@ -71,6 +73,7 @@ if ( GRLIB_use_whitelist == 1 ) then { GRLIB_use_whitelist = true } else { GRLIB
 if ( GRLIB_shorter_nights == 1 ) then { GRLIB_shorter_nights = true } else { GRLIB_shorter_nights = false };
 if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
 if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
+if (KP_liberation_arsenalUsePreset == 1) then {KP_liberation_arsenalUsePreset = true} else {KP_liberation_arsenalUsePreset = false};
 if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true} else {KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false};
 if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
 if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};

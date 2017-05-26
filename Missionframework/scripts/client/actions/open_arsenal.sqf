@@ -71,34 +71,38 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 		[player, [profileNamespace, _loaded_loadout]] call bis_fnc_loadInventory;
 		[ player ] call F_correctLaserBatteries;
 
-		_playerItems = [];
-		if ((headgear player) != "") then {_playerItems pushback (headgear player);};
-		if ((goggles player) != "") then {_playerItems pushback (goggles player);};
-		if ((uniform player) != "") then {_playerItems pushback (uniform player);};
-		if ((vest player) != "") then {_playerItems pushback (vest player);};
-		if ((backpack player) != "") then {_playerItems pushback (backpack player);};
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
-		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
+		if (KP_liberation_arsenalUsePreset) then {
+			_playerItems = [];
+			if ((headgear player) != "") then {_playerItems pushback (headgear player);};
+			if ((goggles player) != "") then {_playerItems pushback (goggles player);};
+			if ((uniform player) != "") then {_playerItems pushback (uniform player);};
+			if ((vest player) != "") then {_playerItems pushback (vest player);};
+			if ((backpack player) != "") then {_playerItems pushback (backpack player);};
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
+			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
-		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
-			_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
-			_text remoteExec ["diag_log",2];
-			_badItems = "";
-			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
-			hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
-			removeAllWeapons player;
-			removeAllItems player;
-			removeAllAssignedItems player;
-			removeUniform player;
-			removeVest player;
-			removeBackpack player;
-			removeHeadgear player;
-			removeGoggles player;	
+			if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
+				_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
+				_text remoteExec ["diag_log",2];
+				_badItems = "";
+				{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
+				hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
+				removeAllWeapons player;
+				removeAllItems player;
+				removeAllAssignedItems player;
+				removeUniform player;
+				removeVest player;
+				removeBackpack player;
+				removeHeadgear player;
+				removeGoggles player;	
+			} else {
+				hint format [ localize "STR_HINT_LOADOUT_LOADED", _loaded_loadout];
+			};
 		} else {
 			hint format [ localize "STR_HINT_LOADOUT_LOADED", _loaded_loadout];
 		};
@@ -131,36 +135,39 @@ if ( edit_loadout > 0 ) then {
 	closeDialog 0;
 	waitUntil { !dialog };
 	[ "Open", false ] spawn BIS_fnc_arsenal;
-	uiSleep 5;
-	waitUntil {sleep 1; isNull (uinamespace getvariable "RSCDisplayArsenal")};
 	
-	_playerItems = [];
-	if ((headgear player) != "") then {_playerItems pushback (headgear player);};
-	if ((goggles player) != "") then {_playerItems pushback (goggles player);};
-	if ((uniform player) != "") then {_playerItems pushback (uniform player);};
-	if ((vest player) != "") then {_playerItems pushback (vest player);};
-	if ((backpack player) != "") then {_playerItems pushback (backpack player);};
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
-	{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
+	if (KP_liberation_arsenalUsePreset) then {
+		uiSleep 5;
+		waitUntil {sleep 1; isNull (uinamespace getvariable "RSCDisplayArsenal")};
+		
+		_playerItems = [];
+		if ((headgear player) != "") then {_playerItems pushback (headgear player);};
+		if ((goggles player) != "") then {_playerItems pushback (goggles player);};
+		if ((uniform player) != "") then {_playerItems pushback (uniform player);};
+		if ((vest player) != "") then {_playerItems pushback (vest player);};
+		if ((backpack player) != "") then {_playerItems pushback (backpack player);};
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
-	if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
-		_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
-		_text remoteExec ["diag_log",2];
-		_badItems = "";
-		{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
-		hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
-		removeAllWeapons player;
-		removeAllItems player;
-		removeAllAssignedItems player;
-		removeUniform player;
-		removeVest player;
-		removeBackpack player;
-		removeHeadgear player;
-		removeGoggles player;
-	};	
+		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
+			_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
+			_text remoteExec ["diag_log",2];
+			_badItems = "";
+			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
+			hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
+			removeAllWeapons player;
+			removeAllItems player;
+			removeAllAssignedItems player;
+			removeUniform player;
+			removeVest player;
+			removeBackpack player;
+			removeHeadgear player;
+			removeGoggles player;
+		};
+	};
 };

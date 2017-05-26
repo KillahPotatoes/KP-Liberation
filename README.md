@@ -153,6 +153,7 @@ class Missions
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
+* Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf`
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
 * Tweaked: Syncing between server and clients after building a sector storage

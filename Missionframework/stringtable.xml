@@ -3443,5 +3443,17 @@
                         Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Factory создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;
 						</Russian>
 				</Key>
+				<Key ID="STR_PARAMS_ARSENALUSEPRESET">
+						<Original>Arsenal mode</Original>
+						<German>Arsenalmodus</German>
+				</Key>
+				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
+						<Original>No restrictions</Original>
+						<German>Keine Einschränkungen</German>
+				</Key>
+				<Key ID="STR_PARAMS_USEPRESET">
+						<Original>Use preset from config</Original>
+						<German>Benutze Preset aus Konfiguration</German>
+				</Key>
 	</Package>
 </Project>
