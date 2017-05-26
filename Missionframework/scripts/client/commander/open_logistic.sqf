@@ -1,4 +1,4 @@
-private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_logi_destinations", "_mapdisplay"];
+private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_logi_destinations", "_mapdisplay", "_tempvariable"];
 
 _dialog = createDialog "liberation_logistic";
 _logi_count = 0;
@@ -29,6 +29,7 @@ sellLogiTruck = 0;
 saveConvoySettings = 0;
 convoyStandby = 0;
 logiError = 0;
+_tempvariable = nil;
 
 disableSerialization;
 
@@ -72,14 +73,16 @@ while {dialog && (alive player)} do {
 
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
+		_tempvariable = _selectedGroup select 1;
 		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
-		waitUntil {sleep 0.5; ((_selectedGroup select 1) != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
+		waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
 	if (sellLogiTruck == 1) then {
 		sellLogiTruck = 0;
+		_tempvariable = _selectedGroup select 1;
 		[_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
-		waitUntil {sleep 0.5; ((_selectedGroup select 1) != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
+		waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
 	if (saveConvoySettings == 1) then {
@@ -99,6 +102,7 @@ while {dialog && (alive player)} do {
 	};
 
 	logiError = 0;
+	_tempvariable = nil;
 	ctrlEnable [75803, true];
 
 	if (_logi_count != (count KP_liberation_logistics)) then {
