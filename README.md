@@ -172,6 +172,7 @@ class Missions
 * Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
 * Fixed: FOB Box won't respawn if fallen into the water
 * Fixed: It was possible to create a logistic mission without defining a A or B destination
+* Fixed: Logistic dialog don't update when buy or sell a truck
 
 ### 0.95
 * Added: New resource system

@@ -693,6 +693,10 @@ GRLIB_arsenal_items = [
 	"rhs_uniform_g3_m81",
 	"rhsusf_ach_helmet_M81",
 	"rhs_Booniehat_m81",
+	"rhs_uniform_g3_mc",
+	"rhsusf_opscore_mc_cover",
+	"rhs_uniform_g3_rgr",
+	"rhsusf_opscore_rg_cover",
 	"rhsusf_opscore_mar_fg_pelt",
 	"rhsusf_opscore_mar_ut_pelt",
 	"rhsusf_spc_patchless",
@@ -703,7 +707,13 @@ GRLIB_arsenal_items = [
 	"V_DeckCrew_green_F",
 	"V_DeckCrew_red_F",
 	"V_DeckCrew_violet_F",
-	"V_DeckCrew_white_F"
+	"V_DeckCrew_white_F",
+	"BWA3_Vest_JPC_Radioman_Fleck",
+	"BWA3_Vest_JPC_Leader_Fleck",
+	"BWA3_Vest_JPC_Rifleman_Fleck",
+	"BWA3_Vest_JPC_Radioman_Tropen",
+	"BWA3_Vest_JPC_Leader_Tropen",
+	"BWA3_Vest_JPC_Rifleman_Tropen"
 ];
 
 GRLIB_arsenal_backpacks = [
