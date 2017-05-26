@@ -163,6 +163,7 @@ class Missions
 * Tweaked: General syncing of production and logistic data between client and server
 * Tweaked: Resource amount is now also be displayed in the production dialog, not only crates count
 * Tweaked: Production menu is now also available if near a production sector
+* Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
 * Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
