@@ -8,9 +8,9 @@ while {GRLIB_endgame == 0} do {
 	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic interval started: %1", time];_text remoteExec ["diag_log",2];};
 		
-		private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
+		private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_maxGetSupply","_maxGetAmmo","_maxGetFuel","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
 		
-		_tempLogistics = KP_liberation_logistics;
+		_tempLogistics = +KP_liberation_logistics;
 
 		{
 			switch (_x select 7) do {
@@ -164,39 +164,63 @@ while {GRLIB_endgame == 0} do {
 							_toProcess = ceil ((ceil (((_x select _locRes) select 0) / 100)) + (ceil (((_x select _locRes) select 1) / 100)) + (ceil (((_x select _locRes) select 2) / 100)));
 							if (_toProcess > 3) then {_toProcess = 3;};
 
+							_maxGetSupply = ((_x select _locRes) select 0);
+							if (_maxGetSupply > 300) then {_maxGetSupply = 300;};
+							_maxGetAmmo = ((_x select _locRes) select 1);
+							if (_maxGetAmmo > 300) then {_maxGetAmmo = 300;};
+							_maxGetFuel = ((_x select _locRes) select 2);
+							if (_maxGetFuel > 300) then {_maxGetFuel = 300;};
+
 							_getSupply = 0;
 							_getAmmo = 0;
 							_getFuel = 0;
 							_i = 0;
+							private _j = 0;
 
-							while {_i < _toProcess} do {
-								if ((((_x select _locRes) select 0) - _getSupply) > 0) then {
-									if ((floor ((((_x select _locRes) select 0) / 100))) > 0) then {
-										_getSupply = _getSupply + 100;
+							while {(_i < _toProcess) && (_j < _toProcess)} do {
+								if ((_maxGetSupply - _getSupply) > 0) then {
+									if ((floor ((_maxGetSupply - _getSupply) / 100)) > 0) then {
+										if ((_supplyValue - _getSupply) >= 100) then {
+											_getSupply = _getSupply + 100;
+											_i = _i + 1;
+										};
 									} else {
-										_getSupply = _getSupply + ((_x select _locRes) select 0);
+										if ((_maxGetSupply - _getSupply) <= (_supplyValue - _getSupply)) then {
+											_getSupply = _maxGetSupply;
+											_i = _i + 1;
+										};
 									};
-									_i = _i + 1;
 								};
-								if ((((_x select _locRes) select 1) - _getAmmo) > 0) then {
-									if ((floor ((((_x select _locRes) select 1) / 100))) > 0) then {
-										_getAmmo = _getAmmo + 100;
+								if ((_maxGetAmmo - _getAmmo) > 0) then {
+									if ((floor ((_maxGetAmmo - _getAmmo) / 100)) > 0) then {
+										if ((_ammoValue - _getAmmo) >= 100) then {
+											_getAmmo = _getAmmo + 100;
+											_i = _i + 1;
+										};
 									} else {
-										_getAmmo = _getAmmo + ((_x select _locRes) select 1);
+										if ((_maxGetAmmo - _getAmmo) <= (_ammoValue - _getAmmo)) then {
+											_getAmmo = _maxGetAmmo;
+											_i = _i + 1;
+										};
 									};
-									_i = _i + 1;
 								};
-								if ((((_x select _locRes) select 2) - _getFuel) > 0) then {
-									if ((floor ((((_x select _locRes) select 2) / 100))) > 0) then {
-										_getFuel = _getFuel + 100;
+								if ((_maxGetFuel - _getFuel) > 0) then {
+									if ((floor ((_maxGetFuel - _getFuel) / 100)) > 0) then {
+										if ((_fuelValue - _getFuel) >= 100) then {
+											_getFuel = _getFuel + 100;
+											_i = _i + 1;
+										};
 									} else {
-										_getFuel = _getFuel + ((_x select _locRes) select 2);
+										if ((_maxGetFuel - _getFuel) <= (_fuelValue - _getFuel)) then {
+											_getFuel = _maxGetFuel;
+											_i = _i + 1;
+										};
 									};
-									_i = _i + 1;
 								};
+								_j = _j + 1;
 							};
 
-							if ((_supplyValue < _getSupply) || (_ammoValue < _getAmmo) || (_fuelValue < _getFuel)) exitWith {_x set [9,3];};
+							if ((_j == _toProcess) && (_i != _toProcess)) exitWith {_x set [9,3];};
 
 							_x set [_locRes,[((_x select _locRes) select 0) - _getSupply,((_x select _locRes) select 1) - _getAmmo,((_x select _locRes) select 2) - _getFuel]];
 							_x set [6,[((_x select 6) select 0) + _getSupply,((_x select 6) select 1) + _getAmmo,((_x select 6) select 2) + _getFuel]];
@@ -303,6 +327,9 @@ while {GRLIB_endgame == 0} do {
 				case 4: {
 					if ((_x select 8) > 1) then {
 						_x set [8,((_x select 8) - 1)];
+
+						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+
 					} else {
 						switch (_x select 7) do {
 							case 2: {
@@ -321,6 +348,8 @@ while {GRLIB_endgame == 0} do {
 
 						_x set [7,_nextState];
 						_x set [8,_time];
+
+						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
 					};
 				};
 				case 5;
@@ -460,7 +489,7 @@ while {GRLIB_endgame == 0} do {
 			};
 		} forEach _tempLogistics;	
 
-		KP_liberation_logistics = _tempLogistics;
+		KP_liberation_logistics = +_tempLogistics;
 
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic interval finished: %1", time];_text remoteExec ["diag_log",2];};
 	};

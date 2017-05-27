@@ -78,7 +78,7 @@ while {GRLIB_endgame == 0} do {
 
 		_tempProduction sort true;
 
-		KP_liberation_production = _tempProduction;
+		KP_liberation_production = +_tempProduction;
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource interval finished: %1", time];_text remoteExec ["diag_log",2];};
 	};
 	waitUntil {sleep 1; recalculate_sectors};
