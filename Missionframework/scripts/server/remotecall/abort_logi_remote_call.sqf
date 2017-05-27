@@ -17,7 +17,7 @@ switch ((KP_liberation_logistics select _index) select 7) do {
 	case 2;
 	case 4: {
 		_time = ceil ((((KP_liberation_logistics select _index) select 2) distance2D ((KP_liberation_logistics select _index) select 3)) / 400);
-		_time = _time -  ((KP_liberation_logistics select _index) select 8);
+		_time = _time - ((KP_liberation_logistics select _index) select 8);
 
 		_time = _time + (ceil (((ceil ((((KP_liberation_logistics select _index) select 6) select 0) / 100)) + (ceil ((((KP_liberation_logistics select _index) select 6) select 1) / 100)) + (ceil ((((KP_liberation_logistics select _index) select 6) select 2) / 100))) / 3));
 		_time = _time + 1;

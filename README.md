@@ -182,6 +182,7 @@ class Missions
 * Fixed: Logistic dialog don't update when buy or sell a truck
 * Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
 * Fixed: Boat recycle caused a script error
+* Fixed: Exploit of build menu if ui was set to show global ressources
 
 ### 0.95
 * Added: New resource system
