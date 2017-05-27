@@ -172,6 +172,7 @@ class Missions
 * Tweaked: Production menu is now also available if near a production sector
 * Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
 * Tweaked: Improved logistics algorithm concerning behaviour of loading resources
+* Tweaked: Removed unarmed vehicles from sector defender vehicles. They are still transports for battlegroups
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
 * Fixed: Missing vehicles because of classname changes due to the ArmA 3 update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
