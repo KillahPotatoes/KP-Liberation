@@ -160,6 +160,7 @@ class Missions
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
 * Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf`
+* Added: Al Rayak missionfile
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
 * Tweaked: Syncing between server and clients after building a sector storage
@@ -167,22 +168,22 @@ class Missions
 * Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Factories will directly start producing supplies, as soon as a storage area is built
 * Tweaked: General syncing of production and logistic data between client and server
-* Tweaked: Resource amount is now also be displayed in the production dialog, not only crates count
+* Tweaked: Resource amount is now also being displayed in the production dialog, not only crates count
 * Tweaked: Production menu is now also available if near a production sector
 * Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
 * Tweaked: Improved logistics algorithm concerning behaviour of loading resources
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
-* Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
+* Fixed: Missing vehicles because of classname changes due to the ArmA 3 update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
 * Fixed: Production menu showed timer even if nothing is produced
 * Fixed: Production timer displayed as float if using a resource multiplier
 * Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
 * Fixed: FOB Box won't respawn if fallen into the water
 * Fixed: It was possible to create a logistic mission without defining a A or B destination
-* Fixed: Logistic dialog don't update when buy or sell a truck
+* Fixed: Logistic dialog didn't update when buying or selling a truck
 * Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
 * Fixed: Boat recycle caused a script error
-* Fixed: Exploit of build menu if ui was set to show global ressources
+* Fixed: Exploit of build menu if UI was set to show global resources
 
 ### 0.95
 * Added: New resource system
