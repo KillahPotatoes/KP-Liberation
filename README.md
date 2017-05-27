@@ -170,6 +170,7 @@ class Missions
 * Tweaked: Resource amount is now also be displayed in the production dialog, not only crates count
 * Tweaked: Production menu is now also available if near a production sector
 * Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
+* Tweaked: Improved logistics algorithm concerning behaviour of loading resources
 * Fixed: Hostile map markers on Sahrani had a little offset from the map grid
 * Fixed: No intelobjects spawned at military bases
 * Fixed: Missing Vehicles because of classname changes due to the ArmA 3 Update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
@@ -179,6 +180,8 @@ class Missions
 * Fixed: FOB Box won't respawn if fallen into the water
 * Fixed: It was possible to create a logistic mission without defining a A or B destination
 * Fixed: Logistic dialog don't update when buy or sell a truck
+* Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
+* Fixed: Boat recycle caused a script error
 
 ### 0.95
 * Added: New resource system
