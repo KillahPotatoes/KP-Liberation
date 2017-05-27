@@ -412,19 +412,14 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"O_G_Offroad_01_F",													//Offroad
-	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
-	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
-	"O_G_Van_01_transport_F"											//Truck (Transport)
+	"O_G_Offroad_01_armed_F"											//Offroad (HMG)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
+	"O_MRAP_02_hmg_F",													//Ifrit (GMG)
 	"O_MRAP_02_gmg_F",													//Ifrit (GMG)
-	"O_MRAP_02_gmg_F",													//Ifrit (GMG)
-	"O_Truck_03_transport_F",											//Tempest Transport
-	"O_Truck_03_covered_F",												//Tempest Transport (Covered)
 	"O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
@@ -434,10 +429,8 @@ opfor_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"O_MRAP_02_F",														//Ifrit
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
-	"O_Truck_03_transport_F",											//Tempest Transport
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 
 	"O_APC_Tracked_02_cannon_F"											//BTR-K Kamysh
 ];
@@ -456,6 +449,7 @@ opfor_battlegroup_vehicles = [
 	"O_MBT_02_cannon_F",												//T-100 Varsuk
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
 	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
 	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
 	"O_Plane_Fighter_02_F"												//To-201 Shikra	
@@ -463,20 +457,19 @@ opfor_battlegroup_vehicles = [
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-	"O_MRAP_02_F",														//Ifrit
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
 	"O_MRAP_02_hmg_F",													//Ifrit (HMG)
 	"O_Truck_03_transport_F",											//Tempest Transport
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 
 	"O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
 	"O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-	"O_Heli_Light_02_dynamicLoadout_F"									//Po-30 Orca (Armed)
+	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Transport_04_bench_F"										//Mi-290 Taru (Bench)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.	*/
 opfor_troup_transports = [
-	"O_G_Van_01_transport_F",											//Truck (Transport)
 	"O_Truck_03_transport_F",											//Tempest Transport
 	"O_Truck_03_covered_F",												//Tempest Transport (Covered)
 	"O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid 

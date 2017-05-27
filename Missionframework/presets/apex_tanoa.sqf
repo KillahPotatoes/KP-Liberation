@@ -403,16 +403,13 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"O_G_Offroad_01_F",													//Offroad
-	"O_G_Offroad_01_F",													//Offroad
-	"O_G_Offroad_01_armed_F",											//Offroad (HMG)
-	"O_G_Van_01_transport_F"											//Truck (Transport)
+	"O_G_Offroad_01_armed_F"											//Offroad (HMG)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels)
 opfor_vehicles = [
-	"O_T_MRAP_02_ghex_F",												//Ifrit (HMG)
-	"O_T_MRAP_02_gmg_ghex_F",											//Ifrit (GMG)
+	"O_T_MRAP_02_hmg_ghex_F",											//Ifrit (HMG)
+	"O_T_MRAP_02_hmg_ghex_F",											//Ifrit (HMG)
 	"O_T_MRAP_02_gmg_ghex_F",											//Ifrit (GMG)
 	"O_T_Truck_03_transport_ghex_F",									//Tempest Transport
 	"O_T_Truck_03_covered_ghex_F",										//Tempest Transport (Covered)
@@ -425,10 +422,8 @@ opfor_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"O_T_MRAP_02_ghex_F",												//Ifrit
 	"O_T_MRAP_02_hmg_ghex_F",											//Ifrit (HMG)
 	"O_T_MRAP_02_hmg_ghex_F",											//Ifrit (HMG)
-	"O_T_Truck_03_transport_ghex_F",									//Tempest Transport
 	"O_T_APC_Wheeled_02_rcws_ghex_F",									//MSE-3 Marid 
 	"O_T_APC_Tracked_02_cannon_ghex_F"									//BTR-K Kamysh
 ];
@@ -447,6 +442,7 @@ opfor_battlegroup_vehicles = [
 	"O_T_MBT_02_cannon_ghex_F",											//T-100 Varsuk
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
 	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
 	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
 	"O_Plane_Fighter_02_F",												//To-201 Shikra
@@ -462,13 +458,13 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"O_T_APC_Wheeled_02_rcws_ghex_F",									//MSE-3 Marid 
 	"O_T_APC_Tracked_02_cannon_ghex_F",									//BTR-K Kamysh
 	"O_T_APC_Tracked_02_AA_ghex_F",										//ZSU-39 Tigris
-	"O_Heli_Light_02_dynamicLoadout_F"									//Po-30 Orca (Armed)
+	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
+	"O_Heli_Transport_04_bench_F"										//Mi-290 Taru (Bench)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.	*/
 opfor_troup_transports = [
-	"O_G_Van_01_transport_F",											//Truck (Transport)
 	"O_T_Truck_03_transport_ghex_F",									//Tempest Transport
 	"O_T_Truck_03_covered_ghex_F",										//Tempest Transport (Covered)
 	"O_T_APC_Wheeled_02_rcws_ghex_F",									//MSE-3 Marid 
@@ -481,14 +477,14 @@ opfor_troup_transports = [
 opfor_choppers = [
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
-	"O_Heli_Attack_02_dynamicLoadout_F"									//Mi-48 Kajman
+	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
+	"O_T_VTOL_02_infantry_dynamicLoadout_F"								//Y-32 Xi'an (Infantry)
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
 	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
-	"O_Plane_Fighter_02_F",												//To-201 Shikra
-	"O_T_VTOL_02_infantry_dynamicLoadout_F"								//Y-32 Xi'an (Infantry)
+	"O_Plane_Fighter_02_F"												//To-201 Shikra
 ];
 
 /*	- Other various mission classnames.

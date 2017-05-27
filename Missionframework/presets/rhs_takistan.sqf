@@ -360,20 +360,14 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"LOP_TKA_UAZ",														//UAZ-3151
-	"LOP_TKA_UAZ",														//UAZ-3151
-	"LOP_TKA_UAZ_DshKM",												//UAZ-3151 (DShKM)
-	"LOP_TKA_Ural_open"													//Ural Truck (Transport)
+	"LOP_TKA_UAZ_DshKM"													//UAZ-3151 (DShKM)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
-	"LOP_TKA_UAZ",														//UAZ-3151 (Covered)
 	"LOP_TKA_UAZ_DshKM",												//UAZ-3151 (DShKM)
 	"LOP_TKA_UAZ_AGS",													//UAZ-3151 (AGS-30)
 	"LOP_TKA_UAZ_SPG",													//UAZ-3151 (SPG-9)
-	"LOP_TKA_Ural_open",												//Ural-4320 Transport
-	"LOP_TKA_Ural",														//Ural-4320 Transport (Covered)
 	"LOP_TKA_BMP2",														//BMP-2
 	"LOP_TKA_BMP2D",													//BMP-2D
 	"LOP_TKA_BTR70",													//BTR-70
@@ -386,10 +380,8 @@ opfor_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"LOP_TKA_UAZ_Open",													//UAZ-3151
 	"LOP_TKA_UAZ_DshKM",												//UAZ-3151 (DShKM)
 	"LOP_TKA_UAZ_AGS",													//UAZ-3151 (AGS-30)
-	"LOP_TKA_Ural_open",												//Ural-4320 Transport
 	"LOP_TKA_BMP1",														//BMP-1
 	"LOP_TKA_BMP1D",													//BMP-1D
 	"LOP_TKA_BTR60"														//BTR-60PB
@@ -413,6 +405,7 @@ opfor_battlegroup_vehicles = [
 	"LOP_TKA_T72BB",													//T-72B
 	"LOP_TKA_Mi24V_AT",													//Mi-24P (AT)
 	"LOP_TKA_Mi24V_UPK23",												//Mi-24V (UPK)
+	"LOP_TKA_Mi8MT_Cargo",												//Mi-8MT (Cargo)
 	"RHS_Su25SM_vvsc",													//Su-25
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
 ];
@@ -428,7 +421,8 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"LOP_TKA_BTR60",													//BTR-60PB
 	"LOP_TKA_ZSU234",													//ZSU-23-4V
 	"LOP_TKA_Mi24V_AT",													//Mi-24P (AT)
-	"LOP_TKA_Mi24V_UPK23"												//Mi-24V (UPK)
+	"LOP_TKA_Mi24V_UPK23",												//Mi-24V (UPK)
+	"LOP_TKA_Mi8MT_Cargo"												//Mi-8MT (Cargo)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.

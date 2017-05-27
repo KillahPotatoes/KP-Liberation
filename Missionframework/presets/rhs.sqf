@@ -364,10 +364,7 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"rhs_tigr_msv",														//GAZ-233011
-	"rhs_tigr_msv",														//GAZ-233011
-	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01"												//Ural Truck (Transport)
+	"rhs_tigr_sts_msv"													//GAZ-233014 (Armed)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
@@ -375,8 +372,6 @@ opfor_vehicles = [
 	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01",												//Ural-4320 Transport
-	"RHS_Ural_MSV_01",													//Ural-4320 Transport (Covered)
 	"rhs_bmp2d_msv",													//BMP-2D
 	"rhs_bmp2k_msv",													//BMP-2K
 	"rhs_brm1k_msv",													//BRM-1K
@@ -389,10 +384,8 @@ opfor_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"rhs_tigr_msv",														//GAZ-233011
 	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_msv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01",												//Ural-4320 Transport
 	"rhs_btr80_msv",													//BTR-80
 	"rhs_btr80a_msv"													//BTR-80A
 ];
@@ -414,6 +407,7 @@ opfor_battlegroup_vehicles = [
 	"rhs_t90a_tv",														//T90A
 	"RHS_Mi24P_AT_vvsc",												//Mi-24P (AT)
 	"RHS_Mi24V_AT_vvsc",												//Mi-24V (AT)
+	"RHS_Mi8mt_Cargo_vvsc",												//Mi-8MT (Cargo)
 	"RHS_Ka52_vvsc",													//Ka-52
 	"RHS_Su25SM_vvsc",													//Su-25
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
@@ -429,7 +423,8 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"rhs_btr80a_msv",													//BTR-80A
 	"rhs_zsu234_aa",													//ZSU-23-4V
 	"RHS_Mi24P_AT_vvsc",												//Mi-24P (AT)
-	"RHS_Mi24V_AT_vvsc"													//Mi-24V (AT)
+	"RHS_Mi24V_AT_vvsc",												//Mi-24V (AT)
+	"RHS_Mi8mt_Cargo_vvsc"												//Mi-8MT (Cargo)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
