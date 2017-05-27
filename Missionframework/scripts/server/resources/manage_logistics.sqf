@@ -191,7 +191,7 @@ while {GRLIB_endgame == 0} do {
 										};
 									};
 								};
-								if ((_maxGetAmmo - _getAmmo) > 0) then {
+								if (((_maxGetAmmo - _getAmmo) > 0) && (_i < _toProcess)) then {
 									if ((floor ((_maxGetAmmo - _getAmmo) / 100)) > 0) then {
 										if ((_ammoValue - _getAmmo) >= 100) then {
 											_getAmmo = _getAmmo + 100;
@@ -204,7 +204,7 @@ while {GRLIB_endgame == 0} do {
 										};
 									};
 								};
-								if ((_maxGetFuel - _getFuel) > 0) then {
+								if (((_maxGetFuel - _getFuel) > 0) && (_i < _toProcess)) then {
 									if ((floor ((_maxGetFuel - _getFuel) / 100)) > 0) then {
 										if ((_fuelValue - _getFuel) >= 100) then {
 											_getFuel = _getFuel + 100;
