@@ -30,6 +30,10 @@ if (((typeOf _vehtorecycle) in _building_classnames) || ((typeOf _vehtorecycle) 
 	_suppMulti = (((_vehtorecycle getHitPointDamage "HitEngine") - 1) * -1) * (((_vehtorecycle getHitPointDamage "HitHull") - 1) * -1);
 	_ammoMulti = _currentAmmo/_allAmmo;
 	_fuelMulti = fuel _vehtorecycle;
+
+	if ((typeOf _vehtorecycle) == "B_Boat_Transport_01_F") then {
+		_suppMulti = (((_vehtorecycle getHitPointDamage "HitEngine") - 1) * -1);
+	};
 };
 
 if ((typeOf _vehtorecycle) in all_hostile_classnames) then {
