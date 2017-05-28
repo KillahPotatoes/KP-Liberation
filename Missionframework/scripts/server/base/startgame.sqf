@@ -25,10 +25,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 		_spawnplace = _potentialplaces call BIS_fnc_selectRandom;
 		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
 
-		if (KP_liberation_debug) then {
-			private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", (name player)];
-			_text remoteExec ["diag_log",2];
-		};
+		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", (name player)];_text remoteExec ["diag_log",2];};
 
 	} else {
 		while { count GRLIB_all_fobs == 0 } do {
@@ -38,20 +35,17 @@ if ( count GRLIB_all_fobs == 0 ) then {
 
 			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
 
-			if (KP_liberation_debug) then {
-				private _text = format ["[KP LIBERATION] [DEBUG] FOB Box placed by: %1", (name player)];
-				_text remoteExec ["diag_log",2];
-			};
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] FOB Box placed by: %1", (name player)];_text remoteExec ["diag_log",2];};
 
 			sleep 3;
 
 			waitUntil {
 				sleep 1;
-				!(alive _fobbox) || count GRLIB_all_fobs > 0
+				!(alive _fobbox) || ((count GRLIB_all_fobs) > 0) || (((getPosASL _fobbox) select 2) < 0)
 			};
 
 			sleep 15;
-
+			
 		};
 
 		deleteVehicle _fobbox;
@@ -61,7 +55,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 
 	private ["_crate","_crateArray", "_smoke"];
 
-	diag_log "[KP LIBERATION] [INFO] First FOB built. Sending resource package.";
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] First FOB built at %1. Sending resource package.", (GRLIB_all_fobs select 0)];_text remoteExec ["diag_log",2];};
 
 	_crateArray = [];
 
@@ -91,9 +85,6 @@ if ( count GRLIB_all_fobs == 0 ) then {
 		_smoke attachTo [_x];
 	} forEach _crateArray;
 
-	if (KP_liberation_debug) then {
-		private _text = format ["[KP LIBERATION] [DEBUG] Startresources dropped by: %1", (name player)];
-		_text remoteExec ["diag_log",2];
-	};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Startresources dropped by: %1", (name player)];_text remoteExec ["diag_log",2];};
 
 };

@@ -1,16 +1,18 @@
-waitUntil { !isNil "build_confirmed" };
-waitUntil { !isNil "one_synchro_done" };
-waitUntil { one_synchro_done };
+waitUntil {!isNil "build_confirmed"};
+waitUntil {!isNil "one_synchro_done"};
+waitUntil {!isNil "one_eco_done"};
+waitUntil {one_synchro_done};
+waitUntil {one_eco_done};
 
-private [ "_managed_trucks", "_managed_boxes", "_managed_areas", "_next_truck", "_next_box", "_truck_load", "_checked_trucks", "_checked_boxes", "_action_id" ];
+private ["_managed_trucks", "_managed_boxes", "_managed_areas", "_next_truck", "_next_box", "_truck_load", "_checked_trucks", "_checked_boxes", "_action_id"];
 
 _managed_trucks = [];
 _managed_boxes = [];
 _managed_areas = [];
 
-while { true } do {
+while {true} do {
 
-	if ( [ player, 5 ] call F_fetchPermission ) then {
+	if ([player, 5] call F_fetchPermission) then {
 
 		_nearammoboxes = ((getpos player) nearEntities [KP_liberation_crates,10]);
 		_neartransporttrucks = ((getpos player) nearEntities [ammobox_transports_typenames,10]);
@@ -22,14 +24,14 @@ while { true } do {
 			_next_truck = _x;
 			_truck_load = _next_truck getVariable ["GRLIB_ammo_truck_load", 0];
 
-			if ( !(_next_truck in _managed_trucks) && (_truck_load > 0)) then {
+			if (!(_next_truck in _managed_trucks) && (_truck_load > 0)) then {
 					_action_id = _next_truck addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_BOX" + "</t>","scripts\client\ammoboxes\do_unload_truck.sqf","",-500,true,true,"","build_confirmed == 0 && (_this distance _target < 7) && (vehicle player == player)"];
 					_next_truck setVariable [ "GRLIB_ammo_truck_action", _action_id, false ];
 					_managed_trucks pushback _next_truck;
 			};
 
-			if ( (_next_truck in _managed_trucks) && _truck_load == 0 ) then {
-				_next_truck removeAction ( _next_truck getVariable ["GRLIB_ammo_truck_action", -1] );
+			if ((_next_truck in _managed_trucks) && _truck_load == 0) then {
+				_next_truck removeAction (_next_truck getVariable ["GRLIB_ammo_truck_action", -1]);
 				_managed_trucks = _managed_trucks - [_next_truck];
 			};
 
@@ -39,9 +41,9 @@ while { true } do {
 
 		{
 			_next_truck = _x;
-			if ( !(_next_truck in _checked_trucks)) then {
+			if (!(_next_truck in _checked_trucks)) then {
 				_managed_trucks = _managed_trucks - [_next_truck];
-				_next_truck removeAction ( _next_truck getVariable ["GRLIB_ammo_truck_action", -1] );
+				_next_truck removeAction ( _next_truck getVariable ["GRLIB_ammo_truck_action", -1]);
 			}
 
 		} foreach _managed_trucks;
@@ -50,10 +52,10 @@ while { true } do {
 
 		{
 			_next_box = _x;
-			if ( !(_next_box in _managed_boxes) && ( isNull  attachedTo _next_box )) then {
+			if (!(_next_box in _managed_boxes) && ( isNull  attachedTo _next_box )) then {
 				_action_id = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_LOAD_BOX" + "</t>","scripts\client\ammoboxes\do_load_box_action.sqf","",-501,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
 				_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KP_liberation_storage_buildings,20]) select 0] call F_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
-				_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{hint format [localize "STR_ACTION_CRATE_VALUE_HINT", (_this select 0) getVariable ["KP_liberation_crate_value",0]]; uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
+				_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{[_this select 0] call F_crateCheckValue;uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
 				_next_box setVariable ["GRLIB_ammo_box_action", _action_id, false];
 				_next_box setVariable ["KP_crate_store_action", _action_id2, false];
 				_next_box setVariable ["KP_crate_value_action", _action_id3, false];
@@ -65,7 +67,7 @@ while { true } do {
 
 		{
 			_next_box = _x;
-			if ( !(_next_box in _managed_boxes) || !( isNull  attachedTo _next_box )) then {
+			if (!(_next_box in _managed_boxes) || !( isNull  attachedTo _next_box )) then {
 				_managed_boxes = _managed_boxes - [_next_box];
 				_next_box removeAction (_next_box getVariable ["GRLIB_ammo_box_action", -1]);
 				_next_box removeAction (_next_box getVariable ["KP_crate_store_action", -1]);
@@ -79,7 +81,7 @@ while { true } do {
 			_next_area = _x;
 			_area_load = count (attachedObjects _x);
 
-			if ( !(_next_area in _managed_areas) && (_area_load > 0)) then {
+			if (!(_next_area in _managed_areas) && (_area_load > 0)) then {
 					_action_id = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_SUPPLY" + "</t>",{[KP_liberation_supply_crate, (_this select 0)] spawn F_crateFromStorage;},"",-504,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
 					_next_area setVariable ["KP_supply_unstore_action", _action_id, false];
 					_action_id2 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_AMMO" + "</t>",{[KP_liberation_ammo_crate, (_this select 0)] spawn F_crateFromStorage;},"",-505,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
@@ -89,7 +91,7 @@ while { true } do {
 					_managed_areas pushback _next_area;
 			};
 
-			if ( (_next_area in _managed_areas) && _area_load == 0 ) then {
+			if ((_next_area in _managed_areas) && _area_load == 0) then {
 				_next_area removeAction (_next_area getVariable ["KP_supply_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_ammo_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_fuel_unstore_action", -1]);
@@ -102,7 +104,7 @@ while { true } do {
 
 		{
 			_next_area = _x;
-			if ( !(_next_area in _checked_areas)) then {
+			if (!(_next_area in _checked_areas)) then {
 				_managed_areas = _managed_areas - [_next_area];
 				_next_area removeAction (_next_area getVariable ["KP_supply_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_ammo_unstore_action", -1]);

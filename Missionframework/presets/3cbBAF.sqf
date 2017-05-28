@@ -15,7 +15,8 @@ huron_typename = "UK3CB_BAF_Merlin_HC3_18_MTP";								// This is Spartan 01, a 
 opfor_ammobox_transport = "RHS_Ural_Open_MSV_01";							// Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config.sqf) otherwise things will break!	Default is "O_Truck_03_transport_F".
 crewman_classname = "UK3CB_BAF_Crewman_MTP";								// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "UK3CB_BAF_HeliPilot_Army_MTP";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
-KP_liberation_little_bird_classname = "UK3CB_BAF_Wildcat_AH1_TRN_8A_MTP";	// These are the little birds that spawn on the lhd or at Chimera base. 																Default is "B_Heli_Light_01_F".
+KP_liberation_little_bird_classname = "UK3CB_BAF_Wildcat_AH1_TRN_8A_MTP";	// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
+KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 					// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";			// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";			// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";						// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -104,9 +105,8 @@ air_vehicles = [
 	["RHS_CH_47F_10",275,80,175],										//CH-47 Chinook (Armed)
 	["UK3CB_BAF_Merlin_HC3_32_MTP",300,0,175],							//Merlin HC3 32
 	["UK3CB_BAF_Merlin_HC3_CSAR_MTP",300,80,175],						//Merlin HC3 CSAR (Armed)
-	["B_UAV_02_F",400,300,200],											//MQ-4A Greyhawk
-	["B_UAV_02_CAS_F",400,500,200],										//MQ-4A Greyhawk (CAS)
-	["B_T_UAV_03_F",450,500,250],										//MQ-12 Falcon
+	["B_UAV_02_dynamicLoadout_F",400,300,200],							//MQ-4A Greyhawk
+	["B_T_UAV_03_dynamicLoadout_F",450,500,250],						//MQ-12 Falcon
 	["B_UAV_05_F",500,500,200],											//UCAV Sentinel
 	["RHS_A10",1000,1000,400],											//A-10A (CAS)
 	["FIR_F15C",1250,1250,450],											//F-15C Eagle
@@ -239,9 +239,8 @@ uavs = [
 	"B_UAV_01_F",														//AR-2 Darter
 	"B_UGV_01_F",														//UGV Stomper
 	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F"														//UCAV Sentinel
 ];
 
@@ -378,10 +377,7 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"rhs_tigr_vdv",														//GAZ-233011
-	"rhs_tigr_vdv",														//GAZ-233011
-	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01"												//Ural Truck (Transport)
+	"rhs_tigr_sts_vdv"													//GAZ-233014 (Armed)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels)
@@ -389,8 +385,6 @@ opfor_vehicles = [
 	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01",												//Ural-4320 Transport
-	"RHS_Ural_MSV_01",													//Ural-4320 Transport (Covered)
 	"rhs_bmp2d_vdv",													//BMP-2D
 	"rhs_bmp2k_vdv",													//BMP-2K
 	"rhs_brm1k_vdv",													//BRM-1K
@@ -402,10 +396,8 @@ opfor_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-	"rhs_tigr_vdv",														//GAZ-233011
 	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
 	"rhs_tigr_sts_vdv",													//GAZ-233014 (Armed)
-	"RHS_Ural_Open_MSV_01",												//Ural-4320 Transport
 	"rhs_btr80_vdv",													//BTR-80
 	"rhs_btr80a_vdv"													//BTR-80A
 ];
@@ -426,6 +418,7 @@ opfor_battlegroup_vehicles = [
 	"rhs_bmd4ma_vdv",													//BMD-4M (A)
 	"RHS_Mi24P_AT_vvsc",												//Mi-24P (AT)
 	"RHS_Mi24V_AT_vvsc",												//Mi-24V (AT)
+	"RHS_Mi8mt_Cargo_vvsc",												//Mi-8MT (Cargo)
 	"RHS_Ka52_vvsc",													//Ka-52
 	"RHS_Su25SM_vvsc",													//Su-25
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
@@ -441,7 +434,8 @@ opfor_battlegroup_vehicles_low_intensity = [
 	"rhs_btr80a_vdv",													//BTR-80A
 	"rhs_zsu234_aa",													//ZSU-23-4V
 	"RHS_Mi24P_AT_vvsc",												//Mi-24P (AT)
-	"RHS_Mi24V_AT_vvsc"													//Mi-24V (AT)
+	"RHS_Mi24V_AT_vvsc",												//Mi-24V (AT)
+	"RHS_Mi8mt_Cargo_vvsc"												//Mi-8MT (Cargo)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
@@ -507,9 +501,8 @@ civilian_vehicles = [
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
 	"rhsusf_mkvsoc",													//Mk.V SOCOM
-	"B_UAV_02_F",														//MQ-4A Greyhawk
-	"B_UAV_02_CAS_F",													//MQ-4A Greyhawk (CAS)
-	"B_T_UAV_03_F",														//MQ-12 Falcon
+	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
+	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
 	"B_UAV_05_F",														//UCAV Sentinel
 	"UK3CB_BAF_Wildcat_AH1_CAS_6C_MTP",									//Wildcat AH1 6 (CAS/AT)
 	"UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP",									//Wildcat AH1 8 (CAS/AT)
@@ -526,7 +519,4 @@ elite_vehicles = [
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];_text remoteExec ["diag_log",2];};

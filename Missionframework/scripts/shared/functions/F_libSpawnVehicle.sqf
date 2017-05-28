@@ -6,7 +6,7 @@ params [
 	[ "_random_rotate", true ]
 ];
 
-diag_log format [ "[KP LIBERATION] [INFO] Spawning vehicle %1 at %2", _classname , time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning vehicle %1 at %2", _classname, time];_text remoteExec ["diag_log",2];};
 
 private _newvehicle = objNull;
 private _spawnpos = zeropos;
@@ -57,7 +57,7 @@ if ( !_disable_abandon ) then {
 	[ _newvehicle ] spawn csat_abandon_vehicle;
 };
 
-diag_log format [ "[KP LIBERATION] [INFO] Done Spawning vehicle %1 at %2", _classname , time ];
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning vehicle %1 at %2", _classname, time];_text remoteExec ["diag_log",2];};
 
 _newvehicle
 

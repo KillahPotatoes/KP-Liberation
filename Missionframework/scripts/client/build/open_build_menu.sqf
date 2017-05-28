@@ -1,9 +1,9 @@
-private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str" ];
+private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
-if ( ( [ getpos player , 500 , GRLIB_side_enemy ] call F_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY"; };
+if (([ getpos player , 500 , GRLIB_side_enemy ] call F_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
 
-if ( isNil "buildtype" ) then { buildtype = 1 };
-if ( isNil "buildindex" ) then { buildindex = -1 };
+if (isNil "buildtype") then {buildtype = 1};
+if (isNil "buildindex") then {buildindex = -1};
 dobuild = 0;
 _oldbuildtype = -1;
 _cfg = configFile >> "cfgVehicles";
@@ -13,13 +13,13 @@ _dialog = createDialog "liberation_build";
 waitUntil { dialog };
 
 _iscommandant = false;
-if ( player == [] call F_getCommander ) then {
+if (player == [] call F_getCommander) then {
 	_iscommandant = true;
 };
 
-ctrlShow [ 108, _iscommandant ];
-ctrlShow [ 1085, _iscommandant ];
-ctrlShow [ 121, _iscommandant ];
+ctrlShow [108, _iscommandant];
+ctrlShow [1085, _iscommandant];
+ctrlShow [121, _iscommandant];
 
 _squadname = "";
 _buildpages = [
@@ -33,24 +33,27 @@ localize "STR_BUILD7",
 localize "STR_BUILD8"
 ];
 
-while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
+_nearfob = [] call F_getNearestFob;
+_actual_fob = [KP_liberation_fob_resources, {((_x select 0) distance _nearfob) < GRLIB_fob_range}] call BIS_fnc_conditionalSelect;
+
+while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	_build_list = build_lists select buildtype;
 
-	if ( buildtype == 7 ) then {
+	if (buildtype == 7) then {
 		_build_list = [];
-		while { count _build_list < (count (build_lists select buildtype)) - 2 } do {
+		while {count _build_list < (count (build_lists select buildtype)) - 2} do {
 			_build_list pushback ((build_lists select buildtype) select (count _build_list));
 		};
 	};
 
-	if (_oldbuildtype != buildtype || synchro_done ) then {
+	if (_oldbuildtype != buildtype || synchro_done) then {
 		synchro_done = false;
 		_oldbuildtype = buildtype;
 
 		lbClear 110;
 		{
-			ctrlSetText [ 151, _buildpages select ( buildtype - 1) ];
-			if ( buildtype != 8 ) then {
+			ctrlSetText [151, _buildpages select ( buildtype - 1)];
+			if (buildtype != 8) then {
 				_classnamevar = (_x select 0);
 				_entrytext = getText (_cfg >> _classnamevar >> "displayName");
 				
@@ -87,9 +90,9 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 
 			_affordable = true;
 			if (
-				((_x select 1 > 0) && ((_x select 1) > KP_liberation_supplies)) ||
-				((_x select 2 > 0) && ((_x select 2) > KP_liberation_ammo)) ||
-				((_x select 3 > 0) && ((_x select 3) > KP_liberation_fuel))
+				((_x select 1 > 0) && ((_x select 1) > ((_actual_fob select 0) select 1))) ||
+				((_x select 2 > 0) && ((_x select 2) > ((_actual_fob select 0) select 2))) ||
+				((_x select 3 > 0) && ((_x select 3) > ((_actual_fob select 0) select 3)))
 			) then {
 				_affordable = false;
 			};
@@ -126,9 +129,9 @@ while { dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	if (dobuild == 0 && _selected_item != -1 && (_selected_item < (count _build_list))) then {
 		_build_item = _build_list select _selected_item;
 		if (
-			((_build_item select 1 == 0 ) || ((_build_item select 1) <= KP_liberation_supplies)) &&
-			((_build_item select 2 == 0 ) || ((_build_item select 2) <= KP_liberation_ammo)) &&
-			((_build_item select 3 == 0 ) || ((_build_item select 3) <= KP_liberation_fuel))
+			((_build_item select 1 == 0 ) || ((_build_item select 1) <= ((_actual_fob select 0) select 1))) &&
+			((_build_item select 2 == 0 ) || ((_build_item select 2) <= ((_actual_fob select 0) select 2))) &&
+			((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
 		) then {
 			if (((_build_item select 0) in KP_liberation_friendly_air_classnames) && !((_build_item select 0) in uavs)) then {
 				if (KP_liberation_air_vehicle_building_near &&

@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.95
+## Current version : 0.951
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -19,15 +19,17 @@ If you like the work and think it's worth a small donation, feel free to use the
 [Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
-The area has fallen to the OPFOR, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
-* Experience a massive CTI campaign with over 100 different capturable settlements across the entire area,
-* Cooperate with 0 to 34 other players, with a commander role and recruitable AI troops to fill the gaps,
-* Buy troops and vehicles using three different types of resources,
-* Build the FOB of your dreams with an ingame "what you see is what you get" system,
-* Fight aggressive and cunning hostile forces who react and adapt to your actions,
-* Learn that every window is a threat thanks to the custom urban combat AI,
-* Accomplish meaningful secondary objectives that will benefit your progression,
-* Never lose your progress with the built-in server-side save system.
+The area has fallen to the enemy, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
+* Experience a massive CTI campaign with up to 200 different capturable settlements across the entire area
+* Cooperative gameplay for up to 34 players
+* A commander role to take care of the planning, production, logistic and AI commanding
+* Recruitable AI troops to fill the gaps
+* Buy troops and vehicles using three different types of resources
+* Build the FOB of your dreams with an ingame "what you see is what you get" system
+* Fight aggressive and cunning hostile forces who react and adapt to your actions
+* Learn that every window is a threat thanks to the custom urban combat AI
+* Accomplish meaningful secondary objectives that will benefit your progression
+* Never lose your progress with the built-in server-side save system
 
 ## Public Servers
 
@@ -40,6 +42,12 @@ The area has fallen to the OPFOR, and it is up to you to take it back. Embark wi
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
+* Al Rayak
+	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+	* [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Altis
 	* Nothing
 * Chernarus
@@ -150,6 +158,37 @@ class Missions
 
 ## Changelog
 
+### 0.951
+* Added: Boats at the stern of the Freedom for amphibious insertion
+* Added: Transport configs for guerilla offroad and van
+* Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf` (no restriction not recommended)
+* Added: Al Rayak missionfile
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
+* Tweaked: Syncing between server and clients after building a sector storage
+* Tweaked: Debug info output for sector production and logistic management
+* Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: Factories will directly start producing supplies, as soon as a storage area is built
+* Tweaked: General syncing of production and logistic data between client and server
+* Tweaked: Resource amount is now also being displayed in the production dialog, not only crates count
+* Tweaked: Production menu is now also available if near a production sector
+* Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
+* Tweaked: Improved logistics algorithm concerning behaviour of loading resources
+* Tweaked: Removed unarmed vehicles from sector defender vehicles. They are still transports for battlegroups
+* Fixed: Hostile map markers on Sahrani had a little offset from the map grid
+* Fixed: No intelobjects spawned at military bases
+* Fixed: Missing vehicles because of classname changes due to the ArmA 3 update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
+* Fixed: Production menu showed timer even if nothing is produced
+* Fixed: Production timer displayed as float if using a resource multiplier
+* Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
+* Fixed: FOB Box won't respawn if fallen into the water
+* Fixed: It was possible to create a logistic mission without defining a A or B destination
+* Fixed: Logistic dialog didn't update when buying or selling a truck
+* Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
+* Fixed: Boat recycle caused a script error
+* Fixed: Exploit of build menu if UI was set to show global resources
+* Fixed: Build menu reloads constantly
+
 ### 0.95
 * Added: New resource system
 * Added: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
@@ -185,7 +224,7 @@ class Missions
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Updated: English InGame Tutorial text with the latest informations for resource, production and logistic system. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
-* Replaced: Every deprecated BIS_fnc_MP with remoteExec
+* Replaced: Every deprecated `BIS_fnc_MP` with `remoteExec`
 * Replaced: ATLAS LHD with USS Freedom. Thanks to [Applejakerie](https://github.com/Applejakerie) for the immersive clutter on the carrier
 * Tweaked: Arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Initialization of the arsenal, which should increase the performance for blacklist using

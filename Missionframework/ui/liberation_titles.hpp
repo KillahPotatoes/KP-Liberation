@@ -144,7 +144,7 @@ class RscTitles
 		PictureFuelShadow,PictureCapShadow,PictureManpower,PictureAmmo,PictureFuel,PictureCap,PictureCombatReadinessShadow,PictureCombatReadiness,
 		PictureIntelShadow, PictureIntel, LabelIntel, PictureHeliShadow, PictureHeli, LabelHeli, PicturePlaneShadow, PicturePlane, LabelPlane,
 		PictureFOBShadow, PictureFOB, LabelFOB,
-		BGPictureSector,CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint, LabelCombatReadiness, CentralShadow, CentralLabel, ActiveSectors,
+		BGPictureSector, CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint, LabelCombatReadiness, CentralShadow, CentralLabel, ActiveSectors,
 		AlertBGPicture, AlertLabel, AlertTimer };
 		class BGPicture {
 			idc = 758012;
@@ -364,6 +364,7 @@ class RscTitles
 			colorText[] = {0.8, 0.8, 0.8, 1};
 		};
 		class CaptureFrameStandard {
+			idc = -1;
 			type =  CT_STATIC;
 			font = FontM;
 			sizeEx = 0.023;
@@ -381,7 +382,7 @@ class RscTitles
 		};
 		class CaptureFrame_OPFOR : CaptureFrameStandard{
 			idc = 203;
-			style = ST_STATIC;
+			style = ST_TYPE;
 			colorText[] = {0.6, 0, 0, 1};
 			colorBackground[] = {0.6, 0, 0, 1};
 			x = 0.9125 * safezoneW + safezoneX;
@@ -392,7 +393,7 @@ class RscTitles
 		};
 		class CaptureFrame_BLUFOR : CaptureFrameStandard{
 			idc = 244;
-			style = ST_STATIC;
+			style = ST_TYPE;
 			colorText[] = {0, 0.2, 0.6, 1};
 			colorBackground[] = {0, 0.2, 0.6, 1};
 			x = 0.9125 * safezoneW + safezoneX;

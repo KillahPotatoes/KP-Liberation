@@ -1,6 +1,6 @@
 if (isServer) then {
 
-	params [ "_liberated_sector" ];
+	params ["_liberated_sector"];
 
 	_combat_readiness_increase = 0;
 
@@ -37,9 +37,9 @@ if (isServer) then {
 	
 	if ((_liberated_sector in sectors_factory) || (_liberated_sector in sectors_capture)) then {
 
-		private ["_sectorType", "_sectorFacilities"];
+		private ["_sectorType", "_sectorFacilities", "_producing"];
 
-		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;} else {_sectorType = 0;_sectorFacilities = false;};
+		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;_producing = 0;} else {_sectorType = 0;_sectorFacilities = false;_producing = 3;};
 
 		{
 			if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
@@ -53,7 +53,7 @@ if (isServer) then {
 			_sectorFacilities,
 			_sectorFacilities,
 			_sectorFacilities,
-			3,
+			_producing,
 			KP_liberation_production_interval,
 			0,
 			0,

@@ -24,13 +24,13 @@ _truck_to_load = objNull;
 			_ammobox attachTo [ _truck_to_load, _offsets select _truck_load ];
 			_ammobox enableRopeAttach false;
 			_truck_to_load setVariable ["GRLIB_ammo_truck_load", _truck_load + 1, true];
-			if ( !isServer ) then {
+			if ( !isDedicated ) then {
 				hint localize "STR_BOX_LOADED";
 			};
 		}
 	};
 } foreach _neartransporttrucks;
 
-if ( isNull _truck_to_load && !isServer ) then {
+if ( isNull _truck_to_load && !isDedicated ) then {
 	hint localize "STR_BOX_CANTLOAD";
 };

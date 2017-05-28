@@ -46,7 +46,7 @@ class Params
 		title = $STR_PARAM_FOBS_COUNT;
 		values[] = {3,5,7,10,15,20,26};
 		texts[] = {3,5,7,10,15,20,26};
-		default = 26;
+		default = 10;
 	};
 	class MaxSquadSize{
 		title = $STR_PARAM_SQUAD_SIZE;
@@ -190,6 +190,12 @@ class Params
 		title = $STR_PARAMS_FATIGUE;
 		values[] = { 0, 1 };
 		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
+		default = 1;
+	};
+	class ArsenalUsePreset {
+		title = $STR_PARAMS_ARSENALUSEPRESET;
+		values[] = { 0, 1 };
+		texts[] = { $STR_PARAMS_NOTRESTRICTIONS, $STR_PARAMS_USEPRESET };
 		default = 1;
 	};
 	class MapMarkers {

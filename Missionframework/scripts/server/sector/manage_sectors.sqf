@@ -26,11 +26,15 @@ while {GRLIB_endgame == 0} do {
 				if ((_nextsector in sectors_factory) || (_nextsector in sectors_capture)) then {
 					[_nextsector] call manage_captureboxes;
 				};
+
+				if (_nextsector in sectors_military) then {
+					[_nextsector] call manage_intel;
+				};
 			};
 		};
 		sleep 0.25;
 	} foreach (sectors_allSectors - blufor_sectors);
 
-	diag_log format ["[KP LIBERATION] [INFO] Full sector scan at %1, active sectors: %2", time, active_sectors];
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Full sector scan at %1, active sectors: %2", time, active_sectors];_text remoteExec ["diag_log",2];};
 	sleep 1;
 };

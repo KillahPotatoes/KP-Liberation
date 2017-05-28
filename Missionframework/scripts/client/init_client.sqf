@@ -53,6 +53,7 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\stay_leader.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\stop_renegade.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\synchronise_vars.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\synchronise_eco.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\spawn\redeploy_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\ui_manager.sqf";

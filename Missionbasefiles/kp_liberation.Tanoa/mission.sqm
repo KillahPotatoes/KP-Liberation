@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4486;
+		nextID=4494;
 	};
 	class LayerIndexProvider
 	{
-		nextID=788;
+		nextID=935;
 	};
 	class Camera
 	{
-		pos[]={134.43146,35.31591,1614.0499};
-		dir[]={0.51482546,-0.55513579,0.65346032};
-		up[]={0.34358752,0.83171141,0.43610907};
-		aside[]={0.78560281,-2.0385487e-006,-0.61892551};
+		pos[]={70.105583,90.119621,1462.0231};
+		dir[]={0.34596792,-0.44950098,0.82362467};
+		up[]={0.17410131,0.89324164,0.414473};
+		aside[]={0.92201585,-7.5396383e-007,-0.38729927};
 	};
 };
 binarizationWanted=0;
@@ -75,7 +75,8 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Medical",
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Structures_F_EPA_Items_Food",
-	"A3_Structures_F_Mil_Cargo"
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Structures_F_Mil_Flags"
 };
 class AddonsMetaData
 {
@@ -332,6 +333,8 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="@STR_MISSION_TITLE";
+		overviewText="@STR_MISSION_DESCRIPTION";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -354,7 +357,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=343;
+		items=349;
 		class Item0
 		{
 			dataType="Marker";
@@ -26742,44 +26745,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -26797,7 +26762,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -26816,26 +26781,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -26877,44 +26823,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -26932,7 +26840,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -26951,26 +26859,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -27013,44 +26902,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -27068,7 +26919,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27087,26 +26938,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -27148,44 +26980,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -27203,7 +26997,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27222,26 +27016,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -27281,64 +27056,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item5
@@ -27378,64 +27096,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item6
@@ -27475,64 +27136,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=1;
 					};
 				};
 				class Item7
@@ -27574,44 +27178,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -27629,7 +27195,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27648,26 +27214,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item8
@@ -27709,44 +27256,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -27764,7 +27273,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27783,26 +27292,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 				class Item9
@@ -27845,44 +27335,6 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -27900,7 +27352,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27919,26 +27371,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=3;
 					};
 				};
 			};
@@ -28112,7 +27545,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={145.41299,23.596479,1633.048};
-				angles[]={0,1.5707964,-0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28153,7 +27586,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={142.91299,23.597727,1631.548};
-				angles[]={0,1.5707964,-0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28194,7 +27627,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={142.91299,23.595736,1633.048};
-				angles[]={0,1.5707964,-0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28274,7 +27707,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={145.91345,24.454601,1629.9504};
-				angles[]={-0,0.68303454,0};
+				angles[]={0,0.68303454,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28284,6 +27717,7 @@ class Mission
 			};
 			id=4450;
 			type="Land_Defibrillator_F";
+			atlOffset=0.0014476776;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28324,7 +27758,7 @@ class Mission
 			};
 			id=4451;
 			type="Land_BloodBag_F";
-			atlOffset=0.014007568;
+			atlOffset=0.015069962;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28395,7 +27829,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={146.0033,24.42425,1630.2776};
-				angles[]={-0,1.7749823,0};
+				angles[]={0,1.7749823,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28405,6 +27839,7 @@ class Mission
 			};
 			id=4453;
 			type="Land_PainKillers_F";
+			atlOffset=0.0008430481;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28435,7 +27870,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={146.10291,24.42425,1630.4207};
-				angles[]={-0,1.1509224,0};
+				angles[]={0,1.1509224,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28445,6 +27880,7 @@ class Mission
 			};
 			id=4454;
 			type="Land_PainKillers_F";
+			atlOffset=0.0008430481;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28484,7 +27920,7 @@ class Mission
 			};
 			id=4455;
 			type="Land_HeatPack_F";
-			atlOffset=0.015380859;
+			atlOffset=0.015491486;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28515,7 +27951,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={145.94275,24.406918,1630.4006};
-				angles[]={-0,2.1050591,0};
+				angles[]={0,2.1050591,0};
 			};
 			side="Empty";
 			flags=4;
@@ -28525,6 +27961,7 @@ class Mission
 			};
 			id=4456;
 			type="Land_Bandage_F";
+			atlOffset=0.00050163269;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28565,6 +28002,7 @@ class Mission
 			};
 			id=4457;
 			type="Land_CampingTable_small_F";
+			atlOffset=0.0080852509;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28641,7 +28079,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={145.41931,23.836973,1725.3469};
-						angles[]={0,1.9780512,-0};
+						angles[]={0,1.9780512,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28682,7 +28120,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={143.6908,24.125683,1725.8567};
-						angles[]={0,0.53423256,-0};
+						angles[]={0,0.53423256,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28723,7 +28161,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={142.32361,23.802702,1725.9875};
-						angles[]={0,2.8453631,-0};
+						angles[]={0,2.8453631,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28734,6 +28172,7 @@ class Mission
 					};
 					id=4462;
 					type="Box_NATO_Ammo_F";
+					atlOffset=0.0011634827;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28764,7 +28203,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={141.81189,23.802702,1725.2166};
-						angles[]={0,2.5835638,-0};
+						angles[]={0,2.5835638,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28775,6 +28214,7 @@ class Mission
 					};
 					id=4463;
 					type="Box_NATO_AmmoOrd_F";
+					atlOffset=0.09485054;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28805,7 +28245,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={144.34705,23.518648,1727.1995};
-						angles[]={0,3.6269391,-0};
+						angles[]={0,3.6269391,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28816,6 +28256,7 @@ class Mission
 					};
 					id=4464;
 					type="Land_WoodenBox_F";
+					atlOffset=0.00020980835;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28846,7 +28287,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={143.84705,23.518648,1728.2478};
-						angles[]={0,0.16919702,-0};
+						angles[]={0,0.16919702,0};
 					};
 					side="Empty";
 					flags=4;
@@ -28857,6 +28298,7 @@ class Mission
 					};
 					id=4465;
 					type="Land_WoodenBox_F";
+					atlOffset=0.00020980835;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28939,6 +28381,7 @@ class Mission
 					};
 					id=4467;
 					type="Land_BottlePlastic_V2_F";
+					atlOffset=0.0026035309;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28980,6 +28423,7 @@ class Mission
 					};
 					id=4468;
 					type="Land_BottlePlastic_V2_F";
+					atlOffset=0.0026035309;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29021,7 +28465,7 @@ class Mission
 					};
 					id=4469;
 					type="Land_BottlePlastic_V2_F";
-					atlOffset=0.037435532;
+					atlOffset=0.040039063;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29048,7 +28492,7 @@ class Mission
 				};
 			};
 			id=4459;
-			atlOffset=0.045602798;
+			atlOffset=0.048635483;
 		};
 		class Item336
 		{
@@ -29063,7 +28507,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={140.35681,24.161846,1627.7673};
-						angles[]={0,6.2756853,-0};
+						angles[]={0,6.2756853,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29104,7 +28548,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={139.55212,24.126646,1626.2449};
-						angles[]={0,1.5799451,-0};
+						angles[]={0,1.5799451,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29145,7 +28589,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={138.82556,24.161846,1627.7659};
-						angles[]={0,4.7294207,-0};
+						angles[]={0,4.7294207,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29267,7 +28711,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={142.31384,23.877829,1727.6965};
-				angles[]={0,2.5988047,-0};
+				angles[]={0,2.5988047,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29277,6 +28721,7 @@ class Mission
 			};
 			id=4476;
 			type="Land_Portable_generator_F";
+			atlOffset=0.0014724731;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29353,7 +28798,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={138.63025,24.250963,1587.2947};
-						angles[]={-0,6.283133,0};
+						angles[]={0,6.283133,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29364,6 +28809,7 @@ class Mission
 					};
 					id=4479;
 					type="Land_CargoBox_V1_F";
+					atlOffset=0.00077056885;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29394,7 +28840,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={154.68689,23.941322,1613.1023};
-						angles[]={0,2.4880757,-0};
+						angles[]={0,2.4880757,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29405,6 +28851,7 @@ class Mission
 					};
 					id=4480;
 					type="Land_MetalBarrel_F";
+					atlOffset=0.0030422211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29435,7 +28882,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={155.20447,23.941322,1613.6458};
-						angles[]={0,5.99617,-0};
+						angles[]={0,5.99617,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29446,6 +28893,7 @@ class Mission
 					};
 					id=4481;
 					type="Land_MetalBarrel_F";
+					atlOffset=0.0030422211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29476,7 +28924,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={155.31189,23.941322,1612.8528};
-						angles[]={0,4.6871367,-0};
+						angles[]={0,4.6871367,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29487,6 +28935,7 @@ class Mission
 					};
 					id=4482;
 					type="Land_MetalBarrel_F";
+					atlOffset=0.0030422211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29517,7 +28966,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={140.65955,23.948215,1587.781};
-						angles[]={-0,0.78542256,0};
+						angles[]={0,0.78542256,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29528,6 +28977,7 @@ class Mission
 					};
 					id=4483;
 					type="Land_Pallets_stack_F";
+					atlOffset=2.4795532e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29558,7 +29008,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={140.00525,24.161846,1586.0417};
-						angles[]={-0,2.0943952,0};
+						angles[]={0,2.0943952,0};
 					};
 					side="Empty";
 					flags=4;
@@ -29595,6 +29045,7 @@ class Mission
 				};
 			};
 			id=4478;
+			atlOffset=0.00069618225;
 		};
 		class Item342
 		{
@@ -29613,6 +29064,130 @@ class Mission
 			id=4485;
 			type="Land_Medevac_house_V1_F";
 			atlOffset=0.00015830994;
+		};
+		class Item343
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={144.91838,27.495453,1624.6859};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this setFlagTexture ""res\kpflag.jpg"";";
+			};
+			id=4486;
+			type="Flag_White_F";
+		};
+		class Item344
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={144.93639,27.495453,1626.2999};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=4489;
+			type="Flag_US_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item345
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={99.511864,0,1544.8942};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="boat_0";
+			};
+			id=4490;
+			type="Land_ClutterCutter_small_F";
+			atlOffset=66.092873;
+		};
+		class Item346
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={109.51186,0,1544.8942};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="boat_1";
+			};
+			id=4491;
+			type="Land_ClutterCutter_small_F";
+			atlOffset=65.706284;
+		};
+		class Item347
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={119.51186,0,1544.8942};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="boat_2";
+			};
+			id=4492;
+			type="Land_ClutterCutter_small_F";
+			atlOffset=63.555347;
+		};
+		class Item348
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={129.51187,0,1544.8942};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="boat_3";
+			};
+			id=4493;
+			type="Land_ClutterCutter_small_F";
+			atlOffset=64.225212;
 		};
 	};
 	class Connections

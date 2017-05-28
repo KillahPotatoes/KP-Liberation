@@ -30,9 +30,11 @@ _distredeploy = 20;
 GRLIB_removefobboxes = false;
 KP_liberation_resources_global = false;
 
-waitUntil { !isNil "build_confirmed" };
-waitUntil { !isNil "one_synchro_done" };
-waitUntil { one_synchro_done };
+waitUntil {!isNil "build_confirmed"};
+waitUntil {!isNil "one_synchro_done"};
+waitUntil {!isNil "one_eco_done"};
+waitUntil {one_synchro_done};
+waitUntil {one_eco_done};
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management started for: %1", (name player)];_text remoteExec ["diag_log",2];};
 
@@ -163,7 +165,7 @@ while { true } do {
 	if ((count _prod_sector) == 12) then {
 		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 0)) then {
 			if (_idact_sectorstorage == -1) then {
-				_idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",[KP_liberation_small_storage_building, _prod_sector, _idact_sectorstorage],-993,false,true,"","build_confirmed == 0"];
+				_idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",[KP_liberation_small_storage_building, _prod_sector],-993,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			if (_idact_sectorstorage != -1) then {
@@ -173,7 +175,7 @@ while { true } do {
 		};
 		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 4)) then {
 			if (_idact_supplyfacility == -1) then {
-				_idact_supplyfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSUPPLYBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["supply", _prod_sector,-1],-994,false,true,"","build_confirmed == 0"];
+				_idact_supplyfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSUPPLYBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["supply", _prod_sector],-994,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			if (_idact_supplyfacility != -1) then {
@@ -183,7 +185,7 @@ while { true } do {
 		};
 		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 5)) then {
 			if (_idact_ammofacility == -1) then {
-				_idact_ammofacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECAMMOBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["ammo", _prod_sector,-1],-995,false,true,"","build_confirmed == 0"];
+				_idact_ammofacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECAMMOBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["ammo", _prod_sector],-995,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			if (_idact_ammofacility != -1) then {
@@ -193,7 +195,7 @@ while { true } do {
 		};
 		if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 6)) then {
 			if (_idact_fuelfacility == -1) then {
-				_idact_fuelfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECFUELBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["fuel", _prod_sector,-1],-996,false,true,"","build_confirmed == 0"];
+				_idact_fuelfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECFUELBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["fuel", _prod_sector],-996,false,true,"","build_confirmed == 0"];
 			};
 		} else {
 			if (_idact_fuelfacility != -1) then {
@@ -231,7 +233,7 @@ while { true } do {
 		};
 	};
 
-	if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
+	if (((_fobdistance < _distfob) || ((count _prod_sector) == 12)) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
 		if (_idact_production == -1) then {
 			_idact_production = player addAction ["<t color='#FF8000'>" + localize "STR_PRODUCTION_ACTION" + "</t>","scripts\client\commander\open_production.sqf","",-998,false,true,"","build_confirmed == 0"];
 		};

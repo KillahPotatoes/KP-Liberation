@@ -3,7 +3,7 @@ CONFIG FILE FOR KP LIBERATION
 */
 
 /* - ACE settings.
-Enable ACE? ("true","false").	*/
+Enable ACE? (true,false).	*/
 KP_liberation_ace = false;
 
 // Vehicle classnames which also function as ACE medical vehicles.
@@ -55,6 +55,7 @@ Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profi
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
 KP_liberation_debug = false;																					// Enables debug messages in the server log
+KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
 
 GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.
@@ -183,7 +184,12 @@ KP_liberation_allowed_items_extension = [
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],	*/
 box_transport_config = [
 	["C_Offroad_01_F", -6.5, [0,-1.7,0.4]],
+	["I_G_Offroad_01_F", -6.5, [0,-1.7,0.4]],
+	["O_G_Offroad_01_F", -6.5, [0,-1.7,0.4]],
 	["C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
+	["I_G_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
+	["I_C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
+	["O_G_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
 	["C_Truck_02_transport_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
 	["C_Truck_02_covered_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
 	["RHS_Ural_Open_Civ_03", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
@@ -352,7 +358,6 @@ GRLIB_endgame = 0;
 if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
 GRLIB_offload_diag = false;
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", (name player)];
-	_text remoteExec ["diag_log",2];
-};
+KP_liberation_production_interval = ceil KP_liberation_production_interval;
+
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", (name player)];_text remoteExec ["diag_log",2];};
