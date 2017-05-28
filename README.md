@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.951
+## Current version : 0.952
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -157,6 +157,9 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
 ## Changelog
+
+### 0.952
+* Fixed: SDV recycle caused a script error
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
