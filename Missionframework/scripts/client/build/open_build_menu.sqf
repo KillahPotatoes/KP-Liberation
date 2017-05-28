@@ -129,9 +129,9 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	if (dobuild == 0 && _selected_item != -1 && (_selected_item < (count _build_list))) then {
 		_build_item = _build_list select _selected_item;
 		if (
-			((_build_item select 1 == 0 ) || ((_build_item select 1) <= KP_liberation_supplies)) &&
-			((_build_item select 2 == 0 ) || ((_build_item select 2) <= KP_liberation_ammo)) &&
-			((_build_item select 3 == 0 ) || ((_build_item select 3) <= KP_liberation_fuel))
+			((_build_item select 1 == 0 ) || ((_build_item select 1) <= ((_actual_fob select 0) select 1))) &&
+			((_build_item select 2 == 0 ) || ((_build_item select 2) <= ((_actual_fob select 0) select 2))) &&
+			((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
 		) then {
 			if (((_build_item select 0) in KP_liberation_friendly_air_classnames) && !((_build_item select 0) in uavs)) then {
 				if (KP_liberation_air_vehicle_building_near &&

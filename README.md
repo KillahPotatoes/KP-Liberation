@@ -185,6 +185,7 @@ class Missions
 * Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
 * Fixed: Boat recycle caused a script error
 * Fixed: Exploit of build menu if UI was set to show global resources
+* Fixed: Build menu reloads constantly
 
 ### 0.95
 * Added: New resource system
