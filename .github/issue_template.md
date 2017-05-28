@@ -1,15 +1,15 @@
 ### Basic informations
-Mission version:
-Map:
-Used mods:
-Dedicated or local game:
-GitHub or Workshop missionfile:
+**Mission version:**
+**Map:**
+**Used mods:**
+**Dedicated or local game:**
+**GitHub or Workshop missionfile:**
 
 ### Individual things
-Did you edit anything in the missionfile?
+**Did you edit anything in the missionfile?**
 
 
-If yes, what did you edit exactly?
+**If yes, what did you edit exactly?**
 
 
 ### Short issue description
