@@ -88,6 +88,7 @@ switch (_fac) do {
 			_x set [_checkFor, true];
 			_hint = format [localize "STR_PRODUCTION_FACBUILD_SUCCESS"];
 			_hint remoteExec ["hint",_clientID];
+			recalculate_sectors = true;
 		} else {
 			_hint = format [localize "STR_PRODUCTION_FACBUILD_ERROR",_price_s,_price_a,_price_f];
 			_hint remoteExec ["hint",_clientID];
