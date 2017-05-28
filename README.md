@@ -19,15 +19,17 @@ If you like the work and think it's worth a small donation, feel free to use the
 [Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
-The area has fallen to the OPFOR, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
-* Experience a massive CTI campaign with over 100 different capturable settlements across the entire area,
-* Cooperate with 0 to 34 other players, with a commander role and recruitable AI troops to fill the gaps,
-* Buy troops and vehicles using three different types of resources,
-* Build the FOB of your dreams with an ingame "what you see is what you get" system,
-* Fight aggressive and cunning hostile forces who react and adapt to your actions,
-* Learn that every window is a threat thanks to the custom urban combat AI,
-* Accomplish meaningful secondary objectives that will benefit your progression,
-* Never lose your progress with the built-in server-side save system.
+The area has fallen to the enemy, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
+* Experience a massive CTI campaign with up to 200 different capturable settlements across the entire area
+* Cooperative gameplay for up to 34 players
+* A commander role to take care of the planning, production, logistic and AI commanding
+* Recruitable AI troops to fill the gaps
+* Buy troops and vehicles using three different types of resources
+* Build the FOB of your dreams with an ingame "what you see is what you get" system
+* Fight aggressive and cunning hostile forces who react and adapt to your actions
+* Learn that every window is a threat thanks to the custom urban combat AI
+* Accomplish meaningful secondary objectives that will benefit your progression
+* Never lose your progress with the built-in server-side save system
 
 ## Public Servers
 
@@ -222,7 +224,7 @@ class Missions
 * Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
 * Updated: English InGame Tutorial text with the latest informations for resource, production and logistic system. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
-* Replaced: Every deprecated BIS_fnc_MP with remoteExec
+* Replaced: Every deprecated `BIS_fnc_MP` with `remoteExec`
 * Replaced: ATLAS LHD with USS Freedom. Thanks to [Applejakerie](https://github.com/Applejakerie) for the immersive clutter on the carrier
 * Tweaked: Arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Initialization of the arsenal, which should increase the performance for blacklist using

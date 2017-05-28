@@ -248,21 +248,21 @@ class Mission
 		overviewText="@STR_MISSION_DESCRIPTION";
 		resistanceWest=0;
 		resistanceEast=1;
-		timeOfChanges=1800.0002;
-		startWeather=0.1;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2007;
+		timeOfChanges=28800;
+		startWeather=0.39999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.39999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2038;
 		month=6;
-		day=7;
-		hour=11;
-		minute=-26;
-		startFogDecay=0.014;
-		forecastFogDecay=0.014;
+		day=6;
+		hour=6;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
 		class CustomAttributes
 		{
 			name="Intel";
