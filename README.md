@@ -161,7 +161,7 @@ class Missions
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
-* Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf`
+* Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf` (no restriction not recommended)
 * Added: Al Rayak missionfile
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
