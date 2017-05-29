@@ -3455,5 +3455,9 @@
 						<Original>Use preset from config</Original>
 						<German>Benutze Preset aus Konfiguration</German>
 				</Key>
+				<Key ID="STR_ACTION_CRATE_PUSH">
+						<Original>-- PUSH CRATE</Original>
+						<German>-- KISTE SCHIEBEN</German>
+				</Key>
 	</Package>
 </Project>

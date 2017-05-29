@@ -33,4 +33,6 @@ _truck_to_load = objNull;
 
 if ( isNull _truck_to_load && !isDedicated ) then {
 	hint localize "STR_BOX_CANTLOAD";
+	uiSleep 2;
+	hint "";
 };
