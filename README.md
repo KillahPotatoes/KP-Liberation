@@ -159,6 +159,8 @@ class Missions
 ## Changelog
 
 ### 0.952
+* Added: Action to push resource crates
+* Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Fixed: SDV recycle caused a script error
 
 ### 0.951
