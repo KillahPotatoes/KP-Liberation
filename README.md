@@ -162,6 +162,7 @@ class Missions
 * Added: Action to push resource crates
 * Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: Some more vehicles from RHS to the presets
+* Tweaked: Starting times of the maps were not equal
 * Fixed: SDV recycle caused a script error
 
 ### 0.951

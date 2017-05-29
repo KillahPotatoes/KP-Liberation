@@ -254,10 +254,11 @@ class Mission
 		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
-		year=2009;
-		day=28;
-		hour=16;
-		minute=20;
+		year=2038;
+		month=6;
+		day=6;
+		hour=6;
+		minute=0;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
