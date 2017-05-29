@@ -1,24 +1,24 @@
-### Basic informations
+### Basic Information
 **Mission version:**
-**Map:**
-**Used mods:**
-**Dedicated or local game:**
-**GitHub or Workshop missionfile:**
+**Map used:**
+**Mods used:**
+**Dedicated or local game?**
+**GitHub or Workshop mission file?**
 
-### Individual things
-**Did you edit anything in the missionfile?**
+### Individual Things
+**Did you edit anything within the mission files?**
 
 
 **If yes, what did you edit exactly?**
 
 
-### Short issue description
+### Short Issue Description
 
 
-### Expected behaviour
+### Expected Behaviour
 
 
-### Steps to reproduce the issue
+### Steps to Reproduce the Issue
 
 
-### Screenshots, serverlog or any other helpful things
+### Screenshots, Serverlog or any other helpful Information
