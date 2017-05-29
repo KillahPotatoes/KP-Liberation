@@ -9,6 +9,7 @@ GRLIB_arsenal_weapons = [
 	"rhs_weap_M136",
 	"rhs_weap_M136_hedp",
 	"rhs_weap_M136_hp",
+	"rhs_weap_m72a7", //reintroduced to BAF forces in Afghanistan
 	"UK3CB_BAF_L1A1",
 	"UK3CB_BAF_L1A1_Wood",
 	"UK3CB_BAF_L110A1",
