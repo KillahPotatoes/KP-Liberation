@@ -69,10 +69,14 @@ light_vehicles = [
 	["rhsusf_m1025_w",100,0,50],										//M1025A2
 	["rhsusf_m1025_w_m2",100,40,50],									//M1025A2 (M2)
 	["rhsusf_m1025_w_mk19",100,60,50],									//M1025A2 (Mk19)
+	["rhsusf_m998_w_2dr_fulltop",100,0,50],								//M1097A2 (2D)
+	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
 	["BWA3_Eagle_Fleck",100,0,50],										//Eagle IV
 	["BWA3_Eagle_FLW100_Fleck",100,100,50],								//Eagle IV (FLW 100)
 	["B_T_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_T_Truck_01_covered_F",125,0,75],								//HEMTT Transport (Covered)
+	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
+	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (HMG)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper

@@ -66,6 +66,7 @@ light_vehicles = [
 	["rhsusf_m1025_w_m2",100,40,50],									//M1025A2 (M2)
 	["rhsusf_m1025_w_mk19",100,60,50],									//M1025A2 (Mk19)
 	["rhsusf_m998_w_2dr_fulltop",100,0,50],								//M1097A2 (2D)
+	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
 	["BWA3_Eagle_Fleck",100,0,50],										//Eagle IV
 	["BWA3_Eagle_FLW100_Fleck",100,100,50],								//Eagle IV (FLW 100)
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
