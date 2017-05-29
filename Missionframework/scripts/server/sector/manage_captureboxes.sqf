@@ -7,7 +7,7 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 
 	KP_capture_sectors_already_activated pushback _sector;
 
-	_crates_amount = 1 + ((ceil (random 3)) * GRLIB_resources_multiplier);
+	_crates_amount = ((ceil (random 3)) * GRLIB_resources_multiplier);
 
 	for [{_i=0},{_i < _crates_amount},{_i=_i+1}] do {
 
