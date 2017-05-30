@@ -10,32 +10,35 @@ Unloads given crate type from storage area
 Parameters:
 _this select 0 - STRING - Crate type
 _this select 1 - OBJECT - Storage
+_this select 2 - BOOL - Update sector resources
 */
+
+params ["_cratetype", "_storage", ["_update",false]];
 
 private ["_storage_positions","_unload_distance","_unload_pos","_i","_unloaded","_stored_crates","_height"];
 
-switch (typeOf (_this select 1)) do {
+switch (typeOf _storage) do {
 	case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions; _unload_distance = 4;};
 	case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions; _unload_distance = 6.5;};
 	default {_storage_positions = KP_liberation_large_storage_positions; _unload_distance = 6.5;};
 };
 
 _i = 0;
-_unload_pos = [(_this select 1), _unload_distance, (getDir (_this select 1)) - 180] call BIS_fnc_relPos;
+_unload_pos = [_storage, _unload_distance, (getDir _storage) - 180] call BIS_fnc_relPos;
 
 while {!((nearestObjects [_unload_pos,KP_liberation_crates,1]) isEqualTo [])} do {
 	_i = _i + 1;
-	_unload_pos = [(_this select 1), _unload_distance + _i * 1.8, (getDir (_this select 1)) - 180] call BIS_fnc_relPos;
+	_unload_pos = [_storage, _unload_distance + _i * 1.8, (getDir _storage) - 180] call BIS_fnc_relPos;
 };
 
 sleep 0.5;
 
 _unloaded = false;
-_stored_crates = attachedObjects (_this select 1);
+_stored_crates = attachedObjects _storage;
 reverse _stored_crates;
 
 {
-	if (typeOf _x == (_this select 0)) then {
+	if (typeOf _x == _cratetype) then {
 		detach _x;
 		
 		clearWeaponCargoGlobal _x;
@@ -58,8 +61,14 @@ reverse _stored_crates;
 				default {_height = 0.6;};
 			};
 			detach _x;
-			_x attachTo [(_this select 1), [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
+			_x attachTo [_storage, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
 			_i = _i + 1;
-		} forEach attachedObjects (_this select 1);
+		} forEach attachedObjects _storage;
 	};
 } forEach _stored_crates;
+
+if (_update) then {
+	if ((_storage getVariable ["KP_liberation_storage_type",-1]) == 1) then {
+		remoteExec ["check_sector_ress_remote_call",2];
+	};
+};

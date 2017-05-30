@@ -163,7 +163,9 @@ class Missions
 * Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: Some more vehicles from RHS to the presets
 * Tweaked: Starting times of the maps were not equal
+* Tweaked: Syncing times for production when resources are stores or unstored in sector storages
 * Fixed: SDV recycle caused a script error
+* Fixed: AI Squads weren't saved
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
