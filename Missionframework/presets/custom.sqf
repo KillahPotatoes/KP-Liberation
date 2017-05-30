@@ -50,6 +50,7 @@ infantry_units = [
 	["B_recon_M_F",30,0,0],												//Recon Marksman
 	["B_Recon_Sharpshooter_F",40,0,0],									//Recon Sharpshooter
 	["B_recon_medic_F",30,0,0],											//Recon Paramedic
+	["B_recon_exp_F",30,0,0],											//Recon Demolition Expert
 	["B_sniper_F",70,5,0],												//Sniper
 	["B_ghillie_ard_F",70,5,0],											//Sniper (Arid)
 	["B_ghillie_lsh_F",70,5,0],											//Sniper (Lush)

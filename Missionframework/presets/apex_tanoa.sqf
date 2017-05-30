@@ -46,6 +46,7 @@ infantry_units = [
 	["B_T_Recon_LAT_F",30,0,0],											//Recon Scout (AT)
 	["B_T_Recon_M_F",30,0,0],											//Recon Marksman
 	["B_T_Recon_Medic_F",30,0,0],										//Recon Paramedic
+	["B_T_Recon_exp_F",30,0,0],											//Recon Demolition Expert
 	["B_T_Sniper_F",70,5,0],											//Sniper
 	["B_T_ghillie_tna_F",70,5,0],										//Sniper (Jungle)
 	["B_T_Spotter_F",20,0,0],											//Spotter
