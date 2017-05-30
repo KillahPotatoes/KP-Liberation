@@ -187,6 +187,10 @@ buildings = [
 	["CamoNet_BLUFOR_big_F",0,0,0],
 	["Land_PortableLight_single_F",0,0,0],
 	["Land_PortableLight_double_F",0,0,0],
+	["Land_LampSolar_F",0,0,0],
+	["Land_LampHalogen_F",0,0,0],
+	["Land_LampStreet_small_F",0,0,0],
+	["Land_LampAirport_F",0,0,0],
 	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],

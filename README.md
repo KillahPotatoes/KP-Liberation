@@ -162,6 +162,7 @@ class Missions
 * Added: Action to push resource crates
 * Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: Some more vehicles from RHS to the presets
+* Added: More buildable lights for the FOB. Thanks to [Reckulation](https://www.killahpotatoes.de/index.php?user/130-reckulation/)
 * Removed: Some clutter of the custom enemy bases on each map. Could maybe increase performance a little bit
 * Tweaked: Starting times of the maps were not equal
 * Tweaked: Syncing times for production when resources are stores or unstored in sector storages
