@@ -164,6 +164,7 @@ class Missions
 * Added: Some more vehicles from RHS to the presets
 * Added: More buildable lights for the FOB. Thanks to [Reckulation](https://www.killahpotatoes.de/index.php?user/130-reckulation/)
 * Added: A devkit mission.sqm for people who want to port Liberation to other maps
+* Added: [GitHub Wiki](https://github.com/Wyqer/kp_liberation/wiki) (will be expanded step by step in the future)
 * Removed: Some clutter of the custom enemy bases on each map. Could maybe increase performance a little bit
 * Tweaked: Starting times of the maps were not equal
 * Tweaked: Syncing times for production when resources are stored or unstored in sector storages

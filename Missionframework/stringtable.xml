@@ -3103,13 +3103,13 @@
 						<Italian>Rimborso: 50 approvvigionamenti e 50 carburante.</Italian>
  				</Key>
  				<Key ID="STR_LOGISTIC_CONFIRM">
- 						<Original>Confirm mission</Original>
+ 						<Original>Confirm Mission</Original>
  						<German>Auftrag bestätigen</German>
 						<Russian>Подтвердить миссию</Russian>
 						<Italian>Conferma missione</Italian>
  				</Key>
  				<Key ID="STR_LOGISTIC_CANCEL">
- 						<Original>Abort mission</Original>
+ 						<Original>Abort Mission</Original>
  						<German>Auftrag abbrechen</German>
 						<Russian>Отменить миссию</Russian>
 						<Italian>Termina missione</Italian>
