@@ -13,11 +13,11 @@ _this select 1 - OBJECT - Storage
 _this select 2 - BOOL - Update sector resources
 */
 
-params ["_crate", "_storage", ["_update",false]];
+params ["_crate", ["_storage",nil], ["_update",false]];
 
 private ["_storage_positions","_height","_crates_count","_placed","_current_pos"];
 
-if (!isNull _storage) then {
+if (!isNil "_storage") then {
 	switch (typeOf _storage) do {
 		case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
 		case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
@@ -37,6 +37,8 @@ if (!isNull _storage) then {
 	clearItemCargoGlobal _crate;
 	
 	_crates_count = count (attachedObjects _storage);
+
+	if (_crates_count >= (count _storage_positions)) exitWith {if (!isDedicated) then {hint localize "STR_BOX_CANTSTORE";};};
 
 	_crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
 	_crate enableRopeAttach false;
