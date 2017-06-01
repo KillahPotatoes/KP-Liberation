@@ -171,6 +171,7 @@ class Missions
 * Fixed: SDV and armed boat recycle caused a script error
 * Fixed: AI Squads weren't saved
 * Fixed: Start vehicles were spawning with items in the inventory
+* Fixed: Sometimes you couldn't slingload crates which were unloaded from a storage
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion

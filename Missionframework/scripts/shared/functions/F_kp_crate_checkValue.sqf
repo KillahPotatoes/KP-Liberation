@@ -17,7 +17,7 @@ hint format [localize "STR_ACTION_CRATE_VALUE_HINT", (_this select 0) getVariabl
 
 if (!(ropeAttachEnabled (_this select 0))) then {
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Crate had ropeAttachEnabled %1. Checked by: %2", (ropeAttachEnabled (_this select 0)), (name player)];_text remoteExec ["diag_log",2];};
-	(_this select 0) enableRopeAttach true;
+	[(_this select 0), true] remoteExec ["enableRopeAttach",(_this select 0)];
 };
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Crate check done - value: %1 - ropeAttachEnabled: %2 - Checked by: %3",((_this select 0) getVariable "KP_liberation_crate_value"), (ropeAttachEnabled (_this select 0)), (name player)];_text remoteExec ["diag_log",2];};

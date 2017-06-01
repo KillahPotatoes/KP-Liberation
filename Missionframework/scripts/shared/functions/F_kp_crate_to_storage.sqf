@@ -41,7 +41,7 @@ if (!isNil "_storage") then {
 	if (_crates_count >= (count _storage_positions)) exitWith {if (!isDedicated) then {hint localize "STR_BOX_CANTSTORE";};};
 
 	_crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
-	_crate enableRopeAttach false;
+	[_crate, false] remoteExec ["enableRopeAttach",_crate];
 
 	if (_update) then {
 		if ((_storage getVariable ["KP_liberation_storage_type",-1]) == 1) then {
