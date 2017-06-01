@@ -168,8 +168,9 @@ class Missions
 * Removed: Some clutter of the custom enemy bases on each map. Could maybe increase performance a little bit
 * Tweaked: Starting times of the maps were not equal
 * Tweaked: Syncing times for production when resources are stored or unstored in sector storages
-* Fixed: SDV recycle caused a script error
+* Fixed: SDV and armed boat recycle caused a script error
 * Fixed: AI Squads weren't saved
+* Fixed: Start vehicles were spawning with items in the inventory
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion
