@@ -104,5 +104,8 @@ GRLIB_ignore_colisions_when_building = [
 	"B_GMG_01_A_F",										//Mk32A GMG 20mm
 	"B_GMG_01_high_F",									//Mk32 GMG 20mm (Raised)
 	"B_static_AT_F",									//Static TTitan Launcher (AT)
-	"B_static_AA_F"										//Static Titan Launcher (AA)
+	"B_static_AA_F",									//Static Titan Launcher (AA)
+	"ACE_friesAnchorBar",								//ACE FRIES
+	"ACE_friesGantryReverse",							//ACE FRIES
+	"ACE_friesGantry"									//ACE FRIES
 ];

@@ -122,7 +122,7 @@ while {dialog && (alive player)} do {
 	if ((_listselect != -1) && (_logi_count > 0)) then {
 		{ctrlShow [_x, true]} forEach _detailControls;
 
-		_selectedGroup = (KP_liberation_logistics select _listselect);
+		_selectedGroup = +(KP_liberation_logistics select _listselect);
 
 		if ((_selectedGroup select 7) == 0) then {
 			ctrlEnable [758021, true];
