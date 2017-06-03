@@ -2,10 +2,6 @@
 CONFIG FILE FOR KP LIBERATION
 */
 
-/* - ACE settings.
-Enable ACE? (true,false).	*/
-KP_liberation_ace = false;
-
 // Vehicle classnames which also function as ACE medical vehicles.
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
@@ -54,7 +50,6 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_debug = false;																					// Enables debug messages in the server log
 KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
 
 GRLIB_side_friendly = WEST;																						// Friendly side.

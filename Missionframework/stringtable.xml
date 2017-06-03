@@ -3459,5 +3459,13 @@
 						<Original>-- PUSH CRATE</Original>
 						<German>-- KISTE SCHIEBEN</German>
 				</Key>
+				<Key ID="STR_PARAMS_ACE_ENABLE">
+						<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
+						<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
+				</Key>
+				<Key ID="STR_PARAMS_DEBUG_ENABLE">
+						<Original>Debug messages for server.rpt</Original>
+						<German>Debugnachrichten für die server.rpt</German>
+				</Key>
 	</Package>
 </Project>

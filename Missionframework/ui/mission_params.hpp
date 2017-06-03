@@ -186,6 +186,12 @@ class Params
 		texts[] = { "" };
 		default = "";
 	};
+	class AceEnable {
+		title = $STR_PARAMS_ACE_ENABLE;
+		values[] = { 0, 1 };
+		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
+		default = 0;
+	};
 	class Fatigue {
 		title = $STR_PARAMS_FATIGUE;
 		values[] = { 0, 1 };
@@ -274,6 +280,12 @@ class Params
 		title = $STR_WHITELIST_PARAM;
 		values[] = { 1, 0 };
 		texts[] = { $STR_WHITELIST_ENABLED, $STR_PARAMS_DISABLED };
+		default = 0;
+	};
+	class DebugEnable {
+		title = $STR_PARAMS_DEBUG_ENABLE;
+		values[] = { 0, 1 };
+		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
 		default = 0;
 	};
 	class WipeSave1{
