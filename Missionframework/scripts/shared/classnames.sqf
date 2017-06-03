@@ -40,6 +40,8 @@ opfor_squad_8_standard = [opfor_squad_leader,opfor_team_leader,opfor_machinegunn
 opfor_squad_8_infkillers = [opfor_squad_leader,opfor_machinegunner,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_marksman,opfor_sharpshooter,opfor_sniper];
 opfor_squad_8_tankkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,opfor_rpg,opfor_rpg,opfor_at,opfor_at,opfor_at];
 opfor_squad_8_airkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,opfor_rpg,opfor_rpg,opfor_aa,opfor_aa,opfor_aa];
+friendly_infantry_classnames = [];
+{if (!(_x in friendly_infantry_classnames)) then {friendly_infantry_classnames pushBack _x};} forEach (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufor_squad_aa + blufor_squad_recon + blufor_squad_para);
 all_resistance_troops = [] + militia_squad;
 all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers + opfor_troup_transports + opfor_vehicles_low_intensity);
 { land_vehicles_classnames pushback (_x select 0); } foreach (heavy_vehicles + light_vehicles);
@@ -102,5 +104,8 @@ GRLIB_ignore_colisions_when_building = [
 	"B_GMG_01_A_F",										//Mk32A GMG 20mm
 	"B_GMG_01_high_F",									//Mk32 GMG 20mm (Raised)
 	"B_static_AT_F",									//Static TTitan Launcher (AT)
-	"B_static_AA_F"										//Static Titan Launcher (AA)
+	"B_static_AA_F",									//Static Titan Launcher (AA)
+	"ACE_friesAnchorBar",								//ACE FRIES
+	"ACE_friesGantryReverse",							//ACE FRIES
+	"ACE_friesGantry"									//ACE FRIES
 ];

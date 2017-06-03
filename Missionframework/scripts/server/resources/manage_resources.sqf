@@ -1,6 +1,9 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_production"};
 
+sectors_recalculating = false;
+sectors_timer = false;
+
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource management started on: %1", (name player)];_text remoteExec ["diag_log",2];};
 
 while {GRLIB_endgame == 0} do {
@@ -8,9 +11,14 @@ while {GRLIB_endgame == 0} do {
 	recalculate_sectors = false;
 	
 	if (((count allPlayers) > 0) && ((count KP_liberation_production) > 0)) then {
+		waitUntil {sleep 0.5; !sectors_recalculating};
+		sectors_recalculating = true;
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource interval started: %1", time];_text remoteExec ["diag_log",2];};
-		
-		private ["_tempProduction", "_storage", "_storageArray", "_supplyValue", "_ammoValue", "_fuelValue", "_time", "_crateType", "_crate"];
+
+		private ["_time_update", "_tempProduction", "_storage", "_storageArray", "_supplyValue", "_ammoValue", "_fuelValue", "_time", "_crateType", "_crate"];
+
+		_time_update = false;
+		if (sectors_timer) then {_time_update = true; sectors_timer = false;};
 
 		_tempProduction = [];
 
@@ -26,25 +34,28 @@ while {GRLIB_endgame == 0} do {
 			if ((count _storage) > 0) then {
 				_storage = (_storage select 0);
 				_storageArray = [(getPosATL _storage),(getDir _storage),(vectorUpVisual _storage)];
+				
+				if (_time_update) then {
+				
+					if ((_time - 1) < 1) then {
+						_time = KP_liberation_production_interval;
+						
+						if (((count (attachedObjects _storage)) < 12) && !((_x select 7) == 3)) then {
+							switch (_x select 7) do {
+								case 1: {_crateType = KP_liberation_ammo_crate;};
+								case 2: {_crateType = KP_liberation_fuel_crate;};
+								default {_crateType = KP_liberation_supply_crate;};
+							};
 
-				if ((_time - 1) < 1) then {
-					_time = KP_liberation_production_interval;
-					
-					if (((count (attachedObjects _storage)) < 12) && !((_x select 7) == 3)) then {
-						switch (_x select 7) do {
-							case 1: {_crateType = KP_liberation_ammo_crate;};
-							case 2: {_crateType = KP_liberation_fuel_crate;};
-							default {_crateType = KP_liberation_supply_crate;};
+							_crate = _crateType createVehicle (getPosATL _storage);
+							_crate setVariable ["KP_liberation_crate_value", 100, true];
+							[_crate, 500] remoteExec ["F_setMass",_crate];
+							[_crate, _storage] call F_crateToStorage;
+
 						};
-
-						_crate = _crateType createVehicle (getPosATL _storage);
-						_crate setVariable ["KP_liberation_crate_value", 100, true];
-						[_crate, 500] remoteExec ["F_setMass",_crate];
-						[_crate, _storage] call F_crateToStorage;
-
+					} else {
+						_time = _time - 1;
 					};
-				} else {
-					_time = _time - 1;
 				};
 
 				{
@@ -80,6 +91,7 @@ while {GRLIB_endgame == 0} do {
 
 		KP_liberation_production = +_tempProduction;
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource interval finished: %1", time];_text remoteExec ["diag_log",2];};
+		sectors_recalculating = false;
 	};
 	waitUntil {sleep 1; recalculate_sectors};
 };

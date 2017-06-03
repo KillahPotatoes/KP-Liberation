@@ -65,13 +65,14 @@ light_vehicles = [
 	["rhsusf_m1025_d",100,0,50],										//M1025A2
 	["rhsusf_m1025_d_m2",100,40,50],									//M1025A2 (M2)
 	["rhsusf_m1025_d_Mk19",100,60,50],									//M1025A2 (Mk19)
+	["rhsusf_m998_d_2dr_fulltop",100,0,50],								//M1097A2 (2D)
+	["rhsusf_m998_d_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
+	["rhsusf_M1083A1P2_d_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
+	["rhsusf_M1083A1P2_d_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
 	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT
 	["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],						//M977A4 BKIT (HMG)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
-	["B_UGV_01_rcws_F",150,40,50],										//UGV Stomper (RCWS)
-	["B_Boat_Transport_01_F",100,0,25],									//Assault Boat
-	["B_Boat_Armed_01_minigun_F",200,80,75],							//Speedboat Minigun
-	["rhsusf_mkvsoc",250,200,100]										//Mk.V SOCOM
+	["B_UGV_01_rcws_F",150,40,50]										//UGV Stomper (RCWS)
 ];
 
 heavy_vehicles = [
@@ -137,6 +138,10 @@ buildings = [
 	["CamoNet_BLUFOR_big_F",0,0,0],
 	["Land_PortableLight_single_F",0,0,0],
 	["Land_PortableLight_double_F",0,0,0],
+	["Land_LampSolar_F",0,0,0],
+	["Land_LampHalogen_F",0,0,0],
+	["Land_LampStreet_small_F",0,0,0],
+	["Land_LampAirport_F",0,0,0],
 	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
@@ -487,7 +492,6 @@ civilian_vehicles = [
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
-	"rhsusf_mkvsoc",													//Mk.V SOCOM
 	"rhsusf_m1a1aim_tuski_d",											//M1A1SA (Tusk I)
 	"rhsusf_m1a2sep1tuskiid_usarmy",									//M1A2SEPv1 (Tusk II)
 	"rhsusf_m109d_usarmy",												//M109A6

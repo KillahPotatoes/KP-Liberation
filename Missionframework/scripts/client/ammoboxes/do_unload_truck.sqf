@@ -31,4 +31,6 @@ if ( _truck_to_unload getVariable ["GRLIB_ammo_truck_load", 0] > 0 ) then {
 	[_truck_to_unload, true] remoteExec ["F_objectProtection"];
 
 	hint localize "STR_BOX_UNLOADED";
+	uiSleep 2;
+	hint "";
 };

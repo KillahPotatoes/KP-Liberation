@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.951
+## Current version : 0.952
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -157,6 +157,22 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
 ## Changelog
+
+### 0.952
+* Added: Action to push resource crates
+* Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
+* Added: Some more vehicles from RHS to the presets
+* Added: More buildable lights for the FOB. Thanks to [Reckulation](https://www.killahpotatoes.de/index.php?user/130-reckulation/)
+* Added: A devkit mission.sqm for people who want to port Liberation to other maps
+* Added: [GitHub Wiki](https://github.com/Wyqer/kp_liberation/wiki) (will be expanded step by step in the future)
+* Removed: Some clutter of the custom enemy bases on each map. Could maybe increase performance a little bit
+* Tweaked: Starting times of the maps were not equal
+* Tweaked: Syncing times for production when resources are stored or unstored in sector storages
+* Tweaked: Moved ACE compatibility and Debug setting from `kp_liberation_config.sqf` to parameters
+* Fixed: SDV and armed boat recycle caused a script error
+* Fixed: AI Squads weren't saved
+* Fixed: Start vehicles were spawning with items in the inventory
+* Fixed: Sometimes you couldn't slingload crates which were unloaded from a storage
 
 ### 0.951
 * Added: Boats at the stern of the Freedom for amphibious insertion

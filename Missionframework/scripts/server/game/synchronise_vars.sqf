@@ -64,7 +64,7 @@ while {true} do {
 	sync_vars = [KP_liberation_fob_resources,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap];
 	publicVariable "sync_vars";
 	
-	_KP_liberation_fob_resources_old = KP_liberation_fob_resources;
+	_KP_liberation_fob_resources_old = +KP_liberation_fob_resources;
 	_KP_liberation_supplies_global_old = KP_liberation_supplies_global;
 	_KP_liberation_ammo_global_old = KP_liberation_ammo_global;
 	_KP_liberation_fuel_global_old = KP_liberation_fuel_global;

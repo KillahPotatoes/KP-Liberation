@@ -8,16 +8,16 @@
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.951</Original>
-						<German>KP Liberation v0.951</German>
-						<Spanish>KP Liberation v0.951</Spanish>
-						<Italian>KP Liberation v0.951</Italian>
+						<Original>KP Liberation v0.952</Original>
+						<German>KP Liberation v0.952</German>
+						<Spanish>KP Liberation v0.952</Spanish>
+						<Italian>KP Liberation v0.952</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.951</Original>
-						<German>v0.951</German>
-						<Spanish>v0.951</Spanish>
-						<Italian>v0.951</Italian>
+						<Original>v0.952</Original>
+						<German>v0.952</German>
+						<Spanish>v0.952</Spanish>
+						<Italian>v0.952</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -3103,13 +3103,13 @@
 						<Italian>Rimborso: 50 approvvigionamenti e 50 carburante.</Italian>
  				</Key>
  				<Key ID="STR_LOGISTIC_CONFIRM">
- 						<Original>Confirm mission</Original>
+ 						<Original>Confirm Mission</Original>
  						<German>Auftrag bestätigen</German>
 						<Russian>Подтвердить миссию</Russian>
 						<Italian>Conferma missione</Italian>
  				</Key>
  				<Key ID="STR_LOGISTIC_CANCEL">
- 						<Original>Abort mission</Original>
+ 						<Original>Abort Mission</Original>
  						<German>Auftrag abbrechen</German>
 						<Russian>Отменить миссию</Russian>
 						<Italian>Termina missione</Italian>
@@ -3454,6 +3454,18 @@
 				<Key ID="STR_PARAMS_USEPRESET">
 						<Original>Use preset from config</Original>
 						<German>Benutze Preset aus Konfiguration</German>
+				</Key>
+				<Key ID="STR_ACTION_CRATE_PUSH">
+						<Original>-- PUSH CRATE</Original>
+						<German>-- KISTE SCHIEBEN</German>
+				</Key>
+				<Key ID="STR_PARAMS_ACE_ENABLE">
+						<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
+						<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
+				</Key>
+				<Key ID="STR_PARAMS_DEBUG_ENABLE">
+						<Original>Debug messages for server.rpt</Original>
+						<German>Debugnachrichten für die server.rpt</German>
 				</Key>
 	</Package>
 </Project>

@@ -24,8 +24,8 @@ while {true} do {
 	sync_eco = [KP_liberation_production,KP_liberation_logistics];
 	publicVariable "sync_eco";
 	
-	_KP_liberation_production_old = KP_liberation_production;
-	_KP_liberation_logistics_old = KP_liberation_logistics;
+	_KP_liberation_production_old = +KP_liberation_production;
+	_KP_liberation_logistics_old = +KP_liberation_logistics;
 
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside eco sent from: %1", (name player)];_text remoteExec ["diag_log",2];};
 };

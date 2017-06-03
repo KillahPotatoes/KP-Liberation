@@ -29,6 +29,8 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilerespawn = ["MobileRespawn",1] call bis_fnc_getParamValue;
 	KP_liberation_mobilearsenal = ["MobileArsenal",1] call bis_fnc_getParamValue;
 	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
+	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
+	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -60,6 +62,8 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilerespawn = 1;
 	KP_liberation_mobilearsenal = 1;
 	KP_liberation_ailogistics = 1;
+	KP_liberation_ace = 0;
+	KP_liberation_debug = 0;
 };
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
@@ -78,6 +82,8 @@ if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_
 if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
 if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};
 if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else {KP_liberation_ailogistics = false};
+if (KP_liberation_ace == 1) then {KP_liberation_ace = true} else {KP_liberation_ace = false};
+if (KP_liberation_debug == 1) then {KP_liberation_debug = true} else {KP_liberation_debug = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {

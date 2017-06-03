@@ -469,7 +469,7 @@ while { true } do {
 				if (  side _nextgroup == GRLIB_side_friendly ) then {
 					if ( { isPlayer _x } count ( units _nextgroup ) == 0 ) then {
 						if ( { alive _x } count ( units _nextgroup ) > 0  ) then {
-							if ((_fobpos distance (leader _nextgroup) < GRLIB_fob_range * 2) && ((typeOf (leader _nextgroup)) in infantry_units)) then {
+							if ((_fobpos distance (leader _nextgroup) < GRLIB_fob_range * 2) && ((typeOf (leader _nextgroup)) in friendly_infantry_classnames)) then {
 								private [ "_grouparray" ];
 								_grouparray = [];
 								{
