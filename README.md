@@ -22,16 +22,14 @@ This mission is an ALiVE integration of [KP/Wyquer's](https://github.com/Wyqer) 
 
 If you like the mission and want to send a beer to the people who are actively improving and maintaining it donate to [Wyqer](https://www.paypal.me/wyqer).
 
-#KP Liberation Links and Info
+# KP Liberation Links and Info
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
 [Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
 
 [Discord](https://discord.gg/bpPUU48)
 
-This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
-
-#Original Liberation Files and Devs
+# Original Liberation Files and Devs
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
 [GreuhZbug's Github](https://github.com/GreuhZbug)
 
