@@ -13,7 +13,7 @@
 
 
 
-![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png)
+![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png) ![ALiVE](http://alivemod.com/img/home_logo.png)
 
 # KP Liberation for ArmA 3
 
