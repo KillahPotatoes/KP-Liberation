@@ -18,7 +18,7 @@
 ## Current Version 0.952.1
 ## Currently Only Supports Takistan Map. More to come!
 
-This mission is an ALiVE integration of [KP/Wyquer's](https://github.com/Wyqer) continuation of [GreuhZbug's](https://github.com/GreuhZbug) Liberation Mission.
+This mission is an ALiVE integration of [KP/Wyqer's](https://github.com/Wyqer) continuation of [GreuhZbug's](https://github.com/GreuhZbug) Liberation Mission.
 
 If you like the mission and want to send a beer to the people who are actively improving and maintaining it donate to [Wyqer](https://www.paypal.me/wyqer).
 
@@ -57,42 +57,14 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark wi
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
-* Al Rayak
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-* Altis
-	* Nothing
-* Chernarus
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* Recommended for more enterable buildings on Chernarus
-		* [Open Chernarus Project with JBAD](http://steamcommunity.com/sharedfiles/filedetails/?id=786865959)
-* Sahrani
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+
 * Takistan
+	* [ALiVE](http://alivemod.com/#Download)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-* Tanoa
-	* Nothing
-* Taunus (very resource-intensive map)
-	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 
 ## Recommended Mods
 This Mods would greatly increase your gaming experience:
@@ -117,11 +89,11 @@ Also you should think about using this mods as serverside mods:
 * [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
 
 ## ACE Serverside Settings
-I've provided our community serverconfig.hpp for the [usage with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.
+Wyqer provided the KP community serverconfig.hpp for the [usage with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.
 Just copy the userconfig folder into your ArmA 3 Server folder and start the ace_server.pbo as serverside mod.
 
 ## Recommended Difficulty Settings
-I recommend to use the following difficulty settings for this mission (User profile of your server):
+KP recommends using the following difficulty settings for this mission (User profile of your server):
 ```
 class CustomDifficulty
 {
@@ -168,159 +140,9 @@ class Missions
 };
 ```
 
-## Media
-[![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
+
 
 ## Changelog
 
-### 0.952
-* Added: Action to push resource crates
-* Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
-* Added: Some more vehicles from RHS to the presets
-* Added: More buildable lights for the FOB. Thanks to [Reckulation](https://www.killahpotatoes.de/index.php?user/130-reckulation/)
-* Added: [A devkit mission.sqm](https://github.com/Wyqer/kp_liberation/wiki/EN:Devkit) for people who want to port Liberation to other maps
-* Added: [GitHub Wiki](https://github.com/Wyqer/kp_liberation/wiki) (will be expanded step by step in the future)
-* Removed: Some clutter of the custom enemy bases on each map. Could maybe increase performance a little bit
-* Tweaked: Starting times of the maps were not equal
-* Tweaked: Syncing times for production when resources are stored or unstored in sector storages
-* Tweaked: Moved ACE compatibility and Debug setting from `kp_liberation_config.sqf` to parameters
-* Fixed: SDV and armed boat recycle caused a script error
-* Fixed: AI Squads weren't saved
-* Fixed: Start vehicles were spawning with items in the inventory
-* Fixed: Sometimes you couldn't slingload crates which were unloaded from a storage
-
-### 0.951
-* Added: Boats at the stern of the Freedom for amphibious insertion
-* Added: Transport configs for guerilla offroad and van
-* Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf` (no restriction not recommended)
-* Added: Al Rayak missionfile
-* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
-* Updated: Russian localization. Thanks to [_KOC_](mailto:Constantin.rogozin@ya.ru)
-* Tweaked: Syncing between server and clients after building a sector storage
-* Tweaked: Debug info output for sector production and logistic management
-* Tweaked: Small things on each mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Tweaked: Factories will directly start producing supplies, as soon as a storage area is built
-* Tweaked: General syncing of production and logistic data between client and server
-* Tweaked: Resource amount is now also being displayed in the production dialog, not only crates count
-* Tweaked: Production menu is now also available if near a production sector
-* Tweaked: Checking the content of a crate now also checks if `ropeAttachEnabled` is true and set it to true if not
-* Tweaked: Improved logistics algorithm concerning behaviour of loading resources
-* Tweaked: Removed unarmed vehicles from sector defender vehicles. They are still transports for battlegroups
-* Fixed: Hostile map markers on Sahrani had a little offset from the map grid
-* Fixed: No intelobjects spawned at military bases
-* Fixed: Missing vehicles because of classname changes due to the ArmA 3 update. Thanks to [madpat3](https://github.com/madpat3) for an overview of all changes
-* Fixed: Production menu showed timer even if nothing is produced
-* Fixed: Production timer displayed as float if using a resource multiplier
-* Fixed: Sahrani mission name wasn't displayed in the server browser, even after mission start
-* Fixed: FOB Box won't respawn if fallen into the water
-* Fixed: It was possible to create a logistic mission without defining a A or B destination
-* Fixed: Logistic dialog didn't update when buying or selling a truck
-* Fixed: Error in serverlog concerning loading control CaptureFrames BLUFOR and OPFOR
-* Fixed: Boat recycle caused a script error
-* Fixed: Exploit of build menu if UI was set to show global resources
-* Fixed: Build menu reloads constantly
-
-### 0.95
-* Added: New resource system
-* Added: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
-* Added: Action to change alignment (up or terrain aligned) during placement of buildings
-* Added: Action to reassign the commander to the zeus module (only shows if the commander has no access to zeus)
-* Added: Paradrop of a resource package when first FOB is built
-* Added: Action to switch between displaying global or local FOB resources
-* Added: Air vehicle slot system (need a Flight Control to build helipads, hangars and air vehicles)
-* Added: Blacklist / Whitelist filtering for saved loadouts
-* Added: Recycling of enemy vehicles
-* Added: Recycle value now depends on vehicle damage, remaining ammo and fuel
-* Added: Production system for factories and cities (not capitals). Accessable for the commander if near a FOB
-* Added: Ability to build storage areas at sectors, where produced resources will be stored
-* Added: Ability to unlock resource facilities in cities, so you can produce that resource there
-* Added: RHS transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Added: Civilian transport configs. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Added: Optional logistics module for smaller groups to enable a automatic logistics system for the commander
-* Added: Mission parameter to enable or disable the logistics system
-* Added: [3cb BAF](https://3cbmod.wordpress.com) unit and arsenal preset. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
-* Added: DLC Jets to most presets
-* Added: Sahrani missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie) for helping with OPFOR Points
-* Added: Debug messages for the server.rpt. Default disabled and can be enabled in the `kp_liberation_config.sqf`
-* Removed: Resource caps system
-* Removed: Old vanilla unit preset (custom.sqf already provides a vanilla setting)
-* Removed: Passive Income (due to new resource system)
-* Removed: Ammo Bounties (due to new resource system)
-* Removed: Civilian Penalties (due to new resource system)
-* Removed: Overwrite functionality for `classnames.sqf`, as it is no longer needed due to the preset system
-* Removed: `gameplay_constants.sqf`
-* Removed: Crate spawn at military bases
-* Removed: Chimera Base on maps with a suitable amount of ocean for supporting the Freedom
-* Merged: `gameplay_constants.sqf` settings into `kp_liberation_config.sqf` and added descriptions to the variables
-* Updated: Spanish localization. Thanks to [regiregi22](https://github.com/regiregi22)
-* Updated: English InGame Tutorial text with the latest informations for resource, production and logistic system. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Replaced: Manpower icon with supplies icon. Thanks to [jus61](https://github.com/jus61)
-* Replaced: Every deprecated `BIS_fnc_MP` with `remoteExec`
-* Replaced: ATLAS LHD with USS Freedom. Thanks to [Applejakerie](https://github.com/Applejakerie) for the immersive clutter on the carrier
-* Tweaked: Arsenal blacklist filtering. Thanks to [veteran29](https://github.com/veteran29)
-* Tweaked: Initialization of the arsenal, which should increase the performance for blacklist using
-* Tweaked: Save manager -> helicopters from the Freedom or Chimera won't be saved, as they spawn on every mission start/load
-* Tweaked: Name for savegame namespace -> adapts automaticly to worldName
-* Tweaked: Revive settings: BI Revive is enabled by default. Disable it, when you use ACE
-* Tweaked: Config, as some apex classnames were missing. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Tweaked: If attacking a sector, a random amount of crates with random resources will spawn once.
-* Tweaked: Better comments in the unit preset files. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Tweaked: Vehicles with dead crew can now be recycled
-* Tweaked: Altis mission.sqm. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Tweaked: Chimera bases on Takistan and Taunus. Thanks to [Applejakerie](https://github.com/Applejakerie)
-* Tweaked: Enemy infantry units will now spawn in initial safe state instead of be directly aware
-* Tweaked: Chimera / Carrier spawn markers. Removed any dependency, using only invisible grasscutter objects. Makes porting etc. much easier
-* Fixed: UAV unconnectable after player death. Thanks to [veteran29](https://github.com/veteran29)
-* Fixed: Missing batteries with Apex laser designators. Thanks to [veteran29](https://github.com/veteran29)
-* Fixed: Enemy weapon dance. Thanks to [k4s0](https://github.com/k4s0)
-* Fixed: Non vanilla paratroopers don't have a parachute
-* Fixed: Enemy jets sometimes spawn on the ground instead flying
-* Fixed: ACE medical crate was empty and couldn't be recycled
-* Fixed: Slingloading while transport crates inside a helicopter causes the helicopter to slingload the loaded crates inside
-* Fixed: Some buildable paratroopers from some presets don't had a parachute
-
-### 0.94
-* Added: Tanoa missionfile and vanilla apex preset
-* Added: Custom made Chimera Base for Tanoa. Thanks to [jus61](https://github.com/jus61) for building it
-* Added: X-Cam-Taunus missionfile
-* Added: Custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](https://github.com/jus61) for building it
-* Added: Custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
-* Added: Arsenal whitelist preset system (change via kp_liberation_config.sqf)
-	* Use blacklist from unit preset (default)
-	* custom whitelist file
-	* KP Community Selection
-	* RHS USAF
-	* RHS USAF with ACE3
-	* RHS USAF with ACE3 and ACRE2
-* Removed: Dependencies on Takistan missionfile
-* Removed: Apex dependencies on Chernarus missionfile (custom chimera base had two apex rocks)
-* Replaced: Old hostile markers (exclamation marks) with a unit count sensitive area marking system
-* Tweaked: Presets
-	* custom.sqf is now default (vanilla is a kind of legacy now)
-	* Vehicle ammo prices are raised to make them more valuable
-	* Provided custom.sqf now adapt automaticly to installed mods
-* Fixed: Falling Little Birds on LHD
-* Fixed: Custom flag texture not applied after savegame load
-* Fixed: Mapmarker disable won't work
-
-### 0.931
-* Added: Takistan Missionfile
-* Added: Chernarus Missionfile
-* Added: RHS Takistan Classnames Preset (desert camo)
-* Added: RHS Classnames Preset (woodland camo)
-* Added: RHS / BW Mod Classnames Preset (woodland camo)
-* Fixed: BI Revive Error
-* Fixed: Starting game with a prebuild FOB caused errors on Takistan
-
-### 0.93
-* Added: kp_liberation_config.sqf with some additional config values
-* Added: ACE support
-* Added: Fuel consumption script
-* Added: Preset system (will grow with more maps) to choose between different classnames_extension presets
-* Added: custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
-* Added: BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
-* Added: Option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
-* Added: Ability to blacklist arsenal items
-* Removed: Farooq's Revive
-* Tweaked: Player group organisation (group changing via extended options ingame still enabled)
-* Tweaked: File organization (split scriptpart from missionpart, so it's easier to provide different maps)
+### 0.952.01
+* Added: ALiVE Support Module integration with Transport Helicopter (Ghost Hawk) and Artillery Position (M109A6 x3). Requires Banana for Support Menu Access
