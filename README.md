@@ -15,7 +15,7 @@
 
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png) ![ALiVE](http://alivemod.com/img/home_logo.png)
 
-## Current Version 0.952.1
+## Current Version 0.952.01
 ## Currently Only Supports Takistan Map. More to come!
 
 This mission is an ALiVE integration of [KP/Wyqer's](https://github.com/Wyqer) continuation of [GreuhZbug's](https://github.com/GreuhZbug) Liberation Mission.
@@ -48,11 +48,7 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark wi
 
 ## Public Servers
 
-### KP Liberation by www.killahpotatoes.de
-* IP: 213.133.110.170
-* Port: 2302
-* Needed Mods: None
-* Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
+### Currently SADBOYS Server is private for testing. Public server access coming soon™.
 
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
