@@ -15,10 +15,14 @@
 
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png) ![ALiVE](http://alivemod.com/img/home_logo.png)
 
-# KP Liberation for ArmA 3
+## Current Version 0.952.1
+## Currently Only Supports Takistan Map. More to come!
 
-## Current version : 0.952
+This mission is an ALiVE integration of [KP/Wyquer's](https://github.com/Wyqer) continuation of [GreuhZbug's](https://github.com/GreuhZbug) Liberation Mission.
 
+If you like the mission and want to send a beer to the people who are actively improving and maintaining it donate to [Wyqer](https://www.paypal.me/wyqer).
+
+#KP Liberation Links and Info
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
 [Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
@@ -27,11 +31,9 @@
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
+#Original Liberation Files and Devs
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
-
-If you like the work and think it's worth a small donation, feel free to use the following link:
-
-[Donate via paypal.me](https://www.paypal.me/wyqer)
+[GreuhZbug's Github](https://github.com/GreuhZbug)
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
