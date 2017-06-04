@@ -30,7 +30,7 @@ If you like the mission and want to send a beer to the people who are actively i
 [Discord](https://discord.gg/bpPUU48)
 
 # Original Liberation Files and Devs
-[Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
+[Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis) and
 [GreuhZbug's Github](https://github.com/GreuhZbug)
 
 ## Overview
