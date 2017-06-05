@@ -440,7 +440,7 @@
 						<German>!! SPIELSTAND WIRD GELOESCHT, KEIN WIEDERHERSTELLEN MOEGLICH !!</German>
 						<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
 						<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
-						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO</Italian>
+						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO !!</Italian>
 				</Key>
 				<Key ID="STR_UNFLIP">
 						<Original>-- UNFLIP</Original>
@@ -2744,7 +2744,7 @@
 						<German>-- KISTE EINLAGERN</German>
 						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
 						<Russian>-- ХРАНЕНИЕ МАГАЗИНА</Russian>
-						<Italian>-- CONTENITORE</Italian>
+						<Italian>-- CREA CONTENITORE</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
@@ -3446,26 +3446,32 @@
 				<Key ID="STR_PARAMS_ARSENALUSEPRESET">
 						<Original>Arsenal mode</Original>
 						<German>Arsenalmodus</German>
+						<Italian>Modalità Arsenale</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
 						<Original>No restrictions</Original>
 						<German>Keine Einschränkungen</German>
+						<Italian>Senza Restrizioni</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_USEPRESET">
 						<Original>Use preset from config</Original>
 						<German>Benutze Preset aus Konfiguration</German>
+						<Italian>Usa il file config.sqf</Italian>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_PUSH">
 						<Original>-- PUSH CRATE</Original>
 						<German>-- KISTE SCHIEBEN</German>
+						<Italian>-- SPINGI CASSA</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_ACE_ENABLE">
 						<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
 						<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
+						<Italian>Compatibilità ACE (disattiva il clima e l'approvvigionamento)</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DEBUG_ENABLE">
 						<Original>Debug messages for server.rpt</Original>
 						<German>Debugnachrichten für die server.rpt</German>
+						<Italian>Messaggi di errore per il debug nel file server.rpt</Italian>
 				</Key>
 	</Package>
 </Project>
