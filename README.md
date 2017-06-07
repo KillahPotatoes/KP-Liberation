@@ -142,3 +142,4 @@ class Missions
 
 ### 0.952.01
 * Added: ALiVE Support Module integration with Transport Helicopter (Ghost Hawk) and Artillery Position (M109A6 x3). Requires Banana for Support Menu Access
+* Added: CAS Module testing
