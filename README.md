@@ -159,7 +159,8 @@ class Missions
 ## Changelog
 
 ### 0.953
-* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0) 
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Fixed: Error in production dialog due to wrong global variable
 
 ### 0.952
 * Added: Action to push resource crates

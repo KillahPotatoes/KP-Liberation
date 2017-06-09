@@ -31,7 +31,7 @@ while {dialog && (alive player)} do {
 	if (saveSectorSetting == 1) then {
 		saveSectorSetting = 0;
 		[(_selectedSector select 1), new_production] remoteExec ["change_prod_remote_call",2];
-		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_logistics select _listselect)))};
+		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_production select _listselect)))};
 	};
 
 	_listselect = (lbCurSel 75802);
