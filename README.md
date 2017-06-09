@@ -162,6 +162,7 @@ class Missions
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: German localization. (umlauts)
 * Tweaked: Statics can now be placed inside buildings
+* Tweaked: Recycle of objects which won't give any resources is now always possible
 * Fixed: Error in production dialog due to wrong global variable
 
 ### 0.952
