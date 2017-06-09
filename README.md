@@ -164,6 +164,7 @@ class Missions
 * Updated: German localization. (umlauts)
 * Tweaked: Statics can now be placed inside buildings
 * Tweaked: Recycle of objects which won't give any resources is now always possible
+* Tweaked: Debug messages
 * Fixed: Error in production dialog due to wrong global variable
 
 ### 0.952
