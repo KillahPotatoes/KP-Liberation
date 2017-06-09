@@ -159,6 +159,7 @@ class Missions
 ## Changelog
 
 ### 0.953
+* Added: Action to stack and sort resources in storage areas
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: German localization. (umlauts)
 * Tweaked: Statics can now be placed inside buildings

@@ -3473,5 +3473,9 @@
 						<German>Debugnachrichten für die server.rpt</German>
 						<Italian>Messaggi di errore per il debug nel file server.rpt</Italian>
 				</Key>
+				<Key ID="STR_ACTION_SORT_STORAGE">
+						<Original>-- STACK AND SORT</Original>
+						<German>-- STAPELN UND SORTIEREN</German>
+				</Key>
 	</Package>
 </Project>
