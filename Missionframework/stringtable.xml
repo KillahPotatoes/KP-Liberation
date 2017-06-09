@@ -182,7 +182,7 @@
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
 						<French>Construction confirmée.</French>
-						<German>Bauen bestaetigt.</German>
+						<German>Bauen bestätigt.</German>
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
 						<Italian>Costruzione confermata.</Italian>
@@ -262,7 +262,7 @@
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
 						<French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les autres FOB. La FOB la plus proche est à %2 mètres d'ici.</French>
-						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das naechste FOB ist %2 Meter entfernt.</German>
+						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das nächste FOB ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
@@ -270,7 +270,7 @@
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
 						<French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les zones capturables. La zone la plus proche est à %2 mètres d'ici.</French>
-						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die naechste Zone ist %2 Meter entfernt.</German>
+						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die nächste Zone ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшиая зона в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
@@ -373,7 +373,7 @@
 				<Key ID="STR_AT_SQUAD">
 						<Original>AT Squad</Original>
 						<French>Escouade AT</French>
-						<German>Panzerbekaempfungstrupp</German>
+						<German>Panzerbekämpfungstrupp</German>
 						<Spanish>Escuadra Antitanque</Spanish>
 						<Russian>Отряд ПТ</Russian>
 						<Italian>Squadra Anticarro</Italian>
@@ -389,7 +389,7 @@
 				<Key ID="STR_RECON_SQUAD">
 						<Original>Recon Squad</Original>
 						<French>Escouade Recon</French>
-						<German>Aufklaerungstrupp</German>
+						<German>Aufklärungstrupp</German>
 						<Spanish>Escuadra de reconocimiento</Spanish>
 						<Russian>Отряд Разведчиков</Russian>
 						<Italian>Squadra Ricognitori</Italian>
@@ -397,7 +397,7 @@
 				<Key ID="STR_PARA_SQUAD">
 						<Original>Paratroopers Squad</Original>
 						<French>Escouade Parachutistes</French>
-						<German>Fallschirmjaegertrupp</German>
+						<German>Fallschirmjägertrupp</German>
 						<Spanish>Escuadra de paracaidistas</Spanish>
 						<Russian>Отряд Десантников</Russian>
 						<Italian>Squadra Paracadutisti</Italian>
@@ -413,7 +413,7 @@
 				<Key ID="STR_WIPE_TITLE">
 						<Original>Wipe savegame</Original>
 						<French>Effacer la sauvegarde</French>
-						<German>Spielstand loeschen</German>
+						<German>Spielstand löschen</German>
 						<Spanish>Borrar partida guardada</Spanish>
 						<Russian>Удалить сохранённый прогресс</Russian>
 						<Italian>Elimina Salvataggi</Italian>
@@ -421,7 +421,7 @@
 				<Key ID="STR_WIPE_TITLE_2">
 						<Original>Confirm : wipe savegame</Original>
 						<French>Confirmer : effacer la sauvegarde</French>
-						<German>Bestätige: Spielstand loeschen</German>
+						<German>Bestätige: Spielstand löschen</German>
 						<Spanish>Confirmar : Borrar partida guardada</Spanish>
 						<Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
 						<Italian>Confermare : Elimina Salvataggi</Italian>
@@ -437,7 +437,7 @@
 				<Key ID="STR_WIPE_YES">
 						<Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
 						<French>!! LA SAUVEGARDE SERA EFFACEE SANS RECUPERATION POSSIBLE !!</French>
-						<German>!! SPIELSTAND WIRD GELOESCHT, KEIN WIEDERHERSTELLEN MOEGLICH !!</German>
+						<German>!! SPIELSTAND WIRD GELÖSCHT, KEIN WIEDERHERSTELLEN MÖGLICH !!</German>
 						<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
 						<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
 						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO !!</Italian>
@@ -638,7 +638,7 @@
 				<Key ID="STR_NOTIFICATION_FOBLOST_TITLE">
 						<Original>FOB DESTROYED</Original>
 						<French>FOB DETRUITE</French>
-						<German>FOB ZERSTOERT</German>
+						<German>FOB ZERSTÖRT</German>
 						<Spanish>FOB DESTRUIDA</Spanish>
 						<Russian>FOB УНИЧТОЖЕНА</Russian>
 						<Italian>FOB DISTRUTTA</Italian>
@@ -646,7 +646,7 @@
 				<Key ID="STR_NOTIFICATION_FOBLOST_TEXT">
 						<Original>FOB %1 has been destroyed!</Original>
 						<French>La FOB %1 a été détruite !</French>
-						<German>FOB %1 wurde zerstoert!</German>
+						<German>FOB %1 wurde zerstört!</German>
 						<Spanish>La FOB %1 ha sido destruida!</Spanish>
 						<Russian>FOB %1 была уничтожена!</Russian>
 						<Italian>La FOB %1 è stata distrutta!</Italian>
@@ -702,7 +702,7 @@
 				<Key ID="STR_NOTIFICATION_SECONDARY_TITLE">
 						<Original>SECONDARY OBJECTIVE</Original>
 						<French>OBJECTIF SECONDAIRE</French>
-						<German>SEKUNDAERZIEL</German>
+						<German>SEKUNDÄRZIEL</German>
 						<Spanish>OBJETIVO SECUNDARIO</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА</Russian>
 						<Italian>OBIETTIVI SECONDARI</Italian>
@@ -710,7 +710,7 @@
 				<Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
 						<Original>Hostile FOB destroyed</Original>
 						<French>FOB hostile détruite.</French>
-						<German>Gegnerische FOB zerstoert.</German>
+						<German>Gegnerische FOB zerstört.</German>
 						<Spanish>FOB hostil destruída</Spanish>
 						<Russian>Вражеская FOB уничтожена</Russian>
 						<Italian>FOB ostile distrutta.</Italian>
@@ -726,7 +726,7 @@
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TEXT">
 						<Original>Hostile forces reinforcing %1.</Original>
 						<French>Forces hostiles en renfort à %1.</French>
-						<German>Gegnerische Truppen verstaerken %1.</German>
+						<German>Gegnerische Truppen verstärken %1.</German>
 						<Spanish>Fuerzas hostiles reforzando %1</Spanish>
 						<Russian>Вражеские подкрепления подходят в %1.</Russian>
 						<Italian>Forze ostili rinforzano le truppe su %1</Italian>
@@ -790,7 +790,7 @@
 				<Key ID="STR_STATS_1">
 						<Original>OPFOR infantry killed:</Original>
 						<French>Infanterie OPFOR tuée :</French>
-						<German>OPFOR Einheit getoetet:</German>
+						<German>OPFOR Einheit getötet:</German>
 						<Spanish>Infantería OPFOR eliminada:</Spanish>
 						<Russian>OPFOR пехоты убито:</Russian>
 						<Italian>Fanteria OPFOR ha ucciso:</Italian>
@@ -798,7 +798,7 @@
 				<Key ID="STR_STATS_2">
 						<Original>OPFOR infantry killed by players:</Original>
 						<French>Infanterie OPFOR tuée par les joueurs :</French>
-						<German>OPFOR Infanterie von Spielern getoetet:</German>
+						<German>OPFOR Infanterie von Spielern getötet:</German>
 						<Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
 						<Russian>OPFOR пехоты убито игроками:</Russian>
 						<Italian>Fanteria OPFOR uccisa da:</Italian>
@@ -806,7 +806,7 @@
 				<Key ID="STR_STATS_3">
 						<Original>BLUFOR infantry killed:</Original>
 						<French>Infanterie BLUFOR tuée :</French>
-						<German>BLUFOR Einheiten getoetet:</German>
+						<German>BLUFOR Einheiten getötet:</German>
 						<Spanish>Infantería BLUFOR eliminada:</Spanish>
 						<Russian>BLUFOR пехоты убито:</Russian>
 						<Italian>Fanteria BLUFOR ha ucciso:</Italian>
@@ -814,7 +814,7 @@
 				<Key ID="STR_STATS_4">
 						<Original>Civilians killed:</Original>
 						<French>Civils tués :</French>
-						<German>Zivilisten getoetet:</German>
+						<German>Zivilisten getötet:</German>
 						<Spanish>Civiles asesinados:</Spanish>
 						<Russian>Гражданских убито:</Russian>
 						<Italian>Civile ha ucciso:</Italian>
@@ -822,7 +822,7 @@
 				<Key ID="STR_STATS_5">
 						<Original>Civilians killed by players:</Original>
 						<French>Civils tués par les joueurs :</French>
-						<German>Zivilisten von Spielern getoetet:</German>
+						<German>Zivilisten von Spielern getötet:</German>
 						<Spanish>Civiles asesinados por jugadores:</Spanish>
 						<Russian>Гражданских убито игроками:</Russian>
 						<Italian>Civile ucciso da:</Italian>
@@ -830,7 +830,7 @@
 				<Key ID="STR_STATS_6">
 						<Original>BLUFOR friendly fire incidents:</Original>
 						<French>Tirs fratricides BLUFOR :</French>
-						<German>BLUFOR Verbuendetenbeschuss Faelle:</German>
+						<German>BLUFOR Verbündetenbeschüsse:</German>
 						<Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
 						<Russian>BLUFOR дружественный огонь:</Russian>
 						<Italian>Fuoco amico tra i BLUFOR:</Italian>
@@ -838,7 +838,7 @@
 				<Key ID="STR_STATS_7">
 						<Original>OPFOR vehicles destroyed:</Original>
 						<French>Vehicules OPFOR détruits :</French>
-						<German>OPFOR Fahrzeuge zerstoert:</German>
+						<German>OPFOR Fahrzeuge zerstört:</German>
 						<Spanish>Vehículos OPFOR destruídos:</Spanish>
 						<Russian>OPFOR техники уничтожено:</Russian>
 						<Italian>Veicolo OPFOR distrutto:</Italian>
@@ -846,7 +846,7 @@
 				<Key ID="STR_STATS_8">
 						<Original>OPFOR vehicles destroyed by players:</Original>
 						<French>Vehicules OPFOR détruits par les joueurs :</French>
-						<German>OPFOR Fahrzeuge von Spielern zerstoert:</German>
+						<German>OPFOR Fahrzeuge von Spielern zerstört:</German>
 						<Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
 						<Russian>OPFOR техники уничтожено игроками:</Russian>
 						<Italian>Veicolo OPFOR distrutto da:</Italian>
@@ -854,7 +854,7 @@
 				<Key ID="STR_STATS_9">
 						<Original>BLUFOR vehicles destroyed:</Original>
 						<French>Vehicules BLUFOR détruits :</French>
-						<German>BLUFOR Fahrzeuge zerstoert:</German>
+						<German>BLUFOR Fahrzeuge zerstört:</German>
 						<Spanish>Vehículos BLUFOR destruídos:</Spanish>
 						<Russian>BLUFOR техники уничтожено:</Russian>
 						<Italian>Veicolo BLUFOR distrutto:</Italian>
@@ -918,7 +918,7 @@
 				<Key ID="STR_STATS_17">
 						<Original>Secondary objectives accomplished:</Original>
 						<French>Objectifs secondaires accomplis :</French>
-						<German>Sekundaerziele erreicht:</German>
+						<German>Sekundärziele erreicht:</German>
 						<Spanish>Objetivos secundarios conseguidos:</Spanish>
 						<Russian>Вторичных заданий выполнено:</Russian>
 						<Italian>Obiettivo secondario completato:</Italian>
@@ -950,7 +950,7 @@
 				<Key ID="STR_STATS_21">
 						<Original>Total combat readiness raised:</Original>
 						<French>Augmentation totale du niveau d'alerte :</French>
-						<German>Gesamte Kampfbereitschaft erhoeht:</German>
+						<German>Gesamte Kampfbereitschaft erhöht:</German>
 						<Spanish>Disposición de combate total recaudada:</Spanish>
 						<Russian>Всего войск поднято по тревоге:</Russian>
 						<Italian>Disposizione al combattimento recuperata:</Italian>
@@ -966,7 +966,7 @@
 				<Key ID="STR_STATS_23">
 						<Original>Number of Spartan 01 losses:</Original>
 						<French>Pertes de Spartan 01 :</French>
-						<German>Hoehe der Spartan 01 Verluste:</German>
+						<German>Höhe der Spartan 01 Verluste:</German>
 						<Spanish>Número de pérdidas de Spartan 01:</Spanish>
 						<Russian>Количество потерянных Spartan 01:</Russian>
 						<Italian>Numero di Spartan 01 persi :</Italian>
@@ -982,7 +982,7 @@
 				<Key ID="STR_STATS_25">
 						<Original>Rabbits killed:</Original>
 						<French>Lapins tués :</French>
-						<German>Hasen getoetet:</German>
+						<German>Hasen getötet:</German>
 						<Spanish>Conejos asesinados:</Spanish>
 						<Russian>Кроликов убито:</Russian>
 						<Italian>Conigli uccisi:</Italian>
