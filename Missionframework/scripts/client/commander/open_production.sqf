@@ -8,7 +8,7 @@ _color_neutral = [1,1,1,1];
 _color_negative = [0.9,0,0,1];
 _color_actual = _color_neutral;
 _listselect = -1;
-_selectedSector = -1;
+_selectedSector = [];
 
 disableSerialization;
 
@@ -35,6 +35,7 @@ while {dialog && (alive player)} do {
 	};
 
 	_listselect = (lbCurSel 75802);
+	waitUntil {_listselect != -1};
 	_selectedSector = +(KP_liberation_production select _listselect);
 
 	ctrlSetText [75803,(_selectedSector select 0)];

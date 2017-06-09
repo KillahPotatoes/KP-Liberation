@@ -160,6 +160,7 @@ class Missions
 
 ### 0.953
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Tweaked: Statics can now be placed inside buildings
 * Fixed: Error in production dialog due to wrong global variable
 
 ### 0.952
