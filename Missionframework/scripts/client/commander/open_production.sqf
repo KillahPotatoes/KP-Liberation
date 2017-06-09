@@ -24,7 +24,7 @@ lbClear 75802;
 ctrlMapAnimClear _mapdisplay;
 
 while {dialog && (alive player)} do {
-	if ( lbCurSel 75802 == -1 ) then {
+	if (lbCurSel 75802 == -1) then {
 		lbSetCurSel [75802,0];
 	};
 
