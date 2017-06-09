@@ -370,4 +370,4 @@ GRLIB_offload_diag = false;
 
 KP_liberation_production_interval = ceil KP_liberation_production_interval;
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", debug_source];_text remoteExec ["diag_log",2];};

@@ -1,7 +1,7 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic management started on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic management started on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while {GRLIB_endgame == 0} do {
 

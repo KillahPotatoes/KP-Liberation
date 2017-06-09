@@ -1,5 +1,7 @@
 enableSaving [ false, false ];
 
+if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
+
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\liberation_functions.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_sectors.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
@@ -36,4 +38,4 @@ if (!isDedicated && hasInterface) then {
 	setViewDistance 1600;
 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init.sqf done for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
