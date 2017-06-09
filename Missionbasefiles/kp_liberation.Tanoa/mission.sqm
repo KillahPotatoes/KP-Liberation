@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=956;
+		nextID=977;
 	};
 	class Camera
 	{
@@ -4660,7 +4660,7 @@ class Mission
 					};
 					id=542;
 					type="CamoNet_ghex_open_F";
-					atlOffset=0.0069980621;
+					atlOffset=0.0069999695;
 				};
 				class Item18
 				{
@@ -5390,7 +5390,7 @@ class Mission
 				};
 			};
 			id=589;
-			atlOffset=0.13824844;
+			atlOffset=0.13837814;
 		};
 		class Item169
 		{
@@ -6267,7 +6267,7 @@ class Mission
 				};
 			};
 			id=946;
-			atlOffset=-0.078840256;
+			atlOffset=-0.081022263;
 		};
 		class Item171
 		{
@@ -7127,7 +7127,6 @@ class Mission
 				};
 			};
 			id=1027;
-			atlOffset=-4.7683716e-007;
 		};
 		class Item174
 		{
@@ -7902,7 +7901,7 @@ class Mission
 				};
 			};
 			id=1078;
-			atlOffset=-0.45316887;
+			atlOffset=-0.45524693;
 		};
 		class Item176
 		{
@@ -8299,7 +8298,7 @@ class Mission
 				};
 			};
 			id=1555;
-			atlOffset=-0.069877625;
+			atlOffset=-0.36951447;
 		};
 		class Item181
 		{
@@ -8641,7 +8640,7 @@ class Mission
 				};
 			};
 			id=1600;
-			atlOffset=-0.017906189;
+			atlOffset=-0.22112274;
 		};
 		class Item182
 		{
@@ -9650,7 +9649,7 @@ class Mission
 				};
 			};
 			id=1663;
-			atlOffset=-0.080083847;
+			atlOffset=-0.045500278;
 		};
 		class Item184
 		{
@@ -14084,7 +14083,7 @@ class Mission
 				};
 			};
 			id=2996;
-			atlOffset=-0.11170197;
+			atlOffset=-0.10884857;
 		};
 		class Item193
 		{
@@ -14903,7 +14902,7 @@ class Mission
 				};
 			};
 			id=3143;
-			atlOffset=-0.021865845;
+			atlOffset=-0.021820068;
 		};
 		class Item195
 		{
@@ -15348,7 +15347,7 @@ class Mission
 				};
 			};
 			id=3188;
-			atlOffset=0.23161125;
+			atlOffset=0.016124725;
 		};
 		class Item197
 		{
@@ -15798,7 +15797,7 @@ class Mission
 				};
 			};
 			id=3376;
-			atlOffset=0.0095272064;
+			atlOffset=0.011102676;
 		};
 		class Item200
 		{
@@ -16070,7 +16069,7 @@ class Mission
 				};
 			};
 			id=3416;
-			atlOffset=-0.010404587;
+			atlOffset=-0.06429863;
 		};
 		class Item201
 		{
@@ -16606,7 +16605,7 @@ class Mission
 				};
 			};
 			id=3468;
-			atlOffset=-0.035411835;
+			atlOffset=-0.035364151;
 		};
 		class Item202
 		{
@@ -19725,7 +19724,7 @@ class Mission
 				};
 			};
 			id=3936;
-			atlOffset=0.21000671;
+			atlOffset=0.21257019;
 		};
 		class Item206
 		{
