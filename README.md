@@ -166,6 +166,7 @@ class Missions
 * Tweaked: Recycle of objects which won't give any resources is now always possible
 * Tweaked: Debug messages
 * Tweaked: Added the blackfish to all presets, as it was already listed to be unlockable
+* Tweaked: Again a small change at the placement of objects from the savegame
 * Fixed: Error in production dialog due to wrong global variable
 * Fixed: Last two supply_vehicle elements weren't shown in the build menu
 
