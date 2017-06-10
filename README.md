@@ -165,6 +165,7 @@ class Missions
 * Tweaked: Statics can now be placed inside buildings
 * Tweaked: Recycle of objects which won't give any resources is now always possible
 * Tweaked: Debug messages
+* Tweaked: Added the blackfish to all presets, as it was already listed to be unlockable
 * Fixed: Error in production dialog due to wrong global variable
 
 ### 0.952
