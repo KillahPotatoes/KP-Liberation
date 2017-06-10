@@ -167,6 +167,7 @@ class Missions
 * Tweaked: Debug messages
 * Tweaked: Added the blackfish to all presets, as it was already listed to be unlockable
 * Fixed: Error in production dialog due to wrong global variable
+* Fixed: Last two supply_vehicle elements weren't shown in the build menu
 
 ### 0.952
 * Added: Action to push resource crates
