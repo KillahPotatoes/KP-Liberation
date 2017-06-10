@@ -174,15 +174,18 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			if ( count _x > 3 ) then {
 				_hascrew = _x select 3;
 			};
-			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
+			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 4) == 3) then {
 				_nextbuilding setVectorUp (_x select 4);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
 			};
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 
 			if ( _nextclass in _building_classnames ) then {
 				_nextbuilding setVariable [ "GRLIB_saved_pos", _nextpos, false ];
@@ -236,16 +239,19 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextpos = _x select 1;
 			_nextdir = _x select 2;
 
-			_nextbuilding = _nextclass createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
+			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 6) == 3) then {
 				_nextbuilding setVectorUp (_x select 6);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
 			};
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 			
 			_supply = floor (_x select 3);
 			_ammo = floor (_x select 4);
@@ -311,16 +317,19 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextpos = _storage select 0;
 			_nextdir = _storage select 1;
 
-			_nextbuilding = KP_liberation_small_storage_building createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
+			_nextbuilding = createVehicle [KP_liberation_small_storage_building, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			_nextbuilding setdir _nextdir;
 			if (count (_storage select 2) == 3) then {
 				_nextbuilding setVectorUp (_storage select 2);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
 			};
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 1, true];
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 			
 			_supply = floor (_x select 9);
 			_ammo = floor (_x select 10);
