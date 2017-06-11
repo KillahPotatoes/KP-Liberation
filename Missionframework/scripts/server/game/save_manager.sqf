@@ -177,12 +177,12 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding enableSimulationGlobal false;
 			_nextbuilding allowdamage false;
-			_nextbuilding setdir _nextdir;
 			if (count (_x select 4) == 3) then {
 				_nextbuilding setVectorUp (_x select 4);
 			};
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
+			_nextbuilding setdir _nextdir;
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
@@ -242,12 +242,12 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding enableSimulationGlobal false;
 			_nextbuilding allowdamage false;
-			_nextbuilding setdir _nextdir;
 			if (count (_x select 6) == 3) then {
 				_nextbuilding setVectorUp (_x select 6);
 			};
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
+			_nextbuilding setdir _nextdir;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
 
 			_nextbuilding enableSimulationGlobal true;
@@ -320,12 +320,12 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextbuilding = createVehicle [KP_liberation_small_storage_building, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding enableSimulationGlobal false;
 			_nextbuilding allowdamage false;
-			_nextbuilding setdir _nextdir;
 			if (count (_storage select 2) == 3) then {
 				_nextbuilding setVectorUp (_storage select 2);
 			};
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
+			_nextbuilding setdir _nextdir;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 1, true];
 
 			_nextbuilding enableSimulationGlobal true;
