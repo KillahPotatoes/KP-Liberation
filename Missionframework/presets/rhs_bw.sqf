@@ -119,7 +119,10 @@ air_vehicles = [
 	["JS_JC_FA18E",1500,1750,450],										//F/A-18 E Super Hornet
 	["JS_JC_FA18F",1500,1750,450],										//F/A-18 F Super Hornet
 	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
-	["B_Plane_Fighter_01_Stealth_F",1500,1750,450]						//F/A-181 Black Wasp II (Stealth)
+	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (Stealth)
+	["B_T_VTOL_01_armed_F",750,1500,500],								//V-44 X Blackfish (Armed)
+	["B_T_VTOL_01_infantry_F",750,0,500],								//V-44 X Blackfish (Infantry)
+	["B_T_VTOL_01_vehicle_F",750,0,500]									//V-44 X Blackfish (Vehicle)
 ];
 
 static_vehicles = [
@@ -521,4 +524,4 @@ elite_vehicles = [
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, debug_source];_text remoteExec ["diag_log",2];};

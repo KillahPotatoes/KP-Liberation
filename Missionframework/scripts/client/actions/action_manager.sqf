@@ -1,5 +1,5 @@
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management initializing for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management initializing for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 private [ "_idact_build",  "_idact_arsenal", "_idact_buildfob", "_idact_redeploy", "_idact_tutorial", "_idact_squad", "_idact_commander", "_idact_production", "_idact_logistic", "_idact_repackage", "_idact_halo", "_idact_secondary", "_idact_zeus", "_idact_resources", "_idact_sectorstorage", "_idact_supplyfacility", "_idact_ammofacility", "_idact_fuelfacility", "_distfob", "_distarsenal",  "_distbuildfob", "_distspawn", "_distredeploy", "_nearest_sector", "_prod_sector"];
 
@@ -36,7 +36,7 @@ waitUntil {!isNil "one_eco_done"};
 waitUntil {one_synchro_done};
 waitUntil {one_eco_done};
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management started for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Action management started for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while { true } do {
 

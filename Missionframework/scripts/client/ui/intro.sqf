@@ -4,7 +4,7 @@ if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false 
 sleep 0.5;
 waitUntil { time > 0 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro started for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro started for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 [] spawn cinematic_camera;
 
@@ -31,4 +31,4 @@ if ( howtoplay == 0 ) then {
 };
 introDone = true;
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro ended for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro ended for: %1", debug_source];_text remoteExec ["diag_log",2];};

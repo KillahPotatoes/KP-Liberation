@@ -45,7 +45,7 @@ if ( count _allposts > 0 ) then {
 
 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning cargopost squad done at %1", time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning cargopost squad done at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};
 
 
 _spawned_units_local

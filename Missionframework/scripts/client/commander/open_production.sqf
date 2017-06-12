@@ -8,7 +8,7 @@ _color_neutral = [1,1,1,1];
 _color_negative = [0.9,0,0,1];
 _color_actual = _color_neutral;
 _listselect = -1;
-_selectedSector = -1;
+_selectedSector = [];
 
 disableSerialization;
 
@@ -24,17 +24,18 @@ lbClear 75802;
 ctrlMapAnimClear _mapdisplay;
 
 while {dialog && (alive player)} do {
-	if ( lbCurSel 75802 == -1 ) then {
+	if (lbCurSel 75802 == -1) then {
 		lbSetCurSel [75802,0];
 	};
 
 	if (saveSectorSetting == 1) then {
 		saveSectorSetting = 0;
 		[(_selectedSector select 1), new_production] remoteExec ["change_prod_remote_call",2];
-		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_logistics select _listselect)))};
+		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_production select _listselect)))};
 	};
 
 	_listselect = (lbCurSel 75802);
+	waitUntil {_listselect != -1};
 	_selectedSector = +(KP_liberation_production select _listselect);
 
 	ctrlSetText [75803,(_selectedSector select 0)];

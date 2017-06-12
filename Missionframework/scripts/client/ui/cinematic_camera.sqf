@@ -3,7 +3,7 @@ private [ "_last_transition", "_last_position", "_cinematic_camera", "_cinematic
 if ( isNil "active_sectors" ) then { active_sectors = [] };
 if ( isNil "GRLIB_all_fobs" ) then { GRLIB_all_fobs = [] };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera started for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera started for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 cinematic_camera_started = true;
 _last_transition = -1;
@@ -278,7 +278,4 @@ camDestroy _cinematic_camera;
 camUseNVG false;
 cinematic_camera_stop = true;
 
-if (KP_liberation_debug) then {
-	private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera stopped for: %1", (name player)];
-	_text remoteExec ["diag_log",2];
-};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Cinematic camera stopped for: %1", debug_source];_text remoteExec ["diag_log",2];};

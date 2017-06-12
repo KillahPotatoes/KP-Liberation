@@ -55,6 +55,6 @@ if ( !(isNull _grp)) then {
 	_everythingspawned = _everythingspawned + (units _grp);
 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning building squad at %1", time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning building squad at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};
 
 _everythingspawned

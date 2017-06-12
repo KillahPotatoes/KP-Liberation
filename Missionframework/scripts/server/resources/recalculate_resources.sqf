@@ -1,6 +1,6 @@
 waitUntil { !isNil "save_is_loaded" };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource calculation initializing on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource calculation initializing on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 private ["_local_fob_resources", "_local_supplies_global", "_local_ammo_global", "_local_fuel_global", "_local_heli_slots", "_local_plane_slots", "_local_infantry_cap", "_fob_buildings", "_heliSlots", "_planeSlots", "_hasAirBuilding", "_hasRecBuilding", "_storage_areas", "_supplyValue", "_ammoValue", "_fuelValue"];
 
@@ -16,7 +16,7 @@ please_recalculate = true;
 
 waitUntil {time > 1};
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource calculation started on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Resource calculation started on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while { true } do {
 	waitUntil { sleep 0.5; please_recalculate };

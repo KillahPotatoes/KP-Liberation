@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.952
+## Current version : 0.953
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -157,6 +157,18 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
 
 ## Changelog
+
+### 0.953
+* Added: Action to stack and sort resources in storage areas
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Updated: German localization. (umlauts)
+* Tweaked: Statics can now be placed inside buildings
+* Tweaked: Recycle of objects which won't give any resources is now always possible
+* Tweaked: Debug messages
+* Tweaked: Added the blackfish to all presets, as it was already listed to be unlockable
+* Tweaked: Again a small change at the placement of objects from the savegame
+* Fixed: Error in production dialog due to wrong global variable
+* Fixed: Last two supply_vehicle elements weren't shown in the build menu
 
 ### 0.952
 * Added: Action to push resource crates

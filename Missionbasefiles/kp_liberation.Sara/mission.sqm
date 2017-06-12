@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=296;
+		nextID=336;
 	};
 	class Camera
 	{
@@ -6181,7 +6181,7 @@ class Mission
 				};
 			};
 			id=320;
-			atlOffset=0.00016307831;
+			atlOffset=-1.335144e-005;
 		};
 		class Item151
 		{
@@ -7386,7 +7386,7 @@ class Mission
 				};
 			};
 			id=600;
-			atlOffset=0.3951273;
+			atlOffset=0.38961124;
 		};
 		class Item152
 		{
@@ -8759,6 +8759,7 @@ class Mission
 					};
 					id=918;
 					type="CamoNet_OPFOR_open_F";
+					atlOffset=-1.5258789e-005;
 				};
 				class Item78
 				{
@@ -8777,6 +8778,7 @@ class Mission
 					};
 					id=919;
 					type="CamoNet_OPFOR_open_F";
+					atlOffset=-1.5258789e-005;
 				};
 				class Item79
 				{
@@ -8850,7 +8852,7 @@ class Mission
 				};
 			};
 			id=931;
-			atlOffset=-0.20831299;
+			atlOffset=-0.19328308;
 		};
 		class Item154
 		{
@@ -8866,13 +8868,13 @@ class Mission
 		class Item155
 		{
 			dataType="Marker";
-			position[]={2883.5342,-3.7680511,2873.7952};
+			position[]={2883.5339,0,2873.7949};
 			name="capture_37";
-			text="Tiberia";
+			text="Rahmadi";
 			type="n_art";
 			colorName="ColorEAST";
 			id=933;
-			atlOffset=-20.950689;
+			atlOffset=-17.182629;
 		};
 		class Item156
 		{
@@ -9573,7 +9575,7 @@ class Mission
 				};
 			};
 			id=1323;
-			atlOffset=0.15242004;
+			atlOffset=0.032592773;
 		};
 		class Item157
 		{
@@ -9705,6 +9707,7 @@ class Mission
 					};
 					id=1333;
 					type="CamoNet_OPFOR_open_F";
+					atlOffset=-1.5258789e-005;
 				};
 				class Item7
 				{
@@ -9868,7 +9871,7 @@ class Mission
 				};
 			};
 			id=1369;
-			atlOffset=-0.20315552;
+			atlOffset=0.045791626;
 		};
 		class Item158
 		{
@@ -11535,7 +11538,7 @@ class Mission
 				};
 			};
 			id=1541;
-			atlOffset=-0.0090751648;
+			atlOffset=-0.037403107;
 		};
 		class Item162
 		{
@@ -14057,7 +14060,7 @@ class Mission
 				};
 			};
 			id=2010;
-			atlOffset=0.00089645386;
+			atlOffset=0.010597229;
 		};
 		class Item163
 		{
@@ -16733,7 +16736,7 @@ class Mission
 				};
 			};
 			id=2535;
-			atlOffset=0.060897827;
+			atlOffset=0.054595947;
 		};
 		class Item167
 		{
@@ -17543,7 +17546,7 @@ class Mission
 				};
 			};
 			id=2596;
-			atlOffset=-0.15753174;
+			atlOffset=-0.16267395;
 		};
 		class Item168
 		{
@@ -17774,6 +17777,7 @@ class Mission
 					};
 					id=2709;
 					type="CamoNet_OPFOR_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item12
 				{
@@ -17902,7 +17906,7 @@ class Mission
 				};
 			};
 			id=2733;
-			atlOffset=-0.0012769699;
+			atlOffset=7.3432922e-005;
 		};
 		class Item170
 		{
@@ -17930,7 +17934,6 @@ class Mission
 				};
 			};
 			id=2806;
-			atlOffset=-0.071690559;
 		};
 		class Item171
 		{
@@ -17993,6 +17996,7 @@ class Mission
 					};
 					id=2836;
 					type="CamoNet_OPFOR_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
@@ -18545,7 +18549,7 @@ class Mission
 				};
 			};
 			id=2963;
-			atlOffset=0.052504539;
+			atlOffset=-0.0090312958;
 		};
 		class Item173
 		{
@@ -18571,7 +18575,7 @@ class Mission
 					};
 					id=3370;
 					type="CamoNet_OPFOR_F";
-					atlOffset=0.0010004044;
+					atlOffset=0.001001358;
 				};
 				class Item1
 				{
@@ -19053,7 +19057,7 @@ class Mission
 				};
 			};
 			id=3408;
-			atlOffset=-0.018486023;
+			atlOffset=-0.018503189;
 		};
 		class Item174
 		{

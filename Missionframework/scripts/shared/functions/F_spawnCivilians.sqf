@@ -26,6 +26,6 @@ while { _idx < _nbcivs } do {
 	_idx = _idx + 1;
 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning civilians at %1", time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning civilians at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};
 
 _createdcivs
