@@ -159,6 +159,7 @@ class Missions
 ## Changelog
 
 ### 0.954
+* Tweaked: Production dialog list entries are now color coded depending on the actual production
 * Fixed: UAVs counted to heli / plane count concerning used slots
 
 ### 0.953
