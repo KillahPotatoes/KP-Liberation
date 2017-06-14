@@ -161,6 +161,7 @@ class Missions
 ### 0.954
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
 * Fixed: UAVs counted to heli / plane count concerning used slots
+* Fixed: SDV was missing in the boats array to be able to place it on water
 
 ### 0.953
 * Added: Action to stack and sort resources in storage areas
