@@ -296,6 +296,7 @@ boats_names = [
 	"B_Boat_Armed_01_minigun_F",
 	"B_T_Boat_Transport_01_F",
 	"B_T_Boat_Armed_01_minigun_F",
+	"B_SDV_01_F",
 	"O_Boat_Transport_01_F",
 	"O_Boat_Armed_01_hmg_F",
 	"O_T_Boat_Transport_01_F",
