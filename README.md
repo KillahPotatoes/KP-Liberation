@@ -158,6 +158,9 @@ class Missions
 
 ## Changelog
 
+### 0.954
+* Fixed: UAVs counted to heli / plane count concerning used slots
+
 ### 0.953
 * Added: Action to stack and sort resources in storage areas
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
