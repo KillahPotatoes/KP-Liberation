@@ -160,7 +160,7 @@ class Missions
 
 ### 0.954
 * Added: Some small aesthetic things for the buildlist
-* Added: Transport configs for the unarmed blackfish variants. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Added: Transport configs for the unarmed Blackfish variants (can hold 5 crates). Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
 * Fixed: UAVs counted to heli / plane count concerning used slots
 * Fixed: SDV was missing in the boats array to be able to place it on water
