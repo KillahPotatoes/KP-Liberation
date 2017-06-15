@@ -154,12 +154,13 @@ class Missions
 ```
 
 ## Media
-[![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
+[![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
 
 ### 0.954
 * Added: Some small aesthetic things for the buildlist
+* Added: Transport configs for the unarmed blackfish variants. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
 * Fixed: UAVs counted to heli / plane count concerning used slots
 * Fixed: SDV was missing in the boats array to be able to place it on water
