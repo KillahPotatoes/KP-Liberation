@@ -186,7 +186,7 @@ buildings = [
 	["Land_HBarrier_1_F",0,0,0],
 	["Land_HBarrier_3_F",0,0,0],
 	["Land_HBarrier_5_F",0,0,0],
-	["Land_HBarrierBig_F",0,0,0],
+	["Land_HBarrier_Big_F",0,0,0],
 	["Land_HBarrierWall4_F",0,0,0],
 	["Land_HBarrierWall6_F",0,0,0],
 	["Land_HBarrierWall_corner_F",0,0,0],
