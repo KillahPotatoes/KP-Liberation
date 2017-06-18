@@ -164,6 +164,7 @@ class Missions
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
 * Tweaked: Small changes in the save_manager.sqf concerning object placement
 * Tweaked: Raised the default production interval a little bit
+* Tweaked: Updated ACE serverside settings
 * Fixed: UAVs counted to heli / plane count concerning used slots
 * Fixed: SDV was missing in the boats array to be able to place it on water
 * Fixed: H-Barrier classname changed from the protected to the public one
