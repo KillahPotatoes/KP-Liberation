@@ -1,3 +1,8 @@
+class ace_medical_blood_enabledFor {
+    value = 2;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_common_forceAllSettings {
     value = 0;
     typeName = "BOOL";
@@ -23,6 +28,21 @@ class ace_cookoff_enable {
     typeName = "BOOL";
     force = 1;
 };
+class ace_cookoff_enableAmmobox {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_cookoff_enableAmmoCookoff {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_cookoff_ammoCookoffDuration {
+    value = 1;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_finger_enabled {
     value = 1;
     typeName = "BOOL";
@@ -39,12 +59,12 @@ class ace_frag_enabled {
     force = 1;
 };
 class ace_frag_spallEnabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_frag_reflectionsEnabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -114,13 +134,18 @@ class ace_interact_menu_addBuildingActions {
     force = 1;
 };
 class ace_interaction_enableTeamManagement {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_interaction_enableMagazinePassing {
     value = 1;
     typeName = "BOOL";
+    force = 1;
+};
+class ace_laser_dispersionCount {
+    value = 2;
+    typeName = "SCALAR";
     force = 1;
 };
 class ace_laserpointer_enabled {
@@ -560,6 +585,11 @@ class ace_overheating_enabled {
     typeName = "BOOL";
     force = 1;
 };
+class ace_overpressure_distanceCoefficient {
+    value = 1;
+    typeName = "SCALAR";
+    force = 1;
+};
 // Logistik Beginn
 class ace_rearm_level {
     value = 2; // 0 = Ganzes Fahrzeug, 1 = Ganzes Magazin, 2 = Kaliberbasiert
@@ -567,7 +597,7 @@ class ace_rearm_level {
     force = 1;
 };
 class ace_refuel_rate {
-    value = 4;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -637,7 +667,47 @@ class ace_respawn_bodyRemoveTimer {
     typeName = "SCALAR";
     force = 1;
 };
-class ace_sitting_enable {
+class ace_scopes_enabled {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_scopes_forceUseOfAdjustmentTurrets {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_scopes_correctZeroing {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_scopes_overwriteZeroRange {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_scopes_defaultZeroRange {
+    value = 100;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_scopes_zeroReferenceTemperature {
+    value = 15;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_scopes_zeroReferenceBarometricPressure {
+    value = 1013.25;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_scopes_zeroReferenceHumidity {
+    value = 0.5;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_scopes_deduceBarometricPressureFromTerrainAltitude {
     value = 0;
     typeName = "BOOL";
     force = 1;
@@ -1143,7 +1213,7 @@ class ace_advanced_ballistics_bulletTraceEnabled {
     force = 1;
 };
 class ace_advanced_ballistics_simulationInterval {
-    value = 0;
+    value = 0.05;
     typeName = "SCALAR";
     force = 1;
 };

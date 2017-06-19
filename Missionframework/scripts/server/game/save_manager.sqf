@@ -177,18 +177,19 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding enableSimulationGlobal false;
 			_nextbuilding allowdamage false;
-			if (count (_x select 4) == 3) then {
-				_nextbuilding setVectorUp (_x select 4);
-			};
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
 			_nextbuilding setdir _nextdir;
+			if (count (_x select 4) == 3) then {
+				_nextbuilding setVectorUp (_x select 4);
+				_nextbuilding setVariable ["KP_saved_vec", (_x select 4), false];
+			};
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
 
 			if ( _nextclass in _building_classnames ) then {
-				_nextbuilding setVariable [ "GRLIB_saved_pos", _nextpos, false ];
+				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 			};
 
 			if ( _hascrew ) then {
@@ -242,13 +243,15 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding enableSimulationGlobal false;
 			_nextbuilding allowdamage false;
-			if (count (_x select 6) == 3) then {
-				_nextbuilding setVectorUp (_x select 6);
-			};
 			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
 			_nextbuilding setdir _nextdir;
+			if (count (_x select 6) == 3) then {
+				_nextbuilding setVectorUp (_x select 6);
+				_nextbuilding setVariable ["KP_saved_vec", (_x select 6), false];
+			};
 			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
+			_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
@@ -500,10 +503,10 @@ while { true } do {
 			private _savedvec = [];
 
 			if ( (typeof _x) in _building_classnames ) then {
-				_savedpos = _x getVariable [ "GRLIB_saved_pos", [] ];
+				_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 				_savedvec = _x getVariable ["KP_saved_vec", []];
 				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-					_x setVariable [ "GRLIB_saved_pos", getPosATL _x, false ];
+					_x setVariable ["GRLIB_saved_pos", getPosATL _x, false];
 					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
 					_savedpos = getPosATL _x;
 					_savedvec = vectorUpVisual _x;

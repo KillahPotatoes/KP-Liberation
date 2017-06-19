@@ -25,7 +25,7 @@ while {true} do {
 			_truck_load = _next_truck getVariable ["GRLIB_ammo_truck_load", 0];
 
 			if (!(_next_truck in _managed_trucks) && (_truck_load > 0)) then {
-					_action_id = _next_truck addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_BOX" + "</t>","scripts\client\ammoboxes\do_unload_truck.sqf","",-500,true,true,"","build_confirmed == 0 && (_this distance _target < 7) && (vehicle player == player)"];
+					_action_id = _next_truck addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_BOX" + "</t>","scripts\client\ammoboxes\do_unload_truck.sqf","",-500,true,true,"","build_confirmed == 0 && (_this distance _target < 8) && (vehicle player == player)"];
 					_next_truck setVariable [ "GRLIB_ammo_truck_action", _action_id, false ];
 					_managed_trucks pushback _next_truck;
 			};

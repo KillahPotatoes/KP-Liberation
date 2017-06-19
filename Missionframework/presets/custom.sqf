@@ -97,6 +97,7 @@ light_vehicles = [
 heavy_vehicles = [
 	["rhsusf_m113_usarmy",200,40,100],									//M113A3 (M2)
 	["rhsusf_m113_usarmy_MK19",200,60,100],								//M113A3 (Mk19)
+	["rhsusf_m113_usarmy_medical",200,0,100],							//M113A3 (Medical)
 	["B_APC_Wheeled_01_cannon_F",200,75,125],							//AMV-7 Marshall
 	["I_APC_Wheeled_03_cannon_F",200,75,125],							//AFV-4 Gorgon
 	["B_APC_Tracked_01_rcws_F",300,100,150],							//IFV-6c Panther
@@ -192,6 +193,7 @@ buildings = [
 	["Land_LampStreet_small_F",0,0,0],
 	["Land_LampAirport_F",0,0,0],
 	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadRescue_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
 	["PortableHelipadLight_01_red_F",0,0,0],
@@ -228,7 +230,7 @@ buildings = [
 	["Land_HBarrier_1_F",0,0,0],
 	["Land_HBarrier_3_F",0,0,0],
 	["Land_HBarrier_5_F",0,0,0],
-	["Land_HBarrierBig_F",0,0,0],
+	["Land_HBarrier_Big_F",0,0,0],
 	["Land_HBarrierWall4_F",0,0,0],
 	["Land_HBarrierWall6_F",0,0,0],
 	["Land_HBarrierWall_corner_F",0,0,0],
@@ -250,7 +252,7 @@ buildings = [
 
 support_vehicles = [
 	[Arsenal_typename,100,200,0],
-	[Respawn_truck_typename,200,0,75],
+	[Respawn_truck_typename,200,0,100],
 	[FOB_box_typename,300,500,0],
 	[FOB_truck_typename,300,500,75],
 	[KP_liberation_small_storage_building,0,0,0],

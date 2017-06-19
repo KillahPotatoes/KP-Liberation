@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.953
+## Current version : 0.954
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -154,9 +154,20 @@ class Missions
 ```
 
 ## Media
-[![Gameplay](http://img.youtube.com/vi/hFQIi5qk8gs/0.jpg)](http://www.youtube.com/watch?v=hFQIi5qk8gs)
+[![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.954
+* Added: Some small aesthetic things for the buildlist
+* Added: Transport configs for the unarmed Blackfish variants (can hold 5 crates). Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: Production dialog list entries are now color coded depending on the actual production
+* Tweaked: Small changes in the save_manager.sqf concerning object placement
+* Tweaked: Raised the default production interval a little bit
+* Tweaked: Updated ACE serverside settings
+* Fixed: UAVs counted to heli / plane count concerning used slots
+* Fixed: SDV was missing in the boats array to be able to place it on water
+* Fixed: H-Barrier classname changed from the protected to the public one
 
 ### 0.953
 * Added: Action to stack and sort resources in storage areas

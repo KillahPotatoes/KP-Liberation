@@ -150,6 +150,7 @@ buildings = [
 	["Land_LampStreet_small_F",0,0,0],
 	["Land_LampAirport_F",0,0,0],
 	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadRescue_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
 	["PortableHelipadLight_01_red_F",0,0,0],
@@ -186,7 +187,7 @@ buildings = [
 	["Land_HBarrier_1_F",0,0,0],
 	["Land_HBarrier_3_F",0,0,0],
 	["Land_HBarrier_5_F",0,0,0],
-	["Land_HBarrierBig_F",0,0,0],
+	["Land_HBarrier_Big_F",0,0,0],
 	["Land_HBarrierWall4_F",0,0,0],
 	["Land_HBarrierWall6_F",0,0,0],
 	["Land_HBarrierWall_corner_F",0,0,0],
@@ -208,7 +209,7 @@ buildings = [
 
 support_vehicles = [
 	[Arsenal_typename,100,200,0],
-	[Respawn_truck_typename,200,0,75],
+	[Respawn_truck_typename,200,0,100],
 	[FOB_box_typename,300,500,0],
 	[FOB_truck_typename,300,500,75],
 	[KP_liberation_small_storage_building,0,0,0],
