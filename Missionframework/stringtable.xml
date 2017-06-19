@@ -8,16 +8,16 @@
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.954dev</Original>
-						<German>KP Liberation v0.954dev</German>
-						<Spanish>KP Liberation v0.954dev</Spanish>
-						<Italian>KP Liberation v0.954dev</Italian>
+						<Original>KP Liberation v0.954</Original>
+						<German>KP Liberation v0.954</German>
+						<Spanish>KP Liberation v0.954</Spanish>
+						<Italian>KP Liberation v0.954</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.954dev</Original>
-						<German>v0.954dev</German>
-						<Spanish>v0.954dev</Spanish>
-						<Italian>v0.954dev</Italian>
+						<Original>v0.954</Original>
+						<German>v0.954</German>
+						<Spanish>v0.954</Spanish>
+						<Italian>v0.954</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
