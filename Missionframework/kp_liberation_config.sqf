@@ -6,8 +6,10 @@ CONFIG FILE FOR KP LIBERATION
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"B_T_Truck_01_medical_F",
+	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
-	"RHS_UH60M_MEV2"
+	"RHS_UH60M_MEV2",
+	"RHS_UH60M_MEV2_d"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
