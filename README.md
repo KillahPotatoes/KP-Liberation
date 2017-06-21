@@ -161,6 +161,7 @@ class Missions
 ### 0.955
 * Added: Some small aesthetic things for the buildlist
 * Fixed: Production and Logistic Overview wasn't usable in normal UI scale
+* Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
 ### 0.954
 * Added: Some small aesthetic things for the buildlist
