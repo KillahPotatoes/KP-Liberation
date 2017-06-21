@@ -173,6 +173,7 @@ buildings = [
 	["Flag_NATO_F",0,0,0],
 	["Flag_US_F",0,0,0],
 	["BWA3_Flag_Ger_F",0,0,0],
+	["Flag_UK_F",0,0,0],
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],

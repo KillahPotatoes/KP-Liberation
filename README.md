@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.954
+## Current version : 0.955
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -157,6 +157,10 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.955
+* Added: Some small aesthetic things for the buildlist
+* Fixed: Production and Logistic Overview wasn't usable in normal UI scale
 
 ### 0.954
 * Added: Some small aesthetic things for the buildlist
