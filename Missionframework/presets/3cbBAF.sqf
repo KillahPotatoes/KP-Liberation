@@ -428,9 +428,7 @@ opfor_battlegroup_vehicles = [
 	"RHS_Mi24P_AT_vvsc",												//Mi-24P (AT)
 	"RHS_Mi24V_AT_vvsc",												//Mi-24V (AT)
 	"RHS_Mi8mt_Cargo_vvsc",												//Mi-8MT (Cargo)
-	"RHS_Ka52_vvsc",													//Ka-52
-	"RHS_Su25SM_vvsc",													//Su-25
-	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
+	"RHS_Ka52_vvsc"														//Ka-52
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).

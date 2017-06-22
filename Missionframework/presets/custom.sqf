@@ -459,9 +459,7 @@ opfor_battlegroup_vehicles = [
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
-	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
-	"O_Plane_Fighter_02_F"												//To-201 Shikra	
+	"O_Heli_Attack_02_dynamicLoadout_F"									//Mi-48 Kajman
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).

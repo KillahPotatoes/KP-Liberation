@@ -161,6 +161,7 @@ class Missions
 ### 0.955
 * Added: Some small aesthetic things for the buildlist
 * Added: Exception for TFAR items from the 1.0 Beta (it's TFAR_ and not tf_ in the classnames there)
+* Tweaked: Jets removed from battlegroups, so they won't spawn on the ground. But they still appear on high awareness.
 * Fixed: Production and Logistic Overview wasn't usable in normal UI scale
 * Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
