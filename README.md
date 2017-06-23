@@ -163,7 +163,8 @@ class Missions
 * Added: Exception for TFAR items from the 1.0 Beta (it's TFAR_ and not tf_ in the classnames there)
 * Added: Malden missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Updated: German tutorial texts. Thanks to [madpat3](https://github.com/madpat3)
-* Tweaked: Jets removed from battlegroups, so they won't spawn on the ground. But they still appear on high awareness.
+* Tweaked: Jets removed from battlegroups, so they won't spawn on the ground. But they still appear on high awareness
+* Tweaked: Recycle action code, changed from `distance` to `distance2D` to prevent issues with buildings like the airport lamp
 * Fixed: Production and Logistic Overview wasn't usable in normal UI scale
 * Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
