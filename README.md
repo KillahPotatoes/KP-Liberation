@@ -160,7 +160,7 @@ class Missions
 
 ## Changelog
 
-### 0.955
+### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
 * Added: Exception for TFAR items from the 1.0 Beta (it's TFAR_ and not tf_ in the classnames there)
 * Added: Malden missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie)
@@ -171,7 +171,7 @@ class Missions
 * Fixed: Production and Logistic Overview wasn't usable in normal UI scale
 * Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
-### 0.954
+### 0.954 (19th June 2017)
 * Added: Some small aesthetic things for the buildlist
 * Added: Transport configs for the unarmed Blackfish variants (can hold 5 crates). Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
@@ -182,7 +182,7 @@ class Missions
 * Fixed: SDV was missing in the boats array to be able to place it on water
 * Fixed: H-Barrier classname changed from the protected to the public one
 
-### 0.953
+### 0.953 (12th June 2017)
 * Added: Action to stack and sort resources in storage areas
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: German localization. (umlauts)
@@ -194,7 +194,7 @@ class Missions
 * Fixed: Error in production dialog due to wrong global variable
 * Fixed: Last two supply_vehicle elements weren't shown in the build menu
 
-### 0.952
+### 0.952 (4th June 2017)
 * Added: Action to push resource crates
 * Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: Some more vehicles from RHS to the presets
@@ -210,7 +210,7 @@ class Missions
 * Fixed: Start vehicles were spawning with items in the inventory
 * Fixed: Sometimes you couldn't slingload crates which were unloaded from a storage
 
-### 0.951
+### 0.951 (28th May 2017)
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
 * Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf` (no restriction not recommended)
@@ -241,7 +241,7 @@ class Missions
 * Fixed: Exploit of build menu if UI was set to show global resources
 * Fixed: Build menu reloads constantly
 
-### 0.95
+### 0.95 (22th May 2017)
 * Added: New resource system
 * Added: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Action to change alignment (up or terrain aligned) during placement of buildings
@@ -300,7 +300,7 @@ class Missions
 * Fixed: Slingloading while transport crates inside a helicopter causes the helicopter to slingload the loaded crates inside
 * Fixed: Some buildable paratroopers from some presets don't had a parachute
 
-### 0.94
+### 0.94 (20th March 2017)
 * Added: Tanoa missionfile and vanilla apex preset
 * Added: Custom made Chimera Base for Tanoa. Thanks to [jus61](https://github.com/jus61) for building it
 * Added: X-Cam-Taunus missionfile
@@ -315,6 +315,7 @@ class Missions
 	* RHS USAF with ACE3 and ACRE2
 * Removed: Dependencies on Takistan missionfile
 * Removed: Apex dependencies on Chernarus missionfile (custom chimera base had two apex rocks)
+* Removed: Apex dependencies on Taunus missionfile
 * Replaced: Old hostile markers (exclamation marks) with a unit count sensitive area marking system
 * Tweaked: Presets
 	* custom.sqf is now default (vanilla is a kind of legacy now)
@@ -324,7 +325,7 @@ class Missions
 * Fixed: Custom flag texture not applied after savegame load
 * Fixed: Mapmarker disable won't work
 
-### 0.931
+### 0.931 (10th March 2017)
 * Added: Takistan Missionfile
 * Added: Chernarus Missionfile
 * Added: RHS Takistan Classnames Preset (desert camo)
@@ -333,7 +334,7 @@ class Missions
 * Fixed: BI Revive Error
 * Fixed: Starting game with a prebuild FOB caused errors on Takistan
 
-### 0.93
+### 0.93 (7th March 2017)
 * Added: kp_liberation_config.sqf with some additional config values
 * Added: ACE support
 * Added: Fuel consumption script
