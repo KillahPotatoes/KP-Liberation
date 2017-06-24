@@ -173,6 +173,7 @@ buildings = [
 	["Flag_NATO_F",0,0,0],
 	["Flag_US_F",0,0,0],
 	["BWA3_Flag_Ger_F",0,0,0],
+	["Flag_UK_F",0,0,0],
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
@@ -455,8 +456,6 @@ opfor_battlegroup_vehicles = [
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
 	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
-	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
-	"O_Plane_Fighter_02_F",												//To-201 Shikra
 	"O_T_VTOL_02_infantry_dynamicLoadout_F"								//Y-32 Xi'an (Infantry)
 ];
 

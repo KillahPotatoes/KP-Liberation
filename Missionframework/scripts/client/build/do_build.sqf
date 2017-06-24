@@ -325,6 +325,12 @@ while { true } do {
 				if (_classname in KP_liberation_medical_vehicles) then {
 					_vehicle setVariable ["ace_medical_medicClass", 1, true];
 				};
+
+				if (_classname == "Land_HelipadSquare_F" || _classname == "Land_HelipadCircle_F" || _classname == "Land_HelipadRescue_F") then {
+					{
+						[_x,[[_vehicle],true]] remoteExec ["addCuratorEditableObjects",2];
+					} forEach allCurators;
+				};
 				
 				sleep 0.3;
 				_vehicle allowDamage true;

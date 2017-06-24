@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.954
+## Current version : 0.955
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -157,6 +157,17 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.955
+* Added: Some small aesthetic things for the buildlist
+* Added: Exception for TFAR items from the 1.0 Beta (it's TFAR_ and not tf_ in the classnames there)
+* Added: Malden missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Updated: German tutorial texts. Thanks to [madpat3](https://github.com/madpat3)
+* Tweaked: Jets removed from battlegroups, so they won't spawn on the ground. But they still appear on high awareness
+* Tweaked: Recycle action code, changed from `distance` to `distance2D` to prevent issues with buildings like the airport lamp
+* Tweaked: Helipads are now added to Zeus, so the commander can delete them, as they can't be recycled normally
+* Fixed: Production and Logistic Overview wasn't usable in normal UI scale
+* Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
 ### 0.954
 * Added: Some small aesthetic things for the buildlist
