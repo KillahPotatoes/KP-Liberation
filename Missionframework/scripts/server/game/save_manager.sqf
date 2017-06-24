@@ -226,6 +226,12 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				clearBackpackCargoGlobal _nextbuilding;
 				clearItemCargoGlobal _nextbuilding;
 			};
+
+			if (_nextclass == "Land_HelipadSquare_F" || _nextclass == "Land_HelipadCircle_F" || _nextclass == "Land_HelipadRescue_F") then {
+				{
+					_x addCuratorEditableObjects [[_nextbuilding],true];
+				} forEach allCurators;
+			};
 		};
 
 	} foreach buildings_to_save;
