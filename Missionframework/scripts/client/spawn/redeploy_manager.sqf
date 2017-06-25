@@ -26,10 +26,7 @@ while { true } do {
 		( GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50) ) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
-	if (KP_liberation_debug) then {
-		private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", (name player)];
-		_text remoteExec ["diag_log",2];
-	};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	fullmap = 0;
 	_old_fullmap = 0;
@@ -196,11 +193,11 @@ while { true } do {
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
-		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
+		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1) || ((_x find "TFAR_") != -1)} count _playerItems) != count _playerItems) then {
 			_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 			_text remoteExec ["diag_log",2];
 			_badItems = "";
-			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
+			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1) && ((_x find "TFAR_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
 			hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
 			removeAllWeapons player;
 			removeAllItems player;

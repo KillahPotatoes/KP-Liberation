@@ -1,17 +1,6 @@
 # KP Liberation ALiVE Integration
 
-
-
-
-
-
-
-
-
-
-
-
-
+## Current version : 0.955
 
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png) ![ALiVE](http://alivemod.com/img/home_logo.png)
 
@@ -53,7 +42,6 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark wi
 ## Needed Mods
 This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
-
 * Takistan
 	* [ALiVE](http://alivemod.com/#Download)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
@@ -140,6 +128,10 @@ class Missions
 
 ## Changelog
 
+### 0.955
+* TODO: // FILL ME IN!
+
 ### 0.952.01
 * Added: ALiVE Support Module integration with Transport Helicopter (Ghost Hawk) and Artillery Position (M109A6 x3). Requires Banana for Support Menu Access
 * Added: CAS Module testing
+

@@ -1,4 +1,4 @@
-private ["_dialog", "_color_positive", "_color_neutral", "_color_negative", "_color_actual", "_sectorType", "_storage", "_crateCount", "_crateMax", "_producing", "_storagespace", "_productiontime", "_saveChanges", "_listselect", "_selectedSector", "_mapdisplay", "_supplyValue", "_ammoValue", "_fuelValue"];
+private ["_dialog", "_color_positive", "_color_neutral", "_color_negative", "_color_actual", "_sectorType", "_storage", "_crateCount", "_crateMax", "_producing", "_storagespace", "_productiontime", "_saveChanges", "_listselect", "_listcolor", "_selectedSector", "_mapdisplay", "_supplyValue", "_ammoValue", "_fuelValue"];
 
 _dialog = createDialog "liberation_production";
 saveSectorSetting = 0;
@@ -8,7 +8,8 @@ _color_neutral = [1,1,1,1];
 _color_negative = [0.9,0,0,1];
 _color_actual = _color_neutral;
 _listselect = -1;
-_selectedSector = -1;
+_listcolor = [1,1,1,1];
+_selectedSector = [];
 
 disableSerialization;
 
@@ -24,17 +25,37 @@ lbClear 75802;
 ctrlMapAnimClear _mapdisplay;
 
 while {dialog && (alive player)} do {
-	if ( lbCurSel 75802 == -1 ) then {
+	if (lbCurSel 75802 == -1) then {
 		lbSetCurSel [75802,0];
 	};
 
 	if (saveSectorSetting == 1) then {
 		saveSectorSetting = 0;
 		[(_selectedSector select 1), new_production] remoteExec ["change_prod_remote_call",2];
-		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_logistics select _listselect)))};
+		waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_production select _listselect)))};
 	};
 
+	_listselect = -1;
+
+	{
+		_listselect = _listselect + 1;
+
+		if ((count (_x select 3)) > 0) then {
+			switch (_x select 7) do {
+				case 1: {_listcolor = [0.75,0,0,1];};
+				case 2: {_listcolor = [0.75,0.75,0,1];};
+				case 3: {_listcolor = [1,1,1,1];};
+				default {_listcolor = [0,0.75,0,1];};
+			};
+		} else {
+			_listcolor = [0.6,0.6,0.6,0.8];
+		};
+
+		lbSetColor [75802, _listselect, _listcolor];
+	} forEach KP_liberation_production;
+
 	_listselect = (lbCurSel 75802);
+	waitUntil {_listselect == (lbCurSel 75802)};
 	_selectedSector = +(KP_liberation_production select _listselect);
 
 	ctrlSetText [75803,(_selectedSector select 0)];

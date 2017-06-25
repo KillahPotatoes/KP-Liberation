@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=889;
+		nextID=898;
 	};
 	class Camera
 	{
@@ -13054,7 +13054,7 @@ class Mission
 			dataType="Layer";
 			name="Check Point (Small)";
 			id=5648;
-			atlOffset=-0.0033812523;
+			atlOffset=185.97;
 		};
 		class Item471
 		{

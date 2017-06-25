@@ -31,7 +31,7 @@ if (((typeOf _vehtorecycle) in _building_classnames) || ((typeOf _vehtorecycle) 
 	_ammoMulti = _currentAmmo/_allAmmo;
 	_fuelMulti = fuel _vehtorecycle;
 
-	if (((typeOf _vehtorecycle) == "B_Boat_Transport_01_F") || ((typeOf _vehtorecycle) == "B_SDV_01_F") || ((typeOf _vehtorecycle) == "B_Boat_Armed_01_minigun_F")) then {
+	if ((typeOf _vehtorecycle) in boats_names) then {
 		_suppMulti = (((_vehtorecycle getHitPointDamage "HitEngine") - 1) * -1);
 	};
 };
@@ -80,7 +80,7 @@ if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 	
 	_nearfob = [] call F_getNearestFob;
 
-	if (!(KP_liberation_recycle_building_near)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
+	if (!(KP_liberation_recycle_building_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 
 	_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 

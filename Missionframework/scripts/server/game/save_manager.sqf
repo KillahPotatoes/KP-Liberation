@@ -2,12 +2,12 @@ if ( !(isNil "GRLIB_param_wipe_savegame_1") && !(isNil "GRLIB_param_wipe_savegam
 	if ( GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1 ) then {
 		profileNamespace setVariable [ GRLIB_save_key,nil ];
 		saveProfileNamespace;
-		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save wiped by: %1", (name player)];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save wiped by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	} else {
-		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] No save wipe for: %1", (name player)];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] No save wipe for: %1", debug_source];_text remoteExec ["diag_log",2];};
 	};
 } else {
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Wipe params where nil for: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Wipe params where nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
 };
 
 date_year = date select 0;
@@ -174,18 +174,22 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			if ( count _x > 3 ) then {
 				_hascrew = _x select 3;
 			};
-			_nextbuilding = _nextclass createVehicle _nextpos;
+			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setdamage 0;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 4) == 3) then {
 				_nextbuilding setVectorUp (_x select 4);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
+				_nextbuilding setVariable ["KP_saved_vec", (_x select 4), false];
 			};
-			_nextbuilding setdamage 0;
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 
 			if ( _nextclass in _building_classnames ) then {
-				_nextbuilding setVariable [ "GRLIB_saved_pos", _nextpos, false ];
+				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 			};
 
 			if ( _hascrew ) then {
@@ -222,11 +226,17 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				clearBackpackCargoGlobal _nextbuilding;
 				clearItemCargoGlobal _nextbuilding;
 			};
+
+			if (_nextclass == "Land_HelipadSquare_F" || _nextclass == "Land_HelipadCircle_F" || _nextclass == "Land_HelipadRescue_F") then {
+				{
+					_x addCuratorEditableObjects [[_nextbuilding],true];
+				} forEach allCurators;
+			};
 		};
 
 	} foreach buildings_to_save;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved buildings placed by: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved buildings placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	
 	{
 		_nextclass = _x select 0;
@@ -236,16 +246,21 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextpos = _x select 1;
 			_nextdir = _x select 2;
 
-			_nextbuilding = _nextclass createVehicle _nextpos;
+			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			_nextbuilding setPosATL _nextpos;
+			_nextbuilding setdamage 0;
 			_nextbuilding setdir _nextdir;
 			if (count (_x select 6) == 3) then {
 				_nextbuilding setVectorUp (_x select 6);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
+				_nextbuilding setVariable ["KP_saved_vec", (_x select 6), false];
 			};
-			_nextbuilding setdamage 0;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
+			_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 			
 			_supply = floor (_x select 3);
 			_ammo = floor (_x select 4);
@@ -301,7 +316,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 	} forEach KP_liberation_storages;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved storages placed by: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	{
 		private ["_storage"];
@@ -311,16 +326,19 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			_nextpos = _storage select 0;
 			_nextdir = _storage select 1;
 
-			_nextbuilding = KP_liberation_small_storage_building createVehicle _nextpos;
-			_nextbuilding setPosATL _nextpos;
-			_nextbuilding setdir _nextdir;
+			_nextbuilding = createVehicle [KP_liberation_small_storage_building, _nextpos, [], 0, "CAN_COLLIDE"];
+			_nextbuilding enableSimulationGlobal false;
+			_nextbuilding allowdamage false;
 			if (count (_storage select 2) == 3) then {
 				_nextbuilding setVectorUp (_storage select 2);
-			} else {
-				_nextbuilding setVectorUp [0,0,1];
 			};
+			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdamage 0;
+			_nextbuilding setdir _nextdir;
 			_nextbuilding setVariable ["KP_liberation_storage_type", 1, true];
+
+			_nextbuilding enableSimulationGlobal true;
+			_nextbuilding allowdamage true;
 			
 			_supply = floor (_x select 9);
 			_ammo = floor (_x select 10);
@@ -376,7 +394,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 	} forEach KP_liberation_production;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved sector storages placed by: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved sector storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	
 	{
 		private [ "_nextgroup", "_grp" ];
@@ -395,9 +413,9 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		} foreach _nextgroup;
 	} foreach ai_groups;
 
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save loading finished by: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save loading finished by: %1", debug_source];_text remoteExec ["diag_log",2];};
 } else {
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save nil for: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
 };
 
 publicVariable "blufor_sectors";
@@ -427,7 +445,7 @@ publicVariable "GRLIB_vehicle_to_military_base_links";
 publicVariable "GRLIB_permissions";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] save_manager.sqf done for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] save_manager.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while { true } do {
 	waitUntil {
@@ -491,10 +509,10 @@ while { true } do {
 			private _savedvec = [];
 
 			if ( (typeof _x) in _building_classnames ) then {
-				_savedpos = _x getVariable [ "GRLIB_saved_pos", [] ];
+				_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 				_savedvec = _x getVariable ["KP_saved_vec", []];
 				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-					_x setVariable [ "GRLIB_saved_pos", getPosATL _x, false ];
+					_x setVariable ["GRLIB_saved_pos", getPosATL _x, false];
 					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
 					_savedpos = getPosATL _x;
 					_savedvec = vectorUpVisual _x;

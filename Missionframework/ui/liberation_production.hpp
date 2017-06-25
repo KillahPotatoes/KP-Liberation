@@ -101,7 +101,7 @@ class liberation_production {
 	class SectorTypeLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (2 * ICONE_SPACY);
+		y = (0.23 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_TYPE;
@@ -117,7 +117,7 @@ class liberation_production {
 	class SectorProdLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (4 * ICONE_SPACY);
+		y = (0.26 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_PRODUCING;
@@ -133,7 +133,7 @@ class liberation_production {
 	class SectorStorageLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (6 * ICONE_SPACY);
+		y = (0.29 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_STORAGE;
@@ -149,7 +149,7 @@ class liberation_production {
 	class SectorTimerLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (8 * ICONE_SPACY);
+		y = (0.32 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_TIMER;
@@ -167,7 +167,7 @@ class liberation_production {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (12 * ICONE_SPACY);
+		y = (0.37 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_FACILITIES;
@@ -176,7 +176,7 @@ class liberation_production {
 		idc = 75808;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (14 * ICONE_SPACY);
+		y = (0.4 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_MANPOWER;
@@ -185,7 +185,7 @@ class liberation_production {
 		idc = 75809;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (16 * ICONE_SPACY);
+		y = (0.43 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_AMMO;
@@ -194,7 +194,7 @@ class liberation_production {
 		idc = 758010;
 		style = ST_CENTER;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (18 * ICONE_SPACY);
+		y = (0.46 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_FUEL;
@@ -205,7 +205,7 @@ class liberation_production {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (22 * ICONE_SPACY);
+		y = (0.51 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_STORAGEDETAIL;
@@ -214,7 +214,7 @@ class liberation_production {
 	class StorageSupplyLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (24 * ICONE_SPACY);
+		y = (0.54 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_MANPOWER;
@@ -230,7 +230,7 @@ class liberation_production {
 	class StorageAmmoLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (26 * ICONE_SPACY);
+		y = (0.57 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_AMMO;
@@ -246,7 +246,7 @@ class liberation_production {
 	class StorageFuelLabel : StdText {
 		idc = -1;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		y = (0.6 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_FUEL;
@@ -264,7 +264,7 @@ class liberation_production {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (32 * ICONE_SPACY);
+		y = (0.65 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_PRODUCE;
@@ -284,7 +284,7 @@ class liberation_production {
 		colorDisable[] = {1, 0, 0, 1};
 		colorSelectedBg[] = COLOR_LIGHTGRAY_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		y = (0.68 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.03 * safezoneH);
 

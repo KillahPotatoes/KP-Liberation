@@ -86,11 +86,11 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
 			{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
-			if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
+			if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1) || ((_x find "TFAR_") != -1)} count _playerItems) != count _playerItems) then {
 				_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 				_text remoteExec ["diag_log",2];
 				_badItems = "";
-				{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
+				{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1) && ((_x find "TFAR_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
 				hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
 				removeAllWeapons player;
 				removeAllItems player;
@@ -154,11 +154,11 @@ if ( edit_loadout > 0 ) then {
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (handgunItems player);
 
-		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1)} count _playerItems) != count _playerItems) then {
+		if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1) || ((_x find "TFAR_") != -1)} count _playerItems) != count _playerItems) then {
 			_text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
 			_text remoteExec ["diag_log",2];
 			_badItems = "";
-			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
+			{if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1) && ((_x find "TFAR_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
 			hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
 			removeAllWeapons player;
 			removeAllItems player;

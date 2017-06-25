@@ -48,6 +48,9 @@ all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers 
 air_vehicles_classnames = [] + opfor_choppers;
 KP_liberation_friendly_air_classnames = [];
 {air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
+KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames - uavs;
+KP_liberation_static_classnames = [];
+{KP_liberation_static_classnames pushback (_x select 0);} forEach static_vehicles;
 ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
 markers_reset = [99999,99999,0];
 zeropos = [0,0,0];
@@ -64,10 +67,6 @@ GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
 
 GRLIB_ignore_colisions_when_building = [
-	"ContainmentArea_02_sand_F",
-	"ContainmentArea_01_sand_F",
-	"Land_CarService_F",
-	"Land_Radar_Small_F",
 	"Land_HelipadSquare_F",
 	"Land_TentHangar_V1_F",
 	"Land_runway_edgelight",
@@ -103,7 +102,7 @@ GRLIB_ignore_colisions_when_building = [
 	"B_HMG_01_high_F",									//Mk30 HMG .50 (Raised)
 	"B_GMG_01_A_F",										//Mk32A GMG 20mm
 	"B_GMG_01_high_F",									//Mk32 GMG 20mm (Raised)
-	"B_static_AT_F",									//Static TTitan Launcher (AT)
+	"B_static_AT_F",									//Static Titan Launcher (AT)
 	"B_static_AA_F",									//Static Titan Launcher (AA)
 	"ACE_friesAnchorBar",								//ACE FRIES
 	"ACE_friesGantryReverse",							//ACE FRIES

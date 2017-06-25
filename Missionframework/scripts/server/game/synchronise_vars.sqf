@@ -1,6 +1,6 @@
 sync_vars = []; publicVariable "sync_vars";
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables starts intitializing on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables starts intitializing on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 waitUntil{!isNil "save_is_loaded"};
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables: save_is_loaded"];_text remoteExec ["diag_log",2];};
@@ -42,7 +42,7 @@ _combat_readiness_old = -1;
 _resources_intel_old = -999;
 _infantry_cap_old = -999;
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables intitializing finished on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables intitializing finished on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while {true} do {
 
@@ -76,5 +76,5 @@ while {true} do {
 	_combat_readiness_old = combat_readiness;
 	_resources_intel_old = resources_intel;
 	_infantry_cap_old = infantry_cap;
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync sent from: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync sent from: %1", debug_source];_text remoteExec ["diag_log",2];};
 };

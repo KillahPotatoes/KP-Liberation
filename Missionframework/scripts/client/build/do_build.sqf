@@ -112,7 +112,11 @@ while { true } do {
 
 			while { build_confirmed == 1 && alive player } do {
 				_truedir = 90 - (getdir player);
-				_truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
+				if ((typeOf _vehicle) in KP_liberation_static_classnames) then {
+					_truepos = [((getposATL player) select 0) + (_dist * (cos _truedir)), ((getposATL player) select 1) + (_dist * (sin _truedir)),((getposATL player) select 2)];
+				} else {
+					_truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
+				};
 				_actualdir = ((getdir player) + build_rotation);
 				if ( _classname == "Land_Cargo_Patrol_V1_F" || _classname == "Land_PortableLight_single_F" ) then { _actualdir = _actualdir + 180 };
 				if ( _classname == FOB_typename ) then { _actualdir = _actualdir + 270 };
@@ -153,14 +157,14 @@ while { true } do {
 
 				private _remove_objects = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle )) then {
+					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
 						_remove_objects pushback _x;
 					};
 				} foreach _near_objects;
 
 				private _remove_objects_25 = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle ))  then {
+					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames))  then {
 						_remove_objects_25 pushback _x;
 					};
 				} foreach _near_objects_25;
@@ -189,7 +193,11 @@ while { true } do {
 					if ( ((buildtype == 6) || (buildtype == 99)) && ((gridmode % 2) == 1) ) then {
 						_vehicle setpos [round (_truepos select 0),round (_truepos select 1), _truepos select 2];
 					} else {
-						_vehicle setpos _truepos;
+						if ((typeOf _vehicle) in KP_liberation_static_classnames) then {
+							_vehicle setPosATL _truepos;
+						} else {
+							_vehicle setpos _truepos;
+						};
 					};
 					if (buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 						if (KP_vector) then {
@@ -279,7 +287,12 @@ while { true } do {
 				_vehicle = _classname createVehicle _truepos;
 				_vehicle allowDamage false;
 				_vehicle setdir _vehdir;
-				_vehicle setpos _truepos;
+				if ((typeOf _vehicle) in KP_liberation_static_classnames) then {
+					_vehicle setPosATL _truepos;
+				} else {
+					_vehicle setpos _truepos;
+				};
+				
 				if (!(_classname in KP_liberation_ace_crates)) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
@@ -311,6 +324,12 @@ while { true } do {
 				
 				if (_classname in KP_liberation_medical_vehicles) then {
 					_vehicle setVariable ["ace_medical_medicClass", 1, true];
+				};
+
+				if (_classname == "Land_HelipadSquare_F" || _classname == "Land_HelipadCircle_F" || _classname == "Land_HelipadRescue_F") then {
+					{
+						[_x,[[_vehicle],true]] remoteExec ["addCuratorEditableObjects",2];
+					} forEach allCurators;
 				};
 				
 				sleep 0.3;

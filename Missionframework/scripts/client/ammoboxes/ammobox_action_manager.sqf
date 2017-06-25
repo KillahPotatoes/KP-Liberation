@@ -4,7 +4,7 @@ waitUntil {!isNil "one_eco_done"};
 waitUntil {one_synchro_done};
 waitUntil {one_eco_done};
 
-private ["_managed_trucks", "_managed_boxes", "_managed_areas", "_next_truck", "_next_box", "_truck_load", "_checked_trucks", "_checked_boxes", "_action_id","_b_action_id1","_b_action_id2","_b_action_id3","_b_action_id4"];
+private ["_managed_trucks", "_managed_boxes", "_managed_areas", "_next_truck", "_next_box", "_truck_load", "_checked_trucks", "_checked_boxes", "_action_id","_action_id2","_action_id3","_action_id4","_b_action_id1","_b_action_id2","_b_action_id3","_b_action_id4"];
 
 _managed_trucks = [];
 _managed_boxes = [];
@@ -25,7 +25,7 @@ while {true} do {
 			_truck_load = _next_truck getVariable ["GRLIB_ammo_truck_load", 0];
 
 			if (!(_next_truck in _managed_trucks) && (_truck_load > 0)) then {
-					_action_id = _next_truck addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_BOX" + "</t>","scripts\client\ammoboxes\do_unload_truck.sqf","",-500,true,true,"","build_confirmed == 0 && (_this distance _target < 7) && (vehicle player == player)"];
+					_action_id = _next_truck addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_BOX" + "</t>","scripts\client\ammoboxes\do_unload_truck.sqf","",-500,true,true,"","build_confirmed == 0 && (_this distance _target < 8) && (vehicle player == player)"];
 					_next_truck setVariable [ "GRLIB_ammo_truck_action", _action_id, false ];
 					_managed_trucks pushback _next_truck;
 			};
@@ -91,6 +91,8 @@ while {true} do {
 					_next_area setVariable ["KP_ammo_unstore_action", _action_id2, false];
 					_action_id3 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_FUEL" + "</t>",{[KP_liberation_fuel_crate, (_this select 0), true] spawn F_crateFromStorage;},"",-506,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
 					_next_area setVariable ["KP_fuel_unstore_action", _action_id3, false];
+					_action_id4 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_SORT_STORAGE" + "</t>",{[(_this select 0)] spawn F_sortStorage;},"",-507,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
+					_next_area setVariable ["KP_storage_sort_action", _action_id4, false];
 					_managed_areas pushback _next_area;
 			};
 
@@ -98,6 +100,7 @@ while {true} do {
 				_next_area removeAction (_next_area getVariable ["KP_supply_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_ammo_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_fuel_unstore_action", -1]);
+				_next_area removeAction (_next_area getVariable ["KP_storage_sort_action", -1]);
 				_managed_areas = _managed_areas - [_next_area];
 			};
 
@@ -112,6 +115,7 @@ while {true} do {
 				_next_area removeAction (_next_area getVariable ["KP_supply_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_ammo_unstore_action", -1]);
 				_next_area removeAction (_next_area getVariable ["KP_fuel_unstore_action", -1]);
+				_next_area removeAction (_next_area getVariable ["KP_storage_sort_action", -1]);
 			}
 
 		} foreach _managed_areas;

@@ -1,6 +1,6 @@
 sync_eco = []; publicVariable "sync_eco";
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync eco starts intitializing on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync eco starts intitializing on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 waitUntil{!isNil "save_is_loaded"};
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync eco: save_is_loaded"];_text remoteExec ["diag_log",2];};
@@ -12,7 +12,7 @@ if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] 
 _KP_liberation_production_old = [0];
 _KP_liberation_logistics_old = [0];
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync eco intitializing finished on: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync eco intitializing finished on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while {true} do {
 
@@ -27,5 +27,5 @@ while {true} do {
 	_KP_liberation_production_old = +KP_liberation_production;
 	_KP_liberation_logistics_old = +KP_liberation_logistics;
 
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside eco sent from: %1", (name player)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside eco sent from: %1", debug_source];_text remoteExec ["diag_log",2];};
 };

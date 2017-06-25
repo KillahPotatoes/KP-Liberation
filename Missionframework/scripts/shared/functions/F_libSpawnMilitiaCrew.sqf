@@ -21,4 +21,4 @@ while { count units _grp < 3 } do {
 	};
 } foreach (units _grp);
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning militia crew at %1", time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning militia crew at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};

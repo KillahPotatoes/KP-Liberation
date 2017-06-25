@@ -8,16 +8,16 @@
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.952</Original>
-						<German>KP Liberation v0.952</German>
-						<Spanish>KP Liberation v0.952</Spanish>
-						<Italian>KP Liberation v0.952</Italian>
+						<Original>KP Liberation v0.955</Original>
+						<German>KP Liberation v0.955</German>
+						<Spanish>KP Liberation v0.955</Spanish>
+						<Italian>KP Liberation v0.955</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.952</Original>
-						<German>v0.952</German>
-						<Spanish>v0.952</Spanish>
-						<Italian>v0.952</Italian>
+						<Original>v0.955</Original>
+						<German>v0.955</German>
+						<Spanish>v0.955</Spanish>
+						<Italian>v0.955</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -182,7 +182,7 @@
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
 						<French>Construction confirmée.</French>
-						<German>Bauen bestaetigt.</German>
+						<German>Bauen bestätigt.</German>
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
 						<Italian>Costruzione confermata.</Italian>
@@ -262,7 +262,7 @@
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
 						<French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les autres FOB. La FOB la plus proche est à %2 mètres d'ici.</French>
-						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das naechste FOB ist %2 Meter entfernt.</German>
+						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das nächste FOB ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
@@ -270,7 +270,7 @@
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
 						<French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les zones capturables. La zone la plus proche est à %2 mètres d'ici.</French>
-						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die naechste Zone ist %2 Meter entfernt.</German>
+						<German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die nächste Zone ist %2 Meter entfernt.</German>
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшиая зона в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
@@ -373,7 +373,7 @@
 				<Key ID="STR_AT_SQUAD">
 						<Original>AT Squad</Original>
 						<French>Escouade AT</French>
-						<German>Panzerbekaempfungstrupp</German>
+						<German>Panzerbekämpfungstrupp</German>
 						<Spanish>Escuadra Antitanque</Spanish>
 						<Russian>Отряд ПТ</Russian>
 						<Italian>Squadra Anticarro</Italian>
@@ -389,7 +389,7 @@
 				<Key ID="STR_RECON_SQUAD">
 						<Original>Recon Squad</Original>
 						<French>Escouade Recon</French>
-						<German>Aufklaerungstrupp</German>
+						<German>Aufklärungstrupp</German>
 						<Spanish>Escuadra de reconocimiento</Spanish>
 						<Russian>Отряд Разведчиков</Russian>
 						<Italian>Squadra Ricognitori</Italian>
@@ -397,7 +397,7 @@
 				<Key ID="STR_PARA_SQUAD">
 						<Original>Paratroopers Squad</Original>
 						<French>Escouade Parachutistes</French>
-						<German>Fallschirmjaegertrupp</German>
+						<German>Fallschirmjägertrupp</German>
 						<Spanish>Escuadra de paracaidistas</Spanish>
 						<Russian>Отряд Десантников</Russian>
 						<Italian>Squadra Paracadutisti</Italian>
@@ -413,7 +413,7 @@
 				<Key ID="STR_WIPE_TITLE">
 						<Original>Wipe savegame</Original>
 						<French>Effacer la sauvegarde</French>
-						<German>Spielstand loeschen</German>
+						<German>Spielstand löschen</German>
 						<Spanish>Borrar partida guardada</Spanish>
 						<Russian>Удалить сохранённый прогресс</Russian>
 						<Italian>Elimina Salvataggi</Italian>
@@ -421,7 +421,7 @@
 				<Key ID="STR_WIPE_TITLE_2">
 						<Original>Confirm : wipe savegame</Original>
 						<French>Confirmer : effacer la sauvegarde</French>
-						<German>Bestätige: Spielstand loeschen</German>
+						<German>Bestätige: Spielstand löschen</German>
 						<Spanish>Confirmar : Borrar partida guardada</Spanish>
 						<Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
 						<Italian>Confermare : Elimina Salvataggi</Italian>
@@ -437,10 +437,10 @@
 				<Key ID="STR_WIPE_YES">
 						<Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
 						<French>!! LA SAUVEGARDE SERA EFFACEE SANS RECUPERATION POSSIBLE !!</French>
-						<German>!! SPIELSTAND WIRD GELOESCHT, KEIN WIEDERHERSTELLEN MOEGLICH !!</German>
+						<German>!! SPIELSTAND WIRD GELÖSCHT, KEIN WIEDERHERSTELLEN MÖGLICH !!</German>
 						<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
 						<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
-						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO</Italian>
+						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO !!</Italian>
 				</Key>
 				<Key ID="STR_UNFLIP">
 						<Original>-- UNFLIP</Original>
@@ -638,7 +638,7 @@
 				<Key ID="STR_NOTIFICATION_FOBLOST_TITLE">
 						<Original>FOB DESTROYED</Original>
 						<French>FOB DETRUITE</French>
-						<German>FOB ZERSTOERT</German>
+						<German>FOB ZERSTÖRT</German>
 						<Spanish>FOB DESTRUIDA</Spanish>
 						<Russian>FOB УНИЧТОЖЕНА</Russian>
 						<Italian>FOB DISTRUTTA</Italian>
@@ -646,7 +646,7 @@
 				<Key ID="STR_NOTIFICATION_FOBLOST_TEXT">
 						<Original>FOB %1 has been destroyed!</Original>
 						<French>La FOB %1 a été détruite !</French>
-						<German>FOB %1 wurde zerstoert!</German>
+						<German>FOB %1 wurde zerstört!</German>
 						<Spanish>La FOB %1 ha sido destruida!</Spanish>
 						<Russian>FOB %1 была уничтожена!</Russian>
 						<Italian>La FOB %1 è stata distrutta!</Italian>
@@ -702,7 +702,7 @@
 				<Key ID="STR_NOTIFICATION_SECONDARY_TITLE">
 						<Original>SECONDARY OBJECTIVE</Original>
 						<French>OBJECTIF SECONDAIRE</French>
-						<German>SEKUNDAERZIEL</German>
+						<German>SEKUNDÄRZIEL</German>
 						<Spanish>OBJETIVO SECUNDARIO</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА</Russian>
 						<Italian>OBIETTIVI SECONDARI</Italian>
@@ -710,7 +710,7 @@
 				<Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
 						<Original>Hostile FOB destroyed</Original>
 						<French>FOB hostile détruite.</French>
-						<German>Gegnerische FOB zerstoert.</German>
+						<German>Gegnerische FOB zerstört.</German>
 						<Spanish>FOB hostil destruída</Spanish>
 						<Russian>Вражеская FOB уничтожена</Russian>
 						<Italian>FOB ostile distrutta.</Italian>
@@ -726,7 +726,7 @@
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TEXT">
 						<Original>Hostile forces reinforcing %1.</Original>
 						<French>Forces hostiles en renfort à %1.</French>
-						<German>Gegnerische Truppen verstaerken %1.</German>
+						<German>Gegnerische Truppen verstärken %1.</German>
 						<Spanish>Fuerzas hostiles reforzando %1</Spanish>
 						<Russian>Вражеские подкрепления подходят в %1.</Russian>
 						<Italian>Forze ostili rinforzano le truppe su %1</Italian>
@@ -790,7 +790,7 @@
 				<Key ID="STR_STATS_1">
 						<Original>OPFOR infantry killed:</Original>
 						<French>Infanterie OPFOR tuée :</French>
-						<German>OPFOR Einheit getoetet:</German>
+						<German>OPFOR Einheit getötet:</German>
 						<Spanish>Infantería OPFOR eliminada:</Spanish>
 						<Russian>OPFOR пехоты убито:</Russian>
 						<Italian>Fanteria OPFOR ha ucciso:</Italian>
@@ -798,7 +798,7 @@
 				<Key ID="STR_STATS_2">
 						<Original>OPFOR infantry killed by players:</Original>
 						<French>Infanterie OPFOR tuée par les joueurs :</French>
-						<German>OPFOR Infanterie von Spielern getoetet:</German>
+						<German>OPFOR Infanterie von Spielern getötet:</German>
 						<Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
 						<Russian>OPFOR пехоты убито игроками:</Russian>
 						<Italian>Fanteria OPFOR uccisa da:</Italian>
@@ -806,7 +806,7 @@
 				<Key ID="STR_STATS_3">
 						<Original>BLUFOR infantry killed:</Original>
 						<French>Infanterie BLUFOR tuée :</French>
-						<German>BLUFOR Einheiten getoetet:</German>
+						<German>BLUFOR Einheiten getötet:</German>
 						<Spanish>Infantería BLUFOR eliminada:</Spanish>
 						<Russian>BLUFOR пехоты убито:</Russian>
 						<Italian>Fanteria BLUFOR ha ucciso:</Italian>
@@ -814,7 +814,7 @@
 				<Key ID="STR_STATS_4">
 						<Original>Civilians killed:</Original>
 						<French>Civils tués :</French>
-						<German>Zivilisten getoetet:</German>
+						<German>Zivilisten getötet:</German>
 						<Spanish>Civiles asesinados:</Spanish>
 						<Russian>Гражданских убито:</Russian>
 						<Italian>Civile ha ucciso:</Italian>
@@ -822,7 +822,7 @@
 				<Key ID="STR_STATS_5">
 						<Original>Civilians killed by players:</Original>
 						<French>Civils tués par les joueurs :</French>
-						<German>Zivilisten von Spielern getoetet:</German>
+						<German>Zivilisten von Spielern getötet:</German>
 						<Spanish>Civiles asesinados por jugadores:</Spanish>
 						<Russian>Гражданских убито игроками:</Russian>
 						<Italian>Civile ucciso da:</Italian>
@@ -830,7 +830,7 @@
 				<Key ID="STR_STATS_6">
 						<Original>BLUFOR friendly fire incidents:</Original>
 						<French>Tirs fratricides BLUFOR :</French>
-						<German>BLUFOR Verbuendetenbeschuss Faelle:</German>
+						<German>BLUFOR Verbündetenbeschüsse:</German>
 						<Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
 						<Russian>BLUFOR дружественный огонь:</Russian>
 						<Italian>Fuoco amico tra i BLUFOR:</Italian>
@@ -838,7 +838,7 @@
 				<Key ID="STR_STATS_7">
 						<Original>OPFOR vehicles destroyed:</Original>
 						<French>Vehicules OPFOR détruits :</French>
-						<German>OPFOR Fahrzeuge zerstoert:</German>
+						<German>OPFOR Fahrzeuge zerstört:</German>
 						<Spanish>Vehículos OPFOR destruídos:</Spanish>
 						<Russian>OPFOR техники уничтожено:</Russian>
 						<Italian>Veicolo OPFOR distrutto:</Italian>
@@ -846,7 +846,7 @@
 				<Key ID="STR_STATS_8">
 						<Original>OPFOR vehicles destroyed by players:</Original>
 						<French>Vehicules OPFOR détruits par les joueurs :</French>
-						<German>OPFOR Fahrzeuge von Spielern zerstoert:</German>
+						<German>OPFOR Fahrzeuge von Spielern zerstört:</German>
 						<Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
 						<Russian>OPFOR техники уничтожено игроками:</Russian>
 						<Italian>Veicolo OPFOR distrutto da:</Italian>
@@ -854,7 +854,7 @@
 				<Key ID="STR_STATS_9">
 						<Original>BLUFOR vehicles destroyed:</Original>
 						<French>Vehicules BLUFOR détruits :</French>
-						<German>BLUFOR Fahrzeuge zerstoert:</German>
+						<German>BLUFOR Fahrzeuge zerstört:</German>
 						<Spanish>Vehículos BLUFOR destruídos:</Spanish>
 						<Russian>BLUFOR техники уничтожено:</Russian>
 						<Italian>Veicolo BLUFOR distrutto:</Italian>
@@ -918,7 +918,7 @@
 				<Key ID="STR_STATS_17">
 						<Original>Secondary objectives accomplished:</Original>
 						<French>Objectifs secondaires accomplis :</French>
-						<German>Sekundaerziele erreicht:</German>
+						<German>Sekundärziele erreicht:</German>
 						<Spanish>Objetivos secundarios conseguidos:</Spanish>
 						<Russian>Вторичных заданий выполнено:</Russian>
 						<Italian>Obiettivo secondario completato:</Italian>
@@ -950,7 +950,7 @@
 				<Key ID="STR_STATS_21">
 						<Original>Total combat readiness raised:</Original>
 						<French>Augmentation totale du niveau d'alerte :</French>
-						<German>Gesamte Kampfbereitschaft erhoeht:</German>
+						<German>Gesamte Kampfbereitschaft erhöht:</German>
 						<Spanish>Disposición de combate total recaudada:</Spanish>
 						<Russian>Всего войск поднято по тревоге:</Russian>
 						<Italian>Disposizione al combattimento recuperata:</Italian>
@@ -966,7 +966,7 @@
 				<Key ID="STR_STATS_23">
 						<Original>Number of Spartan 01 losses:</Original>
 						<French>Pertes de Spartan 01 :</French>
-						<German>Hoehe der Spartan 01 Verluste:</German>
+						<German>Höhe der Spartan 01 Verluste:</German>
 						<Spanish>Número de pérdidas de Spartan 01:</Spanish>
 						<Russian>Количество потерянных Spartan 01:</Russian>
 						<Italian>Numero di Spartan 01 persi :</Italian>
@@ -982,7 +982,7 @@
 				<Key ID="STR_STATS_25">
 						<Original>Rabbits killed:</Original>
 						<French>Lapins tués :</French>
-						<German>Hasen getoetet:</German>
+						<German>Hasen getötet:</German>
 						<Spanish>Conejos asesinados:</Spanish>
 						<Russian>Кроликов убито:</Russian>
 						<Italian>Conigli uccisi:</Italian>
@@ -2744,7 +2744,7 @@
 						<German>-- KISTE EINLAGERN</German>
 						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
 						<Russian>-- ХРАНЕНИЕ МАГАЗИНА</Russian>
-						<Italian>-- CONTENITORE</Italian>
+						<Italian>-- CREA CONTENITORE</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
@@ -3195,6 +3195,14 @@
 						In your efforts you will need the support of the local population, so always double-check what you're firing at!&lt;br/&gt; &lt;br/&gt;
 						Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
+						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
+						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
+						In Ihren Anstrengungen wird es nötig sein, die lokale Bevölkerung zu unterstützen. Achten Sie also stets darauf auf wen Sie schießen!&lt;br/&gt; &lt;br/&gt;
+						Fragen? HQ ende.
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Gentili signori e benvenuti nella regione, le forze nemiche ci hanno sorpreso con un'offensiva brutale e schiacciante. Ora hanno il controllo completo ma con i tuoi sforzi, non durerà a lungo.&lt;br/&gt; &lt;br/&gt;
 						Il nostro obiettivo primario è semplice: liberare la regione dal controllo nemico!&lt;br/&gt; &lt;br/&gt;
@@ -3211,6 +3219,14 @@
 						В ваших интересах поддержка местного населения, поэтому всегда перепроверяйте то, куда вы стреляете!&lt;br/&gt; &lt;br/&gt;
 						Вопросы?&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
+						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
+						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
+						In Ihren Anstrengungen wird es nötig sein, die lokale Bevölkerung zu unterstützen. Achten Sie also stets darauf auf wen Sie schießen!&lt;br/&gt; &lt;br/&gt;
+						Fragen? HQ ende.
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE2">
 						<Original>2. Starting the campaign!</Original>
@@ -3226,6 +3242,11 @@
 						At your starting position you can choose your equipment from a complete Arsenal. You will also find your first FOB packaged inside a container, the Spartan-01 helicopter and a few other small transport helicopters.&lt;br/&gt; &lt;br/&gt;
 						You will have to ferry that container with the Spartan-01 (or choose to start with the first FOB already built). You can deploy this first FOB wherever you want (as long as you're 1km from the starting position and 300m from any sector), so it's up to you to choose the right place to start your campaign offensive.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Sie beginnen die Kampagne entweder auf der USS Freedom, oder bei Chimera Base. Sichere Zonen, die der Feind nicht wagen wird anzugreifen. Ihre erste Wahl wird sein, wo sie beginnen wollen. Zu Anfang geht das nur auf ihrer Startposition, aber im Laufe der Zeit, werden Ihnen mehr Optionen, wie Forward Operating Bases (FOB) und mobile Respawns, zur Verfügung stehen.&lt;br/&gt; &lt;br/&gt;
+						An Ihrer Startposition, können Sie Ihr Equipment aus einem vollständigen Arsenal auswählen. Sie werden außerdem eine erste FOB, verpackt in einem Frachtcontainer vorfinden, welcher mit der Spartan-01 oder auch mit einigen wenigen anderen Helikoptern transportiert werden kann.&lt;br/&gt; &lt;br/&gt;
+						Sie werden diesen Container mit der Spartan-01 transportieren müssen (oder Sie starten die Kampagne mit einer bereits gebauten FOB). Sie können die erste FOB bauen, wo immer Sie wollen (so lange Sie mindestens 1km von Ihrer Startposition und mindestens 300m von einem der Sektoren entfernt sind). Es liegt bei Ihnen, einen geeigneten Ort zu wählen, von dem aus Sie die Kamapagne starten.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						La campagna partirà dalla USS Freedom, o dalla base Chimera, sono zone sicure che il nemico non oserà attaccare. Prima di tutto bisogna scegliere dove schierarsi. All'inizio ci si può solo schierare nelle posizioni citate prima, ma mentre si progredisce, saranno disponibili ulteriori opzioni quali FOB e respawn mobili.&lt;br/&gt; &lt;br/&gt;
 						Nella posizione iniziale puoi scegliere la tua attrezzatura da un completo Arsenale. Troverete anche la prima FOB imballata all'interno di un container, l'elicottero Spartan-01 e qualche altro piccolo elicottero da trasporto.&lt;br/&gt; &lt;br/&gt;
@@ -3236,6 +3257,11 @@
 						На стартовой позиции вы можете выбрать свое снаряжение из полного арсенала. Вы также найдете свой первый FOB, упакованный в контейнер, вертолет Spartan-01 и несколько других небольших транспортных вертолетов.&lt;br/&gt; &lt;br/&gt;
 						Вам придется переправить этот контейнер с помощью Spartan-01 (или начать с первого уже построенного FOB). Вы можете развернуть этот первый FOB везде, где хотите (пока вы в 1 км от стартовой позиции и 300 м от любого сектора), поэтому вам решать, какое место выбрать для начала наступления в вашей кампании.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Sie beginnen die Kampagne entweder auf der USS Freedom, oder bei Chimera Base, sichere Zonen, die der Feind nicht wagen wird anzugreifen. Ihre erste Wahl wird sein, wo sie einsetzen wollen. Zu Anfang geht das nur auf ihrer Startposition, aber im Laufe der Zeit, werden Ihnen mehr Optionen, wie Forward Operating Bases (FOB) und mobile Respawns, zur Verfügung stehen.&lt;br/&gt; &lt;br/&gt;
+						An Ihrer Startposition, können Sie Ihr Equipment aus einem Vollständigen Arsenal auswählen. Sie werden außerdem eine erste FOB, verpackt in einem Frachtkontainer vorfinden, welcher mit der Spartan-01 oder auch mit einigen wenigen anderen Helikoptern transportiert werden kann.&lt;br/&gt; &lt;br/&gt;
+						Sie werden diesen Kontainer mit der Spartan-01 transportieren müssen (oder Sie starten die Kampagne mit einer bereits gebauten FOB). Sie können die erste FOB bauen, wo immer Sie wollen (so lange Sie mindestens 1km von Ihrer Startposition und mindestens 300m von einem der Sektoren entfernt sind). Es liegt bei Ihnen, einen geeigneten Ort zu wählen, von dem aus Sie die Kampagne starten.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE3">
 						<Original>3. Objective</Original>
@@ -3250,6 +3276,10 @@
 						The primary objective of this campaign is to remove enemy forces from the region entirely. To achieve this, you will have to liberate ALL major towns within the region! This is the only victory condition for the campaign but those cities are tough nuts to crack with only limited resources and a well established enemy force. &lt;br/&gt; &lt;br/&gt;
 						To succeed, you will have to capture large number of different sectors, each with their own use.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Das Primärziel dieser Kampagne ist es, die Feindkräfte in dieser Region vollständig zu entfernen. Um dies zu erreichen, werden Sie ALLE Großstädte innerhalb dieser Region befreien müssen! Dies ist die einzige Bedingung zum Sieg, aber diese Städte sind schwer zu knacken, im Anbetracht unserer wenigen Ressourcen und einer gut aufgestellten Feindmacht.&lt;br/&gt; &lt;br/&gt;
+						Um das zu erreichen, werden Sie eine große Anzahl von verschiedensten Sektoren einnehmen, jeder mit seinen spezifischen Eigenschaften.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						L'obiettivo primario di questa campagna è di eliminare interamente le forze nemiche dalla regione. Per raggiungere questo obiettivo, dovrai liberare TUTTE le grandi città della regione! Questa è l'unica condizione di vittoria per la campagna, ma quste città sono difficili da liberare in quanto dovrete aver a disposizione numerose risorse e fronteggiare una forza nemica consolidata. &lt;br/&gt; &lt;br/&gt;
 						Per vincere, dovrai catturare un gran numero di settori diversi, ognuno con il proprio uso.&lt;br/&gt; &lt;br/&gt;
@@ -3258,6 +3288,10 @@
 						Основная цель этой кампании - полностью устранить силы противника из этого региона. Чтобы добиться этого, вам нужно будет освободить ВСЕ крупные города в регионе! Но эти города будут для вас крепкими орешками, их получится раскусить только ограничив поступление в них подкреплений, вражеские силы в них очень хорошо организованы. &lt;br/&gt; &lt;br/&gt;
 						Чтобы добиться успеха, вам нужно будет захватить большое количество различных секторов, каждый со своим собственным использованием.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Das Primärziel dieser Kampagne ist es, die Feindkräfte in dieser Region vollständig zu entfernen. Um dies zu erreichen, werden Sie ALLE Großstädte innerhalb dieser Region befreien müssen! Dies ist die einzige Bedingung zum Sieg, aber diese Städte sind schwer zu knacken, im Anbetracht unserer wenigen Ressourcen und einer gut aufgestellten Feindmacht.&lt;br/&gt; &lt;br/&gt;
+						Um das zu erreichen, werden Sie eine große Anzahl von verschiedensten Sektoren einnehmen, jeder mit seinen spezifischen Eigenschaften.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE4">
 						<Original>4. Sectors</Original>
@@ -3276,6 +3310,14 @@
 						- Radio Towers (RT): When under enemy control, RT will be used to call in reinforcements when a nearby sector is attacked by our own forces. The reaction time will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful map intel on hostile troop movements in the vicinity by intercepting their radio communications.&lt;br/&gt; &lt;br/&gt;
 						- Major Cities: There are several major cities in the region. When all are under friendly control, we will most certainly have beaten back the enemy to a point where they cannot re-establish control. This is your primary objective.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Sektoren sind in 5 unterschiedliche Typen eingeteilt:&lt;br/&gt; &lt;br/&gt;
+						- Point of Interest (PoI): Für gewöhnlich kleine- bis mittelgroße Dörfer/Städte. Jeder PoI, den Sie kontrollieren kann aufgewertet werden (nach Bau einer Lagerfläche), um uns mit den drei Arten von Ressourcen zu versorgen, die gebraucht werden um militärische Ausrüstung zu produzieren.&lt;br/&gt; &lt;br/&gt;
+						- Fabriken: Verteilt über das Gebiet, sind zivile Fabriken unter der Kontrolle des Feindes. Nehmen Sie diese ein, da sie nur eine Lagerfläche brauchen, um dann jede der drei Arten von Ressourcen zu produzieren, ohne sie aufwerten zu müssen. Als solches sind Fabriken ein wertvolles, strategisches, erstes Ziel!&lt;br/&gt; &lt;br/&gt;
+						- Militär Basen: Diese beherbergen eine große Anzahl von bestens ausgestatteten Feindkräften. Sie werden stark verteidigt und erfordern einen großen und gut koordinierten Angriff, falls sie überhaupt irgendwelche Hoffnungen haben, diese einnehmen zu können.&lt;br/&gt; &lt;br/&gt;
+						- Funktürme (FT): Unter Feindkontrolle, werden FT genutzt um Verstärkungen anzufordern, wenn ein Sektor in der Nähe von unseren Kräften angegriffen wird. Die Zeit bis die Verstärkung eintrifft, hängt von der Entfernung zwischen Turm und Sektor ab. Unter unserer Kontrolle geben FT Aufschluß über Feindbewegung in der Nähe, indem sie ihre Funksprüche abfangen.&lt;br/&gt; &lt;br/&gt;
+						- Großstädte: Es gibt mehrere große Städte in dem Gebiet. Wenn alle unter unserer Kontrolle sind, haben wir den Feind soweit zu einem Punkt zurückgeschlagen, von dem aus er sich nicht wieder neu formieren und die Kontrolle zurückerlangen kann. Dies ist Ihr Hauptziel.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						I settori sono divisi in 5 tipi diversi:&lt;br/&gt; &lt;br/&gt;
 						- Punti di interesse (PDI): generalmente piccoli e medi villaggi, ogni PDI che controlli può essere aggiornato (dopo la costruzione di una zona di stoccaggio) per fornire uno dei tre tipi di risorse necessari per continuare a produrre forze militari e armamenti.&lt;br/&gt; &lt;br/&gt;
@@ -3292,6 +3334,14 @@
 						- Радиовышки (RT): Когда под контролем противника, RT будет использоваться для вызова подкреплений, когда соседний сектор атакуют наши собственные силы. Время реакции будет зависеть от расстояния между башней и сектором. Когда под дружественным контролем, башни дадут разведданные о передвижениях войск в окрестностях, перехватив их радиосвязь.&lt;br/&gt; &lt;br/&gt;
 						- Крупные города: В регионе есть несколько крупных городов. Когда все находятся под дружественным контролем, мы, наверняка, отбили врага до такой степени, что он не сможет восстановить контроль. Это ваша основная цель.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Sektoren sind in 5 unterschiedliche Typen eingeteilt:&lt;br/&gt; &lt;br/&gt;
+						- Point of Interest (PoI): Für gewöhnlich kleine- bis mittelgroße Dörfer/Städte. Jeder PoI, den Sie kontrollieren kann aufgewertet werden (nach Bau einer Lagerfläche), um uns mit den drei Arten von Ressourcen zu versorgen, die gebraucht werden um militärische Ausrüstung zu produzieren.&lt;br/&gt; &lt;br/&gt;
+						- Fabriken: Verteilt über das Gebiet, sind zivile Fabriken unter der Kontrolle des Feindes. Nehmen Sie diese ein, da sie nur eine Lagerfläche brauchen, um dann jede der drei Arten von Ressourcen zu produzieren, ohne sie aufwerten zu müssen. Als solches sind Fabriken ein wertvolles, strategisches, erstes Ziel!&lt;br/&gt; &lt;br/&gt;
+						- Militär Basen: Diese beherbergen eine große Anzahl von bestens ausgestatteten Feindkräften. Sie werden stark verteidigt und erfordern einen großen und gut koordinierten Angriff, falls sie überhaupt irgendwelche Hoffnungen haben, diese einnehmen zu können.&lt;br/&gt; &lt;br/&gt;
+						- Funktürme (FT): Unter Feindkontrolle, werden FT genutzt um Verstärkungen anzufordern, wenn ein Sektor in der Nähe von unseren Kräften angegriffen wird. Die Zeit bis die Verstärkung eintrifft, hängt von der Entfernung zwischen Turm und Sektor ab. Unter unserer Kontrolle geben FT Aufschluß über Feindbewegung in der Nähe, indem sie ihre Funksprüche abfangen.&lt;br/&gt; &lt;br/&gt;
+						- Großstädte: Es gibt mehrere große Städte in dem Gebiet. Wenn alle unter unserer Kontrolle sind, haben wir den Feind soweit zu einem Punkt zurückgeschlagen, von dem aus er sich nicht wieder neu formieren und die Kontrolle zurückerlangen kann. Dies ist Ihr Hauptziel.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE5">
 						<Original>5. Resources</Original>
@@ -3309,6 +3359,13 @@
 						&lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Every vehicle needs fuel, some being more thirsty than others.&lt;br/&gt; &lt;br/&gt;
 						You may come across all three resources in any sector but for a considerable and constant supply, you must capture PoI and Factory sectors! Once captured, both require a storage area (scroll menu action) and then a PoI will also require facility construction (again, scroll menu action). All three facilities may be built in any one PoI but you must supply an initial cost to set these facilities up! This is 50 of the specific resource and 100 of the other two.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+                        In dieser Kampagne müssen Sie drei Arten von Ressourcen verwalten, einlagern und beschützen:&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#00ff00'&gt;NACHSCHUB:&lt;/t&gt; Diese sind von essenzieller Bedeutung. Ohne Nachschub, können Sie weder Soldaten rekrutieren, noch militärisches Gerät anfordern. Daher, HQ empfiehlt diese zu bevorzugen!&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;
+						In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme, benötigen beide Lagerflächen (scroll-menu) und dann benötigt der PoI zusätzlich noch ein Fabrikgebäude (wieder scroll-menu). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
                         In questa campagna è necessario gestire, memorizzare e proteggere tre tipi di risorse:&lt;br/&gt; &lt;br/&gt;
 						&lt;t color='#00ff00'&gt;APPROVVIGIONAMENTI:&lt;/t&gt; Questi sono i più essenziali. Senza approvvigionamenti, non sarete in grado di distribuire soldati o richiedere qualsiasi hardware militare. In quanto tale, HQ raccomanda di dare priorità a queste risorse per prime!&lt;br/&gt; &lt;br/&gt;
@@ -3323,6 +3380,13 @@
 						&lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; Каждому транспортному средству нужно топливо,некоторым требуется больше, чем другим.&lt;br/&gt; &lt;br/&gt;
 						Вы можете встретить все три ресурса в любом секторе, но для значительного и постоянного снабжения вы должны захватывать сектора PoI и Заводы! После захвата оба требуют области хранения (действие меню прокрутки), а затем PoI также потребует создания объекта (опять же, действие в меню прокрутки). Все три объекта могут быть построены в любом одном PoI, но вы должны заплатить первоначальную стоимость, чтобы настроить эти объекты! Это 50 конкретных ресурсов и 100 других двух.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+                        In dieser Kampagne müssen Sie drei Arten von Ressourcen verwalten, einlagern und beschützen:&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#00ff00'&gt;NACHSCHUB:&lt;/t&gt; Diese sind von essenzieller Bedeutung. Ohne Nachschub, können Sie weder Soldaten rekrutieren, noch militärisches Gerät anfordern. Daher, HQ empfiehlt diese zu bevorzugen!&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;
+						&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;
+						In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme, benötigen beide Lagerflächen (scroll-menu) und dann benötigt der PoI zusätzlich noch ein Fabrikgebäude (wieder scroll-menu). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;
+						</German>		
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert Level</Original>
@@ -3337,6 +3401,10 @@
 						The enemy won't let you liberate all of its brand new territory without a reaction. When you begin the campaign, hostile forces will only be composed of the garrisons inside military bases. However as you become more threatening by liberating more and more sectors, they will start calling in more reinforcements and equipment to counter you.&lt;br/&gt; &lt;br/&gt;
 						To limit the enemies operational capabilities, you will have to fulfill secondary objectives that will consist of destroying their logistical bases and raiding their convoys. This is not required to win the campaign but if you ignore the alert level for too long, you're in for quite a lot of resistance.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Der Feind wird nicht untätig dabei zusehen, wie wir alles in seines brandneuen Territorium, nach und nach befreien. Zu Beginn der Kampagne, setzen sich die Feindkräfte lediglich aus den Garnisonen innerhalb der Militär Basen zusammen. Wie auch immer, sobald wir für den Feind mehr und mehr zu einer Bedrohnung werden, während wir mehr und mehr Sektoren einnehmen, wird er anfangen Unterstützung und Ausrüstung anzufordern, um uns zu bekämpfen.&lt;br/&gt; &lt;br/&gt;
+						Um den Feind in seinem militärischen Handlungsspielraum einzuschränken, müssen Sie Sekundärziele erfüllen, die aus Suchen und Zerstören von Logistic Basen, Konvoiüberfällen und Suchen und Retten von Kriegsgefangenen bestehen. Dies ist zwar keine Bedingung für den Erfolg der Kampagne, aber wenn Sie das Bedrohungsniveau zu lange ignorieren, stoßen Sie bald auf recht viel Wiederstand.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Il nemico non ti permetterà di liberare tutto il suo nuovo territorio senza una reazione. Quando inizierai la campagna, le forze ostili saranno composte solo dalle guarnigioni all'interno delle basi militari. Tuttavia, quando diventerete più minacciosi , inizieranno a chiamare più rinforzi e attrezzature per contrastarvi.&lt;br/&gt; &lt;br/&gt;
 						Per limitare la capacità offensiva dei nemici, dovrete compiere missioni secondarie che consistono nel distruggere le basi logistiche e raidare i loro convogli. Questo non è richiesto per vincere la campagna, ma se ignorate troppo il livello di allarta, sarate pronti a contrastare la risposta?.&lt;br/&gt; &lt;br/&gt;
@@ -3345,6 +3413,10 @@
 						OPFOR не будут сидеть сложа руки, пока вы будете освобождать все зоны, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt;
 						Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Der Feind wird nicht untätig dabei zusehen, wie wir alles in seines brandneuen Territorium, nach und nach befreien. Zu Beginn der Kampagne, setzen sich die Feindkräfte lediglich aus den Garnisonen innerhalb der Militär Basen zusammen. Wie auch immer, sobald wir für den Feind mehr und mehr zu einer Bedrohnung werden, während wir mehr und mehr Sektoren einnehmen, wird er anfangen Unterstützung und Ausrüstung anzufordern, um uns zu bekämpfen.&lt;br/&gt; &lt;br/&gt;
+						Um den Feind in seinem militärischen Handlungsspielraum einzuschränken, müssen Sie Sekundärziele erfüllen, die aus Suchen und Zerstören von Logistic Basen, Konvoiüberfällen und Suchen und Retten von Kriegsgefangenen bestehen. Dies ist zwar keine Bedingung für den Kampagnenerfolg, aber wenn Sie das Bedrohungsniveau zu lange ignorieren, stoßen Sie bald auf recht viel Wiederstand.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE7">
 						<Original>7. Construction</Original>
@@ -3360,6 +3432,11 @@
 						Although infantry, vehicles and defenses will cost resources, fortifications such as structures, sandbags and walls will not.&lt;br/&gt; &lt;br/&gt;
 						The construction system will be available when you are within 100 meters of any FOB.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Hilfe zum Erfolg Ihrer Bemühungen, bieten die Bauoptionen an den einzelnen FOB, die es Ihnen ermöglichen Infantrie, Fahrzeuge, Verteidigungsanlagen, Befestigungsanlagen und so weiter, an der jeweiligen Position zu bauen.&lt;br/&gt; &lt;br/&gt;
+						Obgleich Infantrie, Fahrzeuge und Verteidigungsanlagen Ressourcen benötigen, braucht man zum Bau von Befestigungsanlagen wie Gebäuden, Sandsäcken und Wänden keine.&lt;br/&gt; &lt;br/&gt;
+						Die Bauoptionen werden verfügbar, in einem Bereich vom 100 Metern um eine FOB herum.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Per aiutarti a riuscire nella tua missione, ogni FOB ti permette di creare fanteria, veicoli, difese, fortificazioni e così via nella posizione specifica.&lt;br/&gt; &lt;br/&gt;
 						Anche se la fanteria, i veicoli e le difese costano risorse, le fortificazioni come strutture, sandbags e muri non lo faranno.&lt;br/&gt; &lt;br/&gt;
@@ -3370,6 +3447,11 @@
 						Хотя пехота, транспортные средства и средства защиты будут стоить ресурсов, тогда как укрепления, конструкции, мешки с песком и стены бесплатны.&lt;br/&gt; &lt;br/&gt;
 						Система строительства будет доступна, если вы находитесь дальше 100 метров от любого FOB.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Hilfe zum Erfolg Ihrer Bemühungen, bieten die Bauoptionen an den einzelnen FOB, die es Ihnen ermöglichen Infantrie, Fahrzeuge, Verteidigungsanlagen, Befestigungsanlagen und so weiter, an der jeweiligen Position zu bauen.&lt;br/&gt; &lt;br/&gt;
+						Obgleich Infantrie, Fahrzeuge und Verteidigungsanlagen Ressourcen benötigen, braucht man zum Bau von Befestigungsanlagen wie Gebäuden, Sandsäcken und Wänden keine.&lt;br/&gt; &lt;br/&gt;
+						Die Bauoptionen werden verfügbar, in einem Bereich vom 100 Metern um eine FOB herum.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE8">
 						<Original>8. Deploying another FOB</Original>
@@ -3384,6 +3466,10 @@
 						To build a brand new FOB, go to the construction menu and then the logistics tab and build a FOB container or a FOB truck (the same thing, only with wheels). Then you can position the FOB container/truck where you want to deploy your shiny new FOB. However, be aware that you can't build a FOB within 1km of your starting position, within 300m of any sector, or within 2km of any other FOB.&lt;br/&gt; &lt;br/&gt;
 						That would simply be redundant!&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Um eine brandneue FOB zu bauen, öffnen Sie das Baumenue und unter dem Reiter Logistik bauen Sie einen FOB Container oder einen FOB Lastwagen (dasselbe, bloß mit Rädern). Dann können Sie den FOB Container/Lastwagen and die Position Ihrer Wahl bringen und Ihre niegelnagelneue FOB aufbauen. Beachten Sie, das Sie keine FOB innerhalb von 1km von der Startposition, von 300m von einem Sektor und von 2km von einer anderen FOB aufbauen können.&lt;br/&gt; &lt;br/&gt;
+						Das wäre einfach unnötig!&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Per costruire una nuova FOB, vai nel menu di costruzione e poi alla scheda logistica e costruisci un contenitore FOB o un camion FOB (la stessa cosa, solo con ruote). Quindi è possibile posizionare il contenitore / camion FOB. Tuttavia, tenere presente che non è possibile costruire un FOB entro 1 km dalla posizione iniziale, ed entro 300 metri da qualsiasi settore, o entro 2 km da qualsiasi altra FOB.&lt;br/&gt; &lt;br/&gt;
 						Sarebbe semplicemente ridondante!&lt;br/&gt; &lt;br/&gt;
@@ -3392,6 +3478,10 @@
 						Чтобы построить совершенно новый FOB, перейдите в меню конструирования, а затем вкладку логистики и постройте контейнер FOB или грузовик FOB (то же самое, только с колесами). Затем вы можете разместить контейнер / грузовик FOB, где вы хотите развернуть свой новый новый FOB. Однако имейте в виду, что вы не можете построить FOB в пределах 1 км от начальной позиции, в пределах 300 м от любого сектора или в пределах 2 км от любого другого FOB.&lt;br/&gt; &lt;br/&gt;
 						Это было бы просто излишним!&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Um eine brandneue FOB zu bauen, öffnen Sie das Baumenue und unter dem Reiter Logistik bauen Sie einen FOB Container oder einen FOB Lastwagen (dasselbe, bloß mit Rädern). Dann können Sie den FOB Container/Lastwagen and die Position Ihrer Wahl bringen und Ihre niegelnagelneue FOB aufbauen. Beachten Sie, das Sie keine FOB innerhalb von 1km von der Startposition, von 300m von einem Sektor und von 2km von einer anderen FOB aufbauen können.&lt;br/&gt; &lt;br/&gt;
+						Das wäre einfach unnötig!&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE9">
 						<Original>9. Secondary Objectives</Original>
@@ -3407,6 +3497,11 @@
 						That interrogation, executed in the utmost respect of the Geneva convention, will allow you to obtain precise information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;
 						After going there you will need to find the exact position of your target, then use any means at your disposal to complete your objective. Succeeding at this task will be rewarded, reducing the alert level consequently and with it the efficiency of all hostile forces.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Nach Befreien eines Sektors, werden sich manchmal ein paar der verbliebenen Feindkräfte ergeben. Sie können sie gefangen nehmen und zu einer nahegelegenen FOB bringen, um sie zu verhören.&lt;br/&gt; &lt;br/&gt;
+						Dieses Verhör wird unter höchster Rücksichtnahme auf die Genfer Konventionen durchgeführt und bringt Ihnen präzise Informationen, die dazu genutzt werden können, um die ungefähre Lage einer feindlichen Logistik Basis zu bestimmen, feindliche Konvois aufzuspühren oder auch die ungefähre Position von Kriegsgefangenen zu ermitteln.&lt;br/&gt; &lt;br/&gt;
+						Wenn sie dort angekommen sind, müssen Sie die exakte Position Ihres Ziels herausfinden, dann setzen Sie alle Ihnen zu Verfügungstehenden Mittel ein, um das Einsatzziel zu erreichen. Ein erfolgreicher Einsatz, wird mit Verringerung des Bedrohungsniveaus und damit der Effektivität der feindlichen Streitkräfte belohnt.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Quando catturi i settori, talvolta le forze ostili che restano si arrenderanno. Quindi puoi catturare quei prigionieri e riportarli in una FOB vicina per interrogarli.&lt;br/&gt; &lt;br/&gt;
 						Questa interrogazione, eseguita nel più grande rispetto della Convenzione di Ginevra, ti permetterà di ottenere informazioni precise che possano essere utilizzate per rivelare la posizione rudimentale di una base logistica nemica, di un convoglio nemico o di un salvataggio.&lt;br/&gt; &lt;br/&gt;
@@ -3417,6 +3512,11 @@
 						Этот допрос, выполненный в полном уважении Женевской конвенции, позволит вам получить точную информацию, которая может быть использована для выявления грубой позиции базы материально-технического обеспечения противника, конвоя противника или дружественного поиска и спасения.&lt;br/&gt; &lt;br/&gt;
 						Побывав там, вам нужно будет найти точное положение вашей цели, а затем использовать любые имеющиеся в вашем распоряжении средства для достижения своей цели. Достижение этой цели будет вознаграждено, следовательно, будет уменьшаться уровень оповещения, а вместе с ним и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Nach Befreien eines Sektors, werden sich manchmal ein paar der verbliebenen Feindkräfte ergeben. Sie können sie gefangen nehmen und zu einer nahegelegenen FOB bringen, um sie zu verhören.&lt;br/&gt; &lt;br/&gt;
+						Dieses Verhör wird unter höchster Rücksichtnahme auf die Genfer Konventionen durchgeführt und bringt Ihnen präzise Informationen, die dazu genutzt werden können, um die ungefähre Lage einer feindlichen Logistik Basis zu bestimmen, feindliche Konvois aufzuspühren oder auch die ungefähre Position von Kriegsgefangenen zu ermitteln.&lt;br/&gt; &lt;br/&gt;
+						Wenn sie dort angekommen sind, müssen Sie die exakte Position Ihres Ziels herausfinden, dann setzen Sie alle Ihnen zu Verfügungstehenden Mittel ein, um das Einsatzziel zu erreichen. Ein erfolgreicher Einsatz, wird mit Verringerung des Bedrohungsniveaus und damit der Effektivität der feindlichen Streitkräfte belohnt.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE10">
 						<Original>10. Commanding</Original>
@@ -3432,6 +3532,11 @@
 						Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;
 						This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by an FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which PoI or Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;
 						</Original>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Wenn ein Spieler die Rolle des Commanders übernimmt, bekommt er spezifischen Zugang zum Zeus-Interface, wenn er die entsprechende Taste dafür drückt (default Z). Dieses Interface erlaubt das Komanndieren befreundeter Einheiten in der 3D und Karten Ansicht.&lt;br/&gt; &lt;br/&gt;
+						Darüberhinaus, hat der Commander erweiterte Bauoptionen, die es Ihm ermöglichen Fahrzeuge mit Besatzung, oder auch komplette vorgefertigte Squads zu bauen.&lt;br/&gt; &lt;br/&gt;
+						Die Rolle des Commanders ist nun zwingend erforderlich, da sie direkten Zugang zum Management von Produktionssektoren und KI-Logistic bietet. Dafür hat man an einer FOB die Optionen "Produktionseinstellungen" und "Logistikübersicht".&lt;br/&gt; &lt;br/&gt; Ersteres gewährt sowohl die Möglichkeit zu entscheiden, welcher PoI oder welche Fabrik welche Ressourcen produzieren soll, als auch einen detaillierten aktuellen Überblick.&lt;br/&gt; &lt;br/&gt; Letzteres erlaubt es einen KI-Logistik-Konvoi zu Befehligen, wobei man Logistik-Gruppen hinzufügen, eine beliebige Anzahl an Lkw pro Gruppe kaufen und diese dann befehligen kann, eine bestimmte Anzahl an Ressourcen quer über die Gesammte Region zu verfahren.&lt;br/&gt; &lt;br/&gt;
+						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						Quando un giocatore usa il ruolo del comandante, ottierrà l'accesso all'interfaccia di Zeus premendo il tasto corrispondente (Y per impostazione predefinita). Questa interfaccia consente il comando di forze amiche in visualizzazione 3D o mappa.&lt;br/&gt; &lt;br/&gt;
 						Inoltre il comandante ottiene ulteriori opzioni di costruzione che consentiranno loro di ottenere veicoli con equipaggio o intere squadre pre-fatte.&lt;br/&gt; &lt;br/&gt;
@@ -3442,30 +3547,45 @@
                         Кроме того, командир получает дополнительные варианты сборки, которые позволят ему создавать технику с экипажем или готовые отряды. &lt;br/&gt; &lt;br/&gt;
                         Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Factory создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;
 						</Russian>
+						<German>&lt;br/&gt;&lt;br/&gt;
+						Wenn ein Spieler die Rolle des Commanders übernimmt, bekommt er spezifischen Zugang zum Zeus-Interface, wenn er die entsprechende Taste dafür drückt (default Z). Dieses Interface erlaubt das Komanndieren befreundeter Einheiten in der 3D und Karten Ansicht.&lt;br/&gt; &lt;br/&gt;
+						Darüberhinaus, hat der Commander erweiterte Bauoptionen, die es Ihm ermöglichen Fahrzeuge mit Besatzung, oder auch komplette vorgefertigte Squads zu bauen.&lt;br/&gt; &lt;br/&gt;
+						Die Rolle des Commanders ist nun zwingend erforderlich, da sie direkten Zugang zum Management von Produktionssektoren und KI-Logistic bietet. Dafür hat man an einer FOB die Optionen "Produktionseinstellungen" und "Logistikübersicht".&lt;br/&gt; &lt;br/&gt; Ersteres gewährt sowohl die Möglichkeit zu entscheiden, welcher PoI oder welche Fabrik welche Ressourcen produzieren soll, als auch einen detaillierten aktuellen Überblick.&lt;br/&gt; &lt;br/&gt; Letzteres erlaubt es einen KI-Logistik-Konvoi zu Befehligen, wobei man Logistik-Gruppen hinzufügen, eine beliebige Anzahl an Lkw pro Gruppe kaufen und diese dann befehligen kann, eine bestimmte Anzahl an Ressourcen quer über die Gesammte Region zu verfahren.&lt;br/&gt; &lt;br/&gt;
+						</German>
 				</Key>
 				<Key ID="STR_PARAMS_ARSENALUSEPRESET">
 						<Original>Arsenal mode</Original>
 						<German>Arsenalmodus</German>
+						<Italian>Modalità Arsenale</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
 						<Original>No restrictions</Original>
 						<German>Keine Einschränkungen</German>
+						<Italian>Senza Restrizioni</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_USEPRESET">
 						<Original>Use preset from config</Original>
 						<German>Benutze Preset aus Konfiguration</German>
+						<Italian>Usa il file config.sqf</Italian>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_PUSH">
 						<Original>-- PUSH CRATE</Original>
 						<German>-- KISTE SCHIEBEN</German>
+						<Italian>-- SPINGI CASSA</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_ACE_ENABLE">
 						<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
 						<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
+						<Italian>Compatibilità ACE (disattiva il clima e l'approvvigionamento)</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_DEBUG_ENABLE">
 						<Original>Debug messages for server.rpt</Original>
 						<German>Debugnachrichten für die server.rpt</German>
+						<Italian>Messaggi di errore per il debug nel file server.rpt</Italian>
+				</Key>
+				<Key ID="STR_ACTION_SORT_STORAGE">
+						<Original>-- STACK AND SORT</Original>
+						<German>-- STAPELN UND SORTIEREN</German>
 				</Key>
 	</Package>
 </Project>

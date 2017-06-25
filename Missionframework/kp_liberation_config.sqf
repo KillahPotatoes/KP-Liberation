@@ -6,8 +6,10 @@ CONFIG FILE FOR KP LIBERATION
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"B_T_Truck_01_medical_F",
+	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
-	"RHS_UH60M_MEV2"
+	"RHS_UH60M_MEV2",
+	"RHS_UH60M_MEV2_d"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -67,7 +69,7 @@ GRLIB_halo_altitude = 2500;																						// Altitude in metres for the H
 GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 0.5;																				// Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 45				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1000;																						// Range to activate a sector.
 GRLIB_capture_size = 175;																						// Range to capture a sector.
@@ -202,6 +204,8 @@ box_transport_config = [
 	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
 	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
+	["B_T_VTOL_01_infantry_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
+    ["B_T_VTOL_01_vehicle_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
 	["RHS_CH_47F_10", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["RHS_CH_47F_light", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["RHS_CH_47F", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
@@ -296,6 +300,7 @@ boats_names = [
 	"B_Boat_Armed_01_minigun_F",
 	"B_T_Boat_Transport_01_F",
 	"B_T_Boat_Armed_01_minigun_F",
+	"B_SDV_01_F",
 	"O_Boat_Transport_01_F",
 	"O_Boat_Armed_01_hmg_F",
 	"O_T_Boat_Transport_01_F",
@@ -370,4 +375,4 @@ GRLIB_offload_diag = false;
 
 KP_liberation_production_interval = ceil KP_liberation_production_interval;
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", debug_source];_text remoteExec ["diag_log",2];};

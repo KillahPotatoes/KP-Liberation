@@ -125,7 +125,7 @@ class liberation_logistic {
 	class StatusLabel : StdText {
 		idc = 75806;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (2 * ICONE_SPACY);
+		y = (0.23 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_STATUS;
@@ -141,7 +141,7 @@ class liberation_logistic {
 	class TimeLabel : StdText {
 		idc = 75808;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (4 * ICONE_SPACY);
+		y = (0.26 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_PRODUCTION_TIMER;
@@ -157,7 +157,7 @@ class liberation_logistic {
 	class DestinationLabel : StdText {
 		idc = 758010;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (6 * ICONE_SPACY);
+		y = (0.29 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_DESTINATION;
@@ -175,7 +175,7 @@ class liberation_logistic {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (10 * ICONE_SPACY);
+		y = (0.34 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_LOADEDDETAIL;
@@ -184,7 +184,7 @@ class liberation_logistic {
 	class TruckCountLabel : StdText {
 		idc = 758013;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (12 * ICONE_SPACY);
+		y = (0.37 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_TRUCKCOUNT;
@@ -200,7 +200,7 @@ class liberation_logistic {
 	class LoadedSupplyLabel : StdText {
 		idc = 758015;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (14 * ICONE_SPACY);
+		y = (0.4 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_MANPOWER;
@@ -216,7 +216,7 @@ class liberation_logistic {
 	class LoadedAmmoLabel : StdText {
 		idc = 758017;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (16 * ICONE_SPACY);
+		y = (0.43 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_AMMO;
@@ -232,7 +232,7 @@ class liberation_logistic {
 	class LoadedFuelLabel : StdText {
 		idc = 758019;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (18 * ICONE_SPACY);
+		y = (0.46 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.07 * safezoneW);
 		h = (0.02 * safezoneH);
 		text = $STR_FUEL;
@@ -248,7 +248,7 @@ class liberation_logistic {
 	class ButtonBuyTruck : StdButton {
 	 	idc = 758021;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
+		y = (0.49 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.0725 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_LOGSTIC_BUYTRUCK;
@@ -259,7 +259,7 @@ class liberation_logistic {
 	class ButtonSellTRuck : StdButton {
 	 	idc = 758022;
 		x = (0.4185 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (20 * ICONE_SPACY);
+		y = (0.49 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.0725 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_LOGSTIC_SELLTRUCK;
@@ -272,7 +272,7 @@ class liberation_logistic {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (24 * ICONE_SPACY);
+		y = (0.54 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_LABELA;
@@ -281,14 +281,14 @@ class liberation_logistic {
 		idc = 758024;
 		sizeEx = 0.018 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (26 * ICONE_SPACY);
+		y = (0.57 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 	};
 	class ASupp : StdEdit {
 		idc = 758025;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		y = (0.6 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_SUPPLY;
@@ -298,7 +298,7 @@ class liberation_logistic {
 	class AAmmo : StdEdit {
 		idc = 758026;
 		x = (0.392 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		y = (0.6 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_AMMO;
@@ -308,7 +308,7 @@ class liberation_logistic {
 	class AFuel : StdEdit {
 		idc = 758027;
 		x = (0.446 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (28 * ICONE_SPACY);
+		y = (0.6 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_FUEL;
@@ -321,7 +321,7 @@ class liberation_logistic {
 		style = ST_CENTER;
 		colorBackground[] = COLOR_BLACK_ALPHA;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (30 * ICONE_SPACY);
+		y = (0.63 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = $STR_LOGISTIC_LABELB;
@@ -330,14 +330,14 @@ class liberation_logistic {
 		idc = 758029;
 		sizeEx = 0.018 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (32 * ICONE_SPACY);
+		y = (0.66 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 	};
 	class BSupp : StdEdit {
 		idc = 758030;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		y = (0.69 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_SUPPLY;
@@ -347,7 +347,7 @@ class liberation_logistic {
 	class BAmmo : StdEdit {
 		idc = 758031;
 		x = (0.392 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		y = (0.69 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_AMMO;
@@ -357,7 +357,7 @@ class liberation_logistic {
 	class BFuel : StdEdit {
 		idc = 758032;
 		x = (0.446 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (34 * ICONE_SPACY);
+		y = (0.69 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = 0.05 * safezoneW;
 		text = "";
 		tooltip = $STR_LOGISTIC_TT_FUEL;
@@ -370,7 +370,7 @@ class liberation_logistic {
 		style = ST_CENTER;
 		sizeEx = 0.018 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (26 * ICONE_SPACY);
+		y = (0.57 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = "";
@@ -380,7 +380,7 @@ class liberation_logistic {
 		style = ST_CENTER;
 		sizeEx = 0.018 * safezoneH;
 		x = (0.338 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE) + (32 * ICONE_SPACY);
+		y = (0.66 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.153 * safezoneW) + BORDERSIZE;
 		h = (0.02 * safezoneH);
 		text = "";

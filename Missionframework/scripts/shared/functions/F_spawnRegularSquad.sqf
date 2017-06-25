@@ -34,6 +34,6 @@ if ( _sector in sectors_capture ) then {
 	} foreach (units _grp);
 };
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning regular squad done at %1", time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning regular squad done at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};
 
 _grp;

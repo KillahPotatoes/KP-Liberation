@@ -91,6 +91,7 @@ light_vehicles = [
 heavy_vehicles = [
 	["rhsusf_m113_usarmy",200,40,100],									//M113A3 (M2)
 	["rhsusf_m113_usarmy_MK19",200,60,100],								//M113A3 (Mk19)
+	["rhsusf_m113_usarmy_medical",200,0,100],							//M113A3 (Medical)
 	["B_T_APC_Wheeled_01_cannon_F",200,75,125],							//AMV-7 Marshall
 	["I_APC_Wheeled_03_cannon_F",200,75,125],							//AFV-4 Gorgon
 	["B_T_APC_Tracked_01_rcws_F",300,100,150],							//IFV-6c Panther
@@ -172,6 +173,7 @@ buildings = [
 	["Flag_NATO_F",0,0,0],
 	["Flag_US_F",0,0,0],
 	["BWA3_Flag_Ger_F",0,0,0],
+	["Flag_UK_F",0,0,0],
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
@@ -186,6 +188,7 @@ buildings = [
 	["Land_LampStreet_small_F",0,0,0],
 	["Land_LampAirport_F",0,0,0],
 	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadRescue_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
 	["PortableHelipadLight_01_red_F",0,0,0],
@@ -244,7 +247,7 @@ buildings = [
 
 support_vehicles = [
 	[Arsenal_typename,100,200,0],
-	[Respawn_truck_typename,200,0,75],
+	[Respawn_truck_typename,200,0,100],
 	[FOB_box_typename,300,500,0],
 	[FOB_truck_typename,300,500,75],
 	[KP_liberation_small_storage_building,0,0,0],
@@ -453,8 +456,6 @@ opfor_battlegroup_vehicles = [
 	"O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
 	"O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
 	"O_Heli_Attack_02_dynamicLoadout_F",								//Mi-48 Kajman
-	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
-	"O_Plane_Fighter_02_F",												//To-201 Shikra
 	"O_T_VTOL_02_infantry_dynamicLoadout_F"								//Y-32 Xi'an (Infantry)
 ];
 
@@ -557,4 +558,4 @@ elite_vehicles = [
 	"B_T_VTOL_01_armed_F"												//V-44 X Blackfish (Armed)
 ];
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unit preset %1 intitialized for: %2", KP_liberation_preset, debug_source];_text remoteExec ["diag_log",2];};

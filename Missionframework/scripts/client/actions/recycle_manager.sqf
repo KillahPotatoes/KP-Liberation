@@ -1,10 +1,11 @@
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management initializing for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management initializing for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 private [ "_recycleable_vehicles", "_recycleable_classnames", "_building_classnames", "_detected_vehicles", "_next_vehicle", "_next_vehicle_already_in_list", "_idact_next" ];
 
 _recycleable_vehicles = [];
 _recycleable_classnames = [];
+veh_action_detect_distance = 20;
 veh_action_distance = 10;
 
 {
@@ -21,7 +22,7 @@ _building_classnames = _building_classnames + ["B_Slingload_01_Cargo_F", "B_Slin
 
 waitUntil {sleep 1; !isNil "GRLIB_all_fobs"};
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management started for: %1", (name player)];_text remoteExec ["diag_log",2];};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Recycle management started for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while {true} do {
 
@@ -30,12 +31,12 @@ while {true} do {
 
 	if ([player, 4] call F_fetchPermission) then {
 
-		_detected_vehicles =	[(getpos player) nearObjects veh_action_distance, {
+		_detected_vehicles =	[(getPos player) nearObjects veh_action_detect_distance, {
 									(((typeof _x in _recycleable_classnames ) &&
 									(({alive _x} count (crew _x)) == 0 || (typeof _x) in uavs) &&
 									((locked _x == 0 || locked _x == 1))) || ((typeOf _x) in _building_classnames) || (((typeOf _x) in KP_liberation_storage_buildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) || ((typeOf _x) in KP_liberation_upgrade_buildings) || ((typeOf _x) in KP_liberation_ace_crates)) &&
 									(alive _x) &&
-									(count(attachedObjects _x) == 0) &&
+									((count(attachedObjects _x) == 0) || ((typeOf _x) == "rhsusf_mkvsoc")) &&
 									(_x distance startbase > 1000) &&
 									(_x distance ( [] call F_getNearestFob) < GRLIB_fob_range) &&
 									(getObjectType _x >= 8)
@@ -51,7 +52,7 @@ while {true} do {
 			} foreach _recycleable_vehicles;
 
 			if (!_next_vehicle_already_in_list) then {
-				_idact_next = _next_vehicle addAction ["<t color='#FFFF00'>" + localize "STR_RECYCLE" + "</t> <img size='2' image='res\ui_recycle.paa'/>", "scripts\client\actions\do_recycle.sqf", "", -900, true, true, "", "build_confirmed == 0 && (  _this distance _target < veh_action_distance ) && (vehicle player == player)"];
+				_idact_next = _next_vehicle addAction ["<t color='#FFFF00'>" + localize "STR_RECYCLE" + "</t> <img size='2' image='res\ui_recycle.paa'/>", "scripts\client\actions\do_recycle.sqf", "", -900, true, true, "", "build_confirmed == 0 && ((_this distance2D _target) < veh_action_distance) && (vehicle player == player)"];
 				_recycleable_vehicles pushback [_next_vehicle, _idact_next ] ;
 			};
 		} foreach _detected_vehicles;
