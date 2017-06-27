@@ -15,6 +15,8 @@ if ( !(GRLIB_autodanger) && (_side == GRLIB_side_friendly)) then {
 	_unit disableAI "AUTOCOMBAT";
 };
 
+if (!KP_liberation_manageaiskill) exitWith {};
+
 if ( _wounded ) then {
 	_unit setSkill ["aimingspeed", [ 0.15 * _skillmodifier ] call F_limitSkill ];
 	if ( !_inVehicle ) then {
