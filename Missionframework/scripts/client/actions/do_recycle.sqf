@@ -11,7 +11,13 @@ _building_classnames = [];
 	_building_classnames pushBack ( _x select 0 );
 } foreach (buildings);
 
-if (((typeOf _vehtorecycle) in _building_classnames) || ((typeOf _vehtorecycle) in KP_liberation_storage_buildings) || ((typeOf _vehtorecycle) in KP_liberation_upgrade_buildings) || ((typeOf _vehtorecycle) in KP_liberation_ace_crates)) then {
+if (((typeOf _vehtorecycle) in _building_classnames) ||
+	((typeOf _vehtorecycle) in KP_liberation_storage_buildings) ||
+	((typeOf _vehtorecycle) in KP_liberation_upgrade_buildings) ||
+	((typeOf _vehtorecycle) in KP_liberation_ace_crates) ||
+	((typeOf _vehtorecycle) == "B_Slingload_01_Repair_F") ||
+	((typeOf _vehtorecycle) == "B_Slingload_01_Fuel_F") ||
+	((typeOf _vehtorecycle) == "B_Slingload_01_Ammo_F")) then {
 	_suppMulti = 0.5;
 	_ammoMulti = 0.5;
 	_fuelMulti = 0.5;
