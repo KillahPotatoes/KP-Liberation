@@ -306,7 +306,7 @@ class Missions
 * Added: X-Cam-Taunus missionfile
 * Added: Custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](https://github.com/jus61) for building it
 * Added: Custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
-* Added: Arsenal whitelist preset system (change via kp_liberation_config.sqf)
+* Added: Arsenal whitelist preset system (change via `kp_liberation_config.sqf`)
 	* Use blacklist from unit preset (default)
 	* custom whitelist file
 	* KP Community Selection
@@ -335,11 +335,11 @@ class Missions
 * Fixed: Starting game with a prebuild FOB caused errors on Takistan
 
 ### 0.93 (7th March 2017)
-* Added: kp_liberation_config.sqf with some additional config values
+* Added: `kp_liberation_config.sqf` with some additional config values
 * Added: ACE support
 * Added: Fuel consumption script
 * Added: Preset system (will grow with more maps) to choose between different classnames_extension presets
-* Added: custom.sqf in the preset system, where you can adjust everything to your liking (like editing the old classnames_extension.sqf)
+* Added: `custom.sqf` in the preset system, where you can adjust everything to your liking (like editing the old `classnames_extension.sqf`)
 * Added: BI Revive System. Activate it via Parameters in the MP Lobby if you don't use ACE
 * Added: Option in the mission parameters to disable the whole mapmarkers and disable the function in the extended options for every player
 * Added: Ability to blacklist arsenal items
