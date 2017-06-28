@@ -1121,6 +1121,9 @@
 						<Russian>Боже мой, мы все умрём!</Russian>
 						<Italian>Oh dio, stiamo per morire!</Italian>
 				</Key>
+				<Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
+						<Original>Manage AI Skill</Original>
+				</Key>
 				<Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
 						<Original>Resources multiplier</Original>
 						<French>Multiplicateur de resources</French>
