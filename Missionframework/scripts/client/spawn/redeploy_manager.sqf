@@ -1,6 +1,9 @@
+private ["_old_fullmap", "_oldsel", "_standard_map_pos", "_frame_pos"];
+
 choiceslist = [];
 fullmap = 0;
 _old_fullmap = 0;
+_oldsel = -999;
 _standard_map_pos = [];
 _frame_pos = [];
 
@@ -36,8 +39,6 @@ while { true } do {
 	if ( !GRLIB_fatigue ) then {
 		player enableStamina false;
 	};
-	player setCustomAimCoef 0.35;
-	player setUnitRecoilCoefficient 0.6;
 
 	_dialog = createDialog "liberation_deploy";
 	deploy = 0;

@@ -3561,7 +3561,7 @@
 						<German>Arsenalmodus</German>
 						<Italian>Modalità Arsenale</Italian>
 				</Key>
-				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
+				<Key ID="STR_PARAMS_NORESTRICTIONS">
 						<Original>No restrictions</Original>
 						<German>Keine Einschränkungen</German>
 						<Italian>Senza Restrizioni</Italian>

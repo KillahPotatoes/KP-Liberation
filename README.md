@@ -162,6 +162,8 @@ class Missions
 
 ### 0.96 (in Development)
 * Added: Parameter to disable the skill handling of enemy units. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed: Player got custom recoil and aiming coefficients on respawn.
+* Fixed: Rare script error on closing respawn screen directly after joining the mission.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist

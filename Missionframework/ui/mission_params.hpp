@@ -207,7 +207,7 @@ class Params
 	class ArsenalUsePreset {
 		title = $STR_PARAMS_ARSENALUSEPRESET;
 		values[] = { 0, 1 };
-		texts[] = { $STR_PARAMS_NOTRESTRICTIONS, $STR_PARAMS_USEPRESET };
+		texts[] = { $STR_PARAMS_NORESTRICTIONS, $STR_PARAMS_USEPRESET };
 		default = 1;
 	};
 	class MapMarkers {
