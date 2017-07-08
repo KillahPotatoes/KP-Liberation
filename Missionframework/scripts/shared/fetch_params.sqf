@@ -19,7 +19,7 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
+	GRLIB_remote_sensors = 0;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
 	GRLIB_maximum_fobs = [ "MaximumFobs",26] call bis_fnc_getParamValue;
@@ -32,6 +32,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_manageaiskill = ["AiSkillManage", 1] call bis_fnc_getParamValue;
 	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
 	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
+	KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -66,6 +67,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_manageaiskill = 1;
 	KP_liberation_ace = 0;
 	KP_liberation_debug = 0;
+	KP_liberation_suppMod_enb = 1;
 };
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };

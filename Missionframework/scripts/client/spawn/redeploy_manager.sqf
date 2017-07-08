@@ -1,4 +1,4 @@
-private ["_old_fullmap", "_oldsel", "_standard_map_pos", "_frame_pos"];
+private ["_old_fullmap", "_oldsel", "_standard_map_pos", "_frame_pos", "_access"];
 
 choiceslist = [];
 fullmap = 0;
@@ -208,6 +208,19 @@ while { true } do {
 			removeBackpack player;
 			removeHeadgear player;
 			removeGoggles player;
+		};
+	};
+
+	if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_req") && (!isNil "KP_liberation_suppMod_arty")};
+		_access = false;
+		switch (KP_liberation_suppMod_enb) do {
+			case 1: {if (player == ([] call F_getCommander)) then {_access = true};};
+			case 2: {if ((getPlayerUID player) in KP_liberation_suppMod_whitelist) then {_access = true};};
+			default {_access = true;};
+		};
+		if (_access) then {
+			[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
 		};
 	};
 };

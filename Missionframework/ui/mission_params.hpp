@@ -234,6 +234,12 @@ class Params
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
 		default = 1;
 	};
+	class SuppMod {
+		title = $STR_PARAMS_SUPPMOD;
+		values[] = {0, 1, 2, 3};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_COMMANDER, $STR_PARAMS_WHITELISTONLY, $STR_PARAMS_EVERYONE};
+		default = 1;
+	};
 	class TeamkillPenalty{
 		title = $STR_PARAM_TEAMKILL_PENALTY;
 		values[] = {1,0};
