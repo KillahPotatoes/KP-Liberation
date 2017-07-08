@@ -4,6 +4,7 @@ build_confirmed = 0;
 _maxdist = GRLIB_fob_range;
 _truepos = [];
 _debug_colisions = false;
+KP_vector = true;
 
 GRLIB_preview_spheres = [];
 while { count GRLIB_preview_spheres < 36 } do {
@@ -24,7 +25,6 @@ while { true } do {
 
 	build_confirmed = 1;
 	build_invalid = 0;
-	KP_vector = true;
 	_classname = "";
 	if ( buildtype == 99 ) then {
 		GRLIB_removefobboxes = true;
