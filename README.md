@@ -171,6 +171,7 @@ class Missions
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
 * Fixed: It was possible to disassemble a mortar in preview.
 * Fixed: Preview vehicles could get saved if you shut down the mission right after canceling the build process or if you'd still the preview in front you.
+* Fixed: Small issues due to the default "hold fire" combar mode for AI.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
