@@ -67,7 +67,6 @@ while { true } do {
 				_idx = _idx + 1;
 
 			} foreach _classname;
-			_grp setCombatMode "GREEN";
 			_grp setBehaviour "SAFE";
 			build_confirmed = 0;
 		} else {

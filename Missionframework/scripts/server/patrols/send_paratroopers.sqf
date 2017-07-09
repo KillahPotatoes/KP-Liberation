@@ -55,7 +55,7 @@ _waypoint = _para_group addWaypoint [ _targetpos, 100];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointBehaviour "COMBAT";
-_waypoint setWaypointCombatMode "GREEN";
+_waypoint setWaypointCombatMode "YELLOW";
 _waypoint setWaypointCompletionRadius 50;
 _waypoint = _para_group addWaypoint [ _targetpos, 100];
 _waypoint setWaypointType "MOVE";

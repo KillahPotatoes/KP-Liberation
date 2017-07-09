@@ -18,7 +18,6 @@ if ( GRLIB_blufor_defenders ) then {
 
 sleep 3;
 
-_grp setCombatMode "GREEN";
 _grp setBehaviour "COMBAT";
 
 sleep 60;
