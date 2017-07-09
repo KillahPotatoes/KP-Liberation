@@ -309,6 +309,12 @@ while { true } do {
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
+
+				if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
+					KP_liberation_suppMod_arty synchronizeObjectsAdd [_vehicle];
+					_vehicle synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+				};
+
 				if ( (_classname in uavs) || manned ) then {
 					[ _vehicle ] call F_forceBluforCrew;
 				};

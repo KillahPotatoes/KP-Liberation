@@ -163,6 +163,8 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 
+	waitUntil {!isNil "KP_liberation_suppMod_created"};
+
 	{
 		_nextclass = _x select 0;
 
@@ -231,6 +233,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				{
 					_x addCuratorEditableObjects [[_nextbuilding],true];
 				} forEach allCurators;
+			};
+
+			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
+				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
+				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
 			};
 		};
 

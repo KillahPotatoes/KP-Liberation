@@ -3590,5 +3590,23 @@
 						<Original>-- STACK AND SORT</Original>
 						<German>-- STAPELN UND SORTIEREN</German>
 				</Key>
+
+				<!-- Added or changed in v0.96 -->
+				<Key ID="STR_PARAMS_SUPPMOD">
+						<Original>BI Support Module System access</Original>
+						<German>BI Support Module System Zugriff</German>
+				</Key>
+				<Key ID="STR_PARAMS_COMMANDER">
+						<Original>Commander only</Original>
+						<German>Nur Kommandant</German>
+				</Key>
+				<Key ID="STR_PARAMS_WHITELISTONLY">
+						<Original>Whitelisted only</Original>
+						<German>Nur Whitelist</German>
+				</Key>
+				<Key ID="STR_PARAMS_EVERYONE">
+						<Original>Everyone</Original>
+						<German>Jeder</German>
+				</Key>
 	</Package>
 </Project>
