@@ -99,10 +99,11 @@ while { true } do {
 			_vehicle allowdamage false;
 			_vehicle setVehicleLock "LOCKED";
 			_vehicle enableSimulationGlobal false;
+			_vehicle setVariable ["KP_liberation_preplaced", true, true];
 
 			_dist = 0.6 * (sizeOf _classname);
 			if (_dist < 3.5) then { _dist = 3.5 };
-			_dist = _dist + 0.5;
+			_dist = _dist + 1;
 
 			for [{_i=0}, {_i<5}, {_i=_i+1}] do {
 				_vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
