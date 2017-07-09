@@ -20,3 +20,6 @@ sleep 3;
 [_new_fob, 0] remoteExec ["remote_call_fob"];
 
 stats_fobs_built = stats_fobs_built + 1;
+
+FOB_build_in_progress = false;
+publicVariable "FOB_build_in_progress";

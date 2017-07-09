@@ -11,6 +11,9 @@ _clearedtobuildfob = true;
 _distsector = 1;
 _clearedtobuildsector = true;
 
+FOB_build_in_progress = true;
+publicVariable "FOB_build_in_progress";
+
 _idx = 0;
 while { (_idx < (count GRLIB_all_fobs)) && _clearedtobuildfob } do {
 	if ( player distance (GRLIB_all_fobs select _idx) < _minfobdist ) then {
