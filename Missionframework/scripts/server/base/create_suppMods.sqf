@@ -10,7 +10,6 @@ if (KP_liberation_suppMod_enb > 0) then {
 	[KP_liberation_suppMod_arty] execVM "A3\modules_f\supports\init_provider.sqf";
 
 	publicVariable "KP_liberation_suppMod_grp";
-	publicVariable "KP_liberation_suppMod_req";
 	publicVariable "KP_liberation_suppMod_arty";
 	KP_liberation_suppMod_created = true; publicVariable "KP_liberation_suppMod_created";
 };

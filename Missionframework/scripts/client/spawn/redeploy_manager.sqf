@@ -212,7 +212,7 @@ while { true } do {
 	};
 
 	if (KP_liberation_suppMod_enb > 0) then {
-		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_req") && (!isNil "KP_liberation_suppMod_arty")};
+		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_arty")};
 		_access = false;
 		switch (KP_liberation_suppMod_enb) do {
 			case 1: {if (player == ([] call F_getCommander)) then {_access = true};};
@@ -220,6 +220,13 @@ while { true } do {
 			default {_access = true;};
 		};
 		if (_access) then {
+			if (isNil "KP_liberation_suppMod_req") then {
+				KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", KP_liberation_suppMod_grp, [], 0, "NONE"];
+				[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";
+				{
+					[KP_liberation_suppMod_req, _x, -1] call BIS_fnc_limitSupport;
+				} forEach ["Artillery","CAS_Heli","CAS_Bombing","UAV","Drop","Transport"];
+			};
 			[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
 		};
 	};
