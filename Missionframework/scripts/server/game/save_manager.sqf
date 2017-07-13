@@ -194,6 +194,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 			};
 
+			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
+				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
+				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+			};
+
 			if ( _hascrew ) then {
 				[ _nextbuilding ] call F_forceBluforCrew;
 			};
@@ -233,11 +238,6 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				{
 					_x addCuratorEditableObjects [[_nextbuilding],true];
 				} forEach allCurators;
-			};
-
-			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
-				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
 			};
 		};
 
