@@ -42,6 +42,7 @@ opfor_squad_8_tankkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,
 opfor_squad_8_airkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,opfor_rpg,opfor_rpg,opfor_aa,opfor_aa,opfor_aa];
 friendly_infantry_classnames = [];
 {if (!(_x in friendly_infantry_classnames)) then {friendly_infantry_classnames pushBack _x};} forEach (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufor_squad_aa + blufor_squad_recon + blufor_squad_para);
+{if (!((_x select 0) in friendly_infantry_classnames)) then {friendly_infantry_classnames pushBack (_x select 0)};} forEach infantry_units;
 all_resistance_troops = [] + militia_squad;
 all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers + opfor_troup_transports + opfor_vehicles_low_intensity);
 { land_vehicles_classnames pushback (_x select 0); } foreach (heavy_vehicles + light_vehicles);
