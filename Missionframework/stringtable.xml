@@ -2747,7 +2747,7 @@
 						<German>-- KISTE EINLAGERN</German>
 						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
 						<Russian>-- ХРАНЕНИЕ МАГАЗИНА</Russian>
-						<Italian>-- CREA CONTENITORE</Italian>
+						<Italian>-- DEPOSITA CASSA</Italian>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
@@ -3199,7 +3199,7 @@
 						Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
 						</Original>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3223,7 +3223,7 @@
 						Вопросы?&lt;br/&gt; &lt;br/&gt;
 						</Russian>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3389,7 +3389,7 @@
 						&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;
 						&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;
 						In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme, benötigen beide Lagerflächen (scroll-menu) und dann benötigt der PoI zusätzlich noch ein Fabrikgebäude (wieder scroll-menu). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;
-						</German>		
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert Level</Original>
@@ -3589,24 +3589,29 @@
 				<Key ID="STR_ACTION_SORT_STORAGE">
 						<Original>-- STACK AND SORT</Original>
 						<German>-- STAPELN UND SORTIEREN</German>
+						<Italian>--	IMPILA E ORDINA</Italian>
 				</Key>
 
 				<!-- Added or changed in v0.96 -->
 				<Key ID="STR_PARAMS_SUPPMOD">
 						<Original>BI Support Module System access</Original>
 						<German>BI Support Module System Zugriff</German>
+						<Italian>Accesso Modulo Di Supporto BI</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_COMMANDER">
 						<Original>Commander only</Original>
 						<German>Nur Kommandant</German>
+						<Italian>Solo per il Comandante</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_WHITELISTONLY">
 						<Original>Whitelisted only</Original>
 						<German>Nur Whitelist</German>
+						<Italian>Con Whitelist</Italian>
 				</Key>
 				<Key ID="STR_PARAMS_EVERYONE">
 						<Original>Everyone</Original>
 						<German>Jeder</German>
+						<Italian>Tutti</Italian>
 				</Key>
 	</Package>
 </Project>
