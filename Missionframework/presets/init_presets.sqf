@@ -14,6 +14,8 @@ switch (KP_liberation_preset_blufor) do {
     case 13: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat.sqf";};
     case 14: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat_apex.sqf";};
     case 15: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\unsung.sqf";};
+    case 16: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_wdl.sqf";};
+    case 17: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_des.sqf";};
     default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
