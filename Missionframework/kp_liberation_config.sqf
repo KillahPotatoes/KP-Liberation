@@ -174,7 +174,11 @@ KP_liberation_allowed_items_extension = [
 	"rhs_weap_M136_used",
 	"rhs_m136_mag",
 	"rhs_m136_hedp_mag",
-	"rhs_m136_hp_mag"
+	"rhs_m136_hp_mag",
+	"BWA3_optic_ZO4x30_NSV",
+	"BWA3_optic_ZO4x30_IRV",
+	"BWA3_optic_ZO4x30_Single_NSV",
+	"BWA3_optic_ZO4x30_Single_IRV"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
