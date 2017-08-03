@@ -3,7 +3,7 @@ private ["_nearby_bigtown"];
 
 if (isServer) then {
 
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] Kill Manager executed on: %1 - _unit: %2 (%3 - %4) - _killer: %5 (%6 - %7)", debug_source, typeOf _unit, _unit, name _unit, typeOf _killer, _killer, name _killer];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] Kill Manager executed on: %1 - _unit: %2 (%3)- _killer: %4 (%5)", debug_source, typeOf _unit, _unit, typeOf _killer, _killer];_text remoteExec ["diag_log",2];};
 
 	please_recalculate = true;
 
