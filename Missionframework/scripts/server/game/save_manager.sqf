@@ -162,8 +162,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
-
-	waitUntil {!isNil "KP_liberation_suppMod_created"};
+	
+	if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {!isNil "KP_liberation_suppMod_created"};
+	};
 
 	{
 		_nextclass = _x select 0;
