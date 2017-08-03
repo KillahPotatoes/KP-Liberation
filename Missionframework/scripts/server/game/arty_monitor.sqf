@@ -36,6 +36,9 @@ while {true} do {
 		};
 	};
 
+	BIS_supp_refresh = TRUE;
+	publicVariable "BIS_supp_refresh";
+
 	waitUntil {
 		sleep 1;
 		({alive _x} count (crew _vehicle)) != _crew_old;
