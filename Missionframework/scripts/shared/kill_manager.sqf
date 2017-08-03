@@ -3,7 +3,7 @@ private ["_nearby_bigtown"];
 
 if (isServer) then {
 
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Kill Manager started on: %1 - _unit: %2 - _killer: %3", debug_source, _unit, _killer];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] Kill Manager executed on: %1 - _unit: %2 (%3 - %4) - _killer: %5 (%6 - %7)", debug_source, typeOf _unit, _unit, name _unit, typeOf _killer, _killer, name _killer];_text remoteExec ["diag_log",2];};
 
 	please_recalculate = true;
 
@@ -62,6 +62,10 @@ if (isServer) then {
 	if (_unit isKindOf "Man") then {
 		if (side (group _unit) == GRLIB_side_civilian) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
+			if (side _killer == GRLIB_side_friendly) then {
+				(format ["A civilian named %1 was killed!", name _unit]) remoteExec ["systemChat"];
+				KP_liberation_civ_rep = KP_liberation_civ_rep - KP_liberation_civ_kill_penalty;
+			};
 			if (isPlayer _killer) then {
 				stats_civilians_killed_by_players = stats_civilians_killed_by_players + 1;
 			};

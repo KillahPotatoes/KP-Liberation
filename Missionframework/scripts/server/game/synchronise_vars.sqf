@@ -28,6 +28,24 @@ waitUntil{!isNil "resources_intel"};
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables: resources_intel"];_text remoteExec ["diag_log",2];};
 waitUntil{!isNil "infantry_cap"};
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables: infantry_cap"];_text remoteExec ["diag_log",2];};
+waitUntil{!isNil "KP_liberation_civ_rep"};
+if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables: KP_liberation_civ_rep"];_text remoteExec ["diag_log",2];};
+
+private [
+	"_KP_liberation_fob_resources_old",
+	"_KP_liberation_supplies_global_old",
+	"_KP_liberation_ammo_global_old",
+	"_KP_liberation_fuel_global_old",
+	"_unitcap_old",
+	"_KP_liberation_heli_count_old",
+	"_KP_liberation_plane_count_old",
+	"_KP_liberation_heli_slots_old",
+	"_KP_liberation_plane_slots_old",
+	"_combat_readiness_old",
+	"_resources_intel_old",
+	"_infantry_cap_old",
+	"_KP_liberation_civ_rep_old"
+];
 
 _KP_liberation_fob_resources_old = [];
 _KP_liberation_supplies_global_old = -1;
@@ -41,6 +59,7 @@ _KP_liberation_plane_slots_old = -1;
 _combat_readiness_old = -1;
 _resources_intel_old = -999;
 _infantry_cap_old = -999;
+_KP_liberation_civ_rep_old = -999;
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync variables intitializing finished on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
@@ -59,9 +78,10 @@ while {true} do {
 		|| _combat_readiness_old != combat_readiness
 		|| _resources_intel_old != resources_intel
 		|| _infantry_cap_old != infantry_cap
+		|| _KP_liberation_civ_rep_old != KP_liberation_civ_rep
 	};
 	sleep 0.25;
-	sync_vars = [KP_liberation_fob_resources,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap];
+	sync_vars = [KP_liberation_fob_resources,KP_liberation_supplies_global,KP_liberation_ammo_global,KP_liberation_fuel_global,unitcap,KP_liberation_heli_count,KP_liberation_plane_count,KP_liberation_heli_slots,KP_liberation_plane_slots,combat_readiness,resources_intel,infantry_cap,KP_liberation_civ_rep];
 	publicVariable "sync_vars";
 	
 	_KP_liberation_fob_resources_old = +KP_liberation_fob_resources;
@@ -76,5 +96,7 @@ while {true} do {
 	_combat_readiness_old = combat_readiness;
 	_resources_intel_old = resources_intel;
 	_infantry_cap_old = infantry_cap;
+	_KP_liberation_civ_rep_old = KP_liberation_civ_rep;
+	
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside sync sent from: %1", debug_source];_text remoteExec ["diag_log",2];};
 };
