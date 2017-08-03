@@ -166,7 +166,11 @@ class Missions
 * Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
 * Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
+* Added: Civil Reputation.
+* Added: Config variables for the civil reputation.
+* Added: Reputation penalty for killing civilians.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Some reordering of UI elements.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
