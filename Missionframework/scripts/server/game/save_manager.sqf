@@ -202,8 +202,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 
 			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
-				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+				[_nextbuilding] remoteExec ["arty_monitor", 2];
 			};
 
 			if ( _hascrew ) then {
