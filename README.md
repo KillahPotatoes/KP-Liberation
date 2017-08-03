@@ -169,6 +169,7 @@ class Missions
 * Added: Civil Reputation.
 * Added: Config variables for the civil reputation.
 * Added: Reputation penalty for killing civilians.
+* Added: Reputation penalty for seizing civil vehicles.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
