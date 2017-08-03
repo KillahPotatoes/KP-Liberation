@@ -87,7 +87,9 @@ GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defen
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
-KP_liberation_civ_kill_penalty = 1;																				// Civil Reputation penalty for killing a civilian
+KP_liberation_cr_kill_penalty = 3;																				// Civil Reputation penalty for killing a civilian
+KP_liberation_cr_building_penalty = 6;																			// Civil Reputation penalty for destroying a building
+KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	

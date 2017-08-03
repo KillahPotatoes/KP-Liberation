@@ -92,7 +92,7 @@
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
 						<Italian>-- COSTRUISCI --</Italian>
-						<Chinesesimp>-- 建造 --</Chinesesim
+						<Chinesesimp>-- 建造 --</Chinesesim>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
@@ -4059,6 +4059,14 @@
 						<German>Jeder</German>
 						<Italian>Tutti</Italian>
 						<Chinesesimp>所有人</Chinesesimp>
+				</Key>
+				<Key ID="STR_CR_KILLMSG">
+						<Original>A civilian named %1 was killed!</Original>
+						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+				</Key>
+				<Key ID="STR_CR_VEHICLEMSG">
+						<Original>A civil vehicle was seized!</Original>
+						<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
 				</Key>
 	</Package>
 </Project>

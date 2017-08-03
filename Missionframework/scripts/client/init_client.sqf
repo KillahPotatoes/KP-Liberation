@@ -61,6 +61,7 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\misc\kp_fuel_consumption.sqf";}];
+player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\misc\kp_cr_checkVehicle.sqf";}];
 
 {
 	[_x] call BIS_fnc_drawCuratorLocations;
