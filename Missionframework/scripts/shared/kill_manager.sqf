@@ -49,7 +49,14 @@ if (isServer) then {
 		stats_player_deaths = stats_player_deaths + 1;	
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
+		// Eject Player from vehicle
 		if (vehicle _unit != _unit) then {moveOut _unit;};
+		// Remove Support Link and delete Requester Module
+		if ((count (synchronizedObjects player)) > 0) then {
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] SUPP: Source: %1 - Remove SuppMod Sync", debug_source];_text remoteExec ["diag_log",2];};
+			[KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_removeSupportLink;
+			deleteVehicle KP_liberation_suppMod_req;
+		};
 	};
 
 	if (_unit isKindOf "Man") then {
