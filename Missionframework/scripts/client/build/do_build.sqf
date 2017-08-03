@@ -310,8 +310,7 @@ while { true } do {
 				};
 
 				if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
-					KP_liberation_suppMod_arty synchronizeObjectsAdd [_vehicle];
-					_vehicle synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+					[_vehicle] remoteExec ["arty_monitor", 2];
 				};
 
 				if ( (_classname in uavs) || manned ) then {
