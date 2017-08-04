@@ -171,6 +171,9 @@ class Missions
 * Added: Reputation penalty for killing civilians.
 * Added: Reputation penalty for seizing civil vehicles.
 * Added: Players can request artillery support from players (generates task).
+* Added: Reputation penalty for destroyed/damaged civil buildings.
+* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
+* Added: Reputation gain for liberated sectors.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
