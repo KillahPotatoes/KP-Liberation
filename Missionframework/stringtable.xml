@@ -4123,5 +4123,21 @@
 						<Original>A civil vehicle was seized!</Original>
 						<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
 				</Key>
+				<Key ID="STR_CR_BUILDINGMSG">
+						<Original>Civilians complaining about %1 lost buildings.</Original>
+						<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_BUILDING">
+						<Original>Civil Reputation penalty for buildings if building is</Original>
+						<German>Ziviler Reputations Abzug für Gebäude, wenn Gebäude</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_DAMAGED">
+						<Original>damaged</Original>
+						<German>beschädigt</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_DESTROYED">
+						<Original>fully destroyed</Original>
+						<German>komplett zerstört</German>
+				</Key>
 	</Package>
 </Project>
