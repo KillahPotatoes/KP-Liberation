@@ -33,6 +33,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
 	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
 	KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
+	KP_liberation_cr_param_buildings = ["CR_Building",1] call BIS_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -89,6 +90,7 @@ if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else
 if (KP_liberation_manageaiskill == 1) then {KP_liberation_manageaiskill = true} else {KP_liberation_manageaiskill = false};
 if (KP_liberation_ace == 1) then {KP_liberation_ace = true} else {KP_liberation_ace = false};
 if (KP_liberation_debug == 1) then {KP_liberation_debug = true} else {KP_liberation_debug = false};
+if (KP_liberation_cr_param_buildings == 1) then {KP_liberation_cr_param_buildings = true} else {KP_liberation_cr_param_buildings = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {
