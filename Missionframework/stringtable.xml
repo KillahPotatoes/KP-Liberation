@@ -4032,76 +4032,91 @@
 				<Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
 						<Original>-- Extended Options --</Original>
 						<German>-- Erweiterte Optionen --</German>
+						<Italian>-- Opzioni Avanzate --</Italian>
 						<Chinesesimp>-- 扩展选项 --</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_EXTENDED_OPTIONS">
 						<Original>Extended Options</Original>
 						<German>Erweiterte Optionen</German>
+						<Italian>Opzioni Avanzate</Italian>
 						<Chinesesimp>扩展选项</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_DISABLED">
 						<Original>- disabled -</Original>
 						<German>- deaktiviert -</German>
+						<Italian>-- disabilitato --</Italian>
 						<Chinesesimp>- 已禁用 -</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SQUAD_MANAGEMENT">
 						<Original>Squad Management</Original>
 						<German>Truppmanagement</German>
+						<Italian>Gestione Squadra</Italian>
 						<Chinesesimp>班组管理</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_JOIN">
 						<Original>Join</Original>
 						<German>Beitreten</German>
+						<Italian>Unisciti</Italian>
 						<Chinesesimp>加入</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CREATE">
 						<Original>Create</Original>
 						<German>Erstellen</German>
+						<Italian>Crea</Italian>
 						<Chinesesimp>创建</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_RENAME">
 						<Original>Rename</Original>
 						<German>Umbenennen</German>
+						<Italian>Rinomina</Italian>
 						<Chinesesimp>重命名</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_LEADER">
 						<Original>Leader</Original>
 						<German>Anführer</German>
+						<Italian>Capo Squadra</Italian>
 						<Chinesesimp>班长</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CANCEL">
 						<Original>Cancel</Original>
 						<German>Abbrechen</German>
+						<Italian>Cancella</Italian>
 						<Chinesesimp>取消</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CHOOSE">
 						<Original>Choose</Original>
 						<German>Wählen</German>
+						<Italian>Scegli</Italian>
 						<Chinesesimp>选择</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
 						<Original>Platoon and Squad Awareness</Original>
 						<German>Sichthilfen und Kartenmarkierungen</German>
+						<Italian>Indicatori di Mappa</Italian>
 						<Chinesesimp>班排警戒</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
 						<Original>Show platoon overlay: </Original>
 						<German>Platoon Overlay: </German>
+						<Italian>Indicatore Plotone: </Italian>
 						<Chinesesimp>显示排界面：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ACTIVE">
 						<Original>active</Original>
 						<German>aktiv</German>
+						<Italian>attivo</Italian>
 						<Chinesesimp>启用</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
 						<Original>Show player nametags: </Original>
 						<German>Spielernamen: </German>
+						<Italian>Indicatore Nomi:  </Italian>
 						<Chinesesimp>显示玩家铭牌：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_YES">
 						<Original>Yes</Original>
 						<German>Ja</German>
+						<Italian>Si</Italian>
 						<Chinesesimp>是</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_NO">
@@ -4112,66 +4127,79 @@
 				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
 						<Original>Adjust View Distance</Original>
 						<German>Sichtweite ändern</German>
+						<Italian>Aggiusta Distanza Visiva</Italian>
 						<Chinesesimp>调整视距</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VIEW_DISTANCE">
 						<Original>View Distance</Original>
 						<German>Sichtweite</German>
+						<Italian>Distanza Visuale</Italian>
 						<Chinesesimp>视野距离</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_INFANTRY">
 						<Original>Infantry</Original>
 						<German>Infanterie</German>
+						<Italian>Fanteria</Italian>
 						<Chinesesimp>步兵</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VEHICLES">
 						<Original>Vehicles</Original>
 						<German>Fahrzeuge</German>
+						<Italian>Veicoli</Italian>
 						<Chinesesimp>载具</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_OBJECTS">
 						<Original>Objects</Original>
 						<German>Objekte</German>
+						<Italian>Oggetti</Italian>
 						<Chinesesimp>物体</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
 						<Original>Adjust view distance to keep FPS above</Original>
 						<German>Automatische Sichtweite für FPS über</German>
+						<Italian>Aggiusta distanza in base agli FPS</Italian>
 						<Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
 						<Original>Adjust Terrain Details</Original>
 						<German>Landschaftdetails</German>
+						<Italian>Aggiusta Dettagli Terreno</Italian>
 						<Chinesesimp>调整地形细节</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VERY_LOW">
 						<Original>Very Low</Original>
 						<German>Sehr niedrig</German>
+						<Italian>Molto Basso</Italian>
 						<Chinesesimp>极低</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_LOW">
 						<Original>Low</Original>
 						<German>Niedrig</German>
+						<Italian>Basso</Italian>
 						<Chinesesimp>低</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_NORMAL">
 						<Original>Normal</Original>
 						<German>Normal</German>
+						<Italian>Normale</Italian>
 						<Chinesesimp>正常</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_HIGH">
 						<Original>High</Original>
 						<German>Hoch</German>
+						<Italian>Alto</Italian>
 						<Chinesesimp>高</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
 						<Original>Show teammates on map: </Original>
 						<German>Truppmitglieder auf Karte:</German>
+						<Italian>Mostra compagni in mappa:</Italian>
 						<Chinesesimp>在地图上显示友军：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
 						<Original>In-Vehicle Sound Volume</Original>
 						<German>Fahrzeug Innenlautstärke</German>
+						<Italian>Suono veicolo a bordo</Italian>
 						<Chinesesimp>载具内音量</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_TEST">
@@ -4182,40 +4210,48 @@
 				<Key ID="STR_GREUH_RESPAWN">
 						<Original>Respawn</Original>
 						<German>Respawn</German>
+						<Italian>Riapparizione</Italian>
 						<Chinesesimp>重生</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_REPLACE_NEAREST_AI">
 						<Original>Replace nearest AI</Original>
 						<German>Ersetze nächste KI</German>
+						<Italian>Rimpiazza AI</Italian>
 						<Chinesesimp>就近附身AI</Chinesesimp>
 				<Key ID="STR_CR_KILLMSG">
 						<Original>A civilian named %1 was killed!</Original>
 						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+						<Italian>Un civile di nome %1 è stato ucciso!</Italian>
 						<Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
 				</Key>
 				<Key ID="STR_CR_VEHICLEMSG">
 						<Original>A civil vehicle was seized!</Original>
 						<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
+						<Italian>Un veicolo civile è stato confiscato!</Italian>
 						<Chinesesimp>一辆平民载具被强征了！</Chinesesimp>
 				</Key>
 				<Key ID="STR_CR_BUILDINGMSG">
 						<Original>Civilians complaining about %1 lost buildings.</Original>
 						<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+						<Italian>Civili si lamentano della perdita di %1 edifici.</Italian>
 						<Chinesesimp>平民对%1建筑的损坏有所怨言。</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_BUILDING">
 						<Original>Civil Reputation penalty for buildings if building is</Original>
 						<German>Ziviler Reputations Abzug für Gebäude, wenn Gebäude</German>
+						<Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
 						<Chinesesimp>当建筑_____时，会平民声望会降低</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_DAMAGED">
 						<Original>damaged</Original>
 						<German>beschädigt</German>
+						<Italian>danneggiato</Italian>
 						<Chinesesimp>受损</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_DESTROYED">
 						<Original>fully destroyed</Original>
 						<German>komplett zerstört</German>
+						<Italian>completamente distrutto</Italian>
 						<Chinesesimp>完全损毁</Chinesesimp>
 				</Key>
 	</Package>
