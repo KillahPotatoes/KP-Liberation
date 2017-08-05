@@ -7,7 +7,7 @@
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-				<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon and special thanks to KelMG for some coding tips-->
+				<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation v0.96dev</Original>
 						<German>KP Liberation v0.96dev</German>
@@ -48,33 +48,6 @@
 						<Russian>Закрыть</Russian>
 						<Italian>Chiudi</Italian>
 						<Chinesesimp>关闭</Chinesesimp>
-				</Key>
-				<Key ID="STR_FAR_Need_Medic1">
-						<Original>I need a medic!</Original>
-						<French>J'ai besoin d'un medic!</French>
-						<German>Ich brauche einen Sanitäter!</German>
-						<Spanish>¡Necesito un médico!</Spanish>
-						<Russian>Мне нужен медик!</Russian>
-						<Italian>Ho bisogno di un medico!</Italian>
-						<Chinesesimp>我需要急救！</Chinesesimp>
-				</Key>
-				<Key ID="STR_FAR_Need_Medic2">
-						<Original>I'm hit! Medic!</Original>
-						<French>Je suis touché! Medic!</French>
-						<German>Wurde getroffen! Sanitäter!</German>
-						<Spanish>Herido! Médico!</Spanish>
-						<Russian>Меня подстрелили! Медик!</Russian>
-						<Italian>Mi hanno colpito! Medico!</Italian>
-						<Chinesesimp>我中弹了！医疗兵！</Chinesesimp>
-				</Key>
-				<Key ID="STR_FAR_Need_Medic3">
-						<Original>I'm down! Medic!</Original>
-						<French>Je suis à terre! Medic!</French>
-						<German>Ich bin gefallen! Sanitäter!</German>
-						<Spanish>Estoy abatido! Médico!</Spanish>
-						<Russian>Я ранен! Медик!</Russian>
-						<Italian>Sono a terra! Medico!</Italian>
-						<Chinesesimp>我被打中了！医疗兵！</Chinesesimp>
 				</Key>
 				<Key ID="STR_REVIVE_LABEL">
 						<Original>YOU ARE WOUNDED</Original>
@@ -4058,130 +4031,162 @@
 				</Key>
 				<Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
 						<Original>-- Extended Options --</Original>
+						<German>-- Erweiterte Optionen --</German>
 						<Chinesesimp>-- 扩展选项 --</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_EXTENDED_OPTIONS">
 						<Original>Extended Options</Original>
+						<German>Erweiterte Optionen</German>
 						<Chinesesimp>扩展选项</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_DISABLED">
 						<Original>- disabled -</Original>
+						<German>- deaktiviert -</German>
 						<Chinesesimp>- 已禁用 -</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SQUAD_MANAGEMENT">
 						<Original>Squad Management</Original>
+						<German>Truppmanagement</German>
 						<Chinesesimp>班组管理</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_JOIN">
 						<Original>Join</Original>
+						<German>Beitreten</German>
 						<Chinesesimp>加入</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CREATE">
 						<Original>Create</Original>
+						<German>Erstellen</German>
 						<Chinesesimp>创建</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_RENAME">
 						<Original>Rename</Original>
+						<German>Umbenennen</German>
 						<Chinesesimp>重命名</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_LEADER">
 						<Original>Leader</Original>
+						<German>Anführer</German>
 						<Chinesesimp>班长</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CANCEL">
 						<Original>Cancel</Original>
+						<German>Abbrechen</German>
 						<Chinesesimp>取消</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_CHOOSE">
 						<Original>Choose</Original>
+						<German>Wählen</German>
 						<Chinesesimp>选择</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
 						<Original>Platoon and Squad Awareness</Original>
+						<German>Sichthilfen und Kartenmarkierungen</German>
 						<Chinesesimp>班排警戒</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
-						<Original>Show platoon overlay : </Original>
+						<Original>Show platoon overlay: </Original>
+						<German>Platoon Overlay: </German>
 						<Chinesesimp>显示排界面：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ACTIVE">
 						<Original>active</Original>
+						<German>aktiv</German>
 						<Chinesesimp>启用</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
-						<Original>Show player nametags : </Original>
+						<Original>Show player nametags: </Original>
+						<German>Spielernamen: </German>
 						<Chinesesimp>显示玩家铭牌：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_YES">
 						<Original>Yes</Original>
+						<German>Ja</German>
 						<Chinesesimp>是</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_NO">
 						<Original>No</Original>
+						<German>Nein</German>
 						<Chinesesimp>否</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
 						<Original>Adjust View Distance</Original>
+						<German>Sichtweite ändern</German>
 						<Chinesesimp>调整视距</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VIEW_DISTANCE">
 						<Original>View Distance</Original>
+						<German>Sichtweite</German>
 						<Chinesesimp>视野距离</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_INFANTRY">
 						<Original>Infantry</Original>
+						<German>Infanterie</German>
 						<Chinesesimp>步兵</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VEHICLES">
 						<Original>Vehicles</Original>
+						<German>Fahrzeuge</German>
 						<Chinesesimp>载具</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_OBJECTS">
 						<Original>Objects</Original>
+						<German>Objekte</German>
 						<Chinesesimp>物体</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
 						<Original>Adjust view distance to keep FPS above</Original>
+						<German>Automatische Sichtweite für FPS über</German>
 						<Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
 						<Original>Adjust Terrain Details</Original>
+						<German>Landschaftdetails</German>
 						<Chinesesimp>调整地形细节</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_VERY_LOW">
 						<Original>Very Low</Original>
+						<German>Sehr niedrig</German>
 						<Chinesesimp>极低</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_LOW">
 						<Original>Low</Original>
+						<German>Niedrig</German>
 						<Chinesesimp>低</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_NORMAL">
 						<Original>Normal</Original>
+						<German>Normal</German>
 						<Chinesesimp>正常</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_HIGH">
 						<Original>High</Original>
+						<German>Hoch</German>
 						<Chinesesimp>高</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
-						<Original>Show teammates on map : </Original>
+						<Original>Show teammates on map: </Original>
+						<German>Truppmitglieder auf Karte:</German>
 						<Chinesesimp>在地图上显示友军：</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
 						<Original>In-Vehicle Sound Volume</Original>
+						<German>Fahrzeug Innenlautstärke</German>
 						<Chinesesimp>载具内音量</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_TEST">
 						<Original>Test</Original>
+						<German>Test</German>
 						<Chinesesimp>测试</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_RESPAWN">
 						<Original>Respawn</Original>
+						<German>Respawn</German>
 						<Chinesesimp>重生</Chinesesimp>
 				</Key>
 				<Key ID="STR_GREUH_REPLACE_NEAREST_AI">
 						<Original>Replace nearest AI</Original>
+						<German>Ersetze nächste KI</German>
 						<Chinesesimp>就近附身AI</Chinesesimp>
 				<Key ID="STR_CR_KILLMSG">
 						<Original>A civilian named %1 was killed!</Original>

@@ -176,6 +176,7 @@ class Missions
 * Added: Reputation gain for liberated sectors.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
+* Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
