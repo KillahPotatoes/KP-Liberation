@@ -56,6 +56,7 @@ GRLIB_permissions = [];
 ai_groups = [];
 resources_intel = 0;
 GRLIB_player_scores = [];
+KP_liberation_civ_rep = 0;
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -146,6 +147,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		GRLIB_player_scores = greuh_liberation_savegame select 14;
 	};
 
+	if (count greuh_liberation_savegame > 15) then {
+		KP_liberation_civ_rep = greuh_liberation_savegame select 15;
+	};
+
 	setDate [ 2045, 6, 6, time_of_day, 0];
 
 	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Loaded savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
@@ -162,8 +167,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
-
-	waitUntil {!isNil "KP_liberation_suppMod_created"};
+	
+	if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {!isNil "KP_liberation_suppMod_created"};
+	};
 
 	{
 		_nextclass = _x select 0;
@@ -195,8 +202,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 
 			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
-				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+				[_nextbuilding] remoteExec ["arty_monitor", 2];
 			};
 
 			if ( _hascrew ) then {
@@ -624,11 +630,11 @@ while { true } do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
-		KP_liberation_production, KP_liberation_logistics, _stats, [ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links,
-		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores ];
+		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
+		KP_liberation_production, KP_liberation_logistics, _stats, [round infantry_weight, round armor_weight, round air_weight], GRLIB_vehicle_to_military_base_links,
+		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep];
 
-		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
+		profileNamespace setVariable [GRLIB_save_key, greuh_liberation_savegame];
 		saveProfileNamespace;
 
 		if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};

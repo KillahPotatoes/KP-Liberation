@@ -220,21 +220,26 @@ while { true } do {
 			default {_access = true;};
 		};
 		if (_access) then {
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Source: %1 - Entered _access area", debug_source];_text remoteExec ["diag_log",2];};
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Entered _access area", debug_source];_text remoteExec ["diag_log",2];};
+			if (isNil "KP_liberation_suppMod_handle") then {KP_liberation_suppMod_handle = scriptNull;};
+			if (isNull KP_liberation_suppMod_handle) then {
+				KP_liberation_suppMod_handle = [KP_liberation_suppMod_arty] execVM "A3\modules_f\supports\init_provider.sqf";
+			};
 			if (isNil "KP_liberation_suppMod_req") then {
-				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Source: %1 - Requester seems to be Nil", debug_source];_text remoteExec ["diag_log",2];};
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Requester seems to be Nil", debug_source];_text remoteExec ["diag_log",2];};
 				KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", KP_liberation_suppMod_grp, [], 0, "NONE"];
+				//KP_liberation_suppMod_req spawn BIS_fnc_moduleSupportsInitRequester;
 				[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";
 				{
 					[KP_liberation_suppMod_req, _x, -1] call BIS_fnc_limitSupport;
 				} forEach ["Artillery","CAS_Heli","CAS_Bombing","UAV","Drop","Transport"];
-				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Source: %1 - Requester: %2", debug_source, KP_liberation_suppMod_req];_text remoteExec ["diag_log",2];};
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Requester: %2", debug_source, KP_liberation_suppMod_req];_text remoteExec ["diag_log",2];};
 			};
 			if ((count (synchronizedObjects player)) == 0) then {
-				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Source: %1 - No synced Objects", debug_source];_text remoteExec ["diag_log",2];};
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - No synced Objects", debug_source];_text remoteExec ["diag_log",2];};
 				[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
 			};
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Source: %1 - Synced to %2 Objects", debug_source, (count (synchronizedObjects player))];_text remoteExec ["diag_log",2];};	
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Synced to %2 -> %3", debug_source, (synchronizedObjects player), synchronizedObjects ((synchronizedObjects player) select 0)];_text remoteExec ["diag_log",2];};
 		};
 	};
 };

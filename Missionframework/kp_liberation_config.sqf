@@ -87,6 +87,11 @@ GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defen
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
+KP_liberation_cr_kill_penalty = 2;																				// Civil Reputation penalty for killing a civilian
+KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building
+KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
+KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
@@ -174,7 +179,11 @@ KP_liberation_allowed_items_extension = [
 	"rhs_weap_M136_used",
 	"rhs_m136_mag",
 	"rhs_m136_hedp_mag",
-	"rhs_m136_hp_mag"
+	"rhs_m136_hp_mag",
+	"BWA3_optic_ZO4x30_NSV",
+	"BWA3_optic_ZO4x30_IRV",
+	"BWA3_optic_ZO4x30_Single_NSV",
+	"BWA3_optic_ZO4x30_Single_IRV"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
@@ -299,11 +308,18 @@ vehicle_refuel_sources = [
 // Classnames of artillery vehicles or statics which should be linked to the support system.
 KP_liberation_artySupp = [
 	"B_Mortar_01_F",
+	"B_T_Mortar_01_F",
 	"B_MBT_01_arty_F",
+	"B_T_MBT_01_arty_F",
 	"B_MBT_01_mlrs_F",
+	"B_T_MBT_01_mlrs_F",
 	"rhsusf_m109_usarmy",
+	"rhsusf_m109d_usarmy",
 	"RHS_M252_WD",
-	"RHS_M119_WD"
+	"RHS_M252_D",
+	"RHS_M119_WD",
+	"RHS_M119_D",
+	"UK3CB_BAF_Static_L16_Deployed_MTP"
 ];
 
 // Classnames of boats, so they can be built on water.

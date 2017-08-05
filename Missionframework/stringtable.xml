@@ -92,12 +92,12 @@
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
 						<Italian>-- COSTRUISCI --</Italian>
-						<Chinesesimp>-- 建造 --</Chinesesimp>
+						<Chinesesimp>-- 建造 --</Chinesesim>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
 						<French>CONSTRUCTION</French>
-						<German>BAUMENUE</German>
+						<German>BAUMENÜ</German>
 						<Spanish>MENU DE CONSTRUCCIÓN</Spanish>
 						<Russian>ОБЕСПЕЧЕНИЕ</Russian>
 						<Italian>MENU COSTRUZIONI</Italian>
@@ -3593,7 +3593,7 @@
  				<Key ID="STR_LOGISTIC_STANDBY_ERROR">
  						<Original>You can't abort this mission at the moment.</Original>
  						<German>Du kannst diesen Auftrag momentan nicht abbrechen.</German>
-						 <Russian>На данный момент вы не можете прервать эту миссию.</Russian>
+						<Russian>На данный момент вы не можете прервать эту миссию.</Russian>
 						<Italian>Non puoi terminare la missione in questo momento.</Italian>
  						<Chinesesimp>目前你不能放弃此任务。</Chinesesimp>
  				</Key>
@@ -3684,11 +3684,6 @@
 						На стартовой позиции вы можете выбрать свое снаряжение из полного арсенала. Вы также найдете свой первый FOB, упакованный в контейнер, вертолет Spartan-01 и несколько других небольших транспортных вертолетов.&lt;br/&gt; &lt;br/&gt;
 						Вам придется переправить этот контейнер с помощью Spartan-01 (или начать с первого уже построенного FOB). Вы можете развернуть этот первый FOB везде, где хотите (пока вы в 1 км от стартовой позиции и 300 м от любого сектора), поэтому вам решать, какое место выбрать для начала наступления в вашей кампании.&lt;br/&gt; &lt;br/&gt;
 						</Russian>
-						<German>&lt;br/&gt;&lt;br/&gt;
-						Sie beginnen die Kampagne entweder auf der USS Freedom, oder bei Chimera Base, sichere Zonen, die der Feind nicht wagen wird anzugreifen. Ihre erste Wahl wird sein, wo sie einsetzen wollen. Zu Anfang geht das nur auf ihrer Startposition, aber im Laufe der Zeit, werden Ihnen mehr Optionen, wie Forward Operating Bases (FOB) und mobile Respawns, zur Verfügung stehen.&lt;br/&gt; &lt;br/&gt;
-						An Ihrer Startposition, können Sie Ihr Equipment aus einem Vollständigen Arsenal auswählen. Sie werden außerdem eine erste FOB, verpackt in einem Frachtkontainer vorfinden, welcher mit der Spartan-01 oder auch mit einigen wenigen anderen Helikoptern transportiert werden kann.&lt;br/&gt; &lt;br/&gt;
-						Sie werden diesen Kontainer mit der Spartan-01 transportieren müssen (oder Sie starten die Kampagne mit einer bereits gebauten FOB). Sie können die erste FOB bauen, wo immer Sie wollen (so lange Sie mindestens 1km von Ihrer Startposition und mindestens 300m von einem der Sektoren entfernt sind). Es liegt bei Ihnen, einen geeigneten Ort zu wählen, von dem aus Sie die Kampagne starten.&lt;br/&gt; &lt;br/&gt;
-						</German>
 						<Chinesesimp>&lt;br/&gt;&lt;br/&gt;
 						自由号航母或奇美拉基地——敌人绝不敢招惹的安全地带，将作为你作战的出发点。你的首个选择就是部署地点。一开始你仅能在出发点部署，但随着进度的深入，前进基地（前哨）和机动复活点等选项将会开启。&lt;br/&gt; &lt;br/&gt;
 						你可以在开始地点从军火库中选择你的装备。你也会在这里找到自己被打包在部署柜里的首个前哨、斯巴达1号直升机以及一些其它小型运输直升机。&lt;br/&gt; &lt;br/&gt;
@@ -3905,7 +3900,7 @@
 						That would simply be redundant!&lt;br/&gt; &lt;br/&gt;
 						</Original>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Um eine brandneue FOB zu bauen, öffnen Sie das Baumenue und unter dem Reiter Logistik bauen Sie einen FOB Container oder einen FOB Lastwagen (dasselbe, bloß mit Rädern). Dann können Sie den FOB Container/Lastwagen and die Position Ihrer Wahl bringen und Ihre niegelnagelneue FOB aufbauen. Beachten Sie, das Sie keine FOB innerhalb von 1km von der Startposition, von 300m von einem Sektor und von 2km von einer anderen FOB aufbauen können.&lt;br/&gt; &lt;br/&gt;
+						Um eine brandneue FOB zu bauen, öffnen Sie das Baumenü und unter dem Reiter Logistik bauen Sie einen FOB Container oder einen FOB Lastwagen (dasselbe, bloß mit Rädern). Dann können Sie den FOB Container/Lastwagen and die Position Ihrer Wahl bringen und Ihre niegelnagelneue FOB aufbauen. Beachten Sie, das Sie keine FOB innerhalb von 1km von der Startposition, von 300m von einem Sektor und von 2km von einer anderen FOB aufbauen können.&lt;br/&gt; &lt;br/&gt;
 						Das wäre einfach unnötig!&lt;br/&gt; &lt;br/&gt;
 						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
@@ -4061,8 +4056,6 @@
 						<Italian>Tutti</Italian>
 						<Chinesesimp>所有人</Chinesesimp>
 				</Key>
-				
-				<!-- GREUH localization -->
 				<Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
 						<Original>-- Extended Options --</Original>
 						<Chinesesimp>-- 扩展选项 --</Chinesesimp>
@@ -4190,6 +4183,29 @@
 				<Key ID="STR_GREUH_REPLACE_NEAREST_AI">
 						<Original>Replace nearest AI</Original>
 						<Chinesesimp>就近附身AI</Chinesesimp>
+				<Key ID="STR_CR_KILLMSG">
+						<Original>A civilian named %1 was killed!</Original>
+						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+				</Key>
+				<Key ID="STR_CR_VEHICLEMSG">
+						<Original>A civil vehicle was seized!</Original>
+						<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
+				</Key>
+				<Key ID="STR_CR_BUILDINGMSG">
+						<Original>Civilians complaining about %1 lost buildings.</Original>
+						<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_BUILDING">
+						<Original>Civil Reputation penalty for buildings if building is</Original>
+						<German>Ziviler Reputations Abzug für Gebäude, wenn Gebäude</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_DAMAGED">
+						<Original>damaged</Original>
+						<German>beschädigt</German>
+				</Key>
+				<Key ID="STR_PARAM_CR_DESTROYED">
+						<Original>fully destroyed</Original>
+						<German>komplett zerstört</German>
 				</Key>
 	</Package>
 </Project>

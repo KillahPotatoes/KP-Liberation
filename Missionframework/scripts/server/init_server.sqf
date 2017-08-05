@@ -38,6 +38,9 @@ manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\man
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
+// Arty Monitor
+arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
+
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
@@ -74,6 +77,9 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\unit_cap.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\lose_sectors.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_sectors.sqf";
+
+// Civil Reputation
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civrep\init_module.sqf";
 
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {

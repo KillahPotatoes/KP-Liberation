@@ -61,6 +61,8 @@ if (isServer) then {
 		];
 	};
 
+	[_liberated_sector] spawn F_cr_liberatedSector;
+
 	[] spawn check_victory_conditions;
 
 	sleep 1;
