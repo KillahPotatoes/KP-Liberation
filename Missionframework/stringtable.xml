@@ -7,7 +7,7 @@
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-				<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon-->
+				<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon and special thanks to KelMG for some coding tips-->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation v0.96dev</Original>
 						<German>KP Liberation v0.96dev</German>
@@ -47,7 +47,7 @@
 						<Spanish>Cerca</Spanish>
 						<Russian>Закрыть</Russian>
 						<Italian>Chiudi</Italian>
-						<Chinesesimp>关闭</Chines
+						<Chinesesimp>关闭</Chinesesimp>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic1">
 						<Original>I need a medic!</Original>
@@ -65,7 +65,7 @@
 						<Spanish>Herido! Médico!</Spanish>
 						<Russian>Меня подстрелили! Медик!</Russian>
 						<Italian>Mi hanno colpito! Medico!</Italian>
-						<Chinesesimp>我中弹了！医疗兵！</Chinesesim
+						<Chinesesimp>我中弹了！医疗兵！</Chinesesimp>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic3">
 						<Original>I'm down! Medic!</Original>
@@ -74,7 +74,7 @@
 						<Spanish>Estoy abatido! Médico!</Spanish>
 						<Russian>Я ранен! Медик!</Russian>
 						<Italian>Sono a terra! Medico!</Italian>
-						<Chinesesimp>我被打中了！医疗兵！</Chin
+						<Chinesesimp>我被打中了！医疗兵！</Chinesesimp>
 				</Key>
 				<Key ID="STR_REVIVE_LABEL">
 						<Original>YOU ARE WOUNDED</Original>
@@ -146,7 +146,7 @@
 						<Spanish>Desangrado en %1 segundos</Spanish>
 						<Russian>Вы умрёте через %1 секунд</Russian>
 						<Italian>Morte per dissanguamento fra %1 secondi</Italian>
-						<Chinesesimp>将于%1秒后因失血阵亡</Chinesesimp>
+						<Chinesesimp>将于%1秒后失血阵亡</Chinesesimp>
 				</Key>
 				<Key ID="STR_BLEEDOUT_STABILIZED">
 						<Original>Stabilized</Original>
@@ -200,7 +200,7 @@
 						<Spanish>Construcción cancelada</Spanish>
 						<Russian>Постройка отменена</Russian>
 						<Italian>Costruzione cancellata.</Italian>
-						<Chinesesimp>已取消建造。</Chinesesimp>
+						<Chinesesimp>建造取消。</Chinesesimp>
 				</Key>
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
@@ -209,7 +209,7 @@
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
 						<Italian>Costruzione confermata.</Italian>
-						<Chinesesimp>已决定建造。</Chinesesimp>
+						<Chinesesimp>建造完成。</Chinesesimp>
 				</Key>
 				<Key ID="STR_PLACEMENT_IMPOSSIBLE">
 						<Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -218,7 +218,7 @@
 						<Spanish>Imposible de colocar aqui: hay 1% objeto(s) a %2 metros de la posición del objeto</Spanish>
 						<Russian>Нельзя разместить здесь:  в %2 метрах есть 1% объект(а).</Russian>
 						<Italian>impossibile piazzare qui: ci sono %1 oggetti vicini %2 metri dalla posizione dell'oggetto in costruzione</Italian>
-						<Chinesesimp>无法安置在这里：当前位置%2米内有%1个物体造成了阻挡。</Chinesesimp>
+						<Chinesesimp>无法安置在这里：当前位置%2米内有%1个物体阻挡。</Chinesesimp>
 				</Key>
 				<Key ID="STR_PLACEMENT_POSSIBLE">
 						<Original>This position is valid.</Original>
@@ -227,7 +227,7 @@
 						<Spanish>Esta posición es válida</Spanish>
 						<Russian>Это место подходит.</Russian>
 						<Italian>Questa posizione è valida</Italian>
-						<Chinesesimp>可以安置于此处。</Chinesesimp>
+						<Chinesesimp>可安置于此处。</Chinesesimp>
 				</Key>
 				<Key ID="STR_ARSENAL_ACTION">
 						<Original>-- ARSENAL --</Original>
@@ -263,7 +263,7 @@
 						<Spanish>Caja de munición cargada correctamente en el vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами загружен в транспортное средство</Russian>
 						<Italian>Cassa munizioni correttamente caricata sul camion da trasporto</Italian>
-						<Chinesesimp>已成功将货箱装载到运输载具中。</Chinesesimp>
+						<Chinesesimp>货箱已装载到运输载具中。</Chinesesimp>
 				</Key>
 				<Key ID="STR_BOX_UNLOADED">
 						<Original>Ammo box successfully unloaded from the transport vehicle.</Original>
@@ -272,7 +272,7 @@
 						<Spanish>Caja de munición descargada correctamente del vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами выгружен из транспортного средства</Russian>
 						<Italian>Cassa munizioni correttamente scaricata dal camion da trasporto</Italian>
-						<Chinesesimp>已成功将运输载具中的货箱卸载。</Chinesesimp>
+						<Chinesesimp>货箱已从运输载具中卸载。</Chinesesimp>
 				</Key>
 				<Key ID="STR_BOX_CANTLOAD">
 						<Original>There is no nearby vehicle capable of carrying the ammo box.</Original>
@@ -352,7 +352,7 @@
 						<Spanish>Respawn móvil</Spanish>
 						<Russian>Мобильная КШМ</Russian>
 						<Italian>Respawn Mobile</Italian>
-						<Chinesesimp>机动复活点</Chinesesimp>
+						<Chinesesimp>机动复活载具</Chinesesimp>
 				</Key>
 				<Key ID="STR_ARSENAL_BOX">
 						<Original>Arsenal box</Original>
@@ -361,7 +361,7 @@
 						<Spanish>Caja de Arsenal</Spanish>
 						<Russian>Ящик с арсеналом</Russian>
 						<Italian>Cassa Arsenale</Italian>
-						<Chinesesimp>军火库箱</Chinesesimp>
+						<Chinesesimp>军火箱</Chinesesimp>
 				</Key>
 				<Key ID="STR_DEPLOY_TITLE">
 						<Original>DEPLOYMENT</Original>
@@ -406,7 +406,7 @@
 						<Spanish>Escuadra de fusileros ligeros</Spanish>
 						<Russian>Легкий Стрелковый Отряд</Russian>
 						<Italian>Squadra Fucilieri Leggeri</Italian>
-						<Chinesesimp>轻步枪班</Chinesesimp>
+						<Chinesesimp>轻装步枪班</Chinesesimp>
 						</Key>
 				<Key ID="STR_RIFLE_SQUAD">
 						<Original>Heavy Rifle Squad</Original>
@@ -415,7 +415,7 @@
 						<Spanish>Escuadra de fusileros pesados</Spanish>
 						<Russian>Тяжёлый Стрелковый Отряд</Russian>
 						<Italian>Squadra Fucilieri Pesanti</Italian>
-						<Chinesesimp>重步枪班</Chinesesimp>
+						<Chinesesimp>重装步枪班</Chinesesimp>
 				</Key>
 				<Key ID="STR_AT_SQUAD">
 						<Original>AT Squad</Original>
@@ -505,7 +505,7 @@
 						<Spanish>-- RECOLOCAR VEHÍCULO</Spanish>
 						<Russian>-- ПЕРЕВЕРНУТЬ</Russian>
 						<Italian>-- RIADDRIZZA</Italian>
-						<Chinesesimp>-- 翻正</Chinesesimp>
+						<Chinesesimp>-- 复位</Chinesesimp>
 				</Key>
 				<Key ID="STR_GRID">
 						<Original>-- Grid mode</Original>
@@ -523,7 +523,7 @@
 						<Spanish>-- CAPTURAR</Spanish>
 						<Russian>-- ЗАХВАТИТЬ</Russian>
 						<Italian>-- CATTURA</Italian>
-						<Chinesesimp>-- 拘捕</Chinesesimp>
+						<Chinesesimp>-- 俘虏</Chinesesimp>
 				</Key>
 				<Key ID="STR_SQUAD_MEMBER">
 						<Original>Squad member</Original>
@@ -667,7 +667,7 @@
 						<Spanish>NUEVA FOB CONSTRUIDA</Spanish>
 						<Russian>НОВАЯ FOB ПОСТРОЕНА</Russian>
 						<Italian>NUOVA FOB COSTRUITA</Italian>
-						<Chinesesimp>新的前哨已建造完成</Chinesesimp>
+						<Chinesesimp>新的前哨部署完成</Chinesesimp>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBBUILT_TEXT">
 						<Original>FOB %1 is now operational.</Original>
@@ -829,7 +829,7 @@
 						<Spanish>VICTORIA DE BLUFOR</Spanish>
 						<Russian>СИНИЕ ПОБЕДИЛИ</Russian>
 						<Italian>VITTORIA PER I BLUFOR</Italian>
-						<Chinesesimp>我方胜利</Chinesesimp>
+						<Chinesesimp>我军胜利</Chinesesimp>
 				</Key>
 				<Key ID="STR_VICTORY_TEXT">
 						<Original>You have liberated the island from the OPFOR oppression.</Original>
@@ -838,7 +838,7 @@
 						<Spanish>Has liberado a Altis de la opresión del OPFOR</Spanish>
 						<Russian>Вы освободили Алтис от оккупации OPFOR.</Russian>
 						<Italian>Siete riusciti a liberare l'isola dall'oppressione degli OPFOR</Italian>
-						<Chinesesimp>你已将本岛从敌方的压迫中解救了出来。</Chinesesimp>
+						<Chinesesimp>你已将本岛从敌人的压迫中解救了出来。</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_DAY">
 						<Original>days</Original>
@@ -892,7 +892,7 @@
 						<Spanish>Infantería OPFOR eliminada:</Spanish>
 						<Russian>OPFOR пехоты убито:</Russian>
 						<Italian>Fanteria OPFOR ha ucciso:</Italian>
-						<Chinesesimp>敌方被击杀的步兵：</Chinesesimp>
+						<Chinesesimp>被击杀的敌军步兵：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_2">
 						<Original>OPFOR infantry killed by players:</Original>
@@ -901,7 +901,7 @@
 						<Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
 						<Russian>OPFOR пехоты убито игроками:</Russian>
 						<Italian>Fanteria OPFOR uccisa da:</Italian>
-						<Chinesesimp>敌方被玩家击杀的步兵：</Chinesesimp>
+						<Chinesesimp>被玩家击杀的敌军步兵：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_3">
 						<Original>BLUFOR infantry killed:</Original>
@@ -910,7 +910,7 @@
 						<Spanish>Infantería BLUFOR eliminada:</Spanish>
 						<Russian>BLUFOR пехоты убито:</Russian>
 						<Italian>Fanteria BLUFOR ha ucciso:</Italian>
-						<Chinesesimp>蓝方被击杀的步兵：</Chinesesimp>
+						<Chinesesimp>被击杀的我军步兵：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_4">
 						<Original>Civilians killed:</Original>
@@ -937,7 +937,7 @@
 						<Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
 						<Russian>BLUFOR дружественный огонь:</Russian>
 						<Italian>Fuoco amico tra i BLUFOR:</Italian>
-						<Chinesesimp>蓝方友军误击事件：</Chinesesimp>
+						<Chinesesimp>我军友军误击事件：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_7">
 						<Original>OPFOR vehicles destroyed:</Original>
@@ -946,7 +946,7 @@
 						<Spanish>Vehículos OPFOR destruídos:</Spanish>
 						<Russian>OPFOR техники уничтожено:</Russian>
 						<Italian>Veicolo OPFOR distrutto:</Italian>
-						<Chinesesimp>敌方被摧毁的载具：</Chinesesimp>
+						<Chinesesimp>敌军被摧毁的载具：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_8">
 						<Original>OPFOR vehicles destroyed by players:</Original>
@@ -955,7 +955,7 @@
 						<Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
 						<Russian>OPFOR техники уничтожено игроками:</Russian>
 						<Italian>Veicolo OPFOR distrutto da:</Italian>
-						<Chinesesimp>被玩家摧毁的敌方载具：</Chinesesimp>
+						<Chinesesimp>被玩家摧毁的敌军载具：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_9">
 						<Original>BLUFOR vehicles destroyed:</Original>
@@ -964,7 +964,7 @@
 						<Spanish>Vehículos BLUFOR destruídos:</Spanish>
 						<Russian>BLUFOR техники уничтожено:</Russian>
 						<Italian>Veicolo BLUFOR distrutto:</Italian>
-						<Chinesesimp>被摧毁的蓝方载具：</Chinesesimp>
+						<Chinesesimp>被摧毁的我军载具：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_10">
 						<Original>BLUFOR vehicles built:</Original>
@@ -973,7 +973,7 @@
 						<Spanish>Vehículos BLUFOR construidos:</Spanish>
 						<Russian>BLUFOR техники построено:</Russian>
 						<Italian>Veicolo BLUFOR creato:</Italian>
-						<Chinesesimp>蓝方建造的载具：</Chinesesimp>
+						<Chinesesimp>我军建造的载具：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_11">
 						<Original>Vehicles recycled:</Original>
@@ -1009,7 +1009,7 @@
 						<Spanish>Sectores perdidos:</Spanish>
 						<Russian>Зон потеряно:</Russian>
 						<Italian>Settore perso:</Italian>
-						<Chinesesimp>失去的战区：</Chinesesimp>
+						<Chinesesimp>丢失的战区：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_15">
 						<Original>FOBs built:</Original>
@@ -1126,7 +1126,7 @@
 						<Spanish>Soldados BLUFOR reclutados:</Spanish>
 						<Russian>BLUFOR солдат призвано:</Russian>
 						<Italian>Soldato BLUFOR reclutato:</Italian>
-						<Chinesesimp>蓝方招募的士兵：</Chinesesimp>
+						<Chinesesimp>我军招募的士兵：</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_28">
 						<Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
@@ -1135,7 +1135,7 @@
 						<Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
 						<Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
 						<Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
-						<Chinesesimp>希望您喜欢这个任务，一如我们喜欢制作此类任务一般。</Chinesesimp>
+						<Chinesesimp>一如我们如此热爱制作这个任务，也希望您能喜欢它。</Chinesesimp>
 				</Key>
 				<Key ID="STR_STATS_29">
 						<Original>(Press ESC to exit)</Original>
@@ -1160,6 +1160,7 @@
 						<German>== Spieleinstellungen ==</German>
 						<Spanish>== OPCIONES DE JUEGO</Spanish>
 						<Italian>==OPZIONI DI GIOCO ==</Italian>
+						<Chinesesimp>== 游戏选项 ==</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAMS_TECHNICALOPTIONS">
 						<Original>== TECHNICAL OPTIONS ==</Original>
@@ -1168,7 +1169,7 @@
 						<Spanish>== OPCIONES TÉCNICAS ==</Spanish>
 						<Russian>== ТЕХНИЧЕСКИЕ ОПЦИИ ==</Russian>
 						<Italian>==OPZIONI TECNICHE ==</Italian>
-						<Chinesesimp>== 技术性选项 ==</Chinesesimp>
+						<Chinesesimp>== 技术选项 ==</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAMS_DAYDURATION">
 						<Original>Day duration (hours)</Original>
@@ -2045,7 +2046,7 @@
 						<Spanish>-- EMPAQUETAR FOB --</Spanish>
 						<Russian>-- СВЕРНУТЬ FOB --</Russian>
 						<Italian>-- SMONTA FOB --</Italian>
-						<Chinesesimp>-- 打包前哨 --</Chinesesimp>
+						<Chinesesimp>-- 收起前哨 --</Chinesesimp>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_TITLE">
 						<Original>REPACKAGE FOB</Original>
@@ -2054,7 +2055,7 @@
 						<Spanish>EMPAQUETAR FOB</Spanish>
 						<Russian>СВЕРНУТЬ FOB</Russian>
 						<Italian>SMONTA FOB</Italian>
-						<Chinesesimp>打包前哨</Chinesesimp>
+						<Chinesesimp>收起前哨</Chinesesimp>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_CONFIRM">
 						<Original>Are you sure you want to repackage this FOB?</Original>
@@ -2063,7 +2064,7 @@
 						<Spanish>¿Estas seguro de querer reempaquetar esta FOB?</Spanish>
 						<Russian>Ты уверен что хочешь свернуть эту FOB?</Russian>
 						<Italian>Sei sicuro di voler smontare la FOB?</Italian>
-						<Chinesesimp>你确定要打包这个前哨？</Chinesesimp>
+						<Chinesesimp>你确定要收起这个前哨？</Chinesesimp>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_HINT">
 						<Original>FOB repackaged.</Original>
@@ -2072,7 +2073,7 @@
 						<Spanish>FOB reempaquetada</Spanish>
 						<Russian>FOB свёрнута</Russian>
 						<Italian>FOB smontata.</Italian>
-						<Chinesesimp>前哨已打包。</Chinesesimp>
+						<Chinesesimp>前哨已收起。</Chinesesimp>
 				</Key>
 				<Key ID="STR_HALO_PARAM">
 						<Original>HALO jump</Original>
@@ -2188,7 +2189,7 @@
 						<Spanish>Activado - ¡Sólo utilizar si has modificado tu whitelist.sqf</Spanish>
 						<Russian>Вкл - Использовать только если вы редактировали файл whitelist.sqf!</Russian>
 						<Italian>Attiva - Solo se hai modificato la tua whitelist.sqf!</Italian>
-						<Chinesesimp>开启 - 只有在你设立了whitelist.sqf的时候才用这个选项！</Chinesesimp>
+						<Chinesesimp>开启 - 只有在设立了whitelist.sqf时才能用这个选项！</Chinesesimp>
 				</Key>
 				<Key ID="STR_BUILD_ENEMIES_NEARBY">
 						<Original>Cannot build: hostile forces nearby.</Original>
@@ -2206,7 +2207,7 @@
 						<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
 						<Russian>Удаление брошенной техники вне FOB.</Russian>
 						<Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
-						<Chinesesimp>清理前哨外的废弃载具。</Chinesesimp>
+						<Chinesesimp>清理前哨外的废弃载具</Chinesesimp>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM1">
 						<Original>Enabled - 1 hour delay</Original>
@@ -2314,7 +2315,7 @@
 						<Spanish>Agresividad del OPFOR</Spanish>
 						<Russian>Уровень обеспокоенности OPFOR</Russian>
 						<Italian>Aggressività OPFOR</Italian>
-						<Chinesesimp>敌方进攻性</Chinesesimp>
+						<Chinesesimp>敌军进攻性</Chinesesimp>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM0">
 						<Original>Anemic</Original>
@@ -2512,7 +2513,7 @@
 						<Spanish>Convoy OPFOR</Spanish>
 						<Russian>Конвой OPFOR</Russian>
 						<Italian>Convoglio OPFOR</Italian>
-						<Chinesesimp>敌方车队</Chinesesimp>
+						<Chinesesimp>敌军车队</Chinesesimp>
 				</Key>
 				<Key ID="STR_SECONDARY_CSAT_CONVOY_WP">
 						<Original>Waypoint</Original>
@@ -2530,7 +2531,7 @@
 						<Spanish>Convoy OPFOR neutralizado</Spanish>
 						<Russian>Конвой OPFOR нейтрализован.</Russian>
 						<Italian>Convoglio OPFOR neutralizzato.</Italian>
-						<Chinesesimp>敌方车队已被消灭</Chinesesimp>
+						<Chinesesimp>敌军车队已被消灭</Chinesesimp>
 				</Key>
 				<Key ID="STR_NOTIFICATION_CONVOY_SPOTTED_TEXT">
 						<Original>OPFOR Convoy near %1.</Original>
@@ -2539,7 +2540,7 @@
 						<Spanish>Convoy OPFOR cerca de 1%</Spanish>
 						<Russian>Конвой OPFOR рядом с %1.</Russian>
 						<Italian>Convoglio OPFOR vicino %1.</Italian>
-						<Chinesesimp>敌方车队接近%1</Chinesesimp>
+						<Chinesesimp>敌军车队接近%1</Chinesesimp>
 				</Key>
 				<Key ID="STR_TUTO_GOTIT">
 						<Original>Got it!</Original>
@@ -2666,14 +2667,14 @@
 						&lt;t size='1.3' color='#ffa000'&gt;狩猎前哨&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1'&gt;
-						敌方部队在阵地后方建有一组小型后勤基地。摧毁这些设施将会极大的打击敌方的补给线，并拖慢他们的反应速度。&lt;/t&gt;
+						敌军部队在阵地后方建有一组小型后勤基地。摧毁这些设施将会极大的打击敌军的补给线，并拖慢他们的反应速度。&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1'&gt;
 						你的任务是不惜一切代价摧毁目标区域所有补给物资（卡车、集装箱）。遗憾的是我们的情报部门无法为你提供这些基地的准确位置，你必须在地图的红色区域中自行搜索目标。&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1.15' color='#00a0ff'&gt;花费：15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
 						&lt;br/&gt;
-						&lt;t size='1.15' color='#ffa000'&gt;奖励：敌方警戒等级降低40%&lt;/t&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;奖励：敌军警戒等级降低40%&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
 						</Chinesesimp>
@@ -2793,14 +2794,14 @@
 						&lt;t size='1.3' color='#ffa000'&gt;劫掠车队&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1'&gt;
-						敌方部队的防御位置通过地面车队进行补给。拦截这种车队可以有效打击他们的补给线，而这也是让我们截获弹药的大好机会。&lt;/t&gt;
+						敌军部队的防御位置通过地面车队进行补给。拦截这种车队可以有效打击他们的补给线，而这也是让我们截获弹药的大好机会。&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1'&gt;
-						你的任务是不惜一切代价拦截敌方车队。由你决定是摧毁还是截获所有的弹药。目标将会标示在你的地图上。&lt;/t&gt;
+						你的任务是不惜一切代价拦截敌军车队。由你决定是摧毁还是截获所有的弹药。目标将会标示在你的地图上。&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='1.15' color='#00a0ff'&gt;花费：10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
 						&lt;br/&gt;
-						&lt;t size='1.15' color='#ffa000'&gt;奖励：敌方警戒等级降低15%&lt;/t&gt;
+						&lt;t size='1.15' color='#ffa000'&gt;奖励：敌军警戒等级降低15%&lt;/t&gt;
 						&lt;br/&gt;
 						&lt;t size='1.15' color='#ffa000'&gt;次要奖励：你能截获的所有弹药。&lt;/t&gt;
 						&lt;br/&gt;&lt;br/&gt;
@@ -2816,7 +2817,7 @@
 						<Spanish>Defensores BLUFOR en los sectores controlados</Spanish>
 						<Russian>BLUFOR защитники в захваченных зонах</Russian>
 						<Italian>Trupppe BLUFOR nei settori controllati</Italian>
-						<Chinesesimp>蓝方部队防御己方战区</Chinesesimp>
+						<Chinesesimp>我军部队防御己方战区</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_AUTODANGER">
 						<Original>Auto-danger behaviour on BLUFOR forces</Original>
@@ -2825,7 +2826,7 @@
 						<Spanish>Comportamiento de Auto-Alerta en las fuerzas BLUFOR</Spanish>
 						<Russian>Авто-опасность для сил BLUFOR</Russian>
 						<Italian>Comportamento Auto-Allerta per forze BLUFOR</Italian>
-						<Chinesesimp>蓝方部队自动警戒行为</Chinesesimp>
+						<Chinesesimp>我军部队自动警戒行为</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_FOBS_COUNT">
 						<Original>Maximum number of FOBs allowed</Original>
@@ -3202,7 +3203,7 @@
 						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
 						<Russian>== ВОЗВРАТИТЬ ОПЦИИ (отключите это, если вы играете с ACE)</Russian>
 						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
-						<Chinesesimp>== 复活选项（如果你挂在了ACE模组，请关闭此项）</Chinesesimp>
+						<Chinesesimp>== 复活选项（如果你挂载了ACE模组，请关闭此项）</Chinesesimp>
 				</Key>
 				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
 						<Original>Following items are not allowed:\n%1</Original>
@@ -3503,7 +3504,7 @@
  						<German>LKW abziehen</German>
 						<Russian>Отменить передачу</Russian>
 						<Italian>Rimuovi camion</Italian>
- 						<Chinesesimp>取消卡车指派</Chinesesimp>
+ 						<Chinesesimp>取消指派卡车</Chinesesimp>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_BUYTRUCK">
  						<Original>Costs: 100 supplies and 100 fuel.</Original>
@@ -3640,7 +3641,7 @@
 						Inoltre, le forze nemiche risponderanno certamente alla nostra offensiva. Dovrai impegnarti in operazioni secondarie per indebolire un nemico che combatte con numeri più elevati e attrezzature migliori di te.&lt;br/&gt; &lt;br/&gt;
 						Avrai bisogno del sostegno della popolazione locale, quindi controlla sempre quello a cui stai sparando!&lt;br/&gt; &lt;br/&gt;
 						Ci sono domande? HQ chiudo.&lt;br/&gt; &lt;br/&gt;
-						</italian>
+						</Italian>
 						<Russian>&lt;br/&gt;&lt;br/&gt;
 						Приветствую Воины и добро пожаловать на фронт, вражеские силы удивили нас сильным и ожесточенным наступлением. Теперь вся территория под их контролем, но с вашими усилиями это не на долго.&lt;br/&gt; &lt;br/&gt;
 						Наша главная задача проста: освободить регион от вражеского контроля!&lt;br/&gt; &lt;br/&gt;
@@ -3673,11 +3674,6 @@
 						At your starting position you can choose your equipment from a complete Arsenal. You will also find your first FOB packaged inside a container, the Spartan-01 helicopter and a few other small transport helicopters.&lt;br/&gt; &lt;br/&gt;
 						You will have to ferry that container with the Spartan-01 (or choose to start with the first FOB already built). You can deploy this first FOB wherever you want (as long as you're 1km from the starting position and 300m from any sector), so it's up to you to choose the right place to start your campaign offensive.&lt;br/&gt; &lt;br/&gt;
 						</Original>
-						<German>&lt;br/&gt;&lt;br/&gt;
-						Sie beginnen die Kampagne entweder auf der USS Freedom, oder bei Chimera Base. Sichere Zonen, die der Feind nicht wagen wird anzugreifen. Ihre erste Wahl wird sein, wo sie beginnen wollen. Zu Anfang geht das nur auf ihrer Startposition, aber im Laufe der Zeit, werden Ihnen mehr Optionen, wie Forward Operating Bases (FOB) und mobile Respawns, zur Verfügung stehen.&lt;br/&gt; &lt;br/&gt;
-						An Ihrer Startposition, können Sie Ihr Equipment aus einem vollständigen Arsenal auswählen. Sie werden außerdem eine erste FOB, verpackt in einem Frachtcontainer vorfinden, welcher mit der Spartan-01 oder auch mit einigen wenigen anderen Helikoptern transportiert werden kann.&lt;br/&gt; &lt;br/&gt;
-						Sie werden diesen Container mit der Spartan-01 transportieren müssen (oder Sie starten die Kampagne mit einer bereits gebauten FOB). Sie können die erste FOB bauen, wo immer Sie wollen (so lange Sie mindestens 1km von Ihrer Startposition und mindestens 300m von einem der Sektoren entfernt sind). Es liegt bei Ihnen, einen geeigneten Ort zu wählen, von dem aus Sie die Kamapagne starten.&lt;br/&gt; &lt;br/&gt;
-						</German>
 						<Italian>&lt;br/&gt;&lt;br/&gt;
 						La campagna partirà dalla USS Freedom, o dalla base Chimera, sono zone sicure che il nemico non oserà attaccare. Prima di tutto bisogna scegliere dove schierarsi. All'inizio ci si può solo schierare nelle posizioni citate prima, ma mentre si progredisce, saranno disponibili ulteriori opzioni quali FOB e respawn mobili.&lt;br/&gt; &lt;br/&gt;
 						Nella posizione iniziale puoi scegliere la tua attrezzatura da un completo Arsenale. Troverete anche la prima FOB imballata all'interno di un container, l'elicottero Spartan-01 e qualche altro piccolo elicottero da trasporto.&lt;br/&gt; &lt;br/&gt;
@@ -3772,7 +3768,7 @@
 						- 兴趣点（PoI）：一般都是小、中型村庄/小镇，你可以升级处于己方控制下的每个PoI（在建造完仓储区后），并从三种用于生产军需品和部队的资源类型中选择一项来生产&lt;br/&gt; &lt;br/&gt;
 						- 工厂：敌军控制中的民用工厂散布在地区的各处。由于只需为这些工厂设立仓储区，即可从三种资源中任选其一进行生产， 由此带来战略地位令它们成为了必争之地！&lt;br/&gt; &lt;br/&gt;
 						- 军事基地：有着大量高度武装的敌军力量驻扎地，这类设施防守严密，只有投入同样强大且配合良好的进攻才有可能攻陷它们！&lt;br/&gt; &lt;br/&gt;
-						- 无线电塔（RT）：敌军控制下的RT将会为附近受到我方部队攻击的战区呼叫增援。敌军增援反应时间取决于无线电塔与战区间的距离。友军控制下的无线电塔能够通过通讯监听获取附近敌军部队的动向。&lt;br/&gt; &lt;br/&gt;
+						- 无线电塔（RT）：敌军控制下的RT将会为附近受到我军部队攻击的战区呼叫增援。敌军增援反应时间取决于无线电塔与战区间的距离。友军控制下的无线电塔能够通过通讯监听获取附近敌军部队的动向。&lt;br/&gt; &lt;br/&gt;
 						- 主要城市：地区内有多个主要城市。当所有城市均处于友军控制下时，我们便可以确信敌军已被彻底击溃。这就是你的主要目标。&lt;br/&gt; &lt;br/&gt;
 						</Chinesesimp>
 				</Key>
@@ -4060,6 +4056,133 @@
 						<Italian>Tutti</Italian>
 						<Chinesesimp>所有人</Chinesesimp>
 				</Key>
+				<Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
+						<Original>-- Extended Options --</Original>
+						<Chinesesimp>-- 扩展选项 --</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_EXTENDED_OPTIONS">
+						<Original>Extended Options</Original>
+						<Chinesesimp>扩展选项</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_DISABLED">
+						<Original>- disabled -</Original>
+						<Chinesesimp>- 已禁用 -</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_SQUAD_MANAGEMENT">
+						<Original>Squad Management</Original>
+						<Chinesesimp>班组管理</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_JOIN">
+						<Original>Join</Original>
+						<Chinesesimp>加入</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_CREATE">
+						<Original>Create</Original>
+						<Chinesesimp>创建</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_RENAME">
+						<Original>Rename</Original>
+						<Chinesesimp>重命名</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_LEADER">
+						<Original>Leader</Original>
+						<Chinesesimp>班长</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_CANCEL">
+						<Original>Cancel</Original>
+						<Chinesesimp>取消</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_CHOOSE">
+						<Original>Choose</Original>
+						<Chinesesimp>选择</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
+						<Original>Platoon and Squad Awareness</Original>
+						<Chinesesimp>班排警戒</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
+						<Original>Show platoon overlay : </Original>
+						<Chinesesimp>显示排界面：</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_ACTIVE">
+						<Original>active</Original>
+						<Chinesesimp>启用</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
+						<Original>Show player nametags : </Original>
+						<Chinesesimp>显示玩家铭牌：</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_YES">
+						<Original>Yes</Original>
+						<Chinesesimp>是</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_NO">
+						<Original>No</Original>
+						<Chinesesimp>否</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
+						<Original>Adjust View Distance</Original>
+						<Chinesesimp>调整视距</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_VIEW_DISTANCE">
+						<Original>View Distance</Original>
+						<Chinesesimp>视野距离</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_INFANTRY">
+						<Original>Infantry</Original>
+						<Chinesesimp>步兵</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_VEHICLES">
+						<Original>Vehicles</Original>
+						<Chinesesimp>载具</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_OBJECTS">
+						<Original>Objects</Original>
+						<Chinesesimp>物体</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
+						<Original>Adjust view distance to keep FPS above</Original>
+						<Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
+						<Original>Adjust Terrain Details</Original>
+						<Chinesesimp>调整地形细节</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_VERY_LOW">
+						<Original>Very Low</Original>
+						<Chinesesimp>极低</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_LOW">
+						<Original>Low</Original>
+						<Chinesesimp>低</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_NORMAL">
+						<Original>Normal</Original>
+						<Chinesesimp>正常</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_HIGH">
+						<Original>High</Original>
+						<Chinesesimp>高</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
+						<Original>Show teammates on map : </Original>
+						<Chinesesimp>在地图上显示友军：</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
+						<Original>In-Vehicle Sound Volume</Original>
+						<Chinesesimp>载具内音量</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_TEST">
+						<Original>Test</Original>
+						<Chinesesimp>测试</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_RESPAWN">
+						<Original>Respawn</Original>
+						<Chinesesimp>重生</Chinesesimp>
+				</Key>
+				<Key ID="STR_GREUH_REPLACE_NEAREST_AI">
+						<Original>Replace nearest AI</Original>
+						<Chinesesimp>就近附身AI</Chinesesimp>
 				<Key ID="STR_CR_KILLMSG">
 						<Original>A civilian named %1 was killed!</Original>
 						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
