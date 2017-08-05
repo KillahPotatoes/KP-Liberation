@@ -92,7 +92,7 @@
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
 						<Italian>-- COSTRUISCI --</Italian>
-						<Chinesesimp>-- 建造 --</Chinesesim>
+						<Chinesesimp>-- 建造 --</Chinesesimp>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
@@ -4186,26 +4186,32 @@
 				<Key ID="STR_CR_KILLMSG">
 						<Original>A civilian named %1 was killed!</Original>
 						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+						<Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
 				</Key>
 				<Key ID="STR_CR_VEHICLEMSG">
 						<Original>A civil vehicle was seized!</Original>
 						<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
+						<Chinesesimp>一辆平民载具被强征了！</Chinesesimp>
 				</Key>
 				<Key ID="STR_CR_BUILDINGMSG">
 						<Original>Civilians complaining about %1 lost buildings.</Original>
 						<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+						<Chinesesimp>平民对%1建筑的损坏有所怨言。</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_BUILDING">
 						<Original>Civil Reputation penalty for buildings if building is</Original>
 						<German>Ziviler Reputations Abzug für Gebäude, wenn Gebäude</German>
+						<Chinesesimp>当建筑_____时，会平民声望会降低</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_DAMAGED">
 						<Original>damaged</Original>
 						<German>beschädigt</German>
+						<Chinesesimp>受损</Chinesesimp>
 				</Key>
 				<Key ID="STR_PARAM_CR_DESTROYED">
 						<Original>fully destroyed</Original>
 						<German>komplett zerstört</German>
+						<Chinesesimp>完全损毁</Chinesesimp>
 				</Key>
 	</Package>
 </Project>
