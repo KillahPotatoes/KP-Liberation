@@ -216,6 +216,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
 			
+			if (_nextclass == "Land_CarService_F") then {
+				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
+			};
+			
 			if (_nextclass == "Flag_White_F") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
