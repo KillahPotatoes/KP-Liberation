@@ -316,7 +316,7 @@ while { true } do {
 					case FOB_box_typename: {[_vehicle, 3000] remoteExec ["F_setMass",_vehicle];};
 					case "Land_Medevac_house_V1_F";
 					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
-					case "Land_CarService_F": {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
+					case KP_liberation_recycle_building: {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
 					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
 					case KP_liberation_small_storage_building;
 					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};
