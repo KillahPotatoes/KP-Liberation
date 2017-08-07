@@ -216,7 +216,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
 			
-			if (_nextclass == "Land_CarService_F") then {
+			if (_nextclass == KP_liberation_recycle_building) then {
 				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
 			};
 			
