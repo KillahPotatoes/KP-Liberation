@@ -81,7 +81,7 @@
 
 #define FontM             "puristaMedium"
 
-#define COLOR_BROWN { 0.18, 0.14, 0.11, 0.75 }
+#define COLOR_BROWN { 0.30, 0.25, 0.2, 0.75 }
 #define COLOR_GREEN { 0.2, 0.23, 0.18, 0.75 }
 #define COLOR_LIGHTGREEN { 0.4, 0.55, 0.36, 0.4 }
 #define COLOR_LIGHTGRAY { 0.6, 0.6, 0.6, 0.8 }
@@ -626,7 +626,6 @@ class GREUH_Menu {
 	};
 	class GREUH_FPSEdit {
 		idc = 960;
-		access = 0;
 		type = CT_EDIT;
 		style = ST_LEFT + ST_FRAME;
 		x = 0.317 * safezoneW + safezoneX;
@@ -834,7 +833,7 @@ class GREUH_respawn {
 		h = 0.04 * safezoneH;
 		text = $STR_GREUH_REPLACE_NEAREST_AI;
 		action = "replace_ai = 1";
-	}
+	};
 	class GREUH_Useless : GREUH_Respawn {
 		idc = -1;
 		x = -5;

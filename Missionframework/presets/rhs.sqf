@@ -224,6 +224,8 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_HE",50,40,0],
 	["ACE_Box_82mm_Mo_Smoke",50,10,0],
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
+	["ACE_Wheel",10,0,0],
+	["ACE_Track",10,0,0],
 	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
 	["rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",325,0,75],					//M977A4 Repair
 	["rhsusf_M978A4_BKIT_usarmy_wd",125,0,275],							//M978A4 Fuel
