@@ -25,7 +25,6 @@ switch (KP_liberation_preset) do {
 
 if (isServer) then {
 	[] call compileFinal preprocessFileLineNumbers "scripts\server\init_server.sqf";
-	ExecVM "server_restart.sqf";
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
