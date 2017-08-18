@@ -174,6 +174,7 @@ class Missions
 * Added: Reputation penalty for destroyed/damaged civil buildings.
 * Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 * Added: Reputation gain for liberated sectors.
+* Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)
