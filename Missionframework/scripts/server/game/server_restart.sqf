@@ -4,6 +4,8 @@ private ["_serverDuration","_timeStart","_timeSinceStart","_shutdownSuccess","_t
 
 _serverDuration = (KP_liberation_restart * 60 * 60);
 
+diag_log format ["[KP LIBERATION] [RESTART] Restart Timer Set To %1", _serverDuration];
+
 _30minspassed = false;
 _15minspassed = false;
 _5minspassed = false;
@@ -57,7 +59,7 @@ while{true} do
 
 		_myPass = call compile preprocessFileLineNumbers "\userconfig\restart\myPass.hpp";
 		_shutdownSuccess = _myPass serverCommand "#restart";//you can change with #restartserver if you want to restart the server process(Windows Dedicated Only).
-		
+
 		if(_shutdownSuccess) then
 		{
 			diag_log "[KP LIBERATION] [RESTART] Shutting down server!";
