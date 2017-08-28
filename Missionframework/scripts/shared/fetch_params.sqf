@@ -69,6 +69,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_ace = 0;
 	KP_liberation_debug = 0;
 	KP_liberation_suppMod_enb = 1;
+	KP_liberation_cr_param_buildings = 1;
 };
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
