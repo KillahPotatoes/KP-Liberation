@@ -101,6 +101,7 @@
 #define COLOR_RED_DISABLED { 1,0,0,0.4 }
 #define COLOR_BLEEDOUT { 0.66,0,0,0.8 }
 #define COLOR_BRIGHTGREEN { 0.2,1,0.2,1 }
+#define COLOR_BLUE {0.2,0.2,1,1}
 
 #define SHADOW_X  0.0008
 #define SHADOW_Y 0.0011
