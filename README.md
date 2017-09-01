@@ -187,6 +187,7 @@ class Missions
 * Fixed: Preview vehicles could get saved if you shut down the mission right after canceling the build process or if you'd still the preview in front you.
 * Fixed: Small issues due to the default "hold fire" combat mode for AI.
 * Fixed: Single Infantry units weren't saved sometimes.
+* Fixed: Paratroopers got sometimes an attack helicopter instead of a transport helicopter.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
