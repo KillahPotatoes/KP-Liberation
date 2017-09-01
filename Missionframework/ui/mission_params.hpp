@@ -242,7 +242,7 @@ class Params
 		title = $STR_PARAM_CR_BUILDING;
 		values[] = {1,0};
 		texts[] = {$STR_PARAM_CR_DAMAGED, $STR_PARAM_CR_DESTROYED};
-		default = 1;
+		default = 0;
 	};
 	class HaloJump {
 		title = $STR_HALO_PARAM;
