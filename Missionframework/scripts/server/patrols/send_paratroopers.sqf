@@ -2,7 +2,12 @@ params [ "_targetsector" ];
 private _targetpos = getMarkerPos _targetsector;
 private _spawnsector = ( [ sectors_airspawn , [ _targetpos ] , { (markerpos _x) distance _input0 }, "ASCEND"] call BIS_fnc_sortBy ) select 0;
 
-private _chopper_type = opfor_choppers call BIS_fnc_selectRandom;
+private _chopper_type = selectRandom opfor_choppers;
+
+while {!(_chopper_type in opfor_troup_transports)} do {
+	_chopper_type = selectRandom opfor_choppers;
+};
+
 private _newvehicle = createVehicle [ _chopper_type, markerpos _spawnsector, [], 0, "FLY"];
 createVehicleCrew _newvehicle;
 sleep 0.1;
