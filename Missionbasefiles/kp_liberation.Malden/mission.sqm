@@ -352,8 +352,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="@STR_MISSION_TITLE";
-		overviewText="@STR_MISSION_DESCRIPTION";
+		briefingName="$STR_MISSION_TITLE";
+		overviewText="$STR_MISSION_DESCRIPTION";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
