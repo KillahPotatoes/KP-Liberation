@@ -219,6 +219,7 @@ box_transport_config = [
 	["rhsusf_M977A4_BKIT_usarmy_wd", -6.5, [0,0.4,1.4], [0,-1.3,1.4], [0,-3,1.4]],
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd", -6.5, [0,0.4,0.7], [0,-1.3,0.7], [0,-3,0.7]],
 	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
+	["BW_AW101_Trans_Heer_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
 	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_T_VTOL_01_infantry_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
@@ -230,6 +231,7 @@ box_transport_config = [
 	["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
+	["BW_LKW7T_Trans_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_covered_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
@@ -264,7 +266,9 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Ammo_F",
+	"rhs_gaz66_ammo_msv"
 ];
 
 // Everything that can resupply other vehicles.
@@ -280,7 +284,8 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Repair_F"
 ];
 
 vehicle_rearm_sources = [
@@ -294,7 +299,8 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Ammo_F"
 ];
 
 vehicle_refuel_sources = [
@@ -308,7 +314,8 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_d",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
-	"rhsusf_M978A4_BKIT_usarmy_wd"
+	"rhsusf_M978A4_BKIT_usarmy_wd",
+	"BW_LKW15T_Fuel_F"
 ];
 
 // Classnames of artillery vehicles or statics which should be linked to the support system.
