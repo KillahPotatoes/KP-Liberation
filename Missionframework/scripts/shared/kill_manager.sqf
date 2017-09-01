@@ -64,7 +64,7 @@ if (isServer) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
 			if (side _killer == GRLIB_side_friendly) then {
 				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [CIVREP] Civilian killed by: %1", name _killer];_text remoteExec ["diag_log",2];};
-				(format [localize "STR_CR_KILLMSG", name _unit]) remoteExec ["systemChat"];
+				[2, [(name _unit)]] remoteExec ["F_cr_penaltyMsg"];
 				[KP_liberation_cr_kill_penalty, true] spawn F_cr_changeCR;
 			};
 			if (isPlayer _killer) then {
