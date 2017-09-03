@@ -34,8 +34,9 @@ if ( _wounded ) then {
 		if ( _inVehicle ) then {
 			_unit setSkill ["aimingaccuracy", [ 0.65 * _skillmodifier ] call F_limitSkill];
 		} else {
-			_unit setSkill ["aimingshake", [ 0.35 * _skillmodifier ] call F_limitSkill];
+			_unit setSkill ["aimingaccuracy", [ 0.35 * _skillmodifier ] call F_limitSkill];
 		};
+		_unit setSkill ["aimingshake", [ 0.35 * _skillmodifier ] call F_limitSkill];
 		_unit setSkill ["spottime", [ 0.5 * _skillmodifier ] call F_limitSkill];
 		_unit setSkill ["spotdistance", [ 0.5 * _skillmodifier ] call F_limitSkill];
 		_unit setSkill ["commanding", 0.5];
