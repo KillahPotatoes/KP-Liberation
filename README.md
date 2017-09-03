@@ -161,7 +161,6 @@ class Missions
 ## Changelog
 
 ### 0.96 (in Development)
-* Added: Parameter to disable the skill handling of enemy units. Thanks to [veteran29](https://github.com/veteran29)
 * Added: BI Support System functionality.
 * Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
 * Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
@@ -175,6 +174,7 @@ class Missions
 * Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 * Added: Reputation gain for liberated sectors.
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
+* Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)

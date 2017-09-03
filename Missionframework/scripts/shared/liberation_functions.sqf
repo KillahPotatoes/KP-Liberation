@@ -24,7 +24,6 @@ F_filterMods = compileFinal preprocessFileLineNumbers "scripts\shared\functions\
 F_swapInventory = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_swapInventory.sqf";
 F_spawnRegularSquad = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_spawnRegularSquad.sqf";
 F_spawnCivilians = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_spawnCivilians.sqf";
-F_limitSkill = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_limitSkill.sqf";
 F_getNearbyPlayers = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getNearbyPlayers.sqf";
 F_lessLoadedHC = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_lessLoadedHC.sqf";
 F_setMass = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_setMass.sqf";
