@@ -85,6 +85,7 @@ GRLIB_ignore_colisions_when_building = [
 	"Land_PortableLight_single_F",
 	"Land_PortableLight_double_F",
 	"Land_HelipadCircle_F",
+	"Land_HelipadRescue_F",
 	"PortableHelipadLight_01_blue_F",
 	"PortableHelipadLight_01_green_F",
 	"PortableHelipadLight_01_red_F",
