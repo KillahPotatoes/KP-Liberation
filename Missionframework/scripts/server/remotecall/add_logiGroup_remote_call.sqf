@@ -1,7 +1,9 @@
 if (!isServer) exitWith {};
 
+private _newID = [count KP_liberation_logistics] call F_getMilitaryID;
+
 KP_liberation_logistics append [[
-	military_alphabet select (count KP_liberation_logistics), 	// ID
+	_newID, 													// ID
 	0,															// Truck Count
 	[0,0,0],													// Position Point A
 	[0,0,0],													// Position Point B

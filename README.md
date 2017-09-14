@@ -181,6 +181,7 @@ class Missions
 * Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)
 * Tweaked: Highlight color in production list changed to blue instead of misleading green.
 * Tweaked: Amounts of resources on each FOB and production site is now visible in logistic dropdown menu as `(Supplies/Ammo/Fuel)`.
+* Tweaked: Removed the logistic convoy cap of 26 (which was due to the alphabet).
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
