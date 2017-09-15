@@ -2,7 +2,6 @@ params [
 	"_sectorpos",
 	"_classname",
 	[ "_precise_position", false ],
-	[ "_disable_abandon", false ],
 	[ "_random_rotate", true ]
 ];
 
@@ -52,10 +51,6 @@ _newvehicle setVectorUp surfaceNormal position _newvehicle;
 sleep 0.1;
 _newvehicle allowdamage true;
 _newvehicle setdamage 0;
-
-if ( !_disable_abandon ) then {
-	[ _newvehicle ] spawn csat_abandon_vehicle;
-};
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Done Spawning vehicle %1 at %2 - Owner: %3", _classname, time, debug_source];_text remoteExec ["diag_log",2];};
 

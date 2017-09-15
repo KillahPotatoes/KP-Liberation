@@ -18,12 +18,6 @@ class Params
 		texts[] = { $STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8 };
 		default = 2;
 	};
-	class AiSkillManage {
-		title = $STR_PARAMS_AI_SKILL_MANAGEMENT;
-		values[] = {1,0};
-		texts[] = {$STR_PARAMS_ENABLED,$STR_PARAMS_DISABLED};
-		default = 1;
-	};
 	class Aggressivity {
 		title = $STR_AGGRESSIVITY_PARAM;
 		values[] = {0,1,2,3,4};
@@ -236,7 +230,7 @@ class Params
 		title = $STR_PARAM_TEAMKILL_PENALTY;
 		values[] = {1,0};
 		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 1;
+		default = 0;
 	};
 	class CR_Building {
 		title = $STR_PARAM_CR_BUILDING;

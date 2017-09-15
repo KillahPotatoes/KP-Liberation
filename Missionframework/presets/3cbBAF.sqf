@@ -231,6 +231,8 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_HE",50,40,0],
 	["ACE_Box_82mm_Mo_Smoke",50,10,0],
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
+	["ACE_Wheel",10,0,0],
+	["ACE_Track",10,0,0],
 	["UK3CB_BAF_Box_WpsStatic",300,300,0],
 	["UK3CB_BAF_Box_L16_Ammo",0,0,0],
 	["UK3CB_BAF_Box_M6_Ammo",0,0,0],

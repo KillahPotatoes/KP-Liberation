@@ -5,7 +5,6 @@ add_civ_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\ad
 add_defense_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_defense_waypoints.sqf";
 battlegroup_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
 building_defence_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\building_defence_ai.sqf";
-csat_abandon_vehicle = compileFinal preprocessFileLineNumbers "scripts\server\ai\csat_abandon_vehicle.sqf";
 patrol_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\patrol_ai.sqf";
 prisonner_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\prisonner_ai.sqf";
 troup_transport = compileFinal preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
@@ -37,6 +36,9 @@ manage_captureboxes = compileFinal preprocessFileLineNumbers "scripts\server\sec
 manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_intel.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
+
+// Arty Monitor
+arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
 
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";

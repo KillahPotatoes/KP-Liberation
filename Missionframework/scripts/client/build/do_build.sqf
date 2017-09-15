@@ -310,8 +310,7 @@ while { true } do {
 				};
 
 				if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
-					KP_liberation_suppMod_arty synchronizeObjectsAdd [_vehicle];
-					_vehicle synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+					[_vehicle] remoteExec ["arty_monitor", 2];
 				};
 
 				if ( (_classname in uavs) || manned ) then {
@@ -322,6 +321,7 @@ while { true } do {
 					case FOB_box_typename: {[_vehicle, 3000] remoteExec ["F_setMass",_vehicle];};
 					case "Land_Medevac_house_V1_F";
 					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
+					case KP_liberation_recycle_building: {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
 					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
 					case KP_liberation_small_storage_building;
 					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};

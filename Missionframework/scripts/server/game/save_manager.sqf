@@ -202,8 +202,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			};
 
 			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				KP_liberation_suppMod_arty synchronizeObjectsAdd [_nextbuilding];
-				_nextbuilding synchronizeObjectsAdd [KP_liberation_suppMod_arty];
+				[_nextbuilding] remoteExec ["arty_monitor", 2];
 			};
 
 			if ( _hascrew ) then {
@@ -228,6 +227,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			
 			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
+			};
+			
+			if (_nextclass == KP_liberation_recycle_building) then {
+				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
 			};
 			
 			if (_nextclass == "Flag_White_F") then {

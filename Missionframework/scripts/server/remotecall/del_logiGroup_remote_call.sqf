@@ -2,16 +2,12 @@ if (!isServer) exitWith {};
 
 params ["_groupToDelete"];
 
-private ["_temp", "_i"];
-
-_temp = KP_liberation_logistics;
+private _temp = +KP_liberation_logistics;
 
 _temp = _temp - [_groupToDelete];
 
-_i = 0;
 {
-	_x set [0, (military_alphabet select _i)];
-	_i = _i + 1;
+	_x set [0, [_forEachIndex] call F_getMilitaryID];
 } forEach _temp;
 
-KP_liberation_logistics = _temp;
+KP_liberation_logistics = +_temp;

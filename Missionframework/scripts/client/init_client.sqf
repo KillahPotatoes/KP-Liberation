@@ -1,13 +1,12 @@
 [] call compileFinal preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
 switch (KP_liberation_arsenal) do {
-	case 0: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\useBlacklist.sqf";};
 	case 1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\killahpotatoes.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
 	case 6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\useBlacklist.sqf";};
+	default {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
 if ( typeOf player == "VirtualSpectator_F" ) exitWith {

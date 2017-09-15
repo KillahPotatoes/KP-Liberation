@@ -13,9 +13,9 @@ private _convoy_destinations = [];
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];
 
-private _scout_vehicle = [ [ _spawnpos, 30, 0 ] call BIS_fnc_relPos, opfor_mrap, true, false, false ] call F_libSpawnVehicle;
-private _escort_vehicle = [ [ _spawnpos, 10, 0 ] call BIS_fnc_relPos, opfor_vehicles_low_intensity call BIS_fnc_selectRandom, true, false, false ] call F_libSpawnVehicle;
-private _transport_vehicle = [ [ _spawnpos, 10, 180 ] call BIS_fnc_relPos, opfor_ammobox_transport, true, true, false ] call F_libSpawnVehicle;
+private _scout_vehicle = [ [ _spawnpos, 30, 0 ] call BIS_fnc_relPos, opfor_mrap, true, false ] call F_libSpawnVehicle;
+private _escort_vehicle = [ [ _spawnpos, 10, 0 ] call BIS_fnc_relPos, opfor_vehicles_low_intensity call BIS_fnc_selectRandom, true, false ] call F_libSpawnVehicle;
+private _transport_vehicle = [ [ _spawnpos, 10, 180 ] call BIS_fnc_relPos, opfor_ammobox_transport, true, false ] call F_libSpawnVehicle;
 
 private _boxes_amount = 0;
 {

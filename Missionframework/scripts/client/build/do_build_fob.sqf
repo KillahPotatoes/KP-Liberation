@@ -36,9 +36,13 @@ if(_clearedtobuildfob) then {
 
 if (!_clearedtobuildfob) then {
 	hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE",floor _minfobdist,floor _distfob];
+	FOB_build_in_progress = false;
+	publicVariable "FOB_build_in_progress";
 } else {
 	if ( !_clearedtobuildsector ) then {
 		hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE_SECTOR",floor _minsectordist,floor _distsector];
+		FOB_build_in_progress = false;
+		publicVariable "FOB_build_in_progress";
 	} else {
 		buildtype = 99;
 		dobuild = 1;
