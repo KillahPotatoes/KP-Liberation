@@ -87,7 +87,7 @@ GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defen
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 2;																				// Civil Reputation penalty for killing a civilian
+KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalty for killing a civilian
 KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building
 KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
 KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector

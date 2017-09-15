@@ -50,3 +50,4 @@ F_crateFromStorage = compileFinal preprocessFileLineNumbers "scripts\shared\func
 F_crateCheckValue = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_checkValue.sqf";
 F_sortStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_sort_storage.sqf";
 F_getMilitaryID = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getMilitaryID.sqf";
+F_cr_penaltyMsg = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_cr_penaltyMsg.sqf";

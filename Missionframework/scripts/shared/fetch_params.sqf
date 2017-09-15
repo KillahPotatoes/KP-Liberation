@@ -32,7 +32,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
 	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
 	KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
-	KP_liberation_cr_param_buildings = ["CR_Building",1] call BIS_fnc_getParamValue;
+	KP_liberation_cr_param_buildings = ["CR_Building",0] call BIS_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -67,6 +67,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_ace = 0;
 	KP_liberation_debug = 0;
 	KP_liberation_suppMod_enb = 1;
+	KP_liberation_cr_param_buildings = 0;
 };
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
