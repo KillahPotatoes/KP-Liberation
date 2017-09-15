@@ -79,6 +79,8 @@ class liberation_production {
 
 	class ProductionList : StdListBox {
 		idc = 75802;
+		colorSelect[] = COLOR_BLUE;
+		colorSelect2[] = COLOR_BLUE;
 		x = (0.2 * safezoneW + safezoneX) - (0.5 * BORDERSIZE);
 		y = (0.2 * safezoneH + safezoneY) - (0.75 * BORDERSIZE);
 		w = (0.12 * safezoneW) + BORDERSIZE;

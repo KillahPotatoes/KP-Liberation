@@ -153,7 +153,7 @@ while { true } do {
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758019)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758022)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758025)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758028)) ctrlSetText format ["%1", KP_liberation_civ_rep];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758028)) ctrlSetText format ["%1%2", KP_liberation_civ_rep,"%"];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758031)) ctrlSetText format ["%1", round(resources_intel)];
 
 				_color_readiness = [0.8,0.8,0.8,1];

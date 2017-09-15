@@ -11,7 +11,7 @@ if (_sector in sectors_bigtown || _sector in sectors_capture) then {
 };
 
 if (_penalty > 0) then {
-	(format [localize "STR_CR_BUILDINGMSG", (_penalty / KP_liberation_cr_building_penalty)]) remoteExec ["systemChat"];
+	[1, [(_penalty / KP_liberation_cr_building_penalty)]] remoteExec ["F_cr_penaltyMsg"];
 };
 
 if (_sector in sectors_bigtown) then {

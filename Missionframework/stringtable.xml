@@ -4218,7 +4218,7 @@
 						<German>Ersetze nächste KI</German>
 						<Italian>Rimpiazza AI</Italian>
 						<Chinesesimp>就近附身AI</Chinesesimp>
-				</key>
+				</Key>
 				<Key ID="STR_CR_KILLMSG">
 						<Original>A civilian named %1 was killed!</Original>
 						<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
