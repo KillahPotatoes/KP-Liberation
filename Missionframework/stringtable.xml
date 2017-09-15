@@ -4255,5 +4255,34 @@
 						<Italian>completamente distrutto</Italian>
 						<Chinesesimp>完全损毁</Chinesesimp>
 				</Key>
+				<Key ID="STR_NOTIFICATION_RESTART_TITLE">
+						<Original>SERVER RESTART NOTIFICATION</Original>
+						<German>SERVER RESTART HINWEIS</German>
+						<Italian>NOTIFICA RESTART SERVER</Italian>
+				</Key>
+				<Key ID="STR_NOTIFICATION_RESTART_SECOND">
+						<Original>The server will restart in less than 60 seconds!</Original>
+						<German>Server Restart in weniger als 60 Sekunden!</German>
+						<Italian>Il server si riavvierà tra meno di 60 secodni!</Italian>
+				</Key>
+				<Key ID="STR_NOTIFICATION_RESTART_FIVE">
+						<Original>The server will restart in less than 5 minutes!</Original>
+						<German>Server Restart in weniger als 5 Minuten!</German>
+						<Italian>Il server si riavvierà tra meno di 5 minuti!</Italian>
+				</Key>
+				<Key ID="STR_NOTIFICATION_RESTART_FIFTEEN">
+						<Original>The server will restart in less than 15 minutes!</Original>
+						<German>Server Restart in weniger als 15 Minuten!</German>
+						<Italian>Il server si riavvierà tra meno di 15 minuti!</Italian>
+				</Key>
+				<Key ID="STR_NOTIFICATION_RESTART_THIRTY">
+						<Original>The server will restart in less than 30 minutes!</Original>
+						<German>Server Restart in weniger als 30 Minuten!</German>
+						<Italian>Il server si riavvierà tra meno di 30 minuti!</Italian>
+				</Key>
+				<Key ID="STR_RESTART_PARAM">
+						<Original>Automatic Server Restart after (hours)</Original>
+						<German>Automatischer Server Restart nach (Stunden)</German>
+				</Key>
 	</Package>
 </Project>

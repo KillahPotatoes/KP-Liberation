@@ -86,4 +86,9 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 	};
 } foreach allUnits;
 
+// Server Restart Script from K4s0
+if (KP_liberation_restart > 0) then {
+	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\server_restart.sqf";
+};
+
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_server.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
