@@ -3,6 +3,21 @@ private ["_nearby_bigtown"];
 
 if (isServer) then {
 
+	if (KP_liberation_ace) then {
+		if (local _unit) then {
+			_killer = _unit getVariable ["ace_medical_lastDamageSource", _killer];
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is local to %1", debug_source];_text remoteExec ["diag_log",2];};
+		} else {
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is not local to %1", debug_source];_text remoteExec ["diag_log",2];};
+			if (isNil "KP_liberation_ace_killer") then {KP_liberation_ace_killer = objNull;};
+			waitUntil {sleep 0.5; !(isNull KP_liberation_ace_killer)};
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] KP_liberation_ace_killer received on %1", debug_source];_text remoteExec ["diag_log",2];};
+			_killer = KP_liberation_ace_killer;
+			KP_liberation_ace_killer = objNull;
+			publicVariable "KP_liberation_ace_killer";
+		};
+	};
+
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] Kill Manager executed on: %1 - _unit: %2 (%3)- _killer: %4 (%5)", debug_source, typeOf _unit, _unit, typeOf _killer, _killer];_text remoteExec ["diag_log",2];};
 
 	please_recalculate = true;
@@ -95,6 +110,12 @@ if (isServer) then {
 		} else {
 			stats_blufor_vehicles_killed = stats_blufor_vehicles_killed + 1;
 		};
+	};
+} else {
+	if (KP_liberation_ace && local _unit) then {
+		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is local to: %1", debug_source];_text remoteExec ["diag_log",2];};
+		KP_liberation_ace_killer = _unit getVariable ["ace_medical_lastDamageSource", _killer];
+		publicVariable "KP_liberation_ace_killer";
 	};
 };
 
