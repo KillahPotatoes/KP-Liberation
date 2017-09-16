@@ -224,7 +224,7 @@ class Params
 		title = $STR_PARAMS_SUPPMOD;
 		values[] = {0, 1, 2, 3};
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_COMMANDER, $STR_PARAMS_WHITELISTONLY, $STR_PARAMS_EVERYONE};
-		default = 1;
+		default = 0;
 	};
 	class TeamkillPenalty {
 		title = $STR_PARAM_TEAMKILL_PENALTY;
