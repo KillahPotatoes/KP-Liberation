@@ -191,6 +191,7 @@ class Missions
 * Fixed: Single Infantry units weren't saved sometimes.
 * Fixed: Paratroopers got sometimes an attack helicopter instead of a transport helicopter.
 * Fixed: Rescue helipad blocked building in their near vicinity.
+* Fixed: MPKill Eventhandler issue when using ACE.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
