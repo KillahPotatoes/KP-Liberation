@@ -160,10 +160,7 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Tripod_Bag",
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
-	"RHS_SPG9_Tripod_Bag",
-	"optic_Nightstalker",
-	"optic_tws",
-	"optic_tws_mg"
+	"RHS_SPG9_Tripod_Bag"
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
