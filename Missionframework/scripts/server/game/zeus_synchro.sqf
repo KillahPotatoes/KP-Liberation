@@ -25,7 +25,7 @@ while { true } do {
 	} foreach allUnits;
 
 	{
-		if (((typeof _x in _vehicleClassnames) || (_x getVariable [ "GRLIB_captured", 0 ] == 1)) && ((_x distance startbase > 1000) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
+		if (((typeof _x in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", 0] == 1)) && ((_x distance startbase > 1000) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach vehicles;
