@@ -56,10 +56,14 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		_spawncivs = true;
 
 		_building_ai_max = round (50 * _popfactor) ;
-		_building_range = 110;
+		_building_range = 200;
 		_local_capture_size = _local_capture_size * 1.4;
-		_iedcount = (2 + (floor (random 4))) * GRLIB_difficulty_modifier;
-		if ( _iedcount > 10 ) then { _iedcount = 10 };
+		if (KP_liberation_civ_rep < 0) then {
+			_iedcount = round (2 + (ceil (random 4)) * (round ((KP_liberation_civ_rep * -1) / 33)) * GRLIB_difficulty_modifier);
+		} else {
+			_iedcount = 0;
+		};
+		if (_iedcount > 16) then {_iedcount = 16};
 	};
 	if ( _sector in sectors_capture ) then {
 		_vehtospawn = [];
@@ -69,9 +73,13 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > (33 / GRLIB_difficulty_modifier)) then { _vehtospawn pushback (militia_vehicles call BIS_fnc_selectRandom); };
 		_spawncivs = true;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
-		_building_range = 70;
-		_iedcount = (floor (random 4)) * GRLIB_difficulty_modifier;
-		if ( _iedcount > 7 ) then { _iedcount = 7 };
+		_building_range = 120;
+		if (KP_liberation_civ_rep < 0) then {
+			_iedcount = round ((ceil (random 4)) * (round ((KP_liberation_civ_rep * -1) / 33)) * GRLIB_difficulty_modifier);
+		} else {
+			_iedcount = 0;
+		};
+		if (_iedcount > 12) then {_iedcount = 12};
 	};
 	if ( _sector in sectors_military ) then {
 		_infsquad = "csat";
@@ -89,7 +97,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > (66 / GRLIB_difficulty_modifier)) then { _vehtospawn pushback ( [] call F_getAdaptiveVehicle ); };
 		_spawncivs = false;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 4 )))) * _popfactor);
-		_building_range = 110;
+		_building_range = 120;
 	};
 	if ( _sector in sectors_factory ) then {
 		_vehtospawn = [];
@@ -102,9 +110,13 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > 33) then { _vehtospawn pushback (militia_vehicles call BIS_fnc_selectRandom); };
 		_spawncivs = false;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
-		_building_range = 100;
-		_iedcount = (floor (random 3)) * GRLIB_difficulty_modifier;
-		if ( _iedcount > 5 ) then { _iedcount = 5 };
+		_building_range = 120;
+		if (KP_liberation_civ_rep < 0) then {
+			_iedcount = round ((ceil (random 3)) * (round ((KP_liberation_civ_rep * -1) / 33)) * GRLIB_difficulty_modifier);
+		} else {
+			_iedcount = 0;
+		};
+		if (_iedcount > 8) then {_iedcount = 8};
 	};
 	if ( _sector in sectors_tower ) then {
 		_spawncivs = false;
@@ -169,6 +181,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		_managed_units = _managed_units + ( [ _sector ] call F_spawnCivilians );
 	};
 
+	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [IED] Sector: %1 (%2) - Range: %3 - Count: %4", _sector, (markerText _sector), _building_range, _iedcount];_text remoteExec ["diag_log",2];};
 	[ _sector, _building_range, _iedcount ] spawn ied_manager;
 
 	sleep 10;

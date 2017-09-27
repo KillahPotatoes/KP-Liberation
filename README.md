@@ -184,6 +184,7 @@ class Missions
 * Tweaked: Removed the logistic convoy cap of 26 (which was due to the alphabet).
 * Tweaked: Captured enemy vehicles are now also listed in the commanders zeus interface.
 * Tweaked: Cities won't be able to produce resources anymore.
+* Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
