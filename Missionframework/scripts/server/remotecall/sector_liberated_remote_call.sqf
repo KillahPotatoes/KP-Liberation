@@ -35,11 +35,11 @@ if (isServer) then {
 	blufor_sectors pushback _liberated_sector; publicVariable "blufor_sectors";
 	stats_sectors_liberated = stats_sectors_liberated + 1;
 	
-	if ((_liberated_sector in sectors_factory) || (_liberated_sector in sectors_capture)) then {
+	if (_liberated_sector in sectors_factory) then {
 
-		private ["_sectorType", "_sectorFacilities", "_producing"];
-
-		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;_producing = 0;} else {_sectorType = 0;_sectorFacilities = false;_producing = 3;};
+		private _sectorType = 1;
+		private _sectorFacilities = true;
+		private _producing = 0;
 
 		{
 			if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
