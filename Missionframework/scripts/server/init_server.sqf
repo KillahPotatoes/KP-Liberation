@@ -38,9 +38,10 @@ manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\secto
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
 // Arty Monitor
-arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
+// Arty Supp deactivated for now
+/*arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
 
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";*/
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startvehicle_spawn.sqf";

@@ -161,15 +161,15 @@ class Missions
 ## Changelog
 
 ### 0.96 (in Development)
-* Added: BI Support System functionality.
-* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
-* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
+* Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
+* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone. (Currently deactivated, as there are still issues in MP)
+* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew). (Currently deactivated, as there are still issues in MP)
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Civil Reputation.
 * Added: Config variables for the civil reputation.
 * Added: Reputation penalty for killing civilians.
 * Added: Reputation penalty for seizing civil vehicles.
-* Added: Players can request artillery support from players (generates task).
+* Added: Players can request artillery support from players (generates task). (Currently deactivated, as there are still issues in MP)
 * Added: Reputation penalty for destroyed/damaged civil buildings.
 * Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 * Added: Reputation gain for liberated sectors.

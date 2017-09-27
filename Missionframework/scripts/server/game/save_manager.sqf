@@ -168,9 +168,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 	
-	if (KP_liberation_suppMod_enb > 0) then {
+	// Arty Supp deactivated for now
+	/*if (KP_liberation_suppMod_enb > 0) then {
 		waitUntil {!isNil "KP_liberation_suppMod_created"};
-	};
+	};*/
 
 	{
 		_nextclass = _x select 0;
@@ -201,9 +202,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 			};
 
-			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
+			// Arty Supp deactivated for now
+			/*if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
 				[_nextbuilding] remoteExec ["arty_monitor", 2];
-			};
+			};*/
 
 			if ( _hascrew ) then {
 				[ _nextbuilding ] call F_forceBluforCrew;

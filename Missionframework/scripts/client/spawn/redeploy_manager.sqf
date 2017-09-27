@@ -23,10 +23,10 @@ waitUntil { cinematic_camera_stop };
 _basenamestr = "Operation Base";
 
 
-while { true } do {
+while {true} do {
 	waitUntil {
 		sleep 0.1;
-		( GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50) ) && vehicle player == player && alive player && !dialog && howtoplay == 0
+		(GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", debug_source];_text remoteExec ["diag_log",2];};
@@ -211,7 +211,8 @@ while { true } do {
 		};
 	};
 
-	if (KP_liberation_suppMod_enb > 0) then {
+	// Arty Supp deactivated for now
+	/*if (KP_liberation_suppMod_enb > 0) then {
 		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_arty")};
 		_access = false;
 		switch (KP_liberation_suppMod_enb) do {
@@ -241,5 +242,5 @@ while { true } do {
 			};
 			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Synced to %2 -> %3", debug_source, (synchronizedObjects player), synchronizedObjects ((synchronizedObjects player) select 0)];_text remoteExec ["diag_log",2];};
 		};
-	};
+	};*/
 };

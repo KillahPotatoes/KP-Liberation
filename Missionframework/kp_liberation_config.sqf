@@ -318,8 +318,8 @@ vehicle_refuel_sources = [
 	"BW_LKW15T_Fuel_F"
 ];
 
-// Classnames of artillery vehicles or statics which should be linked to the support system.
-KP_liberation_artySupp = [
+// Classnames of artillery vehicles or statics which should be linked to the support system. (Currently deactivated)
+/*KP_liberation_artySupp = [
 	"B_Mortar_01_F",
 	"B_T_Mortar_01_F",
 	"B_MBT_01_arty_F",
@@ -333,7 +333,7 @@ KP_liberation_artySupp = [
 	"RHS_M119_WD",
 	"RHS_M119_D",
 	"UK3CB_BAF_Static_L16_Deployed_MTP"
-];
+];*/
 
 // Classnames of boats, so they can be built on water.
 boats_names = [
