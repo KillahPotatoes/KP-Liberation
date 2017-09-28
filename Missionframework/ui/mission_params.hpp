@@ -287,12 +287,6 @@ class Params
 		texts[] = { $STR_WHITELIST_ENABLED, $STR_PARAMS_DISABLED };
 		default = 0;
 	};
-	class DebugEnable {
-		title = $STR_PARAMS_DEBUG_ENABLE;
-		values[] = { 0, 1 };
-		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
-		default = 0;
-	};
 	class ServerRestart {
 		title = $STR_RESTART_PARAM;
 		values[] = {0,1,2,3,4,5,6};
@@ -309,6 +303,36 @@ class Params
 		title = $STR_WIPE_TITLE_2;
 		values[] = {0,1};
 		texts[] = {$STR_WIPE_NO,$STR_WIPE_YES};
+		default = 0;
+	};
+	class Spacer4 {
+		title = "";
+		values[] = {""};
+		texts[] = {""};
+		default = "";
+	};
+	class DebugOptions {
+		title = $STR_PARAMS_DEBUGOPTIONS;
+		values[] = {""};
+		texts[] = {""};
+		default = "";
+	};
+	class DebugCivInfo {
+		title = $STR_PARAMS_DEBUG_CIVINFO;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
+	class DebugCivRep {
+		title = $STR_PARAMS_DEBUG_CIVREP;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
+	class DebugSave {
+		title = $STR_PARAMS_DEBUG_SAVE;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
 		default = 0;
 	};
 };

@@ -174,6 +174,8 @@ class Missions
 * Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 * Added: Reputation gain for liberated sectors.
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
+* Added: Settings in the mission parameters for particular debug messages.
+* Added: Civil informant can rarely spawn in blufor sectors, when reputation is high enough.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
@@ -185,6 +187,7 @@ class Missions
 * Tweaked: Captured enemy vehicles are now also listed in the commanders zeus interface.
 * Tweaked: Cities won't be able to produce resources anymore.
 * Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
+* Tweaked: Corrected some strings in the stringtable.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.

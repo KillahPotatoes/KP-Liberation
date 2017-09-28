@@ -52,8 +52,6 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
-
 GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.
 GRLIB_side_resistance = RESISTANCE;																				// Resistance side.
@@ -91,6 +89,11 @@ KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalt
 KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building
 KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
 KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector
+
+KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time
+KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time
+KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn chance (0-100)
+KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	

@@ -15,7 +15,7 @@ if (random 100 < 12) then {
 	_ultra_strong = true;
 };
 _vehicle_trigger = 1;
-_ied_type = ["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"] call BIS_fnc_selectRandom;
+_ied_type = selectRandom ["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
 _ied_obj = objNull;
 _roadobj = [[getmarkerpos (_sector), random (_radius), random (360)] call BIS_fnc_relPos, _radius, []] call BIS_fnc_nearestRoad;
 _goes_boom = false;

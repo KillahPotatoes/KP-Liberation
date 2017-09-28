@@ -81,6 +81,9 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 // Civil Reputation
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\civrep\init_module.sqf";
 
+// Civil Informant
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civinformant\init_module.sqf";
+
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {
 		deleteVehicle _x;

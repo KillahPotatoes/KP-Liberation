@@ -148,4 +148,13 @@ class CfgNotifications {
         color[] = { 1, 1, 0, 1 };
         sound = "taskCanceled";
     };
+    class lib_civ_informant_start : lib_intel {
+        description = $STR_NOTIFICATION_CIV_INFORMANT_START;
+    };
+    class lib_civ_informant_success : lib_intel {
+        description = $STR_NOTIFICATION_CIV_INFORMANT_SUCCESS;
+    };
+    class lib_civ_informant_fail : lib_intel {
+        description = $STR_NOTIFICATION_CIV_INFORMANT_FAIL;
+    };
 };

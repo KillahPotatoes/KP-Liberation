@@ -22,7 +22,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 			};
 		} foreach sectors_opfor;
 
-		_spawnplace = _potentialplaces call BIS_fnc_selectRandom;
+		_spawnplace = selectRandom _potentialplaces;
 		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
 
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", debug_source];_text remoteExec ["diag_log",2];};

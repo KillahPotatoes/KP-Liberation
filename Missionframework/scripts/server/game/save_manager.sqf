@@ -446,8 +446,8 @@ if ( count GRLIB_vehicle_to_military_base_links == 0 ) then {
 	_assigned_vehicles = [];
 
 	while { count _assigned_bases < count sectors_military && count _assigned_vehicles < count elite_vehicles } do {
-		_nextbase =  ( [ sectors_military, { !(_x in _assigned_bases) } ] call BIS_fnc_conditionalSelect ) call BIS_fnc_selectRandom;
-		_nextvehicle =  ( [ elite_vehicles, { !(_x in _assigned_vehicles) } ] call BIS_fnc_conditionalSelect ) call BIS_fnc_selectRandom;
+		_nextbase =  selectRandom ([sectors_military, {!(_x in _assigned_bases)}] call BIS_fnc_conditionalSelect);
+		_nextvehicle =  selectRandom ([elite_vehicles, {!(_x in _assigned_vehicles)}] call BIS_fnc_conditionalSelect);
 		_assigned_bases pushback _nextbase;
 		_assigned_vehicles pushback _nextvehicle;
 		GRLIB_vehicle_to_military_base_links pushback [_nextvehicle, _nextbase];
