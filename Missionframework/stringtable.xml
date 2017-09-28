@@ -4299,5 +4299,21 @@
 			<Original>Save data (shows whole save array every minute in the server.rpt)</Original>
 			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
 		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
+			<Original>A civilian from %1 says he has some information for us.</Original>
+			<German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
+			<Original>The civilian gave us some important information.</Original>
+			<German>Der Zivilist gab uns wichtige Informationen.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
+			<Original>The civilian is disappeared.</Original>
+			<German>Der Zivilist ist wieder untergetaucht.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
+			<Original>The civilian died.</Original>
+			<German>Der Zivilist wurde getötet.</German>
+		</Key>
 	</Package>
 </Project>

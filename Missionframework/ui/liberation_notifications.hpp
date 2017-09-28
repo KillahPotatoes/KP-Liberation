@@ -157,4 +157,7 @@ class CfgNotifications {
     class lib_civ_informant_fail : lib_intel {
         description = $STR_NOTIFICATION_CIV_INFORMANT_FAIL;
     };
+    class lib_civ_informant_death : lib_intel {
+        description = $STR_NOTIFICATION_CIV_INFORMANT_DEATH;
+    };
 };

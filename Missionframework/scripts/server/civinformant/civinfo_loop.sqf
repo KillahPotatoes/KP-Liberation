@@ -13,10 +13,54 @@ while {true} do {
 	if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant waitUntil passed";_text remoteExec ["diag_log",2];};
 
 	if (KP_liberation_civinfo_chance >= (random 100)) then {
-		if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant spawn chance fits";_text remoteExec ["diag_log",2];};
+		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
+		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
+		
+		private _grp = createGroup GRLIB_side_civilian;
+		private _informant = _grp createUnit [(selectRandom civilians), getMarkerPos _sector, [], 0, "NONE"];
+		private _waiting_time = KP_liberation_civinfo_duration;
 
-		private _sector = selectRandom ([sectors_capture, {_x in blufor_sectors}] call BIS_fnc_conditionalSelect);
+		_informant addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+		_informant setPos (selectRandom (_house buildingPos -1));
+		_informant setUnitPos "UP";
+		sleep 1;
+		_informant disableAI "ANIM";
+		_informant disableAI "MOVE";
+		_informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
+		sleep 2;
+		_informant setCaptive true;
 
+		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant];_text remoteExec ["diag_log",2];};
+
+		[9, getPos _informant] remoteExec ["remote_call_intel"];
+
+		while {alive _informant && captive _informant && _waiting_time > 0} do {
+			uiSleep 1;			
+			private _player_near = false;
+			{
+				if (((_x distance _informant) < 150) && (alive _x)) exitWith {_player_near = true};
+			} foreach allPlayers;
+
+			if !(_player_near) then {
+				_waiting_time = _waiting_time - 1;
+			};
+
+			if ((KP_liberation_civinfo_debug > 0) && ((_waiting_time % 60) == 0)) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant will despawn in %1 minutes", round (_waiting_time / 60)];_text remoteExec ["diag_log",2];};
+		};
+
+		if (_waiting_time > 0) then {
+			if (alive _informant) then {
+				_informant enableAI "ANIM";
+				_informant enableAI "MOVE";
+				sleep 1;
+				// Übergabe an Spieler
+			} else {
+				[12] remoteExec ["remote_call_intel"];
+			};
+		} else {
+			deleteVehicle _informant;
+			[11] remoteExec ["remote_call_intel"];
+		};
 	} else {
 		if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant spawn chance missed";_text remoteExec ["diag_log",2];};
 	};
