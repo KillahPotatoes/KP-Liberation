@@ -36,7 +36,6 @@ while { _boxes_loaded < _boxes_amount } do {
 	_next_box setVariable ["KP_liberation_crate_value", 100, true];
 	[_next_box, 500] remoteExec ["F_setMass",_next_box];
 	[ _next_box, 50 ] call _load_box_fnc;
-	_next_box addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
 };
 
 sleep 0.5;

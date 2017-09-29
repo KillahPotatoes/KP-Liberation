@@ -176,6 +176,8 @@ class Missions
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
 * Added: Civil informant can rarely spawn in blufor sectors, when reputation is high enough.
+* Added: Factory map markers now indicate which production facilities are available there.
+* Added: Asymmetric Threats.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)

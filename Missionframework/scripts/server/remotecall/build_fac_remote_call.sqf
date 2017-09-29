@@ -2,30 +2,31 @@ if (!isServer) exitWith {};
 
 params ["_sector", "_fac","_clientID"];
 
-private ["_tempProduction","_checkFor","_price_s","_price_a","_price_f","_hint"];
-
-_tempProduction = KP_liberation_production;
+private _tempProduction = +KP_liberation_production;
+private _checkFor = 0;
+private _price_s = 100;
+private _price_a = 100;
+private _price_f = 100;
+private _success = false;
 
 switch (_fac) do {
-	case "supply": {_checkFor = 4;_price_s = 50;_price_a = 100;_price_f = 100;};
-	case "ammo": {_checkFor = 5;_price_s = 100;_price_a = 50;_price_f = 100;};
-	case "fuel": {_checkFor = 6;_price_s = 100;_price_a = 100;_price_f = 50;};
+	case "supply": {_checkFor = 4;_price_s = 50};
+	case "ammo": {_checkFor = 5;_price_a = 50;};
+	case "fuel": {_checkFor = 6;_price_f = 50;};
 };
 
 {
-	if ((_x select 1) == (_sector select 1)) then {
+	if ((_x select 1) == (_sector select 1)) exitWith {
 		if (((_x select 9) >= _price_s) && ((_x select 10) >= _price_a) && ((_x select 11) >= _price_f)) then {
-			private ["_storage","_storedCrates","_crateValue"];
-
-			_storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
+			private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
 			_storage = [_storage, {(_x getVariable ["KP_liberation_storage_type",-1]) == 1}] call BIS_fnc_conditionalSelect;
 			if ((count _storage) == 0) exitWith {};
 			_storage = (_storage select 0);
-			_storedCrates = (attachedObjects _storage);
+			private _storedCrates = (attachedObjects _storage);
 			reverse _storedCrates;
 
 			{
-				_crateValue = _x getVariable ["KP_liberation_crate_value",0];
+				private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 				switch ((typeOf _x)) do {
 					case KP_liberation_supply_crate: { 
@@ -86,14 +87,17 @@ switch (_fac) do {
 			} forEach (attachedObjects _storage);
 
 			_x set [_checkFor, true];
-			_hint = format [localize "STR_PRODUCTION_FACBUILD_SUCCESS"];
+			private _hint = format [localize "STR_PRODUCTION_FACBUILD_SUCCESS"];
 			_hint remoteExec ["hint",_clientID];
-			recalculate_sectors = true;
+			_success = true;
 		} else {
-			_hint = format [localize "STR_PRODUCTION_FACBUILD_ERROR",_price_s,_price_a,_price_f];
+			private _hint = format [localize "STR_PRODUCTION_FACBUILD_ERROR",_price_s,_price_a,_price_f];
 			_hint remoteExec ["hint",_clientID];
 		};
 	};
 } forEach _tempProduction;
 
-KP_liberation_production = _tempProduction;
+if (_success) then {
+	KP_liberation_production = +_tempProduction;
+	recalculate_sectors = true;
+};

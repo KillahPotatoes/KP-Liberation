@@ -38,8 +38,8 @@ if (isServer) then {
 	if (_liberated_sector in sectors_factory) then {
 
 		private _sectorType = 1;
-		private _sectorFacilities = true;
-		private _producing = 0;
+		private _sectorFacilities = ([KP_liberation_production_markers, {_liberated_sector == (_x select 0)}] call BIS_fnc_conditionalSelect) select 0;
+		private _producing = 3;
 
 		{
 			if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
@@ -50,9 +50,9 @@ if (isServer) then {
 			_liberated_sector,
 			_sectorType,
 			[],
-			_sectorFacilities,
-			_sectorFacilities,
-			_sectorFacilities,
+			_sectorFacilities select 1,
+			_sectorFacilities select 2,
+			_sectorFacilities select 3,
 			_producing,
 			KP_liberation_production_interval,
 			0,

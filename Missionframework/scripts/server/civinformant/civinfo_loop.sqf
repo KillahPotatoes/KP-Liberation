@@ -1,3 +1,5 @@
+waitUntil {sleep 10; ({_x in sectors_capture || _x in sectors_bigtown} count blufor_sectors) > 0};
+
 if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Loop spawned on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while {true} do {
@@ -7,12 +9,13 @@ while {true} do {
 
 	waitUntil {
 		sleep 10;
+		({_x in sectors_capture || _x in sectors_bigtown} count blufor_sectors) > 0 &&
 		KP_liberation_civ_rep >= 25
 	};
 
 	if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant waitUntil passed";_text remoteExec ["diag_log",2];};
 
-	if (KP_liberation_civinfo_chance >= (random 100)) then {
+	if ((KP_liberation_civinfo_chance >= (random 100)) && GRLIB_endgame == 0) then {
 		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 		
