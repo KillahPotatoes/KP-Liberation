@@ -23,8 +23,7 @@ while {true} do {
 	};
 	{
 		private _sector = _x;
-		{
-			
+		{		
 			if ((_sector select 1) == (_x select 0)) exitWith {
 				_x set [1, (_sector select 4)];
 				_x set [2, (_sector select 5)];

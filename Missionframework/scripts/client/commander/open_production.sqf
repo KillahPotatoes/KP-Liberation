@@ -19,7 +19,7 @@ _mapdisplay = ((findDisplay 75801) displayCtrl 758016);
 
 lbClear 75802;
 {
-	lbAdd [75802, (_x select 0)];
+	lbAdd [75802, (markerText (_x select 1))];
 } forEach KP_liberation_production;
 
 ctrlMapAnimClear _mapdisplay;
