@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.955
+## Current version : 0.96
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -159,6 +159,11 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.96 (in Development)
+* Added: Parameter to disable the skill handling of enemy units. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed: Player got custom recoil and aiming coefficients on respawn.
+* Fixed: Rare script error on closing respawn screen directly after joining the mission.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist

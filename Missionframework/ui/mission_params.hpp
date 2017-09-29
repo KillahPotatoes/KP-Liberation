@@ -18,6 +18,12 @@ class Params
 		texts[] = { $STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8 };
 		default = 2;
 	};
+	class AiSkillManage {
+		title = $STR_PARAMS_AI_SKILL_MANAGEMENT;
+		values[] = {1,0};
+		texts[] = {$STR_PARAMS_ENABLED,$STR_PARAMS_DISABLED};
+		default = 1;
+	};
 	class Aggressivity{
 		title = $STR_AGGRESSIVITY_PARAM;
 		values[] = {0,1,2,3,4};
@@ -201,7 +207,7 @@ class Params
 	class ArsenalUsePreset {
 		title = $STR_PARAMS_ARSENALUSEPRESET;
 		values[] = { 0, 1 };
-		texts[] = { $STR_PARAMS_NOTRESTRICTIONS, $STR_PARAMS_USEPRESET };
+		texts[] = { $STR_PARAMS_NORESTRICTIONS, $STR_PARAMS_USEPRESET };
 		default = 1;
 	};
 	class MapMarkers {
@@ -226,6 +232,12 @@ class Params
 		title = $STR_PARAMS_AILOGISTICS;
 		values[] = {0, 1};
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 1;
+	};
+	class SuppMod {
+		title = $STR_PARAMS_SUPPMOD;
+		values[] = {0, 1, 2, 3};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_COMMANDER, $STR_PARAMS_WHITELISTONLY, $STR_PARAMS_EVERYONE};
 		default = 1;
 	};
 	class TeamkillPenalty{

@@ -1,6 +1,13 @@
 params [ "_unit"];
 
 private _side = side _unit;
+
+if ( !(GRLIB_autodanger) && (_side == GRLIB_side_friendly)) then {
+	_unit disableAI "AUTOCOMBAT";
+};
+
+if (!KP_liberation_manageaiskill) exitWith {};
+
 private _wounded = false;
 (group _unit) allowFleeing 0;
 if ( damage _unit > 0.25 ) then { _wounded = true; };
@@ -9,10 +16,6 @@ private _skillmodifier = sqrt GRLIB_difficulty_modifier;
 private _inVehicle = false;
 if ( vehicle _unit != _unit ) then {
 	_inVehicle = true;
-};
-
-if ( !(GRLIB_autodanger) && (_side == GRLIB_side_friendly)) then {
-	_unit disableAI "AUTOCOMBAT";
 };
 
 if ( _wounded ) then {

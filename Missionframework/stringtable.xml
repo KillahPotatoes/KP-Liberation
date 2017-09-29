@@ -8,16 +8,16 @@
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.955</Original>
-						<German>KP Liberation v0.955</German>
-						<Spanish>KP Liberation v0.955</Spanish>
-						<Italian>KP Liberation v0.955</Italian>
+						<Original>KP Liberation v0.96dev</Original>
+						<German>KP Liberation v0.96dev</German>
+						<Spanish>KP Liberation v0.96dev</Spanish>
+						<Italian>KP Liberation v0.96dev</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.955</Original>
-						<German>v0.955</German>
-						<Spanish>v0.955</Spanish>
-						<Italian>v0.955</Italian>
+						<Original>v0.96dev</Original>
+						<German>v0.96dev</German>
+						<Spanish>v0.96dev</Spanish>
+						<Italian>v0.96dev</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -1120,6 +1120,9 @@
 						<Spanish>Oh dios mío, vamos a morir!</Spanish>
 						<Russian>Боже мой, мы все умрём!</Russian>
 						<Italian>Oh dio, stiamo per morire!</Italian>
+				</Key>
+				<Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
+						<Original>Manage AI Skill</Original>
 				</Key>
 				<Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
 						<Original>Resources multiplier</Original>
@@ -3558,7 +3561,7 @@
 						<German>Arsenalmodus</German>
 						<Italian>Modalità Arsenale</Italian>
 				</Key>
-				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
+				<Key ID="STR_PARAMS_NORESTRICTIONS">
 						<Original>No restrictions</Original>
 						<German>Keine Einschränkungen</German>
 						<Italian>Senza Restrizioni</Italian>
@@ -3586,6 +3589,24 @@
 				<Key ID="STR_ACTION_SORT_STORAGE">
 						<Original>-- STACK AND SORT</Original>
 						<German>-- STAPELN UND SORTIEREN</German>
+				</Key>
+
+				<!-- Added or changed in v0.96 -->
+				<Key ID="STR_PARAMS_SUPPMOD">
+						<Original>BI Support Module System access</Original>
+						<German>BI Support Module System Zugriff</German>
+				</Key>
+				<Key ID="STR_PARAMS_COMMANDER">
+						<Original>Commander only</Original>
+						<German>Nur Kommandant</German>
+				</Key>
+				<Key ID="STR_PARAMS_WHITELISTONLY">
+						<Original>Whitelisted only</Original>
+						<German>Nur Whitelist</German>
+				</Key>
+				<Key ID="STR_PARAMS_EVERYONE">
+						<Original>Everyone</Original>
+						<German>Jeder</German>
 				</Key>
 	</Package>
 </Project>
