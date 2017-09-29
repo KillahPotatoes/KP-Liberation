@@ -164,6 +164,13 @@ while { true } do {
 
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758023)) ctrlSetTextColor _color_readiness;
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758025)) ctrlSetTextColor _color_readiness;
+
+				private _color_reputation = [0.8,0.8,0.8,1];
+				if (KP_liberation_civ_rep >= 25) then {_color_reputation = [0,0.7,0,1]};
+				if (KP_liberation_civ_rep <= -25) then {_color_reputation = [0.7,0,0,1]};
+
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758026)) ctrlSetTextColor _color_reputation;
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758028)) ctrlSetTextColor _color_reputation;
 				_notNearFOB = false;
 
 			};
