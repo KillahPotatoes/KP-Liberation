@@ -55,23 +55,5 @@ switch (_notiftype) do {
 		deleteMarkerLocal "secondarymarkerzone";
 		secondary_objective_position_marker = [];
 	};
-	case 9: {
-		["lib_civ_informant_start", [markertext ([10000, _obj_position] call F_getNearestSector)]] call BIS_fnc_showNotification;
-		_informant_marker = createMarkerLocal ["informantmarker", _obj_position];
-		_informant_marker setMarkerColorLocal "ColorCIV";
-		_informant_marker setMarkerTypeLocal "mil_unknown";
-	};
-	case 10: {
-		["lib_civ_informant_success"] call BIS_fnc_showNotification;
-		deleteMarkerLocal "informantmarker";
-	};
-	case 11: {
-		["lib_civ_informant_fail"] call BIS_fnc_showNotification;
-		deleteMarkerLocal "informantmarker";
-	};
-	case 12: {
-		["lib_civ_informant_death"] call BIS_fnc_showNotification;
-		deleteMarkerLocal "informantmarker";
-	};
-	default {};
+	default {private _text = format ["[KP LIBERATION] [ERROR] remote_call_intel.sqf -> no valid value for _notiftype: %1", _notiftype];_text remoteExec ["diag_log",2];};
 };

@@ -32,9 +32,9 @@ while {true} do {
 
 		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant];_text remoteExec ["diag_log",2];};
 
-		[9, getPos _informant] remoteExec ["remote_call_intel"];
+		[0, getPos _informant] remoteExec ["civinfo_notifications"];
 
-		while {alive _informant && captive _informant && _waiting_time > 0} do {
+		while {alive _informant && ((side (group _informant)) == GRLIB_side_civilian) && _waiting_time > 0} do {
 			uiSleep 1;			
 			private _player_near = false;
 			{
@@ -53,13 +53,15 @@ while {true} do {
 				_informant enableAI "ANIM";
 				_informant enableAI "MOVE";
 				sleep 1;
-				// Übergabe an Spieler
+				[_informant] remoteExec ["civinfo_escort"];
 			} else {
-				[12] remoteExec ["remote_call_intel"];
+				if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant is dead";_text remoteExec ["diag_log",2];};
+				[3] remoteExec ["civinfo_notifications"];
 			};
 		} else {
 			deleteVehicle _informant;
-			[11] remoteExec ["remote_call_intel"];
+			if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant despawned";_text remoteExec ["diag_log",2];};
+			[2] remoteExec ["civinfo_notifications"];
 		};
 	} else {
 		if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant spawn chance missed";_text remoteExec ["diag_log",2];};
