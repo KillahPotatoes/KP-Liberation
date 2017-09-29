@@ -7,17 +7,20 @@
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
+				<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 				<Key ID="STR_MISSION_TITLE">
 						<Original>KP Liberation v0.96dev</Original>
 						<German>KP Liberation v0.96dev</German>
 						<Spanish>KP Liberation v0.96dev</Spanish>
 						<Italian>KP Liberation v0.96dev</Italian>
+						<Turkish>KP Liberation v0.96dev</Turkish>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
 						<Original>v0.96dev</Original>
 						<German>v0.96dev</German>
 						<Spanish>v0.96dev</Spanish>
 						<Italian>v0.96dev</Italian>
+						<Turkish>v0.96dev</Turkish>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -26,6 +29,7 @@
 						<Spanish>Despliegue</Spanish>
 						<Russian>Развёртывание</Russian>
 						<Italian>Schierati</Italian>
+						<Turkish>Atla</Turkish>
 				</Key>
 				<Key ID="STR_Deploy_InProgress">
 						<Original>Deployment in progress ...</Original>
@@ -34,6 +38,7 @@
 						<Spanish>Despliegue en curso ...</Spanish>
 						<Russian>Развёртывание в процессе ...</Russian>
 						<Italian>Schieramento in Corso ...</Italian>
+						<Turkish>Atlama işlemi devam ediyor ...</Turkish>
 				</Key>
 				<Key ID="STR_CLOSE">
 						<Original>Close</Original>
@@ -42,6 +47,7 @@
 						<Spanish>Cerca</Spanish>
 						<Russian>Закрыть</Russian>
 						<Italian>Chiudi</Italian>
+						<Turkish>Kapat</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic1">
 						<Original>I need a medic!</Original>
@@ -50,6 +56,7 @@
 						<Spanish>¡Necesito un médico!</Spanish>
 						<Russian>Мне нужен медик!</Russian>
 						<Italian>Ho bisogno di un medico!</Italian>
+						<Turkish>Sıhhiye lazım!</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic2">
 						<Original>I'm hit! Medic!</Original>
@@ -58,6 +65,7 @@
 						<Spanish>Herido! Médico!</Spanish>
 						<Russian>Меня подстрелили! Медик!</Russian>
 						<Italian>Mi hanno colpito! Medico!</Italian>
+						<Turkish>Vuruldum! Sıhhiye lazım!</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic3">
 						<Original>I'm down! Medic!</Original>
@@ -66,6 +74,7 @@
 						<Spanish>Estoy abatido! Médico!</Spanish>
 						<Russian>Я ранен! Медик!</Russian>
 						<Italian>Sono a terra! Medico!</Italian>
+						<Turkish>Yaralandım! Sıhhiye!</Turkish>
 				</Key>
 				<Key ID="STR_REVIVE_LABEL">
 						<Original>YOU ARE WOUNDED</Original>
@@ -74,6 +83,7 @@
 						<Spanish>ESTAS HERIDO</Spanish>
 						<Russian>ВЫ БЕЗ СОЗНАНИЯ</Russian>
 						<Italian>SEI STATO UCCISO</Italian>
+						<Turkish>Ağır yaralandın!</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_ACTION">
 						<Original>-- BUILD --</Original>
@@ -82,6 +92,7 @@
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
 						<Italian>-- COSTRUISCI --</Italian>
+						<Turkish>-- İnşa Et --</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
@@ -90,6 +101,7 @@
 						<Spanish>MENU DE CONSTRUCCIÓN</Spanish>
 						<Russian>ОБЕСПЕЧЕНИЕ</Russian>
 						<Italian>MENU COSTRUZIONI</Italian>
+						<Turkish>İNŞA MENÜSÜ</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_BUTTON">
 						<Original>Build</Original>
@@ -98,6 +110,7 @@
 						<Spanish>Construir</Spanish>
 						<Russian>Построить</Russian>
 						<Italian>Costruisci</Italian>
+						<Turkish>İnşa Et</Turkish>
 				</Key>
 				<Key ID="STR_MANPOWER">
 						<Original>Supplies</Original>
@@ -106,6 +119,7 @@
 						<Spanish>Efectivos</Spanish>
 						<Russian>Персонал</Russian>
 						<Italian>Personale</Italian>
+						<Turkish>Kaynaklar</Turkish>
 				</Key>
 				<Key ID="STR_AMMO">
 						<Original>Ammunition</Original>
@@ -114,6 +128,7 @@
 						<Spanish>Munición</Spanish>
 						<Russian>Вооружение</Russian>
 						<Italian>Munizioni</Italian>
+						<Turkish>Muhimmatlar</Turkish>
 				</Key>
 				<Key ID="STR_FUEL">
 						<Original>Fuel</Original>
@@ -122,6 +137,7 @@
 						<Spanish>Combustible</Spanish>
 						<Russian>Топливо</Russian>
 						<Italian>Carburante</Italian>
+						<Turkish>Yakıt</Turkish>
 				</Key>
 				<Key ID="STR_BLEEDOUT_MESSAGE">
 						<Original>Bleedout in %1 seconds</Original>
@@ -130,6 +146,7 @@
 						<Spanish>Desangrado en %1 segundos</Spanish>
 						<Russian>Вы умрёте через %1 секунд</Russian>
 						<Italian>Morte per dissanguamento fra %1 secondi</Italian>
+						<Turkish>%1 saniyedir kanıyorsun</Turkish>
 				</Key>
 				<Key ID="STR_BLEEDOUT_STABILIZED">
 						<Original>Stabilized</Original>
@@ -138,6 +155,7 @@
 						<Spanish>Estabilizado</Spanish>
 						<Russian>Стабильно</Russian>
 						<Italian>Stabilizzato</Italian>
+						<Turkish>Stabilize</Turkish>
 				</Key>
 				<Key ID="STR_ROTATION">
 						<Original>-- Rotation</Original>
@@ -146,6 +164,7 @@
 						<Spanish>-- Rotación</Spanish>
 						<Russian>-- Вращать</Russian>
 					 	<Italian>-- Ruota</Italian>
+						<Turkish>-- Döndür</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT">
 						<Original>-- Build</Original>
@@ -154,6 +173,7 @@
 						<Spanish>-- Construir</Spanish>
 						<Russian>-- Поставить</Russian>
 						<Italian>-- Costruisci</Italian>
+						<Turkish>-- Kur</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_BIS">
 						<Original>-- Build and Repeat</Original>
@@ -162,6 +182,7 @@
 						<Spanish>-- Construir y repetir</Spanish>
 						<Russian>-- Поставить и повторить</Russian>
 						<Italian>-- Costruisci e Ripeti</Italian>
+						<Turkish>-- Kur ve tekrarla</Turkish>
 				</Key>
 				<Key ID="STR_CANCEL">
 						<Original>-- Cancel</Original>
@@ -170,6 +191,7 @@
 						<Spanish>-- Cancelar</Spanish>
 						<Russian>-- Отмена</Russian>
 						<Italian>-- Annulla</Italian>
+						<Turkish>-- İptal</Turkish>
 				</Key>
 				<Key ID="STR_CANCEL_HINT">
 						<Original>Building canceled.</Original>
@@ -178,6 +200,7 @@
 						<Spanish>Construcción cancelada</Spanish>
 						<Russian>Постройка отменена</Russian>
 						<Italian>Costruzione cancellata.</Italian>
+						<Turkish>İnşa iptal edildi.</Turkish>
 				</Key>
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
@@ -186,6 +209,7 @@
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
 						<Italian>Costruzione confermata.</Italian>
+						<Turkish>İnşa kuruldu.</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_IMPOSSIBLE">
 						<Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -194,6 +218,7 @@
 						<Spanish>Imposible de colocar aqui: hay 1% objeto(s) a %2 metros de la posición del objeto</Spanish>
 						<Russian>Нельзя разместить здесь:  в %2 метрах есть 1% объект(а).</Russian>
 						<Italian>impossibile piazzare qui: ci sono %1 oggetti vicini %2 metri dalla posizione dell'oggetto in costruzione</Italian>
+						<Turkish>Buraya kurulamaz: %2 metre içinde %1 obje bulunuyor.</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_POSSIBLE">
 						<Original>This position is valid.</Original>
@@ -202,6 +227,7 @@
 						<Spanish>Esta posición es válida</Spanish>
 						<Russian>Это место подходит.</Russian>
 						<Italian>Questa posizione è valida</Italian>
+						<Turkish>Bu pozisyon uygun.</Turkish>
 				</Key>
 				<Key ID="STR_ARSENAL_ACTION">
 						<Original>-- ARSENAL --</Original>
@@ -210,6 +236,7 @@
 						<Spanish>-- ARSENAL --</Spanish>
 						<Russian>-- АРСЕНАЛ --</Russian>
 						<Italian>-- ARSENALE --</Italian>
+						<Turkish>-- CEPHANE --</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_LOAD_BOX">
 						<Original>-- LOAD CRATE</Original>
@@ -218,6 +245,7 @@
 						<Spanish>-- CARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
 						<Italian>-- CARICA CASSA</Italian>
+						<Turkish>-- KUTUYU YÜKLE</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_UNLOAD_BOX">
 						<Original>-- UNLOAD CRATES</Original>
@@ -226,6 +254,7 @@
 						<Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
 						<Italian>-- SCARICA CASSA</Italian>
+						<Turkish>-- KUTUYU İNDİR</Turkish>
 				</Key>
 				<Key ID="STR_BOX_LOADED">
 						<Original>Ammo box successfully loaded on the transport vehicle.</Original>
@@ -234,6 +263,7 @@
 						<Spanish>Caja de munición cargada correctamente en el vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами загружен в транспортное средство</Russian>
 						<Italian>Cassa munizioni correttamente caricata sul camion da trasporto</Italian>
+						<Turkish>Mermi kutusu başarıyla taşıma aracına yüklendi.</Turkish>
 				</Key>
 				<Key ID="STR_BOX_UNLOADED">
 						<Original>Ammo box successfully unloaded from the transport vehicle.</Original>
@@ -242,6 +272,7 @@
 						<Spanish>Caja de munición descargada correctamente del vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами выгружен из транспортного средства</Russian>
 						<Italian>Cassa munizioni correttamente scaricata dal camion da trasporto</Italian>
+						<Turkish>Mermi kutusu başarıyla taşıma aracından indirildi.</Turkish>
 				</Key>
 				<Key ID="STR_BOX_CANTLOAD">
 						<Original>There is no nearby vehicle capable of carrying the ammo box.</Original>
@@ -250,6 +281,7 @@
 						<Spanish>No hay ningún vehículo cercano capaz de cagar la caja de munición</Spanish>
 						<Russian>Рядом нет техники способной перевозить ящики с боеприпасами.</Russian>
 						<Italian>Non ci sono veicoli vicino alla cassa munizioni capaci di caricarla</Italian>
+						<Turkish>Yakınlarda bu kutuyu taşıyabilecek araç yok.</Turkish>
 				</Key>
 				<Key ID="STR_FOB_ACTION">
 						<Original>-- DEPLOY FOB --</Original>
@@ -258,6 +290,7 @@
 						<Spanish>-- DESPLEGAR FOB --</Spanish>
 						<Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
 						<Italian>-- COSTRUISCI FOB --</Italian>
+						<Turkish>-- FOB KUR --</Turkish>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
@@ -266,6 +299,7 @@
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
+						<Turkish>Buraya FOB koyamazsın. Diğer FOB'lerden %1 metre uzakta olmalısın. En yakındaki FOB %2 metre uzaklıkta.</Turkish>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
@@ -3199,7 +3233,7 @@
 						Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
 						</Original>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3223,7 +3257,7 @@
 						Вопросы?&lt;br/&gt; &lt;br/&gt;
 						</Russian>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3389,7 +3423,7 @@
 						&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;
 						&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;
 						In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme, benötigen beide Lagerflächen (scroll-menu) und dann benötigt der PoI zusätzlich noch ein Fabrikgebäude (wieder scroll-menu). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;
-						</German>		
+						</German>
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert Level</Original>
