@@ -190,6 +190,7 @@ class Missions
 * Tweaked: Cities won't be able to produce resources anymore.
 * Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
 * Tweaked: Corrected some strings in the stringtable.
+* Tweaked: Factories don't have all facilities from the start anymore. The facility they start with is set at campaign start.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
