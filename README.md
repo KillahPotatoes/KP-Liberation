@@ -178,6 +178,7 @@ class Missions
 * Added: Civil informant can rarely spawn in blufor sectors, when reputation is high enough.
 * Added: Factory map markers now indicate which production facilities are available there.
 * Added: Asymmetric Threats.
+* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
