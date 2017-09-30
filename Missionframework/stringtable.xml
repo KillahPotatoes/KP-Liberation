@@ -4315,5 +4315,9 @@
 			<Original>The civilian died.</Original>
 			<German>Der Zivilist wurde getötet.</German>
 		</Key>
+		<Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
+			<Original>Asymmetric Threat</Original>
+			<German>Asymmetrische Bedrohung</German>
+		</Key>
 	</Package>
 </Project>

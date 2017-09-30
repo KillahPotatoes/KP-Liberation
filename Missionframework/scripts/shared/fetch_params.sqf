@@ -36,6 +36,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_civinfo_debug = ["DebugCivInfo",0] call bis_fnc_getParamValue;
 	KP_liberation_civrep_debug = ["DebugCivRep",0] call bis_fnc_getParamValue;
 	KP_liberation_savegame_debug = ["DebugSave",0] call bis_fnc_getParamValue;
+	KP_liberation_asymmetric_debug = ["DebugAsymmetric",0] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -75,6 +76,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_civinfo_debug = 0;
 	KP_liberation_civrep_debug = 0;
 	KP_liberation_savegame_debug = 0;
+	KP_liberation_asymmetric_debug = 0;
 };
 
 KP_liberation_debug = false;

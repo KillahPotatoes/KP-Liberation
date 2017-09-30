@@ -11,4 +11,23 @@ if (_negative) then {
 if (KP_liberation_civ_rep < -100) then {KP_liberation_civ_rep = -100;};
 if (KP_liberation_civ_rep > 100) then {KP_liberation_civ_rep = 100;};
 
+if (KP_liberation_civ_rep <= -25) then {
+	GRLIB_side_resistance setFriend [GRLIB_side_enemy, 1];
+	GRLIB_side_enemy setFriend [GRLIB_side_enemy, 1];
+	GRLIB_side_resistance setFriend [GRLIB_side_friendly, 0];
+	GRLIB_side_friendly setFriend [GRLIB_side_friendly, 0];
+};
+if (KP_liberation_civ_rep > -25 && KP_liberation_civ_rep < 25) then {
+	GRLIB_side_resistance setFriend [GRLIB_side_enemy, 1];
+	GRLIB_side_enemy setFriend [GRLIB_side_enemy, 1];
+	GRLIB_side_resistance setFriend [GRLIB_side_friendly, 1];
+	GRLIB_side_friendly setFriend [GRLIB_side_friendly, 1];
+};
+if (KP_liberation_civ_rep >= 25) then {
+	GRLIB_side_resistance setFriend [GRLIB_side_friendly, 1];
+	GRLIB_side_friendly setFriend [GRLIB_side_friendly, 1];
+	GRLIB_side_resistance setFriend [GRLIB_side_enemy, 0];
+	GRLIB_side_enemy setFriend [GRLIB_side_enemy, 0];
+};
+
 if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] changeCR finished on: %1 - New value: %2", debug_source, KP_liberation_civ_rep];_text remoteExec ["diag_log",2];};

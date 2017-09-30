@@ -36,6 +36,7 @@ manage_captureboxes = compileFinal preprocessFileLineNumbers "scripts\server\sec
 manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_intel.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
+manage_asymIED = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\ied\manage_asymIED.sqf";
 
 // Arty Monitor
 // Arty Supp deactivated for now
@@ -83,6 +84,9 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 
 // Civil Informant
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\civinformant\init_module.sqf";
+
+// Asymmetric Threats
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\init_module.sqf";
 
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {

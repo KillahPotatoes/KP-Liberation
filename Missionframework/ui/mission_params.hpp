@@ -317,6 +317,12 @@ class Params
 		texts[] = {""};
 		default = "";
 	};
+	class DebugAsymmetric {
+		title = $STR_PARAMS_DEBUG_ASYMMETRIC;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
 	class DebugCivInfo {
 		title = $STR_PARAMS_DEBUG_CIVINFO;
 		values[] = {0, 1};
