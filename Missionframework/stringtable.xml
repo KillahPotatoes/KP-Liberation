@@ -4308,7 +4308,7 @@
 			<German>Der Zivilist gab uns wichtige Informationen.</German>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
-			<Original>The civilian is disappeared.</Original>
+			<Original>The civilian has disappeared.</Original>
 			<German>Der Zivilist ist wieder untergetaucht.</German>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
@@ -4318,6 +4318,10 @@
 		<Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
 			<Original>Asymmetric Threat</Original>
 			<German>Asymmetrische Bedrohung</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_LOGISTIC">
+			<Original>Logistic</Original>
+			<German>Logistik</German>
 		</Key>
 	</Package>
 </Project>

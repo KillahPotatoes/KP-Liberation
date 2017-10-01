@@ -181,7 +181,7 @@ class Missions
 * Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
-* Tweaked: Terrain aligment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)
 * Tweaked: Highlight color in production list changed to blue instead of misleading green.
