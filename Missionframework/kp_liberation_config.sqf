@@ -52,8 +52,6 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
-
 GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.
 GRLIB_side_resistance = RESISTANCE;																				// Resistance side.
@@ -69,7 +67,7 @@ GRLIB_halo_altitude = 2500;																						// Altitude in metres for the H
 GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 0.5;																				// Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 45				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1000;																						// Range to activate a sector.
 GRLIB_capture_size = 175;																						// Range to capture a sector.
@@ -91,6 +89,12 @@ KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalt
 KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building
 KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
 KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector
+
+KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time (seconds)
+KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time (seconds)
+KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn chance (0-100)
+KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount
+KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning (seconds)
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
@@ -318,8 +322,8 @@ vehicle_refuel_sources = [
 	"BW_LKW15T_Fuel_F"
 ];
 
-// Classnames of artillery vehicles or statics which should be linked to the support system.
-KP_liberation_artySupp = [
+// Classnames of artillery vehicles or statics which should be linked to the support system. (Currently deactivated)
+/*KP_liberation_artySupp = [
 	"B_Mortar_01_F",
 	"B_T_Mortar_01_F",
 	"B_MBT_01_arty_F",
@@ -333,7 +337,7 @@ KP_liberation_artySupp = [
 	"RHS_M119_WD",
 	"RHS_M119_D",
 	"UK3CB_BAF_Static_L16_Deployed_MTP"
-];
+];*/
 
 // Classnames of boats, so they can be built on water.
 boats_names = [

@@ -30,17 +30,17 @@ while { cinematic_camera_started } do {
 
 			if ( count GRLIB_all_fobs > 0 ) then {
 				for [ {_idx=0},{_idx < 2},{_idx=_idx+1} ] do {
-					_positions pushback (GRLIB_all_fobs call bis_fnc_selectRandom);
+					_positions pushback (selectRandom GRLIB_all_fobs);
 				};
 			};
 
 			if ( count active_sectors > 0 ) then {
 				for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-					_positions pushback (getmarkerpos (active_sectors call bis_fnc_selectRandom));
+					_positions pushback (getmarkerpos (selectRandom active_sectors));
 				};
 			} else {
 				for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-					_positions pushback (getmarkerpos (sectors_allSectors call bis_fnc_selectRandom ));
+					_positions pushback (getmarkerpos (selectRandom sectors_allSectors));
 				};
 			};
 
@@ -48,13 +48,13 @@ while { cinematic_camera_started } do {
 				 _activeplayers = ( [ allPlayers , { alive _x && ( _x distance ( getmarkerpos GRLIB_respawn_marker ) ) > 100 } ] call BIS_fnc_conditionalSelect );
 				 if ( count _activeplayers > 0 ) then {
 				 	for [ {_idx=0},{_idx < 3},{_idx=_idx+1} ] do {
-						_positions pushback (getpos ( _activeplayers call bis_fnc_selectRandom ));
+						_positions pushback (getpos (selectRandom _activeplayers));
 					};
 				};
 			};
 
 		};
-		_position = ( _positions - [ _last_position ] ) call bis_fnc_selectRandom;
+		_position = selectRandom (_positions - [_last_position]);
 		_last_position = _position;
 		_cinematic_pointer setpos [ _position select 0, _position select 1, (_position select 2) + 7 ];
 		_nearentities = _position nearEntities [ "Man", 100 ];
@@ -63,10 +63,10 @@ while { cinematic_camera_started } do {
 			_camtarget = startbase;
 		} else {
 			if ( count ( [ _nearentities , { alive _x && isPlayer _x } ] call BIS_fnc_conditionalSelect ) != 0 ) then {
-				_camtarget = ( [ _nearentities , { alive _x && isPlayer _x } ] call BIS_fnc_conditionalSelect ) call bis_fnc_selectRandom;
+				_camtarget = selectRandom ([_nearentities, {alive _x && isPlayer _x}] call BIS_fnc_conditionalSelect);
 			} else {
 				if ( count ( [ _nearentities , { alive _x } ] call BIS_fnc_conditionalSelect ) != 0 ) then {
-					_camtarget = ( [ _nearentities , { alive _x } ] call BIS_fnc_conditionalSelect ) call bis_fnc_selectRandom;
+					_camtarget = selectRandom ([_nearentities, {alive _x}] call BIS_fnc_conditionalSelect);
 				};
 			};
 		};
@@ -81,7 +81,7 @@ while { cinematic_camera_started } do {
 			_startfov = 0.8;
 			_endfov = 0.8;
 
-			_next_transition = ( [ 0, 1, 2, 3, 4, 5, 6, 7 ,8 ,9 ,10, 11 ,12 ,13 ,14, 15 ] - [ _last_transition ] ) call bis_fnc_selectRandom;
+			_next_transition = selectRandom ([0, 1, 2, 3, 4, 5, 6, 7 ,8 ,9 ,10, 11 ,12 ,13 ,14, 15] - [_last_transition]);
 			_last_transition = _next_transition;
 
 			switch ( _next_transition ) do {

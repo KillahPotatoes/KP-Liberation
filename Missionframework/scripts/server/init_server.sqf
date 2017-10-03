@@ -36,11 +36,13 @@ manage_captureboxes = compileFinal preprocessFileLineNumbers "scripts\server\sec
 manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_intel.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
+manage_asymIED = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\ied\manage_asymIED.sqf";
 
 // Arty Monitor
-arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
+// Arty Supp deactivated for now
+/*arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
 
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";*/
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startvehicle_spawn.sqf";
@@ -79,6 +81,12 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 
 // Civil Reputation
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\civrep\init_module.sqf";
+
+// Civil Informant
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civinformant\init_module.sqf";
+
+// Asymmetric Threats
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\init_module.sqf";
 
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {

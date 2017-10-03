@@ -14,7 +14,7 @@ if ( _infsquad == "militia" ) then {
 
 if ( _building_ai_max > floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)) then { _building_ai_max = floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)};
 _squadtospawnnn = [];
-while { (count _squadtospawnnn) < _building_ai_max } do { _squadtospawnnn pushback ( _infsquad_classnames call BIS_fnc_selectRandom ); };
+while {(count _squadtospawnnn) < _building_ai_max} do {_squadtospawnnn pushback (selectRandom _infsquad_classnames);};
 
 _position_indexes = [];
 _position_count = count _buildingpositions;
@@ -36,7 +36,7 @@ _idxposit = 0;
 	[ _nextunit, _sector ] spawn building_defence_ai;
 	if ( _infsquad == "militia" ) then {
 		if ( (typeof _nextunit) in original_resistance ) then {
-			[ _nextunit ] spawn ( militia_standard_squad call BIS_fnc_selectRandom );
+			[ _nextunit ] spawn (selectRandom militia_standard_squad);
 			if ( random 100 < 40 ) then {
 				_nextunit addPrimaryWeaponItem "acc_flashlight";
 			};

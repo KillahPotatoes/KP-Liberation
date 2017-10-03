@@ -45,17 +45,17 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 
 			while {_nbintel > 0} do {
 
-				_buildingposition = _building_positions call BIS_fnc_selectRandom;
+				_buildingposition = selectRandom _building_positions;
 				
 				while {_buildingposition in _used_positions} do {
-					_buildingposition = _building_positions call BIS_fnc_selectRandom;
+					_buildingposition = selectRandom _building_positions;
 				};
 
 				_used_positions pushback _buildingposition;
 				
 				_inteldir = random 360;
 
-				_intelclassname = [GRLIB_intel_file, GRLIB_intel_laptop] call BIS_fnc_selectRandom;
+				_intelclassname = selectRandom [GRLIB_intel_file, GRLIB_intel_laptop];
 				_intelobject = _intelclassname createVehicle _buildingposition;
 				_intelobject setPosATL [_buildingposition select 0, _buildingposition select 1, (_buildingposition select 2) - 0.15];
 				_intelobject enableSimulationGlobal false;

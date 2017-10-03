@@ -14,18 +14,19 @@ while { true } do {
 	_zeusunits = [];
 	{
 		if ((side group _x == GRLIB_side_friendly) && (_x distance startbase > 1000) && alive _x) then {
-			if !(isNil "BIS_SUPP_HQ_WEST") then {
+			// Arty Supp deactivated for now
+			/*if !(isNil "BIS_SUPP_HQ_WEST") then {
 				if !(_x == BIS_SUPP_HQ_WEST) then {
 					_zeusunits pushback _x;
 				};
-			} else {
+			} else {*/
 				_zeusunits pushback _x;
-			};
+			//};
 		};
 	} foreach allUnits;
 
 	{
-		if ((typeof _x in _vehicleClassnames ) && (( _x distance startbase > 1000 ) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
+		if (((typeof _x in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", 0] == 1)) && ((_x distance startbase > 1000) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
 			_zeusunits pushback _x;
 		};
 	} foreach vehicles;
