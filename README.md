@@ -179,6 +179,7 @@ class Missions
 	* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
 	* Added: Own logistic convoys can be ambushed by guerilla forces.
 	* Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
+	* Added: Arrays in preset files for the guerilla forces.
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
