@@ -4,7 +4,6 @@ build_confirmed = 0;
 _maxdist = GRLIB_fob_range;
 _truepos = [];
 _debug_colisions = false;
-KP_vector = true;
 
 GRLIB_preview_spheres = [];
 while { count GRLIB_preview_spheres < 36 } do {
@@ -25,6 +24,7 @@ while { true } do {
 
 	build_confirmed = 1;
 	build_invalid = 0;
+	KP_vector = true;
 	_classname = "";
 	if ( buildtype == 99 ) then {
 		GRLIB_removefobboxes = true;
@@ -308,11 +308,6 @@ while { true } do {
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
-
-				if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
-					[_vehicle] remoteExec ["arty_monitor", 2];
-				};
-
 				if ( (_classname in uavs) || manned ) then {
 					[ _vehicle ] call F_forceBluforCrew;
 				};

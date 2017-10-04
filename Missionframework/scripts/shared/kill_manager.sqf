@@ -47,12 +47,7 @@ if ( isServer ) then {
 		stats_player_deaths = stats_player_deaths + 1;	
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
-		// Eject Player from vehicle
 		if (vehicle _unit != _unit) then {moveOut _unit;};
-		// Remove Support Link and delete Requester Module
-		if ((count (synchronizedObjects _unit)) > 0) then {
-			remoteExec ["remote_call_removeSuppReq", _unit];
-		};
 	};
 
 	if ( _unit isKindOf "Man" ) then {

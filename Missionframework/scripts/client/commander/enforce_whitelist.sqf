@@ -1,5 +1,3 @@
-[] call compileFinal preprocessFileLineNumbers "whitelist.sqf";
-
 if ( !GRLIB_use_whitelist ) exitWith {};
 
 private [ "_commanderobj", "_tagmatch", "_idmatch", "_namematch" ];
@@ -10,6 +8,8 @@ sleep 1;
 _commanderobj = [] call F_getCommander;
 if ( !isNull _commanderobj ) then {
 	if ( player == _commanderobj && !([] call F_isAdmin)) then {
+
+		[] call compileFinal preprocessFileLineNumbers "whitelist.sqf";
 
 		_tagmatch = false;
 		_idmatch = false;

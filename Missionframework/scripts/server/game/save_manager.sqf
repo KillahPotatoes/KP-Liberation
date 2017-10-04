@@ -162,10 +162,6 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
-	
-	if (KP_liberation_suppMod_enb > 0) then {
-		waitUntil {!isNil "KP_liberation_suppMod_created"};
-	};
 
 	{
 		_nextclass = _x select 0;
@@ -194,10 +190,6 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 			if ( _nextclass in _building_classnames ) then {
 				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
-			};
-
-			if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				[_nextbuilding] remoteExec ["arty_monitor", 2];
 			};
 
 			if ( _hascrew ) then {

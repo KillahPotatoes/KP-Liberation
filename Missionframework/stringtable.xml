@@ -7,20 +7,17 @@
 				<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
 				<!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
 				<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-				<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 				<Key ID="STR_MISSION_TITLE">
-						<Original>KP Liberation v0.96dev</Original>
-						<German>KP Liberation v0.96dev</German>
-						<Spanish>KP Liberation v0.96dev</Spanish>
-						<Italian>KP Liberation v0.96dev</Italian>
-						<Turkish>KP Liberation v0.96dev</Turkish>
+						<Original>KP Liberation v0.955</Original>
+						<German>KP Liberation v0.955</German>
+						<Spanish>KP Liberation v0.955</Spanish>
+						<Italian>KP Liberation v0.955</Italian>
 				</Key>
 				<Key ID="STR_MISSION_VERSION">
-						<Original>v0.96dev</Original>
-						<German>v0.96dev</German>
-						<Spanish>v0.96dev</Spanish>
-						<Italian>v0.96dev</Italian>
-						<Turkish>v0.96dev</Turkish>
+						<Original>v0.955</Original>
+						<German>v0.955</German>
+						<Spanish>v0.955</Spanish>
+						<Italian>v0.955</Italian>
 				</Key>
 				<Key ID="STR_Deploy_OnPoint">
 						<Original>Deploy</Original>
@@ -29,7 +26,6 @@
 						<Spanish>Despliegue</Spanish>
 						<Russian>Развёртывание</Russian>
 						<Italian>Schierati</Italian>
-						<Turkish>Atla</Turkish>
 				</Key>
 				<Key ID="STR_Deploy_InProgress">
 						<Original>Deployment in progress ...</Original>
@@ -38,7 +34,6 @@
 						<Spanish>Despliegue en curso ...</Spanish>
 						<Russian>Развёртывание в процессе ...</Russian>
 						<Italian>Schieramento in Corso ...</Italian>
-						<Turkish>Atlama işlemi devam ediyor ...</Turkish>
 				</Key>
 				<Key ID="STR_CLOSE">
 						<Original>Close</Original>
@@ -47,7 +42,6 @@
 						<Spanish>Cerca</Spanish>
 						<Russian>Закрыть</Russian>
 						<Italian>Chiudi</Italian>
-						<Turkish>Kapat</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic1">
 						<Original>I need a medic!</Original>
@@ -56,7 +50,6 @@
 						<Spanish>¡Necesito un médico!</Spanish>
 						<Russian>Мне нужен медик!</Russian>
 						<Italian>Ho bisogno di un medico!</Italian>
-						<Turkish>Sıhhiye lazım!</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic2">
 						<Original>I'm hit! Medic!</Original>
@@ -65,7 +58,6 @@
 						<Spanish>Herido! Médico!</Spanish>
 						<Russian>Меня подстрелили! Медик!</Russian>
 						<Italian>Mi hanno colpito! Medico!</Italian>
-						<Turkish>Vuruldum! Sıhhiye lazım!</Turkish>
 				</Key>
 				<Key ID="STR_FAR_Need_Medic3">
 						<Original>I'm down! Medic!</Original>
@@ -74,7 +66,6 @@
 						<Spanish>Estoy abatido! Médico!</Spanish>
 						<Russian>Я ранен! Медик!</Russian>
 						<Italian>Sono a terra! Medico!</Italian>
-						<Turkish>Yaralandım! Sıhhiye!</Turkish>
 				</Key>
 				<Key ID="STR_REVIVE_LABEL">
 						<Original>YOU ARE WOUNDED</Original>
@@ -83,7 +74,6 @@
 						<Spanish>ESTAS HERIDO</Spanish>
 						<Russian>ВЫ БЕЗ СОЗНАНИЯ</Russian>
 						<Italian>SEI STATO UCCISO</Italian>
-						<Turkish>Ağır yaralandın!</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_ACTION">
 						<Original>-- BUILD --</Original>
@@ -92,7 +82,6 @@
 						<Spanish>-- CONSTRUIR --</Spanish>
 						<Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
 						<Italian>-- COSTRUISCI --</Italian>
-						<Turkish>-- İnşa Et --</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_TITLE">
 						<Original>BUILD MENU</Original>
@@ -101,7 +90,6 @@
 						<Spanish>MENU DE CONSTRUCCIÓN</Spanish>
 						<Russian>ОБЕСПЕЧЕНИЕ</Russian>
 						<Italian>MENU COSTRUZIONI</Italian>
-						<Turkish>İNŞA MENÜSÜ</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_BUTTON">
 						<Original>Build</Original>
@@ -110,7 +98,6 @@
 						<Spanish>Construir</Spanish>
 						<Russian>Построить</Russian>
 						<Italian>Costruisci</Italian>
-						<Turkish>İnşa Et</Turkish>
 				</Key>
 				<Key ID="STR_MANPOWER">
 						<Original>Supplies</Original>
@@ -119,7 +106,6 @@
 						<Spanish>Efectivos</Spanish>
 						<Russian>Персонал</Russian>
 						<Italian>Personale</Italian>
-						<Turkish>Kaynaklar</Turkish>
 				</Key>
 				<Key ID="STR_AMMO">
 						<Original>Ammunition</Original>
@@ -128,7 +114,6 @@
 						<Spanish>Munición</Spanish>
 						<Russian>Вооружение</Russian>
 						<Italian>Munizioni</Italian>
-						<Turkish>Muhimmatlar</Turkish>
 				</Key>
 				<Key ID="STR_FUEL">
 						<Original>Fuel</Original>
@@ -137,7 +122,6 @@
 						<Spanish>Combustible</Spanish>
 						<Russian>Топливо</Russian>
 						<Italian>Carburante</Italian>
-						<Turkish>Yakıt</Turkish>
 				</Key>
 				<Key ID="STR_BLEEDOUT_MESSAGE">
 						<Original>Bleedout in %1 seconds</Original>
@@ -146,7 +130,6 @@
 						<Spanish>Desangrado en %1 segundos</Spanish>
 						<Russian>Вы умрёте через %1 секунд</Russian>
 						<Italian>Morte per dissanguamento fra %1 secondi</Italian>
-						<Turkish>%1 saniyedir kanıyorsun</Turkish>
 				</Key>
 				<Key ID="STR_BLEEDOUT_STABILIZED">
 						<Original>Stabilized</Original>
@@ -155,7 +138,6 @@
 						<Spanish>Estabilizado</Spanish>
 						<Russian>Стабильно</Russian>
 						<Italian>Stabilizzato</Italian>
-						<Turkish>Stabilize</Turkish>
 				</Key>
 				<Key ID="STR_ROTATION">
 						<Original>-- Rotation</Original>
@@ -164,7 +146,6 @@
 						<Spanish>-- Rotación</Spanish>
 						<Russian>-- Вращать</Russian>
 					 	<Italian>-- Ruota</Italian>
-						<Turkish>-- Döndür</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT">
 						<Original>-- Build</Original>
@@ -173,7 +154,6 @@
 						<Spanish>-- Construir</Spanish>
 						<Russian>-- Поставить</Russian>
 						<Italian>-- Costruisci</Italian>
-						<Turkish>-- Kur</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_BIS">
 						<Original>-- Build and Repeat</Original>
@@ -182,7 +162,6 @@
 						<Spanish>-- Construir y repetir</Spanish>
 						<Russian>-- Поставить и повторить</Russian>
 						<Italian>-- Costruisci e Ripeti</Italian>
-						<Turkish>-- Kur ve tekrarla</Turkish>
 				</Key>
 				<Key ID="STR_CANCEL">
 						<Original>-- Cancel</Original>
@@ -191,7 +170,6 @@
 						<Spanish>-- Cancelar</Spanish>
 						<Russian>-- Отмена</Russian>
 						<Italian>-- Annulla</Italian>
-						<Turkish>-- İptal</Turkish>
 				</Key>
 				<Key ID="STR_CANCEL_HINT">
 						<Original>Building canceled.</Original>
@@ -200,7 +178,6 @@
 						<Spanish>Construcción cancelada</Spanish>
 						<Russian>Постройка отменена</Russian>
 						<Italian>Costruzione cancellata.</Italian>
-						<Turkish>İnşa iptal edildi.</Turkish>
 				</Key>
 				<Key ID="STR_CONFIRM_HINT">
 						<Original>Building confirmed.</Original>
@@ -209,7 +186,6 @@
 						<Spanish>Construcción confirmada.</Spanish>
 						<Russian>Постройка подтверждена</Russian>
 						<Italian>Costruzione confermata.</Italian>
-						<Turkish>İnşa kuruldu.</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_IMPOSSIBLE">
 						<Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -218,7 +194,6 @@
 						<Spanish>Imposible de colocar aqui: hay 1% objeto(s) a %2 metros de la posición del objeto</Spanish>
 						<Russian>Нельзя разместить здесь:  в %2 метрах есть 1% объект(а).</Russian>
 						<Italian>impossibile piazzare qui: ci sono %1 oggetti vicini %2 metri dalla posizione dell'oggetto in costruzione</Italian>
-						<Turkish>Buraya kurulamaz: %2 metre içinde %1 obje bulunuyor.</Turkish>
 				</Key>
 				<Key ID="STR_PLACEMENT_POSSIBLE">
 						<Original>This position is valid.</Original>
@@ -227,7 +202,6 @@
 						<Spanish>Esta posición es válida</Spanish>
 						<Russian>Это место подходит.</Russian>
 						<Italian>Questa posizione è valida</Italian>
-						<Turkish>Bu pozisyon uygun.</Turkish>
 				</Key>
 				<Key ID="STR_ARSENAL_ACTION">
 						<Original>-- ARSENAL --</Original>
@@ -236,7 +210,6 @@
 						<Spanish>-- ARSENAL --</Spanish>
 						<Russian>-- АРСЕНАЛ --</Russian>
 						<Italian>-- ARSENALE --</Italian>
-						<Turkish>-- CEPHANE --</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_LOAD_BOX">
 						<Original>-- LOAD CRATE</Original>
@@ -245,7 +218,6 @@
 						<Spanish>-- CARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
 						<Italian>-- CARICA CASSA</Italian>
-						<Turkish>-- KUTUYU YÜKLE</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_UNLOAD_BOX">
 						<Original>-- UNLOAD CRATES</Original>
@@ -254,7 +226,6 @@
 						<Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
 						<Italian>-- SCARICA CASSA</Italian>
-						<Turkish>-- KUTUYU İNDİR</Turkish>
 				</Key>
 				<Key ID="STR_BOX_LOADED">
 						<Original>Ammo box successfully loaded on the transport vehicle.</Original>
@@ -263,7 +234,6 @@
 						<Spanish>Caja de munición cargada correctamente en el vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами загружен в транспортное средство</Russian>
 						<Italian>Cassa munizioni correttamente caricata sul camion da trasporto</Italian>
-						<Turkish>Mermi kutusu başarıyla taşıma aracına yüklendi.</Turkish>
 				</Key>
 				<Key ID="STR_BOX_UNLOADED">
 						<Original>Ammo box successfully unloaded from the transport vehicle.</Original>
@@ -272,7 +242,6 @@
 						<Spanish>Caja de munición descargada correctamente del vehículo de transporte</Spanish>
 						<Russian>Ящик с боеприпасами выгружен из транспортного средства</Russian>
 						<Italian>Cassa munizioni correttamente scaricata dal camion da trasporto</Italian>
-						<Turkish>Mermi kutusu başarıyla taşıma aracından indirildi.</Turkish>
 				</Key>
 				<Key ID="STR_BOX_CANTLOAD">
 						<Original>There is no nearby vehicle capable of carrying the ammo box.</Original>
@@ -281,7 +250,6 @@
 						<Spanish>No hay ningún vehículo cercano capaz de cagar la caja de munición</Spanish>
 						<Russian>Рядом нет техники способной перевозить ящики с боеприпасами.</Russian>
 						<Italian>Non ci sono veicoli vicino alla cassa munizioni capaci di caricarla</Italian>
-						<Turkish>Yakınlarda bu kutuyu taşıyabilecek araç yok.</Turkish>
 				</Key>
 				<Key ID="STR_FOB_ACTION">
 						<Original>-- DEPLOY FOB --</Original>
@@ -290,7 +258,6 @@
 						<Spanish>-- DESPLEGAR FOB --</Spanish>
 						<Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
 						<Italian>-- COSTRUISCI FOB --</Italian>
-						<Turkish>-- FOB KUR --</Turkish>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
@@ -299,7 +266,6 @@
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
-						<Turkish>Buraya FOB koyamazsın. Diğer FOB'lerden %1 metre uzakta olmalısın. En yakındaki FOB %2 metre uzaklıkta.</Turkish>
 				</Key>
 				<Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
 						<Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
@@ -308,7 +274,6 @@
 						<Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
 						<Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшиая зона в %2 метрах.</Russian>
 						<Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
-						<Turkish>Buraya FOB açılamaz. Ele geçirilebilir bölgelerden en az %1 metre uzakta olmalısınız. En yakın bölge %2 metre uzakta.</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_ERROR_WATER">
 						<Original>Can't build on water.</Original>
@@ -317,7 +282,6 @@
 						<Spanish>Imposible construir sobre el agua.</Spanish>
 						<Russian>Нельзя построить в воде.</Russian>
 						<Italian>Impossibile costruire sull'acqua.</Italian>
-						<Turkish>Su içine kurulamaz.</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_ERROR_DISTANCE">
 						<Original>Can't build further than %1 meters away from the FOB.</Original>
@@ -326,7 +290,6 @@
 						<Spanish>Imposible construir más lejos de %1 metros de la FOB</Spanish>
 						<Russian>Нельзя построить дальше чем  в %1 метрах от FOB.</Russian>
 						<Italian>Impossibile costruire a più di %1 metri dalla FOB.</Italian>
-						<Turkish>Diğer FOB'den %1 metre uzakta olmalısınız.</Turkish>
 				</Key>
 				<Key ID="STR_FOBBOX">
 						<Original>FOB Container</Original>
@@ -334,7 +297,6 @@
 						<German>FOB Container</German>
 						<Spanish>Contenedor de FOB</Spanish>
 						<Russian>FOB контейнер</Russian>
-						<Turkish>FOB Konternırı</Turkish>
 				</Key>
 				<Key ID="STR_FOBTRUCK">
 						<Original>FOB Truck</Original>
@@ -343,7 +305,6 @@
 						<Spanish>Camión de FOB</Spanish>
 						<Russian>FOB грузовик </Russian>
 						<Italian>Camion FOB</Italian>
-						<Turkish>FOB Kamyoneti</Turkish>
 				</Key>
 				<Key ID="STR_RESPAWN_TRUCK">
 						<Original>Mobile respawn</Original>
@@ -352,7 +313,6 @@
 						<Spanish>Respawn móvil</Spanish>
 						<Russian>Мобильная КШМ</Russian>
 						<Italian>Respawn Mobile</Italian>
-						<Turkish>Respawn Aracı</Turkish>
 				</Key>
 				<Key ID="STR_ARSENAL_BOX">
 						<Original>Arsenal box</Original>
@@ -361,7 +321,6 @@
 						<Spanish>Caja de Arsenal</Spanish>
 						<Russian>Ящик с арсеналом</Russian>
 						<Italian>Cassa Arsenale</Italian>
-						<Turkish>Arsenal Kutusu</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_TITLE">
 						<Original>DEPLOYMENT</Original>
@@ -370,7 +329,6 @@
 						<Spanish>DESPLIEGUE</Spanish>
 						<Russian>ДИСЛОКАЦИЯ</Russian>
 						<Italian>SCHIERAMENTO</Italian>
-						<Turkish>CANLANMA</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_BUTTON">
 						<Original>Deploy</Original>
@@ -379,7 +337,6 @@
 						<Spanish>Desplegar</Spanish>
 						<Russian>РАЗМЕСТИТЬ</Russian>
 						<Italian>Schierati</Italian>
-						<Turkish>Canlan</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_ACTION">
 						<Original>-- REDEPLOY --</Original>
@@ -388,7 +345,6 @@
 						<Spanish>-- REDESPLEGAR --</Spanish>
 						<Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
 						<Italian>-- RISCHIERAMENTO --</Italian>
-						<Turkish>-- YENİDEN SEÇ --</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_CREW">
 						<Original>Build (Crew)</Original>
@@ -397,7 +353,6 @@
 						<Spanish>Construir (Equipo)</Spanish>
 						<Russian>Создать (Экипаж)</Russian>
 						<Italian>Crea Equipaggio</Italian>
-						<Turkish>Ekip Yarat</Turkish>
 				</Key>
 				<Key ID="STR_LIGHT_RIFLE_SQUAD">
 						<Original>Light Rifle Squad</Original>
@@ -406,7 +361,6 @@
 						<Spanish>Escuadra de fusileros ligeros</Spanish>
 						<Russian>Легкий Стрелковый Отряд</Russian>
 						<Italian>Squadra Fucilieri Leggeri</Italian>
-						<Turkish>Hafif Silah Timi</Turkish>
 						</Key>
 				<Key ID="STR_RIFLE_SQUAD">
 						<Original>Heavy Rifle Squad</Original>
@@ -415,7 +369,6 @@
 						<Spanish>Escuadra de fusileros pesados</Spanish>
 						<Russian>Тяжёлый Стрелковый Отряд</Russian>
 						<Italian>Squadra Fucilieri Pesanti</Italian>
-						<Turkish>Ağır Silah Timi</Turkish>
 				</Key>
 				<Key ID="STR_AT_SQUAD">
 						<Original>AT Squad</Original>
@@ -424,7 +377,6 @@
 						<Spanish>Escuadra Antitanque</Spanish>
 						<Russian>Отряд ПТ</Russian>
 						<Italian>Squadra Anticarro</Italian>
-						<Turkish>Anti-Tank Timi</Turkish>
 				</Key>
 				<Key ID="STR_AA_SQUAD">
 						<Original>AA Squad</Original>
@@ -433,7 +385,6 @@
 						<Spanish>Escuadra Antiaérea</Spanish>
 						<Russian>Отряд ПВО</Russian>
 						<Italian>Squadra Antiaerea</Italian>
-						<Turkish>Anti-Hava Timi</Turkish>
 				</Key>
 				<Key ID="STR_RECON_SQUAD">
 						<Original>Recon Squad</Original>
@@ -442,7 +393,6 @@
 						<Spanish>Escuadra de reconocimiento</Spanish>
 						<Russian>Отряд Разведчиков</Russian>
 						<Italian>Squadra Ricognitori</Italian>
-						<Turkish>Gözcü Timi</Turkish>
 				</Key>
 				<Key ID="STR_PARA_SQUAD">
 						<Original>Paratroopers Squad</Original>
@@ -451,7 +401,6 @@
 						<Spanish>Escuadra de paracaidistas</Spanish>
 						<Russian>Отряд Десантников</Russian>
 						<Italian>Squadra Paracadutisti</Italian>
-						<Turkish>Paraşütçü Asker Timi</Turkish>
 				</Key>
 				<Key ID="STR_UNITCAP">
 						<Original>Unit cap</Original>
@@ -460,7 +409,6 @@
 						<Spanish>Límite de unidades</Spanish>
 						<Russian>Мобилизованных</Russian>
 						<Italian>Limite delle Unità</Italian>
-						<Turkish>Ünit Limiti</Turkish>
 				</Key>
 				<Key ID="STR_WIPE_TITLE">
 						<Original>Wipe savegame</Original>
@@ -469,7 +417,6 @@
 						<Spanish>Borrar partida guardada</Spanish>
 						<Russian>Удалить сохранённый прогресс</Russian>
 						<Italian>Elimina Salvataggi</Italian>
-						<Turkish>Kayıtlı oyunu sil</Turkish>
 				</Key>
 				<Key ID="STR_WIPE_TITLE_2">
 						<Original>Confirm : wipe savegame</Original>
@@ -478,7 +425,6 @@
 						<Spanish>Confirmar : Borrar partida guardada</Spanish>
 						<Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
 						<Italian>Confermare : Elimina Salvataggi</Italian>
-						<Turkish>Onayla : Kayıtlı oyunu sil</Turkish>
 				</Key>
 				<Key ID="STR_WIPE_NO">
 						<Original>No</Original>
@@ -487,7 +433,6 @@
 						<Spanish>No</Spanish>
 						<Russian>Нет</Russian>
 						<Italian>No</Italian>
-						<Turkish>Hayır</Turkish>
 				</Key>
 				<Key ID="STR_WIPE_YES">
 						<Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
@@ -496,7 +441,6 @@
 						<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
 						<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
 						<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO !!</Italian>
-						<Turkish>!! KAYITLI OYUN SİLİNECEKTİR, GERİ GETİRELEMEZ !!</Turkish>
 				</Key>
 				<Key ID="STR_UNFLIP">
 						<Original>-- UNFLIP</Original>
@@ -505,7 +449,6 @@
 						<Spanish>-- RECOLOCAR VEHÍCULO</Spanish>
 						<Russian>-- ПЕРЕВЕРНУТЬ</Russian>
 						<Italian>-- RIADDRIZZA</Italian>
-						<Turkish>-- TERS DÖNDÜR</Turkish>
 				</Key>
 				<Key ID="STR_GRID">
 						<Original>-- Grid mode</Original>
@@ -514,7 +457,6 @@
 						<Spanish>-- Modo rejilla</Spanish>
 						<Russian>-- Режим сетки</Russian>
 						<Italian>-- Modalità Griglia</Italian>
-						<Turkish>-- Grid modu</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_CAPTURE">
 						<Original>-- CAPTURE</Original>
@@ -523,7 +465,6 @@
 						<Spanish>-- CAPTURAR</Spanish>
 						<Russian>-- ЗАХВАТИТЬ</Russian>
 						<Italian>-- CATTURA</Italian>
-						<Turkish>-- YAKALA</Turkish>
 				</Key>
 				<Key ID="STR_SQUAD_MEMBER">
 						<Original>Squad member</Original>
@@ -532,7 +473,6 @@
 						<Spanish>Miembro de escuadra</Spanish>
 						<Russian>Член отряда</Russian>
 						<Italian>Membri Squadra</Italian>
-						<Turkish>Tim üyesi</Turkish>
 				</Key>
 				<Key ID="STR_SPAWN_NEAR">
 						<Original>Near</Original>
@@ -541,7 +481,6 @@
 						<Spanish>Cerca</Spanish>
 						<Russian>Рядом</Russian>
 						<Italian>Vicino</Italian>
-						<Turkish>Yakın</Turkish>
 				</Key>
 				<Key ID="STR_RECYCLE">
 						<Original>-- RECYCLE</Original>
@@ -550,7 +489,6 @@
 						<Spanish>-- RECICLAR</Spanish>
 						<Russian>-- УТИЛИЗИРОВАТЬ</Russian>
 						<Italian>-- RICICLA</Italian>
-						<Turkish>-- GERİ DÖNÜŞTÜR</Turkish>
 				</Key>
 				<Key ID="STR_RECYCLING">
 						<Original>Recycling</Original>
@@ -559,7 +497,6 @@
 						<Spanish>Reciclando</Spanish>
 						<Russian>Утилизация</Russian>
 						<Italian>Riciclando</Italian>
-						<Turkish>Geri Dönüştürme</Turkish>
 				</Key>
 				<Key ID="STR_RECYCLING_YIELD">
 						<Original>Recycling this %1 will yield:</Original>
@@ -568,7 +505,6 @@
 						<Spanish>Reciclando este %1 obtienes:</Spanish>
 						<Russian>Утилизируя %1 получим </Russian>
 						<Italian>Riciclando questo %1 otterrai:</Italian>
-						<Turkish>Geri dönüştürme %1 verecektir:</Turkish>
 				</Key>
 				<Key ID="STR_RECYCLING_PROCEED">
 						<Original>Recycle</Original>
@@ -577,7 +513,7 @@
 						<Spanish>Reciclar</Spanish>
 						<Russian>Утилизировать</Russian>
 						<Italian>Riciclato</Italian>
-						<Turkish>Geri Dönüştür</Turkish>
+
 				</Key>
 				<Key ID="STR_RECYCLING_CANCEL">
 						<Original>Cancel</Original>
@@ -586,7 +522,6 @@
 						<Spanish>Cancelar</Spanish>
 						<Russian>Отмена</Russian>
 						<Italian>Annulla</Italian>
-						<Turkish>İptal</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORCAPTURED_TITLE">
 						<Original>SECTOR CAPTURED</Original>
@@ -595,7 +530,6 @@
 						<Spanish>SECTOR CAPTURADO</Spanish>
 						<Russian>ЗОНА ЗАХВАЧЕНА</Russian>
 						<Italian>SETTORE CATTURATO</Italian>
-						<Turkish>SEKTÖR ELE GEÇİRİLDİ</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORCAPTURED_TEXT">
 						<Original>Our forces have captured %1.</Original>
@@ -604,7 +538,6 @@
 						<Spanish>Nuestras fuerzas han capturado %1</Spanish>
 						<Russian>Наши войска захватили %1.</Russian>
 						<Italian>Le nostre unità hanno catturato %1</Italian>
-						<Turkish>Birliklerimiz %1 'i almayı başardı</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORATTACKED_TITLE">
 						<Original>SECTOR ATTACKED</Original>
@@ -613,7 +546,6 @@
 						<Spanish>SECTOR ATACADO</Spanish>
 						<Russian>ЗОНА АТАКОВАНА</Russian>
 						<Italian>SETTORE SOTTO ATTACCO</Italian>
-						<Turkish>SEKTÖR SALDIRI ALTINDA</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORATTACKED_TEXT">
 						<Original>Hostiles forces are attacking %1!</Original>
@@ -622,7 +554,6 @@
 						<Spanish>Fuerzas hostiles están atacando %1</Spanish>
 						<Russian>Вражеские силы атакуют %1!</Russian>
 						<Italian>Forze ostili attaccano %1!</Italian>
-						<Turkish>Düşman birlikleri %1 'e saldırıyor'</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORLOST_TITLE">
 						<Original>SECTOR LOST</Original>
@@ -631,7 +562,6 @@
 						<Spanish>SECTOR PERDIDO</Spanish>
 						<Russian>ЗОНА ПОТЕРЯНА</Russian>
 						<Italian>SETTORE PERSO</Italian>
-						<Turkish>SEKTÖR KAYBEDİLDİ</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORLOST_TEXT">
 						<Original>We have lost control over %1!</Original>
@@ -640,7 +570,6 @@
 						<Spanish>Hemos perdido el control sobre %1!</Spanish>
 						<Russian>Мы потеряли контроль над %1!</Russian>
 						<Italian>Abbiamo perso il controllo di %1!</Italian>
-						<Turkish>%1 'deki hakimiyetimizi kaybettik!'</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORSAFE_TITLE">
 						<Original>SECTOR SAFE</Original>
@@ -649,7 +578,6 @@
 						<Spanish>SECTOR SEGURO</Spanish>
 						<Russian>ЗОНА В БЕЗОПАСНОСТИ</Russian>
 						<Italian>SETTORE AL SICURO</Italian>
-						<Turkish>SEKTÖR GÜVENDE</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECTORSAFE_TEXT">
 						<Original>%1 is no longer under threat.</Original>
@@ -658,7 +586,6 @@
 						<Spanish>%1 ya no está bajo amenaza.</Spanish>
 						<Russian>%1 больше не под угрозой.</Russian>
 						<Italian>%1 non è più sotto attacco.</Italian>
-						<Turkish>%1 tehlike altında değil.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBBUILT_TITLE">
 						<Original>NEW FOB BUILT</Original>
@@ -667,7 +594,6 @@
 						<Spanish>NUEVA FOB CONSTRUIDA</Spanish>
 						<Russian>НОВАЯ FOB ПОСТРОЕНА</Russian>
 						<Italian>NUOVA FOB COSTRUITA</Italian>
-						<Turkish>YENİ FOB KURULDU</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBBUILT_TEXT">
 						<Original>FOB %1 is now operational.</Original>
@@ -676,7 +602,6 @@
 						<Spanish>La FOB %1 es operacional</Spanish>
 						<Russian>FOB %1 сейчас действует.</Russian>
 						<Italian>La FOB %1 è operativa.</Italian>
-						<Turkish>FOB %1 şimdi yürürlükte.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBSAFE_TITLE">
 						<Original>FOB SAFE</Original>
@@ -685,7 +610,6 @@
 						<Spanish>FOB SEGURA</Spanish>
 						<Russian>FOB В БЕЗОПАСНОСТИ</Russian>
 						<Italian>FOB AL SICURO</Italian>
-						<Turkish>FOB GÜVENDE</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBSAFE_TEXT">
 						<Original>FOB %1 is no longer under threat.</Original>
@@ -694,7 +618,6 @@
 						<Spanish>FOB %1 ya no está bajo amenaza</Spanish>
 						<Russian>FOB %1 больше не находится под угрозой.</Russian>
 						<Italian>La FOB %1 non è più in pericolo.</Italian>
-						<Turkish>FOB %1 artık güvende.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBATTACKED_TITLE">
 						<Original>FOB ATTACKED</Original>
@@ -703,7 +626,6 @@
 						<Spanish>FOB ATACADA</Spanish>
 						<Russian>FOB АТАКОВАНА</Russian>
 						<Italian>FOB SOTTO ATTACCO</Italian>
-						<Turkish>FOB SALDIRI ALTINDA</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBATTACKED_TEXT">
 						<Original>FOB %1 is under attack!</Original>
@@ -712,7 +634,6 @@
 						<Spanish>FOB %1 está bajo ataque!</Spanish>
 						<Russian>FOB %1 атакована!</Russian>
 						<Italian>la FOB %1 è sotto attacco!</Italian>
-						<Turkish>FOB %1 Saldırı altında</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBLOST_TITLE">
 						<Original>FOB DESTROYED</Original>
@@ -721,7 +642,6 @@
 						<Spanish>FOB DESTRUIDA</Spanish>
 						<Russian>FOB УНИЧТОЖЕНА</Russian>
 						<Italian>FOB DISTRUTTA</Italian>
-						<Turkish>FOB YOK EDİLDİ</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOBLOST_TEXT">
 						<Original>FOB %1 has been destroyed!</Original>
@@ -730,7 +650,6 @@
 						<Spanish>La FOB %1 ha sido destruida!</Spanish>
 						<Russian>FOB %1 была уничтожена!</Russian>
 						<Italian>La FOB %1 è stata distrutta!</Italian>
-						<Turkish>FOB %1 kaybedildi!</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_BATTLEGROUP_TITLE">
 						<Original>HOSTILE FORCES INCOMING</Original>
@@ -739,7 +658,6 @@
 						<Spanish>FUERZAS HOSTILES ACERCÁNDOSE</Spanish>
 						<Russian>ПОДХОДЯТ ВРАЖЕСКИЕ СИЛЫ</Russian>
 						<Italian>FORZE OSTILI IN ARRIVO</Italian>
-						<Turkish>DÜŞMAN BİRLİKLERİ GELİYOR</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_BATTLEGROUP_TEXT">
 						<Original>Hostile forces spotted near %1.</Original>
@@ -748,7 +666,6 @@
 						<Spanish>Fuerzas hosstiles avistadas cerca de %1</Spanish>
 						<Russian>Вражеские силы замечены рядом с %1.</Russian>
 						<Italian>Forze ostili avvistate vicino %1</Italian>
-						<Turkish>DÜŞMANLAR %1 yakınlarında göründü.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_INTEL_TITLE">
 						<Original>NEW INTELLIGENCE</Original>
@@ -757,7 +674,6 @@
 						<Spanish>NUEVA INTELIGENCIA</Spanish>
 						<Russian>НОВЫЕ РАЗВЕДДАННЫЕ</Russian>
 						<Italian>NUOVO INTEL</Italian>
-						<Turkish>YENİ İSTİHBAHRAT</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_FOB_TEXT">
 						<Original>Hostile FOB near %1.</Original>
@@ -766,7 +682,6 @@
 						<Spanish>FOB hostil cerca de %1</Spanish>
 						<Russian>Вражеская FOB рядом %1.</Russian>
 						<Italian>FOB ostile vicino %1.</Italian>
-						<Turkish>Düşman FOB'si %1 taraflarında.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_PRISONER_TEXT">
 						<Original>We have interrogated a prisoner.</Original>
@@ -775,7 +690,6 @@
 						<Spanish>Hemos interrogado a un prisionero.</Spanish>
 						<Russian>Мы можем допросить пленного.</Russian>
 						<Italian>Abbiamo interrogato il prigioniero.</Italian>
-						<Turkish>Başarıyla bir tutsağı sorguladık.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_DOCUMENT_TEXT">
 						<Original>We have found secret documents.</Original>
@@ -784,7 +698,6 @@
 						<Spanish>Hemos encontrado documentos secretos</Spanish>
 						<Russian>Мы нашли секретные документы.</Russian>
 						<Italian>Abbiamo trovato dei documenti segreti.</Italian>
-						<Turkish>Gizli istihbahrat dosyası bulduk.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECONDARY_TITLE">
 						<Original>SECONDARY OBJECTIVE</Original>
@@ -793,7 +706,6 @@
 						<Spanish>OBJETIVO SECUNDARIO</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА</Russian>
 						<Italian>OBIETTIVI SECONDARI</Italian>
-						<Turkish>İKİNCİ GÖREV</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
 						<Original>Hostile FOB destroyed</Original>
@@ -802,7 +714,6 @@
 						<Spanish>FOB hostil destruída</Spanish>
 						<Russian>Вражеская FOB уничтожена</Russian>
 						<Italian>FOB ostile distrutta.</Italian>
-						<Turkish>Düşman FOB'si yok edildi.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TITLE">
 						<Original>HOSTILE REINFORCEMENTS</Original>
@@ -811,7 +722,6 @@
 						<Spanish>REFUERZOS HOSTILES</Spanish>
 						<Russian>ВРАЖЕСКОЕ ПОДКРЕПЛЕНИЕ</Russian>
 						<Italian>RINFORZI OSTILI</Italian>
-						<Turkish>DÜŞMAN TAKVİYE KUVVETLERİ</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_REINFORCEMENTS_TEXT">
 						<Original>Hostile forces reinforcing %1.</Original>
@@ -820,7 +730,6 @@
 						<Spanish>Fuerzas hostiles reforzando %1</Spanish>
 						<Russian>Вражеские подкрепления подходят в %1.</Russian>
 						<Italian>Forze ostili rinforzano le truppe su %1</Italian>
-						<Turkish>Düşmanlar %1 'e takviye kuvvet yolladılar.'</Turkish>
 				</Key>
 				<Key ID="STR_VICTORY_TITLE">
 						<Original>BLUFOR VICTORY</Original>
@@ -829,7 +738,6 @@
 						<Spanish>VICTORIA DE BLUFOR</Spanish>
 						<Russian>СИНИЕ ПОБЕДИЛИ</Russian>
 						<Italian>VITTORIA PER I BLUFOR</Italian>
-						<Turkish>BLUFOR ZAFERİ</Turkish>
 				</Key>
 				<Key ID="STR_VICTORY_TEXT">
 						<Original>You have liberated the island from the OPFOR oppression.</Original>
@@ -838,7 +746,6 @@
 						<Spanish>Has liberado a Altis de la opresión del OPFOR</Spanish>
 						<Russian>Вы освободили Алтис от оккупации OPFOR.</Russian>
 						<Italian>Siete riusciti a liberare l'isola dall'oppressione degli OPFOR</Italian>
-						<Turkish>Bu adayı OPFOR işgalinden kurtardınız.</Turkish>
 				</Key>
 				<Key ID="STR_STATS_DAY">
 						<Original>days</Original>
@@ -847,7 +754,6 @@
 						<Spanish>días</Spanish>
 						<Russian>дней</Russian>
 						<Italian>Giorni</Italian>
-						<Turkish>günler</Turkish>
 				</Key>
 				<Key ID="STR_STATS_HOURS">
 						<Original>hours</Original>
@@ -856,7 +762,6 @@
 						<Spanish>horas</Spanish>
 						<Russian>часов</Russian>
 						<Italian>Ore</Italian>
-						<Turkish>saatler</Turkish>
 				</Key>
 				<Key ID="STR_STATS_MINUTES">
 						<Original>minutes</Original>
@@ -865,7 +770,6 @@
 						<Spanish>minutos</Spanish>
 						<Russian>минут</Russian>
 						<Italian>Minuti</Italian>
-						<Turkish>dakikalar</Turkish>
 				</Key>
 				<Key ID="STR_STATS_SECONDS">
 						<Original>seconds</Original>
@@ -874,7 +778,6 @@
 						<Spanish>segundos</Spanish>
 						<Russian>секунд</Russian>
 						<Italian>Secondi</Italian>
-						<Turkish>saniyeler</Turkish>
 				</Key>
 				<Key ID="STR_STATS_PLAYTIME">
 						<Original>Playtime:</Original>
@@ -883,7 +786,6 @@
 						<Spanish>Tiempo de juego:</Spanish>
 						<Russian>Игрового времени:</Russian>
 						<Italian>tempo di Gioco:</Italian>
-						<Turkish>Oynama süresi:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_1">
 						<Original>OPFOR infantry killed:</Original>
@@ -892,7 +794,6 @@
 						<Spanish>Infantería OPFOR eliminada:</Spanish>
 						<Russian>OPFOR пехоты убито:</Russian>
 						<Italian>Fanteria OPFOR ha ucciso:</Italian>
-						<Turkish>Öldürülen OPFOR:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_2">
 						<Original>OPFOR infantry killed by players:</Original>
@@ -901,7 +802,6 @@
 						<Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
 						<Russian>OPFOR пехоты убито игроками:</Russian>
 						<Italian>Fanteria OPFOR uccisa da:</Italian>
-						<Turkish>Oyuncular tarafından öldürülen OPFOR sayısı:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_3">
 						<Original>BLUFOR infantry killed:</Original>
@@ -910,7 +810,6 @@
 						<Spanish>Infantería BLUFOR eliminada:</Spanish>
 						<Russian>BLUFOR пехоты убито:</Russian>
 						<Italian>Fanteria BLUFOR ha ucciso:</Italian>
-						<Turkish>BLUFOR kayıpları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_4">
 						<Original>Civilians killed:</Original>
@@ -919,7 +818,6 @@
 						<Spanish>Civiles asesinados:</Spanish>
 						<Russian>Гражданских убито:</Russian>
 						<Italian>Civile ha ucciso:</Italian>
-						<Turkish>Öldürülen siviller:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_5">
 						<Original>Civilians killed by players:</Original>
@@ -928,7 +826,6 @@
 						<Spanish>Civiles asesinados por jugadores:</Spanish>
 						<Russian>Гражданских убито игроками:</Russian>
 						<Italian>Civile ucciso da:</Italian>
-						<Turkish>Öldürülen siviller (oyuncular tarafından):</Turkish>
 				</Key>
 				<Key ID="STR_STATS_6">
 						<Original>BLUFOR friendly fire incidents:</Original>
@@ -937,7 +834,6 @@
 						<Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
 						<Russian>BLUFOR дружественный огонь:</Russian>
 						<Italian>Fuoco amico tra i BLUFOR:</Italian>
-						<Turkish>BLUFOR dost ateşi:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_7">
 						<Original>OPFOR vehicles destroyed:</Original>
@@ -946,7 +842,6 @@
 						<Spanish>Vehículos OPFOR destruídos:</Spanish>
 						<Russian>OPFOR техники уничтожено:</Russian>
 						<Italian>Veicolo OPFOR distrutto:</Italian>
-						<Turkish>OPFOR yokedilen araçları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_8">
 						<Original>OPFOR vehicles destroyed by players:</Original>
@@ -955,7 +850,6 @@
 						<Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
 						<Russian>OPFOR техники уничтожено игроками:</Russian>
 						<Italian>Veicolo OPFOR distrutto da:</Italian>
-						<Turkish>OPFOR yokedilen araçları (oyuncular tarafından):</Turkish>
 				</Key>
 				<Key ID="STR_STATS_9">
 						<Original>BLUFOR vehicles destroyed:</Original>
@@ -964,7 +858,6 @@
 						<Spanish>Vehículos BLUFOR destruídos:</Spanish>
 						<Russian>BLUFOR техники уничтожено:</Russian>
 						<Italian>Veicolo BLUFOR distrutto:</Italian>
-						<Turkish>BLUFOR yokedilen araçları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_10">
 						<Original>BLUFOR vehicles built:</Original>
@@ -973,7 +866,6 @@
 						<Spanish>Vehículos BLUFOR construidos:</Spanish>
 						<Russian>BLUFOR техники построено:</Russian>
 						<Italian>Veicolo BLUFOR creato:</Italian>
-						<Turkish>BLUFOR yaratılan araçları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_11">
 						<Original>Vehicles recycled:</Original>
@@ -982,7 +874,6 @@
 						<Spanish>Vehículos reciclados:</Spanish>
 						<Russian>Техники утилизировано:</Russian>
 						<Italian>Veicolo riciclato:</Italian>
-						<Turkish>Geri dönüşüm olan araçlar:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_12">
 						<Original>Ammunition units spent:</Original>
@@ -991,7 +882,6 @@
 						<Spanish>Unidades de munición gastadas:</Spanish>
 						<Russian>Единиц боеприпасов потрачено:</Russian>
 						<Italian>Punti munizione spesi:</Italian>
-						<Turkish>Mermi mühimmati kullanımı:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_13">
 						<Original>Sectors liberated:</Original>
@@ -1000,7 +890,6 @@
 						<Spanish>Sectores liberados:</Spanish>
 						<Russian>Зон освобождено:</Russian>
 						<Italian>Settore liberato:</Italian>
-						<Turkish>Ele geçirilen sektörler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_14">
 						<Original>Sectors lost:</Original>
@@ -1009,7 +898,6 @@
 						<Spanish>Sectores perdidos:</Spanish>
 						<Russian>Зон потеряно:</Russian>
 						<Italian>Settore perso:</Italian>
-						<Turkish>Kaybedilen sektörler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_15">
 						<Original>FOBs built:</Original>
@@ -1018,7 +906,6 @@
 						<Spanish>FOBs construídas:</Spanish>
 						<Russian>FOB построено:</Russian>
 						<Italian>FOB costruita:</Italian>
-						<Turkish>Kurulan FOB'ler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_16">
 						<Original>FOBs lost:</Original>
@@ -1027,7 +914,6 @@
 						<Spanish>FOB perdidas:</Spanish>
 						<Russian>FOB потеряно:</Russian>
 						<Italian>FOB persa:</Italian>
-						<Turkish>Kaybedilen FOB'ler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_17">
 						<Original>Secondary objectives accomplished:</Original>
@@ -1036,7 +922,6 @@
 						<Spanish>Objetivos secundarios conseguidos:</Spanish>
 						<Russian>Вторичных заданий выполнено:</Russian>
 						<Italian>Obiettivo secondario completato:</Italian>
-						<Turkish>Bitirilen ikinci görevler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_18">
 						<Original>Prisonners captured:</Original>
@@ -1045,7 +930,6 @@
 						<Spanish>Prisioneros capturados:</Spanish>
 						<Russian>Пленных захвачено:</Russian>
 						<Italian>Prigionieri catturati:</Italian>
-						<Turkish>Ele geçirilen esirler:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_19">
 						<Original>Hostile battlegroups called:</Original>
@@ -1054,7 +938,6 @@
 						<Spanish>Grupos hostiles de combate llamados:</Spanish>
 						<Russian>Вражеских боевых групп вызвано:</Russian>
 						<Italian>Battaglione ostile contattato:</Italian>
-						<Turkish>Düşman savaş grupları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_20">
 						<Original>Hostile reinforcements called:</Original>
@@ -1063,7 +946,6 @@
 						<Spanish>Refuerzos hostiles llamados:</Spanish>
 						<Russian>Враждебных подкреплений вызвано:</Russian>
 						<Italian>Chiamati rinforzi ostili:</Italian>
-						<Turkish>Düşman takviye kuvvetleri:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_21">
 						<Original>Total combat readiness raised:</Original>
@@ -1072,7 +954,6 @@
 						<Spanish>Disposición de combate total recaudada:</Spanish>
 						<Russian>Всего войск поднято по тревоге:</Russian>
 						<Italian>Disposizione al combattimento recuperata:</Italian>
-						<Turkish>Hazırda olan asker sayısı:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_22">
 						<Original>IEDs detonated:</Original>
@@ -1081,7 +962,6 @@
 						<Spanish>IEDs detonados:</Spanish>
 						<Russian>Фугасов взорвано:</Russian>
 						<Italian>IED detonato:</Italian>
-						<Turkish>Patlatılan mayınlar:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_23">
 						<Original>Number of Spartan 01 losses:</Original>
@@ -1090,7 +970,6 @@
 						<Spanish>Número de pérdidas de Spartan 01:</Spanish>
 						<Russian>Количество потерянных Spartan 01:</Russian>
 						<Italian>Numero di Spartan 01 persi :</Italian>
-						<Turkish>Spartan 01 kayıpları:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_24">
 						<Original>Player deaths:</Original>
@@ -1099,7 +978,6 @@
 						<Spanish>Muertes del jugador:</Spanish>
 						<Russian>Смертей игрока:</Russian>
 						<Italian>Giocatori Deceduti:</Italian>
-						<Turkish>Ölen oyuncular:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_25">
 						<Original>Rabbits killed:</Original>
@@ -1108,7 +986,6 @@
 						<Spanish>Conejos asesinados:</Spanish>
 						<Russian>Кроликов убито:</Russian>
 						<Italian>Conigli uccisi:</Italian>
-						<Turkish>Öldürülen tavşanlar:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_26">
 						<Original>Many thanks for playing LIBERATION!</Original>
@@ -1116,8 +993,7 @@
 						<German>Vielen Dank fuers spielen von LIBERATION!</German>
 						<Spanish>¡Muchas gracias por jugar LIBERATION!</Spanish>
 						<Russian>Большое спасибо за то что играли в LIBERATION!</Russian>
-						<Italian>Mille Grazie per aver giocato LIBERATION!</Italian>
-						<Turkish>LIBERATION oynadığınız için çok teşekkürler!</Turkish>
+						<Italian>Mille Grazie per aver giocato LIBERATION!:</Italian>
 				</Key>
 				<Key ID="STR_STATS_27">
 						<Original>BLUFOR soldiers recruited:</Original>
@@ -1126,7 +1002,6 @@
 						<Spanish>Soldados BLUFOR reclutados:</Spanish>
 						<Russian>BLUFOR солдат призвано:</Russian>
 						<Italian>Soldato BLUFOR reclutato:</Italian>
-						<Turkish>Çağrılan BLUFOR askerleri:</Turkish>
 				</Key>
 				<Key ID="STR_STATS_28">
 						<Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
@@ -1134,8 +1009,7 @@
 						<German>Wir hoffen du hast es genossen zu spielen, wie wir genossen haben zu entwickeln.</German>
 						<Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
 						<Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
-						<Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione.</Italian>
-						<Turkish>Umarım oynarken eğlenmişsinizdir, biz yaparken eğlendiğimiz kadar.</Turkish>
+						<Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
 				</Key>
 				<Key ID="STR_STATS_29">
 						<Original>(Press ESC to exit)</Original>
@@ -1144,7 +1018,6 @@
 						<Spanish>(Pulsa ESC para salir)</Spanish>
 						<Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
 						<Italian>(Premi ESC per uscire)</Italian>
-						<Turkish>(ESC'ye basıp çıkabilirsiniz.)</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_MISSIONOPTIONS">
 						<Original>== MISSION OPTIONS ==</Original>
@@ -1153,14 +1026,12 @@
 						<Spanish>== OPCIONES DE MISIÓN ==</Spanish>
 						<Russian>== ОПЦИИ МИССИИ ==</Russian>
 						<Italian>== OPZIONI MISSIONE ==</Italian>
-						<Turkish>== BÖLÜM AYARLARI ==</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
 						<Original>== GAMEPLAY OPTIONS ==</Original>
 						<German>== Spieleinstellungen ==</German>
 						<Spanish>== OPCIONES DE JUEGO</Spanish>
 						<Italian>==OPZIONI DI GIOCO ==</Italian>
-						<Turkish>== OYUN AYARLARI ==</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_TECHNICALOPTIONS">
 						<Original>== TECHNICAL OPTIONS ==</Original>
@@ -1169,7 +1040,6 @@
 						<Spanish>== OPCIONES TÉCNICAS ==</Spanish>
 						<Russian>== ТЕХНИЧЕСКИЕ ОПЦИИ ==</Russian>
 						<Italian>==OPZIONI TECNICHE ==</Italian>
-						<Turkish>== TEKNIK AYARLAR ==</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DAYDURATION">
 						<Original>Day duration (hours)</Original>
@@ -1178,7 +1048,6 @@
 						<Spanish>Duración del día (horas)</Spanish>
 						<Russian>Продолжительность дня (часов)</Russian>
 						<Italian>Durata del giorno (In ore)</Italian>
-						<Turkish>Gün uzunluğu (saat)</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY">
 						<Original>Difficulty</Original>
@@ -1187,7 +1056,6 @@
 						<Spanish>Dificultad</Spanish>
 						<Russian>Сложность</Russian>
 						<Italian>Difficoltà:</Italian>
-						<Turkish>Zorluk:</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY1">
 						<Original>Tourist</Original>
@@ -1196,7 +1064,6 @@
 						<Spanish>Turista</Spanish>
 						<Russian>Турист</Russian>
 						<Italian>Turista</Italian>
-						<Turkish>Turist</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY2">
 						<Original>Easy</Original>
@@ -1205,7 +1072,6 @@
 						<Spanish>Fácil</Spanish>
 						<Russian>Легко</Russian>
 						<Italian>Facile</Italian>
-						<Turkish>Kolay</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY3">
 						<Original>Normal</Original>
@@ -1214,7 +1080,6 @@
 						<Spanish>Normal</Spanish>
 						<Russian>Нормально</Russian>
 						<Italian>Normale</Italian>
-						<Turkish>Normal</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY4">
 						<Original>Moderate</Original>
@@ -1223,7 +1088,6 @@
 						<Spanish>Moderado</Spanish>
 						<Russian>Посложнее</Russian>
 						<Italian>Moderato</Italian>
-						<Turkish>Orta</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY5">
 						<Original>Hard</Original>
@@ -1232,7 +1096,6 @@
 						<Spanish>Difícil</Spanish>
 						<Russian>Сложно</Russian>
 						<Italian>Difficile</Italian>
-						<Turkish>Zor</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY6">
 						<Original>Extreme</Original>
@@ -1241,7 +1104,6 @@
 						<Spanish>Extremo</Spanish>
 						<Russian>Экстремально</Russian>
 						<Italian>Estremo</Italian>
-						<Turkish>Extreme</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY7">
 						<Original>Ludicrous</Original>
@@ -1250,7 +1112,6 @@
 						<Spanish>Ridículo</Spanish>
 						<Russian>Весело</Russian>
 						<Italian>Ridicolo</Italian>
-						<Turkish>Çılgınca</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DIFFICULTY8">
 						<Original>Oh god oh god we're all gonna die</Original>
@@ -1259,11 +1120,6 @@
 						<Spanish>Oh dios mío, vamos a morir!</Spanish>
 						<Russian>Боже мой, мы все умрём!</Russian>
 						<Italian>Oh dio, stiamo per morire!</Italian>
-						<Turkish>Aman tanrım yok olacağız!</Turkish>
-				</Key>
-				<Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
-						<Original>Manage AI Skill</Original>
-						<Turkish>AI Yeteneklerii düzenle</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
 						<Original>Resources multiplier</Original>
@@ -1272,7 +1128,6 @@
 						<Spanish>Multiplicador de recursos</Spanish>
 						<Russian>Множитель ресурсов</Russian>
 						<Italian>Moltiplicatore di risorse</Italian>
-						<Turkish>Kaynak Geliri Çarpanı</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_FATIGUE">
 						<Original>Stamina</Original>
@@ -1281,7 +1136,6 @@
 						<Spanish>Estamina</Spanish>
 						<Russian>Усталость</Russian>
 						<Italian>Stamina</Italian>
-						<Turkish>Stamina</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_INTRO">
 						<Original>Introduction</Original>
@@ -1290,7 +1144,6 @@
 						<Spanish>Introducción</Spanish>
 						<Russian>Введение</Russian>
 						<Italian>Introduzione</Italian>
-						<Turkish>Tanıtım</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DEPLOYMENTCAMERA">
 						<Original>Deployment cinematic</Original>
@@ -1299,7 +1152,6 @@
 						<Spanish>Cinemática de comienzo</Spanish>
 						<Russian>Кино во время размещения</Russian>
 						<Italian>Filmato di Schieramento</Italian>
-						<Turkish>Doğma Sinematiği</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_ENABLED">
 						<Original>Enabled</Original>
@@ -1308,7 +1160,6 @@
 						<Spanish>Activado</Spanish>
 						<Russian>Вкл</Russian>
 						<Italian>Attivo</Italian>
-						<Turkish>Aktif</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DISABLED">
 						<Original>Disabled</Original>
@@ -1317,7 +1168,6 @@
 						<Spanish>Desactivado</Spanish>
 						<Russian>Выкл</Russian>
 						<Italian>Disattivato</Italian>
-						<Turkish>Kapalı</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_FIRSTFOB">
 						<Original>Start the campaign with the first FOB already built</Original>
@@ -1326,7 +1176,6 @@
 						<Spanish>Comenzar la campaña con la primera FOB ya construída</Spanish>
 						<Russian>Начать кампанию, когда первая FOB размещена</Russian>
 						<Italian>Comincia la campagna costruendo la prima FOB</Italian>
-						<Turkish>Oyuna ilk FOB kurulu olarak başla</Turkish>
 				</Key>
 				<Key ID="STR_YES">
 						<Original>Yes</Original>
@@ -1335,7 +1184,6 @@
 						<Spanish>Si</Spanish>
 						<Russian>Да</Russian>
 						<Italian>Si</Italian>
-						<Turkish>Evet</Turkish>
 				</Key>
 				<Key ID="STR_NO">
 						<Original>No</Original>
@@ -1344,7 +1192,6 @@
 						<Spanish>No</Spanish>
 						<Russian>Нет</Russian>
 						<Italian>NO</Italian>
-						<Turkish>Hayır</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP">
 						<Original>Maximum amount of AI units</Original>
@@ -1353,7 +1200,6 @@
 						<Spanish>Cantidad máxima de unidades de IA</Spanish>
 						<Russian>Максимальное количество единиц AI</Russian>
 						<Italian>Numero massimo di unità AI</Italian>
-						<Turkish>AI birlik sınırı</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP1">
 						<Original>50% - Recommended for local hosting</Original>
@@ -1362,7 +1208,6 @@
 						<Spanish>50% - Recomendado para host local</Spanish>
 						<Russian>50% - Рекомендуется для локального хостинга</Russian>
 						<Italian>50% - Raccomandato per host locali</Italian>
-						<Turkish>50% - Yerel sunucu için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP2">
 						<Original>75% - Dedicated server recommended</Original>
@@ -1371,7 +1216,6 @@
 						<Spanish>75% - Recomendado para servidor dedicado</Spanish>
 						<Russian>75% - Выделенный сервер рекомендуется</Russian>
 						<Italian>75% - Raccomandato per server dedicati</Italian>
-						<Turkish>75% - Dedicated server için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP3">
 						<Original>100% - Dedicated server recommended</Original>
@@ -1380,7 +1224,6 @@
 						<Spanish>100% - Recomendado para servidor dedicado</Spanish>
 						<Russian>100% - Выделенный сервер рекомендуется</Russian>
 						<Italian>100% - Raccomandato per server dedicati</Italian>
-						<Turkish>100% - Dedicated server için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP4">
 						<Original>125% - Dedicated server with headless client recommended</Original>
@@ -1389,7 +1232,6 @@
 						<Spanish>125% - Recomendado para servidor dedicado con cliente descabezado</Spanish>
 						<Russian>125% - Выделенный сервер вместе с headless client рекомендуется</Russian>
 						<Italian>125% - Raccomandato per server dedicati con headless client</Italian>
-						<Turkish>125% - Headless client'e sahip dedicated server için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP5">
 						<Original>150% - Dedicated server with multiple headless clients recommended</Original>
@@ -1398,7 +1240,6 @@
 						<Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
 						<Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
 						<Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
-						<Turkish>150% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_UNITCAP6">
 						<Original>200% - Dedicated server with multiple headless clients recommended</Original>
@@ -1407,7 +1248,6 @@
 						<Spanish>200% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
 						<Russian>200% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
 						<Italian>200% - Raccomandato per server dedicati con tanti headless client</Italian>
-						<Turkish>200% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS">
 						<Original>Civilian activity</Original>
@@ -1416,7 +1256,6 @@
 						<Spanish>Actividad civil</Spanish>
 						<Russian>Гражданская активность</Russian>
 						<Italian>Attività dei civili</Italian>
-						<Turkish>Sivil aktivitesi</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS1">
 						<Original>None</Original>
@@ -1425,7 +1264,6 @@
 						<Spanish>Ninguna</Spanish>
 						<Russian>Нету</Russian>
 						<Italian>Nessuna</Italian>
-						<Turkish>Hiç</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS2">
 						<Original>Reduced</Original>
@@ -1434,7 +1272,6 @@
 						<Spanish>Reducida</Spanish>
 						<Russian>Снижена</Russian>
 						<Italian>Ridotta</Italian>
-						<Turkish>Düşük</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS3">
 						<Original>Normal</Original>
@@ -1443,7 +1280,6 @@
 						<Spanish>Normal</Spanish>
 						<Russian>Нормальная</Russian>
 						<Italian>Normale</Italian>
-						<Turkish>Normal</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_CIVILIANS4">
 						<Original>Increased</Original>
@@ -1452,7 +1288,6 @@
 						<Spanish>Aumentada</Spanish>
 						<Russian>Увеличенная</Russian>
 						<Italian>Aumentata</Italian>
-						<Turkish>Arttırılmış</Turkish>
 				</Key>
 				<Key ID="STR_FRIENDLY_FIRE">
 						<Original>Warning: friendly fire</Original>
@@ -1461,7 +1296,6 @@
 						<Spanish>Atención: fuego amigo</Spanish>
 						<Russian>Предупреждение: дружественный огонь</Russian>
 						<Italian>Attenzione: fuoco amico</Italian>
-						<Turkish>Dikkat: dost ateşi</Turkish>
 				</Key>
 				<Key ID="STR_PARAM_TEAMKILL_PENALTY">
 						<Original>Teamkill penalty</Original>
@@ -1470,7 +1304,6 @@
 						<Spanish>Penalización por fuego amigo</Spanish>
 						<Russian>Штраф за убийство своего</Russian>
 						<Italian>Penalità se si uccide un compagno di squadra</Italian>
-						<Turkish>Dost ateşi cezası</Turkish>
 				</Key>
 				<Key ID="STR_PARAM_ADAPT_TO_PLAYERCOUNT">
 						<Original>Hostile presence adapts to player count</Original>
@@ -1479,7 +1312,6 @@
 						<Spanish>Adaptar presencia hostil según la cantidad de jugadores</Spanish>
 						<Russian>Вражеские силы адаптируются к количеству игроков</Russian>
 						<Italian>presenza ostile adattata al numero dei giocatori</Italian>
-						<Turkish>Düşman birlikleri oyuncu sayısına göre adapte olur</Turkish>
 				</Key>
 				<Key ID="STR_BUILD1">
 						<Original>Infantry units</Original>
@@ -1488,7 +1320,6 @@
 						<Spanish>Unidades de infantería</Spanish>
 						<Russian>Пехотинцы</Russian>
 						<Italian>Unità di fanteria</Italian>
-						<Turkish>Birlik ünitleri</Turkish>
 				</Key>
 				<Key ID="STR_BUILD2">
 						<Original>Light vehicles</Original>
@@ -1497,7 +1328,6 @@
 						<Spanish>Vehículos ligeros</Spanish>
 						<Russian>Легкая техника</Russian>
 						<Italian>Veicoli Leggeri</Italian>
-						<Turkish>Hafif araçlar</Turkish>
 				</Key>
 				<Key ID="STR_BUILD3">
 						<Original>Armored vehicles</Original>
@@ -1506,7 +1336,6 @@
 						<Spanish>Vehículos blindados</Spanish>
 						<Russian>Бронетехника</Russian>
 						<Italian>Veicoli Blindati</Italian>
-						<Turkish>Zırhlı araçlar</Turkish>
 				</Key>
 				<Key ID="STR_BUILD4">
 						<Original>Air vehicles</Original>
@@ -1515,7 +1344,6 @@
 						<Spanish>Vehículos aéreos</Spanish>
 						<Russian>Авиационная техника</Russian>
 						<Italian>Veicoli Aerei</Italian>
-						<Turkish>Uçak ve helikopterler</Turkish>
 				</Key>
 				<Key ID="STR_BUILD5">
 						<Original>Static defenses</Original>
@@ -1524,7 +1352,6 @@
 						<Spanish>Defensas estáticas</Spanish>
 						<Russian>Стационары</Russian>
 						<Italian>Difese statiche</Italian>
-						<Turkish>Statik savunma aletleri</Turkish>
 				</Key>
 				<Key ID="STR_BUILD6">
 						<Original>Buildings</Original>
@@ -1533,7 +1360,6 @@
 						<Spanish>Edificios</Spanish>
 						<Russian>Постройки</Russian>
 						<Italian>Edifici</Italian>
-						<Turkish>Yapılar</Turkish>
 				</Key>
 				<Key ID="STR_BUILD7">
 						<Original>Logistics</Original>
@@ -1542,7 +1368,6 @@
 						<Spanish>Logística</Spanish>
 						<Russian>Снабжение</Russian>
 						<Italian>Logistica</Italian>
-						<Turkish>Lojistikler</Turkish>
 				</Key>
 				<Key ID="STR_BUILD8">
 						<Original>Infantry squads</Original>
@@ -1551,7 +1376,6 @@
 						<Spanish>Escuadras de infantería</Spanish>
 						<Russian>Пехотные отделения</Russian>
 						<Italian>Squadra Fanteria</Italian>
-						<Turkish>Asker timleri</Turkish>
 				</Key>
 				<Key ID="STR_ACTIVE_SECTORS">
 						<Original>Active Sectors:</Original>
@@ -1560,7 +1384,6 @@
 						<Spanish>Sectores activos:</Spanish>
 						<Russian>Активные Зоны:</Russian>
 						<Italian>Settori Attivi:</Italian>
-						<Turkish>Aktif Sektörler:</Turkish>
 				</Key>
 				<Key ID="STR_OVERLOAD_HINT">
 						<Original>The unitcap setting has been exceeded and further sector activation is temporarily halted. You can now see the list of currently active sectors where you shall concentrate your efforts.</Original>
@@ -1569,7 +1392,6 @@
 						<Spanish>El límite de unidades activas se ha excedido, por lo que la activación de sectores queda temporalmente paralizada. Ahora puedes ver la lista de sectores activos donde concentrar tus esfuerzos</Spanish>
 						<Russian>Превышено ограничение по количеству ботов в настройках миссии и активация зон временно приостановлена. Теперь вы можете увидеть список активных в данный момент зон, где вы должны сконцентрировать свои усилия.</Russian>
 						<Italian>L'impostazione unitcap è stata superata e l'attivazione di ulteriori settori è interrotta temporaneamente. Ora è possibile visualizzare l'elenco dei settori attualmente attivi in ​​cui si devono concentrare i vostri sforzi.</Italian>
-						<Turkish>Unit sınırı aşıldır ve sektör aktivasyonu geçici olarak durduruldu. Şuan da ilgilenmeniz gereken aktif sektörler listesi görüntülenmekte.</Turkish>
 				</Key>
 				<Key ID="STR_VEHICLE_LOCKED">
 						<Original>LOCKED BY</Original>
@@ -1578,7 +1400,6 @@
 						<Spanish>BLOQUEADO POR</Spanish>
 						<Russian>ЗАБЛОКИРОВАНО</Russian>
 						<Italian>BLOCCATO DA</Italian>
-						<Turkish>TARAFINDAN KİLİTLİ</Turkish>
 				</Key>
 				<Key ID="STR_VEHICLE_UNLOCKED">
 						<Original>UNLOCKED BY</Original>
@@ -1587,7 +1408,6 @@
 						<Spanish>DESBLOQUEADO POR</Spanish>
 						<Russian>РАЗБЛОКИРОВАНО</Russian>
 						<Italian>SBLOCCATO DA</Italian>
-						<Turkish>TARAFINDAN KİLİDİ AÇILDI</Turkish>
 				</Key>
 				<Key ID="STR_SQUAD_MANAGEMENT">
 						<Original>SQUAD MANAGEMENT</Original>
@@ -1596,7 +1416,6 @@
 						<Spanish>GESTIÓN DE ESCUADRA</Spanish>
 						<Russian>УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
 						<Italian>GESTIONE SQUADRA</Italian>
-						<Turkish>TİM YÖNETİMİ</Turkish>
 				</Key>
 				<Key ID="STR_SQUAD_MANAGEMENT_ACTION">
 						<Original>-- SQUAD MANAGEMENT</Original>
@@ -1605,7 +1424,6 @@
 						<Spanish>-- GESTIÓN DE ESCUADRA</Spanish>
 						<Russian>-- УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
 						<Italian>-- GESTIONE SQUADRA</Italian>
-						<Turkish>-- TİM YÖNETİMİ</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_ON_MEMBER">
 						<Original>Replace</Original>
@@ -1614,7 +1432,6 @@
 						<Spanish>Reemplazar</Spanish>
 						<Russian>Заменить</Russian>
 						<Italian>Sostituisci</Italian>
-						<Turkish>Değiş</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
 						<Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
@@ -1623,7 +1440,6 @@
 						<Spanish>Reaparecerás en el miembro de la escuadra seleccionado, manteniendo tu equipación actual</Spanish>
 						<Russian>Вы будете развёрнуты на выбранном AI-солдате группы, и замените его, сохранив текущее снаряжение.</Russian>
 						<Italian>Verrai schierato sul membro della squadra selezionata e lo rimpiazzerai mantenendo il loadout corrente.</Italian>
-						<Turkish>Seçilen şahış ile değişeceksin ve üstündeki herşey ona aktarılacak.</Turkish>
 				</Key>
 				<Key ID="STR_REMOVE_MEMBER">
 						<Original>Remove</Original>
@@ -1632,7 +1448,6 @@
 						<Spanish>Suprimir</Spanish>
 						<Russian>Удалить</Russian>
 						<Italian>Rimuovi</Italian>
-						<Turkish>Kaldır</Turkish>
 				</Key>
 				<Key ID="STR_REMOVE_MEMBER_TOOLTIP">
 						<Original>The selected squad member will be deleted.</Original>
@@ -1641,7 +1456,6 @@
 						<Spanish>El miembro de la escuadra seleccionado será eliminado</Spanish>
 						<Russian>Выбранный член группы будет удалён.</Russian>
 						<Italian>Il soldato attualmente selezionato è stato rimosso</Italian>
-						<Turkish>Bu tim üyesi silinecektir.</Turkish>
 				</Key>
 				<Key ID="STR_RESUPPLY">
 						<Original>Resupply</Original>
@@ -1650,7 +1464,6 @@
 						<Spanish>Reabastecer</Spanish>
 						<Russian>Переснарядить</Russian>
 						<Italian>Riapprovvigionamento</Italian>
-						<Turkish>Tazele</Turkish>
 				</Key>
 				<Key ID="STR_RESUPPLY_TOOLTIP">
 						<Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
@@ -1659,7 +1472,6 @@
 						<Spanish>Si el miembro de la escuadra se encuentra cerca de un punto de abastecimiento (spawn móvil o FOB) obtendrá el equipamiento completo nuevo</Spanish>
 						<Russian>Если выбранный член группы находится достаточно близко от точки пополнения запасов (мобильный КШМ или FOB), он будет заменён новым, полностью снаряжённым.</Russian>
 						<Italian>Se il membro di una squadra è nei pressi di una FOB o Respwan Mobile potrà ricaricare il suo loadout.</Italian>
-						<Turkish>Seçilen tim üyesi bir mühimmat tazeleme noktasına yakın ise (mobil respawn veya FOB) üstündeki herşey doldurulup, yenilenecektir.</Turkish>
 				</Key>
 				<Key ID="STR_CONFIRM">
 						<Original>Confirm</Original>
@@ -1668,7 +1480,6 @@
 						<Spanish>Confirmar</Spanish>
 						<Russian>Подтвердить</Russian>
 						<Italian>Conferma</Italian>
-						<Turkish>Onayla</Turkish>
 				</Key>
 				<Key ID="STR_HEALTH">
 						<Original>Health:</Original>
@@ -1677,7 +1488,6 @@
 						<Spanish>Salud:</Spanish>
 						<Russian>Здоровье:</Russian>
 						<Italian>Salute:</Italian>
-						<Turkish>Sağlık:</Turkish>
 				</Key>
 				<Key ID="STR_DISTANCE">
 						<Original>Distance:</Original>
@@ -1686,7 +1496,6 @@
 						<Spanish>Distancia:</Spanish>
 						<Russian>Дистанция:</Russian>
 						<Italian>Distanza:</Italian>
-						<Turkish>Uzaklık:</Turkish>
 				</Key>
 				<Key ID="STR_PRIMARY_WEAPON">
 						<Original>Primary</Original>
@@ -1695,7 +1504,6 @@
 						<Spanish>Principal</Spanish>
 						<Russian>Главный</Russian>
 						<Italian>Primaria</Italian>
-						<Turkish>Birincil</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_WEAPON">
 						<Original>Secondary</Original>
@@ -1704,7 +1512,6 @@
 						<Spanish>Secundaria</Spanish>
 						<Russian>Подчинённый</Russian>
 						<Italian>Secondaria</Italian>
-						<Turkish>İkincil</Turkish>
 				</Key>
 				<Key ID="STR_NONE">
 						<Original>None</Original>
@@ -1713,7 +1520,6 @@
 						<Spanish>Ninguno</Spanish>
 						<Russian>Никто</Russian>
 						<Italian>Nessuno</Italian>
-						<Turkish>Hiçbiri</Turkish>
 				</Key>
 				<Key ID="STR_DRIVER">
 						<Original>Driver</Original>
@@ -1722,7 +1528,6 @@
 						<Spanish>Conductor</Spanish>
 						<Russian>Водитель</Russian>
 						<Italian>Guidatore</Italian>
-						<Turkish>Sürücü</Turkish>
 				</Key>
 				<Key ID="STR_GUNNER">
 						<Original>Gunner</Original>
@@ -1731,7 +1536,6 @@
 						<Spanish>Artillero</Spanish>
 						<Russian>Стрелок</Russian>
 						<Italian>Artigliere</Italian>
-						<Turkish>Silahçı</Turkish>
 				</Key>
 				<Key ID="STR_COMMANDER">
 						<Original>Commander</Original>
@@ -1740,7 +1544,6 @@
 						<Spanish>Comandante</Spanish>
 						<Russian>Командир</Russian>
 						<Italian>Comandante</Italian>
-						<Turkish>Komutan</Turkish>
 				</Key>
 				<Key ID="STR_PASSENGER">
 						<Original>Passenger</Original>
@@ -1749,7 +1552,6 @@
 						<Spanish>Pasajero</Spanish>
 						<Russian>Пассажир</Russian>
 						<Italian>Passeggero</Italian>
-						<Turkish>Yolcu</Turkish>
 				</Key>
 				<Key ID="STR_SQUAD_DEPLOY">
 						<Original>Squad deploy</Original>
@@ -1758,7 +1560,6 @@
 						<Spanish>Despliegue de escuadra</Spanish>
 						<Russian>Мобилизовать отряд</Russian>
 						<Italian>Schieramento Squadra</Italian>
-						<Turkish>Tim çıkar</Turkish>
 				</Key>
 				<Key ID="STR_REMOVE_OK">
 						<Original>You have deleted the selected squad member.</Original>
@@ -1767,7 +1568,6 @@
 						<Spanish>Has eliminado al miebro de la escuadra.</Spanish>
 						<Russian>Вы демобилизовали выбранного члена группы.</Russian>
 						<Italian>Hai eliminato il membro della squadra selezionato.</Italian>
-						<Turkish>Seçilen tim üyesini sildiniz.</Turkish>
 				</Key>
 				<Key ID="STR_RESUPPLY_OK">
 						<Original>The selected squad member has been resupplied.</Original>
@@ -1776,7 +1576,6 @@
 						<Spanish>El miembro seleccionado de la escuadra ha sido reamunicionado</Spanish>
 						<Russian>Выбранный член группы был переснаряжён</Russian>
 						<Italian>Il membro della squadra selezionato è stato rifornito</Italian>
-						<Turkish>Seçilen tim üyesi mühimmatı tazelendi.</Turkish>
 				</Key>
 				<Key ID="STR_RESUPPLY_KO">
 						<Original>The selected squad member isn't close enough from a FOB or mobile spawn.</Original>
@@ -1785,7 +1584,6 @@
 						<Spanish>El miembro seleccionado de la escuadra no está suficientemente cerca de una FOB o spawn móvil.</Spanish>
 						<Russian>Выбранный член группы находится далеко от КШМ и FOB</Russian>
 						<Italian>Il membro della squadra non è sufficentemente vicino alla FOB o Respawn Mobile.</Italian>
-						<Turkish>Seçilen tim üyesi FOB veya mobil spawn noktasına yakın değil.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TITLE">
 						<Original>PERMISSIONS MANAGEMENT</Original>
@@ -1794,7 +1592,6 @@
 						<Spanish>GESTIÓN DE PERMISOS</Spanish>
 						<Russian>УПРАВЛЕНИЕ РАЗРЕШЕНИЯМИ</Russian>
 						<Italian>GESTIONE PERMESSI</Italian>
-						<Turkish>YETKİLERİ YÖNET</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_LIGHT">
 						<Original>Light vehicles</Original>
@@ -1803,7 +1600,6 @@
 						<Spanish>Vehículos ligeros</Spanish>
 						<Russian>Лёгкая техника</Russian>
 						<Italian>Veicoli Leggeri</Italian>
-						<Turkish>Hafif araçlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_ARMORED">
 						<Original>Armored vehicles</Original>
@@ -1812,7 +1608,6 @@
 						<Spanish>Vehículos blindados</Spanish>
 						<Russian>Бронированная техника</Russian>
 						<Italian>veicoli Blindati</Italian>
-						<Turkish>Zırhlı araçlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_AIR">
 						<Original>Air vehicles</Original>
@@ -1821,7 +1616,6 @@
 						<Spanish>Vehículos aéreos</Spanish>
 						<Russian>Авиация</Russian>
 						<Italian>Aerei</Italian>
-						<Turkish>Hava araçları</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_CONSTRUCTION">
 						<Original>Construction</Original>
@@ -1830,7 +1624,6 @@
 						<Spanish>Construcción</Spanish>
 						<Russian>Постройка</Russian>
 						<Italian>Costruzione</Italian>
-						<Turkish>İnşaat</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_RECYCLING">
 						<Original>Recycling</Original>
@@ -1839,7 +1632,6 @@
 						<Spanish>Reciclar</Spanish>
 						<Russian>Утилизация</Russian>
 						<Italian>Riciclaggio</Italian>
-						<Turkish>Geri dönüşüm</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_MISC">
 						<Original>Others</Original>
@@ -1848,7 +1640,6 @@
 						<Spanish>Otros</Spanish>
 						<Russian>Остальное</Russian>
 						<Italian>Altro</Italian>
-						<Turkish>Diğerleri</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_ALL">
 						<Original>All</Original>
@@ -1857,7 +1648,6 @@
 						<Spanish>Todos</Spanish>
 						<Russian>Всё</Russian>
 						<Italian>Tutto</Italian>
-						<Turkish>Hepsi</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_NONE">
 						<Original>None</Original>
@@ -1866,7 +1656,6 @@
 						<Spanish>Ninguno</Spanish>
 						<Russian>Ничего</Russian>
 						<Italian>Nessuno</Italian>
-						<Turkish>Hiçbiri</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_LIGHT">
 						<Original>Allows the player to operate light vehicles as driver and gunner.</Original>
@@ -1875,7 +1664,6 @@
 						<Spanish>Permite al jugador utilizar vehículos ligeros como conductor y artillero</Spanish>
 						<Russian>Позволить игроку быть водителем и стрелком лёгкой техники.</Russian>
 						<Italian>Permetti al giocatore di entrare nei veicoli leggeri come guidatore e artigliere</Italian>
-						<Turkish>Oyuncunun hafif araçları sürücü veya silahçı olarak kullanmasını sağlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_ARMORED">
 						<Original>Allows the player to operate armored vehicles as driver, gunner and commander.</Original>
@@ -1884,7 +1672,6 @@
 						<Spanish>Permite al jugador utilizar vehículos blindados como conductor, artillero y comandante</Spanish>
 						<Russian>Позволить игроку быть командиром, водителем и стрелком бронированной техники.</Russian>
 						<Italian>Permetti al giocatore di entrare nei veicoli blindati come guidatore e artigliere e comandante</Italian>
-						<Turkish>Oyuncunun zırhlı araçları sürücü, komutan veya silahçı olarak kullanmasını sağlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_AIR">
 						<Original>Allows the player to operate air vehicles as driver and gunner.</Original>
@@ -1893,7 +1680,6 @@
 						<Spanish>Permite al jugador utilizar vehículos aéreos como conductor y artillero</Spanish>
 						<Russian>Позволить игроку быть пилотом и стрелком авиации.</Russian>
 						<Italian>Permetti al giocatore di entrare negli aerei come guidatore e artigliere</Italian>
-						<Turkish>Oyuncunun bütün hava araçlarını sürücü veya silahçı olarak kullanmasını sağlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_CONSTRUCTION">
 						<Original>Allows the player to use the BUILD menu.</Original>
@@ -1902,7 +1688,6 @@
 						<Spanish>Permite al jugador utilizar el menú de CONSTRUCCIÓN</Spanish>
 						<Russian>Позволить игроку использовать меню постройки.</Russian>
 						<Italian>Permetti al giocatore di Costruire</Italian>
-						<Turkish>Oyuncunun İNŞA menüsünü kullanmasını sağlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_RECYCLING">
 						<Original>Allows the player to use the RECYCLE action.</Original>
@@ -1911,7 +1696,6 @@
 						<Spanish>Permite al jugador utilizar la acción de RECICLAR</Spanish>
 						<Russian>Позволить игроку утилизировать постройки и технику.</Russian>
 						<Italian>Permetti al giocatore di Riciclare</Italian>
-						<Turkish>Oyuncunun GERİ DÖNÜŞTÜR butonunu kullanmasını sağlar</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_MISC">
 						<Original>Allows the player to use other actions: unflip, ammo box manipulation, prisoners capture, etc.</Original>
@@ -1920,7 +1704,6 @@
 						<Spanish>Permite al jugador usar otras acciones: Recolocar vehículo, manipulación de cajas de munición, captura de prisioneros, etc.</Spanish>
 						<Russian>Позволить игроку остальные действия: перевернуть, манипуляции с ящиками боеприпасов, захват пленных, итп.</Russian>
 						<Italian>Permetti al giocatore di usare le altre funzioni come , catturare prigionieri,raddrizzare veicoli ecc.</Italian>
-						<Turkish>Oyuncunun şunları yapmasını sağlar: ters döndürme, kutuların yönetimi, esir yakalama, vb.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_ALL">
 						<Original>Gives all permissions to the player.</Original>
@@ -1929,7 +1712,6 @@
 						<Spanish>Darle todos los permisos al jugador</Spanish>
 						<Russian>Разрешить всё игроку.</Russian>
 						<Italian>Permetti tutto al giocatore.</Italian>
-						<Turkish>Bütün yetkileri verir.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_TOOLTIP_NONE">
 						<Original>Removes all permissions from the player.</Original>
@@ -1938,7 +1720,6 @@
 						<Spanish>Quitar todos los permisos al jugador</Spanish>
 						<Russian>Запретить всё игроку.</Russian>
 						<Italian>Rimuovi tutti i permessi al giocatore.</Italian>
-						<Turkish>Hiçbir yetkisi olmaz.</Turkish>
 				</Key>
 				<Key ID="STR_COMMANDER_ACTION">
 						<Original>-- PERMISSIONS</Original>
@@ -1947,7 +1728,6 @@
 						<Spanish>-- PERMISOS</Spanish>
 						<Russian>-- РАЗРЕШЕНИЯ</Russian>
 						<Italian>-- PERMESSI</Italian>
-						<Turkish>-- YETKİLER</Turkish>
 				</Key>
 				<Key ID="STR_SAVE_CHANGES">
 						<Original>Save Changes</Original>
@@ -1956,7 +1736,6 @@
 						<Spanish>Guardar cambios</Spanish>
 						<Russian>Сохранить Изменения</Russian>
 						<Italian>Salva Modifiche</Italian>
-						<Turkish>Değişiklikleri kaydet</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSIONS_PARAM">
 						<Original>Permissions Management</Original>
@@ -1965,7 +1744,6 @@
 						<Spanish>Gestión de permisos</Spanish>
 						<Russian>Управление Разрешениями</Russian>
 						<Italian>Permessi Gestione</Italian>
-						<Turkish>Yetkileri Yönet</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_LIGHT">
 						<Original>You don't have permission from the commander to use light vehicles.</Original>
@@ -1974,7 +1752,6 @@
 						<Spanish>No tienes permiso del comandante para usar vehículos ligeros</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать легкую технику.</Russian>
 						<Italian>Non hai il permesso di usare veicoli leggeri</Italian>
-						<Turkish>Hafif araçları kullanmak için yetkiniz yok.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_ARMOR">
 						<Original>You don't have permission from the commander to use armored vehicles.</Original>
@@ -1983,7 +1760,6 @@
 						<Spanish>No tienes permiso del comandante para usar vehículos blindados</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать бронированную технику.</Russian>
 						<Italian>Non hai il permesso di usare veicoli pesanti</Italian>
-						<Turkish>Zırhlı araçları kullanmanız için yetkiniz yok.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSION_NO_AIR">
 						<Original>You don't have permission from the commander to use air vehicles.</Original>
@@ -1992,7 +1768,6 @@
 						<Spanish>No tienes permiso del comandante para usar vehículos aéreos</Spanish>
 						<Russian>У тебя нет разрешения от командира использовать авиацию.</Russian>
 						<Italian>Non hai il permesso di usare veivoli</Italian>
-						<Turkish>Hava araçlarını kullanmanız için yetkiniz yok.</Turkish>
 				</Key>
 				<Key ID="STR_PERMISSION_WARNING">
 						<Original>No permissions have been set. The commander must setup the permissions to allow player actions and vehicle usage. Alternatively, the permission system can be disabled from the mission options.</Original>
@@ -2001,7 +1776,6 @@
 						<Spanish>No hay permisos definidos. El comandante debe asignar los permisos para permitir a los jugadores el uso de los vehículos y acciones. Alternativamente, puede desactivarse el sistema de permisos desde las opciones de misión</Spanish>
 						<Russian>Разрешения не были даны. Командир должен настроить разрешения, чтобы позволить игроку действия и использование техники. Кроме того, система разрешений может быть отключена в настройках миссии.</Russian>
 						<Italian>I permessi non sono settati.Il comandante deve entrare nel menu e attribuire i permessi ai giocatori.</Italian>
-						<Turkish>Yetkiler ayarlanmadı. Komutan oyuncuların yapabilecekleri yetkileri ayarlamalı. Alternatif olarak, yetki sistemi görev ayarlarından kapatılabilir.</Turkish>
 				</Key>
 				<Key ID="STR_ARSENAL_TITLE">
 						<Original>ARSENAL</Original>
@@ -2010,7 +1784,6 @@
 						<Spanish>ARSENAL</Spanish>
 						<Russian>АРСЕНАЛ</Russian>
 						<Italian>ARSENALE</Italian>
-						<Turkish>ARSENAL</Turkish>
 				</Key>
 				<Key ID="STR_EDIT_LOADOUT">
 						<Original>Edit loadout</Original>
@@ -2019,7 +1792,6 @@
 						<Spanish>Modificar equipamiento</Spanish>
 						<Russian>Редактировать</Russian>
 						<Italian>Modifica Equipaggiamneto</Italian>
-						<Turkish>Ekipmanı düzenle</Turkish>
 				</Key>
 				<Key ID="STR_LOAD_LOADOUT">
 						<Original>Take loadout</Original>
@@ -2028,7 +1800,6 @@
 						<Spanish>Coger equipamiento</Spanish>
 						<Russian>Загрузить</Russian>
 						<Italian>Prendi Equipaggiamento</Italian>
-						<Turkish>Ekipman al</Turkish>
 				</Key>
 				<Key ID="STR_DEFAULT">
 						<Original>Default</Original>
@@ -2037,7 +1808,6 @@
 						<Spanish>Por defecto</Spanish>
 						<Russian>Стандартно</Russian>
 						<Italian>Default</Italian>
-						<Turkish>Varsayılan</Turkish>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE">
 						<Original>-- REPACKAGE FOB --</Original>
@@ -2046,7 +1816,6 @@
 						<Spanish>-- EMPAQUETAR FOB --</Spanish>
 						<Russian>-- СВЕРНУТЬ FOB --</Russian>
 						<Italian>-- SMONTA FOB --</Italian>
-						<Turkish>-- FOB YENIDEN PAKETLE --</Turkish>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_TITLE">
 						<Original>REPACKAGE FOB</Original>
@@ -2055,7 +1824,6 @@
 						<Spanish>EMPAQUETAR FOB</Spanish>
 						<Russian>СВЕРНУТЬ FOB</Russian>
 						<Italian>SMONTA FOB</Italian>
-						<Turkish>FOB YENIDEN PAKETLE</Turkish>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_CONFIRM">
 						<Original>Are you sure you want to repackage this FOB?</Original>
@@ -2064,7 +1832,6 @@
 						<Spanish>¿Estas seguro de querer reempaquetar esta FOB?</Spanish>
 						<Russian>Ты уверен что хочешь свернуть эту FOB?</Russian>
 						<Italian>Sei sicuro di voler smontare la FOB?</Italian>
-						<Turkish>Bu FOB'yi yeniden paketlemek istediğinize emin misiniz?</Turkish>
 				</Key>
 				<Key ID="STR_FOB_REPACKAGE_HINT">
 						<Original>FOB repackaged.</Original>
@@ -2073,7 +1840,6 @@
 						<Spanish>FOB reempaquetada</Spanish>
 						<Russian>FOB свёрнута</Russian>
 						<Italian>FOB smontata.</Italian>
-						<Turkish>FOB yeniden paketlendi.</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM">
 						<Original>HALO jump</Original>
@@ -2082,7 +1848,6 @@
 						<Spanish>Salto HALO</Spanish>
 						<Russian>HALO прыжок</Russian>
 						<Italian>PARACADUTARSI</Italian>
-						<Turkish>HALO atlayışı</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM1">
 						<Original>Enabled - No cooldown</Original>
@@ -2091,7 +1856,6 @@
 						<Spanish>Activado - Sin tiempo de espera</Spanish>
 						<Russian>Вкл - без перерыва</Russian>
 						<Italian>Attivato - Senza attesa</Italian>
-						<Turkish>Açık - Süre yok</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM2">
 						<Original>Enabled - 5 minutes cooldown</Original>
@@ -2100,7 +1864,6 @@
 						<Spanish>Activado - 5 minutos de espera</Spanish>
 						<Russian>Вкл - 5 минут перерыв</Russian>
 						<Italian>Attivato - 5 minuti di attesa</Italian>
-						<Turkish>Açık - 5 dakika bekleme süresi</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM3">
 						<Original>Enabled - 10 minutes cooldown</Original>
@@ -2109,7 +1872,6 @@
 						<Spanish>Activado - 10 minutos de espera</Spanish>
 						<Russian>Вкл - 10 минут перерыв</Russian>
 						<Italian>Attivato - 10 minuti di attesa</Italian>
-						<Turkish>Açık - 10 dakika bekleme süresi</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM4">
 						<Original>Enabled - 15 minutes cooldown</Original>
@@ -2118,7 +1880,6 @@
 						<Spanish>Activado - 15 minutos de espera</Spanish>
 						<Russian>Вкл - 15 минут перерыв</Russian>
 						<Italian>Attivato - 15 minuti di attesa</Italian>
-						<Turkish>Açık - 15 dakika bekleme süresi</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM5">
 						<Original>Enabled - 20 minutes cooldown</Original>
@@ -2127,7 +1888,6 @@
 						<Spanish>Activado - 20 minutos de espera</Spanish>
 						<Russian>Вкл - 20 минут перерыв</Russian>
 						<Italian>Attivato - 20 minuti di attesa</Italian>
-						<Turkish>Açık - 20 dakika bekleme süresi</Turkish>
 				</Key>
 				<Key ID="STR_HALO_PARAM6">
 						<Original>Enabled - 30 minutes cooldown</Original>
@@ -2136,7 +1896,6 @@
 						<Spanish>Activado - 30 minutos de espera</Spanish>
 						<Russian>Вкл - 30 минут перерыв</Russian>
 						<Italian>Attivato - 30 minuti di attesa</Italian>
-						<Turkish>Açık - 30 dakika bekleme süresi</Turkish>
 				</Key>
 				<Key ID="STR_HALO_DENIED_COOLDOWN">
 						<Original>Can't perform HALO jump, you are on cooldown for %1 more minute(s).</Original>
@@ -2145,7 +1904,6 @@
 						<Spanish>No puedes saltar en HALO, te quedan %1 minuto(s) de espera.</Spanish>
 						<Russian>HALO прыжок недоступен, подождите %1 минут</Russian>
 						<Italian>Non puoi paracadutarti, hai un attesa di %1 minuti.</Italian>
-						<Turkish>HALO jump yapılamıyor, %1 dakika beklemelisiniz.</Turkish>
 				</Key>
 				<Key ID="STR_HALO_ACTION">
 						<Original>-- HALO JUMP</Original>
@@ -2154,7 +1912,6 @@
 						<Spanish>-- SALTO HALO</Spanish>
 						<Russian>-- HALO прыжок</Russian>
 						<Italian>-- PARACADUTARSI</Italian>
-						<Turkish>-- HALO Atla</Turkish>
 				</Key>
 				<Key ID="STR_HALO_TITLE">
 						<Original>HALO JUMP</Original>
@@ -2163,7 +1920,6 @@
 						<Spanish>SALTO HALO</Spanish>
 						<Russian>HALO ПРЫЖОК</Russian>
 						<Italian>PARACADUTARSI</Italian>
-						<Turkish>HALO ATLAYIŞI</Turkish>
 				</Key>
 				<Key ID="STR_DEPLOY_IN_PROGRESS">
 						<Original>Deployment in progress...</Original>
@@ -2172,7 +1928,6 @@
 						<Spanish>Despliegue en curso...</Spanish>
 						<Russian>В процессе выполнения ...</Russian>
 						<Italian>In attesa del lancio ...</Italian>
-						<Turkish>Atlanılıyor...</Turkish>
 				</Key>
 				<Key ID="STR_WHITELIST_PARAM">
 						<Original>Use the commander whitelist</Original>
@@ -2181,7 +1936,6 @@
 						<Spanish>Utilizar la lista blanca para Comandantes</Spanish>
 						<Russian>Использование "белого" списка командиров</Russian>
 						<Italian>Usa la whitelist del comandante</Italian>
-						<Turkish>Komutanlar için beyaz liste kullan</Turkish>
 				</Key>
 				<Key ID="STR_WHITELIST_ENABLED">
 						<Original>Enabled - Only use if you have modified your whitelist.sqf!</Original>
@@ -2189,7 +1943,6 @@
 						<Spanish>Activado - ¡Sólo utilizar si has modificado tu whitelist.sqf</Spanish>
 						<Russian>Вкл - Использовать только если вы редактировали файл whitelist.sqf!</Russian>
 						<Italian>Attiva - Solo se hai modificato la tua whitelist.sqf!</Italian>
-						<Turkish>Aktif - whitelist.sqf dosyası ayarlanmış olmalı.</Turkish>
 				</Key>
 				<Key ID="STR_BUILD_ENEMIES_NEARBY">
 						<Original>Cannot build: hostile forces nearby.</Original>
@@ -2198,7 +1951,6 @@
 						<Spanish>No se puede construir: fuerzas hostiles cercanas</Spanish>
 						<Russian>Постройка невозможна: враги рядом.</Russian>
 						<Italian>Impossibile costruire: forze ostili nelle vicinanze</Italian>
-						<Turkish>Kurulamaz: Düşmanlar yakında.</Turkish>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM">
 						<Original>Cleanup abandonned vehicles outside FOBs</Original>
@@ -2207,7 +1959,6 @@
 						<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
 						<Russian>Удаление брошенной техники вне FOB.</Russian>
 						<Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
-						<Turkish>FOB dışındaki araçların temizlenmesi</Turkish>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM1">
 						<Original>Enabled - 1 hour delay</Original>
@@ -2216,7 +1967,6 @@
 						<Spanish>Activado- abandonados durante 1 hora</Spanish>
 						<Russian>Вкл - задержка 1 час</Russian>
 						<Italian>Attivato - eliminazione ogni ora</Italian>
-						<Turkish>Açık - 1 saat gecikmeli</Turkish>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM2">
 						<Original>Enabled - 2 hours delay</Original>
@@ -2225,7 +1975,6 @@
 						<Spanish>Activado - abandonados durante 2 horas</Spanish>
 						<Russian>Вкл - задержка 2 часа</Russian>
 						<Italian>Attivato - eliminazione ogni 2 ore</Italian>
-						<Turkish>Açık - 2 saat gecikmeli</Turkish>
 				</Key>
 				<Key ID="STR_CLEANUP_PARAM3">
 						<Original>Enabled - 4 hours delay</Original>
@@ -2234,7 +1983,6 @@
 						<Spanish>Activado - abandonados durante 4 horas</Spanish>
 						<Russian>Вкл - задержка 4 часа</Russian>
 						<Italian>Attivato - eliminazione ogni 4 ore</Italian>
-						<Turkish>Açık - 4 saat gecikmeli</Turkish>
 				</Key>
 				<Key ID="STR_SORRY">
 						<Original>Sorry!</Original>
@@ -2243,7 +1991,6 @@
 						<Spanish>Lo siento!</Spanish>
 						<Russian>Извини!</Russian>
 						<Italian>Scusa!</Italian>
-						<Turkish>Özür dilerim!</Turkish>
 				</Key>
 				<Key ID="STR_COMMANDER_NOT_AUTHORIZED">
 						<Original>You are not authorized to use the commander slot on this server.</Original>
@@ -2252,7 +1999,6 @@
 						<Spanish>No estás autorizado para usar el slot de comandante en este servidor.</Spanish>
 						<Russian>Вы не авторизованы, чтобы использовать слот коммандира на этом сервере.</Russian>
 						<Italian>Non sei autorizzato ad usare lo slot comandante in questo server.</Italian>
-						<Turkish>Komutan slotunu kullanmak için seçilmemişsiniz.</Turkish>
 				</Key>
 				<Key ID="STR_MAKE_RESPAWN_LOADOUT">
 						<Original>Save respawn loadout</Original>
@@ -2261,7 +2007,6 @@
 						<Spanish>Guardar el equipamiento para respawn</Spanish>
 						<Russian>Всегда загружать</Russian>
 						<Italian>Salva Equipaggiamento </Italian>
-						<Turkish>Respawn ekipmanını kaydet.</Turkish>
 				</Key>
 				<Key ID="STR_MAKE_RESPAWN_LOADOUT_HINT">
 						<Original>Your current loadout will be restored on every respawn.</Original>
@@ -2270,7 +2015,6 @@
 						<Spanish>Tu actual equipamiento seá mantenido en cada respawn.</Spanish>
 						<Russian>Ваше текущее снаряжение будет загружаться после каждого возраждения</Russian>
 						<Italian>Il tuo equipaggiamneto sarà ricaricato ad ogni respawn</Italian>
-						<Turkish>Şuanki ekipmanınız her doğduğunuzda yeniden verilecek.</Turkish>
 				</Key>
 				<Key ID="STR_LOAD_PLAYER_LOADOUT">
 						<Original>Load from player</Original>
@@ -2279,7 +2023,6 @@
 						<Spanish>Cargar desde jugador</Spanish>
 						<Russian>Из игрока</Russian>
 						<Italian>Carica da giocatore</Italian>
-						<Turkish>Diğer oyuncudan al</Turkish>
 				</Key>
 				<Key ID="STR_LOAD_PLAYER_LOADOUT_HINT">
 						<Original>Successful loadout transfer from %1.</Original>
@@ -2288,7 +2031,6 @@
 						<Spanish>Transferencia de equipamiento de %1 terminada.</Spanish>
 						<Russian>Успешная загрузка снаряжения игрока %1</Russian>
 						<Italian>Equipaggiamento traferito correttamente da %1</Italian>
-						<Turkish>%1 den ekipman alındı.</Turkish>
 				</Key>
 				<Key ID="STR_LOADOUT">
 						<Original>Loadout:</Original>
@@ -2297,7 +2039,6 @@
 						<Spanish>Equipamiento:</Spanish>
 						<Russian>Снаряжение:</Russian>
 						<Italian>Equipaggiamento:</Italian>
-						<Turkish>Ekipman:</Turkish>
 				</Key>
 				<Key ID="STR_SPAWN_POINT">
 						<Original>Deployment location:</Original>
@@ -2306,7 +2047,6 @@
 						<Spanish>Lugar para el despliegue:</Spanish>
 						<Russian>Позиция размешения:</Russian>
 						<Italian>Luogo di Schieramento:</Italian>
-						<Turkish>Doğma noktası:</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM">
 						<Original>OPFOR aggressivity</Original>
@@ -2315,7 +2055,6 @@
 						<Spanish>Agresividad del OPFOR</Spanish>
 						<Russian>Уровень обеспокоенности OPFOR</Russian>
 						<Italian>Aggressività OPFOR</Italian>
-						<Turkish>OPFOR agresifliği</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM0">
 						<Original>Anemic</Original>
@@ -2324,7 +2063,6 @@
 						<Spanish>Anémica</Spanish>
 						<Russian>Вяло</Russian>
 						<Italian>Anemico</Italian>
-						<Turkish>Pasif</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM1">
 						<Original>Weak</Original>
@@ -2333,7 +2071,6 @@
 						<Spanish>Floja</Spanish>
 						<Russian>Слабо</Russian>
 						<Italian>Debole</Italian>
-						<Turkish>Zayıf</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM2">
 						<Original>Normal</Original>
@@ -2342,7 +2079,6 @@
 						<Spanish>Normal</Spanish>
 						<Russian>Нормально</Russian>
 						<Italian>Normale</Italian>
-						<Turkish>Normal</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM3">
 						<Original>Strong</Original>
@@ -2351,7 +2087,6 @@
 						<Spanish>Fuerte</Spanish>
 						<Russian>Сильно</Russian>
 						<Italian>Forte</Italian>
-						<Turkish>Güçlü</Turkish>
 				</Key>
 				<Key ID="STR_AGGRESSIVITY_PARAM4">
 						<Original>Extreme</Original>
@@ -2360,7 +2095,6 @@
 						<Spanish>Extrema</Spanish>
 						<Russian>Очень сильно</Russian>
 						<Italian>Estremo</Italian>
-						<Turkish>Extreme</Turkish>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM">
 						<Original>Weather</Original>
@@ -2369,7 +2103,6 @@
 						<Spanish>Clima</Spanish>
 						<Russian>Погода</Russian>
 						<Italian>Meteo</Italian>
-						<Turkish>Hava</Turkish>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM1">
 						<Original>Always sunny</Original>
@@ -2378,7 +2111,6 @@
 						<Spanish>Siempre soleado</Spanish>
 						<Russian>Всегда солнечно</Russian>
 						<Italian>Semopre Soleggiato</Italian>
-						<Turkish>Hep güneşli</Turkish>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM2">
 						<Original>Random without rain</Original>
@@ -2387,7 +2119,6 @@
 						<Spanish>Aleatorio sin lluvia</Spanish>
 						<Russian>Случайно, без дождя</Russian>
 						<Italian>Casuale senza pioggia</Italian>
-						<Turkish>Rasgele ama yağmursuz</Turkish>
 				</Key>
 				<Key ID="STR_WEATHER_PARAM3">
 						<Original>Random</Original>
@@ -2396,7 +2127,6 @@
 						<Spanish>Aleatorio</Spanish>
 						<Russian>Случайно</Russian>
 						<Italian>Casuale</Italian>
-						<Turkish>Rasgele</Turkish>
 				</Key>
 				<Key ID="STR_SHORTER_NIGHTS_PARAM">
 						<Original>Shorter nights</Original>
@@ -2405,7 +2135,6 @@
 						<Spanish>Noches más cortas</Spanish>
 						<Russian>Короткие ночи</Russian>
 						<Italian>Notte Breve</Italian>
-						<Turkish>Kısa geceler</Turkish>
 				</Key>
 				<Key ID="STR_REPAIRING">
 						<Original>Repairing</Original>
@@ -2414,7 +2143,6 @@
 						<Spanish>Reparando</Spanish>
 						<Russian>Ремонт</Russian>
 						<Italian>Riparazione</Italian>
-						<Turkish>Tamir</Turkish>
 				</Key>
 				<Key ID="STR_REARMING">
 						<Original>Rearming in %1s</Original>
@@ -2423,7 +2151,6 @@
 						<Spanish>Rearmando en %1s</Spanish>
 						<Russian>Перезарядка за %1с</Russian>
 						<Italian>Riarmamento 1%</Italian>
-						<Turkish>%1 saniye içinde yeniden dolduruluyor</Turkish>
 				</Key>
 				<Key ID="STR_REFUELING">
 						<Original>Refueling</Original>
@@ -2432,7 +2159,6 @@
 						<Spanish>Repostando</Spanish>
 						<Russian>Заправка</Russian>
 						<Italian>Rifornimento</Italian>
-						<Turkish>Yakıt koyuluyor</Turkish>
 				</Key>
 				<Key ID="STR_INTEL">
 						<Original>-- TAKE INTEL</Original>
@@ -2441,7 +2167,6 @@
 						<Spanish>-- COGER INTELIGENCIA</Spanish>
 						<Russian>-- ПОЛУЧИТЬ РАЗВЕДДАННЫЕ</Russian>
 						<Italian>-- PREDI INTEL</Italian>
-						<Turkish>-- İSTİHBAHRAT AL</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES">
 						<Original>-- SECONDARY OBJECTIVES</Original>
@@ -2450,7 +2175,6 @@
 						<Spanish>-- OBJETIVOS SECUNDARIOS</Spanish>
 						<Russian>-- ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
 						<Italian>-- OBIETTIVI SECONDARI</Italian>
-						<Turkish>-- İKİNCİ GÖREVLER</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES_TITLE">
 						<Original>SECONDARY OBJECTIVES</Original>
@@ -2459,7 +2183,6 @@
 						<Spanish>OBJETIVOS SECUNDARIOS</Spanish>
 						<Russian>ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
 						<Italian>OBIETTIVI SECONDARI</Italian>
-						<Turkish>İKİNCİ GÖREVLER</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_OBJECTIVES_START">
 						<Original>Start</Original>
@@ -2468,7 +2191,6 @@
 						<Spanish>Empezar</Spanish>
 						<Russian>Старт</Russian>
 						<Italian>Inizia</Italian>
-						<Turkish>Başla</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_INTEL">
 						<Original>Current intel: %1</Original>
@@ -2477,7 +2199,6 @@
 						<Spanish>Inteligencia actual: %1</Spanish>
 						<Russian>Разведданные: %1</Russian>
 						<Italian>Intel Attuale: %1</Italian>
-						<Turkish>Şuanki istihbahrat: %1</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_NOT_ENOUGH_INTEL">
 						<Original>Insufficient intel points</Original>
@@ -2486,7 +2207,6 @@
 						<Spanish>Puntos de inteligencia insuficientes</Spanish>
 						<Russian>Недостаточно информации</Russian>
 						<Italian>Punti intel insufficenti</Italian>
-						<Turkish>Yetersiz istihbahrat</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_IN_PROGRESS">
 						<Original>Secondary mission already in progress</Original>
@@ -2495,7 +2215,6 @@
 						<Spanish>Misión secundaria ya en curso</Spanish>
 						<Russian>Дополнительная задача уже есть</Russian>
 						<Italian>Missione secondaria attualmente in progresso</Italian>
-						<Turkish>Başka bir görev zaten çalışıyor.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_INCOMING_TEXT">
 						<Original>Hostile forces are heading towards %1.</Original>
@@ -2504,7 +2223,6 @@
 						<Spanish>Fuerzas hostiles acercándose a %1.</Spanish>
 						<Russian>Замечена вражеская группа рядом с %1</Russian>
 						<Italian>Forze ostili sono in avvicinamento su %1.</Italian>
-						<Turkish>Düşmanlar %1 'e gidiyor.'</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_CSAT_CONVOY">
 						<Original>OPFOR Convoy</Original>
@@ -2513,7 +2231,6 @@
 						<Spanish>Convoy OPFOR</Spanish>
 						<Russian>Конвой OPFOR</Russian>
 						<Italian>Convoglio OPFOR</Italian>
-						<Turkish>OPFOR Konvoyu</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_CSAT_CONVOY_WP">
 						<Original>Waypoint</Original>
@@ -2522,7 +2239,6 @@
 						<Spanish>Punto de ruta</Spanish>
 						<Russian>Путевая точка</Russian>
 						<Italian>Punto di Passaggio</Italian>
-						<Turkish>Varış noktası</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_CONVOY_DESTROYED_TEXT">
 						<Original>OPFOR Convoy neutralized.</Original>
@@ -2531,7 +2247,6 @@
 						<Spanish>Convoy OPFOR neutralizado</Spanish>
 						<Russian>Конвой OPFOR нейтрализован.</Russian>
 						<Italian>Convoglio OPFOR neutralizzato.</Italian>
-						<Turkish>OPFOR Konvoyu etkisizleştirildi.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_CONVOY_SPOTTED_TEXT">
 						<Original>OPFOR Convoy near %1.</Original>
@@ -2540,7 +2255,6 @@
 						<Spanish>Convoy OPFOR cerca de 1%</Spanish>
 						<Russian>Конвой OPFOR рядом с %1.</Russian>
 						<Italian>Convoglio OPFOR vicino %1.</Italian>
-						<Turkish>OPFOR Konvoyu %1 tarafında.</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_GOTIT">
 						<Original>Got it!</Original>
@@ -2549,7 +2263,6 @@
 						<Spanish>Lo tengo!</Spanish>
 						<Russian>Вас понял!</Russian>
 						<Italian>Ricevuto!</Italian>
-						<Turkish>Anlaşıldı!</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_ACTION">
 						<Original>-- TUTORIAL</Original>
@@ -2557,7 +2270,6 @@
 						<German>-- TUTORIAL</German>
 						<Spanish>-- TUTORIAL</Spanish>
 						<Russian>-- РУКОВОДСТВО</Russian>
-						<Turkish>-- EĞİTİM</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TITLE">
 						<Original>TUTORIAL</Original>
@@ -2565,7 +2277,6 @@
 						<German>TUTORIAL</German>
 						<Spanish>TUTORIAL</Spanish>
 						<Russian>РУКОВОДСТВО</Russian>
-						<Turkish>EĞİTİM</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION0">
 						<Original>FOB Hunting</Original>
@@ -2574,7 +2285,6 @@
 						<Spanish>Caza de FOB</Spanish>
 						<Russian>Охота за вражескими FOB</Russian>
 						<Italian>Caccia alla FOB</Italian>
-						<Turkish>FOB Avı</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING0">
 						<Original>
@@ -2663,21 +2373,6 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
 					</Italian>
-					<Turkish>
-					&lt;t size='1.3' color='#ffa000'&gt;FOB AVI&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					OPFOR kuvvetleri küçük çaplı bir işlemler yönetiyor. Bunları yoketmek onlara zarar verirken bir yandanda bizim yararımıza olacak.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					Sizin göreviniz oradaki varlıkları ve eşyaları yoketmek olacak(kamyonet ve mühimmatlar). Malesef istihbaharatımız tam bölge yerini verememekte. Yakın alanlara gidip kendiniz bulmalısınız.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1.15' color='#00a0ff'&gt;Maliyet: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
-					&lt;br/&gt;
-					&lt;t size='1.15' color='#ffa000'&gt;Ödül: OPFOR uyarı seviyesi %40 a düşecek.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
-				</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION1">
 						<Original>Convoy Hijack</Original>
@@ -2686,7 +2381,6 @@
 						<Spanish>Interceptar el Convoy</Spanish>
 						<Russian>Налёт на конвой врага</Russian>
 						<Italian>Intercetta il Convoglio</Italian>
-						<Turkish>Konvoy baskını</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING1">
 						<Original>
@@ -2790,23 +2484,6 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
 					</Italian>
-					<Turkish>
-					&lt;t size='1.3' color='#ffa000'&gt;CONVOY BASKINI&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					OPFOR kuvvetleri kendi bölgelerine konvoy ile mühimmat desteği yapıyor. Sizin göreviniz bu konvoyu durdurup kurtarabildiğiniz mühimmatı kendinize almaktır.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					Göreviniz bu konvoyu ne pahasına olursa olsun durdurmak. Patlatmadığınız mühimmatı kendi bölgenize taşıyabilirsiniz. Konvoy haritada işaretlenecektir.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1.15' color='#00a0ff'&gt;Maliyeti: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
-					&lt;br/&gt;
-					&lt;t size='1.15' color='#ffa000'&gt;Ödül: OPFOR uyarı seviyesi %15 kadar düşecektir.&lt;/t&gt;
-					&lt;br/&gt;
-					&lt;t size='1.15' color='#ffa000'&gt;Yan ödül: Kurtardığınız mühimmatlar.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-				</Turkish>
 				</Key>
 
 				<!-- Added in v0.922 -->
@@ -2817,7 +2494,6 @@
 						<Spanish>Defensores BLUFOR en los sectores controlados</Spanish>
 						<Russian>BLUFOR защитники в захваченных зонах</Russian>
 						<Italian>Trupppe BLUFOR nei settori controllati</Italian>
-						<Turkish>Sektörlerdeki BLUFOR savunmacıları</Turkish>
 				</Key>
 				<Key ID="STR_PARAM_AUTODANGER">
 						<Original>Auto-danger behaviour on BLUFOR forces</Original>
@@ -2826,7 +2502,6 @@
 						<Spanish>Comportamiento de Auto-Alerta en las fuerzas BLUFOR</Spanish>
 						<Russian>Авто-опасность для сил BLUFOR</Russian>
 						<Italian>Comportamento Auto-Allerta per forze BLUFOR</Italian>
-						<Turkish>BLUFOR için Oto-tehlike davranışı</Turkish>
 				</Key>
 				<Key ID="STR_PARAM_FOBS_COUNT">
 						<Original>Maximum number of FOBs allowed</Original>
@@ -2835,7 +2510,6 @@
 						<Russian>Максимальное количество FOB</Russian>
 						<Spanish>Número máximo de FOBs permitidas</Spanish>
 						<Italian>Numero massimo di FOB consentite</Italian>
-						<Turkish>Maksimum FOB sayısı</Turkish>
 				</Key>
 				<Key ID="STR_HINT_FOBS_EXCEEDED">
 						<Original>You are not allowed to deploy more than %1 FOBs at the same time.</Original>
@@ -2844,7 +2518,6 @@
 						<Spanish>No se permite desplegar más de %1 FOBs al mismo tiempo</Spanish>
 						<Russian>Вам не разрешено развертывать более %1 FOB одновременно.</Russian>
 						<Italian>Non sei autorizzato a costruire piè di %1 FOB allo stesso tempo</Italian>
-						<Turkish>Buraya %1 den fazla FOB koyamazsınız.</Turkish>
 				</Key>
 				<Key ID="STR_HINT_LOADOUT_LOADED">
 						<Original>%1 loadout successfully loaded.</Original>
@@ -2853,7 +2526,6 @@
 						<Spanish>Equipamiento %1 cargado correctamente</Spanish>
 						<Russian>Снаряжение %1 успешно загружено.</Russian>
 						<Italian>%1 equipaggiamento correttamente caricato</Italian>
-						<Turkish>%1 ekipmanı başarıyla alındı.</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_MISSION2">
 						<Original>Search and Rescue</Original>
@@ -2862,7 +2534,6 @@
 						<Spanish>Búsqueda y rescate</Spanish>
 						<Russian>Поиск и спасение</Russian>
 						<Italian>Cerca e Soccorri</Italian>
-						<Turkish>Ara ve kurtar</Turkish>
 				</Key>
 				<Key ID="STR_SECONDARY_BRIEFING2">
 						<Original>
@@ -2955,21 +2626,6 @@
 						&lt;br/&gt;&lt;br/&gt;
 						&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
 					</Italian>
-					<Turkish>
-					&lt;t size='1.3' color='#ffa000'&gt;ARA VE KURTAR&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					Dost bir keşif helikopterini düşman sahasında kaybettik. Helikopterin düşman kuvvetleri tarafından vurulduğuna inanıyoruz.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1'&gt;
-					Helikopter son görülen yerde düştüğünü biliyoruz. Göreviniz helikopter personelini bulup ve taşıdığı önemli istihbahratı getirmenizdir. Düşman kuvvetler onu önceden bulabilirler dikkatli olun ve saldırıya açık olun.&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
-					&lt;br/&gt;
-					&lt;t size='1.15' color='#ffa000'&gt;Ödül: 20 istihbahrat puanı (Her yaşayan kişi için 10).&lt;/t&gt;
-					&lt;br/&gt;&lt;br/&gt;
-					&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
-				</Turkish>
 				</Key>
 
 				<!-- Added in v0.924 -->
@@ -2980,7 +2636,6 @@
 						<Spanish>Límite de reclutamiento IA por escuadra</Spanish>
 						<Russian>Ограничение найма ИИ в отряд</Russian>
 						<Italian>Limite di reclutamento AI per squadra</Italian>
-						<Turkish>Tim içindeki maksimum AI limiti</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_STARTED">
 						<Original>Crashed helicopter near %1.</Original>
@@ -2989,7 +2644,6 @@
 						<Spanish>Helicóptero derribado cerca de %1</Spanish>
 						<Russian>Разбился вертолет рядом %1.</Russian>
 						<Italian>L'elicottero si è schiantato  nei pressi di %1.</Italian>
-						<Turkish>Düşmüş helikopter %1 yakınlarında.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_FAILED">
 						<Original>SAR mission failed, both crew are KIA.</Original>
@@ -2998,7 +2652,6 @@
 						<Spanish>Misión de Búsqueda y Rescate fallida, ambos tripulantes están muertos</Spanish>
 						<Russian>Миссия спасение не удалась, экипаж погиб.</Russian>
 						<Italian>Missione Cerca e Soccorri FALLITA,l'equipaggio è stato ucciso</Italian>
-						<Turkish>Arama kurtarma görevi başarısız. Ekip çatışmada öldü.</Turkish>
 				</Key>
 				<Key ID="STR_NOTIFICATION_SAR_SUCCESS">
 						<Original>SAR mission succeeded.</Original>
@@ -3007,7 +2660,6 @@
 						<Spanish>Misión de Búsqueda y Rescate completada satisfactoriamente</Spanish>
 						<Russian>Миссия спасения выполнена</Russian>
 						<Italian>Missione Cerca e Soccorri completata con successo</Italian>
-						<Turkish>Arama kurtarma başarılı.</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_MAPMARKERS">
 						<Original>Player mapmarkers activation through extended options</Original>
@@ -3015,7 +2667,6 @@
 						<Spanish>Activación de marcas de mapa de jugador a través de opciones extendidas</Spanish>
 						<Russian>Активация картмаркеров игроков с помощью расширенных опций</Russian>
 						<Italian>i mapmarker si attivano dal menu opzioni avanzate</Italian>
-						<Turkish>Oyuncu harita işaretleri diğer ayarlardan açılabilir</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILERESPAWN">
 						<Original>Mobile respawn</Original>
@@ -3023,7 +2674,6 @@
 						<Spanish>Respawn Móvil</Spanish>
 						<Russian>Мобильный респаун</Russian>
 						<Italian>Respawn Mobile</Italian>
-						<Turkish>Mobil respawn</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_MOBILEARSENAL">
 						<Original>Mobile arsenal</Original>
@@ -3031,7 +2681,6 @@
 						<Spanish>Arsenal Móvil</Spanish>
 						<Russian>Мобильный арсенал</Russian>
 						<Italian>Arsenale Mobile</Italian>
-						<Turkish>Mobil ekipman</Turkish>
 				</Key>
 
 				<!-- Added or changed in v0.95 -->
@@ -3041,7 +2690,6 @@
 						<Spanish>Bandera de Killah Potatoes</Spanish>
 						<Russian>КР флаг</Russian>
 						<Italian>Bandiera dei Killah Potatoes</Italian>
-						<Turkish>Killah Potatoes bayrağı</Turkish>
 				</Key>
 				<Key ID="STR_SMALL_STORAGE">
 						<Original>Small storage area</Original>
@@ -3049,7 +2697,6 @@
 						<Spanish>Almacén pequeño</Spanish>
 						<Russian>Небольшая платформа склада</Russian>
 						<Italian>Area deposito piccola</Italian>
-						<Turkish>Küçük depo</Turkish>
 				</Key>
 				<Key ID="STR_LARGE_STORAGE">
 						<Original>Large storage area</Original>
@@ -3057,14 +2704,12 @@
 						<Spanish>Almacén grande</Spanish>
 						<Russian>Большая платформа склада</Russian>
 						<Italian>Area deposito grande</Italian>
-						<Turkish>Büyük depo</Turkish>
 				</Key>
 				<Key ID="STR_RECYCLE_BUILDING">
 						<Original>Salvage Depot</Original>
 						<German>Demontageeinrichtung</German>
 						<Russian>Собрать склад</Russian>
 						<Italian>Edificio smaltimento rifiuti</Italian>
-						<Turkish>Dönüşüm deposu</Turkish>
 				</Key>
 				<Key ID="STR_HELI_BUILDING">
 						<Original>Flight Control</Original>
@@ -3072,7 +2717,6 @@
 						<Spanish>Torre de Control Aéreo</Spanish>
 						<Russian>Управление полетом</Russian>
 						<Italian>Torre di controllo Aerea</Italian>
-						<Turkish>Uçuş Kontrol</Turkish>
 				</Key>
 				<Key ID="STR_HELI_SLOT">
 						<Original>Helipad</Original>
@@ -3080,7 +2724,6 @@
 						<Spanish>Helipuerto</Spanish>
 						<Russian>Верт.площадка</Russian>
 						<Italian>Eliporto</Italian>
-						<Turkish>Heliped</Turkish>
 				</Key>
 				<Key ID="STR_PLANE_SLOT">
 						<Original>Tent Hangar</Original>
@@ -3088,7 +2731,6 @@
 						<Spanish>Hangar de aviones</Spanish>
 						<Russian>Ангар</Russian>
 						<Italian>Hangar Aereo</Italian>
-						<Turkish>Çadırdan hangar</Turkish>
 				</Key>
 				<Key ID="STR_BOX_CANTSTORE">
 						<Original>There is no free storage area nearby.</Original>
@@ -3096,7 +2738,6 @@
 						<Spanish>No hay sitio de almacenamiento cercano</Spanish>
 						<Russian>Рядом с вами нет свободного места</Russian>
 						<Italian>Non c'è un area deposito nelle vicinanze</Italian>
-						<Turkish>Yakınlarda boş depo yok</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_STORE_CRATE">
 						<Original>-- STORE CRATE</Original>
@@ -3104,7 +2745,6 @@
 						<Spanish>-- CAJA DE ALMACENAJE</Spanish>
 						<Russian>-- ХРАНЕНИЕ МАГАЗИНА</Russian>
 						<Italian>-- CREA CONTENITORE</Italian>
-						<Turkish>-- KUTUYU DEPOLA</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 						<Original>-- UNLOAD SUPPLY CRATE</Original>
@@ -3112,7 +2752,6 @@
 						<Spanish>-- DESCARGA CAJA DE SUMINISTRO</Spanish>
 						<Russian>-- ЗАГРУЗИТЬ СРОК ПОСТАВКИ</Russian>
 						<Italian>-- SCARICA CASSA RIFORNIMENTI</Italian>
-						<Turkish>-- İKMAL KUTUSUNU ÇIKAR</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_AMMO">
 						<Original>-- UNLOAD AMMO CRATE</Original>
@@ -3120,7 +2759,6 @@
 						<Spanish>-- DESCARGA CAJA DE MUNICIÓN</Spanish>
 						<Russian>-- РАЗГРУЗКА БОЕПРИПАСОВ</Russian>
 						<Italian>-- SCARICA CASSA MUNIZIONI</Italian>
-						<Turkish>-- MERMİ KUTUSUNU ÇIKAR</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_UNSTORE_FUEL">
 						<Original>-- UNLOAD FUEL CRATE</Original>
@@ -3128,7 +2766,6 @@
 						<Spanish>-- DESCARGA CAJA DE COMBUSTIBLE</Spanish>
 						<Russian>-- РАЗГРУЗКА ТОПЛИВА</Russian>
 						<Italian>-- SCARICA CASSA CARBURANTE</Italian>
-						<Turkish>-- BENZIN KUTUSUNU ÇIKAR</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE">
 						<Original>-- CHECK CONTENT</Original>
@@ -3136,7 +2773,6 @@
 						<Spanish>-- COMPROBAR CONTENIDO</Spanish>
 						<Russian>-- ПРОВЕРИТЬ СОДЕРЖАНИЕ</Russian>
 						<Italian>-- CONTROLLA CARICO</Italian>
-						<Turkish>-- İÇİNDEKİLER KONTROL ET</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_VALUE_HINT">
 						<Original>Crate contains %1 resources</Original>
@@ -3144,7 +2780,6 @@
 						<Spanish>La caja contiene %1 recursos</Spanish>
 						<Russian>Ящик содержит %1 ресурсов</Russian>
 						<Italian>La cassa continene %1 risorse</Italian>
-						<Turkish>Kutuda %1 kaynak var</Turkish>
 				</Key>
 				<Key ID="STR_VECACTION">
 						<Original>-- Change alignment</Original>
@@ -3152,7 +2787,6 @@
 						<Spanish>-- Cambiar alineación</Spanish>
 						<Russian>-- Изменить выравнивание</Russian>
 						<Italian>-- Cambia allineamento</Italian>
-						<Turkish>-- Hizaları değiştir</Turkish>
 				</Key>
 				<Key ID="STR_CANCEL_ERROR">
 						<Original>Not enough free storage space</Original>
@@ -3160,42 +2794,36 @@
 						<Spanish>No hay suficiente espacio disponible</Spanish>
 						<Russian>Недостаточно свободного места для хранения</Russian>
 						<Italian>Non c'è abbastanza spazio disponibile</Italian>
-						<Turkish>Yeteri kadar boş alan yok</Turkish>
 				</Key>
 				<Key ID="STR_PREPLACED_ERROR">
 						<Original>You can't recycle preplaced objects</Original>
 						<German>Vorplatzierte Objekte können nicht recycelt werden</German>
 						<Russian>Вы не можете повторно использовать предварительно размещенные объекты</Russian>
 						<Italian>Non puoi riciclare oggetti statici</Italian>
-						<Turkish>Koyulmayan objeleri geri dönüştüremezsiniz</Turkish>
 				</Key>
 				<Key ID="STR_NORECBUILDING_ERROR">
 						<Original>Can't recycle:\nNo Salvage Depot in FOB area</Original>
 						<German>Wiederverwerten nicht möglich:\nKeine Demontageeinrichtung im Bereich der FOB</German>
 						<Russian>Невозможно выполнить переработку:\nNo месте аварийного склада в области FOB</Russian>
 						<Italian>Nessun edificio per il riciclaggio presente nell'area</Italian>
-						<Turkish>Geri dönüşemez:\nYakınlarda Dönüşüm Deposu yok</Turkish>
 				</Key>
 				<Key ID="STR_REASSIGN_ZEUS">
 						<Original>-- REASSIGN ZEUS</Original>
 						<German>-- ZEUS NEU ZUWEISEN</German>
 						<Russian>-- РЕАГИРОВАТЬ ZEUS</Russian>
 						<Italian>-- RIASSEGNA ZEUS</Italian>
-						<Turkish>-- ZEUSU SEÇ</Turkish>
 				</Key>
 				<Key ID="STR_RESOURCE_GLOBAL">
 						<Original>GLOBAL</Original>
 						<German>GESAMT</German>
 						<Russian>ГЛОБАЛЬНЫЙ</Russian>
 						<Italian>GLOBALE</Italian>
-						<Turkish>KÜRESEL</Turkish>
 				</Key>
 				<Key ID="STR_RESOURCE_GLOBAL_ACTION">
 						<Original>-- Switch resource display</Original>
 						<German>-- Ressourcenanzeige wechseln</German>
 						<Russian>-- Переключение отображения ресурсов</Russian>
 						<Italian>-- Cambia visualizzazione risorse</Italian>
-						<Turkish>-- Kaynak bölgesini değiştir</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_REVIVEOPTIONS">
 						<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
@@ -3203,399 +2831,342 @@
 						<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
 						<Russian>== ВОЗВРАТИТЬ ОПЦИИ (отключите это, если вы играете с ACE)</Russian>
 						<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
-						<Turkish>== CANLANDIRMA AYARLARI (ACE ile oynuyorsanız kapatın.)</Turkish>
 				</Key>
 				<Key ID="STR_BLACKLISTED_ITEM_FOUND">
 						<Original>Following items are not allowed:\n%1</Original>
 						<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
 						<Russian>Следующие элементы не разрешены:\n%1</Russian>
 						<Italian>Questi elementi non sono ammessi:\n%1</Italian>
-						<Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_ACTION">
 						<Original>-- Production Settings</Original>
 						<German>-- Produktionseinstellungen</German>
 						<Russian>-- Настройки производства</Russian>
 						<Italian>-- Impostazioni produzione</Italian>
-						<Turkish>-- Üretim ayarları</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_HEADER">
 						<Original>Production Settings</Original>
 						<German>Produktionseinstellungen</German>
 						<Russian>Настройки производства</Russian>
 						<Italian>Impostazioni Produzione</Italian>
-						<Turkish>Üretim ayarları</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_TYPE">
 						<Original>Sector Type:</Original>
 						<German>Sektortyp:</German>
 						<Russian>Тип сектора:</Russian>
 						<Italian>Tipo Settore:</Italian>
-						<Turkish>Sektör türü</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_CITY">
 						<Original>City</Original>
 						<German>Stadt</German>
 						<Russian>Город</Russian>
 						<Italian>Città</Italian>
-						<Turkish>Şehir</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACTORY">
 						<Original>Factory</Original>
 						<German>Fabrik</German>
 						<Russian>Завод</Russian>
 						<Italian>Fabbrica</Italian>
-						<Turkish>Fabrika</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_PRODUCING">
 						<Original>Producing:</Original>
 						<German>Produziert:</German>
 						<Russian>Производства:</Russian>
 						<Italian>Prodotto:</Italian>
-						<Turkish>Üretiyor</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_NOTHING">
 						<Original>Nothing</Original>
 						<German>Nichts</German>
 						<Russian>Ничего</Russian>
 						<Italian>Niente</Italian>
-						<Turkish>Hiçbirşey</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_STORAGE">
 						<Original>Storage:</Original>
 						<German>Lagerbereich:</German>
 						<Russian>Место хранения:</Russian>
 						<Italian>Area Stoccaggio:</Italian>
-						<Turkish>Depo:</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_NOSTORAGE">
 						<Original>Not present</Original>
 						<German>Nicht vorhanden</German>
 						<Russian>нет</Russian>
 						<Italian>Inesistente</Italian>
-						<Turkish>Depolama yok</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_TIMER">
 						<Original>Time left:</Original>
 						<German>Verbl. Zeit:</German>
 						<Russian>Время вышло:</Russian>
 						<Italian>Tempo rimasto:</Italian>
-						<Turkish>Kalan süre:</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_NOTIMER">
 						<Original>No production</Original>
 						<German>Keine Produktion</German>
 						<Russian>Нет производства</Russian>
 						<Italian>Nessuna produzione:</Italian>
-						<Turkish>Üretim yok</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_MINUTES">
 						<Original>%1 minutes</Original>
 						<German>%1 Minuten</German>
 						<Russian>%1 Минут</Russian>
 						<Italian>%1 Minuti</Italian>
-						<Turkish>%1 dakika</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACILITIES">
 						<Original>Facilities available</Original>
 						<German>Verfügbare Einrichtungen</German>
 						<Russian>Услуги доступны</Russian>
 						<Italian>Strutture Disponibili</Italian>
-						<Turkish>Bölgeler hazır</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_STORAGEDETAIL">
 						<Original>Stock Overview</Original>
 						<German>Übersicht Lagerbestände</German>
 						<Russian>Обзор запасов</Russian>
 						<Italian>Scorte</Italian>
-						<Turkish>Stok Listesi</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_CRATE">
 						<Original>%1 Crate</Original>
 						<German>%1 Kiste</German>
 						<Russian>%1 Ящик</Russian>
 						<Italian>%1 Cassa</Italian>
-						<Turkish>%1 Kutu</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_CRATES">
 						<Original>%1 Crates</Original>
 						<German>%1 Kisten</German>
 						<Russian>%1 Ящиков</Russian>
 						<Italian>%1 Casse</Italian>
-						<Turkish>%1 Kutular</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_PRODUCE">
 						<Original>Choose Production</Original>
 						<German>Produktionswahl</German>
 						<Russian>Выбрать продукцию</Russian>
 						<Italian>Seleziona Produzione</Italian>
-						<Turkish>Üretimi seç</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_SAVED">
 						<Original>Sector setting saved.</Original>
 						<German>Sektoreinstellung gespeichert.</German>
 						<Russian>Настройки сектора сохранены.</Russian>
 						<Italian>Settaggi settore salvati.</Italian>
-						<Turkish>Sektör ayarı kaydedildi.</Turkish>
 				</Key>
 				<Key ID="STR_SECSTORAGEBUILD_ACTION">
 						<Original>-- Build storage --</Original>
 						<German>-- Lagerfläche bauen --</German>
 						<Russian>-- Создание хранилища --</Russian>
 						<Italian>-- Crea area di stoccaggio --</Italian>
-						<Turkish>-- Depolama aç --</Turkish>
 				</Key>
 				<Key ID="STR_SECSUPPLYBUILD_ACTION">
 						<Original>-- Build supply facility --</Original>
 						<German>-- Nachschubeinrichtung bauen --</German>
 						<Russian>-- Построить систему снабжения --</Russian>
 						<Italian>-- Crea impianto approvvigionamento --</Italian>
-						<Turkish>-- İkmal kutusu üretimi kur --</Turkish>
 				</Key>
 				<Key ID="STR_SECAMMOBUILD_ACTION">
 						<Original>-- Build ammo facility --</Original>
 						<German>-- Munitionseinrichtung bauen --</German>
 						<Russian>-- Создать боеприпасы --</Russian>
 						<Italian>-- Crea impianto munizioni --</Italian>
-						<Turkish>-- Mermi kutusu üretimi kur --</Turkish>
 				</Key>
 				<Key ID="STR_SECFUELBUILD_ACTION">
 						<Original>-- Build fuel facility --</Original>
 						<German>-- Kraftstoffeinrichtung bauen --</German>
 						<Russian>-- Построить топливный объект --</Russian>
 						<Italian>-- Crea impianto carburante --</Italian>
-						<Turkish>-- Benzin kutusu üretimi kur --</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACFALSE">
 						<Original>Needed facility not built in sector.</Original>
 						<German>Benötigte Einrichtung nicht vorhanden.</German>
 						<Russian>Необходимый объект не построен в секторе.</Russian>
 						<Italian>Impianto necessario non costruito nel settore.</Italian>
-						<Turkish>İstenilen üretim sektörde kurulu değil.</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACBUILD_ERROR">
 						<Original>Not enough resources.\n\nYou need:\n%1 Supplies\n%2 Ammo\n%3 Fuel</Original>
 						<German>Nicht genug Ressourcen.\n\nDu benötigst:\n%1 Nachschub\n%2 Munition\n%3 Kraftstoff</German>
 						<Russian>Недостаточно ресурсов.\n\nВам нужно: \n%1 Расходные материалы \n%2 Боеприпасы \n%3 Топливо</Russian>
 						<Italian>Risorse insufficenti.\n\nHai bisogno di:\n%1 approvvigionamenti\n%2 Munizioni\n%3 Carburante </Italian>
-						<Turkish>Yetersiz kaynak.\n\nLazım olan: \n%1 İkmal \n%2 Mermi\n%3 Benzin</Turkish>
 				</Key>
 				<Key ID="STR_PRODUCTION_FACBUILD_SUCCESS">
 						<Original>Facility established.</Original>
 						<German>Einrichtung etabliert.</German>
 						<Russian>Учреждение создано.</Russian>
 						<Italian>Struttura creata.</Italian>
-						<Turkish>Üretim kuruldu.</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_AILOGISTICS">
  						<Original>AI Logistics Module</Original>
  						<German>AI Logistik Modul</German>
 						<Russian>Модуль логистики AI</Russian>
 						<Italian>AI Logistica</Italian>
-						<Turkish>AI Lojistiği</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_ACTION">
  						<Original>-- Logistic Overview</Original>
  						<German>-- Logistikübersicht</German>
 						<Russian>-- Обзор логистики</Russian>
 						<Italian>-- Vedi Logistica</Italian>
-						<Turkish>-- Lojistik</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_HEADER">
  						<Original>Logistic Overview</Original>
  						<German>Logistikübersicht</German>
 						<Russian>Обзор логистики</Russian>
 						<Italian>Vedi Logistica</Italian>
-						<Turkish>Lojistikler</Turkish>
  				</Key>
  				<Key ID="STR_ADD">
  						<Original>Add</Original>
  						<German>Hinzfg</German>
 						<Russian>Добавить</Russian>
 						<Italian>Aggiungi</Italian>
-						<Turkish>Ekle</Turkish>
  				</Key>
  				<Key ID="STR_DEL">
  						<Original>Del</Original>
  						<German>Entf</German>
 						<Russian>Удалить</Russian>
 						<Italian>Elimina</Italian>
-						<Turkish>Sil</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_STATUS">
  						<Original>Status:</Original>
  						<German>Status:</German>
 						<Russian>Статус</Russian>
 						<Italian>Stato:</Italian>
-						<Turkish>Durum:</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_STANDBY">
  						<Original>Standby</Original>
  						<German>Bereitschaft</German>
 						<Russian>Ожидание</Russian>
 						<Italian>In Attesa</Italian>
-						<Turkish>Beklemede</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_LOADING">
  						<Original>Loading</Original>
  						<German>Verladen</German>
 						<Russian>Загрузка</Russian>
 						<Italian>Caricamento</Italian>
-						<Turkish>Yükleniyor</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TRAVEL">
  						<Original>On the way</Original>
  						<German>Unterwegs</German>
 						<Russian>В пути</Russian>
 						<Italian>In movimento</Italian>
-						<Turkish>Yolda</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_ABORT">
  						<Original>Aborting mission</Original>
  						<German>Auftragsabbruch</German>
 						<Russian>Прерывание миссии</Russian>
 						<Italian>Termina missione</Italian>
-						<Turkish>İptal ediliyor</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_NORESSOURCES">
  						<Original>No resources</Original>
  						<German>Keine Ressourcen</German>
 						<Russian>Нет ресурсов</Russian>
 						<Italian>Risorse non avviabili</Italian>
-						<Turkish>Kaynak yok</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_NOSPACE">
  						<Original>No storagespace</Original>
  						<German>Kein Lagerplatz</German>
 						<Russian>Нет места для хранения</Russian>
 						<Italian>Spazio non avviabile</Italian>
-						<Turkish>Depolama yeri yok</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_DESTINATION">
  						<Original>Next destination:</Original>
  						<German>Nächster Zielort:</German>
 						<Russian>Следующая цель:</Russian>
 						<Italian>Prossima destinazione:</Italian>
-						<Turkish>Diğer istikamet:</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_LOADEDDETAIL">
  						<Original>Current convoy cargo</Original>
  						<German>Aktuelle Konvoiladung</German>
 						<Russian>Текущий состав конвоя</Russian>
 						<Italian>Carico convoglio attuale</Italian>
-						<Turkish>Şuanki konvoy kargosu</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TRUCKCOUNT">
  						<Original>Assigned Trucks</Original>
  						<German>Zugeteilte LKWs</German>
 						<Russian>Назначенные грузовики</Russian>
 						<Italian>Camion Assegnati</Italian>
-						<Turkish>Seçili kamyonlar</Turkish>
  				</Key>
  				<Key ID="STR_LOGSTIC_BUYTRUCK">
  						<Original>Assign Truck</Original>
  						<German>LKW zuteilen</German>
 						<Russian>Назначить грузовик</Russian>
 						<Italian>Assegna camion</Italian>
-						<Turkish>Kamyon seç</Turkish>
  				</Key>
  				<Key ID="STR_LOGSTIC_SELLTRUCK">
  						<Original>Unassign Truck</Original>
  						<German>LKW abziehen</German>
 						<Russian>Отменить передачу</Russian>
 						<Italian>Rimuovi camion</Italian>
-						<Turkish>Seçimi iptal et</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_BUYTRUCK">
  						<Original>Costs: 100 supplies and 100 fuel.</Original>
  						<German>Kosten: 100 Nachschub und 100 Kraftstoff.</German>
 						<Russian>Затраты: 100 поставок и 100 единиц топлива.</Russian>
 						<Italian>Costo: 100 approvvigionamenti e 100 carburante.</Italian>
-						<Turkish>Maliyeti : 100 ikmal ve 100 benzin</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_SELLTRUCK">
  						<Original>Gives: 50 supplies and 50 fuel.</Original>
  						<German>Erstattet: 50 Nachschub und 50 Kraftstoff.</German>
 						<Russian>Дает: 50 предметов снабжения и 50 единиц топлива.</Russian>
 						<Italian>Rimborso: 50 approvvigionamenti e 50 carburante.</Italian>
-						<Turkish>Veriyor: 50 ikmal ve 50 benzin.</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_CONFIRM">
  						<Original>Confirm Mission</Original>
  						<German>Auftrag bestätigen</German>
 						<Russian>Подтвердить миссию</Russian>
 						<Italian>Conferma missione</Italian>
-						<Turkish>Onayla</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_CANCEL">
  						<Original>Abort Mission</Original>
  						<German>Auftrag abbrechen</German>
 						<Russian>Отменить миссию</Russian>
 						<Italian>Termina missione</Italian>
-						<Turkish>İptal et</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_CANTAFFORD">
  						<Original>Not enough resources</Original>
  						<German>Nicht genug Ressourcen</German>
 						<Russian>недостаточно ресурсов</Russian>
 						<Italian>Risorse insufficenti</Italian>
-						<Turkish>Yetersiz kaynak</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_ROUTETITLE">
  						<Original>Mission planning</Original>
  						<German>Auftragsplanung</German>
 						<Russian>Планирование миссии</Russian>
 						<Italian>Pianificazione degli ordini</Italian>
-						<Turkish>Planlama</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_LABELA">
  						<Original>Destination A</Original>
  						<German>Ziel A</German>
 						<Russian>Пункт назначения A</Russian>
 						<Italian>Destinazione A</Italian>
-						<Turkish>A istikameti</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_LABELB">
  						<Original>Destination B</Original>
  						<German>Ziel B</German>
 						<Russian>Пункт назначения В</Russian>
 						<Italian>Destinazione B</Italian>
-						<Turkish>B istikameti</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_SUPPLY">
 						<Original>Supplies value from here to the other destination. (only whole numbers)</Original>
 						<German>Nachschubmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
 						<Russian>Расставляет стоимость отсюда до другого пункта назначения. (Целые числа)</Russian>
 						<Italian>Valore approvvigionamenti da qui all'altra destinazione. (solo numeri interi)</Italian>
-						<Turkish>Burdan diğer istikamete gidecek ikmaller. (sadece sayılar)</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_AMMO">
  						<Original>Ammo value from here to the other destination. (only whole numbers)</Original>
  						<German>Munitionsmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
 						<Russian>Боеприпасы отсюда до другого места назначения. (Целые числа)</Russian>
 						<Italian>Valore munizioni da qui all'altra destinazione. (solo numeri interi)</Italian>
-						<Turkish>Burdan diğer istikamete gidecek mermiler. (sadece sayılar)</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_TT_FUEL">
  						<Original>Fuel value from here to the other destination. (only whole numbers)</Original>
  						<German>Kraftstoffmenge von hier zum anderen Ziel. (nur ganzzahlig)</German>
 						<Russian>Топливо отсюда до другого места назначения. (Целые числа)</Russian>
 						<Italian>Valore carburante da qui all'altra destinazione. (solo numeri interi)</Italian>
-						<Turkish>Burdan diğer istikamete gidecek benzinler. (sadece sayılar)</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_SAVE_ERROR">
  						<Original>Your mission is not possible.</Original>
  						<German>Auftrag nicht möglich.</German>
 						<Russian>Ваша миссия не возможна.</Russian>
 						<Italian>La tua missione non è possibile.</Italian>
-						<Turkish>Bu istikamet imkansız.</Turkish>
  				</Key>
  				<Key ID="STR_LOGISTIC_STANDBY_ERROR">
  						<Original>You can't abort this mission at the moment.</Original>
  						<German>Du kannst diesen Auftrag momentan nicht abbrechen.</German>
 						 <Russian>На данный момент вы не можете прервать эту миссию.</Russian>
 						<Italian>Non puoi terminare la missione in questo momento.</Italian>
-						<Turkish>Bu görevi şuan iptal edemezsiniz.</Turkish>
  				</Key>
 
 				<!-- English adaptations in v0.95, need translations. -->
@@ -3606,7 +3177,6 @@
 						<Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
 						<Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
 						<Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
-						<Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TITLE1">
 						<Original>1. Introduction</Original>
@@ -3615,7 +3185,6 @@
 						<Spanish>1. Introducción</Spanish>
 						<Russian>1. Введение</Russian>
 						<Italian>1. Introduzione</Italian>
-						<Turkish>1. Giriş</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT1">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3627,7 +3196,7 @@
 						Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
 						</Original>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3651,7 +3220,7 @@
 						Вопросы?&lt;br/&gt; &lt;br/&gt;
 						</Russian>
 						<German>&lt;br/&gt;&lt;br/&gt;
-						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
+						Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;  
 						Unser Primärziel ist einfach: Befreie das Gebiet von der Feindkontrolle!&lt;br/&gt; &lt;br/&gt;
 						Die Straße zum Sieg wird lang und gefährlich sein. Sie werden viele Sektoren zurück erobern müssen und sich die nötigen Ressourcen verschaffen, um Quantität und Qualität unserer Truppen zu verbessern.&lt;br/&gt; &lt;br/&gt;
 						Außerdem werden die Freindkräfte zeitnah auf unsere Fortschritte reagieren. Sie werden Sekundärziele bestreiten müssen, um den Feind zu schwächen, der uns in Quantität und in Qualität der Ausrüstung überlegen ist.&lt;br/&gt; &lt;br/&gt;
@@ -3666,7 +3235,6 @@
 						<Spanish>2. Comenzando la campaña</Spanish>
 						<Russian>2. С чего начать</Russian>
 						<Italian>2 .Inizio della Campagna</Italian>
-						<Turkish>2. Göreve başlamak</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT2">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3702,7 +3270,6 @@
 						<Spanish>3. Objetivo</Spanish>
 						<Russian>3. Цели и задачи</Russian>
 						<Italian>3. Obiettivi</Italian>
-						<Turkish>3. Objektifler</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT3">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3733,7 +3300,6 @@
 						<Spanish>4. Sectores</Spanish>
 						<Russian>4. Зоны</Russian>
 						<Italian>4. Settori</Italian>
-						<Turkish>4. Sektörler</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT4">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3784,7 +3350,6 @@
 						<Spanish>5. Recursos</Spanish>
 						<Russian>5. Ресурсы</Russian>
 						<Italian>5. Risorse</Italian>
-						<Turkish>5. Kaynaklar</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT5">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3821,7 +3386,7 @@
 						&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;
 						&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;
 						In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme, benötigen beide Lagerflächen (scroll-menu) und dann benötigt der PoI zusätzlich noch ein Fabrikgebäude (wieder scroll-menu). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;
-						</German>
+						</German>		
 				</Key>
 				<Key ID="STR_TUTO_TITLE6">
 						<Original>6. Alert Level</Original>
@@ -3830,7 +3395,6 @@
 						<Spanish>6. Nivel de alerta</Spanish>
 						<Russian>6. Уровень тревоги</Russian>
 						<Italian>6. Livello di Allerta</Italian>
-						<Turkish>6. Uyarı Seviyesi</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT6">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3861,7 +3425,6 @@
 						<Spanish>7. Construcción</Spanish>
 						<Russian>7. Строительство</Russian>
 						<Italian>7. Construzioni</Italian>
-						<Turkish>7. İnşa etmek</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT7">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3897,7 +3460,6 @@
 						<Spanish>8. Desplegar otra FOB</Spanish>
 						<Russian>8. Развёртывание новой FOB</Russian>
 						<Italian>8. Costruire un'altra FOB</Italian>
-						<Turkish>8. Başka bir FOB kurmak</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT8">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3928,7 +3490,6 @@
 						<Spanish>9. Objetivos secundarios</Spanish>
 						<Russian>9. Дополнительные задания</Russian>
 						<Italian>9. Obiettivi Secondari</Italian>
-						<Turkish>9. İkincil Objektifler</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT9">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3964,7 +3525,6 @@
 						<Spanish>10. Comandancia</Spanish>
 						<Russian>10. Командование</Russian>
 						<Italian>10. Comando</Italian>
-						<Turkish>10. Komuta etmek</Turkish>
 				</Key>
 				<Key ID="STR_TUTO_TEXT10">
 						<Original>&lt;br/&gt;&lt;br/&gt;
@@ -3997,64 +3557,35 @@
 						<Original>Arsenal mode</Original>
 						<German>Arsenalmodus</German>
 						<Italian>Modalità Arsenale</Italian>
-						<Turkish>Ekipman(Arsenal) modu</Turkish>
 				</Key>
-				<Key ID="STR_PARAMS_NORESTRICTIONS">
+				<Key ID="STR_PARAMS_NOTRESTRICTIONS">
 						<Original>No restrictions</Original>
 						<German>Keine Einschränkungen</German>
 						<Italian>Senza Restrizioni</Italian>
-						<Turkish>Kısıtlama yok</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_USEPRESET">
 						<Original>Use preset from config</Original>
 						<German>Benutze Preset aus Konfiguration</German>
 						<Italian>Usa il file config.sqf</Italian>
-						<Turkish>config.sqf kullan</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_CRATE_PUSH">
 						<Original>-- PUSH CRATE</Original>
 						<German>-- KISTE SCHIEBEN</German>
 						<Italian>-- SPINGI CASSA</Italian>
-						<Turkish>-- KUTUYU İTTİR</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_ACE_ENABLE">
 						<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
 						<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
 						<Italian>Compatibilità ACE (disattiva il clima e l'approvvigionamento)</Italian>
-						<Turkish>ACE Uyumluluğu (Liberation hava ve mühimmat scriptini kapatır)</Turkish>
 				</Key>
 				<Key ID="STR_PARAMS_DEBUG_ENABLE">
 						<Original>Debug messages for server.rpt</Original>
 						<German>Debugnachrichten für die server.rpt</German>
 						<Italian>Messaggi di errore per il debug nel file server.rpt</Italian>
-						<Turkish>Debug mesajları server.rpt ye gider</Turkish>
 				</Key>
 				<Key ID="STR_ACTION_SORT_STORAGE">
 						<Original>-- STACK AND SORT</Original>
 						<German>-- STAPELN UND SORTIEREN</German>
-						<Turkish>-- SIRALA VE DÜZENLE</Turkish>
-				</Key>
-
-				<!-- Added or changed in v0.96 -->
-				<Key ID="STR_PARAMS_SUPPMOD">
-						<Original>BI Support Module System access</Original>
-						<German>BI Support Module System Zugriff</German>
-						<Turkish>BI Destek Modülü Sistem girişi</Turkish>
-				</Key>
-				<Key ID="STR_PARAMS_COMMANDER">
-						<Original>Commander only</Original>
-						<German>Nur Kommandant</German>
-						<Turkish>Sadece komutan</Turkish>
-				</Key>
-				<Key ID="STR_PARAMS_WHITELISTONLY">
-						<Original>Whitelisted only</Original>
-						<German>Nur Whitelist</German>
-						<Turkish>Sadece beyaz listedekiler</Turkish>
-				</Key>
-				<Key ID="STR_PARAMS_EVERYONE">
-						<Original>Everyone</Original>
-						<German>Jeder</German>
-						<Turkish>Herkes</Turkish>
 				</Key>
 	</Package>
 </Project>
