@@ -1,6 +1,6 @@
 params ["_sector"];
 
-if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] getBuildings called on: %1 - Sector: %2", debug_source, _sector];_text remoteExec ["diag_log",2];};
+if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] getBuildings called on: %1 - Sector: %2", debug_source, markerText _sector];_text remoteExec ["diag_log",2];};
 
 private _return = 0;
 

@@ -17,6 +17,7 @@ crewman_classname = "rhsusf_army_ocp_combatcrewman";					// This defines the cre
 pilot_classname = "rhsusf_army_ocp_helipilot";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "RHS_MELB_MH6M";					// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
+KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_d";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -460,6 +461,21 @@ opfor_choppers = [
 opfor_air = [
 	"RHS_Su25SM_vvsc",													//Su-25
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
+];
+
+/* - Guerilla forces
+classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+KP_liberation_guerilla_units = [
+	"I_C_Soldier_Bandit_1_F",
+	"I_C_Soldier_Bandit_2_F",
+	"I_C_Soldier_Bandit_3_F",
+	"I_C_Soldier_Bandit_4_F",
+	"I_C_Soldier_Bandit_5_F"
+];
+
+KP_liberation_guerilla_vehicles = [
+	"I_G_Offroad_01_armed_F"
 ];
 
 /*	- Other various mission classnames.

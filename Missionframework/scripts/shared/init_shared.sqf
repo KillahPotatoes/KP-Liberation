@@ -36,6 +36,8 @@ civinfo_notifications = compileFinal preprocessFileLineNumbers "scripts\client\c
 civinfo_escort = compileFinal preprocessFileLineNumbers "scripts\client\civinformant\civinfo_escort.sqf";
 civinfo_delivered = compileFinal preprocessFileLineNumbers "scripts\server\civinformant\civinfo_delivered.sqf";
 
+asymm_notifications = compileFinal preprocessFileLineNumbers "scripts\client\asymmetric\asymm_notifications.sqf";
+
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\scan_skill.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\diagnostics.sqf";
 if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\shared\manage_weather.sqf";};

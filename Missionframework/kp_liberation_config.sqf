@@ -96,6 +96,9 @@ KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn c
 KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount
 KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning (seconds)
 
+KP_liberation_convoy_ambush_chance = 4;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low
+KP_liberation_convoy_ambush_duration = 1800;																	// Duration of the convoy ambush event (seconds)
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/

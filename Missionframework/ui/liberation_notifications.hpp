@@ -160,4 +160,20 @@ class CfgNotifications {
     class lib_civ_informant_death : lib_intel {
         description = $STR_NOTIFICATION_CIV_INFORMANT_DEATH;
     };
+    class lib_asymm_convoy_ambush : lib_default_notification {
+        title = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE;
+        description = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT;
+        iconPicture = "res\notif\ui_notif_camb.paa";
+        color[] = {1, 0, 0, 1};
+        sound = "taskCreated";
+    };
+    class lib_asymm_convoy_ambush_success : lib_asymm_convoy_ambush {
+        description = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS;
+        sound = "taskSucceeded";
+    };
+    class lib_asymm_convoy_ambush_fail : lib_asymm_convoy_ambush {
+        description = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL;
+        color[] = {1, 0, 0, 1};
+        sound = "taskFailed";
+    };
 };

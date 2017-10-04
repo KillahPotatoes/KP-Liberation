@@ -17,6 +17,7 @@ crewman_classname = "B_T_crew_F";										// This defines the crew for vehicles
 pilot_classname = "B_T_Helipilot_F";									// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; 				// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
+KP_liberation_truck_classname = "B_T_Truck_01_transport_F";				// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -400,24 +401,24 @@ opfor_flag = "Flag_CSAT_F";												//CSAT Flag
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often.
 Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.	*/
 militia_squad = [
-	"O_G_Soldier_TL_F",													//Team Leader
-	"O_G_Soldier_SL_F",													//Squad Leader
-	"O_G_Soldier_lite_F",												//Rifleman (Lite)
-	"O_G_Soldier_F",													//Rifleman
-	"O_G_Soldier_F",													//Rifleman
-	"O_G_Soldier_LAT_F",												//Rifleman (AT)
-	"O_G_Soldier_GL_F",													//Grenadier
-	"O_G_Soldier_AR_F",													//Autorifleman
-	"O_G_Soldier_AR_F",													//Autorifleman
-	"O_G_Soldier_M_F",													//Marksman
-	"O_G_medic_F",														//Medic
-	"O_G_engineer_F",													//Engineer
-	"O_G_Soldier_exp_F"													//Explosives Specialist
+	"O_soldierU_TL_F",													//Team Leader
+	"O_SoldierU_SL_F",													//Squad Leader
+	"O_soldierU_F",														//Rifleman (Lite)
+	"O_soldierU_F",														//Rifleman
+	"O_soldierU_F",														//Rifleman
+	"O_soldierU_LAT_F",													//Rifleman (AT)
+	"O_SoldierU_GL_F",													//Grenadier
+	"O_soldierU_AR_F",													//Autorifleman
+	"O_soldierU_AR_F",													//Autorifleman
+	"O_soldierU_M_F",													//Marksman
+	"O_soldierU_medic_F",												//Medic
+	"O_engineer_U_F",													//Engineer
+	"O_soldierU_exp_F"													//Explosives Specialist
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"O_G_Offroad_01_armed_F"											//Offroad (HMG)
+	"O_T_LSV_02_armed_F"												//Qilin (armed)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels)
@@ -497,6 +498,21 @@ opfor_choppers = [
 opfor_air = [
 	"O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
 	"O_Plane_Fighter_02_F"												//To-201 Shikra
+];
+
+/* - Guerilla forces
+classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+KP_liberation_guerilla_units = [
+	"I_C_Soldier_Bandit_1_F",
+	"I_C_Soldier_Bandit_2_F",
+	"I_C_Soldier_Bandit_3_F",
+	"I_C_Soldier_Bandit_4_F",
+	"I_C_Soldier_Bandit_5_F"
+];
+
+KP_liberation_guerilla_vehicles = [
+	"I_G_Offroad_01_armed_F"
 ];
 
 /*	- Other various mission classnames.

@@ -34,14 +34,6 @@ _idxposit = 0;
 	_nextunit setpos (_buildingpositions select (_position_indexes select _idxposit));
 	_nextunit setdir (random 360);
 	[ _nextunit, _sector ] spawn building_defence_ai;
-	if ( _infsquad == "militia" ) then {
-		if ( (typeof _nextunit) in original_resistance ) then {
-			[ _nextunit ] spawn (selectRandom militia_standard_squad);
-			if ( random 100 < 40 ) then {
-				_nextunit addPrimaryWeaponItem "acc_flashlight";
-			};
-		};
-	};
 
 	_idxposit = _idxposit + 1;
 

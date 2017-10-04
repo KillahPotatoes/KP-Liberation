@@ -58,6 +58,7 @@ resources_intel = 0;
 GRLIB_player_scores = [];
 KP_liberation_civ_rep = 0;
 KP_liberation_production_markers = [];
+KP_liberation_guerilla_strength = 25;
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -150,10 +151,33 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 	if (count greuh_liberation_savegame > 15) then {
 		KP_liberation_civ_rep = greuh_liberation_savegame select 15;
+		if (KP_liberation_civ_rep <= -25) then {
+			GRLIB_side_resistance setFriend [GRLIB_side_enemy, 1];
+			GRLIB_side_enemy setFriend [GRLIB_side_resistance, 1];
+			GRLIB_side_resistance setFriend [GRLIB_side_friendly, 0];
+			GRLIB_side_friendly setFriend [GRLIB_side_resistance, 0];
+		};
+		if (KP_liberation_civ_rep > -25 && KP_liberation_civ_rep < 25) then {
+			GRLIB_side_resistance setFriend [GRLIB_side_enemy, 1];
+			GRLIB_side_enemy setFriend [GRLIB_side_resistance, 1];
+			GRLIB_side_resistance setFriend [GRLIB_side_friendly, 1];
+			GRLIB_side_friendly setFriend [GRLIB_side_resistance, 1];
+		};
+		if (KP_liberation_civ_rep >= 25) then {
+			GRLIB_side_resistance setFriend [GRLIB_side_friendly, 1];
+			GRLIB_side_friendly setFriend [GRLIB_side_resistance, 1];
+			GRLIB_side_resistance setFriend [GRLIB_side_enemy, 0];
+			GRLIB_side_enemy setFriend [GRLIB_side_resistance, 0];
+		};
+		if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] %1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)];_text remoteExec ["diag_log",2];};
 	};
 
 	if (count greuh_liberation_savegame > 16) then {
 		KP_liberation_production_markers = greuh_liberation_savegame select 16;
+	};
+
+	if (count greuh_liberation_savegame > 17) then {
+		KP_liberation_guerilla_strength = greuh_liberation_savegame select 17;
 	};
 
 	setDate [ 2045, 6, 6, time_of_day, 0];
@@ -643,7 +667,7 @@ while { true } do {
 
 		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
 		KP_liberation_production, KP_liberation_logistics, _stats, [round infantry_weight, round armor_weight, round air_weight], GRLIB_vehicle_to_military_base_links,
-		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep, KP_liberation_production_markers];
+		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep, KP_liberation_production_markers, KP_liberation_guerilla_strength];
 
 		profileNamespace setVariable [GRLIB_save_key, greuh_liberation_savegame];
 		saveProfileNamespace;
