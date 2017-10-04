@@ -2,12 +2,12 @@ if ( !(isNil "GRLIB_param_wipe_savegame_1") && !(isNil "GRLIB_param_wipe_savegam
 	if ( GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1 ) then {
 		profileNamespace setVariable [ GRLIB_save_key,nil ];
 		saveProfileNamespace;
-		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save wiped by: %1", debug_source];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Save wiped by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	} else {
-		if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] No save wipe for: %1", debug_source];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] No save wipe for: %1", debug_source];_text remoteExec ["diag_log",2];};
 	};
 } else {
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Wipe params where nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Wipe params where nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
 };
 
 date_year = date select 0;
@@ -56,6 +56,8 @@ GRLIB_permissions = [];
 ai_groups = [];
 resources_intel = 0;
 GRLIB_player_scores = [];
+KP_liberation_civ_rep = 0;
+KP_liberation_production_markers = [];
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];
@@ -146,9 +148,17 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		GRLIB_player_scores = greuh_liberation_savegame select 14;
 	};
 
+	if (count greuh_liberation_savegame > 15) then {
+		KP_liberation_civ_rep = greuh_liberation_savegame select 15;
+	};
+
+	if (count greuh_liberation_savegame > 16) then {
+		KP_liberation_production_markers = greuh_liberation_savegame select 16;
+	};
+
 	setDate [ 2045, 6, 6, time_of_day, 0];
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Loaded savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Loaded savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
 
 	_correct_fobs = [];
 	{
@@ -162,6 +172,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
+	
+	// Arty Supp deactivated for now
+	/*if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {!isNil "KP_liberation_suppMod_created"};
+	};*/
 
 	{
 		_nextclass = _x select 0;
@@ -192,6 +207,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
 			};
 
+			// Arty Supp deactivated for now
+			/*if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
+				[_nextbuilding] remoteExec ["arty_monitor", 2];
+			};*/
+
 			if ( _hascrew ) then {
 				[ _nextbuilding ] call F_forceBluforCrew;
 			};
@@ -216,6 +236,10 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
 			
+			if (_nextclass == KP_liberation_recycle_building) then {
+				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
+			};
+			
 			if (_nextclass == "Flag_White_F") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
@@ -236,7 +260,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 
 	} foreach buildings_to_save;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved buildings placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved buildings placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	
 	{
 		_nextclass = _x select 0;
@@ -316,7 +340,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 	} forEach KP_liberation_storages;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	{
 		private ["_storage"];
@@ -394,7 +418,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		};
 	} forEach KP_liberation_production;
 
-	if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved sector storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved sector storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	
 	{
 		private [ "_nextgroup", "_grp" ];
@@ -413,9 +437,9 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		} foreach _nextgroup;
 	} foreach ai_groups;
 
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save loading finished by: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Save loading finished by: %1", debug_source];_text remoteExec ["diag_log",2];};
 } else {
-	if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Save nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Save nil for: %1", debug_source];_text remoteExec ["diag_log",2];};
 };
 
 publicVariable "blufor_sectors";
@@ -427,8 +451,8 @@ if ( count GRLIB_vehicle_to_military_base_links == 0 ) then {
 	_assigned_vehicles = [];
 
 	while { count _assigned_bases < count sectors_military && count _assigned_vehicles < count elite_vehicles } do {
-		_nextbase =  ( [ sectors_military, { !(_x in _assigned_bases) } ] call BIS_fnc_conditionalSelect ) call BIS_fnc_selectRandom;
-		_nextvehicle =  ( [ elite_vehicles, { !(_x in _assigned_vehicles) } ] call BIS_fnc_conditionalSelect ) call BIS_fnc_selectRandom;
+		_nextbase =  selectRandom ([sectors_military, {!(_x in _assigned_bases)}] call BIS_fnc_conditionalSelect);
+		_nextvehicle =  selectRandom ([elite_vehicles, {!(_x in _assigned_vehicles)}] call BIS_fnc_conditionalSelect);
 		_assigned_bases pushback _nextbase;
 		_assigned_vehicles pushback _nextvehicle;
 		GRLIB_vehicle_to_military_base_links pushback [_nextvehicle, _nextbase];
@@ -445,7 +469,7 @@ publicVariable "GRLIB_vehicle_to_military_base_links";
 publicVariable "GRLIB_permissions";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-if (KP_liberation_debug || KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] save_manager.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] save_manager.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 while { true } do {
 	waitUntil {
@@ -617,14 +641,14 @@ while { true } do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [ blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
-		KP_liberation_production, KP_liberation_logistics, _stats, [ round infantry_weight, round armor_weight, round air_weight ], GRLIB_vehicle_to_military_base_links,
-		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores ];
+		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
+		KP_liberation_production, KP_liberation_logistics, _stats, [round infantry_weight, round armor_weight, round air_weight], GRLIB_vehicle_to_military_base_links,
+		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep, KP_liberation_production_markers];
 
-		profileNamespace setVariable [ GRLIB_save_key, greuh_liberation_savegame ];
+		profileNamespace setVariable [GRLIB_save_key, greuh_liberation_savegame];
 		saveProfileNamespace;
 
-		if (KP_liberation_savegame_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Saved savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved savegame: %1", greuh_liberation_savegame];_text remoteExec ["diag_log",2];};
 
 	};
 };

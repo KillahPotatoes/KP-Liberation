@@ -51,7 +51,6 @@ while {GRLIB_endgame == 0} do {
 							_crate setVariable ["KP_liberation_crate_value", 100, true];
 							[_crate, 500] remoteExec ["F_setMass",_crate];
 							[_crate, _storage] call F_crateToStorage;
-
 						};
 					} else {
 						_time = _time - 1;

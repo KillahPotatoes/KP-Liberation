@@ -1,6 +1,5 @@
 class kndr_MapControl
 {
-	access = 0;
 	idc = 10023;
 	type = CT_MAP_MAIN;
 	style = ST_PICTURE;
@@ -518,7 +517,6 @@ class StdCombo {
 
 class StdEdit {
 	idc = -1;
-	access = 0;
 	type = CT_EDIT;
 	style = ST_RIGHT+ST_FRAME;
 	default = false;

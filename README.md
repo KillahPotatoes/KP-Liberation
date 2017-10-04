@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.955
+## Current version : 0.96
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -159,6 +159,49 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.96 (in Development)
+* Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
+* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone. (Currently deactivated, as there are still issues in MP)
+* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew). (Currently deactivated, as there are still issues in MP)
+* Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
+* Added: Civil Reputation.
+* Added: Config variables for the civil reputation.
+* Added: Reputation penalty for killing civilians.
+* Added: Reputation penalty for seizing civil vehicles.
+* Added: Players can request artillery support from players (generates task). (Currently deactivated, as there are still issues in MP)
+* Added: Reputation penalty for destroyed/damaged civil buildings.
+* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
+* Added: Reputation gain for liberated sectors.
+* Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
+* Added: Settings in the mission parameters for particular debug messages.
+* Added: Civil informant can rarely spawn in blufor sectors, when reputation is high enough.
+* Added: Factory map markers now indicate which production facilities are available there.
+* Added: Asymmetric Threats.
+* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
+* Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
+* Removed: Vehicle explosion chance script for convoy ambush.
+* Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Some reordering of UI elements.
+* Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)
+* Tweaked: Highlight color in production list changed to blue instead of misleading green.
+* Tweaked: Amounts of resources on each FOB and production site is now visible in logistic dropdown menu as `(Supplies/Ammo/Fuel)`.
+* Tweaked: Removed the logistic convoy cap of 26 (which was due to the alphabet).
+* Tweaked: Captured enemy vehicles are now also listed in the commanders zeus interface.
+* Tweaked: Cities won't be able to produce resources anymore.
+* Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
+* Tweaked: Corrected some strings in the stringtable.
+* Tweaked: Factories don't have all facilities from the start anymore. The facility they start with is set at campaign start.
+* Fixed: Player got custom recoil and aiming coefficients on respawn.
+* Fixed: Rare script error on closing respawn screen directly after joining the mission.
+* Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
+* Fixed: It was possible to disassemble a mortar in preview.
+* Fixed: Preview vehicles could get saved if you shut down the mission right after canceling the build process or if you'd still the preview in front you.
+* Fixed: Small issues due to the default "hold fire" combat mode for AI.
+* Fixed: Single Infantry units weren't saved sometimes.
+* Fixed: Paratroopers got sometimes an attack helicopter instead of a transport helicopter.
+* Fixed: Rescue helipad blocked building in their near vicinity.
+* Fixed: MPKill Eventhandler issue when using ACE.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist

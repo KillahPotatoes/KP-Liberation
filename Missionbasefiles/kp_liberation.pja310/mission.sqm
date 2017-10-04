@@ -312,7 +312,7 @@ class Mission
 			dataType="Marker";
 			position[]={14660.77,0,19471.467};
 			name="factory";
-			text="Fat Refridgerators Inc";
+			text="Fat Refrigerators Inc";
 			type="loc_Fuelstation";
 			colorName="ColorEAST";
 			id=3;

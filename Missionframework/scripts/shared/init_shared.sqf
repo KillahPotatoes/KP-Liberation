@@ -30,6 +30,11 @@ remote_call_prisonner = compileFinal preprocessFileLineNumbers "scripts\client\r
 remote_call_switchmove = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_switchmove.sqf";
 remote_call_intel = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_intel.sqf";
 remote_call_incoming = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_incoming.sqf";
+// Arty Supp deactivated for now - remote_call_removeSuppReq = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_removeSuppReq.sqf";
+
+civinfo_notifications = compileFinal preprocessFileLineNumbers "scripts\client\civinformant\civinfo_notifications.sqf";
+civinfo_escort = compileFinal preprocessFileLineNumbers "scripts\client\civinformant\civinfo_escort.sqf";
+civinfo_delivered = compileFinal preprocessFileLineNumbers "scripts\server\civinformant\civinfo_delivered.sqf";
 
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\scan_skill.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\diagnostics.sqf";

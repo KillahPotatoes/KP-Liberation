@@ -14,7 +14,7 @@ if ( _is_infantry ) then {
 	_waypoint = _grp addWaypoint [_flagpos, 150];
 	_waypoint setWaypointType "MOVE";
 	_waypoint setWaypointBehaviour "SAFE";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint setWaypointCompletionRadius 10;
 
@@ -31,7 +31,7 @@ if ( _is_infantry ) then {
 	_waypoint = _grp addWaypoint [_basepos, 1];
 	_waypoint setWaypointType "MOVE";
 	_waypoint setWaypointBehaviour "SAFE";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint setWaypointCompletionRadius 30;
 };
@@ -51,7 +51,7 @@ if ( { alive _x } count (units _grp) > 0 ) then {
 	_waypoint = _grp addWaypoint [_basepos, 150];
 	_waypoint setWaypointType "SAD";
 	_waypoint setWaypointBehaviour "COMBAT";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint = _grp addWaypoint [_basepos, 150];
 	_waypoint setWaypointType "SAD";

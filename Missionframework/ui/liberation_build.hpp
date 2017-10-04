@@ -137,7 +137,7 @@ class liberation_build {
 		idc = 1095;
 		x = (0.527 * safezoneW + safezoneX);
 		text = "\A3\ui_f\data\map\mapcontrol\Bunker_CA.paa";
-	}
+	};
 	class BuildBuildingButton : BuildTypeButton{
 		idc = 109;
 		text = "";
@@ -221,7 +221,7 @@ class liberation_build {
 			0,
 			0.65,
 			0.75,
-			0.85,
+			0.85
 		};
 		onLBSelChanged="";
 		shadow = 2;

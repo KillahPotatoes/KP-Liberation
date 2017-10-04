@@ -19,7 +19,7 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
+	GRLIB_remote_sensors = 0;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
 	GRLIB_maximum_fobs = [ "MaximumFobs",26] call bis_fnc_getParamValue;
@@ -30,7 +30,14 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilearsenal = ["MobileArsenal",1] call bis_fnc_getParamValue;
 	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
 	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
-	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
+	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
+	KP_liberation_restart = ["ServerRestart",0] call BIS_fnc_getParamValue;
+	KP_liberation_cr_param_buildings = ["CR_Building",0] call BIS_fnc_getParamValue;
+	KP_liberation_civinfo_debug = ["DebugCivInfo",0] call bis_fnc_getParamValue;
+	KP_liberation_civrep_debug = ["DebugCivRep",0] call bis_fnc_getParamValue;
+	KP_liberation_savegame_debug = ["DebugSave",0] call bis_fnc_getParamValue;
+	KP_liberation_asymmetric_debug = ["DebugAsymmetric",0] call bis_fnc_getParamValue;
+	KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -64,7 +71,17 @@ if ( isMultiplayer ) then {
 	KP_liberation_ailogistics = 1;
 	KP_liberation_ace = 0;
 	KP_liberation_debug = 0;
+	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = 1;
+	KP_liberation_restart = 0;
+	KP_liberation_cr_param_buildings = 0;
+	KP_liberation_civinfo_debug = 0;
+	KP_liberation_civrep_debug = 0;
+	KP_liberation_savegame_debug = 0;
+	KP_liberation_asymmetric_debug = 0;
+	KP_liberation_logistic_debug = 0;
 };
+
+KP_liberation_debug = false;
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
 if ( GRLIB_introduction == 1 ) then { GRLIB_introduction = true } else { GRLIB_introduction = false };
@@ -83,7 +100,7 @@ if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} 
 if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};
 if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else {KP_liberation_ailogistics = false};
 if (KP_liberation_ace == 1) then {KP_liberation_ace = true} else {KP_liberation_ace = false};
-if (KP_liberation_debug == 1) then {KP_liberation_debug = true} else {KP_liberation_debug = false};
+if (KP_liberation_cr_param_buildings == 1) then {KP_liberation_cr_param_buildings = true} else {KP_liberation_cr_param_buildings = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {

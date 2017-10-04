@@ -5,7 +5,6 @@ add_civ_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\ad
 add_defense_waypoints = compileFinal preprocessFileLineNumbers "scripts\server\ai\add_defense_waypoints.sqf";
 battlegroup_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
 building_defence_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\building_defence_ai.sqf";
-csat_abandon_vehicle = compileFinal preprocessFileLineNumbers "scripts\server\ai\csat_abandon_vehicle.sqf";
 patrol_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\patrol_ai.sqf";
 prisonner_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\prisonner_ai.sqf";
 troup_transport = compileFinal preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
@@ -37,7 +36,13 @@ manage_captureboxes = compileFinal preprocessFileLineNumbers "scripts\server\sec
 manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_intel.sqf";
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
+manage_asymIED = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\ied\manage_asymIED.sqf";
 
+// Arty Monitor
+// Arty Supp deactivated for now
+/*arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
+
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";*/
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startvehicle_spawn.sqf";
@@ -74,10 +79,24 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\lose_sectors.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_sectors.sqf";
 
+// Civil Reputation
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civrep\init_module.sqf";
+
+// Civil Informant
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civinformant\init_module.sqf";
+
+// Asymmetric Threats
+[] spawn compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\init_module.sqf";
+
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {
 		deleteVehicle _x;
 	};
 } foreach allUnits;
+
+// Server Restart Script from K4s0
+if (KP_liberation_restart > 0) then {
+	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\server_restart.sqf";
+};
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_server.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};

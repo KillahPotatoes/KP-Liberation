@@ -35,11 +35,11 @@ if (isServer) then {
 	blufor_sectors pushback _liberated_sector; publicVariable "blufor_sectors";
 	stats_sectors_liberated = stats_sectors_liberated + 1;
 	
-	if ((_liberated_sector in sectors_factory) || (_liberated_sector in sectors_capture)) then {
+	if (_liberated_sector in sectors_factory) then {
 
-		private ["_sectorType", "_sectorFacilities", "_producing"];
-
-		if (_liberated_sector in sectors_factory) then {_sectorType = 1;_sectorFacilities = true;_producing = 0;} else {_sectorType = 0;_sectorFacilities = false;_producing = 3;};
+		private _sectorType = 1;
+		private _sectorFacilities = ([KP_liberation_production_markers, {_liberated_sector == (_x select 0)}] call BIS_fnc_conditionalSelect) select 0;
+		private _producing = 3;
 
 		{
 			if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
@@ -50,9 +50,9 @@ if (isServer) then {
 			_liberated_sector,
 			_sectorType,
 			[],
-			_sectorFacilities,
-			_sectorFacilities,
-			_sectorFacilities,
+			_sectorFacilities select 1,
+			_sectorFacilities select 2,
+			_sectorFacilities select 3,
 			_producing,
 			KP_liberation_production_interval,
 			0,
@@ -60,6 +60,8 @@ if (isServer) then {
 			0
 		];
 	};
+
+	[_liberated_sector] spawn F_cr_liberatedSector;
 
 	[] spawn check_victory_conditions;
 

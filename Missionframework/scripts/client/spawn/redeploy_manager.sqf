@@ -1,6 +1,9 @@
+private ["_old_fullmap", "_oldsel", "_standard_map_pos", "_frame_pos", "_access"];
+
 choiceslist = [];
 fullmap = 0;
 _old_fullmap = 0;
+_oldsel = -999;
 _standard_map_pos = [];
 _frame_pos = [];
 
@@ -20,10 +23,10 @@ waitUntil { cinematic_camera_stop };
 _basenamestr = "Operation Base";
 
 
-while { true } do {
+while {true} do {
 	waitUntil {
 		sleep 0.1;
-		( GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50) ) && vehicle player == player && alive player && !dialog && howtoplay == 0
+		(GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
 	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", debug_source];_text remoteExec ["diag_log",2];};
@@ -36,8 +39,6 @@ while { true } do {
 	if ( !GRLIB_fatigue ) then {
 		player enableStamina false;
 	};
-	player setCustomAimCoef 0.35;
-	player setUnitRecoilCoefficient 0.6;
 
 	_dialog = createDialog "liberation_deploy";
 	deploy = 0;
@@ -209,4 +210,37 @@ while { true } do {
 			removeGoggles player;
 		};
 	};
+
+	// Arty Supp deactivated for now
+	/*if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_arty")};
+		_access = false;
+		switch (KP_liberation_suppMod_enb) do {
+			case 1: {if (player == ([] call F_getCommander)) then {_access = true};};
+			case 2: {if ((getPlayerUID player) in KP_liberation_suppMod_whitelist) then {_access = true};};
+			default {_access = true;};
+		};
+		if (_access) then {
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Entered _access area", debug_source];_text remoteExec ["diag_log",2];};
+			if (isNil "KP_liberation_suppMod_handle") then {KP_liberation_suppMod_handle = scriptNull;};
+			if (isNull KP_liberation_suppMod_handle) then {
+				KP_liberation_suppMod_handle = [KP_liberation_suppMod_arty] execVM "A3\modules_f\supports\init_provider.sqf";
+			};
+			if (isNil "KP_liberation_suppMod_req") then {
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Requester seems to be Nil", debug_source];_text remoteExec ["diag_log",2];};
+				KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", KP_liberation_suppMod_grp, [], 0, "NONE"];
+				//KP_liberation_suppMod_req spawn BIS_fnc_moduleSupportsInitRequester;
+				[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";
+				{
+					[KP_liberation_suppMod_req, _x, -1] call BIS_fnc_limitSupport;
+				} forEach ["Artillery","CAS_Heli","CAS_Bombing","UAV","Drop","Transport"];
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Requester: %2", debug_source, KP_liberation_suppMod_req];_text remoteExec ["diag_log",2];};
+			};
+			if ((count (synchronizedObjects player)) == 0) then {
+				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - No synced Objects", debug_source];_text remoteExec ["diag_log",2];};
+				[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
+			};
+			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] Source: %1 - Synced to %2 -> %3", debug_source, (synchronizedObjects player), synchronizedObjects ((synchronizedObjects player) select 0)];_text remoteExec ["diag_log",2];};
+		};
+	};*/
 };

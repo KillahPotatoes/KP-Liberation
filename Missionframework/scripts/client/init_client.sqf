@@ -1,13 +1,12 @@
 [] call compileFinal preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
 switch (KP_liberation_arsenal) do {
-	case 0: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\useBlacklist.sqf";};
 	case 1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\killahpotatoes.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
 	case 6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\useBlacklist.sqf";};
+	default {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
 if ( typeOf player == "VirtualSpectator_F" ) exitWith {
@@ -58,9 +57,11 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\spawn\redeploy_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\ui_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\tutorial_manager.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\update_production_sites.sqf";
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\misc\kp_fuel_consumption.sqf";}];
+player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\civrep\kp_cr_checkVehicle.sqf";}];
 
 {
 	[_x] call BIS_fnc_drawCuratorLocations;
