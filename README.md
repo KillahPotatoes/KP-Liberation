@@ -213,6 +213,7 @@ class Missions
 * Fixed: Rescue helipad blocked building in their near vicinity.
 * Fixed: MPKill Eventhandler issue when using ACE.
 * Fixed: Function to buy a logistic truck worked but caused an error in dedicated server environment.
+* Fixed: Couldn't build under powerlines.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
