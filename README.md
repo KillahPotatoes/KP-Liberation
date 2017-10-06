@@ -187,6 +187,7 @@ class Missions
 * Added: LoW Civilians.
 * Added: LoW UAVs to the default blacklist.
 * Added: Some of the new RHS vehicles.
+* Added: Turkish localization. Thanks to [Carbneth](https://github.com/Carbneth)
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
