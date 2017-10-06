@@ -26,6 +26,8 @@ spawn_camera = compileFinal preprocessFileLineNumbers "scripts\client\spawn\spaw
 cinematic_camera = compileFinal preprocessFileLineNumbers "scripts\client\ui\cinematic_camera.sqf";
 write_credit_line = compileFinal preprocessFileLineNumbers "scripts\client\ui\write_credit_line.sqf";
 do_load_box = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
+kp_fuel_consumption = compileFinal preprocessFileLineNumbers "scripts\client\misc\kp_fuel_consumption.sqf";
+kp_cr_checkVehicle = compileFinal preprocessFileLineNumbers "scripts\client\civrep\kp_cr_checkVehicle.sqf";
 
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\actions\action_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\actions\intel_manager.sqf";
@@ -59,9 +61,9 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\ui\tutorial_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\markers\update_production_sites.sqf";
 
-player addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\misc\kp_fuel_consumption.sqf";}];
-player addEventHandler ["GetInMan", {[_this select 2] execVM "scripts\client\civrep\kp_cr_checkVehicle.sqf";}];
+player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
+player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
+player addEventHandler ["GetInMan", {[_this select 2] spawn kp_cr_checkVehicle;}];
 
 {
 	[_x] call BIS_fnc_drawCuratorLocations;

@@ -17,17 +17,13 @@ Example for initPlayerLocal.sqf:
 player addEventHandler ["GetInMan", {[ _this select 2] execVM "scripts\kp_fuel_consumption.sqf";}];
 */
 
-private ["_kp_neutral_consumption","_kp_normal_consumption","_kp_max_consumption"];
-
-/*
-CONFIG
-*/
+//CONFIG
 // Time in Minutes till a full tank depletes when the vehicle is standing with running engine
-_kp_neutral_consumption = KP_liberation_fuel_neutral;
+private _kp_neutral_consumption = KP_liberation_fuel_neutral;
 // Time in Minutes till a full tank depletes when the vehicle is driving
-_kp_normal_consumption = KP_liberation_fuel_normal;
+private _kp_normal_consumption = KP_liberation_fuel_normal;
 // Time in Minutes till a full tank depletes when the vehicle is driving at max speed
-_kp_max_consumption = KP_liberation_fuel_max;
+private _kp_max_consumption = KP_liberation_fuel_max;
 
 /*
 DO NOT EDIT BELOW

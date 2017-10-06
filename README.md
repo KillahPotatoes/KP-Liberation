@@ -184,6 +184,9 @@ class Missions
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
 * Added: Factory map markers now indicate which production facilities are available there.
+* Added: LoW Civilians.
+* Added: LoW UAVs to the default blacklist.
+* Added: Some of the new RHS vehicles.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
@@ -197,6 +200,8 @@ class Missions
 * Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
 * Tweaked: Corrected some strings in the stringtable.
 * Tweaked: Factories don't have all facilities from the start anymore. The facility they start with is set at campaign start.
+* Tweaked: Replaced all deprecated `BIS_fnc_selectRandom` with the engine solution `selectRandom`.
+* Tweaked: Server log will now contain the `[STATS]` message of all clients. (players and HCs)
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
@@ -207,6 +212,7 @@ class Missions
 * Fixed: Paratroopers got sometimes an attack helicopter instead of a transport helicopter.
 * Fixed: Rescue helipad blocked building in their near vicinity.
 * Fixed: MPKill Eventhandler issue when using ACE.
+* Fixed: Function to buy a logistic truck worked but caused an error in dedicated server environment.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
