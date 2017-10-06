@@ -74,7 +74,7 @@ while {dialog && (alive player)} do {
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
 		_tempvariable = _selectedGroup select 1;
-		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
+		[_listselect, _nearfob, clientOwner, KP_liberation_supplies, KP_liberation_ammo, KP_liberation_fuel] remoteExec ["add_logiTruck_remote_call",2];
 		waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
