@@ -17,6 +17,7 @@ crewman_classname = "UK3CB_BAF_Crewman_MTP";								// This defines the crew for
 pilot_classname = "UK3CB_BAF_HeliPilot_Army_MTP";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "UK3CB_BAF_Wildcat_AH1_TRN_8A_MTP";	// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 					// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
+KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_wd";					// These are the trucks which are used in the logistic convoy system.																		Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";			// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";			// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";						// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -76,6 +77,7 @@ light_vehicles = [
 	["UK3CB_BAF_Coyote_Passenger_L134A1_W_MTP",100,100,50],				//Coyote Passenger (GMG)
 	["UK3CB_BAF_Coyote_Logistics_L111A1_W_MTP",100,80,50],				//Coyote Logistics (HMG)
 	["UK3CB_BAF_Coyote_Logistics_L134A1_W_MTP",100,100,50],				//Coyote Logistics (GMG)
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["rhsusf_M1237_M2_usarmy_wd",125,40,75],							//M1237 (HMG)
 	["rhsusf_M1237_MK19_usarmy_wd",125,60,75],							//M1237 (GMG)
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
@@ -100,6 +102,7 @@ air_vehicles = [
 	["UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP",275,200,150],					//Wildcat AH1 8 (CAS/AT)
 	["UK3CB_BAF_Apache_AH1_MTP",500,500,200],							//Apache AH 1 (Multi-Role)
 	["RHS_AH64D_wd",750,750,250],										//AH-64D (Multi-Role)
+	["RHS_UH60M2",250,0,150],											//UH-60M (Unarmed)
 	["RHS_UH60M",250,80,150],											//UH-60M
 	["RHS_UH60M_MEV2",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F_10",275,80,175],										//CH-47 Chinook (Armed)
@@ -474,20 +477,50 @@ opfor_air = [
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
 ];
 
+/* - Guerilla forces
+classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+KP_liberation_guerilla_units = [
+	"I_G_Soldier_AR_F",
+	"I_G_engineer_F",
+	"I_G_officer_F",
+	"I_G_medic_F",
+	"I_G_Soldier_F",
+	"I_G_Soldier_LAT_F",
+	"I_G_Soldier_M_F",
+	"I_G_Soldier_SL_F"
+];
+
+KP_liberation_guerilla_vehicles = [
+	"I_G_Offroad_01_armed_F"
+];
+
 /*	- Other various mission classnames.
 Civilian classnames.	*/
 civilians = [
+	"C_Man_Fisherman_01_F",
+	"C_man_w_worker_F",
+	"C_man_1_1_F",
 	"C_man_p_beggar_F",
+	"C_Man_Messenger_01_F",
+	"C_man_hunter_1_F",
+	"C_journalist_F",
+	"C_Journalist_01_War_F",
+	"C_man_shorts_2_F",
+	"C_Man_UtilityWorker_01_F",
+	"C_man_1",
+	"C_Man_casual_1_F",
+	"C_Man_casual_2_F",
+	"C_Man_casual_3_F",
+	"C_Man_casual_4_F",
+	"C_Man_casual_5_F",
+	"C_Man_casual_6_F",
 	"C_man_polo_1_F",
 	"C_man_polo_2_F",
 	"C_man_polo_3_F",
 	"C_man_polo_4_F",
 	"C_man_polo_5_F",
-	"C_man_polo_6_F",
-	"C_man_1_1_F",
-	"C_man_hunter_1_F",
-	"C_journalist_F",
-	"C_man_w_worker_F"
+	"C_man_polo_6_F"
 ];
 
 // Civilian vehicle classnames.

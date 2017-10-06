@@ -1,9 +1,7 @@
-private [ "_sourcestr", "_position", "_myfpsmarker", "_myfps", "_localunits", "_localvehicles" ];
+private _sourcestr = "Server";
+private _position = 0;
 
-if ( isServer ) then {
-	_sourcestr = "Server";
-	_position = 0;
-} else {
+if (!isServer) then {
 	if (!isNil "HC1") then {
 		if (!isNull HC1) then {
 			if (local HC1) then {
@@ -32,22 +30,21 @@ if ( isServer ) then {
 	};
 };
 
-_myfpsmarker = createMarker [ format ["fpsmarker%1", _sourcestr ], [ 500, 500 + (500 * _position) ] ];
+private _myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [500, 500 + (500 * _position)]];
 _myfpsmarker setMarkerType "mil_start";
-_myfpsmarker setMarkerSize [ 0.7, 0.7 ];
+_myfpsmarker setMarkerSize [0.7, 0.7];
 
-while { true } do {
+while {true} do {
 
-	_myfps = diag_fps;
-	_localunits = { local _x } count allUnits;
-	_localvehicles = { local _x } count vehicles;
+	private _myfps = diag_fps;
+	private _localunits = {local _x} count allUnits;
 
 	_myfpsmarker setMarkerColor "ColorGREEN";
-	if ( _myfps < 30 ) then { _myfpsmarker setMarkerColor "ColorYELLOW"; };
-	if ( _myfps < 20 ) then { _myfpsmarker setMarkerColor "ColorORANGE"; };
-	if ( _myfps < 10 ) then { _myfpsmarker setMarkerColor GRLIB_color_enemy_bright; };
+	if (_myfps < 30) then {_myfpsmarker setMarkerColor "ColorYELLOW";};
+	if (_myfps < 20) then {_myfpsmarker setMarkerColor "ColorORANGE";};
+	if (_myfps < 10) then {_myfpsmarker setMarkerColor GRLIB_color_enemy_bright;};
 
-	_myfpsmarker setMarkerText format [ "%1: %2 fps, %3 units, %4 vehicles", _sourcestr, ( round ( _myfps * 100.0 ) ) / 100.0 , _localunits, _localvehicles ];
+	_myfpsmarker setMarkerText format ["%1: %2 fps, %3 local units", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localunits];
 
 	sleep 15;
 };

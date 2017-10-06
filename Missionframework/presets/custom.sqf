@@ -17,6 +17,7 @@ crewman_classname = "B_crew_F";											// This defines the crew for vehicles.
 pilot_classname = "B_Helipilot_F";										// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; 				// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
+KP_liberation_truck_classname = "B_Truck_01_transport_F";				// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -80,6 +81,7 @@ light_vehicles = [
 	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
 	["BWA3_Eagle_Fleck",100,0,50],										//Eagle IV
 	["BWA3_Eagle_FLW100_Fleck",100,100,50],								//Eagle IV (FLW 100)
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["B_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_Truck_01_covered_F",125,0,75],									//HEMTT Transport (Covered)
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
@@ -122,10 +124,8 @@ air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
 	["B_Heli_Light_01_F",200,0,100],									//MH-9 Hummingbird
 	["B_Heli_Light_01_dynamicLoadout_F",200,100,100],					//AH-9 Pawnee
-	["RHS_MELB_MH6M",200,0,100],										//AH-6M Little Bird
-	["RHS_MELB_AH6M_L",200,100,100],									//AH-6M-L Little Bird
-	["RHS_MELB_AH6M_M",200,200,100],									//AH-6M-M Little Bird
-	["RHS_MELB_AH6M_H",200,350,100],									//AH-6M-H Little Bird
+	["RHS_MELB_MH6M",200,0,100],										//MH-6M Little Bird
+	["RHS_MELB_AH6M",200,200,100],										//AH-6M Pawnee
 	["I_Heli_light_03_unarmed_F",225,0,125],							//WY-55 Hellcat
 	["I_Heli_light_03_dynamicLoadout_F",225,200,125],					//WY-55 Hellcat (Armed)
 	["RHS_UH1Y_UNARMED",225,0,125],										//UH-1Y (Unarmed)
@@ -136,6 +136,7 @@ air_vehicles = [
 	["BWA3_Tiger_RMK_Universal",750,750,250],							//UH Tiger RMK (Universal)
 	["B_Heli_Transport_01_F",250,80,150],								//UH-80 Ghost Hawk
 	["B_Heli_Transport_01_camo_F",250,80,150],							//UH-80 Ghost Hawk (Camo)
+	["RHS_UH60M2",250,0,150],											//UH-60M (Unarmed)
 	["RHS_UH60M",250,80,150],											//UH-60M
 	["RHS_UH60M_MEV2",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F",275,80,175],											//CH-47 Chinook (Armed)
@@ -406,24 +407,24 @@ opfor_flag = "Flag_CSAT_F";												//CSAT Flag
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often.
 Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.	*/
 militia_squad = [
-	"O_G_Soldier_TL_F",													//Team Leader
-	"O_G_Soldier_SL_F",													//Squad Leader
-	"O_G_Soldier_lite_F",												//Rifleman (Lite)
-	"O_G_Soldier_F",													//Rifleman
-	"O_G_Soldier_F",													//Rifleman
-	"O_G_Soldier_LAT_F",												//Rifleman (AT)
-	"O_G_Soldier_GL_F",													//Grenadier
-	"O_G_Soldier_AR_F",													//Autorifleman
-	"O_G_Soldier_AR_F",													//Autorifleman
-	"O_G_Soldier_M_F",													//Marksman
-	"O_G_medic_F",														//Medic
-	"O_G_engineer_F",													//Engineer
-	"O_G_Soldier_exp_F"													//Explosives Specialist
+	"O_soldierU_TL_F",													//Team Leader
+	"O_SoldierU_SL_F",													//Squad Leader
+	"O_soldierU_F",														//Rifleman (Lite)
+	"O_soldierU_F",														//Rifleman
+	"O_soldierU_F",														//Rifleman
+	"O_soldierU_LAT_F",													//Rifleman (AT)
+	"O_SoldierU_GL_F",													//Grenadier
+	"O_soldierU_AR_F",													//Autorifleman
+	"O_soldierU_AR_F",													//Autorifleman
+	"O_soldierU_M_F",													//Marksman
+	"O_soldierU_medic_F",												//Medic
+	"O_engineer_U_F",													//Engineer
+	"O_soldierU_exp_F"													//Explosives Specialist
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
 militia_vehicles = [
-	"O_G_Offroad_01_armed_F"											//Offroad (HMG)
+	"O_LSV_02_armed_F"													//Qilin (armed)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
@@ -499,20 +500,50 @@ opfor_air = [
 	"O_Plane_Fighter_02_F"												//To-201 Shikra
 ];
 
+/* - Guerilla forces
+classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+KP_liberation_guerilla_units = [
+	"I_G_Soldier_AR_F",
+	"I_G_engineer_F",
+	"I_G_officer_F",
+	"I_G_medic_F",
+	"I_G_Soldier_F",
+	"I_G_Soldier_LAT_F",
+	"I_G_Soldier_M_F",
+	"I_G_Soldier_SL_F"
+];
+
+KP_liberation_guerilla_vehicles = [
+	"I_G_Offroad_01_armed_F"
+];
+
 /*	- Other various mission classnames.
 Civilian classnames.	*/
 civilians = [
+	"C_Man_Fisherman_01_F",
+	"C_man_w_worker_F",
+	"C_man_1_1_F",
 	"C_man_p_beggar_F",
+	"C_Man_Messenger_01_F",
+	"C_man_hunter_1_F",
+	"C_journalist_F",
+	"C_Journalist_01_War_F",
+	"C_man_shorts_2_F",
+	"C_Man_UtilityWorker_01_F",
+	"C_man_1",
+	"C_Man_casual_1_F",
+	"C_Man_casual_2_F",
+	"C_Man_casual_3_F",
+	"C_Man_casual_4_F",
+	"C_Man_casual_5_F",
+	"C_Man_casual_6_F",
 	"C_man_polo_1_F",
 	"C_man_polo_2_F",
 	"C_man_polo_3_F",
 	"C_man_polo_4_F",
 	"C_man_polo_5_F",
-	"C_man_polo_6_F",
-	"C_man_1_1_F",
-	"C_man_hunter_1_F",
-	"C_journalist_F",
-	"C_man_w_worker_F"
+	"C_man_polo_6_F"
 ];
 
 // Civilian vehicle classnames.

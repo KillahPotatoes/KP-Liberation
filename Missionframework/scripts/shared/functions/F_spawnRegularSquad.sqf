@@ -20,20 +20,6 @@ _grp = createGroup GRLIB_side_enemy;
 	sleep 0.1;
 } foreach _squadies_to_spawn;
 
-if ( _sector in sectors_capture ) then {
-	_unitidx = 0;
-	{
-		if ( (typeof _x) in original_resistance ) then {
-			[ _x ] spawn ( militia_standard_squad select _unitidx );
-			if ( random 100 < 40 ) then {
-				_x addPrimaryWeaponItem "acc_flashlight";
-			};
-		};
-		_unitidx = _unitidx + 1;
-		if ( _unitidx > 9 ) then { _unitidx = 0 };
-	} foreach (units _grp);
-};
-
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Spawning regular squad done at %1 - Owner: %2", time, debug_source];_text remoteExec ["diag_log",2];};
 
 _grp;

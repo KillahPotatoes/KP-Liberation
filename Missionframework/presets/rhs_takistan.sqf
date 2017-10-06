@@ -8,15 +8,16 @@
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
 FOB_typename = "Land_Cargo_HQ_V3_F";									// This is the main FOB HQ building. 																									Default is "Land_Cargo_HQ_V1_F".
 FOB_box_typename = "B_Slingload_01_Cargo_F";							// This is the FOB as a container. 																										Default is "B_Slingload_01_Cargo_F".
-FOB_truck_typename = "rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy";			// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
+FOB_truck_typename = "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy";				// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.  																				Default is "B_supplyCrate_F".
-Respawn_truck_typename = "rhsusf_m113d_usarmy_medical";					// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
+Respawn_truck_typename = "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy";	// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
 huron_typename = "RHS_CH_47F";											// This is Spartan 01, a multipurpose mobile respawn as a helicopter. 																	Default is "B_Heli_Transport_03_unarmed_F".
 opfor_ammobox_transport = "LOP_TKA_Ural_open";							// Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config.sqf) otherwise things will break!	Default is "O_Truck_03_transport_F".
 crewman_classname = "rhsusf_army_ocp_combatcrewman";					// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "rhsusf_army_ocp_helipilot";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "RHS_MELB_MH6M";					// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
+KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_d";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -67,6 +68,7 @@ light_vehicles = [
 	["rhsusf_m1025_d_Mk19",100,60,50],									//M1025A2 (Mk19)
 	["rhsusf_m998_d_2dr_fulltop",100,0,50],								//M1097A2 (2D)
 	["rhsusf_m998_d_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
+	["rhsusf_M1230a1_usarmy_d",120,0,60],								//M1230A1 (MEDEVAC)
 	["rhsusf_M1083A1P2_d_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
 	["rhsusf_M1083A1P2_d_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
 	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT
@@ -78,6 +80,7 @@ light_vehicles = [
 heavy_vehicles = [
 	["rhsusf_m113d_usarmy",200,40,100],									//M113A3 (M2)
 	["rhsusf_m113d_usarmy_MK19",200,60,100],							//M113A3 (Mk19)
+	["rhsusf_m113d_usarmy_medical",200,0,100],							//M113A3 (Medical)
 	["RHS_M2A2_BUSKI",300,200,150],										//M2A2ODS (Busk I)
 	["RHS_M2A3_BUSKIII",300,250,175],									//M2A3 (Busk III)
 	["RHS_M6",300,250,175],												//M6A2
@@ -88,14 +91,13 @@ heavy_vehicles = [
 
 air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
-	["RHS_MELB_MH6M",200,0,100],										//AH-6M Little Bird
-	["RHS_MELB_AH6M_L",200,100,100],									//AH-6M-L Little Bird
-	["RHS_MELB_AH6M_M",200,200,100],									//AH-6M-M Little Bird
-	["RHS_MELB_AH6M_H",200,350,100],									//AH-6M-H Little Bird
+	["RHS_MELB_MH6M",200,0,100],										//MH-6M Little Bird
+	["RHS_MELB_AH6M",200,200,100],										//AH-6M Pawnee
 	["RHS_UH1Y_UNARMED_d",225,0,125],									//UH-1Y (Unarmed)
 	["RHS_UH1Y_d_GS",225,200,125],										//UH-1Y (Ground Suppression)
 	["RHS_AH1Z",500,500,200],											//AH-1Z (Multi-Role)
 	["RHS_AH64D",750,750,250],											//AH-64D (Multi-Role)
+	["RHS_UH60M2_d",250,0,150],											//UH-60M (Unarmed)
 	["RHS_UH60M_d",250,80,150],											//UH-60M
 	["RHS_UH60M_MEV2_d",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F_10",275,80,175],										//CH-47 Chinook (Armed)
@@ -460,6 +462,21 @@ opfor_choppers = [
 opfor_air = [
 	"RHS_Su25SM_vvsc",													//Su-25
 	"RHS_Su25SM_KH29_vvsc"												//Su-25 (KH29)
+];
+
+/* - Guerilla forces
+classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+KP_liberation_guerilla_units = [
+	"I_C_Soldier_Bandit_1_F",
+	"I_C_Soldier_Bandit_2_F",
+	"I_C_Soldier_Bandit_3_F",
+	"I_C_Soldier_Bandit_4_F",
+	"I_C_Soldier_Bandit_5_F"
+];
+
+KP_liberation_guerilla_vehicles = [
+	"I_G_Offroad_01_armed_F"
 ];
 
 /*	- Other various mission classnames.

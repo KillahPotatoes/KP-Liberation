@@ -3,6 +3,9 @@ waitUntil {!isNil "KP_liberation_logistics"};
 
 if (KP_liberation_logistic_debug > 0) then {private _text = format ["[KP LIBERATION] [LOGISTIC] Logistic management started on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
+KP_liberation_convoy_ambush_inProgress = false;
+KP_liberation_convoy_ambush_check = 0;
+
 while {GRLIB_endgame == 0} do {
 
 	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {
@@ -139,7 +142,6 @@ while {GRLIB_endgame == 0} do {
 							if (KP_liberation_logistic_debug > 0) then {private _text = format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
 						} else {
 							_x set [9,1];
-							if (KP_liberation_logistic_debug > 0) then {private _text = format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
 						};
 
 						if (((_x select 9) == 1) && !((_x select _locRes) isEqualTo [0,0,0])) then {
@@ -326,7 +328,35 @@ while {GRLIB_endgame == 0} do {
 				case 2;
 				case 4: {
 					if ((_x select 8) > 1) then {
-						_x set [8,((_x select 8) - 1)];
+						
+						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25)) then {
+							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2", (_x select 0), (_x select 8)];_text remoteExec ["diag_log",2];};
+							private _dice = round (random 100);
+							if (_dice <= (KP_liberation_convoy_ambush_chance + (round ((KP_liberation_civ_rep * -1) / 25)))) then {
+								private _convoy = +_x;
+								sleep 0.1;
+								[_convoy] spawn logistic_convoy_ambush;
+								waitUntil {sleep 0.1; KP_liberation_convoy_ambush_check != 0};
+								if (KP_liberation_convoy_ambush_check == 2) then {
+									_x set [1,0];
+									_x set [2,[0,0,0]];
+									_x set [3,[0,0,0]];
+									_x set [4,[0,0,0]];
+									_x set [5,[0,0,0]];
+									_x set [6,[0,0,0]];
+									_x set [7,0];
+									_x set [8,-1];
+								} else {
+									_x set [8,((_x select 8) - 1)];
+									KP_liberation_convoy_ambush_check = 0;
+								}
+							} else {
+								if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: no ambush - Chance: %2 - Dice: %3", (_x select 0), (KP_liberation_convoy_ambush_chance + (round ((KP_liberation_civ_rep * -1) / 25))), _dice];_text remoteExec ["diag_log",2];};
+								_x set [8,((_x select 8) - 1)];	
+							};
+						} else {
+							_x set [8,((_x select 8) - 1)];
+						};
 
 						if (KP_liberation_logistic_debug > 0) then {private _text = format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
 

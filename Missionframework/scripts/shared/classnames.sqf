@@ -100,6 +100,8 @@ GRLIB_ignore_colisions_when_building = [
 	"Land_Razorwire_F",
 	"Sign_Sphere100cm_F",
 	"Land_ClutterCutter_large_F",
+	"Land_HighVoltageColumnWire_F",
+	"Land_PowerWireBig_left_F",
 	"B_HMG_01_A_F",										//Mk30A HMG .50
 	"B_HMG_01_high_F",									//Mk30 HMG .50 (Raised)
 	"B_GMG_01_A_F",										//Mk32A GMG 20mm

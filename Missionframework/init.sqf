@@ -32,7 +32,8 @@ if (!isDedicated && !hasInterface && isMultiplayer) then {
 };
 
 if (!isDedicated && hasInterface) then {
-	waitUntil { alive player };
+	waitUntil {alive player};
+	if (debug_source != name player) then {debug_source = name player};
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
 	setViewDistance 1600;

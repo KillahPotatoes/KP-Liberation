@@ -26,8 +26,10 @@ if (count GRLIB_all_fobs == 0) then {
 		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	} else {
+		private _fobbox = objNull;
+		
 		while {count GRLIB_all_fobs == 0} do {
-			private _fobbox = FOB_box_typename createVehicle (getposATL base_boxspawn);
+			_fobbox = FOB_box_typename createVehicle (getposATL base_boxspawn);
 			_fobbox setposATL (getposATL base_boxspawn);
 			_fobbox setdir getDir base_boxspawn;
 

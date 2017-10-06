@@ -2,11 +2,11 @@ params ["_sector", "_count"];
 
 if (_count <= 0) exitWith {};
 
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf for %1 spawned on: %2", markerText _sector, debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf for %1 spawned on: %2", markerText _sector, debug_source];};
 
 waitUntil {sleep 1; _sector in KP_liberation_asymmetric_sectors};
 
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> spawning IED %1 at %2", _count, markerText _sector];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> spawning IED %1 at %2", _count, markerText _sector];};
 
 private _activation_radius_infantry = 6.66;
 private _activation_radius_vehicles = 10;
@@ -28,7 +28,7 @@ if (!(isnull _roadobj)) then {
 	_ied_obj = createMine [_ied_type, [_roadpos, _spread, random (360)] call BIS_fnc_relPos, [], 0];
 	_ied_obj setdir (random 360);
 
-	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> IED %1 spawned at %2", _count, markerText _sector];_text remoteExec ["diag_log",2];_ied_marker = createMarker [str _ied_obj, getPos _ied_obj];_ied_marker setMarkerColor "ColorRed";_ied_marker setMarkerType "hd_dot";_ied_marker setMarkerText "IED";};
+	if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> IED %1 spawned at %2", _count, markerText _sector];};
 
 	while {(_sector in KP_liberation_asymmetric_sectors) && (mineActive _ied_obj) && !_goes_boom} do {
 		_nearinfantry = [(getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry] , {side _x == GRLIB_side_friendly}] call BIS_fnc_conditionalSelect;
@@ -41,10 +41,10 @@ if (!(isnull _roadobj)) then {
 		sleep 1;
 	};
 } else {
-	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> _roadobj is Null for IED %1 at %2", _count, markerText _sector];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> _roadobj is Null for IED %1 at %2", _count, markerText _sector];};
 };
 
-if ((KP_liberation_asymmetric_debug > 0) && !(isNull _roadobj)) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> exited IED %1 loop at %2", _count, markerText _sector];_text remoteExec ["diag_log",2];deleteMarker _ied_marker;};
+if ((KP_liberation_asymmetric_debug > 0) && !(isNull _roadobj)) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] manage_asymIED.sqf -> exited IED %1 loop at %2", _count, markerText _sector];};
 
 sleep 1800;
 

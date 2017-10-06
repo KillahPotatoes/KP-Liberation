@@ -1,30 +1,28 @@
 if (!isServer) exitWith {};
 
-params ["_index", "_nearfob", "_clientID"];
-
-private ["_storage_areas", "_price_s", "_price_a", "_price_f", "_storage_positions", "_storedCrates", "_crateValue"];
+params ["_index", "_nearfob", "_clientID", "_supplies", "_ammo", "_fuel"];
 
 logiError = 0;
 
-_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+private _storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
 
 if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
-_price_s = 100;
-_price_a = 0;
-_price_f = 100;
+private _price_s = 100;
+private _price_a = 0;
+private _price_f = 100;
 
-if ((_price_s > KP_liberation_supplies) || (_price_a > KP_liberation_ammo) || (_price_f > KP_liberation_fuel)) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
+if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 {
 	
 
-	_storage_positions = [];
-	_storedCrates = (attachedObjects _x);
+	private _storage_positions = [];
+	private _storedCrates = (attachedObjects _x);
 	reverse _storedCrates;
 
 	{
-		_crateValue = _x getVariable ["KP_liberation_crate_value",0];
+		private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 		switch ((typeOf _x)) do {
 			case KP_liberation_supply_crate: { 

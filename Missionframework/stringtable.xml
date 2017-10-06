@@ -1628,7 +1628,7 @@
 		<Key ID="STR_RESUPPLY_TOOLTIP">
 			<Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
 			<French>Si le membre d'escouade sélectionné est assez près d'un point d'approvisionnement (spawn mobile ou FOB) il recevra un nouvel équipement complet.</French>
-			<German>Wenn das gewählte Gruppenmitglied nahe genug bei einem Versorgungspunkt (mobiler Spawn oder FOB)ist, erhält es eine brandneue, vollständige Ausrüstung</German>
+			<German>Wenn das gewählte Gruppenmitglied nahe genug bei einem Versorgungspunkt (mobiler Spawn oder FOB) ist, erhält es eine brandneue, vollständige Ausrüstung</German>
 			<Spanish>Si el miembro de la escuadra se encuentra cerca de un punto de abastecimiento (spawn móvil o FOB) obtendrá el equipamiento completo nuevo</Spanish>
 			<Russian>Если выбранный член группы находится достаточно близко от точки пополнения запасов (мобильный КШМ или FOB), он будет заменён новым, полностью снаряжённым.</Russian>
 			<Italian>Se il membro di una squadra è nei pressi di una FOB o Respwan Mobile potrà ricaricare il suo loadout.</Italian>
@@ -4284,7 +4284,7 @@
 			<German>Automatischer Server Restart nach (Stunden)</German>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUGOPTIONS">
-			<Original>== DEBUG MESSAGE SETTINGS ==</Original>
+			<Original>== DEBUG MESSAGES ==</Original>
 			<German>== DEBUG NACHRICHTEN ==</German>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_CIVINFO">
@@ -4322,6 +4322,22 @@
 		<Key ID="STR_PARAMS_DEBUG_LOGISTIC">
 			<Original>Logistic</Original>
 			<German>Logistik</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
+			<Original>Logistic Convoy Ambush</Original>
+			<German>Logistikkonvoi Überfall</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
+			<Original>Guerilla forces attacking our convoy near %1.</Original>
+			<German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
+			<Original>The ambush was successfully repulsed.</Original>
+			<German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
+			<Original>The guerilla forces excaped with the convoy resources.</Original>
+			<German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
 		</Key>
 	</Package>
 </Project>

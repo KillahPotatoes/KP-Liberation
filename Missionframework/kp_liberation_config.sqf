@@ -9,7 +9,9 @@ KP_liberation_medical_vehicles = [
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
 	"RHS_UH60M_MEV2",
-	"RHS_UH60M_MEV2_d"
+	"RHS_UH60M_MEV2_d",
+	"rhsusf_M1230a1_usarmy_d",
+	"rhsusf_M1230a1_usarmy_wd"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -96,6 +98,9 @@ KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn c
 KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount
 KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning (seconds)
 
+KP_liberation_convoy_ambush_chance = 4;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low
+KP_liberation_convoy_ambush_duration = 1800;																	// Duration of the convoy ambush event (seconds)
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
@@ -170,6 +175,18 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
 	"RHS_SPG9_Tripod_Bag",
+	"I_UAV_06_backpack_F",
+	"O_UAV_06_backpack_F",
+	"B_UAV_06_backpack_F",
+	"I_UAV_06_medical_backpack_F",
+	"O_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_medical_backpack_F",
+	"B_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_antimine_backpack_F",
+	"C_UAV_06_backpack_F",
+	"C_IDAP_UAV_06_backpack_F",
+	"C_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_01_backpack_F",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
@@ -411,6 +428,29 @@ KP_liberation_small_storage_positions = [
 	[-0.75,-1.79883,0.6],
 	[0.850586,-1.79883,0.6],
 	[2.4502,-1.79883,0.6]
+];
+
+// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation
+KP_liberation_cr_ignored_buildings = [
+	"Land_LampStreet_small_F",
+	"Land_PowerPoleWooden_L_F",
+	"Land_LampShabby_F",
+	"Land_SlideCastle_F",
+	"Land_Carousel_01_F",
+	"Land_LampDecor_F",
+	"Land_LampStreet_F",
+	"Land_LampHalogen_F",
+	"Land_LampSolar_F",
+	"Land_LampHarbour_F",
+	"Land_HighVoltageColumnWire_F",
+	"Land_HighVoltageColumn_F",
+	"Land_fs_feed_F",
+	"Land_PowerWireBig_left_F",
+	"Land_runway_edgelight_blue_F",
+	"Land_LampAirport_off_F",
+	"Land_Flush_Light_green_F",
+	"Land_LampAirport_F",
+	"Land_PierLadder_F"
 ];
 
 // DO NOT CHANGE (unless you know what you are doing).

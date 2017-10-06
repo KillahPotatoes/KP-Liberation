@@ -38,6 +38,9 @@ manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\secto
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 manage_asymIED = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\ied\manage_asymIED.sqf";
 
+// Asymmetric
+logistic_convoy_ambush = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\convoy\logistic_convoy_ambush.sqf";
+
 // Arty Monitor
 // Arty Supp deactivated for now
 /*arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";

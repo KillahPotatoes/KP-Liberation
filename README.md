@@ -162,23 +162,31 @@ class Missions
 
 ### 0.96 (in Development)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
-* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone. (Currently deactivated, as there are still issues in MP)
-* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew). (Currently deactivated, as there are still issues in MP)
-* Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
+	* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
+	* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
+	* Added: Players can request artillery support from players (generates task).
 * Added: Civil Reputation.
-* Added: Config variables for the civil reputation.
-* Added: Reputation penalty for killing civilians.
-* Added: Reputation penalty for seizing civil vehicles.
-* Added: Players can request artillery support from players (generates task). (Currently deactivated, as there are still issues in MP)
-* Added: Reputation penalty for destroyed/damaged civil buildings.
-* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
-* Added: Reputation gain for liberated sectors.
+	* Added: Config variables in `kp_liberation_config.sqf`.
+	* Added: Reputation penalty for killing civilians.
+	* Added: Reputation penalty for seizing civil vehicles.
+	* Added: Reputation penalty for destroyed/damaged civil buildings.
+	* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
+	* Added: Reputation gain for liberated sectors.
+* Added: Civil informant.
+	* Added: If you've a good reputation, a civil informant can rarely spawn at blufor sectors.
+	* Added: Intel increase, if you capture the informant and bring him back to a FOB.
+* Added: Asymmetric Threats.
+	* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
+	* Added: Own logistic convoys can be ambushed by guerilla forces.
+	* Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
+	* Added: Arrays in preset files for the guerilla forces.
+* Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
-* Added: Civil informant can rarely spawn in blufor sectors, when reputation is high enough.
 * Added: Factory map markers now indicate which production facilities are available there.
-* Added: Asymmetric Threats.
-* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
+* Added: LoW Civilians.
+* Added: LoW UAVs to the default blacklist.
+* Added: Some of the new RHS vehicles.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
@@ -192,6 +200,8 @@ class Missions
 * Tweaked: IED count in cities, capitals and factories is now dependend on the civil reputation.
 * Tweaked: Corrected some strings in the stringtable.
 * Tweaked: Factories don't have all facilities from the start anymore. The facility they start with is set at campaign start.
+* Tweaked: Replaced all deprecated `BIS_fnc_selectRandom` with the engine solution `selectRandom`.
+* Tweaked: Server log will now contain the `[STATS]` message of all clients. (players and HCs)
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
@@ -202,6 +212,8 @@ class Missions
 * Fixed: Paratroopers got sometimes an attack helicopter instead of a transport helicopter.
 * Fixed: Rescue helipad blocked building in their near vicinity.
 * Fixed: MPKill Eventhandler issue when using ACE.
+* Fixed: Function to buy a logistic truck worked but caused an error in dedicated server environment.
+* Fixed: Couldn't build under powerlines.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
