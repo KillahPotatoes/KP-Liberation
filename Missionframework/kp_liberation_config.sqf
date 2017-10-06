@@ -9,7 +9,9 @@ KP_liberation_medical_vehicles = [
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
 	"RHS_UH60M_MEV2",
-	"RHS_UH60M_MEV2_d"
+	"RHS_UH60M_MEV2_d",
+	"rhsusf_M1230a1_usarmy_d",
+	"rhsusf_M1230a1_usarmy_wd"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -173,6 +175,18 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
 	"RHS_SPG9_Tripod_Bag",
+	"I_UAV_06_backpack_F",
+	"O_UAV_06_backpack_F",
+	"B_UAV_06_backpack_F",
+	"I_UAV_06_medical_backpack_F",
+	"O_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_medical_backpack_F",
+	"B_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_antimine_backpack_F",
+	"C_UAV_06_backpack_F",
+	"C_IDAP_UAV_06_backpack_F",
+	"C_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_01_backpack_F",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
