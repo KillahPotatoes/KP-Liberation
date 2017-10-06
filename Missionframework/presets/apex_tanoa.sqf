@@ -75,6 +75,7 @@ light_vehicles = [
 	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
 	["BWA3_Eagle_Fleck",100,0,50],										//Eagle IV
 	["BWA3_Eagle_FLW100_Fleck",100,100,50],								//Eagle IV (FLW 100)
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["B_T_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_T_Truck_01_covered_F",125,0,75],								//HEMTT Transport (Covered)
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
@@ -117,10 +118,8 @@ air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
 	["B_Heli_Light_01_F",200,0,100],									//MH-9 Hummingbird
 	["B_Heli_Light_01_dynamicLoadout_F",200,100,100],					//AH-9 Pawnee
-	["RHS_MELB_MH6M",200,0,100],										//AH-6M Little Bird
-	["RHS_MELB_AH6M_L",200,100,100],									//AH-6M-L Little Bird
-	["RHS_MELB_AH6M_M",200,200,100],									//AH-6M-M Little Bird
-	["RHS_MELB_AH6M_H",200,350,100],									//AH-6M-H Little Bird
+	["RHS_MELB_MH6M",200,0,100],										//MH-6M Little Bird
+	["RHS_MELB_AH6M",200,200,100],										//AH-6M Pawnee
 	["I_Heli_light_03_unarmed_F",225,0,125],							//WY-55 Hellcat
 	["I_Heli_light_03_dynamicLoadout_F",225,200,125],					//WY-55 Hellcat (Armed)
 	["RHS_UH1Y_UNARMED",225,0,125],										//UH-1Y (Unarmed)
@@ -131,6 +130,7 @@ air_vehicles = [
 	["BWA3_Tiger_RMK_Universal",750,750,250],							//UH Tiger RMK (Universal)
 	["B_Heli_Transport_01_F",250,80,150],								//UH-80 Ghost Hawk
 	["B_Heli_Transport_01_camo_F",250,80,150],							//UH-80 Ghost Hawk (Camo)
+	["RHS_UH60M2",250,0,150],											//UH-60M (Unarmed)
 	["RHS_UH60M",250,80,150],											//UH-60M
 	["RHS_UH60M_MEV2",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F",275,80,175],											//CH-47 Chinook (Armed)
@@ -526,7 +526,12 @@ civilians = [
 	"C_Man_casual_6_F_tanoan",
 	"C_man_sport_1_F_tanoan",
 	"C_man_sport_2_F_tanoan",
-	"C_man_sport_3_F_tanoan"
+	"C_man_sport_3_F_tanoan",
+	"C_Man_Fisherman_01_F",
+	"C_Man_UtilityWorker_01_F",
+	"C_man_hunter_1_F",
+	"C_journalist_F",
+	"C_Journalist_01_War_F"
 ];
 
 // Civilian vehicle classnames.

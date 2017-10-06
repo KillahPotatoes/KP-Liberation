@@ -8,9 +8,9 @@
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
 FOB_typename = "Land_Cargo_HQ_V1_F";									// This is the main FOB HQ building. 																									Default is "Land_Cargo_HQ_V1_F".
 FOB_box_typename = "B_Slingload_01_Cargo_F";							// This is the FOB as a container. 																										Default is "B_Slingload_01_Cargo_F".
-FOB_truck_typename = "B_Truck_01_box_F";								// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
+FOB_truck_typename = "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy";			// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.  																				Default is "B_supplyCrate_F".
-Respawn_truck_typename = "rhsusf_m113_usarmy_medical";					// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
+Respawn_truck_typename = "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy";	// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
 huron_typename = "RHS_CH_47F";											// This is Spartan 01, a multipurpose mobile respawn as a helicopter. 																	Default is "B_Heli_Transport_03_unarmed_F".
 opfor_ammobox_transport = "RHS_Ural_Open_MSV_01";						// Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config.sqf) otherwise things will break!	Default is "O_Truck_03_transport_F".
 crewman_classname = "rhsusf_army_ucp_combatcrewman";					// This defines the crew for vehicles. 																									Default is "B_crew_F".
@@ -67,7 +67,8 @@ light_vehicles = [
 	["rhsusf_m1025_w_m2",100,40,50],									//M1025A2 (M2)
 	["rhsusf_m1025_w_mk19",100,60,50],									//M1025A2 (Mk19)
 	["rhsusf_m998_w_2dr_fulltop",100,0,50],								//M1097A2 (2D)
-	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)					
+	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)				
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
 	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT (cargo truck)
@@ -83,6 +84,7 @@ light_vehicles = [
 heavy_vehicles = [
 	["rhsusf_m113_usarmy",200,40,100],									//M113A3 (M2)
 	["rhsusf_m113_usarmy_MK19",200,60,100],								//M113A3 (Mk19)
+	["rhsusf_m113_usarmy_medical",200,0,100],							//M113A3 (Medical)
 	["RHS_M2A2_BUSKI_WD",300,200,150],									//M2A2ODS (Busk I)
 	["RHS_M2A3_BUSKIII_wd",300,250,175],								//M2A3 (Busk III)
 	["RHS_M6_wd",300,250,175],											//M6A2
@@ -93,14 +95,13 @@ heavy_vehicles = [
 
 air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
-	["RHS_MELB_MH6M",200,0,100],										//AH-6M Little Bird
-	["RHS_MELB_AH6M_L",200,100,100],									//AH-6M-L Little Bird
-	["RHS_MELB_AH6M_M",200,200,100],									//AH-6M-M Little Bird
-	["RHS_MELB_AH6M_H",200,350,100],									//AH-6M-H Little Bird
+	["RHS_MELB_MH6M",200,0,100],										//MH-6M Little Bird
+	["RHS_MELB_AH6M",200,200,100],										//AH-6M Pawnee
 	["RHS_UH1Y_UNARMED",225,0,125],										//UH-1Y (Unarmed)
 	["RHS_UH1Y_GS",225,200,125],										//UH-1Y (Ground Suppression)
 	["RHS_AH1Z",500,500,200],											//AH-1Z (Multi-Role)
 	["RHS_AH64D_wd",750,750,250],										//AH-64D (Multi-Role)
+	["RHS_UH60M2",250,0,150],											//UH-60M (Unarmed)
 	["RHS_UH60M",250,80,150],											//UH-60M
 	["RHS_UH60M_MEV2",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F_10",275,80,175],										//CH-47 Chinook (Armed)
@@ -487,17 +488,29 @@ KP_liberation_guerilla_vehicles = [
 /*	- Other various mission classnames.
 Civilian classnames.	*/
 civilians = [
+	"C_Man_Fisherman_01_F",
+	"C_man_w_worker_F",
+	"C_man_1_1_F",
 	"C_man_p_beggar_F",
+	"C_Man_Messenger_01_F",
+	"C_man_hunter_1_F",
+	"C_journalist_F",
+	"C_Journalist_01_War_F",
+	"C_man_shorts_2_F",
+	"C_Man_UtilityWorker_01_F",
+	"C_man_1",
+	"C_Man_casual_1_F",
+	"C_Man_casual_2_F",
+	"C_Man_casual_3_F",
+	"C_Man_casual_4_F",
+	"C_Man_casual_5_F",
+	"C_Man_casual_6_F",
 	"C_man_polo_1_F",
 	"C_man_polo_2_F",
 	"C_man_polo_3_F",
 	"C_man_polo_4_F",
 	"C_man_polo_5_F",
-	"C_man_polo_6_F",
-	"C_man_1_1_F",
-	"C_man_hunter_1_F",
-	"C_journalist_F",
-	"C_man_w_worker_F"
+	"C_man_polo_6_F"
 ];
 
 // Civilian vehicle classnames.
