@@ -22,15 +22,24 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings.
-Which units preset should be used?
-0 = Default vanilla with RHS USAF and BWMod, both optional (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
-1 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
-2 = RHS USAF and RHS AFRF.
-3 = RHS USAF, RHS AFRF and BWMod.
-4 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
-5 = 3cbBAF, RHS USAF and RHS AFRF. */
-KP_liberation_preset = 0;
+/* - Custom unit and arsenal preset settings. 
+If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
+
+/* BLUFOR preset:
+0 = custom (default vanilla with many optional mods supported) */
+KP_liberation_preset_blufor = 0;
+
+/* OPFOR preset:
+0 = custom (default vanilla CSAT) */
+KP_liberation_preset_opfor = 0;
+
+/* Resistance preset:
+0 = custom (default vanilla) */
+KP_liberation_preset_resistance = 0;
+
+/* Civilians preset:
+0 = custom (default vanilla) */
+KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
 0 = Use the default blacklist method (defined below).

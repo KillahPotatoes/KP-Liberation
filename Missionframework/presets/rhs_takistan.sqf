@@ -327,8 +327,8 @@ blufor_squad_para = [
 /* - Badguy classnames.
 All enemy infantry are defined here.	*/
 opfor_officer = "LOP_TKA_Infantry_Officer";								//Officer
-opfor_team_leader = "LOP_TKA_Infantry_TL";								//Team Leader
 opfor_squad_leader = "LOP_TKA_Infantry_SL";								//Squad Leader
+opfor_team_leader = "LOP_TKA_Infantry_TL";								//Team Leader
 opfor_sentry = "LOP_TKA_Infantry_Rifleman";								//Rifleman (Lite)
 opfor_rifleman = "LOP_TKA_Infantry_Rifleman_2";							//Rifleman
 opfor_rpg = "LOP_TKA_Infantry_Rifleman_3";								//Rifleman (LAT)

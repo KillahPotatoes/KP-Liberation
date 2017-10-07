@@ -6,17 +6,7 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_sectors.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
-
-switch (KP_liberation_preset) do {
-	case 0: {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\custom.sqf";};
-};
-
+[] call compileFinal preprocessFileLineNumbers "presets\init_presets.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames.sqf";
 
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
