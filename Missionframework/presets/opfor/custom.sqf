@@ -43,8 +43,8 @@ Therefore, adding the same value twice or three times means they are more likely
 
 // Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders. */
 militia_squad = [
-	"O_soldierU_TL_F",													//Team Leader
 	"O_SoldierU_SL_F",													//Squad Leader
+	"O_soldierU_TL_F",													//Team Leader
 	"O_soldierU_F",														//Rifleman (Lite)
 	"O_soldierU_F",														//Rifleman
 	"O_soldierU_F",														//Rifleman

@@ -7,7 +7,7 @@ Optional Mods:
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
-Standard loadout (except the uniform) of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
+Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
 KP_liberation_guerilla_units = [
 	"I_G_Soldier_AR_F",
 	"I_G_engineer_F",

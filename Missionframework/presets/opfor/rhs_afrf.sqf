@@ -41,8 +41,8 @@ opfor_flag = "rhs_Flag_Russia_F";										//Russian Flag
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often.
 Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.	*/
 militia_squad = [
-	"rhs_msv_emr_sergeant",												//Team Leader
-	"rhs_msv_emr_efreitor",												//Squad Leader
+	"rhs_msv_emr_sergeant",												//Squad Leader
+	"rhs_msv_emr_efreitor",												//Team Leader
 	"rhs_msv_emr_rifleman",												//Rifleman
 	"rhs_msv_emr_rifleman",												//Rifleman
 	"rhs_msv_emr_rifleman",												//Rifleman

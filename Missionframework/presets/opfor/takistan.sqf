@@ -42,8 +42,8 @@ opfor_flag = "lop_Flag_tak_F";											//Takistani Flag
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often.
 Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.	*/
 militia_squad = [
-	"LOP_TKA_Infantry_TL",												//Team Leader
 	"LOP_TKA_Infantry_SL",												//Squad Leader
+	"LOP_TKA_Infantry_TL",												//Team Leader
 	"LOP_TKA_Infantry_Rifleman",										//Rifleman (Lite)
 	"LOP_TKA_Infantry_Rifleman_2",										//Rifleman
 	"LOP_TKA_Infantry_Rifleman_2",										//Rifleman
