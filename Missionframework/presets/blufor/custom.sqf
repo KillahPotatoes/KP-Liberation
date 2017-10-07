@@ -1,6 +1,13 @@
-// No required mods. 
-// RHS USAF, BWMod, F-15C, F/A-18 are optional (just load the mods on server & client).
-// Apex & Jets DLC are also included but not required (required only to drive/pilot anything from each DLC inc/ the Tanoa map).
+/*
+Needed Mods:
+- None
+
+Optional Mods:
+- BWMod
+- F/A-18
+- F-15C
+- RHSUSAF
+*/
 
 /* - Support classnames.
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
@@ -10,7 +17,6 @@ FOB_truck_typename = "B_Truck_01_box_F";								// This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.  																				Default is "B_supplyCrate_F".
 Respawn_truck_typename = "B_Truck_01_medical_F";						// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
 huron_typename = "B_Heli_Transport_03_unarmed_F";						// This is Spartan 01, a multipurpose mobile respawn as a helicopter. 																	Default is "B_Heli_Transport_03_unarmed_F".
-opfor_ammobox_transport = "O_Truck_03_transport_F";						// Make sure this thing can transport ammo boxes (see box_transport_config in kp_liberation_config.sqf) otherwise things will break!	Default is "O_Truck_03_transport_F".
 crewman_classname = "B_crew_F";											// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "B_Helipilot_F";										// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F"; 				// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".

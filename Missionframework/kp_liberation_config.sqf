@@ -26,11 +26,19 @@ KP_liberation_ace_crates = [
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
-0 = custom (default vanilla with many optional mods supported) */
+0 = custom (default vanilla with many optional mods supported)
+1 = 3cb BAF
+2 = Apex Tanoa
+3 = BWMod (German Bundeswehr)
+4 = RHS USAF woodland
+5 = RHS USAF desert */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
-0 = custom (default vanilla CSAT) */
+0 = custom (default vanilla CSAT)
+1 = Apex Tanoa
+2 = Project OPFOR (Takistan)
+3 = RHS AFRF */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -38,7 +46,9 @@ KP_liberation_preset_opfor = 0;
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
-0 = custom (default vanilla) */
+0 = custom (default vanilla)
+1 = Apex Tanoa
+2 = Project OPFOR (Takistan) */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?

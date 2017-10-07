@@ -203,6 +203,7 @@ class Missions
 * Tweaked: Factories don't have all facilities from the start anymore. The facility they start with is set at campaign start.
 * Tweaked: Replaced all deprecated `BIS_fnc_selectRandom` with the engine solution `selectRandom`.
 * Tweaked: Server log will now contain the `[STATS]` message of all clients. (players and HCs)
+* Tweaked: Preset system split to select blufor, opfor, resistance and civilians independently. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.

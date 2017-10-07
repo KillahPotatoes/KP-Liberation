@@ -1,27 +1,20 @@
 switch (KP_liberation_preset_blufor) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
+	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
+	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
+	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_opfor) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
+	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\apex.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_resistance) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
