@@ -31,7 +31,7 @@ KP_liberation_guerilla_transports = [
 ];
 
 /* Guerilla Equipment
-There are 3 tiers for every category. If the strength of the guerillas will rise, they'll have higher tier equipment. */
+There are 3 tiers for every category. If the strength of the guerillas will increase, they'll have higher tier equipment. */
 
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]

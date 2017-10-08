@@ -181,6 +181,7 @@ class Missions
 	* Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
 	* Added: Guerilla forces presets.
 	* Added: Dynamic guerilla forces equipment depending on their strength value.
+	* Added: Chance that guerilla forces will join the fight at a sector as friend or foe. (depends on reputation)
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.

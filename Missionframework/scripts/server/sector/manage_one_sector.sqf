@@ -21,6 +21,7 @@ private _squad4 = [];
 private _minimum_building_positions = 5;
 private _sector_despawn_tickets = 12;
 private _popfactor = 1;
+private _guerilla = false;
 
 if (GRLIB_unitcap < 1) then {_popfactor = GRLIB_unitcap;};
 
@@ -51,6 +52,10 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		
 		_spawncivs = true;
 
+		if ((random 100) <= KP_liberation_guerilla_sector_chance) then {
+			_guerilla = true;
+		};
+
 		_building_ai_max = round (50 * _popfactor);
 		_building_range = 200;
 		_local_capture_size = _local_capture_size * 1.4;
@@ -80,6 +85,10 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		};
 		
 		_spawncivs = true;
+
+		if ((random 100) <= KP_liberation_guerilla_sector_chance) then {
+			_guerilla = true;
+		};
 		
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
 		_building_range = 120;
@@ -122,6 +131,10 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		if ((random 100) > 33) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 		
 		_spawncivs = false;
+
+		if ((random 100) <= KP_liberation_guerilla_sector_chance) then {
+			_guerilla = true;
+		};
 		
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
 		_building_range = 120;
@@ -148,7 +161,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		_building_ai_max = 0;
 	};
 
-	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), (count _building_ai_max)];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
 
 	if (_building_ai_max > 0 && GRLIB_adaptive_opfor) then {
 		_building_ai_max = round (_building_ai_max * ([] call F_adaptiveOpforFactor));
@@ -168,7 +181,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		{
 			_buildingpositions = _buildingpositions + ([_x] call BIS_fnc_buildingPositions);
 		} forEach _allbuildings;
-		if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector found %3 building positions -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, (count _buildingpositions)];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)];_text remoteExec ["diag_log",2];};
 		if (count _buildingpositions > _minimum_building_positions) then {
 			_managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sectorpos, _sector] call F_spawnBuildingSquad);
 		};
@@ -204,8 +217,12 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		_managed_units = _managed_units + ([_sector] call F_spawnCivilians);
 	};
 
-	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector: %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount];_text remoteExec ["diag_log",2];};
 	[_sector, _building_range, _iedcount] spawn ied_manager;
+
+	if (_guerilla) then {
+		[_sector] spawn sector_guerilla;
+	};
 
 	sleep 10;
 
@@ -213,7 +230,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		[_sector] remoteExec ["reinforcements_remote_call",2];
 	};
 
-	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector: %1 (%2) - populating done at %3", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - populating done at %3", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
 
 	while {!_stopit} do {
 		if (([_sectorpos, _local_capture_size] call F_sectorOwnership == GRLIB_side_friendly) && (GRLIB_endgame == 0)) then {

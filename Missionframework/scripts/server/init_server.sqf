@@ -35,6 +35,7 @@ manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\man
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 manage_asymIED = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\ied\manage_asymIED.sqf";
+sector_guerilla = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\random\sector_guerilla.sqf";
 
 // Asymmetric
 logistic_convoy_ambush = compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\convoy\logistic_convoy_ambush.sqf";
@@ -99,5 +100,3 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 if (KP_liberation_restart > 0) then {
 	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\server_restart.sqf";
 };
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_server.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};

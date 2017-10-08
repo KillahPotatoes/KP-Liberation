@@ -123,6 +123,7 @@ KP_liberation_convoy_ambush_duration = 1800;																	// Duration of the 
 KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;																			// At which strength (0-100) the guerilla forces will be at tier 3?
 KP_liberation_resistance_at_chance = 20;																		// Chance that a guerilla unit has a RPG (tier 2 and 3)
+KP_liberation_guerilla_sector_chance = 30;																		// Chance that a guerilla squad will join an ongoing sector attack
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
@@ -482,5 +483,3 @@ if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
 GRLIB_offload_diag = false;
 
 KP_liberation_production_interval = ceil KP_liberation_production_interval;
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", debug_source];_text remoteExec ["diag_log",2];};

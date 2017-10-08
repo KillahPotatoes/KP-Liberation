@@ -6,7 +6,7 @@ if (isServer) then {
 	_source = name player;
 };
 
-diag_log format ["[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal Preset: %8",(localize "STR_MISSION_TITLE"), worldName, (localize "STR_MISSION_VERSION"),KP_liberation_preset_blufor, KP_liberation_preset_opfor, KP_liberation_preset_resistance, KP_liberation_preset_civilians, KP_liberation_arsenal];
+diag_log format ["[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal: %8",(localize "STR_MISSION_TITLE"), worldName, (localize "STR_MISSION_VERSION"),KP_liberation_preset_blufor, KP_liberation_preset_opfor, KP_liberation_preset_resistance, KP_liberation_preset_civilians, KP_liberation_arsenal];
 
 while {true} do {
 	if (isServer) then {
