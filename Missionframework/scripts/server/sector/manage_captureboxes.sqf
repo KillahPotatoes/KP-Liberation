@@ -20,8 +20,8 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 		_spawnclass = selectRandom KP_liberation_crates;
 
 		_newbox = _spawnclass createVehicle _spawnpos;
-		_newbox setpos _spawnpos;
 		_newbox setdir (random 360);
+		_newbox setpos _spawnpos;
 		clearWeaponCargoGlobal _newbox;
 		clearMagazineCargoGlobal _newbox;
 		clearItemCargoGlobal _newbox;

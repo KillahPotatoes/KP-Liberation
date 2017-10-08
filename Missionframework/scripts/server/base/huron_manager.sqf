@@ -19,8 +19,8 @@ while { true } do {
 		huron = huron_typename createVehicle (getposATL huronspawn);
 		huron enableSimulationGlobal false;
 		huron allowdamage false;
-		huron setPosATL (getposATL huronspawn);
 		huron setDir (getDir huronspawn);
+		huron setPosATL (getposATL huronspawn);
 	};
 
 	firstloop = false;

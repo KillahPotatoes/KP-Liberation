@@ -30,8 +30,8 @@ if (count GRLIB_all_fobs == 0) then {
 		
 		while {count GRLIB_all_fobs == 0} do {
 			_fobbox = FOB_box_typename createVehicle (getposATL base_boxspawn);
-			_fobbox setposATL (getposATL base_boxspawn);
 			_fobbox setdir getDir base_boxspawn;
+			_fobbox setposATL (getposATL base_boxspawn);	
 
 			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
 
