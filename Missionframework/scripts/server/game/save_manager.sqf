@@ -58,7 +58,7 @@ resources_intel = 0;
 GRLIB_player_scores = [];
 KP_liberation_civ_rep = 0;
 KP_liberation_production_markers = [];
-KP_liberation_guerilla_strength = 25;
+KP_liberation_guerilla_strength = 0;
 
 no_kill_handler_classnames = [FOB_typename, huron_typename];
 _classnames_to_save = [FOB_typename, huron_typename];

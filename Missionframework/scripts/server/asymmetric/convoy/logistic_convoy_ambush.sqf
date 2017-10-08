@@ -123,15 +123,22 @@ KP_liberation_convoy_ambush_inProgress = false;
 
 if ((_waitingTime <= 0) && (({alive _x} count (units _grp)) > 0)) then {
 	[2] remoteExec ["asymm_notifications"];
-	{deleteVehicle _x;} forEach (units _grp);
+	private _gain = 0;
+	{
+		if (alive _x) then {
+			deleteVehicle _x;
+			_gain = _gain + 1;
+		};
+	} forEach (units _grp);
 	{
 		if ((typeOf (_x select 0)) == KP_liberation_ammo_crate) then {
-			KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 2;
+			_gain = _gain + 2;
 		} else {
-			KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 1;
+			_gain = _gain + 1;
 		};
 		deleteVehicle (_x select 0);
 	} forEach _crateArray;
+	KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + _gain;
 	if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1 ambush: guerillas escaped", (_convoy select 0)];};
 } else {
 	[1] remoteExec ["asymm_notifications"];

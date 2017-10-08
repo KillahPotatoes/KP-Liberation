@@ -38,8 +38,14 @@ sleep 600;
 
 if (!isNull _grp) then {
 	{
-		deleteVehicle _x;
+		if (alive _x) then {
+			deleteVehicle _x;
+			KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 1;
+		};
 	} forEach (units _grp);
+	if (!isServer) then {
+		publicVariableServer "KP_liberation_guerilla_strength";
+	};
 };
 
 if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};

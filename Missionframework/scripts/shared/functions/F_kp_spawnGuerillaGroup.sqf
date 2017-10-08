@@ -27,6 +27,7 @@ private _headgear = missionNamespace getVariable ("KP_liberation_guerilla_headge
 
 while {(count (units _grp) < _amount)} do {
 	private _unit = _grp createUnit [(selectRandom KP_liberation_guerilla_units), _pos, [], 5, "NONE"];
+	_unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 	private _weapon = selectRandom _weapons;
 
 	removeAllWeapons _unit;
