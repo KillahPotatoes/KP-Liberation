@@ -34,7 +34,7 @@ _waypoint setWaypointType "CYCLE";
 
 waitUntil {sleep 60; !(_sector in active_sectors)};
 
-sleep 600;
+sleep 60;
 
 if (!isNull _grp) then {
 	{

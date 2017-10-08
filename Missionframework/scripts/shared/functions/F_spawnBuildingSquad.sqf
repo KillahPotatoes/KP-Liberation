@@ -19,7 +19,7 @@ while {count _position_indexes < count _squadtospawn} do {
 	private _nextposit = floor (random _position_count);
 	if !(_nextposit in _position_indexes) then {
 		_position_indexes pushback _nextposit;
-	}
+	};
 };
 
 private _grp = createGroup GRLIB_side_enemy;
