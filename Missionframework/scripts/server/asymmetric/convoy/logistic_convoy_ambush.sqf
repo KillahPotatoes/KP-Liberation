@@ -88,12 +88,7 @@ while {_fuel > 0} do {
 };
 if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1 ambush: resource spawning done", (_convoy select 0)];};
 
-private _grp = createGroup GRLIB_side_resistance;
-for "_i" from 1 to (4 + (random (round ((KP_liberation_civ_rep * -1) / 25))) + (random (round (KP_liberation_guerilla_strength / 25)))) do {
-	// GUERILLA -> Need adjusting after loadouts are finished
-	private _unit = _grp createUnit [selectRandom KP_liberation_guerilla_units, getPos _roadObj, [], 50, "NONE"];
-	[_unit] call (selectRandom [loadout_crewman, loadout_rifleman, loadout_autorifleman, loadout_rifleman_light, loadout_marksman]);
-};
+private _grp = [getPos _roadObj] call F_spawnGuerillaGroup;
 
 private _waypoint = _grp addWaypoint [getPos _roadObj, 150];
 _waypoint setWaypointType "SAD";

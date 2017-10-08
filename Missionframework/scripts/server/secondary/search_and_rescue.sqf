@@ -36,7 +36,7 @@ private _patrolcorners = [
 	[ (getpos _helowreck select 0) - 40, (getpos _helowreck select 1) + 40, 0 ]
 ];
 
-{ _x createUnit [ _patrolcorners select 0, _grppatrol,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach ([] call F_getAdaptiveSquadComp);
+{ _x createUnit [ _patrolcorners select 0, _grppatrol,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach (["army"] call F_getAdaptiveSquadComp);
 
 while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
 {

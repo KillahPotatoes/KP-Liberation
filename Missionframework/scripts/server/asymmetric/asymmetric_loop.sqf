@@ -24,7 +24,7 @@ while {GRLIB_endgame == 0} do {
 				KP_liberation_asymmetric_sectors pushBack _x;
 
 				private _hc = [] call F_lessLoadedHC;
-				private _ieds = round ((round (random 1)) * (round ((KP_liberation_civ_rep * -1) / 33)) * GRLIB_difficulty_modifier);
+				private _ieds = round ((round (random 1)) * ([] call F_cr_getMulti) * GRLIB_difficulty_modifier);
 
 				if (isNull _hc) then {
 					[_x, _ieds] spawn manage_asymIED;

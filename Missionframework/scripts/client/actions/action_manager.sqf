@@ -1,4 +1,4 @@
-private dact_build = -1;
+private _idact_build = -1;
 private _idact_arsenal = -1;
 private _idact_buildfob = -1;
 private _idact_redeploy = -1;

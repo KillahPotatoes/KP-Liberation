@@ -9,8 +9,8 @@ if (count _allposts > 0) then {
 	{
 		private _building_positions = [_x] call BIS_fnc_buildingPositions;
 		private _unitclasspost = opfor_marksman;
-		private nextunit_post = objNull;
-		if ( random 100 > 60 ) then {
+		nextunit_post = objNull;
+		if (random 100 > 60) then {
 			_unitclasspost = opfor_machinegunner;
 		};
 		_unitclasspost createUnit [_squadpos, _grp, "nextunit_post = this; this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]"];

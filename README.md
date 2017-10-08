@@ -179,7 +179,8 @@ class Missions
 	* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
 	* Added: Own logistic convoys can be ambushed by guerilla forces.
 	* Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
-	* Added: Arrays in preset files for the guerilla forces.
+	* Added: Guerilla forces presets.
+	* Added: Dynamic guerilla forces equipment depending on their strength value.
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
@@ -204,6 +205,7 @@ class Missions
 * Tweaked: Replaced all deprecated `BIS_fnc_selectRandom` with the engine solution `selectRandom`.
 * Tweaked: Server log will now contain the `[STATS]` message of all clients. (players and HCs)
 * Tweaked: Preset system split to select blufor, opfor, resistance and civilians independently. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: Capitals, cities and factories are now basically guarded by "militia" forces. Switching to regular army if the enemy combat readiness is increased.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.

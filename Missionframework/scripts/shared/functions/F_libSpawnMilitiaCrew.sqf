@@ -14,10 +14,6 @@ while {count units _grp < 3} do {
 {
 	if ( vehicle _x == _x ) then {
 		deleteVehicle _x;
-	} else {
-		if ( (typeof _x) in original_resistance) then {
-			[ _x ] call loadout_crewman;
-		};
 	};
 } foreach (units _grp);
 

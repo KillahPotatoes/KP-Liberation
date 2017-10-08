@@ -137,7 +137,6 @@ ammobox_transports_typenames = [];
 {ammobox_transports_typenames pushback (_x select 0)} foreach box_transport_config;
 ammobox_transports_typenames = [ammobox_transports_typenames, {[_x] call F_checkClass}] call BIS_fnc_conditionalSelect;
 elite_vehicles = [elite_vehicles, {[_x] call F_checkClass}] call BIS_fnc_conditionalSelect;
-original_resistance = ["O_G_Soldier_TL_F","O_G_Soldier_SL_F","O_G_Soldier_lite_F","O_G_Soldier_F","O_G_Soldier_F","O_G_Soldier_LAT_F","O_G_Soldier_GL_F","O_G_Soldier_AR_F","O_G_Soldier_AR_F","O_G_Soldier_M_F","O_G_engineer_F","O_G_Soldier_exp_F"];
 opfor_infantry = [opfor_sentry,opfor_rifleman,opfor_grenadier,opfor_squad_leader,opfor_team_leader,opfor_marksman,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_rpg,opfor_at,opfor_aa,opfor_officer,opfor_sharpshooter,opfor_sniper,opfor_engineer];
 GRLIB_intel_file = "Land_File1_F";
 GRLIB_intel_laptop = "Land_Laptop_device_F";
