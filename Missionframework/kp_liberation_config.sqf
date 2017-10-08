@@ -106,24 +106,24 @@ GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defen
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalty for killing a civilian
-KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building
-KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle
-KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector
+KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 1;																			// Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector.
 
-KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time (seconds)
-KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time (seconds)
-KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn chance (0-100)
-KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount
-KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning (seconds)
+KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time. (seconds)
+KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time. (seconds)
+KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn chance. (0-100)
+KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount.
+KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning. (seconds)
 
-KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low
-KP_liberation_convoy_ambush_duration = 1800;																	// Duration of the convoy ambush event (seconds)
+KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_duration = 1800;																	// Duration of the convoy ambush event. (seconds)
 
 KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;																			// At which strength (0-100) the guerilla forces will be at tier 3?
-KP_liberation_resistance_at_chance = 20;																		// Chance that a guerilla unit has a RPG (tier 2 and 3)
-KP_liberation_guerilla_sector_chance = 30;																		// Chance that a guerilla squad will join an ongoing sector attack
+KP_liberation_resistance_at_chance = 20;																		// Chance that a guerilla unit has a RPG. (tier 2 and 3)
+KP_liberation_resistance_sector_chance = 30;																	// Chance that a guerilla squad will join an ongoing sector attack.
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
