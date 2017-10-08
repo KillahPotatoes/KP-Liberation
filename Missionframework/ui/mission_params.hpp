@@ -335,6 +335,12 @@ class Params
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
 		default = 0;
 	};
+	class DebugKill {
+		title = $STR_PARAMS_DEBUG_KILL;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
 	class DebugLogistic {
 		title = $STR_PARAMS_DEBUG_LOGISTIC;
 		values[] = {0, 1};
@@ -343,6 +349,12 @@ class Params
 	};
 	class DebugSave {
 		title = $STR_PARAMS_DEBUG_SAVE;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
+	class DebugSectorSpawn {
+		title = $STR_PARAMS_DEBUG_SECTORSPAWN;
 		values[] = {0, 1};
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
 		default = 0;

@@ -1,24 +1,23 @@
 params ["_unit", "_killer"];
-private ["_nearby_bigtown"];
 
 if (isServer) then {
+
+	if (KP_liberation_kill_debug > 0) then {diag_log format ["[KP LIBERATION] [KILL] Kill Manager executed - _unit: %1 (%2) - _killer: %3 (%4)", typeOf _unit, _unit, typeOf _killer, _killer];};
 
 	if (KP_liberation_ace) then {
 		if (local _unit) then {
 			_killer = _unit getVariable ["ace_medical_lastDamageSource", _killer];
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is local to %1", debug_source];_text remoteExec ["diag_log",2];};
+			if (KP_liberation_kill_debug > 0) then {diag_log format ["[KP LIBERATION] [KILL] _unit is local to %1", debug_source];};
 		} else {
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is not local to %1", debug_source];_text remoteExec ["diag_log",2];};
+			if (KP_liberation_kill_debug > 0) then {diag_log format ["[KP LIBERATION] [KILL] _unit is not local to %1", debug_source];};
 			if (isNil "KP_liberation_ace_killer") then {KP_liberation_ace_killer = objNull;};
 			waitUntil {sleep 0.5; !(isNull KP_liberation_ace_killer)};
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] KP_liberation_ace_killer received on %1", debug_source];_text remoteExec ["diag_log",2];};
+			if (KP_liberation_kill_debug > 0) then {diag_log format ["[KP LIBERATION] [KILL] KP_liberation_ace_killer received on %1", debug_source];};
 			_killer = KP_liberation_ace_killer;
 			KP_liberation_ace_killer = objNull;
 			publicVariable "KP_liberation_ace_killer";
 		};
 	};
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] Kill Manager executed on: %1 - _unit: %2 (%3)- _killer: %4 (%5)", debug_source, typeOf _unit, _unit, typeOf _killer, _killer];_text remoteExec ["diag_log",2];};
 
 	please_recalculate = true;
 
@@ -28,7 +27,7 @@ if (isServer) then {
 
 	if ((side _killer) == GRLIB_side_friendly) then {
 
-		_nearby_bigtown = [sectors_bigtown, {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250) } ] call BIS_fnc_conditionalSelect;
+		private _nearby_bigtown = [sectors_bigtown, {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250) } ] call BIS_fnc_conditionalSelect;
 		if (count _nearby_bigtown > 0) then {
 			combat_readiness = combat_readiness + (0.5 * GRLIB_difficulty_modifier);
 			stats_readiness_earned = stats_readiness_earned + (0.5 * GRLIB_difficulty_modifier);
@@ -77,7 +76,7 @@ if (isServer) then {
 		if (side (group _unit) == GRLIB_side_civilian) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
 			if (side _killer == GRLIB_side_friendly) then {
-				if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [CIVREP] Civilian killed by: %1", name _killer];_text remoteExec ["diag_log",2];};
+				if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Civilian killed by: %1", name _killer];};
 				[2, [(name _unit)]] remoteExec ["F_cr_penaltyMsg"];
 				[KP_liberation_cr_kill_penalty, true] spawn F_cr_changeCR;
 			};
@@ -114,7 +113,7 @@ if (isServer) then {
 	};
 } else {
 	if (KP_liberation_ace && local _unit) then {
-		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [KILL] _unit is local to: %1", debug_source];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_kill_debug > 0) then {private _text = format ["[KP LIBERATION] [KILL] _unit is local to: %1", debug_source];_text remoteExec ["diag_log",2];};
 		KP_liberation_ace_killer = _unit getVariable ["ace_medical_lastDamageSource", _killer];
 		publicVariable "KP_liberation_ace_killer";
 	};

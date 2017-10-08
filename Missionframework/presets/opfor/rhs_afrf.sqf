@@ -37,18 +37,16 @@ opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";				//Taru Fuel Pod
 opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";				//Taru Ammo Pod
 opfor_flag = "rhs_Flag_Russia_F";										//Russian Flag
 
-/*	Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
-Therefore, adding the same value twice or three times means they are more likely to be chosen more often.
-Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.	*/
+/* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
+Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
+
+/* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
+Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
-	"rhs_msv_emr_sergeant",												//Squad Leader
-	"rhs_msv_emr_efreitor",												//Team Leader
 	"rhs_msv_emr_rifleman",												//Rifleman
 	"rhs_msv_emr_rifleman",												//Rifleman
 	"rhs_msv_emr_rifleman",												//Rifleman
 	"rhs_msv_emr_LAT",													//Rifleman (AT)
-	"rhs_msv_emr_grenadier",											//Grenadier
-	"rhs_msv_emr_arifleman",											//Autorifleman
 	"rhs_msv_emr_arifleman",											//Autorifleman
 	"rhs_msv_emr_marksman",												//Marksman
 	"rhs_msv_emr_medic",												//Medic

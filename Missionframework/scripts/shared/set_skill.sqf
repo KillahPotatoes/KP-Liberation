@@ -1,8 +1,6 @@
-params [ "_unit"];
+params ["_unit"];
 
-private _side = side _unit;
-
-if ( !(GRLIB_autodanger) && (_side == GRLIB_side_friendly)) then {
+if (!(GRLIB_autodanger) && ((side _unit) == GRLIB_side_friendly)) then {
 	_unit disableAI "AUTOCOMBAT";
 };
 
