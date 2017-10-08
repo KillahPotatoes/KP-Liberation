@@ -13,19 +13,22 @@ private _grp = [_startpos] call F_spawnGuerillaGroup;
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 {_x doFollow (leader _grp)} forEach (units _grp);
 
-_waypoint = _grp addWaypoint [markerpos _sector, 50];
+_waypoint = _grp addWaypoint [markerpos _sector, 100];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "YELLOW";
 _waypoint setWaypointCompletionRadius 30;
-_waypoint = _grp addWaypoint [markerpos _sector, 150];
+_waypoint = _grp addWaypoint [markerpos _sector, 200];
 _waypoint setWaypointSpeed "LIMITED";
 _waypoint setWaypointType "SAD";
-_waypoint = _grp addWaypoint [markerpos _sector, 150];
+_waypoint = _grp addWaypoint [markerpos _sector, 200];
 _waypoint setWaypointSpeed "LIMITED";
 _waypoint setWaypointType "SAD";
-_waypoint = _grp addWaypoint [markerpos _sector, 150];
+_waypoint = _grp addWaypoint [markerpos _sector, 200];
+_waypoint setWaypointSpeed "LIMITED";
+_waypoint setWaypointType "SAD";
+_waypoint = _grp addWaypoint [markerpos _sector, 200];
 _waypoint setWaypointSpeed "LIMITED";
 _waypoint setWaypointType "CYCLE";
 
