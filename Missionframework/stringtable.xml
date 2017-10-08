@@ -4860,5 +4860,13 @@
 			<German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
 			<Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
 		</Key>
+		<Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
+			<Original>Sectorspawn</Original>
+			<German>Sektorspawn</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_KILL">
+			<Original>Killed units</Original>
+			<German>Getötete Einheiten</German>
+		</Key>
 	</Package>
 </Project>
