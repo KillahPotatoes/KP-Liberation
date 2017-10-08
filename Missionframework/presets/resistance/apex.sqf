@@ -67,7 +67,6 @@ KP_liberation_guerilla_weapons_3 =[
 
 // Uniforms
 KP_liberation_guerilla_uniforms_1 = [
-	"U_C_WorkerCoveralls",
 	"U_C_Poloshirt_blue",
 	"U_C_Poloshirt_burgundy",
 	"U_C_Poloshirt_salmon",
