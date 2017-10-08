@@ -10,19 +10,17 @@ diag_log format ["[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %
 
 while {true} do {
 	if (isServer) then {
-		diag_log format ["[KP LIBERATION] [STATS] Source: %1 - Time: %2 - FPS: %3 - Total units: %4 - Hostile units: %5 - Local units: %6 - Vehicles: %7 - Unitcap: %8",
+		diag_log format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Total units: %3 - Hostile units: %4 - Local units: %5 - Vehicles: %6 - Active Sectors: %7",
 		_source,
-		time,
 		diag_fps,
 		count allUnits,
 		{side group _x == GRLIB_side_enemy} count allUnits,
 		{local _x} count allUnits,
 		count vehicles,
-		GRLIB_sector_cap];
+		count active_sectors];
 	} else {
-		private _text = format ["[KP LIBERATION] [STATS] Source: %1 - Time: %2 - FPS: %3 - Local units: %4",
+		private _text = format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local units: %3",
 		_source,
-		time,
 		diag_fps,
 		{local _x} count allUnits];
 		_text remoteExec ["diag_log",2];
