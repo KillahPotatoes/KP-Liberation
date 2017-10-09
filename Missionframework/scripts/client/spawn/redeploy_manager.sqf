@@ -189,6 +189,7 @@ while {true} do {
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (backpackItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
