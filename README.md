@@ -172,6 +172,7 @@ class Missions
 	* Added: Reputation penalty for destroyed/damaged civil buildings.
 	* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 	* Added: Reputation gain for liberated sectors.
+	* Added: After capturing a sector you could find wounded civilians. You gain reputation for medical support.
 * Added: Civil informant.
 	* Added: If you've a good reputation, a civil informant can rarely spawn at blufor sectors.
 	* Added: Intel increase, if you capture the informant and bring him back to a FOB.
