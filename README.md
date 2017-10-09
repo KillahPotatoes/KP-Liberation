@@ -221,6 +221,7 @@ class Missions
 * Fixed: MPKill Eventhandler issue when using ACE.
 * Fixed: Function to buy a logistic truck worked but caused an error in dedicated server environment.
 * Fixed: Couldn't build under powerlines.
+* Fixed: Items in backpack weren't checked by arsenal blacklist crawler.
 
 ### 0.955 (24th June 2017)
 * Added: Some small aesthetic things for the buildlist
