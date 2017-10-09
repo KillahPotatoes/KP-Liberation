@@ -4868,5 +4868,13 @@
 			<Original>Killed units</Original>
 			<German>Getötete Einheiten</German>
 		</Key>
+		<Key ID="STR_CR_ACE_ACTION">
+			<Original>Treat the civilian (field dressing)</Original>
+			<German>Zivilisten versorgen (einfache Bandage)</German>
+		</Key>
+		<Key ID="STR_CR_ACE_ACTION_FAIL">
+			<Original>You need a field dressing.</Original>
+			<German>Du brauchst eine einfache Bandage.</German>
+		</Key>
 	</Package>
 </Project>

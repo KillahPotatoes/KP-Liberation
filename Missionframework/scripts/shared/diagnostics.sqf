@@ -1,6 +1,6 @@
 private _source = "";
 
-if (isServer) then {
+if (isDedicated) then {
 	_source = "Server";
 } else {
 	_source = name player;

@@ -52,5 +52,6 @@ F_sortStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions
 F_getMilitaryID = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getMilitaryID.sqf";
 F_cr_penaltyMsg = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_cr_penaltyMsg.sqf";
 F_cr_getMulti = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_cr_getMulti.sqf";
+F_cr_ace_action = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_cr_ace_action.sqf";
 F_getResistanceTier = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getResistanceTier.sqf";
 F_spawnGuerillaGroup = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_spawnGuerillaGroup.sqf";
