@@ -1,4 +1,4 @@
-params ["_amount", "_negative"];
+params ["_amount", ["_negative", false]];
 
 if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] changeCR called on: %1 - Parameters [%2, %3]", debug_source, _amount, _negative];_text remoteExec ["diag_log",2];};
 

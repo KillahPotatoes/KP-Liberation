@@ -60,6 +60,13 @@ if (_liberated_sector in sectors_factory) then {
 
 [_liberated_sector] spawn F_cr_liberatedSector;
 
+if ((random 100) <= KP_liberation_cr_wounded_chance) then {
+	[_liberated_sector] spawn civrep_wounded_civs;
+};
+
+asymm_blocked_sectors pushBack [_liberated_sector, time];
+publicVariable "asymm_blocked_sectors";
+
 [] spawn check_victory_conditions;
 
 sleep 1;

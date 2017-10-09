@@ -1,7 +1,5 @@
 params ["_sector"];
 
-if ((random 100) > KP_liberation_resistance_ambush_chance) exitWith {};
-
 if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] asym_sector_ambush.sqf for %1 spawned on: %2 - Time: %3", markerText _sector, debug_source, time];_text remoteExec ["diag_log",2];};
 
 waitUntil {sleep 1; _sector in KP_liberation_asymmetric_sectors};

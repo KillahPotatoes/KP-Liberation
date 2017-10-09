@@ -1,4 +1,4 @@
-if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] init_buildings.sqf initialising on: %1", debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] init_buildings.sqf initialising on: %1", debug_source];};
 
 KP_liberation_cr_sectorbuildings = [];
 
