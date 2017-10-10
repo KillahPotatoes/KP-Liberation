@@ -169,7 +169,7 @@ class Missions
 	* Added: Config variables in `kp_liberation_config.sqf`.
 	* Added: Reputation penalty for killing civilians.
 	* Added: Reputation penalty for seizing civil vehicles.
-	* Added: Reputation penalty for destroyed/damaged civil buildings.
+	* Added: Reputation penalty for destroyed/damaged civil buildings. (evaluated only on capture a sector event)
 	* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
 	* Added: Reputation gain for liberated sectors.
 	* Added: After capturing a sector you might find wounded civilians. You can also gain reputation for offering medical support.
@@ -193,6 +193,7 @@ class Missions
 * Added: LoW UAVs to the default blacklist.
 * Added: Some of the new RHS vehicles.
 * Added: Turkish localization. Thanks to [Carbneth](https://github.com/Carbneth)
+* Added: Parameter to set a cooldown for using mobile respawns.
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Removed: Old debug messages.

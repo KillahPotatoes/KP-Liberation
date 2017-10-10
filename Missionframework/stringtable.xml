@@ -4888,5 +4888,13 @@
 			<Original>The officer has moved on.</Original>
 			<German>Der Offizier ist weitergezogen.</German>
 		</Key>
+		<Key ID="STR_PARAM_RESPAWN_COOLDOWN">
+			<Original>Mobile Respawn Cooldown (minutes)</Original>
+			<German>Mobiler Respawn Cooldown (Minuten)</German>
+		</Key>
+		<Key ID="STR_RESPAWN_COOLDOWN_HINT">
+			<Original>%1 minutes mobile respawn cooldown left.</Original>
+			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+		</Key>
 	</Package>
 </Project>

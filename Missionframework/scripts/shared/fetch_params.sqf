@@ -40,6 +40,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
 	KP_liberation_sectorspawn_debug = ["DebugSectorSpawn",0] call bis_fnc_getParamValue;
 	KP_liberation_kill_debug = ["DebugKill",0] call bis_fnc_getParamValue;
+	KP_liberation_respawn_cooldown = ["RespawnCooldown",900] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -82,19 +83,20 @@ if ( isMultiplayer ) then {
 	KP_liberation_logistic_debug = 0;
 	KP_liberation_sectorspawn_debug = 0;
 	KP_liberation_kill_debug = 0;
+	KP_liberation_respawn_cooldown = 900;
 };
 
-if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
-if ( GRLIB_introduction == 1 ) then { GRLIB_introduction = true } else { GRLIB_introduction = false };
-if ( GRLIB_deployment_cinematic == 1 ) then { GRLIB_deployment_cinematic = true } else { GRLIB_deployment_cinematic = false };
-if ( GRLIB_build_first_fob == 1 ) then { GRLIB_build_first_fob = true } else { GRLIB_build_first_fob = false };
-if ( GRLIB_teamkill_penalty == 1 ) then { GRLIB_teamkill_penalty = true } else { GRLIB_teamkill_penalty = false };
-if ( GRLIB_adaptive_opfor == 1 ) then { GRLIB_adaptive_opfor = true } else { GRLIB_adaptive_opfor = false };
-if ( GRLIB_permissions_param == 1 ) then { GRLIB_permissions_param = true } else { GRLIB_permissions_param = false };
-if ( GRLIB_use_whitelist == 1 ) then { GRLIB_use_whitelist = true } else { GRLIB_use_whitelist = false };
-if ( GRLIB_shorter_nights == 1 ) then { GRLIB_shorter_nights = true } else { GRLIB_shorter_nights = false };
-if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
-if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
+if (GRLIB_fatigue < 0.1) then {GRLIB_fatigue = false} else {GRLIB_fatigue = true};
+if (GRLIB_introduction == 1) then {GRLIB_introduction = true} else {GRLIB_introduction = false};
+if (GRLIB_deployment_cinematic == 1) then {GRLIB_deployment_cinematic = true} else {GRLIB_deployment_cinematic = false};
+if (GRLIB_build_first_fob == 1) then {GRLIB_build_first_fob = true} else {GRLIB_build_first_fob = false};
+if (GRLIB_teamkill_penalty == 1) then {GRLIB_teamkill_penalty = true} else {GRLIB_teamkill_penalty = false};
+if (GRLIB_adaptive_opfor == 1) then {GRLIB_adaptive_opfor = true} else {GRLIB_adaptive_opfor = false};
+if (GRLIB_permissions_param == 1) then {GRLIB_permissions_param = true} else {GRLIB_permissions_param = false};
+if (GRLIB_use_whitelist == 1) then {GRLIB_use_whitelist = true} else {GRLIB_use_whitelist = false};
+if (GRLIB_shorter_nights == 1) then {GRLIB_shorter_nights = true} else {GRLIB_shorter_nights = false};
+if (GRLIB_blufor_defenders == 1) then {GRLIB_blufor_defenders = true} else {GRLIB_blufor_defenders = false};
+if (GRLIB_autodanger == 1) then {GRLIB_autodanger = true} else {GRLIB_autodanger = false};
 if (KP_liberation_arsenalUsePreset == 1) then {KP_liberation_arsenalUsePreset = true} else {KP_liberation_arsenalUsePreset = false};
 if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true} else {KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false};
 if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
