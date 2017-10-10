@@ -57,6 +57,7 @@ ai_groups = [];
 resources_intel = 0;
 GRLIB_player_scores = [];
 KP_liberation_civ_rep = 0;
+KP_liberation_cr_vehicles = [];
 KP_liberation_production_markers = [];
 KP_liberation_guerilla_strength = 0;
 
@@ -74,7 +75,7 @@ _building_classnames = [FOB_typename];
 	_classnames_to_save_blu pushback (_x select 0);
 } foreach (static_vehicles + air_vehicles + heavy_vehicles + light_vehicles + support_vehicles);
 
-_classnames_to_save = _classnames_to_save + _classnames_to_save_blu + all_hostile_classnames;
+_classnames_to_save = _classnames_to_save + _classnames_to_save_blu + all_hostile_classnames + civilian_vehicles;
 
 trigger_server_save = false;
 greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
@@ -280,8 +281,11 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 					_x addCuratorEditableObjects [[_nextbuilding],true];
 				} forEach allCurators;
 			};
-		};
 
+			if (_nextclass in civilian_vehicles) then {
+				KP_liberation_cr_vehicles pushBack _nextbuilding;
+			};
+		};
 	} foreach buildings_to_save;
 
 	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved buildings placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
@@ -367,8 +371,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 	if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] Saved storages placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	{
-		private ["_storage"];
-		_storage = _x select 3;
+		private _storage = _x select 3;
 
 		if ((count _storage) == 3) then {
 			_nextpos = _storage select 0;
@@ -491,6 +494,7 @@ if ( count GRLIB_vehicle_to_military_base_links == 0 ) then {
 };
 publicVariable "GRLIB_vehicle_to_military_base_links";
 publicVariable "GRLIB_permissions";
+publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
 if (KP_liberation_savegame_debug > 0) then {private _text = format ["[KP LIBERATION] [SAVE] save_manager.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
@@ -556,7 +560,7 @@ while { true } do {
 			private _savedpos = [];
 			private _savedvec = [];
 
-			if ( (typeof _x) in _building_classnames ) then {
+			if ((typeof _x) in _building_classnames) then {
 				_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 				_savedvec = _x getVariable ["KP_saved_vec", []];
 				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
@@ -572,12 +576,14 @@ while { true } do {
 			private _nextclass = typeof _x;
 			private _nextdir = getdir _x;
 			private _hascrew = false;
-			if ( _nextclass in _classnames_to_save_blu ) then {
-				if ( ( { !isPlayer _x } count (crew _x) ) > 0 ) then {
+			if (_nextclass in _classnames_to_save_blu) then {
+				if (({!isPlayer _x} count (crew _x) ) > 0) then {
 					_hascrew = true;
 				};
 			};
-			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew,_savedvec ];
+			if (!(_nextclass in civilian_vehicles) || (_x in KP_liberation_cr_vehicles)) then {
+				buildings_to_save pushback [_nextclass,_savedpos,_nextdir,_hascrew,_savedvec];
+			};
 		} foreach _all_buildings;
 
 		{
