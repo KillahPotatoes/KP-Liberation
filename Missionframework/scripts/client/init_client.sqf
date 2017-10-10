@@ -74,5 +74,3 @@ player addEventHandler ["GetInMan", {[_this select 2] spawn kp_cr_checkVehicle;}
 [] execVM "onPlayerRespawn.sqf";
 
 [player] joinSilent (createGroup GRLIB_side_friendly);
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_client.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};

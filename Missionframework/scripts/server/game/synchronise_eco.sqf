@@ -12,8 +12,8 @@ if (KP_liberation_production_markers isEqualTo []) then {
 	} forEach sectors_factory;
 };
 
-_KP_liberation_production_old = [0];
-_KP_liberation_logistics_old = [0];
+private _KP_liberation_production_old = [0];
+private _KP_liberation_logistics_old = [0];
 
 while {true} do {
 
@@ -37,6 +37,4 @@ while {true} do {
 	
 	_KP_liberation_production_old = +KP_liberation_production;
 	_KP_liberation_logistics_old = +KP_liberation_logistics;
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Serverside eco sent from: %1", debug_source];_text remoteExec ["diag_log",2];};
 };

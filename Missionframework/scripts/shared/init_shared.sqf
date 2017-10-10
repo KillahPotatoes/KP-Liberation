@@ -41,5 +41,3 @@ asymm_notifications = compileFinal preprocessFileLineNumbers "scripts\client\asy
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\scan_skill.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\diagnostics.sqf";
 if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\shared\manage_weather.sqf";};
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init_shared.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};

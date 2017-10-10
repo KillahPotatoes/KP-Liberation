@@ -14,5 +14,4 @@ if (KP_liberation_suppMod_enb > 0) then {
 	publicVariable "KP_liberation_suppMod_grp";
 	publicVariable "KP_liberation_suppMod_arty";
 	KP_liberation_suppMod_created = true; publicVariable "KP_liberation_suppMod_created";
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] [SUPP] SuppMods created by: %1 - Grp: %2 - Arty: %3", debug_source, KP_liberation_suppMod_grp, KP_liberation_suppMod_arty];_text remoteExec ["diag_log",2];};
 };

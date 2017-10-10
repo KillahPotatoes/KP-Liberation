@@ -23,8 +23,6 @@ if (count GRLIB_all_fobs == 0) then {
 		_spawnplace = selectRandom _potentialplaces;
 		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
 
-		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Preplaced FOB placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
-
 	} else {
 		private _fobbox = objNull;
 		
@@ -34,8 +32,6 @@ if (count GRLIB_all_fobs == 0) then {
 			_fobbox setposATL (getposATL base_boxspawn);	
 
 			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
-
-			if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] FOB Box placed by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 			sleep 3;
 
@@ -52,8 +48,6 @@ if (count GRLIB_all_fobs == 0) then {
 	};
 
 	waitUntil {sleep 5; (count GRLIB_all_fobs) > 0};
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] First FOB built at %1. Sending resource package.", (GRLIB_all_fobs select 0)];_text remoteExec ["diag_log",2];};
 
 	private _crateArray = [];
 
@@ -81,7 +75,5 @@ if (count GRLIB_all_fobs == 0) then {
 		private _smoke = "SmokeShellGreen" createVehicle (getPos _x);
 		_smoke attachTo [_x];
 	} forEach _crateArray;
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Startresources dropped by: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 };

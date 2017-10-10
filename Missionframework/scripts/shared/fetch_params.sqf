@@ -72,7 +72,6 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilearsenal = 1;
 	KP_liberation_ailogistics = 1;
 	KP_liberation_ace = 0;
-	KP_liberation_debug = 0;
 	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = 1;
 	KP_liberation_restart = 0;
 	KP_liberation_cr_param_buildings = 0;
@@ -84,8 +83,6 @@ if ( isMultiplayer ) then {
 	KP_liberation_sectorspawn_debug = 0;
 	KP_liberation_kill_debug = 0;
 };
-
-KP_liberation_debug = false;
 
 if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
 if ( GRLIB_introduction == 1 ) then { GRLIB_introduction = true } else { GRLIB_introduction = false };

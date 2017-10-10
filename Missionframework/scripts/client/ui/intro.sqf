@@ -1,10 +1,6 @@
-private [ "_dialog" ];
-
 if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false };
 sleep 0.5;
 waitUntil { time > 0 };
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro started for: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 [] spawn cinematic_camera;
 
@@ -21,7 +17,7 @@ if ( GRLIB_introduction ) then {
 showcaminfo = true;
 dostartgame = 0;
 howtoplay = 0;
-_dialog = createDialog "liberation_menu";
+private _dialog = createDialog "liberation_menu";
 waitUntil { dialog };
 waitUntil { dostartgame == 1 || howtoplay == 1 || !dialog };
 
@@ -30,5 +26,3 @@ if ( howtoplay == 0 ) then {
 	cinematic_camera_started = false;
 };
 introDone = true;
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Intro ended for: %1", debug_source];_text remoteExec ["diag_log",2];};
