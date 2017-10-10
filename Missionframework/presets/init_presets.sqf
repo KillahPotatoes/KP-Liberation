@@ -74,12 +74,15 @@ GRLIB_ignore_colisions_when_building = [
 	"Land_ClutterCutter_large_F",
 	"Land_HighVoltageColumnWire_F",
 	"Land_PowerWireBig_left_F",
-	"B_HMG_01_A_F",										//Mk30A HMG .50
+	"B_HMG_01_F",										//Mk30A HMG .50
 	"B_HMG_01_high_F",									//Mk30 HMG .50 (Raised)
-	"B_GMG_01_A_F",										//Mk32A GMG 20mm
+	"B_HMG_01_A_F",										//Mk30 HMG .50 (Autonomous)
+	"B_GMG_01_F",										//Mk32A GMG 20mm
 	"B_GMG_01_high_F",									//Mk32 GMG 20mm (Raised)
-	"B_static_AT_F",									//Static Titan Launcher (AT)
+	"B_GMG_01_A_F",										//Mk32 GMG 20mm (Autonomous)
+	"B_static_AT_F",									//Static TTitan Launcher (AT)
 	"B_static_AA_F",									//Static Titan Launcher (AA)
+	"B_Mortar_01_F",									//Mk6 Mortar
 	"ACE_friesAnchorBar",								//ACE FRIES
 	"ACE_friesGantryReverse",							//ACE FRIES
 	"ACE_friesGantry"									//ACE FRIES

@@ -161,13 +161,15 @@ air_vehicles = [
 ];
 
 static_vehicles = [
-	["B_T_HMG_01_F",25,40,0],											//Mk30A HMG .50
+	["B_HMG_01_F",25,40,0],												//Mk30A HMG .50
 	["B_HMG_01_high_F",25,40,0],										//Mk30 HMG .50 (Raised)
-	["B_T_GMG_01_F	",25,60,0],											//Mk32A GMG 20mm
-	["B_GMG_01_high_F",25,60,0],										//Mk32 GMG 20mm (Raised)
-	["B_T_Static_AT_F",50,100,0],										//Static TTitan Launcher (AT)
+	["B_HMG_01_A_F",35,40,0],											//Mk30 HMG .50 (Autonomous)
+	["B_GMG_01_F",35,60,0],												//Mk32A GMG 20mm
+	["B_GMG_01_high_F",35,60,0],										//Mk32 GMG 20mm (Raised)
+	["B_GMG_01_A_F",45,60,0],											//Mk32 GMG 20mm (Autonomous)
+	["B_T_Static_AT_F",50,100,0],										//Static Titan Launcher (AT)
 	["B_T_Static_AA_F",50,100,0],										//Static Titan Launcher (AA)
-	["B_T_Mortar_01_F",80,150,0],										//Mk6 Mortar
+	["B_Mortar_01_F",80,150,0],											//Mk6 Mortar
 	["RHS_M119_WD",100,200,0]											//M119A2
 ];
 
