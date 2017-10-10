@@ -190,7 +190,8 @@ class Missions
 * Added: Settings in the mission parameters for particular debug messages.
 * Added: Factory map markers now indicate which production facilities are available there.
 * Added: LoW Civilians.
-* Added: LoW UAVs to the default blacklist.
+* Added: LoW UAV backpacks to the default blacklist.
+* Added: LoW AL-6 Pelican UAV.
 * Added: Some of the new RHS vehicles.
 * Added: Turkish localization. Thanks to [Carbneth](https://github.com/Carbneth)
 * Added: Parameter to set a cooldown for using mobile respawns.
