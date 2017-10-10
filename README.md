@@ -213,7 +213,7 @@ class Missions
 * Tweaked: Preset system split to select blufor, opfor, resistance and civilians independently. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Capitals, cities and factories are now basically guarded by "militia" forces. Switching to regular army if the enemy combat readiness is increased.
 * Tweaked: Static weapons array missed some weapons.
-* Tweaked: Civil vehicles are now saved at a FOB after they where seized by players.
+* Tweaked: Civil vehicles are now saved at a FOB after they were seized by players.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.
