@@ -15,11 +15,11 @@ private _building_classnames = [];
 } foreach (buildings);
 _building_classnames = _building_classnames + ["B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F"];
 
-waitUntil {sleep 1; (!isNil "GRLIB_all_fobs") && (!isNil "KP_liberation_recycle_building_near")};
+waitUntil {sleep 1; !isNil "GRLIB_all_fobs"};
 
 while {true} do {
 	waitUntil {sleep 1; count GRLIB_all_fobs > 0};
-	waitUntil {sleep 3; ((player distance ([] call F_getNearestFob)) < GRLIB_fob_range) && KP_liberation_recycle_building_near};
+	waitUntil {sleep 2; (player distance ([] call F_getNearestFob)) < GRLIB_fob_range};
 
 	if ([player, 4] call F_fetchPermission) then {
 		private _detected_vehicles = [
