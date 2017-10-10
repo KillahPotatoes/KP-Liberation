@@ -176,6 +176,7 @@ class Missions
 * Added: Civil informant.
 	* Added: If you've a good reputation, a civil informant can rarely spawn at blufor sectors.
 	* Added: Intel increase, if you capture the informant and bring him back to a FOB.
+	* Added: There is a chance that an informant will reveal a time critical task to kill a HVT.
 * Added: Asymmetric Threats.
 	* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
 	* Added: Own logistic convoys can be ambushed by guerilla forces.
@@ -194,6 +195,7 @@ class Missions
 * Added: Turkish localization. Thanks to [Carbneth](https://github.com/Carbneth)
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
+* Removed: Old debug messages.
 * Tweaked: Terrain alignment will be persistent during repeat building of objects (like walls). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Some reordering of UI elements.
 * Tweaked: Localization support for the extended options menu. Thanks to [nercon](https://github.com/nercon)

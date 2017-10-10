@@ -160,6 +160,15 @@ class CfgNotifications {
     class lib_civ_informant_death : lib_intel {
         description = $STR_NOTIFICATION_CIV_INFORMANT_DEATH;
     };
+    class lib_civ_hvt_start : lib_intel {
+        description = $STR_NOTIFICATION_CIV_HVT_START;
+    };
+    class lib_civ_hvt_success : lib_intel {
+        description = $STR_NOTIFICATION_CIV_HVT_SUCCESS;
+    };
+    class lib_civ_hvt_fail : lib_intel {
+        description = $STR_NOTIFICATION_CIV_HVT_FAIL;
+    };
     class lib_asymm_convoy_ambush : lib_default_notification {
         title = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE;
         description = $STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT;

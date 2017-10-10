@@ -22,7 +22,6 @@ if (count GRLIB_all_fobs == 0) then {
 
 		_spawnplace = selectRandom _potentialplaces;
 		[markerPos _spawnplace, true] remoteExec ["build_fob_remote_call",2];
-
 	} else {
 		private _fobbox = objNull;
 		
@@ -39,11 +38,8 @@ if (count GRLIB_all_fobs == 0) then {
 				sleep 1;
 				!(alive _fobbox) || ((count GRLIB_all_fobs) > 0) || (((getPosASL _fobbox) select 2) < 0)
 			};
-
-			sleep 15;
-			
+			sleep 15;			
 		};
-
 		deleteVehicle _fobbox;
 	};
 
@@ -75,5 +71,4 @@ if (count GRLIB_all_fobs == 0) then {
 		private _smoke = "SmokeShellGreen" createVehicle (getPos _x);
 		_smoke attachTo [_x];
 	} forEach _crateArray;
-
 };

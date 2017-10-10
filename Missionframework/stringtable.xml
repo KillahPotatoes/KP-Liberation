@@ -4876,5 +4876,17 @@
 			<Original>You need a field dressing.</Original>
 			<German>Du brauchst eine einfache Bandage.</German>
 		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_START">
+			<Original>There is a high ranked officer near %1.</Original>
+			<German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
+			<Original>The officer was successfully killed.</Original>
+			<German>Der Offizier konnte erfolgreich getötet werden.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
+			<Original>The officer has moved on.</Original>
+			<German>Der Offizier ist weitergezogen.</German>
+		</Key>
 	</Package>
 </Project>

@@ -23,5 +23,27 @@ switch (_notif_id) do {
 		["lib_civ_informant_death"] call BIS_fnc_showNotification;
 		deleteMarkerLocal "informantmarker";
 	};
+	case 4: {
+		["lib_civ_hvt_start", [markertext ([10000, _pos] call F_getNearestSector)]] call BIS_fnc_showNotification;
+		private _marker = createMarker ["HVT_marker", _pos];
+		_marker setMarkerColor GRLIB_color_enemy_bright;
+		_marker setMarkerType "hd_unknown";
+
+		private _marker_zone = createMarker ["HVT_zone", _pos];
+		_marker_zone setMarkerColor GRLIB_color_enemy_bright;
+		_marker_zone setMarkerShape "ELLIPSE";
+		_marker_zone setMarkerBrush "FDiagonal";
+		_marker_zone setMarkerSize [500,500];
+	};
+	case 5: {
+		["lib_civ_hvt_success"] call BIS_fnc_showNotification;
+		deleteMarkerLocal "HVT_marker";
+		deleteMarkerLocal "HVT_zone";
+	};
+	case 6: {
+		["lib_civ_hvt_fail"] call BIS_fnc_showNotification;
+		deleteMarkerLocal "HVT_marker";
+		deleteMarkerLocal "HVT_zone";
+	};
 	default {private _text = format ["[KP LIBERATION] [ERROR] civinfo_notifications.sqf -> no valid value for _notif_id: %1", _notif_id];_text remoteExec ["diag_log",2];};
 };
