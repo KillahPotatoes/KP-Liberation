@@ -102,6 +102,7 @@ heavy_vehicles = [
 
 air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
+	["B_UAV_06_F",80,0,30],												//AL-6 Pelican (Cargo)
 	["UK3CB_BAF_Wildcat_AH1_TRN_8A_MTP",225,0,125],						//Wildcat AH1 8 Transport (Unarmed)
 	["UK3CB_BAF_Wildcat_HMA2_TRN_8A_MTP",250,0,125],					//Wildcat HMA2 8 Transport (Unarmed)
 	["UK3CB_BAF_Wildcat_AH1_CAS_6C_MTP",275,200,150],					//Wildcat AH1 6 (CAS/AT)
@@ -261,7 +262,8 @@ uavs = [
 	"B_UGV_01_rcws_F",													//UGV Stomper (RCWS)
 	"B_UAV_02_dynamicLoadout_F",										//MQ-4A Greyhawk
 	"B_T_UAV_03_dynamicLoadout_F",										//MQ-12 Falcon
-	"B_UAV_05_F"														//UCAV Sentinel
+	"B_UAV_05_F",														//UCAV Sentinel
+	"B_UAV_06_F"														//AL-6 Pelican
 ];
 
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
