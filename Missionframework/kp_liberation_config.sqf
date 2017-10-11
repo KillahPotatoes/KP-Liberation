@@ -42,7 +42,8 @@ KP_liberation_preset_blufor = 0;
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
-0 = custom (default vanilla) */
+0 = custom (default vanilla)
+1 = Apex Tanoa */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
