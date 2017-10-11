@@ -2098,7 +2098,7 @@
 			<Turkish>Oyuncunun GERİ DÖNÜŞTÜR butonunu kullanmasını sağlar</Turkish>
 		</Key>
 		<Key ID="STR_PERMISSIONS_TOOLTIP_MISC">
-			<Original>Allows the player to use other actions: unflip, ammo box manipulation, prisoners capture, etc.</Original>
+			<Original>Allows the player to use other actions: unflip, resource box manipulation, prisoner capture, etc.</Original>
 			<French>Autorise le joueur à utiliser les autres actions : retournement de véhicule, manipulation des boites de munition, capture de prisoniers, etc.</French>
 			<German>Erlaubt es dem Spieler, andere Aktionen durchzuführen: Umdrehen, Interaktion mit Munitionskisten, Gefangennahme, usw.</German>
 			<Spanish>Permite al jugador usar otras acciones: Recolocar vehículo, manipulación de cajas de munición, captura de prisioneros, etc.</Spanish>
@@ -4019,12 +4019,12 @@
 		</Key>
 		<Key ID="STR_TUTO_TEXT1">
 			<Original>&lt;br/&gt;&lt;br/&gt;
-			Hello gentlemen and welcome to the region, enemy forces have surprised us with a brutal and overwhelming offensive. They now have complete control but with your efforts, that won't last long.&lt;br/&gt; &lt;br/&gt;
+			Hello gentlemen and welcome to the region, enemy forces have surprised us with a brutal and overwhelming offensive. They now have complete control of the region but with your efforts, that won't last long.&lt;br/&gt; &lt;br/&gt;
 			Our primary objective is simple: liberate the region from enemy control!&lt;br/&gt; &lt;br/&gt;
 			The road to victory will be long and dangerous. You will have to retake many sectors and acquire the necessary resources to improve the quantity and quality of friendly forces engaged in this campaign.&lt;br/&gt; &lt;br/&gt;
 			Moreover, enemy forces will most certainly react to our advance. You will have to engage in secondary operations to weaken a foe that fights with higher numbers and better equipment than you do.&lt;br/&gt; &lt;br/&gt;
 			In your efforts you will need the support of the local population, so always double-check what you're firing at!&lt;br/&gt; &lt;br/&gt;
-			Questions? HQ close.&lt;br/&gt; &lt;br/&gt;
+			Questions? HQ out.&lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
 			Hallo die Herren und Willkommen im Kampfgebiet, der Feind hat uns mit einer brutalen und überwältigenden Offensive überrascht. Er hat jetzt die totale Kontrolle, aber Dank Ihres Einsatzes wird das nicht von Dauer sein.&lt;br/&gt; &lt;br/&gt;
@@ -4118,7 +4118,7 @@
 		</Key>
 		<Key ID="STR_TUTO_TEXT3">
 			<Original>&lt;br/&gt;&lt;br/&gt;
-			The primary objective of this campaign is to remove enemy forces from the region entirely. To achieve this, you will have to liberate ALL major towns within the region! This is the only victory condition for the campaign but those cities are tough nuts to crack with only limited resources and a well established enemy force. &lt;br/&gt; &lt;br/&gt;
+			The primary objective of this campaign is to remove enemy forces from the region entirely. To achieve this, you will have to liberate ALL major cities within the region! This is the only victory condition for the campaign but those cities are tough nuts to crack with only limited resources at your disposal and a well established enemy force. &lt;br/&gt; &lt;br/&gt;
 			To succeed, you will have to capture large number of different sectors, each with their own use.&lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
@@ -4152,10 +4152,10 @@
 		<Key ID="STR_TUTO_TEXT4">
 			<Original>&lt;br/&gt;&lt;br/&gt;
 			Sectors are split into 5 different types:&lt;br/&gt; &lt;br/&gt;
-			- Points of Interest (PoI): Generally small to medium sized villages/towns, each PoI you control can be upgraded (after building a storage area) to supply one of the three types of resources you will need to continue producing military forces and armaments.&lt;br/&gt; &lt;br/&gt;
-			- Factories: Across the region you will find civilian factories under enemy control. Capture these, as they only need a storage area and can then produce one of any of the three resources, without upgrade. As such they are a very strategic first target!&lt;br/&gt; &lt;br/&gt;
-			- Military Bases: Home to large amounts of highly equipped enemy forces, these installations are heavily defended and will require large and well co-ordinated assaults if you have any hope in capturing them!&lt;br/&gt; &lt;br/&gt;
-			- Radio Towers (RT): When under enemy control, RT will be used to call in reinforcements when a nearby sector is attacked by our own forces. The reaction time will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful map intel on hostile troop movements in the vicinity by intercepting their radio communications.&lt;br/&gt; &lt;br/&gt;
+			- Points of Interest (PoI): Generally small to medium sized villages/towns. While strategically unimportant, these places are where the citizens of the region live and as such are key in obtaining their trust and sympathy.&lt;br/&gt; &lt;br/&gt;
+			- Factories: Across the region you will find civilian factories under enemy control. These factories are specialized at creating one of the three resources (Supplies, Ammo, and Fuel), but can later be upgraded to produce all 3. As such they are a very strategic first target!&lt;br/&gt; &lt;br/&gt;
+			- Military Bases: Home to large amounts of highly equipped enemy forces, these installations are heavily defended and will require large and well co-ordinated assaults if you have any hope in capturing them! Capturing these bases will enable us to deploy stronger assets in the region and are critical to your success.&lt;br/&gt; &lt;br/&gt;
+			- Radio Towers (RT): When under enemy control, RTs will be used to call in reinforcements when a nearby sector is attacked by our own forces. The reaction time of the reinforcements will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful map intel on hostile troop movements in the vicinity by intercepting their radio communications.&lt;br/&gt; &lt;br/&gt;
 			- Major Cities: There are several major cities in the region. When all are under friendly control, we will most certainly have beaten back the enemy to a point where they cannot re-establish control. This is your primary objective.&lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
@@ -4206,9 +4206,9 @@
 			<Original>&lt;br/&gt;&lt;br/&gt;
 			In this campaign you have to manage, store and protect three types of resources:&lt;br/&gt; &lt;br/&gt;
 			&lt;t color='#00ff00'&gt;SUPPLIES:&lt;/t&gt; These are the most essential. Without supplies, you will be unable to deploy additional soldiers or requisition any military hardware. As such, HQ recommends prioritising these first!&lt;br/&gt; &lt;br/&gt;
-			&lt;t color='#ff0000'&gt;AMMUNITION:&lt;/t&gt; Used to stock armed vehicles such as APC and MBT as well as elite (and heavily armed) soldiers.&lt;br/&gt; &lt;br/&gt;
+			&lt;t color='#ff0000'&gt;AMMUNITION:&lt;/t&gt; Used to stock armed vehicles such as APCs and MBTs as well as elite (and heavily armed) soldiers.&lt;br/&gt; &lt;br/&gt;
 			&lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Every vehicle needs fuel, some being more thirsty than others.&lt;br/&gt; &lt;br/&gt;
-			You may come across all three resources in any sector but for a considerable and constant supply, you must capture PoI and Factory sectors! Once captured, both require a storage area (scroll menu action) and then a PoI will also require facility construction (again, scroll menu action). All three facilities may be built in any one PoI but you must supply an initial cost to set these facilities up! This is 50 of the specific resource and 100 of the other two.&lt;br/&gt; &lt;br/&gt;
+			You may come across all three resources in any sector but for a considerable and constant supply, you must capture Factory sectors! Once captured, factories require a storage area (scroll menu action) and then they can immediately begin producing their intended resource. If you can afford it, any factory can be upgraded to produce the other two resources as well. &lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
 			In dieser Kampagne müssen Sie drei Arten von Ressourcen verwalten, einlagern und beschützen:&lt;br/&gt; &lt;br/&gt;
@@ -4357,7 +4357,7 @@
 		<Key ID="STR_TUTO_TEXT9">
 			<Original>&lt;br/&gt;&lt;br/&gt;
 			When you capture sectors, sometimes the few hostiles forces remaining will surrender. You can then capture those prisoners and take them back to a nearby FOB to be interrogated.&lt;br/&gt; &lt;br/&gt;
-			That interrogation, executed in the utmost respect of the Geneva convention, will allow you to obtain precise information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;
+			That interrogation, executed in the utmost respect of the Geneva Convention, will allow you to obtain information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;
 			After going there you will need to find the exact position of your target, then use any means at your disposal to complete your objective. Succeeding at this task will be rewarded, reducing the alert level consequently and with it the efficiency of all hostile forces.&lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
@@ -4394,9 +4394,9 @@
 		</Key>
 		<Key ID="STR_TUTO_TEXT10">
 			<Original>&lt;br/&gt;&lt;br/&gt;
-			When a player uses the Commander role, they get specific access to the Zeus interface by pressing the corresponding key (Y by default). This interface allows the commanding of friendly forces in 3D or map view.&lt;br/&gt; &lt;br/&gt;
+			When a player uses the Commander role, they get access to the Zeus interface by pressing the corresponding key (Y by default). This interface allows the commanding of friendly forces in 3D or map view.&lt;br/&gt; &lt;br/&gt;
 			Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;
-			This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by an FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which PoI or Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;
+			This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by a FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
 			Wenn ein Spieler die Rolle des Commanders übernimmt, bekommt er spezifischen Zugang zum Zeus-Interface, wenn er die entsprechende Taste dafür drückt (default Z). Dieses Interface erlaubt das Kommandieren befreundeter Einheiten in der 3D- und Kartenansicht.&lt;br/&gt; &lt;br/&gt;
@@ -4721,14 +4721,14 @@
 			<Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
 		</Key>
 		<Key ID="STR_CR_VEHICLEMSG">
-			<Original>A civil vehicle was seized!</Original>
+			<Original>A civilian's vehicle was seized!</Original>
 			<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
 			<Italian>Un veicolo civile è stato confiscato!</Italian>
 			<Chinesesimp>一辆平民载具被强征了！</Chinesesimp>
 			<Turkish>Bir sivil aracı ele geçirildi!</Turkish>
 		</Key>
 		<Key ID="STR_CR_BUILDINGMSG">
-			<Original>Civilians complaining about %1 lost buildings.</Original>
+			<Original>Civilians are complaining about %1 lost buildings.</Original>
 			<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
 			<Italian>Civili si lamentano della perdita di %1 edifici.</Italian>
 			<Chinesesimp>平民对%1建筑的损坏有所怨言。</Chinesesimp>
@@ -4851,7 +4851,7 @@
 			<Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
-			<Original>The ambush was successfully repulsed.</Original>
+			<Original>The ambush was successfully repelled.</Original>
 			<German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
 			<Turkish>Baskın başarıyla püskürtüldü.</Turkish>
 		</Key>
