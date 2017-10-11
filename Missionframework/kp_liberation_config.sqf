@@ -43,7 +43,8 @@ KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
 0 = custom (default vanilla)
-1 = Apex Tanoa */
+1 = Apex Tanoa 
+2 = RHS GREF */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
