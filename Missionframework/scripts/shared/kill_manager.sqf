@@ -104,6 +104,10 @@ if (isServer) then {
 			if (side (group _unit) == GRLIB_side_resistance) then {
 				KP_liberation_guerilla_strength = KP_liberation_guerilla_strength - 1;
 				if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Guerilla unit killed by: %1", name _killer];};
+				if ((GRLIB_side_friendly getFriend GRLIB_side_resistance) >= 0.6) then {
+					[2, [(name _unit)]] remoteExec ["F_cr_penaltyMsg"];
+					[KP_liberation_cr_resistance_penalty, true] spawn F_cr_changeCR;
+				};
 			};
 		};
 	} else {

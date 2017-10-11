@@ -4896,5 +4896,9 @@
 			<Original>%1 minutes mobile respawn cooldown left.</Original>
 			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
 		</Key>
+		<Key ID="STR_CR_RESISTANCE_KILLMSG">
+			<Original>An allied resistance fighter named %1 was killed!</Original>
+			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+		</Key>
 	</Package>
 </Project>
