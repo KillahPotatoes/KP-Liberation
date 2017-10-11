@@ -168,6 +168,7 @@ class Missions
 * Added: Civil Reputation.
 	* Added: Config variables in `kp_liberation_config.sqf`.
 	* Added: Reputation penalty for killing civilians.
+	* Added: Reputation penalty for killing allied resistance fighters.
 	* Added: Reputation penalty for seizing civil vehicles.
 	* Added: Reputation penalty for destroyed/damaged civil buildings. (evaluated only on capture a sector event)
 	* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
