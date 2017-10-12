@@ -49,41 +49,35 @@ private _fuel = (_convoy select 6) select 2;
 private _crateArray = [];
 
 while {_supplies > 0} do {
-	private _crate = createVehicle [KP_liberation_supply_crate, getPos _roadObj, [], 50, "NONE"];
-	[_crate, 500] remoteExec ["F_setMass",_crate];
-	if ((floor (_supplies / 100)) > 0) then {
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		_supplies = _supplies - 100;
-	} else {
-		_crate setVariable ["KP_liberation_crate_value", _supplies, true];
-		_supplies = 0;
+	private _amount = 100;
+	if ((_supplies / 100) < 1) then {
+		_amount = _supplies;
 	};
+	_supplies = _supplies - _amount;
+	private _crate = [KP_liberation_supply_crate, _amount, getPos _roadObj] call F_createCrate;
+	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
 
 while {_ammo > 0} do {
-	private _crate = createVehicle [KP_liberation_ammo_crate, getPos _roadObj, [], 50, "NONE"];
-	[_crate, 500] remoteExec ["F_setMass",_crate];
-	if ((floor (_ammo / 100)) > 0) then {
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		_ammo = _ammo - 100;
-	} else {
-		_crate setVariable ["KP_liberation_crate_value", _ammo, true];
-		_ammo = 0;
+	private _amount = 100;
+	if ((_ammo / 100) < 1) then {
+		_amount = _ammo;
 	};
+	_ammo = _ammo - _amount;
+	private _crate = [KP_liberation_ammo_crate, _amount, getPos _roadObj] call F_createCrate;
+	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
 
 while {_fuel > 0} do {
-	private _crate = createVehicle [KP_liberation_fuel_crate, getPos _roadObj, [], 50, "NONE"];
-	[_crate, 500] remoteExec ["F_setMass",_crate];
-	if ((floor (_fuel / 100)) > 0) then {
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		_fuel = _fuel - 100;
-	} else {
-		_crate setVariable ["KP_liberation_crate_value", _fuel, true];
-		_fuel = 0;
+	private _amount = 100;
+	if ((_fuel / 100) < 1) then {
+		_amount = _fuel;
 	};
+	_fuel = _fuel - _amount;
+	private _crate = [KP_liberation_fuel_crate, _amount, getPos _roadObj] call F_createCrate;
+	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
 if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1 ambush: resource spawning done", (_convoy select 0)];};

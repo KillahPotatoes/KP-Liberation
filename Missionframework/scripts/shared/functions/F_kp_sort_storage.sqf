@@ -33,55 +33,34 @@ private _fuel = 0;
 sleep 0.5;
 
 while {_supply > 0} do {
-	if ((floor (_supply / 100)) > 0) then {
-		private _crate = KP_liberation_supply_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_supply = _supply - 100;
-	} else {
-		private _crate = KP_liberation_supply_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", _supply, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_supply = 0;
+	private _amount = 100;
+	if ((_supply / 100) < 1) then {
+		_amount = _supply;
 	};
+	_supply = _supply - _amount;
+	private _crate = [KP_liberation_supply_crate, _amount, _pos] call F_createCrate;
+	sleep 0.1;
+	[_crate, _x] call F_crateToStorage;
 };
 
 while {_ammo > 0} do {
-	if ((floor (_ammo / 100)) > 0) then {
-		private _crate = KP_liberation_ammo_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_ammo = _ammo - 100;
-	} else {
-		private _crate = KP_liberation_ammo_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", _ammo, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_ammo = 0;
+	private _amount = 100;
+	if ((_ammo / 100) < 1) then {
+		_amount = _ammo;
 	};
+	_ammo = _ammo - _amount;
+	private _crate = [KP_liberation_ammo_crate, _amount, _pos] call F_createCrate;
+	sleep 0.1;
+	[_crate, _x] call F_crateToStorage;
 };
 
 while {_fuel > 0} do {
-	if ((floor (_fuel / 100)) > 0) then {
-		private _crate = KP_liberation_fuel_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", 100, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_fuel = _fuel - 100;
-	} else {
-		private _crate = KP_liberation_fuel_crate createVehicle _pos;
-		sleep 0.1;
-		_crate setVariable ["KP_liberation_crate_value", _fuel, true];
-		[_crate, 500] remoteExec ["F_setMass",_crate];
-		[_crate, _storage] call F_crateToStorage;
-		_fuel = 0;
+	private _amount = 100;
+	if ((_fuel / 100) < 1) then {
+		_amount = _fuel;
 	};
+	_fuel = _fuel - _amount;
+	private _crate = [KP_liberation_fuel_crate, _amount, _pos] call F_createCrate;
+	sleep 0.1;
+	[_crate, _x] call F_crateToStorage;
 };

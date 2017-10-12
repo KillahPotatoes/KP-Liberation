@@ -242,7 +242,8 @@ KP_liberation_allowed_items_extension = [
     "BWA3_optic_EOTech_tan_Mag_On",
     "BWA3_optic_EOTech_tan_Mag_Off",
     "BWA3_optic_20x50_NSV",
-    "BWA3_optic_24x72_NSV"
+    "BWA3_optic_24x72_NSV",
+	"ACE_ReserveParachute"
 ];
 
 /* - Configuration settings for crates transported by vehicles.

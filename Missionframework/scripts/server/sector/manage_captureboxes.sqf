@@ -18,15 +18,8 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 
 		private _spawnclass = selectRandom KP_liberation_crates;
 
-		private _newbox = _spawnclass createVehicle _spawnpos;
+		private _newbox = [selectRandom KP_liberation_crates, 100, _spawnpos] call F_createCrate;
 		_newbox setdir (random 360);
 		_newbox setpos _spawnpos;
-		clearWeaponCargoGlobal _newbox;
-		clearMagazineCargoGlobal _newbox;
-		clearItemCargoGlobal _newbox;
-		clearBackpackCargoGlobal _newbox;
-		
-		_newbox setVariable ["KP_liberation_crate_value", 100, true];
-		[_newbox, 500] remoteExec ["F_setMass",_newbox];
 	};
 };

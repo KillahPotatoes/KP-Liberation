@@ -31,11 +31,9 @@ private _boxes_loaded = 0;
 while { _boxes_loaded < _boxes_amount } do {
 	_boxes_loaded = _boxes_loaded + 1;
 	sleep 0.5;
-	private _next_box = KP_liberation_ammo_crate createVehicle ([ _spawnpos, 15, 135 ] call BIS_fnc_relPos);
+	private _next_box = [KP_liberation_ammo_crate, 100, _spawnpos getPos [15, 135]] call F_createCrate;
 	sleep 0.5;
-	_next_box setVariable ["KP_liberation_crate_value", 100, true];
-	[_next_box, 500] remoteExec ["F_setMass",_next_box];
-	[ _next_box, 50 ] call _load_box_fnc;
+	[_next_box, 50] call _load_box_fnc;
 };
 
 sleep 0.5;

@@ -4806,9 +4806,8 @@
 			<Turkish>Sivil Repütasyonu</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
-			<Original>Save data (shows whole save array every minute in the server.rpt)</Original>
+			<Original>Saving</Original>
 			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
-			<Turkish>Kayıt verisi (bütün kayıt bilgilerini her dakika server.rpt dosyasında gösterir)</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
 			<Original>A civilian from %1 says he has some information for us.</Original>
@@ -4899,6 +4898,14 @@
 		<Key ID="STR_CR_RESISTANCE_KILLMSG">
 			<Original>An allied resistance fighter named %1 was killed!</Original>
 			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_SAVE">
+			<Original>Gamedata saving</Original>
+			<German>Savegame Speicherung</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_PRODUCTION">
+			<Original>Production</Original>
+			<German>Produktion</German>
 		</Key>
 	</Package>
 </Project>

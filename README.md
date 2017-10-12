@@ -196,6 +196,7 @@ class Missions
 * Added: Some of the new RHS vehicles.
 * Added: Turkish localization. Thanks to [Carbneth](https://github.com/Carbneth)
 * Added: Parameter to set a cooldown for using mobile respawns.
+* Updated: English ingame tutorial texts in stringtable. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
 * Removed: Liberation skill handling of AI units, as BI do this good enough now concerning wounds, etc.
 * Removed: Vehicle explosion chance script for convoy ambush.
 * Removed: Old debug messages.
@@ -216,6 +217,7 @@ class Missions
 * Tweaked: Capitals, cities and factories are now basically guarded by "militia" forces. Switching to regular army if the enemy combat readiness is increased.
 * Tweaked: Static weapons array missed some weapons.
 * Tweaked: Civil vehicles are now saved at a FOB after they were seized by players.
+* Tweaked: Some small code optimizations and format corrections.
 * Fixed: Player got custom recoil and aiming coefficients on respawn.
 * Fixed: Rare script error on closing respawn screen directly after joining the mission.
 * Fixed: Players could deploy multiple FOBs when they selected deploy fast enough on the same container.

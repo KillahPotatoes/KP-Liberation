@@ -353,6 +353,12 @@ class Params
 		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
 		default = 0;
 	};
+	class DebugProduction {
+		title = $STR_PARAMS_DEBUG_PRODUCTION;
+		values[] = {0, 1};
+		texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+		default = 0;
+	};
 	class DebugSave {
 		title = $STR_PARAMS_DEBUG_SAVE;
 		values[] = {0, 1};

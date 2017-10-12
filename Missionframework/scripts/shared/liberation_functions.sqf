@@ -55,3 +55,4 @@ F_cr_getMulti = compileFinal preprocessFileLineNumbers "scripts\shared\functions
 F_cr_ace_action = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_cr_ace_action.sqf";
 F_getResistanceTier = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getResistanceTier.sqf";
 F_spawnGuerillaGroup = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_spawnGuerillaGroup.sqf";
+F_createCrate = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_createCrate.sqf";

@@ -16,5 +16,5 @@ if (isDedicated) exitWith {};
 hint format [localize "STR_ACTION_CRATE_VALUE_HINT", (_this select 0) getVariable ["KP_liberation_crate_value",0]];
 
 if (!(ropeAttachEnabled (_this select 0))) then {
-	[(_this select 0), true] remoteExec ["enableRopeAttach",(_this select 0)];
+	[(_this select 0), true] remoteExec ["enableRopeAttach"];
 };

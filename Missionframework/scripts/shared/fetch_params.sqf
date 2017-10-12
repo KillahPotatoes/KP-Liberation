@@ -40,6 +40,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
 	KP_liberation_sectorspawn_debug = ["DebugSectorSpawn",0] call bis_fnc_getParamValue;
 	KP_liberation_kill_debug = ["DebugKill",0] call bis_fnc_getParamValue;
+	KP_liberation_production_debug = ["DebugProduction",0] call bis_fnc_getParamValue;
 	KP_liberation_respawn_cooldown = ["RespawnCooldown",900] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
@@ -83,6 +84,7 @@ if ( isMultiplayer ) then {
 	KP_liberation_logistic_debug = 0;
 	KP_liberation_sectorspawn_debug = 0;
 	KP_liberation_kill_debug = 0;
+	KP_liberation_production_debug = 0;
 	KP_liberation_respawn_cooldown = 900;
 };
 
