@@ -160,7 +160,7 @@ class Missions
 
 ## Changelog
 
-### 0.96 (in Development)
+### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
 	* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
 	* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
