@@ -21,11 +21,8 @@ switch (KP_liberation_preset_resistance) do {
 };
 
 switch (KP_liberation_preset_civilians) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\apex_tanoa.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\rhs.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_bw.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\rhs_takistan.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\3cbBAF.sqf";};
+	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
