@@ -47,7 +47,7 @@ reverse _stored_crates;
 		clearItemCargoGlobal _x;
 		
 		_x setPos _unload_pos;
-		[_x, true] remoteExec ["enableRopeAttach",_x];
+		[_x, true] remoteExec ["enableRopeAttach"];
 		_unloaded = true;
 	};
 	if (_unloaded) exitWith {
