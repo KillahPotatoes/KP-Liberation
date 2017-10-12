@@ -13,9 +13,9 @@ private _convoy_destinations = [];
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];
 
-private _scout_vehicle = [ [ _spawnpos, 30, 0 ] call BIS_fnc_relPos, opfor_mrap, true, false, false ] call F_libSpawnVehicle;
-private _escort_vehicle = [ [ _spawnpos, 10, 0 ] call BIS_fnc_relPos, opfor_vehicles_low_intensity call BIS_fnc_selectRandom, true, false, false ] call F_libSpawnVehicle;
-private _transport_vehicle = [ [ _spawnpos, 10, 180 ] call BIS_fnc_relPos, opfor_ammobox_transport, true, true, false ] call F_libSpawnVehicle;
+private _scout_vehicle = [ [ _spawnpos, 30, 0 ] call BIS_fnc_relPos, opfor_mrap, true, false ] call F_libSpawnVehicle;
+private _escort_vehicle = [ [ _spawnpos, 10, 0 ] call BIS_fnc_relPos, selectRandom opfor_vehicles_low_intensity, true, false ] call F_libSpawnVehicle;
+private _transport_vehicle = [ [ _spawnpos, 10, 180 ] call BIS_fnc_relPos, opfor_ammobox_transport, true, false ] call F_libSpawnVehicle;
 
 private _boxes_amount = 0;
 {
@@ -31,12 +31,9 @@ private _boxes_loaded = 0;
 while { _boxes_loaded < _boxes_amount } do {
 	_boxes_loaded = _boxes_loaded + 1;
 	sleep 0.5;
-	private _next_box = KP_liberation_ammo_crate createVehicle ([ _spawnpos, 15, 135 ] call BIS_fnc_relPos);
+	private _next_box = [KP_liberation_ammo_crate, 100, _spawnpos getPos [15, 135]] call F_createCrate;
 	sleep 0.5;
-	_next_box setVariable ["KP_liberation_crate_value", 100, true];
-	[_next_box, 500] remoteExec ["F_setMass",_next_box];
-	[ _next_box, 50 ] call _load_box_fnc;
-	_next_box addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
+	[_next_box, 50] call _load_box_fnc;
 };
 
 sleep 0.5;
@@ -79,8 +76,8 @@ _waypoint setWaypointType "CYCLE";
 _waypoint setWaypointCompletionRadius 50;
 
 private _troops_group = createGroup GRLIB_side_enemy;
-{ _x createUnit [_spawnpos, _troops_group,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach ([] call F_getAdaptiveSquadComp);
-{ _x moveInCargo _troop_vehicle } foreach (units _troops_group);
+{_x createUnit [_spawnpos, _troops_group,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];} foreach (["army"] call F_getAdaptiveSquadComp);
+{_x moveInCargo _troop_vehicle} foreach (units _troops_group);
 
 private _convoy_marker = createMarkerLocal [ format [ "convoymarker%1", round time], getpos _transport_vehicle ];
 _convoy_marker setMarkerText (localize "STR_SECONDARY_CSAT_CONVOY");

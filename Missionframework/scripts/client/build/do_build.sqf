@@ -4,6 +4,7 @@ build_confirmed = 0;
 _maxdist = GRLIB_fob_range;
 _truepos = [];
 _debug_colisions = false;
+KP_vector = true;
 
 GRLIB_preview_spheres = [];
 while { count GRLIB_preview_spheres < 36 } do {
@@ -24,7 +25,6 @@ while { true } do {
 
 	build_confirmed = 1;
 	build_invalid = 0;
-	KP_vector = true;
 	_classname = "";
 	if ( buildtype == 99 ) then {
 		GRLIB_removefobboxes = true;
@@ -67,7 +67,6 @@ while { true } do {
 				_idx = _idx + 1;
 
 			} foreach _classname;
-			_grp setCombatMode "GREEN";
 			_grp setBehaviour "SAFE";
 			build_confirmed = 0;
 		} else {
@@ -99,10 +98,11 @@ while { true } do {
 			_vehicle allowdamage false;
 			_vehicle setVehicleLock "LOCKED";
 			_vehicle enableSimulationGlobal false;
+			_vehicle setVariable ["KP_liberation_preplaced", true, true];
 
 			_dist = 0.6 * (sizeOf _classname);
 			if (_dist < 3.5) then { _dist = 3.5 };
-			_dist = _dist + 0.5;
+			_dist = _dist + 1;
 
 			for [{_i=0}, {_i<5}, {_i=_i+1}] do {
 				_vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
@@ -308,6 +308,12 @@ while { true } do {
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
+
+				// Arty Supp deactivated for now
+				/*if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
+					[_vehicle] remoteExec ["arty_monitor", 2];
+				};*/
+
 				if ( (_classname in uavs) || manned ) then {
 					[ _vehicle ] call F_forceBluforCrew;
 				};
@@ -316,6 +322,7 @@ while { true } do {
 					case FOB_box_typename: {[_vehicle, 3000] remoteExec ["F_setMass",_vehicle];};
 					case "Land_Medevac_house_V1_F";
 					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
+					case KP_liberation_recycle_building: {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
 					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
 					case KP_liberation_small_storage_building;
 					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};

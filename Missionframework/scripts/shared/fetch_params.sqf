@@ -19,7 +19,7 @@ if ( isMultiplayer ) then {
 	GRLIB_csat_aggressivity = ["Aggressivity",2] call bis_fnc_getParamValue;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
-	GRLIB_remote_sensors = 0;//[ "DisableRemoteSensors",0] call bis_fnc_getParamValue;
+	GRLIB_remote_sensors = 0;
 	GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
 	GRLIB_autodanger = [ "Autodanger",0] call bis_fnc_getParamValue;
 	GRLIB_maximum_fobs = [ "MaximumFobs",26] call bis_fnc_getParamValue;
@@ -30,7 +30,18 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilearsenal = ["MobileArsenal",1] call bis_fnc_getParamValue;
 	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
 	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
-	KP_liberation_debug = ["DebugEnable",0] call bis_fnc_getParamValue;
+	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
+	KP_liberation_restart = ["ServerRestart",0] call BIS_fnc_getParamValue;
+	KP_liberation_cr_param_buildings = ["CR_Building",0] call BIS_fnc_getParamValue;
+	KP_liberation_civinfo_debug = ["DebugCivInfo",0] call bis_fnc_getParamValue;
+	KP_liberation_civrep_debug = ["DebugCivRep",0] call bis_fnc_getParamValue;
+	KP_liberation_savegame_debug = ["DebugSave",0] call bis_fnc_getParamValue;
+	KP_liberation_asymmetric_debug = ["DebugAsymmetric",0] call bis_fnc_getParamValue;
+	KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
+	KP_liberation_sectorspawn_debug = ["DebugSectorSpawn",0] call bis_fnc_getParamValue;
+	KP_liberation_kill_debug = ["DebugKill",0] call bis_fnc_getParamValue;
+	KP_liberation_production_debug = ["DebugProduction",0] call bis_fnc_getParamValue;
+	KP_liberation_respawn_cooldown = ["RespawnCooldown",900] call bis_fnc_getParamValue;
 } else {
 	GRLIB_difficulty_modifier = 2;
 	GRLIB_time_factor = 12;
@@ -63,27 +74,38 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilearsenal = 1;
 	KP_liberation_ailogistics = 1;
 	KP_liberation_ace = 0;
-	KP_liberation_debug = 0;
+	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = 1;
+	KP_liberation_restart = 0;
+	KP_liberation_cr_param_buildings = 0;
+	KP_liberation_civinfo_debug = 0;
+	KP_liberation_civrep_debug = 0;
+	KP_liberation_savegame_debug = 0;
+	KP_liberation_asymmetric_debug = 0;
+	KP_liberation_logistic_debug = 0;
+	KP_liberation_sectorspawn_debug = 0;
+	KP_liberation_kill_debug = 0;
+	KP_liberation_production_debug = 0;
+	KP_liberation_respawn_cooldown = 900;
 };
 
-if ( GRLIB_fatigue < 0.1 ) then { GRLIB_fatigue = false } else { GRLIB_fatigue = true };
-if ( GRLIB_introduction == 1 ) then { GRLIB_introduction = true } else { GRLIB_introduction = false };
-if ( GRLIB_deployment_cinematic == 1 ) then { GRLIB_deployment_cinematic = true } else { GRLIB_deployment_cinematic = false };
-if ( GRLIB_build_first_fob == 1 ) then { GRLIB_build_first_fob = true } else { GRLIB_build_first_fob = false };
-if ( GRLIB_teamkill_penalty == 1 ) then { GRLIB_teamkill_penalty = true } else { GRLIB_teamkill_penalty = false };
-if ( GRLIB_adaptive_opfor == 1 ) then { GRLIB_adaptive_opfor = true } else { GRLIB_adaptive_opfor = false };
-if ( GRLIB_permissions_param == 1 ) then { GRLIB_permissions_param = true } else { GRLIB_permissions_param = false };
-if ( GRLIB_use_whitelist == 1 ) then { GRLIB_use_whitelist = true } else { GRLIB_use_whitelist = false };
-if ( GRLIB_shorter_nights == 1 ) then { GRLIB_shorter_nights = true } else { GRLIB_shorter_nights = false };
-if ( GRLIB_blufor_defenders == 1 ) then { GRLIB_blufor_defenders = true } else { GRLIB_blufor_defenders = false };
-if ( GRLIB_autodanger == 1 ) then { GRLIB_autodanger = true } else { GRLIB_autodanger = false };
+if (GRLIB_fatigue < 0.1) then {GRLIB_fatigue = false} else {GRLIB_fatigue = true};
+if (GRLIB_introduction == 1) then {GRLIB_introduction = true} else {GRLIB_introduction = false};
+if (GRLIB_deployment_cinematic == 1) then {GRLIB_deployment_cinematic = true} else {GRLIB_deployment_cinematic = false};
+if (GRLIB_build_first_fob == 1) then {GRLIB_build_first_fob = true} else {GRLIB_build_first_fob = false};
+if (GRLIB_teamkill_penalty == 1) then {GRLIB_teamkill_penalty = true} else {GRLIB_teamkill_penalty = false};
+if (GRLIB_adaptive_opfor == 1) then {GRLIB_adaptive_opfor = true} else {GRLIB_adaptive_opfor = false};
+if (GRLIB_permissions_param == 1) then {GRLIB_permissions_param = true} else {GRLIB_permissions_param = false};
+if (GRLIB_use_whitelist == 1) then {GRLIB_use_whitelist = true} else {GRLIB_use_whitelist = false};
+if (GRLIB_shorter_nights == 1) then {GRLIB_shorter_nights = true} else {GRLIB_shorter_nights = false};
+if (GRLIB_blufor_defenders == 1) then {GRLIB_blufor_defenders = true} else {GRLIB_blufor_defenders = false};
+if (GRLIB_autodanger == 1) then {GRLIB_autodanger = true} else {GRLIB_autodanger = false};
 if (KP_liberation_arsenalUsePreset == 1) then {KP_liberation_arsenalUsePreset = true} else {KP_liberation_arsenalUsePreset = false};
 if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_allow_mapmarkers = true; GREUH_allow_platoonview = true} else {KP_liberation_mapmarkers = false; GREUH_allow_mapmarkers = false; GREUH_allow_platoonview = false; show_platoon = false; show_teammates = false; show_nametags = false};
 if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
 if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};
 if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else {KP_liberation_ailogistics = false};
 if (KP_liberation_ace == 1) then {KP_liberation_ace = true} else {KP_liberation_ace = false};
-if (KP_liberation_debug == 1) then {KP_liberation_debug = true} else {KP_liberation_debug = false};
+if (KP_liberation_cr_param_buildings == 1) then {KP_liberation_cr_param_buildings = true} else {KP_liberation_cr_param_buildings = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {

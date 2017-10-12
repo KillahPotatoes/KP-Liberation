@@ -19,7 +19,7 @@ _mapdisplay = ((findDisplay 75801) displayCtrl 758016);
 
 lbClear 75802;
 {
-	lbAdd [75802, (_x select 0)];
+	lbAdd [75802, (markerText (_x select 1))];
 } forEach KP_liberation_production;
 
 ctrlMapAnimClear _mapdisplay;
@@ -106,22 +106,13 @@ while {dialog && (alive player)} do {
 		((findDisplay 75801) displayCtrl 75807) ctrlSetTextColor _color_negative;
 	};
 
-	switch (_selectedSector select 2) do {
-		case 1: {
-			((findDisplay 75801) displayCtrl 75808) ctrlSetTextColor _color_positive;
-			((findDisplay 75801) displayCtrl 75809) ctrlSetTextColor _color_positive;
-			((findDisplay 75801) displayCtrl 758010) ctrlSetTextColor _color_positive;
-		};
-		default {
-			if (_selectedSector select 4) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 75801) displayCtrl 75808) ctrlSetTextColor _color_actual;
-			if (_selectedSector select 5) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 75801) displayCtrl 75809) ctrlSetTextColor _color_actual;
-			if (_selectedSector select 6) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
-			((findDisplay 75801) displayCtrl 758010) ctrlSetTextColor _color_actual;
-			_color_actual = _color_neutral;
-		};
-	};
+	if (_selectedSector select 4) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
+	((findDisplay 75801) displayCtrl 75808) ctrlSetTextColor _color_actual;
+	if (_selectedSector select 5) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
+	((findDisplay 75801) displayCtrl 75809) ctrlSetTextColor _color_actual;
+	if (_selectedSector select 6) then {_color_actual = _color_positive;} else {_color_actual = _color_negative;};
+	((findDisplay 75801) displayCtrl 758010) ctrlSetTextColor _color_actual;
+	_color_actual = _color_neutral;
 
 	_supplyValue = ceil ((_selectedSector select 9) / 100);
 	_ammoValue = ceil ((_selectedSector select 10) / 100);

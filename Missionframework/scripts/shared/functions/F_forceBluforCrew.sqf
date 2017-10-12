@@ -17,7 +17,5 @@ if ( count crew _veh > 0 ) then {
 
 		{ if ( vehicle _x == _x ) then { deleteVehicle _x }; } foreach (units _grp);
 	};
-
-	(group ((crew _veh) select 0)) setCombatMode "GREEN";
 	(group ((crew _veh) select 0)) setBehaviour "SAFE";
 };

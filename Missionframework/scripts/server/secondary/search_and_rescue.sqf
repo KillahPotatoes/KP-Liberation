@@ -36,7 +36,7 @@ private _patrolcorners = [
 	[ (getpos _helowreck select 0) - 40, (getpos _helowreck select 1) + 40, 0 ]
 ];
 
-{ _x createUnit [ _patrolcorners select 0, _grppatrol,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach ([] call F_getAdaptiveSquadComp);
+{ _x createUnit [ _patrolcorners select 0, _grppatrol,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach (["army"] call F_getAdaptiveSquadComp);
 
 while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
 {
@@ -70,7 +70,7 @@ if ( combat_readiness < 50 ) then {
 
 private _vehtospawn = [];
 private _spawnchances = [75,50,15];
-{ if (random 100 < _x ) then { _vehtospawn pushBack (_vehicle_pool call BIS_fnc_selectRandom); }; } foreach _spawnchances;
+{if (random 100 < _x) then {_vehtospawn pushBack (selectRandom _vehicle_pool);};} foreach _spawnchances;
 { ( [ [ getpos _helowreck, 30 + (random 30), random 360 ] call BIS_fnc_relPos , _x, true ] call F_libSpawnVehicle ) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
 
 secondary_objective_position = getpos _helowreck;

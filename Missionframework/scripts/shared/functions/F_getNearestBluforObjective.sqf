@@ -1,32 +1,31 @@
-params [ "_startpos" ];
-private [ "_currentnearest", "_refdistance", "_tpositions"];
+params ["_startpos"];
 
-_currentnearest = [];
-_refdistance = 99999;
-_tpositions = [];
+private _currentnearest = [];
+private _refdistance = 99999;
+private _tpositions = [];
 
-if ( count GRLIB_all_fobs != 0 || count blufor_sectors != 0 ) then {
+if (count GRLIB_all_fobs != 0 || count blufor_sectors != 0) then {
 
-	{ _tpositions pushback _x; } foreach GRLIB_all_fobs;
+	{_tpositions pushback _x;} foreach GRLIB_all_fobs;
 
 	{
-		if ( _startpos distance _x < _refdistance ) then {
+		if (_startpos distance _x < _refdistance) then {
 			_refdistance = (_startpos distance _x);
 			_currentnearest = [_x,_refdistance];
 		};
-	} foreach _tpositions;
+	} forEach _tpositions;
 
-	if ( _refdistance > 4000 ) then {
+	if (_refdistance > 4000) then {
 		{
 			_tpositions pushback (markerpos _x);
-		} foreach blufor_sectors;
+		} forEach blufor_sectors;
 
 		{
-			if ( _startpos distance _x < _refdistance ) then {
+			if (_startpos distance _x < _refdistance) then {
 				_refdistance = (_startpos distance _x);
 				_currentnearest = [_x,_refdistance];
 			};
-		} foreach _tpositions;
+		} forEach _tpositions;
 	};
 } else {
 	_currentnearest = _startpos;

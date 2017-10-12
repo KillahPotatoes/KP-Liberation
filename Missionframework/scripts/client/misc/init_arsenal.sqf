@@ -13,8 +13,6 @@ if (KP_liberation_arsenalUsePreset) then {
 	if (isNil "GRLIB_arsenal_backpacks") then {GRLIB_arsenal_backpacks = []};
 	if (isNil "blacklisted_from_arsenal") then {blacklisted_from_arsenal = []};
 
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initializing for: %2", KP_liberation_arsenal, debug_source];_text remoteExec ["diag_log",2];};
-
 	if ((count GRLIB_arsenal_weapons) == 0) then {
 		if ((count blacklisted_from_arsenal) == 0) then {
 			_virtualWeapons = _virtualCargo select 0;
@@ -79,14 +77,9 @@ if (KP_liberation_arsenalUsePreset) then {
 	if ((count KP_liberation_allowed_items_extension) > 0) then {
 		KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 	};
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Arsenal preset %1 initialized for: %2", KP_liberation_arsenal, debug_source];_text remoteExec ["diag_log",2];};
-
 } else {
 	[missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
-	
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Arsenal with no restrictions initialized for: %1", debug_source];_text remoteExec ["diag_log",2];};
 };

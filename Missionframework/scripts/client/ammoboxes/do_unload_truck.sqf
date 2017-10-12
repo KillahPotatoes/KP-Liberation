@@ -23,7 +23,7 @@ if ( _truck_to_unload getVariable ["GRLIB_ammo_truck_load", 0] > 0 ) then {
 		_offset = _offset - 2.2;
 		sleep 0.5;
 		[_next_box, true] remoteExec ["F_objectProtection"];
-		_next_box enableRopeAttach true;
+		[_next_box, true] remoteExec ["enableRopeAttach"];
 	} foreach ( attachedObjects _truck_to_unload);
 
 	sleep 0.5;

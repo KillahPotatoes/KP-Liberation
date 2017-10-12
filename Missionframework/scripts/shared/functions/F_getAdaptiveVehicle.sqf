@@ -1,8 +1,7 @@
-private [ "_vehicle_to_spawn" ];
+private _vehicle_to_spawn = selectRandom opfor_vehicles;
 
-_vehicle_to_spawn = opfor_vehicles call BIS_fnc_selectRandom;
-if ( combat_readiness < 35 ) then {
-	_vehicle_to_spawn = opfor_vehicles_low_intensity call BIS_fnc_selectRandom;
+if (combat_readiness < 35) then {
+	_vehicle_to_spawn = selectRandom opfor_vehicles_low_intensity;
 };
 
 _vehicle_to_spawn;

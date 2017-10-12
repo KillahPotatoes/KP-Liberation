@@ -1,45 +1,44 @@
 choiceslist = [];
 fullmap = 0;
-_old_fullmap = 0;
-_standard_map_pos = [];
-_frame_pos = [];
+private _old_fullmap = 0;
+private _oldsel = -999;
+private _standard_map_pos = [];
+private _frame_pos = [];
 
 GRLIB_force_redeploy = false;
 
-waitUntil { !isNil "GRLIB_all_fobs" };
-waitUntil { !isNil "blufor_sectors" };
-waitUntil { !isNil "save_is_loaded" };
+waitUntil {!isNil "GRLIB_all_fobs"};
+waitUntil {!isNil "blufor_sectors"};
+waitUntil {!isNil "save_is_loaded"};
 
-_spawn_str = "";
+private _spawn_str = "";
 
-waitUntil { !isNil "introDone" };
-waitUntil { introDone };
-waitUntil { !isNil "cinematic_camera_stop" };
-waitUntil { cinematic_camera_stop };
+waitUntil {!isNil "introDone"};
+waitUntil {introDone};
+waitUntil {!isNil "cinematic_camera_stop"};
+waitUntil {cinematic_camera_stop};
 
-_basenamestr = "Operation Base";
+private _basenamestr = "Operation Base";
 
+KP_liberation_respawn_time = time;
+KP_liberation_respawn_mobile_done = false;
 
-while { true } do {
+while {true} do {
 	waitUntil {
-		sleep 0.1;
-		( GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50) ) && vehicle player == player && alive player && !dialog && howtoplay == 0
+		sleep 0.2;
+		(GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
-
-	if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Redeploy management executed at: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 	fullmap = 0;
 	_old_fullmap = 0;
 
 	GRLIB_force_redeploy = false;
 
-	if ( !GRLIB_fatigue ) then {
+	if (!GRLIB_fatigue) then {
 		player enableStamina false;
 	};
-	player setCustomAimCoef 0.35;
-	player setUnitRecoilCoefficient 0.6;
 
-	_dialog = createDialog "liberation_deploy";
+	createDialog "liberation_deploy";
 	deploy = 0;
 	_oldsel = -999;
 
@@ -52,42 +51,44 @@ while { true } do {
 	respawn_camera cameraEffect ["internal","back"];
 	respawn_camera camcommit 0;
 
-	waitUntil { dialog };
+	waitUntil {dialog};
 
-	((findDisplay 5201) displayCtrl 201) ctrlAddEventHandler [ "mouseButtonDblClick" , { deploy = 1; } ];
+	((findDisplay 5201) displayCtrl 201) ctrlAddEventHandler ["mouseButtonDblClick", {deploy = 1;}];
 
 	_standard_map_pos = ctrlPosition ((findDisplay 5201) displayCtrl 251);
 	_frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 198);
 
-	_saved_loadouts = profileNamespace getVariable "bis_fnc_saveInventory_data";
-	_loadouts_data = [];
-	_counter = 0;
-	if ( !isNil "_saved_loadouts" ) then {
+	private _saved_loadouts = profileNamespace getVariable "bis_fnc_saveInventory_data";
+	private _loadouts_data = [];
+	private _counter = 0;
+	if (!isNil "_saved_loadouts") then {
 		{
-			if ( _counter % 2 == 0 ) then {
+			if (_counter % 2 == 0) then {
 				_loadouts_data pushback _x;
 			};
 			_counter = _counter + 1;
-		} foreach _saved_loadouts;
+		} forEach _saved_loadouts;
 	};
 
-	lbAdd [ 203, "--"] ;
-	{ lbAdd [ 203, _x ]; } foreach _loadouts_data;
-	lbSetCurSel [ 203, 0 ];
+	lbAdd [203, "--"];
+	{lbAdd [203, _x];} forEach _loadouts_data;
+	lbSetCurSel [203, 0];
 
-	while { dialog && alive player && deploy == 0} do {
-		choiceslist = [ [ _basenamestr, getposATL startbase ] ];
+	while {dialog && alive player && deploy == 0} do {
+		choiceslist = [[_basenamestr, getposATL startbase]];
 
 		for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
-			choiceslist = choiceslist + [[format [ "FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx) ],GRLIB_all_fobs select _idx]];
+			choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx)],GRLIB_all_fobs select _idx]];
 		};
 
 		if (KP_liberation_mobilerespawn) then {
-			_respawn_trucks = call F_getMobileRespawns;
+			if (KP_liberation_respawn_time <= time) then {
+				private _respawn_trucks = call F_getMobileRespawns;
 
-			for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
-				choiceslist = choiceslist + [[format [ "%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx)) ],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
-			};
+				for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
+					choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
+				};
+			};	
 		};
 
 		lbClear 201;
@@ -95,21 +96,21 @@ while { true } do {
 			lbAdd [201, (_x select 0)];
 		} foreach choiceslist;
 
-		if ( lbCurSel 201 == -1 ) then {
+		if (lbCurSel 201 == -1) then {
 			 lbSetCurSel [201,0];
 		};
 
-		if ( lbCurSel 201 != _oldsel ) then {
+		if (lbCurSel 201 != _oldsel) then {
 			_oldsel = lbCurSel 201;
-			_objectpos = [0,0,0];
-			if ( dialog ) then {
+			private _objectpos = [0,0,0];
+			if (dialog) then {
 				_objectpos = ((choiceslist select _oldsel) select 1);
 			};
 			respawn_object setposATL ((choiceslist select _oldsel) select 1);
-			_startdist = 120;
-			_enddist = 120;
-			_alti = 35;
-			if ( dialog ) then {
+			private _startdist = 120;
+			private _enddist = 120;
+			private _alti = 35;
+			if (dialog) then {
 				if (((choiceslist select (lbCurSel 201)) select 0) == _basenamestr) then {
 					_startdist = 200;
 					_enddist = 300;
@@ -133,9 +134,9 @@ while { true } do {
 			respawn_camera camcommit 90;
 		};
 
-		if ( _old_fullmap != fullmap ) then {
+		if (_old_fullmap != fullmap) then {
 			_old_fullmap = fullmap;
-			if ( fullmap % 2 == 1 ) then {
+			if (fullmap % 2 == 1) then {
 				((findDisplay 5201) displayCtrl 251) ctrlSetPosition [ (_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
 			} else {
 				((findDisplay 5201) displayCtrl 251) ctrlSetPosition _standard_map_pos;
@@ -143,24 +144,24 @@ while { true } do {
 			((findDisplay 5201) displayCtrl 251) ctrlCommit 0.2;
 			_oldsel = -1;
 		};
-
 		uiSleep 0.1;
 	};
 
 	if (dialog && deploy == 1) then {
-		_idxchoice = lbCurSel 201;
+		private _idxchoice = lbCurSel 201;
 		_spawn_str = (choiceslist select _idxchoice) select 0;
 
 		if (count (choiceslist select _idxchoice) == 3) then {
-			_truck = (choiceslist select _idxchoice) select 2;
-			player setposATL ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos)
+			private _truck = (choiceslist select _idxchoice) select 2;
+			player setposATL ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos);
+			KP_liberation_respawn_mobile_done = true;
 		} else {
-			_destpos = ((choiceslist select _idxchoice) select 1);
+			private _destpos = ((choiceslist select _idxchoice) select 1);
 			player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
 		};
 
-		if ( (lbCurSel 203) > 0 ) then {
-			[ player, [ profileNamespace, _loadouts_data select ((lbCurSel 203) - 1) ] ] call bis_fnc_loadInventory;
+		if ((lbCurSel 203) > 0) then {
+			[player, [profileNamespace, _loadouts_data select ((lbCurSel 203) - 1)]] call bis_fnc_loadInventory;
 		};
 	};
 
@@ -176,8 +177,12 @@ while { true } do {
 
 	if (alive player && deploy == 1) then {
 		[_spawn_str] spawn spawn_camera;
+		if (KP_liberation_respawn_mobile_done) then {
+			KP_liberation_respawn_time = time + KP_liberation_respawn_cooldown;
+			KP_liberation_respawn_mobile_done = false;
+		};
 	};
-
+	
 	if (KP_liberation_arsenalUsePreset) then {
 		_playerItems = [];
 		if ((headgear player) != "") then {_playerItems pushback (headgear player);};
@@ -188,6 +193,7 @@ while { true } do {
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (assignedItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (uniformItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (vestItems player);
+		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (backpackItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (weapons player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (primaryWeaponItems player);
 		{if ((_x != "") && !(_x in _playerItems)) then {_playerItems pushback _x;};} forEach (secondaryWeaponItems player);
@@ -209,4 +215,38 @@ while { true } do {
 			removeGoggles player;
 		};
 	};
+
+	if (KP_liberation_mobilerespawn && (KP_liberation_respawn_time > time)) then {
+		hint format [localize "STR_RESPAWN_COOLDOWN_HINT", ceil ((KP_liberation_respawn_time - time) / 60)];
+		sleep 3;
+		hint "";
+	};
+
+	// Arty Supp deactivated for now
+	/*if (KP_liberation_suppMod_enb > 0) then {
+		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_arty")};
+		private _access = false;
+		switch (KP_liberation_suppMod_enb) do {
+			case 1: {if (player == ([] call F_getCommander)) then {_access = true};};
+			case 2: {if ((getPlayerUID player) in KP_liberation_suppMod_whitelist) then {_access = true};};
+			default {_access = true;};
+		};
+		if (_access) then {
+			if (isNil "KP_liberation_suppMod_handle") then {KP_liberation_suppMod_handle = scriptNull;};
+			if (isNull KP_liberation_suppMod_handle) then {
+				KP_liberation_suppMod_handle = [KP_liberation_suppMod_arty] execVM "A3\modules_f\supports\init_provider.sqf";
+			};
+			if (isNil "KP_liberation_suppMod_req") then {
+				KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", KP_liberation_suppMod_grp, [], 0, "NONE"];
+				//KP_liberation_suppMod_req spawn BIS_fnc_moduleSupportsInitRequester;
+				[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";
+				{
+					[KP_liberation_suppMod_req, _x, -1] call BIS_fnc_limitSupport;
+				} forEach ["Artillery","CAS_Heli","CAS_Bombing","UAV","Drop","Transport"];
+			};
+			if ((count (synchronizedObjects player)) == 0) then {
+				[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
+			};
+		};
+	};*/
 };

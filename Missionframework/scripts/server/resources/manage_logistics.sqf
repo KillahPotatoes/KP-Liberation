@@ -1,18 +1,21 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
 
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic management started on: %1", debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_logistic_debug > 0) then {diag_log "[KP LIBERATION] [LOGISTIC] Logistic management started";};
+
+KP_liberation_convoy_ambush_inProgress = false;
+KP_liberation_convoy_ambush_check = 0;
 
 while {GRLIB_endgame == 0} do {
 
 	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {
-		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic interval started: %1", time];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval started: %1", time];};
 		
-		private ["_tempLogistics","_locPos","_locRes","_storage_areas","_toProcess","_currentIndex","_processed","_space","_crate","_supplyValue","_ammoValue","_fuelValue","_maxGetSupply","_maxGetAmmo","_maxGetFuel","_getSupply","_getAmmo","_getFuel","_i","_nextState","_time"];
-		
-		_tempLogistics = +KP_liberation_logistics;
+		private _tempLogistics = +KP_liberation_logistics;
 
 		{
+			private _locPos = -1;
+			private _locRes = -1;
 			switch (_x select 7) do {
 				case 0: {};
 				case 1;
@@ -20,15 +23,15 @@ while {GRLIB_endgame == 0} do {
 					if ((_x select 8) > 1) then {
 						switch (_x select 7) do {case 1: {_locPos = 2; _locRes = 4;}; case 3: {_locPos = 3; _locRes = 5;};};
 						switch (_x select 9) do {case 2: {_x set [9,0];}; case 3: {_x set [9,1];};};
-						_storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
+						private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
 
 						if (((_x select 9) == 0) && !((_x select 6) isEqualTo [0,0,0])) then {
 
 							if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
 
-							_toProcess = ceil ((ceil (((_x select 6) select 0) / 100)) + (ceil (((_x select 6) select 1) / 100)) + (ceil (((_x select 6) select 2) / 100)));
+							private _toProcess = ceil ((ceil (((_x select 6) select 0) / 100)) + (ceil (((_x select 6) select 1) / 100)) + (ceil (((_x select 6) select 2) / 100)));
 							if (_toProcess > 3) then {_toProcess = 3;};
-							_spaceSum = 0;
+							private _spaceSum = 0;
 							{
 								if (typeOf _x == KP_liberation_large_storage_building) then {
 									_spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
@@ -41,11 +44,11 @@ while {GRLIB_endgame == 0} do {
 							if (_spaceSum < _toProcess) exitWith {_x set [9,2];};
 							
 							_x set [8,((_x select 8) - 1)];
-							_currentIndex = _forEachIndex;
-							_processed = 0;
+							private _currentIndex = _forEachIndex;
+							private _processed = 0;
 							while {_processed < _toProcess} do {
 								{
-									_space = 0;
+									private _space = 0;
 									if (typeOf _x == KP_liberation_large_storage_building) then {
 										_space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
 									};
@@ -54,81 +57,51 @@ while {GRLIB_endgame == 0} do {
 									};
 
 									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
-										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 0) / 100)) > 0) then {
-											_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", 100, true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[(((_tempLogistics select _currentIndex) select 6) select 0) - 100,
-												(((_tempLogistics select _currentIndex) select 6) select 1),
-												(((_tempLogistics select _currentIndex) select 6) select 2)]
-											];
-										} else {
-											_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 0), true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[0,
-												(((_tempLogistics select _currentIndex) select 6) select 1),
-												(((_tempLogistics select _currentIndex) select 6) select 2)]
-											];
+										private _amount = 100;
+										if (((((_tempLogistics select _currentIndex) select 6) select 0) / 100) < 1) then {
+											_amount = ((_tempLogistics select _currentIndex) select 6) select 0;
 										};
+										(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0) - _amount,
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+										private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call F_createCrate;
+										[_crate, _x] call F_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
 									if (_processed >= _toProcess) exitWith {};
 
 									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 1) > 0)) then {
-										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 1) / 100)) > 0) then {
-											_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", 100, true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[(((_tempLogistics select _currentIndex) select 6) select 0),
-												(((_tempLogistics select _currentIndex) select 6) select 1) - 100,
-												(((_tempLogistics select _currentIndex) select 6) select 2)]
-											];
-										} else {
-											_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 1), true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[(((_tempLogistics select _currentIndex) select 6) select 0),
-												0,
-												(((_tempLogistics select _currentIndex) select 6) select 2)]
-											];
+										private _amount = 100;
+										if (((((_tempLogistics select _currentIndex) select 6) select 1) / 100) < 1) then {
+											_amount = ((_tempLogistics select _currentIndex) select 6) select 1;
 										};
+										(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												(((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
+												(((_tempLogistics select _currentIndex) select 6) select 2)]
+											];
+										private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call F_createCrate;
+										[_crate, _x] call F_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
 									if (_processed >= _toProcess) exitWith {};
 
 									if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 2) > 0)) then {
-										if ((floor ((((_tempLogistics select _currentIndex) select 6) select 2) / 100)) > 0) then {
-											_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", 100, true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[(((_tempLogistics select _currentIndex) select 6) select 0),
-												(((_tempLogistics select _currentIndex) select 6) select 1),
-												(((_tempLogistics select _currentIndex) select 6) select 2) - 100]
-											];
-										} else {
-											_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-											_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 2), true];
-											[_crate, 500] remoteExec ["F_setMass",_crate];
-											[_crate, _x] call F_crateToStorage;
-											(_tempLogistics select _currentIndex) set [6,
-												[(((_tempLogistics select _currentIndex) select 6) select 0),
-												(((_tempLogistics select _currentIndex) select 6) select 1),
-												0]
-											];
+										private _amount = 100;
+										if (((((_tempLogistics select _currentIndex) select 6) select 2) / 100) < 1) then {
+											_amount = ((_tempLogistics select _currentIndex) select 6) select 2;
 										};
+										(_tempLogistics select _currentIndex) set [6,
+												[(((_tempLogistics select _currentIndex) select 6) select 0),
+												(((_tempLogistics select _currentIndex) select 6) select 1),
+												(((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
+											];
+										private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call F_createCrate;
+										[_crate, _x] call F_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
@@ -136,19 +109,18 @@ while {GRLIB_endgame == 0} do {
 								} forEach _storage_areas;
 							};
 							please_recalculate = true;
-							if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+							if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 						} else {
 							_x set [9,1];
-							if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
 						};
 
 						if (((_x select 9) == 1) && !((_x select _locRes) isEqualTo [0,0,0])) then {
 
 							if ((count (_storage_areas)) == 0) exitWith {_x set [9,3];};
 
-							_supplyValue = 0;
-							_ammoValue = 0;
-							_fuelValue = 0;
+							private _supplyValue = 0;
+							private _ammoValue = 0;
+							private _fuelValue = 0;
 							
 							{
 								{
@@ -161,20 +133,20 @@ while {GRLIB_endgame == 0} do {
 								} forEach (attachedObjects _x);
 							} forEach _storage_areas;
 
-							_toProcess = ceil ((ceil (((_x select _locRes) select 0) / 100)) + (ceil (((_x select _locRes) select 1) / 100)) + (ceil (((_x select _locRes) select 2) / 100)));
+							private _toProcess = ceil ((ceil (((_x select _locRes) select 0) / 100)) + (ceil (((_x select _locRes) select 1) / 100)) + (ceil (((_x select _locRes) select 2) / 100)));
 							if (_toProcess > 3) then {_toProcess = 3;};
 
-							_maxGetSupply = ((_x select _locRes) select 0);
+							private _maxGetSupply = ((_x select _locRes) select 0);
 							if (_maxGetSupply > 300) then {_maxGetSupply = 300;};
-							_maxGetAmmo = ((_x select _locRes) select 1);
+							private _maxGetAmmo = ((_x select _locRes) select 1);
 							if (_maxGetAmmo > 300) then {_maxGetAmmo = 300;};
-							_maxGetFuel = ((_x select _locRes) select 2);
+							private _maxGetFuel = ((_x select _locRes) select 2);
 							if (_maxGetFuel > 300) then {_maxGetFuel = 300;};
 
-							_getSupply = 0;
-							_getAmmo = 0;
-							_getFuel = 0;
-							_i = 0;
+							private _getSupply = 0;
+							private _getAmmo = 0;
+							private _getFuel = 0;
+							private _i = 0;
 							private _j = 0;
 
 							while {(_i < _toProcess) && (_j < _toProcess)} do {
@@ -303,14 +275,14 @@ while {GRLIB_endgame == 0} do {
 								
 							} forEach _storage_areas;
 
-							if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+							if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 						};
 					} else {
+						private _nextState = 0;
+						private _time = -1;
 						if (((_x select 4) isEqualTo [0,0,0]) && ((_x select 5) isEqualTo [0,0,0]) && ((_x select 6) isEqualTo [0,0,0])) then {
 							_x set [2, [0,0,0]];
 							_x set [3, [0,0,0]];
-							_nextState = 0;
-							_time = -1;
 						} else {
 							_nextState = switch (_x select 7) do {case 1: {2}; case 3: {4};};
 							_time = ceil (((_x select 2) distance2D (_x select 3)) / 400);
@@ -320,17 +292,47 @@ while {GRLIB_endgame == 0} do {
 						_x set [8,_time];
 						_x set [9,0];
 
-						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				case 2;
 				case 4: {
 					if ((_x select 8) > 1) then {
-						_x set [8,((_x select 8) - 1)];
+						
+						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25)) then {
+							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2", (_x select 0), (_x select 8)];_text remoteExec ["diag_log",2];};
+							private _dice = round (random 100);
+							if (_dice <= (KP_liberation_convoy_ambush_chance + ([] call F_cr_getMulti))) then {
+								private _convoy = +_x;
+								sleep 0.1;
+								[_convoy] spawn logistic_convoy_ambush;
+								waitUntil {sleep 0.1; KP_liberation_convoy_ambush_check != 0};
+								if (KP_liberation_convoy_ambush_check == 2) then {
+									_x set [1,0];
+									_x set [2,[0,0,0]];
+									_x set [3,[0,0,0]];
+									_x set [4,[0,0,0]];
+									_x set [5,[0,0,0]];
+									_x set [6,[0,0,0]];
+									_x set [7,0];
+									_x set [8,-1];
+								} else {
+									_x set [8,((_x select 8) - 1)];
+									KP_liberation_convoy_ambush_check = 0;
+								}
+							} else {
+								if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: no ambush - Chance: %2 - Dice: %3", (_x select 0), (KP_liberation_convoy_ambush_chance + (round ((KP_liberation_civ_rep * -1) / 25))), _dice];};
+								_x set [8,((_x select 8) - 1)];	
+							};
+						} else {
+							_x set [8,((_x select 8) - 1)];
+						};
 
-						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 
 					} else {
+						private _nextState = -1;
+						private _time = 0;
 						switch (_x select 7) do {
 							case 2: {
 								_nextState = 3;
@@ -349,7 +351,7 @@ while {GRLIB_endgame == 0} do {
 						_x set [7,_nextState];
 						_x set [8,_time];
 
-						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				case 5;
@@ -357,13 +359,13 @@ while {GRLIB_endgame == 0} do {
 					if ((_x select 8) > 1) then {
 						_locPos = switch (_x select 7) do {case 5: {2}; case 6: {3};};
 						_x set [9,0];
-						_storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
+						private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
 
 						if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
 
-						_toProcess = ceil ((ceil (((_x select 6) select 0) / 100)) + (ceil (((_x select 6) select 1) / 100)) + (ceil (((_x select 6) select 2) / 100)));
+						private _toProcess = ceil ((ceil (((_x select 6) select 0) / 100)) + (ceil (((_x select 6) select 1) / 100)) + (ceil (((_x select 6) select 2) / 100)));
 						if (_toProcess > 3) then {_toProcess = 3;};
-						_spaceSum = 0;
+						private _spaceSum = 0;
 						{
 							if (typeOf _x == KP_liberation_large_storage_building) then {
 								_spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
@@ -376,11 +378,11 @@ while {GRLIB_endgame == 0} do {
 						if (_spaceSum < _toProcess) exitWith {_x set [9,2];};
 						
 						_x set [8,((_x select 8) - 1)];
-						_currentIndex = _forEachIndex;
-						_processed = 0;
+						private _currentIndex = _forEachIndex;
+						private _processed = 0;
 						while {_processed < _toProcess} do {
 							{
-								_space = 0;
+								private _space = 0;
 								if (typeOf _x == KP_liberation_large_storage_building) then {
 									_space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
 								};
@@ -389,81 +391,51 @@ while {GRLIB_endgame == 0} do {
 								};
 
 								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
-									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 0) / 100)) > 0) then {
-										_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", 100, true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[(((_tempLogistics select _currentIndex) select 6) select 0) - 100,
-											(((_tempLogistics select _currentIndex) select 6) select 1),
-											(((_tempLogistics select _currentIndex) select 6) select 2)]
-										];
-									} else {
-										_crate = KP_liberation_supply_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 0), true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[0,
-											(((_tempLogistics select _currentIndex) select 6) select 1),
-											(((_tempLogistics select _currentIndex) select 6) select 2)]
-										];
+									private _amount = 100;
+									if (((((_tempLogistics select _currentIndex) select 6) select 0) / 100) < 1) then {
+										_amount = ((_tempLogistics select _currentIndex) select 6) select 0;
 									};
+									(_tempLogistics select _currentIndex) set [6,
+										[(((_tempLogistics select _currentIndex) select 6) select 0) - _amount,
+										(((_tempLogistics select _currentIndex) select 6) select 1),
+										(((_tempLogistics select _currentIndex) select 6) select 2)]
+									];
+									private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call F_createCrate;
+									[_crate, _x] call F_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};
 								if (_processed >= _toProcess) exitWith {};
 
 								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 1) > 0)) then {
-									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 1) / 100)) > 0) then {
-										_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", 100, true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[(((_tempLogistics select _currentIndex) select 6) select 0),
-											(((_tempLogistics select _currentIndex) select 6) select 1) - 100,
-											(((_tempLogistics select _currentIndex) select 6) select 2)]
-										];
-									} else {
-										_crate = KP_liberation_ammo_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 1), true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[(((_tempLogistics select _currentIndex) select 6) select 0),
-											0,
-											(((_tempLogistics select _currentIndex) select 6) select 2)]
-										];
+									private _amount = 100;
+									if (((((_tempLogistics select _currentIndex) select 6) select 1) / 100) < 1) then {
+										_amount = ((_tempLogistics select _currentIndex) select 6) select 1;
 									};
+									(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											(((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
+											(((_tempLogistics select _currentIndex) select 6) select 2)]
+										];
+									private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call F_createCrate;
+									[_crate, _x] call F_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};
 								if (_processed >= _toProcess) exitWith {};
 
 								if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 2) > 0)) then {
-									if ((floor ((((_tempLogistics select _currentIndex) select 6) select 2) / 100)) > 0) then {
-										_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", 100, true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[(((_tempLogistics select _currentIndex) select 6) select 0),
-											(((_tempLogistics select _currentIndex) select 6) select 1),
-											(((_tempLogistics select _currentIndex) select 6) select 2) - 100]
-										];
-									} else {
-										_crate = KP_liberation_fuel_crate createVehicle (getPos _x);
-										_crate setVariable ["KP_liberation_crate_value", (((_tempLogistics select _currentIndex) select 6) select 2), true];
-										[_crate, 500] remoteExec ["F_setMass",_crate];
-										[_crate, _x] call F_crateToStorage;
-										(_tempLogistics select _currentIndex) set [6,
-											[(((_tempLogistics select _currentIndex) select 6) select 0),
-											(((_tempLogistics select _currentIndex) select 6) select 1),
-											0]
-										];
+									private _amount = 100;
+									if (((((_tempLogistics select _currentIndex) select 6) select 2) / 100) < 1) then {
+										_amount = ((_tempLogistics select _currentIndex) select 6) select 2;
 									};
+									(_tempLogistics select _currentIndex) set [6,
+											[(((_tempLogistics select _currentIndex) select 6) select 0),
+											(((_tempLogistics select _currentIndex) select 6) select 1),
+											(((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
+										];
+									private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call F_createCrate;
+									[_crate, _x] call F_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};
@@ -472,7 +444,7 @@ while {GRLIB_endgame == 0} do {
 						};
 						please_recalculate = true;
 
-						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					} else {
 						_x set [2,[0,0,0]];
 						_x set [3,[0,0,0]];
@@ -482,7 +454,7 @@ while {GRLIB_endgame == 0} do {
 						_x set [7,0];
 						_x set [8,-1];
 
-						if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic Group Update: %1", _x];_text remoteExec ["diag_log",2];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				default {};
@@ -491,7 +463,7 @@ while {GRLIB_endgame == 0} do {
 
 		KP_liberation_logistics = +_tempLogistics;
 
-		if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Logistic interval finished: %1", time];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval finished: %1", time];};
 	};
 	uiSleep 60;
 };

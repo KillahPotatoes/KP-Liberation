@@ -11,7 +11,7 @@ if ( GRLIB_weather_param == 3 ) then {
 _weathertime = 1800;
 
 while { GRLIB_endgame == 0 } do {
-	chosen_weather = _weathers call BIS_fnc_selectRandom;;
+	chosen_weather = selectRandom _weathers;
 	publicVariable "chosen_weather";
 	sleep _weathertime;
 };

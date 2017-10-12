@@ -9,7 +9,9 @@ KP_liberation_medical_vehicles = [
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
 	"RHS_UH60M_MEV2",
-	"RHS_UH60M_MEV2_d"
+	"RHS_UH60M_MEV2_d",
+	"rhsusf_M1230a1_usarmy_d",
+	"rhsusf_M1230a1_usarmy_wd"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -20,15 +22,36 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings.
-Which units preset should be used?
-0 = Default vanilla with RHS USAF and BWMod, both optional (edit the custom.sqf in the presets\ folder to change things for your own versions and tweaks).
-1 = Apex vanilla with RHS USAF and BWMod, both optional (edit the apex_tanoa.sqf in the presets\ folder to change things for your own versions and tweaks).
-2 = RHS USAF and RHS AFRF.
-3 = RHS USAF, RHS AFRF and BWMod.
-4 = RHS USAF, RHS AFRF and Project OPFOR (Takistan)
-5 = 3cbBAF, RHS USAF and RHS AFRF. */
-KP_liberation_preset = 0;
+/* - Custom unit and arsenal preset settings. 
+If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
+
+/* BLUFOR preset:
+0 = custom (default vanilla with many optional mods supported)
+1 = 3cb BAF
+2 = Apex Tanoa
+3 = BWMod (German Bundeswehr)
+4 = RHS USAF woodland
+5 = RHS USAF desert */
+KP_liberation_preset_blufor = 0;
+
+/* OPFOR preset:
+0 = custom (default vanilla CSAT)
+1 = Apex Tanoa
+2 = Project OPFOR (Takistan)
+3 = RHS AFRF */
+KP_liberation_preset_opfor = 0;
+
+/* Resistance preset:
+0 = custom (default vanilla)
+1 = Apex Tanoa 
+2 = RHS GREF */
+KP_liberation_preset_resistance = 0;
+
+/* Civilians preset:
+0 = custom (default vanilla)
+1 = Apex Tanoa
+2 = Project OPFOR (Takistan) */
+KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
 0 = Use the default blacklist method (defined below).
@@ -52,8 +75,6 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_savegame_debug = false;																			// Enables displaying of the whole save array in the server log on each save
-
 GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.
 GRLIB_side_resistance = RESISTANCE;																				// Resistance side.
@@ -69,7 +90,7 @@ GRLIB_halo_altitude = 2500;																						// Altitude in metres for the H
 GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 0.5;																				// Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 45				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1000;																						// Range to activate a sector.
 GRLIB_capture_size = 175;																						// Range to capture a sector.
@@ -86,6 +107,31 @@ GRLIB_blufor_cap = 100								* GRLIB_unitcap;											// Cap for BLUFOR.
 GRLIB_sector_cap = 180								* GRLIB_unitcap;											// Cap for sector defenders.
 GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy battlegroups.
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
+
+KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 2;																			// Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_resistance_penalty = 3;																		// Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector.
+KP_liberation_cr_wounded_chance = 35;																			// Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_gain = 2;																				// Civil Reputation gain for providing medical assistance for wounded civilians.
+
+KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time. (seconds)
+KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time. (seconds)
+KP_liberation_civinfo_chance = 75;																				// Civil Informant spawn chance. (0-100)
+KP_liberation_civinfo_intel = 5;																				// Civil Informant intel amount.
+KP_liberation_civinfo_duration = 1200;																			// Civil Informant staytime until despawning. (seconds)
+KP_liberation_civinfo_task_chance = 40;																			// Chance (0-100) that the delivered informant will spawn a time critical task.
+KP_liberation_civinfo_task_duration = 900;																		// Duration until the task will despawn if no player is near. (seconds)
+
+KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_duration = 1200;																	// Duration of the convoy ambush event. (seconds)
+
+KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?
+KP_liberation_resistance_tier3 = 70;																			// At which strength (0-100) the guerilla forces will be at tier 3?
+KP_liberation_resistance_at_chance = 20;																		// Chance that a guerilla unit has a RPG. (tier 2 and 3)
+KP_liberation_resistance_sector_chance = 35;																	// Chance that a guerilla squad will join an ongoing sector attack.
+KP_liberation_resistance_ambush_chance = 30;																	// Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
@@ -161,6 +207,18 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
 	"RHS_SPG9_Tripod_Bag",
+	"I_UAV_06_backpack_F",
+	"O_UAV_06_backpack_F",
+	"B_UAV_06_backpack_F",
+	"I_UAV_06_medical_backpack_F",
+	"O_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_medical_backpack_F",
+	"B_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_antimine_backpack_F",
+	"C_UAV_06_backpack_F",
+	"C_IDAP_UAV_06_backpack_F",
+	"C_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_01_backpack_F",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
@@ -174,7 +232,18 @@ KP_liberation_allowed_items_extension = [
 	"rhs_weap_M136_used",
 	"rhs_m136_mag",
 	"rhs_m136_hedp_mag",
-	"rhs_m136_hp_mag"
+	"rhs_m136_hp_mag",
+	"BWA3_optic_ZO4x30_NSV",
+	"BWA3_optic_ZO4x30_IRV",
+	"BWA3_optic_ZO4x30_Single_NSV",
+	"BWA3_optic_ZO4x30_Single_IRV",
+	"BWA3_optic_EOTech_Mag_On",
+    "BWA3_optic_EOTech_Mag_Off",
+    "BWA3_optic_EOTech_tan_Mag_On",
+    "BWA3_optic_EOTech_tan_Mag_Off",
+    "BWA3_optic_20x50_NSV",
+    "BWA3_optic_24x72_NSV",
+	"ACE_ReserveParachute"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
@@ -204,6 +273,7 @@ box_transport_config = [
 	["rhsusf_M977A4_BKIT_usarmy_wd", -6.5, [0,0.4,1.4], [0,-1.3,1.4], [0,-3,1.4]],
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd", -6.5, [0,0.4,0.7], [0,-1.3,0.7], [0,-3,0.7]],
 	["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
+	["BW_AW101_Trans_Heer_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
 	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_T_VTOL_01_infantry_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
@@ -215,6 +285,7 @@ box_transport_config = [
 	["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
+	["BW_LKW7T_Trans_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_T_Truck_03_covered_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
@@ -249,7 +320,9 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Ammo_F",
+	"rhs_gaz66_ammo_msv"
 ];
 
 // Everything that can resupply other vehicles.
@@ -265,7 +338,8 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Repair_F"
 ];
 
 vehicle_rearm_sources = [
@@ -279,7 +353,8 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
-	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"
+	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"BW_LKW15T_Ammo_F"
 ];
 
 vehicle_refuel_sources = [
@@ -293,8 +368,26 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_d",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
-	"rhsusf_M978A4_BKIT_usarmy_wd"
+	"rhsusf_M978A4_BKIT_usarmy_wd",
+	"BW_LKW15T_Fuel_F"
 ];
+
+// Classnames of artillery vehicles or statics which should be linked to the support system. (Currently deactivated)
+/*KP_liberation_artySupp = [
+	"B_Mortar_01_F",
+	"B_T_Mortar_01_F",
+	"B_MBT_01_arty_F",
+	"B_T_MBT_01_arty_F",
+	"B_MBT_01_mlrs_F",
+	"B_T_MBT_01_mlrs_F",
+	"rhsusf_m109_usarmy",
+	"rhsusf_m109d_usarmy",
+	"RHS_M252_WD",
+	"RHS_M252_D",
+	"RHS_M119_WD",
+	"RHS_M119_D",
+	"UK3CB_BAF_Static_L16_Deployed_MTP"
+];*/
 
 // Classnames of boats, so they can be built on water.
 boats_names = [
@@ -370,11 +463,32 @@ KP_liberation_small_storage_positions = [
 	[2.4502,-1.79883,0.6]
 ];
 
+// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation
+KP_liberation_cr_ignored_buildings = [
+	"Land_LampStreet_small_F",
+	"Land_PowerPoleWooden_L_F",
+	"Land_LampShabby_F",
+	"Land_SlideCastle_F",
+	"Land_Carousel_01_F",
+	"Land_LampDecor_F",
+	"Land_LampStreet_F",
+	"Land_LampHalogen_F",
+	"Land_LampSolar_F",
+	"Land_LampHarbour_F",
+	"Land_HighVoltageColumnWire_F",
+	"Land_HighVoltageColumn_F",
+	"Land_fs_feed_F",
+	"Land_PowerWireBig_left_F",
+	"Land_runway_edgelight_blue_F",
+	"Land_LampAirport_off_F",
+	"Land_Flush_Light_green_F",
+	"Land_LampAirport_F",
+	"Land_PierLadder_F"
+];
+
 // DO NOT CHANGE (unless you know what you are doing).
 GRLIB_endgame = 0;
 if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
 GRLIB_offload_diag = false;
 
 KP_liberation_production_interval = ceil KP_liberation_production_interval;
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] config loaded for: %1", debug_source];_text remoteExec ["diag_log",2];};

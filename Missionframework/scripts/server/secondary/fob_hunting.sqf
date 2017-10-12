@@ -17,7 +17,7 @@ _base_position = markerpos _spawn_marker;
 _base_objects = [];
 _base_objectives = [];
 _base_defenders = [];
-_template = ([] call (compile preprocessFileLineNumbers ( _fob_templates call bis_fnc_selectrandom )));
+_template = ([] call (compile preprocessFileLineNumbers (selectRandom _fob_templates)));
 
 _objects_to_build = _template select 0;
 _objectives_to_build = _template select 1;
@@ -32,11 +32,11 @@ _base_corners =  _template select 3;
 
 	_nextobject = _nextclass createVehicle _nextpos;
 	_nextobject setVectorUp [0,0,1];
-	_nextobject setpos _nextpos;
 	_nextobject setdir _nextdir;
+	_nextobject setpos _nextpos;
 	_nextobject setVectorUp [0,0,1];
-	_nextobject setpos _nextpos;
 	_nextobject setdir _nextdir;
+	_nextobject setpos _nextpos;
 	_base_objects = _base_objects + [_nextobject];
 
 } foreach _objects_to_build;

@@ -2,16 +2,12 @@ unitcap = 0;
 KP_liberation_heli_count = 0;
 KP_liberation_plane_count = 0;
 
-private ["_local_unitcap","_local_heli_count","_local_plane_count"];
-
-if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] Unitcap calculation started on: %1", debug_source];_text remoteExec ["diag_log",2];};
-
-while { true } do {
-	_local_unitcap = 0;
-	_local_heli_count = 0;
-	_local_plane_count = 0;
+while {true} do {
+	private _local_unitcap = 0;
+	private _local_heli_count = 0;
+	private _local_plane_count = 0;
 	{
-		if ( (side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance startbase) > 250 || (isPlayer _x)) ) then {
+		if ((side group _x == GRLIB_side_friendly) && (alive _x) && ((_x distance startbase) > 250 || (isPlayer _x))) then {
 			_local_unitcap = _local_unitcap + 1;
 		};
 	} forEach allUnits;

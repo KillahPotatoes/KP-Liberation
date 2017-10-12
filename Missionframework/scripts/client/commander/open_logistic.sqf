@@ -13,12 +13,12 @@ _nearfob = [] call F_getNearestFob;
 _logi_destinations = [];
 
 {
-	_logi_destinations pushBack [(format ["FOB %1", military_alphabet select _forEachIndex]), _x];
-} forEach GRLIB_all_fobs;
+	_logi_destinations pushBack [(format ["FOB %1", military_alphabet select _forEachIndex]), (_x select 0), (_x select 1), (_x select 2), (_x select 3)];
+} forEach KP_liberation_fob_resources;
 
 {
-	_logi_destinations pushBack [(markerText _x),(markerPos _x)];
-} forEach (blufor_sectors - sectors_bigtown - sectors_military - sectors_tower);
+	_logi_destinations pushBack [(_x select 0), (markerPos (_x select 1)), (_x select 9), (_x select 10), (_x select 11)];
+} forEach KP_liberation_production;
 
 _logi_destinations sort true;
 
@@ -74,7 +74,7 @@ while {dialog && (alive player)} do {
 	if (buyLogiTruck == 1) then {
 		buyLogiTruck = 0;
 		_tempvariable = _selectedGroup select 1;
-		[_listselect, _nearfob, clientOwner] remoteExec ["add_logiTruck_remote_call",2];
+		[_listselect, _nearfob, clientOwner, KP_liberation_supplies, KP_liberation_ammo, KP_liberation_fuel] remoteExec ["add_logiTruck_remote_call",2];
 		waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
 	};
 
@@ -174,8 +174,8 @@ while {dialog && (alive player)} do {
 		lbClear 758024;
 		lbClear 758029;
 		{
-				lbAdd [758024, (_x select 0)];
-				lbAdd [758029, (_x select 0)];
+			lbAdd [758024, format ["%1 (%2/%3/%4)",(_x select 0), (_x select 2), (_x select 3), (_x select 4)]];
+			lbAdd [758029, format ["%1 (%2/%3/%4)",(_x select 0), (_x select 2), (_x select 3), (_x select 4)]];
 		} forEach _logi_destinations;
 
 		if (!((_selectedGroup select 2) isEqualTo [0,0,0])) then {

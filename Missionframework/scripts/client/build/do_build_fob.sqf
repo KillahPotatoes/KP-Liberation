@@ -11,6 +11,9 @@ _clearedtobuildfob = true;
 _distsector = 1;
 _clearedtobuildsector = true;
 
+FOB_build_in_progress = true;
+publicVariable "FOB_build_in_progress";
+
 _idx = 0;
 while { (_idx < (count GRLIB_all_fobs)) && _clearedtobuildfob } do {
 	if ( player distance (GRLIB_all_fobs select _idx) < _minfobdist ) then {
@@ -33,9 +36,13 @@ if(_clearedtobuildfob) then {
 
 if (!_clearedtobuildfob) then {
 	hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE",floor _minfobdist,floor _distfob];
+	FOB_build_in_progress = false;
+	publicVariable "FOB_build_in_progress";
 } else {
 	if ( !_clearedtobuildsector ) then {
 		hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE_SECTOR",floor _minsectordist,floor _distsector];
+		FOB_build_in_progress = false;
+		publicVariable "FOB_build_in_progress";
 	} else {
 		buildtype = 99;
 		dobuild = 1;
