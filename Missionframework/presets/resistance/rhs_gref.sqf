@@ -63,7 +63,7 @@ KP_liberation_guerilla_weapons_3 =[
 	["rhs_weap_pkm","rhs_100Rnd_762x54mmR",2,"",""],
 	["rhs_weap_pkp","rhs_100Rnd_762x54mmR",2,"rhs_acc_pkas",""],
 	["rhs_weap_svdp","rhs_10rnd_762x54mmR_7N1",5,"rhs_acc_pso1m21",""],
-	["rhs_weap_aks74un","rhs_10rnd_762x54mmR_7N1",4,"rhs_acc_ekp8_02",""]
+	["rhs_weap_aks74un","rhs_30rnd_545x39_AK",4,"rhs_acc_ekp8_02",""]
 ];
 
 // Uniforms
