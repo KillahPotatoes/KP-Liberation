@@ -40,7 +40,7 @@ while {_supply > 0} do {
 	_supply = _supply - _amount;
 	private _crate = [KP_liberation_supply_crate, _amount, _pos] call F_createCrate;
 	sleep 0.1;
-	[_crate, _x] call F_crateToStorage;
+	[_crate, _storage] call F_crateToStorage;
 };
 
 while {_ammo > 0} do {
@@ -51,7 +51,7 @@ while {_ammo > 0} do {
 	_ammo = _ammo - _amount;
 	private _crate = [KP_liberation_ammo_crate, _amount, _pos] call F_createCrate;
 	sleep 0.1;
-	[_crate, _x] call F_crateToStorage;
+	[_crate, _storage] call F_crateToStorage;
 };
 
 while {_fuel > 0} do {
@@ -62,5 +62,5 @@ while {_fuel > 0} do {
 	_fuel = _fuel - _amount;
 	private _crate = [KP_liberation_fuel_crate, _amount, _pos] call F_createCrate;
 	sleep 0.1;
-	[_crate, _x] call F_crateToStorage;
+	[_crate, _storage] call F_crateToStorage;
 };
