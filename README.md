@@ -161,6 +161,9 @@ class Missions
 ## Changelog
 
 ### 0.961 (in development)
+* Updated: RHS GREF resistance preset. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
+* Fixed: Sort function for storage areas.
+* Fixed: HC Sector spawn issue.
 
 ### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
