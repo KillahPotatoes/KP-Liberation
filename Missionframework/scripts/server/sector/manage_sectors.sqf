@@ -1,4 +1,5 @@
 active_sectors = [];
+publicVariable "active_sectors";
 
 waitUntil {!isNil "blufor_sectors"};
 waitUntil {!isNil "sectors_allSectors"};
