@@ -62,8 +62,8 @@ KP_liberation_guerilla_weapons_3 =[
 	["rhs_weap_asval_grip","rhs_20rnd_9x39mm_SP5",5,"rhs_acc_pkas",""],
 	["rhs_weap_pkm","rhs_100Rnd_762x54mmR",2,"",""],
 	["rhs_weap_pkp","rhs_100Rnd_762x54mmR",2,"rhs_acc_pkas",""],
-	["rhs_weap_svdp","20Rnd_650x39_Cased_Mag_F",5,"rhs_acc_pso1m21",""],
-	["rhs_weap_aks74un","rhs_10rnd_762x54mmR_7N1",4,"rhs_acc_ekp8_02",""]
+	["rhs_weap_svdp","rhs_10rnd_762x54mmR_7N1",5,"rhs_acc_pso1m21",""],
+	["rhs_weap_aks74un","rhs_30rnd_545x39_AK",4,"rhs_acc_ekp8_02",""]
 ];
 
 // Uniforms
@@ -164,11 +164,7 @@ KP_liberation_guerilla_headgear_1 = [
 	"",
 	"",
 	"",
-	"H_Hat_brown",
-	"H_Hat_grey",
-	"H_Hat_tan",
-	"H_Hat_checker",
-	"H_Hat_camo",
+	"",
 	"H_Bandanna_surfer",
 	"H_Bandanna_surfer_grn",
 	"H_Bandanna_surfer_blk",
