@@ -25,6 +25,7 @@ private _guerilla = false;
 
 if (GRLIB_unitcap < 1) then {_popfactor = GRLIB_unitcap;};
 
+if (isNil "active_sectors") then {active_sectors = []};
 if (_sector in active_sectors) exitWith {};
 active_sectors pushback _sector; publicVariable "active_sectors";
 
