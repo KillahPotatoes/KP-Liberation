@@ -10,20 +10,20 @@
 		<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.961dev</Original>
-			<German>KP Liberation v0.961dev</German>
-			<Spanish>KP Liberation v0.961dev</Spanish>
-			<Italian>KP Liberation v0.961dev</Italian>
-			<Chinesesimp>KP Liberation v0.961dev</Chinesesimp>
-			<Turkish>KP Liberation v0.961dev</Turkish>
+			<Original>KP Liberation v0.96</Original>
+			<German>KP Liberation v0.96</German>
+			<Spanish>KP Liberation v0.96</Spanish>
+			<Italian>KP Liberation v0.96</Italian>
+			<Chinesesimp>KP Liberation v0.96</Chinesesimp>
+			<Turkish>KP Liberation v0.96</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.961dev</Original>
-			<German>v0.961dev</German>
-			<Spanish>v0.961dev</Spanish>
-			<Italian>v0.961dev</Italian>
-			<Chinesesimp>v0.961dev</Chinesesimp>
-			<Turkish>v0.961dev</Turkish>
+			<Original>v0.96</Original>
+			<German>v0.96</German>
+			<Spanish>v0.96</Spanish>
+			<Italian>v0.96</Italian>
+			<Chinesesimp>v0.96</Chinesesimp>
+			<Turkish>v0.96</Turkish>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
