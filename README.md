@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.961
+## Current version : 0.96
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -159,11 +159,6 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
-
-### 0.961 (in development)
-* Updated: RHS GREF resistance preset. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
-* Fixed: Sort function for storage areas.
-* Fixed: HC Sector spawn issue.
 
 ### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
