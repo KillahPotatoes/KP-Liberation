@@ -20,6 +20,9 @@ while {true} do {
 	infantry_cap = sync_vars select 11;
 	KP_liberation_civ_rep = sync_vars select 12;
 	KP_liberation_guerilla_strength = sync_vars select 13;
+	infantry_weight = sync_vars select 14;
+	armor_weight = sync_vars select 15;
+	air_weight = sync_vars select 16;
 	
 	sync_vars = [];
 	one_synchro_done = true;

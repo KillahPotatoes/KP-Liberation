@@ -15,4 +15,5 @@ asym_sector_ambush = compileFinal preprocessFileLineNumbers "scripts\server\asym
 civinfo_task = compileFinal preprocessFileLineNumbers "scripts\server\civinformant\tasks\civinfo_task.sqf";
 
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\synchronise_vars.sqf";
+[] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\synchronise_eco.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\show_fps.sqf";
