@@ -124,7 +124,7 @@ KP_liberation_civinfo_duration = 1200;																			// Civil Informant stay
 KP_liberation_civinfo_task_chance = 40;																			// Chance (0-100) that the delivered informant will spawn a time critical task.
 KP_liberation_civinfo_task_duration = 900;																		// Duration until the task will despawn if no player is near. (seconds)
 
-KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_chance = 2;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
 KP_liberation_convoy_ambush_duration = 1200;																	// Duration of the convoy ambush event. (seconds)
 
 KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?

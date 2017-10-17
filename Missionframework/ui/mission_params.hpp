@@ -64,7 +64,7 @@ class Params
 		title = $STR_PARAM_AUTODANGER;
 		values[] = {1,0};
 		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 0;
+		default = 1;
 	};
 	class DayDuration {
 		title = $STR_PARAMS_DAYDURATION;
