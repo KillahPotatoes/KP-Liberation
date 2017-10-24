@@ -161,6 +161,7 @@ class Missions
 ## Changelog
 
 ### 0.961 (in development)
+* Updated: ACE settings from our community due to the new pylons system in ACE.
 * Tweaked: Logistic convoy ambush chance balancing.
 * Fixed: SMAW optic placed in wrong array in RHS presets.
 

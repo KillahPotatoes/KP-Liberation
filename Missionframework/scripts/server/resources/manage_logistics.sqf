@@ -320,7 +320,7 @@ while {GRLIB_endgame == 0} do {
 								} else {
 									_x set [8,((_x select 8) - 1)];
 									KP_liberation_convoy_ambush_check = 0;
-								}
+								};
 							} else {
 								_x set [8,((_x select 8) - 1)];	
 							};
