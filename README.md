@@ -82,7 +82,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 
 ## Recommended Mods
-This Mods would greatly increase your gaming experience:
+These mods are recommended by us, as they are likely to increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 * [ACE Compat - RHS Armed Forces of the Russian Federation](http://steamcommunity.com/workshop/filedetails/?id=773131200)
 * [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
@@ -97,7 +97,7 @@ This Mods would greatly increase your gaming experience:
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
-Also you should think about using this mods as serverside mods:
+Also you should think about using these mods as serverside mods: 
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
