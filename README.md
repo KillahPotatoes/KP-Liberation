@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.96
+## Current version : 0.961
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -82,7 +82,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 
 ## Recommended Mods
-These mods will greatly increase your gaming experience:
+These mods are recommended by us, as they are likely to increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 * [ACE Compat - RHS Armed Forces of the Russian Federation](http://steamcommunity.com/workshop/filedetails/?id=773131200)
 * [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
@@ -97,7 +97,7 @@ These mods will greatly increase your gaming experience:
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
-Also you should think about using these mods as serverside mods:
+Also you should think about using these mods as serverside mods: 
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
@@ -159,6 +159,11 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.961 (in development)
+* Updated: ACE settings from our community due to the new pylons system in ACE.
+* Tweaked: Logistic convoy ambush chance balancing.
+* Fixed: SMAW optic placed in wrong array in RHS presets.
 
 ### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)

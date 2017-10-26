@@ -299,10 +299,11 @@ while {GRLIB_endgame == 0} do {
 				case 4: {
 					if ((_x select 8) > 1) then {
 						
-						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25)) then {
-							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2", (_x select 0), (_x select 8)];_text remoteExec ["diag_log",2];};
+						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
 							private _dice = round (random 100);
-							if (_dice <= (KP_liberation_convoy_ambush_chance + ([] call F_cr_getMulti))) then {
+							private _chance = KP_liberation_convoy_ambush_chance + ([] call F_cr_getMulti);
+							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance];_text remoteExec ["diag_log",2];};
+							if (_dice <= _chance) then {
 								private _convoy = +_x;
 								sleep 0.1;
 								[_convoy] spawn logistic_convoy_ambush;
@@ -319,9 +320,8 @@ while {GRLIB_endgame == 0} do {
 								} else {
 									_x set [8,((_x select 8) - 1)];
 									KP_liberation_convoy_ambush_check = 0;
-								}
+								};
 							} else {
-								if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: no ambush - Chance: %2 - Dice: %3", (_x select 0), (KP_liberation_convoy_ambush_chance + (round ((KP_liberation_civ_rep * -1) / 25))), _dice];};
 								_x set [8,((_x select 8) - 1)];	
 							};
 						} else {

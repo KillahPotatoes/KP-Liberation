@@ -10,20 +10,20 @@
 		<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.96</Original>
-			<German>KP Liberation v0.96</German>
-			<Spanish>KP Liberation v0.96</Spanish>
-			<Italian>KP Liberation v0.96</Italian>
-			<Chinesesimp>KP Liberation v0.96</Chinesesimp>
-			<Turkish>KP Liberation v0.96</Turkish>
+			<Original>KP Liberation v0.961dev</Original>
+			<German>KP Liberation v0.961dev</German>
+			<Spanish>KP Liberation v0.961dev</Spanish>
+			<Italian>KP Liberation v0.961dev</Italian>
+			<Chinesesimp>KP Liberation v0.961dev</Chinesesimp>
+			<Turkish>KP Liberation v0.961dev</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.96</Original>
-			<German>v0.96</German>
-			<Spanish>v0.96</Spanish>
-			<Italian>v0.96</Italian>
-			<Chinesesimp>v0.96</Chinesesimp>
-			<Turkish>v0.96</Turkish>
+			<Original>v0.961dev96</Original>
+			<German>v0.961dev</German>
+			<Spanish>v0.961dev</Spanish>
+			<Italian>v0.961dev</Italian>
+			<Chinesesimp>v0.961dev</Chinesesimp>
+			<Turkish>v0.961dev</Turkish>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -4696,6 +4696,7 @@
 		<Key ID="STR_GREUH_TEST">
 			<Original>Test</Original>
 			<German>Test</German>
+			<Italian>Test</Italian>
 			<Chinesesimp>测试</Chinesesimp>
 			<Turkish>Test</Turkish>
 		</Key>
@@ -4788,124 +4789,151 @@
 		<Key ID="STR_RESTART_PARAM">
 			<Original>Automatic Server Restart after (hours)</Original>
 			<German>Automatischer Server Restart nach (Stunden)</German>
+			<Italian>Restart Automatico del Server ogni (ore)</Italian>
 			<Turkish>Otomatik server yeniden başlat (saat)</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUGOPTIONS">
 			<Original>== DEBUG MESSAGES ==</Original>
 			<German>== DEBUG NACHRICHTEN ==</German>
+			<Italian>== MESSAGGI DI DEBUG ==</Italian>
 			<Turkish>== DEBUG MESAJLARI ==</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_CIVINFO">
 			<Original>Civil Informant</Original>
 			<German>Ziviler Informant</German>
+			<Italian>Informatore Civile</Italian>
 			<Turkish>Sivil Bilgisi</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_CIVREP">
 			<Original>Civil Reputation</Original>
 			<German>Ziviles Ansehen</German>
+			<Italian>Reputazione Civili</Italian>
 			<Turkish>Sivil Repütasyonu</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
 			<Original>Saving</Original>
 			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
+			<Italian>Salvataggio Dati</Italian>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
 			<Original>A civilian from %1 says he has some information for us.</Original>
 			<German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
+			<Italian>Un civile a %1 dice di avere informazioni per noi.</Italian>
 			<Turkish>%1 adında ki bir sivil bize vereceği bir bilgisi olduğunu söylüyor.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
 			<Original>The civilian gave us some important information.</Original>
 			<German>Der Zivilist gab uns wichtige Informationen.</German>
+			<Italian>Il civile ha fornito informazioni importatnti.</Italian>
 			<Turkish>Sivil bize çok önemli bilgiler verdi.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
 			<Original>The civilian has disappeared.</Original>
 			<German>Der Zivilist ist wieder untergetaucht.</German>
+			<Italian>Il civile è scomparso.</Italian>
 			<Turkish>Sivil ortadan kayboldu.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
 			<Original>The civilian died.</Original>
 			<German>Der Zivilist wurde getötet.</German>
+			<Italian>Il civile è morto.</Italian>
 			<Turkish>Sivil öldü.</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
 			<Original>Asymmetric Threat</Original>
 			<German>Asymmetrische Bedrohung</German>
+			<Italian>Minaccia Asimmetrica</Italian>
 			<Turkish>Asimetrik Tehdit</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_LOGISTIC">
 			<Original>Logistic</Original>
 			<German>Logistik</German>
+			<Italian>Logistica</Italian>
 			<Turkish>Lojistik</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
 			<Original>Logistic Convoy Ambush</Original>
 			<German>Logistikkonvoi Überfall</German>
+			<Italian>Convoglio Sotto Attacco</Italian>
 			<Turkish>Lojistik Konvoyu Baskını</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
 			<Original>Guerilla forces attacking our convoy near %1.</Original>
 			<German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+			<Italian>Guerriglieri attaccano il nostro convoglio vicino %1</Italian>
 			<Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
 			<Original>The ambush was successfully repelled.</Original>
 			<German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+			<Italian>L'attacco è stato neutralizzato.</Italian>
 			<Turkish>Baskın başarıyla püskürtüldü.</Turkish>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
 			<Original>The guerilla forces excaped with the convoy resources.</Original>
 			<German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
+			<Italian>I Guerriglieri scappano con le risorse del nostro convoglio.</Italian>
 			<Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
 			<Original>Sectorspawn</Original>
 			<German>Sektorspawn</German>
+			<Italian>Spawn Settori</Italian>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_KILL">
 			<Original>Killed units</Original>
 			<German>Getötete Einheiten</German>
+			<Italian>Unità Uccise</Italian>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION">
 			<Original>Treat the civilian (field dressing)</Original>
 			<German>Zivilisten versorgen (einfache Bandage)</German>
+			<Italian>Soccorso Civili</Italian>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION_FAIL">
 			<Original>You need a field dressing.</Original>
 			<German>Du brauchst eine einfache Bandage.</German>
+			<Italian>Hai bisogno di un bendaggio semplice.</Italian>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_START">
 			<Original>There is a high ranked officer near %1.</Original>
 			<German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+			<Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
 			<Original>The officer was successfully killed.</Original>
 			<German>Der Offizier konnte erfolgreich getötet werden.</German>
+			<Italian>L'ufficiale è stato ucciso.</Italian>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
 			<Original>The officer has moved on.</Original>
 			<German>Der Offizier ist weitergezogen.</German>
+			<Italian>L'ufficiale è scappato.</Italian>
 		</Key>
 		<Key ID="STR_PARAM_RESPAWN_COOLDOWN">
 			<Original>Mobile Respawn Cooldown (minutes)</Original>
 			<German>Mobiler Respawn Cooldown (Minuten)</German>
+			<Italian>Attesa Respawn Mobile (Minuti)</Italian>
 		</Key>
 		<Key ID="STR_RESPAWN_COOLDOWN_HINT">
 			<Original>%1 minutes mobile respawn cooldown left.</Original>
 			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+			<Italian>Mancano ancora %1 minuti al respawn.</Italian>
 		</Key>
 		<Key ID="STR_CR_RESISTANCE_KILLMSG">
 			<Original>An allied resistance fighter named %1 was killed!</Original>
 			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+			<Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
 			<Original>Gamedata saving</Original>
 			<German>Savegame Speicherung</German>
+			<Italian>Salvataggio Dati di Gioco</Italian>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_PRODUCTION">
 			<Original>Production</Original>
 			<German>Produktion</German>
+			<Italian>Produzione</Italian>
 		</Key>
 	</Package>
 </Project>
