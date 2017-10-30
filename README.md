@@ -162,6 +162,8 @@ class Missions
 
 ### 0.961 (in development)
 * Updated: ACE settings from our community due to the new pylons system in ACE.
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Updated: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Tweaked: Logistic convoy ambush chance balancing.
 * Fixed: SMAW optic placed in wrong array in RHS presets.
 

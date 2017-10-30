@@ -4898,73 +4898,73 @@
 		<Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
 			<Original>Sectorspawn</Original>
 			<German>Sektorspawn</German>
-      <Italian>Spawn Settori</Italian>
+			<Italian>Spawn Settori</Italian>
 			<Chinesesimp>战区刷新</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_KILL">
 			<Original>Killed units</Original>
 			<German>Getötete Einheiten</German>
-      <Italian>Unità Uccise</Italian>
+			<Italian>Unità Uccise</Italian>
 			<Chinesesimp>击杀的单位</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION">
 			<Original>Treat the civilian (field dressing)</Original>
 			<German>Zivilisten versorgen (einfache Bandage)</German>
-      <Italian>Soccorso Civili</Italian>
+			<Italian>Soccorso Civili</Italian>
 			<Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION_FAIL">
 			<Original>You need a field dressing.</Original>
 			<German>Du brauchst eine einfache Bandage.</German>
-      <Italian>Hai bisogno di un bendaggio semplice.</Italian>
+			<Italian>Hai bisogno di un bendaggio semplice.</Italian>
 			<Chinesesimp>你需要一个战地绷带。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_START">
 			<Original>There is a high ranked officer near %1.</Original>
 			<German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
-      <Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
+			<Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
 			<Chinesesimp>%1附近有一名高级军官。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
 			<Original>The officer was successfully killed.</Original>
 			<German>Der Offizier konnte erfolgreich getötet werden.</German>
-      <Italian>L'ufficiale è stato ucciso.</Italian>
+			<Italian>L'ufficiale è stato ucciso.</Italian>
 			<Chinesesimp>成功刺杀了军官。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
 			<Original>The officer has moved on.</Original>
 			<German>Der Offizier ist weitergezogen.</German>
-      <Italian>L'ufficiale è scappato.</Italian>
+			<Italian>L'ufficiale è scappato.</Italian>
 			<Chinesesimp>军官逃离了。</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAM_RESPAWN_COOLDOWN">
 			<Original>Mobile Respawn Cooldown (minutes)</Original>
 			<German>Mobiler Respawn Cooldown (Minuten)</German>
-      <Italian>Attesa Respawn Mobile (Minuti)</Italian>
+			<Italian>Attesa Respawn Mobile (Minuti)</Italian>
 			<Chinesesimp>机动复活点冷却时间（分钟）</Chinesesimp>
 		</Key>
 		<Key ID="STR_RESPAWN_COOLDOWN_HINT">
 			<Original>%1 minutes mobile respawn cooldown left.</Original>
 			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
-      <Italian>Mancano ancora %1 minuti al respawn.</Italian>
+			<Italian>Mancano ancora %1 minuti al respawn.</Italian>
 			<Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_RESISTANCE_KILLMSG">
 			<Original>An allied resistance fighter named %1 was killed!</Original>
 			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
-      <Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
+			<Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
 			<Chinesesimp>一位名叫%1的友军抵抗军战士阵亡了！</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
 			<Original>Gamedata saving</Original>
 			<German>Savegame Speicherung</German>
-      <Italian>Salvataggio Dati di Gioco</Italian>
+			<Italian>Salvataggio Dati di Gioco</Italian>
 			<Chinesesimp>储存游戏数据中</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_PRODUCTION">
 			<Original>Production</Original>
 			<German>Produktion</German>
-      <Italian>Produzione</Italian>
+			<Italian>Produzione</Italian>
 			<Chinesesimp>生产</Chinesesimp>
 		</Key>
 	</Package>
