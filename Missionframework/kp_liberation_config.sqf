@@ -463,29 +463,6 @@ KP_liberation_small_storage_positions = [
 	[2.4502,-1.79883,0.6]
 ];
 
-// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation
-KP_liberation_cr_ignored_buildings = [
-	"Land_LampStreet_small_F",
-	"Land_PowerPoleWooden_L_F",
-	"Land_LampShabby_F",
-	"Land_SlideCastle_F",
-	"Land_Carousel_01_F",
-	"Land_LampDecor_F",
-	"Land_LampStreet_F",
-	"Land_LampHalogen_F",
-	"Land_LampSolar_F",
-	"Land_LampHarbour_F",
-	"Land_HighVoltageColumnWire_F",
-	"Land_HighVoltageColumn_F",
-	"Land_fs_feed_F",
-	"Land_PowerWireBig_left_F",
-	"Land_runway_edgelight_blue_F",
-	"Land_LampAirport_off_F",
-	"Land_Flush_Light_green_F",
-	"Land_LampAirport_F",
-	"Land_PierLadder_F"
-];
-
 // DO NOT CHANGE (unless you know what you are doing).
 GRLIB_endgame = 0;
 if ( GRLIB_blufor_cap > 100 ) then { GRLIB_blufor_cap = 100 };
