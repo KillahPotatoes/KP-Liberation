@@ -53,13 +53,18 @@ class ace_finger_maxRange {
     typeName = "SCALAR";
     force = 1;
 };
+class ace_finger_indicatorForSelf {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
 class ace_frag_enabled {
     value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_frag_spallEnabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -76,11 +81,6 @@ class ace_frag_maxTrack {
 class ace_frag_maxTrackPerFrame {
     value = 50;
     typeName = "SCALAR";
-    force = 1;
-};
-class ace_frag_enableDebugTrace {
-    value = 0;
-    typeName = "BOOL";
     force = 1;
 };
 class ace_gforces_enabledFor {
@@ -119,7 +119,7 @@ class ace_interact_menu_alwaysUseCursorInteraction {
     force = 0;
 };
 class ace_interact_menu_useListMenu {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 0;
 };
@@ -139,6 +139,11 @@ class ace_interaction_enableTeamManagement {
     force = 1;
 };
 class ace_interaction_enableMagazinePassing {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_interaction_disableNegativeRating {
     value = 1;
     typeName = "BOOL";
     force = 1;
@@ -233,6 +238,21 @@ class ace_map_gestures_interval {
     typeName = "SCALAR";
     force = 1;
 };
+class ace_maptools_drawStaightLines {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_markers_movableMarkersEnabled {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_markers_moveRestriction {
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_medical_level {
     value = 2;
     typeName = "SCALAR";
@@ -266,16 +286,6 @@ class ace_medical_bleedingCoefficient {
 class ace_medical_painCoefficient {
     value = 1;
     typeName = "SCALAR";
-    force = 1;
-};
-class ace_medical_enableAirway {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_medical_enableFractures {
-    value = 0;
-    typeName = "BOOL";
     force = 1;
 };
 class ace_medical_enableAdvancedWounds {
@@ -543,7 +553,12 @@ class ace_nametags_playerNamesViewDistance {
 class ace_nametags_playerNamesMaxAlpha {
     value = 0.8;
     typeName = "SCALAR";
-    force = 1;
+    force = 0;
+};
+class ace_nametags_tagSize {
+    value = 2;
+    typeName = "SCALAR";
+    force = 0;
 };
 class ace_nightvision_disableNVGsWithSights {
     value = 0;
@@ -590,15 +605,85 @@ class ace_overpressure_distanceCoefficient {
     typeName = "SCALAR";
     force = 1;
 };
+class ace_pylons_enabled {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_pylons_rearmNewPylons {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_pylons_searchDistance {
+    value = 15;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_pylons_timePerPylon {
+    value = 5;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_pylons_requireEngineer {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_pylons_requireToolkit {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_quickmount_enabled {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_quickmount_distance {
+    value = 3;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_quickmount_speed {
+    value = 18;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_quickmount_priority {
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
 // Logistik Beginn
 class ace_rearm_level {
     value = 2; // 0 = Ganzes Fahrzeug, 1 = Ganzes Magazin, 2 = Kaliberbasiert
     typeName = "SCALAR";
     force = 1;
 };
+class ace_rearm_supply {
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_refuel_rate {
     value = 1;
     typeName = "SCALAR";
+    force = 1;
+};
+class ace_refuel_hoseLength {
+    value = 12;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_reload_displayText {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_repair_displayTextOnRepair {
+    value = 1;
+    typeName = "BOOL";
     force = 1;
 };
 class ace_repair_engineerSetting_repair {
@@ -712,14 +797,9 @@ class ace_scopes_deduceBarometricPressureFromTerrainAltitude {
     typeName = "BOOL";
     force = 1;
 };
-class ace_spectator_filterUnits {
-    value = 2;
-    typeName = "SCALAR";
-    force = 1;
-};
-class ace_spectator_filterSides {
+class ace_spectator_enableAI {
     value = 0;
-    typeName = "SCALAR";
+    typeName = "BOOL";
     force = 1;
 };
 class ace_spectator_restrictModes {
@@ -764,6 +844,11 @@ class ace_switchunits_enableSafeZone {
 };
 class ace_switchunits_safeZoneRadius {
     value = 100;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_tagging_quickTag {
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -967,17 +1052,17 @@ class ace_viewdistance_limitViewDistance {
     typeName = "SCALAR";
     force = 1;
 };
+class ace_weaponselect_displayText {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
 class ace_weather_enableServerController {
     value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_weather_useACEWeather {
-    value = 1;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_weather_syncRain {
     value = 1;
     typeName = "BOOL";
     force = 1;
@@ -1017,36 +1102,6 @@ class ace_winddeflection_simulationRadius {
     typeName = "SCALAR";
     force = 1;
 };
-class ace_zeus_zeusAscension {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_zeus_zeusBird {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_zeus_remoteWind {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_zeus_radioOrdnance {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
-class ace_zeus_revealMines {
-    value = 0;
-    typeName = "SCALAR";
-    force = 1;
-};
-class ace_zeus_autoAddObjects {
-    value = 0;
-    typeName = "BOOL";
-    force = 1;
-};
 class ace_advanced_fatigue_enabled {
     value = 1;
     typeName = "BOOL";
@@ -1080,7 +1135,7 @@ class ace_advanced_fatigue_terrainGradientFactor {
 class ace_advanced_throwing_enabled {
     value = 1;
     typeName = "BOOL";
-    force = 0;
+    force = 1;
 };
 class ace_advanced_throwing_showThrowArc {
     value = 1;
@@ -1117,9 +1172,19 @@ class ace_captives_allowSurrender {
     typeName = "BOOL";
     force = 1;
 };
+class ace_captives_requireSurrenderAi {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
 class ace_cargo_enable {
     value = 1;
     typeName = "BOOL";
+    force = 1;
+};
+class ace_cargo_paradropTimeCoefficent {
+    value = 2.5;
+    typeName = "SCALAR";
     force = 1;
 };
 class ace_explosives_requireSpecialist {
@@ -1168,6 +1233,36 @@ class ace_hearing_enabledForZeusUnits {
     force = 1;
 };
 class ace_hearing_autoAddEarplugsToUnits {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_zeus_zeusAscension {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_zeus_zeusBird {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_zeus_remoteWind {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_zeus_radioOrdnance {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_zeus_revealMines {
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_zeus_autoAddObjects {
     value = 0;
     typeName = "BOOL";
     force = 1;
@@ -1221,4 +1316,4 @@ class ace_advanced_ballistics_simulationRadius {
     value = 3000;
     typeName = "SCALAR";
     force = 1;
-}
+};
