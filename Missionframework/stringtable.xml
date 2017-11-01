@@ -2377,6 +2377,9 @@
 			<Chinesesimp>伞降</Chinesesimp>
 			<Turkish>HALO ATLAYIŞI</Turkish>
 		</Key>
+		<Key ID="STR_PARAM_CLEAR_CARGO">
+			<Original>Clear vehicle cargo</Original>
+		</Key>
 		<Key ID="STR_DEPLOY_IN_PROGRESS">
 			<Original>Deployment in progress...</Original>
 			<French>Déploiement en cours...</French>

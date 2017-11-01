@@ -8,10 +8,12 @@ for [{_i=0}, {!isNil ("littlebird_" + str _i)}, {_i = _i + 1}] do {
 	_KP_liberation_little_bird allowdamage false;
 	_KP_liberation_little_bird setDir (getDir _KP_liberation_little_bird_pad);
 	_KP_liberation_little_bird setposATL [((getposATL _KP_liberation_little_bird_pad) select 0),((getposATL _KP_liberation_little_bird_pad) select 1),((getposATL _KP_liberation_little_bird_pad) select 2) + 0.1];
-	clearWeaponCargoGlobal _KP_liberation_little_bird;
-	clearMagazineCargoGlobal _KP_liberation_little_bird;
-	clearItemCargoGlobal _KP_liberation_little_bird;
-	clearBackpackCargoGlobal _KP_liberation_little_bird;
+	if(KP_liberation_clear_cargo) then {
+		clearWeaponCargoGlobal _KP_liberation_little_bird;
+		clearMagazineCargoGlobal _KP_liberation_little_bird;
+		clearItemCargoGlobal _KP_liberation_little_bird;
+		clearBackpackCargoGlobal _KP_liberation_little_bird;
+	};
 	sleep 0.5;
 	_KP_liberation_little_bird enableSimulationGlobal true;
 	_KP_liberation_little_bird setDamage 0;
@@ -26,10 +28,12 @@ for [{_i=0}, {!isNil ("boat_" + str _i)}, {_i = _i + 1}] do {
 	_KP_liberation_boat allowdamage false;
 	_KP_liberation_boat setDir (getDir _KP_liberation_boat_spawn);
 	_KP_liberation_boat setposATL (getposATL _KP_liberation_boat_spawn);
-	clearWeaponCargoGlobal _KP_liberation_boat;
-	clearMagazineCargoGlobal _KP_liberation_boat;
-	clearItemCargoGlobal _KP_liberation_boat;
-	clearBackpackCargoGlobal _KP_liberation_boat;
+	if(KP_liberation_clear_cargo) then {
+		clearWeaponCargoGlobal _KP_liberation_boat;
+		clearMagazineCargoGlobal _KP_liberation_boat;
+		clearItemCargoGlobal _KP_liberation_boat;
+		clearBackpackCargoGlobal _KP_liberation_boat;
+	};
 	sleep 0.5;
 	_KP_liberation_boat enableSimulationGlobal true;
 	_KP_liberation_boat setDamage 0;

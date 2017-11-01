@@ -27,10 +27,12 @@ if ( _classname in opfor_choppers ) then {
 };
 _newvehicle allowdamage false;
 
-clearWeaponCargoGlobal _newvehicle;
-clearMagazineCargoGlobal _newvehicle;
-clearItemCargoGlobal _newvehicle;
-clearBackpackCargoGlobal _newvehicle;
+if(KP_liberation_clear_cargo) then {
+	clearWeaponCargoGlobal _newvehicle;
+	clearMagazineCargoGlobal _newvehicle;
+	clearItemCargoGlobal _newvehicle;
+	clearBackpackCargoGlobal _newvehicle;
+};
 
 if ( _classname in militia_vehicles ) then {
 	[ _newvehicle ] call F_libSpawnMilitiaCrew;
