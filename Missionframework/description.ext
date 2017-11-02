@@ -8,7 +8,7 @@ allowFunctionsLog = 0;
 
 loadScreen="res\liberation.jpg";
 onLoadMission = "www.killahpotatoes.de";
-author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer, DartNecrON";
 onLoadName = $STR_MISSION_TITLE;
 
 joinUnassigned = 1;
@@ -28,3 +28,21 @@ class CfgDebriefing
 		pictureBackground = "";
 	};
 };
+
+class CfgFunctions
+{
+
+	#include "scripts\shared\functions\GOM_fnc_functions.hpp"
+
+};
+
+
+class CfgCommunicationMenu
+{
+
+	#include "scripts\shared\functions\GOM_fnc_aircraftLoadoutMenu.hpp"
+
+};
+
+#include "scripts\shared\dialogs\GOM_dialog_parents.hpp"
+#include "scripts\shared\dialogs\GOM_dialog_controls.hpp"
