@@ -22,7 +22,7 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings. 
+/* - Custom unit and arsenal preset settings.
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
@@ -32,18 +32,18 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 3 = BWMod (German Bundeswehr)
 4 = RHS USAF woodland
 5 = RHS USAF desert */
-KP_liberation_preset_blufor = 0;
+KP_liberation_preset_blufor = 4;
 
 /* OPFOR preset:
 0 = custom (default vanilla CSAT)
 1 = Apex Tanoa
 2 = Project OPFOR (Takistan)
 3 = RHS AFRF */
-KP_liberation_preset_opfor = 0;
+KP_liberation_preset_opfor = 3;
 
 /* Resistance preset:
 0 = custom (default vanilla)
-1 = Apex Tanoa 
+1 = Apex Tanoa
 2 = RHS GREF */
 KP_liberation_preset_resistance = 0;
 
@@ -59,7 +59,7 @@ KP_liberation_preset_civilians = 0;
 2 = Killah Potatoes Gaming Community arsenal preset.
 3 = RHS USAF arsenal preset.
 4 = RHS USAF arsenal preset with ACE.
-5 = RHS USAF arsenal preset with ACE and ACRE.	
+5 = RHS USAF arsenal preset with ACE and ACRE.
 6 = 3cbBAF and RHS USAF arsenal preset. */
 KP_liberation_arsenal = 0;
 
@@ -134,7 +134,7 @@ KP_liberation_resistance_sector_chance = 35;																	// Chance that a gu
 KP_liberation_resistance_ambush_chance = 30;																	// Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 /* - Default arsenal blacklist method.
-Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
+Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
 blacklisted_from_arsenal = [
 	"B_Respawn_Sleeping_bag_blue_F",
@@ -322,6 +322,7 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
 	"BW_LKW15T_Ammo_F",
+	"rhsusf_CH53E_USMC",
 	"rhs_gaz66_ammo_msv"
 ];
 
@@ -339,6 +340,7 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+	"rhsusf_CH53E_USMC",
 	"BW_LKW15T_Repair_F"
 ];
 
@@ -354,6 +356,7 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"rhsusf_CH53E_USMC",
 	"BW_LKW15T_Ammo_F"
 ];
 
@@ -369,6 +372,7 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
 	"rhsusf_M978A4_BKIT_usarmy_wd",
+	"rhsusf_CH53E_USMC",
 	"BW_LKW15T_Fuel_F"
 ];
 

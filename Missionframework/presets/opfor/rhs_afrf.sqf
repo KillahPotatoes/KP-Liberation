@@ -73,8 +73,8 @@ opfor_vehicles = [
 	"rhs_zsu234_aa",													//ZSU-23-4V
 	"rhs_t80",															//T80
 	"rhs_t80",															//T80
-	"rhs_t90a_tv"														//T90A
-	"RHS_BM21_VV_01"												//BM21
+	"rhs_t90a_tv",														//T90A
+	"RHS_BM21_VV_01",												//BM21
 	"rhs_2s3_tv",														//2S3Arty
 	"rhs_9k79",														//9K79 HE
 	"rhs_9k79_K",													//9K79 Cluster

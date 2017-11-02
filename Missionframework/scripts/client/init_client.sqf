@@ -64,6 +64,30 @@ if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "s
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_cr_checkVehicle;}];
+player addEventHandler ["fired", {_this execvm "scripts\shared\RHS_disposables.sqf"}]; //necr was here
+//LUL WHAT DLC???
+if !(288520 in getDLCs 1) then
+{
+	[player addAction ["<t color='#00FFFF'>Get in as Driver</t>", "scripts\shared\moveInDriver.sqf", [], 6, true, true, "", "cursorTarget isKindOf 'Kart_01_Base_F' && player distance cursorTarget < 3.4 && isNull driver cursorTarget"]] ;
+};
+if !(304380 in getDLCs 1) then
+{
+	[player addAction ["<t color='#00FFFF'>Get in as Driver</t>", "scripts\shared\moveInDriver.sqf", [], 6, true, true, "", "cursorTarget isKindOf 'O_Heli_Transport_04_F'||'B_Heli_Transport_03_unarmed_F' && player distance cursorTarget < 10 && isNull driver cursorTarget"]] ;
+};
+if !(571710 in getDLCs 1) then
+{
+	[player addAction ["<t color='#00FFFF'>Get in as Driver</t>", "scripts\shared\moveInDriver.sqf", [], 6, true, true, "", "cursorTarget isKindOf 'C_Van_02_medevac_F'||'C_Van_02_vehicle_F'||'C_Van_02_service_F'||'C_Van_02_transport_F' && player distance cursorTarget < 10 && isNull driver cursorTarget"]] ;
+};
+if !(601670 in getDLCs 1) then
+{
+	[player addAction ["<t color='#00FFFF'>Get in as Driver</t>", "scripts\shared\moveInDriver.sqf", [], 6, true, true, "", "cursorTarget isKindOf 'I_Plane_Fighter_04_F'||'B_Plane_Fighter_01_F'||'B_Plane_Fighter_01_Stealth_F'||'O_Plane_Fighter_02_F' && player distance cursorTarget < 10 && isNull driver cursorTarget"]] ;
+};
+player addAction ["<t color='#2E9AFE'>Parachute</t>", "scripts\shared\para.sqf", nil, 2, true, true, "", "vehicle player == player && getpos player select 2 >30;"];
+player addAction ["<t color='#FF0000'>Emergency eject</t>", "scripts\shared\forceEject.sqf", nil, 19, false, true, "", "(vehicle player) isKindOf 'Air'"];
+player addAction ["<t color='#FF0000'>Holster</t>", "player action ['SwitchWeapon', player, player, 100];", nil, -11, false, false, "", "currentWeapon player != '' && vehicle player == player"];
+player addAction ["<t color='#FF0000'>UnHolster</t>", "player action ['SwitchWeapon', player, player, 0];", nil, -11, false, false, "", "currentWeapon player == '' && vehicle player == player"];
+player addAction ["<t color='#FF0000'>Clean up</t>", "scripts\shared\removeRuins.sqf", nil, 2, false, false, "", "count nearestObjects [player, ['Ruins', 'CraterLong', 'CraterLong_small'], 5] > 0"];
+[] spawn compileFinal preprocessFileLineNumbers GOM_fnc_addAircraftLoadout;
 
 {
 	[_x] call BIS_fnc_drawCuratorLocations;
