@@ -33,7 +33,7 @@ KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";						// This defines the ammu
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fuel crates.																										Default is "CargoNet_01_barrels_F".
 
 /* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu. 
+Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
@@ -76,7 +76,7 @@ light_vehicles = [
 	["B_MRAP_01_hmg_F",100,40,50],										//Hunter (HMG)
 	["B_MRAP_01_gmg_F",100,60,50],										//Hunter (GMG)
 	["I_MRAP_03_F",100,0,50],											//Strider
-	["I_MRAP_03_hmg_F",100,40,50],										//Strider (HMG) 
+	["I_MRAP_03_hmg_F",100,40,50],										//Strider (HMG)
 	["I_MRAP_03_gmg_F",100,60,50],										//Strider (GMG)
 	["rhsusf_m1025_w",100,0,50],										//M1025A2
 	["rhsusf_m1025_w_m2",100,40,50],									//M1025A2 (M2)
@@ -128,6 +128,7 @@ air_vehicles = [
 	["B_UAV_01_F",75,0,25],												//AR-2 Darter
 	["B_UAV_06_F",80,0,30],												//AL-6 Pelican (Cargo)
 	["B_Heli_Light_01_F",200,0,100],									//MH-9 Hummingbird
+	["C_Plane_Civil_01_F",150,0,100],									//Cocaine Carrier
 	["B_Heli_Light_01_dynamicLoadout_F",200,100,100],					//AH-9 Pawnee
 	["RHS_MELB_MH6M",200,0,100],										//MH-6M Little Bird
 	["RHS_MELB_AH6M",200,200,100],										//AH-6M Pawnee
@@ -146,7 +147,6 @@ air_vehicles = [
 	["RHS_UH60M_MEV2",300,0,150],										//UH-60M MEV2
 	["RHS_CH_47F",275,80,175],											//CH-47 Chinook (Armed)
 	["I_Heli_Transport_02_F",275,0,175],								//CH-49 Mohawk
-	["rhsusf_CH53E_USMC",300,0,175],									//CH-53E Super Stallion
 	["B_Heli_Transport_03_F",300,80,175],								//CH-67 Huron (Armed)
 	["B_UAV_02_dynamicLoadout_F",400,400,200],							//MQ-4A Greyhawk
 	["B_T_UAV_03_dynamicLoadout_F",450,500,250],						//MQ-12 Falcon
@@ -162,6 +162,7 @@ air_vehicles = [
 	["JS_JC_FA18F",1500,1750,450],										//F/A-18 F Super Hornet
 	["B_Plane_Fighter_01_F",1500,1750,450],								//F/A-181 Black Wasp II
 	["B_Plane_Fighter_01_Stealth_F",1500,1750,450],						//F/A-181 Black Wasp II (Stealth)
+	["rhsusf_f22",850,800,400],						//F-22
 	["B_T_VTOL_01_armed_F",750,1500,500],								//V-44 X Blackfish (Armed)
 	["B_T_VTOL_01_infantry_F",750,0,500],								//V-44 X Blackfish (Infantry)
 	["B_T_VTOL_01_vehicle_F",750,0,500]									//V-44 X Blackfish (Vehicle)
@@ -191,7 +192,7 @@ buildings = [
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
-	["Flag_RedCrystal_F",0,0,0],	
+	["Flag_RedCrystal_F",0,0,0],
 	["CamoNet_BLUFOR_F",0,0,0],
 	["CamoNet_BLUFOR_open_F",0,0,0],
 	["CamoNet_BLUFOR_big_F",0,0,0],
@@ -232,7 +233,7 @@ buildings = [
 	["Land_BagFence_Short_F",0,0,0],
 	["Land_BagFence_Long_F",0,0,0],
 	["Land_BagFence_Corner_F",0,0,0],
-	["Land_BagFence_End_F",0,0,0],	
+	["Land_BagFence_End_F",0,0,0],
 	["Land_BagBunker_Small_F",0,0,0],
 	["Land_BagBunker_Large_F",0,0,0],
 	["Land_BagBunker_Tower_F",0,0,0],
@@ -247,10 +248,10 @@ buildings = [
 	["Land_HBarrierTower_F",0,0,0],
 	["Land_CncBarrierMedium_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
-	["Land_Concrete_SmallWall_4m_F",0,0,0],	
+	["Land_Concrete_SmallWall_4m_F",0,0,0],
 	["Land_Concrete_SmallWall_8m_F",0,0,0],
 	["Land_CncShelter_F",0,0,0],
-	["Land_CncWall1_F",0,0,0],	
+	["Land_CncWall1_F",0,0,0],
 	["Land_CncWall4_F",0,0,0],
 	["Land_Sign_WarningMilitaryArea_F",0,0,0],
 	["Land_Sign_WarningMilAreaSmall_F",0,0,0],
@@ -277,6 +278,7 @@ support_vehicles = [
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
 	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
+	["rhsusf_CH53E_USMC",800,450,550],								//RHS Super Stallion
 	["B_Truck_01_Repair_F",325,0,75],									//HEMTT Repair
 	["B_Truck_01_fuel_F",125,0,275],									//HEMTT Fuel
 	["B_Truck_01_ammo_F",125,200,75],									//HEMTT Ammo

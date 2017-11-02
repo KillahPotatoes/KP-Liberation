@@ -31,7 +31,7 @@ KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";						// This defines the ammu
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fuel crates.
 
 /* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu. 
+Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
@@ -70,7 +70,7 @@ light_vehicles = [
 	["rhsusf_m1025_w_mk19",100,60,50],									//M1025A2 (Mk19)
 	["rhsusf_m998_w_2dr_fulltop",100,0,50],								//M1097A2 (2D)
 	["rhsusf_m998_w_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
-	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)				
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
 	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT (cargo truck)
@@ -146,7 +146,7 @@ buildings = [
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
-	["Flag_RedCrystal_F",0,0,0],	
+	["Flag_RedCrystal_F",0,0,0],
 	["CamoNet_BLUFOR_F",0,0,0],
 	["CamoNet_BLUFOR_open_F",0,0,0],
 	["CamoNet_BLUFOR_big_F",0,0,0],
@@ -187,7 +187,7 @@ buildings = [
 	["Land_BagFence_Short_F",0,0,0],
 	["Land_BagFence_Long_F",0,0,0],
 	["Land_BagFence_Corner_F",0,0,0],
-	["Land_BagFence_End_F",0,0,0],	
+	["Land_BagFence_End_F",0,0,0],
 	["Land_BagBunker_Small_F",0,0,0],
 	["Land_BagBunker_Large_F",0,0,0],
 	["Land_BagBunker_Tower_F",0,0,0],
@@ -202,10 +202,10 @@ buildings = [
 	["Land_HBarrierTower_F",0,0,0],
 	["Land_CncBarrierMedium_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
-	["Land_Concrete_SmallWall_4m_F",0,0,0],	
+	["Land_Concrete_SmallWall_4m_F",0,0,0],
 	["Land_Concrete_SmallWall_8m_F",0,0,0],
 	["Land_CncShelter_F",0,0,0],
-	["Land_CncWall1_F",0,0,0],	
+	["Land_CncWall1_F",0,0,0],
 	["Land_CncWall4_F",0,0,0],
 	["Land_Sign_WarningMilitaryArea_F",0,0,0],
 	["Land_Sign_WarningMilAreaSmall_F",0,0,0],
@@ -231,7 +231,7 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
-	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
+	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat 
 	["rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",325,0,75],					//M977A4 Repair
 	["rhsusf_M978A4_BKIT_usarmy_wd",125,0,275],							//M978A4 Fuel
 	["rhsusf_M977A4_AMMO_BKIT_usarmy_wd",125,200,75],					//M977A4 Ammo
@@ -316,7 +316,7 @@ blufor_squad_recon = [
 	"rhsusf_usmc_recon_marpat_wd_sniper_M107",
 	"rhsusf_army_ucp_medic",
 	"rhsusf_army_ucp_engineer"
-];	
+];
 
 // Paratroopers squad.
 blufor_squad_para = [
