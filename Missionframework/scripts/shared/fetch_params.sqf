@@ -29,7 +29,6 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilerespawn = ["MobileRespawn",1] call bis_fnc_getParamValue;
 	KP_liberation_mobilearsenal = ["MobileArsenal",1] call bis_fnc_getParamValue;
 	KP_liberation_ailogistics = ["AiLogistics",1] call bis_fnc_getParamValue;
-	KP_liberation_ace = ["AceEnable",0] call bis_fnc_getParamValue;
 	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = ["SuppMod",1] call BIS_fnc_getParamValue;
 	KP_liberation_restart = ["ServerRestart",0] call BIS_fnc_getParamValue;
 	KP_liberation_cr_param_buildings = ["CR_Building",0] call BIS_fnc_getParamValue;
@@ -74,7 +73,6 @@ if ( isMultiplayer ) then {
 	KP_liberation_mobilerespawn = 1;
 	KP_liberation_mobilearsenal = 1;
 	KP_liberation_ailogistics = 1;
-	KP_liberation_ace = 0;
 	// Arty Supp deactivated for now - KP_liberation_suppMod_enb = 1;
 	KP_liberation_restart = 0;
 	KP_liberation_cr_param_buildings = 0;
@@ -106,9 +104,11 @@ if (KP_liberation_mapmarkers == 1) then {KP_liberation_mapmarkers = true; GREUH_
 if (KP_liberation_mobilerespawn == 1) then {KP_liberation_mobilerespawn = true} else {KP_liberation_mobilerespawn = false};
 if (KP_liberation_mobilearsenal == 1) then {KP_liberation_mobilearsenal = true} else {KP_liberation_mobilearsenal = false};
 if (KP_liberation_ailogistics == 1) then {KP_liberation_ailogistics = true} else {KP_liberation_ailogistics = false};
-if (KP_liberation_ace == 1) then {KP_liberation_ace = true} else {KP_liberation_ace = false};
 if (KP_liberation_cr_param_buildings == 1) then {KP_liberation_cr_param_buildings = true} else {KP_liberation_cr_param_buildings = false};
 if (KP_liberation_clear_cargo == 1) then {KP_liberation_clear_cargo = true} else {KP_liberation_clear_cargo = false};
+
+// Check if ACE is running
+if (isClass (configFile >> "CfgVehicles" >> "ACE_module")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply and weather scripts from Liberation."} else {KP_liberation_ace = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {

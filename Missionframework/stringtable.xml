@@ -2379,6 +2379,7 @@
 		</Key>
 		<Key ID="STR_PARAM_CLEAR_CARGO">
 			<Original>Clear spawned vehicle cargo</Original>
+			<German>Inventar gespawnter Fahrzeuge leeren</German>
 		</Key>
 		<Key ID="STR_DEPLOY_IN_PROGRESS">
 			<Original>Deployment in progress...</Original>
@@ -4450,13 +4451,6 @@
 			<Italian>-- SPINGI CASSA</Italian>
 			<Chinesesimp>-- 推货箱</Chinesesimp>
 			<Turkish>-- KUTUYU İTTİR</Turkish>
-		</Key>
-		<Key ID="STR_PARAMS_ACE_ENABLE">
-			<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
-			<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
-			<Italian>Compatibilità ACE (disattiva il clima e l'approvvigionamento)</Italian>
-			<Chinesesimp>ACE模组兼容（关闭Liberation天气和补给脚本）</Chinesesimp>
-			<Turkish>ACE Uyumluluğu (Liberation hava ve mühimmat scriptini kapatır)</Turkish>
 		</Key>
 		<Key ID="STR_ACTION_SORT_STORAGE">
 			<Original>-- STACK AND SORT</Original>

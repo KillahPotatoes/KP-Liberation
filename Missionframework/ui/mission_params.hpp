@@ -178,12 +178,6 @@ class Params
 		texts[] = { "" };
 		default = "";
 	};
-	class AceEnable {
-		title = $STR_PARAMS_ACE_ENABLE;
-		values[] = { 0, 1 };
-		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
-		default = 0;
-	};
 	class Fatigue {
 		title = $STR_PARAMS_FATIGUE;
 		values[] = { 0, 1 };
