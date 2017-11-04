@@ -270,10 +270,12 @@ if (!isNil "greuh_liberation_savegame") then {
 			};
 
 			if !(_nextclass in KP_liberation_ace_crates) then {
-				clearWeaponCargoGlobal _nextbuilding;
-				clearMagazineCargoGlobal _nextbuilding;
-				clearBackpackCargoGlobal _nextbuilding;
-				clearItemCargoGlobal _nextbuilding;
+				if(KP_liberation_clear_cargo || !(_nextclass isKindOf "AllVehicles")) then {
+					clearWeaponCargoGlobal _nextbuilding;
+					clearMagazineCargoGlobal _nextbuilding;
+					clearBackpackCargoGlobal _nextbuilding;
+					clearItemCargoGlobal _nextbuilding;
+				};
 			};
 
 			if (_nextclass == "Land_HelipadSquare_F" || _nextclass == "Land_HelipadCircle_F" || _nextclass == "Land_HelipadRescue_F") then {
