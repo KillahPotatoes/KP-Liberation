@@ -124,7 +124,7 @@ KP_liberation_civinfo_duration = 1200;																			// Civil Informant stay
 KP_liberation_civinfo_task_chance = 40;																			// Chance (0-100) that the delivered informant will spawn a time critical task.
 KP_liberation_civinfo_task_duration = 900;																		// Duration until the task will despawn if no player is near. (seconds)
 
-KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_chance = 2;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
 KP_liberation_convoy_ambush_duration = 1200;																	// Duration of the convoy ambush event. (seconds)
 
 KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?
@@ -461,29 +461,6 @@ KP_liberation_small_storage_positions = [
 	[-0.75,-1.79883,0.6],
 	[0.850586,-1.79883,0.6],
 	[2.4502,-1.79883,0.6]
-];
-
-// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation
-KP_liberation_cr_ignored_buildings = [
-	"Land_LampStreet_small_F",
-	"Land_PowerPoleWooden_L_F",
-	"Land_LampShabby_F",
-	"Land_SlideCastle_F",
-	"Land_Carousel_01_F",
-	"Land_LampDecor_F",
-	"Land_LampStreet_F",
-	"Land_LampHalogen_F",
-	"Land_LampSolar_F",
-	"Land_LampHarbour_F",
-	"Land_HighVoltageColumnWire_F",
-	"Land_HighVoltageColumn_F",
-	"Land_fs_feed_F",
-	"Land_PowerWireBig_left_F",
-	"Land_runway_edgelight_blue_F",
-	"Land_LampAirport_off_F",
-	"Land_Flush_Light_green_F",
-	"Land_LampAirport_F",
-	"Land_PierLadder_F"
 ];
 
 // DO NOT CHANGE (unless you know what you are doing).

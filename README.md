@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.96
+## Current version : 0.961
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -19,7 +19,7 @@ If you like the work and think it's worth a small donation, feel free to use the
 [Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
-The area has fallen to the enemy, and it is up to you to take it back. Embark with your teammates on a persistent campaign that will span several weeks of real time to liberate all the major cities of the area.
+The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
 * Experience a massive “Capture the Island” campaign involving a large range of different settlements across the entire area.
 * Cooperate with up to 34 players, including a Commanding role, two fire-team squads, a medevac and a logistical support squad as well as AI recruits to fill the gaps.
 * Purchase both infantry and vehicles (both ground and air) using three different types of physical resources; supplies, ammunition and fuel.
@@ -40,8 +40,8 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark wi
 * Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
 
 ## Needed Mods
-This mods are needed if you use the prepacked missionfiles from the release tab or Steam Workshop.
-You can play every map without any mods (only the maps themself) if you set the preset to custom in `kp_liberation_config`.
+These mods are needed if you want to use the prepacked missionfiles from the release tab or Steam Workshop.
+You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -49,7 +49,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Altis
-	* Nothing
+	* None
 * Chernarus
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -58,7 +58,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* Recommended for more enterable buildings on Chernarus
 		* [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
 * Malden
-	* Nothing
+	* None
 * Sahrani
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -71,7 +71,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Tanoa
-	* Nothing
+	* None
 * Taunus (very resource-intensive map)
 	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
@@ -82,7 +82,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 
 ## Recommended Mods
-This Mods would greatly increase your gaming experience:
+These mods are recommended by us, as they are likely to increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 * [ACE Compat - RHS Armed Forces of the Russian Federation](http://steamcommunity.com/workshop/filedetails/?id=773131200)
 * [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
@@ -97,18 +97,18 @@ This Mods would greatly increase your gaming experience:
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
-Also you should think about using this mods as serverside mods:
+Also you should think about using these mods as serverside mods: 
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
 * [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
 
 ## ACE Serverside Settings
-I've provided our community serverconfig.hpp for the [usage with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.
-Just copy the userconfig folder into your ArmA 3 Server folder and start the ace_server.pbo as serverside mod.
+I've provided our communities serverconfig.hpp to be [used with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.
+Just copy the userconfig folder into your ArmA 3 Server folder and start the ace_server.pbo as a serverside mod.
 
 ## Recommended Difficulty Settings
-I recommend to use the following difficulty settings for this mission (User profile of your server):
+I recommend using the following difficulty settings for this mission (User profile of your server):
 ```
 class CustomDifficulty
 {
@@ -159,6 +159,17 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.961 (6th November 2017)
+* Added: ACE auto detection. (BI Revive still has to be disabled manually)
+* Added: Parameter to decide if vehicles should have cleared cargo or not. Thanks to [veteran29](https://github.com/veteran29)
+* Removed: ACE compatibility parameter.
+* Updated: ACE settings from our community due to the new pylons system in ACE.
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Updated: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
+* Updated: List of ignored buildings for the civil reputation.
+* Tweaked: Logistic convoy ambush chance balancing.
+* Fixed: SMAW optic placed in wrong array in RHS presets.
 
 ### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)

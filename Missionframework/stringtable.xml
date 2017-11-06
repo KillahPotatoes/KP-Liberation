@@ -10,20 +10,20 @@
 		<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.96</Original>
-			<German>KP Liberation v0.96</German>
-			<Spanish>KP Liberation v0.96</Spanish>
-			<Italian>KP Liberation v0.96</Italian>
-			<Chinesesimp>KP Liberation v0.96</Chinesesimp>
-			<Turkish>KP Liberation v0.96</Turkish>
+			<Original>KP Liberation v0.961</Original>
+			<German>KP Liberation v0.961</German>
+			<Spanish>KP Liberation v0.961</Spanish>
+			<Italian>KP Liberation v0.961</Italian>
+			<Chinesesimp>KP Liberation v0.961</Chinesesimp>
+			<Turkish>KP Liberation v0.961</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.96</Original>
-			<German>v0.96</German>
-			<Spanish>v0.96</Spanish>
-			<Italian>v0.96</Italian>
-			<Chinesesimp>v0.96</Chinesesimp>
-			<Turkish>v0.96</Turkish>
+			<Original>v0.961</Original>
+			<German>v0.961</German>
+			<Spanish>v0.961</Spanish>
+			<Italian>v0.961</Italian>
+			<Chinesesimp>v0.961</Chinesesimp>
+			<Turkish>v0.961</Turkish>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -2377,6 +2377,10 @@
 			<Chinesesimp>伞降</Chinesesimp>
 			<Turkish>HALO ATLAYIŞI</Turkish>
 		</Key>
+		<Key ID="STR_PARAM_CLEAR_CARGO">
+			<Original>Clear spawned vehicle cargo</Original>
+			<German>Inventar gespawnter Fahrzeuge leeren</German>
+		</Key>
 		<Key ID="STR_DEPLOY_IN_PROGRESS">
 			<Original>Deployment in progress...</Original>
 			<French>Déploiement en cours...</French>
@@ -4448,13 +4452,6 @@
 			<Chinesesimp>-- 推货箱</Chinesesimp>
 			<Turkish>-- KUTUYU İTTİR</Turkish>
 		</Key>
-		<Key ID="STR_PARAMS_ACE_ENABLE">
-			<Original>ACE Compatibility (deactivates the Liberation weather and resupply script)</Original>
-			<German>ACE Kompatibilität (deaktiviert das Liberation Wetter- und Versorgungsscript)</German>
-			<Italian>Compatibilità ACE (disattiva il clima e l'approvvigionamento)</Italian>
-			<Chinesesimp>ACE模组兼容（关闭Liberation天气和补给脚本）</Chinesesimp>
-			<Turkish>ACE Uyumluluğu (Liberation hava ve mühimmat scriptini kapatır)</Turkish>
-		</Key>
 		<Key ID="STR_ACTION_SORT_STORAGE">
 			<Original>-- STACK AND SORT</Original>
 			<German>-- STAPELN UND SORTIEREN</German>
@@ -4696,6 +4693,7 @@
 		<Key ID="STR_GREUH_TEST">
 			<Original>Test</Original>
 			<German>Test</German>
+			<Italian>Test</Italian>
 			<Chinesesimp>测试</Chinesesimp>
 			<Turkish>Test</Turkish>
 		</Key>
@@ -4731,14 +4729,14 @@
 			<Original>Civilians are complaining about %1 lost buildings.</Original>
 			<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
 			<Italian>Civili si lamentano della perdita di %1 edifici.</Italian>
-			<Chinesesimp>平民对%1建筑的损坏有所怨言。</Chinesesimp>
+			<Chinesesimp>平民们对%1建筑的损坏有所怨言。</Chinesesimp>
 			<Turkish>Siviller %1 kadar yıkılan binaları hakkında konuşuyorlar.</Turkish>
 		</Key>
 		<Key ID="STR_PARAM_CR_BUILDING">
 			<Original>Civil Reputation penalty for buildings if building is</Original>
 			<German>Ziviles Ansehen sinkt, wenn Gebäude</German>
 			<Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
-			<Chinesesimp>当建筑_____时，会平民声望会降低</Chinesesimp>
+			<Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
 			<Turkish>Şu türdeki binalara ceza verilince, ceza uygulanır</Turkish>
 		</Key>
 		<Key ID="STR_PARAM_CR_DAMAGED">
@@ -4760,152 +4758,211 @@
 			<German>SERVER RESTART HINWEIS</German>
 			<Italian>NOTIFICA RESTART SERVER</Italian>
 			<Turkish>SERVER YENİDEN BAŞLATMA BİLDİRİMİ</Turkish>
+			<Chinesesimp>服务器重启提醒</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_RESTART_SECOND">
 			<Original>The server will restart in less than 60 seconds!</Original>
 			<German>Server Restart in weniger als 60 Sekunden!</German>
 			<Italian>Il server si riavvierà tra meno di 60 secodni!</Italian>
 			<Turkish>SERVER 60 SANİYE İÇİNDE YENİDEN BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在60秒内重启！</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_RESTART_FIVE">
 			<Original>The server will restart in less than 5 minutes!</Original>
 			<German>Server Restart in weniger als 5 Minuten!</German>
 			<Italian>Il server si riavvierà tra meno di 5 minuti!</Italian>
 			<Turkish>SERVER 5 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在5分钟内重启！</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_RESTART_FIFTEEN">
 			<Original>The server will restart in less than 15 minutes!</Original>
 			<German>Server Restart in weniger als 15 Minuten!</German>
 			<Italian>Il server si riavvierà tra meno di 15 minuti!</Italian>
 			<Turkish>SERVER 15 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在15分钟内重启！</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_RESTART_THIRTY">
 			<Original>The server will restart in less than 30 minutes!</Original>
 			<German>Server Restart in weniger als 30 Minuten!</German>
 			<Italian>Il server si riavvierà tra meno di 30 minuti!</Italian>
 			<Turkish>SERVER 30 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在30分钟内重启！</Chinesesimp>
 		</Key>
 		<Key ID="STR_RESTART_PARAM">
 			<Original>Automatic Server Restart after (hours)</Original>
 			<German>Automatischer Server Restart nach (Stunden)</German>
+			<Italian>Restart Automatico del Server ogni (ore)</Italian>
 			<Turkish>Otomatik server yeniden başlat (saat)</Turkish>
+			<Chinesesimp>自动重启服务器时间（小时）</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUGOPTIONS">
 			<Original>== DEBUG MESSAGES ==</Original>
 			<German>== DEBUG NACHRICHTEN ==</German>
+			<Italian>== MESSAGGI DI DEBUG ==</Italian>
 			<Turkish>== DEBUG MESAJLARI ==</Turkish>
+			<Chinesesimp>== 除错信息 ==</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_CIVINFO">
 			<Original>Civil Informant</Original>
 			<German>Ziviler Informant</German>
+			<Italian>Informatore Civile</Italian>
 			<Turkish>Sivil Bilgisi</Turkish>
+			<Chinesesimp>民间线人</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_CIVREP">
 			<Original>Civil Reputation</Original>
 			<German>Ziviles Ansehen</German>
+			<Italian>Reputazione Civili</Italian>
 			<Turkish>Sivil Repütasyonu</Turkish>
+			<Chinesesimp>民间声望</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
 			<Original>Saving</Original>
 			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
+      <Italian>Salvataggio Dati</Italian>
+			<Chinesesimp>保存中</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
 			<Original>A civilian from %1 says he has some information for us.</Original>
 			<German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
+			<Italian>Un civile a %1 dice di avere informazioni per noi.</Italian>
 			<Turkish>%1 adında ki bir sivil bize vereceği bir bilgisi olduğunu söylüyor.</Turkish>
+			<Chinesesimp>来自%1的一位平民说他有情报要交给我们。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
 			<Original>The civilian gave us some important information.</Original>
 			<German>Der Zivilist gab uns wichtige Informationen.</German>
+			<Italian>Il civile ha fornito informazioni importatnti.</Italian>
 			<Turkish>Sivil bize çok önemli bilgiler verdi.</Turkish>
+			<Chinesesimp>平民给了我们一些重要情报。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
 			<Original>The civilian has disappeared.</Original>
 			<German>Der Zivilist ist wieder untergetaucht.</German>
+			<Italian>Il civile è scomparso.</Italian>
 			<Turkish>Sivil ortadan kayboldu.</Turkish>
+			<Chinesesimp>平民消失了。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
 			<Original>The civilian died.</Original>
 			<German>Der Zivilist wurde getötet.</German>
+			<Italian>Il civile è morto.</Italian>
 			<Turkish>Sivil öldü.</Turkish>
+			<Chinesesimp>平民死亡了。</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
 			<Original>Asymmetric Threat</Original>
 			<German>Asymmetrische Bedrohung</German>
+			<Italian>Minaccia Asimmetrica</Italian>
 			<Turkish>Asimetrik Tehdit</Turkish>
+			<Chinesesimp>非对称威胁</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_LOGISTIC">
 			<Original>Logistic</Original>
 			<German>Logistik</German>
+			<Italian>Logistica</Italian>
 			<Turkish>Lojistik</Turkish>
+			<Chinesesimp>后勤</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
 			<Original>Logistic Convoy Ambush</Original>
 			<German>Logistikkonvoi Überfall</German>
+			<Italian>Convoglio Sotto Attacco</Italian>
 			<Turkish>Lojistik Konvoyu Baskını</Turkish>
+			<Chinesesimp>后勤车队受袭</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
 			<Original>Guerilla forces attacking our convoy near %1.</Original>
 			<German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+			<Italian>Guerriglieri attaccano il nostro convoglio vicino %1</Italian>
 			<Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
+			<Chinesesimp>游击队正在%1附近攻击我们的车队</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
 			<Original>The ambush was successfully repelled.</Original>
 			<German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+			<Italian>L'attacco è stato neutralizzato.</Italian>
 			<Turkish>Baskın başarıyla püskürtüldü.</Turkish>
+			<Chinesesimp>成功击退了来犯者。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
-			<Original>The guerilla forces excaped with the convoy resources.</Original>
+			<Original>The guerilla forces escaped with the convoy resources.</Original>
 			<German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
+			<Italian>I Guerriglieri scappano con le risorse del nostro convoglio.</Italian>
 			<Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
+			<Chinesesimp>游击队抢走了车队物资。</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
 			<Original>Sectorspawn</Original>
 			<German>Sektorspawn</German>
+			<Italian>Spawn Settori</Italian>
+			<Chinesesimp>战区刷新</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_KILL">
 			<Original>Killed units</Original>
 			<German>Getötete Einheiten</German>
+			<Italian>Unità Uccise</Italian>
+			<Chinesesimp>击杀的单位</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION">
 			<Original>Treat the civilian (field dressing)</Original>
 			<German>Zivilisten versorgen (einfache Bandage)</German>
+			<Italian>Soccorso Civili</Italian>
+			<Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_ACE_ACTION_FAIL">
 			<Original>You need a field dressing.</Original>
 			<German>Du brauchst eine einfache Bandage.</German>
+			<Italian>Hai bisogno di un bendaggio semplice.</Italian>
+			<Chinesesimp>你需要一个战地绷带。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_START">
 			<Original>There is a high ranked officer near %1.</Original>
 			<German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+			<Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
+			<Chinesesimp>%1附近有一名高级军官。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
 			<Original>The officer was successfully killed.</Original>
 			<German>Der Offizier konnte erfolgreich getötet werden.</German>
+			<Italian>L'ufficiale è stato ucciso.</Italian>
+			<Chinesesimp>成功刺杀了军官。</Chinesesimp>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
 			<Original>The officer has moved on.</Original>
 			<German>Der Offizier ist weitergezogen.</German>
+			<Italian>L'ufficiale è scappato.</Italian>
+			<Chinesesimp>军官逃离了。</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAM_RESPAWN_COOLDOWN">
 			<Original>Mobile Respawn Cooldown (minutes)</Original>
 			<German>Mobiler Respawn Cooldown (Minuten)</German>
+			<Italian>Attesa Respawn Mobile (Minuti)</Italian>
+			<Chinesesimp>机动复活点冷却时间（分钟）</Chinesesimp>
 		</Key>
 		<Key ID="STR_RESPAWN_COOLDOWN_HINT">
 			<Original>%1 minutes mobile respawn cooldown left.</Original>
 			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+			<Italian>Mancano ancora %1 minuti al respawn.</Italian>
+			<Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
 		</Key>
 		<Key ID="STR_CR_RESISTANCE_KILLMSG">
 			<Original>An allied resistance fighter named %1 was killed!</Original>
 			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+			<Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
+			<Chinesesimp>一位名叫%1的友军抵抗军战士阵亡了！</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_SAVE">
 			<Original>Gamedata saving</Original>
 			<German>Savegame Speicherung</German>
+			<Italian>Salvataggio Dati di Gioco</Italian>
+			<Chinesesimp>储存游戏数据中</Chinesesimp>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUG_PRODUCTION">
 			<Original>Production</Original>
 			<German>Produktion</German>
+			<Italian>Produzione</Italian>
+			<Chinesesimp>生产</Chinesesimp>
 		</Key>
 	</Package>
 </Project>

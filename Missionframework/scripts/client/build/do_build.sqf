@@ -293,7 +293,7 @@ while { true } do {
 					_vehicle setpos _truepos;
 				};
 				
-				if (!(_classname in KP_liberation_ace_crates)) then {
+				if (!(_classname in KP_liberation_ace_crates) && KP_liberation_clear_cargo) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
 					clearItemCargoGlobal _vehicle;

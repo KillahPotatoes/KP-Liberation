@@ -8830,7 +8830,7 @@ class Mission
 			dataType="Marker";
 			position[]={4875.4141,0,16175.929};
 			name="capture_48";
-			text="Negaes";
+			text="Negades";
 			type="n_art";
 			colorName="ColorEAST";
 			id=2423;
