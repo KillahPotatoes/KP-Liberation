@@ -4,7 +4,7 @@ if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBER
 
 waitUntil {sleep 1; _sector in KP_liberation_asymmetric_sectors};
 
-private _buildings = [nearestObjects [(markerPos _sector), ["House"], 75], {(alive _x) && !((typeOf _x) in KP_liberation_cr_ignored_buildings)}] call BIS_fnc_conditionalSelect;
+private _buildings = [nearestObjects [(markerPos _sector), ["House"], 75], {(alive _x) && !((typeOf _x) in KP_liberation_cr_ign_buildings)}] call BIS_fnc_conditionalSelect;
 private _positions = [];
 {
 	_positions = _positions + ([_x] call BIS_fnc_buildingPositions);
