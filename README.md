@@ -160,7 +160,7 @@ class Missions
 
 ## Changelog
 
-### 0.961 (in development)
+### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
 * Added: Parameter to decide if vehicles should have cleared cargo or not. Thanks to [veteran29](https://github.com/veteran29)
 * Removed: ACE compatibility parameter.
