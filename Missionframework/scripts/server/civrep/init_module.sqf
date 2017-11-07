@@ -7,6 +7,8 @@ F_cr_getBuildings = compileFinal preprocessFileLineNumbers "scripts\server\civre
 F_cr_changeCR = compileFinal preprocessFileLineNumbers "scripts\server\civrep\fnc\f_kp_cr_changeCR.sqf";
 // Reputation gain for liberating a sector
 F_cr_liberatedSector = compileFinal preprocessFileLineNumbers "scripts\server\civrep\fnc\f_kp_cr_liberatedSector.sqf";
+// Play random wounded animation on unit
+F_cr_woundedAnim = compileFinal preprocessFileLineNumbers "scripts\server\civrep\fnc\f_kp_cr_woundedAnim.sqf";
 
 // Scripts
 // Spawn wounded civilians in a sector
