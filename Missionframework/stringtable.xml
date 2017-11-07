@@ -4732,6 +4732,9 @@
 			<Chinesesimp>平民们对%1建筑的损坏有所怨言。</Chinesesimp>
 			<Turkish>Siviller %1 kadar yıkılan binaları hakkında konuşuyorlar.</Turkish>
 		</Key>
+		<Key ID="STR_CR_HEALMSG">
+			<Original>Civilian named %1 is thankful for your help.</Original>
+		</Key>
 		<Key ID="STR_PARAM_CR_BUILDING">
 			<Original>Civil Reputation penalty for buildings if building is</Original>
 			<German>Ziviles Ansehen sinkt, wenn Gebäude</German>

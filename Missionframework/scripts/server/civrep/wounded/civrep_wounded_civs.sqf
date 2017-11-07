@@ -19,7 +19,7 @@ for "_i" from 1 to _count do {
 	_civ setDir (random 360);
 	{_civ disableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
 	_civ setDamage 0.5;
-	_civ switchMove "Acts_SittingWounded_loop";
+	_civ call F_cr_woundedAnim;
 	if (KP_liberation_ace) then {[_civ] remoteExec ["F_cr_ace_action"];};
 	_civs pushBack _civ;
 	private _marker = createMarker ["wounded_marker_" + str _i, [((_pos select 0) - 20 + (random 40)),((_pos select 1) - 20 + (random 40))]];
@@ -41,7 +41,10 @@ while {_units_near > 0} do {
 		if (((damage _x) < 0.5) && !(_x in _healed_civs)) then {
 			(_markers select _forEachIndex) setMarkerAlpha 0;
 			private _civ = _x;
+			[_civ, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
+			sleep 2;
 			{_civ enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
+			[4, [(name _civ)]] remoteExec ["F_cr_penaltyMsg"];
 			[KP_liberation_cr_wounded_gain] call F_cr_changeCR;
 			_healed_civs pushBack _civ;
 		}
