@@ -18,6 +18,7 @@ for "_i" from 1 to _count do {
 	_civ addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 	_civ setDir (random 360);
 	{_civ disableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
+	removeAllItems _civ;
 	_civ setDamage 0.5;
 	_civ call F_cr_woundedAnim;
 	if (KP_liberation_ace) then {[_civ] remoteExec ["F_cr_ace_action"];};
