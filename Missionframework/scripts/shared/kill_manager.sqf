@@ -77,7 +77,7 @@ if (isServer) then {
 			stats_civilians_killed = stats_civilians_killed + 1;
 			if (side _killer == GRLIB_side_friendly) then {
 				if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Civilian killed by: %1", name _killer];};
-				[2, [(name _unit)]] remoteExec ["F_cr_penaltyMsg"];
+				[2, [(name _unit)]] remoteExec ["F_cr_globalMsg"];
 				[KP_liberation_cr_kill_penalty, true] spawn F_cr_changeCR;
 			};
 			if (isPlayer _killer) then {
@@ -106,7 +106,7 @@ if (isServer) then {
 			KP_liberation_guerilla_strength = KP_liberation_guerilla_strength - 1;
 			if (((GRLIB_side_friendly getFriend GRLIB_side_resistance) >= 0.6) && (side _killer == GRLIB_side_friendly)) then {
 				if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Guerilla unit killed by: %1", name _killer];};
-				[3, [(name _unit)]] remoteExec ["F_cr_penaltyMsg"];
+				[3, [(name _unit)]] remoteExec ["F_cr_globalMsg"];
 				[KP_liberation_cr_resistance_penalty, true] spawn F_cr_changeCR;
 			};
 		};

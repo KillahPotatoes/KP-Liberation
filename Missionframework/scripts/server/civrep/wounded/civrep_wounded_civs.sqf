@@ -44,7 +44,7 @@ while {_units_near > 0} do {
 			[_civ, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
 			sleep 2;
 			{_civ enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
-			[4, [(name _civ)]] remoteExec ["F_cr_penaltyMsg"];
+			[4, [(name _civ)]] remoteExec ["F_cr_globalMsg"];
 			[KP_liberation_cr_wounded_gain] call F_cr_changeCR;
 			_healed_civs pushBack _civ;
 		}
