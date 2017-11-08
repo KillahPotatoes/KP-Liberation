@@ -162,6 +162,7 @@ class Missions
 
 ### 0.962 (In Development)
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 
 ### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
