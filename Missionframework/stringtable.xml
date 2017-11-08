@@ -10,20 +10,20 @@
 		<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.961</Original>
-			<German>KP Liberation v0.961</German>
-			<Spanish>KP Liberation v0.961</Spanish>
-			<Italian>KP Liberation v0.961</Italian>
-			<Chinesesimp>KP Liberation v0.961</Chinesesimp>
-			<Turkish>KP Liberation v0.961</Turkish>
+			<Original>KP Liberation v0.962dev</Original>
+			<German>KP Liberation v0.962dev</German>
+			<Spanish>KP Liberation v0.962dev</Spanish>
+			<Italian>KP Liberation v0.962dev</Italian>
+			<Chinesesimp>KP Liberation v0.962dev</Chinesesimp>
+			<Turkish>KP Liberation v0.962dev</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.961</Original>
-			<German>v0.961</German>
-			<Spanish>v0.961</Spanish>
-			<Italian>v0.961</Italian>
-			<Chinesesimp>v0.961</Chinesesimp>
-			<Turkish>v0.961</Turkish>
+			<Original>v0.962dev</Original>
+			<German>v0.962dev</German>
+			<Spanish>v0.962dev</Spanish>
+			<Italian>v0.962dev</Italian>
+			<Chinesesimp>v0.962dev</Chinesesimp>
+			<Turkish>v0.962dev</Turkish>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -4734,6 +4734,7 @@
 		</Key>
 		<Key ID="STR_CR_HEALMSG">
 			<Original>Civilian named %1 is thankful for your help.</Original>
+			<German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
 		</Key>
 		<Key ID="STR_PARAM_CR_BUILDING">
 			<Original>Civil Reputation penalty for buildings if building is</Original>

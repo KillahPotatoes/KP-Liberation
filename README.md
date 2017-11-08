@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.961
+## Current version : 0.962
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -159,6 +159,9 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.962 (In Development)
+* Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
 
 ### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
