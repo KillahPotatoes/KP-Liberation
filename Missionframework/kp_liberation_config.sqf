@@ -243,6 +243,18 @@ KP_liberation_allowed_items_extension = [
     "BWA3_optic_EOTech_tan_Mag_Off",
     "BWA3_optic_20x50_NSV",
     "BWA3_optic_24x72_NSV",
+    	"rhs_acc_ekp8_18b",
+	"rhs_acc_ekp8_18c",
+	"rhs_acc_ekp8_18d",
+	"rhsusf_acc_g33_T1_flip",
+	"rhsusf_acc_g33_xps3_flip",
+	"rhsusf_acc_g33_xps3_tan_flip",
+	"ACE_Chemlight_Shield_Orange",
+	"ACE_Chemlight_Shield_White",
+	"ACE_Chemlight_Shield_Blue",
+	"ACE_Chemlight_Shield_Yellow",
+	"ACE_Chemlight_Shield_Green",
+	"ACE_Chemlight_Shield_Red",
 	"ACE_ReserveParachute"
 ];
 
