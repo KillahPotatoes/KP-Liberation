@@ -249,7 +249,7 @@ KP_liberation_allowed_items_extension = [
 	"BWA3_acc_LLM01_flash",
 	"BWA3_acc_LLM01_laser",
 	"BWA3_acc_LLM01_flash_underbarrel",
-	"BWA3_acc_LLM01_laser_underbarrel",
+	"BWA3_acc_LLM01_laser_underberre", //nach bwa3 update ersetzen durch "BWA3_acc_LLM01_laser_underbarrel", da sich die class name verändern wird. war ein schreibfehler
     	"rhs_acc_ekp8_18b",
 	"rhs_acc_ekp8_18c",
 	"rhs_acc_ekp8_18d",
