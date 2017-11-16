@@ -18,7 +18,7 @@ crewman_classname = "rhs_msv_emr_armoredcrew";							// This defines the crew fo
 pilot_classname = "rhs_pilot_combat_heli";								// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "rhs_ka60_grey";					// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "O_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
-KP_liberation_truck_classname = "RHS_Ural_Open_Flat_MSV_01";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
+KP_liberation_truck_classname = "rhs_kamaz5350_flatbed_vdv";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_forest_F";	// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_forest_F";	// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
 KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
@@ -58,8 +58,8 @@ infantry_units = [
 
 light_vehicles = [
 	["O_Quadbike_01_F",50,0,25],										//Quad Bike
-	["rhs_uaz_vdv",50,0,45],										//Quad Bike
-	["rhs_uaz_open_vdv",50,0,45],										//Quad Bike
+	["rhs_uaz_vdv",50,0,45],											//UAZ
+	["rhs_uaz_open_vdv",50,0,45],										//UAZ (Open)
 	["rhs_tigr_m_vdv",100,0,50],										//GAZ-233114 (Unarmed)
 	["rhs_tigr_m_3camo_vdv",100,0,50],									//GAZ-233114 (Unarmed) Camo
 	["rhs_tigr_sts_vdv",100,60,50],										//GAZ-233014 (Armed)
@@ -327,5 +327,6 @@ elite_vehicles = [
 	"rhs_bmd4m_vdv",													//BMD-4M
 	"rhs_bmd4ma_vdv",													//BMD-4MA
 	"RHS_Ka52_vvsc",													//Ka-52
+	"rhs_btr80a_vdv",													//BTR-80A
 	"rhs_bmd2m"															//BMD-2M (Berezhok)
 ];
