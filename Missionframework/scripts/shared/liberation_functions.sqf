@@ -56,3 +56,4 @@ F_cr_ace_action = compileFinal preprocessFileLineNumbers "scripts\shared\functio
 F_getResistanceTier = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getResistanceTier.sqf";
 F_spawnGuerillaGroup = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_spawnGuerillaGroup.sqf";
 F_createCrate = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_createCrate.sqf";
+F_isClassUAV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isClassUAV.sqf";

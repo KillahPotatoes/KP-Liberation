@@ -314,7 +314,7 @@ while { true } do {
 					[_vehicle] remoteExec ["arty_monitor", 2];
 				};*/
 
-				if ( (_classname in uavs) || manned ) then {
+				if ( (unitIsUAV _vehicle) || manned ) then {
 					[ _vehicle ] call F_forceBluforCrew;
 				};
 
