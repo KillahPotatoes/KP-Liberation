@@ -128,7 +128,7 @@ all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers 
 air_vehicles_classnames = [] + opfor_choppers;
 KP_liberation_friendly_air_classnames = [];
 {air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
-KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames - uavs;
+{ if(_x call F_isClassUAV) then { KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames - [_x] };} foreach KP_liberation_friendly_air_classnames;
 KP_liberation_static_classnames = [];
 {KP_liberation_static_classnames pushback (_x select 0);} forEach static_vehicles;
 ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
