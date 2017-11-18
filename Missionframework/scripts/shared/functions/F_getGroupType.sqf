@@ -20,44 +20,41 @@ if ((_grouptype == 'infantry') && (_vehicletype != '')) then {
 	} foreach heavy_vehicles;
 
 	if ( _grouptype == 'infantry' ) then {
-	{
-		if  ( _vehicletype == (_x select 0)) then {
-			if ( _vehicletype in uavs ) then {
-				_grouptype = 'uav';
-			} else {
+		{
+			if  ( _vehicletype == (_x select 0)) then {
 				_grouptype = 'air';
 			};
-		};
-	} foreach air_vehicles;
+		} foreach air_vehicles;
 	};
 
 	if ( _grouptype == 'infantry' ) then {
-	{
-		if  ( _vehicletype == (_x select 0)) then {
-			if ( _vehicletype in uavs ) then {
-				_grouptype = 'uav';
-			} else {
+		{
+			if  ( _vehicletype == (_x select 0)) then {
 				_grouptype = 'light';
 			};
-		};
-	} foreach light_vehicles;
+		} foreach light_vehicles;
 	};
 
 
 	if ( _grouptype == 'infantry' ) then {
-	{
-		if  ( _vehicletype == (_x select 0)) then {
-			_grouptype = 'support';
-		};
-	} foreach support_vehicles;
+		{
+			if  ( _vehicletype == (_x select 0)) then {
+				_grouptype = 'support';
+			};
+		} foreach support_vehicles;
 	};
 
 	if ( _grouptype == 'infantry' ) then {
-	{
-		if  ( _vehicletype == (_x select 0)) then {
-			_grouptype = 'static';
-		};
-	} foreach static_vehicles;
+		{
+			if  ( _vehicletype == (_x select 0)) then {
+				_grouptype = 'static';
+			};
+		} foreach static_vehicles;
+	};
+
+	// Check if vehicle config says it's an UAV, if it is always set its _grouptype to 'uav'
+	if ( (_vehicletype call F_isClassUAV) ) then {
+		_grouptype = 'uav';
 	};
 
 };
