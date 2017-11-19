@@ -12,7 +12,9 @@ private _newvehicle = createVehicle [_chopper_type, markerpos _spawnsector, [], 
 createVehicleCrew _newvehicle;
 sleep 0.1;
 
-private _pilot_group = group ((crew _newvehicle) select 0);
+private _pilot_group = createGroup GRLIB_side_enemy;
+(crew _newvehicle) joinSilent _pilot_group;
+
 private _para_group = createGroup GRLIB_side_enemy;
 
 _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
