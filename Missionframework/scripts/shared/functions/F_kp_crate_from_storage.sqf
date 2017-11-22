@@ -48,7 +48,7 @@ reverse _stored_crates;
 		
 		_x setPos _unload_pos;
 		[_x, true] remoteExec ["enableRopeAttach"];
-		if(KP_liberation_ace) then {[_x, true, [-0.55, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;};
+		if(KP_liberation_ace) then {[_x, true, [-0.55, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setDraggable"];};
 		_unloaded = true;
 	};
 	if (_unloaded) exitWith {

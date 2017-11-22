@@ -42,7 +42,7 @@ if (!isNil "_storage") then {
 
 	_crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
 	[_crate, false] remoteExec ["enableRopeAttach"];
-	if(KP_liberation_ace) then {[_crate, false, [-0.55, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;};
+	if(KP_liberation_ace) then {[_crate, false, [-0.55, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setDraggable"];};
 
 	if (_update) then {
 		if ((_storage getVariable ["KP_liberation_storage_type",-1]) == 1) then {
