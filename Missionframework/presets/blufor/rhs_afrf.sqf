@@ -69,6 +69,7 @@ light_vehicles = [
 	["RHS_Ural_VDV_01",105,0,75],										//Ural-4320 (covered infantry truck)
 	["rhs_kamaz5350_open_vdv",125,0,75],								//KamaZ-5350 (open infantry truck)
 	["RHS_Ural_Open_VDV_01",105,0,75],									//Ural-4320 (open infantry truck)
+	["rhs_pts_vmf",125,0,100],											//PTS
 	["rhs_gaz66_zu23_vdv",105,70,65],									//GAZ-66 (ZU-23)
 	["rhs_btr60_vdv",150,40,100],										//BTR-60PB
 	["rhs_btr70_vdv",180,60,100],										//BTR-70
@@ -116,7 +117,9 @@ static_vehicles = [
 	["rhs_Kornet_9M133_2_vdv",50,100,0],								//Kornet (AT)
 	["rhs_Igla_AA_pod_vdv",50,100,0],									//Igla Pod (AA)
 	["RHS_ZU23_VDV",80,120,0],											//ZU-23
-	["rhs_SPG9M_VDV",40,90,0]											//SPG-9 Low Tripod
+	["rhs_SPG9M_VDV",40,90,0],											//SPG-9 Low Tripod
+	["rhs_D30_vdv",100,200,0],											//D-30
+	["rhs_D30_at_vdv",100,200,0]										//D-30 AT
 ];
 
 buildings = [
