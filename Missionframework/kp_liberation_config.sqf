@@ -348,6 +348,7 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+	"RHS_Ural_Repair_VDV_01",
 	"BW_LKW15T_Repair_F"
 ];
 
@@ -363,6 +364,7 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	"rhs_gaz66_ammo_msv",
 	"BW_LKW15T_Ammo_F"
 ];
 
@@ -378,6 +380,7 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
 	"rhsusf_M978A4_BKIT_usarmy_wd",
+	"RHS_Ural_Fuel_VDV_01",
 	"BW_LKW15T_Fuel_F"
 ];
 
