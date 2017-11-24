@@ -73,7 +73,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 * Tanoa
 	* None
 * Taunus (very resource-intensive map)
-	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -161,6 +161,7 @@ class Missions
 ## Changelog
 
 ### 0.962 (In Development)
+* Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Extended allowed items extension list with some bwmod classnames. Thanks to [madpat3](https://github.com/madpat3)
 * Tweaked: Detection of UAVs. Thanks to [veteran29](https://github.com/veteran29)
