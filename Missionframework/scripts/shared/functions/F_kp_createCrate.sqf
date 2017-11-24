@@ -31,4 +31,6 @@ clearMagazineCargoGlobal _crate;
 clearBackpackCargoGlobal _crate;
 clearItemCargoGlobal _crate;
 
+if(KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+
 _crate
