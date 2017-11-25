@@ -162,6 +162,8 @@ class Missions
 
 ### 0.962 (In Development)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
+* Updated: RHS transport configs.
+* Updated: RHS vehicles in presets.
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Extended allowed items extension list with some bwmod classnames. Thanks to [madpat3](https://github.com/madpat3)
 * Tweaked: Detection of UAVs. Thanks to [veteran29](https://github.com/veteran29)
