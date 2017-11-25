@@ -65,16 +65,24 @@ infantry_units = [
 
 light_vehicles = [
 	["B_Quadbike_01_F",50,0,25],										//Quad Bike
+	["rhsusf_mrzr4_d",75,0,25],											//MRZR 4
 	["rhsusf_m1025_d",100,0,50],										//M1025A2
 	["rhsusf_m1025_d_m2",100,40,50],									//M1025A2 (M2)
 	["rhsusf_m1025_d_Mk19",100,60,50],									//M1025A2 (Mk19)
 	["rhsusf_m998_d_2dr_fulltop",100,0,50],								//M1097A2 (2D)
 	["rhsusf_m998_d_2dr_halftop",100,0,50],								//M1097A2 (2D / open back)
+	["rhsusf_M1220_usarmy_d",120,0,60],									//M1220
+	["rhsusf_M1220_M2_usarmy_d",120,40,60],								//M1220 (M2)
+	["rhsusf_M1220_MK19_usarmy_d",120,60,60],							//M1220 (Mk19)
+	["rhsusf_M1232_usarmy_d",140,0,60],									//M1220
+	["rhsusf_M1232_M2_usarmy_d",140,40,60],								//M1220 (M2)
+	["rhsusf_M1232_MK19_usarmy_d",140,60,60],							//M1220 (Mk19)
 	["rhsusf_M1230a1_usarmy_d",120,0,60],								//M1230A1 (MEDEVAC)
-	["rhsusf_M1083A1P2_d_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
-	["rhsusf_M1083A1P2_d_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
-	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT
-	["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],						//M977A4 BKIT (HMG)
+	["rhsusf_M1083A1P2_D_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
+	["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",125,0,75],				//M1083A1P2 (small cargo truck)
+	["rhsusf_M977A4_BKIT_usarmy_d",140,0,75],							//M977A4 BKIT (cargo truck)
+	["rhsusf_M977A4_BKIT_M2_usarmy_d",140,40,75],						//M977A4 BKIT (cargo truck with HMG)
+	["rhsusf_M1117_D",150,50,50],										//M1117 ASV
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
 	["B_UGV_01_rcws_F",150,40,50]										//UGV Stomper (RCWS)
 ];
@@ -228,6 +236,7 @@ support_vehicles = [
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
 	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
+	["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",400,200,300],				//M1078A1R SOV
 	["rhsusf_M977A4_REPAIR_usarmy_d",325,0,75],							//M977A4 Repair
 	["rhsusf_M978A4_usarmy_d",125,0,275],								//M978A4 Fuel
 	["rhsusf_M977A4_AMMO_usarmy_d",125,200,75],							//M977A4 Ammo
