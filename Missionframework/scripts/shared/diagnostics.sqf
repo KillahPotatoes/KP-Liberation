@@ -14,7 +14,7 @@ while {true} do {
 	if (isServer) then {
 		diag_log format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Total units: %3 - Hostile units: %4 - Local units: %5 - Vehicles: %6 - Active Sectors: %7",
 		_source,
-		diag_fps,
+		((round (diag_fps * 100.0)) / 100.0),
 		count allUnits,
 		{side group _x == GRLIB_side_enemy} count allUnits,
 		{local _x} count allUnits,
@@ -23,7 +23,7 @@ while {true} do {
 	} else {
 		private _text = format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local units: %3",
 		_source,
-		diag_fps,
+		((round (diag_fps * 100.0)) / 100.0),
 		{local _x} count allUnits];
 		_text remoteExec ["diag_log",2];
 	};
