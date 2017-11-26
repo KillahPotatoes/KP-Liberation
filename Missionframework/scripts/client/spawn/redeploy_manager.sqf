@@ -191,7 +191,7 @@ while {true} do {
 
 	if (KP_liberation_mobilerespawn && (KP_liberation_respawn_time > time)) then {
 		hint format [localize "STR_RESPAWN_COOLDOWN_HINT", ceil ((KP_liberation_respawn_time - time) / 60)];
-		sleep 3;
+		uiSleep 12;
 		hint "";
 	};
 

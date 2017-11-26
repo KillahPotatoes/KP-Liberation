@@ -30,9 +30,9 @@ if (((backpack player) != "") && ((backpack player) != _backpack)) then {_player
 {_playerItems pushBackUnique _x;} forEach (vestItems player);
 {_playerItems pushBackUnique _x;} forEach (backpackItems player);
 {_playerItems pushBackUnique _x;} forEach (weapons player);
-{_playerItems pushBackUnique _x;} forEach (primaryWeaponItems player);
-{_playerItems pushBackUnique _x;} forEach (secondaryWeaponItems player);
-{_playerItems pushBackUnique _x;} forEach (handgunItems player);
+{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (primaryWeaponItems player);
+{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (secondaryWeaponItems player);
+{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (handgunItems player);
 
 if (({(_x in KP_liberation_allowed_items) || ((_x find "ACRE") != -1) || ((_x find "tf_") != -1) || ((_x find "TFAR_") != -1)} count _playerItems) != count _playerItems) then {
 	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
