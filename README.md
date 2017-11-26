@@ -162,6 +162,7 @@ class Missions
 
 ### 0.962 (In Development)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
+* Added: Some additional debug outputs.
 * Updated: RHS transport configs.
 * Updated: RHS vehicles in presets.
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
