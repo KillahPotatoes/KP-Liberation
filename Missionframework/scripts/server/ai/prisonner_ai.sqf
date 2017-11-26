@@ -24,10 +24,13 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
 		sleep 1;
 		_unit disableAI "ANIM";
 		_unit disableAI "MOVE";
-		_unit playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-		sleep 2;
-		_unit setCaptive true;
-
+		if (KP_liberation_ace) then {
+			[_unit, true] call ACE_captives_fnc_setSurrendered;
+		} else {
+			_unit playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
+			sleep 2;
+			_unit setCaptive true;
+		};
 		waitUntil {sleep 1;
 			!alive _unit || side group _unit == GRLIB_side_friendly
 		};
