@@ -173,6 +173,7 @@ class Missions
 * Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
+* Fixed: Guerilla could spawn as neutral combatants.
 
 ### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
