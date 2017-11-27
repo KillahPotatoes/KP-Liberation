@@ -87,7 +87,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		
 		_spawncivs = true;
 
-		if ((random 100) <= KP_liberation_resistance_sector_chance) then {
+		if (((random 100) <= KP_liberation_resistance_sector_chance) && (([] call F_cr_getMulti) > 0)) then {
 			_guerilla = true;
 		};
 		

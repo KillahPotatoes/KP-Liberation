@@ -69,7 +69,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 	if ( load_loadout > 0 ) then {
 		private _loaded_loadout = _loadouts_data select (lbCurSel 201);
 		[player, [profileNamespace, _loaded_loadout]] call bis_fnc_loadInventory;
-		[ player ] call F_correctLaserBatteries;
+		[player] call F_correctLaserBatteries;
 
 		if (KP_liberation_arsenalUsePreset) then {
 			if ([_backpack] call F_checkGear) then {
