@@ -30,7 +30,7 @@ if (count GRLIB_all_fobs == 0) then {
 			_fobbox setdir getDir base_boxspawn;
 			_fobbox setposATL (getposATL base_boxspawn);	
 
-			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
+			_fobbox call F_setFobMass;
 
 			sleep 3;
 
