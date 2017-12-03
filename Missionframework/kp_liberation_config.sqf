@@ -80,7 +80,7 @@ GRLIB_side_friendly = WEST;																						// Friendly side.
 GRLIB_side_enemy = EAST;																						// Enemy side.
 GRLIB_side_resistance = RESISTANCE;																				// Resistance side.
 GRLIB_side_civilian = CIVILIAN;																					// Civilian side.
-GRLIB_respawn_marker = "respawn_west";																			// Respawn marker name.
+GRLIB_respawn_marker = "respawn";																				// Respawn marker name.
 
 GRLIB_color_friendly = "ColorBLUFOR";																			// Friendly sector marker color.
 GRLIB_color_enemy = "ColorOPFOR";																				// Enemy sector marker color.
