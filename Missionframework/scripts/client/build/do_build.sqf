@@ -319,7 +319,7 @@ while { true } do {
 				};
 
 				switch (_classname) do {
-					case FOB_box_typename: {[_vehicle, 3000] remoteExec ["F_setMass",_vehicle];};
+					case FOB_box_typename: {_vehicle call F_setFobMass;};
 					case "Land_Medevac_house_V1_F";
 					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
 					case KP_liberation_recycle_building: {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
