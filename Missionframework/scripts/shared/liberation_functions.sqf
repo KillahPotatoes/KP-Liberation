@@ -58,3 +58,4 @@ F_spawnGuerillaGroup = compileFinal preprocessFileLineNumbers "scripts\shared\fu
 F_createCrate = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_createCrate.sqf";
 F_isClassUAV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isClassUAV.sqf";
 F_checkGear = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_checkGear.sqf";
+F_setFobMass = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_setFobMass.sqf";
