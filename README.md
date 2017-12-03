@@ -181,6 +181,7 @@ class Missions
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
 * Fixed: Guerilla could spawn as neutral combatants.
+* Fixed: Unloading crates from vehicles could let them sink into the ground since the last ArmA Update.
 
 ### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
