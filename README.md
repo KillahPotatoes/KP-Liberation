@@ -167,12 +167,16 @@ class Missions
 * Added: Lythium basefile. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508)
 * Updated: RHS transport configs.
 * Updated: RHS vehicles in presets.
+* Updated: Devkit mission.sqm.
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Extended allowed items extension list with some bwmod classnames. Thanks to [madpat3](https://github.com/madpat3)
 * Tweaked: Detection of UAVs. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Enemy vehicle crew spawning. Ensure that they'll be on the right side (important for red vs blue). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: If you enter the arsenal with a packed weapon or UAV backpack, it won't be identified as blacklisted anymore.
 * Tweaked: FOB container mass now scales with the selected spartan helicopter maximum load. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Removed clutter and AI from the USS Freedom on all maps.
+* Tweaked: Cleaned all custom placed places on all maps some more.
+* Tweaked: Increased the distance of the Little Bird spawnpoints on the USS Freedom and let them facing to the front.
 * Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
