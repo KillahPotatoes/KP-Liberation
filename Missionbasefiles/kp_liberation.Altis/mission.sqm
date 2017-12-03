@@ -13856,7 +13856,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27480,23.518648,5442};
+				position[]={27480,23.518648,5435.5366};
 				angles[]={0,4.712389,0};
 			};
 			side="Empty";
@@ -13896,7 +13896,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27483.92,23.791992,5341.9409};
+				position[]={27483.92,23.927761,5341.9409};
 			};
 			side="Empty";
 			class Attributes
@@ -13935,7 +13935,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27480,23.518648,5455};
+				position[]={27480,23.518648,5452.0142};
 				angles[]={0,4.712389,0};
 			};
 			side="Empty";
