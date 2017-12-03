@@ -163,6 +163,7 @@ class Missions
 ### 0.962 (In Development)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
 * Added: Some additional debug outputs.
+* Added: RHS AFRF Preset for the player side. Thanks to [veteran29](https://github.com/veteran29)
 * Updated: RHS transport configs.
 * Updated: RHS vehicles in presets.
 * Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
@@ -170,6 +171,7 @@ class Missions
 * Tweaked: Detection of UAVs. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Enemy vehicle crew spawning. Ensure that they'll be on the right side (important for red vs blue). Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: If you enter the arsenal with a packed weapon or UAV backpack, it won't be identified as blacklisted anymore.
+* Tweaked: FOB container mass now scales with the selected spartan helicopter maximum load. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
