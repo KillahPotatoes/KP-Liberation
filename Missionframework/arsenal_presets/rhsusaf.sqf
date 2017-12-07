@@ -117,7 +117,6 @@ GRLIB_arsenal_weapons = [
 	"rhsusf_weap_MP7A2_aor1",
 	"rhsusf_weap_MP7A2_desert",
 	"rhsusf_weap_MP7A2_winter"
-
 ];
 
 GRLIB_arsenal_magazines = [

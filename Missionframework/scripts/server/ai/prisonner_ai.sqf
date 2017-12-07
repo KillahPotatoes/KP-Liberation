@@ -22,19 +22,26 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
 		_unit removeItem "NVGoggles_INDEP";
 		_unit setUnitPos "UP";
 		sleep 1;
-		_unit disableAI "ANIM";
-		_unit disableAI "MOVE";
-		_unit playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-		sleep 2;
-		_unit setCaptive true;
-
+		if (KP_liberation_ace) then {
+			[_unit, true] call ACE_captives_fnc_setSurrendered;
+		} else {
+			_unit disableAI "ANIM";
+			_unit disableAI "MOVE";
+			_unit playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
+			sleep 2;
+			_unit setCaptive true;
+		};
 		waitUntil {sleep 1;
 			!alive _unit || side group _unit == GRLIB_side_friendly
 		};
 
 		if (alive _unit) then {
-			_unit enableAI "ANIM";
-			_unit enableAI "MOVE";
+			if (KP_liberation_ace) then {
+				[_unit, false] call ACE_captives_fnc_setSurrendered;
+			} else {
+				_unit enableAI "ANIM";
+				_unit enableAI "MOVE";
+			};
 			sleep 1;
 			[_unit] remoteExec ["remote_call_prisonner", _unit];
 		};

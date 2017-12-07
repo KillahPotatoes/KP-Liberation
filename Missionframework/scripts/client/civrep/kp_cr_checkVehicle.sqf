@@ -8,7 +8,7 @@ if (isNil "KP_liberation_cr_vehicles") then {
 
 if (((typeOf _vehicle) in civilian_vehicles) && !(_vehicle in KP_liberation_cr_vehicles)) then {
 	if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] Vehicle was stolen by: %1", debug_source];_text remoteExec ["diag_log",2];};
-	[0] remoteExec ["F_cr_penaltyMsg"];
+	[0] remoteExec ["F_cr_globalMsg"];
 	[KP_liberation_cr_vehicle_penalty, true] remoteExec ["F_cr_changeCR", 2];
 
 	KP_liberation_cr_vehicles pushBack _vehicle;

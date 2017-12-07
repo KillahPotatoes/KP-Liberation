@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.961
+## Current version : 0.962
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -57,6 +57,12 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
 		* [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
+* Lythium
+	* [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+	* [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
+	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Malden
 	* None
 * Sahrani
@@ -73,7 +79,7 @@ You can play every map without any mods (only the maps themself) if you set the 
 * Tanoa
 	* None
 * Taunus (very resource-intensive map)
-	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=870276636)
+	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
 	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
@@ -159,6 +165,30 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.962 (In Development)
+* Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
+* Added: Some additional debug outputs.
+* Added: RHS AFRF Preset for the player side. Thanks to [veteran29](https://github.com/veteran29)
+* Added: Lythium basefile. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508)
+* Updated: RHS transport configs.
+* Updated: RHS vehicles in presets.
+* Updated: Devkit mission.sqm.
+* Tweaked: Wounded civilians event. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Extended allowed items extension list with some bwmod classnames. Thanks to [madpat3](https://github.com/madpat3)
+* Tweaked: Detection of UAVs. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Enemy vehicle crew spawning. Ensure that they'll be on the right side (important for red vs blue). Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: If you enter the arsenal with a packed weapon or UAV backpack, it won't be identified as blacklisted anymore.
+* Tweaked: FOB container mass now scales with the selected spartan helicopter maximum load. Thanks to [veteran29](https://github.com/veteran29)
+* Tweaked: Removed clutter and AI from the USS Freedom on all maps.
+* Tweaked: Cleaned all custom placed places on all maps some more and renamed the respawn marker from `respawn_west` to `respawn`.
+* Tweaked: Increased the distance of the Little Bird spawnpoints on the USS Freedom and let them facing to the front.
+* Tweaked: Some typos in the german stringtable. Thanks to [gqgunhed](https://github.com/gqgunhed)
+* Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
+* Fixed: With ACE you could take unconscious AI as POW.
+* Fixed: You couldn't handcuff surrendered AI with ACE zipties.
+* Fixed: Guerilla could spawn as neutral combatants.
+* Fixed: Unloading crates from vehicles could let them sink into the ground since the last ArmA Update.
 
 ### 0.961 (6th November 2017)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)

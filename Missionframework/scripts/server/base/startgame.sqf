@@ -30,7 +30,7 @@ if (count GRLIB_all_fobs == 0) then {
 			_fobbox setdir getDir base_boxspawn;
 			_fobbox setposATL (getposATL base_boxspawn);	
 
-			[_fobbox, 3000] remoteExec ["F_setMass",_fobbox];
+			_fobbox call F_setFobMass;
 
 			sleep 3;
 
@@ -64,6 +64,7 @@ if (count GRLIB_all_fobs == 0) then {
 		_crate setVariable ["KP_liberation_crate_value", 100, true];
 		[_crate, 500] remoteExec ["F_setMass",_crate];
 		[objNull, _crate] call BIS_fnc_curatorObjectEdited;
+		if(KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 		_crateArray pushBack _crate;
 	};
 	uiSleep 25;

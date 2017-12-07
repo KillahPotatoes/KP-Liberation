@@ -4,6 +4,7 @@ switch (KP_liberation_preset_blufor) do {
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
+	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
@@ -127,7 +128,7 @@ all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers 
 air_vehicles_classnames = [] + opfor_choppers;
 KP_liberation_friendly_air_classnames = [];
 {air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
-KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames - uavs;
+KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames select {!(_x call F_isClassUAV)};
 KP_liberation_static_classnames = [];
 {KP_liberation_static_classnames pushback (_x select 0);} forEach static_vehicles;
 ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
