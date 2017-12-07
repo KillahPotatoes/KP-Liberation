@@ -57,6 +57,12 @@ You can play every map without any mods (only the maps themself) if you set the 
 	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 	* Recommended for more enterable buildings on Chernarus
 		* [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
+* Lythium
+	* [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+	* [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
+	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Malden
 	* None
 * Sahrani
@@ -175,8 +181,9 @@ class Missions
 * Tweaked: If you enter the arsenal with a packed weapon or UAV backpack, it won't be identified as blacklisted anymore.
 * Tweaked: FOB container mass now scales with the selected spartan helicopter maximum load. Thanks to [veteran29](https://github.com/veteran29)
 * Tweaked: Removed clutter and AI from the USS Freedom on all maps.
-* Tweaked: Cleaned all custom placed places on all maps some more.
+* Tweaked: Cleaned all custom placed places on all maps some more and renamed the respawn marker from `respawn_west` to `respawn`.
 * Tweaked: Increased the distance of the Little Bird spawnpoints on the USS Freedom and let them facing to the front.
+* Tweaked: Some typos in the german stringtable. Thanks to [gqgunhed](https://github.com/gqgunhed)
 * Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
