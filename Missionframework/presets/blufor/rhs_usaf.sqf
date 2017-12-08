@@ -15,8 +15,8 @@ FOB_truck_typename = "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy";			// This is the FO
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.  																				Default is "B_supplyCrate_F".
 Respawn_truck_typename = "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy";	// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
 huron_typename = "RHS_CH_47F";											// This is Spartan 01, a multipurpose mobile respawn as a helicopter. 																	Default is "B_Heli_Transport_03_unarmed_F".
-crewman_classname = "rhsusf_army_ucp_combatcrewman";					// This defines the crew for vehicles. 																									Default is "B_crew_F".
-pilot_classname = "rhsusf_army_ucp_helipilot";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
+crewman_classname = "rhsusf_army_ocp_combatcrewman";					// This defines the crew for vehicles. 																									Default is "B_crew_F".
+pilot_classname = "rhsusf_army_ocp_helipilot";							// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "RHS_MELB_MH6M";					// These are the little birds which spawn on the Freedom or at Chimera base.															Default is "B_Heli_Light_01_F".
 KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boats which spawn at the stern of the Freedom.																			Default is "B_Boat_Transport_01_F".
 KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_wd";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
@@ -35,31 +35,31 @@ Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
-	["rhsusf_army_ucp_riflemanl",15,0,0],								//Rifleman (Light)
-	["rhsusf_army_ucp_rifleman",20,0,0],								//Rifleman
-	["rhsusf_army_ucp_riflemanat",30,0,0],								//Rifleman (AT)
-	["rhsusf_army_ucp_grenadier",25,0,0],								//Grenadier
-	["rhsusf_army_ucp_autorifleman",25,0,0],							//Autorifleman
-	["rhsusf_army_ucp_machinegunner",35,0,0],							//Heavygunner
-	["rhsusf_army_ucp_marksman",30,0,0],								//Marksman
-	["rhsusf_army_ucp_javelin",50,10,0],								//AT Specialist
-	["rhsusf_army_ucp_aa",50,10,0],										//AA Specialist
-	["rhsusf_army_ucp_medic",30,0,0],									//Combat Life Saver
-	["rhsusf_army_ucp_engineer",30,0,0],								//Engineer
-	["rhsusf_army_ucp_explosives",30,0,0],								//Explosives Specialist
+	["rhsusf_army_ocp_riflemanl",15,0,0],								//Rifleman (Light)
+	["rhsusf_army_ocp_rifleman",20,0,0],								//Rifleman
+	["rhsusf_army_ocp_riflemanat",30,0,0],								//Rifleman (AT)
+	["rhsusf_army_ocp_grenadier",25,0,0],								//Grenadier
+	["rhsusf_army_ocp_autorifleman",25,0,0],							//Autorifleman
+	["rhsusf_army_ocp_machinegunner",35,0,0],							//Heavygunner
+	["rhsusf_army_ocp_marksman",30,0,0],								//Marksman
+	["rhsusf_army_ocp_javelin",50,10,0],								//AT Specialist
+	["rhsusf_army_ocp_aa",50,10,0],										//AA Specialist
+	["rhsusf_army_ocp_medic",30,0,0],									//Combat Life Saver
+	["rhsusf_army_ocp_engineer",30,0,0],								//Engineer
+	["rhsusf_army_ocp_explosives",30,0,0],								//Explosives Specialist
 	["rhsusf_usmc_recon_marpat_wd_rifleman",20,0,0],					//Recon Rifleman
 	["rhsusf_usmc_recon_marpat_wd_rifleman_at",30,0,0],					//Recon Rifleman (AT)
 	["rhsusf_usmc_recon_marpat_wd_autorifleman",25,0,0],				//Recon Autorifleman
 	["rhsusf_usmc_recon_marpat_wd_machinegunner",35,0,0],				//Recon Machine Gunner
 	["rhsusf_usmc_recon_marpat_wd_marksman",30,0,0],					//Recon Marksman
 	["rhsusf_usmc_recon_marpat_wd_sniper_M107",70,5,0],					//Recon Sniper (M107)
-	["rhsusf_army_ucp_sniper",70,5,0],									//Sniper
-	["rhsusf_army_ucp_sniper_m107",70,5,0],								//Sniper (M107)
-	["rhsusf_army_ucp_sniper_m24sws",70,5,0],							//Sniper (M24 SWS)
-	["rhsusf_army_ucp_combatcrewman",10,0,0],							//Crewman
-	["rhsusf_army_ucp_rifleman_101st",20,0,0],							//Para Trooper
-	["rhsusf_army_ucp_helicrew",10,0,0],								//Helicopter Crew
-	["rhsusf_army_ucp_helipilot",10,0,0],								//Helicopter Pilot
+	["rhsusf_army_ocp_sniper",70,5,0],									//Sniper
+	["rhsusf_army_ocp_sniper_m107",70,5,0],								//Sniper (M107)
+	["rhsusf_army_ocp_sniper_m24sws",70,5,0],							//Sniper (M24 SWS)
+	["rhsusf_army_ocp_combatcrewman",10,0,0],							//Crewman
+	["rhsusf_army_ocp_rifleman_101st",20,0,0],							//Para Trooper
+	["rhsusf_army_ocp_helicrew",10,0,0],								//Helicopter Crew
+	["rhsusf_army_ocp_helipilot",10,0,0],								//Helicopter Pilot
 	["rhsusf_airforce_jetpilot",10,0,0]									//Pilot
 ];
 
@@ -261,54 +261,54 @@ uavs = [
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
 // Light infantry squad.
 blufor_squad_inf_light = [
-	"rhsusf_army_ucp_teamleader",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_riflemanat",
-	"rhsusf_army_ucp_grenadier",
-	"rhsusf_army_ucp_autorifleman",
-	"rhsusf_army_ucp_autorifleman",
-	"rhsusf_army_ucp_marksman",
-	"rhsusf_army_ucp_medic",
-	"rhsusf_army_ucp_engineer"
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_riflemanat",
+	"rhsusf_army_ocp_grenadier",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_marksman",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_engineer"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
-	"rhsusf_army_ucp_teamleader",
-	"rhsusf_army_ucp_riflemanat",
-	"rhsusf_army_ucp_riflemanat",
-	"rhsusf_army_ucp_grenadier",
-	"rhsusf_army_ucp_autorifleman",
-	"rhsusf_army_ucp_autorifleman",
-	"rhsusf_army_ucp_machinegunner",
-	"rhsusf_army_ucp_marksman",
-	"rhsusf_army_ucp_medic",
-	"rhsusf_army_ucp_engineer"
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_riflemanat",
+	"rhsusf_army_ocp_riflemanat",
+	"rhsusf_army_ocp_grenadier",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_autorifleman",
+	"rhsusf_army_ocp_machinegunner",
+	"rhsusf_army_ocp_marksman",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_engineer"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
-	"rhsusf_army_ucp_teamleader",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_javelin",
-	"rhsusf_army_ucp_javelin",
-	"rhsusf_army_ucp_javelin",
-	"rhsusf_army_ucp_medic",
-	"rhsusf_army_ucp_rifleman"
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_javelin",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_rifleman"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
-	"rhsusf_army_ucp_teamleader",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_rifleman",
-	"rhsusf_army_ucp_aa",
-	"rhsusf_army_ucp_aa",
-	"rhsusf_army_ucp_aa",
-	"rhsusf_army_ucp_medic",
-	"rhsusf_army_ucp_rifleman"
+	"rhsusf_army_ocp_teamleader",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_rifleman",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_aa",
+	"rhsusf_army_ocp_medic",
+	"rhsusf_army_ocp_rifleman"
 ];
 
 // Force recon squad.
@@ -327,16 +327,16 @@ blufor_squad_recon = [
 
 // Paratroopers squad.
 blufor_squad_para = [
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st",
-	"rhsusf_army_ucp_rifleman_101st"
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st",
+	"rhsusf_army_ocp_rifleman_101st"
 ];
 
 // Elite vehicles that should be unlocked through military base capture.

@@ -185,6 +185,7 @@ class Missions
 * Tweaked: Cleaned all custom placed places on all maps some more and renamed the respawn marker from `respawn_west` to `respawn`.
 * Tweaked: Increased the distance of the Little Bird spawnpoints on the USS Freedom and let them facing to the front.
 * Tweaked: Some typos in the german stringtable. Thanks to [gqgunhed](https://github.com/gqgunhed)
+* Tweaked: The US Army woodland troops got the new OCP and were able to throw away their old UCP.
 * Fixed: Wounded civilian animation in dedicated server environment. Thanks to [veteran29](https://github.com/veteran29)
 * Fixed: With ACE you could take unconscious AI as POW.
 * Fixed: You couldn't handcuff surrendered AI with ACE zipties.
