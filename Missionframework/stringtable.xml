@@ -17,6 +17,7 @@
 			<Italian>KP Liberation v0.962dev</Italian>
 			<Chinesesimp>KP Liberation v0.962dev</Chinesesimp>
 			<Turkish>KP Liberation v0.962dev</Turkish>
+			<Portuguese>KP Liberation v0.962dev</Portuguese>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
 			<Original>v0.962dev</Original>
@@ -25,6 +26,7 @@
 			<Italian>v0.962dev</Italian>
 			<Chinesesimp>v0.962dev</Chinesesimp>
 			<Turkish>v0.962dev</Turkish>
+			<Portuguese>v0.962dev</Portuguese>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -266,7 +268,7 @@
 			<Italian>-- CARICA CASSA</Italian>
 			<Chinesesimp>-- 装载货箱</Chinesesimp>
 			<Turkish>-- KUTUYU YÜKLE</Turkish>
-			<Portuguese>-- CARREGAR CAIXA</Portuguese>
+			<Portuguese>-- CARREGAR CAIXA NO TRANSPORTE</Portuguese>
 		</Key>
 		<Key ID="STR_ACTION_UNLOAD_BOX">
 			<Original>-- UNLOAD CRATES</Original>
@@ -1462,7 +1464,7 @@
 			<Italian>Moderato</Italian>
 			<Chinesesimp>适中</Chinesesimp>
 			<Turkish>Orta</Turkish>
-			<Portuguese>Moderado</Portuguese>
+			<Portuguese>Moderada</Portuguese>
 		</Key>
 		<Key ID="STR_PARAMS_DIFFICULTY5">
 			<Original>Hard</Original>
@@ -1484,7 +1486,7 @@
 			<Italian>Estremo</Italian>
 			<Chinesesimp>极难</Chinesesimp>
 			<Turkish>Extreme</Turkish>
-			<Portuguese>Extremo</Portuguese>
+			<Portuguese>Extrema</Portuguese>
 		</Key>
 		<Key ID="STR_PARAMS_DIFFICULTY7">
 			<Original>Ludicrous</Original>
@@ -1495,7 +1497,7 @@
 			<Italian>Ridicolo</Italian>
 			<Chinesesimp>荒谬</Chinesesimp>
 			<Turkish>Çılgınca</Turkish>
-			<Portuguese>Absurdo</Portuguese>
+			<Portuguese>Absurda</Portuguese>
 		</Key>
 		<Key ID="STR_PARAMS_DIFFICULTY8">
 			<Original>Oh god oh god we're all gonna die</Original>
@@ -1506,13 +1508,13 @@
 			<Italian>Oh dio, stiamo per morire!</Italian>
 			<Chinesesimp>天啦噜作死啦</Chinesesimp>
 			<Turkish>Aman tanrım yok olacağız!</Turkish>
-			<Portuguese>Ah meu Deus, estamos fodidos!</Portuguese>
+			<Portuguese>Ah meu Deus, vamos morrer!</Portuguese>
 		</Key>
 		<Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
 			<Original>Manage AI Skill</Original>
 			<Chinesesimp>管理AI能力</Chinesesimp>
 			<Turkish>AI Yeteneklerii düzenle</Turkish>
-			<Portuguese>Administrar habilidade da Inteligência Artificial</Portuguese>
+			<Portuguese>Gerir nível de habilidade da IA</Portuguese>
 		</Key>
 		<Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
 			<Original>Resources multiplier</Original>
@@ -2815,7 +2817,7 @@
 			<Italian>Anemico</Italian>
 			<Chinesesimp>可悲</Chinesesimp>
 			<Turkish>Pasif</Turkish>
-			<Portuguese>Anêmico</Portuguese>
+			<Portuguese>Anêmica</Portuguese>
 		</Key>
 		<Key ID="STR_AGGRESSIVITY_PARAM1">
 			<Original>Weak</Original>
@@ -2826,7 +2828,7 @@
 			<Italian>Debole</Italian>
 			<Chinesesimp>弱小</Chinesesimp>
 			<Turkish>Zayıf</Turkish>
-			<Portuguese>Fraco</Portuguese>
+			<Portuguese>Fraca</Portuguese>
 		</Key>
 		<Key ID="STR_AGGRESSIVITY_PARAM2">
 			<Original>Normal</Original>
@@ -2859,7 +2861,7 @@
 			<Italian>Estremo</Italian>
 			<Chinesesimp>噩梦</Chinesesimp>
 			<Turkish>Extreme</Turkish>
-			<Portuguese>Extremo</Portuguese>
+			<Portuguese>Extrema</Portuguese>
 		</Key>
 		<Key ID="STR_WEATHER_PARAM">
 			<Original>Weather</Original>
@@ -3090,7 +3092,7 @@
 			<Italian>Ricevuto!</Italian>
 			<Chinesesimp>明白了！</Chinesesimp>
 			<Turkish>Anlaşıldı!</Turkish>
-			<Portuguese>Conseguimos!</Portuguese>
+			<Portuguese>Entendido!</Portuguese>
 		</Key>
 		<Key ID="STR_TUTO_ACTION">
 			<Original>-- TUTORIAL</Original>
@@ -3791,7 +3793,7 @@
 			<Italian>-- DEPOSITA CASSA</Italian>
 			<Chinesesimp>-- 仓储货箱</Chinesesimp>
 			<Turkish>-- KUTUYU DEPOLA</Turkish>
-			<Portuguese>-- ARMAZENAR CAIXA</Portuguese>
+			<Portuguese>-- ARMAZENAR CAIXA NO DEPÓSITO</Portuguese>
 		</Key>
 		<Key ID="STR_ACTION_UNSTORE_SUPPLY">
 			<Original>-- UNLOAD SUPPLY CRATE</Original>
@@ -4141,7 +4143,7 @@
 			<Italian>Risorse insufficenti.\n\nHai bisogno di:\n%1 approvvigionamenti\n%2 Munizioni\n%3 Carburante </Italian>
 			<Chinesesimp>资源不足。\n\n你需要\n%1补给\n%2弹药\n%3燃料</Chinesesimp>
 			<Turkish>Yetersiz kaynak.\n\nLazım olan: \n%1 İkmal \n%2 Mermi\n%3 Benzin</Turkish>
-			<Portuguese>Sem recursos suficientes.\n\Você precisa de:\n%1 Suprimentos\n%2 Munição\n%3 Combustível</Portuguese>
+			<Portuguese>Sem recursos suficientes.\n\nVocê precisa de:\n%1 Suprimentos\n%2 Munição\n%3 Combustível</Portuguese>
 		</Key>
 		<Key ID="STR_PRODUCTION_FACBUILD_SUCCESS">
 			<Original>Facility established.</Original>
@@ -4285,7 +4287,7 @@
 			<Italian>Camion Assegnati</Italian>
 			<Chinesesimp>已指派的卡车</Chinesesimp>
 			<Turkish>Seçili kamyonlar</Turkish>
-			<Portuguese>Transportes Designados</Portuguese>
+			<Portuguese>Veículos em uso</Portuguese>
 		</Key>
 		<Key ID="STR_LOGSTIC_BUYTRUCK">
 			<Original>Assign Truck</Original>
@@ -4581,7 +4583,7 @@
 			本战役的主要目标是彻底将敌军赶出这个地区。要达成这点，你必须解放本地区的所有主要城市！这虽是战役唯一的胜利条件，但在有限的进攻资源下这些城市极其棘手，并驻扎着大量敌军。&lt;br/&gt; &lt;br/&gt;
 			要想成功，你必须占领足够多不同的战区，而这些战区各有功效。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			O objetivo primário desta campanha é remover completamente as forças inimigas da região. Para alçancar tal objetivo, você deverá liberar TODAS as principais cidades dentro da região! Esta é a única condição de vitória para a campanha, porém essas cidades serão difíceis de pacificar com recursos limitados à sua disposição. Além disso, as forças inimigas estão muito bem instaladas no território. &lt;br/&gt; &lt;br/&gt;
 			Para lograr êxito, você deverá capturar uma extensa quantidade de setores, cada um com sua própria base de recursos.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
@@ -4696,7 +4698,7 @@
 			&lt;t color='#ffff00'&gt;燃料：&lt;/t&gt;载具离不了燃料，更不用说胃口极大的那些。&lt;br/&gt; &lt;br/&gt;
 			你能在任意战区中找到以上三种资源，但想要稳定而高效的补给就需要你去占领PoI和工厂战区了！两者在占领后都需要一个仓储区（用滚轮动作菜单建立），而PoI还需要建立额外资源生产设施（依旧是滚轮动作菜单）。一个PoI能够同时容纳全部三种设施，但你必须先行投资才能将这些设施建立起来！建造设施需要消耗50点指定资源以及100点另外两种资源。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			Nesta campanha você deverá gerir, estocar e proteger três tipos de recursos.:&lt;br/&gt; &lt;br/&gt;
 			&lt;t color='#00ff00'&gt;SUPRIMENTOS:&lt;/t&gt; Este é o recurso essencial. Sem suprimentos, será impossível mobilizar infantaria adicional ou requisitar equipamentos militares. Desse modo, o QG recomenda priorizar estes recursos!&lt;br/&gt; &lt;br/&gt;
 			&lt;t color='#ff0000'&gt;MUNIÇÃO:&lt;/t&gt; Utilizada para abastecer veículos blindados armados, bem como soldados de elite de equipamento bélico pesado.&lt;br/&gt; &lt;br/&gt;
@@ -4737,7 +4739,7 @@
 			敌人不可能拱手让出刚刚获得的新领地。战役刚开始时，敌军部队仅由本地军事基地驻扎部队构成，但战区解放的增多你产生的威胁也将逐渐加大，因此他们会开始增派更多、更好的增援和装备来对付你。&lt;br/&gt; &lt;br/&gt;
 			要想遏制住敌人的作战能力，你必须完成摧毁对方后勤基地和劫掠对方补给车队的次要任务。这并非战役的胜利条件，但忽视警戒等级的提高将会大大增加敌人抵抗的强度。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			O inimigo não irá permitir a conquista de seu território sem uma reação. Quando iniciar sua campanha, forças hostis serão apenas compostas por guarnições dentro de bases militares. No entanto, ao liberar mais setores, as forças inimigas chamarão mais reforços e equipamentos para tentar te combater.&lt;br/&gt; &lt;br/&gt;
 			Para limitar a capacidade operacional das forças de oposição, você deverá cumprir objetivos secundários que consistem na destruição de bases logísticas e no assalto aos comboios inimigos. Isto não é obrigatório para lograr êxito na campanha, todavia se o nível de alerta for ignorado por muito tempo, você enfrentará uma forte resistência inimiga.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
@@ -4780,7 +4782,7 @@
 			步兵、载具和防御设备需要消耗资源，但建筑、沙袋、墙体等工事是完全免费的。&lt;br/&gt; &lt;br/&gt;
 			你可以在前哨100米半径范围内启用建造系统。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			Para auxiliar no sucesso de sua iniciativa, você terá a capacidade de construir em todas suas bases avançadas, que o permitirá mobilizar infantaria, veículos, defesas, fortificações e etc para sua localidade.&lt;br/&gt; &lt;br/&gt;
 			Embora infantaria, veículos e defesas exijam recursos para seu desenvolvimento, fortificações como estruturas, sacos de areia e muros não terão custo.&lt;br/&gt; &lt;br/&gt;
 			O sistema de construção estará disponível quando você estiver a 100 metros de qualquer FOB.&lt;br/&gt; &lt;br/&gt;
@@ -4819,7 +4821,7 @@
 			要建立一个新前哨，打开建造菜单的后勤面板并建造一个前哨部署柜或前哨部署车（一样的东西，只是多了轮子罢了）。然后你就可以将前哨部署柜/车安置到想部署的地方了。注意，你不能在距离出发点1公里内、战区300米内和其它前哨2公里内部署前哨。&lt;br/&gt; &lt;br/&gt;
 			因为搞那么多前哨实在太多余了！&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			Para construir uma nova FOB, acesse o menu de construção, selecione a aba de logística e então construir FOB no conteiner ou uma FOB transportável (é a mesma coisa, mas com rodas). Em seguida, poderá posicionar sua linda e nova FOB (transportável ou no conteiner) onde desejar. No entanto, esteja ciente de que não poderá construir a FOB dentro de 1km da sua posição inicial, dentro de 300 metros de qualquer setor ou dentro de 2km de outra FOB.&lt;br/&gt; &lt;br/&gt;
 			Seria simplesmente redundante!&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
@@ -4862,7 +4864,7 @@
 			这种在完全遵照日内瓦公约的情况下进行的审问，能为你提供用于揭示敌军后勤基地大致位置、补给车队或友军搜索与营救任务的准确情报。&lt;br/&gt; &lt;br/&gt;
 			之后你就需要找到目标的准确位置，并不惜一切代价完成目标。任务的成功带来的奖励将导致警戒等级下降，并进而削弱所有敌军部队的战斗力。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			Quando você capturar setores, em algumas situações as forças hostis remanescentes se renderão. Você poderá capturar os prisioneiros e levá-los para a FOB mais próxima para serem interrogados.&lt;br/&gt; &lt;br/&gt;
 			O interrogatório, executado em observância à Convenção de Genebra, o permitirá a obtenção de informações que podem ser empregadas para revelar a posição aproximada da base de logística inimiga, comboio inimigo ou operações de busca e resgate de forças aliadas.&lt;br/&gt; &lt;br/&gt;
 			Após chegar na área de operações, você precisará identificar a localização exata do seu alvo, e então fazer uso dos meios necessários à sua disposição para concluir seu objetivo. Ao lograr êxito em sua tarefa, serão recompensados, reduzindo o nível de alerta  reducing the alert level inimigo e consequentemente a eficiência de todas as forças hostis.&lt;br/&gt; &lt;br/&gt;
@@ -4906,7 +4908,7 @@
 			除此以外，指挥官还有额外的建造选项，让他可以招募有乘员的载具或一整个预设的AI班组。&lt;br/&gt; &lt;br/&gt;
 			现阶段由于该角色有着战区产出管理和AI后勤的直接权限，因此必须有玩家进行操作。当处于前哨范围内时，你将会看到“产出设置”和“后勤总览”两个选项。&lt;br/&gt; &lt;br/&gt;前者有着指定PoI和工厂资源产出类型，以及查看总览细目的功能。&lt;br/&gt; &lt;br/&gt;后者则让你能够指挥AI后勤车队，其中你可以“添加”后勤组、为后勤组购买任意数量的卡车，以及指挥他们在这个地区中往来运输指定资源。&lt;br/&gt; &lt;br/&gt;
 			</Chinesesimp>
-			<Portuguese>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
 			Quando um jogador assume a função de comandante, ele recebem acesso à interface Zeus ao pressionar a tecla correspondente (a tecla padrão é 'Y'). Essa interface permite o comando de forças aliadas na plataforma 3D ou através do mapa.&lt;br/&gt; &lt;br/&gt;
 			Ademais, o comandante recebe opções adicionais de construção que o permitirão obter veículos tripulados ou grupos predeterminados.&lt;br/&gt; &lt;br/&gt;
 			Tal função é agora obrigatória, pois possibilita acesso direto à gestão dos setores de produção e logísticas automatizadas. Quando estiver posicionado numa FOB, você poderá observar as opções "Configuração de Produção" e "Visão Geral de Logística".&lt;br/&gt; &lt;br/&gt; A primeira habilita a capacidade de decidir que fabrica/refinaria irá produzir qual recurso específico, bem como uma visão geral detalhada sobre o serviço.&lt;br/&gt; &lt;br/&gt; O último permite a você comandar o sistema automatizado de comboio logístico, onde você poderá "adicionar" grupos logísticos, adquirir quantos transportes desejar e os comandar para transportar quantidades específicas de recursos através do território.&lt;br/&gt; &lt;br/&gt;
@@ -5268,6 +5270,7 @@
 		<Key ID="STR_CR_HEALMSG">
 			<Original>Civilian named %1 is thankful for your help.</Original>
 			<German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
+			<Portuguese>Um civil chamado %1 agradeceu sua ajuda.</Portuguese>
 		</Key>
 		<Key ID="STR_PARAM_CR_BUILDING">
 			<Original>Civil Reputation penalty for buildings if building is</Original>
@@ -5275,7 +5278,7 @@
 			<Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
 			<Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
 			<Turkish>Şu türdeki binalara ceza verilince, ceza uygulanır</Turkish>
-			<Portuguese>Penalidade na reputação civil se a construção está</Portuguese>
+			<Portuguese>Penalidade na reputação civil se a construção estiver</Portuguese>
 		</Key>
 		<Key ID="STR_PARAM_CR_DAMAGED">
 			<Original>damaged</Original>
@@ -5283,7 +5286,7 @@
 			<Italian>danneggiato</Italian>
 			<Chinesesimp>受损</Chinesesimp>
 			<Turkish>zarar görmüş</Turkish>
-			<Portuguese>Danificado</Portuguese>
+			<Portuguese>Danificada</Portuguese>
 		</Key>
 		<Key ID="STR_PARAM_CR_DESTROYED">
 			<Original>fully destroyed</Original>
@@ -5291,7 +5294,7 @@
 			<Italian>completamente distrutto</Italian>
 			<Chinesesimp>完全损毁</Chinesesimp>
 			<Turkish>tamamen yokedilmiş</Turkish>
-			<Portuguese>Totalmente destruído</Portuguese>
+			<Portuguese>Totalmente destruída</Portuguese>
 		</Key>
 		<Key ID="STR_NOTIFICATION_RESTART_TITLE">
 			<Original>SERVER RESTART NOTIFICATION</Original>
