@@ -1,7 +1,8 @@
 /*
 Needed Mods:
-- Project OPFOR
 - RHS USAF
+- RHS AFRF
+- Project OPFOR
 
 Optional Mods:
 - None
@@ -31,7 +32,7 @@ opfor_mrap = "LOP_TKA_UAZ";												//UAZ-3151
 opfor_mrap_armed = "LOP_TKA_UAZ_AGS";									//UAZ-3151 (AGS-30)
 opfor_transport_helo = "LOP_TKA_Mi8MT_Cargo";							//Mi-8MT (Cargo)
 opfor_transport_truck = "LOP_TKA_Ural";									//Ural-4320 Transport (Covered)
-opfor_ammobox_transport = "LOP_TKA_Ural_open";							//Ural-4320 Transport (Open) -> Has to be able to transport resource crates
+opfor_ammobox_transport = "LOP_TKA_Ural_open";							//Ural-4320 Transport (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "RHS_Ural_Fuel_MSV_01";								//Ural-4320 Fuel
 opfor_ammo_truck = "rhs_gaz66_ammo_msv";								//GAZ-66 Ammo
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";				//Taru Fuel Pod
