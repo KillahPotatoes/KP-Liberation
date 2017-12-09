@@ -8,10 +8,12 @@ KP_liberation_medical_vehicles = [
 	"B_T_Truck_01_medical_F",
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
+	"rhsusf_M1230a1_usarmy_d",
+	"rhsusf_M1230a1_usarmy_wd",
 	"RHS_UH60M_MEV2",
 	"RHS_UH60M_MEV2_d",
-	"rhsusf_M1230a1_usarmy_d",
-	"rhsusf_M1230a1_usarmy_wd"
+	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
+	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -26,32 +28,35 @@ KP_liberation_ace_crates = [
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
-0 = custom (default vanilla with many optional mods supported)
-1 = 3cb BAF
-2 = Apex Tanoa
-3 = BWMod (German Bundeswehr)
-4 = RHS USAF woodland
-5 = RHS USAF desert 
-6 = RHS AFRF */
+0 = Custom (default vanilla with many optional mods supported)
+1 = Apex Tanoa (apex vanilla with many optional mods supported)
+2 = 3cb BAF (MTP)
+3 = 3cb BAF (Desert)
+4 = BWMod Bundeswehr (Flektarn)
+5 = RHS USAF (Woodland)
+6 = RHS USAF (Desert)
+7 = RHS AFRF (VDV/MSV) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
-0 = custom (default vanilla CSAT)
-1 = Apex Tanoa
-2 = Project OPFOR (Takistan)
-3 = RHS AFRF */
+0 = Custom (default vanilla CSAT)
+1 = Apex Tanoa (apex vanilla CSAT)
+2 = RHS AFRF (EMR/MSV)
+3 = Project OPFOR (Takistan)
+4 = Project OPFOR (Islamic State) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
-0 = custom (default vanilla)
-1 = Apex Tanoa 
-2 = RHS GREF */
+0 = Custom (default vanilla FIA)
+1 = Apex Tanoa (apex vanilla Syndikat)
+2 = RHS GREF
+3 = Project OPFOR (Middle Eastern) */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
-0 = custom (default vanilla)
-1 = Apex Tanoa
-2 = Project OPFOR (Takistan) */
+0 = Custom (default vanilla)
+1 = Apex Tanoa (apex vanilla)
+2 = Project OPFOR (Middle Eastern) */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -138,11 +143,6 @@ KP_liberation_resistance_ambush_chance = 30;																	// Chance that some
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
 blacklisted_from_arsenal = [
-	"B_Respawn_Sleeping_bag_blue_F",
-	"B_Respawn_Sleeping_bag_brown_F",
-	"B_Respawn_TentDome_F",
-	"B_Respawn_Sleeping_bag_F",
-	"B_Respawn_TentA_F",
 	"I_HMG_01_weapon_F",
 	"B_HMG_01_weapon_F",
 	"O_HMG_01_weapon_F",
@@ -182,6 +182,23 @@ blacklisted_from_arsenal = [
 	"I_UAV_01_backpack_F",
 	"B_UAV_01_backpack_F",
 	"O_UAV_01_backpack_F",
+	"I_UAV_06_backpack_F",
+	"B_UAV_06_backpack_F",
+	"O_UAV_06_backpack_F",
+	"I_UAV_06_medical_backpack_F",
+	"B_UAV_06_medical_backpack_F",
+	"O_UAV_06_medical_backpack_F",
+	"C_UAV_06_backpack_F",
+	"C_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_01_backpack_F",
+	"C_IDAP_UAV_06_backpack_F",
+	"C_IDAP_UAV_06_medical_backpack_F",
+	"C_IDAP_UAV_06_antimine_backpack_F",
+	"B_Respawn_Sleeping_bag_blue_F",
+	"B_Respawn_Sleeping_bag_brown_F",
+	"B_Respawn_TentDome_F",
+	"B_Respawn_Sleeping_bag_F",
+	"B_Respawn_TentA_F",
 	"RHS_M2_Gun_Bag",
 	"RHS_M2_Tripod_Bag",
 	"rhs_M252_Gun_Bag",
@@ -208,18 +225,6 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
 	"RHS_SPG9_Tripod_Bag",
-	"I_UAV_06_backpack_F",
-	"O_UAV_06_backpack_F",
-	"B_UAV_06_backpack_F",
-	"I_UAV_06_medical_backpack_F",
-	"O_UAV_06_medical_backpack_F",
-	"C_IDAP_UAV_06_medical_backpack_F",
-	"B_UAV_06_medical_backpack_F",
-	"C_IDAP_UAV_06_antimine_backpack_F",
-	"C_UAV_06_backpack_F",
-	"C_IDAP_UAV_06_backpack_F",
-	"C_UAV_06_medical_backpack_F",
-	"C_IDAP_UAV_01_backpack_F",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
@@ -228,12 +233,18 @@ blacklisted_from_arsenal = [
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
 KP_liberation_allowed_items_extension = [
 	"ItemRadioAcreFlagged",
-	"rhs_m72a7_mag",
+	"rhs_acc_ekp8_18b",
+	"rhs_acc_ekp8_18c",
+	"rhs_acc_ekp8_18d",
+	"rhsusf_acc_g33_T1_flip",
+	"rhsusf_acc_g33_xps3_flip",
+	"rhsusf_acc_g33_xps3_tan_flip",
 	"rhsusf_acc_anpeq15_bk_light_h",
-	"rhs_weap_M136_used",
 	"rhs_m136_mag",
 	"rhs_m136_hedp_mag",
 	"rhs_m136_hp_mag",
+	"rhs_weap_M136_used",
+	"rhs_m72a7_mag",
 	"BWA3_optic_ZO4x30_NSV",
 	"BWA3_optic_ZO4x30_IRV",
 	"BWA3_optic_ZO4x30_Single_NSV",
@@ -251,12 +262,8 @@ KP_liberation_allowed_items_extension = [
 	"BWA3_acc_LLM01_flash_underbarrel",
 	"BWA3_acc_LLM01_laser_underberre",
 	"BWA3_acc_LLM01_laser_underbarrel",
-	"rhs_acc_ekp8_18b",
-	"rhs_acc_ekp8_18c",
-	"rhs_acc_ekp8_18d",
-	"rhsusf_acc_g33_T1_flip",
-	"rhsusf_acc_g33_xps3_flip",
-	"rhsusf_acc_g33_xps3_tan_flip",
+	"UK3CB_BAF_AT4_CS_AP_Mag",
+	"sma_spitfire_03_rds_low_ard_red",
 	"ACE_Chemlight_Shield_Orange",
 	"ACE_Chemlight_Shield_White",
 	"ACE_Chemlight_Shield_Blue",
@@ -288,6 +295,9 @@ box_transport_config = [
 	["RHS_Ural_Open_Flat_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
 	["LOP_TAK_Civ_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
 	["LOP_TAK_Civ_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["LOP_TKA_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["LOP_TKA_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
+	["LOP_ISTS_OPF_Truck", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
 	["rhs_kamaz5350_flatbed_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
 	["rhs_kamaz5350_flatbed_cover_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
 	["rhs_kamaz5350_open_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
@@ -314,6 +324,10 @@ box_transport_config = [
 	["UK3CB_BAF_Merlin_HC3_18_DPMT", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC4_18_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC4_18_GPMG_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC4_32_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+	["UK3CB_BAF_Merlin_HC4_CSAR_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
 	["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["BW_LKW7T_Trans_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
 	["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
@@ -360,6 +374,7 @@ ai_resupply_sources = [
 	"B_Slingload_01_Ammo_F",
 	"B_APC_Tracked_01_CRV_F",
 	"B_T_APC_Tracked_01_CRV_F",
+	"BW_LKW15T_Ammo_F",
 	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_M977A4_AMMO_usarmy_d",
 	"rhsusf_M977A4_AMMO_usarmy_wd",
@@ -367,7 +382,6 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"BW_LKW15T_Ammo_F",
 	"rhs_gaz66_ammo_msv"
 ];
 
@@ -379,6 +393,7 @@ vehicle_repair_sources = [
 	"B_Slingload_01_Repair_F",
 	"B_APC_Tracked_01_CRV_F",
 	"B_T_APC_Tracked_01_CRV_F",
+	"BW_LKW15T_Repair_F",
 	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_M977A4_REPAIR_usarmy_d",
 	"rhsusf_M977A4_REPAIR_usarmy_wd",
@@ -386,8 +401,7 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
-	"RHS_Ural_Repair_VDV_01",
-	"BW_LKW15T_Repair_F"
+	"RHS_Ural_Repair_VDV_01"
 ];
 
 vehicle_rearm_sources = [
@@ -396,6 +410,7 @@ vehicle_rearm_sources = [
 	"B_Slingload_01_Ammo_F",
 	"B_APC_Tracked_01_CRV_F",
 	"B_T_APC_Tracked_01_CRV_F",
+	"BW_LKW15T_Ammo_F",
 	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_M977A4_AMMO_usarmy_d",
 	"rhsusf_M977A4_AMMO_usarmy_wd",
@@ -403,8 +418,7 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"rhs_gaz66_ammo_msv",
-	"BW_LKW15T_Ammo_F"
+	"rhs_gaz66_ammo_msv"
 ];
 
 vehicle_refuel_sources = [
@@ -415,13 +429,13 @@ vehicle_refuel_sources = [
 	"B_Slingload_01_Fuel_F",
 	"B_APC_Tracked_01_CRV_F",
 	"B_T_APC_Tracked_01_CRV_F",
+	"BW_LKW15T_Fuel_F",
 	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_M978A4_usarmy_d",
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
 	"rhsusf_M978A4_BKIT_usarmy_wd",
-	"RHS_Ural_Fuel_VDV_01",
-	"BW_LKW15T_Fuel_F"
+	"RHS_Ural_Fuel_VDV_01"
 ];
 
 // Classnames of artillery vehicles or statics which should be linked to the support system. (Currently deactivated)

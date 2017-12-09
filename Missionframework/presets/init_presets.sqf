@@ -1,29 +1,32 @@
 switch (KP_liberation_preset_blufor) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
+	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_des.sqf";};
+	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
+	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_wdl.sqf";};
+	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_opfor) do {
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_resistance) do {
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\apex.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 switch (KP_liberation_preset_civilians) do {
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
+	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
