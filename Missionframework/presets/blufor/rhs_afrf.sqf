@@ -226,16 +226,6 @@ support_vehicles = [
 	["B_Slingload_01_Ammo_F",75,200,0]									//Huron Container Ammo
 ];
 
-// All the UAVs must be declared here, otherwise there shall be UAV controlling issues. Namely: you won't be able to control them.
-uavs = [
-	"O_UAV_01_F",														//AR-2 Tayran
-	"O_UGV_01_F",														//UGV Saif
-	"O_UGV_01_rcws_F",													//UGV Saif (RCWS)
-	"O_UAV_02_dynamicLoadout_F",										//K40 Ababil
-	"O_T_UAV_04_CAS_F",													//KH-3A
-	"O_UAV_06_F"														//AL-6 Jinaah
-];
-
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
 // Light infantry squad.
 blufor_squad_inf_light = [
