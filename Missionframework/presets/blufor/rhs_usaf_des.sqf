@@ -78,6 +78,7 @@ light_vehicles = [
 	["rhsusf_M1232_M2_usarmy_d",140,40,60],								//M1220 (M2)
 	["rhsusf_M1232_MK19_usarmy_d",140,60,60],							//M1220 (Mk19)
 	["rhsusf_M1230a1_usarmy_d",120,0,60],								//M1230A1 (MEDEVAC)
+	["rhsusf_M1083A1P2_D_open_fmtv_usarmy",125,0,75],					//M1083A1P2 Transport
 	["rhsusf_M1083A1P2_D_fmtv_usarmy",125,0,75],						//M1083A1P2 Transport (Covered)
 	["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",100,0,50],				//M1083A1P2
 	["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],							//M977A4 BKIT 
