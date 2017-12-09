@@ -33,9 +33,10 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 2 = 3cb BAF (MTP)
 3 = 3cb BAF (Desert)
 4 = BWMod Bundeswehr (Flecktarn)
-5 = RHS USAF (Woodland)
-6 = RHS USAF (Desert)
-7 = RHS AFRF (VDV/MSV) */
+5 = BWMod Bundeswehr (Tropentarn)
+6 = RHS USAF (Woodland)
+7 = RHS USAF (Desert)
+8 = RHS AFRF (VDV/MSV) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
