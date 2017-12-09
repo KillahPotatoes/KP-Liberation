@@ -172,6 +172,8 @@ class Missions
 * Added: RHS AFRF Preset for the player side. Thanks to [veteran29](https://github.com/veteran29)
 * Added: Lythium basefile. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508)
 * Added: Portuguese localization. Thanks to [NomadRomeo](https://github.com/NomadRomeo)
+* Added: BW Mod Tropentarn preset.
+* Added: Project OPFOR Islamic State enemy preset and Project OPFOR resistance preset. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Updated: RHS transport configs.
 * Updated: RHS vehicles in presets.
 * Updated: Devkit mission.sqm.

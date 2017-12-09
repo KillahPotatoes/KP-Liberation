@@ -74,9 +74,9 @@ light_vehicles = [
 	["rhsusf_M1220_usarmy_d",120,0,60],									//M1220
 	["rhsusf_M1220_M2_usarmy_d",120,40,60],								//M1220 (M2)
 	["rhsusf_M1220_MK19_usarmy_d",120,60,60],							//M1220 (Mk19)
-	["rhsusf_M1232_usarmy_d",140,0,60],									//M1220
-	["rhsusf_M1232_M2_usarmy_d",140,40,60],								//M1220 (M2)
-	["rhsusf_M1232_MK19_usarmy_d",140,60,60],							//M1220 (Mk19)
+	["rhsusf_M1232_usarmy_d",140,0,60],									//M1232
+	["rhsusf_M1232_M2_usarmy_d",140,40,60],								//M1232 (M2)
+	["rhsusf_M1232_MK19_usarmy_d",140,60,60],							//M1232 (Mk19)
 	["rhsusf_M1230a1_usarmy_d",120,0,60],								//M1230A1 (MEDEVAC)
 	["rhsusf_M1083A1P2_D_open_fmtv_usarmy",125,0,75],					//M1083A1P2 Transport
 	["rhsusf_M1083A1P2_D_fmtv_usarmy",125,0,75],						//M1083A1P2 Transport (Covered)
@@ -85,7 +85,11 @@ light_vehicles = [
 	["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],						//M977A4 BKIT (HMG)
 	["rhsusf_M1117_D",150,50,50],										//M1117 ASV
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
-	["B_UGV_01_rcws_F",150,40,50]										//UGV Stomper (RCWS)
+	["B_UGV_01_rcws_F",150,40,50],										//UGV Stomper (RCWS)
+	["B_Boat_Transport_01_F",100,0,25],									//Assault Boat
+	["B_Boat_Armed_01_minigun_F",200,80,75],							//Speedboat Minigun
+	["rhsusf_mkvsoc",250,200,100],										//Mk.V SOCOM
+	["B_SDV_01_F",150,0,50]												//SDV
 ];
 
 heavy_vehicles = [
@@ -329,6 +333,7 @@ blufor_squad_para = [
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
+	"rhsusf_mkvsoc",													//Mk.V SOCOM
 	"rhsusf_m1a1aim_tuski_d",											//M1A1SA (Tusk I)
 	"rhsusf_m1a2sep1tuskiid_usarmy",									//M1A2SEPv1 (Tusk II)
 	"rhsusf_m109d_usarmy",												//M109A6

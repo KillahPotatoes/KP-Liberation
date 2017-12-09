@@ -3,9 +3,10 @@ switch (KP_liberation_preset_blufor) do {
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_des.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_wdl.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
-	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
+	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod_des.sqf";};
+	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_wdl.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
+	case 8: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
