@@ -32,7 +32,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 1 = Apex Tanoa (apex vanilla with many optional mods supported)
 2 = 3cb BAF (MTP)
 3 = 3cb BAF (Desert)
-4 = BWMod Bundeswehr (Flektarn)
+4 = BWMod Bundeswehr (Flecktarn)
 5 = RHS USAF (Woodland)
 6 = RHS USAF (Desert)
 7 = RHS AFRF (VDV/MSV) */
