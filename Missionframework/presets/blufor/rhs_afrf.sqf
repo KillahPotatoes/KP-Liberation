@@ -75,6 +75,7 @@ light_vehicles = [
 	["rhs_btr70_vdv",180,60,100],										//BTR-70
 	["rhs_btr80_vdv",180,80,100],										//BTR-80
 	["rhs_btr80a_vdv",220,80,100],										//BTR-80A
+	["RHS_BM21_VDV_01",200,1500,200],									//BM-21 (Grad)
 	["O_UGV_01_F",150,0,50],											//UGV Saif
 	["O_UGV_01_rcws_F",150,40,50],										//UGV Saif (RCWS)
 	["O_Boat_Transport_01_F",100,0,25],									//Assault Boat
@@ -321,5 +322,6 @@ elite_vehicles = [
 	"rhs_bmd4ma_vdv",													//BMD-4MA
 	"RHS_Ka52_vvsc",													//Ka-52
 	"rhs_btr80a_vdv",													//BTR-80A
-	"rhs_bmd2m"															//BMD-2M (Berezhok)
+	"rhs_bmd2m",														//BMD-2M (Berezhok)
+	"RHS_BM21_VDV_01"													//BM-21 (Grad)
 ];
