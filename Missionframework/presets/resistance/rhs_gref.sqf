@@ -78,7 +78,6 @@ KP_liberation_guerilla_uniforms_1 = [
 	"U_BG_Guerilla2_2",
 	"U_BG_Guerilla2_1",
 	"U_BG_Guerilla2_3"
-	
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
@@ -96,13 +95,11 @@ KP_liberation_guerilla_uniforms_2 = [
 ];
 
 KP_liberation_guerilla_uniforms_3 = [
-
 	"rhsgref_uniform_reed",
 	"rhsgref_uniform_woodland_olive",
 	"rhsgref_uniform_flecktarn",
 	"rhsgref_uniform_altis_lizard_olive",
-	"rhsgref_uniform_dpm_olive"	
-
+	"rhsgref_uniform_dpm_olive"
 ];
 
 // Vests
@@ -208,8 +205,6 @@ KP_liberation_guerilla_headgear_3 = [
 	"H_Beret_blk",
 	"H_Watchcap_camo",
 	"H_Watchcap_khk"
-	
-	
 ];
 
 // Facegear. Applies for tier 2 and 3.

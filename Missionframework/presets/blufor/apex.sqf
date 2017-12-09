@@ -4,9 +4,9 @@ Needed Mods:
 
 Optional Mods:
 - BWMod
-- F/A-18
-- F-15C
 - RHSUSAF
+- F-15C
+- F/A-18
 */
 
 /* - Support classnames.
@@ -82,8 +82,9 @@ light_vehicles = [
 	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["B_T_Truck_01_transport_F",125,0,75],								//HEMTT Transport
 	["B_T_Truck_01_covered_F",125,0,75],								//HEMTT Transport (Covered)
-	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 (covered infantry truck)
-	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 (open infantry truck)
+	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 Transport
+	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 Transport (Covered)
+	["rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy",100,0,50],				//M1083A1P2
 	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (HMG)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper

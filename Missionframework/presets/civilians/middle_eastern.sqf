@@ -1,5 +1,7 @@
 /*
 Needed Mods:
+- RHS USAF
+- RHS AFRF
 - Project OPFOR
 
 Optional Mods:
