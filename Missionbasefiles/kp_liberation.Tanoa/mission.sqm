@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1040;
+		nextID=1061;
 	};
 	class Camera
 	{
@@ -5256,7 +5256,7 @@ class Mission
 				};
 			};
 			id=589;
-			atlOffset=0.13885498;
+			atlOffset=0.1391983;
 		};
 		class Item169
 		{
@@ -7550,7 +7550,7 @@ class Mission
 				};
 			};
 			id=1078;
-			atlOffset=-0.45524693;
+			atlOffset=-0.45524979;
 		};
 		class Item176
 		{
@@ -12006,7 +12006,6 @@ class Mission
 				};
 			};
 			id=2618;
-			atlOffset=-7.6293945e-006;
 		};
 		class Item189
 		{
@@ -19630,21 +19629,21 @@ class Mission
 			dataType="Layer";
 			name="Cache Ammo [BLU]";
 			id=4459;
-			atlOffset=0.038837433;
+			atlOffset=60.779999;
 		};
 		class Item308
 		{
 			dataType="Layer";
 			name="Storage (Lamp) [BLU]";
 			id=4470;
-			atlOffset=88.796677;
+			atlOffset=60.779999;
 		};
 		class Item309
 		{
 			dataType="Layer";
 			name="Storage [BLU] #1";
 			id=4478;
-			atlOffset=88.72551;
+			atlOffset=60.779999;
 		};
 		class Item310
 		{

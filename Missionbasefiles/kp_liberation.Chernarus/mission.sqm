@@ -12,7 +12,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1708;
+		nextID=1728;
 	};
 	class Camera
 	{
@@ -23652,21 +23652,21 @@ class Mission
 			dataType="Layer";
 			name="Cache Ammo [BLU]";
 			id=4534;
-			atlOffset=0.039749146;
+			atlOffset=51.599998;
 		};
 		class Item253
 		{
 			dataType="Layer";
 			name="Storage (Lamp) [BLU]";
 			id=4545;
-			atlOffset=175.5273;
+			atlOffset=51.599998;
 		};
 		class Item254
 		{
 			dataType="Layer";
 			name="Storage [BLU] #1";
 			id=4553;
-			atlOffset=175.31207;
+			atlOffset=51.599998;
 		};
 		class Item255
 		{
