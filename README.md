@@ -166,7 +166,7 @@ class Missions
 
 ## Changelog
 
-### 0.962 (In Development)
+### 0.962 (10th December 2017)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
 * Added: Some additional debug outputs.
 * Added: RHS AFRF Preset for the player side. Thanks to [veteran29](https://github.com/veteran29)

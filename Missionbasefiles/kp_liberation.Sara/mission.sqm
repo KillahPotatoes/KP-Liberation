@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=396;
+		nextID=416;
 	};
 	class Camera
 	{
@@ -3767,21 +3767,21 @@ class Mission
 			dataType="Layer";
 			name="Cache Ammo [BLU]";
 			id=222;
-			atlOffset=0.042301178;
+			atlOffset=67.569252;
 		};
 		class Item126
 		{
 			dataType="Layer";
 			name="Storage (Lamp) [BLU]";
 			id=233;
-			atlOffset=64.062965;
+			atlOffset=67.569252;
 		};
 		class Item127
 		{
 			dataType="Layer";
 			name="Storage [BLU] #1";
 			id=241;
-			atlOffset=63.816204;
+			atlOffset=67.569252;
 		};
 		class Item128
 		{
@@ -3809,7 +3809,6 @@ class Mission
 				};
 			};
 			id=320;
-			atlOffset=-1.335144e-005;
 		};
 		class Item129
 		{
@@ -7428,7 +7427,7 @@ class Mission
 				};
 			};
 			id=1369;
-			atlOffset=0.045791626;
+			atlOffset=-0.39686584;
 		};
 		class Item136
 		{
@@ -14175,7 +14174,7 @@ class Mission
 				};
 			};
 			id=2535;
-			atlOffset=0.054595947;
+			atlOffset=0.054580688;
 		};
 		class Item145
 		{
@@ -14893,7 +14892,7 @@ class Mission
 				};
 			};
 			id=2596;
-			atlOffset=-0.16267395;
+			atlOffset=-0.16278076;
 		};
 		class Item146
 		{
@@ -15235,7 +15234,7 @@ class Mission
 				};
 			};
 			id=2733;
-			atlOffset=7.3432922e-005;
+			atlOffset=0.00014591217;
 		};
 		class Item148
 		{
@@ -15537,7 +15536,7 @@ class Mission
 				};
 			};
 			id=2881;
-			atlOffset=-6.0081482e-005;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item150
 		{
@@ -16195,7 +16194,7 @@ class Mission
 				};
 			};
 			id=3408;
-			atlOffset=-0.018503189;
+			atlOffset=-0.018541336;
 		};
 		class Item152
 		{
