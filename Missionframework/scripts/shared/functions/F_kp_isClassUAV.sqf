@@ -13,11 +13,12 @@ BOOL
 */
 params ["_vehicleclass"];
 
-if ((typeName _vehicleclass) != "STRING") exitWith {};
-
 private _isUAV = false;
-if((getNumber(configFile >> "CfgVehicles" >> _vehicleclass >> "isUav")) == 1) then {
-	_isUAV = true;
+
+if ((typeName _vehicleclass) == "STRING") then {
+	if ((getNumber(configFile >> "CfgVehicles" >> _vehicleclass >> "isUav")) == 1) then {
+		_isUAV = true;
+	};
 };
 
 _isUAV;
