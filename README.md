@@ -172,6 +172,7 @@ class Missions
 * Tweaked: Some small tweaks for the Lythium basefile.
 * Fixed: There was a string key twice in the stringtable.
 * Fixed: Lythium basefile was missing mission name and description in the lobby.
+* Fixed: Issue with building premade squads.
 
 ### 0.962 (10th December 2017)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
