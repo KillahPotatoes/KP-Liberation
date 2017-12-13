@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.962
+## Current version : 0.963
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -165,6 +165,10 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.963 (in development)
+* Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Fixed: There was a string key twice in the stringtable.
 
 ### 0.962 (10th December 2017)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
