@@ -167,6 +167,7 @@ class Missions
 ## Changelog
 
 ### 0.963 (in development)
+* Added: Some missing RHS vehicles for the ACE medical system.
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Some small tweaks for the Lythium basefile.
 * Fixed: There was a string key twice in the stringtable.
