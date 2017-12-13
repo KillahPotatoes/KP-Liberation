@@ -168,6 +168,7 @@ class Missions
 
 ### 0.963 (in development)
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
+* Tweaked: Some small tweaks for the Lythium basefile.
 * Fixed: There was a string key twice in the stringtable.
 * Fixed: Lythium basefile was missing mission name and description in the lobby.
 
