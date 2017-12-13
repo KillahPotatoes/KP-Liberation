@@ -6,11 +6,15 @@ CONFIG FILE FOR KP LIBERATION
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"B_T_Truck_01_medical_F",
+	"rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
+	"rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
 	"rhsusf_M1230a1_usarmy_d",
 	"rhsusf_M1230a1_usarmy_wd",
+	"RHS_UH60M_MEV",
 	"RHS_UH60M_MEV2",
+	"RHS_UH60M_MEV_d",
 	"RHS_UH60M_MEV2_d",
 	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
 	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
