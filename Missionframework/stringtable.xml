@@ -5368,13 +5368,6 @@
 			<Chinesesimp>民间声望</Chinesesimp>
 			<Portuguese>Reputação Civil</Portuguese>
 		</Key>
-		<Key ID="STR_PARAMS_DEBUG_SAVE">
-			<Original>Saving</Original>
-			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
-			<Italian>Salvataggio Dati</Italian>
-			<Chinesesimp>保存中</Chinesesimp>
-			<Portuguese>Salvando</Portuguese>
-		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
 			<Original>A civilian from %1 says he has some information for us.</Original>
 			<German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
