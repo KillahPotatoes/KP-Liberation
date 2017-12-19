@@ -271,7 +271,7 @@ KP_liberation_allowed_items_extension = [
 	"BWA3_acc_LLM01_flash",
 	"BWA3_acc_LLM01_laser",
 	"BWA3_acc_LLM01_flash_underbarrel",
-	"BWA3_acc_LLM01_laser_underberre",
+	"BWA3_acc_LLM01_laser_underberrel",
 	"BWA3_acc_LLM01_laser_underbarrel",
 	"UK3CB_BAF_AT4_CS_AP_Mag",
 	"UK3CB_BAF_Javelin_Launcher",
