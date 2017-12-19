@@ -170,6 +170,7 @@ class Missions
 * Added: Some missing RHS vehicles for the ACE medical system.
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Some small tweaks for the Lythium basefile.
+* Tweaked: BWMod Classnames due to the last mod update. Thanks to [madpat3](https://github.com/madpat3)
 * Fixed: There was a string key twice in the stringtable.
 * Fixed: Lythium basefile was missing mission name and description in the lobby.
 * Fixed: Issue with building premade squads.
