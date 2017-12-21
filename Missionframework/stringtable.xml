@@ -2668,7 +2668,7 @@
 			<Portuguese>Não é possível construir: Forças hostis na proximidade.</Portuguese>
 		</Key>
 		<Key ID="STR_CLEANUP_PARAM">
-			<Original>Cleanup abandonned vehicles outside FOBs</Original>
+			<Original>Cleanup abandoned vehicles outside FOBs</Original>
 			<French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
 			<German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
 			<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
