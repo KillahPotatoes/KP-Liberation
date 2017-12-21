@@ -94,8 +94,8 @@ These mods are recommended by us, as they are likely to increase your gaming exp
 * [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
 * [ACE3 - BWMOD Compatibility](http://steamcommunity.com/sharedfiles/filedetails/?id=870313336)
 * [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
+* [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
 * [Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
-* [Enhanced Visuals](http://steamcommunity.com/sharedfiles/filedetails/?id=880703327)
 * [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
 * [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
 * [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
@@ -107,7 +107,6 @@ Also you should think about using these mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
-* [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
 
 ## Recommended Difficulty Settings
 I recommend using the following difficulty settings for this mission (User profile of your server):
