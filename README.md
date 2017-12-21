@@ -109,10 +109,6 @@ Also you should think about using these mods as serverside mods:
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
 * [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
 
-## ACE Serverside Settings
-I've provided our communities serverconfig.hpp to be [used with the ace_server.pbo](https://ace3mod.com/wiki/framework/settings-framework.html#32-loading-up-the-server-config) for dedicated servers.
-Just copy the userconfig folder into your ArmA 3 Server folder and start the ace_server.pbo as a serverside mod.
-
 ## Recommended Difficulty Settings
 I recommend using the following difficulty settings for this mission (User profile of your server):
 ```
@@ -168,6 +164,7 @@ class Missions
 
 ### 0.963 (in development)
 * Added: Some missing RHS vehicles for the ACE medical system.
+* Removed: Provided ACE settings, as they are not used anymore since the last ACE update.
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Some small tweaks for the Lythium basefile.
 * Tweaked: BWMod Classnames due to the last mod update. Thanks to [madpat3](https://github.com/madpat3)
