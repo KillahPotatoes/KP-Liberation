@@ -105,7 +105,7 @@ while { true } do {
 			_dist = _dist + 1;
 
 			for [{_i=0}, {_i<5}, {_i=_i+1}] do {
-				_vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
+				_vehicle setObjectTextureGlobal [_i, "#(rgb,8,8,3)color(0,1,0,0.8)"];
 			};
 
 			{ _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach GRLIB_preview_spheres;
