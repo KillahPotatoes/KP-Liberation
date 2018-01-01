@@ -2,8 +2,8 @@
 **Mission version:**
 **Map used:**
 **Mods used:**
-**Dedicated or local game?**
-**GitHub or Workshop mission file?**
+**Dedicated or local game:**
+**Source of the mission file (URL):**
 
 ### Individual Things
 **Did you edit anything within the mission files?**
