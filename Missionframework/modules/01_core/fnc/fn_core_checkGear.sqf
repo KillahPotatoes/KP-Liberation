@@ -4,7 +4,8 @@
 	File: fn_core_checkGear.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-11-26
-	Last Update: 2017-11-26
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).

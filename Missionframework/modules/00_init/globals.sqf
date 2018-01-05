@@ -1,10 +1,11 @@
 /*
-	KP Liberation global variables of the mission initialization module
+	KP LIBERATION MODULE GLOBALS
 	
 	File: globals.sqf
 	Author: Wyqer - https://github.com/Wyqer
-	Date: 2017-10-20
-	Last Update: 2017-12-30
+	Date: 2017-10-16
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Initializes the global variables which are brought by this module.

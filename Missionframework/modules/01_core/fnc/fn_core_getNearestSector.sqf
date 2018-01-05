@@ -4,7 +4,8 @@
 	File: fn_core_getNearestSector.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-11-26
-	Last Update: 2017-12-30
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Get the nearest capturable sector from the given position inside the given range.

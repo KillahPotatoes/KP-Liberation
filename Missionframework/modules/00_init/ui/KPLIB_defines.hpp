@@ -1,3 +1,16 @@
+/*
+	KP Liberation ui defines
+	
+	File: KPLIB_defines.hpp
+	Author: Wyqer - https://github.com/Wyqer
+	Date: 2017-10-16
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+	Description:
+	The general ui defines for KP Liberation.
+*/
+
 // Control types
 #define CT_STATIC           0
 #define CT_BUTTON           1

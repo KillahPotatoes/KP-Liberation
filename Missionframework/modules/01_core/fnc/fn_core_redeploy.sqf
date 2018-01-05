@@ -4,7 +4,8 @@
 	File: fn_core_redeploy.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-29
-	Last Update: 2017-12-30
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Opens the redeploy dialog and switches to a cinematic camera while the dialog is opened.

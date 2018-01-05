@@ -1,3 +1,16 @@
+/*
+	KP Liberation redeploy dialog defines
+	
+	File: KPLIB_defines.hpp
+	Author: Wyqer - https://github.com/Wyqer
+	Date: 2017-10-28
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+	Description:
+	Redeploy dialog after respawn or select redeploy from a FOB or mobile spawn.
+*/
+
 class KPLIB_redeploy {
 	idd = 75801;
 	movingEnable = false;

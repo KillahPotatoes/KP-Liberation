@@ -4,7 +4,8 @@
 	File: fn_init_fillArsenal.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-27
-	Last Update: 2017-10-28
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Fetches all arsenal classnames from config files and apply the blacklist or add the chosen whitelist to the virtual arsenal.

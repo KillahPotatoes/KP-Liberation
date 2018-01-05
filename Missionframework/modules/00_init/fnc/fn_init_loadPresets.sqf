@@ -4,7 +4,8 @@
 	File: fn_init_loadPresets.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2017-12-30
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Loads the configured preset files, checks if classnames are available with current modset and initialize global arrays which are depending on the presets.

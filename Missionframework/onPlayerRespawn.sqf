@@ -1,3 +1,16 @@
+/*
+	KP LIBERATION RESPAWN EVENTHANDLING FILE
+	
+	File: onPlayerRespawn.sqf
+	Author: Wyqer - https://github.com/Wyqer
+	Date: 2017-10-16
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+	Description:
+	This is running everytime a player respawns and/or entering the mission.
+*/
+
 waitUntil {!isNil "KPLIB_initDone"};
 waitUntil {KPLIB_initDone};
 

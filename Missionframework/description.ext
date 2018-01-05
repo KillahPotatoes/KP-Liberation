@@ -1,3 +1,17 @@
+/*
+	KP LIBERATION DESCRIPTION FILE
+	
+	File: description.ext
+	Author: Wyqer - https://github.com/Wyqer
+	Date: 2017-10-16
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+	Description:
+	Information about the author, mission name, respawn and more very general settings.
+	This overrides corresponding settings which are made in the sqm via eden editor.
+*/
+
 author = "[KP] Wyqer";
 onLoadName = $STR_MISSION_TITLE;
 onLoadMission = "www.killahpotatoes.de";

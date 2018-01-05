@@ -1,10 +1,11 @@
 /*
-	KP Liberation mission initialization module
+	KP LIBERATION MODULE INITIALIZATION
 	
 	File: initModule.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2017-10-26
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	This module initialize basically everything what should be done before the player pass the briefing screen.

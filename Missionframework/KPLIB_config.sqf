@@ -4,7 +4,8 @@
 	File: KPLIB_config.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2017-12-30
+	Last Update: 2018-01-05
+	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
 	Contains all settings which are meant to be adjustable by players but aren't implemented in the mission parameters. (and won't be)
