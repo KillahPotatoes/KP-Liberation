@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="Liberation">
+	<Package name="Liberation">
+		<!-- French localization made by zbug: https://github.com/GreuhZbug -->
+		<!-- German localization made by Wyqer: https://github.com/Wyqer -->
+		<!-- Italian localization made by k4s0: https://github.com/k4s0 -->
+		<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
+		<!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
+		<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
+		<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
+		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
+        <!-- General -->
+		<Key ID="STR_MISSION_TITLE">
+			<Original>KP Liberation Rewrite</Original>
+			<German>KP Liberation Rewrite</German>
+			<Spanish>KP Liberation Rewrite</Spanish>
+			<Italian>KP Liberation Rewrite</Italian>
+			<Chinesesimp>KP Liberation Rewrite</Chinesesimp>
+			<Turkish>KP Liberation Rewrite</Turkish>
+		</Key>
+		<Key ID="STR_MISSION_VERSION">
+			<Original>Rewrite</Original>
+			<German>Rewrite</German>
+			<Spanish>Rewrite</Spanish>
+			<Italian>Rewrite</Italian>
+			<Chinesesimp>Rewrite</Chinesesimp>
+			<Turkish>Rewrite</Turkish>
+		</Key>
+		<Key ID="STR_MISSION_DESCRIPTION">
+			<Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
+			<French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
+			<German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+			<Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
+			<Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
+			<Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
+			<Chinesesimp>从敌人手中解放这个地区！战略是制胜关键！士兵们祝你们好运。</Chinesesimp>
+			<Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
+		</Key>
+		<Key ID="STR_YES">
+			<Original>Yes</Original>
+			<French>Oui</French>
+			<German>Ja</German>
+			<Spanish>Si</Spanish>
+			<Russian>Да</Russian>
+			<Italian>Si</Italian>
+			<Chinesesimp>是</Chinesesimp>
+			<Turkish>Evet</Turkish>
+		</Key>
+		<Key ID="STR_NO">
+			<Original>No</Original>
+			<French>Non</French>
+			<German>Nein</German>
+			<Spanish>No</Spanish>
+			<Russian>Нет</Russian>
+			<Italian>NO</Italian>
+			<Chinesesimp>否</Chinesesimp>
+			<Turkish>Hayır</Turkish>
+		</Key>
+		<Key ID="STR_MAINBASE">
+			<Original>Operation Base</Original>
+			<German>Operationsbasis</German>
+		</Key>
+		<Key ID="STR_RESPAWN_TRUCK">
+			<Original>Mobile respawn</Original>
+			<French>Respawn mobile</French>
+			<German>Mobiler Respawn</German>
+			<Spanish>Respawn móvil</Spanish>
+			<Russian>Мобильная КШМ</Russian>
+			<Italian>Respawn Mobile</Italian>
+			<Chinesesimp>机动复活载具</Chinesesimp>
+			<Turkish>Respawn Aracı</Turkish>
+		</Key>
+		<Key ID="STR_NEAR">
+			<Original>Near</Original>
+			<French>Près de</French>
+			<German>Nahe</German>
+			<Spanish>Cerca</Spanish>
+			<Russian>Рядом</Russian>
+			<Italian>Vicino</Italian>
+			<Chinesesimp>就近</Chinesesimp>
+			<Turkish>Yakın</Turkish>
+		</Key>
+		<!-- Debriefing -->
+		<Key ID="STR_DEBRIEF_SORRY">
+			<Original>Sorry!</Original>
+			<French>Désolé !</French>
+			<German>Entschuldigung!</German>
+			<Spanish>Lo siento!</Spanish>
+			<Russian>Извини!</Russian>
+			<Italian>Scusa!</Italian>
+			<Chinesesimp>抱歉！</Chinesesimp>
+			<Turkish>Özür dilerim!</Turkish>
+		</Key>
+		<Key ID="STR_DEBRIEF_COMMANDER_NOT_AUTHORIZED">
+			<Original>You are not authorized to use the commander slot on this server.</Original>
+			<French>Vous n'êtes pas authorizé à utiliser la place de commandant sur ce serveur.</French>
+			<German>Du bist auf diesem Server nicht als Kommandant autorisiert.</German>
+			<Spanish>No estás autorizado para usar el slot de comandante en este servidor.</Spanish>
+			<Russian>Вы не авторизованы, чтобы использовать слот коммандира на этом сервере.</Russian>
+			<Italian>Non sei autorizzato ad usare lo slot comandante in questo server.</Italian>
+			<Chinesesimp>你没有使用这个服务器指挥官栏位的权限。</Chinesesimp>
+			<Turkish>Komutan slotunu kullanmak için seçilmemişsiniz.</Turkish>
+		</Key>
+		<!-- Parameters -->
+		<Key ID="STR_PARAMS_ENABLED">
+			<Original>Enabled</Original>
+			<French>Activé</French>
+			<German>Aktiviert</German>
+			<Spanish>Activado</Spanish>
+			<Russian>Вкл</Russian>
+			<Italian>Attivo</Italian>
+			<Chinesesimp>开启</Chinesesimp>
+			<Turkish>Aktif</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DISABLED">
+			<Original>Disabled</Original>
+			<French>Désactivé</French>
+			<German>Deaktiviert</German>
+			<Spanish>Desactivado</Spanish>
+			<Russian>Выкл</Russian>
+			<Italian>Disattivato</Italian>
+			<Chinesesimp>关闭</Chinesesimp>
+			<Turkish>Kapalı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_MISSIONOPTIONS">
+			<Original>== MISSION OPTIONS ==</Original>
+			<French>== OPTIONS DE MISSION ==</French>
+			<German>== MISSIONSEINSTELLUNGEN ==</German>
+			<Spanish>== OPCIONES DE MISIÓN ==</Spanish>
+			<Russian>== ОПЦИИ МИССИИ ==</Russian>
+			<Italian>== OPZIONI MISSIONE ==</Italian>
+			<Chinesesimp>== 任务选项 ==</Chinesesimp>
+			<Turkish>== BÖLÜM AYARLARI ==</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP">
+			<Original>Maximum amount of AI units</Original>
+			<French>Quantité maximum d'unités IA</French>
+			<German>Maximale Anzahl KI-Einheiten</German>
+			<Spanish>Cantidad máxima de unidades de IA</Spanish>
+			<Russian>Максимальное количество единиц AI</Russian>
+			<Italian>Numero massimo di unità AI</Italian>
+			<Chinesesimp>AI单位最大数量</Chinesesimp>
+			<Turkish>AI birlik sınırı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP1">
+			<Original>50% - Recommended for local hosting</Original>
+			<French>50% - Recommandé pour un hébergement local</French>
+			<German>50 % - Empfohlen für lokal gehostete Spiele</German>
+			<Spanish>50% - Recomendado para host local</Spanish>
+			<Russian>50% - Рекомендуется для локального хостинга</Russian>
+			<Italian>50% - Raccomandato per host locali</Italian>
+			<Chinesesimp>50% - 适用于本地主机</Chinesesimp>
+			<Turkish>50% - Yerel sunucu için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP2">
+			<Original>75% - Dedicated server recommended</Original>
+			<French>75% - Serveur dédié recommandé</French>
+			<German>75 % - Dezidierter Server empfohlen</German>
+			<Spanish>75% - Recomendado para servidor dedicado</Spanish>
+			<Russian>75% - Выделенный сервер рекомендуется</Russian>
+			<Italian>75% - Raccomandato per server dedicati</Italian>
+			<Chinesesimp>75% - 适用于服务器</Chinesesimp>
+			<Turkish>75% - Yerel sunucu için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP3">
+			<Original>100% - Dedicated server recommended</Original>
+			<French>100% - Serveur dédié recommandé</French>
+			<German>100 % - Dezidierter Server empfohlen</German>
+			<Spanish>100% - Recomendado para servidor dedicado</Spanish>
+			<Russian>100% - Выделенный сервер рекомендуется</Russian>
+			<Italian>100% - Raccomandato per server dedicati</Italian>
+			<Chinesesimp>100% - 适用于服务器</Chinesesimp>
+			<Turkish>100% - Dedicated server için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP4">
+			<Original>125% - Dedicated server with headless client recommended</Original>
+			<French>125% - Serveur dédié avec headless client recommandé</French>
+			<German>125 % - Dezidierter Server mit Headless Client empfohlen</German>
+			<Spanish>125% - Recomendado para servidor dedicado con cliente descabezado</Spanish>
+			<Russian>125% - Выделенный сервер вместе с headless client рекомендуется</Russian>
+			<Italian>125% - Raccomandato per server dedicati con headless client</Italian>
+			<Chinesesimp>125% - 适用于有Headless Client辅助的服务器</Chinesesimp>
+			<Turkish>125% - Headless client'e sahip dedicated server için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP5">
+			<Original>150% - Dedicated server with multiple headless clients recommended</Original>
+			<French>150% - Serveur dédié avec clients headless multiples recommandé</French>
+			<German>150 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+			<Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
+			<Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+			<Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
+			<Chinesesimp>150% - 适用于有多个Headless Client辅助的服务器</Chinesesimp>
+			<Turkish>150% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_UNITCAP6">
+			<Original>200% - Dedicated server with multiple headless clients recommended</Original>
+			<French>200% - Serveur dédié avec clients headless multiples recommandés</French>
+			<German>200 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+			<Spanish>200% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
+			<Russian>200% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+			<Italian>200% - Raccomandato per server dedicati con tanti headless client</Italian>
+			<Chinesesimp>200% - 适用于有多个Headless Client辅助的服务器</Chinesesimp>
+			<Turkish>200% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY">
+			<Original>Difficulty</Original>
+			<French>Difficulté</French>
+			<German>Schwierigkeit</German>
+			<Spanish>Dificultad</Spanish>
+			<Russian>Сложность</Russian>
+			<Italian>Difficoltà:</Italian>
+			<Chinesesimp>难度</Chinesesimp>
+			<Turkish>Zorluk:</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY1">
+			<Original>Tourist</Original>
+			<French>Touriste</French>
+			<German>Tourist</German>
+			<Spanish>Turista</Spanish>
+			<Russian>Турист</Russian>
+			<Italian>Turista</Italian>
+			<Chinesesimp>观光</Chinesesimp>
+			<Turkish>Turist</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY2">
+			<Original>Easy</Original>
+			<French>Facile</French>
+			<German>Einfach</German>
+			<Spanish>Fácil</Spanish>
+			<Russian>Легко</Russian>
+			<Italian>Facile</Italian>
+			<Chinesesimp>简单</Chinesesimp>
+			<Turkish>Kolay</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY3">
+			<Original>Normal</Original>
+			<French>Normal</French>
+			<German>Normal</German>
+			<Spanish>Normal</Spanish>
+			<Russian>Нормально</Russian>
+			<Italian>Normale</Italian>
+			<Chinesesimp>正常</Chinesesimp>
+			<Turkish>Normal</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY4">
+			<Original>Moderate</Original>
+			<French>Modérée</French>
+			<German>Moderat</German>
+			<Spanish>Moderado</Spanish>
+			<Russian>Посложнее</Russian>
+			<Italian>Moderato</Italian>
+			<Chinesesimp>适中</Chinesesimp>
+			<Turkish>Orta</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY5">
+			<Original>Hard</Original>
+			<French>Difficile</French>
+			<German>Schwer</German>
+			<Spanish>Difícil</Spanish>
+			<Russian>Сложно</Russian>
+			<Italian>Difficile</Italian>
+			<Chinesesimp>困难</Chinesesimp>
+			<Turkish>Zor</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY6">
+			<Original>Extreme</Original>
+			<French>Extrême</French>
+			<German>Extrem</German>
+			<Spanish>Extremo</Spanish>
+			<Russian>Экстремально</Russian>
+			<Italian>Estremo</Italian>
+			<Chinesesimp>极难</Chinesesimp>
+			<Turkish>Extreme</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY7">
+			<Original>Ludicrous</Original>
+			<French>Affolante</French>
+			<German>Wahnsinnig</German>
+			<Spanish>Ridículo</Spanish>
+			<Russian>Весело</Russian>
+			<Italian>Ridicolo</Italian>
+			<Chinesesimp>荒谬</Chinesesimp>
+			<Turkish>Çılgınca</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DIFFICULTY8">
+			<Original>Oh god oh god we're all gonna die</Original>
+			<French>Oh mon dieu on va tous mourir</French>
+			<German>Oh mein Gott, wir werden alle sterben!</German>
+			<Spanish>Oh dios mío, vamos a morir!</Spanish>
+			<Russian>Боже мой, мы все умрём!</Russian>
+			<Italian>Oh dio, stiamo per morire!</Italian>
+			<Chinesesimp>天啦噜作死啦</Chinesesimp>
+			<Turkish>Aman tanrım yok olacağız!</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY">
+			<Original>OPFOR aggressivity</Original>
+			<French>Aggressivité de l'OPFOR</French>
+			<German>OPFOR Aggressivität</German>
+			<Spanish>Agresividad del OPFOR</Spanish>
+			<Russian>Уровень обеспокоенности OPFOR</Russian>
+			<Italian>Aggressività OPFOR</Italian>
+			<Chinesesimp>敌军进攻性</Chinesesimp>
+			<Turkish>OPFOR agresifliği</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY0">
+			<Original>Anemic</Original>
+			<French>Anémique</French>
+			<German>Mutlos</German>
+			<Spanish>Anémica</Spanish>
+			<Russian>Вяло</Russian>
+			<Italian>Anemico</Italian>
+			<Chinesesimp>可悲</Chinesesimp>
+			<Turkish>Pasif</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY1">
+			<Original>Weak</Original>
+			<French>Faible</French>
+			<German>Schwach</German>
+			<Spanish>Floja</Spanish>
+			<Russian>Слабо</Russian>
+			<Italian>Debole</Italian>
+			<Chinesesimp>弱小</Chinesesimp>
+			<Turkish>Zayıf</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY2">
+			<Original>Normal</Original>
+			<French>Normale</French>
+			<German>Normal</German>
+			<Spanish>Normal</Spanish>
+			<Russian>Нормально</Russian>
+			<Italian>Normale</Italian>
+			<Chinesesimp>正常</Chinesesimp>
+			<Turkish>Normal</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY3">
+			<Original>Strong</Original>
+			<French>Forte</French>
+			<German>Stark</German>
+			<Spanish>Fuerte</Spanish>
+			<Russian>Сильно</Russian>
+			<Italian>Forte</Italian>
+			<Chinesesimp>强大</Chinesesimp>
+			<Turkish>Güçlü</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AGGRESSIVITY4">
+			<Original>Extreme</Original>
+			<French>Extreme</French>
+			<German>Extrem</German>
+			<Spanish>Extrema</Spanish>
+			<Russian>Очень сильно</Russian>
+			<Italian>Estremo</Italian>
+			<Chinesesimp>噩梦</Chinesesimp>
+			<Turkish>Extreme</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_ADAPTIVEENEMY">
+			<Original>Hostile presence adapts to player count</Original>
+			<French>La présence hostile s'adapte au nombre de joueurs</French>
+			<German>Feindpräsenz passt sich der Spielerzahl an</German>
+			<Spanish>Adaptar presencia hostil según la cantidad de jugadores</Spanish>
+			<Russian>Вражеские силы адаптируются к количеству игроков</Russian>
+			<Italian>presenza ostile adattata al numero dei giocatori</Italian>
+			<Chinesesimp>随玩家数量调整敌军活动</Chinesesimp>
+			<Turkish>Düşman birlikleri oyuncu sayısına göre adapte olur</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVILIANS">
+			<Original>Civilian activity</Original>
+			<French>Activité civile</French>
+			<German>Zivile Aktivität</German>
+			<Spanish>Actividad civil</Spanish>
+			<Russian>Гражданская активность</Russian>
+			<Italian>Attività dei civili</Italian>
+			<Chinesesimp>平民存在感</Chinesesimp>
+			<Turkish>Sivil aktivitesi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVILIANS0">
+			<Original>None</Original>
+			<French>Aucune</French>
+			<German>Keine</German>
+			<Spanish>Ninguna</Spanish>
+			<Russian>Нету</Russian>
+			<Italian>Nessuna</Italian>
+			<Chinesesimp>无</Chinesesimp>
+			<Turkish>Hiç</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVILIANS1">
+			<Original>Reduced</Original>
+			<French>Réduite</French>
+			<German>Reduziert</German>
+			<Spanish>Reducida</Spanish>
+			<Russian>Снижена</Russian>
+			<Italian>Ridotta</Italian>
+			<Chinesesimp>较少</Chinesesimp>
+			<Turkish>Düşük</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVILIANS2">
+			<Original>Normal</Original>
+			<French>Normale</French>
+			<German>Normal</German>
+			<Spanish>Normal</Spanish>
+			<Russian>Нормальная</Russian>
+			<Italian>Normale</Italian>
+			<Chinesesimp>正常</Chinesesimp>
+			<Turkish>Normal</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVILIANS3">
+			<Original>Increased</Original>
+			<French>Augmentée</French>
+			<German>Erhöht</German>
+			<Spanish>Aumentada</Spanish>
+			<Russian>Увеличенная</Russian>
+			<Italian>Aumentata</Italian>
+			<Chinesesimp>较多</Chinesesimp>
+			<Turkish>Arttırılmış</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_FIRSTFOB">
+			<Original>Start the campaign with the first FOB already built</Original>
+			<French>Commencer la campagne avec une première FOB déjà construite</French>
+			<German>Starte die Kampagne mit einer bereits gebauten FOB</German>
+			<Spanish>Comenzar la campaña con la primera FOB ya construída</Spanish>
+			<Russian>Начать кампанию, когда первая FOB размещена</Russian>
+			<Italian>Comincia la campagna costruendo la prima FOB</Italian>
+			<Chinesesimp>部署起始前哨</Chinesesimp>
+			<Turkish>Oyuna ilk FOB kurulu olarak başla</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_MAXFOBS">
+			<Original>Maximum number of FOBs allowed</Original>
+			<French>Nombre maximal de FOBs autorisé</French>
+			<German>Maximale Anzahl an erlaubten FOBs</German>
+			<Russian>Максимальное количество FOB</Russian>
+			<Spanish>Número máximo de FOBs permitidas</Spanish>
+			<Italian>Numero massimo di FOB consentite</Italian>
+			<Chinesesimp>最大前哨数量</Chinesesimp>
+			<Turkish>Maksimum FOB sayısı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_MAXSQUADSIZE">
+			<Original>AI recruitment limit per squad</Original>
+			<French>Limite de recrutement d'IA par escouade</French>
+			<German>KI Rekrutierungslimit per Squad</German>
+			<Spanish>Límite de reclutamiento IA por escuadra</Spanish>
+			<Russian>Ограничение найма ИИ в отряд</Russian>
+			<Italian>Limite di reclutamento AI per squadra</Italian>
+			<Chinesesimp>每班AI招募限制</Chinesesimp>
+			<Turkish>Tim içindeki maksimum AI limiti</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AIDEFENDERS">
+			<Original>BLUFOR defenders in owned sectors</Original>
+			<French>Défenseurs BLUFOR dans les secteurs capturés</French>
+			<German>BLUFOR Verteidiger in besetzten Sektoren</German>
+			<Spanish>Defensores BLUFOR en los sectores controlados</Spanish>
+			<Russian>BLUFOR защитники в захваченных зонах</Russian>
+			<Italian>Trupppe BLUFOR nei settori controllati</Italian>
+			<Chinesesimp>我军部队防御己方战区</Chinesesimp>
+			<Turkish>Sektörlerdeki BLUFOR savunmacıları</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AUTODANGER">
+			<Original>Auto-danger behaviour on BLUFOR forces</Original>
+			<French>Comportement 'danger' automatique sur les forces BLUFOR</French>
+			<German>Automatisches Verhalten "Gefahr" bei BLUFOR Kräften</German>
+			<Spanish>Comportamiento de Auto-Alerta en las fuerzas BLUFOR</Spanish>
+			<Russian>Авто-опасность для сил BLUFOR</Russian>
+			<Italian>Comportamento Auto-Allerta per forze BLUFOR</Italian>
+			<Chinesesimp>我军部队自动警戒行为</Chinesesimp>
+			<Turkish>BLUFOR için Oto-tehlike davranışı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_TIMEMULTI">
+			<Original>Day duration (hours)</Original>
+			<French>Durée du jour (heures)</French>
+			<German>Länge eines Tages (Stunden)</German>
+			<Spanish>Duración del día (horas)</Spanish>
+			<Russian>Продолжительность дня (часов)</Russian>
+			<Italian>Durata del giorno (In ore)</Italian>
+			<Chinesesimp>每日时长（小时）</Chinesesimp>
+			<Turkish>Gün uzunluğu (saat)</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_SHORTNIGHT">
+			<Original>Shorter nights</Original>
+			<French>Nuits plus courtes</French>
+			<German>Kürzere Nächte</German>
+			<Spanish>Noches más cortas</Spanish>
+			<Russian>Короткие ночи</Russian>
+			<Italian>Notte Breve</Italian>
+			<Chinesesimp>短暂夜晚</Chinesesimp>
+			<Turkish>Kısa geceler</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WEATHER">
+			<Original>Weather</Original>
+			<French>Meteo</French>
+			<German>Wetter</German>
+			<Spanish>Clima</Spanish>
+			<Russian>Погода</Russian>
+			<Italian>Meteo</Italian>
+			<Chinesesimp>天气</Chinesesimp>
+			<Turkish>Hava</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WEATHER0">
+			<Original>Always sunny</Original>
+			<French>Soleil permanent</French>
+			<German>Immer sonnig</German>
+			<Spanish>Siempre soleado</Spanish>
+			<Russian>Всегда солнечно</Russian>
+			<Italian>Semopre Soleggiato</Italian>
+			<Chinesesimp>永远晴天</Chinesesimp>
+			<Turkish>Hep güneşli</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WEATHER1">
+			<Original>Random without rain</Original>
+			<French>Aléatoire sans pluie</French>
+			<German>Zufällig ohne Regen</German>
+			<Spanish>Aleatorio sin lluvia</Spanish>
+			<Russian>Случайно, без дождя</Russian>
+			<Italian>Casuale senza pioggia</Italian>
+			<Chinesesimp>随机但无雨</Chinesesimp>
+			<Turkish>Rasgele ama yağmursuz</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WEATHER2">
+			<Original>Random</Original>
+			<French>Aléatoire</French>
+			<German>Zufällig</German>
+			<Spanish>Aleatorio</Spanish>
+			<Russian>Случайно</Russian>
+			<Italian>Casuale</Italian>
+			<Chinesesimp>随机</Chinesesimp>
+			<Turkish>Rasgele</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_RESMULTI">
+			<Original>Resources multiplier</Original>
+			<French>Multiplicateur de resources</French>
+			<German>Ressourcenmultiplikator</German>
+			<Spanish>Multiplicador de recursos</Spanish>
+			<Russian>Множитель ресурсов</Russian>
+			<Italian>Moltiplicatore di risorse</Italian>
+			<Chinesesimp>资源乘数</Chinesesimp>
+			<Turkish>Kaynak Geliri Çarpanı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_REVIVEOPTIONS">
+			<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
+			<German>== WIEDERBELEBUNGSEINSTELLUNGEN (Deaktivieren, wenn ACE genutzt) ==</German>
+			<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE ==</Spanish>
+			<Russian>== ВОЗВРАТИТЬ ОПЦИИ (отключите это, если вы играете с ACE) ==</Russian>
+			<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
+			<Chinesesimp>== 复活选项（如果你挂载了ACE模组，请关闭此项）==</Chinesesimp>
+			<Turkish>== CANLANDIRMA AYARLARI (ACE ile oynuyorsanız kapatın.) ==</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_GAMEPLAYOPTIONS">
+			<Original>== GAMEPLAY OPTIONS ==</Original>
+			<German>== SPIELEINSTELLUNGEN ==</German>
+			<Spanish>== OPCIONES DE JUEGO ==</Spanish>
+			<Italian>== OPZIONI DI GIOCO ==</Italian>
+			<Chinesesimp>== 游戏选项 ==</Chinesesimp>
+			<Turkish>== OYUN AYARLARI ==</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_FATIGUE">
+			<Original>Stamina</Original>
+			<French>Stamina</French>
+			<German>Ausdauer</German>
+			<Spanish>Estamina</Spanish>
+			<Russian>Усталость</Russian>
+			<Italian>Stamina</Italian>
+			<Chinesesimp>体力</Chinesesimp>
+			<Turkish>Stamina</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_ARSENALPRESET">
+			<Original>Arsenal mode</Original>
+			<German>Arsenalmodus</German>
+			<Italian>Modalità Arsenale</Italian>
+			<Chinesesimp>军火库模式</Chinesesimp>
+			<Turkish>Ekipman(Arsenal) modu</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_ARSENALPRESETFREE">
+			<Original>No restrictions</Original>
+			<German>Keine Einschränkungen</German>
+			<Italian>Senza Restrizioni</Italian>
+			<Chinesesimp>无限制</Chinesesimp>
+			<Turkish>Kısıtlama yok</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_ARSENALPRESETUSE">
+			<Original>Use preset from config</Original>
+			<German>Benutze Preset aus Konfiguration</German>
+			<Italian>Usa il file config.sqf</Italian>
+			<Chinesesimp>使用配置文件中的预设内容</Chinesesimp>
+			<Turkish>config.sqf kullan</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_MAPMARKERS">
+			<Original>Player mapmarkers activation through extended options</Original>
+			<German>Kartenmarkierungen von Spielern über Erweiterte Optionen aktivierbar</German>
+			<Spanish>Activación de marcas de mapa de jugador a través de opciones extendidas</Spanish>
+			<Russian>Активация картмаркеров игроков с помощью расширенных опций</Russian>
+			<Italian>i mapmarker si attivano dal menu opzioni avanzate</Italian>
+			<Chinesesimp>通过扩展选项激活玩家地图标记</Chinesesimp>
+			<Turkish>Oyuncu harita işaretleri diğer ayarlardan açılabilir</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_MOBILERESPAWN">
+			<Original>Mobile respawn</Original>
+			<German>Mobiler Respawn</German>
+			<Spanish>Respawn Móvil</Spanish>
+			<Russian>Мобильный респаун</Russian>
+			<Italian>Respawn Mobile</Italian>
+			<Chinesesimp>机动复活点</Chinesesimp>
+			<Turkish>Mobil respawn</Turkish>
+		</Key>
+		<Key ID="STR_PARAM_RESPAWNCD">
+			<Original>Mobile Respawn Cooldown (minutes)</Original>
+			<German>Mobiler Respawn Cooldown (Minuten)</German>
+		</Key>
+		<Key ID="STR_PARAMS_MOBILEARSENAL">
+			<Original>Mobile arsenal</Original>
+			<German>Mobiles Arsenal</German>
+			<Spanish>Arsenal Móvil</Spanish>
+			<Russian>Мобильный арсенал</Russian>
+			<Italian>Arsenale Mobile</Italian>
+			<Chinesesimp>机动军火库</Chinesesimp>
+			<Turkish>Mobil ekipman</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_AILOGISTICS">
+			<Original>AI Logistics Module</Original>
+			<German>AI Logistik Modul</German>
+			<Russian>Модуль логистики AI</Russian>
+			<Italian>AI Logistica</Italian>
+			<Chinesesimp>AI后勤模块</Chinesesimp>
+			<Turkish>AI Lojistiği</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_TEAMKILLPENALTY">
+			<Original>Teamkill penalty</Original>
+			<French>Pénalité pour tirs alliés</French>
+			<German>Strafe für das Töten von Verbündeten</German>
+			<Spanish>Penalización por fuego amigo</Spanish>
+			<Russian>Штраф за убийство своего</Russian>
+			<Italian>Penalità se si uccide un compagno di squadra</Italian>
+			<Chinesesimp>友军击杀惩罚</Chinesesimp>
+			<Turkish>Dost ateşi cezası</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVREPBUILDING">
+			<Original>Civil Reputation penalty for buildings if building is</Original>
+			<German>Ziviles Ansehen sinkt, wenn Gebäude</German>
+			<Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
+			<Chinesesimp>当建筑_____时，会平民声望会降低</Chinesesimp>
+			<Turkish>Şu türdeki binalara ceza verilince, ceza uygulanır</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVREPBUILDINGDESTROYED">
+			<Original>fully destroyed</Original>
+			<German>komplett zerstört</German>
+			<Italian>completamente distrutto</Italian>
+			<Chinesesimp>完全损毁</Chinesesimp>
+			<Turkish>tamamen yokedilmiş</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CIVREPBUILDINGDAMAGED">
+			<Original>damaged</Original>
+			<German>beschädigt</German>
+			<Italian>danneggiato</Italian>
+			<Chinesesimp>受损</Chinesesimp>
+			<Turkish>zarar görmüş</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO">
+			<Original>HALO jump</Original>
+			<French>Saut HALO</French>
+			<German>HALO-Sprung</German>
+			<Spanish>Salto HALO</Spanish>
+			<Russian>HALO прыжок</Russian>
+			<Italian>PARACADUTARSI</Italian>
+			<Chinesesimp>伞降</Chinesesimp>
+			<Turkish>HALO atlayışı</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO1">
+			<Original>Enabled - No cooldown</Original>
+			<French>Activé - Pas de cooldown</French>
+			<German>Aktiviert - Keine Abklingzeit</German>
+			<Spanish>Activado - Sin tiempo de espera</Spanish>
+			<Russian>Вкл - без перерыва</Russian>
+			<Italian>Attivato - Senza attesa</Italian>
+			<Chinesesimp>开启 - 无冷却</Chinesesimp>
+			<Turkish>Açık - Süre yok</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO2">
+			<Original>Enabled - 5 minutes cooldown</Original>
+			<French>Activé - Cooldown de 5 minutes</French>
+			<German>Aktiviert - 5 Minuten Abklingzeit</German>
+			<Spanish>Activado - 5 minutos de espera</Spanish>
+			<Russian>Вкл - 5 минут перерыв</Russian>
+			<Italian>Attivato - 5 minuti di attesa</Italian>
+			<Chinesesimp>开启 - 5分钟冷却</Chinesesimp>
+			<Turkish>Açık - 5 dakika bekleme süresi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO3">
+			<Original>Enabled - 10 minutes cooldown</Original>
+			<French>Activé - Cooldown de 10 minutes</French>
+			<German>Aktiviert - 10 Minuten Abklingzeit</German>
+			<Spanish>Activado - 10 minutos de espera</Spanish>
+			<Russian>Вкл - 10 минут перерыв</Russian>
+			<Italian>Attivato - 10 minuti di attesa</Italian>
+			<Chinesesimp>开启 - 10分钟冷却</Chinesesimp>
+			<Turkish>Açık - 10 dakika bekleme süresi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO4">
+			<Original>Enabled - 15 minutes cooldown</Original>
+			<French>Activé - Cooldown de 15 minutes</French>
+			<German>Aktiviert - 15 Minuten Abklingzeit</German>
+			<Spanish>Activado - 15 minutos de espera</Spanish>
+			<Russian>Вкл - 15 минут перерыв</Russian>
+			<Italian>Attivato - 15 minuti di attesa</Italian>
+			<Chinesesimp>开启 - 15分钟冷却</Chinesesimp>
+			<Turkish>Açık - 15 dakika bekleme süresi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO5">
+			<Original>Enabled - 20 minutes cooldown</Original>
+			<French>Activé - Cooldown de 20 minutes</French>
+			<German>Aktiviert - 20 Minuten Abklingzeit</German>
+			<Spanish>Activado - 20 minutos de espera</Spanish>
+			<Russian>Вкл - 20 минут перерыв</Russian>
+			<Italian>Attivato - 20 minuti di attesa</Italian>
+			<Chinesesimp>开启 - 20分钟冷却</Chinesesimp>
+			<Turkish>Açık - 20 dakika bekleme süresi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_HALO6">
+			<Original>Enabled - 30 minutes cooldown</Original>
+			<French>Activé - Cooldown de 30 minutes</French>
+			<German>Aktiviert - 30 Minuten Abklingzeut</German>
+			<Spanish>Activado - 30 minutos de espera</Spanish>
+			<Russian>Вкл - 30 минут перерыв</Russian>
+			<Italian>Attivato - 30 minuti di attesa</Italian>
+			<Chinesesimp>开启 - 30分钟冷却</Chinesesimp>
+			<Turkish>Açık - 30 dakika bekleme süresi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_TECHNICALOPTIONS">
+			<Original>== TECHNICAL OPTIONS ==</Original>
+			<French>== OPTIONS TECHNIQUES ==</French>
+			<German>== TECHNISCHE EINSTELLUNGEN ==</German>
+			<Spanish>== OPCIONES TÉCNICAS ==</Spanish>
+			<Russian>== ТЕХНИЧЕСКИЕ ОПЦИИ ==</Russian>
+			<Italian>== OPZIONI TECNICHE ==</Italian>
+			<Chinesesimp>== 技术选项 ==</Chinesesimp>
+			<Turkish>== TEKNIK AYARLAR ==</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_PERMISSIONS">
+			<Original>Permissions Management</Original>
+			<French>Gestion des Permissions</French>
+			<German>Rechteverwaltung</German>
+			<Spanish>Gestión de permisos</Spanish>
+			<Russian>Управление Разрешениями</Russian>
+			<Italian>Permessi Gestione</Italian>
+			<Chinesesimp>权限管理</Chinesesimp>
+			<Turkish>Yetkileri Yönet</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CLEANUPVEH">
+			<Original>Cleanup abandoned vehicles outside FOBs</Original>
+			<French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
+			<German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
+			<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
+			<Russian>Удаление брошенной техники вне FOB.</Russian>
+			<Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
+			<Chinesesimp>清理前哨外的废弃载具</Chinesesimp>
+			<Turkish>FOB dışındaki araçların temizlenmesi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CLEANUPVEH1">
+			<Original>Enabled - 1 hour delay</Original>
+			<French>Activé - 1 heure de délai</French>
+			<German>Aktiv - 1 Stunde Verzögerung</German>
+			<Spanish>Activado- abandonados durante 1 hora</Spanish>
+			<Russian>Вкл - задержка 1 час</Russian>
+			<Italian>Attivato - eliminazione ogni ora</Italian>
+			<Chinesesimp>开启 - 1小时延迟</Chinesesimp>
+			<Turkish>Açık - 1 saat gecikmeli</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CLEANUPVEH2">
+			<Original>Enabled - 2 hours delay</Original>
+			<French>Activé - 2 heures de délai</French>
+			<German>Aktiv - 2 Stunde Verzögerung</German>
+			<Spanish>Activado - abandonados durante 2 horas</Spanish>
+			<Russian>Вкл - задержка 2 часа</Russian>
+			<Italian>Attivato - eliminazione ogni 2 ore</Italian>
+			<Chinesesimp>开启 - 2小时延迟</Chinesesimp>
+			<Turkish>Açık - 2 saat gecikmeli</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_CLEANUPVEH3">
+			<Original>Enabled - 4 hours delay</Original>
+			<French>Activé - 4 heures de délai</French>
+			<German>Aktiv - 4 Stunden Verzögerung</German>
+			<Spanish>Activado - abandonados durante 4 horas</Spanish>
+			<Russian>Вкл - задержка 4 часа</Russian>
+			<Italian>Attivato - eliminazione ogni 4 ore</Italian>
+			<Chinesesimp>开启 - 4小时延迟</Chinesesimp>
+			<Turkish>Açık - 4 saat gecikmeli</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_INTRO">
+			<Original>Introduction</Original>
+			<French>Introduction</French>
+			<German>Einführung</German>
+			<Spanish>Introducción</Spanish>
+			<Russian>Введение</Russian>
+			<Italian>Introduzione</Italian>
+			<Chinesesimp>开场动画</Chinesesimp>
+			<Turkish>Tanıtım</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEPLOYCINE">
+			<Original>Deployment cinematic</Original>
+			<French>Cinématique de déploiement</French>
+			<German>Zwischensequenz bei Einsatz</German>
+			<Spanish>Cinemática de comienzo</Spanish>
+			<Russian>Кино во время размещения</Russian>
+			<Italian>Filmato di Schieramento</Italian>
+			<Chinesesimp>部署动画</Chinesesimp>
+			<Turkish>Doğma Sinematiği</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WHITELIST">
+			<Original>Use the commander whitelist</Original>
+			<French>Utiliser la whitelist pour le commandant</French>
+			<German>Nutze die Whitelist für den Kommandanten</German>
+			<Spanish>Utilizar la lista blanca para Comandantes</Spanish>
+			<Russian>Использование "белого" списка командиров</Russian>
+			<Italian>Usa la whitelist del comandante</Italian>
+			<Chinesesimp>使用指挥官白名单</Chinesesimp>
+			<Turkish>Komutanlar için beyaz liste kullan</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WHITELISTON">
+			<Original>Enabled - Only use if you have modified your whitelist.sqf!</Original>
+			<German>Aktiviert - Nur benutzen, wenn du deine whitelist.sqf verändert hast!</German>
+			<French>Activé - A n'utiliser que si vous avez modifié votre whitelist.sqf !</French>
+			<Spanish>Activado - ¡Sólo utilizar si has modificado tu whitelist.sqf</Spanish>
+			<Russian>Вкл - Использовать только если вы редактировали файл whitelist.sqf!</Russian>
+			<Italian>Attiva - Solo se hai modificato la tua whitelist.sqf!</Italian>
+			<Chinesesimp>开启 - 只有在设立了whitelist.sqf时才能用这个选项！</Chinesesimp>
+			<Turkish>Aktif - whitelist.sqf dosyası ayarlanmış olmalı.</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_SERVERRESTART">
+			<Original>Automatic Server Restart after (hours)</Original>
+			<German>Automatischer Server Restart nach (Stunden)</German>
+			<Turkish>Otomatik server yeniden başlat (saat)</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WIPESAVE1">
+			<Original>Wipe savegame</Original>
+			<French>Effacer la sauvegarde</French>
+			<German>Spielstand löschen</German>
+			<Spanish>Borrar partida guardada</Spanish>
+			<Russian>Удалить сохранённый прогресс</Russian>
+			<Italian>Elimina Salvataggi</Italian>
+			<Chinesesimp>清空存档</Chinesesimp>
+			<Turkish>Kayıtlı oyunu sil</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WIPESAVE2">
+			<Original>Confirm : wipe savegame</Original>
+			<French>Confirmer : effacer la sauvegarde</French>
+			<German>Bestätige: Spielstand löschen</German>
+			<Spanish>Confirmar : Borrar partida guardada</Spanish>
+			<Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
+			<Italian>Confermare : Elimina Salvataggi</Italian>
+			<Chinesesimp>确认 ： 清空存档</Chinesesimp>
+			<Turkish>Onayla : Kayıtlı oyunu sil</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_WIPESAVEYES">
+			<Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
+			<French>!! LA SAUVEGARDE SERA EFFACEE SANS RECUPERATION POSSIBLE !!</French>
+			<German>!! SPIELSTAND WIRD GELÖSCHT, KEIN WIEDERHERSTELLEN MÖGLICH !!</German>
+			<Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
+			<Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
+			<Italian>!! I SALVATAGGI SARANNO ELIMINATI, SENZA POSSIBILITA' DI RECUPERO !!</Italian>
+			<Chinesesimp>!! 存档将被移除，且无法恢复 !!</Chinesesimp>
+			<Turkish>!! KAYITLI OYUN SİLİNECEKTİR, GERİ GETİRELEMEZ !!</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGOPTIONS">
+			<Original>== DEBUG MESSAGES ==</Original>
+			<German>== DEBUG NACHRICHTEN ==</German>
+			<Turkish>== DEBUG MESAJLARI ==</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGASYMM">
+			<Original>Asymmetric Threat</Original>
+			<German>Asymmetrische Bedrohung</German>
+			<Turkish>Asimetrik Tehdit</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGCIVINFO">
+			<Original>Civil Informant</Original>
+			<German>Ziviler Informant</German>
+			<Turkish>Sivil Bilgisi</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGCIVREP">
+			<Original>Civil Reputation</Original>
+			<German>Ziviles Ansehen</German>
+			<Turkish>Sivil Repütasyonu</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGKILL">
+			<Original>Killed units</Original>
+			<German>Getötete Einheiten</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGLOGI">
+			<Original>Logistic</Original>
+			<German>Logistik</German>
+			<Turkish>Lojistik</Turkish>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGPROD">
+			<Original>Production</Original>
+			<German>Produktion</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGSAVE">
+			<Original>Saving</Original>
+			<German>Savegame Speicherung</German>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGSECTORSPAWN">
+			<Original>Sectorspawn</Original>
+			<German>Sektorspawn</German>
+		</Key>
+		<!-- Special names -->
+		<Key ID="STR_SQUAD_LIGHT">
+			<Original>Light Rifle Squad</Original>
+			<French>Escouade Fusiliers Légère</French>
+			<German>Leichter Waffentrupp</German>
+			<Spanish>Escuadra de fusileros ligeros</Spanish>
+			<Russian>Легкий Стрелковый Отряд</Russian>
+			<Italian>Squadra Fucilieri Leggeri</Italian>
+			<Chinesesimp>轻装步枪班</Chinesesimp>
+			<Turkish>Hafif Silah Timi</Turkish>
+		</Key>
+		<Key ID="STR_SQUAD_RIFLE">
+			<Original>Heavy Rifle Squad</Original>
+			<French>Escouade Fusiliers Lourde</French>
+			<German>Schwerer Waffentrupp</German>
+			<Spanish>Escuadra de fusileros pesados</Spanish>
+			<Russian>Тяжёлый Стрелковый Отряд</Russian>
+			<Italian>Squadra Fucilieri Pesanti</Italian>
+			<Chinesesimp>重装步枪班</Chinesesimp>
+			<Turkish>Ağır Silah Timi</Turkish>
+		</Key>
+		<Key ID="STR_SQUAD_AT">
+			<Original>AT Squad</Original>
+			<French>Escouade AT</French>
+			<German>Panzerbekämpfungstrupp</German>
+			<Spanish>Escuadra Antitanque</Spanish>
+			<Russian>Отряд ПТ</Russian>
+			<Italian>Squadra Anticarro</Italian>
+			<Chinesesimp>反坦克班</Chinesesimp>
+			<Turkish>Anti-Tank Timi</Turkish>
+		</Key>
+		<Key ID="STR_SQUAD_AA">
+			<Original>AA Squad</Original>
+			<French>Escouade AA</French>
+			<German>Luftabwehrtrupp</German>
+			<Spanish>Escuadra Antiaérea</Spanish>
+			<Russian>Отряд ПВО</Russian>
+			<Italian>Squadra Antiaerea</Italian>
+			<Chinesesimp>防空班</Chinesesimp>
+			<Turkish>Anti-Hava Timi</Turkish>
+		</Key>
+		<Key ID="STR_SQUAD_RECON">
+			<Original>Recon Squad</Original>
+			<French>Escouade Recon</French>
+			<German>Aufklärungstrupp</German>
+			<Spanish>Escuadra de reconocimiento</Spanish>
+			<Russian>Отряд Разведчиков</Russian>
+			<Italian>Squadra Ricognitori</Italian>
+			<Chinesesimp>侦察班</Chinesesimp>
+			<Turkish>Gözcü Timi</Turkish>
+		</Key>
+		<Key ID="STR_SQUAD_PARA">
+			<Original>Paratroopers Squad</Original>
+			<French>Escouade Parachutistes</French>
+			<German>Fallschirmjägertrupp</German>
+			<Spanish>Escuadra de paracaidistas</Spanish>
+			<Russian>Отряд Десантников</Russian>
+			<Italian>Squadra Paracadutisti</Italian>
+			<Chinesesimp>空降班</Chinesesimp>
+			<Turkish>Paraşütçü Asker Timi</Turkish>
+		</Key>
+		<!-- Dialog Elements -->
+		<Key ID="STR_DEPLOY_TITLE">
+			<Original>DEPLOYMENT</Original>
+			<French>DEPLOIEMENT</French>
+			<German>EINSATZ</German>
+			<Spanish>DESPLIEGUE</Spanish>
+			<Russian>ДИСЛОКАЦИЯ</Russian>
+			<Italian>SCHIERAMENTO</Italian>
+			<Chinesesimp>部署</Chinesesimp>
+			<Turkish>CANLANMA</Turkish>
+		</Key>
+		<Key ID="STR_DEPLOY_SPAWNLIST">
+			<Original>Deployment location:</Original>
+			<French>Lieu de déploiement:</French>
+			<German>Einsatzposition:</German>
+			<Spanish>Lugar para el despliegue:</Spanish>
+			<Russian>Позиция размешения:</Russian>
+			<Italian>Luogo di Schieramento:</Italian>
+			<Chinesesimp>部署地点：</Chinesesimp>
+			<Turkish>Doğma noktası:</Turkish>
+		</Key>
+		<Key ID="STR_DEPLOY_LOADOUTLIST">
+			<Original>Loadout:</Original>
+			<French>Equipement:</French>
+			<German>Ausrüstung:</German>
+			<Spanish>Equipamiento:</Spanish>
+			<Russian>Снаряжение:</Russian>
+			<Italian>Equipaggiamento:</Italian>
+			<Chinesesimp>装备：</Chinesesimp>
+			<Turkish>Ekipman:</Turkish>
+		</Key>
+		<Key ID="STR_DEPLOY_BUTTON">
+			<Original>Deploy</Original>
+			<French>Déploiment</French>
+			<German>Einsetzen</German>
+			<Spanish>Desplegar</Spanish>
+			<Russian>РАЗМЕСТИТЬ</Russian>
+			<Italian>Schierati</Italian>
+			<Chinesesimp>部署</Chinesesimp>
+			<Turkish>Canlan</Turkish>
+		</Key>
+		<!-- Hints -->
+		<Key ID="STR_HINT_RESPAWNCOOLDOWN">
+			<Original>%1 minutes mobile respawn cooldown left.</Original>
+			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+			<Italian>Mancano ancora %1 minuti al respawn.</Italian>
+		</Key>
+		<Key ID="STR_HINT_BLACKLISTEDITEMFOUND">
+			<Original>Following items are not allowed:\n%1</Original>
+			<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
+			<Russian>Следующие элементы не разрешены:\n%1</Russian>
+			<Italian>Questi elementi non sono ammessi:\n%1</Italian>
+			<Chinesesimp>以下物品已被禁用：\n%1</Chinesesimp>
+			<Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
+		</Key>
+    </Package>
+</Project>

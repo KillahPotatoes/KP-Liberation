@@ -1,0 +1,45 @@
+author = "[KP] Wyqer";
+onLoadName = $STR_MISSION_TITLE;
+onLoadMission = "www.killahpotatoes.de";
+briefingName = $STR_MISSION_TITLE;
+loadScreen = "res\liberation.jpg";
+overviewText = $STR_MISSION_DESCRIPTION;
+class Header {
+	gameType = "CTI";
+	minPlayers = 1;
+	maxPlayers = 37;
+};
+
+respawn = 3;
+respawndelay = 5;
+respawnButton = 1;
+respawnDialog = 0;
+disabledAI = true;
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+joinUnassigned = 1;
+
+corpseManagerMode = 1;
+corpseLimit = 50;
+corpseRemovalMinTime = 600;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 1200;
+wreckRemovalMaxTime = 7200;
+minPlayerDistance = 1000;
+
+#include "KPLIB_params.hpp"
+#include "KPLIB_functions.hpp"
+#include "KPLIB_ui.hpp"
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title =	$STR_DEBRIEF_SORRY;
+		subtitle = "";
+		description = $STR_DEBRIEF_COMMANDER_NOT_AUTHORIZED;
+		pictureBackground = "";
+	};
+};
