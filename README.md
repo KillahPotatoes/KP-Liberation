@@ -161,7 +161,7 @@ class Missions
 
 ## Changelog
 
-### 0.963 (in development)
+### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.
 * Removed: Provided ACE settings, as they are not used anymore since the last ACE update.
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
