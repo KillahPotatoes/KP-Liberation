@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.963
+## Current version : 0.97
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -10,13 +10,89 @@
 
 [Discord](https://discord.gg/bpPUU48)
 
-This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
+This mission is a full rewrite of the original mission from [GreuhZbug](https://github.com/GreuhZbug).
 
 [Original Liberation mission v0.924](https://github.com/GreuhZbug/greuh_liberation.Altis)
 
 If you like the work and think it's worth a small donation, feel free to use the following link:
 
 [Donate via paypal.me](https://www.paypal.me/wyqer)
+
+## REFACTORING BRANCH
+**!!Not meant to be used for playing at all!!**
+
+**!TAKE ATTENTION TO THE LICENSE CHANGE FOR EVERYTHING IN THIS BRANCH!**
+
+This will replace the current missioncode when it's finished.
+
+Don't get me wrong, but I would prefer hints or suggestions more than contributions of finished code. Reason is that I want to use this rewrite to improve my knowledge about SQF and the possibilities. This benefit would be lost if you contribute finished code, but would still be present if you contribute hints or suggestions via Discord or the issue section in this repo. Edits for "already finished code" (or additional presets for example) via pull request would also keep the benefit for me, so this would also be a appreciated way to support this work.
+
+Guess the hardest thing is to think "out of the box" for already working code. If you look through a code which works without any issues it's not that easy to really find "completely different" ways to realize the functionality in a possible more performance friendly or "better" way. Small tweaks and optimizations are common to find, but rewrite it in a completely different way would be the challenge (if even really needed in the particular file).
+
+Many thanks in advance for all supporters and the Liberation community.
+
+### Goal
+* Modular and therefore much cleaner structure
+* More streamlined code
+* Performance improvements due to code optimizations
+* Easier ways to debug
+* Easier ways to add additional gameplay aspects due to the modular framework
+* There should be no need to do any additions in any `mission.sqm` (removing would be ok)
+* Personally: Using this project to get more familiar with SQF and the Liberation mission itself than before
+
+### Conventions
+* Global variable naming: `KPLIB_moduleName_variableName`
+    * moduleName: The name of the module like `init` or if it is kind of a global category like `preset` or `param`
+    * variableName: Name of the specific variable like `heavySquad` or `adaptiveEnemy`
+    * Only some very rare variables have no moduleName, as they are not directly connected to a module.
+* Function naming: `KPLIB_fnc_moduleName_functionName` (same rules like for the variables)
+* CfgFunctions Framework
+    * `KPLIB_functions.hpp` in missionroot as central fetching file
+    * Each module has an own `functions.hpp` which is included by the `KPLIB_functions.hpp`
+* Modular structure
+    * Naming for modules: `loadOrderNumber_moduleName` like `00_init` or `01_core`
+    * Each module will handle one aspect of the game. For example the initialization, core mechanics, enemy spawn, civil reputation, etc.
+    * General structure:
+        * `fnc` folder for functions and one-time-procedures
+        * `scripts` folder for the scripts (so basically everything which runs a loop through the whole session)
+            * Seperation (if even needed) with a `server`, `client`, `shared` folder
+        * `ui` folder for all dialogs or ui defines which are brought or needed by that module
+        * `functions.hpp` to define the functions of this module
+        * `globals.sqf` to define all global variables which are brought or needed by that module and aren't defined before
+        * `initModule.sqf` which is called by all machines and where possible seperation for clients/HCs/Server will happen
+        * `ui.hpp` to define the ui elements and dialogs from this module (will be included by the `KPLIB_ui.hpp` in the mission root)
+
+### Currently working on (Importance descending) 
+* Core Module
+    * Intro cinematic
+* Go through the `Missionframework\modules\00_init\ui\KPLIB_defines.hpp`
+* Go through the `Missionframework\modules\01_core\ui\KPLIB_titles.hpp`
+* Stringtable
+    * Adding only really needed strings for the current rewrite stage one by one to sort deprecated ones out (runs for the whole rewrite)
+
+### Finished so far (chronologically ascending)
+* Mission parameters
+    * Some format tweaks
+    * Fetch mission parameters function
+    * KPLIB config overhaul and readout
+* Init Module
+    * Sector sorting
+    * Preset initialization and filtering serverside
+    * Send preset data to clients after filtering
+    * Receiving preset data on clients
+    * Globals
+    * Load and save function of this module for the save manager framework
+    * Manage sector and FOB map markers
+    * Arsenal init
+    * Local markers creation
+* Save manager framework
+    * Morph the current save manager to a framework, which only calls module specific load or fetch save data functions
+* Core Module
+    * Spawn menu
+    * Spawn camera
+
+### Still to do
+* Too much ;)
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
@@ -159,7 +235,27 @@ class Missions
 ## Media
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
+## License
+Copyright (C) 2017 [Wyqer](https://github.com/Wyqer)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 ## Changelog
+
+### 0.97 (in development)
+* Added: Refactored code for the whole framework
+* Removed: Old code from the whole framework
 
 ### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.
