@@ -17,6 +17,7 @@ if (isNil "manned") then { manned = false };
 if (isNil "gridmode" ) then { gridmode = 0 };
 if (isNil "repeatbuild" ) then { repeatbuild = false };
 if (isNil "build_rotation" ) then { build_rotation = 0 };
+if (isNil "build_elevation" ) then { build_elevation = 0 }; 
 
 waitUntil { sleep 0.2; !isNil "dobuild" };
 
@@ -89,7 +90,10 @@ while { true } do {
 				_idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>","scripts\client\build\do_grid.sqf","",-735,false,false,"","build_confirmed == 1"];
 				_idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
 			};
+
 			_idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>","scripts\client\build\build_rotate.sqf","",-750,false,false,"","build_confirmed == 1"];
+			_idactraise = player addAction ["<t color='#B0FF00'>-- Raise</t>","scripts\client\build\build_raise.sqf","",-765,false,false,"","build_confirmed == 1"];
+			_idactlower = player addAction ["<t color='#B0FF00'>-- Lower</t>","scripts\client\build\build_lower.sqf","",-766,false,false,"","build_confirmed == 1"];
 			_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
 			_ghost_spot = (getmarkerpos "ghost_spot") findEmptyPosition [0,100];
@@ -141,6 +145,8 @@ while { true } do {
 				} foreach GRLIB_preview_spheres;
 
 				_vehicle setdir _actualdir;
+				
+				_truepos = [_truepos select 0, _truepos select 1, (_truepos select 2) +  build_elevation];
 
 				_near_objects = (_truepos nearobjects ["AllVehicles", _dist]) ;
 				_near_objects = _near_objects + (_truepos nearobjects [FOB_box_typename, _dist]);
