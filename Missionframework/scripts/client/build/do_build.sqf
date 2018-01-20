@@ -374,7 +374,9 @@ while { true } do {
 			};
 			player removeAction _idactrotate;
 			player removeAction _idactplace;
-
+			player removeAction _idactraise;
+			player removeAction _idactlower;
+			
 			if(buildtype == 99) then {
 				_new_fob = getpos player;
 				[_new_fob, false] remoteExec ["build_fob_remote_call",2];
