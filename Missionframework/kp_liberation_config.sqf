@@ -247,6 +247,8 @@ KP_liberation_allowed_items_extension = [
 	"rhs_acc_ekp8_18b",
 	"rhs_acc_ekp8_18c",
 	"rhs_acc_ekp8_18d",
+	"rhs_rshg2_mag",
+	"rhs_rpg26_mag",
 	"rhsusf_acc_g33_T1_flip",
 	"rhsusf_acc_g33_xps3_flip",
 	"rhsusf_acc_g33_xps3_tan_flip",
