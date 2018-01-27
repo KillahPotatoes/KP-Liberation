@@ -5538,5 +5538,17 @@
 			<Chinesesimp>生产</Chinesesimp>
 			<Portuguese>Produção</Portuguese>
 		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS">
+			<Original>Load/Save Parameters</Original>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
+			<Original>SAVE selected parameters</Original>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
+			<Original>LOAD parameters or use selected if no saved value found</Original>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
+			<Original>Use selected parameters without saving</Original>
+		</Key>
 	</Package>
 </Project>
