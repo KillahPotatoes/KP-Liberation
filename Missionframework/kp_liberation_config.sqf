@@ -6,15 +6,11 @@ CONFIG FILE FOR KP LIBERATION
 KP_liberation_medical_vehicles = [
 	"B_Truck_01_medical_F",
 	"B_T_Truck_01_medical_F",
-	"rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
-	"rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
 	"rhsusf_m113_usarmy_medical",
 	"rhsusf_m113d_usarmy_medical",
 	"rhsusf_M1230a1_usarmy_d",
 	"rhsusf_M1230a1_usarmy_wd",
-	"RHS_UH60M_MEV",
 	"RHS_UH60M_MEV2",
-	"RHS_UH60M_MEV_d",
 	"RHS_UH60M_MEV2_d",
 	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
 	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
@@ -28,7 +24,7 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings. 
+/* - Custom unit and arsenal preset settings.
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
@@ -41,7 +37,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 6 = RHS USAF (Woodland)
 7 = RHS USAF (Desert)
 8 = RHS AFRF (VDV/MSV) */
-KP_liberation_preset_blufor = 0;
+KP_liberation_preset_blufor = 1;
 
 /* OPFOR preset:
 0 = Custom (default vanilla CSAT)
@@ -49,14 +45,14 @@ KP_liberation_preset_blufor = 0;
 2 = RHS AFRF (EMR/MSV)
 3 = Project OPFOR (Takistan)
 4 = Project OPFOR (Islamic State) */
-KP_liberation_preset_opfor = 0;
+KP_liberation_preset_opfor = 2;
 
 /* Resistance preset:
 0 = Custom (default vanilla FIA)
 1 = Apex Tanoa (apex vanilla Syndikat)
 2 = RHS GREF
 3 = Project OPFOR (Middle Eastern) */
-KP_liberation_preset_resistance = 0;
+KP_liberation_preset_resistance = 2;
 
 /* Civilians preset:
 0 = Custom (default vanilla)
@@ -70,7 +66,7 @@ KP_liberation_preset_civilians = 0;
 2 = Killah Potatoes Gaming Community arsenal preset.
 3 = RHS USAF arsenal preset.
 4 = RHS USAF arsenal preset with ACE.
-5 = RHS USAF arsenal preset with ACE and ACRE.	
+5 = RHS USAF arsenal preset with ACE and ACRE.
 6 = 3cbBAF and RHS USAF arsenal preset. */
 KP_liberation_arsenal = 0;
 
@@ -96,14 +92,14 @@ GRLIB_color_friendly = "ColorBLUFOR";																			// Friendly sector marke
 GRLIB_color_enemy = "ColorOPFOR";																				// Enemy sector marker color.
 GRLIB_color_enemy_bright = "ColorRED";																			// Enemy sector marker color (activated).
 
-GRLIB_fob_range = 125;																							// Build range around the main FOB building.
-GRLIB_halo_altitude = 2500;																						// Altitude in metres for the HALO jump.
-GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
+GRLIB_fob_range = 200;																							// Build range around the main FOB building.
+GRLIB_halo_altitude = 2000;																						// Altitude in metres for the HALO jump.
+GRLIB_secondary_missions_costs = [15, 10, 5];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
-GRLIB_recycling_percentage = 0.5;																				// Percentage of resources you get back from recycling.
+GRLIB_recycling_percentage = 0.75;																				// Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1000;																						// Range to activate a sector.
+GRLIB_sector_size = 1200;																						// Range to activate a sector.
 GRLIB_capture_size = 175;																						// Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.4;																			// Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 6							* (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);	// Size of enemy battlegroups.
@@ -120,12 +116,12 @@ GRLIB_battlegroup_cap = 150							* GRLIB_unitcap;											// Cap for enemy ba
 GRLIB_patrol_cap = 150								* GRLIB_unitcap;											// Cap for enemy patrols.
 
 KP_liberation_cr_kill_penalty = 5;																				// Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 3;																			// Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_building_penalty = 2;																			// Civil Reputation penalty for destroying/damaging a building.
 KP_liberation_cr_vehicle_penalty = 2;																			// Civil Reputation penalty for stealing a civilian vehicle.
 KP_liberation_cr_resistance_penalty = 3;																		// Civil Reputation penalty for killing a friendly resistance soldier.
-KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 35;																			// Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_gain = 2;																				// Civil Reputation gain for providing medical assistance for wounded civilians.
+KP_liberation_cr_sector_gain = 4;																				// Civil Reputation gain for liberate a sector.
+KP_liberation_cr_wounded_chance = 50;																			// Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_gain = 1;																				// Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time. (seconds)
 KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time. (seconds)
@@ -145,7 +141,7 @@ KP_liberation_resistance_sector_chance = 35;																	// Chance that a gu
 KP_liberation_resistance_ambush_chance = 30;																	// Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 /* - Default arsenal blacklist method.
-Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
+Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
 blacklisted_from_arsenal = [
 	"I_HMG_01_weapon_F",
@@ -230,12 +226,6 @@ blacklisted_from_arsenal = [
 	"RHS_NSV_Gun_Bag",
 	"RHS_SPG9_Gun_Bag",
 	"RHS_SPG9_Tripod_Bag",
-	"UK3CB_BAF_L16",
-	"UK3CB_BAF_L16_Tripod",
-	"UK3CB_BAF_M6",
-	"UK3CB_BAF_L111A1",
-	"UK3CB_BAF_L134A1",
-	"UK3CB_BAF_Tripod",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg"
@@ -271,10 +261,9 @@ KP_liberation_allowed_items_extension = [
 	"BWA3_acc_LLM01_flash",
 	"BWA3_acc_LLM01_laser",
 	"BWA3_acc_LLM01_flash_underbarrel",
-	"BWA3_acc_LLM01_laser_underberrel",
+	"BWA3_acc_LLM01_laser_underberre",
 	"BWA3_acc_LLM01_laser_underbarrel",
 	"UK3CB_BAF_AT4_CS_AP_Mag",
-	"UK3CB_BAF_Javelin_Launcher",
 	"sma_spitfire_03_rds_low_ard_red",
 	"ACE_Chemlight_Shield_Orange",
 	"ACE_Chemlight_Shield_White",
