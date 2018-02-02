@@ -11,22 +11,22 @@
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.963</Original>
-			<German>KP Liberation v0.963</German>
-			<Spanish>KP Liberation v0.963</Spanish>
-			<Italian>KP Liberation v0.963</Italian>
-			<Chinesesimp>KP Liberation v0.963</Chinesesimp>
-			<Turkish>KP Liberation v0.963</Turkish>
-			<Portuguese>KP Liberation v0.963</Portuguese>
+			<Original>KP Liberation Chernarus v0.962</Original>
+			<German>KP Liberation Chernarus v0.962</German>
+			<Spanish>KP Liberation Chernarus v0.962</Spanish>
+			<Italian>KP Liberation Chernarus v0.962</Italian>
+			<Chinesesimp>KP Liberation Chernarus v0.962</Chinesesimp>
+			<Turkish>KP Liberation Chernarus v0.962</Turkish>
+			<Portuguese>KP Liberation Chernarus v0.962</Portuguese>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.963</Original>
-			<German>v0.963</German>
-			<Spanish>v0.963</Spanish>
-			<Italian>v0.963</Italian>
-			<Chinesesimp>v0.963</Chinesesimp>
-			<Turkish>v0.963</Turkish>
-			<Portuguese>v0.963</Portuguese>
+			<Original>v0.962</Original>
+			<German>v0.962</German>
+			<Spanish>v0.962</Spanish>
+			<Italian>v0.962</Italian>
+			<Chinesesimp>v0.962</Chinesesimp>
+			<Turkish>v0.962</Turkish>
+			<Portuguese>v0.962</Portuguese>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -1513,7 +1513,6 @@
 		<Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
 			<Original>Manage AI Skill</Original>
 			<Chinesesimp>管理AI能力</Chinesesimp>
-			<Italian>Livello Difficoltà AI</Italian>
 			<Turkish>AI Yeteneklerii düzenle</Turkish>
 			<Portuguese>Gerir nível de habilidade da IA</Portuguese>
 		</Key>
@@ -2620,7 +2619,6 @@
 		<Key ID="STR_PARAM_CLEAR_CARGO">
 			<Original>Clear spawned vehicle cargo</Original>
 			<German>Inventar gespawnter Fahrzeuge leeren</German>
-			<Italian>Cancella il carico del veicolo creato</Italian>
 			<Portuguese>Remover carga do veículo requisitado</Portuguese>
 		</Key>
 		<Key ID="STR_DEPLOY_IN_PROGRESS">
@@ -2668,7 +2666,7 @@
 			<Portuguese>Não é possível construir: Forças hostis na proximidade.</Portuguese>
 		</Key>
 		<Key ID="STR_CLEANUP_PARAM">
-			<Original>Cleanup abandoned vehicles outside FOBs</Original>
+			<Original>Cleanup abandonned vehicles outside FOBs</Original>
 			<French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
 			<German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
 			<Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
@@ -2937,7 +2935,7 @@
 			<German>Aufmunitioniert in %1s</German>
 			<Spanish>Rearmando en %1s</Spanish>
 			<Russian>Перезарядка за %1с</Russian>
-			<Italian>Riarmando 1%</Italian>
+			<Italian>Riarmamento 1%</Italian>
 			<Chinesesimp>%1后开始补充弹药</Chinesesimp>
 			<Turkish>%1 saniye içinde yeniden dolduruluyor</Turkish>
 			<Portuguese>Remuniciando em %1s</Portuguese>
@@ -2948,7 +2946,7 @@
 			<German>Auftanken</German>
 			<Spanish>Repostando</Spanish>
 			<Russian>Заправка</Russian>
-			<Italian>Rifornendo</Italian>
+			<Italian>Rifornimento</Italian>
 			<Chinesesimp>加油中</Chinesesimp>
 			<Turkish>Yakıt koyuluyor</Turkish>
 			<Portuguese>Reabastecendo</Portuguese>
@@ -3100,7 +3098,6 @@
 			<Original>-- TUTORIAL</Original>
 			<French>-- TUTORIAL</French>
 			<German>-- TUTORIAL</German>
-			<Italian>-- TUTORIAL</Italian>
 			<Spanish>-- TUTORIAL</Spanish>
 			<Russian>-- РУКОВОДСТВО</Russian>
 			<Chinesesimp>-- 教程</Chinesesimp>
@@ -3111,7 +3108,6 @@
 			<Original>TUTORIAL</Original>
 			<French>TUTORIAL</French>
 			<German>TUTORIAL</German>
-			<Italian>TUTORIAL</Italian>
 			<Spanish>TUTORIAL</Spanish>
 			<Russian>РУКОВОДСТВО</Russian>
 			<Chinesesimp>教程</Chinesesimp>
@@ -4873,7 +4869,7 @@
 			O interrogatório, executado em observância à Convenção de Genebra, o permitirá a obtenção de informações que podem ser empregadas para revelar a posição aproximada da base de logística inimiga, comboio inimigo ou operações de busca e resgate de forças aliadas.&lt;br/&gt; &lt;br/&gt;
 			Após chegar na área de operações, você precisará identificar a localização exata do seu alvo, e então fazer uso dos meios necessários à sua disposição para concluir seu objetivo. Ao lograr êxito em sua tarefa, serão recompensados, reduzindo o nível de alerta  reducing the alert level inimigo e consequentemente a eficiência de todas as forças hostis.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
+			
 		</Key>
 		<Key ID="STR_TUTO_TITLE10">
 			<Original>10. Commanding</Original>
@@ -5115,7 +5111,6 @@
 		<Key ID="STR_GREUH_NO">
 			<Original>No</Original>
 			<German>Nein</German>
-			<Italian>No</Italian>
 			<Chinesesimp>否</Chinesesimp>
 			<Turkish>Evet</Turkish>
 			<Portuguese>Não</Portuguese>
@@ -5275,7 +5270,6 @@
 		<Key ID="STR_CR_HEALMSG">
 			<Original>Civilian named %1 is thankful for your help.</Original>
 			<German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
-			<Italian>Il civile di nome %1 ti ringrazia per l'aiuto.</Italian>
 			<Portuguese>Um civil chamado %1 agradeceu sua ajuda.</Portuguese>
 		</Key>
 		<Key ID="STR_PARAM_CR_BUILDING">
@@ -5373,6 +5367,13 @@
 			<Turkish>Sivil Repütasyonu</Turkish>
 			<Chinesesimp>民间声望</Chinesesimp>
 			<Portuguese>Reputação Civil</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_SAVE">
+			<Original>Saving</Original>
+			<German>Savegame Daten (zeigt komplettes Savegame Array jede Minute in der server.rpt)</German>
+			<Italian>Salvataggio Dati</Italian>
+			<Chinesesimp>保存中</Chinesesimp>
+			<Portuguese>Salvando</Portuguese>
 		</Key>
 		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
 			<Original>A civilian from %1 says he has some information for us.</Original>
