@@ -24,15 +24,4 @@ GRLIB_whitelisted_names = [
 // Arty Supp deactivated for now
 /*KP_liberation_suppMod_whitelist = [
 
-];
-*/
-KP_liberation_logistic_whitelist = [
-    "76561198027478646", 	//PSYKO
-    "76561198010458519", 	//Mardigan
-    "76561198010615698", 	//Vapour
-    "76561197998144534",	//Pies
-    "76561198035760225",	//Kiwi
-    "76561198015623617",	//jd6m
-    "76561198048023924",	//Fraser
-    "76561198011864182"		//Hawk
-];
+];*/

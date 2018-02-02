@@ -14,8 +14,11 @@ BOOL
 params ["_vehicleclass"];
 
 private _isUAV = false;
-if( getNumber(configFile >> "CfgVehicles" >> _vehicleclass >> "isUav") == 1 && (typeName  _vehicleclass == "STRING") ) then {
-	_isUAV = true;
+
+if ((typeName _vehicleclass) == "STRING") then {
+	if ((getNumber(configFile >> "CfgVehicles" >> _vehicleclass >> "isUav")) == 1) then {
+		_isUAV = true;
+	};
 };
 
 _isUAV;

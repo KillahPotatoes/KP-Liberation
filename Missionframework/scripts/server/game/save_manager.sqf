@@ -197,7 +197,7 @@ if (!isNil "greuh_liberation_savegame") then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
-
+	
 	// Arty Supp deactivated for now
 	/*if (KP_liberation_suppMod_enb > 0) then {
 		waitUntil {!isNil "KP_liberation_suppMod_created"};
@@ -252,19 +252,19 @@ if (!isNil "greuh_liberation_savegame") then {
 			if (_nextclass == FOB_typename) then {
 				_nextbuilding addEventHandler ["HandleDamage", {0}];
 			};
-
+			
 			if (_nextclass in KP_liberation_medical_vehicles) then {
 				_nextbuilding setVariable ["ace_medical_medicClass", 1, true];
 			};
-
+			
 			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
-
+			
 			if (_nextclass == KP_liberation_recycle_building) then {
 				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
 			};
-
+			
 			if (_nextclass == "Flag_White_F") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
@@ -286,15 +286,12 @@ if (!isNil "greuh_liberation_savegame") then {
 
 			if (_nextclass in civilian_vehicles) then {
 				KP_liberation_cr_vehicles pushBack _nextbuilding;
-				if (_nextclass == "I_Heli_light_03_dynamicLoadout_F") then {
-    [_nextbuilding,["Green",1],true] call BIS_fnc_initVehicle;
-};
 			};
 		};
 	} forEach buildings_to_save;
 
 	if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
-
+	
 	{
 		private _nextclass = _x select 0;
 
@@ -318,11 +315,11 @@ if (!isNil "greuh_liberation_savegame") then {
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
-
+			
 			private _supply = floor (_x select 3);
 			private _ammo = floor (_x select 4);
 			private _fuel = floor (_x select 5);
-
+			
 			while {_supply > 0} do {
 				private _amount = 100;
 				if ((_supply / 100) < 1) then {
@@ -377,11 +374,11 @@ if (!isNil "greuh_liberation_savegame") then {
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
-
+			
 			private _supply = floor (_x select 9);
 			private _ammo = floor (_x select 10);
 			private _fuel = floor (_x select 11);
-
+			
 			while {_supply > 0} do {
 				private _amount = 100;
 				if ((_supply / 100) < 1) then {
@@ -415,7 +412,7 @@ if (!isNil "greuh_liberation_savegame") then {
 	} forEach KP_liberation_production;
 
 	if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved sector storages placed";};
-
+	
 	{
 		private _nextgroup = _x;
 		private _grp = createGroup GRLIB_side_friendly;
@@ -496,10 +493,10 @@ while {true} do {
 				!((typeOf _x) in KP_liberation_crates) &&
 				!(_x getVariable ["KP_liberation_preplaced", false])
  			}] call BIS_fnc_conditionalSelect;
-
+				
 			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
 			_all_storages = [(_all_storages + _nextbuildings), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
-
+			
 			{
 				private _nextgroup = _x;
 				if (side _nextgroup == GRLIB_side_friendly) then {
@@ -553,7 +550,7 @@ while {true} do {
 		{
 			private _savedpos = [];
 			private _savedvec = [];
-
+			
 			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
 			_savedvec = _x getVariable ["KP_saved_vec", []];
 			if ((count _savedpos == 0) || (count _savedvec == 0)) then {
@@ -562,14 +559,14 @@ while {true} do {
 				_savedpos = getPosATL _x;
 				_savedvec = vectorUpVisual _x;
 			};
-
+			
 			private _nextclass = typeof _x;
 			private _nextdir = getdir _x;
-
+			
 			_supplyValue = 0;
 			_ammoValue = 0;
 			_fuelValue = 0;
-
+			
 			{
 				switch ((typeOf _x)) do {
 					case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
@@ -578,8 +575,8 @@ while {true} do {
 					default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 				};
 			} forEach (attachedObjects _x);
-
-			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];
+			
+			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];		
 		} forEach _all_storages;
 
 		time_of_day = date select 3;

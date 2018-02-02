@@ -5,7 +5,7 @@ if ( count GRLIB_all_fobs >= GRLIB_maximum_fobs ) exitWith {
 };
 
 _minfobdist = 1000;
-_minsectordist = 100;
+_minsectordist = GRLIB_capture_size + GRLIB_fob_range;
 _distfob = 1;
 _clearedtobuildfob = true;
 _distsector = 1;

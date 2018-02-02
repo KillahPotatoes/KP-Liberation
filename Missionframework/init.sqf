@@ -27,13 +27,3 @@ if (!isDedicated && hasInterface) then {
 } else {
 	setViewDistance 1600;
 };
-if (hasinterface) then {
-waitUntil {!isnull player};
-player enableStamina false;
-player addEventHandler ["Respawn", {player enableStamina  false}];
-};
-
-if (local player) then { 
-player setCustomAimCoef 0.1; 
-player addMPEventhandler ["MPRespawn", {player setCustomAimCoef 0.1;}]; 
-};
