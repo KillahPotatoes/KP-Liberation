@@ -1,6 +1,6 @@
 /*
 Needed Mods:
-- None
+- RDS Civilian Pack
 
 Optional Mods:
 - None
