@@ -61,7 +61,8 @@ KP_liberation_preset_resistance = 0;
 /* Civilians preset:
 0 = Custom (default vanilla)
 1 = Apex Tanoa (apex vanilla)
-2 = Project OPFOR (Middle Eastern) */
+2 = Project OPFOR (Middle Eastern)
+3 = RDS Civilians */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
