@@ -1,6 +1,5 @@
 {
   "name": "kp_liberation",
-  "main": "dist/index.js",
   "engines": {
     "node": ">=7"
   },
