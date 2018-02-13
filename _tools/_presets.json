@@ -115,5 +115,18 @@
             "KP_liberation_preset_civilians": 2,
             "KP_liberation_arsenal": 0
         }
+    },
+    {
+        "sourceFolder": "kp_liberation.Tanoa",
+        "missionName": "kp_liberation",
+        "map": "Tanoa",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 1,
+            "KP_liberation_preset_opfor": 1,
+            "KP_liberation_preset_resistance": 1,
+            "KP_liberation_preset_civilians": 1,
+            "KP_liberation_arsenal": 0
+        }
     }
 ]
