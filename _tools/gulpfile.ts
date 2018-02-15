@@ -34,46 +34,39 @@ for (let preset of presets) {
     const mission = new MissionPaths(preset, paths);
     const taskName = [preset.missionName, preset.map].join('.');
 
-    /**
-     * Copy mission framework to output dir
-     */
-    taskNames.push('framework_' + taskName);
 
-    gulp.task('framework_' + taskName, () => {
-        return gulp.src(mission.getFrameworkPath().concat('/**/*'))
-            .pipe(gulp.dest(mission.getOutputDir()));
-    });
+    taskNames.push('mission_' + taskName);
 
-    /**
-     * Copy mission.sqm to output dir
-     */
-    taskNames.push('sqm_' + taskName);
+    gulp.task('mission_' + taskName, gulp.series(
+        /** Copy mission framework to output dir */
+        () => {
+            return gulp.src(mission.getFrameworkPath().concat('/**/*'))
+                .pipe(gulp.dest(mission.getOutputDir()));
+        },
+        
+        /** Copy mission.sqm to output dir */
+        () => {
+            return gulp.src(mission.getMissionSqmPath())
+                .pipe(gulp.dest(mission.getOutputDir()));
+        },
 
-    gulp.task('sqm_' + taskName, () => {
-        return gulp.src(mission.getMissionSqmPath())
-            .pipe(gulp.dest(mission.getOutputDir()));
-    });
-
-    /**
-     * Replace variables values in configuration file
-     */
-    taskNames.push('vars_' + taskName);
-
-    gulp.task('vars_' + taskName, () => {
-        let src = gulp.src(mission.getMissionConfigFilePath());
-
-        const variables = Object.getOwnPropertyNames(preset.variables);
-        for (let variable of variables) {
-            // https://regex101.com/r/YknC8r/1
-            const regex = new RegExp(`(${variable} += +)(?:\\d+|".+")`, 'ig');
-            const value = JSON.stringify(preset.variables[variable]);
-
-            // replace variable value
-            src = src.pipe(gulpReplace(regex, `$1${value}`));
+        /** Replace variables values in configuration file */
+        () => {
+            let src = gulp.src(mission.getMissionConfigFilePath());
+    
+            const variables = Object.getOwnPropertyNames(preset.variables);
+            for (let variable of variables) {
+                // https://regex101.com/r/YknC8r/1
+                const regex = new RegExp(`(${variable} += +)(?:\\d+|".+")`, 'ig');
+                const value = JSON.stringify(preset.variables[variable]);
+    
+                // replace variable value
+                src = src.pipe(gulpReplace(regex, `$1${value}`));
+            }
+    
+            return src.pipe(gulp.dest(mission.getOutputDir()));
         }
-
-        return src.pipe(gulp.dest(mission.getOutputDir()));
-    });
+    ));
 
     /**
      * Pack PBOs
