@@ -197,40 +197,45 @@ if (!isNil "greuh_liberation_savegame") then {
 	GRLIB_all_fobs = _correct_fobs;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
-	
+
 	// Arty Supp deactivated for now
 	/*if (KP_liberation_suppMod_enb > 0) then {
 		waitUntil {!isNil "KP_liberation_suppMod_created"};
 	};*/
+
+	private _spawnedBuildings = [];
 
 	{
 		private _nextclass = _x select 0;
 
 		if (_nextclass in _classnames_to_save) then {
 
-			_nextpos = _x select 1;
-			_nextdir = _x select 2;
-			_hascrew = false;
-			if (count _x > 3) then {
-				_hascrew = _x select 3;
-			};
-			_nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
-			_nextbuilding enableSimulationGlobal false;
+			//buildings_to_save pushback [_nextclass,_savedpos,_nextdir,_hascrew,_savedvec];		OLD
+			//buildings_to_save pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_hascrew];		NEW
+
+			private _nextpos = _x select 1;
+			private _nextvecdir = _x select 2;
+			private _nextvecup = _x select 3;
+			private _hascrew = false;
+
+			private _nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
 			_nextbuilding allowdamage false;
-			_nextbuilding setPosATL _nextpos;
-			_nextbuilding setdamage 0;
-			_nextbuilding setdir _nextdir;
-			if (count (_x select 4) == 3) then {
-				_nextbuilding setVectorUp (_x select 4);
-				_nextbuilding setVariable ["KP_saved_vec", (_x select 4), false];
+			_nextbuilding enableSimulation false;
+			_spawnedBuildings pushBack _nextbuilding;
+
+			// Old savegame version (Backwards compatibility)
+			if (typeName _nextvecdir == typeName 0) then {
+				_nextbuilding setPosATL _nextpos;
+				_nextbuilding setdir _nextvecdir;	// actually a number
+				_hascrew = _x param [3, false];
+
+			// New savegame version
+			} else {
+				_nextbuilding setPosWorld _nextpos;
+				_nextbuilding setVectorDirAndUp [_nextvecdir, _nextvecup];
+				_hascrew = _x param [4, false];
 			};
 
-			_nextbuilding enableSimulationGlobal true;
-			_nextbuilding allowdamage true;
-
-			if (_nextclass in _building_classnames) then {
-				_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
-			};
 
 			// Arty Supp deactivated for now
 			/*if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
@@ -252,19 +257,19 @@ if (!isNil "greuh_liberation_savegame") then {
 			if (_nextclass == FOB_typename) then {
 				_nextbuilding addEventHandler ["HandleDamage", {0}];
 			};
-			
+
 			if (_nextclass in KP_liberation_medical_vehicles) then {
 				_nextbuilding setVariable ["ace_medical_medicClass", 1, true];
 			};
-			
+
 			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
 				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
 			};
-			
+
 			if (_nextclass == KP_liberation_recycle_building) then {
 				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
 			};
-			
+
 			if (_nextclass == "Flag_White_F") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
@@ -291,35 +296,49 @@ if (!isNil "greuh_liberation_savegame") then {
 	} forEach buildings_to_save;
 
 	if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
-	
+
 	{
 		private _nextclass = _x select 0;
 
 		if (_nextclass in _classnames_to_save) then {
 
+			//KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];			OLD
+			//KP_liberation_storages pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];		NEW
+
 			private _nextpos = _x select 1;
-			private _nextdir = _x select 2;
+			private _nextvecdir = _x select 2;
+			private _nextvecup = _x select 3;
+			private _supply = 0;
+			private _ammo = 0;
+			private _fuel = 0;
 
-			private _nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];
-			_nextbuilding enableSimulationGlobal false;
+			private _nextbuilding = createVehicle [_nextclass, _nextpos, [], 0, "CAN_COLLIDE"];;
 			_nextbuilding allowdamage false;
-			_nextbuilding setPosATL _nextpos;
-			_nextbuilding setdamage 0;
-			_nextbuilding setdir _nextdir;
-			if (count (_x select 6) == 3) then {
-				_nextbuilding setVectorUp (_x select 6);
-				_nextbuilding setVariable ["KP_saved_vec", (_x select 6), false];
-			};
-			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
-			_nextbuilding setVariable ["GRLIB_saved_pos", _nextpos, false];
+			_nextbuilding enableSimulation false;
 
-			_nextbuilding enableSimulationGlobal true;
+			// Old savegame version (Backwards compatibility)
+			if (typeName _nextvecdir == typeName 0) then {
+				_nextbuilding setPosATL _nextpos;
+				_nextbuilding setdir _nextvecdir;	// actually a number
+				_supply = floor (_x select 3);
+				_ammo = floor (_x select 4);
+				_fuel = floor (_x select 5);
+
+			// New savegame version
+			} else {
+				_nextbuilding setPosWorld _nextpos;
+				_nextbuilding setVectorDirAndUp [_nextvecdir, _nextvecup];
+				_supply = floor (_x select 4);
+				_ammo = floor (_x select 5);
+				_fuel = floor (_x select 6);
+			};
+
+			_nextbuilding setdamage 0;
+			_nextbuilding enableSimulation true;
 			_nextbuilding allowdamage true;
-			
-			private _supply = floor (_x select 3);
-			private _ammo = floor (_x select 4);
-			private _fuel = floor (_x select 5);
-			
+
+			_nextbuilding setVariable ["KP_liberation_storage_type", 0, true];
+
 			while {_supply > 0} do {
 				private _amount = 100;
 				if ((_supply / 100) < 1) then {
@@ -352,6 +371,14 @@ if (!isNil "greuh_liberation_savegame") then {
 		};
 	} forEach KP_liberation_storages;
 
+	// Re-enable physics on the spawned objects
+	{
+		_x enableSimulation true;
+		_x setdamage 0;
+		_x allowdamage true;
+	} forEach _spawnedBuildings;
+
+
 	if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved storages placed"};
 
 	{
@@ -374,11 +401,11 @@ if (!isNil "greuh_liberation_savegame") then {
 
 			_nextbuilding enableSimulationGlobal true;
 			_nextbuilding allowdamage true;
-			
+
 			private _supply = floor (_x select 9);
 			private _ammo = floor (_x select 10);
 			private _fuel = floor (_x select 11);
-			
+
 			while {_supply > 0} do {
 				private _amount = 100;
 				if ((_supply / 100) < 1) then {
@@ -412,7 +439,7 @@ if (!isNil "greuh_liberation_savegame") then {
 	} forEach KP_liberation_production;
 
 	if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved sector storages placed";};
-	
+
 	{
 		private _nextgroup = _x;
 		private _grp = createGroup GRLIB_side_friendly;
@@ -485,18 +512,18 @@ while {true} do {
 			private _fobpos = _x;
 			private _nextbuildings = [_fobpos nearobjects (GRLIB_fob_range * 2), {
 				((typeof _x) in _classnames_to_save ) &&
-				(alive _x) &&
-				(speed _x < 5) &&
-				(isNull attachedTo _x) &&
-				(((getpos _x) select 2) < 10) &&
-				(getObjectType _x >= 8) &&
-				!((typeOf _x) in KP_liberation_crates) &&
+				(alive _x) &&					// Exclude dead or broken objects
+				(speed _x < 5) &&				// Exclude moving objects (like civilians driving through)
+				(isNull attachedTo _x) &&			// Exclude attachTo'd objects
+				(((getpos _x) select 2) < 10) &&		// Exclude hovering helicopters and the like
+				(getObjectType _x >= 8) &&			// Exclude preplaced terrain objects
+				!((typeOf _x) in KP_liberation_crates) &&	// Exclude storage crates (those are handled separately)
 				!(_x getVariable ["KP_liberation_preplaced", false])
  			}] call BIS_fnc_conditionalSelect;
-				
+
 			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
 			_all_storages = [(_all_storages + _nextbuildings), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
-			
+
 			{
 				private _nextgroup = _x;
 				if (side _nextgroup == GRLIB_side_friendly) then {
@@ -517,56 +544,34 @@ while {true} do {
 			} forEach allGroups;
 		} forEach GRLIB_all_fobs;
 
+		// Save all buildings and vehicles
 		{
-			private _savedpos = [];
-			private _savedvec = [];
-
-			if ((typeof _x) in _building_classnames) then {
-				_savedpos = _x getVariable ["GRLIB_saved_pos", []];
-				_savedvec = _x getVariable ["KP_saved_vec", []];
-				if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-					_x setVariable ["GRLIB_saved_pos", getPosATL _x, false];
-					_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-					_savedpos = getPosATL _x;
-					_savedvec = vectorUpVisual _x;
-				};
-			} else {
-				_savedpos = getPosATL _x;
-			};
-
+			private _savedpos = getPosWorld _x;;
+			private _savedvecdir = vectorDirVisual _x;
+			private _savedvecup = vectorUpVisual _x;;
 			private _nextclass = typeof _x;
-			private _nextdir = getdir _x;
 			private _hascrew = false;
+
 			if (_nextclass in _classnames_to_save_blu) then {
 				if (({!isPlayer _x} count (crew _x) ) > 0) then {
 					_hascrew = true;
 				};
 			};
 			if (!(_nextclass in civilian_vehicles) || (_x in KP_liberation_cr_vehicles)) then {
-				buildings_to_save pushback [_nextclass,_savedpos,_nextdir,_hascrew,_savedvec];
+				//buildings_to_save pushback [_nextclass,_savedpos,_nextdir,_hascrew,_savedvec];
+				buildings_to_save pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_hascrew];
 			};
 		} forEach _all_buildings;
 
 		{
-			private _savedpos = [];
-			private _savedvec = [];
-			
-			_savedpos = _x getVariable ["GRLIB_saved_pos", []];
-			_savedvec = _x getVariable ["KP_saved_vec", []];
-			if ((count _savedpos == 0) || (count _savedvec == 0)) then {
-				_x setVariable ["GRLIB_saved_pos", getPosATL _x, false];
-				_x setVariable ["KP_saved_vec", vectorUpVisual _x, false];
-				_savedpos = getPosATL _x;
-				_savedvec = vectorUpVisual _x;
-			};
-			
+			private _savedpos = getPosWorld _x;;
+			private _savedvecdir = vectorDirVisual _x;
+			private _savedvecup = vectorUpVisual _x;;
 			private _nextclass = typeof _x;
-			private _nextdir = getdir _x;
-			
 			_supplyValue = 0;
 			_ammoValue = 0;
 			_fuelValue = 0;
-			
+
 			{
 				switch ((typeOf _x)) do {
 					case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
@@ -575,8 +580,9 @@ while {true} do {
 					default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 				};
 			} forEach (attachedObjects _x);
-			
-			KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];		
+
+			//KP_liberation_storages pushback [_nextclass,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];
+			KP_liberation_storages pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];
 		} forEach _all_storages;
 
 		time_of_day = date select 3;
