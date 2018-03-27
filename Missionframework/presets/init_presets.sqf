@@ -88,7 +88,14 @@ GRLIB_ignore_colisions_when_building = [
 	"B_Mortar_01_F",									//Mk6 Mortar
 	"ACE_friesAnchorBar",								//ACE FRIES
 	"ACE_friesGantryReverse",							//ACE FRIES
-	"ACE_friesGantry"									//ACE FRIES
+	"ACE_friesGantry",									//ACE FRIES
+	"Land_HBarrier_1_F",
+	"Land_HBarrier_3_F",
+	"Land_HBarrier_5_F",
+	"Land_Concrete_SmallWall_4m_F",
+	"Land_Concrete_SmallWall_8m_F",
+	"GroundWeaponHolder",				// Items on ground
+	"WeaponHolderSimulated"				// Weapon on ground
 ];
 
 
