@@ -11,20 +11,20 @@
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
         <!-- General -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation Rewrite</Original>
-			<German>KP Liberation Rewrite</German>
-			<Spanish>KP Liberation Rewrite</Spanish>
-			<Italian>KP Liberation Rewrite</Italian>
-			<Chinesesimp>KP Liberation Rewrite</Chinesesimp>
-			<Turkish>KP Liberation Rewrite</Turkish>
+			<Original>KP Liberation</Original>
+			<German>KP Liberation</German>
+			<Spanish>KP Liberation</Spanish>
+			<Italian>KP Liberation</Italian>
+			<Chinesesimp>KP Liberation</Chinesesimp>
+			<Turkish>KP Liberation</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>Rewrite</Original>
-			<German>Rewrite</German>
-			<Spanish>Rewrite</Spanish>
-			<Italian>Rewrite</Italian>
-			<Chinesesimp>Rewrite</Chinesesimp>
-			<Turkish>Rewrite</Turkish>
+			<Original>0.97dev</Original>
+			<German>0.97dev</German>
+			<Spanish>0.97dev</Spanish>
+			<Italian>0.97dev</Italian>
+			<Chinesesimp>0.97dev</Chinesesimp>
+			<Turkish>0.97dev</Turkish>
 		</Key>
 		<Key ID="STR_MISSION_DESCRIPTION">
 			<Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
