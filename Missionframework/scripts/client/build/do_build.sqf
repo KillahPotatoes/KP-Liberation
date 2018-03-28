@@ -35,10 +35,10 @@ while { true } do {
 		_price_s = ((build_lists select buildtype) select buildindex) select 1;
 		_price_a = ((build_lists select buildtype) select buildindex) select 2;
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
-		
+
 		_nearfob = [] call F_getNearestFob;
 		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
-		
+
 		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
 	};
 
@@ -163,14 +163,16 @@ while { true } do {
 
 				private _remove_objects = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
+					private _typeOfX = typeOf _x;
+					if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
 						_remove_objects pushback _x;
 					};
 				} foreach _near_objects;
 
 				private _remove_objects_25 = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames))  then {
+					private _typeOfX = typeOf _x;
+					if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
 						_remove_objects_25 pushback _x;
 					};
 				} foreach _near_objects_25;
@@ -298,7 +300,7 @@ while { true } do {
 				} else {
 					_vehicle setpos _truepos;
 				};
-				
+
 				if (!(_classname in KP_liberation_ace_crates) && KP_liberation_clear_cargo) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
@@ -334,7 +336,7 @@ while { true } do {
 					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};
 					default {};
 				};
-				
+
 				if (_classname in KP_liberation_medical_vehicles) then {
 					_vehicle setVariable ["ace_medical_medicClass", 1, true];
 				};
@@ -344,7 +346,7 @@ while { true } do {
 						[_x,[[_vehicle],true]] remoteExec ["addCuratorEditableObjects",2];
 					} forEach allCurators;
 				};
-				
+
 				sleep 0.3;
 				_vehicle allowDamage true;
 				_vehicle setDamage 0;
