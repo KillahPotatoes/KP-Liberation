@@ -4,7 +4,7 @@
 	File: KPLIB_introMenu.hpp
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-28
-	Last Update: 2018-01-05
+	Last Update: 2018-03-28
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
@@ -42,7 +42,7 @@ class KPLIB_introMenu {
 		sizeEx = 0.025 * safezoneH;
 		size = 0.025 * safezoneH;
 		text = "";
-		action = "KPLIB_intro_startGame = true;";
+		action = "KPLIB_intro_startGame = 1;";
 		textureNoShortcut = "res\btn_join_spl_idl3.paa";
 		animTextureNormal = "res\btn_join_spl_idl3.paa";
 		animTextureDisabled = "res\btn_join_spl_idl3.paa";
@@ -94,7 +94,7 @@ class KPLIB_introMenu {
 		tooltipColorShade[] = COLOR_BROWN;
 		tooltipColorText[] = COLOR_WHITE;
 		tooltipColorBox[] = COLOR_GREEN;
-		action = "KPLIB_intro_tutorial = true;";
+		action = "KPLIB_intro_tutorial = 1;";
 	};
 
 

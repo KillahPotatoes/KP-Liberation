@@ -4,7 +4,7 @@
 	File: globals.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2018-01-05
+	Last Update: 2018-03-28
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
@@ -30,6 +30,8 @@ KPLIB_resetPos = [99999,99999,0];
 KPLIB_sectors_airspawn = [];
 // All capturable sectors
 KPLIB_sectors_all = [];
+// All active sectors
+KPLIB_sectors_active = [];
 // All capital sectors
 KPLIB_sectors_bigtown = [];
 // Sectors which are captured by blufor
@@ -48,5 +50,7 @@ KPLIB_sectors_military = [];
 KPLIB_sectors_opfor = [];
 // All radiotowers
 KPLIB_sectors_tower = [];
+// Respawn position shortcut
+KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
