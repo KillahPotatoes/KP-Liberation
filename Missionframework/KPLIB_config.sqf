@@ -235,7 +235,7 @@ KPLIB_halo_altitude = 2500;
 
 // Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
 KPLIB_secondary_costs = [15,10,8];
-// The percentage impact against enemy combat readiness for a successful FOB hunt (1.0 = 100%)
+// The percentage impact against enemy combat readiness for a successful FOB hunt. (1.0 = 100%)
 KPLIB_secondary_impact = 0.6;
 
 /*------------------------------------------------------------ 
@@ -498,7 +498,7 @@ KPLIB_storage_smallOffsets = [
 	Arrays with classnames for the Liberation resupply script.
 ------------------------------------------------------------*/
 
-// Everything the AI troups should be able to resupply from.
+// Everything the AI troops should be able to resupply from.
 KPLIB_resupply_aiSource = [
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
