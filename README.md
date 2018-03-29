@@ -19,10 +19,10 @@ If you like the work and think it's worth a small donation, feel free to use the
 [Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
-The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
+The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will most likely span several weeks of real time.
 * Experience a massive “Capture the Island” campaign involving a large range of different settlements across the entire area.
 * Cooperate with up to 34 players, including a Commanding role, two fire-team squads, a medevac and a logistical support squad as well as AI recruits to fill the gaps.
-* Purchase both infantry and vehicles (both ground and air) using three different types of physical resources; supplies, ammunition and fuel.
+* Purchase both infantry and both ground and air vehicles using three different types of physical resources; supplies, ammunition and fuel.
 * Build the FOB of your dreams with an in-game "what you see is what you get" system.
 * Play within an immersive engine that not only punishes you for civilian casualty but diversely reacts in turn.
 * Combat aggressive and cunning hostile forces who react and adapt to your actions.
@@ -40,7 +40,7 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 * Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
 
 ## Needed Mods
-These mods are needed if you want to use the prepacked missionfiles from the release tab or Steam Workshop.
+These mods are needed if you want to use the prepackaged missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
