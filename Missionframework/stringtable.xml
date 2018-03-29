@@ -889,8 +889,8 @@
 			<German>Produktion</German>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUGSAVE">
-			<Original>Saving</Original>
-			<German>Savegame Speicherung</German>
+			<Original>Saving process</Original>
+			<German>Speichervorgang</German>
 		</Key>
 		<Key ID="STR_PARAMS_DEBUGSECTORSPAWN">
 			<Original>Sectorspawn</Original>
