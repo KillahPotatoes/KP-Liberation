@@ -210,7 +210,7 @@ KPLIB_arsenal_addToWhitelist = [
 // Name of the save key inside of the [ServerProfileName].vars.Arma3Profile file.
 KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME_REWRITE";
 // Save interval in seconds.
-KPLIB_save_interval = 30;
+KPLIB_save_interval = 60;
 
 /*------------------------------------------------------------
 	--- RANGES AND HEIGHTS ---
