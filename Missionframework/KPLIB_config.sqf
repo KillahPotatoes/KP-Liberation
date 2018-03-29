@@ -4,7 +4,7 @@
 	File: KPLIB_config.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2018-01-05
+	Last Update: 2018-03-29
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
@@ -13,7 +13,7 @@
 
 /*------------------------------------------------------------
 	--- PRESET SETTINGS ---
-	Select here the provided premade presets for each faction
+	Select here the provided premade presets for each faction.
 	If you want to edit or adjust a preset, it's recommended to set the specific presets to 0 and edit the appropriate custom.sqf file in the preset folder.
 ------------------------------------------------------------*/
 
@@ -63,7 +63,7 @@ KPLIB_preset_arsenal = 0;
 	REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.
 ------------------------------------------------------------*/
 
-// Array of blacklisted item classnames
+// Array of blacklisted item classnames.
 KPLIB_arsenal_generalBlacklist = [
 	"I_HMG_01_weapon_F",
 	"B_HMG_01_weapon_F",
@@ -158,7 +158,7 @@ KPLIB_arsenal_generalBlacklist = [
 	"optic_tws_mg"
 ];
 
-// Items which should be added as allowed Items. For items which get blacklisted, even if they are not in the KPLIB_arsenal_generalBlacklist array
+// Items which should be added as allowed Items. For items which get blacklisted, even if they are not in the KPLIB_arsenal_generalBlacklist array.
 KPLIB_arsenal_addToWhitelist = [
 	"ItemRadioAcreFlagged",
 	"rhs_acc_ekp8_18b",
@@ -207,7 +207,7 @@ KPLIB_arsenal_addToWhitelist = [
 	Settings concerning the internal save system.
 ------------------------------------------------------------*/
 
-// Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.
+// Name of the save key inside of the [ServerProfileName].vars.Arma3Profile file.
 KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME_REWRITE";
 // Save interval in seconds.
 KPLIB_save_interval = 30;
@@ -217,13 +217,13 @@ KPLIB_save_interval = 30;
 	All values in meters.
 ------------------------------------------------------------*/
 
-// Build range around the main FOB building
+// Build range around the main FOB building.
 KPLIB_range_fob = 125;
-// Range to activate a sector
+// Range to activate a sector.
 KPLIB_range_sector = 1000;
-// Range to capture a sector
+// Range to capture a sector.
 KPLIB_range_capture = 175;
-// Radio Tower scanning range
+// Radio Tower scanning range.
 KPLIB_range_radiotower = 2500;
 // Altitude in metres for the HALO jump.
 KPLIB_halo_altitude = 2500;
@@ -233,9 +233,9 @@ KPLIB_halo_altitude = 2500;
 	Settings which are connected to the available secondary missions which can be started by players via the secondary mission dialog.
 ------------------------------------------------------------*/
 
-// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR]
+// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
 KPLIB_secondary_costs = [15,10,8];
-// The percentage impact against enemy combat readiness for a successful FOB hunt
+// The percentage impact against enemy combat readiness for a successful FOB hunt (1.0 = 100%)
 KPLIB_secondary_impact = 0.6;
 
 /*------------------------------------------------------------ 
@@ -243,11 +243,11 @@ KPLIB_secondary_impact = 0.6;
 	Values for the KP Fuel Consumption Script.
 ------------------------------------------------------------*/
 
-//Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine
+//Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine.
 KPLIB_fuel_neutral = 180;
-// Time in minutes till a full tank depletes whilst the vehicle is driving below max speed
+// Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
 KPLIB_fuel_normal = 90;
-// Time in minutes till a full tank depletes whilst the vehicle is driving at max speed
+// Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
 KPLIB_fuel_max = 45;
 
 /*------------------------------------------------------------ 
@@ -256,13 +256,13 @@ KPLIB_fuel_max = 45;
 	Values are total and not only for one sector or one battlegroup for example.
 ------------------------------------------------------------*/
 
-// Unit cap for friendly side
+// Unit cap for friendly side.
 KPLIB_cap_blufor = 100;
-// Unit cap for sector defenders
+// Unit cap for sector defenders.
 KPLIB_cap_sector = 180;
-// Unit cap for enemy battlegroup units
+// Unit cap for enemy battlegroup units.
 KPLIB_cap_battlegroup = 150;
-// Unit cap for enemy patrol units
+// Unit cap for enemy patrol units.
 KPLIB_cap_patrol = 150;
 
 /*------------------------------------------------------------ 
@@ -270,19 +270,19 @@ KPLIB_cap_patrol = 150;
 	Values connected to the civil reputation system.
 ------------------------------------------------------------*/
 
-// Civil Reputation penalty for killing a civilian
+// Civil Reputation penalty for killing a civilian.
 KPLIB_civrep_killPenalty = 5;
-// Civil Reputation penalty for destroying/damaging a building
+// Civil Reputation penalty for destroying/damaging a building.
 KPLIB_civrep_buildingPenalty = 3;
-// Civil Reputation penalty for stealing a civilian vehicle
+// Civil Reputation penalty for stealing a civilian vehicle.
 KPLIB_civrep_vehiclePenalty = 2;
-// Civil Reputation penalty for killing a friendly resistance soldier
+// Civil Reputation penalty for killing a friendly resistance soldier.
 KPLIB_civrep_resistancePenalty = 3;
-// Civil Reputation gain for liberate a sector
+// Civil Reputation gain for liberate a sector.
 KPLIB_civrep_sectorGain = 5;
-// Chance (0-100) that there are wounded civilians right after capturing a sector
+// Chance (0-100) that there are wounded civilians right after capturing a sector.
 KPLIB_civrep_woundedChance = 35;
-// Civil Reputation gain for providing medical assistance for wounded civilians
+// Civil Reputation gain for providing medical assistance for wounded civilians.
 KPLIB_civrep_woundedGain = 2;
 
 // Civil Informant minimum spawn time. (seconds)
@@ -300,7 +300,7 @@ KPLIB_civinfo_taskChance = 40;
 // Duration until the task will despawn if no player is near. (seconds)
 KPLIB_civinfo_taskDuration = 900;
 
-// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation
+// Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation.
 KPLIB_civrep_ignoredBuildings = [
 	"Land_LampStreet_small_F",
 	"Land_PowerPoleWooden_L_F",
@@ -498,7 +498,7 @@ KPLIB_storage_smallOffsets = [
 	Arrays with classnames for the Liberation resupply script.
 ------------------------------------------------------------*/
 
-// Everything the AI troups should be able to resupply from
+// Everything the AI troups should be able to resupply from.
 KPLIB_resupply_aiSource = [
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
@@ -515,7 +515,7 @@ KPLIB_resupply_aiSource = [
 	"rhs_gaz66_ammo_msv"
 ];
 
-// Vehicles which should be able to repair other vehicles
+// Vehicles which should be able to repair other vehicles.
 KPLIB_resupply_repairSource = [
 	"C_Offroad_01_repair_F",
 	"B_Truck_01_Repair_F",
@@ -532,7 +532,7 @@ KPLIB_resupply_repairSource = [
 	"BW_LKW15T_Repair_F"
 ];
 
-// Vehicles which should be able to rearm other vehicles
+// Vehicles which should be able to rearm other vehicles.
 KPLIB_resupply_rearmSource = [
 	"B_Truck_01_ammo_F",
 	"B_T_Truck_01_ammo_F",
@@ -548,7 +548,7 @@ KPLIB_resupply_rearmSource = [
 	"BW_LKW15T_Ammo_F"
 ];
 
-// Vehicles which should be able to refuel other vehicles
+// Vehicles which should be able to refuel other vehicles.
 KPLIB_resupply_refuelSource = [
 	"C_Van_01_fuel_F",
 	"C_Truck_02_fuel_F",
@@ -584,7 +584,7 @@ KPLIB_surrender_chance = 80;
 // Civilian count multiplier.
 KPLIB_civilians_amount = 10;
 
-// Classnames of objects which should be ignored when building
+// Classnames of objects which should be ignored when building.
 KPLIB_build_ignored_classnames = [
 	"Land_HelipadSquare_F",
 	"Land_TentHangar_V1_F",
