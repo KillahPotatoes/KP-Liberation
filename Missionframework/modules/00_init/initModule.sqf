@@ -4,7 +4,7 @@
 	File: initModule.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2018-01-05
+	Last Update: 2018-03-29
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
@@ -37,12 +37,12 @@ call KPLIB_fnc_init_fillArsenal;
 // Sort the sector markers to category arrays
 call KPLIB_fnc_init_sortSectors;
 
-// Run save manager script
-execVM "modules\00_init\scripts\server\saveManager\saveManager.sqf";
-execVM "modules\00_init\scripts\server\saveManager\saveManager_timeTrigger.sqf";
+// Load current save and start the timer for triggering the saving process
+call KPLIB_fnc_init_load;
+execVM "modules\00_init\scripts\server\saveTimer\timer.sqf";
 
 // Run sector marker color manager
-execVM "modules\00_init\scripts\server\mapMarkers\sectorMarkers.sqf";
+execVM "modules\00_init\scripts\server\markersUpdater\sectorMarkers.sqf";
 
 // Run FOB marker manager
-execVM "modules\00_init\scripts\server\mapMarkers\fobMarkers.sqf";
+execVM "modules\00_init\scripts\server\markersUpdater\fobMarkers.sqf";

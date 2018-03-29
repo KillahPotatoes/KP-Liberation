@@ -11,7 +11,7 @@
 	This script will take care to apply general sector marker colors and create locked vehicle markers.
 */
 
-waitUntil {!isNil "KPLIB_save_loaded"};
+waitUntil {KPLIB_save_loaded};
 
 // Create locked vehicle markers
 private _lockedVehMarkers = [];

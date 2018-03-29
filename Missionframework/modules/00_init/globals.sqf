@@ -4,7 +4,7 @@
 	File: globals.sqf
 	Author: Wyqer - https://github.com/Wyqer
 	Date: 2017-10-16
-	Last Update: 2018-03-28
+	Last Update: 2018-03-29
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
@@ -15,6 +15,8 @@
 KPLIB_arsenal_whitelist = [];
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
+// Respawn position shortcut
+KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // Squad names for the buildable squads
 KPLIB_preset_squadNames = [
 	localize "STR_SQUAD_LIGHT",
@@ -24,8 +26,8 @@ KPLIB_preset_squadNames = [
 	localize "STR_SQUAD_RECON",
 	localize "STR_SQUAD_PARA"
 ];
-// Reset position shortcut
-KPLIB_resetPos = [99999,99999,0];
+// Indicator if the saved data is fully loaded
+KPLIB_save_loaded = false;
 // Spawnpoints for air vehicles
 KPLIB_sectors_airspawn = [];
 // All capturable sectors
@@ -50,7 +52,7 @@ KPLIB_sectors_military = [];
 KPLIB_sectors_opfor = [];
 // All radiotowers
 KPLIB_sectors_tower = [];
-// Respawn position shortcut
-KPLIB_eden_respawnPos = getMarkerPos "respawn";
+// Reset position shortcut
+KPLIB_resetPos = [99999,99999,0];
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];

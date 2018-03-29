@@ -11,7 +11,7 @@
 	Places and rearranges FOB map markers, if needed.
 */
 
-waitUntil {!isNil "KPLIB_save_loaded"};
+waitUntil {KPLIB_save_loaded};
 
 private _fobMarkers = [];
 

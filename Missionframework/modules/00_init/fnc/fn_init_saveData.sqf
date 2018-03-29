@@ -17,6 +17,8 @@
 	ARRAY
 */
 
+if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module saving...";};
+
 private _moduleData = [];
 
 // Current date and time
