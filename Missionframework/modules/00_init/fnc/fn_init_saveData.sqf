@@ -8,7 +8,7 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	Fetches data which is bound to the init module and return it as array.
+	Fetches data which is bound to the init module and return it as an array.
 
 	Parameter(s):
 	NONE
