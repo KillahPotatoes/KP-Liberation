@@ -8,7 +8,7 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	Loads the configured preset files, checks if classnames are available with current modset and initialize global arrays which are depending on the presets.
+	Loads the configured preset files, checks if classnames are available with current modset and initialize global arrays which are dependent on the presets.
 	Distributes the cleaned arrays to the clients.
 
 	Parameter(s):
@@ -21,14 +21,14 @@
 	Not sure about this whole publicVariable method in the preset initialization.
 	Idea was that the server will first initialize all vital stuff and distribute it to the clients.
 	This would avoid that clients check all arrays for mods etc. to ensure equality in these arrays.
-	As it would catch errors if a client has for example RHS loaded, but not the server (due to verifySignatures 0 for example).
+	As it would catch errors if a client has for example RHS loaded but not the server (due to verifySignatures 0 for example).
 	--- ENDNOTE
 */
 
 // Load blufor preset
 switch (KPLIB_preset_blufor) do {
-	case 1: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
-	case 2: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+	case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+	case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
 	case 3: {call compile preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
 	case 4: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
 	case 5: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
@@ -38,8 +38,8 @@ switch (KPLIB_preset_blufor) do {
 // Load opfor preset
 switch (KPLIB_preset_opfor) do {
 	case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
-	case 2: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
-	case 3: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
+	case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
+	case 3: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
 	default {call compile preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
