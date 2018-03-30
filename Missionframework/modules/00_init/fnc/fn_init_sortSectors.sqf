@@ -21,7 +21,7 @@
 	private _isMissionSector = false;
 	private _tempMarker = toArray _x;
 	
-	// Fetch the opfor spawn points
+	// Fetch the Opfor spawn points
 	_tempMarker resize 9;
 	if (toString _tempMarker == "opfor_air") then {KPLIB_sectors_airspawn pushBack _x;};
 	if (toString _tempMarker == "opfor_poi") then {KPLIB_sectors_opfor pushBack _x;};
