@@ -8,7 +8,7 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	This module initialize basically everything what should be done before the player pass the briefing screen.
+	This module initialize basically everything that should be done before the player passes the briefing screen.
 	Tasks of this module are:
 		* Fetch parameters
 		* Fetch config values
