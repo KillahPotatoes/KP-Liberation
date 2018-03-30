@@ -35,7 +35,7 @@ switch (KPLIB_preset_blufor) do {
 	default {call compile preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
-// Load opfor preset
+// Load Opfor preset
 switch (KPLIB_preset_opfor) do {
 	case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
 	case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
@@ -122,7 +122,7 @@ KPLIB_preset_bluforPackage = [
 ];
 publicVariable "KPLIB_preset_bluforPackage";
 
-// Filter opfor preset arrays
+// Filter Opfor preset arrays
 KPLIB_preset_oVehicles = [KPLIB_preset_oVehicles] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_oVehiclesLow = [KPLIB_preset_oVehiclesLow] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_oChoppers = [KPLIB_preset_oChoppers] call KPLIB_fnc_init_filterMods;
@@ -133,7 +133,7 @@ KPLIB_preset_oBattleVeh = [KPLIB_preset_oBattleVeh] call KPLIB_fnc_init_filterMo
 KPLIB_preset_oBattleVehLow = [KPLIB_preset_oBattleVehLow] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_oBattleTransports = [KPLIB_preset_oBattleTransports] call KPLIB_fnc_init_filterMods;
 
-// Prepare some additional opfor arrays
+// Prepare some additional Opfor arrays
 KPLIB_preset_oInfantry = [KPLIB_preset_oSquadLeader,KPLIB_preset_oTeamLeader,KPLIB_preset_oSentry,KPLIB_preset_oRifleman,KPLIB_preset_oRpg,KPLIB_preset_oGrenadier,KPLIB_preset_oMachinegunner,KPLIB_preset_oHeavygunner,KPLIB_preset_oMarksman,KPLIB_preset_oSharpshooter,KPLIB_preset_oSniper,KPLIB_preset_oAt,KPLIB_preset_oAa,KPLIB_preset_oMedic,KPLIB_preset_oEngineer];
 KPLIB_preset_oStandard = [KPLIB_preset_oSquadLeader,KPLIB_preset_oTeamLeader,KPLIB_preset_oMachinegunner,KPLIB_preset_oHeavygunner,KPLIB_preset_oMedic,KPLIB_preset_oMarksman,KPLIB_preset_oGrenadier,KPLIB_preset_oRpg];
 KPLIB_preset_oInfKill = [KPLIB_preset_oSquadLeader,KPLIB_preset_oMachinegunner,KPLIB_preset_oMachinegunner,KPLIB_preset_oHeavygunner,KPLIB_preset_oMedic,KPLIB_preset_oMarksman,KPLIB_preset_oSharpshooter,KPLIB_preset_oSniper];
@@ -144,7 +144,7 @@ KPLIB_preset_oAirVeh = [];
 KPLIB_preset_oLandVeh = [];
 {if (_x isKindOf "Land") then {KPLIB_preset_oLandVeh pushBackUnique _x};} forEach (KPLIB_preset_oVehicles + KPLIB_preset_oVehiclesLow + KPLIB_preset_oMilVeh + KPLIB_preset_oBattleVeh + KPLIB_preset_oBattleVehLow);
 
-// Send opfor preset to clients
+// Send Opfor preset to clients
 KPLIB_preset_opforPackage = [
 	KPLIB_preset_sideEnemy,
 	KPLIB_preset_colorEnemy,
