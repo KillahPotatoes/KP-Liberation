@@ -24,7 +24,7 @@ waitUntil {!isNil "KPLIB_preset_resistancePackage"};
 waitUntil {!isNil "KPLIB_preset_civiliansPackage"};
 waitUntil {!isNil "KPLIB_preset_collectionsPackage"};
 
-// Process blufor package
+// Process Blufor package
 KPLIB_preset_sidePlayers = KPLIB_preset_bluforPackage select 0;
 KPLIB_preset_colorPlayers = KPLIB_preset_bluforPackage select 1;
 KPLIB_preset_fobBuilding = KPLIB_preset_bluforPackage select 2;
@@ -66,7 +66,7 @@ KPLIB_preset_lockedVeh = KPLIB_preset_bluforPackage select 37;
 KPLIB_preset_alphabet = KPLIB_preset_bluforPackage select 38;
 KPLIB_preset_squads = KPLIB_preset_bluforPackage select 39;
 
-// Process opfor package
+// Process Opfor package
 KPLIB_preset_sideEnemy = KPLIB_preset_opforPackage select 0;
 KPLIB_preset_colorEnemy = KPLIB_preset_opforPackage select 1;
 KPLIB_preset_colorEnemyAct = KPLIB_preset_opforPackage select 2;
