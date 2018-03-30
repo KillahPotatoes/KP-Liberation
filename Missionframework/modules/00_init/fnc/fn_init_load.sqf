@@ -8,7 +8,7 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	Loads save data or create a new save depending on wipe settings or if there is no save data available.
+	Loads save data or creates a new save depending on wipe settings or if there is no save data available.
 
 	Parameter(s):
 	NONE
