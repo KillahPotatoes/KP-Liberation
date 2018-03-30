@@ -8,7 +8,7 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	Fetches all arsenal classnames from config files and apply the blacklist or add the chosen whitelist to the virtual arsenal.
+	Fetches all arsenal classnames from config files and applies the blacklist or adds the chosen whitelist to the virtual arsenal.
 
 	Parameter(s):
 	NONE
