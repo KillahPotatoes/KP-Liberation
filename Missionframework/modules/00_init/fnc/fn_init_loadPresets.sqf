@@ -25,7 +25,7 @@
 	--- ENDNOTE
 */
 
-// Load blufor preset
+// Load Blufor preset
 switch (KPLIB_preset_blufor) do {
 	case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
 	case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
@@ -57,7 +57,7 @@ switch (KPLIB_preset_civilians) do {
 	default {call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
-// Set prices for the blufor infantry squads (supplies, ammo, fuel)
+// Set prices for the Blufor infantry squads (supplies, ammo, fuel)
 KPLIB_preset_squads = [
 	[KPLIB_preset_lightSquad,200,0,0],
 	[KPLIB_preset_heavySquad,300,0,0],
@@ -67,7 +67,7 @@ KPLIB_preset_squads = [
 	[KPLIB_preset_paraSquad,200,0,0]
 ];
 
-// Filter blufor preset arrays
+// Filter Blufor preset arrays
 KPLIB_preset_infantry = [KPLIB_preset_infantry] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_lightVeh = [KPLIB_preset_lightVeh] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_heavyVeh = [KPLIB_preset_heavyVeh] call KPLIB_fnc_init_filterMods;
@@ -77,7 +77,7 @@ KPLIB_preset_buildings = [KPLIB_preset_buildings] call KPLIB_fnc_init_filterMods
 KPLIB_preset_supportVeh = [KPLIB_preset_supportVeh] call KPLIB_fnc_init_filterMods;
 KPLIB_preset_lockedVeh = [KPLIB_preset_lockedVeh] call KPLIB_fnc_init_filterMods;
 
-// Send blufor preset to clients
+// Send Blufor preset to clients
 KPLIB_preset_bluforPackage = [
 	KPLIB_preset_sidePlayers,
 	KPLIB_preset_colorPlayers,
@@ -294,7 +294,7 @@ KPLIB_preset_allInfantryBlue = [];
 KPLIB_preset_allLandVeh = [] + KPLIB_preset_oLandVeh;
 {KPLIB_preset_allLandVeh pushBack (_x select 0);} forEach (KPLIB_preset_heavyVeh + KPLIB_preset_lightVeh);
 
-// Fetch all air vehicles and a seperate array with only blufor air vehicle classnames
+// Fetch all air vehicles and a seperate array with only Blufor air vehicle classnames
 KPLIB_preset_allAirVeh = [] + KPLIB_preset_oAirVeh;
 KPLIB_preset_allAirBlue = [];
 {KPLIB_preset_allAirVeh pushBack (_x select 0); KPLIB_preset_allAirBlue pushBack (_x select 0);} forEach KPLIB_preset_airVeh;
