@@ -8,41 +8,41 @@
 	License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 	Description:
-	Contains all settings which are meant to be adjustable by players but aren't implemented in the mission parameters. (and won't be)
+	Contains all settings which are meant to be adjustable by players but aren't implemented in the mission parameters (and won't be).
 */
 
 /*------------------------------------------------------------
 	--- PRESET SETTINGS ---
-	Select here the provided premade presets for each faction.
+	Select here the provided premade presets you would like to use for each faction.
 	If you want to edit or adjust a preset, it's recommended to set the specific presets to 0 and edit the appropriate custom.sqf file in the preset folder.
 ------------------------------------------------------------*/
 
 /* BLUFOR preset:
-0 = custom (default vanilla with many optional mods supported)
-1 = 3cb BAF
-2 = Apex Tanoa
-3 = BWMod (German Bundeswehr)
-4 = RHS USAF woodland
-5 = RHS USAF desert */
+0 = Custom (default vanilla NATO with many optional mods supported)
+1 = Apex NATO (with the same optional mods supported)
+2 = 3CB BAF
+3 = BWMod (Bundeswehr)
+4 = RHS USAF Woodland
+5 = RHS USAF Desert */
 KPLIB_preset_blufor = 0;
 
 /* OPFOR preset:
-0 = custom (default vanilla CSAT)
-1 = Apex Tanoa
-2 = Project OPFOR (Takistan)
-3 = RHS AFRF */
+0 = Custom (default vanilla CSAT)
+1 = Apex CSAT
+2 = RHS AFRF
+3 = Project OPFOR (Takistani Armed Forces) */
 KPLIB_preset_opfor = 0;
 
 /* Resistance preset:
-0 = custom (default vanilla)
-1 = Apex Tanoa 
+0 = Custom (default vanilla)
+1 = Apex Tanoa
 2 = RHS GREF */
 KPLIB_preset_resistance = 0;
 
 /* Civilians preset:
-0 = custom (default vanilla)
+0 = Custom (default vanilla)
 1 = Apex Tanoa
-2 = Project OPFOR (Takistan) */
+2 = Project OPFOR (Middle Eastern) */
 KPLIB_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -52,7 +52,7 @@ KPLIB_preset_civilians = 0;
 3 = RHS USAF arsenal preset.
 4 = RHS USAF arsenal preset with ACE.
 5 = RHS USAF arsenal preset with ACE and ACRE.	
-6 = 3cbBAF and RHS USAF arsenal preset. */
+6 = 3CB BAF and RHS USAF arsenal preset. */
 KPLIB_preset_arsenal = 0;
 
 /*------------------------------------------------------------
@@ -233,9 +233,9 @@ KPLIB_halo_altitude = 2500;
 	Settings which are connected to the available secondary missions which can be started by players via the secondary mission dialog.
 ------------------------------------------------------------*/
 
-// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
+// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 KPLIB_secondary_costs = [15,10,8];
-// The percentage impact against enemy combat readiness for a successful FOB hunt. (1.0 = 100%)
+// The percentage impact against enemy combat readiness for a successful FOB hunt (1.0 = 100%).
 KPLIB_secondary_impact = 0.6;
 
 /*------------------------------------------------------------ 
@@ -278,26 +278,26 @@ KPLIB_civrep_buildingPenalty = 3;
 KPLIB_civrep_vehiclePenalty = 2;
 // Civil Reputation penalty for killing a friendly resistance soldier.
 KPLIB_civrep_resistancePenalty = 3;
-// Civil Reputation gain for liberate a sector.
+// Civil Reputation gain for liberating a sector.
 KPLIB_civrep_sectorGain = 5;
 // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KPLIB_civrep_woundedChance = 35;
 // Civil Reputation gain for providing medical assistance for wounded civilians.
 KPLIB_civrep_woundedGain = 2;
 
-// Civil Informant minimum spawn time. (seconds)
+// Civil Informant minimum spawn time (seconds).
 KPLIB_civinfo_min = 5400;
-// Civil Informant maximum spawn time. (seconds)
+// Civil Informant maximum spawn time (seconds).
 KPLIB_civinfo_max = 10800;
-// Civil Informant spawn chance. (0-100)
+// Civil Informant spawn chance (0-100).
 KPLIB_civinfo_chance = 75;
 // Civil Informant intel gain amount.
 KPLIB_civinfo_intel = 5;
-// Civil Informant staytime until despawning. (seconds)
+// Civil Informant staytime until despawning (seconds).
 KPLIB_civinfo_duration = 1200;
 // Chance (0-100) that the delivered informant will spawn a time critical task.
 KPLIB_civinfo_taskChance = 40;
-// Duration until the task will despawn if no player is near. (seconds)
+// Duration until the task will despawn if no player is near (seconds).
 KPLIB_civinfo_taskDuration = 900;
 
 // Building classnames which should be ignored for the destroyed/damaged buildings check for the civil reputation.
@@ -328,19 +328,19 @@ KPLIB_civrep_ignoredBuildings = [
 	Values connected to the asymmetric warfare / resistance system.
 ------------------------------------------------------------*/
 
-// At which strength (0-100) the resistance forces will be at tier 2?
+// At which strength (0-100) the resistance forces will be at tier 2.
 KPLIB_resistance_tier2 = 30;
-// At which strength (0-100) the resistance forces will be at tier 3?
+// At which strength (0-100) the resistance forces will be at tier 3.
 KPLIB_resistance_tier3 = 70;
-// Chance that a resistance unit has a RPG. (tier 2 and 3)
+// Chance that a resistance unit has a RPG (tier 2 and 3).
 KPLIB_resistance_atChance = 20;
 // Chance that a logistic convoy will be ambushed, when civil reputation is low.
 KPLIB_resistance_convoyAmbushChance = 2;
-// Duration of the convoy ambush event. (seconds)
+// Duration of the convoy ambush event (seconds).
 KPLIB_resistance_convoyAmbushDuration = 1200;
 // Chance that a resistance squad will join an ongoing sector attack.
 KPLIB_resistance_sectorChance = 35;
-// Chance that some resistance units will spawn in blufor sectors for an ambush, if reputation is low.
+// Chance that some resistance units will spawn in Blufor sectors for an ambush, if reputation is low.
 KPLIB_resistance_ambushChance = 30;
 
 /*------------------------------------------------------------ 
@@ -373,7 +373,7 @@ KPLIB_ace_crates = [
 	Transport vehicle and storage area offset configurations.
 ------------------------------------------------------------*/
 
-// Configuration settings for crates transported by vehicles. ["classname", distance behind vehicle to unload crate, attachTo positions for each box]
+// Configuration settings for crates transported by vehicles ["classname", distance behind vehicle to unload crate, attachTo positions for each box].
 KPLIB_transport_config = [
 	["C_Offroad_01_F", -6.5, [0,-1.7,0.4]],
 	["I_G_Offroad_01_F", -6.5, [0,-1.7,0.4]],
@@ -403,7 +403,7 @@ KPLIB_transport_config = [
 	["B_Heli_Transport_03_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_Heli_Transport_03_unarmed_F", -7.5, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
 	["B_T_VTOL_01_infantry_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
-    ["B_T_VTOL_01_vehicle_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
+	["B_T_VTOL_01_vehicle_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
 	["RHS_CH_47F_10", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["RHS_CH_47F_light", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
 	["RHS_CH_47F", -7.5, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
@@ -424,9 +424,9 @@ KPLIB_transport_config = [
 	["rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_wd_open_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
+	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1083A1P2_d_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_d_open_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
+	["rhsusf_M1083A1P2_d_open_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_M1083A1P2_B_M2_d_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
@@ -629,8 +629,8 @@ KPLIB_build_ignored_classnames = [
 	"B_static_AT_F",									//Static Titan Launcher (AT)
 	"B_static_AA_F",									//Static Titan Launcher (AA)
 	"B_Mortar_01_F",									//Mk6 Mortar
-	"ACE_friesAnchorBar",								//ACE FRIES
-	"ACE_friesGantryReverse",							//ACE FRIES
+	"ACE_friesAnchorBar",									//ACE FRIES
+	"ACE_friesGantryReverse",								//ACE FRIES
 	"ACE_friesGantry"									//ACE FRIES
 ];
 
@@ -647,7 +647,6 @@ KPLIB_build_boats = [
 	"O_T_Boat_Armed_01_hmg_F",
 	"rhsusf_mkvsoc"
 ];
-
 
 /*------------------------------- 
 	!!! DO NOT EDIT BELOW !!!
