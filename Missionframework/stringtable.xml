@@ -1,4 +1,4 @@
-a<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Project name="Liberation">
 	<Package name="Liberation">
 		<!-- French localization made by zbug: https://github.com/GreuhZbug -->
@@ -11,22 +11,22 @@ a<?xml version="1.0" encoding="UTF-8"?>
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.963a</Original>
-			<German>KP Liberation v0.963a</German>
-			<Spanish>KP Liberation v0.963a</Spanish>
-			<Italian>KP Liberation v0.963a</Italian>
-			<Chinesesimp>KP Liberation v0.963a</Chinesesimp>
-			<Turkish>KP Liberation v0.963a</Turkish>
-			<Portuguese>KP Liberation v0.963a</Portuguese>
+			<Original>KP Liberation v0.963</Original>
+			<German>KP Liberation v0.963</German>
+			<Spanish>KP Liberation v0.963</Spanish>
+			<Italian>KP Liberation v0.963</Italian>
+			<Chinesesimp>KP Liberation v0.963</Chinesesimp>
+			<Turkish>KP Liberation v0.963</Turkish>
+			<Portuguese>KP Liberation v0.963</Portuguese>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.963a</Original>
-			<German>v0.963a</German>
-			<Spanish>v0.963a</Spanish>
-			<Italian>v0.963a</Italian>
-			<Chinesesimp>v0.963a</Chinesesimp>
-			<Turkish>v0.963a</Turkish>
-			<Portuguese>v0.963a</Portuguese>
+			<Original>v0.963</Original>
+			<German>v0.963</German>
+			<Spanish>v0.963</Spanish>
+			<Italian>v0.963</Italian>
+			<Chinesesimp>v0.963</Chinesesimp>
+			<Turkish>v0.963</Turkish>
+			<Portuguese>v0.963</Portuguese>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -4850,4 +4850,717 @@ a<?xml version="1.0" encoding="UTF-8"?>
 			</Original>
 			<German>&lt;br/&gt;&lt;br/&gt;
 			Nach Befreiung eines Sektors, werden sich manchmal ein paar der verbliebenen Feindkräfte ergeben. Sie können sie gefangen nehmen und zu einer nahegelegenen FOB bringen, um sie zu verhören.&lt;br/&gt; &lt;br/&gt;
-			Dieses Verhör wird unter höchster Rücksichtnahme auf die Genfer Konventionen durchgeführt und bringt Ihnen präzise Informationen, die dazu genutzt werden können, um die ungefähre Lage 
+			Dieses Verhör wird unter höchster Rücksichtnahme auf die Genfer Konventionen durchgeführt und bringt Ihnen präzise Informationen, die dazu genutzt werden können, um die ungefähre Lage einer feindlichen Logistik Basis zu bestimmen, feindliche Konvois aufzuspühren oder auch die ungefähre Position von Kriegsgefangenen zu ermitteln.&lt;br/&gt; &lt;br/&gt;
+			Wenn sie dort angekommen sind, müssen Sie die exakte Position Ihres Ziels herausfinden, dann setzen Sie alle Ihnen zur Verfügung stehenden Mittel ein, um das Einsatzziel zu erreichen. Ein erfolgreicher Einsatz wird mit Verringerung des Bedrohungsniveaus und damit der Effektivität der feindlichen Streitkräfte belohnt.&lt;br/&gt; &lt;br/&gt;
+			</German>
+			<Italian>&lt;br/&gt;&lt;br/&gt;
+			Quando catturi i settori, talvolta le forze ostili che restano si arrenderanno. Quindi puoi catturare quei prigionieri e riportarli in una FOB vicina per interrogarli.&lt;br/&gt; &lt;br/&gt;
+			Questa interrogazione, eseguita nel più grande rispetto della Convenzione di Ginevra, ti permetterà di ottenere informazioni precise che possano essere utilizzate per rivelare la posizione rudimentale di una base logistica nemica, di un convoglio nemico o di un salvataggio.&lt;br/&gt; &lt;br/&gt;
+			Dopo essere andato lì dovrai trovare la posizione esatta del tuo bersaglio, quindi utilizzare qualsiasi mezzo a tua disposizione per completare il tuo obiettivo. Eseguire questo compito sarà premiato, riducendo così il livello di allarme e con essa l'efficienza di tutte le forze ostili.&lt;br/&gt; &lt;br/&gt;
+			</Italian>
+			<Russian>&lt;br/&gt;&lt;br/&gt;
+			Когда вы захватываете сектора, иногда несколько оставшихся сил противника будут сдаваться. Затем вы можете захватить этих пленных и отвезти их в соседний ФОБ для допроса.&lt;br/&gt; &lt;br/&gt;
+			Этот допрос, выполненный в полном уважении Женевской конвенции, позволит вам получить точную информацию, которая может быть использована для выявления грубой позиции базы материально-технического обеспечения противника, конвоя противника или дружественного поиска и спасения.&lt;br/&gt; &lt;br/&gt;
+			Побывав там, вам нужно будет найти точное положение вашей цели, а затем использовать любые имеющиеся в вашем распоряжении средства для достижения своей цели. Достижение этой цели будет вознаграждено, следовательно, будет уменьшаться уровень оповещения, а вместе с ним и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;
+			</Russian>
+			<Chinesesimp>&lt;br/&gt;&lt;br/&gt;
+			有时候当你占领战区时，一些敌军残部会选择投降。你可以将他们抓到就近的前哨去审问。&lt;br/&gt; &lt;br/&gt;
+			这种在完全遵照日内瓦公约的情况下进行的审问，能为你提供用于揭示敌军后勤基地大致位置、补给车队或友军搜索与营救任务的准确情报。&lt;br/&gt; &lt;br/&gt;
+			之后你就需要找到目标的准确位置，并不惜一切代价完成目标。任务的成功带来的奖励将导致警戒等级下降，并进而削弱所有敌军部队的战斗力。&lt;br/&gt; &lt;br/&gt;
+			</Chinesesimp>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
+			Quando você capturar setores, em algumas situações as forças hostis remanescentes se renderão. Você poderá capturar os prisioneiros e levá-los para a FOB mais próxima para serem interrogados.&lt;br/&gt; &lt;br/&gt;
+			O interrogatório, executado em observância à Convenção de Genebra, o permitirá a obtenção de informações que podem ser empregadas para revelar a posição aproximada da base de logística inimiga, comboio inimigo ou operações de busca e resgate de forças aliadas.&lt;br/&gt; &lt;br/&gt;
+			Após chegar na área de operações, você precisará identificar a localização exata do seu alvo, e então fazer uso dos meios necessários à sua disposição para concluir seu objetivo. Ao lograr êxito em sua tarefa, serão recompensados, reduzindo o nível de alerta  reducing the alert level inimigo e consequentemente a eficiência de todas as forças hostis.&lt;br/&gt; &lt;br/&gt;
+			</Portuguese>
+
+		</Key>
+		<Key ID="STR_TUTO_TITLE10">
+			<Original>10. Commanding</Original>
+			<French>10. Commandement</French>
+			<German>10. Oberkommando</German>
+			<Spanish>10. Comandancia</Spanish>
+			<Russian>10. Командование</Russian>
+			<Italian>10. Comando</Italian>
+			<Chinesesimp>10. 指挥</Chinesesimp>
+			<Turkish>10. Komuta etmek</Turkish>
+			<Portuguese>10. Comandando</Portuguese>
+		</Key>
+		<Key ID="STR_TUTO_TEXT10">
+			<Original>&lt;br/&gt;&lt;br/&gt;
+			When a player uses the Commander role, they get access to the Zeus interface by pressing the corresponding key (Y by default). This interface allows the commanding of friendly forces in 3D or map view.&lt;br/&gt; &lt;br/&gt;
+			Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;
+			This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by a FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;
+			</Original>
+			<German>&lt;br/&gt;&lt;br/&gt;
+			Wenn ein Spieler die Rolle des Commanders übernimmt, bekommt er spezifischen Zugang zum Zeus-Interface, wenn er die entsprechende Taste dafür drückt (default Z). Dieses Interface erlaubt das Kommandieren befreundeter Einheiten in der 3D- und Kartenansicht.&lt;br/&gt; &lt;br/&gt;
+			Darüber hinaus hat der Commander erweiterte Bauoptionen, die es ihm ermöglichen, Fahrzeuge mit Besatzung oder auch komplette vorgefertigte Squads zu bauen.&lt;br/&gt; &lt;br/&gt;
+			Die Rolle des Commanders ist nun zwingend erforderlich, da sie direkten Zugang zum Management von Produktionssektoren und KI-Logistik bietet. Dafür hat man an einer FOB die Optionen "Produktionseinstellungen" und "Logistikübersicht".&lt;br/&gt; &lt;br/&gt; Ersteres gewährt sowohl die Möglichkeit zu entscheiden, welcher PoI oder welche Fabrik welche Ressourcen produzieren soll, als auch einen detaillierten aktuellen Überblick.&lt;br/&gt; &lt;br/&gt; Letzteres erlaubt es, einen KI-Logistik-Konvoi zu befehligen, wobei man Logistik-Gruppen hinzufügen, eine beliebige Anzahl an Lkw pro Gruppe kaufen und diese dann befehligen kann, eine bestimmte Anzahl an Ressourcen quer über die Gesammte Region zu verfahren.&lt;br/&gt; &lt;br/&gt;
+			</German>
+			<Italian>&lt;br/&gt;&lt;br/&gt;
+			Quando un giocatore usa il ruolo del comandante, ottierrà l'accesso all'interfaccia di Zeus premendo il tasto corrispondente (Y per impostazione predefinita). Questa interfaccia consente il comando di forze amiche in visualizzazione 3D o mappa.&lt;br/&gt; &lt;br/&gt;
+			Inoltre il comandante ottiene ulteriori opzioni di costruzione che consentiranno loro di ottenere veicoli con equipaggio o intere squadre pre-fatte.&lt;br/&gt; &lt;br/&gt;
+			Questo ruolo è ora obbligatorio in quanto fornisce accesso diretto alla gestione dei settori produttivi e alla logistica AI. Dato che sei posizionato da una FOB, vedrai le opzioni "Impostazioni di produzione" e "Panoramica logistica".&lt;br/&gt; &lt;br/&gt; Il primo consente di decidere quali PDI o Fabbriche producono  risorse specifiche, così come una panoramica corrente dettagliata.&lt;br/&gt; &lt;br/&gt; Quest'ultimo ti permette di comandare un convoglio logistico di AI, dove puoi "aggiungere" gruppi logistici, acquistare qualsiasi quantità di camion per gruppo e mandarli a spostare determinate risorse in tutta la regione per te.&lt;br/&gt; &lt;br/&gt;
+			</Italian>
+			<Russian>&lt;br/&gt;&lt;br/&gt;
+			Когда игрок использует роль Commander, он получает специальный доступ к интерфейсу Zeus, нажав соответствующую клавишу (по умолчанию Y). Этот интерфейс позволяет управлять дружественными силами в трехмерном режиме или в режиме карты. &lt;br/&gt; &lt;br/&gt;
+			Кроме того, командир получает дополнительные варианты сборки, которые позволят ему создавать технику с экипажем или готовые отряды. &lt;br/&gt; &lt;br/&gt;
+			Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Factory создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;
+			</Russian>
+			<Chinesesimp>&lt;br/&gt;&lt;br/&gt;
+			当一名玩家扮演指挥官角色时，他将会得到按指定按键（默认为Y）打开宙斯（Zeus）界面的权限。该界面让玩家可以在3D或地图视角中指挥友军部队。&lt;br/&gt; &lt;br/&gt;
+			除此以外，指挥官还有额外的建造选项，让他可以招募有乘员的载具或一整个预设的AI班组。&lt;br/&gt; &lt;br/&gt;
+			现阶段由于该角色有着战区产出管理和AI后勤的直接权限，因此必须有玩家进行操作。当处于前哨范围内时，你将会看到“产出设置”和“后勤总览”两个选项。&lt;br/&gt; &lt;br/&gt;前者有着指定PoI和工厂资源产出类型，以及查看总览细目的功能。&lt;br/&gt; &lt;br/&gt;后者则让你能够指挥AI后勤车队，其中你可以“添加”后勤组、为后勤组购买任意数量的卡车，以及指挥他们在这个地区中往来运输指定资源。&lt;br/&gt; &lt;br/&gt;
+			</Chinesesimp>
+			<Portuguese>&lt;br/&gt;&lt;br/&gt;
+			Quando um jogador assume a função de comandante, ele recebem acesso à interface Zeus ao pressionar a tecla correspondente (a tecla padrão é 'Y'). Essa interface permite o comando de forças aliadas na plataforma 3D ou através do mapa.&lt;br/&gt; &lt;br/&gt;
+			Ademais, o comandante recebe opções adicionais de construção que o permitirão obter veículos tripulados ou grupos predeterminados.&lt;br/&gt; &lt;br/&gt;
+			Tal função é agora obrigatória, pois possibilita acesso direto à gestão dos setores de produção e logísticas automatizadas. Quando estiver posicionado numa FOB, você poderá observar as opções "Configuração de Produção" e "Visão Geral de Logística".&lt;br/&gt; &lt;br/&gt; A primeira habilita a capacidade de decidir que fabrica/refinaria irá produzir qual recurso específico, bem como uma visão geral detalhada sobre o serviço.&lt;br/&gt; &lt;br/&gt; O último permite a você comandar o sistema automatizado de comboio logístico, onde você poderá "adicionar" grupos logísticos, adquirir quantos transportes desejar e os comandar para transportar quantidades específicas de recursos através do território.&lt;br/&gt; &lt;br/&gt;
+			</Portuguese>
+
+		</Key>
+		<Key ID="STR_PARAMS_ARSENALUSEPRESET">
+			<Original>Arsenal mode</Original>
+			<German>Arsenalmodus</German>
+			<Italian>Modalità Arsenale</Italian>
+			<Chinesesimp>军火库模式</Chinesesimp>
+			<Turkish>Ekipman(Arsenal) modu</Turkish>
+			<Portuguese>Modo do Arsenal</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_NORESTRICTIONS">
+			<Original>No restrictions</Original>
+			<German>Keine Einschränkungen</German>
+			<Italian>Senza Restrizioni</Italian>
+			<Chinesesimp>无限制</Chinesesimp>
+			<Turkish>Kısıtlama yok</Turkish>
+			<Portuguese>Sem restrições</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_USEPRESET">
+			<Original>Use preset from config</Original>
+			<German>Benutze Preset aus Konfiguration</German>
+			<Italian>Usa il file config.sqf</Italian>
+			<Chinesesimp>使用配置文件中的预设内容</Chinesesimp>
+			<Turkish>config.sqf kullan</Turkish>
+			<Portuguese>Usar predefinição de config.sqf</Portuguese>
+		</Key>
+		<Key ID="STR_ACTION_CRATE_PUSH">
+			<Original>-- PUSH CRATE</Original>
+			<German>-- KISTE SCHIEBEN</German>
+			<Italian>-- SPINGI CASSA</Italian>
+			<Chinesesimp>-- 推货箱</Chinesesimp>
+			<Turkish>-- KUTUYU İTTİR</Turkish>
+			<Portuguese>-- EMPURRAR CAIXA --</Portuguese>
+		</Key>
+		<Key ID="STR_ACTION_SORT_STORAGE">
+			<Original>-- STACK AND SORT</Original>
+			<German>-- STAPELN UND SORTIEREN</German>
+			<Italian>--	IMPILA E ORDINA</Italian>
+			<Chinesesimp>-- 排列并分类</Chinesesimp>
+			<Turkish>-- SIRALA VE DÜZENLE</Turkish>
+			<Portuguese>-- ORDENAR E CLASSIFICAR --</Portuguese>
+		</Key>
+		<!-- Added or changed in v0.96 -->
+		<Key ID="STR_PARAMS_SUPPMOD">
+			<Original>BI Support Module System access</Original>
+			<German>BI Support Module System Zugriff</German>
+			<Italian>Accesso Modulo Di Supporto BI</Italian>
+			<Chinesesimp>BI支援模块系统权限</Chinesesimp>
+			<Portuguese>Acesso ao Módulo de Suporte da Bohemia Interactive</Portuguese>
+
+		</Key>
+		<Key ID="STR_PARAMS_COMMANDER">
+			<Original>Commander only</Original>
+			<German>Nur Kommandant</German>
+			<Italian>Solo per il Comandante</Italian>
+			<Chinesesimp>仅指挥官</Chinesesimp>
+			<Turkish>Sadece komutan</Turkish>
+			<Portuguese>Apenas comandante</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_WHITELISTONLY">
+			<Original>Whitelisted only</Original>
+			<German>Nur Whitelist</German>
+			<Italian>Con Whitelist</Italian>
+			<Chinesesimp>仅白名单</Chinesesimp>
+			<Turkish>Sadece beyaz listedekiler</Turkish>
+			<Portuguese>Apenas quem está na lista de permissão</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_EVERYONE">
+			<Original>Everyone</Original>
+			<German>Jeder</German>
+			<Italian>Tutti</Italian>
+			<Chinesesimp>所有人</Chinesesimp>
+			<Turkish>Herkes</Turkish>
+			<Portuguese>Todos</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
+			<Original>-- Extended Options --</Original>
+			<German>-- Erweiterte Optionen --</German>
+			<Italian>-- Opzioni Avanzate --</Italian>
+			<Chinesesimp>-- 扩展选项 --</Chinesesimp>
+			<Turkish>-- Gelişmiş Ayarlar --</Turkish>
+			<Portuguese>-- Opções Avançadas --</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_EXTENDED_OPTIONS">
+			<Original>Extended Options</Original>
+			<German>Erweiterte Optionen</German>
+			<Italian>Opzioni Avanzate</Italian>
+			<Chinesesimp>扩展选项</Chinesesimp>
+			<Turkish>Gelişmiş Ayarlar</Turkish>
+			<Portuguese>Opções Avançadas</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_DISABLED">
+			<Original>- disabled -</Original>
+			<German>- deaktiviert -</German>
+			<Italian>- disabilitato -</Italian>
+			<Chinesesimp>- 已禁用 -</Chinesesimp>
+			<Turkish>- kapalı -</Turkish>
+			<Portuguese>- desativado -</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_SQUAD_MANAGEMENT">
+			<Original>Squad Management</Original>
+			<German>Truppmanagement</German>
+			<Italian>Gestione Squadra</Italian>
+			<Chinesesimp>班组管理</Chinesesimp>
+			<Turkish>Tim Yönetimi</Turkish>
+			<Portuguese>Gestão de equipe</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_JOIN">
+			<Original>Join</Original>
+			<German>Beitreten</German>
+			<Italian>Unisciti</Italian>
+			<Chinesesimp>加入</Chinesesimp>
+			<Turkish>Katıl</Turkish>
+			<Portuguese>Se juntar</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_CREATE">
+			<Original>Create</Original>
+			<German>Erstellen</German>
+			<Italian>Crea</Italian>
+			<Chinesesimp>创建</Chinesesimp>
+			<Turkish>Yarat</Turkish>
+			<Portuguese>Criar</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_RENAME">
+			<Original>Rename</Original>
+			<German>Umbenennen</German>
+			<Italian>Rinomina</Italian>
+			<Chinesesimp>重命名</Chinesesimp>
+			<Turkish>Yeniden Adlandır</Turkish>
+			<Portuguese>Renomear</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_LEADER">
+			<Original>Leader</Original>
+			<German>Anführer</German>
+			<Italian>Capo Squadra</Italian>
+			<Chinesesimp>班长</Chinesesimp>
+			<Turkish>Lider</Turkish>
+			<Portuguese>Líder</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_CANCEL">
+			<Original>Cancel</Original>
+			<German>Abbrechen</German>
+			<Italian>Cancella</Italian>
+			<Chinesesimp>取消</Chinesesimp>
+			<Turkish>İptal</Turkish>
+			<Portuguese>Cancelar</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_CHOOSE">
+			<Original>Choose</Original>
+			<German>Wählen</German>
+			<Italian>Scegli</Italian>
+			<Chinesesimp>选择</Chinesesimp>
+			<Turkish>Seç</Turkish>
+			<Portuguese>Selecionar</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
+			<Original>Platoon and Squad Awareness</Original>
+			<German>Sichthilfen und Kartenmarkierungen</German>
+			<Italian>Indicatori di Mappa</Italian>
+			<Chinesesimp>班排警戒</Chinesesimp>
+			<Turkish>Platon ve Tim Farkındalığı</Turkish>
+			<Portuguese>Indicador de grupo no mapa</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
+			<Original>Show platoon overlay: </Original>
+			<German>Platoon Overlay: </German>
+			<Italian>Indicatore Plotone: </Italian>
+			<Chinesesimp>显示排界面：</Chinesesimp>
+			<Turkish>Platonu ekranda göster: </Turkish>
+			<Portuguese>Mostrar indicador de pelotão:</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_ACTIVE">
+			<Original>active</Original>
+			<German>aktiv</German>
+			<Italian>attivo</Italian>
+			<Chinesesimp>启用</Chinesesimp>
+			<Turkish>aktif</Turkish>
+			<Portuguese>Ativo</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
+			<Original>Show player nametags: </Original>
+			<German>Spielernamen: </German>
+			<Italian>Indicatore Nomi:  </Italian>
+			<Chinesesimp>显示玩家铭牌：</Chinesesimp>
+			<Turkish>Oyuncu isimlerini göster: </Turkish>
+			<Portuguese>Mostrar nome dos jogadores</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_YES">
+			<Original>Yes</Original>
+			<German>Ja</German>
+			<Italian>Si</Italian>
+			<Chinesesimp>是</Chinesesimp>
+			<Turkish>Evet</Turkish>
+			<Portuguese>Sim</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_NO">
+			<Original>No</Original>
+			<German>Nein</German>
+			<Italian>No</Italian>
+			<Chinesesimp>否</Chinesesimp>
+			<Turkish>Evet</Turkish>
+			<Portuguese>Não</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
+			<Original>Adjust View Distance</Original>
+			<German>Sichtweite ändern</German>
+			<Italian>Aggiusta Distanza Visiva</Italian>
+			<Chinesesimp>调整视距</Chinesesimp>
+			<Turkish>Görüş Mesafesi</Turkish>
+			<Portuguese>Ajustar distância de visão</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_VIEW_DISTANCE">
+			<Original>View Distance</Original>
+			<German>Sichtweite</German>
+			<Italian>Distanza Visuale</Italian>
+			<Chinesesimp>视野距离</Chinesesimp>
+			<Turkish>Görüş Mesafesi</Turkish>
+			<Portuguese>Distância de visão</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_INFANTRY">
+			<Original>Infantry</Original>
+			<German>Infanterie</German>
+			<Italian>Fanteria</Italian>
+			<Chinesesimp>步兵</Chinesesimp>
+			<Turkish>Kara Askeri</Turkish>
+			<Portuguese>Infantaria</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_VEHICLES">
+			<Original>Vehicles</Original>
+			<German>Fahrzeuge</German>
+			<Italian>Veicoli</Italian>
+			<Chinesesimp>载具</Chinesesimp>
+			<Turkish>Araçlar</Turkish>
+			<Portuguese>Veículos</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_OBJECTS">
+			<Original>Objects</Original>
+			<German>Objekte</German>
+			<Italian>Oggetti</Italian>
+			<Chinesesimp>物体</Chinesesimp>
+			<Turkish>Objeler</Turkish>
+			<Portuguese>Objetos</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
+			<Original>Adjust view distance to keep FPS above</Original>
+			<German>Automatische Sichtweite für FPS über</German>
+			<Italian>Aggiusta distanza in base agli FPS</Italian>
+			<Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
+			<Turkish>Görüş mesafesini ayarlarak FPS'i yüksek tutun</Turkish>
+			<Portuguese>Ajustar distância de visão para manter FPS acima de</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
+			<Original>Adjust Terrain Details</Original>
+			<German>Landschaftdetails</German>
+			<Italian>Aggiusta Dettagli Terreno</Italian>
+			<Chinesesimp>调整地形细节</Chinesesimp>
+			<Turkish>Yer Detayı Ayarı</Turkish>
+			<Portuguese>Ajustar detalhes do terreno</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_VERY_LOW">
+			<Original>Very Low</Original>
+			<German>Sehr niedrig</German>
+			<Italian>Molto Basso</Italian>
+			<Chinesesimp>极低</Chinesesimp>
+			<Turkish>Çok Düşük</Turkish>
+			<Portuguese>Muito baixo</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_LOW">
+			<Original>Low</Original>
+			<German>Niedrig</German>
+			<Italian>Basso</Italian>
+			<Chinesesimp>低</Chinesesimp>
+			<Turkish>Düşük</Turkish>
+			<Portuguese>Baixo</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_NORMAL">
+			<Original>Normal</Original>
+			<German>Normal</German>
+			<Italian>Normale</Italian>
+			<Chinesesimp>正常</Chinesesimp>
+			<Turkish>Normal</Turkish>
+			<Portuguese>Normal</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_HIGH">
+			<Original>High</Original>
+			<German>Hoch</German>
+			<Italian>Alto</Italian>
+			<Chinesesimp>高</Chinesesimp>
+			<Turkish>Yüksek</Turkish>
+			<Portuguese>Alto</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
+			<Original>Show teammates on map: </Original>
+			<German>Truppmitglieder auf Karte:</German>
+			<Italian>Mostra compagni in mappa:</Italian>
+			<Chinesesimp>在地图上显示友军：</Chinesesimp>
+			<Turkish>Dostları haritada göster: </Turkish>
+			<Portuguese>Mostrar membros da equipe no mapa:</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
+			<Original>In-Vehicle Sound Volume</Original>
+			<German>Fahrzeug Innenlautstärke</German>
+			<Italian>Suono veicolo a bordo</Italian>
+			<Chinesesimp>载具内音量</Chinesesimp>
+			<Turkish>Araç-içi Ses</Turkish>
+			<Portuguese>Volume do som dentro do veículo</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_TEST">
+			<Original>Test</Original>
+			<German>Test</German>
+			<Italian>Test</Italian>
+			<Chinesesimp>测试</Chinesesimp>
+			<Turkish>Test</Turkish>
+			<Portuguese>Teste</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_RESPAWN">
+			<Original>Respawn</Original>
+			<German>Respawn</German>
+			<Italian>Riapparizione</Italian>
+			<Chinesesimp>重生</Chinesesimp>
+			<Turkish>Yeniden Doğ</Turkish>
+			<Portuguese>Respawn</Portuguese>
+		</Key>
+		<Key ID="STR_GREUH_REPLACE_NEAREST_AI">
+			<Original>Replace nearest AI</Original>
+			<German>Ersetze nächste KI</German>
+			<Italian>Rimpiazza AI</Italian>
+			<Chinesesimp>就近附身AI</Chinesesimp>
+			<Turkish>En yakındaki AI ile değiş</Turkish>
+			<Portuguese>Substituir IA mais próxima</Portuguese>
+		</Key>
+		<Key ID="STR_CR_KILLMSG">
+			<Original>A civilian named %1 was killed!</Original>
+			<German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+			<Italian>Un civile di nome %1 è stato ucciso!</Italian>
+			<Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+			<Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+			<Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+		</Key>
+		<Key ID="STR_CR_VEHICLEMSG">
+			<Original>A civilian's vehicle was seized!</Original>
+			<German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
+			<Italian>Un veicolo civile è stato confiscato!</Italian>
+			<Chinesesimp>一辆平民载具被强征了！</Chinesesimp>
+			<Turkish>Bir sivil aracı ele geçirildi!</Turkish>
+			<Portuguese>Um veículo de civil foi tomado!</Portuguese>
+		</Key>
+		<Key ID="STR_CR_BUILDINGMSG">
+			<Original>Civilians are complaining about %1 lost buildings.</Original>
+			<German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+			<Italian>Civili si lamentano della perdita di %1 edifici.</Italian>
+			<Chinesesimp>平民们对%1建筑的损坏有所怨言。</Chinesesimp>
+			<Turkish>Siviller %1 kadar yıkılan binaları hakkında konuşuyorlar.</Turkish>
+			<Portuguese>Civis estão reclamando sobre %1 construções destruídas</Portuguese>
+		</Key>
+		<Key ID="STR_CR_HEALMSG">
+			<Original>Civilian named %1 is thankful for your help.</Original>
+			<German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
+			<Italian>Il civile di nome %1 ti ringrazia per l'aiuto.</Italian>
+			<Portuguese>Um civil chamado %1 agradeceu sua ajuda.</Portuguese>
+		</Key>
+		<Key ID="STR_PARAM_CR_BUILDING">
+			<Original>Civil Reputation penalty for buildings if building is</Original>
+			<German>Ziviles Ansehen sinkt, wenn Gebäude</German>
+			<Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
+			<Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
+			<Turkish>Şu türdeki binalara ceza verilince, ceza uygulanır</Turkish>
+			<Portuguese>Penalidade na reputação civil se a construção estiver</Portuguese>
+		</Key>
+		<Key ID="STR_PARAM_CR_DAMAGED">
+			<Original>damaged</Original>
+			<German>beschädigt</German>
+			<Italian>danneggiato</Italian>
+			<Chinesesimp>受损</Chinesesimp>
+			<Turkish>zarar görmüş</Turkish>
+			<Portuguese>Danificada</Portuguese>
+		</Key>
+		<Key ID="STR_PARAM_CR_DESTROYED">
+			<Original>fully destroyed</Original>
+			<German>komplett zerstört</German>
+			<Italian>completamente distrutto</Italian>
+			<Chinesesimp>完全损毁</Chinesesimp>
+			<Turkish>tamamen yokedilmiş</Turkish>
+			<Portuguese>Totalmente destruída</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_RESTART_TITLE">
+			<Original>SERVER RESTART NOTIFICATION</Original>
+			<German>SERVER RESTART HINWEIS</German>
+			<Italian>NOTIFICA RESTART SERVER</Italian>
+			<Turkish>SERVER YENİDEN BAŞLATMA BİLDİRİMİ</Turkish>
+			<Chinesesimp>服务器重启提醒</Chinesesimp>
+			<Portuguese>NOTIFICAÇÃO DE REINÍCIO DO SERVIDOR</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_RESTART_SECOND">
+			<Original>The server will restart in less than 60 seconds!</Original>
+			<German>Server Restart in weniger als 60 Sekunden!</German>
+			<Italian>Il server si riavvierà tra meno di 60 secodni!</Italian>
+			<Turkish>SERVER 60 SANİYE İÇİNDE YENİDEN BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在60秒内重启！</Chinesesimp>
+			<Portuguese>O servidor irá reiniciar em menos de 60 segundos!</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_RESTART_FIVE">
+			<Original>The server will restart in less than 5 minutes!</Original>
+			<German>Server Restart in weniger als 5 Minuten!</German>
+			<Italian>Il server si riavvierà tra meno di 5 minuti!</Italian>
+			<Turkish>SERVER 5 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在5分钟内重启！</Chinesesimp>
+			<Portuguese>O servidor irá reiniciar em menos de 5 minutos!</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_RESTART_FIFTEEN">
+			<Original>The server will restart in less than 15 minutes!</Original>
+			<German>Server Restart in weniger als 15 Minuten!</German>
+			<Italian>Il server si riavvierà tra meno di 15 minuti!</Italian>
+			<Turkish>SERVER 15 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在15分钟内重启！</Chinesesimp>
+			<Portuguese>O servidor irá reiniciar em menos de 15 minutos!</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_RESTART_THIRTY">
+			<Original>The server will restart in less than 30 minutes!</Original>
+			<German>Server Restart in weniger als 30 Minuten!</German>
+			<Italian>Il server si riavvierà tra meno di 30 minuti!</Italian>
+			<Turkish>SERVER 30 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
+			<Chinesesimp>服务器将在30分钟内重启！</Chinesesimp>
+			<Portuguese>O servidor irá reiniciar em menos de 30 minutos!</Portuguese>
+		</Key>
+		<Key ID="STR_RESTART_PARAM">
+			<Original>Automatic Server Restart after (hours)</Original>
+			<German>Automatischer Server Restart nach (Stunden)</German>
+			<Italian>Restart Automatico del Server ogni (ore)</Italian>
+			<Turkish>Otomatik server yeniden başlat (saat)</Turkish>
+			<Chinesesimp>自动重启服务器时间（小时）</Chinesesimp>
+			<Portuguese>Reinício automático do servidor após (horas)</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUGOPTIONS">
+			<Original>== DEBUG MESSAGES ==</Original>
+			<German>== DEBUG NACHRICHTEN ==</German>
+			<Italian>== MESSAGGI DI DEBUG ==</Italian>
+			<Turkish>== DEBUG MESAJLARI ==</Turkish>
+			<Chinesesimp>== 除错信息 ==</Chinesesimp>
+			<Portuguese>== MENSAGENS DE DEBUG ==</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_CIVINFO">
+			<Original>Civil Informant</Original>
+			<German>Ziviler Informant</German>
+			<Italian>Informatore Civile</Italian>
+			<Turkish>Sivil Bilgisi</Turkish>
+			<Chinesesimp>民间线人</Chinesesimp>
+			<Portuguese>Informante Civil</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_CIVREP">
+			<Original>Civil Reputation</Original>
+			<German>Ziviles Ansehen</German>
+			<Italian>Reputazione Civili</Italian>
+			<Turkish>Sivil Repütasyonu</Turkish>
+			<Chinesesimp>民间声望</Chinesesimp>
+			<Portuguese>Reputação Civil</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
+			<Original>A civilian from %1 says he has some information for us.</Original>
+			<German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
+			<Italian>Un civile a %1 dice di avere informazioni per noi.</Italian>
+			<Turkish>%1 adında ki bir sivil bize vereceği bir bilgisi olduğunu söylüyor.</Turkish>
+			<Chinesesimp>来自%1的一位平民说他有情报要交给我们。</Chinesesimp>
+			<Portuguese>Um civil de %1 disse que possui algumas informações para nos apresentar.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
+			<Original>The civilian gave us some important information.</Original>
+			<German>Der Zivilist gab uns wichtige Informationen.</German>
+			<Italian>Il civile ha fornito informazioni importatnti.</Italian>
+			<Turkish>Sivil bize çok önemli bilgiler verdi.</Turkish>
+			<Chinesesimp>平民给了我们一些重要情报。</Chinesesimp>
+			<Portuguese>Um civil nos concedeu algumas informações importantes.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
+			<Original>The civilian has disappeared.</Original>
+			<German>Der Zivilist ist wieder untergetaucht.</German>
+			<Italian>Il civile è scomparso.</Italian>
+			<Turkish>Sivil ortadan kayboldu.</Turkish>
+			<Chinesesimp>平民消失了。</Chinesesimp>
+			<Portuguese>Um civil desapareceu.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
+			<Original>The civilian died.</Original>
+			<German>Der Zivilist wurde getötet.</German>
+			<Italian>Il civile è morto.</Italian>
+			<Turkish>Sivil öldü.</Turkish>
+			<Chinesesimp>平民死亡了。</Chinesesimp>
+			<Portuguese>Um civil morreu.</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
+			<Original>Asymmetric Threat</Original>
+			<German>Asymmetrische Bedrohung</German>
+			<Italian>Minaccia Asimmetrica</Italian>
+			<Turkish>Asimetrik Tehdit</Turkish>
+			<Chinesesimp>非对称威胁</Chinesesimp>
+			<Portuguese>Ameaça Assimétrica</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_LOGISTIC">
+			<Original>Logistic</Original>
+			<German>Logistik</German>
+			<Italian>Logistica</Italian>
+			<Turkish>Lojistik</Turkish>
+			<Chinesesimp>后勤</Chinesesimp>
+			<Portuguese>Logística</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
+			<Original>Logistic Convoy Ambush</Original>
+			<German>Logistikkonvoi Überfall</German>
+			<Italian>Convoglio Sotto Attacco</Italian>
+			<Turkish>Lojistik Konvoyu Baskını</Turkish>
+			<Chinesesimp>后勤车队受袭</Chinesesimp>
+			<Portuguese>Emboscada no Comboio Logístico</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
+			<Original>Guerilla forces attacking our convoy near %1.</Original>
+			<German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+			<Italian>Guerriglieri attaccano il nostro convoglio vicino %1</Italian>
+			<Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
+			<Chinesesimp>游击队正在%1附近攻击我们的车队</Chinesesimp>
+			<Portuguese>Forças de guerrilha estão atacando nosso comboio nas proximidades de %1.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
+			<Original>The ambush was successfully repelled.</Original>
+			<German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+			<Italian>L'attacco è stato neutralizzato.</Italian>
+			<Turkish>Baskın başarıyla püskürtüldü.</Turkish>
+			<Chinesesimp>成功击退了来犯者。</Chinesesimp>
+			<Portuguese>A emboscada foi frustrada com sucesso.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
+			<Original>The guerilla forces escaped with the convoy resources.</Original>
+			<German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
+			<Italian>I Guerriglieri scappano con le risorse del nostro convoglio.</Italian>
+			<Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
+			<Chinesesimp>游击队抢走了车队物资。</Chinesesimp>
+			<Portuguese>As forças de guerrilha escaparam com os recursos do comboio.</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
+			<Original>Sectorspawn</Original>
+			<German>Sektorspawn</German>
+			<Italian>Spawn Settori</Italian>
+			<Chinesesimp>战区刷新</Chinesesimp>
+			<Portuguese>Spawn do setor</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_KILL">
+			<Original>Killed units</Original>
+			<German>Getötete Einheiten</German>
+			<Italian>Unità Uccise</Italian>
+			<Chinesesimp>击杀的单位</Chinesesimp>
+			<Portuguese>Unidades mortas</Portuguese>
+		</Key>
+		<Key ID="STR_CR_ACE_ACTION">
+			<Original>Treat the civilian (field dressing)</Original>
+			<German>Zivilisten versorgen (einfache Bandage)</German>
+			<Italian>Soccorso Civili</Italian>
+			<Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
+			<Portuguese>Preste socorro ao civil (curativo)</Portuguese>
+		</Key>
+		<Key ID="STR_CR_ACE_ACTION_FAIL">
+			<Original>You need a field dressing.</Original>
+			<German>Du brauchst eine einfache Bandage.</German>
+			<Italian>Hai bisogno di un bendaggio semplice.</Italian>
+			<Chinesesimp>你需要一个战地绷带。</Chinesesimp>
+			<Portuguese>Você precisa de curativo.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_START">
+			<Original>There is a high ranked officer near %1.</Original>
+			<German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+			<Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
+			<Chinesesimp>%1附近有一名高级军官。</Chinesesimp>
+			<Portuguese>Há um oficial de alta patente nas proximidades de %1.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
+			<Original>The officer was successfully killed.</Original>
+			<German>Der Offizier konnte erfolgreich getötet werden.</German>
+			<Italian>L'ufficiale è stato ucciso.</Italian>
+			<Chinesesimp>成功刺杀了军官。</Chinesesimp>
+			<Portuguese>O oficial foi morto. Missão cumprida.</Portuguese>
+		</Key>
+		<Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
+			<Original>The officer has moved on.</Original>
+			<German>Der Offizier ist weitergezogen.</German>
+			<Italian>L'ufficiale è scappato.</Italian>
+			<Chinesesimp>军官逃离了。</Chinesesimp>
+			<Portuguese>O oficial escapou.</Portuguese>
+		</Key>
+		<Key ID="STR_PARAM_RESPAWN_COOLDOWN">
+			<Original>Mobile Respawn Cooldown (minutes)</Original>
+			<German>Mobiler Respawn Cooldown (Minuten)</German>
+			<Italian>Attesa Respawn Mobile (Minuti)</Italian>
+			<Chinesesimp>机动复活点冷却时间（分钟）</Chinesesimp>
+			<Portuguese>Tempo de espera do respawn móvel (minutos)</Portuguese>
+		</Key>
+		<Key ID="STR_RESPAWN_COOLDOWN_HINT">
+			<Original>%1 minutes mobile respawn cooldown left.</Original>
+			<German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+			<Italian>Mancano ancora %1 minuti al respawn.</Italian>
+			<Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
+			<Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
+		</Key>
+		<Key ID="STR_CR_RESISTANCE_KILLMSG">
+			<Original>An allied resistance fighter named %1 was killed!</Original>
+			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+			<Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
+			<Chinesesimp>一位名叫%1的友军抵抗军战士阵亡了！</Chinesesimp>
+			<Portuguese>Um aliado das forças de resistência de nome %1 foi morto!</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_SAVE">
+			<Original>Gamedata saving</Original>
+			<German>Savegame Speicherung</German>
+			<Italian>Salvataggio Dati di Gioco</Italian>
+			<Chinesesimp>储存游戏数据中</Chinesesimp>
+			<Portuguese>Salvando dados do jogo</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_DEBUG_PRODUCTION">
+			<Original>Production</Original>
+			<German>Produktion</German>
+			<Italian>Produzione</Italian>
+			<Chinesesimp>生产</Chinesesimp>
+			<Portuguese>Produção</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS">
+			<Original>Load/Save Parameters</Original>
+			<German>Laden/Speichern der Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
+			<Original>SAVE selected parameters</Original>
+			<German>SPEICHERN der momentanen Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
+			<Original>LOAD parameters or use selected if no saved value found</Original>
+			<German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
+			<Original>Use selected parameters without saving</Original>
+			<German>Momentane Parametereinstellung ohne Speicherung</German>
+		</Key>
+		<Key ID="STR_RAISE">
+			<Original>-- Raise</Original>
+			<German>-- Höher</German>
+		</Key>
+		<Key ID="STR_LOWER">
+			<Original>-- Lower</Original>
+			<German>-- Niedriger</German>
+		</Key>
+	</Package>
+</Project>
