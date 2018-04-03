@@ -3,7 +3,7 @@ waitUntil {sleep 1; !isNil "active_sectors"};
 while {true} do {
 	uiSleep 600;
 	
-	diag_log format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck started at %1 -----", time];
+	diag_log format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck for %1 groups started at %2 -----", count allGroups, time];
 	diag_log "[KP LIBERATION] [GROUPCHECK] Groups which aren't marked for deletion when empty:";
 	
 	private _markedgroups = 0;
