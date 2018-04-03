@@ -31,7 +31,7 @@ waitUntil {sleep 5;
 if (alive _informant) then {
 	if (_is_near_fob) then {
 		sleep 5;
-		private _grp = createGroup GRLIB_side_friendly;
+		private _grp = createGroup [GRLIB_side_friendly, true];
 		[_informant] joinSilent _grp;
 		_informant playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
 		_informant disableAI "ANIM";

@@ -38,7 +38,7 @@ if(KP_liberation_clear_cargo) then {
 if ( _classname in militia_vehicles ) then {
 	[ _newvehicle ] call F_libSpawnMilitiaCrew;
 } else {
-	_grp = createGroup GRLIB_side_enemy; //TODO test
+	_grp = createGroup [GRLIB_side_enemy, true]; //TODO test
 	createVehicleCrew _newvehicle;
 	(crew _newvehicle) joinSilent _grp;
 

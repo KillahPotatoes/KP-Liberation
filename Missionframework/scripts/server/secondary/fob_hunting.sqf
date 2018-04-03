@@ -65,7 +65,7 @@ sleep 1;
 
 { _x setDamage 0; } foreach (_base_objectives + _base_objects);
 
-_grpdefenders = createGroup GRLIB_side_enemy;
+_grpdefenders = createGroup [GRLIB_side_enemy, true];
 _idxselected = [];
 while { count _idxselected < _defenders_amount } do {
 	_idx = floor (random (count _defenders_to_build));
@@ -88,7 +88,7 @@ while { count _idxselected < _defenders_amount } do {
 
 _sentry = ceil ((3 + (floor (random 4))) * ( sqrt ( GRLIB_unitcap ) ) );
 
-_grpsentry = createGroup GRLIB_side_enemy;
+_grpsentry = createGroup [GRLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1),0];
 for [ {_idx=0},{_idx < _sentry},{_idx=_idx+1} ] do {
 	opfor_sentry createUnit [_base_sentry_pos, _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];

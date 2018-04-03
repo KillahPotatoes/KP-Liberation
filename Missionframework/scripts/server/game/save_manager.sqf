@@ -442,7 +442,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
 	{
 		private _nextgroup = _x;
-		private _grp = createGroup GRLIB_side_friendly;
+		private _grp = createGroup [GRLIB_side_friendly, true];
 		{
 			private _nextunit = _x;
 			private _nextpos = [(_nextunit select 1) select 0, (_nextunit select 1) select 1, ((_nextunit select 1) select 2) + 0.2];

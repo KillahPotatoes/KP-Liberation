@@ -75,7 +75,7 @@ _waypoint = _convoy_group addWaypoint [_convoy_destinations select 0, 0];
 _waypoint setWaypointType "CYCLE";
 _waypoint setWaypointCompletionRadius 50;
 
-private _troops_group = createGroup GRLIB_side_enemy;
+private _troops_group = createGroup [GRLIB_side_enemy, true];
 {_x createUnit [_spawnpos, _troops_group,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];} foreach (["army"] call F_getAdaptiveSquadComp);
 {_x moveInCargo _troop_vehicle} foreach (units _troops_group);
 
@@ -119,7 +119,7 @@ while { _mission_in_progress } do {
 		_disembark_troops = true;
 
 		if (alive (driver _troop_vehicle)) then {
-			private _troop_driver_group = (createGroup GRLIB_side_enemy);
+			private _troop_driver_group = createGroup [GRLIB_side_enemy, true];
 			[ driver _troop_vehicle ] joinSilent _troop_driver_group;
 			sleep 1;
 			while {(count (waypoints _troop_driver_group)) != 0} do {deleteWaypoint ((waypoints _troop_driver_group) select 0);};

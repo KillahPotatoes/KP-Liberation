@@ -16,7 +16,7 @@ GROUP
 
 params ["_pos"];
 
-private _grp = createGroup GRLIB_side_resistance;
+private _grp = createGroup [GRLIB_side_resistance, true];
 private _tier = [] call F_getResistanceTier;
 private _cr_multi = [] call F_cr_getMulti;
 private _amount = (4 + (round (random _cr_multi)) + (round (random _tier)));
