@@ -160,6 +160,9 @@ class Missions
 * Added: Presets for: RDS Civilians, Project OPFOR SLA and Project OPFOR RACS. Thanks to [PSYKO-nz](https://github.com/PSYKO-nz)
 * Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
 * Added: Tanks DLC classnames for presets.
+* Added: Group diag output for serverlog.
+* Tweaked: All `spawn compilefinal preprocessfilelinenumber` replaced with `execVM`.
+* Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 
 ### 0.963 (05th January 2018)
