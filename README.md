@@ -161,6 +161,7 @@ class Missions
 * Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
 * Added: Tanks DLC classnames for presets.
 * Added: Group diag output for serverlog.
+* Added: Debug output for group count and amount of active scripts.
 * Tweaked: All `spawn compilefinal preprocessfilelinenumber` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
