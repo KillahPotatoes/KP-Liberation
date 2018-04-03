@@ -161,7 +161,7 @@ class Missions
 * Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
 * Added: Tanks DLC classnames for presets.
 * Added: Group diag output for serverlog.
-* Added: Debug output for group count and amount of active scripts.
+* Added: Debug output for group count and amount of active scripts. Liberation brings about [13,70,0,1] - [20,80,0,1].
 * Removed: Some old scripts which aren't needed anymore.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
