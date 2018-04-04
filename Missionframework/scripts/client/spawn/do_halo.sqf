@@ -35,7 +35,7 @@ if ( dialog ) then {
 
 if ( dojump > 0 ) then {
 	GRLIB_last_halo_jump = time;
-	halo_position = [ halo_position, random 250, random 360 ] call BIS_fnc_relPos;
+	halo_position = halo_position getRelPos [random 250, random 360];
 	halo_position = [ halo_position select 0, halo_position select 1, GRLIB_halo_altitude + (random 200) ];
 	halojumping = true;
 	sleep 0.1;

@@ -1,5 +1,5 @@
 if (KP_liberation_suppMod_enb > 0) then {
-	KP_liberation_suppMod_grp = createGroup sideLogic;
+	KP_liberation_suppMod_grp = createGroup [sideLogic, true];
 	KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", getPos huronspawn, [], 0, "NONE"];
 	//KP_liberation_suppMod_req spawn BIS_fnc_moduleSupportsInitRequester;
 	[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";

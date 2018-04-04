@@ -12,7 +12,7 @@ while { true } do {
 		_grp = grpNull;
 		switch (squadaction) do {
 			case "create" : {
-				_grp = createGroup (side player);
+				_grp = createGroup [(side player), true];
 				[player] join _grp;
 				hint "New squad created";
 			};

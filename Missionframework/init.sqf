@@ -17,7 +17,7 @@ if (isServer) then {
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
-	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\hc_manager.sqf";
+	execVM "scripts\server\offloading\hc_manager.sqf";
 };
 
 if (!isDedicated && hasInterface) then {

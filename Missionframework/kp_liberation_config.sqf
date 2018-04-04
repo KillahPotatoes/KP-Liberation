@@ -48,20 +48,23 @@ KP_liberation_preset_blufor = 0;
 1 = Apex Tanoa (apex vanilla CSAT)
 2 = RHS AFRF (EMR/MSV)
 3 = Project OPFOR (Takistan)
-4 = Project OPFOR (Islamic State) */
+4 = Project OPFOR (Islamic State)
+5 = Project OPFOR (Sahrani) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
 0 = Custom (default vanilla FIA)
 1 = Apex Tanoa (apex vanilla Syndikat)
 2 = RHS GREF
-3 = Project OPFOR (Middle Eastern) */
+3 = Project OPFOR (Middle Eastern)
+4 = Project OPFOR (Sahrani) */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
 0 = Custom (default vanilla)
 1 = Apex Tanoa (apex vanilla)
-2 = Project OPFOR (Middle Eastern) */
+2 = Project OPFOR (Middle Eastern)
+3 = RDS Civilians */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -247,6 +250,8 @@ KP_liberation_allowed_items_extension = [
 	"rhs_acc_ekp8_18b",
 	"rhs_acc_ekp8_18c",
 	"rhs_acc_ekp8_18d",
+	"rhs_rshg2_mag",
+	"rhs_rpg26_mag",
 	"rhsusf_acc_g33_T1_flip",
 	"rhsusf_acc_g33_xps3_flip",
 	"rhsusf_acc_g33_xps3_tan_flip",

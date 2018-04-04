@@ -19,7 +19,7 @@ while {true} do {
 		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 		
-		private _grp = createGroup GRLIB_side_civilian;
+		private _grp = createGroup [GRLIB_side_civilian, true];
 		private _informant = _grp createUnit [(selectRandom civilians), getMarkerPos _sector, [], 0, "NONE"];
 		private _waiting_time = KP_liberation_civinfo_duration;
 

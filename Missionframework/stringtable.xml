@@ -12,24 +12,24 @@
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.963</Original>
-			<German>KP Liberation v0.963</German>
-			<Spanish>KP Liberation v0.963</Spanish>
-			<Italian>KP Liberation v0.963</Italian>
-			<Chinesesimp>KP Liberation v0.963</Chinesesimp>
-			<Chinese>KP Liberation v0.963</Chinese>
-			<Turkish>KP Liberation v0.963</Turkish>
-			<Portuguese>KP Liberation v0.963</Portuguese>
+			<Original>KP Liberation v0.963a</Original>
+			<German>KP Liberation v0.963a</German>
+			<Spanish>KP Liberation v0.963a</Spanish>
+			<Italian>KP Liberation v0.963a</Italian>
+			<Chinesesimp>KP Liberation v0.963a</Chinesesimp>
+			<Chinese>KP Liberation v0.963a</Chinese>
+			<Turkish>KP Liberation v0.963a</Turkish>
+			<Portuguese>KP Liberation v0.963a</Portuguese>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.963</Original>
-			<German>v0.963</German>
-			<Spanish>v0.963</Spanish>
-			<Italian>v0.963</Italian>
-			<Chinesesimp>v0.963</Chinesesimp>
-			<Chinese>v0.963</Chinese>
-			<Turkish>v0.963</Turkish>
-			<Portuguese>v0.963</Portuguese>
+			<Original>v0.963a</Original>
+			<German>v0.963a</German>
+			<Spanish>v0.963a</Spanish>
+			<Italian>v0.963a</Italian>
+			<Chinesesimp>v0.963a</Chinesesimp>
+			<Chinese>v0.963a</Chinese>
+			<Turkish>v0.963a</Turkish>
+			<Portuguese>v0.963a</Portuguese>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -5109,7 +5109,6 @@
 			- Torres de Rádio: Quando sob domínio inimigo, as torres de rádio serão utilizadas para solicitar reforços quando um setor próximo estiver sendo atacado pela Coalizão. O tempo de reação dependerá da distância entre a torre e o setor. Quando estiver sob controle aliado, as torres fornecerão inteligência sobre a movimentação das tropas inimigas na proximidade. Isto será possível pois as torres interceptarão as frequências inimigas.&lt;br/&gt; &lt;br/&gt;
 			- Grandes Cidades: Existem dezenas de grandes cidades na região. Quando estiverem sob controle da Coalizão, certamente não será possível ao inimigo retomar seu controle. Este é seu objetivo primário.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_TUTO_TITLE5">
 			<Original>5. Resources</Original>
@@ -5173,7 +5172,6 @@
 			&lt;t color='#ffff00'&gt;COMBUSTÍVEL:&lt;/t&gt; Todo veículo precisa de combustível, alguns consomem mais que outros.&lt;br/&gt; &lt;br/&gt;
 			Você cruzará com todos os três tipos de recursos dispersos pelos setores, porém para adquirir uma quantidade considerável e abastecimento constante, você deverá capturar setores com fábricas/refinarias. Uma vez capturadas, as fábricas precisarão de um depósito (use o scroll do mouse) e então poderão imediatamente iniciar a produção do recurso pretendido. Se puder arcar com os custos, as fábricas poderão ser aprimoradas para produzir os demais recursos. &lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_TUTO_TITLE6">
 			<Original>6. Alert Level</Original>
@@ -5216,7 +5214,6 @@
 			O inimigo não irá permitir a conquista de seu território sem uma reação. Quando iniciar sua campanha, forças hostis serão apenas compostas por guarnições dentro de bases militares. No entanto, ao liberar mais setores, as forças inimigas chamarão mais reforços e equipamentos para tentar te combater.&lt;br/&gt; &lt;br/&gt;
 			Para limitar a capacidade operacional das forças de oposição, você deverá cumprir objetivos secundários que consistem na destruição de bases logísticas e no assalto aos comboios inimigos. Isto não é obrigatório para lograr êxito na campanha, todavia se o nível de alerta for ignorado por muito tempo, você enfrentará uma forte resistência inimiga.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_TUTO_TITLE7">
 			<Original>7. Construction</Original>
@@ -5310,7 +5307,6 @@
 			Para construir uma nova FOB, acesse o menu de construção, selecione a aba de logística e então construir FOB no conteiner ou uma FOB transportável (é a mesma coisa, mas com rodas). Em seguida, poderá posicionar sua linda e nova FOB (transportável ou no conteiner) onde desejar. No entanto, esteja ciente de que não poderá construir a FOB dentro de 1km da sua posição inicial, dentro de 300 metros de qualquer setor ou dentro de 2km de outra FOB.&lt;br/&gt; &lt;br/&gt;
 			Seria simplesmente redundante!&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_TUTO_TITLE9">
 			<Original>9. Secondary Objectives</Original>
@@ -5360,7 +5356,6 @@
 			O interrogatório, executado em observância à Convenção de Genebra, o permitirá a obtenção de informações que podem ser empregadas para revelar a posição aproximada da base de logística inimiga, comboio inimigo ou operações de busca e resgate de forças aliadas.&lt;br/&gt; &lt;br/&gt;
 			Após chegar na área de operações, você precisará identificar a localização exata do seu alvo, e então fazer uso dos meios necessários à sua disposição para concluir seu objetivo. Ao lograr êxito em sua tarefa, serão recompensados, reduzindo o nível de alerta  reducing the alert level inimigo e consequentemente a eficiência de todas as forças hostis.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_TUTO_TITLE10">
 			<Original>10. Commanding</Original>
@@ -5411,7 +5406,6 @@
 			Ademais, o comandante recebe opções adicionais de construção que o permitirão obter veículos tripulados ou grupos predeterminados.&lt;br/&gt; &lt;br/&gt;
 			Tal função é agora obrigatória, pois possibilita acesso direto à gestão dos setores de produção e logísticas automatizadas. Quando estiver posicionado numa FOB, você poderá observar as opções "Configuração de Produção" e "Visão Geral de Logística".&lt;br/&gt; &lt;br/&gt; A primeira habilita a capacidade de decidir que fabrica/refinaria irá produzir qual recurso específico, bem como uma visão geral detalhada sobre o serviço.&lt;br/&gt; &lt;br/&gt; O último permite a você comandar o sistema automatizado de comboio logístico, onde você poderá "adicionar" grupos logísticos, adquirir quantos transportes desejar e os comandar para transportar quantidades específicas de recursos através do território.&lt;br/&gt; &lt;br/&gt;
 			</Portuguese>
-
 		</Key>
 		<Key ID="STR_PARAMS_ARSENALUSEPRESET">
 			<Original>Arsenal mode</Original>
@@ -5466,7 +5460,6 @@
 			<Chinesesimp>BI支援模块系统权限</Chinesesimp>
 			<Chinese>BI支援模塊系統權限</Chinese>
 			<Portuguese>Acesso ao Módulo de Suporte da Bohemia Interactive</Portuguese>
-
 		</Key>
 		<Key ID="STR_PARAMS_COMMANDER">
 			<Original>Commander only</Original>
@@ -6110,6 +6103,34 @@
 			<Chinesesimp>生产</Chinesesimp>
 			<Chinese>生產</Chinese>
 			<Portuguese>Produção</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS">
+			<Original>Load/Save Parameters</Original>
+			<German>Laden/Speichern der Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
+			<Original>SAVE selected parameters</Original>
+			<German>SPEICHERN der momentanen Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
+			<Original>LOAD parameters or use selected if no saved value found</Original>
+			<German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
+			<Original>Use selected parameters without saving</Original>
+			<German>Momentane Parametereinstellung ohne Speicherung</German>
+		</Key>
+		<Key ID="STR_RAISE">
+			<Original>-- Raise</Original>
+			<German>-- Höher</German>
+		</Key>
+		<Key ID="STR_LOWER">
+			<Original>-- Lower</Original>
+			<German>-- Niedriger</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_GUERILLA_INCOMING">
+			<Original>Guerilla forces are incoming to %1 from the %2.</Original>
+			<German>Guerillakräfte nähern sich %1 aus %2.</German>
 		</Key>
 	</Package>
 </Project>

@@ -22,7 +22,7 @@ while { GRLIB_endgame == 0 } do {
 	if ( count _usable_sectors > 0 ) then {
 		_spawnsector = selectRandom _usable_sectors;
 
-		_grp = createGroup GRLIB_side_civilian;
+		_grp = createGroup [GRLIB_side_civilian, true];
 		if ( random 100 < 33) then {
 			_civnumber = 1 + (floor (random 2));
 			while { count units _grp < _civnumber } do {
@@ -33,7 +33,7 @@ while { GRLIB_endgame == 0 } do {
 
 			_nearestroad = objNull;
 			while { isNull _nearestroad } do {
-				_nearestroad = [[getmarkerpos (_spawnsector), random (100), random (360)] call BIS_fnc_relPos, 200, []] call BIS_fnc_nearestRoad;
+				_nearestroad = [(getmarkerpos (_spawnsector)) getRelPos [random (100), random (360)], 200, []] call BIS_fnc_nearestRoad;
 				sleep 1;
 			};
 
@@ -74,7 +74,7 @@ while { GRLIB_endgame == 0 } do {
 		{_x doFollow leader _grp} foreach units _grp;
 
 		{
-			_nearestroad = [ [  getmarkerpos (_x), random(100), random(360)  ] call BIS_fnc_relPos, 200, [] ] call BIS_fnc_nearestRoad;
+			_nearestroad = [(getmarkerpos _x) getRelPos [random(100), random(360)], 200, []] call BIS_fnc_nearestRoad;
 			if ( isNull _nearestroad ) then {
 				_waypoint = _grp addWaypoint [ markerpos _x, 100 ];
 			} else {

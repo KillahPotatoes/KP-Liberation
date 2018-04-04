@@ -1,5 +1,17 @@
 class Params
 {
+	class LoadSaveParams {
+		title = $STR_PARAMS_LOADSAVEPARAMS;
+		values[] = { 0, 1, 2 };
+		texts[] = { $STR_PARAMS_LOADSAVEPARAMS_SAVE, $STR_PARAMS_LOADSAVEPARAMS_LOAD, $STR_PARAMS_LOADSAVEPARAMS_SELECTED };
+		default = 1;
+	};
+	class Spacer0 {
+		title = "";
+		values[] = { "" };
+		texts[] = { "" };
+		default = "";
+	};
 	class MissionOptions {
 		title = $STR_PARAMS_MISSIONOPTIONS;
 		values[] = { "" };

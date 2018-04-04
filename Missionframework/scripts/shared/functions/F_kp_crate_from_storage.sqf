@@ -24,11 +24,11 @@ switch (typeOf _storage) do {
 };
 
 _i = 0;
-_unload_pos = [_storage, _unload_distance, (getDir _storage) - 180] call BIS_fnc_relPos;
+_unload_pos = _storage getRelPos [_unload_distance, (getDir _storage) - 180];
 
 while {!((nearestObjects [_unload_pos,KP_liberation_crates,1]) isEqualTo [])} do {
 	_i = _i + 1;
-	_unload_pos = [_storage, _unload_distance + _i * 1.8, (getDir _storage) - 180] call BIS_fnc_relPos;
+	_unload_pos = _storage getRelPos [_unload_distance + _i * 1.8, (getDir _storage) - 180];
 };
 
 sleep 0.5;
