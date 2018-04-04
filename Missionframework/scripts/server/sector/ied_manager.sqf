@@ -18,7 +18,7 @@ if (random 100 < 12) then {
 private _vehicle_trigger = 1;
 private _ied_type = selectRandom ["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
 private _ied_obj = objNull;
-private _roadobj = [[getmarkerpos (_sector), random (_radius), random (360)] call BIS_fnc_relPos, _radius, []] call BIS_fnc_nearestRoad;
+private _roadobj = [(getmarkerpos _sector) getRelPos [random _radius, random 360], _radius, []] call BIS_fnc_nearestRoad;
 private _goes_boom = false;
 private _ied_marker = "";
 
@@ -31,7 +31,7 @@ if (_number > 0) then {
 if (!(isnull _roadobj)) then {
 
 	_roadpos = getpos _roadobj;
-	_ied_obj = createMine [_ied_type, [_roadpos, _spread, random (360)] call BIS_fnc_relPos, [], 0];
+	_ied_obj = createMine [_ied_type, _roadpos getRelPos [_spread, random 360], [], 0];
 	_ied_obj setdir (random 360);
 
 	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] ied_manager.sqf -> IED %1 spawned at %2", _number, markerText _sector];_text remoteExec ["diag_log",2];};

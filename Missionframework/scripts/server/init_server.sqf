@@ -35,55 +35,53 @@ manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\man
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
-// Arty Monitor
-// Arty Supp deactivated for now
-/*arty_monitor = compileFinal preprocessFileLineNumbers "scripts\server\game\arty_monitor.sqf";
-
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\create_suppMods.sqf";*/
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startgame.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\huron_manager.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\base\startvehicle_spawn.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\counter_battlegroup.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\random_battlegroups.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\readiness_increase.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\apply_default_permissions.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\apply_saved_scores.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\capture_vehicles.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\clean.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\cleanup_vehicles.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\fucking_set_fog.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\manage_time.sqf";
-if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\manage_weather.sqf";};
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\periodic_save.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\playtime.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\save_manager.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\spawn_radio_towers.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\synchronise_vars.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\synchronise_eco.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\zeus_synchro.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\offload_calculation.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\offload_manager.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\show_fps.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\civilian_patrols.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\manage_patrols.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\patrols\reinforcements_resetter.sqf";
-if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\manage_logistics.sqf";};
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\manage_resources.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\recalculate_resources.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\recalculate_timer.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\recalculate_timer_sector.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\resources\unit_cap.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\lose_sectors.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_sectors.sqf";
+execVM "scripts\server\base\startgame.sqf";
+execVM "scripts\server\base\huron_manager.sqf";
+execVM "scripts\server\base\startvehicle_spawn.sqf";
+execVM "scripts\server\battlegroup\counter_battlegroup.sqf";
+execVM "scripts\server\battlegroup\random_battlegroups.sqf";
+execVM "scripts\server\battlegroup\readiness_increase.sqf";
+execVM "scripts\server\game\apply_default_permissions.sqf";
+execVM "scripts\server\game\apply_saved_scores.sqf";
+execVM "scripts\server\game\capture_vehicles.sqf";
+execVM "scripts\server\game\clean.sqf";
+execVM "scripts\server\game\cleanup_vehicles.sqf";
+execVM "scripts\server\game\fucking_set_fog.sqf";
+execVM "scripts\server\game\manage_time.sqf";
+if (!KP_liberation_ace) then {execVM "scripts\server\game\manage_weather.sqf";};
+execVM "scripts\server\game\periodic_save.sqf";
+execVM "scripts\server\game\playtime.sqf";
+execVM "scripts\server\game\save_manager.sqf";
+execVM "scripts\server\game\spawn_radio_towers.sqf";
+execVM "scripts\server\game\synchronise_vars.sqf";
+execVM "scripts\server\game\synchronise_eco.sqf";
+execVM "scripts\server\game\zeus_synchro.sqf";
+execVM "scripts\server\offloading\offload_calculation.sqf";
+execVM "scripts\server\offloading\offload_manager.sqf";
+execVM "scripts\server\offloading\show_fps.sqf";
+execVM "scripts\server\patrols\civilian_patrols.sqf";
+execVM "scripts\server\patrols\manage_patrols.sqf";
+execVM "scripts\server\patrols\reinforcements_resetter.sqf";
+if (KP_liberation_ailogistics) then {execVM "scripts\server\resources\manage_logistics.sqf";};
+execVM "scripts\server\resources\manage_resources.sqf";
+execVM "scripts\server\resources\recalculate_resources.sqf";
+execVM "scripts\server\resources\recalculate_timer.sqf";
+execVM "scripts\server\resources\recalculate_timer_sector.sqf";
+execVM "scripts\server\resources\unit_cap.sqf";
+execVM "scripts\server\sector\lose_sectors.sqf";
+execVM "scripts\server\sector\manage_sectors.sqf";
 
 // Civil Reputation
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civrep\init_module.sqf";
+execVM "scripts\server\civrep\init_module.sqf";
 
 // Civil Informant
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\civinformant\init_module.sqf";
+execVM "scripts\server\civinformant\init_module.sqf";
 
 // Asymmetric Threats
-[] spawn compileFinal preprocessFileLineNumbers "scripts\server\asymmetric\init_module.sqf";
+execVM "scripts\server\asymmetric\init_module.sqf";
+
+// Groupcheck for deletion when empty
+execVM "scripts\server\offloading\group_diag.sqf";
 
 {
 	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {
@@ -93,5 +91,5 @@ if (KP_liberation_ailogistics) then {[] spawn compileFinal preprocessFileLineNum
 
 // Server Restart Script from K4s0
 if (KP_liberation_restart > 0) then {
-	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\game\server_restart.sqf";
+	execVM "scripts\server\game\server_restart.sqf";
 };

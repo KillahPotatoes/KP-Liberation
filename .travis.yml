@@ -1,0 +1,33 @@
+sudo: false
+
+language: node_js
+node_js:
+  - node
+
+cache:
+  directories:
+    - node_modules
+
+# Only build tags
+if: tag IS present
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: build/*.zip
+  skip_cleanup: true
+  on:
+    tags: true
+
+before_deploy:
+  - cd _tools
+  - npm install
+  - npx gulp
+  - echo "Listing built files"
+  - ls ./build/
+
+jobs:
+  include:
+    - stage: deploy
+      script: skip # default job will be skipped

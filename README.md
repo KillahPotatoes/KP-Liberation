@@ -2,7 +2,7 @@
 
 # KP Liberation for ArmA 3
 
-## Current version : 0.963
+## Current version : 0.963a
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
@@ -19,10 +19,10 @@ If you like the work and think it's worth a small donation, feel free to use the
 [Donate via paypal.me](https://www.paypal.me/wyqer)
 
 ## Overview
-The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will span several weeks of real time.
+The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will most likely span several weeks of real time.
 * Experience a massive “Capture the Island” campaign involving a large range of different settlements across the entire area.
 * Cooperate with up to 34 players, including a Commanding role, two fire-team squads, a medevac and a logistical support squad as well as AI recruits to fill the gaps.
-* Purchase both infantry and vehicles (both ground and air) using three different types of physical resources; supplies, ammunition and fuel.
+* Purchase both infantry and both ground and air vehicles using three different types of physical resources; supplies, ammunition and fuel.
 * Build the FOB of your dreams with an in-game "what you see is what you get" system.
 * Play within an immersive engine that not only punishes you for civilian casualty but diversely reacts in turn.
 * Combat aggressive and cunning hostile forces who react and adapt to your actions.
@@ -31,16 +31,8 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 * Accomplish meaningful secondary objectives that will benefit your progression.
 * Never lose your progress with the built-in server-side save system.
 
-## Public Servers
-
-### KP Liberation by www.killahpotatoes.de
-* IP: 213.133.110.170
-* Port: 2302
-* Needed Mods: None
-* Admin: [jus61](https://www.killahpotatoes.de/index.php?user/2-jus61/)
-
 ## Needed Mods
-These mods are needed if you want to use the prepacked missionfiles from the release tab or Steam Workshop.
+These mods are needed if you want to use the prepackaged missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak
 	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
@@ -160,6 +152,23 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.963a (planned for 11th April 2018 as "legacy support" release)
+* Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
+* Added: 2 RHS mag classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: Functionality to save/load mission parameters. Thanks to [veteran29](https://github.com/veteran29)
+* Added: Presets for: RDS Civilians, Project OPFOR SLA and Project OPFOR RACS. Thanks to [PSYKO-nz](https://github.com/PSYKO-nz)
+* Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
+* Added: Tanks DLC classnames for presets.
+* Added: Group diag output for serverlog.
+* Added: Debug output for group count and amount of active scripts. Liberation starts with [13,70,0,1].
+* Added: Notification for incoming guerilla forces when attacking a sector.
+* Added: Vehicle chance for guerilla forces who approach a sector.
+* Removed: Some old scripts which aren't needed anymore.
+* Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
+* Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
+* Tweaked: All `BIS_fnc_relPos` replaced with `getRelPos`.
+* Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 
 ### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.

@@ -17,6 +17,7 @@ if (isNil "manned") then { manned = false };
 if (isNil "gridmode" ) then { gridmode = 0 };
 if (isNil "repeatbuild" ) then { repeatbuild = false };
 if (isNil "build_rotation" ) then { build_rotation = 0 };
+if (isNil "build_elevation" ) then { build_elevation = 0 }; 
 
 waitUntil { sleep 0.2; !isNil "dobuild" };
 
@@ -34,10 +35,10 @@ while { true } do {
 		_price_s = ((build_lists select buildtype) select buildindex) select 1;
 		_price_a = ((build_lists select buildtype) select buildindex) select 2;
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
-		
+
 		_nearfob = [] call F_getNearestFob;
 		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
-		
+
 		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
 	};
 
@@ -89,7 +90,10 @@ while { true } do {
 				_idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>","scripts\client\build\do_grid.sqf","",-735,false,false,"","build_confirmed == 1"];
 				_idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
 			};
+
 			_idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>","scripts\client\build\build_rotate.sqf","",-750,false,false,"","build_confirmed == 1"];
+			_idactraise = player addAction ["<t color='#B0FF00'>" + localize "STR_RAISE" + "</t>","scripts\client\build\build_raise.sqf","",-765,false,false,"","build_confirmed == 1"];
+			_idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>","scripts\client\build\build_lower.sqf","",-766,false,false,"","build_confirmed == 1"];
 			_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
 			_ghost_spot = (getmarkerpos "ghost_spot") findEmptyPosition [0,100];
@@ -141,6 +145,8 @@ while { true } do {
 				} foreach GRLIB_preview_spheres;
 
 				_vehicle setdir _actualdir;
+				
+				_truepos = [_truepos select 0, _truepos select 1, (_truepos select 2) +  build_elevation];
 
 				_near_objects = (_truepos nearobjects ["AllVehicles", _dist]) ;
 				_near_objects = _near_objects + (_truepos nearobjects [FOB_box_typename, _dist]);
@@ -157,14 +163,16 @@ while { true } do {
 
 				private _remove_objects = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
+					private _typeOfX = typeOf _x;
+					if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
 						_remove_objects pushback _x;
 					};
 				} foreach _near_objects;
 
 				private _remove_objects_25 = [];
 				{
-					if ((_x isKindOf "Animal") || ((typeof _x) in GRLIB_ignore_colisions_when_building) || (_x == player) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames))  then {
+					private _typeOfX = typeOf _x;
+					if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KP_liberation_static_classnames)) then {
 						_remove_objects_25 pushback _x;
 					};
 				} foreach _near_objects_25;
@@ -292,7 +300,7 @@ while { true } do {
 				} else {
 					_vehicle setpos _truepos;
 				};
-				
+
 				if (!(_classname in KP_liberation_ace_crates) && KP_liberation_clear_cargo) then {
 					clearWeaponCargoGlobal _vehicle;
 					clearMagazineCargoGlobal _vehicle;
@@ -328,7 +336,7 @@ while { true } do {
 					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};
 					default {};
 				};
-				
+
 				if (_classname in KP_liberation_medical_vehicles) then {
 					_vehicle setVariable ["ace_medical_medicClass", 1, true];
 				};
@@ -338,7 +346,7 @@ while { true } do {
 						[_x,[[_vehicle],true]] remoteExec ["addCuratorEditableObjects",2];
 					} forEach allCurators;
 				};
-				
+
 				sleep 0.3;
 				_vehicle allowDamage true;
 				_vehicle setDamage 0;
@@ -368,7 +376,9 @@ while { true } do {
 			};
 			player removeAction _idactrotate;
 			player removeAction _idactplace;
-
+			player removeAction _idactraise;
+			player removeAction _idactlower;
+			
 			if(buildtype == 99) then {
 				_new_fob = getpos player;
 				[_new_fob, false] remoteExec ["build_fob_remote_call",2];

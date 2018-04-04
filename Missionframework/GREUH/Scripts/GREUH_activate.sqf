@@ -40,12 +40,10 @@ if ( !isNil "greuh_options_profile" ) then {
 
 [] call compile preprocessFileLineNumbers "GREUH\GREUH_config.sqf";
 [] call compile preprocessFileLineNumbers "GREUH\scripts\GREUH_version.sqf";
-[] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_actionmanager.sqf";
-[] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_revive_camera.sqf";
-[] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_medic_listener.sqf";
-if ( GREUH_allow_mapmarkers ) then { [] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_playermarkers.sqf"; };
-if ( GREUH_allow_platoonview ) then { [] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_platoonoverlay.sqf"; };
-if ( GREUH_allow_platoonview ) then { [] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_cache_units.sqf"; };
-if ( GREUH_allow_customsquads ) then { [] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_squadmanagement.sqf"; };
-if ( GREUH_allow_viewdistance ) then { [] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_view_distance_management.sqf"; };
-[] spawn compile preprocessFileLineNumbers "GREUH\scripts\GREUH_dynamic_view_distance.sqf";
+execVM "GREUH\scripts\GREUH_actionmanager.sqf";
+if ( GREUH_allow_mapmarkers ) then { execVM "GREUH\scripts\GREUH_playermarkers.sqf"; };
+if ( GREUH_allow_platoonview ) then { execVM "GREUH\scripts\GREUH_platoonoverlay.sqf"; };
+if ( GREUH_allow_platoonview ) then { execVM "GREUH\scripts\GREUH_cache_units.sqf"; };
+if ( GREUH_allow_customsquads ) then { execVM "GREUH\scripts\GREUH_squadmanagement.sqf"; };
+if ( GREUH_allow_viewdistance ) then { execVM "GREUH\scripts\GREUH_view_distance_management.sqf"; };
+execVM "GREUH\scripts\GREUH_dynamic_view_distance.sqf";

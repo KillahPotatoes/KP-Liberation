@@ -186,7 +186,7 @@ while { dialog && alive player } do {
 
 			if ( _fobdistance < 100 || count _nearsquad > 0 ) then {
 
-				_tempgmp = createGroup GRLIB_side_friendly;
+				_tempgmp = createGroup [GRLIB_side_friendly, true];
 				(typeof _selectedmember) createUnit [ markers_reset, _tempgmp,''];
 				[ (units _tempgmp) select 0, _selectedmember ] call F_swapInventory;
 				deleteVehicle ((units _tempgmp) select 0);

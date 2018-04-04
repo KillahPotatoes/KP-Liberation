@@ -11,22 +11,22 @@
 		<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
 		<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
 		<Key ID="STR_MISSION_TITLE">
-			<Original>KP Liberation v0.963</Original>
-			<German>KP Liberation v0.963</German>
-			<Spanish>KP Liberation v0.963</Spanish>
-			<Italian>KP Liberation v0.963</Italian>
-			<Chinesesimp>KP Liberation v0.963</Chinesesimp>
-			<Turkish>KP Liberation v0.963</Turkish>
-			<Portuguese>KP Liberation v0.963</Portuguese>
+			<Original>KP Liberation v0.963a</Original>
+			<German>KP Liberation v0.963a</German>
+			<Spanish>KP Liberation v0.963a</Spanish>
+			<Italian>KP Liberation v0.963a</Italian>
+			<Chinesesimp>KP Liberation v0.963a</Chinesesimp>
+			<Turkish>KP Liberation v0.963a</Turkish>
+			<Portuguese>KP Liberation v0.963a</Portuguese>
 		</Key>
 		<Key ID="STR_MISSION_VERSION">
-			<Original>v0.963</Original>
-			<German>v0.963</German>
-			<Spanish>v0.963</Spanish>
-			<Italian>v0.963</Italian>
-			<Chinesesimp>v0.963</Chinesesimp>
-			<Turkish>v0.963</Turkish>
-			<Portuguese>v0.963</Portuguese>
+			<Original>v0.963a</Original>
+			<German>v0.963a</German>
+			<Spanish>v0.963a</Spanish>
+			<Italian>v0.963a</Italian>
+			<Chinesesimp>v0.963a</Chinesesimp>
+			<Turkish>v0.963a</Turkish>
+			<Portuguese>v0.963a</Portuguese>
 		</Key>
 		<Key ID="STR_Deploy_OnPoint">
 			<Original>Deploy</Original>
@@ -5537,6 +5537,34 @@
 			<Italian>Produzione</Italian>
 			<Chinesesimp>生产</Chinesesimp>
 			<Portuguese>Produção</Portuguese>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS">
+			<Original>Load/Save Parameters</Original>
+			<German>Laden/Speichern der Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
+			<Original>SAVE selected parameters</Original>
+			<German>SPEICHERN der momentanen Parameter</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
+			<Original>LOAD parameters or use selected if no saved value found</Original>
+			<German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+		</Key>
+		<Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
+			<Original>Use selected parameters without saving</Original>
+			<German>Momentane Parametereinstellung ohne Speicherung</German>
+		</Key>
+		<Key ID="STR_RAISE">
+			<Original>-- Raise</Original>
+			<German>-- Höher</German>
+		</Key>
+		<Key ID="STR_LOWER">
+			<Original>-- Lower</Original>
+			<German>-- Niedriger</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_GUERILLA_INCOMING">
+			<Original>Guerilla forces are incoming to %1 from the %2.</Original>
+			<German>Guerillakräfte nähern sich %1 aus %2.</German>
 		</Key>
 	</Package>
 </Project>

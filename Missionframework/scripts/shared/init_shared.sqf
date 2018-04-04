@@ -38,6 +38,6 @@ civinfo_delivered = compileFinal preprocessFileLineNumbers "scripts\server\civin
 
 asymm_notifications = compileFinal preprocessFileLineNumbers "scripts\client\asymmetric\asymm_notifications.sqf";
 
-[] spawn compileFinal preprocessFileLineNumbers "scripts\shared\scan_skill.sqf";
-[] spawn compileFinal preprocessFileLineNumbers "scripts\shared\diagnostics.sqf";
-if (!KP_liberation_ace) then {[] spawn compileFinal preprocessFileLineNumbers "scripts\shared\manage_weather.sqf";};
+execVM "scripts\shared\scan_skill.sqf";
+execVM "scripts\shared\diagnostics.sqf";
+if (!KP_liberation_ace) then {execVM "scripts\shared\manage_weather.sqf";};

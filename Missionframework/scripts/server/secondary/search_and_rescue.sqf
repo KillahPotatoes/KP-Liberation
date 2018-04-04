@@ -3,7 +3,7 @@ private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
-private _helopos = [ getmarkerpos _spawn_marker, random 200, random 360 ] call BIS_fnc_relPos;
+private _helopos = (getmarkerpos _spawn_marker) getRelPos [random 200, random 360];
 private _helowreck = GRLIB_sar_wreck createVehicle _helopos;
 _helowreck allowDamage false;
 _helowreck setPos _helopos;
@@ -15,11 +15,11 @@ private _helofire = GRLIB_sar_fire createVehicle (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 
-private _pilotsGrp = createGroup GRLIB_side_enemy;
-private _pilotsPos = [ getpos _helowreck, 25, random 360 ] call BIS_fnc_relPos;
+private _pilotsGrp = createGroup [GRLIB_side_enemy, true];
+private _pilotsPos = (getpos _helowreck) getRelPos [25, random 360];
 pilot_classname createUnit [ _pilotsPos, _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 sleep 0.2;
-pilot_classname createUnit [ [ _pilotsPos, 1, random 360 ] call BIS_fnc_relPos, _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+pilot_classname createUnit [_pilotsPos getRelPos [1, random 360], _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 sleep 2;
 private _pilotUnits = units _pilotsGrp;
 {
@@ -28,7 +28,7 @@ private _pilotUnits = units _pilotsGrp;
 	sleep 0.5
 } foreach (_pilotUnits);
 
-private _grppatrol = createGroup GRLIB_side_enemy;
+private _grppatrol = createGroup [GRLIB_side_enemy, true];
 private _patrolcorners = [
 	[ (getpos _helowreck select 0) - 40, (getpos _helowreck select 1) - 40, 0 ],
 	[ (getpos _helowreck select 0) + 40, (getpos _helowreck select 1) - 40, 0 ],
@@ -52,16 +52,16 @@ _waypoint = _grppatrol addWaypoint [(_patrolcorners select 0), 0];
 _waypoint setWaypointType "CYCLE";
 {_x doFollow (leader _grppatrol)} foreach units _grppatrol;
 
-private _grpsentry = createGroup GRLIB_side_enemy;
+private _grpsentry = createGroup [GRLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
-	opfor_sentry createUnit [ [ _pilotsPos, 1, random 360 ] call BIS_fnc_relPos, _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+	opfor_sentry createUnit [_pilotsPos getRelPos [1, random 360], _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 };
 
 (leader _grpsentry) setDir (random 360);
 
-(opfor_transport_truck createVehicle ([ getpos _helowreck, 25, random 360 ] call BIS_fnc_relPos)) setDir random 360;
+(opfor_transport_truck createVehicle ((getpos _helowreck) getRelPos [25, random 360])) setDir random 360;
 
 private _vehicle_pool = opfor_vehicles;
 if ( combat_readiness < 50 ) then {
@@ -71,10 +71,10 @@ if ( combat_readiness < 50 ) then {
 private _vehtospawn = [];
 private _spawnchances = [75,50,15];
 {if (random 100 < _x) then {_vehtospawn pushBack (selectRandom _vehicle_pool);};} foreach _spawnchances;
-{ ( [ [ getpos _helowreck, 30 + (random 30), random 360 ] call BIS_fnc_relPos , _x, true ] call F_libSpawnVehicle ) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
+{([(getpos _helowreck) getRelPos [30 + (random 30), random 360], _x, true] call F_libSpawnVehicle) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
 
 secondary_objective_position = getpos _helowreck;
-secondary_objective_position_marker = [ secondary_objective_position, 800, random 360 ] call BIS_fnc_relPos;
+secondary_objective_position_marker = secondary_objective_position getRelPos [800, random 360];
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 GRLIB_secondary_in_progress = 2; publicVariable "GRLIB_secondary_in_progress";
@@ -92,7 +92,7 @@ if ( _alive_crew_count == 0 ) then {
 	[7] remoteExec ["remote_call_intel"];
 } else {
 	[8] remoteExec ["remote_call_intel"];
-	private _grp = createGroup GRLIB_side_friendly;
+	private _grp = createGroup [GRLIB_side_friendly, true];
 	{ [_x ] joinSilent _grp; } foreach _pilotUnits;
 	while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 	{_x doFollow (leader _grp)} foreach units _grp;

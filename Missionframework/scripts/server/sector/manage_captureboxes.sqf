@@ -12,7 +12,7 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 
 		private _spawnpos = zeropos;
 		while { _spawnpos distance zeropos < 1000 } do {
-			_spawnpos =  ( [ ( markerpos _sector), random 50, random 360 ] call BIS_fnc_relPos ) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
+			_spawnpos =  ((markerpos _sector) getRelPos [random 50, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
 			if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
 		};
 
