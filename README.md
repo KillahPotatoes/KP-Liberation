@@ -170,6 +170,7 @@ class Missions
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
 * Tweaked: All `BIS_fnc_relPos` replaced with `getRelPos`.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
+* Fixed: Sometimes helicopters exploded when spawning on the deck of the USS Freedom.
 
 ### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.
