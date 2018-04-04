@@ -5562,5 +5562,9 @@
 			<Original>-- Lower</Original>
 			<German>-- Niedriger</German>
 		</Key>
+		<Key ID="STR_NOTIFICATION_GUERILLA_INCOMING">
+			<Original>Guerilla forces are incoming to %1 from the %2.</Original>
+			<German>Guerillakräfte nähern sich %1 aus %2.</German>
+		</Key>
 	</Package>
 </Project>

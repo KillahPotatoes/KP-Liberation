@@ -185,4 +185,9 @@ class CfgNotifications {
         color[] = {1, 0, 0, 1};
         sound = "taskFailed";
     };
+    class lib_asymm_guerilla_incoming : lib_battlegroup {
+        description = $STR_NOTIFICATION_GUERILLA_INCOMING;
+        color[] = {0, 0.5, 0, 1};
+        sound = "taskUpdated";
+    };
 };
