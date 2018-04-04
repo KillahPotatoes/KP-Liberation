@@ -164,6 +164,7 @@ class Missions
 * Added: Debug output for group count and amount of active scripts. Liberation starts with [13,70,0,1].
 * Added: Notification for incoming guerilla forces when attacking a sector.
 * Added: Vehicle chance for guerilla forces who approach a sector.
+* Added: Traditional Chinese localization. Thanks to [KOEI5113](https://github.com/KOEI5113)
 * Removed: Some old scripts which aren't needed anymore.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
