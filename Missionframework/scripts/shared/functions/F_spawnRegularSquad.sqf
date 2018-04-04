@@ -1,10 +1,10 @@
 params [ "_sector", "_squadies_to_spawn" ];
 
-private _sectorpos = (getMarkerPos _sector) getRelPos [random 100, random 360];
+private _sectorpos = (getMarkerPos _sector) getPos [random 100, random 360];
 
 private _spawnpos = zeropos;
 while {_spawnpos distance zeropos < 1000} do {
-	_spawnpos = (_sectorpos getRelPos [random 50, random 360]) findEmptyPosition [5, 100, "B_Heli_Light_01_F"];
+	_spawnpos = (_sectorpos getPos [random 50, random 360]) findEmptyPosition [5, 100, "B_Heli_Light_01_F"];
 	if (count _spawnpos == 0) then {_spawnpos = zeropos;};
 };
 

@@ -13,7 +13,7 @@ if ( _precise_position ) then {
 	_spawnpos = [] + _sectorpos;
 } else {
 	while { _spawnpos distance zeropos < 1000 } do {
-		_spawnpos = (_sectorpos getRelPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
+		_spawnpos = (_sectorpos getPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
 		if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
 	};
 };

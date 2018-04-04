@@ -3,7 +3,7 @@ private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
-private _helopos = (getmarkerpos _spawn_marker) getRelPos [random 200, random 360];
+private _helopos = (getmarkerpos _spawn_marker) getPos [random 200, random 360];
 private _helowreck = GRLIB_sar_wreck createVehicle _helopos;
 _helowreck allowDamage false;
 _helowreck setPos _helopos;
@@ -16,10 +16,10 @@ _helofire setpos (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 
 private _pilotsGrp = createGroup [GRLIB_side_enemy, true];
-private _pilotsPos = (getpos _helowreck) getRelPos [25, random 360];
+private _pilotsPos = (getpos _helowreck) getPos [25, random 360];
 pilot_classname createUnit [ _pilotsPos, _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 sleep 0.2;
-pilot_classname createUnit [_pilotsPos getRelPos [1, random 360], _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+pilot_classname createUnit [_pilotsPos getPos [1, random 360], _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 sleep 2;
 private _pilotUnits = units _pilotsGrp;
 {
@@ -56,12 +56,12 @@ private _grpsentry = createGroup [GRLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
-	opfor_sentry createUnit [_pilotsPos getRelPos [1, random 360], _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+	opfor_sentry createUnit [_pilotsPos getPos [1, random 360], _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 };
 
 (leader _grpsentry) setDir (random 360);
 
-(opfor_transport_truck createVehicle ((getpos _helowreck) getRelPos [25, random 360])) setDir random 360;
+(opfor_transport_truck createVehicle ((getpos _helowreck) getPos [25, random 360])) setDir random 360;
 
 private _vehicle_pool = opfor_vehicles;
 if ( combat_readiness < 50 ) then {
@@ -71,10 +71,10 @@ if ( combat_readiness < 50 ) then {
 private _vehtospawn = [];
 private _spawnchances = [75,50,15];
 {if (random 100 < _x) then {_vehtospawn pushBack (selectRandom _vehicle_pool);};} foreach _spawnchances;
-{([(getpos _helowreck) getRelPos [30 + (random 30), random 360], _x, true] call F_libSpawnVehicle) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
+{([(getpos _helowreck) getPos [30 + (random 30), random 360], _x, true] call F_libSpawnVehicle) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
 
 secondary_objective_position = getpos _helowreck;
-secondary_objective_position_marker = secondary_objective_position getRelPos [800, random 360];
+secondary_objective_position_marker = secondary_objective_position getPos [800, random 360];
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 GRLIB_secondary_in_progress = 2; publicVariable "GRLIB_secondary_in_progress";

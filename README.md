@@ -168,7 +168,7 @@ class Missions
 * Removed: Some old scripts which aren't needed anymore.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
-* Tweaked: All `BIS_fnc_relPos` replaced with `getRelPos`.
+* Tweaked: All `BIS_fnc_relPos` replaced with `getPos`.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 * Fixed: Sometimes helicopters exploded when spawning on the deck of the USS Freedom.
 

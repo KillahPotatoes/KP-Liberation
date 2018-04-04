@@ -155,7 +155,7 @@ while {true} do {
 
 		if (count (choiceslist select _idxchoice) == 3) then {
 			private _truck = (choiceslist select _idxchoice) select 2;
-			player setposATL (_truck getRelPos [5 + (random 3), random 360]);
+			player setposATL (_truck getPos [5 + (random 3), random 360]);
 			KP_liberation_respawn_mobile_done = true;
 		} else {
 			private _destpos = ((choiceslist select _idxchoice) select 1);
