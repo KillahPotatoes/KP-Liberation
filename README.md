@@ -166,6 +166,7 @@ class Missions
 * Removed: Some old scripts which aren't needed anymore.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
+* Tweaked: All `BIS_fnc_relPos` replaced with `getRelPos`.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 
 ### 0.963 (05th January 2018)
