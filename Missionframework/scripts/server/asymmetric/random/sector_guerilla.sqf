@@ -11,7 +11,6 @@ while {(([_startpos, 500, GRLIB_side_friendly] call F_getUnitsCount) > 0) || (su
 private _incDir = (markerPos _sector) getDir _startpos;
 private _incString = "unknown";
 
-// Have to check if a switch with value range cases work in sqf as this looks horrible. (not at my own pc currently)
 if (_incDir < 23) then {
 	_incString = "N";
 } else {
@@ -83,6 +82,7 @@ if ((random 100) <= 25) then {
 
 	_waypoint = _grp addWaypoint [markerpos _sector, 100];
 	_waypoint setWaypointType "MOVE";
+	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint setWaypointBehaviour "AWARE";
 	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointCompletionRadius 30;
