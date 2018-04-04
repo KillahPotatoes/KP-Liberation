@@ -60,19 +60,21 @@ _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "YELLOW";
 _waypoint setWaypointCompletionRadius 30;
 _waypoint = _grp addWaypoint [markerpos _sector, 200];
-_waypoint setWaypointSpeed "LIMITED";
+_waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointType "SAD";
 _waypoint = _grp addWaypoint [markerpos _sector, 200];
-_waypoint setWaypointSpeed "LIMITED";
+_waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointType "SAD";
 _waypoint = _grp addWaypoint [markerpos _sector, 200];
-_waypoint setWaypointSpeed "LIMITED";
+_waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointType "SAD";
 _waypoint = _grp addWaypoint [markerpos _sector, 200];
-_waypoint setWaypointSpeed "LIMITED";
+_waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointType "CYCLE";
 
 _spawnedGroups pushBack _grp;
+
+sleep 30;
 
 if ((random 100) <= 25) then {
 	_vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
@@ -113,7 +115,7 @@ private _strengthChanged = false;
 		{
 			if (alive _x) then {
 				deleteVehicle _x;
-				KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 1;
+				KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 2;
 				_strengthChanged = true;
 			};
 		} forEach (units _x);

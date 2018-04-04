@@ -186,7 +186,8 @@ class CfgNotifications {
         sound = "taskFailed";
     };
     class lib_asymm_guerilla_incoming : lib_reinforcements {
-        description = $STR_NOTIFICATION_GUERILLA_INCOMING;
+        title = $STR_NOTIFICATION_GUER_INC_TITLE;
+        description = $STR_NOTIFICATION_GUER_INC;
         color[] = {0, 0.5, 0, 1};
         sound = "taskUpdated";
     };

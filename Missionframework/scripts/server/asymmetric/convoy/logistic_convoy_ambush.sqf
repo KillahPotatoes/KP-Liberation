@@ -121,14 +121,14 @@ if ((_waitingTime <= 0) && (({alive _x} count (units _grp)) > 0)) then {
 	{
 		if (alive _x) then {
 			deleteVehicle _x;
-			_gain = _gain + 1;
+			_gain = _gain + 2;
 		};
 	} forEach (units _grp);
 	{
 		if ((typeOf (_x select 0)) == KP_liberation_ammo_crate) then {
-			_gain = _gain + 2;
+			_gain = _gain + 3;
 		} else {
-			_gain = _gain + 1;
+			_gain = _gain + 2;
 		};
 		deleteVehicle (_x select 0);
 	} forEach _crateArray;

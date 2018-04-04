@@ -6128,9 +6128,13 @@
 			<Original>-- Lower</Original>
 			<German>-- Niedriger</German>
 		</Key>
-		<Key ID="STR_NOTIFICATION_GUERILLA_INCOMING">
+		<Key ID="STR_NOTIFICATION_GUER_INC_TITLE">
+			<Original>Guerilla forces on the way.</Original>
+			<German>Widerstandskämpfer sind unterwegs.</German>
+		</Key>
+		<Key ID="STR_NOTIFICATION_GUER_INC">
 			<Original>Guerilla forces are incoming to %1 from the %2.</Original>
-			<German>Guerillakräfte nähern sich %1 aus %2.</German>
+			<German>Widerstandskämpfer nähern sich %1 aus %2.</German>
 		</Key>
 	</Package>
 </Project>
