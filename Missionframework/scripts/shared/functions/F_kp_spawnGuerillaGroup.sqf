@@ -14,12 +14,12 @@ Return:
 GROUP
 */
 
-params ["_pos"];
+params ["_pos", ["_amount", 0]];
 
 private _grp = createGroup [GRLIB_side_resistance, true];
 private _tier = [] call F_getResistanceTier;
 private _cr_multi = [] call F_cr_getMulti;
-private _amount = (4 + (round (random _cr_multi)) + (round (random _tier)));
+if (_amount == 0) then {_amount = (4 + (round (random _cr_multi)) + (round (random _tier)));};
 private _weapons = missionNamespace getVariable ("KP_liberation_guerilla_weapons_" + str _tier);
 private _uniforms = missionNamespace getVariable ("KP_liberation_guerilla_uniforms_" + str _tier);
 private _vests = missionNamespace getVariable ("KP_liberation_guerilla_vests_" + str _tier);

@@ -48,12 +48,13 @@ if (_incDir < 23) then {
 
 [5, [(markerText _sector), _incString]] remoteExec ["F_cr_globalMsg"];
 
+private _spawnedGroups = [];
 private _grp = [_startpos] call F_spawnGuerillaGroup;
 
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 {_x doFollow (leader _grp)} forEach (units _grp);
 
-_waypoint = _grp addWaypoint [markerpos _sector, 100];
+private _waypoint = _grp addWaypoint [markerpos _sector, 100];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointBehaviour "AWARE";
@@ -72,20 +73,55 @@ _waypoint = _grp addWaypoint [markerpos _sector, 200];
 _waypoint setWaypointSpeed "LIMITED";
 _waypoint setWaypointType "CYCLE";
 
+_spawnedGroups pushBack _grp;
+
+if ((random 100) <= 25) then {
+	_vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
+	_grp = [_startpos, 2] call F_spawnGuerillaGroup;
+	((units _grp) select 0) moveInDriver _vehicle;
+	((units _grp) select 1) moveInGunner _vehicle;
+
+	_waypoint = _grp addWaypoint [markerpos _sector, 100];
+	_waypoint setWaypointType "MOVE";
+	_waypoint setWaypointBehaviour "AWARE";
+	_waypoint setWaypointCombatMode "YELLOW";
+	_waypoint setWaypointCompletionRadius 30;
+	_waypoint = _grp addWaypoint [markerpos _sector, 300];
+	_waypoint setWaypointSpeed "LIMITED";
+	_waypoint setWaypointType "SAD";
+	_waypoint = _grp addWaypoint [markerpos _sector, 300];
+	_waypoint setWaypointSpeed "LIMITED";
+	_waypoint setWaypointType "SAD";
+	_waypoint = _grp addWaypoint [markerpos _sector, 300];
+	_waypoint setWaypointSpeed "LIMITED";
+	_waypoint setWaypointType "SAD";
+	_waypoint = _grp addWaypoint [markerpos _sector, 300];
+	_waypoint setWaypointSpeed "LIMITED";
+	_waypoint setWaypointType "CYCLE";
+
+	_spawnedGroups pushBack _grp;
+};
+
 waitUntil {sleep 60; !(_sector in active_sectors)};
 
 sleep 60;
 
-if (!isNull _grp) then {
-	{
-		if (alive _x) then {
-			deleteVehicle _x;
-			KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 1;
-		};
-	} forEach (units _grp);
-	if (!isServer) then {
-		publicVariableServer "KP_liberation_guerilla_strength";
+private _strengthChanged = false;
+
+{
+	if (!isNull _x) then {
+		{
+			if (alive _x) then {
+				deleteVehicle _x;
+				KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 1;
+				_strengthChanged = true;
+			};
+		} forEach (units _x);
 	};
+} forEach _spawnedGroups;
+
+if (!isServer && _strengthChanged) then {
+	publicVariableServer "KP_liberation_guerilla_strength";
 };
 
 if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};

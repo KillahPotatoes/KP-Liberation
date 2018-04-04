@@ -163,6 +163,7 @@ class Missions
 * Added: Group diag output for serverlog.
 * Added: Debug output for group count and amount of active scripts. Liberation starts with [13,70,0,1].
 * Added: Notification for incoming guerilla forces when attacking a sector.
+* Added: Vehicle chance for guerilla forces who approach a sector.
 * Removed: Some old scripts which aren't needed anymore.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
