@@ -161,7 +161,7 @@ class Missions
 * Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
 * Added: Tanks DLC classnames for presets.
 * Added: Group diag output for serverlog.
-* Added: Debug output for group count and amount of active scripts. Liberation starts with [13,70,0,1].
+* Added: Debug output for group count and amount of active scripts. Liberation starts with [13,70,0,1] and may rise to [70,70,0,1].
 * Added: Notification for incoming guerilla forces when attacking a sector.
 * Added: Vehicle chance for guerilla forces who approach a sector.
 * Added: Traditional Chinese localization. Thanks to [KOEI5113](https://github.com/KOEI5113)
