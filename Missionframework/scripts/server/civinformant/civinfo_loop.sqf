@@ -27,11 +27,15 @@ while {true} do {
 		_informant setPos (selectRandom (_house buildingPos -1));
 		_informant setUnitPos "UP";
 		sleep 1;
-		_informant disableAI "ANIM";
-		_informant disableAI "MOVE";
-		_informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-		sleep 2;
-		_informant setCaptive true;
+		if (KP_liberation_ace) then {
+			[_informant, true] call ACE_captives_fnc_setSurrendered;
+		} else {
+			_informant disableAI "ANIM";
+			_informant disableAI "MOVE";
+			_informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
+			sleep 2;
+			_informant setCaptive true;
+		};
 
 		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant];_text remoteExec ["diag_log",2];};
 
@@ -53,8 +57,12 @@ while {true} do {
 
 		if (_waiting_time > 0) then {
 			if (alive _informant) then {
-				_informant enableAI "ANIM";
-				_informant enableAI "MOVE";
+				if (KP_liberation_ace) then {
+					[_informant, false] call ACE_captives_fnc_setSurrendered;
+				} else {
+					_informant enableAI "ANIM";
+					_informant enableAI "MOVE";
+				};
 				sleep 1;
 				[_informant] remoteExec ["civinfo_escort"];
 			} else {
