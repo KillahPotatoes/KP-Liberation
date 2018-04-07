@@ -36,7 +36,7 @@ switch (_action) do {
 			_savedParams = [[_paramName, _value]];
 
 		} else {
-			private _singleParam = ([_savedParams, { (_x select 0) == _paramName}] call bis_fnc_conditionalSelect) select 0;
+			private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
 			if(isNil "_singleParam") then {
 				if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [SAVE PARAM] Saving value: %1 for param: %2,", _value, _paramName];};
 				_savedParams pushBack [_paramName, _value];
@@ -62,7 +62,7 @@ switch (_action) do {
 			if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [SAVE PARAM] No saved value for param: %1, fetching value.", _paramName];};
 			_value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
 		} else {
-			private _singleParam = ([_savedParams, { (_x select 0) == _paramName}] call bis_fnc_conditionalSelect) select 0;
+			private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
 			if(isNil "_singleParam") then {
 				if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [SAVE PARAM] No saved value for param: %1, fetching value.", _paramName];};
 				_value = [_paramName, _defaultValue] call bis_fnc_getParamValue;

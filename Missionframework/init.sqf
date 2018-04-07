@@ -27,3 +27,8 @@ if (!isDedicated && hasInterface) then {
 } else {
 	setViewDistance 1600;
 };
+
+// Execute fnc_reviveInit again (by default it executes in postInit)
+if ((KP_liberation_bis_revive_mode == 1) && !KP_liberation_ace_med) then {
+	[] call bis_fnc_reviveInit;
+};

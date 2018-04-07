@@ -12,6 +12,15 @@ KP_liberation_production_debug = ["DebugProduction",0] call bis_fnc_getParamValu
 
 KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 /* Saveable params */
+KP_liberation_bis_revive_mode = ["ReviveMode",1] call F_getSaveableParam;
+KP_liberation_bis_revive_mode call bis_fnc_paramReviveMode;
+(["ReviveDuration",6] call F_getSaveableParam) call BIS_fnc_paramReviveDuration;
+(["ReviveRequiredTrait",1] call F_getSaveableParam) call BIS_fnc_paramReviveRequiredTrait;
+(["ReviveMedicSpeedMultiplier",1] call F_getSaveableParam) call BIS_fnc_paramReviveMedicSpeedMultiplier;
+(["ReviveRequiredItems",1] call F_getSaveableParam) call BIS_fnc_paramReviveRequiredItems;
+(["UnconsciousStateMode",0] call F_getSaveableParam) call BIS_fnc_paramReviveUnconsciousStateMode;
+(["ReviveBleedOutDuration",180] call F_getSaveableParam) call BIS_fnc_paramReviveBleedOutDuration;
+(["ReviveForceRespawnDuration",10] call F_getSaveableParam) call BIS_fnc_paramReviveForceRespawnDuration;
 GRLIB_difficulty_modifier = ["Difficulty",2] call F_getSaveableParam;
 GRLIB_time_factor = ["DayDuration",12] call F_getSaveableParam;
 GRLIB_resources_multiplier = ["ResourcesMultiplier",3] call F_getSaveableParam;
@@ -40,7 +49,6 @@ KP_liberation_mapmarkers = ["MapMarkers",1] call F_getSaveableParam;
 KP_liberation_mobilerespawn = ["MobileRespawn",1] call F_getSaveableParam;
 KP_liberation_mobilearsenal = ["MobileArsenal",1] call F_getSaveableParam;
 KP_liberation_ailogistics = ["AiLogistics",1] call F_getSaveableParam;
-// Arty Supp deactivated for now - KP_liberation_suppMod_enb = ["SuppMod",1] call F_getSaveableParam;
 KP_liberation_restart = ["ServerRestart",0] call F_getSaveableParam;
 KP_liberation_cr_param_buildings = ["CR_Building",0] call F_getSaveableParam;
 KP_liberation_respawn_cooldown = ["RespawnCooldown",900] call F_getSaveableParam;
@@ -66,7 +74,9 @@ if (KP_liberation_cr_param_buildings == 1) then {KP_liberation_cr_param_building
 if (KP_liberation_clear_cargo == 1) then {KP_liberation_clear_cargo = true} else {KP_liberation_clear_cargo = false};
 
 // Check if ACE is running
-if (isClass (configFile >> "CfgVehicles" >> "ACE_module")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply and weather scripts from Liberation."} else {KP_liberation_ace = false};
+if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply and weather scripts from Liberation."} else {KP_liberation_ace = false};
+// Deactivate BI Revive when ACE Medical is running
+if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KP_liberation_ace_med = true; diag_log "[KP LIBERATION] ACE Medical detected. Deactivating BI Revive System."} else {KP_liberation_ace_med = false};
 
 // Fix for not working float values in mission params
 switch (GRLIB_unitcap) do {

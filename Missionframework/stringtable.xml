@@ -4279,17 +4279,6 @@
 			<Turkish>-- Kaynak bölgesini değiştir</Turkish>
 			<Portuguese>-- Alterar painel de recursos</Portuguese>
 		</Key>
-		<Key ID="STR_PARAMS_REVIVEOPTIONS">
-			<Original>== REVIVE OPTIONS (Disable it, if you play with ACE) ==</Original>
-			<German>== WIEDERBELEBUNGSEINSTELLUNGEN (Deaktivieren, wenn ACE genutzt) ==</German>
-			<Spanish>== OPCIONES DE REVIVE (Activar sólo si no se usa ACE</Spanish>
-			<Russian>== ВОЗВРАТИТЬ ОПЦИИ (отключите это, если вы играете с ACE)</Russian>
-			<Italian>== OPZIONI RIANIMAZIONE (Abilità, solo se giochi con ACE) ==</Italian>
-			<Chinesesimp>== 复活选项（如果你挂载了ACE模组，请关闭此项）</Chinesesimp>
-			<Chinese>== 昏迷甦醒選項（如果你有掛載 ACE 模組，請關閉此項） ==</Chinese>
-			<Turkish>== CANLANDIRMA AYARLARI (ACE ile oynuyorsanız kapatın.)</Turkish>
-			<Portuguese>== OPÇÕES DE RESSUCITAÇÃO (Desative se for jogar com ACE) ==</Portuguese>
-		</Key>
 		<Key ID="STR_BLACKLISTED_ITEM_FOUND">
 			<Original>Following items are not allowed:\n%1</Original>
 			<German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
@@ -6104,6 +6093,7 @@
 			<Chinese>生產</Chinese>
 			<Portuguese>Produção</Portuguese>
 		</Key>
+		<!-- Added/Changed in 0.963a -->
 		<Key ID="STR_PARAMS_LOADSAVEPARAMS">
 			<Original>Load/Save Parameters</Original>
 			<German>Laden/Speichern der Parameter</German>
@@ -6135,6 +6125,17 @@
 		<Key ID="STR_NOTIFICATION_GUER_INC">
 			<Original>Guerilla forces are incoming to %1 from the %2.</Original>
 			<German>Widerstandskämpfer nähern sich %1 aus %2.</German>
+		</Key>
+		<Key ID="STR_PARAMS_REVIVEOPTIONS">
+			<Original>== REVIVE OPTIONS (Disregarded, if you play with ACE Medical) ==</Original>
+			<German>== WIEDERBELEBUNGSEINSTELLUNGEN (Nicht berücksichtigt, wenn mit ACE Medical gespielt wird) ==</German>
+			<Spanish>== OPCIONES DE REVIVE ==</Spanish>
+			<Russian>== ВОЗВРАТИТЬ ОПЦИИ ==</Russian>
+			<Italian>== OPZIONI RIANIMAZIONE ==</Italian>
+			<Chinesesimp>== 复活选项 ==</Chinesesimp>
+			<Chinese>== 昏迷甦醒選項 ==</Chinese>
+			<Turkish>== CANLANDIRMA AYARLARI ==</Turkish>
+			<Portuguese>== OPÇÕES DE RESSUCITAÇÃO ==</Portuguese>
 		</Key>
 	</Package>
 </Project>
