@@ -138,6 +138,8 @@ if (!isNil "greuh_liberation_savegame") then {
 
 	if (count greuh_liberation_savegame > 11) then {
 		GRLIB_permissions = greuh_liberation_savegame select 11;
+		// Compatibility with prior version (reset once for reassign)
+		if (count (GRLIB_permissions select 0) < 3) then {GRLIB_permissions = [];};
 	};
 
 	if (count greuh_liberation_savegame > 12) then {
