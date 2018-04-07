@@ -458,23 +458,6 @@ vehicle_refuel_sources = [
 	"RHS_Ural_Fuel_VDV_01"
 ];
 
-// Classnames of artillery vehicles or statics which should be linked to the support system. (Currently deactivated)
-/*KP_liberation_artySupp = [
-	"B_Mortar_01_F",
-	"B_T_Mortar_01_F",
-	"B_MBT_01_arty_F",
-	"B_T_MBT_01_arty_F",
-	"B_MBT_01_mlrs_F",
-	"B_T_MBT_01_mlrs_F",
-	"rhsusf_m109_usarmy",
-	"rhsusf_m109d_usarmy",
-	"RHS_M252_WD",
-	"RHS_M252_D",
-	"RHS_M119_WD",
-	"RHS_M119_D",
-	"UK3CB_BAF_Static_L16_Deployed_MTP"
-];*/
-
 // Classnames of boats, so they can be built on water.
 boats_names = [
 	"B_Boat_Transport_01_F",

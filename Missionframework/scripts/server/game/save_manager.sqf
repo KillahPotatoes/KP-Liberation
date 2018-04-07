@@ -200,11 +200,6 @@ if (!isNil "greuh_liberation_savegame") then {
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 
-	// Arty Supp deactivated for now
-	/*if (KP_liberation_suppMod_enb > 0) then {
-		waitUntil {!isNil "KP_liberation_suppMod_created"};
-	};*/
-
 	private _spawnedBuildings = [];
 
 	{
@@ -237,12 +232,6 @@ if (!isNil "greuh_liberation_savegame") then {
 				_nextbuilding setVectorDirAndUp [_nextvecdir, _nextvecup];
 				_hascrew = _x param [4, false];
 			};
-
-
-			// Arty Supp deactivated for now
-			/*if ((KP_liberation_suppMod_enb > 0) && (_nextclass in KP_liberation_artySupp)) then {
-				[_nextbuilding] remoteExec ["arty_monitor", 2];
-			};*/
 
 			if (_hascrew) then {
 				[ _nextbuilding ] call F_forceBluforCrew;

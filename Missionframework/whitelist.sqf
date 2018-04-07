@@ -19,9 +19,3 @@ GRLIB_whitelisted_steamids = [
 GRLIB_whitelisted_names = [
 
 ];
-
-// Array with SteamIDs of players who should be able to access the support module functionality if you set the parameter to "Whitelist only"
-// Arty Supp deactivated for now
-/*KP_liberation_suppMod_whitelist = [
-
-];*/
