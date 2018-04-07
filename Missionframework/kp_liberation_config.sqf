@@ -278,6 +278,8 @@ KP_liberation_allowed_items_extension = [
 	"BWA3_acc_LLM01_flash_underbarrel",
 	"BWA3_acc_LLM01_laser_underberrel",
 	"BWA3_acc_LLM01_laser_underbarrel",
+	"BWA3_Pzf3_Used",
+	"BWA3_RGW90_Used",
 	"UK3CB_BAF_AT4_CS_AP_Mag",
 	"UK3CB_BAF_Javelin_Launcher",
 	"sma_spitfire_03_rds_low_ard_red",
@@ -287,7 +289,8 @@ KP_liberation_allowed_items_extension = [
 	"ACE_Chemlight_Shield_Yellow",
 	"ACE_Chemlight_Shield_Green",
 	"ACE_Chemlight_Shield_Red",
-	"ACE_ReserveParachute"
+	"ACE_ReserveParachute",
+	"ACE_launch_NLAW_Used_F"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
