@@ -171,6 +171,7 @@ class Missions
 * Tweaked: All `BIS_fnc_relPos` replaced with `getPos`.
 * Tweaked: Guerilla forces event chances, strength gain values and unit amounts.
 * Tweaked: The Commander / Admin can now change the permissions of offline players.
+* Tweaked: BI Revive is now automatically deactivated if ACE Medical is loaded.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 * Fixed: Sometimes helicopters exploded when spawning on the deck of the USS Freedom.
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
