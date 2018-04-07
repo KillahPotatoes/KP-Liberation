@@ -155,7 +155,7 @@ class Missions
 
 ### 0.963a (planned for 11th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
-* Added: 2 RHS mag classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: Some classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)
 * Added: Functionality to save/load mission parameters. Thanks to [veteran29](https://github.com/veteran29)
 * Added: Presets for: RDS Civilians, Project OPFOR SLA and Project OPFOR RACS. Thanks to [PSYKO-nz](https://github.com/PSYKO-nz)
 * Added: Automatic mission pbo build tool (available on GitHub). Thanks to [Dahlgren](https://github.com/Dahlgren) and [veteran29](https://github.com/veteran29)
