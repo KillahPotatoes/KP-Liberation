@@ -153,7 +153,7 @@ class Missions
 
 ## Changelog
 
-### 0.963a (planned for 11th April 2018 as "legacy support" release)
+### 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
 * Added: Some classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)
 * Added: Functionality to save/load mission parameters. Thanks to [veteran29](https://github.com/veteran29)
