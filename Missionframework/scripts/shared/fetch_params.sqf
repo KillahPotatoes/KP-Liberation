@@ -137,5 +137,5 @@ if(isServer) then {
 	waitUntil {sleep 0.5; !isNil "KP_serverParamsFetched"};
 	waitUntil {sleep 0.5; KP_serverParamsFetched};
 
-	private _text = format ["[KP LIBERATION] [PARAM] Client %1 received parameters from server.", debug_source]; _text remoteExec [diag_log,2];
+	private _text = format ["[KP LIBERATION] [PARAM] Client %1 received parameters from server.", debug_source]; _text remoteExec ["diag_log",2];
 };
