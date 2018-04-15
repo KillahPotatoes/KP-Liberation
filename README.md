@@ -173,9 +173,12 @@ class Missions
 * Tweaked: The Commander / Admin can now change the permissions of offline players.
 * Tweaked: BI Revive is now automatically deactivated if ACE Medical is loaded.
 * Tweaked: FPS map marker is now below the map and also shows count of local groups.
+* Tweaked: Overview picture for loading and mission selection screen.
 * Fixed: Placement of buildings after save/load. Thanks to [Cre8or](https://github.com/Cre8or)
 * Fixed: Sometimes helicopters exploded when spawning on the deck of the USS Freedom.
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
+* Fixed: File name instead of mission name in mission selection screen.
+* Fixed: "Taking Command" spam from AI after players death.
 
 ### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.
