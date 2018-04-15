@@ -166,6 +166,7 @@ class Missions
 * Added: Vehicle chance for guerilla forces who approach a sector.
 * Added: Traditional Chinese localization. Thanks to [KOEI5113](https://github.com/KOEI5113)
 * Removed: Some old scripts which aren't needed anymore.
+* Removed: Always no fog.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
 * Tweaked: All `createGroup` now with activated `deleteWhenEmpty`.
 * Tweaked: All `BIS_fnc_relPos` replaced with `getPos`.
