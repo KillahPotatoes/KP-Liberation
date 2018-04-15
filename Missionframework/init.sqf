@@ -29,6 +29,6 @@ if (!isDedicated && hasInterface) then {
 };
 
 // Execute fnc_reviveInit again (by default it executes in postInit)
-if ((!(player call bis_fnc_reviveEnabled) || isDedicated) && !(KP_liberation_bis_revive_mode == 0)) then {
+if ((!((player getVariable "bis_revive_ehHandleHeal") >= 0) || isDedicated) && !(KP_liberation_bis_revive_mode == 0)) then {
     [] call bis_fnc_reviveInit;
 };
