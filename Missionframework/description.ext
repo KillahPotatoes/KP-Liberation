@@ -10,6 +10,7 @@ loadScreen="res\liberation.jpg";
 onLoadMission = "www.killahpotatoes.de";
 author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
 onLoadName = $STR_MISSION_TITLE;
+briefingName = $STR_MISSION_TITLE;
 
 joinUnassigned = 1;
 
