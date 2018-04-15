@@ -78,54 +78,54 @@ if(isServer) then {
 
 	// Fix for not working float values in mission params
 	switch (GRLIB_unitcap) do {
-		case 0: {GRLIB_unitcap = MOD_UNITCAP_50;};
-		case 1: {GRLIB_unitcap = MOD_UNITCAP_75;};
-		case 2: {GRLIB_unitcap = MOD_UNITCAP_100;};
-		case 3: {GRLIB_unitcap = MOD_UNITCAP_125;};
-		case 4: {GRLIB_unitcap = MOD_UNITCAP_150;};
-		case 5: {GRLIB_unitcap = MOD_UNITCAP_200;};
-		default {GRLIB_unitcap = MOD_UNITCAP_100;};
+		case 0: {GRLIB_unitcap = 0.5;};
+		case 1: {GRLIB_unitcap = 0.75;};
+		case 2: {GRLIB_unitcap = 1;};
+		case 3: {GRLIB_unitcap = 1.25;};
+		case 4: {GRLIB_unitcap = 1.5;};
+		case 5: {GRLIB_unitcap = 2;};
+		default {GRLIB_unitcap = 1;};
 	};
 
 	switch (GRLIB_difficulty_modifier) do {
-		case 0: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_TOURIST;};
-		case 1: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_EASY;};
-		case 2: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_NORMAL;};
-		case 3: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_MODERATE;};
-		case 4: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_HARD;};
-		case 5: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_EXTREME;};
-		case 6: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_LUDICROUS;};
-		case 7: {GRLIB_difficulty_modifier = MOD_DIFFICULTY_IMPOSSIBLE;};
-		default {GRLIB_difficulty_modifier = MOD_DIFFICULTY_NORMAL;};
+		case 0: {GRLIB_difficulty_modifier = 0.5;};
+		case 1: {GRLIB_difficulty_modifier = 0.75;};
+		case 2: {GRLIB_difficulty_modifier = 1;};
+		case 3: {GRLIB_difficulty_modifier = 1.25;};
+		case 4: {GRLIB_difficulty_modifier = 1.5;};
+		case 5: {GRLIB_difficulty_modifier = 2;};
+		case 6: {GRLIB_difficulty_modifier = 4;};
+		case 7: {GRLIB_difficulty_modifier = 10;};
+		default {GRLIB_difficulty_modifier = 1;};
 	};
 
 	switch (GRLIB_csat_aggressivity) do {
-		case 0: {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_ANEMIC;};
-		case 1: {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_WEAK;};
-		case 2: {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_NORMAL;};
-		case 3: {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_STRONG;};
-		case 4: {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_EXTREME;};
-		default {GRLIB_csat_aggressivity = MOD_AGGRESSIVTY_NORMAL;};
+		case 0: {GRLIB_csat_aggressivity = 0.25;};
+		case 1: {GRLIB_csat_aggressivity = 0.5;};
+		case 2: {GRLIB_csat_aggressivity = 1;};
+		case 3: {GRLIB_csat_aggressivity = 2;};
+		case 4: {GRLIB_csat_aggressivity = 4;};
+		default {GRLIB_csat_aggressivity = 1;};
 	};
 
 	switch (GRLIB_civilian_activity) do {
-		case 0: {GRLIB_civilian_activity = MOD_CIVILIANS_NONE;};
-		case 1: {GRLIB_civilian_activity = MOD_CIVILIANS_REDUCED;};
-		case 2: {GRLIB_civilian_activity = MOD_CIVILIANS_NORMAL;};
-		case 3: {GRLIB_civilian_activity = MOD_CIVILIANS_INCREASED;};
-		default {GRLIB_civilian_activity = MOD_CIVILIANS_NORMAL;};
+		case 0: {GRLIB_civilian_activity = 0;};
+		case 1: {GRLIB_civilian_activity = 0.5;};
+		case 2: {GRLIB_civilian_activity = 1;};
+		case 3: {GRLIB_civilian_activity = 2;};
+		default {GRLIB_csat_aggressivity = 1;};
 	};
 
 	switch (GRLIB_resources_multiplier) do {
-		case 0: {GRLIB_resources_multiplier = MOD_RESOURCES_25;};
-		case 1: {GRLIB_resources_multiplier = MOD_RESOURCES_50;};
-		case 2: {GRLIB_resources_multiplier = MOD_RESOURCES_75;};
-		case 3: {GRLIB_resources_multiplier = MOD_RESOURCES_100;};
-		case 4: {GRLIB_resources_multiplier = MOD_RESOURCES_125;};
-		case 5: {GRLIB_resources_multiplier = MOD_RESOURCES_150;};
-		case 6: {GRLIB_resources_multiplier = MOD_RESOURCES_200;};
-		case 7: {GRLIB_resources_multiplier = MOD_RESOURCES_300;};
-		default {GRLIB_resources_multiplier = MOD_RESOURCES_100;};
+		case 0: {GRLIB_resources_multiplier = 0.25;};
+		case 1: {GRLIB_resources_multiplier = 0.5;};
+		case 2: {GRLIB_resources_multiplier = 0.75;};
+		case 3: {GRLIB_resources_multiplier = 1;};
+		case 4: {GRLIB_resources_multiplier = 1.25;};
+		case 5: {GRLIB_resources_multiplier = 1.5;};
+		case 6: {GRLIB_resources_multiplier = 2;};
+		case 7: {GRLIB_resources_multiplier = 3;};
+		default {GRLIB_resources_multiplier = 1;};
 	};
 
 	KP_serverParamsFetched = true;
