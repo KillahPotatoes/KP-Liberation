@@ -51,7 +51,6 @@ execVM "scripts\client\misc\offload_diag.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
 if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
-execVM "scripts\client\misc\stay_leader.sqf";
 execVM "scripts\client\misc\stop_renegade.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";
