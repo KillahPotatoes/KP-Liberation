@@ -1,2 +1,2 @@
 params [ "_veh" ];
-_veh setVehicleAmmoDef 1;
+_veh setVehicleAmmo 1;
