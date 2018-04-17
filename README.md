@@ -180,6 +180,7 @@ class Missions
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
 * Fixed: File name instead of mission name in mission selection screen.
 * Fixed: "Taking Command" spam from AI after players death.
+* Fixed: Fixed range for recycling and start of building instead of using FOB range. 
 
 ### 0.963 (05th January 2018)
 * Added: Some missing RHS vehicles for the ACE medical system.
