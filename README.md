@@ -166,6 +166,7 @@ class Missions
 * Added: Vehicle chance for guerilla forces who approach a sector.
 * Added: Traditional Chinese localization. Thanks to [KOEI5113](https://github.com/KOEI5113)
 * Added: IDE editorconfig file.
+* Added: Overview of actual applied mission parameters on the map screen as diary record.
 * Removed: Some old scripts which aren't needed anymore.
 * Removed: Always no fog.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
