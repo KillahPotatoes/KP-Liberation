@@ -165,6 +165,7 @@ class Missions
 * Added: Notification for incoming guerilla forces when attacking a sector.
 * Added: Vehicle chance for guerilla forces who approach a sector.
 * Added: Traditional Chinese localization. Thanks to [KOEI5113](https://github.com/KOEI5113)
+* Added: IDE editorconfig file.
 * Removed: Some old scripts which aren't needed anymore.
 * Removed: Always no fog.
 * Tweaked: All `spawn compileFinal preprocessFileLineNumbers` replaced with `execVM`.
