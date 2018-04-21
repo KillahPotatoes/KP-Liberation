@@ -21,7 +21,8 @@ KP_liberation_guerilla_units = [
 
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
-	"I_G_Offroad_01_armed_F"
+	"I_G_Offroad_01_armed_F",
+	"I_G_Offroad_01_AT_F"
 ];
 
 // transport vehicles (should be able to transport at least 10 soldiers)

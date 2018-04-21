@@ -27,7 +27,7 @@ while { GRLIB_endgame == 0 } do {
 	_sector_spawn_pos = [(((markerpos _spawn_marker) select 0) - 500) + (random 1000),(((markerpos _spawn_marker) select 1) - 500) + (random 1000),0];
 
 	if (_is_infantry) then {
-		_grp = createGroup GRLIB_side_enemy;
+		_grp = createGroup [GRLIB_side_enemy, true];
 		_squad = ["army"] call F_getAdaptiveSquadComp;
 		{
 			_x createUnit [_sector_spawn_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];

@@ -19,7 +19,7 @@ while {true} do {
 		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 		
-		private _grp = createGroup GRLIB_side_civilian;
+		private _grp = createGroup [GRLIB_side_civilian, true];
 		private _informant = _grp createUnit [(selectRandom civilians), getMarkerPos _sector, [], 0, "NONE"];
 		private _waiting_time = KP_liberation_civinfo_duration;
 
@@ -27,11 +27,15 @@ while {true} do {
 		_informant setPos (selectRandom (_house buildingPos -1));
 		_informant setUnitPos "UP";
 		sleep 1;
-		_informant disableAI "ANIM";
-		_informant disableAI "MOVE";
-		_informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-		sleep 2;
-		_informant setCaptive true;
+		if (KP_liberation_ace) then {
+			[_informant, true] call ACE_captives_fnc_setSurrendered;
+		} else {
+			_informant disableAI "ANIM";
+			_informant disableAI "MOVE";
+			_informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
+			sleep 2;
+			_informant setCaptive true;
+		};
 
 		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant];_text remoteExec ["diag_log",2];};
 
@@ -53,8 +57,12 @@ while {true} do {
 
 		if (_waiting_time > 0) then {
 			if (alive _informant) then {
-				_informant enableAI "ANIM";
-				_informant enableAI "MOVE";
+				if (KP_liberation_ace) then {
+					[_informant, false] call ACE_captives_fnc_setSurrendered;
+				} else {
+					_informant enableAI "ANIM";
+					_informant enableAI "MOVE";
+				};
 				sleep 1;
 				[_informant] remoteExec ["civinfo_escort"];
 			} else {

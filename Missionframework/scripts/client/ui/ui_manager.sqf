@@ -48,7 +48,7 @@ _resourcescontrols = [
 
 _active_sectors_hint = false;
 _first_iteration = true;
-_distfob = 100;
+_distfob = (GRLIB_fob_range * 0.8);
 _notNearFOB = false;
 _resource_area = "";
 GRLIB_ui_notif = "";

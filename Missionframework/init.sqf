@@ -17,7 +17,7 @@ if (isServer) then {
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
-	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\hc_manager.sqf";
+	execVM "scripts\server\offloading\hc_manager.sqf";
 };
 
 if (!isDedicated && hasInterface) then {
@@ -26,4 +26,9 @@ if (!isDedicated && hasInterface) then {
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
 	setViewDistance 1600;
+};
+
+// Execute fnc_reviveInit again (by default it executes in postInit)
+if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(bis_reviveParam_mode == 0)) then {
+    [] call bis_fnc_reviveInit;
 };

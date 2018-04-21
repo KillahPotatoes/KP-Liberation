@@ -16,7 +16,7 @@ while { true } do {
 	if ( firstloop && !isNull _savedhuron ) then {
 		huron = _savedhuron;
 	} else {
-		huron = huron_typename createVehicle (getposATL huronspawn);
+		huron = huron_typename createVehicle [(getposATL huronspawn) select 0, (getposATL huronspawn) select 1, ((getposATL huronspawn) select 2) + 0.2];
 		huron enableSimulationGlobal false;
 		huron allowdamage false;
 		huron setDir (getDir huronspawn);

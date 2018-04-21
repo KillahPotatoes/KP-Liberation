@@ -155,7 +155,7 @@ while {true} do {
 
 		if (count (choiceslist select _idxchoice) == 3) then {
 			private _truck = (choiceslist select _idxchoice) select 2;
-			player setposATL ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos);
+			player setposATL (_truck getPos [5 + (random 3), random 360]);
 			KP_liberation_respawn_mobile_done = true;
 		} else {
 			private _destpos = ((choiceslist select _idxchoice) select 1);
@@ -194,32 +194,4 @@ while {true} do {
 		uiSleep 12;
 		hint "";
 	};
-
-	// Arty Supp deactivated for now
-	/*if (KP_liberation_suppMod_enb > 0) then {
-		waitUntil {sleep 1; (!isNil "KP_liberation_suppMod_grp") && (!isNil "KP_liberation_suppMod_arty")};
-		private _access = false;
-		switch (KP_liberation_suppMod_enb) do {
-			case 1: {if (player == ([] call F_getCommander)) then {_access = true};};
-			case 2: {if ((getPlayerUID player) in KP_liberation_suppMod_whitelist) then {_access = true};};
-			default {_access = true;};
-		};
-		if (_access) then {
-			if (isNil "KP_liberation_suppMod_handle") then {KP_liberation_suppMod_handle = scriptNull;};
-			if (isNull KP_liberation_suppMod_handle) then {
-				KP_liberation_suppMod_handle = [KP_liberation_suppMod_arty] execVM "A3\modules_f\supports\init_provider.sqf";
-			};
-			if (isNil "KP_liberation_suppMod_req") then {
-				KP_liberation_suppMod_req = KP_liberation_suppMod_grp createUnit ["SupportRequester", KP_liberation_suppMod_grp, [], 0, "NONE"];
-				//KP_liberation_suppMod_req spawn BIS_fnc_moduleSupportsInitRequester;
-				[KP_liberation_suppMod_req] execVM "A3\modules_f\supports\init_requester.sqf";
-				{
-					[KP_liberation_suppMod_req, _x, -1] call BIS_fnc_limitSupport;
-				} forEach ["Artillery","CAS_Heli","CAS_Bombing","UAV","Drop","Transport"];
-			};
-			if ((count (synchronizedObjects player)) == 0) then {
-				[player, KP_liberation_suppMod_req, KP_liberation_suppMod_arty] call BIS_fnc_addSupportLink;
-			};
-		};
-	};*/
 };

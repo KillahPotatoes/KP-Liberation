@@ -185,4 +185,10 @@ class CfgNotifications {
         color[] = {1, 0, 0, 1};
         sound = "taskFailed";
     };
+    class lib_asymm_guerilla_incoming : lib_reinforcements {
+        title = $STR_NOTIFICATION_GUER_INC_TITLE;
+        description = $STR_NOTIFICATION_GUER_INC;
+        color[] = {0, 0.5, 0, 1};
+        sound = "taskUpdated";
+    };
 };

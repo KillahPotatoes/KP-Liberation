@@ -6,10 +6,13 @@ disabledAI = true;
 enableDebugConsole = 1;
 allowFunctionsLog = 0;
 
-loadScreen="res\liberation.jpg";
-onLoadMission = "www.killahpotatoes.de";
+briefingName = $STR_MISSION_TITLE;
+overviewText = "www.killahpotatoes.de";
+overviewPicture = "res\lib.paa";
 author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
 onLoadName = $STR_MISSION_TITLE;
+onLoadMission = "www.killahpotatoes.de";
+loadScreen = "res\lib.paa";
 
 joinUnassigned = 1;
 

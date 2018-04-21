@@ -4,7 +4,7 @@ if ( combat_readiness >= 75 ) then { _planes_number = (floor (random 2)) };
 
 _plane_type = selectRandom opfor_air;
 _air_spawnpoint = ( [ sectors_airspawn , [ _first_objective ] , { (markerpos _x) distance _input0 }, "ASCEND"] call BIS_fnc_sortBy ) select 0;
-_air_grp = createGroup GRLIB_side_enemy;
+_air_grp = createGroup [GRLIB_side_enemy, true];
 
 for [ {_idx=0},{_idx < _planes_number},{_idx=_idx+1}] do {
 

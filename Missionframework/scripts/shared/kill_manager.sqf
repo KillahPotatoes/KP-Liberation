@@ -65,11 +65,6 @@ if (isServer) then {
 		_unit connectTerminalToUAV objNull;
 		// Eject Player from vehicle
 		if (vehicle _unit != _unit) then {moveOut _unit;};
-		// Remove Support Link and delete Requester Module
-		// Arty Supp deactivated for now
-		/*if ((count (synchronizedObjects _unit)) > 0) then {
-			remoteExec ["remote_call_removeSuppReq", _unit];
-		};*/
 	};
 
 	if (_unit isKindOf "Man") then {

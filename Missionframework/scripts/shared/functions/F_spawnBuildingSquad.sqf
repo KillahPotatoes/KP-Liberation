@@ -22,7 +22,7 @@ while {count _position_indexes < count _squadtospawn} do {
 	};
 };
 
-private _grp = createGroup GRLIB_side_enemy;
+private _grp = createGroup [GRLIB_side_enemy, true];
 private _idxposit = 0;
 {
 	_x createUnit [_sectorpos, _grp];
@@ -36,7 +36,7 @@ private _idxposit = 0;
 
 	if (count units _grp > 10) then {
 		_everythingspawned = _everythingspawned + (units _grp);
-		_grp = createGroup GRLIB_side_enemy;
+		_grp = createGroup [GRLIB_side_enemy, true];
 	};
 } forEach _squadtospawn;
 

@@ -15,6 +15,7 @@ switch (KP_liberation_preset_opfor) do {
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
+	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\SLA.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
@@ -22,12 +23,14 @@ switch (KP_liberation_preset_resistance) do {
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\apex.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
+	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\RACS.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 switch (KP_liberation_preset_civilians) do {
 	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
+	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\RDSCiv.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 

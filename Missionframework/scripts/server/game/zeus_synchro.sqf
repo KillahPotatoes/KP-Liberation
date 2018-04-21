@@ -14,14 +14,7 @@ while { true } do {
 	_zeusunits = [];
 	{
 		if ((side group _x == GRLIB_side_friendly) && (_x distance startbase > 1000) && alive _x) then {
-			// Arty Supp deactivated for now
-			/*if !(isNil "BIS_SUPP_HQ_WEST") then {
-				if !(_x == BIS_SUPP_HQ_WEST) then {
-					_zeusunits pushback _x;
-				};
-			} else {*/
-				_zeusunits pushback _x;
-			//};
+			_zeusunits pushback _x;
 		};
 	} foreach allUnits;
 
