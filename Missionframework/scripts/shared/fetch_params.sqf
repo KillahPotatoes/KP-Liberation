@@ -76,58 +76,6 @@ if(isServer) then {
 	GRLIB_remote_sensors = 0;
 	publicVariable "GRLIB_remote_sensors";
 
-	// Fix for not working float values in mission params
-	switch (GRLIB_unitcap) do {
-		case 0: {GRLIB_unitcap = 0.5;};
-		case 1: {GRLIB_unitcap = 0.75;};
-		case 2: {GRLIB_unitcap = 1;};
-		case 3: {GRLIB_unitcap = 1.25;};
-		case 4: {GRLIB_unitcap = 1.5;};
-		case 5: {GRLIB_unitcap = 2;};
-		default {GRLIB_unitcap = 1;};
-	};
-
-	switch (GRLIB_difficulty_modifier) do {
-		case 0: {GRLIB_difficulty_modifier = 0.5;};
-		case 1: {GRLIB_difficulty_modifier = 0.75;};
-		case 2: {GRLIB_difficulty_modifier = 1;};
-		case 3: {GRLIB_difficulty_modifier = 1.25;};
-		case 4: {GRLIB_difficulty_modifier = 1.5;};
-		case 5: {GRLIB_difficulty_modifier = 2;};
-		case 6: {GRLIB_difficulty_modifier = 4;};
-		case 7: {GRLIB_difficulty_modifier = 10;};
-		default {GRLIB_difficulty_modifier = 1;};
-	};
-
-	switch (GRLIB_csat_aggressivity) do {
-		case 0: {GRLIB_csat_aggressivity = 0.25;};
-		case 1: {GRLIB_csat_aggressivity = 0.5;};
-		case 2: {GRLIB_csat_aggressivity = 1;};
-		case 3: {GRLIB_csat_aggressivity = 2;};
-		case 4: {GRLIB_csat_aggressivity = 4;};
-		default {GRLIB_csat_aggressivity = 1;};
-	};
-
-	switch (GRLIB_civilian_activity) do {
-		case 0: {GRLIB_civilian_activity = 0;};
-		case 1: {GRLIB_civilian_activity = 0.5;};
-		case 2: {GRLIB_civilian_activity = 1;};
-		case 3: {GRLIB_civilian_activity = 2;};
-		default {GRLIB_csat_aggressivity = 1;};
-	};
-
-	switch (GRLIB_resources_multiplier) do {
-		case 0: {GRLIB_resources_multiplier = 0.25;};
-		case 1: {GRLIB_resources_multiplier = 0.5;};
-		case 2: {GRLIB_resources_multiplier = 0.75;};
-		case 3: {GRLIB_resources_multiplier = 1;};
-		case 4: {GRLIB_resources_multiplier = 1.25;};
-		case 5: {GRLIB_resources_multiplier = 1.5;};
-		case 6: {GRLIB_resources_multiplier = 2;};
-		case 7: {GRLIB_resources_multiplier = 3;};
-		default {GRLIB_resources_multiplier = 1;};
-	};
-
 	KP_serverParamsFetched = true;
 	publicVariable "KP_serverParamsFetched";
 
@@ -140,12 +88,64 @@ if(isServer) then {
 	private _text = format ["[KP LIBERATION] [PARAM] Client %1 received parameters from server.", name player]; _text remoteExec ["diag_log",2];
 };
 
+// Fix for not working float values in mission params
+switch (GRLIB_unitcap) do {
+    case 0: {GRLIB_unitcap = 0.5;};
+    case 1: {GRLIB_unitcap = 0.75;};
+    case 2: {GRLIB_unitcap = 1;};
+    case 3: {GRLIB_unitcap = 1.25;};
+    case 4: {GRLIB_unitcap = 1.5;};
+    case 5: {GRLIB_unitcap = 2;};
+    default {GRLIB_unitcap = 1;};
+};
+
+switch (GRLIB_difficulty_modifier) do {
+    case 0: {GRLIB_difficulty_modifier = 0.5;};
+    case 1: {GRLIB_difficulty_modifier = 0.75;};
+    case 2: {GRLIB_difficulty_modifier = 1;};
+    case 3: {GRLIB_difficulty_modifier = 1.25;};
+    case 4: {GRLIB_difficulty_modifier = 1.5;};
+    case 5: {GRLIB_difficulty_modifier = 2;};
+    case 6: {GRLIB_difficulty_modifier = 4;};
+    case 7: {GRLIB_difficulty_modifier = 10;};
+    default {GRLIB_difficulty_modifier = 1;};
+};
+
+switch (GRLIB_csat_aggressivity) do {
+    case 0: {GRLIB_csat_aggressivity = 0.25;};
+    case 1: {GRLIB_csat_aggressivity = 0.5;};
+    case 2: {GRLIB_csat_aggressivity = 1;};
+    case 3: {GRLIB_csat_aggressivity = 2;};
+    case 4: {GRLIB_csat_aggressivity = 4;};
+    default {GRLIB_csat_aggressivity = 1;};
+};
+
+switch (GRLIB_civilian_activity) do {
+    case 0: {GRLIB_civilian_activity = 0;};
+    case 1: {GRLIB_civilian_activity = 0.5;};
+    case 2: {GRLIB_civilian_activity = 1;};
+    case 3: {GRLIB_civilian_activity = 2;};
+    default {GRLIB_csat_aggressivity = 1;};
+};
+
+switch (GRLIB_resources_multiplier) do {
+    case 0: {GRLIB_resources_multiplier = 0.25;};
+    case 1: {GRLIB_resources_multiplier = 0.5;};
+    case 2: {GRLIB_resources_multiplier = 0.75;};
+    case 3: {GRLIB_resources_multiplier = 1;};
+    case 4: {GRLIB_resources_multiplier = 1.25;};
+    case 5: {GRLIB_resources_multiplier = 1.5;};
+    case 6: {GRLIB_resources_multiplier = 2;};
+    case 7: {GRLIB_resources_multiplier = 3;};
+    default {GRLIB_resources_multiplier = 1;};
+};
+
 if (!isDedicated && hasInterface) then {
     // Create diary section for an overview of actual mission parameters
     player createDiarySubject ["parameters", "Mission Parameters"];
 
     private _param = localize "STR_PARAMS_UNITCAP";
-    private _value = format ["%1 %", GRLIB_unitcap * 100];
+    private _value = (format ["%1", GRLIB_unitcap * 100]) + "%";
     private _text = format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_DIFFICULTY";
