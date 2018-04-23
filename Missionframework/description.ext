@@ -44,3 +44,6 @@ wreckLimit = 20;
 wreckRemovalMinTime = 1200;
 wreckRemovalMaxTime = 7200;
 minPlayerDistance = 1000;
+
+#include "KPLIB_functions.hpp"
+#include "KPLIB_ui.hpp"
