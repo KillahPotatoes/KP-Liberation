@@ -2541,7 +2541,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={16785.447,0,12620.23};
-			name="KPLIB_eden_capital";
+			name="KPLIB_eden_metropolis";
 			text="Pyrgos";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2643,7 +2643,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={18110.082,0,15240.913};
-			name="KPLIB_eden_capital_1";
+			name="KPLIB_eden_metropolis_1";
 			text="Charkia";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2657,7 +2657,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={20955.869,0,16966.561};
-			name="KPLIB_eden_capital_2";
+			name="KPLIB_eden_metropolis_2";
 			text="Paros";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2671,7 +2671,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={26993.199,0,23204.664};
-			name="KPLIB_eden_capital_3";
+			name="KPLIB_eden_metropolis_3";
 			text="Molos";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2685,7 +2685,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={10332.446,0,19059.676};
-			name="KPLIB_eden_capital_5";
+			name="KPLIB_eden_metropolis_5";
 			text="Galati";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2699,7 +2699,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={14016.847,0,18717.344};
-			name="KPLIB_eden_capital_4";
+			name="KPLIB_eden_metropolis_4";
 			text="Athira";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2713,7 +2713,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9319.9912,0,15869.404};
-			name="KPLIB_eden_capital_6";
+			name="KPLIB_eden_metropolis_6";
 			text="Agios Dionysios";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2727,7 +2727,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9133.1504,0,11943.679};
-			name="KPLIB_eden_capital_8";
+			name="KPLIB_eden_metropolis_8";
 			text="Zaros";
 			type="n_service";
 			colorName="ColorEAST";
@@ -2741,7 +2741,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={3509.3169,0,12995.863};
-			name="KPLIB_eden_capital_9";
+			name="KPLIB_eden_metropolis_9";
 			text="Kavala";
 			type="n_service";
 			colorName="ColorEAST";
@@ -6634,7 +6634,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={3891.8906,1.9350519,17412.955};
-			name="KPLIB_eden_capital_7";
+			name="KPLIB_eden_metropolis_7";
 			text="Agios Konstantinos";
 			type="n_service";
 			colorName="ColorEAST";
