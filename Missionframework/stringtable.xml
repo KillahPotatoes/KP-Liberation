@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="KP-Liberation">
+    <Package name="KP-Liberation">
+        <!-- French localization made by zbug: https://github.com/GreuhZbug -->
+        <!-- German localization made by Wyqer: https://github.com/Wyqer -->
+        <!-- Italian localization made by k4s0: https://github.com/k4s0 -->
+        <!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
+        <!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
+        <!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
+        <!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
+        <!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
+        <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
+        <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
+        <!-- General -->
+        <Key ID="STR_MISSION_TITLE">
+            <Original>KP Liberation v0.97dev</Original>
+            <German>KP Liberation v0.97dev</German>
+            <Spanish>KP Liberation v0.97dev</Spanish>
+            <Italian>KP Liberation v0.97dev</Italian>
+            <Chinesesimp>KP Liberation v0.97dev</Chinesesimp>
+            <Chinese>KP Liberation v0.97dev</Chinese>
+            <Turkish>KP Liberation v0.97dev</Turkish>
+            <Portuguese>KP Liberation v0.97dev</Portuguese>
+        </Key>
+        <Key ID="STR_MISSION_VERSION">
+            <Original>v0.97dev</Original>
+            <German>v0.97dev</German>
+            <Spanish>v0.97dev</Spanish>
+            <Italian>v0.97dev</Italian>
+            <Chinesesimp>v0.97dev</Chinesesimp>
+            <Chinese>v0.97dev</Chinese>
+            <Turkish>v0.97dev</Turkish>
+            <Portuguese>v0.97dev</Portuguese>
+        </Key>
+        <Key ID="STR_MISSION_DESCRIPTION">
+            <Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
+            <French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
+            <German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+            <Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
+            <Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
+            <Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
+            <Chinesesimp>从敌人手中解放这个地区！战略是制胜关键！士兵们祝你们好运。</Chinesesimp>
+            <Chinese>從敵人手中解放此區域！戰略是致勝關鍵！士兵們，祝好運！</Chinese>
+            <Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
+            <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
+        </Key>
+    </Package>
+</Project>
