@@ -29,6 +29,8 @@ If you like the work and think it's worth a small donation, feel free to use the
 ## REFACTORING BRANCH
 **!!Not meant to be used for playing at all!!**
 
+As we use [ZenHub](https://github.com/marketplace/zenhub) for our workflow instead of the GitHub project board, you need this addon to have a look at the complete workflow. But we're trying to keep the labels on issues etc. always up to date, so you can briefly follow the workflow also without ZenHub.
+
 **!TAKE ATTENTION TO THE LICENSE CHANGE FOR EVERYTHING IN THIS BRANCH!**
 
 This will replace the current missioncode when it's finished.
