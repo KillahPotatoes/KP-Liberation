@@ -1,0 +1,46 @@
+/*
+    KP LIBERATION DESCRIPTION FILE
+
+    File: description.ext
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-16
+    Last Update: 2018-01-05
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+    Information about the author, mission name, respawn and more very general settings.
+    This overrides corresponding settings which are made in the sqm via eden editor.
+*/
+
+briefingName = $STR_MISSION_TITLE;
+overviewText = "www.killahpotatoes.de";
+overviewPicture = "res\lib.paa";
+author = "KP Liberation Dev Team";
+onLoadName = $STR_MISSION_TITLE;
+onLoadMission = "www.killahpotatoes.de";
+loadScreen = "res\lib.paa";
+
+class Header {
+    gameType = "CTI";
+    minPlayers = 1;
+    maxPlayers = 37;
+};
+
+respawn = 3;
+respawndelay = 5;
+respawnButton = 1;
+respawnDialog = 0;
+disabledAI = true;
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+joinUnassigned = 1;
+
+corpseManagerMode = 1;
+corpseLimit = 50;
+corpseRemovalMinTime = 600;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 1200;
+wreckRemovalMaxTime = 7200;
+minPlayerDistance = 1000;
