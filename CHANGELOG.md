@@ -5,6 +5,7 @@
 * Tweaked: Eden objects got `KPLIB_eden_` as prefix.
 * Tweaked: Faster initial sector sorting.
 * Tweaked: Stringtable key names categorized.
+* Tweaked: Formatting and comments in preset files.
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
