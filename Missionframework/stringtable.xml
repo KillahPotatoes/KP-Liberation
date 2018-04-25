@@ -122,7 +122,7 @@
         <Key ID="STR_PARAMS_UNITCAP">
             <Original>Maximum amount of AI units</Original>
             <French>Quantité maximum d'unités IA</French>
-            <German>Maximale Anzahl KI-Einheiten</German>
+            <German>Maximale Anzahl an KI-Einheiten</German>
             <Spanish>Cantidad máxima de unidades de IA</Spanish>
             <Russian>Максимальное количество единиц AI</Russian>
             <Italian>Numero massimo di unità AI</Italian>
@@ -146,7 +146,7 @@
         <Key ID="STR_PARAMS_UNITCAP2">
             <Original>75% - Dedicated server recommended</Original>
             <French>75% - Serveur dédié recommandé</French>
-            <German>75 % - Dezidierter Server empfohlen</German>
+            <German>75 % - Dedizierter Server empfohlen</German>
             <Spanish>75% - Recomendado para servidor dedicado</Spanish>
             <Russian>75% - Выделенный сервер рекомендуется</Russian>
             <Italian>75% - Raccomandato per server dedicati</Italian>
@@ -158,7 +158,7 @@
         <Key ID="STR_PARAMS_UNITCAP3">
             <Original>100% - Dedicated server recommended</Original>
             <French>100% - Serveur dédié recommandé</French>
-            <German>100 % - Dezidierter Server empfohlen</German>
+            <German>100 % - Dedizierter Server empfohlen</German>
             <Spanish>100% - Recomendado para servidor dedicado</Spanish>
             <Russian>100% - Выделенный сервер рекомендуется</Russian>
             <Italian>100% - Raccomandato per server dedicati</Italian>
@@ -170,7 +170,7 @@
         <Key ID="STR_PARAMS_UNITCAP4">
             <Original>125% - Dedicated server with headless client recommended</Original>
             <French>125% - Serveur dédié avec headless client recommandé</French>
-            <German>125 % - Dezidierter Server mit Headless Client empfohlen</German>
+            <German>125 % - Dedizierter Server mit Headless Client empfohlen</German>
             <Spanish>125% - Recomendado para servidor dedicado con cliente descabezado</Spanish>
             <Russian>125% - Выделенный сервер вместе с headless client рекомендуется</Russian>
             <Italian>125% - Raccomandato per server dedicati con headless client</Italian>
@@ -182,7 +182,7 @@
         <Key ID="STR_PARAMS_UNITCAP5">
             <Original>150% - Dedicated server with multiple headless clients recommended</Original>
             <French>150% - Serveur dédié avec clients headless multiples recommandé</French>
-            <German>150 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+            <German>150 % - Dedizierter Server mit mehreren Headless Clients empfohlen</German>
             <Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
             <Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
             <Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
@@ -194,7 +194,7 @@
         <Key ID="STR_PARAMS_UNITCAP6">
             <Original>200% - Dedicated server with multiple headless clients recommended</Original>
             <French>200% - Serveur dédié avec clients headless multiples recommandés</French>
-            <German>200 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+            <German>200 % - Dedizierter Server mit mehreren Headless Clients empfohlen</German>
             <Spanish>200% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
             <Russian>200% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
             <Italian>200% - Raccomandato per server dedicati con tanti headless client</Italian>
@@ -860,7 +860,7 @@
         <Key ID="STR_PARAMS_CLEANUPVEH">
             <Original>Cleanup abandoned vehicles outside FOBs</Original>
             <French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
-            <German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
+            <German>Entferne verlassene Fahrzeuge außerhalb von FOBs</German>
             <Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
             <Russian>Удаление брошенной техники вне FOB.</Russian>
             <Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
@@ -884,7 +884,7 @@
         <Key ID="STR_PARAMS_CLEANUPVEH2">
             <Original>Enabled - 2 hours delay</Original>
             <French>Activé - 2 heures de délai</French>
-            <German>Aktiv - 2 Stunde Verzögerung</German>
+            <German>Aktiv - 2 Stunden Verzögerung</German>
             <Spanish>Activado - abandonados durante 2 horas</Spanish>
             <Russian>Вкл - задержка 2 часа</Russian>
             <Italian>Attivato - eliminazione ogni 2 ore</Italian>
