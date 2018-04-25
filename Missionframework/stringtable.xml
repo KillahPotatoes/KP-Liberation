@@ -1120,5 +1120,73 @@
             <Turkish>Paraşütçü Asker Timi</Turkish>
             <Portuguese>Grupo de Combate de Paraquedistas</Portuguese>
         </Key>
+        <!-- Dialog Elements -->
+        <Key ID="STR_DEPLOY_TITLE">
+            <Original>DEPLOYMENT</Original>
+            <French>DEPLOIEMENT</French>
+            <German>EINSATZ</German>
+            <Spanish>DESPLIEGUE</Spanish>
+            <Russian>ДИСЛОКАЦИЯ</Russian>
+            <Italian>SCHIERAMENTO</Italian>
+            <Chinesesimp>部署</Chinesesimp>
+            <Chinese>佈署</Chinese>
+            <Turkish>CANLANMA</Turkish>
+            <Portuguese>MOBILIZAÇÃO</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_SPAWNLIST">
+            <Original>Deployment location:</Original>
+            <French>Lieu de déploiement:</French>
+            <German>Einsatzposition:</German>
+            <Spanish>Lugar para el despliegue:</Spanish>
+            <Russian>Позиция размешения:</Russian>
+            <Italian>Luogo di Schieramento:</Italian>
+            <Chinesesimp>部署地点：</Chinesesimp>
+            <Chinese>佈署地點：</Chinese>
+            <Turkish>Doğma noktası:</Turkish>
+            <Portuguese>Local para mobilização:</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_LOADOUTLIST">
+            <Original>Loadout:</Original>
+            <French>Equipement:</French>
+            <German>Ausrüstung:</German>
+            <Spanish>Equipamiento:</Spanish>
+            <Russian>Снаряжение:</Russian>
+            <Italian>Equipaggiamento:</Italian>
+            <Chinesesimp>装备：</Chinesesimp>
+            <Chinese>裝備:</Chinese>
+            <Turkish>Ekipman:</Turkish>
+            <Portuguese>Equipamento:</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_BUTTON">
+            <Original>Deploy</Original>
+            <French>Déploiment</French>
+            <German>Einsetzen</German>
+            <Spanish>Desplegar</Spanish>
+            <Russian>РАЗМЕСТИТЬ</Russian>
+            <Italian>Schierati</Italian>
+            <Chinesesimp>部署</Chinesesimp>
+            <Chinese>佈署</Chinese>
+            <Turkish>Canlan</Turkish>
+            <Portuguese>Mobilizar</Portuguese>
+        </Key>
+        <!-- Hints -->
+        <Key ID="STR_HINT_RESPAWNCOOLDOWN">
+            <Original>%1 minutes mobile respawn cooldown left.</Original>
+            <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+            <Italian>Mancano ancora %1 minuti al respawn.</Italian>
+            <Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
+            <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
+            <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
+        </Key>
+        <Key ID="STR_HINT_BLACKLISTEDITEMFOUND">
+            <Original>Following items are not allowed:\n%1</Original>
+            <German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
+            <Russian>Следующие элементы не разрешены:\n%1</Russian>
+            <Italian>Questi elementi non sono ammessi:\n%1</Italian>
+            <Chinesesimp>以下物品已被禁用：\n%1</Chinesesimp>
+            <Chinese>以下品已被禁用：\n%1</Chinese>
+            <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
+            <Portuguese>Os seguintes itens não são permitidos:\n%1</Portuguese>
+        </Key>
     </Package>
 </Project>
