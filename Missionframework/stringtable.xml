@@ -54,6 +54,34 @@
             <Turkish>Hayır</Turkish>
             <Portuguese>Não</Portuguese>
         </Key>
+        <Key ID="STR_MAINBASE">
+            <Original>Operation Base</Original>
+            <German>Operationsbasis</German>
+        </Key>
+        <Key ID="STR_RESPAWN_TRUCK">
+            <Original>Mobile respawn</Original>
+            <French>Respawn mobile</French>
+            <German>Mobiler Respawn</German>
+            <Spanish>Respawn móvil</Spanish>
+            <Russian>Мобильная КШМ</Russian>
+            <Italian>Respawn Mobile</Italian>
+            <Chinesesimp>机动复活载具</Chinesesimp>
+            <Chinese>機動復活載具</Chinese>
+            <Turkish>Respawn Aracı</Turkish>
+            <Portuguese>Respawn móvel</Portuguese>
+        </Key>
+        <Key ID="STR_NEAR">
+            <Original>Near</Original>
+            <French>Près de</French>
+            <German>Nahe</German>
+            <Spanish>Cerca</Spanish>
+            <Russian>Рядом</Russian>
+            <Italian>Vicino</Italian>
+            <Chinesesimp>就近</Chinesesimp>
+            <Chinese>附近</Chinese>
+            <Turkish>Yakın</Turkish>
+            <Portuguese>Próximo de</Portuguese>
+        </Key>
         <!-- Parameters -->
         <Key ID="STR_PARAMS_ENABLED">
             <Original>Enabled</Original>
