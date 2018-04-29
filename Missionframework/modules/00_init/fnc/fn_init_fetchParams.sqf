@@ -4,12 +4,11 @@
     File: fn_init_fetchParams.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-04-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Fetches all mission parameters to global variables and switches values to float if needed.
-    Also reads the KPLIB_config.sqf
+    Fetches all mission parameters to global variables
 
     Parameter(s):
     NONE
@@ -18,104 +17,53 @@
     BOOL
 */
 
-// Parameter fetching
-KPLIB_param_unitcap = ["Unitcap", 2] call BIS_fnc_getParamValue;
-KPLIB_param_difficulty = ["Difficulty", 2] call BIS_fnc_getParamValue;
-KPLIB_param_aggressivity = ["Aggressivity", 2] call BIS_fnc_getParamValue;
-KPLIB_param_adaptiveEnemy = ["AdaptiveEnemy", 1] call BIS_fnc_getParamValue;
-KPLIB_param_civilians = ["Civilians", 2] call BIS_fnc_getParamValue;
-KPLIB_param_firstFob = ["FirstFob", 0] call BIS_fnc_getParamValue;
-KPLIB_param_maxFobs = ["MaxFobs", 10] call BIS_fnc_getParamValue;
-KPLIB_param_maxSquadSize = ["MaxSquadSize", 12] call BIS_fnc_getParamValue;
-KPLIB_param_aiDefenders = ["AiDefenders", 1] call BIS_fnc_getParamValue;
-KPLIB_param_autodanger = ["Autodanger", 1] call BIS_fnc_getParamValue;
-KPLIB_param_timeMulti = ["TimeMulti", 6] call BIS_fnc_getParamValue;
-KPLIB_param_shortNight = ["ShortNight", 0] call BIS_fnc_getParamValue;
-KPLIB_param_weather = ["Weather", 3] call BIS_fnc_getParamValue;
-KPLIB_param_resMulti = ["ResMulti", 3] call BIS_fnc_getParamValue;
-KPLIB_param_fatigue = ["Fatigue", 1] call BIS_fnc_getParamValue;
-KPLIB_param_arsenalPreset = ["ArsenalPreset", 1] call BIS_fnc_getParamValue;
-KPLIB_param_mapMarkers = ["MapMarkers", 1] call BIS_fnc_getParamValue;
-KPLIB_param_mobileRespawn = ["MobileRespawn", 1] call BIS_fnc_getParamValue;
-KPLIB_param_respawnCd = ["RespawnCd", 900] call BIS_fnc_getParamValue;
-KPLIB_param_mobileArsenal = ["MobileArsenal", 1] call BIS_fnc_getParamValue;
-KPLIB_param_aiLogistics = ["AiLogistics", 1] call BIS_fnc_getParamValue;
-KPLIB_param_teamkillPenalty = ["TeamkillPenalty", 0] call BIS_fnc_getParamValue;
-KPLIB_param_civRepBuilding = ["CivRepBuilding", 0] call BIS_fnc_getParamValue;
-KPLIB_param_halo = ["Halo", 0] call BIS_fnc_getParamValue;
-KPLIB_param_permissions = ["Permissions", 1] call BIS_fnc_getParamValue;
-KPLIB_param_cleanupVeh = ["CleanupVeh", 2] call BIS_fnc_getParamValue;
-KPLIB_param_intro = ["Intro", 1] call BIS_fnc_getParamValue;
-KPLIB_param_deployCine = ["DeployCine", 1] call BIS_fnc_getParamValue;
-KPLIB_param_whitelist = ["Whitelist", 0] call BIS_fnc_getParamValue;
-KPLIB_param_serverRestart = ["ServerRestart", 0] call BIS_fnc_getParamValue;
-KPLIB_param_wipeSave1 = ["WipeSave1", 0] call BIS_fnc_getParamValue;
-KPLIB_param_wipeSave2 = ["WipeSave2", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugAsymm = ["DebugAsymm", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugCivInfo = ["DebugCivInfo", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugCivRep = ["DebugCivRep", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugKill = ["DebugKill", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugLogi = ["DebugLogi", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugProd = ["DebugProd", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugSave = ["DebugSave", 0] call BIS_fnc_getParamValue;
-KPLIB_param_debugSectorSpawn = ["DebugSectorSpawn", 0] call BIS_fnc_getParamValue;
+KPLIB_params_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_PARAMS_REWRITE";
+KPLIB_params_array = profileNamespace getVariable KPLIB_params_save_key;
 
-// Check for ACE
-KPLIB_aceEnable = isClass (configFile >> "CfgVehicles" >> "ACE_module");
-
-// Float value conversion
-switch (KPLIB_param_unitcap) do {
-    case 0: {KPLIB_param_unitcap = 0.5;};
-    case 1: {KPLIB_param_unitcap = 0.75;};
-    case 2: {KPLIB_param_unitcap = 1;};
-    case 3: {KPLIB_param_unitcap = 1.25;};
-    case 4: {KPLIB_param_unitcap = 1.5;};
-    case 5: {KPLIB_param_unitcap = 2;};
-    default {KPLIB_param_unitcap = 1;};
+if(isNil "KPLIB_params_array") then {
+    KPLIB_params_array = [];
 };
 
-switch (KPLIB_param_difficulty) do {
-    case 0: {KPLIB_param_difficulty = 0.5;};
-    case 1: {KPLIB_param_difficulty = 0.75;};
-    case 2: {KPLIB_param_difficulty = 1;};
-    case 3: {KPLIB_param_difficulty = 1.25;};
-    case 4: {KPLIB_param_difficulty = 1.5;};
-    case 5: {KPLIB_param_difficulty = 2;};
-    case 6: {KPLIB_param_difficulty = 4;};
-    case 7: {KPLIB_param_difficulty = 10;};
-    default {KPLIB_param_difficulty = 1;};
-};
+// Loop on every Param class
+{
+    private _name = configName _x;
+    private _default = getNumber (_x >> "default");
 
-switch (KPLIB_param_aggressivity) do {
-    case 0: {KPLIB_param_aggressivity = 0.25;};
-    case 1: {KPLIB_param_aggressivity = 0.5;};
-    case 2: {KPLIB_param_aggressivity = 1;};
-    case 3: {KPLIB_param_aggressivity = 2;};
-    case 4: {KPLIB_param_aggressivity = 4;};
-    default {KPLIB_param_aggressivity = 1;};
-};
+    private _value = nil;
+    private _source = nil;
 
-switch (KPLIB_param_civilians) do {
-    case 0: {KPLIB_param_civilians = 0;};
-    case 1: {KPLIB_param_civilians = 0.5;};
-    case 2: {KPLIB_param_civilians = 1;};
-    case 3: {KPLIB_param_civilians = 2;};
-    default {KPLIB_param_civilians = 1;};
-};
+    // If param is persistent and param save load is not disabled
+    if (getNumber (_x >> "persistent") > 0 && KPLIB_param_source > 0) then {
+        switch(KPLIB_param_source) do {
+            // PARAM LOAD
+            case 1: {
+                private _paramData = [_name, _default] call KPLIB_fnc_init_loadParam;
+                _value = _paramData select 0;
+                _source = _paramData select 1;
+            };
+            // PARAM SAVE
+            case 2: {
+                _value = [_name, _default] call BIS_fnc_getParamValue;
+                _source = "LOBBY/SAVED";
 
-switch (KPLIB_param_resMulti) do {
-    case 0: {KPLIB_param_resMulti = 0.25;};
-    case 1: {KPLIB_param_resMulti = 0.5;};
-    case 2: {KPLIB_param_resMulti = 0.75;};
-    case 3: {KPLIB_param_resMulti = 1;};
-    case 4: {KPLIB_param_resMulti = 1.25;};
-    case 5: {KPLIB_param_resMulti = 1.5;};
-    case 6: {KPLIB_param_resMulti = 2;};
-    case 7: {KPLIB_param_resMulti = 3;};
-    default {KPLIB_param_resMulti = 1;};
-};
+                [_name, _value] call KPLIB_fnc_init_saveParam;
+            };
+            default {
 
-// Read the KPLIB_config.sqf file
-call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+            };
+        }
+    } else {
+        _source = "LOBBY";
+        _value = [_name, _default] call BIS_fnc_getParamValue;
+    };
+
+    // Create variable for Param
+    [_name, _value] call KPLIB_fnc_init_createParamVar;
+
+    diag_log format ["[KP LIBERATION] [PARAM] Loaded param: %1 from %2 with value %3", _name, _source, _value] ;
+} forEach ("true" configClasses getMissionConfig "Params");
+
+profileNamespace setVariable [KPLIB_params_save_key, KPLIB_params_array];
+publicVariable "KPLIB_params_array";
 
 true

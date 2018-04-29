@@ -20,10 +20,22 @@ class init {
     // Create local client markers
     class init_clientMarkers {};
 
-    // Fetches the mission parameters
-    class init_fetchParams {
+    // Setups global variables from params
+    // Also initializes mission config
+    class init_setupConfig {
         preInit = 1;
     };
+
+    // Fetches the mission parameters and saves them
+    class init_fetchParams {};
+
+    // Loads param from KPLIB params array
+    class init_loadParam {};
+
+    // Saves param to KPLIB params array
+    class init_saveParam {};
+
+    class init_createParamVar {};
 
     // Initializes the virtual arsenal
     class init_fillArsenal {};
