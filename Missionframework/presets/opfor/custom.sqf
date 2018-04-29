@@ -72,35 +72,35 @@ KPLIB_preset_oParatrooper = "O_soldier_PG_F";
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 KPLIB_preset_oVehicles = [
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_MRAP_02_hmg_F",													//Ifrit (GMG)
-    "O_MRAP_02_gmg_F",													//Ifrit (GMG)
-    "O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-    "O_MBT_02_cannon_F",												//T-100 Varsuk
-    "O_MBT_02_cannon_F"													//T-100 Varsuk
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (GMG)
+    "O_MRAP_02_gmg_F",                                                  //Ifrit (GMG)
+    "O_APC_Tracked_02_cannon_F",                                        //BTR-K Kamysh
+    "O_APC_Tracked_02_AA_F",                                            //ZSU-39 Tigris
+    "O_APC_Tracked_02_AA_F",                                            //ZSU-39 Tigris
+    "O_MBT_02_cannon_F",                                                //T-100 Varsuk
+    "O_MBT_02_cannon_F"                                                 //T-100 Varsuk
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 KPLIB_preset_oVehiclesLow = [
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid
-    "O_APC_Tracked_02_cannon_F"											//BTR-K Kamysh
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_APC_Wheeled_02_rcws_F",                                          //MSE-3 Marid
+    "O_APC_Tracked_02_cannon_F"                                         //BTR-K Kamysh
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 KPLIB_preset_oChoppers = [
-    "O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-    "O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
-    "O_Heli_Attack_02_dynamicLoadout_F"									//Mi-48 Kajman
+    "O_Heli_Transport_04_bench_F",                                      //Mi-290 Taru (Bench)
+    "O_Heli_Light_02_dynamicLoadout_F",                                 //Po-30 Orca (Armed)
+    "O_Heli_Attack_02_dynamicLoadout_F"                                 //Mi-48 Kajman
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 KPLIB_preset_oJets = [
-    "O_Plane_CAS_02_dynamicLoadout_F",									//To-199 Neophron (CAS)
-    "O_Plane_Fighter_02_F"												//To-201 Shikra
+    "O_Plane_CAS_02_dynamicLoadout_F",                                  //To-199 Neophron (CAS)
+    "O_Plane_Fighter_02_F"                                              //To-201 Shikra
 ];
 
 /*------------------------------------------------------------
@@ -111,20 +111,20 @@ KPLIB_preset_oJets = [
 
 // Militia soldiers
 KPLIB_preset_oMilUnits = [
-    "O_soldierU_F",														//Rifleman (Lite)
-    "O_soldierU_F",														//Rifleman (Lite)
-    "O_soldierU_F",														//Rifleman
-    "O_soldierU_F",														//Rifleman
-    "O_soldierU_LAT_F",													//Rifleman (AT)
-    "O_soldierU_AR_F",													//Autorifleman
-    "O_soldierU_M_F",													//Marksman
-    "O_soldierU_medic_F",												//Medic
-    "O_engineer_U_F"													//Engineer
+    "O_soldierU_F",                                                     //Rifleman (Lite)
+    "O_soldierU_F",                                                     //Rifleman (Lite)
+    "O_soldierU_F",                                                     //Rifleman
+    "O_soldierU_F",                                                     //Rifleman
+    "O_soldierU_LAT_F",                                                 //Rifleman (AT)
+    "O_soldierU_AR_F",                                                  //Autorifleman
+    "O_soldierU_M_F",                                                   //Marksman
+    "O_soldierU_medic_F",                                               //Medic
+    "O_engineer_U_F"                                                    //Engineer
 ];
 
 // Militia vehicles
 KPLIB_preset_oMilVeh = [
-    "O_LSV_02_armed_F"													//Qilin (armed)
+    "O_LSV_02_armed_F"                                                  //Qilin (armed)
 ];
 
 /*------------------------------------------------------------
@@ -134,42 +134,42 @@ KPLIB_preset_oMilVeh = [
 
 // Vehicles for high enemy combat readiness (aggression level).
 KPLIB_preset_oBattleVeh = [
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_MRAP_02_gmg_F",													//Ifrit (GMG)
-    "O_MRAP_02_gmg_F",													//Ifrit (GMG)
-    "O_Truck_03_transport_F",											//Tempest Transport
-    "O_Truck_03_covered_F",												//Tempest Transport (Covered)
-    "O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-    "O_MBT_02_cannon_F",												//T-100 Varsuk
-    "O_MBT_02_cannon_F",												//T-100 Varsuk
-    "O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
-    "O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-    "O_Heli_Attack_02_dynamicLoadout_F"									//Mi-48 Kajman
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_MRAP_02_gmg_F",                                                  //Ifrit (GMG)
+    "O_MRAP_02_gmg_F",                                                  //Ifrit (GMG)
+    "O_Truck_03_transport_F",                                           //Tempest Transport
+    "O_Truck_03_covered_F",                                             //Tempest Transport (Covered)
+    "O_APC_Tracked_02_cannon_F",                                        //BTR-K Kamysh
+    "O_APC_Tracked_02_AA_F",                                            //ZSU-39 Tigris
+    "O_APC_Tracked_02_AA_F",                                            //ZSU-39 Tigris
+    "O_MBT_02_cannon_F",                                                //T-100 Varsuk
+    "O_MBT_02_cannon_F",                                                //T-100 Varsuk
+    "O_Heli_Light_02_dynamicLoadout_F",                                 //Po-30 Orca (Armed)
+    "O_Heli_Light_02_dynamicLoadout_F",                                 //Po-30 Orca (Armed)
+    "O_Heli_Transport_04_bench_F",                                      //Mi-290 Taru (Bench)
+    "O_Heli_Attack_02_dynamicLoadout_F"                                 //Mi-48 Kajman
 ];
 
 // Vehicles for lower enemy combat readiness (aggression levels).
 KPLIB_preset_oBattleVehLow = [
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_MRAP_02_hmg_F",													//Ifrit (HMG)
-    "O_Truck_03_transport_F",											//Tempest Transport
-    "O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid
-    "O_APC_Tracked_02_cannon_F",										//BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",											//ZSU-39 Tigris
-    "O_Heli_Light_02_dynamicLoadout_F",									//Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F"										//Mi-290 Taru (Bench)
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_MRAP_02_hmg_F",                                                  //Ifrit (HMG)
+    "O_Truck_03_transport_F",                                           //Tempest Transport
+    "O_APC_Wheeled_02_rcws_F",                                          //MSE-3 Marid
+    "O_APC_Tracked_02_cannon_F",                                        //BTR-K Kamysh
+    "O_APC_Tracked_02_AA_F",                                            //ZSU-39 Tigris
+    "O_Heli_Light_02_dynamicLoadout_F",                                 //Po-30 Orca (Armed)
+    "O_Heli_Transport_04_bench_F"                                       //Mi-290 Taru (Bench)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also able to hold at least 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur. */
 KPLIB_preset_oBattleTransports = [
-    "O_Truck_03_transport_F",											//Tempest Transport
-    "O_Truck_03_covered_F",												//Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F",											//MSE-3 Marid
-    "O_Heli_Transport_04_bench_F",										//Mi-290 Taru (Bench)
-    "O_Heli_Light_02_dynamicLoadout_F"									//Po-30 Orca (Armed)
+    "O_Truck_03_transport_F",                                           //Tempest Transport
+    "O_Truck_03_covered_F",                                             //Tempest Transport (Covered)
+    "O_APC_Wheeled_02_rcws_F",                                          //MSE-3 Marid
+    "O_Heli_Transport_04_bench_F",                                      //Mi-290 Taru (Bench)
+    "O_Heli_Light_02_dynamicLoadout_F"                                  //Po-30 Orca (Armed)
 ];
 
 /*------------------------------------------------------------
@@ -178,22 +178,22 @@ KPLIB_preset_oBattleTransports = [
 ------------------------------------------------------------*/
 
 // Unarmed MRAP
-KPLIB_preset_oMrap = "O_MRAP_02_F";												//Ifrit
+KPLIB_preset_oMrap = "O_MRAP_02_F";                                     //Ifrit
 // Armed MRAP
-KPLIB_preset_oMrapArmed = "O_MRAP_02_hmg_F";									//Ifrit (HMG)
+KPLIB_preset_oMrapArmed = "O_MRAP_02_hmg_F";                            //Ifrit (HMG)
 // Transport helicopter
-KPLIB_preset_oTransportHeli = "O_Heli_Transport_04_bench_F";					//Mi-290 Taru (Bench)
+KPLIB_preset_oTransportHeli = "O_Heli_Transport_04_bench_F";            //Mi-290 Taru (Bench)
 // Transport truck
-KPLIB_preset_oTransportTruck = "O_Truck_03_covered_F";							//Tempest Transport (Covered)
+KPLIB_preset_oTransportTruck = "O_Truck_03_covered_F";                  //Tempest Transport (Covered)
 // Logistic truck (has to be able to transport reouce crates)
-KPLIB_preset_oLogiTruck = "O_Truck_03_transport_F";								//Tempest Transport (Open)
+KPLIB_preset_oLogiTruck = "O_Truck_03_transport_F";                     //Tempest Transport (Open)
 // Fuel truck
-KPLIB_preset_oFuelTruck = "O_Truck_03_fuel_F";									//Tempest Fuel
+KPLIB_preset_oFuelTruck = "O_Truck_03_fuel_F";                          //Tempest Fuel
 // Ammo truck
-KPLIB_preset_oAmmoTruck = "O_Truck_03_ammo_F";									//Tempest Ammo
+KPLIB_preset_oAmmoTruck = "O_Truck_03_ammo_F";                          //Tempest Ammo
 // Fuel container
-KPLIB_preset_oFuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";				//Taru Fuel Pod
+KPLIB_preset_oFuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";      //Taru Fuel Pod
 // Ammo container
-KPLIB_preset_oAmmoContainer = "Land_Pod_Heli_Transport_04_ammo_F";				//Taru Ammo Pod
+KPLIB_preset_oAmmoContainer = "Land_Pod_Heli_Transport_04_ammo_F";      //Taru Ammo Pod
 // Enemy flag
-KPLIB_preset_oFlag = "Flag_CSAT_F";												//CSAT Flag
+KPLIB_preset_oFlag = "Flag_CSAT_F";                                     //CSAT Flag
