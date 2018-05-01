@@ -29,6 +29,9 @@ class core {
     // Start the intro cinematic
     class core_intro {};
 
+    // Spawning of the start vehicles
+    class core_spawnStartVeh {};
+
     // Opens the redeploy/spawn dialog
     class core_redeploy {};
 
