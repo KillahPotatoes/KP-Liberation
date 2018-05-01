@@ -19,18 +19,20 @@
 
 // Go through the available markers for the little bird spawn. Adapts to the amount of placed markers.
 for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
-    // Current position for the spawn.
+    // Spawn point from mission.sqm
     private _spawnPoint = missionNamespace getVariable ("KPLIB_eden_littlebird_" + str _i);
+    // Current position for the spawn.
+    private _spawnPos = getPosATL _spawnPoint;
     // Vehicle created at the spawn position with a slight height offset.
-    private _vehicle = createVehicle [KPLIB_preset_addHeli, [(getposATL _spawnPoint) select 0, (getposATL _spawnPoint) select 1, ((getposATL _spawnPoint) select 2) + 0.1], [], 0, "NONE"];
+    private _vehicle = createVehicle [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], [], 0, "NONE"];
 
     // Disable damage handling and simulation.
-    _vehicle allowdamage false;
+    _vehicle allowDamage false;
     _vehicle enableSimulationGlobal false;
 
     // Repositioning of the vehicle to make sure it'll be where it should be.
     _vehicle setDir (getDir _spawnPoint);
-    _vehicle setposATL [(getposATL _spawnPoint) select 0, (getposATL _spawnPoint) select 1, ((getposATL _spawnPoint) select 2) + 0.1];
+    _vehicle setPosATL [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1];
 
     // Clear all cargo of the start vehicle.
     clearWeaponCargoGlobal _vehicle;
@@ -42,23 +44,25 @@ for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
     sleep 0.2;
     _vehicle enableSimulationGlobal true;
     _vehicle setDamage 0;
-    _vehicle allowdamage true;
+    _vehicle allowDamage true;
 };
 
 // Go through the available markers for the rubber dinghy spawn. Adapts to the amount of placed markers.
 for [{_i=0}, {!isNil ("KPLIB_eden_boat_" + str _i)}, {_i = _i + 1}] do {
-    // Current position for the spawn.
+    // Spawn point from mission.sqm
     private _spawnPoint = missionNamespace getVariable ("KPLIB_eden_boat_" + str _i);
+    // Current position for the spawn.
+    private _spawnPos = getPosATL _spawnPoint;
     // Vehicle created at the spawn position with a slight height offset.
-    private _vehicle = createVehicle [KPLIB_preset_addBoat, [(getposATL _spawnPoint) select 0, (getposATL _spawnPoint) select 1, ((getposATL _spawnPoint) select 2) + 0.1], [], 0, "NONE"];
+    private _vehicle = createVehicle [KPLIB_preset_addBoat, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], [], 0, "NONE"];
 
     // Disable damage handling and simulation.
-    _vehicle allowdamage false;
+    _vehicle allowDamage false;
     _vehicle enableSimulationGlobal false;
 
     // Repositioning of the vehicle to make sure it'll be where it should be.
     _vehicle setDir (getDir _spawnPoint);
-    _vehicle setposATL [(getposATL _spawnPoint) select 0, (getposATL _spawnPoint) select 1, ((getposATL _spawnPoint) select 2) + 0.1];
+    _vehicle setPosATL [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1];
 
     // Clear all cargo of the start vehicle.
     clearWeaponCargoGlobal _vehicle;
@@ -70,7 +74,7 @@ for [{_i=0}, {!isNil ("KPLIB_eden_boat_" + str _i)}, {_i = _i + 1}] do {
     sleep 0.2;
     _vehicle enableSimulationGlobal true;
     _vehicle setDamage 0;
-    _vehicle allowdamage true;
+    _vehicle allowDamage true;
 };
 
 true
