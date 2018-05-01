@@ -84,7 +84,7 @@
         </Key>
         <!-- Parameters -->
         <Key ID="STR_PARAMS_PARAMSOPTIONS">
-            <Original>== PARAMETRS OPTIONS ==  [ Loaded values will be visible in diary "KP Params" ] </Original>
+            <Original>== PARAMETRS OPTIONS ==  [ Loaded values will be visible in diary "Mission Parameters" ] </Original>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS">
             <Original>Load/Save Parameters</Original>

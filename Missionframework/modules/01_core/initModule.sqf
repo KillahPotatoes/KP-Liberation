@@ -22,6 +22,9 @@
 call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
 if (hasInterface) then {
+    // Add parameter diary entries
+    call KPLIB_fnc_core_paramsDiary;
+
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;
 };

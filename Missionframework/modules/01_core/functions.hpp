@@ -34,4 +34,10 @@ class core {
 
     // The spawn camera sequence
     class core_spawnCam {};
+
+    // Creates diary entries with parameter values
+    class core_paramsDiary {};
+
+    // Converts value of param to "texts" string
+    class core_paramToText {};
 };
