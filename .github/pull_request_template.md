@@ -21,10 +21,10 @@ to show if it's already finished and already part of the pull request.
 -->
 
 ### Tested on:
-- [ ] Vanilla
-- [ ] ACE
-- [ ] Local MP
-- [ ] Dedicated MP
+- [ ] Local MP Vanilla
+- [ ] Local MP ACE
+- [ ] Dedicated MP Vanilla
+- [ ] Dedicated MP ACE
 
 <!--
 Add strikethrough if N\A, for eg. stringtable updates
