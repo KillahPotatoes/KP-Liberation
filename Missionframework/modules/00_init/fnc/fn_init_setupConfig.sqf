@@ -18,7 +18,7 @@
     BOOL
 */
 
-diag_log format ["[KP LIBERATION] [INIT] ----- Time: %1 - Config initialization started -----", diag_tickTime];
+diag_log format ["[KP LIBERATION] [PRE INIT] ----- Time: %1 - Config initialization started -----", diag_tickTime];
 
 // Check for ACE
 KPLIB_ace_enabled = isClass (configFile >> "CfgVehicles" >> "ACE_module");
@@ -29,16 +29,16 @@ KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 if(isServer) then {
     call KPLIB_fnc_init_paramsFetch;
 
-    KPLIB_initParamsDone = true;
-    publicVariable "KPLIB_initParamsDone";
+    KPLIB_initSetupDone = true;
+    publicVariable "KPLIB_initSetupDone";
 } else {
-    waitUntil {!isNil "KPLIB_initParamsDone"};
-    waitUntil {KPLIB_initParamsDone};
+    waitUntil {!isNil "KPLIB_initSetupDone"};
+    waitUntil {KPLIB_initSetupDone};
 };
 
 // Read the KPLIB_config.sqf file
 call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
-diag_log format ["[KP LIBERATION] [INIT] ----- Time: %1 - Config initialization finished -----", diag_tickTime];
+diag_log format ["[KP LIBERATION] [PRE INIT] ----- Time: %1 - Config initialization finished -----", diag_tickTime];
 
 true

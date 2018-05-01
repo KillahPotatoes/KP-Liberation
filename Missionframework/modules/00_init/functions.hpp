@@ -32,9 +32,7 @@ class init {
     // Loads param from KPLIB params array
     class init_paramLoad {};
 
-    // Saves param to KPLIB params array
-    class init_paramSave {};
-
+    // Creates variable from param name and value in format of "KPLIB_param_<name>"
     class init_paramVarCreate {};
 
     // Initializes the virtual arsenal
