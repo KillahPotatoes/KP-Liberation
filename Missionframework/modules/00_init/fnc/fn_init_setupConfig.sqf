@@ -18,6 +18,8 @@
     BOOL
 */
 
+diag_log format ["[KP LIBERATION] [INIT] ----- Time: %1 - Config initialization started -----", diag_tickTime];
+
 // Check for ACE
 KPLIB_ace_enabled = isClass (configFile >> "CfgVehicles" >> "ACE_module");
 KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
@@ -36,5 +38,7 @@ if(isServer) then {
 
 // Read the KPLIB_config.sqf file
 call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+
+diag_log format ["[KP LIBERATION] [INIT] ----- Time: %1 - Config initialization finished -----", diag_tickTime];
 
 true
