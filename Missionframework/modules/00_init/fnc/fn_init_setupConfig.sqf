@@ -25,7 +25,7 @@ KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
 KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 if(isServer) then {
-    [] call KPLIB_fnc_init_fetchParams;
+    call KPLIB_fnc_init_paramsFetch;
 
     KPLIB_initParamsDone = true;
     publicVariable "KPLIB_initParamsDone";

@@ -37,7 +37,7 @@ if(isNil "KPLIB_params_array") then {
         switch(KPLIB_param_source) do {
             // PARAM LOAD
             case 1: {
-                private _paramData = [_name, _default] call KPLIB_fnc_init_loadParam;
+                private _paramData = [_name, _default] call KPLIB_fnc_init_paramLoad;
                 _value = _paramData select 0;
                 _source = _paramData select 1;
             };
@@ -46,7 +46,7 @@ if(isNil "KPLIB_params_array") then {
                 _value = [_name, _default] call BIS_fnc_getParamValue;
                 _source = "LOBBY/SAVED";
 
-                [_name, _value] call KPLIB_fnc_init_saveParam;
+                [_name, _value] call KPLIB_fnc_init_paramSave;
             };
             default {
 
@@ -58,7 +58,7 @@ if(isNil "KPLIB_params_array") then {
     };
 
     // Create variable for Param
-    [_name, _value] call KPLIB_fnc_init_createParamVar;
+    [_name, _value] call KPLIB_fnc_init_paramVarCreate;
 
     diag_log format ["[KP LIBERATION] [PARAM] Loaded param: %1 from %2 with value %3", _name, _source, _value] ;
 } forEach ("true" configClasses getMissionConfig "Params");

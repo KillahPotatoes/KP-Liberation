@@ -27,15 +27,15 @@ class init {
     };
 
     // Fetches the mission parameters and saves them
-    class init_fetchParams {};
+    class init_paramsFetch {};
 
     // Loads param from KPLIB params array
-    class init_loadParam {};
+    class init_paramLoad {};
 
     // Saves param to KPLIB params array
-    class init_saveParam {};
+    class init_paramSave {};
 
-    class init_createParamVar {};
+    class init_paramVarCreate {};
 
     // Initializes the virtual arsenal
     class init_fillArsenal {};
