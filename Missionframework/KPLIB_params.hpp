@@ -39,23 +39,23 @@ class Params
     };
     class Unitcap {
         title = $STR_PARAMS_UNITCAP;
-        values[] = {0,1,2,3,4,5};
+        values[] = {0.5,0.75,1,1.25,1.5,2};
         texts[] = {$STR_PARAMS_UNITCAP1,$STR_PARAMS_UNITCAP2,$STR_PARAMS_UNITCAP3,$STR_PARAMS_UNITCAP4,$STR_PARAMS_UNITCAP5,$STR_PARAMS_UNITCAP6};
-        default = 2; // Default value. Must be one from the values array above.
+        default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class Difficulty {
         title = $STR_PARAMS_DIFFICULTY;
-        values[] = {0,1,2,3,4,5,6,7};
+        values[] = {0.5,0.75,1,1.25,1.5,2,4,10};
         texts[] = {$STR_PARAMS_DIFFICULTY1,$STR_PARAMS_DIFFICULTY2,$STR_PARAMS_DIFFICULTY3,$STR_PARAMS_DIFFICULTY4,$STR_PARAMS_DIFFICULTY5,$STR_PARAMS_DIFFICULTY6,$STR_PARAMS_DIFFICULTY7,$STR_PARAMS_DIFFICULTY8};
-        default = 2; // Default value. Must be one from the values array above.
+        default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class Aggressivity {
         title = $STR_PARAMS_AGGRESSIVITY;
-        values[] = {0,1,2,3,4};
+        values[] = {0.25,0.5,1,2,4};
         texts[] = {$STR_PARAMS_AGGRESSIVITY0,$STR_PARAMS_AGGRESSIVITY1,$STR_PARAMS_AGGRESSIVITY2,$STR_PARAMS_AGGRESSIVITY3,$STR_PARAMS_AGGRESSIVITY4};
-        default = 2; // Default value. Must be one from the values array above.
+        default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class AdaptiveEnemy {
@@ -67,9 +67,9 @@ class Params
     };
     class Civilians {
         title = $STR_PARAMS_CIVILIANS;
-        values[] = {0,1,2,3};
+        values[] = {0,0.5,1,2};
         texts[] = {$STR_PARAMS_CIVILIANS0,$STR_PARAMS_CIVILIANS1,$STR_PARAMS_CIVILIANS2,$STR_PARAMS_CIVILIANS3};
-        default = 2; // Default value. Must be one from the values array above.
+        default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class FirstFob {
@@ -130,9 +130,9 @@ class Params
     };
     class ResMulti {
         title = $STR_PARAMS_RESMULTI;
-        values[] = {0,1,2,3,4,5,6,7};
+        values[] = {0.25,0.5,0.75,1,1.25,1.5,2,3};
         texts[] = {"x0.25","x0.5","x0.75","x1","x1.25","x1.5","x2","x3"};
-        default = 3; // Default value. Must be one from the values array above.
+        default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class Spacer1 {
