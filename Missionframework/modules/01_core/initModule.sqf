@@ -24,6 +24,7 @@ call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 // Server section (dedicated and player hosted)
 if (isServer) then {
     [] spawn KPLIB_fnc_core_spawnStartVeh;
+    [] spawn KPLIB_fnc_core_spawnPotato;
 };
 
 // HC section
