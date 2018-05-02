@@ -56,3 +56,10 @@ KPLIB_sectors_tower = [];
 KPLIB_resetPos = [99999,99999,0];
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
+
+// Publish some variables to the clients (maybe this should be moved elsewhere later on)
+publicVariable "KPLIB_campaignRunning";
+publicVariable "KPLIB_eden_respawnPos";
+publicVariable "KPLIB_sectors_active";
+publicVariable "KPLIB_resetPos";
+publicVariable "KPLIB_zeroPos";
