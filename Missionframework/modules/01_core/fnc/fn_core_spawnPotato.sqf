@@ -42,10 +42,8 @@ if (isNull KPLIB_core_potato01 || !(alive KPLIB_core_potato01)) then {
     // Declare as ace medical vehicle (can also be set if ACE is not used)
     KPLIB_core_potato01 setVariable ["ace_medical_medicClass", 1, true];
 
-    // Add event handler to call this script again if we have a "Potato down".
-    // NOTE: Has to be tested in the testing phase, if this may cause all players to execute a spawning of a new Potato 01 in a dedicated server environment.
-    // NOTE: If it's the case, a simple "if (isServer)" should be fine to ensure it'll only spawn one Potato 01 from the server (dedicated or player hosted).
-    KPLIB_core_potato01 addMPEventHandler ["MPKilled", {[] spawn KPLIB_fnc_core_spawnPotato;}];
+    // Add event handler to call this script again if we have a "Potato down". Will run only on the server.
+    KPLIB_core_potato01 addMPEventHandler ["MPKilled", {if (isServer) then {[] spawn KPLIB_fnc_core_spawnPotato;};}];
 
     // Small delay to prevent issues with activated damage handling and activate the simulation again.
     sleep 0.2;
