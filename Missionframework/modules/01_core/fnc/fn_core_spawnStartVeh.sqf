@@ -17,26 +17,22 @@
     BOOL
 */
 
-// Go through the available markers for the little bird spawn. Adapts to the amount of placed markers.
-for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
-    // Spawn point from mission.sqm
-    private _spawnPoint = missionNamespace getVariable ("KPLIB_eden_littlebird_" + str _i);
-    // Current position for the spawn.
-    private _spawnPos = getPosATL _spawnPoint;
+{
+    private _spawnPointString = "";
+    switch (_forEachIndex) do {
+        case 0: {_spawnPointString = "KPLIB_eden_littlebird_";};
+        case 1: {_spawnPointString = "KPLIB_eden_boat_";};
+    };
+    // Go through the available markers for the little bird spawn. Adapts to the amount of placed markers.
+    for [{_i=0}, {!isNil (_spawnPointString + str _i)}, {_i = _i + 1}] do {
+        // Spawn point from mission.sqm
+        private _spawnPoint = missionNamespace getVariable (_spawnPointString + str _i);
+        // Current position for the spawn.
+        private _spawnPos = getPosATL _spawnPoint;
 
-    // Spawn the vehicle at the spawn position with a slight height offset.
-    [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_core_spawnVehicle;
-};
-
-// Go through the available markers for the rubber dinghy spawn. Adapts to the amount of placed markers.
-for [{_i=0}, {!isNil ("KPLIB_eden_boat_" + str _i)}, {_i = _i + 1}] do {
-    // Spawn point from mission.sqm
-    private _spawnPoint = missionNamespace getVariable ("KPLIB_eden_boat_" + str _i);
-    // Current position for the spawn.
-    private _spawnPos = getPosATL _spawnPoint;
-
-    // Spawn the vehicle at the spawn position with a slight height offset.
-    [KPLIB_preset_addBoat, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_core_spawnVehicle;
-};
+        // Spawn the vehicle at the spawn position with a slight height offset.
+        [_x, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_core_spawnVehicle;
+    };
+} forEach [KPLIB_preset_addHeli, KPLIB_preset_addBoat];
 
 true
