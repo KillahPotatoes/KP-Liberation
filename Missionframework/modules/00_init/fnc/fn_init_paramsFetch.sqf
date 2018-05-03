@@ -4,7 +4,7 @@
     File: fn_init_fetchParams.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-04-29
+    Last Update: 2018-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,11 +16,6 @@
     Returns:
     BOOL
 */
-
-KPLIB_params_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_PARAMS_REWRITE";
-KPLIB_params_array = [];
-// Store persistent parameters in separate array. This array will be saved to user profile if set to save in lobby
-KPLIB_params_persistent_array = profileNamespace getVariable KPLIB_params_save_key;
 
 if(isNil "KPLIB_params_persistent_array") then {
     KPLIB_params_persistent_array = [];
