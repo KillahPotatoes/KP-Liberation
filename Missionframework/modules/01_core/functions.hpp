@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-01-05
+    Last Update: 2018-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,15 +29,18 @@ class core {
     // Start the intro cinematic
     class core_intro {};
 
+    // Opens the redeploy/spawn dialog
+    class core_redeploy {};
+
+    // The spawn camera sequence
+    class core_spawnCam {};
+
     // Spawning of the Potato 01 helicopter
     class core_spawnPotato {};
 
     // Spawning of the start vehicles
     class core_spawnStartVeh {};
 
-    // Opens the redeploy/spawn dialog
-    class core_redeploy {};
-
-    // The spawn camera sequence
-    class core_spawnCam {};
+    // Spawning of a vehicle at given position with given direction
+    class core_spawnVehicle {};
 };

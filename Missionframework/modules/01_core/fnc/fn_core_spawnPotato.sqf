@@ -4,7 +4,7 @@
     File: fn_core_spawnPotato.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-05-01
-    Last Update: 2018-05-01
+    Last Update: 2018-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,34 +22,15 @@
 if (isNull KPLIB_core_potato01 || !(alive KPLIB_core_potato01)) then {
     // Position for the spawn.
     private _spawnPos = getPosATL KPLIB_eden_potatospawn;
+
     // Create Potato 01 at the spawn position with a slight height offset.
-    KPLIB_core_potato01 = createVehicle [KPLIB_preset_potato, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], [], 0, "NONE"];
-
-    // Disable damage handling and simulation.
-    KPLIB_core_potato01 allowDamage false;
-    KPLIB_core_potato01 enableSimulationGlobal false;
-
-    // Repositioning of Potato 01 to make sure it'll be where it should be.
-    KPLIB_core_potato01 setDir (getDir KPLIB_eden_potatospawn);
-    KPLIB_core_potato01 setPosATL [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1];
-
-    // Clear all cargo.
-    clearWeaponCargoGlobal KPLIB_core_potato01;
-    clearMagazineCargoGlobal KPLIB_core_potato01;
-    clearItemCargoGlobal KPLIB_core_potato01;
-    clearBackpackCargoGlobal KPLIB_core_potato01;
+    KPLIB_core_potato01 = [KPLIB_preset_potato, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir KPLIB_eden_potatospawn, true] call KPLIB_fnc_core_spawnVehicle;
 
     // Declare as ace medical vehicle (can also be set if ACE is not used)
     KPLIB_core_potato01 setVariable ["ace_medical_medicClass", 1, true];
 
     // Add event handler to call this script again if we have a "Potato down". Will run only on the server.
-    KPLIB_core_potato01 addMPEventHandler ["MPKilled", {if (isServer) then {[] spawn KPLIB_fnc_core_spawnPotato;};}];
-
-    // Small delay to prevent issues with activated damage handling and activate the simulation again.
-    sleep 0.2;
-    KPLIB_core_potato01 enableSimulationGlobal true;
-    KPLIB_core_potato01 setDamage 0;
-    KPLIB_core_potato01 allowDamage true;
+    KPLIB_core_potato01 addMPEventHandler ["MPKilled", {if (isServer) then {[] call KPLIB_fnc_core_spawnPotato;};}];
 };
 
 true
