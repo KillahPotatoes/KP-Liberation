@@ -18,11 +18,13 @@
 */
 
 {
+    // Set the right spawn point name depending on the current vehicle
     private _spawnPointString = "";
     switch (_forEachIndex) do {
         case 0: {_spawnPointString = "KPLIB_eden_littlebird_";};
         case 1: {_spawnPointString = "KPLIB_eden_boat_";};
     };
+
     // Go through the available markers for the little bird spawn. Adapts to the amount of placed markers.
     for [{_i=0}, {!isNil (_spawnPointString + str _i)}, {_i = _i + 1}] do {
         // Spawn point from mission.sqm
