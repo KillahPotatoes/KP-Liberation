@@ -40,4 +40,7 @@ class core {
 
     // Converts value of param to "texts" string
     class core_paramToText {};
+
+    // Initialize BIS revive
+    class core_reviveInit {};
 };

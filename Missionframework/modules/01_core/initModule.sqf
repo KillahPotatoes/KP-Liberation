@@ -21,6 +21,8 @@
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
+call KPLIB_fnc_core_reviveInit;
+
 if (hasInterface) then {
     // Add parameter diary entries
     call KPLIB_fnc_core_paramsDiary;

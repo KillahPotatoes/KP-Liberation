@@ -149,75 +149,59 @@ class Params
     };
     class ReviveMode {
         title = $STR_A3_ReviveMode;
-        isGlobal = 1;
         values[] = {0,1};
         texts[] = {$STR_A3_Disabled,$STR_A3_EnabledForAllPlayers};
         default = 1; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveMode";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveDuration {
         title = $STR_A3_ReviveDuration;
-        isGlobal = 1;
         values[] = {6,8,10,12,15,20,25,30};
         texts[] = {6,8,10,12,15,20,25,30};
         default = 6; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveDuration";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveRequiredTrait {
         title = $STR_A3_RequiredTrait;
-        isGlobal = 1;
         values[] = {0,1};
         texts[] = {$STR_A3_None,$STR_A3_Medic};
         default = 1; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveRequiredTrait";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveMedicSpeedMultiplier {
         title = $STR_A3_RequiredTrait_MedicSpeedMultiplier;
-        isGlobal = 1;
         values[] = {1,1.5,2,2.5,3};
         texts[] = {"1x","1.5x","2x","2.5x","3x"};
         default = 1; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveMedicSpeedMultiplier";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveRequiredItems {
         title = $STR_A3_RequiredItems;
-        isGlobal = 1;
         values[] = {0,1,2};
         texts[] = {$STR_A3_None,$STR_A3_Medikit,$STR_A3_FirstAidKitOrMedikit};
         default = 1; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveRequiredItems";
-        // TODO persistent
+        persistent = 1;
     };
-    class UnconsciousStateMode {
+    class ReviveUnconsciousStateMode {
         title = $STR_A3_IncapacitationMode;
-        isGlobal = 1;
         values[] = {0,1,2};
         texts[] = {$STR_A3_Basic,$STR_A3_Advanced,$STR_A3_Realistic};
         default = 0; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveUnconsciousStateMode";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveBleedOutDuration {
         title = $STR_A3_BleedOutDuration;
-        isGlobal = 1;
         values[] = {10,15,20,30,45,60,90,180};
         texts[] = {10,15,20,30,45,60,90,180};
         default = 180; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveBleedOutDuration";
-        // TODO persistent
+        persistent = 1;
     };
     class ReviveForceRespawnDuration {
         title = $STR_A3_ForceRespawnDuration;
-        isGlobal = 1;
         values[] = {3,4,5,6,7,8,9,10};
         texts[] = {3,4,5,6,7,8,9,10};
         default = 10; // Default value. Must be one from the values array above.
-        function = "bis_fnc_paramReviveForceRespawnDuration";
-        // TODO persistent
+        persistent = 1;
     };
     class Spacer2 {
         title = "";
