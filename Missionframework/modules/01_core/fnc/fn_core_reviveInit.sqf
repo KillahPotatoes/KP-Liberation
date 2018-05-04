@@ -18,8 +18,10 @@
 */
 
 if(KPLIB_ace_medical || KPLIB_param_reviveMode == 0) exitWith {
-    diag_log format ["[KP LIBERATION] [CORE] ACE medical system detected. BIS revive disabled!"];
+    diag_log format ["[KP LIBERATION] [CORE] Skipping BIS revive initialization!"];
 };
+
+diag_log format ["[KP LIBERATION] [CORE] Initializing BIS revive"];
 
 KPLIB_param_reviveMode call BIS_fnc_paramReviveMode;
 KPLIB_param_reviveDuration call BIS_fnc_paramReviveDuration;

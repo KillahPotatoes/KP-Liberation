@@ -32,7 +32,8 @@ private _text = "";
     private _value = _x select 1;
 
     private _displayValue = [_name, _value] call KPLIB_fnc_core_paramToText;
-    _text = _text + format ["<font color='#ff8000'>%1</font><br /><font size='16'>%2</font>", _name, _displayValue];
+    private _title = getText (missionConfigFile >> "Params" >> _name >> "title");
+    _text = _text + format ["<font color='#ff8000'>%1</font><br /><font size='16'>%2</font>", _title, _displayValue];
 
 } forEach(_allParams);
 
