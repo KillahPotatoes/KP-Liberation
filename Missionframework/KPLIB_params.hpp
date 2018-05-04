@@ -21,8 +21,8 @@ class Params
     };
     class LoadSaveParams {
         title = $STR_PARAMS_LOADSAVEPARAMS;
-        values[] = {2,1,0};
-        texts[] = { $STR_PARAMS_LOADSAVEPARAMS_SAVE, $STR_PARAMS_LOADSAVEPARAMS_LOAD, $STR_PARAMS_LOADSAVEPARAMS_SELECTED };
+        values[] = {2,1,0,-1};
+        texts[] = {$STR_PARAMS_LOADSAVEPARAMS_SAVE, $STR_PARAMS_LOADSAVEPARAMS_LOAD, $STR_PARAMS_LOADSAVEPARAMS_SELECTED, $STR_PARAMS_LOADSAVEPARAMS_WIPE};
         default = 1;
     };
     class Spacer0 {

@@ -21,6 +21,12 @@
 KPLIB_params_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_PARAMS_REWRITE";
 // Standard lobby parameters array
 KPLIB_params_array = [];
+
+// WIPE parameters from server profile
+if(KPLIB_param_source == -1) then {
+    profileNamespace setVariable [KPLIB_params_save_key, nil];
+};
+
 // Persistent parameters array. This array will be saved to user profile if set to save in lobby
 // Array must be copied (+) to be not overwritten when using lobby values only
 KPLIB_params_persistent_array = +(profileNamespace getVariable KPLIB_params_save_key);
