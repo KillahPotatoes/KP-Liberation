@@ -17,6 +17,13 @@
     BOOL
 */
 
+// Parameters save key
+KPLIB_params_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_PARAMS_REWRITE";
+// Standard lobby parameters array
+KPLIB_params_array = [];
+// Persistent parameters array. This array will be saved to user profile if set to save in lobby
+KPLIB_params_persistent_array = profileNamespace getVariable KPLIB_params_save_key;
+
 if(isNil "KPLIB_params_persistent_array") then {
     KPLIB_params_persistent_array = [];
 };
