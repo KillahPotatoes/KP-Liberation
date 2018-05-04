@@ -4,7 +4,7 @@
     File: fn_core_intro.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-31
-    Last Update: 2018-03-28
+    Last Update: 2018-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,7 +14,7 @@
     NONE
 
     Returns:
-    BOOL
+    NOTHING
 */
 
 // Wait until mission is loaded
@@ -45,5 +45,3 @@ if (KPLIB_intro_tutorial == 0) then {
 
 // Finish the intro
 KPLIB_intro_done = true;
-
-true

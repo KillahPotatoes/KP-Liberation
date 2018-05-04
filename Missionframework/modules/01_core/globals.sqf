@@ -11,6 +11,8 @@
     Initializes the global variables which are brought by this module.
 */
 
+// Potato 01 vehicle reference
+KPLIB_core_potato01 = objNull;
 // Deploy button trigger for redeploy dialog
 KPLIB_dialog_deploy = 0;
 // Map scale trigger for redeploy dialog

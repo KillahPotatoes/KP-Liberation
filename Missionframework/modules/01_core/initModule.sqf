@@ -21,6 +21,18 @@
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
+// Server section (dedicated and player hosted)
+if (isServer) then {
+    call KPLIB_fnc_core_spawnStartVeh;
+    call KPLIB_fnc_core_spawnPotato;
+};
+
+// HC section
+if (!hasInterface && !isDedicated) then {
+
+};
+
+// Player section
 if (hasInterface) then {
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;
