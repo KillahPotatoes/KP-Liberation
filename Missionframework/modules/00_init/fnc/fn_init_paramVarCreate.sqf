@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_init_createParamVar
+    KPLIB_fnc_init_paramVarCreate
 
-    File: fn_init_createParamVar.sqf
+    File: fn_init_paramVarCreate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-01
     Last Update: 2018-05-02

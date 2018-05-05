@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_core_paramsDiary
+    KPLIB_fnc_core_paramDiaryList
 
-    File: fn_core_paramsDiary.sqf
+    File: fn_core_paramDiaryList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-01
     Last Update: 2018-05-01

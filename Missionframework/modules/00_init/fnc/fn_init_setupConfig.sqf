@@ -4,7 +4,7 @@
     File: fn_init_setupConfig.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-01
-    Last Update: 2018-05-02
+    Last Update: 2018-05-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,9 +27,9 @@ KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
 KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 // Skip params fetching on clients
-// preInit unscheduled environment should guarnantee that this is run on server first
+// preInit unscheduled environment should guarnantee that this is ran on server first
 if(isServer) then {
-    call KPLIB_fnc_init_paramsFetch;
+    call KPLIB_fnc_init_paramFetchAll;
 
     KPLIB_initSetupDone = true;
     publicVariable "KPLIB_initSetupDone";

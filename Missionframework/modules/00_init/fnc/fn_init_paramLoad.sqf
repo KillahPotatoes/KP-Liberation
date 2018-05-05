@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_init_loadParam
+    KPLIB_fnc_init_paramLoad
 
-    File: fn_init_loadParam.sqf
+    File: fn_init_paramLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-01
     Last Update: 2018-05-02

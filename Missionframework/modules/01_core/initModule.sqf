@@ -4,7 +4,7 @@
     File: initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-01-05
+    Last Update: 2018-05-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,11 +21,10 @@
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
-call KPLIB_fnc_core_reviveInit;
 
 if (hasInterface) then {
     // Add parameter diary entries
-    call KPLIB_fnc_core_paramsDiary;
+    call KPLIB_fnc_core_paramDiaryList;
 
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;

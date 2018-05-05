@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_init_fetchParams
+    KPLIB_fnc_init_paramFetchAll
 
-    File: fn_init_fetchParams.sqf
+    File: fn_init_paramFetchAll.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-05-02
+    Last Update: 2018-05-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:

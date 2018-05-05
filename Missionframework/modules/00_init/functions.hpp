@@ -20,21 +20,6 @@ class init {
     // Create local client markers
     class init_clientMarkers {};
 
-    // Setups global variables from params
-    // Also initializes mission config
-    class init_setupConfig {
-        preInit = 1;
-    };
-
-    // Fetches the mission parameters and saves them
-    class init_paramsFetch {};
-
-    // Loads param from KPLIB persistent params array
-    class init_paramLoad {};
-
-    // Creates variable from param name and value in format of "KPLIB_param_<name>"
-    class init_paramVarCreate {};
-
     // Initializes the virtual arsenal
     class init_fillArsenal {};
 
@@ -50,6 +35,15 @@ class init {
     // Loads and checks the configured unit presets
     class init_loadPresets {};
 
+    // Fetches the mission parameters and saves them
+    class init_paramFetchAll {};
+
+    // Loads param from KPLIB persistent params array
+    class init_paramLoad {};
+
+    // Creates variable from param name and value in format of "KPLIB_param_<name>"
+    class init_paramVarCreate {};
+
     // Client function for processing init data which was published by the server
     class init_receiveInit {};
 
@@ -58,6 +52,12 @@ class init {
 
     // Saves module specific data for the save
     class init_saveData {};
+
+    // Setups global variables from params
+    // Also initializes mission config
+    class init_setupConfig {
+        preInit = 1;
+    };
 
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
