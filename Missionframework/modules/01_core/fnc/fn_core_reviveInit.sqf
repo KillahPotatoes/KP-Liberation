@@ -21,6 +21,10 @@ if(KPLIB_ace_medical || KPLIB_param_reviveMode == 0) exitWith {
     diag_log format ["[KP LIBERATION] [CORE] Skipping BIS revive initialization!"];
 };
 
+if (!isDedicated && !isNil {player getVariable "bis_revive_ehHandleHeal"}) exitWith {
+    diag_log format ["[KP LIBERATION] [CORE] BIS revive already initialized, skipping!"];
+};
+
 diag_log format ["[KP LIBERATION] [CORE] Initializing BIS revive"];
 
 KPLIB_param_reviveMode call BIS_fnc_paramReviveMode;
