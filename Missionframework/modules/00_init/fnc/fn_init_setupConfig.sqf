@@ -26,16 +26,14 @@ KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
 
 KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
+// Skip params fetching on clients
+// preInit unscheduled environment should guarnantee that this is run on server first
 if(isServer) then {
     call KPLIB_fnc_init_paramsFetch;
 
     KPLIB_initSetupDone = true;
     publicVariable "KPLIB_initSetupDone";
-} else {
-    waitUntil {!isNil "KPLIB_initSetupDone"};
-    waitUntil {KPLIB_initSetupDone};
 };
-
 // Read the KPLIB_config.sqf file
 call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
