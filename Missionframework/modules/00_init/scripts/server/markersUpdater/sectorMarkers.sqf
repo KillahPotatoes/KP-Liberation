@@ -13,39 +13,51 @@
 
 waitUntil {KPLIB_save_loaded};
 
-// Create locked vehicle markers
+// Array to store sector and locked vehicle markers.
 private _lockedVehMarkers = [];
+// Shortcut to CfgVehicles.
 private _cfg = configFile >> "CfgVehicles";
 
+// Circle through all locked vehicle connections.
 {
+    // Classname of the locked vehicle.
     private _vehicle = _x select 0;
+    // Marker of the sector to which the vehicle is connected.
     private _base = _x select 1;
-    private _marker = createMarker ["lockedVehicle_" + _base, [markerPos _base select 0, (markerPos _base select 1) + 125]];
 
+    // Create marker above the sector marker.
+    private _marker = createMarker ["lockedVehicle_" + _base, [markerPos _base select 0, (markerPos _base select 1) + 125]];
     _marker setMarkerText (getText (_cfg >> _vehicle >> "displayName"));
     _marker setMarkerShape "ICON";
     _marker setMarkerType "mil_pickup";
     _marker setMarkerColor KPLIB_preset_colorEnemy;
 
+    // Storing of the created locked vehicle marker with relation to the base marker.
     _lockedVehMarkers pushBack [_marker, _base];
 } forEach KPLIB_sectors_lockedVeh;
 
-// Start loop to adjust marker colors
+// Storage for the last blufor sector count.
 private _sectorCount = -1;
 
+// Loop to adjust marker colors during the game.
 while {KPLIB_campaignRunning} do {
+
+    // Only continue if blufor lost or captured a sector.
     waitUntil {uiSleep 2; (count KPLIB_sectors_blufor) != _sectorCount};
 
+    // Color change for the main sector markers.
     {_x setMarkerColor KPLIB_preset_colorEnemy;} forEach (KPLIB_sectors_all - KPLIB_sectors_blufor);
     {_x setMarkerColor KPLIB_preset_colorPlayers;} forEach KPLIB_sectors_blufor;
 
+    // Color change for the locked vehicle markers.
     {
-        private _nextMarker = _x;
-        (_nextMarker select 0) setMarkerColor KPLIB_preset_colorEnemy;
-        {
-            if (_x == (_nextMarker select 1)) exitWith {(_nextMarker select 0) setMarkerColor KPLIB_preset_colorPlayers};
-        } forEach (KPLIB_sectors_blufor select {_x in KPLIB_sectors_military});
+        if ((_x select 1) in KPLIB_sectors_blufor) then {
+            (_x select 0) setMarkerColor KPLIB_preset_colorPlayers;
+        } else {
+            (_x select 0) setMarkerColor KPLIB_preset_colorEnemy;
+        }
     } forEach _lockedVehMarkers;
 
+    // Update blufor sector count storage.
     _sectorCount = count KPLIB_sectors_blufor;
 };
