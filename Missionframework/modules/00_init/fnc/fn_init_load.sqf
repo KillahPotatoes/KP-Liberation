@@ -18,7 +18,7 @@
 */
 
 // Check for save wipe parameters
-if (KPLIB_param_wipeSave1 == 1 && KPLIB_param_wipeSave2 == 1) then {
+if (KPLIB_param_wipeSave1 > 0 && KPLIB_param_wipeSave2 > 0) then {
     call KPLIB_fnc_init_wipe;
 };
 
