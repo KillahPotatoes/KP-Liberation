@@ -83,6 +83,29 @@
             <Portuguese>Próximo de</Portuguese>
         </Key>
         <!-- Parameters -->
+        <Key ID="STR_PARAMS_PARAMSOPTIONS">
+            <Original>== PARAMETRS OPTIONS ==  [ Loaded values will be visible in diary "Mission Parameters" ] </Original>
+        </Key>
+        <Key ID="STR_PARAMS_LOADSAVEPARAMS">
+            <Original>Load/Save Parameters</Original>
+            <German>Laden/Speichern der Parameter</German>
+        </Key>
+        <Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
+            <Original>SAVE selected parameters</Original>
+            <German>SPEICHERN der momentanen Parameter</German>
+        </Key>
+        <Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
+            <Original>LOAD parameters or use selected if no saved value found</Original>
+            <German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+        </Key>
+        <Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
+            <Original>USE Lobby values without saving</Original>
+            <German>BENUTZE aktuelle Werte ohne Speicherung</German>
+        </Key>
+        <Key ID="STR_PARAMS_LOADSAVEPARAMS_WIPE">
+            <Original>WIPE saved values and use Lobby values</Original>
+            <German>LÖSCHT gespeicherte Werte und verwendet die aktuell eingestellten Werte</German>
+        </Key>
         <Key ID="STR_PARAMS_ENABLED">
             <Original>Enabled</Original>
             <French>Activé</French>

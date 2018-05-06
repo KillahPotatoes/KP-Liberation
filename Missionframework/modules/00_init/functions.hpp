@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-03-29
+    Last Update: 2018-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,11 +19,6 @@ class init {
 
     // Create local client markers
     class init_clientMarkers {};
-
-    // Fetches the mission parameters
-    class init_fetchParams {
-        preInit = 1;
-    };
 
     // Initializes the virtual arsenal
     class init_fillArsenal {};
@@ -40,6 +35,15 @@ class init {
     // Loads and checks the configured unit presets
     class init_loadPresets {};
 
+    // Fetches the mission parameters and saves them
+    class init_paramFetchAll {};
+
+    // Loads param from KPLIB persistent params array
+    class init_paramLoad {};
+
+    // Creates variable from param name and value in format of "KPLIB_param_<name>"
+    class init_paramVarCreate {};
+
     // Client function for processing init data which was published by the server
     class init_receiveInit {};
 
@@ -48,6 +52,12 @@ class init {
 
     // Saves module specific data for the save
     class init_saveData {};
+
+    // Setups global variables from params
+    // Also initializes mission config
+    class init_setupConfig {
+        preInit = 1;
+    };
 
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
