@@ -10,9 +10,12 @@
     Description:
     This module provides the very basic functions and mechanics for the general gameplay of the mission.
     Tasks of this module are:
-        * Provide basic functions
-        * Manage respawn / redeploy dialog
-        * Show respawn, spawn and intro cinematics
+        * Provide basic functions.
+        * Manage respawn / redeploy dialog.
+        * Show respawn, spawn and intro cinematics.
+        * Spawning of Little Birds and Rubber Dinghies.
+        * Spawning and respawn handling of Potato 01.
+        * Track sectors to handle their activation/deactivation.
 
     Dependencies:
         * 00_init
@@ -25,6 +28,7 @@ call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 if (isServer) then {
     call KPLIB_fnc_core_spawnStartVeh;
     call KPLIB_fnc_core_spawnPotato;
+    execVM "modules\01_core\scripts\server\sectorMonitor\sectorMonitor.sqf";
 };
 
 // HC section

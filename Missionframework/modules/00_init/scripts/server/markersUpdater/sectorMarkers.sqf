@@ -36,18 +36,21 @@ private _cfg = configFile >> "CfgVehicles";
     _lockedVehMarkers pushBack [_marker, _base];
 } forEach KPLIB_sectors_lockedVeh;
 
-// Storage for the last blufor sector count.
-private _sectorCount = -1;
+// Storage for the last blufor sectors count.
+private _bluforCount = -1;
+// Storage for the last active sectors count.
+private _activeCount = 0;
 
 // Loop to adjust marker colors during the game.
 while {KPLIB_campaignRunning} do {
 
-    // Only continue if blufor lost or captured a sector.
-    waitUntil {uiSleep 2; (count KPLIB_sectors_blufor) != _sectorCount};
+    // Only continue if blufor lost or captured a sector or a sector is activated/deactivated.
+    waitUntil {uiSleep 2; ((count KPLIB_sectors_blufor) != _bluforCount) || ((count KPLIB_sectors_active) != _activeCount)};
 
     // Color change for the main sector markers.
-    {_x setMarkerColor KPLIB_preset_colorEnemy;} forEach (KPLIB_sectors_all - KPLIB_sectors_blufor);
+    {_x setMarkerColor KPLIB_preset_colorEnemy;} forEach (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
     {_x setMarkerColor KPLIB_preset_colorPlayers;} forEach KPLIB_sectors_blufor;
+    {_x setMarkerColor KPLIB_preset_colorEnemyAct;} forEach KPLIB_sectors_active;
 
     // Color change for the locked vehicle markers.
     {
@@ -58,6 +61,7 @@ while {KPLIB_campaignRunning} do {
         }
     } forEach _lockedVehMarkers;
 
-    // Update blufor sector count storage.
-    _sectorCount = count KPLIB_sectors_blufor;
+    // Update count storages.
+    _bluforCount = count KPLIB_sectors_blufor;
+    _activeCount = count KPLIB_sectors_active;
 };
