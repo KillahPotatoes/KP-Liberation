@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Checks if there are units from given side(s) inside a given radius around a given position.
+    Changes the ownership of a given sector to the player or enemy side.
 
     Parameter(s):
         0: STRING - Sector marker name.
