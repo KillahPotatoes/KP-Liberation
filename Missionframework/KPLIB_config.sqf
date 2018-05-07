@@ -577,7 +577,7 @@ KPLIB_surrender_chance = 80;
 // Civilian count multiplier.
 KPLIB_civilians_amount = 10;
 // Time in seconds until an enemy sector will be deactivated after there are no blufor units near.
-KPLIB_sectors_stayActiveTime = 30;
+KPLIB_sectors_stayActiveTime = 300;
 
 // Classnames of objects which should be ignored when building.
 KPLIB_build_ignored_classnames = [

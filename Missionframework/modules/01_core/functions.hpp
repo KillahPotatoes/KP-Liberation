@@ -14,6 +14,12 @@
 class core {
     file = "modules\01_core\fnc";
 
+    // Check if units are near a position
+    class core_areUnitsNear {};
+
+    // Change the owner of a sector
+    class core_changeSectorOwner {};
+
     // Check player gear against blacklist
     class core_checkGear {};
 
@@ -25,6 +31,9 @@ class core {
 
     // Get the nearest capturable sector
     class core_getNearestSector {};
+
+    // Handle an activated sector
+    class core_handleSector {};
 
     // Start the intro cinematic
     class core_intro {};
