@@ -28,6 +28,7 @@ call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 if (isServer) then {
     call KPLIB_fnc_core_spawnStartVeh;
     call KPLIB_fnc_core_spawnPotato;
+    call KPLIB_fnc_core_updateSectorMarkers;
     execVM "modules\01_core\scripts\server\sectorMonitor\sectorMonitor.sqf";
 };
 

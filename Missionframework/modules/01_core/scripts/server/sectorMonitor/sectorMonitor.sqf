@@ -12,6 +12,9 @@
 */
 
 while {KPLIB_campaignRunning} do {
+    // Has a sector been activated?
+    private _sectorActivated = false;
+
     // Only check for possible sector activation, if the cap isn't already reached. (The cap can be intended exceeded during one loop circle)
     if (count KPLIB_sectors_active < KPLIB_cap_sector) then {
         {
@@ -23,6 +26,7 @@ while {KPLIB_campaignRunning} do {
                 // NOTE: Later we could check here for the HC load and distribute the sector handling to a HC, if running.
                 KPLIB_sectors_active pushBack _x;
                 [_x] spawn KPLIB_fnc_core_handleSector;
+                _sectorActivated = true;
             };
         } forEach (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
     } else {
@@ -30,5 +34,13 @@ while {KPLIB_campaignRunning} do {
         // Wait here to avoid rpt spamming of the above message.
         waitUntil {uiSleep 5; count KPLIB_sectors_active < KPLIB_cap_sector};
     };
+
+    // Update the active sectors array and sector marker colors on all machines, if at least one has been activated.
+    // We could leave this variable out and just do it every circle, but then it's basically the same as before (just one loop instead of two)
+    if (_sectorActivated) then {
+        publicVariable "KPLIB_sectors_active";
+        call KPLIB_fnc_core_updateSectorMarkers;
+    };
+
     uiSleep 5;
 };

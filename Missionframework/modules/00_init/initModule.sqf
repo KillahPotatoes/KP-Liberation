@@ -41,8 +41,8 @@ call KPLIB_fnc_init_sortSectors;
 call KPLIB_fnc_init_load;
 execVM "modules\00_init\scripts\server\saveTimer\timer.sqf";
 
-// Run sector marker color manager
-execVM "modules\00_init\scripts\server\markersUpdater\sectorMarkers.sqf";
+// Create locked vehicle markers
+call KPLIB_fnc_init_createLockedVehMarkers;
 
 // Run FOB marker manager
 execVM "modules\00_init\scripts\server\markersUpdater\fobMarkers.sqf";

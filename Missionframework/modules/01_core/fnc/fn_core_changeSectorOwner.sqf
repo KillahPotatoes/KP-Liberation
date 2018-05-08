@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Changes the ownership of a given sector to the player or enemy side.
+    Changes the ownership of a given sector to the player or enemy side by updating the blufor sectors array.
 
     Parameter(s):
         0: STRING - Sector marker name.
@@ -25,5 +25,7 @@ if (_toPlayerSide) then {
 } else {
     KPLIB_sectors_blufor = KPLIB_sectors_blufor - [_sectorToChange];
 };
+
+publicVariable "KPLIB_sectors_blufor";
 
 true

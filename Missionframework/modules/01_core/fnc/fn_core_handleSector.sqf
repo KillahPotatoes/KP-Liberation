@@ -67,4 +67,10 @@ while {_sectorActive} do {
     };
 };
 
+// Remove sector from active sectors array.
 KPLIB_sectors_active = KPLIB_sectors_active - [_sectorMarkerName];
+publicVariable "KPLIB_sectors_active";
+
+// As the argument for changing a sector color should be global this should be fine. If not, we've to change it to something like
+// If isServer then call, else remoteExec on server (concerning sector handling by HCs in the end)
+call KPLIB_fnc_core_updateSectorMarkers;
