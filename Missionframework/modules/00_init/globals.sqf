@@ -44,6 +44,8 @@ KPLIB_sectors_factory = [];
 KPLIB_sectors_fobs = [];
 // Locked vehicles <-> military bases connection array
 KPLIB_sectors_lockedVeh = [];
+// Markers for the locked vehicles
+KPLIB_sectors_lockedVehMarkers = [];
 // All metropolis (capital) sectors
 KPLIB_sectors_metropolis = [];
 // All military sectors

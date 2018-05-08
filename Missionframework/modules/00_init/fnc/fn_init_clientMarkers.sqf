@@ -17,12 +17,6 @@
     BOOL
 */
 
-private _marker = createMarkerLocal ["zone_capture", KPLIB_resetPos];
-_marker setMarkerColorLocal "ColorUNKNOWN";
-_marker setMarkerShapeLocal "Ellipse";
-_marker setMarkerBrushLocal "SolidBorder";
-_marker setMarkerSizeLocal [KPLIB_range_capture, KPLIB_range_capture];
-
 _marker = createMarkerLocal ["spawn_marker", KPLIB_resetPos];
 _marker setMarkerColorLocal "ColorGreen";
 _marker setMarkerTypeLocal "Select";

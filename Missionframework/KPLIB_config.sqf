@@ -217,13 +217,13 @@ KPLIB_save_interval = 60;
     All values in meters.
 ------------------------------------------------------------*/
 
-// Build range around the main FOB building.
+// Build radius around the main FOB building.
 KPLIB_range_fob = 125;
-// Range to activate a sector.
-KPLIB_range_sector = 1000;
-// Range to capture a sector.
-KPLIB_range_capture = 175;
-// Radio Tower scanning range.
+// Radius to activate a sector.
+KPLIB_range_sector = 1200;
+// Radius to capture a sector.
+KPLIB_range_capture = 150;
+// Radio Tower scanning radius.
 KPLIB_range_radiotower = 2500;
 // Altitude in metres for the HALO jump.
 KPLIB_halo_altitude = 2500;
@@ -251,19 +251,12 @@ KPLIB_fuel_normal = 90;
 KPLIB_fuel_max = 45;
 
 /*------------------------------------------------------------
-    --- UNIT CAP SETTINGS ---
+    --- CAP SETTINGS ---
     Caps for different groups/mechanics.
-    Values are total and not only for one sector or one battlegroup for example.
 ------------------------------------------------------------*/
 
-// Unit cap for friendly side.
-KPLIB_cap_blufor = 100;
-// Unit cap for sector defenders.
-KPLIB_cap_sector = 180;
-// Unit cap for enemy battlegroup units.
-KPLIB_cap_battlegroup = 150;
-// Unit cap for enemy patrol units.
-KPLIB_cap_patrol = 150;
+// Cap for active sectors.
+KPLIB_cap_sector = 6;
 
 /*------------------------------------------------------------
     --- CIVIL REPUTATION SETTINGS ---
@@ -583,6 +576,8 @@ KPLIB_vulnerability_timer = 1200;
 KPLIB_surrender_chance = 80;
 // Civilian count multiplier.
 KPLIB_civilians_amount = 10;
+// Time in seconds until an enemy sector will be deactivated after there are no blufor units near.
+KPLIB_sectors_stayActiveTime = 300;
 
 // Classnames of objects which should be ignored when building.
 KPLIB_build_ignored_classnames = [

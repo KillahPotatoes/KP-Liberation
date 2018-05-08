@@ -24,12 +24,12 @@ waitUntil {time > 0};
 [] spawn KPLIB_fnc_core_cinematic;
 
 // If intro is enabled, show intro texts. Otherwise skip.
-if (KPLIB_param_intro == 1) then {
-    sleep 1;
+if (KPLIB_param_intro > 0) then {
+    uiSleep 1;
     cutRsc ["intro1", "PLAIN", 1, true];
-    sleep 5.5;
+    uiSleep 5.5;
     cutRsc ["intro2", "PLAIN", 1, true];
-    sleep 10;
+    uiSleep 10;
 };
 
 // Show the intro dialog for play or tutorial

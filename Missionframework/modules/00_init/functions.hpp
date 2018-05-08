@@ -17,8 +17,11 @@ class init {
     // Checks if given classname is inside CfgVehicles
     class init_checkClass {};
 
-    // Create local client markers
+    // Creates local client markers
     class init_clientMarkers {};
+
+    // Creates locked vehicle markers
+    class init_createLockedVehMarkers {};
 
     // Initializes the virtual arsenal
     class init_fillArsenal {};

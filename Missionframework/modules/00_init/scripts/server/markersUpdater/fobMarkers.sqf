@@ -9,6 +9,9 @@
 
     Description:
     Places and rearranges FOB map markers, if needed.
+
+    NOTE:
+    This could also adjusted to a function during the "FOB placement task". Own function or maybe integrated in the sector marker update function.
 */
 
 waitUntil {KPLIB_save_loaded};
