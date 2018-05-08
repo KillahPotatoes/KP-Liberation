@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-05-04
+    Last Update: 2018-05-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,8 +38,19 @@ class core {
     // Start the intro cinematic
     class core_intro {};
 
+    // Creates diary entries with parameter values
+    class core_paramDiaryList {};
+
+    // Converts value of param to "texts" string
+    class core_paramToText {};
+
     // Opens the redeploy/spawn dialog
     class core_redeploy {};
+
+    // Initialize BIS revive
+    class core_reviveInit {
+        postInit = 1;
+    };
 
     // The spawn camera sequence
     class core_spawnCam {};

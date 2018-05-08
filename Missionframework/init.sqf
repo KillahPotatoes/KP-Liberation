@@ -30,7 +30,7 @@ diag_log format [
     KPLIB_preset_resistance,
     KPLIB_preset_civilians,
     KPLIB_preset_arsenal,
-    KPLIB_aceEnable
+    KPLIB_ace_enabled
 ];
 
 // Call module inits
