@@ -61,6 +61,9 @@ class core {
     // Spawning of the Potato 01 helicopter
     class core_spawnPotato {};
 
+    // Spawning of the start fob box
+    class core_spawnStartFobBox {};
+
     // Spawning of the start vehicles
     class core_spawnStartVeh {};
 
