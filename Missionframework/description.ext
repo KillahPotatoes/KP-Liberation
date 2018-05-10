@@ -48,3 +48,4 @@ minPlayerDistance = 1000;
 #include "KPLIB_params.hpp"
 #include "KPLIB_functions.hpp"
 #include "KPLIB_ui.hpp"
+#include "KPLIB_debriefs.hpp"
