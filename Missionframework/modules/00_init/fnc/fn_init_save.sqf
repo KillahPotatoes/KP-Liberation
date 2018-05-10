@@ -17,6 +17,8 @@
     BOOL
 */
 
+if (!KPLIB_campaignRunning) exitWith {false};
+
 if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function started -----", diag_tickTime];};
 
 // Call the save data fetch functions from each module and store them in a multidimensional array for saving
