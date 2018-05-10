@@ -23,3 +23,5 @@ if (({_x in KPLIB_sectors_blufor} count KPLIB_sectors_metropolis) == count KPLIB
     call KPLIB_fnc_init_wipe;
     "KPLIB_win" call BIS_fnc_endMissionServer;
 };
+
+true
