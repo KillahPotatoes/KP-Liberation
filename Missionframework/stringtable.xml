@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project name="KP-Liberation">
-    <Package name="KP-Liberation">
-        <!-- French localization made by zbug: https://github.com/GreuhZbug -->
-        <!-- German localization made by Wyqer: https://github.com/Wyqer -->
-        <!-- Italian localization made by k4s0: https://github.com/k4s0 -->
-        <!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
-        <!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
-        <!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-        <!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
-        <!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
-        <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
-        <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
-        <!-- General -->
+	<!-- French localization made by zbug: https://github.com/GreuhZbug -->
+	<!-- German localization made by Wyqer: https://github.com/Wyqer -->
+	<!-- Italian localization made by k4s0: https://github.com/k4s0 -->
+	<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
+	<!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
+	<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
+	<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
+	<!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
+	<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
+	<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
+    <Package name="General">
         <Key ID="STR_MISSION_TITLE">
             <Original>KP Liberation v0.97dev</Original>
         </Key>
@@ -82,7 +81,8 @@
             <Turkish>Yakın</Turkish>
             <Portuguese>Próximo de</Portuguese>
         </Key>
-        <!-- Parameters -->
+    </Package>
+    <Package name="Params">
         <Key ID="STR_PARAMS_PARAMSOPTIONS">
             <Original>== PARAMETRS OPTIONS ==  [ Loaded values will be visible in diary "Mission Parameters" ] </Original>
         </Key>
@@ -1098,6 +1098,8 @@
             <Chinese>戰區刷新</Chinese>
             <Portuguese>Spawn do setor</Portuguese>
         </Key>
+    </Package>
+    <Package name="Dialogs">
         <!-- Special names -->
         <Key ID="STR_SQUAD_LIGHT">
             <Original>Light Rifle Squad</Original>
@@ -1220,7 +1222,8 @@
             <Turkish>Canlan</Turkish>
             <Portuguese>Mobilizar</Portuguese>
         </Key>
-        <!-- Debriefings -->
+    </Package>
+    <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">
             <Original>The area is liberated.</Original>
             <German>Das Gebiet wurde befreit.</German>
@@ -1229,7 +1232,8 @@
             <Original>Later you'll have a cinematic with the stats etc.</Original>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
-        <!-- Hints -->
+    </Package>
+    <Package name="Hints">
         <Key ID="STR_HINT_RESPAWNCOOLDOWN">
             <Original>%1 minutes mobile respawn cooldown left.</Original>
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
