@@ -17,6 +17,7 @@
     BOOL
 */
 
+// Catch the rare situation that the win condition is met, but the save process is fired and therefore the save isn't wiped.
 if (!KPLIB_campaignRunning) exitWith {false};
 
 if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function started -----", diag_tickTime];};
