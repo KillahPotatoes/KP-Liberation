@@ -21,7 +21,7 @@ params [["_boxWreck", objNull]];
 if (!isServer || count KPLIB_sectors_fobs > 0) exitWith {};
 
 // If FOB box wreck is too close to respawn we should delete it.
-if((_boxWreck distance KPLIB_eden_boxspawn) < 10 && !alive _boxWreck) then {
+if((_boxWreck distance2D KPLIB_eden_boxspawn) < 10 && !alive _boxWreck) then {
     deleteVehicle _boxWreck;
     // deleteVehicle deletes object in next frame.
     // Without sleep player was sometimes unable to interact with object.

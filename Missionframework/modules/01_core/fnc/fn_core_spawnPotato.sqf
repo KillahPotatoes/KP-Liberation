@@ -22,7 +22,7 @@
 if(!isServer || alive KPLIB_core_potato01) exitWith {};
 
 // If Potato 01 wreck is too close to respawn we should delete it.
-if((KPLIB_core_potato01 distance KPLIB_eden_potatospawn) < 10 && !alive KPLIB_core_potato01) then {
+if((KPLIB_core_potato01 distance2D KPLIB_eden_potatospawn) < 10 && !alive KPLIB_core_potato01) then {
     deleteVehicle KPLIB_core_potato01;
     // deleteVehicle deletes object in next frame.
     // Without sleep player was sometimes unable to interact with object.
