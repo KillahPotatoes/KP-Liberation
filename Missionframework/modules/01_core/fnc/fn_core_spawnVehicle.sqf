@@ -25,14 +25,14 @@ params ["_classname", "_spawnPos", ["_spawnDir", random 360], ["_returnVeh", fal
 // Return variable
 private _return = true;
 
-// Vehicle created at the spawn position with a slight height offset.
-private _vehicle = createVehicle [_classname, _spawnPos, [], 0, "CAN_COLLIDE"];
+// Vehicle initially created at the zero position. This is faster then create the vehicle at the desired position.
+private _vehicle = createVehicle [_classname, KPLIB_zeroPos, [], 0, "CAN_COLLIDE"];
 
 // Disable damage handling and simulation.
 _vehicle allowDamage false;
 _vehicle enableSimulationGlobal false;
 
-// Repositioning of the vehicle to make sure it'll be where it should be.
+// Set the vehicle to the position where it should be.
 _vehicle setDir _spawnDir;
 _vehicle setPosATL _spawnPos;
 
