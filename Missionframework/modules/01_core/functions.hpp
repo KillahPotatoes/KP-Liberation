@@ -23,6 +23,9 @@ class core {
     // Check player gear against blacklist
     class core_checkGear {};
 
+    // Check if win conditions are met
+    class core_checkWinCond {};
+
     // The intro cinematic procedure
     class core_cinematic {};
 

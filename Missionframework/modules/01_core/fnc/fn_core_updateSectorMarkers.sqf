@@ -27,8 +27,12 @@
     if ((_x select 1) in KPLIB_sectors_blufor) then {
         (_x select 0) setMarkerColor KPLIB_preset_colorPlayers;
     } else {
-        (_x select 0) setMarkerColor KPLIB_preset_colorEnemy;
-    }
+        if ((_x select 1) in KPLIB_sectors_active) then {
+            (_x select 0) setMarkerColor KPLIB_preset_colorEnemyAct;
+        } else {
+            (_x select 0) setMarkerColor KPLIB_preset_colorEnemy;
+        };
+    };
 } forEach KPLIB_sectors_lockedVehMarkers;
 
 true

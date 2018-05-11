@@ -22,6 +22,7 @@ params ["_sectorToChange", ["_toPlayerSide", true]];
 
 if (_toPlayerSide) then {
     KPLIB_sectors_blufor pushBack _sectorToChange;
+    call KPLIB_fnc_core_checkWinCond;
 } else {
     KPLIB_sectors_blufor = KPLIB_sectors_blufor - [_sectorToChange];
 };

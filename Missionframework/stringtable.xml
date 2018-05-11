@@ -1220,6 +1220,15 @@
             <Turkish>Canlan</Turkish>
             <Portuguese>Mobilizar</Portuguese>
         </Key>
+        <!-- Debriefings -->
+        <Key ID="STR_DEBRIEF_WINTITLE">
+            <Original>The area is liberated.</Original>
+            <German>Das Gebiet wurde befreit.</German>
+        </Key>
+        <Key ID="STR_DEBRIEF_WINDESCR">
+            <Original>Later you'll have a cinematic with the stats etc.</Original>
+            <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
+        </Key>
         <!-- Hints -->
         <Key ID="STR_HINT_RESPAWNCOOLDOWN">
             <Original>%1 minutes mobile respawn cooldown left.</Original>
