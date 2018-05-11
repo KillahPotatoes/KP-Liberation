@@ -16,7 +16,7 @@
     Returns:
     BOOL
 */
-params [["_boxWreck", nil]];
+params [["_boxWreck", objNull]];
 
 if (!isServer || count KPLIB_sectors_fobs > 0) exitWith {};
 

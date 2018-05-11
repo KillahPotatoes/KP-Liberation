@@ -19,7 +19,7 @@
 
 // Check if there wasn't a Potato 01 already spawned or if the spawned one is destroyed.
 // NOTE: As the loading will happen before this function is called, it won't interfere with a loaded Potato 01.
-if(!isServer && (!isNull KPLIB_core_potato01 || alive KPLIB_core_potato01)) exitWith {};
+if(!isServer || alive KPLIB_core_potato01) exitWith {};
 
 // If Potato 01 wreck is too close to respawn we should delete it.
 if((KPLIB_core_potato01 distance KPLIB_eden_potatospawn) < 10 && !alive KPLIB_core_potato01) then {
