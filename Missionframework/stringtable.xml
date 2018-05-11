@@ -1249,4 +1249,18 @@
             <Portuguese>Os seguintes itens não são permitidos:\n%1</Portuguese>
         </Key>
     </Package>
+    <Package name="Actions">
+        <Key ID="STR_FOB_DEPLOY">
+			<Original>-- DEPLOY FOB --</Original>
+			<French>-- DEPLOYER FOB --</French>
+			<German>-- FOB BEREITSTELLEN --</German>
+			<Spanish>-- DESPLEGAR FOB --</Spanish>
+			<Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
+			<Italian>-- COSTRUISCI FOB --</Italian>
+			<Chinesesimp>-- 部署前哨 --</Chinesesimp>
+			<Chinese>-- 佈署前線基地 --</Chinese>
+			<Turkish>-- FOB KUR --</Turkish>
+			<Portuguese>-- INSTALAR FOB --</Portuguese>
+		</Key>
+    </Package>
 </Project>

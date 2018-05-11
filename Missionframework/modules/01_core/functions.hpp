@@ -17,6 +17,12 @@ class core {
     // Check if units are near a position
     class core_areUnitsNear {};
 
+    // Build fob and register it
+    class core_buildFob {};
+
+    // Checks if player can build fob
+    class core_canBuildFob {};
+
     // Change the owner of a sector
     class core_changeSectorOwner {};
 
@@ -57,6 +63,9 @@ class core {
 
     // The spawn camera sequence
     class core_spawnCam {};
+
+    // Spawining of vehicle with FOB action attached
+    class core_spawnFobVehicle {};
 
     // Spawning of the Potato 01 helicopter
     class core_spawnPotato {};
