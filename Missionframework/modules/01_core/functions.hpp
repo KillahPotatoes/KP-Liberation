@@ -35,6 +35,9 @@ class core {
     // The intro cinematic procedure
     class core_cinematic {};
 
+    // Creates FOB marker
+    class core_createFobMarker {};
+
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
 

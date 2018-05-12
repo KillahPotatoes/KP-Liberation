@@ -59,7 +59,14 @@ lbAdd [_loadouts_idc, "--"];
 {lbAdd [_loadouts_idc, _x];} forEach _loadouts_data;
 lbSetCurSel [_loadouts_idc, 0];
 
-// Array for all possible spawnpoints
+/*
+    Array for all posible spawnpoints
+
+    Structure:
+        0: STRING - Label of spawn position
+        1: ARRAY - position of respawn area
+        2: OBJECT - OPTIONAL - Mobile respawn object
+*/
 private _spawnchoices = [];
 
 // Selection storages
@@ -79,7 +86,13 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
 
     // Add the FOBs to the spawn list
     for "_i" from 0 to (count KPLIB_sectors_fobs - 1) do {
-        _spawnchoices pushBack [format ["FOB %1 - %2", (KPLIB_preset_alphabet select _i), mapGridPosition (KPLIB_sectors_fobs select _i)], (KPLIB_sectors_fobs select _i)];
+        // Convert marker array to positions array
+        private _position = (KPLIB_sectors_fobs apply {getMarkerPos _x}) select _i;
+
+        _spawnchoices pushBack [
+            format ["FOB %1 - %2", (KPLIB_preset_alphabet select _i), mapGridPosition (_position)],
+            _position
+        ];
     };
 
     // Add mobile respawns to the spawn list if parameter isn't disabled
@@ -89,7 +102,11 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
 
             // Adding the mobile respawns with object refence as third element, to access it on spawning
             for "_i" from 0 to (count _mobileSpawns - 1) do {
-                _spawnchoices pushBack [format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition (getPosATL (_mobileSpawns select _i))], getPosATL (_mobileSpawns select _i), (_mobileSpawns select _i)];
+                _spawnchoices pushBack [
+                    format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition (getPosATL (_mobileSpawns select _i))],
+                    getPosATL (_mobileSpawns select _i),
+                    (_mobileSpawns select _i)
+                ];
             };
         };
     };
@@ -101,7 +118,7 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
     } forEach _spawnchoices;
 
     if (lbCurSel _spawnlist_idc == -1) then {
-            lbSetCurSel [_spawnlist_idc, 0];
+        lbSetCurSel [_spawnlist_idc, 0];
     };
 
     // Adjust respawn camera if selection has changed

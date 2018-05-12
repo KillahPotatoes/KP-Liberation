@@ -80,8 +80,14 @@ if (_moduleData isEqualTo []) then {
     KPLIB_sectors_blufor = _moduleData select 2;
     publicVariable "KPLIB_sectors_blufor";
 
+
+    private _fobPositions = _moduleData select 3;
+    // Convert FOB positions to markers
+    {
+        [_x] call KPLIB_fnc_core_buildFob
+    } forEach _fobPositions;
+
     // Publish FOB positions
-    KPLIB_sectors_fobs = _moduleData select 3;
     publicVariable "KPLIB_sectors_fobs";
 };
 

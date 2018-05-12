@@ -4,7 +4,7 @@
     File: fn_core_spawnFobVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-11
-    Last Update: 2018-05-11
+    Last Update: 2018-05-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,7 +19,7 @@
     OBJECT - Spawned vehicle
 */
 
-params ["_classname", "_spawnPos", ["_spawnDir", random 360]];
+params [["_classname", KPLIB_preset_fobBox], ["_spawnPos", getPos player], ["_spawnDir", random 360]];
 
 private _vehicle = [_classname, _spawnPos, _spawnDir, true] call KPLIB_fnc_core_spawnVehicle;
 
