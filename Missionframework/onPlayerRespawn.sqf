@@ -39,4 +39,7 @@ if (KPLIB_param_fatigue == 0) then {
 };
 
 // Spawn redeploy dialog
-[] spawn KPLIB_fnc_core_redeploy;
+while {(player distance2D KPLIB_eden_respawnPos) < 100} do {
+    private _respawnhandle = [] spawn KPLIB_fnc_core_redeploy;
+    waitUntil{scriptDone _respawnhandle};
+};
