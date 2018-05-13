@@ -20,7 +20,6 @@
 
 params ["_box", "_player"];
 
-private _canBuild = false;
 // Built FOB range should not overlap over sector range
 private _minSectorDist = KPLIB_range_fob + KPLIB_range_capture;
 
@@ -28,6 +27,4 @@ _canBuild = (
     alive _box
     &&_box distance2D KPLIB_eden_startbase > 300
     && ([_minSectorDist, getPos _box] call KPLIB_fnc_core_getNearestSector == "")
-);
-
-_canBuild
+)
