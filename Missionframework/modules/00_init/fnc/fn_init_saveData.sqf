@@ -19,18 +19,11 @@
 
 if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module saving...";};
 
-private _moduleData = [];
-
-// Current date and time
-_moduleData pushBack date;
-
-// Locked Vehicles array
-_moduleData pushBack KPLIB_sectors_lockedVeh;
-
-// Blufor sectors
-_moduleData pushBack KPLIB_sectors_blufor;
-
-// FOB positions
-_moduleData pushBack KPLIB_sectors_fobs;
+private _moduleData = [
+    date, // Current date and time
+    KPLIB_sectors_lockedVeh, // Locked Vehicles array
+    KPLIB_sectors_blufor, // Blufor sectors
+    KPLIB_sectors_fobs apply {getMarkerPos _x} // FOB positions
+];
 
 _moduleData

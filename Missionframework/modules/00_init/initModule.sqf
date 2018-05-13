@@ -43,6 +43,3 @@ execVM "modules\00_init\scripts\server\saveTimer\timer.sqf";
 
 // Create locked vehicle markers
 call KPLIB_fnc_init_createLockedVehMarkers;
-
-// Run FOB marker manager
-execVM "modules\00_init\scripts\server\markersUpdater\fobMarkers.sqf";

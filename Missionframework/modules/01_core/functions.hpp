@@ -17,6 +17,12 @@ class core {
     // Check if units are near a position
     class core_areUnitsNear {};
 
+    // Build fob and register it
+    class core_buildFob {};
+
+    // Checks if player can build fob
+    class core_canBuildFob {};
+
     // Change the owner of a sector
     class core_changeSectorOwner {};
 
@@ -28,6 +34,9 @@ class core {
 
     // The intro cinematic procedure
     class core_cinematic {};
+
+    // Creates FOB marker
+    class core_createFobMarker {};
 
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
@@ -58,14 +67,23 @@ class core {
     // The spawn camera sequence
     class core_spawnCam {};
 
+    // Spawining of vehicle with FOB action attached
+    class core_spawnFobVehicle {};
+
     // Spawning of the Potato 01 helicopter
     class core_spawnPotato {};
+
+    // Spawning of the start fob box
+    class core_spawnStartFobBox {};
 
     // Spawning of the start vehicles
     class core_spawnStartVeh {};
 
     // Spawning of a vehicle at given position with given direction
     class core_spawnVehicle {};
+
+    // Updates the fob markers labels
+    class core_updateFobMarkers {};
 
     // Updates the sector marker colors
     class core_updateSectorMarkers {};

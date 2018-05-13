@@ -26,6 +26,7 @@ call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
+    call KPLIB_fnc_core_spawnStartFobBox;
     call KPLIB_fnc_core_spawnStartVeh;
     call KPLIB_fnc_core_spawnPotato;
     call KPLIB_fnc_core_updateSectorMarkers;

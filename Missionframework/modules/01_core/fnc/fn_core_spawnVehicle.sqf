@@ -14,7 +14,7 @@
         0: STRING - Classname of the vehicle which should be spawned.
         1: POSITION - Position ATL where the vehicle should be spawned.
         2: NUMBER - OPTIONAL - Heading for the vehicle from 0 to 360. (Default: random direction)
-        2: BOOL - OPTIONAL - True for return the spawned vehicle as object, false for return only true on success. (Default: false)
+        3: BOOL - OPTIONAL - True for return the spawned vehicle as object, false for return only true on success. (Default: false)
 
     Returns:
     OBJECT / BOOL - Depends on 3rd parameter. True -> returns object, False -> return true on success.
