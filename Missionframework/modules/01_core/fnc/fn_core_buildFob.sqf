@@ -44,3 +44,4 @@ if (_interactive) then {
 };
 
 publicVariable "KPLIB_sectors_fobs";
+call KPLIB_fnc_core_updateFobMarkers;

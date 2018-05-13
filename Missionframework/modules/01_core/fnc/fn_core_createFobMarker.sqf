@@ -18,12 +18,11 @@
 */
 params ["_position"];
 
-private _index = count KPLIB_sectors_fobs;
+private _markerName = format ["KPLIB_fob_%1", mapGridPosition _position];
 
-private _marker = createMarker ["KPLIB_fob_" + str _index, _position];
+private _marker = createMarker [_markerName, _position];
         _marker setMarkerShape "ICON";
         _marker setMarkerType "b_hq";
-        _marker setMarkerText format ["FOB %1", KPLIB_preset_alphabet select (_index)];
         _marker setMarkerSize [1.5, 1.5];
         _marker setMarkerColor "ColorYellow";
 

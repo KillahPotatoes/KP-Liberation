@@ -82,6 +82,9 @@ class core {
     // Spawning of a vehicle at given position with given direction
     class core_spawnVehicle {};
 
+    // Updates the fob markers labels
+    class core_updateFobMarkers {};
+
     // Updates the sector marker colors
     class core_updateSectorMarkers {};
 };
