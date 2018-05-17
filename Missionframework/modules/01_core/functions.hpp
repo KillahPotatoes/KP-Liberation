@@ -88,3 +88,17 @@ class core {
     // Updates the sector marker colors
     class core_updateSectorMarkers {};
 };
+
+// Scripted event handlers
+class event {
+    file = "modules\01_core\fnc\event";
+
+    // Adds scripted event handler
+    class event_addHandler {};
+
+    // Triggers event
+    class event_trigger {};
+
+    // Removes handler with given id
+    class event_removeHandler {};
+};
