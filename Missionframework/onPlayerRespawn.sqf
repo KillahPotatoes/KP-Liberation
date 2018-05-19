@@ -13,10 +13,8 @@
 
 waitUntil {!isNil "KPLIB_initDone"};
 waitUntil {KPLIB_initDone};
-waitUntil {!isNil "KPLIB_intro_done"};
-waitUntil {KPLIB_intro_done};
-waitUntil {!isNil "KPLIB_intro_stopped"};
-waitUntil {KPLIB_intro_stopped};
+waitUntil {!isNil "KPLIB_intro_running"};
+waitUntil {!KPLIB_intro_running};
 
 // Remove all items
 removeAllWeapons player;

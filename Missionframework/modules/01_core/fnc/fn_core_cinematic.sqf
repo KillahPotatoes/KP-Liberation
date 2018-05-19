@@ -18,7 +18,7 @@
 */
 
 // Intro cinematic started
-KPLIB_intro_started = true;
+KPLIB_intro_running = true;
 
 // Transition and position storage variables
 private _lastTransition = -1;
@@ -41,13 +41,13 @@ _cam camcommit 0;
 private _firstRound = true;
 
 // Show the intro cinematic until it's aborted
-while {KPLIB_intro_started} do {
+while {KPLIB_intro_running} do {
 
     // Wait until the last camera round is finished or the intro is aborted
-    waitUntil {!KPLIB_intro_started || camCommitted _cam};
+    waitUntil {!KPLIB_intro_running || camCommitted _cam};
 
     // If the intro is still running, commit next camera round
-    if (KPLIB_intro_started) then {
+    if (KPLIB_intro_running) then {
 
         // Deactivate NVG effect for the camera
         camUseNVG false;
@@ -62,7 +62,7 @@ while {KPLIB_intro_started} do {
             // Add 2 FOBs as possible camera targets
             if ((count KPLIB_sectors_fobs) > 0) then {
                 for "_i" from 1 to 2 step 1 do {
-                    _targetPositions pushBack (selectRandom KPLIB_sectors_fobs);
+                    _targetPositions pushBack (getMarkerPos (selectRandom KPLIB_sectors_fobs));
                 };
             };
 
@@ -299,14 +299,14 @@ while {KPLIB_intro_started} do {
             // Get the name of the sector we're looking at
             private _sectorName = "";
             if (_actualTargetPos distance KPLIB_eden_startbase < 300) then {
-                _sectorName = "BEGIN OF OPERATION";
+                _sectorName = "BEGIN OF OPERATION"; // Should this be localized?
             } else {
                 _sectorName = [300, _actualTargetPos] call KPLIB_fnc_core_getNearestSector;
                 if (_sectorName != "") then {
                     _sectorName = markertext _sectorName;
                 } else {
                     // If it's not a player, not a sector and not the starting base, it has to be a FOB
-                    _nearFobs = KPLIB_sectors_fobs select {_x distance _actualTargetPos < 300};
+                    _nearFobs = KPLIB_sectors_fobs select {getMarkerPos _x distance _actualTargetPos < 300};
                     if (count _nearFobs > 0) then {
                         _sectorName = format ["FOB %1", KPLIB_preset_alphabet select (KPLIB_sectors_fobs find (_nearFobs select 0))];
                     };
@@ -323,4 +323,3 @@ _cam cameraEffect ["Terminate", "BACK"];
 camDestroy _cam;
 camUseNVG false;
 deleteVehicle _pointer;
-KPLIB_intro_stopped = true;
