@@ -125,7 +125,7 @@ switch (GRLIB_civilian_activity) do {
     case 1: {GRLIB_civilian_activity = 0.5;};
     case 2: {GRLIB_civilian_activity = 1;};
     case 3: {GRLIB_civilian_activity = 2;};
-    default {GRLIB_csat_aggressivity = 1;};
+    default {GRLIB_civilian_activity = 1;};
 };
 
 switch (GRLIB_resources_multiplier) do {
