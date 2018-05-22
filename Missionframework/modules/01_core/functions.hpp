@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-05-06
+    Last Update: 2018-05-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -96,9 +96,23 @@ class event {
     // Adds scripted event handler
     class event_addHandler {};
 
-    // Triggers event
-    class event_trigger {};
+    // Initializes event system
+    class event_init {
+        preInit = 1;
+    };
 
     // Removes handler with given id
     class event_removeHandler {};
+
+    // Triggers event
+    class event_trigger {};
 };
+
+// Common utility functions
+class common {
+    file = "modules\01_core\fnc\common";
+
+    // Creates namespace
+    class common_createNamespace {};
+};
+
