@@ -29,7 +29,6 @@ private _handlers = _namespace getVariable [_name, []];
 // Id must be unsigned and in handlers array range
 if(_id > -1 && (count _handlers) > _id) exitWith {
     _handlers set [_id, -1];
-
     //Handler found and removed
     true
 };

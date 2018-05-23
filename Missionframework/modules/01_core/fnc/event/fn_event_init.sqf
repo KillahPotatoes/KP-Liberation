@@ -24,4 +24,9 @@ if(!isNil "KPLIB_event_namespace") exitWith {
 
 KPLIB_eventNamespace = call KPLIB_fnc_common_createNamespace;
 
+// Subscribe to global events
+"KPLIB_eventGlobalReceiver" addPublicVariableEventHandler {
+    (_this select 1) call KPLIB_fnc_event_trigger;
+};
+
 true

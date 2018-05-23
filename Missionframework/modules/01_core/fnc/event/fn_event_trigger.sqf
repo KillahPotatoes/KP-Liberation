@@ -13,7 +13,7 @@
     Parameter(s):
         0: STRING - Name of event
         1: ARRAY - Array of arguments passed to triggered event
-        2: ANY - OPTIONAL - Where event should be triggered (remoteExec target). Local by default.
+        2: BOOL - OPTIONAL - Should event be global. Local by default.
 
     Returns:
     BOOLEAN
@@ -22,22 +22,23 @@
 params [
     ["_name", nil, [""]],
     ["_arguments", [], [[]]],
-    "_targets"
+    ["_global", false, [false]]
 ];
 
 private _namespace = KPLIB_eventNamespace;
 private _handlers = _namespace getVariable [_name, []];
-private _local = isNil "_targets";
 
 // Call every handler for event
 {
 	if (_x isEqualType {}) then {
-        if(_local) then {
 		    _arguments call _x;
-        }  else {
-            [_arguments, _x] remoteExecCall ["call", _targets];
-        };
 	}
 } forEach _handlers;
+
+// Broadcast global event
+if(_global) then {
+    KPLIB_eventGlobalReceiver = [_name, _arguments];
+    publicVariable "KPLIB_eventGlobalReceiver";
+};
 
 true

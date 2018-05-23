@@ -98,7 +98,8 @@ class event {
 
     // Initializes event system
     class event_init {
-        preInit = 1;
+        // public var EH does not work for clients in preInit
+        postInit = 1;
     };
 
     // Removes handler with given id
@@ -115,4 +116,3 @@ class common {
     // Creates namespace
     class common_createNamespace {};
 };
-
