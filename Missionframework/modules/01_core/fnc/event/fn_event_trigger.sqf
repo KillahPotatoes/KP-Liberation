@@ -1,3 +1,4 @@
+#include "defines.hpp"
 /*
     KPLIB_fnc_event_trigger
 
@@ -18,6 +19,9 @@
     Returns:
     BOOLEAN
 */
+#ifdef DEBUG_EVENTS
+    diag_log format[LOG_PREFIX + "Triggered: %1", _this joinString ", "];
+#endif
 
 params [
     ["_name", nil, [""]],

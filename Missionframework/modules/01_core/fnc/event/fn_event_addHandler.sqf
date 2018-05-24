@@ -1,3 +1,4 @@
+#include "defines.hpp"
 /*
     KPLIB_fnc_event_addHandler
 
