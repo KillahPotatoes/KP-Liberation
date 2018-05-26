@@ -18,7 +18,7 @@
     BOOLEAN
 */
 
-// Exit if not ran
+// Exit if already initialized
 if(!isNil "KPLIB_event_namespace") exitWith {
     diag_log LOG_PREFIX + "Event system already initialized!";
 };
@@ -33,47 +33,9 @@ KPLIB_eventNamespace = call KPLIB_fnc_common_createNamespace;
     (_this select 1) call KPLIB_fnc_event_trigger;
 };
 
-// STILL WIP
 // Create server side event loop
 if(isServer) then {
-    [] spawn {
-        while {KPLIB_campaignRunning} do {
-            // FOB Event
-            // TODO move to function, REFACTOR!! CHECK PERFORMANCE!!
-            call {
-                // Get all players
-                private _players = allPlayers select {alive _x};
-
-                // Check for players inside fobs
-                {
-                    private _fob = _x;
-                    private _inFob = _players inAreaArray [getMarkerPos _fob, KPLIB_range_fob, KPLIB_range_fob];
-                    {
-                        if(_x getVariable ["KPLIB_fob", false] isEqualTo false) then {
-                            // Save current player fob on player
-                            _x setVariable ["KPLIB_fob", _fob];
-                            // Emit event
-                            ["player_inFob", [_x, _fob]] call KPLIB_fnc_event_trigger;
-                        };
-                        // We don't need to check this player anymore
-                        _players = _players - [_x];
-                    } forEach _inFob;
-                } forEach (KPLIB_sectors_fobs);
-
-                // Players that left are outside of fobs
-                {
-                    if(_x getVariable ["KPLIB_fob", false] isEqualType "") then {
-                        // Remove fob that was saved on player
-                        _x setVariable ["KPLIB_fob", false];
-                        // Emit event
-                        ["player_inFob", [_x, false]] call KPLIB_fnc_event_trigger;
-                    };
-                } forEach _players;
-            };
-
-            uiSleep 3;
-        };
-    };
+    execVM "modules\01_core\scripts\server\eventLoop.sqf";
 };
 
 true
