@@ -49,4 +49,6 @@ _vehicle allowDamage true;
 
 if (_returnVeh) then {_return = _vehicle;};
 
+["vehicle_spawn", [_vehicle]] call KPLIB_fnc_event_trigger;
+
 _return
