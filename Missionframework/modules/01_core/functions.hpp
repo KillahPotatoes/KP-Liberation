@@ -64,6 +64,9 @@ class core {
         postInit = 1;
     };
 
+    // Setup of actions avaible to players
+    class core_setupPlayerActions {};
+
     // The spawn camera sequence
     class core_spawnCam {};
 

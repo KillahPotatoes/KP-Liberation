@@ -24,6 +24,9 @@
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
 
+// Initialize actions
+call KPLIB_fnc_core_setupPlayerActions;
+
 // Server section (dedicated and player hosted)
 if (isServer) then {
     call KPLIB_fnc_core_spawnStartFobBox;

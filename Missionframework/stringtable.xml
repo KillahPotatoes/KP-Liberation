@@ -1254,7 +1254,7 @@
         </Key>
     </Package>
     <Package name="Actions">
-        <Key ID="STR_FOB_DEPLOY">
+        <Key ID="STR_FOB_DEPLOY_ACTION">
 			<Original>-- DEPLOY FOB --</Original>
 			<French>-- DEPLOYER FOB --</French>
 			<German>-- FOB BEREITSTELLEN --</German>
@@ -1265,6 +1265,18 @@
 			<Chinese>-- 佈署前線基地 --</Chinese>
 			<Turkish>-- FOB KUR --</Turkish>
 			<Portuguese>-- INSTALAR FOB --</Portuguese>
+		</Key>
+        <Key ID="STR_REDEPLOY_ACTION">
+			<Original>-- REDEPLOY --</Original>
+			<French>-- REDEPLOIEMENT --</French>
+			<German>-- NEU EINSETZEN --</German>
+			<Spanish>-- REDESPLEGAR --</Spanish>
+			<Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
+			<Italian>-- RISCHIERAMENTO --</Italian>
+			<Chinesesimp>-- 重新部署 --</Chinesesimp>
+			<Chinese>-- 重新佈署 --</Chinese>
+			<Turkish>-- YENİDEN SEÇ --</Turkish>
+			<Portuguese>-- REMOBILIZAR --</Portuguese>
 		</Key>
     </Package>
 </Project>
