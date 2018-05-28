@@ -32,7 +32,7 @@ while {KPLIB_campaignRunning} do {
                 ["player_fob", [_x, _fob], true] call KPLIB_fnc_event_trigger;
             };
         } forEach _inFob;
-    } forEach (KPLIB_sectors_fobs);
+    } forEach (KPLIB_sectors_fobs + ["KPLIB_eden_startbase_marker"]);
 
     // Players that left are outside of fobs
     {
