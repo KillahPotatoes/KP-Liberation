@@ -32,7 +32,7 @@ if((_boxWreck distance2D KPLIB_eden_boxspawn) < 10 && !alive _boxWreck) then {
 private _spawnPos = getPosATL KPLIB_eden_boxspawn;
 
 // Create FOB box at the spawn position with a slight height offset.
-private _fobBox = [KPLIB_preset_fobBox, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir KPLIB_eden_potatospawn] call KPLIB_fnc_core_spawnFobVehicle;
+private _fobBox = [KPLIB_preset_fobBox, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir KPLIB_eden_boxspawn] call KPLIB_fnc_common_spawnVehicle;
 
 // Add event handler to call this script again if box was destroyed.
 _fobBox addMPEventHandler ["MPKilled", {[_this select 0] spawn KPLIB_fnc_core_spawnStartFobBox}];

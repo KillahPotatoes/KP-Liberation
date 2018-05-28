@@ -67,9 +67,6 @@ class core {
     // The spawn camera sequence
     class core_spawnCam {};
 
-    // Spawining of vehicle with FOB action attached
-    class core_spawnFobVehicle {};
-
     // Spawning of the Potato 01 helicopter
     class core_spawnPotato {};
 
@@ -79,14 +76,22 @@ class core {
     // Spawning of the start vehicles
     class core_spawnStartVeh {};
 
-    // Spawning of a vehicle at given position with given direction
-    class core_spawnVehicle {};
-
     // Updates the fob markers labels
     class core_updateFobMarkers {};
 
     // Updates the sector marker colors
     class core_updateSectorMarkers {};
+};
+
+// Common utility functions
+class common {
+    file = "modules\01_core\fnc\common";
+
+    // Creates namespace
+    class common_createNamespace {};
+
+    // Spawning of a vehicle at given position with given direction
+    class common_spawnVehicle {};
 };
 
 // Scripted event handlers
@@ -107,12 +112,4 @@ class event {
 
     // Triggers event
     class event_trigger {};
-};
-
-// Common utility functions
-class common {
-    file = "modules\01_core\fnc\common";
-
-    // Creates namespace
-    class common_createNamespace {};
 };
