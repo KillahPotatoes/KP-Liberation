@@ -11,6 +11,8 @@
     Does periodic checks on players and emits events when necessary
 */
 
+waitUntil {!isNil "KPLIB_campaignRunning"};
+
 while {KPLIB_campaignRunning} do {
     // FOB Event
     // Get all players

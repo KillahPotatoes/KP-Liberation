@@ -104,7 +104,7 @@ class event {
     // Initializes event system
     class event_init {
         // public var EH does not work for clients in preInit
-        postInit = 1;
+        preInit = 1;
     };
 
     // Removes handler with given id

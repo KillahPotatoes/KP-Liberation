@@ -25,12 +25,16 @@ if(!isNil "KPLIB_event_namespace") exitWith {
 
 KPLIB_eventNamespace = call KPLIB_fnc_common_createNamespace;
 
-// Subscribe to global events
-"KPLIB_eventGlobalReceiver" addPublicVariableEventHandler {
-    #ifdef DEBUG_EVENTS
-        diag_log format[LOG_PREFIX + "Recived: %1", _this joinString ", " ];
-    #endif
-    (_this select 1) call KPLIB_fnc_event_trigger;
+// we can't add public var Eh at preinit, spawn will fix it.
+// "Inspired" by: <https://github.com/CBATeam/CBA_A3/blob/435ae41e9282ab71d34150bb3c1a8621a18bcfb0/addons/events/XEH_preInit.sqf#L19>
+[] spawn {
+    // Subscribe to global events
+    "KPLIB_eventGlobalReceiver" addPublicVariableEventHandler {
+        #ifdef DEBUG_EVENTS
+            diag_log format[LOG_PREFIX + "Recived: %1", _this joinString ", " ];
+        #endif
+        (_this select 1) call KPLIB_fnc_event_trigger;
+    };
 };
 
 // Create server side event loop
