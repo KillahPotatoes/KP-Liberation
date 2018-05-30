@@ -33,7 +33,7 @@
         private _spawnPos = getPosATL _spawnPoint;
 
         // Spawn the vehicle at the spawn position with a slight height offset.
-        [_x, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_core_spawnVehicle;
+        [_x, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_common_spawnVehicle;
     };
 } forEach [KPLIB_preset_addHeli, KPLIB_preset_addBoat];
 

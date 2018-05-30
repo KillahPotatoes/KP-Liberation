@@ -19,10 +19,8 @@ KPLIB_dialog_deploy = 0;
 KPLIB_dialog_mapTrigger = 0;
 // Intro cinematic done
 KPLIB_intro_done = false;
-// Intro cinematic started
-KPLIB_intro_started = false;
-// Intro cinematic stopped
-KPLIB_intro_stopped = false;
+// Intro cinematic running
+KPLIB_intro_running = false;
 // Start game button state in intro cinematic
 KPLIB_intro_startGame = 0;
 // Tutorial button state in intro cinematic

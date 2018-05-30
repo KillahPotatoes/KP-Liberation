@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_core_spawnVehicle
+    KPLIB_fnc_common_spawnVehicle
 
-    File: fn_core_spawnVehicle.sqf
+    File: fn_common_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-05-03
+    Last Update: 2018-05-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,7 +20,7 @@
     OBJECT / BOOL - Depends on 3rd parameter. True -> returns object, False -> return true on success.
 */
 
-params ["_classname", "_spawnPos", ["_spawnDir", random 360], ["_returnVeh", false]];
+params [["_classname", nil, [""]], ["_spawnPos", nil, [[]]], ["_spawnDir", random 360], ["_returnVeh", false]];
 
 // Return variable
 private _return = true;
@@ -48,5 +48,7 @@ _vehicle setDamage 0;
 _vehicle allowDamage true;
 
 if (_returnVeh) then {_return = _vehicle;};
+
+["vehicle_spawned", [_vehicle]] call KPLIB_fnc_event_trigger;
 
 _return
