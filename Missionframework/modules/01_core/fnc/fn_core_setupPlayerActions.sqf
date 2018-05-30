@@ -29,7 +29,7 @@ if (isServer) then {
                 // Add FOB build action globaly and for JIP
                 [
                     _vehicle,
-                    [localize "STR_FOB_DEPLOY_ACTION", {[param [0], param [1], param[3]] call KPLIB_fnc_core_buildFob}, true /* Arguments */, -1000, false, false, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
+                    [localize "STR_ACTION_FOB_DEPLOY", {[param [0], param [1], param[3]] call KPLIB_fnc_core_buildFob}, true /* Arguments */, -1000, false, false, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
                 ] remoteExecCall ["addAction", 0, true];
             };
 
@@ -37,7 +37,7 @@ if (isServer) then {
                 // Add redeploy action globaly and for JIP
                 [
                     _vehicle,
-                    [localize "STR_REDEPLOY_ACTION", {[] spawn KPLIB_fnc_core_redeploy}, nil /* Arguments */, -1000, false, false, "", "vehicle player == player", 10]
+                    [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil /* Arguments */, -1000, false, false, "", "vehicle player == player", 10]
                 ] remoteExecCall ["addAction", 0, true];
             };
         };
@@ -49,21 +49,21 @@ if(hasInterface) then {
     ["player_fob", {
         params ["_player", "_fob"];
 
-        private _redeployActionId = _player getVariable ["KPLIB_redeployActionId", nil];
+        private _redeployActionId = _player getVariable ["KPLIB_actionId_redeploy", nil];
 
         // Remove redeploy action if player had one avalible
         if (_fob isEqualTo "") then {
             if (!isNil "_redeployActionId") then {
                 _player removeAction _redeployActionId;
-                _player setVariable ["KPLIB_redeployActionId", nil];
+                _player setVariable ["KPLIB_actionId_redeploy", nil];
             };
         } else {
             // If entered fob and had no action
             if (isNil "_redeployActionId") then {
                 // Add action to player
-                _redeployActionId = _player addAction [localize "STR_REDEPLOY_ACTION", {[] spawn KPLIB_fnc_core_redeploy}, nil /* Arguments */, -1000, false, false, "", "vehicle player == player", 10];
+                _redeployActionId = _player addAction [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil /* Arguments */, -1000, false, false, "", "vehicle player == player", 10];
                 // Save action id so it can we removed when out of FOB
-                _player setVariable ["KPLIB_redeployActionId", _redeployActionId];
+                _player setVariable ["KPLIB_actionId_redeploy", _redeployActionId];
             };
         };
     }] call KPLIB_fnc_event_addHandler

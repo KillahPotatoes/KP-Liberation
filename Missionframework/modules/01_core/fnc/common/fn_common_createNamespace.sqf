@@ -15,7 +15,7 @@
         0: BOOL - Should created namespace be global
 
     Returns:
-    BOOLEAN - TRUE if removed, FALSE if didn't exist
+    OBJECT/LOCATION - object if global namespace, location otherwise
 */
 #define KPLIB_NAMESPACE_POS [-1000,-1000,0]
 

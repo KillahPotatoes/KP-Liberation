@@ -29,6 +29,9 @@
             <Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
             <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
         </Key>
+        <Key ID="STR_INTRO_BEGIN">
+            <Original>BEGIN OF OPERATION</Original>
+        </Key>
         <Key ID="STR_YES">
             <Original>Yes</Original>
             <French>Oui</French>
@@ -1254,7 +1257,7 @@
         </Key>
     </Package>
     <Package name="Actions">
-        <Key ID="STR_FOB_DEPLOY_ACTION">
+        <Key ID="STR_ACTION_FOB_DEPLOY">
 			<Original>-- DEPLOY FOB --</Original>
 			<French>-- DEPLOYER FOB --</French>
 			<German>-- FOB BEREITSTELLEN --</German>
@@ -1266,7 +1269,7 @@
 			<Turkish>-- FOB KUR --</Turkish>
 			<Portuguese>-- INSTALAR FOB --</Portuguese>
 		</Key>
-        <Key ID="STR_REDEPLOY_ACTION">
+        <Key ID="STR_ACTION_REDEPLOY">
 			<Original>-- REDEPLOY --</Original>
 			<French>-- REDEPLOIEMENT --</French>
 			<German>-- NEU EINSETZEN --</German>

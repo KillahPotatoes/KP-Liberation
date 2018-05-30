@@ -299,7 +299,7 @@ while {KPLIB_intro_running} do {
             // Get the name of the sector we're looking at
             private _sectorName = "";
             if (_actualTargetPos distance KPLIB_eden_startbase < 300) then {
-                _sectorName = "BEGIN OF OPERATION"; // Should this be localized?
+                _sectorName = localize "STR_INTRO_BEGIN";
             } else {
                 _sectorName = [300, _actualTargetPos] call KPLIB_fnc_core_getNearestSector;
                 if (_sectorName != "") then {
