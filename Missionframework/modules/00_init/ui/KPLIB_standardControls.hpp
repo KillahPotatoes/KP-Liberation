@@ -11,8 +11,7 @@
     The basic dialog control defines for KP Liberation.
 */
 
-class kndr_MapControl
-{
+class kndr_MapControl {
     idc = 10023;
     type = CT_MAP_MAIN;
     style = ST_PICTURE;
@@ -345,15 +344,14 @@ class kndr_MapControl
     };
 };
 
-class RscText
-{
-        type = CT_STATIC;
-        idc = -1;
-        style = ST_LEFT;
-        colorBackground[] = {0, 0, 0, 0};
-        colorText[] = {1, 1, 1, 1};
-        font = "Bitstream";
-        sizeEx = 0.04;
+class RscText {
+    idc = -1;
+    type = CT_STATIC;
+    style = ST_LEFT;
+    colorBackground[] = {0, 0, 0, 0};
+    colorText[] = {1, 1, 1, 1};
+    font = "Bitstream";
+    sizeEx = 0.04;
 };
 
 
@@ -370,13 +368,13 @@ class StdText {
 };
 
 class StdHeader : StdText {
-      style = ST_CENTER;
+    style = ST_CENTER;
     sizeEx = 0.03 * safezoneH;
     colorBackground[] = COLOR_LIGHTGRAY;
 };
 
 class StdButton {
-      idc = -1;
+    idc = -1;
     type = CT_BUTTON;
     style = ST_CENTER;
     default = false;
@@ -407,13 +405,13 @@ class StdButton {
   };
 
 class StdBG {
-        idc = -1;
-        type =  CT_STATIC;
-        style = ST_SINGLE;
-        colorText[] = COLOR_BLACK;
-        font = FontM;
-        sizeEx = 0.023;
-        text = "";
+    idc = -1;
+    type =  CT_STATIC;
+    style = ST_SINGLE;
+    colorText[] = COLOR_BLACK;
+    font = FontM;
+    sizeEx = 0.023;
+    text = "";
 };
 
 class StdListBox {
@@ -479,7 +477,6 @@ class StdListNBox : StdListBox {
 };
 
 class BgPicture {
-
     idc = -1;
     type = CT_STATIC;
     style = ST_PICTURE;
