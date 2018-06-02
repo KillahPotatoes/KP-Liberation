@@ -7,6 +7,7 @@
     "sqflint.ignoredVariables": [
         "_input0",
         "BIS_fnc_reviveInit",
+        "KPLIB_eden_boxspawn",
         "KPLIB_eden_startbase",
         "KPLIB_eden_potatospawn",
         "KPLIB_fnc_core_areUnitsNear",

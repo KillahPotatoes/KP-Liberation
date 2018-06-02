@@ -34,9 +34,9 @@ private _handlers = _namespace getVariable [_name, []];
 
 // Call every handler for event
 {
-	if (_x isEqualType {}) then {
-		    _arguments call _x;
-	}
+    if (_x isEqualType {}) then {
+            _arguments call _x;
+    }
 } forEach _handlers;
 
 // Broadcast global event
