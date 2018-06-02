@@ -36,6 +36,9 @@ if (KPLIB_param_fatigue == 0) then {
     player enableStamina false;
 };
 
+// Add player options action
+player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_OPTIONS" + "</t>", {hint "Player Options called"}, nil, -1200, false, true];
+
 // Spawn redeploy dialog
 while {(player distance2D KPLIB_eden_respawnPos) < 100} do {
     private _respawnhandle = [] spawn KPLIB_fnc_core_redeploy;
