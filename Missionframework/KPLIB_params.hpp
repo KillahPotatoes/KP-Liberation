@@ -125,7 +125,7 @@ class Params
         title = $STR_PARAMS_WEATHER;
         values[] = {0,1,2};
         texts[] = {$STR_PARAMS_WEATHER0,$STR_PARAMS_WEATHER1,$STR_PARAMS_WEATHER2};
-        default = 3; // Default value. Must be one from the values array above.
+        default = 2; // Default value. Must be one from the values array above.
         persistent = 1;
     };
     class ResMulti {
