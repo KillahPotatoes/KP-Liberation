@@ -10,7 +10,6 @@
     Description:
     This module provides the Liberation player options.
     Tasks of this module are:
-        * Group Management
         * View Distances
 
     Dependencies:
