@@ -37,7 +37,7 @@ if (KPLIB_param_fatigue == 0) then {
 };
 
 // Add player options action
-player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_OPTIONS" + "</t>", {hint "Player Options called"}, nil, -1200, false, true];
+// player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_OPTIONS" + "</t>", {createDialog "KPLIB_playerOptions";}, nil, -1200, false, true];
 
 // Spawn redeploy dialog
 while {(player distance2D KPLIB_eden_respawnPos) < 100} do {

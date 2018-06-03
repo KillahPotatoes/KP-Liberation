@@ -85,6 +85,14 @@
             <Turkish>Yakın</Turkish>
             <Portuguese>Próximo de</Portuguese>
         </Key>
+        <Key ID="STR_CONFIRM">
+            <Original>Confirm</Original>
+            <German>Bestätigen</German>
+        </Key>
+        <Key ID="STR_CANCEL">
+            <Original>Cancel</Original>
+            <German>Abbrechen</German>
+        </Key>
     </Package>
     <Package name="Params">
         <Key ID="STR_PARAMS_PARAMSOPTIONS">

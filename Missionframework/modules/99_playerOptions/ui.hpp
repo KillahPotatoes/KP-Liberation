@@ -10,3 +10,5 @@
     Description:
     Initializes the ui defines, dialogs and elements which are brought by this module.
 */
+
+#include "ui\KPLIB_playerOptions.hpp"
