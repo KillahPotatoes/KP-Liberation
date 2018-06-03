@@ -37,9 +37,10 @@ if(isNil "_handlers") exitWith {
 private _id =  _handlers find -1;
 
 if (_id < 0) then { // No empty space append to array
-	_id = _handlers pushBack _code;
+    _id = _handlers pushBack _code;
 } else { // Empty space found, reuse index
-	_handlers set [_id, _code];
+    _handlers set [_id, _code];
 };
+
 // Return handler ID
 _id

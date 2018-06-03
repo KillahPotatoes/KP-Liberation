@@ -23,6 +23,11 @@ diag_log format ["[KP LIBERATION] [INIT] Time: %1 - All data received", diag_tic
 if (hasInterface) then {
     // Preload the arsenal to speed up arsenal opening during the game
     ["Preload"] call BIS_fnc_arsenal;
+
+    // Initialize the BI Dynamic Groups System
+    // https://community.bistudio.com/wiki/Dynamic_Groups
+    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+
     // Create needed local markers
     call KPLIB_fnc_init_clientMarkers;
 };

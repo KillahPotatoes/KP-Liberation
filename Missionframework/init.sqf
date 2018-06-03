@@ -35,5 +35,6 @@ diag_log format [
 
 // Call module inits
 call compile preprocessFileLineNumbers "modules\01_core\initModule.sqf";
+call compile preprocessFileLineNumbers "modules\99_playerOptions\initModule.sqf";
 
 KPLIB_initDone = true;

@@ -13,3 +13,4 @@
 
 #include "modules\00_init\ui.hpp"
 #include "modules\01_core\ui.hpp"
+#include "modules\99_playerOptions\ui.hpp"
