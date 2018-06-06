@@ -19,7 +19,7 @@ class KPLIB_introMenu {
 
     class Splash {
         idc = -1;
-        type =  CT_STATIC ;
+        type =  CT_STATIC;
         style = ST_PICTURE;
         colorText[] = COLOR_WHITE;
         colorBackground[] = COLOR_NOALPHA;
@@ -31,9 +31,10 @@ class KPLIB_introMenu {
         h = 0.43 * safezoneH;
         text = "res\splash.paa";
     };
+
     class Start {
         idc = 758021;
-        type = CT_SHORTCUT_BUTTON;
+        type = CT_SHORTCUTBUTTON;
         style = ST_CENTER;
         x = (0.137 * safezoneW + safezoneX) - (BORDERSIZE);
         y = (0.53 * safezoneH + safezoneY);
@@ -82,6 +83,7 @@ class KPLIB_introMenu {
             bottom = 0;
         };
     };
+
     class Help : Start {
         idc = 758022;
         y = (0.62 * safezoneH + safezoneY);

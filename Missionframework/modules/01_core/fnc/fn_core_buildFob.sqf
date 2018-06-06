@@ -38,9 +38,11 @@ if (_interactive) then {
     deleteVehicle _box;
     private _marker = [_buildPos] call KPLIB_fnc_core_createFobMarker;
     KPLIB_sectors_fobs pushBack _marker;
+    ["fob_built", [_marker]] call KPLIB_fnc_event_trigger;
 } else {
     private _marker = [_buildPos] call KPLIB_fnc_core_createFobMarker;
     KPLIB_sectors_fobs pushBack _marker;
+    ["fob_built", [_marker]] call KPLIB_fnc_event_trigger;
 };
 
 publicVariable "KPLIB_sectors_fobs";

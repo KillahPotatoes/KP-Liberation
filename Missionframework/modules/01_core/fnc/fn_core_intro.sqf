@@ -20,27 +20,28 @@
 // Wait until mission is loaded
 waitUntil {time > 0};
 
-// Spawn cinematic camera procedure
-[] spawn KPLIB_fnc_core_cinematic;
-
-// If intro is enabled, show intro texts. Otherwise skip.
 if (KPLIB_param_intro > 0) then {
+    // Spawn cinematic camera procedure
+    [] spawn KPLIB_fnc_core_cinematic;
+
+    // Show intro texts
     uiSleep 1;
     cutRsc ["intro1", "PLAIN", 1, true];
     uiSleep 5.5;
     cutRsc ["intro2", "PLAIN", 1, true];
     uiSleep 10;
-};
 
-// Show the intro dialog for play or tutorial
-createDialog "KPLIB_introMenu";
-waitUntil {dialog};
-waitUntil {KPLIB_intro_startGame == 1 || KPLIB_intro_tutorial == 1 || !dialog};
-closeDialog 0;
+    // Show the intro dialog for play or tutorial
+    createDialog "KPLIB_introMenu";
+    // If we are not able to open introMenu we should continue
+    waitUntil {dialog};
+    waitUntil {KPLIB_intro_startGame == 1 || KPLIB_intro_tutorial == 1 || !dialog};
+    closeDialog 0;
 
-// Show tutorial, if selected
-if (KPLIB_intro_tutorial == 0) then {
-    KPLIB_intro_started = false;
+    // Show tutorial, if selected
+    if (KPLIB_intro_tutorial == 0) then {
+        KPLIB_intro_running = false;
+    };
 };
 
 // Finish the intro

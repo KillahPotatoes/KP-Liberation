@@ -16,6 +16,10 @@ diag_log format ["[KP LIBERATION] [INIT] ----- Time: %1 - Mission initialization
 // Deactivate vanilla saving
 enableSaving [false, false];
 
+// Initialize the BI Dynamic Groups System
+// https://community.bistudio.com/wiki/Dynamic_Groups
+["Initialize"] call BIS_fnc_dynamicGroups;
+
 // Initialize mission
 call compile preprocessFileLineNumbers "modules\00_init\initModule.sqf";
 

@@ -13,10 +13,8 @@
 
 waitUntil {!isNil "KPLIB_initDone"};
 waitUntil {KPLIB_initDone};
-waitUntil {!isNil "KPLIB_intro_done"};
-waitUntil {KPLIB_intro_done};
-waitUntil {!isNil "KPLIB_intro_stopped"};
-waitUntil {KPLIB_intro_stopped};
+waitUntil {!isNil "KPLIB_intro_running"};
+waitUntil {!KPLIB_intro_running};
 
 // Remove all items
 removeAllWeapons player;
@@ -37,6 +35,9 @@ player linkItem "ItemRadio";
 if (KPLIB_param_fatigue == 0) then {
     player enableStamina false;
 };
+
+// Add player options action
+// player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_OPTIONS" + "</t>", {createDialog "KPLIB_playerOptions";}, nil, -1200, false, true];
 
 // Spawn redeploy dialog
 while {(player distance2D KPLIB_eden_respawnPos) < 100} do {

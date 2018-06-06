@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project name="KP-Liberation">
-	<!-- French localization made by zbug: https://github.com/GreuhZbug -->
-	<!-- German localization made by Wyqer: https://github.com/Wyqer -->
-	<!-- Italian localization made by k4s0: https://github.com/k4s0 -->
-	<!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
-	<!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
-	<!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-	<!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
-	<!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
-	<!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
-	<!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
+    <!-- French localization made by zbug: https://github.com/GreuhZbug -->
+    <!-- German localization made by Wyqer: https://github.com/Wyqer -->
+    <!-- Italian localization made by k4s0: https://github.com/k4s0 -->
+    <!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
+    <!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru -->
+    <!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
+    <!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
+    <!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
+    <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
+    <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
     <Package name="General">
         <Key ID="STR_MISSION_TITLE">
             <Original>KP Liberation v0.97dev</Original>
@@ -28,6 +28,10 @@
             <Chinese>從敵人手中解放此區域！戰略是致勝關鍵！士兵們，祝好運！</Chinese>
             <Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
             <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
+        </Key>
+        <Key ID="STR_INTRO_BEGIN">
+            <Original>BEGIN OF OPERATION</Original>
+            <German>BEGINN DER OPERATION</German>
         </Key>
         <Key ID="STR_YES">
             <Original>Yes</Original>
@@ -80,6 +84,14 @@
             <Chinese>附近</Chinese>
             <Turkish>Yakın</Turkish>
             <Portuguese>Próximo de</Portuguese>
+        </Key>
+        <Key ID="STR_CONFIRM">
+            <Original>Confirm</Original>
+            <German>Bestätigen</German>
+        </Key>
+        <Key ID="STR_CANCEL">
+            <Original>Cancel</Original>
+            <German>Abbrechen</German>
         </Key>
     </Package>
     <Package name="Params">
@@ -1254,17 +1266,33 @@
         </Key>
     </Package>
     <Package name="Actions">
-        <Key ID="STR_FOB_DEPLOY">
-			<Original>-- DEPLOY FOB --</Original>
-			<French>-- DEPLOYER FOB --</French>
-			<German>-- FOB BEREITSTELLEN --</German>
-			<Spanish>-- DESPLEGAR FOB --</Spanish>
-			<Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
-			<Italian>-- COSTRUISCI FOB --</Italian>
-			<Chinesesimp>-- 部署前哨 --</Chinesesimp>
-			<Chinese>-- 佈署前線基地 --</Chinese>
-			<Turkish>-- FOB KUR --</Turkish>
-			<Portuguese>-- INSTALAR FOB --</Portuguese>
-		</Key>
+        <Key ID="STR_ACTION_FOB_DEPLOY">
+            <Original>-- DEPLOY FOB --</Original>
+            <French>-- DEPLOYER FOB --</French>
+            <German>-- FOB BEREITSTELLEN --</German>
+            <Spanish>-- DESPLEGAR FOB --</Spanish>
+            <Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
+            <Italian>-- COSTRUISCI FOB --</Italian>
+            <Chinesesimp>-- 部署前哨 --</Chinesesimp>
+            <Chinese>-- 佈署前線基地 --</Chinese>
+            <Turkish>-- FOB KUR --</Turkish>
+            <Portuguese>-- INSTALAR FOB --</Portuguese>
+        </Key>
+        <Key ID="STR_ACTION_REDEPLOY">
+            <Original>-- REDEPLOY --</Original>
+            <French>-- REDEPLOIEMENT --</French>
+            <German>-- NEU EINSETZEN --</German>
+            <Spanish>-- REDESPLEGAR --</Spanish>
+            <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
+            <Italian>-- RISCHIERAMENTO --</Italian>
+            <Chinesesimp>-- 重新部署 --</Chinesesimp>
+            <Chinese>-- 重新佈署 --</Chinese>
+            <Turkish>-- YENİDEN SEÇ --</Turkish>
+            <Portuguese>-- REMOBILIZAR --</Portuguese>
+        </Key>
+        <Key ID="STR_ACTION_PLAYER_OPTIONS">
+            <Original>-- KPLIB Player Options --</Original>
+            <German>-- KPLIB Spieler Optionen --</German>
+        </Key>
     </Package>
 </Project>
