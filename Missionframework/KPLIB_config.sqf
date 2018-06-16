@@ -4,7 +4,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-03-29
+    Last Update: 2018-06-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,31 +18,43 @@
 ------------------------------------------------------------*/
 
 /* BLUFOR preset:
-0 = Custom (default vanilla NATO with many optional mods supported)
-1 = Apex NATO (with the same optional mods supported)
-2 = 3CB BAF
-3 = BWMod (Bundeswehr)
-4 = RHS USAF Woodland
-5 = RHS USAF Desert */
+0 = Custom
+1 = Vanilla (default vanilla NATO with many optional mods supported)
+2 = Apex NATO (with the same optional mods supported)
+3 = 3CB BAF Woodland
+4 = 3CB BAF Desert
+5 = BWMod Woodland
+6 = BWMod Desert
+7 = RHS USAF Woodland
+8 = RHS USAF Desert
+9 = RHS AFRF */
 KPLIB_preset_blufor = 0;
 
 /* OPFOR preset:
-0 = Custom (default vanilla CSAT)
-1 = Apex CSAT
-2 = RHS AFRF
-3 = Project OPFOR (Takistani Armed Forces) */
+0 = custom
+1 = Vanilla
+2 = Apex CSAT
+3 = RHS AFRF
+4 = Project OPFOR (Takistani Armed Forces)
+5 = Project OPFOR (Islamic State)
+6 = Project OPFOR (SLA) */
 KPLIB_preset_opfor = 0;
 
 /* Resistance preset:
-0 = Custom (default vanilla)
-1 = Apex Tanoa
-2 = RHS GREF */
+0 = Custom
+1 = Vanilla
+2 = Apex Tanoa
+3 = RHS GREF
+4 = Project OPFOR (Middle Eastern)
+5 = RACS */
 KPLIB_preset_resistance = 0;
 
 /* Civilians preset:
-0 = Custom (default vanilla)
-1 = Apex Tanoa
-2 = Project OPFOR (Middle Eastern) */
+0 = Custom
+1 = Vanilla
+2 = Apex Tanoa
+3 = Project OPFOR (Middle Eastern)
+4 = RDS CIvilians */
 KPLIB_preset_civilians = 0;
 
 /* Which arsenal preset should be used?

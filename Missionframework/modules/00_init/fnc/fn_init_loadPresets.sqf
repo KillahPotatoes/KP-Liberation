@@ -4,7 +4,7 @@
     File: fn_init_loadPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-06-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,33 +27,45 @@
 
 // Load Blufor preset
 switch (KPLIB_preset_blufor) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
-    case 3: {call compile preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
-    case 4: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
-    case 5: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
+    case 1: {call compile preprocessFileLineNumbers "presets\blufor\vanilla.sqf";};
+    case 2: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+    case 3: {call compile preprocessFileLineNumbers "presets\blufor\3cbbaf_wdl.sqf";};
+    case 4: {call compile preprocessFileLineNumbers "presets\blufor\3cbbaf_des.sqf";};
+    case 5: {call compile preprocessFileLineNumbers "presets\blufor\bwmod_wdl.sqf";};
+    case 6: {call compile preprocessFileLineNumbers "presets\blufor\bwmod_des.sqf";};
+    case 7: {call compile preprocessFileLineNumbers "presets\blufor\rhsusaf_wdl.sqf";};
+    case 8: {call compile preprocessFileLineNumbers "presets\blufor\rhsusaf_des.sqf";};
+    case 9: {call compile preprocessFileLineNumbers "presets\blufor\rhsafrf.sqf";};
     default {call compile preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
 // Load Opfor preset
 switch (KPLIB_preset_opfor) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
-    case 3: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+    case 1: {call compile preprocessFileLineNumbers "presets\opfor\vanilla.sqf";};
+    case 2: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
+    case 3: {call compile preprocessFileLineNumbers "presets\opfor\rhsafrf.sqf";};
+    case 4: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+    case 5: {call compile preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
+    case 6: {call compile preprocessFileLineNumbers "presets\opfor\sla.sqf";};
     default {call compile preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
 // Load resistance preset
 switch (KPLIB_preset_resistance) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\resistance\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
+    case 1: {call compile preprocessFileLineNumbers "presets\resistance\vanilla.sqf";};
+    case 2: {call compile preprocessFileLineNumbers "presets\resistance\apex.sqf";};
+    case 3: {call compile preprocessFileLineNumbers "presets\resistance\rhsgref.sqf";};
+    case 4: {call compile preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
+    case 5: {call compile preprocessFileLineNumbers "presets\resistance\racs.sqf";};
     default {call compile preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 // Load civilian preset
 switch (KPLIB_preset_civilians) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\civilians\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
+    case 1: {call compile preprocessFileLineNumbers "presets\civilians\vanilla.sqf";};
+    case 2: {call compile preprocessFileLineNumbers "presets\civilians\apex.sqf";};
+    case 3: {call compile preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
+    case 4: {call compile preprocessFileLineNumbers "presets\civilians\rdsciv.sqf";};
     default {call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 

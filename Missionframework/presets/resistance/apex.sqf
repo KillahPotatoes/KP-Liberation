@@ -1,14 +1,14 @@
 /*
-    KP Liberation custom resistance preset
+    KP Liberation Apex resistance preset
 
-    File: custom.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
+    File: apex.sqf
+    Author: Dubjunk - https://github.com/Dubjunk
+    Date: 2018-06-15
     Last Update: 2018-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Custom preset file for resistance units which contains only vanilla assets by default.
+    Apex preset file for resistance units.
     The resistance faction is friendly or hostile, depending on the civil reputation.
 
     Needed Mods:
@@ -30,26 +30,26 @@ KPLIB_preset_colorResistance = "ColorGUER";
 
 // Resistance units
 KPLIB_preset_rUnits = [
-    "I_G_Soldier_AR_F",
-    "I_G_engineer_F",
-    "I_G_officer_F",
-    "I_G_medic_F",
-    "I_G_Soldier_F",
-    "I_G_Soldier_LAT_F",
-    "I_G_Soldier_M_F",
-    "I_G_Soldier_SL_F"
+    "I_C_Soldier_Bandit_1_F",
+    "I_C_Soldier_Bandit_2_F",
+    "I_C_Soldier_Bandit_3_F",
+    "I_C_Soldier_Bandit_4_F",
+    "I_C_Soldier_Bandit_5_F",
+    "I_C_Soldier_Bandit_6_F",
+    "I_C_Soldier_Bandit_7_F",
+    "I_C_Soldier_Bandit_8_F"
 ];
 
 // Armed resistance vehicles
 KPLIB_preset_rVehicles = [
-    "I_G_Offroad_01_armed_F",
-    "I_G_Offroad_01_AT_F"
+    "I_C_Offroad_02_LMG_F",
+    "I_C_Offroad_02_AT_F"
 ];
 
 // Resistance transport vehicles (should be able to transport at least 10 soldiers)
 KPLIB_preset_rTransports = [
-    "I_G_Van_01_transport_F",
-    "I_G_Van_02_transport_F"
+    "I_C_Van_01_transport_F",
+    "I_C_Van_02_transport_F"
 ];
 
 /*------------------------------------------------------------

@@ -4,7 +4,7 @@
     File: fn_init_fillArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2018-01-05
+    Last Update: 2018-08-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,6 +20,11 @@
 // Load arsenal preset
 switch (KPLIB_preset_arsenal) do {
     case 1: {call compile preprocessFileLineNumbers "presets\arsenal\custom.sqf";};
+    case 2: {call compile preprocessFileLineNumbers "presets\arsenal\killahpotatoes.sqf";};
+    case 3: {call compile preprocessFileLineNumbers "presets\arsenal\rhsusaf.sqf";};
+    case 4: {call compile preprocessFileLineNumbers "presets\arsenal\rhsusaf_ace.sqf";};
+    case 5: {call compile preprocessFileLineNumbers "presets\arsenal\rhsusaf_ace_acre.sqf";};
+    case 6: {call compile preprocessFileLineNumbers "presets\arsenal\3cbbaf.sqf";};
     default {KPLIB_arsenal_weapons = []; KPLIB_arsenal_magazines = []; KPLIB_arsenal_items = []; KPLIB_arsenal_backpacks = [];};
 };
 

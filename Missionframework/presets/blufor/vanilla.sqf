@@ -1,16 +1,15 @@
 /*
-    KP Liberation custom blufor preset
+    KP Liberation Vanilla blufor preset
 
-    File: custom.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
+    File: vanilla.sqf
+    Author: Dubjunk - https://github.com/Dubjunk/
+    Date: 2018-08-05
     Last Update: 2018-08-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     Custom preset file for BLUFOR units which contains vanilla assets by default.
     Vehicles from other common mods are also listed and therefore available if the corresponding mods are loaded by server and clients.
-    With this file you can create a custom preset for vehicles etc.
 
     Needed Mods:
     - None

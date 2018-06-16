@@ -1,14 +1,14 @@
 /*
-    KP Liberation custom opfor preset
+    KP Liberation Vanilla opfor preset
 
-    File: custom.sqf
-    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
+    File: vanilla.sqf
+    Author: Dubjunk - https://github.com/Dubjunk
+    Date: 2018-06-15
     Last Update: 2018-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Custom preset file for OPFOR units which contains only vanilla assets by default.
+    Vanilla preset file for OPFOR units.
 
     Needed Mods:
     - None
