@@ -197,3 +197,11 @@ KPLIB_preset_oFuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";      //Taru F
 KPLIB_preset_oAmmoContainer = "Land_Pod_Heli_Transport_04_ammo_F";      //Taru Ammo Pod
 // Enemy flag
 KPLIB_preset_oFlag = "Flag_CSAT_F";                                     //CSAT Flag
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// Preset was properly parsed, if this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["opfor", true];

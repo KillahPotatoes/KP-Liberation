@@ -60,3 +60,11 @@ KPLIB_preset_cVehicles = [
     "C_Truck_02_covered_F",
     "C_Truck_02_box_F"
 ];
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// Preset was properly parsed, if this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["civilians", true];

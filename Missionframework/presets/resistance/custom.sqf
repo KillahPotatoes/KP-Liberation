@@ -257,3 +257,11 @@ KPLIB_preset_rFacegear = [
     "G_Bandanna_aviator",
     "G_Bandanna_blk"
 ];
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// Preset was properly parsed, if this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["resistance", true];

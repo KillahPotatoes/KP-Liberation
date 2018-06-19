@@ -1244,6 +1244,18 @@
             <Original>Later you'll have a cinematic with the stats etc.</Original>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
+        <Key ID="STR_DEBRIEF_ERRORTITLE">
+            <Original>Configuration error</Original>
+        </Key>
+        <Key ID="STR_DEBRIEF_ERRORSUBTITLE">
+            <Original>There is an error in one of configuration files...</Original>
+        </Key>
+        <Key ID="STR_DEBRIEF_ERRORDESCR">
+            <Original>
+                One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.
+                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or KillahPotatoes Discord Server.
+            </Original>
+        </Key>
     </Package>
     <Package name="Hints">
         <Key ID="STR_HINT_RESPAWNCOOLDOWN">
