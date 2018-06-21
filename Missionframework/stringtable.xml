@@ -1110,6 +1110,9 @@
             <Chinese>戰區刷新</Chinese>
             <Portuguese>Spawn do setor</Portuguese>
         </Key>
+        <Key ID="STR_PARAM_CONFIGGUARD">
+            <Original>Verify configuration files</Original>
+        </Key>
     </Package>
     <Package name="Dialogs">
         <!-- Special names -->
