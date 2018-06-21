@@ -17,7 +17,7 @@
     Returns:
     NOTHING
 */
-
+                // We can't use our params vars here as this will be ran before all other functions
 if(!isServer || (["DebugConfigGuard", 1] call BIS_fnc_getParamValue) == 0) exitWith {};
 
 // Create validation namespace on server
@@ -35,7 +35,7 @@ KPLIB_validationNamespace setVariable ["resistance", false];
 
 // Delay all checks unitl all initialization is done
 [] spawn {
-    waitUntil{time>0};
+    waitUntil{time > 0 && count call KPLIB_fnc_common_getAllPlayers > 0};
     diag_log "[KP LIBERATION] [CFG GUARD] Validating configuration files";
 
     // Get array of variables to check
@@ -45,7 +45,8 @@ KPLIB_validationNamespace setVariable ["resistance", false];
 
     if(_invalidConfig) exitWith {
         diag_log "[KP LIBERATION] [CFG GUARD] Invalid configuration files present. Ending mission for everyone";
-        "KPLIB_configError" remoteExecCall ["BIS_fnc_endMissionServer", 0, true];
+
+        "KPLIB_configError" call BIS_fnc_endMissionServer;
     };
 
     diag_log "[KP LIBERATION] [CFG GUARD] All configuration files seem to be OK";
