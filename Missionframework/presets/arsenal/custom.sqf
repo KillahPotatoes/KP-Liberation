@@ -34,3 +34,11 @@ KPLIB_arsenal_items = [
 KPLIB_arsenal_backpacks = [
 
 ];
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// If this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["arsenal", true];

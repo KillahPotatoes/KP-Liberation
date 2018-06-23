@@ -502,3 +502,11 @@ KPLIB_preset_alphabet = [
     "Yankee",
     "Zulu"
 ];
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// If this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["blufor", true];
