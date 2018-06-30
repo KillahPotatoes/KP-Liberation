@@ -11,6 +11,7 @@
     Initializes the ui defines, dialogs and elements which are brought by this module.
 */
 
+#include "ui\KPLIB_uiClasses.hpp"
 #include "ui\KPLIB_introMenu.hpp"
 #include "ui\KPLIB_redeploy.hpp"
 #include "ui\KPLIB_titles.hpp"
