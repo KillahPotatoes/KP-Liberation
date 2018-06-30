@@ -20,23 +20,364 @@ class KPLIB_redeploy {
 
     objects[] = {};
 
-    class RecycleBG: BgPicture {
+    class RecycleBG {
         idc = 758011;
+        type = CT_STATIC;
+        style = ST_PICTURE;
+        colorText[] = {0.5, 0.4, 0.25, 0.6};
+        colorBackground[] = {0, 0, 0, 1};
+        font = FontM;
+        sizeEx = 0.023;
+        moving = false;
+        text = "res\camo.jpg";
         x = (0.15 * safezoneW + safezoneX) - (2 * BORDERSIZE);
         y = (0.12 * safezoneH + safezoneY) - (3 * BORDERSIZE);
         w = (0.15 * safezoneW) + (4 * BORDERSIZE);
         h = (0.75 * safezoneH) + (6 * BORDERSIZE);
     };
-    class DeployMap: kndr_MapControl {
+    class DeployMap {
         idc = 758012;
+        type = CT_MAP_MAIN;
+        style = ST_PICTURE;
+        colorBackground[] = {0, 0, 0, 0};
+        colorText[] = {0, 0, 0, 0};
+        colorSea[] = {0.1, 0.3, 0.5, 0.25};
+        colorForest[] = {0.10, 0.50, 0.10, 0.50};
+        colorRocks[] = {0.50, 0.50, 0.50, 1};
+        colorCountlines[] = {0.65, 0.45, 0.27, 0.50};
+        colorMainCountlines[] = {0.65, 0.45, 0.27, 1.00};
+        colorCountlinesWater[] = {0.00, 0.53, 1.00, 0.3};
+        colorMainCountlinesWater[] = {0.00, 0.53, 1.00, 0.6};
+        colorForestBorder[] = {0.40, 0.80, 0.00, 1.00};
+        colorRocksBorder[] = {0.50, 0.50, 0.50, 1.00};
+        colorPowerLines[] = {0.00, 0.00, 0.00, 1.00};
+        colorNames[] = {0.00, 0.00, 0.00, 1.00};
+        colorInactive[] = {1, 0.3, 0.5, 1};
+        colorLevels[] = {0.00, 0.00, 0.00, 1.00};
+        colorOutside[] = {0.1, 0.3, 0.5, 0.5};
+        colorRailWay[] = {1, 0, 0.5, 1};
+        colorTracks[] = {0.8, 0.6, 0.6, 1};
+        colorTracksFill[] = {0.7, 0.5, 0.5, 1};
+        colorRoads[] = {0.8, 0.8, 0.8, 1};
+        colorRoadsFill[] = {0.7, 0.7, 0.7, 1};
+        colorMainRoads[] = {1, 1, 1, 1};
+        colorMainRoadsFill[] = {0.9, 0.9, 0.9, 1};
+        colorGrid[] = {0, 0, 0, 0.5};
+        colorGridMap[] = {0, 0, 0, 0.5};
+        alphaFadeStartScale = 5;
+        alphaFadeEndScale = 5;
+        font = FontM;
+        sizeEx = 0.075;
+        fontLabel = FontM;
+        sizeExLabel = 0.075;
+        fontGrid = FontM;
+        sizeExGrid = 0.02;
+        fontUnits = FontM;
+        sizeExUnits = 0.075;
+        fontNames = FontM;
+        sizeExNames = 0.075;
+        fontInfo = FontM;
+        sizeExInfo = 0.075;
+        fontLevel = FontM;
+        sizeExLevel = 0.02;
+        stickX[] = {0.20, {"Gamma", 1.00, 1.50} };
+        stickY[] = {0.20, {"Gamma", 1.00, 1.50} };
+        ptsPerSquareSea = 6;
+        ptsPerSquareTxt = 8;
+        ptsPerSquareCLn = 8;
+        ptsPerSquareExp = 8;
+        ptsPerSquareCost = 8;
+        ptsPerSquareFor = "4.0f";
+        ptsPerSquareForEdge = "10.0f";
+        ptsPerSquareRoad = 2;
+        ptsPerSquareObj = 10;
+        maxSatelliteAlpha = 0.9;
+        text = "";
+        showCountourInterval=2;
+        scaleDefault = 0.1;
+        onMouseButtonClick = "";
+        onMouseButtonDblClick = "";
+        scaleMin = 0.05;
+        scaleMax = 3;
+
+        class ActiveMarker {
+            color[] = {0.30, 0.10, 0.90, 1.00};
+            size = 50;
+        };
+        class Bunker {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 14;
+            importance = "1.5 * 14 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Bush {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1.00};
+            size = 14;
+            importance = "0.2 * 14 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class BusStop {
+            icon = "";
+            color[] = {0.00, 0.00, 1.00, 1.00};
+            size = 10;
+            importance = "1 * 10 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Command {
+            icon = "#(argb,8,8,3)color(1,1,1,1)";
+            color[] = {0.00, 0.00, 0.00, 1.00};
+            size = 18;
+            importance = 1.00;
+            coefMin = 1.00;
+            coefMax = 1.00;
+        };
+        class Cross {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "0.7 * 16 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Chapel {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "1 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class Church {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class CustomMark {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1};
+            size = 16;
+            importance = 0.7 * 16 * 0.05;
+            coefMin = 0.25;
+            coefMax = 4;
+        };
+        class Fortress {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Fuelstation {
+            icon = "";
+            color[] = {1.00, 0.35, 0.35, 1.00};
+            size = 16;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.75;
+            coefMax = 4.00;
+        };
+        class Fountain {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 12;
+            importance = "1 * 12 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Hospital {
+            icon = "";
+            color[] = {0.78, 0.00, 0.05, 1.00};
+            size = 16;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.50;
+            coefMax = 4;
+        };
+        class Lighthouse {
+            icon = "";
+            color[] = {0.78, 0.00, 0.05, 1.00};
+            size = 20;
+            importance = "3 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class Quay {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.50;
+            coefMax = 4.00;
+        };
+        class Rock {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1};
+            size = 12;
+            importance = 0.5 * 12 * 0.05;
+            coefMin = 0.25;
+            coefMax = 4;
+        };
+        class Ruin {
+            icon = "";
+            color[] = {0.78, 0, 0.05, 1};
+            size = 16;
+            importance = 1.2 * 16 * 0.05;
+            coefMin = 1;
+            coefMax = 4;
+        };
+        class Stack {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 20;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class Tree {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1.00};
+            size = 12;
+            importance = "0.9 * 16 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class SmallTree {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1.00};
+            size = 12;
+            importance = "0.6 * 12 * 0.05";
+            coefMin = 0.25;
+            coefMax = 4.00;
+        };
+        class Task {
+            icon = "";
+            color[] = {0.55, 0.64, 0.43, 1};
+            size = 16;
+            importance = 0.7 * 16 * 0.05;
+            coefMin = 0.25;
+            coefMax = 4;
+            iconCreated = "#(argb,8,8,3)color(1,1,1,1)";
+            iconCanceled = "#(argb,8,8,3)color(0,0,1,1)";
+            iconDone = "#(argb,8,8,3)color(0,0,0,1)";
+            iconFailed = "#(argb,8,8,3)color(1,0,0,1)";
+            colorCreated[] = {1,1,1,1};
+            colorCanceled[] = {1,1,1,1};
+            colorDone[] = {1,1,1,1};
+            colorFailed[] = {1,1,1,1};
+        };
+        class Tourism {
+            icon = "";
+            color[] = {0.78, 0.00, 0.05, 1.00};
+            size = 16; importance = "1 * 16 * 0.05";
+            coefMin = 0.70;
+            coefMax = 4.00;
+        };
+        class ShipWreck {
+            icon = "";
+            color[] = {0.78, 0.00, 0.05, 1.00};
+            size = 16; importance = "1 * 16 * 0.05";
+            coefMin = 0.70;
+            coefMax = 4.00;
+        };
+        class Transmitter {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 20;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class PowerSolar {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 20;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class PowerWave {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 20;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class LineMarker {
+            icon = "";
+            color[] = {0,0,0,0};
+            size = 0;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0;
+            coefMax = 0;
+            lineWidthThin = 0;
+            lineWidthThick = 0;
+            lineDistanceMin = 0;
+            lineDistanceMax = 0;
+            lineLengthMin = 0;
+            linelengthMax = 0;
+        };
+        class PowerWind {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 20;
+            importance = "2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class ViewTower {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 16;
+            importance = "2.5 * 16 * 0.05";
+            coefMin = 0.50;
+            coefMax = 4.00;
+        };
+        class Watertower {
+            icon = "";
+            color[] = {0.00, 0.35, 0.70, 1.00};
+            size = 32;
+            importance = "1.2 * 16 * 0.05";
+            coefMin = 0.90;
+            coefMax = 4.00;
+        };
+        class Waypoint {
+            icon = "";
+            color[] = {0.00, 0.00, 0.00, 1.00};
+            size = 24;
+            importance = 1.00;
+            coefMin = 1.00;
+            coefMax = 1.00;
+        };
+        class WaypointCompleted {
+            icon = "";
+            color[] = {0.00, 0.00, 0.00, 1.00};
+            size = 24;
+            importance = 1.00;
+            coefMin = 1.00;
+            coefMax = 1.00;
+        };
         x = (0.15 * safezoneW + safezoneX);
         y = (0.57 * safezoneH + safezoneY);
         w = (0.15 * safezoneW);
         h = (0.25 * safezoneH) - (1.5 * BORDERSIZE);
     };
 
-    class OuterBG: StdBG {
+    class OuterBG {
         idc = -1;
+		type =  CT_STATIC;
+		style = ST_SINGLE;
+		colorText[] = COLOR_BLACK;
+		font = FontM;
+		sizeEx = 0.023;
+        text = "";
         colorBackground[] = COLOR_BROWN;
         x = (0.15 * safezoneW + safezoneX) - (2 * BORDERSIZE);
         y = (0.12 * safezoneH + safezoneY) - (3 * BORDERSIZE);
@@ -59,7 +400,14 @@ class KPLIB_redeploy {
         idc = -1;
         style = ST_FRAME;
     };
-    class Header: StdHeader {
+    class Header {
+        type =  CT_STATIC;
+        style = ST_CENTER;
+        colorText[] = COLOR_WHITE;
+        colorBackground[] = COLOR_LIGHTGRAY;
+        font = FontM;
+        sizeEx = 0.03 * safezoneH;
+        shadow = 2;
         idc = -1;
         x = 0.15 * safezoneW + safezoneX - (BORDERSIZE);
         y = 0.11 * safezoneH + safezoneY;
@@ -67,8 +415,14 @@ class KPLIB_redeploy {
         h = 0.05 * safezoneH - (BORDERSIZE);
         text = $STR_DEPLOY_TITLE;
     };
-    class LabelDeploy: StdText {
+    class LabelDeploy {
         idc = -1;
+        type =  CT_STATIC;
+        style = ST_LEFT;
+        colorText[] = COLOR_WHITE;
+        colorBackground[] = COLOR_NOALPHA;
+        font = FontM;
+        shadow = 2;
         x = (0.15 * safezoneW + safezoneX);
         w = (0.15 * safezoneW);
         h = (0.03 * safezoneH);
@@ -76,8 +430,40 @@ class KPLIB_redeploy {
         sizeEx = 0.018 * safezoneH;
         text = $STR_DEPLOY_SPAWNLIST;
     };
-    class DeployList: StdListBox {
+    class DeployList {
         idc = 758013;
+        type = 5;
+        style = 0 + 0x10;
+        font = FontM;
+        sizeEx = 0.018 * safezoneH;
+        rowHeight = 0.018 * safezoneH * 1.25;
+        color[] = COLOR_LIGHTGRAY;
+        colorText[] = COLOR_WHITE;
+        colorScrollbar[] = COLOR_BRIGHTGREEN;
+        colorSelect[] = COLOR_BRIGHTGREEN;
+        colorSelect2[] = COLOR_BRIGHTGREEN;
+        colorSelectBackground[] = COLOR_LIGHTGRAY;
+        colorSelectBackground2[] = COLOR_LIGHTGRAY;
+        colorActive[] = COLOR_BRIGHTGREEN;
+        colorDisabled[] = COLOR_GREEN;
+        columns[] = {0.1, 0.9};
+        period = 0.3;
+        colorBackground[] = COLOR_GREEN;
+        maxHistoryDelay = 1.0;
+        autoScrollSpeed = -1;
+        autoScrollDelay = 5;
+        autoScrollRewind = 0;
+        soundSelect[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.09, 1};
+
+        class ListScrollBar {
+            color[] = {1, 1, 1, 0.6};
+            colorActive[] = {1, 1, 1, 1};
+            colorDisabled[] = {1, 1, 1, 0.3};
+            thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+            arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+            arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+            border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+        };
         x = 0.15 * safezoneW + safezoneX;
         w = 0.15 * safezoneW;
         y = 0.26 * safezoneH + safezoneY;
@@ -86,8 +472,14 @@ class KPLIB_redeploy {
         onLBSelChanged="";
     };
 
-    class LabelLoadout: StdText {
+    class LabelLoadout {
         idc = -1;
+        type =  CT_STATIC;
+        style = ST_LEFT;
+        colorText[] = COLOR_WHITE;
+        colorBackground[] = COLOR_NOALPHA;
+        font = FontM;
+        shadow = 2;
         x = (0.15 * safezoneW + safezoneX);
         w = (0.15 * safezoneW);
         h = (0.03 * safezoneH);
@@ -95,16 +487,66 @@ class KPLIB_redeploy {
         sizeEx = 0.018 * safezoneH;
         text = $STR_DEPLOY_LOADOUTLIST;
     };
-    class LoadoutsCombo: StdCombo {
+    class LoadoutsCombo {
         idc = 758014;
+        type = 4;
+        style = 1;
+        colorSelect[] = COLOR_BRIGHTGREEN;
+        colorText[] = COLOR_WHITE;
+        colorBackground[] = COLOR_GREEN_NOALPHA;
+        colorSelectBackground[] = COLOR_LIGHTGRAY;
+        colorScrollbar[] = COLOR_BRIGHTGREEN;
+        arrowEmpty ="\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+        wholeHeight = 0.45;
+        color[] = COLOR_LIGHTGRAY;
+        colorActive[] = COLOR_BRIGHTGREEN;
+        colorDisabled[] = COLOR_GREEN;
+        font = FontM;
+        soundSelect[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.09, 1};
+        soundExpand[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.09, 1};
+        soundCollapse[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.09, 1};
+        maxHistoryDelay = 1.0;
+
+        class ComboScrollBar {
+            color[] = {1, 1, 1, 0.6};
+            colorActive[] = {1, 1, 1, 1};
+            colorDisabled[] = {1, 1, 1, 0.3};
+            thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+            arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+            arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+            border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+        };
         x = (0.15 * safezoneW + safezoneX);
         w = 0.15 * safezoneW;
         y = 0.19 * safezoneH + safezoneY;
         h = 0.03 * safezoneH;
         sizeEx = 0.018 * safezoneH;
       };
-    class DeployButton: StdButton {
+    class DeployButton {
         idc = 758015;
+        type = CT_BUTTON;
+        style = ST_CENTER;
+        default = false;
+        font = FontM;
+        colorText[] = { 0, 0, 0, 1 };
+        colorFocused[] = { 1, 1, 1, 1 };
+        colorDisabled[] = { 0.2, 0.2, 0.2, 0.7 };
+        colorBackground[] = { 0.8, 0.8, 0.8, 0.8 };
+        colorBackgroundDisabled[] = { 0.5, 0.5, 0.5, 0.5 };
+        colorBackgroundActive[] = { 1, 1, 1, 1 };
+        offsetX = 0.003;
+        offsetY = 0.003;
+        offsetPressedX = 0.002;
+        offsetPressedY = 0.002;
+        colorShadow[] = { 0, 0, 0, 0.5 };
+        colorBorder[] = { 0, 0, 0, 1 };
+        borderSize = 0;
+        soundEnter[] = { "", 0, 1 };  // no sound
+        soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
+        soundClick[] = { "", 0, 1 };  // no sound
+        soundEscape[] = { "", 0, 1 };  // no sound
+        shadow = 1;
         x = (0.15 * safezoneW + safezoneX);
         y = (0.82 * safezoneH + safezoneY);
         w = (0.15 * safezoneW);
@@ -113,8 +555,30 @@ class KPLIB_redeploy {
         text = $STR_DEPLOY_BUTTON;
         action = "KPLIB_dialog_deploy = 1";
     };
-    class MapButton: StdButton {
+    class MapButton {
         idc = 758016;
+        type = CT_BUTTON;
+        style = ST_CENTER;
+        default = false;
+        font = FontM;
+        colorText[] = { 0, 0, 0, 1 };
+        colorFocused[] = { 1, 1, 1, 1 };
+        colorDisabled[] = { 0.2, 0.2, 0.2, 0.7 };
+        colorBackground[] = { 0.8, 0.8, 0.8, 0.8 };
+        colorBackgroundDisabled[] = { 0.5, 0.5, 0.5, 0.5 };
+        colorBackgroundActive[] = { 1, 1, 1, 1 };
+        offsetX = 0.003;
+        offsetY = 0.003;
+        offsetPressedX = 0.002;
+        offsetPressedY = 0.002;
+        colorShadow[] = { 0, 0, 0, 0.5 };
+        colorBorder[] = { 0, 0, 0, 1 };
+        borderSize = 0;
+        soundEnter[] = { "", 0, 1 };  // no sound
+        soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
+        soundClick[] = { "", 0, 1 };  // no sound
+        soundEscape[] = { "", 0, 1 };  // no sound
+        shadow = 1;
         x = (0.285 * safezoneW + safezoneX);
         y = (0.56 * safezoneH + safezoneY);
         w = (0.015 * safezoneW);

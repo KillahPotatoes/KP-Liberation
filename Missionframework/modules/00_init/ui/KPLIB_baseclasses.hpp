@@ -443,7 +443,7 @@ class KPLIB_Combo {
         1
     };
     maxHistoryDelay = 1;
-    class ComboScrollBar: ScrollBar {
+    class ComboScrollBar: KPLIB_ScrollBar {
         color[] = {1,1,1,1};
     };
     colorSelectBackground[] = {1, 1, 1, 0.7};
