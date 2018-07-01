@@ -1237,6 +1237,18 @@
             <Turkish>Canlan</Turkish>
             <Portuguese>Mobilizar</Portuguese>
         </Key>
+        <Key ID="STR_BUILD">
+            <Original>BUILD</Original>
+            <French>CONSTRUIRE</French>
+            <German>BAUEN</German>
+            <Spanish>CONSTRUIR</Spanish>
+            <Russian>ОБЕСПЕЧЕНИЕ</Russian>
+            <Italian>COSTRUISCI</Italian>
+            <Chinesesimp>建造</Chinesesimp>
+            <Chinese>建造</Chinese>
+            <Turkish>İnşa Et</Turkish>
+            <Portuguese>CONSTRUIR</Portuguese>
+        </Key>
     </Package>
     <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">
@@ -1304,6 +1316,18 @@
             <Chinese>-- 重新佈署 --</Chinese>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
             <Portuguese>-- REMOBILIZAR --</Portuguese>
+        </Key>
+        <Key ID="STR_ACTION_FOB_BUILD">
+            <Original>-- BUILD --</Original>
+            <French>-- CONSTRUIRE --</French>
+            <German>-- BAUEN --</German>
+            <Spanish>-- CONSTRUIR --</Spanish>
+            <Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
+            <Italian>-- COSTRUISCI --</Italian>
+            <Chinesesimp>-- 建造 --</Chinesesimp>
+            <Chinese>-- 建造 --</Chinese>
+            <Turkish>-- İnşa Et --</Turkish>
+            <Portuguese>-- CONSTRUIR --</Portuguese>
         </Key>
         <Key ID="STR_ACTION_PLAYER_OPTIONS">
             <Original>-- KPLIB Player Options --</Original>
