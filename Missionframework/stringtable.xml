@@ -1305,6 +1305,18 @@
             <Turkish>-- YENİDEN SEÇ --</Turkish>
             <Portuguese>-- REMOBILIZAR --</Portuguese>
         </Key>
+        <Key ID="STR_ACTION_FOB_BUILD">
+            <Original>-- BUILD --</Original>
+            <French>-- CONSTRUIRE --</French>
+            <German>-- BAUEN --</German>
+            <Spanish>-- CONSTRUIR --</Spanish>
+            <Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
+            <Italian>-- COSTRUISCI --</Italian>
+            <Chinesesimp>-- 建造 --</Chinesesimp>
+            <Chinese>-- 建造 --</Chinese>
+            <Turkish>-- İnşa Et --</Turkish>
+            <Portuguese>-- CONSTRUIR --</Portuguese>
+        </Key>
         <Key ID="STR_ACTION_PLAYER_OPTIONS">
             <Original>-- KPLIB Player Options --</Original>
             <German>-- KPLIB Spieler Optionen --</German>
