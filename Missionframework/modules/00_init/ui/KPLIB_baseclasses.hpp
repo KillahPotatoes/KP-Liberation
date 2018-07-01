@@ -295,7 +295,7 @@ class KPLIB_ShortcutButton {
         bottom = 0;
     };
     shortcuts[] = {};
-    textureNoShortcut = "#(argb, 8, 8, 3)color(0, 0, 0, 0)";
+    textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
     color[] = {1, 1, 1, 1};
     colorFocused[] = {1, 1, 1, 1};
     color2[] = {0.95, 0.95, 0.95, 1};
@@ -1015,12 +1015,12 @@ class KPLIB_MapControl {
         coefMax = 1;
     };
     class Task {
-        taskNone = "#(argb, 8, 8, 3)color(0, 0, 0, 0)";
-        taskCreated = "#(argb, 8, 8, 3)color(0, 0, 0, 1)";
+        taskNone = "#(argb,8,8,3)color(0,0,0,0)";
+        taskCreated = "#(argb,8,8,3)color(0,0,0,1)";
         taskAssigned = "#(argb,8,8,3)color(1,1,1,1)";
-        taskSucceeded = "#(argb, 8, 8, 3)color(0, 1, 0, 1)";
-        taskFailed = "#(argb, 8, 8, 3)color(1, 0, 0, 1)";
-        taskCanceled = "#(argb, 8, 8, 3)color(1, 0.5, 0,1)";
+        taskSucceeded = "#(argb,8,8,3)color(0,1,0,1)";
+        taskFailed = "#(argb,8,8,3)color(1,0,0,1)";
+        taskCanceled = "#(argb,8,8,3)color(1,0.5,0,1)";
         colorCreated[] = {1, 1, 1, 1};
         colorCanceled[] = {0.7, 0.7, 0.7, 1};
         colorDone[] = {0.7, 1, 0.3, 1};
