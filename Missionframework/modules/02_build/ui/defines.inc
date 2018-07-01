@@ -1,3 +1,15 @@
+/*
+    KP LIBERATION BUILD UI DEFINES
+
+    File: defines.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2018-07-01
+    Last Update: 2018-07-01
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+    Common defines for build module UI elements
+*/
 
 // General defines
 #define KPLIB_BUILD_TAB_WIDTH               (KPLIB_GUI_WIDTH_AREA_CORNER / 8)
