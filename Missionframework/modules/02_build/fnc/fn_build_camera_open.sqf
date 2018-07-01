@@ -39,20 +39,7 @@ call KPLIB_fnc_build_camera_ticker_start;
 
 KPLIB_build_camera = _camera;
 
-// Open overlay Display
-private _display = uiNamespace getVariable ["KPLIB_build_display", displayNull];
-
 private _display = (findDisplay 46) createDisplay "KPLIB_build";
 uiNamespace setVariable ["KPLIB_build_display", _display];
-
-private _vignette = _display displayCtrl 1202;
-_vignette ctrlShow false;
-
-// Block ESC close
-_display displayAddEventHandler ["keyDown", {
-    if (_this select 1 == 1) then {
-        call KPLIB_fnc_build_camera_close;
-    };
-}];
 
 true
