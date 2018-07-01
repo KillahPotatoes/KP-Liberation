@@ -124,6 +124,7 @@
 // GUI positions and sizes
 #define KPLIB_GUI_GAP                   0.005
 #define KPLIB_GUI_HEIGTH_TITLE          0.035
+#define KPLIB_GUI_AREA_PADDING          0.0025
 
 // Standard
 #define KPLIB_GUI_POS_X                 safeZoneX + safeZoneW * 0.25
@@ -135,6 +136,9 @@
 #define KPLIB_GUI_POS_Y_AREA            safeZoneY + safeZoneH * (0.2 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP)
 #define KPLIB_GUI_WIDTH_AREA            safeZoneW * 0.5
 #define KPLIB_GUI_HEIGHT_AREA           safeZoneH * (0.6 - KPLIB_GUI_HEIGTH_TITLE - KPLIB_GUI_GAP)
+#define KPLIB_GUI_POS_X_CONTENT         safeZoneX + safeZoneW * (0.25 + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_POS_Y_CONTENT         safeZoneY + safeZoneH * (0.2 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_WIDTH_CONTENT         safeZoneW * (0.5 - 2 * KPLIB_GUI_AREA_PADDING)
 
 // Large
 #define KPLIB_GUI_POS_X_LARGE           safeZoneX + safeZoneW * 0.15
@@ -146,6 +150,9 @@
 #define KPLIB_GUI_POS_Y_AREA_LARGE      safeZoneY + safeZoneH * (0.15 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP)
 #define KPLIB_GUI_WIDTH_AREA_LARGE      safeZoneW * 0.7
 #define KPLIB_GUI_HEIGHT_AREA_LARGE     safeZoneH * (0.7 - KPLIB_GUI_HEIGTH_TITLE - KPLIB_GUI_GAP)
+#define KPLIB_GUI_POS_X_CONTENT_LARGE   safeZoneX + safeZoneW * (0.15 + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_POS_Y_CONTENT_LARGE   safeZoneY + safeZoneH * (0.15 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_WIDTH_CONTENT_LARGE   safeZoneW * (0.7 - 2 * KPLIB_GUI_AREA_PADDING)
 
 // Upper left corner
 #define KPLIB_GUI_POS_X_CORNER          safeZoneX + safeZoneW * 0.035
@@ -157,6 +164,9 @@
 #define KPLIB_GUI_POS_Y_AREA_CORNER     safeZoneY + safeZoneH * (0.05 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP)
 #define KPLIB_GUI_WIDTH_AREA_CORNER     safeZoneW * 0.25
 #define KPLIB_GUI_HEIGHT_AREA_CORNER    safeZoneH * (0.75 - KPLIB_GUI_HEIGTH_TITLE - KPLIB_GUI_GAP)
+#define KPLIB_GUI_POS_X_CONTENT_CORNER  safeZoneX + safeZoneW * (0.035 + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_POS_Y_CONTENT_CORNER  safeZoneY + safeZoneH * (0.05 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
+#define KPLIB_GUI_WIDTH_CONTENT_CORNER  safeZoneW * (0.25 - 2 * KPLIB_GUI_AREA_PADDING)
 
 /*
     --- OLD FRAMEWORK DEFINES ---
