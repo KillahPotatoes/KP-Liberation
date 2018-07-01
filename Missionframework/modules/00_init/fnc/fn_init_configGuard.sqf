@@ -26,7 +26,7 @@ KPLIB_validationNamespace = call KPLIB_fnc_common_createNamespace;
 // Config
 KPLIB_validationNamespace setVariable ["config", false];
 // Arsenal
-KPLIB_validationNamespace setVariable ["arsenal", false];
+if (KPLIB_preset_arsenal > 0) then {KPLIB_validationNamespace setVariable ["arsenal", false];};
 // Presets
 KPLIB_validationNamespace setVariable ["blufor", false];
 KPLIB_validationNamespace setVariable ["opfor", false];
