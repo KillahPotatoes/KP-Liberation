@@ -4,7 +4,7 @@
     File: KPLIB_baseclasses.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-15
-    Last Update: 2018-06-15
+    Last Update: 2018-07-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -111,7 +111,7 @@ class KPLIB_Progress {
     w = 0.313726;
     h = 0.0261438;
     shadow = 2;
-    texture = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    texture = "#(argb,8,8,3)color(1,1,1,1)";
 };
 
 class KPLIB_Picture {
@@ -295,7 +295,7 @@ class KPLIB_ShortcutButton {
         bottom = 0;
     };
     shortcuts[] = {};
-    textureNoShortcut = "#(argb, 8, 8, 3)color(0, 0, 0, 0)";
+    textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
     color[] = {1, 1, 1, 1};
     colorFocused[] = {1, 1, 1, 1};
     color2[] = {0.95, 0.95, 0.95, 1};
@@ -483,8 +483,8 @@ class KPLIB_ListBox {
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
     autoScrollRewind = 0;
-    arrowEmpty = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    arrowFull = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+    arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
     colorPicture[] = {1, 1, 1, 1};
     colorPictureSelected[] = {1, 1, 1, 1};
     colorPictureDisabled[] = {1, 1, 1, 0.25};
@@ -536,7 +536,7 @@ class KPLIB_ListNBox {
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
     autoScrollRewind = 0;
-    arrowEmpty = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
     arrowFull = "#(argb,8,8,3)color(1, 1, 1, 1)";
     drawSideArrows = 0;
     columns[] = {0.3, 0.6, 0.7};
@@ -915,12 +915,12 @@ class KPLIB_ButtonMenu: KPLIB_ShortcutButton {
     y = 0;
     w = 0.095589;
     h = 0.039216;
-    animTextureNormal = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    animTextureDisabled = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    animTextureOver = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    animTextureFocused = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    animTexturePressed = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-    animTextureDefault = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+    animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
     textSecondary = "";
     sizeExSecondary = GUI_TEXT_SIZE_MEDIUM;
     fontSecondary = "PuristaLight";
@@ -1015,12 +1015,12 @@ class KPLIB_MapControl {
         coefMax = 1;
     };
     class Task {
-        taskNone = "#(argb, 8, 8, 3)color(0, 0, 0, 0)";
-        taskCreated = "#(argb, 8, 8, 3)color(0, 0, 0, 1)";
-        taskAssigned = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
-        taskSucceeded = "#(argb, 8, 8, 3)color(0, 1, 0, 1)";
-        taskFailed = "#(argb, 8, 8, 3)color(1, 0, 0, 1)";
-        taskCanceled = "#(argb, 8, 8, 3)color(1, 0.5, 0,1)";
+        taskNone = "#(argb,8,8,3)color(0,0,0,0)";
+        taskCreated = "#(argb,8,8,3)color(0,0,0,1)";
+        taskAssigned = "#(argb,8,8,3)color(1,1,1,1)";
+        taskSucceeded = "#(argb,8,8,3)color(0,1,0,1)";
+        taskFailed = "#(argb,8,8,3)color(1,0,0,1)";
+        taskCanceled = "#(argb,8,8,3)color(1,0.5,0,1)";
         colorCreated[] = {1, 1, 1, 1};
         colorCanceled[] = {0.7, 0.7, 0.7, 1};
         colorDone[] = {0.7, 1, 0.3, 1};
@@ -1178,7 +1178,7 @@ class KPLIB_MapControl {
         coefMax = 1;
     };
     class LineMarker {
-        textureComboBoxColor = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+        textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
         lineWidthThin = 0.008;
         lineWidthThick = 0.014;
         lineDistanceMin = 3e-005;
@@ -1316,10 +1316,10 @@ class KPLIB_MapControl {
     sizeExInfo = GUI_TEXT_SIZE_SMALL;
     fontLevel = "TahomaB";
     sizeExLevel = 0.02;
-    text = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    text = "#(argb,8,8,3)color(1,1,1,1)";
     idcMarkerColor = -1;
     idcMarkerIcon = -1;
-    textureComboBoxColor = "#(argb, 8, 8, 3)color(1, 1, 1, 1)";
+    textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
     showMarkers = 1;
 };
 

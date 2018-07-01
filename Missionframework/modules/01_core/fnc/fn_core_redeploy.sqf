@@ -4,7 +4,7 @@
     File: fn_core_redeploy.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-29
-    Last Update: 2018-05-04
+    Last Update: 2018-07-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -33,13 +33,12 @@ disableSerialization;
 waitUntil {dialog};
 
 // Fetch display controls in variables
-private _frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 758011);
-private _map = (findDisplay 75801) displayCtrl 758012;
-private _spawnlist_idc = 758013;
-private _spawnlist = (findDisplay 75801) displayCtrl _spawnlist_idc;
-private _loadouts_idc = 758014;
-private _loadouts = (findDisplay 75801) displayCtrl _loadouts_idc;
-private _standard_map_pos = ctrlPosition _map;
+private _thisDialog = findDisplay 75801;
+private _loadoutsIdc = 758011;
+private _loadouts = _thisDialog displayCtrl _loadoutsIdc;
+private _spawnlistIdc = 758012;
+private _spawnlist = _thisDialog displayCtrl _spawnlistIdc;
+private _map = _thisDialog displayCtrl 758013;
 
 // Get current backpack (to avoid blacklisting of packed weapons/UAVs)
 private _backpack = backpack player;
@@ -55,9 +54,9 @@ private _loadouts_data = [];
     };
 } forEach (profileNamespace getVariable "BIS_fnc_saveInventory_data");
 
-lbAdd [_loadouts_idc, "--"];
-{lbAdd [_loadouts_idc, _x];} forEach _loadouts_data;
-lbSetCurSel [_loadouts_idc, 0];
+lbAdd [_loadoutsIdc, "--"];
+{lbAdd [_loadoutsIdc, _x];} forEach _loadouts_data;
+lbSetCurSel [_loadoutsIdc, 0];
 
 /*
     Array for all posible spawnpoints
@@ -112,24 +111,24 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
     };
 
     // Add entries to the dialog control
-    lbClear _spawnlist_idc;
+    lbClear _spawnlistIdc;
     {
-        lbAdd [_spawnlist_idc, (_x select 0)];
+        lbAdd [_spawnlistIdc, (_x select 0)];
     } forEach _spawnchoices;
 
-    if (lbCurSel _spawnlist_idc == -1) then {
-        lbSetCurSel [_spawnlist_idc, 0];
+    if (lbCurSel _spawnlistIdc == -1) then {
+        lbSetCurSel [_spawnlistIdc, 0];
     };
 
     // Adjust respawn camera if selection has changed
-    if (lbCurSel _spawnlist_idc != _oldselect) then {
-        _oldselect = lbCurSel _spawnlist_idc;
+    if (lbCurSel _spawnlistIdc != _oldselect) then {
+        _oldselect = lbCurSel _spawnlistIdc;
         private _objectpos = ((_spawnchoices select _oldselect) select 1);
         _respawn_object setposATL ((_spawnchoices select _oldselect) select 1);
         private _startdist = 120;
         private _enddist = 120;
         private _alt = 35;
-        if (((_spawnchoices select (lbCurSel _spawnlist_idc)) select 0) == localize "STR_MAINBASE") then {
+        if (((_spawnchoices select (lbCurSel _spawnlistIdc)) select 0) == localize "STR_MAINBASE") then {
             _startdist = 200;
             _enddist = 300;
             _alt = 30;
@@ -151,24 +150,12 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
         _respawn_camera camSetPos [(getPos _respawn_object select 0) - 70, (getPos _respawn_object select 1) - _enddist, (getPos _respawn_object select 2) + _alt];
         _respawn_camera camcommit 90;
     };
-
-    // Adjust map view, if map scale changed
-    if (_oldMapTrigger != KPLIB_dialog_mapTrigger) then {
-        _oldMapTrigger = KPLIB_dialog_mapTrigger;
-        if (KPLIB_dialog_mapTrigger % 2 == 1) then {
-            _map ctrlSetPosition [(_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
-        } else {
-            _map ctrlSetPosition _standard_map_pos;
-        };
-        _map ctrlCommit 0.2;
-        _oldselect = -1;
-    };
     uiSleep 0.1;
 };
 
 // Move player to selected spawn position
 if (dialog && KPLIB_dialog_deploy == 1) then {
-    private _spawnId = lbCurSel _spawnlist_idc;
+    private _spawnId = lbCurSel _spawnlistIdc;
     _spawn_str = (_spawnchoices select _spawnId) select 0;
 
     // Check if respawn vehicle or FOB
@@ -182,8 +169,8 @@ if (dialog && KPLIB_dialog_deploy == 1) then {
     };
 
     // Add loadout if selected
-    if ((lbCurSel _loadouts_idc) > 0) then {
-        [player, [profileNamespace, _loadouts_data select ((lbCurSel _loadouts_idc) - 1)]] call BIS_fnc_loadInventory;
+    if ((lbCurSel _loadoutsIdc) > 0) then {
+        [player, [profileNamespace, _loadouts_data select ((lbCurSel _loadoutsIdc) - 1)]] call BIS_fnc_loadInventory;
     };
 };
 
