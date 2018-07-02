@@ -411,4 +411,10 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
         default = 0; // Default value. Must be one from the values array above.
     };
+    class DebugConfigGuard {
+        title = $STR_PARAM_CONFIGGUARD;
+        values[] = {0,1};
+        texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
+        default = 1; // Default value. Must be one from the values array above.
+    };
 };

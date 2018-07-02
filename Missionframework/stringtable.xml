@@ -1110,6 +1110,9 @@
             <Chinese>戰區刷新</Chinese>
             <Portuguese>Spawn do setor</Portuguese>
         </Key>
+        <Key ID="STR_PARAM_CONFIGGUARD">
+            <Original>Verify configuration files</Original>
+        </Key>
     </Package>
     <Package name="Dialogs">
         <!-- Special names -->
@@ -1189,7 +1192,7 @@
         <Key ID="STR_DEPLOY_TITLE">
             <Original>DEPLOYMENT</Original>
             <French>DEPLOIEMENT</French>
-            <German>EINSATZ</German>
+            <German>STATIONIEREN</German>
             <Spanish>DESPLIEGUE</Spanish>
             <Russian>ДИСЛОКАЦИЯ</Russian>
             <Italian>SCHIERAMENTO</Italian>
@@ -1201,7 +1204,7 @@
         <Key ID="STR_DEPLOY_SPAWNLIST">
             <Original>Deployment location:</Original>
             <French>Lieu de déploiement:</French>
-            <German>Einsatzposition:</German>
+            <German>Ort zur Stationierung:</German>
             <Spanish>Lugar para el despliegue:</Spanish>
             <Russian>Позиция размешения:</Russian>
             <Italian>Luogo di Schieramento:</Italian>
@@ -1225,7 +1228,7 @@
         <Key ID="STR_DEPLOY_BUTTON">
             <Original>Deploy</Original>
             <French>Déploiment</French>
-            <German>Einsetzen</German>
+            <German>Stationieren</German>
             <Spanish>Desplegar</Spanish>
             <Russian>РАЗМЕСТИТЬ</Russian>
             <Italian>Schierati</Italian>
@@ -1233,6 +1236,18 @@
             <Chinese>佈署</Chinese>
             <Turkish>Canlan</Turkish>
             <Portuguese>Mobilizar</Portuguese>
+        </Key>
+        <Key ID="STR_BUILD">
+            <Original>BUILD</Original>
+            <French>CONSTRUIRE</French>
+            <German>BAUEN</German>
+            <Spanish>CONSTRUIR</Spanish>
+            <Russian>ОБЕСПЕЧЕНИЕ</Russian>
+            <Italian>COSTRUISCI</Italian>
+            <Chinesesimp>建造</Chinesesimp>
+            <Chinese>建造</Chinese>
+            <Turkish>İnşa Et</Turkish>
+            <Portuguese>CONSTRUIR</Portuguese>
         </Key>
     </Package>
     <Package name="Debriefings">
@@ -1243,6 +1258,18 @@
         <Key ID="STR_DEBRIEF_WINDESCR">
             <Original>Later you'll have a cinematic with the stats etc.</Original>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
+        </Key>
+        <Key ID="STR_DEBRIEF_ERRORTITLE">
+            <Original>Configuration error</Original>
+        </Key>
+        <Key ID="STR_DEBRIEF_ERRORSUBTITLE">
+            <Original>There is an error in one of configuration files...</Original>
+        </Key>
+        <Key ID="STR_DEBRIEF_ERRORDESCR">
+            <Original>
+                One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.
+                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or KillahPotatoes Discord Server.
+            </Original>
         </Key>
     </Package>
     <Package name="Hints">
@@ -1281,7 +1308,7 @@
         <Key ID="STR_ACTION_REDEPLOY">
             <Original>-- REDEPLOY --</Original>
             <French>-- REDEPLOIEMENT --</French>
-            <German>-- NEU EINSETZEN --</German>
+            <German>-- NEU STATIONIEREN --</German>
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
             <Italian>-- RISCHIERAMENTO --</Italian>
@@ -1289,6 +1316,18 @@
             <Chinese>-- 重新佈署 --</Chinese>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
             <Portuguese>-- REMOBILIZAR --</Portuguese>
+        </Key>
+        <Key ID="STR_ACTION_FOB_BUILD">
+            <Original>-- BUILD --</Original>
+            <French>-- CONSTRUIRE --</French>
+            <German>-- BAUEN --</German>
+            <Spanish>-- CONSTRUIR --</Spanish>
+            <Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
+            <Italian>-- COSTRUISCI --</Italian>
+            <Chinesesimp>-- 建造 --</Chinesesimp>
+            <Chinese>-- 建造 --</Chinese>
+            <Turkish>-- İnşa Et --</Turkish>
+            <Portuguese>-- CONSTRUIR --</Portuguese>
         </Key>
         <Key ID="STR_ACTION_PLAYER_OPTIONS">
             <Original>-- KPLIB Player Options --</Original>

@@ -93,6 +93,9 @@ class common {
     // Creates namespace
     class common_createNamespace {};
 
+    // Get all human players
+    class common_getAllPlayers {};
+
     // Spawning of a vehicle at given position with given direction
     class common_spawnVehicle {};
 };

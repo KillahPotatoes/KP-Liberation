@@ -15,8 +15,6 @@
 KPLIB_core_potato01 = objNull;
 // Deploy button trigger for redeploy dialog
 KPLIB_dialog_deploy = 0;
-// Map scale trigger for redeploy dialog
-KPLIB_dialog_mapTrigger = 0;
 // Intro cinematic done
 KPLIB_intro_done = false;
 // Intro cinematic running

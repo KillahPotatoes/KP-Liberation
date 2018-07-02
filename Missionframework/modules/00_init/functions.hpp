@@ -14,6 +14,11 @@
 class init {
     file = "modules\00_init\fnc";
 
+    // Try to catch errors in config file
+    class init_configGuard {
+        preInit = 1;
+    };
+
     // Checks if given classname is inside CfgVehicles
     class init_checkClass {};
 

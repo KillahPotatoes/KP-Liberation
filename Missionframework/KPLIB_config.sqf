@@ -656,3 +656,5 @@ KPLIB_cap_blufor = KPLIB_cap_blufor * KPLIB_param_unitcap;
 KPLIB_cap_sector = KPLIB_cap_sector * KPLIB_param_unitcap;
 KPLIB_cap_battlegroup = KPLIB_cap_battlegroup * KPLIB_param_unitcap;
 KPLIB_cap_patrol = KPLIB_cap_patrol * KPLIB_param_unitcap;
+// Config was properly parsed, if this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable ["config", true];
