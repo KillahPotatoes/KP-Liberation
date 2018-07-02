@@ -138,9 +138,6 @@ while {dialog && (alive player) && (KPLIB_dialog_deploy == 0)} do {
         ctrlMapAnimClear _map;
         private _transition_map_pos = getPos _respawn_object;
         private _fullscreen_map_offset = 4000;
-        if (KPLIB_dialog_mapTrigger % 2 == 1) then {
-            _transition_map_pos = [(_transition_map_pos select 0) - _fullscreen_map_offset, (_transition_map_pos select 1) + (_fullscreen_map_offset * 0.75), 0];
-        };
 
         _map ctrlMapAnimAdd [0, 0.3, _transition_map_pos];
         ctrlMapAnimCommit _map;

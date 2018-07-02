@@ -1,4 +1,3 @@
-#include "..\ui\defines.inc"
 /*
     KPLIB_fnc_build_displayScript
 

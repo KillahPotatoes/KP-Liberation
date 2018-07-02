@@ -1,6 +1,3 @@
-
-#include "..\..\00_init\ui\KPLIB_defines.hpp"
-#include "defines.inc"
 /*
     KP Liberation build display defines
 
