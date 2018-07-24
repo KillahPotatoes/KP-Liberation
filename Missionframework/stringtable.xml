@@ -12,7 +12,7 @@
     <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
     <Package name="General">
         <Key ID="STR_MISSION_TITLE">
-            <Original>KP Liberation v0.97dev</Original>
+            <Original>CTI 34 KP Liberation v0.97dev</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.97dev</Original>
