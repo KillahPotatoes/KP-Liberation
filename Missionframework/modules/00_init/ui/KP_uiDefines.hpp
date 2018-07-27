@@ -4,7 +4,7 @@
     File: KP_uiDefines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2018-07-18
+    Last Update: 2018-07-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,6 +35,27 @@
 // Colors
 #define KP_COLOR_PLAYERDEFINE           {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"}
 #define KP_COLOR_BACKGROUND             {0, 0, 0, 0.5}
+#define COLOR_BROWN                     {0.30, 0.25, 0.2, 0.75}
+#define COLOR_GREEN                     {0.2, 0.23, 0.18, 0.75}
+#define COLOR_GREEN_ALPHA               {0.2, 0.23, 0.18, 0.4}
+#define COLOR_GREEN_NOALPHA             {0.2, 0.23, 0.18, 1}
+#define COLOR_LIGHTGREEN                {0.4, 0.55, 0.36, 0.4}
+#define COLOR_LIGHTGRAY                 {0.6, 0.6, 0.6, 0.8}
+#define COLOR_LIGHTGRAY_ALPHA           {0.6, 0.6, 0.6, 0.55}
+#define COLOR_WHITE                     {1, 1, 1, 1}
+#define COLOR_NOALPHA                   {0, 0, 0, 0}
+#define COLOR_BLUFOR                    {0, 0.3, 1, 1}
+#define COLOR_OPFOR                     {1, 0, 0, 1}
+#define COLOR_GUER                      {0.5, 0.5, 0.5, 0.5}
+#define COLOR_WHITE_TRANSP              {1, 1, 1, 0.5}
+#define COLOR_BLACK                     {0, 0, 0, 1}
+#define COLOR_BLACK_ALPHA               {0, 0, 0, 0.85}
+#define COLOR_BLUFOR_NOALPHA            {0, 0, 1, 1}
+#define COLOR_OPFOR_NOALPHA             {1, 0, 0, 1}
+#define COLOR_RED_DISABLED              {1, 0, 0, 0.4}
+#define COLOR_BLEEDOUT                  {0.66, 0, 0, 0.8}
+#define COLOR_BRIGHTGREEN               {0.2, 1, 0.2, 1}
+#define COLOR_BLUE                      {0.2, 0.2, 1, 1}
 
 /*
     --- Functions ---
@@ -273,7 +294,7 @@ class KP_DialogButtonL: KP_Button {
 #define KP_X_VAL_C                      0.035
 #define KP_Y_VAL_C                      0.05
 
-#define KP_WIDTH_VAL_C                  0.25
+#define KP_WIDTH_VAL_C                  0.2
 #define KP_HEIGHT_VAL_C                 (0.75 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
 
 // Title bar
@@ -284,22 +305,22 @@ class KP_DialogTitleC: KP_Title {
 };
 
 // Cross symbol
-class KP_DialogCrossL: KP_CloseCross {
+class KP_DialogCrossC: KP_CloseCross {
     x = KP_GETX_CROSS(KP_X_VAL_C);
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 
 // Background
-class KP_DialogBackgroundL: KP_Background {
+class KP_DialogBackgroundC: KP_Background {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
     y = KP_GETY_AREA(KP_Y_VAL_C);
     w = KP_GETWPLAIN(KP_WIDTH_VAL_C,1);
     h = safeZoneH * KP_HEIGHT_VAL_C;
 };
 
-// Button pos 1 in 2 button row
-class KP_DialogButtonL: KP_Button {
+// Button
+class KP_DialogButtonC: KP_Button {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,2);
     y = KP_GETY_BELOW(KP_Y_VAL_C,KP_HEIGHT_VAL_C);
-    w = KP_GETWPLAIN(KP_WIDTH_VAL_C,2);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_C,1);
 };

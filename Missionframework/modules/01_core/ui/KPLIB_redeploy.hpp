@@ -1,15 +1,17 @@
 /*
-    KP Liberation redeploy dialog defines
+    KP Liberation redeploy dialog
 
-    File: KPLIB_defines.hpp
+    File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-07-01
+    Last Update: 2018-07-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     Redeploy dialog after respawn or select redeploy from a FOB or mobile spawn.
 */
+
+// TODO: Switch from a variable change at the button to an event handler.
 
 class KPLIB_redeploy {
     idd = 75801;
@@ -17,70 +19,68 @@ class KPLIB_redeploy {
 
     class controlsBackground {
 
-        class KPLIB_DialogTitle: KPLIB_Title {
+        class KPLIB_DialogTitle: KP_DialogTitleC {
             text = $STR_DEPLOY_TITLE;
-            x = KPLIB_GUI_POS_X_CORNER;
-            y = KPLIB_GUI_POS_Y_CORNER;
-            w = KPLIB_GUI_WIDTH_CORNER;
         };
 
-        class KPLIB_DialogArea: KPLIB_AreaBackground {
-            x = KPLIB_GUI_POS_X_AREA_CORNER;
-            y = KPLIB_GUI_POS_Y_AREA_CORNER;
-            w = KPLIB_GUI_WIDTH_AREA_CORNER;
-            h = KPLIB_GUI_HEIGHT_AREA_CORNER;
-        };
+        class KPLIB_DialogArea: KP_DialogBackgroundC {};
 
-        class LabelLoadout: KPLIB_Text {
+        class KPLIB_LabelLoadout: KP_Text {
             text = $STR_DEPLOY_LOADOUTLIST;
-            x = KPLIB_GUI_POS_X_CONTENT_CORNER;
-            y = KPLIB_GUI_POS_Y_CONTENT_CORNER;
-            w = KPLIB_GUI_WIDTH_CONTENT_CORNER;
-            h = safezoneH * 0.04;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16);
+            sizeEx = KP_TEXT_L;
         };
 
-        class LabelDeploy: KPLIB_Text {
+        class KPLIB_LabelDeploy: KP_Text {
             text = $STR_DEPLOY_SPAWNLIST;
-            x = KPLIB_GUI_POS_X_CONTENT_CORNER;
-            y = safeZoneY + safeZoneH * (0.13 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
-            w = KPLIB_GUI_WIDTH_CONTENT_CORNER;
-            h = safezoneH * 0.04;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,2,16);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16);
+            sizeEx = KP_TEXT_L;
+        };
+
+        class KPLIB_LabelMap: KP_Text {
+            text = $STR_DEPLOY_MAPVIEW;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,7,16);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16);
+            sizeEx = KP_TEXT_L;
         };
     };
 
     class controls {
 
-        class KPLIB_LoadoutsDropdown: KPLIB_Combo {
+        class KPLIB_LoadoutsDropdown: KP_Combo {
             idc = 758011;
-            x = KPLIB_GUI_POS_X_CONTENT_CORNER;
-            y = safeZoneY + safeZoneH * (0.09 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
-            w = KPLIB_GUI_WIDTH_CONTENT_CORNER;
-            h = 0.04;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,16);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KPLIB_DeployList: KPLIB_ListBox {
+        class KPLIB_DeployList: KP_ListBox {
             idc = 758012;
-            x = KPLIB_GUI_POS_X_CONTENT_CORNER;
-            y = safeZoneY + safeZoneH * (0.17 + KPLIB_GUI_HEIGTH_TITLE + KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
-            w = KPLIB_GUI_WIDTH_CONTENT_CORNER;
-            h = safezoneH * 0.25;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,3,16);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,4);
         };
 
-        class KPLIB_DeployMap: KPLIB_MapControl {
+        class KPLIB_DeployMap: RscMapControl {
             idc = 758013;
-            x = KPLIB_GUI_POS_X_CONTENT_CORNER;
-            y = safeZoneY + safeZoneH * (0.42 + KPLIB_GUI_HEIGTH_TITLE + 2 * KPLIB_GUI_GAP + KPLIB_GUI_AREA_PADDING)
-            w = KPLIB_GUI_WIDTH_CONTENT_CORNER;
-            h = safezoneH * 0.3275;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,2);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,2);
         };
 
-        class DeployButton: KPLIB_Button {
+        class KPLIB_DeployButton: KP_DialogButtonC {
             text = $STR_DEPLOY_BUTTON;
-            x = KPLIB_GUI_POS_X_CORNER;
-            y = safeZoneY + safeZoneH * (0.8 + KPLIB_GUI_GAP);
-            w = KPLIB_GUI_WIDTH_CORNER;
-            h = safeZoneH * KPLIB_GUI_HEIGTH_TITLE;
-            sizeEx = GUI_TEXT_SIZE_LARGE;
             action = "KPLIB_dialog_deploy = 1";
         };
     };

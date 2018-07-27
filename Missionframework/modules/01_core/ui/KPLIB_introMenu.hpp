@@ -4,12 +4,14 @@
     File: KPLIB_introMenu.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-03-28
+    Last Update: 2018-07-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     The intro menu which appears after joining the mission.
 */
+
+// TODO: REWORK!
 
 class KPLIB_introMenu {
     idd = 75802;
@@ -23,7 +25,7 @@ class KPLIB_introMenu {
         style = ST_PICTURE;
         colorText[] = COLOR_WHITE;
         colorBackground[] = COLOR_NOALPHA;
-        font = FontM;
+        font = "RobotoCondensed";
         sizeEx = 0.1 * safezoneH;
         x = 0.08 * safezoneW + safezoneX;
         w = 0.25 * safezoneW;
@@ -36,9 +38,9 @@ class KPLIB_introMenu {
         idc = 758021;
         type = CT_SHORTCUTBUTTON;
         style = ST_CENTER;
-        x = (0.137 * safezoneW + safezoneX) - (BORDERSIZE);
+        x = (0.137 * safezoneW + safezoneX) - (0.01);
         y = (0.53 * safezoneH + safezoneY);
-        w = (0.15 * safezoneW) - (BORDERSIZE);
+        w = (0.15 * safezoneW) - (0.01);
         h = (0.07 * safezoneH);
         sizeEx = 0.025 * safezoneH;
         size = 0.025 * safezoneH;
@@ -59,7 +61,7 @@ class KPLIB_introMenu {
         colorBackground2[] = COLOR_WHITE;
         colorDisabled[] = COLOR_WHITE;
         colorFocused[] = COLOR_WHITE;
-        font = FontM;
+        font = "RobotoCondensed";
         soundEnter[] = { "", 0, 1 };  // no sound
         soundPush[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hintExpand", 0.891251, 1};
         soundClick[] = { "", 0, 1 };  // no sound
