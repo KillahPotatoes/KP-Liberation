@@ -1192,7 +1192,7 @@
         <Key ID="STR_DEPLOY_TITLE">
             <Original>DEPLOYMENT</Original>
             <French>DEPLOIEMENT</French>
-            <German>STATIONIEREN</German>
+            <German>EINSETZEN</German>
             <Spanish>DESPLIEGUE</Spanish>
             <Russian>ДИСЛОКАЦИЯ</Russian>
             <Italian>SCHIERAMENTO</Italian>
@@ -1200,18 +1200,6 @@
             <Chinese>佈署</Chinese>
             <Turkish>CANLANMA</Turkish>
             <Portuguese>MOBILIZAÇÃO</Portuguese>
-        </Key>
-        <Key ID="STR_DEPLOY_SPAWNLIST">
-            <Original>Deployment location:</Original>
-            <French>Lieu de déploiement:</French>
-            <German>Ort zur Stationierung:</German>
-            <Spanish>Lugar para el despliegue:</Spanish>
-            <Russian>Позиция размешения:</Russian>
-            <Italian>Luogo di Schieramento:</Italian>
-            <Chinesesimp>部署地点：</Chinesesimp>
-            <Chinese>佈署地點：</Chinese>
-            <Turkish>Doğma noktası:</Turkish>
-            <Portuguese>Local para mobilização:</Portuguese>
         </Key>
         <Key ID="STR_DEPLOY_LOADOUTLIST">
             <Original>Loadout:</Original>
@@ -1225,10 +1213,26 @@
             <Turkish>Ekipman:</Turkish>
             <Portuguese>Equipamento:</Portuguese>
         </Key>
+        <Key ID="STR_DEPLOY_SPAWNLIST">
+            <Original>Deployment location:</Original>
+            <French>Lieu de déploiement:</French>
+            <German>Einsatzorte:</German>
+            <Spanish>Lugar para el despliegue:</Spanish>
+            <Russian>Позиция размешения:</Russian>
+            <Italian>Luogo di Schieramento:</Italian>
+            <Chinesesimp>部署地点：</Chinesesimp>
+            <Chinese>佈署地點：</Chinese>
+            <Turkish>Doğma noktası:</Turkish>
+            <Portuguese>Local para mobilização:</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_MAPVIEW">
+            <Original>Overview Map:</Original>
+            <German>Übersichtskarte:</German>
+        </Key>
         <Key ID="STR_DEPLOY_BUTTON">
             <Original>Deploy</Original>
             <French>Déploiment</French>
-            <German>Stationieren</German>
+            <German>Einsetzen</German>
             <Spanish>Desplegar</Spanish>
             <Russian>РАЗМЕСТИТЬ</Russian>
             <Italian>Schierati</Italian>
@@ -1308,7 +1312,7 @@
         <Key ID="STR_ACTION_REDEPLOY">
             <Original>-- REDEPLOY --</Original>
             <French>-- REDEPLOIEMENT --</French>
-            <German>-- NEU STATIONIEREN --</German>
+            <German>-- NEU EINSETZEN --</German>
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
             <Italian>-- RISCHIERAMENTO --</Italian>
