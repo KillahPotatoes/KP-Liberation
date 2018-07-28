@@ -38,6 +38,9 @@ class core {
     // Creates FOB marker
     class core_createFobMarker {};
 
+    // Exports current save data to the players profile
+    class core_exportSave {};
+
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
 
@@ -47,8 +50,14 @@ class core {
     // Handle an activated sector
     class core_handleSector {};
 
+    // Imports saved data from the players profile
+    class core_importSave {};
+
     // Start the intro cinematic
     class core_intro {};
+
+    // Opens the admin menu dialog
+    class core_openAdminDialog {};
 
     // Creates diary entries with parameter values
     class core_paramDiaryList {};

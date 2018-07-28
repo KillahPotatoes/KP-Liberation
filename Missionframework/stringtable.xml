@@ -1253,6 +1253,26 @@
             <Turkish>İnşa Et</Turkish>
             <Portuguese>CONSTRUIR</Portuguese>
         </Key>
+        <Key ID="STR_ADMINDIALOG_TITLE">
+            <Original>KP Liberation Admin Menu</Original>
+            <German>KP Liberation Admin Menü</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_EXP">
+            <Original>Save Export</Original>
+            <German>Spielstand exportieren</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_EXPDESC">
+            <Original>Stores the current save data in your profile.</Original>
+            <German>Speichert den momentanen Spielstand in deinem Profil.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMP">
+            <Original>Save Import</Original>
+            <German>Spielstand importieren</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMPDESC">
+            <Original>Imports the saved data from your profile. Requires a restart after import.</Original>
+            <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
+        </Key>
     </Package>
     <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">
@@ -1265,15 +1285,21 @@
         </Key>
         <Key ID="STR_DEBRIEF_ERRORTITLE">
             <Original>Configuration error</Original>
+            <German>Konfigurationsfehler</German>
         </Key>
         <Key ID="STR_DEBRIEF_ERRORSUBTITLE">
             <Original>There is an error in one of configuration files...</Original>
+            <German>Es ist ein Fehler in mindestens einer Konfigurationsdatei aufgetreten...</German>
         </Key>
         <Key ID="STR_DEBRIEF_ERRORDESCR">
             <Original>
                 One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.
-                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or KillahPotatoes Discord Server.
+                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or Killah Potatoes Discord Server.
             </Original>
+            <German>
+                Mindestens eine Konfigurationsdatei ist fehlerhaft. Prüfe deine Konfigurations- und Presetdateien auf Syntaxfehler.
+                &lt;br/&gt;Wenn du weitere Hilfe benötigst, besuche das KP Liberation Wiki oder den Killah Potatoes Discord Server.
+            </German>
         </Key>
     </Package>
     <Package name="Hints">

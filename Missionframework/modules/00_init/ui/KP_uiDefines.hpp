@@ -306,7 +306,7 @@ class KP_DialogTitleC: KP_Title {
 
 // Cross symbol
 class KP_DialogCrossC: KP_CloseCross {
-    x = KP_GETX_CROSS(KP_X_VAL_C);
+    x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.02)
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 
@@ -320,7 +320,7 @@ class KP_DialogBackgroundC: KP_Background {
 
 // Button
 class KP_DialogButtonC: KP_Button {
-    x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,2);
+    x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_C,KP_HEIGHT_VAL_C);
     w = KP_GETWPLAIN(KP_WIDTH_VAL_C,1);
 };
