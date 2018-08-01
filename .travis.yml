@@ -8,8 +8,13 @@ cache:
   directories:
     - node_modules
 
-# Only build tags
-if: tag IS present
+install:
+  - sudo apt-get update
+  - sudo apt-get -y install python3-pip
+  - sudo pip3 install sqflint
+
+script:
+  - sqflint -d Missionframework
 
 deploy:
   provider: releases
@@ -26,8 +31,3 @@ before_deploy:
   - npx gulp
   - echo "Listing built files"
   - ls ./build/
-
-jobs:
-  include:
-    - stage: deploy
-      script: skip # default job will be skipped
