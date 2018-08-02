@@ -20,7 +20,7 @@
 
 createDialog "KPLIB_admin";
 
-if (player getVariable [KPLIB_save_key + "_export", []] isEqualTo []) then {
+if (profileNamespace getVariable [KPLIB_save_key + "_export", []] isEqualTo []) then {
     findDisplay 75802 displayCtrl 758021 ctrlEnable false;
 };
 
