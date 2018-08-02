@@ -1265,6 +1265,10 @@
             <Original>Stores the current save data in your profile.</Original>
             <German>Speichert den momentanen Spielstand in deinem Profil.</German>
         </Key>
+        <Key ID="STR_ADMINDIALOG_EXPDONE">
+            <Original>Save data export successful.</Original>
+            <German>Spielstand erfolgreich exportiert.</German>
+        </Key>
         <Key ID="STR_ADMINDIALOG_IMP">
             <Original>Save Import</Original>
             <German>Spielstand importieren</German>
@@ -1272,6 +1276,10 @@
         <Key ID="STR_ADMINDIALOG_IMPDESC">
             <Original>Imports the saved data from your profile. Requires a restart after import.</Original>
             <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMPDONE">
+            <Original>Save data import successful. Please restart the server.</Original>
+            <German>Spielstand erfolgreich importiert. Serverneustart erforderlich.</German>
         </Key>
     </Package>
     <Package name="Debriefings">
