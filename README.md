@@ -84,52 +84,54 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 * Never lose your progress with the built-in server-side save system.
 
 ## Needed Mods
+
+**Always required:** [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+
 These mods are needed if you want to use the prepackaged missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Altis
-	* None
+    * None
 * Chernarus
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* Recommended for more enterable buildings on Chernarus
-		* [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * Recommended for more enterable buildings on Chernarus
+        * [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
 * Lythium
-	* [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
-	* [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
-	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+    * [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
+    * [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Malden
-	* None
+    * None
 * Sahrani
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Takistan
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Tanoa
-	* None
+    * None
 * Taunus (very resource-intensive map)
-	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
+    * [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
 
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
@@ -157,32 +159,32 @@ I recommend using the following difficulty settings for this mission (User profi
 ```
 class CustomDifficulty
 {
-	class Options
-	{
-		groupIndicators=0;
-		friendlyTags=0;
-		enemyTags=0;
-		detectedMines=0;
-		commands=0;
-		waypoints=0;
-		weaponInfo=1;
-		stanceIndicator=1;
-		reducedDamage=0;
-		staminaBar=0;
-		weaponCrosshair=0;
-		visionAid=0;
-		thirdPersonView=0;
-		cameraShake=1;
-		scoreTable=0;
-		deathMessages=0;
-		vonID=1;
-		mapContent=0;
-		autoReport=0;
-		multipleSaves=0;
-		squadRadar=0;
-		tacticalPing=0;
-	};
-	aiLevelPreset=1;
+    class Options
+    {
+        groupIndicators=0;
+        friendlyTags=0;
+        enemyTags=0;
+        detectedMines=0;
+        commands=0;
+        waypoints=0;
+        weaponInfo=1;
+        stanceIndicator=1;
+        reducedDamage=0;
+        staminaBar=0;
+        weaponCrosshair=0;
+        visionAid=0;
+        thirdPersonView=0;
+        cameraShake=1;
+        scoreTable=0;
+        deathMessages=0;
+        vonID=1;
+        mapContent=0;
+        autoReport=0;
+        multipleSaves=0;
+        squadRadar=0;
+        tacticalPing=0;
+    };
+    aiLevelPreset=1;
 };
 ```
 
@@ -192,11 +194,11 @@ forcedDifficulty = "custom";
 
 class Missions
 {
-	class kp_liberation
-	{
-		template = "kp_liberation.Altis";
-		difficulty = "custom";
-	};
+    class kp_liberation
+    {
+        template = "kp_liberation.Altis";
+        difficulty = "custom";
+    };
 };
 ```
 
