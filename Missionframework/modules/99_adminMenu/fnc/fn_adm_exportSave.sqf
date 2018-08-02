@@ -19,7 +19,7 @@
 
 if (isServer) then {
     // If it's local hosted we can directly access the save data
-    player setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
+    profileNamespace setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
     saveProfileNamespace;
     hint localize "STR_ADMINDIALOG_EXPDONE";
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
@@ -32,7 +32,7 @@ if (isServer) then {
     [
         {!isNil "KPLIB_save_data"},
         {
-            player setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
+            profileNamespace setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
             saveProfileNamespace;
             hint localize "STR_ADMINDIALOG_EXPDONE";
             [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
