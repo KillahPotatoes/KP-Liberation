@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1015;
+		nextID=1501;
 	};
 	class Camera
 	{
@@ -129,7 +129,7 @@ class AddonsMetaData
 randomSeed=7564349;
 class ScenarioData
 {
-	author="[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+	author="KP Liberation Dev Team";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -138,7 +138,7 @@ class ScenarioData
 	{
 		gameType="CTI";
 		minPlayers=1;
-		maxPlayers=34;
+		maxPlayers=37;
 	};
 };
 class CustomAttributes
