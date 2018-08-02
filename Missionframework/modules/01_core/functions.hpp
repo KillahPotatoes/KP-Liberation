@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-05-23
+    Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,9 +38,6 @@ class core {
     // Creates FOB marker
     class core_createFobMarker {};
 
-    // Exports current save data to the players profile
-    class core_exportSave {};
-
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
 
@@ -50,14 +47,8 @@ class core {
     // Handle an activated sector
     class core_handleSector {};
 
-    // Imports saved data from the players profile
-    class core_importSave {};
-
     // Start the intro cinematic
     class core_intro {};
-
-    // Opens the admin menu dialog
-    class core_openAdminDialog {};
 
     // Creates diary entries with parameter values
     class core_paramDiaryList {};
