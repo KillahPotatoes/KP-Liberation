@@ -17,8 +17,11 @@ class adm {
     // Exports current save data to the players profile
     class adm_exportSave {};
 
-    // Imports saved data from the players profile
+    // Imports save data from the players profile
     class adm_importSave {};
+
+    // Applies provided save data for import to the server profile
+    class adm_importSaveServer {};
 
     // Opens the admin menu dialog
     class adm_openDialog {};

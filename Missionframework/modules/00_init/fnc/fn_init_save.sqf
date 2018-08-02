@@ -4,7 +4,7 @@
     File: fn_init_save.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-04-22
+    Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,6 +19,9 @@
 
 // Catch the rare situation that the win condition is met, but the save process is fired and therefore the save isn't wiped.
 if (!KPLIB_campaignRunning) exitWith {false};
+
+// Skip the saving, if a save is imported by the admin
+if (KPLIB_save_imported) exitWith {false};
 
 if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function started -----", diag_tickTime];};
 
