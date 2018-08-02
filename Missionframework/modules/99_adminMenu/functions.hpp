@@ -14,6 +14,9 @@
 class adm {
     file = "modules\99_adminMenu\fnc";
 
+    // Deletes exported data in the players profile
+    class adm_deleteExport {};
+
     // Exports current save data to the players profile
     class adm_exportSave {};
 

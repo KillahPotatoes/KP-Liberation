@@ -1281,6 +1281,18 @@
             <Original>Save data import successful. Please restart the server.</Original>
             <German>Spielstand erfolgreich importiert. Serverneustart erforderlich.</German>
         </Key>
+        <Key ID="STR_ADMINDIALOG_DEL">
+            <Original>Delete exported data</Original>
+            <German>Exportierte Daten löschen</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_DELDESC">
+            <Original>Deletes the exported data from your profile. Doesn't affect the current save data.</Original>
+            <German>Löscht die exportierten Daten von deinem Profil. Betrifft nicht den momentanen Spielstand.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_DELDONE">
+            <Original>Exported data deleted.</Original>
+            <German>Exportierten Daten gelöscht.</German>
+        </Key>
     </Package>
     <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">

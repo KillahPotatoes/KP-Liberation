@@ -42,5 +42,13 @@ class KPLIB_admin {
             tooltip = "$STR_ADMINDIALOG_IMPDESC";
             onButtonClick = "call KPLIB_fnc_adm_importSave";
         };
+
+        class KPLIB_DeleteButton: KP_DialogButtonC {
+            idc = 758022
+            y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + 2 * KP_HEIGTH_BUTTON + 3 * KP_SPACING_Y);
+            text = "$STR_ADMINDIALOG_DEL";
+            tooltip = "$STR_ADMINDIALOG_DELDESC";
+            onButtonClick = "call KPLIB_fnc_adm_deleteExport";
+        };
     };
 };

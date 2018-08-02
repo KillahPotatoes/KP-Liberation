@@ -40,7 +40,8 @@ if (isServer) then {
     ] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Enable Import button
+// Enable Import and delete button
 findDisplay 75802 displayCtrl 758021 ctrlEnable true;
+findDisplay 75802 displayCtrl 758022 ctrlEnable true;
 
 true
