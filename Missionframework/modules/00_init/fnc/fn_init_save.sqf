@@ -4,11 +4,11 @@
     File: fn_init_save.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-04-22
+    Last Update: 2018-08-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Saves the current progress by calling the module specific save functions. After receiving the data from the modules, it'll be saved in the profile namespace.
+    Saves the current progress by calling the module specific save functions. After receiving the data from the modules, it'll be saved in the profileNamespace.
 
     Parameter(s):
     NONE
@@ -17,7 +17,7 @@
     BOOL
 */
 
-// Catch the rare situation that the win condition is met, but the save process is fired and therefore the save isn't wiped.
+// Skip the saving process, if the campaign isn't running anymore
 if (!KPLIB_campaignRunning) exitWith {false};
 
 if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function started -----", diag_tickTime];};

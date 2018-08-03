@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-01-05
+    Last Update: 2018-07-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,7 +40,7 @@ class RscTitles
         style = ST_CENTER;
         colorText[] = COLOR_WHITE;
         colorBackground[] = COLOR_NOALPHA;
-        font = FontM;
+        font = "RobotoCondensed";
         sizeEx = 0.035 * safezoneH;
         x = 0.3 * safezoneW + safezoneX;
         w = 0.4 * safezoneW;
@@ -70,7 +70,7 @@ class RscTitles
             style = ST_PICTURE;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "RobotoCondensed";
             sizeEx = 0.1 * safezoneH;
             x = 0.325 * safezoneW + safezoneX;
             w = 0.35 * safezoneW;
@@ -85,7 +85,7 @@ class RscTitles
             shadow = 1;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "RobotoCondensed";
             sizeEx = 0.035 * safezoneH;
             x = 0.45 * safezoneW + safezoneX;
             w = 0.3 * safezoneW;
@@ -95,7 +95,7 @@ class RscTitles
         };
         class VersionLabelShadow : VersionLabel {
             shadow = 2;
-            font = FontM;
+            font = "RobotoCondensed";
         };
     };
 
@@ -126,7 +126,7 @@ class RscTitles
             style = ST_LEFT;
             colorText[] = COLOR_BLACK;
             colorBackground[] = COLOR_BLACK;
-            font = FontM;
+            font = "RobotoCondensed";
             sizeEx = 0.023;
             x = -3; y = -3;
             w = 9;  h = 9;
@@ -138,7 +138,7 @@ class RscTitles
             style = ST_CENTER;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "RobotoCondensed";
             sizeEx = 0.03;
             x = 0; y = 0.75;
             w = 1.0;  h = 0.1;
@@ -146,6 +146,8 @@ class RscTitles
         };
     };
 
+// TODO: Rework and implementation of the Status Overlay
+/*
     class statusoverlay
     {
         name = "statusoverlay";
@@ -177,7 +179,7 @@ class RscTitles
             style = ST_PICTURE;
             colorText[] = {0.8,0.8,0.8,0.9};
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "puristaMedium";
             sizeEx = 0.5;
             x = 0.95 * safezoneW + safezoneX;
             w = 0.075 * safezoneW;
@@ -198,7 +200,7 @@ class RscTitles
             type =  CT_STATIC;
             style = ST_RIGHT;
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "puristaMedium";
             sizeEx = 0.022 * safezoneH;
             x = 0.905 * safezoneW + safezoneX;
             w = 0.08 * safezoneW;
@@ -230,7 +232,7 @@ class RscTitles
             style = ST_PICTURE;
             colorText[] = {0.9,0.9,0.9,1};
             colorBackground[] = COLOR_NOALPHA;
-            font = FontM;
+            font = "puristaMedium";
             sizeEx = 0.5;
             x = 0.985 * safezoneW + safezoneX;
             w = 0.012 * safezoneW;
@@ -421,7 +423,7 @@ class RscTitles
         class CaptureFrameStandard {
             idc = -1;
             type =  CT_STATIC;
-            font = FontM;
+            font = "puristaMedium";
             sizeEx = 0.023;
             text = "";
         };
@@ -482,7 +484,7 @@ class RscTitles
             size = 0.02 * safezoneH;
             sizeEx = 0.02 * safezoneH;
             shadow = 2;
-            font = FontM;
+            font = "puristaMedium";
             color = "#e0e000";
             align = "right";
             valign = "top";
@@ -526,4 +528,5 @@ class RscTitles
             colorText[] = {0.85, 0, 0, 1};
         };
     };
+*/
 };

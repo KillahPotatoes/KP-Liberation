@@ -1192,7 +1192,7 @@
         <Key ID="STR_DEPLOY_TITLE">
             <Original>DEPLOYMENT</Original>
             <French>DEPLOIEMENT</French>
-            <German>STATIONIEREN</German>
+            <German>EINSETZEN</German>
             <Spanish>DESPLIEGUE</Spanish>
             <Russian>ДИСЛОКАЦИЯ</Russian>
             <Italian>SCHIERAMENTO</Italian>
@@ -1200,18 +1200,6 @@
             <Chinese>佈署</Chinese>
             <Turkish>CANLANMA</Turkish>
             <Portuguese>MOBILIZAÇÃO</Portuguese>
-        </Key>
-        <Key ID="STR_DEPLOY_SPAWNLIST">
-            <Original>Deployment location:</Original>
-            <French>Lieu de déploiement:</French>
-            <German>Ort zur Stationierung:</German>
-            <Spanish>Lugar para el despliegue:</Spanish>
-            <Russian>Позиция размешения:</Russian>
-            <Italian>Luogo di Schieramento:</Italian>
-            <Chinesesimp>部署地点：</Chinesesimp>
-            <Chinese>佈署地點：</Chinese>
-            <Turkish>Doğma noktası:</Turkish>
-            <Portuguese>Local para mobilização:</Portuguese>
         </Key>
         <Key ID="STR_DEPLOY_LOADOUTLIST">
             <Original>Loadout:</Original>
@@ -1225,10 +1213,26 @@
             <Turkish>Ekipman:</Turkish>
             <Portuguese>Equipamento:</Portuguese>
         </Key>
+        <Key ID="STR_DEPLOY_SPAWNLIST">
+            <Original>Deployment location:</Original>
+            <French>Lieu de déploiement:</French>
+            <German>Einsatzorte:</German>
+            <Spanish>Lugar para el despliegue:</Spanish>
+            <Russian>Позиция размешения:</Russian>
+            <Italian>Luogo di Schieramento:</Italian>
+            <Chinesesimp>部署地点：</Chinesesimp>
+            <Chinese>佈署地點：</Chinese>
+            <Turkish>Doğma noktası:</Turkish>
+            <Portuguese>Local para mobilização:</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_MAPVIEW">
+            <Original>Overview Map:</Original>
+            <German>Übersichtskarte:</German>
+        </Key>
         <Key ID="STR_DEPLOY_BUTTON">
             <Original>Deploy</Original>
             <French>Déploiment</French>
-            <German>Stationieren</German>
+            <German>Einsetzen</German>
             <Spanish>Desplegar</Spanish>
             <Russian>РАЗМЕСТИТЬ</Russian>
             <Italian>Schierati</Italian>
@@ -1249,6 +1253,46 @@
             <Turkish>İnşa Et</Turkish>
             <Portuguese>CONSTRUIR</Portuguese>
         </Key>
+        <Key ID="STR_ADMINDIALOG_TITLE">
+            <Original>KP Liberation Admin Menu</Original>
+            <German>KP Liberation Admin Menü</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_EXP">
+            <Original>Save Export</Original>
+            <German>Spielstand exportieren</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_EXPDESC">
+            <Original>Stores the current save data in your profile.</Original>
+            <German>Speichert den momentanen Spielstand in deinem Profil.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_EXPDONE">
+            <Original>Save data export successful.</Original>
+            <German>Spielstand erfolgreich exportiert.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMP">
+            <Original>Save Import</Original>
+            <German>Spielstand importieren</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMPDESC">
+            <Original>Imports the saved data from your profile. Requires a restart after import.</Original>
+            <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_IMPDONE">
+            <Original>Save data import successful. All vital scripts are stopped. Please restart the server.</Original>
+            <German>Spielstand erfolgreich importiert. Alle wichtigen Skripte wurden beendet. Serverneustart erforderlich.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_DEL">
+            <Original>Delete exported data</Original>
+            <German>Exportierte Daten löschen</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_DELDESC">
+            <Original>Deletes the exported data from your profile. Doesn't affect the current save data.</Original>
+            <German>Löscht die exportierten Daten von deinem Profil. Betrifft nicht den momentanen Spielstand.</German>
+        </Key>
+        <Key ID="STR_ADMINDIALOG_DELDONE">
+            <Original>Exported data deleted.</Original>
+            <German>Exportierten Daten gelöscht.</German>
+        </Key>
     </Package>
     <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">
@@ -1261,15 +1305,21 @@
         </Key>
         <Key ID="STR_DEBRIEF_ERRORTITLE">
             <Original>Configuration error</Original>
+            <German>Konfigurationsfehler</German>
         </Key>
         <Key ID="STR_DEBRIEF_ERRORSUBTITLE">
             <Original>There is an error in one of configuration files...</Original>
+            <German>Es ist ein Fehler in mindestens einer Konfigurationsdatei aufgetreten...</German>
         </Key>
         <Key ID="STR_DEBRIEF_ERRORDESCR">
             <Original>
                 One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.
-                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or KillahPotatoes Discord Server.
+                &lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or Killah Potatoes Discord Server.
             </Original>
+            <German>
+                Mindestens eine Konfigurationsdatei ist fehlerhaft. Prüfe deine Konfigurations- und Presetdateien auf Syntaxfehler.
+                &lt;br/&gt;Wenn du weitere Hilfe benötigst, besuche das KP Liberation Wiki oder den Killah Potatoes Discord Server.
+            </German>
         </Key>
     </Package>
     <Package name="Hints">
@@ -1308,7 +1358,7 @@
         <Key ID="STR_ACTION_REDEPLOY">
             <Original>-- REDEPLOY --</Original>
             <French>-- REDEPLOIEMENT --</French>
-            <German>-- NEU STATIONIEREN --</German>
+            <German>-- NEU EINSETZEN --</German>
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
             <Italian>-- RISCHIERAMENTO --</Italian>

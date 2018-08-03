@@ -17,6 +17,7 @@ class CfgFunctions {
         #include "modules\00_init\functions.hpp"
         #include "modules\01_core\functions.hpp"
         #include "modules\02_build\functions.hpp"
+        #include "modules\99_adminMenu\functions.hpp"
         #include "modules\99_playerOptions\functions.hpp"
     };
 };

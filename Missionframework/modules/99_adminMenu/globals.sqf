@@ -1,12 +1,12 @@
 /*
-    KP LIBERATION MODULE UI FILE
+    KP LIBERATION MODULE GLOBALS
 
-    File: KPLIB_ui.hpp
+    File: globals.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
+    Date: 2018-08-02
     Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Initializes the ui defines, dialogs and elements which are brought by this module.
+    Initializes the global variables which are brought by this module.
 */

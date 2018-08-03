@@ -5,7 +5,7 @@
     File: fn_event_init.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-18
-    Last Update: 2018-05-23
+    Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@
     NONE
 
     Returns:
-    BOOLEAN
+    BOOL
 */
 
 // Exit if already initialized
