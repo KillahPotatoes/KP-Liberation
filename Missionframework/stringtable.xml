@@ -1278,8 +1278,8 @@
             <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
         </Key>
         <Key ID="STR_ADMINDIALOG_IMPDONE">
-            <Original>Save data import successful. Please restart the server.</Original>
-            <German>Spielstand erfolgreich importiert. Serverneustart erforderlich.</German>
+            <Original>Save data import successful. All vital scripts are stopped. Please restart the server.</Original>
+            <German>Spielstand erfolgreich importiert. Alle wichtigen Skripte wurden beendet. Serverneustart erforderlich.</German>
         </Key>
         <Key ID="STR_ADMINDIALOG_DEL">
             <Original>Delete exported data</Original>
