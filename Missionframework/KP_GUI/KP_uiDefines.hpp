@@ -4,7 +4,7 @@
     File: KP_uiDefines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2018-07-27
+    Last Update: 2018-08-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -150,6 +150,12 @@ class KP_Text: RscText {
     sizeEx = KP_TEXT_M;
 };
 
+// Inline Title
+class KP_InlineTitle: RscText {
+    style = 2;
+    sizeEx = KP_TEXT_L;
+};
+
 // Active Text
 class KP_ActiveText: RscActiveText {
     style = 2;
@@ -168,17 +174,21 @@ class KP_PictureRatio: RscText {
 
 // Button
 class KP_Button: RscButton {
+    colorBackground[] = KP_COLOR_BACKGROUND;
+    colorFocused[] = KP_COLOR_BACKGROUND;
     h = safeZoneH * KP_HEIGTH_BUTTON;
     sizeEx = KP_TEXT_M;
 };
 
-// Shortcut Button
-class KP_ShortcutButton: RscShortcutButton {
-    colorBackground[] = {0.2, 0.2, 0.2, 1};
-    colorBackgroundFocused[] = {0.25, 0.25, 0.25, 1};
-    colorBackground2[] = {0.25, 0.25, 0.25, 1};
-    style = 2;
+// Inline Button
+class KP_InlineButton: RscButton {
+    colorBackground[] = {0.25, 0.25, 0.25, 1};
+    colorBackgroundDisabled[] = {0, 1, 0, 1};
+    colorBackgroundActive[] = {0.3, 0.3, 0.3, 1};
+    colorFocused[] = {0.25, 0.25, 0.25, 1};
     sizeEx = KP_TEXT_M;
+    offsetPressedX = safeZoneW * 0.0005;
+    offsetPressedY = safeZoneH * 0.001;
 }
 
 // Controls group
