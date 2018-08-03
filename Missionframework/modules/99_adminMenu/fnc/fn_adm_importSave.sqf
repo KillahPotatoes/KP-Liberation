@@ -17,10 +17,6 @@
     BOOL
 */
 
-// Interrupt all mission functionalities, especially the saving
-KPLIB_campaignRunning = false;
-publicVariable "KPLIB_campaignRunning";
-
 if (isServer) then {
     // If it's local hosted we can directly import the save data
     [profileNamespace getVariable [KPLIB_save_key + "_export", nil]] call KPLIB_fnc_adm_importSaveServer;

@@ -20,6 +20,10 @@
 params [["_data", nil]];
 
 if (!isNil "_data") then {
+    // Interrupt all mission functionalities, especially the saving
+    KPLIB_campaignRunning = false;
+    publicVariable "KPLIB_campaignRunning";
+
     // Import data to server profile
     profileNamespace setVariable [KPLIB_save_key, _data];
     saveProfileNamespace;
