@@ -17,7 +17,8 @@ about: 'Creation of a developer task'
 
 
 ### Sub-Tasks
-<!-- List of all finished tasks which were part of this sprint. -->
+<!-- List of all identified Sub-Tasks which should be taken care of to complete the main task. -->
+<!-- The work will not be limited to only these Sub-Tasks. But everything noteworthy should be added here. -->
 - [ ] Sub-Task 1
 - [ ] Sub-Task 2
     - [ ] Sub-Task 2.1
