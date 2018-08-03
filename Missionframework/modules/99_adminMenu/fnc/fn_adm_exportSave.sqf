@@ -21,6 +21,8 @@ if (isServer) then {
     // If it's local hosted we can directly access the save data
     profileNamespace setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
     saveProfileNamespace;
+
+    // Hint output
     hint localize "STR_ADMINDIALOG_EXPDONE";
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 } else {
@@ -40,7 +42,7 @@ if (isServer) then {
     ] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Enable Import and delete button
+// Enable the import and delete button in the admin dialog
 findDisplay 75802 displayCtrl 758021 ctrlEnable true;
 findDisplay 75802 displayCtrl 758022 ctrlEnable true;
 

@@ -4,7 +4,7 @@
     File: fn_init_paramFetchAll.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-05-06
+    Last Update: 2018-08-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -84,7 +84,7 @@ if(isNil "KPLIB_params_persistent_array") then {
     }
 } forEach ("true" configClasses getMissionConfig "Params");
 
-// SAVE to profile namespace if set to save in lobby
+// SAVE to profileNamespace if set to save in lobby
 if(KPLIB_param_source == 2) then {
     profileNamespace setVariable [KPLIB_params_save_key, KPLIB_params_persistent_array];
 };

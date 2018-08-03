@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Saves the current progress by calling the module specific save functions. After receiving the data from the modules, it'll be saved in the profile namespace.
+    Saves the current progress by calling the module specific save functions. After receiving the data from the modules, it'll be saved in the profileNamespace.
 
     Parameter(s):
     NONE
