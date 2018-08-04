@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-07-27
+    Last Update: 2018-08-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -91,7 +91,7 @@ class RscTitles
             w = 0.3 * safezoneW;
             y = 0.65 * safezoneH + safezoneY;
             h = 0.1 * safezoneH;
-            text = $STR_MISSION_VERSION;
+            text = "$STR_MISSION_VERSION";
         };
         class VersionLabelShadow : VersionLabel {
             shadow = 2;
@@ -142,7 +142,7 @@ class RscTitles
             sizeEx = 0.03;
             x = 0; y = 0.75;
             w = 1.0;  h = 0.1;
-            text = $STR_DEPLOY_IN_PROGRESS;
+            text = "$STR_DEPLOY_IN_PROGRESS";
         };
     };
 
