@@ -24,7 +24,9 @@ class build {
 
     class build_camera_ticker_stop {};
 
-    class build_setupPlayerActions {};
+    class build_fobArea {};
 
     class build_displayScript {};
+
+    class build_setupPlayerActions {};
 };

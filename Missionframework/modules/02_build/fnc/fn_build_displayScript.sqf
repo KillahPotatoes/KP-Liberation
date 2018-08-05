@@ -80,10 +80,15 @@ switch _mode do {
 
         // Initialize with infantry tab selected
         ["tabChanged", [_display displayCtrl KPLIB_IDC_BUILD_TAB_INFANTRY]] call KPLIB_fnc_build_displayScript;
+
+        // Create FOB range indicators
+        ["init", player getVariable ["KPLIB_fob", ""]] call KPLIB_fnc_build_fobArea;
     };
 
     case "onUnload": {
         [] call KPLIB_fnc_build_camClose;
+        // Remove fob range indicators
+        ["remove"] call KPLIB_fnc_build_fobArea;
     };
 
     case "tabChanged": {
