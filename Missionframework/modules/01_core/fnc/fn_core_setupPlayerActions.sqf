@@ -29,7 +29,7 @@ if (isServer) then {
                 // Add FOB build action globaly and for JIP
                 [
                     _vehicle,
-                    [localize "STR_ACTION_FOB_DEPLOY", {[param [0], param [1], param[3]] call KPLIB_fnc_core_buildFob}, true, -1000, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
+                    [localize "STR_ACTION_FOB_DEPLOY", {[param [0], param [1], param[3]] call KPLIB_fnc_core_buildFob}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
                 ] remoteExecCall ["addAction", 0, true];
             };
 
@@ -37,7 +37,7 @@ if (isServer) then {
                 // Add redeploy action globaly and for JIP
                 [
                     _vehicle,
-                    [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -1000, false, true, "", "vehicle player == player", 10]
+                    [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -801, false, true, "", "vehicle player == player", 10]
                 ] remoteExecCall ["addAction", 0, true];
             };
         };
@@ -61,7 +61,7 @@ if(hasInterface) then {
             // If entered fob and had no action
             if (isNil "_redeployActionId") then {
                 // Add action to player
-                _redeployActionId = _player addAction [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -1000, false, true, "", "vehicle player == player", 10];
+                _redeployActionId = _player addAction [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -801, false, true, "", "vehicle player == player", 10];
                 // Save action id so it can we removed when out of FOB
                 _player setVariable ["KPLIB_actionId_redeploy", _redeployActionId];
             };

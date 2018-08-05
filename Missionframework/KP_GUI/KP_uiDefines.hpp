@@ -4,7 +4,7 @@
     File: KP_uiDefines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2018-07-27
+    Last Update: 2018-08-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -150,6 +150,12 @@ class KP_Text: RscText {
     sizeEx = KP_TEXT_M;
 };
 
+// Inline Title
+class KP_InlineTitle: RscText {
+    style = 2;
+    sizeEx = KP_TEXT_L;
+};
+
 // Active Text
 class KP_ActiveText: RscActiveText {
     style = 2;
@@ -168,17 +174,21 @@ class KP_PictureRatio: RscText {
 
 // Button
 class KP_Button: RscButton {
+    colorBackground[] = KP_COLOR_BACKGROUND;
+    colorFocused[] = KP_COLOR_BACKGROUND;
     h = safeZoneH * KP_HEIGTH_BUTTON;
     sizeEx = KP_TEXT_M;
 };
 
-// Shortcut Button
-class KP_ShortcutButton: RscShortcutButton {
-    colorBackground[] = {0.2, 0.2, 0.2, 1};
-    colorBackgroundFocused[] = {0.25, 0.25, 0.25, 1};
-    colorBackground2[] = {0.25, 0.25, 0.25, 1};
-    style = 2;
+// Inline Button
+class KP_InlineButton: RscButton {
+    colorBackground[] = {0.25, 0.25, 0.25, 1};
+    colorBackgroundDisabled[] = {0, 1, 0, 1};
+    colorBackgroundActive[] = {0.3, 0.3, 0.3, 1};
+    colorFocused[] = {0.25, 0.25, 0.25, 1};
     sizeEx = KP_TEXT_M;
+    offsetPressedX = safeZoneW * 0.0005;
+    offsetPressedY = safeZoneH * 0.001;
 }
 
 // Controls group
@@ -205,6 +215,18 @@ class KP_ListBox: RscListBox {
 // XListBox
 class KP_XListBox: RscXListBox {
     colorBackground[] = KP_COLOR_BACKGROUND;
+    sizeEx = KP_TEXT_M;
+};
+
+// Slider
+class KP_Slider: RscXSliderH {
+    color[] = {1, 1, 1, 0.6};
+    colorActive[] = {1, 1, 1, 0.6};
+};
+
+// Editbox
+class KP_EditBox: RscEdit {
+    colorBackground[] = {0, 0, 0, 0.3};
     sizeEx = KP_TEXT_M;
 };
 
@@ -288,7 +310,7 @@ class KP_DialogButtonL: KP_Button {
 
 /*
     --- Corner dialog components ---
-    (X from 0.035 - 0.285, Y from 0.05 - 0.8)
+    (X from 0.035 - 0.235, Y from 0.05 - 0.8)
 */
 
 #define KP_X_VAL_C                      0.035

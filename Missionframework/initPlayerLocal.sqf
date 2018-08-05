@@ -4,7 +4,7 @@
     File: initPlayerLocal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-08-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,10 +23,6 @@ diag_log format ["[KP LIBERATION] [INIT] Time: %1 - All data received", diag_tic
 if (hasInterface) then {
     // Preload the arsenal to speed up arsenal opening during the game
     ["Preload"] call BIS_fnc_arsenal;
-
-    // Initialize the BI Dynamic Groups System
-    // https://community.bistudio.com/wiki/Dynamic_Groups
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
     // Create needed local markers
     call KPLIB_fnc_init_clientMarkers;
