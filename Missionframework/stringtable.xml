@@ -1417,6 +1417,10 @@
             <Original>In vehicle volume:</Original>
             <German>Lautstärke im Fahrzeug:</German>
         </Key>
+        <Key ID="STR_PLAYERDIALOG_TTSOUND">
+            <Original>The sound adjustment is overwritten by ACE, if you should use it.</Original>
+            <German>Die Lautstärkeanpassung wird durch ACE überschrieben, wenn du es nutzen solltest.</German>
+        </Key>
         <Key ID="STR_PLAYERDIALOG_NOTLEADER">
             <Original>You're not the leader of this group.</Original>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>

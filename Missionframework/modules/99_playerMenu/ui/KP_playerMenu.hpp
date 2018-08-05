@@ -58,8 +58,8 @@ class KP_playerMenu {
         class KP_NoRanks: KP_LabelPlayer {
             idc = 758037;
             style = 2;
-            text = "$STR_PLAYERDIALOG_NORANKS";
             colorText[] = {0.8, 0, 0, 0.75};
+            text = "$STR_PLAYERDIALOG_NORANKS";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,3,32);
             sizeEx = KP_TEXT_L
         };
@@ -234,6 +234,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,23,24);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
+            tooltip = "$STR_PLAYERDIALOG_TTSOUND"
             onSliderPosChanged = "ctrlSetText [7580316, format ['%1%2', round (_this select 1), '%']]";
         };
 
