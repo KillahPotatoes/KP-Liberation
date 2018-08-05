@@ -16,8 +16,29 @@
         * Sound Settings
 
     Dependencies:
-    NONE
+        * KP GUI system
 */
 
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\99_playerMenu\globals.sqf";
+
+// Load settings, if available
+private _settings = profileNamespace getVariable ["KP_PLM_Settings", []];
+if !(_settings isEqualTo []) then {
+    KPLIB_plm_viewFoot = _settings select 0;
+    KPLIB_plm_viewVeh = _settings select 1;
+    KPLIB_plm_viewAir = _settings select 2;
+    KPLIB_plm_terrain = _settings select 3;
+    KPLIB_plm_tpv = _settings select 4;
+    KPLIB_plm_radio = _settings select 5;
+    KPLIB_plm_soundVeh = _settings select 6;
+};
+
+// Add event handler
+if (hasInterface) then {
+    player addEventHandler ["GetInMan", {[] call KPLIB_fnc_plm_getInOut}];
+    player addEventHandler ["GetOutMan", {[] call KPLIB_fnc_plm_getInOut}];
+};
+
+// Apply default/loaded values
+[] call KPLIB_fnc_plm_apply;
