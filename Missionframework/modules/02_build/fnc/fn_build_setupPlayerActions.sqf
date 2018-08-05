@@ -34,7 +34,7 @@ if(hasInterface) then {
             // If entered fob and had no action
             if (isNil "_buildActionId") then {
                 // Add action to player
-                _buildActionId = _player addAction [localize "STR_ACTION_FOB_BUILD", {[] spawn KPLIB_fnc_build_camera_open}, nil, -1000, false, true, "", "vehicle player == player", 10];
+                _buildActionId = _player addAction [localize "STR_ACTION_FOB_BUILD", {[] spawn KPLIB_fnc_build_camera_open}, nil, -802, false, true, "", "vehicle player == player", 10];
                 // Save action id so it can we removed when out of FOB
                 _player setVariable ["KPLIB_actionId_build", _buildActionId];
             };

@@ -43,11 +43,11 @@ if (KPLIB_param_fatigue == 0) then {
 */
 
 // Add player menu action
-player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_MENU" + "</t>", {[] call KPLIB_fnc_plm_openDialog;}, nil, -1200, false, true];
+player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_MENU" + "</t>", {[] call KPLIB_fnc_plm_openDialog;}, nil, -803, false, true];
 
 // Add admin menu action, if player is logged in Admin
 if (serverCommandAvailable "#kick") then {
-    player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -1201, false, true];
+    player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true];
 };
 
 // Spawn redeploy dialog
