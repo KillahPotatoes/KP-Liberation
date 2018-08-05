@@ -97,7 +97,7 @@ class common {
     class common_getAllPlayers {};
 
     // Generate positions in circle
-    fn_common_getCirclePositions {};
+    class common_getCirclePositions {};
 
     // Spawning of a vehicle at given position with given direction
     class common_spawnVehicle {};
