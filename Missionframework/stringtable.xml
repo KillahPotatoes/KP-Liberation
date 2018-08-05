@@ -89,6 +89,10 @@
             <Original>Confirm</Original>
             <German>Bestätigen</German>
         </Key>
+        <Key ID="STR_APPLY">
+            <Original>Apply</Original>
+            <German>Anwenden</German>
+        </Key>
         <Key ID="STR_CANCEL">
             <Original>Cancel</Original>
             <German>Abbrechen</German>
@@ -1202,32 +1206,36 @@
             <Portuguese>MOBILIZAÇÃO</Portuguese>
         </Key>
         <Key ID="STR_DEPLOY_LOADOUTLIST">
-            <Original>Loadout:</Original>
-            <French>Equipement:</French>
-            <German>Ausrüstung:</German>
-            <Spanish>Equipamiento:</Spanish>
-            <Russian>Снаряжение:</Russian>
-            <Italian>Equipaggiamento:</Italian>
-            <Chinesesimp>装备：</Chinesesimp>
-            <Chinese>裝備:</Chinese>
-            <Turkish>Ekipman:</Turkish>
-            <Portuguese>Equipamento:</Portuguese>
+            <Original>Loadout</Original>
+            <French>Equipement</French>
+            <German>Ausrüstung</German>
+            <Spanish>Equipamiento</Spanish>
+            <Russian>Снаряжение</Russian>
+            <Italian>Equipaggiamento</Italian>
+            <Chinesesimp>装备</Chinesesimp>
+            <Chinese>裝備</Chinese>
+            <Turkish>Ekipman</Turkish>
+            <Portuguese>Equipamento</Portuguese>
+        </Key>
+        <Key ID="STR_DEPLOY_LOADOUTTEXT">
+            <Original>Choose one of your arsenal loadouts:</Original>
+            <German>Wähle eines deiner Arsenal Loadouts:</German>
         </Key>
         <Key ID="STR_DEPLOY_SPAWNLIST">
-            <Original>Deployment location:</Original>
-            <French>Lieu de déploiement:</French>
-            <German>Einsatzorte:</German>
-            <Spanish>Lugar para el despliegue:</Spanish>
-            <Russian>Позиция размешения:</Russian>
-            <Italian>Luogo di Schieramento:</Italian>
-            <Chinesesimp>部署地点：</Chinesesimp>
-            <Chinese>佈署地點：</Chinese>
-            <Turkish>Doğma noktası:</Turkish>
-            <Portuguese>Local para mobilização:</Portuguese>
+            <Original>Deployment location</Original>
+            <French>Lieu de déploiement</French>
+            <German>Einsatzorte</German>
+            <Spanish>Lugar para el despliegue</Spanish>
+            <Russian>Позиция размешения</Russian>
+            <Italian>Luogo di Schieramento</Italian>
+            <Chinesesimp>部署地点</Chinesesimp>
+            <Chinese>佈署地點</Chinese>
+            <Turkish>Doğma noktası</Turkish>
+            <Portuguese>Local para mobilização</Portuguese>
         </Key>
         <Key ID="STR_DEPLOY_MAPVIEW">
-            <Original>Overview Map:</Original>
-            <German>Übersichtskarte:</German>
+            <Original>Overview Map</Original>
+            <German>Übersichtskarte</German>
         </Key>
         <Key ID="STR_DEPLOY_BUTTON">
             <Original>Deploy</Original>
@@ -1292,6 +1300,126 @@
         <Key ID="STR_ADMINDIALOG_DELDONE">
             <Original>Exported data deleted.</Original>
             <German>Exportierten Daten gelöscht.</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TITLE">
+            <Original>KP Player Menu</Original>
+            <German>KP Spielermenü</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_LABELPLAYER">
+            <Original>Player Information</Original>
+            <German>Spielerinformationen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_RANK">
+            <Original>Rank:</Original>
+            <German>Dienstgrad:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_SCORE">
+            <Original>Score:</Original>
+            <German>Punkte:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_PLAYTIME">
+            <Original>Playtime:</Original>
+            <German>Spielzeit:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_NORANKS">
+            <Original>KP Ranks mod not loaded</Original>
+            <German>KP Ranks Mod nicht geladen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_LABELGROUPS">
+            <Original>Group Management</Original>
+            <German>Gruppenverwaltung</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_CREATE">
+            <Original>Create</Original>
+            <German>Erstellen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_JOIN">
+            <Original>Join</Original>
+            <German>Beitreten</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_RENAME">
+            <Original>Rename</Original>
+            <German>Umbenennen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_LABELVIEW">
+            <Original>View Distance Settings</Original>
+            <German>Sichtweiteneinstellungen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_VIEWFOOT">
+            <Original>m on foot</Original>
+            <German>m zu Fuß</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_VIEWVEHICLE">
+            <Original>m in ground vehicles</Original>
+            <German>m in Bodenfahrzeugen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_VIEWAIR">
+            <Original>m in air vehicles</Original>
+            <German>m in Luftfahrzeugen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_LABELMISC">
+            <Original>Misc Settings</Original>
+            <German>Sonstige Einstellungen</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TEXTTERRAIN">
+            <Original>Terrain detail:</Original>
+            <German>Terraindetail:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TERRAINLOW">
+            <Original>Low</Original>
+            <German>Niedrig</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TERRAINSTANDARD">
+            <Original>Standard</Original>
+            <German>Standard</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TERRAINHIGH">
+            <Original>High</Original>
+            <German>Hoch</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TERRAINVHIGH">
+            <Original>Very High</Original>
+            <German>Sehr Hoch</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TERRAINULTRA">
+            <Original>Ultra</Original>
+            <German>Ultra</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TEXTTPV">
+            <Original>Auto 3rd person view:</Original>
+            <German>Auto 3rd-Person-Sicht:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TPVAIR">
+            <Original>Air vehicles</Original>
+            <German>Luftfahrzeuge</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TPVLAND">
+            <Original>Ground vehicles</Original>
+            <German>Bodenfahrzeuge</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TPVALL">
+            <Original>All vehicles</Original>
+            <German>Alle Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TEXTRADIO">
+            <Original>Disable radio chatter:</Original>
+            <German>KI Funk deaktivieren:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_RADIOVOICE">
+            <Original>Only voice</Original>
+            <German>Nur Stimme</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_RADIOALL">
+            <Original>Voice + Chat</Original>
+            <German>Stimme + Chat</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_TEXTSOUND">
+            <Original>In vehicle volume:</Original>
+            <German>Lautstärke im Fahrzeug:</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_NOTLEADER">
+            <Original>You're not the leader of this group.</Original>
+            <German>Du bist nicht der Anführer dieser Gruppe.</German>
         </Key>
     </Package>
     <Package name="Debriefings">
@@ -1379,9 +1507,13 @@
             <Turkish>-- İnşa Et --</Turkish>
             <Portuguese>-- CONSTRUIR --</Portuguese>
         </Key>
-        <Key ID="STR_ACTION_PLAYER_OPTIONS">
-            <Original>-- KPLIB Player Options --</Original>
-            <German>-- KPLIB Spieler Optionen --</German>
+        <Key ID="STR_ACTION_ADMIN_MENU">
+            <Original>-- Admin Menu --</Original>
+            <German>-- Admin Menü --</German>
+        </Key>
+        <Key ID="STR_ACTION_PLAYER_MENU">
+            <Original>-- Player Menu --</Original>
+            <German>-- Spielermenü --</German>
         </Key>
     </Package>
 </Project>
