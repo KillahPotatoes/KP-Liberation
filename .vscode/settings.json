@@ -89,6 +89,9 @@
         "KPLIB_param_unitcap",
         "KPLIB_param_wipeSave1",
         "KPLIB_param_wipeSave2",
-        "KPLIB_plm_groups"
+        "KPLIB_plm_groups",
+        "KPR_playerNaton",
+        "KPR_players",
+        "KPR_uniforms"
     ]
 }
