@@ -14,6 +14,27 @@
 class plm {
     file = "modules\99_playerMenu\fnc";
 
+    // Apply and save settings
+    class plm_apply {};
+
+    // Creates a new group
+    class plm_create {};
+
+    // Apply view distance and sound volume
+    class plm_getInOut {};
+
+    // Joins selected group
+    class plm_join {};
+
     // Open the dialog
     class plm_openDialog {};
+
+    // Applies new name to group
+    class plm_rename {};
+
+    // Save dialog settings
+    class plm_save {};
+
+    // Get and display KP Ranks data
+    class plm_showRankData {};
 };

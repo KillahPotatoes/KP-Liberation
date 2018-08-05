@@ -64,6 +64,10 @@
         "KPLIB_fnc_init_saveData",
         "KPLIB_fnc_init_sortSectors",
         "KPLIB_fnc_init_wipe",
+        "KPLIB_fnc_plm_apply",
+        "KPLIB_fnc_plm_getInOut",
+        "KPLIB_fnc_plm_openDialog",
+        "KPLIB_fnc_plm_showRankData",
         "KPLIB_param_aggressivity",
         "KPLIB_param_arsenalPreset",
         "KPLIB_param_civilians",
@@ -84,6 +88,7 @@
         "KPLIB_param_reviveUnconsciousStateMode",
         "KPLIB_param_unitcap",
         "KPLIB_param_wipeSave1",
-        "KPLIB_param_wipeSave2"
+        "KPLIB_param_wipeSave2",
+        "KPLIB_plm_groups"
     ]
 }
