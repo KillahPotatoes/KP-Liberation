@@ -167,6 +167,8 @@ class KP_Picture: RscText {
     style = 48;
 };
 
+class KP_ActivePicture: RscActivePicture {};
+
 // Picture which keeps aspect ratio
 class KP_PictureRatio: RscText {
     style = 48 + 2048;
@@ -209,6 +211,10 @@ class KP_CheckBox: RscCheckBox {
 
 // ListBox
 class KP_ListBox: RscListBox {
+    sizeEx = KP_TEXT_M;
+};
+
+class KP_ListNBox: RscListNBox {
     sizeEx = KP_TEXT_M;
 };
 
