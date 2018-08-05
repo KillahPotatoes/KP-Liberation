@@ -34,7 +34,7 @@ for "_i" from  0 to _elements do {
     private _x = _center select 0 + _radius * cos(_angle);
     private _y = _center select 1 + _radius * sin(_angle);
 
-    _positions [_x, _y, _center select 2, _angle];
+    _positions pushBack [_x, _y, _center select 2, _angle];
  };
 
 _positions
