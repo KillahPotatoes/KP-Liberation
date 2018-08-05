@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_build_open
+    KPLIB_fnc_build_camClose
 
-    File: fn_build_open.sqf
+    File: fn_build_camClose.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
     Last Update: 2018-07-01
@@ -22,6 +22,6 @@ camDestroy (missionNamespace getVariable ["KPLIB_build_camera", objNull]);
 // Close overlay display
 (uiNamespace getVariable ["KPLIB_build_display", displayNull]) closeDisplay 1;
 // Stop PFH
-call KPLIB_fnc_build_camera_ticker_stop;
+[] call KPLIB_fnc_build_camera_ticker_stop;
 
 true

@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_build_open
+    KPLIB_fnc_build_camOpen
 
-    File: fn_build_open.sqf
+    File: fn_build_camOpen.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
     Last Update: 2018-07-01
