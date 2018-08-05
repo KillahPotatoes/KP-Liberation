@@ -14,6 +14,6 @@
 #include "KP_GUI\KP_uiDefines.hpp"
 #include "modules\00_init\ui.hpp"
 #include "modules\01_core\ui.hpp"
-//#include "modules\02_build\ui.hpp"
+#include "modules\02_build\ui.hpp"
 #include "modules\99_adminMenu\ui.hpp"
 #include "modules\99_playerMenu\ui.hpp"
