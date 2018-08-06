@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_build_open
+    KPLIB_fnc_build_camOpen
 
-    File: fn_build_open.sqf
+    File: fn_build_camOpen.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-07-01
+    Last Update: 2018-08-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,7 +35,7 @@ _camera camCommand format ["speedMax %1", 1.5];
 // Enable display of GUI in camera
 cameraEffectEnableHUD true;
 
-call KPLIB_fnc_build_camera_ticker_start;
+[] call KPLIB_fnc_build_camera_ticker_start;
 
 KPLIB_build_camera = _camera;
 

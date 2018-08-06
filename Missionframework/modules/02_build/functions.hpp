@@ -15,16 +15,18 @@ class build {
     file = "modules\02_build\fnc";
 
     // Close build camera
-    class build_camera_close {};
+    class build_camClose {};
 
     // Open build menu
-    class build_camera_open {};
+    class build_camOpen {};
 
     class build_camera_ticker_start {};
 
     class build_camera_ticker_stop {};
 
-    class build_setupPlayerActions {};
+    class build_fobArea {};
 
     class build_displayScript {};
+
+    class build_setupPlayerActions {};
 };

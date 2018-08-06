@@ -5,7 +5,7 @@
     File: fn_build_displayScript.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-07-01
+    Last Update: 2018-08-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -70,18 +70,25 @@ switch _mode do {
             };
         }];
 
-        // Add tab change handler and scale tab images down
+        // Add tab change handler
         {
             _ctrl = _display displayCtrl _x;
             _ctrl ctrlAddEventHandler ["buttonClick", {
                 ["tabChanged", _this] call KPLIB_fnc_build_displayScript
             }];
-
-            [_ctrl, 0.8] call BIS_fnc_ctrlSetScale;
         } forEach KPLIB_BUILD_TABS_IDCS_ARRAY;
 
         // Initialize with infantry tab selected
         ["tabChanged", [_display displayCtrl KPLIB_IDC_BUILD_TAB_INFANTRY]] call KPLIB_fnc_build_displayScript;
+
+        // Create FOB range indicators
+        ["init", player getVariable ["KPLIB_fob", ""]] call KPLIB_fnc_build_fobArea;
+    };
+
+    case "onUnload": {
+        [] call KPLIB_fnc_build_camClose;
+        // Remove fob range indicators
+        ["remove"] call KPLIB_fnc_build_fobArea;
     };
 
     case "tabChanged": {
@@ -93,16 +100,13 @@ switch _mode do {
         {
             _ctrl = _display displayctrl _x;
             _ctrl ctrlsettextcolor [1,1,1,0.5];
-            _scale = 0.8;
             _color = [1,1,1,0.5];
             // Selected tab will be scaled up and highlighted
             if (_ctrl == _selectedControl) then {
-                _scale = 1;
                 _color = [1,1,1,1];
                 _selectedMode = _foreachindex;
             };
             _ctrl ctrlSetTextColor _color;
-            [_ctrl, _scale, 0.1] call BIS_fnc_ctrlSetScale;
         } foreach KPLIB_BUILD_TABS_IDCS_ARRAY;
 
         // If clicked mode is different than current mode fire change event
