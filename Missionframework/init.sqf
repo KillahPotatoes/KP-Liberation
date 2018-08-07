@@ -4,7 +4,7 @@
     File: init.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-03-29
+    Last Update: 2018-08-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,6 +36,7 @@ diag_log format [
 // Call module inits
 call compile preprocessFileLineNumbers "modules\01_core\initModule.sqf";
 call compile preprocessFileLineNumbers "modules\02_build\initModule.sqf";
-call compile preprocessFileLineNumbers "modules\99_playerOptions\initModule.sqf";
+call compile preprocessFileLineNumbers "modules\99_adminMenu\initModule.sqf";
+call compile preprocessFileLineNumbers "modules\99_playerMenu\initModule.sqf";
 
 KPLIB_initDone = true;

@@ -4,7 +4,7 @@
     File: fn_event_removeHandler.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-18
-    Last Update: 2018-05-23
+    Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@
         1: NUMBER - ID of the handler for given event
 
     Returns:
-    BOOLEAN - TRUE if removed, FALSE if didn't exist
+    BOOL - TRUE if removed, FALSE if didn't exist
 */
 
 params [

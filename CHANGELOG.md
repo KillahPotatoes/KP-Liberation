@@ -1,11 +1,18 @@
 # Changelog
 
 ## 0.97 (in Development)
+* **Fully rewritten the mission code from scratch.**
 * Added: Functions library via CfgFunctions.
+* Added: Admin dialog with various functionalities for server admins.
+* Added: Free camera view for building.
+* Added: Config guard for preset file syntax error detection.
+* Added: KP GUI system implemented for dialog creation.
+* Tweaked: License changed from MIT to GPLv3.
 * Tweaked: Eden objects got `KPLIB_eden_` as prefix.
 * Tweaked: Faster initial sector sorting.
 * Tweaked: Stringtable key names categorized.
 * Tweaked: Formatting and comments in preset files.
+* Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
@@ -37,7 +44,7 @@
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
 * Fixed: File name instead of mission name in mission selection screen.
 * Fixed: "Taking Command" spam from AI after players death.
-* Fixed: Fixed range for recycling and start of building instead of using FOB range. 
+* Fixed: Fixed range for recycling and start of building instead of using FOB range.
 * Fixed: Some vehicles with dynamic loadout support lost their weapons when rearmed by Liberation rearm module.
 
 ## 0.963 (05th January 2018)

@@ -14,144 +14,107 @@
 // Build display
 class KPLIB_build {
     idd = -1;
-    movingEnable = false;
+    movingEnable = 0;
 
     onLoad = "['onLoad', _this] call KPLIB_fnc_build_displayScript";
+    onUnload = "['onUnload', _this] call KPLIB_fnc_build_displayScript";
 
-    class ControlsBackground {
+    class controlsBackground {
 
-        class KPLIB_ItemsTitle: KPLIB_Title {
+        class KPLIB_DialogTitle: KP_DialogTitleC {
             text = "$STR_BUILD";
-            x = KPLIB_GUI_POS_X_CORNER;
-            y = KPLIB_GUI_POS_Y_CORNER;
-            w = KPLIB_GUI_WIDTH_CORNER;
+            w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
         };
-        class KPLIB_ItemsArea: KPLIB_AreaBackground {
-            x = KPLIB_GUI_POS_X_AREA_CORNER;
-            y = KPLIB_GUI_POS_Y_AREA_CORNER;
-            w = KPLIB_GUI_WIDTH_AREA_CORNER;
-            h = KPLIB_GUI_HEIGHT_AREA_CORNER;
+
+        class KP_DialogArea: KP_DialogBackgroundC {
+            w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
         };
 
     };
 
     class Controls {
 
-        class KPLIB_CloseDisplay: KPLIB_CloseCross {
-            x = KPLIB_GUI_POS_X_CROSS_CORNER;
-            y = KPLIB_GUI_POS_Y_CROSS_CORNER;
-            // Close whole build camera
-            action = "call KPLIB_fnc_build_camera_close";
+        class KPLIB_DialogCross: KP_DialogCrossC {
+            action = "call KPLIB_fnc_build_camClose;";
+            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
         };
 
-        class KPLIB_BuildTabsGroup: KPLIB_ControlsGroupNoScrollbars {
-            x = KPLIB_GUI_POS_X_AREA_CORNER;
-            y = KPLIB_GUI_POS_Y_AREA_CORNER;
-            w = KPLIB_GUI_WIDTH_AREA_CORNER;
-            h = KPLIB_BUILD_TAB_WIDTH + KPLIB_BUILD_TAB_Y_OFFSET;
+        class KPLIB_ModeUnits: KP_ActivePicture {
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
 
-            class Controls {
-
-                class KPLIB_ModeUnits: KPLIB_ActivePicture {
-                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 0;
-                    y = 0;
-
-                    w = KPLIB_BUILD_TAB_WIDTH;
-                    h = KPLIB_BUILD_TAB_WIDTH;
-
-                    idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
-                };
-
-                class KPLIB_ModeLight: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 1;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_LIGHT;
-                };
-
-                class KPLIB_ModeHeavy: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\vehicleicons\iconTank_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 2;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_HEAVY;
-                };
-
-                class KPLIB_ModeAir: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\vehicleicons\iconHelicopter_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 3;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_AIR;
-                };
-
-                class KPLIB_ModeStatic: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\vehicleicons\iconStaticCannon_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 4;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_STATIC;
-                };
-
-                class KPLIB_ModeBuilding: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\mapcontrol\Bunker_CA.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 5;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_BUILDING;
-                };
-
-                class KPLIB_ModeSupport: KPLIB_ModeUnits {
-                    text = "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 6;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_SUPPORT;
-                };
-
-                class KPLIB_ModeSquad: KPLIB_ModeUnits {
-                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-
-                    x = KPLIB_BUILD_TAB_WIDTH * 7;
-                    y = 0;
-
-                    idc = KPLIB_IDC_BUILD_TAB_SQUAD;
-                };
-
-            };
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,0,8);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
+            w = KP_GETW(KP_WIDTH_BUILD,8);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16);
         };
 
-        class KPLIB_BuildList: KPLIB_ListNBox {
-            idc = 201;
+        class KPLIB_ModeLight: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_LIGHT;
 
-            x = KPLIB_GUI_POS_X_AREA_CORNER;
-            y = KPLIB_GUI_POS_Y_AREA_CORNER + KPLIB_BUILD_TAB_WIDTH + KPLIB_BUILD_TAB_Y_OFFSET;
-            w = KPLIB_GUI_WIDTH_AREA_CORNER;
-            h = KPLIB_GUI_HEIGHT_AREA_CORNER - KPLIB_BUILD_TAB_WIDTH - KPLIB_BUILD_TAB_Y_OFFSET;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,1,8);
+        };
+
+        class KPLIB_ModeHeavy: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\vehicleicons\iconTank_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_HEAVY;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,2,8);
+        };
+
+        class KPLIB_ModeAir: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\vehicleicons\iconHelicopter_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_AIR;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,3,8);
+        };
+
+        class KPLIB_ModeStatic: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\vehicleicons\iconStaticCannon_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_STATIC;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,4,8);
+        };
+
+        class KPLIB_ModeBuilding: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\mapcontrol\Bunker_CA.paa";
+            idc = KPLIB_IDC_BUILD_TAB_BUILDING;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,5,8);
+        };
+
+        class KPLIB_ModeSupport: KPLIB_ModeUnits {
+            text = "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_SUPPORT;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,6,8);
+        };
+
+        class KPLIB_ModeSquad: KPLIB_ModeUnits {
+            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
+            idc = KPLIB_IDC_BUILD_TAB_SQUAD;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,7,8);
+        };
+
+        class KPLIB_BuildList: KP_ListNBox {
+            idc = KPLIB_IDC_BUILD_ITEM_LIST;
+
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,2,16);
+            w = KP_GETW(KP_WIDTH_BUILD,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16) * 15;
 
             columns[] = { 0, 0.65, 0.75, 0.85 };
         };
 
-        class KPLIB_BuildConfirm: KPLIB_ButtonMenu {
+        class KP_ApplyButton: KP_DialogButtonC {
             idc = KPLIB_IDC_BUILD_CONFIRM;
-
-            x = KPLIB_GUI_POS_X_AREA_CORNER + KPLIB_GUI_WIDTH_AREA_CORNER * (1 - 0.3);
-            // TODO improve positioning
-            y = (KPLIB_GUI_POS_Y_AREA_CORNER + KPLIB_BUILD_TAB_WIDTH + KPLIB_BUILD_TAB_Y_OFFSET) + (KPLIB_GUI_HEIGHT_AREA_CORNER - KPLIB_BUILD_TAB_WIDTH - KPLIB_BUILD_TAB_Y_OFFSET);
-
-            w = KPLIB_GUI_WIDTH_AREA_CORNER * 0.3;
-            h = GUI_GRID_H * 1;
-
             text = "$STR_BUILD";
+
+            w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
+            onButtonClick = "['build', _this] call KPLIB_fnc_build_displayScript";
         };
 
     };

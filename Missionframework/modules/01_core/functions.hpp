@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-05-23
+    Last Update: 2018-08-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -95,6 +95,9 @@ class common {
 
     // Get all human players
     class common_getAllPlayers {};
+
+    // Generate positions in circle
+    class common_getCirclePositions {};
 
     // Spawning of a vehicle at given position with given direction
     class common_spawnVehicle {};
