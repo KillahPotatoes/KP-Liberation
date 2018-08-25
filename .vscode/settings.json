@@ -92,6 +92,10 @@
         "KPLIB_param_wipeSave1",
         "KPLIB_param_wipeSave2",
         "KPLIB_plm_groups",
+        "KPR_fnc_getPlaytime",
+        "KPR_fnc_getRankName",
+        "KPR_fnc_getScore",
+        "KPR_levelSystem",
         "KPR_playerNation",
         "KPR_players",
         "KPR_uniforms"

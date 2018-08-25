@@ -1425,6 +1425,10 @@
             <Original>You're not the leader of this group.</Original>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>
         </Key>
+        <Key ID="STR_PLAYERDIALOG_NOLVLSYSTEM">
+            <Original>Leveling system disabled</Original>
+            <German>Levelsystem deaktiviert</German>
+        </Key>
     </Package>
     <Package name="Debriefings">
         <Key ID="STR_DEBRIEF_WINTITLE">
