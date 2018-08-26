@@ -102,23 +102,3 @@ class common {
     // Spawning of a vehicle at given position with given direction
     class common_spawnVehicle {};
 };
-
-// Scripted event handlers
-class event {
-    file = "modules\01_core\fnc\event";
-
-    // Adds scripted event handler
-    class event_addHandler {};
-
-    // Initializes event system
-    class event_init {
-        // public var EH does not work for clients in preInit
-        preInit = 1;
-    };
-
-    // Removes handler with given id
-    class event_removeHandler {};
-
-    // Triggers event
-    class event_trigger {};
-};
