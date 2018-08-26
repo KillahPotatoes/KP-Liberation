@@ -19,7 +19,7 @@
 
 // Actions avalible LOCALLY to player
 if(hasInterface) then {
-    ["player_fob", {
+    ["KPLIB_player_fob", {
         params ["_player", "_fob"];
 
         private _buildActionId = _player getVariable ["KPLIB_actionId_build", nil];
@@ -39,7 +39,7 @@ if(hasInterface) then {
                 _player setVariable ["KPLIB_actionId_build", _buildActionId];
             };
         };
-    }] call KPLIB_fnc_event_addHandler
+    }] call CBA_fnc_addEventHandler
 };
 
 true

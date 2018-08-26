@@ -34,6 +34,7 @@ if (isServer) then {
     call KPLIB_fnc_core_spawnPotato;
     call KPLIB_fnc_core_updateSectorMarkers;
     execVM "modules\01_core\scripts\server\sectorMonitor.sqf";
+    execVM "modules\01_core\scripts\server\eventLoop.sqf";
 };
 
 // HC section

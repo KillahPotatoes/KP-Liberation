@@ -33,7 +33,7 @@ private _sectorTimer = diag_tickTime - KPLIB_sectors_stayActiveTime;
  * At this place we should add the spawning and other "upon sector activation" stuff when we reached that development stage.
  */
 // Emit event about activated sector
-["sector_activated", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
+["KPLIB_sector_activated", [_sectorMarkerName]] call CBA_fnc_globalEvent;
 
 // Loop until the sector is abandoned.
 while {_sectorActive} do {
@@ -56,7 +56,7 @@ while {_sectorActive} do {
             if (_sectorCaptureReady) then {
                 _sectorActive = false;
                 [_sectorMarkerName] call KPLIB_fnc_core_changeSectorOwner;
-                ["sector_captured", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
+                ["KPLIB_sector_captured", [_sectorMarkerName]] call CBA_fnc_globalEvent;
             } else {
                 _sectorCaptureReady = true;
             };
@@ -75,7 +75,7 @@ KPLIB_sectors_active = KPLIB_sectors_active - [_sectorMarkerName];
 publicVariable "KPLIB_sectors_active";
 
 // Emit event about deactivated sector
-["sector_deactivated", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
+["KPLIB_sector_deactivated", [_sectorMarkerName]] call CBA_fnc_globalEvent;
 
 // As the argument for changing a sector color should be global this should be fine. If not, we've to change it to something like
 // If isServer then call, else remoteExec on server (concerning sector handling by HCs in the end)

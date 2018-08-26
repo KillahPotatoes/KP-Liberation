@@ -20,7 +20,7 @@
 // Actions avalible GLOBALLY on objects
 if (isServer) then {
     // Actions on Vehicles
-    ["vehicle_spawned", {
+    ["KPLIB_vehicle_spawned", {
         params ["_vehicle"];
 
         switch(typeOf _vehicle) do {
@@ -41,12 +41,12 @@ if (isServer) then {
                 ] remoteExecCall ["addAction", 0, true];
             };
         };
-    }] call KPLIB_fnc_event_addHandler;
+    }] call CBA_fnc_addEventHandler;
 };
 
 // Actions avalible LOCALLY to player
 if(hasInterface) then {
-    ["player_fob", {
+    ["KPLIB_player_fob", {
         params ["_player", "_fob"];
 
         private _redeployActionId = _player getVariable ["KPLIB_actionId_redeploy", nil];
@@ -66,7 +66,7 @@ if(hasInterface) then {
                 _player setVariable ["KPLIB_actionId_redeploy", _redeployActionId];
             };
         };
-    }] call KPLIB_fnc_event_addHandler
+    }] call CBA_fnc_addEventHandler
 };
 
 true
