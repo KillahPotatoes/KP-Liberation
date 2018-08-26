@@ -37,7 +37,7 @@ switch _mode do {
         // ESC closes whole camera
         _display displayAddEventHandler ["keyDown", {
             if (_this select 1 == 1) then {
-                call KPLIB_fnc_build_camera_close;
+                call KPLIB_fnc_build_camClose;
             };
         }];
 

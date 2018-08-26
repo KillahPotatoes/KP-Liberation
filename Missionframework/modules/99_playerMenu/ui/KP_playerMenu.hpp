@@ -123,8 +123,6 @@ class KP_playerMenu {
 
     class controls {
 
-        class KP_DialogCross: KP_DialogCrossC {};
-
         class KP_PlayerRank: KP_Text {
             idc = 758032;
             style = 2;
@@ -242,5 +240,7 @@ class KP_playerMenu {
             text = "$STR_APPLY";
             onButtonClick = "[] call KPLIB_fnc_plm_save";
         };
+
+        class KP_DialogCross: KP_DialogCrossC {};
     };
 };
