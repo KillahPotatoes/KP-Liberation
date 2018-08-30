@@ -47,8 +47,6 @@
         "KPLIB_fnc_core_spawnStartVeh",
         "KPLIB_fnc_core_updateFobMarkers",
         "KPLIB_fnc_core_updateSectorMarkers",
-        "KPLIB_fnc_event_addHandler",
-        "KPLIB_fnc_event_trigger",
         "KPLIB_fnc_init_checkClass",
         "KPLIB_fnc_init_clientMarkers",
         "KPLIB_fnc_init_createLockedVehMarkers",

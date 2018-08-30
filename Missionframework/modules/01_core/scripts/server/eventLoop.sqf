@@ -4,7 +4,7 @@
     File: eventLoop.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-25
-    Last Update: 2018-05-25
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,7 +31,7 @@ while {KPLIB_campaignRunning} do {
                 // Save current player fob on player
                 _x setVariable ["KPLIB_fob", _fob];
                 // Emit event
-                ["player_fob", [_x, _fob], true] call KPLIB_fnc_event_trigger;
+                ["KPLIB_player_fob", [_x, _fob]] call CBA_fnc_globalEvent;
             };
         } forEach _inFob;
     } forEach (KPLIB_sectors_fobs + ["KPLIB_eden_startbase_marker"]);
@@ -42,7 +42,7 @@ while {KPLIB_campaignRunning} do {
             // Remove fob that was saved on player
             _x setVariable ["KPLIB_fob", ""];
             // Emit event
-            ["player_fob", [_x, ""], true] call KPLIB_fnc_event_trigger;
+            ["KPLIB_player_fob", [_x, ""]] call CBA_fnc_globalEvent;
         };
     } forEach (_players - _checkedPlayers);
 

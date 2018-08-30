@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-08-02
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -101,24 +101,4 @@ class common {
 
     // Spawning of a vehicle at given position with given direction
     class common_spawnVehicle {};
-};
-
-// Scripted event handlers
-class event {
-    file = "modules\01_core\fnc\event";
-
-    // Adds scripted event handler
-    class event_addHandler {};
-
-    // Initializes event system
-    class event_init {
-        // public var EH does not work for clients in preInit
-        preInit = 1;
-    };
-
-    // Removes handler with given id
-    class event_removeHandler {};
-
-    // Triggers event
-    class event_trigger {};
 };

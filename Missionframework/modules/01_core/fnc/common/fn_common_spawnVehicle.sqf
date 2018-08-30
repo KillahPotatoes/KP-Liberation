@@ -4,7 +4,7 @@
     File: fn_common_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-05-28
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -49,6 +49,6 @@ _vehicle allowDamage true;
 
 if (_returnVeh) then {_return = _vehicle;};
 
-["vehicle_spawned", [_vehicle]] call KPLIB_fnc_event_trigger;
+["KPLIB_vehicle_spawned", [_vehicle]] call CBA_fnc_localEvent;
 
 _return

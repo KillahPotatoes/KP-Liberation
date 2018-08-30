@@ -4,7 +4,7 @@
     File: initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-05-06
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,7 @@ if (isServer) then {
     call KPLIB_fnc_core_spawnPotato;
     call KPLIB_fnc_core_updateSectorMarkers;
     execVM "modules\01_core\scripts\server\sectorMonitor.sqf";
+    execVM "modules\01_core\scripts\server\eventLoop.sqf";
 };
 
 // HC section
