@@ -37,7 +37,7 @@ KPLIB_validationNamespace setVariable ["resistance", false];
 // Delay all checks unitl all initialization is done
 [] spawn {
     waitUntil{time > 0 && count call KPLIB_fnc_common_getAllPlayers > 0};
-    diag_log "[KP LIBERATION] [CFG GUARD] Validating configuration files";
+    diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];
 
     // Get array of variables to check
     private _toValidate = allVariables KPLIB_validationNamespace;
@@ -45,12 +45,13 @@ KPLIB_validationNamespace setVariable ["resistance", false];
     private _invalidConfig = (_toValidate findIf {!(KPLIB_validationNamespace getVariable _x)}) != -1;
 
     if(_invalidConfig) exitWith {
-        diag_log "[KP LIBERATION] [CFG GUARD] Invalid configuration files present. Ending mission for everyone";
+        diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Invalid configuration files present. Ending mission for everyone", diag_tickTime];
 
         "KPLIB_configError" call BIS_fnc_endMissionServer;
     };
 
     diag_log "[KP LIBERATION] [CFG GUARD] All configuration files seem to be OK";
+    diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
 
     diag_log format [
         "[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal: %8 - ACE: %9",
