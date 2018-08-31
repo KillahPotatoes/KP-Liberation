@@ -12,7 +12,7 @@
 */
 
 class adm {
-    file = "modules\99_adminMenu\fnc";
+    file = "modules\99_adm\fnc";
 
     // Deletes exported data in the players profile
     class adm_deleteExport {};
@@ -25,6 +25,11 @@ class adm {
 
     // Applies provided save data for import to the server profile
     class adm_importSaveServer {};
+
+    // Module initialization
+    class adm_initModule {
+        postInit = 1;
+    };
 
     // Opens the admin menu dialog
     class adm_openDialog {};
