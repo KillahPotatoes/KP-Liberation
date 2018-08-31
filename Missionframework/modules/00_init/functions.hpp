@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-05-02
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,16 @@ class init {
     // Filters not available classnames out of a given array of classnames
     class init_filterMods {};
 
+    // Module post initialization
+    class init_postInitModule {
+        postInit = 1;
+    };
+
+    // Module pre initialization
+    class init_preInitModule {
+        preInit = 1;
+    };
+
     // Initializes full load procedure for the saved campaign
     class init_load {};
 
@@ -53,19 +63,15 @@ class init {
     class init_paramVarCreate {};
 
     // Client function for processing init data which was published by the server
-    class init_receiveInit {};
+    class init_receiveInit {
+        postInit = 1;
+    };
 
     // Initializes full saves procedure for the running campaign
     class init_save {};
 
     // Saves module specific data for the save
     class init_saveData {};
-
-    // Setups global variables from params
-    // Also initializes mission config
-    class init_setupConfig {
-        preInit = 1;
-    };
 
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
