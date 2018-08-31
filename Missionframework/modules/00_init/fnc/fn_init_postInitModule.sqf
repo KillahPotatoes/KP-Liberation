@@ -27,6 +27,20 @@ if (!isServer) exitWith {};
 
 diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
 
+// Initialize Debug Events
+DEBUG_EVENTS = [
+        "KPLIB_vehicle_spawned",
+        "KPLIB_fob_built",
+        "KPLIB_sector_activated",
+        "KPLIB_sector_captured",
+        "KPLIB_sector_deactivated",
+        "KPLIB_player_fob"
+    ];
+
+{
+    [_x, compile ("diag_log 'eventCalled " + _x + "'; diag_log _this;")] call CBA_fnc_addEventHandler;
+    [_x, compile ("systemChat 'eventCalled " + _x + "'; systemChat format['%1', _this];")] call CBA_fnc_addEventHandler;
+} forEach DEBUG_EVENTS;
 
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
