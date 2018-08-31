@@ -17,12 +17,20 @@
     NOTHING
 */
 
+if (isDedicated) exitWith {};
+
+diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initializing...", diag_tickTime];
+
+diag_log "[KP LIBERATION] [CLIENT INIT] Receiving data...";
+
 // Wait until the server has send the packages
 waitUntil {!isNil "KPLIB_preset_bluforPackage"};
 waitUntil {!isNil "KPLIB_preset_opforPackage"};
 waitUntil {!isNil "KPLIB_preset_resistancePackage"};
 waitUntil {!isNil "KPLIB_preset_civiliansPackage"};
 waitUntil {!isNil "KPLIB_preset_collectionsPackage"};
+
+diag_log "[KP LIBERATION] [CLIENT INIT] Data received. Processing packages...";
 
 // Process Blufor package
 KPLIB_preset_sidePlayers = KPLIB_preset_bluforPackage select 0;
@@ -65,6 +73,8 @@ KPLIB_preset_paraSquad = KPLIB_preset_bluforPackage select 36;
 KPLIB_preset_lockedVeh = KPLIB_preset_bluforPackage select 37;
 KPLIB_preset_alphabet = KPLIB_preset_bluforPackage select 38;
 KPLIB_preset_squads = KPLIB_preset_bluforPackage select 39;
+
+diag_log "[KP LIBERATION] [CLIENT INIT] Blufor package processed";
 
 // Process Opfor package
 KPLIB_preset_sideEnemy = KPLIB_preset_opforPackage select 0;
@@ -114,6 +124,8 @@ KPLIB_preset_oAirKill = KPLIB_preset_opforPackage select 43;
 KPLIB_preset_oAirVeh = KPLIB_preset_opforPackage select 44;
 KPLIB_preset_oLandVeh = KPLIB_preset_opforPackage select 45;
 
+diag_log "[KP LIBERATION] [CLIENT INIT] Opfor package processed";
+
 // Process resistance package
 KPLIB_preset_sideResistance = KPLIB_preset_resistancePackage select 0;
 KPLIB_preset_colorResistance = KPLIB_preset_resistancePackage select 1;
@@ -134,9 +146,13 @@ KPLIB_preset_rHeadgear2 = KPLIB_preset_resistancePackage select 15;
 KPLIB_preset_rHeadgear3 = KPLIB_preset_resistancePackage select 16;
 KPLIB_preset_rFacegear = KPLIB_preset_resistancePackage select 17;
 
+diag_log "[KP LIBERATION] [CLIENT INIT] Resistance package processed";
+
 // Process civilian package
 KPLIB_preset_cUnits = KPLIB_preset_civiliansPackage select 0;
 KPLIB_preset_cVehicles = KPLIB_preset_civiliansPackage select 1;
+
+diag_log "[KP LIBERATION] [CLIENT INIT] Civilian package processed";
 
 // Process collections package
 KPLIB_preset_buildLists = KPLIB_preset_collectionsPackage select 0;
@@ -151,6 +167,8 @@ KPLIB_preset_allAirBlue = KPLIB_preset_collectionsPackage select 8;
 KPLIB_preset_staticClassesBlue = KPLIB_preset_collectionsPackage select 9;
 KPLIB_resupply_aiSource = KPLIB_preset_collectionsPackage select 10;
 
+diag_log "[KP LIBERATION] [CLIENT INIT] Collections package processed";
+
 // Set correct localized squad names
 KPLIB_preset_squadNames = [
     localize "STR_SQUAD_LIGHT",
@@ -160,3 +178,15 @@ KPLIB_preset_squadNames = [
     localize "STR_SQUAD_RECON",
     localize "STR_SQUAD_PARA"
 ];
+
+if (hasInterface) then {
+    // Preload the arsenal to speed up arsenal opening during the game
+    ["Preload"] call BIS_fnc_arsenal;
+    diag_log "[KP LIBERATION] [CLIENT INIT] Preloaded Arsenal";
+
+    // Create needed local markers
+    call KPLIB_fnc_init_clientMarkers;
+    diag_log "[KP LIBERATION] [CLIENT INIT] Client Markers initialized";
+};
+
+diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initialized", diag_tickTime];

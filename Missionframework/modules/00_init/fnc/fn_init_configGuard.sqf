@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2018-07-01
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,8 @@
     Returns:
     NOTHING
 */
-                // We can't use our params vars here as this will be ran before all other functions
+
+// We can't use our params vars here as this will be ran before all other functions
 if(!isServer || (["DebugConfigGuard", 1] call BIS_fnc_getParamValue) == 0) exitWith {};
 
 // Create validation namespace on server
@@ -50,4 +51,17 @@ KPLIB_validationNamespace setVariable ["resistance", false];
     };
 
     diag_log "[KP LIBERATION] [CFG GUARD] All configuration files seem to be OK";
+
+    diag_log format [
+        "[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal: %8 - ACE: %9",
+        (localize "STR_MISSION_TITLE"),
+        worldName,
+        (localize "STR_MISSION_VERSION"),
+        KPLIB_preset_blufor,
+        KPLIB_preset_opfor,
+        KPLIB_preset_resistance,
+        KPLIB_preset_civilians,
+        KPLIB_preset_arsenal,
+        KPLIB_ace_enabled
+    ];
 };
