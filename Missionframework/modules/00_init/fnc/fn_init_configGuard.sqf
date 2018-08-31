@@ -50,7 +50,6 @@ KPLIB_validationNamespace setVariable ["resistance", false];
         "KPLIB_configError" call BIS_fnc_endMissionServer;
     };
 
-    diag_log "[KP LIBERATION] [CFG GUARD] All configuration files seem to be OK";
     diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
 
     diag_log format [
