@@ -23,7 +23,7 @@
 
 if (!isServer) exitWith {};
 
-diag_log format ["[KP LIBERATION] [%1] [PREINIT] Module initializing...", diag_tickTime];
+diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initializing...", diag_tickTime];
 
 // Deactivate vanilla saving
 enableSaving [false, false];
@@ -57,6 +57,6 @@ call KPLIB_fnc_init_paramFetchAll;
 // Read the KPLIB_config.sqf file
 call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
-diag_log format ["[KP LIBERATION] [%1] [PREINIT] Module initialized", diag_tickTime];
+diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initialized", diag_tickTime];
 
 true

@@ -25,7 +25,7 @@
 
 if (!isServer) exitWith {};
 
-diag_log format ["[KP LIBERATION] [%1] [POSTINIT] Module initializing...", diag_tickTime];
+diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
 
 
 // Read the module globals
@@ -47,6 +47,6 @@ execVM "modules\00_init\scripts\server\saveTimer\timer.sqf";
 // Create locked vehicle markers
 call KPLIB_fnc_init_createLockedVehMarkers;
 
-diag_log format ["[KP LIBERATION] [%1] [POSTINIT] Module initialized", diag_tickTime];
+diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initialized", diag_tickTime];
 
 true
