@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-02
-    Last Update: 2018-08-03
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 */
 
 class plm {
-    file = "modules\99_playerMenu\fnc";
+    file = "modules\99_plm\fnc";
 
     // Apply and save settings
     class plm_apply {};
@@ -22,6 +22,11 @@ class plm {
 
     // Apply view distance and sound volume
     class plm_getInOut {};
+
+    // Module initialization
+    class plm_initModule {
+        postInit = 1;
+    };
 
     // Joins selected group
     class plm_join {};

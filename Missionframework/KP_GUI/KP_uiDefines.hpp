@@ -4,7 +4,7 @@
     File: KP_uiDefines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2018-08-04
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -334,7 +334,7 @@ class KP_DialogTitleC: KP_Title {
 
 // Cross symbol
 class KP_DialogCrossC: KP_CloseCross {
-    x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.02)
+    x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 

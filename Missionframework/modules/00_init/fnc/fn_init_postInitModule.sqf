@@ -1,19 +1,14 @@
 /*
-    KP LIBERATION MODULE INITIALIZATION
+    KPLIB_fnc_init_postInitModule
 
-    File: initModule.sqf
+    File: fn_init_postInitModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
-    Last Update: 2018-03-29
+    Date: 2017-08-31
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    This module initialize basically everything that should be done before the player passes the briefing screen.
     Tasks of this module are:
-        * Fetch parameters
-        * Fetch config values
-        * Define basic ui values
-        * Fetch, check and distribute preset data
         * Sort sector markers to specific arrays
         * Initialize the save manager
         * Connect unlockable vehicles to military sectors
@@ -23,22 +18,14 @@
 
     Dependencies:
     NONE
-*/
-if(isServer) then {
-    DEBUG_EVENTS = [
-            "KPLIB_vehicle_spawned",
-            "KPLIB_fob_built",
-            "KPLIB_sector_activated",
-            "KPLIB_sector_captured",
-            "KPLIB_sector_deactivated",
-            "KPLIB_player_fob"
-        ];
 
-    {
-        [_x, compile ("diag_log 'eventCalled " + _x + "'; diag_log _this;")] call CBA_fnc_addEventHandler;
-        [_x, compile ("systemChat 'eventCalled " + _x + "'; systemChat format['%1', _this];")] call CBA_fnc_addEventHandler;
-    } forEach DEBUG_EVENTS;
-};
+    Returns:
+    BOOL
+*/
+
+if (!isServer) exitWith {};
+
+diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
 
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
@@ -58,3 +45,7 @@ execVM "modules\00_init\scripts\server\saveTimer\timer.sqf";
 
 // Create locked vehicle markers
 call KPLIB_fnc_init_createLockedVehMarkers;
+
+diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initialized", diag_tickTime];
+
+true

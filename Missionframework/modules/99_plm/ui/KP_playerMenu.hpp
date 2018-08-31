@@ -4,7 +4,7 @@
     File: KP_playerMenu.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-03
-    Last Update: 2018-08-05
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,7 +61,7 @@ class KP_playerMenu {
             colorText[] = {0.8, 0, 0, 0.75};
             text = "$STR_PLAYERDIALOG_NORANKS";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,3,32);
-            sizeEx = KP_TEXT_L
+            sizeEx = KP_TEXT_L;
         };
 
         class KP_LabelGroups: KP_LabelPlayer {
@@ -232,7 +232,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,23,24);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            tooltip = "$STR_PLAYERDIALOG_TTSOUND"
+            tooltip = "$STR_PLAYERDIALOG_TTSOUND";
             onSliderPosChanged = "ctrlSetText [7580316, format ['%1%2', round (_this select 1), '%']]";
         };
 
