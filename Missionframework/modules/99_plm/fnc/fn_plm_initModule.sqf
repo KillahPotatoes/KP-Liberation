@@ -22,6 +22,8 @@
     BOOL
 */
 
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PLM] Module initializing...", diag_tickTime];};
+
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\99_plm\globals.sqf";
 
@@ -45,5 +47,7 @@ if (hasInterface) then {
 
 // Apply default/loaded values
 [] call KPLIB_fnc_plm_apply;
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PLM] Module initialized", diag_tickTime];};
 
 true

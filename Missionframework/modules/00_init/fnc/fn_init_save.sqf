@@ -4,7 +4,7 @@
     File: fn_init_save.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-08-03
+    Last Update: 2018-08-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,7 +20,7 @@
 // Skip the saving process, if the campaign isn't running anymore
 if (!KPLIB_campaignRunning) exitWith {false};
 
-if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function started -----", diag_tickTime];};
+if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [%1] [SAVE] ----- Save function started -----", diag_tickTime];};
 
 // Call the save data fetch functions from each module and store them in a multidimensional array for saving
 KPLIB_save_data = [
@@ -30,6 +30,6 @@ KPLIB_save_data = [
 profileNamespace setVariable [KPLIB_save_key, KPLIB_save_data];
 saveProfileNamespace;
 
-if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [SAVE] ----- Time: %1 - Save function finished -----", diag_tickTime];};
+if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [%1] [SAVE] ----- Save function finished -----", diag_tickTime];};
 
 true
