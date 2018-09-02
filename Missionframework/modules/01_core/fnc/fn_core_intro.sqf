@@ -17,6 +17,11 @@
     NOTHING
 */
 
+/*
+--- TODO IN SPRINT 6 ---
+Rework the intro and cinematic. Currently it doesn't work reliable. Mostly an endless loop of the cinematic.
+Postponed, as it's not in the current scope of the sprint 5 tasks.
+
 // Wait until mission is loaded
 waitUntil {time > 0};
 
@@ -44,5 +49,6 @@ if (KPLIB_intro_tutorial == 0) then {
     KPLIB_intro_running = false;
 };
 
+*/
 // Finish the intro
 KPLIB_intro_done = true;
