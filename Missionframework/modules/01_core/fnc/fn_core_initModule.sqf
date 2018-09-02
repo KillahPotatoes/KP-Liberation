@@ -34,10 +34,10 @@ call KPLIB_fnc_core_setupPlayerActions;
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
-    call KPLIB_fnc_core_spawnStartFobBox;
-    call KPLIB_fnc_core_spawnStartVeh;
-    call KPLIB_fnc_core_spawnPotato;
-    call KPLIB_fnc_core_updateSectorMarkers;
+    [] call KPLIB_fnc_core_spawnStartFobBox;
+    [] call KPLIB_fnc_core_spawnStartVeh;
+    [] call KPLIB_fnc_core_spawnPotato;
+    [] call KPLIB_fnc_core_updateSectorMarkers;
     execVM "modules\01_core\scripts\server\sectorMonitor.sqf";
     execVM "modules\01_core\scripts\server\eventLoop.sqf";
 };
