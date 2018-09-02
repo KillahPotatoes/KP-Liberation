@@ -23,7 +23,6 @@
         "KPLIB_fnc_build_displayScript",
         "KPLIB_fnc_build_setupPlayerActions",
         "KPLIB_fnc_common_createNamespace",
-        "KPLIB_fnc_common_getAllPlayers",
         "KPLIB_fnc_common_spawnVehicle",
         "KPLIB_fnc_common_getCirclePositions",
         "KPLIB_fnc_core_areUnitsNear",

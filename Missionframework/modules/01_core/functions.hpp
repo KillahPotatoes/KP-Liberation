@@ -98,9 +98,6 @@ class common {
     // Creates namespace
     class common_createNamespace {};
 
-    // Get all human players
-    class common_getAllPlayers {};
-
     // Generate positions in circle
     class common_getCirclePositions {};
 
