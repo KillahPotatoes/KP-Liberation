@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=641;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6426;
+		nextID=6429;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1501;
+		nextID=1573;
 	};
 	class Camera
 	{
-		pos[]={27413.344,69.24128,5263.127};
-		dir[]={0.28290743,-0.41119808,0.86657882};
-		up[]={0.12762293,0.91152316,0.39092639};
-		aside[]={0.95066839,9.4066854e-007,-0.31035793};
+		pos[]={27387.133,77.370262,5464.4775};
+		dir[]={-0.36465764,-0.44018537,0.82061678};
+		up[]={-0.17877361,0.89786202,0.40230659};
+		aside[]={0.91390491,-5.0714152e-007,0.40611401};
 	};
 };
 binarizationWanted=0;
@@ -52,15 +52,15 @@ addons[]=
 	"A3_Structures_F_Ind_PowerLines",
 	"A3_Structures_F_Ind_SolarPowerPlant",
 	"A3_Structures_F_Ind_DieselPowerPlant",
-	"A3_Boat_F_Jets_Carrier_01",
 	"A3_Structures_F_System",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Boat_F_Destroyer_Destroyer_01",
+	"A3_Static_F_Destroyer_Boat_Rack_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -119,8 +119,15 @@ class AddonsMetaData
 		};
 		class Item8
 		{
-			className="A3_Boat_F_Jets";
+			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Static_F_Destroyer";
+			name="CFGPATCHES_A3_Static_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -280,7 +287,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=516;
+		items=511;
 		class Item0
 		{
 			dataType="Marker";
@@ -10640,17 +10647,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27449.313,0,5497.0952};
-				angles[]={0,3.1415927,0};
+				position[]={27353.395,8.8006763,5562.4253};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
-				aiRadarUsage=1885958239;
+				name="KPLIB_eden_startbase";
 			};
-			id=5817;
-			type="Land_Carrier_01_base_F";
-			atlOffset=185.97;
+			id=5818;
+			type="Land_ClutterCutter_small_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10680,16 +10686,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27466.58,23.518997,5408.188};
+				position[]={27350,8.8009949,5558};
+				angles[]={0,3.1415927,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
-				name="KPLIB_eden_startbase";
+				name="KPLIB_eden_littlebird_0";
 			};
-			id=5818;
+			id=5821;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=209.489;
+			atlOffset=0.00031852722;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10719,16 +10727,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27476.613,23.528,5445.1982};
+				position[]={27350,8.7604513,5525};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
-				name="KPLIB_eden_littlebird_0";
+				name="KPLIB_eden_potatospawn";
 			};
-			id=5821;
+			id=5828;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=10.572567;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10758,16 +10766,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27483.92,23.541992,5341.9409};
+				position[]={27350,8.8009949,5548};
+				angles[]={0,3.1415927,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
-				name="KPLIB_eden_potatospawn";
+				name="KPLIB_eden_littlebird_1";
 			};
-			id=5828;
+			id=5829;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=209.51199;
+			atlOffset=0.00031852722;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10797,16 +10807,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27476.42,23.528,5481.1841};
+				position[]={27340,8.762989,5515};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
-				name="KPLIB_eden_littlebird_1";
+				name="KPLIB_eden_boxspawn";
 			};
-			id=5829;
+			id=5831;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=209.498;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10833,86 +10843,6 @@ class Mission
 		};
 		class Item501
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27476.391,23.539001,5532.3101};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="KPLIB_eden_littlebird_2";
-			};
-			id=5830;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=0.00042533875;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item502
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27415.729,23.539001,5349.5508};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="KPLIB_eden_boxspawn";
-			};
-			id=5831;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=0.025999069;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item503
-		{
 			dataType="Marker";
 			position[]={27435.021,0,5463.521};
 			name="KPLIB_eden_startbase_marker";
@@ -10922,46 +10852,44 @@ class Mission
 			id=5832;
 			atlOffset=185.97;
 		};
-		class Item504
+		class Item502
 		{
 			dataType="Layer";
 			name="Cache Ammo [BLU]";
 			id=6002;
 			atlOffset=185.97;
 		};
-		class Item505
+		class Item503
 		{
 			dataType="Layer";
 			name="Storage (Lamp) [BLU]";
 			id=6017;
 			atlOffset=185.97;
 		};
-		class Item506
+		class Item504
 		{
 			dataType="Layer";
 			name="Storage [BLU] #1";
 			id=6409;
 			atlOffset=185.97;
 		};
-		class Item507
+		class Item505
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27482.145,24.218649,5375.0635};
-				angles[]={0,1.571093,0};
+				position[]={27343.854,9.5006762,5566.2847};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 				init="this setVariable [""ace_medical_isMedicalFacility"", true, true];";
 			};
 			id=6417;
 			type="Land_Medevac_house_V1_F";
-			atlOffset=209.48865;
 		};
-		class Item508
+		class Item506
 		{
 			dataType="Marker";
 			position[]={16747.148,202.38486,13648.493};
@@ -10972,108 +10900,7 @@ class Mission
 			id=6418;
 			atlOffset=192.86084;
 		};
-		class Item509
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27480.521,27.495453,5376.5474};
-				angles[]={0,3.1415927,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				init="this setFlagTexture ""res\kpflag.jpg"";";
-			};
-			id=6419;
-			type="Flag_White_F";
-			atlOffset=8.5367746;
-		};
-		class Item510
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27480.379,27.495453,5378.5591};
-				angles[]={0,3.7524579,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=6421;
-			type="Flag_US_F";
-			atlOffset=8.5367746;
-		};
-		class Item511
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27435.506,0,5296.2451};
-				angles[]={0,3.1415927,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="KPLIB_eden_boat_0";
-			};
-			id=6422;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=185.97;
-		};
-		class Item512
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27445.506,0,5296.2451};
-				angles[]={0,3.1415927,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="KPLIB_eden_boat_1";
-			};
-			id=6423;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=185.97;
-		};
-		class Item513
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27455.506,0,5296.2451};
-				angles[]={0,3.1415927,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="KPLIB_eden_boat_2";
-			};
-			id=6424;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=185.97;
-		};
-		class Item514
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={27465.506,0,5296.2451};
-				angles[]={0,3.1415927,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="KPLIB_eden_boat_3";
-			};
-			id=6425;
-			type="Land_ClutterCutter_small_F";
-			atlOffset=185.97;
-		};
-		class Item515
+		class Item507
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -11296,6 +11123,153 @@ class Mission
 				};
 				nAttributes=11;
 			};
+		};
+		class Item508
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,0,5600};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=6426;
+			type="Land_Destroyer_01_base_F";
+			atlOffset=185.97;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ShipHangarDoorState";
+					expression="[([_this, 'Land_Destroyer_01_hull_04_F'] call bis_fnc_destroyer01GetShipPart), _value, true] spawn bis_fnc_destroyer01AnimateHangarDoors;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="CustomShipFlagTexture0";
+					expression="([_this, 'ShipFlag_US_F'] call bis_fnc_destroyer01GetShipPart) setFlagTexture _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="res\flag_kp_co.paa";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="CustomShipNumber1";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 0] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="CustomShipNumber2";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 1] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="CustomShipNumber3";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=8;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item509
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27361.492,6.7548218,5585.4995};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="KPLIB_eden_boat_1";
+			};
+			id=6427;
+			type="Land_Destroyer_01_Boat_Rack_01_F";
+			atlOffset=193.239;
+		};
+		class Item510
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27338.498,6.7548218,5585.4995};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="KPLIB_eden_boat_0";
+			};
+			id=6428;
+			type="Land_Destroyer_01_Boat_Rack_01_F";
+			atlOffset=193.239;
 		};
 	};
 	class Connections
