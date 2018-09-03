@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6429;
+		nextID=6441;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1573;
+		nextID=1600;
 	};
 	class Camera
 	{
-		pos[]={27387.133,77.370262,5464.4775};
-		dir[]={-0.36465764,-0.44018537,0.82061678};
-		up[]={-0.17877361,0.89786202,0.40230659};
-		aside[]={0.91390491,-5.0714152e-007,0.40611401};
+		pos[]={27474.258,37.428844,5715.5439};
+		dir[]={-0.84432453,-0.14856432,-0.51505321};
+		up[]={-0.12705064,0.98879832,-0.077503599};
+		aside[]={-0.52084452,2.8626237e-006,0.85379994};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,17 @@ addons[]=
 	"A3_Structures_F_Ind_DieselPowerPlant",
 	"A3_Structures_F_System",
 	"A3_Boat_F_Destroyer_Destroyer_01",
-	"A3_Static_F_Destroyer_Boat_Rack_01"
+	"A3_Static_F_Destroyer_Boat_Rack_01",
+	"A3_Static_F_Destroyer_Ship_MRLS_01",
+	"A3_Static_F_Destroyer_Ship_Gun_01",
+	"A3_Static_F_Jets_AAA_System_01",
+	"A3_Static_F_Jets_SAM_System_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -128,6 +132,13 @@ class AddonsMetaData
 		{
 			className="A3_Static_F_Destroyer";
 			name="CFGPATCHES_A3_Static_F_Destroyer";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Static_F_Jets";
+			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -287,7 +298,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=511;
+		items=516;
 		class Item0
 		{
 			dataType="Marker";
@@ -11270,6 +11281,110 @@ class Mission
 			id=6428;
 			type="Land_Destroyer_01_Boat_Rack_01_F";
 			atlOffset=193.239;
+		};
+		class Item511
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,11.897507,5662.4878};
+				angles[]={6.2761512,0,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				ammo=0;
+				name="KPLIB_eden_destroyer_w1";
+				receiveRemoteTargets=1;
+			};
+			id=6435;
+			type="B_Ship_MRLS_01_F";
+			atlOffset=196.494;
+		};
+		class Item512
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,14.828903,5678.9556};
+				angles[]={6.2571101,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				ammo=0;
+				name="KPLIB_eden_destroyer_w0";
+				receiveRemoteTargets=1;
+			};
+			id=6436;
+			type="B_Ship_Gun_01_F";
+			atlOffset=0.00099182129;
+		};
+		class Item513
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,17.593277,5647.896};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="KPLIB_eden_destroyer_w2";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=6437;
+			type="B_AAA_System_01_F";
+			atlOffset=0.13908291;
+		};
+		class Item514
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,21.72261,5564.3423};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="KPLIB_eden_destroyer_w3";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=6438;
+			type="B_AAA_System_01_F";
+			atlOffset=0.072252274;
+		};
+		class Item515
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={27350,17.541412,5549.4067};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="KPLIB_eden_destroyer_w4";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=6439;
+			type="B_SAM_System_01_F";
+			atlOffset=0.2450161;
 		};
 	};
 	class Connections
