@@ -1,6 +1,6 @@
 --- 
 name: Question 
-about: 'It is recommended to ask questions here: https://discord.gg/bpPUU48' 
+about: 'It is recommended to ask questions at the <a href="https://discord.gg/bpPUU48">KP Community Discord</a>' 
  
 --- 
  
