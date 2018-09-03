@@ -1,20 +1,25 @@
 --- 
 name: Question 
-about: 'It is recommended to ask questions at the <a href="https://discord.gg/bpPUU48">KP Community Discord</a>' 
+about: 'Ask questions at the KP Community Discord: https://discord.gg/bpPUU48' 
  
 --- 
  
-<!-- Do you have a question? --> 
-<!-- Join our Discord server for fast responses and latest news!--> 
-<!-- 
-    https://discord.gg/bpPUU48 
+<!--
+
+If you have a question concerning KP Liberation, join the KP Community Discord:
+https://discord.gg/bpPUU48
+
+There you have hundreds of Liberation players and server owners who are able to help you.
+Also some volunteers as direct "Liberation Support", which are looking forward to help others with their questions.
+
+In every case make sure you've already read the Wiki (especially the FAQ) on GitHub:
+https://github.com/KillahPotatoes/KP-Liberation/wiki
+
+Keep in mind that this issue tracker isn't a kind of forum or chat.
+It's meant to be used for contributing bug reports or suggestions/feature requests in accordance with the provided templates.
+
+We ask you to respect this guideline and understand that we'll close everything which isn't one of the above without any comment. That way we can keep our focus on the development.
+
 --> 
- 
-<!-- If you don't want to use Discord please check if your question was not answered already on issue tracker. --> 
-<!--  
-    https://github.com/KillahPotatoes/KP-Liberation/issues?q=is%3Aissue+label%3Aquestion 
- --> 
- 
-#### My question was not answered on the issue tracker and I do not want to use Discord for this. 
-## Question: 
-<!-- Ask your question here. --> 
+
+
