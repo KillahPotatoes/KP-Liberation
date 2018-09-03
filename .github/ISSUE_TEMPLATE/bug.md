@@ -10,6 +10,9 @@ about: 'Report a bug'
 <!-- 
     https://github.com/KillahPotatoes/KP-Liberation/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Abug
  -->
+ 
+ <!-- Otherwise use the template below. This ensures that we have all needed information for a first investigation. -->
+ <!-- Please understand that we close your report uncommented if you don't use the template so we would need to ask everything which is already asked in it. -->
 
 ### Basic Information
 <!-- Include as many relevant details about the environment you experienced the bug in -->
