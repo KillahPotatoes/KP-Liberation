@@ -36,12 +36,6 @@
     _vehicle setDir _spawnDir;
     _vehicle setPosATL _spawnPos;
 
-    // Clear all cargo of the start vehicle.
-    clearWeaponCargoGlobal _vehicle;
-    clearMagazineCargoGlobal _vehicle;
-    clearItemCargoGlobal _vehicle;
-    clearBackpackCargoGlobal _vehicle;
-
     // Activate the simulation again.
     _vehicle enableSimulationGlobal true;
     _vehicle setDamage 0;

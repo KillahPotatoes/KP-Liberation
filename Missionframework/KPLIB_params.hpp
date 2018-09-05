@@ -72,6 +72,13 @@ class Params
         default = 1; // Default value. Must be one from the values array above.
         persistent = 1;
     };
+    class ClearVehicleCargo {
+        title = $STR_PARAMS_CLEARVEHICLECARGO;
+        values[] = {0,1};
+        texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
+        default = 1; // Default value. Must be one from the values array above.
+        persistent = 1;
+    };
     class FirstFob {
         title = $STR_PARAMS_FIRSTFOB;
         values[] = {0,1};

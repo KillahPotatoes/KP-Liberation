@@ -70,6 +70,7 @@
         "KPLIB_param_aggressivity",
         "KPLIB_param_arsenalPreset",
         "KPLIB_param_civilians",
+        "KPLIB_param_clearVehicleCargo",
         "KPLIB_param_debugSave",
         "KPLIB_param_deployCine",
         "KPLIB_param_fatigue",
