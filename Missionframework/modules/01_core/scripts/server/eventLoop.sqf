@@ -13,6 +13,16 @@
 
 waitUntil {!isNil "KPLIB_campaignRunning"};
 
+// Init function for event loop, executed every time whole list of player was iterated
+private _initFunction = {
+    // Get all current FOBs
+    _players = [] call CBA_fnc_players;
+    _tick = 0;
+    _playersCount = count _players;
+    // Get fobs as positions
+    _fobs = (["KPLIB_eden_startbase_marker"] + KPLIB_sectors_fobs);
+};
+
 // Create PFH for fob event
 [
     {
@@ -43,14 +53,7 @@ waitUntil {!isNil "KPLIB_campaignRunning"};
     },      // Handler
     0,      // Delay
     [],     // Args
-    {
-        // Get all current FOBs
-        _players = [] call CBA_fnc_players;
-        _tick = 0;
-        _playersCount = count _players;
-        // Get fobs as positions
-        _fobs = (["KPLIB_eden_startbase_marker"] + KPLIB_sectors_fobs);
-    },      // Start func
+    _initFunction,      // Start func
     {},     // End func
     {KPLIB_campaignRunning}, // Run condition
     {},     // End condition
