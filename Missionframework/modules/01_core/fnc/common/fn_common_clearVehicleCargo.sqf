@@ -1,0 +1,27 @@
+/*
+    KPLIB_fnc_common_clearVehicleCargo
+
+    File: fn_common_clearVehicleCargo.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2018-09-05
+    Last Update: 2018-09-05
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+    Clear global cargo of an vehicle.
+
+    Parameter(s):
+        0: OBJECT - Vehicle which cargo will be cleared
+
+    Returns:
+    BOOL
+*/
+params [["_vehicle", nil, [objNull]]];
+
+// Clear all cargo of the start vehicle.
+clearWeaponCargoGlobal _vehicle;
+clearMagazineCargoGlobal _vehicle;
+clearItemCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+
+true

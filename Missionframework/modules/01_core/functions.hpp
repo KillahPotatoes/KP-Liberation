@@ -95,6 +95,9 @@ class core {
 class common {
     file = "modules\01_core\fnc\common";
 
+    // Clears vehicle cargo
+    class common_clearVehicleCargo;
+
     // Creates namespace
     class common_createNamespace {};
 
