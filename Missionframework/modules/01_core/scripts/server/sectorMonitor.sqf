@@ -21,19 +21,14 @@ if(isServer) then {
     private _initFunction = {
         // Get inactive sectors
         _sectors = (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
-        _startTime = time; // DEBUG
-
-        {_x setMarkerColor KPLIB_preset_colorEnemy;} forEach _sectors; // DEBUG
-
+        _sectorCapReached = (count KPLIB_sectors_active < KPLIB_cap_sector);
     };
 
     // Create PFH Object for sectors activation check
     [
-        {"KPLIB_sector_loop";
-
+        {
             // If we checked whole list, reinitialize the list
             if (_sectors isEqualTo []) then {
-                systemChat format["Exec time: %1", (time - _startTime)]; // DEBUG
                 [] call (_this getVariable "start");
             };
 
@@ -42,7 +37,6 @@ if(isServer) then {
 
             // Check if sector should be activated
             if([getMarkerPos _currentSector, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
-                systemChat format["Activating %1", _currentSector];
                 [_currentSector] call KPLIB_fnc_core_handleSector;
             };
         },      // Handler
@@ -50,9 +44,9 @@ if(isServer) then {
         [],     // Args
         _initFunction,      // Start func
         {},     // End func
-        {KPLIB_campaignRunning && (count KPLIB_sectors_active < KPLIB_cap_sector)}, // Run condition
+        {KPLIB_campaignRunning && _sectorCapReached}, // Run condition
         {},     // End condition
-        ["_sectors", "_startTime"]      // Privates to serialize between calls
+        ["_sectors", "_sectorCapReached"]      // Privates to serialize between calls
     ] call CBA_fnc_createPerFrameHandlerObject;
 
 };
