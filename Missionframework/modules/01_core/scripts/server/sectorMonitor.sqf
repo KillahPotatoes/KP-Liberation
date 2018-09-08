@@ -21,7 +21,6 @@ if(isServer) then {
     private _initFunction = {
         // Get inactive sectors
         _sectors = (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
-        _sectorCapReached = (count KPLIB_sectors_active < KPLIB_cap_sector);
     };
 
     // Create PFH Object for sectors activation check
@@ -44,9 +43,9 @@ if(isServer) then {
         [],     // Args
         _initFunction,      // Start func
         {},     // End func
-        {KPLIB_campaignRunning && _sectorCapReached}, // Run condition
+        {KPLIB_campaignRunning && (count KPLIB_sectors_active < KPLIB_cap_sector)}, // Run condition
         {},     // End condition
-        ["_sectors", "_sectorCapReached"]      // Privates to serialize between calls
+        ["_sectors"]      // Privates to serialize between calls
     ] call CBA_fnc_createPerFrameHandlerObject;
 
 };
