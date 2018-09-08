@@ -95,11 +95,8 @@ class core {
 class common {
     file = "modules\01_core\fnc\common";
 
-    // Creates namespace
-    class common_createNamespace {};
-
-    // Get all human players
-    class common_getAllPlayers {};
+    // Clears vehicle cargo
+    class common_clearVehicleCargo;
 
     // Generate positions in circle
     class common_getCirclePositions {};

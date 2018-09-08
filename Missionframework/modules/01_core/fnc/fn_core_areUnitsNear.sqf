@@ -4,7 +4,7 @@
     File: fn_core_areUnitsNear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-07
-    Last Update: 2018-05-07
+    Last Update: 2018-09-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,11 +21,6 @@
 
 params ["_centerPos", ["_radius", 1000], ["_sidesToCheck", [KPLIB_preset_sidePlayers]]];
 
-private _return = false;
-
 private _nearUnits = _centerPos nearEntities ["AllVehicles", _radius];
-private _nearUnitsCount = {side _x in _sidesToCheck} count _nearUnits;
-
-if (_nearUnitsCount > 0) then {_return = true;};
-
-_return
+// Return true if there is any enemy unit in the area
+(_nearUnits findIf {side _x in _sidesToCheck} != -1)
