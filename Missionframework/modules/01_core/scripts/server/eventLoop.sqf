@@ -26,7 +26,6 @@ private _initFunction = {
 // Create PFH for fob event
 [
     {
-
         private _currentPlayer = _players select _tick;
         // Increment the counter
         _tick = _tick + 1;
