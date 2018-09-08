@@ -98,9 +98,6 @@ class common {
     // Clears vehicle cargo
     class common_clearVehicleCargo;
 
-    // Creates namespace
-    class common_createNamespace {};
-
     // Generate positions in circle
     class common_getCirclePositions {};
 

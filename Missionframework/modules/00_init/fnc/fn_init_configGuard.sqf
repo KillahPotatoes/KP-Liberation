@@ -22,7 +22,7 @@
 if(!isServer || (["DebugConfigGuard", 1] call BIS_fnc_getParamValue) == 0) exitWith {};
 
 // Create validation namespace on server
-KPLIB_validationNamespace = call KPLIB_fnc_common_createNamespace;
+KPLIB_validationNamespace = [] call CBA_fnc_createNamespace;
 
 // Config
 KPLIB_validationNamespace setVariable ["config", false];
