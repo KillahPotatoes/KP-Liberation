@@ -13,38 +13,49 @@
 
 waitUntil {!isNil "KPLIB_campaignRunning"};
 
-while {KPLIB_campaignRunning} do {
-    // FOB Event
-    // Get all players
-    private _players = allPlayers select {alive _x && !(_x isKindOf "HeadlessClient_F")};
-    private _checkedPlayers = [];
-
-    // Check for players inside fobs
-    {
-        private _fob = _x;
-        private _inFob = _players inAreaArray [getMarkerPos _fob, KPLIB_range_fob, KPLIB_range_fob];
-        _checkedPlayers append _inFob;
-        // Handle all players in current fob
-        {
-            // If player is in current fob but it is not set on him we need to Emit event
-            if(!(_x getVariable ["KPLIB_fob", ""] isEqualTo _fob)) then {
-                // Save current player fob on player
-                _x setVariable ["KPLIB_fob", _fob];
-                // Emit event
-                ["KPLIB_player_fob", [_x, _fob]] call CBA_fnc_globalEvent;
-            };
-        } forEach _inFob;
-    } forEach (KPLIB_sectors_fobs + ["KPLIB_eden_startbase_marker"]);
-
-    // Players that left are outside of fobs
-    {
-        if(!(_x getVariable ["KPLIB_fob", ""] isEqualTo "")) then {
-            // Remove fob that was saved on player
-            _x setVariable ["KPLIB_fob", ""];
-            // Emit event
-            ["KPLIB_player_fob", [_x, ""]] call CBA_fnc_globalEvent;
-        };
-    } forEach (_players - _checkedPlayers);
-
-    uiSleep 3;
+// Init function for event loop, executed every time whole list of player was iterated
+private _initFunction = {
+    // Get all current FOBs
+    _players = [] call CBA_fnc_players;
+    _tick = 0;
+    _playersCount = count _players;
+    // Get fobs as positions
+    _fobs = (["KPLIB_eden_startbase_marker"] + KPLIB_sectors_fobs);
 };
+
+// Create PFH for fob event
+[
+    {
+        private _currentPlayer = _players select _tick;
+        // Increment the counter
+        _tick = _tick + 1;
+
+        private _playerFob = "";
+        // Check if player is in any of the fobs
+        {
+            if (_currentPlayer inArea [getMarkerPos _x, KPLIB_range_fob, KPLIB_range_fob, 0, false]) exitWith {
+                _playerFob = _x;
+            };
+        } forEach _fobs;
+
+        // Set fob variable on player if it has changed
+         if !(_currentPlayer getVariable ["KPLIB_fob", ""] isEqualTo _playerFob) then {
+            _currentPlayer setVariable ["KPLIB_fob", _playerFob];
+            // Emit event
+            ["KPLIB_player_fob", [_currentPlayer, _playerFob]] call CBA_fnc_globalEvent;
+        };
+
+        // If we checked whole list, reinitialize the list
+        if(_tick >= _playersCount) then {
+            [] call (_this getVariable "start");
+        };
+    },      // Handler
+    0,      // Delay
+    [],     // Args
+    _initFunction,      // Start func
+    {},     // End func
+    {KPLIB_campaignRunning}, // Run condition
+    {},     // End condition
+    ["_players", "_tick", "_playersCount", "_fobs"]      // Privates to serialize between calls
+] call CBA_fnc_createPerFrameHandlerObject;
+

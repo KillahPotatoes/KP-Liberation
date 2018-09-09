@@ -22,7 +22,7 @@
 if(!isServer || (["DebugConfigGuard", 1] call BIS_fnc_getParamValue) == 0) exitWith {};
 
 // Create validation namespace on server
-KPLIB_validationNamespace = call KPLIB_fnc_common_createNamespace;
+KPLIB_validationNamespace = [] call CBA_fnc_createNamespace;
 
 // Config
 KPLIB_validationNamespace setVariable ["config", false];
@@ -36,7 +36,7 @@ KPLIB_validationNamespace setVariable ["resistance", false];
 
 // Delay all checks unitl all initialization is done
 [] spawn {
-    waitUntil{time > 0 && count call KPLIB_fnc_common_getAllPlayers > 0};
+    waitUntil{time > 0 && count call CBA_fnc_players > 0};
     diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];
 
     // Get array of variables to check
