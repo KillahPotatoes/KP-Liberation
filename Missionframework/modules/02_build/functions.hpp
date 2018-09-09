@@ -14,24 +14,42 @@
 class build {
     file = "modules\02_build\fnc";
 
-    // Close build camera
-    class build_camClose {};
+    // PFH limiting camera flying area
+    class build_camAreaLimiter {};
 
     // Open build menu
-    class build_camOpen {};
+    class build_camCreate {};
 
-    class build_camera_ticker_start {};
+    // Display initialization
+    class build_displayLoad {};
 
-    class build_camera_ticker_stop {};
+    // Place object in build queue
+    class build_displayPlaceObject {};
 
-    class build_fobArea {};
+    // Set display build mode (tab)
+    class build_displaySetMode {};
 
-    class build_displayScript {};
+    // Handle tab click
+    class build_displayTabClick {};
+
+    // Display load handler
+    class build_displayUnload {};
+
+    // Mouse movement and click handler
+    class build_handleMouse {};
 
     // Module initialization
     class build_initModule {
         postInit = 1;
     };
 
+    // Marks given area with circle created out of spheres
+    class build_markArea {};
+
     class build_setupPlayerActions {};
+
+    // Start building logic
+    class build_start {};
+
+    class build_stop {};
 };

@@ -16,10 +16,23 @@ class KPLIB_build {
     idd = -1;
     movingEnable = 0;
 
-    onLoad = "['onLoad', _this] call KPLIB_fnc_build_displayScript";
-    onUnload = "['onUnload', _this] call KPLIB_fnc_build_displayScript";
+    onLoad = "call KPLIB_fnc_build_displayLoad";
+    onUnload = "call KPLIB_fnc_build_displayUnload";
 
     class controlsBackground {
+
+        class MouseHandler: RscControlsGroupNoScrollbars {
+            idc = 101;
+            x = safeZoneX;
+            y = safeZoneY;
+            w = safeZoneW;
+            h = safeZoneH;
+            onMouseButtonDown = "['onMouseButtonDown', _this] call KPLIB_fnc_build_handleMouse";
+            onMouseButtonUp = "['onMouseButtonUp', _this] call KPLIB_fnc_build_handleMouse";
+            onMouseZChanged = "['onMouseZChanged', _this] call KPLIB_fnc_build_handleMouse";
+            onMouseMoving = "['onMouseMoving', _this] call KPLIB_fnc_build_handleMouse";
+            onMouseHolding = "['onMouseHolding', _this] call KPLIB_fnc_build_handleMouse";
+        };
 
         class KPLIB_DialogTitle: KP_DialogTitleC {
             text = "$STR_BUILD";
@@ -33,11 +46,6 @@ class KPLIB_build {
     };
 
     class Controls {
-
-        class KPLIB_DialogCross: KP_DialogCrossC {
-            action = "call KPLIB_fnc_build_camClose;";
-            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
-        };
 
         class KPLIB_ModeUnits: KP_ActivePicture {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
@@ -115,6 +123,11 @@ class KPLIB_build {
 
             w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
             onButtonClick = "['build', _this] call KPLIB_fnc_build_displayScript";
+        };
+
+        class KPLIB_DialogCross: KP_DialogCrossC {
+            action = "call KPLIB_fnc_build_stop";
+            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
         };
 
     };
