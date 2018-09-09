@@ -34,11 +34,6 @@ class KPLIB_build {
 
     class Controls {
 
-        class KPLIB_DialogCross: KP_DialogCrossC {
-            action = "call KPLIB_fnc_build_camClose;";
-            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
-        };
-
         class KPLIB_ModeUnits: KP_ActivePicture {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
@@ -115,6 +110,11 @@ class KPLIB_build {
 
             w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
             onButtonClick = "['build', _this] call KPLIB_fnc_build_displayScript";
+        };
+
+        class KPLIB_DialogCross: KP_DialogCrossC {
+            action = "call KPLIB_fnc_build_camClose;";
+            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
         };
 
     };
