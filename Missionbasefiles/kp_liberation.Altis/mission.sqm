@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1600;
+		nextID=1627;
 	};
 	class Camera
 	{
-		pos[]={27474.258,37.428844,5715.5439};
-		dir[]={-0.84432453,-0.14856432,-0.51505321};
-		up[]={-0.12705064,0.98879832,-0.077503599};
-		aside[]={-0.52084452,2.8626237e-006,0.85379994};
+		pos[]={27350.963,14.753862,5474.4766};
+		dir[]={0.036241163,-0.15555356,0.98727185};
+		up[]={0.0057144975,0.9877041,0.15570982};
+		aside[]={0.99946183,2.5690078e-006,-0.036677718};
 	};
 };
 binarizationWanted=0;
@@ -11154,6 +11154,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="CustomShipNameTexture0";
+					expression="([_this, 'Land_Destroyer_01_hull_05_F'] call bis_fnc_destroyer01GetShipPart) setObjectTextureGlobal [0, _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="res\destroyer_decal_ca.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ShipHangarDoorState";
 					expression="[([_this, 'Land_Destroyer_01_hull_04_F'] call bis_fnc_destroyer01GetShipPart), _value, true] spawn bis_fnc_destroyer01AnimateHangarDoors;";
 					class Value
@@ -11171,7 +11190,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="CustomShipFlagTexture0";
 					expression="([_this, 'ShipFlag_US_F'] call bis_fnc_destroyer01GetShipPart) setFlagTexture _value;";
@@ -11190,7 +11209,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="CustomShipNumber1";
 					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 0] spawn bis_fnc_destroyer01InitHullNumbers;";
@@ -11209,7 +11228,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="CustomShipNumber2";
 					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 1] spawn bis_fnc_destroyer01InitHullNumbers;";
@@ -11228,7 +11247,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="CustomShipNumber3";
 					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
@@ -11247,7 +11266,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=5;
+				nAttributes=6;
 			};
 		};
 		class Item509
