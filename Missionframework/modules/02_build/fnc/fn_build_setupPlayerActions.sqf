@@ -19,27 +19,14 @@
 
 // Actions avalible LOCALLY to player
 if(hasInterface) then {
-    ["KPLIB_player_fob", {
-        params ["_player", "_fob"];
-
-        private _buildActionId = _player getVariable ["KPLIB_actionId_build", nil];
-
-        // Remove redeploy action if player had one avalible
-        if (_fob isEqualTo "" || _fob isEqualTo "KPLIB_eden_startbase_marker") then {
-            if (!isNil "_buildActionId") then {
-                _player removeAction _buildActionId;
-                _player setVariable ["KPLIB_actionId_build", nil];
-            };
-        } else {
-            // If entered fob and had no action
-            if (isNil "_buildActionId") then {
-                // Add action to player
-                _buildActionId = _player addAction [localize "STR_ACTION_FOB_BUILD", {[] spawn KPLIB_fnc_build_camOpen}, nil, -802, false, true, "", "vehicle player == player", 10];
-                // Save action id so it can we removed when out of FOB
-                _player setVariable ["KPLIB_actionId_build", _buildActionId];
-            };
-        };
-    }] call CBA_fnc_addEventHandler
+    // Build action
+    private _buildCondition = 'vehicle player == player && !(player getVariable ["KPLIB_fob", ""] in ["", "KPLIB_eden_startbase_marker"])';
+    private _buildAction = {
+        private _pos = getMarkerPos (player getVariable "KPLIB_fob");
+        [_pos, KPLIB_range_fob] call KPLIB_fnc_build_start;
+    };
+    _buildActionId = player addAction [localize "STR_ACTION_FOB_BUILD", _buildAction, nil, -802, false, true, "", _buildCondition, 10];
+    player setVariable ["KPLIB_actionId_build", _buildActionId];
 };
 
 true

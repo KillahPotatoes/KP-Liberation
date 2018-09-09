@@ -8,19 +8,20 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Opens the build camera and creates build overlay
+    Creates the build camera
 
     Parameter(s):
     NONE
 
     Returns:
-    BOOL
+    OBJECT - Building camera
 */
+params [
+    ["_position", nil, [[]]],
+    ["_radius", nil, [0]]
+];
 
 private _camera = "CamCurator" camCreate (eyePos player);
-
-// Animate player
-player playactionnow "gear";
 
 _camera cameraEffect ["internal", "back"];
 _camera camCommand "maxPitch 89";
@@ -35,11 +36,6 @@ _camera camCommand format ["speedMax %1", 1.5];
 // Enable display of GUI in camera
 cameraEffectEnableHUD true;
 
-[] call KPLIB_fnc_build_camera_ticker_start;
+[_position, _radius, _camera] call KPLIB_fnc_build_camAreaLimiter;
 
-KPLIB_build_camera = _camera;
-
-private _display = (findDisplay 46) createDisplay "KPLIB_build";
-uiNamespace setVariable ["KPLIB_build_display", _display];
-
-true
+_camera
