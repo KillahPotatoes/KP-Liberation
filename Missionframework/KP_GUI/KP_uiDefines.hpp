@@ -191,7 +191,7 @@ class KP_InlineButton: RscButton {
     sizeEx = KP_TEXT_M;
     offsetPressedX = safeZoneW * 0.0005;
     offsetPressedY = safeZoneH * 0.001;
-}
+};
 
 // Controls group
 class KP_ControlsGroup: RscControlsGroup {};
