@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-08-31
+    Last Update: 2018-09-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -46,6 +46,9 @@ class core {
 
     // Handle an activated sector
     class core_handleSector {};
+
+    // Handle vehicle spawn event
+    class core_handleVehicleSpawn {};
 
     // Module initialization
     class core_initModule {
