@@ -32,7 +32,7 @@ switch(typeOf _vehicle) do {
         // Add redeploy action globaly and for JIP
         [
             _vehicle,
-            [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -801, false, true, "", "_target == _originalTarget", 10]
+            [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -801, false, true, "", "_this == vehicle _this", 10]
         ] remoteExecCall ["addAction", 0, true];
     };
 };
