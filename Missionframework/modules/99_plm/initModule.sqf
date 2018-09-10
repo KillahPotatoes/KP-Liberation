@@ -20,7 +20,7 @@
 */
 
 // Read the module globals
-call compile preprocessFileLineNumbers "modules\99_playerMenu\globals.sqf";
+call compile preprocessFileLineNumbers "modules\99_plm\globals.sqf";
 
 // Load settings, if available
 private _settings = profileNamespace getVariable ["KP_PLM_Settings", []];

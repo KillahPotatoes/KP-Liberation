@@ -10,37 +10,42 @@
     Description:
     Handles activation of sectors and spawning of the sector handle script, if blufor units are near a sector.
 */
+scriptName "KPLIB_sectorMonitor";
 
-while {KPLIB_campaignRunning} do {
-    // Has a sector been activated?
-    private _sectorActivated = false;
+if(isServer) then {
 
-    // Only check for possible sector activation, if the cap isn't already reached. (The cap can be intended exceeded during one loop circle)
-    if (count KPLIB_sectors_active < KPLIB_cap_sector) then {
+    // Update sector markers every time sector state was changed
+    {[_x, {call KPLIB_fnc_core_updateSectorMarkers}] call CBA_fnc_addEventHandler;} forEach ["KPLIB_sector_activated", "KPLIB_sector_deactivated"];
+
+    // Init function, executed every time whole list of sectors was iterated
+    private _initFunction = {
+        // Get inactive sectors
+        _sectors = (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
+    };
+
+    // Create PFH Object for sectors activation check
+    [
         {
-            // Position of current sector.
-            private _currentSectorPos = getMarkerPos _x;
-
-            // If there are units inside the activation radius, start the sector handle script.
-            if ([_currentSectorPos, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
-                // NOTE: Later we could check here for the HC load and distribute the sector handling to a HC, if running.
-                KPLIB_sectors_active pushBack _x;
-                [_x] spawn KPLIB_fnc_core_handleSector;
-                _sectorActivated = true;
+            // If we checked whole list, reinitialize the list
+            if (_sectors isEqualTo []) then {
+                [] call (_this getVariable "start");
             };
-        } forEach (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
-    } else {
-        diag_log format ["[KP LIBERATION] [SECTOR CAP] Cap for active sectors reached. %1 sectors currently active.", count KPLIB_sectors_active];
-        // Wait here to avoid rpt spamming of the above message.
-        waitUntil {uiSleep 5; count KPLIB_sectors_active < KPLIB_cap_sector};
-    };
 
-    // Update the active sectors array and sector marker colors on all machines, if at least one has been activated.
-    // We could leave this variable out and just do it every circle, but then it's basically the same as before (just one loop instead of two)
-    if (_sectorActivated) then {
-        publicVariable "KPLIB_sectors_active";
-        call KPLIB_fnc_core_updateSectorMarkers;
-    };
+            // Extract current sector from array
+            private _currentSector = _sectors deleteAt (random count _sectors);
 
-    uiSleep 5;
+            // Check if sector should be activated
+            if([getMarkerPos _currentSector, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
+                [_currentSector] call KPLIB_fnc_core_handleSector;
+            };
+        },      // Handler
+        0,      // Delay
+        [],     // Args
+        _initFunction,      // Start func
+        {},     // End func
+        {KPLIB_campaignRunning && (count KPLIB_sectors_active < KPLIB_cap_sector)}, // Run condition
+        {},     // End condition
+        ["_sectors"]      // Privates to serialize between calls
+    ] call CBA_fnc_createPerFrameHandlerObject;
+
 };

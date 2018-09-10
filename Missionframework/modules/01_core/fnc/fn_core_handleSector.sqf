@@ -4,7 +4,7 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-05-06
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,66 +17,56 @@
     NOTHING
 */
 
-params ["_sectorMarkerName"];
+params [["_sectorMarkerName", nil, [""]]];
 
-// Position of the sector.
-private _sectorPos = getMarkerPos _sectorMarkerName;
-// Leave loop variable.
-private _sectorActive = true;
-// Sector ready to be captured variable.
-private _sectorCaptureReady = false;
-// Deactivation timer. Set with the substraction to directly deactivate a sector if it was activated through a "fly by".
-private _sectorTimer = diag_tickTime - KPLIB_sectors_stayActiveTime;
+// Create sector handler PFH Object
+private _handler = [
+    {
+        // Per Tick
+        _this getVariable "params" params ["_sector", "_sectorPos"];
 
-/**
- * TODO:
- * At this place we should add the spawning and other "upon sector activation" stuff when we reached that development stage.
- */
-// Emit event about activated sector
-["sector_activated", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
+        // If there are no enemy units in two times the capture range and friendly units are in capture range
+        // capture the sector
+        if (
+            !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
+            && {[_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear}
+        ) then {
+            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was captured", [diag_tickTime, _sector]];
 
-// Loop until the sector is abandoned.
-while {_sectorActive} do {
-    uiSleep 15;
+            _this setVariable ["KPLIB_sectorActive", false];
+            [_sector] call KPLIB_fnc_core_changeSectorOwner;
+            ["KPLIB_sector_captured", [_sector]] call CBA_fnc_globalEvent;
+        }
+        else {
+            // If there are no friendly units in activation range, deactivate the sector
+            if !([_sectorPos, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
+                _this setVariable ["KPLIB_sectorActive", false];
+            }
+        }
+    }, // Handler
+    (15 + random 5), // Delay
+    [_sectorMarkerName, getMarkerPos _sectorMarkerName], // Args
+    {
+        _this getVariable "params" params ["_sector"];
 
-    if ([_sectorPos, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
-        // Reset deactivation timer.
-        _sectorTimer = diag_tickTime;
+        _this setVariable ["KPLIB_sectorActive", true];
 
-        /**
-         * NOTE:
-         * Maybe we could move the spawning etc. in here with a "_sectorSpawned" variable to do the spawning after the "fly by" catching.
-         * But it could lead to a "Enemies spawn too late", but with a "spawn for 15 seconds" it could be more dangerous for air vehicles
-         * to travel through enemy airspace. Guess this is something we have to look into when it comes to the enemy module and performance questions.
-         */
+        KPLIB_sectors_active pushBack _sector;
+        publicVariable "KPLIB_sectors_active";
+        ["KPLIB_sector_activated", [_sector]] call CBA_fnc_globalEvent;
 
-        // Check if blufor captured the sector and call ownership change
-        if ([_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear && !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)) then {
-            // Ensure that there are really no enemies nearby, by insert one loop cycle as wait time.
-            if (_sectorCaptureReady) then {
-                _sectorActive = false;
-                [_sectorMarkerName] call KPLIB_fnc_core_changeSectorOwner;
-                ["sector_captured", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
-            } else {
-                _sectorCaptureReady = true;
-            };
-        } else {
-            _sectorCaptureReady = false;
-        };
-    } else {
-        if (diag_tickTime > (_sectorTimer + KPLIB_sectors_stayActiveTime)) then {
-            _sectorActive = false;
-        };
-    };
-};
+        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was activated", [diag_tickTime, _sector]];
 
-// Remove sector from active sectors array.
-KPLIB_sectors_active = KPLIB_sectors_active - [_sectorMarkerName];
-publicVariable "KPLIB_sectors_active";
+    }, // Start func
+    {
+        _this getVariable "params" params ["_sector"];
 
-// Emit event about deactivated sector
-["sector_deactivated", [_sectorMarkerName], true] call KPLIB_fnc_event_trigger;
+        KPLIB_sectors_active = KPLIB_sectors_active - [_sector];
+        publicVariable "KPLIB_sectors_active";
+        ["KPLIB_sector_deactivated", [_sector]] call CBA_fnc_globalEvent;
 
-// As the argument for changing a sector color should be global this should be fine. If not, we've to change it to something like
-// If isServer then call, else remoteExec on server (concerning sector handling by HCs in the end)
-call KPLIB_fnc_core_updateSectorMarkers;
+        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was deactivated", [diag_tickTime, _sector]];
+    }, // End func
+    {true}, // Run condition
+    {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition
+] call CBA_fnc_createPerFrameHandlerObject;

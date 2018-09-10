@@ -4,7 +4,7 @@
     File: fn_common_setupPlayerActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-28
-    Last Update: 2018-05-28
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,7 +20,7 @@
 // Actions avalible GLOBALLY on objects
 if (isServer) then {
     // Actions on Vehicles
-    ["vehicle_spawned", {
+    ["KPLIB_vehicle_spawned", {
         params ["_vehicle"];
 
         switch(typeOf _vehicle) do {
@@ -41,12 +41,12 @@ if (isServer) then {
                 ] remoteExecCall ["addAction", 0, true];
             };
         };
-    }] call KPLIB_fnc_event_addHandler;
+    }] call CBA_fnc_addEventHandler;
 };
 
 // Actions avalible LOCALLY to player
 if(hasInterface) then {
-    ["player_fob", {
+    ["KPLIB_player_fob", {
         params ["_player", "_fob"];
 
         private _redeployActionId = _player getVariable ["KPLIB_actionId_redeploy", nil];
@@ -66,7 +66,7 @@ if(hasInterface) then {
                 _player setVariable ["KPLIB_actionId_redeploy", _redeployActionId];
             };
         };
-    }] call KPLIB_fnc_event_addHandler
+    }] call CBA_fnc_addEventHandler
 };
 
 true

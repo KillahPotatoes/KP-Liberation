@@ -494,6 +494,9 @@
             <Turkish>Arttırılmış</Turkish>
             <Portuguese>Aumentada</Portuguese>
         </Key>
+        <Key ID="STR_PARAMS_CLEARVEHICLECARGO">
+            <Original>Clear vehicles cargo</Original>
+        </Key>
         <Key ID="STR_PARAMS_FIRSTFOB">
             <Original>Start the campaign with the first FOB already built</Original>
             <French>Commencer la campagne avec une première FOB déjà construite</French>
@@ -1424,6 +1427,10 @@
         <Key ID="STR_PLAYERDIALOG_NOTLEADER">
             <Original>You're not the leader of this group.</Original>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>
+        </Key>
+        <Key ID="STR_PLAYERDIALOG_NOLVLSYSTEM">
+            <Original>Leveling system disabled</Original>
+            <German>Levelsystem deaktiviert</German>
         </Key>
     </Package>
     <Package name="Debriefings">

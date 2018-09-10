@@ -4,7 +4,7 @@
     File: fn_core_buildFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-11
-    Last Update: 2018-05-11
+    Last Update: 2018-08-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,11 +38,11 @@ if (_interactive) then {
     deleteVehicle _box;
     private _marker = [_buildPos] call KPLIB_fnc_core_createFobMarker;
     KPLIB_sectors_fobs pushBack _marker;
-    ["fob_built", [_marker]] call KPLIB_fnc_event_trigger;
+    ["KPLIB_fob_built", [_marker]] call CBA_fnc_localEvent;
 } else {
     private _marker = [_buildPos] call KPLIB_fnc_core_createFobMarker;
     KPLIB_sectors_fobs pushBack _marker;
-    ["fob_built", [_marker]] call KPLIB_fnc_event_trigger;
+    ["KPLIB_fob_built", [_marker]] call CBA_fnc_localEvent;
 };
 
 publicVariable "KPLIB_sectors_fobs";

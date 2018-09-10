@@ -22,11 +22,10 @@
 if(!isServer || alive KPLIB_core_potato01) exitWith {};
 
 // If Potato 01 wreck is too close to respawn we should delete it.
-if((KPLIB_core_potato01 distance2D KPLIB_eden_potatospawn) < 10 && !alive KPLIB_core_potato01) then {
+if((KPLIB_core_potato01 distance2D KPLIB_eden_potatospawn) < 10 && !alive KPLIB_core_potato01) exitWith {
     deleteVehicle KPLIB_core_potato01;
-    // deleteVehicle deletes object in next frame.
-    // Without sleep player was sometimes unable to interact with object.
-    uiSleep 1;
+    // Spawn Helicopter after wreck was deleted
+    [{[] call KPLIB_fnc_core_spawnPotato}, [], 1] call CBA_fnc_waitAndExecute;
 };
 
 // Position for the spawn.
@@ -39,4 +38,4 @@ KPLIB_core_potato01 = [KPLIB_preset_potato, [_spawnPos select 0, _spawnPos selec
 KPLIB_core_potato01 setVariable ["ace_medical_medicClass", 1, true];
 
 // Add event handler to call this script again if we have a "Potato down".
-KPLIB_core_potato01 addMPEventHandler ["MPKilled", {[] spawn KPLIB_fnc_core_spawnPotato}];
+KPLIB_core_potato01 addMPEventHandler ["MPKilled", {[] call KPLIB_fnc_core_spawnPotato}];

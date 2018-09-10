@@ -10,12 +10,18 @@
     Description:
     Repeatedly triggers the save process depending on configured time interval.
 */
+scriptName "KPLIB_saveTimer";
 
 waitUntil {KPLIB_save_loaded};
 
-while {KPLIB_campaignRunning} do {
-    uiSleep KPLIB_save_interval;
-    call KPLIB_fnc_init_save;
-};
+// Add saveTimer per frame handler
+[{
+    params ["_args", "_handle"];
 
-diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
+    if (KPLIB_campaignRunning) then {
+        [] call KPLIB_fnc_init_save;
+    } else {
+        _handle call CBA_fnc_removePerFrameHandler;
+        diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
+    }
+}, KPLIB_save_interval] call CBA_fnc_addPerFrameHandler;
