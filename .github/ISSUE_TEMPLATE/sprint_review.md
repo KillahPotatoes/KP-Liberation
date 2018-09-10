@@ -9,6 +9,7 @@ As we will release a working iteration of the new framework after every sprint, 
 The only thing to remember is that you should only report bugs in this issue, which are caused by the contents of this sprint (which are listed below). So it is vital to look at the content description to see what was actually added. Only by reading this you know what we've really intended to implement and defined as done.
 I guess you understand that reporting things which weren't even planned to be part of the sprint won't help in any way.
 This releases (which are also marked as *Pre-release*) aren't meant to be played as replacement for the current framework. It is for testing purpose or a kind of first look at features/changes which will be part of the 0.97 release in some months.
+For serious playing use the latest stable release: [v0.963a](https://github.com/KillahPotatoes/KP-Liberation/releases/tag/v0.963a-Hotfix3)
 
 ### Summary of this sprint
 <!-- A summary of what've been done during the sprint. Also which conclusions, plans, new ideas, etc. evolved. -->
@@ -21,7 +22,7 @@ This releases (which are also marked as *Pre-release*) aren't meant to be played
 
 ### Released sprint result
 <!-- Link to the releases entry of the current sprint release -->
-<!-- Example: https://github.com/KillahPotatoes/KP-Liberation/releases/tag/v0.97S3 -->
+<!-- Example: https://github.com/KillahPotatoes/KP-Liberation/releases/tag/v0.97S6 -->
 
 
 ### Bugs found so far
@@ -36,6 +37,7 @@ This releases (which are also marked as *Pre-release*) aren't meant to be played
 <!-- History of all Sprint Review Issues from the past -->
 | Sprint | Quick Summary | Details |
 | --- | --- | --- |
+| 4 | Player and Admin menu, building camera overlay | #471 |
 | 3 | First UI overhaul, config guard, free build camera | #445 |
 | 2 | Event handling and action manager | #427 |
 | 1 | Basic CTI functionality: Intro, Spawn, FOB deploy, capture sector, win campaign | #404 |
