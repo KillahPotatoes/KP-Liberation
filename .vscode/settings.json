@@ -96,5 +96,49 @@
         "KPR_playerNation",
         "KPR_players",
         "KPR_uniforms"
+    ],
+    "psi-header.lang-config": [
+        {
+            "license": "Custom",
+            "language": "sqf",
+            "rootDirFileName": "description.ext",
+            "begin": "/*",
+            "prefix": "    ",
+            "end": "*/",
+            "forceToTop": true
+        }
+    ],
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "include": ["sqf"],
+        "modDate": "Last Update:",
+        "modDateFormat": "YYYY-MM-DD",
+        "autoHeader": "manualSave"
+    },
+    "psi-header.license-text": [
+        "GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html"
+    ],
+    "psi-header.templates": [
+        {
+            "language": "sqf",
+            "template": [
+                "KPLIB_fnc_",
+                "",
+                "File: <<filename>>",
+                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Date: <<filecreated('YYYY-MM-DD')>>",
+                "Last Update:",
+                "License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html",
+                "",
+                "Description:",
+                "-",
+                "",
+                "Parameter(s):",
+                "NONE",
+                "",
+                "Returns:",
+                "NOTHING"
+            ]
+        }
     ]
 }
