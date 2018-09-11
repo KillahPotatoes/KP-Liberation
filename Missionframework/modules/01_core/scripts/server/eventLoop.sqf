@@ -40,7 +40,7 @@ private _initFunction = {
 
         // Set fob variable on player if it has changed
          if !(_currentPlayer getVariable ["KPLIB_fob", ""] isEqualTo _playerFob) then {
-            _currentPlayer setVariable ["KPLIB_fob", _playerFob];
+            _currentPlayer setVariable ["KPLIB_fob", _playerFob, true];
             // Emit event
             ["KPLIB_player_fob", [_currentPlayer, _playerFob]] call CBA_fnc_globalEvent;
         };
