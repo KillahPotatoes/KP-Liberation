@@ -15,5 +15,6 @@
 #include "modules\00_init\ui.hpp"
 #include "modules\01_core\ui.hpp"
 #include "modules\02_build\ui.hpp"
+#include "modules\02_respawn\ui.hpp"
 #include "modules\99_adm\ui.hpp"
 #include "modules\99_plm\ui.hpp"

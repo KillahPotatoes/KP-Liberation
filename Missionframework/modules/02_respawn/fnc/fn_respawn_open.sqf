@@ -4,7 +4,7 @@
     File: fn_core_redeploy.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-29
-    Last Update: 2018-07-01
+    Last Update: 2018-09-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,6 +17,9 @@
     NOTHING
 */
 
+// Open dialog and disable serialization, so local variables can store displays and controls
+createDialog "KPLIB_redeploy";
+
 // Start redeploy cinematic
 showCinemaBorder false;
 camUseNVG false;
@@ -27,8 +30,6 @@ _respawn_camera camSetTarget _respawn_object;
 _respawn_camera cameraEffect ["internal","back"];
 _respawn_camera camcommit 0;
 
-// Open dialog and disable serialization, so local variables can store displays and controls
-createDialog "KPLIB_redeploy";
 disableSerialization;
 waitUntil {dialog};
 

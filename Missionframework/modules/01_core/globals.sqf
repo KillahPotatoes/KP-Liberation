@@ -4,7 +4,7 @@
     File: globals.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-03-28
+    Last Update: 2018-09-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,5 +23,3 @@ KPLIB_intro_running = false;
 KPLIB_intro_startGame = 0;
 // Tutorial button state in intro cinematic
 KPLIB_intro_tutorial = 0;
-// Last time a mobile respawn was done
-KPLIB_respawn_time = time;
