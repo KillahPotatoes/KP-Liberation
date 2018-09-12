@@ -18,7 +18,7 @@
 */
 
 private _return = vehicles select {
-    (typeOf _x == KPLIB_preset_respawnTruck || typeOf _x == KPLIB_preset_potato) &&
+    (_x getVariable ["KPLIB_respawn", false]) &&
     ((_x distance KPLIB_eden_startbase) > 500) &&
     (surfaceIsWater getPos _x  && _x isKindOf "Boat") &&
     ((getPos _x) select 2) < 5 &&
