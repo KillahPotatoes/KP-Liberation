@@ -26,10 +26,11 @@ class Header {
     maxPlayers = 37;
 };
 
-respawn = 3;
-respawndelay = 5;
+respawn = "BASE";
 respawnButton = 1;
 respawnDialog = 0;
+respawnTemplates[] = {"KPLIB_respawn"};
+
 disabledAI = true;
 enableDebugConsole = 1;
 allowFunctionsLog = 0;
@@ -55,6 +56,17 @@ class CfgFunctions {
 
 class CfgDebriefing {
     #include "KPLIB_debriefs.hpp"
+};
+
+class CfgRespawnTemplates
+{
+    class KPLIB_respawn
+    {
+        onPlayerKilled = "KPLIB_fnc_respawn_onKilled";
+        onPlayerRespawn = "KPLIB_fnc_respawn_onRespawn";
+        respawnOnStart = 1;
+        respawnDelay = 5;
+    };
 };
 
 #include "KPLIB_ui.hpp"

@@ -4,7 +4,7 @@
     File: onPlayerRespawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-09-11
+    Last Update: 2018-09-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -46,10 +46,4 @@ player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_MENU" + "<
 // Add admin menu action, if player is logged in Admin
 if (serverCommandAvailable "#kick") then {
     player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true];
-};
-
-// Spawn redeploy dialog
-while {(player distance2D KPLIB_eden_respawnPos) < 100} do {
-    private _respawnhandle = [] spawn KPLIB_fnc_respawn_open;
-    waitUntil{scriptDone _respawnhandle};
 };
