@@ -290,6 +290,19 @@ class KPGUI_PRE_ControlsGroup {
     style = 16;
 };
 
+// Controls group no scrollbars
+class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup
+{
+    class VScrollbar: VScrollbar
+    {
+        width = 0;
+    };
+    class HScrollbar: HScrollbar
+    {
+        height = 0;
+    };
+};
+
 // Combo
 class KPGUI_PRE_Combo {
     deletable = 0;
