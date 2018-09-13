@@ -4,7 +4,7 @@
     File: KPLIB_admin.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-27
-    Last Update: 2018-08-05
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,23 +19,23 @@ class KPLIB_admin {
 
     class controlsBackground {
 
-        class KPLIB_DialogTitle: KP_DialogTitleC {
+        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
             text = "$STR_ADMINDIALOG_TITLE";
         };
     };
 
     class controls {
 
-        class KPLIB_DialogCross: KP_DialogCrossC {};
+        class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};
 
-        class KPLIB_ExportButton: KP_DialogButtonC {
+        class KPLIB_ExportButton: KPGUI_PRE_DialogButtonC {
             text = "$STR_ADMINDIALOG_EXP";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + KP_SPACING_Y);
             tooltip = "$STR_ADMINDIALOG_EXPDESC";
             onButtonClick = "call KPLIB_fnc_adm_exportSave";
         };
 
-        class KPLIB_ImportButton: KP_DialogButtonC {
+        class KPLIB_ImportButton: KPGUI_PRE_DialogButtonC {
             idc = 758021;
             text = "$STR_ADMINDIALOG_IMP";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + KP_HEIGTH_BUTTON + 2 * KP_SPACING_Y);
@@ -43,7 +43,7 @@ class KPLIB_admin {
             onButtonClick = "call KPLIB_fnc_adm_importSave";
         };
 
-        class KPLIB_DeleteButton: KP_DialogButtonC {
+        class KPLIB_DeleteButton: KPGUI_PRE_DialogButtonC {
             idc = 758022;
             text = "$STR_ADMINDIALOG_DEL";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + 2 * KP_HEIGTH_BUTTON + 3 * KP_SPACING_Y);

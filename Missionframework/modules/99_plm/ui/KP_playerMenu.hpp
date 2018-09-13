@@ -4,7 +4,7 @@
     File: KP_playerMenu.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-03
-    Last Update: 2018-08-31
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,13 +20,13 @@ class KP_playerMenu {
 
     class controlsBackground {
 
-        class KP_DialogTitle: KP_DialogTitleC {
+        class KP_DialogTitle: KPGUI_PRE_DialogTitleC {
             text = "$STR_PLAYERDIALOG_TITLE";
         };
 
-        class KP_DialogArea: KP_DialogBackgroundC {};
+        class KP_DialogArea: KPGUI_PRE_DialogBackgroundC {};
 
-        class KP_LabelPlayer: KP_InlineTitle {
+        class KP_LabelPlayer: KPGUI_PRE_InlineTitle {
             text = "$STR_PLAYERDIALOG_LABELPLAYER";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
@@ -34,7 +34,7 @@ class KP_playerMenu {
             h = KP_GETH(KP_HEIGHT_VAL_C,16);
         };
 
-        class KP_TextRank: KP_Text {
+        class KP_TextRank: KPGUI_PRE_Text {
             idc = 758031;
             text = "$STR_PLAYERDIALOG_RANK";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -77,7 +77,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,2);
         };
 
-        class KP_TextViewFoot: KP_Text {
+        class KP_TextViewFoot: KPGUI_PRE_Text {
             text = "$STR_PLAYERDIALOG_VIEWFOOT";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,9,16);
@@ -123,7 +123,7 @@ class KP_playerMenu {
 
     class controls {
 
-        class KP_PlayerRank: KP_Text {
+        class KP_PlayerRank: KPGUI_PRE_Text {
             idc = 758032;
             style = 2;
             text = "";
@@ -145,7 +145,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,7,48);
         };
 
-        class KP_GroupList: KP_ListBox {
+        class KP_GroupList: KPGUI_PRE_ListBox {
             idc = 758038;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,4,16);
@@ -154,7 +154,7 @@ class KP_playerMenu {
             onLBSelChanged = "ctrlSetText [758039, groupId (KPLIB_plm_groups select (lbCurSel 758038))]";
         };
 
-        class KP_ButtonCreate: KP_InlineButton {
+        class KP_ButtonCreate: KPGUI_PRE_InlineButton {
             text = "$STR_PLAYERDIALOG_CREATE";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,3,4);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,4,16);
@@ -169,7 +169,7 @@ class KP_playerMenu {
             onButtonClick = "[] call KPLIB_fnc_plm_join";
         };
 
-        class KP_RenameEdit: KP_EditBox {
+        class KP_RenameEdit: KPGUI_PRE_EditBox {
             idc = 758039;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,24);
@@ -184,7 +184,7 @@ class KP_playerMenu {
             onButtonClick = "[] call KPLIB_fnc_plm_rename";
         };
 
-        class KP_BoxViewFoot: KP_EditBox {
+        class KP_BoxViewFoot: KPGUI_PRE_EditBox {
             idc = 7580310;
             style = 65;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,4);
@@ -203,7 +203,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,31,48);
         };
 
-        class KP_ComboTerrain: KP_Combo {
+        class KP_ComboTerrain: KPGUI_PRE_Combo {
             idc = 7580313;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,12,16);
@@ -226,7 +226,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,22,24);
         };
 
-        class KP_SliderSound: KP_Slider {
+        class KP_SliderSound: KPGUI_PRE_Slider {
             idc = 7580317;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,23,24);
@@ -236,11 +236,11 @@ class KP_playerMenu {
             onSliderPosChanged = "ctrlSetText [7580316, format ['%1%2', round (_this select 1), '%']]";
         };
 
-        class KP_ApplyButton: KP_DialogButtonC {
+        class KP_ApplyButton: KPGUI_PRE_DialogButtonC {
             text = "$STR_APPLY";
             onButtonClick = "[] call KPLIB_fnc_plm_save";
         };
 
-        class KP_DialogCross: KP_DialogCrossC {};
+        class KP_DialogCross: KPGUI_PRE_DialogCrossC {};
     };
 };
