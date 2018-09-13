@@ -4,7 +4,7 @@
     File: fn_respawn_initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-09-11
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,7 +36,11 @@ if (!hasInterface && !isDedicated) then {
 
 // Player section
 if (hasInterface) then {
+    ["KPLIB_respawn_requested", {
+        params ["_target", "_caller", "_actionId", "_arguments"];
 
+        [] call KPLIB_fnc_respawn_open;
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initialized", diag_tickTime];};
