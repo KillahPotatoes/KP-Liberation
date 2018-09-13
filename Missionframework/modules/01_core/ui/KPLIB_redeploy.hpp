@@ -4,7 +4,7 @@
     File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-08-31
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,13 +19,13 @@ class KPLIB_redeploy {
 
     class controlsBackground {
 
-        class KPLIB_DialogTitle: KP_DialogTitleC {
+        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
             text = "$STR_DEPLOY_TITLE";
         };
 
-        class KPLIB_DialogArea: KP_DialogBackgroundC {};
+        class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundC {};
 
-        class KPLIB_LabelLoadout: KP_InlineTitle {
+        class KPLIB_LabelLoadout: KPGUI_PRE_InlineTitle {
             text = "$STR_DEPLOY_LOADOUTLIST";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
@@ -33,7 +33,7 @@ class KPLIB_redeploy {
             h = KP_GETH(KP_HEIGHT_VAL_C,16);
         };
 
-        class KPLIB_TextLoadout: KP_Text {
+        class KPLIB_TextLoadout: KPGUI_PRE_Text {
             text = "$STR_DEPLOY_LOADOUTTEXT";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,16);
@@ -54,7 +54,7 @@ class KPLIB_redeploy {
 
     class controls {
 
-        class KPLIB_LoadoutsDropdown: KP_Combo {
+        class KPLIB_LoadoutsDropdown: KPGUI_PRE_Combo {
             idc = 758011;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,48);
@@ -62,7 +62,7 @@ class KPLIB_redeploy {
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KPLIB_DeployList: KP_ListBox {
+        class KPLIB_DeployList: KPGUI_PRE_ListBox {
             idc = 758012;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,24);
@@ -70,7 +70,7 @@ class KPLIB_redeploy {
             h = KP_GETH(KP_HEIGHT_VAL_C,(24/7));
         };
 
-        class KPLIB_DeployMap: RscMapControl {
+        class KPLIB_DeployMap: KPGUI_PRE_MapControl {
             idc = 758013;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,9,16);
@@ -78,7 +78,7 @@ class KPLIB_redeploy {
             h = KP_GETH(KP_HEIGHT_VAL_C,(16/7));
         };
 
-        class KPLIB_DeployButton: KP_DialogButtonC {
+        class KPLIB_DeployButton: KPGUI_PRE_DialogButtonC {
             text = "$STR_DEPLOY_BUTTON";
             action = "KPLIB_dialog_deploy = 1";
         };

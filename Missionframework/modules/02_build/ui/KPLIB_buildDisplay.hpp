@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-07-01
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,7 +21,7 @@ class KPLIB_build {
 
     class controlsBackground {
 
-        class MouseHandler: RscControlsGroupNoScrollbars {
+        class MouseHandler: KPGUI_PRE_ControlsGroupNoScrollbars {
             idc = 101;
             x = safeZoneX;
             y = safeZoneY;
@@ -34,12 +34,12 @@ class KPLIB_build {
             onMouseHolding = "['onMouseHolding', _this] call KPLIB_fnc_build_handleMouse";
         };
 
-        class KPLIB_DialogTitle: KP_DialogTitleC {
+        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
             text = "$STR_BUILD";
             w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
         };
 
-        class KP_DialogArea: KP_DialogBackgroundC {
+        class KP_DialogArea: KPGUI_PRE_DialogBackgroundC {
             w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
         };
 
@@ -47,7 +47,7 @@ class KPLIB_build {
 
     class Controls {
 
-        class KPLIB_ModeUnits: KP_ActivePicture {
+        class KPLIB_ModeUnits: KPGUI_PRE_ActivePicture {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
 
@@ -106,7 +106,7 @@ class KPLIB_build {
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,7,8);
         };
 
-        class KPLIB_BuildList: KP_ListNBox {
+        class KPLIB_BuildList: KPGUI_PRE_ListNBox {
             idc = KPLIB_IDC_BUILD_ITEM_LIST;
 
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,0,1);
@@ -117,7 +117,7 @@ class KPLIB_build {
             columns[] = { 0, 0.65, 0.75, 0.85 };
         };
 
-        class KP_ApplyButton: KP_DialogButtonC {
+        class KP_ApplyButton: KPGUI_PRE_DialogButtonC {
             idc = KPLIB_IDC_BUILD_CONFIRM;
             text = "$STR_BUILD";
 
@@ -125,7 +125,7 @@ class KPLIB_build {
             onButtonClick = "['build', _this] call KPLIB_fnc_build_displayScript";
         };
 
-        class KPLIB_DialogCross: KP_DialogCrossC {
+        class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {
             action = "call KPLIB_fnc_build_stop";
             x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
         };
