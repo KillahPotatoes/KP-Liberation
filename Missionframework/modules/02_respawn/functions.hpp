@@ -18,7 +18,7 @@ class respawn {
     class respawn_displayConfirm {};
 
     // Handle respawn list selection change
-    class respawn_displayLbSelChanged {};
+    class respawn_displaySpawnSelChanged {};
 
     // Handle respawn display load
     class respawn_displayLoad {};

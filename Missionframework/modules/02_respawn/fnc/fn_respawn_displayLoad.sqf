@@ -56,4 +56,12 @@ _loadoutsCtrl lbAdd "--";
 _loadoutsCtrl lbSetCurSel 0;
 
 // Fill respawns list with data
-_display call KPLIB_fnc_respawn_displayUpdateList;
+[{
+    params ["_display", "_handle"];
+    if (_display isEqualTo displayNull) then {
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
+
+    _display call KPLIB_fnc_respawn_displayUpdateList;
+}, 5, _display] call CBA_fnc_addPerFrameHandler;
+

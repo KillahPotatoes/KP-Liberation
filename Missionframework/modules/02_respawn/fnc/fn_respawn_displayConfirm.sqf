@@ -19,8 +19,7 @@
 */
 params [["_display", nil, [displayNull]]];
 
-private _respawnItem = _display getVariable "KPLIB_currentItem";
-systemChat format["currentItem: %1", _respawnItem];
+private _respawnItem = (_display getVariable "KPLIB_currentItem");
 private _respawnPos = [(_respawnItem select 1)] call KPLIB_fnc_respawn_getSpawnPos;
 
 // Spawn the player at selected position

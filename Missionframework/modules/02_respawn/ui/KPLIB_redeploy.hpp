@@ -65,8 +65,8 @@ class KPLIB_redeploy {
 
         class KPLIB_DeployList: KPGUI_PRE_ListBox {
             idc = KPLIB_IDC_RESPAWN_SPAWNS;
-            onLBSelChanged = "call KPLIB_fnc_respawn_displayLbSelChanged"
-            onMouseButtonDblClick = "[ctrlParent (_this select 0)] call KPLIB_fnc_respawn_displayConfirm"
+            onLBSelChanged = "call KPLIB_fnc_respawn_displaySpawnSelChanged";
+            onMouseButtonDblClick = "[ctrlParent (_this select 0)] call KPLIB_fnc_respawn_displayConfirm";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,24);
             w = KP_GETW(KP_WIDTH_VAL_C,1);

@@ -1,5 +1,6 @@
+#include "..\ui\defines.hpp"
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_respawn_displayUpdateMap
 
     File: fn_respawn_displayUpdateMap.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -16,7 +17,10 @@
     Returns:
     NOTHING
 */
+params [["_display", nil, [displayNull]]];
 
+private _respawnItem = (_display getVariable "KPLIB_currentItem");
+private _spawnPos = [(_respawnItem select 1)] call KPLIB_fnc_respawn_getSpawnPos;
 
 private _mapCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_MAP;;
 _mapCtrl ctrlMapAnimAdd [0, 0.3, _spawnPos];

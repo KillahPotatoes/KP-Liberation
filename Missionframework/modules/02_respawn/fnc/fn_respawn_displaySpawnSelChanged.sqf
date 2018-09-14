@@ -1,8 +1,8 @@
 #include "..\ui\defines.hpp"
 /*
-    KPLIB_fnc_respawn_displayLbSelChanged
+    KPLIB_fnc_respawn_displaySpawnSelChanged
 
-    File: fn_respawn_displayLbSelChanged.sqf
+    File: fn_respawn_displaySpawnSelChanged.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
     Last Update: 2018-09-14
@@ -30,3 +30,4 @@ private _currentItem =  (_display getVariable "KPLIB_respawns") select _selected
 // Set currently selected item
 _display setVariable ["KPLIB_currentItem", _currentItem];
 
+[_display] call KPLIB_fnc_respawn_displayUpdateMap;
