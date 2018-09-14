@@ -26,7 +26,6 @@ class Header {
     maxPlayers = 37;
 };
 
-respawn = "BASE";
 respawnButton = 1;
 respawnDialog = 0;
 respawnTemplates[] = {"KPLIB_respawn"};
@@ -70,3 +69,5 @@ class CfgRespawnTemplates
 };
 
 #include "KPLIB_ui.hpp"
+
+allowFunctionsRecompile = 1;

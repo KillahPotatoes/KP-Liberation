@@ -5,7 +5,7 @@
     File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-09-13
+    Last Update: 2018-09-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -66,6 +66,7 @@ class KPLIB_redeploy {
         class KPLIB_DeployList: KPGUI_PRE_ListBox {
             idc = KPLIB_IDC_RESPAWN_SPAWNS;
             onLBSelChanged = "call KPLIB_fnc_respawn_displayLbSelChanged"
+            onMouseButtonDblClick = "[ctrlParent (_this select 0)] call KPLIB_fnc_respawn_displayConfirm"
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,24);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -82,7 +83,7 @@ class KPLIB_redeploy {
 
         class KPLIB_DeployButton: KPGUI_PRE_DialogButtonC {
             text = "$STR_DEPLOY_BUTTON";
-            onButtonClick = "call KPLIB_respawn_displayConfirm";
+            onButtonClick = "[ctrlParent (_this select 0)] call KPLIB_fnc_respawn_displayConfirm";
         };
     };
 };

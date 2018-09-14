@@ -5,7 +5,7 @@
     File: fn_respawn_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-11
-    Last Update: 2018-09-13
+    Last Update: 2018-09-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -55,7 +55,5 @@ _loadoutsCtrl lbAdd "--";
 } forEach _loadoutsData;
 _loadoutsCtrl lbSetCurSel 0;
 
-// Enable double click functionality in spawn location list
-_spawnListCtrl ctrlAddEventHandler ["mouseButtonDblClick", {call KPLIB_fnc_respawn_displayConfirm}];
 // Fill respawns list with data
-_spawnListCtrl call KPLIB_fnc_respawn_displayUpdateList;
+_display call KPLIB_fnc_respawn_displayUpdateList;

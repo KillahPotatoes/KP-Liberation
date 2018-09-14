@@ -5,7 +5,7 @@
     File: fn_respawn_displayConfirm.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
-    Last Update: 2018-09-13
+    Last Update: 2018-09-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,12 +17,11 @@
     Returns:
     NOTHING
 */
-params [["_confirmCtrl", nil, [controlNull]]];
+params [["_display", nil, [displayNull]]];
 
-private _display = ctrlParent _confirmCtrl;
-private _spawnListCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_SPAWNS;
-
-private _respawnPos = _spawnListCtrl call KPLIB_fnc_respawn_displayGetSpawnPos;
+private _respawnItem = _display getVariable "KPLIB_currentItem";
+systemChat format["currentItem: %1", _respawnItem];
+private _respawnPos = [(_respawnItem select 1)] call KPLIB_fnc_respawn_getSpawnPos;
 
 // Spawn the player at selected position
 [_respawnPos] call KPLIB_fnc_respawn_spawnPlayer;
