@@ -70,4 +70,3 @@ class CfgRespawnTemplates
 
 #include "KPLIB_ui.hpp"
 
-allowFunctionsRecompile = 1;
