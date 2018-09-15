@@ -24,7 +24,7 @@ private _spawnListCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_SPAWNS;
 private _respawns = [] call KPLIB_fnc_respawn_getRespawns;
 _display setVariable ["KPLIB_respawns", _respawns];
 
-private _lastSelectedItem = _display getVariable "KPLIB_currentItem";
+private _lastSelectedItem = _display getVariable "KPLIB_selRespawn";
 _lastSelectedItem params ["_oldLabel", "_oldPos"];
 
 // Select first item by default

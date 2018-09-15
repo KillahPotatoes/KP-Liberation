@@ -5,7 +5,7 @@
     File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-09-14
+    Last Update: 2018-09-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -57,6 +57,7 @@ class KPLIB_redeploy {
 
         class KPLIB_LoadoutsDropdown: KPGUI_PRE_Combo {
             idc = KPLIB_IDC_RESPAWN_LOADOUTS;
+            onLBSelChanged = "call KPLIB_fnc_respawn_displayLoadoutSelChanged";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);

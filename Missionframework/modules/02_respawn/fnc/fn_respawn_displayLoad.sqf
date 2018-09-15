@@ -19,14 +19,13 @@
 */
 params [["_display", nil, [displayNull]]];
 
-systemChat "Respawn onLoad";
-
 // Make display unclosable if player is dead
 if (!alive player) then {
     _display displayAddEventHandler ["KeyDown", {
         params ["_display","_dik","_shift","_ctrl","_alt"];
         if (_dik == 1) exitWith {
             [] spawn {
+                disableSerialization;
                 private _interruptDisplay = (findDisplay 46) createDisplay "RscDisplayInterrupt";
                 waitUntil {_interruptDisplay isEqualTo displayNull};
                 [] call KPLIB_fnc_respawn_open;
@@ -35,27 +34,10 @@ if (!alive player) then {
     }];
 };
 
+// Fill loadouts list
+_display call KPLIB_fnc_respawn_displayUpdateLoadouts;
 
-// Get controls
-private _loadoutsCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_LOADOUTS;
-private _spawnListCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_SPAWNS;
-private _mapCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_MAP;
-
-// Fetch player loadouts and fill dropdown menu
-private _loadoutsData = [];
-{
-    if (_forEachIndex % 2 == 0) then {
-        _loadoutsData pushback _x;
-    };
-} forEach (profileNamespace getVariable "BIS_fnc_saveInventory_data");
-
-_loadoutsCtrl lbAdd "--";
-{
-    _loadoutsCtrl lbAdd _x;
-} forEach _loadoutsData;
-_loadoutsCtrl lbSetCurSel 0;
-
-// Fill respawns list with data
+// Fill respawns list
 [{
     params ["_display", "_handle"];
     if (_display isEqualTo displayNull) then {

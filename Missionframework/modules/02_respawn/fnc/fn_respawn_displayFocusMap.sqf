@@ -19,7 +19,7 @@
 */
 params [["_display", nil, [displayNull]]];
 
-private _respawnItem = (_display getVariable "KPLIB_currentItem");
+private _respawnItem = (_display getVariable "KPLIB_selRespawn");
 private _spawnPos = [(_respawnItem select 1)] call KPLIB_fnc_common_getPos;
 
 private _mapCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_MAP;;
