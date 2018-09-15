@@ -1,4 +1,3 @@
-#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_common_getPos
 
