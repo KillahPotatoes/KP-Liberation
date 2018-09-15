@@ -26,7 +26,8 @@ class respawn {
     // Update list of available respawns
     class respawn_displayUpdateList {};
 
-    class respawn_displayUpdateMap {};
+    // Focus map control on currently selected respawn area
+    class respawn_displayFocusMap {};
 
     // Get an array of available respawns
     class respawn_getRespawns {};

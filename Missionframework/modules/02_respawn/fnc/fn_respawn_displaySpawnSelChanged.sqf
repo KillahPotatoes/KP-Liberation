@@ -30,4 +30,4 @@ private _currentItem =  (_display getVariable "KPLIB_respawns") select _selected
 // Set currently selected item
 _display setVariable ["KPLIB_currentItem", _currentItem];
 
-[_display] call KPLIB_fnc_respawn_displayUpdateMap;
+[_display] call KPLIB_fnc_respawn_displayFocusMap;
