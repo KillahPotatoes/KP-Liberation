@@ -10855,7 +10855,7 @@ class Mission
 		class Item501
 		{
 			dataType="Marker";
-			position[]={27435.021,0,5463.521};
+			position[]={27350.303,0,5634.2764};
 			name="KPLIB_eden_startbase_marker";
 			text="Operation Base";
 			type="mil_start";
