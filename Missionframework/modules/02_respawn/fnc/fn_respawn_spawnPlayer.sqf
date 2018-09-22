@@ -29,6 +29,8 @@ params [
 setPlayerRespawnTime 0;
 
 [{alive player}, {
+    setPlayerRespawnTime 1e10;
+
     params ["_respawnPos", "_loadout"];
     player setPosATL _respawnPos;
 
