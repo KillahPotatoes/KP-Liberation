@@ -23,17 +23,27 @@ params [
     ["_loadout", "", [""]]
 ];
 
+// Close respawn display
 (findDisplay KPLIB_IDC_RESPAWN_DISPLAY) closeDisplay 0;
 
 // Respawn the player
 setPlayerRespawnTime 0;
 
 [{alive player}, {
+    params ["_respawnPos", "_loadout"];
+
     setPlayerRespawnTime 1e10;
 
-    params ["_respawnPos", "_loadout"];
-    player setPosATL _respawnPos;
+    // Try to find empty respawn pos around given respawn position
+    private _emptyRespawnPos = _respawnPos findEmptyPosition [0, 15, "Man"];
+    if (_emptyRespawnPos isEqualTo []) then {
+        player setPosATL _respawnPos;
+    }
+    else {
+        player setPosATL _emptyRespawnPos;
+    };
 
+    // Load loadout
     [player, [profileNamespace, _loadout]] call BIS_fnc_loadInventory;
 
     // Reveal player to nearby infantry so he is not "invisible" to them for a while
