@@ -46,4 +46,3 @@ _display call KPLIB_fnc_respawn_displayUpdateLoadouts;
 
     _display call KPLIB_fnc_respawn_displayUpdateRespawns;
 }, 5, _display] call CBA_fnc_addPerFrameHandler;
-

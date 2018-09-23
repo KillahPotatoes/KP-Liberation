@@ -17,6 +17,7 @@ class KPLIB_redeploy {
     movingEnable = 0;
 
     onLoad = "call KPLIB_fnc_respawn_displayLoad";
+    onUnload = "call KPLIB_fnc_respawn_displayUnload";
 
     class controlsBackground {
 

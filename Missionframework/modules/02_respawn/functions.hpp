@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-11
-    Last Update: 2018-09-15
+    Last Update: 2018-09-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,6 +14,9 @@
 class respawn {
     file = "modules\02_respawn\fnc";
 
+    // Do a camera fly by from-to position
+    class respawn_camFlyBy {};
+
     // Handle respawn confirmation
     class respawn_displayConfirm {};
 
@@ -22,6 +25,9 @@ class respawn {
 
     // Handle respawn list selection change
     class respawn_displaySpawnSelChanged {};
+
+    // Handle resapwn display unload
+    class respawn_displayUnload {};
 
     // Handle respawn list selection change
     class respawn_displayLoadoutSelChanged {};
