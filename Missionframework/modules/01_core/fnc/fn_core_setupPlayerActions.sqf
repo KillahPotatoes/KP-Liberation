@@ -4,7 +4,7 @@
     File: fn_common_setupPlayerActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-28
-    Last Update: 2018-09-10
+    Last Update: 2018-09-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +27,7 @@ if (isServer) then {
 if(hasInterface) then {
     // FOB redeploy action
     private _fobRedeployCondition = '_target isEqualTo _originalTarget && !(_originalTarget getVariable ["KPLIB_fob", ""] isEqualTo "")';
-    private _actionArray = [localize "STR_ACTION_REDEPLOY", {[] spawn KPLIB_fnc_core_redeploy}, nil, -801, false, true, "", _fobRedeployCondition, 10];
+    private _actionArray = [localize "STR_ACTION_REDEPLOY", {["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", _fobRedeployCondition, 10];
     [_actionArray] call CBA_fnc_addPlayerAction;
 };
 

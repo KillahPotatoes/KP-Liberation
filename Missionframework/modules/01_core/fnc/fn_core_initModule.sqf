@@ -4,14 +4,13 @@
     File: fn_core_initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-08-31
+    Last Update: 2018-09-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     This module provides the very basic functions and mechanics for the general gameplay of the mission.
     Tasks of this module are:
         * Provide basic functions.
-        * Manage respawn / redeploy dialog.
         * Show respawn, spawn and intro cinematics.
         * Spawning of Little Birds and Rubber Dinghies.
         * Spawning and respawn handling of Potato 01.
