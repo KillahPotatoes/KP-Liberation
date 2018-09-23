@@ -37,7 +37,9 @@ setPlayerRespawnTime 0;
     [player, [profileNamespace, _loadout]] call BIS_fnc_loadInventory;
 
     // Reveal player to nearby infantry so he is not "invisible" to them for a while
-    {_x reveal [player, 0.01]} forEach (player nearEntities ["Man", 10])
+    {_x reveal [player, 0.01]} forEach (player nearEntities ["Man", 10]);
 
+    // Emit redeploy event
+    ["KPLIB_player_redeploy", [player, _respawnPos, _loadout]] call CBA_fnc_globalEvent;
 
 }, [_respawnPos, _loadout], 2] call CBA_fnc_waitUntilAndExecute;
