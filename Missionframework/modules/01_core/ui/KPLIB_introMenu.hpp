@@ -4,7 +4,7 @@
     File: KPLIB_introMenu.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-07-27
+    Last Update: 2018-09-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,8 +21,8 @@ class KPLIB_introMenu {
 
     class Splash {
         idc = -1;
-        type =  CT_STATIC;
-        style = ST_PICTURE;
+        type =  0;
+        style = 48;
         colorText[] = COLOR_WHITE;
         colorBackground[] = COLOR_NOALPHA;
         font = "RobotoCondensed";
@@ -36,8 +36,8 @@ class KPLIB_introMenu {
 
     class Start {
         idc = 758021;
-        type = CT_SHORTCUTBUTTON;
-        style = ST_CENTER;
+        type = 16;
+        style = 2;
         x = (0.137 * safezoneW + safezoneX) - (0.01);
         y = (0.53 * safezoneH + safezoneY);
         w = (0.15 * safezoneW) - (0.01);
