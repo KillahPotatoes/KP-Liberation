@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-08-03
+    Last Update: 2018-09-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,8 +36,8 @@ class RscTitles
         };
     class GenericLabel2 {
         idc = -1;
-        type =  CT_STATIC ;
-        style = ST_CENTER;
+        type =  0 ;
+        style = 2;
         colorText[] = COLOR_WHITE;
         colorBackground[] = COLOR_NOALPHA;
         font = "RobotoCondensed";
@@ -66,8 +66,8 @@ class RscTitles
         };
         class Splash {
             idc = -1;
-            type =  CT_STATIC ;
-            style = ST_PICTURE;
+            type =  0;
+            style = 48;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
             font = "RobotoCondensed";
@@ -80,8 +80,8 @@ class RscTitles
         };
         class VersionLabel {
             idc = -1;
-            type =  CT_STATIC ;
-            style = ST_CENTER;
+            type =  0;
+            style = 2;
             shadow = 1;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
@@ -122,8 +122,8 @@ class RscTitles
         };
         class OuterBackground {
             idc = -1;
-            type =  CT_STATIC ;
-            style = ST_LEFT;
+            type =  0;
+            style = 0;
             colorText[] = COLOR_BLACK;
             colorBackground[] = COLOR_BLACK;
             font = "RobotoCondensed";
@@ -134,8 +134,8 @@ class RscTitles
         };
         class GenericLabel111 {
             idc = -1;
-            type =  CT_STATIC ;
-            style = ST_CENTER;
+            type =  0;
+            style = 2;
             colorText[] = COLOR_WHITE;
             colorBackground[] = COLOR_NOALPHA;
             font = "RobotoCondensed";
