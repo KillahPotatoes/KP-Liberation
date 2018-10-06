@@ -36,13 +36,16 @@ if (isServer) then {
 
     KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
     [] call KPLIB_fnc_init_paramFetchAll;
+
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
 };
 
 // Read the KPLIB_config.sqf file
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
-
-// Register load event handler
-["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
 
 diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initialized", diag_tickTime];
 

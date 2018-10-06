@@ -30,9 +30,6 @@ diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag
 // Read the module globals
 [] call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
 
-// Register save event handler
-["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
-
 // Load preset files
 [] call KPLIB_fnc_init_loadPresets;
 
