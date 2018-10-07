@@ -42,7 +42,10 @@ class build {
 
     class build_drawBoundingBox {};
 
+    // Handle object dragging/positon changing
     class build_handleDrag {};
+
+    class build_handleKeys {};
 
     // Mouse movement and click handler
     class build_handleMouse {};
@@ -61,6 +64,7 @@ class build {
     // Return object under cursor
     class build_objectUnderCursor {};
 
+    // Add player actions
     class build_setupPlayerActions {};
 
     // Start building logic

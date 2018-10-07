@@ -19,38 +19,6 @@
 */
 params [["_display", nil, [displayNull]]];
 
-systemChat "onLoad";
-
-// Add ESC Handler
-_display displayAddEventHandler ["keyDown", {
-    params ["_display","_dik","_shift","_ctrl","_alt"];
-    if (_dik == 1) exitWith {
-        // [] call KPLIB_fnc_build_stop;
-        // Open debug ESC menu (for debugging)
-        [] spawn {
-            disableSerialization;
-            private _interruptDisplay = (findDisplay 46) createDisplay "RscDisplayInterrupt";
-            waitUntil {_interruptDisplay isEqualTo displayNull};
-            (findDisplay 46) createDisplay "KPLIB_build";
-        };
-        true
-    };
-    private _logic = KPLIB_buildLogic;
-
-    if (!(_logic getVariable "shiftKey") && _shift) then {_logic setVariable ["shiftKey", true]};
-    if (!(_logic getVariable "ctrlKey") && _ctrl) then {_logic setVariable ["ctrlKey", true]};
-}];
-
-_display displayAddEventHandler ["keyUp", {
-    params ["_display","_dik","_shift","_ctrl","_alt"];
-
-    private _logic = KPLIB_buildLogic;
-
-    if (_logic getVariable "shiftKey" && _shift) then {_logic setVariable ["shiftKey", false]};
-    if (_logic getVariable "ctrlKey" && _ctrl) then {_logic setVariable ["ctrlKey", false]};
-
-}];
-
 // Add Item selection handler
 private _itemsList = _display displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 _itemsList ctrlAddEventHandler ["LBSelChanged", {

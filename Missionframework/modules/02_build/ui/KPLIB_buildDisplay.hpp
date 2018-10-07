@@ -18,6 +18,8 @@ class KPLIB_build {
 
     onLoad = "call KPLIB_fnc_build_displayLoad";
     onUnload = "call KPLIB_fnc_build_displayUnload";
+    onKeyDown = "['onKeyDown', _this] call KPLIB_fnc_build_handleKeys";
+    onKeyUp = "['onKeyUp', _this] call KPLIB_fnc_build_handleKeys";
 
     class controlsBackground {
 
