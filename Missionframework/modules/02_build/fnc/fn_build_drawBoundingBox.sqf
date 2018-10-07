@@ -4,14 +4,15 @@
     File: fn_build_drawBoundingBox.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-29
-    Last Update: 2018-09-29
+    Last Update: 2018-10-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     -
 
     Parameter(s):
-    NONE
+        0: OBJECT - Object to draw bounding box on
+        1: ARRAY - Color array in drawLine3D format
 
     Returns:
     NOTHING
@@ -23,8 +24,6 @@ params [
 
 // Get left bottom and right top corners
 (boundingBoxReal _object) params ["_c1", "_c2"];
-
-systemChat str [_c1, _c2];
 
 // Draw the bounding box
 {
@@ -51,6 +50,6 @@ systemChat str [_c1, _c2];
     [[_c1#0, _c1#1, _c2#2], [_c2#0, _c1#1, _c2#2]],
     [[_c1#0, _c1#1, _c2#2], [_c1#0, _c2#1, _c2#2]],
     [[_c2#0, _c1#1, _c1#2], [_c2#0, _c2#1, _c1#2]],
-    // front bottom left > top left
+    // front bottom left > front top left (vertical)
     [[_c1#0, _c2#1, _c1#2], [_c1#0, _c2#1, _c2#2]]
 ];

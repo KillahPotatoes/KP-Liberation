@@ -53,6 +53,9 @@ KPLIB_buildLogic = _logic;
     ["mousePos", [0.5, 0.5]]
 ];
 
+// Draw bounding boxes for objects in queue
+[] call KPLIB_fnc_build_boundingBoxPFH;
+
 (findDisplay 46) createDisplay "KPLIB_build";
 
 _logic

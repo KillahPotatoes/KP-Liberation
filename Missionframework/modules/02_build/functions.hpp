@@ -14,6 +14,9 @@
 class build {
     file = "modules\02_build\fnc";
 
+    // PFH that renders bouding boxes for objects in queue
+    class build_boundingBoxPFH {};
+
     // PFH limiting camera flying area
     class build_camAreaLimiter {};
 
