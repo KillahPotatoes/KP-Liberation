@@ -6,7 +6,7 @@
     File: fn_build_displayTabClick.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-07
+    Last Update: 2018-10-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,6 +40,6 @@ _selectedMode = 0;
 
 // If clicked mode is different than current mode fire change event
 if(LGVAR_D(buildMode, -1) != _selectedMode) then {
-    LSVAR(buildMode, _selectedMode);
+    LSVAR("buildMode", _selectedMode);
     LGVAR(buildMode) call KPLIB_fnc_build_displaySetMode;
 };

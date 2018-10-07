@@ -5,7 +5,7 @@
     File: fn_build_handleKeys.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-07
+    Last Update: 2018-10-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,8 +39,8 @@ switch toLower _mode do {
             true
         };
 
-        if (!LGVAR(shiftKey) && _shift) then {LSVAR(shiftKey, true)};
-        if (!LGVAR(ctrlKey) && _ctrl) then {LSVAR(ctrlKey, true)};
+        if (!LGVAR(shiftKey) && _shift) then {LSVAR("shiftKey", true)};
+        if (!LGVAR(ctrlKey) && _ctrl) then {LSVAR("ctrlKey", true)};
 
         switch _dik do {
             case 211: {
@@ -54,8 +54,8 @@ switch toLower _mode do {
     case "onkeyup": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
-        if (LGVAR(shiftKey) && _shift) then {LSVAR(shiftKey, false)};
-        if (LGVAR(ctrlKey) && _ctrl) then {LSVAR(ctrlKey, false)};
+        if (LGVAR(shiftKey) && _shift) then {LSVAR("shiftKey", false)};
+        if (LGVAR(ctrlKey) && _ctrl) then {LSVAR("ctrlKey", false)};
 
         false
     };

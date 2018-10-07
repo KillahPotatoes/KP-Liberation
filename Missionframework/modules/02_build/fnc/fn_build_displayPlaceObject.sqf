@@ -5,7 +5,7 @@
     File: fn_build_displayPlaceObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-07
+    Last Update: 2018-10-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,7 +38,7 @@ if !(_className isEqualTo "") then {
     LGVAR(buildQueue) pushBack _obj;
 
     if !LGVAR(ctrlKey) then {
-        LSVAR(buildItem, []);
+        LSVAR("buildItem", []);
     }
 
 };

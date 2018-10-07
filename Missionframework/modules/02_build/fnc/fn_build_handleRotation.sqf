@@ -5,7 +5,7 @@
     File: fn_build_handleRotation.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-07
+    Last Update: 2018-10-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ params [
 // Exit rotation drag and set direction of objects
 if (_updateRot) exitWith {
 
-    LSVAR(isRotating, false);
+    LSVAR("isRotating", false);
 
     // Move all selected objects to target positions
     {
@@ -38,7 +38,7 @@ if (_updateRot) exitWith {
     } forEach LGVAR(selection);
 
     // Reset state variables
-    LSVAR(rotationAnchorObject, objNull);
+    LSVAR("rotationAnchorObject", objNull);
 };
 
 // Can't rotate while dragging
@@ -46,14 +46,14 @@ if (LGVAR(isDragging)) exitWith {};
 
 // Rotation start
 if (isNull _anchorObject) then {
-    LSVAR(isRotating, true);
+    LSVAR("isRotating", true);
 
     // If selection is empty or currently dragged object not in selection
     if (LGVAR(selection) isEqualTo [] || !(LGVAR(cursorObject) in LGVAR(selection))) then {
         [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
     };
 
-    LSVAR(rotationAnchorObject, LGVAR(cursorObject));
+    LSVAR("rotationAnchorObject", LGVAR(cursorObject));
 
 } else {
 

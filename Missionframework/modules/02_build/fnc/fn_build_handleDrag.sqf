@@ -5,7 +5,7 @@
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-07
+    Last Update: 2018-10-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ params [
 // Exit position drag and set positions of objects
 if (_updatePos) exitWith {
 
-    LSVAR(isDragging, false);
+    LSVAR("isDragging", false);
 
     // Move all selected objects to target positions
     {
@@ -38,7 +38,7 @@ if (_updatePos) exitWith {
     } forEach LGVAR(selection);
 
     // Reset state variables
-    LSVAR(dragAnchorObject, objNull);
+    LSVAR("dragAnchorObject", objNull);
 };
 
 // Can't drag while rotating
@@ -46,7 +46,7 @@ if (LGVAR(isRotating)) exitWith {};
 
 // Drag start
 if (isNull _anchorObject) then {
-    LSVAR(isDragging, true);
+    LSVAR("isDragging", true);
     systemChat "Drag start";
 
     // If selection is empty or currently dragged object not in selection
@@ -54,7 +54,7 @@ if (isNull _anchorObject) then {
         [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
     };
 
-    LSVAR(dragAnchorObject, LGVAR(cursorObject));
+    LSVAR("dragAnchorObject", LGVAR(cursorObject));
 
 } else {
 
