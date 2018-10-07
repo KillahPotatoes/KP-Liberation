@@ -1,6 +1,6 @@
 #include "script_components.hpp"
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_build_handleDrag
 
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -17,14 +17,14 @@
     Returns:
     NOTHING
 */
-
-
 params [
     ["_anchorObject", objNull, [objNull]],
     ["_updatePos", false, [false]]
 ];
 
-if (_updatePos) then {
+// Exit position drag and set positions of objects
+if (_updatePos) exitWith {
+
     LSVAR(isDragging, false);
 
     // Move all selected objects to target positions
@@ -36,23 +36,30 @@ if (_updatePos) then {
         };
 
     } forEach LGVAR(selection);
+
+    // Reset state variables
+    LSVAR(dragAnchorObject, objNull);
 };
+
+// Can't drag while rotating
+if (LGVAR(isRotating)) exitWith {};
 
 // Drag start
 if (isNull _anchorObject) then {
+    LSVAR(isDragging, true);
+    systemChat "Drag start";
 
     // If selection is empty or currently dragged object not in selection
-    if (LGVAR(selection) isEqualTo [] || !(LGVAR(cursorDragStartObject) in LGVAR(selection))) then {
-        [LGVAR(cursorDragStartObject)] call KPLIB_fnc_build_addToSelection;
+    if (LGVAR(selection) isEqualTo [] || !(LGVAR(cursorObject) in LGVAR(selection))) then {
+        [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
     };
 
-    LSVAR(cursorAnchorObject, LGVAR(cursorDragStartObject));
+    LSVAR(dragAnchorObject, LGVAR(cursorObject));
 
 } else {
-    systemChat str _anchorObject;
 
     private _mouseWorldPos = AGLToASL screenToWorld LGVAR(mousePos);
-    private _anchorPos = getPosASL LGVAR(cursorAnchorObject);
+    private _anchorPos = getPosASL LGVAR(dragAnchorObject);
 
     {
         private _object = _x;
@@ -62,7 +69,7 @@ if (isNull _anchorObject) then {
         private _offset = [0, 0, 0];
 
         // Calculate offset for objects in selection
-        if (_x != LGVAR(cursorAnchorObject)) then {
+        if (_x != LGVAR(dragAnchorObject)) then {
             _offset = _posASL vectorDiff _anchorPos;
             _targetPos = _targetPos vectorAdd _offset;
         };

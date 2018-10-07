@@ -47,6 +47,9 @@ class build {
     // Mouse movement and click handler
     class build_handleMouse {};
 
+    // Handle object dragging/rotation
+    class build_handleRotation {};
+
     // Module initialization
     class build_initModule {
         postInit = 1;

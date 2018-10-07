@@ -34,14 +34,11 @@ switch toLower _mode do {
 
         // Place object if lmb
         if (_button == 0) then {
-            (_logic getVariable "buildItem") call KPLIB_fnc_build_displayPlaceObject;
-
-            // Set cursor drag start object to current object
-            LSVAR(cursorDragStartObject, LGVAR(cursorObject));
+            LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject;
 
             // Delay selection a bit to allow for mouse dragging
             [{
-                if (!LGVAR(isDragging)) then {
+                if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
                     [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
                 };
             }, [], 0.1] call CBA_fnc_waitAndExecute;
@@ -55,11 +52,12 @@ switch toLower _mode do {
 
         if (LGVAR(isDragging)) then {
             // Move dragged objects to destination position
-            [LGVAR(cursorAnchorObject), true] call KPLIB_fnc_build_handleDrag;
+            [LGVAR(dragAnchorObject), true] call KPLIB_fnc_build_handleDrag;
+        };
 
-            LSVAR(cursorDragStartObject, objNull);
-            LSVAR(cursorAnchorObject, objNull);
-            LSVAR(isDragging, false);
+        if (LGVAR(isRotating)) then {
+            // Rotate dragged objects
+            [LGVAR(rotationAnchorObject), true] call KPLIB_fnc_build_handleRotation;
         };
 
     };
@@ -77,17 +75,30 @@ switch toLower _mode do {
 
         LSVAR(cursorObject, [] call KPLIB_fnc_build_objectUnderCursor);
 
-        if (!isNull LGVAR(cursorDragStartObject) && {(LGVAR(mouseLeft)) && {!LGVAR(shiftKey)} && !LGVAR(ctrlKey)}) then {
-            LSVAR(isDragging, true);
-            [LGVAR(cursorAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        if (LGVAR(isDragging) ||
+            (!isNull LGVAR(cursorObject) && {(LGVAR(mouseLeft)) && {!LGVAR(shiftKey)} && !LGVAR(ctrlKey)})
+        ) then {
+            [LGVAR(dragAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        };
+
+        // Handle rotation
+        if (LGVAR(isRotating) ||
+            (!isNull LGVAR(cursorObject) && {(LGVAR(mouseLeft)) && {LGVAR(shiftKey)} && !LGVAR(ctrlKey)})
+        ) then {
+            [LGVAR(rotationAnchorObject)] call KPLIB_fnc_build_handleRotation;
         };
      };
 
     case "onmouseholding": {
         _args params ["_ctrl","_x","_y"];
 
-        if (!isNull LGVAR(cursorDragStartObject) && {(LGVAR(mouseLeft)) && {!LGVAR(shiftKey)} && !LGVAR(ctrlKey)}) then {
-            [LGVAR(cursorAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        if !(isNull LGVAR(dragAnchorObject)) then {
+            [LGVAR(dragAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        };
+
+        // Handle rotation
+        if !(isNull LGVAR(rotationAnchorObject)) then {
+            [LGVAR(rotationAnchorObject)] call KPLIB_fnc_build_handleRotation;
         };
     };
 
