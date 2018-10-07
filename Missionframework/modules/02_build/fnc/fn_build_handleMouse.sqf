@@ -113,7 +113,7 @@ switch toLower _mode do {
     };
 
     default {
-        systemChat format["Incorrect mode passed to handleMouse: %1", _mode];
+        diag_log format ["[KP LIBERATION] [BUILD] Incorrect mode passed to handleMouse: %1", _mode]
     };
 
 }
