@@ -52,7 +52,10 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
 
         deleteVehicle _x;
 
-        private _obj = [_class, _pos, 0, true] remoteExecCall ["KPLIB_fnc_common_spawnVehicle", 2];
+        [[[_class, _pos, 0, true], _dirAndUp], {
+            private _obj = (_this select 0) call KPLIB_fnc_common_spawnVehicle;
+            _obj setVectorDirAndUp (_this select 1);
+        }] remoteExecCall ["call", 2];
         //_obj setVectorDirAndUp _dirAndUp;
 
     } forEach (_logic getVariable "buildQueue");
