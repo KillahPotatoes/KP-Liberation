@@ -30,7 +30,6 @@ if (_selection isEqualType objNull) then {
         _selectionArray pushBackUnique _selection;
     }
     else {
-        systemChat str _this;
         // If no ctrl held and clicked on ground unselect all
         if(isNull _selection) then {
             _logic setVariable ["selection", []];

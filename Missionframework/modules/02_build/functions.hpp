@@ -42,6 +42,8 @@ class build {
 
     class build_drawBoundingBox {};
 
+    class build_handleDrag {};
+
     // Mouse movement and click handler
     class build_handleMouse {};
 

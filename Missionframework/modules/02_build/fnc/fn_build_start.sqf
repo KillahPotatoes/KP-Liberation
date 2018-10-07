@@ -45,12 +45,16 @@ KPLIB_buildLogic = _logic;
     ["display", displayNull],
     ["selection", []],
     ["cursorObject", objNull],
+    ["cursorAnchorObject", objNull],
+    ["cursorDragStartObject", objNull],
+    // States
+    ["isDragging", false],
     // Keys
     ["altKey", false],
     ["ctrlKey", false],
     ["shiftKey", false],
-    ["leftMouse", false],
-    ["rightMouse", false],
+    ["mouseLeft", false],
+    ["mouseRight", false],
     ["mousePos", [0.5, 0.5]]
 ];
 

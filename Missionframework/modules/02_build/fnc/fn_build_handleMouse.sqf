@@ -1,4 +1,5 @@
 #include "..\ui\defines.hpp"
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_handleMouse
 
@@ -31,13 +32,19 @@ switch toLower _mode do {
 
         _logic setVariable [["mouseLeft", "mouseRight"] select _button, true];
 
-        systemChat format ["mouseDown: %1", _logic getVariable (["mouseLeft", "mouseRight"] select _button)];
-
         // Place object if lmb
         if (_button == 0) then {
             (_logic getVariable "buildItem") call KPLIB_fnc_build_displayPlaceObject;
 
-            (_logic getVariable "cursorObject") call KPLIB_fnc_build_addToSelection;
+            // Set cursor drag start object to current object
+            LSVAR(cursorDragStartObject, LGVAR(cursorObject));
+
+            // Delay selection a bit to allow for mouse dragging
+            [{
+                if (!LGVAR(isDragging)) then {
+                    [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
+                };
+            }, [], 0.1] call CBA_fnc_waitAndExecute;
         };
     };
 
@@ -46,7 +53,15 @@ switch toLower _mode do {
 
         _logic setVariable [["mouseLeft", "mouseRight"] select _button, false];
 
-        systemChat format ["mouseUp: %1", _logic getVariable (["mouseLeft", "mouseRight"] select _button)];
+        if (LGVAR(isDragging)) then {
+            // Move dragged objects to destination position
+            [LGVAR(cursorAnchorObject), true] call KPLIB_fnc_build_handleDrag;
+
+            LSVAR(cursorDragStartObject, objNull);
+            LSVAR(cursorAnchorObject, objNull);
+            LSVAR(isDragging, false);
+        };
+
     };
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
@@ -60,7 +75,20 @@ switch toLower _mode do {
 
         _logic setVariable ["mousePos", [_x, _y]];
 
-        _logic setVariable ["cursorObject", ([] call KPLIB_fnc_build_objectUnderCursor)];
+        LSVAR(cursorObject, [] call KPLIB_fnc_build_objectUnderCursor);
+
+        if (!isNull LGVAR(cursorDragStartObject) && {(LGVAR(mouseLeft)) && {!LGVAR(shiftKey)} && !LGVAR(ctrlKey)}) then {
+            LSVAR(isDragging, true);
+            [LGVAR(cursorAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        };
      };
+
+    case "onmouseholding": {
+        _args params ["_ctrl","_x","_y"];
+
+        if (!isNull LGVAR(cursorDragStartObject) && {(LGVAR(mouseLeft)) && {!LGVAR(shiftKey)} && !LGVAR(ctrlKey)}) then {
+            [LGVAR(cursorAnchorObject)] call KPLIB_fnc_build_handleDrag;
+        };
+    };
 
 }
