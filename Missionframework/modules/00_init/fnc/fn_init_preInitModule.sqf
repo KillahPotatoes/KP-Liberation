@@ -4,7 +4,7 @@
     File: fn_init_preInitModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-08-31
+    Last Update: 2018-10-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,11 +35,17 @@ if (isServer) then {
     enableSaving [false, false];
 
     KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
-    call KPLIB_fnc_init_paramFetchAll;
+    [] call KPLIB_fnc_init_paramFetchAll;
+
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
 };
 
 // Read the KPLIB_config.sqf file
-call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
 diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initialized", diag_tickTime];
 
