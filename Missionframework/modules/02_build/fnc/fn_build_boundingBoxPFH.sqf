@@ -1,3 +1,4 @@
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_boundingBoxPFH
 
@@ -20,16 +21,14 @@
 private _handle = [{
     params ["", "_handle"];
 
-    private _logic = KPLIB_buildLogic;
-
-    if (isNull _logic) exitWith {
+    if (isNull KPLIB_buildLogic) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     // Draw bounding box for every object in queue
     {
-        private _underCursor = _x isEqualTo (_logic getVariable "cursorObject");
-        private _selected = _x in (_logic getVariable "selection");
+        private _underCursor = _x isEqualTo LGVAR(cursorObject);
+        private _selected = _x in LGVAR(selection);
 
         // White by default
         private _color = [1,1,1,1];
@@ -44,6 +43,6 @@ private _handle = [{
 
         [_x, _color] call KPLIB_fnc_build_drawBoundingBox;
 
-    } forEach (_logic getVariable "buildQueue");
+    } forEach LGVAR(buildQueue);
 
 }, 0] call CBA_fnc_addPerFrameHandler;

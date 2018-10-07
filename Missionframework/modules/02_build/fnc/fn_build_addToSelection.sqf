@@ -1,3 +1,4 @@
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_addToSelection
 
@@ -20,9 +21,8 @@ params [
     ["_selection", objNull, [objNull, []]]
 ];
 
-private _logic = missionNamespace getVariable "KPLIB_buildLogic";
-private _selectionArray = (_logic getVariable "selection");
-private _ctrlKey = _logic getVariable "ctrlKey";
+private _selectionArray = LGVAR(selection);
+private _ctrlKey = LGVAR(ctrlKey);
 
 if (_selection isEqualType objNull) then {
     // If ctrl is held append to selection
@@ -32,11 +32,11 @@ if (_selection isEqualType objNull) then {
     else {
         // If no ctrl held and clicked on ground unselect all
         if(isNull _selection) then {
-            _logic setVariable ["selection", []];
+            LSVAR(selection, []);
         }
         // If no ctrl held select single object
         else {
-            _logic setVariable ["selection", [_selection]];
+            LSVAR(selection, [_selection]);
         }
     }
 } else {

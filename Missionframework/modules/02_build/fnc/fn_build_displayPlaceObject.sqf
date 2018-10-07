@@ -1,3 +1,4 @@
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_displayPlaceObject
 
@@ -27,18 +28,17 @@ params [
 ];
 
 if !(_className isEqualTo "") then {
-    private _logic = KPLIB_buildLogic;
-    private _pos = screenToWorld (_logic getVariable "mousePos");
+    private _pos = screenToWorld LGVAR(mousePos);
 
     private _obj = _className createVehicleLocal KPLIB_zeroPos;
     _obj setPos _pos;
 
     _obj enableSimulation false;
 
-    (_logic getVariable "buildQueue") pushBack _obj;
+    LGVAR(buildQueue) pushBack _obj;
 
-    if !(_logic getVariable "ctrlKey") then {
-        _logic setVariable ["buildItem", []];
+    if !LGVAR(ctrlKey) then {
+        LSVAR(buildItem, []);
     }
 
 };

@@ -1,3 +1,4 @@
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_objectUnderCursor
 
@@ -18,9 +19,9 @@
 */
 
 private _logic = missionNamespace getVariable "KPLIB_buildLogic";
-private _camera = _logic getVariable "camera";
-private _cursorPos = _logic getVariable "mousePos";
-private _queue = _logic getVariable "buildQueue";
+private _camera = LGVAR(camera);
+private _cursorPos = LGVAR(mousePos);
+private _queue = LGVAR(buildQueue);
 
 private _target = objNull;
 private _cursorWorldPos = AGLtoASL (screenToWorld _cursorPos);

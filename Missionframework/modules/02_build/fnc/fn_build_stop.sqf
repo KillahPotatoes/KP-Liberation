@@ -1,3 +1,4 @@
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_stop
 
@@ -20,9 +21,9 @@
 private _logic = missionNamespace getVariable "KPLIB_buildLogic";
 
 if !(isNull _logic) then {
-    camDestroy (_logic getVariable ["camera", objNull]);
+    camDestroy LGVAR_D(camera, objNull);
     (_logic getVariable ["display", displayNull]) closeDisplay 0;
-    {deleteVehicle _X} forEach (_logic getVariable ["areaIndicators", []]);
-    {deleteVehicle _X} forEach (_logic getVariable ["buildQueue", []]);
+    {deleteVehicle _X} forEach LGVAR_D(areaIndicators, []);
+    {deleteVehicle _X} forEach LGVAR_D(buildQueue, []);
     _logic call CBA_fnc_deleteNamespace;
 };
