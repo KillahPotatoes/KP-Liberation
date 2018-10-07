@@ -30,7 +30,8 @@ switch toLower _mode do {
     case "onmousebuttondown": {
         _args params ["_ctrl","_button"];
 
-        _logic setVariable [["mouseLeft", "mouseRight"] select _button, true];
+        private _buttonName = ["mouseLeft", "mouseRight"] select _button;
+        LSVAR(_buttonName, true);
 
         // Place object if lmb
         if (_button == 0) then {
@@ -48,7 +49,8 @@ switch toLower _mode do {
     case "onmousebuttonup": {
         _args params ["_ctrl","_button"];
 
-        _logic setVariable [["mouseLeft", "mouseRight"] select _button, false];
+        private _buttonName = ["mouseLeft", "mouseRight"] select _button;
+        LSVAR(_buttonName, false);
 
         if (LGVAR(isDragging)) then {
             // Move dragged objects to destination position
