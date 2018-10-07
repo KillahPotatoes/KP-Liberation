@@ -36,20 +36,19 @@ _display displayAddEventHandler ["keyDown", {
         true
     };
     private _logic = KPLIB_buildLogic;
-    _logic setVariable ["shiftKey", _shift];
-    _logic setVariable ["ctrlKey", _ctrl];
 
-    systemChat format["keyDown, ctrl: %1, shift: %2", [_ctrl, _shift]];
+    if (!(_logic getVariable "shiftKey") && _shift) then {_logic setVariable ["shiftKey", true]};
+    if (!(_logic getVariable "ctrlKey") && _ctrl) then {_logic setVariable ["ctrlKey", true]};
 }];
 
 _display displayAddEventHandler ["keyUp", {
     params ["_display","_dik","_shift","_ctrl","_alt"];
 
     private _logic = KPLIB_buildLogic;
-    _logic setVariable ["shiftKey", _shift];
-    _logic setVariable ["ctrlKey", _ctrl];
 
-    systemChat format["keyUp, ctrl: %1, shift: %2", [_ctrl, _shift]];
+    if (_logic getVariable "shiftKey" && _shift) then {_logic setVariable ["shiftKey", false]};
+    if (_logic getVariable "ctrlKey" && _ctrl) then {_logic setVariable ["ctrlKey", false]};
+
 }];
 
 // Add Item selection handler

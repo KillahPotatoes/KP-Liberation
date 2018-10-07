@@ -5,7 +5,7 @@
     File: fn_build_handleMouse.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-09-09
+    Last Update: 2018-10-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,6 +36,8 @@ switch toLower _mode do {
         // Place object if lmb
         if (_button == 0) then {
             (_logic getVariable "buildItem") call KPLIB_fnc_build_displayPlaceObject;
+
+            (_logic getVariable "cursorObject") call KPLIB_fnc_build_addToSelection;
         };
     };
 
@@ -53,10 +55,12 @@ switch toLower _mode do {
         if (true) exitWith {true};
     };
 
-     case "onmousemoving": {
-         _args params ["_ctrl","_x","_y"];
+    case "onmousemoving": {
+        _args params ["_ctrl","_x","_y"];
 
-         _logic setVariable ["mousePos", [_x, _y]];
+        _logic setVariable ["mousePos", [_x, _y]];
+
+        _logic setVariable ["cursorObject", ([] call KPLIB_fnc_build_objectUnderCursor)];
      };
 
 }
