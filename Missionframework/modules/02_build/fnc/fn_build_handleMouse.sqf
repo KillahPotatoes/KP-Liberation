@@ -71,7 +71,11 @@ switch toLower _mode do {
     case "onmousemoving": {
         _args params ["_ctrl","_x","_y"];
 
-        _logic setVariable ["mousePos", [_x, _y]];
+        // Enable camera movement when cursor not over dialog
+        LGVAR(camera) camCommand "manual on";
+
+        private _xy = [_x, _y];
+        LSVAR(mousePos, _xy);
 
         LSVAR(cursorObject, [] call KPLIB_fnc_build_objectUnderCursor);
 
@@ -100,6 +104,16 @@ switch toLower _mode do {
         if !(isNull LGVAR(rotationAnchorObject)) then {
             [LGVAR(rotationAnchorObject)] call KPLIB_fnc_build_handleRotation;
         };
+    };
+
+    case "onmousemoving_buildlist": {
+        // Disable camera movement when cursor is over build dialog
+        // TODO is there any better solution?
+        LGVAR(camera) camCommand "manual off";;
+    };
+
+    default {
+        systemChat format["Incorrect mode passed to handleMouse: %1", _mode];
     };
 
 }

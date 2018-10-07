@@ -23,8 +23,6 @@ params [
     ["_args", nil, [[]]]
 ];
 
-systemChat str _args;
-
 switch toLower _mode do {
     case "onkeydown": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
