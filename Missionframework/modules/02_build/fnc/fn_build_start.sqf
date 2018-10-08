@@ -6,7 +6,7 @@
     File: fn_build_start.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-09-09
+    Last Update: 2018-10-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,18 +40,27 @@ KPLIB_buildLogic = _logic;
     ["buildQueue", []],
     ["center", _center],
     ["radius", _radius],
-    ["cursorPos", []],
     ["areaIndicators", [_center, _radius] call KPLIB_fnc_build_markArea],
     ["camera", [_center, _radius] call KPLIB_fnc_build_camCreate],
     ["display", displayNull],
+    ["selection", []],
+    ["cursorObject", objNull],
+    ["dragAnchorObject", objNull],
+    ["rotationAnchorObject", objNull],
+    // States
+    ["isDragging", false],
+    ["isRotating", false],
     // Keys
     ["altKey", false],
     ["ctrlKey", false],
     ["shiftKey", false],
-    ["leftMouse", false],
-    ["rightMouse", false],
+    ["mouseLeft", false],
+    ["mouseRight", false],
     ["mousePos", [0.5, 0.5]]
 ];
+
+// Draw bounding boxes for objects in queue
+[] call KPLIB_fnc_build_boundingBoxPFH;
 
 (findDisplay 46) createDisplay "KPLIB_build";
 
