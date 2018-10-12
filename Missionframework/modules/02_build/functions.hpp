@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-08-31
+    Last Update: 2018-10-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,6 +13,11 @@
 
 class build {
     file = "modules\02_build\fnc";
+
+    class build_addToSelection {};
+
+    // PFH that renders bouding boxes for objects in queue
+    class build_boundingBoxPFH {};
 
     // PFH limiting camera flying area
     class build_camAreaLimiter {};
@@ -35,8 +40,18 @@ class build {
     // Display load handler
     class build_displayUnload {};
 
+    class build_drawBoundingBox {};
+
+    // Handle object dragging/positon changing
+    class build_handleDrag {};
+
+    class build_handleKeys {};
+
     // Mouse movement and click handler
     class build_handleMouse {};
+
+    // Handle object dragging/rotation
+    class build_handleRotation {};
 
     // Module initialization
     class build_initModule {
@@ -46,6 +61,10 @@ class build {
     // Marks given area with circle created out of spheres
     class build_markArea {};
 
+    // Return object under cursor
+    class build_objectUnderCursor {};
+
+    // Add player actions
     class build_setupPlayerActions {};
 
     // Start building logic

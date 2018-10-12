@@ -1,11 +1,12 @@
 #include "..\ui\defines.hpp"
+#include "script_components.hpp"
 /*
     KPLIB_fnc_build_displaySetMode
 
     File: fn_build_displaySetMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-09-09
+    Last Update: 2018-10-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +28,7 @@ private _logic = KPLIB_buildLogic;
 private _cfg = configFile >> "CfgVehicles";
 private _listElements = KPLIB_preset_buildLists select _mode;
 
-private _listBox = (_logic getVariable "display") displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
+private _listBox = LGVAR(display) displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 _listBox lbSetCurSel -1; // Unselect current row as it sticks between clearing
 lnbClear _listBox;
 {

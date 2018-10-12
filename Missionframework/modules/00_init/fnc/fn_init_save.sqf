@@ -4,11 +4,11 @@
     File: fn_init_save.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-08-31
+    Last Update: 2018-10-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Saves the current progress by calling the module specific save functions. After receiving the data from the modules, it'll be saved in the profileNamespace.
+    Saves the current progress by firing the doSave event. After all registered handlers for this event are processed, it'll write the save data to the profile namespace.
 
     Parameter(s):
     NONE
@@ -22,11 +22,15 @@ if (!KPLIB_campaignRunning) exitWith {false};
 
 if (KPLIB_param_debugSave > 0) then {diag_log format ["[KP LIBERATION] [%1] [SAVE] ----- Save function started -----", diag_tickTime];};
 
-// Call the save data fetch functions from each module and store them in a multidimensional array for saving
-KPLIB_save_data = [
-    call KPLIB_fnc_init_saveData
-];
+// Reset the current save data array
+KPLIB_save_data = [];
 
+// Fire the saving event
+if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Firing save event...";};
+["KPLIB_doSave"] call CBA_fnc_localEvent;
+
+// Write save data array to profile namespace
+if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Writing data to profile...";};
 profileNamespace setVariable [KPLIB_save_key, KPLIB_save_data];
 saveProfileNamespace;
 
