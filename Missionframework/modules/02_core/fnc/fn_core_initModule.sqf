@@ -4,7 +4,7 @@
     File: fn_core_initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-09-11
+    Last Update: 2018-10-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,7 @@
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [CORE] Module initializing...", diag_tickTime];};
 
 // Read the module globals
-call compile preprocessFileLineNumbers "modules\01_core\globals.sqf";
+call compile preprocessFileLineNumbers "modules\02_core\globals.sqf";
 
 // Initialize actions
 call KPLIB_fnc_core_setupPlayerActions;
@@ -41,8 +41,8 @@ if (isServer) then {
     [] call KPLIB_fnc_core_spawnStartVeh;
     [] call KPLIB_fnc_core_spawnPotato;
     [] call KPLIB_fnc_core_updateSectorMarkers;
-    execVM "modules\01_core\scripts\server\sectorMonitor.sqf";
-    execVM "modules\01_core\scripts\server\eventLoop.sqf";
+    execVM "modules\02_core\scripts\server\sectorMonitor.sqf";
+    execVM "modules\02_core\scripts\server\eventLoop.sqf";
 };
 
 // HC section

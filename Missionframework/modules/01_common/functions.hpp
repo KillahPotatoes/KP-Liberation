@@ -1,10 +1,10 @@
 /*
-    KP LIBERATION CORE FUNCTIONS
+    KP LIBERATION COMMON FUNCTIONS
 
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-09-15
+    Last Update: 2018-10-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 */
 
 class common {
-    file = "modules\01_core\fnc\common";
+    file = "modules\01_common\fnc";
 
     // Clears vehicle cargo
     class common_clearVehicleCargo;
