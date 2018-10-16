@@ -4,7 +4,7 @@
     File: fn_respawn_initModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-09-13
+    Last Update: 2018-10-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,7 +13,7 @@
         * Manage respawn / redeploy dialog.
 
     Dependencies:
-        * 01_core
+        * 02_core
 
     Returns:
     BOOL
@@ -22,7 +22,7 @@
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initializing...", diag_tickTime];};
 
 // Read the module globals
-call compile preprocessFileLineNumbers "modules\02_respawn\globals.sqf";
+call compile preprocessFileLineNumbers "modules\03_respawn\globals.sqf";
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
