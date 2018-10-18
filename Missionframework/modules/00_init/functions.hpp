@@ -64,9 +64,7 @@ class init {
     };
 
     // Client function for processing init data which was published by the server
-    class init_receiveInit {
-        postInit = 1;
-    };
+    class init_receiveInit {};
 
     // Initializes full saves procedure for the running campaign
     class init_save {};

@@ -4,7 +4,7 @@
     File: fn_init_postInitModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-06
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,42 +23,44 @@
     BOOL
 */
 
-if (!isServer) exitWith {};
+if (isServer) then {
+    diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
 
-diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
+    // Read the module globals
+    [] call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
 
-// Read the module globals
-[] call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
+    // Load preset files
+    [] call KPLIB_fnc_init_loadPresets;
 
-// Load preset files
-[] call KPLIB_fnc_init_loadPresets;
+    // Load arsenal
+    [] call KPLIB_fnc_init_fillArsenal;
 
-// Load arsenal
-[] call KPLIB_fnc_init_fillArsenal;
+    // Sort the sector markers to category arrays
+    [] call KPLIB_fnc_init_sortSectors;
 
-// Sort the sector markers to category arrays
-[] call KPLIB_fnc_init_sortSectors;
+    // Load current save
+    [] call KPLIB_fnc_init_load;
 
-// Load current save
-[] call KPLIB_fnc_init_load;
+    // Add saveTimer per frame handler
+    [{
+        params ["_args", "_handle"];
 
-// Add saveTimer per frame handler
-[{
-    params ["_args", "_handle"];
-
-    if (KPLIB_save_loaded) then {
-        if (KPLIB_campaignRunning) then {
-            [] call KPLIB_fnc_init_save;
-        } else {
-            _handle call CBA_fnc_removePerFrameHandler;
-            diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
+        if (KPLIB_save_loaded) then {
+            if (KPLIB_campaignRunning) then {
+                [] call KPLIB_fnc_init_save;
+            } else {
+                _handle call CBA_fnc_removePerFrameHandler;
+                diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
+            };
         };
-    };
-}, KPLIB_save_interval] call CBA_fnc_addPerFrameHandler;
+    }, KPLIB_save_interval] call CBA_fnc_addPerFrameHandler;
 
-// Create locked vehicle markers
-[] call KPLIB_fnc_init_createLockedVehMarkers;
+    // Create locked vehicle markers
+    [] call KPLIB_fnc_init_createLockedVehMarkers;
 
-diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initialized", diag_tickTime];
+    diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initialized", diag_tickTime];
+};
+
+[] call KPLIB_fnc_init_receiveInit;
 
 true
