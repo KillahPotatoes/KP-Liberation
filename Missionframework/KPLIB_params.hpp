@@ -4,7 +4,7 @@
     File: KPLIB_params.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-09-11
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -425,56 +425,56 @@ class DebugAsymm {
     title = $STR_PARAMS_DEBUGASYMM;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugCivInfo {
     title = $STR_PARAMS_DEBUGCIVINFO;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugCivRep {
     title = $STR_PARAMS_DEBUGCIVREP;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugKill {
     title = $STR_PARAMS_DEBUGKILL;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugLogi {
     title = $STR_PARAMS_DEBUGLOGI;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugProd {
     title = $STR_PARAMS_DEBUGPROD;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugSave {
     title = $STR_PARAMS_DEBUGSAVE;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugSectorSpawn {
     title = $STR_PARAMS_DEBUGSECTORSPAWN;
     values[] = {0,1};
     texts[] = {$STR_PARAMS_DISABLED,$STR_PARAMS_ENABLED};
-    default = 0; // Default value. Must be one from the values array above.
+    default = 1; // Default value. Must be one from the values array above.
 };
 
 class DebugConfigGuard {
