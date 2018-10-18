@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-10-07
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,9 +15,7 @@ class init {
     file = "modules\00_init\fnc";
 
     // Try to catch errors in config file
-    class init_configGuard {
-        preInit = 1;
-    };
+    class init_configGuard {};
 
     // Checks if given classname is inside CfgVehicles
     class init_checkClass {};
