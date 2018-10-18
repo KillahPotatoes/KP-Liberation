@@ -21,7 +21,7 @@
     BOOL
 */
 
-diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initializing...", diag_tickTime];
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initializing...", diag_tickTime];};
 
 // Execute config guard function
 [] call KPLIB_fnc_init_configGuard;
@@ -50,6 +50,6 @@ if (isServer) then {
 // Read the KPLIB_config.sqf file
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
-diag_log format ["[KP LIBERATION] [%1] [PRE INIT] Module initialized", diag_tickTime];
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initialized", diag_tickTime];};
 
 true

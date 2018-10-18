@@ -19,7 +19,7 @@
     BOOL
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initializing...", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [RESPAWN] Module initializing...", diag_tickTime];};
 
 // Read the module globals
 call compile preprocessFileLineNumbers "modules\03_respawn\globals.sqf";
@@ -43,6 +43,6 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [RESPAWN] Module initialized", diag_tickTime];};
 
 true

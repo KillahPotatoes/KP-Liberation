@@ -24,7 +24,7 @@
 */
 
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initializing...", diag_tickTime];
+    diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initializing...", diag_tickTime];
 
     // Read the module globals
     [] call compile preprocessFileLineNumbers "modules\00_init\globals.sqf";
@@ -58,7 +58,7 @@ if (isServer) then {
     // Create locked vehicle markers
     [] call KPLIB_fnc_init_createLockedVehMarkers;
 
-    diag_log format ["[KP LIBERATION] [%1] [POST INIT] Module initialized", diag_tickTime];
+    diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
 };
 
 [] call KPLIB_fnc_init_receiveInit;

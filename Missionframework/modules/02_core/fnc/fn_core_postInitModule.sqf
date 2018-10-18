@@ -23,7 +23,7 @@
     BOOL
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [CORE] Module initializing...", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initializing...", diag_tickTime];};
 
 // Read the module globals
 [] call compile preprocessFileLineNumbers "modules\02_core\globals.sqf";
@@ -62,6 +62,6 @@ if (hasInterface) then {
     [] spawn KPLIB_fnc_core_intro;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [CORE] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initialized", diag_tickTime];};
 
 true
