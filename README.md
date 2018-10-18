@@ -35,10 +35,6 @@ As we use [ZenHub](https://github.com/marketplace/zenhub) for our workflow inste
 
 This will replace the current missioncode when it's finished.
 
-Guess the hardest thing is to think "out of the box" for already working code. If you look through a code which works without any issues it's not that easy to really find "completely different" ways to realize the functionality in a possible more performance friendly or "better" way. Small tweaks and optimizations are common to find, but rewrite it in a completely different way would be the challenge (if even really needed in the particular file).
-
-Many thanks in advance for all supporters and the Liberation community.
-
 ### Goal
 * Modular and therefore much cleaner structure
 * More streamlined code
@@ -47,28 +43,6 @@ Many thanks in advance for all supporters and the Liberation community.
 * Easier ways to add additional gameplay aspects due to the modular framework
 * There should be no need to do any additions in any `mission.sqm` (removing would be ok)
 * Personally: Using this project to get more familiar with SQF and the Liberation mission itself than before
-
-### Conventions
-* Global variable naming: `KPLIB_moduleName_variableName`
-    * moduleName: The name of the module like `init` or if it is kind of a global category like `preset` or `param`
-    * variableName: Name of the specific variable like `heavySquad` or `adaptiveEnemy`
-    * Only some very rare variables have no moduleName, as they are not directly connected to a module.
-* Function naming: `KPLIB_fnc_moduleName_functionName` (same rules like for the variables)
-* CfgFunctions Framework
-    * `KPLIB_functions.hpp` in missionroot as central fetching file
-    * Each module has an own `functions.hpp` which is included by the `KPLIB_functions.hpp`
-* Modular structure
-    * Naming for modules: `loadOrderNumber_moduleName` like `00_init` or `01_core`
-    * Each module will handle one aspect of the game. For example the initialization, core mechanics, enemy spawn, civil reputation, etc.
-    * General structure:
-        * `fnc` folder for functions and one-time-procedures
-        * `scripts` folder for the scripts (so basically everything which runs a loop through the whole session)
-            * Seperation (if even needed) with a `server`, `client`, `shared` folder
-        * `ui` folder for all dialogs or ui defines which are brought or needed by that module
-        * `functions.hpp` to define the functions of this module
-        * `globals.sqf` to define all global variables which are brought or needed by that module and aren't defined before
-        * `initModule.sqf` which is called by all machines and where possible seperation for clients/HCs/Server will happen
-        * `ui.hpp` to define the ui elements and dialogs from this module (will be included by the `KPLIB_ui.hpp` in the mission root)
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area will most likely span several weeks of real time.
