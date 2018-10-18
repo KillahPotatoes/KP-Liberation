@@ -4,7 +4,7 @@
     File: fn_init_sortSectors.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,9 +17,12 @@
     BOOL
 */
 
+private _isMissionSector = false;
+private _tempMarker = [];
+
 {
-    private _isMissionSector = false;
-    private _tempMarker = toArray _x;
+    _isMissionSector = false;
+    _tempMarker = toArray _x;
 
     // Fetch the Opfor spawn points
     _tempMarker resize 12;
