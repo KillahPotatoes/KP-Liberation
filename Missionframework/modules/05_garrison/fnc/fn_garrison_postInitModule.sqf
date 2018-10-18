@@ -19,7 +19,8 @@
     BOOL
 */
 
-// Read the module globals
-[] call compile preprocessFileLineNumbers "modules\05_garrison\globals.sqf";
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [GARRISON] Module initializing...", diag_tickTime];};
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [GARRISON] Module initialized", diag_tickTime];};
 
 true

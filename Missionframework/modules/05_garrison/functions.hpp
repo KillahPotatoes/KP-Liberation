@@ -11,9 +11,22 @@
     Defines for all functions, which are brought by this module.
 */
 
-class build {
-    // Module initialization
+class garrison {
+    file = "modules\05_garrison\fnc";
+
+    // Loads module specific data from the save
+    class garrison_loadData {};
+
+    // Module post initialization
     class garrison_postInitModule {
         postInit = 1;
     };
+
+    // Module pre initialization
+    class garrison_preInitModule {
+        preInit = 1;
+    };
+
+    // Saves module specific data for the save
+    class garrison_saveData {};
 };
