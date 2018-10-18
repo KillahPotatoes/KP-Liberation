@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.97 (in Development)
+## 0.97.0 (in Development)
 * **Fully rewritten the mission code from scratch.**
 * Added: Functions library via CfgFunctions.
 * Added: Admin dialog with various functionalities for server admins.
@@ -13,6 +13,8 @@
 * Tweaked: Stringtable key names categorized.
 * Tweaked: Formatting and comments in preset files.
 * Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
+* Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better seperation.
+* Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
