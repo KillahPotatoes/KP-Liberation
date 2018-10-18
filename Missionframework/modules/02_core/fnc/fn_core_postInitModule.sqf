@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_core_initModule
+    KPLIB_fnc_core_postInitModule
 
-    File: fn_core_initModule.sqf
+    File: fn_core_postInitModule.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-16
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,10 +26,13 @@
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [CORE] Module initializing...", diag_tickTime];};
 
 // Read the module globals
-call compile preprocessFileLineNumbers "modules\02_core\globals.sqf";
+[] call compile preprocessFileLineNumbers "modules\02_core\globals.sqf";
+
+// Initialize BIS Revive
+[] call KPLIB_fnc_core_reviveInit;
 
 // Initialize actions
-call KPLIB_fnc_core_setupPlayerActions;
+[] call KPLIB_fnc_core_setupPlayerActions;
 
 if(KPLIB_param_clearVehicleCargo > 0) then {
     ["KPLIB_vehicle_spawned", {call KPLIB_fnc_common_clearVehicleCargo;}] call CBA_fnc_addEventHandler;
@@ -53,7 +56,7 @@ if (!hasInterface && !isDedicated) then {
 // Player section
 if (hasInterface) then {
     // Add parameter diary entries
-    call KPLIB_fnc_core_paramDiaryList;
+    [] call KPLIB_fnc_core_paramDiaryList;
 
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;
