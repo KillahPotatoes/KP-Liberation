@@ -53,9 +53,14 @@ class respawn {
     // Open respawn menu
     class respawn_open {};
 
-    // Module initialization
+    // Module post initialization
     class respawn_postInitModule {
         postInit = 1;
+    };
+
+    // Module pre initialization
+    class respawn_preInitModule {
+        preInit = 1;
     };
 
     // Spawns player at given position

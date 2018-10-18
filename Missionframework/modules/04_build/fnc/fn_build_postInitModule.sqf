@@ -19,8 +19,6 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [BUILD] Module initializing...", diag_tickTime];};
 
-[] call compile preprocessFileLineNumbers "modules\04_build\globals.sqf";
-
 [] call KPLIB_fnc_build_setupPlayerActions;
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [BUILD] Module initialized", diag_tickTime];};

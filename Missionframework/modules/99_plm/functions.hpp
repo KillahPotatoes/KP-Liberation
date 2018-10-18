@@ -29,9 +29,14 @@ class plm {
     // Open the dialog
     class plm_openDialog {};
 
-    // Module initialization
+    // Module post initialization
     class plm_postInitModule {
         postInit = 1;
+    };
+
+    // Module pre initialization
+    class plm_preInitModule {
+        preInit = 1;
     };
 
     // Applies new name to group

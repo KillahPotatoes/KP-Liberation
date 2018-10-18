@@ -59,9 +59,14 @@ class core {
     // Converts value of param to "texts" string
     class core_paramToText {};
 
-    // Module initialization
+    // Module post initialization
     class core_postInitModule {
         postInit = 1;
+    };
+
+    // Module pre initialization
+    class core_preInitModule {
+        preInit = 1;
     };
 
     // Initialize BIS revive

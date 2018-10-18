@@ -17,11 +17,8 @@
     BOOL
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [ADM] Module initializing...", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ADM] Module initializing...", diag_tickTime];};
 
-// Read the module globals
-[] call compile preprocessFileLineNumbers "modules\99_adm\globals.sqf";
-
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [ADM] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ADM] Module initialized", diag_tickTime];};
 
 true

@@ -29,8 +29,13 @@ class adm {
     // Opens the admin menu dialog
     class adm_openDialog {};
 
-    // Module initialization
+    // Module post initialization
     class adm_postInitModule {
         postInit = 1;
+    };
+
+    // Module pre initialization
+    class adm_preInitModule {
+        preInit = 1;
     };
 };

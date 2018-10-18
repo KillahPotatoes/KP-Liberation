@@ -25,9 +25,6 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initializing...", diag_tickTime];};
 
-// Read the module globals
-[] call compile preprocessFileLineNumbers "modules\02_core\globals.sqf";
-
 // Initialize BIS Revive
 [] call KPLIB_fnc_core_reviveInit;
 

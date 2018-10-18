@@ -59,9 +59,14 @@ class build {
     // Return object under cursor
     class build_objectUnderCursor {};
 
-    // Module initialization
+    // Module post initialization
     class build_postInitModule {
         postInit = 1;
+    };
+
+    // Module pre initialization
+    class build_preInitModule {
+        preInit = 1;
     };
 
     // Add player actions
