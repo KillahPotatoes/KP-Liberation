@@ -54,12 +54,12 @@ class init {
     class init_paramVarCreate {};
 
     // Module post initialization
-    class init_postInitModule {
+    class init_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class init_preInitModule {
+    class init_preInit {
         preInit = 1;
     };
 

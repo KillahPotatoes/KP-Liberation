@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_adm_preInitModule
+    KPLIB_fnc_adm_preInit
 
-    File: fn_adm_preInitModule.sqf
+    File: fn_adm_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
     Last Update: 2018-10-18

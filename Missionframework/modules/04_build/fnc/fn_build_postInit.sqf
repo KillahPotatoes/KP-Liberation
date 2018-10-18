@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_build_postInitModule
+    KPLIB_fnc_build_postInit
 
-    File: fn_build_postInitModule.sqf
+    File: fn_build_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
     Last Update: 2018-10-18

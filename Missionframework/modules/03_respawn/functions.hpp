@@ -54,12 +54,12 @@ class respawn {
     class respawn_open {};
 
     // Module post initialization
-    class respawn_postInitModule {
+    class respawn_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class respawn_preInitModule {
+    class respawn_preInit {
         preInit = 1;
     };
 

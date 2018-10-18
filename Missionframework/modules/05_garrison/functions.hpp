@@ -18,12 +18,12 @@ class garrison {
     class garrison_loadData {};
 
     // Module post initialization
-    class garrison_postInitModule {
+    class garrison_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class garrison_preInitModule {
+    class garrison_preInit {
         preInit = 1;
     };
 

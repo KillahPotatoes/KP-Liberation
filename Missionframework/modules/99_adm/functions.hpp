@@ -30,12 +30,12 @@ class adm {
     class adm_openDialog {};
 
     // Module post initialization
-    class adm_postInitModule {
+    class adm_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class adm_preInitModule {
+    class adm_preInit {
         preInit = 1;
     };
 };

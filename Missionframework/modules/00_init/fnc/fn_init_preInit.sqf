@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_init_preInitModule
+    KPLIB_fnc_init_preInit
 
-    File: fn_init_preInitModule.sqf
+    File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
     Last Update: 2018-10-18

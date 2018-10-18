@@ -60,12 +60,12 @@ class core {
     class core_paramToText {};
 
     // Module post initialization
-    class core_postInitModule {
+    class core_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class core_preInitModule {
+    class core_preInit {
         preInit = 1;
     };
 

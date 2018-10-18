@@ -60,12 +60,12 @@ class build {
     class build_objectUnderCursor {};
 
     // Module post initialization
-    class build_postInitModule {
+    class build_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class build_preInitModule {
+    class build_preInit {
         preInit = 1;
     };
 

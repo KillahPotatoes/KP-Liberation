@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_plm_postInitModule
+    KPLIB_fnc_plm_postInit
 
-    File: fn_plm_postInitModule.sqf
+    File: fn_plm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
     Last Update: 2018-10-18

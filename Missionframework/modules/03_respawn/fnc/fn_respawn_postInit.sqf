@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_respawn_postInitModule
+    KPLIB_fnc_respawn_postInit
 
-    File: fn_respawn_postInitModule.sqf
+    File: fn_respawn_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
     Last Update: 2018-10-18

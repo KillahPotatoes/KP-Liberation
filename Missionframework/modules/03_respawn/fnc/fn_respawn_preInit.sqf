@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_build_preInitModule
+    KPLIB_fnc_respawn_preInit
 
-    File: fn_build_preInitModule.sqf
+    File: fn_respawn_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
     Last Update: 2018-10-18
@@ -17,20 +17,17 @@
     BOOL
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initializing...", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [RESPAWN] Module initializing...", diag_tickTime];};
 
 /*
     ----- Module Globals -----
 */
 
-// Build camera
-KPLIB_build_camera = objNull;
+// Last time a mobile respawn was done
+KPLIB_respawn_time = time;
 
-KPLIB_buildLogic = locationNull;
+KPLIB_respawn_camera = "camera" camCreate KPLIB_zeroPos;
 
-// Build camera PFH ticker id
-KPLIB_build_ticker = -1;
-
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [RESPAWN] Module initialized", diag_tickTime];};
 
 true

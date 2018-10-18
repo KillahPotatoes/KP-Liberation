@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_garrison_preInit
 
-    File: fn_garrison_preInitModule.sqf
+    File: fn_garrison_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
     Last Update: 2018-10-18

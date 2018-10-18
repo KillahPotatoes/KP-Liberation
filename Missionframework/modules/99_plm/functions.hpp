@@ -30,12 +30,12 @@ class plm {
     class plm_openDialog {};
 
     // Module post initialization
-    class plm_postInitModule {
+    class plm_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class plm_preInitModule {
+    class plm_preInit {
         preInit = 1;
     };
 
