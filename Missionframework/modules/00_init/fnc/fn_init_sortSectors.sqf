@@ -17,28 +17,22 @@
     BOOL
 */
 
-private _isMissionSector = false;
 private _tempMarker = [];
 
 {
-    _isMissionSector = false;
     _tempMarker = toArray _x;
-
-    // Fetch the Opfor spawn points
     _tempMarker resize 12;
-    if (toString _tempMarker == "KPLIB_eden_a") then {KPLIB_sectors_airspawn pushBack _x;};
-    if (toString _tempMarker == "KPLIB_eden_s") then {KPLIB_sectors_spawn pushBack _x;};
 
-    // Fetch the main mission sectors
+    // Fetch the main mission sectors and  spawnpoints
     switch (toString _tempMarker) do {
-        case "KPLIB_eden_b": {KPLIB_sectors_military pushBack _x;_isMissionSector = true;};
-        case "KPLIB_eden_c": {KPLIB_sectors_city pushBack _x;_isMissionSector = true;};
-        case "KPLIB_eden_m": {KPLIB_sectors_metropolis pushBack _x;_isMissionSector = true;};
-        case "KPLIB_eden_f": {KPLIB_sectors_factory pushBack _x;_isMissionSector = true;};
-        case "KPLIB_eden_t": {KPLIB_sectors_tower pushBack _x;if (isServer) then {_x setMarkerText format ["%1 %2",markerText _x, mapGridPosition (markerPos _x)];};_isMissionSector = true;};
+        case "KPLIB_eden_a": {KPLIB_sectors_airspawn pushBack _x;};
+        case "KPLIB_eden_s": {KPLIB_sectors_spawn pushBack _x;};
+        case "KPLIB_eden_b": {KPLIB_sectors_military pushBack _x; KPLIB_sectors_all pushBack _x;};
+        case "KPLIB_eden_c": {KPLIB_sectors_city pushBack _x; KPLIB_sectors_all pushBack _x;};
+        case "KPLIB_eden_m": {KPLIB_sectors_metropolis pushBack _x; KPLIB_sectors_all pushBack _x;};
+        case "KPLIB_eden_f": {KPLIB_sectors_factory pushBack _x; KPLIB_sectors_all pushBack _x;};
+        case "KPLIB_eden_t": {KPLIB_sectors_tower pushBack _x; if (isServer) then {_x setMarkerText format ["%1 %2",markerText _x, mapGridPosition (markerPos _x)];}; KPLIB_sectors_all pushBack _x;};
     };
-
-    if (_isMissionSector) then {KPLIB_sectors_all pushBack _x;};
 } forEach allMapMarkers;
 
 // Send filled arrays to clients
