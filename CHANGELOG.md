@@ -13,7 +13,7 @@
 * Tweaked: Stringtable key names categorized.
 * Tweaked: Formatting and comments in preset files.
 * Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
-* Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better seperation.
+* Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better separation.
 * Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
 
 ## 0.963a (10th April 2018 as "legacy support" release)
