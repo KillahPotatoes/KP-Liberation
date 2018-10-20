@@ -31,7 +31,7 @@ private _handler = [
             !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
             && {[_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear}
         ) then {
-            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was captured", diag_tickTime, _sector];
+            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 (%3) captured", diag_tickTime, markerText _sector, _sector];
 
             _this setVariable ["KPLIB_sectorActive", false];
             [_sector] call KPLIB_fnc_core_changeSectorOwner;
@@ -49,13 +49,13 @@ private _handler = [
     {
         _this getVariable "params" params ["_sector"];
 
+        diag_log format ["[KP LIBERATION] [%1] [CORE] ----- Sector %2 (%3) activated -----", diag_tickTime, markerText _sector, _sector];
+
         _this setVariable ["KPLIB_sectorActive", true];
 
         KPLIB_sectors_active pushBack _sector;
         publicVariable "KPLIB_sectors_active";
         ["KPLIB_sector_activated", [_sector]] call CBA_fnc_globalEvent;
-
-        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was activated", diag_tickTime, _sector];
 
     }, // Start func
     {
@@ -65,7 +65,7 @@ private _handler = [
         publicVariable "KPLIB_sectors_active";
         ["KPLIB_sector_deactivated", [_sector]] call CBA_fnc_globalEvent;
 
-        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was deactivated", diag_tickTime, _sector];
+        diag_log format ["[KP LIBERATION] [%1] [CORE] ----- Sector %2 (%3) deactivated -----", diag_tickTime, markerText _sector, _sector];
     }, // End func
     {true}, // Run condition
     {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition
