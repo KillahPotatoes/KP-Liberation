@@ -4,7 +4,7 @@
     File: fn_garrison_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-10-18
+    Last Update: 2018-10-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -72,6 +72,7 @@ if (_moduleData isEqualTo []) then {
         _lVehicles = [];
         _hVehicles = [];
 
+        // Add light vehicles
         for "_i" from 1 to _lVehCount do {
             if (_side == 0) then {
                 _lVehicles pushBack (selectRandom KPLIB_preset_oVehiclesLow);
@@ -80,11 +81,13 @@ if (_moduleData isEqualTo []) then {
             };
         };
 
+        // Add heavy vehicles
         for "_i" from 1 to _hVehCount do {
             _hVehicles pushBack (selectRandom KPLIB_preset_oVehicles);
         };
 
-        KPLIB_garrison_array append [_x, _side, _soldiers, _lVehicles, _hVehicles];
+        // Add current sector to the garrison array
+        KPLIB_garrison_array pushBack [_x, _side, _soldiers, _lVehicles, _hVehicles];
 
     } forEach (KPLIB_sectors_military + KPLIB_sectors_city + KPLIB_sectors_factory + KPLIB_sectors_metropolis + KPLIB_sectors_tower);
 
