@@ -4,7 +4,7 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-18
+    Last Update: 2018-10-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -44,7 +44,9 @@ if (isServer) then {
 
         if (KPLIB_save_loaded) then {
             if (KPLIB_campaignRunning) then {
-                [] call KPLIB_fnc_init_save;
+                if (time > 0) then {
+                    [] call KPLIB_fnc_init_save;
+                };
             } else {
                 _handle call CBA_fnc_removePerFrameHandler;
                 diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
