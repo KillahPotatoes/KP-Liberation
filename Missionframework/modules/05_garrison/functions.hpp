@@ -35,4 +35,7 @@ class garrison {
 
     // Spawns the garrison upon sector activation
     class garrison_spawn {};
+
+    // Spawns an infantry patrol at a sector
+    class garrison_spawnSectorPatrol {};
 };
