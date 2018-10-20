@@ -4,7 +4,7 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-08-26
+    Last Update: 2018-10-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,7 +31,7 @@ private _handler = [
             !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
             && {[_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear}
         ) then {
-            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was captured", [diag_tickTime, _sector]];
+            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was captured", diag_tickTime, _sector];
 
             _this setVariable ["KPLIB_sectorActive", false];
             [_sector] call KPLIB_fnc_core_changeSectorOwner;
@@ -55,7 +55,7 @@ private _handler = [
         publicVariable "KPLIB_sectors_active";
         ["KPLIB_sector_activated", [_sector]] call CBA_fnc_globalEvent;
 
-        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was activated", [diag_tickTime, _sector]];
+        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was activated", diag_tickTime, _sector];
 
     }, // Start func
     {
@@ -65,7 +65,7 @@ private _handler = [
         publicVariable "KPLIB_sectors_active";
         ["KPLIB_sector_deactivated", [_sector]] call CBA_fnc_globalEvent;
 
-        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was deactivated", [diag_tickTime, _sector]];
+        diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 was deactivated", diag_tickTime, _sector];
     }, // End func
     {true}, // Run condition
     {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition
