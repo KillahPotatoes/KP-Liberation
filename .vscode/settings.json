@@ -6,7 +6,6 @@
     },
     "sqflint.ignoredVariables": [
         "_input0",
-        "findIf",
         "BIS_fnc_reviveInit",
         "KPLIB_eden_boxspawn",
         "KPLIB_eden_startbase",
