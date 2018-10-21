@@ -4,7 +4,7 @@
     File: fn_garrison_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-10-20
+    Last Update: 2018-10-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,6 +39,9 @@ if (isServer) then {
 
 // Array which contains all garrisons
 KPLIB_garrison_array = [];
+
+// Array to collect active garrison units
+KPLIB_garrison_active = [];
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [GARRISON] Module initialized", diag_tickTime];};
 

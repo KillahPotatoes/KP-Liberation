@@ -38,4 +38,7 @@ class garrison {
 
     // Spawns garrison infantry at a sector
     class garrison_spawnSectorInfantry {};
+
+    // Spawns a vehicle at a sector
+    class garrison_spawnSectorVehicle {};
 };

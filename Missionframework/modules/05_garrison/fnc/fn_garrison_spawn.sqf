@@ -29,6 +29,12 @@ private _sectorOwnerSide = sideEmpty;
 private _soldierCount = _garrison select 2;
 private _squadCount = floor (_soldierCount / 6);
 private _leftSolders = _soldierCount % 6;
+private _lightVehicles = _garrison select 3;
+private _heavyVehicles = _garrison select 4;
+
+private _spawnedSquads = [];
+private _spawnedVehL = [];
+private _spawnedVehH = [];
 
 // Get current sector owner
 switch (_sectorOwner) do {
@@ -38,14 +44,21 @@ switch (_sectorOwner) do {
     default {_sectorOwnerSide = KPLIB_preset_sideEnemy;};
 };
 
+// Spawn full infantry squads
 for "_i" from 1 to _squadCount do {
     // Spawn infantry squads with small delays. Otherwise it could cause a small freeze, when there >3 squads at a sector.
-    [{[_this select 0, _this select 1] call KPLIB_fnc_garrison_spawnSectorInfantry;}, [_sector, _sectorOwner], _i] call CBA_fnc_waitAndExecute;
+    [{_this call KPLIB_fnc_garrison_spawnSectorInfantry;}, [_sector, _sectorOwner], _i] call CBA_fnc_waitAndExecute;
 };
 
+// Spawn remaining soldiers
 if (_leftSolders > 0) then {
     [_sector, _sectorOwner, _leftSolders] call KPLIB_fnc_garrison_spawnSectorInfantry;
 };
+
+// Spawn vehicles
+{
+    [{_this call KPLIB_fnc_garrison_spawnSectorVehicle;}, [_sector, _x, _sectorOwnerSide], _forEachIndex] call CBA_fnc_waitAndExecute;
+} forEach (_lightVehicles + _heavyVehicles);
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [GARRISON] Spawn for %2 finished", diag_tickTime, _sector];};
 
