@@ -4,7 +4,7 @@
     File: fn_garrison_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-10-20
+    Last Update: 2018-10-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -43,26 +43,26 @@ if (_moduleData isEqualTo []) then {
         switch (toString _tempMarker) do {
             case "KPLIB_eden_b": {
                 _side = 0;
-                _soldiers = (ceil (random 4)) * 6;
+                _soldiers = (ceil (random 3) + 3) * 6;
                 _lVehCount = (round (random 2)) + 2;
                 _hVehCount = (round (random 3)) + 3;
             };
             case "KPLIB_eden_c";
             case "KPLIB_eden_f": {
                 _side = 1;
-                _soldiers = (ceil (random 3)) * 6;
+                _soldiers = (ceil (random 2) + 2) * 6;
                 _lVehCount = (round (random 3)) + 2;
                 _hVehCount = 0;
             };
             case "KPLIB_eden_m": {
                 _side = 1;
-                _soldiers = (ceil (random 6)) * 6;
+                _soldiers = (ceil (random 5) + 3) * 6;
                 _lVehCount = (round (random 4)) + 4;
                 _hVehCount = 0;
             };
             case "KPLIB_eden_t": {
                 _side = 0;
-                _soldiers = (ceil (random 2)) * 6;
+                _soldiers = (ceil (random 2) + 1) * 6;
                 _lVehCount = 0;
                 _hVehCount = 0;
             };
