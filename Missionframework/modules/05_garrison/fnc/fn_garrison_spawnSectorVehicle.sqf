@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2018-10-21
+    Last Update: 2018-10-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,6 +14,7 @@
         _sector         - Markername of the sector          [STRING, defaults to ""]
         _vehicle        - Classname of the vehicle to spawn [STRING, defaults to ""]
         _side           - Side of the vehicle               [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _kind           - Kind of the vehicle (light/heavy) [STRING, defaults to "light"]
 
     Returns:
         Spawned vehicle [OBJECT]
@@ -22,7 +23,8 @@
 params [
     ["_sector", "", [""]],
     ["_vehicle", "", [""]],
-    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]]
+    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]],
+    ["_kind", "light", [""]]
 ];
 
 // Exit if no or invalid sector or classname was given
@@ -32,7 +34,9 @@ if !(_sector in KPLIB_sectors_all) exitWith {objNull};
 
 // Initialize local variables
 private _vehicleArray = [];
-private _spawnPos = ((getMarkerPos _sector) getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
+private _sectorPos = getMarkerPos _sector;
+private _spawnPos = [_sectorPos] call KPLIB_fnc_garrison_getVehSpawnPos;
+private _activeGarrisonRef = KPLIB_garrison_active select (KPLIB_garrison_active findIf {(_x select 0) == _sector});
 
 /* NOTE
     This works totally fine and also adds e.g. a CSAT vehicle classname as Blufor side, if ordered.
@@ -41,10 +45,12 @@ private _spawnPos = ((getMarkerPos _sector) getPos [50 + (random 250), random 36
 */
 // Spawn vehicle
 _vehicleArray = [_spawnPos, random 360, _vehicle, _side] call BIS_fnc_spawnvehicle;
+private _vehicle = _vehicleArray select 0;
+private _crew = crew _vehicle;
 
 // FOR DEBUG: Add group to Zeus
 {
-    _x addCuratorEditableObjects [[(_vehicleArray select 0)] + (_vehicleArray select 1), true]
+    _x addCuratorEditableObjects [[_vehicle] + _crew, true]
 } forEach allCurators;
 
 /* NOTE
@@ -54,6 +60,16 @@ _vehicleArray = [_spawnPos, random 360, _vehicle, _side] call BIS_fnc_spawnvehic
     Personally I think both options aren't the best in their current implementation, but I would prefer them to just stand.
 */
 // Add patrol waypoints
-// [(_vehicleArray select 0), (getMarkerPos _sector), 250, 4, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_taskPatrol;
+// [_vehicle, _sectorPos, 250, 4, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_taskPatrol;
 
-_vehicleArray select 0
+// Add vehicle and crew to active garrison array
+if (_kind == "light") then {
+    (_activeGarrisonRef select 2) pushBack _vehicle;
+} else {
+    (_activeGarrisonRef select 3) pushBack _vehicle;
+};
+
+(_activeGarrisonRef select 4) append _crew;
+
+// Return vehicle object
+_vehicle

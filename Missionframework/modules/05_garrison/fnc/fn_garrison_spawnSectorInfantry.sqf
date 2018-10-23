@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-21
+    Last Update: 2018-10-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,31 +35,18 @@ private _side = sideEmpty;
 private _sectorPos = getMarkerPos _sector;
 private _spawnPos = _sectorPos getPos [random 150, random 360];
 private _soldierArray = [];
+private _activeGarrisonRef = KPLIB_garrison_active select (KPLIB_garrison_active findIf {(_x select 0) == _sector}) select 1;
+
+// Avoid spawn position on water
+while {surfaceIsWater _spawnPos} do {
+    _spawnPos = _sectorPos getPos [random 150, random 360];
+};
 
 // Set array to select soldier classnames from
 switch (_ownerNumber) do {
     case 1: {_soldierArray = KPLIB_preset_oMilUnits; _side = KPLIB_preset_sideEnemy;};
     case 2: {_soldierArray = KPLIB_preset_lightSquad; _side = KPLIB_preset_sidePlayers;};
-    default {
-        _soldierArray = [
-            KPLIB_preset_oTeamLeader,
-            KPLIB_preset_oRifleman,
-            KPLIB_preset_oRifleman,
-            KPLIB_preset_oRifleman,
-            KPLIB_preset_oRpg,
-            KPLIB_preset_oRpg,
-            KPLIB_preset_oRpg,
-            KPLIB_preset_oGrenadier,
-            KPLIB_preset_oMachinegunner,
-            KPLIB_preset_oHeavygunner,
-            KPLIB_preset_oMarksman,
-            KPLIB_preset_oAt,
-            KPLIB_preset_oAa,
-            KPLIB_preset_oMedic,
-            KPLIB_preset_oMedic
-        ];
-        _side = KPLIB_preset_sideEnemy;
-    };
+    default {_soldierArray = KPLIB_preset_oInfantry; _side = KPLIB_preset_sideEnemy;};
 };
 
 // Create group
@@ -67,7 +54,7 @@ _grp = createGroup [_side, true];
 
 // Add soldiers to group
 for "_i" from 1 to _amount do {
-    _grp createUnit [selectRandom _soldierArray, _spawnPos, [], 10, "NONE"];
+    _activeGarrisonRef pushBack (_grp createUnit [selectRandom _soldierArray, _spawnPos, [], 10, "NONE"]);
 };
 
 // FOR DEBUG: Add group to Zeus
