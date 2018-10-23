@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-10-21
+    Last Update: 2018-10-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class garrison {
 
     // Despawns the remaining garrison and updates the garrison array upon sector deactivation
     class garrison_despawn {};
+
+    // Finds empty position suitable for vehicle spawn
+    class garrison_getVehSpawnPos {};
 
     // Loads module specific data from the save
     class garrison_loadData {};
