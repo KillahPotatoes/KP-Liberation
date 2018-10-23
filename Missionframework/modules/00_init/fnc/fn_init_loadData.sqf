@@ -4,7 +4,7 @@
     File: fn_init_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-10-07
+    Last Update: 2018-10-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,9 +31,11 @@ if (_moduleData isEqualTo []) then {
     // Connect locked vehicles to military bases
     private _assignedVehicles = [];
     private _assignedBases = [];
+    private _nextVehicle = "";
+    private _nextBase = "";
     while {((count _assignedVehicles) < (count KPLIB_preset_lockedVeh)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-        private _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
-        private _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
+        _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
+        _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
@@ -63,6 +65,8 @@ if (_moduleData isEqualTo []) then {
         diag_log "[KP LIBERATION] [IMPORTANT] Additional military sectors or unlock vehicles detected and assigned.";
         private _assignedVehicles = [];
         private _assignedBases = [];
+        private _nextVehicle = "";
+        private _nextBase = "";
 
         {
             _assignedVehicles pushBack (_x select 0);
@@ -70,8 +74,8 @@ if (_moduleData isEqualTo []) then {
         } forEach KPLIB_sectors_lockedVeh;
 
         while {((count _assignedVehicles) < (count KPLIB_preset_lockedVeh)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-            private _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
-            private _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
+            _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
+            _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
             _assignedVehicles pushBack _nextVehicle;
             _assignedBases pushBack _nextBase;
             KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
