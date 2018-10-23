@@ -14,6 +14,9 @@
 class garrison {
     file = "modules\05_garrison\fnc";
 
+    // Changes the owner of a sector garrison
+    class garrison_changeOwner {};
+
     // Despawns the remaining garrison and updates the garrison array upon sector deactivation
     class garrison_despawn {};
 
