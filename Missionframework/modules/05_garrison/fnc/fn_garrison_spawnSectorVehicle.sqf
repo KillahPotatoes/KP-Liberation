@@ -64,12 +64,12 @@ private _crew = crew _vehicle;
 
 // Add vehicle and crew to active garrison array
 if (_kind == "light") then {
-    (_activeGarrisonRef select 2) pushBack _vehicle;
-} else {
     (_activeGarrisonRef select 3) pushBack _vehicle;
+} else {
+    (_activeGarrisonRef select 4) pushBack _vehicle;
 };
 
-(_activeGarrisonRef select 4) append _crew;
+(_activeGarrisonRef select 5) append _crew;
 
 // Return vehicle object
 _vehicle

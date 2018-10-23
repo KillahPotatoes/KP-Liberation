@@ -23,9 +23,6 @@ params [
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [GARRISON] Spawn for %2", diag_tickTime, _sector];};
 
-// Create active garrison array entry
-KPLIB_garrison_active pushBack [_sector, [], [], [], []];
-
 // Initialize local variables
 private _garrison = KPLIB_garrison_array select (KPLIB_garrison_array findIf {_x select 0 == _sector});
 private _sectorOwner = _garrison select 1;
@@ -35,6 +32,9 @@ private _squadCount = floor (_soldierCount / 6);
 private _leftSolders = _soldierCount % 6;
 private _lightVehicles = _garrison select 3;
 private _heavyVehicles = _garrison select 4;
+
+// Create active garrison array entry
+KPLIB_garrison_active pushBack [_sector, _sectorOwner, [], [], [], []];
 
 // Get current sector owner
 switch (_sectorOwner) do {
