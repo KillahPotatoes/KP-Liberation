@@ -23,12 +23,12 @@ class common {
     // Creates a unit with given classname in given group
     class common_createUnit {};
 
+    // Creates a vehicle at given position with given direction
+    class common_createVehicle {};
+
     // Generate positions in circle
     class common_getCirclePositions {};
 
     // getPos wrapper for ATL positions
     class common_getPos {};
-
-    // Spawning of a vehicle at given position with given direction
-    class common_spawnVehicle {};
 };

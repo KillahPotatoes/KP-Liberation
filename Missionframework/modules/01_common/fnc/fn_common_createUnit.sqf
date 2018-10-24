@@ -13,7 +13,7 @@
     Parameter(s):
         _grp        - Group for the unit to join            [GROUP, defaults to grpNull]
         _unit       - Classname of the unit to spawn        [STRING, defaults to ""]
-        _spawnPos   - Position to spawn the unit            [ARRAY, defaults to KPLIB_zeroPos]
+        _spawnPos   - Position to spawn the unit            [POSITION, defaults to KPLIB_zeroPos]
         _addition   - Additional argument for unit creation [STRING, defaults to "NONE"]
 
     Returns:
@@ -23,7 +23,7 @@
 params [
     ["_grp", grpNull, [grpNull]],
     ["_unit", "", [""]],
-    ["_spawnPos", [KPLIB_zeroPos], [[]], [2,3]],
+    ["_spawnPos", [KPLIB_zeroPos], [[]], [3]],
     ["_addition", "NONE", [""]]
 ];
 

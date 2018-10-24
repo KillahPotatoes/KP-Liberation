@@ -13,7 +13,7 @@
     Parameter(s):
         _side       - Side of the group                             [SIDE, defaults to KPLIB_preset_sideEnemy]
         _units      - Array of classnames to spawn as group members [ARRAY, defaults to []]
-        _spawnPos   - Position to spawn the group and units         [ARRAY, defaults to KPLIB_zeroPos]
+        _spawnPos   - Position to spawn the group and units         [POSITION, defaults to KPLIB_zeroPos]
         _addition   - Additional argument for unit creation         [STRING, defaults to "NONE"]
 
     Returns:
@@ -23,7 +23,7 @@
 params [
     ["_side", KPLIB_preset_sideEnemy, [sideEmpty]],
     ["_units", [], [[]]],
-    ["_spawnPos", [KPLIB_zeroPos], [[]], [2,3]],
+    ["_spawnPos", [KPLIB_zeroPos], [[]], [3]],
     ["_addition", "NONE", [""]]
 ];
 
