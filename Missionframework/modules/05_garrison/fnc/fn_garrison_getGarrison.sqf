@@ -23,10 +23,6 @@ params [
     ["_active", false, [true]]
 ];
 
-private _array = KPLIB_garrison_array;
-
-if (_active) then {
-    _array = KPLIB_garrison_active;
-};
+private _array = [KPLIB_garrison_array, KPLIB_garrison_active] select _active;
 
 _array select (_array findIf {_x select 0 == _sector})
