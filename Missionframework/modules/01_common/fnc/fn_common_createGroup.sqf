@@ -17,7 +17,7 @@
         _addition   - Additional argument for unit creation         [STRING, defaults to "NONE"]
 
     Returns:
-        Array with created group and group members as objects [ARRAY]
+        Created group [GROUP]
 */
 
 params [
