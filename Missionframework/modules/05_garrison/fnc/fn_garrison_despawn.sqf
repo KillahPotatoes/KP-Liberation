@@ -4,7 +4,7 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-23
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,8 +25,8 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [GARRISON] Despawn fo
 
 // Initialize local variables
 private _activeGarrisonId = KPLIB_garrison_active findIf {(_x select 0) == _sector};
-private _activeGarrisonRef = KPLIB_garrison_active select _activeGarrisonId;
-private _persistentGarrisonRef = KPLIB_garrison_array select (KPLIB_garrison_array findIf {(_x select 0) == _sector});
+private _activeGarrisonRef = [_sector, true] call KPLIB_fnc_garrison_getGarrison;
+private _persistentGarrisonRef = [_sector] call KPLIB_fnc_garrison_getGarrison;
 private _vehicle = objNull;
 private _infantry = 0;
 private _handledCrew = [];

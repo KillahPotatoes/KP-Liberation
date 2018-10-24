@@ -20,6 +20,9 @@ class garrison {
     // Despawns the remaining garrison and updates the garrison array upon sector deactivation
     class garrison_despawn {};
 
+    // Gets the specific garrison array
+    class garrison_getGarrison {};
+
     // Finds empty position suitable for vehicle spawn
     class garrison_getVehSpawnPos {};
 

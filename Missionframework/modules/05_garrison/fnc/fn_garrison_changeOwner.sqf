@@ -24,7 +24,7 @@ params [
 if (_sector == "") exitWith {false};
 
 // Get the sector reference in the garrison array and initialize new owner variable
-private _persistentGarrisonRef = KPLIB_garrison_array select (KPLIB_garrison_array findIf {(_x select 0) == _sector});
+private _persistentGarrisonRef = [_sector] call KPLIB_fnc_garrison_getGarrison;
 private _newOwner = 2;
 
 // If sector already player owned -> enemy as new owner

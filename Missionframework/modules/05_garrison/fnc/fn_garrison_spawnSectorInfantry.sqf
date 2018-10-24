@@ -35,7 +35,7 @@ private _side = sideEmpty;
 private _sectorPos = getMarkerPos _sector;
 private _spawnPos = _sectorPos getPos [random 150, random 360];
 private _soldierArray = [];
-private _activeGarrisonRef = KPLIB_garrison_active select (KPLIB_garrison_active findIf {(_x select 0) == _sector}) select 2;
+private _activeGarrisonRef = ([_sector, true] call KPLIB_fnc_garrison_getGarrison) select 2;
 
 // Avoid spawn position on water
 while {surfaceIsWater _spawnPos} do {
