@@ -6,7 +6,7 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-08
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -51,7 +51,7 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
         deleteVehicle _x;
 
         [[[_class, _pos, 0, true], _dirAndUp], {
-            private _obj = (_this select 0) call KPLIB_fnc_common_spawnVehicle;
+            private _obj = (_this select 0) call KPLIB_fnc_common_createVehicle;
             _obj setVectorDirAndUp (_this select 1);
         }] remoteExecCall ["call", 2];
         //_obj setVectorDirAndUp _dirAndUp;

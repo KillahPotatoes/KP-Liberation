@@ -4,7 +4,7 @@
     File: fn_core_spawnStartVeh.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-05-01
-    Last Update: 2018-09-03
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,7 @@ for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
     private _spawnPos = getPosATL _spawnPoint;
 
     // Spawn the vehicle at the spawn position with a slight height offset.
-    [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_common_spawnVehicle;
+    [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_common_createVehicle;
 };
 
 // Spawn the boats and move them in the boat racks
@@ -35,7 +35,7 @@ for [{_i=0}, {!isNil ("KPLIB_eden_boat_" + str _i)}, {_i = _i + 1}] do {
     _spawnPoint = missionNamespace getVariable ("KPLIB_eden_boat_" + str _i);
 
     // Spawn the boat
-    private _boat = [KPLIB_preset_addBoat, KPLIB_zeroPos, getDir _spawnPoint, true] call KPLIB_fnc_common_spawnVehicle;
+    private _boat = [KPLIB_preset_addBoat, KPLIB_zeroPos, getDir _spawnPoint, true] call KPLIB_fnc_common_createVehicle;
 
     // Move the boat to the rack
     _spawnPoint setVehicleCargo _boat;
