@@ -8,13 +8,13 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Loads data which is bound to the this module from the given save data or initializes needed data for a new campaign.
+        Loads data which is bound to the this module from the given save data or initializes needed data for a new campaign.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Garrison module loading...";};
