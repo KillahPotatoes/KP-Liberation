@@ -4,7 +4,7 @@
     File: fn_garrison_getVehSpawnPos.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-23
-    Last Update: 2018-10-23
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,21 +21,9 @@ params [
     ["_center", [], [[]], [2,3]]
 ];
 
-private _spawnPos = [];
+private _spawnPos = (_center getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
 
-// Prevent error when findEmptyPosition returns an empty array
-while {_spawnPos isEqualTo []} do {
-    _spawnPos = (_center getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
-};
-
-// Avoid spawn position on water
-while {surfaceIsWater _spawnPos} do {
-    _spawnPos = (_center getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
-
-    // Prevent error when findEmptyPosition returns an empty array
-    while {_spawnPos isEqualTo []} do {
-        _spawnPos = (_center getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
-    };
-};
+// Avoid spawn position on water or empty position by findEmptyPosition
+if (_spawnPos isEqualTo [] || {surfaceIsWater _spawnPos}) exitWith {_this call KPLIB_fnc_garrison_getVehSpawnPos};
 
 _spawnPos
