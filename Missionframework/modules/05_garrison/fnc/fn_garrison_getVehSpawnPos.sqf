@@ -11,7 +11,7 @@
         Finds an position where a vehicle can safely spawn. Skips water positions.
 
     Parameter(s):
-        _centerPos - Center position from which to find a spawn position [ARRAY, defaults to []]
+        _center - Center position from which to find a spawn position [ARRAY, defaults to []]
 
     Returns:
         Position to spawn as 3d position [ARRAY]
