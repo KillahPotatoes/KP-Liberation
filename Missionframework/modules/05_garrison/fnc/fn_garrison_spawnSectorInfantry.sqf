@@ -4,11 +4,11 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-23
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Spawns an infantrie squad with given amount of soldiers of given side at given sector.
+        Spawns an infantry squad with given amount of soldiers of given side at given sector.
 
     Parameter(s):
         _sector         - Markername of the sector      [STRING, defaults to ""]

@@ -4,14 +4,14 @@
     File: fn_garrison_changeOwner.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-23
-    Last Update: 2018-10-23
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Changes the owner of a sector garrison from blufor to opfor or vice versa.
 
     Parameter(s):
-        _sector         - Markername of the sector      [STRING, defaults to ""]
+        _sector - Markername of the sector [STRING, defaults to ""]
 
     Returns:
         Function reached the end [BOOL]
