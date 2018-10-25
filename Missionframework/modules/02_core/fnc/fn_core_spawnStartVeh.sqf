@@ -26,7 +26,7 @@ for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
     private _spawnPos = getPosATL _spawnPoint;
 
     // Spawn the vehicle at the spawn position with a slight height offset.
-    [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint] call KPLIB_fnc_common_createVehicle;
+    [KPLIB_preset_addHeli, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir _spawnPoint, true] call KPLIB_fnc_common_createVehicle;
 };
 
 // Spawn the boats and move them in the boat racks

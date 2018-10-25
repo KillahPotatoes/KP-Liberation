@@ -41,9 +41,15 @@ private _heavyVeh = [];
     };
 } forEach (_activeGarrisonRef select 2);
 
+/* NOTE:
+    With the current despawn checks for the vehicles, the vehicle won't be deleted if it's a wreck or the crew bailed out due to damage.
+    This leads to the behaviour that it would be deleted if there is a blufor unit or a player in the vehicle (if the enemy is opfor).
+    We'll address the "capture enemy vehicle" with a variable which will be set to the vehicle like "KPLIB_captured" in a later iteration.
+*/
+
 // Despawn garrison light vehicles
 {
-    if (alive _x) then {
+    if (alive _x && !((crew _x) isEqualTo [])) then {
         _vehicle = _x;
         _lightVeh pushBack (typeOf _x);
         {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
@@ -53,7 +59,7 @@ private _heavyVeh = [];
 
 // Despawn garrison heavy vehicles
 {
-    if (alive _x) then {
+    if (alive _x && !((crew _x) isEqualTo [])) then {
         _vehicle = _x;
         _heavyVeh pushBack (typeOf _x);
         {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);

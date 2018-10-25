@@ -4,17 +4,17 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2018-10-24
+    Last Update: 2018-10-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Spawns a vehicle with full crew of given side at given sector.
 
     Parameter(s):
-        _sector         - Markername of the sector          [STRING, defaults to ""]
-        _vehicle        - Classname of the vehicle to spawn [STRING, defaults to ""]
-        _side           - Side of the vehicle               [SIDE, defaults to KPLIB_preset_sideEnemy]
-        _kind           - Kind of the vehicle (light/heavy) [STRING, defaults to "light"]
+        _sector     - Markername of the sector          [STRING, defaults to ""]
+        _classname  - Classname of the vehicle to spawn [STRING, defaults to ""]
+        _side       - Side of the vehicle               [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _kind       - Kind of the vehicle (light/heavy) [STRING, defaults to "light"]
 
     Returns:
         Spawned vehicle [OBJECT]
@@ -22,18 +22,15 @@
 
 params [
     ["_sector", "", [""]],
-    ["_vehicle", "", [""]],
+    ["_classname", "", [""]],
     ["_side", KPLIB_preset_sideEnemy, [sideEmpty]],
     ["_kind", "light", [""]]
 ];
 
 // Exit if no or invalid sector or classname was given
-if (_sector == "") exitWith {objNull};
-if (_vehicle == "") exitWith {objNull};
-if !(_sector in KPLIB_sectors_all) exitWith {objNull};
+if (_sector == "" || _classname == "" || !(_sector in KPLIB_sectors_all)) exitWith {objNull};
 
 // Initialize local variables
-private _vehicleArray = [];
 private _sectorPos = getMarkerPos _sector;
 private _spawnPos = [_sectorPos] call KPLIB_fnc_garrison_getVehSpawnPos;
 private _activeGarrisonRef = [_sector, true] call KPLIB_fnc_garrison_getGarrison;
@@ -44,13 +41,12 @@ private _activeGarrisonRef = [_sector, true] call KPLIB_fnc_garrison_getGarrison
     Maybe we have to replace it with an own function, especially as some AAF vehicles (resistance side) are also in the blufor preset.
 */
 // Spawn vehicle
-_vehicleArray = [_spawnPos, random 360, _vehicle, _side] call BIS_fnc_spawnvehicle;
-private _vehicle = _vehicleArray select 0;
+private _vehicle = [_classname, _spawnPos, random 360, true, true] call KPLIB_fnc_common_createVehicle;
 private _crew = crew _vehicle;
 
 // FOR DEBUG: Add group to Zeus
 {
-    _x addCuratorEditableObjects [[_vehicle] + _crew, true]
+    _x addCuratorEditableObjects [[_vehicle], true]
 } forEach allCurators;
 
 /* NOTE

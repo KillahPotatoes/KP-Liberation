@@ -11,14 +11,14 @@
         Finds an position where a vehicle can safely spawn. Skips water positions.
 
     Parameter(s):
-        _center - Center position from which to find a spawn position [ARRAY, defaults to []]
+        _center - Center position from which to find a spawn position [POSITION, defaults to []]
 
     Returns:
-        Position to spawn as 3d position [ARRAY]
+        Position to spawn [POSITION AGL]
 */
 
 params [
-    ["_center", [], [[]], [2,3]]
+    ["_center", [], [[]], [3]]
 ];
 
 private _spawnPos = (_center getPos [50 + (random 250), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
