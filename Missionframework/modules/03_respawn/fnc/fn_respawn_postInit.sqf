@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_resapwn_initModule
+    KPLIB_fnc_respawn_postInit
 
-    File: fn_respawn_initModule.sqf
+    File: fn_respawn_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-16
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,10 +19,7 @@
     BOOL
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initializing...", diag_tickTime];};
-
-// Read the module globals
-call compile preprocessFileLineNumbers "modules\03_respawn\globals.sqf";
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [RESPAWN] Module initializing...", diag_tickTime];};
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
@@ -43,6 +40,6 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [RESPAWN] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [RESPAWN] Module initialized", diag_tickTime];};
 
 true

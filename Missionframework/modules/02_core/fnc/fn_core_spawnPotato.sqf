@@ -4,7 +4,7 @@
     File: fn_core_spawnPotato.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-05-01
-    Last Update: 2018-05-09
+    Last Update: 2018-10-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ if((KPLIB_core_potato01 distance2D KPLIB_eden_potatospawn) < 10 && !alive KPLIB_
 private _spawnPos = getPosATL KPLIB_eden_potatospawn;
 
 // Create Potato 01 at the spawn position with a slight height offset.
-KPLIB_core_potato01 = [KPLIB_preset_potato, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir KPLIB_eden_potatospawn, true] call KPLIB_fnc_common_spawnVehicle;
+KPLIB_core_potato01 = [KPLIB_preset_potato, [_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2) + 0.1], getDir KPLIB_eden_potatospawn, true] call KPLIB_fnc_common_createVehicle;
 
 // Declare as ace medical vehicle (can also be set if ACE is not used)
 KPLIB_core_potato01 setVariable ["ace_medical_medicClass", 1, true];

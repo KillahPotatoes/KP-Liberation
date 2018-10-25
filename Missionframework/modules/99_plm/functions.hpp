@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-02
-    Last Update: 2018-08-31
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,16 +23,21 @@ class plm {
     // Apply view distance and sound volume
     class plm_getInOut {};
 
-    // Module initialization
-    class plm_initModule {
-        postInit = 1;
-    };
-
     // Joins selected group
     class plm_join {};
 
     // Open the dialog
     class plm_openDialog {};
+
+    // Module post initialization
+    class plm_postInit {
+        postInit = 1;
+    };
+
+    // Module pre initialization
+    class plm_preInit {
+        preInit = 1;
+    };
 
     // Applies new name to group
     class plm_rename {};

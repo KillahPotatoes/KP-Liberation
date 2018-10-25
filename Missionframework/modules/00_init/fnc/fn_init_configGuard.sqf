@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2018-08-31
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,7 +34,7 @@ KPLIB_validationNamespace setVariable ["opfor", false];
 KPLIB_validationNamespace setVariable ["civilians", false];
 KPLIB_validationNamespace setVariable ["resistance", false];
 
-// Delay all checks unitl all initialization is done
+// Delay all checks until all initializations are done
 [] spawn {
     waitUntil{time > 0 && count call CBA_fnc_players > 0};
     diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];

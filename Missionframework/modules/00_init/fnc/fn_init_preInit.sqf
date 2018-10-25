@@ -1,14 +1,57 @@
 /*
-    KP LIBERATION MODULE GLOBALS
+    KPLIB_fnc_init_preInit
 
-    File: globals.sqf
+    File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
-    Last Update: 2018-08-03
+    Date: 2017-08-31
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Initializes the global variables which are brought by this module.
+    Tasks of this module are:
+        * Fetch parameters
+        * Fetch config values
+        * Define basic ui values
+        * Fetch, check and distribute preset data
+
+    Dependencies:
+    NONE
+
+    Returns:
+    BOOL
+*/
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initializing...", diag_tickTime];};
+
+// Execute config guard function
+[] call KPLIB_fnc_init_configGuard;
+
+// Check for ACE
+KPLIB_ace_enabled = isClass (configFile >> "CfgPatches" >> "ace_main");
+KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
+
+// Check for KP Ranks
+KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
+
+// Parameter processing and vanilla save deactivation on the server only
+if (isServer) then {
+    enableSaving [false, false];
+
+    KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
+    [] call KPLIB_fnc_init_paramFetchAll;
+
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
+};
+
+// Read the KPLIB_config.sqf file
+[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+
+/*
+    ----- Module Globals -----
 */
 
 // Array of all whitelisted arsenal items
@@ -59,9 +102,6 @@ KPLIB_resetPos = [99999,99999,0];
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
 
-// Publish some variables to the clients (maybe this should be moved elsewhere later on)
-publicVariable "KPLIB_campaignRunning";
-publicVariable "KPLIB_eden_respawnPos";
-publicVariable "KPLIB_sectors_active";
-publicVariable "KPLIB_resetPos";
-publicVariable "KPLIB_zeroPos";
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initialized", diag_tickTime];};
+
+true

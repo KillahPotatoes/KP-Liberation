@@ -1,14 +1,26 @@
 /*
-    KP LIBERATION MODULE GLOBALS
+    KPLIB_fnc_plm_preInit
 
-    File: globals.sqf
+    File: fn_plm_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2018-06-02
-    Last Update: 2018-08-04
+    Date: 2018-10-18
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Initializes the global variables which are brought by this module.
+    This preInit function defines just the global variables which are added due to this module.
+
+    Dependencies:
+        * KP GUI system
+
+    Returns:
+    BOOL
+*/
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PLM] Module initializing...", diag_tickTime];};
+
+/*
+    ----- Module Globals -----
 */
 
 // View distance on foot
@@ -31,3 +43,7 @@ KPLIB_plm_radio = 0;
 
 // Sound volume inside a vehicle
 KPLIB_plm_soundVeh = soundVolume;
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PLM] Module initialized", diag_tickTime];};
+
+true

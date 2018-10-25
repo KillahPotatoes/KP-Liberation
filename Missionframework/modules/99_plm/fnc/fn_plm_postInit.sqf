@@ -1,10 +1,10 @@
 /*
-    KP LIBERATION MODULE INITIALIZATION
+    KPLIB_fnc_plm_postInit
 
-    File: initModule.sqf
+    File: fn_plm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2018-06-02
-    Last Update: 2018-08-04
+    Date: 2017-08-31
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,10 +17,12 @@
 
     Dependencies:
         * KP GUI system
+
+    Returns:
+    BOOL
 */
 
-// Read the module globals
-call compile preprocessFileLineNumbers "modules\99_plm\globals.sqf";
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module initializing...", diag_tickTime];};
 
 // Load settings, if available
 private _settings = profileNamespace getVariable ["KP_PLM_Settings", []];
@@ -42,3 +44,7 @@ if (hasInterface) then {
 
 // Apply default/loaded values
 [] call KPLIB_fnc_plm_apply;
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module initialized", diag_tickTime];};
+
+true
