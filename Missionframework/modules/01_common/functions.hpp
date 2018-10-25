@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-10-24
+    Last Update: 2018-10-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class common {
 
     // Clears vehicle cargo
     class common_clearVehicleCargo {};
+
+    // Spawns a full crew for given vehicle
+    class common_createCrew {};
 
     // Creates a group at given side with given groupmembers
     class common_createGroup {};
