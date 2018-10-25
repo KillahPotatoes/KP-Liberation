@@ -27,7 +27,7 @@ params [
     ["_addition", "NONE", [""]]
 ];
 
-if (_grp == grpNull || _classname == "") exitWith {objNull};
+if (_grp isEqualTo grpNull || _classname isEqualTo "") exitWith {objNull};
 
 private _unit = _grp createUnit [_classname, _spawnPos, [], 10, _addition];
 
