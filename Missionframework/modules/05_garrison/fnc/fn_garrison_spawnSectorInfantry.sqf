@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-24
+    Last Update: 2018-10-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,7 @@ params [
 ];
 
 // Exit if no or invalid sector was given
-if (_sector == "") exitWith {grpNull};
+if (_sector isEqualTo "") exitWith {grpNull};
 if !(_sector in KPLIB_sectors_all) exitWith {grpNull};
 
 // Initialize local variables

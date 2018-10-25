@@ -28,7 +28,7 @@ params [
 ];
 
 // Exit if no or invalid sector or classname was given
-if (_sector == "" || _classname == "" || !(_sector in KPLIB_sectors_all)) exitWith {objNull};
+if (_sector isEqualTo "" || _classname isEqualTo "" || !(_sector in KPLIB_sectors_all)) exitWith {objNull};
 
 // Initialize local variables
 private _sectorPos = getMarkerPos _sector;
