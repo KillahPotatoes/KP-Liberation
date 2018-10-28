@@ -49,7 +49,7 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
     systemChat "buildConfirm: Resource check not implemented yet!";
     {
         private _dirAndUp = [vectorDir _x, vectorUp _x];
-        private _pos = getPos _x;
+        private _pos = getPosATL _x;
         private _class = typeOf _x;
 
         deleteVehicle _x;
