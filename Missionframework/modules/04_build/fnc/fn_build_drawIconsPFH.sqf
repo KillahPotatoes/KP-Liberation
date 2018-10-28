@@ -47,8 +47,8 @@
             _icon,
             _color,
             ASLtoAGL _drawPosASL,
-            1.5,        // Width
-            1.5,        // Height
+            1,          // Width
+            1,          // Height
             0,          // Angle
             "",         // Text
             1,          // Shadow
