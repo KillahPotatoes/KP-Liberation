@@ -6,7 +6,7 @@
     File: fn_build_handleMouse.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-25
+    Last Update: 2018-10-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -97,6 +97,11 @@ switch toLower _mode do {
 
     case "onmouseholding": {
         _args params ["_ctrl","_x","_y"];
+
+        private _xy = [_x, _y];
+        LSVAR("mousePos", _xy);
+
+        LSVAR("cursorObject", [] call KPLIB_fnc_build_objectUnderCursor);
 
         if !(isNull LGVAR(dragAnchorObject)) then {
             [LGVAR(dragAnchorObject)] call KPLIB_fnc_build_handleDrag;
