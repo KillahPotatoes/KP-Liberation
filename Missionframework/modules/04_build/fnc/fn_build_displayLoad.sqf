@@ -6,7 +6,7 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-24
+    Last Update: 2018-10-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,6 +35,10 @@ _itemsList ctrlAddEventHandler ["LBSelChanged", {
     private _selectedItem = _buildList select _selectedIndex;
 
     LSVAR("buildItem", _selectedItem);
+
+    // Unfocus the listbox to prevent camera controls from changing the selection
+    private _currentTabIDC = KPLIB_BUILD_TABS_IDCS_ARRAY select _mode;
+    ctrlSetFocus ((ctrlParent _control) displayCtrl _currentTabIDC);
 }];
 
 // Add build confirmation handler
