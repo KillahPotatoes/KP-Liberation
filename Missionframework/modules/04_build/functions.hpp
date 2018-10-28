@@ -56,6 +56,9 @@ class build {
     // Marks given area with circle created out of spheres
     class build_markArea {};
 
+    // Get user interface item color depending on object state
+    class build_objectColor {};
+
     // Return object under cursor
     class build_objectUnderCursor {};
 
