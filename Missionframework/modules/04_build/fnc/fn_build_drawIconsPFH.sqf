@@ -44,18 +44,18 @@
         private _drawPosASL = [_dragPos, getPosASLVisual _x] select (isNil "_dragPos");
 
         drawIcon3D [
-                _icon,
-                _color,
-                ASLtoAGL _drawPosASL,
-                1.5,        // Width
-                1.5,        // Height
-                0,          // Angle
-                "",         // Text
-                1,          // Shadow
-                0,          // Text size
-                "TahomaB",  // Font
-                "",         // Text align
-                true        // Draw side arrows
+            _icon,
+            _color,
+            ASLtoAGL _drawPosASL,
+            1.5,        // Width
+            1.5,        // Height
+            0,          // Angle
+            "",         // Text
+            1,          // Shadow
+            0,          // Text size
+            "TahomaB",  // Font
+            "",         // Text align
+            true        // Draw side arrows
         ];
     } forEach LGVAR(buildQueue);
 
