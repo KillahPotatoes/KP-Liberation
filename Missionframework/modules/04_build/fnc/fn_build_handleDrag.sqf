@@ -5,7 +5,7 @@
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-08
+    Last Update: 2018-10-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,6 +30,7 @@ if (_updatePos) exitWith {
     // Move all selected objects to target positions
     {
         private _targetPos = _x getVariable ["KPLIB_dragPos", []];
+        _x setVariable ["KPLIB_dragPos", nil];
 
         if !(_targetPos isEqualTo []) then {
             _x setPosASL _targetPos;

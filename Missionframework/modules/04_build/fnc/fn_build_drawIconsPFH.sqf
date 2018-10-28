@@ -38,10 +38,15 @@
         private _icon = getText (_cfgVehicles >> _objectClassname >> "icon");
         private _iconPath = [getText (_cfgVehiclesIcon >> _icon), _icon] select ((toLower _icon) find "\" > -1);
 
+        // Get item target drag pos
+        private _dragPos = _x getVariable ["KPLIB_dragPos", nil];
+        // Icon will be drawed at target pos if it is not nil
+        private _drawPosASL = [_dragPos, getPosASLVisual _x] select (isNil "_dragPos");
+
         drawIcon3D [
                 _icon,
                 _color,
-                ASLtoAGL (getPosASLVisual _x),
+                ASLtoAGL _drawPosASL,
                 1.5,        // Width
                 1.5,        // Height
                 0,          // Angle
