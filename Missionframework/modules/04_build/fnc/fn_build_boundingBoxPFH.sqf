@@ -9,13 +9,13 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Create PFH used that draws bounding boxes of objects in queue
+        Creates PFH used that draws bounding boxes of objects in queue
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 [{
@@ -34,3 +34,5 @@
     } forEach LGVAR(buildQueue);
 
 }, 0] call CBA_fnc_addPerFrameHandler;
+
+true

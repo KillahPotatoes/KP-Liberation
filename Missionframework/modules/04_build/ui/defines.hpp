@@ -4,7 +4,7 @@
     File: defines.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-07-01
+    Last Update: 2018-10-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,7 @@
 #define KPLIB_BUILD_TAB_Y_OFFSET            0.02
 
 // IDCs
+#define KPLIB_IDC_MOUSEHANDLER              101
 #define KPLIB_IDC_BUILD_TAB_INFANTRY        70100
 #define KPLIB_IDC_BUILD_TAB_LIGHT           70101
 #define KPLIB_IDC_BUILD_TAB_HEAVY           70102

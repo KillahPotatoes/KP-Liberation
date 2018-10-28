@@ -6,7 +6,7 @@
     File: fn_build_start.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-07
+    Last Update: 2018-10-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,6 +61,8 @@ KPLIB_buildLogic = _logic;
 
 // Draw bounding boxes for objects in queue
 [] call KPLIB_fnc_build_boundingBoxPFH;
+// Draw icons for objects in queue
+[] call KPLIB_fnc_build_drawIconsPFH;
 
 (findDisplay 46) createDisplay "KPLIB_build";
 
