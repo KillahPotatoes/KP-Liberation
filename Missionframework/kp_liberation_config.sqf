@@ -350,7 +350,14 @@ KP_liberation_allowed_items_extension = [
 	"ACE_Chemlight_Shield_Green",
 	"ACE_Chemlight_Shield_Red",
 	"ACE_ReserveParachute",
-	"ACE_launch_NLAW_Used_F"
+	"ACE_launch_NLAW_Used_F",
+    "ACE_PreloadedMissileDummy_Strela_2_CUP",
+	"ACE_PreloadedMissileDummy_Stinger_CUP",
+	"ACE_PreloadedMissileDummy_Igla_CUP",
+	"ACE_PreloadedMissileDummy_CUP",
+	"ACE_PreloadedMissileDummy_M72A6_CUP",
+	"ACE_PreloadedMissileDummy_NLAW_CUP",
+	"ACE_PreloadedMissileDummy_RPG18_CUP"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
