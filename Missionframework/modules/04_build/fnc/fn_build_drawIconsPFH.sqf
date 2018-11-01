@@ -5,7 +5,7 @@
     File: fn_build_drawIconsPFH.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-28
-    Last Update: 2018-10-28
+    Last Update: 2018-11-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,10 +38,8 @@
         private _icon = getText (_cfgVehicles >> _objectClassname >> "icon");
         private _iconPath = [getText (_cfgVehiclesIcon >> _icon), _icon] select ((toLower _icon) find "\" > -1);
 
-        // Get item target drag pos
-        private _dragPos = _x getVariable ["KPLIB_dragPos", nil];
-        // Icon will be drawed at target pos if it is not nil
-        private _drawPosASL = [_dragPos, getPosASLVisual _x] select (isNil "_dragPos");
+        // Get icon pos, either current pos or target pos when dragging
+        private _drawPosASL = _x getVariable ["KPLIB_dragPos", getPosASLVisual _x];
 
         drawIcon3D [
             _icon,

@@ -5,7 +5,7 @@
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-28
+    Last Update: 2018-11-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -63,8 +63,7 @@ if (isNull _anchorObject) then {
     private _anchorPos = getPosASL LGVAR(dragAnchorObject);
 
     {
-        private _object = _x;
-        private _posASL = getPosASL _object;
+        private _posASL = getPosASL _x;
 
         private _targetPos = _mouseWorldPos;
         private _offset = [0, 0, 0];
@@ -75,7 +74,7 @@ if (isNull _anchorObject) then {
             _targetPos = _targetPos vectorAdd _offset;
         };
 
-        _object setVariable ["KPLIB_dragPos", _targetPos];
+        _x setVariable ["KPLIB_dragPos", _targetPos];
 
     } forEach LGVAR(selection);
 };
