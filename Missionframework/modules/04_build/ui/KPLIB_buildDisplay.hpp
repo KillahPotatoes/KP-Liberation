@@ -50,9 +50,9 @@ class KPLIB_build {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,0,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,8);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
-            w = KP_GETW(KP_WIDTH_BUILD,8);
+            w = KP_GETW(KP_WIDTH_VAL_C,8);
             h = KP_GETH(KP_HEIGHT_VAL_C,16);
         };
 
@@ -60,58 +60,57 @@ class KPLIB_build {
             text = "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_LIGHT;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,1,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,8);
         };
 
         class KPLIB_ModeHeavy: KPLIB_ModeUnits {
             text = "\A3\ui_f\data\map\vehicleicons\iconTank_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_HEAVY;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,2,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,2,8);
         };
 
         class KPLIB_ModeAir: KPLIB_ModeUnits {
             text = "\A3\ui_f\data\map\vehicleicons\iconHelicopter_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_AIR;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,3,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,3,8);
         };
 
         class KPLIB_ModeStatic: KPLIB_ModeUnits {
             text = "\A3\ui_f\data\map\vehicleicons\iconStaticCannon_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_STATIC;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,4,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,4,8);
         };
 
         class KPLIB_ModeBuilding: KPLIB_ModeUnits {
             text = "\A3\ui_f\data\map\mapcontrol\Bunker_CA.paa";
             idc = KPLIB_IDC_BUILD_TAB_BUILDING;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,5,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,5,8);
         };
 
         class KPLIB_ModeSupport: KPLIB_ModeUnits {
             text = "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_SUPPORT;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,6,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,6,8);
         };
 
         class KPLIB_ModeSquad: KPLIB_ModeUnits {
             text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
             idc = KPLIB_IDC_BUILD_TAB_SQUAD;
 
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,7,8);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,7,8);
         };
 
         class KPLIB_BuildList: KPGUI_PRE_ListNBox {
             idc = KPLIB_IDC_BUILD_ITEM_LIST;
 
-
-            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_BUILD,0,1);
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,2,16);
-            w = KP_GETW(KP_WIDTH_BUILD,1);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,16) * 15;
 
             columns[] = { 0, 0.65, 0.75, 0.85 };
@@ -123,13 +122,12 @@ class KPLIB_build {
             idc = KPLIB_IDC_BUILD_CONFIRM;
             text = "$STR_BUILD";
 
-            w = KP_GETWPLAIN(KP_WIDTH_BUILD,1);
+            w = KP_GETWPLAIN(KP_WIDTH_VAL_C,1);
             onButtonClick = "['build', _this] call KPLIB_fnc_build_displayScript";
         };
 
         class KPLIB_DialogCross: KPLIB_BUILD_DialogCrossC {
             action = "call KPLIB_fnc_build_stop";
-            x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_BUILD - 0.02);
         };
 
     };
