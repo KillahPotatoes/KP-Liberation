@@ -6,7 +6,7 @@
     File: fn_build_handleMouse.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-28
+    Last Update: 2018-11-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -33,16 +33,16 @@ switch toLower _mode do {
         private _buttonName = ["mouseLeft", "mouseRight"] select _button;
         LSVAR(_buttonName, true);
 
-        // Place object if lmb
         if (_button == 0) then {
-            LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject;
-
-            // Delay selection a bit to allow for mouse dragging
-            [{
-                if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
-                    [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
-                };
-            }, [], 0.1] call CBA_fnc_waitAndExecute;
+            // If item is selected try to place it, handle selection/dragging otherwise
+            if !(LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject) then {;
+                // Delay selection a bit to allow for mouse dragging
+                [{
+                    if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
+                        [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
+                    };
+                }, [], 0.1] call CBA_fnc_waitAndExecute;
+            };
         };
     };
 

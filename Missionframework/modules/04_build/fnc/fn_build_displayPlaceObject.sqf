@@ -5,7 +5,7 @@
     File: fn_build_displayPlaceObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-08
+    Last Update: 2018-11-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,7 +18,7 @@
         3: NUMBER - Fuel price of placed object
 
     Returns:
-    NOTHING
+        Object was placed (BOOL)
 */
 params [
     ["_className", "", [""]],
@@ -27,7 +27,7 @@ params [
     ["_priceFuel", nil, [0]]
 ];
 
-if !(_className isEqualTo "") then {
+if !(_className isEqualTo "") exitWith {
     private _pos = screenToWorld LGVAR(mousePos);
 
     private _obj = _className createVehicleLocal KPLIB_zeroPos;
@@ -39,6 +39,9 @@ if !(_className isEqualTo "") then {
 
     if !LGVAR(ctrlKey) then {
         LSVAR("buildItem", []);
-    }
+    };
 
+    true
 };
+
+false
