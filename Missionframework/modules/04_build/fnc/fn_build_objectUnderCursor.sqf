@@ -5,7 +5,7 @@
     File: fn_build_objectUnderCursor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-28
+    Last Update: 2018-11-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,10 +41,8 @@ if !(_objects isEqualTo []) then {
     {
         private _obj = _x select 2;
 
-        if (_obj in _queue) then {
-            if (true) exitWith {
-                _target = _obj;
-            };
+        if (_obj in _queue) exitWith {
+            _target = _obj;
         };
 
     } forEach _objects;
