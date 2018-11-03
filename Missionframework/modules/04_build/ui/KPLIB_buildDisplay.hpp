@@ -23,11 +23,13 @@ class KPLIB_build {
 
     class controlsBackground {
 
+        class KPLIB_LogoRightCorner: KPGUI_PRE_LogoRightCorner {};
+
         class MouseHandler: KPGUI_PRE_ControlsGroupNoScrollbars {
             idc = KPLIB_IDC_MOUSEHANDLER;
-            x = safeZoneX;
+            x = safeZoneXAbs;
             y = safeZoneY;
-            w = safeZoneW;
+            w = safeZoneWAbs;
             h = safeZoneH;
             onMouseButtonDown = "['onMouseButtonDown', _this] call KPLIB_fnc_build_handleMouse";
             onMouseButtonUp = "['onMouseButtonUp', _this] call KPLIB_fnc_build_handleMouse";
