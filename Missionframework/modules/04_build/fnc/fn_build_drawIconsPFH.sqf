@@ -5,7 +5,7 @@
     File: fn_build_drawIconsPFH.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-28
-    Last Update: 2018-11-01
+    Last Update: 2018-11-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -56,6 +56,27 @@
             true        // Draw side arrows
         ];
     } forEach LGVAR(buildQueue);
+
+    private _currentItem = LGVAR(buildItem) select 0;
+
+    if !(isNil "_currentItem") then {
+        private _icon = getText (_cfgVehicles >> _currentItem >> "icon");
+        private _iconPath = [getText (_cfgVehiclesIcon >> _icon), _icon] select ((toLower _icon) find "\" > -1);
+
+        private _cursorWorldPosAGL = screenToWorld LGVAR(mousePos);
+
+        drawIcon3D [
+            _iconPath,
+            [1, 1, 1, 1],
+            _cursorWorldPosAGL,
+            1,          // Width
+            1,          // Height
+            0,          // Angle
+            "",         // Text
+            1,          // Shadow
+            0           // Text size
+        ];
+    };
 
 }] call CBA_fnc_addPerFrameHandler;
 
