@@ -39,5 +39,7 @@ class common {
     class common_getPos {};
 
     // Initialize common module
-    class common_preInit {};
+    class common_preInit {
+        preInit = 1;
+    };
 };

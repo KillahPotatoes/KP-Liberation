@@ -5,7 +5,7 @@
     File: fn_build_handleKeys.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-08
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,6 +26,7 @@ params [
 switch toLower _mode do {
     case "onkeydown": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
+        systemchat str _args;
         // ESC
         if (_dik == 1) exitWith {
             // [] call KPLIB_fnc_build_stop;

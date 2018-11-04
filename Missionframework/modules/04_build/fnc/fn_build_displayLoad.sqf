@@ -6,17 +6,17 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-03
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handle build display load
+        Handle build display load
 
     Parameter(s):
-        0: DISPLAY - Build display
+        _display - Build display [Display]
 
     Returns:
-    NOTHING
+        Display was loaded [BOOL]
 */
 params [["_display", nil, [displayNull]]];
 
@@ -84,3 +84,6 @@ LGVAR_D(buildMode, 0) call KPLIB_fnc_build_displaySetMode;
 /* Seems to be buggy on triple screen, disable for now
  setMousePosition LGVAR(mousePos); */
 
+["KPLIB_build_display_open", [_display]] call CBA_fnc_localEvent;
+
+true

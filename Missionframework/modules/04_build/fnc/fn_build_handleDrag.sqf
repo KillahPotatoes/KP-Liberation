@@ -5,17 +5,18 @@
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-01
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    -
+        Handles object mouse dragging
 
     Parameter(s):
-    NONE
+        _anchorObject   - Drag dragging anchor object                           [OBJECT, defaults to objNull]
+        _updatePos      - Dragging should be finished and positions updated     [BOOL, defaults to false]
 
     Returns:
-    NOTHING
+        NOTHING
 */
 params [
     ["_anchorObject", objNull, [objNull]],

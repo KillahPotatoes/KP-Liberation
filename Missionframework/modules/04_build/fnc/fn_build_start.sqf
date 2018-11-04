@@ -6,18 +6,18 @@
     File: fn_build_start.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-28
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
     Starts KP Liberation building mode
 
     Parameter(s):
-        0: ARRAY - Center position of build area
-        1: NUMBER - Allowed build radius
+        _center - Center of building area [POSITION]
+        _radius - Allowed building radius [NUMBER]
 
     Returns:
-    LOCATION - Building logic object
+        Building logic object [LOCATION]
 */
 params [
     ["_center", nil, [[]]],
@@ -54,6 +54,7 @@ KPLIB_buildLogic = _logic;
     ["altKey", false],
     ["ctrlKey", false],
     ["shiftKey", false],
+    ["heldKeys", [] resize 255],
     ["mouseLeft", false],
     ["mouseRight", false],
     ["mousePos", [0.5, 0.5]]
@@ -65,5 +66,7 @@ KPLIB_buildLogic = _logic;
 [] call KPLIB_fnc_build_drawIconsPFH;
 
 (findDisplay 46) createDisplay "KPLIB_build";
+
+["KPLIB_build_start", [_logic, _center, _radius]] call CBA_fnc_localEvent;
 
 _logic

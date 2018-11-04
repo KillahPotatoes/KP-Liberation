@@ -5,17 +5,17 @@
     File: fn_build_boundingBoxPFH.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-28
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Creates PFH used that draws bounding boxes of objects in queue
+        Creates PFH that draws bounding boxes of objects in the build queue
 
     Parameter(s):
         NONE
 
     Returns:
-        Function reached the end [BOOL]
+        PFH was created [BOOL]
 */
 
 [{

@@ -4,17 +4,19 @@
     File: fn_build_camera_ticker_start.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-09-09
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Build camera per frame ticker, limits camera area
+        Build camera per frame ticker, limits camera area
 
     Parameter(s):
-    NONE
+        _center - Center camera area                [POSITION]
+        _radius - Allowed camera flying radius      [NUMBER]
+        _camera - Camera object                     [OBJECT]
 
     Returns:
-    NUMBER - PFH Handle
+        PFH Handle [NUMBER]
 */
 params [
     ["_position", nil, [[]]],

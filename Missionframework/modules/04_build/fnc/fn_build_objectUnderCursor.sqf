@@ -5,7 +5,7 @@
     File: fn_build_objectUnderCursor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-03
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@
         NONE
 
     Returns:
-       Object that is currently under the cursor (OBJECT)
+       Object that is currently under the cursor [OBJECT]
 */
 
 private _logic = missionNamespace getVariable "KPLIB_buildLogic";
@@ -50,7 +50,6 @@ if !(_objects isEqualTo []) then {
 // If we were not able to find any item directly under cusror try to get one nearest to
 if (_target isEqualTo objNull) then {
     private _nearest = nearestObjects [_cursorWorldPosAGL, ["All"], 1] arrayIntersect _queue;
-    systemChat str _nearest;
 
     if !(_nearest isEqualTo []) then {
         _target = _nearest select 0;

@@ -5,7 +5,7 @@
     File: fn_build_drawIconsPFH.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-28
-    Last Update: 2018-11-03
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@
         NONE
 
     Returns:
-        Function reached the end [BOOL]
+        PFH was created [BOOL]
 */
 
 [{
@@ -31,18 +31,12 @@
     // Draw icons in 3D space
     {
         private _objectClassname = typeOf _x;
-
         private _color = _x call KPLIB_fnc_build_objectColor;
-
-
-        private _icon = getText (_cfgVehicles >> _objectClassname >> "icon");
-        private _iconPath = [getText (_cfgVehiclesIcon >> _icon), _icon] select ((toLower _icon) find "\" > -1);
-
         // Get icon pos, either current pos or target pos when dragging
         private _drawPosASL = _x getVariable ["KPLIB_dragPos", getPosASLVisual _x];
 
         drawIcon3D [
-            _icon,
+            _objectClassname call KPLIB_fnc_common_getIcon,
             _color,
             ASLtoAGL _drawPosASL,
             1,          // Width
@@ -60,13 +54,11 @@
     private _currentItem = LGVAR(buildItem) select 0;
 
     if !(isNil "_currentItem") then {
-        private _icon = getText (_cfgVehicles >> _currentItem >> "icon");
-        private _iconPath = [getText (_cfgVehiclesIcon >> _icon), _icon] select ((toLower _icon) find "\" > -1);
 
         private _cursorWorldPosAGL = screenToWorld LGVAR(mousePos);
 
         drawIcon3D [
-            _iconPath,
+            _currentItem call KPLIB_fnc_common_getIcon,
             [1, 1, 1, 1],
             _cursorWorldPosAGL,
             1,          // Width
