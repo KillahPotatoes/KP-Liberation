@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-10-28
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -82,4 +82,7 @@ class build {
     class build_start {};
 
     class build_stop {};
+
+    // Checks if object position is valid for building
+    class build_validatePosition {};
 };

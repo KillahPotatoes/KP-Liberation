@@ -23,8 +23,10 @@ params [
 
 private _underCursor = _object isEqualTo LGVAR(cursorObject);
 private _selected = _object in LGVAR(selection);
+private _invalidPos = !(_object getVariable ["KPLIB_validPos", true]);
 
 private _color = switch true do {
+    case _invalidPos: {[1, 0, 0, 1]};
     // Cyan color for selected and under cursor
     case (_selected && _underCursor): {[0, 1, 0.2, 1]};
     // Yellow color for unselected and under cursor

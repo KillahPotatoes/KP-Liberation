@@ -45,6 +45,9 @@ _itemsList ctrlAddEventHandler ["LBSelChanged", {
 private _confirmButton = _display displayCtrl KPLIB_IDC_BUILD_CONFIRM;
 _confirmButton ctrlAddEventHandler ["buttonClick", {
 
+    private _validItems = LGVAR(buildQueue) select {_x getVariable ["KPLIB_validPos", true]};
+    LSVAR("buildQueue", LGVAR(buildQueue) - _validItems);
+
     // TODO implement build queue handling (resource check etc.)
     systemChat "buildConfirm: Resource check not implemented yet!";
     {
@@ -58,11 +61,8 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
             private _obj = (_this select 0) call KPLIB_fnc_common_createVehicle;
             _obj setVectorDirAndUp (_this select 1);
         }] remoteExecCall ["call", 2];
-        //_obj setVectorDirAndUp _dirAndUp;
 
-    } forEach LGVAR(buildQueue);
-
-    LSVAR("buildQueue", []);
+    } forEach _validItems;
 }];
 
 // Add tab change handler
