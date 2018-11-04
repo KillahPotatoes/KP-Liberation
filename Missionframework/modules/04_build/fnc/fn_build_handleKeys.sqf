@@ -45,7 +45,13 @@ switch toLower _mode do {
 
         switch _dik do {
             case 211: {
+                private _queue = LGVAR(buildQueue);
+                // Remove items from build queue
+                LSVAR("buildQueue", _queue - _selection);
+                // Delete objects
                 {deleteVehicle _x} forEach LGVAR(selection);
+                // Clear selection
+                LSVAR(selection, [])
             };
         };
 
@@ -55,8 +61,6 @@ switch toLower _mode do {
     case "onkeyup": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
-
-        systemChat str _args;
         if (LGVAR(shiftKey)) then {LSVAR("shiftKey", !_shift)};
         if (LGVAR(ctrlKey)) then {LSVAR("ctrlKey", !_ctrl)};
 
