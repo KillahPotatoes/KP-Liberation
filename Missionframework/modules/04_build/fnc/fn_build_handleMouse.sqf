@@ -33,9 +33,9 @@ switch toLower _mode do {
         private _buttonName = ["mouseLeft", "mouseRight"] select _button;
         LSVAR(_buttonName, true);
 
-        if (_button == 0) then {
+        if (_button isEqualTo 0) then {
             // If item is selected try to place it, handle selection/dragging otherwise
-            if !(LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject) then {;
+            if !(LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject) then {
                 // Delay selection a bit to allow for mouse dragging
                 [{
                     if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
@@ -65,8 +65,6 @@ switch toLower _mode do {
     };
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
-        systemChat format ["zChange: %1", _zChange];
-
         if (true) exitWith {true};
     };
 

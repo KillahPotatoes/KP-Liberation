@@ -18,7 +18,6 @@
        Object that is currently under the cursor [OBJECT]
 */
 
-private _logic = missionNamespace getVariable "KPLIB_buildLogic";
 private _camera = LGVAR(camera);
 private _cursorPos = LGVAR(mousePos);
 private _queue = LGVAR(buildQueue);

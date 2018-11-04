@@ -51,22 +51,21 @@
         ];
     } forEach LGVAR(buildQueue);
 
-    private _currentItem = LGVAR(buildItem) select 0;
+    private _currentItemClass = LGVAR(buildItem) select 0;
+    // Draw icon for currently selected build item
+    if !(isNil "_currentItemClass") then {
 
-    if !(isNil "_currentItem") then {
-
-        private _cursorWorldPosAGL = screenToWorld LGVAR(mousePos);
+        ([] call KPLIB_fnc_build_surfaceUnderCursor) params ["_cursorWorldPosASL"];
 
         drawIcon3D [
-            _currentItem call KPLIB_fnc_common_getIcon,
+            _currentItemClass call KPLIB_fnc_common_getIcon,
             [1, 1, 1, 1],
-            _cursorWorldPosAGL,
+            ASLToAGL _cursorWorldPosASL,
             1,          // Width
             1,          // Height
             0,          // Angle
             "",         // Text
-            1,          // Shadow
-            0           // Text size
+            1          // Shadow
         ];
     };
 

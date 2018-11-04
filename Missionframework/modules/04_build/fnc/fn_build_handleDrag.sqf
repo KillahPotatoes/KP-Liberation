@@ -30,11 +30,26 @@ if (_updatePos) exitWith {
 
     // Move all selected objects to target positions
     {
-        private _targetPos = _x getVariable ["KPLIB_dragPos", []];
+        private _targetPos = _x getVariable ["KPLIB_dragPos", KPLIB_zeroPos];
+        private _targetVectorUp = _x getVariable ["KPLIB_dragVectorUp", surfaceNormal _targetPos];
+        // Zero target values
         _x setVariable ["KPLIB_dragPos", nil];
+        _x setVariable ["KPLIB_dragVectorUp", nil];
 
-        if !(_targetPos isEqualTo []) then {
-            _x setPosASL _targetPos;
+        if !(_targetPos isEqualTo KPLIB_zeroPos) then {
+
+            switch true do {
+                case (surfaceIsWater _targetPos): {
+                    _targetPos set [2, 0];
+                    _x setPosASL _targetPos;
+                    _x setVectorUp _targetVectorUp;
+                };
+                default {
+                    _x setPosASL _targetPos;
+                    _x setVectorUp _targetVectorUp;
+                };
+            };
+
         };
 
         // Notify that item needs position validity check
@@ -62,23 +77,38 @@ if (isNull _anchorObject) then {
     LSVAR("dragAnchorObject", LGVAR(cursorObject));
 
 } else {
+    private _selection = LGVAR(selection);
 
-    private _mouseWorldPos = AGLToASL screenToWorld LGVAR(mousePos);
-    private _anchorPos = getPosASL LGVAR(dragAnchorObject);
+    // Handle dragging when single selected (surface aligment)
+    if((count _selection) isEqualTo 1) then {
+        private _selectedItem = _selection select 0;
 
-    {
-        private _posASL = getPosASL _x;
+        // Get position and surface normal under the cursor
+        ([_selectedItem] call KPLIB_fnc_build_surfaceUnderCursor) params ["_targetPos", "_targetVectorUp"];
 
-        private _targetPos = _mouseWorldPos;
-        private _offset = [0, 0, 0];
+        _selectedItem setVariable ["KPLIB_dragPos", _targetPos];
+        _selectedItem setVariable ["KPLIB_dragVectorUp", _targetVectorUp];
 
-        // Calculate offset for objects in selection
-        if (_x != LGVAR(dragAnchorObject)) then {
-            _offset = _posASL vectorDiff _anchorPos;
-            _targetPos = _targetPos vectorAdd _offset;
-        };
+    // Handle dragging when multiple selected
+    } else {
+        private _mouseWorldPos = AGLToASL screenToWorld LGVAR(mousePos);
+        private _anchorPos = getPosASL LGVAR(dragAnchorObject);
 
-        _x setVariable ["KPLIB_dragPos", _targetPos];
+        {
+            private _posASL = getPosASL _x;
 
-    } forEach LGVAR(selection);
+            private _targetPos = _mouseWorldPos;
+            private _offset = [0, 0, 0];
+
+            // Calculate offset for objects in selection
+            if (_x != LGVAR(dragAnchorObject)) then {
+                _offset = _posASL vectorDiff _anchorPos;
+                _targetPos = _targetPos vectorAdd _offset;
+            };
+
+            _x setVariable ["KPLIB_dragPos", _targetPos];
+            _x setVariable ["KPLIB_dragVectorUp", surfaceNormal _targetPos];
+
+        } forEach _selection;
+    };
 };

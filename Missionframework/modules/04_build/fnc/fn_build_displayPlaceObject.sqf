@@ -28,12 +28,12 @@ params [
 ];
 
 if !(_className isEqualTo "") exitWith {
-    private _pos = screenToWorld LGVAR(mousePos);
-
     private _obj = _className createVehicleLocal KPLIB_zeroPos;
-    _obj setPos _pos;
-
     _obj enableSimulation false;
+
+    ([] call KPLIB_fnc_build_surfaceUnderCursor) params ["_cursorWorldPosASL", "_cursorSurfaceNormal"];
+    _obj setPosASL _cursorWorldPosASL;
+    _obj setVectorUp _cursorSurfaceNormal;
 
     LGVAR(buildQueue) pushBack _obj;
 

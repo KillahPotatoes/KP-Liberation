@@ -83,6 +83,9 @@ class build {
 
     class build_stop {};
 
+    // Returns surface that is directly under cursor
+    class build_surfaceUnderCursor {};
+
     // Checks if object position is valid for building
     class build_validatePosition {};
 };
