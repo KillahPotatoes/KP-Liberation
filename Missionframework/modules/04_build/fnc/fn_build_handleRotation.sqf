@@ -36,6 +36,9 @@ if (_updateRot) exitWith {
             _x setDir _targetDir;
         };
 
+        // Notify that item needs position validity check
+        ["KPLIB_build_item_moved", _x] call CBA_fnc_localEvent;
+
     } forEach LGVAR(selection);
 
     // Reset state variables

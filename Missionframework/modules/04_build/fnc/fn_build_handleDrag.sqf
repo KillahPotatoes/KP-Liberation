@@ -37,6 +37,9 @@ if (_updatePos) exitWith {
             _x setPosASL _targetPos;
         };
 
+        // Notify that item needs position validity check
+        ["KPLIB_build_item_moved", _x] call CBA_fnc_localEvent;
+
     } forEach LGVAR(selection);
 
     // Reset state variables

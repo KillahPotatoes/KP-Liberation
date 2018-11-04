@@ -47,11 +47,11 @@ switch toLower _mode do {
             case 211: {
                 private _queue = LGVAR(buildQueue);
                 // Remove items from build queue
-                LSVAR("buildQueue", _queue - _selection);
+                LSVAR("buildQueue", _queue - LGVAR(selection));
                 // Delete objects
                 {deleteVehicle _x} forEach LGVAR(selection);
                 // Clear selection
-                LSVAR(selection, [])
+                LSVAR("selection", [])
             };
         };
 

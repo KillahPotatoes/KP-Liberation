@@ -42,6 +42,9 @@ if !(_className isEqualTo "") exitWith {
         LSVAR("buildItem", []);
     };
 
+    // Notify that item needs position validity check
+    ["KPLIB_build_item_moved", _obj] call CBA_fnc_localEvent;
+
     true
 };
 
