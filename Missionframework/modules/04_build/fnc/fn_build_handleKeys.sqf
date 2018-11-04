@@ -26,7 +26,10 @@ params [
 switch toLower _mode do {
     case "onkeydown": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
-        systemchat str _args;
+
+        if (!LGVAR(shiftKey)) then {LSVAR("shiftKey", _shift)};
+        if (!LGVAR(ctrlKey)) then {LSVAR("ctrlKey", _ctrl)};
+
         // ESC
         if (_dik == 1) exitWith {
             // [] call KPLIB_fnc_build_stop;
@@ -40,9 +43,6 @@ switch toLower _mode do {
             true
         };
 
-        if (!LGVAR(shiftKey) && _shift) then {LSVAR("shiftKey", true)};
-        if (!LGVAR(ctrlKey) && _ctrl) then {LSVAR("ctrlKey", true)};
-
         switch _dik do {
             case 211: {
                 {deleteVehicle _x} forEach LGVAR(selection);
@@ -55,8 +55,10 @@ switch toLower _mode do {
     case "onkeyup": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
-        if (LGVAR(shiftKey) && _shift) then {LSVAR("shiftKey", false)};
-        if (LGVAR(ctrlKey) && _ctrl) then {LSVAR("ctrlKey", false)};
+
+        systemChat str _args;
+        if (LGVAR(shiftKey)) then {LSVAR("shiftKey", !_shift)};
+        if (LGVAR(ctrlKey)) then {LSVAR("ctrlKey", !_ctrl)};
 
         false
     };
