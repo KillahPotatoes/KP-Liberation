@@ -12,7 +12,7 @@
         Manges selection
 
     Parameter(s):
-        _selection - Items to add to selection [Object or Array, defaults to objNull]
+        _selection - Items to add to selection [OBJECT or ARRAY, defaults to objNull]
 
     Returns:
        Selection was changed [BOOLEAN]
