@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -53,9 +53,9 @@ class KPLIB_build {
             idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
 
             x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,8);
-            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,0,16);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,1,20);
             w = KP_GETW(KP_WIDTH_VAL_LP,8);
-            h = KP_GETH(KP_HEIGHT_VAL_LP,16);
+            h = KP_GETH(KP_HEIGHT_VAL_LP,20);
         };
 
         class KPLIB_ModeLight: KPLIB_ModeUnits {
@@ -111,9 +111,9 @@ class KPLIB_build {
             idc = KPLIB_IDC_BUILD_ITEM_LIST;
 
             x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
-            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,2,16);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,2,20);
             w = KP_GETW(KP_WIDTH_VAL_LP,1);
-            h = KP_GETH(KP_HEIGHT_VAL_LP,16) * 15;
+            h = KP_GETH(KP_HEIGHT_VAL_LP,20) * 19.55
 
             columns[] = { 0, 0.65, 0.75, 0.85 };
 
