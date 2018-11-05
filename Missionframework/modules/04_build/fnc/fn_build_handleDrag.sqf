@@ -5,7 +5,7 @@
     File: fn_build_handleDrag.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,7 +16,7 @@
         _updatePos      - Dragging should be finished and positions updated     [BOOL, defaults to false]
 
     Returns:
-        NOTHING
+        Is dragging [BOOL]
 */
 params [
     ["_anchorObject", objNull, [objNull]],
@@ -59,10 +59,13 @@ if (_updatePos) exitWith {
 
     // Reset state variables
     LSVAR("dragAnchorObject", objNull);
+
+    // Return value
+    false
 };
 
 // Can't drag while rotating
-if (LGVAR(isRotating)) exitWith {};
+if (LGVAR(isRotating)) exitWith {false};
 
 // Drag start
 if (isNull _anchorObject) then {
@@ -112,3 +115,5 @@ if (isNull _anchorObject) then {
         } forEach _selection;
     };
 };
+
+true

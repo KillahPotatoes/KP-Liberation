@@ -1,30 +1,33 @@
 /*
-    KPLIB_fnc_build_camera_ticker_start
+    KPLIB_fnc_build_camAreaLimiter
 
-    File: fn_build_camera_ticker_start.sqf
+    File: fn_build_camAreaLimiter.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Build camera per frame ticker, limits camera area
+        Build camera per frame ticker, limits camera area.
 
     Parameter(s):
-        _center - Center camera area                [POSITION]
-        _radius - Allowed camera flying radius      [NUMBER]
-        _camera - Camera object                     [OBJECT]
+        _camera     - Camera object                     [OBJECT, defaults to objNull]
+        _position   - Limiter center area               [POSITION, defaults to position _camera]
+        _radius     - Allowed camera flying radius      [NUMBER, defaults to KPLIB_range_fob]
 
     Returns:
-        PFH Handle [NUMBER]
+        PFH was created [BOOL]
 */
 params [
+    ["_camera", objNull, [objNull]],
     ["_position", nil, [[]], 3],
-    ["_radius", nil, [0]],
-    ["_camera", nil, [objNull]]
+    ["_radius", KPLIB_range_fob, [0]]
 ];
 
-private _handle = [{
+// Default position to position of camera
+if (isNil "_position") then {_position = getPos _camera};
+
+[{
     params ["_args", "_handle"];
     _args params ["_position", "_radius","_camera"];
 
@@ -52,4 +55,4 @@ private _handle = [{
 
 }, 0, [_position, _radius, _camera]] call CBA_fnc_addPerFrameHandler;
 
-_handle
+true

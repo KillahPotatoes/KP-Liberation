@@ -23,7 +23,7 @@ private _serializedData = [];
 // Serialize data
 {
     private _fobData = [_x, []];
-    private _fobItems = (KPLIB_build_save_data getVariable _x);
+    private _fobItems = (KPLIB_build_saveNamespace getVariable _x);
     // Foreach fob item, save className, pos and dirAndUp
     {
         if (alive _x) then {
@@ -33,7 +33,7 @@ private _serializedData = [];
 
     _serializedData pushBack _fobData;
 
-} forEach (allVariables KPLIB_build_save_data);
+} forEach (allVariables KPLIB_build_saveNamespace);
 
 // Set module data to save and send it to the global save data array
 [

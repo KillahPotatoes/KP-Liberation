@@ -11,6 +11,7 @@
     This preInit function defines just the global variables which are added due to this module.
 
     Dependencies:
+        * 01_common
         * 02_core
 
     Returns:
@@ -32,7 +33,7 @@ KPLIB_buildLogic = locationNull;
 KPLIB_build_ticker = -1;
 
 // Save data
-KPLIB_build_save_data = locationNull;
+KPLIB_build_saveNamespace = locationNull;
 
 // Register build item movement handler
 ["KPLIB_build_item_moved", KPLIB_fnc_build_validatePosition] call CBA_fnc_addEventHandler;
@@ -47,11 +48,11 @@ KPLIB_build_save_data = locationNull;
     params ["_object", "_fob"];
 
     // If fob has no save data, initialize it
-    if (isNil {KPLIB_build_save_data getVariable _fob}) then {
-        KPLIB_build_save_data setVariable [_fob, []];
+    if (isNil {KPLIB_build_saveNamespace getVariable _fob}) then {
+        KPLIB_build_saveNamespace setVariable [_fob, []];
     };
 
-    (KPLIB_build_save_data getVariable _fob) pushBackUnique _object;
+    (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
 
 }] call CBA_fnc_addEventHandler;
 

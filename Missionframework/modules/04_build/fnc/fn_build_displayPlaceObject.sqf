@@ -5,26 +5,26 @@
     File: fn_build_displayPlaceObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Creates local object for the build queue
 
     Parameter(s):
-        _className - Classname of object to place [String, defaults to ""]
-        _priceSupplies - Supplies price [Number]
-        _priceAmmo - Ammo price [Number]
-        _priceFuel - Fuel price [Number]
+        _className      - Classname of object to place  [STRING, defaults to ""]
+        _priceSupplies  - Supplies price                [NUMBER, defaults to 0]
+        _priceAmmo      - Ammo price                    [NUMBER, defaults to 0]
+        _priceFuel      - Fuel price                    [NUMBER, defaults to 0]
 
     Returns:
         Object was placed [BOOL]
 */
 params [
     ["_className", "", [""]],
-    ["_priceSupplies", nil, [0]],
-    ["_priceAmmo", nil, [0]],
-    ["_priceFuel", nil, [0]]
+    ["_priceSupplies", 0, [0]],
+    ["_priceAmmo", 0, [0]],
+    ["_priceFuel", 0, [0]]
 ];
 
 if !(_className isEqualTo "") exitWith {

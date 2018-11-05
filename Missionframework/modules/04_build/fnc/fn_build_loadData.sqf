@@ -26,20 +26,20 @@ if (_moduleData isEqualTo []) then {
     if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Build module data empty, creating new data...";};
 
     // Initialize every sector and add the data to the garrison array
-    KPLIB_build_save_data = [] call CBA_fnc_createNamespace;
+    KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
 } else {
     // Otherwise start applying the saved data
     if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Build module data found, applying data...";};
 
-    KPLIB_build_save_data = [] call CBA_fnc_createNamespace;
+    KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
 
     // Deserialize data for every FOB
     {
         _x params ["_fob", "_items"];
 
-        private _fobItems = KPLIB_build_save_data getVariable _fob;
+        private _fobItems = KPLIB_build_saveNamespace getVariable _fob;
         if(isNil "_fobItems") then {
-            KPLIB_build_save_data setVariable [_fob, []];
+            KPLIB_build_saveNamespace setVariable [_fob, []];
         };
 
         // Convert serialized objects into real objects
@@ -47,7 +47,7 @@ if (_moduleData isEqualTo []) then {
             private _object = [_x select 0, _x select 1] call KPLIB_fnc_common_createVehicle;
             _object setVectorDirAndUp (_x select 2);
 
-            (KPLIB_build_save_data getVariable _fob) pushBack _object;
+            (KPLIB_build_saveNamespace getVariable _fob) pushBack _object;
         } forEach _items;
 
     } forEach _moduleData;

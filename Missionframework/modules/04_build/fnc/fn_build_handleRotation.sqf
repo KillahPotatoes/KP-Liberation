@@ -5,7 +5,7 @@
     File: fn_build_handleRotation.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,7 +16,7 @@
         _updatePos      - Rotation should be finished and positions updated     [BOOL, defaults to false]
 
     Returns:
-        NOTHING
+        Is rotating [BOOL]
 */
 params [
     ["_anchorObject", objNull, [objNull]],
@@ -43,10 +43,13 @@ if (_updateRot) exitWith {
 
     // Reset state variables
     LSVAR("rotationAnchorObject", objNull);
+
+    // Return val
+    false
 };
 
 // Can't rotate while dragging
-if (LGVAR(isDragging)) exitWith {};
+if (LGVAR(isDragging)) exitWith {false};
 
 // Rotation start
 if (isNull _anchorObject) then {
@@ -82,3 +85,6 @@ if (isNull _anchorObject) then {
 
     } forEach LGVAR(selection);
 };
+
+// Return val
+true

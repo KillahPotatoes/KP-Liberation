@@ -6,19 +6,21 @@
     File: fn_build_displaySetMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Sets display build mode
 
     Parameter(s):
-        _mode - Build mode index [Number, defaults to 0]
+        _mode - Build mode index [NUMBER, defaults to 0]
 
     Returns:
         Mode was changed [BOOL]
 */
-params [["_mode", 0, [0]]];
+params [
+    ["_mode", 0, [0]]
+];
 
 // CfgVehicles config for shorter/faster access
 private _cfg = configFile >> "CfgVehicles";

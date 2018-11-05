@@ -13,12 +13,14 @@
         Handle build display load
 
     Parameter(s):
-        _display - Build display [Display]
+        _display - Build display [DISPLAY, defaults to nil]
 
     Returns:
         Display was loaded [BOOL]
 */
-params [["_display", nil, [displayNull]]];
+params [
+    ["_display", nil, [displayNull]]
+];
 
 // Add Item selection handler
 private _itemsList = _display displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
