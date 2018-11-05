@@ -26,7 +26,9 @@ private _serializedData = [];
     private _fobItems = (KPLIB_build_save_data getVariable _x);
     // Foreach fob item, save className, pos and dirAndUp
     {
-         (_fobData select 1) pushBack [typeOf _x, getPosATL _x, [vectorDir _x, vectorUp _x]];
+        if (alive _x) then {
+            (_fobData select 1) pushBack [typeOf _x, getPosATL _x, [vectorDir _x, vectorUp _x]];
+        };
     } forEach _fobItems;
 
     _serializedData pushBack _fobData;
