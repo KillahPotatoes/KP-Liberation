@@ -19,7 +19,7 @@
         PFH Handle [NUMBER]
 */
 params [
-    ["_position", nil, [[]]],
+    ["_position", nil, [[]], 3],
     ["_radius", nil, [0]],
     ["_camera", nil, [objNull]]
 ];
