@@ -37,6 +37,9 @@ For serious playing use the latest stable release: [v0.963a](https://github.com/
 <!-- History of all Sprint Review Issues from the past -->
 | Sprint | Quick Summary | Details |
 | --- | --- | --- |
+| 7 | Persistent sector garrison, build menu implementation part 4, common functions module | #520 |
+| 6 | Own Respawn template, object manipulation in build menu, event based save/load | #505 |
+| 5 | Freedom replaced with Liberty, extended CBA implementation, refactor mission init, build camera refactor | #494 |
 | 4 | Player and Admin menu, building camera overlay | #471 |
 | 3 | First UI overhaul, config guard, free build camera | #445 |
 | 2 | Event handling and action manager | #427 |
