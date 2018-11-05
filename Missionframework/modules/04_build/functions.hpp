@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-04
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -56,6 +56,9 @@ class build {
     // Handle object dragging/rotation
     class build_handleRotation {};
 
+    // Handle persistent data loading
+    class build_loadData {};
+
     // Marks given area with circle created out of spheres
     class build_markArea {};
 
@@ -74,6 +77,9 @@ class build {
     class build_preInit {
         preInit = 1;
     };
+
+    // Handle persistent data saving
+    class build_saveData {};
 
     // Add player actions
     class build_setupPlayerActions {};
