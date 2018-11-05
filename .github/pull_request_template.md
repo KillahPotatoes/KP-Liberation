@@ -24,9 +24,16 @@ to show if it's already finished and already part of the pull request.
 - [ ] Local MP Vanilla
 - [ ] Dedicated MP Vanilla
 
+<!--
+As soon as you've tested your feature on the listed environment you can check the checkbox.
+It has to work without any issues and errors in your own tests.
+Especially if you open a PR as WIP and not after you've fully finished your work, remember to update the states accordingly.
+-->
+
 ### Compatibility checked with:
 * ACE
 * Mod XYZ
+
 <!--
 Add a list of Mods you've checked. This should only contain mods which really affect the feature.
 So for a feature like e.g. "hint on entering a sector area" you don't list/test compatibility with RHS, ACE, Achilles, etc.
