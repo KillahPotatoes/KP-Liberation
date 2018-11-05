@@ -20,14 +20,15 @@ Add things which are part of this pull request as checkboxes
 to show if it's already finished and already part of the pull request.
 -->
 
-### Tested on:
+### Successfully tested on:
 - [ ] Local MP Vanilla
-- [ ] Local MP ACE
 - [ ] Dedicated MP Vanilla
-- [ ] Dedicated MP ACE
 
+### Compatibility checked with:
+* ACE
+* Mod XYZ
 <!--
-Add strikethrough if N\A, for eg. stringtable updates
-
-- [x] ~~Not applicable~~
+Add a list of Mods you've checked. This should only contain mods which really affect the feature.
+So for a feature like e.g. "hint on entering a sector area" you don't list/test compatibility with RHS, ACE, Achilles, etc.
+Also listing CBA isn't necessary, as it's a general dependency in Liberation.
 -->
