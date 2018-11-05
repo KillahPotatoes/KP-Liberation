@@ -6,7 +6,6 @@
     },
     "sqflint.ignoredVariables": [
         "_input0",
-        "findIf",
         "BIS_fnc_reviveInit",
         "KPLIB_eden_boxspawn",
         "KPLIB_eden_startbase",
@@ -76,13 +75,13 @@
                 "License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html",
                 "",
                 "Description:",
-                "-",
+                "    No description added yet.",
                 "",
                 "Parameter(s):",
-                "NONE",
+                "    _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]",
                 "",
                 "Returns:",
-                "NOTHING"
+                "    Function reached the end [BOOL]"
             ]
         }
     ]

@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-02
-    Last Update: 2018-08-02
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,11 +26,16 @@ class adm {
     // Applies provided save data for import to the server profile
     class adm_importSaveServer {};
 
-    // Module initialization
-    class adm_initModule {
+    // Opens the admin menu dialog
+    class adm_openDialog {};
+
+    // Module post initialization
+    class adm_postInit {
         postInit = 1;
     };
 
-    // Opens the admin menu dialog
-    class adm_openDialog {};
+    // Module pre initialization
+    class adm_preInit {
+        preInit = 1;
+    };
 };

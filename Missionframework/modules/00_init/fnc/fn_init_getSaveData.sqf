@@ -4,7 +4,7 @@
     File: fn_init_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-07
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,10 +28,10 @@ private _return = [];
 // Return an empty array, if there is no save data
 if (isNil "KPLIB_save_data") exitWith {_return};
 
-_return = KPLIB_save_data select {(_x select 0) == _tag};
+private _index = (KPLIB_save_data findIf {(_x select 0) == _tag});
 
-if (_return isEqualTo []) then {
+if (_index isEqualTo -1) then {
     _return
 } else {
-    _return select 0 select 1
+    (KPLIB_save_data select _index) select 1
 };

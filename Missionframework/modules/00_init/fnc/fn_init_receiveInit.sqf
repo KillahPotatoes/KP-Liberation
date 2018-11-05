@@ -4,7 +4,7 @@
     File: fn_init_receiveInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-25
-    Last Update: 2018-05-04
+    Last Update: 2018-10-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -185,7 +185,7 @@ if (hasInterface) then {
     diag_log "[KP LIBERATION] [CLIENT INIT] Preloaded Arsenal";
 
     // Create needed local markers
-    call KPLIB_fnc_init_clientMarkers;
+    [] call KPLIB_fnc_init_clientMarkers;
     diag_log "[KP LIBERATION] [CLIENT INIT] Client Markers initialized";
 };
 
