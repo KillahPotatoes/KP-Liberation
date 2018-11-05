@@ -1,24 +1,25 @@
 /*
-    KPLIB_fnc_build_camOpen
+    KPLIB_fnc_build_camCreate
 
-    File: fn_build_camOpen.sqf
+    File: fn_build_camCreate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-08-06
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Creates the build camera
+        Creates the build camera
 
     Parameter(s):
-    NONE
+        _center - Center of building area [POSITION, defaults to position player]
+        _radius - Allowed building radius [NUMBER, defaults to KPLIB_range_fob]
 
     Returns:
-    OBJECT - Building camera
+        Building camera [OBJECT]
 */
 params [
-    ["_position", nil, [[]]],
-    ["_radius", nil, [0]]
+    ["_position", position player, [[]], 3],
+    ["_radius", KPLIB_range_fob, [0]]
 ];
 
 private _camera = "CamCurator" camCreate (eyePos player);
@@ -36,6 +37,6 @@ _camera camCommand format ["speedMax %1", 1.5];
 // Enable display of GUI in camera
 cameraEffectEnableHUD true;
 
-[_position, _radius, _camera] call KPLIB_fnc_build_camAreaLimiter;
+[_camera, _position, _radius] call KPLIB_fnc_build_camAreaLimiter;
 
 _camera

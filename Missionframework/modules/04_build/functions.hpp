@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-10-18
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -42,6 +42,9 @@ class build {
 
     class build_drawBoundingBox {};
 
+    // PFH that draws icons in 3D space
+    class build_drawIconsPFH {};
+
     // Handle object dragging/positon changing
     class build_handleDrag {};
 
@@ -53,8 +56,14 @@ class build {
     // Handle object dragging/rotation
     class build_handleRotation {};
 
+    // Handle persistent data loading
+    class build_loadData {};
+
     // Marks given area with circle created out of spheres
     class build_markArea {};
+
+    // Get user interface item color depending on object state
+    class build_objectColor {};
 
     // Return object under cursor
     class build_objectUnderCursor {};
@@ -69,6 +78,9 @@ class build {
         preInit = 1;
     };
 
+    // Handle persistent data saving
+    class build_saveData {};
+
     // Add player actions
     class build_setupPlayerActions {};
 
@@ -76,4 +88,10 @@ class build {
     class build_start {};
 
     class build_stop {};
+
+    // Returns surface that is directly under cursor
+    class build_surfaceUnderCursor {};
+
+    // Checks if object position is valid for building
+    class build_validatePosition {};
 };

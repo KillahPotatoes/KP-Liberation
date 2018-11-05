@@ -5,17 +5,17 @@
     File: fn_build_addToSelection.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-08
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Adds objects to selection
+        Manges selection
 
     Parameter(s):
-        0: OBJECT/ARRAY - Object or array of objects to be added
+        _selection - Items to add to selection [OBJECT or ARRAY, defaults to objNull]
 
     Returns:
-    NOTHING
+       Selection was changed [BOOLEAN]
 */
 params [
     ["_selection", objNull, [objNull, []]]
@@ -24,23 +24,26 @@ params [
 private _selectionArray = LGVAR(selection);
 private _ctrlKey = LGVAR(ctrlKey);
 
-if (_selection isEqualType objNull) then {
+// Unselect if no ctrl and selection is null
+if (_selection isEqualTo objNull) exitWith {
+    if (!_ctrlKey) then {
+        LSVAR("selection", []);
+    };
+    false
+};
+
+if (_selection isEqualType []) then {
+    {
+        _selectionArray pushBackUnique _x;
+    } forEach _selection;
+} else {
     // If ctrl is held append to selection
     if (_ctrlKey) then {
         _selectionArray pushBackUnique _selection;
     }
     else {
-        // If no ctrl held and clicked on ground unselect all
-        if(isNull _selection) then {
-            LSVAR("selection", []);
-        }
-        // If no ctrl held select single object
-        else {
-            LSVAR("selection", [_selection]);
-        }
-    }
-} else {
-    {
-        _selectionArray pushBackUnique _x;
-    } forEach _selection;
+        LSVAR("selection", [_selection]);
+    };
 };
+
+true

@@ -4,21 +4,21 @@
     File: fn_build_markArea.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-05
-    Last Update: 2018-09-13
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Creates sphere indicators around given area (LOCALLY)
+        Creates sphere indicators around given area (LOCALLY)
 
     Parameter(s):
-        0: ARRAY - Center position of area to mark
-        1: STRING - Radius to mark around the center position
+        _position   - Center position of area to mark           [POSITION, defaults to nil]
+        _radius     - Radius to mark around the center position [NUMBER, defaults to nil]
 
     Returns:
-    ARRAY - Array with created spheres
+        Array with created spheres [ARRAY]
 */
 params [
-    ["_position", nil, [[]]],
+    ["_position", nil, [[]], 3],
     ["_radius", nil, [0]]
 ];
 

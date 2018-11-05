@@ -6,31 +6,30 @@
     File: fn_build_displaySetMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-07
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Sets display build mode
+        Sets display build mode
 
     Parameter(s):
-        0: NUMBER - Build mode index
+        _mode - Build mode index [NUMBER, defaults to 0]
 
     Returns:
-    NOTHING
+        Mode was changed [BOOL]
 */
-params [["_mode", 0, [0]]];
+params [
+    ["_mode", 0, [0]]
+];
 
-systemChat format["Set mode: %1", _mode];
-
-private _logic = KPLIB_buildLogic;
-
-// CfgVehicles config for shorter access
+// CfgVehicles config for shorter/faster access
 private _cfg = configFile >> "CfgVehicles";
 private _listElements = KPLIB_preset_buildLists select _mode;
 
 private _listBox = LGVAR(display) displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 _listBox lbSetCurSel -1; // Unselect current row as it sticks between clearing
 lnbClear _listBox;
+// Fill the item list
 {
     // All but squad build mode
     if (_mode != 7) then {
@@ -39,10 +38,7 @@ lnbClear _listBox;
 
         _listBox lnbAddRow [_name, str _priceSupp, str _priceAmmo, str _priceFuel];
 
-        _icon = getText ( _cfg >> _className >> "icon");
-        if(isText (configFile >> "CfgVehicleIcons" >> _icon)) then {
-            _icon = (getText (configFile >> "CfgVehicleIcons" >> _icon));
-        };
+        private _icon = _className call KPLIB_fnc_common_getIcon;
         _listBox lnbSetPicture [[((lnbSize _listBox) select 0) - 1, 0], _icon];
 
     } else {
@@ -53,3 +49,5 @@ lnbClear _listBox;
     };
 
 } foreach _listElements;
+
+true

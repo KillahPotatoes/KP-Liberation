@@ -5,40 +5,47 @@
     File: fn_build_displayPlaceObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-08
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Places object into build queue
+        Creates local object for the build queue
 
     Parameter(s):
-        0: STRING - Classname of object to place
-        1: NUMBER - Supply price of placed object
-        2: NUMBER - Ammo price of placed object
-        3: NUMBER - Fuel price of placed object
+        _className      - Classname of object to place  [STRING, defaults to ""]
+        _priceSupplies  - Supplies price                [NUMBER, defaults to 0]
+        _priceAmmo      - Ammo price                    [NUMBER, defaults to 0]
+        _priceFuel      - Fuel price                    [NUMBER, defaults to 0]
 
     Returns:
-    NOTHING
+        Object was placed [BOOL]
 */
 params [
     ["_className", "", [""]],
-    ["_priceSupplies", nil, [0]],
-    ["_priceAmmo", nil, [0]],
-    ["_priceFuel", nil, [0]]
+    ["_priceSupplies", 0, [0]],
+    ["_priceAmmo", 0, [0]],
+    ["_priceFuel", 0, [0]]
 ];
 
-if !(_className isEqualTo "") then {
-    private _pos = screenToWorld LGVAR(mousePos);
-
+if !(_className isEqualTo "") exitWith {
     private _obj = _className createVehicleLocal KPLIB_zeroPos;
-    _obj setPos _pos;
-
     _obj enableSimulation false;
+
+    ([] call KPLIB_fnc_build_surfaceUnderCursor) params ["_cursorWorldPosASL", "_cursorSurfaceNormal"];
+    _obj setPosASL _cursorWorldPosASL;
+    _obj setVectorUp _cursorSurfaceNormal;
 
     LGVAR(buildQueue) pushBack _obj;
 
+    // Clear current item upon placement
     if !LGVAR(ctrlKey) then {
         LSVAR("buildItem", []);
-    }
+    };
 
+    // Notify that item needs position validity check
+    ["KPLIB_build_item_moved", _obj] call CBA_fnc_localEvent;
+
+    true
 };
+
+false

@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-10-25
+    Last Update: 2018-11-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,6 +32,14 @@ class common {
     // Generate positions in circle
     class common_getCirclePositions {};
 
+    // Gets path for className icon
+    class common_getIcon {};
+
     // getPos wrapper for ATL positions
     class common_getPos {};
+
+    // Initialize common module
+    class common_preInit {
+        preInit = 1;
+    };
 };

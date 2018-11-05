@@ -5,17 +5,18 @@
     File: fn_build_handleRotation.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-10-08
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    -
+        Handles object rotation dragging
 
     Parameter(s):
-    NONE
+        _anchorObject   - Rotation dragging anchor object                       [OBJECT, defaults to objNull]
+        _updatePos      - Rotation should be finished and positions updated     [BOOL, defaults to false]
 
     Returns:
-    NOTHING
+        Is rotating [BOOL]
 */
 params [
     ["_anchorObject", objNull, [objNull]],
@@ -35,14 +36,20 @@ if (_updateRot) exitWith {
             _x setDir _targetDir;
         };
 
+        // Notify that item needs position validity check
+        ["KPLIB_build_item_moved", _x] call CBA_fnc_localEvent;
+
     } forEach LGVAR(selection);
 
     // Reset state variables
     LSVAR("rotationAnchorObject", objNull);
+
+    // Return val
+    false
 };
 
 // Can't rotate while dragging
-if (LGVAR(isDragging)) exitWith {};
+if (LGVAR(isDragging)) exitWith {false};
 
 // Rotation start
 if (isNull _anchorObject) then {
@@ -61,21 +68,23 @@ if (isNull _anchorObject) then {
     private _anchorPos = getPosASL LGVAR(rotationAnchorObject);
 
     {
-        private _object = _x;
-        private _posASL = getPosASL _object;
+        private _posASL = getPosASL _x;
         private _dir = _posASL getDir _mouseWorldPos;
 
-        _object setVariable ["KPLIB_rotationDir", _dir];
+        _x setVariable ["KPLIB_rotationDir", _dir];
 
-        private _startPos = _object modelToWorldVisual (_object selectionPosition "pelvis");
-        private _endPos = (ASLtoAGL _mouseWorldPos);
-        _endPos set [2, (_startPos select 2)];
+        private _lineStartPos = _x modelToWorldVisual [0,0,0];
+        private _lineEndPos = (ASLtoAGL _mouseWorldPos);
+        _lineEndPos set [2, (_lineStartPos select 2)];
 
         drawLine3D [
-            _startPos,
-            _endPos,
+            _lineStartPos,
+            _lineEndPos,
             [1,1,0,1] // Yellow
         ];
 
     } forEach LGVAR(selection);
 };
+
+// Return val
+true

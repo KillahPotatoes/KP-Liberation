@@ -5,7 +5,7 @@
     File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-09-15
+    Last Update: 2018-11-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,6 +20,8 @@ class KPLIB_redeploy {
     onUnload = "call KPLIB_fnc_respawn_displayUnload";
 
     class controlsBackground {
+
+        class KPLIB_LogoRightCorner: KPGUI_PRE_LogoRightCorner {};
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
             text = "$STR_DEPLOY_TITLE";

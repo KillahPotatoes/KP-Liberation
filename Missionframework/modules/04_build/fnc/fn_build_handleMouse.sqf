@@ -6,18 +6,18 @@
     File: fn_build_handleMouse.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-10-08
+    Last Update: 2018-11-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handle build display mouse movement events
+        Handle build display mouse movement events
 
     Parameter(s):
-        0: STRING - Mouse move event
-        1: ARRAY - Additional event arguments
+        _mode   - Mouse event name              [STRING, defaults to nil]
+        _args   - Additonal event parameters    [ARRAY, defaults to nil]
 
     Returns:
-    NOTHING
+        NOTHING
 */
 params [
     ["_mode", nil, [""]],
@@ -33,16 +33,16 @@ switch toLower _mode do {
         private _buttonName = ["mouseLeft", "mouseRight"] select _button;
         LSVAR(_buttonName, true);
 
-        // Place object if lmb
-        if (_button == 0) then {
-            LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject;
-
-            // Delay selection a bit to allow for mouse dragging
-            [{
-                if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
-                    [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
-                };
-            }, [], 0.1] call CBA_fnc_waitAndExecute;
+        if (_button isEqualTo 0) then {
+            // If item is selected try to place it, handle selection/dragging otherwise
+            if !(LGVAR(buildItem) call KPLIB_fnc_build_displayPlaceObject) then {
+                // Delay selection a bit to allow for mouse dragging
+                [{
+                    if (!LGVAR(isDragging) && !LGVAR(isRotating)) then {
+                        [LGVAR(cursorObject)] call KPLIB_fnc_build_addToSelection;
+                    };
+                }, [], 0.1] call CBA_fnc_waitAndExecute;
+            };
         };
     };
 
@@ -65,8 +65,6 @@ switch toLower _mode do {
     };
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
-        systemChat format ["zChange: %1", _zChange];
-
         if (true) exitWith {true};
     };
 
@@ -98,6 +96,11 @@ switch toLower _mode do {
     case "onmouseholding": {
         _args params ["_ctrl","_x","_y"];
 
+        private _xy = [_x, _y];
+        LSVAR("mousePos", _xy);
+
+        LSVAR("cursorObject", [] call KPLIB_fnc_build_objectUnderCursor);
+
         if !(isNull LGVAR(dragAnchorObject)) then {
             [LGVAR(dragAnchorObject)] call KPLIB_fnc_build_handleDrag;
         };
@@ -108,10 +111,14 @@ switch toLower _mode do {
         };
     };
 
-    case "onmousemoving_buildlist": {
-        // Disable camera movement when cursor is over build dialog
+    case "onmousezchanged_buildlist": {
+        // Disable camera movement when scrolling over build dialog
         // TODO is there any better solution?
-        LGVAR(camera) camCommand "manual off";;
+        LGVAR(camera) camCommand "manual off";
+
+        [{
+            LGVAR(camera) camCommand "manual on";
+        }] call CBA_fnc_execNextFrame;
     };
 
     default {
