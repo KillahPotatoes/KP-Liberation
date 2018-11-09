@@ -4,23 +4,23 @@
     File: fn_core_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-18
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    This module provides the very basic functions and mechanics for the general gameplay of the mission.
-    Tasks of this module are:
-        * Provide basic functions.
-        * Show respawn, spawn and intro cinematics.
-        * Spawning of Little Birds and Rubber Dinghies.
-        * Spawning and respawn handling of Potato 01.
-        * Track sectors to handle their activation/deactivation.
+        This module provides the very basic functions and mechanics for the general gameplay of the mission.
+        Tasks of this module are:
+            * Provide basic functions.
+            * Show respawn, spawn and intro cinematics.
+            * Spawning of Little Birds and Rubber Dinghies.
+            * Spawning and respawn handling of Potato 01.
+            * Track sectors to handle their activation/deactivation.
 
     Dependencies:
         * 00_init
 
     Returns:
-    BOOL
+        Module was initialized [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initializing...", diag_tickTime];};

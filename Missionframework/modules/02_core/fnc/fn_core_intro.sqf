@@ -4,17 +4,17 @@
     File: fn_core_intro.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-31
-    Last Update: 2018-09-25
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Starts the intro cinematic with the optional credit introduction line.
+        Starts the intro cinematic with the optional credit introduction line.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 /*
@@ -49,3 +49,5 @@ if (KPLIB_intro_tutorial == 0) then {
 
 // Finish the intro
 KPLIB_intro_done = true;
+
+true

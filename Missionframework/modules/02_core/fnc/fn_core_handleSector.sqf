@@ -4,20 +4,22 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-10-20
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handles an activated sector concerning which scripts should be started and checks for a later deactivation.
+        Handles an activated sector concerning which scripts should be started and checks for a later deactivation.
 
     Parameter(s):
-        0: STRING - Name of the sectormarker.
+        _sectorMarkerName - Sector marker name [STRING, defaults to nil]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
-params [["_sectorMarkerName", nil, [""]]];
+params [
+    ["_sectorMarkerName", nil, [""]]
+];
 
 // Create sector handler PFH Object
 private _handler = [
@@ -70,3 +72,5 @@ private _handler = [
     {true}, // Run condition
     {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition
 ] call CBA_fnc_createPerFrameHandlerObject;
+
+true

@@ -4,17 +4,17 @@
     File: fn_core_cinematic.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-31
-    Last Update: 2018-05-04
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    The intro cinematic procedure.
+        The intro cinematic procedure.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 // Intro cinematic started
@@ -323,3 +323,5 @@ _cam cameraEffect ["Terminate", "BACK"];
 camDestroy _cam;
 camUseNVG false;
 deleteVehicle _pointer;
+
+true

@@ -4,17 +4,17 @@
     File: fn_core_updateFobMarkers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-13
-    Last Update: 2018-05-13
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Updates labels of FOB markers
+        Updates labels of FOB markers
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 // Update label of every FOB marker
