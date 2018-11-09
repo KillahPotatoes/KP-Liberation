@@ -27,7 +27,7 @@ KPLIB_validationNamespace = [] call CBA_fnc_createNamespace;
 // Config
 KPLIB_validationNamespace setVariable ["config", false];
 // Arsenal
-if (KPLIB_preset_arsenal > 0) then {KPLIB_validationNamespace setVariable ["arsenal", false];};
+if (KPLIB_param_presetArsenal > 0) then {KPLIB_validationNamespace setVariable ["arsenal", false];};
 // Presets
 KPLIB_validationNamespace setVariable ["blufor", false];
 KPLIB_validationNamespace setVariable ["opfor", false];
@@ -57,11 +57,11 @@ KPLIB_validationNamespace setVariable ["resistance", false];
         (localize "STR_MISSION_TITLE"),
         worldName,
         (localize "STR_MISSION_VERSION"),
-        KPLIB_preset_blufor,
-        KPLIB_preset_opfor,
-        KPLIB_preset_resistance,
-        KPLIB_preset_civilians,
-        KPLIB_preset_arsenal,
+        KPLIB_param_presetPlayer,
+        KPLIB_param_presetEnemy,
+        KPLIB_param_presetResistance,
+        KPLIB_param_presetCivilian,
+        KPLIB_param_presetArsenal,
         KPLIB_ace_enabled
     ];
 };

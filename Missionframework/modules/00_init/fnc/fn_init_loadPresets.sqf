@@ -26,7 +26,7 @@
 */
 
 // Load Blufor preset
-switch (KPLIB_preset_blufor) do {
+switch (KPLIB_param_presetPlayer) do {
     case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
     case 3: {call compile preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
@@ -36,7 +36,7 @@ switch (KPLIB_preset_blufor) do {
 };
 
 // Load Opfor preset
-switch (KPLIB_preset_opfor) do {
+switch (KPLIB_param_presetEnemy) do {
     case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
     case 3: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
@@ -44,14 +44,14 @@ switch (KPLIB_preset_opfor) do {
 };
 
 // Load resistance preset
-switch (KPLIB_preset_resistance) do {
+switch (KPLIB_param_presetResistance) do {
     case 1: {call compile preprocessFileLineNumbers "presets\resistance\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
     default {call compile preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 // Load civilian preset
-switch (KPLIB_preset_civilians) do {
+switch (KPLIB_param_presetCivilian) do {
     case 1: {call compile preprocessFileLineNumbers "presets\civilians\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
     default {call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};

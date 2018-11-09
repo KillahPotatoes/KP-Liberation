@@ -14,14 +14,14 @@
 class init {
     file = "modules\00_init\fnc";
 
-    // Try to catch errors in config file
-    class init_configGuard {};
-
     // Checks if given classname is inside CfgVehicles
     class init_checkClass {};
 
     // Creates local client markers
     class init_clientMarkers {};
+
+    // Try to catch errors in config file
+    class init_configGuard {};
 
     // Creates locked vehicle markers
     class init_createLockedVehMarkers {};
@@ -44,15 +44,6 @@ class init {
     // Loads and checks the configured unit presets
     class init_loadPresets {};
 
-    // Fetches the mission parameters and saves them
-    class init_paramFetchAll {};
-
-    // Loads param from KPLIB persistent params array
-    class init_paramLoad {};
-
-    // Creates variable from param name and value in format of "KPLIB_param_<name>"
-    class init_paramVarCreate {};
-
     // Module post initialization
     class init_postInit {
         postInit = 1;
@@ -71,6 +62,9 @@ class init {
 
     // Saves module specific data for the save
     class init_saveData {};
+
+    // CBA Settings for this module
+    class init_settings {};
 
     // Adds a module data array to the save data array
     class init_setSaveData {};

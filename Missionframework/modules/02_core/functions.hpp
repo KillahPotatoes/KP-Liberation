@@ -53,12 +53,6 @@ class core {
     // Start the intro cinematic
     class core_intro {};
 
-    // Creates diary entries with parameter values
-    class core_paramDiaryList {};
-
-    // Converts value of param to "texts" string
-    class core_paramToText {};
-
     // Module post initialization
     class core_postInit {
         postInit = 1;

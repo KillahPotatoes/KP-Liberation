@@ -52,7 +52,7 @@ if (isServer) then {
                 diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
             };
         };
-    }, KPLIB_save_interval] call CBA_fnc_addPerFrameHandler;
+    }, KPLIB_param_saveInterval] call CBA_fnc_addPerFrameHandler;
 
     // Create locked vehicle markers
     [] call KPLIB_fnc_init_createLockedVehMarkers;

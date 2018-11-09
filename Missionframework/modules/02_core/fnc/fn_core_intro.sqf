@@ -21,31 +21,33 @@
 --- TODO IN SPRINT .... soon ^^ ---
 Rework the intro and cinematic. Currently it doesn't work reliable. Mostly an endless loop of the cinematic.
 Postponed, as it's not in the current scope of the sprint 5 tasks.
+
+Also: Refactor or even remove it completely
 */
 
 // Spawn cinematic camera procedure
-[] spawn KPLIB_fnc_core_cinematic;
+// [] spawn KPLIB_fnc_core_cinematic;
 
-if (KPLIB_param_intro > 0) then {
+/* if (KPLIB_param_intro > 0) then {
     // Show intro texts
     uiSleep 1;
     cutRsc ["intro1", "PLAIN", 1, true];
     uiSleep 5.5;
     cutRsc ["intro2", "PLAIN", 1, true];
     uiSleep 10;
-};
+};*/
 
 // Show the intro dialog for play or tutorial
-createDialog "KPLIB_introMenu";
+// createDialog "KPLIB_introMenu";
 // If we are not able to open introMenu we should continue
-waitUntil {dialog};
-waitUntil {KPLIB_intro_startGame == 1 || KPLIB_intro_tutorial == 1 || !dialog};
-closeDialog 0;
+// waitUntil {dialog};
+// waitUntil {KPLIB_intro_startGame == 1 || KPLIB_intro_tutorial == 1 || !dialog};
+// closeDialog 0;
 
 // Show tutorial, if selected
-if (KPLIB_intro_tutorial == 0) then {
+/*if (KPLIB_intro_tutorial == 0) then {
     KPLIB_intro_running = false;
-};
+};*/
 
 // Finish the intro
 KPLIB_intro_done = true;

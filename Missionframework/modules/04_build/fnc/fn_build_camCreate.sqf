@@ -12,7 +12,7 @@
 
     Parameter(s):
         _center - Center of building area [POSITION, defaults to position player]
-        _radius - Allowed building radius [NUMBER, defaults to KPLIB_range_fob]
+        _radius - Allowed building radius [NUMBER, defaults to KPLIB_param_fobRange]
 
     Returns:
         Building camera [OBJECT]
@@ -20,7 +20,7 @@
 
 params [
     ["_position", position player, [[]], 3],
-    ["_radius", KPLIB_range_fob, [0]]
+    ["_radius", KPLIB_param_fobRange, [0]]
 ];
 
 private _camera = "CamCurator" camCreate (eyePos player);

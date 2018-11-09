@@ -23,7 +23,7 @@ if(hasInterface) then {
     private _buildCondition = '_target == _originalTarget && !(_originalTarget getVariable ["KPLIB_fob", ""] in ["", "KPLIB_eden_startbase_marker"])';
     private _buildAction = {
         private _pos = getMarkerPos (player getVariable "KPLIB_fob");
-        [_pos, KPLIB_range_fob] call KPLIB_fnc_build_start;
+        [_pos, KPLIB_param_fobRange] call KPLIB_fnc_build_start;
     };
 
     private _actionArray = [localize "STR_ACTION_FOB_BUILD", _buildAction, nil, -802, false, true, "", _buildCondition, 10];

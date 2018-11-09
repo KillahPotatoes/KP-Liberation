@@ -55,10 +55,6 @@ wreckRemovalMinTime = 1200;
 wreckRemovalMaxTime = 7200;
 minPlayerDistance = 1000;
 
-class Params {
-    #include "KPLIB_params.hpp"
-};
-
 class CfgFunctions {
     #include "KPLIB_functions.hpp"
 };

@@ -31,7 +31,7 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module 
 // Initialize actions
 [] call KPLIB_fnc_core_setupPlayerActions;
 
-if(KPLIB_param_clearVehicleCargo > 0) then {
+if(KPLIB_param_clearVehicleCargo) then {
     ["KPLIB_vehicle_spawned", {call KPLIB_fnc_common_clearVehicleCargo;}] call CBA_fnc_addEventHandler;
 };
 
@@ -52,9 +52,6 @@ if (!hasInterface && !isDedicated) then {
 
 // Player section
 if (hasInterface) then {
-    // Add parameter diary entries
-    [] call KPLIB_fnc_core_paramDiaryList;
-
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;
 };

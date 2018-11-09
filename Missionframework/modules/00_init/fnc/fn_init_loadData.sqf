@@ -17,13 +17,13 @@
         Function reached the end [BOOL]
 */
 
-if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module loading...";};
+if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Init module loading...";};
 
 private _moduleData = ["init"] call KPLIB_fnc_init_getSaveData;
 
 // Check if there is a new campaign
 if (_moduleData isEqualTo []) then {
-    if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module data empty, creating new data...";};
+    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Init module data empty, creating new data...";};
 
     // Set random start date
     setDate [2018, ceil (random 12), ceil (random 28), 8, 0];
@@ -43,7 +43,7 @@ if (_moduleData isEqualTo []) then {
     publicVariable "KPLIB_sectors_lockedVeh";
 } else {
     // Otherwise start applying the saved data
-    if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module data found, applying data...";};
+    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Init module data found, applying data...";};
 
     // Set saved date and time
     setDate [

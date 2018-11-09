@@ -19,12 +19,12 @@
 
 
 // Load arsenal preset
-switch (KPLIB_preset_arsenal) do {
+switch (KPLIB_param_presetArsenal) do {
     case 1: {call compile preprocessFileLineNumbers "presets\arsenal\custom.sqf";};
     default {KPLIB_arsenal_weapons = []; KPLIB_arsenal_magazines = []; KPLIB_arsenal_items = []; KPLIB_arsenal_backpacks = [];};
 };
 
-if (KPLIB_param_arsenalPreset > 0) then {
+if (KPLIB_param_presetArsenal > 0) then {
     // Fetch all needed config classes
     private _configClasses = [];
     {

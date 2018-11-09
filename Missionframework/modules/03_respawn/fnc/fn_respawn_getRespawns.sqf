@@ -29,7 +29,7 @@ private _spawns = [[localize "STR_MAINBASE", KPLIB_eden_startbase]];
 } forEach KPLIB_sectors_fobs;
 
 // Add mobile respawns to the spawn list if parameter isn't disabled
-if (KPLIB_param_mobileRespawn > 0) then {
+if (KPLIB_param_mobileRespawn) then {
     {
         private _displayName = getText (configFile >>  "CfgVehicles" >> (typeOf _x) >> "displayName");
         // Add item to list
