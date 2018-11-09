@@ -20,7 +20,7 @@ class common {
     // Spawns a full crew for given vehicle
     class common_createCrew {};
 
-    // Creates a group at given side with given groupmembers
+    // Creates a group of given side with given groupmembers
     class common_createGroup {};
 
     // Creates a unit with given classname in given group

@@ -60,6 +60,7 @@ if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
 };
 
+// Called in the scheduled postInit environment allows the small waits in the function
 [] call KPLIB_fnc_init_receiveInit;
 
 true
