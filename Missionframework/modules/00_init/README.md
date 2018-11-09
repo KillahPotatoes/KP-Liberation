@@ -1,8 +1,6 @@
 # KP Liberation Module Description
 
 ## Init Module
-*Last Update: 2018-11-09*
-
 The init module handles the general mission initialization and distributes it to all clients.
 It contains the general/vital CBA settings for the mission, defines basic global variables and ui classes/values.
 Also the presets are loaded and checked for syntax errors. If any errors are found, it'll end the mission with a hint.

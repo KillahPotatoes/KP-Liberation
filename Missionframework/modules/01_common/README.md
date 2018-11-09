@@ -1,8 +1,6 @@
 # KP Liberation Module Description
 
 ## Common Module
-*Last Update: 2018-11-09*
-
 The common module provides vanilla command replacement functions which should always be used in the Liberation environment.
 Furthermore it provides functions which are often used and are not specifically connected to one module.
 

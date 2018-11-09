@@ -1,14 +1,13 @@
 # KP Liberation Module Description
 
 ## Core Module
-*Last Update: 2018-11-09*
-
 The core module provides the very basic CTI functionalities for the Liberation mission.
 It makes sure to spawn the starting equipment, the sector owner changing and checking if any win condition is met to end the mission.
 So this is the core gameplay where all other modules are inject their functionalities to extend the way of the mission from the beginning to winning.
 
 ### Dependencies
-This module uses no data or functions from other modules.
+* Init
+* Common
 
 ### Functions
 * KPLIB_fnc_core_areUnitsNear

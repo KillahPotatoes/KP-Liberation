@@ -20,8 +20,14 @@ class respawn {
     // Handle respawn confirmation
     class respawn_displayConfirm {};
 
+    // Focus map control on currently selected respawn area
+    class respawn_displayFocusMap {};
+
     // Handle respawn display load
     class respawn_displayLoad {};
+
+    // Handle loadout list selection change
+    class respawn_displayLoadoutSelChanged {};
 
     // Handle respawn list selection change
     class respawn_displaySpawnSelChanged {};
@@ -29,17 +35,11 @@ class respawn {
     // Handle resapwn display unload
     class respawn_displayUnload {};
 
-    // Handle respawn list selection change
-    class respawn_displayLoadoutSelChanged {};
-
-    // Update list of available respawns
-    class respawn_displayUpdateRespawns {};
-
     // Update list of available loadouts
     class respawn_displayUpdateLoadouts {};
 
-    // Focus map control on currently selected respawn area
-    class respawn_displayFocusMap {};
+    // Update list of available respawns
+    class respawn_displayUpdateRespawns {};
 
     // Get an array of available respawns
     class respawn_getRespawns {};
