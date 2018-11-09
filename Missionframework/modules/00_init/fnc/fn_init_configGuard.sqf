@@ -4,18 +4,18 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2018-10-18
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Initializes validationNamespace for config verification.
-    After mission start checks if all defined config variables are "true" (valid) if any config is not valid then mission is interrupted.
+        Initializes validationNamespace for config verification.
+        After mission start checks if all defined config variables are "true" (valid) if any config is not valid then mission is interrupted.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 // We can't use our params vars here as this will be ran before all other functions
@@ -65,3 +65,5 @@ KPLIB_validationNamespace setVariable ["resistance", false];
         KPLIB_ace_enabled
     ];
 };
+
+true

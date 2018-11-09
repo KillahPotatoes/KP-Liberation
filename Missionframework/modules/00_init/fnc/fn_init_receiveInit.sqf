@@ -4,17 +4,17 @@
     File: fn_init_receiveInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-25
-    Last Update: 2018-10-18
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Receive data from the server initialization and split the packages accordingly.
+        Receive data from the server initialization and split the packages accordingly.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 if (isDedicated) exitWith {};
@@ -190,3 +190,5 @@ if (hasInterface) then {
 };
 
 diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initialized", diag_tickTime];
+
+true

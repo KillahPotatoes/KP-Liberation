@@ -4,18 +4,19 @@
     File: fn_init_fillArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2018-01-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Fetches all arsenal classnames from config files and applies the blacklist or adds the chosen whitelist to the virtual arsenal.
+        Fetches all arsenal classnames from config files and applies the blacklist or adds the chosen whitelist to the virtual arsenal.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
+
 
 // Load arsenal preset
 switch (KPLIB_preset_arsenal) do {

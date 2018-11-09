@@ -4,17 +4,17 @@
     File: fn_init_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-10-23
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Loads data which is bound to the init module from the given save data or initializes needed data for a new campaign.
+        Loads data which is bound to the init module from the given save data or initializes needed data for a new campaign.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module loading...";};

@@ -4,21 +4,21 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-18
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Tasks of this module are:
-        * Fetch parameters
-        * Fetch config values
-        * Define basic ui values
-        * Fetch, check and distribute preset data
+        Tasks of this module are:
+            * Fetch parameters
+            * Fetch config values
+            * Define basic ui values
+            * Fetch, check and distribute preset data
 
     Dependencies:
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Module was initialized [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initializing...", diag_tickTime];};

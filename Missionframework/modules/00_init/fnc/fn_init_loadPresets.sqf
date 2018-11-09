@@ -4,18 +4,18 @@
     File: fn_init_loadPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Loads the configured preset files, checks if classnames are available with current modset and initialize global arrays which are dependent on the presets.
-    Distributes the cleaned arrays to the clients.
+        Loads the configured preset files, checks if classnames are available with current modset and initialize global arrays which are dependent on the presets.
+        Distributes the cleaned arrays to the clients.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 
     --- NOTE
     Not sure about this whole publicVariable method in the preset initialization.

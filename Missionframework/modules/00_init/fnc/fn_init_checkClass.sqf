@@ -4,20 +4,22 @@
     File: fn_init_checkClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-01-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Returns if given classname is available in CfgVehicles.
+        Returns if given classname is available in CfgVehicles.
 
     Parameter(s):
-        0: STRING - Classname which should be checked
+        _toCheck - Classname which should be checked [STRING, defaults to ""]
 
     Returns:
-    BOOL
+        Classname check result [BOOL]
 */
 
-params ["_toCheck"];
+params [
+    ["_toCheck", "", [""]]
+];
 
 private _return = false;
 
