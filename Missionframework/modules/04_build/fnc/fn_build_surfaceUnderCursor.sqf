@@ -5,7 +5,7 @@
     File: fn_build_surfaceUnderCursor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-11-04
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,6 +18,7 @@
     Returns:
         Position ASL and Surface normal underneath the cursor [ARRAY]
 */
+
 params [
     ["_ignore", objNull, [objNull]]
 ];
