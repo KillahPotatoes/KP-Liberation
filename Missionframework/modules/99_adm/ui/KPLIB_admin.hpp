@@ -4,12 +4,12 @@
     File: KPLIB_admin.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-27
-    Last Update: 2018-09-13
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    A small admin dialog for the server admin to access some maintenance features.
-    Can be easily expanded, as it's basically just a button list.
+        A small admin dialog for the server admin to access some maintenance features.
+        Can be easily expanded, as it's basically just a button list.
 */
 
 
