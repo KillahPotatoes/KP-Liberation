@@ -4,7 +4,7 @@
     File: fn_common_createVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-10-25
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,7 +13,7 @@
 
     Parameter(s):
         _classname  - Classname of the vehicle which should be spawned                                              [STRING, defaults to ""]
-        _spawnPos   - Position ATL where the vehicle should be spawned. Paradropped when z > 10 and no air vehicle  [POSITION ATL, defaults to []]
+        _spawnPos   - Position ATL where the vehicle should be spawned. Paradropped when z > 10 and no air vehicle  [POSITION ATL, defaults to KPLIB_zeroPos]
         _spawnDir   - Heading for the vehicle from 0 to 360                                                         [NUMBER, defaults to (random 360)]
         _justSpawn  - True to skip all paradrop or air vehicle detection, even if z > 10                            [BOOL, defaults to false]
         _withCrew   - True to spawn crew for the vehicle                                                            [BOOL, defaults to false]
@@ -25,7 +25,7 @@
 
 params [
     ["_classname", "", [""]],
-    ["_spawnPos", [], [[]], [3]],
+    ["_spawnPos", KPLIB_zeroPos, [[]], [3]],
     ["_spawnDir", random 360, [0]],
     ["_justSpawn", false, [true]],
     ["_withCrew", false, [true]],
