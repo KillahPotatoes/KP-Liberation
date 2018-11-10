@@ -4,23 +4,18 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-09
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Tasks of this module are:
-            * Sort sector markers to specific arrays
-            * Initialize the save manager
-            * Connect unlockable vehicles to military sectors
-            * Load and save very basic data like date, sector ownership, FOB positions and unlockable vehicle sector links
-            * Manage sector color changing
-            * Manage FOB markers
+        The postInit function of a module takes care of starting/executing the modules functions or scripts.
+        Basically it starts/initializes the module functionality to make all provided features usable.
 
-    Dependencies:
+    Parameter(s):
         NONE
 
     Returns:
-        Module was initialized [BOOL]
+        Module postInit finished [BOOL]
 */
 
 if (isServer) then {

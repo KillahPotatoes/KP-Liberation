@@ -4,17 +4,18 @@
     File: fn_adm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-10
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        This module provides an admin menu for a KP Liberation server.
+        The postInit function of a module takes care of starting/executing the modules functions or scripts.
+        Basically it starts/initializes the module functionality to make all provided features usable.
 
-    Dependencies:
+    Parameter(s):
         NONE
 
     Returns:
-        Module was initialized [BOOL]
+        Module postInit finished [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ADM] Module initializing...", diag_tickTime];};
