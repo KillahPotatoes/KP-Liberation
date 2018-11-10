@@ -4,7 +4,7 @@
     File: fn_core_cinematic.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-31
-    Last Update: 2018-11-09
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -299,7 +299,7 @@ while {KPLIB_intro_running} do {
             // Get the name of the sector we're looking at
             private _sectorName = "";
             if (_actualTargetPos distance KPLIB_eden_startbase < 300) then {
-                _sectorName = localize "STR_INTRO_BEGIN";
+                _sectorName = localize "STR_KPLIB_INTRO_BEGIN";
             } else {
                 _sectorName = [300, _actualTargetPos] call KPLIB_fnc_core_getNearestSector;
                 if (_sectorName != "") then {

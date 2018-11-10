@@ -26,7 +26,7 @@ findDisplay 75802 displayCtrl 758021 ctrlEnable false;
 findDisplay 75802 displayCtrl 758022 ctrlEnable false;
 
 // Hint output
-hint localize "STR_ADMINDIALOG_DELDONE";
+hint localize "STR_KPLIB_DIALOG_ADMIN_DEL_NOTE";
 [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 
 true

@@ -41,9 +41,9 @@ if !(KPLIB_param_stamina) then {
 */
 
 // Add player menu action
-player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_PLAYER_MENU" + "</t>", {[] call KPLIB_fnc_plm_openDialog;}, nil, -803, false, true, "", 'player == _originalTarget'];
+player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_PLAYER_MENU" + "</t>", {[] call KPLIB_fnc_plm_openDialog;}, nil, -803, false, true, "", 'player == _originalTarget'];
 
 // Add admin menu action, if player is logged in Admin
 if (serverCommandAvailable "#kick") then {
-    player addAction ["<t color='#FF8000'>" + localize "STR_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true, "", 'player == _originalTarget'];
+    player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true, "", 'player == _originalTarget'];
 };

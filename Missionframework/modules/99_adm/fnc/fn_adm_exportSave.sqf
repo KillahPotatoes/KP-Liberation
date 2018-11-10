@@ -23,7 +23,7 @@ if (isServer) then {
     saveProfileNamespace;
 
     // Hint output
-    hint localize "STR_ADMINDIALOG_EXPDONE";
+    hint localize "STR_KPLIB_DIALOG_ADMIN_EXP_NOTE";
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 } else {
     // Otherwise request it from the server
@@ -36,7 +36,7 @@ if (isServer) then {
         {
             profileNamespace setVariable [KPLIB_save_key + "_export", KPLIB_save_data];
             saveProfileNamespace;
-            hint localize "STR_ADMINDIALOG_EXPDONE";
+            hint localize "STR_KPLIB_DIALOG_ADMIN_EXP_NOTE";
             [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
         }
     ] call CBA_fnc_waitUntilAndExecute;

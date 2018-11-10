@@ -61,12 +61,12 @@ KPLIB_campaignRunning = true;
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // Squad names for the buildable squads
 KPLIB_preset_squadNames = [
-    localize "STR_SQUAD_LIGHT",
-    localize "STR_SQUAD_RIFLE",
-    localize "STR_SQUAD_AT",
-    localize "STR_SQUAD_AA",
-    localize "STR_SQUAD_RECON",
-    localize "STR_SQUAD_PARA"
+    localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
+    localize "STR_KPLIB_UNITS_SQUAD_RIFLE",
+    localize "STR_KPLIB_UNITS_SQUAD_AT",
+    localize "STR_KPLIB_UNITS_SQUAD_AA",
+    localize "STR_KPLIB_UNITS_SQUAD_RECON",
+    localize "STR_KPLIB_UNITS_SQUAD_PARA"
 ];
 // Reset position shortcut
 KPLIB_resetPos = [99999,99999,0];

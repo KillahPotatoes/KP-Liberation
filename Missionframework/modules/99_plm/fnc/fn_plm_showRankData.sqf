@@ -32,7 +32,7 @@ _ctrlRank ctrlSetText ([] call KPR_fnc_getRankName);
 if (KPR_levelSystem) then {
     _ctrlScore ctrlSetText str ([] call KPR_fnc_getScore);
 } else {
-    _ctrlScore ctrlSetText (localize "STR_PLAYERDIALOG_NOLVLSYSTEM");
+    _ctrlScore ctrlSetText (localize "STR_KPLIB_DIALOG_PLAYER_NOLVLSYSTEM");
 };
 _ctrlPlaytime ctrlSetText ([] call KPR_fnc_getPlaytime);
 

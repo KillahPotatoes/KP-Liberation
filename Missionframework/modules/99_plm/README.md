@@ -5,7 +5,7 @@ With the Player Menu dialog the players get functionalities like a lightweight g
 It also displays KP Ranks data, if the mod is running.
 
 ### Dependencies
-* Init
+The are no dependencies to other KP Liberation modules.
 
 ### Functions
 * KPLIB_fnc_plm_apply

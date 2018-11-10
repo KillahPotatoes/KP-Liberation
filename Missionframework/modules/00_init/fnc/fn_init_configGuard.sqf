@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2018-11-09
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -54,9 +54,9 @@ KPLIB_validationNamespace setVariable ["resistance", false];
 
     diag_log format [
         "[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal: %8 - ACE: %9",
-        (localize "STR_MISSION_TITLE"),
+        (localize "STR_KPLIB_TITLE"),
         worldName,
-        (localize "STR_MISSION_VERSION"),
+        (localize "STR_KPLIB_VERSION"),
         KPLIB_param_presetPlayer,
         KPLIB_param_presetEnemy,
         KPLIB_param_presetResistance,

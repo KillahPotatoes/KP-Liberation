@@ -31,7 +31,7 @@ if (leader _grp == player) then {
     closeDialog 0;
     [{!dialog}, {call KPLIB_fnc_plm_openDialog;}] call CBA_fnc_waitUntilAndExecute;
 } else {
-    hint localize "STR_PLAYERDIALOG_NOTLEADER";
+    hint localize "STR_KPLIB_DIALOG_PLAYER_NOTLEADER_NOTE";
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 };
 

@@ -20,7 +20,7 @@ class KPLIB_admin {
     class controlsBackground {
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
-            text = "$STR_ADMINDIALOG_TITLE";
+            text = "$STR_KPLIB_DIALOG_ADMIN_TITLE";
         };
     };
 
@@ -29,25 +29,25 @@ class KPLIB_admin {
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};
 
         class KPLIB_ExportButton: KPGUI_PRE_DialogButtonC {
-            text = "$STR_ADMINDIALOG_EXP";
+            text = "$STR_KPLIB_DIALOG_ADMIN_EXP";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + KP_SPACING_Y);
-            tooltip = "$STR_ADMINDIALOG_EXPDESC";
+            tooltip = "$STR_KPLIB_DIALOG_ADMIN_EXP_TT";
             onButtonClick = "call KPLIB_fnc_adm_exportSave";
         };
 
         class KPLIB_ImportButton: KPGUI_PRE_DialogButtonC {
             idc = 758021;
-            text = "$STR_ADMINDIALOG_IMP";
+            text = "$STR_KPLIB_DIALOG_ADMIN_IMP";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + KP_HEIGTH_BUTTON + 2 * KP_SPACING_Y);
-            tooltip = "$STR_ADMINDIALOG_IMPDESC";
+            tooltip = "$STR_KPLIB_DIALOG_ADMIN_IMP_TT";
             onButtonClick = "call KPLIB_fnc_adm_importSave";
         };
 
         class KPLIB_DeleteButton: KPGUI_PRE_DialogButtonC {
             idc = 758022;
-            text = "$STR_ADMINDIALOG_DEL";
+            text = "$STR_KPLIB_DIALOG_ADMIN_DEL";
             y = safeZoneY + safeZoneH * (KP_Y_VAL_C + KP_HEIGTH_TITLE + 2 * KP_HEIGTH_BUTTON + 3 * KP_SPACING_Y);
-            tooltip = "$STR_ADMINDIALOG_DELDESC";
+            tooltip = "$STR_KPLIB_DIALOG_ADMIN_DEL_TT";
             onButtonClick = "call KPLIB_fnc_adm_deleteExport";
         };
     };
