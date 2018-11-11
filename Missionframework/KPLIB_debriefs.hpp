@@ -12,15 +12,15 @@
 */
 
 class KPLIB_Win {
-    title =	$STR_KPLIB_DEBRIEF_WINTITLE;
+    title =	$STR_KPLIB_DEBRIEF_WIN_TITLE;
     subtitle = "";
-    description = $STR_KPLIB_DEBRIEF_WINDESCR;
+    description = $STR_KPLIB_DEBRIEF_WIN_DESCR;
     pictureBackground = "";
 };
 
 class KPLIB_ConfigError {
-    title = $STR_KPLIB_DEBRIEF_ERRORTITLE;
-    subtitle = $STR_KPLIB_DEBRIEF_ERRORSUBTITLE;
-    description = $STR_KPLIB_DEBRIEF_ERRORDESCR;
+    title = $STR_KPLIB_DEBRIEF_ERROR_TITLE;
+    subtitle = $STR_KPLIB_DEBRIEF_ERROR_SUBTITLE;
+    description = $STR_KPLIB_DEBRIEF_ERROR_DESCR;
     pictureBackground = "";
 };

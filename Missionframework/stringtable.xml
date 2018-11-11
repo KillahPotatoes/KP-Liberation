@@ -177,29 +177,9 @@
     <!-- ACTIONS -->
 
     <Package name="Actions">
-        <Key ID="STR_KPLIB_ACTION_DEPLOY">
-            <English>-- DEPLOY FOB --</English>
-            <Chinese>-- 佈署前線基地 --</Chinese>
-            <Chinesesimp>-- 部署前哨 --</Chinesesimp>
-            <French>-- DEPLOYER FOB --</French>
-            <German>-- FOB BEREITSTELLEN --</German>
-            <Italian>-- COSTRUISCI FOB --</Italian>
-            <Portuguese>-- INSTALAR FOB --</Portuguese>
-            <Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
-            <Spanish>-- DESPLEGAR FOB --</Spanish>
-            <Turkish>-- FOB KUR --</Turkish>
-        </Key>
-        <Key ID="STR_KPLIB_ACTION_REDEPLOY">
-            <English>-- REDEPLOY --</English>
-            <Chinese>-- 重新佈署 --</Chinese>
-            <Chinesesimp>-- 重新部署 --</Chinesesimp>
-            <French>-- REDEPLOIEMENT --</French>
-            <German>-- NEU EINSETZEN --</German>
-            <Italian>-- RISCHIERAMENTO --</Italian>
-            <Portuguese>-- REMOBILIZAR --</Portuguese>
-            <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
-            <Spanish>-- REDESPLEGAR --</Spanish>
-            <Turkish>-- YENİDEN SEÇ --</Turkish>
+        <Key ID="STR_KPLIB_ACTION_ADMIN_MENU">
+            <English>-- Admin Menu --</English>
+            <German>-- Admin Menü --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_BUILD">
             <English>-- BUILD --</English>
@@ -213,13 +193,33 @@
             <Spanish>-- CONSTRUIR --</Spanish>
             <Turkish>-- İnşa Et --</Turkish>
         </Key>
-        <Key ID="STR_KPLIB_ACTION_ADMIN_MENU">
-            <English>-- Admin Menu --</English>
-            <German>-- Admin Menü --</German>
+        <Key ID="STR_KPLIB_ACTION_DEPLOY">
+            <English>-- DEPLOY FOB --</English>
+            <Chinese>-- 佈署前線基地 --</Chinese>
+            <Chinesesimp>-- 部署前哨 --</Chinesesimp>
+            <French>-- DEPLOYER FOB --</French>
+            <German>-- FOB BEREITSTELLEN --</German>
+            <Italian>-- COSTRUISCI FOB --</Italian>
+            <Portuguese>-- INSTALAR FOB --</Portuguese>
+            <Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
+            <Spanish>-- DESPLEGAR FOB --</Spanish>
+            <Turkish>-- FOB KUR --</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PLAYER_MENU">
             <English>-- Player Menu --</English>
             <German>-- Spielermenü --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_REDEPLOY">
+            <English>-- REDEPLOY --</English>
+            <Chinese>-- 重新佈署 --</Chinese>
+            <Chinesesimp>-- 重新部署 --</Chinesesimp>
+            <French>-- REDEPLOIEMENT --</French>
+            <German>-- NEU EINSETZEN --</German>
+            <Italian>-- RISCHIERAMENTO --</Italian>
+            <Portuguese>-- REMOBILIZAR --</Portuguese>
+            <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
+            <Spanish>-- REDESPLEGAR --</Spanish>
+            <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
     </Package>
 
@@ -227,25 +227,28 @@
     <!-- DEBRIEFINGS -->
 
     <Package name="Debrief">
-        <Key ID="STR_KPLIB_DEBRIEF_WINTITLE">
-            <English>The area is liberated.</English>
-            <German>Das Gebiet wurde befreit.</German>
-        </Key>
-        <Key ID="STR_KPLIB_DEBRIEF_WINDESCR">
-            <English>Later you'll have a cinematic with the stats etc.</English>
-            <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
-        </Key>
-        <Key ID="STR_KPLIB_DEBRIEF_ERRORTITLE">
+        <!-- CONFIG ERROR -->
+        <Key ID="STR_KPLIB_DEBRIEF_ERROR_TITLE">
             <English>Configuration error</English>
             <German>Konfigurationsfehler</German>
         </Key>
-        <Key ID="STR_KPLIB_DEBRIEF_ERRORSUBTITLE">
+        <Key ID="STR_KPLIB_DEBRIEF_ERROR_DESCR">
+            <English>One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.&lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or Killah Potatoes Discord Server.</English>
+            <German>Mindestens eine Konfigurationsdatei ist fehlerhaft. Prüfe deine Konfigurations- und Presetdateien auf Syntaxfehler.&lt;br/&gt;Wenn du weitere Hilfe benötigst, besuche das KP Liberation Wiki oder den Killah Potatoes Discord Server.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DEBRIEF_ERROR_SUBTITLE">
             <English>Error in at least one of the configuration files...</English>
             <German>Fehler in mindestens einer Konfigurationsdatei aufgetreten...</German>
         </Key>
-        <Key ID="STR_KPLIB_DEBRIEF_ERRORDESCR">
-            <English>One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.&lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or Killah Potatoes Discord Server.</English>
-            <German>Mindestens eine Konfigurationsdatei ist fehlerhaft. Prüfe deine Konfigurations- und Presetdateien auf Syntaxfehler.&lt;br/&gt;Wenn du weitere Hilfe benötigst, besuche das KP Liberation Wiki oder den Killah Potatoes Discord Server.</German>
+
+        <!-- MISSION WON -->
+        <Key ID="STR_KPLIB_DEBRIEF_WIN_TITLE">
+            <English>The area is liberated.</English>
+            <German>Das Gebiet wurde befreit.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DEBRIEF_WIN_DESCR">
+            <English>Later you'll have a cinematic with the stats etc.</English>
+            <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
     </Package>
 
@@ -516,14 +519,6 @@
     <!-- HINTS/NOTIFICATIONS -->
 
     <Package name="Hint">
-        <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
-            <English>%1 minutes mobile respawn cooldown left.</English>
-            <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
-            <Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
-            <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
-            <Italian>Mancano ancora %1 minuti al respawn.</Italian>
-            <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
-        </Key>
         <Key ID="STR_KPLIB_HINT_BLACKLISTEDITEMFOUND">
             <English>Following items are not allowed:\n%1</English>
             <Chinese>以下品已被禁用：\n%1</Chinese>
@@ -534,13 +529,215 @@
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
+            <English>%1 minutes mobile respawn cooldown left.</English>
+            <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
+            <Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
+            <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+            <Italian>Mancano ancora %1 minuti al respawn.</Italian>
+            <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
+        </Key>
     </Package>
 
 
     <!-- SETTINGS -->
 
     <Package name="Settings">
+        <!-- GENERAL CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL">
+            <English>KPLIB - General</English>
+            <German>KPLIB - Allgemein</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO">
+            <English>Clear Vehicle Cargo</English>
+            <German>Fahrzeuginventar leeren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO_TT">
+            <English>Enables/Disables if spawned/loaded vehicles have an empty cargo space.</English>
+            <German>Aktiviert/Deaktiviert ob gebaute/geladene Fahrzeuge ein leeres Inventar haben.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG">
+            <English>Enable Debug Mode</English>
+            <German>Debug Modus aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT">
+            <English>Enables/Disables extended Liberation debug output for the server log.</English>
+            <German>Aktiviert/Deaktiviert erweiterte Liberation Debug Ausgaben im Serverlog.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE">
+            <English>FOB Area</English>
+            <German>FOB Bereich</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE_TT">
+            <English>Radius in meters of the FOB area.</English>
+            <German>Radius in Metern des FOB Bereichs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT">
+            <English>Save Interval</English>
+            <German>Speicherintervall</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT_TT">
+            <English>Interval of periodic saves in seconds.</English>
+            <German>Intervall in Sekunden der automatischen Speicherung.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECACT">
+            <English>Distance for sector activation</English>
+            <German>Entfernung zur Sektoraktivierung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECACT_TT">
+            <English>Radius in meters around the sector center to activate the sector.</English>
+            <German>Radius in Metern vom Sektor aus, um ihn zu aktivieren.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECCAP">
+            <English>Sector Cap</English>
+            <German>Sektorlimit</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECCAP_TT">
+            <English>The amount of sectors which can be active at the same time.</English>
+            <German>Maximalzahl der gleichzeitig aktiven Sektoren.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECRANGE">
+            <English>Sector Capture Distance</English>
+            <German>Entfernung zur Sektoreroberung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECRANGE_TT">
+            <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
+            <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA">
+            <English>Enable Stamina</English>
+            <German>Ausdauer aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA_TT">
+            <English>Enables/Disables the BI stamina system. (doesn't affect ACE Advanced Fatigue)</English>
+            <German>Aktiviert/Deaktiviert das BI Ausdauersystem. (Kein Einfluss auf die erweiterte Ausdauer von ACE)</German>
+        </Key>
 
+        <!-- PRESETS CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_PRESET">
+            <English>KPLIB - Presets</English>
+            <German>KPLIB - Presets</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_TT">
+            <English>Selection between the arsenal presets, blacklist method or unrestricted arsenal access.</English>
+            <German>Auswahl des Arsenal Presets, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_0">
+            <English>Unrestricted</English>
+            <German>Uneingeschränkt</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_1">
+            <English>Blacklist Method</English>
+            <German>Blacklist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_2">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
+            <English>Player</English>
+            <German>Spieler</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_TT">
+            <English>Selection for the units, vehicles, etc. for the players.</English>
+            <German>Auswahl der Einheiten, Fahrzeuge, etc. der Spieler.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_0">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY">
+            <English>Enemy</English>
+            <German>Gegner</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_TT">
+            <English>Selection for the units, vehicles, etc. for the enemy.</English>
+            <German>Auswahl der Einheiten, Fahrzeuge, etc. der Gegner.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_0">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS">
+            <English>Resistance</English>
+            <German>Widerstand</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_TT">
+            <English>Selection for the units, vehicles, etc. for the resistance.</English>
+            <German>Auswahl der Einheiten, Fahrzeuge, etc. des Widerstands.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_0">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV">
+            <English>Civlians</English>
+            <German>Zivilisten</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_TT">
+            <English>Selection for the units, vehicles, etc. for the civilians.</English>
+            <German>Auswahl der Einheiten, Fahrzeuge, etc. der Zivilisten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_0">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
+        </Key>
+
+        <!-- RESPAWN CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RESPAWN">
+            <English>KPLIB - Respawn</English>
+            <German>KPLIB - Respawn</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE">
+            <English>Allow Mobile Respawn</English>
+            <German>Ausdauer aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE_TT">
+            <English>Enables/Disables the mobile respawn functionality of certain vehicles.</English>
+            <German>Aktiviert/Deaktiviert die Möglichkeit entsprechende Fahrzeuge als mobilen Respawnpunkt zu nutzen.</German>
+        </Key>
+
+        <!-- BI REVIVE CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE">
+            <English>KPLIB - BI Revive</English>
+            <German>KPLIB - BI Revive</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_BLEEDOUT_TT">
+            <English>How long it takes in seconds to bleed out when incapacitated.</English>
+            <German>Dauer in Sekunden, bis man im Wiederbelebungsstatus verblutet ist.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_DURATION_TT">
+            <English>How long it takes in seconds to revive someone.</English>
+            <German>Dauer in Sekunden, um jemanden wiederzubeleben.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_INCAPMODE_TT">
+            <English>How deep is the simulation of damage and incapacitation.</English>
+            <German>Umfang der Schadenssimulation.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_MODE_TT">
+            <English>Enables/Disables the BI Revive System. (Automatically disabled if using ACE medical)</English>
+            <German>Aktiviert/Deaktiviert das BI Revive System. (Automatisch deaktiviert, wenn ACE Medical aktiv)</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_REQITEM_TT">
+            <English>Controls whether any items are required to revive someone.</English>
+            <German>Festlegung, ob ein spezieller Gegenstand zur Wiederbelebung nötig ist.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_REQTRAIT_TT">
+            <English>Controls whether special training is required to revive someone.</English>
+            <German>Festlegung, ob ein spezielles Training zur Wiederbelebung nötig ist.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_RESPAWN_TT">
+            <English>How long it takes in seconds for players to force their respawn.</English>
+            <German>Dauer in Sekunden, um den Respawn zu erzwingen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_REVIVE_SPEEDMULT_TT">
+            <English>Decreases the time it takes for a Medic to revive someone.</English>
+            <German>Verringert die notwendige Zeit, die ein Sanitäter zur Wiederbelebung benötigt.</German>
+        </Key>
     </Package>
 
 
@@ -595,18 +792,6 @@
             <Spanish>Escuadra de paracaidistas</Spanish>
             <Turkish>Paraşütçü Asker Timi</Turkish>
         </Key>
-        <Key ID="STR_KPLIB_UNITS_SQUAD_RIFLE">
-            <English>Heavy Rifle Squad</English>
-            <Chinese>重裝步槍班</Chinese>
-            <Chinesesimp>重装步枪班</Chinesesimp>
-            <French>Escouade Fusiliers Lourde</French>
-            <German>Schwerer Waffentrupp</German>
-            <Italian>Squadra Fucilieri Pesanti</Italian>
-            <Portuguese>Grupo de Combate de Infantaria Pesada</Portuguese>
-            <Russian>Тяжёлый Стрелковый Отряд</Russian>
-            <Spanish>Escuadra de fusileros pesados</Spanish>
-            <Turkish>Ağır Silah Timi</Turkish>
-        </Key>
         <Key ID="STR_KPLIB_UNITS_SQUAD_RECON">
             <English>Recon Squad</English>
             <Chinese>偵查班</Chinese>
@@ -618,6 +803,18 @@
             <Russian>Отряд Разведчиков</Russian>
             <Spanish>Escuadra de reconocimiento</Spanish>
             <Turkish>Gözcü Timi</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_UNITS_SQUAD_RIFLE">
+            <English>Heavy Rifle Squad</English>
+            <Chinese>重裝步槍班</Chinese>
+            <Chinesesimp>重装步枪班</Chinesesimp>
+            <French>Escouade Fusiliers Lourde</French>
+            <German>Schwerer Waffentrupp</German>
+            <Italian>Squadra Fucilieri Pesanti</Italian>
+            <Portuguese>Grupo de Combate de Infantaria Pesada</Portuguese>
+            <Russian>Тяжёлый Стрелковый Отряд</Russian>
+            <Spanish>Escuadra de fusileros pesados</Spanish>
+            <Turkish>Ağır Silah Timi</Turkish>
         </Key>
     </Package>
 </Project>
