@@ -27,5 +27,13 @@ The Admin Menu provides maintenance and debug functionalities for the logged in 
 
   *Opens the admin menu dialog.*
 
+* KPLIB_fnc_adm_wipe
+
+  *Export current campaign to admins profile and requests server to wipe the saved campaign.*
+
+* KPLIB_fnc_adm_wipeServer
+
+  *Completely wipes all data from the current campaign.*
+
 ### Scripts
 No scripts will be started by this module
