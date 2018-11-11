@@ -328,12 +328,24 @@
             <German>Spielstand importieren</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_IMP_NOTE">
-            <English>Save data import successful. All vital game mechanics are stopped. Please restart the server.</English>
-            <German>Spielstand erfolgreich importiert. Alle wichtigen Spielmechaniken wurden gestoppt. Serverneustart erforderlich.</German>
+            <English>Save data import successful.\n\nAll vital game mechanics are stopped.\nPlease restart the server.</English>
+            <German>Spielstand erfolgreich importiert.\n\nAlle wichtigen Spielmechaniken wurden gestoppt.\nServerneustart erforderlich.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_IMP_TT">
             <English>Imports the saved data from your profile. Requires a restart after import.</English>
             <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE">
+            <English>Wipe saved campaign</English>
+            <German>Gespeicherte Kampagne zurücksetzen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE_NOTE">
+            <English>Campaign wiped.\nOld save was exported to your profile\n\nAll vital game mechanics are stopped.\nPlease restart the server.</English>
+            <German>Kampagne zurückgesetzt.\nAlter Speicherstand wurde in dein Profil exportiert.\n\nAlle wichtigen Spielmechaniken wurden gestoppt.\nServerneustart erforderlich.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE_TT">
+            <English>Deletes all saved campaign data. Current campaign will be exported to your profile as safety measure. Requires a restart after wipe.</English>
+            <German>Löscht den kompletten gespeicherten Spielstand. Der momentane Stand wird zur Sicherheit in dein Profil exportiert. Benötigt einen Neustart nach der Löschung.</German>
         </Key>
 
         <!-- BUILD DIALOG -->
@@ -694,7 +706,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE">
             <English>Allow Mobile Respawn</English>
-            <German>Ausdauer aktivieren</German>
+            <German>Erlaube mobilen Respawn</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE_TT">
             <English>Enables/Disables the mobile respawn functionality of certain vehicles.</English>

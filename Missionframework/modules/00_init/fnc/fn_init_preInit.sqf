@@ -36,9 +36,6 @@ KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
 if (isServer) then {
     enableSaving [false, false];
 
-    //KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
-    //[] call KPLIB_fnc_init_paramFetchAll;
-
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
 

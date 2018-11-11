@@ -37,11 +37,9 @@ if (isServer) then {
     [{
         params ["_args", "_handle"];
 
-        if (KPLIB_save_loaded) then {
+        if (KPLIB_save_loaded && (time > 0)) then {
             if (KPLIB_campaignRunning) then {
-                if (time > 0) then {
-                    [] call KPLIB_fnc_init_save;
-                };
+                [] call KPLIB_fnc_init_save;
             } else {
                 _handle call CBA_fnc_removePerFrameHandler;
                 diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";

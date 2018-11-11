@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-09
+    Last Update: 2018-11-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -71,7 +71,4 @@ class init {
 
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
-
-    // Completely wipes all data from the current campaign
-    class init_wipe {};
 };
