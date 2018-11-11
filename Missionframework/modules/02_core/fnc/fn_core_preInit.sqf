@@ -19,6 +19,9 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CORE] Module initializing...", diag_tickTime];};
 
+// Process CBA Settings
+[] call KPLIB_fnc_core_settings;
+
 /*
     ----- Module Globals -----
 */
