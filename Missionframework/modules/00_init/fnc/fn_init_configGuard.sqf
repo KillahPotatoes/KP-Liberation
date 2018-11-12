@@ -18,8 +18,8 @@
         Function reached the end [BOOL]
 */
 
-// We can't use our params vars here as this will be ran before all other functions
-if(!isServer || (["DebugConfigGuard", 1] call BIS_fnc_getParamValue) == 0) exitWith {};
+// The config validation happens only on the server
+if(!isServer) exitWith {};
 
 // Create validation namespace on server
 KPLIB_validationNamespace = [] call CBA_fnc_createNamespace;
