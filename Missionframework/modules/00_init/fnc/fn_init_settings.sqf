@@ -4,7 +4,7 @@
     File: fn_init_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-09
-    Last Update: 2018-11-11
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -156,11 +156,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetPlayer
+// KPLIB_param_presetFriendly
 // Selection for the units, vehicles, etc. for the player side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetPlayer",
+    "KPLIB_param_presetFriendly",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_PLAYER", localize "STR_KPLIB_SETTINGS_PRESET_PLAYER_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",

@@ -16,7 +16,7 @@
         "KPLIB_param_fobRange",
         "KPLIB_param_mobileRespawn",
         "KPLIB_param_presetArsenal",
-        "KPLIB_param_presetPlayer",
+        "KPLIB_param_presetFriendly",
         "KPLIB_param_presetEnemy",
         "KPLIB_param_presetResistance",
         "KPLIB_param_presetCivilian",
