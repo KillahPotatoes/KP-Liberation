@@ -4,7 +4,7 @@
     File: sectorMonitor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-05
-    Last Update: 2018-05-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,7 +35,7 @@ if(isServer) then {
             private _currentSector = _sectors deleteAt (random count _sectors);
 
             // Check if sector should be activated
-            if([getMarkerPos _currentSector, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
+            if([getMarkerPos _currentSector, KPLIB_param_sectorActRange] call KPLIB_fnc_core_areUnitsNear) then {
                 [_currentSector] call KPLIB_fnc_core_handleSector;
             };
         },      // Handler
@@ -43,7 +43,7 @@ if(isServer) then {
         [],     // Args
         _initFunction,      // Start func
         {},     // End func
-        {KPLIB_campaignRunning && (count KPLIB_sectors_active < KPLIB_cap_sector)}, // Run condition
+        {KPLIB_campaignRunning && (count KPLIB_sectors_active < KPLIB_param_sectorCapRange)}, // Run condition
         {},     // End condition
         ["_sectors"]      // Privates to serialize between calls
     ] call CBA_fnc_createPerFrameHandlerObject;

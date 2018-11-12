@@ -7,6 +7,8 @@
 * Added: Free camera view for building.
 * Added: Config guard for preset file syntax error detection.
 * Added: KP GUI system implemented for dialog creation.
+* Added: Mission configuration completely via CBA Settings.
+* Removed: Mission configuration via mission parameters.
 * Tweaked: License changed from MIT to GPLv3.
 * Tweaked: Eden objects got `KPLIB_eden_` as prefix.
 * Tweaked: Faster initial sector sorting.

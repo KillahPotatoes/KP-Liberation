@@ -4,7 +4,7 @@
     File: fn_core_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-11-09
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -42,7 +42,7 @@ if (({(_x in KPLIB_arsenal_whitelist) || ((_x find "ACRE") != -1) || ((_x find "
     _text remoteExec ["diag_log",2];
     private _badItems = "";
     {if (((_x find "ACRE") == -1) && ((_x find "tf_") == -1) && ((_x find "TFAR_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KPLIB_arsenal_whitelist);
-    hint format [localize "STR_HINT_BLACKLISTEDITEMFOUND", _badItems];
+    hint format [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND", _badItems];
     removeAllWeapons player;
     removeAllItems player;
     removeAllAssignedItems player;

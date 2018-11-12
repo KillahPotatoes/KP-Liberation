@@ -30,8 +30,8 @@ private _handler = [
         // If there are no enemy units in two times the capture range and friendly units are in capture range
         // capture the sector
         if (
-            !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
-            && {[_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear}
+            !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
+            && {[_sectorPos, KPLIB_param_sectorCapRange] call KPLIB_fnc_core_areUnitsNear}
         ) then {
             diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 (%3) captured", diag_tickTime, markerText _sector, _sector];
 
@@ -41,7 +41,7 @@ private _handler = [
         }
         else {
             // If there are no friendly units in activation range, deactivate the sector
-            if !([_sectorPos, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
+            if !([_sectorPos, KPLIB_param_sectorActRange] call KPLIB_fnc_core_areUnitsNear) then {
                 _this setVariable ["KPLIB_sectorActive", false];
             }
         }

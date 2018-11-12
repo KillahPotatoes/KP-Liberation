@@ -12,11 +12,11 @@
         This overrides corresponding settings which are made in the sqm via eden editor.
 */
 
-briefingName = $STR_MISSION_TITLE;
+briefingName = $STR_KPLIB_TITLE;
 overviewText = "www.killahpotatoes.de";
 overviewPicture = "res\lib.paa";
 author = "KP Liberation Dev Team";
-onLoadName = $STR_MISSION_TITLE;
+onLoadName = $STR_KPLIB_TITLE;
 onLoadMission = "www.killahpotatoes.de";
 loadScreen = "res\lib.paa";
 
@@ -54,10 +54,6 @@ wreckLimit = 20;
 wreckRemovalMinTime = 1200;
 wreckRemovalMaxTime = 7200;
 minPlayerDistance = 1000;
-
-class Params {
-    #include "KPLIB_params.hpp"
-};
 
 class CfgFunctions {
     #include "KPLIB_functions.hpp"

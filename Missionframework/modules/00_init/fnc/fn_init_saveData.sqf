@@ -17,7 +17,7 @@
         Function reached the end [BOOL]
 */
 
-if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Init module saving...";};
+if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Init module saving...";};
 
 // Set module data to save and send it to the global save data array
 ["init",

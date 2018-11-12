@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-11-09
+    Last Update: 2018-11-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -53,12 +53,6 @@ class core {
     // Start the intro cinematic
     class core_intro {};
 
-    // Creates diary entries with parameter values
-    class core_paramDiaryList {};
-
-    // Converts value of param to "texts" string
-    class core_paramToText {};
-
     // Module post initialization
     class core_postInit {
         postInit = 1;
@@ -71,6 +65,9 @@ class core {
 
     // Initialize BIS revive
     class core_reviveInit {};
+
+    // CBA Settings for this module
+    class core_settings {};
 
     // Setup of actions avaible to players
     class core_setupPlayerActions {};

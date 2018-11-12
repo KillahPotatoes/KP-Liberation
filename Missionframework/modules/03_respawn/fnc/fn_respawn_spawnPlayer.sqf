@@ -5,7 +5,7 @@
     File: fn_respawn_doSpawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
-    Last Update: 2018-11-10
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,8 +39,7 @@ setPlayerRespawnTime 0;
     private _emptyRespawnPos = _respawnPos findEmptyPosition [0, 15, "Man"];
     if (_emptyRespawnPos isEqualTo []) then {
         player setPosATL _respawnPos;
-    }
-    else {
+    } else {
         player setPosATL _emptyRespawnPos;
     };
 

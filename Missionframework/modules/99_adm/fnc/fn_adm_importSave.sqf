@@ -25,6 +25,6 @@ if (isServer) then {
     [profileNamespace getVariable [KPLIB_save_key + "_export", nil]] remoteExecCall ["KPLIB_fnc_adm_importSaveServer", 2];
 };
 
-hint localize "STR_ADMINDIALOG_IMPDONE";
+hint localize "STR_KPLIB_DIALOG_ADMIN_IMP_NOTE";
 
 true

@@ -4,23 +4,18 @@
     File: fn_core_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-09
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        This module provides the very basic functions and mechanics for the general gameplay of the mission.
-        Tasks of this module are:
-            * Provide basic functions.
-            * Show respawn, spawn and intro cinematics.
-            * Spawning of Little Birds and Rubber Dinghies.
-            * Spawning and respawn handling of Potato 01.
-            * Track sectors to handle their activation/deactivation.
+        The postInit function of a module takes care of starting/executing the modules functions or scripts.
+        Basically it starts/initializes the module functionality to make all provided features usable.
 
-    Dependencies:
-        * 00_init
+    Parameter(s):
+        NONE
 
     Returns:
-        Module was initialized [BOOL]
+        Module postInit finished [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initializing...", diag_tickTime];};
@@ -31,7 +26,7 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module 
 // Initialize actions
 [] call KPLIB_fnc_core_setupPlayerActions;
 
-if(KPLIB_param_clearVehicleCargo > 0) then {
+if(KPLIB_param_clearVehicleCargo) then {
     ["KPLIB_vehicle_spawned", {call KPLIB_fnc_common_clearVehicleCargo;}] call CBA_fnc_addEventHandler;
 };
 
@@ -52,9 +47,6 @@ if (!hasInterface && !isDedicated) then {
 
 // Player section
 if (hasInterface) then {
-    // Add parameter diary entries
-    [] call KPLIB_fnc_core_paramDiaryList;
-
     // Start the intro cinematic
     [] spawn KPLIB_fnc_core_intro;
 };

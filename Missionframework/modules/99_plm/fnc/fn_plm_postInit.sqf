@@ -4,22 +4,18 @@
     File: fn_plm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-10
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        This module provides the KP player menu.
-        The chosen settings in this dialog will be persistent for a player on all servers which run a mission who uses this dialog.
-        It provides the following functionalities to the player:
-            * Group Management
-            * View Distances
-            * Sound Settings
+        The postInit function of a module takes care of starting/executing the modules functions or scripts.
+        Basically it starts/initializes the module functionality to make all provided features usable.
 
-    Dependencies:
-        * KP GUI system
+    Parameter(s):
+        NONE
 
     Returns:
-        Module was initialized [BOOL]
+        Module postInit finished [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module initializing...", diag_tickTime];};

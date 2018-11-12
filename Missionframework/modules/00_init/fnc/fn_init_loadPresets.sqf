@@ -4,7 +4,7 @@
     File: fn_init_loadPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-09
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,7 @@
 */
 
 // Load Blufor preset
-switch (KPLIB_preset_blufor) do {
+switch (KPLIB_param_presetFriendly) do {
     case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
     case 3: {call compile preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
@@ -36,7 +36,7 @@ switch (KPLIB_preset_blufor) do {
 };
 
 // Load Opfor preset
-switch (KPLIB_preset_opfor) do {
+switch (KPLIB_param_presetEnemy) do {
     case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
     case 3: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
@@ -44,14 +44,14 @@ switch (KPLIB_preset_opfor) do {
 };
 
 // Load resistance preset
-switch (KPLIB_preset_resistance) do {
+switch (KPLIB_param_presetResistance) do {
     case 1: {call compile preprocessFileLineNumbers "presets\resistance\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
     default {call compile preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 // Load civilian preset
-switch (KPLIB_preset_civilians) do {
+switch (KPLIB_param_presetCivilian) do {
     case 1: {call compile preprocessFileLineNumbers "presets\civilians\apex.sqf";};
     case 2: {call compile preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
     default {call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};

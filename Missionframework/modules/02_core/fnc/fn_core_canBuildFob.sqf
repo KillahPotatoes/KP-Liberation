@@ -24,7 +24,7 @@ params [
 ];
 
 // Built FOB range should not overlap over sector range
-private _minSectorDist = KPLIB_range_fob + KPLIB_range_capture;
+private _minSectorDist = KPLIB_param_fobRange + KPLIB_param_sectorCapRange;
 
 (alive _box
 && _box distance2D KPLIB_eden_startbase > 300
