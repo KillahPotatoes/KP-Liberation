@@ -22,7 +22,7 @@
 params [
     ["_camera", objNull, [objNull]],
     ["_position", position _camera, [[]], 3],
-    ["_radius", KPLIB_range_fob, [0]]
+    ["_radius", KPLIB_param_fobRange, [0]]
 ];
 
 // Default position to position of camera

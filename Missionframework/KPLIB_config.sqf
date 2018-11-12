@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Contains all settings which are meant to be adjustable by players but aren't implemented in the mission parameters (and won't be).
+    Contains all settings which are meant to be adjustable by players but aren't implemented in the mission settings.
 */
 
 /*------------------------------------------------------------
