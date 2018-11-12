@@ -5,19 +5,21 @@
     File: fn_respawn_displayUpdateLoadouts.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-09-15
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    -
+        -
 
     Parameter(s):
-        0: DISPLAY - Respawn display
+        _display - Respawn display [DISPLAY, defaults to nil]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
-params [["_display", nil, [displayNull]]];
+params [
+    ["_display", nil, [displayNull]]
+];
 
 private _loadoutsCtrl = _display displayCtrl KPLIB_IDC_RESPAWN_LOADOUTS;
 // Fetch player loadouts and fill dropdown menu
@@ -36,3 +38,5 @@ _loadoutsCtrl lbSetData [0, ""];
 } forEach _loadoutsNames;
 
 _loadoutsCtrl lbSetCurSel 0;
+
+true

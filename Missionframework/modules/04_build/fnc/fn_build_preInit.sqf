@@ -4,18 +4,18 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    This preInit function defines just the global variables which are added due to this module.
+        This preInit function defines just the global variables which are added due to this module.
 
     Dependencies:
         * 01_common
         * 02_core
 
     Returns:
-        Module was setup [BOOL]
+        Module was initialized [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initializing...", diag_tickTime];};

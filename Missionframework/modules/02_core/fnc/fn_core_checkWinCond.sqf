@@ -4,17 +4,17 @@
     File: fn_core_checkWinCond.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-10
-    Last Update: 2018-05-10
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Checks if the selected win conditions are met and end the mission.
+        Checks if the selected win conditions are met and end the mission.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 // In the next steps we'll implement a parameter for more win conditions. For now the "old one" will be used.

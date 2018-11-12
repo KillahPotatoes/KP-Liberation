@@ -4,19 +4,19 @@
     File: fn_respawn_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-18
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    This module provides functions and UI defines for Liberation respawn system.
-    Tasks of this module are:
-        * Manage respawn / redeploy dialog.
+        This module provides functions and UI defines for Liberation respawn system.
+        Tasks of this module are:
+            * Manage respawn / redeploy dialog.
 
     Dependencies:
         * 02_core
 
     Returns:
-    BOOL
+        Module was initialized [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [RESPAWN] Module initializing...", diag_tickTime];};

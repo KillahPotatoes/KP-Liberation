@@ -5,19 +5,20 @@
     File: fn_respawn_displaySpawnSelChanged.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
-    Last Update: 2018-09-15
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handle respawn list selection change
+        Handle respawn list selection change
 
     Parameter(s):
-        0: CONTROL - Spawn list control
-        1: NUMBER - Selected index
+        _spawnListCtrl      - Spawn list control    [CONTROL, defaults to nil]
+        _selectedIndex      - Selected index        [NUMBER, defaults to 0]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
+
 params [
     ["_spawnListCtrl", nil, [controlNull]],
     ["_selectedIndex", 0, [0]]
@@ -58,3 +59,5 @@ _camEnd = _camEnd vectorAdd [0,0, (_camFocusPos select 2) + 40];
 
 // Fade out effect
 cutText ["", "BLACK IN", 2];
+
+true

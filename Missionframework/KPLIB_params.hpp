@@ -4,11 +4,11 @@
     File: KPLIB_params.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-10-18
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Definitions and default values for all mission parameters.
+        Definitions and default values for all mission parameters.
 */
 
 class ParamsOptions {

@@ -4,20 +4,22 @@
     File: fn_core_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-01-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
+        Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
 
     Parameter(s):
-        0: STRING - Backpack classname of the players backpack as he entered the arsenal / load a loadout. (Default "")
+        _backpack - Backpack classname of the players backpack as he entered the arsenal / load a loadout [STRING, defaults to ""]
 
     Returns:
-    BOOL
+        Result (see description) [BOOL]
 */
 
-params [["_backpack", ""]];
+params [
+    ["_backpack", "", [""]]
+];
 
 private _return = true;
 private _playerItems = [];

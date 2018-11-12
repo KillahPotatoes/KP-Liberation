@@ -4,23 +4,23 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-20
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Tasks of this module are:
-        * Sort sector markers to specific arrays
-        * Initialize the save manager
-        * Connect unlockable vehicles to military sectors
-        * Load and save very basic data like date, sector ownership, FOB positions and unlockable vehicle sector links
-        * Manage sector color changing
-        * Manage FOB markers
+        Tasks of this module are:
+            * Sort sector markers to specific arrays
+            * Initialize the save manager
+            * Connect unlockable vehicles to military sectors
+            * Load and save very basic data like date, sector ownership, FOB positions and unlockable vehicle sector links
+            * Manage sector color changing
+            * Manage FOB markers
 
     Dependencies:
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Module was initialized [BOOL]
 */
 
 if (isServer) then {

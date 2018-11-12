@@ -4,11 +4,11 @@
     File: KPGUI_defines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2018-11-04
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    UI defines and functions used in mods and missions from the Killah Potatoes Gaming Community.
+        UI defines and functions used in mods and missions from the Killah Potatoes Gaming Community.
 */
 
 // Prefix for this use case to avoid issues with duplicated definitions

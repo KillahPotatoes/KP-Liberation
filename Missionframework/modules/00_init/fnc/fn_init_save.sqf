@@ -4,17 +4,17 @@
     File: fn_init_save.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-10-06
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Saves the current progress by firing the doSave event. After all registered handlers for this event are processed, it'll write the save data to the profile namespace.
+        Saves the current progress by firing the doSave event. After all registered handlers for this event are processed, it'll write the save data to the profile namespace.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 // Skip the saving process, if the campaign isn't running anymore

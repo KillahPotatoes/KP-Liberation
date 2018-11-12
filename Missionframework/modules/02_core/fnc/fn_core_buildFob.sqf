@@ -4,22 +4,26 @@
     File: fn_core_buildFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-11
-    Last Update: 2018-08-26
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Builds FOB on given position.
+        Builds FOB on given position.
 
     Parameter(s):
-        0: OBJECT|ARRAY - Object or position where FOB has to be built.
-        1: OBJECT - OPTIONAL - Player that initiated building. Mandatory for interactive build. (Default: objNull)
-        2: BOOL - OPTIONAL - Should FOB be built interactively for player. (Default: false)
+        _position       - Object or position where FOB has to be built                      [OBJECT/ARRAY, defaults to []]
+        _player         - Player that initiated building. Mandatory for interactive build   [OBJECT, defaults to objNull]
+        _interactive    - Should FOB be built interactively for player                      [BOOL, defaults to false]
 
     Returns:
-    OBJECT - Spawned vehicle
+        Spawned vehicle [OBJECT]
 */
 
-params ["_position", ["_player", objNull], ["_interactive", false]];
+params [
+    ["_position", [], [[], objNull]],
+    ["_player", objNull, [objNull]],
+    ["_interactive", false, [false]]
+];
 
 // Get position of build area
 private _buildPos = _position;
