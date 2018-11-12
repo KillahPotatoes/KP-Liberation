@@ -48,19 +48,6 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_sectorCap
-// The amount of sectors which can be active at the same time.
-// Default: 6
-[
-    "KPLIB_param_sectorCap",
-    "SLIDER",
-    [localize "STR_KPLIB_SETTINGS_GENERAL_SECCAP", localize "STR_KPLIB_SETTINGS_GENERAL_SECCAP_TT"],
-    localize "STR_KPLIB_SETTINGS_GENERAL",
-    [1, 12, 6, 0],
-    1,
-    {}
-] call CBA_Settings_fnc_init;
-
 // KPLIB_param_stamina
 // Enables/Disables the BI stamina system. (doesn't affect ACE Advanced Fatigue)
 // Default: true
@@ -96,32 +83,6 @@
     [localize "STR_KPLIB_SETTINGS_GENERAL_FOBRANGE", localize "STR_KPLIB_SETTINGS_GENERAL_FOBRANGE_TT"],
     localize "STR_KPLIB_SETTINGS_GENERAL",
     [100, 250, 125, 0],
-    1,
-    {}
-] call CBA_Settings_fnc_init;
-
-// KPLIB_param_sectorActRange
-// Radius in meters around the sector center to activate the sector.
-// Default: 1200 meters
-[
-    "KPLIB_param_sectorActRange",
-    "SLIDER",
-    [localize "STR_KPLIB_SETTINGS_GENERAL_SECACT", localize "STR_KPLIB_SETTINGS_GENERAL_SECACT_TT"],
-    localize "STR_KPLIB_SETTINGS_GENERAL",
-    [600, 1800, 1200, 0],
-    1,
-    {}
-] call CBA_Settings_fnc_init;
-
-// KPLIB_param_sectorCapRange
-// Radius in meters around the sector center a unit has to be to being able to capture the sector.
-// Default: 150 meters
-[
-    "KPLIB_param_sectorCapRange",
-    "SLIDER",
-    [localize "STR_KPLIB_SETTINGS_GENERAL_SECRANGE", localize "STR_KPLIB_SETTINGS_GENERAL_SECRANGE_TT"],
-    localize "STR_KPLIB_SETTINGS_GENERAL",
-    [100, 200, 150, 0],
     1,
     {}
 ] call CBA_Settings_fnc_init;

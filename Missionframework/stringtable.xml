@@ -592,30 +592,6 @@
             <English>Interval of periodic saves in seconds.</English>
             <German>Intervall in Sekunden der automatischen Speicherung.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECACT">
-            <English>Distance for sector activation</English>
-            <German>Entfernung zur Sektoraktivierung</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECACT_TT">
-            <English>Radius in meters around the sector center to activate the sector.</English>
-            <German>Radius in Metern vom Sektor aus, um ihn zu aktivieren.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECCAP">
-            <English>Sector Cap</English>
-            <German>Sektorlimit</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECCAP_TT">
-            <English>The amount of sectors which can be active at the same time.</English>
-            <German>Maximalzahl der gleichzeitig aktiven Sektoren.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECRANGE">
-            <English>Sector Capture Distance</English>
-            <German>Entfernung zur Sektoreroberung</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SECRANGE_TT">
-            <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
-            <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
-        </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA">
             <English>Enable Stamina</English>
             <German>Ausdauer aktivieren</German>
@@ -749,6 +725,36 @@
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_SPEEDMULT_TT">
             <English>Decreases the time it takes for a Medic to revive someone.</English>
             <German>Verringert die notwendige Zeit, die ein Sanitäter zur Wiederbelebung benötigt.</German>
+        </Key>
+
+        <!-- SECTOR CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR">
+            <English>KPLIB - Sectors</English>
+            <German>KPLIB - Sektoren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECACT">
+            <English>Distance for sector activation</English>
+            <German>Entfernung zur Sektoraktivierung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECACT_TT">
+            <English>Radius in meters around the sector center to activate the sector.</English>
+            <German>Radius in Metern vom Sektor aus, um ihn zu aktivieren.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECCAP">
+            <English>Sector Cap</English>
+            <German>Sektorlimit</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECCAP_TT">
+            <English>The amount of sectors which can be active at the same time.</English>
+            <German>Maximalzahl der gleichzeitig aktiven Sektoren.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE">
+            <English>Sector Capture Distance</English>
+            <German>Entfernung zur Sektoreroberung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT">
+            <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
+            <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
     </Package>
 

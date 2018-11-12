@@ -4,7 +4,7 @@
     File: fn_core_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-11
-    Last Update: 2018-11-11
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,50 @@
     Returns:
         Function reached the end [BOOL]
 */
+
+
+/*
+    ----- SECTOR SETTINGS -----
+*/
+
+// KPLIB_param_sectorActRange
+// Radius in meters around the sector center to activate the sector.
+// Default: 1200 meters
+[
+    "KPLIB_param_sectorActRange",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_SECTOR_SECACT", localize "STR_KPLIB_SETTINGS_SECTOR_SECACT_TT"],
+    localize "STR_KPLIB_SETTINGS_SECTOR",
+    [600, 1800, 1200, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_sectorCap
+// The amount of sectors which can be active at the same time.
+// Default: 6
+[
+    "KPLIB_param_sectorCap",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_SECTOR_SECCAP", localize "STR_KPLIB_SETTINGS_SECTOR_SECCAP_TT"],
+    localize "STR_KPLIB_SETTINGS_SECTOR",
+    [1, 12, 6, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_sectorCapRange
+// Radius in meters around the sector center a unit has to be to being able to capture the sector.
+// Default: 150 meters
+[
+    "KPLIB_param_sectorCapRange",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_SECTOR_SECRANGE", localize "STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT"],
+    localize "STR_KPLIB_SETTINGS_SECTOR",
+    [100, 200, 150, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
 
 
 /*
