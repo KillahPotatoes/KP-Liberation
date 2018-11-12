@@ -14,4 +14,12 @@
 class arsenal {
     file = "modules\06_arsenal\fnc";
 
+    // Initializes the virtual arsenal
+    class arsenal_fillArsenal {};
+
+    // Module post initialization
+    class arsenal_postInit {
+        postInit = 1;
+    };
+
 };

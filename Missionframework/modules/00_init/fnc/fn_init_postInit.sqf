@@ -24,9 +24,6 @@ if (isServer) then {
     // Load preset files
     [] call KPLIB_fnc_init_loadPresets;
 
-    // Load arsenal
-    [] call KPLIB_fnc_init_fillArsenal;
-
     // Sort the sector markers to category arrays
     [] call KPLIB_fnc_init_sortSectors;
 
