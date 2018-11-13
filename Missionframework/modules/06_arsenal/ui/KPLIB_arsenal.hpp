@@ -4,7 +4,7 @@
     File: KPLIB_arsenal.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-12
-    Last Update: 2018-11-12
+    Last Update: 2018-11-13
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,9 +17,72 @@ class KPLIB_arsenal {
 
     class controlsBackground {
 
+        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
+            text = "PLACEHOLDER";
+        };
+
+        class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundC {};
+
     };
 
     class controls {
+
+        class KPLIB_LoadoutList: KPGUI_PRE_ListBox {
+            idc = 68740;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,(48/32));
+        };
+
+        class KPLIB_ButtonLoad: KPGUI_PRE_InlineButton {
+            text = "PLACEHOLDER";
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,32,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,16);
+            onButtonClick = "";
+        };
+
+        class KPLIB_ButtonSetDefault: KPLIB_ButtonLoad {
+            text = "PLACEHOLDER";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,35,48);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+            onButtonClick = "";
+        };
+
+        class KPLIB_ComboNear: KPGUI_PRE_Combo {
+            idc = 68741;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,39,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+            tooltip = "";
+        };
+
+        class KPLIB_RefreshNear: KPGUI_PRE_CloseCross {
+            text = "KPCF\img\icon_refresh.paa";
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,11,12);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,39,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,12);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+            tooltip = "";
+            action = "";
+        };
+
+        class KPLIB_ButtonLoadNear: KPLIB_ButtonSetDefault {
+            text = "PLACEHOLDER";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,41,48);
+            onButtonClick = "";
+        };
+
+        class KPLIB_ButtonOpen: KPLIB_ButtonLoad {
+            text = "PLACEHOLDER";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,45,48);
+            onButtonClick = "";
+        };
+
+        class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};
 
     };
 
