@@ -525,6 +525,31 @@
             <English>Leveling system disabled</English>
             <German>Levelsystem deaktiviert</German>
         </Key>
+        <!-- ARSENAL DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
+            <English>KP Liberation Arsenal</English>
+            <German>KP Liberation Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOAD">
+            <English>Load selection</English>
+            <German>Auswahl laden</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_DEFAULT">
+            <English>Set as default</English>
+            <German>Als Standard benutzen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT">
+            <English>Refresh</English>
+            <German>Aktualisieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
+            <English>Copy/Load from near player</English>
+            <German>Kopieren/Laden von einem Spieler in der Nähe</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_OPEN">
+            <English>Open Arsenal</English>
+            <German>Arsenal öffnen</German>
+        </Key>
     </Package>
 
 

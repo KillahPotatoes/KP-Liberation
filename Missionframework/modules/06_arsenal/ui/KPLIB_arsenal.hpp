@@ -18,7 +18,7 @@ class KPLIB_arsenal {
     class controlsBackground {
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
-            text = "PLACEHOLDER";
+            text = "$STR_KPLIB_DIALOG_ARSENAL_TITLE";
         };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundC {};
@@ -36,7 +36,7 @@ class KPLIB_arsenal {
         };
 
         class KPLIB_ButtonLoad: KPGUI_PRE_InlineButton {
-            text = "PLACEHOLDER";
+            text = "$STR_KPLIB_DIALOG_ARSENAL_LOAD";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,32,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -45,7 +45,7 @@ class KPLIB_arsenal {
         };
 
         class KPLIB_ButtonSetDefault: KPLIB_ButtonLoad {
-            text = "PLACEHOLDER";
+            text = "$STR_KPLIB_DIALOG_ARSENAL_DEFAULT";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,35,48);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             onButtonClick = "";
@@ -57,27 +57,26 @@ class KPLIB_arsenal {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,39,48);
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            tooltip = "";
         };
 
         class KPLIB_RefreshNear: KPGUI_PRE_CloseCross {
-            text = "KPCF\img\icon_refresh.paa";
+            text = "KPGUI\res\icon_refresh.paa";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,11,12);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,39,48);
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            tooltip = "";
+            tooltip = "$STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT";
             action = "";
         };
 
         class KPLIB_ButtonLoadNear: KPLIB_ButtonSetDefault {
-            text = "PLACEHOLDER";
+            text = "&STR_KPLIB_DIALOG_ARSENAL_LOADNEAR";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,41,48);
             onButtonClick = "";
         };
 
         class KPLIB_ButtonOpen: KPLIB_ButtonLoad {
-            text = "PLACEHOLDER";
+            text = "STR_KPLIB_DIALOG_ARSENAL_OPEN";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,45,48);
             onButtonClick = "";
         };
