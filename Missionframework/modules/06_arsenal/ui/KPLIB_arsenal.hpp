@@ -79,7 +79,7 @@ class KPLIB_arsenal {
         class KPLIB_ButtonOpen: KPLIB_ButtonLoad {
             text = "$STR_KPLIB_DIALOG_ARSENAL_OPEN";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,45,48);
-            onButtonClick = "";
+            onButtonClick = "[] call KPLIB_fnc_arsenal_openArsenal";
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};

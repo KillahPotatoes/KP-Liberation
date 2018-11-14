@@ -18,10 +18,16 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Module initializing...", diag_tickTime];};
+if (isServer) then {
+    diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Module initializing...", diag_tickTime];
 
     // Load arsenal
     [] call KPLIB_fnc_arsenal_fillArsenal;
+};
+
+if (hasInterface && KPLIB_ace_enabled) then {
+    [player, KPLIB_arsenal_whitelist, false] call ace_arsenal_fnc_addVirtualItems;
+};
 
     // Setup of actions available to players
     [] call KPLIB_fnc_arsenal_setupPlayerActions;
