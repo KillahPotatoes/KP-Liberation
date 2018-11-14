@@ -221,6 +221,10 @@
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ARSENAL">
+            <English>-- ARSENAL --</English>
+            <German>-- ARSENAL --</German>
+        </Key>
     </Package>
 
 

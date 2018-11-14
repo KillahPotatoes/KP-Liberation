@@ -23,6 +23,9 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Modu
     // Load arsenal
     [] call KPLIB_fnc_arsenal_fillArsenal;
 
+    // Setup of actions available to players
+    [] call KPLIB_fnc_arsenal_setupPlayerActions;
+
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Module initialized", diag_tickTime];};
 
 true
