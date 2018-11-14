@@ -20,6 +20,9 @@ class arsenal {
     // Initializes the virtual arsenal
     class arsenal_fillArsenal {};
 
+    // Opens the arsenal dependent on the selected type
+    class arsenal_openArsenal {};
+
     // Open the dialog
     class arsenal_openDialog {};
 
@@ -27,6 +30,14 @@ class arsenal {
     class arsenal_postInit {
         postInit = 1;
     };
+
+    // Module pre initialization
+    class arsenal_preInit {
+        preInit = 1;
+    };
+
+    // CBA Settings initialization for this module
+    class arsenal_settings {};
 
     // Setup of actions available to players
     class arsenal_setupPlayerActions {};
