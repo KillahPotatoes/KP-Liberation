@@ -25,12 +25,19 @@ if (isServer) then {
     [] call KPLIB_fnc_arsenal_fillArsenal;
 };
 
+
 if (hasInterface && KPLIB_ace_enabled) then {
     [player, KPLIB_arsenal_whitelist, false] call ace_arsenal_fnc_addVirtualItems;
 };
 
-    // Setup of actions available to players
-    [] call KPLIB_fnc_arsenal_setupPlayerActions;
+// Setup of actions available to players
+[] call KPLIB_fnc_arsenal_setupPlayerActions;
+
+// Add event handler for gear check
+if (hasInterface) then {
+    [missionNamespace, "arsenalClosed", {[backpack player] call KPLIB_fnc_core_checkGear}] call BIS_fnc_addScriptedEventHandler;
+    ["ace_arsenal_displayClosed", {[backpack player] call KPLIB_fnc_core_checkGear}] call CBA_fnc_addEventHandler;
+};
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Module initialized", diag_tickTime];};
 
