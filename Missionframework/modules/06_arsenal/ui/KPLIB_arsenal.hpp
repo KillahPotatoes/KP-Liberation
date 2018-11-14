@@ -14,7 +14,7 @@
 class KPLIB_arsenal {
     idd = 758076
     movingEnable = 0;
-    onUnload = "call KPLIB_fnc_core_checkGear";
+    onUnload = "[backpack player] call KPLIB_fnc_core_checkGear";
 
     class controlsBackground {
 
