@@ -14,6 +14,9 @@
 class arsenal {
     file = "modules\06_arsenal\fnc";
 
+    // Applies the selected loadout to the player
+    class arsenal_applyLoadout {};
+
     // Initializes the virtual arsenal
     class arsenal_fillArsenal {};
 

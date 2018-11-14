@@ -42,7 +42,7 @@ class KPLIB_arsenal {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,32,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,16);
-            onButtonClick = "";
+            onButtonClick = "[] call KPLIB_fnc_arsenal_applyLoadout";
         };
 
         class KPLIB_ButtonSetDefault: KPLIB_ButtonLoad {
