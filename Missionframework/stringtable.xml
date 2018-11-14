@@ -785,6 +785,28 @@
             <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
+
+        <!-- ARSENAL CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
+            <English>KPLIB - Arsenal</English>
+            <German>KPLIB - Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
+            <English>Arsenal type</English>
+            <German>Arsenal Typ</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
+            <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
+            <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
+            <English>BI Arsenal</English>
+            <German>BI Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
+            <English>ACE Arsenal</English>
+            <German>ACE Arsenal</German>
+        </Key>
     </Package>
 
 
