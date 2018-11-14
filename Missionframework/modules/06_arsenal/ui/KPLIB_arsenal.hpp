@@ -4,7 +4,7 @@
     File: KPLIB_arsenal.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-12
-    Last Update: 2018-11-13
+    Last Update: 2018-11-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 */
 
 class KPLIB_arsenal {
-    idd = 758068
+    idd = 758076
     movingEnable = 0;
 
     class controlsBackground {
@@ -70,13 +70,13 @@ class KPLIB_arsenal {
         };
 
         class KPLIB_ButtonLoadNear: KPLIB_ButtonSetDefault {
-            text = "&STR_KPLIB_DIALOG_ARSENAL_LOADNEAR";
+            text = "$STR_KPLIB_DIALOG_ARSENAL_LOADNEAR";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,41,48);
             onButtonClick = "";
         };
 
         class KPLIB_ButtonOpen: KPLIB_ButtonLoad {
-            text = "STR_KPLIB_DIALOG_ARSENAL_OPEN";
+            text = "$STR_KPLIB_DIALOG_ARSENAL_OPEN";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,45,48);
             onButtonClick = "";
         };
