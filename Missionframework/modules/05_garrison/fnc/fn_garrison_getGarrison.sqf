@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_garrison_getGarrison
 
     File: fn_garrison_getGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-24
-    Last Update: 2018-10-24
+    Last Update: 2018-11-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,5 +24,10 @@ params [
 ];
 
 private _array = [KPLIB_garrison_array, KPLIB_garrison_active] select _active;
+private _index = (_array findIf {_x select 0 == _sector});
 
-_array select (_array findIf {_x select 0 == _sector})
+if(_index isEqualTo -1) then {
+    [[], [], [], [], []]
+} else {
+    _array select _index
+}
