@@ -396,7 +396,8 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="removeallWeapons this; removebackpack this;";
-						description="Platoon Sergeant";
+						name="KPLIB_eden_subCommander";
+						description="Platoon Sergeant (Sub-Commander)";
 						isPlayable=1;
 					};
 					id=564;
