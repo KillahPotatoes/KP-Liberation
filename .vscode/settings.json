@@ -33,6 +33,8 @@
         "KPLIB_param_sectorCap",
         "KPLIB_param_sectorCapRange",
         "KPLIB_param_stamina",
+        "KPLIB_param_virtual_commanderZeusMode",
+        "KPLIB_param_virtual_subCommanderZeusMode",
         "KPLIB_plm_groups",
         "KPR_fnc_getPlaytime",
         "KPR_fnc_getRankName",

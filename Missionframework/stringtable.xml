@@ -756,6 +756,33 @@
             <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
+
+        <!-- ZEUS CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS">
+            <English>KPLIB - Zeus</English>
+            <German>KPLIB - Zeus</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_COMMANDER">
+            <English>Commander</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_SUBCOMMANDER">
+            <English>Sun-Commander</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_COMMANDER_MODE">
+            <English>Commander slot zeus access level</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_SUBCOMMANDER_MODE">
+            <English>Sub-Commander slot zeus access level</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_NONE">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_LIMITED">
+            <English>Limited</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_FULL">
+            <English>Full</English>
+        </Key>
     </Package>
 
 

@@ -11,17 +11,26 @@
         Defines for all functions, which are brought by this module.
 */
 
-class zeus {
-    file = "modules\06_zeus\fnc";
+class virtual {
+    file = "modules\06_virtual\fnc";
+
+    // Adds curator to player
+    class virtual_addCurator {};
 
     // Module post initialization
-    class zeus_postInit {
+    class virtual_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class zeus_preInit {
+    class virtual_preInit {
         preInit = 1;
     };
+
+    // Remove curator to player
+    class virtual_removeCurator {};
+
+    // Setup settings for this module
+    class virtual_settings {};
 
 };
