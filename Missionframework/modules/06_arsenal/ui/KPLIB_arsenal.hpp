@@ -4,7 +4,7 @@
     File: KPLIB_arsenal.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-12
-    Last Update: 2018-11-18
+    Last Update: 2018-11-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -67,13 +67,13 @@ class KPLIB_arsenal {
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT";
-            action = "";
+            action = "[] call KPLIB_fnc_arsenal_getNearPlayers";
         };
 
         class KPLIB_ButtonLoadNear: KPLIB_ButtonSetDefault {
             text = "$STR_KPLIB_DIALOG_ARSENAL_LOADNEAR";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,41,48);
-            onButtonClick = "";
+            onButtonClick = "[] call KPLIB_fnc_arsenal_copyLoadout";
         };
 
         class KPLIB_ButtonOpen: KPLIB_ButtonLoad {

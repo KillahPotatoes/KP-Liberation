@@ -4,7 +4,7 @@
     File: fn_arsenal_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-14
-    Last Update: 2018-11-14
+    Last Update: 2018-11-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,6 +40,19 @@
         ],
         0
     ],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_copyDistance
+// Defines the range for the loadout copy function.
+// Default: 50
+[
+    "KPLIB_param_copyDistance",
+    "EDITBOX",
+    [localize "STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE", localize "STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE_TT"],
+    localize "STR_KPLIB_SETTINGS_ARSENAL",
+    50,
     1,
     {}
 ] call CBA_Settings_fnc_init;
