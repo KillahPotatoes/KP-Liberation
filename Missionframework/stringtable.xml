@@ -635,26 +635,6 @@
             <English>KPLIB - Presets</English>
             <German>KPLIB - Presets</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL">
-            <English>Arsenal</English>
-            <German>Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_TT">
-            <English>Selection between the arsenal presets, blacklist method or unrestricted arsenal access.</English>
-            <German>Auswahl des Arsenal Presets, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_0">
-            <English>Unrestricted</English>
-            <German>Uneingeschränkt</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_1">
-            <English>Blacklist Method</English>
-            <German>Blacklist Methode</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARSENAL_2">
-            <English>Custom Preset</English>
-            <German>Custom Preset</German>
-        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
             <English>Player</English>
             <German>Spieler</German>
@@ -790,6 +770,26 @@
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
             <English>KPLIB - Arsenal</English>
             <German>KPLIB - Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
+            <English>Selection between the arsenal presets, blacklist method or unrestricted arsenal access.</English>
+            <German>Auswahl des Arsenal Presets, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
+            <English>Unrestricted</English>
+            <German>Uneingeschränkt</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
+            <English>Blacklist Method</English>
+            <German>Blacklist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
+            <English>Custom Preset</English>
+            <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
             <English>Arsenal type</English>
