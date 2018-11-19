@@ -30,7 +30,7 @@ private _index = 0;
 
 {
     _index = _ctrlNearPlayer lbAdd (name _x);
-    _ctrlNearPlayer lbSetData [_index, _x];
+    _ctrlNearPlayer lbSetData [_index, [_x] call BIS_fnc_objectVar];
 } forEach (allPlayers select {(_x distance2D player) < KPLIB_param_copyDistance});
 
 true

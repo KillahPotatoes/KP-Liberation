@@ -34,6 +34,7 @@
         "KPLIB_param_sectorCapRange",
         "KPLIB_param_stamina",
         "KPLIB_param_arsenalType",
+        "KPLIB_param_copyDistance",
         "KPLIB_plm_groups",
         "KPR_fnc_getPlaytime",
         "KPR_fnc_getRankName",

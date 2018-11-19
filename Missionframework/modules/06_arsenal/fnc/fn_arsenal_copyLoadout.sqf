@@ -24,8 +24,6 @@ private _dialog = findDisplay 758076;
 private _ctrlNearPlayer = _dialog displayCtrl 68741;
 
 private _index = lbCurSel _ctrlNearPlayer;
-private _loadout = getUnitLoadout (_ctrlNearPlayer lbData _index);
-
-player setUnitLoadout _loadout;
+player setUnitLoadout (getUnitLoadout (missionNamespace getVariable (_ctrlNearPlayer lbData _index)));
 
 true
