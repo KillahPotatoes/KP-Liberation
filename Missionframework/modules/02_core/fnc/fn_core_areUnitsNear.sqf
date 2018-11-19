@@ -4,14 +4,14 @@
     File: fn_core_areUnitsNear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-07
-    Last Update: 2018-11-19
+    Last Update: 2018-11-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Checks if there are units from given side(s) inside a given radius around a given position.
 
     Parameter(s):
-        _centerPos      - Position to check for units    [POSITION, defaults to nil]
+        _centerPos      - Position to check for units           [POSITION, defaults to nil]
         _radius         - Radius in meters                      [NUMBER, defaults to 1000]
         _sidesToCheck   - Array of SIDE values                  [ARRAY, defaults to KPLIB_preset_sidePlayers]
 

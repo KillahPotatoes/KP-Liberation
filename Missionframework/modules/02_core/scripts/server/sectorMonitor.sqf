@@ -32,7 +32,7 @@ if(isServer) then {
             };
 
             // Extract current sector from array
-            private _currentSector = _sectors deleteAt (random count _sectors);
+            private _currentSector = _sectors deleteAt (floor random count _sectors);
 
             // Check if sector should be activated
             if([getMarkerPos _currentSector, KPLIB_param_sectorActRange] call KPLIB_fnc_core_areUnitsNear) then {
