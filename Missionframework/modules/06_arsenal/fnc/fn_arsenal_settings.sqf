@@ -49,10 +49,10 @@
 // Default: 50
 [
     "KPLIB_param_copyDistance",
-    "EDITBOX",
+    "SLIDER",
     [localize "STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE", localize "STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE_TT"],
     localize "STR_KPLIB_SETTINGS_ARSENAL",
-    50,
+    [1, 10000, 50, 0],
     1,
     {}
 ] call CBA_Settings_fnc_init;
