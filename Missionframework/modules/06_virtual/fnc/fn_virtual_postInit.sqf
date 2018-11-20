@@ -4,7 +4,7 @@
     File: fn_virtual_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-18
+    Last Update: 2018-11-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,13 +22,21 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [VIRTUAL] Modu
 
 if(hasInterface) then {
 
-    // Add zeus to
+    // Add zeus to commander
     if (player isEqualTo (missionNamespace getVariable ["KPLIB_eden_commander", objNull])) then {
-        ["KPLIB_virtual_giveZeus", [player, KPLIB_param_virtual_commanderZeusMode]] call CBA_fnc_serverEvent;
+        [player, "respawn", {
+            ["KPLIB_player_giveZeus", [player, KPLIB_param_virtual_commanderZeusMode]] call CBA_fnc_serverEvent;
+
+            player removeEventHandler ["respawn", _thisID];
+        }]call CBA_fnc_addBISEventHandler;
     };
 
     if (player isEqualTo (missionNamespace getVariable ["KPLIB_eden_subCommander", objNull])) then {
-        ["KPLIB_virtual_giveZeus", [player, KPLIB_param_virtual_subCommanderZeusMode]] call CBA_fnc_serverEvent;
+        [player, "respawn", {
+            ["KPLIB_player_giveZeus", [player, KPLIB_param_virtual_subCommanderZeusMode]] call CBA_fnc_serverEvent;
+
+            player removeEventHandler ["respawn", _thisID];
+        }]call CBA_fnc_addBISEventHandler;
     };
 
 };
