@@ -4,7 +4,7 @@
     File: onPlayerRespawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-12
+    Last Update: 2018-11-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,21 +13,6 @@
 
 waitUntil {!isNil "KPLIB_intro_running"};
 waitUntil {!KPLIB_intro_running};
-
-// Remove all items
-removeAllWeapons player;
-removeAllItems player;
-removeAllAssignedItems player;
-removeVest player;
-removeBackpack player;
-removeHeadgear player;
-removeGoggles player;
-
-// Add basic items
-player linkItem "ItemMap";
-player linkItem "ItemCompass";
-player linkItem "ItemWatch";
-player linkItem "ItemRadio";
 
 // Disable stamina if selected in settings
 if !(KPLIB_param_stamina) then {
