@@ -1,14 +1,14 @@
 /*
-    KP Liberation Custom West Side Preset
+    KP Liberation Custom East Side Preset
 
-    File: customWest.sqf
+    File: customEast.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-24
     Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Custom west side preset file for individual adjustments.
+        Custom east side preset file for individual adjustments.
 */
 
 #include "script_component.hpp"
@@ -23,13 +23,13 @@ params [
 ------------------------------------------------------------*/
 
 // Color for this side
-KPLIBPRSTSETVAR("color", "ColorWest");
+KPLIBPRSTSETVAR("color", "ColorEast");
 // Color for this side (active)
-KPLIBPRSTSETVAR("colorAct", "ColorBlue");
+KPLIBPRSTSETVAR("colorAct", "ColorRed");
 // Name of the used/created army in this preset
-KPLIBPRSTSETVAR("name", "Custom West Army");
+KPLIBPRSTSETVAR("name", "Custom East Army");
 // Side for this preset
-KPLIBPRSTSETVAR("side", west);
+KPLIBPRSTSETVAR("side", east);
 // Military alphabet
 KPLIBPRSTARCREATE("alphabet");
 (KPLIBPRSTGETVAR("alphabet")) pushBack "Alpha";
@@ -69,25 +69,25 @@ KPLIBPRSTARCREATE("alphabet");
 // The building defined to unlock FOB air vehicle availability.
 KPLIBPRSTSETVAR("airBuilding", "Land_Radar_Small_F");
 // This is the virtual arsenal as portable supply crate.
-KPLIBPRSTSETVAR("arsenalBox", "B_supplyCrate_F");
+KPLIBPRSTSETVAR("arsenalBox", "O_supplyCrate_F");
 // This defines the ammunition resource crates.
-KPLIBPRSTSETVAR("crateAmmo", "B_CargoNet_01_ammo_F");
+KPLIBPRSTSETVAR("crateAmmo", "O_CargoNet_01_ammo_F");
 // This defines the fuel resource crates.
 KPLIBPRSTSETVAR("crateFuel", "CargoNet_01_barrels_F");
 // This defines the supply resource crates.
 KPLIBPRSTSETVAR("crateSupply", "CargoNet_01_box_F");
 // This is the FOB as a container.
-KPLIBPRSTSETVAR("fobBox", "B_Slingload_01_Cargo_F");
+KPLIBPRSTSETVAR("fobBox", "Land_Pod_Heli_Transport_04_box_F");
 // This is the main FOB HQ building.
 KPLIBPRSTSETVAR("fobBuilding", "Land_Cargo_HQ_V1_F");
 // This is the FOB as a vehicle..
-KPLIBPRSTSETVAR("fobTruck", "B_Truck_01_box_F");
+KPLIBPRSTSETVAR("fobTruck", "O_Truck_03_device_F");
 // The building defined to unlock FOB logistic functionalities.
 KPLIBPRSTSETVAR("logiBuilding", "Land_RepairDepot_01_tan_F");
 // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIBPRSTSETVAR("potato", "B_Heli_Transport_03_unarmed_F");
+KPLIBPRSTSETVAR("potato", "O_Heli_Transport_04_covered_F");
 // This is the mobile respawn (and medical) truck.
-KPLIBPRSTSETVAR("respawnTruck", "B_Truck_01_medical_F");
+KPLIBPRSTSETVAR("respawnTruck", "O_Truck_03_medical_F");
 // The helipad used to increase the GLOBAL rotary-wing cap.
 KPLIBPRSTSETVAR("slotHeli", "Land_HelipadSquare_F");
 // The hangar used to increase the GLOBAL fixed-wing cap.
@@ -105,19 +105,19 @@ KPLIBPRSTSETVAR("storageSmall", "ContainmentArea_02_sand_F");
 ------------------------------------------------------------*/
 
 // These are the boats which spawn in the boat racks of the Liberty.
-KPLIBPRSTSETVAR("addBoat", "B_Boat_Transport_01_F");
+KPLIBPRSTSETVAR("addBoat", "O_Boat_Transport_01_F");
 // These are the additional helicopter which spawns at the Operation Base.
 KPLIBPRSTSETVAR("addHeli", "B_Heli_Light_01_F");
 // These are the trucks which are used in the logistic convoy system.
-KPLIBPRSTSETVAR("logiTruck", "B_Truck_01_transport_F");
+KPLIBPRSTSETVAR("logiTruck", "O_Truck_03_transport_F");
 // Static Mortar Classname
-KPLIBPRSTSETVAR("mortar", "B_Mortar_01_F");
+KPLIBPRSTSETVAR("mortar", "O_Mortar_01_F");
 // Static AA Classname
-KPLIBPRSTSETVAR("staticAa", "B_static_AA_F");
+KPLIBPRSTSETVAR("staticAa", "O_static_AA_F");
 // Static Big AA Classname
-KPLIBPRSTSETVAR("staticAaBig", "B_SAM_System_03_F");
+KPLIBPRSTSETVAR("staticAaBig", "O_SAM_System_04_F");
 // Static AT Classname
-KPLIBPRSTSETVAR("staticAt", "B_static_AT_F");
+KPLIBPRSTSETVAR("staticAt", "O_static_AT_F");
 
 /*------------------------------------------------------------
     --- REGULAR SOLDIER CLASSNAMES ---
@@ -126,45 +126,45 @@ KPLIBPRSTSETVAR("staticAt", "B_static_AT_F");
 ------------------------------------------------------------*/
 
 // AA Specialist
-KPLIBPRSTSETVAR("rsAntiAir", "B_soldier_AA_F");
+KPLIBPRSTSETVAR("rsAntiAir", "O_Soldier_AA_F");
 // AT Specialist
-KPLIBPRSTSETVAR("rsAntiTank", "B_soldier_AT_F");
+KPLIBPRSTSETVAR("rsAntiTank", "O_Soldier_AT_F");
 // Autorifleman
-KPLIBPRSTSETVAR("rsAutorifleMan", "B_soldier_AR_F");
+KPLIBPRSTSETVAR("rsAutorifleMan", "O_Soldier_AR_F");
 // Helicopter crew
-KPLIBPRSTSETVAR("rsCrewmanHeli", "B_helicrew_F");
+KPLIBPRSTSETVAR("rsCrewmanHeli", "O_helicrew_F");
 // Vehicle crew
-KPLIBPRSTSETVAR("rsCrewmanVeh", "B_crew_F");
+KPLIBPRSTSETVAR("rsCrewmanVeh", "O_crew_F");
 // Engineer
-KPLIBPRSTSETVAR("rsEngineer", "B_engineer_F");
+KPLIBPRSTSETVAR("rsEngineer", "O_engineer_F");
 // Grenadier
-KPLIBPRSTSETVAR("rsGrenadier", "B_Soldier_GL_F");
+KPLIBPRSTSETVAR("rsGrenadier", "O_Soldier_GL_F");
 // Heavy Gunner
-KPLIBPRSTSETVAR("rsHeavyGunner", "B_HeavyGunner_F");
+KPLIBPRSTSETVAR("rsHeavyGunner", "O_HeavyGunner_F");
 // Helicopter pilot
-KPLIBPRSTSETVAR("rsPilotHeli", "B_Helipilot_F");
+KPLIBPRSTSETVAR("rsPilotHeli", "O_helipilot_F");
 // Jet pilot
-KPLIBPRSTSETVAR("rsPilotJet", "B_Fighter_Pilot_F");
+KPLIBPRSTSETVAR("rsPilotJet", "O_Fighter_Pilot_F");
 // Light Anti Tank
-KPLIBPRSTSETVAR("rsLightAt", "B_soldier_LAT_F");
+KPLIBPRSTSETVAR("rsLightAt", "O_Soldier_LAT_F");
 // Marksman
-KPLIBPRSTSETVAR("rsMarksman", "B_soldier_M_F");
+KPLIBPRSTSETVAR("rsMarksman", "O_soldier_M_F");
 // Medic
-KPLIBPRSTSETVAR("rsMedic", "B_medic_F");
+KPLIBPRSTSETVAR("rsMedic", "O_medic_F");
 // Officer
-KPLIBPRSTSETVAR("rsOfficer", "B_officer_F");
+KPLIBPRSTSETVAR("rsOfficer", "O_officer_F");
 // Paratrooper
-KPLIBPRSTSETVAR("rsParatrooper", "B_soldier_PG_F");
+KPLIBPRSTSETVAR("rsParatrooper", "O_soldier_PG_F");
 // Rifleman
-KPLIBPRSTSETVAR("rsRifleman", "B_Soldier_F");
+KPLIBPRSTSETVAR("rsRifleman", "O_Soldier_F");
 // Sharpshooter
-KPLIBPRSTSETVAR("rsSharpshooter", "B_Sharpshooter_F");
+KPLIBPRSTSETVAR("rsSharpshooter", "O_Sharpshooter_F");
 // Squad Leader
-KPLIBPRSTSETVAR("rsSquadLeader", "B_Soldier_SL_F");
+KPLIBPRSTSETVAR("rsSquadLeader", "O_Soldier_SL_F");
 // Survivor (no weapons, etc.)
-KPLIBPRSTSETVAR("rsSurvivor", "B_Survivor_F");
+KPLIBPRSTSETVAR("rsSurvivor", "O_Survivor_F");
 // Team Leader
-KPLIBPRSTSETVAR("rsTeamLeader", "B_Soldier_TL_F");
+KPLIBPRSTSETVAR("rsTeamLeader", "O_Soldier_TL_F");
 
 
 /*------------------------------------------------------------
@@ -174,25 +174,25 @@ KPLIBPRSTSETVAR("rsTeamLeader", "B_Soldier_TL_F");
 ------------------------------------------------------------*/
 
 // Special Forces Diver
-KPLIBPRSTSETVAR("sfDiver", "B_diver_F");
+KPLIBPRSTSETVAR("sfDiver", "O_diver_F");
 // Special Forces Explosive Specialist
-KPLIBPRSTSETVAR("sfExplosive", "B_recon_exp_F");
+KPLIBPRSTSETVAR("sfExplosive", "O_V_Soldier_Exp_hex_F");
 // Special Forces Light Anti Tank
-KPLIBPRSTSETVAR("sfLightAt", "B_recon_LAT_F");
+KPLIBPRSTSETVAR("sfLightAt", "O_V_Soldier_LAT_hex_F");
 // Special Forces Marksman
-KPLIBPRSTSETVAR("sfMarksman", "B_recon_M_F");
+KPLIBPRSTSETVAR("sfMarksman", "O_V_Soldier_M_hex_F");
 // Special Forces Medic
-KPLIBPRSTSETVAR("sfMedic", "B_recon_medic_F");
+KPLIBPRSTSETVAR("sfMedic", "O_V_Soldier_Medic_hex_F");
 // Special Forces Rifleman
-KPLIBPRSTSETVAR("sfRifleman", "B_recon_F");
+KPLIBPRSTSETVAR("sfRifleman", "O_V_Soldier_hex_F");
 // Special Forces Sharpshooter
-KPLIBPRSTSETVAR("sfSharpshooter", "B_Recon_Sharpshooter_F");
+KPLIBPRSTSETVAR("sfSharpshooter", "O_Pathfinder_F");
 // Special Forces Sniper
-KPLIBPRSTSETVAR("sfSniper", "B_sniper_F");
+KPLIBPRSTSETVAR("sfSniper", "O_sniper_F");
 // Special Forces Spotter
-KPLIBPRSTSETVAR("sfSpotter", "B_spotter_F");
+KPLIBPRSTSETVAR("sfSpotter", "O_spotter_F");
 // Special Forces Teamleader
-KPLIBPRSTSETVAR("sfTeamLeader", "B_recon_TL_F");
+KPLIBPRSTSETVAR("sfTeamLeader", "O_V_Soldier_TL_hex_F");
 
 
 /*------------------------------------------------------------
@@ -238,86 +238,82 @@ KPLIBPRSTARPLAIN("specOps", "specOpsPl");
 
 // Light vehicles
 KPLIBPRSTARCREATE("lVeh");
-KPLIBPRSTARADD("lVeh", "B_Quadbike_01_F",                             50,    0,  25);   // Quadbike
-KPLIBPRSTARADD("lVeh", "B_LSV_01_unarmed_F",                          75,    0,  50);   // Prowler
-KPLIBPRSTARADD("lVeh", "B_LSV_01_armed_F",                            75,   40,  50);   // Prowler (HMG)
-KPLIBPRSTARADD("lVeh", "B_LSV_01_AT_F",                               75,   50,  50);   // Prowler (AT)
-KPLIBPRSTARADD("lVeh", "B_MRAP_01_F",                                100,    0,  50);   // Hunter
-KPLIBPRSTARADD("lVeh", "B_MRAP_01_hmg_F",                            100,   40,  50);   // Hunter (HMG)
-KPLIBPRSTARADD("lVeh", "B_MRAP_01_gmg_F",                            100,   60,  50);   // Hunter (GMG)
+KPLIBPRSTARADD("lVeh", "O_Quadbike_01_F",                             50,    0,  25);   // Quadbike
+KPLIBPRSTARADD("lVeh", "O_LSV_02_unarmed_F",                          75,    0,  50);   // Qilin
+KPLIBPRSTARADD("lVeh", "O_LSV_02_armed_F",                            75,   40,  50);   // Qilin (HMG)
+KPLIBPRSTARADD("lVeh", "O_LSV_02_AT_F",                               75,   50,  50);   // Qilin (AT)
+KPLIBPRSTARADD("lVeh", "O_MRAP_02_F",                                100,    0,  50);   // Ifrit
+KPLIBPRSTARADD("lVeh", "O_MRAP_02_hmg_F",                            100,   40,  50);   // Ifrit (HMG)
+KPLIBPRSTARADD("lVeh", "O_MRAP_02_gmg_F",                            100,   60,  50);   // Ifrit (GMG)
 KPLIBPRSTARPLAIN("lVeh", "lVehPl");
 
 // Transport trucks
 KPLIBPRSTARCREATE("transports");
-KPLIBPRSTARADD("transports", "B_Truck_01_transport_F",               125,    0,  75);   // HEMTT Transport
-KPLIBPRSTARADD("transports", "B_Truck_01_covered_F",                 125,    0,  75);   // HEMTT Transport (Covered)
+KPLIBPRSTARADD("transports", "O_Truck_03_transport_F",               125,    0,  75);   // Tempest Transport
+KPLIBPRSTARADD("transports", "O_Truck_03_covered_F",                 125,    0,  75);   // Tempest Transport (Covered)
 KPLIBPRSTARPLAIN("transports", "transportsPl");
 
 // Boats
 KPLIBPRSTARCREATE("boats");
-KPLIBPRSTARADD("boats", "B_Boat_Transport_01_F",                     100,    0,  25);   // Assault Boat
-KPLIBPRSTARADD("boats", "B_Boat_Armed_01_minigun_F",                 200,   80,  75);   // Speedboat with Minigun
-KPLIBPRSTARADD("boats", "B_SDV_01_F",                                 50,    0,  50);   // SDV
+KPLIBPRSTARADD("boats", "O_Boat_Transport_01_F",                     100,    0,  25);   // Assault Boat
+KPLIBPRSTARADD("boats", "O_Boat_Armed_01_hmg_F",                     200,   80,  75);   // Speedboat with Minigun
+KPLIBPRSTARADD("boats", "O_SDV_01_F",                                150,    0,  50);   // SDV
 KPLIBPRSTARPLAIN("boats", "boatsPl");
 
 // Heavy vehicles
 KPLIBPRSTARCREATE("hVeh");
-KPLIBPRSTARADD("hVeh", "B_APC_Wheeled_01_cannon_F",                  200,   75, 125);    // AMV-7 Marshall
-KPLIBPRSTARADD("hVeh", "B_APC_Tracked_01_rcws_F",                    300,  100, 150);    // IFV-6c Panther
-KPLIBPRSTARADD("hVeh", "B_AFV_Wheeled_01_cannon_F",                  300,  250, 180);    // Rhino MGS
-KPLIBPRSTARADD("hVeh", "B_AFV_Wheeled_01_up_cannon_F",               400,  300, 200);    // Rhino MGS UP
-KPLIBPRSTARADD("hVeh", "B_MBT_01_cannon_F",                          400,  300, 200);    // M2A1 Slammer
-KPLIBPRSTARADD("hVeh", "B_MBT_01_TUSK_F",                            500,  350, 225);    // M2A4 Slammer UP
+KPLIBPRSTARADD("hVeh", "O_APC_Wheeled_02_rcws_v2_F",                 200,   75, 125);    // MSE-3 Marid
+KPLIBPRSTARADD("hVeh", "O_APC_Tracked_02_cannon_F",                  300,  100, 150);    // BTR-K Kamysh
+KPLIBPRSTARADD("hVeh", "O_MBT_02_cannon_F",                          300,  250, 180);    // T-100 Varsuk
+KPLIBPRSTARADD("hVeh", "O_MBT_04_cannon_F",                          400,  300, 200);    // T-140 Angara
+KPLIBPRSTARADD("hVeh", "O_MBT_04_command_F",                         500,  350, 225);    // T-140K Angara
 KPLIBPRSTARPLAIN("hVeh", "hVehPl");
 
 // Anti Air vehicles
 KPLIBPRSTARCREATE("antiAir");
-KPLIBPRSTARADD("antiAir", "B_APC_Tracked_01_AA_F",                   300,  250, 175);    // IFV-6a Cheetah
+KPLIBPRSTARADD("antiAir", "O_APC_Tracked_02_AA_F",                   300,  250, 175);    // ZSU-39 Tigris
 KPLIBPRSTARPLAIN("antiAir", "antiAirPl");
 
 // Artillery vehicles
 KPLIBPRSTARCREATE("arty");
 KPLIBPRSTARADD("arty", KPLIBPRSTGETVAR("mortar"),                     80,  150,   0);    // Mk6 Mortar
-KPLIBPRSTARADD("arty", "B_MBT_01_arty_F",                            600, 1250, 300);    // M4 Scorcher
-KPLIBPRSTARADD("arty", "B_MBT_01_mlrs_F",                            800, 1750, 400);    // M5 Sandstorm MLRS
+KPLIBPRSTARADD("arty", "O_MBT_02_arty_F",                            600, 1250, 300);    // 2S9 Sochor
 KPLIBPRSTARPLAIN("arty", "artyPl");
 
 // Transport Helicopters
 KPLIBPRSTARCREATE("heliTrans");
 KPLIBPRSTARADD("heliTrans", "B_Heli_Light_01_F",                     200,    0, 100);    // MH-9 Hummingbird
-KPLIBPRSTARADD("heliTrans", "B_Heli_Transport_01_F",                 250,   80, 150);    // UH-80 Ghost Hawk
-KPLIBPRSTARADD("heliTrans", "B_Heli_Transport_01_camo_F",            250,   80, 150);    // UH-80 Ghost Hawk (Camo)
-KPLIBPRSTARADD("heliTrans", "B_Heli_Transport_03_F",                 300,   80, 175);    // CH-67 Huron (Armed)
+KPLIBPRSTARADD("heliTrans", "O_Heli_Light_02_unarmed_F",             250,    0, 150);    // PO-30 Orca (unarmed)
+KPLIBPRSTARADD("heliTrans", "O_Heli_Transport_04_bench_F",           300,    0, 175);    // Mi-290 Taru (Bench)
 KPLIBPRSTARPLAIN("heliTrans", "heliTransPl");
 
 // Attack Helicopters
 KPLIBPRSTARCREATE("heliAttack");
-KPLIBPRSTARADD("heliAttack", "B_Heli_Light_01_dynamicLoadout_F",     200,  100, 100);    // AH-9 Pawnee
-KPLIBPRSTARADD("heliAttack", "B_Heli_Attack_01_dynamicLoadout_F",    500,  400, 200);    // AH-99 Blackfoot
+KPLIBPRSTARADD("heliAttack", "O_Heli_Light_02_dynamicLoadout_F",     250,  100, 150);    // PO-30 Orca
+KPLIBPRSTARADD("heliAttack", "O_Heli_Attack_02_dynamicLoadout_F",    500,  400, 200);    // Mi-48 Kajman
 KPLIBPRSTARPLAIN("heliAttack", "heliAttackPl");
 
 // Transport Planes
 KPLIBPRSTARCREATE("planeTrans");
-KPLIBPRSTARADD("planeTrans", "B_T_VTOL_01_armed_F",                  750, 1500, 500);    // V-44 X Blackfish (Armed)
-KPLIBPRSTARADD("planeTrans", "B_T_VTOL_01_infantry_F",               750,    0, 500);    // V-44 X Blackfish (Infantry)
-KPLIBPRSTARADD("planeTrans", "B_T_VTOL_01_vehicle_F",                750,    0, 500);    // V-44 X Blackfish (Vehicle)
+KPLIBPRSTARADD("planeTrans", "O_T_VTOL_02_infantry_dynamicLoadout_F",750, 1000, 500);    // Y-32 Xi'an (Infantry)
+KPLIBPRSTARADD("planeTrans", "O_T_VTOL_02_vehicle_dynamicLoadout_F", 750, 1000, 500);    // Y-32 Xi'an (Vehicle)
 KPLIBPRSTARPLAIN("planeTrans", "planeTransPl");
 
 // Jets
 KPLIBPRSTARCREATE("jets");
-KPLIBPRSTARADD("jets", "B_Plane_CAS_01_dynamicLoadout_F",           1000,  800, 400);    // A-164 Wipeout (CAS)
-KPLIBPRSTARADD("jets", "B_Plane_Fighter_01_F",                      1500, 1750, 450);    // F/A-181 Black Wasp II
-KPLIBPRSTARADD("jets", "B_Plane_Fighter_01_Stealth_F",              1500, 1750, 450);    // F/A-181 Black Wasp II (Stealth)
+KPLIBPRSTARADD("jets", "O_Plane_CAS_02_dynamicLoadout_F",           1000,  800, 400);    // To-199 Neophron
+KPLIBPRSTARADD("jets", "O_Plane_Fighter_02_F",                      1500, 1750, 450);    // To-201 Shikra
+KPLIBPRSTARADD("jets", "O_Plane_Fighter_02_Stealth_F",              1500, 1750, 450);    // To-201 Shikra (Stealth)
 KPLIBPRSTARPLAIN("jets", "jetsPl");
 
 // Static Defenses
 KPLIBPRSTARCREATE("statics");
-KPLIBPRSTARADD("statics", "B_HMG_01_F",                               25,   40,   0);    // Mk30 HMG .50
-KPLIBPRSTARADD("statics", "B_HMG_01_high_F",                          25,   40,   0);    // Mk30 HMG .50 (Raised)
-KPLIBPRSTARADD("statics", "B_GMG_01_F",                               35,   60,   0);    // Mk32 GMG 20mm
-KPLIBPRSTARADD("statics", "B_GMG_01_high_F",                          35,   60,   0);    // Mk32 GMG 20mm (Raised)
+KPLIBPRSTARADD("statics", "O_HMG_01_F",                               25,   40,   0);    // Mk30 HMG .50
+KPLIBPRSTARADD("statics", "O_HMG_01_high_F",                          25,   40,   0);    // Mk30 HMG .50 (Raised)
+KPLIBPRSTARADD("statics", "O_GMG_01_F",                               35,   60,   0);    // Mk32 GMG 20mm
+KPLIBPRSTARADD("statics", "O_GMG_01_high_F",                          35,   60,   0);    // Mk32 GMG 20mm (Raised)
 KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAa"),                50,  100,   0);    // Static Titan Launcher (AA)
-KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAaBig"),            100,  250,   0);    // MIM-145 Defender
+KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAaBig"),            100,  250,   0);    // S-750 Rhea
 KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAt"),                50,  100,   0);    // Static Titan Launcher (AT)
 KPLIBPRSTARPLAIN("statics", "staticsPl");
 
@@ -333,13 +329,13 @@ KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("logiBuilding"),         250,    0, 
 KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("airBuilding"),         1000,    0,   0);
 KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("slotHeli"),             250,    0,   0);
 KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("slotJet"),              500,    0,   0);
-KPLIBPRSTARADD("logistic", "B_Radar_System_01_F",                    250,    0,   0);    // AN/MPQ-105 Radar
-KPLIBPRSTARADD("logistic", "B_Truck_01_Repair_F",                    325,    0,  75);    // HEMTT Repair
-KPLIBPRSTARADD("logistic", "B_Truck_01_fuel_F",                      125,    0, 275);    // HEMTT Fuel
-KPLIBPRSTARADD("logistic", "B_Truck_01_ammo_F",                      125,  200,  75);    // HEMTT Ammo
-KPLIBPRSTARADD("logistic", "B_Slingload_01_Repair_F",                275,    0,   0);    // Huron Repair Container
-KPLIBPRSTARADD("logistic", "B_Slingload_01_Fuel_F",                   75,    0, 200);    // Huron Fuel Container
-KPLIBPRSTARADD("logistic", "B_Slingload_01_Ammo_F",                   75,  200,   0);    // Huron Ammo Container
+KPLIBPRSTARADD("logistic", "O_Radar_System_02_F",                    250,    0,   0);    // R-750 Cronus Radar
+KPLIBPRSTARADD("logistic", "O_Truck_03_repair_F",                    325,    0,  75);    // Tempest Repair
+KPLIBPRSTARADD("logistic", "O_Truck_03_fuel_F",                      125,    0, 275);    // Tempest Fuel
+KPLIBPRSTARADD("logistic", "O_Truck_03_ammo_F",                      125,  200,  75);    // Tempest Ammo
+KPLIBPRSTARADD("logistic", "Land_Pod_Heli_Transport_04_repair_F",    275,    0,   0);    // Taru Repair Container
+KPLIBPRSTARADD("logistic", "Land_Pod_Heli_Transport_04_fuel_F",       75,    0, 200);    // Taru Fuel Container
+KPLIBPRSTARADD("logistic", "Land_Pod_Heli_Transport_04_ammo_F",       75,  200,   0);    // Taru Ammo Container
 KPLIBPRSTARPLAIN("logistic", "logisticPl");
 
 // Decorative Objects
@@ -347,9 +343,8 @@ KPLIBPRSTARCREATE("deco");
 KPLIBPRSTARADD("deco", "Land_Cargo_House_V1_F",                        0,    0,   0);
 KPLIBPRSTARADD("deco", "Land_Cargo_Patrol_V1_F",                       0,    0,   0);
 KPLIBPRSTARADD("deco", "Land_Cargo_Tower_V1_F",                        0,    0,   0);
-KPLIBPRSTARADD("deco", "Flag_NATO_F",                                  0,    0,   0);
-KPLIBPRSTARADD("deco", "Flag_US_F",                                    0,    0,   0);
-KPLIBPRSTARADD("deco", "Flag_UK_F",                                    0,    0,   0);
+KPLIBPRSTARADD("deco", "Flag_CSAT_F",                                  0,    0,   0);
+KPLIBPRSTARADD("deco", "Flag_Viper_F",                                 0,    0,   0);
 KPLIBPRSTARADD("deco", "Flag_White_F",                                 0,    0,   0);
 KPLIBPRSTARADD("deco", "Land_Medevac_house_V1_F",                      0,    0,   0);
 KPLIBPRSTARADD("deco", "Land_Medevac_HQ_V1_F",                         0,    0,   0);
