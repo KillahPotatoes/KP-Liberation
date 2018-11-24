@@ -4,7 +4,7 @@
     File: fn_init_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-09
-    Last Update: 2018-11-12
+    Last Update: 2018-11-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -117,11 +117,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetFriendly
+// KPLIB_param_presetF
 // Selection for the units, vehicles, etc. for the player side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetFriendly",
+    "KPLIB_param_presetF",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_PLAYER", localize "STR_KPLIB_SETTINGS_PRESET_PLAYER_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -138,11 +138,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetEnemy
+// KPLIB_param_presetE
 // Selection for the units, vehicles, etc. for the enemy side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetEnemy",
+    "KPLIB_param_presetE",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_ENEMY", localize "STR_KPLIB_SETTINGS_PRESET_ENEMY_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -159,11 +159,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetResistance
+// KPLIB_param_presetR
 // Selection for the units, vehicles, etc. for the resistance side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetResistance",
+    "KPLIB_param_presetR",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_RESIS", localize "STR_KPLIB_SETTINGS_PRESET_RESIS_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -180,11 +180,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetCivilian
+// KPLIB_param_presetC
 // Selection for the units, vehicles, etc. for the civilian side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetCivilian",
+    "KPLIB_param_presetC",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_CIV", localize "STR_KPLIB_SETTINGS_PRESET_CIV_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
