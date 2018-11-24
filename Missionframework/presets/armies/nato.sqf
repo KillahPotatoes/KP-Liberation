@@ -72,7 +72,7 @@ KPLIBPRSTARCREATE("alphabet");
 
 // The building defined to unlock FOB air vehicle availability.
 KPLIBPRSTSETVAR("airBuilding", "Land_Radar_Small_F");
-// This is the virtual arsenal as portable supply crates.
+// This is the virtual arsenal as portable supply crate.
 KPLIBPRSTSETVAR("arsenalBox", "B_supplyCrate_F");
 // This defines the ammunition resource crates.
 KPLIBPRSTSETVAR("crateAmmo", "B_CargoNet_01_ammo_F");
@@ -84,7 +84,7 @@ KPLIBPRSTSETVAR("crateSupply", "CargoNet_01_box_F");
 KPLIBPRSTSETVAR("fobBox", "B_Slingload_01_Cargo_F");
 // This is the main FOB HQ building.
 KPLIBPRSTSETVAR("fobBuilding", "Land_Cargo_HQ_V1_F");
-// This is the FOB as a vehicle. Default is "B_Truck_01_box_F".
+// This is the FOB as a vehicle..
 KPLIBPRSTSETVAR("fobTruck", "B_Truck_01_box_F");
 // The building defined to unlock FOB logistic functionalities.
 KPLIBPRSTSETVAR("logiBuilding", "Land_RepairDepot_01_tan_F");
@@ -110,7 +110,7 @@ KPLIBPRSTSETVAR("storageSmall", "ContainmentArea_02_sand_F");
 
 // These are the boats which spawn in the boat racks of the Liberty.
 KPLIBPRSTSETVAR("addBoat", "B_Boat_Transport_01_F");
-// These are the additional helicopter which spawn at the Operation Base.
+// These are the additional helicopter which spawns at the Operation Base.
 KPLIBPRSTSETVAR("addHeli", "B_Heli_Light_01_F");
 // These are the trucks which are used in the logistic convoy system.
 KPLIBPRSTSETVAR("logiTruck", "B_Truck_01_transport_F");
@@ -265,12 +265,12 @@ KPLIBPRSTARADD("hVeh", "B_MBT_01_cannon_F",                          400,  300, 
 KPLIBPRSTARADD("hVeh", "B_MBT_01_TUSK_F",                            500,  350, 225);    // M2A4 Slammer UP
 KPLIBPRSTARPLAIN("hVeh", "hVehPl");
 
-// Anti Air
+// Anti Air vehicles
 KPLIBPRSTARCREATE("antiAir");
 KPLIBPRSTARADD("antiAir", "B_APC_Tracked_01_AA_F",                   300,  250, 175);    // IFV-6a Cheetah
 KPLIBPRSTARPLAIN("antiAir", "antiAirPl");
 
-// Artillery
+// Artillery vehicles
 KPLIBPRSTARCREATE("arty");
 KPLIBPRSTARADD("arty", KPLIBPRSTGETVAR("mortar"),                     80,  150,   0);    // Mk6 Mortar
 KPLIBPRSTARADD("arty", "B_MBT_01_arty_F",                            600, 1250, 300);    // M4 Scorcher
@@ -305,7 +305,7 @@ KPLIBPRSTARADD("jets", "B_Plane_Fighter_01_F",                      1500, 1750, 
 KPLIBPRSTARADD("jets", "B_Plane_Fighter_01_Stealth_F",              1500, 1750, 450);    // F/A-181 Black Wasp II (Stealth)
 KPLIBPRSTARPLAIN("jets", "jetsPl");
 
-// Static Defense
+// Static Defenses
 KPLIBPRSTARCREATE("statics");
 KPLIBPRSTARADD("statics", "B_HMG_01_F",                               25,   40,   0);    // Mk30A HMG .50
 KPLIBPRSTARADD("statics", "B_HMG_01_high_F",                          25,   40,   0);    // Mk30 HMG .50 (Raised)
@@ -316,7 +316,7 @@ KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAaBig"),            100,  250, 
 KPLIBPRSTARADD("statics", KPLIBPRSTGETVAR("staticAt"),                50,  100,   0);    // Static Titan Launcher (AT)
 KPLIBPRSTARPLAIN("statics", "staticsPl");
 
-// Logistics
+// Logistic vehicles and objects
 KPLIBPRSTARCREATE("logistic");
 KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("arsenalBox"),           100,  200,   0);
 KPLIBPRSTARADD("logistic",  KPLIBPRSTGETVAR("respawnTruck"),         200,    0, 100);
