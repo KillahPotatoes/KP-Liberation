@@ -4,7 +4,7 @@
     File: fn_arsenal_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-11-24
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,7 @@ if ((headgear player) != "") then {_playerItems pushBack (headgear player);};
 if ((goggles player) != "") then {_playerItems pushBack (goggles player);};
 if ((uniform player) != "") then {_playerItems pushBack (uniform player);};
 if ((vest player) != "") then {_playerItems pushBack (vest player);};
-if (((backpack player) != "") && ((backpack player) != _backpack)) then {_playerItems pushBack (backpack player);};
+if ((backpack player) != "") then {_playerItems pushBack (backpack player);};
 {_playerItems pushBackUnique _x;} forEach (assignedItems player);
 {_playerItems pushBackUnique _x;} forEach (uniformItems player);
 {_playerItems pushBackUnique _x;} forEach (vestItems player);
