@@ -263,6 +263,10 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Artillery vehicles.*
 
+* **KPLIB_preset_boats**
+
+  *All kinds of water vehicles.*
+
 * **KPLIB_preset_deco**
 
   *Decorative Objects.*
@@ -306,3 +310,7 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 * **KPLIB_preset_statics**
 
   *Static Defenses.*
+
+* **KPLIB_preset_transports**
+
+  *Unarmed transport trucks.*
