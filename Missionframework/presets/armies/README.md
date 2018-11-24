@@ -251,22 +251,6 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Military alphabet with `0 = A` to `25 = Z` (obviously only one-dimensional)*
 
-* **KPLIB_preset_soldiers**
-
-  *Regular infantry units.*
-
-* **KPLIB_preset_specOps**
-
-  *Special Forces units.*
-
-* **KPLIB_preset_lVeh**
-
-  *Light vehicles.*
-
-* **KPLIB_preset_hVeh**
-
-  *Heavy vehicles.*
-
 * **KPLIB_preset_antiAir**
 
   *Anti Air vehicles.*
@@ -274,6 +258,10 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 * **KPLIB_preset_arty**
 
   *Artillery vehicles.*
+
+* **KPLIB_preset_deco**
+
+  *Decorative Objects.*
 
 * **KPLIB_preset_heliTrans**
 
@@ -283,22 +271,34 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Attack Helicopters.*
 
-* **KPLIB_preset_planeTrans**
+* **KPLIB_preset_hVeh**
 
-  *Transport Planes.*
+  *Heavy vehicles.*
 
 * **KPLIB_preset_jets**
 
   *Jets.*
 
-* **KPLIB_preset_statics**
-
-  *Static Defenses.*
-
 * **KPLIB_preset_logistic**
 
   *Logistic vehicles and objects.*
 
-* **KPLIB_preset_deco**
+* **KPLIB_preset_lVeh**
 
-  *Decorative Objects.*
+  *Light vehicles.*
+
+* **KPLIB_preset_planeTrans**
+
+  *Transport Planes.*
+
+* **KPLIB_preset_soldiers**
+
+  *Regular infantry units.*
+
+* **KPLIB_preset_specOps**
+
+  *Special Forces units.*
+
+* **KPLIB_preset_statics**
+
+  *Static Defenses.*
