@@ -80,6 +80,10 @@ Each listed variable/array needs the `F` or `E` suffix to access the correspondi
 
   *Static Mortar Classname.*
 
+* **KPLIB_preset_name**
+
+  *Name of the used/created army in this preset.*
+
 * **KPLIB_preset_potato**
 
   *Potato 01, a multipurpose mobile respawn helicopter.*

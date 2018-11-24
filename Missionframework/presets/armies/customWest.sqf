@@ -1,20 +1,14 @@
 /*
-    KP Liberation NATO Preset
+    KP Liberation Custom West Side Preset
 
-    File: nato.sqf
+    File: customWest.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2018-11-17
+    Date: 2018-11-24
     Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        NATO preset file which contains only vanilla assets.
-
-    Needed Mods:
-        - None
-
-    Optional Mods:
-        - None
+        Custom west side preset file for individual adjustments.
 */
 
 #include "script_component.hpp"
@@ -33,7 +27,7 @@ KPLIBPRSTSETVAR("color", "ColorWest");
 // Color for this side (active)
 KPLIBPRSTSETVAR("colorAct", "ColorBlue");
 // Name of the used/created army in this preset
-KPLIBPRSTSETVAR("name", "NATO");
+KPLIBPRSTSETVAR("name", "Custom West Army");
 // Side for this preset
 KPLIBPRSTSETVAR("side", west);
 // Military alphabet
