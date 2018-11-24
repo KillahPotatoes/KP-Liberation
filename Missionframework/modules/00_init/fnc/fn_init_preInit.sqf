@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-12
+    Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -50,8 +50,6 @@ if (isServer) then {
     ----- Module Globals -----
 */
 
-// Array of all whitelisted arsenal items
-KPLIB_arsenal_whitelist = [];
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
 // Respawn position shortcut
