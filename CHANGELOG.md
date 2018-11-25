@@ -17,6 +17,7 @@
 * Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
 * Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better separation.
 * Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
+* Tweaked: Unit/Army Presets are now universally used as friendly or enemy preset.
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
