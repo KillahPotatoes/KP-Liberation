@@ -4,7 +4,7 @@
     File: fn_arsenal_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-14
-    Last Update: 2018-11-24
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,14 +25,6 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ARSENAL] Modul
 /*
     ----- Module Globals -----
 */
-
-// Array of all whitelisted arsenal items
-KPLIB_preset_arsenal_whitelist = [];
-KPLIB_arsenal_whitelist = [];
-
-// Array of all blacklisted arsenal items
-KPLIB_preset_arsenal_blacklist = [];
-KPLIB_arsenal_blacklist = [];
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ARSENAL] Module initialized", diag_tickTime];};
 
