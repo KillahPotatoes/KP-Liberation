@@ -17,8 +17,6 @@
         Result (see description) [BOOL]
 */
 
-private _return = true;
-
 // Gets all player items and searchs them for blacklisted items
 private _playerItems = [];
 
@@ -39,7 +37,7 @@ if ((backpack player) != "") then {_playerItems pushBack (backpack player);};
 // Search for forbidden items
 private _badItems = _playerItems arrayIntersect KPLIB_preset_arsenal_blacklist;
 
-if (!(_badItems isEqualTo [])) then {
+if (!(_badItems isEqualTo [])) exitWith {
     private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _badItems, name player];
     _text remoteExec ["diag_log",2];
     hint format [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND", _badItems];
@@ -51,7 +49,8 @@ if (!(_badItems isEqualTo [])) then {
     removeBackpack player;
     removeHeadgear player;
     removeGoggles player;
-    _return = false;
+
+    false
 };
 
-_return
+true
