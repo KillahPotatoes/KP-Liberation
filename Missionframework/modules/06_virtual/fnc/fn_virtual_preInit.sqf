@@ -4,7 +4,7 @@
     File: fn_virtual_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-20
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,7 +22,35 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [VIRTUAL] Modul
 [] call KPLIB_fnc_virtual_settings;
 
 if (isServer) then {
-    ["KPLIB_player_giveZeus", KPLIB_fnc_virtual_addCurator] call CBA_fnc_addEventHandler;
+    // Give zeus to unit when requested via event or remove it with none mode
+    ["KPLIB_player_giveZeus", {
+        params ["_unit", "_mode"];
+
+        switch _mode do {
+            // NONE mode
+            case 0: {
+               _unit call KPLIB_fnc_virtual_removeCurator;
+            };
+            // Other modes
+            default {
+                _this call KPLIB_fnc_virtual_addCurator;
+            };
+        };
+    }] call CBA_fnc_addEventHandler;
+
+    // Limit curator area
+    ["KPLIB_curatorOpen", {
+        params ["_display", "_player"];
+
+        private _curator = getAssignedCuratorLogic _player;
+
+        switch (_curator getVariable ["KPLIB_mode", 0]) do {
+            // Limited mode
+            case 1: {
+                [_curator, getPos player] call KPLIB_fnc_virtual_curatorAreaLimit;
+            };
+        };
+    }] call CBA_fnc_addEventHandler;
 };
 
 

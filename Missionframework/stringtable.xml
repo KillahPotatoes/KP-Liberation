@@ -780,6 +780,9 @@
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_LIMITED">
             <English>Limited</English>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_LIMITED_FREE_CAM">
+            <English>Limited with free camera</English>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FULL">
             <English>Full</English>
         </Key>
