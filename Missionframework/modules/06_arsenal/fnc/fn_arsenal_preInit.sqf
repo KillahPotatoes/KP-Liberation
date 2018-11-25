@@ -26,6 +26,13 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ARSENAL] Modul
     ----- Module Globals -----
 */
 
+// Array of all whitelisted arsenal items
+KPLIB_preset_arsenal_whitelist = [];
+
+ // Array of all blacklisted arsenal items
+KPLIB_preset_arsenal_blacklist = [];
+
+
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ARSENAL] Module initialized", diag_tickTime];};
 
 true
