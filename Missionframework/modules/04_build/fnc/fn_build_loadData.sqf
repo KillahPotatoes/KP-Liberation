@@ -39,7 +39,8 @@ if (_moduleData isEqualTo []) then {
 
         private _fobItems = KPLIB_build_saveNamespace getVariable _fob;
         if(isNil "_fobItems") then {
-            _fobItems = KPLIB_build_saveNamespace setVariable [_fob, []];
+            _fobItems = [];
+            KPLIB_build_saveNamespace setVariable [_fob, _fobItems];
         };
 
         // Convert serialized objects into real objects
