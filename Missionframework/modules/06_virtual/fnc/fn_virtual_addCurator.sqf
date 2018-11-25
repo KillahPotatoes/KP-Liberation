@@ -23,7 +23,7 @@ params [
 ];
 
 // Do not add curator if mode out of range or unit is null
-if (!(_mode in [1, 2, 3]) || isNull "_unit") exitWith {false};
+if (!(_mode in [1, 2, 3]) || isNull _unit) exitWith {false};
 
 if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
 
