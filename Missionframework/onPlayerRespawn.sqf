@@ -4,7 +4,7 @@
     File: onPlayerRespawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-23
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,3 +32,5 @@ player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_PLAYER_MENU
 if (serverCommandAvailable "#kick") then {
     player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true, "", 'player == _originalTarget'];
 };
+
+[] call KPLIB_fnc_arsenal_checkGear;
