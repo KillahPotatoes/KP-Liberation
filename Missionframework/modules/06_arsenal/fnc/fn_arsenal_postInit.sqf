@@ -32,6 +32,7 @@ if (isServer) then {
 if (hasInterface) then {
     [missionNamespace, "arsenalClosed", {[] call KPLIB_fnc_arsenal_checkGear}] call BIS_fnc_addScriptedEventHandler;
     ["ace_arsenal_displayClosed", {[] call KPLIB_fnc_arsenal_checkGear}] call CBA_fnc_addEventHandler;
+    ["KPLIB_player_redeploy", {[] call KPLIB_fnc_arsenal_checkGear}] call CBA_fnc_addEventHandler;
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ARSENAL] Module initialized", diag_tickTime];};

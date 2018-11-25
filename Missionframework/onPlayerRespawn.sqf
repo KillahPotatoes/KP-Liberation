@@ -32,5 +32,3 @@ player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_PLAYER_MENU
 if (serverCommandAvailable "#kick") then {
     player addAction ["<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_ADMIN_MENU" + "</t>", {[] call KPLIB_fnc_adm_openDialog;}, nil, -804, false, true, "", 'player == _originalTarget'];
 };
-
-[] call KPLIB_fnc_arsenal_checkGear;
