@@ -45,9 +45,24 @@ if (_moduleData isEqualTo []) then {
 
         // Convert serialized objects into real objects
         {
-            private _object = [_x select 0] call KPLIB_fnc_common_createVehicle;
-            _object setPosWorld (_x select 1);
-            _object setVectorDirAndUp (_x select 2);
+            _x params ["_className", "_posWorld", "_vectorDirAndUp"];
+
+            private ["_object"];
+
+            // TODO proper deserialization/serialization with groups and vehicle crews handling
+            switch true do {
+                case (_className isKindOf "Man"): {
+                    _object = [createGroup KPLIB_preset_sidePlayers, _className] call KPLIB_fnc_common_createUnit;
+                    _object setPosWorld _posWorld;
+                    _object setVectorDirAndUp _vectorDirAndUp;
+                };
+
+                default {
+                    _object = [_className] call KPLIB_fnc_common_createVehicle;
+                    _object setPosWorld _posWorld;
+                    _object setVectorDirAndUp _vectorDirAndUp;
+                };
+            };
 
             _fobItems pushBack _object;
         } forEach _items;
