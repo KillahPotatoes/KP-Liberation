@@ -4,7 +4,7 @@
     File: KPLIB_ui.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-10
+    Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,5 +16,6 @@
 #include "modules\02_core\ui.hpp"
 #include "modules\03_respawn\ui.hpp"
 #include "modules\04_build\ui.hpp"
+#include "modules\06_virtual\ui.hpp"
 #include "modules\99_adm\ui.hpp"
 #include "modules\99_plm\ui.hpp"
