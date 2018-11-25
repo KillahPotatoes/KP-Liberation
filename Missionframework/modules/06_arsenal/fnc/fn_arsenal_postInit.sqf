@@ -4,7 +4,7 @@
     File: fn_arsenal_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-12
-    Last Update: 2018-11-24
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,11 +23,6 @@ if (isServer) then {
 
     // Load arsenal
     [] call KPLIB_fnc_arsenal_fillArsenal;
-};
-
-
-if (hasInterface && KPLIB_ace_enabled) then {
-    [player, KPLIB_arsenal_whitelist, false] call ace_arsenal_fnc_addVirtualItems;
 };
 
 // Setup of actions available to players

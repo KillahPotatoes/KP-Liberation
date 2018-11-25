@@ -31,7 +31,7 @@ private _configClasses = [];
 {
     _configClasses append (
         "
-            private _type = (configName _x) call BIS_fnc_itemType;
+            _type = (configName _x) call BIS_fnc_itemType;
             (getNumber (_x >> 'scope') == 2) &&
             ((_type select 0) != '') &&
             ((_type select 0) != 'VehicleWeapon')
@@ -42,43 +42,64 @@ private _configClasses = [];
 // Fetch classnames
 private _allItems = [];
 {
-    if !(configName _x isKindOf "Weapon_Bag_Base") then {
-        _allItems pushBackUnique (configName _x);
-    };
+    _allItems pushBack (configName _x);
 } forEach _configClasses;
 
-// Define the blacklist
+// Define the blacklist depending on arsenal preset selection
+private _badItems = [];
+private _goodItems = [];
 switch (KPLIB_param_presetArsenal) do {
     case 1: {
-        KPLIB_arsenal_blacklist = _allItems arrayIntersect KPLIB_preset_arsenal_blacklist;
+        // Blacklist Method
+        _badItems = _allItems arrayIntersect KPLIB_preset_arsenal_blacklist;
         {
-            if !(_x in KPLIB_arsenal_blacklist) then {
-                KPLIB_arsenal_whitelist pushBack _x;
+            if !(_x in _badItems) then {
+                _goodItems pushBack _x;
             };
         } forEach _allItems
     };
     case 2: {
-        KPLIB_arsenal_whitelist = _allItems arrayIntersect KPLIB_preset_arsenal_whitelist;
+        // Whitelist Method
+        _goodItems = _allItems arrayIntersect KPLIB_preset_arsenal_whitelist;
         {
-            if !(_x in KPLIB_arsenal_whitelist) then {
-                KPLIB_arsenal_blacklist pushBack _x;
+            if !(_x in _goodItems) then {
+                _badItems pushBack _x;
             };
         } forEach _allItems
     };
-    default {
-        KPLIB_arsenal_whitelist append _allItems;
-        KPLIB_arsenal_blacklist = [];
-    };
+    default {};
 };
 
-// Fill the whitelist into arsenal
-[missionNamespace, KPLIB_arsenal_whitelist, true] call BIS_fnc_addVirtualWeaponCargo;
-[missionNamespace, KPLIB_arsenal_whitelist, true] call BIS_fnc_addVirtualMagazineCargo;
-[missionNamespace, KPLIB_arsenal_whitelist, true] call BIS_fnc_addVirtualItemCargo;
-[missionNamespace, KPLIB_arsenal_whitelist, true] call BIS_fnc_addVirtualBackpackCargo;
+// Overwrite the blacklist (it removes entries which aren't available due to missing mods or something)
+KPLIB_preset_arsenal_blacklist = +_badItems;
 
-// Send generated arsenal whitelist and blacklist to clients
-publicVariable "KPLIB_arsenal_whitelist";
-publicVariable "KPLIB_arsenal_blacklist";
+// Fetch classnames and sort them to the four needed arrays
+private _weapons = [];
+private _magazines = [];
+private _items = [];
+private _backpacks = [];
+{
+    _type = _x call BIS_fnc_itemType;
+    switch (_type select 0) do {
+        case "Weapon": {if ((_x call BIS_fnc_baseWeapon) == _x) then {_weapons pushBack _x;};};
+        case "Mine";
+        case "Magazine": {_magazines pushBack _x};
+        case "Item";
+        case "Equipment": {if ((_type select 1) == "Backpack") then {_backpacks pushBack _x} else {_items pushBack _x};};
+    };
+} forEach _goodItems;
+
+// Fill the whitelist into arsenal
+[missionNamespace, _weapons, true] call BIS_fnc_addVirtualWeaponCargo;
+[missionNamespace, _magazines, true] call BIS_fnc_addVirtualMagazineCargo;
+[missionNamespace, _items, true] call BIS_fnc_addVirtualItemCargo;
+[missionNamespace, _backpacks, true] call BIS_fnc_addVirtualBackpackCargo;
+
+if (KPLIB_ace_enabled) then {
+    [player, _goodItems, false] remoteExecCall ["ace_arsenal_fnc_addVirtualItems", [-2, 0] select hasInterface, true];
+};
+
+// Send updated blacklist to clients
+publicVariable "KPLIB_preset_arsenal_blacklist";
 
 true

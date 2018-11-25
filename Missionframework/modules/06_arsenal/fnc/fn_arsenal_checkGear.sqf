@@ -37,7 +37,7 @@ if ((backpack player) != "") then {_playerItems pushBack (backpack player);};
 {if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (handgunItems player);
 
 // Search for forbidden items
-private _badItems = _playerItems arrayIntersect KPLIB_arsenal_blacklist;
+private _badItems = _playerItems arrayIntersect KPLIB_preset_arsenal_blacklist;
 
 if (!(_badItems isEqualTo [])) then {
     private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _badItems, name player];
