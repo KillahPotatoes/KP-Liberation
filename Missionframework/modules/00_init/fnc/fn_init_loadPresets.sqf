@@ -4,7 +4,7 @@
     File: fn_init_loadPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-12
+    Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,35 +25,23 @@
     --- ENDNOTE
 */
 
-// Load Blufor preset
-switch (KPLIB_param_presetFriendly) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\blufor\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\blufor\3cbBAF.sqf";};
-    case 3: {call compile preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
-    case 4: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf.sqf";};
-    case 5: {call compile preprocessFileLineNumbers "presets\blufor\rhs_usaf_d.sqf";};
+// Load friendly (player side) preset
+switch (KPLIB_param_presetF) do {
     default {call compile preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
-// Load Opfor preset
-switch (KPLIB_param_presetEnemy) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\opfor\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
-    case 3: {call compile preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+// Load enemy preset
+switch (KPLIB_param_presetE) do {
     default {call compile preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
 // Load resistance preset
-switch (KPLIB_param_presetResistance) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\resistance\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
+switch (KPLIB_param_presetR) do {
     default {call compile preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 // Load civilian preset
-switch (KPLIB_param_presetCivilian) do {
-    case 1: {call compile preprocessFileLineNumbers "presets\civilians\apex.sqf";};
-    case 2: {call compile preprocessFileLineNumbers "presets\civilians\takistan.sqf";};
+switch (KPLIB_param_presetC) do {
     default {call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 

@@ -30,6 +30,7 @@ if (isServer) then {
 
 // Add event handler for gear check
 if (hasInterface) then {
+    [missionNamespace, "arsenalOpened", {player setVariable ["KPLIB_backpack", backpack player]}] call BIS_fnc_addScriptedEventHandler;
     [missionNamespace, "arsenalClosed", {[] call KPLIB_fnc_arsenal_checkGear}] call BIS_fnc_addScriptedEventHandler;
     ["ace_arsenal_displayClosed", {[] call KPLIB_fnc_arsenal_checkGear}] call CBA_fnc_addEventHandler;
     ["KPLIB_player_redeploy", {[] call KPLIB_fnc_arsenal_checkGear}] call CBA_fnc_addEventHandler;
