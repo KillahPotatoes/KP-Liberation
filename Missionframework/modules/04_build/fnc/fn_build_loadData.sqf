@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-11-09
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,15 +39,16 @@ if (_moduleData isEqualTo []) then {
 
         private _fobItems = KPLIB_build_saveNamespace getVariable _fob;
         if(isNil "_fobItems") then {
-            KPLIB_build_saveNamespace setVariable [_fob, []];
+            _fobItems = KPLIB_build_saveNamespace setVariable [_fob, []];
         };
 
         // Convert serialized objects into real objects
         {
-            private _object = [_x select 0, _x select 1] call KPLIB_fnc_common_createVehicle;
+            private _object = [_x select 0] call KPLIB_fnc_common_createVehicle;
+            _object setPosWorld (_x select 1);
             _object setVectorDirAndUp (_x select 2);
 
-            (KPLIB_build_saveNamespace getVariable _fob) pushBack _object;
+            _fobItems pushBack _object;
         } forEach _items;
 
     } forEach _moduleData;
