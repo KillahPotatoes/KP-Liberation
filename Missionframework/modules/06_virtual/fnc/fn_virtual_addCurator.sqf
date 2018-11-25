@@ -40,6 +40,14 @@ switch _mode do {
     case 1;
     case 2: {
         _curator setVariable ["Addons", 0, true];
+
+        private _fobSaveNamespace = (missionNamespace getVariable ["KPLIB_build_saveNamespace", objNull]);
+        private _fobsItems = [];
+        {
+            _fobsItems append (_fobSaveNamespace getVariable _x);
+        } forEach allVariables _fobSaveNamespace;
+
+        _curator addCuratorEditableObjects [_fobsItems, true];
     };
     // Full mode
     case 3: {
