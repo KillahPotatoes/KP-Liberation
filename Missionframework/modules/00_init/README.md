@@ -27,10 +27,6 @@ This module uses no data or functions from other modules.
 
   *Creates locked vehicle markers.*
 
-* KPLIB_fnc_init_fillArsenal
-
-  *Initializes the virtual arsenal.*
-
 * KPLIB_fnc_init_filterMods
 
   *Filters not available classnames out of a given array of classnames.*

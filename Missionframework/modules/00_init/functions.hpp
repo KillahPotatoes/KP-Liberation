@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-11
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,9 +25,6 @@ class init {
 
     // Creates locked vehicle markers
     class init_createLockedVehMarkers {};
-
-    // Initializes the virtual arsenal
-    class init_fillArsenal {};
 
     // Filters not available classnames out of a given array of classnames
     class init_filterMods {};

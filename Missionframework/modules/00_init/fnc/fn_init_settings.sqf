@@ -4,7 +4,7 @@
     File: fn_init_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-09
-    Last Update: 2018-11-18
+    Last Update: 2018-11-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -92,30 +92,6 @@
     ----- PRESET SETTINGS -----
 */
 
-// KPLIB_param_presetArsenal
-// Selection between the arsenal presets, blacklist method or unrestricted arsenal access.
-// Default: Blacklist Method
-[
-    "KPLIB_param_presetArsenal",
-    "LIST",
-    [localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL", localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_TT"],
-    localize "STR_KPLIB_SETTINGS_PRESET",
-    [
-        [
-            0,
-            1,
-            2
-        ],
-        [
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_0",
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_1",
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_2"
-        ],
-        1
-    ],
-    1,
-    {}
-] call CBA_Settings_fnc_init;
 
 // KPLIB_param_presetF
 // Selection for the units, vehicles, etc. for the player side.
