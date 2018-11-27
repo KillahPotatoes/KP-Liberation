@@ -47,9 +47,6 @@ if (isServer) then {
     // Create locked vehicle markers
     [] call KPLIB_fnc_init_createLockedVehMarkers;
 
-    // Apply Time Multiplier
-    [] call KPLIB_fnc_init_timeMultiApply;
-
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
 };
 
