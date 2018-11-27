@@ -56,6 +56,11 @@ switch _mode do {
     };
 };
 
+// Add 3D fob icons if enabled
+if (KPLIB_param_zeusFobIcons) then {
+    _curator call KPLIB_fnc_virtual_curatorUpdateFobIcons;
+};
+
 _unit assignCurator _curator;
 
 _curator
