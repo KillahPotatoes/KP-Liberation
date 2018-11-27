@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_virtual_curatorUpdateFobIcons
+    KPLIB_fnc_virtual_curatorRemoveFobIcons
 
-    File: fn_virtual_curatorUpdateFobIcons.sqf
+    File: fn_virtual_curatorRemoveFobIcons.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-27
     Last Update: 2018-11-27

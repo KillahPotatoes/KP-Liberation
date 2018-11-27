@@ -30,7 +30,8 @@ private _fobIcons = KPLIB_sectors_fobs apply {
     private _fobName = format ["FOB - %1", _x call KPLIB_fnc_common_getFobAlphabetName];
 
     // Return icon index
-    [_curator, ["", [1,0,0,1], getMarkerPos _x, 0, 0, 0, _fobName]] call BIS_fnc_addCuratorIcon
+    // (same texture, size and color as BIS curator locations)
+    [_curator, ["#(argb,8,8,3)color(0,0,0,0)", [1,1,1,1], getMarkerPos _x, 0, 0, 0, _fobName, 2, 0.05, false, true]] call BIS_fnc_addCuratorIcon
 };
 
 _curator setVariable ["KPLIB_fobIcons", _fobIcons];
