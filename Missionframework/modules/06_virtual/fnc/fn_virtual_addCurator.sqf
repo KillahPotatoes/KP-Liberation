@@ -41,6 +41,7 @@ switch _mode do {
     case 2: {
         _curator setVariable ["Addons", 0, true];
 
+        // Add Built items to zeus
         private _fobSaveNamespace = (missionNamespace getVariable ["KPLIB_build_saveNamespace", objNull]);
         private _fobsItems = [];
         {
@@ -48,6 +49,16 @@ switch _mode do {
         } forEach allVariables _fobSaveNamespace;
 
         _curator addCuratorEditableObjects [_fobsItems, true];
+
+        // Set editing area to zero size area to prevent anything but AI commanding
+        _curator addCuratorEditingArea [1, KPLIB_zeroPos, 0];
+
+        // Disallow attributes changing of objects
+        [
+            _curator,
+            "object",
+            []
+        ] call BIS_fnc_setCuratorAttributes;
     };
     // Full mode
     case 3: {

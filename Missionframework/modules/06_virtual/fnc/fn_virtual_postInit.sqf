@@ -32,15 +32,6 @@ if(hasInterface) then {
         "KPLIB_param_subCommanderZeusMode" call KPLIB_fnc_virtual_initCuratorOnPlayer;
     };
 
-    // Change zeus watermark to KP Logo ;-)
-    ["KPLIB_curatorOpen", {
-        [{
-            private _watermarkCtrl = (findDisplay 312) displayCtrl 15717;
-            systemChat str _watermarkCtrl;
-            _watermarkCtrl ctrlSetText "KPGUI\res\kp512_CA.paa";
-        }] call CBA_fnc_execNextFrame;
-    }] call CBA_fnc_addEventHandler;
-
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [VIRTUAL] Module initialized", diag_tickTime];};

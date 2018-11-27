@@ -57,8 +57,27 @@ if (isServer) then {
             };
         };
     }] call CBA_fnc_addEventHandler;
+
+    // Handle built items
+    ["KPLIB_build_item_built", {
+        params ["_object"];
+        // Add built item to all curators
+        {
+            _x addCuratorEditableObjects [[_object]];
+        } forEach allCurators;
+    }] call CBA_fnc_addEventHandler;
 };
 
+if (hasInterface) then {
+    // Change zeus watermark to KP Logo ;-)
+    ["KPLIB_curatorOpen", {
+        [{
+            private _watermarkCtrl = (findDisplay 312) displayCtrl 15717;
+            systemChat str _watermarkCtrl;
+            _watermarkCtrl ctrlSetText "KPGUI\res\kp512_CA.paa";
+        }] call CBA_fnc_execNextFrame;
+    }] call CBA_fnc_addEventHandler;
+};
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [VIRTUAL] Module initialized", diag_tickTime]};
 
