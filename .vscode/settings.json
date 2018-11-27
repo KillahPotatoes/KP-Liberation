@@ -5,6 +5,8 @@
         "*.hpp": "sqf"
     },
     "sqflint.ignoredVariables": [
+        "_thisId",
+        "_thisArgs",
         "_input0",
         "BIS_fnc_reviveInit",
         "CBA_Settings_fnc_init",
