@@ -39,6 +39,15 @@ private _mode = missionNamespace getVariable [_modeSetting, 0];
             ["KPLIB_player_giveZeus", [player, _value]] call CBA_fnc_serverEvent;
         };
 
+        case "KPLIB_param_zeusLocationIcons": {
+            if (_value) then {
+                (getAssignedCuratorLogic player) call BIS_fnc_drawCuratorLocations;
+            } else {
+                // There is no way to remove location icons so we have to recreate zeus module
+                ["KPLIB_player_giveZeus", [player, missionNamespace getVariable [_thisArgs, 0]]] call CBA_fnc_serverEvent;
+            };
+        };
+
         // Enable/disable 3D fob location icons
         case "KPLIB_param_zeusFobIcons": {
             if (_value) then {

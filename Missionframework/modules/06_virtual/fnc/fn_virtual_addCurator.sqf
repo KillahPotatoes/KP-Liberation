@@ -61,6 +61,11 @@ if (KPLIB_param_zeusFobIcons) then {
     _curator call KPLIB_fnc_virtual_curatorUpdateFobIcons;
 };
 
+// Add 3D location icons if enabled
+if (KPLIB_param_zeusLocationIcons) then {
+    _curator call BIS_fnc_drawCuratorLocations;
+};
+
 _unit assignCurator _curator;
 
 _curator

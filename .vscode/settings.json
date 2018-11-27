@@ -39,6 +39,8 @@
         "KPLIB_param_subCommanderZeusMode",
         "KPLIB_param_limitedZeusRadius",
         "KPLIB_param_limitedZeusCeiling",
+        "KPLIB_param_zeusFobIcons",
+        "KPLIB_param_zeusLocationIcons",
         "KPLIB_plm_groups",
         "KPR_fnc_getPlaytime",
         "KPR_fnc_getRankName",
