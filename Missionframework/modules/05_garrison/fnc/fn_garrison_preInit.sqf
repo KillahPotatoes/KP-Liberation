@@ -4,7 +4,7 @@
     File: fn_garrison_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-12
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,15 @@ if (isServer) then {
 
     // Register sector deactivation event handler
     ["KPLIB_sector_deactivated", {[_this select 0] call KPLIB_fnc_garrison_despawn;}] call CBA_fnc_addEventHandler;
+
+    // Register preset change event handler
+    ["CBA_SettingChanged", {
+        params ["_setting", "_value"];
+
+        if (_setting in ["KPLIB_param_presetF", "KPLIB_param_presetE"]) then {
+            [_setting] call KPLIB_fnc_garrison_reInitSectors;
+        };
+    }] call CBA_fnc_addEventHandler;
 };
 
 /*
