@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,8 +17,14 @@ class virtual {
     // Adds curator to player
     class virtual_addCurator {};
 
+    // Add curator FOB indicators
+    class virtual_curatorAddFobIcons {};
+
     // Limit curator editing area
     class virtual_curatorAreaLimit {};
+
+    // Remove curator FOB indicators
+    class virtual_curatorRemoveFobIcons {};
 
     // Module post initialization
     class virtual_postInit {

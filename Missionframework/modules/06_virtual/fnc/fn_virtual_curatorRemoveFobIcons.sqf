@@ -1,0 +1,33 @@
+/*
+    KPLIB_fnc_virtual_curatorUpdateFobIcons
+
+    File: fn_virtual_curatorUpdateFobIcons.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2018-11-27
+    Last Update: 2018-11-27
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+        Removes FOBs icons from curator.
+
+    Parameter(s):
+        _curator    - Curator logic [OBJECT, defaults to objNull]
+
+    Returns:
+        FOB icons were removed [BOOL]
+*/
+params [
+    ["_curator", objNull, [objNull]]
+];
+
+if (isNull _curator) exitWith {};
+
+// Remove all icons from curator
+{
+    [_curator, _x] call BIS_fnc_removeCuratorIcon
+
+} forEach KPLIB_virtual_fobIcons;
+
+KPLIB_virtual_fobIcons = [];
+
+true

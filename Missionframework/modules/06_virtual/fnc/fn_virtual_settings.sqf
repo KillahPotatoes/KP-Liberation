@@ -4,7 +4,7 @@
     File: fn_virtual_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -99,6 +99,32 @@
     localize "STR_KPLIB_SETTINGS_ZEUS",
     [5, 500, 35, 0],
     1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_zeusFobIcons
+// Should FOB 3D icons be shown in zeus interface.
+// Default: true
+[
+    "KPLIB_param_zeusFobIcons",
+    "CHECKBOX",
+    localize "STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS",
+    localize "STR_KPLIB_SETTINGS_ZEUS",
+    true,
+    0,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_zeusLocationIcons
+// Should FOB 3D icons be shown in zeus interface.
+// Default: true
+[
+    "KPLIB_param_zeusLocationIcons",
+    "CHECKBOX",
+    localize "STR_KPLIB_SETTINGS_ZEUS_LOCATION_ICONS",
+    localize "STR_KPLIB_SETTINGS_ZEUS",
+    true,
+    0,
     {}
 ] call CBA_Settings_fnc_init;
 
