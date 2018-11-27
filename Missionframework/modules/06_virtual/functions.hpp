@@ -17,14 +17,17 @@ class virtual {
     // Adds curator to player
     class virtual_addCurator {};
 
-    // Add curator FOB indicators
-    class virtual_curatorAddFobIcons {};
-
     // Limit curator editing area
     class virtual_curatorAreaLimit {};
 
     // Remove curator FOB indicators
     class virtual_curatorRemoveFobIcons {};
+
+    // Update curator FOB indicators
+    class virtual_curatorUpdateFobIcons {};
+
+    // Initializes curator handling for player
+    class virtual_initCuratorOnPlayer {};
 
     // Module post initialization
     class virtual_postInit {

@@ -14,7 +14,7 @@
         _curator    - Curator logic [OBJECT, defaults to objNull]
 
     Returns:
-        FOBs icons were added to curator [BOOL]
+        IDs of icons added to curator [ARRAY]
 */
 params [
     ["_curator", objNull, [objNull]]
@@ -22,13 +22,17 @@ params [
 
 if (isNull _curator) exitWith {};
 
+// Update fob icons from curator, if any
+_curator call KPLIB_fnc_virtual_curatorRemoveFobIcons;
+
 // Add fob icons to curator
-{
+private _fobIcons = KPLIB_sectors_fobs apply {
     private _fobName = format ["FOB - %1", _x call KPLIB_fnc_common_getFobAlphabetName];
 
-    private _iconIndex = [_curator, ["", [1,0,0,1], getMarkerPos _x, 0, 0, 0, _fobName]] call BIS_fnc_addCuratorIcon;
-    KPLIB_virtual_fobIcons pushBack _iconIndex;
+    // Return icon index
+    [_curator, ["", [1,0,0,1], getMarkerPos _x, 0, 0, 0, _fobName]] call BIS_fnc_addCuratorIcon
+};
 
-} forEach KPLIB_sectors_fobs;
+_curator setVariable ["KPLIB_fobIcons", _fobIcons];
 
-true
+_fobIcons

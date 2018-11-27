@@ -4,7 +4,7 @@
     File: fn_virtual_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,38 +24,12 @@ if(hasInterface) then {
 
     // Add zeus to commander
     if (vehicleVarName player isEqualTo "KPLIB_eden_commander") then {
-        [player, "respawn", {
-            ["KPLIB_player_giveZeus", [player, KPLIB_param_commanderZeusMode]] call CBA_fnc_serverEvent;
-
-            player removeEventHandler ["respawn", _thisID];
-        }] call CBA_fnc_addBISEventHandler;
-
-        // Listen for CBA event to allow changing of zeus when mission is running
-        ["CBA_SettingChanged", {
-            params ["_setting", "_value"];
-
-            if !(_setting isEqualTo "KPLIB_param_commanderZeusMode") exitWith {};
-
-            ["KPLIB_player_giveZeus", [player, _value]] call CBA_fnc_serverEvent;
-        }] call CBA_fnc_addEventHandler;
+        "KPLIB_param_commanderZeusMode" call KPLIB_fnc_virtual_initCuratorOnPlayer;
     };
 
     // Add zeus to sub-commander
     if (vehicleVarName player isEqualTo "KPLIB_eden_subCommander") then {
-        [player, "respawn", {
-            ["KPLIB_player_giveZeus", [player, KPLIB_param_subCommanderZeusMode]] call CBA_fnc_serverEvent;
-
-            player removeEventHandler ["respawn", _thisID];
-        }] call CBA_fnc_addBISEventHandler;
-
-        // Listen for CBA event to allow changing of zeus when mission is running
-        ["CBA_SettingChanged", {
-            params ["_setting", "_value"];
-
-            if !(_setting isEqualTo "KPLIB_param_subCommanderZeusMode") exitWith {};
-
-            ["KPLIB_player_giveZeus", [player, _value]] call CBA_fnc_serverEvent;
-        }] call CBA_fnc_addEventHandler;
+        "KPLIB_param_subCommanderZeusMode" call KPLIB_fnc_virtual_initCuratorOnPlayer;
     };
 
 };

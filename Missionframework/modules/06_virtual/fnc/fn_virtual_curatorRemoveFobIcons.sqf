@@ -22,12 +22,14 @@ params [
 
 if (isNull _curator) exitWith {};
 
+private _fobIcons = _curator getVariable ["KPLIB_fobIcons", []];
+
 // Remove all icons from curator
 {
     [_curator, _x] call BIS_fnc_removeCuratorIcon
 
-} forEach KPLIB_virtual_fobIcons;
+} forEach _fobIcons;
 
-KPLIB_virtual_fobIcons = [];
+_curator setVariable ["KPLIB_fobIcons", []];
 
 true
