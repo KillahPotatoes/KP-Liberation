@@ -27,7 +27,7 @@ Furthermore it handles the saving/loading of all objects which are buildable/spa
 
   *Creates the build camera.*
 
-  * KPLIB_fnc_build_displayLoad
+* KPLIB_fnc_build_displayLoad
 
   *Display initialization.*
 
