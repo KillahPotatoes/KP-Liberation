@@ -45,6 +45,10 @@
         "KPR_players",
         "KPR_uniforms"
     ],
+    "sqflint.exclude": [
+        "Missionframework/modules/02_core/scripts/server/eventLoop.sqf",
+        "Missionframework/modules/02_core/scripts/server/sectorMonitor.sqf"
+    ],
     "psi-header.lang-config": [
         {
             "license": "Custom",
