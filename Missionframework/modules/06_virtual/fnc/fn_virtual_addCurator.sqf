@@ -50,8 +50,10 @@ switch _mode do {
 
         _curator addCuratorEditableObjects [_fobsItems, true];
 
-        // Set editing area to zero size area to prevent anything but AI commanding
-        _curator addCuratorEditingArea [1, KPLIB_zeroPos, 0];
+        // Disable place, edit, delete and destroy
+        {
+            _curator setCuratorCoef [_x, -1e10];
+        } forEach ["place", "edit", "delete", "destroy"];
 
         // Disallow attributes changing of objects
         [

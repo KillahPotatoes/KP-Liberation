@@ -39,6 +39,7 @@ if (isServer) then {
             };
             // Other modes
             default {
+                (findDisplay 312) closeDisplay 0;
                 _this call KPLIB_fnc_virtual_addCurator;
             };
         };
