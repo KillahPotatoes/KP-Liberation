@@ -40,11 +40,11 @@ if (_preset isEqualTo "KPLIB_param_presetF") then {
 };
 
 // Get the correct classname arrays - NOTE: Needs to be adjusted for new preset template, placeholder for now and not working for blufor sector
-//_lVehicles = missionNamespace getVariable ["KPLIB_preset_lVehPl" + (["E", "F"] select _friendly), []];
-//_hVehicles = missionNamespace getVariable ["KPLIB_preset_hVehPl" + (["E", "F"] select _friendly), []];
+// private _lVehicles = missionNamespace getVariable ["KPLIB_preset_lVehPl" + (["E", "F"] select _friendly), []];
+// private _hVehicles = missionNamespace getVariable ["KPLIB_preset_hVehPl" + (["E", "F"] select _friendly), []];
 
-_lVehicles = missionNamespace getVariable [["KPLIB_preset_oVehiclesLow", "F"] select _friendly, []];
-_hVehicles = missionNamespace getVariable [["KPLIB_preset_oVehicles", "F"] select _friendly, []];
+private _lVehicles = missionNamespace getVariable [["KPLIB_preset_oVehiclesLow", "F"] select _friendly, []];
+private _hVehicles = missionNamespace getVariable [["KPLIB_preset_oVehicles", "F"] select _friendly, []];
 
 // Reinitialize vehicle classnames in sector garrisons
 private _lVehCount = 0;
