@@ -27,34 +27,35 @@
         Localization contributors:
 
             English | Updated: 2018-11-10
-                KP Liberation Dev Team: https://github.com/KillahPotatoes
+                KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
-                Nercon: https://github.com/nercon
+                Nercon - https://github.com/nercon
 
             Chinese Traditional | Updated: pre 0.97
-                John M. Rodriguez: https://github.com/KOEI5113
+                John M. Rodriguez - https://github.com/KOEI5113
 
             French | Updated: pre 0.97
-                zbug: https://github.com/GreuhZbug
+                zbug - https://github.com/GreuhZbug
 
             German | Updated: 2018-11-10
-                Wyqer: https://github.com/Wyqer
+                Dubjunk - https://github.com/Dubjunk
+                Wyqer - https://github.com/Wyqer
 
             Italian | Updated: pre 0.97
-                k4s0: https://github.com/k4s0
+                k4s0 - https://github.com/k4s0
 
             Portuguese | Updated: pre 0.97
-                NomadRomeo: https://github.com/NomadRomeo
+                NomadRomeo - https://github.com/NomadRomeo
 
             Russian | Updated: pre 0.97
-                _KOC_: Constantin.rogozin@ya.ru
+                _KOC_ - Constantin.rogozin@ya.ru
 
             Spanish | Updated: pre 0.97
-                regiregi22: https://github.com/regiregi22
+                regiregi22 - https://github.com/regiregi22
 
             Turkish | Updated: pre 0.97
-                Carbneth: https://github.com/Carbneth
+                Carbneth - https://github.com/Carbneth
     -->
 
 
@@ -114,10 +115,6 @@
             <Russian>Вкл</Russian>
             <Spanish>Activado</Spanish>
             <Turkish>Aktif</Turkish>
-        </Key>
-        <Key ID="STR_KPLIB_INTRO_BEGIN">
-            <English>BEGIN OF OPERATION</English>
-            <German>BEGINN DER OPERATION</German>
         </Key>
         <Key ID="STR_KPLIB_MAINBASE">
             <English>Operation Base</English>
@@ -584,6 +581,56 @@
     <!-- SETTINGS -->
 
     <Package name="Settings">
+        <!-- ARSENAL CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
+            <English>KPLIB - Arsenal</English>
+            <German>KPLIB - Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
+            <English>Selection between whitelist method, blacklist method or unrestricted arsenal access.</English>
+            <German>Auswahl des Whitelist Methode, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
+            <English>Unrestricted</English>
+            <German>Uneingeschränkt</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
+            <English>Blacklist Method</English>
+            <German>Blacklist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
+            <English>Whitelist Method</English>
+            <German>Whitelist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE">
+            <English>Loadout Copy Distance</English>
+            <German>Loadout Kopierdistanz</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE_TT">
+            <English>Radius in meters around the player in which other players are recognized for loadout copying.</English>
+            <German>Radius in Metern um den Spieler, in dem andere Spieler zum Loadout kopieren registiert werden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
+            <English>Arsenal Type</English>
+            <German>Arsenal Typ</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
+            <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
+            <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
+            <English>BI Arsenal</English>
+            <German>BI Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
+            <English>ACE Arsenal</English>
+            <German>ACE Arsenal</German>
+        </Key>
+
         <!-- GENERAL CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_GENERAL">
             <English>KPLIB - General</English>
@@ -628,6 +675,14 @@
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA_TT">
             <English>Enables/Disables the BI stamina system. (doesn't affect ACE Advanced Fatigue)</English>
             <German>Aktiviert/Deaktiviert das BI Ausdauersystem. (Kein Einfluss auf die erweiterte Ausdauer von ACE)</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI">
+            <English>Time Multiplier</English>
+            <German>Zeitbeschleunigung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI_TT">
+            <English>Sets the time multiplier. Default of 4 means 6 hours in realtime for 24 hours in ingame time.</English>
+            <German>Legt die Zeitbeschleunigung fest. Standard von 4 bedeutet 6 Stunden Echtzeit für 24 Stunden ingame Zeit.</German>
         </Key>
 
         <!-- PRESETS CATEGORY -->
@@ -764,48 +819,6 @@
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT">
             <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
-        </Key>
-
-        <!-- ARSENAL CATEGORY -->
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
-            <English>KPLIB - Arsenal</English>
-            <German>KPLIB - Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
-            <English>Arsenal</English>
-            <German>Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
-            <English>Selection between whitelist method, blacklist method or unrestricted arsenal access.</English>
-            <German>Auswahl des Whitelist Methode, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
-            <English>Unrestricted</English>
-            <German>Uneingeschränkt</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
-            <English>Blacklist Method</English>
-            <German>Blacklist Methode</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
-            <English>Whitelist Method</English>
-            <German>Whitelist Methode</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
-            <English>Arsenal type</English>
-            <German>Arsenal Typ</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
-            <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
-            <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
-            <English>BI Arsenal</English>
-            <German>BI Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
-            <English>ACE Arsenal</English>
-            <German>ACE Arsenal</German>
         </Key>
     </Package>
 

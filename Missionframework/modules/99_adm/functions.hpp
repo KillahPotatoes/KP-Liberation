@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-02
-    Last Update: 2018-11-12
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,4 @@ class adm {
 
     // Export current campaign to admins profile and requests server to wipe the saved campaign
     class adm_wipe {};
-
-    // Completely wipes all data from the current campaign
-    class adm_wipeServer {};
 };

@@ -30,10 +30,6 @@ So this is the core gameplay where all other modules are inject their functional
 
   *Check if win conditions are met.*
 
-* KPLIB_fnc_core_cinematic
-
-  *The intro cinematic procedure.*
-
 * KPLIB_fnc_core_createFobMarker
 
   *Creates FOB marker.*
@@ -53,10 +49,6 @@ So this is the core gameplay where all other modules are inject their functional
 * KPLIB_fnc_core_handleVehicleSpawn
 
   *Handle vehicle spawn event.*
-
-* KPLIB_fnc_core_intro
-
-  *Start the intro cinematic.*
 
 * KPLIB_fnc_core_reviveInit
 

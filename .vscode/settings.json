@@ -11,7 +11,9 @@
         "KPLIB_eden_boxspawn",
         "KPLIB_eden_startbase",
         "KPLIB_eden_potatospawn",
+        "KPLIB_param_arsenalType",
         "KPLIB_param_clearVehicleCargo",
+        "KPLIB_param_copyDistance",
         "KPLIB_param_debug",
         "KPLIB_param_fobRange",
         "KPLIB_param_mobileRespawn",
@@ -33,8 +35,7 @@
         "KPLIB_param_sectorCap",
         "KPLIB_param_sectorCapRange",
         "KPLIB_param_stamina",
-        "KPLIB_param_arsenalType",
-        "KPLIB_param_copyDistance",
+        "KPLIB_param_timeMulti",
         "KPLIB_plm_groups",
         "KPR_fnc_getPlaytime",
         "KPR_fnc_getRankName",
@@ -43,6 +44,10 @@
         "KPR_playerNation",
         "KPR_players",
         "KPR_uniforms"
+    ],
+    "sqflint.exclude": [
+        "Missionframework/modules/02_core/scripts/server/eventLoop.sqf",
+        "Missionframework/modules/02_core/scripts/server/sectorMonitor.sqf"
     ],
     "psi-header.lang-config": [
         {
