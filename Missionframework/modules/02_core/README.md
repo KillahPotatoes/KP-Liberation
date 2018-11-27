@@ -26,17 +26,9 @@ So this is the core gameplay where all other modules are inject their functional
 
   *Change the owner of a sector.*
 
-* KPLIB_fnc_core_checkGear
-
-  *Check player gear against blacklist.*
-
 * KPLIB_fnc_core_checkWinCond
 
   *Check if win conditions are met.*
-
-* KPLIB_fnc_core_cinematic
-
-  *The intro cinematic procedure.*
 
 * KPLIB_fnc_core_createFobMarker
 
@@ -57,10 +49,6 @@ So this is the core gameplay where all other modules are inject their functional
 * KPLIB_fnc_core_handleVehicleSpawn
 
   *Handle vehicle spawn event.*
-
-* KPLIB_fnc_core_intro
-
-  *Start the intro cinematic.*
 
 * KPLIB_fnc_core_reviveInit
 

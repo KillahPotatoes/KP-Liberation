@@ -27,10 +27,6 @@ This module uses no data or functions from other modules.
 
   *Creates locked vehicle markers.*
 
-* KPLIB_fnc_init_fillArsenal
-
-  *Initializes the virtual arsenal.*
-
 * KPLIB_fnc_init_filterMods
 
   *Filters not available classnames out of a given array of classnames.*
@@ -62,6 +58,14 @@ This module uses no data or functions from other modules.
 * KPLIB_fnc_init_sortSectors
 
   *Sorts sector markers and fills global sector arrays.*
+
+* KPLIB_fnc_init_timeMultiApply
+
+  *Applies the chosen time multiplier.*
+
+* KPLIB_fnc_init_wipe
+
+  *Completely wipes all data from the current campaign.*
 
 ### Scripts
 No scripts will be started by this module

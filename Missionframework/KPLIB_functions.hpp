@@ -20,6 +20,7 @@ class KPLIB {
     #include "modules\04_build\functions.hpp"
     #include "modules\05_garrison\functions.hpp"
     #include "modules\06_virtual\functions.hpp"
+    #include "modules\06_arsenal\functions.hpp"
     #include "modules\99_adm\functions.hpp"
     #include "modules\99_plm\functions.hpp"
 };

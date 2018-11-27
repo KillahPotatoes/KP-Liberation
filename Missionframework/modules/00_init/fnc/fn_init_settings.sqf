@@ -4,7 +4,7 @@
     File: fn_init_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-09
-    Last Update: 2018-11-12
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -87,41 +87,30 @@
     {}
 ] call CBA_Settings_fnc_init;
 
+// KPLIB_param_timeMulti
+// Time Multiplier.
+// Default: 4x
+[
+    "KPLIB_param_timeMulti",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI", localize "STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI_TT"],
+    localize "STR_KPLIB_SETTINGS_GENERAL",
+    [1, 24, 4, 0],
+    1,
+    {[] call KPLIB_fnc_init_timeMultiApply;}
+] call CBA_Settings_fnc_init;
+
 
 /*
     ----- PRESET SETTINGS -----
 */
 
-// KPLIB_param_presetArsenal
-// Selection between the arsenal presets, blacklist method or unrestricted arsenal access.
-// Default: Blacklist Method
-[
-    "KPLIB_param_presetArsenal",
-    "LIST",
-    [localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL", localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_TT"],
-    localize "STR_KPLIB_SETTINGS_PRESET",
-    [
-        [
-            0,
-            1,
-            2
-        ],
-        [
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_0",
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_1",
-            localize "STR_KPLIB_SETTINGS_PRESET_ARSENAL_2"
-        ],
-        1
-    ],
-    1,
-    {}
-] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetFriendly
+// KPLIB_param_presetF
 // Selection for the units, vehicles, etc. for the player side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetFriendly",
+    "KPLIB_param_presetF",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_PLAYER", localize "STR_KPLIB_SETTINGS_PRESET_PLAYER_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -138,11 +127,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetEnemy
+// KPLIB_param_presetE
 // Selection for the units, vehicles, etc. for the enemy side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetEnemy",
+    "KPLIB_param_presetE",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_ENEMY", localize "STR_KPLIB_SETTINGS_PRESET_ENEMY_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -159,11 +148,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetResistance
+// KPLIB_param_presetR
 // Selection for the units, vehicles, etc. for the resistance side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetResistance",
+    "KPLIB_param_presetR",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_RESIS", localize "STR_KPLIB_SETTINGS_PRESET_RESIS_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",
@@ -180,11 +169,11 @@
     {}
 ] call CBA_Settings_fnc_init;
 
-// KPLIB_param_presetCivilian
+// KPLIB_param_presetC
 // Selection for the units, vehicles, etc. for the civilian side.
 // Default: Custom Preset
 [
-    "KPLIB_param_presetCivilian",
+    "KPLIB_param_presetC",
     "LIST",
     [localize "STR_KPLIB_SETTINGS_PRESET_CIV", localize "STR_KPLIB_SETTINGS_PRESET_CIV_TT"],
     localize "STR_KPLIB_SETTINGS_PRESET",

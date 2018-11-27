@@ -17,5 +17,6 @@
 #include "modules\03_respawn\ui.hpp"
 #include "modules\04_build\ui.hpp"
 #include "modules\06_virtual\ui.hpp"
+#include "modules\06_arsenal\ui.hpp"
 #include "modules\99_adm\ui.hpp"
 #include "modules\99_plm\ui.hpp"

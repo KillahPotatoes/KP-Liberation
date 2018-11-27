@@ -31,6 +31,10 @@ It'll also provide functions to change garrison data and a garrison management d
 
   *Initializes a sector garrison.*
 
+* KPLIB_fnc_garrison_reInitSectors
+
+  *Reinitialize sectors of given preset faction.*
+
 * KPLIB_fnc_garrison_spawn
 
   *Spawns the garrison upon sector activation.*

@@ -4,7 +4,7 @@
     File: fn_adm_wipe.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-11-11
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,9 +24,9 @@
 [
     {
         if (isServer) then {
-            [] call KPLIB_fnc_adm_wipeServer;
+            [] call KPLIB_fnc_init_wipe;
         } else {
-            [] remoteExecCall ["KPLIB_fnc_adm_wipeServer", 2];
+            [] remoteExecCall ["KPLIB_fnc_init_wipe", 2];
         };
 
         hint localize "STR_KPLIB_DIALOG_ADMIN_WIPE_NOTE";

@@ -4,7 +4,7 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -49,7 +49,7 @@ private _heavyVeh = [];
 
 // Despawn garrison light vehicles
 {
-    if (alive _x && !((crew _x) isEqualTo [])) then {
+    if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false])) then {
         _vehicle = _x;
         _lightVeh pushBack (typeOf _x);
         {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
@@ -59,7 +59,7 @@ private _heavyVeh = [];
 
 // Despawn garrison heavy vehicles
 {
-    if (alive _x && !((crew _x) isEqualTo [])) then {
+    if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false])) then {
         _vehicle = _x;
         _heavyVeh pushBack (typeOf _x);
         {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);

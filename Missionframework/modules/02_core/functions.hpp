@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-11-11
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,14 +26,8 @@ class core {
     // Change the owner of a sector
     class core_changeSectorOwner {};
 
-    // Check player gear against blacklist
-    class core_checkGear {};
-
     // Check if win conditions are met
     class core_checkWinCond {};
-
-    // The intro cinematic procedure
-    class core_cinematic {};
 
     // Creates FOB marker
     class core_createFobMarker {};
@@ -49,9 +43,6 @@ class core {
 
     // Handle vehicle spawn event
     class core_handleVehicleSpawn {};
-
-    // Start the intro cinematic
-    class core_intro {};
 
     // Module post initialization
     class core_postInit {

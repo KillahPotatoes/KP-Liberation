@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-09
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,6 +41,9 @@ class garrison {
     class garrison_preInit {
         preInit = 1;
     };
+
+    // Reinitializes sectors
+    class garrison_reInitSectors {};
 
     // Saves module specific data for the save
     class garrison_saveData {};
