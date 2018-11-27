@@ -20,7 +20,7 @@ params [
     ["_fob", "", [""]]
 ];
 
-private _index = KPLIB_sectors_fobs findIf _fob;
+private _index = KPLIB_sectors_fobs findIf {_x == _fob};
 
 if (_index isEqualTo -1) then {
     ""
