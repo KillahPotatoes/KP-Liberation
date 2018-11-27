@@ -26,7 +26,7 @@ private _mode = missionNamespace getVariable [_modeSetting, 0];
 [player, "respawn", {
     ["KPLIB_player_giveZeus", [player, _thisArgs]] call CBA_fnc_serverEvent;
 
-    player removeEventHandler ["respawn", _thisID];
+    player removeEventHandler ["respawn", _thisId];
 }, _mode] call CBA_fnc_addBISEventHandler;
 
 // Listen for CBA event to allow changing of zeus settings when mission is running
@@ -35,7 +35,7 @@ private _mode = missionNamespace getVariable [_modeSetting, 0];
 
     switch _setting do {
         // Zeus mode
-        case _this: {
+        case _thisArgs: {
             ["KPLIB_player_giveZeus", [player, _value]] call CBA_fnc_serverEvent;
         };
 
@@ -48,6 +48,6 @@ private _mode = missionNamespace getVariable [_modeSetting, 0];
             };
         };
     };
-}, _modeSetting] call CBA_fnc_addEventHandler;
+}, _modeSetting] call CBA_fnc_addEventHandlerArgs;
 
 true
