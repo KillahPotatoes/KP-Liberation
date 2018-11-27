@@ -62,7 +62,7 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
 
         [[[_class, _pos, 0, true], _dirAndUp], {
             params ["_createParams", "_vectorDirAndUp"];
-            _createParams params ["_className"];
+            _createParams params ["_className", "_pos"];
 
             private ["_obj"];
 
@@ -71,6 +71,7 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
             switch true do {
                 case (_className isKindOf "Man"): {
                     _obj = [createGroup KPLIB_preset_sidePlayers, _className] call KPLIB_fnc_common_createUnit;
+                    _obj setPosATL _pos;
                     _obj setVectorDirAndUp _vectorDirAndUp;
                 };
 
