@@ -109,7 +109,7 @@
     "KPLIB_param_zeusFobIcons",
     "CHECKBOX",
     localize "STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS",
-    localize "STR_KPLIB_SETTINGS_ZEUS",
+    [localize "STR_KPLIB_SETTINGS_ZEUS", localize "STR_KPLIB_SETTINGS_ZEUS_CLIENT"],
     true,
     0,
     {}
@@ -122,7 +122,7 @@
     "KPLIB_param_zeusLocationIcons",
     "CHECKBOX",
     localize "STR_KPLIB_SETTINGS_ZEUS_LOCATION_ICONS",
-    localize "STR_KPLIB_SETTINGS_ZEUS",
+    [localize "STR_KPLIB_SETTINGS_ZEUS", localize "STR_KPLIB_SETTINGS_ZEUS_CLIENT"],
     true,
     0,
     {}

@@ -766,7 +766,10 @@
             <English>Commander</English>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_SUBCOMMANDER">
-            <English>Sun-Commander</English>
+            <English>Sub-Commander</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_CLIENT">
+            <English>Client settings</English>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_COMMANDER_MODE">
             <English>Commander slot zeus access level</English>
@@ -785,6 +788,18 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FULL">
             <English>Full</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_RADIUS">
+            <English>Limited mode camera radius</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_CEILING">
+            <English>Limited mode camera ceiling</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS">
+            <English>Show 3D fob labels</English>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ZEUS_LOCATION_ICONS">
+            <English>Show 3D locations labels</English>
         </Key>
     </Package>
 
