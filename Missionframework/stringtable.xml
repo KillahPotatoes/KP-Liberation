@@ -581,6 +581,56 @@
     <!-- SETTINGS -->
 
     <Package name="Settings">
+        <!-- ARSENAL CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
+            <English>KPLIB - Arsenal</English>
+            <German>KPLIB - Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
+            <English>Selection between whitelist method, blacklist method or unrestricted arsenal access.</English>
+            <German>Auswahl des Whitelist Methode, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
+            <English>Unrestricted</English>
+            <German>Uneingeschränkt</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
+            <English>Blacklist Method</English>
+            <German>Blacklist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
+            <English>Whitelist Method</English>
+            <German>Whitelist Methode</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE">
+            <English>Loadout Copy Distance</English>
+            <German>Loadout Kopierdistanz</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE_TT">
+            <English>Radius in meters around the player in which other players are recognized for loadout copying.</English>
+            <German>Radius in Metern um den Spieler, in dem andere Spieler zum Loadout kopieren registiert werden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
+            <English>Arsenal Type</English>
+            <German>Arsenal Typ</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
+            <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
+            <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
+            <English>BI Arsenal</English>
+            <German>BI Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
+            <English>ACE Arsenal</English>
+            <German>ACE Arsenal</German>
+        </Key>
+
         <!-- GENERAL CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_GENERAL">
             <English>KPLIB - General</English>
@@ -769,48 +819,6 @@
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT">
             <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
-        </Key>
-
-        <!-- ARSENAL CATEGORY -->
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
-            <English>KPLIB - Arsenal</English>
-            <German>KPLIB - Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
-            <English>Arsenal</English>
-            <German>Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
-            <English>Selection between whitelist method, blacklist method or unrestricted arsenal access.</English>
-            <German>Auswahl des Whitelist Methode, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
-            <English>Unrestricted</English>
-            <German>Uneingeschränkt</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
-            <English>Blacklist Method</English>
-            <German>Blacklist Methode</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
-            <English>Whitelist Method</English>
-            <German>Whitelist Methode</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
-            <English>Arsenal type</English>
-            <German>Arsenal Typ</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
-            <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
-            <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
-            <English>BI Arsenal</English>
-            <German>BI Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
-            <English>ACE Arsenal</English>
-            <German>ACE Arsenal</German>
         </Key>
     </Package>
 
