@@ -626,6 +626,14 @@
             <English>Enables/Disables the BI stamina system. (doesn't affect ACE Advanced Fatigue)</English>
             <German>Aktiviert/Deaktiviert das BI Ausdauersystem. (Kein Einfluss auf die erweiterte Ausdauer von ACE)</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI">
+            <English>Time Multiplier</English>
+            <German>Zeitbeschleunigung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI_TT">
+            <English>Sets the time multiplier. Default of 4 means 6 hours in realtime for 24 hours in ingame time.</English>
+            <German>Legt die Zeitbeschleunigung fest. Standard von 4 bedeutet 6 Stunden Echtzeit für 24 Stunden ingame Zeit.</German>
+        </Key>
 
         <!-- PRESETS CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_PRESET">

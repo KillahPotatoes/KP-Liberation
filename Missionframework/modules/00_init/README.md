@@ -59,6 +59,10 @@ This module uses no data or functions from other modules.
 
   *Sorts sector markers and fills global sector arrays.*
 
+* KPLIB_fnc_init_timeMultiApply
+
+  *Applies the chosen time multiplier.*
+
 * KPLIB_fnc_init_wipe
 
   *Completely wipes all data from the current campaign.*

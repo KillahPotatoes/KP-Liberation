@@ -69,6 +69,9 @@ class init {
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
 
+    // Applies the chosen time multiplier
+    class init_timeMultiApply {};
+
     // Completely wipes all data from the current campaign
     class init_wipe {};
 };
