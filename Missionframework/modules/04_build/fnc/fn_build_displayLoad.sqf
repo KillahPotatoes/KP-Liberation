@@ -6,7 +6,7 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-09
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,8 +61,25 @@ _confirmButton ctrlAddEventHandler ["buttonClick", {
         deleteVehicle _x;
 
         [[[_class, _pos, 0, true], _dirAndUp], {
-            private _obj = (_this select 0) call KPLIB_fnc_common_createVehicle;
-            _obj setVectorDirAndUp (_this select 1);
+            params ["_createParams", "_vectorDirAndUp"];
+            _createParams params ["_className"];
+
+            private ["_obj"];
+
+            // TODO save only builings via Build module, units and vehicles should be moved to persistence module
+            // Confirmation handling must be moved to separate function
+            switch true do {
+                case (_className isKindOf "Man"): {
+                    _obj = [createGroup KPLIB_preset_sidePlayers, _className] call KPLIB_fnc_common_createUnit;
+                    _obj setVectorDirAndUp _vectorDirAndUp;
+                };
+
+                default {
+                    _obj = _createParams call KPLIB_fnc_common_createVehicle;
+                    _obj setVectorDirAndUp _vectorDirAndUp;
+                };
+            };
+
 
             ["KPLIB_build_item_built", [_obj, player getVariable "KPLIB_fob"]] call CBA_fnc_localEvent;
         }] remoteExecCall ["call", 2];
