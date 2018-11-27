@@ -14,7 +14,6 @@ For serious playing use the latest stable release: [v0.963a](https://github.com/
 ### Summary of this sprint
 <!-- A summary of what've been done during the sprint. Also which conclusions, plans, new ideas, etc. evolved. -->
 
-
 ### Content of this sprint
 <!-- List of all finished tasks which were part of this sprint. -->
 | Task | Description | PR |
@@ -24,6 +23,18 @@ For serious playing use the latest stable release: [v0.963a](https://github.com/
 <!-- Link to the releases entry of the current sprint release -->
 <!-- Example: https://github.com/KillahPotatoes/KP-Liberation/releases/tag/v0.97S6 -->
 
+### Official public Testserver
+The latest pre-release missionfile is running on our public Testserver. Feel free to join and have a look at the current development state. We would highly appreciate any feedback and/or bug reports.
+
+**Name:** KP Liberation Dev Testserver
+
+**IP:** 195.201.56.254
+
+**Port:** 2322
+
+**Needed Mods:**
+* [CBA A3](https://steamcommunity.com/workshop/filedetails/?id=450814997)
+* [KP Ranks](https://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 
 ### Bugs found so far
 <!-- List of all bugs which had been found during the sprint which weren't fixed during this sprint. -->
