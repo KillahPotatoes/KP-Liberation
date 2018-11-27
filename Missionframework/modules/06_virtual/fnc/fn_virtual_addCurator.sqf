@@ -4,7 +4,7 @@
     File: fn_virtual_addCurator.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@
         _mode - Curator mode 1 (limited) or 2 (limited, free camera) or 3 (full)    [NUMBER, defaults to 1 (limited)]
 
     Returns:
-        Curator was added to unit [BOOL]
+        Curator logic [OBJECT]
 */
 params [
     ["_unit", objNull, [objNull]],
@@ -58,4 +58,4 @@ switch _mode do {
 
 _unit assignCurator _curator;
 
-true
+_curator
