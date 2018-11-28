@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-11-09
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ private _moduleData = ["build"] call KPLIB_fnc_init_getSaveData;
 if (_moduleData isEqualTo []) then {
     if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data empty, creating new data...";};
 
-    // Initialize every sector and add the data to the garrison array
+    // Initialize build save namespace
     KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
 } else {
     // Otherwise start applying the saved data
@@ -39,15 +39,32 @@ if (_moduleData isEqualTo []) then {
 
         private _fobItems = KPLIB_build_saveNamespace getVariable _fob;
         if(isNil "_fobItems") then {
-            KPLIB_build_saveNamespace setVariable [_fob, []];
+            _fobItems = [];
+            KPLIB_build_saveNamespace setVariable [_fob, _fobItems];
         };
 
         // Convert serialized objects into real objects
         {
-            private _object = [_x select 0, _x select 1] call KPLIB_fnc_common_createVehicle;
-            _object setVectorDirAndUp (_x select 2);
+            _x params ["_className", "_posWorld", "_vectorDirAndUp"];
 
-            (KPLIB_build_saveNamespace getVariable _fob) pushBack _object;
+            private ["_object"];
+
+            // TODO proper deserialization/serialization with groups and vehicle crews handling
+            switch true do {
+                case (_className isKindOf "Man"): {
+                    _object = [createGroup KPLIB_preset_sidePlayers, _className] call KPLIB_fnc_common_createUnit;
+                    _object setPosWorld _posWorld;
+                    _object setVectorDirAndUp _vectorDirAndUp;
+                };
+
+                default {
+                    _object = [_className] call KPLIB_fnc_common_createVehicle;
+                    _object setPosWorld _posWorld;
+                    _object setVectorDirAndUp _vectorDirAndUp;
+                };
+            };
+
+            _fobItems pushBack _object;
         } forEach _items;
 
     } forEach _moduleData;

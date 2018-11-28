@@ -5,6 +5,8 @@
         "*.hpp": "sqf"
     },
     "sqflint.ignoredVariables": [
+        "_thisId",
+        "_thisArgs",
         "_input0",
         "BIS_fnc_reviveInit",
         "CBA_Settings_fnc_init",
@@ -35,6 +37,12 @@
         "KPLIB_param_sectorCap",
         "KPLIB_param_sectorCapRange",
         "KPLIB_param_stamina",
+        "KPLIB_param_commanderZeusMode",
+        "KPLIB_param_subCommanderZeusMode",
+        "KPLIB_param_limitedZeusRadius",
+        "KPLIB_param_limitedZeusCeiling",
+        "KPLIB_param_zeusFobIcons",
+        "KPLIB_param_zeusLocationIcons",
         "KPLIB_param_timeMulti",
         "KPLIB_plm_groups",
         "KPR_fnc_getPlaytime",
