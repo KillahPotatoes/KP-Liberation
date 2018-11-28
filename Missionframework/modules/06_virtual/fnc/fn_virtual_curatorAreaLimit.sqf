@@ -4,11 +4,11 @@
     File: fn_virtual_curatorAreaLimit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-25
-    Last Update: 2018-11-27
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Limits curator camera to certain area. Needs to be executed server side.
+        Limits curator camera to certain area.
 
     Parameter(s):
         _curator    - Curator logic             [OBJECT, defaults to nil]
@@ -26,7 +26,7 @@ params [
 	["_ceiling", KPLIB_param_limitedZeusCeiling, [0]]
 ];
 
-_curator addCuratorCameraArea [1, _position, _radius];
-_curator setCuratorCameraAreaCeiling _ceiling;
+[_curator, [1, _position, _radius]] remoteExec ["addCuratorCameraArea", 2];
+[_curator, _ceiling] remoteExec ["setCuratorCameraAreaCeiling", 2];
 
 true

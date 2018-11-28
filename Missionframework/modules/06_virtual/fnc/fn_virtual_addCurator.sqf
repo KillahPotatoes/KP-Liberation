@@ -73,6 +73,9 @@ switch _mode do {
 _unit assignCurator _curator;
 
 [_curator ,{
+    // Close the zeus display to prevent issues when recreating already open zeus
+    (findDisplay 312) closeDisplay 0;
+
     // Add 3D fob icons if enabled
     if (KPLIB_param_zeusFobIcons) then {
         _this call KPLIB_fnc_virtual_curatorUpdateFobIcons;
