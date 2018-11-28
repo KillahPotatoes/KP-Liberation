@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-12
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,6 +25,9 @@ class build {
 
     // Creates the build camera
     class build_camCreate {};
+
+    // Confirms all items in queue
+    class build_confirmAll {};
 
     // Display initialization
     class build_displayLoad {};

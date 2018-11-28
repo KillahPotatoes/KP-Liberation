@@ -55,6 +55,11 @@ if (_moduleData isEqualTo []) then {
                     _object = [createGroup KPLIB_preset_sidePlayers, _className] call KPLIB_fnc_common_createUnit;
                     _object setPosWorld _posWorld;
                     _object setVectorDirAndUp _vectorDirAndUp;
+
+                    // Set watching direction
+                    if (_object isEqualTo formLeader _object) then {
+                        _object setFormDir getDir _object;
+                    };
                 };
 
                 default {
