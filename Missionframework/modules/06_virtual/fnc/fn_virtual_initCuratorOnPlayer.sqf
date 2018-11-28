@@ -4,14 +4,14 @@
     File: fn_virtual_initCuratorOnPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-27
-    Last Update: 2018-11-27
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        No description added yet.
+        Initializes Curator and CBA settings handlers.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _modeSetting - Name of CBA settings global variable that holds curator mode value [STRING, defaults to ""]
 
     Returns:
         Curator handling was initialized [BOOL]
