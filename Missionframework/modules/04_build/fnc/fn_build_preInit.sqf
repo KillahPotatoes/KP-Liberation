@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-28
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -47,7 +47,7 @@ if (isServer) then {
 
         // If fob has no save data, initialize it
         if (isNil {KPLIB_build_saveNamespace getVariable _fob}) then {
-            KPLIB_build_saveNamespace setVariable [_fob, [], true];
+            KPLIB_build_saveNamespace setVariable [_fob, []];
         };
 
         (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
