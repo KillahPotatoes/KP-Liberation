@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-11-25
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ private _moduleData = ["build"] call KPLIB_fnc_init_getSaveData;
 if (_moduleData isEqualTo []) then {
     if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data empty, creating new data...";};
 
-    // Initialize every sector and add the data to the garrison array
+    // Initialize build save namespace
     KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
 } else {
     // Otherwise start applying the saved data

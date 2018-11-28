@@ -1,16 +1,12 @@
 # KP Liberation Module Description
 
 ## Zeus Module
-This module provides...
+This module provides access to Zeus module functionalities
 
 ### Dependencies
 * Init
 * Core
-
-### Functions
-* KPLIB_fnc_garrison_changeOwner
-
-  *Changes the owner of a sector garrison.*
+* Build
 
 ### Scripts
 No scripts will be started by this module
