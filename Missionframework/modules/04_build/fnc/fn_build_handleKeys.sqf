@@ -5,7 +5,7 @@
     File: fn_build_handleKeys.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-18
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,7 +16,7 @@
         _args - Gives the display or control, the keyboard code and the state of Shift, Ctrl and Alt    [ARRAY, defaults to nil]
 
     Returns:
-        Function reached the end [BOOL]
+        Stop handling key presses [BOOL]
 */
 
 params [
