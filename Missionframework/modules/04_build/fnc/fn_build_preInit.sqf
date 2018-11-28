@@ -57,6 +57,8 @@ if (isServer) then {
 if (hasInterface) then {
     // Register build item movement handler
     ["KPLIB_build_item_moved", KPLIB_fnc_build_validatePosition] call CBA_fnc_addEventHandler;
+
+    player addEventHandler ["Killed", KPLIB_fnc_build_stop];
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initialized", diag_tickTime];};
