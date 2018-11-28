@@ -93,6 +93,9 @@ class build {
     // Start building logic
     class build_start {};
 
+    // Start building logic for single item build
+    class build_start_single {};
+
     // Stop building logic
     class build_stop {};
 

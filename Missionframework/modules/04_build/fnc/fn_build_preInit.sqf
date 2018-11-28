@@ -43,6 +43,7 @@ if (isServer) then {
 
     ["KPLIB_build_item_built", {
         params ["_object", "_fob"];
+        if (_fob isEqualTo "") exitWith {};
 
         // If fob has no save data, initialize it
         if (isNil {KPLIB_build_saveNamespace getVariable _fob}) then {
