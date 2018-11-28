@@ -4,7 +4,7 @@
     File: defines.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-09
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,6 +28,8 @@
 #define KPLIB_IDC_BUILD_ITEM_LIST           70202
 
 #define KPLIB_IDC_BUILD_CONFIRM             70301
+
+#define KPLIB_IDC_BUILD_DIALOG_AREA         70401
 
 // All tabs IDCs
 #define KPLIB_BUILD_TABS_IDCS_ARRAY         [70100,70101,70102,70103,70104,70105,70106,70107]
