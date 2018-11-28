@@ -40,7 +40,7 @@ So this is the core gameplay where all other modules are inject their functional
 
 * KPLIB_fnc_core_getNearestMarker
 
-  *Get the nearest capturable sector.*
+  *Get the marker from array of markers.*
 
 * KPLIB_fnc_core_handleSector
 

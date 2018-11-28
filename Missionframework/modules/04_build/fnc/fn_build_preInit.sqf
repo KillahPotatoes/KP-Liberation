@@ -34,6 +34,9 @@ KPLIB_build_ticker = -1;
 // Save data
 KPLIB_build_saveNamespace = locationNull;
 
+// Object from which FOB build event originated
+KPLIB_build_fobBuildObject = objNull;
+
 if (isServer) then {
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_build_loadData}] call CBA_fnc_addEventHandler;
@@ -62,6 +65,7 @@ if (hasInterface) then {
     // Register Build module as FOB building provider
     ["KPLIB_fob_build_requested", {
         params ["_object"];
+        KPLIB_build_fobBuildObject = _object;
 
          [getPos _object, nil, [KPLIB_preset_fobBuilding, 0,0,0], {
              params ["_builtObject"];
@@ -70,7 +74,7 @@ if (hasInterface) then {
              // Emit the built event with FOB and object to assign the object to FOB
              ["KPLIB_build_item_built", [_builtObject, _fobName]] call CBA_fnc_globalEvent;
              // Remove object
-             deleteVehicle _builtObject;
+             deleteVehicle KPLIB_build_fobBuildObject;
          }] call KPLIB_fnc_build_start_single;
 
     }] call CBA_fnc_addEventHandler;
