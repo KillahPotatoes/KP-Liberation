@@ -4,7 +4,7 @@
     File: fn_virtual_addCurator.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-27
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,15 +25,15 @@ params [
 // Do not add curator if mode out of range or unit is null
 if (!(_mode in [1, 2, 3]) || isNull _unit) exitWith {objNull};
 
-if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
-
 _unit call KPLIB_fnc_virtual_removeCurator;
+
+if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
 
 private _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 // Add player so he can see himself in curator
 _curator addCuratorEditableObjects [[_unit], false];
 
-_curator setVariable ["KPLIB_mode", _mode];
+_curator setVariable ["KPLIB_mode", _mode, true];
 
 switch _mode do {
     // Limited mode, limited and full camera
@@ -69,16 +69,20 @@ switch _mode do {
     };
 };
 
-// Add 3D fob icons if enabled
-if (KPLIB_param_zeusFobIcons) then {
-    _curator call KPLIB_fnc_virtual_curatorUpdateFobIcons;
-};
-
-// Add 3D location icons if enabled
-if (KPLIB_param_zeusLocationIcons) then {
-    _curator call BIS_fnc_drawCuratorLocations;
-};
-
+// Assigning the curator will change locality, needs to be assigned before adding icons
 _unit assignCurator _curator;
+
+[_curator ,{
+    // Add 3D fob icons if enabled
+    if (KPLIB_param_zeusFobIcons) then {
+        _this call KPLIB_fnc_virtual_curatorUpdateFobIcons;
+    };
+
+    // Add 3D location icons if enabled
+    if (KPLIB_param_zeusLocationIcons) then {
+        _this call BIS_fnc_drawCuratorLocations;
+    };
+}] remoteExec ["call", _curator];
+
 
 _curator

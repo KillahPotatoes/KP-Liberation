@@ -20,6 +20,8 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
+if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Removing curator from unit '%1'", _unit]};
+
 // Remove curator from unit and delete it afterwards
 {
     if (_unit isEqualTo getAssignedCuratorUnit _x) then {
