@@ -59,6 +59,22 @@ if (hasInterface) then {
     // Register build item movement handler
     ["KPLIB_build_item_moved", KPLIB_fnc_build_validatePosition] call CBA_fnc_addEventHandler;
 
+    // Register Build module as FOB building provider
+    ["KPLIB_fob_build_requested", {
+        params ["_object"];
+
+         [getPos _object, nil, [KPLIB_preset_fobBuilding, 0,0,0], {
+             params ["_builtObject"];
+             // Build FOB when item placed
+             private _fobName = [getPos _builtObject] call KPLIB_fnc_core_buildFob;
+             // Emit the built event with FOB and object to assign the object to FOB
+             ["KPLIB_build_item_built", [_builtObject, _fobName]] call CBA_fnc_globalEvent;
+             // Remove object
+             deleteVehicle _builtObject;
+         }] call KPLIB_fnc_build_start_single;
+
+    }] call CBA_fnc_addEventHandler;
+
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
 };
 
