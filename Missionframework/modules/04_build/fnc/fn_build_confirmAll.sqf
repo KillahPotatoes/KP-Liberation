@@ -59,6 +59,7 @@ systemChat "buildConfirm: Resource check not implemented yet!";
 
 
         ["KPLIB_build_item_built", [_obj, player getVariable "KPLIB_fob"]] call CBA_fnc_globalEvent;
+        ["KPLIB_build_item_built_local", [_obj, player getVariable "KPLIB_fob"]] call CBA_fnc_localEvent;
     }] remoteExecCall ["call", 2];
 
 } forEach _validItems;
