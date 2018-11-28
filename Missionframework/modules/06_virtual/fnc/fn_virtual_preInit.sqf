@@ -59,16 +59,13 @@ if (hasInterface) then {
     ["KPLIB_curatorOpen", {
         [{
             private _watermarkCtrl = (findDisplay 312) displayCtrl 15717;
-            systemChat str _watermarkCtrl;
             _watermarkCtrl ctrlSetText "KPGUI\res\kp512_CA.paa";
         }] call CBA_fnc_execNextFrame;
     }] call CBA_fnc_addEventHandler;
 
     // Limit curator area
     ["KPLIB_curatorOpen", {
-        params ["_display", "_player"];
-
-        private _curator = getAssignedCuratorLogic _player;
+        private _curator = getAssignedCuratorLogic player;
 
         switch (_curator getVariable ["KPLIB_mode", 0]) do {
             // Limited mode

@@ -13,6 +13,6 @@
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
-        KPLIB_virtual = "['KPLIB_curatorOpen', [_this, player]] call CBA_fnc_localEvent;['KPLIB_playerCuratorOpen', [player]] call CBA_fnc_serverEvent";
+        KPLIB_virtual = "['KPLIB_curatorOpen', _this] call CBA_fnc_localEvent;['KPLIB_playerCuratorOpen', player] call CBA_fnc_serverEvent";
     };
 };

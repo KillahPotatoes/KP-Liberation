@@ -15,7 +15,7 @@
         _mode - Curator mode 1 (limited) or 2 (limited, free camera) or 3 (full)    [NUMBER, defaults to 1 (limited)]
 
     Returns:
-        Curator logic [OBJECT]
+       Curator was added to unit [BOOL]
 */
 params [
     ["_unit", objNull, [objNull]],
@@ -23,69 +23,77 @@ params [
 ];
 
 // Do not add curator if mode out of range or unit is null
-if (!(_mode in [1, 2, 3]) || isNull _unit) exitWith {objNull};
+if (!(_mode in [1, 2, 3]) || isNull _unit) exitWith {false};
 
-_unit call KPLIB_fnc_virtual_removeCurator;
+private _oldCurator = getAssignedCuratorLogic _unit;
+unassignCurator _oldCurator;
 
-if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
+// Due to locality zeus issues we need to wait until old curator is unassigned from unit
+[{isNull getAssignedCuratorLogic (_this select 0)}, {
+    params ["_unit", "_mode", "_oldCurator"];
 
-private _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-// Add player so he can see himself in curator
-_curator addCuratorEditableObjects [[_unit], false];
+    deleteVehicle _oldCurator;
 
-_curator setVariable ["KPLIB_mode", _mode, true];
+    if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
 
-switch _mode do {
-    // Limited mode, limited and full camera
-    case 1;
-    case 2: {
-        _curator setVariable ["Addons", 0, true];
+    private _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    // Add player so he can see himself in curator
+    _curator addCuratorEditableObjects [[_unit], false];
 
-        // Add Built items to zeus
-        private _fobSaveNamespace = (missionNamespace getVariable ["KPLIB_build_saveNamespace", objNull]);
-        private _fobsItems = [];
-        {
-            _fobsItems append (_fobSaveNamespace getVariable _x);
-        } forEach allVariables _fobSaveNamespace;
+    _curator setVariable ["KPLIB_mode", _mode, true];
 
-        _curator addCuratorEditableObjects [_fobsItems, true];
+    switch _mode do {
+        // Limited mode, limited and full camera
+        case 1;
+        case 2: {
+            _curator setVariable ["Addons", 0, true];
 
-        // Disable place, edit, delete and destroy
-        {
-            _curator setCuratorCoef [_x, -1e10];
-        } forEach ["place", "edit", "delete", "destroy"];
+            // Add Built items to zeus
+            private _fobSaveNamespace = (missionNamespace getVariable ["KPLIB_build_saveNamespace", objNull]);
+            private _fobsItems = [];
+            {
+                _fobsItems append (_fobSaveNamespace getVariable _x);
+            } forEach allVariables _fobSaveNamespace;
 
-        // Disallow attributes changing of objects
-        [
-            _curator,
-            "object",
-            []
-        ] call BIS_fnc_setCuratorAttributes;
-    };
-    // Full mode
-    case 3: {
-        _curator setVariable ["Addons", 3, true];
-        _curator addCuratorEditableObjects [entities "", true];
-    };
-};
+            _curator addCuratorEditableObjects [_fobsItems, true];
 
-// Assigning the curator will change locality, needs to be assigned before adding icons
-_unit assignCurator _curator;
+            // Disable place, edit, delete and destroy
+            {
+                _curator setCuratorCoef [_x, -1e10];
+            } forEach ["place", "edit", "delete", "destroy"];
 
-[_curator ,{
-    // Close the zeus display to prevent issues when recreating already open zeus
-    (findDisplay 312) closeDisplay 0;
-
-    // Add 3D fob icons if enabled
-    if (KPLIB_param_zeusFobIcons) then {
-        _this call KPLIB_fnc_virtual_curatorUpdateFobIcons;
+            // Disallow attributes changing of objects
+            [
+                _curator,
+                "object",
+                []
+            ] call BIS_fnc_setCuratorAttributes;
+        };
+        // Full mode
+        case 3: {
+            _curator setVariable ["Addons", 3, true];
+            _curator addCuratorEditableObjects [entities "", true];
+        };
     };
 
-    // Add 3D location icons if enabled
-    if (KPLIB_param_zeusLocationIcons) then {
-        _this call BIS_fnc_drawCuratorLocations;
-    };
-}] remoteExec ["call", _curator];
+    // Assigning the curator will change locality, needs to be assigned before adding icons
+    _unit assignCurator _curator;
 
+    [_curator ,{
+        // Close the zeus display to prevent issues when recreating already open zeus
+        (findDisplay 312) closeDisplay 0;
 
-_curator
+        // Add 3D fob icons if enabled
+        if (KPLIB_param_zeusFobIcons) then {
+            _this call KPLIB_fnc_virtual_curatorUpdateFobIcons;
+        };
+
+        // Add 3D location icons if enabled
+        if (KPLIB_param_zeusLocationIcons) then {
+            _this call BIS_fnc_drawCuratorLocations;
+        };
+    }] remoteExec ["call", _curator];
+
+}, [_unit, _mode, _oldCurator], 10] call CBA_fnc_waitUntilAndExecute;
+
+true
