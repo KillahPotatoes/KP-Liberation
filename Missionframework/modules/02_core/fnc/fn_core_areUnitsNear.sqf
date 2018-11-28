@@ -31,5 +31,5 @@ params [
 if (isNil "_centerPos") exitWith {false};
 
 private _nearUnits = _centerPos nearEntities ["AllVehicles", _radius];
-// Return true if there is any enemy unit in the area
+// Return true if there is any unit of given side in the area
 (_nearUnits findIf {side _x in _sidesToCheck} != -1)
