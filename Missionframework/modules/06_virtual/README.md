@@ -12,7 +12,7 @@ This module provides access to Zeus module functionalities
 
 **KPLIB_player_giveZeus** (server side):
 ```
-// Gives zeus module access to unit with given mode (0-4)
+// Gives zeus module access to unit with given mode (0-3)
 ["KPLIB_player_giveZeus", [<unit, OBJECT>, <mode, NUMBER>]] call CBA_fnc_serverEvent;
 ```
 
