@@ -4,11 +4,11 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-10-18
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Defines for all functions, which are brought by this module.
+        Defines for all functions, which are brought by this module.
 */
 
 class core {
@@ -26,14 +26,8 @@ class core {
     // Change the owner of a sector
     class core_changeSectorOwner {};
 
-    // Check player gear against blacklist
-    class core_checkGear {};
-
     // Check if win conditions are met
     class core_checkWinCond {};
-
-    // The intro cinematic procedure
-    class core_cinematic {};
 
     // Creates FOB marker
     class core_createFobMarker {};
@@ -41,23 +35,14 @@ class core {
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
 
-    // Get the nearest capturable sector
-    class core_getNearestSector {};
+    // Get the nearest marker from array of markers
+    class core_getNearestMarker {};
 
     // Handle an activated sector
     class core_handleSector {};
 
     // Handle vehicle spawn event
     class core_handleVehicleSpawn {};
-
-    // Start the intro cinematic
-    class core_intro {};
-
-    // Creates diary entries with parameter values
-    class core_paramDiaryList {};
-
-    // Converts value of param to "texts" string
-    class core_paramToText {};
 
     // Module post initialization
     class core_postInit {
@@ -71,6 +56,9 @@ class core {
 
     // Initialize BIS revive
     class core_reviveInit {};
+
+    // CBA Settings for this module
+    class core_settings {};
 
     // Setup of actions avaible to players
     class core_setupPlayerActions {};

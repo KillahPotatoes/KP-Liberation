@@ -4,23 +4,32 @@
     File: fn_core_areUnitsNear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-07
-    Last Update: 2018-09-08
+    Last Update: 2018-11-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Checks if there are units from given side(s) inside a given radius around a given position.
+        Checks if there are units from given side(s) inside a given radius around a given position.
 
     Parameter(s):
-        0: POSITION - Position to check for blufor units.
-        1: NUMBER - Radius in meters. (Default: 1000m)
-        2: ARRAY - Array of SIDE values. (Default: [KPLIB_preset_sidePlayers])
+        _centerPos      - Position to check for units           [POSITION, defaults to nil]
+        _radius         - Radius in meters                      [NUMBER, defaults to 1000]
+        _sidesToCheck   - Array of SIDE values                  [ARRAY, defaults to KPLIB_preset_sidePlayers]
 
     Returns:
-    BOOL
+        Result [BOOL]
 */
 
-params ["_centerPos", ["_radius", 1000], ["_sidesToCheck", [KPLIB_preset_sidePlayers]]];
+// TODO
+// Guess we can move this to common
+
+params [
+    ["_centerPos", nil, [[]], [2,3]],
+    ["_radius", 1000, [0]],
+    ["_sidesToCheck", [KPLIB_preset_sidePlayers], [[]]]
+];
+
+if (isNil "_centerPos") exitWith {false};
 
 private _nearUnits = _centerPos nearEntities ["AllVehicles", _radius];
-// Return true if there is any enemy unit in the area
+// Return true if there is any unit of given side in the area
 (_nearUnits findIf {side _x in _sidesToCheck} != -1)

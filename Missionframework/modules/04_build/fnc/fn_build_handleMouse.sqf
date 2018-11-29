@@ -6,7 +6,7 @@
     File: fn_build_handleMouse.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-05
+    Last Update: 2018-11-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,6 +19,7 @@
     Returns:
         NOTHING
 */
+
 params [
     ["_mode", nil, [""]],
     ["_args", nil, [[]]]
@@ -125,4 +126,4 @@ switch toLower _mode do {
         diag_log format ["[KP LIBERATION] [BUILD] Incorrect mode passed to handleMouse: %1", _mode]
     };
 
-}
+};

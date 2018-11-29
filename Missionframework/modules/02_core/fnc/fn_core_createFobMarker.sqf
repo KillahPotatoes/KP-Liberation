@@ -4,19 +4,22 @@
     File: fn_core_createFobMarker.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-12
-    Last Update: 2018-05-12
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Creates FOB marker
+        Creates FOB marker
 
     Parameter(s):
-        0: ARRAY - Position where FOB has to be built.
+        _position - Position where FOB has to be built [ARRAY, defaults to []]
 
     Returns:
-    STRING - Marker name
+        Marker name [STRING]
 */
-params ["_position"];
+
+params [
+    ["_position", [], [[]], 3]
+];
 
 private _markerName = format ["KPLIB_fob_%1", mapGridPosition _position];
 

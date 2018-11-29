@@ -4,21 +4,17 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-10-18
+    Last Update: 2018-11-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Tasks of this module are:
-        * Fetch parameters
-        * Fetch config values
-        * Define basic ui values
-        * Fetch, check and distribute preset data
+        The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
 
-    Dependencies:
-    NONE
+    Parameter(s):
+        NONE
 
     Returns:
-    BOOL
+        Module preInit finished [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initializing...", diag_tickTime];};
@@ -33,12 +29,12 @@ KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
 // Check for KP Ranks
 KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
 
+// Process CBA Settings
+[] call KPLIB_fnc_init_settings;
+
 // Parameter processing and vanilla save deactivation on the server only
 if (isServer) then {
     enableSaving [false, false];
-
-    KPLIB_param_source = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
-    [] call KPLIB_fnc_init_paramFetchAll;
 
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
@@ -54,21 +50,21 @@ if (isServer) then {
     ----- Module Globals -----
 */
 
-// Array of all whitelisted arsenal items
-KPLIB_arsenal_whitelist = [];
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
 // Respawn position shortcut
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // Squad names for the buildable squads
 KPLIB_preset_squadNames = [
-    localize "STR_SQUAD_LIGHT",
-    localize "STR_SQUAD_RIFLE",
-    localize "STR_SQUAD_AT",
-    localize "STR_SQUAD_AA",
-    localize "STR_SQUAD_RECON",
-    localize "STR_SQUAD_PARA"
+    localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
+    localize "STR_KPLIB_UNITS_SQUAD_RIFLE",
+    localize "STR_KPLIB_UNITS_SQUAD_AT",
+    localize "STR_KPLIB_UNITS_SQUAD_AA",
+    localize "STR_KPLIB_UNITS_SQUAD_RECON",
+    localize "STR_KPLIB_UNITS_SQUAD_PARA"
 ];
+// Reset position shortcut
+KPLIB_resetPos = [99999,99999,0];
 // Indicator if the saved data is fully loaded
 KPLIB_save_loaded = false;
 // Spawnpoints for air vehicles
@@ -97,8 +93,6 @@ KPLIB_sectors_military = [];
 KPLIB_sectors_spawn = [];
 // All radiotowers
 KPLIB_sectors_tower = [];
-// Reset position shortcut
-KPLIB_resetPos = [99999,99999,0];
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
 

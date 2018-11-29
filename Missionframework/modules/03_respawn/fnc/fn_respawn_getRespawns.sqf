@@ -4,21 +4,21 @@
     File: fn_respawn_getRespawns.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
-    Last Update: 2018-09-14
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Get list of currenty available respawns
+        Get list of currenty available respawns
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    ARRAY - <STRING, STRING/OBJECT> - Array of arrays with available respawns
+        Array of arrays with available respawns [ARRAY]
 */
 
 
-private _spawns = [[localize "STR_MAINBASE", KPLIB_eden_startbase]];
+private _spawns = [[localize "STR_KPLIB_MAINBASE", KPLIB_eden_startbase]];
 
 // Add the FOBs to the spawn list
 {
@@ -29,7 +29,7 @@ private _spawns = [[localize "STR_MAINBASE", KPLIB_eden_startbase]];
 } forEach KPLIB_sectors_fobs;
 
 // Add mobile respawns to the spawn list if parameter isn't disabled
-if (KPLIB_param_mobileRespawn > 0) then {
+if (KPLIB_param_mobileRespawn) then {
     {
         private _displayName = getText (configFile >>  "CfgVehicles" >> (typeOf _x) >> "displayName");
         // Add item to list

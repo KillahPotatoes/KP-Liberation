@@ -4,17 +4,17 @@
     File: fn_core_updateSectorMarkers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2018-05-08
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Updates general sector marker colors and create locked vehicle markers.
+        Updates general sector marker colors and create locked vehicle markers.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 // Color change for the main sector markers.

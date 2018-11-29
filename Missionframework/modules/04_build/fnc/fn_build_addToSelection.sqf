@@ -5,11 +5,11 @@
     File: fn_build_addToSelection.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-04
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Manges selection
+        Manages selection depending on currently pressed keys.
 
     Parameter(s):
         _selection - Items to add to selection [OBJECT or ARRAY, defaults to objNull]
@@ -17,6 +17,7 @@
     Returns:
        Selection was changed [BOOLEAN]
 */
+
 params [
     ["_selection", objNull, [objNull, []]]
 ];

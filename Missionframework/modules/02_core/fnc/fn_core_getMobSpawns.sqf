@@ -4,17 +4,17 @@
     File: fn_core_getMobSpawns.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-30
-    Last Update: 2018-09-13
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Returns an array with all mobile spawn objects.
+        Returns an array with all mobile spawn objects.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    ARRAY
+        Mobile spawn objects [ARRAY]
 */
 
 private _return = vehicles select {

@@ -4,20 +4,20 @@
     File: fn_core_reviveInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-02
-    Last Update: 2018-05-02
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Initializes BIS revive module if ace medical is not present
+        Initializes BIS revive module if ace medical is not present
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
-if(KPLIB_ace_medical || KPLIB_param_reviveMode == 0) exitWith {
+if(KPLIB_ace_medical || (KPLIB_param_reviveMode isEqualTo 0)) exitWith {
     diag_log format ["[KP LIBERATION] [CORE] Skipping BIS revive initialization!"];
 };
 

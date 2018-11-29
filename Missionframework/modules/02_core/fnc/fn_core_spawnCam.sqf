@@ -4,24 +4,26 @@
     File: fn_core_spawnCam.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-05-04
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Show the spawning camera sequence.
+        Show the spawning camera sequence.
 
     Parameter(s):
-        0: STRING - Name of the respawn point for the text display.
+        _spawn_str - Name of the respawn point for the text display [STRING, defaults to ""]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
-params ["_spawn_str"];
+params [
+    ["_spawn_str", "", [""]]
+];
 
 // Get the nearest sector from the current position for the spawn text display
-private _nearestSector = [2000] call KPLIB_fnc_core_getNearestSector;
-if (_nearestSector != "") then {_nearestSector = format ["%1 %2", localize "STR_NEAR", markertext _nearestSector];};
+private _nearestSector = [2000] call KPLIB_fnc_core_getNearestMarker;
+if (_nearestSector != "") then {_nearestSector = format ["%1 %2", localize "STR_KPLIB_NEAR", markertext _nearestSector];};
 
 // Get the current time for the spawn text display
 private _zeroHour = "";
@@ -93,3 +95,5 @@ waitUntil { camCommitted _spawnCam };
 _spawnCam cameraEffect ["Terminate","back"];
 camDestroy _spawnCam;
 camUseNVG false;
+
+true

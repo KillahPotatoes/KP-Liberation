@@ -4,19 +4,22 @@
     File: fn_core_handleVehicleSpawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-10
-    Last Update: 2018-09-13
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handle vehicle spawn event
+        Handle vehicle spawn event
 
     Parameter(s):
-        0: OBJECT - Vehicle which was spawned
+        _vehicle - Vehicle which was spawned [OBJECT, defaults to objNull]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
-params ["_vehicle"];
+
+params [
+    ["_vehicle", objNull, [objNull]]
+];
 
 switch(typeOf _vehicle) do {
     case KPLIB_preset_fobBox;
@@ -24,7 +27,7 @@ switch(typeOf _vehicle) do {
         // Add FOB build action globaly and for JIP
         [
             _vehicle,
-            [localize "STR_ACTION_FOB_DEPLOY", {[param [0], param [1], param[3]] call KPLIB_fnc_core_buildFob}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
+            [localize "STR_KPLIB_ACTION_DEPLOY", {["KPLIB_fob_build_requested", _this select 0] call CBA_fnc_localEvent}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
         ] remoteExecCall ["addAction", 0, true];
     };
 
@@ -35,7 +38,9 @@ switch(typeOf _vehicle) do {
         // Add redeploy action globaly and for JIP
         [
             _vehicle,
-            [localize "STR_ACTION_REDEPLOY", {["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", "_this == vehicle _this", 10]
+            [localize "STR_KPLIB_ACTION_REDEPLOY", {["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", "_this == vehicle _this", 10]
         ] remoteExecCall ["addAction", 0, true];
     };
 };
+
+true

@@ -4,11 +4,11 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-09-25
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    The rsc titles, sounds and the player status overlay are defined here.
+        The rsc titles, sounds and the player status overlay are defined here.
 */
 
 class CfgSounds
@@ -24,81 +24,6 @@ class CfgSounds
 
 class RscTitles
 {
-    class intro1
-    {
-        name = "intro1";
-        duration = 4;
-        idd = -1;
-        movingEnable = false;
-        controls[]=
-        {
-            GenericLabelShadow, GenericLabel2
-        };
-    class GenericLabel2 {
-        idc = -1;
-        type =  0 ;
-        style = 2;
-        colorText[] = COLOR_WHITE;
-        colorBackground[] = COLOR_NOALPHA;
-        font = "RobotoCondensed";
-        sizeEx = 0.035 * safezoneH;
-        x = 0.3 * safezoneW + safezoneX;
-        w = 0.4 * safezoneW;
-        y = 0.65 * safezoneH + safezoneY;
-        h = 0.1 * safezoneH;
-        text = "The Killah Potatoes present";
-        shadow = 1;
-        };
-        class GenericLabelShadow : GenericLabel2{
-        shadow = 2;
-        };
-    };
-
-    class intro2
-    {
-        name = "intro2";
-        duration = 7;
-        idd = -1;
-        movingEnable = false;
-        controls[]=
-        {
-            VersionLabelShadow, Splash, VersionLabel
-        };
-        class Splash {
-            idc = -1;
-            type =  0;
-            style = 48;
-            colorText[] = COLOR_WHITE;
-            colorBackground[] = COLOR_NOALPHA;
-            font = "RobotoCondensed";
-            sizeEx = 0.1 * safezoneH;
-            x = 0.325 * safezoneW + safezoneX;
-            w = 0.35 * safezoneW;
-            y = 0.2 * safezoneH + safezoneY;
-            h = 0.6 * safezoneH;
-            text = "res\splash.paa";
-        };
-        class VersionLabel {
-            idc = -1;
-            type =  0;
-            style = 2;
-            shadow = 1;
-            colorText[] = COLOR_WHITE;
-            colorBackground[] = COLOR_NOALPHA;
-            font = "RobotoCondensed";
-            sizeEx = 0.035 * safezoneH;
-            x = 0.45 * safezoneW + safezoneX;
-            w = 0.3 * safezoneW;
-            y = 0.65 * safezoneH + safezoneY;
-            h = 0.1 * safezoneH;
-            text = "$STR_MISSION_VERSION";
-        };
-        class VersionLabelShadow : VersionLabel {
-            shadow = 2;
-            font = "RobotoCondensed";
-        };
-    };
-
     class blank
     {
         name = "blank";

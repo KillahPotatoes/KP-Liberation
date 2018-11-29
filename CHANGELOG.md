@@ -7,6 +7,8 @@
 * Added: Free camera view for building.
 * Added: Config guard for preset file syntax error detection.
 * Added: KP GUI system implemented for dialog creation.
+* Added: Mission configuration completely via CBA Settings.
+* Removed: Mission configuration via mission parameters.
 * Tweaked: License changed from MIT to GPLv3.
 * Tweaked: Eden objects got `KPLIB_eden_` as prefix.
 * Tweaked: Faster initial sector sorting.
@@ -15,6 +17,8 @@
 * Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
 * Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better separation.
 * Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
+* Tweaked: Unit/Army presets are now universally used as friendly or enemy preset.
+* Tweaked: Changing presets is now possible without server restart.
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)

@@ -4,17 +4,17 @@
     File: fn_plm_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-03
-    Last Update: 2018-08-05
+    Last Update: 2018-11-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Opens the player menu dialog.
+        Opens the player menu dialog.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    BOOL
+        Function reached the end [BOOL]
 */
 
 // Create player options dialog
@@ -65,22 +65,22 @@ _ctrlViewVeh ctrlSetText str KPLIB_plm_viewVeh;
 _ctrlViewAir ctrlSetText str KPLIB_plm_viewAir;
 
 // Fill density, auto tpv and radio dropdowns. Also preselect the saved values
-_ctrlTerrain lbAdd localize "STR_PLAYERDIALOG_TERRAINLOW"; // 50
-_ctrlTerrain lbAdd localize "STR_PLAYERDIALOG_TERRAINSTANDARD"; // 25
-_ctrlTerrain lbAdd localize "STR_PLAYERDIALOG_TERRAINHIGH"; // 12.5
-_ctrlTerrain lbAdd localize "STR_PLAYERDIALOG_TERRAINVHIGH"; // 6.25
-_ctrlTerrain lbAdd localize "STR_PLAYERDIALOG_TERRAINULTRA"; // 3.125
+_ctrlTerrain lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TERRAINLOW"; // 50
+_ctrlTerrain lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TERRAINSTANDARD"; // 25
+_ctrlTerrain lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TERRAINHIGH"; // 12.5
+_ctrlTerrain lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TERRAINVHIGH"; // 6.25
+_ctrlTerrain lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TERRAINULTRA"; // 3.125
 _ctrlTerrain lbSetCurSel KPLIB_plm_terrain;
 
-_ctrlTpv lbAdd localize "STR_PARAMS_DISABLED";
-_ctrlTpv lbAdd localize "STR_PLAYERDIALOG_TPVAIR";
-_ctrlTpv lbAdd localize "STR_PLAYERDIALOG_TPVLAND";
-_ctrlTpv lbAdd localize "STR_PLAYERDIALOG_TPVALL";
+_ctrlTpv lbAdd localize "STR_KPLIB_DISABLED";
+_ctrlTpv lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TPVAIR";
+_ctrlTpv lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TPVLAND";
+_ctrlTpv lbAdd localize "STR_KPLIB_DIALOG_PLAYER_TPVALL";
 _ctrlTpv lbSetCurSel KPLIB_plm_tpv;
 
-_ctrlRadio lbAdd localize "STR_NO";
-_ctrlRadio lbAdd localize "STR_PLAYERDIALOG_RADIOVOICE";
-_ctrlRadio lbAdd localize "STR_PLAYERDIALOG_RADIOALL";
+_ctrlRadio lbAdd localize "STR_KPLIB_NO";
+_ctrlRadio lbAdd localize "STR_KPLIB_DIALOG_PLAYER_RADIOVOICE";
+_ctrlRadio lbAdd localize "STR_KPLIB_DIALOG_PLAYER_RADIOALL";
 _ctrlRadio lbSetCurSel KPLIB_plm_radio;
 
 // Initialize sound slider range, position and speed

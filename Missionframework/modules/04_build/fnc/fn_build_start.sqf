@@ -6,22 +6,23 @@
     File: fn_build_start.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-05
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Starts KP Liberation building mode
+        Starts KP Liberation building mode
 
     Parameter(s):
         _center - Center of building area [POSITION, defaults to position player]
-        _radius - Allowed building radius [NUMBER, defaults to KPLIB_range_fob]
+        _radius - Allowed building radius [NUMBER, defaults to KPLIB_param_fobRange]
 
     Returns:
         Building logic object [LOCATION]
 */
+
 params [
     ["_center", position player, [[]], 3],
-    ["_radius", KPLIB_range_fob, [0]]
+    ["_radius", KPLIB_param_fobRange, [0]]
 ];
 
 // Animate player

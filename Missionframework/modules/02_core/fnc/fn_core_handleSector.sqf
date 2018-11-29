@@ -4,20 +4,22 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-10-20
+    Last Update: 2018-11-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Handles an activated sector concerning which scripts should be started and checks for a later deactivation.
+        Handles an activated sector concerning which scripts should be started and checks for a later deactivation.
 
     Parameter(s):
-        0: STRING - Name of the sectormarker.
+        _sectorMarkerName - Sector marker name [STRING, defaults to nil]
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
-params [["_sectorMarkerName", nil, [""]]];
+params [
+    ["_sectorMarkerName", nil, [""]]
+];
 
 // Create sector handler PFH Object
 private _handler = [
@@ -28,8 +30,8 @@ private _handler = [
         // If there are no enemy units in two times the capture range and friendly units are in capture range
         // capture the sector
         if (
-            !([_sectorPos, 2 * KPLIB_range_capture, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
-            && {[_sectorPos, KPLIB_range_capture] call KPLIB_fnc_core_areUnitsNear}
+            !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
+            && {[_sectorPos, KPLIB_param_sectorCapRange] call KPLIB_fnc_core_areUnitsNear}
         ) then {
             diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 (%3) captured", diag_tickTime, markerText _sector, _sector];
 
@@ -39,7 +41,7 @@ private _handler = [
         }
         else {
             // If there are no friendly units in activation range, deactivate the sector
-            if !([_sectorPos, KPLIB_range_sector] call KPLIB_fnc_core_areUnitsNear) then {
+            if !([_sectorPos, KPLIB_param_sectorActRange] call KPLIB_fnc_core_areUnitsNear) then {
                 _this setVariable ["KPLIB_sectorActive", false];
             }
         }
@@ -70,3 +72,5 @@ private _handler = [
     {true}, // Run condition
     {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition
 ] call CBA_fnc_createPerFrameHandlerObject;
+
+true

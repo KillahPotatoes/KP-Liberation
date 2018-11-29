@@ -4,7 +4,7 @@
     File: fn_build_saveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-11-05
+    Last Update: 2018-11-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         Data was saved [BOOL]
 */
 
-if (KPLIB_param_debugSave > 0) then {diag_log "[KP LIBERATION] [SAVE] Build module saving...";};
+if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module saving...";};
 
 private _serializedData = [];
 // Serialize data
@@ -27,7 +27,7 @@ private _serializedData = [];
     // Foreach fob item, save className, pos and dirAndUp
     {
         if (alive _x) then {
-            (_fobData select 1) pushBack [typeOf _x, getPosATL _x, [vectorDir _x, vectorUp _x]];
+            (_fobData select 1) pushBack [typeOf _x, getPosWorld _x, [vectorDir _x, vectorUp _x]];
         };
     } forEach _fobItems;
 

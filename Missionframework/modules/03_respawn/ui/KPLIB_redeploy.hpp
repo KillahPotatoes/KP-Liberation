@@ -5,11 +5,11 @@
     File: KPLIB_redeploy.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-11-03
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Splendid Redeploy dialog after respawn or select redeploy from a FOB or mobile spawn.
+        Splendid Redeploy dialog after respawn or select redeploy from a FOB or mobile spawn.
 */
 
 class KPLIB_redeploy {
@@ -24,13 +24,13 @@ class KPLIB_redeploy {
         class KPLIB_LogoRightCorner: KPGUI_PRE_LogoRightCorner {};
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleC {
-            text = "$STR_DEPLOY_TITLE";
+            text = "$STR_KPLIB_DIALOG_DEPLOY_TITLE";
         };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundC {};
 
         class KPLIB_LabelLoadout: KPGUI_PRE_InlineTitle {
-            text = "$STR_DEPLOY_LOADOUTLIST";
+            text = "$STR_KPLIB_DIALOG_DEPLOY_LOADOUTLIST";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,16);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -38,7 +38,7 @@ class KPLIB_redeploy {
         };
 
         class KPLIB_TextLoadout: KPGUI_PRE_Text {
-            text = "$STR_DEPLOY_LOADOUTTEXT";
+            text = "$STR_KPLIB_DIALOG_DEPLOY_LOADOUTTEXT";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,16);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -46,12 +46,12 @@ class KPLIB_redeploy {
         };
 
         class KPLIB_LabelDeploy: KPLIB_LabelLoadout {
-            text = "$STR_DEPLOY_SPAWNLIST";
+            text = "$STR_KPLIB_DIALOG_DEPLOY_SPAWNLIST";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,7,48);
         };
 
         class KPLIB_LabelMap: KPLIB_LabelLoadout {
-            text = "$STR_DEPLOY_MAPVIEW";
+            text = "$STR_KPLIB_DIALOG_DEPLOY_MAPVIEW";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,2);
         };
     };
@@ -86,7 +86,7 @@ class KPLIB_redeploy {
         };
 
         class KPLIB_DeployButton: KPGUI_PRE_DialogButtonC {
-            text = "$STR_DEPLOY_BUTTON";
+            text = "$STR_KPLIB_DIALOG_BUTTON_DEPLOY";
             onButtonClick = "[ctrlParent (_this select 0)] call KPLIB_fnc_respawn_displayConfirm";
         };
     };

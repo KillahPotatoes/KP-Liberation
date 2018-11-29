@@ -4,20 +4,27 @@
     File: fn_core_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-10-18
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    This preInit function defines just the global variables which are added due to this module.
+        The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
 
-    Dependencies:
-        * 00_init
+    Parameter(s):
+        NONE
 
     Returns:
-    BOOL
+        Module preInit finished [BOOL]
 */
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CORE] Module initializing...", diag_tickTime];};
+
+// Process CBA Settings
+[] call KPLIB_fnc_core_settings;
+
+if (isServer) then {
+    ["KPLIB_vehicle_spawned", KPLIB_fnc_core_handleVehicleSpawn] call CBA_fnc_addEventHandler;
+};
 
 /*
     ----- Module Globals -----
@@ -27,14 +34,6 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CORE] Module i
 KPLIB_core_potato01 = objNull;
 // Deploy button trigger for redeploy dialog
 KPLIB_dialog_deploy = 0;
-// Intro cinematic done
-KPLIB_intro_done = false;
-// Intro cinematic running
-KPLIB_intro_running = false;
-// Start game button state in intro cinematic
-KPLIB_intro_startGame = 0;
-// Tutorial button state in intro cinematic
-KPLIB_intro_tutorial = 0;
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CORE] Module initialized", diag_tickTime];};
 

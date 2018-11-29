@@ -4,17 +4,17 @@
     File: fn_init_receiveInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-25
-    Last Update: 2018-10-18
+    Last Update: 2018-11-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Receive data from the server initialization and split the packages accordingly.
+        Receive data from the server initialization and split the packages accordingly.
 
     Parameter(s):
-    NONE
+        NONE
 
     Returns:
-    NOTHING
+        Function reached the end [BOOL]
 */
 
 if (isDedicated) exitWith {};
@@ -171,12 +171,12 @@ diag_log "[KP LIBERATION] [CLIENT INIT] Collections package processed";
 
 // Set correct localized squad names
 KPLIB_preset_squadNames = [
-    localize "STR_SQUAD_LIGHT",
-    localize "STR_SQUAD_RIFLE",
-    localize "STR_SQUAD_AT",
-    localize "STR_SQUAD_AA",
-    localize "STR_SQUAD_RECON",
-    localize "STR_SQUAD_PARA"
+    localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
+    localize "STR_KPLIB_UNITS_SQUAD_RIFLE",
+    localize "STR_KPLIB_UNITS_SQUAD_AT",
+    localize "STR_KPLIB_UNITS_SQUAD_AA",
+    localize "STR_KPLIB_UNITS_SQUAD_RECON",
+    localize "STR_KPLIB_UNITS_SQUAD_PARA"
 ];
 
 if (hasInterface) then {
@@ -190,3 +190,5 @@ if (hasInterface) then {
 };
 
 diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initialized", diag_tickTime];
+
+true

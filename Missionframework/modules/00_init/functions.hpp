@@ -4,18 +4,15 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-10-18
+    Last Update: 2018-11-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    Defines for all functions, which are brought by this module.
+        Defines for all functions, which are brought by this module.
 */
 
 class init {
     file = "modules\00_init\fnc";
-
-    // Try to catch errors in config file
-    class init_configGuard {};
 
     // Checks if given classname is inside CfgVehicles
     class init_checkClass {};
@@ -23,11 +20,11 @@ class init {
     // Creates local client markers
     class init_clientMarkers {};
 
+    // Try to catch errors in config file
+    class init_configGuard {};
+
     // Creates locked vehicle markers
     class init_createLockedVehMarkers {};
-
-    // Initializes the virtual arsenal
-    class init_fillArsenal {};
 
     // Filters not available classnames out of a given array of classnames
     class init_filterMods {};
@@ -43,15 +40,6 @@ class init {
 
     // Loads and checks the configured unit presets
     class init_loadPresets {};
-
-    // Fetches the mission parameters and saves them
-    class init_paramFetchAll {};
-
-    // Loads param from KPLIB persistent params array
-    class init_paramLoad {};
-
-    // Creates variable from param name and value in format of "KPLIB_param_<name>"
-    class init_paramVarCreate {};
 
     // Module post initialization
     class init_postInit {
@@ -72,11 +60,17 @@ class init {
     // Saves module specific data for the save
     class init_saveData {};
 
+    // CBA Settings for this module
+    class init_settings {};
+
     // Adds a module data array to the save data array
     class init_setSaveData {};
 
     // Sorts sector markers and fills global sector arrays
     class init_sortSectors {};
+
+    // Applies the chosen time multiplier
+    class init_timeMultiApply {};
 
     // Completely wipes all data from the current campaign
     class init_wipe {};
