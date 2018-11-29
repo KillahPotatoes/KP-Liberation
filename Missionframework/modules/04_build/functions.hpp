@@ -32,6 +32,9 @@ class build {
     // Confirms all items in queue
     class build_confirmAll {};
 
+    // Confirms single item from queue
+    build_confirmSingle {};
+
     // Display initialization
     class build_displayLoad {};
 
