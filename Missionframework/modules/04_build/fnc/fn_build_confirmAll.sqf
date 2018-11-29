@@ -31,6 +31,6 @@ systemChat "buildConfirm: Resource check not implemented yet!";
 
     deleteVehicle _x;
 
-    [[[_class, _pos, 0, true], _dirAndUp, player]] remoteExecCall ["KPLIB_fnc_build_confirmSingle", 2];
+    [[_class, _pos, 0, true], _dirAndUp, player] remoteExecCall ["KPLIB_fnc_build_confirmSingle", 2];
 
 } forEach _validItems;

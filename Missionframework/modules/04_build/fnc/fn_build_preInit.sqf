@@ -66,17 +66,19 @@ if (hasInterface) then {
     ["KPLIB_fob_build_requested", {
         params ["_object"];
         KPLIB_build_fobBuildObject = _object;
-
-         [getPos _object, nil, [KPLIB_preset_fobBuilding, 0,0,0], {
-             params ["_builtObject"];
-             // Build FOB when item placed
-             private _fobName = [getPos _builtObject] call KPLIB_fnc_core_buildFob;
-             // Emit the built event with FOB and object to assign the object to FOB
-             ["KPLIB_build_item_built", [_builtObject, _fobName]] call CBA_fnc_globalEvent;
-             // Remove object
-             deleteVehicle KPLIB_build_fobBuildObject;
+        // Start single item build for fob building
+        [getPos _object, nil, [KPLIB_preset_fobBuilding, 0,0,0], {
+            // On confirm callback, create FOB on server
+            [[_this select 0, KPLIB_build_fobBuildObject], {
+                params ["_fobBuilding", "_fobBoxObject"];
+                // Build FOB when item placed
+                private _fobName = [getPos _fobBuilding] call KPLIB_fnc_core_buildFob;
+                // Emit the built event with FOB and object to assign the object to FOB
+                ["KPLIB_build_item_built", [_fobBuilding, _fobName]] call CBA_fnc_globalEvent;
+                // Remove object
+                deleteVehicle _fobBoxObject;
+             }] remoteExec ["call", 2];
          }] call KPLIB_fnc_build_start_single;
-
     }] call CBA_fnc_addEventHandler;
 
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
