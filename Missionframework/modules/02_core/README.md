@@ -38,9 +38,9 @@ So this is the core gameplay where all other modules are inject their functional
 
   *Get all mobile respawn vehicles.*
 
-* KPLIB_fnc_core_getNearestSector
+* KPLIB_fnc_core_getNearestMarker
 
-  *Get the nearest capturable sector.*
+  *Get the marker from array of markers.*
 
 * KPLIB_fnc_core_handleSector
 

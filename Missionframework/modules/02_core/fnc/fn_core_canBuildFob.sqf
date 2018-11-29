@@ -4,7 +4,7 @@
     File: fn_core_canBuildFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-11
-    Last Update: 2018-11-09
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,6 +27,6 @@ params [
 private _minSectorDist = KPLIB_param_fobRange + KPLIB_param_sectorCapRange;
 
 (alive _box
-&& _box distance2D KPLIB_eden_startbase > 300
-&& ([_minSectorDist, getPos _box] call KPLIB_fnc_core_getNearestSector == ""))
+&& _box distance2D KPLIB_eden_startbase > 1000
+&& ([_minSectorDist, getPos _box, KPLIB_sectors_all + KPLIB_sectors_fobs] call KPLIB_fnc_core_getNearestMarker isEqualTo ""))
 

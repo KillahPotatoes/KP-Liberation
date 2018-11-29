@@ -4,7 +4,7 @@
     File: fn_core_spawnCam.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-11-12
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,7 +22,7 @@ params [
 ];
 
 // Get the nearest sector from the current position for the spawn text display
-private _nearestSector = [2000] call KPLIB_fnc_core_getNearestSector;
+private _nearestSector = [2000] call KPLIB_fnc_core_getNearestMarker;
 if (_nearestSector != "") then {_nearestSector = format ["%1 %2", localize "STR_KPLIB_NEAR", markertext _nearestSector];};
 
 // Get the current time for the spawn text display

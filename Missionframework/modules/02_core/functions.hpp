@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-11-27
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,8 +35,8 @@ class core {
     // Get all mobile respawn vehicles
     class core_getMobSpawns {};
 
-    // Get the nearest capturable sector
-    class core_getNearestSector {};
+    // Get the nearest marker from array of markers
+    class core_getNearestMarker {};
 
     // Handle an activated sector
     class core_handleSector {};

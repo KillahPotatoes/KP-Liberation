@@ -4,7 +4,7 @@
     File: fn_common_setupPlayerActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-28
-    Last Update: 2018-11-12
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,12 +16,6 @@
     Returns:
         Function reached the end [BOOL]
 */
-
-// Actions avalible GLOBALLY on objects
-if (isServer) then {
-    // Add actions to supported vehicles
-    ["KPLIB_vehicle_spawned", KPLIB_fnc_core_handleVehicleSpawn] call CBA_fnc_addEventHandler;
-};
 
 // Actions avalible LOCALLY to player
 if(hasInterface) then {

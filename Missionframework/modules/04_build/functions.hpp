@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-12
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,6 +25,15 @@ class build {
 
     // Creates the build camera
     class build_camCreate {};
+
+    // Change queue mode between moving existing items and placing new
+    class build_changeQueueMode {};
+
+    // Confirms all items in queue
+    class build_confirmAll {};
+
+    // Confirms single item from queue
+    class build_confirmSingle {};
 
     // Display initialization
     class build_displayLoad {};
@@ -49,6 +58,9 @@ class build {
 
     // Handle object dragging/positon changing
     class build_handleDrag {};
+
+    // Handles FOB build confirmation
+    class build_handleFobBuildConfirm {};
 
     // Handle display keypresses
     class build_handleKeys {};
@@ -89,6 +101,9 @@ class build {
 
     // Start building logic
     class build_start {};
+
+    // Start building logic for single item build
+    class build_start_single {};
 
     // Stop building logic
     class build_stop {};
