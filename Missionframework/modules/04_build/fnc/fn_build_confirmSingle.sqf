@@ -11,17 +11,17 @@
         Confirms single item from build queue.
 
     Parameter(s):
-        _createParams   - Parameters for common_createVehicle   [ARRAY, defaults to nil]
-        _vectorDirAndUp - Vector dir and up for created object  [ARRAY, defaults to nil]
-        _player         - Player that initiated the building of object
+        _createParams   - Parameters for common_createVehicle           [ARRAY, defaults to nil]
+        _vectorDirAndUp - Vector dir and up for created object          [ARRAY, defaults to nil]
+        _player         - Player that initiated the building of object  [OBJECT, defaults to objNull]
 
     Returns:
         Function reached the end [BOOL]
 */
 params [
-    "_createParams",
-    "_vectorDirAndUp",
-    "_player"
+    ["_createParams", nil, [[]]],
+    ["_vectorDirAndUp", nil, [[]], 2],
+    ["_player", objNull, [objNull]]
 ];
 _createParams params ["_className", "_pos", "_dir", "_justBuild"];
 
@@ -48,5 +48,5 @@ switch true do {
 
 private _fob = _player getVariable ["KPLIB_fob", ""];
 
-["KPLIB_build_item_built", [_obj, _fob] call CBA_fnc_globalEvent;
+["KPLIB_build_item_built", [_obj, _fob]] call CBA_fnc_globalEvent;
 ["KPLIB_build_item_built_local", [_obj, _fob], _player] call CBA_fnc_targetEvent;
