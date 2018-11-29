@@ -4,7 +4,7 @@
     File: defines.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-28
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,6 +24,8 @@
 #define KPLIB_IDC_BUILD_TAB_BUILDING        70105
 #define KPLIB_IDC_BUILD_TAB_SUPPORT         70106
 #define KPLIB_IDC_BUILD_TAB_SQUAD           70107
+
+#define KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS   70111
 
 #define KPLIB_IDC_BUILD_ITEM_LIST           70202
 

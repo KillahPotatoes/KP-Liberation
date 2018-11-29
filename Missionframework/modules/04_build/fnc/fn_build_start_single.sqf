@@ -7,7 +7,7 @@
     File: fn_build_start_single.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-28
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,7 +39,7 @@ private _openEhId = ["KPLIB_build_display_open", {
     private _confirmCtrl = (_display displayCtrl KPLIB_IDC_BUILD_CONFIRM);
 
     // Get pos of build mode selector
-    private _confirmCtrlNewPos = (ctrlPosition (_display displayCtrl KPLIB_IDC_BUILD_TAB_INFANTRY));
+    private _confirmCtrlNewPos = (ctrlPosition ctrlParentControlsGroup (_display displayCtrl KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS));
     // Save only X, Y
     _confirmCtrlNewPos resize 2;
     // Get original W, H
@@ -51,7 +51,7 @@ private _openEhId = ["KPLIB_build_display_open", {
     // Hide tabs, build list and background
     {
         (_display displayCtrl _x) ctrlShow false;
-    } forEach KPLIB_BUILD_TABS_IDCS_ARRAY + [KPLIB_IDC_BUILD_ITEM_LIST, KPLIB_IDC_BUILD_DIALOG_AREA];
+    } forEach KPLIB_BUILD_TABS_IDCS_ARRAY + [KPLIB_IDC_BUILD_ITEM_LIST, KPLIB_IDC_BUILD_DIALOG_AREA, KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS];
 
     LSVAR("buildItem", _thisArgs);
 

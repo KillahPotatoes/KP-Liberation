@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-28
+    Last Update: 2018-11-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -120,6 +120,42 @@ class KPLIB_build {
             columns[] = { 0, 0.65, 0.75, 0.85 };
 
             onMouseZChanged = "['onMouseZChanged_BuildList', _this] call KPLIB_fnc_build_handleMouse";
+        };
+
+        class KPLIB_ToolboxContainer: KPGUI_PRE_ControlsGroup {
+            class VScrollbar: KPGUI_PRE_ScrollBar {
+                width = 0;
+            };
+            class HScrollbar: KPGUI_PRE_ScrollBar {
+                color[] = {1, 1, 1, 0.5};
+                height = 0.02;
+            };
+
+            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,0,20);
+            w = KP_GETW(KP_WIDTH_VAL_LP,1);
+            h = KP_GETH(KP_HEIGHT_VAL_LP,20);
+
+            // Toolbox Controls
+            class Controls {
+                // TODO move toolbox items creation to script
+                class KPLIB_Toolbox_MoveItems: KPGUI_PRE_ActiveText {
+                    text = "Build mode";
+                    idc = KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS;
+
+                    colorActive[] = {1, 1, 1, 1};
+                    colorText[] = {1, 1, 1, 0.75};
+                    colorDisabled[] = {1, 1, 1, 0.25};
+                    color[] = {1, 1, 1, 0.55};
+
+                    x = 0;
+                    y = 0;
+                    w = KP_GETW(KP_WIDTH_VAL_LP,4);
+                    h = KP_GETH(KP_HEIGHT_VAL_LP,20) - 0.02;
+
+                    onButtonClick = "_this call KPLIB_fnc_build_changeQueueMode"
+                };
+            };
         };
 
         class KP_ApplyButton: KPGUI_PRE_DialogButton_LeftPanel {
