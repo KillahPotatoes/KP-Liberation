@@ -9,15 +9,14 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        No description added yet.
+        Confirms and builds every item in build queue.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        NONE
 
     Returns:
-        Function reached the end [BOOL]
+        Items were built [BOOL]
 */
-
 
 private _validItems = LGVAR(buildQueue) select {_x getVariable ["KPLIB_validPos", true]};
 LSVAR("buildQueue", LGVAR(buildQueue) - _validItems);
@@ -34,3 +33,5 @@ systemChat "buildConfirm: Resource check not implemented yet!";
     [[_class, _pos, 0, true], _dirAndUp, player] remoteExecCall ["KPLIB_fnc_build_confirmSingle", 2];
 
 } forEach _validItems;
+
+true

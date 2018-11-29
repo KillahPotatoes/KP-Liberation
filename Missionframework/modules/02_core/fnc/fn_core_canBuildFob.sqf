@@ -27,6 +27,6 @@ params [
 private _minSectorDist = KPLIB_param_fobRange + KPLIB_param_sectorCapRange;
 
 (alive _box
-&& _box distance2D KPLIB_eden_startbase > 300
+&& _box distance2D KPLIB_eden_startbase > 1000
 && ([_minSectorDist, getPos _box, KPLIB_sectors_all + KPLIB_sectors_fobs] call KPLIB_fnc_core_getNearestMarker isEqualTo ""))
 

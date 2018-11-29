@@ -30,7 +30,7 @@ private _markersWithinRange =  _markers select {((markerPos _x) distance _center
 private _markersAscByRange = [_markersWithinRange, [_centerPos], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy;
 // Return nearest marker
 if !(_markersAscByRange isEqualTo []) then {
-    _markersAscByRange select 0;
+    _markersAscByRange select 0
 } else {
     ""
-}
+};
