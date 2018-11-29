@@ -115,7 +115,7 @@ class KPLIB_build {
             x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
             y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,2,20);
             w = KP_GETW(KP_WIDTH_VAL_LP,1);
-            h = KP_GETH(KP_HEIGHT_VAL_LP,20) * 19.55;
+            h = KP_GETH(KP_HEIGHT_VAL_LP,(20/18));
 
             columns[] = { 0, 0.65, 0.75, 0.85 };
 
