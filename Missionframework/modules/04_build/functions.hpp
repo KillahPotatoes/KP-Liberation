@@ -59,6 +59,9 @@ class build {
     // Handle object dragging/positon changing
     class build_handleDrag {};
 
+    // Handles FOB build confirmation
+    class build_handleFobBuildConfirm {};
+
     // Handle display keypresses
     class build_handleKeys {};
 
