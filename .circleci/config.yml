@@ -11,7 +11,5 @@ jobs:
       - run:
           name: Validate Config style
           command: python tools/config_style_checker.py
-      - run:
-          name: sqflint
-          command: pip3 install sqflint && sqflint -d Missionframework
+
 
