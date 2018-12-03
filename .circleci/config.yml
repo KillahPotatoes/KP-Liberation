@@ -6,5 +6,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate SQF and Config style
-          command: python tools/sqf_validator.py && python tools/config_style_checker.py
+          name: Validate SQF
+          command: python tools/sqf_validator.py
+      - run:
+          name: Validate Config style
+          command: python tools/config_style_checker.py
+      - run:
+          name: sqflint
+          command: pip3 install sqflint && sqflint -d Missionframework
+
