@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # This script is based on source code from acemod project template
-# Many thanks to ACE3 team for provinding suach a useful piece of software
+# Many thanks to ACE3 team for provinding such a useful piece of software
 # https://github.com/acemod/arma-project-template
 
 import fnmatch
