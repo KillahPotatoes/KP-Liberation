@@ -11,5 +11,3 @@ jobs:
       - run:
           name: Validate Config style
           command: python tools/config_style_checker.py
-
-
