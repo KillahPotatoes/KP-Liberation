@@ -12,7 +12,7 @@
 */
 
 class build {
-    file = "modules\04_build\fnc";
+    file = "modules\15_build\fnc";
 
     // Manages selection depending on currently pressed keys
     class build_addToSelection {};

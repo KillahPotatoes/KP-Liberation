@@ -12,7 +12,7 @@
 */
 
 class adm {
-    file = "modules\99_adm\fnc";
+    file = "modules\04_adm\fnc";
 
     // Deletes exported data in the players profile
     class adm_deleteExport {};
