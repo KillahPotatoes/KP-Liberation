@@ -175,14 +175,14 @@ buildings = [
 ];
 
 support_vehicles = [
-	[Arsenal_typename,100,200,0],
-	[Respawn_truck_typename,200,0,100],
-	[FOB_truck_typename,300,500,75],
+	[Arsenal_typename,50,200,0],
+	[Respawn_truck_typename,100,0,100],
+	[FOB_truck_typename,250,500,75],
 	[KP_liberation_small_storage_building,0,0,0],
 	[KP_liberation_large_storage_building,0,0,0],
-	[KP_liberation_recycle_building,250,0,0],
-	[KP_liberation_plane_slot_building,500,0,0],
-	[KP_liberation_air_vehicle_building,1000,0,0],
+	[KP_liberation_recycle_building,150,0,0],
+	[KP_liberation_plane_slot_building,350,0,0],
+	[KP_liberation_air_vehicle_building,750,0,0],
 	["ACE_medicalSupplyCrate_advanced",50,0,0],
 	["LIB_US_GMC_Parm",200,0,50],
 	["LIB_US_GMC_Fuel",150,0,200],
