@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: acemod/armake:master
+    steps:
+      - checkout
+      - run:
+          name: Validate SQF
+          command: python tools/sqf_validator.py
+      - run:
+          name: Validate Config style
+          command: python tools/config_style_checker.py

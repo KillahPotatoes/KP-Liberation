@@ -4,7 +4,7 @@
     File: fn_build_drawBoundingBox.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-29
-    Last Update: 2018-11-09
+    Last Update: 2018-12-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,6 @@
     Returns:
         Function reached the end [BOOL]
 */
-
 params [
     ["_object", objNull, [objNull]],
     ["_color", [1,1,1,1], [[]]]
@@ -33,26 +32,26 @@ params [
     // Draw the line
     drawLine3D [
         _object modelToWorldVisual _from,
-        _object modelToWorldVisual  _to,
+        _object modelToWorldVisual _to,
         _color
     ];
 
 } forEach [
-    [_c1, [_c1#0, _c1#1, _c2#2]],
-    [_c1, [_c1#0, _c2#1, _c1#2]],
-    [_c1, [_c2#0, _c1#1, _c1#2]],
+    [_c1, [_c1 select 0, _c1 select 1, _c2 select 2]],
+    [_c1, [_c1 select 0, _c2 select 1, _c1 select 2]],
+    [_c1, [_c2 select 0, _c1 select 1, _c1 select 2]],
 
-    [_c2, [_c2#0, _c2#1, _c1#2]],
-    [_c2, [_c2#0, _c1#1, _c2#2]],
-    [_c2, [_c1#0, _c2#1, _c2#2]],
+    [_c2, [_c2 select 0, _c2 select 1, _c1 select 2]],
+    [_c2, [_c2 select 0, _c1 select 1, _c2 select 2]],
+    [_c2, [_c1 select 0, _c2 select 1, _c2 select 2]],
 
-    [[_c1#0, _c2#1, _c1#2], [_c2#0, _c2#1, _c1#2]],
-    [[_c2#0, _c1#1, _c1#2], [_c2#0, _c1#1, _c2#2]],
-    [[_c1#0, _c1#1, _c2#2], [_c2#0, _c1#1, _c2#2]],
-    [[_c1#0, _c1#1, _c2#2], [_c1#0, _c2#1, _c2#2]],
-    [[_c2#0, _c1#1, _c1#2], [_c2#0, _c2#1, _c1#2]],
+    [[_c1 select 0, _c2 select 1, _c1 select 2], [_c2 select 0, _c2 select 1, _c1 select 2]],
+    [[_c2 select 0, _c1 select 1, _c1 select 2], [_c2 select 0, _c1 select 1, _c2 select 2]],
+    [[_c1 select 0, _c1 select 1, _c2 select 2], [_c2 select 0, _c1 select 1, _c2 select 2]],
+    [[_c1 select 0, _c1 select 1, _c2 select 2], [_c1 select 0, _c2 select 1, _c2 select 2]],
+    [[_c2 select 0, _c1 select 1, _c1 select 2], [_c2 select 0, _c2 select 1, _c1 select 2]],
     // front bottom left > front top left (vertical)
-    [[_c1#0, _c2#1, _c1#2], [_c1#0, _c2#1, _c2#2]]
+    [[_c1 select 0, _c2 select 1, _c1 select 2], [_c1 select 0, _c2 select 1, _c2 select 2]]
 ];
 
 true
