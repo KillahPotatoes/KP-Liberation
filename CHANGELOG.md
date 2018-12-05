@@ -8,6 +8,7 @@
 * Added: Config guard for preset file syntax error detection.
 * Added: KP GUI system implemented for dialog creation.
 * Added: Mission configuration completely via CBA Settings.
+* Updated: Traditional Chinese Localization. Thanks to [dustin902001](https://github.com/dustin902001)
 * Removed: Mission configuration via mission parameters.
 * Tweaked: License changed from MIT to GPLv3.
 * Tweaked: Eden objects got `KPLIB_eden_` as prefix.
