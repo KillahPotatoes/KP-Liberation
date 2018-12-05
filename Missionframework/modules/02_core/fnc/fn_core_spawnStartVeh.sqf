@@ -20,10 +20,7 @@
 // local variables
 private _spawnPoint = objNull;
 private _spawnPoint = KPLIB_zeroPos;
-private _heli = objNull;
-private _actId = -1;
-private _boat = objNull;
-private _weapon = objNull;
+private _vehicle = objNull;
 
 // Go through the available markers for the little bird spawn. Adapts to the amount of placed markers.
 for [{_i=0}, {!isNil ("KPLIB_eden_littlebird_" + str _i)}, {_i = _i + 1}] do {
@@ -43,19 +40,19 @@ for [{_i=0}, {!isNil ("KPLIB_eden_boat_" + str _i)}, {_i = _i + 1}] do {
     _spawnPoint = missionNamespace getVariable ("KPLIB_eden_boat_" + str _i);
 
     // Spawn the boat
-    _boat = [KPLIB_preset_addBoat, KPLIB_zeroPos, getDir _spawnPoint, true] call KPLIB_fnc_common_createVehicle;
+    _vehicle = [KPLIB_preset_addBoat, KPLIB_zeroPos, getDir _spawnPoint, true] call KPLIB_fnc_common_createVehicle;
 
     // Move the boat to the rack
-    _spawnPoint setVehicleCargo _boat;
+    _spawnPoint setVehicleCargo _vehicle;
 };
 
 // Spawn crew for the destroyer weapons, so they're available through the UAV terminal
 for [{_i=0}, {!isNil ("KPLIB_eden_destroyer_w" + str _i)}, {_i = _i + 1}] do {
     // Get the current weapon
-    _weapon = missionNamespace getVariable ("KPLIB_eden_destroyer_w" + str _i);
+    _vehicle = missionNamespace getVariable ("KPLIB_eden_destroyer_w" + str _i);
 
     // Create crew
-    createVehicleCrew _weapon;
+    createVehicleCrew _vehicle;
 };
 
 true
