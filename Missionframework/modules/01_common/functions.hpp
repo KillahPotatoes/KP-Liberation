@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-11-27
+    Last Update: 2018-12-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,6 +13,9 @@
 
 class common {
     file = "modules\01_common\fnc";
+
+    // Adds action to object with correct localized title
+    class common_addAction {};
 
     // Clears vehicle cargo
     class common_clearVehicleCargo {};
