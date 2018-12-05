@@ -32,7 +32,8 @@
             Chinese Simplified | Updated: pre 0.97
                 Nercon - https://github.com/nercon
 
-            Chinese Traditional | Updated: pre 0.97
+            Chinese Traditional | Updated: 2018-12-05
+                dustin902001 - https://github.com/dustin902001
                 John M. Rodriguez - https://github.com/KOEI5113
 
             French | Updated: pre 0.97
@@ -70,7 +71,7 @@
         </Key>
         <Key ID="STR_KPLIB_DESCRIPTION">
             <English>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</English>
-            <Chinese>從敵人手中解放此區域！戰略是致勝關鍵！士兵們，祝好運！</Chinese>
+            <Chinese>從敵人手中解放此區！步步為營是致勝關鍵！戰士們，祝好運！</Chinese>
             <Chinesesimp>从敌人手中解放这个地区！战略是制胜关键！士兵们祝你们好运。</Chinesesimp>
             <French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
             <German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
@@ -82,14 +83,17 @@
         </Key>
         <Key ID="STR_KPLIB_APPLY">
             <English>Apply</English>
+            <Chinese>使用</Chinese>
             <German>Anwenden</German>
         </Key>
         <Key ID="STR_KPLIB_CANCEL">
             <English>Cancel</English>
+            <Chinese>取消</Chinese>
             <German>Abbrechen</German>
         </Key>
         <Key ID="STR_KPLIB_CONFIRM">
             <English>Confirm</English>
+            <Chinese>確認</Chinese>
             <German>Bestätigen</German>
         </Key>
         <Key ID="STR_KPLIB_DISABLED">
@@ -106,7 +110,7 @@
         </Key>
         <Key ID="STR_KPLIB_ENABLED">
             <English>Enabled</English>
-            <Chinese>開啟</Chinese>
+            <Chinese>啟用</Chinese>
             <Chinesesimp>开启</Chinesesimp>
             <French>Activé</French>
             <German>Aktiviert</German>
@@ -118,11 +122,12 @@
         </Key>
         <Key ID="STR_KPLIB_MAINBASE">
             <English>Operation Base</English>
+            <Chinese>起始基地</Chinese>
             <German>Operationsbasis</German>
         </Key>
         <Key ID="STR_KPLIB_MOBILE_RESPAWN">
             <English>Mobile respawn</English>
-            <Chinese>機動復活載具</Chinese>
+            <Chinese>機動重生載具</Chinese>
             <Chinesesimp>机动复活载具</Chinesesimp>
             <French>Respawn mobile</French>
             <German>Mobiler Respawn</German>
@@ -176,6 +181,7 @@
     <Package name="Actions">
         <Key ID="STR_KPLIB_ACTION_ADMIN_MENU">
             <English>-- Admin Menu --</English>
+            <Chinese>-- 管理員選單 --</Chinese>
             <German>-- Admin Menü --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_BUILD">
@@ -204,11 +210,12 @@
         </Key>
         <Key ID="STR_KPLIB_ACTION_PLAYER_MENU">
             <English>-- Player Menu --</English>
+            <Chinese>-- 玩家選單 --</Chinese>
             <German>-- Spielermenü --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_REDEPLOY">
             <English>-- REDEPLOY --</English>
-            <Chinese>-- 重新佈署 --</Chinese>
+            <Chinese>-- 選擇傳送位置 --</Chinese>
             <Chinesesimp>-- 重新部署 --</Chinesesimp>
             <French>-- REDEPLOIEMENT --</French>
             <German>-- NEU EINSETZEN --</German>
@@ -220,6 +227,7 @@
         </Key>
         <Key ID="STR_KPLIB_ACTION_ARSENAL">
             <English>-- ARSENAL --</English>
+            <Chinese>-- 軍火庫 --</Chinese>
             <German>-- ARSENAL --</German>
         </Key>
     </Package>
@@ -231,24 +239,29 @@
         <!-- CONFIG ERROR -->
         <Key ID="STR_KPLIB_DEBRIEF_ERROR_TITLE">
             <English>Configuration error</English>
+            <Chinese>配置錯誤</Chinese>
             <German>Konfigurationsfehler</German>
         </Key>
         <Key ID="STR_KPLIB_DEBRIEF_ERROR_DESCR">
             <English>One of configuration files is invalid. Please check your configuration and preset files for common syntax errors.&lt;br/&gt;If you need furher assistance please visit KP Liberation wiki or Killah Potatoes Discord Server.</English>
+            <Chinese>其中一個配置檔案無效。請檢查您的配置和預設檔案是否存在常見的語法錯誤&lt;br/&gt;如果您需要幫助，請聯繫KP Liberation wiki或Killah Potatoes Discord.</Chinese>
             <German>Mindestens eine Konfigurationsdatei ist fehlerhaft. Prüfe deine Konfigurations- und Presetdateien auf Syntaxfehler.&lt;br/&gt;Wenn du weitere Hilfe benötigst, besuche das KP Liberation Wiki oder den Killah Potatoes Discord Server.</German>
         </Key>
         <Key ID="STR_KPLIB_DEBRIEF_ERROR_SUBTITLE">
             <English>Error in at least one of the configuration files...</English>
+            <Chinese>至少有一個配置檔案出錯...</Chinese>
             <German>Fehler in mindestens einer Konfigurationsdatei aufgetreten...</German>
         </Key>
 
         <!-- MISSION WON -->
         <Key ID="STR_KPLIB_DEBRIEF_WIN_TITLE">
             <English>The area is liberated.</English>
+            <Chinese>我們已經完成解放行動!</Chinese>
             <German>Das Gebiet wurde befreit.</German>
         </Key>
         <Key ID="STR_KPLIB_DEBRIEF_WIN_DESCR">
             <English>Later you'll have a cinematic with the stats etc.</English>
+            <Chinese>稍後你將看到本次作戰的統計結果</Chinese>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
     </Package>
@@ -288,64 +301,79 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_BUTTON_JOIN">
             <English>Join</English>
+            <Chinese>加入</Chinese>
             <German>Beitreten</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_BUTTON_RENAME">
             <English>Rename</English>
+            <Chinese>重新命名</Chinese>
             <German>Umbenennen</German>
         </Key>
 
         <!-- ADMIN MENU DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ADMIN_TITLE">
             <English>KP Liberation Admin Menu</English>
+            <Chinese>KP Liberation 管理員選單</Chinese>
             <German>KP Liberation Admin Menü</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL">
             <English>Delete exported data</English>
+            <Chinese>刪除輸出的資料</Chinese>
             <German>Exportierte Daten löschen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_NOTE">
             <English>Exported data deleted.</English>
+            <Chinese>輸出的資料已經刪除</Chinese>
             <German>Exportierten Daten gelöscht.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_TT">
             <English>Deletes the exported data from your profile. Doesn't affect the current save data.</English>
+            <Chinese>從你的資料夾中刪除輸出的資料，不會影響現在的存檔數據。</Chinese>
             <German>Löscht die exportierten Daten von deinem Profil. Betrifft nicht den momentanen Spielstand.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_EXP">
             <English>Save Export</English>
+            <Chinese>儲存輸出的資料</Chinese>
             <German>Spielstand exportieren</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_EXP_NOTE">
             <English>Save data export successful.</English>
+            nese>存檔數據輸出成功</Chinese>
             <German>Spielstand erfolgreich exportiert.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_EXP_TT">
             <English>Stores the current save data in your profile.</English>
+            <Chinese>在你的資料夾儲存現在的存檔數據</Chinese>
             <German>Speichert den momentanen Spielstand in deinem Profil.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_IMP">
             <English>Save Import</English>
+            <Chinese>儲存輸入的資料</Chinese>
             <German>Spielstand importieren</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_IMP_NOTE">
             <English>Save data import successful.\n\nAll vital game mechanics are stopped.\nPlease restart the server.</English>
+            <Chinese>存檔數據輸入成功，\n\n所有運作中的遊戲機制都會停止\n請重新啟動伺服器</Chinese>
             <German>Spielstand erfolgreich importiert.\n\nAlle wichtigen Spielmechaniken wurden gestoppt.\nServerneustart erforderlich.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_IMP_TT">
             <English>Imports the saved data from your profile. Requires a restart after import.</English>
+            <Chinese>從你的資料夾中輸入保存數據，需要在輸入後重新啟動</Chinese>
             <German>Importiert einen Spielstand aus deinem Profil. Benötigt einen Neustart nach dem Import.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE">
             <English>Wipe saved campaign</English>
+            <Chinese>清除所有存檔數據</Chinese>
             <German>Gespeicherte Kampagne zurücksetzen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE_NOTE">
             <English>Campaign wiped.\nOld save was exported to your profile\n\nAll vital game mechanics are stopped.\nPlease restart the server.</English>
+            <Chinese>所有存檔數據已清除，\n舊的存檔數據已經輸出到你的資料夾\n\n所有運作中的遊戲機制都會停止\n請重新啟動伺服器</Chinese>
             <German>Kampagne zurückgesetzt.\nAlter Speicherstand wurde in dein Profil exportiert.\n\nAlle wichtigen Spielmechaniken wurden gestoppt.\nServerneustart erforderlich.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_WIPE_TT">
             <English>Deletes all saved campaign data. Current campaign will be exported to your profile as safety measure. Requires a restart after wipe.</English>
+            <Chinese>刪除所有存檔數據，\n因保險起見，現在的存檔數據將會輸出到你的資料夾，請在清除數據後重新啟動伺服器</Chinese>
             <German>Löscht den kompletten gespeicherten Spielstand. Der momentane Stand wird zur Sicherheit in dein Profil exportiert. Benötigt einen Neustart nach der Löschung.</German>
         </Key>
 
@@ -390,10 +418,12 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_LOADOUTTEXT">
             <English>Choose one of your arsenal loadouts:</English>
+            <Chinese>選擇一個軍火庫預設裝備</Chinese>
             <German>Wähle eines deiner Arsenal Loadouts:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_MAPVIEW">
             <English>Overview Map</English>
+            <Chinese>地圖總覽</Chinese>
             <German>Übersichtskarte</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_SPAWNLIST">
@@ -412,143 +442,178 @@
         <!-- PLAYER MENU DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TITLE">
             <English>KP Player Menu</English>
+            <Chinese>KP 玩家選單</Chinese>
             <German>KP Spielermenü</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_LABELPLAYER">
             <English>Player Information</English>
+            <Chinese>玩家資訊</Chinese>
             <German>Spielerinformationen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_RANK">
             <English>Rank:</English>
+            <Chinese>階級</Chinese>
             <German>Dienstgrad:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_SCORE">
             <English>Score:</English>
+            <Chinese>得分</Chinese>
             <German>Punkte:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_PLAYTIME">
             <English>Playtime:</English>
+            <Chinese>遊戲時間</Chinese>
             <German>Spielzeit:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_NORANKS">
             <English>KP Ranks mod not loaded</English>
+            <Chinese>KP Rank 模組未裝載</Chinese>
             <German>KP Ranks Mod nicht geladen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_LABELGROUPS">
             <English>Group Management</English>
+            <Chinese>團隊管理</Chinese>
             <German>Gruppenverwaltung</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_LABELVIEW">
             <English>View Distance Settings</English>
+            <Chinese>視距設定</Chinese>
             <German>Sichtweiteneinstellungen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_VIEWFOOT">
             <English>m on foot</English>
+            <Chinese>m 步兵視野</Chinese>
             <German>m zu Fuß</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_VIEWVEHICLE">
             <English>m in ground vehicles</English>
+            <Chinese>m 地面載具視野</Chinese>
             <German>m in Bodenfahrzeugen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_VIEWAIR">
             <English>m in air vehicles</English>
+            <Chinese>m 空中載具視野</Chinese>
             <German>m in Luftfahrzeugen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_LABELMISC">
             <English>Misc Settings</English>
+            <Chinese>細項設定</Chinese>
             <German>Sonstige Einstellungen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TEXTTERRAIN">
             <English>Terrain detail:</English>
+            <Chinese>地形細節</Chinese>
             <German>Terraindetail:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TERRAINLOW">
             <English>Low</English>
+            <Chinese>低</Chinese>
             <German>Niedrig</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TERRAINSTANDARD">
             <English>Standard</English>
+            <Chinese>標準</Chinese>
             <German>Standard</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TERRAINHIGH">
             <English>High</English>
+            <Chinese>高</Chinese>
             <German>Hoch</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TERRAINVHIGH">
             <English>Very High</English>
+            <Chinese>非常高</Chinese>
             <German>Sehr Hoch</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TERRAINULTRA">
             <English>Ultra</English>
+            <Chinese>極高</Chinese>
             <German>Ultra</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TEXTTPV">
             <English>Auto 3rd person view:</English>
+            <Chinese>自動第三人稱視角</Chinese>
             <German>Auto 3rd-Person-Sicht:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TPVAIR">
             <English>Air vehicles</English>
+            <Chinese>空中載具</Chinese>
             <German>Luftfahrzeuge</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TPVLAND">
             <English>Ground vehicles</English>
+            <Chinese>地面載具</Chinese>
             <German>Bodenfahrzeuge</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TPVALL">
             <English>All vehicles</English>
+            <Chinese>所有載具</Chinese>
             <German>Alle Fahrzeuge</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TEXTRADIO">
             <English>Disable radio chatter:</English>
+            <Chinese>關閉文字聊天：</Chinese>
             <German>KI Funk deaktivieren:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_RADIOVOICE">
             <English>Only voice</English>
+            <Chinese>只有語音通訊</Chinese>
             <German>Nur Stimme</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_RADIOALL">
             <English>Voice + Chat</English>
+            <Chinese>語音+文字通訊</Chinese>
             <German>Stimme + Chat</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_TEXTSOUND">
             <English>In vehicle volume:</English>
+            <Chinese>載具內音量：</Chinese>
             <German>Lautstärke im Fahrzeug:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_SOUND_TT">
             <English>The sound adjustment is overwritten by ACE, if you should use it.</English>
+            <Chinese>如果你有使用ACE模組，聲音設定將會被ACE的覆蓋</Chinese>
             <German>Die Lautstärkeanpassung wird durch ACE überschrieben, wenn du es nutzen solltest.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_NOTLEADER_NOTE">
             <English>You're not the leader of this group.</English>
+            <Chinese>你不是這個團隊的隊長</Chinese>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_NOLVLSYSTEM">
             <English>Leveling system disabled</English>
+            <Chinese>陞階系統關閉</Chinese>
             <German>Levelsystem deaktiviert</German>
         </Key>
         <!-- ARSENAL DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
             <English>KP Liberation Arsenal</English>
+            <Chinese>KP Liberation軍火庫</Chinese>
             <German>KP Liberation Arsenal</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOAD">
             <English>Load selection</English>
+            <Chinese>讀取選擇</Chinese>
             <German>Auswahl laden</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_DEFAULT">
             <English>Set as default</English>
+            <Chinese>設定為預設值</Chinese>
             <German>Als Standard benutzen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT">
             <English>Refresh</English>
+            <Chinese>刷新</Chinese>
             <German>Aktualisieren</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
             <English>Copy/Load from near player</English>
+            <Chinese>複製並讀取附近玩家的裝備配置</Chinese>
             <German>Kopieren/Laden von einem Spieler in der Nähe</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_OPEN">
             <English>Open Arsenal</English>
+            <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
     </Package>
@@ -584,286 +649,357 @@
         <!-- ARSENAL CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL">
             <English>KPLIB - Arsenal</English>
+            <Chinese>KPLIB - 軍火庫</Chinese>
             <German>KPLIB - Arsenal</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL">
             <English>Arsenal</English>
+            <Chinese>軍火庫</Chinese>
             <German>Arsenal</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_TT">
             <English>Selection between whitelist method, blacklist method or unrestricted arsenal access.</English>
+            <Chinese>可以選擇白名單、黑名單或是無限制的軍火庫</Chinese>
             <German>Auswahl des Whitelist Methode, der Blacklist Methode oder uneingeschränkten Arsenalzugang.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0">
             <English>Unrestricted</English>
+            <Chinese>無限制</Chinese>
             <German>Uneingeschränkt</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1">
             <English>Blacklist Method</English>
+            <Chinese>黑名單</Chinese>
             <German>Blacklist Methode</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2">
             <English>Whitelist Method</English>
+            <Chinese>白名單</Chinese>
             <German>Whitelist Methode</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE">
             <English>Loadout Copy Distance</English>
+            <Chinese>可複製裝備的距離</Chinese>
             <German>Loadout Kopierdistanz</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_COPYDISTANCE_TT">
             <English>Radius in meters around the player in which other players are recognized for loadout copying.</English>
+            <Chinese>在玩家中心半徑公尺的距離，可複製裝備</Chinese>
             <German>Radius in Metern um den Spieler, in dem andere Spieler zum Loadout kopieren registiert werden.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE">
             <English>Arsenal Type</English>
+            <Chinese>軍火庫類型</Chinese>
             <German>Arsenal Typ</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_TT">
             <English>Used arsenal, which can be accessed through the arsenal dialog.</English>
+            <Chinese>可透過軍火庫選單讀取使用過的裝備</Chinese>
             <German>Ausgewähltes Arsenal, das über den Arsenal Dialog benutzt werden kann.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_0">
             <English>BI Arsenal</English>
+            <Chinese>BI 軍火庫</Chinese>
             <German>BI Arsenal</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ARSENAL_TYPE_1">
             <English>ACE Arsenal</English>
+            <Chinese>ACE 軍火庫</Chinese>
             <German>ACE Arsenal</German>
         </Key>
 
         <!-- GENERAL CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_GENERAL">
             <English>KPLIB - General</English>
+            <Chinese>KPLIB - 一般選項</Chinese>
             <German>KPLIB - Allgemein</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO">
             <English>Clear Vehicle Cargo</English>
+            <Chinese>清空載具貨物</Chinese>
             <German>Fahrzeuginventar leeren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO_TT">
             <English>Enables/Disables if spawned/loaded vehicles have an empty cargo space.</English>
+            <Chinese>如果重生/裝載的載具有倉儲空間則啟用/關閉</Chinese>
             <German>Aktiviert/Deaktiviert ob gebaute/geladene Fahrzeuge ein leeres Inventar haben.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG">
             <English>Enable Debug Mode</English>
+            <Chinese>啟動除錯模式</Chinese>
             <German>Debug Modus aktivieren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT">
             <English>Enables/Disables extended Liberation debug output for the server log.</English>
+            <Chinese>啟用/關閉擴展的Liberation除錯訊息輸出到伺服器紀錄</Chinese>
             <German>Aktiviert/Deaktiviert erweiterte Liberation Debug Ausgaben im Serverlog.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE">
             <English>FOB Area</English>
+            <Chinese>前線基地範圍</Chinese>
             <German>FOB Bereich</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE_TT">
             <English>Radius in meters of the FOB area.</English>
+            <Chinese>前線基地半徑公尺內</Chinese>
             <German>Radius in Metern des FOB Bereichs.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT">
             <English>Save Interval</English>
+            <Chinese>儲存間隔</Chinese>
             <German>Speicherintervall</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT_TT">
             <English>Interval of periodic saves in seconds.</English>
+            <Chinese>儲存間隔以秒計</Chinese>
             <German>Intervall in Sekunden der automatischen Speicherung.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA">
             <English>Enable Stamina</English>
+            <Chinese>啟用體力</Chinese>
             <German>Ausdauer aktivieren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_STAMINA_TT">
             <English>Enables/Disables the BI stamina system. (doesn't affect ACE Advanced Fatigue)</English>
+            <Chinese>啟用/關閉BI體力系統，不影響ACE進階疲勞系統</Chinese>
             <German>Aktiviert/Deaktiviert das BI Ausdauersystem. (Kein Einfluss auf die erweiterte Ausdauer von ACE)</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI">
             <English>Time Multiplier</English>
+            Chinese>時間加速</Chinese>
             <German>Zeitbeschleunigung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_TIMEMULTI_TT">
             <English>Sets the time multiplier. Default of 4 means 6 hours in realtime for 24 hours in ingame time.</English>
+            <Chinese>設定時間加速，預設值為4代表6小時的遊戲時間走完真實時間的24小時</Chinese>
             <German>Legt die Zeitbeschleunigung fest. Standard von 4 bedeutet 6 Stunden Echtzeit für 24 Stunden ingame Zeit.</German>
         </Key>
 
         <!-- PRESETS CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_PRESET">
             <English>KPLIB - Presets</English>
+            <Chinese>KPLIB - 預設值</Chinese>
             <German>KPLIB - Presets</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
             <English>Player</English>
+            <Chinese>玩家</Chinese>
             <German>Spieler</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_TT">
             <English>Selection for the units, vehicles, etc. for the players.</English>
+            <Chinese>玩家可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Spieler.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_0">
             <English>Custom Preset</English>
+            <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY">
             <English>Enemy</English>
+            <Chinese>敵人</Chinese>
             <German>Gegner</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_TT">
             <English>Selection for the units, vehicles, etc. for the enemy.</English>
+            <Chinese>敵人可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Gegner.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_0">
             <English>Custom Preset</English>
+            <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS">
             <English>Resistance</English>
+            <Chinese>反抗軍</Chinese>
             <German>Widerstand</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_TT">
             <English>Selection for the units, vehicles, etc. for the resistance.</English>
+            <Chinese>反抗軍可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. des Widerstands.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_0">
             <English>Custom Preset</English>
+            <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV">
             <English>Civlians</English>
+            <Chinese>平民</Chinese>
             <German>Zivilisten</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_TT">
             <English>Selection for the units, vehicles, etc. for the civilians.</English>
+            <Chinese>平民可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Zivilisten.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_0">
             <English>Custom Preset</English>
+            <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
 
         <!-- RESPAWN CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_RESPAWN">
             <English>KPLIB - Respawn</English>
+            <Chinese>KPLIB - 重生</Chinese>
             <German>KPLIB - Respawn</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE">
             <English>Allow Mobile Respawn</English>
+            <Chinese>允許機動重生</Chinese>
             <German>Erlaube mobilen Respawn</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESPAWN_MOBILE_TT">
             <English>Enables/Disables the mobile respawn functionality of certain vehicles.</English>
+            <Chinese>啟用/關閉部分載具的機動重生功能</Chinese>
             <German>Aktiviert/Deaktiviert die Möglichkeit entsprechende Fahrzeuge als mobilen Respawnpunkt zu nutzen.</German>
         </Key>
 
         <!-- BI REVIVE CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_REVIVE">
             <English>KPLIB - BI Revive</English>
+            <Chinese>KPLIB - BI 復甦系統</Chinese>
             <German>KPLIB - BI Revive</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_BLEEDOUT_TT">
             <English>How long it takes in seconds to bleed out when incapacitated.</English>
+            <Chinese>昏厥後流血時間(以秒計)</Chinese>
             <German>Dauer in Sekunden, bis man im Wiederbelebungsstatus verblutet ist.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_DURATION_TT">
             <English>How long it takes in seconds to revive someone.</English>
+            <Chinese>復甦所需時間(以秒計)</Chinese>
             <German>Dauer in Sekunden, um jemanden wiederzubeleben.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_INCAPMODE_TT">
             <English>How deep is the simulation of damage and incapacitation.</English>
+            <Chinese>模擬傷害及昏厥的強度</Chinese>
             <German>Umfang der Schadenssimulation.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_MODE_TT">
             <English>Enables/Disables the BI Revive System. (Automatically disabled if using ACE medical)</English>
+            <Chinese>啟用/關閉BI 復甦系統(若使用ACE醫療則自動關閉)</Chinese>
             <German>Aktiviert/Deaktiviert das BI Revive System. (Automatisch deaktiviert, wenn ACE Medical aktiv)</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_REQITEM_TT">
             <English>Controls whether any items are required to revive someone.</English>
+            <Chinese>是否需要醫療物品才能復甦傷者</Chinese>
             <German>Festlegung, ob ein spezieller Gegenstand zur Wiederbelebung nötig ist.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_REQTRAIT_TT">
             <English>Controls whether special training is required to revive someone.</English>
+            <Chinese>是否需要醫護兵才能復甦傷者</Chinese>
             <German>Festlegung, ob ein spezielles Training zur Wiederbelebung nötig ist.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_RESPAWN_TT">
             <English>How long it takes in seconds for players to force their respawn.</English>
+            <Chinese>玩家昏厥後到可重生的時間(以秒計)</Chinese>
             <German>Dauer in Sekunden, um den Respawn zu erzwingen.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_REVIVE_SPEEDMULT_TT">
             <English>Decreases the time it takes for a Medic to revive someone.</English>
+            <Chinese>醫護兵加速醫療時間</Chinese>
             <German>Verringert die notwendige Zeit, die ein Sanitäter zur Wiederbelebung benötigt.</German>
         </Key>
 
         <!-- SECTOR CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_SECTOR">
             <English>KPLIB - Sectors</English>
+            <Chinese>KPLIB - 戰區</Chinese>
             <German>KPLIB - Sektoren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECACT">
             <English>Distance for sector activation</English>
+            <Chinese>戰區被啟動的距離</Chinese>
             <German>Entfernung zur Sektoraktivierung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECACT_TT">
             <English>Radius in meters around the sector center to activate the sector.</English>
+            <Chinese>在戰區中心半徑公尺內啟動戰區</Chinese>
             <German>Radius in Metern vom Sektor aus, um ihn zu aktivieren.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECCAP">
             <English>Sector Cap</English>
+            <Chinese>戰區上限</Chinese>
             <German>Sektorlimit</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECCAP_TT">
             <English>The amount of sectors which can be active at the same time.</English>
+            <Chinese>可以同時被啟動的戰區數量</Chinese>
             <German>Maximalzahl der gleichzeitig aktiven Sektoren.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE">
             <English>Sector Capture Distance</English>
+            <Chinese>可佔領戰區的距離</Chinese>
             <German>Entfernung zur Sektoreroberung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT">
             <English>Radius in meters around the sector center a unit has to be to being able to capture the sector.</English>
+            <Chinese>在戰區中心半徑公尺內的單位可進行佔領</Chinese>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
 
         <!-- ZEUS CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_ZEUS">
             <English>KPLIB - Zeus</English>
+            <Chinese>KPLIB - 宙斯</Chinese>
             <German>KPLIB - Zeus</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_COMMANDER">
             <English>Commander</English>
+            <Chinese>指揮官</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_SUBCOMMANDER">
             <English>Sub-Commander</English>
+            <Chinese>副指揮官</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_CLIENT">
             <English>Client settings</English>
+            <Chinese>客戶端設定</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_COMMANDER_MODE">
             <English>Commander slot zeus access level</English>
+            <Chinese>指揮官可使用宙斯的層級</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_SUBCOMMANDER_MODE">
             <English>Sub-Commander slot zeus access level</English>
+            <Chinese>副指揮官可使用宙斯的層級</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_NONE">
             <English>None</English>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_LIMITED">
             <English>Limited</English>
+            <Chinese>被限制的</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_LIMITED_FREE_CAM">
             <English>Limited with free camera</English>
+            <Chinese>關閉使用自由攝影機</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FULL">
             <English>Full</English>
+            <Chinese>全部</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_RADIUS">
             <English>Limited mode camera radius</English>
+            <Chinese>限制模式的攝影機半徑</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_CEILING">
             <English>Limited mode camera ceiling</English>
+            <Chinese>限制模式的攝影機高度</Chinese>            
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS">
             <English>Show 3D fob labels</English>
+            <Chinese>使用立體FOB標記</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_LOCATION_ICONS">
             <English>Show 3D locations labels</English>
+            <Chinese>使用立體位置標記</Chinese>
         </Key>
     </Package>
 
@@ -885,7 +1021,7 @@
         </Key>
         <Key ID="STR_KPLIB_UNITS_SQUAD_AT">
             <English>AT Squad</English>
-            <Chinese>反坦班</Chinese>
+            <Chinese>反裝甲班</Chinese>
             <Chinesesimp>反坦克班</Chinesesimp>
             <French>Escouade AT</French>
             <German>Panzerbekämpfungstrupp</German>
@@ -897,7 +1033,7 @@
         </Key>
         <Key ID="STR_KPLIB_UNITS_SQUAD_LIGHT">
             <English>Light Rifle Squad</English>
-            <Chinese>輕裝步槍班</Chinese>
+            <Chinese>輕武器班</Chinese>
             <Chinesesimp>轻装步枪班</Chinesesimp>
             <French>Escouade Fusiliers Légère</French>
             <German>Leichter Waffentrupp</German>
@@ -933,7 +1069,7 @@
         </Key>
         <Key ID="STR_KPLIB_UNITS_SQUAD_RIFLE">
             <English>Heavy Rifle Squad</English>
-            <Chinese>重裝步槍班</Chinese>
+            <Chinese>重武器班</Chinese>
             <Chinesesimp>重装步枪班</Chinesesimp>
             <French>Escouade Fusiliers Lourde</French>
             <German>Schwerer Waffentrupp</German>
