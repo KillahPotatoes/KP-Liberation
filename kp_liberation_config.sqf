@@ -101,20 +101,20 @@ GRLIB_color_enemy_bright = "ColorRED";																			// Enemy sector marker 
 
 GRLIB_fob_range = 125;																							// Build range around the main FOB building.
 GRLIB_halo_altitude = 2500;																						// Altitude in metres for the HALO jump.
-GRLIB_secondary_missions_costs = [15, 10, 8];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
-GRLIB_secondary_objective_impact = 0.6;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
+GRLIB_secondary_missions_costs = [20, 15, 10];																	// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
+GRLIB_secondary_objective_impact = 0.8;																			// The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 0.8;																				// Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 30				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 25				/ GRLIB_resources_multiplier;								// Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1000;																						// Range to activate a sector.
 GRLIB_capture_size = 175;																						// Range to capture a sector.
-GRLIB_defended_buildingpos_part = 0.4;																			// Multiplier for defenders in buildings.
-GRLIB_battlegroup_size = 6							* (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);	// Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 1200;																				// Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_defended_buildingpos_part = 0.5;																			// Multiplier for defenders in buildings.
+GRLIB_battlegroup_size = 8							* (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);	// Size of enemy battlegroups.
+GRLIB_vulnerability_timer = 1500;																				// Time in seconds how long a captured sector is vulnerable to enemy troops.
 GRLIB_radiotower_size = 2500;																					// Radio Tower scanning range.
-GRLIB_surrender_chance = 80;																					// Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_surrender_chance = 85;																					// Chance that enemy infantry will surrender after heavy losses are encountered.
 
-GRLIB_civilians_amount = 10 						* GRLIB_civilian_activity;									// Civilian count multiplier.
+GRLIB_civilians_amount = 15 						* GRLIB_civilian_activity;									// Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;																						// Time in seconds until bodies of dead soldiers are cleaned up.
 
 GRLIB_blufor_cap = 100								* GRLIB_unitcap;											// Cap for BLUFOR.
@@ -127,8 +127,8 @@ KP_liberation_cr_building_penalty = 3;																			// Civil Reputation pen
 KP_liberation_cr_vehicle_penalty = 2;																			// Civil Reputation penalty for stealing a civilian vehicle.
 KP_liberation_cr_resistance_penalty = 3;																		// Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 5;																				// Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 35;																			// Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_gain = 2;																				// Civil Reputation gain for providing medical assistance for wounded civilians.
+KP_liberation_cr_wounded_chance = 50;																			// Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_gain = 5;																				// Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 5400;																				// Civil Informant minimum spawn time. (seconds)
 KP_liberation_civinfo_max = 10800;																				// Civil Informant maximum spawn time. (seconds)
@@ -138,8 +138,8 @@ KP_liberation_civinfo_duration = 1200;																			// Civil Informant stay
 KP_liberation_civinfo_task_chance = 100;																		// Chance (0-100) that the delivered informant will spawn a time critical task.
 KP_liberation_civinfo_task_duration = 900;																		// Duration until the task will despawn if no player is near. (seconds)
 
-KP_liberation_convoy_ambush_chance = 2;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
-KP_liberation_convoy_ambush_duration = 1200;																	// Duration of the convoy ambush event. (seconds)
+KP_liberation_convoy_ambush_chance = 5;																			// Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_duration = 1500;																	// Duration of the convoy ambush event. (seconds)
 
 KP_liberation_resistance_tier2 = 30;																			// At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;																			// At which strength (0-100) the guerilla forces will be at tier 3?

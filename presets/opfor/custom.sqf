@@ -7,35 +7,35 @@ Optional Mods:
 */
 
 // Enemy infantry classes
-opfor_officer = "LIB_GER_oberst";                                            //Officer
-opfor_squad_leader = "SG_sturmtrooper_lieutenant";                        //Squad Leader
-opfor_team_leader = "SG_sturmtrooper_unterofficer";                        //Team Leader
-opfor_sentry = "LIB_DAK_Sentry";                                        //Rifleman (Lite) 
-opfor_rifleman = "LIB_GER_rifleman";                                    //Rifleman 
-opfor_rpg = "fow_s_ger_heer_rifleman_mp40_pzf";                                            //Rifleman (LAT) 
-opfor_grenadier = "LIB_GER_AT_grenadier";                                        //Grenadier 
-opfor_machinegunner = "fow_s_ger_heer_mg34_gunner";                                //Autorifleman 
-opfor_heavygunner = "LIB_GER_mgunner";                                    //Heavy Gunner 
-opfor_marksman = "fow_s_ger_heer_rifleman_g43";                                        //Marksman 
-opfor_sharpshooter = "LIB_GER_scout_sniper";                                //Sharpshooter 
-opfor_sniper = "SG_sturmtrooper_sniper";                                            //Sniper 
-opfor_at = "SG_sturmtrooper_AT_soldier";                                            //AT Specialist 
-opfor_aa = "SG_sturmtrooper_stggunner";                                            //Assault Gunner 
-opfor_medic = "SG_sturmtrooper_medic";                                                //Combat Life Saver 
-opfor_engineer = "SG_sturmtrooper_sapper_gefr";                                        //Engineer
-opfor_paratrooper = "LIB_FSJ_Soldier_2_para";                                    //Paratrooper
+opfor_officer = 							"LIB_GER_oberst";									//Officer
+opfor_squad_leader = 						"SG_sturmtrooper_lieutenant";						//Squad Leader
+opfor_team_leader = 						"SG_sturmtrooper_unterofficer";						//Team Leader
+opfor_sentry = 								"LIB_DAK_Sentry";									//Rifleman (Light) 
+opfor_rifleman = 							"LIB_GER_rifleman";									//Rifleman 
+opfor_rpg = 								"fow_s_ger_heer_rifleman_mp40_pzf";					//Rifleman (Panzerfaust) 
+opfor_grenadier = 							"LIB_GER_AT_grenadier";								//Grenadier 
+opfor_machinegunner = 						"fow_s_ger_heer_mg34_gunner";                  	    //Autorifleman 
+opfor_heavygunner = 						"LIB_GER_mgunner";                             		//Heavy Gunner 
+opfor_marksman = 							"fow_s_ger_heer_rifleman_g43";						//Marksman 
+opfor_sharpshooter = 						"LIB_GER_scout_sniper";                    		    //Sharpshooter 
+opfor_sniper = 								"SG_sturmtrooper_sniper";                     	    //Sniper 
+opfor_at = 									"SG_sturmtrooper_AT_soldier";                		//AT Specialist 
+opfor_aa = 									"SG_sturmtrooper_stggunner";						//Assault Gunner 
+opfor_medic = 								"SG_sturmtrooper_medic";                            //Combat Life Saver 
+opfor_engineer = 							"SG_sturmtrooper_sapper_gefr";                     	//Engineer
+opfor_paratrooper = 						"LIB_FSJ_Soldier_2_para";                          	//Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "LIB_kfz1";												//Ifrit
-opfor_mrap_armed = "LIB_Kfz1_MG42";										//Ifrit (HMG)
-opfor_transport_helo = "O_Heli_Transport_04_bench_F";					//Mi-290 Taru (Bench)
-opfor_transport_truck = "LIB_opelblitz_tent_y_camo";							//Tempest Transport (Covered)
-opfor_ammobox_transport = "LIB_opelblitz_open_y_camo";						//Tempest Transport (Open) -> Has to be able to transport resource crates!
-opfor_fuel_truck = "LIB_opelblitz_fuel";									//Tempest Fuel
-opfor_ammo_truck = "LIB_opelblitz_ammo";									//Tempest Ammo
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";				//Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";				//Taru Ammo Pod
-opfor_flag = "geist_Flag_3Rc3_F";												//CSAT Flag
+opfor_mrap = 								"LIB_kfz1";											//Kuebelwagen
+opfor_mrap_armed = 							"LIB_Kfz1_MG42";									//Kuebelwagen (MG42)
+opfor_transport_helo = 						"O_Heli_Transport_04_bench_F";						//Mi-290 Taru (Bench)
+opfor_transport_truck = 					"LIB_opelblitz_tent_y_camo";						//Opel Blitz Transport (Covered)
+opfor_ammobox_transport = 					"LIB_opelblitz_open_y_camo";						//Opel Blitz Transport (Open) -> Has to be able to transport resource crates!
+opfor_fuel_truck = 							"LIB_opelblitz_fuel";								//Opel Blitz Fuel
+opfor_ammo_truck = 							"LIB_opelblitz_ammo";								//Opel Blitz Ammo
+opfor_fuel_container = 						"Land_Pod_Heli_Transport_04_fuel_F";				//Taru Fuel Pod
+opfor_ammo_container = 						"Land_Pod_Heli_Transport_04_ammo_F";				//Taru Ammo Pod
+opfor_flag = 								"geist_Flag_3Rc3_F";								//German Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
