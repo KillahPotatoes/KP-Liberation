@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6441;
+		nextID=6442;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1654;
+		nextID=1663;
 	};
 	class Camera
 	{
-		pos[]={27350.963,14.753862,5474.4766};
-		dir[]={0.036241163,-0.15555356,0.98727185};
-		up[]={0.0057144975,0.9877041,0.15570982};
-		aside[]={0.99946183,2.5690078e-006,-0.036677718};
+		pos[]={27349.959,12.751208,5490.6816};
+		dir[]={0.01663249,-0.15409485,0.98792595};
+		up[]={0.0025940374,0.98805588,0.15407744};
+		aside[]={0.99986899,3.7177415e-008,-0.016833657};
 	};
 };
 binarizationWanted=0;
@@ -57,13 +57,14 @@ addons[]=
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Static_F_Destroyer_Ship_Gun_01",
 	"A3_Static_F_Jets_AAA_System_01",
-	"A3_Static_F_Jets_SAM_System_01"
+	"A3_Static_F_Jets_SAM_System_01",
+	"cba_main"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -133,6 +134,13 @@ class AddonsMetaData
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="cba_main";
+			name="Community Base Addons - Hauptkomponente";
+			author="CBA-Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
 		};
 	};
 };
@@ -290,7 +298,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=511;
+		items=512;
 		class Item0
 		{
 			dataType="Marker";
@@ -10643,6 +10651,17 @@ class Mission
 			id=6439;
 			type="B_SAM_System_01_F";
 			atlOffset=0.2450161;
+		};
+		class Item511
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14505.024,8.3395672,5881.2769};
+			};
+			id=6441;
+			type="CBA_main_require";
+			atlOffset=0.00060844421;
 		};
 	};
 };
