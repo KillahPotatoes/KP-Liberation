@@ -4,7 +4,7 @@
     File: fn_arsenal_setDefaultLoadout.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-22
-    Last Update: 2018-11-22
+    Last Update: 2018-12-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,9 @@ private _index = lbCurSel _ctrlLoadoutList;
 private _loadout = _ctrlLoadoutList lbText _index;
 
 // Save the default loadout name to player profile
-profileNamespace setVariable ["KPLIB_defaultLoadout", _loadout];
-saveprofilenamespace;
+if !(_loadout isEqualTo "----------") then {
+    profileNamespace setVariable ["KPLIB_defaultLoadout", _loadout];
+    saveprofilenamespace;
+};
 
 true
