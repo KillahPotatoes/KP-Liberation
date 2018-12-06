@@ -5,9 +5,10 @@
         "*.hpp": "sqf"
     },
     "sqflint.ignoredVariables": [
-        "_thisId",
-        "_thisArgs",
         "_input0",
+        "_thisArgs",
+        "_thisId",
+        "_thisType",
         "BIS_fnc_reviveInit",
         "CBA_Settings_fnc_init",
         "KPLIB_eden_boxspawn",

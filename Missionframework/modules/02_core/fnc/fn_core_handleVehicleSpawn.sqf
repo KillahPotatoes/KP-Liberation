@@ -4,7 +4,7 @@
     File: fn_core_handleVehicleSpawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-10
-    Last Update: 2018-11-29
+    Last Update: 2018-12-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,8 +27,9 @@ switch(typeOf _vehicle) do {
         // Add FOB build action globaly and for JIP
         [
             _vehicle,
-            [localize "STR_KPLIB_ACTION_DEPLOY", {["KPLIB_fob_build_requested", _this select 0] call CBA_fnc_localEvent}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
-        ] remoteExecCall ["addAction", 0, true];
+            "STR_KPLIB_ACTION_DEPLOY",
+            [{["KPLIB_fob_build_requested", _this select 0] call CBA_fnc_localEvent}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
     };
 
     case KPLIB_preset_respawnTruck;
@@ -38,8 +39,21 @@ switch(typeOf _vehicle) do {
         // Add redeploy action globaly and for JIP
         [
             _vehicle,
-            [localize "STR_KPLIB_ACTION_REDEPLOY", {["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", "_this == vehicle _this", 10]
-        ] remoteExecCall ["addAction", 0, true];
+            "STR_KPLIB_ACTION_REDEPLOY",
+            [{["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", "_this == vehicle _this", 10]
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    };
+
+    case KPLIB_preset_addHeli: {
+        if ((_vehicle distance KPLIB_eden_startbase) < 20) then {
+            // Add moving action for start helicopters
+            [
+                _vehicle,
+                "STR_KPLIB_ACTION_HELIMOVE",
+                [{[_this select 0] call KPLIB_fnc_core_heliToDeck;}, nil, 10, true, true, "", "(_target distance KPLIB_eden_startbase) < 20", 3],
+                "#FF8000"
+            ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+        };
     };
 };
 

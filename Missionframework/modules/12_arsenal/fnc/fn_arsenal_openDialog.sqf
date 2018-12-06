@@ -4,7 +4,7 @@
     File: fn_arsenal_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-14
-    Last Update: 2018-11-22
+    Last Update: 2018-12-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,14 +30,19 @@ private _ctrlNearPlayer = _dialog displayCtrl 68741;
 private _loadout = profileNamespace getVariable ["KPLIB_defaultLoadout", ""];
 
 // Get Loadout names
-private _loadouts = profileNamespace getVariable "bis_fnc_saveInventory_data";
+private _loadouts = profileNamespace getVariable ["bis_fnc_saveInventory_data", []];
 private _loadoutNames = [];
-{
-    if (_x isEqualType "") then {
-        _loadoutNames pushBack _x;
-    };
-} forEach _loadouts;
-_loadoutNames sort true;
+
+if (_loadouts isEqualTo []) then {
+    _loadoutNames pushback "----------";
+} else {
+    {
+        if (_x isEqualType "") then {
+            _loadoutNames pushBack _x;
+        };
+    } forEach _loadouts;
+    _loadoutNames sort true;
+};
 
 private _index = 0;
 

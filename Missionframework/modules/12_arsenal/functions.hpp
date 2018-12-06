@@ -12,7 +12,7 @@
 */
 
 class arsenal {
-    file = "modules\06_arsenal\fnc";
+    file = "modules\12_arsenal\fnc";
 
     // Applies the selected loadout to the player
     class arsenal_applyLoadout {};

@@ -1,14 +1,14 @@
 /*
-    KPLIB_fnc_arsenal_applyLoadout
+    KPLIB_fnc_setDefaultLoadout
 
-    File: fn_arsenal_applyLoadout.sqf
+    File: fn_arsenal_setDefaultLoadout.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2018-11-14
-    Last Update: 2018-11-25
+    Date: 2018-11-22
+    Last Update: 2018-12-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Applies the selected loadout to the player.
+        Stores the selected loadout as default loadout.
 
     Parameter(s):
         NONE
@@ -25,8 +25,10 @@ private _ctrlLoadoutList = _dialog displayCtrl 68740;
 private _index = lbCurSel _ctrlLoadoutList;
 private _loadout = _ctrlLoadoutList lbText _index;
 
-[player, [profileNamespace, _loadout]] call bis_fnc_loadInventory;
-
-[] call KPLIB_fnc_arsenal_checkGear;
+// Save the default loadout name to player profile
+if !(_loadout isEqualTo "----------") then {
+    profileNamespace setVariable ["KPLIB_defaultLoadout", _loadout];
+    saveprofilenamespace;
+};
 
 true

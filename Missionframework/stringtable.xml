@@ -26,7 +26,7 @@
 
         Localization contributors:
 
-            English | Updated: 2018-11-10
+            English | Updated: 2018-12-05
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -39,7 +39,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2018-11-10
+            German | Updated: 2018-12-05
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -207,6 +207,10 @@
             <Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
             <Spanish>-- DESPLEGAR FOB --</Spanish>
             <Turkish>-- FOB KUR --</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_HELIMOVE">
+            <English>Move to aft deck</English>
+            <German>Zum Achterdeck bewegen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PLAYER_MENU">
             <English>-- Player Menu --</English>
@@ -639,6 +643,10 @@
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
+            <English>Clear the aft deck and the helicopter first.</English>
+            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
     </Package>
 
