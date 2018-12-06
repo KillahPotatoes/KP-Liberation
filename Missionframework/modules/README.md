@@ -1,6 +1,7 @@
 # KP Liberation Module Framework
 
-The used framework provides a module for each function container.
+The used framework provides a modular structure, where each module provides one specific gameplay aspect or functionality.
+
 Each module contains some basic data:
 * `fnc` folder
 * functions.hpp
