@@ -12,7 +12,7 @@
 */
 
 class KPLIB_permission {
-    idd = 758076;
+    idd = 7580761;
     movingEnable = 0;
 
     class controlsBackground {
