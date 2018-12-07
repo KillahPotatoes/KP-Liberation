@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "../script_component.hpp"
 /*
     KP Liberation Custom Civilian Preset
 
@@ -12,65 +12,65 @@
         Custom civilian preset file for individual adjustments.
 */
 
-// Civilian Citizens (KPLIB_preset_unitsC)
-KPLIB_PRST_CAT_BEGIN("units");
-KPLIB_PRST_CAT_ADD("units", "C_Man_Fisherman_01_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_w_worker_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_1_1_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_p_beggar_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_Messenger_01_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_hunter_1_F");
-KPLIB_PRST_CAT_ADD("units", "C_journalist_F");
-KPLIB_PRST_CAT_ADD("units", "C_Journalist_01_War_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_shorts_2_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_UtilityWorker_01_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_1");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_1_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_2_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_3_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_4_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_5_F");
-KPLIB_PRST_CAT_ADD("units", "C_Man_casual_6_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_1_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_2_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_3_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_4_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_5_F");
-KPLIB_PRST_CAT_ADD("units", "C_man_polo_6_F");
+// Civilian Citizens (KPLIB_preset_unitsPlC)
+KPLIB_PRST_CAT_BEGIN("unitsPlC");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_Fisherman_01_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_w_worker_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_1_1_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_p_beggar_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_Messenger_01_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_hunter_1_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_journalist_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Journalist_01_War_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_shorts_2_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_UtilityWorker_01_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_1");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_1_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_2_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_3_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_4_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_5_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_casual_6_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_1_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_2_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_3_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_4_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_5_F");
+KPLIB_PRST_CAT_ADD("unitsPlC", "C_man_polo_6_F");
 
-// Civilian Cars (KPLIB_preset_vehLightUnarmedC)
-KPLIB_PRST_CAT_BEGIN("vehLightUnarmed");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Quadbike_01_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Hatchback_01_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Hatchback_01_sport_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Offroad_01_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_SUV_01_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Van_01_box_F");
+// Civilian Cars (KPLIB_preset_vehLightUnarmedPlC)
+KPLIB_PRST_CAT_BEGIN("vehLightUnarmedPlC");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_Quadbike_01_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_Hatchback_01_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_Hatchback_01_sport_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_Offroad_01_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_SUV_01_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlC", "C_Van_01_box_F");
 
-// Civilian Trucks (KPLIB_preset_vehTransC)
-KPLIB_PRST_CAT_BEGIN("vehTrans");
-KPLIB_PRST_CAT_ADD("vehTrans", "C_Truck_02_covered_F");
-KPLIB_PRST_CAT_ADD("vehTrans", "C_Truck_02_transport_F");
-KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_01_transport_F");
-KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_02_transport_F");
-KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_02_vehicle_F");
+// Civilian Trucks (KPLIB_preset_vehTransPlC)
+KPLIB_PRST_CAT_BEGIN("vehTransPlC");
+KPLIB_PRST_CAT_ADD("vehTransPlC", "C_Truck_02_covered_F");
+KPLIB_PRST_CAT_ADD("vehTransPlC", "C_Truck_02_transport_F");
+KPLIB_PRST_CAT_ADD("vehTransPlC", "C_Van_01_transport_F");
+KPLIB_PRST_CAT_ADD("vehTransPlC", "C_Van_02_transport_F");
+KPLIB_PRST_CAT_ADD("vehTransPlC", "C_Van_02_vehicle_F");
 
-// Civilian Utility Vehicles (KPLIB_preset_logisticC)
-KPLIB_PRST_CAT_BEGIN("logistic");
-KPLIB_PRST_CAT_ADD("logistic", "C_Offroad_01_repair_F");
-KPLIB_PRST_CAT_ADD("logistic", "C_Truck_02_box_F");
-KPLIB_PRST_CAT_ADD("logistic", "C_Truck_02_fuel_F");
-KPLIB_PRST_CAT_ADD("logistic", "C_Van_01_fuel_F");
-KPLIB_PRST_CAT_ADD("logistic", "C_Van_02_medevac_F");
+// Civilian Utility Vehicles (KPLIB_preset_logisticPlC)
+KPLIB_PRST_CAT_BEGIN("logisticPlC");
+KPLIB_PRST_CAT_ADD("logisticPlC", "C_Offroad_01_repair_F");
+KPLIB_PRST_CAT_ADD("logisticPlC", "C_Truck_02_box_F");
+KPLIB_PRST_CAT_ADD("logisticPlC", "C_Truck_02_fuel_F");
+KPLIB_PRST_CAT_ADD("logisticPlC", "C_Van_01_fuel_F");
+KPLIB_PRST_CAT_ADD("logisticPlC", "C_Van_02_medevac_F");
 
-// Civilian Helicopters (KPLIB_preset_heliTransC)
-KPLIB_PRST_CAT_BEGIN("heliTrans");
-KPLIB_PRST_CAT_ADD("heliTrans", "C_Heli_Light_01_civil_F");
+// Civilian Helicopters (KPLIB_preset_heliTransPlC)
+KPLIB_PRST_CAT_BEGIN("heliTransPlC");
+KPLIB_PRST_CAT_ADD("heliTransPlC", "C_Heli_Light_01_civil_F");
 
-// Civilian Planes (KPLIB_preset_planeTransC)
-KPLIB_PRST_CAT_BEGIN("planeTrans");
-KPLIB_PRST_CAT_ADD("planeTrans", "C_Plane_Civil_01_F");
-KPLIB_PRST_CAT_ADD("planeTrans", "C_Plane_Civil_01_racing_F");
+// Civilian Planes (KPLIB_preset_planeTransPlC)
+KPLIB_PRST_CAT_BEGIN("planeTransPlC");
+KPLIB_PRST_CAT_ADD("planeTransPlC", "C_Plane_Civil_01_F");
+KPLIB_PRST_CAT_ADD("planeTransPlC", "C_Plane_Civil_01_racing_F");
 
 
 /*-------------------------------
