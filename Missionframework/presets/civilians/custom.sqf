@@ -12,6 +12,12 @@
         Custom civilian preset file for individual adjustments.
 */
 
+
+/*------------------------------------------------------------
+    --- Civilian Population ---
+    Just normal civilians which are living in the area.
+------------------------------------------------------------*/
+
 // Civilian Citizens (KPLIB_preset_unitsPlC)
 KPLIB_PRST_CAT_BEGIN("unitsPlC");
 KPLIB_PRST_CAT_ADD("unitsPlC", "C_Man_Fisherman_01_F");
@@ -71,6 +77,48 @@ KPLIB_PRST_CAT_ADD("heliTransPlC", "C_Heli_Light_01_civil_F");
 KPLIB_PRST_CAT_BEGIN("planeTransPlC");
 KPLIB_PRST_CAT_ADD("planeTransPlC", "C_Plane_Civil_01_F");
 KPLIB_PRST_CAT_ADD("planeTransPlC", "C_Plane_Civil_01_racing_F");
+
+
+/*------------------------------------------------------------
+    --- Humanitarian Institution ---
+    Units/Vehicles from a humanitarian institution like IDAP.
+------------------------------------------------------------*/
+
+// Engineer (EOD Specialist)
+KPLIB_PRST_SETVAR("rsEngineerIdap", "C_IDAP_Man_EOD_01_F");
+// Helicopter Pilot
+KPLIB_PRST_SETVAR("rsPilotHeliIdap", "C_IDAP_Pilot_01_F");
+// Medic
+KPLIB_PRST_SETVAR("rsMedicIdap", "C_IDAP_Man_Paramedic_01_F");
+// Medical Truck
+KPLIB_PRST_SETVAR("respawnTruckIdap", "C_IDAP_Van_02_medevac_F");
+
+// IDAP Units (KPLIB_preset_unitsPlIdap)
+KPLIB_PRST_CAT_BEGIN("unitsPlIdap");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_01_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_02_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_03_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_04_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_05_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_06_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_07_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_08_F");
+KPLIB_PRST_CAT_ADD("idapUnitsPlC", "C_IDAP_Man_AidWorker_09_F");
+
+// IDAP Cars (KPLIB_preset_vehLightUnarmedPlIdap)
+KPLIB_PRST_CAT_BEGIN("vehLightUnarmedPlIdap");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlIdap", "C_IDAP_Offroad_01_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlIdap", "C_IDAP_Offroad_02_unarmed_F");
+KPLIB_PRST_CAT_ADD("vehLightUnarmedPlIdap", "C_IDAP_Van_02_transport_F");
+
+// IDAP Trucks (KPLIB_preset_vehTransPlIdap)
+KPLIB_PRST_CAT_BEGIN("vehTransPlIdap");
+KPLIB_PRST_CAT_ADD("vehTransPlIdap", "C_IDAP_Truck_02_F");
+KPLIB_PRST_CAT_ADD("vehTransPlIdap", "C_IDAP_Truck_02_transport_F");
+
+// Civilian Helicopters (KPLIB_preset_heliTransPlIdap)
+KPLIB_PRST_CAT_BEGIN("heliTransPlIdap");
+KPLIB_PRST_CAT_ADD("heliTransPlIdap", "C_IDAP_Heli_Transport_02_F");
 
 
 /*-------------------------------
