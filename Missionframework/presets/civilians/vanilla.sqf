@@ -52,13 +52,13 @@ KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Hatchback_01_sport_F");
 KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Offroad_01_F");
 KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_SUV_01_F");
 KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Van_01_box_F");
-KPLIB_PRST_CAT_ADD("vehLightUnarmed", "C_Van_02_transport_F");
 
 // Civilian Trucks (KPLIB_preset_vehTransC)
 KPLIB_PRST_CAT_BEGIN("vehTrans");
 KPLIB_PRST_CAT_ADD("vehTrans", "C_Truck_02_covered_F");
 KPLIB_PRST_CAT_ADD("vehTrans", "C_Truck_02_transport_F");
 KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_01_transport_F");
+KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_02_transport_F");
 KPLIB_PRST_CAT_ADD("vehTrans", "C_Van_02_vehicle_F");
 
 // Civilian Utility Vehicles (KPLIB_preset_logisticC)
