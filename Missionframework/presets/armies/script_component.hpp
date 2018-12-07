@@ -4,7 +4,7 @@
     File: script_component.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-23
-    Last Update: 2018-11-25
+    Last Update: 2018-12-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,14 +24,14 @@
     missionnamespace setVariable [KPLIB_PRST_VAR(VARIABLE), CLASS]
 
 // Creates a KPLIB preset array
-#define KPLIB_PRST_AR_CREATE(ARRAYNAME)\
+#define KPLIB_PRST_CAT_BEGIN(ARRAYNAME)\
     missionnamespace setVariable [KPLIB_PRST_VAR(ARRAYNAME), []];
 
 // Adds a classname to a preset array with resource costs
-#define KPLIB_PRST_AR_ADD(ARRAYNAME, UNITCLASS, RESSUPPLY, RESAMMO, RESFUEL)\
+#define KPLIB_PRST_CAT_ADD(ARRAYNAME, UNITCLASS, RESSUPPLY, RESAMMO, RESFUEL)\
     (KPLIB_PRST_GETVAR(ARRAYNAME)) pushBack [UNITCLASS, RESSUPPLY, RESAMMO, RESFUEL]
 
 // Creates a plain classname array from a preset array with building costs
-#define KPLIB_PRST_AR_PLAIN(ARRAYOLD, ARRAYNEW)\
-    KPLIB_PRST_AR_CREATE(ARRAYNEW);\
-    {(KPLIB_PRST_GETVAR(ARRAYNEW)) pushBack (_X select 0);} forEach (KPLIB_PRST_GETVAR(ARRAYOLD))
+#define KPLIB_PRST_CAT_END(ARRAYNAME)\
+    KPLIB_PRST_CAT_BEGIN(ARRAYNAME + "Pl");\
+    {(KPLIB_PRST_GETVAR(ARRAYNAME + "Pl")) pushBack (_X select 0);} forEach (KPLIB_PRST_GETVAR(ARRAYNAME))
