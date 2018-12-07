@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-24
+    Last Update: 2018-12-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -52,6 +52,18 @@ if (isServer) then {
 
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
+// Enemy side color
+KPLIB_colorEnemy = "ColorEAST";
+// Enemy side color (active)
+KPLIB_colorEnemyAct = "ColorRed";
+// Friendly side color
+KPLIB_colorPlayers = "ColorWEST";
+// Friendly side color (active)
+KPLIB_colorPlayersAct = "ColorBlue";
+// Resistance side color
+KPLIB_colorResistance = "ColorGUER";
+// Resistance side color (active)
+KPLIB_colorResistanceAct = "ColorGreen";
 // Respawn position shortcut
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // Squad names for the buildable squads
@@ -93,6 +105,12 @@ KPLIB_sectors_military = [];
 KPLIB_sectors_spawn = [];
 // All radiotowers
 KPLIB_sectors_tower = [];
+// Enemy side
+KPLIB_sideEnemy = east;
+// Player side
+KPLIB_sidePlayer = west;
+// Resistance side
+KPLIB_sideResistance = resistance;
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
 
