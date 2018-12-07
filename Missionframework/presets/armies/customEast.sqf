@@ -203,23 +203,23 @@ KPLIB_PRST_SETVAR("sfTeamLeader", "O_V_Soldier_TL_hex_F");
 ------------------------------------------------------------*/
 
 // Infantry units
-KPLIB_PRST_CAT_BEGIN("soldiers");
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsRifleman"),               20,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsLightAt"),                30,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsGrenadier"),              25,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsAutorifleMan"),           25,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsHeavyGunner"),            35,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsMarksman"),               30,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsAntiTank"),               50,   10,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsAntiAir"),                50,   10,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsMedic"),                  30,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsEngineer"),               30,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsParatrooper"),            20,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsCrewmanVeh"),             10,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsCrewmanHeli"),            10,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsPilotHeli"),              10,    0,    0);
-KPLIB_PRST_CAT_ADD("soldiers", KPLIB_PRST_GETVAR("rsPilotJet"),               10,    0,    0);
-KPLIB_PRST_CAT_END("soldiers");
+KPLIB_PRST_CAT_BEGIN("units");
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsRifleman"),               20,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsLightAt"),                30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsGrenadier"),              25,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAutorifleMan"),           25,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsHeavyGunner"),            35,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMarksman"),               30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiTank"),               50,   10,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiAir"),                50,   10,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMedic"),                  30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsEngineer"),               30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsParatrooper"),            20,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanVeh"),             10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanHeli"),            10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotHeli"),              10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotJet"),               10,    0,    0);
+KPLIB_PRST_CAT_END("units");
 
 // Special Forces units
 KPLIB_PRST_CAT_BEGIN("specOps");
@@ -418,3 +418,11 @@ KPLIB_PRST_CAT_ADD("deco", "Land_Sign_WarningMilAreaSmall_F",                  0
 KPLIB_PRST_CAT_ADD("deco", "Land_Sign_WarningMilitaryVehicles_F",              0,    0,    0);
 KPLIB_PRST_CAT_ADD("deco", "Land_Razorwire_F",                                 0,    0,    0);
 KPLIB_PRST_CAT_END("deco");
+
+
+/*-------------------------------
+    !!! DO NOT EDIT BELOW !!!
+-------------------------------*/
+
+// Preset was properly parsed, if this is not set player will be informed about errors
+KPLIB_validationNamespace setVariable [KPLIB_PRST_VAR("checked"), true];

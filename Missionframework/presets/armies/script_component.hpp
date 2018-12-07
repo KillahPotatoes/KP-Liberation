@@ -1,5 +1,5 @@
 /*
-    KPLIB Preset Script Component
+    KPLIB Armies Preset Script Component
 
     File: script_component.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Contains all preprocessor commands for the preset processing.
+        Contains all preprocessor commands for the armies preset processing.
 */
 
 // Generates a KPLIB preset variable

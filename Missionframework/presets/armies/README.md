@@ -15,7 +15,7 @@ KPLIB_preset_specOpsF
 KPLIB_preset_specOpsE
 ```
 
-The side and colors of each faction is set in the init module in the fn_init_preInit.sqf.
+The side and colors of each faction is set in the init module in the `fn_init_preInit.sqf`.
 Changes there are not needed or required in any way, only if you want to change the colors or anything.
 
 ## Created Variables and Arrays
@@ -278,10 +278,6 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Transport Planes.*
 
-* **KPLIB_preset_soldiers**
-
-  *Regular infantry units.*
-
 * **KPLIB_preset_specOps**
 
   *Special Forces units.*
@@ -289,6 +285,10 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 * **KPLIB_preset_statics**
 
   *Static Defenses.*
+
+* **KPLIB_preset_units**
+
+  *Regular infantry units.*
 
 * **KPLIB_preset_vehAntiAir**
 
