@@ -52,31 +52,28 @@ if (isServer) then {
 
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
-// Enemy side color
-KPLIB_colorEnemy = "ColorEAST";
-// Enemy side color (active)
-KPLIB_colorEnemyAct = "ColorRed";
-// Friendly side color
-KPLIB_colorPlayers = "ColorWEST";
-// Friendly side color (active)
-KPLIB_colorPlayersAct = "ColorBlue";
-// Resistance side color
-KPLIB_colorResistance = "ColorGUER";
-// Resistance side color (active)
-KPLIB_colorResistanceAct = "ColorGreen";
 // Respawn position shortcut
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // All preset variable names as collection for processing
 KPLIB_preset_allVariables = [];
-// Squad names for the buildable squads
-KPLIB_preset_squadNames = [
-    localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
-    localize "STR_KPLIB_UNITS_SQUAD_RIFLE",
-    localize "STR_KPLIB_UNITS_SQUAD_AT",
-    localize "STR_KPLIB_UNITS_SQUAD_AA",
-    localize "STR_KPLIB_UNITS_SQUAD_RECON",
-    localize "STR_KPLIB_UNITS_SQUAD_PARA"
-];
+// Enemy side color
+KPLIB_preset_colorE = "ColorEAST";
+// Enemy side color (active)
+KPLIB_preset_colorActE = "ColorRed";
+// Friendly side color
+KPLIB_preset_colorF = "ColorWEST";
+// Friendly side color (active)
+KPLIB_preset_colorActF = "ColorBlue";
+// Resistance side color
+KPLIB_preset_colorR = "ColorGUER";
+// Resistance side color (active)
+KPLIB_preset_colorActR = "ColorGreen";
+// Enemy side
+KPLIB_preset_sideE = east;
+// Player side
+KPLIB_preset_sideF = west;
+// Resistance side
+KPLIB_preset_sideR = resistance;
 // Reset position shortcut
 KPLIB_resetPos = [99999,99999,0];
 // Indicator if the saved data is fully loaded
@@ -107,12 +104,6 @@ KPLIB_sectors_military = [];
 KPLIB_sectors_spawn = [];
 // All radiotowers
 KPLIB_sectors_tower = [];
-// Enemy side
-KPLIB_sideEnemy = east;
-// Player side
-KPLIB_sidePlayer = west;
-// Resistance side
-KPLIB_sideResistance = resistance;
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
 
