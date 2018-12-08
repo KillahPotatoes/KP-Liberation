@@ -5,7 +5,7 @@
     File: vanilla.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-07
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -132,4 +132,4 @@ KPLIB_PRST_CAT_ADD("heliTransPlIdap", "C_IDAP_Heli_Transport_02_F");
 -------------------------------*/
 
 // Preset was properly parsed, if this is not set player will be informed about errors
-KPLIB_validationNamespace setVariable [KPLIB_PRST_VAR("checked"), true];
+KPLIB_validationNamespace setVariable [KPLIB_PRST_VAR("checkedC"), true];

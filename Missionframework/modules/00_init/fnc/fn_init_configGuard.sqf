@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2018-12-07
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -33,6 +33,7 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedC", false];
 KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedE", false];
 KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedF", false];
 KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedR", false];
+KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
 
 // Delay all checks until all initializations are done
 [] spawn {
