@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2018-12-05
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -43,6 +43,9 @@ class common {
 
     // getPos wrapper for ATL positions
     class common_getPos {};
+
+    // Gets random class of given type from preset
+    class common_getRandomPresetClass {};
 
     // Initialize common module
     class common_preInit {
