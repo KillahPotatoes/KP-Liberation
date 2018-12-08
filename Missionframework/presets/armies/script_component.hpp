@@ -21,11 +21,13 @@
 
 // Sets the value of a KPLIB preset variable
 #define KPLIB_PRST_SETVAR(VARIABLE,CLASS)\
-    missionNamespace setVariable [KPLIB_PRST_VAR(VARIABLE), CLASS]
+    missionNamespace setVariable [KPLIB_PRST_VAR(VARIABLE), CLASS];\
+    KPLIB_preset_allVariables pushBackUnique VARIABLE
 
 // Creates a KPLIB preset array
 #define KPLIB_PRST_CAT_BEGIN(ARRAYNAME)\
-    missionNamespace setVariable [KPLIB_PRST_VAR(ARRAYNAME), []];
+    missionNamespace setVariable [KPLIB_PRST_VAR(ARRAYNAME), []];\
+    KPLIB_preset_allVariables pushBackUnique ARRAYNAME
 
 // Adds a classname to a preset array with resource costs
 #define KPLIB_PRST_CAT_ADD(ARRAYNAME, UNITCLASS, RESSUPPLY, RESAMMO, RESFUEL)\

@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-07
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -66,6 +66,8 @@ KPLIB_colorResistance = "ColorGUER";
 KPLIB_colorResistanceAct = "ColorGreen";
 // Respawn position shortcut
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
+// All preset variable names as collection for processing
+KPLIB_preset_allVariables = [];
 // Squad names for the buildable squads
 KPLIB_preset_squadNames = [
     localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
