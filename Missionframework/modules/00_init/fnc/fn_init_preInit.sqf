@@ -56,6 +56,10 @@ KPLIB_campaignRunning = true;
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
 // All preset variable names as collection for processing
 KPLIB_preset_allVariables = [];
+// Civilian side color
+KPLIB_preset_colorC = "ColorCIV";
+// Civilian side color (active)
+KPLIB_preset_colorActC = "ColorPink";
 // Enemy side color
 KPLIB_preset_colorE = "ColorEAST";
 // Enemy side color (active)
@@ -68,6 +72,8 @@ KPLIB_preset_colorActF = "ColorBlue";
 KPLIB_preset_colorR = "ColorGUER";
 // Resistance side color (active)
 KPLIB_preset_colorActR = "ColorGreen";
+// Civilian side
+KPLIB_preset_sideC = civilian;
 // Enemy side
 KPLIB_preset_sideE = east;
 // Player side

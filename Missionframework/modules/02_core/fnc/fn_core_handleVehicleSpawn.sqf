@@ -4,7 +4,7 @@
     File: fn_core_handleVehicleSpawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-10
-    Last Update: 2018-12-05
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,8 +22,8 @@ params [
 ];
 
 switch(typeOf _vehicle) do {
-    case KPLIB_preset_fobBox;
-    case KPLIB_preset_fobTruck: {
+    case KPLIB_preset_fobBoxF;
+    case KPLIB_preset_fobTruckF: {
         // Add FOB build action globaly and for JIP
         [
             _vehicle,
@@ -32,8 +32,8 @@ switch(typeOf _vehicle) do {
         ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
     };
 
-    case KPLIB_preset_respawnTruck;
-    case KPLIB_preset_potato: {
+    case KPLIB_preset_respawnTruckF;
+    case KPLIB_preset_potatoF: {
         // Set vehicle as mobile respawn
         _vehicle setVariable ["KPLIB_respawn", true, true];
         // Add redeploy action globaly and for JIP
@@ -44,7 +44,7 @@ switch(typeOf _vehicle) do {
         ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
     };
 
-    case KPLIB_preset_addHeli: {
+    case KPLIB_preset_addHeliF: {
         if ((_vehicle distance KPLIB_eden_startbase) < 20) then {
             // Add moving action for start helicopters
             [

@@ -4,7 +4,7 @@
     File: fn_common_createCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-25
-    Last Update: 2018-10-25
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 
     Parameter(s):
         _vehicle    - Vehicle object which should get a crew    [OBJECT, defaults to objNull]
-        _side       - Side of the crew                          [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _side       - Side of the crew                          [SIDE, defaults to KPLIB_preset_sideE]
 
     Returns:
         Created crew [GROUP]
@@ -20,42 +20,30 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]]
+    ["_side", KPLIB_preset_sideE, [sideEmpty]]
 ];
 
 // Exit when no or destroyed vehicle was given
 if ((_vehicle isEqualTo objNull) || !(alive _vehicle)) exitWith {grpNull};
-/* NOTE
-    The following code will be used as soon as we've refactored the preset files structure
 
 // Determine classname side
 private _crewSide = switch (_side) do {
-    case "KPLIB_preset_sidePlayers": {""};
-    case "KPLIB_preset_sideResistance": {"r"};
-    case "KPLIB_preset_sideCivilian": {"c"};
-    default {"o"};
+    case KPLIB_preset_sideF: {"F"};
+    case KPLIB_preset_sideR: {"R"};
+    case KPLIB_preset_sideC: {"C"};
+    default {"E"};
 };
 
 // Determine classname type for air vehicles
 private _crewType = switch (true) do {
-    case (_vehicle isKindOf "Plane"): {"Pilot"};
-    case (_vehicle isKindOf "Helicopter"): {"hpilot"};
-    default {"Crew"};
+    case (_vehicle isKindOf "Plane"): {"rsPilotJet"};
+    case (_vehicle isKindOf "Helicopter"): {"rsPilotHeli"};
+    default {"rsCrewmanVeh"};
 };
 
 // Get correct classname or exit, when no classname could be found
-private _crewClass = missionNamespace getVariable ["KPLIB_preset_" + _crewSide + _crewType, ""];
+private _crewClass = missionNamespace getVariable ["KPLIB_preset_" + _crewType + _crewSide, ""];
 if ((_crewClass isEqualTo "") || (_crewClass isEqualTo [])) exitWith {grpNull};
-
-*/
-
-// Determine crew classname (will be removed as soon as the above will be used)
-private _crewClass = switch (_side) do {
-    case "KPLIB_preset_sidePlayers": {KPLIB_preset_crewman};
-    case "KPLIB_preset_sideResistance": {KPLIB_preset_rUnits};
-    case "KPLIB_preset_sideCivilian": {KPLIB_preset_cUnits};
-    default {KPLIB_preset_oMilUnits};
-};
 
 // Get all turret paths of the vehicle
 private _turrets = [[-1]] + (allTurrets _vehicle);
