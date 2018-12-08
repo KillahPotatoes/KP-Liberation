@@ -789,6 +789,22 @@
             <Chinese>KPLIB - 預設值</Chinese>
             <German>KPLIB - Presets</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_0">
+            <English>CEA - Custom East Army</English>
+            <German>CEA - Custom East Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_1">
+            <English>CSAT</English>
+            <German>CSAT</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_2">
+            <English>CWA - Custom West Army</English>
+            <German>CWA - Custom West Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_3">
+            <English>NATO</English>
+            <German>NATO</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
             <English>Player</English>
             <Chinese>玩家</Chinese>
@@ -799,11 +815,6 @@
             <Chinese>玩家可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Spieler.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
-        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY">
             <English>Enemy</English>
             <Chinese>敵人</Chinese>
@@ -813,11 +824,6 @@
             <English>Selection for the units, vehicles, etc. for the enemy.</English>
             <Chinese>敵人可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Gegner.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS">
             <English>Resistance</English>
@@ -834,6 +840,10 @@
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_1">
+            <English>FIA</English>
+            <German>FIA</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV">
             <English>Civlians</English>
             <Chinese>平民</Chinese>
@@ -848,6 +858,10 @@
             <English>Custom Preset</English>
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_1">
+            <English>Vanilla</English>
+            <German>Vanilla</German>
         </Key>
 
         <!-- RESPAWN CATEGORY -->
@@ -999,7 +1013,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_CEILING">
             <English>Limited mode camera ceiling</English>
-            <Chinese>限制模式的攝影機高度</Chinese>            
+            <Chinese>限制模式的攝影機高度</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS">
             <English>Show 3D fob labels</English>
