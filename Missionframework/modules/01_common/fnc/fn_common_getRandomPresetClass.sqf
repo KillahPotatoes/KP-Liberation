@@ -30,13 +30,13 @@ private _sideSuffix = switch (_side) do {
     default {"E"};
 };
 
-private _classNamesVariable = format ["KPLIB_preset_%1%2", _type, _sideSuffix];
+private _classNamesVar = format ["KPLIB_preset_%1%2", _type, _sideSuffix];
 
-private _classNames = missionNamespace getVariable [_classNamesVariable, nil];
+private _classNames = missionNamespace getVariable [_classNamesVar, nil];
 
-// Exit if there are not classnames of given type in preset
+// Exit if there are no classnames of given type in preset
 if (isNil "_classNames") exitWith {
-    diag_log format ["[KP LIBERATION] [%1] [COMMON] Could not find preset variable '%2'", diag_tickTime, _classNames];
+    diag_log format ["[KP LIBERATION] [%1] [COMMON] Could not find preset variable '%2'", diag_tickTime, _classNamesVar];
     ""
 };
 

@@ -26,47 +26,38 @@ params [
 // Exit when no or destroyed vehicle was given
 if ((_vehicle isEqualTo objNull) || !(alive _vehicle)) exitWith {grpNull};
 
-// Determine classname side
-private _crewSide = switch (_side) do {
-    case KPLIB_preset_sideF: {"F"};
-    case KPLIB_preset_sideR: {"R"};
-    case KPLIB_preset_sideC: {"C"};
-    default {"E"};
-};
+private _turrets = (allTurrets _vehicle);
 
-// Determine classname type for air vehicles
-private _crewType = switch (true) do {
+// Get driver class depending on vehicle type
+private _driverType = switch (true) do {
     case (_vehicle isKindOf "Plane"): {"rsPilotJet"};
     case (_vehicle isKindOf "Helicopter"): {"rsPilotHeli"};
     default {"rsCrewmanVeh"};
 };
 
-// Get correct classname or exit, when no classname could be found
-private _crewClass = missionNamespace getVariable ["KPLIB_preset_" + _crewType + _crewSide, ""];
-if ((_crewClass isEqualTo "") || (_crewClass isEqualTo [])) exitWith {grpNull};
+private _driverClass = [[_driverType, _side] call KPLIB_fnc_common_getRandomPresetClass];
 
-// Get all turret paths of the vehicle
-private _turrets = [[-1]] + (allTurrets _vehicle);
+// Get crew class depending on vehicle type
+private _crewType = switch (true) do {
+    case (_vehicle isKindOf "Plane"): {"rsPilotJet"};
+    case (_vehicle isKindOf "Helicopter"): {"rsCrewmanHeli"};
+    default {"rsCrewmanVeh"};
+};
 
-// Fill array for group spawning
-private _classnames = [];
-for "_i" from 1 to (count _turrets) do {
-    if (_crewClass isEqualType []) then {
-        _classnames pushBack (selectRandom _crewClass);
-    } else {
-        _classnames pushBack _crewClass;
-    };
+private _crewClasses = _turrets apply {
+    [_crewType, _side] call KPLIB_fnc_common_getRandomPresetClass;
 };
 
 // Spawn group and move into to vehicle
-private _grp = [_side, _classnames, getPos _vehicle] call KPLIB_fnc_common_createGroup;
+private _grp = [_side, _driverClass + _crewClasses, getPos _vehicle] call KPLIB_fnc_common_createGroup;
+// Move the units into the vehicle, -1 indicates driver
 {
     if (_forEachIndex isEqualTo 0) then {
         ((units _grp) select _forEachIndex) moveInDriver _vehicle;
     } else {
         ((units _grp) select _forEachIndex) moveInTurret [_vehicle, _x];
     }
-} forEach _turrets;
+} forEach [-1] + _turrets;
 
 // Assign vehicle to group and make sure the commander is group leader
 _grp addVehicle _vehicle;
