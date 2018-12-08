@@ -4,7 +4,7 @@
     File: fn_init_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-09
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,7 +28,7 @@ if (_moduleData isEqualTo []) then {
     // Set random start date
     setDate [2018, ceil (random 12), ceil (random 28), 8, 0];
 
-    // Connect locked vehicles to military bases
+    /*// Connect locked vehicles to military bases
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -39,7 +39,7 @@ if (_moduleData isEqualTo []) then {
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
-    };
+    };*/
     publicVariable "KPLIB_sectors_lockedVeh";
 } else {
     // Otherwise start applying the saved data
@@ -59,7 +59,7 @@ if (_moduleData isEqualTo []) then {
     KPLIB_sectors_lockedVeh = KPLIB_sectors_lockedVeh select {(_x select 0) in KPLIB_preset_lockedVeh};
     KPLIB_sectors_lockedVeh = KPLIB_sectors_lockedVeh select {(_x select 1) in KPLIB_sectors_military};
 
-    // Check for additions in the locked vehicles array
+    /*// Check for additions in the locked vehicles array
     private _lockedVehCount = count KPLIB_sectors_lockedVeh;
     if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_preset_lockedVeh))) then {
         diag_log "[KP LIBERATION] [IMPORTANT] Additional military sectors or unlock vehicles detected and assigned.";
@@ -80,7 +80,7 @@ if (_moduleData isEqualTo []) then {
             _assignedBases pushBack _nextBase;
             KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
         };
-    };
+    };*/
     publicVariable "KPLIB_sectors_lockedVeh";
 
     // Publish blufor sectors
