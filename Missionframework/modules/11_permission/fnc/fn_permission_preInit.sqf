@@ -19,12 +19,24 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initializing...", diag_tickTime];};
 
-// Create permission nameSpace
-KPLIB_permission_nameSpace = [] call CBA_fnc_createNamespace;
+if (isServer) then {
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_permission_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_permission_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Create permission nameSpace
+    KPLIB_permission_nameSpace = [] call CBA_fnc_createNamespace;
+};
 
 /*
     ----- Module Globals -----
 */
+
+KPLIB_permissions = [];
+KPLIB_permissionTypes = [];
+KPLIB_defaultPermissions = [];
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initialized", diag_tickTime];};
 

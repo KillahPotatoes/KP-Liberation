@@ -20,6 +20,9 @@ class permission {
     // Checks the given permission and returns the result.
     class permission_checkPermission {};
 
+    // Loads module specific data from the save
+    class permission_loadData {};
+
     // Module post initialization
     class permission_postInit {
         postInit = 1;
@@ -29,5 +32,8 @@ class permission {
     class permission_preInit {
         preInit = 1;
     };
+
+    // Saves module specific data for the save
+    class permission_saveData {};
 
 };

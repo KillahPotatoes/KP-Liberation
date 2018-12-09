@@ -23,6 +23,8 @@ params [
     ["_code", {false}, [{}]]
 ];
 
+KPLIB_permissionTypes pushBack _permission;
+
 KPLIB_permission_nameSpace setVariable [toLower _permission, _code];
 
 true
