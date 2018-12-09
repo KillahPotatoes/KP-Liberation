@@ -30,6 +30,8 @@ private _turrets = (allTurrets _vehicle);
 
 // Get driver class depending on vehicle type
 private _driverType = switch (true) do {
+    // Civilians and resitance do not have specialized infantry units
+    case (_side in [KPLIB_preset_sideC, KPLIB_preset_sideR]): {"units"};
     case (_vehicle isKindOf "Plane"): {"rsPilotJet"};
     case (_vehicle isKindOf "Helicopter"): {"rsPilotHeli"};
     default {"rsCrewmanVeh"};
@@ -39,6 +41,8 @@ private _driverClass = [[_driverType, _side] call KPLIB_fnc_common_getPresetClas
 
 // Get crew class depending on vehicle type
 private _crewType = switch (true) do {
+    // Civilians and resitance do not have specialized infantry units
+    case (_side in [KPLIB_preset_sideC, KPLIB_preset_sideR]): {"units"};
     case (_vehicle isKindOf "Plane"): {"rsPilotJet"};
     case (_vehicle isKindOf "Helicopter"): {"rsCrewmanHeli"};
     default {"rsCrewmanVeh"};
