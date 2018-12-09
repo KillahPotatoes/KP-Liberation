@@ -1,11 +1,10 @@
-#include "loadPresets_macros.hpp"
 /*
     KPLIB_fnc_init_loadPresets
 
     File: fn_init_loadPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-08
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
