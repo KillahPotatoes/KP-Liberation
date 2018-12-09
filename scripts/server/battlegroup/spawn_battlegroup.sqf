@@ -44,7 +44,7 @@ if ( _spawn_marker != "" ) then {
 		last_battlegroup_size = last_battlegroup_size + 1;
 	} foreach _selected_opfor_battlegroup;
 
-	if ( GRLIB_csat_aggressivity > 0.9 ) then {
+	if ( GRLIB_csat_aggressivity > 0.85 ) then {
 		[([markerpos _spawn_marker] call F_getNearestBluforObjective) select 0] spawn spawn_air;
 	};
 
