@@ -1,5 +1,5 @@
 /*
-    KPLIB_fnc_permission_addPermission
+    KPLIB_fnc_permission_addPermissionHandler
 
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -23,8 +23,13 @@ params [
     ["_code", {false}, [{}]]
 ];
 
-KPLIB_permissionTypes pushBack _permission;
+KPLIB_permissionTypes pushBackUnique _permission;
 
+// Read the Variable
+private _data = [_code];
+_data append KPLIB_permission_nameSpace getVariable [toLower _permission, []];
+
+// Write the Variable
 KPLIB_permission_nameSpace setVariable [toLower _permission, _code];
 
 true

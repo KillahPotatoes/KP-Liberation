@@ -15,7 +15,7 @@ class permission {
     file = "modules\11_permission\fnc";
 
     // Adds a new permission to the permission system
-    class permission_addPermission {};
+    class permission_addPermissionHandler {};
 
     // Checks the given permission and returns the result.
     class permission_checkPermission {};
