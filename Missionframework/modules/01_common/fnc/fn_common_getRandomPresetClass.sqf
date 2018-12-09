@@ -4,7 +4,7 @@
     File: fn_common_getRandomPresetClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-08
-    Last Update: 2018-12-08
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,9 +24,9 @@ params [
 
 // Determine classname side
 private _sideSuffix = switch (_side) do {
-    case "KPLIB_preset_sidePlayers": {"F"};
-    case "KPLIB_preset_sideResistance": {"R"};
-    case "KPLIB_preset_sideCivilian": {"C"};
+    case KPLIB_preset_sideF: {"F"};
+    case KPLIB_preset_sideR: {"R"};
+    case KPLIB_preset_sideC: {"C"};
     default {"E"};
 };
 
