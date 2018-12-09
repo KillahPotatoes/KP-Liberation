@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-29
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,6 +36,9 @@ KPLIB_build_saveNamespace = locationNull;
 
 // Object from which FOB build event originated
 KPLIB_build_fobBuildObject = objNull;
+
+// Categorized buildable items
+KPLIB_build_categoryItems = [];
 
 if (isServer) then {
     // Register load event handler
@@ -74,6 +77,16 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
+
+    {
+        _x call KPLIB_fnc_build_addBuildables;
+    } forEach [
+        ["Heavy", {KPLIB_preset_vehHeavyF}],
+        ["Heavy", {KPLIB_preset_vehHeavyApcF}],
+        ["Light", [["O_LSV_02_armed_F", 0,1,2]]],
+        ["Light", ["O_LSV_02_armed_F", 0,1,4]]
+    ];
+
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initialized", diag_tickTime];};

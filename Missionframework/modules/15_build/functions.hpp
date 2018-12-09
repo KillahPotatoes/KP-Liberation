@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-29
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,6 +13,9 @@
 
 class build {
     file = "modules\15_build\fnc";
+
+    // Adds buildable items
+    class build_addBuildables {};
 
     // Manages selection depending on currently pressed keys
     class build_addToSelection {};
@@ -42,7 +45,7 @@ class build {
     class build_displayPlaceObject {};
 
     // Set display build mode (tab)
-    class build_displaySetMode {};
+    class build_displayFillList {};
 
     // Handle tab click
     class build_displayTabClick {};
