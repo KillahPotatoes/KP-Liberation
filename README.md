@@ -195,12 +195,5 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-### Short License Summary / Guideline
-*This small summary does not replace the license text or validity in any way.*
-
-* If you use the mission code within your community on a **non-public server** and with **no public access to the mission code** then you can freely edit the mission code for this purpose. The only condition is that you keep the same license and the copyright notice (this readme) within your mission file.
-
-* If you want to edit the mission code and publish your derivative anywhere **public** or run a **public server** with an edited derivative of the original mission code, you are free to do so under these conditions:
-    * Your edited mission code must be published under the same license, with the original copyright notice.
-    * The source code of the mission must be visible to the public (via a Github repository for example). The link to this source code repository must be linked somewhere in the description/readme of the published derivative.
-    * You must state every change you have made to the source code at this public repository (via the commit history of your Github repository for example).
+### Short License Summary/Guideline
+We've provided a more illustrative [License Summary/Guideline](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_licenseGuide) in the KP Liberation Wiki.
