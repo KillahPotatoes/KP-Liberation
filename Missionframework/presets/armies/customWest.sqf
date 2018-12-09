@@ -5,7 +5,7 @@
     File: customWest.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-24
-    Last Update: 2018-12-07
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -423,6 +423,24 @@ KPLIB_PRST_CAT_ADD("deco", "Land_Sign_WarningMilAreaSmall_F",                  0
 KPLIB_PRST_CAT_ADD("deco", "Land_Sign_WarningMilitaryVehicles_F",              0,    0,    0);
 KPLIB_PRST_CAT_ADD("deco", "Land_Razorwire_F",                                 0,    0,    0);
 KPLIB_PRST_CAT_END("deco");
+
+
+/*------------------------------------------------------------
+    --- LOCKED VEHICLE CLASSNAMES ---
+    Classnames of vehicles which shouldn't be available from the start.
+    The listed classnames have to be also listed in one of the build categories above.
+    You can leave this category empty, but leave the line with BEGIN untouched.
+------------------------------------------------------------*/
+
+KPLIB_PRST_CAT_BEGIN("lockedVehPl");
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_AFV_Wheeled_01_cannon_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_AFV_Wheeled_01_up_cannon_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_MBT_01_arty_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_MBT_01_mlrs_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_Heli_Attack_01_dynamicLoadout_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_T_VTOL_01_armed_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_Plane_Fighter_01_F";
+(KPLIB_PRST_GETVAR("lockedVehPl")) pushBack "B_Plane_Fighter_01_Stealth_F";
 
 
 /*-------------------------------

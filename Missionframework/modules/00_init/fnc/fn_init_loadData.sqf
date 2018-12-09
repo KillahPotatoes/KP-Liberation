@@ -4,7 +4,7 @@
     File: fn_init_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-08
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,18 +28,18 @@ if (_moduleData isEqualTo []) then {
     // Set random start date
     setDate [2018, ceil (random 12), ceil (random 28), 8, 0];
 
-    /*// Connect locked vehicles to military bases
+    // Connect locked vehicles to military bases
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
     private _nextBase = "";
-    while {((count _assignedVehicles) < (count KPLIB_preset_lockedVeh)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-        _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
+    while {((count _assignedVehicles) < (count KPLIB_preset_lockedVehPlF)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
+        _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF select {!(_x in _assignedVehicles)});
         _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
-    };*/
+    };
     publicVariable "KPLIB_sectors_lockedVeh";
 } else {
     // Otherwise start applying the saved data
@@ -56,12 +56,12 @@ if (_moduleData isEqualTo []) then {
 
     // Check for deleted military sectors or deleted classnames in the locked vehicles array
     KPLIB_sectors_lockedVeh = _moduleData select 1;
-    KPLIB_sectors_lockedVeh = KPLIB_sectors_lockedVeh select {(_x select 0) in KPLIB_preset_lockedVeh};
+    KPLIB_sectors_lockedVeh = KPLIB_sectors_lockedVeh select {(_x select 0) in KPLIB_preset_lockedVehPlF};
     KPLIB_sectors_lockedVeh = KPLIB_sectors_lockedVeh select {(_x select 1) in KPLIB_sectors_military};
 
-    /*// Check for additions in the locked vehicles array
+    // Check for additions in the locked vehicles array
     private _lockedVehCount = count KPLIB_sectors_lockedVeh;
-    if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_preset_lockedVeh))) then {
+    if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_preset_lockedVehPlF))) then {
         diag_log "[KP LIBERATION] [IMPORTANT] Additional military sectors or unlock vehicles detected and assigned.";
         private _assignedVehicles = [];
         private _assignedBases = [];
@@ -73,14 +73,14 @@ if (_moduleData isEqualTo []) then {
             _assignedBases pushBack (_x select 1);
         } forEach KPLIB_sectors_lockedVeh;
 
-        while {((count _assignedVehicles) < (count KPLIB_preset_lockedVeh)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-            _nextVehicle =  selectRandom (KPLIB_preset_lockedVeh select {!(_x in _assignedVehicles)});
+        while {((count _assignedVehicles) < (count KPLIB_preset_lockedVehPlF)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
+            _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF select {!(_x in _assignedVehicles)});
             _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
             _assignedVehicles pushBack _nextVehicle;
             _assignedBases pushBack _nextBase;
             KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
         };
-    };*/
+    };
     publicVariable "KPLIB_sectors_lockedVeh";
 
     // Publish blufor sectors

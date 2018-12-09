@@ -89,6 +89,7 @@
         "KPLIB_preset_jetsF",
         "KPLIB_preset_jetsPlE",
         "KPLIB_preset_jetsPlF",
+        "KPLIB_preset_lockedVehPlF",
         "KPLIB_preset_logiBuildingE",
         "KPLIB_preset_logiBuildingF",
         "KPLIB_preset_logiTruckE",
