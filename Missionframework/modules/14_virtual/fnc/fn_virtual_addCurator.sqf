@@ -4,7 +4,7 @@
     File: fn_virtual_addCurator.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-11-28
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -37,6 +37,9 @@ unassignCurator _oldCurator;
     if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [VIRTUAL] Adding curator for unit '%1' with mode %2", _unit, _mode]};
 
     private _curator = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    // Since 1.86 modules don't activate automatically when created via scripts
+    // We need to activate it manually
+    _curator setVariable ["BIS_fnc_initModules_activate", true, true];
     // Add player so he can see himself in curator
     _curator addCuratorEditableObjects [[_unit], false];
 
