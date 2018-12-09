@@ -22,5 +22,9 @@ params [
 ];
 
 private _result = false;
+private _code = missionNamespace getVariable [toLower _permission, []];
+
+// Execute the registered code
+_result = [] call _code;
 
 _result
