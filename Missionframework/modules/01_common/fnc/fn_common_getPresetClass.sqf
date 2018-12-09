@@ -30,7 +30,7 @@ private _sideSuffix = switch (_side) do {
     default {"E"};
 };
 
-private _classNamesVar = format ["KPLIB_preset_%1%2", _type, _sideSuffix];
+private _classNamesVar = format ["KPLIB_preset_%1Pl%2", _type, _sideSuffix];
 
 private _classNames = missionNamespace getVariable [_classNamesVar, nil];
 
