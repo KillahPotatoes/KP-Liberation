@@ -4,7 +4,7 @@
     File: fn_common_createCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-25
-    Last Update: 2018-12-08
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,7 +35,7 @@ private _driverType = switch (true) do {
     default {"rsCrewmanVeh"};
 };
 
-private _driverClass = [[_driverType, _side] call KPLIB_fnc_common_getRandomPresetClass];
+private _driverClass = [[_driverType, _side] call KPLIB_fnc_common_getPresetClass];
 
 // Get crew class depending on vehicle type
 private _crewType = switch (true) do {
@@ -45,7 +45,7 @@ private _crewType = switch (true) do {
 };
 
 private _crewClasses = _turrets apply {
-    [_crewType, _side] call KPLIB_fnc_common_getRandomPresetClass;
+    [_crewType, _side] call KPLIB_fnc_common_getPresetClass;
 };
 
 // Spawn group and move into to vehicle

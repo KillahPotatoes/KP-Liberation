@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_common_getRandomPresetClass
+    KPLIB_fnc_common_getPresetClass
 
-    File: fn_common_getRandomPresetClass.sqf
+    File: fn_common_getPresetClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-08
     Last Update: 2018-12-09
@@ -19,7 +19,7 @@
 */
 params [
     ["_type", "", [""]],
-    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]]
+    ["_side", KPLIB_preset_sideE, [sideEmpty]]
 ];
 
 // Determine classname side
