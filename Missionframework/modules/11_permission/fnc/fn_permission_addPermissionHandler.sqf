@@ -27,7 +27,7 @@ KPLIB_permissionTypes pushBackUnique _permission;
 
 // Read the Variable
 private _data = [_code];
-_data append missionNamespace getVariable [toLower _permission, []];
+_data append (missionNamespace getVariable [toLower _permission, []]);
 
 // Write the Variable
 missionNamespace setVariable [toLower _permission, _code];
