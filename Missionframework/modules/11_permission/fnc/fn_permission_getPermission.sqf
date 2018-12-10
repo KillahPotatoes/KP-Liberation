@@ -24,5 +24,27 @@ params [
 ];
 
 private _result = false;
+private _playerPermissions = [];
+_permission = toLower _permission;
+
+// Search for the player permissions
+private _playerPermissions = KPLIB_permissionList select (KPLIB_permissionList findIf {
+    (_x select 0) isEqualTo (getPlayerUID player)
+}) select 2;
+
+// Check if the permission dosn't exist and use the default permission
+if !((_playerPermissions findIf {(_permission in _x)}) isEqualTo -1) then {
+    {
+        if (_permission in _x) then {
+            _result = _x select 1;
+        };
+    } forEach _playerPermissions;
+} else {
+    {
+        if (_permission in _x) then {
+            _result = _x select 1;
+        }
+    } forEach KPLIB_defaultPermissions;
+};
 
 _result
