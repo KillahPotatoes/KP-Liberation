@@ -31,7 +31,7 @@ if (isServer) then {
     ----- Module Globals -----
 */
 
-KPLIB_permissions = [];
+KPLIB_permissionList = [];
 KPLIB_permissionTypes = [];
 KPLIB_defaultPermissions = [];
 
