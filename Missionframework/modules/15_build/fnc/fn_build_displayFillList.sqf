@@ -6,7 +6,7 @@
     File: fn_build_displayFillList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-12-09
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,14 +25,25 @@ params [
 
 // CfgVehicles config for shorter/faster access
 private _cfg = configFile >> "CfgVehicles";
+// Get category items
 (LGVAR(buildables) select _categoryIdx) params ["", "_categoryItems"];
 
 private _listBox = LGVAR(display) displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 _listBox lbSetCurSel -1; // Unselect current row as it sticks between clearing
 lnbClear _listBox;
-_listBox lnbAddRow ['DBG', 0, 0, 0];
 
 private _fnc_addItems = {
+
+};
+
+// Fill the item list
+{
+    // If item is a code execute it
+    if(_x isEqualType {}) then {
+        _x = [] call _x;
+    };
+
+    // Fill the list with items from currently selected category
     {
         _x params ["_className", "_priceSupp", "_priceAmmo", "_priceFuel"];
 
@@ -46,19 +57,7 @@ private _fnc_addItems = {
 
         private _icon = _className call KPLIB_fnc_common_getIcon;
         _listBox lnbSetPicture [[_currentIdx, 0], _icon];
-    } forEach _this;
-};
-
-// Fill the item list
-{
-    // Handle removed items
-    if (isNil _x) exitWith {};
-
-    if(_x isEqualType {}) then {
-        _x = [] call _x;
-    };
-
-    _x call _fnc_addItems;
+    } forEach _x;
 
 } foreach _categoryItems;
 

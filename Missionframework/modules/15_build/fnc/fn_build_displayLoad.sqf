@@ -6,7 +6,7 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-12-09
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,14 +39,27 @@ _itemsList ctrlAddEventHandler ["LBSelChanged", {
     LSVAR("buildItem", _selectedItem);
 
     // Unfocus the listbox to prevent camera controls from changing the selection
-    private _currentTabIDC = KPLIB_BUILD_TABS_IDCS_ARRAY select _mode;
-    ctrlSetFocus ((ctrlParent _control) displayCtrl _currentTabIDC);
+    ctrlSetFocus ((ctrlParent _control) displayCtrl KPLIB_IDC_BUILD_CONFIRM);
 }];
 
+
 private _categoriesList = _display displayCtrl KPLIB_IDC_BUILD_CATEGORY_LIST;
+_categoriesList ctrlAddEventHandler ["LBSelChanged", {
+    params ["_control", "_selectedIndex"];
+
+    // Clear the search on category change
+    LSVAR("search", "");
+
+    // Fill the items list
+    [_selectedIndex, ""] call KPLIB_fnc_build_displayFillList;
+
+    // Unfocus the listbox to prevent camera controls from changing the selection
+    ctrlSetFocus ((ctrlParent _control) displayCtrl KPLIB_IDC_BUILD_CONFIRM);
+}];
+
+// Fill the list of categories
 {
     _x params ["_categoryName"];
-
     _categoriesList lbAdd _categoryName;
 } forEach LGVAR(buildables);
 
@@ -59,7 +72,6 @@ LSVAR("display", _display);
 
 // Select last category
 _categoriesList lbSetCurSel LGVAR_D(selectedCategoryIdx, 0);
-[LGVAR_D(selectedCategoryIdx, 0), LGVAR_D(search, "")] call KPLIB_fnc_build_displayFillList;
 
 /* Seems to be buggy on triple screen, disable for now
  setMousePosition LGVAR(mousePos); */

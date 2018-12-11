@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-12-09
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -57,6 +57,8 @@ class KPLIB_build {
             y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,2,40);
             w = KP_GETW(KP_WIDTH_VAL_LP,1);
             h = KP_GETH(KP_HEIGHT_VAL_LP,40);
+
+            onMouseZChanged = "['onMouseZChanged_BuildCategoryList', _this] call KPLIB_fnc_build_handleMouse";
         };
 
         class KPLIB_BuildSearch: KPGUI_PRE_Combo {
