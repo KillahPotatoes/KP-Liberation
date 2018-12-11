@@ -1110,4 +1110,45 @@
             <Turkish>Ağır Silah Timi</Turkish>
         </Key>
     </Package>
+
+    <!-- CATEGORIES -->
+
+    <Package name="Categories">
+        <Key ID="STR_KPLIB_CAT_AA">
+            <English>Anti-Air</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_ARTY">
+            <English>Artillery</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_BOATS">
+            <English>Boats</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_INFANTRY">
+            <English>Infantry</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LIGHT">
+            <English>Light</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LOGISTIC">
+            <English>Logistic</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HEAVY">
+            <English>Heavy</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_STATICS">
+            <English>Statics</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_TRANSPORT">
+            <English>Transport</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HELI">
+            <English>Helicopters</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_PLANES">
+            <English>Planes</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_DECO">
+            <English>Decorations</English>
+        </Key>
+    </Package>
 </Project>

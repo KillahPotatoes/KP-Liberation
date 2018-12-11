@@ -78,13 +78,42 @@ if (hasInterface) then {
 
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
 
+    // Add default buildables from preset
     {
-        _x call KPLIB_fnc_build_addBuildables;
+        [
+            localize (_x select 0),
+            compile format ["KPLIB_preset_%1F", _x select 1]
+        ] call KPLIB_fnc_build_addBuildables;
     } forEach [
-        ["Heavy", {KPLIB_preset_vehHeavyF}],
-        ["Heavy", {KPLIB_preset_vehHeavyApcF}],
-        ["Light", [["O_LSV_02_armed_F", 0,1,2]]],
-        ["Light", ["O_LSV_02_armed_F", 0,1,4]]
+        // Infantry
+        ["STR_KPLIB_CAT_INFANTRY", "units"],
+        ["STR_KPLIB_CAT_INFANTRY", "specOps"],
+        // Light
+        ["STR_KPLIB_CAT_LIGHT", "vehLightUnarmed"],
+        ["STR_KPLIB_CAT_LIGHT", "vehLightArmed"],
+        // Heavy
+        ["STR_KPLIB_CAT_HEAVY", "vehHeavyApc"],
+        ["STR_KPLIB_CAT_HEAVY", "vehHeavy"],
+        // Transport
+        ["STR_KPLIB_CAT_TRANSPORT", "vehTrans"],
+        // Helicopters
+        ["STR_KPLIB_CAT_HELI", "heliTrans"],
+        ["STR_KPLIB_CAT_HELI", "heliAttack"],
+        // Planes
+        ["STR_KPLIB_CAT_PLANES", "planeTrans"],
+        ["STR_KPLIB_CAT_PLANES", "jets"],
+        // Statics
+        ["STR_KPLIB_CAT_AA", "vehAntiAir"],
+        // Artillery
+        ["STR_KPLIB_CAT_ARTY", "vehArty"],
+        // Anti-Air
+        ["STR_KPLIB_CAT_STATICS", "statics"],
+        // Boats
+        ["STR_KPLIB_CAT_BOATS", "boats"],
+        // Logistic
+        ["STR_KPLIB_CAT_LOGISTIC", "logistic"],
+        // Decoration
+        ["STR_KPLIB_CAT_DECO", "deco"]
     ];
 
 };
