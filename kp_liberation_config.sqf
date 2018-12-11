@@ -89,9 +89,9 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-GRLIB_side_friendly = Independent;																						// Friendly side.
-GRLIB_side_enemy = West;																						// Enemy side.
-GRLIB_side_resistance = Independent;																				// Resistance side.
+GRLIB_side_friendly = RESISTANCE;																						// Friendly side.
+GRLIB_side_enemy = WEST;																						// Enemy side.
+GRLIB_side_resistance = EAST;																					// Resistance side.
 GRLIB_side_civilian = CIVILIAN;																					// Civilian side.
 GRLIB_respawn_marker = "respawn";																				// Respawn marker name.
 
