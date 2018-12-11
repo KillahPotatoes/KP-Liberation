@@ -208,6 +208,10 @@
             <Spanish>-- DESPLEGAR FOB --</Spanish>
             <Turkish>-- FOB KUR --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_DEPLOYRANDOM">
+            <English>-- RANDOM FOB DEPLOYMENT --</English>
+            <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
@@ -636,6 +640,14 @@
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
+            <English>Clear the aft deck and the helicopter first.</English>
+            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
+            <English>Random placement of a FOB is currently not possible.</English>
+            <German>Zufällige FOB Platzierung ist im Moment nicht möglich.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
             <English>%1 minutes mobile respawn cooldown left.</English>
             <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
@@ -643,10 +655,6 @@
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
-        </Key>
-        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
-            <English>Clear the aft deck and the helicopter first.</English>
-            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
     </Package>
 
