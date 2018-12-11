@@ -1,6 +1,6 @@
 _planes_number = 0;
 _first_objective = _this select 0;
-if ( combat_readiness >= 75 ) then { _planes_number = (floor (random 2)) };
+if ( combat_readiness >= 65 ) then { _planes_number = (floor (random 2)) };
 
 _plane_type = selectRandom opfor_air;
 _air_spawnpoint = ( [ sectors_airspawn , [ _first_objective ] , { (markerpos _x) distance _input0 }, "ASCEND"] call BIS_fnc_sortBy ) select 0;
