@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-12-09
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -95,6 +95,9 @@ class build {
     class build_preInit {
         preInit = 1;
     };
+
+    // Removes buildable items from category
+    class build_removeBuildables {};
 
     // Handle persistent data saving
     class build_saveData {};
