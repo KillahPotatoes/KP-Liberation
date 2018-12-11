@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-08
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,6 +40,9 @@ class init {
 
     // Loads and checks the configured unit presets
     class init_loadPresets {};
+
+    // Places Antennas at Radio Tower sectors
+    class init_placeTowers {};
 
     // Module post initialization
     class init_postInit {
