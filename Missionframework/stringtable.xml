@@ -208,6 +208,10 @@
             <Spanish>-- DESPLEGAR FOB --</Spanish>
             <Turkish>-- FOB KUR --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_DEPLOYRANDOM">
+            <English>-- RANDOM FOB DEPLOYMENT --</English>
+            <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
@@ -636,6 +640,14 @@
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
+            <English>Clear the aft deck and the helicopter first.</English>
+            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
+            <English>Random placement of a FOB is currently not possible.</English>
+            <German>Zufällige FOB Platzierung ist im Moment nicht möglich.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
             <English>%1 minutes mobile respawn cooldown left.</English>
             <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
@@ -643,10 +655,6 @@
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
-        </Key>
-        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
-            <English>Clear the aft deck and the helicopter first.</English>
-            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
     </Package>
 
@@ -789,6 +797,22 @@
             <Chinese>KPLIB - 預設值</Chinese>
             <German>KPLIB - Presets</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_0">
+            <English>CEA - Custom East Army</English>
+            <German>CEA - Custom East Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_1">
+            <English>CSAT</English>
+            <German>CSAT</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_2">
+            <English>CWA - Custom West Army</English>
+            <German>CWA - Custom West Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_3">
+            <English>NATO</English>
+            <German>NATO</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
             <English>Player</English>
             <Chinese>玩家</Chinese>
@@ -799,11 +823,6 @@
             <Chinese>玩家可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Spieler.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
-        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY">
             <English>Enemy</English>
             <Chinese>敵人</Chinese>
@@ -813,11 +832,6 @@
             <English>Selection for the units, vehicles, etc. for the enemy.</English>
             <Chinese>敵人可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Gegner.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS">
             <English>Resistance</English>
@@ -834,6 +848,10 @@
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_1">
+            <English>FIA</English>
+            <German>FIA</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV">
             <English>Civlians</English>
             <Chinese>平民</Chinese>
@@ -848,6 +866,10 @@
             <English>Custom Preset</English>
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_1">
+            <English>Vanilla</English>
+            <German>Vanilla</German>
         </Key>
 
         <!-- RESPAWN CATEGORY -->
@@ -999,7 +1021,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_CEILING">
             <English>Limited mode camera ceiling</English>
-            <Chinese>限制模式的攝影機高度</Chinese>            
+            <Chinese>限制模式的攝影機高度</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS">
             <English>Show 3D fob labels</English>
@@ -1086,6 +1108,47 @@
             <Russian>Тяжёлый Стрелковый Отряд</Russian>
             <Spanish>Escuadra de fusileros pesados</Spanish>
             <Turkish>Ağır Silah Timi</Turkish>
+        </Key>
+    </Package>
+
+    <!-- CATEGORIES -->
+
+    <Package name="Categories">
+        <Key ID="STR_KPLIB_CAT_AA">
+            <English>Anti-Air</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_ARTY">
+            <English>Artillery</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_BOATS">
+            <English>Boats</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_INFANTRY">
+            <English>Infantry</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LIGHT">
+            <English>Light</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LOGISTIC">
+            <English>Logistic</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HEAVY">
+            <English>Heavy</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_STATICS">
+            <English>Statics</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_TRANSPORT">
+            <English>Transport</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HELI">
+            <English>Helicopters</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_PLANES">
+            <English>Planes</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_DECO">
+            <English>Decorations</English>
         </Key>
     </Package>
 </Project>

@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-24
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -54,15 +54,32 @@ if (isServer) then {
 KPLIB_campaignRunning = true;
 // Respawn position shortcut
 KPLIB_eden_respawnPos = getMarkerPos "respawn";
-// Squad names for the buildable squads
-KPLIB_preset_squadNames = [
-    localize "STR_KPLIB_UNITS_SQUAD_LIGHT",
-    localize "STR_KPLIB_UNITS_SQUAD_RIFLE",
-    localize "STR_KPLIB_UNITS_SQUAD_AT",
-    localize "STR_KPLIB_UNITS_SQUAD_AA",
-    localize "STR_KPLIB_UNITS_SQUAD_RECON",
-    localize "STR_KPLIB_UNITS_SQUAD_PARA"
-];
+// All preset variable names as collection for processing
+KPLIB_preset_allVariables = [];
+// Civilian side color
+KPLIB_preset_colorC = "ColorCIV";
+// Civilian side color (active)
+KPLIB_preset_colorActC = "ColorPink";
+// Enemy side color
+KPLIB_preset_colorE = "ColorEAST";
+// Enemy side color (active)
+KPLIB_preset_colorActE = "ColorRed";
+// Friendly side color
+KPLIB_preset_colorF = "ColorWEST";
+// Friendly side color (active)
+KPLIB_preset_colorActF = "ColorBlue";
+// Resistance side color
+KPLIB_preset_colorR = "ColorGUER";
+// Resistance side color (active)
+KPLIB_preset_colorActR = "ColorGreen";
+// Civilian side
+KPLIB_preset_sideC = civilian;
+// Enemy side
+KPLIB_preset_sideE = east;
+// Player side
+KPLIB_preset_sideF = west;
+// Resistance side
+KPLIB_preset_sideR = resistance;
 // Reset position shortcut
 KPLIB_resetPos = [99999,99999,0];
 // Indicator if the saved data is fully loaded

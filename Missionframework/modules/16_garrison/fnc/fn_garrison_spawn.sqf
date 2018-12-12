@@ -4,7 +4,7 @@
     File: fn_garrison_spawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-24
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,9 +39,9 @@ KPLIB_garrison_active pushBack [_sector, _sectorOwner, [], [], [], []];
 // Get current sector owner
 switch (_sectorOwner) do {
     case 0;
-    case 1: {_sectorOwnerSide = KPLIB_preset_sideEnemy;};
-    case 2: {_sectorOwnerSide = KPLIB_preset_sidePlayers;};
-    default {_sectorOwnerSide = KPLIB_preset_sideEnemy;};
+    case 1: {_sectorOwnerSide = KPLIB_preset_sideE;};
+    case 2: {_sectorOwnerSide = KPLIB_preset_sideF;};
+    default {_sectorOwnerSide = KPLIB_preset_sideE;};
 };
 
 // Spawn full infantry squads

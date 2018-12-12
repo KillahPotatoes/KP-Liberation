@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-29
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -37,6 +37,9 @@ KPLIB_build_saveNamespace = locationNull;
 // Object from which FOB build event originated
 KPLIB_build_fobBuildObject = objNull;
 
+// Categorized buildable items
+KPLIB_build_categoryItems = [];
+
 if (isServer) then {
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_build_loadData}] call CBA_fnc_addEventHandler;
@@ -67,13 +70,52 @@ if (hasInterface) then {
         params ["_object"];
         KPLIB_build_fobBuildObject = _object;
         // Start single item build for fob building
-        [getPos _object, nil, [KPLIB_preset_fobBuilding, 0,0,0], {
+        [getPos _object, nil, [KPLIB_preset_fobBuildingF, 0,0,0], {
             // On confirm callback, create FOB on server
             [_this select 0, KPLIB_build_fobBuildObject] remoteExec ["KPLIB_fnc_build_handleFobBuildConfirm", 2];
          }] call KPLIB_fnc_build_start_single;
     }] call CBA_fnc_addEventHandler;
 
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
+
+    // Add default buildables from preset
+    {
+        [
+            localize (_x select 0),
+            compile format ["KPLIB_preset_%1F", _x select 1]
+        ] call KPLIB_fnc_build_addBuildables;
+    } forEach [
+        // Infantry
+        ["STR_KPLIB_CAT_INFANTRY", "units"],
+        ["STR_KPLIB_CAT_INFANTRY", "specOps"],
+        // Light
+        ["STR_KPLIB_CAT_LIGHT", "vehLightUnarmed"],
+        ["STR_KPLIB_CAT_LIGHT", "vehLightArmed"],
+        // Heavy
+        ["STR_KPLIB_CAT_HEAVY", "vehHeavyApc"],
+        ["STR_KPLIB_CAT_HEAVY", "vehHeavy"],
+        // Transport
+        ["STR_KPLIB_CAT_TRANSPORT", "vehTrans"],
+        // Helicopters
+        ["STR_KPLIB_CAT_HELI", "heliTrans"],
+        ["STR_KPLIB_CAT_HELI", "heliAttack"],
+        // Planes
+        ["STR_KPLIB_CAT_PLANES", "planeTrans"],
+        ["STR_KPLIB_CAT_PLANES", "jets"],
+        // Statics
+        ["STR_KPLIB_CAT_AA", "vehAntiAir"],
+        // Artillery
+        ["STR_KPLIB_CAT_ARTY", "vehArty"],
+        // Anti-Air
+        ["STR_KPLIB_CAT_STATICS", "statics"],
+        // Boats
+        ["STR_KPLIB_CAT_BOATS", "boats"],
+        // Logistic
+        ["STR_KPLIB_CAT_LOGISTIC", "logistic"],
+        // Decoration
+        ["STR_KPLIB_CAT_DECO", "deco"]
+    ];
+
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initialized", diag_tickTime];};

@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.97.0 (in Development)
-* **Fully rewritten the mission code from scratch.**
+* **Fully rewritten the mission code from scratch.** (Details in the [Dev-Blogs](https://github.com/KillahPotatoes/KP-Liberation/issues?utf8=%E2%9C%93&q=label%3Adev-blog))
 * Added: Functions library via CfgFunctions.
 * Added: Admin dialog with various functionalities for server admins.
 * Added: Free camera view for building.

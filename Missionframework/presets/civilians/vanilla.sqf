@@ -1,15 +1,21 @@
 #include "../script_component.hpp"
 /*
-    KP Liberation Custom Civilian Preset
+    KP Liberation Vanilla Civilian Preset
 
-    File: custom.sqf
+    File: vanilla.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2017-10-16
+    Date: 2018-12-07
     Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Custom civilian preset file for individual adjustments.
+        Vanilla civilian preset file which contains only vanilla assets.
+
+    Needed Mods:
+        - None
+
+    Optional Mods:
+        - None
 */
 
 

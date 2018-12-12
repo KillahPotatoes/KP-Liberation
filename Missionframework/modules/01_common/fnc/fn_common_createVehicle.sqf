@@ -4,7 +4,7 @@
     File: fn_common_createVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-11-10
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         _spawnDir   - Heading for the vehicle from 0 to 360                                                         [NUMBER, defaults to (random 360)]
         _justSpawn  - True to skip all paradrop or air vehicle detection, even if z > 10                            [BOOL, defaults to false]
         _withCrew   - True to spawn crew for the vehicle                                                            [BOOL, defaults to false]
-        _side       - Side to which this vehicle should belong, when _withCrew == true                              [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _side       - Side to which this vehicle should belong, when _withCrew == true                              [SIDE, defaults to KPLIB_preset_sideE]
 
     Returns:
         Created vehicle [OBJECT]
@@ -29,7 +29,7 @@ params [
     ["_spawnDir", random 360, [0]],
     ["_justSpawn", false, [true]],
     ["_withCrew", false, [true]],
-    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]]
+    ["_side", KPLIB_preset_sideE, [sideEmpty]]
 ];
 
 // Exit if arguments are missing

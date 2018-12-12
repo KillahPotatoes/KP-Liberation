@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2018-11-10
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -212,6 +212,11 @@ class KPGUI_PRE_ActivePicture: KPGUI_PRE_ActiveText {
     color[] = {1, 1, 1, 0.5};
     colorActive[] = {1, 1, 1, 1};
     style = 48;
+};
+
+// Active Picture which keeps aspect ratio
+class KPGUI_PRE_ActivePictureRatio: KPGUI_PRE_ActivePicture {
+    style = 48 + 2048;
 };
 
 // Picture which keeps aspect ratio

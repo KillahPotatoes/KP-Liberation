@@ -6,7 +6,7 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-28
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,29 +28,40 @@ private _itemsList = _display displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 _itemsList ctrlAddEventHandler ["LBSelChanged", {
     params ["_control", "_selectedIndex"];
 
-    private _mode = LGVAR(buildMode);
-
-    if(_selectedIndex == -1) exitWith {
+    if(_selectedIndex isEqualTo -1) exitWith {
         LSVAR("buildItem", []);
     };
 
-    private _buildList = KPLIB_preset_buildLists select _mode;
-    private _selectedItem = _buildList select _selectedIndex;
+    private _stringArray = (_control lnbData [_selectedIndex, 0]);
+    systemChat str _stringArray;
+    private _selectedItem = parseSimpleArray _stringArray;
 
     LSVAR("buildItem", _selectedItem);
 
     // Unfocus the listbox to prevent camera controls from changing the selection
-    private _currentTabIDC = KPLIB_BUILD_TABS_IDCS_ARRAY select _mode;
-    ctrlSetFocus ((ctrlParent _control) displayCtrl _currentTabIDC);
+    ctrlSetFocus ((ctrlParent _control) displayCtrl KPLIB_IDC_BUILD_CONFIRM);
 }];
 
-// Add tab change handler
+
+private _categoriesList = _display displayCtrl KPLIB_IDC_BUILD_CATEGORY_LIST;
+_categoriesList ctrlAddEventHandler ["LBSelChanged", {
+    params ["_control", "_selectedIndex"];
+
+    // Clear the search on category change
+    LSVAR("search", "");
+
+    // Fill the items list
+    [_selectedIndex, ""] call KPLIB_fnc_build_displayFillList;
+
+    // Unfocus the listbox to prevent camera controls from changing the selection
+    ctrlSetFocus ((ctrlParent _control) displayCtrl KPLIB_IDC_BUILD_CONFIRM);
+}];
+
+// Fill the list of categories
 {
-    private _ctrl = _display displayCtrl _x;
-    _ctrl ctrlAddEventHandler ["buttonClick", {
-        _this call KPLIB_fnc_build_displayTabClick;
-    }];
-} forEach KPLIB_BUILD_TABS_IDCS_ARRAY;
+    _x params ["_categoryName"];
+    _categoriesList lbAdd _categoryName;
+} forEach LGVAR(buildables);
 
 // Hide vignette, show hud
 private _vignette = _display displayCtrl 1202;
@@ -58,7 +69,9 @@ _vignette ctrlShow false;
 showHUD true;
 
 LSVAR("display", _display);
-LGVAR_D(buildMode, 0) call KPLIB_fnc_build_displaySetMode;
+
+// Select last category
+_categoriesList lbSetCurSel LGVAR_D(selectedCategoryIdx, 0);
 
 /* Seems to be buggy on triple screen, disable for now
  setMousePosition LGVAR(mousePos); */
