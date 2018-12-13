@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-29
+    Last Update: 2018-12-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -50,64 +50,36 @@ class KPLIB_build {
 
     class Controls {
 
-        class KPLIB_ModeUnits: KPGUI_PRE_ActivePicture {
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_INFANTRY;
+        class KPLIB_BuildCategoryList: KPGUI_PRE_Combo {
+            idc = KPLIB_IDC_BUILD_CATEGORY_LIST;
 
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,8);
-            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,1,20);
-            w = KP_GETW(KP_WIDTH_VAL_LP,8);
-            h = KP_GETH(KP_HEIGHT_VAL_LP,20);
+            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,2,40);
+            w = KP_GETW(KP_WIDTH_VAL_LP,1);
+            h = KP_GETH(KP_HEIGHT_VAL_LP,40);
+
+            onMouseZChanged = "['onMouseZChanged_BuildCategoryList', _this] call KPLIB_fnc_build_handleMouse";
         };
 
-        class KPLIB_ModeLight: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_LIGHT;
+        class KPLIB_BuildSearch: KPGUI_PRE_Combo {
+            idc = KPLIB_IDC_BUILD_SEARCH;
 
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,1,8);
+            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,12);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,3,40);
+            w = KP_GETW(KP_WIDTH_VAL_LP,(12/11));
+            h = KP_GETH(KP_HEIGHT_VAL_LP,40);
         };
 
-        class KPLIB_ModeHeavy: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\vehicleicons\iconTank_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_HEAVY;
+        class KPLIB_BuildSearchButton: KPGUI_PRE_ActivePictureRatio {
+            idc = KPLIB_IDC_BUILD_SEARCH_BUTTON;
 
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,2,8);
-        };
+            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,11,12);
+            y = KP_GETCY(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP,3,40);
+            w = KP_GETW(KP_WIDTH_VAL_LP,(12/1));
+            h = KP_GETH(KP_HEIGHT_VAL_LP,40);
 
-        class KPLIB_ModeAir: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\vehicleicons\iconHelicopter_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_AIR;
-
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,3,8);
-        };
-
-        class KPLIB_ModeStatic: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\vehicleicons\iconStaticCannon_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_STATIC;
-
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,4,8);
-        };
-
-        class KPLIB_ModeBuilding: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\mapcontrol\Bunker_CA.paa";
-            idc = KPLIB_IDC_BUILD_TAB_BUILDING;
-
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,5,8);
-        };
-
-        class KPLIB_ModeSupport: KPLIB_ModeUnits {
-            text = "\A3\ui_f\data\map\vehicleicons\iconCrateAmmo_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_SUPPORT;
-
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,6,8);
-        };
-
-        class KPLIB_ModeSquad: KPLIB_ModeUnits {
-            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-            idc = KPLIB_IDC_BUILD_TAB_SQUAD;
-
-            x = KP_GETCX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,7,8);
-        };
+            text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+        }
 
         class KPLIB_BuildList: KPGUI_PRE_ListNBox {
             idc = KPLIB_IDC_BUILD_ITEM_LIST;
@@ -153,7 +125,7 @@ class KPLIB_build {
                     w = KP_GETW(KP_WIDTH_VAL_LP,4);
                     h = KP_GETH(KP_HEIGHT_VAL_LP,20) - 0.02;
 
-                    onButtonClick = "_this call KPLIB_fnc_build_changeQueueMode"
+                    onButtonClick = "_this call KPLIB_fnc_build_changeQueueMode";
                 };
             };
         };

@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-10-25
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -45,10 +45,20 @@ while {surfaceIsWater _spawnPos} do {
 
 // Set array to select soldier classnames from
 switch (_ownerNumber) do {
-    case 1: {_soldierArray = KPLIB_preset_oMilUnits; _side = KPLIB_preset_sideEnemy;};
-    case 2: {_soldierArray = KPLIB_preset_lightSquad; _side = KPLIB_preset_sidePlayers;};
-    default {_soldierArray = KPLIB_preset_oInfantry; _side = KPLIB_preset_sideEnemy;};
+    case 1: {_soldierArray = KPLIB_preset_unitsPlE; _side = KPLIB_preset_sideE;};
+    case 2: {_soldierArray = KPLIB_preset_unitsPlF; _side = KPLIB_preset_sideF;};
+    default {_soldierArray = KPLIB_preset_unitsPlE; _side = KPLIB_preset_sideE;};
 };
+
+// Remove unwanted soldier types
+_soldierArray = _soldierArray - [
+    ["rsCrewmanHeli", _side] call KPLIB_fnc_common_getPresetClass,
+    ["rsCrewmanVeh", _side] call KPLIB_fnc_common_getPresetClass,
+    ["rsPilotHeli", _side] call KPLIB_fnc_common_getPresetClass,
+    ["rsPilotJet", _side] call KPLIB_fnc_common_getPresetClass,
+    ["rsParatrooper", _side] call KPLIB_fnc_common_getPresetClass,
+    ["rsSurvivor", _side] call KPLIB_fnc_common_getPresetClass
+];
 
 // Fetch unit classnames
 for "_i" from 1 to _amount do {

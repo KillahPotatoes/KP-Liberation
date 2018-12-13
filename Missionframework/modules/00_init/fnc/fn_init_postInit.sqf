@@ -4,7 +4,7 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-27
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -46,6 +46,9 @@ if (isServer) then {
 
     // Create locked vehicle markers
     [] call KPLIB_fnc_init_createLockedVehMarkers;
+
+    // Place down Antennas at Radio Tower sectors
+    [] call KPLIB_fnc_init_placeTowers;
 
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
 };

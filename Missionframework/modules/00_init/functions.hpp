@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-11-27
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,6 +41,9 @@ class init {
     // Loads and checks the configured unit presets
     class init_loadPresets {};
 
+    // Places Antennas at Radio Tower sectors
+    class init_placeTowers {};
+
     // Module post initialization
     class init_postInit {
         postInit = 1;
@@ -50,6 +53,9 @@ class init {
     class init_preInit {
         preInit = 1;
     };
+
+    // Processes a given preset variable
+    class init_processPresetVar {};
 
     // Client function for processing init data which was published by the server
     class init_receiveInit {};

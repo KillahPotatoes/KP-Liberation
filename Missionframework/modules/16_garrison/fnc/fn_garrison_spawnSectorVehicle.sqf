@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2018-10-25
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,7 +13,7 @@
     Parameter(s):
         _sector     - Markername of the sector          [STRING, defaults to ""]
         _classname  - Classname of the vehicle to spawn [STRING, defaults to ""]
-        _side       - Side of the vehicle               [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _side       - Side of the vehicle               [SIDE, defaults to KPLIB_preset_sideE]
         _kind       - Kind of the vehicle (light/heavy) [STRING, defaults to "light"]
 
     Returns:
@@ -23,7 +23,7 @@
 params [
     ["_sector", "", [""]],
     ["_classname", "", [""]],
-    ["_side", KPLIB_preset_sideEnemy, [sideEmpty]],
+    ["_side", KPLIB_preset_sideE, [sideEmpty]],
     ["_kind", "light", [""]]
 ];
 
