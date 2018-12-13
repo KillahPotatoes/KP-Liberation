@@ -16,7 +16,7 @@ if (random 100 < 12) then {
 	_ultra_strong = true;
 };
 private _vehicle_trigger = 1;
-private _ied_type = selectRandom ["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
+private _ied_type = selectRandom ["LIB_TMI_42_MINE","LIB_TM44_MINE","LIB_STMI_MINE","LIB_SMI_35_1_MINE","LIB_SMI_35_MINE","LIB_shumine_42_MINE","LIB_PMD6_MINE","IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
 private _ied_obj = objNull;
 private _roadobj = [(getmarkerpos _sector) getPos [random _radius, random 360], _radius, []] call BIS_fnc_nearestRoad;
 private _goes_boom = false;
