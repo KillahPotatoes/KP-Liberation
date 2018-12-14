@@ -65,27 +65,81 @@ KP_liberation_guerilla_weapons_3 =[
 
 // Uniforms
 KP_liberation_guerilla_uniforms_1 = [
-	"U_GELIB_POL_CitizenAK03PckSten",
-	"U_GELIB_POL_VillagerAK01SzM9130",
-	"U_GELIB_POL_WoodlanderAK01SzM9130",
-	"U_LIB_POL_rifleman_nvfpbcSz2K98"
+	"U_LIB_CIV_Assistant",
+	"U_LIB_CIV_Assistant_2",
+	"U_LIB_CIV_Citizen_1",
+	"U_LIB_CIV_Citizen_2",
+	"U_LIB_CIV_Citizen_3",
+	"U_LIB_CIV_Citizen_4",
+	"U_LIB_CIV_Citizen_5",
+	"U_LIB_CIV_Citizen_6",
+	"U_LIB_CIV_Citizen_7",
+	"U_LIB_CIV_Citizen_8",
+	"U_LIB_CIV_Doctor",
+	"U_LIB_CIV_Functionary_1",
+	"U_LIB_CIV_Functionary_2",
+	"U_LIB_CIV_Functionary_3",
+	"U_LIB_CIV_Functionary_4",
+	"U_LIB_CIV_Priest",
+	"U_LIB_CIV_Rocker_1",
+	"U_LIB_CIV_Schoolteacher",
+	"U_LIB_CIV_Schoolteacher_2",
+	"U_LIB_CIV_Villager_1",
+	"U_LIB_CIV_Villager_2",
+	"U_LIB_CIV_Villager_3",
+	"U_LIB_CIV_Villager_4",
+	"U_LIB_CIV_Worker_1",
+	"U_LIB_CIV_Worker_2",
+	"U_LIB_CIV_Worker_3",
+	"U_LIB_CIV_Worker_4",
+	"U_LIB_CIV_Woodlander_1",
+	"U_LIB_CIV_Woodlander_2",
+	"U_LIB_CIV_Woodlander_3",
+	"U_LIB_CIV_Woodlander_4"
 	
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
-	"U_LIB_POL_rifleman_vvgpbcStKpl2Sten",
-	"U_LIB_POL_rifleman_bvvprcStSz2RKMwz28",
-	"U_LIB_POL_rifleman_gvbpbcSz2SmLE",
-	"U_LIB_POL_soldier_bcvmpbcSzt3Mp40"
+	"U_LIB_CIV_Assistant",
+	"U_LIB_CIV_Assistant_2",
+	"U_LIB_CIV_Citizen_1",
+	"U_LIB_CIV_Citizen_2",
+	"U_LIB_CIV_Citizen_3",
+	"U_LIB_CIV_Citizen_4",
+	"U_LIB_CIV_Citizen_5",
+	"U_LIB_CIV_Citizen_6",
+	"U_LIB_CIV_Citizen_7",
+	"U_LIB_CIV_Citizen_8",
+	"U_LIB_CIV_Doctor",
+	"U_LIB_CIV_Functionary_1",
+	"U_LIB_CIV_Functionary_2",
+	"U_LIB_CIV_Functionary_3",
+	"U_LIB_CIV_Functionary_4",
+	"U_LIB_CIV_Priest",
+	"U_LIB_CIV_Rocker_1",
+	"U_LIB_CIV_Schoolteacher",
+	"U_LIB_CIV_Schoolteacher_2",
+	"U_LIB_CIV_Villager_1",
+	"U_LIB_CIV_Villager_2",
+	"U_LIB_CIV_Villager_3",
+	"U_LIB_CIV_Villager_4",
+	"U_LIB_CIV_Worker_1",
+	"U_LIB_CIV_Worker_2",
+	"U_LIB_CIV_Worker_3",
+	"U_LIB_CIV_Worker_4",
+	"U_LIB_CIV_Woodlander_1",
+	"U_LIB_CIV_Woodlander_2",
+	"U_LIB_CIV_Woodlander_3",
+	"U_LIB_CIV_Woodlander_4",
+	"U_LIB_WP_Soldier_camo_1",
+	"U_LIB_WP_Soldier_camo_2",
+	"U_LIB_WP_Soldier_camo_3"
 ];
 
 KP_liberation_guerilla_uniforms_3 = [
-	"U_LIB_POL_rifleman_bvbpKplK98",
-	"U_LIB_POL_Soldier_camo_luftvnpgcbcStSzM9130",
-	"U_LIB_POL_Soldier_camo_09vfpbcbcSzK98",
-	"U_LIB_POL_Soldier_camo_15vbpbcgcSztMp40",
-	"U_LIB_POL_Soldier_camo_00vmpbcbcSzm9130",
-	"U_LIB_POL_Soldier_camo_21vnpbcgcStSzPpsch41m"
+	"U_LIB_WP_Soldier_camo_1",
+	"U_LIB_WP_Soldier_camo_2",
+	"U_LIB_WP_Soldier_camo_3"
 ];
 
 // Vests
