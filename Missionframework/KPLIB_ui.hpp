@@ -4,7 +4,7 @@
     File: KPLIB_ui.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-07
+    Last Update: 2018-12-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,6 +12,7 @@
 */
 
 #include "KPGUI\KPGUI_defines.hpp"
+#include "KPGUI\KPGUI_classes.hpp"
 #include "modules\00_init\ui.hpp"
 #include "modules\02_core\ui.hpp"
 #include "modules\03_respawn\ui.hpp"
