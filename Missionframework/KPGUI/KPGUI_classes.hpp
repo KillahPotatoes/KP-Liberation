@@ -86,7 +86,7 @@ class KPGUI_PRE_CloseCross {
     fade = 0;
     access = 0;
     type = 11;
-    style = 48;
+    style = 48 + 2048;
     color[] = {1, 1, 1, 0.75};
     colorBackground[] = {0, 0, 0, 0};
     colorText[] = {1, 1, 1, 0.75};
@@ -113,6 +113,13 @@ class KPGUI_PRE_CloseCross {
     url = "";
     action = "closeDialog 0";
 };
+
+// Help or version info icon
+class KPGUI_PRE_VersionIcon: KPGUI_PRE_CloseCross {
+    text = "\A3\Ui_f\data\Map\Markers\Military\unknown_CA.paa";
+    tooltip = "";
+    action = "";
+}
 
 // General background for the dialog area
 class KPGUI_PRE_Background {
@@ -960,6 +967,12 @@ class KPGUI_PRE_DialogCross: KPGUI_PRE_CloseCross {
     y = KP_GETY_CROSS(KP_Y_VAL);
 };
 
+// Version info
+class KPGUI_PRE_DialogVersionIcon: KPGUI_PRE_VersionIcon {
+    x = safeZoneX + safeZoneW * (KP_X_VAL + KP_WIDTH_VAL - 0.04);
+    y = KP_GETY_CROSS(KP_Y_VAL);
+};
+
 // Background
 class KPGUI_PRE_DialogBackground: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL,KP_WIDTH_VAL,0,1);
@@ -989,6 +1002,12 @@ class KPGUI_PRE_DialogTitleL: KPGUI_PRE_Title {
 // Cross symbol
 class KPGUI_PRE_DialogCrossL: KPGUI_PRE_CloseCross {
     x = KP_GETX_CROSS(KP_X_VAL_L);
+    y = KP_GETY_CROSS(KP_Y_VAL_L);
+};
+
+// Version info
+class KPGUI_PRE_DialogVersionIconL: KPGUI_PRE_VersionIcon {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_L + KP_WIDTH_VAL_L - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL_L);
 };
 
@@ -1024,6 +1043,12 @@ class KPGUI_PRE_DialogCrossC: KPGUI_PRE_CloseCross {
     y = KP_GETY_CROSS(KP_Y_VAL_C);
 };
 
+// Version info
+class KPGUI_PRE_DialogVersionIconC: KPGUI_PRE_VersionIcon {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_C + KP_WIDTH_VAL_C - 0.04);
+    y = KP_GETY_CROSS(KP_Y_VAL_C);
+};
+
 // Background
 class KPGUI_PRE_DialogBackgroundC: KPGUI_PRE_Background {
     x = KP_GETX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -1053,6 +1078,12 @@ class KPGUI_PRE_DialogTitle_LeftPanel: KPGUI_PRE_Title {
 // Cross symbol
 class KPGUI_PRE_DialogCross_LeftPanel: KPGUI_PRE_CloseCross {
     x = safeZoneX + safeZoneW * (KP_X_VAL_LP + KP_WIDTH_VAL_LP - 0.02);
+    y = KP_GETY_CROSS(KP_Y_VAL_LP);
+};
+
+// Version info
+class KPGUI_PRE_DialogVersionIcon_LeftPanel: KPGUI_PRE_VersionIcon {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_LP + KP_WIDTH_VAL_LP - 0.04);
     y = KP_GETY_CROSS(KP_Y_VAL_LP);
 };
 
