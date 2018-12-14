@@ -4,7 +4,7 @@
     File: fn_plm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-27
+    Last Update: 2018-12-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,7 +23,7 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module i
 // Player section
 if (hasInterface) then {
     // Load settings, if available
-    private _settings = profileNamespace getVariable ["KP_PLM_Settings", []];
+    private _settings = profileNamespace getVariable ["KPPLM_Settings", []];
     if !(_settings isEqualTo []) then {
         KPLIB_plm_viewFoot = _settings select 0;
         KPLIB_plm_viewVeh = _settings select 1;
