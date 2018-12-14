@@ -11,3 +11,17 @@ This module uses no data or functions from other modules.
 
 ### Scripts
 No scripts will be started by this module
+
+### Example Permission Array
+KPLIB_permissionList = [
+    ["SteamID64", "PlayerName", [
+        ["AVehicle", true],
+        ["BVehicle", false],
+        ["CVehicle", false]
+    ]],
+    ["SteamID64", "PlayerName", [
+        ["AVehicle", true],
+        ["BVehicle", false],
+        ["CVehicle", false]
+    ]],
+];
