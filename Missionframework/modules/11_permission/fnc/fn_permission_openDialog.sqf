@@ -17,6 +17,8 @@
         Function reached the end [BOOL]
 */
 
+#include "..\..\..\KPGUI\KPGUI_defines.hpp"
+
 // Create dialog
 createDialog "KPLIB_permission";
 disableSerialization;
@@ -40,10 +42,10 @@ private _tempCtrl = "";
 
 _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", -1];
 _tempCtrl ctrlSetPosition [
-    0,
-    0,
-    0,
-    0
+    (KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2)),
+    (KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,48)),
+    (KP_GETW(KP_WIDTH_VAL_C,2)),
+    (KP_GETH(KP_HEIGHT_VAL_C,24))
 ];
 _tempCtrl ctrlSetText "LightVehicle";
 
