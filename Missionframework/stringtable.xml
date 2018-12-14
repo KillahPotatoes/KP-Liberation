@@ -234,6 +234,10 @@
             <Chinese>-- 軍火庫 --</Chinese>
             <German>-- ARSENAL --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_PERMISSION">
+            <English>-- Permission --</English>
+            <German>-- RECHTE --</German>
+        </Key>
     </Package>
 
 
@@ -620,6 +624,12 @@
             <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
+        <!-- ARSENAL DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
+            <English>KP Liberation Permissions</English>
+            <Chinese>KP Liberation</Chinese>
+            <German>KP Liberation Rechteverwaltung</German>
+        </Key>
     </Package>
 
 
@@ -999,7 +1009,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_CEILING">
             <English>Limited mode camera ceiling</English>
-            <Chinese>限制模式的攝影機高度</Chinese>            
+            <Chinese>限制模式的攝影機高度</Chinese>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_ZEUS_FOB_ICONS">
             <English>Show 3D fob labels</English>

@@ -26,6 +26,10 @@ class permission {
     // Loads module specific data from the save
     class permission_loadData {};
 
+    // Open the dialog
+    class permission_openDialog {};
+
+
     // Module post initialization
     class permission_postInit {
         postInit = 1;
