@@ -4,7 +4,7 @@
     File: fn_arsenal_applyLoadout.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-14
-    Last Update: 2018-12-06
+    Last Update: 2018-12-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,7 +18,7 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758076;
+private _dialog = findDisplay 758012;
 private _ctrlLoadoutList = _dialog displayCtrl 68740;
 
 // Get the selected loadout name
