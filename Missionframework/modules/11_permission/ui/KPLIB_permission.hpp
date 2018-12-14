@@ -27,7 +27,20 @@ class KPLIB_permission {
 
     class controls {
 
+        class KPLIB_PlayerList: KPGUI_PRE_ListBox {
+            idc = 68740;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,2);
+            h = KP_GETH(KP_HEIGHT_VAL_C,1);
+        };
 
+        class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};
+
+        class KPLIB_SaveButton: KPGUI_PRE_DialogButtonC {
+            text = "$STR_KPLIB_DIALOG_BUTTON_SAVE";
+            onButtonClick = "";
+        };
 
     };
 

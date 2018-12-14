@@ -317,6 +317,10 @@
             <Chinese>重新命名</Chinese>
             <German>Umbenennen</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_SAVE">
+            <English>Save</English>
+            <German>Speichern</German>
+        </Key>
 
         <!-- ADMIN MENU DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ADMIN_TITLE">
@@ -627,8 +631,11 @@
         <!-- ARSENAL DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
             <English>KP Liberation Permissions</English>
-            <Chinese>KP Liberation</Chinese>
             <German>KP Liberation Rechteverwaltung</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_DEFAULT">
+            <English>Default permissions</English>
+            <German>Standard Rechte</German>
         </Key>
     </Package>
 

@@ -23,5 +23,28 @@ disableSerialization;
 
 // Dialog controls
 private _dialog = findDisplay 758011;
+private _ctrlPlayerList = _dialog displayCtrl 68740;
+
+
+// Fill the controls
+_ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
+_ctrlPlayerList lbAdd "----------";
+
+private _index = 0;
+{
+    _index = _ctrlPlayerList lbAdd (name _x);
+    _ctrlPlayerList lbSetData [_index, name _x];
+} forEach (allPlayers - (entities "HeadlessClient_F"));
+
+private _tempCtrl = "";
+
+_tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", -1];
+_tempCtrl ctrlSetPosition [
+    0,
+    0,
+    0,
+    0
+];
+_tempCtrl ctrlSetText "LightVehicle";
 
 true
