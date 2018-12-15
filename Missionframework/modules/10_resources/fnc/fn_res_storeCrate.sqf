@@ -38,12 +38,7 @@ if (_nearStorage isEqualTo []) exitWith {
 _nearStorage = _nearStorage select 0;
 
 // Get storage position array depending on storage type
-private _attachPosition = switch (typeOf _nearStorage) do {
-    case KPLIB_preset_storageLargeE;
-    case KPLIB_preset_storageLargeF: {KPLIB_storage_largeOffsets};
-    case KPLIB_preset_storageSmallE;
-    case KPLIB_preset_storageSmallF: {KPLIB_storage_smallOffsets};
-};
+private _attachPosition = [typeOf _nearStorage] call KPLIB_fnc_res_getAttachArray;
 
 // Get number of already stored crates
 private _attachedCrates = count (attachedObjects _nearStorage);
@@ -58,18 +53,12 @@ if (_attachedCrates >= (count _attachPosition)) exitWith {
 // Get the correct attachTo position from the array
 _attachPosition = _attachPosition select _attachedCrates;
 
-// Set the height offset for the crate type
-private _zOffset = switch (typeOf _crate) do {
-    case KPLIB_preset_crateSupplyE;
-    case KPLIB_preset_crateSupplyF: {0.4};
-    case KPLIB_preset_crateAmmoE;
-    case KPLIB_preset_crateAmmoF: {0.6};
-    case KPLIB_preset_crateFuelE;
-    case KPLIB_preset_crateFuelF: {0.3};
-};
-
 // Attach crate to storage
-_crate attachTo [_nearStorage, [(_attachPosition select 0), (_attachPosition select 1), _zOffset]];
+_crate attachTo [_nearStorage, [
+    (_attachPosition select 0),
+    (_attachPosition select 1),
+    [typeOf _crate] call KPLIB_fnc_res_getCrateZ
+]];
 
 // TODO: We need to test, if this on/off is really necessary.
 // [_crate, false] remoteExecCall ["enableRopeAttach", true];

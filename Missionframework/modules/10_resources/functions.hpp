@@ -23,6 +23,12 @@ class res {
     // Creates a resource crate
     class res_createCrate {};
 
+    // Gets storage attachTo positions
+    class res_getAttachArray {};
+
+    // Gets Z offset for crate storing
+    class res_getCrateZ {};
+
     // Loads module specific data from the save
     class res_loadData {};
 
@@ -47,4 +53,7 @@ class res {
 
     // Store crate in storage
     class res_storeCrate {};
+
+    // Unstores given kind of resource crate
+    class res_unstoreCrate {};
 };

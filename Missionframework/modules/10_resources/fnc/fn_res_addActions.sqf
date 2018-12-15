@@ -8,7 +8,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Adds all actions to the resource crates upon spawning.
+        Adds all actions to the resource crates and resource storages upon spawning.
 
     Parameter(s):
         _object - Spawned object to take care of [OBJECT, defaults to objNull]
@@ -56,7 +56,15 @@ if ((typeOf _object) in KPLIB_res_storageClasses) then {
     // Add the storage to the storages array
     KPLIB_res_allStorages pushBack _object;
 
-
+    // Unstore resource crate actions
+    {
+        [
+            _object,
+            "STR_KPLIB_ACTION_UNSTORE" + (toUpper _x),
+            [{[_this select 0, _this select 3] call KPLIB_fnc_res_unstoreCrate;}, _x, -500 - _forEachIndex, false, true, "", "", 10],
+            "#FFFF00"
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    } forEach ["Supply", "Ammo", "Fuel"];
 };
 
 true

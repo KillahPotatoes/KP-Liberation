@@ -281,6 +281,40 @@
             <Spanish>- CAJA DE ALMACENAJE -</Spanish>
             <Turkish>- KUTUYU DEPOLA -</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTORESUPPLY">
+            <English>- UNLOAD SUPPLY CRATE -</English>
+            <Chinese>- 卸載補給箱 -</Chinese>
+            <Chinesesimp>- 卸载补给箱 -</Chinesesimp>
+            <German>- NACHSCHUB AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA RIFORNIMENTI -</Italian>
+            <Portuguese>- DESCARREGAR CAIXA DE SUPRIMENTOS -</Portuguese>
+            <Russian>- ЗАГРУЗИТЬ СРОК ПОСТАВКИ -</Russian>
+            <Spanish>- DESCARGA CAJA DE SUMINISTRO -</Spanish>
+            <Turkish>- İKMAL KUTUSUNU ÇIKAR -</Turkish>
+
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTOREAMMO">
+            <English>- UNLOAD AMMO CRATE -</English>
+            <Chinese>- 卸載彈藥箱 -</Chinese>
+            <Chinesesimp>- 卸载弹药箱 -</Chinesesimp>
+            <German>- MUNITION AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA MUNIZIONI -</Italian>
+            <Portuguese>- DESCARREGAR CAIXA DE MUNIÇÃO -</Portuguese>
+            <Russian>- РАЗГРУЗКА БОЕПРИПАСОВ -</Russian>
+            <Spanish>- DESCARGA CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- MERMİ KUTUSUNU ÇIKAR -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTOREFUEL">
+            <English>- UNLOAD FUEL CRATE -</English>
+            <Chinese>- 卸載油料箱 -</Chinese>
+            <Chinesesimp>- 卸载燃料箱 -</Chinesesimp>
+            <German>- KRAFTSTOFF AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA CARBURANTE -</Italian>
+            <Portuguese>- DESCARREGAR BARRIS DE COMBUSTÍVEL -</Portuguese>
+            <Russian>- РАЗГРУЗКА ТОПЛИВА -</Russian>
+            <Spanish>- DESCARGA CAJA DE COMBUSTIBLE -</Spanish>
+            <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
+        </Key>
     </Package>
 
 
