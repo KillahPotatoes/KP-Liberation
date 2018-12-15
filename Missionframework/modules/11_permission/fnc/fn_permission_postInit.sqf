@@ -20,14 +20,14 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];};
 
-["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}] call KPLIB_fnc_permission_addPermissionHandler;
+["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE"] call KPLIB_fnc_permission_addPermissionHandler;
 
 if (hasInterface) then {
     // Setup of actions available to players
     [] call KPLIB_fnc_permission_setupPlayerActions;
 
     // Add event handlers
-    player addEventHandler ["GetInMan", {if !(["LightVehicle", "STR_KPLIB_PERMISSION_LIGHTVEHICLE"] call KPLIB_fnc_permission_checkPermission) then {moveOut player};}];
+    player addEventHandler ["GetInMan", {if !(["LightVehicle"] call KPLIB_fnc_permission_checkPermission) then {moveOut player};}];
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initialized", diag_tickTime];};
