@@ -1114,5 +1114,13 @@
             <English>Light Vehicle</English>
             <German>Leichte Fahrzeuge</German>
         </Key>
+        <Key ID="STR_KPLIB_PERMISSION_HEAVYVEHICLE">
+            <English>Heavy Vehicle</English>
+            <German>Schwere Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_HELICOPTER">
+            <English>Helicopter</English>
+            <German>Helikopter</German>
+        </Key>
     </Package>
 </Project>

@@ -34,6 +34,7 @@ private _white = [1,1,1,1];
 
 // Fill the controls
 _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
+_ctrlPlayerList lbSetData "default";
 _ctrlPlayerList lbAdd "----------";
 
 private _index = 0;
@@ -58,6 +59,8 @@ private _i = 0;
     _tempCtrl ctrlSetText (localize (_data select 1));
     _tempCtrl ctrlSetActiveColor _white;
     _tempCtrl ctrlSetTextColor _red;
+    _tempCtrl ctrlSetEventHandler ["MouseButtonClick", ''];
+
     _i = _i + 2;
     _tempCtrl ctrlCommit 0;
 } forEach KPLIB_permissionTypes;
