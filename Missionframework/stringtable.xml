@@ -1105,4 +1105,14 @@
             <Turkish>Ağır Silah Timi</Turkish>
         </Key>
     </Package>
+
+
+    <!-- PERMISSIONS -->
+
+    <Package name="Permissions">
+        <Key ID="STR_KPLIB_PERMISSION_LIGHTVEHICLE">
+            <English>Light Vehicle</English>
+            <German>Leichte Fahrzeuge</German>
+        </Key>
+    </Package>
 </Project>

@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-14
+    Last Update: 2018-12-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +27,7 @@ if (hasInterface) then {
     [] call KPLIB_fnc_permission_setupPlayerActions;
 
     // Add event handlers
-    player addEventHandler ["GetInMan", {if !(["LightVehicle"] call KPLIB_fnc_permission_checkPermission) then {moveOut player};}];
+    player addEventHandler ["GetInMan", {if !(["LightVehicle", "STR_KPLIB_PERMISSION_LIGHTVEHICLE"] call KPLIB_fnc_permission_checkPermission) then {moveOut player};}];
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initialized", diag_tickTime];};
