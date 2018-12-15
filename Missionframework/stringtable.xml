@@ -26,7 +26,7 @@
 
         Localization contributors:
 
-            English | Updated: 2018-12-05
+            English | Updated: 2018-12-14
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -39,7 +39,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2018-12-05
+            German | Updated: 2018-12-14
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -887,6 +887,20 @@
             <English>Enables/Disables the mobile respawn functionality of certain vehicles.</English>
             <Chinese>啟用/關閉部分載具的機動重生功能</Chinese>
             <German>Aktiviert/Deaktiviert die Möglichkeit entsprechende Fahrzeuge als mobilen Respawnpunkt zu nutzen.</German>
+        </Key>
+
+        <!-- RESSOURCES CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RES">
+            <English>KPLIB - Resources</English>
+            <German>KPLIB - Resources</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
+            <English>Volume of resource crates</English>
+            <German>Fassungsvermögen von Ressourcenkisten</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME_TT">
+            <English>The maximum amount of resources which can be stored in a crate.</English>
+            <German>Das maximal mögliche Menge an Ressourcen in den Ressourcenkisten.</German>
         </Key>
 
         <!-- BI REVIVE CATEGORY -->

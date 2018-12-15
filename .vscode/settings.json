@@ -18,6 +18,7 @@
         "KPLIB_param_clearVehicleCargo",
         "KPLIB_param_commanderZeusMode",
         "KPLIB_param_copyDistance",
+        "KPLIB_param_crateVolume",
         "KPLIB_param_debug",
         "KPLIB_param_fobRange",
         "KPLIB_param_limitedZeusCeiling",
