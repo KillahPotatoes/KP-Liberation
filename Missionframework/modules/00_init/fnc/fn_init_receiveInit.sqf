@@ -17,16 +17,10 @@
         Function reached the end [BOOL]
 */
 
-if (isDedicated) exitWith {};
-
-diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initializing...", diag_tickTime];
-
-diag_log "[KP LIBERATION] [CLIENT INIT] Receiving data...";
+diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Preset data initializing...", diag_tickTime];
 
 // Wait until the server has send the preset data
 waitUntil {!isNil "KPLIB_preset_allData"};
-
-diag_log "[KP LIBERATION] [CLIENT INIT] Data received. Processing...";
 
 {
     {
@@ -34,8 +28,6 @@ diag_log "[KP LIBERATION] [CLIENT INIT] Data received. Processing...";
     } forEach _x;
 } forEach KPLIB_preset_allData;
 
-diag_log "[KP LIBERATION] [CLIENT INIT] Data processed";
-
-diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Client initialized", diag_tickTime];
+diag_log format ["[KP LIBERATION] [%1] [CLIENT INIT] Preset data initialized", diag_tickTime];
 
 true

@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-08
+    Last Update: 2018-12-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,6 +32,9 @@ KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
 // Process CBA Settings
 [] call KPLIB_fnc_init_settings;
 
+// Read the KPLIB_config.sqf file
+[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+
 // Parameter processing and vanilla save deactivation on the server only
 if (isServer) then {
     enableSaving [false, false];
@@ -41,10 +44,11 @@ if (isServer) then {
 
     // Register save event handler
     ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Load preset files
+    [] call KPLIB_fnc_init_loadPresets;
 };
 
-// Read the KPLIB_config.sqf file
-[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 
 /*
     ----- Module Globals -----
