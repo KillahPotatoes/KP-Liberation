@@ -43,6 +43,9 @@ if (isServer) then {
         KPLIB_preset_crateFuelE
     ];
     publicVariable "KPLIB_res_crateClasses";
+
+    // Array for all spawned resource crates
+    KPLIB_res_allCrates = [];
 };
 
 // HC section
