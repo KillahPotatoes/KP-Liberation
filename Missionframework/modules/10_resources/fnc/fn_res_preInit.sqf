@@ -31,9 +31,10 @@ if (isServer) then {
     ["KPLIB_doSave", {[] call KPLIB_fnc_res_saveData;}] call CBA_fnc_addEventHandler;
 
     // Adding actions to spawned crates
-    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_res_addCrateActions}] call CBA_fnc_addEventHandler;
+    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_res_addActions}] call CBA_fnc_addEventHandler;
 
-    // All valid crate classnames. Defined here on the server as the used preset variables aren't present on the clients yet but needed in initial loading.
+    // Some globals defined here on the server as the used preset variables aren't present on the clients yet but needed in initial loading
+    // All valid crate classnames
     KPLIB_res_crateClasses = [
         KPLIB_preset_crateSupplyF,
         KPLIB_preset_crateAmmoF,
@@ -42,10 +43,24 @@ if (isServer) then {
         KPLIB_preset_crateAmmoE,
         KPLIB_preset_crateFuelE
     ];
+
+    // All valid storage classnames
+    KPLIB_res_storageClasses = [
+        KPLIB_preset_storageSmallE,
+        KPLIB_preset_storageSmallF,
+        KPLIB_preset_storageLargeE,
+        KPLIB_preset_storageLargeF
+    ];
+
+    // Publish variables to clients
     publicVariable "KPLIB_res_crateClasses";
+    publicVariable "KPLIB_res_storageClasses";
 
     // Array for all spawned resource crates
     KPLIB_res_allCrates = [];
+
+    // Array for all storages
+    KPLIB_res_allStorages = [];
 };
 
 // HC section

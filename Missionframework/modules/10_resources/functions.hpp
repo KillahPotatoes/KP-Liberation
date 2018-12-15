@@ -15,7 +15,7 @@ class res {
     file = "modules\10_resources\fnc";
 
     // Adds actions to spawned crates
-    class res_addCrateActions {};
+    class res_addActions {};
 
     // Displays amount of resources in crate
     class res_checkCrate {};

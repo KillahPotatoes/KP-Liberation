@@ -42,8 +42,5 @@ private _crate = [_presetClass, _pos] call KPLIB_fnc_common_createVehicle;
 // Add the amount of resources
 _crate setVariable ["KPLIB_resValue", _value min KPLIB_param_crateVolume];
 
-// Add the crate to the crates array
-KPLIB_res_allCrates pushBack _crate;
-
 // Return crate
 _crate
