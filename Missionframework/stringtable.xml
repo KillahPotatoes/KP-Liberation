@@ -173,6 +173,18 @@
             <Spanish>Si</Spanish>
             <Turkish>Evet</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_SUPPLIES">
+            <English>Supplies</English>
+            <German>Nachschub</German>
+        </Key>
+        <Key ID="STR_KPLIB_AMMO">
+            <English>Ammunition</English>
+            <German>Munition</German>
+        </Key>
+        <Key ID="STR_KPLIB_FUEL">
+            <English>Fuel</English>
+            <German>Kraftstoff</German>
+        </Key>
     </Package>
 
 
@@ -624,6 +636,7 @@
             <Chinese>陞階系統關閉</Chinese>
             <German>Levelsystem deaktiviert</German>
         </Key>
+
         <!-- ARSENAL DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
             <English>KP Liberation Arsenal</English>
@@ -672,12 +685,16 @@
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
         <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
-            <English>The crate currently holds:\n%1 resources</English>
-            <German>Die Kiste beinhaltet im Moment:\n%1 Ressourcen</German>
+            <English>The crate currently holds:\n%1 %2</English>
+            <German>Die Kiste beinhaltet im Moment:\n%1 %2</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOCRATEFOUND">
+            <English>Desired resource crate wasn't found in the storage.</English>
+            <German>Keine passende Ressourcenkiste im Lager gefunden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
             <English>No storage found in 20m.</English>

@@ -21,7 +21,18 @@ params [
     ["_crate", objNull, [objNull]]
 ];
 
-hint format [localize "STR_KPLIB_HINT_RESCRATECONTENT", _crate getVariable ["KPLIB_resValue", 0]];
+// Get the specific resource type string
+private _resource = switch (typeOf _crate) do {
+    case KPLIB_preset_crateSupplyE;
+    case KPLIB_preset_crateSupplyF: {"STR_KPLIB_SUPPLIES"};
+    case KPLIB_preset_crateAmmoE;
+    case KPLIB_preset_crateAmmoF: {"STR_KPLIB_AMMO"};
+    case KPLIB_preset_crateFuelE;
+    case KPLIB_preset_crateFuelF: {"STR_KPLIB_FUEL"};
+};
+
+// Display hint
+hint format [localize "STR_KPLIB_HINT_RESCRATECONTENT", _crate getVariable ["KPLIB_resValue", 0], localize _resource];
 [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 
 true
