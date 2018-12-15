@@ -242,6 +242,10 @@
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_STORECRATE">
+            <English>- Store Crate -</English>
+            <German>- Kiste einlagern -</German>
+        </Key>
     </Package>
 
 
@@ -651,6 +655,14 @@
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
+            <English>No storage found in 20m.</English>
+            <German>Kein Lager innerhalb von 20m gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGESPACE">
+            <English>No space in nearest storage.</English>
+            <German>Kein Platz im Lager.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
             <English>Random placement of a FOB is currently not possible.</English>

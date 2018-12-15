@@ -41,4 +41,7 @@ class res {
 
     // CBA Settings for this module
     class res_settings {};
+
+    // Store crate in storage
+    class res_storeCrate {};
 };

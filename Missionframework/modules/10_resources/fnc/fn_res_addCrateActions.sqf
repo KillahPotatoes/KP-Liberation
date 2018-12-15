@@ -28,7 +28,15 @@ if !((typeOf _crate) in KPLIB_res_crateClasses) exitWith {false};
 [
     _crate,
     "STR_KPLIB_ACTION_CHECKCRATE",
-    [{[_this select 0] call KPLIB_fnc_res_checkCrate;}, nil, -500, false, true, "", "", 4],
+    [{[_this select 0] call KPLIB_fnc_res_checkCrate;}, nil, -500, false, true, "", "isNull attachedTo _target", 4],
+    "#FFFF00"
+] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+
+// Add store action to crate
+[
+    _crate,
+    "STR_KPLIB_ACTION_STORECRATE",
+    [{[_this select 0] call KPLIB_fnc_res_storeCrate;}, nil, -501, false, true, "", "isNull attachedTo _target", 4],
     "#FFFF00"
 ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
 
