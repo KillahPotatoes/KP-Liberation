@@ -184,6 +184,15 @@
             <Chinese>-- 管理員選單 --</Chinese>
             <German>-- Admin Menü --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ARSENAL">
+            <English>-- ARSENAL --</English>
+            <Chinese>-- 軍火庫 --</Chinese>
+            <German>-- ARSENAL --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_CHECKCRATE">
+            <English>- Check Content -</English>
+            <German>- Inhalt prüfen -</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_BUILD">
             <English>-- BUILD --</English>
             <Chinese>-- 建造 --</Chinese>
@@ -232,11 +241,6 @@
             <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
-        </Key>
-        <Key ID="STR_KPLIB_ACTION_ARSENAL">
-            <English>-- ARSENAL --</English>
-            <Chinese>-- 軍火庫 --</Chinese>
-            <German>-- ARSENAL --</German>
         </Key>
     </Package>
 
@@ -640,6 +644,10 @@
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
+            <English>The crate currently holds:\n%1 resources</English>
+            <German>Die Kiste beinhaltet im Moment:\n%1 Ressourcen</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
@@ -892,7 +900,7 @@
         <!-- RESSOURCES CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_RES">
             <English>KPLIB - Resources</English>
-            <German>KPLIB - Resources</German>
+            <German>KPLIB - Ressourcen</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
             <English>Volume of resource crates</English>
