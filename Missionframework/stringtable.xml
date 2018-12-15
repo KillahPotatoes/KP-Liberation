@@ -190,8 +190,15 @@
             <German>-- ARSENAL --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_CHECKCRATE">
-            <English>- Check Content -</English>
-            <German>- Inhalt prüfen -</German>
+            <English>- CHECK CONTENT -</English>
+            <Chinese>- 檢查存貨 -</Chinese>
+            <Chinesesimp>- 检查存货 -</Chinesesimp>
+            <German>- INHALT PRÜFEN -</German>
+            <Italian>- CONTROLLA CARICO -</Italian>
+            <Portuguese>- CHECAR CONTEÚDO -</Portuguese>
+            <Russian>- ПРОВЕРИТЬ СОДЕРЖАНИЕ -</Russian>
+            <Spanish>- COMPROBAR CONTENIDO -</Spanish>
+            <Turkish>- İÇİNDEKİLER KONTROL ET -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_BUILD">
             <English>-- BUILD --</English>
@@ -230,6 +237,15 @@
             <Chinese>-- 玩家選單 --</Chinese>
             <German>-- Spielermenü --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_PUSHCRATE">
+            <English>- PUSH CRATE -</English>
+            <Chinese>- 推貨物 -</Chinese>
+            <Chinesesimp>- 推货箱 -</Chinesesimp>
+            <German>- KISTE SCHIEBEN -</German>
+            <Italian>- SPINGI CASSA -</Italian>
+            <Portuguese>- EMPURRAR CAIXA -</Portuguese>
+            <Turkish>- KUTUYU İTTİR -</Turkish>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_REDEPLOY">
             <English>-- REDEPLOY --</English>
             <Chinese>-- 選擇傳送位置 --</Chinese>
@@ -243,8 +259,15 @@
             <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_STORECRATE">
-            <English>- Store Crate -</English>
-            <German>- Kiste einlagern -</German>
+            <English>- STORE CRATE -</English>
+            <Chinese>- 倉儲貨物 -</Chinese>
+            <Chinesesimp>- 仓储货箱 -</Chinesesimp>
+            <German>- KISTE EINLAGERN -</German>
+            <Italian>- DEPOSITA CASSA -</Italian>
+            <Portuguese>- ARMAZENAR CAIXA NO DEPÓSITO -</Portuguese>
+            <Russian>- ХРАНЕНИЕ МАГАЗИНА -</Russian>
+            <Spanish>- CAJA DE ALMACENAJE -</Spanish>
+            <Turkish>- KUTUYU DEPOLA -</Turkish>
         </Key>
     </Package>
 

@@ -1,5 +1,5 @@
 /*
-    KPLIB_fnc_storeCrate
+    KPLIB_fnc_res_storeCrate
 
     File: fn_res_storeCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes

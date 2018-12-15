@@ -36,6 +36,9 @@ class res {
         preInit = 1;
     };
 
+    // Push crate
+    class res_pushCrate {};
+
     // Saves module specific data for the save
     class res_saveData {};
 
