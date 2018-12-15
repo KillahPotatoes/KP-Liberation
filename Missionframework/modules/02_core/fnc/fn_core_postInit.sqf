@@ -4,7 +4,7 @@
     File: fn_core_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-27
+    Last Update: 2018-12-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,10 +25,6 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module 
 
 // Initialize actions
 [] call KPLIB_fnc_core_setupPlayerActions;
-
-if(KPLIB_param_clearVehicleCargo) then {
-    ["KPLIB_vehicle_spawned", {call KPLIB_fnc_common_clearVehicleCargo;}] call CBA_fnc_addEventHandler;
-};
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
