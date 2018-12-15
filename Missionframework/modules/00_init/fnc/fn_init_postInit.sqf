@@ -18,8 +18,10 @@
         Module postInit finished [BOOL]
 */
 
-// Server section (dedicated and player hosted)
-if (isServer) then {
+if (!isServer) then {
+    // Called in the scheduled postInit environment allows the small wait in the function
+    [] call KPLIB_fnc_init_receiveInit;
+} else {
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initializing...", diag_tickTime];
 
     // Sort the sector markers to category arrays
@@ -49,9 +51,6 @@ if (isServer) then {
     [] call KPLIB_fnc_init_placeTowers;
 
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
-} else {
-    // Called in the scheduled postInit environment allows the small wait in the function
-    [] call KPLIB_fnc_init_receiveInit;
 };
 
 // Player section
