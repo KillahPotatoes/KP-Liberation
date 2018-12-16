@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-14
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class permission {
 
     // Adds a new permission to the permission system
     class permission_addPermissionHandler {};
+
+    // Changes the selected permission on the given player
+    class permission_changePermission {};
 
     // Checks the given permission and executes the registered code
     class permission_checkPermission {};
