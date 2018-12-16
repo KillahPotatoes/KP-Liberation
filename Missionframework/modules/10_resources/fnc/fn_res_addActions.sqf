@@ -73,6 +73,14 @@ if ((typeOf _object) in KPLIB_res_storageClasses) then {
             "#FFFF00"
         ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
     } forEach ["Supply", "Ammo", "Fuel"];
+
+    // Stack and Sort action for storage
+    [
+        _object,
+        "STR_KPLIB_ACTION_STACKNSORT",
+        [{[_this select 0] call KPLIB_fnc_res_stackNsort;}, nil, -503, false, false, "", "", 10],
+        "#FFFF00"
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
 };
 
 true

@@ -4,7 +4,7 @@
     File: fn_res_unstoreCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-15
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -68,16 +68,8 @@ _crate setPos _unloadPos;
 // Get storage position array depending on storage type
 private _attachPositions = [typeOf _storage] call KPLIB_fnc_res_getAttachArray;
 
-// Stack the crates to close the possible gap
-{
-    // Detach and reattach crate
-    detach _x;
-    _x attachTo [_storage, [
-        (_attachPositions select _forEachIndex) select 0,
-        (_attachPositions select _forEachIndex) select 1,
-        [typeOf _x] call KPLIB_fnc_res_getCrateZ
-    ]];
-} forEach (attachedObjects _storage);
+// Reorder the crates to close the possible gap
+[_storage] call KPLIB_fnc_res_orderStorage;
 
 // Return unstored crate
 _crate
