@@ -13,7 +13,7 @@
     Parameter(s):
         _permission - Permission name                               [STRING, defaults to ""]
         _condition  - Code which is executed on permission check    [CODE, defaults to {false}]
-        _string     - Permission stringtable path                   [STRING, defaults to "Unknown"]
+        _string     - Permission stringtable path                   [STRING, defaults to ""]
 
     Returns:
         Function reached the end [BOOL]
@@ -22,7 +22,7 @@
 params [
     ["_permission", "", [""]],
     ["_code", {false}, [{}]],
-    ["_string", "Unknown", [""]]
+    ["_string", "", [""]]
 ];
 
 KPLIB_permissionTypes pushBackUnique _permission;
