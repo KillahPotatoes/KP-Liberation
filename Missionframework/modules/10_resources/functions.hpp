@@ -32,6 +32,9 @@ class res {
     // Gets Z offset for crate storing
     class res_getCrateZ {};
 
+    // Loads crate to transport vehicle
+    class res_loadCrate {};
+
     // Loads module specific data from the save
     class res_loadData {};
 
@@ -56,6 +59,9 @@ class res {
 
     // Store crate in storage
     class res_storeCrate {};
+
+    // Unloads crate from transport vehicle
+    class res_unloadCrate {};
 
     // Unstores given kind of resource crate
     class res_unstoreCrate {};

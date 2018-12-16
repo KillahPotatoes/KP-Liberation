@@ -244,6 +244,17 @@
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_LOADCRATE">
+            <English>- LOAD CRATE -</English>
+            <Chinese>- 裝載貨物 -</Chinese>
+            <Chinesesimp>- 装载货箱 -</Chinesesimp>
+            <German>- KISTE AUFLADEN -</German>
+            <Italian>- CARICA CASSA -</Italian>
+            <Portuguese>- CARREGAR CAIXA NO TRANSPORTE -</Portuguese>
+            <Russian>- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ -</Russian>
+            <Spanish>- CARGAR CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- KUTUYU YÜKLE -</Turkish>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_PLAYER_MENU">
             <English>-- Player Menu --</English>
             <Chinese>-- 玩家選單 --</Chinese>
@@ -281,6 +292,17 @@
             <Spanish>- CAJA DE ALMACENAJE -</Spanish>
             <Turkish>- KUTUYU DEPOLA -</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_UNLOADCRATE">
+            <English>- UNLOAD CRATES -</English>
+            <Chinese>- 卸載貨物 -</Chinese>
+            <Chinesesimp>- 卸载货箱 -</Chinesesimp>
+            <German>- KISTEN ABLADEN -</German>
+            <Italian>- SCARICA CASSA -</Italian>
+            <Portuguese>- DESCARREGAR CAIXAS -</Portuguese>
+            <Russian>- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ -</Russian>
+            <Spanish>- DESCARGAR CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- KUTUYU İNDİR -</Turkish>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_UNSTORESUPPLY">
             <English>- UNLOAD SUPPLY CRATE -</English>
             <Chinese>- 卸載補給箱 -</Chinese>
@@ -291,7 +313,6 @@
             <Russian>- ЗАГРУЗИТЬ СРОК ПОСТАВКИ -</Russian>
             <Spanish>- DESCARGA CAJA DE SUMINISTRO -</Spanish>
             <Turkish>- İKMAL KUTUSUNU ÇIKAR -</Turkish>
-
         </Key>
         <Key ID="STR_KPLIB_ACTION_UNSTOREAMMO">
             <English>- UNLOAD AMMO CRATE -</English>
@@ -735,8 +756,12 @@
             <German>Kein Lager innerhalb von 20m gefunden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOSTORAGESPACE">
-            <English>No space in nearest storage.</English>
-            <German>Kein Platz im Lager.</German>
+            <English>No free space.</English>
+            <German>Kein freier Platz.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOTRANSPORTNEAR">
+            <English>No transport vehicle found in 10m.</English>
+            <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
             <English>Random placement of a FOB is currently not possible.</English>

@@ -35,11 +35,11 @@ private ["_class", "_pos", "_vector", "_supplies", "_ammo", "_fuel"];
     {
         switch (typeOf _x) do {
             case KPLIB_preset_crateSupplyE;
-            case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_resValue", 0])};
+            case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_res_crateValue", 0])};
             case KPLIB_preset_crateAmmoE;
-            case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_resValue", 0])};
+            case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_res_crateValue", 0])};
             case KPLIB_preset_crateFuelE;
-            case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_resValue", 0])};
+            case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_res_crateValue", 0])};
         };
     } forEach (attachedObjects _x);
 

@@ -4,7 +4,7 @@
     File: fn_res_addActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-15
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -47,6 +47,14 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
         _object,
         "STR_KPLIB_ACTION_STORECRATE",
         [{[_this select 0] call KPLIB_fnc_res_storeCrate;}, nil, -502, false, true, "", "isNull attachedTo _target", 4],
+        "#FFFF00"
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+
+    // Add load to transport action to crate
+    [
+        _object,
+        "STR_KPLIB_ACTION_LOADCRATE",
+        [{[_this select 0] call KPLIB_fnc_res_loadCrate;}, nil, -502, false, true, "", "isNull attachedTo _target", 4],
         "#FFFF00"
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
 };
