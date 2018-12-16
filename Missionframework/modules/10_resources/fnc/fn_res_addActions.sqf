@@ -54,7 +54,7 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
     [
         _object,
         "STR_KPLIB_ACTION_LOADCRATE",
-        [{[_this select 0] call KPLIB_fnc_res_loadCrate;}, nil, -502, false, true, "", "isNull attachedTo _target", 4],
+        [{[_this select 0] call KPLIB_fnc_res_loadCrate;}, nil, -503, false, true, "", "isNull attachedTo _target", 4],
         "#FFFF00"
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
 };
