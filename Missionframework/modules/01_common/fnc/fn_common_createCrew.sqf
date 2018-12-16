@@ -4,7 +4,7 @@
     File: fn_common_createCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-25
-    Last Update: 2018-12-09
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,7 +24,7 @@ params [
 ];
 
 // Exit when no or destroyed vehicle was given
-if ((_vehicle isEqualTo objNull) || !(alive _vehicle)) exitWith {grpNull};
+if ((isNull _vehicle) || !(alive _vehicle)) exitWith {grpNull};
 
 private _turrets = (allTurrets _vehicle);
 
