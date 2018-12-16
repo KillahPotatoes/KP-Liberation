@@ -33,13 +33,13 @@ reverse _loadedCrates;
 private _crate = _loadedCrates select 0;
 
 // Get the next free unload position
-private _unloadPos = _vehicle getPos [_distance, getDir _vehicle];
+private _unloadPos = _vehicle getPos [_distance, (getDir _vehicle) - 180];
 
 // Increment the distance, when spot is occupied
 private _i = 0;
 while {!((nearestObjects [_unloadPos, [], 1]) isEqualTo [])} do {
     _i = _i + 1;
-    _unloadPos = _vehicle getPos [_distance - _i * 1.8, getDir _vehicle];
+    _unloadPos = _vehicle getPos [_distance + _i * 1.8, (getDir _vehicle) - 180];
 };
 
 // Detach crate and move to unload position
