@@ -4,11 +4,11 @@
     File: fn_garrison_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-09
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Loads data which is bound to the this module from the given save data or initializes needed data for a new campaign.
+        Loads data which is bound to this module from the given save data or initializes needed data for a new campaign.
 
     Parameter(s):
         NONE

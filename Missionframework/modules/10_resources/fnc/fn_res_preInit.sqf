@@ -4,7 +4,7 @@
     File: fn_res_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
-    Last Update: 2018-12-15
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,7 +30,7 @@ if (isServer) then {
     // Register save event handler
     ["KPLIB_doSave", {[] call KPLIB_fnc_res_saveData;}] call CBA_fnc_addEventHandler;
 
-    // Adding actions to spawned crates
+    // Adding actions to spawned crates and storages
     ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_res_addActions}] call CBA_fnc_addEventHandler;
 
     // Some globals defined here on the server as the used preset variables aren't present on the clients yet but needed in initial loading
@@ -77,6 +77,7 @@ if (hasInterface) then {
     ----- Module Globals -----
 */
 
+KPLIB_res_intel = 0;
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [RESOURCES] Module initialized", diag_tickTime];};
 
