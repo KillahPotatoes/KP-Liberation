@@ -23,6 +23,8 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module i
     ----- Module Globals -----
 */
 
+// Name of the save key inside of the [ServerProfileName].vars.Arma3Profile file.
+KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME_REWRITE";
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
 // Respawn position shortcut
