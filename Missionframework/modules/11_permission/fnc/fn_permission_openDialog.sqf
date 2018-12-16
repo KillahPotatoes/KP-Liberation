@@ -33,8 +33,8 @@ private _green = [0,0.8,0,1];
 private _white = [1,1,1,1];
 
 // Fill the controls
-_ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
-_ctrlPlayerList lbSetData "default";
+private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
+_ctrlPlayerList lbSetData [_index, "default"];
 _ctrlPlayerList lbAdd "----------";
 
 private _index = 0;
@@ -49,19 +49,21 @@ private _i = 0;
 
 {
     _data = missionNamespace getVariable [toLower _x, []];
-    _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", -1];
+    _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", 68741 + _i];
     _tempCtrl ctrlSetPosition [
         KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2),
-        KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,_i,48),
+        KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,_i * 2,48),
         KP_GETW(KP_WIDTH_VAL_C,2),
         KP_GETH(KP_HEIGHT_VAL_C,24)
     ];
     _tempCtrl ctrlSetText (localize (_data select 1));
+    _tempCtrl ctrlsettextsecondary _x;
     _tempCtrl ctrlSetActiveColor _white;
     _tempCtrl ctrlSetTextColor _red;
-    _tempCtrl ctrlSetEventHandler ["MouseButtonClick", ''];
+    _tempCtrl setVariable ["Data", [_x, false]];
+    _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
 
-    _i = _i + 2;
+    _i = _i + 1;
     _tempCtrl ctrlCommit 0;
 } forEach KPLIB_permissionTypes;
 
