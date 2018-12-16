@@ -21,30 +21,16 @@ if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Resources module s
 
 private _storageSave = [];
 
-private ["_class", "_pos", "_vector", "_supplies", "_ammo", "_fuel"];
+private ["_class", "_pos", "_vector", "_resources"];
 {
     // General data of the storage
     _class = typeOf _x;
     _pos = getPosWorld _x;
     _vector = [vectorDir _x, vectorUp _x];
-    _supplies = 0;
-    _ammo = 0;
-    _fuel = 0;
-
-    // Get the stored resource values
-    {
-        switch (typeOf _x) do {
-            case KPLIB_preset_crateSupplyE;
-            case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_res_crateValue", 0])};
-            case KPLIB_preset_crateAmmoE;
-            case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_res_crateValue", 0])};
-            case KPLIB_preset_crateFuelE;
-            case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_res_crateValue", 0])};
-        };
-    } forEach (attachedObjects _x);
+    _resources = [_x] call KPLIB_fnc_res_getStorageValue;
 
     // Add to the save array
-    _storageSave pushBack [_class, _pos, _vector, _supplies, _ammo, _fuel];
+    _storageSave pushBack [_class, _pos, _vector, _resources select 0, _resources select 1, _resources select 2];
 } forEach KPLIB_res_allStorages;
 
 // Set module data to save and send it to the global save data array
