@@ -21,24 +21,22 @@ params [
     ["_location", "", [""]]
 ];
 
+// Exit if no location was given
+if (_location isEqualTo "") exitWith {[0, 0, 0]};
+
 // Get all storage areas in the vicinity of the marker
 private _storages = nearestObjects [markerPos _location, KPLIB_res_storageClasses, KPLIB_param_fobRange];
 
 // Get the stored resource values
+private _resources = [0, 0, 0];
 private _supplies = 0;
 private _ammo = 0;
 private _fuel = 0;
 {
-    {
-        switch (typeOf _x) do {
-            case KPLIB_preset_crateSupplyE;
-            case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_res_crateValue", 0])};
-            case KPLIB_preset_crateAmmoE;
-            case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_res_crateValue", 0])};
-            case KPLIB_preset_crateFuelE;
-            case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_res_crateValue", 0])};
-        };
-    } forEach (attachedObjects _x);
+    _resources = [_x] call KPLIB_fnc_res_getStorageValue;
+    _supplies = _supplies + (_resources select 0);
+    _ammo = _ammo + (_resources select 1);
+    _fuel = _fuel + (_resources select 2);
 } forEach _storages;
 
 // Return values
