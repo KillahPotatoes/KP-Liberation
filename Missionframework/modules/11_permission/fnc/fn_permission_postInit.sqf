@@ -22,7 +22,7 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] M
 
 ["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE"] call KPLIB_fnc_permission_addPermissionHandler;
 ["HeavyVehicle", {[player, "HeavyVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HEAVYVEHICLE"] call KPLIB_fnc_permission_addPermissionHandler;
-["Helicopters", {[player, "Helicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HELICOPTER"] call KPLIB_fnc_permission_addPermissionHandler;
+["Helicopter", {[player, "Helicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HELICOPTER"] call KPLIB_fnc_permission_addPermissionHandler;
 
 if (hasInterface) then {
     // Setup of actions available to players
