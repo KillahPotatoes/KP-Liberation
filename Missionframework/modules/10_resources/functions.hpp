@@ -32,6 +32,9 @@ class res {
     // Gets Z offset for crate storing
     class res_getCrateZ {};
 
+    // Gets array with amounts of all resources at given location
+    class res_getResTotal {};
+
     // Loads crate to transport vehicle
     class res_loadCrate {};
 

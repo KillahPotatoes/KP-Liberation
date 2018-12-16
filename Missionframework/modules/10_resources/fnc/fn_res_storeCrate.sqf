@@ -4,7 +4,7 @@
     File: fn_res_storeCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-15
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ params [
 if !((typeOf _crate) in KPLIB_res_crateClasses) exitWith {false};
 
 // Check for near storages
-private _nearStorage = nearestObjects [_crate, [KPLIB_preset_storageLargeF, KPLIB_preset_storageSmallF], 20];
+private _nearStorage = nearestObjects [_crate, KPLIB_res_storageClasses, 20];
 
 // Exit if no storages near
 if (_nearStorage isEqualTo []) exitWith {
