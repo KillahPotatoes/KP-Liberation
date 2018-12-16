@@ -52,7 +52,7 @@ if (_usedSlots >= (count _attachPosition)) exitWith {
 
 // Load crate to transport and adjust usedSlots variable
 _crate attachTo [_nearTransport, _attachPosition select _usedSlots];
-_nearTransport setVariable ["KPLIB_res_usedSlots", _usedSlots + 1];
+_nearTransport setVariable ["KPLIB_res_usedSlots", _usedSlots + 1, true];
 
 // Add unload action, if not already added to vehicle
 if !(_nearTransport getVariable ["KPLIB_res_unloadAction", false]) then {

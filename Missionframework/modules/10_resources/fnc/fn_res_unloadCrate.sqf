@@ -47,6 +47,6 @@ detach _crate;
 _crate setPos _unloadPos;
 
 // Decrement usedSlots variable
-_vehicle setVariable ["KPLIB_res_usedSlots", (_vehicle getVariable ["KPLIB_res_usedSlots", 0]) - 1];
+_vehicle setVariable ["KPLIB_res_usedSlots", (_vehicle getVariable ["KPLIB_res_usedSlots", 0]) - 1, true];
 
 true
