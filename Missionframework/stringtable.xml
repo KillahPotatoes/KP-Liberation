@@ -281,6 +281,15 @@
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_STACKNSORT">
+            <English>- STACK AND SORT -</English>
+            <Chinese>- 排列並分類 -</Chinese>
+            <Chinesesimp>- 排列并分类 -</Chinesesimp>
+            <German>- STAPELN UND SORTIEREN -</German>
+            <Italian>- IMPILA E ORDINA -</Italian>
+            <Portuguese>- ORDENAR E CLASSIFICAR -</Portuguese>
+            <Turkish>- SIRALA VE DÜZENLE -</Turkish>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_STORECRATE">
             <English>- STORE CRATE -</English>
             <Chinese>- 倉儲貨物 -</Chinese>

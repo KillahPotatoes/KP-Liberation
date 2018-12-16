@@ -35,11 +35,20 @@ class res {
     // Gets array with amounts of all resources at given location
     class res_getResTotal {};
 
+    // Gets array with resource values of given storage
+    class res_getStorageValue {};
+
     // Loads crate to transport vehicle
     class res_loadCrate {};
 
     // Loads module specific data from the save
     class res_loadData {};
+
+    // Orders the crates in a storage area
+    class res_orderStorage {};
+
+    // Removes given amount of resources from given location
+    class res_pay {};
 
     // Module post initialization
     class res_postInit {
@@ -59,6 +68,9 @@ class res {
 
     // CBA Settings for this module
     class res_settings {};
+
+    // Stack and sort crates inside storage area
+    class res_stackNsort {};
 
     // Store crate in storage
     class res_storeCrate {};
