@@ -409,7 +409,7 @@
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_NOTE">
             <English>Exported data deleted.</English>
             <Chinese>輸出的資料已經刪除</Chinese>
-            <German>Exportierten Daten gelöscht.</German>
+            <German>Exportierte Daten gelöscht.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_TT">
             <English>Deletes the exported data from your profile. Doesn't affect the current save data.</English>
