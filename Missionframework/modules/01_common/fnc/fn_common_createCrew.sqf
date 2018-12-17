@@ -65,7 +65,7 @@ private _grp = [_side, _driverClass + _crewClasses, getPos _vehicle] call KPLIB_
 
 // Remove excess units from group
 {
-    if ( vehicle _x == _x ) then {
+    if (isNull objectParent _x) then {
         deleteVehicle _x;
     };
 } foreach (units _grp);
