@@ -16,3 +16,47 @@
     Returns:
         Function reached the end [BOOL]
 */
+
+// Dialog controls
+private _dialog = findDisplay 758011;
+private _ctrlPlayerList = _dialog displayCtrl 68740;
+
+// Colors
+private _red = [0.9,0,0,1];
+private _green = [0,0.8,0,1];
+private _white = [1,1,1,1];
+
+// Read the control
+private _index = lbCurSel _ctrlPlayerList;
+private _player = _ctrlPlayerList lbData _index;
+
+private _defaultPermission = false;
+private _index = 0;
+_permission = "";
+
+switch (_player) do {
+    case "default": {
+        {
+            _permission = (_x getVariable ["Data", ["", false]]) select 0;
+            private _defaultPermission = KPLIB_defaultPermissions select (KPLIB_defaultPermissions findIf {
+                (_x select 0) isEqualTo (toLower _permission)
+            }) select 1;
+            if (_defaultPermission) then {
+                _x setVariable ["Data", [_permission, true]];
+                _x ctrlSetTextColor _green;
+            } else {
+                _x setVariable ["Data", [_permission, false]];
+                _x ctrlSetTextColor _red;
+            };
+            _x ctrlEnable true;
+        } forEach KPLIB_permission_tempControls;
+    };
+    case "placeholder": {
+        {
+            _x ctrlEnable false;
+        } forEach KPLIB_permission_tempControls;
+    };
+    default {};
+};
+
+true

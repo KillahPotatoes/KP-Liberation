@@ -26,6 +26,9 @@ class permission {
     // Checks the given permission and returns the result
     class permission_getPermission {};
 
+    // Initializes the default permissions
+    class permission_initDefault {};
+
     // Loads module specific data from the save
     class permission_loadData {};
 
