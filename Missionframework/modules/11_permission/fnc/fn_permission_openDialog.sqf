@@ -4,7 +4,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-16
+    Last Update: 2018-12-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -46,6 +46,7 @@ private _index = 0;
 private _tempCtrl = controlNull;
 private _data = [];
 private _i = 0;
+private _controls = [];
 
 {
     _data = missionNamespace getVariable [toLower _x, []];
@@ -57,14 +58,13 @@ private _i = 0;
         KP_GETH(KP_HEIGHT_VAL_C,24)
     ];
     _tempCtrl ctrlSetText (localize (_data select 1));
-    _tempCtrl ctrlsettextsecondary _x;
     _tempCtrl ctrlSetActiveColor _white;
-    _tempCtrl ctrlSetTextColor _red;
     _tempCtrl setVariable ["Data", [_x, false]];
     _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
-
-    _i = _i + 1;
     _tempCtrl ctrlCommit 0;
+    _tempCtrl ctrlEnable false;
+    _controls pushBack _tempCtrl;
+    _i = _i + 1;
 } forEach KPLIB_permissionTypes;
 
 true
