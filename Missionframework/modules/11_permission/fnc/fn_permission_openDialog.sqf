@@ -35,7 +35,8 @@ private _white = [1,1,1,1];
 // Fill the controls
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
 _ctrlPlayerList lbSetData [_index, "default"];
-_ctrlPlayerList lbAdd "----------";
+_index = _ctrlPlayerList lbAdd "----------";
+_ctrlPlayerList lbSetData [_index, "placeholder"];
 
 private _index = 0;
 {
@@ -46,7 +47,7 @@ private _index = 0;
 private _tempCtrl = controlNull;
 private _data = [];
 private _i = 0;
-private _controls = [];
+KPLIB_permission_tempControls = [];
 
 {
     _data = missionNamespace getVariable [toLower _x, []];
@@ -63,7 +64,7 @@ private _controls = [];
     _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
     _tempCtrl ctrlCommit 0;
     _tempCtrl ctrlEnable false;
-    _controls pushBack _tempCtrl;
+    KPLIB_permission_tempControls pushBack _tempCtrl;
     _i = _i + 1;
 } forEach KPLIB_permissionTypes;
 
