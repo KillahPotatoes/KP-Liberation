@@ -4,7 +4,7 @@
     File: fn_build_confirmSingle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2018-12-08
+    Last Update: 2018-12-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -43,6 +43,10 @@ switch true do {
     default {
         _obj = _createParams call KPLIB_fnc_common_createVehicle;
         _obj setVectorDirAndUp _vectorDirAndUp;
+
+        if(unitIsUAV _obj) then {
+            [_obj, KPLIB_preset_sideF] call KPLIB_fnc_common_createCrew;
+        };
     };
 };
 
