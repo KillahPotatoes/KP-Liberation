@@ -4,7 +4,7 @@
     File: fn_permission_getPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-10
-    Last Update: 2018-12-10
+    Last Update: 2018-12-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ private _playerPermissions = KPLIB_permissionList select (KPLIB_permissionList f
     (_x select 0) isEqualTo (getPlayerUID player)
 }) select 2;
 
-// Check if the permission dosn't exist and use the default permission
+// Check if the permission doesn't exist and use the default permission
 if !((_playerPermissions findIf {(_permission in _x)}) isEqualTo -1) then {
     {
         if (_permission in _x) then {
