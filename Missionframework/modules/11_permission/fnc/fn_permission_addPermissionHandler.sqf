@@ -34,4 +34,7 @@ _data append (missionNamespace getVariable [toLower _permission, []]);
 // Write the Variable
 missionNamespace setVariable [toLower _permission, _data];
 
+    // Emit permissions added event
+    ["KPLIB_permission_newPH", [_permission]] call CBA_fnc_globalEvent;
+
 true
