@@ -14,6 +14,7 @@
         _permission - Permission name                               [STRING, defaults to ""]
         _condition  - Code which is executed on permission check    [CODE, defaults to {false}]
         _string     - Permission stringtable path                   [STRING, defaults to ""]
+        _default    - Default permission                            [BOOL, defaults to false]
 
     Returns:
         Function reached the end [BOOL]
@@ -22,7 +23,8 @@
 params [
     ["_permission", "", [""]],
     ["_code", {false}, [{}]],
-    ["_string", "", [""]]
+    ["_string", "", [""]],
+    ["_default", false, [false]]
 ];
 
 KPLIB_permissionTypes pushBackUnique _permission;
@@ -35,6 +37,6 @@ _data append (missionNamespace getVariable [toLower _permission, []]);
 missionNamespace setVariable [toLower _permission, _data];
 
     // Emit permissions added event
-    ["KPLIB_permission_newPH", [_permission]] call CBA_fnc_globalEvent;
+    ["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
 
 true

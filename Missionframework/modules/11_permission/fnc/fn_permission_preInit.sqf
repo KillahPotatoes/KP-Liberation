@@ -27,7 +27,7 @@ if (isServer) then {
     ["KPLIB_doSave", {[] call KPLIB_fnc_permission_saveData;}] call CBA_fnc_addEventHandler;
 
     // Register newPH event handler
-    ["KPLIB_permission_newPH", {[_this select 0] call KPLIB_fnc_permission_initDefault;}] call CBA_fnc_addEventHandler;
+    ["KPLIB_permission_newPH", {[_this select 0, _this select 1] call KPLIB_fnc_permission_initDefault;}] call CBA_fnc_addEventHandler;
 };
 
 /*
