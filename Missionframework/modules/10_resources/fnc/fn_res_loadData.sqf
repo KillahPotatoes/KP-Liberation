@@ -44,7 +44,7 @@ if (_moduleData isEqualTo []) then {
                 _amount = _resource min KPLIB_param_crateVolume;
                 _crate = [(_x select 0), getPosATL _storage, _amount] call KPLIB_fnc_res_createCrate;
                 [_crate] call KPLIB_fnc_res_storeCrate;
-                _resource = _resource - (_resource min KPLIB_param_crateVolume);
+                _resource = _resource - _amount;
             };
         } forEach [["Supply", _supplies], ["Ammo", _ammo], ["Fuel", _fuel]];
     } forEach (_moduleData select 0);
