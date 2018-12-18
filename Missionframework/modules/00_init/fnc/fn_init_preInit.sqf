@@ -4,7 +4,7 @@
     File: fn_init_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-08
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,37 +19,12 @@
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initializing...", diag_tickTime];};
 
-// Execute config guard function
-[] call KPLIB_fnc_init_configGuard;
-
-// Check for ACE
-KPLIB_ace_enabled = isClass (configFile >> "CfgPatches" >> "ace_main");
-KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
-
-// Check for KP Ranks
-KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
-
-// Process CBA Settings
-[] call KPLIB_fnc_init_settings;
-
-// Parameter processing and vanilla save deactivation on the server only
-if (isServer) then {
-    enableSaving [false, false];
-
-    // Register load event handler
-    ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
-
-    // Register save event handler
-    ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
-};
-
-// Read the KPLIB_config.sqf file
-[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
-
 /*
     ----- Module Globals -----
 */
 
+// Name of the save key inside of the [ServerProfileName].vars.Arma3Profile file.
+KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME_REWRITE";
 // Variable for ending the campaign
 KPLIB_campaignRunning = true;
 // Respawn position shortcut
@@ -112,6 +87,41 @@ KPLIB_sectors_spawn = [];
 KPLIB_sectors_tower = [];
 // Zero position shortcut
 KPLIB_zeroPos = [0,0,0];
+
+
+/*
+    ----- Module Initialization -----
+*/
+
+// Execute config guard function
+[] call KPLIB_fnc_init_configGuard;
+
+// Check for ACE
+KPLIB_ace_enabled = isClass (configFile >> "CfgPatches" >> "ace_main");
+KPLIB_ace_medical = isClass (configfile >> "CfgPatches" >> "ace_medical");
+
+// Check for KP Ranks
+KPLIB_kpr_enabled = isClass (configFile >> "CfgPatches" >> "KP_Ranks");
+
+// Process CBA Settings
+[] call KPLIB_fnc_init_settings;
+
+// Read the KPLIB_config.sqf file
+[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+
+// Parameter processing and vanilla save deactivation on the server only
+if (isServer) then {
+    enableSaving [false, false];
+
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_init_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_init_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Load preset files
+    [] call KPLIB_fnc_init_loadPresets;
+};
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [INIT] Module initialized", diag_tickTime];};
 

@@ -4,7 +4,7 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-11
+    Last Update: 2018-12-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,11 +18,11 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {
+if (!isServer) then {
+    // Called in the scheduled postInit environment allows the small wait in the function
+    [] call KPLIB_fnc_init_receiveInit;
+} else {
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initializing...", diag_tickTime];
-
-    // Load preset files
-    [] call KPLIB_fnc_init_loadPresets;
 
     // Sort the sector markers to category arrays
     [] call KPLIB_fnc_init_sortSectors;
@@ -53,7 +53,10 @@ if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
 };
 
-// Called in the scheduled postInit environment allows the small waits in the function
-[] call KPLIB_fnc_init_receiveInit;
+// Player section
+if (hasInterface) then {
+    // Preload the arsenal to speed up arsenal opening during the game
+    ["Preload"] call BIS_fnc_arsenal;
+};
 
 true

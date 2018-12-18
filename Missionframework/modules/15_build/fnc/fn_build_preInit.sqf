@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-12-11
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -56,7 +56,10 @@ if (isServer) then {
             KPLIB_build_saveNamespace setVariable [_fob, []];
         };
 
-        (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
+        // Skip storage areas
+        if !((typeOf _object) in KPLIB_res_storageClasses) then {
+            (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
+        };
 
     }] call CBA_fnc_addEventHandler;
 };
@@ -67,10 +70,14 @@ if (hasInterface) then {
 
     // Register Build module as FOB building provider
     ["KPLIB_fob_build_requested", {
-        params ["_object"];
+        params ["_object", ["_pos", KPLIB_zeroPos]];
         KPLIB_build_fobBuildObject = _object;
+        if (_pos isEqualTo KPLIB_zeroPos) then{
+            _pos = getPos _object;
+        };
+        diag_log format ["[KP LIBERATION] [BUILD] KPLIB_fob_build_requested with _object: %1 (%2) - global: %3 (%4)", _object, getPos _object, KPLIB_build_fobBuildObject, getPos KPLIB_build_fobBuildObject];
         // Start single item build for fob building
-        [getPos _object, nil, [KPLIB_preset_fobBuildingF, 0,0,0], {
+        [_pos, nil, [KPLIB_preset_fobBuildingF, 0,0,0], {
             // On confirm callback, create FOB on server
             [_this select 0, KPLIB_build_fobBuildObject] remoteExec ["KPLIB_fnc_build_handleFobBuildConfirm", 2];
          }] call KPLIB_fnc_build_start_single;

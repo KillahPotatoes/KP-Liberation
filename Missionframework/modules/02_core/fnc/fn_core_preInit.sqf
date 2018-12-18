@@ -4,7 +4,7 @@
     File: fn_core_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-29
+    Last Update: 2018-12-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,7 +23,11 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CORE] Module i
 [] call KPLIB_fnc_core_settings;
 
 if (isServer) then {
-    ["KPLIB_vehicle_spawned", KPLIB_fnc_core_handleVehicleSpawn] call CBA_fnc_addEventHandler;
+    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_core_handleVehicleSpawn}] call CBA_fnc_addEventHandler;
+
+    if(KPLIB_param_clearVehicleCargo) then {
+        ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_common_clearVehicleCargo}] call CBA_fnc_addEventHandler;
+    };
 };
 
 /*

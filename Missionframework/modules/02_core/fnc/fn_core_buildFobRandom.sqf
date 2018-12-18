@@ -4,14 +4,14 @@
     File: fn_core_buildFobRandom.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-11
-    Last Update: 2018-12-11
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        No description added yet.
+        Functionality to place the FOB box at a random spawn point and trigger the FOB buildings placement to establish a random FOB at start.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _box - FOB box which provided the action [OBJECT, defaults to objNull]
 
     Returns:
         Function reached the end [BOOL]
@@ -47,6 +47,6 @@ _box enableSimulationGlobal true;
 _box setDamage 0;
 _box allowDamage true;
 
-["KPLIB_fob_build_requested", _box] call CBA_fnc_localEvent;
+["KPLIB_fob_build_requested", [_box, _spawnPos]] call CBA_fnc_localEvent;
 
 true
