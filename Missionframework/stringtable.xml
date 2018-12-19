@@ -317,9 +317,9 @@
             <Chinese>重新命名</Chinese>
             <German>Umbenennen</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_BUTTON_SAVE">
-            <English>Save</English>
-            <German>Speichern</German>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RESET">
+            <English>Reset to default</English>
+            <German>Auf Standard zurücksetzen</German>
         </Key>
 
         <!-- ADMIN MENU DIALOG -->
