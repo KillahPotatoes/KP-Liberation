@@ -31,13 +31,15 @@ private _ctrlPlayerList = _dialog displayCtrl 68740;
 private _red = [0.9,0,0,1];
 private _green = [0,0.8,0,1];
 private _white = [1,1,1,1];
+private _orange = [1,0.5,0, 0.8];
 
 // Fill the controls
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
 _ctrlPlayerList lbSetData [_index, "default"];
 
-_index = _ctrlPlayerList lbAdd "-Online Players-";
+_index = _ctrlPlayerList lbAdd "- Online Players -";
 _ctrlPlayerList lbSetData [_index, "placeholder"];
+_ctrlPlayerList lbSetColor [_index, _orange];
 
 private _UIDList = [];
 {

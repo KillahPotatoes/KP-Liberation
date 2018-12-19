@@ -28,14 +28,14 @@ private _white = [1,1,1,1];
 
 // Read the control
 private _index = lbCurSel _ctrlPlayerList;
-private _player = _ctrlPlayerList lbData _index;
+private _playerUID = _ctrlPlayerList lbData _index;
 
 private _defaultPermission = false;
 private _index = 0;
 private _permission = "";
 private _playerPermissions = [];
 
-switch (_player) do {
+switch (_playerUID) do {
     case "default": {
         {
             _permission = (_x getVariable ["Data", ["", false]]) select 0;
@@ -58,7 +58,7 @@ switch (_player) do {
         } forEach KPLIB_permission_tempControls;
     };
     default {
-        _index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (_player)};
+        _index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (_playerUID)};
         if (_index != -1) then {
             _playerPermissions = (KPLIB_permissionList select _index) select 2;
         };
