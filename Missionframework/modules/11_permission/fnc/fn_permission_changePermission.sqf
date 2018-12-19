@@ -37,9 +37,39 @@ private _white = [1,1,1,1];
     "_permission",
     "_state"
 ];
+
+// Get the listbox data
 private _index = lbCurSel _ctrlPlayerList;
 private _playerUID = _ctrlPlayerList lbData _index;
+private _playerArray = [];
+private _playerPermissions = [];
+private _permissionArray = [];
 
+switch (_playerUID) do {
+    case "default": {
+
+    };
+    default {
+        // Change the player permission or apply them
+        _index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (_playerUID)};
+        if (_index != -1) then {
+            _playerArray = KPLIB_permissionList deleteAt _index;
+            _playerPermissions = _playerArray deleteAt 2;
+            _index = _playerPermissions findIf {(_x select 0) isEqualTo (toLower _permission)};
+            if (_index != -1) then {
+                _permissionArray = _playerPermissions deleteAt _index;
+                _permissionArray set [1, !_state];
+                _playerPermissions pushBack _permissionArray;
+            } else {
+                _playerPermissions pushBack [toLower _permission, !_state];
+            };
+            _playerArray pushBack _playerPermissions;
+            KPLIB_permissionList pushBack _playerArray;
+        };
+    };
+};
+
+// Edit the control
 if (_state) then {
     _control setVariable ["Data", [_permission, false]];
     _control ctrlSetTextColor _red;
