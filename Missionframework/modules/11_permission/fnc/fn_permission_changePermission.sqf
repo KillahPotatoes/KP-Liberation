@@ -47,7 +47,9 @@ private _permissionArray = [];
 
 switch (_playerUID) do {
     case "default": {
-
+        _index = KPLIB_defaultPermissions findIf {(_x select 0) isEqualTo (toLower _permission)};
+        KPLIB_defaultPermissions deleteAt _index;
+        KPLIB_defaultPermissions pushBack [toLower _permission, !_state];
     };
     default {
         // Change the player permission or apply them
