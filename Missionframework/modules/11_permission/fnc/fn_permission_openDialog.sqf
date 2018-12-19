@@ -4,7 +4,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-17
+    Last Update: 2018-12-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,13 +35,19 @@ private _white = [1,1,1,1];
 // Fill the controls
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
 _ctrlPlayerList lbSetData [_index, "default"];
-_index = _ctrlPlayerList lbAdd "----------";
+
+_index = _ctrlPlayerList lbAdd "-Online Players-";
 _ctrlPlayerList lbSetData [_index, "placeholder"];
 
-private _index = 0;
+private _UIDList = [];
+{
+    _UIDList pushBack (_x select 0);
+} forEach KPLIB_permissionList;
+
 {
     _index = _ctrlPlayerList lbAdd (name _x);
-    _ctrlPlayerList lbSetData [_index, name _x];
+    _ctrlPlayerList lbSetData [_index, getPlayerUID _x];
+    _UIDList deleteAt (_UIDList find _x);
 } forEach (allPlayers - (entities "HeadlessClient_F"));
 
 private _tempCtrl = controlNull;
