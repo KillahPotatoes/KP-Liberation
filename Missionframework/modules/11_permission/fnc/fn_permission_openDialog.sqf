@@ -41,17 +41,20 @@ _index = _ctrlPlayerList lbAdd "- Online Players -";
 _ctrlPlayerList lbSetData [_index, "placeholder"];
 _ctrlPlayerList lbSetColor [_index, _orange];
 
+// Checksum to add only 1 entry for each player
 private _UIDList = [];
 {
     _UIDList pushBack (_x select 0);
 } forEach KPLIB_permissionList;
 
+// Add all players and delete them from checksum
 {
     _index = _ctrlPlayerList lbAdd (name _x);
     _ctrlPlayerList lbSetData [_index, getPlayerUID _x];
     _UIDList deleteAt (_UIDList find _x);
 } forEach (allPlayers - (entities "HeadlessClient_F"));
 
+// prepare the dynamic controls
 private _tempCtrl = controlNull;
 private _data = [];
 private _i = 0;

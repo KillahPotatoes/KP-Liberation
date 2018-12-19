@@ -26,10 +26,11 @@ private _red = [0.9,0,0,1];
 private _green = [0,0.8,0,1];
 private _white = [1,1,1,1];
 
-// Read the control
+// Read the listbox
 private _index = lbCurSel _ctrlPlayerList;
 private _playerUID = _ctrlPlayerList lbData _index;
 
+// Check the listbox data and execute code dependent on listbox selection
 private _defaultPermission = false;
 private _index = 0;
 private _permission = "";
