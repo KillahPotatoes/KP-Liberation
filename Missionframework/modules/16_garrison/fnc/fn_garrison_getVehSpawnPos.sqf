@@ -27,4 +27,4 @@ private _spawnPos = (_center getPos [50 + (random 200), random 360]) findEmptyPo
 if (_spawnPos isEqualTo [] || {surfaceIsWater _spawnPos}) exitWith {_this call KPLIB_fnc_garrison_getVehSpawnPos};
 
 // Return position with a slight z Offset
-[_spawnPos select 0, _spawnPos select 1, (_spawnPos select 2 + 0.25)]
+[_spawnPos select 0, _spawnPos select 1, 0.25]
