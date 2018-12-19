@@ -14,8 +14,8 @@
 class KPLIB_permission {
     idd = 758011;
     movingEnable = 0;
-    onLoad = "KPLIB_tempPermissions = +KPLIB_permissionList";
-    onUnload = "KPLIB_tempPermissions = []";
+    onLoad = "";
+    onUnload = "";
 
     class controlsBackground {
 
