@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-27
+    Last Update: 2018-12-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,8 +14,23 @@
 class garrison {
     file = "modules\16_garrison\fnc";
 
+    // Add heavy vehicle to sector garrison
+    class garrison_addHeavyVeh {};
+
+    // Add infantry to sector garrison
+    class garrison_addInfantry {};
+
+    // Add light vehicle to sector garrison
+    class garrison_addLightVeh {};
+
     // Changes the owner of a sector garrison
     class garrison_changeOwner {};
+
+    // Remove given heavy vehicle from sector garrison
+    class garrison_delHeavyVeh {};
+
+    // Remove given light vehicle from sector garrison
+    class garrison_delLightVeh {};
 
     // Despawns the remaining garrison and updates the garrison array upon sector deactivation
     class garrison_despawn {};
