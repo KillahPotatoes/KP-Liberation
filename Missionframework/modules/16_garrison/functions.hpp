@@ -14,26 +14,17 @@
 class garrison {
     file = "modules\16_garrison\fnc";
 
-    // Add heavy vehicle to sector garrison
-    class garrison_addHeavyVeh {};
-
     // Add infantry to sector garrison
     class garrison_addInfantry {};
 
     // Add light vehicle to sector garrison
-    class garrison_addLightVeh {};
+    class garrison_addVeh {};
 
     // Changes the owner of a sector garrison
     class garrison_changeOwner {};
 
-    // Remove given heavy vehicle from sector garrison
-    class garrison_delHeavyVeh {};
-
-    // Remove given light vehicle from sector garrison
-    class garrison_delLightVeh {};
-
-    // Despawns the remaining garrison and updates the garrison array upon sector deactivation
-    class garrison_despawn {};
+    // Remove given vehicle from sector garrison
+    class garrison_delVeh {};
 
     // Gets the specific garrison array
     class garrison_getGarrison {};

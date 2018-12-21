@@ -35,4 +35,7 @@ _amount = (_curAmount + _amount) max 0;
 // Add new value to garrison
 _garrisonRef set [2, _amount];
 
+// Publish changes to other machines
+publicVariable "KPLIB_garrison_array";
+
 true

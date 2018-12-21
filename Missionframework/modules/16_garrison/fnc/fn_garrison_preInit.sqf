@@ -39,14 +39,22 @@ if (isServer) then {
     ["CBA_SettingChanged", {
         params ["_setting", "_value"];
 
-        if (_setting in ["KPLIB_param_presetF", "KPLIB_param_presetE"]) then {
-            if (isNil "KPLIB_garrison_settingInit") then {
-                diag_log "[KP LIBERATION] [GARRISON] First setting initialization done.";
-                KPLIB_garrison_settingInit = true;
-            } else {
-                diag_log "[KP LIBERATION] [GARRISON] Reinitialization started.";
-                [_setting] call KPLIB_fnc_garrison_reInitSectors;
+        switch (_setting) do {
+            case "KPLIB_param_presetE": {
+                if (isNil "KPLIB_garrison_presetInitE") then {
+                    KPLIB_garrison_presetInitE = true;
+                } else {
+                    [_setting] call KPLIB_fnc_garrison_reInitSectors;
+                };
             };
+            case "KPLIB_param_presetF": {
+                if (isNil "KPLIB_garrison_presetInitF") then {
+                    KPLIB_garrison_presetInitF = true;
+                } else {
+                    [_setting] call KPLIB_fnc_garrison_reInitSectors;
+                };
+            };
+            default {};
         };
     }] call CBA_fnc_addEventHandler;
 };
