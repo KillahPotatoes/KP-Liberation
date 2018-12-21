@@ -4,7 +4,7 @@
     File: fn_garrison_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-11-27
+    Last Update: 2018-12-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,7 +40,13 @@ if (isServer) then {
         params ["_setting", "_value"];
 
         if (_setting in ["KPLIB_param_presetF", "KPLIB_param_presetE"]) then {
-            [_setting] call KPLIB_fnc_garrison_reInitSectors;
+            if (isNil "KPLIB_garrison_settingInit") then {
+                diag_log "[KP LIBERATION] [GARRISON] First setting initialization done.";
+                KPLIB_garrison_settingInit = true;
+            } else {
+                diag_log "[KP LIBERATION] [GARRISON] Reinitialization started.";
+                [_setting] call KPLIB_fnc_garrison_reInitSectors;
+            };
         };
     }] call CBA_fnc_addEventHandler;
 };
