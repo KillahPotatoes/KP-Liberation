@@ -4,7 +4,7 @@
     File: fn_common_createVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-12-08
+    Last Update: 2018-12-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,7 +36,7 @@ params [
 if (_classname isEqualTo "" || _spawnPos isEqualTo []) exitWith {objNull};
 
 // Local variables initialization
-private _specialAttr = "CAN_COLLIDE";
+private _specialAttr = "NONE";
 private _paradrop = false;
 private _firstPos = KPLIB_zeroPos;
 private _reposition = true;
@@ -74,6 +74,7 @@ if (_reposition) then {
     // Set the vehicle to the position where it should be.
     _vehicle setDir _spawnDir;
     _vehicle setPosATL _spawnPos;
+    _vehicle setVectorUp (surfaceNormal (position _vehicle));
 
     // Activate the simulation again.
     _vehicle enableSimulationGlobal true;

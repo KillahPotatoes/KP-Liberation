@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2018-12-08
+    Last Update: 2018-12-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -42,6 +42,7 @@ private _activeGarrisonRef = [_sector, true] call KPLIB_fnc_garrison_getGarrison
 */
 // Spawn vehicle
 private _vehicle = [_classname, _spawnPos, random 360, true, true] call KPLIB_fnc_common_createVehicle;
+_vehicle setDamage 0;
 private _crew = crew _vehicle;
 
 // FOR DEBUG: Add group to Zeus
@@ -55,8 +56,17 @@ private _crew = crew _vehicle;
     So we could let them spawn standing still and just "scan the area" or we keep it like in the old framework and let them drive around.
     Personally I think both options aren't the best in their current implementation, but I would prefer them to just stand.
 */
-// Add patrol waypoints
-// [_vehicle, _sectorPos, 250, 4, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_taskPatrol;
+// Add patrol waypoints with a chance of 15%. Otherwise create a waypoint at spawn position.
+if (random 1 <= 0.15) then {
+    [_vehicle, _sectorPos, 250, 4, "SAD", "SAFE", "RED", "LIMITED"] call CBA_fnc_taskPatrol;
+} else {
+    private _waypoint = (group (_crew select 0)) addWaypoint [_spawnPos, 1];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointCombatMode "RED";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCompletionRadius 30;
+};
 
 // Add vehicle and crew to active garrison array
 if (_kind == "light") then {

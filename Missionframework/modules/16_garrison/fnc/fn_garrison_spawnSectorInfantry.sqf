@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-12-11
+    Last Update: 2018-12-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +26,6 @@ params [
 ];
 
 // Exit if no or invalid sector was given
-if (_sector isEqualTo "") exitWith {grpNull};
 if !(_sector in KPLIB_sectors_all) exitWith {grpNull};
 
 // Initialize local variables
@@ -83,12 +82,8 @@ while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) selec
 // Make sure every soldier is following the leader
 {_x doFollow (leader _grp)} forEach (units _grp);
 
-// 40% chance to garrison nearby buildings, otherwise act as patrol
-if ((random 1 <= 0.4) && !(_sector in KPLIB_sectors_tower)) then {
-    [_grp, _spawnPos] execVM "\x\cba\addons\ai\fnc_waypointGarrison.sqf";
-} else {
-    [_grp, _sectorPos, 200, 4, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_taskPatrol;
-};
+// Order group to defend sector position
+[_grp, _sectorPos, 150, 3, 0.25, 0.6] call CBA_fnc_taskDefend;
 
 // Return group
 _grp
