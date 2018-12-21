@@ -4,7 +4,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-19
+    Last Update: 2018-12-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -37,22 +37,36 @@ private _orange = [1,0.5,0, 0.8];
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
 _ctrlPlayerList lbSetData [_index, "default"];
 
-_index = _ctrlPlayerList lbAdd "- Online Players -";
+_index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_ONLINE");
 _ctrlPlayerList lbSetData [_index, "placeholder"];
 _ctrlPlayerList lbSetColor [_index, _orange];
 
 // Checksum to add only 1 entry for each player
-private _UIDList = [];
+private _playerList = [];
 {
-    _UIDList pushBack (_x select 0);
+    _playerList pushBack [_x select 1, _x select 0];
 } forEach KPLIB_permissionList;
 
-// Add all players and delete them from checksum
+_playerList sort true;
+
+// Add all online players and delete them from checksum
+private _player = "";
 {
     _index = _ctrlPlayerList lbAdd (name _x);
     _ctrlPlayerList lbSetData [_index, getPlayerUID _x];
-    _UIDList deleteAt (_UIDList find _x);
+    _player = _x;
+    _playerList deleteAt (_playerList findIf {((_x select 1) isEqualTo (getPlayerUID _player))});
 } forEach (allPlayers - (entities "HeadlessClient_F"));
+
+_index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_OFFLINE");
+_ctrlPlayerList lbSetData [_index, "placeholder"];
+_ctrlPlayerList lbSetColor [_index, _orange];
+
+// Add all offline players and delete them from checksum
+{
+    _index = _ctrlPlayerList lbAdd (_x select 0);
+    _ctrlPlayerList lbSetData [_index, _x select 1];
+} forEach _playerList;
 
 // prepare the dynamic controls
 private _tempCtrl = controlNull;
