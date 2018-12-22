@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-19
+    Last Update: 2018-12-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,11 +18,13 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];};
+if (isServer) then {
+    diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];
 
-["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE", true] call KPLIB_fnc_permission_addPermissionHandler;
-["HeavyVehicle", {[player, "HeavyVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HEAVYVEHICLE"] call KPLIB_fnc_permission_addPermissionHandler;
-["Helicopter", {[player, "Helicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HELICOPTER"] call KPLIB_fnc_permission_addPermissionHandler;
+    ["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE", true, KPLIB_preset_lightVeh] call KPLIB_fnc_permission_addPermissionHandler;
+    ["HeavyVehicle", {[player, "HeavyVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HEAVYVEHICLE", false, KPLIB_preset_heavyVeh] call KPLIB_fnc_permission_addPermissionHandler;
+    ["Helicopter", {[player, "Helicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HELICOPTER", false, KPLIB_preset_airVeh] call KPLIB_fnc_permission_addPermissionHandler;
+};
 
 if (hasInterface) then {
     // Check if player is already registered to the permission systemChat
@@ -32,7 +34,7 @@ if (hasInterface) then {
     [] call KPLIB_fnc_permission_setupPlayerActions;
 
     // Add event handlers
-    player addEventHandler ["GetInMan", {if !(["LightVehicle"] call KPLIB_fnc_permission_checkPermission) then {moveOut player};}];
+    player addEventHandler ["GetInMan", {if !([_this select 0, _this select 1, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {moveOut player};}];
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initialized", diag_tickTime];};

@@ -15,6 +15,7 @@
         _condition  - Code which is executed on permission check    [CODE, defaults to {false}]
         _string     - Permission stringtable path                   [STRING, defaults to ""]
         _default    - Default permission                            [BOOL, defaults to false]
+        _vehCheck   - Vehcile clasnames for the check               [ARRAY, defaults to []]
 
     Returns:
         Function reached the end [BOOL]
@@ -24,13 +25,20 @@ params [
     ["_permission", "", [""]],
     ["_code", {false}, [{}]],
     ["_string", "", [""]],
-    ["_default", false, [false]]
+    ["_default", false, [false]],
+    ["_vehCheck", [], [[]]]
 ];
 
 KPLIB_permissionTypes pushBackUnique _permission;
 
+private _classNames = [];
+
+{
+    _classNames pushBack (_x select 0);
+} forEach _vehCheck;
+
 // Read the Variable
-private _data = [[_code], _string];
+private _data = [[_code], _string, _classNames];
 (_data select 0) append ((missionNamespace getVariable [toLower _permission, []]) select 0);
 
 if !(_string isEqualTo "") then {
