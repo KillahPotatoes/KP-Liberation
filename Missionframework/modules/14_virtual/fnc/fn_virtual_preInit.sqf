@@ -49,7 +49,7 @@ if (isServer) then {
         params ["_object"];
         // Add built item to all curators
         {
-            _x addCuratorEditableObjects [[_object] + crew _object ];
+            _x addCuratorEditableObjects [[_object], true];
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 };
