@@ -4,7 +4,7 @@
     File: fn_permission_registerPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-19
-    Last Update: 2018-12-19
+    Last Update: 2018-12-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,5 +29,7 @@ if (_index isEqualto -1) then {
     _playerArray set [1, name player];
     KPLIB_permissionList pushBack _playerArray;
 };
+
+[KPLIB_permissionList, [], []] remoteExecCall ["KPLIB_fnc_permission_syncClients", 2];
 
 true

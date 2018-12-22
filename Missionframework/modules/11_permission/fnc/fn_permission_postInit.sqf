@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-21
+    Last Update: 2018-12-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,13 +27,13 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    // Check if player is already registered to the permission systemChat
+    // Check if player is already registered to the permission system
     [] call KPLIB_fnc_permission_registerPlayer;
 
     // Setup of actions available to players
     [] call KPLIB_fnc_permission_setupPlayerActions;
 
-    // Add event handlers
+    // Add vehicle event handlers
     player addEventHandler ["GetInMan", {if !([_this select 0, _this select 1, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {moveOut player};}];
 };
 
