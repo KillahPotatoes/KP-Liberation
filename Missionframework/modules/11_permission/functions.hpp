@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-22
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -50,6 +50,9 @@ class permission {
 
     // Checks if the player is already registered to the permission system
     class permission_registerPlayer {};
+
+    // Resets all permissions to default
+    class permission_resetToDefault {};
 
     // Saves module specific data for the save
     class permission_saveData {};

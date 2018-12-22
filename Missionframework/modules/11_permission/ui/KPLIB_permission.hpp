@@ -4,7 +4,7 @@
     File: KPLIB_permission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-22
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,7 @@ class KPLIB_permission {
 
         class KPLIB_ResetButton: KPGUI_PRE_DialogButtonC {
             text = "$STR_KPLIB_DIALOG_BUTTON_RESET";
-            onButtonClick = "";
+            onButtonClick = "[] call KPLIB_fnc_permission_resetToDefault";
         };
 
     };
