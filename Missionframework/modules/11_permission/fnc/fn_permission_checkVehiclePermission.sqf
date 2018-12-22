@@ -29,6 +29,10 @@ private _data = [];
 private _permission = "";
 private _classNames = [];
 
+if (_role isEqualTo "cargo") exitWith {
+    true
+};
+
 // Check the given vehicle category
 {
     _data = missionNamespace getVariable [toLower _x, []];
