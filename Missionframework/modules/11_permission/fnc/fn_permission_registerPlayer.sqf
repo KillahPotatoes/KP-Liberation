@@ -4,7 +4,7 @@
     File: fn_permission_registerPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-19
-    Last Update: 2018-12-22
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,7 +23,7 @@ private _playerArray = [];
 // Check if the player is registered
 _index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (getPlayerUID player)};
 if (_index isEqualto -1) then {
-    KPLIB_permissionList pushBack [getPlayerUID player, name player, []];
+    KPLIB_permissionList pushBack [getPlayerUID player, name player, KPLIB_defaultPermissions];
 } else {
     _playerArray = KPLIB_permissionList deleteAt _index;
     _playerArray set [1, name player];
