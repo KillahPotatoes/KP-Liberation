@@ -1,4 +1,3 @@
-
 #include "script_components.hpp"
 #include "..\ui\defines.hpp"
 /*
@@ -7,7 +6,7 @@
     File: fn_build_start_single.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-29
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
