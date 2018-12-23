@@ -21,9 +21,15 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];
 
-    ["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE", true, KPLIB_preset_lightVeh] call KPLIB_fnc_permission_addPermissionHandler;
-    ["HeavyVehicle", {[player, "HeavyVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HEAVYVEHICLE", false, KPLIB_preset_heavyVeh] call KPLIB_fnc_permission_addPermissionHandler;
-    ["Helicopter", {[player, "Helicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HELICOPTER", false, KPLIB_preset_airVeh] call KPLIB_fnc_permission_addPermissionHandler;
+    ["LightVehicle", {[player, "LightVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LIGHTVEHICLE", true, (KPLIB_preset_vehLightUnarmedPlF + KPLIB_preset_vehLightArmedPlF)] call KPLIB_fnc_permission_addPermissionHandler;
+    ["HeavyVehicle", {[player, "HeavyVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_HEAVYVEHICLE", false, (KPLIB_preset_vehHeavyApcPlF + KPLIB_preset_vehHeavyPlF)] call KPLIB_fnc_permission_addPermissionHandler;
+    ["AntiAirVehicle", {[player, "AntiAirVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_ANTIAIRVEHICLE", false, KPLIB_preset_vehAntiAirPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["ArtilleryVehicle", {[player, "ArtilleryVehicle"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_ARTILLERYVEHICLE", false, KPLIB_preset_vehArtyPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["TransportHelicopter", {[player, "TransportHelicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_TRANSPORTHELICOPTER", false, KPLIB_preset_heliTransPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["AttackHelicopter", {[player, "AttackHelicopter"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_ATTACKHELICOPTER", false, KPLIB_preset_heliAttackPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["TransportPlane", {[player, "TransportPlane"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_TRANSPORTPLANE", false, KPLIB_preset_planeTransPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["Jet", {[player, "Jet"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_JET", false, KPLIB_preset_jetsPlF] call KPLIB_fnc_permission_addPermissionHandler;
+    ["Logistic", {[player, "Logistic"] call KPLIB_fnc_permission_getPermission}, "STR_KPLIB_PERMISSION_LOGISTIC", false, KPLIB_preset_logisticPlF] call KPLIB_fnc_permission_addPermissionHandler;
 };
 
 if (hasInterface) then {

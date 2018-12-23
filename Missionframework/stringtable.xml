@@ -1338,9 +1338,33 @@
             <English>Heavy Vehicle</English>
             <German>Schwere Fahrzeuge</German>
         </Key>
-        <Key ID="STR_KPLIB_PERMISSION_HELICOPTER">
-            <English>Helicopter</English>
-            <German>Helikopter</German>
+        <Key ID="STR_KPLIB_PERMISSION_ANTIAIRVEHICLE">
+            <English>Antiair Vehicle</English>
+            <German>Luftabwehr Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_ARTILLERYVEHICLE">
+            <English>Artillery Vehicle</English>
+            <German>Artillerie Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTHELICOPTER">
+            <English>Transport Helicopter</English>
+            <German>Transporthelikopter</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_ATTACKHELICOPTER">
+            <English>Attack Helicopter</English>
+            <German>Kampfhubschrauber</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTPLANE">
+            <English>Transport Plane</English>
+            <German>Transportflugzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_JET">
+            <English>Jet</English>
+            <German>Kampfflugzeug</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_LOGISTIC">
+            <English>Logistic Vehicle</English>
+            <German>Logistik Fahrzeuge</German>
         </Key>
     </Package>
 </Project>
