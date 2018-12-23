@@ -31,14 +31,8 @@ params [
 
 KPLIB_permission_types pushBackUnique _permission;
 
-private _classNames = [];
-
-{
-    _classNames pushBack (_x select 0);
-} forEach _vehCheck;
-
 // Read the Variable
-private _data = [[_code], _string, _classNames];
+private _data = [[_code], _string, _vehCheck];
 (_data select 0) append ((KPLIB_permission_data getVariable [toLower _permission, []]) select 0);
 
 if !(_string isEqualTo "") then {

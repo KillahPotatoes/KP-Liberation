@@ -29,7 +29,7 @@ private _data = [];
 private _permission = "";
 private _classNames = [];
 
-if (_role isEqualTo "cargo") exitWith {
+if (_role isEqualTo "cargo" || typeOf _vehicle isEqualTo KPLIB_preset_potatoF || typeOf _vehicle isEqualTo KPLIB_preset_addHeliF) exitWith {
     true
 };
 
