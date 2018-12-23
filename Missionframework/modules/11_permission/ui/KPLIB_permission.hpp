@@ -14,7 +14,7 @@
 class KPLIB_permission {
     idd = 758011;
     movingEnable = 0;
-    onUnload = "[KPLIB_permissionList, KPLIB_defaultPermissions, KPLIB_permissionTypes] remoteExecCall ['KPLIB_fnc_permission_syncClients', 2]";
+    onUnload = "[KPLIB_permission_list, KPLIB_permission_default, KPLIB_permission_types] remoteExecCall ['KPLIB_fnc_permission_syncClients', 2]";
 
     class controlsBackground {
 

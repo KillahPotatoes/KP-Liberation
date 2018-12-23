@@ -29,7 +29,7 @@ params [
     ["_vehCheck", [], [[]]]
 ];
 
-KPLIB_permissionTypes pushBackUnique _permission;
+KPLIB_permission_types pushBackUnique _permission;
 
 private _classNames = [];
 
@@ -51,6 +51,6 @@ KPLIB_permission_data setVariable [toLower _permission, _data, true];
 // Emit permissions added event
 ["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
 
-[[], [], KPLIB_permissionTypes] call KPLIB_fnc_permission_syncClients;
+[[], [], KPLIB_permission_types] call KPLIB_fnc_permission_syncClients;
 
 true

@@ -4,7 +4,7 @@
     File: fn_permission_getPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-10
-    Last Update: 2018-12-17
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,7 +28,7 @@ private _playerPermissions = [];
 _permission = toLower _permission;
 
 // Search for the player permissions
-private _playerPermissions = KPLIB_permissionList select (KPLIB_permissionList findIf {
+private _playerPermissions = KPLIB_permission_list select (KPLIB_permission_list findIf {
     (_x select 0) isEqualTo (getPlayerUID player)
 }) select 2;
 
@@ -44,7 +44,7 @@ if !((_playerPermissions findIf {(_permission in _x)}) isEqualTo -1) then {
         if (_permission in _x) then {
             _result = _x select 1;
         }
-    } forEach KPLIB_defaultPermissions;
+    } forEach KPLIB_permission_default;
 };
 
 _result

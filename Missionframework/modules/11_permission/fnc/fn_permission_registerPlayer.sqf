@@ -21,15 +21,15 @@ private _index = 0;
 private _playerArray = [];
 
 // Check if the player is registered
-_index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (getPlayerUID player)};
+_index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (getPlayerUID player)};
 if (_index isEqualto -1) then {
-    KPLIB_permissionList pushBack [getPlayerUID player, name player, KPLIB_defaultPermissions];
+    KPLIB_permission_list pushBack [getPlayerUID player, name player, KPLIB_permission_default];
 } else {
-    _playerArray = KPLIB_permissionList deleteAt _index;
+    _playerArray = KPLIB_permission_list deleteAt _index;
     _playerArray set [1, name player];
-    KPLIB_permissionList pushBack _playerArray;
+    KPLIB_permission_list pushBack _playerArray;
 };
 
-[KPLIB_permissionList, [], []] remoteExecCall ["KPLIB_fnc_permission_syncClients", 2];
+[KPLIB_permission_list, [], []] remoteExecCall ["KPLIB_fnc_permission_syncClients", 2];
 
 true

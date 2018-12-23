@@ -4,7 +4,7 @@
     File: fn_permission_changePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-19
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -47,15 +47,15 @@ private _permissionArray = [];
 
 switch (_playerUID) do {
     case "default": {
-        _index = KPLIB_defaultPermissions findIf {(_x select 0) isEqualTo (toLower _permission)};
-        KPLIB_defaultPermissions deleteAt _index;
-        KPLIB_defaultPermissions pushBack [toLower _permission, !_state];
+        _index = KPLIB_permission_default findIf {(_x select 0) isEqualTo (toLower _permission)};
+        KPLIB_permission_default deleteAt _index;
+        KPLIB_permission_default pushBack [toLower _permission, !_state];
     };
     default {
         // Change the player permission or apply them
-        _index = KPLIB_permissionList findIf {(_x select 0) isEqualTo (_playerUID)};
+        _index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (_playerUID)};
         if (_index != -1) then {
-            _playerArray = KPLIB_permissionList deleteAt _index;
+            _playerArray = KPLIB_permission_list deleteAt _index;
             _playerPermissions = _playerArray deleteAt 2;
             _index = _playerPermissions findIf {(_x select 0) isEqualTo (toLower _permission)};
             if (_index != -1) then {
@@ -66,7 +66,7 @@ switch (_playerUID) do {
                 _playerPermissions pushBack [toLower _permission, !_state];
             };
             _playerArray pushBack _playerPermissions;
-            KPLIB_permissionList pushBack _playerArray;
+            KPLIB_permission_list pushBack _playerArray;
         };
     };
 };

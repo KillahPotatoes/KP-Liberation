@@ -39,7 +39,7 @@ if (_role isEqualTo "cargo") exitWith {
     if ((typeOf vehicle _unit) in (_data select 2)) then {
         _permission = _x;
     };
-} forEach KPLIB_permissionTypes;
+} forEach KPLIB_permission_types;
 
 // Exit if no permission is found
 if (_permission isEqualTo "") exitWith {

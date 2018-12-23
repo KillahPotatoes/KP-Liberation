@@ -45,7 +45,7 @@ _ctrlPlayerList lbSetColor [_index, _orange];
 private _playerList = [];
 {
     _playerList pushBack [_x select 1, _x select 0];
-} forEach KPLIB_permissionList;
+} forEach KPLIB_permission_list;
 
 _playerList sort true;
 
@@ -91,6 +91,6 @@ KPLIB_permission_tempControls = [];
     _tempCtrl ctrlEnable false;
     KPLIB_permission_tempControls pushBack _tempCtrl;
     _i = _i + 1;
-} forEach KPLIB_permissionTypes;
+} forEach KPLIB_permission_types;
 
 true

@@ -18,8 +18,8 @@
 */
 
 {
-    _x set [2, KPLIB_defaultPermissions];
-} forEach KPLIB_permissionList;
+    _x set [2, KPLIB_permission_default];
+} forEach KPLIB_permission_list;
 
 closeDialog 0;
 

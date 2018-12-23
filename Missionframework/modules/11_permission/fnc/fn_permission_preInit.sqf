@@ -37,9 +37,9 @@ KPLIB_permission_data = true call CBA_fnc_createNamespace;
     ----- Module Globals -----
 */
 
-KPLIB_permissionList = [];
-KPLIB_permissionTypes = [];
-KPLIB_defaultPermissions = [];
+KPLIB_permission_list = [];
+KPLIB_permission_types = [];
+KPLIB_permission_default = [];
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initialized", diag_tickTime];};
 
