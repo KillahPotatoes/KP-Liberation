@@ -32,6 +32,7 @@ if (isServer) then {
 };
 
 KPLIB_permission_data = true call CBA_fnc_createNamespace;
+publicVariable "KPLIB_permission_data";
 
 /*
     ----- Module Globals -----
