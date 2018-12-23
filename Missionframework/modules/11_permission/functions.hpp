@@ -26,6 +26,9 @@ class permission {
     // Checks the given vehicle permission and executes the registered code
     class permission_checkVehiclePermission {};
 
+    // Ejects the player and creates a hint
+    class permission_ejectPlayer {};
+
     // Checks the given permission and returns the result
     class permission_getPermission {};
 

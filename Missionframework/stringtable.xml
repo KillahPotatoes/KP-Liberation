@@ -673,6 +673,10 @@
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
+        <Key ID="STR_KPLIB_HINT_NOPERMISSION">
+            <English>C>You don't have permission to use this vehicle.</English>
+            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
+        </Key>
     </Package>
 
 
