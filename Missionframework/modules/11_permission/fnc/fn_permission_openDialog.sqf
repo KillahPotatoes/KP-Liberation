@@ -1,3 +1,4 @@
+#include "..\..\..\KPGUI\KPGUI_defines.hpp"
 /*
     KPLIB_fnc_permission_openDialog
 
@@ -16,8 +17,6 @@
     Returns:
         Function reached the end [BOOL]
 */
-
-#include "..\..\..\KPGUI\KPGUI_defines.hpp"
 
 // Create dialog
 createDialog "KPLIB_permission";
