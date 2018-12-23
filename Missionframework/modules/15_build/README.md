@@ -9,6 +9,7 @@ Furthermore it handles the saving/loading of all objects which are buildable/spa
 * Init
 * Common
 * Core
+* Resources
 
 ### Functions
 * KPLIB_fnc_build_addToSelection

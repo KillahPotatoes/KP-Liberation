@@ -26,7 +26,7 @@
 
         Localization contributors:
 
-            English | Updated: 2018-12-05
+            English | Updated: 2018-12-14
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -39,7 +39,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2018-12-05
+            German | Updated: 2018-12-14
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -173,6 +173,18 @@
             <Spanish>Si</Spanish>
             <Turkish>Evet</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_SUPPLIES">
+            <English>Supplies</English>
+            <German>Nachschub</German>
+        </Key>
+        <Key ID="STR_KPLIB_AMMO">
+            <English>Ammunition</English>
+            <German>Munition</German>
+        </Key>
+        <Key ID="STR_KPLIB_FUEL">
+            <English>Fuel</English>
+            <German>Kraftstoff</German>
+        </Key>
     </Package>
 
 
@@ -183,6 +195,22 @@
             <English>-- Admin Menu --</English>
             <Chinese>-- 管理員選單 --</Chinese>
             <German>-- Admin Menü --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_ARSENAL">
+            <English>-- ARSENAL --</English>
+            <Chinese>-- 軍火庫 --</Chinese>
+            <German>-- ARSENAL --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_CHECKCRATE">
+            <English>- CHECK CONTENT -</English>
+            <Chinese>- 檢查存貨 -</Chinese>
+            <Chinesesimp>- 检查存货 -</Chinesesimp>
+            <German>- INHALT PRÜFEN -</German>
+            <Italian>- CONTROLLA CARICO -</Italian>
+            <Portuguese>- CHECAR CONTEÚDO -</Portuguese>
+            <Russian>- ПРОВЕРИТЬ СОДЕРЖАНИЕ -</Russian>
+            <Spanish>- COMPROBAR CONTENIDO -</Spanish>
+            <Turkish>- İÇİNDEKİLER KONTROL ET -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_BUILD">
             <English>-- BUILD --</English>
@@ -208,14 +236,38 @@
             <Spanish>-- DESPLEGAR FOB --</Spanish>
             <Turkish>-- FOB KUR --</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_DEPLOYRANDOM">
+            <English>-- RANDOM FOB DEPLOYMENT --</English>
+            <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_LOADCRATE">
+            <English>- LOAD CRATE -</English>
+            <Chinese>- 裝載貨物 -</Chinese>
+            <Chinesesimp>- 装载货箱 -</Chinesesimp>
+            <German>- KISTE AUFLADEN -</German>
+            <Italian>- CARICA CASSA -</Italian>
+            <Portuguese>- CARREGAR CAIXA NO TRANSPORTE -</Portuguese>
+            <Russian>- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ -</Russian>
+            <Spanish>- CARGAR CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- KUTUYU YÜKLE -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PLAYER_MENU">
             <English>-- Player Menu --</English>
             <Chinese>-- 玩家選單 --</Chinese>
             <German>-- Spielermenü --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_PUSHCRATE">
+            <English>- PUSH CRATE -</English>
+            <Chinese>- 推貨物 -</Chinese>
+            <Chinesesimp>- 推货箱 -</Chinesesimp>
+            <German>- KISTE SCHIEBEN -</German>
+            <Italian>- SPINGI CASSA -</Italian>
+            <Portuguese>- EMPURRAR CAIXA -</Portuguese>
+            <Turkish>- KUTUYU İTTİR -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_REDEPLOY">
             <English>-- REDEPLOY --</English>
@@ -229,10 +281,69 @@
             <Spanish>-- REDESPLEGAR --</Spanish>
             <Turkish>-- YENİDEN SEÇ --</Turkish>
         </Key>
-        <Key ID="STR_KPLIB_ACTION_ARSENAL">
-            <English>-- ARSENAL --</English>
-            <Chinese>-- 軍火庫 --</Chinese>
-            <German>-- ARSENAL --</German>
+        <Key ID="STR_KPLIB_ACTION_STACKNSORT">
+            <English>- STACK AND SORT -</English>
+            <Chinese>- 排列並分類 -</Chinese>
+            <Chinesesimp>- 排列并分类 -</Chinesesimp>
+            <German>- STAPELN UND SORTIEREN -</German>
+            <Italian>- IMPILA E ORDINA -</Italian>
+            <Portuguese>- ORDENAR E CLASSIFICAR -</Portuguese>
+            <Turkish>- SIRALA VE DÜZENLE -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_STORECRATE">
+            <English>- STORE CRATE -</English>
+            <Chinese>- 倉儲貨物 -</Chinese>
+            <Chinesesimp>- 仓储货箱 -</Chinesesimp>
+            <German>- KISTE EINLAGERN -</German>
+            <Italian>- DEPOSITA CASSA -</Italian>
+            <Portuguese>- ARMAZENAR CAIXA NO DEPÓSITO -</Portuguese>
+            <Russian>- ХРАНЕНИЕ МАГАЗИНА -</Russian>
+            <Spanish>- CAJA DE ALMACENAJE -</Spanish>
+            <Turkish>- KUTUYU DEPOLA -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNLOADCRATE">
+            <English>- UNLOAD CRATES -</English>
+            <Chinese>- 卸載貨物 -</Chinese>
+            <Chinesesimp>- 卸载货箱 -</Chinesesimp>
+            <German>- KISTEN ABLADEN -</German>
+            <Italian>- SCARICA CASSA -</Italian>
+            <Portuguese>- DESCARREGAR CAIXAS -</Portuguese>
+            <Russian>- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ -</Russian>
+            <Spanish>- DESCARGAR CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- KUTUYU İNDİR -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTORESUPPLY">
+            <English>- UNLOAD SUPPLY CRATE -</English>
+            <Chinese>- 卸載補給箱 -</Chinese>
+            <Chinesesimp>- 卸载补给箱 -</Chinesesimp>
+            <German>- NACHSCHUB AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA RIFORNIMENTI -</Italian>
+            <Portuguese>- DESCARREGAR CAIXA DE SUPRIMENTOS -</Portuguese>
+            <Russian>- ЗАГРУЗИТЬ СРОК ПОСТАВКИ -</Russian>
+            <Spanish>- DESCARGA CAJA DE SUMINISTRO -</Spanish>
+            <Turkish>- İKMAL KUTUSUNU ÇIKAR -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTOREAMMO">
+            <English>- UNLOAD AMMO CRATE -</English>
+            <Chinese>- 卸載彈藥箱 -</Chinese>
+            <Chinesesimp>- 卸载弹药箱 -</Chinesesimp>
+            <German>- MUNITION AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA MUNIZIONI -</Italian>
+            <Portuguese>- DESCARREGAR CAIXA DE MUNIÇÃO -</Portuguese>
+            <Russian>- РАЗГРУЗКА БОЕПРИПАСОВ -</Russian>
+            <Spanish>- DESCARGA CAJA DE MUNICIÓN -</Spanish>
+            <Turkish>- MERMİ KUTUSUNU ÇIKAR -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNSTOREFUEL">
+            <English>- UNLOAD FUEL CRATE -</English>
+            <Chinese>- 卸載油料箱 -</Chinese>
+            <Chinesesimp>- 卸载燃料箱 -</Chinesesimp>
+            <German>- KRAFTSTOFF AUSLAGERN -</German>
+            <Italian>- SCARICA CASSA CARBURANTE -</Italian>
+            <Portuguese>- DESCARREGAR BARRIS DE COMBUSTÍVEL -</Portuguese>
+            <Russian>- РАЗГРУЗКА ТОПЛИВА -</Russian>
+            <Spanish>- DESCARGA CAJA DE COMBUSTIBLE -</Spanish>
+            <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
             <English>-- Permission --</English>
@@ -336,7 +447,7 @@
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_NOTE">
             <English>Exported data deleted.</English>
             <Chinese>輸出的資料已經刪除</Chinese>
-            <German>Exportierten Daten gelöscht.</German>
+            <German>Exportierte Daten gelöscht.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_ADMIN_DEL_TT">
             <English>Deletes the exported data from your profile. Doesn't affect the current save data.</English>
@@ -479,7 +590,7 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_NORANKS">
             <English>KP Ranks mod not loaded</English>
-            <Chinese>KP Rank 模組未裝載</Chinese>
+            <Chinese>KP Ranks 模組未裝載</Chinese>
             <German>KP Ranks Mod nicht geladen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PLAYER_LABELGROUPS">
@@ -597,6 +708,7 @@
             <Chinese>陞階系統關閉</Chinese>
             <German>Levelsystem deaktiviert</German>
         </Key>
+
         <!-- ARSENAL DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
             <English>KP Liberation Arsenal</English>
@@ -660,6 +772,34 @@
             <Portuguese>Os seguintes itens não são permitidos:\n%1</Portuguese>
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
+            <English>The crate currently holds:\n%1 %2</English>
+            <German>Die Kiste beinhaltet im Moment:\n%1 %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
+            <English>Clear the aft deck and the helicopter first.</English>
+            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOCRATEFOUND">
+            <English>Desired resource crate wasn't found in the storage.</English>
+            <German>Keine passende Ressourcenkiste im Lager gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
+            <English>No storage found in 20m.</English>
+            <German>Kein Lager innerhalb von 20m gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGESPACE">
+            <English>No free space.</English>
+            <German>Kein freier Platz.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOTRANSPORTNEAR">
+            <English>No transport vehicle found in 10m.</English>
+            <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
+            <English>Random placement of a FOB is currently not possible.</English>
+            <German>Zufällige FOB Platzierung ist im Moment nicht möglich.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
             <English>%1 minutes mobile respawn cooldown left.</English>
@@ -818,6 +958,22 @@
             <Chinese>KPLIB - 預設值</Chinese>
             <German>KPLIB - Presets</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_0">
+            <English>CEA - Custom East Army</English>
+            <German>CEA - Custom East Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_1">
+            <English>CSAT</English>
+            <German>CSAT</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_2">
+            <English>CWA - Custom West Army</English>
+            <German>CWA - Custom West Army</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_ARMY_3">
+            <English>NATO</English>
+            <German>NATO</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER">
             <English>Player</English>
             <Chinese>玩家</Chinese>
@@ -828,11 +984,6 @@
             <Chinese>玩家可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Spieler.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_PLAYER_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
-        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY">
             <English>Enemy</English>
             <Chinese>敵人</Chinese>
@@ -842,11 +993,6 @@
             <English>Selection for the units, vehicles, etc. for the enemy.</English>
             <Chinese>敵人可使用的單位及載具</Chinese>
             <German>Auswahl der Einheiten, Fahrzeuge, etc. der Gegner.</German>
-        </Key>
-        <Key ID="STR_KPLIB_SETTINGS_PRESET_ENEMY_0">
-            <English>Custom Preset</English>
-            <Chinese>自訂的預設值</Chinese>
-            <German>Custom Preset</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS">
             <English>Resistance</English>
@@ -863,6 +1009,10 @@
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_RESIS_1">
+            <English>FIA</English>
+            <German>FIA</German>
+        </Key>
         <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV">
             <English>Civlians</English>
             <Chinese>平民</Chinese>
@@ -877,6 +1027,10 @@
             <English>Custom Preset</English>
             <Chinese>自訂的預設值</Chinese>
             <German>Custom Preset</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PRESET_CIV_1">
+            <English>Vanilla</English>
+            <German>Vanilla</German>
         </Key>
 
         <!-- RESPAWN CATEGORY -->
@@ -894,6 +1048,20 @@
             <English>Enables/Disables the mobile respawn functionality of certain vehicles.</English>
             <Chinese>啟用/關閉部分載具的機動重生功能</Chinese>
             <German>Aktiviert/Deaktiviert die Möglichkeit entsprechende Fahrzeuge als mobilen Respawnpunkt zu nutzen.</German>
+        </Key>
+
+        <!-- RESSOURCES CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RES">
+            <English>KPLIB - Resources</English>
+            <German>KPLIB - Ressourcen</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
+            <English>Volume of resource crates</English>
+            <German>Fassungsvermögen von Ressourcenkisten</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME_TT">
+            <English>The maximum amount of resources which can be stored in a crate.</English>
+            <German>Das maximal mögliche Menge an Ressourcen in den Ressourcenkisten.</German>
         </Key>
 
         <!-- BI REVIVE CATEGORY -->
@@ -1118,6 +1286,46 @@
         </Key>
     </Package>
 
+    <!-- CATEGORIES -->
+
+    <Package name="Categories">
+        <Key ID="STR_KPLIB_CAT_AA">
+            <English>Anti-Air</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_ARTY">
+            <English>Artillery</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_BOATS">
+            <English>Boats</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_INFANTRY">
+            <English>Infantry</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LIGHT">
+            <English>Light</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_LOGISTIC">
+            <English>Logistic</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HEAVY">
+            <English>Heavy</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_STATICS">
+            <English>Statics</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_TRANSPORT">
+            <English>Transport</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_HELI">
+            <English>Helicopters</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_PLANES">
+            <English>Planes</English>
+        </Key>
+        <Key ID="STR_KPLIB_CAT_DECO">
+            <English>Decorations</English>
+        </Key>
+    </Package>
 
     <!-- PERMISSIONS -->
 

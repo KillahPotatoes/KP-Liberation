@@ -15,6 +15,9 @@ KPLIB_preset_specOpsF
 KPLIB_preset_specOpsE
 ```
 
+The side and colors of each faction is set in the init module in the `fn_init_preInit.sqf`.
+Changes there are not needed or required in any way, only if you want to change the colors or anything.
+
 ## Created Variables and Arrays
 Each listed variable/array needs the `F` or `E` suffix to access the corresponding friendly or enemy values.
 
@@ -35,14 +38,6 @@ Each listed variable/array needs the `F` or `E` suffix to access the correspondi
 * **KPLIB_preset_arsenalBox**
 
   *This is the virtual arsenal as portable supply crate.*
-
-* **KPLIB_preset_color**
-
-  *Color for this side.*
-
-* **KPLIB_preset_colorAct**
-
-  *Color for this side. (active)*
 
 * **KPLIB_preset_crateAmmo**
 
@@ -212,10 +207,6 @@ Each listed variable/array needs the `F` or `E` suffix to access the correspondi
 
   *Special Forces Teamleader.*
 
-* **KPLIB_preset_side**
-
-  *Side for this preset.*
-
 * **KPLIB_preset_slotHeli**
 
   *Helipad used to increase the GLOBAL rotary-wing cap.*
@@ -231,6 +222,10 @@ Each listed variable/array needs the `F` or `E` suffix to access the correspondi
 * **KPLIB_preset_staticAaBig**
 
   *Static Big AA Classname.*
+
+* **KPLIB_preset_staticAaBigRadar**
+
+  *Static Big AA Radar Classname.*
 
 * **KPLIB_preset_staticAt**
 
@@ -255,14 +250,6 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Military alphabet with `0 = A` to `25 = Z` (obviously only one-dimensional)*
 
-* **KPLIB_preset_antiAir**
-
-  *Anti Air vehicles.*
-
-* **KPLIB_preset_arty**
-
-  *Artillery vehicles.*
-
 * **KPLIB_preset_boats**
 
   *All kinds of water vehicles.*
@@ -279,10 +266,6 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Attack Helicopters.*
 
-* **KPLIB_preset_hVeh**
-
-  *Heavy vehicles.*
-
 * **KPLIB_preset_jets**
 
   *Jets.*
@@ -291,17 +274,9 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Logistic vehicles and objects.*
 
-* **KPLIB_preset_lVeh**
-
-  *Light vehicles.*
-
 * **KPLIB_preset_planeTrans**
 
   *Transport Planes.*
-
-* **KPLIB_preset_soldiers**
-
-  *Regular infantry units.*
 
 * **KPLIB_preset_specOps**
 
@@ -311,6 +286,34 @@ The second variant has the suffix `Pl` for "Plain" e.g. `soldiersPl` which is a 
 
   *Static Defenses.*
 
-* **KPLIB_preset_transports**
+* **KPLIB_preset_units**
+
+  *Regular infantry units.*
+
+* **KPLIB_preset_vehAntiAir**
+
+  *Anti Air vehicles.*
+
+* **KPLIB_preset_vehArty**
+
+  *Artillery vehicles.*
+
+* **KPLIB_preset_vehHeavy**
+
+  *Heavy vehicles.*
+
+* **KPLIB_preset_vehHeavyApc**
+
+  *APC vehicles.*
+
+* **KPLIB_preset_vehLightArmed**
+
+  *Light armed vehicles.*
+
+* **KPLIB_preset_vehLightUnarmed**
+
+  *Light unarmed vehicles.*
+
+* **KPLIB_preset_vehTrans**
 
   *Unarmed transport trucks.*
