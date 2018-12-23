@@ -4,7 +4,7 @@
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2018-12-22
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,14 +39,14 @@ private _classNames = [];
 
 // Read the Variable
 private _data = [[_code], _string, _classNames];
-(_data select 0) append ((missionNamespace getVariable [toLower _permission, []]) select 0);
+(_data select 0) append ((KPLIB_permission_data getVariable [toLower _permission, []]) select 0);
 
 if !(_string isEqualTo "") then {
     _data set [1, _string];
 };
 
 // Write the Variable
-missionNamespace setVariable [toLower _permission, _data, true];
+KPLIB_permission_data setVariable [toLower _permission, _data, true];
 
 // Emit permissions added event
 ["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;

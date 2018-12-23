@@ -4,7 +4,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-22
+    Last Update: 2018-12-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -75,7 +75,7 @@ private _i = 0;
 KPLIB_permission_tempControls = [];
 
 {
-    _data = missionNamespace getVariable [toLower _x, []];
+    _data = KPLIB_permission_data getVariable [toLower _x, []];
     _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", 68741 + _i];
     _tempCtrl ctrlSetPosition [
         KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2),
