@@ -4,7 +4,7 @@
     File: fn_common_createCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-25
-    Last Update: 2018-12-16
+    Last Update: 2018-12-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -62,6 +62,13 @@ private _grp = [_side, _driverClass + _crewClasses, getPos _vehicle] call KPLIB_
         ((units _grp) select _forEachIndex) moveInTurret [_vehicle, _x];
     }
 } forEach [-1] + _turrets;
+
+// Remove excess units from group
+{
+    if (isNull objectParent _x) then {
+        deleteVehicle _x;
+    };
+} foreach (units _grp);
 
 // Assign vehicle to group and make sure the commander is group leader
 _grp addVehicle _vehicle;
