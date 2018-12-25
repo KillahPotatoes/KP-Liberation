@@ -5,7 +5,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-23
+    Last Update: 2018-12-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -74,7 +74,6 @@ private _i = 0;
 KPLIB_permission_tempControls = [];
 
 {
-    _data = KPLIB_permission_data getVariable [toLower _x, []];
     _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", 68741 + _i];
     _tempCtrl ctrlSetPosition [
         KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2),
@@ -82,14 +81,31 @@ KPLIB_permission_tempControls = [];
         KP_GETW(KP_WIDTH_VAL_C,2),
         KP_GETH(KP_HEIGHT_VAL_C,24)
     ];
-    _tempCtrl ctrlSetText (localize (_data select 1));
-    _tempCtrl ctrlSetActiveColor _white;
-    _tempCtrl setVariable ["Data", [_x, false]];
-    _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
+    _tempCtrl ctrlSetText (localize (_x select 1));
+    _tempCtrl ctrlSetTextColor _orange;
+    _tempCtrl ctrlSetActiveColor _orange;
     _tempCtrl ctrlCommit 0;
-    _tempCtrl ctrlEnable false;
-    KPLIB_permission_tempControls pushBack _tempCtrl;
+    _tempCtrl ctrlEnable true;
     _i = _i + 1;
-} forEach KPLIB_permission_types;
+
+    {
+        _data = KPLIB_permission_data getVariable [toLower _x, []];
+        _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", 68741 + _i];
+        _tempCtrl ctrlSetPosition [
+            KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2),
+            KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,_i * 2,48),
+            KP_GETW(KP_WIDTH_VAL_C,2),
+            KP_GETH(KP_HEIGHT_VAL_C,24)
+        ];
+        _tempCtrl ctrlSetText (localize (_data select 1));
+        _tempCtrl ctrlSetActiveColor _white;
+        _tempCtrl setVariable ["Data", [_x, false]];
+        _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
+        _tempCtrl ctrlCommit 0;
+        _tempCtrl ctrlEnable false;
+        KPLIB_permission_tempControls pushBack _tempCtrl;
+        _i = _i + 1;
+    } forEach (_x select 2);
+} forEach KPLIB_permission_groups;
 
 true

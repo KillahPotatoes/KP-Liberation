@@ -4,7 +4,7 @@
     File: fn_permission_syncClients.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-22
-    Last Update: 2018-12-23
+    Last Update: 2018-12-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,8 +12,9 @@
 
     Parameter(s):
         _list       - KPLIB_permission_list      [ARRAY, defaults to []]
-        _default    - KPLIB_permission_default  [ARRAY, defaults to []]
+        _default    - KPLIB_permission_default   [ARRAY, defaults to []]
         _types      - KPLIB_permission_types     [ARRAY, defaults to []]
+        _groups     - KPLIB_permission_groups    [ARRAY, defaults to []]
 
     Returns:
         Function reached the end [BOOL]
@@ -22,7 +23,8 @@
 params [
     ["_list", [], [[]]],
     ["_default", [], [[]]],
-    ["_types", [], [[]]]
+    ["_types", [], [[]]],
+    ["_groups", [], [[]]]
 ];
 
 // Sort out empty variables and publish the rest
@@ -38,5 +40,10 @@ if !(_default isEqualTo []) then {
 
 if !(_types isEqualTo []) then {
     KPLIB_permission_types = +_types;
+    publicVariable "KPLIB_permission_types";
+};
+
+if !(_types isEqualTo []) then {
+    KPLIB_permission_groups = +_groups;
     publicVariable "KPLIB_permission_types";
 };

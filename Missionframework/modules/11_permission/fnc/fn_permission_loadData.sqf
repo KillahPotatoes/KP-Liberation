@@ -4,7 +4,7 @@
     File: fn_permission_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2018-12-23
+    Last Update: 2018-12-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,6 +32,6 @@ if (_moduleData isEqualTo []) then {
     KPLIB_permission_default = _moduleData select 1;
 };
 
-[KPLIB_permission_list, KPLIB_permission_default, []] call KPLIB_fnc_permission_syncClients;
+[KPLIB_permission_list, KPLIB_permission_default, [], []] call KPLIB_fnc_permission_syncClients;
 
 true

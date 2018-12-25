@@ -1330,6 +1330,14 @@
     <!-- PERMISSIONS -->
 
     <Package name="Permissions">
+        <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
+            <English>-- Miscellaneous --</English>
+            <German>-- Sonstiges --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPVEHICLE">
+            <English>-- Vehicles --</English>
+            <German>-- Fahrzeuge --</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_LIGHTVEHICLE">
             <English>Light Vehicle</English>
             <German>Leichte Fahrzeuge</German>
