@@ -21,6 +21,10 @@ params [
     ["_permission", "", [""]]
 ];
 
+if !(KPLIB_param_permission) exitWith {
+    true
+};
+
 private _results = [];
 private _result = false;
 private _data = KPLIB_permission_data getVariable [toLower _permission, []];

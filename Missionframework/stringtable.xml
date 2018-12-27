@@ -814,8 +814,12 @@
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOPERMISSION">
-            <English>C>You don't have permission to use this vehicle.</English>
+            <English>You don't have permission to use this vehicle.</English>
             <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
+            <English>The permission system isn't active.</English>
+            <German>Das Rechtesystem ist derzeit nicht aktiviert.</German>
         </Key>
     </Package>
 
@@ -1206,6 +1210,19 @@
             <English>Show 3D locations labels</English>
             <Chinese>使用立體位置標記</Chinese>
         </Key>
+
+        <!-- ZEUS CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION">
+            <English>KPLIB - Permissions</English>
+            <German>KPLIB - Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE">
+            <English>Enable Permission System</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE_TT">
+            <English>Enables/Disables the Liberation permission system.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
     </Package>
 
 

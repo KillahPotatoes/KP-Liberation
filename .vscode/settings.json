@@ -46,6 +46,7 @@
         "KPLIB_param_timeMulti",
         "KPLIB_param_zeusFobIcons",
         "KPLIB_param_zeusLocationIcons",
+        "KPLIB_param_permission",
         "KPLIB_plm_groups",
         "KPLIB_preset_addBoatE",
         "KPLIB_preset_addBoatF",
