@@ -49,7 +49,7 @@ switch (_playerUID) do {
     case "default": {
         _index = KPLIB_permission_default findIf {(_x select 0) isEqualTo (toLower _permission)};
         KPLIB_permission_default deleteAt _index;
-        KPLIB_permission_default pushBack [toLower _permission, !_state];
+         (KPLIB_permission_default select _index) set [1, !_state];
     };
     default {
         // Change the player permission or apply them
