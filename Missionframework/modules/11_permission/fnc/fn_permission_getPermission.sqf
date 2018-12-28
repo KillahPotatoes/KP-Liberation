@@ -4,7 +4,7 @@
     File: fn_permission_getPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-10
-    Last Update: 2018-12-27
+    Last Update: 2018-12-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +27,6 @@ if !(KPLIB_param_permission) exitWith {
     true
 };
 
-private _result = false;
 private _playerPermissions = [];
 _permission = toLower _permission;
 
@@ -36,19 +35,16 @@ private _playerPermissions = KPLIB_permission_list select (KPLIB_permission_list
     (_x select 0) isEqualTo (getPlayerUID player)
 }) select 2;
 
-// Check if the permission doesn't exist and use the default permission
-if !((_playerPermissions findIf {(_permission in _x)}) isEqualTo -1) then {
-    {
-        if (_permission in _x) then {
-            _result = _x select 1;
-        };
-    } forEach _playerPermissions;
-} else {
-    {
-        if (_permission in _x) then {
-            _result = _x select 1;
-        }
-    } forEach KPLIB_permission_default;
+// Check if the permission is added to the player and return the state
+private _index = _playerPermissions findIf {(_x select 0) isEqualTo _permission};
+if !(_index isEqualTo -1) exitWith {
+    (_playerPermissions select _index) select 1
 };
 
-_result
+// Otherwise look for a default value. If even this fails, return just false
+_index = KPLIB_permission_default findIf {(_x select 0) isEqualTo _permission};
+if !(_index isEqualTo -1) then {
+    (KPLIB_permission_default select _index) select 1
+} else {
+    false
+};

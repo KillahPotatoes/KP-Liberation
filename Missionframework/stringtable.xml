@@ -740,7 +740,7 @@
             <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
-        <!-- ARSENAL DIALOG -->
+        <!-- PERMISSION DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
             <English>KP Liberation Permissions</English>
             <German>KP Liberation Rechteverwaltung</German>
@@ -1211,7 +1211,7 @@
             <Chinese>使用立體位置標記</Chinese>
         </Key>
 
-        <!-- ZEUS CATEGORY -->
+        <!-- PERMISSION CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_PERMISSION">
             <English>KPLIB - Permissions</English>
             <German>KPLIB - Rechte</German>

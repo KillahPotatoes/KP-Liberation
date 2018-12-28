@@ -4,7 +4,7 @@
     File: fn_permission_setupPermissionControls.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2018-12-23
+    Last Update: 2018-12-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,17 +39,13 @@ private _playerPermissions = [];
 switch (_playerUID) do {
     case "default": {
         {
-            _permission = (_x getVariable ["Data", ["", false]]) select 0;
+            _permission = toLower (_x getVariable ["Data", ["", false]]) select 0;
             _defaultPermission = KPLIB_permission_default select (KPLIB_permission_default findIf {
-                (_x select 0) isEqualTo (toLower _permission)
+                (_x select 0) isEqualTo _permission
             }) select 1;
-            if (_defaultPermission) then {
-                _x setVariable ["Data", [_permission, true]];
-                _x ctrlSetTextColor _green;
-            } else {
-                _x setVariable ["Data", [_permission, false]];
-                _x ctrlSetTextColor _red;
-            };
+
+            _x setVariable ["Data", [_permission, _defaultPermission]];
+            _x ctrlSetTextColor ([_red, _green] select _defaultPermission);
             _x ctrlEnable true;
         } forEach KPLIB_permission_tempControls;
     };
@@ -63,29 +59,19 @@ switch (_playerUID) do {
         if (_index != -1) then {
             _playerPermissions = (KPLIB_permission_list select _index) select 2;
         };
+        private _permissionState = false;
         {
-            _permission = (_x getVariable ["Data", ["", false]]) select 0;
-            _index = (_playerPermissions findIf {(_x select 0) isEqualTo (toLower _permission)});
+            _permission = toLower (_x getVariable ["Data", ["", false]]) select 0;
+            _index = (_playerPermissions findIf {(_x select 0) isEqualTo _permission});
             if (_index isEqualTo -1) then {
-                _defaultPermission = KPLIB_permission_default select (KPLIB_permission_default findIf {
-                    (_x select 0) isEqualTo (toLower _permission)
+                _permissionState = KPLIB_permission_default select (KPLIB_permission_default findIf {
+                    (_x select 0) isEqualTo _permission
                 }) select 1;
-                if (_defaultPermission) then {
-                    _x setVariable ["Data", [_permission, true]];
-                    _x ctrlSetTextColor _green;
-                } else {
-                    _x setVariable ["Data", [_permission, false]];
-                    _x ctrlSetTextColor _red;
-                };
             } else {
-                if ((_playerPermissions select _index) select 1) then {
-                    _x setVariable ["Data", [_permission, true]];
-                    _x ctrlSetTextColor _green;
-                } else {
-                    _x setVariable ["Data", [_permission, false]];
-                    _x ctrlSetTextColor _red;
-                };
+                _permissionState = (_playerPermissions select _index) select 1;
             };
+            _x setVariable ["Data", [_permission, _permissionState]];
+            _x ctrlSetTextColor ([_red, _green] select _permissionState);
             _x ctrlEnable true;
         } forEach KPLIB_permission_tempControls;
     };

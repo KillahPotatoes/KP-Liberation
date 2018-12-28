@@ -54,18 +54,17 @@ switch (_playerUID) do {
         // Change the player permission or apply them
         _index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (_playerUID)};
         if (_index != -1) then {
-            _playerArray = KPLIB_permission_list deleteAt _index;
-            _playerPermissions = _playerArray deleteAt 2;
-            _index = _playerPermissions findIf {(_x select 0) isEqualTo (toLower _permission)};
+            // Ref to player array in permission list
+            _playerArray = KPLIB_permission_list select _index;
+            _index = (_playerArray select 2) findIf {(_x select 0) isEqualTo (toLower _permission)};
+
+            // If the player already has the permission, change the state
             if (_index != -1) then {
-                _permissionArray = _playerPermissions deleteAt _index;
-                _permissionArray set [1, !_state];
-                _playerPermissions pushBack _permissionArray;
+                ((_playerArray select 2) select _index) set [1, !_state];
             } else {
-                _playerPermissions pushBack [toLower _permission, !_state];
+                // Otherwise add the permission
+                (_playerArray select 2) pushBack [toLower _permission, !_state];
             };
-            _playerArray pushBack _playerPermissions;
-            KPLIB_permission_list pushBack _playerArray;
         };
     };
 };

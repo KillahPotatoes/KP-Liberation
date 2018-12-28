@@ -4,7 +4,7 @@
     File: fn_permission_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-25
+    Last Update: 2018-12-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,10 +29,11 @@ if (isServer) then {
 
     // Register newPH event handler
     ["KPLIB_permission_newPH", {[_this select 0, _this select 1] call KPLIB_fnc_permission_initDefault;}] call CBA_fnc_addEventHandler;
-};
 
-KPLIB_permission_data = true call CBA_fnc_createNamespace;
-publicVariable "KPLIB_permission_data";
+    KPLIB_permission_data = true call CBA_fnc_createNamespace;
+    publicVariable "KPLIB_permission_data";
+
+};
 
 /*
     ----- Module Globals -----
