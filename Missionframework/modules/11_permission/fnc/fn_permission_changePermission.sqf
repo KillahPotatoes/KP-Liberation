@@ -4,7 +4,7 @@
     File: fn_permission_changePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-23
+    Last Update: 2018-12-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -48,8 +48,7 @@ private _permissionArray = [];
 switch (_playerUID) do {
     case "default": {
         _index = KPLIB_permission_default findIf {(_x select 0) isEqualTo (toLower _permission)};
-        KPLIB_permission_default deleteAt _index;
-         (KPLIB_permission_default select _index) set [1, !_state];
+        (KPLIB_permission_default select _index) set [1, !_state];
     };
     default {
         // Change the player permission or apply them
