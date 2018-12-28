@@ -751,7 +751,7 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_ONLINE">
             <English>- Online players -</English>
-            <German>- Aktive Spieler -</German>
+             <German>- Anwesende Spieler -</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
