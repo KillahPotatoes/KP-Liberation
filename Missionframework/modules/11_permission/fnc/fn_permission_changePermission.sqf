@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_changePermission
 
@@ -26,11 +27,6 @@ _args params ["_control"];
 // Dialog controls
 private _dialog = findDisplay 758011;
 private _ctrlPlayerList = _dialog displayCtrl 68740;
-
-// Colors
-private _red = [0.9,0,0,1];
-private _green = [0,0.8,0,1];
-private _white = [1,1,1,1];
 
 // Read the control
 (_control getVariable ["Data", ["", false]]) params [
@@ -72,6 +68,6 @@ switch (_playerUID) do {
 
 // Edit the control
 _control setVariable ["Data", [_permission, !_state]];
-_control ctrlSetTextColor ([_green, _red] select _state);
+_control ctrlSetTextColor ([KPLIB_COLOR_GREEN, KPLIB_COLOR_RED] select _state);
 
 true

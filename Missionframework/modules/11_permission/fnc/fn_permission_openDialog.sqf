@@ -1,11 +1,12 @@
 #include "..\..\..\KPGUI\KPGUI_defines.hpp"
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_openDialog
 
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2018-12-27
+    Last Update: 2018-12-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,19 +32,13 @@ disableSerialization;
 private _dialog = findDisplay 758011;
 private _ctrlPlayerList = _dialog displayCtrl 68740;
 
-// Colors
-private _red = [0.9,0,0,1];
-private _green = [0,0.8,0,1];
-private _white = [1,1,1,1];
-private _orange = [1,0.5,0, 0.8];
-
 // Fill the controls
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
 _ctrlPlayerList lbSetData [_index, "default"];
 
 _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_ONLINE");
 _ctrlPlayerList lbSetData [_index, "placeholder"];
-_ctrlPlayerList lbSetColor [_index, _orange];
+_ctrlPlayerList lbSetColor [_index, KPLIB_COLOR_ORANGE];
 
 // Checksum to add only 1 entry for each player
 private _playerList = [];
@@ -64,7 +59,7 @@ private _player = "";
 
 _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_OFFLINE");
 _ctrlPlayerList lbSetData [_index, "placeholder"];
-_ctrlPlayerList lbSetColor [_index, _orange];
+_ctrlPlayerList lbSetColor [_index, KPLIB_COLOR_ORANGE];
 
 // Add all offline players and delete them from checksum
 {
@@ -87,8 +82,8 @@ KPLIB_permission_tempControls = [];
         KP_GETH(KP_HEIGHT_VAL_C,24)
     ];
     _tempCtrl ctrlSetText (localize (_x select 1));
-    _tempCtrl ctrlSetTextColor _orange;
-    _tempCtrl ctrlSetActiveColor _orange;
+    _tempCtrl ctrlSetTextColor KPLIB_COLOR_ORANGE;
+    _tempCtrl ctrlSetActiveColor KPLIB_COLOR_ORANGE;
     _tempCtrl ctrlCommit 0;
     _tempCtrl ctrlEnable true;
     _i = _i + 1;
@@ -103,7 +98,7 @@ KPLIB_permission_tempControls = [];
             KP_GETH(KP_HEIGHT_VAL_C,24)
         ];
         _tempCtrl ctrlSetText (localize (_data select 1));
-        _tempCtrl ctrlSetActiveColor _white;
+        _tempCtrl ctrlSetActiveColor KPLIB_COLOR_WHITE;
         _tempCtrl setVariable ["Data", [_x, false]];
         _tempCtrl ctrlSetEventHandler ["MouseButtonClick", '[_this] call KPLIB_fnc_permission_changePermission'];
         _tempCtrl ctrlCommit 0;

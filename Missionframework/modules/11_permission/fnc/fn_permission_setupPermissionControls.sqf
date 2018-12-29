@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_setupPermissionControls
 
@@ -21,11 +22,6 @@
 private _dialog = findDisplay 758011;
 private _ctrlPlayerList = _dialog displayCtrl 68740;
 
-// Colors
-private _red = [0.9,0,0,1];
-private _green = [0,0.8,0,1];
-private _white = [1,1,1,1];
-
 // Read the listbox
 private _index = lbCurSel _ctrlPlayerList;
 private _playerUID = _ctrlPlayerList lbData _index;
@@ -45,7 +41,7 @@ switch (_playerUID) do {
             }) select 1;
 
             _x setVariable ["Data", [_permission, _defaultPermission]];
-            _x ctrlSetTextColor ([_red, _green] select _defaultPermission);
+            _x ctrlSetTextColor ([KPLIB_COLOR_RED, KPLIB_COLOR_GREEN] select _defaultPermission);
             _x ctrlEnable true;
         } forEach KPLIB_permission_tempControls;
     };
@@ -71,7 +67,7 @@ switch (_playerUID) do {
                 _permissionState = (_playerPermissions select _index) select 1;
             };
             _x setVariable ["Data", [_permission, _permissionState]];
-            _x ctrlSetTextColor ([_red, _green] select _permissionState);
+            _x ctrlSetTextColor ([KPLIB_COLOR_RED, KPLIB_COLOR_GREEN] select _permissionState);
             _x ctrlEnable true;
         } forEach KPLIB_permission_tempControls;
     };
