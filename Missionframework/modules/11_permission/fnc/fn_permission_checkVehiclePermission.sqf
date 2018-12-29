@@ -50,4 +50,4 @@ if (_permission isEqualTo "") exitWith {
     false
 };
 
-[_permission] call KPLIB_fnc_permission_checkPermission;
+[_permission] call KPLIB_fnc_permission_checkPermission
