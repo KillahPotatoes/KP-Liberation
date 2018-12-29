@@ -346,7 +346,7 @@
             <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
-             <English>-- Permissions --</English>
+            <English>-- Permissions --</English>
             <German>-- RECHTE --</German>
         </Key>
     </Package>
