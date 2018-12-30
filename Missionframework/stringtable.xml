@@ -345,6 +345,10 @@
             <Spanish>- DESCARGA CAJA DE COMBUSTIBLE -</Spanish>
             <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_PERMISSION">
+            <English>-- Permissions --</English>
+            <German>-- RECHTE --</German>
+        </Key>
     </Package>
 
 
@@ -423,6 +427,10 @@
             <English>Rename</English>
             <Chinese>重新命名</Chinese>
             <German>Umbenennen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RESET">
+            <English>Reset to default</English>
+            <German>Auf Standard zurücksetzen</German>
         </Key>
 
         <!-- ADMIN MENU DIALOG -->
@@ -732,6 +740,23 @@
             <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
+        <!-- PERMISSION DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
+            <English>KP Liberation Permissions</English>
+            <German>KP Liberation Rechteverwaltung</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_DEFAULT">
+            <English>Default permissions</English>
+            <German>Standard Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_ONLINE">
+            <English>- Online players -</English>
+            <German>- Anwesende Spieler -</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
+            <English>- Offline players -</English>
+            <German>- Abwesende Spieler -</German>
+        </Key>
     </Package>
 
 
@@ -783,6 +808,18 @@
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
+            <English>Clear the aft deck and the helicopter first.</English>
+            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOPERMISSION">
+            <English>You don't have permission to use this vehicle.</English>
+            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
+            <English>The permission system isn't active.</English>
+            <German>Das Rechtesystem ist derzeit nicht aktiviert.</German>
         </Key>
     </Package>
 
@@ -1173,6 +1210,19 @@
             <English>Show 3D locations labels</English>
             <Chinese>使用立體位置標記</Chinese>
         </Key>
+
+        <!-- PERMISSION CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION">
+            <English>KPLIB - Permissions</English>
+            <German>KPLIB - Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE">
+            <English>Enable Permission System</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE_TT">
+            <English>Enables/Disables the Liberation permission system.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
     </Package>
 
 
@@ -1291,6 +1341,55 @@
         </Key>
         <Key ID="STR_KPLIB_CAT_DECO">
             <English>Decorations</English>
+        </Key>
+    </Package>
+
+    <!-- PERMISSIONS -->
+
+    <Package name="Permissions">
+        <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
+            <English>-- Miscellaneous --</English>
+            <German>-- Sonstiges --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPVEHICLE">
+            <English>-- Vehicles --</English>
+            <German>-- Fahrzeuge --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_LIGHTVEHICLE">
+            <English>Light Vehicle</English>
+            <German>Leichte Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_HEAVYVEHICLE">
+            <English>Heavy Vehicle</English>
+            <German>Schwere Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_ANTIAIRVEHICLE">
+            <English>Antiair Vehicle</English>
+            <German>Luftabwehr Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_ARTILLERYVEHICLE">
+            <English>Artillery Vehicle</English>
+            <German>Artillerie Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTHELICOPTER">
+            <English>Transport Helicopter</English>
+            <German>Transporthelikopter</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_ATTACKHELICOPTER">
+            <English>Attack Helicopter</English>
+            <German>Kampfhubschrauber</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTPLANE">
+            <English>Transport Plane</English>
+            <German>Transportflugzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_JET">
+            <English>Jet</English>
+            <German>Kampfflugzeug</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_LOGISTIC">
+            <English>Logistic Vehicle</English>
+            <German>Logistik Fahrzeuge</German>
         </Key>
     </Package>
 </Project>
