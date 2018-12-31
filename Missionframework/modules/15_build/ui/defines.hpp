@@ -4,7 +4,7 @@
     File: defines.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-11-29
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,14 +16,11 @@
 
 // IDCs
 #define KPLIB_IDC_MOUSEHANDLER              101
-#define KPLIB_IDC_BUILD_TAB_INFANTRY        70100
-#define KPLIB_IDC_BUILD_TAB_LIGHT           70101
-#define KPLIB_IDC_BUILD_TAB_HEAVY           70102
-#define KPLIB_IDC_BUILD_TAB_AIR             70103
-#define KPLIB_IDC_BUILD_TAB_STATIC          70104
-#define KPLIB_IDC_BUILD_TAB_BUILDING        70105
-#define KPLIB_IDC_BUILD_TAB_SUPPORT         70106
-#define KPLIB_IDC_BUILD_TAB_SQUAD           70107
+
+#define KPLIB_IDC_BUILD_CATEGORY_LIST       70100
+
+#define KPLIB_IDC_BUILD_SEARCH              70101
+#define KPLIB_IDC_BUILD_SEARCH_BUTTON       70102
 
 #define KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS   70111
 

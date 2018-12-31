@@ -4,7 +4,7 @@
     File: fn_init_createLockedVehMarkers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-08
-    Last Update: 2018-11-09
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ private _cfg = configFile >> "CfgVehicles";
     _marker setMarkerText (getText (_cfg >> _vehicle >> "displayName"));
     _marker setMarkerShape "ICON";
     _marker setMarkerType "mil_pickup";
-    _marker setMarkerColor KPLIB_preset_colorEnemy;
+    _marker setMarkerColor KPLIB_preset_colorE;
 
     // Storing of the created locked vehicle marker with relation to the base marker.
     KPLIB_sectors_lockedVehMarkers pushBack [_marker, _base];

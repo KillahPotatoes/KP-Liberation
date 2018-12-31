@@ -4,7 +4,7 @@
     File: fn_garrison_initSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-24
-    Last Update: 2018-10-25
+    Last Update: 2018-12-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -48,13 +48,13 @@ switch (toString _tempMarker) do {
     case "KPLIB_eden_f": {
         _side = 1;
         _soldiers = (ceil (random 2) + 2) * 6;
-        _lVehCount = (round (random 3)) + 2;
+        _lVehCount = (round (random 2)) + 2;
         _hVehCount = 0;
     };
     case "KPLIB_eden_m": {
         _side = 1;
         _soldiers = (ceil (random 5) + 3) * 6;
-        _lVehCount = (round (random 4)) + 4;
+        _lVehCount = (round (random 3)) + 3;
         _hVehCount = 0;
     };
     case "KPLIB_eden_t": {
@@ -68,15 +68,15 @@ switch (toString _tempMarker) do {
 // Add light vehicles
 for "_i" from 1 to _lVehCount do {
     if (_side isEqualTo 0) then {
-        _lVehicles pushBack (selectRandom KPLIB_preset_oVehiclesLow);
+        _lVehicles pushBack (selectRandom KPLIB_preset_vehLightArmedPlE);
     } else {
-        _lVehicles pushBack (selectRandom KPLIB_preset_oMilVeh);
+        _lVehicles pushBack (selectRandom (KPLIB_preset_vehLightArmedPlE + KPLIB_preset_vehHeavyApcPlE));
     };
 };
 
 // Add heavy vehicles
 for "_i" from 1 to _hVehCount do {
-    _hVehicles pushBack (selectRandom KPLIB_preset_oVehicles);
+    _hVehicles pushBack (selectRandom (KPLIB_preset_vehHeavyApcPlE + KPLIB_preset_vehHeavyPlE));
 };
 
 // Return garrison data

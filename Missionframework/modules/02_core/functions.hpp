@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-12-05
+    Last Update: 2018-12-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,6 +19,9 @@ class core {
 
     // Build fob and register it
     class core_buildFob {};
+
+    // Build fob at random position and register it
+    class core_buildFobRandom {};
 
     // Checks if player can build fob
     class core_canBuildFob {};

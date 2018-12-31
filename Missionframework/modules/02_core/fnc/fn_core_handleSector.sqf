@@ -4,7 +4,7 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-11-09
+    Last Update: 2018-12-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,7 +30,7 @@ private _handler = [
         // If there are no enemy units in two times the capture range and friendly units are in capture range
         // capture the sector
         if (
-            !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideEnemy]] call KPLIB_fnc_core_areUnitsNear)
+            !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideE]] call KPLIB_fnc_core_areUnitsNear)
             && {[_sectorPos, KPLIB_param_sectorCapRange] call KPLIB_fnc_core_areUnitsNear}
         ) then {
             diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 (%3) captured", diag_tickTime, markerText _sector, _sector];

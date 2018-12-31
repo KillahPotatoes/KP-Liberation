@@ -5,7 +5,7 @@
     File: fn_build_objectUnderCursor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-07
-    Last Update: 2018-11-04
+    Last Update: 2018-12-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -47,7 +47,7 @@ if !(_objects isEqualTo []) then {
     } forEach _objects;
 };
 // If we were not able to find any item directly under cusror try to get one nearest to
-if (_target isEqualTo objNull) then {
+if (isNull _target) then {
     private _nearest = nearestObjects [_cursorWorldPosAGL, ["All"], 1] arrayIntersect _queue;
 
     if !(_nearest isEqualTo []) then {
