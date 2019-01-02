@@ -50,6 +50,7 @@ GRLIB_arsenal_magazines = [
 GRLIB_arsenal_items = [
 "ItemWatch",
 "ItemRadio",
+"tf_anprc154",
 "ItemMap",
 "MineDetector",
 "Binocular",
@@ -214,6 +215,8 @@ GRLIB_arsenal_backpacks = [
 "fow_b_uk_p37_blanco_shovel",
 "fow_b_uk_p37_shovel",
 "fow_b_uk_vickers_support",
+"fow_b_usa_m1919_support",
+"fow_b_usa_m1919_weapon",
 "fow_b_uk_vickers_weapon",
 "fow_b_uk_piat",
 "B_LIB_US_TypeA3",
