@@ -229,7 +229,7 @@ class AddonsMetaData
 randomSeed=7564349;
 class ScenarioData
 {
-	author="TEST";
+	author="Zbug, McKeewa, Wyqer and WW2 ANZAC edit by Pi123263";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
