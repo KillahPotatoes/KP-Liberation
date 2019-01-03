@@ -10,6 +10,8 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
 
+[] execVM "RYD_FFE\FFE.sqf";
+
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
 if (isServer) then {
