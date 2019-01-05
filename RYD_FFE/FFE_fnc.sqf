@@ -260,11 +260,11 @@ RYD_ArtyMission =
 								{
 								switch (_ammoG) do
 									{
-									case ("HE") : {_ammo = "8Rnd_82mm_Mo_shells"};
-									case ("SPECIAL") : {_ammo = "8Rnd_82mm_Mo_shells"};
-									case ("SECONDARY") : {_ammo = "8Rnd_82mm_Mo_shells"};
-									case ("SMOKE") : {_ammo = "8Rnd_82mm_Mo_Smoke_white"};
-									case ("ILLUM") : {_ammo = "8Rnd_82mm_Mo_Flare_white"};
+									case ("HE") : {_ammo = "lib_45x_sprgr_kwk36_he"};
+									case ("SPECIAL") : {_ammo = "lib_45x_sprgr_kwk36_he"};
+									case ("SECONDARY") : {_ammo = "lib_45x_sprgr_kwk36_he"};
+									case ("SMOKE") : {_ammo = ""};
+									case ("ILLUM") : {_ammo = ""};
 									}
 								};
 								
@@ -275,10 +275,10 @@ RYD_ArtyMission =
 									{
 									switch (_ammoG) do
 										{
-										case ("HE") : {_ammo = "32Rnd_155mm_Mo_shells"};
-										case ("SPECIAL") : {_ammo = "2Rnd_155mm_Mo_Cluster"};
-										case ("SECONDARY") : {_ammo = "2Rnd_155mm_Mo_guided"};
-										case ("SMOKE") : {_ammo = "6Rnd_155mm_Mo_smoke"};
+										case ("HE") : {_ammo = "LIB_20x_Shell_105L28_Gr39HlC_HE"};
+										case ("SPECIAL") : {_ammo = "LIB_20x_Shell_105L28_Gr38_HE"};
+										case ("SECONDARY") : {_ammo = "LIB_20x_Shell_105L28_Gr39HlC_HE"};
+										case ("SMOKE") : {_ammo = ""};
 										case ("ILLUM") : {_ammo = ""};
 										};
 									}
@@ -299,9 +299,9 @@ RYD_ArtyMission =
 								{
 								switch (_ammoG) do
 									{
-									case ("HE") : {_ammo = "12Rnd_230mm_rockets"};
-									case ("SPECIAL") : {_ammo = "12Rnd_230mm_rockets"};
-									case ("SECONDARY") : {_ammo = "12Rnd_230mm_rockets"};
+									case ("HE") : {_ammo = "lib_6rnd_nbw41"};
+									case ("SPECIAL") : {_ammo = "lib_6rnd_nbw41"};
+									case ("SECONDARY") : {_ammo = "lib_6rnd_nbw41"};
 									case ("SMOKE") : {_ammo = ""};
 									case ("ILLUM") : {_ammo = ""};
 									};
