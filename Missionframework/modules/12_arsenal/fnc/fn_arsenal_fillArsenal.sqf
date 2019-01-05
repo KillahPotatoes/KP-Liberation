@@ -4,7 +4,7 @@
     File: fn_init_fillArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2018-12-12
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,7 +24,7 @@
 [missionNamespace, KPLIB_preset_arsenal_whitelist, true] call BIS_fnc_removeVirtualBackpackCargo;
 
 if (KPLIB_ace_enabled) then {
-    [player, true, false] remoteExecCall ["ace_arsenal_fnc_removeVirtualItems", [-2, 0] select hasInterface, true];
+    [KPLIB_preset_arsenal_whitelist ,{[player, true, false] call ace_arsenal_fnc_removeVirtualItems}] remoteExec ["call", -2, true];
 };
 
 // Load arsenal preset
@@ -116,7 +116,7 @@ if !(_goodItems isEqualTo true) then {
     [missionNamespace, _backpacks, true] call BIS_fnc_addVirtualBackpackCargo;
 
     if (KPLIB_ace_enabled) then {
-        [player, _goodItems, false] remoteExecCall ["ace_arsenal_fnc_addVirtualItems", [-2, 0] select hasInterface, true];
+        [_goodItems ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", -2, true];
     };
 } else {
     // Fill the arsenal
@@ -126,7 +126,7 @@ if !(_goodItems isEqualTo true) then {
     [missionNamespace, _goodItems, true] call BIS_fnc_addVirtualBackpackCargo;
 
     if (KPLIB_ace_enabled) then {
-        [player, _goodItems, false] remoteExecCall ["ace_arsenal_fnc_addVirtualItems", [-2, 0] select hasInterface, true];
+        [_goodItems ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", -2, true];
     };
 };
 
