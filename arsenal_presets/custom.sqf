@@ -201,6 +201,7 @@ GRLIB_arsenal_items = [
 "U_LIB_US_NAC_Med",
 "U_LIB_US_NAC_Uniform_2",
 "fow_h_uk_woolen_hat",
+"H_LIB_NKVD_OfficerCap",
 "U_LIB_US_AB_Uniform_M43_NCO",
 "V_LIB_US_AB_Vest_Carbine_nco_Radio",
 "H_LIB_US_AB_Helmet_NCO_1",
