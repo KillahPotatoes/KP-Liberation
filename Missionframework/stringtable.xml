@@ -1371,6 +1371,10 @@
             <English>Artillery Vehicle</English>
             <German>Artillerie Fahrzeuge</German>
         </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTVEHICLE">
+            <English>Transport Vehicle</English>
+            <German>Transportfahrzeug</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_TRANSPORTHELICOPTER">
             <English>Transport Helicopter</English>
             <German>Transporthelikopter</German>

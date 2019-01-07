@@ -47,7 +47,7 @@ if (_role isEqualTo "cargo" || typeOf _vehicle isEqualTo KPLIB_preset_potatoF ||
 
 // Exit if no permission is found
 if (_permission isEqualTo "") exitWith {
-    false
+    true
 };
 
 [_permission] call KPLIB_fnc_permission_checkPermission
