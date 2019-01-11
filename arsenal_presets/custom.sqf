@@ -50,6 +50,7 @@ GRLIB_arsenal_magazines = [
 GRLIB_arsenal_items = [
 "ItemWatch",
 "ItemRadio",
+"tf_anprc152",
 "tf_anprc154",
 "ItemMap",
 "MineDetector",
