@@ -4,7 +4,7 @@
     File: fn_permission_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-29
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,9 @@ if (isServer) then {
     publicVariable "KPLIB_permission_data";
 
 };
+
+// Process CBA Settings
+[] call KPLIB_fnc_permission_settings;
 
 /*
     ----- Module Globals -----
