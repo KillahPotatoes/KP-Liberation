@@ -233,5 +233,7 @@ GRLIB_arsenal_backpacks = [
 "tf_rt1523g_green",
 "tf_rt1523g_big_bwmod",
 "tf_rt1523g_big_bwmod_tropen",
+"ifr_lg40_WpnBag",
+"ifr_lg40_PodBag",
 "B_Carryall_ocamo"
 ];
