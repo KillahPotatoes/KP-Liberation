@@ -740,6 +740,7 @@
             <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
+
         <!-- PERMISSION DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
             <English>KP Liberation Permissions</English>
@@ -756,6 +757,12 @@
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
             <German>- Abwesende Spieler -</German>
+        </Key>
+
+        <!-- LOGISTIC MAIN DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_LOGISTICMAIN_TITLE">
+            <English>KP Liberation Logistic Main Menu</English>
+            <German>KP Liberation Logistik Hauptmenü</German>
         </Key>
     </Package>
 
