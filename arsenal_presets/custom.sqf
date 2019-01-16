@@ -27,7 +27,7 @@ GRLIB_arsenal_weapons = [
 "fow_w_leeenfield_no4mk1",
 "fow_w_leeenfield_no4mk1_redwood",
 "LIB_PTRD",
-"LIB_PTRD_optic",
+"lib_PTRD_optic",
 "fow_w_webley",
 "fow_w_m1911",
 "KA_TL_122_flashlight",
