@@ -11,4 +11,4 @@
         Initializes the ui defines, dialogs and elements which are brought by this module.
 */
 
-#include "ui\KPLIB_*.hpp"
+#include "ui\KPLIB_logisticMain.hpp"

@@ -346,8 +346,12 @@
             <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
-            <English>-- Permissions --</English>
+            <English>-- PERMISSIONS --</English>
             <German>-- RECHTE --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_LOGISTIC">
+            <English>-- LOGISTIC --</English>
+            <German>-- LOGISTIK --</German>
         </Key>
     </Package>
 

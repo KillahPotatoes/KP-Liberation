@@ -14,6 +14,12 @@
 class logistic {
     file = "modules\23_logistic\fnc";
 
+    // Adds the logistic actions
+    class logistic_addActions {};
+
+    // Open the logistioc main dialog
+    class logistic_openDialog {};
+
     // Module post initialization
     class logistic_postInit {
         postInit = 1;
