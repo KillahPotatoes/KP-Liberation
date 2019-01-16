@@ -136,6 +136,7 @@ GRLIB_arsenal_items = [
 "ACE_tourniquet",                 			 //ACE
 "ACE_EarPlugs",
 "ACE_CableTie",
+"ACE_DefusalKit",
 "ACE_EntrenchingTool",
 "ACE_Clacker",
 "ACE_MapTools",
