@@ -17,7 +17,15 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initializing...", diag_tickTime];};
+if (isServer) then {
+    diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initializing...", diag_tickTime];
+
+    // Adding actions to spawned logi buildings
+    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_logistic_addActions;}] call CBA_fnc_addEventHandler;
+
+    KPLIB_logistic_data = true call CBA_fnc_createNamespace;
+    publicVariable "KPLIB_logistic_data";
+};
 
 /*
     ----- Module Globals -----
@@ -25,15 +33,6 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Modu
 
 KPLIB_logistic_building = KPLIB_preset_logiBuildingF;
 
-/*
-    ----- Module Initialization -----
-*/
-
-if (isServer) then {
-    // Adding actions to spawned logi buildings
-    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_logistic_addActions;}] call CBA_fnc_addEventHandler;
-
-    diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initialized", diag_tickTime];
-};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initialized", diag_tickTime];};
 
 true

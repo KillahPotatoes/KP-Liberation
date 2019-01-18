@@ -1355,6 +1355,15 @@
         </Key>
     </Package>
 
+    <!-- LOGISTIC -->
+
+    <Package name="Logistic">
+        <Key ID="STR_KPLIB_LOGISTIC_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
+    </Package>
+
     <!-- PERMISSIONS -->
 
     <Package name="Permissions">
