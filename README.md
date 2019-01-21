@@ -26,11 +26,11 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 * Never lose your progress with the built-in server-side save system.
 
 ## Needed Mods
-These mods are needed if you want to use the prepackaged missionfile from the release tab.
-*CUP Terrains (Data)
-*IFA3 Liberation
-*IFA3 All In One
-*Sabre's secret weapons
+These mods are needed if you want to use the prepackaged missionfile from the release tab:
+* CUP Terrains (Data)
+* IFA3 Liberation
+* IFA3 All In One
+* Sabre's secret weapons
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
 * [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
