@@ -1,16 +1,10 @@
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png)
 
-# KP Liberation for ArmA 3
+# WW2 ANZAC Liberation for ArmA 3
 
-## Current version : 0.963a
+## Current version : 2.7
 
-[BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
-
-[Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
-
-[Discord](https://discord.gg/bpPUU48)
-
-This mission is a version of the awesome mission called KP Liberation ,made by the KP Team, and developed by Pi123263
+This mission is a version of the awesome mission called KP Liberation, made by the KP Team.
 
 ## Overview
 The area has fallen to the enemy, and it is up to you to take it back. Embark on a persistent campaign with your teammates to liberate all the major cities of the area that will most likely span several weeks of real time.
