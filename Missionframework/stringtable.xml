@@ -768,6 +768,21 @@
             <English>KP Liberation Logistic Main Menu</English>
             <German>KP Liberation Logistik Hauptmenü</German>
         </Key>
+
+        <!-- RECYCLE DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_TITLE">
+            <English>KP Liberation Recycle </English>
+            <German>KP Liberation Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT">
+            <English>Select the vehicle, that you want to recycle.</English>
+            <German>Wähle das Fahrzeug aus, dass du Recyceln möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_REFRESH_TT">
+            <English>Refresh</English>
+            <Chinese>刷新</Chinese>
+            <German>Aktualisieren</German>
+        </Key>
     </Package>
 
 

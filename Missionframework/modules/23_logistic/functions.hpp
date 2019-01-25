@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-01-17
+    Last Update: 2019-01-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,6 +23,9 @@ class logistic {
     // Open the logistioc main dialog
     class logistic_openDialog {};
 
+    // Opens the logistic recycle dialog
+    class logistic_openRecycleDialog {};
+
     // Module post initialization
     class logistic_postInit {
         postInit = 1;
@@ -32,4 +35,7 @@ class logistic {
     class logistic_preInit {
         preInit = 1;
     };
+
+    // Refreshes the vehicle list
+    class logistic_refreshVehicles {};
 };

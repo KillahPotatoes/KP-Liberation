@@ -4,7 +4,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-01-17
+    Last Update: 2019-01-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,7 +21,7 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
 
-    ["Recycle", {closeDialog 0; systemChat "test";}, "STR_KPLIB_LOGISTIC_RECYCLE"] call KPLIB_fnc_logistic_addMenu;
+    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logistic_openRecycleDialog;}, "STR_KPLIB_LOGISTIC_RECYCLE"] call KPLIB_fnc_logistic_addMenu;
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initialized", diag_tickTime];};

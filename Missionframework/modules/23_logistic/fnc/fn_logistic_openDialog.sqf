@@ -5,7 +5,7 @@
     File: fn_logistic_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-01-18
+    Last Update: 2019-01-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,6 +17,9 @@
     Returns:
         Function reached the end [BOOL]
 */
+
+// Close all open Dialogs
+closeDialog 0;
 
 // Create dialog
 createDialog "KPLIB_logisticMain";
