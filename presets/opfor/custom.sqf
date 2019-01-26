@@ -28,7 +28,7 @@ opfor_paratrooper = 						"LIB_FSJ_Soldier_2_para";                          	//
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = 								"LIB_kfz1";											//Kuebelwagen
 opfor_mrap_armed = 							"LIB_Kfz1_MG42";									//Kuebelwagen (MG42)
-opfor_transport_helo = 						"O_Heli_Transport_04_bench_F";						//Mi-290 Taru (Bench)
+opfor_transport_helo = 						"ifa3_pzkpfwIV_H";									//Mi-290 Taru (Bench)
 opfor_transport_truck = 					"LIB_opelblitz_tent_y_camo";						//Opel Blitz Transport (Covered)
 opfor_ammobox_transport = 					"LIB_opelblitz_open_y_camo";						//Opel Blitz Transport (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = 							"LIB_opelblitz_fuel";								//Opel Blitz Fuel
@@ -158,16 +158,8 @@ opfor_vehicles = [
 	"ifa3_stuh_42",								"ifa3_stuh_42",
 	"Lib_SdKfz124",
 	"Lib_FlakpanzerIV_Wirbelwind",
-	"Lib_PzKpfwVI_E",
-	"Lib_PzKpfwVI_E_1",
-	"Lib_PzKpfwVI_E_2",
-	"Lib_PzKpfwVI_E_tarn51c",
-	"Lib_PzKpfwVI_E_tarn51d",
-	"Lib_PzKpfwVI_E_tarn52c",
-	"Lib_PzKpfwVI_E_tarn52d",
-	"Lib_PzKpfwVI_B",
-	"Lib_PzKpfwVI_B_tarn51c",
-	"Lib_PzKpfwVI_B_tarn51d"
+	"Lib_PzKpfwVI_E",							"Lib_PzKpfwVI_E_1",	
+	"Lib_PzKpfwVI_B",							"Lib_PzKpfwVI_B_tarn51c"
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
