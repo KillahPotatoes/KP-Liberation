@@ -1,41 +1,25 @@
-private [ "_doeject" ];
+params ["_role", "_vehicle"];
 
-_doeject = false;
+private _doEject = false;
+private _blacklistedRoles = ["driver", "gunner", "commander"];
+private _permissableVehicles = [["Tank", 1, "STR_PERMISSION_NO_ARMOR"], ["Air", 2, "STR_PERMISSION_NO_AIR"]];
 
-while { true } do {
-
-	waitUntil { alive player };
-
-	waitUntil { sleep 0.2;
-		vehicle player == player
+_playerVehicleDetails = _permissableVehicles select {_vehicle isKindOf (_x select 0)} select 0;
+if(count _playerVehicleDetails == 0) then {
+	if(!([player, 0] call F_fetchPermission)) then {
+		_doEject = true;
+		hint localize "STR_PERMISSION_NO_LIGHT";
 	};
+} else {
+	_vehiclePermissionIndex = _playerVehicleDetails select 1;
+	_vehiclePermissionAccessMessage = _playerVehicleDetails select 2;
 
-	waitUntil { sleep 0.2;
-		(vehicle player != player) &&  ( (vehicle player ) getCargoIndex player ) < 0  && isTouchingGround (vehicle player) && !((vehicle player ) isKindOf "ParachuteBase")
+	if(!([player, _vehiclePermissionIndex] call F_fetchPermission) && _role in _blacklistedRoles) then {
+		_doEject = true;
+		hint localize _vehiclePermissionAccessMessage;
 	};
+};
 
-	if ( (vehicle player ) isKindOf "Tank" ) then {
-		if ( ! (  [ player, 1 ] call F_fetchPermission ) ) then {
-			_doeject = true;
-			hint localize "STR_PERMISSION_NO_ARMOR";
-		};
-	} else {
-		if ( (vehicle player ) isKindOf "Air" ) then {
-			if ( ! (  [ player, 2 ] call F_fetchPermission ) ) then {
-				_doeject = true;
-				hint localize "STR_PERMISSION_NO_AIR";
-			};
-		} else {
-			if ( ! (  [ player, 0 ] call F_fetchPermission ) ) then {
-				_doeject = true;
-				hint localize "STR_PERMISSION_NO_LIGHT";
-			};
-
-		};
-	};
-
-	if ( _doeject ) then {
-		moveOut player;
-		_doeject = false;
-	};
+if (_doEject) then {
+	moveOut player;
 };
