@@ -4,7 +4,7 @@
     File: fn_logistic_openRecycleDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-01-25
+    Last Update: 2019-01-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,8 +23,7 @@ disableSerialization;
 
 // Dialog controls
 private _dialog = findDisplay 7580232;
-private _ctrlVehicleList = _dialog displayCtrl 68740;
 
-
+[] call KPLIB_fnc_logistic_refreshVehicles;
 
 true

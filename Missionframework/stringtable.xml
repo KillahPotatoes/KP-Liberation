@@ -771,7 +771,7 @@
 
         <!-- RECYCLE DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_TITLE">
-            <English>KP Liberation Recycle </English>
+            <English>KP Liberation Recycle</English>
             <German>KP Liberation Recyceln</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT">
@@ -782,6 +782,22 @@
             <English>Refresh</English>
             <Chinese>刷新</Chinese>
             <German>Aktualisieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_RESOURCES">
+            <English>Refunded Resources:</English>
+            <German>Erstattete Ressourcen:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_SUPPLY">
+            <English>Supplies:</English>
+            <German>Nachschub:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMO">
+            <English>Ammo:</English>
+            <German>Munition:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUEL">
+            <English>Fuel:</English>
+            <German>Treibstoff:</German>
         </Key>
     </Package>
 
