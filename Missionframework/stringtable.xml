@@ -436,6 +436,10 @@
             <English>Reset to default</English>
             <German>Auf Standard zurücksetzen</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
 
         <!-- ADMIN MENU DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ADMIN_TITLE">
@@ -1265,6 +1269,21 @@
         <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE_TT">
             <English>Enables/Disables the Liberation permission system.</English>
             <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
+        </Key>
+
+        <!-- RECYCLE CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE">
+            <English>KPLIB - Recycle</English>
+            <German>KPLIB - Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR">
+            <English>Enable Permission System</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR_TT">
+            <English>Enables/Disables the Liberation permission system.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
+        </Key>
     </Package>
 
 

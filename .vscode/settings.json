@@ -29,6 +29,7 @@
         "KPLIB_param_presetE",
         "KPLIB_param_presetF",
         "KPLIB_param_presetR",
+        "KPLIB_param_recycleFactor",
         "KPLIB_param_reviveBleedOutDuration",
         "KPLIB_param_reviveDuration",
         "KPLIB_param_reviveForceRespawnDuration",
