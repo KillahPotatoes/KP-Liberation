@@ -1277,12 +1277,12 @@
             <German>KPLIB - Recyceln</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR">
-            <English>Enable Permission System</English>
-            <German>Rechtesystem aktivieren</German>
+            <English>Recycle refund factor</English>
+            <German>Recycel Rückerstattung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR_TT">
-            <English>Enables/Disables the Liberation permission system.</English>
-            <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
+            <English>Defines the recycle refund in percentage.</English>
+            <German>Definiert die Recycel Rückerstattung in Prozent.</German>
         </Key>
     </Package>
 
