@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-01-28
+    Last Update: 2019-01-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,6 +35,9 @@ class logistic {
     class logistic_preInit {
         preInit = 1;
     };
+
+    // Recycles the selected vehicle
+    class logistic_recycleTarget {};
 
     // Refreshes the vehicle list
     class logistic_refreshVehicles {};

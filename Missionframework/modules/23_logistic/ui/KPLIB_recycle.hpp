@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-01-28
+    Last Update: 2019-01-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -64,7 +64,7 @@ class KPLIB_recycle {
 
         class KPLIB_TextSupplyRefund: KPGUI_PRE_Text {
             idc = 68741;
-            text = "0";
+            text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,8,48);
@@ -92,9 +92,19 @@ class KPLIB_recycle {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,14,48);
         };
 
+        class KPLIB_RecycleCam: KPGUI_PRE_Picture {
+            idc = 68744;
+            text = "KPGUI\res\kp512_CA.paa";
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,2);
+        }
+
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
             idc = 68745;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
+            action = "[] call KPLIB_fnc_logistic_recycleTarget"
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {

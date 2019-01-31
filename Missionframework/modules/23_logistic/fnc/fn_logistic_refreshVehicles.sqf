@@ -4,7 +4,7 @@
     File: fn_logistic_refreshVehicles.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-01-27
+    Last Update: 2019-01-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,6 +32,10 @@ private _type = "";
 private _name = "";
 private _index = 0;
 
+// Add a blank entry
+_index = _ctrlVehicleList lbAdd "----------";
+_ctrlVehicleList lbSetData [_index, "placeholder"];
+
 // Fill the list
 {
     _type = typeOf _x;
@@ -45,5 +49,7 @@ private _index = 0;
         _ctrlVehicleList lbSetPicture [_index, _picture];
     };
 } forEach _vehicles;
+
+_ctrlVehicleList lbSetCurSel 0;
 
 true

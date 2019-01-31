@@ -4,7 +4,7 @@
     File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-01-28
+    Last Update: 2019-01-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,6 +28,13 @@ private _recycleButton = _dialog displayCtrl 68745;
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
 private _vehicleId = _ctrlVehicleList lbData _index;
+
+// Check for empty selection
+if (_vehicleId isEqualTo "placeholder") exitWith {
+    _ctrlSupply ctrlSetText "---";
+    _ctrlAmmo ctrlSetText "---";
+    _ctrlFuel ctrlSetText "---";
+};
 
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
