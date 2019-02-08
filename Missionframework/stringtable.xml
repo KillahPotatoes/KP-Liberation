@@ -1456,7 +1456,7 @@
     <!-- LOGISTIC -->
 
     <Package name="Logistic">
-        <Key ID="STR_KPLIB_LOGISTIC_RECYCLE">
+        <Key ID="STR_KPLIB_logi_RECYCLE">
             <English>Recycle</English>
             <German>Recyceln</German>
         </Key>

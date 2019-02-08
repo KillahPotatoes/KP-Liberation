@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logistic_refreshVehicles
+    KPLIB_fnc_logi_refreshVehicles
 
-    File: fn_logistic_refreshVehicles.sqf
+    File: fn_logi_refreshVehicles.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
     Last Update: 2019-01-31

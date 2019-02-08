@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logistic_addMenu
+    KPLIB_fnc_logi_addMenu
 
-    File: fn_logistic_addMenu.sqf
+    File: fn_logi_addMenu.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-17
     Last Update: 2019-01-31
@@ -26,10 +26,10 @@ params [
 ];
 
 // Read the registered menus
-private _menus = KPLIB_logistic_data getVariable ["menus", []];
+private _menus = KPLIB_logi_data getVariable ["menus", []];
 
 // Append the new menu and save the variable
 _menus pushBack [_menu, _code, _string];
-KPLIB_logistic_data setVariable ["menus", _menus, true];
+KPLIB_logi_data setVariable ["menus", _menus, true];
 
 true

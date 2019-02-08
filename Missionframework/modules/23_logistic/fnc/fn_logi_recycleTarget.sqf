@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logistic_recycleTarget
+    KPLIB_fnc_logi_recycleTarget
 
-    File: fn_logistic_recycleTarget.sqf
+    File: fn_logi_recycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-31
     Last Update: 2019-02-08
@@ -39,6 +39,6 @@ deleteVehicle _vehicle;
 - Implement Resource refund
 */
 
-[] call KPLIB_fnc_logistic_refreshVehicles;
+[] call KPLIB_fnc_logi_refreshVehicles;
 
 true

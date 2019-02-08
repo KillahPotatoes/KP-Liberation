@@ -11,40 +11,40 @@
         Defines for all functions, which are brought by this module.
 */
 
-class logistic {
+class logi {
     file = "modules\23_logistic\fnc";
 
     // Adds the logistic actions
-    class logistic_addActions {};
+    class logi_addActions {};
 
     // Adds a new menu to the logistic main menu
-    class logistic_addMenu {};
+    class logi_addMenu {};
 
     // Open the logistioc main dialog
-    class logistic_openDialog {};
+    class logi_openDialog {};
 
     // Opens the logistic recycle dialog
-    class logistic_openRecycleDialog {};
+    class logi_openRecycleDialog {};
 
     // Module post initialization
-    class logistic_postInit {
+    class logi_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class logistic_preInit {
+    class logi_preInit {
         preInit = 1;
     };
 
     // Recycles the selected vehicle
-    class logistic_recycleTarget {};
+    class logi_recycleTarget {};
 
     // Refreshes the vehicle list
-    class logistic_refreshVehicles {};
+    class logi_refreshVehicles {};
 
     // Selects the vehicle from the combo cox and fills the dialog
-    class logistic_selectRecycleTarget {};
+    class logi_selectRecycleTarget {};
 
     // CBA Settings initialization for this module
-    class logistic_settings {};
+    class logi_settings {};
 };

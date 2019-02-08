@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logistic_postInit
+    KPLIB_fnc_logi_postInit
 
-    File: fn_logistic_postInit.sqf
+    File: fn_logi_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
     Last Update: 2019-01-31
@@ -21,7 +21,7 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
 
-    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logistic_openRecycleDialog;}, "STR_KPLIB_LOGISTIC_RECYCLE"] call KPLIB_fnc_logistic_addMenu;
+    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logi_openRecycleDialog;}, "STR_KPLIB_logi_RECYCLE"] call KPLIB_fnc_logi_addMenu;
 
     private _vehicles = [];
     {
@@ -42,7 +42,7 @@ if (isServer) then {
         "jets",
         "logistic"
     ];
-    KPLIB_logistic_data setVariable ["Vehicles", _vehicles, true]
+    KPLIB_logi_data setVariable ["Vehicles", _vehicles, true]
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initialized", diag_tickTime];};

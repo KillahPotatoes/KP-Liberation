@@ -14,7 +14,7 @@
 class KPLIB_recycle {
     idd = 7580232;
     movingEnable = 0;
-    onUnload = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam;";
+    onUnload = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam;";
 
     class controlsBackground {
 
@@ -34,7 +34,7 @@ class KPLIB_recycle {
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT";
-            onLBSelChanged = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam; [] spawn KPLIB_fnc_logistic_selectRecycleTarget";
+            onLBSelChanged = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam; [] spawn KPLIB_fnc_logi_selectRecycleTarget";
         };
 
         class KPLIB_RefreshVehicles: KPGUI_PRE_CloseCross {
@@ -44,7 +44,7 @@ class KPLIB_recycle {
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RECYCLE_REFRESH_TT";
-            action = "[] call KPLIB_fnc_logistic_refreshVehicles";
+            action = "[] call KPLIB_fnc_logi_refreshVehicles";
         };
 
         class KPLIB_LabelResources: KPGUI_PRE_InlineTitle {
@@ -105,7 +105,7 @@ class KPLIB_recycle {
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
             idc = 68745;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
-            action = "[] call KPLIB_fnc_logistic_recycleTarget"
+            action = "[] call KPLIB_fnc_logi_recycleTarget"
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {
