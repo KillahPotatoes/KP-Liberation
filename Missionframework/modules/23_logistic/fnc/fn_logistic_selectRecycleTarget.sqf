@@ -75,6 +75,10 @@ if !(_vehicleIndex isEqualTo -1) then {
     _ctrlFuel ctrlSetText str (KPLIB_param_refundFuel * _fuel);
 };
 
+/* TODO:
+- Implement check for empty cargo space
+*/
+
 _recycleButton ctrlEnable true;
 
 true
