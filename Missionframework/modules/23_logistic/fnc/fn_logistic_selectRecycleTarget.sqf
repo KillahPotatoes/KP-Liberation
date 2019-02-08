@@ -23,6 +23,7 @@ private _ctrlVehicleList = _dialog displayCtrl 68740;
 private _ctrlSupply = _dialog displayCtrl 68741;
 private _ctrlAmmo = _dialog displayCtrl 68742;
 private _ctrlFuel = _dialog displayCtrl 68743;
+private _ctrlCam = _dialog displayCtrl 68744;
 private _recycleButton = _dialog displayCtrl 68745;
 
 // Read controls
@@ -34,6 +35,7 @@ if (_vehicleId isEqualTo "placeholder") exitWith {
     _ctrlSupply ctrlSetText "---";
     _ctrlAmmo ctrlSetText "---";
     _ctrlFuel ctrlSetText "---";
+    _ctrlCam ctrlSetText "KPGUI\res\kp512_CA.paa";
 };
 
 // Get the target vehicle
@@ -80,5 +82,26 @@ if !(_vehicleIndex isEqualTo -1) then {
 */
 
 _recycleButton ctrlEnable true;
+
+// Spawn camera object
+_ctrlCam ctrlSetText "#(argb,512,512,1)r2t(rtt,1)";
+camUseNVG false;
+showCinemaBorder false;
+private _cam = "camera" camCreate (getpos _vehicle);
+_cam cameraEffect ["internal", "front", "rtt"];
+KPLIB_logistic_activeCam = _cam;
+_cam camSetTarget _vehicle;
+_cam camSetFov 0.5;
+_cam camCommit 0;
+_cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 5]);
+_cam camCommit 0;
+
+while {(lbCurSel _ctrlVehicleList) isEqualTo _index || !dialog} do {
+    for "_i" from 1 to 36 do {
+        _cam camSetPos ((_vehicle getRelPos [15, _i * 10]) vectorAdd [0, 0, 5]);
+        _cam camCommit 30/36;
+        waitUntil {camCommitted _cam};
+    };
+};
 
 true
