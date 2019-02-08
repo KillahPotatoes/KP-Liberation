@@ -4,7 +4,7 @@
     File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-01-31
+    Last Update: 2019-02-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,14 +40,40 @@ if (_vehicleId isEqualTo "placeholder") exitWith {
 private _vehicle = objectFromNetId _vehicleId;
 private _type = typeOf _vehicle;
 private _vehicles = KPLIB_logistic_data getVariable ["Vehicles", []];
-private _vehicleArray = _vehicles select (_vehicles findIf {_x select 0 isEqualTo _type});
+private _vehicleIndex = _vehicles findIf {_x select 0 isEqualTo _type};
+private _damage = 1;
+private _ammo = 1;
+private _fuel = 1;
 
-_vehicle = _vehicles select (_vehicles findIf {_x select 0 isEqualTo "B_APC_Wheeled_01_cannon_F"});
+if (KPLIB_param_damageInfluence) then {
+    _damage = (1 - damage _vehicle);
+};
+
+if (KPLIB_param_ammoInfluence) then {
+    private _ammoState = {_x select 2 != 0} count magazinesAllTurrets _vehicle;
+    if (_ammoState > 0) then {
+        private _ammoMax = count magazinesAllTurrets _vehicle;
+        _ammo = _ammoState / _ammoMax;
+    } else {
+        _ammo = 0;
+    };
+};
+
+if (KPLIB_param_fuelInfluence) then {
+    _fuel = fuel _vehicle;
+};
 
 // Fill the controls
-    _ctrlSupply ctrlSetText str (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100)));
-    _ctrlAmmo ctrlSetText str (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100)));
-    _ctrlFuel ctrlSetText str (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100)));
+if !(_vehicleIndex isEqualTo -1) then {
+    private _vehicleArray = _vehicles select _vehicleIndex;
+    _ctrlSupply ctrlSetText str (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
+    _ctrlAmmo ctrlSetText str (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
+    _ctrlFuel ctrlSetText str (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
+} else {
+    _ctrlSupply ctrlSetText str (KPLIB_param_refundSupply * _damage);
+    _ctrlAmmo ctrlSetText str (KPLIB_param_refundAmmo * _ammo);
+    _ctrlFuel ctrlSetText str (KPLIB_param_refundFuel * _fuel);
+};
 
 _recycleButton ctrlEnable true;
 

@@ -1278,11 +1278,59 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR">
             <English>Recycle refund factor</English>
-            <German>Recycel Rückerstattung</German>
+            <German>Rückerstattungs Faktor</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR_TT">
             <English>Defines the recycle refund in percentage.</English>
-            <German>Definiert die Recycel Rückerstattung in Prozent.</German>
+            <German>Definiert die Rückerstattung in Prozent.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE">
+            <English>Damage influence</English>
+            <German>Schadens Auswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE_TT">
+            <English>Activates/deactivates the supply refund dependent on the damage state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die beeinflussung des erstatteten Nachschubs in Abhängigkeit vom Schaden des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE">
+            <English>Ammo influence</English>
+            <German>Munitions Auswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE_TT">
+            <English>Activates/deactivates the ammo refund dependent on the ammo state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die beeinflussung der erstatteten Munition in Abhängigkeit der aktuellen Munition des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE">
+            <English>Fuel influence</English>
+            <German>Treibstoff Auswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE_TT">
+            <English>Activates/deactivates the fuel refund dependent on the fuel state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die beeinflussung des erstatteten Treibstoffs in Abhängigkeit vom Treibstoffstand des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY">
+            <English>Supply refund</English>
+            <German>Nachschub Rückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY_TT">
+            <English>Defines the supply refund for vehicles without defined costs.</English>
+            <German>Definiert die Nachschub Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO">
+            <English>Ammo refund</English>
+            <German>Munitions Rückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO_TT">
+            <English>Defines the ammo refund for vehicles without defined costs.</English>
+            <German>Definiert die Munitions Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL">
+            <English>Fuel refund</English>
+            <German>Treibstoff Rückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL_TT">
+            <English>Defines the fuel refund for vehicles without defined costs.</English>
+            <German>Definiert die Treibstoff Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
         </Key>
     </Package>
 
