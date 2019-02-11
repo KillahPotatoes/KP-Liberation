@@ -791,17 +791,33 @@
             <English>Refunded Resources:</English>
             <German>Erstattete Ressourcen:</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_REFUND">
+            <English>Refund:</English>
+            <German>Rückerstattung:</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_SUPPLY">
             <English>Supplies:</English>
             <German>Nachschub:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_SUPPLYSTATE">
+            <English>State:</English>
+            <German>Zustand:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMO">
             <English>Ammo:</English>
             <German>Munition:</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMOSTATE">
+            <English>Remaining Ammo:</English>
+            <German>Munitionsstand:</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUEL">
             <English>Fuel:</English>
             <German>Treibstoff:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUELSTATE">
+            <English>Fuel level:</English>
+            <German>Treibstoffstand:</German>
         </Key>
     </Package>
 

@@ -4,7 +4,7 @@
     File: fn_logi_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-02-08
+    Last Update: 2019-02-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,11 +20,13 @@
 // Dialog controls
 private _dialog = findDisplay 7580232;
 private _ctrlVehicleList = _dialog displayCtrl 68740;
-private _ctrlSupply = _dialog displayCtrl 68741;
-private _ctrlAmmo = _dialog displayCtrl 68742;
-private _ctrlFuel = _dialog displayCtrl 68743;
-private _ctrlCam = _dialog displayCtrl 68744;
-private _recycleButton = _dialog displayCtrl 68745;
+private _ctrlSupplyFactor = _dialog displayCtrl 68741;
+private _ctrlSupplyValue = _dialog displayCtrl 68742;
+private _ctrlAmmoFactor = _dialog displayCtrl 68743;
+private _ctrlAmmoValue = _dialog displayCtrl 68744;
+private _ctrlFuelFactor = _dialog displayCtrl 68745;
+private _ctrlFuelValue = _dialog displayCtrl 68746;
+private _recycleButton = _dialog displayCtrl 68747;
 
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
@@ -32,10 +34,12 @@ private _vehicleId = _ctrlVehicleList lbData _index;
 
 // Check for empty selection
 if (_vehicleId isEqualTo "placeholder") exitWith {
-    _ctrlSupply ctrlSetText "---";
-    _ctrlAmmo ctrlSetText "---";
-    _ctrlFuel ctrlSetText "---";
-    _ctrlCam ctrlSetText "KPGUI\res\kp512_CA.paa";
+    _ctrlSupplyFactor ctrlSetText "---";
+    _ctrlSupplyValue ctrlSetText "---";
+    _ctrlAmmoFactor ctrlSetText "---";
+    _ctrlAmmoValue ctrlSetText "---";
+    _ctrlFuelFactor ctrlSetText "---";
+    _ctrlFuelValue ctrlSetText "---";
 };
 
 // Get the target vehicle
@@ -68,14 +72,18 @@ if (KPLIB_param_fuelInfluence) then {
 // Fill the controls
 if !(_vehicleIndex isEqualTo -1) then {
     private _vehicleArray = _vehicles select _vehicleIndex;
-    _ctrlSupply ctrlSetText str (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
-    _ctrlAmmo ctrlSetText str (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
-    _ctrlFuel ctrlSetText str (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
+    _ctrlSupplyValue ctrlSetText str (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
+    _ctrlAmmoValue ctrlSetText str (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
+    _ctrlFuelValue ctrlSetText str (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
 } else {
-    _ctrlSupply ctrlSetText str (KPLIB_param_refundSupply * _damage);
-    _ctrlAmmo ctrlSetText str (KPLIB_param_refundAmmo * _ammo);
-    _ctrlFuel ctrlSetText str (KPLIB_param_refundFuel * _fuel);
+    _ctrlSupplyValue ctrlSetText str (KPLIB_param_refundSupply * _damage);
+    _ctrlAmmoValue ctrlSetText str (KPLIB_param_refundAmmo * _ammo);
+    _ctrlFuelValue ctrlSetText str (KPLIB_param_refundFuel * _fuel);
 };
+
+_ctrlSupplyFactor ctrlSetText str (round (_damage * 100)) + " %";
+_ctrlAmmoFactor ctrlSetText str (round (_ammo * 100)) + " %";
+_ctrlFuelFactor ctrlSetText str (round (_fuel * 100)) + " %";
 
 /* TODO:
 - Implement check for empty cargo space
@@ -84,7 +92,6 @@ if !(_vehicleIndex isEqualTo -1) then {
 _recycleButton ctrlEnable true;
 
 // Spawn camera object
-_ctrlCam ctrlSetText "#(argb,512,512,1)r2t(rtt,1)";
 camUseNVG false;
 showCinemaBorder false;
 private _cam = "camera" camCreate (getpos _vehicle);

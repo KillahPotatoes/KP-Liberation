@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-02-08
+    Last Update: 2019-02-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -55,7 +55,7 @@ class KPLIB_recycle {
             h = KP_GETH(KP_HEIGHT_VAL_C,16);
         };
 
-        class KPLIB_TextSupply: KPGUI_PRE_Text {
+        class KPLIB_TextSupply: KPGUI_PRE_InlineTitle {
             text = "$STR_KPLIB_DIALOG_RECYCLE_SUPPLY";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,8,48);
@@ -63,47 +63,104 @@ class KPLIB_recycle {
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KPLIB_TextSupplyRefund: KPGUI_PRE_Text {
+        class KPLIB_TextSupplyCondition: KPGUI_PRE_Text {
+            text = "$STR_KPLIB_DIALOG_RECYCLE_SUPPLYSTATE";
+            style = 0;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,10,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+        };
+
+        class KPLIB_TextSupplyConditionValue: KPGUI_PRE_Text {
             idc = 68741;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,8,48);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,10,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+        };
+
+        class KPLIB_TextSupplyRefund: KPGUI_PRE_Text {
+            text = "$STR_KPLIB_DIALOG_RECYCLE_REFUND";
+            style = 0;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,12,48);
+            w = KP_GETW(KP_WIDTH_VAL_C,1);
+            h = KP_GETH(KP_HEIGHT_VAL_C,24);
+        };
+
+        class KPLIB_TextSupplyRefundValue: KPGUI_PRE_Text {
+            idc = 68742;
+            text = "---";
+            style = 1;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,12,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
         class KPLIB_TextAmmo: KPLIB_TextSupply {
             text = "$STR_KPLIB_DIALOG_RECYCLE_AMMO";
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,48);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,15,48);
+        };
+
+        class KPLIB_TextAmmoState: KPLIB_TextSupplyCondition {
+            text = "$STR_KPLIB_DIALOG_RECYCLE_AMMOSTATE";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
+        };
+
+        class KPLIB_TextAmmoStateValue: KPLIB_TextSupplyConditionValue {
+            idc = 68743;
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
         };
 
         class KPLIB_TextAmmoRefund: KPLIB_TextSupplyRefund {
-            idc = 68742;
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,48);
+            text = "$STR_KPLIB_DIALOG_RECYCLE_REFUND";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,19,48);
+        };
+
+        class KPLIB_TextAmmoRefundValue: KPLIB_TextSupplyRefundValue {
+            idc = 68744;
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,19,48);
         };
 
         class KPLIB_TextFuel: KPLIB_TextSupply {
             text = "$STR_KPLIB_DIALOG_RECYCLE_FUEL";
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,14,48);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,22,48);
+        };
+
+        class KPLIB_TextFuelState: KPLIB_TextSupplyCondition {
+            text = "$STR_KPLIB_DIALOG_RECYCLE_FUELSTATE";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
+        };
+
+        class KPLIB_TextFuelStateValue: KPLIB_TextSupplyConditionValue {
+            idc = 68745;
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
         };
 
         class KPLIB_TextFuelRefund: KPLIB_TextSupplyRefund {
-            idc = 68743;
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,14,48);
+            text = "$STR_KPLIB_DIALOG_RECYCLE_REFUND";
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,26,48);
+        };
+
+        class KPLIB_TextFuelRefundValue: KPLIB_TextSupplyRefundValue {
+            idc = 68746;
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,26,48);
         };
 
         class KPLIB_RecycleCam: KPGUI_PRE_Picture {
-            idc = 68744;
-            text = "KPGUI\res\kp512_CA.paa";
+            text = "#(argb,512,512,1)r2t(rtt,1.333)";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
-            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,31,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
-            h = KP_GETH(KP_HEIGHT_VAL_C,2);
+            h = KP_GETH(KP_HEIGHT_VAL_C,3);
         }
 
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
-            idc = 68745;
+            idc = 68747;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
             action = "[] call KPLIB_fnc_logi_recycleTarget"
         };
