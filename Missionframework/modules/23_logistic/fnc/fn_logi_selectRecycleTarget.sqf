@@ -4,7 +4,7 @@
     File: fn_logi_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-02-11
+    Last Update: 2019-02-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -51,6 +51,7 @@ private _damage = 1;
 private _ammo = 1;
 private _fuel = 1;
 
+// Check for the influence params
 if (KPLIB_param_damageInfluence) then {
     _damage = (1 - damage _vehicle);
 };
