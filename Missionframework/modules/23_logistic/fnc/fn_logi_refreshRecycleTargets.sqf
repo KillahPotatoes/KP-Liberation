@@ -1,14 +1,14 @@
 /*
-    KPLIB_fnc_logi_refreshVehicles
+    KPLIB_fnc_logi_refreshRecycleTargets
 
-    File: fn_logi_refreshVehicles.sqf
+    File: fn_logi_refreshRecycleTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-01-31
+    Last Update: 2019-02-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Refreshes the vehicle list.
+        Refreshes the recycle vehicle list.
 
     Parameter(s):
         NONE

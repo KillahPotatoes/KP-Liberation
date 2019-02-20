@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-01-31
+    Last Update: 2019-02-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,8 +39,8 @@ class logi {
     // Recycles the selected vehicle
     class logi_recycleTarget {};
 
-    // Refreshes the vehicle list
-    class logi_refreshVehicles {};
+    // Refreshes the recycle vehicle list
+    class logi_refreshRecycleTargets {};
 
     // Selects the vehicle from the combo cox and fills the dialog
     class logi_selectRecycleTarget {};
