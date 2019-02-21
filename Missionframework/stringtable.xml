@@ -440,6 +440,10 @@
             <English>Recycle</English>
             <German>Recyceln</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RESUPPLY">
+            <English>Resupply</English>
+            <German>Versorgen</German>
+        </Key>
 
         <!-- ADMIN MENU DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_ADMIN_TITLE">
@@ -818,6 +822,21 @@
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUELSTATE">
             <English>Fuel level:</English>
             <German>Treibstoffstand:</German>
+        </Key>
+
+        <!-- RESUPPLY DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_TITLE">
+            <English>KP Liberation Resupply</English>
+            <German>KP Liberation Nachschub</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_VEHICLE_TT">
+            <English>Select the vehicle, that you want to resupply.</English>
+            <German>Wähle das Fahrzeug aus, dass du Versorgen möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_REFRESH_TT">
+            <English>Refresh</English>
+            <Chinese>刷新</Chinese>
+            <German>Aktualisieren</German>
         </Key>
     </Package>
 
@@ -1472,9 +1491,13 @@
     <!-- LOGISTIC -->
 
     <Package name="Logistic">
-        <Key ID="STR_KPLIB_logi_RECYCLE">
+        <Key ID="STR_KPLIB_LOGI_RECYCLE">
             <English>Recycle</English>
             <German>Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_LOGI_RESUPPLY">
+            <English>Resupply</English>
+            <German>Nachschub</German>
         </Key>
     </Package>
 

@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-02-11
+    Last Update: 2019-02-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -44,7 +44,7 @@ class KPLIB_recycle {
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RECYCLE_REFRESH_TT";
-            action = "[] call KPLIB_fnc_logi_refreshVehicles";
+            action = "[7580232, 68740] call KPLIB_fnc_logi_refreshTargets";
         };
 
         class KPLIB_LabelResources: KPGUI_PRE_InlineTitle {

@@ -1,25 +1,31 @@
 /*
-    KPLIB_fnc_logi_refreshRecycleTargets
+    KPLIB_fnc_logi_refreshTargets
 
-    File: fn_logi_refreshRecycleTargets.sqf
+    File: fn_logi_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-02-20
+    Last Update: 2019-02-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Refreshes the recycle vehicle list.
+        Refreshes the vehicle list for the given dialog.
 
     Parameter(s):
-        NONE
+        _dialogId   - The dialog id     [Number, defaults to 0]
+        _ctrlId     - The control id    [Number, defaults to 0]
 
     Returns:
         Function reached the end [BOOL]
 */
 
+params [
+    ["_dialogId", 0, [0]],
+    ["_ctrlId", 0, [0]]
+];
+
 // Dialog controls
-private _dialog = findDisplay 7580232;
-private _ctrlVehicleList = _dialog displayCtrl 68740;
+private _dialog = findDisplay _dialogId;
+private _ctrlVehicleList = _dialog displayCtrl _ctrlId;
 
 lbClear _ctrlVehicleList;
 
