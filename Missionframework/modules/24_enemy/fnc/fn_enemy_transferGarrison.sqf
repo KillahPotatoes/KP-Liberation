@@ -11,7 +11,8 @@
         Transfer given amount of infantry or vehicle classes from one sector to another.
         Given the condition, that the amount of infantry or the specific classname is available at the origin sector.
         The origin sector also has to be inactive.
-        NOTE: Maybe this could be moved to the garrison module.
+
+        !NOTE! Maybe this could be moved to the garrison module.
 
     Parameter(s):
         _origin         - Sector from which the troops should be transfered                     [STRING, defaults to ""]
@@ -108,7 +109,7 @@ if !(_troops > (_garrison select 2)) then {
 
 // Handle requested vehicles
 if !(_vehicleClasses isEqualTo []) then {
-
+    // !TODO!
 };
 
 // Send created units to destination
