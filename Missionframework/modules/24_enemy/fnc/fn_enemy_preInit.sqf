@@ -54,7 +54,7 @@ if (isServer) then {
     ["KPLIB_sector_deactivated", {[_this select 0] call KPLIB_fnc_enemy_sectorDeact;}] call CBA_fnc_addEventHandler;
 
     // Register convoy arrival event handler
-    ["KPLIB_transferConvoy_end", {[_this select 0] call KPLIB_fnc_enemy_handleConvoyEnd;}] call CBA_fnc_addEventHandler;
+    ["KPLIB_transferConvoy_end", {_this call KPLIB_fnc_enemy_handleConvoyEnd;}] call CBA_fnc_addEventHandler;
 };
 
 // HC section
