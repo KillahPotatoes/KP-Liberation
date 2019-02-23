@@ -29,11 +29,37 @@ private _grp = group (_units select 0);
 // !DEBUG!
 hint format ["Arrived: %1\nUnits: %2\nDestination: %3 (%4)", units _grp, _units, markerText _destination, _destination];
 
-[_destination, count _units] call KPLIB_fnc_garrison_addInfantry;
+private _garrisonRef = [_destination, true] call KPLIB_fnc_garrison_getGarrison;
 
-{
-    deleteVehicle (vehicle _x);
-    deleteVehicle _x;
-} forEach (units _grp);
+if (_garrisonRef isEqualTo []) then {
+    // Delete units and add to garrison, if sector isn't active
+    [_destination, count _units] call KPLIB_fnc_garrison_addInfantry;
+    {
+        deleteVehicle (vehicle _x);
+        deleteVehicle _x;
+    } forEach (units _grp);
+} else {
+    // Add infantry and vehicles to active garrison array for a possible later despawn
+    {
+        private _parent = objectParent _x;
+
+        // Assign to active garrison arrays according to arrived type of reinforcement
+        switch (true) do {
+            case ((typeOf _parent) in KPLIB_preset_vehLightArmedPlE): {(_garrisonRef select 3) pushBackUnique _parent;};
+            case ((typeOf _parent) in (KPLIB_preset_vehHeavyApcPlE + KPLIB_preset_vehHeavyPlE)): {(_garrisonRef select 4) pushBackUnique _parent;};
+            default {
+                (_garrisonRef select 2) pushBackUnique _x;
+                // If it's infantry with a transport vehicle, let them disembark
+                if !(isNull _parent) then {
+                    _grp leaveVehicle _parent;
+                    (_garrisonRef select 3) pushBackUnique _parent;
+                };
+            };
+        };
+    } forEach (units _grp);
+
+    // Add patrol task to arrived group
+    [_grp, markerPos _destination, 150, 3, 1, 0.6] call CBA_fnc_taskDefend;
+};
 
 true
