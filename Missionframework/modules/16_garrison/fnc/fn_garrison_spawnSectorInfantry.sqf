@@ -78,7 +78,7 @@ _grp = [_classnames, _spawnPos, _side] call KPLIB_fnc_common_createGroup;
 } forEach allCurators;
 
 // Remove possible initialization waypoints
-while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+{deleteWaypoint [_grp, 0];} forEach (waypoints _grp);
 // Make sure every soldier is following the leader
 {_x doFollow (leader _grp)} forEach (units _grp);
 
