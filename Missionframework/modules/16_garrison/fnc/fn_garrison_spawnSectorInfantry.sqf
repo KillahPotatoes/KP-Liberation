@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-12-21
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -65,7 +65,7 @@ for "_i" from 1 to _amount do {
 };
 
 // Create group
-_grp = [_side, _classnames, _spawnPos] call KPLIB_fnc_common_createGroup;
+_grp = [_classnames, _spawnPos, _side] call KPLIB_fnc_common_createGroup;
 
 // Add units of created group to active garrison array
 {
