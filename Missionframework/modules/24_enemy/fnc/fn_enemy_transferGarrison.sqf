@@ -78,6 +78,10 @@ if !(_troops > (_garrison select 2)) then {
         private _spawnDir = random 360;
         if !(isNil "_nearRoad") then {
             _spawnPos = getPosATL _nearRoad;
+            while {!((_spawnPos nearEntities 5) isEqualTo [])} do {
+                _nearRoad = selectRandom ((markerPos _origin) nearRoads 100);
+                _spawnPos = getPosATL _nearRoad;
+            };
             _spawnDir = _nearRoad getDir ((roadsConnectedTo _nearRoad) select 0);
         };
 
