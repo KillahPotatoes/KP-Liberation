@@ -4,7 +4,7 @@
     File: fn_enemy_getTransportClasses.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-18
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,7 +24,7 @@ params [
 ];
 
 // Select ground or air transport array
-private _toCheck = [KPLIB_preset_vehTransPlE, KPLIB_preset_heliTransPlE] select _air;
+private _toCheck = [(KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE), KPLIB_preset_heliTransPlE] select _air;
 
 // Check via config for enough transport seats and return resulting array
 private _validVeh = [];
