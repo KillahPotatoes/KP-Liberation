@@ -49,11 +49,18 @@ private _heavyVeh = [];
 
 // Despawn garrison light vehicles
 {
-    if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false]) && !(_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
-        _vehicle = _x;
-        _lightVeh pushBack (typeOf _x);
-        {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
-        deleteVehicle _vehicle;
+    if ((alive _x) && !(_x getVariable ["KPLIB_captured", false])) then {
+        // A combat-capable vehicle
+        if (!((crew _x) isEqualTo []) && !(_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
+            _vehicle = _x;
+            _lightVeh pushBack (typeOf _x);
+            {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
+            deleteVehicle _vehicle;
+        };
+        // An unarmed and empty transport vehicle
+        if (((crew _x) isEqualTo []) && (_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
+            deleteVehicle _x;
+        };
     };
 } forEach (_activeGarrisonRef select 3);
 
