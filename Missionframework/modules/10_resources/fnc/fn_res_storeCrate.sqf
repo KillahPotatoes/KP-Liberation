@@ -4,7 +4,7 @@
     File: fn_res_storeCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-16
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -60,7 +60,7 @@ _crate attachTo [_nearStorage, [
     [typeOf _crate] call KPLIB_fnc_res_getCrateZ
 ]];
 
-// TODO: We need to test, if this on/off is really necessary.
+// !TODO! We need to test, if this on/off is really necessary.
 // [_crate, false] remoteExecCall ["enableRopeAttach", true];
 
 true

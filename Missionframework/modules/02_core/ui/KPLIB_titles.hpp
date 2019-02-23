@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2018-11-27
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -71,7 +71,7 @@ class RscTitles
         };
     };
 
-// TODO: Rework and implementation of the Status Overlay
+// !TODO! Rework and implementation of the Status Overlay
 /*
     class statusoverlay
     {

@@ -72,7 +72,7 @@ _grp = [_classnames, _spawnPos, _side] call KPLIB_fnc_common_createGroup;
     _activeGarrisonRef pushBack _x;
 } forEach (units _grp);
 
-// FOR DEBUG: Add group to Zeus
+// !DEBUG! Add group to Zeus
 {
     _x addCuratorEditableObjects [units _grp, true]
 } forEach allCurators;
