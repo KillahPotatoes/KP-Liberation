@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-02-18
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class enemy {
 
     // Get valid transport vehicle for given amount of soldiers
     class enemy_getTransportClasses {};
+
+    // Handles transfer convoy arrival
+    class enemy_handleConvoyEnd {};
 
     // Loads module specific data from the save
     class enemy_loadData {};
@@ -35,6 +38,15 @@ class enemy {
 
     // Saves module specific data for the save
     class enemy_saveData {};
+
+    // Handle sector activation
+    class enemy_sectorAct {};
+
+    // Handle sector capture
+    class enemy_sectorCapture {};
+
+    // Handle sector deactivation
+    class enemy_sectorDeact {};
 
     // CBA Settings for this module
     class enemy_settings {};

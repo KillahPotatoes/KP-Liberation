@@ -4,7 +4,7 @@
     File: fn_enemy_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-02-18
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -43,6 +43,18 @@ if (isServer) then {
 
     // Register save event handler
     ["KPLIB_doSave", {[] call KPLIB_fnc_enemy_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Register sector activation event handler
+    ["KPLIB_sector_activated", {[_this select 0] call KPLIB_fnc_enemy_sectorAct;}] call CBA_fnc_addEventHandler;
+
+    // Register sector captured event handler
+    ["KPLIB_sector_captured", {[_this select 0] call KPLIB_fnc_enemy_sectorCapture;}] call CBA_fnc_addEventHandler;
+
+    // Register sector deactivation event handler
+    ["KPLIB_sector_deactivated", {[_this select 0] call KPLIB_fnc_enemy_sectorDeact;}] call CBA_fnc_addEventHandler;
+
+    // Register convoy arrival event handler
+    ["KPLIB_transferConvoy_end", {[_this select 0] call KPLIB_fnc_enemy_handleConvoyEnd;}] call CBA_fnc_addEventHandler;
 };
 
 // HC section
