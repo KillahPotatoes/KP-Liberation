@@ -11,7 +11,7 @@
         Returns the FOB of the given player.
 
     Parameter(s):
-        _player - Player which should be checked [OBJECT, defaults player]
+        _player - Player which should be checked [OBJECT, defaults to player]
 
     Returns:
         FOB of the player to check
@@ -21,4 +21,4 @@ params [
     ["_player", player, [objNull]]
 ];
 
-(_player getVariable ["KPLIB_fob", ""])
+_player getVariable ["KPLIB_fob", ""]
