@@ -31,7 +31,7 @@ lbClear _ctrlVehicleList;
 
 // Get all FOB vehicles
 private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
-private _vehicles = (getMarkerPos (_nearFOB select 0) nearObjects KPLIB_param_fobRange) select {_x isKindOf "LandVehicle" || _x isKindOf "Air" || _x isKindOf "Ship"};
+private _vehicles = (getMarkerPos (_nearFOB select 0) nearEntities ["AllVehicles", KPLIB_param_fobRange]) select {_x isKindOf "LandVehicle" || _x isKindOf "Air" || _x isKindOf "Ship"};
 
 private _cfg = configFile >> "CfgVehicles";
 private _type = "";
