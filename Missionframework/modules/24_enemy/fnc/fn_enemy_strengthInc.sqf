@@ -4,7 +4,7 @@
     File: fn_enemy_strengthInc.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-18
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,7 +19,7 @@
 
 // Increase strength by remaining enemy military bases
 private _increase = (count (KPLIB_sectors_military select {!(_x in KPLIB_sectors_blufor)})) * 10;
-KPLIB_enemy_strength = KPLIB_enemy_strength + _increase;
+[_increase] call KPLIB_fnc_enemy_addStrength;
 
 // Enforce cap for strength
 if (KPLIB_enemy_strength > 1000) then {
