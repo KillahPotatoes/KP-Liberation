@@ -26,8 +26,8 @@ if (isServer) then {
 
     private _vehicles = [];
     {
-        _vehicles append call (compile format ["KPLIB_preset_%1F", _x]);
-        _vehicles append call (compile format ["KPLIB_preset_%1E", _x]);
+        _vehicles append (missionNamespace getVariable [format ["KPLIB_preset_%1F", _x], ""]);
+        _vehicles append (missionNamespace getVariable [format ["KPLIB_preset_%1E", _x], ""]);
     } forEach [
         "vehLightUnarmed",
         "vehLightArmed",

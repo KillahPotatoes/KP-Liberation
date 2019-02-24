@@ -36,6 +36,10 @@ This module uses no data or functions from other modules.
 
   *Gets path for className icon.*
 
+* KPLIB_fnc_common_getPlayerFob
+
+  *Returns the FOB of the given player.*
+
 * KPLIB_fnc_common_getPos
 
   *getPos wrapper for ATL positions.*
