@@ -4,7 +4,7 @@
     File: fn_core_changeSectorOwner.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-07
-    Last Update: 2018-11-27
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +27,7 @@ if (_toPlayerSide) then {
     KPLIB_sectors_blufor pushBack _sectorToChange;
     [] call KPLIB_fnc_core_checkWinCond;
 } else {
-    KPLIB_sectors_blufor deleteAt (KPLIB_sectors_blufor findIf {_x isEqualTo _sectorToChange});
+    KPLIB_sectors_blufor deleteAt (KPLIB_sectors_blufor find _sectorToChange);
 };
 
 publicVariable "KPLIB_sectors_blufor";

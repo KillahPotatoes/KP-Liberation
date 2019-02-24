@@ -4,7 +4,7 @@
     File: fn_garrison_initSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-24
-    Last Update: 2018-12-09
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ if (_sector isEqualTo "") exitWith {[]};
 
 // Initialize general sector garrisons
 private _tempMarker = toArray _sector;
-private _side = 0;          // 0 - Enemy Military Troops; 1 - Local Militia Troops; 2 - Players (NOTE: It's very possible that this will change, so consider it as placeholder)
+private _side = 0;          // 0 - Enemy Military Troops; 1 - Local Militia Troops; 2 - Players (!NOTE! It's very possible that this will change, so consider it as placeholder)
 private _soldiers = 0;      // Amount of soldiers
 private _lVehicles = [];    // Array of light vehicle classnames
 private _hVehicles = [];    // Array of heavy vehicle classnames

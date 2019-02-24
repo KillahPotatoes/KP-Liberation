@@ -9,6 +9,7 @@ It'll also provide functions to change garrison data and a garrison management d
 * Init
 * Common
 * Core
+* Garrison
 
 ### Functions
 * KPLIB_fnc_garrison_changeOwner
