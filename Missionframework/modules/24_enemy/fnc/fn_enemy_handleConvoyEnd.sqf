@@ -4,7 +4,7 @@
     File: fn_enemy_handleConvoyEnd.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-02-23
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,8 +32,18 @@ hint format ["Arrived: %1\nUnits: %2\nDestination: %3 (%4)", units _grp, _units,
 private _garrisonRef = [_destination, true] call KPLIB_fnc_garrison_getGarrison;
 
 if (_garrisonRef isEqualTo []) then {
-    // Delete units and add to garrison, if sector isn't active
-    [_destination, count _units] call KPLIB_fnc_garrison_addInfantry;
+    // Determine kind of arrived vehicle
+    private _vehicle = objNull;
+    {
+        if !(objectParent _x isEqualTo objNull) exitWith {_vehicle = objectParent _x};
+    } forEach (units _grp);
+
+    switch (true) do {
+        case ((typeOf _vehicle) in KPLIB_preset_vehLightArmedPlE): {[_destination, typeOf _vehicle] call KPLIB_fnc_garrison_addVeh;};
+        case ((typeOf _vehicle) in (KPLIB_preset_vehHeavyApcPlE + KPLIB_preset_vehHeavyPlE)): {[_destination, typeOf _vehicle, true] call KPLIB_fnc_garrison_addVeh;};
+        default {[_destination, count _units] call KPLIB_fnc_garrison_addInfantry;};
+    };
+
     {
         deleteVehicle (vehicle _x);
         deleteVehicle _x;
@@ -41,18 +51,18 @@ if (_garrisonRef isEqualTo []) then {
 } else {
     // Add infantry and vehicles to active garrison array for a possible later despawn
     {
-        private _parent = objectParent _x;
+        private _vehicle = objectParent _x;
 
         // Assign to active garrison arrays according to arrived type of reinforcement
         switch (true) do {
-            case ((typeOf _parent) in KPLIB_preset_vehLightArmedPlE): {(_garrisonRef select 3) pushBackUnique _parent;};
-            case ((typeOf _parent) in (KPLIB_preset_vehHeavyApcPlE + KPLIB_preset_vehHeavyPlE)): {(_garrisonRef select 4) pushBackUnique _parent;};
+            case ((typeOf _vehicle) in KPLIB_preset_vehLightArmedPlE): {(_garrisonRef select 3) pushBackUnique _vehicle;};
+            case ((typeOf _vehicle) in (KPLIB_preset_vehHeavyApcPlE + KPLIB_preset_vehHeavyPlE)): {(_garrisonRef select 4) pushBackUnique _vehicle;};
             default {
                 (_garrisonRef select 2) pushBackUnique _x;
                 // If it's infantry with a transport vehicle, let them disembark
-                if !(isNull _parent) then {
-                    _grp leaveVehicle _parent;
-                    (_garrisonRef select 3) pushBackUnique _parent;
+                if !(isNull _vehicle) then {
+                    _grp leaveVehicle _vehicle;
+                    (_garrisonRef select 3) pushBackUnique _vehicle;
                 };
             };
         };

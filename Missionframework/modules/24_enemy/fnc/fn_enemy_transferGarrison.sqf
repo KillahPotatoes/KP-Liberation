@@ -4,7 +4,7 @@
     File: fn_enemy_transferGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-23
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,7 +34,7 @@ params [
 ];
 
 // Exit, if no origin or destination is given
-if (_origin == "" || _destination == "") exitWith {[]};
+if (_origin isEqualTo "" || _destination isEqualTo "") exitWith {[]};
 
 // Exit, if origin sector is currently active
 if (_origin in KPLIB_garrison_active) exitWith {[]};
@@ -46,15 +46,40 @@ if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] Transferr
 // Arrays for created units
 private _infantry = [];
 private _vehicles = [];
+private _groups = [];
 
 // Origin garrison reference
 private _garrison = [_origin] call KPLIB_fnc_garrison_getGarrison;
+
+// Spawn Pos and Dir function
+private _getPosDir = {
+    params [
+        ["_pos", [], [[]]],
+        ["_radius", 150, [0]]
+    ];
+
+    private _nearRoad = selectRandom (_pos nearRoads _radius);
+    private _spawnPos = (_pos getPos [(random _radius), random 360]) findEmptyPosition [10, 50, "B_T_VTOL_01_armed_F"];
+    private _spawnDir = random 360;
+    if !(isNil "_nearRoad") then {
+        _spawnPos = getPosATL _nearRoad;
+        while {!((_spawnPos nearEntities 20) isEqualTo [])} do {
+            _nearRoad = selectRandom (_pos nearRoads _radius);
+            _spawnPos = getPosATL _nearRoad;
+        };
+        _spawnDir = _nearRoad getDir ((roadsConnectedTo _nearRoad) select 0);
+    };
+
+    [_spawnPos, _spawnDir]
+};
 
 // Handle requested infantry
 if !(_troops > (_garrison select 2)) then {
     // Define one infantry squad for transport
     private _squadComp = [
         KPLIB_preset_rsSquadLeaderE,
+        KPLIB_preset_rsRiflemanE,
+        KPLIB_preset_rsRiflemanE,
         KPLIB_preset_rsRiflemanE,
         KPLIB_preset_rsRiflemanE,
         KPLIB_preset_rsRiflemanE,
@@ -74,27 +99,17 @@ if !(_troops > (_garrison select 2)) then {
 
     while {_troops > 0} do {
         // Get spawn position
-        _nearRoad = selectRandom ((markerPos _origin) nearRoads 100);
-        private _spawnPos = ((markerPos _origin) getPos [(random 100), random 360]) findEmptyPosition [10, 50, "B_T_VTOL_01_armed_F"];
-        private _spawnDir = random 360;
-        if !(isNil "_nearRoad") then {
-            _spawnPos = getPosATL _nearRoad;
-            while {!((_spawnPos nearEntities 5) isEqualTo [])} do {
-                _nearRoad = selectRandom ((markerPos _origin) nearRoads 100);
-                _spawnPos = getPosATL _nearRoad;
-            };
-            _spawnDir = _nearRoad getDir ((roadsConnectedTo _nearRoad) select 0);
-        };
+        private _spawnData = [markerPos _origin] call _getPosDir;
 
         // Create infantry group
-        _grp = [_squadComp select [0, 8 min _troops], _spawnPos] call KPLIB_fnc_common_createGroup;
+        _grp = [_squadComp select [0, 10 min _troops], _spawnData select 0] call KPLIB_fnc_common_createGroup;
         _infantry pushBack _grp;
         _troops = _troops - (count (units _grp));
 
         // Add vehicle, if needed
         if (!_onFoot) then {
             private _transportClasses = [count (units _grp)] call KPLIB_fnc_enemy_getTransportClasses;
-            _transport = [selectRandom _transportClasses, _spawnPos, _spawnDir] call KPLIB_fnc_common_createVehicle;
+            _transport = [selectRandom _transportClasses, _spawnData select 0, _spawnData select 1] call KPLIB_fnc_common_createVehicle;
             _grp addVehicle _transport;
         };
 
@@ -104,13 +119,29 @@ if !(_troops > (_garrison select 2)) then {
         } forEach allCurators;
     };
 } else {
-    if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] %1 exceeds garrison strength of %2 for transfer", _troops, _origin];};
+    if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] %1 exceeds garrison strength of %2 (%3) for transfer", _troops, markerText _origin, _origin];};
 };
 
 // Handle requested vehicles
-if !(_vehicleClasses isEqualTo []) then {
-    // !TODO!
-};
+{
+    if (_x in (_garrison select 3) || _x in (_garrison select 4)) then {
+        // Remove from garrison
+        if (isNil {(_garrison select 3) deleteAt ((_garrison select 3) find _x)}) then {
+            (_garrison select 4) deleteAt ((_garrison select 4) find _x);
+        };
+
+        // Spawn vehicle
+        private _spawnData = [markerPos _origin] call _getPosDir;
+        _vehicles pushBack ([_x, _spawnData select 0, _spawnData select 1, false, true] call KPLIB_fnc_common_createVehicle);
+    } else {
+        if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] %1 not available at garrison of %2 (%3)", _x, markerText _origin, _origin];};
+    };
+} forEach _vehicleClasses;
+
+// !DEBUG!
+{
+    _x addCuratorEditableObjects [_vehicles, true];
+} forEach allCurators;
 
 // Send created units to destination
 {
@@ -120,24 +151,24 @@ if !(_vehicleClasses isEqualTo []) then {
         _grp = group ((crew _x) select 0);
     };
 
+    _groups pushBack _grp;
+
     // Remove possible initialization waypoints
     {deleteWaypoint [_grp, 0];} forEach (waypoints _grp);
 
     // Get destination position
-    private _nearRoad = selectRandom ((markerPos _destination) nearRoads 50);
-    private _destPos = ((markerPos _destination) getPos [(random 100), random 360]) findEmptyPosition [10, 50, "B_T_VTOL_01_armed_F"];
-    if !(isNil "_nearRoad") then {
-        _destPos = getPosATL _nearRoad;
-    };
+    private _destPos = ([markerPos _destination, 100] call _getPosDir) select 0;
 
     // Add waypoint for destination
     private _waypoint = _grp addWaypoint [_destPos, 1];
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointBehaviour "SAFE";
     _waypoint setWaypointCombatMode "GREEN";
-    _waypoint setWaypointSpeed "LIMITED";
-    _waypoint setWaypointCompletionRadius 50;
+    if !((objectParent ((units _grp) select 0)) isKindOf "Tank") then {
+        _waypoint setWaypointSpeed "LIMITED";
+    };
+    _waypoint setWaypointCompletionRadius 25;
     _waypoint setWaypointStatements ["true", format ["['KPLIB_transferConvoy_end', [thislist, ""%1""]] call CBA_fnc_localEvent;", _destination]];
 } forEach (_infantry + _vehicles);
 
-true
+_groups
