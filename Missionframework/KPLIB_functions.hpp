@@ -26,5 +26,6 @@ class KPLIB {
     #include "modules\14_virtual\functions.hpp"
     #include "modules\15_build\functions.hpp"
     #include "modules\16_garrison\functions.hpp"
+    #include "modules\23_logistic\functions.hpp"
     #include "modules\24_enemy\functions.hpp"
 };
