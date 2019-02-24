@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-02-23
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,6 +13,9 @@
 
 class enemy {
     file = "modules\24_enemy\fnc";
+
+    // Add/Remove strength amount
+    class enemy_addStrength {};
 
     // Get valid transport vehicle for given amount of soldiers
     class enemy_getTransportClasses {};
