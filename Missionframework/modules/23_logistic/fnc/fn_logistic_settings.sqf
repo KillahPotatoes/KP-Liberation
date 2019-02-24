@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logi_settings
+    KPLIB_fnc_logistic_settings
 
-    File: fn_logi_settings.sqf
+    File: fn_logistic_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-28
     Last Update: 2019-02-24

@@ -11,52 +11,52 @@
         Defines for all functions, which are brought by this module.
 */
 
-class logi {
+class logistic {
     file = "modules\23_logistic\fnc";
 
     // Adds the logistic actions
-    class logi_addActions {};
+    class logistic_addActions {};
 
     // Adds a new menu to the logistic main menu
-    class logi_addMenu {};
+    class logistic_addMenu {};
 
     // Calculates the costs of the resupply action
-    class logi_calcCosts {};
+    class logistic_calcCosts {};
 
     // Open the logistioc main dialog
-    class logi_openDialog {};
+    class logistic_openDialog {};
 
     // Opens the logistic recycle dialog
-    class logi_openRecycleDialog {};
+    class logistic_openRecycleDialog {};
 
     // Opens the logistic resupply dialog
-    class logi_openResupplyDialog {};
+    class logistic_openResupplyDialog {};
 
     // Module post initialization
-    class logi_postInit {
+    class logistic_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class logi_preInit {
+    class logistic_preInit {
         preInit = 1;
     };
 
     // Recycles the selected vehicle
-    class logi_recycleTarget {};
+    class logistic_recycleTarget {};
 
     // Refreshes the vehicle list for the given dialog
-    class logi_refreshTargets {};
+    class logistic_refreshTargets {};
 
     // Resupplies the given vehicle
-    class logi_resupplyTarget {};
+    class logistic_resupplyTarget {};
 
     // Selects the vehicle from the combo cox and fills the dialog
-    class logi_selectRecycleTarget {};
+    class logistic_selectRecycleTarget {};
 
     // Selects the vehicle from the combo cox and fills the dialog
-    class logi_selectResupplyTarget {};
+    class logistic_selectResupplyTarget {};
 
     // CBA Settings initialization for this module
-    class logi_settings {};
+    class logistic_settings {};
 };

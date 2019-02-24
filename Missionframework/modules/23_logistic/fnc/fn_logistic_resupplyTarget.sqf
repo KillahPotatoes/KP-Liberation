@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_logi_resupplyTarget
+    KPLIB_fnc_logistic_resupplyTarget
 
-    File: fn_logi_resupplyTarget.sqf
+    File: fn_logistic_resupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-24
     Last Update: 2019-02-24
@@ -72,6 +72,6 @@ if !(KPLIB_param_aceResupply) then {
     };
 };
 
-[] spawn KPLIB_fnc_logi_selectResupplyTarget;
+[] spawn KPLIB_fnc_logistic_selectResupplyTarget;
 
 true

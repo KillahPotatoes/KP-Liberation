@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_calcCosts
+    KPLIB_fnc_logistic_calcCosts
 
-    File: fn_logi_calcCosts.sqf
+    File: fn_logistic_calcCosts.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
     Last Update: 2019-02-24

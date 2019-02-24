@@ -1601,11 +1601,11 @@
     <!-- LOGISTIC -->
 
     <Package name="Logistic">
-        <Key ID="STR_KPLIB_LOGI_RECYCLE">
+        <Key ID="STR_KPLIB_LOGISTIC_RECYCLE">
             <English>Recycle</English>
             <German>Recyceln</German>
         </Key>
-        <Key ID="STR_KPLIB_LOGI_RESUPPLY">
+        <Key ID="STR_KPLIB_LOGISTIC_RESUPPLY">
             <English>Resupply</English>
             <German>Versorgung</German>
         </Key>

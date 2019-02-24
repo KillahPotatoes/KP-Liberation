@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_logi_refreshTargets
+    KPLIB_fnc_logistic_refreshTargets
 
-    File: fn_logi_refreshTargets.sqf
+    File: fn_logistic_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-02-21
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:

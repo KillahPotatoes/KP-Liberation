@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_logi_openRecycleDialog
+    KPLIB_fnc_logistic_openRecycleDialog
 
-    File: fn_logi_openRecycleDialog.sqf
+    File: fn_logistic_openRecycleDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-02-21
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,6 +28,6 @@ private _recycleButton = _dialog displayCtrl 68745;
 _recycleButton ctrlEnable false;
 
 // Get near vehicles
-[7580232, 68740] call KPLIB_fnc_logi_refreshTargets;
+[7580232, 68740] call KPLIB_fnc_logistic_refreshTargets;
 
 true

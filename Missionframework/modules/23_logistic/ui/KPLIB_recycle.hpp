@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-02-21
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,7 +14,7 @@
 class KPLIB_recycle {
     idd = 7580232;
     movingEnable = 0;
-    onUnload = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam;";
+    onUnload = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam;";
 
     class controlsBackground {
 
@@ -34,7 +34,7 @@ class KPLIB_recycle {
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT";
-            onLBSelChanged = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam; [] spawn KPLIB_fnc_logi_selectRecycleTarget";
+            onLBSelChanged = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam; [] spawn KPLIB_fnc_logistic_selectRecycleTarget";
         };
 
         class KPLIB_RefreshVehicles: KPGUI_PRE_CloseCross {
@@ -44,7 +44,7 @@ class KPLIB_recycle {
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RECYCLE_REFRESH_TT";
-            action = "[7580232, 68740] call KPLIB_fnc_logi_refreshTargets";
+            action = "[7580232, 68740] call KPLIB_fnc_logistic_refreshTargets";
         };
 
         class KPLIB_LabelResources: KPGUI_PRE_InlineTitle {
@@ -162,7 +162,7 @@ class KPLIB_recycle {
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
             idc = 68747;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
-            action = "[] call KPLIB_fnc_logi_recycleTarget"
+            action = "[] call KPLIB_fnc_logistic_recycleTarget"
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {

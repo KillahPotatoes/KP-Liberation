@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_selectRecycleTarget
+    KPLIB_fnc_logistic_selectRecycleTarget
 
-    File: fn_logi_selectRecycleTarget.sqf
+    File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-02-12
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -45,7 +45,7 @@ if (_vehicleId isEqualTo "placeholder") exitWith {
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
 private _type = typeOf _vehicle;
-private _vehicles = KPLIB_logi_data getVariable ["Vehicles", []];
+private _vehicles = KPLIB_logistic_data getVariable ["Vehicles", []];
 private _vehicleIndex = _vehicles findIf {_x select 0 isEqualTo _type};
 private _damage = 1;
 private _ammo = 1;
@@ -97,7 +97,7 @@ camUseNVG false;
 showCinemaBorder false;
 private _cam = "camera" camCreate (getpos _vehicle);
 _cam cameraEffect ["internal", "front", "rtt"];
-KPLIB_logi_activeCam = _cam;
+KPLIB_logistic_activeCam = _cam;
 _cam camSetTarget _vehicle;
 _cam camSetFov 0.5;
 _cam camCommit 0;

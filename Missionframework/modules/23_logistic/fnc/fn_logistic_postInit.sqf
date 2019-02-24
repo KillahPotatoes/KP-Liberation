@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_logi_postInit
+    KPLIB_fnc_logistic_postInit
 
-    File: fn_logi_postInit.sqf
+    File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-02-21
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,8 +21,8 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
 
-    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logi_openRecycleDialog;}, "STR_KPLIB_LOGI_RECYCLE"] call KPLIB_fnc_logi_addMenu;
-    ["Resupply", {closeDialog 0; [] call KPLIB_fnc_logi_openResupplyDialog;}, "STR_KPLIB_LOGI_RESUPPLY"] call KPLIB_fnc_logi_addMenu;
+    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logistic_openRecycleDialog;}, "STR_KPLIB_LOGISTIC_RECYCLE"] call KPLIB_fnc_logistic_addMenu;
+    ["Resupply", {closeDialog 0; [] call KPLIB_fnc_logistic_openResupplyDialog;}, "STR_KPLIB_LOGISTIC_RESUPPLY"] call KPLIB_fnc_logistic_addMenu;
 
     private _vehicles = [];
     {
@@ -43,7 +43,7 @@ if (isServer) then {
         "jets",
         "logistic"
     ];
-    KPLIB_logi_data setVariable ["Vehicles", _vehicles, true]
+    KPLIB_logistic_data setVariable ["Vehicles", _vehicles, true]
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initialized", diag_tickTime];};

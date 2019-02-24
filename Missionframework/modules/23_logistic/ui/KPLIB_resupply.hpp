@@ -14,7 +14,7 @@
 class KPLIB_resupply {
     idd = 7580233;
     movingEnable = 0;
-    onUnload = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam;";
+    onUnload = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam;";
 
     class controlsBackground {
 
@@ -34,7 +34,7 @@ class KPLIB_resupply {
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_VEHICLE_TT";
-            onLBSelChanged = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam; [] spawn KPLIB_fnc_logi_selectResupplyTarget";
+            onLBSelChanged = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam; [] spawn KPLIB_fnc_logistic_selectResupplyTarget";
         };
 
         class KPLIB_RefreshVehicles: KPGUI_PRE_CloseCross {
@@ -44,7 +44,7 @@ class KPLIB_resupply {
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
             tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_REFRESH_TT";
-            action = "[7580232, 68740] call KPLIB_fnc_logi_refreshTargets";
+            action = "[7580232, 68740] call KPLIB_fnc_logistic_refreshTargets";
         };
 
         class KPLIB_ComboCargo: KPLIB_ComboVehicles {
@@ -52,7 +52,7 @@ class KPLIB_resupply {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT";
-            onLBSelChanged = "KPLIB_logi_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logi_activeCam; [] spawn KPLIB_fnc_logi_selectResupplyTarget";
+            onLBSelChanged = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam; [] spawn KPLIB_fnc_logistic_selectResupplyTarget";
         };
 
         class KPLIB_TextCargoState: KPGUI_PRE_Text {
@@ -90,7 +90,7 @@ class KPLIB_resupply {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            onSliderPosChanged = "[] call KPLIB_fnc_logi_calcCosts"
+            onSliderPosChanged = "[] call KPLIB_fnc_logistic_calcCosts"
         }
 
         class KPLIB_TextSlider: KPLIB_TextCargoState {
@@ -124,7 +124,7 @@ class KPLIB_resupply {
         class KPLIB_ButtonResupply: KPGUI_PRE_DialogButtonC {
             idc = 68747;
             text = "$STR_KPLIB_DIALOG_BUTTON_RESUPPLY";
-            action = "[] call KPLIB_fnc_logi_resupplyTarget";
+            action = "[] call KPLIB_fnc_logistic_resupplyTarget";
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {

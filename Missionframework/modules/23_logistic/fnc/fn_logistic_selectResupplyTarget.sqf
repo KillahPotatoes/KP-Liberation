@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_selectResupplyTarget
+    KPLIB_fnc_logistic_selectResupplyTarget
 
-    File: fn_logi_selectResupplyTarget.sqf
+    File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
     Last Update: 2019-02-24
@@ -121,7 +121,7 @@ camUseNVG false;
 showCinemaBorder false;
 private _cam = "camera" camCreate (getpos _vehicle);
 _cam cameraEffect ["internal", "front", "rtt"];
-KPLIB_logi_activeCam = _cam;
+KPLIB_logistic_activeCam = _cam;
 _cam camSetTarget _vehicle;
 _cam camSetFov 0.5;
 _cam camCommit 0;

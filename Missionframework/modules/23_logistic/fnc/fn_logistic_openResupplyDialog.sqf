@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_logi_openResupplyDialog
+    KPLIB_fnc_logistic_openResupplyDialog
 
-    File: fn_logi_openResupplyDialog.sqf
+    File: fn_logistic_openResupplyDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-21
-    Last Update: 2019-02-23
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,6 +38,6 @@ _index = _ctrlCargo lbAdd localize "STR_KPLIB_DIALOG_RESUPPLY_CARGOFUEL";
 _ctrlCargo lbSetData [_index, "FUEL"];
 
 // Get near vehicles
-[7580233, 68740] call KPLIB_fnc_logi_refreshTargets;
+[7580233, 68740] call KPLIB_fnc_logistic_refreshTargets;
 
 true
