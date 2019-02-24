@@ -827,7 +827,7 @@
         <!-- RESUPPLY DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_TITLE">
             <English>KP Liberation Resupply</English>
-            <German>KP Liberation Nachschub</German>
+            <German>KP Liberation Versorgung</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_VEHICLE_TT">
             <English>Select the vehicle, that you want to resupply.</English>
@@ -837,6 +837,66 @@
             <English>Refresh</English>
             <Chinese>刷新</Chinese>
             <German>Aktualisieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT">
+            <English>Select the Cargo which you want to resupply.</English>
+            <German>Wähle den Vorrat den du auffüllen möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOAMMO">
+            <English>Ammo</English>
+            <German>Munition</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOFUEL">
+            <English>Fuel</English>
+            <German>Treibstoff</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOSTATE">
+            <English>Cargo State:</English>
+            <German>Vorratsstand:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE">
+            <English>%1 empty or used from %2</English>
+            <German>%1 leer oder angebrochen von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE">
+            <English>%1 from %2 gallons left</English>
+            <German>%1 von %2 Gallonen übrig</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATEACE">
+            <English>%1 ammo left from %2</English>
+            <German>%1 Munition übrig von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_FUELSTATEACE">
+            <English>%1 fuel left from %2</English>
+            <German>%1 Treibstoff übrig von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTS">
+            <English>Costs:</English>
+            <German>Kosten:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMO">
+            <English>%1 ammo per magazine</English>
+            <German>%1 Munition pro Magazin</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSFUEL">
+            <English>%1 fuel per gallon</English>
+            <German>%1 Treibstoff pro Gallone</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMOACE">
+            <English>%1 ammo per 100 ammo cargo</English>
+            <German>%1 Munition pro 100 Munitionsvorrat</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSFUELACE">
+            <English>%1 fuel per 1000 fuel cargo</English>
+            <German>%1 Treibstoff pro 1000 Treibstoffvorrat</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_SLIDERVALUE">
+            <English>Slider value:</English>
+            <German>Schieberegler Wert:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_TOTALCOSTS">
+            <English>Total costs:</English>
+            <German>Gesamtkosten:</German>
         </Key>
     </Package>
 
@@ -1367,6 +1427,56 @@
             <English>Defines the fuel refund for vehicles without defined costs.</English>
             <German>Definiert die Treibstoff Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
         </Key>
+
+        <!-- RESUPPLY CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY">
+            <English>KPLIB - Resupply</English>
+            <German>KPLIB - Versorgung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLYACE">
+            <English>ACE settings</English>
+            <German>ACE Einstellungen</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY">
+            <English>ACE resupply</English>
+            <German>ACE Versorgung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY_TT">
+            <English>Activates/deactivates the ACE resupply mode, where only fuel/ammo transports can be resupplied.</English>
+            <German>Aktiviert/deaktiviert die die ACE Versorgung, sodass nur noch Treibstoff/Munitions Transporter versorgt werden können.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST">
+            <English>Magazine price</English>
+            <German>Magazin Preis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST_TT">
+            <English>Defines the price of one magazine.</English>
+            <German>Definiert die Kosten für ein Magazin.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST">
+            <English>Gallon price</English>
+            <German>Gallonen Preis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST_TT">
+            <English>Defines the price of one gallon.</English>
+            <German>Definiert die Kosten für eine Gallone.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST">
+            <English>Ammo cargo price</English>
+            <German>Munitionsvorrat Preis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST_TT">
+            <English>Defines the price of 100 ammo cargo for ACE rearm vehicles.</English>
+            <German>Definiert die Kosten für 100 Munitionsvorrat für ein ACE Munitions Fahrzeug.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST">
+            <English>Fuel cargo price</English>
+            <German>Treibstoffvorrat Preis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST_TT">
+            <English>Defines the price of 1000 fuel cargo for ACE refuel vehicles.</English>
+            <German>Definiert die Kosten für 1000 Treibstoffvorrat für ein ACE Tank Fahrzeug.</German>
+        </Key>
     </Package>
 
 
@@ -1497,7 +1607,7 @@
         </Key>
         <Key ID="STR_KPLIB_LOGI_RESUPPLY">
             <English>Resupply</English>
-            <German>Nachschub</German>
+            <German>Versorgung</German>
         </Key>
     </Package>
 

@@ -4,7 +4,7 @@
     File: fn_logi_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-28
-    Last Update: 2019-02-08
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,6 +15,10 @@
 
     Returns:
         Function reached the end [BOOL]
+*/
+
+/*
+    ----- RECYCLE SETTINGS -----
 */
 
 // KPLIB_param_recycleFactor
@@ -104,6 +108,75 @@
     [localize "STR_KPLIB_SETTINGS_RECYCLE_FUEL", localize "STR_KPLIB_SETTINGS_RECYCLE_FUEL_TT"],
     localize "STR_KPLIB_SETTINGS_RECYCLE",
     [0, 1000, 50, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+/*
+    ----- RESUPPLY SETTINGS -----
+*/
+
+// KPLIB_param_resupplyMagCost
+// Defines the costs to resupply one vehicle magazine.
+// Default: 10
+[
+    "KPLIB_param_resupplyMagCost",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY_MAGCOST", localize "STR_KPLIB_SETTINGS_RESUPPLY_MAGCOST_TT"],
+    localize "STR_KPLIB_SETTINGS_RESUPPLY",
+    [0, 1000, 10, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_resupplyGallCost
+// Defines the costs to resupply one vehicle gallon.
+// Default: 10
+[
+    "KPLIB_param_resupplyGallCost",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY_GALLCOST", localize "STR_KPLIB_SETTINGS_RESUPPLY_GALLCOST_TT"],
+    localize "STR_KPLIB_SETTINGS_RESUPPLY",
+    [0, 1000, 10, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_aceResupply
+// Enables/Disables the ACE resupply functions.
+// Default: false
+[
+    "KPLIB_param_aceResupply",
+    "CHECKBOX",
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY_ACERESUPPLY", localize "STR_KPLIB_SETTINGS_RESUPPLY_ACERESUPPLY_TT"],
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY", localize "STR_KPLIB_SETTINGS_RESUPPLYACE"],
+    false,
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_resupplyAmmoCost
+// Defines the costs to resupply the ammo cargo of an ACE ammo vehicle.
+// Default: false
+[
+    "KPLIB_param_resupplyAmmoCost",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY_AMMOCOST", localize "STR_KPLIB_SETTINGS_RESUPPLY_AMMOCOST_TT"],
+    localize "STR_KPLIB_SETTINGS_RESUPPLY",
+    [0, 1000, 10, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_resupplyFuelCost
+// Defines the costs to resupply the fuel cargo of an ACE fuel vehicle.
+// Default: false
+[
+    "KPLIB_param_resupplyFuelCost",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_RESUPPLY_FUELCOST", localize "STR_KPLIB_SETTINGS_RESUPPLY_FUELCOST_TT"],
+    localize "STR_KPLIB_SETTINGS_RESUPPLY",
+    [0, 1000, 10, 0],
     1,
     {}
 ] call CBA_Settings_fnc_init;
