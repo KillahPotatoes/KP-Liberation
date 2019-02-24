@@ -14,6 +14,9 @@
 class enemy {
     file = "modules\24_enemy\fnc";
 
+    // Add/Remove awareness amount
+    class enemy_addAwareness {};
+
     // Add/Remove strength amount
     class enemy_addStrength {};
 
