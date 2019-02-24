@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
-    Last Update: 2018-12-16
+    Last Update: 2019-02-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,12 @@ class res {
 
     // Gets array with amounts of all resources at given location
     class res_getResTotal {};
+
+    // Gets array with all storage objects in given radius of given position
+    class res_getStorages {};
+
+    // Gets amount of free storage space of given storage
+    class res_getStorageSpace {};
 
     // Gets array with resource values of given storage
     class res_getStorageValue {};

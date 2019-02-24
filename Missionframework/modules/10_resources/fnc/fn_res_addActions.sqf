@@ -4,7 +4,7 @@
     File: fn_res_addActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-16
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
         "STR_KPLIB_ACTION_CHECKCRATE",
         [{[_this select 0] call KPLIB_fnc_res_checkCrate;}, nil, -500, false, true, "", "isNull attachedTo _target", 4],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
 
     // Add push action to crate
     [
@@ -40,7 +40,7 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
         "STR_KPLIB_ACTION_PUSHCRATE",
         [{[_this select 0] call KPLIB_fnc_res_pushCrate;}, nil, -501, false, false, "", "isNull attachedTo _target", 4],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
 
     // Add store action to crate
     [
@@ -48,7 +48,7 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
         "STR_KPLIB_ACTION_STORECRATE",
         [{[_this select 0] call KPLIB_fnc_res_storeCrate;}, nil, -502, false, true, "", "isNull attachedTo _target", 4],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
 
     // Add load to transport action to crate
     [
@@ -56,7 +56,7 @@ if ((typeOf _object) in KPLIB_res_crateClasses) then {
         "STR_KPLIB_ACTION_LOADCRATE",
         [{[_this select 0] call KPLIB_fnc_res_loadCrate;}, nil, -503, false, true, "", "isNull attachedTo _target", 4],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
 };
 
 // Storage actions
@@ -71,7 +71,7 @@ if ((typeOf _object) in KPLIB_res_storageClasses) then {
             "STR_KPLIB_ACTION_UNSTORE" + (toUpper _x),
             [{[_this select 0, _this select 3] call KPLIB_fnc_res_unstoreCrate;}, _x, -500 - _forEachIndex, false, true, "", "", 10],
             "#FFFF00"
-        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
     } forEach ["Supply", "Ammo", "Fuel"];
 
     // Stack and Sort action for storage
@@ -80,7 +80,7 @@ if ((typeOf _object) in KPLIB_res_storageClasses) then {
         "STR_KPLIB_ACTION_STACKNSORT",
         [{[_this select 0] call KPLIB_fnc_res_stackNsort;}, nil, -503, false, false, "", "", 10],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _object];
 };
 
 true

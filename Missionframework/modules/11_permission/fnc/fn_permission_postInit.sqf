@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-29
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,6 +30,17 @@ if (isServer) then {
         "Vehicle",
         "STR_KPLIB_PERMISSION_GROUPVEHICLE",
         (KPLIB_preset_vehLightUnarmedPlF + KPLIB_preset_vehLightArmedPlF)
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Add Transport Vehicle Permission
+    [
+        "TransportVehicle",
+        {[player, "TransportVehicle"] call KPLIB_fnc_permission_getPermission},
+        "STR_KPLIB_PERMISSION_TRANSPORTVEHICLE",
+        true,
+        "Vehicle",
+        "STR_KPLIB_PERMISSION_GROUPVEHICLE",
+        KPLIB_preset_vehTransPlF
     ] call KPLIB_fnc_permission_addPermissionHandler;
 
     // Add Heavy Vehicle Permission

@@ -4,7 +4,7 @@
     File: fn_res_loadCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-16
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,7 +61,7 @@ if !(_nearTransport getVariable ["KPLIB_res_unloadAction", false]) then {
         "STR_KPLIB_ACTION_UNLOADCRATE",
         [{[_this select 0] call KPLIB_fnc_res_unloadCrate;}, nil, -500, false, true, "", "!((_target getVariable ['KPLIB_res_usedSlots', 0]) isEqualTo 0)", 10],
         "#FFFF00"
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _nearTransport];
 
     _nearTransport setVariable ["KPLIB_res_unloadAction", true, true];
 };

@@ -6,7 +6,7 @@
     File: fn_build_changeQueueMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2018-12-17
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ params [
 private _display = ctrlParent _control;
 private _confirmBtnControl = _display displayCtrl KPLIB_IDC_BUILD_CONFIRM;
 
-// TODO preserve and restore current build queue
+// !TODO! preserve and restore current build queue
 switch (LGVAR_D(buildMode, 0)) do {
     case 0: {
         _control ctrlSetText "Move mode";

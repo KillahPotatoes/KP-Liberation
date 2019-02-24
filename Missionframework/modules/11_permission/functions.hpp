@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-23
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -59,6 +59,9 @@ class permission {
 
     // Saves module specific data for the save
     class permission_saveData {};
+
+    // CBA Settings initialization for this module
+    class permission_settings {};
 
     // Reads the player permissions and applies them to the dialog controls
     class permission_setupPermissionControls {};

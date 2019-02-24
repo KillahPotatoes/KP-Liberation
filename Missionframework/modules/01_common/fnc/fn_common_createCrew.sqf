@@ -4,7 +4,7 @@
     File: fn_common_createCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-25
-    Last Update: 2018-12-17
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -53,7 +53,7 @@ private _crewClasses = _turrets apply {
 };
 
 // Spawn group and move into to vehicle
-private _grp = [_side, _driverClass + _crewClasses, getPos _vehicle] call KPLIB_fnc_common_createGroup;
+private _grp = [_driverClass + _crewClasses, getPos _vehicle, _side] call KPLIB_fnc_common_createGroup;
 // Move the units into the vehicle, -1 indicates driver
 {
     if (_forEachIndex isEqualTo 0) then {

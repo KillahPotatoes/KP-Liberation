@@ -185,6 +185,11 @@
             <English>Fuel</English>
             <German>Kraftstoff</German>
         </Key>
+        <Key ID="STR_KPLIB_REFRESH">
+            <English>Refresh</English>
+            <Chinese>刷新</Chinese>
+            <German>Aktualisieren</German>
+        </Key>
     </Package>
 
 
@@ -346,8 +351,12 @@
             <Turkish>- BENZIN KUTUSUNU ÇIKAR -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
-            <English>-- Permissions --</English>
+            <English>-- PERMISSIONS --</English>
             <German>-- RECHTE --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_LOGISTIC">
+            <English>-- LOGISTIC --</English>
+            <German>-- LOGISTIK --</German>
         </Key>
     </Package>
 
@@ -431,6 +440,14 @@
         <Key ID="STR_KPLIB_DIALOG_BUTTON_RESET">
             <English>Reset to default</English>
             <German>Auf Standard zurücksetzen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUTTON_RESUPPLY">
+            <English>Resupply</English>
+            <German>Versorgen</German>
         </Key>
 
         <!-- ADMIN MENU DIALOG -->
@@ -725,11 +742,6 @@
             <Chinese>設定為預設值</Chinese>
             <German>Als Standard benutzen</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT">
-            <English>Refresh</English>
-            <Chinese>刷新</Chinese>
-            <German>Aktualisieren</German>
-        </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
             <English>Copy/Load from near player</English>
             <Chinese>複製並讀取附近玩家的裝備配置</Chinese>
@@ -740,6 +752,7 @@
             <Chinese>開啟軍火庫</Chinese>
             <German>Arsenal öffnen</German>
         </Key>
+
         <!-- PERMISSION DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
             <English>KP Liberation Permissions</English>
@@ -756,6 +769,124 @@
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
             <German>- Abwesende Spieler -</German>
+        </Key>
+
+        <!-- LOGISTIC MAIN DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_LOGISTICMAIN_TITLE">
+            <English>KP Liberation Logistic Main Menu</English>
+            <German>KP Liberation Logistik Hauptmenü</German>
+        </Key>
+
+        <!-- RECYCLE DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_TITLE">
+            <English>KP Liberation Recycle</English>
+            <German>KP Liberation Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT">
+            <English>Select the vehicle, that you want to recycle.</English>
+            <German>Wähle das Fahrzeug aus, dass du recyceln möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_RESOURCES">
+            <English>Refunded Resources:</English>
+            <German>Erstattete Ressourcen:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_REFUND">
+            <English>Refund:</English>
+            <German>Rückerstattung:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_SUPPLY">
+            <English>Supplies:</English>
+            <German>Nachschub:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_SUPPLYSTATE">
+            <English>State:</English>
+            <German>Zustand:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMO">
+            <English>Ammo:</English>
+            <German>Munition:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMOSTATE">
+            <English>Ammo left:</English>
+            <German>Munitionsstand:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUEL">
+            <English>Fuel:</English>
+            <German>Treibstoff:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUELSTATE">
+            <English>Fuel left:</English>
+            <German>Treibstoffstand:</German>
+        </Key>
+
+        <!-- RESUPPLY DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_TITLE">
+            <English>KP Liberation Resupply</English>
+            <German>KP Liberation Versorgung</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_VEHICLE_TT">
+            <English>Select the vehicle, that you want to resupply.</English>
+            <German>Wähle das Fahrzeug aus, dass du Versorgen möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT">
+            <English>Select the Cargo which you want to resupply.</English>
+            <German>Wähle den Vorrat den du auffüllen möchtest.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOAMMO">
+            <English>Ammo</English>
+            <German>Munition</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOFUEL">
+            <English>Fuel</English>
+            <German>Treibstoff</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGOSTATE">
+            <English>Cargo State:</English>
+            <German>Vorratsstand:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE">
+            <English>%1 empty or used from %2</English>
+            <German>%1 leer oder angebrochen von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE">
+            <English>%1 from %2 gallons left</English>
+            <German>%1 von %2 Gallonen übrig</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATEACE">
+            <English>%1 ammo left from %2</English>
+            <German>%1 Munition übrig von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_FUELSTATEACE">
+            <English>%1 fuel left from %2</English>
+            <German>%1 Treibstoff übrig von %2</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTS">
+            <English>Costs:</English>
+            <German>Kosten:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMO">
+            <English>%1 ammo per magazine</English>
+            <German>%1 Munition pro Magazin</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSFUEL">
+            <English>%1 fuel per gallon</English>
+            <German>%1 Treibstoff pro Gallone</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMOACE">
+            <English>%1 ammo per 100 ammo cargo</English>
+            <German>%1 Munition pro 100 Munitionsvorrat</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_COSTSFUELACE">
+            <English>%1 fuel per 1000 fuel cargo</English>
+            <German>%1 Treibstoff pro 1000 Treibstoffvorrat</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_SLIDERVALUE">
+            <English>Slider value:</English>
+            <German>Schieberegler Wert:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_TOTALCOSTS">
+            <English>Total costs:</English>
+            <German>Gesamtkosten:</German>
         </Key>
     </Package>
 
@@ -1223,6 +1354,119 @@
         <Key ID="STR_KPLIB_SETTINGS_PERMISSION_ACTIVATE_TT">
             <English>Enables/Disables the Liberation permission system.</English>
             <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
+        </Key>
+
+        <!-- RECYCLE CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE">
+            <English>KPLIB - Recycle</English>
+            <German>KPLIB - Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR">
+            <English>Recycle refund factor</English>
+            <German>Rückerstattungsfaktor</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR_TT">
+            <English>Defines the recycle refund in percentage.</English>
+            <German>Definiert die Rückerstattung in Prozent.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE">
+            <English>Damage influence</English>
+            <German>Schadensauswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE_TT">
+            <English>Activates/deactivates the supply refund dependent on the damage state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die Beeinflussung des erstatteten Nachschubs in Abhängigkeit vom Schaden des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE">
+            <English>Ammo influence</English>
+            <German>Munitionsauswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE_TT">
+            <English>Activates/deactivates the ammo refund dependent on the ammo state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die Beeinflussung der erstatteten Munition in Abhängigkeit der aktuellen Munition des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE">
+            <English>Fuel influence</English>
+            <German>Treibstoffauswirkung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE_TT">
+            <English>Activates/deactivates the fuel refund dependent on the fuel state of the vehicle.</English>
+            <German>Aktiviert/deaktiviert die Beeinflussung des erstatteten Treibstoffs in Abhängigkeit vom Treibstoffstand des Fahrzeugs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY">
+            <English>Supply refund</English>
+            <German>Nachschubrückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY_TT">
+            <English>Defines the supply refund for vehicles without defined costs.</English>
+            <German>Definiert die Nachschubrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO">
+            <English>Ammo refund</English>
+            <German>Munitionsrückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO_TT">
+            <English>Defines the ammo refund for vehicles without defined costs.</English>
+            <German>Definiert die Munitionsrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL">
+            <English>Fuel refund</English>
+            <German>Kraftstoffrückerstattung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL_TT">
+            <English>Defines the fuel refund for vehicles without defined costs.</English>
+            <German>Definiert die Kraftstoffrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+        </Key>
+
+        <!-- RESUPPLY CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY">
+            <English>KPLIB - Resupply</English>
+            <German>KPLIB - Versorgung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLYACE">
+            <English>ACE settings</English>
+            <German>ACE Einstellungen</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY">
+            <English>ACE resupply</English>
+            <German>ACE Versorgung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY_TT">
+            <English>Activates/deactivates the ACE resupply mode, where only fuel/ammo transports can be resupplied.</English>
+            <German>Aktiviert/deaktiviert die die ACE Versorgung, sodass nur noch Kraftstoff-/Munitionstransporter versorgt werden können.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST">
+            <English>Magazine price</English>
+            <German>Magazinpreis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST_TT">
+            <English>Defines the price of one magazine.</English>
+            <German>Definiert die Kosten für ein Magazin.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST">
+            <English>Gallon price</English>
+            <German>Gallonenpreis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST_TT">
+            <English>Defines the price of one gallon.</English>
+            <German>Definiert die Kosten für eine Gallone.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST">
+            <English>Ammo cargo price</English>
+            <German>Munitionsvorratpreis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST_TT">
+            <English>Defines the price of 100 ammo cargo for ACE rearm vehicles.</English>
+            <German>Definiert die Kosten für 100 Munitionsvorrat für ein ACE Munitions Fahrzeug.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST">
+            <English>Fuel cargo price</English>
+            <German>Treibstoffvorratpreis</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST_TT">
+            <English>Defines the price of 1000 fuel cargo for ACE refuel vehicles.</English>
+            <German>Definiert die Kosten für 1000 Treibstoffvorrat für ein ACE Tank Fahrzeug.</German>
+        </Key>
     </Package>
 
 
@@ -1344,6 +1588,19 @@
         </Key>
     </Package>
 
+    <!-- LOGISTIC -->
+
+    <Package name="Logistic">
+        <Key ID="STR_KPLIB_LOGISTIC_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_LOGISTIC_RESUPPLY">
+            <English>Resupply</English>
+            <German>Versorgung</German>
+        </Key>
+    </Package>
+
     <!-- PERMISSIONS -->
 
     <Package name="Permissions">
@@ -1370,6 +1627,10 @@
         <Key ID="STR_KPLIB_PERMISSION_ARTILLERYVEHICLE">
             <English>Artillery Vehicle</English>
             <German>Artillerie Fahrzeuge</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_TRANSPORTVEHICLE">
+            <English>Transport Vehicle</English>
+            <German>Transportfahrzeug</German>
         </Key>
         <Key ID="STR_KPLIB_PERMISSION_TRANSPORTHELICOPTER">
             <English>Transport Helicopter</English>

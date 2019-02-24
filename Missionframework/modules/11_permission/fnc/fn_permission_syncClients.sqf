@@ -4,7 +4,7 @@
     File: fn_permission_syncClients.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-22
-    Last Update: 2018-12-29
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -48,5 +48,7 @@ if !(_types isEqualTo []) then {
 
 if !(_types isEqualTo []) then {
     KPLIB_permission_groups = +_groups;
-    publicVariable "KPLIB_permission_types";
+    publicVariable "KPLIB_permission_groups";
 };
+
+true

@@ -4,7 +4,7 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-11-27
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,7 @@ private _heavyVeh = [];
     };
 } forEach (_activeGarrisonRef select 2);
 
-/* NOTE:
+/* !NOTE!
     With the current despawn checks for the vehicles, the vehicle won't be deleted if it's a wreck or the crew bailed out due to damage.
     This leads to the behaviour that it would be deleted if there is a blufor unit or a player in the vehicle (if the enemy is opfor).
     We'll address the "capture enemy vehicle" with a variable which will be set to the vehicle like "KPLIB_captured" in a later iteration.
@@ -49,11 +49,13 @@ private _heavyVeh = [];
 
 // Despawn garrison light vehicles
 {
-    if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false])) then {
-        _vehicle = _x;
-        _lightVeh pushBack (typeOf _x);
-        {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
-        deleteVehicle _vehicle;
+    if ((alive _x) && !(_x getVariable ["KPLIB_captured", false])) then {
+        if (!((crew _x) isEqualTo []) && !(_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
+            _vehicle = _x;
+            _lightVeh pushBack (typeOf _x);
+            {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach (crew _x);
+        };
+        deleteVehicle _x;
     };
 } forEach (_activeGarrisonRef select 3);
 

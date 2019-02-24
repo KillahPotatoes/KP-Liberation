@@ -5,7 +5,7 @@
     File: fn_permission_setupPermissionControls.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2018-12-29
+    Last Update: 2019-01-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,7 +35,7 @@ private _playerPermissions = [];
 switch (_playerUID) do {
     case "default": {
         {
-            _permission = toLower (_x getVariable ["Data", ["", false]]) select 0;
+            _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
             _defaultPermission = KPLIB_permission_default select (KPLIB_permission_default findIf {
                 (_x select 0) isEqualTo _permission
             }) select 1;
@@ -57,7 +57,7 @@ switch (_playerUID) do {
         };
         private _permissionState = false;
         {
-            _permission = toLower (_x getVariable ["Data", ["", false]]) select 0;
+            _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
             _index = (_playerPermissions findIf {(_x select 0) isEqualTo _permission});
             if (_index isEqualTo -1) then {
                 _permissionState = KPLIB_permission_default select (KPLIB_permission_default findIf {

@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2018-12-08
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -49,7 +49,7 @@ if (_moduleData isEqualTo []) then {
 
             private ["_object"];
 
-            // TODO proper deserialization/serialization with groups and vehicle crews handling
+            // !TODO! proper deserialization/serialization with groups and vehicle crews handling
             switch true do {
                 case (_className isKindOf "Man"): {
                     _object = [createGroup KPLIB_preset_sideF, _className] call KPLIB_fnc_common_createUnit;
