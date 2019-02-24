@@ -4,7 +4,7 @@
     File: fn_build_confirmSingle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2018-12-17
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,7 +27,7 @@ _createParams params ["_className", "_pos", "_dir", "_justBuild"];
 
 private ["_obj"];
 
-// TODO save only builings via Build module, units and vehicles should be moved to persistence module
+// !TODO! save only builings via Build module, units and vehicles should be moved to persistence module
 switch true do {
     case (_className isKindOf "Man"): {
         _obj = [createGroup KPLIB_preset_sideF, _className] call KPLIB_fnc_common_createUnit;

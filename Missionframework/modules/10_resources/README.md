@@ -1,7 +1,7 @@
 # KP Liberation Module Description
 
 ## Resources Module
-TODO Description
+!TODO! Description
 
 ### Dependencies
 * Init

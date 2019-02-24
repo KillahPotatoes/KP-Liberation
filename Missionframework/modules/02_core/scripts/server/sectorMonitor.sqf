@@ -4,7 +4,7 @@
     File: sectorMonitor.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-05
-    Last Update: 2018-11-09
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,7 +15,7 @@ scriptName "KPLIB_sectorMonitor";
 if(isServer) then {
 
     // Update sector markers every time sector state was changed
-    {[_x, {call KPLIB_fnc_core_updateSectorMarkers}] call CBA_fnc_addEventHandler;} forEach ["KPLIB_sector_activated", "KPLIB_sector_deactivated"];
+    {[_x, {[] call KPLIB_fnc_core_updateSectorMarkers}] call CBA_fnc_addEventHandler;} forEach ["KPLIB_sector_activated", "KPLIB_sector_deactivated"];
 
     // Init function, executed every time whole list of sectors was iterated
     private _initFunction = {

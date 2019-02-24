@@ -4,7 +4,7 @@
     File: fn_virtual_addCurator.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2018-12-11
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ unassignCurator _oldCurator;
 [{isNull getAssignedCuratorLogic (_this select 0)}, {
     params ["_unit", "_mode", "_oldCurator"];
 
-    // TODO
+    // !TODO!
     // This causes rpt spam about not existing objects
     // Disable for now
     //deleteVehicle _oldCurator;

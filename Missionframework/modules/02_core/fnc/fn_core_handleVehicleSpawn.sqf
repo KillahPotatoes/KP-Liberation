@@ -4,7 +4,7 @@
     File: fn_core_handleVehicleSpawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-10
-    Last Update: 2018-12-11
+    Last Update: 2019-02-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,7 +29,7 @@ switch (typeOf _vehicle) do {
             _vehicle,
             "STR_KPLIB_ACTION_DEPLOY",
             [{["KPLIB_fob_build_requested", _this select 0] call CBA_fnc_localEvent}, true, -800, false, true, "", "[_target, _this] call KPLIB_fnc_core_canBuildFob", 10]
-        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _vehicle];
     };
 
     case KPLIB_preset_respawnTruckF;
@@ -41,7 +41,7 @@ switch (typeOf _vehicle) do {
             _vehicle,
             "STR_KPLIB_ACTION_REDEPLOY",
             [{["KPLIB_respawn_requested", _this] call CBA_fnc_localEvent}, nil, -801, false, true, "", "_this == vehicle _this", 10]
-        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+        ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _vehicle];
     };
 
     case KPLIB_preset_addHeliF: {
@@ -52,7 +52,7 @@ switch (typeOf _vehicle) do {
                 "STR_KPLIB_ACTION_HELIMOVE",
                 [{[_this select 0] call KPLIB_fnc_core_heliToDeck;}, nil, 10, true, true, "", "(_target distance KPLIB_eden_startbase) < 20", 4],
                 "#FF8000"
-            ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, true];
+            ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _vehicle];
         };
     };
 };

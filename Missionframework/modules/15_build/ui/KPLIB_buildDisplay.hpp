@@ -4,7 +4,7 @@
     File: KPLIB_defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-12-12
+    Last Update: 2019-02-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -110,7 +110,7 @@ class KPLIB_build {
 
             // Toolbox Controls
             class Controls {
-                // TODO move toolbox items creation to script
+                // !TODO! move toolbox items creation to script
                 class KPLIB_Toolbox_MoveItems: KPGUI_PRE_ActiveText {
                     text = "Build mode";
                     idc = KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS;
