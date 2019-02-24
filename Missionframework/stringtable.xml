@@ -185,6 +185,11 @@
             <English>Fuel</English>
             <German>Kraftstoff</German>
         </Key>
+        <Key ID="STR_KPLIB_REFRESH">
+            <English>Refresh</English>
+            <Chinese>刷新</Chinese>
+            <German>Aktualisieren</German>
+        </Key>
     </Package>
 
 
@@ -737,11 +742,6 @@
             <Chinese>設定為預設值</Chinese>
             <German>Als Standard benutzen</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_REFRESH_TT">
-            <English>Refresh</English>
-            <Chinese>刷新</Chinese>
-            <German>Aktualisieren</German>
-        </Key>
         <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
             <English>Copy/Load from near player</English>
             <Chinese>複製並讀取附近玩家的裝備配置</Chinese>
@@ -784,12 +784,7 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_VEHICLE_TT">
             <English>Select the vehicle, that you want to recycle.</English>
-            <German>Wähle das Fahrzeug aus, dass du Recyceln möchtest.</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_RECYCLE_REFRESH_TT">
-            <English>Refresh</English>
-            <Chinese>刷新</Chinese>
-            <German>Aktualisieren</German>
+            <German>Wähle das Fahrzeug aus, dass du recyceln möchtest.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_RESOURCES">
             <English>Refunded Resources:</English>
@@ -812,7 +807,7 @@
             <German>Munition:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_AMMOSTATE">
-            <English>Remaining Ammo:</English>
+            <English>Ammo left:</English>
             <German>Munitionsstand:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUEL">
@@ -820,7 +815,7 @@
             <German>Treibstoff:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RECYCLE_FUELSTATE">
-            <English>Fuel level:</English>
+            <English>Fuel left:</English>
             <German>Treibstoffstand:</German>
         </Key>
 
@@ -832,11 +827,6 @@
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_VEHICLE_TT">
             <English>Select the vehicle, that you want to resupply.</English>
             <German>Wähle das Fahrzeug aus, dass du Versorgen möchtest.</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_RESUPPLY_REFRESH_TT">
-            <English>Refresh</English>
-            <Chinese>刷新</Chinese>
-            <German>Aktualisieren</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT">
             <English>Select the Cargo which you want to resupply.</English>
@@ -1373,7 +1363,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR">
             <English>Recycle refund factor</English>
-            <German>Rückerstattungs Faktor</German>
+            <German>Rückerstattungsfaktor</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FACTOR_TT">
             <English>Defines the recycle refund in percentage.</English>
@@ -1381,51 +1371,51 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE">
             <English>Damage influence</English>
-            <German>Schadens Auswirkung</German>
+            <German>Schadensauswirkung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_DAMAGE_TT">
             <English>Activates/deactivates the supply refund dependent on the damage state of the vehicle.</English>
-            <German>Aktiviert/deaktiviert die beeinflussung des erstatteten Nachschubs in Abhängigkeit vom Schaden des Fahrzeugs.</German>
+            <German>Aktiviert/deaktiviert die Beeinflussung des erstatteten Nachschubs in Abhängigkeit vom Schaden des Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE">
             <English>Ammo influence</English>
-            <German>Munitions Auswirkung</German>
+            <German>Munitionsauswirkung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMOSTATE_TT">
             <English>Activates/deactivates the ammo refund dependent on the ammo state of the vehicle.</English>
-            <German>Aktiviert/deaktiviert die beeinflussung der erstatteten Munition in Abhängigkeit der aktuellen Munition des Fahrzeugs.</German>
+            <German>Aktiviert/deaktiviert die Beeinflussung der erstatteten Munition in Abhängigkeit der aktuellen Munition des Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE">
             <English>Fuel influence</English>
-            <German>Treibstoff Auswirkung</German>
+            <German>Treibstoffauswirkung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUELSTATE_TT">
             <English>Activates/deactivates the fuel refund dependent on the fuel state of the vehicle.</English>
-            <German>Aktiviert/deaktiviert die beeinflussung des erstatteten Treibstoffs in Abhängigkeit vom Treibstoffstand des Fahrzeugs.</German>
+            <German>Aktiviert/deaktiviert die Beeinflussung des erstatteten Treibstoffs in Abhängigkeit vom Treibstoffstand des Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY">
             <English>Supply refund</English>
-            <German>Nachschub Rückerstattung</German>
+            <German>Nachschubrückerstattung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_SUPPLY_TT">
             <English>Defines the supply refund for vehicles without defined costs.</English>
-            <German>Definiert die Nachschub Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+            <German>Definiert die Nachschubrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO">
             <English>Ammo refund</English>
-            <German>Munitions Rückerstattung</German>
+            <German>Munitionsrückerstattung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_AMMO_TT">
             <English>Defines the ammo refund for vehicles without defined costs.</English>
-            <German>Definiert die Munitions Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+            <German>Definiert die Munitionsrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL">
             <English>Fuel refund</English>
-            <German>Treibstoff Rückerstattung</German>
+            <German>Kraftstoffrückerstattung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE_FUEL_TT">
             <English>Defines the fuel refund for vehicles without defined costs.</English>
-            <German>Definiert die Treibstoff Rückerstattung für Fahrzeuge ohne definierte Kosten.</German>
+            <German>Definiert die Kraftstoffrückerstattung für Fahrzeuge ohne definierte Kosten.</German>
         </Key>
 
         <!-- RESUPPLY CATEGORY -->
@@ -1443,11 +1433,11 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY_TT">
             <English>Activates/deactivates the ACE resupply mode, where only fuel/ammo transports can be resupplied.</English>
-            <German>Aktiviert/deaktiviert die die ACE Versorgung, sodass nur noch Treibstoff/Munitions Transporter versorgt werden können.</German>
+            <German>Aktiviert/deaktiviert die die ACE Versorgung, sodass nur noch Kraftstoff-/Munitionstransporter versorgt werden können.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST">
             <English>Magazine price</English>
-            <German>Magazin Preis</German>
+            <German>Magazinpreis</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST_TT">
             <English>Defines the price of one magazine.</English>
@@ -1455,7 +1445,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST">
             <English>Gallon price</English>
-            <German>Gallonen Preis</German>
+            <German>Gallonenpreis</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST_TT">
             <English>Defines the price of one gallon.</English>
@@ -1463,7 +1453,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST">
             <English>Ammo cargo price</English>
-            <German>Munitionsvorrat Preis</German>
+            <German>Munitionsvorratpreis</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST_TT">
             <English>Defines the price of 100 ammo cargo for ACE rearm vehicles.</English>
@@ -1471,7 +1461,7 @@
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST">
             <English>Fuel cargo price</English>
-            <German>Treibstoffvorrat Preis</German>
+            <German>Treibstoffvorratpreis</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST_TT">
             <English>Defines the price of 1000 fuel cargo for ACE refuel vehicles.</English>

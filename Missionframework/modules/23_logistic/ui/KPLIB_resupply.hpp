@@ -43,7 +43,7 @@ class KPLIB_resupply {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,48);
             w = KP_GETW(KP_WIDTH_VAL_C,12);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_REFRESH_TT";
+            tooltip = "$STR_KPLIB_REFRESH";
             action = "[7580232, 68740] call KPLIB_fnc_logistic_refreshTargets";
         };
 
