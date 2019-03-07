@@ -904,10 +904,6 @@
             <Russian>Следующие элементы не разрешены:\n%1</Russian>
             <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
         </Key>
-        <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
-            <English>The crate currently holds:\n%1 %2</English>
-            <German>Die Kiste beinhaltet im Moment:\n%1 %2</German>
-        </Key>
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
@@ -915,6 +911,10 @@
         <Key ID="STR_KPLIB_HINT_NOCRATEFOUND">
             <English>Desired resource crate wasn't found in the storage.</English>
             <German>Keine passende Ressourcenkiste im Lager gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOPERMISSION">
+            <English>You don't have permission to use this vehicle.</English>
+            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
             <English>No storage found in 20m.</English>
@@ -928,9 +928,17 @@
             <English>No transport vehicle found in 10m.</English>
             <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
         </Key>
+        <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
+            <English>The permission system isn't active.</English>
+            <German>Das Rechtesystem ist derzeit nicht aktiviert.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_RANDOMFOBERROR">
             <English>Random placement of a FOB is currently not possible.</English>
             <German>Zufällige FOB Platzierung ist im Moment nicht möglich.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
+            <English>The crate currently holds:\n%1 %2</English>
+            <German>Die Kiste beinhaltet im Moment:\n%1 %2</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RESPAWNCOOLDOWN">
             <English>%1 minutes mobile respawn cooldown left.</English>
@@ -939,18 +947,6 @@
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
-        </Key>
-        <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
-            <English>Clear the aft deck and the helicopter first.</English>
-            <German>Räume zuerst das Achterdeck und den Helikopter.</German>
-        </Key>
-        <Key ID="STR_KPLIB_HINT_NOPERMISSION">
-            <English>You don't have permission to use this vehicle.</English>
-            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
-        </Key>
-        <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
-            <English>The permission system isn't active.</English>
-            <German>Das Rechtesystem ist derzeit nicht aktiviert.</German>
         </Key>
     </Package>
 
