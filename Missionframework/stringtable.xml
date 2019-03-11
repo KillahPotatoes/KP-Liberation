@@ -392,6 +392,16 @@
             <Chinese>稍後你將看到本次作戰的統計結果</Chinese>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
+
+        <!-- MISSING PERMISSION -->
+        <Key ID="STR_KPLIB_DEBRIEF_PERMISSION_TITLE">
+            <English>Missing permission</English>
+            <German>Fehlende Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_DEBRIEF_PERMISSION_DESCR">
+            <English>You've no permission to use the selected slot, contact the server admin or change your slot.</English>
+            <German>Du besitzt nicht die benütigten Rechte um den gewählten Slot zu besetzen, wende dich an den Serveradmin oder wechsel deinen Slot.</German>
+        </Key>
     </Package>
 
 
@@ -1600,6 +1610,18 @@
     <!-- PERMISSIONS -->
 
     <Package name="Permissions">
+        <Key ID="STR_KPLIB_PERMISSION_GROUPSLOTS">
+            <English>-- Slots --</English>
+            <German>-- Slots --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_COMMANDER">
+            <English>Commander</English>
+            <German>Commander</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_SUBCOMMANDER">
+            <English>Sub-Commander</English>
+            <German>Sub-Commander</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
             <English>-- Miscellaneous --</English>
             <German>-- Sonstiges --</German>

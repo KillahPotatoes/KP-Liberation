@@ -4,7 +4,7 @@
     File: KPLIB_debriefs.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-02
+    Last Update: 2019-03-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,6 +17,13 @@ class KPLIB_Win {
     description = $STR_KPLIB_DEBRIEF_WIN_DESCR;
     pictureBackground = "";
 };
+
+class KPLIB_MissingPermission {
+    title = $STR_KPLIB_DEBRIEF_PERMISSION_TITLE;
+    subtitle = "";
+    description = $STR_KPLIB_DEBRIEF_PERMISSION_DESCR;
+    pictureBackground = "";
+}
 
 class KPLIB_ConfigError {
     title = $STR_KPLIB_DEBRIEF_ERROR_TITLE;
