@@ -4,7 +4,7 @@
     File: KPLIB_functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2019-02-02
+    Last Update: 2019-03-11
 
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,6 +17,7 @@ class KPLIB {
     #include "modules\00_init\functions.hpp"
     #include "modules\01_common\functions.hpp"
     #include "modules\02_core\functions.hpp"
+    #include "modules\03_persistence\functions.hpp"
     #include "modules\03_respawn\functions.hpp"
     #include "modules\04_adm\functions.hpp"
     #include "modules\10_resources\functions.hpp"
