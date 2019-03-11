@@ -11,10 +11,10 @@
         Debriefing defines for KP Liberation.
 */
 
-class KPLIB_Win {
-    title = $STR_KPLIB_DEBRIEF_WIN_TITLE;
-    subtitle = "";
-    description = $STR_KPLIB_DEBRIEF_WIN_DESCR;
+class KPLIB_ConfigError {
+    title = $STR_KPLIB_DEBRIEF_ERROR_TITLE;
+    subtitle = $STR_KPLIB_DEBRIEF_ERROR_SUBTITLE;
+    description = $STR_KPLIB_DEBRIEF_ERROR_DESCR;
     pictureBackground = "";
 };
 
@@ -23,11 +23,11 @@ class KPLIB_MissingPermission {
     subtitle = "";
     description = $STR_KPLIB_DEBRIEF_PERMISSION_DESCR;
     pictureBackground = "";
-}
+};
 
-class KPLIB_ConfigError {
-    title = $STR_KPLIB_DEBRIEF_ERROR_TITLE;
-    subtitle = $STR_KPLIB_DEBRIEF_ERROR_SUBTITLE;
-    description = $STR_KPLIB_DEBRIEF_ERROR_DESCR;
+class KPLIB_Win {
+    title = $STR_KPLIB_DEBRIEF_WIN_TITLE;
+    subtitle = "";
+    description = $STR_KPLIB_DEBRIEF_WIN_DESCR;
     pictureBackground = "";
 };
