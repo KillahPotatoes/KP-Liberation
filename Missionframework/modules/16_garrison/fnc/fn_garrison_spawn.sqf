@@ -4,7 +4,7 @@
     File: fn_garrison_spawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2018-12-08
+    Last Update: 2019-03-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -57,12 +57,12 @@ if (_leftSolders > 0) then {
 
 // Spawn light vehicles
 {
-    [{_this call KPLIB_fnc_garrison_spawnSectorVehicle;}, [_sector, _x, _sectorOwnerSide], _forEachIndex] call CBA_fnc_waitAndExecute;
+    [{_this call KPLIB_fnc_garrison_spawnSectorVehicle;}, [_sector, _x, _sectorOwnerSide], _squadCount + _forEachIndex + 1] call CBA_fnc_waitAndExecute;
 } forEach _lightVehicles;
 
 // Spawn heavy vehicles
 {
-    [{_this call KPLIB_fnc_garrison_spawnSectorVehicle;}, [_sector, _x, _sectorOwnerSide, "heavy"], (count _lightvehicles) + _forEachIndex] call CBA_fnc_waitAndExecute;
+    [{_this call KPLIB_fnc_garrison_spawnSectorVehicle;}, [_sector, _x, _sectorOwnerSide, "heavy"], _squadCount + (count _lightvehicles) + _forEachIndex + 1] call CBA_fnc_waitAndExecute;
 } forEach _heavyVehicles;
 
 true

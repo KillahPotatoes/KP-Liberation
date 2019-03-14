@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2019-02-23
+    Last Update: 2019-03-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,11 +35,6 @@ private _sectorPos = getMarkerPos _sector;
 private _spawnPos = [_sectorPos] call KPLIB_fnc_garrison_getVehSpawnPos;
 private _activeGarrisonRef = [_sector, true] call KPLIB_fnc_garrison_getGarrison;
 
-/* !NOTE!
-    This works totally fine and also adds e.g. a CSAT vehicle classname as Blufor side, if ordered.
-    The "problem" is, that it has the normal config crew, so it's manned by CSAT soldiers which belong to Blufor side.
-    Maybe we have to replace it with an own function, especially as some AAF vehicles (resistance side) are also in the blufor preset.
-*/
 // Spawn vehicle
 private _vehicle = [_classname, _spawnPos, random 360, true, true] call KPLIB_fnc_common_createVehicle;
 _vehicle setDamage 0;
