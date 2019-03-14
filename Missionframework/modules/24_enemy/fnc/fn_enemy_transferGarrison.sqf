@@ -4,7 +4,7 @@
     File: fn_enemy_transferGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-24
+    Last Update: 2019-03-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -59,7 +59,7 @@ private _getPosDir = {
     ];
 
     private _nearRoad = selectRandom (_pos nearRoads _radius);
-    private _spawnPos = (_pos getPos [(random _radius), random 360]) findEmptyPosition [10, 50, "B_T_VTOL_01_armed_F"];
+    private _spawnPos = [];
     private _spawnDir = random 360;
     if !(isNil "_nearRoad") then {
         _spawnPos = getPosATL _nearRoad;
@@ -68,6 +68,8 @@ private _getPosDir = {
             _spawnPos = getPosATL _nearRoad;
         };
         _spawnDir = _nearRoad getDir ((roadsConnectedTo _nearRoad) select 0);
+    } else {
+        _spawnPos = (_pos getPos [(random _radius), random 360]) findEmptyPosition [10, 50, "B_T_VTOL_01_armed_F"];
     };
 
     [_spawnPos, _spawnDir]
