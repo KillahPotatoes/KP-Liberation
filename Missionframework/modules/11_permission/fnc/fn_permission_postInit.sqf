@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-03-11
+    Last Update: 2019-03-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,6 +40,17 @@ if (isServer) then {
         false,
         "Slots",
         "STR_KPLIB_PERMISSION_GROUPSLOTS"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // BuildMenu permissions
+    // Build
+    [
+        "Build",
+        {},
+        "STR_KPLIB_PERMISSION_BUILD",
+        false,
+        "BuildMenu",
+        "STR_KPLIB_PERMISSION_GROUPBUILDMENU"
     ] call KPLIB_fnc_permission_addPermissionHandler;
 
     // Vehicle permissions

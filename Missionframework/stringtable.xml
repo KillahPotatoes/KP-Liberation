@@ -1361,6 +1361,22 @@
             <English>Enables/Disables the Liberation permission system.</English>
             <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_COMMANDER">
+            <English>Enable Permission Menu for Commander</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_COMMANDER_TT">
+            <English>Enables/Disables the the permission menu access for the commander slot.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtemenü für den Commander.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_SUBCOMMANDER">
+            <English>Enable Permission Menu for Sub-Commander</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_SUBCOMMANDER_TT">
+            <English>Enables/Disables the the permission menu access for the sub-commander slot.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtemenü für den Sub-Commander.</German>
+        </Key>
 
         <!-- RECYCLE CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE">
@@ -1621,6 +1637,14 @@
         <Key ID="STR_KPLIB_PERMISSION_SUBCOMMANDER">
             <English>Sub-Commander</English>
             <German>Sub-Commander</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPBUILDMENU">
+            <English>-- Buildmenu --</English>
+            <German>-- Baumenü --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_BUILD">
+            <English>Build</English>
+            <German>Bauen</German>
         </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
             <English>-- Miscellaneous --</English>
