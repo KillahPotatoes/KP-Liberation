@@ -41,7 +41,7 @@ private _badItems = _playerItems arrayIntersect KPLIB_preset_arsenal_blacklist;
 if (!(_badItems isEqualTo [])) exitWith {
     private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _badItems, name player];
     _text remoteExec ["diag_log",2];
-    [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND", str _badItems]call CBA_fnc_notify;
+    [[localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND"], [str _badItems]] call CBA_fnc_notify;
     removeAllWeapons player;
     removeAllItems player;
     removeAllAssignedItems player;
