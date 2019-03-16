@@ -923,8 +923,8 @@
             <German>Keine passende Ressourcenkiste im Lager gefunden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOPERMISSION">
-            <English>You don't have permission to use this vehicle.</English>
-            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
+            <English>You don't have the permission to use this.</English>
+            <German>Du hast keine Rechte zur Nutzung.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
             <English>No storage found in 20m.</English>
@@ -937,6 +937,10 @@
         <Key ID="STR_KPLIB_HINT_NOTRANSPORTNEAR">
             <English>No transport vehicle found in 10m.</English>
             <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOVEHICLEPERMISSION">
+            <English>You don't have the permission to use this vehicle.</English>
+            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
             <English>The permission system isn't active.</English>
@@ -1645,6 +1649,18 @@
         <Key ID="STR_KPLIB_PERMISSION_BUILD">
             <English>Build</English>
             <German>Bauen</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPLOGISTICS">
+            <English>-- Logistic Station --</English>
+            <German>-- Logistikstation --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_RESUPPLY">
+            <English>Resupply</English>
+            <German>Nachschub</German>
         </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
             <English>-- Miscellaneous --</English>
