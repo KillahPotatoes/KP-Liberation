@@ -4,93 +4,93 @@
     File: fn_persistence_serializeObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-14
-    Last Update: 2019-03-14
+    Last Update: 2019-03-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Serializes vehicle into an array.
 
     Parameter(s):
-        _vehicle - Vehicle to serialize [OBJECT, defaults to objNull]
+        _object - Vehicle to serialize [OBJECT, defaults to objNull]
 
     Returns:
         Serialized vehicle state [ARRAY]
 */
 params [
-    ["_vehicle", objNull, [objNull]]
+    ["_object", objNull, [objNull]]
 ];
 
-if (isNull _vehicle) exitWith {[]};
+if (isNull _object) exitWith {[]};
 
-private _vehicleType = typeOf _vehicle;
+private _objectType = typeOf _object;
 
 private _hitpoints = [];
-private _configHitpoints = configFile >> "CfgVehicles" >> _vehicleType >> "HitPoints";
+private _configHitpoints = configFile >> "CfgVehicles" >> _objectType >> "HitPoints";
 
 // Get current damage
 for "_i" from 0 to (count _configHitpoints - 1) do {
     private _hitpointEntry = configName (_configHitpoints select _i);
-    private _hitpointHealth = _vehicle getHitPointDamage _hitpointEntry;
+    private _hitpointHealth = _object getHitPointDamage _hitpointEntry;
     _hitpoints pushBack [_hitpointEntry, _hitpointHealth];
 };
 
-private _vehiclePos = getPosWorld _vehicle;
-private _vehicleDirAndUp = [vectorDir _vehicle, vectorUp _vehicle];
-private _vehicleAlive = alive _vehicle;
-private _vehicleDamage = damage _vehicle;
+private _objectPos = getPosWorld _object;
+private _objectDirAndUp = [vectorDir _object, vectorUp _object];
+private _objectAlive = alive _object;
+private _objectDamage = damage _object;
 
 
-private _vehicleCrew = [];
-if (_vehicle isKindOf "AllVehicles") then {
+private _objectCrew = [];
+if (_object isKindOf "AllVehicles") then {
     {
-        _vehicleCrew pushBack (_x call KPLIB_fnc_persistence_serializeUnit);
-    } forEach (crew _vehicle);
+        _objectCrew pushBack (_x call KPLIB_fnc_persistence_serializeUnit);
+    } forEach (crew _object);
 };
 
-private _vehicleFuel = fuel _vehicle;
+private _objectFuel = fuel _object;
 
-private _vehicleAmmo = [];
-private _vehicleMagazineCargo = [];
-private _vehicleItemCargo = [];
-private _vehicleWeapons = [];
-private _vehicleBackPacks = [];
+private _objectAmmo = [];
+private _objectMagazineCargo = [];
+private _objectItemCargo = [];
+private _objectWeapons = [];
+private _objectBackPacks = [];
 
-private _vehicleBackpackItems = [];
-private _vehicleBackpackMagazines = [];
-private _vehicleBackpackWeapons = [];
+private _objectBackpackItems = [];
+private _objectBackpackMagazines = [];
+private _objectBackpackWeapons = [];
 
 
-if (_vehicleAlive) then {
-    _vehicleAmmo = magazinesAmmo _vehicle;
-    _vehicleMagazineCargo =  getMagazineCargo _vehicle;
-    _vehicleItemCargo =  itemCargo _vehicle;
-    _vehicleWeapons = weaponsItemsCargo _vehicle;
-    _vehicleBackPacks = getBackpackCargo _vehicle;
+if (_objectAlive) then {
+    _objectAmmo = magazinesAmmo _object;
+    _objectMagazineCargo =  getMagazineCargo _object;
+    _objectItemCargo =  itemCargo _object;
+    _objectWeapons = weaponsItemsCargo _object;
+    _objectBackPacks = getBackpackCargo _object;
 
     {
         _x params ["", "_container"];
-        _vehicleBackpackItems append (itemCargo _container);
-        _vehicleBackpackMagazines append (getMagazineCargo _container);
-        _vehicleBackpackWeapons append (weaponsItems _container);
-    } forEach (everyContainer _vehicle);
+        _objectBackpackItems append (itemCargo _container);
+        _objectBackpackMagazines append (getMagazineCargo _container);
+        _objectBackpackWeapons append (weaponsItems _container);
+    } forEach (everyContainer _object);
 };
 
 // Return
 [
-    _vehicleType,
-    _vehiclePos,
-    _vehicleDirAndUp,
-    _vehicleAlive,
-    _vehicleDamage,
+    _objectType,
+    _objectPos,
+    _objectDirAndUp,
+    _objectAlive,
+    _objectDamage,
     _hitpoints,
-    _vehicleFuel,
-    _vehicleAmmo,
-    _vehicleMagazineCargo,
-    _vehicleItemCargo,
-    _vehicleWeapons,
-    _vehicleCrew,
-    _vehicleBackPacks,
-    _vehicleBackpackItems,
-    _vehicleBackpackMagazines,
-    _vehicleBackpackWeapons
+    _objectFuel,
+    _objectAmmo,
+    _objectMagazineCargo,
+    _objectItemCargo,
+    _objectWeapons,
+    _objectCrew,
+    _objectBackPacks,
+    _objectBackpackItems,
+    _objectBackpackMagazines,
+    _objectBackpackWeapons
 ]
