@@ -392,6 +392,16 @@
             <Chinese>稍後你將看到本次作戰的統計結果</Chinese>
             <German>Später wird hier eine Sequenz mit den Statistiken etc. laufen.</German>
         </Key>
+
+        <!-- MISSING PERMISSION -->
+        <Key ID="STR_KPLIB_DEBRIEF_PERMISSION_TITLE">
+            <English>Missing permission</English>
+            <German>Fehlende Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_DEBRIEF_PERMISSION_DESCR">
+            <English>You've no permission to use the selected slot, contact the server admin or change your slot.</English>
+            <German>Du besitzt nicht die benütigten Rechte um den gewählten Slot zu besetzen, wende dich an den Serveradmin oder wechsel deinen Slot.</German>
+        </Key>
     </Package>
 
 
@@ -895,14 +905,14 @@
 
     <Package name="Hint">
         <Key ID="STR_KPLIB_HINT_BLACKLISTEDITEMFOUND">
-            <English>Following items are not allowed:\n%1</English>
-            <Chinese>以下品已被禁用：\n%1</Chinese>
-            <Chinesesimp>以下物品已被禁用：\n%1</Chinesesimp>
-            <German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
-            <Italian>Questi elementi non sono ammessi:\n%1</Italian>
-            <Portuguese>Os seguintes itens não são permitidos:\n%1</Portuguese>
-            <Russian>Следующие элементы не разрешены:\n%1</Russian>
-            <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
+            <English>Following items are not allowed:</English>
+            <Chinese>以下品已被禁用</Chinese>
+            <Chinesesimp>以下物品已被禁用</Chinesesimp>
+            <German>Folgende Gegenstände sind nicht erlaubt:</German>
+            <Italian>Questi elementi non sono ammessi:</Italian>
+            <Portuguese>Os seguintes itens não são permitidos:</Portuguese>
+            <Russian>Следующие элементы не разрешены:</Russian>
+            <Turkish>Şu eşyalar yasaklı:</Turkish>
         </Key>
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
@@ -913,8 +923,8 @@
             <German>Keine passende Ressourcenkiste im Lager gefunden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOPERMISSION">
-            <English>You don't have permission to use this vehicle.</English>
-            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
+            <English>You don't have the permission to use this.</English>
+            <German>Du hast keine Rechte zur Nutzung.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOSTORAGENEAR">
             <English>No storage found in 20m.</English>
@@ -927,6 +937,10 @@
         <Key ID="STR_KPLIB_HINT_NOTRANSPORTNEAR">
             <English>No transport vehicle found in 10m.</English>
             <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOVEHICLEPERMISSION">
+            <English>You don't have the permission to use this vehicle.</English>
+            <German>Du hast keine Rechte zur Nutzung dieses Fahrzeugs.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_PERMISSIONDEACTIVATED">
             <English>The permission system isn't active.</English>
@@ -1351,6 +1365,22 @@
             <English>Enables/Disables the Liberation permission system.</English>
             <German>Aktiviert/Deaktiviert das Liberation Rechtesystem.</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_COMMANDER">
+            <English>Enable Permission Menu for Commander</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_COMMANDER_TT">
+            <English>Enables/Disables the the permission menu access for the commander slot.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtemenü für den Commander.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_SUBCOMMANDER">
+            <English>Enable Permission Menu for Sub-Commander</English>
+            <German>Rechtesystem aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_PERMISSION_SUBCOMMANDER_TT">
+            <English>Enables/Disables the the permission menu access for the sub-commander slot.</English>
+            <German>Aktiviert/Deaktiviert das Liberation Rechtemenü für den Sub-Commander.</German>
+        </Key>
 
         <!-- RECYCLE CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_RECYCLE">
@@ -1600,6 +1630,38 @@
     <!-- PERMISSIONS -->
 
     <Package name="Permissions">
+        <Key ID="STR_KPLIB_PERMISSION_GROUPSLOTS">
+            <English>-- Slots --</English>
+            <German>-- Slots --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_COMMANDER">
+            <English>Commander</English>
+            <German>Commander</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_SUBCOMMANDER">
+            <English>Sub-Commander</English>
+            <German>Sub-Commander</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPBUILDMENU">
+            <English>-- Buildmenu --</English>
+            <German>-- Baumenü --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_BUILD">
+            <English>Build</English>
+            <German>Bauen</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GROUPLOGISTICS">
+            <English>-- Logistic Station --</English>
+            <German>-- Logistikstation --</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_RECYCLE">
+            <English>Recycle</English>
+            <German>Recyceln</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_RESUPPLY">
+            <English>Resupply</English>
+            <German>Nachschub</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
             <English>-- Miscellaneous --</English>
             <German>-- Sonstiges --</German>
