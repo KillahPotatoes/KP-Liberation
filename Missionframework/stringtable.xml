@@ -905,14 +905,14 @@
 
     <Package name="Hint">
         <Key ID="STR_KPLIB_HINT_BLACKLISTEDITEMFOUND">
-            <English>Following items are not allowed:\n%1</English>
-            <Chinese>以下品已被禁用：\n%1</Chinese>
-            <Chinesesimp>以下物品已被禁用：\n%1</Chinesesimp>
-            <German>Folgende Gegenstände sind nicht erlaubt:\n%1</German>
-            <Italian>Questi elementi non sono ammessi:\n%1</Italian>
-            <Portuguese>Os seguintes itens não são permitidos:\n%1</Portuguese>
-            <Russian>Следующие элементы не разрешены:\n%1</Russian>
-            <Turkish>Şu eşyalar yasaklı:\n%1</Turkish>
+            <English>Following items are not allowed:</English>
+            <Chinese>以下品已被禁用</Chinese>
+            <Chinesesimp>以下物品已被禁用</Chinesesimp>
+            <German>Folgende Gegenstände sind nicht erlaubt:</German>
+            <Italian>Questi elementi non sono ammessi:</Italian>
+            <Portuguese>Os seguintes itens não são permitidos:</Portuguese>
+            <Russian>Следующие элементы не разрешены:</Russian>
+            <Turkish>Şu eşyalar yasaklı:</Turkish>
         </Key>
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
