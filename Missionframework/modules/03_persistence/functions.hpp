@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-03-14
+    Last Update: 2019-03-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,6 +13,10 @@
 
 class persistence {
     file = "modules\03_persistence\fnc";
+
+    class persistence_deserializeObject {};
+
+    class persistence_getCargo {};
 
     // Loads module specific data from the save
     class persistence_loadData {};
@@ -26,5 +30,11 @@ class persistence {
     class persistence_saveData {};
 
     // Serialize vehicle into an array
-    class persistence_serializeVehicle {};
+    class persistence_serializeObject {};
+
+    class persistence_serializeUnit {};
+
+    class persistence_setCargo {};
+
+    class persistence_setTurretMagazines {};
 };

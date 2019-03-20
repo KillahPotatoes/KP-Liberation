@@ -4,7 +4,7 @@
     File: fn_persistence_serializeObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-14
-    Last Update: 2019-03-17
+    Last Update: 2019-03-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,75 +22,48 @@ params [
 
 if (isNull _object) exitWith {[]};
 
-private _objectType = typeOf _object;
+private _type = typeOf _object;
 
-private _hitpoints = [];
-private _configHitpoints = configFile >> "CfgVehicles" >> _objectType >> "HitPoints";
+_object = cursorObject;
+_type = typeOf _object;
 
-// Get current damage
-for "_i" from 0 to (count _configHitpoints - 1) do {
-    private _hitpointEntry = configName (_configHitpoints select _i);
-    private _hitpointHealth = _object getHitPointDamage _hitpointEntry;
-    _hitpoints pushBack [_hitpointEntry, _hitpointHealth];
+private _hitpointsDamage = [];
+private _hitpoints = getAllHitPointsDamage _object;
+
+for "_i" from 0 to (count (_hitpoints select 0) - 1) do {
+    _hitpointsDamage pushBack [
+        _hitpoints select 0 select _i,
+        _hitpoints select 2 select _i
+    ];
 };
 
-private _objectPos = getPosWorld _object;
-private _objectDirAndUp = [vectorDir _object, vectorUp _object];
-private _objectAlive = alive _object;
-private _objectDamage = damage _object;
+private _worldPos = getPosWorld _object;
+private _dirAndUp = [vectorDir _object, vectorUp _object];
+private _alive = alive _object;
+private _damage = damage _object;
+
+private _crew = (crew _object) apply {_x call KPLIB_fnc_persistence_serializeUnit};
+
+private _fuel = fuel _object;
+
+private _ammo = [];
 
 
-private _objectCrew = [];
-if (_object isKindOf "AllVehicles") then {
-    {
-        _objectCrew pushBack (_x call KPLIB_fnc_persistence_serializeUnit);
-    } forEach (crew _object);
+if (_alive) then {
+    _turretMagazines = magazinesAllTurrets _object;
+    _cargo = _object call KPLIB_fnc_persistence_getCargo;
 };
 
-private _objectFuel = fuel _object;
-
-private _objectAmmo = [];
-private _objectMagazineCargo = [];
-private _objectItemCargo = [];
-private _objectWeapons = [];
-private _objectBackPacks = [];
-
-private _objectBackpackItems = [];
-private _objectBackpackMagazines = [];
-private _objectBackpackWeapons = [];
-
-
-if (_objectAlive) then {
-    _objectAmmo = magazinesAmmo _object;
-    _objectMagazineCargo =  getMagazineCargo _object;
-    _objectItemCargo =  itemCargo _object;
-    _objectWeapons = weaponsItemsCargo _object;
-    _objectBackPacks = getBackpackCargo _object;
-
-    {
-        _x params ["", "_container"];
-        _objectBackpackItems append (itemCargo _container);
-        _objectBackpackMagazines append (getMagazineCargo _container);
-        _objectBackpackWeapons append (weaponsItems _container);
-    } forEach (everyContainer _object);
-};
-
-// Return
+// return
 [
-    _objectType,
-    _objectPos,
-    _objectDirAndUp,
-    _objectAlive,
-    _objectDamage,
-    _hitpoints,
-    _objectFuel,
-    _objectAmmo,
-    _objectMagazineCargo,
-    _objectItemCargo,
-    _objectWeapons,
-    _objectCrew,
-    _objectBackPacks,
-    _objectBackpackItems,
-    _objectBackpackMagazines,
-    _objectBackpackWeapons
+    _type,
+    _worldPos,
+    _dirAndUp,
+    _alive,
+    _damage,
+    _hitpointsDamage,
+    _crew,
+    _fuel,
+    _turretMagazines,
+    _cargo
 ]
