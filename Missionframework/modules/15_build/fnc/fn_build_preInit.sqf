@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-12-16
+    Last Update: 2019-03-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,6 +41,10 @@ KPLIB_build_fobBuildObject = objNull;
 KPLIB_build_categoryItems = [];
 
 if (isServer) then {
+
+    // Register FOB var for persistence
+    "KPLIB_fob" call KPLIB_fnc_persistence_addPersistentVar;
+
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_build_loadData}] call CBA_fnc_addEventHandler;
 
@@ -59,6 +63,7 @@ if (isServer) then {
         // Skip storage areas
         if !((typeOf _object) in KPLIB_res_storageClasses) then {
             (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
+            _object setVariable ["KPLIB_fob", _fob, true];
         };
 
     }] call CBA_fnc_addEventHandler;
