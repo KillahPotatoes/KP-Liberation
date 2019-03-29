@@ -245,6 +245,10 @@
             <English>-- RANDOM FOB DEPLOYMENT --</English>
             <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
+            <English>-- Garrison Management --</English>
+            <German>-- Garnisonverwaltung --</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
@@ -517,6 +521,33 @@
             <German>Löscht den kompletten gespeicherten Spielstand. Der momentane Stand wird zur Sicherheit in dein Profil exportiert. Benötigt einen Neustart nach der Löschung.</German>
         </Key>
 
+        <!-- ARSENAL DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
+            <English>KP Liberation Arsenal</English>
+            <Chinese>KP Liberation軍火庫</Chinese>
+            <German>KP Liberation Arsenal</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOAD">
+            <English>Load selection</English>
+            <Chinese>讀取選擇</Chinese>
+            <German>Auswahl laden</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_DEFAULT">
+            <English>Set as default</English>
+            <Chinese>設定為預設值</Chinese>
+            <German>Als Standard benutzen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
+            <English>Copy/Load from near player</English>
+            <Chinese>複製並讀取附近玩家的裝備配置</Chinese>
+            <German>Kopieren/Laden von einem Spieler in der Nähe</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_ARSENAL_OPEN">
+            <English>Open Arsenal</English>
+            <Chinese>開啟軍火庫</Chinese>
+            <German>Arsenal öffnen</German>
+        </Key>
+
         <!-- BUILD DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_BUILD_TITLE">
             <English>BUILD</English>
@@ -577,6 +608,36 @@
             <Russian>Позиция размешения</Russian>
             <Spanish>Lugar para el despliegue</Spanish>
             <Turkish>Doğma noktası</Turkish>
+        </Key>
+
+        <!-- GARRISON DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_TITLE">
+            <English>GARRISON MANAGEMENT</English>
+            <German>GARNISONVERWALTUNG</German>
+        </Key>
+
+        <!-- LOGISTIC MAIN DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_LOGISTICMAIN_TITLE">
+            <English>KP Liberation Logistic Main Menu</English>
+            <German>KP Liberation Logistik Hauptmenü</German>
+        </Key>
+
+        <!-- PERMISSION DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
+            <English>KP Liberation Permissions</English>
+            <German>KP Liberation Rechteverwaltung</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_DEFAULT">
+            <English>Default permissions</English>
+            <German>Standard Rechte</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_ONLINE">
+            <English>- Online players -</English>
+            <German>- Anwesende Spieler -</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
+            <English>- Offline players -</English>
+            <German>- Abwesende Spieler -</German>
         </Key>
 
         <!-- PLAYER MENU DIALOG -->
@@ -724,57 +785,6 @@
             <English>Leveling system disabled</English>
             <Chinese>陞階系統關閉</Chinese>
             <German>Levelsystem deaktiviert</German>
-        </Key>
-
-        <!-- ARSENAL DIALOG -->
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_TITLE">
-            <English>KP Liberation Arsenal</English>
-            <Chinese>KP Liberation軍火庫</Chinese>
-            <German>KP Liberation Arsenal</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOAD">
-            <English>Load selection</English>
-            <Chinese>讀取選擇</Chinese>
-            <German>Auswahl laden</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_DEFAULT">
-            <English>Set as default</English>
-            <Chinese>設定為預設值</Chinese>
-            <German>Als Standard benutzen</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_LOADNEAR">
-            <English>Copy/Load from near player</English>
-            <Chinese>複製並讀取附近玩家的裝備配置</Chinese>
-            <German>Kopieren/Laden von einem Spieler in der Nähe</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_ARSENAL_OPEN">
-            <English>Open Arsenal</English>
-            <Chinese>開啟軍火庫</Chinese>
-            <German>Arsenal öffnen</German>
-        </Key>
-
-        <!-- PERMISSION DIALOG -->
-        <Key ID="STR_KPLIB_DIALOG_PERMISSION_TITLE">
-            <English>KP Liberation Permissions</English>
-            <German>KP Liberation Rechteverwaltung</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_PERMISSION_DEFAULT">
-            <English>Default permissions</English>
-            <German>Standard Rechte</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_PERMISSION_ONLINE">
-            <English>- Online players -</English>
-            <German>- Anwesende Spieler -</German>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
-            <English>- Offline players -</English>
-            <German>- Abwesende Spieler -</German>
-        </Key>
-
-        <!-- LOGISTIC MAIN DIALOG -->
-        <Key ID="STR_KPLIB_DIALOG_LOGISTICMAIN_TITLE">
-            <English>KP Liberation Logistic Main Menu</English>
-            <German>KP Liberation Logistik Hauptmenü</German>
         </Key>
 
         <!-- RECYCLE DIALOG -->
