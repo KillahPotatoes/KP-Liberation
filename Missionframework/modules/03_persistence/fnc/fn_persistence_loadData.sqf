@@ -1,7 +1,7 @@
 /*
     KPLIB_fnc_persistence_loadData
 
-    File: fn_example_loadData.sqf
+    File: fn_persistence_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
     Last Update: 2019-03-30
