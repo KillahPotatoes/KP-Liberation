@@ -24,7 +24,7 @@ if (isNull _object) exitWith {[]};
 
 // return
 KPLIB_persistenceSavedVars apply {[
-    _x#0, // name
-    _object getVariable (_x#0), // val
-    _x#1 // global
-]} select {!isNil {_x#1}};
+    _x select 0, // name
+    _object getVariable (_x select 0), // val
+    _x select 1 // global
+]} select {!isNil {_x select 1}};
