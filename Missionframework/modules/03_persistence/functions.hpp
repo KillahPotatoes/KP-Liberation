@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-03-26
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,6 +25,8 @@ class persistence {
     // Loads module specific data from the save
     class persistence_loadData {};
 
+    class persistence_makePersistent {};
+
     // Persistence pre initialization
     class persistence_preInit {
         preInit = 1;
@@ -37,6 +39,8 @@ class persistence {
     class persistence_serializeObject {};
 
     class persistence_serializeUnit {};
+
+    class persistence_serializeVars {};
 
     class persistence_setCargo {};
 

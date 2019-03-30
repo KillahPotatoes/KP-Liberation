@@ -4,7 +4,7 @@
     File: fn_persistence_serializeObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-14
-    Last Update: 2019-03-20
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,9 +23,6 @@ params [
 if (isNull _object) exitWith {[]};
 
 private _type = typeOf _object;
-
-_object = cursorObject;
-_type = typeOf _object;
 
 private _hitpointsDamage = [];
 private _hitpoints = getAllHitPointsDamage _object;
@@ -46,9 +43,8 @@ private _crew = (crew _object) apply {_x call KPLIB_fnc_persistence_serializeUni
 
 private _fuel = fuel _object;
 
-private _ammo = [];
-
-
+private _turretMagazines = [];
+private _cargo = [];
 if (_alive) then {
     _turretMagazines = magazinesAllTurrets _object;
     _cargo = _object call KPLIB_fnc_persistence_getCargo;

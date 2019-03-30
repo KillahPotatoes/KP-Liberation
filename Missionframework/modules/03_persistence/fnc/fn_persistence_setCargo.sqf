@@ -4,7 +4,7 @@
     File: fn_persistence_setCargo.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-20
-    Last Update: 2019-03-20
+    Last Update: 2019-03-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,10 +19,16 @@
 */
 params [
     ["_object", objNull, [objNull]],
-    ["_cargo", [], [[]], 5]
+    ["_cargo", [], [[]]]
 ];
 
-_cargo params ["_magazines", "_items", "_weapons", "_backpacks", "_containersCargo"];
+_cargo params [
+    ["_magazines", []],
+    ["_items", []],
+    ["_weapons", []],
+    ["_backpacks", []],
+    ["_containersCargo", []]
+];
 
 clearWeaponCargoGlobal _object;
 clearMagazineCargoGlobal _object;

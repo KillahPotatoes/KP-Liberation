@@ -4,7 +4,7 @@
     File: fn_example_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-03-26
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,14 +39,18 @@ if (_moduleData isEqualTo []) then {
         private _object = _serialized call KPLIB_fnc_persistence_deserializeObject;
         // Apply saved variables
         {
-            _x params ["_var", "_val", "_global"];
-            _object setVariable [_var, _val, _global];
-            // Add var to persistence so even if module that added it originaly is not preset the data won't be lost
-            _var call KPLIB_fnc_persistence_addPersistentVar;
+            _x params [["_var", nil], ["_val", nil], ["_global", false]];
+            if (!isNil "_var") then {
+                _object setVariable [_var, _val, _global];
+                // Add var to persistence so even if module that added it originaly is not preset the data won't be lost
+                _var call KPLIB_fnc_persistence_addPersistentVar;
+            };
         } forEach _variables;
 
         _objects pushBack _object;
     } forEach (_moduleData select 0);
+
+    KPLIB_persistence_objects = _objects;
 
     // Load units
     {
@@ -55,18 +59,18 @@ if (_moduleData isEqualTo []) then {
         private _unit = _serialized call KPLIB_fnc_persistence_deserializeObject;
         // Apply saved variables
         {
-            _x params ["_var", "_val", "_global"];
-            _unit setVariable [_var, _val, _global];
-            // Add var to persistence so even if module that added it originaly is not preset the data won't be lost
-            _var call KPLIB_fnc_persistence_addPersistentVar;
+            _x params [["_var", nil], ["_val", nil], ["_global", false]];
+            if (!isNil "_var") then {
+                _unit setVariable [_var, _val, _global];
+                // Add var to persistence so even if module that added it originaly is not preset the data won't be lost
+                _var call KPLIB_fnc_persistence_addPersistentVar;
+            };
         } forEach _variables;
 
         _units pushBack _unit;
     } forEach (_moduleData select 1);
 
-
-    [KPLIB_persistenceHash, "objects", _objects] call CBA_fnc_hashSet;
-    [KPLIB_persistenceHash, "units", _units] call CBA_fnc_hashSet;
+    KPLIB_persistence_units = _units;
 };
 
 true

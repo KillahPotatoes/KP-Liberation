@@ -4,7 +4,7 @@
     File: fn_persistence_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-03-26
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,7 +23,8 @@ if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERSISTENCE] M
     ----- Module Globals -----
 */
 
-KPLIB_persistenceHash = [[], []] call CBA_fnc_hashCreate;
+KPLIB_persistence_objects = [];
+KPLIB_persistence_units = [];
 
 // List of variables that will be persisted
 KPLIB_persistenceSavedVars = [];

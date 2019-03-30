@@ -4,7 +4,7 @@
     File: fn_persistence_deserializeObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-17
-    Last Update: 2019-03-20
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,13 +28,13 @@ params [
     ["_crew", [], [[]]],
     ["_fuel", 1, [0]],
     ["_turretMagazines", [], [[]]],
-    ["_cargo", [], [[]], 5]
+    ["_cargo", [], [[]]]
 ];
 
-private _object = createVehicle [_type, KPLIB_zeroPos, [], 0, "CAN_COLLIDE"];
+private _object = _type call KPLIB_fnc_common_createVehicle;
 _object setPosWorld _worldPos;
 _object setVectorDirAndUp _dirAndUp;
-_object setDamage _damage;
+_object setDamage [_damage, false];
 
 {
     _object setHitPointDamage _x;
