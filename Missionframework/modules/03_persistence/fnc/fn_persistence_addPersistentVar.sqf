@@ -12,8 +12,8 @@
         Variable should contain simple data only. (no objects etc.)
 
     Parameter(s):
-        _variableName - Name of variable which should be saved [STRING]
-        _global - Is variable global [BOOL, defaults to false]
+        _variableName   - Name of variable which should be saved [STRING]
+        _global         - Is variable global [BOOL, defaults to false]
 
     Returns:
         Variable was added to persistence system [BOOL]

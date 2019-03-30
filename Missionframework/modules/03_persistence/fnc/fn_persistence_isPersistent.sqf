@@ -22,7 +22,7 @@ params [
 ];
 
 if (_object isKindOf "CAManBase") exitWith {
-    (KPLIB_persistence_units find _object) != -1;
+    (KPLIB_persistence_units find _object) != -1
 };
 
-(KPLIB_persistence_objects find _object) != -1;
+(KPLIB_persistence_objects find _object) != -1

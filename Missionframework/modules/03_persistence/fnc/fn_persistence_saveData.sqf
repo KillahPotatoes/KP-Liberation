@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_example_saveData
+    KPLIB_fnc_persistence_saveData
 
-    File: fn_example_saveData.sqf
+    File: fn_persistence_saveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
     Last Update: 2019-03-30
@@ -20,7 +20,7 @@
 if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Persistence module saving..."};
 
 KPLIB_persistence_objects = KPLIB_persistence_objects - [objNull];
-KPLIB_persistence_units = (KPLIB_persistence_units select {alive _x}) - [objNull];
+KPLIB_persistence_units = KPLIB_persistence_units select {alive _x};
 
 // Set module data to save and send it to the global save data array
 ["persistence", [

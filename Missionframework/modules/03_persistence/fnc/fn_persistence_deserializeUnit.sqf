@@ -11,7 +11,7 @@
         Deserializes unit from array.
 
     Parameter(s):
-        _type       - Description                                               [STRING]
+        _type       - Description                                               [STRING, defaults to ""]
         _pos        - Position WORLD                                            [Pos WORLD, defaults to KPLIB_zeroPos]
         _dirAndUp   - Dir and up                                                [ARRAY, defaults to [[0,1,0], [0,0,1]]]
         _side       - Side of unit, ignored if group is provided                [SIDE, defaults to KPLIB_preset_sideF]
