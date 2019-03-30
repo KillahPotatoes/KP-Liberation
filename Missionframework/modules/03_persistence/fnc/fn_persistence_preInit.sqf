@@ -17,7 +17,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERSISTENCE] Module initializing...", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERSISTENCE] Module initializing...", diag_tickTime]};
 
 /*
     ----- Module Globals -----
@@ -40,8 +40,18 @@ if (isServer) then {
 
     // Register save event handler
     ["KPLIB_doSave", {[] call KPLIB_fnc_persistence_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Add default persistent variables
+    {
+        _x params ["_var", "_global"];
+        [_var, _global] call KPLIB_fnc_persistence_addPersistentVar;
+    } forEach [
+        ["ace_rearm_magazineSupply", true],
+        ["ace_rearm_currentSupply", true],
+        ["ace_refuel_currentFuelCargo", true]
+    ];
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERSISTENCE] Module initialized", diag_tickTime];};
+if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERSISTENCE] Module initialized", diag_tickTime]};
 
 true
