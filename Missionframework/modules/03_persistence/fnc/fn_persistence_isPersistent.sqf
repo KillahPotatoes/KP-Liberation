@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_persistence_makePersistent
+    KPLIB_fnc_persistence_isPersistent
 
-    File: fn_persistence_makePersistent.sqf
+    File: fn_persistence_isPersistent.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-30
     Last Update: 2019-03-30
@@ -9,22 +9,20 @@
     Public: Yes
 
     Description:
-        Adds object to persistence system.
+        Checks if object is added to persistence system.
 
     Parameter(s):
-        _object - Object to add to persistence [OBJECT]
+        _object - Object to check [OBJECT]
 
     Returns:
-        Object was added to persistence [BOOL]
+        Is object persistent [BOOL]
 */
 params [
     ["_object", objNull, [objNull]]
 ];
 
 if (_object isKindOf "CAManBase") exitWith {
-    KPLIB_persistence_units pushBackUnique _object;
+    (KPLIB_persistence_units find _object) != -1;
 };
 
-KPLIB_persistence_objects pushBackUnique _object;
-
-true
+(KPLIB_persistence_objects find _object) != -1;
