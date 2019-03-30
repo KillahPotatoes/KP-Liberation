@@ -24,9 +24,10 @@ params [
 ];
 
 if (_variableName isEqualTo "") exitWith {false};
-// Prevent overwrites and warn
-if (KPLIB_persistenceSavedVars findIf {(_x select 0) == _variableName} != -1) exitWith {
-    diag_log text format ["[KP LIBERATION] [SAVE] [WARNING] Variable '%1' was already in persistence system!", _variableName];
+
+private _idx = KPLIB_persistenceSavedVars findIf {(_x select 0) == _variableName};
+if (_idx != -1) exitWith {
+    KPLIB_persistenceSavedVars set [_idx, [_variableName, _global]];
 };
 
 diag_log format ["[KP LIBERATION] [PERSISTENCE] Variable '%1' added to persistence system", _variableName];
