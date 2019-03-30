@@ -31,7 +31,7 @@ if (hasInterface) then {
         false,
         true,
         "",
-        '_target isEqualTo _originalTarget && !(_originalTarget getVariable ["KPLIB_fob", ""] in ["", "KPLIB_eden_startbase_marker"]) && !(KPLIB_sectors_blufor isEqualTo [])'
+        '_target isEqualTo _originalTarget && !(_originalTarget getVariable ["KPLIB_fob", ""] isEqualTo "") && !(KPLIB_sectors_blufor isEqualTo [])'
     ];
     [_actionArray] call CBA_fnc_addPlayerAction;
 };
