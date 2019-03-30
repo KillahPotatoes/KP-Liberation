@@ -4,7 +4,7 @@
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-02-24
+    Last Update: 2019-03-18
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -124,17 +124,9 @@ _cam cameraEffect ["internal", "front", "rtt"];
 KPLIB_logistic_activeCam = _cam;
 _cam camSetTarget _vehicle;
 _cam camSetFov 0.5;
-_cam camCommit 0;
-_cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 5]);
+_cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 90]);
 _cam camCommit 0;
 
-private _index = lbCurSel _ctrlVehicleList;
-while {(lbCurSel _ctrlVehicleList) isEqualTo _index || !dialog} do {
-    for "_i" from 1 to 36 do {
-        _cam camSetPos ((_vehicle getRelPos [15, _i * 10]) vectorAdd [0, 0, 5]);
-        _cam camCommit 30/36;
-        waitUntil {camCommitted _cam};
-    };
-};
+[_cam, _vehicle, 36, 60] call KPLIB_fnc_common_cameraCircleTarget;
 
 true
