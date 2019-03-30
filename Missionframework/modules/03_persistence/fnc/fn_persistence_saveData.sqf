@@ -20,7 +20,7 @@
 if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Persistence module saving..."};
 
 KPLIB_persistence_objects = KPLIB_persistence_objects - [objNull];
-KPLIB_persistence_units = KPLIB_persistence_units - [objNull];
+KPLIB_persistence_units = (KPLIB_persistence_units select {alive _x}) - [objNull];
 
 // Set module data to save and send it to the global save data array
 ["persistence", [

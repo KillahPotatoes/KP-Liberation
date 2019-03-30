@@ -56,7 +56,7 @@ if (_moduleData isEqualTo []) then {
     {
         _x params ["_serialized", ["_variables", []]];
 
-        private _unit = _serialized call KPLIB_fnc_persistence_deserializeObject;
+        private _unit = _serialized call KPLIB_fnc_persistence_deserializeUnit;
         // Apply saved variables
         {
             _x params [["_var", nil], ["_val", nil], ["_global", false]];

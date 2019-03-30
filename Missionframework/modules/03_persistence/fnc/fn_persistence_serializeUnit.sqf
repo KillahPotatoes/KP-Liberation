@@ -23,6 +23,6 @@ params [
 [
     typeOf _unit,
     getPosWorld _unit,
-    [vectorDir _unit, vectorUp _unit]
+    [vectorDir _unit, vectorUp _unit],
     side _unit
 ]
