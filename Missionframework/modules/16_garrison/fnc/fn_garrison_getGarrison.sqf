@@ -4,8 +4,9 @@
     File: fn_garrison_getGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-24
-    Last Update: 2019-02-23
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Gets the specific garrison array as reference for a given sector.
@@ -26,8 +27,8 @@ params [
 private _array = [KPLIB_garrison_array, KPLIB_garrison_active] select _active;
 private _index = (_array findIf {_x select 0 == _sector});
 
-if(_index isEqualTo -1) then {
+if (_index isEqualTo -1) then {
     []
 } else {
     _array select _index
-}
+};

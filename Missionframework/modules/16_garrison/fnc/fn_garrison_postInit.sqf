@@ -6,6 +6,7 @@
     Date: 2018-10-18
     Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The postInit function of a module takes care of starting/executing the modules functions or scripts.
