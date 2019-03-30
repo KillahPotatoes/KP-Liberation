@@ -26,7 +26,7 @@
 
         Localization contributors:
 
-            English | Updated: 2018-12-14
+            English | Updated: 2019-03-30
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -39,7 +39,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2018-12-14
+            German | Updated: 2019-03-30
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -246,8 +246,8 @@
             <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
-            <English>-- Garrison Management --</English>
-            <German>-- Garnisonverwaltung --</German>
+            <English>-- GARRISON MANAGEMENT --</English>
+            <German>-- GARNISONVERWALTUNG --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
