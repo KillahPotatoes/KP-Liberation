@@ -4,8 +4,9 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2019-03-14
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Spawns a vehicle with full crew of given side at given sector.
