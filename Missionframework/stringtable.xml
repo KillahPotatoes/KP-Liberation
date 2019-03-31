@@ -962,6 +962,10 @@
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
         </Key>
+        <Key ID="STR_KPLIB_HINT_NOTENOUGHSTORAGE">
+            <English>It's not enough storage space left.</English>
+            <German>Es sind nicht genügend freie Lagerplätze vorhanden.</German>
+        </Key>
     </Package>
 
 

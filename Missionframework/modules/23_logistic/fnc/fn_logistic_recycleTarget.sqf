@@ -4,7 +4,7 @@
     File: fn_logistic_recycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-31
-    Last Update: 2019-02-24
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,12 +32,20 @@ private _vehicleId = _ctrlVehicleList lbData _index;
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
 
+// Pay the refund
+private _storage = objNull;
+private _crate = objNull;
+private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
+
+private _supplyValue = KPLIB_logistic_supplyValue;
+private _ammoValue = KPLIB_logistic_ammoValue;
+private _fuelValue = KPLIB_logistic_fuelValue;
+
+[_nearFOB, _supplyValue, _ammoValue, _fuelValue] remoteExecCall ["KPLIB_fnc_res_refund", 2];
+
 // Delete the vehicle
 deleteVehicle _vehicle;
-
-/* TODO:
-- Implement Resource refund
-*/
 
 [7580232, 68740] call KPLIB_fnc_logistic_refreshTargets;
 

@@ -4,7 +4,7 @@
     File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-03-18
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -73,24 +73,46 @@ if (KPLIB_param_fuelInfluence) then {
 // Fill the controls
 if !(_vehicleIndex isEqualTo -1) then {
     private _vehicleArray = _vehicles select _vehicleIndex;
-    _ctrlSupplyValue ctrlSetText str (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
-    _ctrlAmmoValue ctrlSetText str (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
-    _ctrlFuelValue ctrlSetText str (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
+    KPLIB_logistic_supplyValue = (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
+    _ctrlSupplyValue ctrlSetText str KPLIB_logistic_supplyValue;
+    KPLIB_logistic_ammoValue = (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
+    _ctrlAmmoValue ctrlSetText str KPLIB_logistic_ammoValue;
+    KPLIB_logistic_fuelValue = (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
+    _ctrlFuelValue ctrlSetText str KPLIB_logistic_fuelValue;
 } else {
-    _ctrlSupplyValue ctrlSetText str (KPLIB_param_refundSupply * _damage);
-    _ctrlAmmoValue ctrlSetText str (KPLIB_param_refundAmmo * _ammo);
-    _ctrlFuelValue ctrlSetText str (KPLIB_param_refundFuel * _fuel);
+    KPLIB_logistic_supplyValue = (KPLIB_param_refundSupply * _damage);
+    _ctrlSupplyValue ctrlSetText str KPLIB_logistic_supplyValue;
+    KPLIB_logistic_ammoValue = (KPLIB_param_refundAmmo * _ammo);
+    _ctrlAmmoValue ctrlSetText str KPLIB_logistic_ammoValue;
+    KPLIB_logistic_fuelValue = (KPLIB_param_refundFuel * _fuel);
+    _ctrlFuelValue ctrlSetText str KPLIB_logistic_fuelValue;
 };
 
 _ctrlSupplyFactor ctrlSetText str (round (_damage * 100)) + " %";
 _ctrlAmmoFactor ctrlSetText str (round (_ammo * 100)) + " %";
 _ctrlFuelFactor ctrlSetText str (round (_fuel * 100)) + " %";
 
-/* TODO:
-- Implement check for empty cargo space
-*/
+// Check if there's enough empty storage capacity
+private _supplyCrates = ceil (KPLIB_logistic_supplyValue / KPLIB_param_crateVolume);
+private _ammoCrates = ceil (KPLIB_logistic_ammoValue / KPLIB_param_crateVolume);
+private _fuelCrates = ceil (KPLIB_logistic_fuelValue / KPLIB_param_crateVolume);
+private _crateCount = _supplyCrates + _ammoCrates + _fuelCrates;
+private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
+private _crateCapacity = 0;
+{
+    _crateCapacity = _crateCapacity + ([_x] call KPLIB_fnc_res_getStorageSpace);
+} forEach _storages;
 
-_recycleButton ctrlEnable true;
+if (_crateCapacity < _crateCount) then {
+    _recycleButton ctrlEnable false;
+    [
+        ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+        [localize "STR_KPLIB_HINT_NOTENOUGHSTORAGE"]
+    ] call CBA_fnc_notify;
+} else {
+    _recycleButton ctrlEnable true;
+};
 
 // Spawn camera object
 camUseNVG false;
