@@ -63,9 +63,9 @@ _grp = [_classnames, _spawnPos, _side] call KPLIB_fnc_common_createGroup;
 } forEach (units _grp);
 
 // !DEBUG! Add group to Zeus
-{
+/* {
     _x addCuratorEditableObjects [units _grp, true]
-} forEach allCurators;
+} forEach allCurators; */
 
 // Remove possible initialization waypoints
 {deleteWaypoint [_grp, 0];} forEach (waypoints _grp);

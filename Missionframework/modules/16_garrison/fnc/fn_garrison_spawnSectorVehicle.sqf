@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-21
-    Last Update: 2019-03-30
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -42,9 +42,9 @@ _vehicle setDamage 0;
 private _crew = crew _vehicle;
 
 // !DEBUG! Add group to Zeus
-{
+/* {
     _x addCuratorEditableObjects [[_vehicle], true]
-} forEach allCurators;
+} forEach allCurators; */
 
 /* !NOTE!
     Adding a patrol waypoint pattern to the vehicle let it move like the infantry squads, which is the same like in the old framework.
