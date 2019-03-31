@@ -43,7 +43,7 @@ class KPLIB_garrison {
     class controls {
         class KPLIB_GarrisonList: KPGUI_PRE_Listbox {
             idc = KPLIB_IDC_GARRISON_GARRISONLIST;
-            onLBSelChanged = "_this call KPLIB_fnc_garrison_dialogSelectSector";
+            onLBSelChanged = "[_this select 1] call KPLIB_fnc_garrison_dialogSelectSector";
             x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,0,1);
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,16);
             w = KP_GETW(KP_WIDTH_VAL,4);

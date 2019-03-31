@@ -21,12 +21,11 @@
 */
 
 params [
-    ["_ctrlLbSectors", controlNull, [controlNull]],
     ["_lbIndex", -1, [0]]
 ];
 
 // Exit if no parameters passed
-if (isNull _ctrlLbSectors || _lbIndex isEqualTo -1) exitWith {};
+if (_lbIndex isEqualTo -1) exitWith {};
 
 // Dialog controls
 private _dialog = findDisplay KPLIB_IDC_GARRISON_DIALOG;
