@@ -270,7 +270,6 @@ class KPGUI_PRE_Button {
 // Inline Button
 class KPGUI_PRE_InlineButton: KPGUI_PRE_Button {
     colorBackground[] = {0.25, 0.25, 0.25, 1};
-    colorBackgroundDisabled[] = {0, 1, 0, 1};
     colorBackgroundActive[] = {0.3, 0.3, 0.3, 1};
     colorFocused[] = {0.25, 0.25, 0.25, 1};
     offsetPressedX = safeZoneW * 0.0005;
