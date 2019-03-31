@@ -30,13 +30,14 @@ if (isNull _ctrlLbSectors || _lbIndex isEqualTo -1) exitWith {};
 // Initialize needed local variables
 private _dialog = ctrlParent _ctrlLbSectors;
 private _ctrlNameTitle = _dialog displayCtrl 758042;
-private _ctrlInfLabel = _dialog displayCtrl 758043;
-private _ctrlInfAmount = _dialog displayCtrl 758044;
-private _ctrlLightLabel = _dialog displayCtrl 758045;
-private _ctrlLightAmount = _dialog displayCtrl 758046;
-private _ctrlHeavyLabel = _dialog displayCtrl 758047;
-private _ctrlHeavyAmount = _dialog displayCtrl 758048;
-private _ctrlMap = _dialog displayCtrl 758049;
+private _ctrlAlertNote = _dialog displayCtrl 758043;
+private _ctrlInfLabel = _dialog displayCtrl 758044;
+private _ctrlInfAmount = _dialog displayCtrl 758045;
+private _ctrlLightLabel = _dialog displayCtrl 758046;
+private _ctrlLightAmount = _dialog displayCtrl 758047;
+private _ctrlHeavyLabel = _dialog displayCtrl 758048;
+private _ctrlHeavyAmount = _dialog displayCtrl 758049;
+private _ctrlMap = _dialog displayCtrl 7580410;
 private _sector = _ctrlLbSectors lbData _lbIndex;
 private _sectorPos = [_sector] call KPLIB_fnc_common_getPos;
 private _garrison = [_sector] call KPLIB_fnc_garrison_getGarrison;
@@ -50,6 +51,7 @@ private _sectorDetailCtrls = [
     _ctrlHeavyAmount,
     _ctrlMap
 ];
+private _alert = !(([_sector, true] call KPLIB_fnc_garrison_getGarrison) isEqualTo []);
 
 // Show sector details
 {_x ctrlShow true;} forEach _sectorDetailCtrls;
@@ -59,6 +61,13 @@ _ctrlNameTitle ctrlSetText (markerText _sector);
 _ctrlInfAmount ctrlSetText (str (_garrison select 2));
 _ctrlLightAmount ctrlSetText (str (count (_garrison select 3)));
 _ctrlHeavyAmount ctrlSetText (str (count (_garrison select 4)));
+
+// Show alert state hint
+if (_alert) then {
+    _ctrlAlertNote ctrlShow true;
+} else {
+    _ctrlAlertNote ctrlShow false;
+};
 
 // Show map and center on sector
 _ctrlMap ctrlMapAnimAdd [0, 0.2, _sectorPos];

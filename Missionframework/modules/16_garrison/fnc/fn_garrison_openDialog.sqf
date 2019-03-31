@@ -26,15 +26,17 @@ disableSerialization;
 private _dialog = findDisplay 75804;
 private _ctrlLbSectors = _dialog displayCtrl 758041;
 private _ctrlNameTitle = _dialog displayCtrl 758042;
-private _ctrlInfLabel = _dialog displayCtrl 758043;
-private _ctrlInfAmount = _dialog displayCtrl 758044;
-private _ctrlLightLabel = _dialog displayCtrl 758045;
-private _ctrlLightAmount = _dialog displayCtrl 758046;
-private _ctrlHeavyLabel = _dialog displayCtrl 758047;
-private _ctrlHeavyAmount = _dialog displayCtrl 758048;
-private _ctrlMap = _dialog displayCtrl 758049;
+private _ctrlAlertNote = _dialog displayCtrl 758043;
+private _ctrlInfLabel = _dialog displayCtrl 758044;
+private _ctrlInfAmount = _dialog displayCtrl 758045;
+private _ctrlLightLabel = _dialog displayCtrl 758046;
+private _ctrlLightAmount = _dialog displayCtrl 758047;
+private _ctrlHeavyLabel = _dialog displayCtrl 758048;
+private _ctrlHeavyAmount = _dialog displayCtrl 758049;
+private _ctrlMap = _dialog displayCtrl 7580410;
 private _sectorDetailCtrls = [
     _ctrlNameTitle,
+    _ctrlAlertNote,
     _ctrlInfLabel,
     _ctrlInfAmount,
     _ctrlLightLabel,
@@ -51,13 +53,16 @@ private _sectorDetailCtrls = [
 private _sectors = [];
 {
     _sectors pushBack [markerText _x, _x];
-} forEach KPLIB_sectors_blufor;
+} forEach KPLIB_sectors_all;
 _sectors sort true;
 
 // Add sectors to listbox
 lbClear _ctrlLbSectors;
 {
     _ctrlLbSectors lbSetData [_ctrlLbSectors lbAdd (_x select 0), _x select 1];
+    if !(([_x select 1, true] call KPLIB_fnc_garrison_getGarrison) isEqualTo []) then {
+        _ctrlLbSectors lbSetColor [_forEachIndex, [0.8, 0, 0, 1]];
+    }
 } forEach _sectors;
 _ctrlLbSectors lbSetCurSel -1;
 
