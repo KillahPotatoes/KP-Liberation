@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-03-14
+    Last Update: 2019-03-31
 
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -449,6 +449,7 @@ class KPGUI_PRE_ListBox {
     maxHistoryDelay = 1;
 };
 
+// ListNBox
 class KPGUI_PRE_ListNBox {
     deletable = 0;
     fade = 0;
