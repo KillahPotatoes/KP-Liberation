@@ -635,9 +635,17 @@
             <English>Garrisons</English>
             <German>Garnisonen</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_NOSECTOR">
+            <English>No garrison selected</English>
+            <German>Keine Garnison ausgewählt</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_REINFORCEHEADER">
             <English>Reinforce</English>
             <German>Verstärken</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_REMOVE_TT">
+            <English>Remove amount/vehicle from garrison.</English>
+            <German>Anzahl/Fahrzeug aus der Garnison entfernen.</German>
         </Key>
 
         <!-- LOGISTIC MAIN DIALOG -->

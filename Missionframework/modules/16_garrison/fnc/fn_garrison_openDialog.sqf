@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_garrison_openDialog
 
@@ -23,26 +24,44 @@ createDialog "KPLIB_garrison";
 disableSerialization;
 
 // Dialog controls
-private _dialog = findDisplay 75804;
-private _ctrlLbSectors = _dialog displayCtrl 758041;
-private _ctrlNameTitle = _dialog displayCtrl 758042;
-private _ctrlAlertNote = _dialog displayCtrl 758043;
-private _ctrlInfLabel = _dialog displayCtrl 758044;
-private _ctrlInfAmount = _dialog displayCtrl 758045;
-private _ctrlLightLabel = _dialog displayCtrl 758046;
-private _ctrlLightAmount = _dialog displayCtrl 758047;
-private _ctrlHeavyLabel = _dialog displayCtrl 758048;
-private _ctrlHeavyAmount = _dialog displayCtrl 758049;
-private _ctrlMap = _dialog displayCtrl 7580410;
+private _dialog = findDisplay KPLIB_IDC_GARRISON_DIALOG;
+
+private _ctrlLbSectors = _dialog displayCtrl KPLIB_IDC_GARRISON_GARRISONLIST;
+
+private _ctrlNameTitle = _dialog displayCtrl KPLIB_IDC_GARRISON_SECTORNAME;
+private _ctrlAlertNote = _dialog displayCtrl KPLIB_IDC_GARRISON_ALERTNOTE;
+
+private _ctrlInfLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYLABEL;
+private _ctrlInfAmount = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYAMOUNT;
+private _ctrlInfBox = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYBOX;
+private _ctrlInfButton = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYBUTTON;
+
+private _ctrlLightLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTLABEL;
+private _ctrlLightAmount = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTAMOUNT;
+private _ctrlLightList = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTLIST;
+private _ctrlLightButton = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTBUTTON;
+
+private _ctrlHeavyLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYLABEL;
+private _ctrlHeavyAmount = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYAMOUNT;
+private _ctrlHeavyList = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYLIST;
+private _ctrlHeavyButton = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYBUTTON;
+
+private _ctrlMap = _dialog displayCtrl KPLIB_IDC_GARRISON_MAP;
+
 private _sectorDetailCtrls = [
-    _ctrlNameTitle,
     _ctrlAlertNote,
     _ctrlInfLabel,
     _ctrlInfAmount,
+    _ctrlInfBox,
+    _ctrlInfButton,
     _ctrlLightLabel,
     _ctrlLightAmount,
+    _ctrlLightList,
+    _ctrlLightButton,
     _ctrlHeavyLabel,
     _ctrlHeavyAmount,
+    _ctrlHeavyList,
+    _ctrlHeavyButton,
     _ctrlMap
 ];
 
