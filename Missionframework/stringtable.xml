@@ -966,6 +966,10 @@
             <English>No free space.</English>
             <German>Kein freier Platz.</German>
         </Key>
+        <Key ID="STR_KPLIB_HINT_NOTATGARRISON">
+            <English>Not enough units/vehicles available.</English>
+            <German>Nicht genug Einheiten/Fahrzeuge vorhanden.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_NOTRANSPORTNEAR">
             <English>No transport vehicle found in 10m.</English>
             <German>Kein Transportfahrzeug innerhalb von 10m gefunden.</German>
