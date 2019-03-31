@@ -53,6 +53,9 @@ class common {
     // Gets a random spawn marker
     class common_getRandomSpawnMarker {};
 
+    // Gets array of soldier classnames from preset
+    class common_getSoldierArray {};
+
     // Checks if player occupies a slot
     class common_isSlot {};
 
