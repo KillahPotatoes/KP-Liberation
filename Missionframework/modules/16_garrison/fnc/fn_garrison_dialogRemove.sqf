@@ -49,8 +49,7 @@ if (_button == _ctrlInfButton) exitWith {
     // Only continue, if the amount of infantry is available
     if ((_garrison select 2) >= _amount) then {
         // Adjust garrison soldier count
-        _garrison set [2, (_garrison select 2) - _amount];
-        publicVariable "KPLIB_garrison_array";
+        [-_amount] remoteExecCall ["KPLIB_fnc_garrison_addInfantry", 2];
 
         // Get array of soldier classnames
         private _soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray;
