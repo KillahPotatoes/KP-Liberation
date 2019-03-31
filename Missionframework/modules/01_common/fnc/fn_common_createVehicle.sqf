@@ -4,7 +4,7 @@
     File: fn_common_createVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-03
-    Last Update: 2018-12-19
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -99,7 +99,7 @@ if (_paradrop) then {
     [objNull, _vehicle] call BIS_fnc_curatorObjectEdited;
 };
 
-["KPLIB_vehicle_spawned", [_vehicle]] call CBA_fnc_localEvent;
+["KPLIB_vehicle_spawned", [_vehicle]] call CBA_fnc_globalEvent;
 
 // Return created vehicle
 _vehicle
