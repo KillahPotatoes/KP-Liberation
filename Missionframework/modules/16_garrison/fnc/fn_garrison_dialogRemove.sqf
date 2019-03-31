@@ -73,7 +73,7 @@ if (_button == _ctrlInfButton) exitWith {
         } forEach _squads;
 
         // Reload sector details after a small sync delay
-        [{_this call KPLIB_fnc_garrison_dialogSelectSector;}, [lbCurSel _ctrlLbSectors], 1] call CBA_fnc_waitAndExecute;
+        [{_this call KPLIB_fnc_garrison_dialogSelectSector;}, [lbCurSel _ctrlLbSectors], 2] call CBA_fnc_waitAndExecute;
         true
     } else {
         // Notify player that there are not enough infantry units at the sector

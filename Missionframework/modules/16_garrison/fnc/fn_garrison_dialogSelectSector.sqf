@@ -92,6 +92,9 @@ _ctrlInfAmount ctrlSetText (str (_garrison select 2));
 _ctrlLightAmount ctrlSetText (str (count (_garrison select 3)));
 _ctrlHeavyAmount ctrlSetText (str (count (_garrison select 4)));
 
+// Reset infantry amount box
+_ctrlInfBox ctrlSetText "0";
+
 // Fill light vehicle list
 lbClear _ctrlLightList;
 _ctrlLightList lbSetData [_ctrlLightList lbAdd "---", ""];
