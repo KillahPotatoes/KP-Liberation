@@ -615,6 +615,30 @@
             <English>GARRISON MANAGEMENT</English>
             <German>GARNISONVERWALTUNG</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_ALERTNOTE">
+            <English>Sector in red alert</English>
+            <German>Sektor in Alarmbereitschaft</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_HEAVYLABEL">
+            <English>Heavy Vehicles:</English>
+            <German>Schwere Fahrzeuge:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_INFLABEL">
+            <English>Infantry:</English>
+            <German>Infanterie:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_LIGHTLABEL">
+            <English>Light Vehicles:</English>
+            <German>Leichte Fahrzeuge:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_LISTHEADER">
+            <English>Garrisons</English>
+            <German>Garnisonen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_REINFORCEHEADER">
+            <English>Reinforce</English>
+            <German>Verstärken</German>
+        </Key>
 
         <!-- LOGISTIC MAIN DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_LOGISTICMAIN_TITLE">
@@ -1558,39 +1582,51 @@
     <Package name="Categories">
         <Key ID="STR_KPLIB_CAT_AA">
             <English>Anti-Air</English>
+            <German>Luftabwehr</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_ARTY">
             <English>Artillery</English>
+            <German>Artillerie</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_BOATS">
             <English>Boats</English>
+            <German>Boote</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_INFANTRY">
             <English>Infantry</English>
+            <German>Infanterie</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_LIGHT">
             <English>Light</English>
+            <German>Leicht</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_LOGISTIC">
             <English>Logistic</English>
+            <German>Logistik</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_HEAVY">
             <English>Heavy</English>
+            <German>Schwer</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_STATICS">
             <English>Statics</English>
+            <German>Geschütze</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_TRANSPORT">
             <English>Transport</English>
+            <German>Transport</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_HELI">
             <English>Helicopters</English>
+            <German>Helikopter</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_PLANES">
             <English>Planes</English>
+            <German>Flugzeuge</German>
         </Key>
         <Key ID="STR_KPLIB_CAT_DECO">
             <English>Decorations</English>
+            <German>Dekoratives</German>
         </Key>
     </Package>
 
