@@ -6,7 +6,7 @@
     File: fn_build_changeQueueMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2019-02-23
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,8 @@ switch (LGVAR_D(buildMode, 0)) do {
         LSVAR("buildMode", 1);
         _confirmBtnControl ctrlEnable false;
 
-        private _currentItems = (KPLIB_build_saveNamespace getVariable [player getVariable "KPLIB_fob", []]) select {!isNull _x};
+        private _playerFob = player getVariable "KPLIB_fob";
+        private _currentItems = (KPLIB_persistence_objects select {(_x getVariable "KPLIB_fob") isEqualTo _playerFob}) select {!isNull _x};
         LSVAR("buildQueue", _currentItems);
     };
 

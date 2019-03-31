@@ -9,6 +9,7 @@ Furthermore it handles the saving/loading of all objects which are buildable/spa
 * Init
 * Common
 * Core
+* Persistence
 * Resources
 
 ### Functions
