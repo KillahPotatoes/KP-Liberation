@@ -48,8 +48,8 @@ if (_button == _ctrlInfButton) exitWith {
 
     // Only continue, if the amount of infantry is available
     if ((_garrison select 2) >= _amount) then {
-        // Adjust garrison soldier count
-        [-_amount] remoteExecCall ["KPLIB_fnc_garrison_addInfantry", 2];
+        // Request server to adjust the garrison infantry amount
+        [_sector, -_amount] remoteExecCall ["KPLIB_fnc_garrison_addInfantry", 2];
 
         // Get array of soldier classnames
         private _soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray;
@@ -72,8 +72,8 @@ if (_button == _ctrlInfButton) exitWith {
             [{_this call KPLIB_fnc_common_createGroup;}, [_x, _spawnPos, _side], _forEachIndex] call CBA_fnc_waitAndExecute;
         } forEach _squads;
 
-        // Reload sector details
-        [lbCurSel _ctrlLbSectors] call KPLIB_fnc_garrison_dialogSelectSector;
+        // Reload sector details after a small sync delay
+        [{_this call KPLIB_fnc_garrison_dialogSelectSector;}, [lbCurSel _ctrlLbSectors], 1] call CBA_fnc_waitAndExecute;
         true
     } else {
         // Notify player that there are not enough infantry units at the sector
