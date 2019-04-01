@@ -4,7 +4,7 @@
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-03-18
+    Last Update: 2019-04-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,18 +61,20 @@ private _fuelState = 0;
 if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
+            _ctrlSlider ctrlEnable true;
             _ammoMax = count magazinesAllTurrets _vehicle;
             _ammoState = {_x select 2 isEqualTo (getNumber (_cfgMag >> (_x select 0) >> "count"))} count magazinesAllTurrets _vehicle;
-            _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE", _ammoMax - _ammoState, _ammoMax];
+            _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE", _ammoState, _ammoMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMO", str KPLIB_param_resupplyMagCost];
-            _ctrlTotalCosts ctrlSetText str ((_ammoMax - _ammoState) * KPLIB_param_resupplyMagCost);
-            _resupplyButton ctrlEnable true;
+            _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
+            _ctrlSlider sliderSetPosition 0;
+            _ctrlSlider sliderSetSpeed [1, 1];
         };
         case "FUEL": {
             _ctrlSlider ctrlEnable true;
             _fuelMax = getNumber (_cfgVeh >> _type >> "fuelCapacity");
             _fuelState = _fuelMax * (fuel _vehicle);
-            _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE", _fuelState toFixed 2, _fuelMax];
+            _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE", _fuelState toFixed 2, _fuelMax toFixed 2];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSFUEL", str KPLIB_param_resupplyGallCost];
             _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
             _ctrlSlider sliderSetPosition 0;
@@ -87,13 +89,13 @@ if !(KPLIB_param_aceResupply) then {
             if (_ammoMax isEqualTo 0) then {
                 _ammoState = 0;
             } else {
-                _ammoState = [_vehicle] call ace_rearm_fnc_getSupplyCount;
+                _ammoState = _vehicle getVariable ["ace_rearm_currentSupply", 0];
             };
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATEACE", _ammoState, _ammoMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMOACE", str KPLIB_param_resupplyAmmoCost];
             _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
             _ctrlSlider sliderSetPosition 0;
-            _ctrlSlider sliderSetSpeed [100, 100];
+            _ctrlSlider sliderSetSpeed [10, 10];
         };
         case "FUEL": {
             _ctrlSlider ctrlEnable true;
@@ -101,13 +103,13 @@ if !(KPLIB_param_aceResupply) then {
             if (_fuelMax isEqualTo 0) then {
                 _fuelState = 0;
             } else {
-                _fuelState = [_vehicle] call ace_refuel_fnc_getFuel;
+                _fuelState = _vehicle getVariable ["ace_refuel_currentFuelCargo", 0];
             };
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_FUELSTATEACE", _fuelState, _fuelMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSFUELACE", str KPLIB_param_resupplyFuelCost];
             _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
             _ctrlSlider sliderSetPosition 0;
-            _ctrlSlider sliderSetSpeed [1000, 1000];
+            _ctrlSlider sliderSetSpeed [100, 100];
         };
     };
 };
@@ -117,16 +119,30 @@ if !(KPLIB_param_aceResupply) then {
 */
 
 // Spawn camera object
-camUseNVG false;
-showCinemaBorder false;
-private _cam = "camera" camCreate (getpos _vehicle);
-_cam cameraEffect ["internal", "front", "rtt"];
-KPLIB_logistic_activeCam = _cam;
-_cam camSetTarget _vehicle;
-_cam camSetFov 0.5;
-_cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 90]);
-_cam camCommit 0;
-
-[_cam, _vehicle, 36, 60] call KPLIB_fnc_common_cameraCircleTarget;
+if (isNull KPLIB_logistic_activeCam) then {
+    camUseNVG false;
+    showCinemaBorder false;
+    private _cam = "camera" camCreate (getpos _vehicle);
+    _cam cameraEffect ["internal", "front", "rtt"];
+    KPLIB_logistic_activeCam = _cam;
+    _cam camSetTarget _vehicle;
+    _cam camSetFov 0.5;
+    _cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 90]);
+    _cam camCommit 0;
+    [_cam, _vehicle, 36, 60] call KPLIB_fnc_common_cameraCircleTarget;
+} else {
+    if !(_vehicle isEqualTo (camTarget KPLIB_logistic_activeCam)) then {
+        camUseNVG false;
+        showCinemaBorder false;
+        private _cam = "camera" camCreate (getpos _vehicle);
+        _cam cameraEffect ["internal", "front", "rtt"];
+        KPLIB_logistic_activeCam = _cam;
+        _cam camSetTarget _vehicle;
+        _cam camSetFov 0.5;
+        _cam camSetPos ((_vehicle getRelPos [15, 0]) vectorAdd [0, 0, 90]);
+        _cam camCommit 0;
+        [_cam, _vehicle, 36, 60] call KPLIB_fnc_common_cameraCircleTarget;
+    };
+};
 
 true

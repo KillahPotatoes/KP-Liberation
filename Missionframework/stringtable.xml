@@ -855,8 +855,8 @@
             <German>Vorratsstand:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE">
-            <English>%1 empty or used from %2</English>
-            <German>%1 leer oder angebrochen von %2</German>
+            <English>%1 from %2 magazines full</English>
+            <German>%1 von %2 Magazinen voll</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE">
             <English>%1 from %2 gallons left</English>

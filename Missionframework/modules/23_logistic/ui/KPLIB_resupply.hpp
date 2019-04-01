@@ -4,7 +4,7 @@
     File: KPLIB_resupply.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-21
-    Last Update: 2019-03-30
+    Last Update: 2019-04-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -52,7 +52,7 @@ class KPLIB_resupply {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT";
-            onLBSelChanged = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam; [] call KPLIB_fnc_logistic_selectResupplyTarget";
+            onLBSelChanged = "[] call KPLIB_fnc_logistic_selectResupplyTarget";
         };
 
         class KPLIB_TextCargoState: KPGUI_PRE_Text {

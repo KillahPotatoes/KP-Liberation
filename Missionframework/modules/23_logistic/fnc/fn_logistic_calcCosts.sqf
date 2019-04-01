@@ -4,7 +4,7 @@
     File: fn_logistic_calcCosts.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-02-24
+    Last Update: 2019-04-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,7 +28,7 @@ private _resupplyButton = _dialog displayCtrl 68747;
 
 // Read the controls
 private _costs = parseNumber (ctrlText _ctrlCosts);
-private _count = sliderPosition _ctrlSlider;
+private _count = round (sliderPosition _ctrlSlider);
 
 // Fill the controls
 _index = lbCurSel _ctrlCargo;
@@ -46,10 +46,12 @@ if !(KPLIB_param_aceResupply) then {
 } else {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
+            _count = (ceil (_count / 10)) * 10;
             _ctrlTotalCosts ctrlSetText str (_costs * (_count / 100));
             _ctrlSliderValue ctrlSetText str _count;
         };
         case "FUEL": {
+            _count = (ceil (_count / 100)) * 100;
             _ctrlTotalCosts ctrlSetText str (_costs * (_count / 1000));
             _ctrlSliderValue ctrlSetText str _count;
         };

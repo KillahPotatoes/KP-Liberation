@@ -4,7 +4,7 @@
     File: fn_logistic_resupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-24
-    Last Update: 2019-03-30
+    Last Update: 2019-04-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,17 +38,23 @@ private _type = typeOf _vehicle;
 
 // Do the resupply
 _index = lbCurSel _ctrlCargo;
+private _addValue = parseNumber ctrlText _ctrlSliderValue;
 
 if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
-            _vehicle setVehicleAmmo 1;
+            _ammoMax = count magazinesAllTurrets _vehicle;
+            _ammoState = {_x select 2 isEqualTo (getNumber (_cfgMag >> (_x select 0) >> "count"))} count magazinesAllTurrets _vehicle;
+            private _newAmmoState = ((_ammoState + _addValue) / _ammoMax);
+            if (_newAmmoState > 1) then {
+                _newAmmoState = 1;
+            };
+            _vehicle setVehicleAmmo _newAmmoState;
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "fuelCapacity");
             private _fuelState = _fuelMax * (fuel _vehicle);
-            private _addValue = parseNumber ctrlText _ctrlSliderValue;
-            private _newFuelState = ((_fuelState + _addValue) /_fuelMax);
+            private _newFuelState = ((_fuelState + _addValue) / _fuelMax);
             if (_newFuelState > 1) then {
                 _newFuelState = 1;
             };
@@ -59,15 +65,21 @@ if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
             private _ammoMax = getNumber (_cfgVeh >> _type >> "ace_rearm_defaultSupply");
-            private _ammoState = [_vehicle] call ace_rearm_fnc_getSupplyCount;
-            private _addValue = parseNumber ctrlText _ctrlSliderValue;
-            [_vehicle, _ammoState + _addValue] call ace_rearm_fnc_setSupplyCount;
+            private _ammoState = _vehicle getVariable ["ace_rearm_currentSupply", 0];
+            if ((_ammoState + _addValue) > _ammoMax) then {
+                _vehicle setVariable ["ace_rearm_currentSupply", _ammoMax];
+            } else {
+                _vehicle setVariable ["ace_rearm_currentSupply", _ammoState + _addValue];
+            };
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "ace_refuel_fuelCargo");
-            private _fuelState = [_vehicle] call ace_refuel_fnc_getFuel;
-            private _addValue = parseNumber ctrlText _ctrlSliderValue;
-            [_vehicle, _fuelState + _addValue] call ace_refuel_fnc_setFuel;
+            private _fuelState = _vehicle getVariable ["ace_refuel_currentFuelCargo", 0];
+            if ((_fuelState + _addValue) > _fuelMax) then {
+                _vehicle setVariable ["ace_refuel_currentFuelCargo", _fuelMax];
+            } else {
+                _vehicle setVariable ["ace_refuel_currentFuelCargo", _fuelState + _addValue];
+            };
         };
     };
 };
