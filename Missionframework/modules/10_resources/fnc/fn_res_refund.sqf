@@ -4,7 +4,7 @@
     File: fn_res_refund.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-03-31
+    Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -53,7 +53,6 @@ private _crate = objNull;
 
 while {_supplies > 0 || _ammo > 0 || _fuel > 0} do {
     _storage = _storages select (_storages findIf {([_x] call KPLIB_fnc_res_getStorageSpace) > 0});
-    systemchat format ["%1 %2 %3", canSuspend, _ammo, _fuel];
     switch (true) do {
         case (_supplies > 0): {
             _crate = ["Supply", getPosATL _storage, (_supplies min KPLIB_param_crateVolume)] call KPLIB_fnc_res_createCrate;

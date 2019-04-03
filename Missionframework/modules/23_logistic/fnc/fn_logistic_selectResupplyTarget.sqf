@@ -6,6 +6,7 @@
     Date: 2019-02-23
     Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Selects the vehicle from the combo cox and fills the dialog.
@@ -58,6 +59,9 @@ private _ammoState = 0;
 private _fuelMax = 0;
 private _fuelState = 0;
 
+private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
+
 if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
@@ -66,7 +70,11 @@ if !(KPLIB_param_aceResupply) then {
             _ammoState = {_x select 2 isEqualTo (getNumber (_cfgMag >> (_x select 0) >> "count"))} count magazinesAllTurrets _vehicle;
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATE", _ammoState, _ammoMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMO", str KPLIB_param_resupplyMagCost];
-            _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
+            if ((ceil (_ammoMax - _ammoState)) > (floor ((_res select 1) / KPLIB_param_resupplyMagCost))) then {
+                _ctrlSlider sliderSetRange [0, floor ((_res select 1) / KPLIB_param_resupplyMagCost)];
+            } else {
+                _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
+            };
             _ctrlSlider sliderSetPosition 0;
             _ctrlSlider sliderSetSpeed [1, 1];
         };
@@ -76,7 +84,11 @@ if !(KPLIB_param_aceResupply) then {
             _fuelState = _fuelMax * (fuel _vehicle);
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_FUELSTATE", _fuelState toFixed 2, _fuelMax toFixed 2];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSFUEL", str KPLIB_param_resupplyGallCost];
-            _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
+            if ((ceil (_fuelMax - _fuelState)) > (floor ((_res select 2) / KPLIB_param_resupplyGallCost))) then {
+                _ctrlSlider sliderSetRange [0, floor ((_res select 2) / KPLIB_param_resupplyGallCost)];
+            } else {
+                _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
+            };
             _ctrlSlider sliderSetPosition 0;
             _ctrlSlider sliderSetSpeed [1, 1];
         };
@@ -93,7 +105,11 @@ if !(KPLIB_param_aceResupply) then {
             };
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_AMMOSTATEACE", _ammoState, _ammoMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSAMMOACE", str KPLIB_param_resupplyAmmoCost];
-            _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
+            if (((ceil (_ammoMax - _ammoState)) / 100) > (floor ((_res select 1) / KPLIB_param_resupplyAmmoCost))) then {
+                _ctrlSlider sliderSetRange [0, (floor ((_res select 1) / KPLIB_param_resupplyAmmoCost)) * 100];
+            } else {
+                _ctrlSlider sliderSetRange [0, ceil (_ammoMax - _ammoState)];
+            };
             _ctrlSlider sliderSetPosition 0;
             _ctrlSlider sliderSetSpeed [10, 10];
         };
@@ -107,7 +123,11 @@ if !(KPLIB_param_aceResupply) then {
             };
             _ctrlCargoStateValue ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_FUELSTATEACE", _fuelState, _fuelMax];
             _ctrlCosts ctrlSetText format [localize "STR_KPLIB_DIALOG_RESUPPLY_COSTSFUELACE", str KPLIB_param_resupplyFuelCost];
-            _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
+            if (((ceil (_fuelMax - _fuelState)) / 1000) > (floor ((_res select 2) / KPLIB_param_resupplyFuelCost))) then {
+                _ctrlSlider sliderSetRange [0, (floor ((_res select 2) / KPLIB_param_resupplyFuelCost)) * 1000];
+            } else {
+                _ctrlSlider sliderSetRange [0, ceil (_fuelMax - _fuelState)];
+            };
             _ctrlSlider sliderSetPosition 0;
             _ctrlSlider sliderSetSpeed [100, 100];
         };

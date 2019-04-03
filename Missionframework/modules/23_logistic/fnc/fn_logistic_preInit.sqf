@@ -4,8 +4,9 @@
     File: fn_logistic_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-03-30
+    Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
@@ -36,10 +37,6 @@ if (isServer) then {
 
 KPLIB_logistic_building = KPLIB_preset_logiBuildingF;
 KPLIB_logistic_activeCam = objNull;
-
-KPLIB_logistic_supplyValue = 0;
-KPLIB_logistic_ammoValue = 0;
-KPLIB_logistic_fuelValue = 0;
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initialized", diag_tickTime];};
 

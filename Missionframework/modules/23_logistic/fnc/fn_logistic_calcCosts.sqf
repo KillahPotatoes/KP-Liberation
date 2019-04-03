@@ -6,6 +6,7 @@
     Date: 2019-02-23
     Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Calculates the costs of the resupply action.
@@ -42,27 +43,27 @@ if !(KPLIB_param_aceResupply) then {
         case "AMMO": {
             _ctrlTotalCosts ctrlSetText str (_costs * _count);
             _ctrlSliderValue ctrlSetText str _count;
-            _check = ((_res select 1) > (_costs * _count));
+            _check = ((_res select 1) >= (_costs * _count));
         };
         case "FUEL": {
             _ctrlTotalCosts ctrlSetText str (_costs * _count);
             _ctrlSliderValue ctrlSetText str _count;
-            _check = ((_res select 2) > (_costs * _count));
+            _check = ((_res select 2) >= (_costs * _count));
         };
     };
 } else {
     switch (_ctrlCargo lbData _index) do {
         case "AMMO": {
-            _count = (ceil (_count / 10)) * 10;
+            _count = (ceil (_count / 100)) * 100;
             _ctrlTotalCosts ctrlSetText str (_costs * (_count / 100));
             _ctrlSliderValue ctrlSetText str _count;
-            _check = ((_res select 1) > (_costs * (_count / 100)));
+            _check = ((_res select 1) >= (_costs * (_count / 100)));
         };
         case "FUEL": {
-            _count = (ceil (_count / 100)) * 100;
+            _count = (ceil (_count / 1000)) * 1000;
             _ctrlTotalCosts ctrlSetText str (_costs * (_count / 1000));
             _ctrlSliderValue ctrlSetText str _count;
-            _check = ((_res select 2) > (_costs * (_count / 1000)));
+            _check = ((_res select 2) >= (_costs * (_count / 1000)));
         };
     };
 };

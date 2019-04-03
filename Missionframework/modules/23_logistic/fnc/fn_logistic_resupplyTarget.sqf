@@ -6,6 +6,7 @@
     Date: 2019-02-24
     Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Resupplies the given vehicle.
@@ -21,8 +22,6 @@
 private _dialog = findDisplay 7580233;
 private _ctrlVehicleList = _dialog displayCtrl 68740;
 private _ctrlCargo = _dialog displayCtrl 68741;
-private _ctrlCosts = _dialog displayCtrl 68743;
-private _ctrlSlider = _dialog displayCtrl 68744;
 private _ctrlSliderValue = _dialog displayCtrl 68745;
 private _ctrlTotalCosts = _dialog displayCtrl 68746;
 
@@ -32,8 +31,7 @@ private _cfgMag = configFile >> "CfgMagazines";
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
 private _vehicleId = _ctrlVehicleList lbData _index;
-private _costs = parseNumber (ctrlText _ctrlCosts);
-private _count = round (sliderPosition _ctrlSlider);
+private _costs = parseNumber (ctrlText _ctrlTotalCosts);
 
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
@@ -54,7 +52,7 @@ if !(KPLIB_param_aceResupply) then {
                 _newAmmoState = 1;
             };
             _vehicle setVehicleAmmo _newAmmoState;
-            [_nearFOB, 0, (_costs * _count), 0] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_res_pay;
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "fuelCapacity");
@@ -64,7 +62,7 @@ if !(KPLIB_param_aceResupply) then {
                 _newFuelState = 1;
             };
             _vehicle setFuel _newFuelState;
-            [_nearFOB, 0, 0, (_costs * _count)] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_res_pay;
         };
     };
 } else {
@@ -77,7 +75,7 @@ if !(KPLIB_param_aceResupply) then {
             } else {
                 _vehicle setVariable ["ace_rearm_currentSupply", _ammoState + _addValue];
             };
-            [_nearFOB, 0, (_costs * (_count / 100)), 0] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_res_pay;
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "ace_refuel_fuelCargo");
@@ -87,7 +85,7 @@ if !(KPLIB_param_aceResupply) then {
             } else {
                 _vehicle setVariable ["ace_refuel_currentFuelCargo", _fuelState + _addValue];
             };
-            [_nearFOB, 0, 0, (_costs * (_count / 1000))] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_res_pay;
         };
     };
 };
