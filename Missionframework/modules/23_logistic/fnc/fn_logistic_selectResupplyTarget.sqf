@@ -4,7 +4,7 @@
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-04-01
+    Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -113,10 +113,6 @@ if !(KPLIB_param_aceResupply) then {
         };
     };
 };
-
-/* TODO:
-- Implement check for resources
-*/
 
 // Spawn camera object
 if (isNull KPLIB_logistic_activeCam) then {
