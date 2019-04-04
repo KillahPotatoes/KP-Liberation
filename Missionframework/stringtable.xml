@@ -970,6 +970,10 @@
             <English>It's not enough resources available.</English>
             <German>Es sind nicht genügend Ressourcen vorhanden.</German>
         </Key>
+        <Key ID="STR_KPLIB_HINT_VEHICLECHANGES">
+            <English>The state of the Vehicle changed, refresh your selection to try again.</English>
+            <German>Der Zustand des Fahrzeugs hat sich geändert, aktualisiere deine Auswahl und versuche es erneut.</German>
+        </Key>
     </Package>
 
 
