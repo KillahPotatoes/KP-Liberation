@@ -4,7 +4,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-03
+    Last Update: 2019-04-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -52,6 +52,22 @@ if (isServer) then {
             };
         },
         "STR_KPLIB_LOGISTIC_RESUPPLY"
+    ] call KPLIB_fnc_logistic_addMenu;
+
+    [
+        "Cratefiller",
+        {
+            if ([player, "Cratefiller"] call KPLIB_fnc_permission_getPermission) then {
+                closeDialog 0;
+                [] call KPLIB_fnc_cratefiller_openDialog;
+            } else {
+                [
+                    ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+                    [localize "STR_KPLIB_HINT_NOPERMISSION"]
+                ] call CBA_fnc_notify;
+            };
+        },
+        "STR_KPLIB_LOGISTIC_CRATEFILLER"
     ] call KPLIB_fnc_logistic_addMenu;
 
     private _vehicles = [];

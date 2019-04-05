@@ -898,6 +898,43 @@
             <English>Total costs:</English>
             <German>Gesamtkosten:</German>
         </Key>
+
+        <!-- BUILD DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTWEAPONS">
+            <English>Weapons</English>
+            <German>Waffen</German>
+            <Polish>Bronie</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTMAGAZINES">
+            <English>Magazines</English>
+            <German>Magazine</German>
+            <Polish>Magazynki</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTATTACHMENTS">
+            <English>Weapon attachments</English>
+            <German>Waffenzubehör</German>
+            <Polish>Akcesoria do broni</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTGRENADES">
+            <English>Grenades</English>
+            <German>Granaten</German>
+            <Polish>Granaty</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTEXPLOSIVES">
+            <English>Explosives</English>
+            <German>Sprengstoffe</German>
+            <Polish>Ładunki wybuchowe</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTVARIOUS">
+            <English>Others</English>
+            <German>Sonstiges</German>
+            <Polish>Inne</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTBACKPACKS">
+            <English>Backpacks</English>
+            <German>Rucksäcke</German>
+            <Polish>Plecaki</Polish>
+        </Key>
     </Package>
 
 
@@ -1637,6 +1674,10 @@
             <English>Resupply</English>
             <German>Versorgung</German>
         </Key>
+        <Key ID="STR_KPLIB_LOGISTIC_CRATEFILLER">
+            <English>Cratefiller</English>
+            <German>Kistenfüller</German>
+        </Key>
     </Package>
 
     <!-- PERMISSIONS -->
@@ -1673,6 +1714,10 @@
         <Key ID="STR_KPLIB_PERMISSION_RESUPPLY">
             <English>Resupply</English>
             <German>Nachschub</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_CRATEFILLER">
+            <English>Cratefiller</English>
+            <German>Kistenfüller</German>
         </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPMISC">
             <English>-- Miscellaneous --</English>
