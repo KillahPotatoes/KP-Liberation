@@ -42,6 +42,7 @@ With these additions the intended complexity comes into the mission. It is highl
 23 Logistic
 24 Enemy Commander
 25 Friendly Commander Managing Dialog
+26 Cratefiller
 ```
 ### TBA
 Mod specific compatibility modules
