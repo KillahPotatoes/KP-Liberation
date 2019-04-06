@@ -4,7 +4,7 @@
     File: fn_init_fillArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2019-01-07
+    Last Update: 2019-04-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -134,5 +134,8 @@ if !(_goodItems isEqualTo true) then {
 publicVariable "KPLIB_preset_arsenal_whitelist";
 // Send updated blacklist to clients
 publicVariable "KPLIB_preset_arsenal_blacklist";
+
+// Emit arsenal filled event
+["KPLIB_arsenal_newLists", []] call CBA_fnc_serverEvent;
 
 true

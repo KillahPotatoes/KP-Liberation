@@ -14,6 +14,12 @@
 class cratefiller {
     file = "modules\26_cratefiller\fnc";
 
+    // Changes the shown equipment category
+    class cratefiller_createEquipmentList {};
+
+    // Creates a list with valueable magazines or attachments
+    class cratefiller_createSubList {};
+
     // Gets the config path / type of the given classname
     class cratefiller_getConfigPath {};
 

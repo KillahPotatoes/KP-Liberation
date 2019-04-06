@@ -62,7 +62,6 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPINVENTORY";
-            //onLBSelChanged = "[] call KPCF_fnc_setActiveStorage";
         };
 
         class KPLIB_RefreshCargo: KPGUI_PRE_CloseCross {
@@ -84,14 +83,14 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPCATEGORY";
-            //onLBSelChanged = "[] call KPCF_fnc_createEquipmentList";
+            onLBSelChanged = "[] call KPLIB_fnc_cratefiller_createEquipmentList";
         };
 
         class KPLIB_ComboWeapons: KPLIB_ComboEquipment {
             idc = 75811;
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
             //tooltip = "$STR_KPCF_TOOLTIPWEAPONSELECTION";
-            //onLBSelChanged = "[] call KPCF_fnc_createSubList";
+            onLBSelChanged = "[] call KPLIB_fnc_cratefiller_createSubList";
         };
 
         class KPLIB_EquipmentList: KPGUI_PRE_ListBox {
