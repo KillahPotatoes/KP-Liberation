@@ -62,6 +62,7 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPINVENTORY";
+            onLBSelChanged = "[] call KPLIB_fnc_cratefiller_showInventory";
         };
 
         class KPLIB_RefreshCargo: KPGUI_PRE_CloseCross {
@@ -107,25 +108,25 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,16,96);
             w = KP_GETW(KP_WIDTH_VAL_S,16);
             h = KP_GETH(KP_HEIGHT_VAL_S,(96/19));
-            //onButtonClick = "[1] call KPCF_fnc_addEquipment";
+            onButtonClick = "[1] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_ButtonAddEquipment5: KPLIB_ButtonAddEquipment {
             text = "+ 5";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,35,96);
-            //onButtonClick = "[5] call KPCF_fnc_addEquipment";
+            onButtonClick = "[5] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_ButtonAddEquipment10: KPLIB_ButtonAddEquipment {
             text = "+ 10";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,54,96);
-            //onButtonClick = "[10] call KPCF_fnc_addEquipment";
+            onButtonClick = "[10] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_ButtonAddEquipment20: KPLIB_ButtonAddEquipment {
             text = "+ 20";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,73,96);
-            //onButtonClick = "[20] call KPCF_fnc_addEquipment";
+            onButtonClick = "[20] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         // Inventory
@@ -188,25 +189,25 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,24,96);
             w = KP_GETW(KP_WIDTH_VAL_S,16);
             h = KP_GETH(KP_HEIGHT_VAL_S,(96/17));
-            //onButtonClick = "[1] call KPCF_fnc_removeEquipment";
+            onButtonClick = "[1] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_ButtonRemoveEquipment5: KPLIB_ButtonRemoveEquipment {
             text = "- 5";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,41,96);
-            //onButtonClick = "[5] call KPCF_fnc_removeEquipment";
+            onButtonClick = "[5] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_ButtonRemoveEquipment10: KPLIB_ButtonRemoveEquipment {
             text = "- 10";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,58,96);
-            //onButtonClick = "[10] call KPCF_fnc_removeEquipment";
+            onButtonClick = "[10] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_ButtonRemoveEquipmentClear: KPLIB_ButtonRemoveEquipment {
             text = "Clear";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,75,96);
-            //onButtonClick = "[0] call KPCF_fnc_removeEquipment";
+            onButtonClick = "[0] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_ProgressBar : KPGUI_PRE_ProgressBar {

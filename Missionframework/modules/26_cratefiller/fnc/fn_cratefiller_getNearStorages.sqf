@@ -57,9 +57,10 @@ private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
     _type = typeOf _x;
     _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
     _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getMarkerPos _nearFOB) distance2D _x), getText (configFile >> _config >> _type >> "displayName")];
+    _ctrlStorage lbSetData [_index, netId _x];
     _picture = getText (configFile >> _config >> _type >> "picture");
     if (_picture isEqualTo "pictureThing") then {
-        _ctrlStorage lbSetPicture [_index, "KPCF\img\icon_help.paa"];
+        _ctrlStorage lbSetPicture [_index, "KPGUI\res\icon_help.paa"];
     } else {
         _ctrlStorage lbSetPicture [_index, _picture];
     };

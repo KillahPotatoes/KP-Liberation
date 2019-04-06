@@ -25,7 +25,7 @@ private _ctrlImport = _dialog displayCtrl 75821;
 lbClear _ctrlImport;
 
 // Read the presets from profileNamespace
-private _import = profileNamespace getVariable ["KPCF_preset", []];
+private _import = profileNamespace getVariable ["KPLIB_cratefiller_preset", []];
 
 // Fill controls
 {
