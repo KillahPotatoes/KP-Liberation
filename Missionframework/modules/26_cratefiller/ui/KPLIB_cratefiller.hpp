@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-05
+    Last Update: 2019-04-06
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -59,7 +59,7 @@ class KPLIB_cratefiller {
             idc = 75802;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,2);
+            w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPINVENTORY";
             //onLBSelChanged = "[] call KPCF_fnc_setActiveStorage";
@@ -72,7 +72,7 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,24);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPREFRESH";
-            //action = "[] call KPCF_fnc_getNearStorages";
+            action = "[] call KPLIB_fnc_cratefiller_getNearStorages";
         };
 
         // Equipment

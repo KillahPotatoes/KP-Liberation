@@ -31,6 +31,15 @@ private _number= 0;
 private _index = 0;
 private _picture = "";
 private _storages = [];
+private _blacklist = [
+    KPLIB_preset_crateSupplyE,
+    KPLIB_preset_crateSupplyF,
+    KPLIB_preset_crateAmmoE,
+    KPLIB_preset_crateAmmoF,
+    KPLIB_preset_crateFuelE,
+    KPLIB_preset_crateFuelF,
+    KPLIB_logistic_building
+];
 
 private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
 {
@@ -41,13 +50,13 @@ private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
     if (_number > 0) then {
         _storages pushBack _x;
     };
-} forEach (_nearFOB nearObjects KPLIB_param_fobRange);
+} forEach (((getMarkerPos _nearFOB) nearObjects KPLIB_param_fobRange) select {!(typeOf _x in _blacklist)});
 
 // Fill the list
 {
     _type = typeOf _x;
     _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-    _index = _ctrlStorage lbAdd format ["%1m - %2", round (player distance2D _x), getText (configFile >> _config >> _type >> "displayName")];
+    _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getMarkerPos _nearFOB) distance2D _x), getText (configFile >> _config >> _type >> "displayName")];
     _picture = getText (configFile >> _config >> _type >> "picture");
     if (_picture isEqualTo "pictureThing") then {
         _ctrlStorage lbSetPicture [_index, "KPCF\img\icon_help.paa"];

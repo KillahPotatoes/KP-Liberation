@@ -30,13 +30,13 @@ private _ctrlWeapon = _dialog displayCtrl 75811;
 _ctrlWeapon ctrlShow false;
 
 // Reset variables
-_ctrlCat lbAdd localize "STR_KPCF_LISTWEAPONS";
-_ctrlCat lbAdd localize "STR_KPCF_LISTMAGAZINES";
-_ctrlCat lbAdd localize "STR_KPCF_LISTATTACHMENTS";
-_ctrlCat lbAdd localize "STR_KPCF_LISTGRENADES";
-_ctrlCat lbAdd localize "STR_KPCF_LISTEXPLOSIVES";
-_ctrlCat lbAdd localize "STR_KPCF_LISTVARIOUS";
-_ctrlCat lbAdd localize "STR_KPCF_LISTBACKPACKS";
+_ctrlCat lbAdd "WEAPONS";
+_ctrlCat lbAdd "MAGAZINES";
+_ctrlCat lbAdd "ATTACHMENTS";
+_ctrlCat lbAdd "GRENADES";
+_ctrlCat lbAdd "EXPLOSIVES";
+_ctrlCat lbAdd "VARIOUS";
+_ctrlCat lbAdd "BACKPACKS";
 
 [] call KPLIB_fnc_cratefiller_showPresets;
 [] call KPLIB_fnc_cratefiller_getNearStorages;
