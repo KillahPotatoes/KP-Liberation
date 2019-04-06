@@ -23,6 +23,12 @@ class cratefiller {
     // Creates a list with valueable magazines or attachments
     class cratefiller_createSubList {};
 
+    // Deletes the selected preset
+    class cratefiller_deletePreset {};
+
+    // Exports the active inventory
+    class cratefiller_export {};
+
     // Gets all inventory items of the storage
     class cratefiller_getInventory {};
 
@@ -34,6 +40,9 @@ class cratefiller {
 
     // Returns the active storage
     class cratefiller_getStorage {};
+
+    // Imports the selected inventory
+    class cratefiller_import {};
 
     // Opens the cratefiller dialog
     class cratefiller_openDialog {};

@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -155,14 +155,14 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,10,48);
             w = KP_GETW(KP_WIDTH_VAL_S,4);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //onButtonClick = "[] call KPCF_fnc_export";
+            onButtonClick = "[] call KPLIB_fnc_cratefiller_export";
         };
 
         class KPLIB_ButtonImport: KPLIB_ButtonExport {
             text = "Import";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,3,4);
             w = KP_GETW(KP_WIDTH_VAL_S,(24/5));
-            //onButtonClick = "[] call KPCF_fnc_import";
+            onButtonClick = "[] call KPLIB_fnc_cratefiller_import";
         };
 
         class KPLIB_DeletePreset: KPGUI_PRE_CloseCross {
@@ -172,7 +172,7 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,24);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             //tooltip = "$STR_KPCF_TOOLTIPDELETE";
-            //action = "[] call KPCF_fnc_deletePreset";
+            action = "[] call KPLIB_fnc_cratefiller_deletePreset";
         };
 
         class KPLIB_InventoryList: KPGUI_PRE_ListBox {
