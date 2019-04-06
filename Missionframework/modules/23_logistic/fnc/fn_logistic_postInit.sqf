@@ -57,7 +57,7 @@ if (isServer) then {
     [
         "Cratefiller",
         {
-            if ([player, "Cratefiller"] call KPLIB_fnc_permission_getPermission) then {
+            if ([player, "Cratefiller"] call KPLIB_fnc_permission_getPermission && KPLIB_param_cratefiller) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_cratefiller_openDialog;
             } else {

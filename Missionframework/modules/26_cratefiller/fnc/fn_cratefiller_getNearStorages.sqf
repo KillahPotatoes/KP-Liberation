@@ -25,7 +25,12 @@ private _ctrlStorage = _dialog displayCtrl 75802;
 lbClear _ctrlStorage;
 
 // Get near objects and check for storage capacity
-private ["_type", "_config", "_number", "_index", "_picture", "_storages"];
+private _type = objNull;
+private _config = "";
+private _number= 0;
+private _index = 0;
+private _picture = "";
+private _storages = [];
 
 private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
 {

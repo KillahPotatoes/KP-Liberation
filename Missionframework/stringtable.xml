@@ -1542,6 +1542,20 @@
             <English>Defines the price of 1000 fuel cargo for ACE refuel vehicles.</English>
             <German>Definiert die Kosten für 1000 Treibstoffvorrat für ein ACE Tank Fahrzeug.</German>
         </Key>
+
+        <!-- CRATEFILLER CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER">
+            <English>KPLIB - Cratefiller</English>
+            <German>KPLIB - Kistenfüller</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE">
+            <English>Enable Cratefiller</English>
+            <German>Kistenfüller aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE_TT">
+            <English>Enables/Disables the Liberation cratefiller.</English>
+            <German>Aktiviert/Deaktiviert den Liberation Kistenfüller.</German>
+        </Key>
     </Package>
 
 

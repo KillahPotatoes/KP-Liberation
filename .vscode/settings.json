@@ -18,6 +18,7 @@
         "KPLIB_param_aceResupply",
         "KPLIB_param_ammoInfluence",
         "KPLIB_param_arsenalType",
+        "KPLIB_param_cratefiller",
         "KPLIB_param_clearVehicleCargo",
         "KPLIB_param_commanderZeusMode",
         "KPLIB_param_copyDistance",
