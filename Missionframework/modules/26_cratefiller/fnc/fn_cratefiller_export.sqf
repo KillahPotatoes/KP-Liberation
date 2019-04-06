@@ -30,7 +30,7 @@ _ctrlExport ctrlSetText "";
 
 // Check if the name is empty
 if (_exportName isEqualTo "") exitWith {
-    //hint localize "STR_KPCF_HINTNAME";
+    [localize "STR_KPLIB_HINT_NAME"] call CBA_fnc_notify;
 };
 
 // Check if the variable is empty

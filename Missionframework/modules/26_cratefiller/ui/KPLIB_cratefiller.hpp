@@ -19,7 +19,7 @@ class KPLIB_cratefiller {
     class controlsBackground {
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleS {
-            text = "KPLIB Cratefiller";
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLE";
         };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundS {};
@@ -27,7 +27,7 @@ class KPLIB_cratefiller {
         // Crates
 
         class KPLIB_TransportTitle: KPGUI_PRE_InlineTitle {
-            text = "Transport Medium";
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLETRANSPORT";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -37,7 +37,7 @@ class KPLIB_cratefiller {
         // Equipment
 
         class KP_EquipmentTitle: KPLIB_TransportTitle {
-            text = "Equipment";
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
         };
@@ -45,7 +45,7 @@ class KPLIB_cratefiller {
         // Inventory
 
         class KP_InventoryTitle: KPLIB_TransportTitle {
-            text = "Inventory";
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEINVENTORY";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
         };
 
@@ -61,7 +61,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPINVENTORY";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT";
             onLBSelChanged = "[] call KPLIB_fnc_cratefiller_showInventory";
         };
 
@@ -71,7 +71,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,24);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPREFRESH";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT";
             action = "[] call KPLIB_fnc_cratefiller_getNearStorages";
         };
 
@@ -83,14 +83,14 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPCATEGORY";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_CATEGORY_TT";
             onLBSelChanged = "[] call KPLIB_fnc_cratefiller_createEquipmentList";
         };
 
         class KPLIB_ComboWeapons: KPLIB_ComboEquipment {
             idc = 75811;
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
-            //tooltip = "$STR_KPCF_TOOLTIPWEAPONSELECTION";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_WEAPONSELECTION_TT";
             onLBSelChanged = "[] call KPLIB_fnc_cratefiller_createSubList";
         };
 
@@ -137,7 +137,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
             w = KP_GETW(KP_WIDTH_VAL_S,4);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPEXPORT";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_EXPORT_TT";
         };
 
         class KPLIB_ImportName: KPGUI_PRE_Combo {
@@ -146,7 +146,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
             w = KP_GETW(KP_WIDTH_VAL_S,4);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPIMPORT";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_IMPORT_TT";
         };
 
         class KPLIB_ButtonExport: KPGUI_PRE_InlineButton {
@@ -171,7 +171,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,10,48);
             w = KP_GETW(KP_WIDTH_VAL_S,24);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPDELETE";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_DELETE_TT";
             action = "[] call KPLIB_fnc_cratefiller_deletePreset";
         };
 
@@ -216,7 +216,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
             w = KP_GETW(KP_WIDTH_VAL_S,1);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            //tooltip = "$STR_KPCF_TOOLTIPFILLLEVEL"
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT"
         };
 
         class KP_DialogCross: KPGUI_PRE_DialogCrossS {};

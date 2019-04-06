@@ -27,7 +27,7 @@ private _importName = _ctrlImport lbText _index;
 
 // Check for empty selection
 if (_index isEqualTo -1) exitWith {
-    //hint localize "STR_KPCF_HINTSELECTION";
+    [localize "STR_KPLIB_HINT_SELECTION"] call CBA_fnc_notify;
 };
 
 // Read the presets from profileNamespace

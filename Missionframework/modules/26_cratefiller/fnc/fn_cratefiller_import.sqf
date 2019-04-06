@@ -26,7 +26,7 @@ private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
 
 // Check if there's an active storage
 if (isNull _storage) exitWith {
-    //hint localize "STR_KPCF_HINTNOSTORAGE";
+    [localize "STR_KPLIB_HINT_NOSTORAGE"] call CBA_fnc_notify;
 };
 
 // Read the import name
@@ -35,7 +35,7 @@ private _importName = _ctrlImport lbText _index;
 
 // Check for empty selection
 if (_index isEqualTo -1) exitWith {
-    //hint localize "STR_KPCF_HINTSELECTION";
+    [localize "STR_KPLIB_HINT_SELECTION"] call CBA_fnc_notify;
 };
 
 // Get the storage inventory

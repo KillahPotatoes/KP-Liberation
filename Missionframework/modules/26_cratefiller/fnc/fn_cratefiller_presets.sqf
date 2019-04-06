@@ -4,7 +4,7 @@
     File: fn_cratefiller_presets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,9 +36,9 @@ private _specialItems = [];
 {
     _type = _x call BIS_fnc_itemType;
     switch (_type select 0) do {
-        case "Weapon": {if ((_type select 1) isEqualTo "UnknownWeapon") then {_items pushBack _x} else {if ((_x call BIS_fnc_baseWeapon) == _x) then {_weapons pushBack _x;};};};
+        case "Weapon": {if ((_type select 1) isEqualTo "UnknownWeapon") then {_items pushBack _x} else {if ((_x call BIS_fnc_baseWeapon) isEqualTo _x) then {_weapons pushBack _x;};};};
         case "Mine": {_explosives pushBack _x};
-        case "Magazine": {if ((((_type select 1) isEqualTo "Grenade") || ((_type select 1) isEqualTo "SmokeShell")) && !((getNumber (configFile >> "CfgMagazines" >> _x >> "type")) == 16)) then {_grenades pushBack _x}};
+        case "Magazine": {if ((((_type select 1) isEqualTo "Grenade") || ((_type select 1) isEqualTo "SmokeShell")) && !((getNumber (configFile >> "CfgMagazines" >> _x >> "type")) isEqualTo 16)) then {_grenades pushBack _x}};
         case "Equipment": {if ((_type select 1) isEqualTo "Backpack") then {_backpacks pushBack _x}};
         case "Item": {
             switch (_type select 1) do {

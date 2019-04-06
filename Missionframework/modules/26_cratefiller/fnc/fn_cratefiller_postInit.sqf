@@ -4,7 +4,7 @@
     File: fn_cratefiller_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,16 +27,6 @@ if (isServer) then {
 
     // Register arsenal filled event handler
     ["KPLIB_arsenal_newLists", {[] call KPLIB_fnc_cratefiller_presets;}] call CBA_fnc_addEventHandler;
-};
-
-// HC section
-if (!hasInterface && !isDedicated) then {
-
-};
-
-// Player section
-if (hasInterface) then {
-
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CRATEFILLER] Module initialized", diag_tickTime];};

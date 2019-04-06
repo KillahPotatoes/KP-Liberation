@@ -37,12 +37,12 @@ private _inventory = [] call KPLIB_fnc_cratefiller_getInventory;
 
 // Check for empty selection
 if (_index isEqualTo -1) exitWith {
-    //hint localize "STR_KPCF_HINTSELECTION";
+    [localize "STR_KPLIB_HINT_SELECTION"] call CBA_fnc_notify;
 };
 
 // Check if the storage is in range
 if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWith {
-    //hint localize "STR_KPCF_HINTRANGE";
+    [localize "STR_KPLIB_HINT_RANGE"] call CBA_fnc_notify;
     [] remoteExecCall ["KPLIB_fnc_cratefiller_getNearStorages", (allPlayers - entities "HeadlessClient_F")];
 };
 
@@ -50,7 +50,7 @@ if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWi
 if (_amount isEqualTo 0) exitWith {
     _inventory = [];
     [_inventory] call KPLIB_fnc_cratefiller_setInventory;
-    //hint localize "STR_KPCF_HINTCLEARFULL";
+    [localize "STR_KPLIB_HINT_CLEARFULL"] call CBA_fnc_notify;
 };
 
 // Item selection
@@ -71,6 +71,10 @@ if (_modify < 0) then {
 
 private _config = [_item] call KPLIB_fnc_cratefiller_getConfigPath;
 private _name = (getText (configFile >> _config >> _item >> "displayName"));
-//hint format [localize "STR_KPCF_HINTCLEAR", _name, _amount];
+private _picture = (getText (configFile >> _config >> _item >> "picture"));
+[
+    [_picture, 2],
+    [format [localize "STR_KPLIB_HINT_UNLOAD", _name, _amount]]
+] call CBA_fnc_notify;
 
 true

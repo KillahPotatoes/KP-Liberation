@@ -4,7 +4,7 @@
     File: fn_cratefiller_createSubList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,7 +31,7 @@ private _catIndex = lbCurSel _ctrlCat;
 private _weaponIndex = lbCurSel _ctrlWeapon;
 
 // Check for empty selection
-if (_weaponIndex == -1) exitWith {};
+if (_weaponIndex isEqualTo -1) exitWith {};
 
 // Weapon selection
 private _weaponType = _ctrlWeapon lbData _weaponIndex;

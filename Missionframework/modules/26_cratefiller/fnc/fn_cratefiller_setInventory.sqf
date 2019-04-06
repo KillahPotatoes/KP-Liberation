@@ -26,7 +26,7 @@ private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
 
 // Check if the storage is in range
 if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWith {
-    //hint localize "STR_KPCF_HINTRANGE";
+    [localize "STR_KPLIB_HINT_RANGE"] call CBA_fnc_notify;
     [] remoteExecCall ["KPLIB_fnc_cratefiller_getNearStorages", (allPlayers - entities "HeadlessClient_F")];
 };
 

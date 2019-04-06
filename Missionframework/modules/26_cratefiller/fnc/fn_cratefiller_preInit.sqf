@@ -4,7 +4,7 @@
     File: fn_example_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,16 +31,6 @@ if (isServer) then {
 
 // Process CBA Settings
 [] call KPLIB_fnc_cratefiller_settings;
-
-// Server section (dedicated and player hosted)
-if (isServer) then {
-
-};
-
-// Player section
-if (hasInterface) then {
-
-};
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CRATEFILLER] Module initialized", diag_tickTime];};
 

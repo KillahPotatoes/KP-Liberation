@@ -4,7 +4,7 @@
     File: fn_cratefiller_showInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-06
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -57,9 +57,9 @@ if (isNull _storage) exitWith {
 {
     _type = (_x select 1);
     _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-    if (_config == "CfgWeapons") then {
+    if (_config isEqualTo "CfgWeapons") then {
         _itemMass = getNumber (configfile >> _config >> _type >> "WeaponSlotsInfo" >> "mass");
-        if (_itemMass == 0) then {
+        if (_itemMass isEqualTo 0) then {
             _itemMass = getNumber (configfile >> _config >> _type >> "ItemInfo" >> "mass");
         };
     } else {
