@@ -1065,7 +1065,7 @@
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHRESOURCES">
             <English>It's not enough resources available.</English>
-            <German>Es sind nicht genügend Ressourcen vorhanden.</German>
+            <German>Nicht genügend Ressourcen vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_VEHICLECHANGES">
             <English>Vehicle state changed, refresh your selection to try again.</English>
