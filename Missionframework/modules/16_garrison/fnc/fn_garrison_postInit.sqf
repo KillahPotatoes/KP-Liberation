@@ -4,7 +4,7 @@
     File: fn_garrison_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-03-30
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -34,7 +34,7 @@ if (hasInterface) then {
         "",
         '_target isEqualTo _originalTarget && !(_originalTarget getVariable ["KPLIB_fob", ""] isEqualTo "") && !(KPLIB_sectors_blufor isEqualTo [])'
     ];
-    [_actionArray] call CBA_fnc_addPlayerAction;
+    // [_actionArray] call CBA_fnc_addPlayerAction;
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [GARRISON] Module initialized", diag_tickTime];};
