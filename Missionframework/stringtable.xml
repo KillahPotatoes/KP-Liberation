@@ -1499,43 +1499,43 @@
             <English>ACE settings</English>
             <German>ACE Einstellungen</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_ACERESUPPLY">
             <English>ACE resupply</English>
             <German>ACE Versorgung</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_ACERESUPPLY_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_ACERESUPPLY_TT">
             <English>Activates/deactivates the ACE resupply mode, where only fuel/ammo transports can be resupplied.</English>
             <German>Aktiviert/deaktiviert die die ACE Versorgung, sodass nur noch Kraftstoff-/Munitionstransporter versorgt werden können.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_MAGCOST">
             <English>Magazine price</English>
             <German>Magazinpreis</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_MAGCOST_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_MAGCOST_TT">
             <English>Defines the price of one magazine.</English>
             <German>Definiert die Kosten für ein Magazin.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_GALLCOST">
             <English>Gallon price</English>
             <German>Gallonenpreis</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_GALLCOST_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_GALLCOST_TT">
             <English>Defines the price of one gallon.</English>
             <German>Definiert die Kosten für eine Gallone.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_AMMOCOST">
             <English>Ammo cargo price</English>
             <German>Munitionsvorratpreis</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_AMMOCOST_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_AMMOCOST_TT">
             <English>Defines the price of 100 ammo cargo for ACE rearm vehicles.</English>
             <German>Definiert die Kosten für 100 Munitionsvorrat für ein ACE Munitions Fahrzeug.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_FUELCOST">
             <English>Fuel cargo price</English>
             <German>Treibstoffvorratpreis</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_RESUPPLY_FUELCOST_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESUPPLY_FUELCOST_TT">
             <English>Defines the price of 1000 fuel cargo for ACE refuel vehicles.</English>
             <German>Definiert die Kosten für 1000 Treibstoffvorrat für ein ACE Tank Fahrzeug.</German>
         </Key>
