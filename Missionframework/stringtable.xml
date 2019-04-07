@@ -1061,7 +1061,7 @@
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHSTORAGE">
             <English>It's not enough storage space left.</English>
-            <German>Es sind nicht genügend freie Lagerplätze vorhanden.</German>
+            <German>Nicht genügend freie Lagerplätze vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHRESOURCES">
             <English>Not enough resources available.</English>
