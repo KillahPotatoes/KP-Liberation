@@ -59,7 +59,7 @@ private _ammoState = 0;
 private _fuelMax = 0;
 private _fuelState = 0;
 
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
 
 if !(KPLIB_param_aceResupply) then {

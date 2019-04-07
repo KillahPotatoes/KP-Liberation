@@ -41,7 +41,7 @@ private _blacklist = [
     KPLIB_logistic_building
 ];
 
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 {
     _type = typeOf _x;
     if (_type isEqualTo "GroundWeaponHolder") exitWith {};

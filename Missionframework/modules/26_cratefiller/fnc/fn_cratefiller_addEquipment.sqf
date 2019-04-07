@@ -33,7 +33,7 @@ if (_index isEqualTo -1) exitWith {};
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 
 // Check if the storage is in range
 if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWith {

@@ -32,7 +32,7 @@ private _costs = parseNumber (ctrlText _ctrlCosts);
 private _count = round (sliderPosition _ctrlSlider);
 
 // Prepare resource check
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
 private _check = false;
 

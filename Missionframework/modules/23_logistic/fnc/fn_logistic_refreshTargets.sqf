@@ -31,7 +31,7 @@ private _ctrlVehicleList = _dialog displayCtrl _ctrlId;
 lbClear _ctrlVehicleList;
 
 // Get all FOB vehicles
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _vehicles = (getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange];
 
 private _cfg = configFile >> "CfgVehicles";

@@ -4,17 +4,17 @@
     File: fn_res_refund.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-04-03
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Refunds given amount of resources to the provided location.
 
     Parameter(s):
-        _location   - Sector or FOB marker from where to pay the resources from [STRING, defaults to ""]
-        _supplies   - Amount of supplies to pay                                 [NUMBER, defaults to 0]
-        _ammo       - Amount of ammo to pay                                     [NUMBER, defaults to 0]
-        _fuel       - Amount of fuel to pay                                     [NUMBER, defaults to 0]
+        _location   - Sector or FOB marker where the resources should be refunden   [STRING, defaults to ""]
+        _supplies   - Amount of supplies to refund                                  [NUMBER, defaults to 0]
+        _ammo       - Amount of ammo to refund                                      [NUMBER, defaults to 0]
+        _fuel       - Amount of fuel to refund                                      [NUMBER, defaults to 0]
 
     Returns:
         Refund successful [BOOL]
@@ -56,20 +56,19 @@ while {_supplies > 0 || _ammo > 0 || _fuel > 0} do {
     switch (true) do {
         case (_supplies > 0): {
             _crate = ["Supply", getPosATL _storage, (_supplies min KPLIB_param_crateVolume)] call KPLIB_fnc_res_createCrate;
-            [_crate] call KPLIB_fnc_res_storeCrate;
             _supplies = _supplies - KPLIB_param_crateVolume;
         };
         case (_ammo > 0): {
             _crate = ["Ammo", getPosATL _storage, (_ammo min KPLIB_param_crateVolume)] call KPLIB_fnc_res_createCrate;
-            [_crate] call KPLIB_fnc_res_storeCrate;
             _ammo = _ammo - KPLIB_param_crateVolume;
         };
         case (_fuel > 0): {
             _crate = ["Fuel", getPosATL _storage, (_fuel min KPLIB_param_crateVolume)] call KPLIB_fnc_res_createCrate;
-            [_crate] call KPLIB_fnc_res_storeCrate;
+
             _fuel = _fuel - KPLIB_param_crateVolume;
         };
     };
+    [_crate] call KPLIB_fnc_res_storeCrate;
 };
 
 // Reorder the crates on all storages to close the possible gaps

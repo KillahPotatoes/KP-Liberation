@@ -39,7 +39,7 @@ private _costs = parseNumber (ctrlText _ctrlTotalCosts);
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
 private _type = typeOf _vehicle;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 
 // Check if the Vehicle state has changed and exit
 private _cargo = ctrlText _ctrlCargoStateValue;

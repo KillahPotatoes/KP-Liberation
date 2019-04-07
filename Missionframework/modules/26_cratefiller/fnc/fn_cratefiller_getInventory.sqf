@@ -22,7 +22,7 @@ private _dialog = findDisplay 758026;
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 
 // Check for an active storage
 private _cargo = [];

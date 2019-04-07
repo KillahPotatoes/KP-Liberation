@@ -99,7 +99,7 @@ private _supplyCrates = ceil (_supplyValue / KPLIB_param_crateVolume);
 private _ammoCrates = ceil (_ammoValue / KPLIB_param_crateVolume);
 private _fuelCrates = ceil (_fuelValue / KPLIB_param_crateVolume);
 private _crateCount = _supplyCrates + _ammoCrates + _fuelCrates;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
 private _crateCapacity = 0;
 

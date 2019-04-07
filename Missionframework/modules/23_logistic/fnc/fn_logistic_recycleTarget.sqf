@@ -65,7 +65,7 @@ if (KPLIB_param_fuelInfluence) then {
 private _supplyValueCheck = 0;
 private _ammoValueCheck = 0;
 private _fuelValueCheck = 0;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 
 if !(_vehicleIndex isEqualTo -1) then {
     private _vehicleArray = _vehicles select _vehicleIndex;

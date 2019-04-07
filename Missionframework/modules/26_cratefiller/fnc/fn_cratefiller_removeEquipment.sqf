@@ -30,7 +30,7 @@ private _index = lbCurSel _ctrlInventory;
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 
 // Get the storage inventory
 private _inventory = [] call KPLIB_fnc_cratefiller_getInventory;
