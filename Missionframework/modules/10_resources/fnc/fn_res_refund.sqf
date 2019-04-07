@@ -11,7 +11,7 @@
         Refunds given amount of resources to the provided location.
 
     Parameter(s):
-        _location   - Sector or FOB marker where the resources should be refunden   [STRING, defaults to ""]
+        _location   - Sector or FOB marker where the resources should be refunded   [STRING, defaults to ""]
         _supplies   - Amount of supplies to refund                                  [NUMBER, defaults to 0]
         _ammo       - Amount of ammo to refund                                      [NUMBER, defaults to 0]
         _fuel       - Amount of fuel to refund                                      [NUMBER, defaults to 0]
