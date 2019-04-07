@@ -1064,7 +1064,7 @@
             <German>Es sind nicht genügend freie Lagerplätze vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHRESOURCES">
-            <English>It's not enough resources available.</English>
+            <English>Not enough resources available.</English>
             <German>Nicht genügend Ressourcen vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_VEHICLECHANGES">
