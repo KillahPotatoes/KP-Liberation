@@ -4,8 +4,9 @@
     File: fn_garrison_getVehSpawnPos.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-23
-    Last Update: 2019-02-23
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Finds an position where a vehicle can safely spawn. Skips water positions.
@@ -21,10 +22,10 @@ params [
     ["_center", KPLIB_zeroPos, [[]], [3]]
 ];
 
-private _spawnPos = (_center getPos [50 + (random 200), random 360]) findEmptyPosition [0, 100, "B_T_VTOL_01_armed_F"];
+private _spawnPos = (_center getPos [50 + (random 200), random 360]) findEmptyPosition [0, 50, "B_T_VTOL_01_armed_F"];
 private _nearRoad = selectRandom (_center nearRoads 150);
 if !(isNil "_nearRoad") then {
-    _spawnPos = getPos _nearRoad;
+    _spawnPos = getPosATL _nearRoad;
 };
 
 // Avoid spawn position on water or empty position by findEmptyPosition

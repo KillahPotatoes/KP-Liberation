@@ -4,8 +4,9 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-02-23
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Spawns an infantry squad with given amount of soldiers of given side at given sector.
@@ -44,20 +45,9 @@ while {surfaceIsWater _spawnPos} do {
 
 // Set array to select soldier classnames from
 switch (_ownerNumber) do {
-    case 1: {_soldierArray = KPLIB_preset_unitsPlE; _side = KPLIB_preset_sideE;};
-    case 2: {_soldierArray = KPLIB_preset_unitsPlF; _side = KPLIB_preset_sideF;};
-    default {_soldierArray = KPLIB_preset_unitsPlE; _side = KPLIB_preset_sideE;};
+    case 2: {_soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray;};
+    default {_soldierArray = [] call KPLIB_fnc_common_getSoldierArray;};
 };
-
-// Remove unwanted soldier types
-_soldierArray = _soldierArray - [
-    ["rsCrewmanHeli", _side] call KPLIB_fnc_common_getPresetClass,
-    ["rsCrewmanVeh", _side] call KPLIB_fnc_common_getPresetClass,
-    ["rsPilotHeli", _side] call KPLIB_fnc_common_getPresetClass,
-    ["rsPilotJet", _side] call KPLIB_fnc_common_getPresetClass,
-    ["rsParatrooper", _side] call KPLIB_fnc_common_getPresetClass,
-    ["rsSurvivor", _side] call KPLIB_fnc_common_getPresetClass
-];
 
 // Fetch unit classnames
 for "_i" from 1 to _amount do {
@@ -73,9 +63,9 @@ _grp = [_classnames, _spawnPos, _side] call KPLIB_fnc_common_createGroup;
 } forEach (units _grp);
 
 // !DEBUG! Add group to Zeus
-{
+/* {
     _x addCuratorEditableObjects [units _grp, true]
-} forEach allCurators;
+} forEach allCurators; */
 
 // Remove possible initialization waypoints
 {deleteWaypoint [_grp, 0];} forEach (waypoints _grp);
