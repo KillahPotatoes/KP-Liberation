@@ -1060,16 +1060,16 @@
             <Portuguese>Falta(m) %1 minuto(s) de tempo de espera do respawn móvel.</Portuguese>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHSTORAGE">
-            <English>It's not enough storage space left.</English>
-            <German>Es sind nicht genügend freie Lagerplätze vorhanden.</German>
+            <English>Not enough storage space left.</English>
+            <German>Nicht genügend freie Lagerplätze vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOTENOUGHRESOURCES">
-            <English>It's not enough resources available.</English>
-            <German>Es sind nicht genügend Ressourcen vorhanden.</German>
+            <English>Not enough resources available.</English>
+            <German>Nicht genügend Ressourcen vorhanden.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_VEHICLECHANGES">
-            <English>The state of the Vehicle changed, refresh your selection to try again.</English>
-            <German>Der Zustand des Fahrzeugs hat sich geändert, aktualisiere deine Auswahl und versuche es erneut.</German>
+            <English>Vehicle state changed, refresh your selection to try again.</English>
+            <German>Fahrzeugzustand hat sich geändert. Aktualisiere deine Auswahl und versuche es erneut.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RANGE">
             <English>Selected transport medium is out of range.</English>
