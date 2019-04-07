@@ -5,7 +5,6 @@
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
     Last Update: 2019-04-05
-
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -270,7 +269,6 @@ class KPGUI_PRE_Button {
 // Inline Button
 class KPGUI_PRE_InlineButton: KPGUI_PRE_Button {
     colorBackground[] = {0.25, 0.25, 0.25, 1};
-    colorBackgroundDisabled[] = {0, 1, 0, 1};
     colorBackgroundActive[] = {0.3, 0.3, 0.3, 1};
     colorFocused[] = {0.25, 0.25, 0.25, 1};
     offsetPressedX = safeZoneW * 0.0005;
@@ -449,6 +447,7 @@ class KPGUI_PRE_ListBox {
     maxHistoryDelay = 1;
 };
 
+// ListNBox
 class KPGUI_PRE_ListNBox {
     deletable = 0;
     fade = 0;
@@ -919,6 +918,7 @@ class KPGUI_PRE_MapControl {
         coefMin = 0.85;
         coefMax = 1;
     };
+    widthRailWay = 1;
     moveOnEdges = 1;
     x = "SafeZoneXAbs";
     y = SafeZoneY + 1.5 * GUI_GRID_H;

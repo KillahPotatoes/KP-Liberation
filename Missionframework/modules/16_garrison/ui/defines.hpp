@@ -1,0 +1,36 @@
+/*
+    KP LIBERATION GARRISON UI DEFINES
+
+    File: defines.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-03-31
+    Last Update: 2019-03-31
+    License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+
+    Description:
+        Common defines for garrison module UI elements
+*/
+
+#define KPLIB_IDC_GARRISON_DIALOG           75804
+
+#define KPLIB_IDC_GARRISON_GARRISONLIST     758041
+
+#define KPLIB_IDC_GARRISON_SECTORNAME       758042
+#define KPLIB_IDC_GARRISON_ALERTNOTE        758043
+
+#define KPLIB_IDC_GARRISON_INFANTRYLABEL    758044
+#define KPLIB_IDC_GARRISON_INFANTRYAMOUNT   758045
+#define KPLIB_IDC_GARRISON_INFANTRYBOX      758046
+#define KPLIB_IDC_GARRISON_INFANTRYBUTTON   758047
+
+#define KPLIB_IDC_GARRISON_LIGHTLABEL       758048
+#define KPLIB_IDC_GARRISON_LIGHTAMOUNT      758049
+#define KPLIB_IDC_GARRISON_LIGHTLIST        7580410
+#define KPLIB_IDC_GARRISON_LIGHTBUTTON      7580411
+
+#define KPLIB_IDC_GARRISON_HEAVYLABEL       7580412
+#define KPLIB_IDC_GARRISON_HEAVYAMOUNT      7580413
+#define KPLIB_IDC_GARRISON_HEAVYLIST        7580414
+#define KPLIB_IDC_GARRISON_HEAVYBUTTON      7580415
+
+#define KPLIB_IDC_GARRISON_MAP              7580416

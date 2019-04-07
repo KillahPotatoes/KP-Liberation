@@ -4,11 +4,12 @@
     File: fn_garrison_addInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-21
-    Last Update: 2018-12-21
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
-        Adds given amount if infantry units to the garrison of given sector.
+        Adds given amount of infantry units to the garrison of given sector.
 
     Parameter(s):
         _sector - Markername of the sector                                  [STRING, defaults to ""]
@@ -28,7 +29,7 @@ if (!(_sector in KPLIB_sectors_all) || (_sector in KPLIB_garrison_active)) exitW
 
 private _garrisonRef = [_sector] call KPLIB_fnc_garrison_getGarrison;
 
-// Prevent values below <0
+// Prevent values below 0
 private _curAmount = _garrisonRef select 2;
 _amount = (_curAmount + _amount) max 0;
 

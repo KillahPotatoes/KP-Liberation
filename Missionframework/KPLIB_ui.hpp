@@ -22,5 +22,6 @@
 #include "modules\13_plm\ui.hpp"
 #include "modules\14_virtual\ui.hpp"
 #include "modules\15_build\ui.hpp"
+#include "modules\16_garrison\ui.hpp"
 #include "modules\23_logistic\ui.hpp"
 #include "modules\26_cratefiller\ui.hpp"

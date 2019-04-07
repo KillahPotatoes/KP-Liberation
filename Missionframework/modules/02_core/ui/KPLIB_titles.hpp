@@ -1,10 +1,10 @@
 /*
     KP Liberation rsc titles defines
 
-    File: KPLIB_defines.hpp
+    File: KPLIB_titles.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-28
-    Last Update: 2019-02-23
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
