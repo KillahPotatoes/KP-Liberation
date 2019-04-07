@@ -17,6 +17,9 @@ class common {
     // Adds action to object with correct localized title
     class common_addAction {};
 
+    // Let a camera circle around a given target with given params
+    class common_cameraCircleTarget {};
+
     // Clears vehicle cargo
     class common_clearVehicleCargo {};
 

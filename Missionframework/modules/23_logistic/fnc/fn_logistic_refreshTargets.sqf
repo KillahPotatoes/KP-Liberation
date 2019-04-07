@@ -4,8 +4,9 @@
     File: fn_logistic_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-02-24
+    Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Refreshes the vehicle list for the given dialog.
@@ -30,7 +31,7 @@ private _ctrlVehicleList = _dialog displayCtrl _ctrlId;
 lbClear _ctrlVehicleList;
 
 // Get all FOB vehicles
-private _nearFOB = [player] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _vehicles = (getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange];
 
 private _cfg = configFile >> "CfgVehicles";

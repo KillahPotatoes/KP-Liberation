@@ -4,8 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-03-31
-
+    Last Update: 2019-04-05
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -582,6 +581,16 @@ class KPGUI_PRE_EditBox {
     canModify = 1;
 };
 
+// Progress bar
+class KPGUI_PRE_ProgressBar
+{
+    type = 8;
+    style = 0;
+    colorFrame[] = {1,1,1,1};
+    colorBar[] = KP_COLOR_PLAYERDEFINE;
+    texture = "";
+};
+
 // MapControl
 class KPGUI_PRE_MapControl {
     deletable = 0;
@@ -1101,6 +1110,38 @@ class KPGUI_PRE_DialogButton_LeftPanel: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP);
     w = KP_GETWPLAIN(KP_WIDTH_VAL_LP,1);
+};
+
+/*
+    --- Small sized classes ---
+*/
+
+// Title bar
+class KPGUI_PRE_DialogTitleS: KPGUI_PRE_Title {
+    x = KP_GETX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
+    y = safeZoneY + safeZoneH * KP_Y_VAL_S;
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_S,1);
+};
+
+// Cross symbol
+class KPGUI_PRE_DialogCrossS: KPGUI_PRE_CloseCross {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.02)
+    y = KP_GETY_CROSS(KP_Y_VAL_S);
+};
+
+// Background
+class KPGUI_PRE_DialogBackgroundS: KPGUI_PRE_Background {
+    x = KP_GETX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
+    y = KP_GETY_AREA(KP_Y_VAL_S);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_S,1);
+    h = safeZoneH * KP_HEIGHT_VAL_S;
+};
+
+// Button
+class KPGUI_PRE_DialogButtonS: KPGUI_PRE_Button {
+    x = KP_GETX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
+    y = KP_GETY_BELOW(KP_Y_VAL_S,KP_HEIGHT_VAL_S);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_S,1);
 };
 
 /*
