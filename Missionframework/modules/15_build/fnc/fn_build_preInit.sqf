@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2018-12-16
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,9 +31,6 @@ KPLIB_buildLogic = locationNull;
 // Build camera PFH ticker id
 KPLIB_build_ticker = -1;
 
-// Save data
-KPLIB_build_saveNamespace = locationNull;
-
 // Object from which FOB build event originated
 KPLIB_build_fobBuildObject = objNull;
 
@@ -41,6 +38,10 @@ KPLIB_build_fobBuildObject = objNull;
 KPLIB_build_categoryItems = [];
 
 if (isServer) then {
+
+    // Register FOB var for persistence
+    ["KPLIB_fob", true] call KPLIB_fnc_persistence_addPersistentVar;
+
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_build_loadData}] call CBA_fnc_addEventHandler;
 
@@ -51,14 +52,10 @@ if (isServer) then {
         params ["_object", "_fob"];
         if (_fob isEqualTo "") exitWith {};
 
-        // If fob has no save data, initialize it
-        if (isNil {KPLIB_build_saveNamespace getVariable _fob}) then {
-            KPLIB_build_saveNamespace setVariable [_fob, []];
-        };
-
         // Skip storage areas
         if !((typeOf _object) in KPLIB_res_storageClasses) then {
-            (KPLIB_build_saveNamespace getVariable _fob) pushBackUnique _object;
+            _object setVariable ["KPLIB_fob", _fob, true];
+            _object call KPLIB_fnc_persistence_makePersistent;
         };
 
     }] call CBA_fnc_addEventHandler;

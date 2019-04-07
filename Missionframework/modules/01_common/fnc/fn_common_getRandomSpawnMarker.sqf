@@ -4,14 +4,15 @@
     File: fn_common_getRandomSpawnMarker.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-11
-    Last Update: 2018-12-11
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Gets a random marker from KPLIB_sectors_airspawn or KPLIB_sectors_spawn with given distances to other sectors.
 
     Parameter(s):
-        _markersArray   - Array of markers. KPLIB_sectors_airspawn or KPLIB_sectors_spawn   [BOOL, defaults to false]
+        _markersArray   - Array of markers. KPLIB_sectors_airspawn or KPLIB_sectors_spawn   [ARRAY, defaults to []]
         _minDistE       - Minimum distance to any enemy sector                              [NUMBER, defaults to 300]
         _minDistF       - Minimum distance to any friendly sector                           [NUMBER, defaults to 300]
 
