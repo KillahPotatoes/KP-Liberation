@@ -8,6 +8,15 @@ Furthermore it provides functions which are often used and are not specifically 
 This module uses no data or functions from other modules.
 
 ### Functions
+
+* KPLIB_fnc_common_addAction
+
+  *Adds given action local to given object.*
+
+* KPLIB_fnc_common_cameraCircleTarget
+
+  *Let a camera circle around a given target with given params.*
+
 * KPLIB_fnc_common_clearVehicleCargo
 
   *Clears vehicle cargo.*

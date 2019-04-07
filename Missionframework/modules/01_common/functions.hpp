@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2019-02-24
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class common {
 
     // Adds action to object with correct localized title
     class common_addAction {};
+
+    // Let a camera circle around a given target with given params
+    class common_cameraCircleTarget {};
 
     // Clears vehicle cargo
     class common_clearVehicleCargo {};
@@ -52,6 +55,12 @@ class common {
 
     // Gets a random spawn marker
     class common_getRandomSpawnMarker {};
+
+    // Gets array of soldier classnames from preset
+    class common_getSoldierArray {};
+
+    // Checks if player occupies a slot
+    class common_isSlot {};
 
     // Initialize common module
     class common_preInit {

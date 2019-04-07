@@ -4,8 +4,9 @@
     File: fn_logistic_recycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-31
-    Last Update: 2019-02-24
+    Last Update: 2019-04-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Recycles the selected vehicle.
@@ -20,24 +21,85 @@
 // Dialog controls
 private _dialog = findDisplay 7580232;
 private _ctrlVehicleList = _dialog displayCtrl 68740;
-private _ctrlSupply = _dialog displayCtrl 68741;
-private _ctrlAmmo = _dialog displayCtrl 68742;
-private _ctrlFuel = _dialog displayCtrl 68743;
-private _recycleButton = _dialog displayCtrl 68745;
+private _ctrlSupplyValue = _dialog displayCtrl 68742;
+private _ctrlAmmoValue = _dialog displayCtrl 68744;
+private _ctrlFuelValue = _dialog displayCtrl 68746;
+private _recycleButton = _dialog displayCtrl 68747;
 
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
 private _vehicleId = _ctrlVehicleList lbData _index;
+private _supplyValue = parseNumber (ctrlText _ctrlSupplyValue);
+private _ammoValue = parseNumber (ctrlText _ctrlAmmoValue);
+private _fuelValue = parseNumber (ctrlText _ctrlFuelValue);
 
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
+private _type = typeOf _vehicle;
+private _vehicles = KPLIB_logistic_data getVariable ["Vehicles", []];
+private _vehicleIndex = _vehicles findIf {_x select 0 isEqualTo _type};
+private _damage = 1;
+private _ammo = 1;
+private _fuel = 1;
+
+// Check for the influence params
+if (KPLIB_param_damageInfluence) then {
+    _damage = (1 - damage _vehicle);
+};
+
+if (KPLIB_param_ammoInfluence) then {
+    private _ammoState = {_x select 2 != 0} count magazinesAllTurrets _vehicle;
+    if (_ammoState > 0) then {
+        private _ammoMax = count magazinesAllTurrets _vehicle;
+        _ammo = _ammoState / _ammoMax;
+    } else {
+        _ammo = 0;
+    };
+};
+
+if (KPLIB_param_fuelInfluence) then {
+    _fuel = fuel _vehicle;
+};
+
+// Check if the Vehicle state has changed and exit
+private _supplyValueCheck = 0;
+private _ammoValueCheck = 0;
+private _fuelValueCheck = 0;
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+
+if !(_vehicleIndex isEqualTo -1) then {
+    private _vehicleArray = _vehicles select _vehicleIndex;
+    _supplyValueCheck = (round ((_vehicleArray select 1) * (KPLIB_param_recycleFactor / 100) * _damage));
+    _ammoValueCheck = (round ((_vehicleArray select 2) * (KPLIB_param_recycleFactor / 100) * _ammo));
+    _fuelValueCheck = (round ((_vehicleArray select 3) * (KPLIB_param_recycleFactor / 100) * _fuel));
+} else {
+    _supplyValueCheck = (KPLIB_param_refundSupply * _damage);
+    _ammoValueCheck = (KPLIB_param_refundAmmo * _ammo);
+    _fuelValueCheck = (KPLIB_param_refundFuel * _fuel);
+};
+
+if (
+    !(_supplyValue isEqualTo _supplyValueCheck) ||
+    !(_ammoValue isEqualTo _ammoValueCheck) ||
+    !(_fuelValue isEqualTo _fuelValueCheck) ||
+    (((getMarkerPos _nearFOB) distance2D _vehicle) > KPLIB_param_fobRange)
+) exitWith {
+    _recycleButton ctrlEnable false;
+    [
+        ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+        [localize "STR_KPLIB_HINT_VEHICLECHANGES"]
+    ] call CBA_fnc_notify;
+};
+
+// Pay the refund
+private _storage = objNull;
+private _crate = objNull;
+private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
+
+[_nearFOB, _supplyValue, _ammoValue, _fuelValue] remoteExecCall ["KPLIB_fnc_res_refund", 2];
 
 // Delete the vehicle
 deleteVehicle _vehicle;
-
-/* TODO:
-- Implement Resource refund
-*/
 
 [7580232, 68740] call KPLIB_fnc_logistic_refreshTargets;
 

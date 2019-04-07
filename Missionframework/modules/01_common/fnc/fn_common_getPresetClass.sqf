@@ -4,11 +4,12 @@
     File: fn_common_getPresetClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-08
-    Last Update: 2018-12-11
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
-        Gets random class of given type from preset.
+        Gets class or array of given type from preset.
 
     Parameter(s):
         _type       - Preset type name                                          [STRING, defaults to ""]
@@ -46,9 +47,5 @@ if (isNil "_classNames") exitWith {
     ""
 };
 
-// Return random className
-if (_classNames isEqualType []) then {
-    selectRandom _classNames
-} else {
-    _classNames
-}
+// Return classname(s)
+_classNames

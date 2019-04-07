@@ -4,8 +4,9 @@
     File: fn_common_createGroup.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-24
-    Last Update: 2019-02-23
+    Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Creates a group at given side with units according to given array of classnames and fires the Liberation group created event.
@@ -33,6 +34,6 @@ private _grp = createGroup [_side, true];
     [_grp, _x, _spawnPos, _addition] call KPLIB_fnc_common_createUnit;
 } forEach _units;
 
-["KPLIB_group_created", [_grp]] call CBA_fnc_localEvent;
+["KPLIB_group_created", [_grp]] call CBA_fnc_globalEvent;
 
 _grp

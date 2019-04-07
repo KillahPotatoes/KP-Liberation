@@ -4,8 +4,9 @@
     File: fn_logistic_addActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-02-24
+    Last Update: 2019-04-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Adds all actions to the spawned logistic building.

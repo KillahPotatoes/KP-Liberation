@@ -64,21 +64,27 @@ EMitted when a new permission handler is registered
   *Module pre initialization.*
 
 * KPLIB_fnc_permission_registerPlayer
+
   *Checks if the player is already registered to the permission system.*
 
 * KPLIB_fnc_permission_resetToDefault
+
   *Resets all permissions to default.*
 
 * KPLIB_fnc_permission_saveData
+
   *Fetches data which is bound to this module and send it to the global save data array.*
 
 * KPLIB_fnc_permission_setupPermissionControls
+
   *Reads the player permissions and applies them to the dialog controls.*
 
 * KPLIB_fnc_permission_setupplayerActions
+
   *Initialization of actions availible to players.*
 
 * KPLIB_fnc_permission_syncClients
+
   *Receive client variables and send them to all clients.*
 
 ### Scripts

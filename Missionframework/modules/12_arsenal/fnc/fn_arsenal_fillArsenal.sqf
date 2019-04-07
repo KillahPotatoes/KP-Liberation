@@ -4,7 +4,7 @@
     File: fn_init_fillArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-27
-    Last Update: 2019-01-07
+    Last Update: 2019-04-07
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,7 @@ private _configClasses = [];
     _configClasses append (
         "
             _type = (configName _x) call BIS_fnc_itemType;
-            (getNumber (_x >> 'scope') == 2) &&
+            (getNumber (_x >> 'scope') isEqualTo 2) &&
             ((_type select 0) != '') &&
             ((_type select 0) != 'VehicleWeapon')
         " configClasses _x
@@ -101,11 +101,11 @@ if !(_goodItems isEqualTo true) then {
     {
         _type = _x call BIS_fnc_itemType;
         switch (_type select 0) do {
-            case "Weapon": {if ((_x call BIS_fnc_baseWeapon) == _x) then {_weapons pushBack _x;};};
+            case "Weapon": {if ((_x call BIS_fnc_baseWeapon) isEqualTo _x) then {_weapons pushBack _x;};};
             case "Mine";
             case "Magazine": {_magazines pushBack _x};
             case "Item";
-            case "Equipment": {if ((_type select 1) == "Backpack") then {_backpacks pushBack _x} else {_items pushBack _x};};
+            case "Equipment": {if ((_type select 1) isEqualTo "Backpack") then {_backpacks pushBack _x} else {_items pushBack _x};};
         };
     } forEach _goodItems;
 
@@ -134,5 +134,8 @@ if !(_goodItems isEqualTo true) then {
 publicVariable "KPLIB_preset_arsenal_whitelist";
 // Send updated blacklist to clients
 publicVariable "KPLIB_preset_arsenal_blacklist";
+
+// Emit arsenal filled event
+["KPLIB_arsenal_newLists", []] call CBA_fnc_serverEvent;
 
 true
