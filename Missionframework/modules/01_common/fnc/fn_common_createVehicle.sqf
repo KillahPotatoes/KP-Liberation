@@ -6,6 +6,7 @@
     Date: 2018-05-03
     Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Spawning of a vehicle at given position with given direction.

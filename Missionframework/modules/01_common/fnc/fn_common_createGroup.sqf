@@ -6,6 +6,7 @@
     Date: 2018-10-24
     Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Creates a group at given side with units according to given array of classnames and fires the Liberation group created event.

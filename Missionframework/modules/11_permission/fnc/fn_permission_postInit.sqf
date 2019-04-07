@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-01-05
+    Last Update: 2019-03-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,6 +21,60 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];
 
+    // Slot permissions
+    // Commander
+    [
+        "Commander",
+        {},
+        "STR_KPLIB_PERMISSION_COMMANDER",
+        false,
+        "Slots",
+        "STR_KPLIB_PERMISSION_GROUPSLOTS"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Sub-Commander
+    [
+        "SubCommander",
+        {},
+        "STR_KPLIB_PERMISSION_SUBCOMMANDER",
+        false,
+        "Slots",
+        "STR_KPLIB_PERMISSION_GROUPSLOTS"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Build menu permissions
+    // Build
+    [
+        "Build",
+        {},
+        "STR_KPLIB_PERMISSION_BUILD",
+        false,
+        "BuildMenu",
+        "STR_KPLIB_PERMISSION_GROUPBUILDMENU"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Logistic station permissions
+    // Recycle
+    [
+        "Recycle",
+        {},
+        "STR_KPLIB_PERMISSION_RECYCLE",
+        false,
+        "LogisticStation",
+        "STR_KPLIB_PERMISSION_GROUPLOGISTICS"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Resupply
+    [
+        "Resupply",
+        {},
+        "STR_KPLIB_PERMISSION_RESUPPLY",
+        false,
+        "LogisticStation",
+        "STR_KPLIB_PERMISSION_GROUPLOGISTICS"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Vehicle permissions
     // Add Light Vehicle Permission
     [
         "LightVehicle",
@@ -137,6 +191,14 @@ if (hasInterface) then {
 
     // Setup of actions available to players
     [] call KPLIB_fnc_permission_setupPlayerActions;
+
+    // Check the slot permissions
+    if ((str player) isEqualTo "KPLIB_eden_commander" && !([player, "Commander"] call KPLIB_fnc_permission_getPermission)) then {
+        ["KPLIB_MissingPermission"] call BIS_fnc_endMission;
+    };
+    if ((str player) isEqualTo "KPLIB_eden_subCommander" && !([player, "SubCommander"] call KPLIB_fnc_permission_getPermission)) then {
+        ["KPLIB_MissingPermission"] call BIS_fnc_endMission;
+    };
 
     // Add vehicle event handlers
     player addEventHandler ["GetInMan", {if !([_this select 0, _this select 1, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];

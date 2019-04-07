@@ -4,7 +4,7 @@
     File: fn_arsenal_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2018-11-25
+    Last Update: 2019-03-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,11 @@ private _badItems = _playerItems arrayIntersect KPLIB_preset_arsenal_blacklist;
 if (!(_badItems isEqualTo [])) exitWith {
     private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _badItems, name player];
     _text remoteExec ["diag_log",2];
-    hint format [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND", _badItems];
+    [
+        ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+        [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND"],
+        [str _badItems]
+    ] call CBA_fnc_notify;
     removeAllWeapons player;
     removeAllItems player;
     removeAllAssignedItems player;

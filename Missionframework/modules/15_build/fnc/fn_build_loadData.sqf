@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2019-02-23
+    Last Update: 2019-03-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,27 +21,17 @@ if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module loadi
 
 private _moduleData = ["build"] call KPLIB_fnc_init_getSaveData;
 
-// Check if there is a new campaign
-if (_moduleData isEqualTo []) then {
-    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data empty, creating new data...";};
+// DEPRECATED, persistence is handled by dedicated module
+// TODO remove later. For now this function is left for save compatiblity.
+// Check if there is any saved data
+if !(_moduleData isEqualTo []) then {
 
-    // Initialize build save namespace
-    KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
-} else {
     // Otherwise start applying the saved data
-    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data found, applying data...";};
-
-    KPLIB_build_saveNamespace = [] call CBA_fnc_createNamespace;
+    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data found, migrating data to persistence module...";};
 
     // Deserialize data for every FOB
     {
         _x params ["_fob", "_items"];
-
-        private _fobItems = KPLIB_build_saveNamespace getVariable _fob;
-        if(isNil "_fobItems") then {
-            _fobItems = [];
-            KPLIB_build_saveNamespace setVariable [_fob, _fobItems];
-        };
 
         // Convert serialized objects into real objects
         {
@@ -69,7 +59,9 @@ if (_moduleData isEqualTo []) then {
                 };
             };
 
-            _fobItems pushBack _object;
+            _object setVariable ["KPLIB_fob", _fob, true];
+            _object call KPLIB_fnc_persistence_makePersistent
+
         } forEach _items;
 
     } forEach _moduleData;

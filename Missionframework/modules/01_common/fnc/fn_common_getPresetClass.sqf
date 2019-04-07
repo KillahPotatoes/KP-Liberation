@@ -6,6 +6,7 @@
     Date: 2018-12-08
     Last Update: 2019-03-31
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Gets class or array of given type from preset.

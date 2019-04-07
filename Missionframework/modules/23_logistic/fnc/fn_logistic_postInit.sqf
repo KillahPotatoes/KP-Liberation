@@ -4,7 +4,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-02-24
+    Last Update: 2019-03-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,8 +21,37 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
 
-    ["Recycle", {closeDialog 0; [] call KPLIB_fnc_logistic_openRecycleDialog;}, "STR_KPLIB_LOGISTIC_RECYCLE"] call KPLIB_fnc_logistic_addMenu;
-    ["Resupply", {closeDialog 0; [] call KPLIB_fnc_logistic_openResupplyDialog;}, "STR_KPLIB_LOGISTIC_RESUPPLY"] call KPLIB_fnc_logistic_addMenu;
+    [
+        "Recycle",
+        {
+            if ([player, "Recycle"] call KPLIB_fnc_permission_getPermission) then {
+                closeDialog 0;
+                [] call KPLIB_fnc_logistic_openRecycleDialog;
+            } else {
+                [
+                    ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+                    [localize "STR_KPLIB_HINT_NOPERMISSION"]
+                ] call CBA_fnc_notify;
+            };
+        },
+        "STR_KPLIB_LOGISTIC_RECYCLE"
+    ] call KPLIB_fnc_logistic_addMenu;
+
+    [
+        "Resupply",
+        {
+            if ([player, "Resupply"] call KPLIB_fnc_permission_getPermission) then {
+                closeDialog 0;
+                [] call KPLIB_fnc_logistic_openResupplyDialog;
+            } else {
+                [
+                    ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+                    [localize "STR_KPLIB_HINT_NOPERMISSION"]
+                ] call CBA_fnc_notify;
+            };
+        },
+        "STR_KPLIB_LOGISTIC_RESUPPLY"
+    ] call KPLIB_fnc_logistic_addMenu;
 
     private _vehicles = [];
     {
