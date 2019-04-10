@@ -23,7 +23,7 @@ params [
     ["_permission", "", [""]]
 ];
 
-if !(KPLIB_param_permission) exitWith {
+if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {
     true
 };
 
