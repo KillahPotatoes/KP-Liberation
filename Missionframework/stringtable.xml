@@ -1079,6 +1079,10 @@
             <German>Ungültiger Name.</German>
             <Polish>Nieprawidłowa nazwa.</Polish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_NOCRATEFILLER">
+            <English>The cratefiller is deactivated.</English>
+            <German>Der Kistenfüller ist deaktiviert.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_NOCRATEFOUND">
             <English>Desired resource crate wasn't found in the storage.</English>
             <German>Keine passende Ressourcenkiste im Lager gefunden.</German>

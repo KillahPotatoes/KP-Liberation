@@ -4,7 +4,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-06
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -63,7 +63,7 @@ if (isServer) then {
             } else {
                 [
                     ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
-                    [localize "STR_KPLIB_HINT_NOPERMISSION"]
+                    [[localize "STR_KPLIB_HINT_NOCRATEFILLER", localize "STR_KPLIB_HINT_NOPERMISSION"] select KPLIB_param_cratefiller]
                 ] call CBA_fnc_notify;
             };
         },
