@@ -4,7 +4,7 @@
     File: fn_cratefiller_getConfigPath.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-06
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,12 +21,30 @@ params [
     ["_classname", "", [""]]
 ];
 
-// find configclass
-switch true do
-{
-    case (isClass (configFile >> "CfgMagazines" >> _classname)): {"CfgMagazines"};
-    case (isClass (configFile >> "CfgWeapons" >> _classname)): {"CfgWeapons"};
-    case (isClass (configFile >> "CfgVehicles" >> _classname)): {"CfgVehicles"};
-    case (isClass (configFile >> "CfgGlasses" >> _classname)): {"CfgGlasses"};
-    default {""};
-};
+// Exit if no parameter provided
+if (_className isEqualTo "") exitWith {""};
+
+private _config = KPLIB_cratefiller_cache getVariable _className;
+
+if (isNil "_config") then {
+    // find configclass
+    switch true do
+    {
+        case (isClass (configFile >> "CfgMagazines" >> _classname)): {
+            _config = (configFile >> "CfgMagazines" >> _classname);
+        };
+        case (isClass (configFile >> "CfgWeapons" >> _classname)): {
+            _config = (configFile >> "CfgWeapons" >> _classname);
+        };
+        case (isClass (configFile >> "CfgVehicles" >> _classname)): {
+            _config = (configFile >> "CfgVehicles" >> _classname);
+        };
+        case (isClass (configFile >> "CfgGlasses" >> _classname)): {
+            _config = (configFile >> "CfgGlasses" >> _classname);
+        };
+        default {""};
+    };
+    KPLIB_cratefiller_cache setVariable [_classname, _config];
+}
+
+_config

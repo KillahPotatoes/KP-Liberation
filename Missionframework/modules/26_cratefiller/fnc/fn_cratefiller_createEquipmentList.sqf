@@ -4,7 +4,7 @@
     File: fn_cratefiller_createEquipmentList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-06
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -47,7 +47,7 @@ switch (_catIndex) do {
             _index = _ctrlEquipment lbAdd (_x select 0);
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
     };
 
@@ -58,7 +58,7 @@ switch (_catIndex) do {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlWeapon lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
     };
 
@@ -69,7 +69,7 @@ switch (_catIndex) do {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlWeapon lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
     };
 
@@ -79,7 +79,7 @@ switch (_catIndex) do {
             _index = _ctrlEquipment lbAdd (_x select 0);
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["grenades", []]);
     };
 
@@ -89,7 +89,7 @@ switch (_catIndex) do {
             _index = _ctrlEquipment lbAdd (_x select 0);
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["explosives", []]);
     };
 
@@ -99,7 +99,7 @@ switch (_catIndex) do {
             _index = _ctrlEquipment lbAdd (_x select 0);
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["items", []]);
     };
 
@@ -109,7 +109,7 @@ switch (_catIndex) do {
             _index = _ctrlEquipment lbAdd (_x select 0);
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (KPLIB_cratefiller_data getVariable ["backpacks", []]);
     };
 

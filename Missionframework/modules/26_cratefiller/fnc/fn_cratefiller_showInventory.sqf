@@ -4,7 +4,7 @@
     File: fn_cratefiller_showInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-07
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -43,7 +43,7 @@ private _inventory = [] call KPLIB_fnc_cratefiller_getInventory;
 {
     _index = _ctrlInventory lbAdd (format ["%1x %2", str (_x select 2), _x select 0]);
     _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-    _ctrlInventory lbSetPicture [_index, getText (configFile >> _config >> (_x select 1) >> "picture")];
+    _ctrlInventory lbSetPicture [_index, getText (_config >> "picture")];
 } forEach _inventory;
 
 private _load = 0;
@@ -57,20 +57,20 @@ if (isNull _storage) exitWith {
 {
     _type = (_x select 1);
     _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-    if (_config isEqualTo "CfgWeapons") then {
-        _itemMass = getNumber (configfile >> _config >> _type >> "WeaponSlotsInfo" >> "mass");
+    if (isClass (configFile >> "CfgWeapons" >> _type)) then {
+        _itemMass = getNumber (_config >> "WeaponSlotsInfo" >> "mass");
         if (_itemMass isEqualTo 0) then {
-            _itemMass = getNumber (configfile >> _config >> _type >> "ItemInfo" >> "mass");
+            _itemMass = getNumber (_config >> "ItemInfo" >> "mass");
         };
     } else {
-        _itemMass = getNumber (configFile >> _config >> _type >> "mass");
+        _itemMass = getNumber (_config >> "mass");
     };
     _load = _load + (_itemMass * (_x select 2));
 } forEach _inventory;
 
 _type = typeOf _storage;
 _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-private _maxLoad = getNumber (configFile >> _config >> _type >> "maximumLoad");
+private _maxLoad = getNumber (_config >> "maximumLoad");
 private _loadFactor = _load / _maxLoad;
 
 _ctlrProgress progressSetPosition _loadFactor;

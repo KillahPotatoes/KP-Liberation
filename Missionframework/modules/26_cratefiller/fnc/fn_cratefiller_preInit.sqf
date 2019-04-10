@@ -4,7 +4,7 @@
     File: fn_example_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-04-07
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,6 +27,8 @@ if (isServer) then {
     KPLIB_cratefiller_data = true call CBA_fnc_createNamespace;
     publicVariable "KPLIB_cratefiller_data";
 
+    KPLIB_cratefiller_cache = [] call CBA_fnc_createNamespace;
+    publicVariable "KPLIB_cratefiller_cache";
 };
 
 // Process CBA Settings
