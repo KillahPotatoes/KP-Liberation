@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-01-05
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -68,7 +68,4 @@ class permission {
 
     // Setup of actions available to players
     class permission_setupPlayerActions {};
-
-    // Receive client variables and send them to all clients
-    class permission_syncClients {};
 };

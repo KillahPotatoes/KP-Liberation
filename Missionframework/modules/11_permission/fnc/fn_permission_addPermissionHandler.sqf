@@ -4,7 +4,7 @@
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2018-12-29
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -37,14 +37,18 @@ params [
 
 _permission = toLower _permission;
 
-KPLIB_permission_types pushBackUnique _permission;
+private _types = KPLIB_permission_data getVariable ["permissionTypes", []];
+_types pushBackUnique _permission;
 
-private _index = KPLIB_permission_groups findIf {(_x select 0) isEqualTo _group};
+private _groups = KPLIB_permission_data getVariable ["permissionGroups", []];
+private _index = _groups findIf {
+    (_x select 0) isEqualTo _group
+};
 
 if (_index isEqualTo -1) then {
-    KPLIB_permission_groups pushBack [_group, _groupString, [_permission]];
+    _groups pushBack [_group, _groupString, [_permission]];
 } else {
-    ((KPLIB_permission_groups select _index) select 2) pushBackUnique _permission;
+    ((_groups select _index) select 2) pushBackUnique _permission;
 };
 
 // Read the Variable
@@ -61,6 +65,8 @@ KPLIB_permission_data setVariable [_permission, _data, true];
 // Emit permissions added event
 ["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
 
-[[], [], KPLIB_permission_types, KPLIB_permission_groups] call KPLIB_fnc_permission_syncClients;
+// Set data in namespace
+KPLIB_permission_data setVariable ["permissionTypes", _types, true];
+KPLIB_permission_data setVariable ["permissionGroups", _groups, true];
 
 true

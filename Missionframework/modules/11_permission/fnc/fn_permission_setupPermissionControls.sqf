@@ -5,7 +5,7 @@
     File: fn_permission_setupPermissionControls.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2019-01-05
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,11 +32,14 @@ private _index = 0;
 private _permission = "";
 private _playerPermissions = [];
 
+private _list = KPLIB_permission_data getVariable ["permissionList", []];
+private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
+
 switch (_playerUID) do {
     case "default": {
         {
             _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
-            _defaultPermission = KPLIB_permission_default select (KPLIB_permission_default findIf {
+            _defaultPermission = _default select (_default findIf {
                 (_x select 0) isEqualTo _permission
             }) select 1;
 
@@ -51,16 +54,20 @@ switch (_playerUID) do {
         } forEach KPLIB_permission_tempControls;
     };
     default {
-        _index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (_playerUID)};
+        _index = _list findIf {
+            (_x select 0) isEqualTo (_playerUID)
+        };
         if (_index != -1) then {
-            _playerPermissions = (KPLIB_permission_list select _index) select 2;
+            _playerPermissions = (_list select _index) select 2;
         };
         private _permissionState = false;
         {
             _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
-            _index = (_playerPermissions findIf {(_x select 0) isEqualTo _permission});
+            _index = (_playerPermissions findIf {
+                (_x select 0) isEqualTo _permission
+            });
             if (_index isEqualTo -1) then {
-                _permissionState = KPLIB_permission_default select (KPLIB_permission_default findIf {
+                _permissionState = _default select (_default findIf {
                     (_x select 0) isEqualTo _permission
                 }) select 1;
             } else {

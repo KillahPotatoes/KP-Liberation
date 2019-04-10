@@ -4,7 +4,7 @@
     File: fn_permission_checkVehiclePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-21
-    Last Update: 2019-01-05
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -33,17 +33,23 @@ private _data = [];
 private _permission = "";
 private _classNames = [];
 
-if (_role isEqualTo "cargo" || typeOf _vehicle isEqualTo KPLIB_preset_potatoF || typeOf _vehicle isEqualTo KPLIB_preset_addHeliF || typeOf _vehicle isEqualTo KPLIB_preset_addBoatF) exitWith {
+if (
+    _role isEqualTo "cargo" ||
+    typeOf _vehicle isEqualTo KPLIB_preset_potatoF ||
+    typeOf _vehicle isEqualTo KPLIB_preset_addHeliF ||
+    typeOf _vehicle isEqualTo KPLIB_preset_addBoatF
+) exitWith {
     true
 };
 
 // Check the given vehicle category
+private _types = KPLIB_permission_data getVariable ["permissionTypes", []];
 {
     _data = KPLIB_permission_data getVariable [toLower _x, []];
     if ((typeOf vehicle _unit) in (_data select 2)) then {
         _permission = _x;
     };
-} forEach KPLIB_permission_types;
+} forEach _types;
 
 // Exit if no permission is found
 if (_permission isEqualTo "") exitWith {

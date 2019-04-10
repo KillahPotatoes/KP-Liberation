@@ -4,7 +4,7 @@
     File: fn_permission_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-01-05
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,11 +41,6 @@ if (isServer) then {
 /*
     ----- Module Globals -----
 */
-
-KPLIB_permission_list = [];
-KPLIB_permission_types = [];
-KPLIB_permission_default = [];
-KPLIB_permission_groups = [];
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initialized", diag_tickTime];};
 

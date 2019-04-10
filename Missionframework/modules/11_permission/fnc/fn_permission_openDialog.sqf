@@ -6,7 +6,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2019-03-16
+    Last Update: 2019-04-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,10 +40,12 @@ _ctrlPlayerList lbSetData [_index, "placeholder"];
 _ctrlPlayerList lbSetColor [_index, KPLIB_COLOR_ORANGE];
 
 // Checksum to add only 1 entry for each player
+private _list = KPLIB_permission_data getVariable ["permissionList", []];
+private _groups = KPLIB_permission_data getVariable ["permissionGroups", []];
 private _playerList = [];
 {
     _playerList pushBack [_x select 1, _x select 0];
-} forEach KPLIB_permission_list;
+} forEach _list;
 
 _playerList sort true;
 
@@ -53,7 +55,9 @@ private _player = "";
     _index = _ctrlPlayerList lbAdd (name _x);
     _ctrlPlayerList lbSetData [_index, getPlayerUID _x];
     _player = _x;
-    _playerList deleteAt (_playerList findIf {((_x select 1) isEqualTo (getPlayerUID _player))});
+    _playerList deleteAt (_playerList findIf {
+        ((_x select 1) isEqualTo (getPlayerUID _player))
+    });
 } forEach (allPlayers - (entities "HeadlessClient_F"));
 
 _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_OFFLINE");
@@ -105,6 +109,6 @@ KPLIB_permission_tempControls = [];
         KPLIB_permission_tempControls pushBack _tempCtrl;
         _i = _i + 1;
     } forEach (_x select 2);
-} forEach KPLIB_permission_groups;
+} forEach _groups;
 
 true
