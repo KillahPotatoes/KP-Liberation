@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_getConfigPath
 
     File: fn_cratefiller_getConfigPath.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,7 +25,8 @@ params [
 // Exit if no parameter provided
 if (_className isEqualTo "") exitWith {""};
 
-private _config = KPLIB_cratefiller_cache getVariable _className;
+// Variables
+private _config = CCGVAR(_className, []);
 
 if (isNil "_config") then {
     // find configclass
@@ -44,7 +46,7 @@ if (isNil "_config") then {
         };
         default {""};
     };
-    KPLIB_cratefiller_cache setVariable [_classname, _config];
+    CCSVAR(_classname, _config);
 }
 
 _config

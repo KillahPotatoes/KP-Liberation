@@ -4,7 +4,7 @@
     File: fn_cratefiller_getNearStorages.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -24,7 +24,8 @@ private _ctrlStorage = _dialog displayCtrl 75802;
 // Clear the lists
 lbClear _ctrlStorage;
 
-// Get near objects and check for storage capacity
+// Variables
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _type = objNull;
 private _config = "";
 private _number= 0;
@@ -41,7 +42,7 @@ private _blacklist = [
     KPLIB_logistic_building
 ];
 
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+// Get near objects and check for storage capacity
 {
     _type = typeOf _x;
     if (_type isEqualTo "GroundWeaponHolder") exitWith {};

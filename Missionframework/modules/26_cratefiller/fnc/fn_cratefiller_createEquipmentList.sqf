@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_createEquipmentList
 
     File: fn_cratefiller_createEquipmentList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -36,6 +37,7 @@ private _catIndex = lbCurSel _ctrlCat;
 // Check for empty selection
 if (_catIndex isEqualTo -1) exitWith {};
 
+// Variables
 private _index = 0;
 private _config = "";
 
@@ -48,7 +50,7 @@ switch (_catIndex) do {
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
+        } forEach (CGVAR("weapons", []));
     };
 
     // Magazines
@@ -59,7 +61,7 @@ switch (_catIndex) do {
             _ctrlWeapon lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
+        } forEach (CGVAR("weapons", []));
     };
 
     // Attachments
@@ -70,7 +72,7 @@ switch (_catIndex) do {
             _ctrlWeapon lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["weapons", []]);
+        } forEach (CGVAR("weapons", []));
     };
 
     // Grenades
@@ -80,7 +82,7 @@ switch (_catIndex) do {
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["grenades", []]);
+        } forEach (CGVAR("grenades", []));
     };
 
     // Explosives
@@ -90,7 +92,7 @@ switch (_catIndex) do {
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["explosives", []]);
+        } forEach (CGVAR("explosives", []));
     };
 
     // Items
@@ -100,7 +102,7 @@ switch (_catIndex) do {
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["items", []]);
+        } forEach (CGVAR("items", []));
     };
 
     // Backpacks
@@ -110,7 +112,7 @@ switch (_catIndex) do {
             _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
-        } forEach (KPLIB_cratefiller_data getVariable ["backpacks", []]);
+        } forEach (CGVAR("backpacks", []));
     };
 
 };

@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_presets
 
     File: fn_cratefiller_presets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-07
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +18,7 @@
         Function reached the end [BOOL]
 */
 
-// Define variables
+// Variables
 private _weapons = [];
 private _grenades = [];
 private _explosives = [];
@@ -54,10 +55,10 @@ private _specialItems = [];
 
 _items append _specialItems;
 
-KPLIB_cratefiller_data setVariable ["weapons", [_weapons] call KPLIB_fnc_cratefiller_sortList, true];
-KPLIB_cratefiller_data setVariable ["grenades", [_grenades] call KPLIB_fnc_cratefiller_sortList, true];
-KPLIB_cratefiller_data setVariable ["explosives", [_explosives] call KPLIB_fnc_cratefiller_sortList, true];
-KPLIB_cratefiller_data setVariable ["items", [_items] call KPLIB_fnc_cratefiller_sortList, true];
-KPLIB_cratefiller_data setVariable ["backpacks", [_backpacks] call KPLIB_fnc_cratefiller_sortList, true];
+CSVAR("weapons", [_weapons] call KPLIB_fnc_cratefiller_sortList);
+CSVAR("grenades", [_grenades] call KPLIB_fnc_cratefiller_sortList);
+CSVAR("explosives", [_explosives] call KPLIB_fnc_cratefiller_sortList);
+CSVAR("items", [_items] call KPLIB_fnc_cratefiller_sortList);
+CSVAR("backpacks", [_backpacks] call KPLIB_fnc_cratefiller_sortList);
 
 true

@@ -4,7 +4,7 @@
     File: fn_cratefiller_showInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,6 +28,7 @@ if (isNull _dialog) exitWith {};
 // Reset variables
 lbClear _ctrlInventory;
 
+// Variables
 private _config = "";
 private _type = "";
 private _itemMass = 0;
