@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,8 +29,14 @@ class permission {
     // Ejects the player and creates a hint
     class permission_ejectPlayer {};
 
+    // Export the permission list
+    class permission_export {};
+
     // Checks the given permission and returns the result
     class permission_getPermission {};
+
+    // Import the permission list
+    class permission_import {};
 
     // Initializes the default permissions
     class permission_initDefault {};
