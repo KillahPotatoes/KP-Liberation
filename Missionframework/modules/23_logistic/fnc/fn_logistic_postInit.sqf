@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_postInit
 
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -89,7 +90,7 @@ if (isServer) then {
         "jets",
         "logistic"
     ];
-    KPLIB_logistic_data setVariable ["Vehicles", _vehicles, true]
+    LSVAR("Vehicles", _vehicles);
 };
 
 if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initialized", diag_tickTime];};

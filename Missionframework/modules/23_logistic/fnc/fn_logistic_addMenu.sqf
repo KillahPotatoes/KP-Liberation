@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_addMenu
 
     File: fn_logistic_addMenu.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-17
-    Last Update: 2019-04-03
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -27,10 +28,10 @@ params [
 ];
 
 // Read the registered menus
-private _menus = KPLIB_logistic_data getVariable ["menus", []];
+private _menus = LGVAR("menus", []);
 
 // Append the new menu and save the variable
 _menus pushBack [_menu, _code, _string];
-KPLIB_logistic_data setVariable ["menus", _menus, true];
+LSVAR("menus", _menus);
 
 true

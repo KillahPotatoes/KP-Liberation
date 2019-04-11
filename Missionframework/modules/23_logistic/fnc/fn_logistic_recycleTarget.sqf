@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_recycleTarget
 
     File: fn_logistic_recycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-31
-    Last Update: 2019-04-04
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -36,7 +37,9 @@ private _fuelValue = parseNumber (ctrlText _ctrlFuelValue);
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
 private _type = typeOf _vehicle;
-private _vehicles = KPLIB_logistic_data getVariable ["Vehicles", []];
+
+// Variables
+private _vehicles = LGVAR("Vehicles", []);
 private _vehicleIndex = _vehicles findIf {_x select 0 isEqualTo _type};
 private _damage = 1;
 private _ammo = 1;

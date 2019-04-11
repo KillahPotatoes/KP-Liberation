@@ -4,7 +4,7 @@
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-04-03
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -29,9 +29,6 @@ private _ctrlSliderValue = _dialog displayCtrl 68745;
 private _ctrlTotalCosts = _dialog displayCtrl 68746;
 private _resupplyButton = _dialog displayCtrl 68747;
 
-private _cfgVeh = configFile >> "CfgVehicles";
-private _cfgMag = configFile >> "CfgMagazines";
-
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
 private _vehicleId = _ctrlVehicleList lbData _index;
@@ -54,13 +51,15 @@ private _type = typeOf _vehicle;
 // Fill the controls
 _index = lbCurSel _ctrlCargo;
 
+// Variables
+private _cfgVeh = configFile >> "CfgVehicles";
+private _cfgMag = configFile >> "CfgMagazines";
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
 private _ammoMax = 0;
 private _ammoState = 0;
 private _fuelMax = 0;
 private _fuelState = 0;
-
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
 
 if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {

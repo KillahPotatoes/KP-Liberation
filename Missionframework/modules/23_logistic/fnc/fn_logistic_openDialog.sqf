@@ -1,11 +1,12 @@
 #include "..\..\..\KPGUI\KPGUI_defines.hpp"
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_openDialog
 
     File: fn_logistic_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-03
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,7 +31,7 @@ disableSerialization;
 private _dialog = findDisplay 7580231;
 
 // Read the registered menus
-private _menus = KPLIB_logistic_data getVariable ["menus", []];
+private _menus = LGVAR("menus", []);
 
 // Prepare the dynamic controls
 private _tempCtrl = controlNull;
