@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_initDefault
 
     File: fn_permission_initDefault.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,7 +27,9 @@ params [
 // Check for empty string
 if (_permission isEqualTo "") exitWith {};
 
-private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
+// Variables
+private _default = PGVAR("permissionDefault", []);
+
 _permission = toLower _permission;
 
 // Check if the default permission is already set
@@ -39,6 +42,6 @@ if ((_default findIf {(_x select 0) isEqualTo (_permission)}) isEqualTo -1) then
 };
 
 // Set data in namespace
-KPLIB_permission_data setVariable ["permissionDefault", _default, true];
+PSVAR("permissionDefault", _default);
 
 true

@@ -14,3 +14,8 @@
 #define KPLIB_COLOR_GREEN  [0, 0.8, 0, 1]
 #define KPLIB_COLOR_WHITE  [1, 1, 1, 1]
 #define KPLIB_COLOR_ORANGE [1, 0.5, 0, 0.8]
+
+// Permission get var
+#define PGVAR(var, defVal)      (KPLIB_permission_data getVariable [var, defVal])
+// Permission set var
+#define PSVAR(var, val)         (KPLIB_permission_data setVariable [var, val, true])

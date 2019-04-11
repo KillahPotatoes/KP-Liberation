@@ -6,7 +6,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -39,10 +39,12 @@ _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_ONLINE");
 _ctrlPlayerList lbSetData [_index, "placeholder"];
 _ctrlPlayerList lbSetColor [_index, KPLIB_COLOR_ORANGE];
 
-// Checksum to add only 1 entry for each player
-private _list = KPLIB_permission_data getVariable ["permissionList", []];
-private _groups = KPLIB_permission_data getVariable ["permissionGroups", []];
+// Variables
+private _list = PGVAR("permissionList", []);
+private _groups = PGVAR("permissionGroups", []);
 private _playerList = [];
+
+// Checksum to add only 1 entry for each player
 {
     _playerList pushBack [_x select 1, _x select 0];
 } forEach _list;
@@ -92,7 +94,7 @@ KPLIB_permission_tempControls = [];
     _i = _i + 1;
 
     {
-        _data = KPLIB_permission_data getVariable [toLower _x, []];
+        _data = PGVAR(toLower _x, []);
         _tempCtrl = _dialog ctrlCreate ["KPGUI_PRE_ActiveText", 68741 + _i];
         _tempCtrl ctrlSetPosition [
             KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2),

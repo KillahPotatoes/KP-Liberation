@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_addPermissionHandler
 
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,12 +36,14 @@ params [
     ["_vehCheck", [], [[]]]
 ];
 
-_permission = toLower _permission;
+// Variables
+private _types = PGVAR("permissionTypes", []);
+private _groups = PGVAR("permissionGroups", []);
 
-private _types = KPLIB_permission_data getVariable ["permissionTypes", []];
+_permission = toLower _permission;
 _types pushBackUnique _permission;
 
-private _groups = KPLIB_permission_data getVariable ["permissionGroups", []];
+
 private _index = _groups findIf {
     (_x select 0) isEqualTo _group
 };
@@ -53,20 +56,20 @@ if (_index isEqualTo -1) then {
 
 // Read the Variable
 private _data = [[_code], _string, _vehCheck];
-(_data select 0) append ((KPLIB_permission_data getVariable [_permission, []]) select 0);
+(_data select 0) append ((PGVAR(_permission, []) select 0);
 
 if !(_string isEqualTo "") then {
     _data set [1, _string];
 };
 
 // Write the Variable
-KPLIB_permission_data setVariable [_permission, _data, true];
+PSVAR(_permission, _data);
 
 // Emit permissions added event
 ["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
 
 // Set data in namespace
-KPLIB_permission_data setVariable ["permissionTypes", _types, true];
-KPLIB_permission_data setVariable ["permissionGroups", _groups, true];
+PSVAR("permissionTypes", _types);
+PSVAR("permissionGroups", _groups);
 
 true

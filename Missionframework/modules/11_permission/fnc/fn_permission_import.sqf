@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_import
 
@@ -22,6 +23,6 @@ params [
     ["_list", [], [[]]]
 ]
 
-KPLIB_permission_data setVariable ["permissionList", _list];
+PSVAR("permissionList", _list);
 
 true

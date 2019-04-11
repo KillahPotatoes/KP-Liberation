@@ -5,7 +5,7 @@
     File: fn_permission_changePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,15 +34,18 @@ private _ctrlPlayerList = _dialog displayCtrl 68740;
     "_state"
 ];
 
-// Get the listbox data
-private _index = lbCurSel _ctrlPlayerList;
-private _playerUID = _ctrlPlayerList lbData _index;
+// Variables
+private _list =  PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 private _playerArray = [];
 private _playerPermissions = [];
 private _permissionArray = [];
+
 _permission = toLower _permission;
-private _list = KPLIB_permission_data getVariable ["permissionList", []];
-private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
+
+// Get the listbox data
+private _index = lbCurSel _ctrlPlayerList;
+private _playerUID = _ctrlPlayerList lbData _index;
 
 switch (_playerUID) do {
     case "default": {
@@ -79,7 +82,7 @@ _control setVariable ["Data", [_permission, !_state]];
 _control ctrlSetTextColor ([KPLIB_COLOR_GREEN, KPLIB_COLOR_RED] select _state);
 
 // Set data in namespace
-KPLIB_permission_data setVariable ["permissionList", _list, true];
-KPLIB_permission_data setVariable ["permissionDefault", _default, true];
+PSVAR("permissionList", _list);
+PSVAR("permissionDefault", _default);
 
 true

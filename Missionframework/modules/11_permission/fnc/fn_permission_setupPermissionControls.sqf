@@ -5,7 +5,7 @@
     File: fn_permission_setupPermissionControls.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,15 +26,15 @@ private _ctrlPlayerList = _dialog displayCtrl 68740;
 private _index = lbCurSel _ctrlPlayerList;
 private _playerUID = _ctrlPlayerList lbData _index;
 
-// Check the listbox data and execute code dependent on listbox selection
+// Variables
+private _list = PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 private _defaultPermission = false;
 private _index = 0;
 private _permission = "";
 private _playerPermissions = [];
 
-private _list = KPLIB_permission_data getVariable ["permissionList", []];
-private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
-
+// Check the listbox data and execute code dependent on listbox selection
 switch (_playerUID) do {
     case "default": {
         {

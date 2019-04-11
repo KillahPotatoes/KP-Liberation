@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_getPermission
 
     File: fn_permission_getPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-10
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,9 +28,11 @@ if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {
     true
 };
 
-private _list = KPLIB_permission_data getVariable ["permissionList", []];
-private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
+// Variables
+private _list =  PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 private _playerPermissions = [];
+
 _permission = toLower _permission;
 
 // Search for the player permissions

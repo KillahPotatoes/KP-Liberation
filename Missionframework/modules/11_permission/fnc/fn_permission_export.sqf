@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_export
 
@@ -18,4 +19,4 @@
         Permission list [ARRAY]
 */
 
-KPLIB_permission_data getVariable ["permissionList", []]
+PGVAR("permissionList", [])

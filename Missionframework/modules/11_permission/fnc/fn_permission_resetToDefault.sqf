@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_resetToDefault
 
     File: fn_permission_resetToDefault.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-23
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,8 +18,9 @@
         Function reached the end [BOOL]
 */
 
-private _list = KPLIB_permission_data getVariable ["permissionList", []];
-private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
+// Variables
+private _list = PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 
 {
     _x set [2, _default];
@@ -27,7 +29,7 @@ private _default = KPLIB_permission_data getVariable ["permissionDefault", []];
 closeDialog 0;
 
 // Set data in namespace
-KPLIB_permission_data setVariable ["permissionList", _list, true];
+PSVAR("permissionList", _list);
 
 [{[] call KPLIB_fnc_permission_openDialog;}, [], 0.1] call CBA_fnc_waitAndExecute;
 

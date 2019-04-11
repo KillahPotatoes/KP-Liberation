@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_loadData
 
     File: fn_permission_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2019-04-10
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,8 +29,8 @@ if (_moduleData isEqualTo []) then {
 } else {
     // Otherwise start applying the saved data
     if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Permission module data found, applying data...";};
-    KPLIB_permission_data setVariable ["permissionList", _moduleData select 0, true];
-    KPLIB_permission_data setVariable ["permissionDefault", _moduleData select 1, true];
+    PSVAR("permissionList", _moduleData select 0);
+    PSVAR("permissionDefault", _moduleData select 1);
 };
 
 true
