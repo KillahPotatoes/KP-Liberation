@@ -5,7 +5,7 @@
     File: fn_cratefiller_getConfigPath.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-11
+    Last Update: 2019-04-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,9 +26,9 @@ params [
 if (_className isEqualTo "") exitWith {""};
 
 // Variables
-private _config = CCGVAR(_className, []);
+private _config = CCGVAR(_className, configNull);
 
-if (isNil "_config") then {
+if (isNull _config) then {
     // find configclass
     switch true do
     {
@@ -47,6 +47,6 @@ if (isNil "_config") then {
         default {""};
     };
     CCSVAR(_classname, _config);
-}
+};
 
 _config
