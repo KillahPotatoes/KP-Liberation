@@ -4,7 +4,7 @@
     File: KPLIB_permission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-04-10
+    Last Update: 2019-04-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,6 +34,14 @@ class KPLIB_permission {
             w = KP_GETW(KP_WIDTH_VAL_C,2);
             h = KP_GETH(KP_HEIGHT_VAL_C,1);
             onLBSelChanged = "[] call KPLIB_fnc_permission_setupPermissionControls";
+        };
+
+        class KPLIB_Permissions: KPGUI_PRE_ControlsGroup {
+            idc = 68741;
+            x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2);
+            y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,1);
+            w = KP_GETW(KP_WIDTH_VAL_C,2);
+            h = KP_GETH(KP_HEIGHT_VAL_C,1);
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {};

@@ -3,7 +3,7 @@
     File: script_component.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-11
-    Last Update: 2019-04-11
+    Last Update: 2019-04-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -17,6 +17,6 @@
 #define CSVAR(var, val)         (KPLIB_cratefiller_data setVariable [var, val, true])
 
 // Cratefiller cache get var
-#define CCGVAR(var, defVal)      (KPLIB_cratefiller_cache getVariable [var, defVal])
+#define CCGVAR(var, defVal)     (KPLIB_cratefiller_cache getVariable [var, defVal])
 // Cratefiller cache set var
-#define CCSVAR(var, val)         (KPLIB_cratefiller_cache setVariable [var, val, true])
+#define CCSVAR(var, val)        (KPLIB_cratefiller_cache setVariable [var, val, true])
