@@ -23,7 +23,7 @@ params [
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlEquipment = _dialog displayCtrl 68744;
+private _ctrlEquipment = _dialog displayCtrl 68745;
 
 // Read controls
 private _index = lbCurSel _ctrlEquipment;

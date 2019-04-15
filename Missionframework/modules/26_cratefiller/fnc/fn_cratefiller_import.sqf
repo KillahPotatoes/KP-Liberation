@@ -19,7 +19,7 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlImport = _dialog displayCtrl 68746;
+private _ctrlImport = _dialog displayCtrl 68747;
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;

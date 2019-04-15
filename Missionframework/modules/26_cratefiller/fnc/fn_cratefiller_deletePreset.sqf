@@ -19,7 +19,7 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlImport = _dialog displayCtrl 68746;
+private _ctrlImport = _dialog displayCtrl 68747;
 
 // Read the import name
 private _index = lbCurSel _ctrlImport;

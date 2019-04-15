@@ -954,6 +954,10 @@
             <German>Wähle eine Kategorie aus, von der du Gegenstände verladen willst.</German>
             <Polish>Wybierz kategorie z której chcesz pobrać przedmioty.</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CLEARSEARCH_TT">
+            <English>Clears the searchbox.</English>
+            <German>Suche zurücksetzen.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_DELETE_TT">
             <English>Deletes the selected preset.</English>
             <German>Löscht das ausgewählte Ausrüstungsset.</German>
@@ -1018,6 +1022,10 @@
             <English>Search for new inventories.</English>
             <German>Nach neuem Laderaum suchen.</German>
             <Polish>Szukaj nowych ekwipunków.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_SEARCH_TT">
+            <English>Search for a specified weapon.</English>
+            <German>Suche nach einer bestimmten Waffe.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT">
             <English>Equipment</English>

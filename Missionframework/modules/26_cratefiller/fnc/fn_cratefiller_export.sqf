@@ -19,7 +19,7 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlExport = _dialog displayCtrl 68745;
+private _ctrlExport = _dialog displayCtrl 68746;
 
 // Read the presets from profileNamespace
 private _preset = profileNamespace getVariable ["KPLIB_cratefiller_preset", []];

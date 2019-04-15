@@ -25,9 +25,13 @@ disableSerialization;
 private _dialog = findDisplay 758026;
 private _ctrlCat = _dialog displayCtrl 68741;
 private _ctrlWeapon = _dialog displayCtrl 68742;
+private _ctrlSearch = _dialog displayCtrl 68743;
+private _ctrlClearSearch = _dialog displayCtrl 68744;
 
 // Hide controls
 _ctrlWeapon ctrlShow false;
+_ctrlSearch ctrlShow false;
+_ctrlClearSearch ctrlShow false;
 
 // Reset variables
 _ctrlCat lbAdd localize "STR_KPLIB_DIALOG_CRATEFILLER_LISTWEAPONS";

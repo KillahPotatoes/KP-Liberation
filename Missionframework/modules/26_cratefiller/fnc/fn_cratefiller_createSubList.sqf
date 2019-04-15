@@ -21,7 +21,7 @@
 private _dialog = findDisplay 758026;
 private _ctrlCat = _dialog displayCtrl 68741;
 private _ctrlWeapon = _dialog displayCtrl 68742;
-private _ctrlEquipment = _dialog displayCtrl 68744;
+private _ctrlEquipment = _dialog displayCtrl 68745;
 
 // Clear the lists
 lbClear _ctrlEquipment;

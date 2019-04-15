@@ -22,7 +22,9 @@
 private _dialog = findDisplay 758026;
 private _ctrlCat = _dialog displayCtrl 68741;
 private _ctrlWeapon = _dialog displayCtrl 68742;
-private _ctrlEquipment = _dialog displayCtrl 68744;
+private _ctrlSearch = _dialog displayCtrl 68743;
+private _ctrlClearSearch = _dialog displayCtrl 68744;
+private _ctrlEquipment = _dialog displayCtrl 68745;
 
 // Clear the lists
 lbClear _ctrlWeapon;
@@ -30,6 +32,7 @@ lbClear _ctrlEquipment;
 
 // Hide controls
 _ctrlWeapon ctrlShow false;
+_ctrlSearch ctrlShow false;
 
 // Read controls
 private _catIndex = lbCurSel _ctrlCat;
@@ -56,6 +59,8 @@ switch (_catIndex) do {
     // Magazines
     case 1 : {
         _ctrlWeapon ctrlShow true;
+        _ctrlSearch ctrlShow true;
+        _ctrlClearSearch ctrlShow true;
         {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];
@@ -67,6 +72,8 @@ switch (_catIndex) do {
     // Attachments
     case 2 : {
         _ctrlWeapon ctrlShow true;
+        _ctrlSearch ctrlShow true;
+        _ctrlClearSearch ctrlShow true;
         {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];

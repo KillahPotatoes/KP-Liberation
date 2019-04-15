@@ -19,8 +19,8 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlInventory = _dialog displayCtrl 68747;
-private _ctlrProgress = _dialog displayCtrl 68748;
+private _ctrlInventory = _dialog displayCtrl 68748;
+private _ctlrProgress = _dialog displayCtrl 68749;
 
 // Check if dialog is open
 if (isNull _dialog) exitWith {};
