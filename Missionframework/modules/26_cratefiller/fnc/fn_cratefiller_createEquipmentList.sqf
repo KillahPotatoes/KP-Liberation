@@ -5,7 +5,7 @@
     File: fn_cratefiller_createEquipmentList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-11
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -20,9 +20,9 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlCat = _dialog displayCtrl 75810;
-private _ctrlWeapon = _dialog displayCtrl 75811;
-private _ctrlEquipment = _dialog displayCtrl 75812;
+private _ctrlCat = _dialog displayCtrl 68741;
+private _ctrlWeapon = _dialog displayCtrl 68742;
+private _ctrlEquipment = _dialog displayCtrl 68744;
 
 // Clear the lists
 lbClear _ctrlWeapon;

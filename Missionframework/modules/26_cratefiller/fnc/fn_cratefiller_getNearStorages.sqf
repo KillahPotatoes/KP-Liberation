@@ -4,7 +4,7 @@
     File: fn_cratefiller_getNearStorages.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-11
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,7 +19,7 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlStorage = _dialog displayCtrl 75802;
+private _ctrlStorage = _dialog displayCtrl 68740;
 
 // Clear the lists
 lbClear _ctrlStorage;

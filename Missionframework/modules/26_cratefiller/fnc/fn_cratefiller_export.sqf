@@ -4,7 +4,7 @@
     File: fn_cratefiller_export.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-07
-    Last Update: 2019-04-07
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,7 +19,7 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _ctrlExport = _dialog displayCtrl 75820;
+private _ctrlExport = _dialog displayCtrl 68745;
 
 // Read the presets from profileNamespace
 private _preset = profileNamespace getVariable ["KPLIB_cratefiller_preset", []];
