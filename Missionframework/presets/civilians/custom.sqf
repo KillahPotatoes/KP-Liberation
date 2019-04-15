@@ -12,7 +12,7 @@
         Custom civilian preset file for individual adjustments.
 */
 
-// Name of the used/created army in this preset
+// Name of this preset
 KPLIB_PRST_SETVAR("nameC", "Custom Civilians");
 
 /*------------------------------------------------------------
