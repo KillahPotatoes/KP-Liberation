@@ -58,7 +58,7 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
 
     diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
 
-    diag_log "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION START ---";
+    diag_log "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
     diag_log format ["[KP LIBERATION] [MISSIONSTART] Missionfile: %1", (localize "STR_KPLIB_TITLE")];
     diag_log format ["[KP LIBERATION] [MISSIONSTART] World Name: %1", worldName];
     diag_log format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_KPLIB_VERSION")];
@@ -69,7 +69,6 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
     diag_log format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KPLIB_preset_NameC];
     diag_log format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KPLIB_param_presetArsenal];
     diag_log format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KPLIB_ace_enabled];
-    diag_log "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION END ---";
 };
 
 true
