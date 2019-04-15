@@ -43,7 +43,7 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
         ((count ([] call CBA_fnc_players)) > 0)
     };
 
-    diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];
+    diag_log text format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];
 
     // Get array of variables to check
     private _toValidate = allVariables KPLIB_validationNamespace;
@@ -56,19 +56,19 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
         "KPLIB_configError" call BIS_fnc_endMissionServer;
     };
 
-    diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
+    diag_log text format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
 
-    diag_log "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Name: %1", (localize "STR_KPLIB_TITLE")];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] World: %1", worldName];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_KPLIB_VERSION")];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Author: %1", [missionConfigFile] call BIS_fnc_overviewAuthor];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Blufor: %1", KPLIB_preset_nameF];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Opfor: %1", KPLIB_preset_nameE];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KPLIB_preset_nameR];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KPLIB_preset_nameC];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KPLIB_param_presetArsenal];
-    diag_log format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KPLIB_ace_enabled];
+    diag_log text "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Name: %1", (localize "STR_KPLIB_TITLE")];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] World: %1", worldName];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_KPLIB_VERSION")];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Author: %1", [missionConfigFile] call BIS_fnc_overviewAuthor];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Blufor: %1", KPLIB_preset_nameF];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Opfor: %1", KPLIB_preset_nameE];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KPLIB_preset_nameR];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KPLIB_preset_nameC];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KPLIB_param_presetArsenal];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KPLIB_ace_enabled];
 };
 
 true
