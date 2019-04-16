@@ -40,6 +40,9 @@ private _unit = _grpTemp createUnit [_classname, _spawnPos, [], 10, _addition];
 // Let unit join the "correct side group"
 [_unit] joinSilent _grp;
 
+// Remove temp group
+_grpTemp = grpNull;
+
 ["KPLIB_unit_created", [_unit]] call CBA_fnc_globalEvent;
 
 _unit
