@@ -41,7 +41,7 @@ private _unit = _grpTemp createUnit [_classname, _spawnPos, [], 10, _addition];
 [_unit] joinSilent _grp;
 
 // Remove temp group
-_grpTemp = grpNull;
+deleteGroup _grpTemp;
 
 ["KPLIB_unit_created", [_unit]] call CBA_fnc_globalEvent;
 
