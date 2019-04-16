@@ -21,8 +21,8 @@ to show if it's already finished and already part of the pull request.
 -->
 
 ### Successfully tested on:
-- [ ] Local MP Vanilla
-- [ ] Dedicated MP Vanilla
+- [ ] Local MP
+- [ ] Dedicated MP
 
 <!--
 As soon as you've tested your feature on the listed environment you can check the checkbox.
