@@ -5,7 +5,7 @@
     File: csat.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-17
-    Last Update: 2018-12-09
+    Last Update: 2019-04-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -86,7 +86,7 @@ KPLIB_PRST_SETVAR("fobTruck", "O_Truck_03_device_F");
 // The building defined to unlock FOB logistic functionalities.
 KPLIB_PRST_SETVAR("logiBuilding", "Land_RepairDepot_01_tan_F");
 // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_PRST_SETVAR("potato", "O_Heli_Transport_04_covered_F");
+KPLIB_PRST_SETVAR("potato", "O_Heli_Transport_04_F");
 // This is the mobile respawn (and medical) truck.
 KPLIB_PRST_SETVAR("respawnTruck", "O_Truck_03_medical_F");
 // The helipad used to increase the GLOBAL rotary-wing cap.
@@ -295,7 +295,9 @@ KPLIB_PRST_CAT_END("vehArty");
 KPLIB_PRST_CAT_BEGIN("heliTrans");
 KPLIB_PRST_CAT_ADD("heliTrans", "B_Heli_Light_01_F",                         200,    0,  100);    // MH-9 Hummingbird
 KPLIB_PRST_CAT_ADD("heliTrans", "O_Heli_Light_02_unarmed_F",                 250,    0,  150);    // PO-30 Orca (unarmed)
-KPLIB_PRST_CAT_ADD("heliTrans", "O_Heli_Transport_04_bench_F",               300,    0,  175);    // Mi-290 Taru (Bench)
+KPLIB_PRST_CAT_ADD("heliTrans", "O_Heli_Transport_04_bench_F",               275,    0,  175);    // Mi-290 Taru (Bench)
+KPLIB_PRST_CAT_ADD("heliTrans", "O_Heli_Transport_04_covered_F",             300,    0,  175);    // Mi-290 Taru (Covered)
+KPLIB_PRST_CAT_ADD("heliTrans", "O_Heli_Transport_04_medevac_F",             320,    0,  175);    // Mi-290 Taru (MedEvac)
 KPLIB_PRST_CAT_END("heliTrans");
 
 // Attack Helicopters
