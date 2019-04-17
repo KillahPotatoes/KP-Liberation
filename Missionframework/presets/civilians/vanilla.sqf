@@ -5,7 +5,7 @@
     File: vanilla.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2018-12-08
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,6 +18,8 @@
         - None
 */
 
+// Name of this preset
+KPLIB_PRST_SETVAR("nameC", "Vanilla Civilians");
 
 /*------------------------------------------------------------
     --- Civilian Population ---

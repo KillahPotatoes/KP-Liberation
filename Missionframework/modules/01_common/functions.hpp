@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2019-03-31
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,6 +61,9 @@ class common {
 
     // Checks if player occupies a slot
     class common_isSlot {};
+
+    // Logs given text to server rpt
+    class common_log {};
 
     // Initialize common module
     class common_preInit {

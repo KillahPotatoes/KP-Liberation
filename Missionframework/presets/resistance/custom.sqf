@@ -5,13 +5,15 @@
     File: custom.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2018-12-08
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
         Custom resistance preset file for individual adjustments.
 */
 
+// Name of this preset
+KPLIB_PRST_SETVAR("nameR", "Custom Resistance");
 
 /*------------------------------------------------------------
     --- RESISTANCE UNIT AND VEHICLE CLASSNAMES ---
