@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2019-04-15
+    Last Update: 2019-04-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -67,7 +67,13 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
     diag_log text format ["[KP LIBERATION] [MISSIONSTART] Opfor: %1", KPLIB_preset_nameE];
     diag_log text format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KPLIB_preset_nameR];
     diag_log text format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KPLIB_preset_nameC];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KPLIB_param_presetArsenal];
+    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1",
+        [
+            localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0",
+            localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1",
+            localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2"
+        ] select KPLIB_param_presetArsenal
+    ];
     diag_log text format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KPLIB_ace_enabled];
 };
 
