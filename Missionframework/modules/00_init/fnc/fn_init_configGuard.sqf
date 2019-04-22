@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2019-04-17
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -43,38 +43,39 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
         ((count ([] call CBA_fnc_players)) > 0)
     };
 
-    diag_log text format ["[KP LIBERATION] [%1] [CFG GUARD] Validating configuration files...", diag_tickTime];
+    ["Validating configuration files...", "CFG GUARD", true] call KPLIB_fnc_common_log;
 
     // Get array of variables to check
     private _toValidate = allVariables KPLIB_validationNamespace;
     // If there is any "false" variable this means one of the guarded config files is invalid
     private _invalidConfig = (_toValidate findIf {!(KPLIB_validationNamespace getVariable _x)}) != -1;
 
+    // End mission on invalid config
     if(_invalidConfig) exitWith {
-        diag_log format ["[KP LIBERATION] [%1] [CFG GUARD] Invalid configuration files present. Ending mission for everyone", diag_tickTime];
-
+        ["Invalid configuration files present. Ending mission for everyone", "CFG GUARD", true] call KPLIB_fnc_common_log;
         "KPLIB_configError" call BIS_fnc_endMissionServer;
     };
 
-    diag_log text format ["[KP LIBERATION] [%1] [CFG GUARD] Configuration files are valid", diag_tickTime];
+    ["Configuration files are valid", "CFG GUARD", true] call KPLIB_fnc_common_log;
 
-    diag_log text "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Name: %1", (localize "STR_KPLIB_TITLE")];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] World: %1", worldName];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_KPLIB_VERSION")];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Author: %1", [missionConfigFile] call BIS_fnc_overviewAuthor];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Blufor: %1", KPLIB_preset_nameF];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Opfor: %1", KPLIB_preset_nameE];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KPLIB_preset_nameR];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KPLIB_preset_nameC];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1",
+    // Display mission information
+    ["--- MISSION INFORMATION ---", "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Name: %1", (localize "STR_KPLIB_TITLE")], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["World: %1", worldName], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Version: %1", (localize "STR_KPLIB_VERSION")], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Author: %1", [missionConfigFile] call BIS_fnc_overviewAuthor], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Blufor: %1", KPLIB_preset_nameF], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Opfor: %1", KPLIB_preset_nameE], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Resistance: %1", KPLIB_preset_nameR], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Civilians: %1", KPLIB_preset_nameC], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["Arsenal: %1",
         [
             localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_0",
             localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_1",
             localize "STR_KPLIB_SETTINGS_ARSENAL_ARSENAL_2"
         ] select KPLIB_param_presetArsenal
-    ];
-    diag_log text format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KPLIB_ace_enabled];
+    ], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    [format ["ACE: %1", KPLIB_ace_enabled], "MISSIONSTART"] call KPLIB_fnc_common_log;
 };
 
 true
