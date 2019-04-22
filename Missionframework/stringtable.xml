@@ -1239,9 +1239,9 @@
             <German>Fahrzeuginventar leeren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO_TT">
-            <English>Enables/Disables if spawned/loaded vehicles have an empty cargo space.</English>
+            <English>Enables/Disables if spawned vehicles have initially an empty cargo space.</English>
             <Chinese>如果重生/裝載的載具有倉儲空間則啟用/關閉</Chinese>
-            <German>Aktiviert/Deaktiviert ob gebaute/geladene Fahrzeuge ein leeres Inventar haben.</German>
+            <German>Aktiviert/Deaktiviert ob gebaute Fahrzeuge anfänglich ein leeres Inventar haben.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG">
             <English>Enable Debug Mode</English>
