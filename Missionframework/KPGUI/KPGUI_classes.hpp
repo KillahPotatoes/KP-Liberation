@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-04-15
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -1125,7 +1125,7 @@ class KPGUI_PRE_DialogTitleS: KPGUI_PRE_Title {
 
 // Cross symbol
 class KPGUI_PRE_DialogCrossS: KPGUI_PRE_CloseCross {
-    x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.02)
+    x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_S);
 };
 

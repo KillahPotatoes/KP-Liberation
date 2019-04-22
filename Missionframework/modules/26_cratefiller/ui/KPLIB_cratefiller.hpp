@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-07
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -216,7 +216,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
             w = KP_GETW(KP_WIDTH_VAL_S,1);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT"
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT";
         };
 
         class KP_DialogCross: KPGUI_PRE_DialogCrossS {};
