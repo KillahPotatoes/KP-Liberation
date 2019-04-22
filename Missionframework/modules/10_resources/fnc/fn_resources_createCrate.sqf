@@ -6,6 +6,7 @@
     Date: 2018-12-15
     Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Spawns a resource crate of given type and side at given position.

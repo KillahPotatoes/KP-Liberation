@@ -6,6 +6,7 @@
     Date: 2018-12-16
     Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: Yes
 
     Description:
         Stacks all values of the crates inside given storage and sorts the crates according to resource type.
