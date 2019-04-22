@@ -6,6 +6,7 @@
     Date: 2018-07-27
     Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Imports the stored save data of a running Liberation campaign from the profile vars of the player.

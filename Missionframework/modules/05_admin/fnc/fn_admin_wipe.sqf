@@ -6,6 +6,7 @@
     Date: 2018-03-29
     Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Creates a backup of the current save as exported save. Afterwards let the server wipe his saved campaign.
