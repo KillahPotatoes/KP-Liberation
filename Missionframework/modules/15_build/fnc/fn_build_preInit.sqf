@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-03-30
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -53,7 +53,7 @@ if (isServer) then {
         if (_fob isEqualTo "") exitWith {};
 
         // Skip storage areas
-        if !((typeOf _object) in KPLIB_res_storageClasses) then {
+        if !((typeOf _object) in KPLIB_resources_storageClasses) then {
             _object setVariable ["KPLIB_fob", _fob, true];
             _object call KPLIB_fnc_persistence_makePersistent;
         };

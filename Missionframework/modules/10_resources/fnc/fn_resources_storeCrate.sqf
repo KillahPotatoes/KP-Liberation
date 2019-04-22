@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_storeCrate
+    KPLIB_fnc_resources_storeCrate
 
-    File: fn_res_storeCrate.sqf
+    File: fn_resources_storeCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2019-02-23
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,10 +22,10 @@ params [
 ];
 
 // Exit if we have no valid crate object
-if !((typeOf _crate) in KPLIB_res_crateClasses) exitWith {false};
+if !((typeOf _crate) in KPLIB_resources_crateClasses) exitWith {false};
 
 // Check for near storages
-private _nearStorage = nearestObjects [_crate, KPLIB_res_storageClasses, 20];
+private _nearStorage = nearestObjects [_crate, KPLIB_resources_storageClasses, 20];
 
 // Exit if no storages near
 if (_nearStorage isEqualTo []) exitWith {
@@ -38,7 +38,7 @@ if (_nearStorage isEqualTo []) exitWith {
 _nearStorage = _nearStorage select 0;
 
 // Get storage position array depending on storage type
-private _attachPosition = [typeOf _nearStorage] call KPLIB_fnc_res_getAttachArray;
+private _attachPosition = [typeOf _nearStorage] call KPLIB_fnc_resources_getAttachArray;
 
 // Get number of already stored crates
 private _attachedCrates = count (attachedObjects _nearStorage);
@@ -57,7 +57,7 @@ _attachPosition = _attachPosition select _attachedCrates;
 _crate attachTo [_nearStorage, [
     (_attachPosition select 0),
     (_attachPosition select 1),
-    [typeOf _crate] call KPLIB_fnc_res_getCrateZ
+    [typeOf _crate] call KPLIB_fnc_resources_getCrateZ
 ]];
 
 // !TODO! We need to test, if this on/off is really necessary.

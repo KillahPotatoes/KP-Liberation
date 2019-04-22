@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_getStorageSpace
+    KPLIB_fnc_resources_getStorageSpace
 
-    File: fnc_res_getStorageSpace.sqf
+    File: fnc_resources_getStorageSpace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-16
-    Last Update: 2019-02-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,7 +22,7 @@ params [
 ];
 
 // Get the storage positions amount
-private _allSpaces = count ([typeOf _storage] call KPLIB_fnc_res_getAttachArray);
+private _allSpaces = count ([typeOf _storage] call KPLIB_fnc_resources_getAttachArray);
 
 // Get amount of already stored crates
 private _attachedCrates = count (attachedObjects _storage);

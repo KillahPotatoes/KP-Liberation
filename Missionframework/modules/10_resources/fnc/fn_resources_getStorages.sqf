@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_getStorages
+    KPLIB_fnc_resources_getStorages
 
-    File: fn_res_getStorages.sqf
+    File: fn_resources_getStorages.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-16
-    Last Update: 2019-02-18
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,4 +23,4 @@ params [
     ["_radius", 100, [0]]
 ];
 
-nearestObjects [_center, KPLIB_res_storageClasses, _radius]
+nearestObjects [_center, KPLIB_resources_storageClasses, _radius]

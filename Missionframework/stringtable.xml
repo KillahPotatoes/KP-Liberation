@@ -1401,15 +1401,15 @@
         </Key>
 
         <!-- RESSOURCES CATEGORY -->
-        <Key ID="STR_KPLIB_SETTINGS_RES">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES">
             <English>KPLIB - Resources</English>
             <German>KPLIB - Ressourcen</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME">
             <English>Volume of resource crates</English>
             <German>Fassungsvermögen von Ressourcenkisten</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME_TT">
             <English>The maximum amount of resources which can be stored in a crate.</English>
             <German>Das maximal mögliche Menge an Ressourcen in den Ressourcenkisten.</German>
         </Key>

@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_res_postInit
+    KPLIB_fnc_resources_postInit
 
-    File: fn_res_postInit.sqf
+    File: fn_resources_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
     Last Update: 2019-04-22

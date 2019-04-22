@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_res_loadData
+    KPLIB_fnc_resources_loadData
 
-    File: fn_res_loadData.sqf
+    File: fn_resources_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
     Last Update: 2019-04-22
@@ -42,15 +42,15 @@ if (_moduleData isEqualTo []) then {
             _resource = _x select 1;
             while {_resource > 0} do {
                 _amount = _resource min KPLIB_param_crateVolume;
-                _crate = [(_x select 0), getPosATL _storage, _amount] call KPLIB_fnc_res_createCrate;
-                [_crate] call KPLIB_fnc_res_storeCrate;
+                _crate = [(_x select 0), getPosATL _storage, _amount] call KPLIB_fnc_resources_createCrate;
+                [_crate] call KPLIB_fnc_resources_storeCrate;
                 _resource = _resource - _amount;
             };
         } forEach [["Supply", _supplies], ["Ammo", _ammo], ["Fuel", _fuel]];
     } forEach (_moduleData select 0);
 
     // Apply the intel points
-    KPLIB_res_intel = _moduleData select 1;
+    KPLIB_resources_intel = _moduleData select 1;
 };
 
 true

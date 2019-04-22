@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_createCrate
+    KPLIB_fnc_resources_createCrate
 
-    File: fn_res_createCrate.sqf
+    File: fn_resources_createCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -40,7 +40,7 @@ if (_presetClass isEqualTo "") exitWith {objNull};
 private _crate = [_presetClass, _pos] call KPLIB_fnc_common_createVehicle;
 
 // Add the amount of resources
-_crate setVariable ["KPLIB_res_crateValue", _value min KPLIB_param_crateVolume, true];
+_crate setVariable ["KPLIB_resources_crateValue", _value min KPLIB_param_crateVolume, true];
 
 // Return crate
 _crate

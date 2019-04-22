@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_res_preInit
+    KPLIB_fnc_resources_preInit
 
-    File: fn_res_preInit.sqf
+    File: fn_resources_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
     Last Update: 2019-04-22
@@ -24,10 +24,10 @@ if (isServer) then {["Module initializing...", "PRE] [RESOURCES", true] call KPL
 */
 
 // Intel currency resource amount
-KPLIB_res_intel = 0;
+KPLIB_resources_intel = 0;
 
 // Large storage area placement position offsets.
-KPLIB_res_storageOffsetsLarge = [
+KPLIB_resources_storageOffsetsLarge = [
     [ -5.59961,        3.60938,     0.6],
     [ -3.99902,        3.60938,     0.6],
     [ -2.39941,        3.60938,     0.6],
@@ -71,7 +71,7 @@ KPLIB_res_storageOffsetsLarge = [
 ];
 
 // Small storage area placement position offsets.
-KPLIB_res_storageOffsetsSmall = [
+KPLIB_resources_storageOffsetsSmall = [
     [ -2.34961,        1.80078,     0.6],
     [    -0.75,        1.80078,     0.6],
     [ 0.850586,        1.80078,     0.6],
@@ -89,7 +89,7 @@ KPLIB_res_storageOffsetsSmall = [
 // Configuration settings for crates transported by vehicles ["classname", distance from vehicle center to unload crate, attachTo positions for each box].
 // Set and filtered on the server
 if (isServer) then {
-    KPLIB_res_transportConfigs = [[
+    KPLIB_resources_transportConfigs = [[
         ["B_Heli_Transport_03_F",                        7.5, [[0.00,  2.20, -1.00], [0.00,  0.50, -1.00], [0.00, -1.20, -1.00]                                            ]],
         ["B_Heli_Transport_03_unarmed_F",                7.5, [[0.00,  2.20, -1.00], [0.00,  0.50, -1.00], [0.00, -1.20, -1.00]                                            ]],
         ["B_T_Truck_01_covered_F",                       6.5, [[0.00, -0.40,  0.40], [0.00, -2.10,  0.40], [0.00, -3.80,  0.40]                                            ]],
@@ -146,14 +146,14 @@ if (isServer) then {
     ]] call KPLIB_fnc_init_filterMods;
 
     // Plain transport vehicle classnames array
-    KPLIB_res_transportVehicles = [];
+    KPLIB_resources_transportVehicles = [];
     {
-        KPLIB_res_transportVehicles pushBack (_x select 0);
-    } forEach KPLIB_res_transportConfigs;
+        KPLIB_resources_transportVehicles pushBack (_x select 0);
+    } forEach KPLIB_resources_transportConfigs;
 
     // Send filtered lists to clients
-    publicVariable "KPLIB_res_transportConfigs";
-    publicVariable "KPLIB_res_transportVehicles";
+    publicVariable "KPLIB_resources_transportConfigs";
+    publicVariable "KPLIB_resources_transportVehicles";
 };
 
 
@@ -162,22 +162,22 @@ if (isServer) then {
 */
 
 // Process CBA Settings
-[] call KPLIB_fnc_res_settings;
+[] call KPLIB_fnc_resources_settings;
 
 // Server section (dedicated and player hosted)
 if (isServer) then {
     // Register load event handler
-    ["KPLIB_doLoad", {[] call KPLIB_fnc_res_loadData;}] call CBA_fnc_addEventHandler;
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_resources_loadData;}] call CBA_fnc_addEventHandler;
 
     // Register save event handler
-    ["KPLIB_doSave", {[] call KPLIB_fnc_res_saveData;}] call CBA_fnc_addEventHandler;
+    ["KPLIB_doSave", {[] call KPLIB_fnc_resources_saveData;}] call CBA_fnc_addEventHandler;
 
     // Adding actions to spawned crates and storages
-    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_res_addActions}] call CBA_fnc_addEventHandler;
+    ["KPLIB_vehicle_spawned", {[_this select 0] call KPLIB_fnc_resources_addActions}] call CBA_fnc_addEventHandler;
 
     // Some globals defined here on the server as the used preset variables aren't present on the clients yet but needed in initial loading
     // All valid crate classnames
-    KPLIB_res_crateClasses = [
+    KPLIB_resources_crateClasses = [
         KPLIB_preset_crateSupplyF,
         KPLIB_preset_crateAmmoF,
         KPLIB_preset_crateFuelF,
@@ -187,7 +187,7 @@ if (isServer) then {
     ];
 
     // All valid storage classnames
-    KPLIB_res_storageClasses = [
+    KPLIB_resources_storageClasses = [
         KPLIB_preset_storageSmallE,
         KPLIB_preset_storageSmallF,
         KPLIB_preset_storageLargeE,
@@ -195,14 +195,14 @@ if (isServer) then {
     ];
 
     // Publish variables to clients
-    publicVariable "KPLIB_res_crateClasses";
-    publicVariable "KPLIB_res_storageClasses";
+    publicVariable "KPLIB_resources_crateClasses";
+    publicVariable "KPLIB_resources_storageClasses";
 
     // Array for all spawned resource crates
-    KPLIB_res_allCrates = [];
+    KPLIB_resources_allCrates = [];
 
     // Array for all storages
-    KPLIB_res_allStorages = [];
+    KPLIB_resources_allStorages = [];
 };
 
 // HC section

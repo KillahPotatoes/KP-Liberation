@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_getResTotal
+    KPLIB_fnc_resources_getResTotal
 
-    File: fn_res_getResTotal.sqf
+    File: fn_resources_getResTotal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,7 +25,7 @@ params [
 if (_location isEqualTo "") exitWith {[0, 0, 0]};
 
 // Get all storage areas in the vicinity of the marker
-private _storages = nearestObjects [markerPos _location, KPLIB_res_storageClasses, KPLIB_param_fobRange];
+private _storages = nearestObjects [markerPos _location, KPLIB_resources_storageClasses, KPLIB_param_fobRange];
 
 // Get the stored resource values
 private _resources = [0, 0, 0];
@@ -33,7 +33,7 @@ private _supplies = 0;
 private _ammo = 0;
 private _fuel = 0;
 {
-    _resources = [_x] call KPLIB_fnc_res_getStorageValue;
+    _resources = [_x] call KPLIB_fnc_resources_getStorageValue;
     _supplies = _supplies + (_resources select 0);
     _ammo = _ammo + (_resources select 1);
     _fuel = _fuel + (_resources select 2);

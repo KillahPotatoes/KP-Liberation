@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_getStorageValue
+    KPLIB_fnc_resources_getStorageValue
 
-    File: fn_res_getStorageValue.sqf
+    File: fn_resources_getStorageValue.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,11 +31,11 @@ private _fuel = 0;
 {
     switch (typeOf _x) do {
         case KPLIB_preset_crateSupplyE;
-        case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_res_crateValue", 0])};
+        case KPLIB_preset_crateSupplyF: {_supplies = _supplies + (_x getVariable ["KPLIB_resources_crateValue", 0])};
         case KPLIB_preset_crateAmmoE;
-        case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_res_crateValue", 0])};
+        case KPLIB_preset_crateAmmoF: {_ammo = _ammo + (_x getVariable ["KPLIB_resources_crateValue", 0])};
         case KPLIB_preset_crateFuelE;
-        case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_res_crateValue", 0])};
+        case KPLIB_preset_crateFuelF: {_fuel = _fuel + (_x getVariable ["KPLIB_resources_crateValue", 0])};
     };
 } forEach (attachedObjects _storage);
 

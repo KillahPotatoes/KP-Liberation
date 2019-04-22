@@ -1,10 +1,10 @@
 /*
     KPLIB_fnc_
 
-    File: fn_res_unstoreCrate.sqf
+    File: fn_resources_unstoreCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -66,10 +66,10 @@ detach _crate;
 _crate setPos _unloadPos;
 
 // Get storage position array depending on storage type
-private _attachPositions = [typeOf _storage] call KPLIB_fnc_res_getAttachArray;
+private _attachPositions = [typeOf _storage] call KPLIB_fnc_resources_getAttachArray;
 
 // Reorder the crates to close the possible gap
-[_storage] call KPLIB_fnc_res_orderStorage;
+[_storage] call KPLIB_fnc_resources_orderStorage;
 
 // Return unstored crate
 _crate

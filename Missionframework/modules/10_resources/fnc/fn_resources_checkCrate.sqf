@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_checkCrate
+    KPLIB_fnc_resources_checkCrate
 
-    File: fn_res_checkCrate.sqf
+    File: fn_resources_checkCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-15
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -32,7 +32,7 @@ private _resource = switch (typeOf _crate) do {
 };
 
 // Display hint
-hint format [localize "STR_KPLIB_HINT_RESCRATECONTENT", _crate getVariable ["KPLIB_res_crateValue", 0], localize _resource];
+hint format [localize "STR_KPLIB_HINT_RESCRATECONTENT", _crate getVariable ["KPLIB_resources_crateValue", 0], localize _resource];
 [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
 
 true

@@ -1,7 +1,7 @@
 /*
-    KPLIB_fnc_res_saveData
+    KPLIB_fnc_resources_saveData
 
-    File: fn_res_saveData.sqf
+    File: fn_resources_saveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
     Last Update: 2019-04-22
@@ -27,17 +27,17 @@ private ["_class", "_pos", "_vector", "_resources"];
     _class = typeOf _x;
     _pos = getPosWorld _x;
     _vector = [vectorDir _x, vectorUp _x];
-    _resources = [_x] call KPLIB_fnc_res_getStorageValue;
+    _resources = [_x] call KPLIB_fnc_resources_getStorageValue;
 
     // Add to the save array
     _storageSave pushBack [_class, _pos, _vector, _resources select 0, _resources select 1, _resources select 2];
-} forEach KPLIB_res_allStorages;
+} forEach KPLIB_resources_allStorages;
 
 // Set module data to save and send it to the global save data array
 ["resources",
     [
         _storageSave,
-        KPLIB_res_intel
+        KPLIB_resources_intel
     ]
 ] call KPLIB_fnc_init_setSaveData;
 

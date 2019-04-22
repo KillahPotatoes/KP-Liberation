@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_addIntel
+    KPLIB_fnc_resources_addIntel
 
-    File: fn_res_addIntel.sqf
+    File: fn_resources_addIntel.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -21,10 +21,10 @@ params [
     ["_add", 0, [0]]
 ];
 
-KPLIB_res_intel = KPLIB_res_intel + _add;
+KPLIB_resources_intel = KPLIB_resources_intel + _add;
 
-if (KPLIB_res_intel < 0) then {KPLIB_res_intel = 0;};
+if (KPLIB_resources_intel < 0) then {KPLIB_resources_intel = 0;};
 
-publicVariable "KPLIB_res_intel";
+publicVariable "KPLIB_resources_intel";
 
 true

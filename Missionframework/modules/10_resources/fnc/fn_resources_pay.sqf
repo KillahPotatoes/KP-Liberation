@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_res_pay
+    KPLIB_fnc_resources_pay
 
-    File: fn_res_pay.sqf
+    File: fn_resources_pay.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,7 +31,7 @@ params [
 if (_location isEqualTo "") exitWith {false};
 
 // Check if the location even has the needed amount of resources
-private _resTotal = [_location] call KPLIB_fnc_res_getResTotal;
+private _resTotal = [_location] call KPLIB_fnc_resources_getResTotal;
 if (
     ((_resTotal select 0) < _supplies) ||
     ((_resTotal select 1) < _ammo) ||
@@ -39,7 +39,7 @@ if (
 ) exitWith {false};
 
 // Get all storage areas in the vicinity of the marker
-private _storages = nearestObjects [markerPos _location, KPLIB_res_storageClasses, KPLIB_param_fobRange];
+private _storages = nearestObjects [markerPos _location, KPLIB_resources_storageClasses, KPLIB_param_fobRange];
 
 // Get the stored resource crates by type
 private _sCrates = [];
@@ -64,7 +64,7 @@ private ["_resource", "_crate", "_value"];
     _resource = _x select 0;
     while {_resource > 0} do {
         _crate = (_x select 1) deleteAt 0;
-        _value = _crate getVariable ["KPLIB_res_crateValue", 0];
+        _value = _crate getVariable ["KPLIB_resources_crateValue", 0];
 
         // Check if crate holds enough resources already
         if (_resource >= _value) then {
@@ -80,14 +80,14 @@ private ["_resource", "_crate", "_value"];
             detach _crate;
             deleteVehicle _crate;
         } else {
-            _crate setVariable ["KPLIB_res_crateValue", _value, true];
+            _crate setVariable ["KPLIB_resources_crateValue", _value, true];
         }
     };
 } forEach [[_supplies, _sCrates], [_ammo, _aCrates], [_fuel, _fCrates]];
 
 // Reorder the crates on all storages to close the possible gaps
 {
-    [_x] call KPLIB_fnc_res_orderStorage;
+    [_x] call KPLIB_fnc_resources_orderStorage;
 } forEach _storages;
 
 true
