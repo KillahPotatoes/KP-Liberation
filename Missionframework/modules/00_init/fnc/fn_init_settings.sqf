@@ -36,6 +36,19 @@
     {}
 ] call CBA_Settings_fnc_init;
 
+// KPLIB_param_savedebug
+// Enables/Disables detailed rpt logging of each saving process.
+// Default: false
+[
+    "KPLIB_param_savedebug",
+    "CHECKBOX",
+    [localize "STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG", localize "STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG_TT"],
+    localize "STR_KPLIB_SETTINGS_GENERAL",
+    false,
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
 // KPLIB_param_saveInterval
 // Interval of periodic saves in seconds.
 // Default: 60

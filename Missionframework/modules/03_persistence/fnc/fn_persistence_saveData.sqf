@@ -18,7 +18,7 @@
         Function reached the end [BOOL]
 */
 
-if (KPLIB_param_debug) then {["Persistence module saving...", "SAVE"] call KPLIB_fnc_common_log;};
+if (KPLIB_param_savedebug) then {["Persistence module saving...", "SAVE"] call KPLIB_fnc_common_log;};
 
 KPLIB_persistence_objects = KPLIB_persistence_objects - [objNull];
 KPLIB_persistence_units = KPLIB_persistence_units select {alive _x};

@@ -21,20 +21,20 @@
 // Skip the saving process, if the campaign isn't running anymore
 if (!KPLIB_campaignRunning) exitWith {false};
 
-if (KPLIB_param_debug) then {["----- Save function started -----", "SAVE", true] call KPLIB_fnc_common_log;};
+if (KPLIB_param_savedebug) then {["----- Save function started -----", "SAVE", true] call KPLIB_fnc_common_log;};
 
 // Reset the current save data array
 KPLIB_save_data = [];
 
 // Fire the saving event
-if (KPLIB_param_debug) then {["Firing save event...", "SAVE"] call KPLIB_fnc_common_log;};
+if (KPLIB_param_savedebug) then {["Firing save event...", "SAVE"] call KPLIB_fnc_common_log;};
 ["KPLIB_doSave"] call CBA_fnc_localEvent;
 
 // Write save data array to profile namespace
-if (KPLIB_param_debug) then {["Writing data to profile...", "SAVE"] call KPLIB_fnc_common_log;};
+if (KPLIB_param_savedebug) then {["Writing data to profile...", "SAVE"] call KPLIB_fnc_common_log;};
 profileNamespace setVariable [KPLIB_save_key, KPLIB_save_data];
 saveProfileNamespace;
 
-if (KPLIB_param_debug) then {["----- Save function finished -----", "SAVE", true] call KPLIB_fnc_common_log;};
+if (KPLIB_param_savedebug) then {["----- Save function finished -----", "SAVE", true] call KPLIB_fnc_common_log;};
 
 true

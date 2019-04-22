@@ -28,7 +28,7 @@
 
         Localization contributors:
 
-            English | Updated: 2019-04-10
+            English | Updated: 2019-04-22
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -41,7 +41,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2019-04-10
+            German | Updated: 2019-04-22
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -1251,7 +1251,7 @@
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT">
             <English>Enables/Disables extended Liberation debug output for the server log.</English>
             <Chinese>啟用/關閉擴展的Liberation除錯訊息輸出到伺服器紀錄</Chinese>
-            <German>Aktiviert/Deaktiviert erweiterte Liberation Debug Ausgaben im Serverlog.</German>
+            <German>Aktiviert/Deaktiviert erweiterte Liberation Debugausgaben im Serverlog.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE">
             <English>FOB Area</English>
@@ -1262,6 +1262,14 @@
             <English>Radius in meters of the FOB area.</English>
             <Chinese>前線基地半徑公尺內</Chinese>
             <German>Radius in Metern des FOB Bereichs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG">
+            <English>Enable Save Debug</English>
+            <German>Speicher Debug aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG_TT">
+            <English>Enables/Disables detailed rpt logging of each saving process.</English>
+            <German>Aktiviert/Deaktiviert detaillierte Informationen zur Spielstandspeicherung im RPT Log.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT">
             <English>Save Interval</English>
