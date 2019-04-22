@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_adm_wipe
+    KPLIB_fnc_admin_wipe
 
-    File: fn_adm_wipe.sqf
+    File: fn_admin_wipe.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-03-29
-    Last Update: 2018-11-27
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,7 +18,7 @@
 */
 
 // First we backup the current save as exported save
-[] call KPLIB_fnc_adm_exportSave;
+[] call KPLIB_fnc_admin_exportSave;
 
 // Small delay to ensure correct export. Then wipe the save on the server
 [

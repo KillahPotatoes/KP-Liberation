@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_adm_postInit
+    KPLIB_fnc_admin_postInit
 
-    File: fn_adm_postInit.sqf
+    File: fn_admin_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-11-27
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,14 +18,14 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ADM] Module initializing...", diag_tickTime];};
+["Module initializing...", "POST] [ADMIN", true] call KPLIB_fnc_common_log;
 
 // Player section
 if (hasInterface) then {
     // Action to open the dialog
     private _actionArray = [
         "<t color='#FF8000'>" + localize "STR_KPLIB_ACTION_ADMIN_MENU" + "</t>",
-        {[] call KPLIB_fnc_adm_openDialog;},
+        {[] call KPLIB_fnc_admin_openDialog;},
         nil,
         -804,
         false,
@@ -36,6 +36,6 @@ if (hasInterface) then {
     [_actionArray] call CBA_fnc_addPlayerAction;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [ADM] Module initialized", diag_tickTime];};
+["Module initialized", "POST] [ADMIN", true] call KPLIB_fnc_common_log;
 
 true
