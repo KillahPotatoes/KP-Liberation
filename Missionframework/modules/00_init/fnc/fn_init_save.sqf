@@ -6,6 +6,7 @@
     Date: 2018-03-29
     Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Saves the current progress by firing the doSave event. After all registered handlers for this event are processed, it'll write the save data to the profile namespace.
