@@ -4,7 +4,7 @@
     File: fn_res_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
-    Last Update: 2018-12-16
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [RESOURCES] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "PRE] [RESOURCES", true] call KPLIB_fnc_common_log;};
 
 /*
     ----- Module Globals -----
@@ -215,6 +215,6 @@ if (hasInterface) then {
 
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [RESOURCES] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [RESOURCES", true] call KPLIB_fnc_common_log;};
 
 true

@@ -17,7 +17,7 @@
         Function reached the end [BOOL]
 */
 
-if (KPLIB_param_savedebug) then {diag_log "[KP LIBERATION] [SAVE] Resources module saving...";};
+if (KPLIB_param_savedebug) then {["Resources module saving...", "SAVE"] call KPLIB_fnc_common_log;};
 
 private _storageSave = [];
 
