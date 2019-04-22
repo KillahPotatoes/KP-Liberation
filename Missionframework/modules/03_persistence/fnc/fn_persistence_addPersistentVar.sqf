@@ -4,7 +4,7 @@
     File: fn_persistence_addPersistentVar.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-26
-    Last Update: 2019-03-30
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -30,7 +30,7 @@ if (_idx != -1) exitWith {
     KPLIB_persistenceSavedVars set [_idx, [_variableName, _global]];
 };
 
-diag_log format ["[KP LIBERATION] [PERSISTENCE] Variable '%1' added to persistence system", _variableName];
+[format ["Variable '%1' added to persistence system", _variableName], ""] call KPLIB_fnc_common_log;
 
 KPLIB_persistenceSavedVars pushBack [_variableName, _global];
 

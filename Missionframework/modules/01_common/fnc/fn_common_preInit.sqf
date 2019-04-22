@@ -18,7 +18,11 @@
         Module preInit finished [BOOL]
 */
 
+if (isServer) then {["Module initializing...", "PRE] [COMMON", true] call KPLIB_fnc_common_log;};
+
 // Cache for getIcon function
 KPLIB_common_iconCache = [] call CBA_fnc_createNamespace;
+
+if (isServer) then {["Module initialized", "PRE] [COMMON", true] call KPLIB_fnc_common_log;};
 
 true
