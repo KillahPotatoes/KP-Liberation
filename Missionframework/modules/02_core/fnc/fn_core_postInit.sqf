@@ -4,8 +4,9 @@
     File: fn_core_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-15
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The postInit function of a module takes care of starting/executing the modules functions or scripts.
@@ -18,7 +19,7 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "POST] [CORE", true] call KPLIB_fnc_common_log;};
 
 // Initialize BIS Revive
 [] call KPLIB_fnc_core_reviveInit;
@@ -46,6 +47,6 @@ if (hasInterface) then {
 
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [CORE] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "POST] [CORE", true] call KPLIB_fnc_common_log;};
 
 true
