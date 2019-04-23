@@ -4,7 +4,7 @@
     File: fn_build_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-04
-    Last Update: 2019-03-30
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         Data was loaded [BOOL]
 */
 
-if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module loading...";};
+if (KPLIB_param_debug) then {["Build module loading...", "SAVE"] call KPLIB_fnc_common_log;};
 
 private _moduleData = ["build"] call KPLIB_fnc_init_getSaveData;
 
@@ -27,7 +27,7 @@ private _moduleData = ["build"] call KPLIB_fnc_init_getSaveData;
 if !(_moduleData isEqualTo []) then {
 
     // Otherwise start applying the saved data
-    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [SAVE] Build module data found, migrating data to persistence module...";};
+    if (KPLIB_param_debug) then {["Build module data found, migrating data to persistence module...", "SAVE"] call KPLIB_fnc_common_log;};
 
     // Deserialize data for every FOB
     {

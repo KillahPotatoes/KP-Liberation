@@ -4,7 +4,7 @@
     File: fn_build_handleFobBuildConfirm.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2018-11-29
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,7 +22,7 @@ params [
     ["_fobBoxObject", objNull, [objNull]]
 ];
 
-if (isNull _fobBuilding) exitWith {diag_log format ["[KP LIBERATION] [%1] [BUILD] Null object passed, cannot create FOB", diag_tickTime]};
+if (isNull _fobBuilding) exitWith {["Null object passed, cannot create FOB", "BUILD"] call KPLIB_fnc_common_log;};
 
 // Create FOB on position of building
 private _fobName = [getPos _fobBuilding] call KPLIB_fnc_core_buildFob;

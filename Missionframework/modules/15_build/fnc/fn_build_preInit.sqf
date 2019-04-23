@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-04-22
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "PRE] [BUILD", true] call KPLIB_fnc_common_log;};
 
 /*
     ----- Module Globals -----
@@ -72,7 +72,7 @@ if (hasInterface) then {
         if (_pos isEqualTo KPLIB_zeroPos) then{
             _pos = getPos _object;
         };
-        diag_log format ["[KP LIBERATION] [BUILD] KPLIB_fob_build_requested with _object: %1 (%2) - global: %3 (%4)", _object, getPos _object, KPLIB_build_fobBuildObject, getPos KPLIB_build_fobBuildObject];
+        [format ["KPLIB_fob_build_requested with _object: %1 (%2) - global: %3 (%4)", _object, getPos _object, KPLIB_build_fobBuildObject, getPos KPLIB_build_fobBuildObject], "BUILD", true] call KPLIB_fnc_common_log;
         // Start single item build for fob building
         [_pos, nil, [KPLIB_preset_fobBuildingF, 0,0,0], {
             // On confirm callback, create FOB on server
@@ -122,6 +122,6 @@ if (hasInterface) then {
 
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [BUILD] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [BUILD", true] call KPLIB_fnc_common_log;};
 
 true
