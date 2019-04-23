@@ -1,5 +1,5 @@
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_garrison_saveData
 
     File: fn_garrison_saveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes

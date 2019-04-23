@@ -6,7 +6,7 @@
     Date: 2018-10-20
     Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: Yes
+    Public: No
 
     Description:
         Handles the spawning of the sector garrison which is stored in the garrison array.
