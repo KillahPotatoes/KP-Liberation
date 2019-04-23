@@ -20,7 +20,7 @@
 
 if (isServer) then {
 
-    if (isServer) then {["Module initializing...", "PRE] [PERMISSION", true] call KPLIB_fnc_common_log;};
+    ["Module initializing...", "PRE] [PERMISSION", true] call KPLIB_fnc_common_log;
 
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_permission_loadData;}] call CBA_fnc_addEventHandler;

@@ -216,6 +216,6 @@ if (hasInterface) then {
     player addEventHandler ["SeatSwitchedMan", {if !([_this select 0, "", _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
 };
 
-["Module initialized", "POST] [PERMISSION", true] call KPLIB_fnc_common_log;
+if (isServer) then {["Module initialized", "POST] [PERMISSION", true] call KPLIB_fnc_common_log;};
 
 true
