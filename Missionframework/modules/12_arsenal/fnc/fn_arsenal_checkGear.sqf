@@ -6,6 +6,7 @@
     Date: 2017-11-26
     Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
