@@ -4,7 +4,7 @@
     File: fn_enemy_reinforceGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-24
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,7 +35,7 @@ if (_base isEqualTo "" || !(_base in KPLIB_sectors_military) || _destination isE
 private _costs = _troops * 2 + (count _vehicleClasses) * 10;
 if (_costs > KPLIB_enemy_strength) exitWith {[]};
 
-if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] Reinfore garrison of %1 (%2) for %3 strength with [%4, %5]", markerText _destination, _destination, _costs, _troops, _vehicleClasses];};
+if (KPLIB_param_debug) then {[format ["Reinfore garrison of %1 (%2) for %3 strength with [%4, %5]", markerText _destination, _destination, _costs, _troops, _vehicleClasses], "ENEMY"] call KPLIB_fnc_common_log;};
 
 [-_costs] call KPLIB_fnc_enemy_addStrength;
 
