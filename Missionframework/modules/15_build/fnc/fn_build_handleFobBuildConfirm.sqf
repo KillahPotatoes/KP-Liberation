@@ -6,6 +6,7 @@
     Date: 2018-11-29
     Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Handles FOB build confirmation

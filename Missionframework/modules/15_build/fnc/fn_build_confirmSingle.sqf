@@ -4,8 +4,9 @@
     File: fn_build_confirmSingle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2019-02-23
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Confirms single item from build queue.
