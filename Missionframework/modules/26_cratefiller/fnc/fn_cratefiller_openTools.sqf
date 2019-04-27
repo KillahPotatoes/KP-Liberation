@@ -20,8 +20,8 @@
 
 // Dialog controls
 private _dialog = findDisplay 758026;
-private _toolsGroup = _dialog displayCtrl 687410;
+private _ctrlToolsGroup = _dialog displayCtrl 687410;
 
-_toolsGroup ctrlShow ([true, false] select (ctrlShown _toolsGroup));
+_ctrlToolsGroup ctrlShow ([true, false] select (ctrlShown _ctrlToolsGroup));
 
 true

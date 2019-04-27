@@ -27,7 +27,7 @@ private _ctrlCat = _dialog displayCtrl 68741;
 private _ctrlWeapon = _dialog displayCtrl 68742;
 private _ctrlSearch = _dialog displayCtrl 68743;
 private _ctrlClearSearch = _dialog displayCtrl 68744;
-private _toolsGroup = _dialog displayCtrl 687410;
+private _ctrlToolsGroup = _dialog displayCtrl 687410;
 
 // Hide controls
 _ctrlWeapon ctrlShow false;
