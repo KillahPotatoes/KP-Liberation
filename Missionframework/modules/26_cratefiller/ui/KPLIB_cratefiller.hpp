@@ -75,6 +75,44 @@ class KPLIB_cratefiller {
                     y = KP_GETY_AREA(KP_Y_VAL_SR) - safezoneY;
                 };
 
+                class KPLIB_ComboGroups: KPGUI_PRE_Combo {
+                    idc = 687411;
+                    x = KP_GETCX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
+                    y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,0,48) - safezoneY;
+                    w = KP_GETW(KP_WIDTH_VAL_SR,1);
+                    h = KP_GETH(KP_HEIGHT_VAL_SR,24);
+                    tooltip = "TT";
+                    onLBSelChanged = "[] call KPLIB_fnc_cratefiller_getPlayers";
+                };
+
+                class KPLIB_ComboPlayers: KPLIB_ComboGroups {
+                    idc = 687412;
+                    y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,2,48) - safezoneY;
+                    tooltip = "TT";
+                    onLBSelChanged = "";
+                };
+
+                class KPLIB_MainWeapon: KPGUI_PRE_PictureRatio {
+                    idc = 687413;
+                    text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
+                    x = KP_GETCX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
+                    y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,6,48) - safezoneY;
+                    w = KP_GETW(KP_WIDTH_VAL_SR,1);
+                    h = KP_GETH(KP_HEIGHT_VAL_SR,4);
+                };
+
+                class KPLIB_HandWeapon: KPLIB_MainWeapon {
+                    idc = 687414;
+                    text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
+                    y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,21,48) - safezoneY;
+                };
+
+                class KPLIB_SecondaryWeapon: KPLIB_MainWeapon {
+                    idc = 687415;
+                    text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
+                    y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,36,48) - safezoneY;
+                };
+
             };
 
         };

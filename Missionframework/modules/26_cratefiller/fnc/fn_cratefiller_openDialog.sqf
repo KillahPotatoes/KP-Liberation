@@ -33,7 +33,7 @@ private _ctrlToolsGroup = _dialog displayCtrl 687410;
 _ctrlWeapon ctrlShow false;
 _ctrlSearch ctrlShow false;
 _ctrlClearSearch ctrlShow false;
-_toolsGroup ctrlShow false;
+_ctrlToolsGroup ctrlShow false;
 
 // Reset variables
 _ctrlCat lbAdd localize "STR_KPLIB_DIALOG_CRATEFILLER_LISTWEAPONS";

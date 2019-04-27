@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-25
+    Last Update: 2019-04-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -38,8 +38,14 @@ class cratefiller {
     // Gets the config path / type of the given classname
     class cratefiller_getConfigPath {};
 
+    // Gets all player groups and adds them to the listbox
+    class cratefiller_getGroups {};
+
     // Scans the fob for possible storages
     class cratefiller_getNearStorages {};
+
+    // Gets all players from the selected group and adds them to the listbox
+    class cratefiller_getPlayers {};
 
     // Returns the active storage
     class cratefiller_getStorage {};

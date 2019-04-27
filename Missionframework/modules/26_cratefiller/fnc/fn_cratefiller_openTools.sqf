@@ -24,4 +24,6 @@ private _ctrlToolsGroup = _dialog displayCtrl 687410;
 
 _ctrlToolsGroup ctrlShow ([true, false] select (ctrlShown _ctrlToolsGroup));
 
+[] call KPLIB_fnc_cratefiller_getGroups;
+
 true
