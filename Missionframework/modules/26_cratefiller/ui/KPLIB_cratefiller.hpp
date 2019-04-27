@@ -4,11 +4,11 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-15
+    Last Update: 2019-04-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-        Just a placeholder file for the example module.
+        Opens the cratefiller dialog where you can load/unload several inventories with weapons and items.
 */
 
 
@@ -36,7 +36,7 @@ class KPLIB_cratefiller {
 
         // Equipment
 
-        class KP_EquipmentTitle: KPLIB_TransportTitle {
+        class KPLIB_EquipmentTitle: KPLIB_TransportTitle {
             text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
@@ -44,7 +44,7 @@ class KPLIB_cratefiller {
 
         // Inventory
 
-        class KP_InventoryTitle: KPLIB_TransportTitle {
+        class KPLIB_InventoryTitle: KPLIB_TransportTitle {
             text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEINVENTORY";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
         };
@@ -52,6 +52,41 @@ class KPLIB_cratefiller {
     };
 
     class controls {
+
+        // Tools controlsGroup
+
+        class KPLIB_GroupTools: KPGUI_PRE_ControlsGroupNoScrollbars {
+            idc = 687410;
+            x = safezoneX;
+            y = safezoneY;
+            w = safezoneW;
+            h = safezoneH;
+
+            class controls {
+
+                class KPLIB_DialogTitleTools: KPGUI_PRE_DialogTitleSR {
+                    text = "Cratefiller Tools";
+                    x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
+                    y = safeZoneY + safeZoneH * KP_Y_VAL_SR - safezoneY;
+                };
+
+                class KPLIB_DialogAreaTools: KPGUI_PRE_DialogBackgroundSR {
+                    x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
+                    y = KP_GETY_AREA(KP_Y_VAL_SR) - safezoneY;
+                };
+
+            };
+
+        };
+
+        // Tools controlsGroup end
+
+        class KPLIB_ToolsButton: KPGUI_PRE_DialogCrossS {
+            text = "KPGUI\res\icon_tools.paa";
+            x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.04);
+            tooltip = "";
+            action = "[] call KPLIB_fnc_cratefiller_openTools";
+        };
 
         // Crates
 
@@ -238,7 +273,7 @@ class KPLIB_cratefiller {
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT"
         };
 
-        class KP_DialogCross: KPGUI_PRE_DialogCrossS {};
+        class KPLIB_DialogCross: KPGUI_PRE_DialogCrossS {};
 
     };
 

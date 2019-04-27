@@ -4,7 +4,7 @@
     File: fn_cratefiller_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-15
+    Last Update: 2019-04-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -27,11 +27,13 @@ private _ctrlCat = _dialog displayCtrl 68741;
 private _ctrlWeapon = _dialog displayCtrl 68742;
 private _ctrlSearch = _dialog displayCtrl 68743;
 private _ctrlClearSearch = _dialog displayCtrl 68744;
+private _toolsGroup = _dialog displayCtrl 687410;
 
 // Hide controls
 _ctrlWeapon ctrlShow false;
 _ctrlSearch ctrlShow false;
 _ctrlClearSearch ctrlShow false;
+_toolsGroup ctrlShow false;
 
 // Reset variables
 _ctrlCat lbAdd localize "STR_KPLIB_DIALOG_CRATEFILLER_LISTWEAPONS";
