@@ -49,10 +49,6 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
         };
 
-    };
-
-    class controls {
-
         // Tools controlsGroup
 
         class KPLIB_GroupTools: KPGUI_PRE_ControlsGroupNoScrollbars {
@@ -89,7 +85,7 @@ class KPLIB_cratefiller {
                     idc = 687412;
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,2,48) - safezoneY;
                     tooltip = "TT";
-                    onLBSelChanged = "";
+                    onLBSelChanged = "[] call KPLIB_fnc_cratefiller_getPlayerInventory";
                 };
 
                 class KPLIB_MainWeapon: KPGUI_PRE_PictureRatio {
@@ -118,6 +114,12 @@ class KPLIB_cratefiller {
         };
 
         // Tools controlsGroup end
+
+    };
+
+    class controls {
+
+
 
         class KPLIB_ToolsButton: KPGUI_PRE_DialogCrossS {
             text = "KPGUI\res\icon_tools.paa";

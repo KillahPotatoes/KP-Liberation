@@ -44,6 +44,9 @@ class cratefiller {
     // Scans the fob for possible storages
     class cratefiller_getNearStorages {};
 
+    // Gets all weapons of the selected player
+    class cratefiller_getPlayerInventory {};
+
     // Gets all players from the selected group and adds them to the listbox
     class cratefiller_getPlayers {};
 

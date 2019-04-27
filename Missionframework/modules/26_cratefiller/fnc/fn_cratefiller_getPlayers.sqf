@@ -36,10 +36,12 @@ private _group = (CCGVAR("groups", [])) select _index;
 // Get all units from the group
 private _players = (units _group) select {isPlayer _x};
 
+// Cache the players
+CCSVAR("players", _players, false);
+
 // Fill the list
 {
     _index = _ctrlPlayers lbAdd name _x;
-    _ctrlPlayers lbSetData [_index, netId _x];
 } forEach _players;
 
 true
