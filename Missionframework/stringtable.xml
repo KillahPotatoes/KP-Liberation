@@ -28,7 +28,7 @@
 
         Localization contributors:
 
-            English | Updated: 2019-04-10
+            English | Updated: 2019-04-27
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -41,7 +41,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2019-04-10
+            German | Updated: 2019-04-27
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -1132,6 +1132,14 @@
             <English>Selected transport medium is out of range.</English>
             <German>Ausgewähltes Transportmedium ist außer Reichweite.</German>
             <Polish>Wybrany środek transportu jest poza zasięgiem.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_REQUIRERESTART1">
+            <English>Restart required</English>
+            <German>Neustart benötigt</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_REQUIRERESTART2">
+            <English>The setting you've changed needs a server restart.</English>
+            <German>Die von dir geänderte Einstellung benötigt einen Neustart des Servers.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
             <English>The crate currently holds:\n%1 %2</English>

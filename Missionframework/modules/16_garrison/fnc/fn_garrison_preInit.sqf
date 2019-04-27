@@ -70,6 +70,9 @@ if (isServer) then {
                     } else {
                         [] spawn KPLIB_fnc_init_receiveInit;
                     };
+                    if (hasInterface && serverCommandAvailable "#kick") then {
+                        hint parseText format ["<t color='#ff0000' align='center' size='2'>%1</t><br />%2", localize "STR_KPLIB_HINT_REQUIRERESTART1", localize "STR_KPLIB_HINT_REQUIRERESTART2"];
+                    };
                 };
             };
             case "KPLIB_param_presetF": {
@@ -81,6 +84,9 @@ if (isServer) then {
                         [_setting] call KPLIB_fnc_garrison_reInitSectors;
                     } else {
                         [] spawn KPLIB_fnc_init_receiveInit;
+                    };
+                    if (hasInterface && serverCommandAvailable "#kick") then {
+                        hint parseText format ["<t color='#ff0000' align='center' size='2'>%1</t><br />%2", localize "STR_KPLIB_HINT_REQUIRERESTART1", localize "STR_KPLIB_HINT_REQUIRERESTART2"];
                     };
                 };
             };
