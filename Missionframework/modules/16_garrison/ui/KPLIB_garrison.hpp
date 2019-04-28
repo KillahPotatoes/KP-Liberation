@@ -15,7 +15,7 @@ class KPLIB_garrison {
     idd = KPLIB_IDC_GARRISON_DIALOG;
     movingEnable = 0;
     onLoad = "KPLIB_garrison_dialogGroups = []; KPLIB_garrison_dialogSelGroup = grpNull; KPLIB_garrison_dialogSelUnit = objNull;";
-    onUnload = "KPLIB_garrison_dialogGroups = nil; KPLIB_garrison_dialogSelGroup = nil; KPLIB_garrison_dialogSelUnit = nil;";
+    onUnload = "KPLIB_garrison_dialogGroups = nil; KPLIB_garrison_dialogSelGroup = nil; KPLIB_garrison_dialogSelUnit = nil; deleteMarkerLocal 'grpMarker'";
 
     class controlsBackground {
 

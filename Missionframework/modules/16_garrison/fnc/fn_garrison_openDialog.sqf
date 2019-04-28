@@ -5,7 +5,7 @@
     File: fn_garrison_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-29
-    Last Update: 2019-04-07
+    Last Update: 2019-04-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -48,7 +48,15 @@ private _ctrlHeavyButton = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYBUTTON;
 
 private _ctrlMap = _dialog displayCtrl KPLIB_IDC_GARRISON_MAP;
 
-private _sectorDetailCtrls = [
+private _ctrlReinforceTitle = _dialog displayCtrl KPLIB_IDC_GARRISON_REINFORCETITLE;
+private _ctrlGroupsLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPSLABEL;
+private _ctrlLbGroups = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPLIST;
+private _ctrlGroupButton = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPBUTTON;
+private _ctrlUnitsLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITSLABEL;
+private _ctrlLbUnits = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITLIST;
+private _ctrlUnitButton = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITBUTTON;
+
+private _ctrlsToHide = [
     _ctrlAlertNote,
     _ctrlInfLabel,
     _ctrlInfAmount,
@@ -62,17 +70,21 @@ private _sectorDetailCtrls = [
     _ctrlHeavyAmount,
     _ctrlHeavyList,
     _ctrlHeavyButton,
-    _ctrlMap
+    _ctrlMap,
+    _ctrlReinforceTitle,
+    _ctrlGroupsLabel,
+    _ctrlLbGroups,
+    _ctrlGroupButton,
+    _ctrlUnitsLabel,
+    _ctrlLbUnits,
+    _ctrlUnitButton
 ];
 
-// Hide sector details, as no sector is selected at this point
-{_x ctrlShow false;} forEach _sectorDetailCtrls;
+// Hide some dialog elements, as no sector is selected at this point
+{_x ctrlShow false;} forEach _ctrlsToHide;
 
 // Generate local sector list
-private _sectors = [];
-{
-    _sectors pushBack [markerText _x, _x];
-} forEach KPLIB_sectors_blufor; // KPLIB_sectors_all;
+private _sectors = KPLIB_sectors_blufor apply {[markerText _x, _x]};
 _sectors sort true;
 
 // Add sectors to listbox
@@ -81,7 +93,7 @@ lbClear _ctrlLbSectors;
     _ctrlLbSectors lbSetData [_ctrlLbSectors lbAdd (_x select 0), _x select 1];
     if !(([_x select 1, true] call KPLIB_fnc_garrison_getGarrison) isEqualTo []) then {
         _ctrlLbSectors lbSetColor [_forEachIndex, [0.8, 0, 0, 1]];
-    }
+    };
 } forEach _sectors;
 _ctrlLbSectors lbSetCurSel -1;
 
