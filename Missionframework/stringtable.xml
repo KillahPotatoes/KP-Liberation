@@ -249,7 +249,7 @@
         </Key>
         <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
             <English>-- GARRISON MANAGEMENT --</English>
-            <German>-- GARNISONVERWALTUNG --</German>
+            <German>-- GARNISONSVERWALTUNG --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
@@ -625,11 +625,23 @@
         <!-- GARRISON DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_GARRISON_TITLE">
             <English>GARRISON MANAGEMENT</English>
-            <German>GARNISONVERWALTUNG</German>
+            <German>GARNISONSVERWALTUNG</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_ALERTNOTE">
             <English>Sector in red alert</English>
             <German>Sektor in Alarmbereitschaft</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON">
+            <English>Garrison group</English>
+            <German>Gruppe stationieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON_TT">
+            <English>Add whole selected group to the sector garrison.</English>
+            <German>Fügt die gewählte Gruppe vollständig der Garnison hinzu.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPSLABEL">
+            <English>Groups in vicinity:</English>
+            <German>Gruppen in der Nähe:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_HEAVYLABEL">
             <English>Heavy Vehicles:</English>
@@ -658,6 +670,18 @@
         <Key ID="STR_KPLIB_DIALOG_GARRISON_REMOVE_TT">
             <English>Remove amount/vehicle from garrison.</English>
             <German>Anzahl/Fahrzeug aus der Garnison entfernen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITBUTTON">
+            <English>Garrison unit</English>
+            <German>Einheit stationieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITBUTTON_TT">
+            <English>Add selected unit to the sector garrison.</English>
+            <German>Fügt die gewählte Einheit der Garnison hinzu.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITSLABEL">
+            <English>Units of selected group:</English>
+            <German>Einheiten der gewählten Gruppe:</German>
         </Key>
 
         <!-- LOGISTIC MAIN DIALOG -->

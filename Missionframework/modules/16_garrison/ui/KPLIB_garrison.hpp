@@ -4,7 +4,7 @@
     File: KPLIB_garrison.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-19
-    Last Update: 2019-03-31
+    Last Update: 2019-04-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -14,12 +14,10 @@
 class KPLIB_garrison {
     idd = KPLIB_IDC_GARRISON_DIALOG;
     movingEnable = 0;
+    onLoad = "KPLIB_garrison_dialogGroups = []; KPLIB_garrison_dialogSelGroup = grpNull; KPLIB_garrison_dialogSelUnit = objNull;";
+    onUnload = "KPLIB_garrison_dialogGroups = nil; KPLIB_garrison_dialogSelGroup = nil; KPLIB_garrison_dialogSelUnit = nil;";
 
     class controlsBackground {
-
-        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitle {
-            text = "$STR_KPLIB_DIALOG_GARRISON_TITLE";
-        };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackground {};
 
@@ -30,17 +28,14 @@ class KPLIB_garrison {
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,16);
         };
-
-        class KPLIB_GarrisonControlsTitle: KPGUI_PRE_InlineTitle {
-            text = "$STR_KPLIB_DIALOG_GARRISON_REINFORCEHEADER";
-            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
-            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,0,16);
-            w = KP_GETW(KP_WIDTH_VAL,4);
-            h = KP_GETH(KP_HEIGHT_VAL,16);
-        };
     };
 
     class controls {
+
+        class KPLIB_DialogTitle: KPGUI_PRE_DialogTitle {
+            text = "$STR_KPLIB_DIALOG_GARRISON_TITLE";
+        };
+
         class KPLIB_GarrisonList: KPGUI_PRE_Listbox {
             idc = KPLIB_IDC_GARRISON_GARRISONLIST;
             onLBSelChanged = "[_this select 1] call KPLIB_fnc_garrison_dialogSelectSector";
@@ -154,9 +149,72 @@ class KPLIB_garrison {
         class KPLIB_GarrisonMap: KPGUI_PRE_MapControl {
             idc = KPLIB_IDC_GARRISON_MAP;
             x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,1,4);
-            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,2);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,5,16);
             w = KP_GETW(KP_WIDTH_VAL,2);
-            h = KP_GETH(KP_HEIGHT_VAL,2);
+            h = KP_GETH(KP_HEIGHT_VAL,(16/11));
+        };
+
+        class KPLIB_GarrisonReinforceTitle: KPGUI_PRE_InlineTitle {
+            idc = KPLIB_IDC_GARRISON_REINFORCETITLE;
+            text = "$STR_KPLIB_DIALOG_GARRISON_REINFORCEHEADER";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,0,16);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,16);
+        };
+
+        class KPLIB_GarrisonGroupsLabel: KPGUI_PRE_Text {
+            idc = KPLIB_IDC_GARRISON_GROUPSLABEL;
+            text = "$STR_KPLIB_DIALOG_GARRISON_GROUPSLABEL";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,16);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,16);
+        };
+
+        class KPLIB_GarrisonGroupList: KPGUI_PRE_Listbox {
+            idc = KPLIB_IDC_GARRISON_GROUPLIST;
+            onLBSelChanged = "[_this select 1] call KPLIB_fnc_garrison_dialogSelectGroup";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,2,16);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,(16/5));
+        };
+
+        class KPLIB_GarrisonGroupButton: KPGUI_PRE_InlineButton {
+            idc = KPLIB_IDC_GARRISON_GROUPBUTTON;
+            text = "$STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON";
+            tooltip = "$STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON_TT";
+            onButtonClick = "_this call KPLIB_fnc_garrison_dialogAdd";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,7,16);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,16);
+        };
+
+        class KPLIB_GarrisonUnitsLabel: KPGUI_PRE_Text {
+            idc = KPLIB_IDC_GARRISON_UNITSLABEL;
+            text = "$STR_KPLIB_DIALOG_GARRISON_UNITSLABEL";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,2);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,16);
+        };
+
+        class KPLIB_GarrisonUnitList: KPGUI_PRE_Listbox {
+            idc = KPLIB_IDC_GARRISON_UNITLIST;
+            onLBSelChanged = "[_this select 1] call KPLIB_fnc_garrison_dialogSelectUnit";
+            x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,3,4);
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,9,16);
+            w = KP_GETW(KP_WIDTH_VAL,4);
+            h = KP_GETH(KP_HEIGHT_VAL,(16/6));
+        };
+
+        class KPLIB_GarrisonUnitButton: KPLIB_GarrisonGroupButton {
+            idc = KPLIB_IDC_GARRISON_UNITBUTTON;
+            text = "$STR_KPLIB_DIALOG_GARRISON_UNITBUTTON";
+            tooltip = "$STR_KPLIB_DIALOG_GARRISON_UNITBUTTON_TT";
+            y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,15,16);
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCross {};
