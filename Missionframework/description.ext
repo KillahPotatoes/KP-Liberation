@@ -151,7 +151,7 @@ allowFunctionsLog = 0;
 
 // As a security measure, functions are by default protected against rewriting during mission.
 // This restriction does not apply in missions previewed from the editor.
-allowFunctionsRecompile = __EVAL([0, 1] select is3DENMultiplayer);
+allowFunctionsRecompile = __EVAL([0, 1] select (is3DENMultiplayer || is3DEN));
 
 // Disable specific channels for voice and text communication.
 // MOTD and admin say have exception and will show in global.
