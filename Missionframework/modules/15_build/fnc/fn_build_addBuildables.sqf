@@ -4,7 +4,7 @@
     File: KPLIB_fnc_build_addBuildables.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2018-12-11
+    Last Update: 2019-04-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 
     Parameter(s):
         _category   - Display name of category [DATATYPE, defaults to DEFAULTVALUE]
-        _buildables - Buildable items [DATATYPE, defaults to DEFAULTVALUE]
+        _buildables - Buildable items [ARRAY or CODE, defaults to []]
 
     Returns:
         Index of items inside category [NUMBER]

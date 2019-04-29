@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2018-12-11
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -101,6 +101,9 @@ class build {
 
     // Handle persistent data saving
     class build_saveData {};
+
+    // Clear build list search
+    class build_searchClear {};
 
     // Add player actions
     class build_setupPlayerActions {};

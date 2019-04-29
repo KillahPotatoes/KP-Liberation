@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-03-30
+    Last Update: 2019-04-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -86,6 +86,7 @@ if (hasInterface) then {
     {
         [
             localize (_x select 0),
+            // Add preset vars as code so if preset is changed during gameplay the lists will update dynamically
             compile format ["KPLIB_preset_%1F", _x select 1]
         ] call KPLIB_fnc_build_addBuildables;
     } forEach [
