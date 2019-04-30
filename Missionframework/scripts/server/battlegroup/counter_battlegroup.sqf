@@ -35,7 +35,7 @@ while { GRLIB_csat_aggressivity >= 0.9 && GRLIB_endgame == 0 } do {
 	 		_target_player = _x;
 	 	};
 
-	 } foreach allPlayers;
+	 } foreach (allPlayers - entities "HeadlessClient_F");
 
 	 if (!(isNull _target_player)) then {
 	 	_target_pos = [99999, getpos _target_player ] call F_getNearestSector;
