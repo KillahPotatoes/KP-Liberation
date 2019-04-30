@@ -38,40 +38,6 @@ if (isServer) then {
         "GroupSlots"
     ] call KPLIB_fnc_permission_addPermissionHandler;
 
-    // Build menu permissions
-    // Build
-    [
-        "Build",
-        {},
-        false,
-        "GroupBuildMenu"
-    ] call KPLIB_fnc_permission_addPermissionHandler;
-
-    // Logistic station permissions
-    // Recycle
-    [
-        "Recycle",
-        {},
-        false,
-        "GroupLogistics"
-    ] call KPLIB_fnc_permission_addPermissionHandler;
-
-    // Resupply
-    [
-        "Resupply",
-        {},
-        false,
-        "GroupLogistics"
-    ] call KPLIB_fnc_permission_addPermissionHandler;
-
-    // Cratefiller
-    [
-        "Cratefiller",
-        {},
-        false,
-        "GroupLogistics"
-    ] call KPLIB_fnc_permission_addPermissionHandler;
-
     // Vehicle permissions
     // Add Light Vehicle Permission
     [

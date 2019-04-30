@@ -23,6 +23,23 @@
 if (isServer) then {
     diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
 
+    // Logistic station permissions
+    // Recycle
+    [
+        "Recycle",
+        {},
+        false,
+        "GroupLogistics"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Resupply
+    [
+        "Resupply",
+        {},
+        false,
+        "GroupLogistics"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
     [
         "Recycle",
         {
