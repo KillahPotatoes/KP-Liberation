@@ -5,7 +5,7 @@
     File: fn_garrison_dialogRemove.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-03-31
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -39,7 +39,7 @@ private _garrison = [_sector] call KPLIB_fnc_garrison_getGarrison;
 private _side = KPLIB_preset_sideF;
 
 // Handle Infantry
-if (_button == _ctrlInfButton) exitWith {
+if (_button isEqualTo _ctrlInfButton) exitWith {
     // Prevent button spam
     _ctrlInfButton ctrlEnable false;
 
@@ -85,14 +85,14 @@ if (_button == _ctrlInfButton) exitWith {
 };
 
 // Handle Light Vehicles
-if (_button == _ctrlLightButton) exitWith {
+if (_button isEqualTo _ctrlLightButton) exitWith {
     hint format ["Light from %1", markerText _sector];
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
     true
 };
 
 // Handle Heavy Vehicles
-if (_button == _ctrlHeavyButton) exitWith {
+if (_button isEqualTo _ctrlHeavyButton) exitWith {
     hint format ["Heavy from %1", markerText _sector];
     [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
     true

@@ -651,6 +651,10 @@
             <English>Infantry:</English>
             <German>Infanterie:</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_INVALID_NOTE">
+            <English>At least one unit can't be added to a garrison.</English>
+            <German>Mindestens eine Einheit kann nicht in der Garnison stationiert werden.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_LIGHTLABEL">
             <English>Light Vehicles:</English>
             <German>Leichte Fahrzeuge:</German>

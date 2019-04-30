@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-04-28
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,6 +31,12 @@ class garrison {
 
     // Handle button click for unit/group adding
     class garrison_dialogAdd {};
+
+    // Adds selected unit to sector garrison
+    class garrison_dialogAddUnit {};
+
+    // Adds selected vehicle to sector garrison
+    class garrison_dialogAddVeh {};
 
     // Handle button click of infantry/vehicle removal
     class garrison_dialogRemove {};
