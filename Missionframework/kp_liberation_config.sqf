@@ -74,7 +74,8 @@ KP_liberation_preset_civilians = 0;
 3 = RHS USAF arsenal preset.
 4 = RHS USAF arsenal preset with ACE.
 5 = RHS USAF arsenal preset with ACE and ACRE.
-6 = 3cbBAF and RHS USAF arsenal preset. */
+6 = 3cbBAF and RHS USAF arsenal preset.
+7 = GM West arsenal preset. */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
