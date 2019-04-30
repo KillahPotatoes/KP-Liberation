@@ -5,7 +5,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-11
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -26,7 +26,7 @@ if (isServer) then {
     [
         "Recycle",
         {
-            if ([player, "Recycle"] call KPLIB_fnc_permission_getPermission) then {
+            if (["Recycle"] call KPLIB_fnc_permission_checkPermission) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_logistic_openRecycleDialog;
             } else {
@@ -42,7 +42,7 @@ if (isServer) then {
     [
         "Resupply",
         {
-            if ([player, "Resupply"] call KPLIB_fnc_permission_getPermission) then {
+            if (["Resupply"] call KPLIB_fnc_permission_checkPermission) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_logistic_openResupplyDialog;
             } else {
@@ -58,7 +58,7 @@ if (isServer) then {
     [
         "Cratefiller",
         {
-            if ([player, "Cratefiller"] call KPLIB_fnc_permission_getPermission && KPLIB_param_cratefiller) then {
+            if (["Cratefiller"] call KPLIB_fnc_permission_checkPermission && KPLIB_param_cratefiller) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_cratefiller_openDialog;
             } else {
