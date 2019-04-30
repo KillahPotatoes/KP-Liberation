@@ -1905,6 +1905,10 @@
             <English>Cratefiller</English>
             <German>Kistenfüller</German>
         </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GARRISONDIALOGACCESS">
+            <English>Garrison Management</English>
+            <German>Garnisonsverwaltung</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPBUILDMENU">
             <English>-- Buildmenu --</English>
             <German>-- Baumenü --</German>
