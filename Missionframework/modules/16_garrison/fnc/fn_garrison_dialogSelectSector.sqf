@@ -5,7 +5,7 @@
     File: fn_garrison_dialogSelectSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-30
-    Last Update: 2019-04-28
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -153,7 +153,8 @@ if !((_garrison select 4) isEqualTo []) then {
     } forEach _heavyVehicles;
 };
 
-// Show map and center on sector
+// Show map and center on sector and remove possible created group marker
+deleteMarkerLocal "grpMarker";
 _ctrlMap ctrlMapAnimAdd [0, 0.1, _sectorPos];
 ctrlMapAnimCommit _ctrlMap;
 
