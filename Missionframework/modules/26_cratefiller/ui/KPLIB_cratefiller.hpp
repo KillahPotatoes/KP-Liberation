@@ -122,6 +122,7 @@ class KPLIB_cratefiller {
 
 
         class KPLIB_ToolsButton: KPGUI_PRE_DialogCrossS {
+            idc = 687416;
             text = "KPGUI\res\icon_tools.paa";
             x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.04);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_TOOLS_TT";
@@ -174,21 +175,10 @@ class KPLIB_cratefiller {
             idc = 68743;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,3);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,8);
+            w = KP_GETW(KP_WIDTH_VAL_S,6);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_SEARCH_TT";
-            onKeyDown = "[] call KPLIB_fnc_cratefiller_search"
-        };
-
-        class KPLIB_ClearSearchBar: KPGUI_PRE_CloseCross {
-            idc = 68744;
-            text = "KPGUI\res\icon_recyclebin.paa";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,11,24);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,24);
-            h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_CLEARSEARCH_TT";
-            action = "[] call KPLIB_fnc_cratefiller_clearSearch";
+            onKeyUp = "[] call KPLIB_fnc_cratefiller_search";
         };
 
         class KPLIB_EquipmentList: KPGUI_PRE_ListBox {
@@ -261,10 +251,12 @@ class KPLIB_cratefiller {
             onButtonClick = "[] call KPLIB_fnc_cratefiller_import";
         };
 
-        class KPLIB_DeletePreset: KPLIB_ClearSearchBar {
+        class KPLIB_DeletePreset: KPGUI_PRE_CloseCross {
             text = "KPGUI\res\icon_recyclebin.paa";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,23,24);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,10,48);
+            w = KP_GETW(KP_WIDTH_VAL_S,24);
+            h = KP_GETH(KP_HEIGHT_VAL_S,24);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_DELETE_TT";
             action = "[] call KPLIB_fnc_cratefiller_deletePreset";
         };

@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-27
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,9 +16,6 @@ class cratefiller {
 
     // Adds the given amount of the selected item to the inventory
     class cratefiller_addEquipment {};
-
-    // Clears the search box
-    class cratefiller_clearSearch {};
 
     // Changes the shown equipment category
     class cratefiller_createEquipmentList {};
