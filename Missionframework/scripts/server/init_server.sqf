@@ -47,7 +47,7 @@ execVM "scripts\server\game\capture_vehicles.sqf";
 execVM "scripts\server\game\clean.sqf";
 execVM "scripts\server\game\cleanup_vehicles.sqf";
 execVM "scripts\server\game\manage_time.sqf";
-if (!KP_liberation_ace) then {execVM "scripts\server\game\manage_weather.sqf";};
+execVM "scripts\server\game\manage_weather.sqf";
 execVM "scripts\server\game\periodic_save.sqf";
 execVM "scripts\server\game\playtime.sqf";
 execVM "scripts\server\game\save_manager.sqf";
