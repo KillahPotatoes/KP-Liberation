@@ -162,6 +162,7 @@ class Missions
 ## Changelog
 
 ### 0.964 (Global Mobilization additions)
+* Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Chernarus Winter basefile to repository.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
