@@ -26,6 +26,19 @@
         }
     },
     {
+        "sourceFolder": "kp_liberation.Chernarus_Winter",
+        "missionName": "kp_liberation",
+        "map": "Chernarus_Winter",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 6,
+            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_resistance": 2,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
         "sourceFolder": "kp_liberation.Malden",
         "missionName": "kp_liberation",
         "map": "Malden",
