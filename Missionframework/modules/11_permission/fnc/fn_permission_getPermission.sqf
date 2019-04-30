@@ -12,16 +12,16 @@
         Checks the given permission and returns the result.
 
     Parameter(s):
-        _target     - Target player     [OBJECT, defaults to player]
         _permission - Permission name   [STRING, defaults to ""]
+        _target     - Target player     [OBJECT, defaults to player]
 
     Returns:
         State of the given permission [BOOL]
 */
 
 params [
-    ["_target", objNull, [objNull]],
-    ["_permission", "", [""]]
+    ["_permission", "", [""]],
+    ["_target", player, [objNull]]
 ];
 
 if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {

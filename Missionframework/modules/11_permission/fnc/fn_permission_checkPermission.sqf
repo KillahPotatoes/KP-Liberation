@@ -33,7 +33,7 @@ if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {
 // Variables
 private _data = PGVAR(toLower _permission, []);
 private _codeResult = false;
-private _result = [_target, _permission] call KPLIB_fnc_permission_getPermission;
+private _result = [_permission, _target] call KPLIB_fnc_permission_getPermission;
 
 // Execute the registered code
 _codeResult = [] call (_data select 0);
