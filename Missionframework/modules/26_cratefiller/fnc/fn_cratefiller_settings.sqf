@@ -4,7 +4,7 @@
     File: fn_cratefiller_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-06
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,6 +28,19 @@
     "KPLIB_param_cratefiller",
     "CHECKBOX",
     [localize "STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE", localize "STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE_TT"],
+    localize "STR_KPLIB_SETTINGS_CRATEFILLER",
+    true,
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_cratefillerTools
+// Enables/Disables the cratefiller tools.
+// Default: true
+[
+    "KPLIB_param_cratefillerTools",
+    "CHECKBOX",
+    [localize "STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATETOOLS", localize "STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATETOOLS_TT"],
     localize "STR_KPLIB_SETTINGS_CRATEFILLER",
     true,
     1,

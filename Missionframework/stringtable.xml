@@ -1732,6 +1732,14 @@
             <English>Enables/Disables the Liberation cratefiller.</English>
             <German>Aktiviert/Deaktiviert den Liberation Kistenfüller.</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATETOOLS">
+            <English>Enable Cratefiller tools</English>
+            <German>Kistenfüller Werkzeuge aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
+            <English>Enables/Disables the Liberation cratefiller tools.</English>
+            <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Werkzeuge.</German>
+        </Key>
     </Package>
 
 
