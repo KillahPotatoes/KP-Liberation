@@ -65,6 +65,7 @@ class KPLIB_ToolboxContainer: KPGUI_PRE_ControlsGroup {
         // !TODO! move toolbox items creation to script
         class KPLIB_Toolbox_MoveItems: KPGUI_PRE_ActiveText {
             text = "Build mode";
+            tooltip = "Click to toggle between building new items and moving existing items modes."
             idc = KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS;
 
             colorActive[] = {1, 1, 1, 1};
