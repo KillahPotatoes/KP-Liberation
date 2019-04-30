@@ -12,24 +12,10 @@
         <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
         <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
         <Key ID="STR_MISSION_TITLE">
-            <Original>KP Liberation v0.963a</Original>
-            <German>KP Liberation v0.963a</German>
-            <Spanish>KP Liberation v0.963a</Spanish>
-            <Italian>KP Liberation v0.963a</Italian>
-            <Chinesesimp>KP Liberation v0.963a</Chinesesimp>
-            <Chinese>KP Liberation v0.963a</Chinese>
-            <Turkish>KP Liberation v0.963a</Turkish>
-            <Portuguese>KP Liberation v0.963a</Portuguese>
+            <Original>CTI 34 KP Liberation v0.964</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.963a</Original>
-            <German>v0.963a</German>
-            <Spanish>v0.963a</Spanish>
-            <Italian>v0.963a</Italian>
-            <Chinesesimp>v0.963a</Chinesesimp>
-            <Chinese>v0.963a</Chinese>
-            <Turkish>v0.963a</Turkish>
-            <Portuguese>v0.963a</Portuguese>
+            <Original>v0.964</Original>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>

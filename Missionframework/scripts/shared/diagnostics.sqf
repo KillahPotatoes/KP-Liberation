@@ -1,6 +1,16 @@
 private _source = "";
 
-diag_log format ["[KP LIBERATION] [MISSIONSTART] Missionfile: %1 - World Name: %2 - Version: %3 - Blufor: %4 - Opfor: %5 - Resistance: %6 - Civilians: %7 - Arsenal: %8",(localize "STR_MISSION_TITLE"), worldName, (localize "STR_MISSION_VERSION"),KP_liberation_preset_blufor, KP_liberation_preset_opfor, KP_liberation_preset_resistance, KP_liberation_preset_civilians, KP_liberation_arsenal];
+diag_log text "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Name: %1", (localize "STR_MISSION_TITLE")];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] World: %1", worldName];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_MISSION_VERSION")];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Author: %1", [missionConfigFile] call BIS_fnc_overviewAuthor];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Blufor: %1", KP_liberation_preset_blufor];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Opfor: %1", KP_liberation_preset_opfor];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KP_liberation_preset_resistance];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KP_liberation_preset_civilians];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KP_liberation_arsenal];
+diag_log text format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KP_liberation_ace];
 
 waitUntil {sleep 1; !isNil "active_sectors"};
 
