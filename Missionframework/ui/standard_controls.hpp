@@ -65,6 +65,7 @@ class kndr_MapControl
 	onMouseButtonDblClick = "";
 	scaleMin = 0.05;
 	scaleMax = 3;
+	widthRailWay = 1;
 
 	class ActiveMarker {
 		color[] = {0.30, 0.10, 0.90, 1.00};
