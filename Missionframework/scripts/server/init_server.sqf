@@ -56,7 +56,7 @@ execVM "scripts\server\game\synchronise_vars.sqf";
 execVM "scripts\server\game\synchronise_eco.sqf";
 execVM "scripts\server\game\zeus_synchro.sqf";
 execVM "scripts\server\offloading\offload_calculation.sqf";
-execVM "scripts\server\offloading\offload_manager.sqf";
+//execVM "scripts\server\offloading\offload_manager.sqf";
 execVM "scripts\server\offloading\show_fps.sqf";
 execVM "scripts\server\patrols\civilian_patrols.sqf";
 execVM "scripts\server\patrols\manage_patrols.sqf";
