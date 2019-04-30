@@ -5,7 +5,7 @@
     File: fn_cratefiller_getPlayerInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-27
-    Last Update: 2019-04-27
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -40,16 +40,30 @@ private _secondaryWeapon = secondaryWeapon _player;
 // Variables
 private _config = configNull;
 private _picture = "";
-private _name = "";
+private _tooltip = [];
 private _description = "";
+private _magazine = "";
+private _attachments = "";
 
 // Fill the controls
 if !(_mainWeapon isEqualTo "") then {
     _config = [_mainWeapon] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
-    _name = getText (_config >> "displayName");
+
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _description = (getText (_config >> "descriptionShort")) splitString "<>";
+    _tooltip append [_description select 0, "\n", _description select 2, "\n"];
+    _magazine = (primaryWeaponMagazine _player) select 0;
+    _config = [_magazine] call KPLIB_fnc_cratefiller_getConfigPath;
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _attachments = primaryWeaponItems _player;
+    {
+        _config = [_x] call KPLIB_fnc_cratefiller_getConfigPath;
+        _tooltip append [getText (_config >> "displayName"), "\n"];
+    } forEach (_attachments select {!(_x isEqualTo "")});
+
     _ctrlMainWeapon ctrlSetText _picture;
-    _ctrlMainWeapon ctrlSetTooltip _name;
+    _ctrlMainWeapon ctrlSetTooltip (_tooltip joinString "");
 } else {
     _ctrlMainWeapon ctrlSetText "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
 };
@@ -57,9 +71,21 @@ if !(_mainWeapon isEqualTo "") then {
 if !(_handgun isEqualTo "") then {
     _config = [_handgun] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
-    _name = getText (_config >> "displayName");
+
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _description = (getText (_config >> "descriptionShort")) splitString "<>";
+    _tooltip append [_description select 0, "\n", _description select 2, "\n"];
+    _magazine = (handgunMagazine _player) select 0;
+    _config = [_magazine] call KPLIB_fnc_cratefiller_getConfigPath;
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _attachments = handgunItems _player;
+    {
+        _config = [_x] call KPLIB_fnc_cratefiller_getConfigPath;
+        _tooltip append [getText (_config >> "displayName"), "\n"];
+    } forEach (_attachments select {!(_x isEqualTo "")});
+
     _ctrlHandgun ctrlSetText _picture;
-    _ctrlHandgun ctrlSetTooltip _name;
+    _ctrlHandgun ctrlSetTooltip (_tooltip joinString "");
 } else {
     _ctrlHandgun ctrlSetText "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
 };
@@ -67,9 +93,21 @@ if !(_handgun isEqualTo "") then {
 if !(_secondaryWeapon isEqualTo "") then {
     _config = [_secondaryWeapon] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
-    _name = getText (_config >> "displayName");
+
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _description = (getText (_config >> "descriptionShort")) splitString "<>";
+    _tooltip append [_description select 0, "\n", _description select 2, "\n"];
+    _magazine = (secondaryWeaponMagazine _player) select 0;
+    _config = [_magazine] call KPLIB_fnc_cratefiller_getConfigPath;
+    _tooltip append [getText (_config >> "displayName"), "\n"];
+    _attachments = secondaryWeaponItems _player;
+    {
+        _config = [_x] call KPLIB_fnc_cratefiller_getConfigPath;
+        _tooltip append [getText (_config >> "displayName"), "\n"];
+    } forEach (_attachments select {!(_x isEqualTo "")});
+
     _ctrlSecondaryWeapon ctrlSetText _picture;
-    _ctrlSecondaryWeapon ctrlSetTooltip _name;
+    _ctrlSecondaryWeapon ctrlSetTooltip (_tooltip joinString "");
 } else {
     _ctrlSecondaryWeapon ctrlSetText "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
 };
