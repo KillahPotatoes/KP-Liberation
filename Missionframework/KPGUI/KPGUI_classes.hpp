@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-04-15
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -1110,6 +1110,44 @@ class KPGUI_PRE_DialogButton_LeftPanel: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_LP,KP_WIDTH_VAL_LP,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_LP,KP_HEIGHT_VAL_LP);
     w = KP_GETWPLAIN(KP_WIDTH_VAL_LP,1);
+};
+
+/*
+    --- Right panel sized classes ---
+*/
+
+// Title bar
+class KPGUI_PRE_DialogTitle_RightPanel: KPGUI_PRE_Title {
+    x = KP_GETX(KP_X_VAL_RP,KP_WIDTH_VAL_RP,0,1);
+    y = safeZoneY + safeZoneH * KP_Y_VAL_RP;
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_RP,1);
+};
+
+// Cross symbol
+class KPGUI_PRE_DialogCross_RightPanel: KPGUI_PRE_CloseCross {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_RP + KP_WIDTH_VAL_RP - 0.02);
+    y = KP_GETY_CROSS(KP_Y_VAL_RP);
+};
+
+// Version info
+class KPGUI_PRE_DialogVersionIcon_RightPanel: KPGUI_PRE_VersionIcon {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_RP + KP_WIDTH_VAL_RP - 0.04);
+    y = KP_GETY_CROSS(KP_Y_VAL_RP);
+};
+
+// Background
+class KPGUI_PRE_DialogBackground_RightPanel: KPGUI_PRE_Background {
+    x = KP_GETX(KP_X_VAL_RP,KP_WIDTH_VAL_RP,0,1);
+    y = KP_GETY_AREA(KP_Y_VAL_RP);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_RP,1);
+    h = safeZoneH * KP_HEIGHT_VAL_RP;
+};
+
+// Button
+class KPGUI_PRE_DialogButton_RightPanel: KPGUI_PRE_Button {
+    x = KP_GETX(KP_X_VAL_RP,KP_WIDTH_VAL_RP,0,1);
+    y = KP_GETY_BELOW(KP_Y_VAL_RP,KP_HEIGHT_VAL_RP);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_RP,1);
 };
 
 /*

@@ -4,7 +4,7 @@
     File: KPGUI_defines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2019-04-05
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -141,6 +141,16 @@
 
 #define KP_WIDTH_VAL_LP                 0.2
 #define KP_HEIGHT_VAL_LP                (1 - 2 * KP_Y_VAL_LP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+
+/*
+    --- Right panel dialog components ---
+*/
+
+#define KP_X_VAL_RP                     0.8 - 0.0025
+#define KP_Y_VAL_RP                     0.0025
+
+#define KP_WIDTH_VAL_RP                 0.2
+#define KP_HEIGHT_VAL_RP                (1 - 2 * KP_Y_VAL_RP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
 
 /*
     --- Small dialog components ---
