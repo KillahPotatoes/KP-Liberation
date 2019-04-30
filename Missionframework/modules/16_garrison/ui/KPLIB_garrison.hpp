@@ -4,7 +4,7 @@
     File: KPLIB_garrison.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-19
-    Last Update: 2019-04-28
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -59,6 +59,7 @@ class KPLIB_garrison {
             text = "$STR_KPLIB_DIALOG_GARRISON_ALERTNOTE";
             colorBackground[] = {0.8, 0, 0, 0.4};
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonInfantryLabel: KPGUI_PRE_Text {
@@ -68,6 +69,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,2,16);
             w = KP_GETW(KP_WIDTH_VAL,(16/3));
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonInfantryAmount: KPLIB_GarrisonInfantryLabel {
@@ -76,6 +78,7 @@ class KPLIB_garrison {
             style = 1;
             x = KP_GETCX(KP_X_VAL,KP_WIDTH_VAL,7,16);
             w = KP_GETW(KP_WIDTH_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonInfantryBox: KPGUI_PRE_EditBox {
@@ -86,6 +89,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,2,16);
             w = KP_GETW(KP_WIDTH_VAL,(16/3));
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonInfantryButton: KPGUI_PRE_InlineButton {
@@ -97,6 +101,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,2,16);
             w = KP_GETW(KP_WIDTH_VAL,16);
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonLightLabel: KPLIB_GarrisonInfantryLabel {
@@ -152,6 +157,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,5,16);
             w = KP_GETW(KP_WIDTH_VAL,2);
             h = KP_GETH(KP_HEIGHT_VAL,(16/11));
+            show = 0;
         };
 
         class KPLIB_GarrisonReinforceTitle: KPGUI_PRE_InlineTitle {
@@ -161,6 +167,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,0,16);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonGroupsLabel: KPGUI_PRE_Text {
@@ -170,6 +177,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,16);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonGroupList: KPGUI_PRE_Listbox {
@@ -179,6 +187,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,2,16);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,(16/5));
+            show = 0;
         };
 
         class KPLIB_GarrisonGroupButton: KPGUI_PRE_InlineButton {
@@ -190,6 +199,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,7,16);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonUnitsLabel: KPGUI_PRE_Text {
@@ -199,6 +209,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,1,2);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,16);
+            show = 0;
         };
 
         class KPLIB_GarrisonUnitList: KPGUI_PRE_Listbox {
@@ -208,6 +219,7 @@ class KPLIB_garrison {
             y = KP_GETCY(KP_Y_VAL,KP_HEIGHT_VAL,9,16);
             w = KP_GETW(KP_WIDTH_VAL,4);
             h = KP_GETH(KP_HEIGHT_VAL,(16/6));
+            show = 0;
         };
 
         class KPLIB_GarrisonUnitButton: KPLIB_GarrisonGroupButton {
