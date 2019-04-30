@@ -13,6 +13,8 @@ jobs:
           name: Pack PBOs
           command: npx gulp
           working_directory: ~/project/_tools
+      - store_artifacts:
+          path: ~/project/_tools/build/pbo
   validate:
     docker:
       - image: circleci/python
