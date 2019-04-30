@@ -949,6 +949,10 @@
             <German>KP Kistenfüller</German>
             <Polish>KP Cratefiller</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLETOOLS">
+            <English>KP Cratefiller Tools</English>
+            <German>KP Kistenfüller Werkzeuge</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CATEGORY_TT">
             <English>Choose a category from which you want to stow items.</English>
             <German>Wähle eine Kategorie aus, von der du Gegenstände verladen willst.</German>
@@ -972,6 +976,10 @@
             <English>Shows the current cargo space.</English>
             <German>Zeigt den aktuellen Laderaumstand.</German>
             <Polish>Pokazuje aktualny stan załadunku.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_GROUPS_TT">
+            <English>Select a group, whose players should be shown.</English>
+            <German>Wähle eine Gruppe, deren Spieler angezeigt werden sollen.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT">
             <English>Select an inventory that you want to edit.</English>
@@ -1018,6 +1026,10 @@
             <German>Waffen</German>
             <Polish>Bronie</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT">
+            <English>Select a player, whose weapons should be shown.</English>
+            <German>Wähle einen Spieler, dessen Waffen angezeigt werden sollen.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT">
             <English>Search for new inventories.</English>
             <German>Nach neuem Laderaum suchen.</German>
@@ -1041,6 +1053,10 @@
             <English>Transport medium</English>
             <German>Transportmedium</German>
             <Polish>Środek transportu</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TOOLS_TT">
+            <English>Toggle cratefiller tools display.</English>
+            <German>Kistenfüller Werkzeuge umschalten.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_WEAPONSELECTION_TT">
             <English>Choose a weapon to find the right magazines or attachments.</English>
