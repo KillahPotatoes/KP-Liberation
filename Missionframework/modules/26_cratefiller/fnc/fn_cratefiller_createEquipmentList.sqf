@@ -5,7 +5,7 @@
     File: fn_cratefiller_createEquipmentList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-15
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -41,7 +41,6 @@ private _catIndex = lbCurSel _ctrlCat;
 if (_catIndex isEqualTo -1) exitWith {};
 
 // Variables
-private _index = 0;
 private _config = "";
 
 switch (_catIndex) do {
@@ -49,11 +48,11 @@ switch (_catIndex) do {
     // Weapons
     case 0 : {
         {
-            _index = _ctrlEquipment lbAdd (_x select 0);
-            _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
+            _ctrlEquipment lnbAddRow ["", _x select 0];
+            _ctrlEquipment lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
         } forEach (CGVAR("weapons", []));
+        CCSVAR("activeCat", "weapons", false);
     };
 
     // Magazines
@@ -67,6 +66,7 @@ switch (_catIndex) do {
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (CGVAR("weapons", []));
+        CCSVAR("activeCat", "magazines", false);
     };
 
     // Attachments
@@ -80,46 +80,47 @@ switch (_catIndex) do {
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
             _ctrlWeapon lbSetPicture [_index, getText (_config >> "picture")];
         } forEach (CGVAR("weapons", []));
+        CCSVAR("activeCat", "attachments", false);
     };
 
     // Grenades
     case 3 : {
         {
-            _index = _ctrlEquipment lbAdd (_x select 0);
-            _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
+            _ctrlEquipment lnbAddRow ["", _x select 0];
+            _ctrlEquipment lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
         } forEach (CGVAR("grenades", []));
+        CCSVAR("activeCat", "grenades", false);
     };
 
     // Explosives
     case 4 : {
         {
-            _index = _ctrlEquipment lbAdd (_x select 0);
-            _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
+            _ctrlEquipment lnbAddRow ["", _x select 0];
+            _ctrlEquipment lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
         } forEach (CGVAR("explosives", []));
+        CCSVAR("activeCat", "explosives", false);
     };
 
     // Items
     case 5 : {
         {
-            _index = _ctrlEquipment lbAdd (_x select 0);
-            _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
+            _ctrlEquipment lnbAddRow ["", _x select 0];
+            _ctrlEquipment lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
         } forEach (CGVAR("items", []));
+        CCSVAR("activeCat", "items", false);
     };
 
     // Backpacks
     case 6 : {
         {
-            _index = _ctrlEquipment lbAdd (_x select 0);
-            _ctrlEquipment lbSetData [_index , _x select 1];
             _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-            _ctrlEquipment lbSetPicture [_index, getText (_config >> "picture")];
+            _ctrlEquipment lnbAddRow ["", _x select 0];
+            _ctrlEquipment lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
         } forEach (CGVAR("backpacks", []));
+        CCSVAR("activeCat", "backpacks", false);
     };
 
 };

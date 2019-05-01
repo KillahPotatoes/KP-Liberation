@@ -4,7 +4,7 @@
     File: fn_cratefiller_showInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-15
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,8 +25,8 @@ private _ctlrProgress = _dialog displayCtrl 68749;
 // Check if dialog is open
 if (isNull _dialog) exitWith {};
 
-// Reset variables
-lbClear _ctrlInventory;
+// Reset Controls
+lnbClear _ctrlInventory;
 
 // Variables
 private _config = "";
@@ -42,9 +42,9 @@ private _inventory = [] call KPLIB_fnc_cratefiller_getInventory;
 
 // Fill the controls
 {
-    _index = _ctrlInventory lbAdd (format ["%1x %2", str (_x select 2), _x select 0]);
     _config = [_x select 1] call KPLIB_fnc_cratefiller_getConfigPath;
-    _ctrlInventory lbSetPicture [_index, getText (_config >> "picture")];
+    _index = _ctrlInventory lnbAddRow ["", format ["%1x", str (_x select 2)], _x select 0];
+    _ctrlInventory lnbSetPicture [[_foreachIndex, 0], getText (_config >> "picture")];
 } forEach _inventory;
 
 private _load = 0;

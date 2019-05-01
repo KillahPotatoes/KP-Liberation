@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-30
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -119,8 +119,6 @@ class KPLIB_cratefiller {
 
     class controls {
 
-
-
         class KPLIB_ToolsButton: KPGUI_PRE_DialogCrossS {
             idc = 687416;
             text = "KPGUI\res\icon_tools.paa";
@@ -181,39 +179,29 @@ class KPLIB_cratefiller {
             onKeyUp = "[] call KPLIB_fnc_cratefiller_search";
         };
 
-        class KPLIB_EquipmentList: KPGUI_PRE_ListBox {
+        class KPLIB_LeftEquipmentListButton: KPGUI_PRE_BUTTON {
+            idc = 687420;
+            text = "-";
+            onButtonClick = "[68745] call KPLIB_fnc_cratefiller_removeEquipment";
+        };
+
+        class KPLIB_RightEquipmentListButton: KPGUI_PRE_BUTTON {
+            idc = 687421;
+            text = "+";
+            onButtonClick = "[68745] call KPLIB_fnc_cratefiller_addEquipment";
+        };
+
+        class KPLIB_EquipmentList: KPGUI_PRE_ListNBox {
             idc = 68745;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,(16/7));
+            w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/38));
-        };
 
-        class KPLIB_ButtonAddEquipment: KPGUI_PRE_InlineButton {
-            text = "+ 1";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,7,16);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,16,96);
-            w = KP_GETW(KP_WIDTH_VAL_S,16);
-            h = KP_GETH(KP_HEIGHT_VAL_S,(96/19));
-            onButtonClick = "[1] call KPLIB_fnc_cratefiller_addEquipment";
-        };
+            columns[] = { 0.05, 0.2};
 
-        class KPLIB_ButtonAddEquipment5: KPLIB_ButtonAddEquipment {
-            text = "+ 5";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,35,96);
-            onButtonClick = "[5] call KPLIB_fnc_cratefiller_addEquipment";
-        };
-
-        class KPLIB_ButtonAddEquipment10: KPLIB_ButtonAddEquipment {
-            text = "+ 10";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,54,96);
-            onButtonClick = "[10] call KPLIB_fnc_cratefiller_addEquipment";
-        };
-
-        class KPLIB_ButtonAddEquipment20: KPLIB_ButtonAddEquipment {
-            text = "+ 20";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,73,96);
-            onButtonClick = "[20] call KPLIB_fnc_cratefiller_addEquipment";
+            idcLeft = 687420;
+            idcRight = 687421;
         };
 
         // Inventory
@@ -261,39 +249,29 @@ class KPLIB_cratefiller {
             action = "[] call KPLIB_fnc_cratefiller_deletePreset";
         };
 
-        class KPLIB_InventoryList: KPGUI_PRE_ListBox {
+        class KPLIB_LeftInventoryListButton: KPGUI_PRE_BUTTON {
+            idc = 687422;
+            text = "-";
+            onButtonClick = "[68748] call KPLIB_fnc_cratefiller_removeEquipment";
+        };
+
+        class KPLIB_RightInventoryListButton: KPGUI_PRE_BUTTON {
+            idc = 687423;
+            text = "+";
+            onButtonClick = "[68748] call KPLIB_fnc_cratefiller_addEquipment";
+        };
+
+        class KPLIB_InventoryList: KPGUI_PRE_ListNBox {
             idc = 68748;
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,8,16);
+            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,12,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,(16/7));
+            w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/34));
-        };
 
-        class KPLIB_ButtonRemoveEquipment: KPGUI_PRE_InlineButton {
-            text = "- 1";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,15,16);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,24,96);
-            w = KP_GETW(KP_WIDTH_VAL_S,16);
-            h = KP_GETH(KP_HEIGHT_VAL_S,(96/17));
-            onButtonClick = "[1] call KPLIB_fnc_cratefiller_removeEquipment";
-        };
+            columns[] = { 0.05, 0.2, 0.3};
 
-        class KPLIB_ButtonRemoveEquipment5: KPLIB_ButtonRemoveEquipment {
-            text = "- 5";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,41,96);
-            onButtonClick = "[5] call KPLIB_fnc_cratefiller_removeEquipment";
-        };
-
-        class KPLIB_ButtonRemoveEquipment10: KPLIB_ButtonRemoveEquipment {
-            text = "- 10";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,58,96);
-            onButtonClick = "[10] call KPLIB_fnc_cratefiller_removeEquipment";
-        };
-
-        class KPLIB_ButtonRemoveEquipmentClear: KPLIB_ButtonRemoveEquipment {
-            text = "Clear";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,75,96);
-            onButtonClick = "[0] call KPLIB_fnc_cratefiller_removeEquipment";
+            idcLeft = 687422;
+            idcRight = 687423;
         };
 
         class KPLIB_ProgressBar : KPGUI_PRE_ProgressBar {
