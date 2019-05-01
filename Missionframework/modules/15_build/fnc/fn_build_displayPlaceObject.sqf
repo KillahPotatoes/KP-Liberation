@@ -5,7 +5,7 @@
     File: fn_build_displayPlaceObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-11-09
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,6 +35,8 @@ if !(_className isEqualTo "") exitWith {
     ([] call KPLIB_fnc_build_surfaceUnderCursor) params ["_cursorWorldPosASL", "_cursorSurfaceNormal"];
     _obj setPosASL _cursorWorldPosASL;
     _obj setVectorUp _cursorSurfaceNormal;
+
+    _obj setVariable ["KPLIB_buildPrice", [_priceSupplies, _priceAmmo, _priceFuel]];
 
     LGVAR(buildQueue) pushBack _obj;
 

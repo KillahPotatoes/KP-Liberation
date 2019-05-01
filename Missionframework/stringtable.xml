@@ -574,6 +574,11 @@
             <Turkish>İnşa Et</Turkish>
         </Key>
 
+        <!-- BUILD DIALOG -->
+        <Key ID="STR_KPLIB_DIALOG_BUILD_QUEUE_TITLE">
+            <English>BUILD QUEUE</English>
+        </Key>
+
         <!-- REDEPLOY/RESPAWN DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_TITLE">
             <English>DEPLOYMENT</English>
@@ -1059,6 +1064,9 @@
             <Portuguese>Os seguintes itens não são permitidos:</Portuguese>
             <Russian>Следующие элементы не разрешены:</Russian>
             <Turkish>Şu eşyalar yasaklı:</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_BUILD_NO_RESOURCES">
+            <English>Not enough resources to build %1.</English>
         </Key>
         <Key ID="STR_KPLIB_HINT_CLEARFULL">
             <English>Selected storage is emptied.</English>
