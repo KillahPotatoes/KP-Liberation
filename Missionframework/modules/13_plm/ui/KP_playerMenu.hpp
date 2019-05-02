@@ -4,7 +4,7 @@
     File: KP_playerMenu.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-03
-    Last Update: 2018-11-10
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -175,7 +175,7 @@ class KP_playerMenu {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,24);
             w = KP_GETW(KP_WIDTH_VAL_C,(4/3));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-        }
+        };
 
         class KP_ButtonRename: KP_ButtonCreate {
             text = "$STR_KPLIB_DIALOG_BUTTON_RENAME";

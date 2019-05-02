@@ -5,6 +5,7 @@
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
     Last Update: 2019-04-16
+
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -118,7 +119,7 @@ class KPGUI_PRE_VersionIcon: KPGUI_PRE_CloseCross {
     text = "\A3\Ui_f\data\Map\Markers\Military\unknown_CA.paa";
     tooltip = "";
     action = "";
-}
+};
 
 // General background for the dialog area
 class KPGUI_PRE_Background {
