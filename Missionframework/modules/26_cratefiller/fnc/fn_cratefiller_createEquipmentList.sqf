@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_createEquipmentList
@@ -5,7 +6,7 @@
     File: fn_cratefiller_createEquipmentList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-01
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,12 +20,11 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlCat = _dialog displayCtrl 68741;
-private _ctrlWeapon = _dialog displayCtrl 68742;
-private _ctrlSearch = _dialog displayCtrl 68743;
-private _ctrlClearSearch = _dialog displayCtrl 68744;
-private _ctrlEquipment = _dialog displayCtrl 68745;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlCat = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT;
+private _ctrlWeapon = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOWEAPONS;
+private _ctrlSearch = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_SEARCHBAR;
+private _ctrlEquipment = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_EQUIPMENTLIST;
 
 // Clear the lists
 lbClear _ctrlWeapon;
@@ -59,7 +59,6 @@ switch (_catIndex) do {
     case 1 : {
         _ctrlWeapon ctrlShow true;
         _ctrlSearch ctrlShow true;
-        _ctrlClearSearch ctrlShow true;
         {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];
@@ -73,7 +72,6 @@ switch (_catIndex) do {
     case 2 : {
         _ctrlWeapon ctrlShow true;
         _ctrlSearch ctrlShow true;
-        _ctrlClearSearch ctrlShow true;
         {
             _index = _ctrlWeapon lbAdd (_x select 0);
             _ctrlWeapon lbSetData [_index , _x select 1];

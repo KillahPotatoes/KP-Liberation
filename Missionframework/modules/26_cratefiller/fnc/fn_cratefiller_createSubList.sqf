@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_createSubList
@@ -5,7 +6,7 @@
     File: fn_cratefiller_createSubList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-01
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,10 +20,10 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlCat = _dialog displayCtrl 68741;
-private _ctrlWeapon = _dialog displayCtrl 68742;
-private _ctrlEquipment = _dialog displayCtrl 68745;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlCat = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT;
+private _ctrlWeapon = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOWEAPONS;
+private _ctrlEquipment = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_EQUIPMENTLIST;
 
 // Clear the lists
 lbClear _ctrlEquipment;

@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_getPlayerInventory
@@ -5,7 +6,7 @@
     File: fn_cratefiller_getPlayerInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-27
-    Last Update: 2019-04-30
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -20,11 +21,11 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlPlayers = _dialog displayCtrl 687412;
-private _ctrlMainWeapon = _dialog displayCtrl 687413;
-private _ctrlHandgun = _dialog displayCtrl 687414;
-private _ctrlSecondaryWeapon = _dialog displayCtrl 687415;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlPlayers = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOPLAYERS;
+private _ctrlMainWeapon = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_MAINWEAPON;
+private _ctrlHandgun = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_HANDGUN;
+private _ctrlSecondaryWeapon = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_SECONDARYWEAPON;
 
 // Read controls
 private _index = lbCurSel _ctrlPlayers;

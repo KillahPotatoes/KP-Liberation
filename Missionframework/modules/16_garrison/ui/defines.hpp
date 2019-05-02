@@ -1,10 +1,10 @@
 /*
     KP LIBERATION GARRISON UI DEFINES
 
-    File: defines.sqf
+    File: defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-03-31
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:

@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_cratefiller_openDialog
 
     File: fn_cratefiller_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-01
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,18 +23,16 @@ createDialog "KPLIB_cratefiller";
 disableSerialization;
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlCat = _dialog displayCtrl 68741;
-private _ctrlWeapon = _dialog displayCtrl 68742;
-private _ctrlSearch = _dialog displayCtrl 68743;
-private _ctrlClearSearch = _dialog displayCtrl 68744;
-private _ctrlToolsGroup = _dialog displayCtrl 687410;
-private _ctrlTools = _dialog displayCtrl 687416;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlCat = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT;
+private _ctrlWeapon = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOWEAPONS;
+private _ctrlSearch = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_SEARCHBAR;
+private _ctrlToolsGroup = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_GROUPTOOLS;
+private _ctrlTools = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_BUTTONTOOLS;
 
 // Hide controls
 _ctrlWeapon ctrlShow false;
 _ctrlSearch ctrlShow false;
-_ctrlClearSearch ctrlShow false;
 _ctrlToolsGroup ctrlShow false;
 
 // Disable the tools button on deactivation

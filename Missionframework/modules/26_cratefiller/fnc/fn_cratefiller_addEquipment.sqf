@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_cratefiller_addEquipment
@@ -23,7 +24,7 @@ params [
 ];
 
 // Dialog controls
-private _dialog = findDisplay 758026;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
 private _ctrlActive = _dialog displayCtrl _controlId;
 
 // Read controls
@@ -46,7 +47,7 @@ if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWi
 // Variables
 private _item = "";
 
-if (_controlId isEqualTo 68748) then {
+if (_controlId isEqualTo KPLIB_IDC_CRATEFILLER_INVENTORYLIST) then {
     // Item selection
     _item = (_inventory select _indexActive) select 1;
 } else {

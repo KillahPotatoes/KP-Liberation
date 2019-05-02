@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_cratefiller_showPresets
 
     File: fn_cratefiller_showPresets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-15
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -18,8 +19,8 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlImport = _dialog displayCtrl 68747;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlImport = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_IMPORTNAME;
 
 // Reset variables
 lbClear _ctrlImport;

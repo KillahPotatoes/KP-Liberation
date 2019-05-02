@@ -13,7 +13,7 @@
 
 
 class KPLIB_cratefiller {
-    idd = 758026;
+    idd = KPLIB_IDC_CRATEFILLER_DIALOG;
     movingEnable = 0;
 
     class controlsBackground {
@@ -52,7 +52,7 @@ class KPLIB_cratefiller {
         // Tools controlsGroup
 
         class KPLIB_GroupTools: KPGUI_PRE_ControlsGroupNoScrollbars {
-            idc = 687410;
+            idc = KPLIB_IDC_CRATEFILLER_GROUPTOOLS;
             x = safezoneX;
             y = safezoneY;
             w = safezoneW;
@@ -72,7 +72,7 @@ class KPLIB_cratefiller {
                 };
 
                 class KPLIB_ComboGroups: KPGUI_PRE_Combo {
-                    idc = 687411;
+                    idc = KPLIB_IDC_CRATEFILLER_COMBOGROUPS;
                     x = KP_GETCX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,0,48) - safezoneY;
                     w = KP_GETW(KP_WIDTH_VAL_SR,1);
@@ -82,14 +82,14 @@ class KPLIB_cratefiller {
                 };
 
                 class KPLIB_ComboPlayers: KPLIB_ComboGroups {
-                    idc = 687412;
+                    idc = KPLIB_IDC_CRATEFILLER_COMBOPLAYERS;
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,2,48) - safezoneY;
                     tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT";
                     onLBSelChanged = "[] call KPLIB_fnc_cratefiller_getPlayerInventory";
                 };
 
                 class KPLIB_MainWeapon: KPGUI_PRE_PictureRatio {
-                    idc = 687413;
+                    idc = KPLIB_IDC_CRATEFILLER_MAINWEAPON;
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     x = KP_GETCX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,6,48) - safezoneY;
@@ -97,14 +97,14 @@ class KPLIB_cratefiller {
                     h = KP_GETH(KP_HEIGHT_VAL_SR,4);
                 };
 
-                class KPLIB_HandWeapon: KPLIB_MainWeapon {
-                    idc = 687414;
+                class KPLIB_Handgun: KPLIB_MainWeapon {
+                    idc = KPLIB_IDC_CRATEFILLER_HANDGUN;
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,21,48) - safezoneY;
                 };
 
                 class KPLIB_SecondaryWeapon: KPLIB_MainWeapon {
-                    idc = 687415;
+                    idc = KPLIB_IDC_CRATEFILLER_SECONDARYWEAPONS;
                     text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
                     y = KP_GETCY(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR,36,48) - safezoneY;
                 };
@@ -119,8 +119,8 @@ class KPLIB_cratefiller {
 
     class controls {
 
-        class KPLIB_ToolsButton: KPGUI_PRE_DialogCrossS {
-            idc = 687416;
+        class KPLIB_ButtonTools: KPGUI_PRE_DialogCrossS {
+            idc = KPLIB_IDC_CRATEFILLER_BUTTONTOOLS;
             text = "KPGUI\res\icon_tools.paa";
             x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.04);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_TOOLS_TT";
@@ -130,7 +130,7 @@ class KPLIB_cratefiller {
         // Crates
 
         class KPLIB_ComboCargo: KPGUI_PRE_Combo {
-            idc = 68740;
+            idc = KPLIB_IDC_CRATEFILLER_COMBOCARGO;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
@@ -152,7 +152,7 @@ class KPLIB_cratefiller {
         // Equipment
 
         class KPLIB_ComboEquipment: KPGUI_PRE_Combo {
-            idc = 68741;
+            idc = KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -162,7 +162,7 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_ComboWeapons: KPLIB_ComboEquipment {
-            idc = 68742;
+            idc = KPLIB_IDC_CRATEFILLER_COMBOWEAPONS;
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
             w = KP_GETW(KP_WIDTH_VAL_S,3);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_WEAPONSELECTION_TT";
@@ -170,7 +170,7 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_SearchBar: KPGUI_PRE_EditBox {
-            idc = 68743;
+            idc = KPLIB_IDC_CRATEFILLER_SEARCHBAR;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,3);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
             w = KP_GETW(KP_WIDTH_VAL_S,6);
@@ -180,19 +180,19 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_LeftEquipmentListButton: KPGUI_PRE_BUTTON {
-            idc = 687420;
+            idc = KPLIB_IDC_CRATEFILLER_LEFTEQUIPMENTBUTTON;
             text = "-";
             onButtonClick = "[68745] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_RightEquipmentListButton: KPGUI_PRE_BUTTON {
-            idc = 687421;
+            idc = KPLIB_IDC_CRATEFILLER_RIGHTEQUIPMENTBUTTON;
             text = "+";
             onButtonClick = "[68745] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_EquipmentList: KPGUI_PRE_ListNBox {
-            idc = 68745;
+            idc = KPLIB_IDC_CRATEFILLER_EQUIPMENTLIST;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -200,14 +200,14 @@ class KPLIB_cratefiller {
 
             columns[] = { 0.05, 0.2};
 
-            idcLeft = 687420;
-            idcRight = 687421;
+            idcLeft = KPLIB_IDC_CRATEFILLER_LEFTEQUIPMENTBUTTON;
+            idcRight = KPLIB_IDC_CRATEFILLER_RIGHTEQUIPMENTBUTTON;
         };
 
         // Inventory
 
         class KPLIB_ExportName: KPLIB_SearchBar {
-            idc = 68746;
+            idc = KPLIB_IDC_CRATEFILLER_EXPORTNAME;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,2,4);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
             w = KP_GETW(KP_WIDTH_VAL_S,4);
@@ -215,7 +215,7 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_ImportName: KPGUI_PRE_Combo {
-            idc = 68747;
+            idc = KPLIB_IDC_CRATEFILLER_IMPORTNAME;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,3,4);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,8,48);
             w = KP_GETW(KP_WIDTH_VAL_S,4);
@@ -250,19 +250,19 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_LeftInventoryListButton: KPGUI_PRE_BUTTON {
-            idc = 687422;
+            idc = KPLIB_IDC_CRATEFILLER_LEFTINVENTORYBUTTON;
             text = "-";
             onButtonClick = "[68748] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_RightInventoryListButton: KPGUI_PRE_BUTTON {
-            idc = 687423;
+            idc = KPLIB_IDC_CRATEFILLER_RIGHTINVENTORYBUTTON;
             text = "+";
             onButtonClick = "[68748] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_InventoryList: KPGUI_PRE_ListNBox {
-            idc = 68748;
+            idc = KPLIB_IDC_CRATEFILLER_INVENTORYLIST;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,12,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -270,12 +270,12 @@ class KPLIB_cratefiller {
 
             columns[] = { 0.05, 0.2, 0.3};
 
-            idcLeft = 687422;
-            idcRight = 687423;
+            idcLeft = KPLIB_IDC_CRATEFILLER_LEFTINVENTORYBUTTON;
+            idcRight = KPLIB_IDC_CRATEFILLER_RIGHTINVENTORYBUTTON;
         };
 
         class KPLIB_ProgressBar : KPGUI_PRE_ProgressBar {
-            idc = 68749;
+            idc = KPLIB_IDC_CRATEFILLER_PROGRESSBAR;
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
             w = KP_GETW(KP_WIDTH_VAL_S,1);
