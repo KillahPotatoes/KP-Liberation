@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_logistic_calcCosts
 
     File: fn_logistic_calcCosts.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-04-11
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,13 +20,13 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 7580233;
-private _ctrlCargo = _dialog displayCtrl 68741;
-private _ctrlCosts = _dialog displayCtrl 68743;
-private _ctrlSlider = _dialog displayCtrl 68744;
-private _ctrlSliderValue = _dialog displayCtrl 68745;
-private _ctrlTotalCosts = _dialog displayCtrl 68746;
-private _resupplyButton = _dialog displayCtrl 68747;
+private _dialog = findDisplay KPLIB_IDC_LOGISTIC_RESUPPLY_DIALOG;
+private _ctrlCargo = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_COMBOCARGO;
+private _ctrlCosts = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_CARGOCOSTSVALUE;
+private _ctrlSlider = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_RESUPPLYCOUNT;
+private _ctrlSliderValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_SLIDERVALUE;
+private _ctrlTotalCosts = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_TOTALCOSTSVALUE;
+private _resupplyButton = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_BUTTONRESUPPLY;
 
 // Read the controls
 private _costs = parseNumber (ctrlText _ctrlCosts);
