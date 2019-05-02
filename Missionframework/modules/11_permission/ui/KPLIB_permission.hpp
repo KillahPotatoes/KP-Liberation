@@ -4,7 +4,7 @@
     File: KPLIB_permission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-04-14
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 */
 
 class KPLIB_permission {
-    idd = 758011;
+    idd = KPLIB_IDC_PERMISSION_DIALOG;
     movingEnable = 0;
 
     class controlsBackground {
@@ -28,7 +28,7 @@ class KPLIB_permission {
     class controls {
 
         class KPLIB_PlayerList: KPGUI_PRE_ListBox {
-            idc = 68740;
+            idc = KPLIB_IDC_PERMISSION_PLAYERLIST;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,48);
             w = KP_GETW(KP_WIDTH_VAL_C,2);
@@ -37,7 +37,7 @@ class KPLIB_permission {
         };
 
         class KPLIB_Permissions: KPGUI_PRE_ControlsGroup {
-            idc = 68741;
+            idc = KPLIB_IDC_PERMISSION_PERMISSIONS;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,1,2);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,1);
             w = KP_GETW(KP_WIDTH_VAL_C,2);

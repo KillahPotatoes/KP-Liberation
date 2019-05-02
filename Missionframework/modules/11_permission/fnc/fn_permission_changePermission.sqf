@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_permission_changePermission
@@ -5,7 +6,7 @@
     File: fn_permission_changePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2019-04-11
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -25,8 +26,8 @@ params [
 _args params ["_control"];
 
 // Dialog controls
-private _dialog = findDisplay 758011;
-private _ctrlPlayerList = _dialog displayCtrl 68740;
+private _dialog = findDisplay KPLIB_IDC_PERMISSION_DIALOG;
+private _ctrlPlayerList = _dialog displayCtrl KPLIB_IDC_PERMISSION_PLAYERLIST;
 
 // Read the control
 (_control getVariable ["Data", ["", false]]) params [

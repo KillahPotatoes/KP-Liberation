@@ -1,4 +1,5 @@
 #include "..\..\..\KPGUI\KPGUI_defines.hpp"
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_permission_openDialog
@@ -6,7 +7,7 @@
     File: fn_permission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2019-05-01
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -28,9 +29,9 @@ createDialog "KPLIB_permission";
 disableSerialization;
 
 // Dialog controls
-private _dialog = findDisplay 758011;
-private _ctrlPlayerList = _dialog displayCtrl 68740;
-private _ctrlPermissionsGroup = _dialog displayCtrl 68741;
+private _dialog = findDisplay KPLIB_IDC_PERMISSION_DIALOG;
+private _ctrlPlayerList = _dialog displayCtrl KPLIB_IDC_PERMISSION_PLAYERLIST;
+private _ctrlPermissionsGroup = _dialog displayCtrl KPLIB_IDC_PERMISSION_PERMISSIONS;
 
 // Fill the controls
 private _index = _ctrlPlayerList lbAdd (localize "STR_KPLIB_DIALOG_PERMISSION_DEFAULT");
