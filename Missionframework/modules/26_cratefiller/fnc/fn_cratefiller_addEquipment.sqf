@@ -6,7 +6,7 @@
     File: fn_cratefiller_addEquipment.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -31,7 +31,9 @@ private _ctrlActive = _dialog displayCtrl _controlId;
 private _indexActive = lbCurSel _ctrlActive;
 
 // Check for empty selection
-if (_indexActive isEqualTo -1) exitWith {};
+if (_indexActive isEqualTo -1 || ((lnbSize _ctrlActive) select 0) isEqualTo 0) exitWith {
+    [localize "STR_KPLIB_HINT_SELECTION"] call CBA_fnc_notify;
+};
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
@@ -58,6 +60,7 @@ if (_controlId isEqualTo KPLIB_IDC_CRATEFILLER_INVENTORYLIST) then {
 
 // Check for enough inventory capacity
 if (!(_storage canAdd _item)) exitWith {
+    CBA_ui_notifyQueue = [];
     [localize "STR_KPLIB_HINT_FULL"] call CBA_fnc_notify;
 };
 
@@ -73,6 +76,7 @@ if (_item isKindOf "Bag_Base") then {
 private _config = [_item] call KPLIB_fnc_cratefiller_getConfigPath;
 private _name = (getText (_config >> "displayName"));
 private _picture = (getText (_config >> "picture"));
+CBA_ui_notifyQueue = [];
 [
     [_picture, 2],
     [format [localize "STR_KPLIB_HINT_ADDED", _name, 1]]
