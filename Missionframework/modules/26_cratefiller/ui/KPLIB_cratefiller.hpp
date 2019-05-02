@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -182,13 +182,13 @@ class KPLIB_cratefiller {
         class KPLIB_LeftEquipmentListButton: KPGUI_PRE_BUTTON {
             idc = KPLIB_IDC_CRATEFILLER_LEFTEQUIPMENTBUTTON;
             text = "-";
-            onButtonClick = "[68745] call KPLIB_fnc_cratefiller_removeEquipment";
+            onButtonClick = "[687413] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_RightEquipmentListButton: KPGUI_PRE_BUTTON {
             idc = KPLIB_IDC_CRATEFILLER_RIGHTEQUIPMENTBUTTON;
             text = "+";
-            onButtonClick = "[68745] call KPLIB_fnc_cratefiller_addEquipment";
+            onButtonClick = "[687413] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_EquipmentList: KPGUI_PRE_ListNBox {
@@ -252,13 +252,13 @@ class KPLIB_cratefiller {
         class KPLIB_LeftInventoryListButton: KPGUI_PRE_BUTTON {
             idc = KPLIB_IDC_CRATEFILLER_LEFTINVENTORYBUTTON;
             text = "-";
-            onButtonClick = "[68748] call KPLIB_fnc_cratefiller_removeEquipment";
+            onButtonClick = "[687418] call KPLIB_fnc_cratefiller_removeEquipment";
         };
 
         class KPLIB_RightInventoryListButton: KPGUI_PRE_BUTTON {
             idc = KPLIB_IDC_CRATEFILLER_RIGHTINVENTORYBUTTON;
             text = "+";
-            onButtonClick = "[68748] call KPLIB_fnc_cratefiller_addEquipment";
+            onButtonClick = "[687418] call KPLIB_fnc_cratefiller_addEquipment";
         };
 
         class KPLIB_InventoryList: KPGUI_PRE_ListNBox {

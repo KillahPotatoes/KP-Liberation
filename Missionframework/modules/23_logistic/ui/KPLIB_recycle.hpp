@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -74,7 +74,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_TextSupplyStateValue: KPGUI_PRE_Text {
-            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYCONDITION;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYSTATEVALUE;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -93,7 +93,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_TextSupplyRefundValue: KPGUI_PRE_Text {
-            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYREFUND;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYREFUNDVALUE;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
