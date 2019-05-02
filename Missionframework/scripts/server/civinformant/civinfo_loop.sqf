@@ -4,7 +4,7 @@ if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATI
 
 while {true} do {
 	uiSleep (KP_liberation_civinfo_min + round (random (KP_liberation_civinfo_max - KP_liberation_civinfo_min)));
-	
+
 	if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant sleep passed";_text remoteExec ["diag_log",2];};
 
 	waitUntil {
@@ -18,7 +18,7 @@ while {true} do {
 	if ((KP_liberation_civinfo_chance >= (random 100)) && GRLIB_endgame == 0) then {
 		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
-		
+
 		private _grp = createGroup [GRLIB_side_civilian, true];
 		private _informant = _grp createUnit [(selectRandom civilians), getMarkerPos _sector, [], 0, "NONE"];
 		private _waiting_time = KP_liberation_civinfo_duration;
@@ -39,10 +39,10 @@ while {true} do {
 
 		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant];_text remoteExec ["diag_log",2];};
 
-		[0, getPos _informant] remoteExec ["civinfo_notifications"];
+		[0, [((((getPos _informant) select 0) + 200) - random 400),((((getPos _informant) select 1) + 200) - random 400),0]] remoteExec ["civinfo_notifications"];
 
 		while {alive _informant && ((side (group _informant)) == GRLIB_side_civilian) && _waiting_time > 0} do {
-			uiSleep 1;			
+			uiSleep 1;
 			private _player_near = false;
 			{
 				if (((_x distance _informant) < 150) && (alive _x)) exitWith {_player_near = true};

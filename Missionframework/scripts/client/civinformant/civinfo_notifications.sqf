@@ -9,7 +9,9 @@ switch (_notif_id) do {
 		["lib_civ_informant_start", [markertext ([10000, _pos] call F_getNearestSector)]] call BIS_fnc_showNotification;
 		private _informant_marker = createMarkerLocal ["informantmarker", _pos];
 		_informant_marker setMarkerColorLocal "ColorCIV";
-		_informant_marker setMarkerTypeLocal "hd_unknown";
+		_informant_marker setMarkerShape "ELLIPSE";
+		_informant_marker setMarkerBrush "FDiagonal";
+		_informant_marker setMarkerSize [500,500];
 	};
 	case 1: {
 		["lib_civ_informant_success"] call BIS_fnc_showNotification;

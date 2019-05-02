@@ -169,6 +169,7 @@ class Missions
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
 * Tweaked: Disabled script that switched locality of all blufor units to the commander machine. (should fix UAV issue)
 * Tweaked: `allPlayers` replaced with `(allPlayers - entities "HeadlessClient_F")` for scripts which should pause when no players are online. (logistic, resources, battlegroups)
+* Tweaked: Marker for civilian informant is an area now and not centered on the informants position anymore.
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 
 ### 0.963a (10th April 2018 as "legacy support" release)
