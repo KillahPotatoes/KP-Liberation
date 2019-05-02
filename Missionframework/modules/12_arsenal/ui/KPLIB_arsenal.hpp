@@ -4,7 +4,7 @@
     File: KPLIB_arsenal.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-12
-    Last Update: 2019-02-24
+    Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +12,7 @@
 */
 
 class KPLIB_arsenal {
-    idd = 758012;
+    idd = KPLIB_IDC_ARSENAL_DIALOG;
     movingEnable = 0;
 
     class controlsBackground {
@@ -28,7 +28,7 @@ class KPLIB_arsenal {
     class controls {
 
         class KPLIB_LoadoutList: KPGUI_PRE_ListBox {
-            idc = 68740;
+            idc = KPLIB_IDC_ARSENAL_LOADOUTLIST;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,0,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -52,7 +52,7 @@ class KPLIB_arsenal {
         };
 
         class KPLIB_ComboNear: KPGUI_PRE_Combo {
-            idc = 68741;
+            idc = KPLIB_IDC_ARSENAL_COMBONEAR;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,39,48);
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
