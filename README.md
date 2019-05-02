@@ -165,6 +165,7 @@ class Missions
 * Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Chernarus Winter basefile to repository.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
+* Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
 * Tweaked: Disabled script that switched locality of all blufor units to the commander machine. (should fix UAV issue)
 * Tweaked: `allPlayers` replaced with `(allPlayers - entities "HeadlessClient_F")` for scripts which should pause when no players are online. (logistic, resources, battlegroups)

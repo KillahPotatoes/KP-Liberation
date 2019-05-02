@@ -8,6 +8,7 @@ switch (worldName) do {
 	case "Sara": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\sara.sqf"};
 	case "Takistan": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\takistan.sqf"};
 	case "Tanoa": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\tanoa.sqf"};
+	case "WL_Rosche": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\wl_rosche.sqf"};
 	case "xcam_taunus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\xcam_taunus.sqf"};
 	default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
 };
