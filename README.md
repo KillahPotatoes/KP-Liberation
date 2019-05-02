@@ -171,6 +171,7 @@ class Missions
 * Tweaked: `allPlayers` replaced with `(allPlayers - entities "HeadlessClient_F")` for scripts which should pause when no players are online. (logistic, resources, battlegroups)
 * Tweaked: Marker for civilian informant is an area now and not centered on the informants position anymore.
 * Tweaked: Renamed Huron marker.
+* Tweaked: If there isn't enough enemy territory left for a secondary mission to start, the player gets a small hint now.
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 
 ### 0.963a (10th April 2018 as "legacy support" release)
