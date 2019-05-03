@@ -6,7 +6,7 @@
     File: fn_cratefiller_getGroups.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-27
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -31,7 +31,7 @@ lbClear _ctrlGroups;
 private _groups = [];
 {
     _groups pushBackUnique group _x;
-} forEach allPlayers;
+} forEach (allPlayers - (entities "HeadlessClient_F"));
 _groups = _groups - [grpNull];
 _groups sort true;
 

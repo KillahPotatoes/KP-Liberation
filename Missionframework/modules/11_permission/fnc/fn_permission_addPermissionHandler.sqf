@@ -5,7 +5,7 @@
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2019-05-01
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -61,7 +61,7 @@ if (_index isEqualTo -1) then {
 };
 
 // Read the Variable
-private _data = [[_code], _string, _vehCheck];
+private _data = [_code, _string, _vehCheck];
 
 if !(_string isEqualTo "") then {
     _data set [1, _string];
