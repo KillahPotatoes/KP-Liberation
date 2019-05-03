@@ -8,6 +8,9 @@ switch (KP_liberation_preset_blufor) do {
 	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
 	case 8: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
 	case 9: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_west.sqf";};
+	case 10: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_west.sqf";}; // !TODO! Edit when east preset finished
+	case 11: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat.sqf";};
+	case 12: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat_apex.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
@@ -17,6 +20,8 @@ switch (KP_liberation_preset_opfor) do {
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\SLA.sqf";};
+	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\aaf.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\nato.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 

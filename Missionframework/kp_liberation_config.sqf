@@ -42,7 +42,9 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 7 = RHS USAF (Desert)
 8 = RHS AFRF (VDV/MSV)
 9 = Germany West (Global Mobilization)
-*/
+10 = Germany East (Global Mobilization)
+11 = CSAT Brown
+12 = CSAT Green */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -51,7 +53,9 @@ KP_liberation_preset_blufor = 0;
 2 = RHS AFRF (EMR/MSV)
 3 = Project OPFOR (Takistan)
 4 = Project OPFOR (Islamic State)
-5 = Project OPFOR (Sahrani) */
+5 = Project OPFOR (Sahrani)
+6 = AAF
+7 = NATO */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -77,7 +81,9 @@ KP_liberation_preset_civilians = 0;
 4 = RHS USAF arsenal preset with ACE.
 5 = RHS USAF arsenal preset with ACE and ACRE.
 6 = 3cbBAF and RHS USAF arsenal preset.
-7 = GM West arsenal preset. */
+7 = GM West arsenal preset.
+8 = GM East arsenal preset.
+9 = CSAT arsenal preset. */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
