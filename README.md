@@ -175,6 +175,7 @@ class Missions
 * Tweaked: Marker for civilian informant is an area now and not centered on the informants position anymore.
 * Tweaked: Renamed Huron marker.
 * Tweaked: If there isn't enough enemy territory left for a secondary mission to start, the player gets a small hint now.
+* Tweaked: BWMod item classnames in KP_liberation_allowed_items_extension. Thanks to [madpat3](https://github.com/madpat3)
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 
 ### 0.963a (10th April 2018 as "legacy support" release)
