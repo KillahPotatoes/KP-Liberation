@@ -4,7 +4,7 @@
     File: defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-02
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -13,7 +13,7 @@
 
 #define KPLIB_IDC_CRATEFILLER_DIALOG                758026
 
-#define KPLIB_IDC_CRATEFILLER_GROUPTOOLS            687400
+#define KPLIB_IDC_CRATEFILLER_GROUPOVERVIEW         687400
 
 #define KPLIB_IDC_CRATEFILLER_COMBOGROUPS           687401
 #define KPLIB_IDC_CRATEFILLER_COMBOPLAYERS          687402

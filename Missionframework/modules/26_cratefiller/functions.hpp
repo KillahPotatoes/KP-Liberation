@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-30
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -56,9 +56,6 @@ class cratefiller {
     // Opens the cratefiller dialog
     class cratefiller_openDialog {};
 
-    // Opens the cratefiller tools display
-    class cratefiller_openTools {};
-
     // Module post initialization
     class cratefiller_postInit {
         postInit = 1;
@@ -86,6 +83,9 @@ class cratefiller {
 
     // Displays the items of the active storage
     class cratefiller_showInventory {};
+
+    // Shows the cratefiller overview display
+    class cratefiller_showOverview {};
 
     // Reads all saved presets and lists them
     class cratefiller_showPresets {};

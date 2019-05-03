@@ -6,7 +6,7 @@
     File: fn_cratefiller_getPlayerInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-27
-    Last Update: 2019-05-02
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -46,11 +46,12 @@ private _description = "";
 private _magazine = "";
 private _attachments = "";
 
-// Fill the controls
+// Set the main weapon picture and tooltip
 if !(_mainWeapon isEqualTo "") then {
     _config = [_mainWeapon] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
 
+    // Handle the tooltip stuff
     _tooltip append [getText (_config >> "displayName"), "\n"];
     _description = (getText (_config >> "descriptionShort")) splitString "<>";
     _tooltip append [_description select 0, "\n", _description select 2, "\n"];
@@ -63,16 +64,19 @@ if !(_mainWeapon isEqualTo "") then {
         _tooltip append [getText (_config >> "displayName"), "\n"];
     } forEach (_attachments select {!(_x isEqualTo "")});
 
+    // Finally fill the control
     _ctrlMainWeapon ctrlSetText _picture;
     _ctrlMainWeapon ctrlSetTooltip (_tooltip joinString "");
 } else {
     _ctrlMainWeapon ctrlSetText "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
 };
 
+// Set the handgun picture and tooltip
 if !(_handgun isEqualTo "") then {
     _config = [_handgun] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
 
+    // Handle the tooltip stuff
     _tooltip append [getText (_config >> "displayName"), "\n"];
     _description = (getText (_config >> "descriptionShort")) splitString "<>";
     _tooltip append [_description select 0, "\n", _description select 2, "\n"];
@@ -85,16 +89,19 @@ if !(_handgun isEqualTo "") then {
         _tooltip append [getText (_config >> "displayName"), "\n"];
     } forEach (_attachments select {!(_x isEqualTo "")});
 
+    // Finally fill the control
     _ctrlHandgun ctrlSetText _picture;
     _ctrlHandgun ctrlSetTooltip (_tooltip joinString "");
 } else {
     _ctrlHandgun ctrlSetText "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
 };
 
+// Set the secondary weapon picture and tooltip
 if !(_secondaryWeapon isEqualTo "") then {
     _config = [_secondaryWeapon] call KPLIB_fnc_cratefiller_getConfigPath;
     _picture = getText (_config >> "picture");
 
+    // Handle the tooltip stuff
     _tooltip append [getText (_config >> "displayName"), "\n"];
     _description = (getText (_config >> "descriptionShort")) splitString "<>";
     _tooltip append [_description select 0, "\n", _description select 2, "\n"];
@@ -107,6 +114,7 @@ if !(_secondaryWeapon isEqualTo "") then {
         _tooltip append [getText (_config >> "displayName"), "\n"];
     } forEach (_attachments select {!(_x isEqualTo "")});
 
+    // Finally fill the control
     _ctrlSecondaryWeapon ctrlSetText _picture;
     _ctrlSecondaryWeapon ctrlSetTooltip (_tooltip joinString "");
 } else {

@@ -5,7 +5,7 @@
     File: fn_permission_resetToDefault.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-23
-    Last Update: 2019-04-11
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -26,11 +26,9 @@ private _default = PGVAR("permissionDefault", []);
     _x set [2, _default];
 } forEach _list;
 
-closeDialog 0;
-
 // Set data in namespace
 PSVAR("permissionList", _list);
 
-[{[] call KPLIB_fnc_permission_openDialog;}, [], 0.1] call CBA_fnc_waitAndExecute;
+[] call KPLIB_fnc_permission_setupPermissionControls;
 
 true

@@ -5,24 +5,24 @@
     File: fn_permission_import.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-11
-    Last Update: 2019-04-12
+    Last Update: 2019-05-03
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
     Description:
-        Import the permission list.
+        Import the permission list from profileNamespace.
 
     Parameter(s):
-        _list - Permission list to import [ARRAY, defaults to []]
+        NONE
 
     Returns:
         Function reached the end [BOOL]
 */
 
-params [
-    ["_list", [], [[]]]
-];
+private _list = +(profileNamespace getVariable ["KPLIB_permission_export", []]);
 
 PSVAR("permissionList", _list);
+
+[] call KPLIB_fnc_permission_setupPermissionControls;
 
 true

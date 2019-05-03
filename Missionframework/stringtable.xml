@@ -675,6 +675,22 @@
             <English>Default permissions</English>
             <German>Standard Rechte</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_EXPORT">
+            <English>Permission Export</English>
+            <German>Rechte exportieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_EXPORT_TT">
+            <English>Stores the current permissions in your profile.</English>
+            <German>Speichert die momentanen Rechte in deinem Profil.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_IMPORT">
+            <English>Permission Import</English>
+            <German>Rechte importieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_IMPORT_TT">
+            <English>Imports the saved permissions from your profile.</English>
+            <German>Importiert die rechte aus deinem Profil.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
             <German>- Abwesende Spieler -</German>
@@ -949,9 +965,9 @@
             <German>KP Kistenfüller</German>
             <Polish>KP Cratefiller</Polish>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLETOOLS">
-            <English>KP Cratefiller Tools</English>
-            <German>KP Kistenfüller Werkzeuge</German>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEOVERVIEW">
+            <English>Equipment overview</English>
+            <German>Ausrüstungsübersicht</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CATEGORY_TT">
             <English>Choose a category from which you want to stow items.</English>
@@ -1026,6 +1042,10 @@
             <German>Waffen</German>
             <Polish>Bronie</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT">
+            <English>Toggle cratefiller equipment overview.</English>
+            <German>Kistenfüller Werkzeuge umschalten.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT">
             <English>Select a player, whose weapons should be shown.</English>
             <German>Wähle einen Spieler, dessen Waffen angezeigt werden sollen.</German>
@@ -1053,10 +1073,6 @@
             <English>Transport medium</English>
             <German>Transportmedium</German>
             <Polish>Środek transportu</Polish>
-        </Key>
-        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TOOLS_TT">
-            <English>Toggle cratefiller tools display.</English>
-            <German>Kistenfüller Werkzeuge umschalten.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_WEAPONSELECTION_TT">
             <English>Choose a weapon to find the right magazines or attachments.</English>
@@ -1732,13 +1748,13 @@
             <English>Enables/Disables the Liberation cratefiller.</English>
             <German>Aktiviert/Deaktiviert den Liberation Kistenfüller.</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATETOOLS">
-            <English>Enable Cratefiller tools</English>
-            <German>Kistenfüller Werkzeuge aktivieren</German>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW">
+            <English>Enable cratefiller equipment overview</English>
+            <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
-            <English>Enables/Disables the Liberation cratefiller tools.</English>
-            <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Werkzeuge.</German>
+            <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
+            <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
     </Package>
 

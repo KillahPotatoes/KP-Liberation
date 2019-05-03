@@ -52,7 +52,7 @@ class KPLIB_cratefiller {
         // Tools controlsGroup
 
         class KPLIB_GroupTools: KPGUI_PRE_ControlsGroupNoScrollbars {
-            idc = KPLIB_IDC_CRATEFILLER_GROUPTOOLS;
+            idc = KPLIB_IDC_CRATEFILLER_GROUPOVERVIEW;
             x = safezoneX;
             y = safezoneY;
             w = safezoneW;
@@ -61,7 +61,7 @@ class KPLIB_cratefiller {
             class controls {
 
                 class KPLIB_DialogTitleTools: KPGUI_PRE_DialogTitleSR {
-                    text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLETOOLS";
+                    text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEOVERVIEW";
                     x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1) - safezoneX;
                     y = safeZoneY + safeZoneH * KP_Y_VAL_SR - safezoneY;
                 };
@@ -123,8 +123,8 @@ class KPLIB_cratefiller {
             idc = KPLIB_IDC_CRATEFILLER_BUTTONTOOLS;
             text = "KPGUI\res\icon_tools.paa";
             x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.04);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_TOOLS_TT";
-            action = "[] call KPLIB_fnc_cratefiller_openTools";
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT";
+            action = "[] call KPLIB_fnc_cratefiller_showOverview";
         };
 
         // Crates
@@ -198,7 +198,7 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/38));
 
-            columns[] = { 0.05, 0.2};
+            columns[] = {0.05, 0.2};
 
             idcLeft = KPLIB_IDC_CRATEFILLER_LEFTEQUIPMENTBUTTON;
             idcRight = KPLIB_IDC_CRATEFILLER_RIGHTEQUIPMENTBUTTON;
@@ -268,7 +268,7 @@ class KPLIB_cratefiller {
             w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/34));
 
-            columns[] = { 0.05, 0.2, 0.3};
+            columns[] = {0.05, 0.2, 0.3};
 
             idcLeft = KPLIB_IDC_CRATEFILLER_LEFTINVENTORYBUTTON;
             idcRight = KPLIB_IDC_CRATEFILLER_RIGHTINVENTORYBUTTON;
