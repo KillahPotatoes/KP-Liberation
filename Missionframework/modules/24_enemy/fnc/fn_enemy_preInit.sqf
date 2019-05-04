@@ -4,8 +4,9 @@
     File: fn_enemy_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-02-23
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
@@ -17,7 +18,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ENEMY] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "PRE] [ENEMY", true] call KPLIB_fnc_common_log;};
 
 /*
     ----- Module Globals -----
@@ -67,6 +68,6 @@ if (hasInterface) then {
 
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [ENEMY] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [ENEMY", true] call KPLIB_fnc_common_log;};
 
 true

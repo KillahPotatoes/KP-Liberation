@@ -18,7 +18,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [GARRISON] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "PRE] [GARRISON", true] call KPLIB_fnc_common_log;};
 
 /*
     ----- Module Globals -----
@@ -102,6 +102,6 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [GARRISON] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [GARRISON", true] call KPLIB_fnc_common_log;};
 
 true

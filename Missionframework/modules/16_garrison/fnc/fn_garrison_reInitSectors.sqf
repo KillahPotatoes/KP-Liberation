@@ -25,7 +25,7 @@ params [
 // Only execute on server and with valid parameter
 if (!isServer || (_preset isEqualTo "")) exitWith {};
 
-diag_log format ["[KP LIBERATION] [%1] [GARRISON] ----- Reinitialization of sector garrisons started -----", diag_tickTime];
+["----- Reinitialization of sector garrisons started -----", "GARRISON", true] call KPLIB_fnc_common_log;
 
 // Fetch all not active sectors
 private _sectors = KPLIB_sectors_all - KPLIB_sectors_active;
@@ -68,11 +68,11 @@ private _hVehCount = 0;
             (_x select 4) pushBack (selectRandom _hVehicles);
         };
 
-        diag_log format ["[KP LIBERATION] [GARRISON] %1 (%2) reinitialized", markerText (_x select 0), _x select 0];
+        [format ["%1 (%2) reinitialized", markerText (_x select 0), _x select 0], "GARRISON"] call KPLIB_fnc_common_log;
     };
 } forEach KPLIB_garrison_array;
 
-diag_log format ["[KP LIBERATION] [%1] [GARRISON] ----- Reinitialization of sector garrisons finished -----", diag_tickTime];
+["----- Reinitialization of sector garrisons finished -----", "GARRISON", true] call KPLIB_fnc_common_log;
 
 [] call KPLIB_fnc_init_save;
 

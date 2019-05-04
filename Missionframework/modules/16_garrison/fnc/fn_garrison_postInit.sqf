@@ -19,7 +19,7 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [GARRISON] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "POST] [GARRISON", true] call KPLIB_fnc_common_log;};
 
 // Server section
 if (isServer) then {
@@ -52,6 +52,6 @@ if (hasInterface) then {
     [_actionArray] call CBA_fnc_addPlayerAction;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [GARRISON] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "POST] [GARRISON", true] call KPLIB_fnc_common_log;};
 
 true

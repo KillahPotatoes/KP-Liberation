@@ -4,8 +4,9 @@
     File: fn_enemy_strengthInc.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-02-24
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         CBA loop to increase the enemy strength in given interval depending on the remaining military bases.
@@ -24,9 +25,9 @@ private _increase = (count (KPLIB_sectors_military select {!(_x in KPLIB_sectors
 // Enforce cap for strength
 if (KPLIB_enemy_strength > 1000) then {
     KPLIB_enemy_strength = 1000;
-    if (KPLIB_param_debug) then {diag_log "[KP LIBERATION] [ENEMY] Strength reached cap of 1000";};
+    if (KPLIB_param_debug) then {["Strength reached cap of 1000", "ENEMY"] call KPLIB_fnc_common_log;};
 } else {
-    if (KPLIB_param_debug) then {diag_log format ["[KP LIBERATION] [ENEMY] Strength increased from %1 to %2", KPLIB_enemy_strength - _increase, KPLIB_enemy_strength];};
+    if (KPLIB_param_debug) then {[format ["Strength increased from %1 to %2", KPLIB_enemy_strength - _increase, KPLIB_enemy_strength], "ENEMY"] call KPLIB_fnc_common_log;};
 };
 
 // Schedule the next call

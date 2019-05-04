@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
-    Last Update: 2019-03-31
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -15,78 +15,78 @@ class res {
     file = "modules\10_resources\fnc";
 
     // Adds actions to spawned crates
-    class res_addActions {};
+    class resources_addActions {};
 
     // Adds value to intel resource
-    class res_addIntel {};
+    class resources_addIntel {};
 
     // Displays amount of resources in crate
-    class res_checkCrate {};
+    class resources_checkCrate {};
 
     // Creates a resource crate
-    class res_createCrate {};
+    class resources_createCrate {};
 
     // Gets storage attachTo positions
-    class res_getAttachArray {};
+    class resources_getAttachArray {};
 
     // Gets Z offset for crate storing
-    class res_getCrateZ {};
+    class resources_getCrateZ {};
 
     // Gets array with amounts of all resources at given location
-    class res_getResTotal {};
+    class resources_getResTotal {};
 
     // Gets array with all storage objects in given radius of given position
-    class res_getStorages {};
+    class resources_getStorages {};
 
     // Gets amount of free storage space of given storage
-    class res_getStorageSpace {};
+    class resources_getStorageSpace {};
 
     // Gets array with resource values of given storage
-    class res_getStorageValue {};
+    class resources_getStorageValue {};
 
     // Loads crate to transport vehicle
-    class res_loadCrate {};
+    class resources_loadCrate {};
 
     // Loads module specific data from the save
-    class res_loadData {};
+    class resources_loadData {};
 
     // Orders the crates in a storage area
-    class res_orderStorage {};
+    class resources_orderStorage {};
 
     // Removes given amount of resources from given location
-    class res_pay {};
+    class resources_pay {};
 
     // Module post initialization
-    class res_postInit {
+    class resources_postInit {
         postInit = 1;
     };
 
     // Module pre initialization
-    class res_preInit {
+    class resources_preInit {
         preInit = 1;
     };
 
     // Push crate
-    class res_pushCrate {};
+    class resources_pushCrate {};
 
     // Refunds given amount of resources to the provided location
-    class res_refund {};
+    class resources_refund {};
 
     // Saves module specific data for the save
-    class res_saveData {};
+    class resources_saveData {};
 
     // CBA Settings for this module
-    class res_settings {};
+    class resources_settings {};
 
     // Stack and sort crates inside storage area
-    class res_stackNsort {};
+    class resources_stackNsort {};
 
     // Store crate in storage
-    class res_storeCrate {};
+    class resources_storeCrate {};
 
     // Unloads crate from transport vehicle
-    class res_unloadCrate {};
+    class resources_unloadCrate {};
 
     // Unstores given kind of resource crate
-    class res_unstoreCrate {};
+    class resources_unstoreCrate {};
 };

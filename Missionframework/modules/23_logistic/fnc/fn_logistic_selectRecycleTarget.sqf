@@ -4,7 +4,7 @@
     File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-04-03
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -100,11 +100,11 @@ private _ammoCrates = ceil (_ammoValue / KPLIB_param_crateVolume);
 private _fuelCrates = ceil (_fuelValue / KPLIB_param_crateVolume);
 private _crateCount = _supplyCrates + _ammoCrates + _fuelCrates;
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
+private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_resources_getStorages;
 private _crateCapacity = 0;
 
 {
-    _crateCapacity = _crateCapacity + ([_x] call KPLIB_fnc_res_getStorageSpace);
+    _crateCapacity = _crateCapacity + ([_x] call KPLIB_fnc_resources_getStorageSpace);
 } forEach _storages;
 
 if (_crateCapacity < _crateCount) then {

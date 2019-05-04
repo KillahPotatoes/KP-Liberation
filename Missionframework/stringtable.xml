@@ -1275,9 +1275,9 @@
             <German>Fahrzeuginventar leeren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO_TT">
-            <English>Enables/Disables if spawned/loaded vehicles have an empty cargo space.</English>
+            <English>Enables/Disables if spawned vehicles have initially an empty cargo space.</English>
             <Chinese>如果重生/裝載的載具有倉儲空間則啟用/關閉</Chinese>
-            <German>Aktiviert/Deaktiviert ob gebaute/geladene Fahrzeuge ein leeres Inventar haben.</German>
+            <German>Aktiviert/Deaktiviert ob gebaute Fahrzeuge anfänglich ein leeres Inventar haben.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG">
             <English>Enable Debug Mode</English>
@@ -1287,7 +1287,7 @@
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT">
             <English>Enables/Disables extended Liberation debug output for the server log.</English>
             <Chinese>啟用/關閉擴展的Liberation除錯訊息輸出到伺服器紀錄</Chinese>
-            <German>Aktiviert/Deaktiviert erweiterte Liberation Debug Ausgaben im Serverlog.</German>
+            <German>Aktiviert/Deaktiviert erweiterte Liberation Debugausgaben im Serverlog.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE">
             <English>FOB Area</English>
@@ -1298,6 +1298,14 @@
             <English>Radius in meters of the FOB area.</English>
             <Chinese>前線基地半徑公尺內</Chinese>
             <German>Radius in Metern des FOB Bereichs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG">
+            <English>Enable Save Debug</English>
+            <German>Speicher Debug aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG_TT">
+            <English>Enables/Disables detailed rpt logging of each saving process.</English>
+            <German>Aktiviert/Deaktiviert detaillierte Informationen zur Spielstandspeicherung im RPT Log.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT">
             <English>Save Interval</English>
@@ -1429,15 +1437,15 @@
         </Key>
 
         <!-- RESSOURCES CATEGORY -->
-        <Key ID="STR_KPLIB_SETTINGS_RES">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES">
             <English>KPLIB - Resources</English>
             <German>KPLIB - Ressourcen</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME">
             <English>Volume of resource crates</English>
             <German>Fassungsvermögen von Ressourcenkisten</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME_TT">
             <English>The maximum amount of resources which can be stored in a crate.</English>
             <German>Das maximal mögliche Menge an Ressourcen in den Ressourcenkisten.</German>
         </Key>
