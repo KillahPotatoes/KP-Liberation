@@ -689,7 +689,7 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_IMPORT_TT">
             <English>Imports the saved permissions from your profile.</English>
-            <German>Importiert die rechte aus deinem Profil.</German>
+            <German>Importiert die Rechte aus deinem Profil.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
