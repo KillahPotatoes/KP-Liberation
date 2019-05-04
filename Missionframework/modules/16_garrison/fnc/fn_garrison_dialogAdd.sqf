@@ -5,7 +5,7 @@
     File: fn_garrison_dialogAdd.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-28
-    Last Update: 2019-04-30
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -61,14 +61,16 @@ if (_button isEqualTo _ctrlGroupButton) then {
     private _classnames = _units apply {typeOf _x};
     private _validClassnames = _classnames select {_x in _all};
 
-    // Only proceed with a valid units
+    // Only proceed with a valid (buildable) units
     if ((count _classnames) isEqualTo (count _validClassnames)) then {
+        if (KPLIB_param_debug) then {[format ["Adding group to garrison of %1: %2 (%3)", markerText _sector, _group, _classnames], "GARRISON"] call KPLIB_fnc_common_log;};
+
         // Despawn group
         {
             private _veh = _x;
             {_veh deleteVehicleCrew _x;} forEach (crew _veh);
             deleteVehicle _veh;
-        } forEach (units _group);
+        } forEach _units;
         deleteGroup _group;
 
         // Add classnames to garrison
@@ -99,8 +101,10 @@ if (_button isEqualTo _ctrlGroupButton) then {
 } else {
     private _classname = typeOf KPLIB_garrison_dialogSelUnit;
 
-    // Only proceed with a valid units
+    // Only proceed with a valid (buildable) unit
     if (_classname in _all) then {
+        if (KPLIB_param_debug) then {[format ["Adding unit to garrison of %1: %2 (%3)", markerText _sector, KPLIB_garrison_dialogSelUnit, _classname], "GARRISON"] call KPLIB_fnc_common_log;};
+
         // Remove selected unit
         {KPLIB_garrison_dialogSelUnit deleteVehicleCrew _x;} forEach (crew KPLIB_garrison_dialogSelUnit);
         deleteVehicle KPLIB_garrison_dialogSelUnit;
@@ -115,9 +119,6 @@ if (_button isEqualTo _ctrlGroupButton) then {
             };
             case (_classname in _infantry): {
                 [_sector, 1] remoteExecCall ["KPLIB_fnc_garrison_addInfantry", 2];
-            };
-            default {
-                _invalid = true;
             };
         };
     } else {
