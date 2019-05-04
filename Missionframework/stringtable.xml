@@ -577,6 +577,7 @@
         <!-- BUILD DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_BUILD_QUEUE_TITLE">
             <English>BUILD QUEUE</English>
+            <German>BAULISTE</German>
         </Key>
 
         <!-- REDEPLOY/RESPAWN DIALOG -->
