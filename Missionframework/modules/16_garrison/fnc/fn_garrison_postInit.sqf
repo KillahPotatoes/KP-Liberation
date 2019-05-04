@@ -25,7 +25,7 @@ if (isServer) then {["Module initializing...", "POST] [GARRISON", true] call KPL
 if (isServer) then {
     // Add Garrison Dialog access permission
     [
-        "GARRISONDIALOGACCESS",
+        "GarrisonDialogAccess",
         {}
     ] call KPLIB_fnc_permission_addPermissionHandler;
 };
@@ -45,7 +45,7 @@ if (hasInterface) then {
             _target isEqualTo _originalTarget &&
             !(_originalTarget getVariable ["KPLIB_fob", ""] isEqualTo "") &&
             !(KPLIB_sectors_blufor isEqualTo []) &&
-            [player, "GarrisonDialogAccess"] call KPLIB_fnc_permission_getPermission
+            ["GarrisonDialogAccess"] call KPLIB_fnc_permission_checkPermission
         '
     ];
     [_actionArray] call CBA_fnc_addPlayerAction;
