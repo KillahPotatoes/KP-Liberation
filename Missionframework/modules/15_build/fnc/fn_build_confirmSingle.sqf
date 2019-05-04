@@ -31,7 +31,7 @@ _createParams params ["_className", "_pos", "_dir", "_justBuild"];
 private _fob = _player getVariable ["KPLIB_fob", ""];
 
 if !(([_fob] + _price) call KPLIB_fnc_resources_pay) exitWith {
-    diag_log format ["[KP LIBERATION] [BUILD] Not enough resources to build: %1 at: %2", _className, _fob];
+    [format ["Not enough resources to build: %1 at: %2", _className, _fob], "BUILD"] call KPLIB_fnc_common_log;
     ["KPLIB_build_not_enough_resources", [_className], _player] call CBA_fnc_targetEvent;
 };
 
