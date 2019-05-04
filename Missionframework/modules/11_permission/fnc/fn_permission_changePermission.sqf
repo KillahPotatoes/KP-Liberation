@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_permission_changePermission
@@ -5,7 +6,7 @@
     File: fn_permission_changePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-16
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -26,8 +27,8 @@ params [
 _args params ["_control"];
 
 // Dialog controls
-private _dialog = findDisplay 758011;
-private _ctrlPlayerList = _dialog displayCtrl 68740;
+private _dialog = findDisplay KPLIB_IDC_PERMISSION_DIALOG;
+private _ctrlPlayerList = _dialog displayCtrl KPLIB_IDC_PERMISSION_PLAYERLIST;
 
 // Read the control
 (_control getVariable ["Data", ["", false]]) params [
@@ -35,26 +36,37 @@ private _ctrlPlayerList = _dialog displayCtrl 68740;
     "_state"
 ];
 
-// Get the listbox data
-private _index = lbCurSel _ctrlPlayerList;
-private _playerUID = _ctrlPlayerList lbData _index;
+// Variables
+private _list =  PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 private _playerArray = [];
 private _playerPermissions = [];
 private _permissionArray = [];
+
 _permission = toLower _permission;
+
+// Get the listbox data
+private _index = lbCurSel _ctrlPlayerList;
+private _playerUID = _ctrlPlayerList lbData _index;
 
 switch (_playerUID) do {
     case "default": {
-        _index = KPLIB_permission_default findIf {(_x select 0) isEqualTo (_permission)};
-        (KPLIB_permission_default select _index) set [1, !_state];
+        _index = _default findIf {
+            (_x select 0) isEqualTo (_permission)
+        };
+        (_default select _index) set [1, !_state];
     };
     default {
         // Change the player permission or apply them
-        _index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (_playerUID)};
+        _index = _list findIf {
+            (_x select 0) isEqualTo (_playerUID)
+        };
         if (_index != -1) then {
             // Ref to player array in permission list
-            _playerArray = KPLIB_permission_list select _index;
-            _index = (_playerArray select 2) findIf {(_x select 0) isEqualTo (_permission)};
+            _playerArray = _list select _index;
+            _index = (_playerArray select 2) findIf {
+                (_x select 0) isEqualTo (_permission)
+            };
 
             // If the player already has the permission, change the state
             if (_index != -1) then {
@@ -70,5 +82,9 @@ switch (_playerUID) do {
 // Edit the control
 _control setVariable ["Data", [_permission, !_state]];
 _control ctrlSetTextColor ([KPLIB_COLOR_GREEN, KPLIB_COLOR_RED] select _state);
+
+// Set data in namespace
+PSVAR("permissionList", _list);
+PSVAR("permissionDefault", _default);
 
 true

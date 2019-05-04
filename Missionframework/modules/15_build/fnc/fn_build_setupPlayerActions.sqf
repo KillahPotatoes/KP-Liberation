@@ -4,7 +4,7 @@
     File: fn_build_setupPlayerActions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-07-01
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,12 +19,12 @@
 */
 
 // Actions avalible LOCALLY to player
-if(hasInterface) then {
+if (hasInterface) then {
     // Build action
     private _buildCondition = '
         (_target == _originalTarget) &&
         !(_originalTarget getVariable ["KPLIB_fob", ""] in ["", "KPLIB_eden_startbase_marker"]) &&
-        ([player, "Build"] call KPLIB_fnc_permission_getPermission)
+        (["Build"] call KPLIB_fnc_permission_checkPermission)
     ';
     private _buildAction = {
         private _pos = getMarkerPos (player getVariable "KPLIB_fob");

@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_postInit
 
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -22,10 +23,27 @@
 if (isServer) then {
     ["Module initializing...", "POST] [LOGISTIC", true] call KPLIB_fnc_common_log;
 
+    // Logistic station permissions
+    // Recycle
+    [
+        "Recycle",
+        {},
+        false,
+        "GroupLogistics"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
+    // Resupply
+    [
+        "Resupply",
+        {},
+        false,
+        "GroupLogistics"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
     [
         "Recycle",
         {
-            if ([player, "Recycle"] call KPLIB_fnc_permission_getPermission) then {
+            if (["Recycle"] call KPLIB_fnc_permission_checkPermission) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_logistic_openRecycleDialog;
             } else {
@@ -41,7 +59,7 @@ if (isServer) then {
     [
         "Resupply",
         {
-            if ([player, "Resupply"] call KPLIB_fnc_permission_getPermission) then {
+            if (["Resupply"] call KPLIB_fnc_permission_checkPermission) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_logistic_openResupplyDialog;
             } else {
@@ -57,13 +75,13 @@ if (isServer) then {
     [
         "Cratefiller",
         {
-            if ([player, "Cratefiller"] call KPLIB_fnc_permission_getPermission && KPLIB_param_cratefiller) then {
+            if (["Cratefiller"] call KPLIB_fnc_permission_checkPermission && KPLIB_param_cratefiller) then {
                 closeDialog 0;
                 [] call KPLIB_fnc_cratefiller_openDialog;
             } else {
                 [
                     ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
-                    [localize "STR_KPLIB_HINT_NOPERMISSION"]
+                    [[localize "STR_KPLIB_HINT_NOCRATEFILLER", localize "STR_KPLIB_HINT_NOPERMISSION"] select KPLIB_param_cratefiller]
                 ] call CBA_fnc_notify;
             };
         },
@@ -89,7 +107,7 @@ if (isServer) then {
         "jets",
         "logistic"
     ];
-    KPLIB_logistic_data setVariable ["Vehicles", _vehicles, true]
+    LSVAR("Vehicles", _vehicles);
 };
 
 if (isServer) then {["Module initialized", "POST] [LOGISTIC", true] call KPLIB_fnc_common_log;};

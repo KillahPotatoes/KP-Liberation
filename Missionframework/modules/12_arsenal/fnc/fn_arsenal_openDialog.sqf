@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_arsenal_openDIalog
 
     File: fn_arsenal_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-14
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -23,9 +24,9 @@ createDialog "KPLIB_arsenal";
 disableSerialization;
 
 // Dialog controls
-private _dialog = findDisplay 758012;
-private _ctrlLoadoutList = _dialog displayCtrl 68740;
-private _ctrlNearPlayer = _dialog displayCtrl 68741;
+private _dialog = findDisplay KPLIB_IDC_ARSENAL_DIALOG;
+private _ctrlLoadoutList = _dialog displayCtrl KPLIB_IDC_ARSENAL_LOADOUTLIST;
+private _ctrlNearPlayer = _dialog displayCtrl KPLIB_IDC_ARSENAL_COMBONEAR;
 
 // Get the default loadout name from player profile
 private _loadout = profileNamespace getVariable ["KPLIB_defaultLoadout", ""];

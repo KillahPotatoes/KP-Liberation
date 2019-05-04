@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -1142,6 +1142,38 @@ class KPGUI_PRE_DialogButtonS: KPGUI_PRE_Button {
     x = KP_GETX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,1);
     y = KP_GETY_BELOW(KP_Y_VAL_S,KP_HEIGHT_VAL_S);
     w = KP_GETWPLAIN(KP_WIDTH_VAL_S,1);
+};
+
+/*
+    --- Small right sized classes ---
+*/
+
+// Title bar
+class KPGUI_PRE_DialogTitleSR: KPGUI_PRE_Title {
+    x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1);
+    y = safeZoneY + safeZoneH * KP_Y_VAL_SR;
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_SR,1);
+};
+
+// Cross symbol
+class KPGUI_PRE_DialogCrossSR: KPGUI_PRE_CloseCross {
+    x = safeZoneX + safeZoneW * (KP_X_VAL_SR + KP_WIDTH_VAL_SR - 0.02)
+    y = KP_GETY_CROSS(KP_Y_VAL_SR);
+};
+
+// Background
+class KPGUI_PRE_DialogBackgroundSR: KPGUI_PRE_Background {
+    x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1);
+    y = KP_GETY_AREA(KP_Y_VAL_SR);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_SR,1);
+    h = safeZoneH * KP_HEIGHT_VAL_SR;
+};
+
+// Button
+class KPGUI_PRE_DialogButtonSR: KPGUI_PRE_Button {
+    x = KP_GETX(KP_X_VAL_SR,KP_WIDTH_VAL_SR,0,1);
+    y = KP_GETY_BELOW(KP_Y_VAL_SR,KP_HEIGHT_VAL_SR);
+    w = KP_GETWPLAIN(KP_WIDTH_VAL_SR,1);
 };
 
 /*

@@ -703,6 +703,22 @@
             <English>Default permissions</English>
             <German>Standard Rechte</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_EXPORT">
+            <English>Permission Export</English>
+            <German>Rechte exportieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_EXPORT_TT">
+            <English>Stores the current permissions in your profile.</English>
+            <German>Speichert die momentanen Rechte in deinem Profil.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_IMPORT">
+            <English>Permission Import</English>
+            <German>Rechte importieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_PERMISSION_IMPORT_TT">
+            <English>Imports the saved permissions from your profile.</English>
+            <German>Importiert die Rechte aus deinem Profil.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_PERMISSION_OFFLINE">
             <English>- Offline players -</English>
             <German>- Abwesende Spieler -</German>
@@ -977,10 +993,18 @@
             <German>KP Kistenfüller</German>
             <Polish>KP Cratefiller</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEOVERVIEW">
+            <English>Equipment overview</English>
+            <German>Ausrüstungsübersicht</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CATEGORY_TT">
             <English>Choose a category from which you want to stow items.</English>
             <German>Wähle eine Kategorie aus, von der du Gegenstände verladen willst.</German>
             <Polish>Wybierz kategorie z której chcesz pobrać przedmioty.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CLEARSEARCH_TT">
+            <English>Clears the searchbox.</English>
+            <German>Suche zurücksetzen.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_DELETE_TT">
             <English>Deletes the selected preset.</English>
@@ -996,6 +1020,10 @@
             <English>Shows the current cargo space.</English>
             <German>Zeigt den aktuellen Laderaumstand.</German>
             <Polish>Pokazuje aktualny stan załadunku.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_GROUPS_TT">
+            <English>Select a group, whose players should be shown.</English>
+            <German>Wähle eine Gruppe, deren Spieler angezeigt werden sollen.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT">
             <English>Select an inventory that you want to edit.</English>
@@ -1042,10 +1070,22 @@
             <German>Waffen</German>
             <Polish>Bronie</Polish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT">
+            <English>Toggle cratefiller equipment overview.</English>
+            <German>Kistenfüller Ausrüstungsübersicht umschalten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT">
+            <English>Select a player, whose weapons should be shown.</English>
+            <German>Wähle einen Spieler, dessen Waffen angezeigt werden sollen.</German>
+        </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT">
             <English>Search for new inventories.</English>
             <German>Nach neuem Laderaum suchen.</German>
             <Polish>Szukaj nowych ekwipunków.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_SEARCH_TT">
+            <English>Search for a specified weapon.</English>
+            <German>Suche nach einer bestimmten Waffe.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT">
             <English>Equipment</English>
@@ -1106,6 +1146,10 @@
             <English>Invalid name.</English>
             <German>Ungültiger Name.</German>
             <Polish>Nieprawidłowa nazwa.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOCRATEFILLER">
+            <English>The cratefiller is deactivated.</English>
+            <German>Der Kistenfüller ist deaktiviert.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NOCRATEFOUND">
             <English>Desired resource crate wasn't found in the storage.</English>
@@ -1747,6 +1791,14 @@
         <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE_TT">
             <English>Enables/Disables the Liberation cratefiller.</English>
             <German>Aktiviert/Deaktiviert den Liberation Kistenfüller.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW">
+            <English>Enable cratefiller equipment overview</English>
+            <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
+            <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
+            <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
     </Package>
 

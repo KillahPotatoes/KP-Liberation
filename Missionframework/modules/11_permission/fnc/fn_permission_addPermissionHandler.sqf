@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
     KPLIB_fnc_permission_addPermissionHandler
 
     File: fn_permission_addPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -14,10 +15,8 @@
     Parameter(s):
         _permission     - Permission name                               [STRING, defaults to ""]
         _condition      - Code which is executed on permission check    [CODE, defaults to {false}]
-        _string         - Permission stringtable path                   [STRING, defaults to ""]
         _default        - Default permission                            [BOOL, defaults to false]
-        _group          - Permission group name                         [STRING, defaults to "Misc"]
-        _groupString    - Permission group stringtable path             [STRING, defaults to "STR_KPLIB_PERMISSION_GROUPMISC"]
+        _group          - Permission group name                         [STRING, defaults to "GROUPMISC"]
         _vehCheck       - Vehicle clasnames for the check               [ARRAY, defaults to []]
 
     Returns:
@@ -29,39 +28,55 @@ if (!isServer) exitWith {};
 params [
     ["_permission", "", [""]],
     ["_code", {false}, [{}]],
-    ["_string", "", [""]],
     ["_default", false, [false]],
-    ["_group", "Misc", [""]],
-    ["_groupString", "STR_KPLIB_PERMISSION_GROUPMISC", [""]],
+    ["_group", "GROUPMISC", [""]],
     ["_vehCheck", [], [[]]]
 ];
 
+// Variables
+private _types = PGVAR("permissionTypes", []);
+private _groups = PGVAR("permissionGroups", []);
+private _string = localize (["STR_KPLIB_PERMISSION_", toUpper _permission] joinString "");
+private _groupString = localize (["STR_KPLIB_PERMISSION_", toUpper _group] joinString "");
+
+// Fetch the strintable keys
+if (_string isEqualTo "") then {
+    _string = _permission;
+};
+
+if (_groupString isEqualTo "") then {
+    _groupString = _group;
+};
+
 _permission = toLower _permission;
+_types pushBackUnique _permission;
 
-KPLIB_permission_types pushBackUnique _permission;
-
-private _index = KPLIB_permission_groups findIf {(_x select 0) isEqualTo _group};
+private _index = _groups findIf {
+    (_x select 0) isEqualTo _group
+};
 
 if (_index isEqualTo -1) then {
-    KPLIB_permission_groups pushBack [_group, _groupString, [_permission]];
+    _groups pushBack [_group, _groupString, [_permission]];
 } else {
-    ((KPLIB_permission_groups select _index) select 2) pushBackUnique _permission;
+    ((_groups select _index) select 2) pushBackUnique _permission;
 };
 
 // Read the Variable
 private _data = [[_code], _string, _vehCheck];
-(_data select 0) append ((KPLIB_permission_data getVariable [_permission, []]) select 0);
+(_data select 0) append (PGVAR(_permission, []) select 0);
 
 if !(_string isEqualTo "") then {
     _data set [1, _string];
 };
 
 // Write the Variable
-KPLIB_permission_data setVariable [_permission, _data, true];
+PSVAR(_permission, _data);
 
 // Emit permissions added event
-["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
+["KPLIB_permission_newPH", [_permission, _default]] call CBA_fnc_globalEvent;
 
-[[], [], KPLIB_permission_types, KPLIB_permission_groups] call KPLIB_fnc_permission_syncClients;
+// Set data in namespace
+PSVAR("permissionTypes", _types);
+PSVAR("permissionGroups", _groups);
 
 true

@@ -4,7 +4,8 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
+
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +13,7 @@
 */
 
 class KPLIB_recycle {
-    idd = 7580232;
+    idd = KPLIB_IDC_LOGISTIC_RECYCLE_DIALOG;
     movingEnable = 0;
     onUnload = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam;";
 
@@ -29,7 +30,7 @@ class KPLIB_recycle {
     class controls {
 
         class KPLIB_ComboVehicles: KPGUI_PRE_Combo {
-            idc = 68740;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_COMBOVEHICLES;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,48);
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
@@ -64,7 +65,7 @@ class KPLIB_recycle {
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KPLIB_TextSupplyCondition: KPGUI_PRE_Text {
+        class KPLIB_TextSupplyState: KPGUI_PRE_Text {
             text = "$STR_KPLIB_DIALOG_RECYCLE_SUPPLYSTATE";
             style = 0;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -73,8 +74,8 @@ class KPLIB_recycle {
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KPLIB_TextSupplyConditionValue: KPGUI_PRE_Text {
-            idc = 68741;
+        class KPLIB_TextSupplyStateValue: KPGUI_PRE_Text {
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYSTATEVALUE;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -93,7 +94,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_TextSupplyRefundValue: KPGUI_PRE_Text {
-            idc = 68742;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYREFUNDVALUE;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -107,13 +108,13 @@ class KPLIB_recycle {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,15,48);
         };
 
-        class KPLIB_TextAmmoState: KPLIB_TextSupplyCondition {
+        class KPLIB_TextAmmoState: KPLIB_TextSupplyState {
             text = "$STR_KPLIB_DIALOG_RECYCLE_AMMOSTATE";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
         };
 
-        class KPLIB_TextAmmoStateValue: KPLIB_TextSupplyConditionValue {
-            idc = 68743;
+        class KPLIB_TextAmmoStateValue: KPLIB_TextSupplyStateValue {
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_AMMOSTATEVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
         };
 
@@ -123,7 +124,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_TextAmmoRefundValue: KPLIB_TextSupplyRefundValue {
-            idc = 68744;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_AMMOREFUNDVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,19,48);
         };
 
@@ -132,13 +133,13 @@ class KPLIB_recycle {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,22,48);
         };
 
-        class KPLIB_TextFuelState: KPLIB_TextSupplyCondition {
+        class KPLIB_TextFuelState: KPLIB_TextSupplyState {
             text = "$STR_KPLIB_DIALOG_RECYCLE_FUELSTATE";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
         };
 
-        class KPLIB_TextFuelStateValue: KPLIB_TextSupplyConditionValue {
-            idc = 68745;
+        class KPLIB_TextFuelStateValue: KPLIB_TextSupplyStateValue {
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_FUELSTATEVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,24,48);
         };
 
@@ -148,7 +149,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_TextFuelRefundValue: KPLIB_TextSupplyRefundValue {
-            idc = 68746;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_FUELREFUNDVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,26,48);
         };
 
@@ -161,7 +162,7 @@ class KPLIB_recycle {
         };
 
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
-            idc = 68747;
+            idc = KPLIB_IDC_LOGISTIC_RECYCLE_BUTTONRECYCLE;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
             action = "[] call KPLIB_fnc_logistic_recycleTarget";
         };

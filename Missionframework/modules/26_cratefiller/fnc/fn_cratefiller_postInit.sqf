@@ -4,7 +4,7 @@
     File: fn_cratefiller_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,10 +19,17 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {["Module initializing...", "POST] [CRATEFILLER", true] call KPLIB_fnc_common_log;};
-
-// Server section (dedicated and player hosted)
 if (isServer) then {
+    ["Module initializing...", "POST] [CRATEFILLER", true] call KPLIB_fnc_common_log;
+
+    // Cratefiller permission
+    [
+        "Cratefiller",
+        {},
+        false,
+        "GroupLogistics"
+    ] call KPLIB_fnc_permission_addPermissionHandler;
+
     // create cratefiller presets on startup
     [] call KPLIB_fnc_cratefiller_presets;
 

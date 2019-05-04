@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_logistic_selectResupplyTarget
 
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,18 +20,15 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 7580233;
-private _ctrlVehicleList = _dialog displayCtrl 68740;
-private _ctrlCargo = _dialog displayCtrl 68741;
-private _ctrlCargoStateValue = _dialog displayCtrl 68742;
-private _ctrlCosts = _dialog displayCtrl 68743;
-private _ctrlSlider = _dialog displayCtrl 68744;
-private _ctrlSliderValue = _dialog displayCtrl 68745;
-private _ctrlTotalCosts = _dialog displayCtrl 68746;
-private _resupplyButton = _dialog displayCtrl 68747;
-
-private _cfgVeh = configFile >> "CfgVehicles";
-private _cfgMag = configFile >> "CfgMagazines";
+private _dialog = findDisplay KPLIB_IDC_LOGISTIC_RESUPPLY_DIALOG;
+private _ctrlVehicleList = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_COMBOVEHICLES;
+private _ctrlCargo = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_COMBOCARGO;
+private _ctrlCargoStateValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_CARGOSTATEVALUE;
+private _ctrlCosts = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_CARGOCOSTSVALUE;
+private _ctrlSlider = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_RESUPPLYCOUNT;
+private _ctrlSliderValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_SLIDERVALUE;
+private _ctrlTotalCosts = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_TOTALCOSTSVALUE;
+private _resupplyButton = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RESUPPLY_BUTTONRESUPPLY;
 
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
@@ -54,13 +52,15 @@ private _type = typeOf _vehicle;
 // Fill the controls
 _index = lbCurSel _ctrlCargo;
 
+// Variables
+private _cfgVeh = configFile >> "CfgVehicles";
+private _cfgMag = configFile >> "CfgMagazines";
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+private _res = [_nearFOB] call KPLIB_fnc_resources_getResTotal;
 private _ammoMax = 0;
 private _ammoState = 0;
 private _fuelMax = 0;
 private _fuelState = 0;
-
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _res = [_nearFOB] call KPLIB_fnc_resources_getResTotal;
 
 if !(KPLIB_param_aceResupply) then {
     switch (_ctrlCargo lbData _index) do {

@@ -4,7 +4,7 @@
     File: fn_garrison_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-04-30
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -26,8 +26,7 @@ if (isServer) then {
     // Add Garrison Dialog access permission
     [
         "GarrisonDialogAccess",
-        {},
-        "STR_KPLIB_PERMISSION_GARRISONDIALOGACCESS"
+        {}
     ] call KPLIB_fnc_permission_addPermissionHandler;
 };
 
@@ -46,7 +45,7 @@ if (hasInterface) then {
             _target isEqualTo _originalTarget &&
             !(_originalTarget getVariable ["KPLIB_fob", ""] isEqualTo "") &&
             !(KPLIB_sectors_blufor isEqualTo []) &&
-            [player, "GarrisonDialogAccess"] call KPLIB_fnc_permission_getPermission
+            ["GarrisonDialogAccess"] call KPLIB_fnc_permission_checkPermission
         '
     ];
     [_actionArray] call CBA_fnc_addPlayerAction;
