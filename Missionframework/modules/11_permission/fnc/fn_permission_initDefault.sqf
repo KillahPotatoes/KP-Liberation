@@ -29,20 +29,20 @@ params [
 if (_permission isEqualTo "") exitWith {};
 
 // Variables
-private _default = PGVAR("permissionDefault", []);
+private _permissionDefault = PGVAR("permissionDefault", []);
 
 _permission = toLower _permission;
 
 // Check if the default permission is already set
-if (_default isEqualTo []) then {
-    _default pushBack [_permission, _default];
+if (_permissionDefault isEqualTo []) then {
+    _permissionDefault pushBack [_permission, _default];
 };
 
-if ((_default findIf {(_x select 0) isEqualTo (_permission)}) isEqualTo -1) then {
-    _default pushBack [_permission, _default];
+if ((_permissionDefault findIf {(_x select 0) isEqualTo (_permission)}) isEqualTo -1) then {
+    _permissionDefault pushBack [_permission, _default];
 };
 
 // Set data in namespace
-PSVAR("permissionDefault", _default);
+PSVAR("permissionDefault", _permissionDefault);
 
 true

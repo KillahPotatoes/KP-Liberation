@@ -62,7 +62,8 @@ if (_index isEqualTo -1) then {
 };
 
 // Read the Variable
-private _data = [_code, _string, _vehCheck];
+private _data = [[_code], _string, _vehCheck];
+(_data select 0) append (PGVAR(_permission, []) select 0);
 
 if !(_string isEqualTo "") then {
     _data set [1, _string];
@@ -72,7 +73,7 @@ if !(_string isEqualTo "") then {
 PSVAR(_permission, _data);
 
 // Emit permissions added event
-["KPLIB_permission_newPH", [_permission,_default]] call CBA_fnc_globalEvent;
+["KPLIB_permission_newPH", [_permission, _default]] call CBA_fnc_globalEvent;
 
 // Set data in namespace
 PSVAR("permissionTypes", _types);

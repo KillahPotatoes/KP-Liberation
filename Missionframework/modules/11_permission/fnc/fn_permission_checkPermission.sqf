@@ -33,18 +33,22 @@ if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {
 
 // Variables
 private _data = PGVAR(_permission, []);
-private _codeResult = false;
+private _codeResults = [];
 private _result = [_permission, _target] call KPLIB_fnc_permission_getPermission;
 private _code = _data select 0;
 
 // Execute the registered code
-if !(_code isEqualTo {}) then {
-    _codeResult = [] call _code;
-};
+{
+    if !(_x isEqualTo {}) then {
+        _codeResults pushBack [] call _x;
+    } else {
+        _codeResults pushBack false;
+    }
+} forEach _code;
 
 // Return the result
 if (_unanimous) then {
-    (_codeResult && _result)
+    ((({_x isEqualTo true} count _codeResults) isEqualTo (count _codeResults)) && _result)
 } else {
-    (_codeResult || _result)
+    ((true in _codeResults) || _result)
 };
