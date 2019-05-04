@@ -1,13 +1,15 @@
 # Changelog
 
 ## 0.97.0 (in Development)
-* **Fully rewritten the mission code from scratch.** (Details in the [Dev-Blogs](https://github.com/KillahPotatoes/KP-Liberation/issues?utf8=%E2%9C%93&q=label%3Adev-blog))
+* **Fully rewritten the mission code from scratch.** (Details in the [Dev-Blogs](https://github.com/KillahPotatoes/KP-Liberation/issues?q=label%3Adev-blog))
 * Added: Functions library via CfgFunctions.
 * Added: Admin dialog with various functionalities for server admins.
 * Added: Free camera view for building.
 * Added: Config guard for preset file syntax error detection.
 * Added: KP GUI system implemented for dialog creation.
 * Added: Mission configuration completely via CBA Settings.
+* Added: Logistic station with cratefiller, vehicle resupply and recycle functionality.
+* Added: Garrison dialog for the commander to manage his own sector garrisons.
 * Updated: Traditional Chinese Localization. Thanks to [dustin902001](https://github.com/dustin902001)
 * Removed: Mission configuration via mission parameters.
 * Tweaked: License changed from MIT to GPLv3.
@@ -19,7 +21,7 @@
 * Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better separation.
 * Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
 * Tweaked: Unit/Army presets are now universally used as friendly or enemy preset.
-* Tweaked: Changing presets is now possible without server restart.
+* Tweaked: Changing presets is now basically possible without server restart (still needed for Potato 01 replacement).
 
 ## 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
