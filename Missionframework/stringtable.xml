@@ -1068,6 +1068,7 @@
         </Key>
         <Key ID="STR_KPLIB_HINT_BUILD_NO_RESOURCES">
             <English>Not enough resources to build %1.</English>
+            <German>Nicht genug Ressourcen, um %1 zu bauen.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_CLEARFULL">
             <English>Selected storage is emptied.</English>
