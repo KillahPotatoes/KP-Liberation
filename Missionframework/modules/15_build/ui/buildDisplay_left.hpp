@@ -41,7 +41,7 @@ class KPLIB_BuildList: KPGUI_PRE_ListNBox {
     w = KP_GETW(KP_WIDTH_VAL_LP,1);
     h = KP_GETH(KP_HEIGHT_VAL_LP,(20/18));
 
-    columns[] = { 0, 0.65, 0.75, 0.85 };
+    columns[] = {0, 0.65, 0.75, 0.85};
 
     onMouseZChanged = "['onMouseZChanged_BuildList', _this] call KPLIB_fnc_build_handleMouse";
 };
