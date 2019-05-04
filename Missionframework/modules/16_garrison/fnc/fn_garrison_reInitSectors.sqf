@@ -4,7 +4,7 @@
     File: fn_garrison_reInitSectors.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-27
-    Last Update: 2019-04-30
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -71,6 +71,8 @@ private _hVehCount = 0;
         [format ["%1 (%2) reinitialized", markerText (_x select 0), _x select 0], "GARRISON"] call KPLIB_fnc_common_log;
     };
 } forEach KPLIB_garrison_array;
+
+publicVariable "KPLIB_garrison_array";
 
 ["----- Reinitialization of sector garrisons finished -----", "GARRISON", true] call KPLIB_fnc_common_log;
 

@@ -4,7 +4,7 @@
     File: fn_garrison_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -35,5 +35,7 @@ if (_moduleData isEqualTo []) then {
     if (KPLIB_param_debug) then {["Garrison module data found, applying data...", "SAVE"] call KPLIB_fnc_common_log;};
     KPLIB_garrison_array = _moduleData select 0;
 };
+
+publicVariable "KPLIB_garrison_array";
 
 true
