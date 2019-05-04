@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-05-03
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -120,7 +120,7 @@ class KPLIB_cratefiller {
     class controls {
 
         class KPLIB_ButtonTools: KPGUI_PRE_DialogCrossS {
-            idc = KPLIB_IDC_CRATEFILLER_BUTTONTOOLS;
+            idc = KPLIB_IDC_CRATEFILLER_BUTTONOVERVIEW;
             text = "KPGUI\res\icon_tools.paa";
             x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.04);
             tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT";

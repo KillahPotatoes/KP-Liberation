@@ -5,7 +5,7 @@
     File: fn_permission_checkPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-09
-    Last Update: 2019-05-03
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,9 +34,12 @@ if (!KPLIB_param_permission || serverCommandAvailable "#kick") exitWith {
 private _data = PGVAR(_permission, []);
 private _codeResult = false;
 private _result = [_permission, _target] call KPLIB_fnc_permission_getPermission;
+private _code = _data select 0;
 
 // Execute the registered code
-_codeResult = [] call (_data select 0);
+if !(_code isEqualTo {}) then {
+    _codeResult = [] call _code;
+};
 
 // Return the result
 if (_unanimous) then {

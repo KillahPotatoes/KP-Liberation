@@ -4,7 +4,7 @@
     File: defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-02
-    Last Update: 2019-05-03
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -22,7 +22,7 @@
 #define KPLIB_IDC_CRATEFILLER_HANDGUN               687404
 #define KPLIB_IDC_CRATEFILLER_SECONDARYWEAPON       687405
 
-#define KPLIB_IDC_CRATEFILLER_BUTTONTOOLS           687406
+#define KPLIB_IDC_CRATEFILLER_BUTTONOVERVIEW           687406
 
 #define KPLIB_IDC_CRATEFILLER_COMBOCARGO            687407
 #define KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT        687408
