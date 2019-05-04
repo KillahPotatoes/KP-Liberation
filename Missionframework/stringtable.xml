@@ -1044,7 +1044,7 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT">
             <English>Toggle cratefiller equipment overview.</English>
-            <German>Kistenfüller Werkzeuge umschalten.</German>
+            <German>Kistenfüller Ausrüstungsübersicht umschalten.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT">
             <English>Select a player, whose weapons should be shown.</English>
