@@ -4,8 +4,9 @@
     File: fn_init_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-15
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The postInit function of a module takes care of starting/executing the modules functions or scripts.
@@ -22,7 +23,7 @@ if (!isServer) then {
     // Called in the scheduled postInit environment allows the small wait in the function
     [] call KPLIB_fnc_init_receiveInit;
 } else {
-    diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initializing...", diag_tickTime];
+    ["Module initializing...", "POST] [INIT", true] call KPLIB_fnc_common_log;
 
     // Sort the sector markers to category arrays
     [] call KPLIB_fnc_init_sortSectors;
@@ -39,7 +40,7 @@ if (!isServer) then {
                 [] call KPLIB_fnc_init_save;
             } else {
                 _handle call CBA_fnc_removePerFrameHandler;
-                diag_log "[KP LIBERATION] [IMPORTANT] Save timer deactivated due to KPLIB_campaignRunning false.";
+                ["Save timer deactivated due to KPLIB_campaignRunning false", "IMPORTANT"] call KPLIB_fnc_common_log;
             };
         };
     }, KPLIB_param_saveInterval] call CBA_fnc_addPerFrameHandler;
@@ -50,7 +51,7 @@ if (!isServer) then {
     // Place down Antennas at Radio Tower sectors
     [] call KPLIB_fnc_init_placeTowers;
 
-    diag_log format ["[KP LIBERATION] [%1] [POST] [INIT] Module initialized", diag_tickTime];
+    ["Module initialized", "POST] [INIT", true] call KPLIB_fnc_common_log;
 };
 
 // Player section

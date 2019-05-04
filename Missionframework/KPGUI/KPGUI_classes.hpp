@@ -1163,7 +1163,7 @@ class KPGUI_PRE_DialogTitleS: KPGUI_PRE_Title {
 
 // Cross symbol
 class KPGUI_PRE_DialogCrossS: KPGUI_PRE_CloseCross {
-    x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.02)
+    x = safeZoneX + safeZoneW * (KP_X_VAL_S + KP_WIDTH_VAL_S - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_S);
 };
 

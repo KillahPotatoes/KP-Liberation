@@ -4,8 +4,9 @@
     File: fn_core_heliToDeck.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-05
-    Last Update: 2018-12-05
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Moves given helicopter from the Liberty hangar to the aft deck, when it's empty.

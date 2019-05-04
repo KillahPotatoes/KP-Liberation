@@ -4,7 +4,7 @@
     File: fn_logistic_resupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-24
-    Last Update: 2019-04-04
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -110,7 +110,7 @@ if !(KPLIB_param_aceResupply) then {
                 _newAmmoState = 1;
             };
             _vehicle setVehicleAmmo _newAmmoState;
-            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_resources_pay;
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "fuelCapacity");
@@ -120,7 +120,7 @@ if !(KPLIB_param_aceResupply) then {
                 _newFuelState = 1;
             };
             _vehicle setFuel _newFuelState;
-            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_resources_pay;
         };
     };
 } else {
@@ -133,7 +133,7 @@ if !(KPLIB_param_aceResupply) then {
             } else {
                 _vehicle setVariable ["ace_rearm_currentSupply", _ammoState + _addValue];
             };
-            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, _costs, 0] call KPLIB_fnc_resources_pay;
         };
         case "FUEL": {
             private _fuelMax = getNumber (_cfgVeh >> _type >> "ace_refuel_fuelCargo");
@@ -143,7 +143,7 @@ if !(KPLIB_param_aceResupply) then {
             } else {
                 _vehicle setVariable ["ace_refuel_currentFuelCargo", _fuelState + _addValue];
             };
-            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_res_pay;
+            [_nearFOB, 0, 0, _costs] call KPLIB_fnc_resources_pay;
         };
     };
 };

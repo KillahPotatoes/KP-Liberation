@@ -6,6 +6,7 @@
     Date: 2018-12-09
     Last Update: 2019-04-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Adds buildable items
