@@ -581,12 +581,15 @@
         </Key>
         <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_BUILD">
             <English>Build mode</English>
+            <German>Baumodus</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_MOVE">
             <English>Move mode</English>
+            <German>Bearbeitungsmodus</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_TOOLTIP">
             <English>Click to toggle between building new items and moving existing items modes.</English>
+            <German>Wechsle zwischen dem Baumodus und dem Bearbeitungsmodus.</German>
         </Key>
 
         <!-- REDEPLOY/RESPAWN DIALOG -->
