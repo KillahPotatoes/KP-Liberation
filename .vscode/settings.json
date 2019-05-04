@@ -59,6 +59,7 @@
         "KPLIB_param_reviveRequiredItems",
         "KPLIB_param_reviveRequiredTrait",
         "KPLIB_param_reviveUnconsciousStateMode",
+        "KPLIB_param_savedebug",
         "KPLIB_param_saveInterval",
         "KPLIB_param_sectorActRange",
         "KPLIB_param_sectorCap",

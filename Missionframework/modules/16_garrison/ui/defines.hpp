@@ -4,7 +4,7 @@
     File: defines.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-05-02
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -34,3 +34,11 @@
 #define KPLIB_IDC_GARRISON_HEAVYBUTTON      7580415
 
 #define KPLIB_IDC_GARRISON_MAP              7580416
+
+#define KPLIB_IDC_GARRISON_REINFORCETITLE   7580417
+#define KPLIB_IDC_GARRISON_GROUPSLABEL      7580418
+#define KPLIB_IDC_GARRISON_GROUPLIST        7580419
+#define KPLIB_IDC_GARRISON_GROUPBUTTON      7580420
+#define KPLIB_IDC_GARRISON_UNITSLABEL       7580421
+#define KPLIB_IDC_GARRISON_UNITLIST         7580422
+#define KPLIB_IDC_GARRISON_UNITBUTTON       7580423

@@ -4,9 +4,9 @@
     File: fn_garrison_spawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-03-30
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: Yes
+    Public: No
 
     Description:
         Handles the spawning of the sector garrison which is stored in the garrison array.
@@ -22,7 +22,7 @@ params [
     ["_sector", "", [""]]
 ];
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [GARRISON] Spawn for %2", diag_tickTime, _sector];};
+if (isServer) then {[format ["Spawn for %1", _sector], "GARRISON", true] call KPLIB_fnc_common_log;};
 
 // Initialize local variables
 private _garrison = [_sector] call KPLIB_fnc_garrison_getGarrison;

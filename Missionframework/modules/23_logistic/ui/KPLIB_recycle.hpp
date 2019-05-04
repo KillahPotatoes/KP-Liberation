@@ -4,7 +4,7 @@
     File: KPLIB_recycle.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-22
-    Last Update: 2019-05-03
+    Last Update: 2019-05-04
 
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -164,7 +164,7 @@ class KPLIB_recycle {
         class KPLIB_ButtonRecycle: KPGUI_PRE_DialogButtonC {
             idc = KPLIB_IDC_LOGISTIC_RECYCLE_BUTTONRECYCLE;
             text = "$STR_KPLIB_DIALOG_BUTTON_RECYCLE";
-            action = "[] call KPLIB_fnc_logistic_recycleTarget"
+            action = "[] call KPLIB_fnc_logistic_recycleTarget";
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossC {

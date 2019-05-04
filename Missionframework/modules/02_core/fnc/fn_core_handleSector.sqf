@@ -4,8 +4,9 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2018-12-08
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Handles an activated sector concerning which scripts should be started and checks for a later deactivation.
@@ -33,7 +34,7 @@ private _handler = [
             !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideE]] call KPLIB_fnc_core_areUnitsNear)
             && {[_sectorPos, KPLIB_param_sectorCapRange] call KPLIB_fnc_core_areUnitsNear}
         ) then {
-            diag_log format ["[KP LIBERATION] [%1] [CORE] Sector %2 (%3) captured", diag_tickTime, markerText _sector, _sector];
+            [format ["Sector %1 (%2) captured", markerText _sector, _sector], "CORE", true] call KPLIB_fnc_common_log;
 
             _this setVariable ["KPLIB_sectorActive", false];
             [_sector] call KPLIB_fnc_core_changeSectorOwner;
@@ -51,7 +52,7 @@ private _handler = [
     {
         _this getVariable "params" params ["_sector"];
 
-        diag_log format ["[KP LIBERATION] [%1] [CORE] ----- Sector %2 (%3) activated -----", diag_tickTime, markerText _sector, _sector];
+        [format ["----- Sector %1 (%2) activated -----", markerText _sector, _sector], "CORE", true] call KPLIB_fnc_common_log;
 
         _this setVariable ["KPLIB_sectorActive", true];
 
@@ -67,7 +68,7 @@ private _handler = [
         publicVariable "KPLIB_sectors_active";
         ["KPLIB_sector_deactivated", [_sector]] call CBA_fnc_globalEvent;
 
-        diag_log format ["[KP LIBERATION] [%1] [CORE] ----- Sector %2 (%3) deactivated -----", diag_tickTime, markerText _sector, _sector];
+        [format ["----- Sector %1 (%2) deactivated -----", markerText _sector, _sector], "CORE", true] call KPLIB_fnc_common_log;
     }, // End func
     {true}, // Run condition
     {!(_this getVariable ["KPLIB_sectorActive", true])} // End condition

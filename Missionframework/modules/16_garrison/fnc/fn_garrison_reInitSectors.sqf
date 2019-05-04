@@ -4,7 +4,7 @@
     File: fn_garrison_reInitSectors.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-27
-    Last Update: 2019-03-30
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -25,7 +25,7 @@ params [
 // Only execute on server and with valid parameter
 if (!isServer || (_preset isEqualTo "")) exitWith {};
 
-diag_log format ["[KP LIBERATION] [%1] [GARRISON] ----- Reinitialization of sector garrisons started -----", diag_tickTime];
+["----- Reinitialization of sector garrisons started -----", "GARRISON", true] call KPLIB_fnc_common_log;
 
 // Fetch all not active sectors
 private _sectors = KPLIB_sectors_all - KPLIB_sectors_active;
@@ -43,6 +43,7 @@ if (_preset isEqualTo "KPLIB_param_presetF") then {
 private _lVehicles = missionNamespace getVariable ["KPLIB_preset_vehLightArmedPl" + (["E", "F"] select _friendly), []];
 private _hVehicles = +(missionNamespace getVariable ["KPLIB_preset_vehHeavyApcPl" + (["E", "F"] select _friendly), []]);
 _hVehicles append (missionNamespace getVariable ["KPLIB_preset_vehHeavyPl" + (["E", "F"] select _friendly), []]);
+_hVehicles append (missionNamespace getVariable ["KPLIB_preset_vehAntiAirPl" + (["E", "F"] select _friendly), []]);
 
 // Reinitialize vehicle classnames in sector garrisons
 private _lVehCount = 0;
@@ -67,10 +68,14 @@ private _hVehCount = 0;
             (_x select 4) pushBack (selectRandom _hVehicles);
         };
 
-        diag_log format ["[KP LIBERATION] [GARRISON] %1 (%2) reinitialized", markerText (_x select 0), _x select 0];
+        [format ["%1 (%2) reinitialized", markerText (_x select 0), _x select 0], "GARRISON"] call KPLIB_fnc_common_log;
     };
 } forEach KPLIB_garrison_array;
 
-diag_log format ["[KP LIBERATION] [%1] [GARRISON] ----- Reinitialization of sector garrisons finished -----", diag_tickTime];
+publicVariable "KPLIB_garrison_array";
+
+["----- Reinitialization of sector garrisons finished -----", "GARRISON", true] call KPLIB_fnc_common_log;
+
+[] call KPLIB_fnc_init_save;
 
 true

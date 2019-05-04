@@ -5,7 +5,7 @@
     File: fn_logistic_selectResupplyTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-23
-    Last Update: 2019-05-02
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -56,7 +56,7 @@ _index = lbCurSel _ctrlCargo;
 private _cfgVeh = configFile >> "CfgVehicles";
 private _cfgMag = configFile >> "CfgMagazines";
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _res = [_nearFOB] call KPLIB_fnc_res_getResTotal;
+private _res = [_nearFOB] call KPLIB_fnc_resources_getResTotal;
 private _ammoMax = 0;
 private _ammoState = 0;
 private _fuelMax = 0;

@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-03-31
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,11 +29,20 @@ class garrison {
     // Despawns the sector garrison and updates the garrison array with actual data
     class garrison_despawn {};
 
+    // Handle button click for unit/group adding
+    class garrison_dialogAdd {};
+
     // Handle button click of infantry/vehicle removal
     class garrison_dialogRemove {};
 
+    // Handle group selection in garrison dialog
+    class garrison_dialogSelectGroup {};
+
     // Handle new selection in garrison dialog
     class garrison_dialogSelectSector {};
+
+    // Handle unit selection in garrison dialog
+    class garrison_dialogSelectUnit {};
 
     // Gets the specific garrison array
     class garrison_getGarrison {};

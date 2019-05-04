@@ -4,8 +4,9 @@
     File: fn_example_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-04-14
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
@@ -18,7 +19,7 @@
 */
 
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [%1] [PRE] [CRATEFILLER] Module initializing...", diag_tickTime];
+    ["Module initializing...", "PRE] [CRATEFILLER", true] call KPLIB_fnc_common_log;
 
 /*
     ----- Module Initialization -----
@@ -34,6 +35,6 @@ if (isServer) then {
 // Process CBA Settings
 [] call KPLIB_fnc_cratefiller_settings;
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [CRATEFILLER] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [CRATEFILLER", true] call KPLIB_fnc_common_log;};
 
 true

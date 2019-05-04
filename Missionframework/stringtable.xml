@@ -28,7 +28,7 @@
 
         Localization contributors:
 
-            English | Updated: 2019-04-10
+            English | Updated: 2019-04-27
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -41,7 +41,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2019-04-10
+            German | Updated: 2019-04-27
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -249,7 +249,7 @@
         </Key>
         <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
             <English>-- GARRISON MANAGEMENT --</English>
-            <German>-- GARNISONVERWALTUNG --</German>
+            <German>-- GARNISONSVERWALTUNG --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
@@ -625,11 +625,23 @@
         <!-- GARRISON DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_GARRISON_TITLE">
             <English>GARRISON MANAGEMENT</English>
-            <German>GARNISONVERWALTUNG</German>
+            <German>GARNISONSVERWALTUNG</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_ALERTNOTE">
             <English>Sector in red alert</English>
             <German>Sektor in Alarmbereitschaft</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON">
+            <English>Garrison group</English>
+            <German>Gruppe stationieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPBUTTON_TT">
+            <English>Add whole selected group to the sector garrison.</English>
+            <German>Fügt die gewählte Gruppe vollständig der Garnison hinzu.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_GROUPSLABEL">
+            <English>Groups in vicinity:</English>
+            <German>Gruppen in der Nähe:</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_HEAVYLABEL">
             <English>Heavy Vehicles:</English>
@@ -638,6 +650,10 @@
         <Key ID="STR_KPLIB_DIALOG_GARRISON_INFLABEL">
             <English>Infantry:</English>
             <German>Infanterie:</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_INVALID_NOTE">
+            <English>At least one unit can't be added to a garrison.</English>
+            <German>Mindestens eine Einheit kann nicht in der Garnison stationiert werden.</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_GARRISON_LIGHTLABEL">
             <English>Light Vehicles:</English>
@@ -658,6 +674,18 @@
         <Key ID="STR_KPLIB_DIALOG_GARRISON_REMOVE_TT">
             <English>Remove amount/vehicle from garrison.</English>
             <German>Anzahl/Fahrzeug aus der Garnison entfernen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITBUTTON">
+            <English>Garrison unit</English>
+            <German>Einheit stationieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITBUTTON_TT">
+            <English>Add selected unit to the sector garrison.</English>
+            <German>Fügt die gewählte Einheit der Garnison hinzu.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_GARRISON_UNITSLABEL">
+            <English>Units of selected group:</English>
+            <German>Einheiten der gewählten Gruppe:</German>
         </Key>
 
         <!-- LOGISTIC MAIN DIALOG -->
@@ -1177,6 +1205,14 @@
             <German>Ausgewähltes Transportmedium ist außer Reichweite.</German>
             <Polish>Wybrany środek transportu jest poza zasięgiem.</Polish>
         </Key>
+        <Key ID="STR_KPLIB_HINT_REQUIRERESTART1">
+            <English>Restart required</English>
+            <German>Neustart benötigt</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_REQUIRERESTART2">
+            <English>The setting you've changed needs a server restart.</English>
+            <German>Die von dir geänderte Einstellung benötigt einen Neustart des Servers.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_RESCRATECONTENT">
             <English>The crate currently holds:\n%1 %2</English>
             <German>Die Kiste beinhaltet im Moment:\n%1 %2</German>
@@ -1283,9 +1319,9 @@
             <German>Fahrzeuginventar leeren</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_CLEARCARGO_TT">
-            <English>Enables/Disables if spawned/loaded vehicles have an empty cargo space.</English>
+            <English>Enables/Disables if spawned vehicles have initially an empty cargo space.</English>
             <Chinese>如果重生/裝載的載具有倉儲空間則啟用/關閉</Chinese>
-            <German>Aktiviert/Deaktiviert ob gebaute/geladene Fahrzeuge ein leeres Inventar haben.</German>
+            <German>Aktiviert/Deaktiviert ob gebaute Fahrzeuge anfänglich ein leeres Inventar haben.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG">
             <English>Enable Debug Mode</English>
@@ -1295,7 +1331,7 @@
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT">
             <English>Enables/Disables extended Liberation debug output for the server log.</English>
             <Chinese>啟用/關閉擴展的Liberation除錯訊息輸出到伺服器紀錄</Chinese>
-            <German>Aktiviert/Deaktiviert erweiterte Liberation Debug Ausgaben im Serverlog.</German>
+            <German>Aktiviert/Deaktiviert erweiterte Liberation Debugausgaben im Serverlog.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_FOBRANGE">
             <English>FOB Area</English>
@@ -1306,6 +1342,14 @@
             <English>Radius in meters of the FOB area.</English>
             <Chinese>前線基地半徑公尺內</Chinese>
             <German>Radius in Metern des FOB Bereichs.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG">
+            <English>Enable Save Debug</English>
+            <German>Speicher Debug aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG_TT">
+            <English>Enables/Disables detailed rpt logging of each saving process.</English>
+            <German>Aktiviert/Deaktiviert detaillierte Informationen zur Spielstandspeicherung im RPT Log.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_GENERAL_SAVEINT">
             <English>Save Interval</English>
@@ -1437,15 +1481,15 @@
         </Key>
 
         <!-- RESSOURCES CATEGORY -->
-        <Key ID="STR_KPLIB_SETTINGS_RES">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES">
             <English>KPLIB - Resources</English>
             <German>KPLIB - Ressourcen</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME">
             <English>Volume of resource crates</English>
             <German>Fassungsvermögen von Ressourcenkisten</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_RES_CRATEVOLUME_TT">
+        <Key ID="STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME_TT">
             <English>The maximum amount of resources which can be stored in a crate.</English>
             <German>Das maximal mögliche Menge an Ressourcen in den Ressourcenkisten.</German>
         </Key>
@@ -1924,6 +1968,10 @@
         <Key ID="STR_KPLIB_PERMISSION_CRATEFILLER">
             <English>Cratefiller</English>
             <German>Kistenfüller</German>
+        </Key>
+        <Key ID="STR_KPLIB_PERMISSION_GARRISONDIALOGACCESS">
+            <English>Garrison Management</English>
+            <German>Garnisonsverwaltung</German>
         </Key>
         <Key ID="STR_KPLIB_PERMISSION_GROUPBUILDMENU">
             <English>-- Buildmenu --</English>

@@ -5,7 +5,7 @@
     File: fn_logistic_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-05-01
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -21,7 +21,7 @@
 */
 
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initializing...", diag_tickTime];
+    ["Module initializing...", "POST] [LOGISTIC", true] call KPLIB_fnc_common_log;
 
     // Logistic station permissions
     // Recycle
@@ -110,6 +110,6 @@ if (isServer) then {
     LSVAR("Vehicles", _vehicles);
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [LOGISTIC] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "POST] [LOGISTIC", true] call KPLIB_fnc_common_log;};
 
 true

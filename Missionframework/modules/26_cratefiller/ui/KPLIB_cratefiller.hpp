@@ -280,7 +280,7 @@ class KPLIB_cratefiller {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
             w = KP_GETW(KP_WIDTH_VAL_S,1);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT"
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT";
         };
 
         class KPLIB_DialogCross: KPGUI_PRE_DialogCrossS {};

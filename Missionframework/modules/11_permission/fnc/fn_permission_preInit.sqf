@@ -4,8 +4,9 @@
     File: fn_permission_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-04-10
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The preInit function defines global variables, adds event handlers and set some vital settings which are used in this module.
@@ -19,7 +20,7 @@
 
 if (isServer) then {
 
-    diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initializing...", diag_tickTime];
+    ["Module initializing...", "PRE] [PERMISSION", true] call KPLIB_fnc_common_log;
 
     // Register load event handler
     ["KPLIB_doLoad", {[] call KPLIB_fnc_permission_loadData;}] call CBA_fnc_addEventHandler;
@@ -42,6 +43,6 @@ if (isServer) then {
     ----- Module Globals -----
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [PERMISSION] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [PERMISSION", true] call KPLIB_fnc_common_log;};
 
 true

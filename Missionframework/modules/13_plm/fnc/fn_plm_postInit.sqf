@@ -4,8 +4,9 @@
     File: fn_plm_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2018-12-14
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The postInit function of a module takes care of starting/executing the modules functions or scripts.
@@ -18,7 +19,7 @@
         Module postInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module initializing...", diag_tickTime];};
+if (isServer) then {["Module initializing...", "POST] [PLM", true] call KPLIB_fnc_common_log;};
 
 // Player section
 if (hasInterface) then {
@@ -55,6 +56,6 @@ if (hasInterface) then {
     [] call KPLIB_fnc_plm_apply;
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PLM] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "POST] [PLM", true] call KPLIB_fnc_common_log;};
 
 true
