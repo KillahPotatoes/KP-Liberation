@@ -18,7 +18,7 @@ class KPLIB_BuildSearch: KPGUI_PRE_EditBox {
     w = KP_GETW(KP_WIDTH_VAL_LP,(12/11));
     h = KP_GETH(KP_HEIGHT_VAL_LP,40);
 
-    onKeyUp = "call KPLIB_fnc_build_displayFillList";
+    onKeyUp = "[] call KPLIB_fnc_build_displayFillList";
 };
 
 class KPLIB_BuildSearchClearButton: KPGUI_PRE_ActivePictureRatio {
@@ -30,7 +30,7 @@ class KPLIB_BuildSearchClearButton: KPGUI_PRE_ActivePictureRatio {
     h = KP_GETH(KP_HEIGHT_VAL_LP,40);
 
     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_end_ca.paa";
-    action = "call KPLIB_fnc_build_searchClear";
+    action = "[] call KPLIB_fnc_build_searchClear";
 };
 
 class KPLIB_BuildList: KPGUI_PRE_ListNBox {
@@ -64,8 +64,8 @@ class KPLIB_ToolboxContainer: KPGUI_PRE_ControlsGroup {
     class Controls {
         // !TODO! move toolbox items creation to script
         class KPLIB_Toolbox_MoveItems: KPGUI_PRE_ActiveText {
-            text = "Build mode";
-            tooltip = "Click to toggle between building new items and moving existing items modes."
+            text = "$STR_KPLIB_DIALOG_BUILD_MODE_BUILD";
+            tooltip = "$STR_KPLIB_DIALOG_BUILD_MODE_TOOLTIP"
             idc = KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS;
 
             colorActive[] = {1, 1, 1, 1};
@@ -92,5 +92,5 @@ class KP_ApplyButton: KPGUI_PRE_DialogButton_LeftPanel {
 };
 
 class KPLIB_DialogCross: KPGUI_PRE_DialogCross_LeftPanel {
-    action = "call KPLIB_fnc_build_stop";
+    action = "[] call KPLIB_fnc_build_stop";
 };

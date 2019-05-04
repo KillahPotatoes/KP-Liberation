@@ -6,7 +6,7 @@
     File: fn_build_changeQueueMode.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2019-05-01
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,7 +30,7 @@ private _buildList = _display displayCtrl KPLIB_IDC_BUILD_ITEM_LIST;
 // !TODO! preserve and restore current build queue
 switch (LGVAR_D(buildMode, 0)) do {
     case 0: {
-        _control ctrlSetText "Move mode";
+        _control ctrlSetText localize "STR_KPLIB_DIALOG_BUILD_MODE_MOVE";
         LSVAR("buildMode", 1);
         LSVAR("buildItem", []);
         _confirmBtnControl ctrlEnable false;
@@ -45,7 +45,7 @@ switch (LGVAR_D(buildMode, 0)) do {
     };
 
     case 1: {
-        _control ctrlSetText "Build mode";
+        _control ctrlSetText localize "STR_KPLIB_DIALOG_BUILD_MODE_BUILD";
         LSVAR("buildMode", 0);
         _confirmBtnControl ctrlEnable true;
         _buildList ctrlEnable true;

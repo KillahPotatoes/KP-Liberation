@@ -579,6 +579,15 @@
             <English>BUILD QUEUE</English>
             <German>BAULISTE</German>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_BUILD">
+            <English>Build mode</English>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_MOVE">
+            <English>Move mode</English>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_TOOLTIP">
+            <English>Click to toggle between building new items and moving existing items modes.</English>
+        </Key>
 
         <!-- REDEPLOY/RESPAWN DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_TITLE">
