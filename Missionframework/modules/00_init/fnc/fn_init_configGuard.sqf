@@ -4,7 +4,7 @@
     File: fn_init_configGuard.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-06-19
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -59,7 +59,7 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
     ["Configuration files are valid", "CFG GUARD", true] call KPLIB_fnc_common_log;
 
     // Display mission information
-    ["--- MISSION INFORMATION ---", "MISSIONSTART"] call KPLIB_fnc_common_log;
+    ["------------------------------------", "MISSIONSTART"] call KPLIB_fnc_common_log;
     [format ["Name: %1", (localize "STR_KPLIB_TITLE")], "MISSIONSTART"] call KPLIB_fnc_common_log;
     [format ["World: %1", worldName], "MISSIONSTART"] call KPLIB_fnc_common_log;
     [format ["Version: %1", (localize "STR_KPLIB_VERSION")], "MISSIONSTART"] call KPLIB_fnc_common_log;
@@ -76,6 +76,7 @@ KPLIB_validationNamespace setVariable ["KPLIB_preset_checkedSingles", true];
         ] select KPLIB_param_presetArsenal
     ], "MISSIONSTART"] call KPLIB_fnc_common_log;
     [format ["ACE: %1", KPLIB_ace_enabled], "MISSIONSTART"] call KPLIB_fnc_common_log;
+    ["------------------------------------", "MISSIONSTART"] call KPLIB_fnc_common_log;
 };
 
 true

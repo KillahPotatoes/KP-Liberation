@@ -4,7 +4,7 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -93,5 +93,7 @@ if ((_activeGarrisonRef select 1) isEqualTo (_persistentGarrisonRef select 1)) t
 
 // Remove active garnison array entry
 KPLIB_garrison_active deleteAt _activeGarrisonId;
+
+publicVariable "KPLIB_garrison_array";
 
 true
