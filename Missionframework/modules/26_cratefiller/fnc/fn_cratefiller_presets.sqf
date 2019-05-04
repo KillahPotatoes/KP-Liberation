@@ -4,8 +4,9 @@
     File: fn_cratefiller_presets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-07
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Creates the different categories of the whitelisted items.

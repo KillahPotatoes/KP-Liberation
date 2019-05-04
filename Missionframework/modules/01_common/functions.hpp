@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2019-04-15
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,6 +19,9 @@ class common {
 
     // Let a camera circle around a given target with given params
     class common_cameraCircleTarget {};
+
+    // Do a camera fly by from-to position
+    class common_cameraFlyBy {};
 
     // Clears vehicle cargo
     class common_clearVehicleCargo {};

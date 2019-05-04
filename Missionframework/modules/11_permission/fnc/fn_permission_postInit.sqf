@@ -4,8 +4,9 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-04-06
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         The postInit function of a module takes care of starting/executing the modules functions or scripts.
@@ -19,7 +20,7 @@
 */
 
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initializing...", diag_tickTime];
+    ["Module initializing...", "POST] [PERMISSION", true] call KPLIB_fnc_common_log;
 
     // Slot permissions
     // Commander
@@ -215,6 +216,6 @@ if (hasInterface) then {
     player addEventHandler ["SeatSwitchedMan", {if !([_this select 0, "", _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
 };
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [POST] [PERMISSION] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "POST] [PERMISSION", true] call KPLIB_fnc_common_log;};
 
 true

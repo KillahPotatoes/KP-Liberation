@@ -4,8 +4,9 @@
     File: fn_plm_showRankData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-08-05
-    Last Update: 2018-11-10
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Reads the KP Ranks data of the current player and displays it in the player menu dialog.

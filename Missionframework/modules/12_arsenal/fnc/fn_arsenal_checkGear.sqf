@@ -4,8 +4,9 @@
     File: fn_arsenal_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2019-03-17
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
@@ -40,7 +41,7 @@ private _badItems = _playerItems arrayIntersect KPLIB_preset_arsenal_blacklist;
 
 if (!(_badItems isEqualTo [])) exitWith {
     private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _badItems, name player];
-    _text remoteExec ["diag_log",2];
+    [format ["Found %1 at Player %2", _badItems, name player], "BLACKLIST"] remoteExecCall ["KPLIB_fnc_common_log",2];
     [
         ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
         [localize "STR_KPLIB_HINT_BLACKLISTEDITEMFOUND"],
