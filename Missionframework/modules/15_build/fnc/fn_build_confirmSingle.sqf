@@ -4,7 +4,7 @@
     File: fn_build_confirmSingle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2019-05-01
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,7 +30,7 @@ _createParams params ["_className", "_pos", "_dir", "_justBuild"];
 
 private _fob = _player getVariable ["KPLIB_fob", ""];
 
-if !(([_fob] + _price) call KPLIB_fnc_res_pay) exitWith {
+if !(([_fob] + _price) call KPLIB_fnc_resources_pay) exitWith {
     diag_log format ["[KP LIBERATION] [BUILD] Not enough resources to build: %1 at: %2", _className, _fob];
     ["KPLIB_build_not_enough_resources", [_className], _player] call CBA_fnc_targetEvent;
 };
