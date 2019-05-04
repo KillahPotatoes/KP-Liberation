@@ -573,12 +573,6 @@
             <Spanish>CONSTRUIR</Spanish>
             <Turkish>İnşa Et</Turkish>
         </Key>
-
-        <!-- BUILD DIALOG -->
-        <Key ID="STR_KPLIB_DIALOG_BUILD_QUEUE_TITLE">
-            <English>BUILD QUEUE</English>
-            <German>BAULISTE</German>
-        </Key>
         <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_BUILD">
             <English>Build mode</English>
             <German>Baumodus</German>
@@ -587,9 +581,13 @@
             <English>Move mode</English>
             <German>Bearbeitungsmodus</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_TOOLTIP">
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_TT">
             <English>Click to toggle between building new items and moving existing items modes.</English>
             <German>Wechsle zwischen dem Baumodus und dem Bearbeitungsmodus.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_QUEUE_TITLE">
+            <English>BUILD QUEUE</English>
+            <German>BAULISTE</German>
         </Key>
 
         <!-- REDEPLOY/RESPAWN DIALOG -->
