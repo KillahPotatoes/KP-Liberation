@@ -2,6 +2,8 @@ if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIV
 
 switch (worldName) do {
 	case "Chernarus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
+    case "gm_weferlingen_summer": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\gm_weferlingen_summer.sqf"};
+    case "gm_weferlingen_winter": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\gm_weferlingen_winter.sqf"};
 	case "lythium": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\lythium.sqf"};
 	case "Malden": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\malden.sqf"};
 	case "pja310": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\pja310.sqf"};
