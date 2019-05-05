@@ -154,11 +154,22 @@
 
 /*
     --- Small dialog components ---
-    (X from 0.3 - 0.7, Y from 0.05 - 0.8)
+    (X from 0.3 - 0.7, Y from 0.15 - 0.85)
 */
 
 #define KP_X_VAL_S                      0.3
-#define KP_Y_VAL_S                      0.05
+#define KP_Y_VAL_S                      0.15
 
 #define KP_WIDTH_VAL_S                  0.4
-#define KP_HEIGHT_VAL_S                 (0.75 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+#define KP_HEIGHT_VAL_S                 (0.7 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+
+/*
+    --- Small right dialog components ---
+    (X from 0.80 - 0.95, Y from 0.15 - 0.85)
+*/
+
+#define KP_X_VAL_SR                      0.80
+#define KP_Y_VAL_SR                      0.15
+
+#define KP_WIDTH_VAL_SR                  0.15
+#define KP_HEIGHT_VAL_SR                 (0.7 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)

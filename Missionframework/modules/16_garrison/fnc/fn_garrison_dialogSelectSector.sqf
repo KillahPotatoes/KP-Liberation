@@ -5,7 +5,7 @@
     File: fn_garrison_dialogSelectSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-30
-    Last Update: 2019-03-31
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -13,8 +13,7 @@
         Fetches and displays information of a sector selected in the garrison management dialog.
 
     Parameter(s):
-        _ctrlLbSectors  - Sector list control                   [CONTROL, defaults to controlNull]
-        _lbIndex        - Selected index in the list control    [NUMBER, defaults to -1]
+        _lbIndex    - Selected index in the list control    [NUMBER, defaults to -1]
 
     Returns:
         Function reached the end [BOOL]
@@ -25,7 +24,7 @@ params [
 ];
 
 // Exit if no parameters passed
-if (_lbIndex isEqualTo -1) exitWith {};
+if (_lbIndex isEqualTo -1) exitWith {false};
 
 // Dialog controls
 private _dialog = findDisplay KPLIB_IDC_GARRISON_DIALOG;
@@ -52,7 +51,15 @@ private _ctrlHeavyButton = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYBUTTON;
 
 private _ctrlMap = _dialog displayCtrl KPLIB_IDC_GARRISON_MAP;
 
-private _sectorDetailCtrls = [
+private _ctrlReinforceTitle = _dialog displayCtrl KPLIB_IDC_GARRISON_REINFORCETITLE;
+private _ctrlGroupsLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPSLABEL;
+private _ctrlLbGroups = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPLIST;
+private _ctrlGroupButton = _dialog displayCtrl KPLIB_IDC_GARRISON_GROUPBUTTON;
+private _ctrlUnitsLabel = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITSLABEL;
+private _ctrlLbUnits = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITLIST;
+private _ctrlUnitButton = _dialog displayCtrl KPLIB_IDC_GARRISON_UNITBUTTON;
+
+private _ctrlsToHide = [
     _ctrlInfLabel,
     _ctrlInfAmount,
     _ctrlInfBox,
@@ -65,7 +72,14 @@ private _sectorDetailCtrls = [
     _ctrlHeavyAmount,
     _ctrlHeavyList,
     _ctrlHeavyButton,
-    _ctrlMap
+    _ctrlMap,
+    _ctrlReinforceTitle,
+    _ctrlGroupsLabel,
+    _ctrlLbGroups,
+    _ctrlGroupButton,
+    _ctrlUnitsLabel,
+    _ctrlLbUnits,
+    _ctrlUnitButton
 ];
 
 // Initialize needed local variables
@@ -74,8 +88,12 @@ private _sectorPos = [_sector] call KPLIB_fnc_common_getPos;
 private _garrison = [_sector] call KPLIB_fnc_garrison_getGarrison;
 private _alert = !(([_sector, true] call KPLIB_fnc_garrison_getGarrison) isEqualTo []);
 
+// Reset group and unit selection
+KPLIB_garrison_dialogSelGroup = grpNull;
+KPLIB_garrison_dialogSelUnit = objNull;
+
 // Show sector details
-{_x ctrlShow true;} forEach _sectorDetailCtrls;
+{_x ctrlShow true;} forEach _ctrlsToHide;
 
 // Show alert state hint
 _ctrlAlertNote ctrlShow _alert;
@@ -135,8 +153,28 @@ if !((_garrison select 4) isEqualTo []) then {
     } forEach _heavyVehicles;
 };
 
-// Show map and center on sector
-_ctrlMap ctrlMapAnimAdd [0, 0.2, _sectorPos];
+// Show map and center on sector and remove possible created group marker
+deleteMarkerLocal "grpMarker";
+_ctrlMap ctrlMapAnimAdd [0, 0.1, _sectorPos];
 ctrlMapAnimCommit _ctrlMap;
+
+// Fill group list with groups in vicinity of the sector
+KPLIB_garrison_dialogGroups = allGroups select {(side _x) isEqualTo KPLIB_preset_sideF};
+KPLIB_garrison_DialogGroups = KPLIB_garrison_dialogGroups select {((_sectorPos distance2D (getPos leader _x)) <= KPLIB_param_sectorCapRange * 1.5)};
+KPLIB_garrison_dialogGroups = KPLIB_garrison_dialogGroups apply {[groupId _x, _x]};
+KPLIB_garrison_dialogGroups sort true;
+lbClear _ctrlLbGroups;
+{
+    _ctrlLbGroups lbAdd (_x select 0);
+} forEach KPLIB_garrison_dialogGroups;
+_ctrlLbGroups lbSetCurSel -1;
+
+// Make sure the group units list is empty
+lbClear _ctrlLbUnits;
+_ctrlLbUnits lbSetCurSel -1;
+
+// Deactivate garrison buttons as long as nothing is selected
+_ctrlGroupButton ctrlEnable false;
+_ctrlUnitButton ctrlEnable false;
 
 true

@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_cratefiller_getNearStorages
 
     File: fn_cratefiller_getNearStorages.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,13 +20,14 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlStorage = _dialog displayCtrl 75802;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlStorage = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_COMBOCARGO;
 
 // Clear the lists
 lbClear _ctrlStorage;
 
-// Get near objects and check for storage capacity
+// Variables
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _type = objNull;
 private _config = "";
 private _number= 0;
@@ -42,14 +44,15 @@ private _blacklist = [
     KPLIB_logistic_building
 ];
 
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+// Get near objects and check for storage capacity
 {
     _type = typeOf _x;
-    if (_type isEqualTo "GroundWeaponHolder") exitWith {};
-    _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-    _number = getNumber (configfile >> _config >> _type >> "maximumLoad");
-    if (_number > 0) then {
-        _storages pushBack _x;
+    if (_type != "GroundWeaponHolder") then {
+        _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
+        _number = getNumber (_config >> "maximumLoad");
+        if (_number > 0) then {
+            _storages pushBack _x;
+        };
     };
 } forEach (((getMarkerPos _nearFOB) nearObjects KPLIB_param_fobRange) select {!(typeOf _x in _blacklist)});
 
@@ -57,9 +60,9 @@ private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 {
     _type = typeOf _x;
     _config = [_type] call KPLIB_fnc_cratefiller_getConfigPath;
-    _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getMarkerPos _nearFOB) distance2D _x), getText (configFile >> _config >> _type >> "displayName")];
+    _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getMarkerPos _nearFOB) distance2D _x), getText (_config >> "displayName")];
     _ctrlStorage lbSetData [_index, netId _x];
-    _picture = getText (configFile >> _config >> _type >> "picture");
+    _picture = getText (_config >> "picture");
     if (_picture isEqualTo "pictureThing") then {
         _ctrlStorage lbSetPicture [_index, "KPGUI\res\icon_help.paa"];
     } else {

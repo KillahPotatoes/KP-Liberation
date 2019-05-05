@@ -4,7 +4,7 @@
     File: fn_resources_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-14
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,7 +30,7 @@
     "KPLIB_param_crateVolume",
     "SLIDER",
     [localize "STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME", localize "STR_KPLIB_SETTINGS_RESOURCES_CRATEVOLUME_TT"],
-    localize "STR_KPLIB_SETTINGS_RES",
+    localize "STR_KPLIB_SETTINGS_RESOURCES",
     [50, 400, 100, 0],
     1,
     {}

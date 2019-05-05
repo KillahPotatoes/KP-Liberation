@@ -4,7 +4,8 @@
     File: KPLIB_resupply.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-21
-    Last Update: 2019-04-22
+    Last Update: 2019-05-04
+
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -12,7 +13,7 @@
 */
 
 class KPLIB_resupply {
-    idd = 7580233;
+    idd = KPLIB_IDC_LOGISTIC_RESUPPLY_DIALOG;
     movingEnable = 0;
     onUnload = "KPLIB_logistic_activeCam cameraEffect [""terminate"",""back""]; camDestroy KPLIB_logistic_activeCam;";
 
@@ -29,7 +30,7 @@ class KPLIB_resupply {
     class controls {
 
         class KPLIB_ComboVehicles: KPGUI_PRE_Combo {
-            idc = 68740;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_COMBOVEHICLES;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,1,48);
             w = KP_GETW(KP_WIDTH_VAL_C,(12/11));
@@ -49,7 +50,7 @@ class KPLIB_resupply {
         };
 
         class KPLIB_ComboCargo: KPLIB_ComboVehicles {
-            idc = 68741;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_COMBOCARGO;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,5,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
             tooltip = "$STR_KPLIB_DIALOG_RESUPPLY_CARGO_TT";
@@ -66,7 +67,7 @@ class KPLIB_resupply {
         };
 
         class KPLIB_TextCargoStateValue: KPGUI_PRE_Text {
-            idc = 68742;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_CARGOSTATEVALUE;
             text = "---";
             style = 1;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
@@ -81,12 +82,12 @@ class KPLIB_resupply {
         };
 
         class KPLIB_TextCargoCostsValue: KPLIB_TextCargoStateValue {
-            idc = 68743;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_CARGOCOSTSVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,13,48);
         };
 
         class KPLIB_SliderResupplyCount: KPGUI_PRE_Slider {
-            idc = 68744;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_RESUPPLYCOUNT;
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,0,1);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
             w = KP_GETW(KP_WIDTH_VAL_C,1);
@@ -100,7 +101,7 @@ class KPLIB_resupply {
         };
 
         class KPLIB_TextSliderValue: KPLIB_TextCargoStateValue {
-            idc = 68745;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_SLIDERVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,21,48);
         };
 
@@ -110,7 +111,7 @@ class KPLIB_resupply {
         };
 
         class KPLIB_TextTotalCostsValue: KPLIB_TextCargoStateValue {
-            idc = 68746;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_TOTALCOSTSVALUE;
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,25,48);
         };
 
@@ -123,7 +124,7 @@ class KPLIB_resupply {
         };
 
         class KPLIB_ButtonResupply: KPGUI_PRE_DialogButtonC {
-            idc = 68747;
+            idc = KPLIB_IDC_LOGISTIC_RESUPPLY_BUTTONRESUPPLY;
             text = "$STR_KPLIB_DIALOG_BUTTON_RESUPPLY";
             action = "[] call KPLIB_fnc_logistic_resupplyTarget";
         };

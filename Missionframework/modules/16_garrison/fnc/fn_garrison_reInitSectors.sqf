@@ -4,7 +4,7 @@
     File: fn_garrison_reInitSectors.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-27
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -43,6 +43,7 @@ if (_preset isEqualTo "KPLIB_param_presetF") then {
 private _lVehicles = missionNamespace getVariable ["KPLIB_preset_vehLightArmedPl" + (["E", "F"] select _friendly), []];
 private _hVehicles = +(missionNamespace getVariable ["KPLIB_preset_vehHeavyApcPl" + (["E", "F"] select _friendly), []]);
 _hVehicles append (missionNamespace getVariable ["KPLIB_preset_vehHeavyPl" + (["E", "F"] select _friendly), []]);
+_hVehicles append (missionNamespace getVariable ["KPLIB_preset_vehAntiAirPl" + (["E", "F"] select _friendly), []]);
 
 // Reinitialize vehicle classnames in sector garrisons
 private _lVehCount = 0;
@@ -71,6 +72,10 @@ private _hVehCount = 0;
     };
 } forEach KPLIB_garrison_array;
 
+publicVariable "KPLIB_garrison_array";
+
 ["----- Reinitialization of sector garrisons finished -----", "GARRISON", true] call KPLIB_fnc_common_log;
+
+[] call KPLIB_fnc_init_save;
 
 true

@@ -91,7 +91,7 @@ EMitted when a new permission handler is registered
 No scripts will be started by this module
 
 ### Example Permission Array
-KPLIB_permission_list = [
+KPLIB_permission_data getVariable ["permissionList", []]; = [
     ["SteamID64", "PlayerName", [
         ["AVehicle", true],
         ["BVehicle", false],

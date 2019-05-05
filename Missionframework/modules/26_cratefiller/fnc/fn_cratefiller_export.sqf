@@ -1,10 +1,11 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_cratefiller_export
 
     File: fn_cratefiller_export.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-07
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,8 +20,8 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758026;
-private _ctrlExport = _dialog displayCtrl 75820;
+private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
+private _ctrlExport = _dialog displayCtrl KPLIB_IDC_CRATEFILLER_EXPORTNAME;
 
 // Read the presets from profileNamespace
 private _preset = profileNamespace getVariable ["KPLIB_cratefiller_preset", []];

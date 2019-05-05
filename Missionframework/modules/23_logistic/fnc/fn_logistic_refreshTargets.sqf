@@ -4,7 +4,7 @@
     File: fn_logistic_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-04-03
+    Last Update: 2019-04-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -34,6 +34,7 @@ lbClear _ctrlVehicleList;
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _vehicles = (getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange];
 
+// Variables
 private _cfg = configFile >> "CfgVehicles";
 private _type = "";
 private _name = "";

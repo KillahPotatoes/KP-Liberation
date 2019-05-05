@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
     KPLIB_fnc_permission_setupPermissionControls
@@ -5,7 +6,7 @@
     File: fn_permission_setupPermissionControls.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-17
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -20,24 +21,27 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 758011;
-private _ctrlPlayerList = _dialog displayCtrl 68740;
+private _dialog = findDisplay KPLIB_IDC_PERMISSION_DIALOG;
+private _ctrlPlayerList = _dialog displayCtrl KPLIB_IDC_PERMISSION_PLAYERLIST;
 
 // Read the listbox
 private _index = lbCurSel _ctrlPlayerList;
 private _playerUID = _ctrlPlayerList lbData _index;
 
-// Check the listbox data and execute code dependent on listbox selection
+// Variables
+private _list = PGVAR("permissionList", []);
+private _default = PGVAR("permissionDefault", []);
 private _defaultPermission = false;
 private _index = 0;
 private _permission = "";
 private _playerPermissions = [];
 
+// Check the listbox data and execute code dependent on listbox selection
 switch (_playerUID) do {
     case "default": {
         {
             _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
-            _defaultPermission = KPLIB_permission_default select (KPLIB_permission_default findIf {
+            _defaultPermission = _default select (_default findIf {
                 (_x select 0) isEqualTo _permission
             }) select 1;
 
@@ -52,16 +56,20 @@ switch (_playerUID) do {
         } forEach KPLIB_permission_tempControls;
     };
     default {
-        _index = KPLIB_permission_list findIf {(_x select 0) isEqualTo (_playerUID)};
+        _index = _list findIf {
+            (_x select 0) isEqualTo (_playerUID)
+        };
         if (_index != -1) then {
-            _playerPermissions = (KPLIB_permission_list select _index) select 2;
+            _playerPermissions = (_list select _index) select 2;
         };
         private _permissionState = false;
         {
             _permission = toLower ((_x getVariable ["Data", ["", false]]) select 0);
-            _index = (_playerPermissions findIf {(_x select 0) isEqualTo _permission});
+            _index = (_playerPermissions findIf {
+                (_x select 0) isEqualTo _permission
+            });
             if (_index isEqualTo -1) then {
-                _permissionState = KPLIB_permission_default select (KPLIB_permission_default findIf {
+                _permissionState = _default select (_default findIf {
                     (_x select 0) isEqualTo _permission
                 }) select 1;
             } else {

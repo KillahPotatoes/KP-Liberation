@@ -5,7 +5,7 @@
     File: fn_garrison_dialogRemove.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-03-31
-    Last Update: 2019-03-31
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -28,8 +28,11 @@ if (isNull _button) exitWith {false};
 // Dialog controls
 private _dialog = findDisplay KPLIB_IDC_GARRISON_DIALOG;
 private _ctrlLbSectors = _dialog displayCtrl KPLIB_IDC_GARRISON_GARRISONLIST;
+private _ctrlInfBox = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYBOX;
 private _ctrlInfButton = _dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYBUTTON;
+private _ctrlLightList = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTLIST;
 private _ctrlLightButton = _dialog displayCtrl KPLIB_IDC_GARRISON_LIGHTBUTTON;
+private _ctrlHeavyList = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYLIST;
 private _ctrlHeavyButton = _dialog displayCtrl KPLIB_IDC_GARRISON_HEAVYBUTTON;
 
 // Initialize needed local variables
@@ -38,13 +41,13 @@ private _sectorPos = [_sector] call KPLIB_fnc_common_getPos;
 private _garrison = [_sector] call KPLIB_fnc_garrison_getGarrison;
 private _side = KPLIB_preset_sideF;
 
-// Handle Infantry
-if (_button == _ctrlInfButton) exitWith {
-    // Prevent button spam
-    _ctrlInfButton ctrlEnable false;
+// Prevent button spam
+_button ctrlEnable false;
 
+// Handle Infantry
+if (_button isEqualTo _ctrlInfButton) exitWith {
     // Get amount of soldiers
-    private _amount = parseNumber (ctrlText (_dialog displayCtrl KPLIB_IDC_GARRISON_INFANTRYBOX));
+    private _amount = parseNumber (ctrlText _ctrlInfBox);
 
     // Only continue, if the amount of infantry is available
     if ((_garrison select 2) >= _amount) then {
@@ -52,7 +55,7 @@ if (_button == _ctrlInfButton) exitWith {
         [_sector, -_amount] remoteExecCall ["KPLIB_fnc_garrison_addInfantry", 2];
 
         // Get array of soldier classnames
-        private _soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray;
+        private _soldierArray = [_side] call KPLIB_fnc_common_getSoldierArray;
         private _squads = [];
 
         // Prepare infantry squads for spawning
@@ -84,17 +87,27 @@ if (_button == _ctrlInfButton) exitWith {
     };
 };
 
-// Handle Light Vehicles
-if (_button == _ctrlLightButton) exitWith {
-    hint format ["Light from %1", markerText _sector];
-    [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
-    true
-};
+// Handle vehicles
+if (_button isEqualTo _ctrlLightButton || _button isEqualTo _ctrlHeavyButton) exitWith {
+    // Light or heavy
+    private _heavyVeh = _button isEqualTo _ctrlHeavyButton;
 
-// Handle Heavy Vehicles
-if (_button == _ctrlHeavyButton) exitWith {
-    hint format ["Heavy from %1", markerText _sector];
-    [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
+    // Choose listbox
+    private _listBox = [_ctrlLightList, _ctrlHeavyList] select _heavyVeh;
+
+    // Get vehicle classname
+    private _classname = _listBox lbData (lbCurSel _listBox);
+
+    // Remove vehicle from Garrison
+    [_sector, _classname, _heavyVeh] remoteExecCall ["KPLIB_fnc_garrison_delVeh", 2];
+
+    // Get spawnpos and spawn vehicle
+    private _spawnPos = [_sectorPos] call KPLIB_fnc_garrison_getVehSpawnPos;
+    [_classname, _spawnPos, random 360, true, true, _side] call KPLIB_fnc_common_createVehicle;
+
+    // Reload sector details after a small sync delay
+    [{_this call KPLIB_fnc_garrison_dialogSelectSector;}, [lbCurSel _ctrlLbSectors], 2] call CBA_fnc_waitAndExecute;
+
     true
 };
 
