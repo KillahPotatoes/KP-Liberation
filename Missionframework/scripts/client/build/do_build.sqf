@@ -17,7 +17,7 @@ if (isNil "manned") then { manned = false };
 if (isNil "gridmode" ) then { gridmode = 0 };
 if (isNil "repeatbuild" ) then { repeatbuild = false };
 if (isNil "build_rotation" ) then { build_rotation = 0 };
-if (isNil "build_elevation" ) then { build_elevation = 0 }; 
+if (isNil "build_elevation" ) then { build_elevation = 0 };
 
 waitUntil { sleep 0.2; !isNil "dobuild" };
 
@@ -37,7 +37,7 @@ while { true } do {
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
 
 		_nearfob = [] call F_getNearestFob;
-		_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+		_storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
 	};
@@ -145,7 +145,7 @@ while { true } do {
 				} foreach GRLIB_preview_spheres;
 
 				_vehicle setdir _actualdir;
-				
+
 				_truepos = [_truepos select 0, _truepos select 1, (_truepos select 2) +  build_elevation];
 
 				_near_objects = (_truepos nearobjects ["AllVehicles", _dist]) ;
@@ -260,7 +260,7 @@ while { true } do {
 				_price_f = ((build_lists select buildtype) select buildindex) select 3;
 
 				_nearfob = [] call F_getNearestFob;
-				_storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+				_storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 				_supplyCrates = ceil (_price_s / 100);
 				_ammoCrates = ceil (_price_a / 100);
@@ -378,7 +378,7 @@ while { true } do {
 			player removeAction _idactplace;
 			player removeAction _idactraise;
 			player removeAction _idactlower;
-			
+
 			if(buildtype == 99) then {
 				_new_fob = getpos player;
 				[_new_fob, false] remoteExec ["build_fob_remote_call",2];
