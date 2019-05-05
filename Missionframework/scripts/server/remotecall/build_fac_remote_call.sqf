@@ -19,7 +19,7 @@ switch (_fac) do {
 	if ((_x select 1) == (_sector select 1)) exitWith {
 		if (((_x select 9) >= _price_s) && ((_x select 10) >= _price_a) && ((_x select 11) >= _price_f)) then {
 			private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
-			_storage = [_storage, {(_x getVariable ["KP_liberation_storage_type",-1]) == 1}] call BIS_fnc_conditionalSelect;
+			_storage = _storage select {(_x getVariable ["KP_liberation_storage_type",-1]) == 1};
 			if ((count _storage) == 0) exitWith {};
 			_storage = (_storage select 0);
 			private _storedCrates = (attachedObjects _storage);
@@ -29,7 +29,7 @@ switch (_fac) do {
 				private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 				switch ((typeOf _x)) do {
-					case KP_liberation_supply_crate: { 
+					case KP_liberation_supply_crate: {
 						if (_price_s > 0) then {
 							if (_crateValue > _price_s) then {
 								_crateValue = _crateValue - _price_s;

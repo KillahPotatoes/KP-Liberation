@@ -458,8 +458,8 @@ if (count GRLIB_vehicle_to_military_base_links == 0) then {
 	private _assigned_vehicles = [];
 
 	while {count _assigned_bases < count sectors_military && count _assigned_vehicles < count elite_vehicles} do {
-		private _nextbase =  selectRandom ([sectors_military, {!(_x in _assigned_bases)}] call BIS_fnc_conditionalSelect);
-		private _nextvehicle =  selectRandom ([elite_vehicles, {!(_x in _assigned_vehicles)}] call BIS_fnc_conditionalSelect);
+		private _nextbase =  selectRandom (sectors_military select {!(_x in _assigned_bases)});
+		private _nextvehicle =  selectRandom (elite_vehicles select {!(_x in _assigned_vehicles)});
 		_assigned_bases pushback _nextbase;
 		_assigned_vehicles pushback _nextvehicle;
 		GRLIB_vehicle_to_military_base_links pushback [_nextvehicle, _nextbase];
@@ -501,19 +501,19 @@ while {true} do {
 		private _all_storages = [];
 		{
 			private _fobpos = _x;
-			private _nextbuildings = [_fobpos nearobjects (GRLIB_fob_range * 2), {
+			private _nextbuildings = (_fobpos nearobjects (GRLIB_fob_range * 2)) select {
 				((typeof _x) in _classnames_to_save ) &&
-				(alive _x) &&					// Exclude dead or broken objects
-				(speed _x < 5) &&				// Exclude moving objects (like civilians driving through)
-				(isNull attachedTo _x) &&			// Exclude attachTo'd objects
-				(((getpos _x) select 2) < 10) &&		// Exclude hovering helicopters and the like
-				(getObjectType _x >= 8) &&			// Exclude preplaced terrain objects
+				(alive _x) &&					            // Exclude dead or broken objects
+				(speed _x < 5) &&				            // Exclude moving objects (like civilians driving through)
+				(isNull attachedTo _x) &&			        // Exclude attachTo'd objects
+				(((getpos _x) select 2) < 10) &&	        // Exclude hovering helicopters and the like
+				(getObjectType _x >= 8) &&			        // Exclude preplaced terrain objects
 				!((typeOf _x) in KP_liberation_crates) &&	// Exclude storage crates (those are handled separately)
 				!(_x getVariable ["KP_liberation_preplaced", false])
- 			}] call BIS_fnc_conditionalSelect;
+ 			};
 
-			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
-			_all_storages = [(_all_storages + _nextbuildings), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+			_all_buildings = (_all_buildings + _nextbuildings) select {!((typeOf _x) in KP_liberation_storage_buildings)};
+			_all_storages = (_all_storages + _nextbuildings) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 			{
 				private _nextgroup = _x;

@@ -16,7 +16,7 @@ while {true} do {
 	if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] Informant waitUntil passed";_text remoteExec ["diag_log",2];};
 
 	if ((KP_liberation_civinfo_chance >= (random 100)) && GRLIB_endgame == 0) then {
-		private _sector = selectRandom ([blufor_sectors, {_x in sectors_capture || _x in sectors_bigtown}] call BIS_fnc_conditionalSelect);
+		private _sector = selectRandom (blufor_sectors select {_x in sectors_capture || _x in sectors_bigtown});
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 
 		private _grp = createGroup [GRLIB_side_civilian, true];

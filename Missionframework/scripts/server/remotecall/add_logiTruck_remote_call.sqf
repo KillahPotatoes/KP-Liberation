@@ -4,7 +4,7 @@ params ["_index", "_nearfob", "_clientID", "_supplies", "_ammo", "_fuel"];
 
 logiError = 0;
 
-private _storage_areas = [_nearfob nearobjects (GRLIB_fob_range * 2), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+private _storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
@@ -15,7 +15,7 @@ private _price_f = 100;
 if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith {(localize "STR_LOGISTIC_CANTAFFORD") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 
 {
-	
+
 
 	private _storage_positions = [];
 	private _storedCrates = (attachedObjects _x);
@@ -25,7 +25,7 @@ if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith
 		private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 		switch ((typeOf _x)) do {
-			case KP_liberation_supply_crate: { 
+			case KP_liberation_supply_crate: {
 				if (_price_s > 0) then {
 					if (_crateValue > _price_s) then {
 						_crateValue = _crateValue - _price_s;
@@ -67,7 +67,7 @@ if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith
 			default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 		};
 	} forEach _storedCrates;
-	
+
 	switch (typeOf _x) do {
 		case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
 		case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
@@ -90,7 +90,7 @@ if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith
 	} forEach attachedObjects (_x);
 
 	if ((_price_s == 0) && (_price_a == 0) && (_price_f == 0)) exitWith {};
-	
+
 } forEach _storage_areas;
 
 please_recalculate = true;

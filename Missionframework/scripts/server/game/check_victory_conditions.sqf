@@ -1,6 +1,6 @@
 sleep 5;
 
-_blufor_bigtowns = [ blufor_sectors, { _x in sectors_bigtown } ] call BIS_fnc_conditionalSelect;
+_blufor_bigtowns = blufor_sectors select {_x in sectors_bigtown};
 
 if ( count _blufor_bigtowns == count sectors_bigtown ) then {
 	GRLIB_endgame = 1;

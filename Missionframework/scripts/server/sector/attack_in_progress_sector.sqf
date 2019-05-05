@@ -58,7 +58,7 @@ if ( GRLIB_endgame == 0 ) then {
 						detach _x;
 						deleteVehicle _x;
 					} forEach (attachedObjects ((nearestObjects [((_x select 3) select 0), [KP_liberation_small_storage_building], 10]) select 0));
-					
+
 					deleteVehicle ((nearestObjects [((_x select 3) select 0), [KP_liberation_small_storage_building], 10]) select 0);
 				};
 				KP_liberation_production = KP_liberation_production - [_x];
@@ -66,7 +66,7 @@ if ( GRLIB_endgame == 0 ) then {
 		} forEach KP_liberation_production;
 	} else {
 		[_sector, 3] remoteExec ["remote_call_sector"];
-		{ [_x] spawn prisonner_ai; } foreach ( [ (markerpos _sector) nearEntities [ "Man", GRLIB_capture_size * 0.8 ], { side group _x == GRLIB_side_enemy } ] call BIS_fnc_conditionalSelect );
+		{[_x] spawn prisonner_ai;} foreach (((markerpos _sector) nearEntities ["Man", GRLIB_capture_size * 0.8]) select {side group _x == GRLIB_side_enemy});
 	};
 };
 
