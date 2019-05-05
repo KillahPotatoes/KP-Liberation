@@ -18,7 +18,6 @@
 * Tweaked: Stringtable key names categorized.
 * Tweaked: Formatting and comments in preset files.
 * Tweaked: Mission name now fits the [name standard](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/).
-* Tweaked: Versioning format from e.g. 0.97X to 0.97.X for a better separation.
 * Tweaked: Sector garrisons are now persistent during activations and doesn't spawn fresh on each activation.
 * Tweaked: Unit/Army presets are now universally used as friendly or enemy preset.
 * Tweaked: Changing presets is now basically possible without server restart (still needed for Potato 01 replacement).
