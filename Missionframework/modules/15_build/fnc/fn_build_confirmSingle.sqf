@@ -4,7 +4,7 @@
     File: fn_build_confirmSingle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-29
-    Last Update: 2019-04-23
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -14,6 +14,7 @@
     Parameter(s):
         _createParams   - Parameters for common_createVehicle           [ARRAY, defaults to nil]
         _vectorDirAndUp - Vector dir and up for created object          [ARRAY, defaults to nil]
+        _price          - Supplies price                                [ARRAY, defaults to nil]
         _player         - Player that initiated the building of object  [OBJECT, defaults to objNull]
 
     Returns:
@@ -22,13 +23,20 @@
 params [
     ["_createParams", nil, [[]]],
     ["_vectorDirAndUp", nil, [[]], 2],
+    ["_price", nil, [[]], 3],
     ["_player", objNull, [objNull]]
 ];
 _createParams params ["_className", "_pos", "_dir", "_justBuild"];
 
+private _fob = _player getVariable ["KPLIB_fob", ""];
+
+if !(([_fob] + _price) call KPLIB_fnc_resources_pay) exitWith {
+    [format ["Not enough resources to build: %1 at: %2", _className, _fob], "BUILD"] call KPLIB_fnc_common_log;
+    ["KPLIB_build_not_enough_resources", [_className], _player] call CBA_fnc_targetEvent;
+};
+
 private ["_obj"];
 
-// !TODO! save only builings via Build module, units and vehicles should be moved to persistence module
 switch true do {
     case (_className isKindOf "Man"): {
         _obj = [createGroup KPLIB_preset_sideF, _className] call KPLIB_fnc_common_createUnit;
@@ -51,7 +59,6 @@ switch true do {
     };
 };
 
-private _fob = _player getVariable ["KPLIB_fob", ""];
 
 ["KPLIB_build_item_built", [_obj, _fob]] call CBA_fnc_globalEvent;
 ["KPLIB_build_item_built_local", [_obj, _fob], _player] call CBA_fnc_targetEvent;

@@ -573,6 +573,22 @@
             <Spanish>CONSTRUIR</Spanish>
             <Turkish>İnşa Et</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_BUILD">
+            <English>Build mode</English>
+            <German>Baumodus</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_MOVE">
+            <English>Move mode</English>
+            <German>Bearbeitungsmodus</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_MODE_TT">
+            <English>Click to toggle between building new items and moving existing items modes.</English>
+            <German>Wechsle zwischen dem Baumodus und dem Bearbeitungsmodus.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_BUILD_QUEUE_TITLE">
+            <English>BUILD QUEUE</English>
+            <German>BAULISTE</German>
+        </Key>
 
         <!-- REDEPLOY/RESPAWN DIALOG -->
         <Key ID="STR_KPLIB_DIALOG_DEPLOY_TITLE">
@@ -1127,6 +1143,10 @@
             <Portuguese>Os seguintes itens não são permitidos:</Portuguese>
             <Russian>Следующие элементы не разрешены:</Russian>
             <Turkish>Şu eşyalar yasaklı:</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_BUILD_NO_RESOURCES">
+            <English>Not enough resources to build %1.</English>
+            <German>Nicht genug Ressourcen, um %1 zu bauen.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_CLEARFULL">
             <English>Selected storage is emptied.</English>

@@ -4,7 +4,7 @@
     File: fn_build_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2019-04-23
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -83,10 +83,23 @@ if (hasInterface) then {
 
     player addEventHandler ["Killed", KPLIB_fnc_build_stop];
 
+    // Handle server notification about not enough resources
+    ["KPLIB_build_not_enough_resources", {
+        params ["_classname"];
+        // TODO common func with caching
+        private _name = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+
+        [
+            format[localize "STR_KPLIB_HINT_BUILD_NO_RESOURCES", _name]
+        ] call CBA_fnc_notify;
+
+    }] call CBA_fnc_addEventHandler;
+
     // Add default buildables from preset
     {
         [
             localize (_x select 0),
+            // Add preset vars as code so if preset is changed during gameplay the lists will update dynamically
             compile format ["KPLIB_preset_%1F", _x select 1]
         ] call KPLIB_fnc_build_addBuildables;
     } forEach [
