@@ -90,9 +90,6 @@ if (isServer) then {
 
 			if (side (group _unit) == GRLIB_side_friendly) then {
 				stats_blufor_teamkills = stats_blufor_teamkills + 1;
-			};
-
-			if (side (group _unit) == GRLIB_side_friendly) then {
                 stats_blufor_soldiers_killed = stats_blufor_soldiers_killed + 1;
 			};
 		};
