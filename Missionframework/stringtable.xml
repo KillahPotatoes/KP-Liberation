@@ -12,10 +12,10 @@
         <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
         <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
         <Key ID="STR_MISSION_TITLE">
-            <Original>CTI 34 KP Liberation v0.964</Original>
+            <Original>CTI 34 KP Liberation v0.96.4</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.964</Original>
+            <Original>v0.96.4</Original>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>

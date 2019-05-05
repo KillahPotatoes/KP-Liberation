@@ -178,6 +178,7 @@ class Missions
 * Tweaked: BWMod item classnames in KP_liberation_allowed_items_extension. Thanks to [madpat3](https://github.com/madpat3)
 * Tweaked: Equalized all Eden attributes of the mission.sqm files.
 * Tweaked: Replaced deprecated `BIS_fnc_conditionalSelect` function calls with sensible select statements.
+* Tweaked: Versioning format from e.g. 0.964 to 0.96.4 for a better separation.
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 * Fixed: Blufor soldier losses weren't counted in statistics.
 

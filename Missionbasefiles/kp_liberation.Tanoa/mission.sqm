@@ -186,7 +186,7 @@ class ScenarioData
 	{
 		gameType="CTI";
 		minPlayers=1;
-		maxPlayers=34;
+		maxPlayers=37;
 	};
 };
 class CustomAttributes

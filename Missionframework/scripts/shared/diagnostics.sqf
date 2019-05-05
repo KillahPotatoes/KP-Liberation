@@ -1,6 +1,6 @@
 private _source = "";
 
-diag_log text "[KP LIBERATION] [MISSIONSTART] --- MISSION INFORMATION ---";
+diag_log text "[KP LIBERATION] [MISSIONSTART] ------------------------------------";
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] Name: %1", (localize "STR_MISSION_TITLE")];
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] World: %1", worldName];
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] Version: %1", (localize "STR_MISSION_VERSION")];
@@ -11,6 +11,7 @@ diag_log text format ["[KP LIBERATION] [MISSIONSTART] Resistance: %1", KP_libera
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] Civilians: %1", KP_liberation_preset_civilians];
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] Arsenal: %1", KP_liberation_arsenal];
 diag_log text format ["[KP LIBERATION] [MISSIONSTART] ACE: %1", KP_liberation_ace];
+diag_log text "[KP LIBERATION] [MISSIONSTART] ------------------------------------";
 
 waitUntil {sleep 1; !isNil "active_sectors"};
 
@@ -20,7 +21,7 @@ while {true} do {
 	} else {
 		_source = name player;
 	};
-	
+
 	if (isServer) then {
 		diag_log format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 - Active Sectors: %7 - Active Scripts: %8",
 		_source,
