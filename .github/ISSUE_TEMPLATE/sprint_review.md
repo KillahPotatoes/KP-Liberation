@@ -9,7 +9,7 @@ As we will release a working iteration of the new framework after every sprint, 
 The only thing to remember is that you should only report bugs in this issue, which are caused by the contents of this sprint (which are listed below). So it is vital to look at the content description to see what was actually added. Only by reading this you know what we've really intended to implement and defined as done.
 I guess you understand that reporting things which weren't even planned to be part of the sprint won't help in any way.
 This releases (which are also marked as *Pre-release*) aren't meant to be played as replacement for the current framework. It is for testing purpose or a kind of first look at features/changes which will be part of the 0.97.0 release in some months.
-For serious playing use the latest stable release: [v0.963a](https://github.com/KillahPotatoes/KP-Liberation/releases/tag/v0.963a-Hotfix3)
+For serious playing use the [latest stable release](https://github.com/KillahPotatoes/KP-Liberation/releases/latest)
 
 ### Summary of this sprint
 <!-- A summary of what've been done during the sprint. Also which conclusions, plans, new ideas, etc. evolved. -->
@@ -48,6 +48,7 @@ The latest pre-release missionfile is running on our public Testserver. Feel fre
 <!-- History of all Sprint Review Issues from the past -->
 | Sprint | Quick Summary | Details |
 | --- | --- | --- |
+| 12 | Garrison dialog, Cratefiller additions, Permission additions, building now cost resources | #603 |
 | 11 | Resources implementation for logistic, Cratefiller added, Persistence module, Garrison dialog pt1 | #585 |
 | 10 | Resupply of vehicles via a logistic station, first iteration for the enemy commander module, Bugfixes | #570 |
 | 9 | Permission and resources modules, second part of the garrison module, finished universal preset | #562 |
