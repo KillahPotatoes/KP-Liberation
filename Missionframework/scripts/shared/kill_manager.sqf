@@ -59,8 +59,8 @@ if (isServer) then {
 		if (air_weight < 0) then {air_weight = 0};
 	};
 
-	if (isPlayer _unit) then { 
-		stats_player_deaths = stats_player_deaths + 1;	
+	if (isPlayer _unit) then {
+		stats_player_deaths = stats_player_deaths + 1;
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
 		// Eject Player from vehicle
@@ -93,7 +93,7 @@ if (isServer) then {
 			};
 
 			if (side (group _unit) == GRLIB_side_friendly) then {
-				stats_blufor_teamkills = stats_blufor_teamkills + 1;
+                stats_blufor_soldiers_killed = stats_blufor_soldiers_killed + 1;
 			};
 		};
 
