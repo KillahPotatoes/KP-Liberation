@@ -55,7 +55,9 @@ KP_liberation_preset_blufor = 0;
 4 = Project OPFOR (Islamic State)
 5 = Project OPFOR (Sahrani)
 6 = AAF
-7 = NATO */
+7 = NATO
+8 = Germany West (Global Mobilization)
+9 = Germany East (Global Mobilization) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
