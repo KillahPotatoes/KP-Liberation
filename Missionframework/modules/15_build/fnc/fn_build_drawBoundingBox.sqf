@@ -4,8 +4,9 @@
     File: fn_build_drawBoundingBox.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-29
-    Last Update: 2018-12-02
+    Last Update: 2019-05-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Draws bounding box on single object
@@ -23,7 +24,7 @@ params [
 ];
 
 // Get left bottom and right top corners
-(boundingBoxReal _object) params ["_c1", "_c2"];
+(0 boundingBoxReal _object) params ["_c1", "_c2"];
 
 // Draw the bounding box
 {

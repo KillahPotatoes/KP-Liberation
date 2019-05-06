@@ -5,8 +5,9 @@
     File: fn_respawn_displaySpawnSelChanged.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-12
-    Last Update: 2018-11-09
+    Last Update: 2019-04-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Handle respawn list selection change
@@ -55,7 +56,7 @@ _camStart = _camStart vectorAdd [0,0, (_camFocusPos select 2) + 40];
 _camEnd = _camEnd vectorAdd [0,0, (_camFocusPos select 2) + 40];
 
 // Update build camera location
-[_camStart, _camEnd, _camFocus, KPLIB_respawn_camera] call KPLIB_fnc_respawn_camFlyBy;
+[_camStart, _camEnd, _camFocus, KPLIB_respawn_camera] call KPLIB_fnc_common_cameraFlyBy;
 
 // Fade out effect
 cutText ["", "BLACK IN", 2];

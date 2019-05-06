@@ -5,7 +5,7 @@
     File: customWest.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-24
-    Last Update: 2018-12-09
+    Last Update: 2019-04-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -204,21 +204,21 @@ KPLIB_PRST_SETVAR("sfTeamLeader", "B_recon_TL_F");
 
 // Infantry units
 KPLIB_PRST_CAT_BEGIN("units");
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsRifleman"),               20,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsLightAt"),                30,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsGrenadier"),              25,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAutorifleMan"),           25,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsHeavyGunner"),            35,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMarksman"),               30,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiTank"),               50,   10,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiAir"),                50,   10,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMedic"),                  30,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsEngineer"),               30,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsParatrooper"),            20,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanVeh"),             10,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanHeli"),            10,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotHeli"),              10,    0,    0);
-KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotJet"),               10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsRifleman"),                  20,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsLightAt"),                   30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsGrenadier"),                 25,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAutorifleMan"),              25,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsHeavyGunner"),               35,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMarksman"),                  30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiTank"),                  50,   10,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsAntiAir"),                   50,   10,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsMedic"),                     30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsEngineer"),                  30,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsParatrooper"),               20,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanVeh"),                10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsCrewmanHeli"),               10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotHeli"),                 10,    0,    0);
+KPLIB_PRST_CAT_ADD("units", KPLIB_PRST_GETVAR("rsPilotJet"),                  10,    0,    0);
 KPLIB_PRST_CAT_END("units");
 
 // Special Forces units

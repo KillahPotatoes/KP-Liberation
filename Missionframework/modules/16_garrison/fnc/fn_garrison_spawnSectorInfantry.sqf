@@ -4,7 +4,7 @@
     File: fn_garrison_spawnSectorInfantry.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-03-31
+    Last Update: 2019-04-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -45,8 +45,8 @@ while {surfaceIsWater _spawnPos} do {
 
 // Set array to select soldier classnames from
 switch (_ownerNumber) do {
-    case 2: {_soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray;};
-    default {_soldierArray = [] call KPLIB_fnc_common_getSoldierArray;};
+    case 2: {_soldierArray = [KPLIB_preset_sideF] call KPLIB_fnc_common_getSoldierArray; _side = KPLIB_preset_sideF;};
+    default {_soldierArray = [] call KPLIB_fnc_common_getSoldierArray; _side = KPLIB_preset_sideE;};
 };
 
 // Fetch unit classnames

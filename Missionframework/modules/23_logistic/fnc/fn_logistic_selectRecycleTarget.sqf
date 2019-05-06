@@ -1,10 +1,12 @@
+#include "..\ui\defines.hpp"
+#include "script_component.hpp"
 /*
     KPLIB_fnc_logistic_selectRecycleTarget
 
     File: fn_logistic_selectRecycleTarget.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-27
-    Last Update: 2019-04-03
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,15 +21,15 @@
 */
 
 // Dialog controls
-private _dialog = findDisplay 7580232;
-private _ctrlVehicleList = _dialog displayCtrl 68740;
-private _ctrlSupplyFactor = _dialog displayCtrl 68741;
-private _ctrlSupplyValue = _dialog displayCtrl 68742;
-private _ctrlAmmoFactor = _dialog displayCtrl 68743;
-private _ctrlAmmoValue = _dialog displayCtrl 68744;
-private _ctrlFuelFactor = _dialog displayCtrl 68745;
-private _ctrlFuelValue = _dialog displayCtrl 68746;
-private _recycleButton = _dialog displayCtrl 68747;
+private _dialog = findDisplay KPLIB_IDC_LOGISTIC_RECYCLE_DIALOG;
+private _ctrlVehicleList = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_COMBOVEHICLES;
+private _ctrlSupplyFactor = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYSTATEVALUE;
+private _ctrlSupplyValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_SUPPLYREFUNDVALUE;
+private _ctrlAmmoFactor = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_AMMOSTATEVALUE;
+private _ctrlAmmoValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_AMMOREFUNDVALUE;
+private _ctrlFuelFactor = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_FUELSTATEVALUE;
+private _ctrlFuelValue = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_FUELREFUNDVALUE;
+private _recycleButton = _dialog displayCtrl KPLIB_IDC_LOGISTIC_RECYCLE_BUTTONRECYCLE;
 
 // Read controls
 private _index = lbCurSel _ctrlVehicleList;
@@ -46,7 +48,9 @@ if (_vehicleId isEqualTo "placeholder") exitWith {
 // Get the target vehicle
 private _vehicle = objectFromNetId _vehicleId;
 private _type = typeOf _vehicle;
-private _vehicles = KPLIB_logistic_data getVariable ["Vehicles", []];
+
+// Variables
+private _vehicles = LGVAR("Vehicles", []);
 private _vehicleIndex = _vehicles findIf {_x select 0 isEqualTo _type};
 private _damage = 1;
 private _ammo = 1;
@@ -100,11 +104,11 @@ private _ammoCrates = ceil (_ammoValue / KPLIB_param_crateVolume);
 private _fuelCrates = ceil (_fuelValue / KPLIB_param_crateVolume);
 private _crateCount = _supplyCrates + _ammoCrates + _fuelCrates;
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_res_getStorages;
+private _storages = [getMarkerPos _nearFOB, KPLIB_param_fobRange] call KPLIB_fnc_resources_getStorages;
 private _crateCapacity = 0;
 
 {
-    _crateCapacity = _crateCapacity + ([_x] call KPLIB_fnc_res_getStorageSpace);
+    _crateCapacity = _crateCapacity + ([_x] call KPLIB_fnc_resources_getStorageSpace);
 } forEach _storages;
 
 if (_crateCapacity < _crateCount) then {

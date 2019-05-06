@@ -37,14 +37,6 @@ Furthermore it handles the saving/loading of all objects which are buildable/spa
 
   *Place object in build queue.*
 
-* KPLIB_fnc_build_displaySetMode
-
-  *Set display build mode. (tab)*
-
-* KPLIB_fnc_build_displayTabClick
-
-  *Handle tab click.*
-
 * KPLIB_fnc_build_displayUnload
 
   *Handle build display unload.*

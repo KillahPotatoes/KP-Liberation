@@ -4,9 +4,9 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-03-30
+    Last Update: 2019-05-04
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: Yes
+    Public: No
 
     Description:
         Despawns the sector garrison and updates the garrison array with actual data.
@@ -22,7 +22,7 @@ params [
     ["_sector", "", [""]]
 ];
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [GARRISON] Despawn for %2", diag_tickTime, _sector];};
+if (isServer) then {[format ["Despawn for %1", _sector], "GARRISON", true] call KPLIB_fnc_common_log;};
 
 // Initialize local variables
 private _activeGarrisonId = KPLIB_garrison_active findIf {(_x select 0) == _sector};
@@ -93,5 +93,7 @@ if ((_activeGarrisonRef select 1) isEqualTo (_persistentGarrisonRef select 1)) t
 
 // Remove active garnison array entry
 KPLIB_garrison_active deleteAt _activeGarrisonId;
+
+publicVariable "KPLIB_garrison_array";
 
 true

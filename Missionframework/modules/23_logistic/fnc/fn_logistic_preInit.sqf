@@ -4,7 +4,7 @@
     File: fn_logistic_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-16
-    Last Update: 2019-04-06
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,7 +19,7 @@
 */
 
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initializing...", diag_tickTime];
+    ["Module initializing...", "PRE] [LOGISTIC", true] call KPLIB_fnc_common_log;
 
 /*
     ----- Module Initialization -----
@@ -42,6 +42,6 @@ if (isServer) then {
 KPLIB_logistic_building = KPLIB_preset_logiBuildingF;
 KPLIB_logistic_activeCam = objNull;
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [%1] [PRE] [LOGISTIC] Module initialized", diag_tickTime];};
+if (isServer) then {["Module initialized", "PRE] [LOGISTIC", true] call KPLIB_fnc_common_log;};
 
 true

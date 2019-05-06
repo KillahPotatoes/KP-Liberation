@@ -4,8 +4,9 @@
     File: fn_init_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-09
-    Last Update: 2018-12-08
+    Last Update: 2019-04-27
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         CBA Settings initialization for this module
@@ -31,6 +32,19 @@
     [localize "STR_KPLIB_SETTINGS_GENERAL_DEBUG", localize "STR_KPLIB_SETTINGS_GENERAL_DEBUG_TT"],
     localize "STR_KPLIB_SETTINGS_GENERAL",
     true,
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_savedebug
+// Enables/Disables detailed rpt logging of each saving process.
+// Default: false
+[
+    "KPLIB_param_savedebug",
+    "CHECKBOX",
+    [localize "STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG", localize "STR_KPLIB_SETTINGS_GENERAL_SAVEDEBUG_TT"],
+    localize "STR_KPLIB_SETTINGS_GENERAL",
+    false,
     1,
     {}
 ] call CBA_Settings_fnc_init;
@@ -130,7 +144,8 @@
         2
     ],
     1,
-    {}
+    {},
+    true
 ] call CBA_Settings_fnc_init;
 
 // KPLIB_param_presetE
@@ -157,7 +172,8 @@
         0
     ],
     1,
-    {}
+    {},
+    true
 ] call CBA_Settings_fnc_init;
 
 // KPLIB_param_presetR
@@ -180,7 +196,8 @@
         0
     ],
     1,
-    {}
+    {},
+    true
 ] call CBA_Settings_fnc_init;
 
 // KPLIB_param_presetC
@@ -203,7 +220,8 @@
         0
     ],
     1,
-    {}
+    {},
+    true
 ] call CBA_Settings_fnc_init;
 
 true

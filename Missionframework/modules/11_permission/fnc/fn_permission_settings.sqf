@@ -4,8 +4,9 @@
     File: fn_permission_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-27
-    Last Update: 2019-03-15
+    Last Update: 2019-04-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         CBA Settings initialization for this module.

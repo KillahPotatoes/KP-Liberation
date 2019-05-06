@@ -6,8 +6,9 @@
     File: fn_build_displayLoad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-09
-    Last Update: 2018-12-11
+    Last Update: 2019-04-30
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+    Public: No
 
     Description:
         Handle build display load
@@ -45,13 +46,10 @@ _itemsList ctrlAddEventHandler ["LBSelChanged", {
 
 private _categoriesList = _display displayCtrl KPLIB_IDC_BUILD_CATEGORY_LIST;
 _categoriesList ctrlAddEventHandler ["LBSelChanged", {
-    params ["_control", "_selectedIndex"];
+    params ["_control"];
 
-    // Clear the search on category change
-    LSVAR("search", "");
-
-    // Fill the items list
-    [_selectedIndex, ""] call KPLIB_fnc_build_displayFillList;
+    // Clear search and fill the items list
+    [] call KPLIB_fnc_build_searchClear;
 
     // Unfocus the listbox to prevent camera controls from changing the selection
     ctrlSetFocus ((ctrlParent _control) displayCtrl KPLIB_IDC_BUILD_CONFIRM);
