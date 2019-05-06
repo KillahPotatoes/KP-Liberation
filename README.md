@@ -161,7 +161,7 @@ class Missions
 
 ## Changelog
 
-### 0.964 (Global Mobilization additions)
+### 0.96.4 (Global Mobilization additions)
 * Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Chernarus Winter basefile to repository.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
