@@ -116,7 +116,7 @@ opfor_troup_transports = [
     "gm_gc_army_ural4320_cargo",                                        //Truck gel. 5 Transport
     "gm_gc_army_btr60pa",                                               //SPW-60PA
     "gm_gc_army_btr60pb",                                               //SPW-60PB
-    "gm_gc_army_bmp1sp2",                                               //BMP-1 SP-2
+    "gm_gc_army_bmp1sp2"                                                //BMP-1 SP-2
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
