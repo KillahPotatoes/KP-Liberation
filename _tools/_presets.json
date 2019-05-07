@@ -141,5 +141,31 @@
             "KP_liberation_preset_civilians": 1,
             "KP_liberation_arsenal": 0
         }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_summer",
+        "missionName": "kp_liberation_west",
+        "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 9,
+            "KP_liberation_preset_opfor": 9,
+            "KP_liberation_preset_resistance": 0,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 7
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_summer",
+        "missionName": "kp_liberation_east",
+        "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 10,
+            "KP_liberation_preset_opfor": 8,
+            "KP_liberation_preset_resistance": 0,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 8
+        }
     }
 ]
