@@ -32,16 +32,16 @@ KP_liberation_ace_crates = [
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
-0 = Custom (default vanilla with many optional mods supported)
-1 = Apex Tanoa (apex vanilla with many optional mods supported)
-2 = 3cb BAF (MTP)
-3 = 3cb BAF (Desert)
-4 = BWMod Bundeswehr (Flecktarn)
-5 = BWMod Bundeswehr (Tropentarn)
-6 = RHS USAF (Woodland)
-7 = RHS USAF (Desert)
-8 = RHS AFRF (VDV/MSV)
-9 = Germany West (Global Mobilization)
+0  = Custom (default vanilla with many optional mods supported)
+1  = Apex Tanoa (apex vanilla with many optional mods supported)
+2  = 3cb BAF (MTP)
+3  = 3cb BAF (Desert)
+4  = BWMod Bundeswehr (Flecktarn)
+5  = BWMod Bundeswehr (Tropentarn)
+6  = RHS USAF (Woodland)
+7  = RHS USAF (Desert)
+8  = RHS AFRF (VDV/MSV)
+9  = Germany West (Global Mobilization)
 10 = Germany East (Global Mobilization)
 11 = CSAT Brown
 12 = CSAT Green */
