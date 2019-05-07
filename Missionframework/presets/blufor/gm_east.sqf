@@ -12,7 +12,7 @@ Optional Mods:
 /* - Support classnames.
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
 FOB_typename = "land_gm_tower_bt_6_fuest_80";							// This is the main FOB HQ building. 																									Default is "Land_Cargo_HQ_V1_F".
-FOB_box_typename = "gm_gc_army_brdm2um";								// This is the FOB as a container/BRDM (due to lack of proper container transport in GM German EAST).									Default is "B_Slingload_01_Cargo_F".
+FOB_box_typename = "gm_gc_army_brdm2um_ols";								// This is the FOB as a container/BRDM (due to lack of proper container transport in GM German EAST).									Default is "B_Slingload_01_Cargo_F".
 FOB_truck_typename = "gm_gc_army_btr60pu12";							// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.																				Default is "B_supplyCrate_F".
 Respawn_truck_typename = "gm_gc_army_ural375d_medic";					// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
@@ -54,7 +54,7 @@ light_vehicles = [
 ];
 
 heavy_vehicles = [
-	["gm_gc_army_btr60pa", 200, 0, 100]									//BTR-60PA
+	["gm_gc_army_btr60pa", 200, 0, 100],								//BTR-60PA
 	["gm_gc_army_brdm2",200,40,100],									//BRDM2
 	["gm_gc_army_btr60pb",200,150,125],									//BTR-60PB
 	["gm_gc_army_zsu234v1",300,250,200],								//Shilka
