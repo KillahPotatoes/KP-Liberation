@@ -96,7 +96,11 @@ GRLIB_arsenal_magazines = [
 	"gm_smokeshell_red_dm23",
 	"gm_smokeshell_yel_dm26",
 	"gm_smokeshell_org_dm32",
-	"gm_smokeshell_wht_dm25"
+	"gm_smokeshell_wht_dm25",
+
+	// Explosives
+	"gm_explosive_petn_charge",
+	"gm_mine_at_dm21"
 ];
 
 GRLIB_arsenal_items = [
@@ -152,8 +156,11 @@ GRLIB_arsenal_items = [
 	"gm_ge_army_gauzeCompress",
 	"gm_ge_army_medkit_80",
 	"gm_repairkit_01",
-	"gm_ferod16_oli",
-	"gm_watch_kosei_80"
+	"gm_ferod16_oli", // Binocular
+	"gm_watch_kosei_80",
+	"ItemMap",
+	"ItemWatch",
+	"ItemRadio"
 ];
 
 GRLIB_arsenal_backpacks = [
