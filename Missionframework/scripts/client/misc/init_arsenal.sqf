@@ -83,3 +83,6 @@ if (KP_liberation_arsenalUsePreset) then {
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
 };
+
+// Lowercase all classnames
+KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
