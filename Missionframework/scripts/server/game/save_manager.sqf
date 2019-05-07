@@ -265,6 +265,11 @@ if (!isNil "greuh_liberation_savegame") then {
 				_nextbuilding setFlagTexture "res\kpflag.jpg";
 			};
 
+			if (_nextclass == FOB_box_typename) then {
+				// Add ViV actions to FOB Box
+				[_nextbuilding] remoteExecCall ["F_setLoadableViV", 0, _nextbuilding];
+			};
+
 			if !(_nextclass in KP_liberation_ace_crates) then {
 				if(KP_liberation_clear_cargo || !(_nextclass isKindOf "AllVehicles")) then {
 					clearWeaponCargoGlobal _nextbuilding;

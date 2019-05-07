@@ -33,6 +33,8 @@ if ( dorepackage > 0 ) then {
 	if ( dorepackage == 1 ) then {
 		_fobbox = FOB_box_typename createVehicle _spawnpos;
 		_fobbox call F_setFobMass;
+		// Add ViV actions to FOB Box
+		[_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
 	};
 
 	if ( dorepackage == 2 ) then {
