@@ -295,6 +295,15 @@
             <Turkish>-- KUTUYU İNDİR</Turkish>
             <Portuguese>-- DESCARREGAR CAIXAS</Portuguese>
         </Key>
+        <Key ID="STR_ACTION_LOAD_VIV">
+            <Original>-- LOAD TO VEHICLE</Original>
+        </Key>
+        <Key ID="STR_ACTION_UNLOAD_VIV">
+            <Original>-- UNLOAD FROM VEHICLE</Original>
+        </Key>
+		<Key ID="STR_ACTION_NOTRANSPORT_VIV">
+            <Original>-- NO TRANSPORT VEHICLES NEARBY</Original>
+        </Key>
         <Key ID="STR_BOX_LOADED">
             <Original>Ammo box successfully loaded on the transport vehicle.</Original>
             <French>La caisse de munitions a été chargée sur le véhicule de transport.</French>

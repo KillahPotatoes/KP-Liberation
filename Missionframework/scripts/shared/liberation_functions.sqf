@@ -60,3 +60,5 @@ F_isClassUAV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\
 F_checkGear = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_checkGear.sqf";
 F_setFobMass = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_setFobMass.sqf";
 F_getSaveableParam = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getSaveableParam.sqf";
+F_setLoadableViV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_setLoadableViV.sqf";
+F_getNearestViVTransport = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getNearestViVTransport.sqf";

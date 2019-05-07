@@ -39,7 +39,7 @@ private _validItemsCount = {
 	|| ((_x find "ACRE") != -1)
 	|| ((_x find "tf_") != -1)
 	|| ((_x find "TFAR_") != -1)
-} count _playerItems);
+} count _playerItems;
 
 if (_validItemsCount != count _playerItems) then {
 	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];

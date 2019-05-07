@@ -77,12 +77,13 @@ if (KP_liberation_arsenalUsePreset) then {
 	if ((count KP_liberation_allowed_items_extension) > 0) then {
 		KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 	};
+
+	// Lowercase all classnames
+	KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
+
 } else {
 	[missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
 };
-
-// Lowercase all classnames
-KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
