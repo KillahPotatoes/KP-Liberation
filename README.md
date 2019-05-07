@@ -162,6 +162,8 @@ class Missions
 ## Changelog
 
 ### 0.96.4 (Global Mobilization additions)
+* Added: Vehicle in Vehicle transport actions for FOB Box.
+* Added: East Germany Arsenal Preset.
 * Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Chernarus Winter basefile to repository.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
@@ -179,6 +181,7 @@ class Missions
 * Tweaked: Equalized all Eden attributes of the mission.sqm files.
 * Tweaked: Replaced deprecated `BIS_fnc_conditionalSelect` function calls with sensible select statements.
 * Tweaked: Versioning format from e.g. 0.964 to 0.96.4 for a better separation.
+* Tweaked: Arsenal whitelist/blacklist classes are case insensitive.
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 * Fixed: Blufor soldier losses weren't counted in statistics.
 
