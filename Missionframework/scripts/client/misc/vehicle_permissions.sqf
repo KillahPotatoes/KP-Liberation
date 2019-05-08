@@ -1,8 +1,9 @@
-params ["_role", "_vehicle"];
+params ["unit", "_vehicle"];
 
 private _doEject = false;
 private _blacklistedRoles = ["driver", "gunner", "commander"];
 private _permissibleVehicles = [["Tank", 1, "STR_PERMISSION_NO_ARMOR"], ["Air", 2, "STR_PERMISSION_NO_AIR"]];
+private _role = assignedVehicleRole _unit;
 
 _playerVehicleDetails = _permissibleVehicles select {_vehicle isKindOf (_x select 0)} select 0;
 if(count _playerVehicleDetails isEqualTo 0) then {
