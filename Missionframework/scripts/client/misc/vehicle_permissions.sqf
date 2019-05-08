@@ -1,17 +1,20 @@
-params ["_unit", "_vehicle"];
+params ["_vehicle"];
+private _vehicleClass = toLower typeOf _vehicle;
 
-private _role = assignedVehicleRole player select 0;
-if (_role isEqualTo "cargo") exitWith {};
+// Cargo is always allowed
+private _isCargo = (_vehicle getCargoIndex player) != -1;
+if (_isCargo || _vehicle isKindOf "ParachuteBase") exitWith {};
 
 private _permissibleVehicles = [
-    ["Car", 0, "STR_PERMISSION_NO_LIGHT"],
-    ["Tank", 1, "STR_PERMISSION_NO_ARMOR"],
-    ["Air", 2, "STR_PERMISSION_NO_AIR"]
+    [light_vehicles_classes, "STR_PERMISSION_NO_LIGHT"],
+    [heavy_vehicles_classes, "STR_PERMISSION_NO_ARMOR"],
+    [air_vehicles_classes, "STR_PERMISSION_NO_AIR"]
 ];
 
-(_permissibleVehicles select {_vehicle isKindOf (_x select 0)} select 0) params ["_type", "_permission", "_hintString"];
+private _permissionIdx = _permissibleVehicles findIf {_vehicleClass in (_x select 0)};
+if (_permissionIdx isEqualTo -1) exitWith {};
 
-if !([player, _permission] call F_fetchPermission) exitWith {
+if !([player, _permissionIdx] call F_fetchPermission) exitWith {
     moveOut player;
-    hint localize _hintString;
+    hint localize (_permissibleVehicles select _permissionIdx select 1);
 };
