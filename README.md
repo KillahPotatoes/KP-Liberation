@@ -170,6 +170,7 @@ class Missions
 * Added: CSAT Vanilla blufor preset, CSAT Apex blufor preset and CSAT Arsenal preset. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
 * Added: AAF and NATO opfor presets. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
 * Added: Vehicle in Vehicle transport actions for FOB Box.
+* Added: Germany (Global Mobilization) civilian preset.
 * Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
 * Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
