@@ -102,11 +102,11 @@ class Params
 		texts[] = { "x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3" };
 		default = 3;
 	};
-	class Spacer1 {
-		title = "";
-		values[] = { "" };
-		texts[] = { "" };
-		default = "";
+	class ArsenalType {
+		title = $STR_PARAMS_ARSENAL;
+		values[] = {0, 1};
+		texts[] = {"BI", "ACE"};
+		default = "0";
 	};
 	class ReviveOptions {
 		title = $STR_PARAMS_REVIVEOPTIONS;

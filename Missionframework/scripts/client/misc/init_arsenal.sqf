@@ -78,12 +78,16 @@ if (KP_liberation_arsenalUsePreset) then {
 		KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 	};
 
-	// Lowercase all classnames
-	KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
-
+    if (KP_liberation_ace) then {
+        [KP_liberation_allowed_items ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", [-2, 0] select hasInterface, true];
+    };
 } else {
 	[missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
+
+    if (KP_liberation_ace) then {
+        [true ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", [-2, 0] select hasInterface, true];
+    };
 };

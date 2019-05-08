@@ -106,8 +106,12 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 if ( edit_loadout > 0 ) then {
 	closeDialog 0;
 	waitUntil { !dialog };
-	[ "Open", false ] spawn BIS_fnc_arsenal;
-	
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+        [player, player, false] call ace_arsenal_fnc_openBox;
+    } else {
+	    [ "Open", false ] spawn BIS_fnc_arsenal;
+    };
+
 	if (KP_liberation_arsenalUsePreset) then {
 		uiSleep 5;
 		waitUntil {sleep 1; isNull (uinamespace getvariable "RSCDisplayArsenal")};

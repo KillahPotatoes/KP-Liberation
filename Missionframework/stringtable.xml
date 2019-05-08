@@ -6725,5 +6725,9 @@
             <Turkish>== CANLANDIRMA AYARLARI ==</Turkish>
             <Portuguese>== OPÇÕES DE RESSUCITAÇÃO ==</Portuguese>
         </Key>
+        <Key ID="STR_PARAMS_ARSENAL">
+            <Original>Arsenal</Original>
+            <German>Arsenal</German>
+        </Key>
     </Package>
 </Project>
