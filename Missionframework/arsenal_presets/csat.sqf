@@ -73,6 +73,7 @@ GRLIB_arsenal_items = [
     "ItemCompass",
     "ItemWatch",
     "ItemGPS",
+    "ItemRadio",
     "H_HelmetSpecO_blk",
     "H_HelmetSpecO_ocamo",
     "Rangefinder",
