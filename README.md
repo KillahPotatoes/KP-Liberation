@@ -162,7 +162,6 @@ class Missions
 ## Changelog
 
 ### 0.96.4 (Global Mobilization additions)
-* Added: Vehicle in Vehicle transport actions for FOB Box.
 * Added: East Germany Arsenal Preset.
 * Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Chernarus Winter basefile to repository.
@@ -170,6 +169,8 @@ class Missions
 * Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
 * Added: CSAT Vanilla blufor preset, CSAT Apex blufor preset and CSAT Arsenal preset. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
 * Added: AAF and NATO opfor presets. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
+* Added: Vehicle in Vehicle transport actions for FOB Box.
+* Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
 * Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
 * Tweaked: Disabled script that switched locality of all blufor units to the commander machine. (should fix UAV issue)
