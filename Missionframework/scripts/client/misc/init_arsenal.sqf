@@ -78,7 +78,7 @@ if (KP_liberation_arsenalUsePreset) then {
 		KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 	};
 
-    if (KP_liberation_ace) then {
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
         [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
     };
 
@@ -90,7 +90,7 @@ if (KP_liberation_arsenalUsePreset) then {
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
 
-    if (KP_liberation_ace) then {
-        [true ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", [-2, 0] select hasInterface, true];
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+        [player, true, false] call ace_arsenal_fnc_addVirtualItems;
     };
 };
