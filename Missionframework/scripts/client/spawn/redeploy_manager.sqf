@@ -60,12 +60,10 @@ while {true} do {
 	_standard_map_pos = ctrlPosition ((findDisplay 5201) displayCtrl 251);
 	_frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 198);
 
+	// Get loadouts either from ACE or BI arsenals
 	private ["_loadouts_data"];
 	if (KP_liberation_ace && KP_liberation_arsenal_type) then {
 		_loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
-
-		lbAdd [203, "--"];
-		{lbAdd [203, _x select 0];} forEach _loadouts_data;
 	} else {
 		private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
 		_loadouts_data = [];
@@ -78,10 +76,10 @@ while {true} do {
 				_counter = _counter + 1;
 			} forEach _saved_loadouts;
 		};
-		lbAdd [203, "--"];
-		{lbAdd [203, _x];} forEach _loadouts_data;
 	};
 
+	lbAdd [203, "--"];
+	{lbAdd [203, _x param [0]]} forEach _loadouts_data;
 	lbSetCurSel [203, 0];
 
 	while {dialog && alive player && deploy == 0} do {
@@ -173,7 +171,7 @@ while {true} do {
 		if ((lbCurSel 203) > 0) then {
 			private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
 			if (KP_liberation_ace && KP_liberation_arsenal_type) then {
-				player setUnitLoadout _selectedLoadout;
+				player setUnitLoadout (_selectedLoadout select 1);
 			} else {
 				[player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
 			};
