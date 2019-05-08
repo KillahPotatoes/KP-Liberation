@@ -79,8 +79,11 @@ if (KP_liberation_arsenalUsePreset) then {
 	};
 
     if (KP_liberation_ace) then {
-        [KP_liberation_allowed_items ,{[player, _this, false] call ace_arsenal_fnc_addVirtualItems}] remoteExec ["call", [-2, 0] select hasInterface, true];
+        [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
     };
+
+    // Lowercase all classnames
+	KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
 } else {
 	[missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
