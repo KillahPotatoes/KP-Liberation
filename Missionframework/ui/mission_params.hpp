@@ -108,6 +108,12 @@ class Params
 		texts[] = {"BI", "ACE"};
 		default = "0";
 	};
+	class Spacer1 {
+		title = "";
+		values[] = { "" };
+		texts[] = { "" };
+		default = "";
+	};
 	class ReviveOptions {
 		title = $STR_PARAMS_REVIVEOPTIONS;
 		values[] = { "" };
