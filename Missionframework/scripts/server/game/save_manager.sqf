@@ -249,26 +249,7 @@ if (!isNil "greuh_liberation_savegame") then {
 				_nextbuilding addEventHandler ["HandleDamage", {0}];
 			};
 
-			if (_nextclass in KP_liberation_medical_vehicles) then {
-				_nextbuilding setVariable ["ace_medical_medicClass", 1, true];
-			};
-
-			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
-				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
-			};
-
-			if (_nextclass == KP_liberation_recycle_building) then {
-				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
-			};
-
-			if (_nextclass == "Flag_White_F") then {
-				_nextbuilding setFlagTexture "res\kpflag.jpg";
-			};
-
-			if (_nextclass == FOB_box_typename) then {
-				// Add ViV actions to FOB Box
-				[_nextbuilding] remoteExecCall ["F_setLoadableViV", 0, _nextbuilding];
-			};
+			_nextbuilding call F_addObjectInit;
 
 			if !(_nextclass in KP_liberation_ace_crates) then {
 				if(KP_liberation_clear_cargo || !(_nextclass isKindOf "AllVehicles")) then {
@@ -277,12 +258,6 @@ if (!isNil "greuh_liberation_savegame") then {
 					clearBackpackCargoGlobal _nextbuilding;
 					clearItemCargoGlobal _nextbuilding;
 				};
-			};
-
-			if (_nextclass == "Land_HelipadSquare_F" || _nextclass == "Land_HelipadCircle_F" || _nextclass == "Land_HelipadRescue_F") then {
-				{
-					_x addCuratorEditableObjects [[_nextbuilding],true];
-				} forEach allCurators;
 			};
 
 			if (_nextclass in civilian_vehicles) then {

@@ -20,6 +20,12 @@ KP_liberation_medical_vehicles = [
 	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
 ];
 
+// Building classnames which also function as ACE medical facilities.
+KP_liberation_medical_facilities = [
+    "Land_Medevac_house_V1_F",
+    "Land_Medevac_HQ_V1_F"
+];
+
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
 KP_liberation_ace_crates = [
 	"ACE_Box_82mm_Mo_HE",

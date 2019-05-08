@@ -326,31 +326,7 @@ while { true } do {
 					[ _vehicle ] call F_forceBluforCrew;
 				};
 
-				switch (_classname) do {
-					case FOB_box_typename: {_vehicle call F_setFobMass;};
-					case "Land_Medevac_house_V1_F";
-					case "Land_Medevac_HQ_V1_F": {_vehicle setVariable ["ace_medical_isMedicalFacility", true, true];};
-					case KP_liberation_recycle_building: {_vehicle setVariable ["ace_isRepairFacility", 1, true];};
-					case "Flag_White_F": {_vehicle setFlagTexture "res\kpflag.jpg";};
-					case KP_liberation_small_storage_building;
-					case KP_liberation_large_storage_building: {_vehicle setVariable ["KP_liberation_storage_type", 0, true];};
-					default {};
-				};
-
-				if (_classname == FOB_box_typename) then {
-					// Add ViV actions to FOB Box
-					[_vehicle] remoteExecCall ["F_setLoadableViV", 0, _vehicle];
-				};
-
-				if (_classname in KP_liberation_medical_vehicles) then {
-					_vehicle setVariable ["ace_medical_medicClass", 1, true];
-				};
-
-				if (_classname == "Land_HelipadSquare_F" || _classname == "Land_HelipadCircle_F" || _classname == "Land_HelipadRescue_F") then {
-					{
-						[_x,[[_vehicle],true]] remoteExec ["addCuratorEditableObjects",2];
-					} forEach allCurators;
-				};
+                _vehicle call F_addObjectInit;
 
 				sleep 0.3;
 				_vehicle allowDamage true;

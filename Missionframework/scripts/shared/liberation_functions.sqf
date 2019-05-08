@@ -62,3 +62,4 @@ F_setFobMass = compileFinal preprocessFileLineNumbers "scripts\shared\functions\
 F_getSaveableParam = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getSaveableParam.sqf";
 F_setLoadableViV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_setLoadableViV.sqf";
 F_getNearestViVTransport = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getNearestViVTransport.sqf";
+F_addObjectInit = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_addObjectInit.sqf";
