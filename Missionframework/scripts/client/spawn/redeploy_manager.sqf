@@ -62,12 +62,12 @@ while {true} do {
 
 	private ["_loadouts_data"];
 	if (KP_liberation_ace && KP_liberation_arsenal_type) then {
-		_loadouts_data = +profileNamespace getVariable ["ace_arsenal_saved_loadouts", []];
+		_loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
 
 		lbAdd [203, "--"];
 		{lbAdd [203, _x select 0];} forEach _loadouts_data;
 	} else {
-		private _saved_loadouts = +profileNamespace getVariable "bis_fnc_saveInventory_data";
+		private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
 		_loadouts_data = [];
 		private _counter = 0;
 		if (!isNil "_saved_loadouts") then {
