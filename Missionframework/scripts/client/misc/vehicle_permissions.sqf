@@ -1,26 +1,17 @@
-params ["unit", "_vehicle"];
+params ["_unit", "_vehicle"];
 
-private _doEject = false;
-private _blacklistedRoles = ["driver", "gunner", "commander"];
-private _permissibleVehicles = [["Tank", 1, "STR_PERMISSION_NO_ARMOR"], ["Air", 2, "STR_PERMISSION_NO_AIR"]];
-private _role = assignedVehicleRole _unit;
+private _role = assignedVehicleRole player select 0;
+if (_role isEqualTo "cargo") exitWith {};
 
-_playerVehicleDetails = _permissibleVehicles select {_vehicle isKindOf (_x select 0)} select 0;
-if(count _playerVehicleDetails isEqualTo 0) then {
-	if(!([player, 0] call F_fetchPermission)) then {
-		_doEject = true;
-		hint localize "STR_PERMISSION_NO_LIGHT";
-	};
-} else {
-	_vehiclePermissionIndex = _playerVehicleDetails select 1;
-	_vehiclePermissionAccessMessage = _playerVehicleDetails select 2;
+private _permissibleVehicles = [
+    ["Car", 0, "STR_PERMISSION_NO_LIGHT"],
+    ["Tank", 1, "STR_PERMISSION_NO_ARMOR"],
+    ["Air", 2, "STR_PERMISSION_NO_AIR"]
+];
 
-	if(!([player, _vehiclePermissionIndex] call F_fetchPermission) && _role in _blacklistedRoles) then {
-		_doEject = true;
-		hint localize _vehiclePermissionAccessMessage;
-	};
-};
+(_permissibleVehicles select {_vehicle isKindOf (_x select 0)} select 0) params ["_type", "_permission", "_hintString"];
 
-if (_doEject) then {
-	moveOut player;
+if !([player, _permission] call F_fetchPermission) exitWith {
+    moveOut player;
+    hint localize _hintString;
 };
