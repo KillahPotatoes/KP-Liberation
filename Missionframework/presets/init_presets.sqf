@@ -32,6 +32,7 @@ switch (KP_liberation_preset_resistance) do {
 	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
 	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
 	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\RACS.sqf";};
+    case 5: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\germany.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 

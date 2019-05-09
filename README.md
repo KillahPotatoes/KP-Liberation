@@ -172,6 +172,8 @@ class Missions
 * Added: Vehicle in Vehicle transport actions for FOB Box.
 * Added: Germany (Global Mobilization) civilian preset.
 * Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
+* Added: Germany (Global Mobilization) resistence preset.
+* Removed: `KP_liberation_guerilla_transports` array from resistance presets, as it isn't used in the legacy framework.
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
 * Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)

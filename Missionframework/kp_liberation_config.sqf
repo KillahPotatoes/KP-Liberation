@@ -71,7 +71,8 @@ KP_liberation_preset_opfor = 0;
 1 = Apex Tanoa (apex vanilla Syndikat)
 2 = RHS GREF
 3 = Project OPFOR (Middle Eastern)
-4 = Project OPFOR (Sahrani) */
+4 = Project OPFOR (Sahrani)
+5 = Germany (Global Mobilization) */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
