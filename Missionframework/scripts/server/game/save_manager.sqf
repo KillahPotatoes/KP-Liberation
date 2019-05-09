@@ -82,6 +82,11 @@ _classnames_to_save = _classnames_to_save + _classnames_to_save_blu + all_hostil
 trigger_server_save = false;
 greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
 
+// Prevent saving/duplication of objects placed in Eden
+{
+    _x setVariable ["KP_liberation_preplaced", true, true];
+} forEach (allMissionObjects "");
+
 if (!isNil "greuh_liberation_savegame") then {
 
 	blufor_sectors = greuh_liberation_savegame select 0;
