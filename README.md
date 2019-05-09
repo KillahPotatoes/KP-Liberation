@@ -195,6 +195,7 @@ class Missions
 * Tweaked: Versioning format from e.g. 0.964 to 0.96.4 for a better separation.
 * Tweaked: Arsenal whitelist/blacklist classes are case insensitive.
 * Tweaked: Vehicle permissions now via sensible event handlers instead of loop. Thanks to [ColinM9991](https://github.com/ColinM9991)
+* Tweaked: Objects placed in Eden Editor won't be saved anymore. Fixes possible duplications on save/load.
 * Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
 * Fixed: Blufor soldier losses weren't counted in statistics.
 * Fixed: Missing `itemRadio` in some arsenal presets.
