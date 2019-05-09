@@ -84,7 +84,7 @@ greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
 
 // Prevent saving/duplication of objects placed in Eden
 {
-    _x setVariable ["KP_liberation_preplaced", true, true];
+    _x setVariable ["KP_liberation_edenObject", true];
 } forEach (allMissionObjects "");
 
 if (!isNil "greuh_liberation_savegame") then {
@@ -494,7 +494,8 @@ while {true} do {
 				(((getpos _x) select 2) < 10) &&	        // Exclude hovering helicopters and the like
 				(getObjectType _x >= 8) &&			        // Exclude preplaced terrain objects
 				!((typeOf _x) in KP_liberation_crates) &&	// Exclude storage crates (those are handled separately)
-				!(_x getVariable ["KP_liberation_preplaced", false])
+				!(_x getVariable ["KP_liberation_preplaced", false]) &&
+                !(_x getVariable ["KP_liberation_edenObject", false])
  			};
 
 			_all_buildings = (_all_buildings + _nextbuildings) select {!((typeOf _x) in KP_liberation_storage_buildings)};
