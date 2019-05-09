@@ -6683,35 +6683,42 @@
         <Key ID="STR_PARAMS_LOADSAVEPARAMS">
             <Original>Load/Save Parameters</Original>
             <German>Laden/Speichern der Parameter</German>
+            <Italian>Carica/Salva Parametri</Italian>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
             <Original>SAVE selected parameters</Original>
             <German>SPEICHERN der momentanen Parameter</German>
+            <Italian>SALVA i parametri</Italian>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
             <Original>LOAD parameters or use selected if no saved value found</Original>
-            <German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind
-            </German>
+            <German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+            <Italian>CARICA parametri o utilizza selezionati se non è stato trovato alcun valore salvato</Italian>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
             <Original>Use selected parameters without saving</Original>
             <German>Momentane Parametereinstellung ohne Speicherung</German>
+            <Italian>Usa i parametri selezionati senza salvare</Italian>
         </Key>
         <Key ID="STR_RAISE">
             <Original>-- Raise</Original>
             <German>-- Höher</German>
+            <Italian>-- Aumenta</Italian>
         </Key>
         <Key ID="STR_LOWER">
             <Original>-- Lower</Original>
             <German>-- Niedriger</German>
+            <Italian>-- Abbassa</Italian>
         </Key>
         <Key ID="STR_NOTIFICATION_GUER_INC_TITLE">
             <Original>Guerilla forces on the way.</Original>
             <German>Widerstandskämpfer sind unterwegs.</German>
+            <Italian>Guerriglieri in arrivo.</Italian>
         </Key>
         <Key ID="STR_NOTIFICATION_GUER_INC">
             <Original>Guerilla forces are incoming to %1 from the %2.</Original>
             <German>Widerstandskämpfer nähern sich %1 aus %2.</German>
+            <Italian>Guerriglieri in arrivo su %1 da %2.</Italian>
         </Key>
         <Key ID="STR_PARAMS_REVIVEOPTIONS">
             <Original>== REVIVE OPTIONS (Disregarded, if you play with ACE Medical) ==</Original>
@@ -6728,6 +6735,7 @@
         <Key ID="STR_PARAMS_ARSENAL">
             <Original>Arsenal</Original>
             <German>Arsenal</German>
+            <Italian>Arsenale</Italian>
         </Key>
     </Package>
 </Project>
