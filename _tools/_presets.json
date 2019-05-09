@@ -150,8 +150,8 @@
         "variables": {
             "KP_liberation_preset_blufor": 9,
             "KP_liberation_preset_opfor": 9,
-            "KP_liberation_preset_resistance": 0,
-            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
             "KP_liberation_arsenal": 7
         }
     },
@@ -163,8 +163,8 @@
         "variables": {
             "KP_liberation_preset_blufor": 10,
             "KP_liberation_preset_opfor": 8,
-            "KP_liberation_preset_resistance": 0,
-            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
             "KP_liberation_arsenal": 8
         }
     }
