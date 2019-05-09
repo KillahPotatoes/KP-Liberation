@@ -161,7 +161,7 @@ class Missions
 
 ## Changelog
 
-### 0.96.4 (Global Mobilization additions)
+### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.
 * Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: East Germany blufor and opfor preset.
