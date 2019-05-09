@@ -9,11 +9,11 @@ Optional Mods:
 /* - Support classnames.
 Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
 FOB_typename = "land_gm_tower_bt_6_fuest_80";							// This is the main FOB HQ building. 																									Default is "Land_Cargo_HQ_V1_F".
-FOB_box_typename = "gm_gc_army_brdm2um";								// This is the FOB as a container/BRDM (due to lack of proper container transport in GM German EAST).									Default is "B_Slingload_01_Cargo_F".
-FOB_truck_typename = "gm_gc_army_btr60pu12";							// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
+FOB_box_typename = "gm_gc_army_brdm2um_win";							// This is the FOB as a container/BRDM (due to lack of proper container transport in GM German EAST).									Default is "B_Slingload_01_Cargo_F".
+FOB_truck_typename = "gm_gc_army_btr60pu12_win";						// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.																				Default is "B_supplyCrate_F".
 Respawn_truck_typename = "gm_gc_army_ural375d_medic";					// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
-huron_typename = "gm_gc_army_btr60pa";							// This is Spartan 01, a multipurpose mobile respawn as a command BTR60.																Default is "B_Heli_Transport_03_unarmed_F".
+huron_typename = "gm_gc_army_btr60pa_win";				    			// This is Spartan 01, a multipurpose mobile respawn as a command BTR60.																Default is "B_Heli_Transport_03_unarmed_F".
 crewman_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";				// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";					// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
 KP_liberation_little_bird_classname = "gm_gc_bgs_p601";					// Little birds replaced with unimog for container transportation.																		Default is "B_Heli_Light_01_F".
@@ -34,28 +34,28 @@ Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
-	["gm_gc_army_rifleman_mpiak74n_80_str",20,0,0],						//Rifleman
-	["gm_gc_army_antitank_mpiak74n_rpg7_80_str",30,0,0],				//Rifleman (AT)
-	["gm_gc_army_machinegunner_lmgrpk_80_str",25,0,0],					//Light Machinegunner
-	["gm_gc_army_machinegunner_pk_80_str",25,10,0],						//Autorifleman
-	["gm_gc_army_engineer_mpiaks74n_80_str",30,0,0],					//Engineer
-	["gm_gc_army_demolition_mpiaks74n_80_str",30,0,0],					//Explosives Specialist
+	["gm_gc_army_rifleman_mpiak74n_80_win",20,0,0],						//Rifleman
+	["gm_gc_army_antitank_mpiak74n_rpg7_80_win",30,0,0],				//Rifleman (AT)
+	["gm_gc_army_machinegunner_lmgrpk_80_win",25,0,0],					//Light Machinegunner
+	["gm_gc_army_machinegunner_pk_80_win",25,10,0],						//Autorifleman
+	["gm_gc_army_engineer_mpiaks74n_80_win",30,0,0],					//Engineer
+	["gm_gc_army_demolition_mpiaks74n_80_win",30,0,0],					//Explosives Specialist
 	["gm_gc_army_crew_mpiaks74nk_80_blk",10,0,0]						//Crewman
 ];
 
 light_vehicles = [
 	["gm_gc_army_bicycle_01_oli",10,0,0],								//Service Bicycle
 	["gm_gc_army_p601",50,0,25],										//Trabant
-	["gm_gc_army_ural4320_cargo",125,30,75],							//Ural Transport
+	["gm_gc_army_ural4320_cargo_win",125,30,75],						//Ural Transport
 	["B_Boat_Transport_01_F",100,0,25]									//Assault Boat
 ];
 
 heavy_vehicles = [
-	["gm_gc_army_brdm2",200,40,100],									//BRDM2
-	["gm_gc_army_btr60pb",200,150,125],									//BTR-60PB
-	["gm_gc_army_zsu234v1",300,250,200],								//Shilka
-	["gm_gc_army_bmp1sp2",300,300,175],									//BMP-1
-	["gm_gc_army_t55a",450,550,250]										//T-55
+	["gm_gc_army_brdm2_win",200,40,100],								//BRDM2
+	["gm_gc_army_btr60pb_win",200,150,125],								//BTR-60PB
+	["gm_gc_army_zsu234v1_win",300,250,200],							//Shilka
+	["gm_gc_army_bmp1sp2_win",300,300,175],								//BMP-1
+	["gm_gc_army_t55a_win",450,550,250]									//T-55
 ];
 
 air_vehicles = [
@@ -174,86 +174,86 @@ support_vehicles = [
 // Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
 // Light infantry squad.
 blufor_squad_inf_light = [
-	"gm_gc_army_squadleader_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_machinegunner_lmgrpk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_demolition_mpiaks74n_80_str",
-	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_str",
-	"gm_gc_army_engineer_mpiaks74n_80_str"
+	"gm_gc_army_squadleader_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_machinegunner_lmgrpk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_demolition_mpiaks74n_80_win",
+	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_win",
+	"gm_gc_army_engineer_mpiaks74n_80_win"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
-	"gm_gc_army_squadleader_mpiak74n_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_machinegunner_lmgrpk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_demolition_mpiaks74n_80_str",
-	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_str",
-	"gm_gc_army_engineer_mpiaks74n_80_str"
+	"gm_gc_army_squadleader_mpiak74n_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_machinegunner_lmgrpk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_demolition_mpiaks74n_80_win",
+	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_win",
+	"gm_gc_army_engineer_mpiaks74n_80_win"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
-	"gm_gc_army_squadleader_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str"
+	"gm_gc_army_squadleader_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
-	"gm_gc_army_squadleader_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str"
+	"gm_gc_army_squadleader_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win"
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
-	"gm_gc_army_squadleader_mpiak74n_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-    "gm_gc_army_antitank_mpiak74n_rpg7_80_str",
-	"gm_gc_army_machinegunner_lmgrpk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_machinegunner_pk_80_str",
-	"gm_gc_army_demolition_mpiaks74n_80_str",
-	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_str",
-	"gm_gc_army_engineer_mpiaks74n_80_str"
+	"gm_gc_army_squadleader_mpiak74n_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+    "gm_gc_army_antitank_mpiak74n_rpg7_80_win",
+	"gm_gc_army_machinegunner_lmgrpk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_machinegunner_pk_80_win",
+	"gm_gc_army_demolition_mpiaks74n_80_win",
+	"gm_gc_army_machinegunner_assistant_mpiak74n_lmgrpk_80_win",
+	"gm_gc_army_engineer_mpiaks74n_80_win"
 ];
 
 // Paratroopers squad.
 blufor_squad_para = [
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str",
-	"gm_gc_army_rifleman_mpiak74n_80_str"
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win",
+	"gm_gc_army_rifleman_mpiak74n_80_win"
 ];
 
 // Elite vehicles that should be unlocked through military base capture.
 elite_vehicles = [
-    "gm_gc_army_t55a"
+    "gm_gc_army_t55a_win"
 ];
