@@ -8,7 +8,7 @@ Optional Mods:
 - None
 */
 
-/* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+/* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
 KP_liberation_guerilla_units = [
 	"LOP_AM_Infantry_SL",
@@ -24,11 +24,6 @@ KP_liberation_guerilla_units = [
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
 	"LOP_AM_UAZ_DshKM"
-];
-
-// transport vehicles (should be able to transport at least 10 soldiers)
-KP_liberation_guerilla_transports = [
-	"LOP_AM_Truck"
 ];
 
 /* Guerilla Equipment
@@ -79,7 +74,7 @@ KP_liberation_guerilla_uniforms_1 = [
 	"LOP_U_TAK_Civ_Fatigue_15",
 	"LOP_U_TAK_Civ_Fatigue_16"
 ];
-	
+
 KP_liberation_guerilla_uniforms_2 = [
 	"LOP_U_TAK_Civ_Fatigue_01",
 	"LOP_U_TAK_Civ_Fatigue_02",
@@ -150,7 +145,7 @@ KP_liberation_guerilla_headgear_1 = [
 	"H_Bandanna_blu",
 	"H_Bandanna_cbr",
 	"H_Bandanna_khk",
-	"H_Bandanna_mcamo",	
+	"H_Bandanna_mcamo",
 	"H_Bandanna_sgg",
 	"H_Bandanna_sand",
 	"H_Bandanna_camo"
@@ -163,7 +158,7 @@ KP_liberation_guerilla_headgear_2 = [
 	"H_Bandanna_gry",
 	"H_Bandanna_cbr",
 	"H_Bandanna_khk",
-	"H_Bandanna_mcamo",	
+	"H_Bandanna_mcamo",
 	"H_Bandanna_sgg",
 	"H_Bandanna_sand",
 	"H_Bandanna_camo",
