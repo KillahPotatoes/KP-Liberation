@@ -4,9 +4,6 @@ Needed Mods:
 
 Optional Mods:
 - LEN - Cold War Helicopters (due to lack fo air assets in GM for now) - https://steamcommunity.com/sharedfiles/filedetails/?id=1726445116
-    - RHSUSAF
-    - RHSSAF
-    - RHSAFRF
 */
 
 // Enemy infantry classes
