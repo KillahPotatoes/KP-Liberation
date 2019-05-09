@@ -9,5 +9,7 @@ KPLIB_objectInits = [
     [[KP_liberation_recycle_building], {_this setVariable ["ace_isRepairFacility", 1, true];}],
     [[KP_liberation_small_storage_building, KP_liberation_large_storage_building], {_this setVariable ["KP_liberation_storage_type", 0, true];}],
     [KP_liberation_medical_facilities, {_this setVariable ["ace_medical_isMedicalFacility", true, true];}],
-    [KP_liberation_medical_vehicles, {_this setVariable ["ace_medical_medicClass", 1, true];}]
+    [KP_liberation_medical_vehicles, {_this setVariable ["ace_medical_medicClass", 1, true];}],
+    // Hide Cover on big GM trucks
+    [["gm_ge_army_kat1_454_cargo", "gm_ge_army_kat1_454_cargo_win"], {_this animateSource ["cover_unhide", 0, true];}]
 ];
