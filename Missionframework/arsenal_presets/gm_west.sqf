@@ -50,10 +50,10 @@ GRLIB_arsenal_magazines = [
 	"gm_120rnd_762x51mm_b_t_dm21a2_mg3_grn",
 
 	// MP2A1 9x19 mm
-	"gm_mp2a1_blk",
+	"gm_32rnd_9x19mm_b_dm51_mp2_blk",
 
 	// P1 9x19 mm
-	"gm_p1_blk",
+	"gm_8rnd_9x19mm_b_dm11_p1_blk",
 
 	// P2A1 26.5 mm
 	"gm_1Rnd_265mm_flare_single_wht_gc",
