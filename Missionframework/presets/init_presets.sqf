@@ -106,13 +106,27 @@ GRLIB_ignore_colisions_when_building = [
 
 
 /* !!! DO NOT EDIT BELOW !!! */
-
+// Preset arrays
 infantry_units = [infantry_units] call F_filterMods;
 light_vehicles = [light_vehicles] call F_filterMods;
 heavy_vehicles = [heavy_vehicles] call F_filterMods;
 air_vehicles = [air_vehicles] call F_filterMods;
 support_vehicles = [support_vehicles] call F_filterMods;
 static_vehicles = [static_vehicles] call F_filterMods;
+// Preset classes arrays
+light_vehicles_classes = light_vehicles apply {toLower (_x select 0)};
+heavy_vehicles_classes = heavy_vehicles apply {toLower (_x select 0)};
+air_vehicles_classes = air_vehicles apply {toLower (_x select 0)};
+// Detect type of Potato 01 and support vehicles
+{
+    _x params ["_class"];
+    switch (true) do {
+        case (_class isKindOf "Tank"): {heavy_vehicles_classes pushBack toLower _class};
+        case (_class isKindOf "Air"): {air_vehicles_classes pushBack toLower _class};
+        default {light_vehicles_classes pushBack toLower _class};
+    };
+} forEach support_vehicles + [huron_typename];
+
 buildings = [buildings] call F_filterMods;
 build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,static_vehicles,buildings,support_vehicles,squads];
 KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];

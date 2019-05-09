@@ -1,41 +1,20 @@
-private [ "_doeject" ];
+params ["_vehicle"];
+private _vehicleClass = toLower typeOf _vehicle;
 
-_doeject = false;
+// Cargo is always allowed
+private _isCargo = (_vehicle getCargoIndex player) != -1;
+if (_isCargo || _vehicle isKindOf "ParachuteBase") exitWith {};
 
-while { true } do {
+private _permissibleVehicles = [
+    [light_vehicles_classes, "STR_PERMISSION_NO_LIGHT"],
+    [heavy_vehicles_classes, "STR_PERMISSION_NO_ARMOR"],
+    [air_vehicles_classes, "STR_PERMISSION_NO_AIR"]
+];
 
-	waitUntil { alive player };
+private _permissionIdx = _permissibleVehicles findIf {_vehicleClass in (_x select 0)};
+if (_permissionIdx isEqualTo -1) exitWith {};
 
-	waitUntil { sleep 0.2;
-		vehicle player == player
-	};
-
-	waitUntil { sleep 0.2;
-		(vehicle player != player) &&  ( (vehicle player ) getCargoIndex player ) < 0  && isTouchingGround (vehicle player) && !((vehicle player ) isKindOf "ParachuteBase")
-	};
-
-	if ( (vehicle player ) isKindOf "Tank" ) then {
-		if ( ! (  [ player, 1 ] call F_fetchPermission ) ) then {
-			_doeject = true;
-			hint localize "STR_PERMISSION_NO_ARMOR";
-		};
-	} else {
-		if ( (vehicle player ) isKindOf "Air" ) then {
-			if ( ! (  [ player, 2 ] call F_fetchPermission ) ) then {
-				_doeject = true;
-				hint localize "STR_PERMISSION_NO_AIR";
-			};
-		} else {
-			if ( ! (  [ player, 0 ] call F_fetchPermission ) ) then {
-				_doeject = true;
-				hint localize "STR_PERMISSION_NO_LIGHT";
-			};
-
-		};
-	};
-
-	if ( _doeject ) then {
-		moveOut player;
-		_doeject = false;
-	};
+if !([player, _permissionIdx] call F_fetchPermission) exitWith {
+    moveOut player;
+    hint localize (_permissibleVehicles select _permissionIdx select 1);
 };
