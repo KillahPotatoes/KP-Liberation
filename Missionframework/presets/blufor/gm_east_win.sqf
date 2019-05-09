@@ -12,7 +12,7 @@ FOB_typename = "land_gm_tower_bt_6_fuest_80";							// This is the main FOB HQ b
 FOB_box_typename = "gm_gc_army_brdm2um_win";							// This is the FOB as a container/BRDM (due to lack of proper container transport in GM German EAST).									Default is "B_Slingload_01_Cargo_F".
 FOB_truck_typename = "gm_gc_army_btr60pu12_win";						// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
 Arsenal_typename = "B_supplyCrate_F";									// This is the virtual arsenal as portable supply crates.																				Default is "B_supplyCrate_F".
-Respawn_truck_typename = "gm_gc_army_ural375d_medic";					// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
+Respawn_truck_typename = "gm_gc_army_ural375d_medic_win";				// This is the mobile respawn (and medical) truck. 																						Default is "B_Truck_01_medical_F".
 huron_typename = "gm_gc_army_btr60pa_win";				    			// This is Spartan 01, a multipurpose mobile respawn as a command BTR60.																Default is "B_Heli_Transport_03_unarmed_F".
 crewman_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";				// This defines the crew for vehicles. 																									Default is "B_crew_F".
 pilot_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";					// This defines the pilot for helicopters. 																								Default is "B_Helipilot_F".
@@ -163,9 +163,9 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
-	["gm_gc_army_ural4320_repair",325,30,75],							//Ural Repair
-	["gm_gc_army_ural375d_refuel",125,0,275],							//Ural Fuel
-	["gm_gc_army_ural4320_reammo",125,200,75],							//Ural Ammo
+	["gm_gc_army_ural4320_repair_win",325,30,75],						//Ural Repair
+	["gm_gc_army_ural375d_refuel_win",125,0,275],						//Ural Fuel
+	["gm_gc_army_ural4320_reammo_win",125,200,75],						//Ural Ammo
 	["B_Slingload_01_Repair_F",275,0,0],								//Huron Repair
 	["B_Slingload_01_Fuel_F",75,0,200],									//Huron Fuel
 	["B_Slingload_01_Ammo_F",75,200,0]									//Huron Ammo

@@ -174,9 +174,9 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
-	["gm_ge_army_u1300l_repair",325,30,75],								//Truck 2t repair
-	["gm_ge_army_kat1_451_refuel",125,0,275],							//Truck 5t fuel
-	["gm_ge_army_kat1_451_reammo",125,200,75],							//Truck 5t ammo
+	["gm_ge_army_u1300l_repair_win",325,30,75],							//Truck 2t repair
+	["gm_ge_army_kat1_451_refuel_win",125,0,275],						//Truck 5t fuel
+	["gm_ge_army_kat1_451_reammo_win",125,200,75],						//Truck 5t ammo
 	["B_Slingload_01_Repair_F",275,0,0],								//Huron Repair
 	["B_Slingload_01_Fuel_F",75,0,200],									//Huron Fuel
 	["B_Slingload_01_Ammo_F",75,200,0]									//Huron Ammo
