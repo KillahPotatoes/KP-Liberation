@@ -172,11 +172,12 @@ class Missions
 * Added: Germany (Global Mobilization) civilian preset.
 * Added: CSAT Vanilla blufor preset, CSAT Apex blufor preset and CSAT Arsenal preset. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
 * Added: AAF and NATO opfor presets. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
-* Added: Weferlingen basefile.
+* Added: Weferlingen Summer basefile.
 * Added: Weferlingen Winter basefile.
 * Added: Chernarus Winter basefile.
-* Added: Fog removal script readded, as some people had issues with too much fog after some time.
+* Added: Weferlingen Summer and Winter building ignore list.
 * Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: Fog removal script readded, as some people had issues with too much fog after some time.
 * Added: Vehicle in Vehicle transport actions for FOB Box.
 * Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
 * Removed: `KP_liberation_guerilla_transports` array from resistance presets, as it isn't used in the legacy framework.
