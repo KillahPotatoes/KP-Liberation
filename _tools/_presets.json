@@ -144,8 +144,21 @@
     },
     {
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
-        "missionName": "kp_liberation_west",
+        "missionName": "kp_liberation",
         "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 9,
+            "KP_liberation_preset_opfor": 9,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 7
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_winter",
+        "missionName": "kp_liberation",
+        "map": "gm_weferlingen_winter",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 9,
@@ -159,6 +172,19 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
         "missionName": "kp_liberation_east",
         "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 10,
+            "KP_liberation_preset_opfor": 8,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 8
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_winter",
+        "missionName": "kp_liberation_east",
+        "map": "gm_weferlingen_winter",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 10,
