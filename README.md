@@ -162,17 +162,23 @@ class Missions
 ## Changelog
 
 ### 0.96.4 (Global Mobilization additions)
-* Added: East Germany Arsenal Preset.
-* Added: West Germany Arsenal Preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
-* Added: Chernarus Winter basefile to repository.
-* Added: Fog removal script readded, as some people had issues with too much fog after some time.
-* Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: East Germany arsenal preset.
+* Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: East Germany blufor and opfor preset.
+* Added: East Germany Winter blufor and opfor preset.
+* Added: West Germany blufor and opfor preset.
+* Added: West Germany Winter blufor and opfor preset.
+* Added: Germany (Global Mobilization) resistence preset.
+* Added: Germany (Global Mobilization) civilian preset.
 * Added: CSAT Vanilla blufor preset, CSAT Apex blufor preset and CSAT Arsenal preset. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
 * Added: AAF and NATO opfor presets. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
+* Added: Weferlingen basefile.
+* Added: Weferlingen Winter basefile.
+* Added: Chernarus Winter basefile.
+* Added: Fog removal script readded, as some people had issues with too much fog after some time.
+* Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
 * Added: Vehicle in Vehicle transport actions for FOB Box.
-* Added: Germany (Global Mobilization) civilian preset.
 * Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
-* Added: Germany (Global Mobilization) resistence preset.
 * Removed: `KP_liberation_guerilla_transports` array from resistance presets, as it isn't used in the legacy framework.
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
