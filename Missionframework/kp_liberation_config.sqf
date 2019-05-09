@@ -17,7 +17,11 @@ KP_liberation_medical_vehicles = [
 	"RHS_UH60M_MEV_d",
 	"RHS_UH60M_MEV2_d",
 	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
-	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
+	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM",
+    "gm_gc_army_ural375d_medic",
+    "gm_gc_army_ural375d_medic_win",
+    "gm_ge_army_u1300l_medic",
+    "gm_ge_army_u1300l_medic_win_rc"
 ];
 
 // Building classnames which also function as ACE medical facilities.
@@ -497,7 +501,11 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"rhs_gaz66_ammo_msv"
+	"rhs_gaz66_ammo_msv",
+    "gm_gc_army_ural4320_reammo",
+    "gm_gc_army_ural4320_reammo_win",
+    "gm_ge_army_kat1_451_reammo",
+    "gm_ge_army_kat1_451_reammo_win"
 ];
 
 // Everything that can resupply other vehicles.
@@ -516,7 +524,11 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
-	"RHS_Ural_Repair_VDV_01"
+	"RHS_Ural_Repair_VDV_01",
+    "gm_gc_army_ural4320_repair",
+    "gm_gc_army_ural4320_repair_win",
+    "gm_ge_army_u1300l_repair",
+    "gm_ge_army_u1300l_repair_win"
 ];
 
 vehicle_rearm_sources = [
@@ -533,7 +545,11 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"rhs_gaz66_ammo_msv"
+	"rhs_gaz66_ammo_msv",
+    "gm_gc_army_ural4320_reammo",
+    "gm_gc_army_ural4320_reammo_win",
+    "gm_ge_army_kat1_451_reammo",
+    "gm_ge_army_kat1_451_reammo_win"
 ];
 
 vehicle_refuel_sources = [
@@ -550,7 +566,11 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
 	"rhsusf_M978A4_BKIT_usarmy_wd",
-	"RHS_Ural_Fuel_VDV_01"
+	"RHS_Ural_Fuel_VDV_01",
+    "gm_gc_army_ural375d_refuel",
+    "gm_gc_army_ural375d_refuel_win",
+    "gm_ge_army_kat1_451_refuel",
+    "gm_ge_army_kat1_451_refuel_win"
 ];
 
 // Classnames of boats, so they can be built on water.
