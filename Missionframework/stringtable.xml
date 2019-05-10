@@ -6737,5 +6737,13 @@
             <German>Arsenal</German>
             <Italian>Arsenale</Italian>
         </Key>
+        <Key ID="STR_PARAMS_ARSENAL_BI">
+            <Original>BI arsenal</Original>
+            <German>BI Arsenal</German>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENAL_ACE">
+            <Original>ACE arsenal</Original>
+            <German>ACE Arsenal</German>
+        </Key>
     </Package>
 </Project>
