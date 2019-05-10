@@ -92,7 +92,7 @@ if (!isNil "greuh_liberation_savegame") then {
 	blufor_sectors = greuh_liberation_savegame select 0;
 	GRLIB_all_fobs = greuh_liberation_savegame select 1;
 	buildings_to_save = greuh_liberation_savegame select 2;
-	time_of_day = greuh_liberation_savegame select 3;
+	campaign_date = greuh_liberation_savegame select 3;
 	combat_readiness = greuh_liberation_savegame select 4;
 	KP_liberation_storages = greuh_liberation_savegame select 5;
 	KP_liberation_production = greuh_liberation_savegame select 6;
@@ -190,18 +190,7 @@ if (!isNil "greuh_liberation_savegame") then {
 		KP_liberation_guerilla_strength = greuh_liberation_savegame select 17;
 	};
 
-	setDate [2045, 6, 6, time_of_day, 0];
-
-	private _correct_fobs = [];
-	{
-		private _next_fob = _x;
-		private _keep_fob = true;
-		{
-			if (_next_fob distance (markerpos _x) < 50) exitWith {_keep_fob = false};
-		} forEach sectors_allSectors;
-		if (_keep_fob) then {_correct_fobs pushback _next_fob};
-	} forEach GRLIB_all_fobs;
-	GRLIB_all_fobs = _correct_fobs;
+	setDate campaign_date;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 
@@ -562,8 +551,6 @@ while {true} do {
 			KP_liberation_storages pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];
 		} forEach _all_storages;
 
-		time_of_day = date select 3;
-
 		stats_saves_performed = stats_saves_performed + 1;
 
 		private _knownplayers = [];
@@ -612,7 +599,7 @@ while {true} do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
+		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, date, round combat_readiness, KP_liberation_storages,
 		KP_liberation_production, KP_liberation_logistics, _stats, [round infantry_weight, round armor_weight, round air_weight], GRLIB_vehicle_to_military_base_links,
 		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep, KP_liberation_production_markers, KP_liberation_guerilla_strength];
 
