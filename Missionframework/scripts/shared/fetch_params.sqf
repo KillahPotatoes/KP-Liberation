@@ -57,6 +57,7 @@ if(isServer) then {
 	GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
 	GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
 	GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
+    GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
 
 	GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
 	GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);

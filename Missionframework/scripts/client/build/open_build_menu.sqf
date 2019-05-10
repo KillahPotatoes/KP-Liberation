@@ -34,7 +34,7 @@ localize "STR_BUILD8"
 ];
 
 _nearfob = [] call F_getNearestFob;
-_actual_fob = [KP_liberation_fob_resources, {((_x select 0) distance _nearfob) < GRLIB_fob_range}] call BIS_fnc_conditionalSelect;
+_actual_fob = KP_liberation_fob_resources select {((_x select 0) distance _nearfob) < GRLIB_fob_range};
 
 while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	_build_list = build_lists select buildtype;
@@ -49,7 +49,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 			if (buildtype != 8) then {
 				_classnamevar = (_x select 0);
 				_entrytext = getText (_cfg >> _classnamevar >> "displayName");
-				
+
 				switch (_classnamevar) do {
 					case FOB_box_typename: {_entrytext = localize "STR_FOBBOX";};
 					case Arsenal_typename: {if (KP_liberation_mobilearsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
@@ -138,7 +138,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 					_affordable = true;
 				};
 			};
-		};				
+		};
 
 		if ( buildtype != 8 ) then {
 			{ if ( ( _build_item select 0 ) == ( _x select 0 ) ) exitWith { _base_link = _x select 1; _linked = true; } } foreach GRLIB_vehicle_to_military_base_links;
@@ -163,7 +163,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	ctrlSetText [131, format [ "%1 : %2" , localize "STR_MANPOWER", (floor KP_liberation_supplies)]] ;
 	ctrlSetText [132, format [ "%1 : %2" , localize "STR_AMMO", (floor KP_liberation_ammo)]];
 	ctrlSetText [133, format [ "%1 : %2" , localize "STR_FUEL", (floor KP_liberation_fuel)]];
-	
+
 	((findDisplay 5501) displayCtrl (134)) ctrlSetStructuredText formatText [
 		"%1/%2 %3 - %4/%5 %6 - %7/%8 %9",
 		unitcap,

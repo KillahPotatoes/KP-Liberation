@@ -20,8 +20,60 @@
         "variables": {
             "KP_liberation_preset_blufor": 6,
             "KP_liberation_preset_opfor": 2,
-            "KP_liberation_preset_resistance": 2,
+            "KP_liberation_preset_resistance": 0,
             "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.Chernarus_Winter",
+        "missionName": "kp_liberation",
+        "map": "Chernarus_Winter",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 6,
+            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_resistance": 0,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_summer",
+        "missionName": "kp_liberation",
+        "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 9,
+            "KP_liberation_preset_opfor": 10,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 7
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_winter",
+        "missionName": "kp_liberation",
+        "map": "gm_weferlingen_winter",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 10,
+            "KP_liberation_preset_opfor": 11,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 7
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.lythium",
+        "missionName": "kp_liberation",
+        "map": "lythium",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 7,
+            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_resistance": 3,
+            "KP_liberation_preset_civilians": 2,
             "KP_liberation_arsenal": 0
         }
     },
@@ -33,58 +85,6 @@
         "variables": {
             "KP_liberation_preset_blufor": 0,
             "KP_liberation_preset_opfor": 0,
-            "KP_liberation_preset_resistance": 0,
-            "KP_liberation_preset_civilians": 0,
-            "KP_liberation_arsenal": 0
-        }
-    },
-    {
-        "sourceFolder": "kp_liberation.Takistan",
-        "missionName": "kp_liberation",
-        "map": "Takistan",
-        "configFile": "kp_liberation_config.sqf",
-        "variables": {
-            "KP_liberation_preset_blufor": 7,
-            "KP_liberation_preset_opfor": 3,
-            "KP_liberation_preset_resistance": 3,
-            "KP_liberation_preset_civilians": 2,
-            "KP_liberation_arsenal": 0
-        }
-    },
-    {
-        "sourceFolder": "kp_liberation.Takistan",
-        "missionName": "kp_liberation_afrf",
-        "map": "Takistan",
-        "configFile": "kp_liberation_config.sqf",
-        "variables": {
-            "KP_liberation_preset_blufor": 8,
-            "KP_liberation_preset_opfor": 3,
-            "KP_liberation_preset_resistance": 3,
-            "KP_liberation_preset_civilians": 2,
-            "KP_liberation_arsenal": 0
-        }
-    },
-    {
-        "sourceFolder": "kp_liberation.Sara",
-        "missionName": "kp_liberation",
-        "map": "Sara",
-        "configFile": "kp_liberation_config.sqf",
-        "variables": {
-            "KP_liberation_preset_blufor": 6,
-            "KP_liberation_preset_opfor": 2,
-            "KP_liberation_preset_resistance": 0,
-            "KP_liberation_preset_civilians": 0,
-            "KP_liberation_arsenal": 0
-        }
-    },
-    {
-        "sourceFolder": "kp_liberation.xcam_taunus",
-        "missionName": "kp_liberation",
-        "map": "xcam_taunus",
-        "configFile": "kp_liberation_config.sqf",
-        "variables": {
-            "KP_liberation_preset_blufor": 4,
-            "KP_liberation_preset_opfor": 2,
             "KP_liberation_preset_resistance": 0,
             "KP_liberation_preset_civilians": 0,
             "KP_liberation_arsenal": 0
@@ -104,13 +104,26 @@
         }
     },
     {
-        "sourceFolder": "kp_liberation.lythium",
+        "sourceFolder": "kp_liberation.Sara",
         "missionName": "kp_liberation",
-        "map": "lythium",
+        "map": "Sara",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 6,
+            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_resistance": 0,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.Takistan",
+        "missionName": "kp_liberation",
+        "map": "Takistan",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 7,
-            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_opfor": 3,
             "KP_liberation_preset_resistance": 3,
             "KP_liberation_preset_civilians": 2,
             "KP_liberation_arsenal": 0
@@ -126,6 +139,58 @@
             "KP_liberation_preset_opfor": 1,
             "KP_liberation_preset_resistance": 1,
             "KP_liberation_preset_civilians": 1,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.xcam_taunus",
+        "missionName": "kp_liberation",
+        "map": "xcam_taunus",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 4,
+            "KP_liberation_preset_opfor": 2,
+            "KP_liberation_preset_resistance": 0,
+            "KP_liberation_preset_civilians": 0,
+            "KP_liberation_arsenal": 0
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_summer",
+        "missionName": "kp_liberation_east",
+        "map": "gm_weferlingen_summer",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 11,
+            "KP_liberation_preset_opfor": 8,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 8
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.gm_weferlingen_winter",
+        "missionName": "kp_liberation_east",
+        "map": "gm_weferlingen_winter",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 12,
+            "KP_liberation_preset_opfor": 9,
+            "KP_liberation_preset_resistance": 5,
+            "KP_liberation_preset_civilians": 4,
+            "KP_liberation_arsenal": 8
+        }
+    },
+    {
+        "sourceFolder": "kp_liberation.Takistan",
+        "missionName": "kp_liberation_afrf",
+        "map": "Takistan",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 8,
+            "KP_liberation_preset_opfor": 3,
+            "KP_liberation_preset_resistance": 3,
+            "KP_liberation_preset_civilians": 2,
             "KP_liberation_arsenal": 0
         }
     }

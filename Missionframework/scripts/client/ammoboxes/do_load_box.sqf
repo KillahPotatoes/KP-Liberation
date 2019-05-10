@@ -2,7 +2,7 @@ params [ "_ammobox", ["_max_transport_distance", 15] ];
 private [ "_neartransporttrucks", "_truck_to_load", "_truck_load", "_next_truck", "_maxload", "_i" ];
 
 _maxload = 3;
-_neartransporttrucks = [ ((getpos _ammobox) nearEntities [ ammobox_transports_typenames, _max_transport_distance]), { alive _x && speed _x < 5 && ((getpos _x) select 2) < 5 } ] call BIS_fnc_conditionalSelect;
+_neartransporttrucks = ((getpos _ammobox) nearEntities [ ammobox_transports_typenames, _max_transport_distance]) select {alive _x && speed _x < 5 && ((getpos _x) select 2) < 5};
 _truck_to_load = objNull;
 
 

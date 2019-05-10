@@ -2,12 +2,15 @@ if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIV
 
 switch (worldName) do {
 	case "Chernarus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
+    case "gm_weferlingen_summer": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\gm_weferlingen_summer.sqf"};
+    case "gm_weferlingen_winter": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\gm_weferlingen_winter.sqf"};
 	case "lythium": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\lythium.sqf"};
 	case "Malden": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\malden.sqf"};
 	case "pja310": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\pja310.sqf"};
 	case "Sara": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\sara.sqf"};
 	case "Takistan": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\takistan.sqf"};
 	case "Tanoa": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\tanoa.sqf"};
+	case "WL_Rosche": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\wl_rosche.sqf"};
 	case "xcam_taunus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\xcam_taunus.sqf"};
 	default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
 };

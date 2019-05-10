@@ -39,4 +39,4 @@ asymm_notifications = compileFinal preprocessFileLineNumbers "scripts\client\asy
 
 execVM "scripts\shared\scan_skill.sqf";
 execVM "scripts\shared\diagnostics.sqf";
-if (!KP_liberation_ace) then {execVM "scripts\shared\manage_weather.sqf";};
+execVM "scripts\shared\manage_weather.sqf";

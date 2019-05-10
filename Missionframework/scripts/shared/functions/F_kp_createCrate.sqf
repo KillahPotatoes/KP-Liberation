@@ -1,5 +1,5 @@
 /*
-F_kp_createCrate.sqf
+F_createCrate.sqf
 Author: Wyqer
 Website: www.killahpotatoes.de
 Date: 2017-10-11

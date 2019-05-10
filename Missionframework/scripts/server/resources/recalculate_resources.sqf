@@ -23,21 +23,21 @@ while {true} do {
 	private _local_heli_slots = 0;
 	private _local_plane_slots = 0;
 	private _local_infantry_cap = 50 * GRLIB_resources_multiplier;
-	
+
 	{
 		private _fob_buildings = _x nearobjects (GRLIB_fob_range * 2);
-		private _storage_areas = [_fob_buildings, {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+		private _storage_areas = _fob_buildings select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 		private _heliSlots = {(typeOf _x) == KP_liberation_heli_slot_building;} count _fob_buildings;
 		private _planeSlots = {(typeOf _x) == KP_liberation_plane_slot_building;} count _fob_buildings;
 		private _hasAirBuilding = {(typeOf _x) == KP_liberation_air_vehicle_building;} count _fob_buildings;
 		if (_hasAirBuilding > 0) then {_hasAirBuilding = true;} else {_hasAirBuilding = false;};
 		private _hasRecBuilding = {(typeOf _x) == KP_liberation_recycle_building;} count _fob_buildings;
 		if (_hasRecBuilding > 0) then {_hasRecBuilding = true;} else {_hasRecBuilding = false;};
-		
+
 		private _supplyValue = 0;
 		private _ammoValue = 0;
 		private _fuelValue = 0;
-		
+
 		{
 			{
 				switch ((typeOf _x)) do {
@@ -48,15 +48,15 @@ while {true} do {
 				};
 			} forEach (attachedObjects _x);
 		} forEach _storage_areas;
-		
+
 		_local_fob_resources pushBack [_x, _supplyValue, _ammoValue, _fuelValue, _hasAirBuilding, _hasRecBuilding];
 		_local_supplies_global = _local_supplies_global + _supplyValue;
 		_local_ammo_global = _local_ammo_global + _ammoValue;
 		_local_fuel_global = _local_fuel_global + _fuelValue;
 		_local_heli_slots = _local_heli_slots + _heliSlots;
 		_local_plane_slots = _local_plane_slots + _planeSlots;
-	} forEach GRLIB_all_fobs;	
-	
+	} forEach GRLIB_all_fobs;
+
 	{
 		if ( _x in sectors_capture ) then {
 			_local_infantry_cap = _local_infantry_cap + (10 * GRLIB_resources_multiplier);

@@ -84,27 +84,27 @@ while { true } do {
 		_overlayshown = false;
 		_first_iteration = true;
 	};
-	
+
 	_nearfob = [] call F_getNearestFob;
 	_fobdistance = 9999;
 	_actual_fob = [];
 	if ( count _nearfob == 3 ) then {
 		_fobdistance = player distance _nearfob;
-		_actual_fob = [KP_liberation_fob_resources, {((_x select 0) distance _nearfob) < GRLIB_fob_range}] call BIS_fnc_conditionalSelect;
+		_actual_fob = KP_liberation_fob_resources select {((_x select 0) distance _nearfob) < GRLIB_fob_range};
 	};
-	
+
 	if (_fobdistance < _distfob) then {
 		_resources = true;
 		if (KP_liberation_resources_global) then {
 			_resource_area = localize "STR_RESOURCE_GLOBAL";
 			KP_liberation_supplies = KP_liberation_supplies_global;
 			KP_liberation_ammo = KP_liberation_ammo_global;
-			KP_liberation_fuel = KP_liberation_fuel_global;	
+			KP_liberation_fuel = KP_liberation_fuel_global;
 		} else {
 			_resource_area = toUpper ([_nearfob] call F_getFobName);
 			KP_liberation_supplies = ((_actual_fob select 0) select 1);
 			KP_liberation_ammo = ((_actual_fob select 0) select 2);
-			KP_liberation_fuel = ((_actual_fob select 0) select 3);	
+			KP_liberation_fuel = ((_actual_fob select 0) select 3);
 		};
 		KP_liberation_air_vehicle_building_near = ((_actual_fob select 0) select 4);
 		KP_liberation_recycle_building_near = ((_actual_fob select 0) select 5);
@@ -116,7 +116,7 @@ while { true } do {
 		KP_liberation_air_vehicle_building_near = false;
 		KP_liberation_recycle_building_near = false;
 	};
-	
+
 	if ( _overlayshown) then {
 
 		((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
@@ -142,7 +142,7 @@ while { true } do {
 			if (isNil "KP_liberation_supplies") then {KP_liberation_supplies = 0;};
 			if (isNil "KP_liberation_ammo") then {KP_liberation_ammo = 0;};
 			if (isNil "KP_liberation_fuel") then {KP_liberation_fuel = 0;};
-			
+
 			if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758004)) ctrlSetText format ["%1", _resource_area];
@@ -178,7 +178,7 @@ while { true } do {
 			{((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
 			_notNearFOB = true;
 		};
-		
+
 		if ( _uiticks % 25 == 0 ) then {
 
 			if (!isNil "active_sectors" && ( [] call F_opforCap >= GRLIB_sector_cap)) then {

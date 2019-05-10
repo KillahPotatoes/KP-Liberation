@@ -77,9 +77,20 @@ if (KP_liberation_arsenalUsePreset) then {
 	if ((count KP_liberation_allowed_items_extension) > 0) then {
 		KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
 	};
+
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+        [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
+    };
+
+    // Lowercase all classnames
+	KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
 } else {
 	[missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
 	[missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
+
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+        [player, true, false] call ace_arsenal_fnc_addVirtualItems;
+    };
 };

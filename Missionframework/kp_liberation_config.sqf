@@ -17,7 +17,17 @@ KP_liberation_medical_vehicles = [
 	"RHS_UH60M_MEV_d",
 	"RHS_UH60M_MEV2_d",
 	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP",
-	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM"
+	"UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM",
+    "gm_gc_army_ural375d_medic",
+    "gm_gc_army_ural375d_medic_win",
+    "gm_ge_army_u1300l_medic",
+    "gm_ge_army_u1300l_medic_win_rc"
+];
+
+// Building classnames which also function as ACE medical facilities.
+KP_liberation_medical_facilities = [
+    "Land_Medevac_house_V1_F",
+    "Land_Medevac_HQ_V1_F"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -28,28 +38,40 @@ KP_liberation_ace_crates = [
 	"ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings. 
+/* - Custom unit and arsenal preset settings.
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
-0 = Custom (default vanilla with many optional mods supported)
-1 = Apex Tanoa (apex vanilla with many optional mods supported)
-2 = 3cb BAF (MTP)
-3 = 3cb BAF (Desert)
-4 = BWMod Bundeswehr (Flecktarn)
-5 = BWMod Bundeswehr (Tropentarn)
-6 = RHS USAF (Woodland)
-7 = RHS USAF (Desert)
-8 = RHS AFRF (VDV/MSV) */
+0  = Custom (default vanilla with many optional mods supported)
+1  = Apex Tanoa (apex vanilla with many optional mods supported)
+2  = 3cb BAF (MTP)
+3  = 3cb BAF (Desert)
+4  = BWMod Bundeswehr (Flecktarn)
+5  = BWMod Bundeswehr (Tropentarn)
+6  = RHS USAF (Woodland)
+7  = RHS USAF (Desert)
+8  = RHS AFRF (VDV/MSV)
+9  = Germany West (Global Mobilization)
+10 = Germany West Winter (Global Mobilization)
+11 = Germany East (Global Mobilization)
+12 = Germany East Winter (Global Mobilization)
+13 = CSAT Brown
+14 = CSAT Green */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
-0 = Custom (default vanilla CSAT)
-1 = Apex Tanoa (apex vanilla CSAT)
-2 = RHS AFRF (EMR/MSV)
-3 = Project OPFOR (Takistan)
-4 = Project OPFOR (Islamic State)
-5 = Project OPFOR (Sahrani) */
+0  = Custom (default vanilla CSAT)
+1  = Apex Tanoa (apex vanilla CSAT)
+2  = RHS AFRF (EMR/MSV)
+3  = Project OPFOR (Takistan)
+4  = Project OPFOR (Islamic State)
+5  = Project OPFOR (Sahrani)
+6  = AAF
+7  = NATO
+8  = Germany West (Global Mobilization)
+9  = Germany West Winter (Global Mobilization)
+10 = Germany East (Global Mobilization)
+11 = Germany East Winter (Global Mobilization) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -57,14 +79,16 @@ KP_liberation_preset_opfor = 0;
 1 = Apex Tanoa (apex vanilla Syndikat)
 2 = RHS GREF
 3 = Project OPFOR (Middle Eastern)
-4 = Project OPFOR (Sahrani) */
+4 = Project OPFOR (Sahrani)
+5 = Germany (Global Mobilization) */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
 0 = Custom (default vanilla)
 1 = Apex Tanoa (apex vanilla)
 2 = Project OPFOR (Middle Eastern)
-3 = RDS Civilians */
+3 = RDS Civilians
+4 = Germany (Global Mobilization) */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -73,8 +97,11 @@ KP_liberation_preset_civilians = 0;
 2 = Killah Potatoes Gaming Community arsenal preset.
 3 = RHS USAF arsenal preset.
 4 = RHS USAF arsenal preset with ACE.
-5 = RHS USAF arsenal preset with ACE and ACRE.	
-6 = 3cbBAF and RHS USAF arsenal preset. */
+5 = RHS USAF arsenal preset with ACE and ACRE.
+6 = 3cbBAF and RHS USAF arsenal preset.
+7 = GM West arsenal preset.
+8 = GM East arsenal preset.
+9 = CSAT arsenal preset. */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -148,7 +175,7 @@ KP_liberation_resistance_sector_chance = 35;																	// Chance that a gu
 KP_liberation_resistance_ambush_chance = 25;																	// Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 /* - Default arsenal blacklist method.
-Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.	
+Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.	*/
 blacklisted_from_arsenal = [
 	"I_HMG_01_weapon_F",
@@ -261,24 +288,78 @@ KP_liberation_allowed_items_extension = [
 	"rhs_m136_hp_mag",
 	"rhs_weap_M136_used",
 	"rhs_m72a7_mag",
-	"BWA3_optic_ZO4x30_NSV",
-	"BWA3_optic_ZO4x30_IRV",
-	"BWA3_optic_ZO4x30_Single_NSV",
-	"BWA3_optic_ZO4x30_Single_IRV",
+	"BWA3_acc_LLM01_flash",
+	"BWA3_acc_LLM01_laser",
+	"BWA3_acc_LLM01_flash_underbarrel",
+	"BWA3_acc_LLM01_laser_underbarrel",
+	"BWA3_acc_LLM01_flash_tan",
+	"BWA3_acc_LLM01_laser_tan",
+	"BWA3_acc_VarioRay_flash",
+	"BWA3_acc_VarioRay_laser",
+	"BWA3_Bunkerfaust",
+	"BWA3_G36A2_pip",
+	"BWA3_G36A2_tan_pip",
+	"BWA3_optic_CompM2_G36A2",
+	"BWA3_optic_CompM2_tan_G36A2",
 	"BWA3_optic_EOTech_Mag_On",
 	"BWA3_optic_EOTech_Mag_Off",
 	"BWA3_optic_EOTech_tan_Mag_On",
 	"BWA3_optic_EOTech_tan_Mag_Off",
-	"BWA3_optic_20x50_NSV",
-	"BWA3_optic_24x72_NSV",
-	"BWA3_acc_VarioRay_flash",
-	"BWA3_acc_VarioRay_laser",
-	"BWA3_acc_LLM01_flash",
-	"BWA3_acc_LLM01_laser",
-	"BWA3_acc_LLM01_flash_underbarrel",
-	"BWA3_acc_LLM01_laser_underberrel",
-	"BWA3_acc_LLM01_laser_underbarrel",
-	"BWA3_Pzf3_Used",
+	"BWA3_optic_EOTech552_G36A2",
+	"BWA3_optic_EOTech552_tan_G36A2",
+	"BWA3_optic_EOTech_G36A2",
+	"BWA3_optic_EOTech_sand_G36A2",
+	"BWA3_optic_Hensoldt_NSV",
+	"BWA3_optic_MicroT1_G36A2",
+	"BWA3_optic_MicroT2_G36A2",
+	"BWA3_optic_M5Xi_MSR_pip",
+	"BWA3_optic_M5Xi_MSR_MicroT2_pip",
+	"BWA3_optic_M5Xi_Tremor3_pip",
+	"BWA3_optic_M5Xi_Tremor3_MicroT2_pip",
+	"BWA3_optic_NSA80_G36",
+	"BWA3_optic_PMII_ShortdotCC_pip",
+	"BWA3_optic_PMII_DMR_pip",
+	"BWA3_optic_PMII_DMR_NSV_pip",
+	"BWA3_optic_PMII_DMR_MicroT1_rear_pip",
+	"BWA3_optic_PMII_DMR_MicroT1_front_pip",
+	"BWA3_optic_PMII_DMR_MicroT1_rear_NSV_pip",
+	"BWA3_optic_PMII_DMR_MicroT1_front_NSV_pip",
+	"BWA3_optic_PMII_DMR_NSV",
+	"BWA3_optic_PMII_DMR_MicroT1_rear_NSV",
+	"BWA3_optic_PMII_DMR_MicroT1_front_NSV",
+	"BWA3_optic_RSAS_G36A2",
+	"BWA3_optic_RSAS_brown_G36A2",
+	"BWA3_optic_RSAS_tan_G36A2",
+	"BWA3_optic_RSAS_sand_G36A2",
+	"BWA3_optic_ZO4x30_pip",
+	"BWA3_optic_ZO4x30_RSAS_pip",
+	"BWA3_optic_ZO4x30_RSAS_NSV_pip",
+	"BWA3_optic_ZO4x30_RSAS_IRV_pip",
+	"BWA3_optic_ZO4x30_brown_pip",
+	"BWA3_optic_ZO4x30_brown_RSAS_pip",
+	"BWA3_optic_ZO4x30_brown_RSAS_NSV_pip",
+	"BWA3_optic_ZO4x30_brown_RSAS_IRV_pip",
+	"BWA3_optic_ZO4x30i_pip",
+	"BWA3_optic_ZO4x30i_sand_pip",
+	"BWA3_optic_ZO4x30i_MicroT2_pip",
+	"BWA3_optic_ZO4x30i_MicroT2_sand_pip",
+	"BWA3_optic_ZO4x30i_RSAS_pip",
+	"BWA3_optic_ZO4x30i_RSAS_sand_pip",
+	"BWA3_optic_ZO4x30_RSAS_NSV",
+	"BWA3_optic_ZO4x30_RSAS_IRV",
+	"BWA3_optic_ZO4x30_MicroT2_NSV",
+	"BWA3_optic_ZO4x30_MicroT2_IRV",
+	"BWA3_optic_ZO4x30_NSV",
+	"BWA3_optic_ZO4x30_IRV",
+	"BWA3_optic_ZO4x30_brown_RSAS_NSV",
+	"BWA3_optic_ZO4x30_brown_RSAS_IRV",
+	"BWA3_optic_ZO4x30_MicroT2_brown_NSV",
+	"BWA3_optic_ZO4x30_MicroT2_brown_IRV",
+	"BWA3_optic_ZO4x30_brown_NSV",
+	"BWA3_optic_ZO4x30_brown_IRV",
+	"BWA3_PzF3",
+	"BWA3_PzF3_Used",
+	"BWA3_RGW90",
 	"BWA3_RGW90_Used",
 	"UK3CB_BAF_AT4_CS_AP_Mag",
 	"UK3CB_BAF_Javelin_Launcher",
@@ -290,7 +371,14 @@ KP_liberation_allowed_items_extension = [
 	"ACE_Chemlight_Shield_Green",
 	"ACE_Chemlight_Shield_Red",
 	"ACE_ReserveParachute",
-	"ACE_launch_NLAW_Used_F"
+	"ACE_launch_NLAW_Used_F",
+    "ACE_PreloadedMissileDummy_Strela_2_CUP",
+	"ACE_PreloadedMissileDummy_Stinger_CUP",
+	"ACE_PreloadedMissileDummy_Igla_CUP",
+	"ACE_PreloadedMissileDummy_CUP",
+	"ACE_PreloadedMissileDummy_M72A6_CUP",
+	"ACE_PreloadedMissileDummy_NLAW_CUP",
+	"ACE_PreloadedMissileDummy_RPG18_CUP"
 ];
 
 /* - Configuration settings for crates transported by vehicles.
@@ -383,7 +471,18 @@ box_transport_config = [
 	["rhsusf_M1083A1P2_B_M2_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
 	["rhsusf_CH53E_USMC", -11.0, [0,2.5,1.4], [0,2.5,2.6], [0,1.0,1.4], [0,1.0,2.6], [0,-0.5,1.4], [0,-0.5,2.6], [0,-0.5,1.4], [0,-0.5,2.6], [0,-2.0,1.4], [0,-2.5,2.6], [0,-3.5,1.4], [0,-3.5,2.6]],
 	["rhsusf_CH53E_USMC_D", -11.0, [0,2.5,1.4], [0,2.5,2.6], [0,1.0,1.4], [0,1.0,2.6], [0,-0.5,1.4], [0,-0.5,2.6], [0,-0.5,1.4], [0,-0.5,2.6], [0,-2.0,1.4], [0,-2.5,2.6], [0,-3.5,1.4], [0,-3.5,2.6]],
-	["RHS_C130J", -9.5, [-0.8,4.5,1.9], [0.8,4.5,1.9], [-0.8,4.5,3.1], [0.8,4.5,3.1], [-0.8,3.0,1.9], [0.8,3.0,1.9], [-0.8,3.0,3.1], [0.8,3.0,3.1], [-0.8,2.0,1.9], [0.8,2.0,1.9], [-0.8,2.0,3.1], [0.8,2.0,3.1], [-0.8,1.0,1.9], [0.8,1.0,1.9], [-0.8,1.0,3.1], [0.8,1.0,3.1], [-0.8,0.0,1.9], [0.8,0.0,1.9], [-0.8,0.0,3.1], [0.8,0.0,3.1], [-0.8,-1.0,1.9], [0.8,-1.0,1.9], [-0.8,-1.0,3.1], [0.8,-1.0,3.1]]
+	["RHS_C130J", -9.5, [-0.8,4.5,1.9], [0.8,4.5,1.9], [-0.8,4.5,3.1], [0.8,4.5,3.1], [-0.8,3.0,1.9], [0.8,3.0,1.9], [-0.8,3.0,3.1], [0.8,3.0,3.1], [-0.8,2.0,1.9], [0.8,2.0,1.9], [-0.8,2.0,3.1], [0.8,2.0,3.1], [-0.8,1.0,1.9], [0.8,1.0,1.9], [-0.8,1.0,3.1], [0.8,1.0,3.1], [-0.8,0.0,1.9], [0.8,0.0,1.9], [-0.8,0.0,3.1], [0.8,0.0,3.1], [-0.8,-1.0,1.9], [0.8,-1.0,1.9], [-0.8,-1.0,3.1], [0.8,-1.0,3.1]],
+	// GM Default
+	["gm_ge_army_kat1_454_cargo",-6.5, [-0.0217285,1.32764,0.35], [-0.00170898,-0.337891,0.35], [-0.0441895,-1.90332,0.35], [-0.0615234,-3.59033,0.35]],
+	["gm_ge_army_u1300l_container", -5, [-0.0495605,-0.609863,-0.6], [0.147461,-2.06787,-0.6]],
+	["gm_ge_army_kat1_451_container", -5, [-0.0280762,0.222656,-0.2], [-0.0202637,-1.31152,-0.2], [-0.0222168,-2.79834,-0.2]],
+	["gm_gc_army_ural4320_cargo", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
+	["gm_gc_bgs_ural4320_cargo", -5, [-0.0373535,-0.535156,-0.1], [-0.0344238,-1.76611,-0.1], [-0.0334473,-2.85547,-0.1]],
+	// GM Winter
+	["gm_ge_army_kat1_454_cargo_win",-6.5, [-0.0217285,1.32764,0.35], [-0.00170898,-0.337891,0.35], [-0.0441895,-1.90332,0.35], [-0.0615234,-3.59033,0.35]],
+	["gm_ge_army_u1300l_container_win", -5, [-0.0495605,-0.609863,-0.6], [0.147461,-2.06787,-0.6]],
+	["gm_ge_army_kat1_451_container_win", -5, [-0.0280762,0.222656,-0.2], [-0.0202637,-1.31152,-0.2],[-0.0222168,-2.79834,-0.2]],
+	["gm_gc_army_ural4320_cargo_win", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]]
 ];
 
 /* Various other settings.
@@ -402,7 +501,11 @@ ai_resupply_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"rhs_gaz66_ammo_msv"
+	"rhs_gaz66_ammo_msv",
+    "gm_gc_army_ural4320_reammo",
+    "gm_gc_army_ural4320_reammo_win",
+    "gm_ge_army_kat1_451_reammo",
+    "gm_ge_army_kat1_451_reammo_win"
 ];
 
 // Everything that can resupply other vehicles.
@@ -421,7 +524,11 @@ vehicle_repair_sources = [
 	"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
-	"RHS_Ural_Repair_VDV_01"
+	"RHS_Ural_Repair_VDV_01",
+    "gm_gc_army_ural4320_repair",
+    "gm_gc_army_ural4320_repair_win",
+    "gm_ge_army_u1300l_repair",
+    "gm_ge_army_u1300l_repair_win"
 ];
 
 vehicle_rearm_sources = [
@@ -438,7 +545,11 @@ vehicle_rearm_sources = [
 	"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
 	"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
-	"rhs_gaz66_ammo_msv"
+	"rhs_gaz66_ammo_msv",
+    "gm_gc_army_ural4320_reammo",
+    "gm_gc_army_ural4320_reammo_win",
+    "gm_ge_army_kat1_451_reammo",
+    "gm_ge_army_kat1_451_reammo_win"
 ];
 
 vehicle_refuel_sources = [
@@ -455,7 +566,11 @@ vehicle_refuel_sources = [
 	"rhsusf_M978A4_usarmy_wd",
 	"rhsusf_M978A4_BKIT_usarmy_d",
 	"rhsusf_M978A4_BKIT_usarmy_wd",
-	"RHS_Ural_Fuel_VDV_01"
+	"RHS_Ural_Fuel_VDV_01",
+    "gm_gc_army_ural375d_refuel",
+    "gm_gc_army_ural375d_refuel_win",
+    "gm_ge_army_kat1_451_refuel",
+    "gm_ge_army_kat1_451_refuel_win"
 ];
 
 // Classnames of boats, so they can be built on water.

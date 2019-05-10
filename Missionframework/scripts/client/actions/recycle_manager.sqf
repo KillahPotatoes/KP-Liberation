@@ -22,20 +22,18 @@ while {true} do {
 	waitUntil {sleep 2; (player distance ([] call F_getNearestFob)) < GRLIB_fob_range};
 
 	if ([player, 4] call F_fetchPermission) then {
-		private _detected_vehicles = [
-			(getPos player) nearObjects veh_action_detect_distance, {
-				(((typeof _x in _recycleable_classnames ) && (({alive _x} count (crew _x)) == 0 || (unitIsUAV _x)) && ((locked _x == 0 || locked _x == 1))) ||
-				((typeOf _x) in _building_classnames) ||
-				(((typeOf _x) in KP_liberation_storage_buildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
-				((typeOf _x) in KP_liberation_upgrade_buildings) ||
-				((typeOf _x) in KP_liberation_ace_crates)) &&
-				(alive _x) &&
-				((count(attachedObjects _x) == 0) || ((typeOf _x) == "rhsusf_mkvsoc")) &&
-				(_x distance startbase > 1000) &&
-				(_x distance ( [] call F_getNearestFob) < GRLIB_fob_range) &&
-				(getObjectType _x >= 8)
-			}
-		] call BIS_fnc_conditionalSelect;
+		private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
+            (((typeof _x in _recycleable_classnames ) && (({alive _x} count (crew _x)) == 0 || (unitIsUAV _x)) && ((locked _x == 0 || locked _x == 1))) ||
+            ((typeOf _x) in _building_classnames) ||
+            (((typeOf _x) in KP_liberation_storage_buildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
+            ((typeOf _x) in KP_liberation_upgrade_buildings) ||
+            ((typeOf _x) in KP_liberation_ace_crates)) &&
+            (alive _x) &&
+            ((count(attachedObjects _x) == 0) || ((typeOf _x) == "rhsusf_mkvsoc")) &&
+            (_x distance startbase > 1000) &&
+            (_x distance ( [] call F_getNearestFob) < GRLIB_fob_range) &&
+            (getObjectType _x >= 8)
+		};
 
 		{
 			private _next_vehicle = _x;

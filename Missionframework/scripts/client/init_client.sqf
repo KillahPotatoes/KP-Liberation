@@ -6,6 +6,9 @@ switch (KP_liberation_arsenal) do {
 	case 4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
 	case 5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
 	case 6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_west.sqf";};
+	case 8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_east.sqf";};
+	case 9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\csat.sqf";};
 	default {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
@@ -28,6 +31,7 @@ write_credit_line = compileFinal preprocessFileLineNumbers "scripts\client\ui\wr
 do_load_box = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
 kp_fuel_consumption = compileFinal preprocessFileLineNumbers "scripts\client\misc\kp_fuel_consumption.sqf";
 kp_cr_checkVehicle = compileFinal preprocessFileLineNumbers "scripts\client\civrep\kp_cr_checkVehicle.sqf";
+kp_vehicle_permissions = compileFinal preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 
 execVM "scripts\client\actions\action_manager.sqf";
 execVM "scripts\client\actions\intel_manager.sqf";
@@ -41,7 +45,7 @@ if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\empty_vehicle
 execVM "scripts\client\markers\fob_markers.sqf";
 if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
 execVM "scripts\client\markers\hostile_groups.sqf";
-if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarker "huronmarker"};
+if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
 execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
@@ -54,7 +58,6 @@ execVM "scripts\client\misc\secondary_jip.sqf";
 execVM "scripts\client\misc\stop_renegade.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";
-execVM "scripts\client\misc\vehicle_permissions.sqf";
 execVM "scripts\client\spawn\redeploy_manager.sqf";
 execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
@@ -63,6 +66,8 @@ execVM "scripts\client\markers\update_production_sites.sqf";
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_cr_checkVehicle;}];
+player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];
+player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
 
 {
 	[_x] call BIS_fnc_drawCuratorLocations;

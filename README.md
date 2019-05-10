@@ -161,6 +161,47 @@ class Missions
 
 ## Changelog
 
+### 0.96.4 (10th May 2019 due to Global Mobilization Release)
+* Added: East Germany arsenal preset.
+* Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: East Germany blufor and opfor preset.
+* Added: East Germany Winter blufor and opfor preset.
+* Added: West Germany blufor and opfor preset.
+* Added: West Germany Winter blufor and opfor preset.
+* Added: Germany (Global Mobilization) resistence preset.
+* Added: Germany (Global Mobilization) civilian preset.
+* Added: CSAT Vanilla blufor preset, CSAT Apex blufor preset and CSAT Arsenal preset. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
+* Added: AAF and NATO opfor presets. Thanks to [zandru](https://steamcommunity.com/id/radicalrabbit)
+* Added: Weferlingen Summer basefile.
+* Added: Weferlingen Winter basefile.
+* Added: Chernarus Winter basefile.
+* Added: Weferlingen Summer and Winter building ignore list.
+* Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: Support for ACE arsenal. Can be enabled via mission parameter.
+* Added: Fog removal script readded, as some people had issues with too much fog after some time.
+* Added: Vehicle in Vehicle transport actions for FOB Box.
+* Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes in save_manager.sqf and do_build.sqf needed. [Explanation in the Wiki](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_ConfigFiles#kp_objectinitsqf-since-0964)
+* Removed: `KP_liberation_guerilla_transports` array from resistance presets, as it isn't used in the legacy framework.
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
+* Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
+* Tweaked: Weather module is also loaded, even with ACE running. (ACE doesn't control weather completely anymore)
+* Tweaked: Disabled script that switched locality of all blufor units to the commander machine. (should fix UAV issue)
+* Tweaked: `allPlayers` replaced with `(allPlayers - entities "HeadlessClient_F")` for scripts which should pause when no players are online. (logistic, resources, battlegroups)
+* Tweaked: Marker for civilian informant is an area now and not centered on the informants position anymore.
+* Tweaked: Renamed Huron marker.
+* Tweaked: If there isn't enough enemy territory left for a secondary mission to start, the player gets a small hint now.
+* Tweaked: BWMod item classnames in KP_liberation_allowed_items_extension. Thanks to [madpat3](https://github.com/madpat3)
+* Tweaked: Equalized all Eden attributes of the mission.sqm files.
+* Tweaked: Replaced deprecated `BIS_fnc_conditionalSelect` function calls with sensible select statements.
+* Tweaked: Versioning format from e.g. 0.964 to 0.96.4 for a better separation.
+* Tweaked: Arsenal whitelist/blacklist classes are case insensitive.
+* Tweaked: Vehicle permissions now via sensible event handlers instead of loop. Thanks to [ColinM9991](https://github.com/ColinM9991)
+* Tweaked: Objects placed in Eden Editor won't be saved anymore. Fixes possible duplications on save/load.
+* Tweaked: Whole in game date and time is now persistent, not only the daytime.
+* Fixed: Annoying popup since A3 1.90 concerning missing entry for `widthRailWay`.
+* Fixed: Blufor soldier losses weren't counted in statistics.
+* Fixed: Missing `itemRadio` in some arsenal presets.
+
 ### 0.963a (10th April 2018 as "legacy support" release)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
 * Added: Some classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)

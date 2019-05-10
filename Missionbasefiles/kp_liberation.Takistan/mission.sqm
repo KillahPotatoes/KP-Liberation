@@ -179,17 +179,17 @@ class ScenarioData
 	{
 		gameType="CTI";
 		minPlayers=1;
-		maxPlayers=34;
+		maxPlayers=37;
 	};
 };
 class CustomAttributes
 {
 	class Category0
 	{
-		name="Multiplayer";
+		name="Scenario";
 		class Attribute0
 		{
-			property="RespawnTemplates";
+			property="EnableDebugConsole";
 			expression="true";
 			class Value
 			{
@@ -199,27 +199,10 @@ class CustomAttributes
 					{
 						type[]=
 						{
-							"ARRAY"
+							"SCALAR"
 						};
 					};
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Counter";
-							};
-						};
-					};
+					value=1;
 				};
 			};
 		};
@@ -232,7 +215,6 @@ class Mission
 	{
 		briefingName="@STR_MISSION_TITLE";
 		overviewText="@STR_MISSION_DESCRIPTION";
-		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.40000001;

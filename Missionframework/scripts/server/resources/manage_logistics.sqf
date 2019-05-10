@@ -8,7 +8,7 @@ KP_liberation_convoy_ambush_check = 0;
 
 while {GRLIB_endgame == 0} do {
 
-	if (((count allPlayers) > 0) && ((count KP_liberation_logistics) > 0)) then {
+	if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KP_liberation_logistics) > 0)) then {
 		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval started: %1", time];};
 		
 		private _tempLogistics = +KP_liberation_logistics;

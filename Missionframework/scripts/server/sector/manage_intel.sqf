@@ -27,14 +27,14 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 
 	KP_military_sectors_already_activated pushback _sector;
 
-	private _nearbuildings = [nearestObjects [markerpos _sector, _compatible_classnames, _intel_range], {alive _x}] call BIS_fnc_conditionalSelect;
+	private _nearbuildings = (nearestObjects [markerpos _sector, _compatible_classnames, _intel_range]) select {alive _x};
 
 	if ((count _nearbuildings) > 0) then {
 		private _building_positions = [];
 
 		{_building_positions = _building_positions + ([_x] call BIS_fnc_buildingPositions);} foreach _nearbuildings;
 
-		_building_positions = [_building_positions, {(_x select 2) < 2 }] call BIS_fnc_conditionalSelect;
+		_building_positions = _building_positions select {(_x select 2) < 2};
 
 		if ((count _building_positions) >= (_nbintel * 4)) then {
 
@@ -43,7 +43,7 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 			while {_nbintel > 0} do {
 
 				private _buildingposition = selectRandom _building_positions;
-				
+
 				while {_buildingposition in _used_positions} do {
 					_buildingposition = selectRandom _building_positions;
 				};

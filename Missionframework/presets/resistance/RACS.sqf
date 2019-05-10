@@ -25,11 +25,6 @@ KP_liberation_guerilla_vehicles = [
 	"LOP_RACS_Offroad_M2"
 ];
 
-// transport vehicles (should be able to transport at least 10 soldiers)
-KP_liberation_guerilla_transports = [
-	"LOP_RACS_Truck"
-];
-
 /* Guerilla Equipment
 There are 3 tiers for every category. If the strength of the guerillas will increase, they'll have higher tier equipment. */
 

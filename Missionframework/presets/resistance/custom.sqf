@@ -6,7 +6,7 @@ Optional Mods:
 - None
 */
 
-/* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 
+/* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
 KP_liberation_guerilla_units = [
 	"I_G_Soldier_AR_F",
@@ -23,12 +23,6 @@ KP_liberation_guerilla_units = [
 KP_liberation_guerilla_vehicles = [
 	"I_G_Offroad_01_armed_F",
 	"I_G_Offroad_01_AT_F"
-];
-
-// transport vehicles (should be able to transport at least 10 soldiers)
-KP_liberation_guerilla_transports = [
-	"I_G_Van_01_transport_F",
-	"I_G_Van_02_transport_F"
 ];
 
 /* Guerilla Equipment
@@ -82,7 +76,7 @@ KP_liberation_guerilla_uniforms_1 = [
 	"U_C_Man_casual_5_F",
 	"U_C_Man_casual_6_F",
 	"U_Marshal"
-	
+
 ];
 
 KP_liberation_guerilla_uniforms_2 = [

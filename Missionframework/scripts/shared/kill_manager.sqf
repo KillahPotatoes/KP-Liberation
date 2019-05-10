@@ -27,7 +27,7 @@ if (isServer) then {
 
 	if ((side _killer) == GRLIB_side_friendly) then {
 
-		private _nearby_bigtown = [sectors_bigtown, {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250) } ] call BIS_fnc_conditionalSelect;
+		private _nearby_bigtown = sectors_bigtown select {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250)};
 		if (count _nearby_bigtown > 0) then {
 			combat_readiness = combat_readiness + (0.5 * GRLIB_difficulty_modifier);
 			stats_readiness_earned = stats_readiness_earned + (0.5 * GRLIB_difficulty_modifier);
@@ -59,8 +59,8 @@ if (isServer) then {
 		if (air_weight < 0) then {air_weight = 0};
 	};
 
-	if (isPlayer _unit) then { 
-		stats_player_deaths = stats_player_deaths + 1;	
+	if (isPlayer _unit) then {
+		stats_player_deaths = stats_player_deaths + 1;
 		// Disconnect UAV from player on death
 		_unit connectTerminalToUAV objNull;
 		// Eject Player from vehicle
@@ -90,10 +90,7 @@ if (isServer) then {
 
 			if (side (group _unit) == GRLIB_side_friendly) then {
 				stats_blufor_teamkills = stats_blufor_teamkills + 1;
-			};
-
-			if (side (group _unit) == GRLIB_side_friendly) then {
-				stats_blufor_teamkills = stats_blufor_teamkills + 1;
+                stats_blufor_soldiers_killed = stats_blufor_soldiers_killed + 1;
 			};
 		};
 

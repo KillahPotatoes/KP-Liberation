@@ -82,12 +82,17 @@ _classnames_to_save = _classnames_to_save + _classnames_to_save_blu + all_hostil
 trigger_server_save = false;
 greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
 
+// Prevent saving/duplication of objects placed in Eden
+{
+    _x setVariable ["KP_liberation_edenObject", true];
+} forEach (allMissionObjects "");
+
 if (!isNil "greuh_liberation_savegame") then {
 
 	blufor_sectors = greuh_liberation_savegame select 0;
 	GRLIB_all_fobs = greuh_liberation_savegame select 1;
 	buildings_to_save = greuh_liberation_savegame select 2;
-	time_of_day = greuh_liberation_savegame select 3;
+	campaign_date = greuh_liberation_savegame select 3;
 	combat_readiness = greuh_liberation_savegame select 4;
 	KP_liberation_storages = greuh_liberation_savegame select 5;
 	KP_liberation_production = greuh_liberation_savegame select 6;
@@ -185,18 +190,7 @@ if (!isNil "greuh_liberation_savegame") then {
 		KP_liberation_guerilla_strength = greuh_liberation_savegame select 17;
 	};
 
-	setDate [2045, 6, 6, time_of_day, 0];
-
-	private _correct_fobs = [];
-	{
-		private _next_fob = _x;
-		private _keep_fob = true;
-		{
-			if (_next_fob distance (markerpos _x) < 50) exitWith {_keep_fob = false};
-		} forEach sectors_allSectors;
-		if (_keep_fob) then {_correct_fobs pushback _next_fob};
-	} forEach GRLIB_all_fobs;
-	GRLIB_all_fobs = _correct_fobs;
+	setDate campaign_date;
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 
@@ -249,21 +243,7 @@ if (!isNil "greuh_liberation_savegame") then {
 				_nextbuilding addEventHandler ["HandleDamage", {0}];
 			};
 
-			if (_nextclass in KP_liberation_medical_vehicles) then {
-				_nextbuilding setVariable ["ace_medical_medicClass", 1, true];
-			};
-
-			if (_nextclass == "Land_Medevac_house_V1_F" || _nextclass == "Land_Medevac_HQ_V1_F") then {
-				_nextbuilding setVariable ["ace_medical_isMedicalFacility", true, true];
-			};
-
-			if (_nextclass == KP_liberation_recycle_building) then {
-				_nextbuilding setVariable ["ace_isRepairFacility", 1, true];
-			};
-
-			if (_nextclass == "Flag_White_F") then {
-				_nextbuilding setFlagTexture "res\kpflag.jpg";
-			};
+			_nextbuilding call F_addObjectInit;
 
 			if !(_nextclass in KP_liberation_ace_crates) then {
 				if(KP_liberation_clear_cargo || !(_nextclass isKindOf "AllVehicles")) then {
@@ -272,12 +252,6 @@ if (!isNil "greuh_liberation_savegame") then {
 					clearBackpackCargoGlobal _nextbuilding;
 					clearItemCargoGlobal _nextbuilding;
 				};
-			};
-
-			if (_nextclass == "Land_HelipadSquare_F" || _nextclass == "Land_HelipadCircle_F" || _nextclass == "Land_HelipadRescue_F") then {
-				{
-					_x addCuratorEditableObjects [[_nextbuilding],true];
-				} forEach allCurators;
 			};
 
 			if (_nextclass in civilian_vehicles) then {
@@ -458,8 +432,8 @@ if (count GRLIB_vehicle_to_military_base_links == 0) then {
 	private _assigned_vehicles = [];
 
 	while {count _assigned_bases < count sectors_military && count _assigned_vehicles < count elite_vehicles} do {
-		private _nextbase =  selectRandom ([sectors_military, {!(_x in _assigned_bases)}] call BIS_fnc_conditionalSelect);
-		private _nextvehicle =  selectRandom ([elite_vehicles, {!(_x in _assigned_vehicles)}] call BIS_fnc_conditionalSelect);
+		private _nextbase =  selectRandom (sectors_military select {!(_x in _assigned_bases)});
+		private _nextvehicle =  selectRandom (elite_vehicles select {!(_x in _assigned_vehicles)});
 		_assigned_bases pushback _nextbase;
 		_assigned_vehicles pushback _nextvehicle;
 		GRLIB_vehicle_to_military_base_links pushback [_nextvehicle, _nextbase];
@@ -501,19 +475,20 @@ while {true} do {
 		private _all_storages = [];
 		{
 			private _fobpos = _x;
-			private _nextbuildings = [_fobpos nearobjects (GRLIB_fob_range * 2), {
+			private _nextbuildings = (_fobpos nearobjects (GRLIB_fob_range * 2)) select {
 				((typeof _x) in _classnames_to_save ) &&
-				(alive _x) &&					// Exclude dead or broken objects
-				(speed _x < 5) &&				// Exclude moving objects (like civilians driving through)
-				(isNull attachedTo _x) &&			// Exclude attachTo'd objects
-				(((getpos _x) select 2) < 10) &&		// Exclude hovering helicopters and the like
-				(getObjectType _x >= 8) &&			// Exclude preplaced terrain objects
+				(alive _x) &&					            // Exclude dead or broken objects
+				(speed _x < 5) &&				            // Exclude moving objects (like civilians driving through)
+				(isNull attachedTo _x) &&			        // Exclude attachTo'd objects
+				(((getpos _x) select 2) < 10) &&	        // Exclude hovering helicopters and the like
+				(getObjectType _x >= 8) &&			        // Exclude preplaced terrain objects
 				!((typeOf _x) in KP_liberation_crates) &&	// Exclude storage crates (those are handled separately)
-				!(_x getVariable ["KP_liberation_preplaced", false])
- 			}] call BIS_fnc_conditionalSelect;
+				!(_x getVariable ["KP_liberation_preplaced", false]) &&
+                !(_x getVariable ["KP_liberation_edenObject", false])
+ 			};
 
-			_all_buildings = [(_all_buildings + _nextbuildings), {!((typeOf _x) in KP_liberation_storage_buildings)}] call BIS_fnc_conditionalSelect;
-			_all_storages = [(_all_storages + _nextbuildings), {(_x getVariable ["KP_liberation_storage_type",-1]) == 0}] call BIS_fnc_conditionalSelect;
+			_all_buildings = (_all_buildings + _nextbuildings) select {!((typeOf _x) in KP_liberation_storage_buildings)};
+			_all_storages = (_all_storages + _nextbuildings) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 			{
 				private _nextgroup = _x;
@@ -576,8 +551,6 @@ while {true} do {
 			KP_liberation_storages pushback [_nextclass,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];
 		} forEach _all_storages;
 
-		time_of_day = date select 3;
-
 		stats_saves_performed = stats_saves_performed + 1;
 
 		private _knownplayers = [];
@@ -626,7 +599,7 @@ while {true} do {
 		_stats pushback stats_fobs_lost;
 		_stats pushback stats_readiness_earned;
 
-		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, time_of_day, round combat_readiness, KP_liberation_storages,
+		greuh_liberation_savegame = [blufor_sectors, GRLIB_all_fobs, buildings_to_save, date, round combat_readiness, KP_liberation_storages,
 		KP_liberation_production, KP_liberation_logistics, _stats, [round infantry_weight, round armor_weight, round air_weight], GRLIB_vehicle_to_military_base_links,
 		GRLIB_permissions, ai_groups, resources_intel, GRLIB_player_scores, KP_liberation_civ_rep, KP_liberation_production_markers, KP_liberation_guerilla_strength];
 
