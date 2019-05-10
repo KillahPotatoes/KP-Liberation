@@ -177,6 +177,7 @@ class Missions
 * Added: Chernarus Winter basefile.
 * Added: Weferlingen Summer and Winter building ignore list.
 * Added: Rosche building ignore list. Thanks to [madpat3](https://github.com/madpat3)
+* Added: Support for ACE arsenal. Can be enabled via mission parameter.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
 * Added: Vehicle in Vehicle transport actions for FOB Box.
 * Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
