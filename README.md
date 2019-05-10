@@ -180,7 +180,7 @@ class Missions
 * Added: Support for ACE arsenal. Can be enabled via mission parameter.
 * Added: Fog removal script readded, as some people had issues with too much fog after some time.
 * Added: Vehicle in Vehicle transport actions for FOB Box.
-* Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes save_manager.sqf and do_build.sqf needed.
+* Added: `kp_objectInits.sqf` for custom code on a vehicle after it has been loaded or built. No more changes in save_manager.sqf and do_build.sqf needed. [Explanation in the Wiki](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_ConfigFiles#kp_objectinitsqf-since-0964)
 * Removed: `KP_liberation_guerilla_transports` array from resistance presets, as it isn't used in the legacy framework.
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Title of the mission to conform the Mission Name Standard from [BI Forums](https://forums.bohemia.net/forums/topic/217676-mission-name-standard/)
