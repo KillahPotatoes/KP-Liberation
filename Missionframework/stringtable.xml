@@ -6740,10 +6740,12 @@
         <Key ID="STR_PARAMS_ARSENAL_BI">
             <Original>BI arsenal</Original>
             <German>BI Arsenal</German>
+            <Italian>BI Arsenale</Italian>
         </Key>
         <Key ID="STR_PARAMS_ARSENAL_ACE">
             <Original>ACE arsenal</Original>
             <German>ACE Arsenal</German>
+            <Italian>ACE Arsenale</Italian>
         </Key>
     </Package>
 </Project>
