@@ -47,4 +47,5 @@ Temporary Items
 .apdisk
 
 # Build directory
-build/
+_build/
+node_modules/
