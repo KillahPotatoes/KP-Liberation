@@ -190,7 +190,7 @@ if (!isNil "greuh_liberation_savegame") then {
 		KP_liberation_guerilla_strength = greuh_liberation_savegame select 17;
 	};
 
-    if (_date isEqualType []) then {
+    if (campaign_date isEqualType []) then {
 	    setDate campaign_date;
     } else {
         setDate [2045, 6, 6, campaign_date, 0];
