@@ -194,7 +194,7 @@ if (!isNil "greuh_liberation_savegame") then {
 	    setDate campaign_date;
     } else {
         setDate [2045, 6, 6, campaign_date, 0];
-    }
+    };
 
 	stats_saves_loaded = stats_saves_loaded + 1;
 
