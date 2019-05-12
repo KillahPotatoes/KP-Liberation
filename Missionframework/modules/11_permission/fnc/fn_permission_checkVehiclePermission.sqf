@@ -5,7 +5,7 @@
     File: fn_permission_checkVehiclePermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-21
-    Last Update: 2019-05-04
+    Last Update: 2019-05-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -14,7 +14,6 @@
 
     Parameter(s):
         _unit       - Unit for the Check    [OBJECT, defaults to player]
-        _role       - Player role           [STRING, defaults to ""]
         _vehicle    - Player vehicle        [OBJECT, defaults to objNull]
 
     Returns:
@@ -23,7 +22,6 @@
 
 params [
     ["_unit", player, [objNull]],
-    ["_role", "", [""]],
     ["_vehicle", objNull, [objNull]]
 ];
 
@@ -35,14 +33,14 @@ if !(KPLIB_param_permission) exitWith {
 private _types = PGVAR("permissionTypes", []);
 private _data = [];
 private _permission = "";
-private _classNames = [];
+private _isCargo = (_vehicle getCargoIndex _unit) != -1;
+private _whitelist = [
+    KPLIB_preset_potatoF,
+    KPLIB_preset_addHeliF,
+    KPLIB_preset_addBoatF
+];
 
-if (
-    _role isEqualTo "cargo" ||
-    typeOf _vehicle isEqualTo KPLIB_preset_potatoF ||
-    typeOf _vehicle isEqualTo KPLIB_preset_addHeliF ||
-    typeOf _vehicle isEqualTo KPLIB_preset_addBoatF
-) exitWith {
+if (_isCargo || typeOf _vehicle in _whitelist) exitWith {
     true
 };
 
