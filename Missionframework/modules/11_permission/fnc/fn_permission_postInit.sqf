@@ -4,7 +4,7 @@
     File: fn_permission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-05-04
+    Last Update: 2019-05-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -147,8 +147,8 @@ if (hasInterface) then {
     };
 
     // Add vehicle event handlers
-    player addEventHandler ["GetInMan", {if !([_this select 0, _this select 1, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
-    player addEventHandler ["SeatSwitchedMan", {if !([_this select 0, "", _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
+    player addEventHandler ["GetInMan", {if !([_this select 0, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
+    player addEventHandler ["SeatSwitchedMan", {if !([_this select 0, _this select 2] call KPLIB_fnc_permission_checkVehiclePermission) then {[] call KPLIB_fnc_permission_ejectPlayer};}];
 };
 
 if (isServer) then {["Module initialized", "POST] [PERMISSION", true] call KPLIB_fnc_common_log;};
