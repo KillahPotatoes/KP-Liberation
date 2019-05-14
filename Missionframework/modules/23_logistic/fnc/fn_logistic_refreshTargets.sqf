@@ -5,7 +5,7 @@
     File: fn_logistic_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-05-13
+    Last Update: 2019-05-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -84,8 +84,7 @@ if (_dialogId isEqualTo KPLIB_IDC_LOGISTIC_RECYCLE_DIALOG) then {
 // Fill the controls
 {
     _type = typeOf _x;
-    _name = getText (_cfgVeh >> _type >> "displayName");
-    _index = _ctrlVehicleList lbAdd format ["%1", _name];
+    _index = _ctrlVehicleList lbAdd (getText (_cfgVeh >> _type >> "displayName"));
     _ctrlVehicleList lbSetData [_index, netId _x];
     _picture = getText (_cfgVeh >> _type >> "picture");
     if (_picture isEqualTo "pictureThing") then {

@@ -5,7 +5,7 @@
     File: fn_cratefiller_getNearStorages.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-11
+    Last Update: 2019-05-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -54,7 +54,7 @@ private _objects = (getMarkerPos _nearFOB) nearObjects KPLIB_param_fobRange;
     _number = getNumber (_config >> "maximumLoad");
     // If the object has an inventory add it to the list
     if (_number > 0) then {
-        _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getMarkerPos _nearFOB) distance2D _x), getText (_config >> "displayName")];
+        _index = _ctrlStorage lbAdd format ["%1m - %2", round ((getPos player) distance2D _x), getText (_config >> "displayName")];
         _ctrlStorage lbSetData [_index, netId _x];
         _picture = getText (_config >> "picture");
         if (_picture isEqualTo "pictureThing") then {
