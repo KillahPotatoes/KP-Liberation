@@ -4,7 +4,7 @@
     File: fn_logistic_refreshTargets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-01-25
-    Last Update: 2019-04-11
+    Last Update: 2019-05-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -52,7 +52,7 @@ _ctrlVehicleList lbSetData [_index, "placeholder"];
     _ctrlVehicleList lbSetData [_index, netId _x];
     _picture = getText (_cfg >> _type >> "picture");
     if (_picture isEqualTo "pictureThing") then {
-        _ctrlVehicleList lbSetPicture [_index, "KPGUI\res\kp512_CA.paa"];
+        _ctrlVehicleList lbSetPicture [_index, "KPGUI\res\kp512_ca.paa"];
     } else {
         _ctrlVehicleList lbSetPicture [_index, _picture];
     };

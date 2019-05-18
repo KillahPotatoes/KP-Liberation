@@ -4,7 +4,7 @@
     File: fn_virtual_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2019-04-29
+    Last Update: 2019-05-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -60,7 +60,7 @@ if (hasInterface) then {
     ["KPLIB_curatorOpen", {
         [{
             private _watermarkCtrl = (findDisplay 312) displayCtrl 15717;
-            _watermarkCtrl ctrlSetText "KPGUI\res\kp512_CA.paa";
+            _watermarkCtrl ctrlSetText "KPGUI\res\kp512_ca.paa";
         }] call CBA_fnc_execNextFrame;
     }] call CBA_fnc_addEventHandler;
 

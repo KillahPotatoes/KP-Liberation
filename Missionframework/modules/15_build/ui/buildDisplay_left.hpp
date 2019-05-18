@@ -65,7 +65,7 @@ class KPLIB_ToolboxContainer: KPGUI_PRE_ControlsGroup {
         // !TODO! move toolbox items creation to script
         class KPLIB_Toolbox_MoveItems: KPGUI_PRE_ActiveText {
             text = "$STR_KPLIB_DIALOG_BUILD_MODE_BUILD";
-            tooltip = "$STR_KPLIB_DIALOG_BUILD_MODE_TT"
+            tooltip = "$STR_KPLIB_DIALOG_BUILD_MODE_TT";
             idc = KPLIB_IDC_BUILD_TOOLBOX_MOVEITEMS;
 
             colorActive[] = {1, 1, 1, 1};
