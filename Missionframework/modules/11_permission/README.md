@@ -17,11 +17,17 @@ Calls KPLIB_fnc_permission_loadData to process saved module data
 Calls KPLIB_fnc_permission_saveData to add the module data to the save array
 
 **KPLIB_permission_newPH** (server side)
-EMitted when a new permission handler is registered
+Calls KPLIB_fnc_permission_initDefault to add the permission to the default permissions
+
+**GetInMan** (client side)
+Calls KPLIB_fnc_permission_checkVehiclePermission and checks the player permission for the entered vehicle
+
+**SeatSwitchedMan** (client side)
+Calls KPLIB_fnc_permission_checkVehiclePermission and checks the player permission for the entered vehicle
 
 ### Emitted events
 **KPLIB_permission_newPH** (server side)
-EMitted when a new permission handler is registered
+Emitted when a new permission handler is registered
 
 ### Functions
 * KPLIB_fnc_permission_addPermissionHandler
