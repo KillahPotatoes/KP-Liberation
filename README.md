@@ -161,6 +161,9 @@ class Missions
 
 ## Changelog
 
+### 0.96.5 (TBD due to Contacts Release)
+* Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
+
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.
 * Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
