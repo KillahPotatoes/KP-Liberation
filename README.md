@@ -162,6 +162,7 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
+* Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)

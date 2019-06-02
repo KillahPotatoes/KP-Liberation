@@ -22,7 +22,7 @@ KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boa
 KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_wd";			// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
-KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
+KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
 KP_liberation_air_vehicle_building = "Land_Radar_Small_F";				// The building defined to unlock FOB air vehicle functionality.																		Default is "Land_Radar_Small_F".
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";				// The helipad used to increase the GLOBAL rotary-wing cap.																				Default is "Land_HelipadSquare_F".
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";				// The hangar used to increase the GLOBAL fixed-wing cap.																				Default is "Land_TentHangar_V1_F".
@@ -31,7 +31,7 @@ KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";						// This defines the ammu
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fuel crates.
 
 /* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu. 
+Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
@@ -76,11 +76,11 @@ light_vehicles = [
 	["rhsusf_M1232_usarmy_wd",140,0,60],								//M1232
 	["rhsusf_M1232_M2_usarmy_wd",140,40,60],							//M1232 (M2)
 	["rhsusf_M1232_MK19_usarmy_wd",140,60,60],							//M1232 (Mk19)
-	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)				
+	["rhsusf_M1230a1_usarmy_wd",120,0,60],								//M1230A1 (MEDEVAC)
 	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 Transport
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 Transport (Covered)
 	["rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy",100,0,50],				//M1083A1P2
-	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
+	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (HMG)
 	["rhsusf_M1117_W",150,50,50],										//M1117 ASV
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
@@ -154,7 +154,7 @@ buildings = [
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
-	["Flag_RedCrystal_F",0,0,0],	
+	["Flag_RedCrystal_F",0,0,0],
 	["CamoNet_BLUFOR_F",0,0,0],
 	["CamoNet_BLUFOR_open_F",0,0,0],
 	["CamoNet_BLUFOR_big_F",0,0,0],
@@ -195,7 +195,7 @@ buildings = [
 	["Land_BagFence_Short_F",0,0,0],
 	["Land_BagFence_Long_F",0,0,0],
 	["Land_BagFence_Corner_F",0,0,0],
-	["Land_BagFence_End_F",0,0,0],	
+	["Land_BagFence_End_F",0,0,0],
 	["Land_BagBunker_Small_F",0,0,0],
 	["Land_BagBunker_Large_F",0,0,0],
 	["Land_BagBunker_Tower_F",0,0,0],
@@ -210,10 +210,10 @@ buildings = [
 	["Land_HBarrierTower_F",0,0,0],
 	["Land_CncBarrierMedium_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
-	["Land_Concrete_SmallWall_4m_F",0,0,0],	
+	["Land_Concrete_SmallWall_4m_F",0,0,0],
 	["Land_Concrete_SmallWall_8m_F",0,0,0],
 	["Land_CncShelter_F",0,0,0],
-	["Land_CncWall1_F",0,0,0],	
+	["Land_CncWall1_F",0,0,0],
 	["Land_CncWall4_F",0,0,0],
 	["Land_Sign_WarningMilitaryArea_F",0,0,0],
 	["Land_Sign_WarningMilAreaSmall_F",0,0,0],
@@ -313,7 +313,7 @@ blufor_squad_recon = [
 	"rhsusf_usmc_recon_marpat_wd_sniper_M107",
 	"rhsusf_army_ucp_medic",
 	"rhsusf_army_ucp_engineer"
-];	
+];
 
 // Paratroopers squad.
 blufor_squad_para = [

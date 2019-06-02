@@ -24,7 +24,7 @@ KP_liberation_boat_classname = "B_Boat_Transport_01_F"; 				// These are the boa
 KP_liberation_truck_classname = "B_T_Truck_01_transport_F";				// These are the trucks which are used in the logistic convoy system.																	Default is "B_Truck_01_transport_F".
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";		// A small storage area for resources.																									Default is "ContainmentArea_02_sand_F".
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";		// A large storage area for resources.																									Default is "ContainmentArea_01_sand_F".
-KP_liberation_recycle_building = "Land_CarService_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
+KP_liberation_recycle_building = "Land_RepairDepot_01_green_F";					// The building defined to unlock FOB recycling functionality.																			Default is "Land_CarService_F".
 KP_liberation_air_vehicle_building = "Land_Radar_Small_F";				// The building defined to unlock FOB air vehicle functionality.																		Default is "Land_Radar_Small_F".
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";				// The helipad used to increase the GLOBAL rotary-wing cap.																				Default is "Land_HelipadSquare_F".
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";				// The hangar used to increase the GLOBAL fixed-wing cap.																				Default is "Land_TentHangar_V1_F".
@@ -33,7 +33,7 @@ KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";						// This defines the ammu
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fuel crates.																										Default is "CargoNet_01_barrels_F".
 
 /* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu. 
+Each array below represents one of the 7 pages within the build menu.
 Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
 The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
 infantry_units = [
@@ -71,7 +71,7 @@ light_vehicles = [
 	["B_T_MRAP_01_hmg_F",100,40,50],									//Hunter (HMG)
 	["B_T_MRAP_01_gmg_F",100,60,50],									//Hunter (GMG)
 	["I_MRAP_03_F",100,0,50],											//Strider
-	["I_MRAP_03_hmg_F",100,40,50],										//Strider (HMG) 
+	["I_MRAP_03_hmg_F",100,40,50],										//Strider (HMG)
 	["I_MRAP_03_gmg_F",100,60,50],										//Strider (GMG)
 	["rhsusf_m1025_w",100,0,50],										//M1025A2
 	["rhsusf_m1025_w_m2",100,40,50],									//M1025A2 (M2)
@@ -86,7 +86,7 @@ light_vehicles = [
 	["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",125,0,75],					//M1083A1P2 Transport
 	["rhsusf_M1083A1P2_wd_fmtv_usarmy",125,0,75],						//M1083A1P2 Transport (Covered)
 	["rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy",100,0,50],				//M1083A1P2
-	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT 
+	["rhsusf_M977A4_BKIT_usarmy_wd",125,0,75],							//M977A4 BKIT
 	["rhsusf_M977A4_BKIT_M2_usarmy_wd",125,40,75],						//M977A4 BKIT (HMG)
 	["B_UGV_01_F",150,0,50],											//UGV Stomper
 	["B_UGV_01_rcws_F",150,40,50],										//UGV Stomper (RCWS)
@@ -193,7 +193,7 @@ buildings = [
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
-	["Flag_RedCrystal_F",0,0,0],	
+	["Flag_RedCrystal_F",0,0,0],
 	["CamoNet_ghex_F",0,0,0],
 	["CamoNet_ghex_open_F",0,0,0],
 	["CamoNet_ghex_big_F",0,0,0],
@@ -234,7 +234,7 @@ buildings = [
 	["Land_BagFence_01_short_green_F",0,0,0],
 	["Land_BagFence_01_long_green_F",0,0,0],
 	["Land_BagFence_01_corner_green_F",0,0,0],
-	["Land_BagFence_01_end_green_F",0,0,0],	
+	["Land_BagFence_01_end_green_F",0,0,0],
 	["Land_BagBunker_01_small_green_F",0,0,0],
 	["Land_BagBunker_01_large_green_F",0,0,0],
 	["Land_HBarrier_01_tower_green_F",0,0,0],
@@ -249,10 +249,10 @@ buildings = [
 	["Land_HBarrier_01_big_tower_green_F",0,0,0],
 	["Land_CncBarrierMedium_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
-	["Land_Concrete_SmallWall_4m_F",0,0,0],	
+	["Land_Concrete_SmallWall_4m_F",0,0,0],
 	["Land_Concrete_SmallWall_8m_F",0,0,0],
 	["Land_CncShelter_F",0,0,0],
-	["Land_CncWall1_F",0,0,0],	
+	["Land_CncWall1_F",0,0,0],
 	["Land_CncWall4_F",0,0,0],
 	["Land_Sign_WarningMilitaryArea_F",0,0,0],
 	["Land_Sign_WarningMilAreaSmall_F",0,0,0],
