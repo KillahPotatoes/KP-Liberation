@@ -297,12 +297,15 @@
         </Key>
         <Key ID="STR_ACTION_LOAD_VIV">
             <Original>-- LOAD TO VEHICLE</Original>
+            <German>-- AUF FAHRZEUG LADEN</German>
         </Key>
         <Key ID="STR_ACTION_UNLOAD_VIV">
             <Original>-- UNLOAD FROM VEHICLE</Original>
+            <German>-- VON FAHRZEUG ABLADEN</German>
         </Key>
-		<Key ID="STR_ACTION_NOTRANSPORT_VIV">
+        <Key ID="STR_ACTION_NOTRANSPORT_VIV">
             <Original>-- NO TRANSPORT VEHICLES NEARBY</Original>
+            <German>-- KEIN TRANSPORTFAHRZEUG IN DER NÄHE</German>
         </Key>
         <Key ID="STR_BOX_LOADED">
             <Original>Ammo box successfully loaded on the transport vehicle.</Original>
