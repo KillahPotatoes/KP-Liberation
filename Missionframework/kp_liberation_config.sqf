@@ -21,13 +21,20 @@ KP_liberation_medical_vehicles = [
     "gm_gc_army_ural375d_medic",
     "gm_gc_army_ural375d_medic_win",
     "gm_ge_army_u1300l_medic",
-    "gm_ge_army_u1300l_medic_win_rc"
+    "gm_ge_army_u1300l_medic_win_rc",
+    "uns_M577_amb",
+    "uns_H13_medevac_CAV",
+    "uns_uh1D_med",
+    "uns_ch47a_medevac"
 ];
 
 // Building classnames which also function as ACE medical facilities.
 KP_liberation_medical_facilities = [
     "Land_Medevac_house_V1_F",
-    "Land_Medevac_HQ_V1_F"
+    "Land_Medevac_HQ_V1_F",
+    "LAND_uns_army_med",
+    "US_Tent_2",
+    "LAND_uns_tent3mash"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -56,7 +63,8 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 11 = Germany East (Global Mobilization)
 12 = Germany East Winter (Global Mobilization)
 13 = CSAT Brown
-14 = CSAT Green */
+14 = CSAT Green
+15 = Unsung US */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -505,7 +513,9 @@ ai_resupply_sources = [
     "gm_gc_army_ural4320_reammo",
     "gm_gc_army_ural4320_reammo_win",
     "gm_ge_army_kat1_451_reammo",
-    "gm_ge_army_kat1_451_reammo_win"
+    "gm_ge_army_kat1_451_reammo_win",
+    "uns_M113_ENG",
+    "uns_M35A2_ammo"
 ];
 
 // Everything that can resupply other vehicles.
@@ -528,7 +538,9 @@ vehicle_repair_sources = [
     "gm_gc_army_ural4320_repair",
     "gm_gc_army_ural4320_repair_win",
     "gm_ge_army_u1300l_repair",
-    "gm_ge_army_u1300l_repair_win"
+    "gm_ge_army_u1300l_repair_win",
+    "uns_M113_ENG",
+    "uns_M35A2_repair"
 ];
 
 vehicle_rearm_sources = [
@@ -549,7 +561,9 @@ vehicle_rearm_sources = [
     "gm_gc_army_ural4320_reammo",
     "gm_gc_army_ural4320_reammo_win",
     "gm_ge_army_kat1_451_reammo",
-    "gm_ge_army_kat1_451_reammo_win"
+    "gm_ge_army_kat1_451_reammo_win",
+    "uns_M113_ENG",
+    "uns_M35A2_ammo"
 ];
 
 vehicle_refuel_sources = [
@@ -570,7 +584,10 @@ vehicle_refuel_sources = [
     "gm_gc_army_ural375d_refuel",
     "gm_gc_army_ural375d_refuel_win",
     "gm_ge_army_kat1_451_refuel",
-    "gm_ge_army_kat1_451_refuel_win"
+    "gm_ge_army_kat1_451_refuel_win",
+    "uns_M113_ENG",
+    "uns_M35A2_fueltanker",
+    "uns_M35A2_fuel"
 ];
 
 // Classnames of boats, so they can be built on water.
@@ -584,7 +601,11 @@ boats_names = [
 	"O_Boat_Armed_01_hmg_F",
 	"O_T_Boat_Transport_01_F",
 	"O_T_Boat_Armed_01_hmg_F",
-	"rhsusf_mkvsoc"
+	"rhsusf_mkvsoc",
+    "UNS_Zodiac_W",
+    "uns_pbr",
+    "uns_pbr_mk18",
+    "uns_PBR_M10"
 ];
 
 // Large storage area placement position offsets.
