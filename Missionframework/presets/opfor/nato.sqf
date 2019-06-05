@@ -1,9 +1,9 @@
 /*
-Needed Mods:
-- None
+    Needed Mods:
+    - None
 
-Optional Mods:
-- None
+    Optional Mods:
+    - None
 */
 
 // Enemy infantry classes
@@ -35,7 +35,7 @@ opfor_fuel_truck = "B_Truck_01_fuel_F";                                 // HEMTT
 opfor_ammo_truck = "B_Truck_01_ammo_F";                                 // HEMTT Ammo
 opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Pod
 opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Pod
-opfor_flag = "Flag_NATO_F";                                             // NATO Flag
+opfor_flag = "Flag_NATO_F";                                             // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */

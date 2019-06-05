@@ -1,9 +1,9 @@
 /*
-Needed Mods:
-- The Unsung Vietnam War Mod
+    Needed Mods:
+    - The Unsung Vietnam War Mod
 
-Optional Mods:
-- None
+    Optional Mods:
+    - None
 */
 
 // Civilian classnames.
