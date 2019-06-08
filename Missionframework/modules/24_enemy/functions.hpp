@@ -62,6 +62,9 @@ class enemy {
     // CBA Settings for this module
     class enemy_settings {};
 
+    // Spawns an enemy patrol
+    class enemy_spawnPatrol {};
+
     // Strength increase event function
     class enemy_strengthInc {};
 

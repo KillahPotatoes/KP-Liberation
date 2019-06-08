@@ -30,7 +30,7 @@ item25[] = {"timer",4,218,-200.000000,-825.000000,-100.000000,-775.000000,0.0000
 item26[] = {"aw___35_____str",4,218,-275.000000,-275.000000,-175.000000,-225.000000,2.000000,"aw > 35%" \n "&& str > 350"};
 item27[] = {"aw___50_____str",4,218,-275.000000,-425.000000,-175.000000,-375.000000,2.000000,"aw > 50%" \n "&& str > 500"};
 item28[] = {"aw___75_____str",4,218,-275.000000,-575.000000,-175.000000,-525.000000,2.000000,"aw > 75%" \n "&& str > 750"};
-item29[] = {"enemy_sectors__",4,218,-450.000000,-725.000000,-350.000000,-675.000000,5.000000,"enemy sectors" \n "< 6"};
+item29[] = {"enemy_sectors__",4,218,-450.000000,-800.000000,-350.000000,-750.000000,5.000000,"enemy sectors" \n "< 6"};
 item30[] = {"",7,210,-79.000008,146.000000,-70.999992,154.000000,0.000000,""};
 item31[] = {"",7,210,-79.000008,-4.000004,-70.999992,4.000004,0.000000,""};
 item32[] = {"",7,210,-79.000008,-154.000000,-70.999992,-146.000000,0.000000,""};
@@ -57,10 +57,36 @@ item52[] = {"",7,210,-154.000000,-404.000000,-146.000000,-396.000000,0.000000,""
 item53[] = {"",7,210,-154.000000,-554.000000,-146.000000,-546.000000,0.000000,""};
 item54[] = {"aw___65_",4,218,-375.000000,-575.000000,-275.000000,-525.000000,2.000000,"aw < 65%"};
 item55[] = {"aw___40_",4,218,-375.000000,-425.000000,-275.000000,-375.000000,2.000000,"aw < 40%"};
-item56[] = {"aw___20_____str",4,4314,-375.000000,-275.000000,-275.000000,-225.000000,2.000000,"aw < 20%" \n "|| str < 200"};
-item57[] = {"",7,210,-404.000000,-254.000000,-396.000000,-246.000000,0.000000,""};
-item58[] = {"",7,210,-404.000000,-404.000000,-396.000000,-396.000000,0.000000,""};
-item59[] = {"",7,210,-404.000000,-554.000000,-396.000000,-546.000000,0.000000,""};
+item56[] = {"aw___20_____str",4,218,-375.000000,-275.000000,-275.000000,-225.000000,2.000000,"aw < 20%" \n "|| str < 200"};
+item57[] = {"",7,210,-404.000000,-179.000000,-396.000000,-171.000000,0.000000,""};
+item58[] = {"",7,210,-404.000000,-329.000000,-396.000000,-321.000000,0.000000,""};
+item59[] = {"",7,210,-404.000000,-479.000000,-396.000000,-471.000000,0.000000,""};
+item60[] = {"spawn_patrol",4,218,-525.000000,-50.000000,-425.000000,0.000000,1.000000,"spawn" \n "patrol"};
+item61[] = {"",7,210,-354.000000,21.000000,-346.000000,29.000000,0.000000,""};
+item62[] = {"",7,210,-354.000000,-79.000000,-346.000000,-71.000000,0.000000,""};
+item63[] = {"",7,210,-479.000000,21.000000,-471.000000,29.000000,0.000000,""};
+item64[] = {"",7,210,-479.000000,-79.000000,-471.000000,-71.000000,0.000000,""};
+item65[] = {"spawn_patrol",4,218,-525.000000,-200.000000,-425.000000,-150.000000,1.000000,"spawn" \n "patrol"};
+item66[] = {"",7,210,-479.000000,-129.000000,-471.000000,-121.000000,0.000000,""};
+item67[] = {"",7,210,-354.000000,-129.000000,-346.000000,-121.000000,0.000000,""};
+item68[] = {"",7,210,-354.000000,-229.000000,-346.000000,-221.000000,0.000000,""};
+item69[] = {"",7,210,-479.000000,-229.000000,-471.000000,-221.000000,0.000000,""};
+item70[] = {"",7,210,-404.000000,-629.000000,-396.000000,-621.000000,0.000000,""};
+item71[] = {"spawn_patrol",4,218,-525.000000,-350.000000,-425.000000,-300.000000,1.000000,"spawn" \n "patrol"};
+item72[] = {"",7,210,-354.000000,-279.000000,-346.000000,-271.000000,0.000000,""};
+item73[] = {"",7,210,-354.000000,-379.000000,-346.000000,-371.000000,0.000000,""};
+item74[] = {"",7,210,-479.000000,-379.000000,-471.000000,-371.000000,0.000000,""};
+item75[] = {"",7,210,-479.000000,-279.000000,-471.000000,-271.000000,0.000000,""};
+item76[] = {"spawn_patrol",4,218,-525.000000,-500.000000,-425.000000,-450.000000,1.000000,"spawn" \n "patrol"};
+item77[] = {"",7,210,-479.000000,-429.000000,-471.000000,-421.000000,0.000000,""};
+item78[] = {"",7,210,-354.000000,-429.000000,-346.000000,-421.000000,0.000000,""};
+item79[] = {"",7,210,-479.000000,-529.000000,-471.000000,-521.000061,0.000000,""};
+item80[] = {"",7,210,-354.000000,-529.000000,-346.000000,-521.000000,0.000000,""};
+item81[] = {"spawn_patrol",4,218,-525.000000,-650.000000,-425.000000,-600.000000,1.000000,"spawn" \n "patrol"};
+item82[] = {"",7,210,-479.000000,-579.000000,-471.000000,-571.000000,0.000000,""};
+item83[] = {"",7,210,-479.000000,-679.000000,-471.000000,-671.000000,0.000000,""};
+item84[] = {"",7,210,-354.000000,-679.000000,-346.000000,-671.000000,0.000000,""};
+item85[] = {"",7,210,-354.000000,-579.000000,-346.000000,-571.000000,0.000000,""};
 link0[] = {0,1};
 link1[] = {0,33};
 link2[] = {1,2};
@@ -68,86 +94,117 @@ link3[] = {3,4};
 link4[] = {4,18};
 link5[] = {4,20};
 link6[] = {4,49};
-link7[] = {5,6};
-link8[] = {6,22};
-link9[] = {6,27};
-link10[] = {6,51};
-link11[] = {6,56};
-link12[] = {6,58};
-link13[] = {7,8};
-link14[] = {8,24};
-link15[] = {8,29};
-link16[] = {8,53};
-link17[] = {8,54};
-link18[] = {9,10};
-link19[] = {10,21};
-link20[] = {10,26};
-link21[] = {10,48};
-link22[] = {10,57};
-link23[] = {11,12};
-link24[] = {12,23};
-link25[] = {12,28};
-link26[] = {12,52};
-link27[] = {12,55};
-link28[] = {12,59};
-link29[] = {13,14};
-link30[] = {14,25};
-link31[] = {14,39};
-link32[] = {15,16};
-link33[] = {16,17};
-link34[] = {16,19};
-link35[] = {16,45};
-link36[] = {17,4};
-link37[] = {18,10};
-link38[] = {19,16};
-link39[] = {20,4};
-link40[] = {21,10};
-link41[] = {22,6};
-link42[] = {23,12};
-link43[] = {24,8};
-link44[] = {25,14};
-link45[] = {26,6};
-link46[] = {27,12};
-link47[] = {28,8};
-link48[] = {29,14};
-link49[] = {30,15};
-link50[] = {31,3};
-link51[] = {31,30};
-link52[] = {32,9};
-link53[] = {32,31};
-link54[] = {33,5};
-link55[] = {33,32};
-link56[] = {33,34};
-link57[] = {34,11};
-link58[] = {34,35};
-link59[] = {35,7};
-link60[] = {35,36};
-link61[] = {36,13};
-link62[] = {37,38};
-link63[] = {38,2};
-link64[] = {39,40};
-link65[] = {40,42};
-link66[] = {41,37};
-link67[] = {42,43};
-link68[] = {43,50};
-link69[] = {44,46};
-link70[] = {45,44};
-link71[] = {46,47};
-link72[] = {47,41};
-link73[] = {48,47};
-link74[] = {49,46};
-link75[] = {50,41};
-link76[] = {51,50};
-link77[] = {52,43};
-link78[] = {53,42};
-link79[] = {54,12};
-link80[] = {55,6};
-link81[] = {56,10};
-link82[] = {57,58};
-link83[] = {58,59};
-link84[] = {59,29};
-globals[] = {0.000000,0,0,0,0,640,480,1,62,6316128,1,-1060.653198,407.028320,247.209534,-840.326111,1193,884,1};
-window[] = {2,-1,-1,-32000,-32000,811,52,1492,52,3,1211};
+link7[] = {4,61};
+link8[] = {5,6};
+link9[] = {6,22};
+link10[] = {6,27};
+link11[] = {6,51};
+link12[] = {6,56};
+link13[] = {6,58};
+link14[] = {6,72};
+link15[] = {7,8};
+link16[] = {8,24};
+link17[] = {8,53};
+link18[] = {8,54};
+link19[] = {8,70};
+link20[] = {8,85};
+link21[] = {9,10};
+link22[] = {10,21};
+link23[] = {10,26};
+link24[] = {10,48};
+link25[] = {10,57};
+link26[] = {10,67};
+link27[] = {11,12};
+link28[] = {12,23};
+link29[] = {12,28};
+link30[] = {12,52};
+link31[] = {12,55};
+link32[] = {12,59};
+link33[] = {12,78};
+link34[] = {13,14};
+link35[] = {14,25};
+link36[] = {14,39};
+link37[] = {15,16};
+link38[] = {16,17};
+link39[] = {16,19};
+link40[] = {16,45};
+link41[] = {17,4};
+link42[] = {18,10};
+link43[] = {19,16};
+link44[] = {20,4};
+link45[] = {21,10};
+link46[] = {22,6};
+link47[] = {23,12};
+link48[] = {24,8};
+link49[] = {25,14};
+link50[] = {26,6};
+link51[] = {27,12};
+link52[] = {28,8};
+link53[] = {29,14};
+link54[] = {30,15};
+link55[] = {31,3};
+link56[] = {31,30};
+link57[] = {32,9};
+link58[] = {32,31};
+link59[] = {33,5};
+link60[] = {33,32};
+link61[] = {33,34};
+link62[] = {34,11};
+link63[] = {34,35};
+link64[] = {35,7};
+link65[] = {35,36};
+link66[] = {36,13};
+link67[] = {37,38};
+link68[] = {38,2};
+link69[] = {39,40};
+link70[] = {40,42};
+link71[] = {41,37};
+link72[] = {42,43};
+link73[] = {43,50};
+link74[] = {44,46};
+link75[] = {45,44};
+link76[] = {46,47};
+link77[] = {47,41};
+link78[] = {48,47};
+link79[] = {49,46};
+link80[] = {50,41};
+link81[] = {51,50};
+link82[] = {52,43};
+link83[] = {53,42};
+link84[] = {54,12};
+link85[] = {55,6};
+link86[] = {56,10};
+link87[] = {57,58};
+link88[] = {58,59};
+link89[] = {59,70};
+link90[] = {60,64};
+link91[] = {61,63};
+link92[] = {62,4};
+link93[] = {63,60};
+link94[] = {64,62};
+link95[] = {65,69};
+link96[] = {66,65};
+link97[] = {67,66};
+link98[] = {68,10};
+link99[] = {69,68};
+link100[] = {70,29};
+link101[] = {71,74};
+link102[] = {72,75};
+link103[] = {73,6};
+link104[] = {74,73};
+link105[] = {75,71};
+link106[] = {76,79};
+link107[] = {77,76};
+link108[] = {78,77};
+link109[] = {79,80};
+link110[] = {80,12};
+link111[] = {81,83};
+link112[] = {82,81};
+link113[] = {83,84};
+link114[] = {84,8};
+link115[] = {85,82};
+globals[] = {0.000000,0,0,0,0,640,480,1,88,6316128,1,-1026.256470,54.126343,-177.497986,-978.049866,1193,884,1};
+window[] = {2,-1,-1,-32000,-32000,941,182,1622,182,3,1211};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -322,6 +379,22 @@ class FSM
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "spawn_patrol">*/
+                                class spawn_patrol
+                                {
+                                        itemno = 60;
+                                        priority = 1.000000;
+                                        to="passive";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "    random 100 <= 5" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[passive] spawn patrol"";};" \n
+                                         "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
                                 class timer
                                 {
@@ -330,8 +403,7 @@ class FSM
                                         to="passive";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -407,6 +479,23 @@ class FSM
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "spawn_patrol">*/
+                                class spawn_patrol
+                                {
+                                        itemno = 71;
+                                        priority = 1.000000;
+                                        to="reinforcing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "    random 100 <= 5" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                         "[[], 4, selectRandom [false, false, false, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
+                                         "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
                                 class timer
                                 {
@@ -415,8 +504,7 @@ class FSM
                                         to="reinforcing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -431,6 +519,17 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                                /*%FSM<LINK "__campaignRunnin">*/
+                                class __campaignRunnin
+                                {
+                                        itemno = 37;
+                                        priority = 5.000000;
+                                        to="exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "enemy_sectors__">*/
                                 class enemy_sectors__
                                 {
@@ -445,17 +544,6 @@ class FSM
                                          "}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand reached"";};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "__campaignRunnin">*/
-                                class __campaignRunnin
-                                {
-                                        itemno = 37;
-                                        priority = 5.000000;
-                                        to="exit";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "aw___65_">*/
@@ -474,6 +562,23 @@ class FSM
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "spawn_patrol">*/
+                                class spawn_patrol
+                                {
+                                        itemno = 81;
+                                        priority = 1.000000;
+                                        to="counterattacking";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "    random 100 <= 5" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                         "[[], 4, selectRandom [false, false, false, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
+                                         "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
                                 class timer
                                 {
@@ -482,8 +587,7 @@ class FSM
                                         to="counterattacking";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -542,6 +646,23 @@ class FSM
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "spawn_patrol">*/
+                                class spawn_patrol
+                                {
+                                        itemno = 65;
+                                        priority = 1.000000;
+                                        to="defending";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "    random 100 <= 5" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                         "[[], 4, selectRandom [false, false, false, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
+                                         "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
                                 class timer
                                 {
@@ -550,8 +671,7 @@ class FSM
                                         to="defending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -626,6 +746,23 @@ class FSM
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
+                                /*%FSM<LINK "spawn_patrol">*/
+                                class spawn_patrol
+                                {
+                                        itemno = 76;
+                                        priority = 1.000000;
+                                        to="skirmishing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "    random 100 <= 5" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                         "[[], 4, selectRandom [false, false, false, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
+                                         "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
                                 class timer
                                 {
@@ -634,8 +771,7 @@ class FSM
                                         to="skirmishing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -669,8 +805,7 @@ class FSM
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -721,8 +856,7 @@ class FSM
                                         to="unaware";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;" \n
-                                         "systemChat format [""[%1] Waiting..."", _time];"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
