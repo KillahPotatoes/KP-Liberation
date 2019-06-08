@@ -29,6 +29,7 @@ switch (KP_liberation_preset_opfor) do {
 	case 9: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_west_win.sqf";};
     case 10: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_east.sqf";};
 	case 11: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_east_win.sqf";};
+    case 12: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\unsung.sqf";};
 	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 

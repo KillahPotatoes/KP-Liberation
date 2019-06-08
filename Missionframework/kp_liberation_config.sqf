@@ -80,7 +80,8 @@ KP_liberation_preset_blufor = 0;
 8  = Germany West (Global Mobilization)
 9  = Germany West Winter (Global Mobilization)
 10 = Germany East (Global Mobilization)
-11 = Germany East Winter (Global Mobilization) */
+11 = Germany East Winter (Global Mobilization)
+12 = Unsung NVA */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
