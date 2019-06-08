@@ -187,12 +187,14 @@ static_vehicles = [
 ];
 
 buildings = [
-    ["Flag_US_F",0,0,0],
-    ["Flag_NATO_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
-    ["Flag_UK_F",0,0,0],
+    ["uns_FlagCarrierUS",0,0,0],
+    ["uns_FlagCarrier101AB",0,0,0],
+    ["uns_FlagCarrier25ID",0,0,0],
+    ["uns_FlagCarrierUS_AIRCAV",0,0,0],
+    ["uns_FlagCarrierUS_SOG",0,0,0],
+    ["uns_FlagCarrierUSMC",0,0,0],
     ["Flag_White_F",0,0,0],
-    ["Flag_RedCrystal_F",0,0,0],
+    ["uns_FlagCarrierMed",0,0,0],
     ["LAND_uns_army_med",0,0,0],
     ["US_Tent_2",0,0,0],
     ["LAND_uns_tent3mash",0,0,0],
