@@ -14,8 +14,8 @@
 
     Parameter(s):
         _spawnPos   - Position look for nearest sector to spawn patrol from. If empty, random sector selection  [ARRAY, defaults to []]
-        _unitCount  - Amount of infantry units                                                                  [NUMBER, defaults to 4]
         _motorized  - Bool to select if the patrol should be motorized                                          [BOOL, defaults to false]
+        _unitCount  - Amount of infantry units, when not motorized                                              [NUMBER, defaults to 4]
 
     Returns:
         Spawned patrol [GROUP]
@@ -23,74 +23,88 @@
 
 params [
     ["_spawnPos", [], [[]]],
-    ["_unitCount", 4, [0]],
-    ["_motorized", false, [false]]
+    ["_motorized", false, [false]],
+    ["_unitCount", 4, [0]]
 ];
 
 // Only inactive opfor sectors
 private _sectors = (KPLIB_sectors_all - KPLIB_sectors_blufor - KPLIB_sectors_active);
-private _sector = "";
+private _patrolSectors = [];
+private _grp = grpNull;
 private _veh = objNull;
 
 // Get random sector, when no position given. Otherwise get nearest sector
 if (_spawnPos isEqualTo []) then {
-    _sector = _sectors deleteAt (floor random count _sectors);
+    _patrolSectors pushBack (_sectors deleteAt (floor random count _sectors));
 } else {
-    _sector =  [1000, _spawnPos, _sectors] call KPLIB_fnc_core_getNearestMarker;
-    _sectors = _sectors - [_sector];
+    _patrolSectors pushBack ([1200, _spawnPos, _sectors] call KPLIB_fnc_core_getNearestMarker);
+    _sectors = _sectors - _patrolSectors;
 };
 
 // Exit if no sector was found
-if (_sector isEqualTo "") exitWith {
+if ((_patrolSectors select 0) isEqualTo "") exitWith {
     private _text = format ["Spawn patrol couldn't find sector in vicinity of given position: %1", _spawnPos];
     [_text, "ENEMY"] call KPLIB_fnc_common_log
 };
 
-// Get spawn und destination pos in vicinity of sector
-_spawnPos = (getMarkerPos _sector) getPos [random 100, random 360];
-private _destPos = getMarkerPos ([2500, _spawnPos, _sectors] call KPLIB_fnc_core_getNearestMarker);
+// Fetch some nearby patrol sectors
+_patrolSectors append (_sectors select {((getMarkerPos (_patrolSectors select 0)) distance2D (getMarkerPos _x)) < 2000});
 
-// Gather infantry classnames
-private _soldierArray = [] call KPLIB_fnc_common_getSoldierArray;
-private _units = [];
-for "_i" from 1 to _unitCount do {
-    _units pushBack (selectRandom _soldierArray);
+// Exit if sector is too far away from other sectors for a patrol route
+if ((count _patrolSectors) < 2) exitWith {
+    private _text = format ["Spawn patrol couldn't find near sectors for patrol from sector: %1 (%2)", markerText (_patrolSectors select 0), _patrolSectors select 0];
+    [_text, "ENEMY"] call KPLIB_fnc_common_log
 };
 
-// Tweak spawnPos to a road and spawn vehicle when motorized
+// Take a maximum of 4 sectors
+if ((count _patrolSectors) > 4) then {_patrolSectors resize 4;};
+
+// Spawn infantry or motorized patrol
 if (_motorized) then {
-    _spawnPos = [_spawnPos] call KPLIB_fnc_garrison_getVehSpawnPos;
-    _veh = [selectRandom (["vehLightArmed", KPLIB_preset_sideE, true] call KPLIB_fnc_common_getPresetClass), _spawnPos] call KPLIB_fnc_common_createVehicle;
+    // Get spawnpos on road
+    _spawnPos = [getMarkerPos (_patrolSectors select 0)] call KPLIB_fnc_garrison_getVehSpawnPos;
+    // Spawn vehicle with crew
+    _veh = [selectRandom (["vehLightArmed", KPLIB_preset_sideE, true] call KPLIB_fnc_common_getPresetClass), _spawnPos, random 360, false, true] call KPLIB_fnc_common_createVehicle;
+    _grp = group ((crew _veh) select 0);
+} else {
+    // Get spawn und destination pos in vicinity of sector
+    _spawnPos = (getMarkerPos (_patrolSectors select 0)) getPos [random 100, random 360];
+
+    // Gather infantry classnames
+    private _soldierArray = [] call KPLIB_fnc_common_getSoldierArray;
+    private _units = [];
+    for "_i" from 1 to _unitCount do {
+        _units pushBack (selectRandom _soldierArray);
+    };
+
+    // Create group
+    _grp = [_units, _spawnPos] call KPLIB_fnc_common_createGroup;
 };
 
-// Create group
-private _grp = [_units, _spawnPos] call KPLIB_fnc_common_createGroup;
-// Remove possible initialization waypoints
-{deleteWaypoint [_grp, 0];} forEach (waypoints _grp);
-// Make sure every soldier is following the leader
-{_x doFollow (leader _grp);} forEach (units _grp);
-// Add possible vehicle to group
-_grp addVehicle _veh;
+// Set waypoints
+private _waypoint = [];
+{
+    if (_forEachIndex > 0) then {
+        _waypoint = _grp addWaypoint [getMarkerPos _x, 50];
+        _waypoint setWaypointType "MOVE";
+        _waypoint setWaypointSpeed "LIMITED";
+        _waypoint setWaypointBehaviour "SAFE";
+        _waypoint setWaypointCombatMode "YELLOW";
+        _waypoint setWaypointCompletionRadius 30;
+    };
+} forEach _patrolSectors;
+
+// Add cycle waypoint at spawnpoint
+_waypoint = _grp addWaypoint [_spawnPos, 0];
+_waypoint setWaypointType "CYCLE";
+_waypoint setWaypointCompletionRadius 30;
+
+// Add group to patrols array
+KPLIB_enemy_patrols pushBack _grp;
 
 // !DEBUG! Add patrol to Zeus
 {
     _x addCuratorEditableObjects [(units _grp) + [_veh], true];
 } forEach allCurators;
-
-// Set waypoints
-private _waypoint = _grp addWaypoint [_destPos, 50];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointCombatMode "YELLOW";
-_waypoint setWaypointCompletionRadius 30;
-
-_waypoint = _grp addWaypoint [_spawnPos, 50];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointCompletionRadius 30;
-
-_waypoint = _grp addWaypoint [_spawnPos, 50];
-_waypoint setWaypointType "CYCLE";
-_waypoint setWaypointCompletionRadius 30;
 
 _grp
