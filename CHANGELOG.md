@@ -10,6 +10,7 @@
 * Added: Mission configuration completely via CBA Settings.
 * Added: Logistic station with cratefiller, vehicle resupply and recycle functionality.
 * Added: Garrison dialog for the commander to manage his own sector garrisons.
+* Added: Enemy Commander decision making and (re)action triggering via a FSM.
 * Updated: Traditional Chinese Localization. Thanks to [dustin902001](https://github.com/dustin902001)
 * Removed: Mission configuration via mission parameters.
 * Tweaked: License changed from MIT to GPLv3.
