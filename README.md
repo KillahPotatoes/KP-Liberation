@@ -161,6 +161,8 @@ class Missions
 
 ## Changelog
 
+### 0.96.5 (TBD due to Contacts Release)
+
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.
 * Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
