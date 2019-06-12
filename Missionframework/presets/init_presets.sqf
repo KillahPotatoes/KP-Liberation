@@ -1,111 +1,117 @@
 switch (KP_liberation_preset_blufor) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_des.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod_des.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_wdl.sqf";};
-	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
-	case 8: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
-	case 9: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_west.sqf";};
+    case 1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
+    case 2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
+    case 3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_des.sqf";};
+    case 4: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod.sqf";};
+    case 5: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod_des.sqf";};
+    case 6: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_wdl.sqf";};
+    case 7: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_usaf_des.sqf";};
+    case 8: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\rhs_afrf.sqf";};
+    case 9: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_west.sqf";};
     case 10: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_west_win.sqf";};
-	case 11: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_east.sqf";};
+    case 11: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_east.sqf";};
     case 12: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\gm_east_win.sqf";};
-	case 13: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat.sqf";};
-	case 14: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat_apex.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
+    case 13: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat.sqf";};
+    case 14: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\csat_apex.sqf";};
+    case 15: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\unsung.sqf";};
+    default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_opfor) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\SLA.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\aaf.sqf";};
-	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\nato.sqf";};
-	case 8: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_west.sqf";};
-	case 9: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_west_win.sqf";};
+    case 1: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\apex.sqf";};
+    case 2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
+    case 3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
+    case 4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\islamic_state.sqf";};
+    case 5: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\SLA.sqf";};
+    case 6: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\aaf.sqf";};
+    case 7: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\nato.sqf";};
+    case 8: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_west.sqf";};
+    case 9: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_west_win.sqf";};
     case 10: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_east.sqf";};
-	case 11: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_east_win.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
+    case 11: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\gm_east_win.sqf";};
+    case 12: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\unsung.sqf";};
+    default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
 switch (KP_liberation_preset_resistance) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\RACS.sqf";};
+    case 1: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\apex.sqf";};
+    case 2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
+    case 3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
+    case 4: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\RACS.sqf";};
     case 5: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\germany.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
+    default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
 switch (KP_liberation_preset_civilians) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\RDSCiv.sqf";};
+    case 1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
+    case 2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
+    case 3: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\RDSCiv.sqf";};
     case 4: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\germany.sqf";};
-	default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
+    case 5: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\unsung.sqf";};
+    default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 squads = [
-	[blufor_squad_inf_light,200,0,0],
-	[blufor_squad_inf,300,0,0],
-	[blufor_squad_at,200,250,0],
-	[blufor_squad_aa,200,250,0],
-	[blufor_squad_recon,250,0,0],
-	[blufor_squad_para,200,0,0]
+    [blufor_squad_inf_light,200,0,0],
+    [blufor_squad_inf,300,0,0],
+    [blufor_squad_at,200,250,0],
+    [blufor_squad_aa,200,250,0],
+    [blufor_squad_recon,250,0,0],
+    [blufor_squad_para,200,0,0]
 ];
 
 // Classnames of objects which should be ignored when building
 GRLIB_ignore_colisions_when_building = [
-	"Land_HelipadSquare_F",
-	"Land_TentHangar_V1_F",
-	"Land_runway_edgelight",
-	"Land_runway_edgelight_blue_F",
-	"Land_Flush_Light_green_F",
-	"Land_Flush_Light_red_F",
-	"Land_Flush_Light_yellow_F",
-	"TMR_Autorest_Georef",
-	"Flag_NATO_F",
-	"Flag_White_F",
-	"Flag_RedCrystal_F",
-	"CamoNet_BLUFOR_F",
-	"CamoNet_BLUFOR_open_F",
-	"CamoNet_BLUFOR_big_F",
-	"Land_PortableLight_single_F",
-	"Land_PortableLight_double_F",
-	"Land_HelipadCircle_F",
-	"Land_HelipadRescue_F",
-	"PortableHelipadLight_01_blue_F",
-	"PortableHelipadLight_01_green_F",
-	"PortableHelipadLight_01_red_F",
-	"Land_BagFence_Round_F",
-	"Land_BagFence_Short_F",
-	"Land_BagFence_Long_F",
-	"Land_BagFence_Corner_F",
-	"Land_BagFence_End_F",
-	"Land_Sign_WarningMilitaryArea_F",
-	"Land_Sign_WarningMilAreaSmall_F",
-	"Land_Sign_WarningMilitaryVehicles_F",
-	"Land_Razorwire_F",
-	"Sign_Sphere100cm_F",
-	"Land_ClutterCutter_large_F",
-	"Land_HighVoltageColumnWire_F",
-	"Land_PowerWireBig_left_F",
-	"B_HMG_01_F",										//Mk30A HMG .50
-	"B_HMG_01_high_F",									//Mk30 HMG .50 (Raised)
-	"B_HMG_01_A_F",										//Mk30 HMG .50 (Autonomous)
-	"B_GMG_01_F",										//Mk32A GMG 20mm
-	"B_GMG_01_high_F",									//Mk32 GMG 20mm (Raised)
-	"B_GMG_01_A_F",										//Mk32 GMG 20mm (Autonomous)
-	"B_static_AT_F",									//Static Titan Launcher (AT)
-	"B_static_AA_F",									//Static Titan Launcher (AA)
-	"B_Mortar_01_F",									//Mk6 Mortar
-	"ACE_friesAnchorBar",								//ACE FRIES
-	"ACE_friesGantryReverse",							//ACE FRIES
-	"ACE_friesGantry"									//ACE FRIES
+    "Land_HelipadSquare_F",
+    "Land_TentHangar_V1_F",
+    "Land_runway_edgelight",
+    "Land_runway_edgelight_blue_F",
+    "Land_Flush_Light_green_F",
+    "Land_Flush_Light_red_F",
+    "Land_Flush_Light_yellow_F",
+    "TMR_Autorest_Georef",
+    "Flag_NATO_F",
+    "Flag_White_F",
+    "Flag_RedCrystal_F",
+    "CamoNet_BLUFOR_F",
+    "CamoNet_BLUFOR_open_F",
+    "CamoNet_BLUFOR_big_F",
+    "Land_PortableLight_single_F",
+    "Land_PortableLight_double_F",
+    "Land_HelipadCircle_F",
+    "Land_HelipadRescue_F",
+    "Helipad",
+    "LAND_uns_Heli_pad",
+    "LAND_uns_evac_pad",
+    "PortableHelipadLight_01_blue_F",
+    "PortableHelipadLight_01_green_F",
+    "PortableHelipadLight_01_red_F",
+    "Land_BagFence_Round_F",
+    "Land_BagFence_Short_F",
+    "Land_BagFence_Long_F",
+    "Land_BagFence_Corner_F",
+    "Land_BagFence_End_F",
+    "Land_Sign_WarningMilitaryArea_F",
+    "Land_Sign_WarningMilAreaSmall_F",
+    "Land_Sign_WarningMilitaryVehicles_F",
+    "Land_Razorwire_F",
+    "Sign_Sphere100cm_F",
+    "Land_ClutterCutter_large_F",
+    "Land_HighVoltageColumnWire_F",
+    "Land_PowerWireBig_left_F",
+    "B_HMG_01_F",                                                       // Mk30A HMG .50
+    "B_HMG_01_high_F",                                                  // Mk30 HMG .50 (Raised)
+    "B_HMG_01_A_F",                                                     // Mk30 HMG .50 (Autonomous)
+    "B_GMG_01_F",                                                       // Mk32A GMG 20mm
+    "B_GMG_01_high_F",                                                  // Mk32 GMG 20mm (Raised)
+    "B_GMG_01_A_F",                                                     // Mk32 GMG 20mm (Autonomous)
+    "B_static_AT_F",                                                    // Static Titan Launcher (AT)
+    "B_static_AA_F",                                                    // Static Titan Launcher (AA)
+    "B_Mortar_01_F",                                                    // Mk6 Mortar
+    "ACE_friesAnchorBar",                                               // ACE FRIES
+    "ACE_friesGantryReverse",                                           // ACE FRIES
+    "ACE_friesGantry"                                                   // ACE FRIES
 ];
 
 

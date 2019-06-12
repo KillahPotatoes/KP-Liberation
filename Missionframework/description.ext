@@ -5,6 +5,7 @@ disabledAI = true;
 
 enableDebugConsole = 1;
 allowFunctionsLog = 0;
+unsafeCVL = 1;
 
 briefingName = $STR_MISSION_TITLE;
 overviewText = "www.killahpotatoes.de";

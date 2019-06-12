@@ -162,6 +162,13 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
+* Added: The Unsung Vietnam War Mod presets.
+* Added: The Unsung Vietnam War Mod transport configs.
+* Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
+* Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
+* Tweaked: Added elite vehicles to CSAT presets.
+* Tweaked: Formatting/Comments in the preset files.
+* Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.

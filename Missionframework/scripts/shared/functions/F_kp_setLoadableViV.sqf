@@ -28,11 +28,11 @@ _object addAction [
 	"<t color='#FFFF00'>" + localize "STR_ACTION_LOAD_VIV" + "</t>",
 	_loadFnc,
 	nil,
-	-501,
-	true,
+	-991,
+	false,
 	true,
 	"",
-	"(vehicle player isEqualTo player) && {!isNull (_target call F_getNearestViVTransport)}",
+	"(isNull objectParent player) && {!isNull (_target call F_getNearestViVTransport)}",
 	10
 ];
 
@@ -41,11 +41,11 @@ _object addAction [
 	"<t color='#FF0000'>" + localize "STR_ACTION_NOTRANSPORT_VIV" + "</t>",
 	{},
 	nil,
-	-501,
-	true,
+	-991,
+	false,
 	true,
 	"",
-	"(vehicle player isEqualTo player) && {isNull (_target call F_getNearestViVTransport)} && {isNull isVehicleCargo _target}",
+	"(isNull objectParent player) && {isNull (_target call F_getNearestViVTransport)} && {isNull isVehicleCargo _target}",
 	10
 ];
 
@@ -60,11 +60,11 @@ _object addAction [
 	"<t color='#FFFF00'>" + localize "STR_ACTION_UNLOAD_VIV" + "</t>",
 	_unloadFnc,
 	nil,
-	-501,
-	true,
+	-991,
+	false,
 	true,
 	"",
-	"(vehicle player isEqualTo player) && {!isNull isVehicleCargo _target}",
+	"(isNull objectParent player) && {!isNull isVehicleCargo _target}",
 	10
 ];
 
