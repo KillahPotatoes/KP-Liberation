@@ -24,7 +24,7 @@ params [
 ];
 
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _secondCheck = true
+private _resourceCheck = true
 
 if (_mission isEqualType []) then {
     _mission = selectRandom _mission;
@@ -34,7 +34,7 @@ if (_mission isEqualType []) then {
 private _data = MGVAR(toLower _mission, []);
 
 // Check the mission condition
-private _firstCheck = [] call (_data select 5);
+private _conditionCheck = [] call (_data select 5);
 
 // Check if the mission is a buyable mission and check if there are enough resources available
 if !(_data select 0) then {
@@ -55,12 +55,12 @@ if !(_data select 0) then {
         (_resFuel < _costFuel) ||
         (KPLIB_resources_intel < _costIntel)
     ) then {
-        _secondCheck = false;
+        _resourceCheck = false;
     };
 };
 
 // Exit if one of the condition isn't true
-if !(_firstCheck && _secondCheck) exitWith {
+if !(_conditionCheck && _resourceCheck) exitWith {
     false
 };
 

@@ -47,6 +47,7 @@ private _string = localize (["STR_KPLIB_MISSION_", toUpper _missionName] joinStr
 private _descString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, "_DESCR"] joinString "");
 
 // Set data in namespace
-MSVAR(toLower _missionName, [_eventMission, _missionStart, _missionAbort, _string, _descString, _condition, _cost, _minTime, _randomTime]);
+private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _condition, _cost, _minTime, _randomTime];
+MSVAR(toLower _missionName, _data);
 
 true
