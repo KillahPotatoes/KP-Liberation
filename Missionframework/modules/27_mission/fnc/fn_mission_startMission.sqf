@@ -32,6 +32,13 @@ if (_mission isEqualType []) then {
 
 // Get data from namespace
 private _data = MGVAR(toLower _mission, []);
+private _cost = _data select 6;
+_cost params [
+    "_costSupply",
+    "_costAmmo",
+    "_costFuel",
+    "_costIntel"
+];
 
 // Check the mission condition
 private _conditionCheck = [] call (_data select 5);
@@ -42,12 +49,6 @@ if !(_data select 0) then {
         "_resSupply",
         "_resAmmo",
         "_resFuel"
-    ];
-    (_data select 6) params [
-        "_costSupply",
-        "_costAmmo",
-        "_costFuel",
-        "_costIntel"
     ];
     if (
         (_resSupply < _costSupply) ||
@@ -62,6 +63,12 @@ if !(_data select 0) then {
 // Exit if one of the condition isn't true
 if !(_conditionCheck && _resourceCheck) exitWith {
     false
+};
+
+// Pay the resources if the mission costs anything
+if !(_cost isEqualTo [0, 0, 0, 0]) then {
+    [_nearFOB, _costSupply, _costAmmo, _costFuel] call KPLIB_fnc_resources_pay;
+    [-_costIntel] call KPLIB_fnc_resources_addIntel;
 };
 
 // Execute the startup function
