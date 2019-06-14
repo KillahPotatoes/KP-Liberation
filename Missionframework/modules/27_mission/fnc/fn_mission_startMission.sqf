@@ -5,7 +5,7 @@
     File: fn_mission_startMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-13
+    Last Update: 2019-06-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -31,8 +31,8 @@ if (_mission isEqualType []) then {
 };
 
 // Get data from namespace
-private _data = MGVAR(toLower _mission, []);
-private _cost = _data select 6;
+private _missionData = MGVAR(toLower _mission, []);
+private _cost = _missionData select 6;
 _cost params [
     "_costSupply",
     "_costAmmo",
@@ -41,10 +41,10 @@ _cost params [
 ];
 
 // Check the mission condition
-private _conditionCheck = [] call (_data select 5);
+private _conditionCheck = [] call (_missionData select 5);
 
 // Check if the mission is a buyable mission and check if there are enough resources available
-if !(_data select 0) then {
+if !(_missionData select 0) then {
     ([_nearFOB] call KPLIB_fnc_resources_getResTotal) params [
         "_resSupply",
         "_resAmmo",
@@ -72,6 +72,11 @@ if !(_cost isEqualTo [0, 0, 0, 0]) then {
 };
 
 // Execute the startup function
-call compile preprocessFileLineNumbers (_data select 1);
+call compile preprocessFileLineNumbers (_missionData select 1);
+
+// Set data in namespace
+private _data = MGVAR("runningMissions", []);
+_data pushback [_mission, _nearFOB];
+MSVAR("runningMissions", _data);
 
 true
