@@ -14,6 +14,9 @@
 class cratefiller {
     file = "modules\27_mission\fnc";
 
+    // Aborts the given mission
+    class mission_abortMission {};
+
     // Module post initialization
     class mission_postInit {
         postInit = 1;
