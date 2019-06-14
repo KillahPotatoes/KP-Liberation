@@ -1820,6 +1820,19 @@
             <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
             <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
+
+        <!-- MISSION CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_MISSION">
+            <English>KPLIB - Missions</English>
+            <German>KPLIB - Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND">
+            <English>Mission abortion refund factor</English>
+            <German>Rückerstattungsfaktor bei Missionsabbruch</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND_TT">
+            <English>Defines the mission abortion refund in percentage.</English>
+            <German>Definiert die Rückerstattung in Prozent.</German>
     </Package>
 
 

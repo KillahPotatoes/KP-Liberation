@@ -26,6 +26,7 @@ params [
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _resourceCheck = true
 
+// Check for array and select random mission from it
 if (_mission isEqualType []) then {
     _mission = selectRandom _mission;
 };

@@ -4,7 +4,7 @@
     File: fn_mission_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-09
-    Last Update: 2019-06-13
+    Last Update: 2019-06-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -26,6 +26,9 @@ if (isServer) then {
     publicVariable "KPLIB_mission_data";
 
 };
+
+// Process CBA Settings
+[] call KPLIB_fnc_mission_settings;
 
 /*
     ----- Module Globals -----
