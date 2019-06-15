@@ -1831,7 +1831,7 @@
             <English>Enable cratefiller equipment overview</English>
             <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW_TT">
             <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
             <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
