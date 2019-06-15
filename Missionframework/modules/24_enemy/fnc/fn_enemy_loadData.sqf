@@ -4,7 +4,7 @@
     File: fn_enemy_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-06-08
+    Last Update: 2019-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -36,6 +36,6 @@ if (_moduleData isEqualTo []) then {
 };
 
 // Start commander FSM
-[_state, true] call KPLIB_fnc_enemy_commanderLogic;
+[_state, KPLIB_param_enemyDebug] call KPLIB_fnc_enemy_commanderLogic;
 
 true

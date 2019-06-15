@@ -267,7 +267,7 @@ link149[] = {110,79};
 link150[] = {111,110};
 link151[] = {112,111};
 globals[] = {0.000000,0,0,0,0,640,480,1,115,6316128,1,-1053.304565,466.154053,247.370117,-878.532288,1193,884,1};
-window[] = {2,-1,-1,-32000,-32000,915,156,1596,156,3,1211};
+window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1211};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -433,7 +433,7 @@ class FSM
                                         priority = 2.000000;
                                         to="defending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count KPLIB_sectors_blufor > 2)" \n
@@ -450,7 +450,7 @@ class FSM
                                         priority = 1.000000;
                                         to="passive";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (diag_tickTime - _patrolTime) > 30    " \n
@@ -479,7 +479,7 @@ class FSM
                                         priority = 0.000000;
                                         to="passive";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -513,7 +513,7 @@ class FSM
                                         priority = 5.000000;
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
@@ -529,7 +529,7 @@ class FSM
                                         priority = 2.000000;
                                         to="defending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness < 20)" \n
@@ -546,7 +546,7 @@ class FSM
                                         priority = 2.000000;
                                         to="skirmishing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness > 50)" \n
@@ -563,7 +563,7 @@ class FSM
                                         priority = 1.000000;
                                         to="reinforcing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (diag_tickTime - _patrolTime) > 30    " \n
@@ -614,7 +614,7 @@ class FSM
                                         priority = 0.000000;
                                         to="reinforcing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -648,7 +648,7 @@ class FSM
                                         priority = 5.000000;
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
@@ -664,7 +664,7 @@ class FSM
                                         priority = 2.000000;
                                         to="skirmishing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness < 65)" \n
@@ -680,7 +680,7 @@ class FSM
                                         priority = 1.000000;
                                         to="counterattacking";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (diag_tickTime - _patrolTime) > 30    " \n
@@ -742,7 +742,7 @@ class FSM
                                         priority = 0.000000;
                                         to="counterattacking";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -776,7 +776,7 @@ class FSM
                                         priority = 5.000000;
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
@@ -792,7 +792,7 @@ class FSM
                                         priority = 2.000000;
                                         to="reinforcing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness > 35)" \n
@@ -809,7 +809,7 @@ class FSM
                                         priority = 1.000000;
                                         to="defending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (diag_tickTime - _patrolTime) > 30    " \n
@@ -849,7 +849,7 @@ class FSM
                                         priority = 0.000000;
                                         to="defending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -872,7 +872,7 @@ class FSM
                                         priority = 5.000000;
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
@@ -899,7 +899,7 @@ class FSM
                                         priority = 2.000000;
                                         to="reinforcing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness < 40)" \n
@@ -915,7 +915,7 @@ class FSM
                                         priority = 2.000000;
                                         to="counterattacking";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (KPLIB_enemy_awareness > 75)" \n
@@ -932,7 +932,7 @@ class FSM
                                         priority = 1.000000;
                                         to="skirmishing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (diag_tickTime - _patrolTime) > 30    " \n
@@ -994,7 +994,7 @@ class FSM
                                         priority = 0.000000;
                                         to="skirmishing";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -1028,7 +1028,7 @@ class FSM
                                         priority = 0.000000;
                                         to="lastStand";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -1062,7 +1062,7 @@ class FSM
                                         priority = 2.000000;
                                         to="passive";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1" \n
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1" \n
                                          "&&" \n
                                          "{" \n
                                          "    (count KPLIB_sectors_blufor > 0)" \n
@@ -1079,7 +1079,7 @@ class FSM
                                         priority = 0.000000;
                                         to="unaware";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _time) >= 1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
