@@ -36,6 +36,6 @@ if (_moduleData isEqualTo []) then {
 };
 
 // Start commander FSM
-[_state, KPLIB_param_enemyDebug] call KPLIB_fnc_enemy_commanderLogic;
+[_state] call KPLIB_fnc_enemy_commanderLogic;
 
 true

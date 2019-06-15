@@ -1,7 +1,7 @@
 /*%FSM<COMPILE "C:\Games\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, KPLIB_enemyCommander">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"start",0,250,0.000000,-325.000000,100.000000,-275.000000,0.000000,"start"};
+item0[] = {"start",0,4346,0.000000,-325.000000,100.000000,-275.000000,0.000000,"start"};
 item1[] = {"_",8,218,125.000000,-325.000000,225.000000,-275.000000,0.000000,""};
 item2[] = {"exit",1,250,250.000000,-325.000000,350.000000,-275.000000,0.000000,"exit"};
 item3[] = {"start_passive",4,218,-200.000000,-25.000000,-100.000000,25.000000,1.000000,"start" \n "passive"};
@@ -267,7 +267,7 @@ link149[] = {110,79};
 link150[] = {111,110};
 link151[] = {112,111};
 globals[] = {0.000000,0,0,0,0,640,480,1,115,6316128,1,-1053.304565,466.154053,247.370117,-878.532288,1193,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1211};
+window[] = {2,-1,-1,-1,-1,993,234,1674,234,3,1211};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -280,8 +280,7 @@ class FSM
                         name = "start";
                         itemno = 0;
                         init = /*%FSM<STATEINIT""">*/"params [" \n
-                         "    [""_state"", ""unaware"", [""""]]," \n
-                         "    [""_debug"", false, [false]]" \n
+                         "    [""_state"", ""unaware"", [""""]]" \n
                          "];" \n
                          "" \n
                          "private _time = diag_tickTime;" \n
@@ -299,7 +298,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""reinforcing""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""reinforcing"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started reinforcing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_defending">*/
@@ -312,7 +311,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""defending""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""defending"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started defending"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_passive">*/
@@ -325,7 +324,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""passive""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""passive"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started passive"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_unaware">*/
@@ -338,7 +337,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""unaware""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""unaware"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started unaware"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_skirmishin">*/
@@ -351,7 +350,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""skirmishing""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""skirmishing"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started skirmishing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_counteratt">*/
@@ -364,7 +363,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""counterattacking""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""counterattacking"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started counterattacking"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "start_lastStand">*/
@@ -377,7 +376,7 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"isServer" \n
                                          "&&" \n
                                          "{_state == ""lastStand""}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand"";};"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Started lastStand"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "_">*/
@@ -423,7 +422,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "___Sectors____1">*/
@@ -439,7 +438,7 @@ class FSM
                                          "    (count KPLIB_sectors_blufor > 2)" \n
                                          "    || (count (KPLIB_sectors_blufor arrayIntersect KPLIB_sectors_military) > 0)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""passive -> defending"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from passive to defending"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -466,7 +465,7 @@ class FSM
                                          "        }" \n
                                          "    }" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[passive] spawn patrol"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Spawn Patrol"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "[getMarkerPos (KPLIB_sectors_blufor select 0), false, 2] call KPLIB_fnc_enemy_spawnPatrol;" \n
                                          "_time = diag_tickTime;" \n
                                          "_patrolTime = diag_tickTime;"/*%FSM</ACTION""">*/;
@@ -503,7 +502,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "enemy_sectors__">*/
@@ -518,7 +517,7 @@ class FSM
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand reached"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Reached last stand"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -535,7 +534,7 @@ class FSM
                                          "    (KPLIB_enemy_awareness < 20)" \n
                                          "    || (KPLIB_enemy_strength < 200)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""reinforcing -> defending"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from reinforcing to defending"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -552,7 +551,7 @@ class FSM
                                          "    (KPLIB_enemy_awareness > 50)" \n
                                          "    && (KPLIB_enemy_strength > 500)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""reinforcing -> skirmishing"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from reinforcing to skirmishing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -579,7 +578,7 @@ class FSM
                                          "        }" \n
                                          "    }" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Spawn Patrol"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "[getMarkerPos (selectRandom KPLIB_sectors_blufor), selectRandom [false, false, true, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
                                          "_time = diag_tickTime;" \n
                                          "_patrolTime = diag_tickTime;"/*%FSM</ACTION""">*/;
@@ -638,7 +637,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "enemy_sectors__">*/
@@ -653,7 +652,7 @@ class FSM
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand reached"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Reached last stand"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -669,7 +668,7 @@ class FSM
                                          "{" \n
                                          "    (KPLIB_enemy_awareness < 65)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""counterattacking -> skirmishing"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from counterattacking to skirmishing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -696,7 +695,7 @@ class FSM
                                          "        }" \n
                                          "    }" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Spawn Patrol"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "[getMarkerPos (selectRandom KPLIB_sectors_blufor), selectRandom [false, true, true, true], 6] call KPLIB_fnc_enemy_spawnPatrol;" \n
                                          "_time = diag_tickTime;" \n
                                          "_patrolTime = diag_tickTime;"/*%FSM</ACTION""">*/;
@@ -766,7 +765,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "enemy_sectors__">*/
@@ -781,7 +780,7 @@ class FSM
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand reached"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Reached last stand"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -798,7 +797,7 @@ class FSM
                                          "    (KPLIB_enemy_awareness > 35)" \n
                                          "    && (KPLIB_enemy_strength > 350)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""defending -> reinforcing"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from defending to reinforcing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -825,7 +824,7 @@ class FSM
                                          "        }" \n
                                          "    }" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Spawn Patrol"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "[getMarkerPos (selectRandom KPLIB_sectors_blufor), selectRandom [false, false, false, true]] call KPLIB_fnc_enemy_spawnPatrol;" \n
                                          "_time = diag_tickTime;" \n
                                          "_patrolTime = diag_tickTime;"/*%FSM</ACTION""">*/;
@@ -877,7 +876,7 @@ class FSM
                                          "{" \n
                                          "    (count (KPLIB_sectors_all - KPLIB_sectors_blufor) < 6)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""lastStand reached"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Reached last stand"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -889,7 +888,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "aw___40_">*/
@@ -904,7 +903,7 @@ class FSM
                                          "{" \n
                                          "    (KPLIB_enemy_awareness < 40)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""skirmishing -> reinforcing"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from skirmishing to reinforcing"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -921,7 +920,7 @@ class FSM
                                          "    (KPLIB_enemy_awareness > 75)" \n
                                          "    && (KPLIB_enemy_strength > 750)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""skirmishing -> counterattacking"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from skirmishing to counterattacking"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -948,7 +947,7 @@ class FSM
                                          "        }" \n
                                          "    }" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""[defending] spawn patrol"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Spawn Patrol"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "[getMarkerPos (selectRandom KPLIB_sectors_blufor), selectRandom [false, true, true, true], 6] call KPLIB_fnc_enemy_spawnPatrol;" \n
                                          "_time = diag_tickTime;" \n
                                          "_patrolTime = diag_tickTime;"/*%FSM</ACTION""">*/;
@@ -1018,7 +1017,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "timer">*/
@@ -1052,7 +1051,7 @@ class FSM
                                         to="exit";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!KPLIB_campaignRunning"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""Commander FSM exited"", ""ENEMY FSM""] call KPLIB_fnc_common_log;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "___FOB____1_Sect">*/
@@ -1068,7 +1067,7 @@ class FSM
                                          "    (count KPLIB_sectors_blufor > 0)" \n
                                          "    && (count KPLIB_sectors_fobs > 0)" \n
                                          "}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"if (_debug) then {systemChat ""unaware -> passive"";};" \n
+                                        action=/*%FSM<ACTION""">*/"if (KPLIB_param_enemyDebug) then {[""Switched from unaware to passive"", ""ENEMY FSM""] call KPLIB_fnc_common_log;};" \n
                                          "_time = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
