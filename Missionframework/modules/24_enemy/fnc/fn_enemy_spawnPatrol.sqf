@@ -4,7 +4,7 @@
     File: fn_enemy_spawnPatrol.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-08
-    Last Update: 2019-06-09
+    Last Update: 2019-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -43,7 +43,7 @@ if (_spawnPos isEqualTo []) then {
 
 // Exit if no sector was found
 if ((_patrolSectors select 0) isEqualTo "") exitWith {
-    private _text = format ["Spawn patrol couldn't find sector in vicinity of given position: %1", _spawnPos];
+    private _text = format ["Spawn patrol couldn't find a sector within 1200m distance of given position: %1", _spawnPos];
     [_text, "ENEMY"] call KPLIB_fnc_common_log
 };
 
@@ -52,7 +52,7 @@ _patrolSectors append (_sectors select {((getMarkerPos (_patrolSectors select 0)
 
 // Exit if sector is too far away from other sectors for a patrol route
 if ((count _patrolSectors) < 2) exitWith {
-    private _text = format ["Spawn patrol couldn't find near sectors for patrol from sector: %1 (%2)", markerText (_patrolSectors select 0), _patrolSectors select 0];
+    private _text = format ["Spawn patrol couldn't find sectors within 2000m distance for patrol from sector: %1 (%2)", markerText (_patrolSectors select 0), _patrolSectors select 0];
     [_text, "ENEMY"] call KPLIB_fnc_common_log
 };
 
