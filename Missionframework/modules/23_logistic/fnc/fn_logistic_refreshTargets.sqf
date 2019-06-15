@@ -1,3 +1,4 @@
+#include "..\ui\defines.hpp"
 /*
     KPLIB_fnc_logistic_refreshTargets
 
@@ -30,33 +31,68 @@ private _ctrlVehicleList = _dialog displayCtrl _ctrlId;
 
 lbClear _ctrlVehicleList;
 
-// Get all FOB vehicles
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _vehicles = (getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange];
-
 // Variables
-private _cfg = configFile >> "CfgVehicles";
+private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+private _cfgVeh = configFile >> "CfgVehicles";
 private _type = "";
 private _name = "";
 private _index = 0;
+private _objects = [];
+private _blacklist = [
+    KPLIB_preset_crateSupplyE,
+    KPLIB_preset_crateSupplyF,
+    KPLIB_preset_crateAmmoE,
+    KPLIB_preset_crateAmmoF,
+    KPLIB_preset_crateFuelE,
+    KPLIB_preset_crateFuelF,
+    KPLIB_logistic_building,
+    "GroundWeaponHolder",
+    "WeaponHolderSimulated",
+    "Camera",
+    ""
+];
 
 // Add a blank entry
 _index = _ctrlVehicleList lbAdd "----------";
 _ctrlVehicleList lbSetData [_index, "placeholder"];
 
-// Fill the list
+// Detect the dialog type and select all objects dependent on the settings
+if (_dialogId isEqualTo KPLIB_IDC_LOGISTIC_RECYCLE_DIALOG) then {
+    // If recycle dialog is open
+    _objects = ((getMarkerPos _nearFOB) nearObjects KPLIB_param_fobRange) select {
+        !(typeOf _x in _blacklist) &&
+        !((typeOf _x select [0,1]) isEqualTo "#") &&
+        !(_x isKindOf "Building") &&
+        !(_x isKindOf "Man")
+    };
+} else {
+    // If resupply dialog is open
+    if (KPLIB_param_aceResupply) then {
+        {
+            _type = typeOf _x;
+            _ammoMax = getNumber (_cfgVeh >> _type >> "ace_rearm_defaultSupply");
+            _fuelMax = getNumber (_cfgVeh >> _type >> "ace_refuel_fuelCargo");
+            if (_ammoMax != 0 || _fuelMax != 0) then {
+                _objects pushBack _x;
+            };
+        } forEach ((getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange]);
+    } else {
+        _objects = (getMarkerPos _nearFOB) nearEntities [["LandVehicle", "Air", "Ship"], KPLIB_param_fobRange];
+    };
+};
+
+// Fill the controls
 {
     _type = typeOf _x;
-    _name = getText (_cfg >> _type >> "displayName");
-    _index = _ctrlVehicleList lbAdd format ["%1", _name];
+    _index = _ctrlVehicleList lbAdd (getText (_cfgVeh >> _type >> "displayName"));
     _ctrlVehicleList lbSetData [_index, netId _x];
-    _picture = getText (_cfg >> _type >> "picture");
+    _picture = getText (_cfgVeh >> _type >> "picture");
     if (_picture isEqualTo "pictureThing") then {
         _ctrlVehicleList lbSetPicture [_index, "KPGUI\res\kp512_ca.paa"];
     } else {
         _ctrlVehicleList lbSetPicture [_index, _picture];
     };
-} forEach _vehicles;
+} forEach _objects;
 
 _ctrlVehicleList lbSetCurSel 0;
 
