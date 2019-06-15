@@ -18,7 +18,6 @@
         Function reached the end [BOOL]
 */
 
-
 /*
     ----- ENEMY COMMANDER SETTINGS -----
 */
