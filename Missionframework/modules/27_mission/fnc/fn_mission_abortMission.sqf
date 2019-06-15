@@ -5,7 +5,7 @@
     File: fn_mission_abortMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-14
+    Last Update: 2019-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -66,7 +66,7 @@ if !(_cost isEqualTo [0, 0, 0, 0]) then {
     [_costIntel] call KPLIB_fnc_resources_addIntel;
 };
 
-// Execute the abort function
-call compile preprocessFileLineNumbers (_missionData select 2);
+// Execute the abort function via server event
+["KPLIB_missionExec", [_missionData select 2]] call CBA_fnc_serverEvent;
 
 true
