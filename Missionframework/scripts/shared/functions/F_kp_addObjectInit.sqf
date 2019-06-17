@@ -20,12 +20,12 @@ params [["_object", objNull, [objNull]]];
 
 private _elements = KPLIB_objectInits select {(toLower (typeOf _object)) in ((_x select 0) apply {toLower _x})};
 
-if !(_elements isEqualTo []) exitWith {
-    {
-        _object call (_x select 1);
-    } forEach _elements;
-
-    true
+if (_elements isEqualTo []) exitWith {
+    false
 };
 
-false
+{
+    _object call (_x select 1);
+} forEach _elements;
+
+true
