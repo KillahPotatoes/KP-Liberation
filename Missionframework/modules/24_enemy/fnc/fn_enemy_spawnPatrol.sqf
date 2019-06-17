@@ -48,7 +48,7 @@ if ((_patrolSectors select 0) isEqualTo "") exitWith {
 };
 
 // Fetch some nearby patrol sectors
-_patrolSectors append (_sectors select {((getMarkerPos (_patrolSectors select 0)) distance2D (getMarkerPos _x)) < 2000});
+_patrolSectors append [(_sectors select {((getMarkerPos (_patrolSectors select 0)) distance2D (getMarkerPos _x)) < 2000})] call BIS_fnc_arrayShuffle;
 
 // Exit if sector is too far away from other sectors for a patrol route
 if ((count _patrolSectors) < 2) exitWith {
