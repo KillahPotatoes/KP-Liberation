@@ -164,8 +164,10 @@ class Missions
 ### 0.96.5 (TBD due to Contacts Release)
 * Added: The Unsung Vietnam War Mod presets.
 * Added: The Unsung Vietnam War Mod transport configs.
-* Added: Statistic values of civilian, resistance kills.
+* Added: Statistic values for destroyed civilian buildings and vehicles
+* Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
+* Removed: Vanilla player score saving.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
 * Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
 * Tweaked: Added elite vehicles to CSAT presets.
