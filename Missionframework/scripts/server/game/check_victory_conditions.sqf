@@ -25,8 +25,6 @@ if (count _blufor_bigtowns == count sectors_bigtown) then {
     publicstats pushback stats_secondary_objectives;
     publicstats pushback stats_hostile_battlegroups;
     publicstats pushback stats_ieds_detonated;
-    publicstats pushback stats_saves_performed;
-    publicstats pushback stats_saves_loaded;
     publicstats pushback stats_reinforcements_called;
     publicstats pushback stats_prisonners_captured;
     publicstats pushback stats_blufor_teamkills;
