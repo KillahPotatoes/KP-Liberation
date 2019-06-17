@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 params ["_price_s", "_price_a", "_price_f", "_typename", "_localtype", "_storage_areas"];
 
 if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
-	
+
 	{
 		private _storage_positions = [];
 		private _storedCrates = (attachedObjects _x);
@@ -13,7 +13,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 			_crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 			switch ((typeOf _x)) do {
-				case KP_liberation_supply_crate: { 
+				case KP_liberation_supply_crate: {
 					if (_price_s > 0) then {
 						if (_crateValue > _price_s) then {
 							_crateValue = _crateValue - _price_s;
@@ -55,7 +55,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 				default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 			};
 		} forEach _storedCrates;
-		
+
 		switch (typeOf _x) do {
 			case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
 			case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
@@ -78,10 +78,8 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 		} forEach attachedObjects (_x);
 
 		if ((_price_s == 0) && (_price_a == 0) && (_price_f == 0)) exitWith {};
-		
+
 	} forEach _storage_areas;
-	
-	
 
 	if ( _localtype == 8 ) then {
 		stats_blufor_soldiers_recruited = stats_blufor_soldiers_recruited + 10;
@@ -95,7 +93,9 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 		};
 	};
 
-	stats_ammo_spent = stats_ammo_spent + _price_a;
+    stats_supplies_spent = stats_supplies_spent + _price_s;
+    stats_ammo_spent = stats_ammo_spent + _price_a;
+    stats_fuel_spent = stats_fuel_spent + _price_f;
 
 	please_recalculate = true;
 };
