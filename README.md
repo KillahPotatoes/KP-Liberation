@@ -167,8 +167,10 @@ class Missions
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
+* Added: Encore Anti Air static to sensible presets.
 * Removed: Vanilla player score saving.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
+* Tweaked: Changed default air building from small radar dome to encore static radar.
 * Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
 * Tweaked: Added elite vehicles to CSAT presets.
 * Tweaked: Formatting/Comments in the preset files.
