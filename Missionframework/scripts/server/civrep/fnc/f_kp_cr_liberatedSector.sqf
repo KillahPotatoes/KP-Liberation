@@ -4,10 +4,12 @@ if (_sector in sectors_bigtown || _sector in sectors_capture) then {
 	if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] liberatedSector called at: %1 - Sector: %2", time, markerText _sector];};
 
 	private _penalty = 0;
-	
+
 	{
 		if (_sector == (_x select 0)) exitWith {_penalty = (_x select 1) - ([_sector] call F_cr_getBuildings)};
 	} forEach KP_liberation_cr_sectorbuildings;
+
+    stats_civilian_buildings_destroyed = stats_civilian_buildings_destroyed + _penalty;
 
 	_penalty = _penalty * KP_liberation_cr_building_penalty;
 
