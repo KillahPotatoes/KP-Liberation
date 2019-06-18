@@ -122,8 +122,7 @@ static_vehicles = [
     ["O_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
     ["O_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["O_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
-    ["O_Radar_System_02_F",100,0,0],                                    // Air Radar
-    ["O_SAM_System_04_F",100,200,0]                                     // SAM Rhea
+    ["O_SAM_System_04_F",250,500,0]                                     // S-750 Rhea
 ];
 
 buildings = [

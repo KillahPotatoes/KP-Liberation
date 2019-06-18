@@ -153,7 +153,8 @@ static_vehicles = [
     ["RHS_TOW_TriPod_D",50,100,0],                                      // TOW (AT)
     ["RHS_Stinger_AA_pod_D",50,100,0],                                  // Stinger (AA)
     ["RHS_M252_D",80,150,0],                                            // Mk6 Mortar
-    ["RHS_M119_D",100,200,0]                                            // M119A2
+    ["RHS_M119_D",100,200,0],                                           // M119A2
+    ["B_SAM_System_03_F",250,500,0]                                     // MIM-145 Defender
 ];
 
 buildings = [

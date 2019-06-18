@@ -200,7 +200,8 @@ static_vehicles = [
     ["B_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
     ["B_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["B_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
-    ["RHS_M119_WD",100,200,0]                                           // M119A2
+    ["RHS_M119_WD",100,200,0],                                          // M119A2
+    ["B_SAM_System_03_F",250,500,0]                                     // MIM-145 Defender
 ];
 
 buildings = [
