@@ -18,6 +18,10 @@ switch (_fac) do {
 {
 	if ((_x select 1) == (_sector select 1)) exitWith {
 		if (((_x select 9) >= _price_s) && ((_x select 10) >= _price_a) && ((_x select 11) >= _price_f)) then {
+            stats_supplies_spent = stats_supplies_spent + _price_s;
+            stats_ammo_spent = stats_ammo_spent + _price_a;
+            stats_fuel_spent = stats_fuel_spent + _price_f;
+
 			private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
 			_storage = _storage select {(_x getVariable ["KP_liberation_storage_type",-1]) == 1};
 			if ((count _storage) == 0) exitWith {};

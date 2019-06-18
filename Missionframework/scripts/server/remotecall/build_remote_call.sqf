@@ -4,6 +4,10 @@ params ["_price_s", "_price_a", "_price_f", "_typename", "_localtype", "_storage
 
 if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 
+    stats_supplies_spent = stats_supplies_spent + _price_s;
+    stats_ammo_spent = stats_ammo_spent + _price_a;
+    stats_fuel_spent = stats_fuel_spent + _price_f;
+
 	{
 		private _storage_positions = [];
 		private _storedCrates = (attachedObjects _x);
@@ -92,10 +96,6 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 			};
 		};
 	};
-
-    stats_supplies_spent = stats_supplies_spent + _price_s;
-    stats_ammo_spent = stats_ammo_spent + _price_a;
-    stats_fuel_spent = stats_fuel_spent + _price_f;
 
 	please_recalculate = true;
 };
