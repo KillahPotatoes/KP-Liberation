@@ -277,156 +277,78 @@ if (!isNil "greuh_liberation_savegame") then {
         setDate [2045, 6, 6, _dateTime, 0]; // Compatibility for older save data
     };
 
-    //_objectsToSave pushBack [_class,_savedpos,_nextdir,_hascrew,_savedvec];		OLD
-    //_objectsToSave pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_hascrew];		NEW
-
     // Collection array for all objects which are loaded
     private _spawnedObjects = [];
 
     // Spawn all saved objects
     {
-        // Classname of object to spawn
-        private _class = _x select 0;
+        // Fetch data of saved object
+        _x params ["_class", "_pos", "_vecDir", "_vecUp", ["_hasCrew", false]];
 
-        // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
-        if (!(KP_liberation_recycle_building == "Land_CarService_F") && (_class == "Land_CarService_F")) then {
-            _class = KP_liberation_recycle_building;
+        if (((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
+            // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
+            if ((KP_liberation_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
+                _class = KP_liberation_recycle_building;
+            };
+
+            // Pre 0.96.5 compatibility with air building, as it was replaced by default with a different classname
+            if ((KP_liberation_air_vehicle_building != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
+                _class = KP_liberation_air_vehicle_building;
+            };
         };
-
-        // Pre 0.96.5 compatibility with air building, as it was replaced by default with a different classname
-        if (!(KP_liberation_air_vehicle_building == "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
-            _class = KP_liberation_air_vehicle_building;
-        };
-
-        /*
-            --- Done until here ---
-            --- Below still to do ---
-        */
 
         // Only spawn, if the classname is still in the presets
         if (_class in _classnamesToSave) then {
-            private _pos = _x select 1;
-            private _vecdir = _x select 2;
-            private _vecup = _x select 3;
-            private _hascrew = false;
 
+            // Create object without damage handling and simulation
             private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
             _object allowdamage false;
             _object enableSimulation false;
+
+            // Add object to spawned objects collection
             _spawnedObjects pushBack _object;
 
+            // Reposition spawned object
             _object setPosWorld _pos;
-            _object setVectorDirAndUp [_vecdir, _vecup];
-            _hascrew = _x param [4, false];
+            _object setVectorDirAndUp [_vecDir, _vecUp];
 
+            // Add blufor crew, if it had crew
             if (_hascrew) then {
-                [ _object ] call F_forceBluforCrew;
+                [_object] call F_forceBluforCrew;
             };
 
+            // Apply kill manager handling, if not excluded
             if !(_class in _noKillHandler) then {
                 _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
             };
 
+            // Set captured variable, if it's an OPFOR vehicle
             if (_class in all_hostile_classnames) then {
                 _object setVariable ["GRLIB_captured", 1, true];
             };
 
+            // Prevent damage for the FOB building
             if (_class == FOB_typename) then {
                 _object addEventHandler ["HandleDamage", {0}];
             };
 
-            _object call F_addObjectInit;
+            // Process KP object init
+            [_object] call F_addObjectInit;
 
-            if !(_class in KP_liberation_ace_crates) then {
-                if(KP_liberation_clear_cargo || !(_class isKindOf "AllVehicles")) then {
-                    clearWeaponCargoGlobal _object;
-                    clearMagazineCargoGlobal _object;
-                    clearBackpackCargoGlobal _object;
-                    clearItemCargoGlobal _object;
-                };
+            // Determine if cargo should be cleared
+            if (KP_liberation_clear_cargo || {!(_class in KP_liberation_ace_crates)} || {!(_class isKindOf "AllVehicles")}) then {
+                clearWeaponCargoGlobal _object;
+                clearMagazineCargoGlobal _object;
+                clearBackpackCargoGlobal _object;
+                clearItemCargoGlobal _object;
             };
 
+            // Mark civilian vehicle as "already seized"
             if (_class in civilian_vehicles) then {
                 KP_liberation_cr_vehicles pushBack _object;
             };
         };
     } forEach _objectsToSave;
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
-
-    {
-        private _class = _x select 0;
-
-        if (_class in _classnamesToSave) then {
-
-            //_resourceStorages pushBack [_class,_savedpos,_nextdir,_supplyValue,_ammoValue,_fuelValue,_savedvec];			OLD
-            //_resourceStorages pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];		NEW
-
-            private _pos = _x select 1;
-            private _vecdir = _x select 2;
-            private _vecup = _x select 3;
-            private _supply = 0;
-            private _ammo = 0;
-            private _fuel = 0;
-
-            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];;
-            _object allowdamage false;
-            _object enableSimulation false;
-
-            // Old savegame version (Backwards compatibility)
-            if (typeName _vecdir == typeName 0) then {
-                _object setPosATL _pos;
-                _object setdir _vecdir;	// actually a number
-                _supply = floor (_x select 3);
-                _ammo = floor (_x select 4);
-                _fuel = floor (_x select 5);
-
-            // New savegame version
-            } else {
-                _object setPosWorld _pos;
-                _object setVectorDirAndUp [_vecdir, _vecup];
-                _supply = floor (_x select 4);
-                _ammo = floor (_x select 5);
-                _fuel = floor (_x select 6);
-            };
-
-            _object setdamage 0;
-            _object enableSimulation true;
-            _object allowdamage true;
-
-            _object setVariable ["KP_liberation_storage_type", 0, true];
-
-            while {_supply > 0} do {
-                private _amount = 100;
-                if ((_supply / 100) < 1) then {
-                    _amount = _supply;
-                };
-                _supply = _supply - _amount;
-                private _crate = [KP_liberation_supply_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
-
-            while {_ammo > 0} do {
-                private _amount = 100;
-                if ((_ammo / 100) < 1) then {
-                    _amount = _ammo;
-                };
-                _ammo = _ammo - _amount;
-                private _crate = [KP_liberation_ammo_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
-
-            while {_fuel > 0} do {
-                private _amount = 100;
-                if ((_fuel / 100) < 1) then {
-                    _amount = _fuel;
-                };
-                _fuel = _fuel - _amount;
-                private _crate = [KP_liberation_fuel_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
-        };
-    } forEach _resourceStorages;
 
     // Re-enable physics on the spawned objects
     {
@@ -435,80 +357,90 @@ if (!isNil "greuh_liberation_savegame") then {
         _x allowdamage true;
     } forEach _spawnedObjects;
 
+    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
+
+    // Spawn saved resource storages and their content
+    {
+        _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
+
+        // Only spawn, if the classname is still in the presets
+        if (_class in _classnamesToSave) then {
+
+            // Create object without damage handling and simulation
+            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];;
+            _object allowdamage false;
+            _object enableSimulation false;
+
+            // Reposition spawned object
+            _object setPosWorld _pos;
+            _object setVectorDirAndUp [_vecDir, _vecUp];
+
+            // Re-enable physics on spawned object
+            _object setdamage 0;
+            _object enableSimulation true;
+            _object allowdamage true;
+
+            // Mark it as FOB storage
+            _object setVariable ["KP_liberation_storage_type", 0, true];
+
+            // Fill storage with saved resources
+            [floor _supply, floor _ammo, floor _fuel, _object] call F_fillStorage;
+        };
+    } forEach _resourceStorages;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved storages placed"};
 
+    // Spawn saved sector storages and their content
     {
         private _storage = _x select 3;
 
+        // Spawn storage, if sector has valid storage
         if ((count _storage) == 3) then {
-            private _pos = _storage select 0;
-            private _nextdir = _storage select 1;
+            _storage params ["_pos", "_dir", "_vecUp"];
 
+            // Create object without damage handling and simulation
             private _object = createVehicle [KP_liberation_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
             _object enableSimulationGlobal false;
             _object allowdamage false;
-            if (count (_storage select 2) == 3) then {
-                _object setVectorUp (_storage select 2);
-            };
-            _object setPosATL _pos;
-            _object setdamage 0;
-            _object setdir _nextdir;
-            _object setVariable ["KP_liberation_storage_type", 1, true];
 
-            _object enableSimulationGlobal true;
+            // Reposition spawned object
+            _object setdir _dir;
+            _object setVectorUp _vecUp;
+            _object setPosATL _pos;
+
+            // Re-enable physics on spawned object
+            _object setdamage 0;
+            _object enableSimulation true;
             _object allowdamage true;
 
-            private _supply = floor (_x select 9);
-            private _ammo = floor (_x select 10);
-            private _fuel = floor (_x select 11);
+            // Mark it as sector storage
+            _object setVariable ["KP_liberation_storage_type", 1, true];
 
-            while {_supply > 0} do {
-                private _amount = 100;
-                if ((_supply / 100) < 1) then {
-                    _amount = _supply;
-                };
-                _supply = _supply - _amount;
-                private _crate = [KP_liberation_supply_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
-
-            while {_ammo > 0} do {
-                private _amount = 100;
-                if ((_ammo / 100) < 1) then {
-                    _amount = _ammo;
-                };
-                _ammo = _ammo - _amount;
-                private _crate = [KP_liberation_ammo_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
-
-            while {_fuel > 0} do {
-                private _amount = 100;
-                if ((_fuel / 100) < 1) then {
-                    _amount = _fuel;
-                };
-                _fuel = _fuel - _amount;
-                private _crate = [KP_liberation_fuel_crate, _amount, _pos] call F_createCrate;
-                [_crate, _object] call F_crateToStorage;
-            };
+            // Fill storage
+            [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call F_fillStorage;
         };
     } forEach KP_liberation_production;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved sector storages placed";};
 
+    /*
+        --- Done until here ---
+        --- Below still to do ---
+    */
+
+    // Spawn BLUFOR AI groups
     {
-        private _nextgroup = _x;
+        private _savedGroup = _x;
         private _grp = createGroup [GRLIB_side_friendly, true];
         {
-            private _nextunit = _x;
-            private _pos = [(_nextunit select 1) select 0, (_nextunit select 1) select 1, ((_nextunit select 1) select 2) + 0.2];
-            private _nextdir = _nextunit select 2;
-            (_nextunit select 0) createUnit [ _pos, _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}] '];
+            private _unit = _x;
+            private _pos = [(_unit select 1) select 0, (_unit select 1) select 1, ((_unit select 1) select 2) + 0.2];
+            private _dir = _unit select 2;
+            (_unit select 0) createUnit [ _pos, _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}] '];
             private _nextobj = ((units _grp) select ((count (units _grp)) - 1));
+            _nextobj setDir _dir;
             _nextobj setPosATL _pos;
-            _nextobj setDir _nextdir;
-        } forEach _nextgroup;
+        } forEach _savedGroup;
     } forEach ai_groups;
 
     diag_log "[KP LIBERATION] [SAVE] Save loading finished";
