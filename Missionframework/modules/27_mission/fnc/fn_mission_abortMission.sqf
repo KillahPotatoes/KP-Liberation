@@ -5,9 +5,9 @@
     File: fn_mission_abortMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-15
+    Last Update: 2019-06-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: Yes
+    Public: No
 
     Description:
         Aborts the given mission.

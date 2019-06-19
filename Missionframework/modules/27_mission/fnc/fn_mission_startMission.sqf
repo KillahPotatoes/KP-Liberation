@@ -5,9 +5,9 @@
     File: fn_mission_startMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-15
+    Last Update: 2019-06-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: Yes
+    Public: No
 
     Description:
         Starts the given mission or selects one from the given array.
@@ -24,7 +24,7 @@ params [
 ];
 
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
-private _resourceCheck = true
+private _resourceCheck = true;
 
 // Check for array and select random mission from it
 if (_mission isEqualType []) then {
