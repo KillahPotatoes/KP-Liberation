@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-06-17
+    Last Update: 2019-06-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -104,10 +104,12 @@ class KPLIB_cratefiller {
 
         // Equipment
 
-        class KPLIB_EquipmentTitle: KPLIB_TransportTitle {
+        class KPLIB_EquipmentTitle: KPGUI_PRE_InlineTitle {
             text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
+            w = KP_GETW(KP_WIDTH_VAL_S,2);
+            h = KP_GETH(KP_HEIGHT_VAL_S,16);
         };
 
         class KPLIB_ComboEquipment: KPGUI_PRE_Combo {
@@ -165,12 +167,10 @@ class KPLIB_cratefiller {
 
         // Crates
 
-        class KPLIB_TransportTitle: KPGUI_PRE_InlineTitle {
+        class KPLIB_TransportTitle: KPLIB_EquipmentTitle {
             text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLETRANSPORT";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,2);
-            h = KP_GETH(KP_HEIGHT_VAL_S,16);
         };
 
         class KPLIB_ComboCargo: KPGUI_PRE_Combo {
