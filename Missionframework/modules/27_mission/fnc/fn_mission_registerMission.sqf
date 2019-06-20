@@ -5,7 +5,7 @@
     File: fn_mission_registerMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-13
+    Last Update: 2019-06-20
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -22,6 +22,7 @@
         _randomTime     - The additional time which will randomly added to the minTime      [NUMBER, defaults to 0]
         _missionStart   - Path of the mission start function                                [STRING, defaults to ""]
         _missionAbort   - Path of the mission abort function                                [STRING, defaults to ""]
+        _picture        - Path to the mission picture                                       [STRING, defaults to "KPGUI\res\kp512_CA.paa"]
 
     Returns:
         Function reached the end [BOOL]
@@ -35,7 +36,8 @@ params [
     ["_minTime", 0, [0]],
     ["_randomTime", 0, [0]],
     ["_missionStart", "", [""]],
-    ["_missionAbort", "", [""]]
+    ["_missionAbort", "", [""]],
+    ["_picture", "KPGUI\res\kp512_CA.paa", [""]]
 ];
 
 // Exit when no mission name is declared
@@ -47,7 +49,7 @@ private _string = localize (["STR_KPLIB_MISSION_", toUpper _missionName] joinStr
 private _descString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, "_DESCR"] joinString "");
 
 // Set data in namespace
-private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _condition, _cost, _minTime, _randomTime];
+private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _picture, _condition, _cost, _minTime, _randomTime];
 MSVAR(toLower _missionName, _data);
 
 true
