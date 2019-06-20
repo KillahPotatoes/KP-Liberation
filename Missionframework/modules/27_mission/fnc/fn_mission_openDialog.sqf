@@ -1,11 +1,12 @@
 #include "..\ui\defines.hpp"
+#include "script_component.hpp"
 /*
     KPLIB_fnc_mission_openDialog
 
     File: fn_mission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-19
-    Last Update: 2019-06-20
+    Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -42,5 +43,39 @@ _ctrlHeaderRunning lnbSetPicture [[0, 1], "res\ui_supplies.paa"];
 _ctrlHeaderRunning lnbSetPicture [[0, 2], "res\ui_ammo.paa"];
 _ctrlHeaderRunning lnbSetPicture [[0, 3], "res\ui_fuel.paa"];
 _ctrlHeaderRunning lnbSetPicture [[0, 4], "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa"];
+
+// Variables
+private _data = [];
+
+// Get data from namespace
+private _missions = MGVAR("registeredMissions", []);
+private _running = MGVAR("runningMissions", []);
+
+// Fill the dialog controls
+{
+    _data = MGVAR(toLower _x, []);
+    (_data select 7) params [
+        "_costSupply",
+        "_costAmmo",
+        "_costFuel",
+        "_costIntel"
+    ];
+    _ctrlMission lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
+} forEach _missions;
+
+{
+    _data = MGVAR(toLower _x, []);
+    (_data select 7) params [
+        "_costSupply",
+        "_costAmmo",
+        "_costFuel",
+        "_costIntel"
+    ];
+    _costSupply = _costSupply * (KPLIB_param_missionRefund / 100);
+    _costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
+    _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
+    _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
+    _ctrlMission lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
+} forEach _running;
 
 true

@@ -5,7 +5,7 @@
     File: fn_mission_registerMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-20
+    Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -51,5 +51,9 @@ private _descString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, 
 // Set data in namespace
 private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _picture, _condition, _cost, _minTime, _randomTime];
 MSVAR(toLower _missionName, _data);
+
+_data = MGVAR("registeredMissions", []);
+_data pushBack _missionName;
+MSVAR("registeredMissions", _data);
 
 true
