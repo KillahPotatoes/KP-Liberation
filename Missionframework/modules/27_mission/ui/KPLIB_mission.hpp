@@ -60,12 +60,13 @@ class KPLIB_mission {
         };
 
         class KPLIB_ButtonStart: KPGUI_PRE_InlineButton {
+            idc = KPLIB_IDC_MISSION_MISSIONBUTTON;
             text = "Start Mission";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,30,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            onButtonClick = "";
+            onButtonClick = "[_this select 0] call KPLIB_fnc_mission_buttonClick";
         };
 
         class KPLIB_LabelAbort: KPLIB_LabelStart {
@@ -87,9 +88,10 @@ class KPLIB_mission {
         };
 
         class KPLIB_ButtonAbort: KPLIB_ButtonStart {
+            idc = KPLIB_IDC_MISSION_RUNNINGBUTTON;
             text = "Abort Mission";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
-            onButtonClick = "";
+            onButtonClick = "[_this select 0] call KPLIB_fnc_mission_buttonClick";
         };
 
         // Right side of the dialog
