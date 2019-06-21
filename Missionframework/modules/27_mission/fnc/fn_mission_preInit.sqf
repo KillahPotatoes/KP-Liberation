@@ -22,6 +22,12 @@ if (isServer) then {
 
     ["Module initializing...", "PRE] [Mission", true] call KPLIB_fnc_common_log;
 
+    // Register load event handler
+    ["KPLIB_doLoad", {[] call KPLIB_fnc_mission_loadData;}] call CBA_fnc_addEventHandler;
+
+    // Register save event handler
+    ["KPLIB_doSave", {[] call KPLIB_fnc_mission_saveData;}] call CBA_fnc_addEventHandler;
+
     // Register mission execution event handler
     ["KPLIB_missionExec", {call compile preprocessFileLineNumbers (_this select 0);}] call CBA_fnc_addEventHandler;
 

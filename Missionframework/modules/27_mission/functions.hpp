@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-09
-    Last Update: 2019-06-19
+    Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -16,6 +16,9 @@ class mission {
 
     // Aborts the given mission
     class mission_abortMission {};
+
+    // Loads module specific data from the save
+    class mission_loadData {};
 
     // Opens the mission dialog
     class mission_openDialog {};
@@ -32,6 +35,9 @@ class mission {
 
     // Registers a mission for the usage as event or "buyable" sidemission
     class mission_registerMission {};
+
+    // Saves module specific data for the save
+    class mission_saveData {};
 
     // CBA Settings initialization for this module
     class mission_settings {};
