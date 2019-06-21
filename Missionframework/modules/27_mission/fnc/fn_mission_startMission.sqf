@@ -25,6 +25,7 @@ params [
 
 private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
 private _resourceCheck = true;
+private _timeCheck = true;
 
 // Check for array and select random mission from it
 if (_mission isEqualType []) then {
@@ -40,9 +41,22 @@ _cost params [
     "_costFuel",
     "_costIntel"
 ];
+private _data = MGVAR("runningMissions", []);
 
 // Check the mission condition
 private _conditionCheck = [] call (_missionData select 8);
+
+// Check the timestamp of the mission
+private _timeData = MGVAR("timeCheck", []);
+private _index = _timeData findIf {(_x select 0) isEqualTo _mission};
+if (_index != -1) then {
+    private _missionTimeData = _timeData select _index;
+    if (((_missionTimeData select 1) - diag_tickTime) <= 0) then {
+        _timeData deleteAt _index;
+    } else {
+        _timeCheck = false;
+    };
+};
 
 // Check if the mission is a buyable mission and check if there are enough resources available
 if !(_missionData select 0) then {
@@ -62,7 +76,7 @@ if !(_missionData select 0) then {
 };
 
 // Exit if one of the condition isn't true
-if !(_conditionCheck && _resourceCheck) exitWith {
+if !(_conditionCheck && _resourceCheck && _timeCheck) exitWith {
     false
 };
 
@@ -75,9 +89,13 @@ if !(_cost isEqualTo [0, 0, 0, 0]) then {
 // Execute the startup function via server event
 ["KPLIB_missionExec", [_missionData select 1]] call CBA_fnc_serverEvent;
 
-// Set data in namespace
-private _data = MGVAR("runningMissions", []);
+// Prepare the namespace data
 _data pushback [_mission, _nearFOB];
+private _startTime = diag_tickTime + (_missionData select 10) + (round (random (_missionData select 11)));
+_timeData pushBack [_mission, _startTime];
+
+// Set data in namespace
 MSVAR("runningMissions", _data);
+MSVAR("timeCheck", _timeData);
 
 true
