@@ -17,6 +17,9 @@ class mission {
     // Aborts the given mission
     class mission_abortMission {};
 
+    // Displays the information for the given mission
+    class mission_displayMission {};
+
     // Loads module specific data from the save
     class mission_loadData {};
 
@@ -28,10 +31,16 @@ class mission {
         postInit = 1;
     };
 
+    // Checks the mission conditions on a changing selection and disables the button
+    class mission_preCheck {};
+
     // Module pre initialization
     class mission_preInit {
         preInit = 1;
     };
+
+    // Reads the data of the given listbox
+    class mission_readData {};
 
     // Registers a mission for the usage as event or "buyable" sidemission
     class mission_registerMission {};

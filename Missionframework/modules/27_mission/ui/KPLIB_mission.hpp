@@ -56,6 +56,7 @@ class KPLIB_mission {
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/25));
 
             columns[] = {0, 0.4, 0.55, 0.70, 0.85};
+            onLBSelChanged = "[] call KPLIB_fnc_mission_preCheck";
         };
 
         class KPLIB_ButtonStart: KPGUI_PRE_InlineButton {
@@ -81,6 +82,8 @@ class KPLIB_mission {
             idc = KPLIB_IDC_MISSION_RUNNINGLIST;
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,37,48);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/9));
+
+            onLBSelChanged = "[_this select, _this select 1] call KPLIB_fnc_mission_readData";
         };
 
         class KPLIB_ButtonAbort: KPLIB_ButtonStart {
@@ -92,11 +95,13 @@ class KPLIB_mission {
         // Right side of the dialog
 
         class KPLIB_LabelDescription: KPLIB_LabelStart {
-            text = "Missiondescription";
+            idc = KPLIB_IDC_MISSION_TITLE;
+            text = "";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
         };
 
         class KPLIB_MissionDescription: KPGUI_PRE_Text {
+            idc = KPLIB_IDC_MISSION_DESCRIPTION;
             text = "BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla\nBlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla\nBlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
@@ -112,6 +117,7 @@ class KPLIB_mission {
         };
 
         class KPLIB_VictoryReward: KPLIB_MissionDescription {
+            idc = KPLIB_IDC_MISSION_REWARD;
             text = "Reward";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,18,48);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/4));
@@ -123,11 +129,13 @@ class KPLIB_mission {
         };
 
         class KPLIB_DefeatPenalty: KPLIB_VictoryReward {
+            idc = KPLIB_IDC_MISSION_PENALTY;
             text = "Penalty";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,26,48);
         };
 
         class KPLIB_MissionLogo: KPGUI_PRE_PictureRatio {
+            idc = KPLIB_IDC_MISSION_PICTURE;
             text = "KPGUI\res\kp512_CA.paa";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,31,48);

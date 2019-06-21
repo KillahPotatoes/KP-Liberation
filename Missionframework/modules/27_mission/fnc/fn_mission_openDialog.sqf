@@ -61,6 +61,7 @@ private _running = MGVAR("runningMissions", []);
         "_costIntel"
     ];
     _ctrlMission lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
+    _ctrlMission lnbSetData [[_forEachIndex, 0], _x select 1];
 } forEach _missions;
 
 {
@@ -75,7 +76,8 @@ private _running = MGVAR("runningMissions", []);
     _costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
     _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
     _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
-    _ctrlMission lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
+    _ctrlRunning lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
+    _ctrlRunning lnbSetData [[_forEachIndex, 0], _x select 0];
 } forEach _running;
 
 true

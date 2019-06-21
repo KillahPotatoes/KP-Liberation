@@ -1,36 +1,36 @@
+#include "..\ui\defines.hpp"
 #include "script_component.hpp"
 /*
-    KPLIB_fnc_mission_startMission
+    KPLIB_fnc_mission_preCheck
 
-    File: fn_mission_startMission.sqf
+    File: fn_mission_preCheck.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2019-06-13
+    Date: 2019-06-21
     Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
     Description:
-        Starts the given mission or selects one from the given array.
+        Checks the mission conditions on a changing selection and disables the button.
 
     Parameter(s):
-        _mission - Array or string with the missions [STRING/ARRAY, defaults to ""]
+        NONE
 
     Returns:
-        Mission started [BOOL]
+        Function reached the end [BOOL]
 */
 
-params [
-    ["_mission", "", ["", []]]
-];
+// Dialog controls
+private _dialog = findDisplay KPLIB_IDC_MISSION_DIALOG;
+private _ctrlMission = _dialog displayCtrl KPLIB_IDC_MISSION_MISSIONLIST;
+private _ctrlMissionButton = _dialog displayCtrl KPLIB_IDC_MISSION_MISSIONBUTTON;
 
-// Check for array and select random mission from it
-if (_mission isEqualType []) then {
-    _mission = selectRandom _mission;
-};
+// Read the dialog controls
+private _index = lnbCurSelRow _ctrlMission;
+private _mission = [_ctrlMission, _index] call KPLIB_fnc_mission_readData;
 
 // Get data from namespace
 private _missionData = MGVAR(toLower _mission, []);
-private _data = MGVAR("runningMissions", []);
 
 // Variables
 private _cost = _missionData select 9;
@@ -76,27 +76,31 @@ if !(_missionData select 0) then {
     };
 };
 
-// Exit if one of the condition isn't true
-if !(_conditionCheck && _resourceCheck && _timeCheck) exitWith {
-    false
+
+// Disable the button if one of the condition isn't true
+_ctrlMissionButton ctrlEnable true;
+if !(_conditionCheck && _resourceCheck && _timeCheck) then {
+    _ctrlMissionButton ctrlEnable false;
+    if !(_conditionCheck) then {
+        [
+            ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+            [localize "STR_KPLIB_HINT_MISSIONCONDITION"]
+        ] call CBA_fnc_notify;
+    };
+    if !(_resourceCheck) then {
+        [
+            ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+            [localize "STR_KPLIB_HINT_MISSIONRESOURCES"]
+        ] call CBA_fnc_notify;
+    };
+    if !(_timeCheck) then {
+        [
+            ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+            [localize "STR_KPLIB_HINT_MISSIONTIME"]
+        ] call CBA_fnc_notify;
+    };
+} else {
+
 };
-
-// Pay the resources if the mission costs anything
-if !(_cost isEqualTo [0, 0, 0, 0]) then {
-    [_nearFOB, _costSupply, _costAmmo, _costFuel] call KPLIB_fnc_resources_pay;
-    [-_costIntel] call KPLIB_fnc_resources_addIntel;
-};
-
-// Execute the startup function via server event
-["KPLIB_missionExec", [_missionData select 1]] call CBA_fnc_serverEvent;
-
-// Prepare the namespace data
-_data pushback [_mission, _nearFOB];
-private _startTime = diag_tickTime + (_missionData select 10) + (round (random (_missionData select 11)));
-_timeData pushBack [_mission, _startTime];
-
-// Set data in namespace
-MSVAR("runningMissions", _data);
-MSVAR("timeCheck", _timeData);
 
 true

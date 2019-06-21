@@ -1162,6 +1162,18 @@
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
         </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONCONDITION">
+            <English>The conditions for the mission start aren't met.</English>
+            <German>Die Bedingungen für den Missionsstart sind nicht erfüllt.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONRESOURCES">
+            <English>There aren't enough resources to start the mission.</English>
+            <German>Es sind nicht genügend Ressourcen vorhanden, um die Mission zu starten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONTIME">
+            <English>The mission can't be started yet, you'll need to wait some more time.</English>
+            <German>Die Mission kann noch nicht gestartet werden, du musst noch etwas warten.</German>
+        </Key>
         <Key ID="STR_KPLIB_HINT_NAME">
             <English>Invalid name.</English>
             <German>Ungültiger Name.</German>
