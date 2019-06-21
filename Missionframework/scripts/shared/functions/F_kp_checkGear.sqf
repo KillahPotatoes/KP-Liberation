@@ -21,23 +21,23 @@ params [["_backpack", ""]];
 private _return = true;
 private _removedItems = [];
 
-if (!(toLower(headgear player) in KP_liberation_allowed_items)) then {
+if !(toLower (headgear player) in KP_liberation_allowed_items) then {
     _removedItems pushBack (headgear player);
     removeHeadgear player;
 };
-if (!(toLower(goggles player) in KP_liberation_allowed_items)) then {
+if !(toLower (goggles player) in KP_liberation_allowed_items) then {
     _removedItems pushBack (goggles player);
     removeGoggles player;
 };
-if (!(toLower(uniform player) in KP_liberation_allowed_items)) then {
+if !(toLower (uniform player) in KP_liberation_allowed_items) then {
     _removedItems pushBack (uniform player);
     removeUniform player;
 };
-if (!(toLower(vest player) in KP_liberation_allowed_items)) then {
+if !(toLower (vest player) in KP_liberation_allowed_items) then {
     _removedItems pushBack (vest player);
     removeVest player;
 };
-if (!(toLower(backpack player) in KP_liberation_allowed_items) && ((backpack player) != _backpack)) then {
+if (!(toLower (backpack player) in KP_liberation_allowed_items) && ((backpack player) != _backpack)) then {
     _removedItems pushBack (backpack player);
     removeBackpack player;
 };
@@ -46,7 +46,7 @@ private _playerItems = assignedItems player;
 _playerItems append ((getItemCargo (uniformContainer player)) select 0);
 _playerItems append ((getItemCargo (vestContainer player)) select 0);
 _playerItems append ((getItemCargo (backpackContainer player)) select 0);
-_playerItems = _playerItems apply { toLower _x };
+_playerItems = _playerItems apply {toLower _x};
 {
     _removedItems pushBack _x;
     player unassignItem _x;
@@ -56,7 +56,7 @@ _playerItems = _playerItems apply { toLower _x };
 private _playerMagazines = ((getMagazineCargo (uniformContainer player)) select 0);
 _playerMagazines append ((getMagazineCargo (vestContainer player)) select 0);
 _playerMagazines append ((getMagazineCargo (backpackContainer player)) select 0);
-_playerMagazines = _playerMagazines apply { toLower _x };
+_playerMagazines = _playerMagazines apply {toLower _x};
 {
     _removedItems pushBack _x;
     player removeMagazines _x;
@@ -190,7 +190,7 @@ _removedItems append ([vestContainer player] call _removeWeapons);
 _removedItems append ([backpackContainer player] call _removeWeapons);
 
 private _weapons = weapons player;
-_weapons = _weapons apply { toLower _x };
+_weapons = _weapons apply {toLower _x};
 {
     player removeWeapon _x;
     _removedItems pushBack _x;
@@ -198,7 +198,7 @@ _weapons = _weapons apply { toLower _x };
 
 private _weaponItems = primaryWeaponItems player;
 _weaponItems append primaryWeaponMagazine player;
-_weaponItems = _weaponItems apply { toLower _x };
+_weaponItems = _weaponItems apply {toLower _x};
 {
     player removePrimaryWeaponItem _x;
     _removedItems pushBack _x;
@@ -206,7 +206,7 @@ _weaponItems = _weaponItems apply { toLower _x };
 
 _weaponItems = secondaryWeaponItems player;
 _weaponItems append secondaryWeaponMagazine player;
-_weaponItems = _weaponItems apply { toLower _x };
+_weaponItems = _weaponItems apply {toLower _x};
 {
     player removeSecondaryWeaponItem _x;
     _removedItems pushBack _x;
@@ -214,19 +214,17 @@ _weaponItems = _weaponItems apply { toLower _x };
 
 _weaponItems = handgunItems player;
 _weaponItems append handgunMagazine player;
-_weaponItems = _weaponItems apply { toLower _x };
+_weaponItems = _weaponItems apply {toLower _x};
 {
     player removeHandgunItem _x;
     _removedItems pushBack _x;
 } forEach (_weaponItems - KP_liberation_allowed_items);
 
 _removedItems = (_removedItems arrayIntersect _removedItems) - [""];
-if (count _removedItems > 0) then {
+if !(_removedItems isEqualTo []) then {
 	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_removedItems), name player];
 	_text remoteExec ["diag_log",2];
-	private _badItems = "";
-	{if (((_x find "acre") == -1) && ((_x find "tf_") == -1) && ((_x find "tfar_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_removedItems);
-	hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
+	hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
 	_return = false;
 };
 
