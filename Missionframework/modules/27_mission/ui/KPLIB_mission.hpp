@@ -91,8 +91,8 @@ class KPLIB_mission {
 
         // Right side of the dialog
 
-        class KPLIB_LabelTitle: KPLIB_LabelStart {
-            text = "Missiontitle";
+        class KPLIB_LabelDescription: KPLIB_LabelStart {
+            text = "Missiondescription";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
         };
 
@@ -101,68 +101,36 @@ class KPLIB_mission {
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
-            h = KP_GETH(KP_HEIGHT_VAL_S,3);
+            h = KP_GETH(KP_HEIGHT_VAL_S,4);
 
             style = 16;
         };
 
-        class KPLIB_TextSupply: KPGUI_PRE_Text {
-            text = "Supply cost/refund: ";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,21,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,4);
-            h = KP_GETH(KP_HEIGHT_VAL_S,24);
-
-            style = 1;
+        class KPLIB_LabelVictory: KPLIB_LabelDescription {
+            text = "Reward on victory";
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,15,48);
         };
 
-        class KPLIB_CostSupply: KPGUI_PRE_Text {
-            idc = KPLIB_IDC_MISSION_COSTSUPPLY;
-            text = "0";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,3,4);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,21,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,4);
-            h = KP_GETH(KP_HEIGHT_VAL_S,24);
+        class KPLIB_VictoryReward: KPLIB_MissionDescription {
+            text = "Reward";
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,18,48);
+            h = KP_GETH(KP_HEIGHT_VAL_S,(48/4));
         };
 
-        class KPLIB_TextAmmo: KPLIB_TextSupply {
-            text = "Ammo cost/refund: ";
+        class KPLIB_LabelDefeat: KPLIB_LabelVictory {
+            text = "Penalty on defeat";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,23,48);
         };
 
-        class KPLIB_CostAmmo: KPLIB_CostSupply {
-            idc = KPLIB_IDC_MISSION_COSTAMMO;
-            text = "0";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,23,48);
-        };
-
-        class KPLIB_TextFuel: KPLIB_TextSupply {
-            text = "Fuel cost/refund: ";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,25,48);
-        };
-
-        class KPLIB_CostFuel: KPLIB_CostSupply {
-            idc = KPLIB_IDC_MISSION_COSTFUEL;
-            text = "0";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,23,48);
-        };
-
-        class KPLIB_TextIntel: KPLIB_TextSupply {
-            text = "Intel cost/refund: ";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,27,48);
-        };
-
-        class KPLIB_CostIntel: KPLIB_CostSupply {
-            idc = KPLIB_IDC_MISSION_COSTINTEL;
-            text = "0";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,23,48);
+        class KPLIB_DefeatPenalty: KPLIB_VictoryReward {
+            text = "Penalty";
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,26,48);
         };
 
         class KPLIB_MissionLogo: KPGUI_PRE_PictureRatio {
             text = "KPGUI\res\kp512_CA.paa";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,31,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,2);
             h = KP_GETH(KP_HEIGHT_VAL_S,3);
         };
 
