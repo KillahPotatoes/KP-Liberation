@@ -4,7 +4,7 @@
     File: KPLIB_mission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-15
-    Last Update: 2019-06-21
+    Last Update: 2019-06-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -83,7 +83,7 @@ class KPLIB_mission {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,37,48);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/9));
 
-            onLBSelChanged = "[[_this select, _this select 1] call KPLIB_fnc_mission_readData] call KPLIB_fnc_mission_displayMission";
+            onLBSelChanged = "[[_this select 0, _this select 1] call KPLIB_fnc_mission_readData] call KPLIB_fnc_mission_displayMission";
         };
 
         class KPLIB_ButtonAbort: KPLIB_ButtonStart {
@@ -102,7 +102,7 @@ class KPLIB_mission {
 
         class KPLIB_MissionDescription: KPGUI_PRE_Text {
             idc = KPLIB_IDC_MISSION_DESCRIPTION;
-            text = "BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla\nBlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla\nBlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla BlaBla";
+            text = "";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -118,7 +118,7 @@ class KPLIB_mission {
 
         class KPLIB_VictoryReward: KPLIB_MissionDescription {
             idc = KPLIB_IDC_MISSION_REWARD;
-            text = "Reward";
+            text = "";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,18,48);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/4));
         };
@@ -130,7 +130,7 @@ class KPLIB_mission {
 
         class KPLIB_DefeatPenalty: KPLIB_VictoryReward {
             idc = KPLIB_IDC_MISSION_PENALTY;
-            text = "Penalty";
+            text = "";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,26,48);
         };
 
