@@ -47,9 +47,11 @@ if (_missionName isEqualTo "") exitWith {
 
 private _string = localize (["STR_KPLIB_MISSION_", toUpper _missionName] joinString "");
 private _descString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, "_DESCR"] joinString "");
+private _rewardString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, "_REWARD"] joinString "");
+private _penaltyString = localize (["STR_KPLIB_PERMISSION_", toUpper _missionName, "_PENALTY"] joinString "");
 
 // Set data in namespace
-private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _picture, _condition, _cost, _minTime, _randomTime];
+private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _rewardString, _penaltyString, _picture, _condition, _cost, _minTime, _randomTime];
 MSVAR(toLower _missionName, _data);
 
 _data = MGVAR("registeredMissions", []);

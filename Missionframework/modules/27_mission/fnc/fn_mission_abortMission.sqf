@@ -5,7 +5,7 @@
     File: fn_mission_abortMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-19
+    Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -31,14 +31,14 @@ if (_mission isEqualTo "") exitWith {
 // Get data from namespace
 private _missionData = MGVAR(toLower _mission, []);
 private _runningMissions = MGVAR("runningMissions", []);
-private _cost = _missionData select 6;
+private _cost = _missionData select 9;
 _cost params [
     "_costSupply",
     "_costAmmo",
     "_costFuel",
     "_costIntel"
 ];
-private _FOB = (_missionData select {(_x select 0) isEqualTo _mission}) select 1;
+private _FOB = (_runningMissions select {(_x select 0) isEqualTo _mission}) select 1;
 private _crateCapacity = 0;
 private _crateCount = 0;
 

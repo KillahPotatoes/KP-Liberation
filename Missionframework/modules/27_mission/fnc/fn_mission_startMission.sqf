@@ -5,7 +5,7 @@
     File: fn_mission_startMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-20
+    Last Update: 2019-06-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -33,7 +33,7 @@ if (_mission isEqualType []) then {
 
 // Get data from namespace
 private _missionData = MGVAR(toLower _mission, []);
-private _cost = _missionData select 7;
+private _cost = _missionData select 9;
 _cost params [
     "_costSupply",
     "_costAmmo",
@@ -42,7 +42,7 @@ _cost params [
 ];
 
 // Check the mission condition
-private _conditionCheck = [] call (_missionData select 6);
+private _conditionCheck = [] call (_missionData select 8);
 
 // Check if the mission is a buyable mission and check if there are enough resources available
 if !(_missionData select 0) then {
