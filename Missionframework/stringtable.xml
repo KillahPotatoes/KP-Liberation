@@ -2050,6 +2050,10 @@
             <English>Logistic Vehicle</English>
             <German>Logistik Fahrzeuge</German>
         </Key>
+        <Key ID="STR_KPLIB_PERMISSION_MISSION">
+            <English>Missions</English>
+            <German>Missionen</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_RECYCLE">
             <English>Recycle</English>
             <German>Recyceln</German>
