@@ -83,7 +83,7 @@ class KPLIB_mission {
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,37,48);
             h = KP_GETH(KP_HEIGHT_VAL_S,(48/9));
 
-            onLBSelChanged = "[_this select, _this select 1] call KPLIB_fnc_mission_readData";
+            onLBSelChanged = "[[_this select, _this select 1] call KPLIB_fnc_mission_readData] call KPLIB_fnc_mission_displayMission";
         };
 
         class KPLIB_ButtonAbort: KPLIB_ButtonStart {

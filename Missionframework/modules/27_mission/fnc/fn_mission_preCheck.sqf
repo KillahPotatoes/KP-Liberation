@@ -100,7 +100,7 @@ if !(_conditionCheck && _resourceCheck && _timeCheck) then {
         ] call CBA_fnc_notify;
     };
 } else {
-
+    [_mission] call KPLIB_fnc_mission_displayMission;
 };
 
 true
