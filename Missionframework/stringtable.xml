@@ -2091,4 +2091,29 @@
             <German>Transportfahrzeug</German>
         </Key>
     </Package>
+
+    <!-- USER MISSIONS -->
+
+    <Package name="Missions">
+
+        <!-- EXAMPLE MISSION -->
+
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE">
+            <English>Example Mission</English>
+            <German>Beispiel Mission</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_DESCR">
+            <English>This mission serves as a test mission and template.\n\nThis box shows the mission description.</English>
+            <German>Diese Mission dient als Test Mission und Vorlage.\n\nDiese Box zeigt die Missionsbeschreibung.</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_REWARD">
+            <English>This box describes the reward of the completed mission.</English>
+            <German>Diese Box beschreibt die Belohnung bei erfolgreichem Missionsabschluss.</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_PENALTY">
+            <English>This box describes the penalty of the failed mission.</English>
+            <German>Diese Box beschreibt die Strafe bei nicht erfolgreichem Missionsabschluss.</German>
+        </Key>
+
+    </Package>
 </Project>
