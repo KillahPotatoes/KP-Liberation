@@ -5,7 +5,7 @@
     File: fn_mission_startMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-22
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,7 +30,7 @@ if (_mission isEqualType []) then {
 
 // Get data from namespace
 private _missionData = MGVAR(_mission, []);
-private _data = MGVAR("runningMissions", []);
+private _runningMissions = MGVAR("runningMissions", []);
 
 // Variables
 private _cost = _missionData select 9;
@@ -91,12 +91,15 @@ if !(_cost isEqualTo [0, 0, 0, 0]) then {
 ["KPLIB_missionExec", [_missionData select 1]] call CBA_fnc_serverEvent;
 
 // Prepare the namespace data
-_data pushback [_mission, _nearFOB];
+_runningMissions pushback [_mission, _nearFOB];
 private _startTime = diag_tickTime + (_missionData select 10) + (round (random (_missionData select 11)));
 _timeData pushBack [_mission, _startTime];
 
 // Set data in namespace
-MSVAR("runningMissions", _data);
+MSVAR("runningMissions", _runningMissions);
 MSVAR("timeCheck", _timeData);
+
+closeDialog 0;
+[{!dialog}, {call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
 
 true

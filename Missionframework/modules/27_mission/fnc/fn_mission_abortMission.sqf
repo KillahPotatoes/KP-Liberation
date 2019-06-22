@@ -73,7 +73,13 @@ if !(_cost isEqualTo [0, 0, 0, 0]) then {
     [_costIntel] call KPLIB_fnc_resources_addIntel;
 };
 
+// Set data in namespace
+MSVAR("runningMissions", _runningMissions);
+
 // Execute the abort function via server event
 ["KPLIB_missionExec", [_missionData select 2]] call CBA_fnc_serverEvent;
+
+closeDialog 0;
+[{!dialog}, {call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
 
 true
