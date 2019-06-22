@@ -24,4 +24,4 @@ params [
     ["_index", 0, [0]]
 ];
 
-_ctrl lnbData _index
+_ctrl lnbData [_index, 0];

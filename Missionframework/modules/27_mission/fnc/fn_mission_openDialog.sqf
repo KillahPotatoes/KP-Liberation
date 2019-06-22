@@ -6,7 +6,7 @@
     File: fn_mission_openDialog.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-19
-    Last Update: 2019-06-21
+    Last Update: 2019-06-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -54,19 +54,19 @@ private _running = MGVAR("runningMissions", []);
 // Fill the dialog controls
 {
     _data = MGVAR(toLower _x, []);
-    (_data select 7) params [
+    (_data select 9) params [
         "_costSupply",
         "_costAmmo",
         "_costFuel",
         "_costIntel"
     ];
-    _ctrlMission lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
-    _ctrlMission lnbSetData [[_forEachIndex, 0], _x select 1];
+    _ctrlMission lnbAddRow [_data select 3, str _costSupply, str _costAmmo, str _costFuel, str _costIntel];
+    _ctrlMission lnbSetData [[_forEachIndex, 0], _x];
 } forEach _missions;
 
 {
     _data = MGVAR(toLower _x, []);
-    (_data select 7) params [
+    (_data select 9) params [
         "_costSupply",
         "_costAmmo",
         "_costFuel",
@@ -76,8 +76,8 @@ private _running = MGVAR("runningMissions", []);
     _costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
     _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
     _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
-    _ctrlRunning lnbAddRow [_x select 0, _costSupply, _costAmmo, _costFuel, _costIntel];
-    _ctrlRunning lnbSetData [[_forEachIndex, 0], _x select 0];
+    _ctrlRunning lnbAddRow [_data select 3, str _costSupply, str _costAmmo, str _costFuel, str _costIntel];
+    _ctrlRunning lnbSetData [[_forEachIndex, 0], _x];
 } forEach _running;
 
 true
