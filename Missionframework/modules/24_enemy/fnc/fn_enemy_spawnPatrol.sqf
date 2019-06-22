@@ -4,7 +4,7 @@
     File: fn_enemy_spawnPatrol.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-08
-    Last Update: 2019-06-15
+    Last Update: 2019-06-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -48,7 +48,7 @@ if ((_patrolSectors select 0) isEqualTo "") exitWith {
 };
 
 // Fetch some nearby patrol sectors
-_patrolSectors append [(_sectors select {((getMarkerPos (_patrolSectors select 0)) distance2D (getMarkerPos _x)) < 2000})] call BIS_fnc_arrayShuffle;
+_patrolSectors append ((_sectors select {((getMarkerPos (_patrolSectors select 0)) distance2D (getMarkerPos _x)) < 2000}) call BIS_fnc_arrayShuffle);
 
 // Exit if sector is too far away from other sectors for a patrol route
 if ((count _patrolSectors) < 2) exitWith {
@@ -103,8 +103,10 @@ _waypoint setWaypointCompletionRadius 30;
 KPLIB_enemy_patrols pushBack _grp;
 
 // !DEBUG! Add patrol to Zeus
-{
-    _x addCuratorEditableObjects [(units _grp) + [_veh], true];
-} forEach allCurators;
+if (KPLIB_param_enemyDebug) then {
+    {
+        _x addCuratorEditableObjects [(units _grp) + [_veh], true];
+    } forEach allCurators;
+};
 
 _grp
