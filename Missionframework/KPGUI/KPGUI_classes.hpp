@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2019-05-04
+    Last Update: 2019-05-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -57,7 +57,6 @@ class KPGUI_PRE_ScrollBar {
 class KPGUI_PRE_Title {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 0;
     idc = -1;
     colorBackground[] = KP_COLOR_PLAYERDEFINE;
@@ -83,7 +82,6 @@ class KPGUI_PRE_Title {
 class KPGUI_PRE_CloseCross {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 11;
     style = 48 + 2048;
     color[] = {1, 1, 1, 0.75};
@@ -124,7 +122,6 @@ class KPGUI_PRE_VersionIcon: KPGUI_PRE_CloseCross {
 class KPGUI_PRE_Background {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 0;
     idc = -1;
     colorBackground[] = KP_COLOR_BACKGROUND;
@@ -150,7 +147,6 @@ class KPGUI_PRE_Background {
 class KPGUI_PRE_Text {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 0;
     idc = -1;
     colorBackground[] = {0, 0, 0, 0};
@@ -182,7 +178,6 @@ class KPGUI_PRE_InlineTitle: KPGUI_PRE_Text {
 class KPGUI_PRE_ActiveText {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 11;
     style = 2;
     color[] = {0, 0, 0, 1};
@@ -234,7 +229,6 @@ class KPGUI_PRE_PictureRatio: KPGUI_PRE_Picture {
 class KPGUI_PRE_Button {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 1;
     text = "";
     colorText[] = {1, 1, 1, 1};
@@ -316,7 +310,6 @@ class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup
 class KPGUI_PRE_Combo {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 4;
     colorSelect[] = {0, 0, 0, 1};
     colorText[] = {1, 1, 1, 1};
@@ -401,7 +394,6 @@ class KPGUI_PRE_CheckBox {
 class KPGUI_PRE_ListBox {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 5;
     rowHeight = 0;
     colorText[] = {1, 1, 1, 1};
@@ -451,7 +443,6 @@ class KPGUI_PRE_ListBox {
 class KPGUI_PRE_ListNBox {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 102;
     rowHeight = 0;
     colorText[] = {1, 1, 1, 1};
@@ -553,7 +544,6 @@ class KPGUI_PRE_Slider {
 class KPGUI_PRE_EditBox {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 2;
     x = 0;
     y = 0;
@@ -595,7 +585,6 @@ class KPGUI_PRE_ProgressBar
 class KPGUI_PRE_MapControl {
     deletable = 0;
     fade = 0;
-    access = 0;
     type = 101;
     idc = 51;
     style = 16 + 32;
@@ -1195,7 +1184,7 @@ class KPGUI_PRE_DialogTitleSR: KPGUI_PRE_Title {
 
 // Cross symbol
 class KPGUI_PRE_DialogCrossSR: KPGUI_PRE_CloseCross {
-    x = safeZoneX + safeZoneW * (KP_X_VAL_SR + KP_WIDTH_VAL_SR - 0.02)
+    x = safeZoneX + safeZoneW * (KP_X_VAL_SR + KP_WIDTH_VAL_SR - 0.02);
     y = KP_GETY_CROSS(KP_Y_VAL_SR);
 };
 
@@ -1219,7 +1208,7 @@ class KPGUI_PRE_DialogButtonSR: KPGUI_PRE_Button {
 */
 
 class KPGUI_PRE_LogoRightCorner: KPGUI_PRE_PictureRatio {
-    text = "KPGUI\res\kp512_CA.paa";
+    text = "KPGUI\res\kp512_ca.paa";
     x = "safezoneX + safezoneW - 5.3 * (((safezoneW / safezoneH) min 1.2) / 40)";
     y = "safezoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
     w = "3.5 * (((safezoneW / safezoneH) min 1.2) / 40)";

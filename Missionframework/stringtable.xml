@@ -28,7 +28,7 @@
 
         Localization contributors:
 
-            English | Updated: 2019-04-27
+            English | Updated: 2019-06-15
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -41,7 +41,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2019-04-27
+            German | Updated: 2019-06-15
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -1327,6 +1327,21 @@
             <German>ACE Arsenal</German>
         </Key>
 
+        <!-- ENEMY CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY">
+            <English>KPLIB - Enemy Commander</English>
+            <German>KPLIB - Feindlicher Kommandant</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY_DEBUG">
+            <English>Enable Debug Mode</English>
+            <Chinese>啟動除錯模式</Chinese>
+            <German>Debug Modus aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY_DEBUG_TT">
+            <English>Enables/Disables debug mode for this module.</English>
+            <German>Aktiviert/Deaktiviert den Debug Modus dieses Moduls.</German>
+        </Key>
+
         <!-- GENERAL CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_GENERAL">
             <English>KPLIB - General</English>
@@ -1816,7 +1831,7 @@
             <English>Enable cratefiller equipment overview</English>
             <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW_TT">
             <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
             <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>

@@ -4,7 +4,7 @@
     File: fn_common_getPresetClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-08
-    Last Update: 2019-04-22
+    Last Update: 2019-06-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -13,7 +13,7 @@
 
     Parameter(s):
         _type       - Preset type name                                          [STRING, defaults to ""]
-        _side       - Preset side                                               [SIDE, defaults to KPLIB_preset_sideEnemy]
+        _side       - Preset side                                               [SIDE, defaults to KPLIB_preset_sideE]
         _isArray    - Array of classnames (true) or single classname (false)    [BOOL, defaults to false]
 
     Returns:
