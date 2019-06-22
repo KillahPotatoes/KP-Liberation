@@ -103,7 +103,7 @@ These mods are recommended by us, as they are likely to increase your gaming exp
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
-Also you should think about using these mods as serverside mods: 
+Also you should think about using these mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
@@ -167,6 +167,7 @@ class Missions
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
+* Added: Statistics will be posted additionally in the server log after winning the campaign.
 * Added: Encore Anti Air static to sensible presets.
 * Removed: Vanilla player score saving.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
@@ -249,7 +250,7 @@ class Missions
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
 * Fixed: File name instead of mission name in mission selection screen.
 * Fixed: "Taking Command" spam from AI after players death.
-* Fixed: Fixed range for recycling and start of building instead of using FOB range. 
+* Fixed: Fixed range for recycling and start of building instead of using FOB range.
 * Fixed: Some vehicles with dynamic loadout support lost their weapons when rearmed by Liberation rearm module.
 
 ### 0.963 (05th January 2018)
