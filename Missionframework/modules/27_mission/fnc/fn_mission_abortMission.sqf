@@ -5,7 +5,7 @@
     File: fn_mission_abortMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-22
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -38,7 +38,7 @@ _cost params [
     "_costFuel",
     "_costIntel"
 ];
-private _FOB = (_runningMissions select {(_x select 0) isEqualTo _mission}) select 1;
+private _FOB = (_runningMissions select (_runningMissions findIf {(_x select 0) isEqualTo _mission})) select 1;
 private _crateCapacity = 0;
 private _crateCount = 0;
 
@@ -61,10 +61,14 @@ if (_crateCapacity < _crateCount) exitWith {
 };
 
 // Delete the mission from the running mission data
-_missionData deleteAt (_missionData findIf {_x select 0 isEqualTo _mission});
+_runningMissions deleteAt (_runningMissions findIf {(_x select 0) isEqualTo _mission});
 
 // Refund the costs
 if !(_cost isEqualTo [0, 0, 0, 0]) then {
+    _costSupply = _costSupply * (KPLIB_param_missionRefund / 100);
+    _costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
+    _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
+    _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
     [_FOB, _costSupply, _costAmmo, _costFuel] call KPLIB_fnc_resources_refund;
     [_costIntel] call KPLIB_fnc_resources_addIntel;
 };
