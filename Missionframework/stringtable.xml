@@ -270,6 +270,10 @@
             <English>-- LOGISTIC --</English>
             <German>-- LOGISTIK --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_MISSION">
+            <English>-- MISSIONS --</English>
+            <German>-- MISSIONEN --</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
             <English>-- PERMISSIONS --</English>
             <German>-- RECHTE --</German>

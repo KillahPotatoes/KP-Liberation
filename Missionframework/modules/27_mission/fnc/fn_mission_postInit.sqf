@@ -4,7 +4,7 @@
     File: fn_mission_postInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-09
-    Last Update: 2019-06-21
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -28,6 +28,13 @@ if (isServer) then {
         {},
         false
     ] call KPLIB_fnc_permission_addPermissionHandler;
+
+};
+
+if (hasInterface) then {
+
+    // Setup of actions available to players
+    [] call KPLIB_fnc_mission_setupPlayerActions;
 
 };
 
