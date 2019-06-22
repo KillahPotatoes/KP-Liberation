@@ -52,7 +52,7 @@ private _penaltyString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, 
 
 // Set data in namespace
 private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _rewardString, _penaltyString, _picture, _condition, _cost, _minTime, _randomTime];
-MSVAR(toLower _missionName, _data);
+MSVAR(_missionName, _data);
 
 _data = MGVAR("registeredMissions", []);
 _data pushBack _missionName;

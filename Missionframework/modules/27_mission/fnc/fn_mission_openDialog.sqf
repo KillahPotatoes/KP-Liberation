@@ -53,7 +53,7 @@ private _running = MGVAR("runningMissions", []);
 
 // Fill the dialog controls
 {
-    _data = MGVAR(toLower _x, []);
+    _data = MGVAR(_x, []);
     (_data select 9) params [
         "_costSupply",
         "_costAmmo",
@@ -65,7 +65,7 @@ private _running = MGVAR("runningMissions", []);
 } forEach _missions;
 
 {
-    _data = MGVAR(toLower _x, []);
+    _data = MGVAR(_x select 0, []);
     (_data select 9) params [
         "_costSupply",
         "_costAmmo",
@@ -77,7 +77,7 @@ private _running = MGVAR("runningMissions", []);
     _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
     _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
     _ctrlRunning lnbAddRow [_data select 3, str _costSupply, str _costAmmo, str _costFuel, str _costIntel];
-    _ctrlRunning lnbSetData [[_forEachIndex, 0], _x];
+    _ctrlRunning lnbSetData [[_forEachIndex, 0], (_x select 0)];
 } forEach _running;
 
 true

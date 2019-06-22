@@ -37,7 +37,7 @@ if (_ctrl isEqualTo _ctrlButtonMission) then {
     [_mission] call KPLIB_fnc_mission_startMission;
 };
 
-if (_ctrl isEqualTo _ctrlButtonMission) then {
+if (_ctrl isEqualTo _ctrlButtonRunning) then {
     private _index = lnbCurSelRow _ctrlRunning;
     private _mission = [_ctrlRunning, _index] call KPLIB_fnc_mission_readData;
     [_mission] call KPLIB_fnc_mission_abortMission;
