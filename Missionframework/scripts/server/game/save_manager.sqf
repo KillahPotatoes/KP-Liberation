@@ -103,6 +103,7 @@ stats_blufor_vehicles_killed = 0;
 stats_civilian_buildings_destroyed = 0;
 stats_civilian_vehicles_killed = 0;
 stats_civilian_vehicles_killed_by_players = 0;
+stats_civilian_vehicles_seized = 0;
 stats_civilians_healed = 0;
 stats_civilians_killed = 0;
 stats_civilians_killed_by_players = 0;
@@ -170,37 +171,38 @@ if (!isNil "greuh_liberation_savegame") then {
         stats_blufor_teamkills                      = _stats select  4;
         stats_blufor_vehicles_built                 = _stats select  5;
         stats_blufor_vehicles_killed                = _stats select  6;
-        stats_civilian_buildings_destroyed          = _stats select  7
+        stats_civilian_buildings_destroyed          = _stats select  7;
         stats_civilian_vehicles_killed              = _stats select  8;
         stats_civilian_vehicles_killed_by_players   = _stats select  9;
-        stats_civilians_healed                      = _stats select 10;
-        stats_civilians_killed                      = _stats select 11;
-        stats_civilians_killed_by_players           = _stats select 12;
-        stats_fobs_built                            = _stats select 13;
-        stats_fobs_lost                             = _stats select 14;
-        stats_fuel_produced                         = _stats select 15;
-        stats_fuel_spent                            = _stats select 16;
-        stats_hostile_battlegroups                  = _stats select 17;
-        stats_ieds_detonated                        = _stats select 18;
-        stats_opfor_killed_by_players               = _stats select 19;
-        stats_opfor_soldiers_killed                 = _stats select 20;
-        stats_opfor_vehicles_killed                 = _stats select 21;
-        stats_opfor_vehicles_killed_by_players      = _stats select 22;
-        stats_player_deaths                         = _stats select 23;
-        stats_playtime                              = _stats select 24;
-        stats_prisonners_captured                   = _stats select 25;
-        stats_readiness_earned                      = _stats select 26;
-        stats_reinforcements_called                 = _stats select 27;
-        stats_resistance_killed                     = _stats select 28;
-        stats_resistance_teamkills                  = _stats select 29;
-        stats_resistance_teamkills_by_players       = _stats select 30;
-        stats_secondary_objectives                  = _stats select 31;
-        stats_sectors_liberated                     = _stats select 32;
-        stats_sectors_lost                          = _stats select 33;
-        stats_spartan_respawns                      = _stats select 34;
-        stats_supplies_produced                     = _stats select 35;
-        stats_supplies_spent                        = _stats select 36;
-        stats_vehicles_recycled                     = _stats select 37;
+        stats_civilian_vehicles_seized              = _stats select 10;
+        stats_civilians_healed                      = _stats select 11;
+        stats_civilians_killed                      = _stats select 12;
+        stats_civilians_killed_by_players           = _stats select 13;
+        stats_fobs_built                            = _stats select 14;
+        stats_fobs_lost                             = _stats select 15;
+        stats_fuel_produced                         = _stats select 16;
+        stats_fuel_spent                            = _stats select 17;
+        stats_hostile_battlegroups                  = _stats select 18;
+        stats_ieds_detonated                        = _stats select 19;
+        stats_opfor_killed_by_players               = _stats select 20;
+        stats_opfor_soldiers_killed                 = _stats select 21;
+        stats_opfor_vehicles_killed                 = _stats select 22;
+        stats_opfor_vehicles_killed_by_players      = _stats select 23;
+        stats_player_deaths                         = _stats select 24;
+        stats_playtime                              = _stats select 25;
+        stats_prisonners_captured                   = _stats select 26;
+        stats_readiness_earned                      = _stats select 27;
+        stats_reinforcements_called                 = _stats select 28;
+        stats_resistance_killed                     = _stats select 29;
+        stats_resistance_teamkills                  = _stats select 30;
+        stats_resistance_teamkills_by_players       = _stats select 31;
+        stats_secondary_objectives                  = _stats select 32;
+        stats_sectors_liberated                     = _stats select 33;
+        stats_sectors_lost                          = _stats select 34;
+        stats_spartan_respawns                      = _stats select 35;
+        stats_supplies_produced                     = _stats select 36;
+        stats_supplies_spent                        = _stats select 37;
+        stats_vehicles_recycled                     = _stats select 38;
     } else {
         /*
             --- Compatibility for older save data ---
@@ -448,6 +450,7 @@ if (!isNil "greuh_liberation_savegame") then {
     diag_log "[KP LIBERATION] [SAVE] Save nil";
 };
 
+publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
 publicVariable "GRLIB_all_fobs";
@@ -592,6 +595,7 @@ while {true} do {
             stats_civilian_buildings_destroyed,
             stats_civilian_vehicles_killed,
             stats_civilian_vehicles_killed_by_players,
+            stats_civilian_vehicles_seized,
             stats_civilians_healed,
             stats_civilians_killed,
             stats_civilians_killed_by_players,

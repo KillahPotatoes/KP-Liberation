@@ -13,6 +13,9 @@ if (((typeOf _vehicle) in civilian_vehicles) && !(_vehicle in KP_liberation_cr_v
 
 	KP_liberation_cr_vehicles pushBack _vehicle;
 	publicVariable "KP_liberation_cr_vehicles";
+
+    stats_civilian_vehicles_seized = stats_civilian_vehicles_seized + 1;
+    publicVariable "stats_civilian_vehicles_seized";
 };
 
 if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] checkVehicle finished on: %1 - Stolen vehicle list: %2", debug_source, KP_liberation_cr_vehicles];_text remoteExec ["diag_log",2];};
