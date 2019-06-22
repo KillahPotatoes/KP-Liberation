@@ -4,7 +4,7 @@
     File: KPLIB_mission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-15
-    Last Update: 2019-06-22
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -19,7 +19,7 @@ class KPLIB_mission {
     class controlsBackground {
 
         class KPLIB_DialogTitle: KPGUI_PRE_DialogTitleS {
-            text = "KP Liberation Missions";
+            text = "$STR_KPLIB_DIALOG_MISSION_TITLE";
         };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundS {};
@@ -31,7 +31,7 @@ class KPLIB_mission {
         // Left side of the dialog
 
         class KPLIB_LabelStart: KPGUI_PRE_InlineTitle {
-            text = "Available Missions";
+            text = "$STR_KPLIB_DIALOG_MISSION_TITLESTART";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -61,7 +61,7 @@ class KPLIB_mission {
 
         class KPLIB_ButtonStart: KPGUI_PRE_InlineButton {
             idc = KPLIB_IDC_MISSION_MISSIONBUTTON;
-            text = "Start Mission";
+            text = "$STR_KPLIB_DIALOG_MISSION_BUTTONSTART";
             x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,30,48);
             w = KP_GETW(KP_WIDTH_VAL_S,2);
@@ -70,7 +70,7 @@ class KPLIB_mission {
         };
 
         class KPLIB_LabelAbort: KPLIB_LabelStart {
-            text = "Running Missions";
+            text = "$STR_KPLIB_DIALOG_MISSION_TITLEABORT";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,32,48);
         };
 
@@ -89,7 +89,7 @@ class KPLIB_mission {
 
         class KPLIB_ButtonAbort: KPLIB_ButtonStart {
             idc = KPLIB_IDC_MISSION_RUNNINGBUTTON;
-            text = "Abort Mission";
+            text = "$STR_KPLIB_DIALOG_MISSION_BUTTONABORT";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,46,48);
             onButtonClick = "[_this select 0] call KPLIB_fnc_mission_buttonClick";
         };
@@ -114,7 +114,7 @@ class KPLIB_mission {
         };
 
         class KPLIB_LabelVictory: KPLIB_LabelDescription {
-            text = "Reward on victory";
+            text = "$STR_KPLIB_DIALOG_MISSION_TITLEREWARD";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,15,48);
         };
 
@@ -126,7 +126,7 @@ class KPLIB_mission {
         };
 
         class KPLIB_LabelDefeat: KPLIB_LabelVictory {
-            text = "Penalty on defeat";
+            text = "$STR_KPLIB_DIALOG_MISSION_TITLEPENALTY";
             y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,23,48);
         };
 

@@ -1127,6 +1127,38 @@
             <German>Wähle eine Waffe um die passenden Magazine oder Zubehör zu finden.</German>
             <Polish>Wybierz broń do której mają być wyszukane magazynki oraz dodatki.</Polish>
         </Key>
+
+        <!-- MISSION DIALOG -->
+
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLE">
+            <English>KP Liberation Missions</English>
+            <German>KP Liberation Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLESTART">
+            <English>Available missions</English>
+            <German>Verfügbare Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONSTART">
+            <English>Start mission</English>
+            <German>Mission starten</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEABORT">
+            <English>Running missions</English>
+            <German>Laufende Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONABORT">
+            <English>Abort mission</English>
+            <German>Mission abbrechen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEREWARD">
+            <English>Reward on mission success</English>
+            <German>Belohnung bei erfoglreicher Mission</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEPENALTY">
+            <English>Penalty on mission failure</English>
+            <German>Strafe bei nicht erfoglreicher Mission</German>
+        </Key>
+
     </Package>
 
 
