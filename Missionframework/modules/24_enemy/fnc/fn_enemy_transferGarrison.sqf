@@ -4,7 +4,7 @@
     File: fn_enemy_transferGarrison.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-18
-    Last Update: 2019-04-23
+    Last Update: 2019-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -40,7 +40,7 @@ if (_origin isEqualTo "" || _destination isEqualTo "") exitWith {[]};
 // Exit, if origin sector is currently active
 if (_origin in KPLIB_garrison_active) exitWith {[]};
 
-if (KPLIB_param_debug) then {[format ["Transferring garrison from %1 (%2) to %3 (%4) with [%5, %6]", markerText _origin, _origin, markerText _destination, _destination, _troops, _vehicleClasses], "ENEMY"] call KPLIB_fnc_common_log;};
+if (KPLIB_param_enemyDebug) then {[format ["Transferring garrison from %1 (%2) to %3 (%4) with [%5, %6]", markerText _origin, _origin, markerText _destination, _destination, _troops, _vehicleClasses], "ENEMY"] call KPLIB_fnc_common_log;};
 
 ["KPLIB_transferConvoy_start", [_origin, _destination]] call CBA_fnc_localEvent;
 
@@ -122,7 +122,7 @@ if !(_troops > (_garrison select 2)) then {
         } forEach allCurators;
     };
 } else {
-    if (KPLIB_param_debug) then {[format ["%1 exceeds garrison strength of %2 (%3) for transfer", _troops, markerText _origin, _origin], "ENEMY"] call KPLIB_fnc_common_log;};
+    if (KPLIB_param_enemyDebug) then {[format ["%1 exceeds garrison strength of %2 (%3) for transfer", _troops, markerText _origin, _origin], "ENEMY"] call KPLIB_fnc_common_log;};
 };
 
 // Handle requested vehicles
@@ -137,7 +137,7 @@ if !(_troops > (_garrison select 2)) then {
         private _spawnData = [markerPos _origin] call _getPosDir;
         _vehicles pushBack ([_x, _spawnData select 0, _spawnData select 1, false, true] call KPLIB_fnc_common_createVehicle);
     } else {
-        if (KPLIB_param_debug) then {[format ["%1 not available at garrison of %2 (%3)", _x, markerText _origin, _origin], "ENEMY"] call KPLIB_fnc_common_log;};
+        if (KPLIB_param_enemyDebug) then {[format ["%1 not available at garrison of %2 (%3)", _x, markerText _origin, _origin], "ENEMY"] call KPLIB_fnc_common_log;};
     };
 } forEach _vehicleClasses;
 

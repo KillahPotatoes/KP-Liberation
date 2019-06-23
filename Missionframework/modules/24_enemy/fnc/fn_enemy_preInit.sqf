@@ -4,7 +4,7 @@
     File: fn_enemy_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-04-23
+    Last Update: 2019-06-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -24,11 +24,12 @@ if (isServer) then {["Module initializing...", "PRE] [ENEMY", true] call KPLIB_f
     ----- Module Globals -----
 */
 
-// Strength of the enemy (0-1000)
-KPLIB_enemy_strength = 500;
-
 // Awareness of the enemy (0-100)
 KPLIB_enemy_awareness = 0;
+// All enemy patrols
+KPLIB_enemy_patrols = [];
+// Strength of the enemy (0-1000)
+KPLIB_enemy_strength = 500;
 
 /*
     ----- Module Initialization -----

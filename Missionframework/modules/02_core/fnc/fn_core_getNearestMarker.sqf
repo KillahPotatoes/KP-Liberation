@@ -4,7 +4,7 @@
     File: fn_core_getNearestMarker.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-26
-    Last Update: 2019-04-22
+    Last Update: 2019-06-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -27,8 +27,8 @@ params [
 ];
 
 
-private _markersWithinRange =  _markers select {((markerPos _x) distance _centerPos) < _range};
-private _markersAscByRange = [_markersWithinRange, [_centerPos], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy;
+private _markersWithinRange =  _markers select {((markerPos _x) distance2D _centerPos) < _range};
+private _markersAscByRange = [_markersWithinRange, [_centerPos], {(markerPos _x) distance2D _input0}, "ASCEND"] call BIS_fnc_sortBy;
 // Return nearest marker
 if !(_markersAscByRange isEqualTo []) then {
     _markersAscByRange select 0

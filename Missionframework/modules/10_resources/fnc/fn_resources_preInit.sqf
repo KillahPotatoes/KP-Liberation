@@ -4,7 +4,7 @@
     File: fn_resources_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-13
-    Last Update: 2019-04-22
+    Last Update: 2019-06-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -147,10 +147,7 @@ if (isServer) then {
     ]] call KPLIB_fnc_init_filterMods;
 
     // Plain transport vehicle classnames array
-    KPLIB_resources_transportVehicles = [];
-    {
-        KPLIB_resources_transportVehicles pushBack (_x select 0);
-    } forEach KPLIB_resources_transportConfigs;
+    KPLIB_resources_transportVehicles = KPLIB_resources_transportConfigs apply {_x select 0};
 
     // Send filtered lists to clients
     publicVariable "KPLIB_resources_transportConfigs";

@@ -30,6 +30,23 @@ if (isServer) then {
         "GroupLogistics"
     ] call KPLIB_fnc_permission_addPermissionHandler;
 
+    // Cratefiller logistic menu
+    [
+        "Cratefiller",
+        {
+            if (["Cratefiller"] call KPLIB_fnc_permission_checkPermission && KPLIB_param_cratefiller) then {
+                closeDialog 0;
+                [] call KPLIB_fnc_cratefiller_openDialog;
+            } else {
+                [
+                    ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+                    [[localize "STR_KPLIB_HINT_NOCRATEFILLER", localize "STR_KPLIB_HINT_NOPERMISSION"] select KPLIB_param_cratefiller]
+                ] call CBA_fnc_notify;
+            };
+        },
+        "STR_KPLIB_LOGISTIC_CRATEFILLER"
+    ] call KPLIB_fnc_logistic_addMenu;
+
     // create cratefiller presets on startup
     [] call KPLIB_fnc_cratefiller_presets;
 };
