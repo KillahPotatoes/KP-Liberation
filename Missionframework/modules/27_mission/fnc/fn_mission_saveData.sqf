@@ -22,7 +22,7 @@
 if (KPLIB_param_savedebug) then {["Mission module saving...", "SAVE"] call KPLIB_fnc_common_log;};
 
 // Modify the data which will be saved
-private _timeData = (MGVAR("timeCheck", [])) apply {(_x select 1) = (_x select 1) - diag_tickTime};
+private _timeData = (MGVAR("timeCheck", [])) apply {[_x select 0, (_x select 1) - diag_tickTime]};
 
 // Set module data to save and send it to the global save data array
 ["mission",
