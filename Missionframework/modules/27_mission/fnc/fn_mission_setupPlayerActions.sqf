@@ -24,7 +24,7 @@ private _missionCondition = '
     _target isEqualTo _originalTarget &&
     (
         serverCommandAvailable "#kick" ||
-        (["Mission"] call KPLIB_fnc_permission_checkPermission)
+        {["Mission"] call KPLIB_fnc_permission_checkPermission}
     )
 ';
 private _actionArray = [localize "STR_KPLIB_ACTION_MISSION", {[] call KPLIB_fnc_mission_openDialog}, nil, -801, false, true, "", _missionCondition, 10];

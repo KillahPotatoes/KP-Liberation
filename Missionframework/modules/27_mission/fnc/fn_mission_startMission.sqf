@@ -45,7 +45,7 @@ private _resourceCheck = true;
 private _timeCheck = true;
 
 // Check the mission condition
-private _conditionCheck = [] call (_missionData select 8);
+private _conditionCheckFnc = _missionData select 8;
 
 // Check the timestamp of the mission
 private _timeData = MGVAR("timeCheck", []);
@@ -77,7 +77,7 @@ if !(_missionData select 0) then {
 };
 
 // Exit if one of the condition isn't true
-if !(_conditionCheck && _resourceCheck && _timeCheck) exitWith {
+if !(_resourceCheck && {_timeCheck && {[] call _conditionCheckFnc}}) exitWith {
     false
 };
 
@@ -100,6 +100,6 @@ MSVAR("runningMissions", _runningMissions);
 MSVAR("timeCheck", _timeData);
 
 closeDialog 0;
-[{!dialog}, {call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
+[{!dialog}, {[] call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
 
 true

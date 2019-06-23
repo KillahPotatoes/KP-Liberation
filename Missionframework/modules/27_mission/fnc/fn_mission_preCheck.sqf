@@ -6,7 +6,7 @@
     File: fn_mission_preCheck.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-21
-    Last Update: 2019-06-22
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -24,6 +24,9 @@
 private _dialog = findDisplay KPLIB_IDC_MISSION_DIALOG;
 private _ctrlMission = _dialog displayCtrl KPLIB_IDC_MISSION_MISSIONLIST;
 private _ctrlMissionButton = _dialog displayCtrl KPLIB_IDC_MISSION_MISSIONBUTTON;
+
+// Disable the button
+_ctrlMissionButton ctrlEnable false;
 
 // Read the dialog controls
 private _index = lnbCurSelRow _ctrlMission;
@@ -78,7 +81,6 @@ if !(_missionData select 0) then {
 
 
 // Disable the button if one of the condition isn't true
-_ctrlMissionButton ctrlEnable true;
 if !(_conditionCheck && _resourceCheck && _timeCheck) then {
     _ctrlMissionButton ctrlEnable false;
     if !(_conditionCheck) then {
@@ -100,6 +102,7 @@ if !(_conditionCheck && _resourceCheck && _timeCheck) then {
         ] call CBA_fnc_notify;
     };
 } else {
+    _ctrlMissionButton ctrlEnable true;
     [_mission] call KPLIB_fnc_mission_displayMission;
 };
 

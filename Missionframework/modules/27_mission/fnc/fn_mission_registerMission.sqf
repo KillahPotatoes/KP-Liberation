@@ -5,7 +5,7 @@
     File: fn_mission_registerMission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-06-13
-    Last Update: 2019-06-22
+    Last Update: 2019-06-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -46,6 +46,9 @@ if (_missionName isEqualTo "") exitWith {
 };
 
 private _string = localize (["STR_KPLIB_MISSION_", toUpper _missionName] joinString "");
+if (_string isEqualTo "") then {
+    _string = _missionName;
+};
 private _descString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_DESCR"] joinString "");
 private _rewardString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_REWARD"] joinString "");
 private _penaltyString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_PENALTY"] joinString "");

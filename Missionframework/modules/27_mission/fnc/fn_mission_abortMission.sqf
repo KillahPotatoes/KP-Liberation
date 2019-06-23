@@ -41,6 +41,10 @@ _cost params [
 private _FOB = (_runningMissions select (_runningMissions findIf {(_x select 0) isEqualTo _mission})) select 1;
 private _crateCapacity = 0;
 private _crateCount = 0;
+_costSupply = _costSupply * (KPLIB_param_missionRefund / 100);
+_costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
+_costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
+_costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
 
 // Check if the mission is a buyable mission and if there's enough empty storage capacity
 if !(_missionData select 0) then {
@@ -57,6 +61,10 @@ if !(_missionData select 0) then {
 
 // Exit if there's not enough storage
 if (_crateCapacity < _crateCount) exitWith {
+    [
+        ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],
+        [localize "STR_KPLIB_HINT_MISSIONSTORAGE"]
+    ] call CBA_fnc_notify;
     false
 };
 
@@ -65,10 +73,6 @@ _runningMissions deleteAt (_runningMissions findIf {(_x select 0) isEqualTo _mis
 
 // Refund the costs
 if !(_cost isEqualTo [0, 0, 0, 0]) then {
-    _costSupply = _costSupply * (KPLIB_param_missionRefund / 100);
-    _costAmmo = _costAmmo * (KPLIB_param_missionRefund / 100);
-    _costFuel = _costFuel * (KPLIB_param_missionRefund / 100);
-    _costIntel = _costIntel * (KPLIB_param_missionRefund / 100);
     [_FOB, _costSupply, _costAmmo, _costFuel] call KPLIB_fnc_resources_refund;
     [_costIntel] call KPLIB_fnc_resources_addIntel;
 };
@@ -80,6 +84,6 @@ MSVAR("runningMissions", _runningMissions);
 ["KPLIB_missionExec", [_missionData select 2]] call CBA_fnc_serverEvent;
 
 closeDialog 0;
-[{!dialog}, {call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
+[{!dialog}, {[] call KPLIB_fnc_mission_openDialog;}] call CBA_fnc_waitUntilAndExecute;
 
 true

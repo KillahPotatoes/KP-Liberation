@@ -1134,9 +1134,9 @@
             <English>KP Liberation Missions</English>
             <German>KP Liberation Missionen</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLESTART">
-            <English>Available missions</English>
-            <German>Verfügbare Missionen</German>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONABORT">
+            <English>Abort mission</English>
+            <German>Mission abbrechen</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONSTART">
             <English>Start mission</English>
@@ -1146,17 +1146,17 @@
             <English>Running missions</English>
             <German>Laufende Missionen</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONABORT">
-            <English>Abort mission</English>
-            <German>Mission abbrechen</German>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEPENALTY">
+            <English>Penalty on mission failure</English>
+            <German>Strafe bei nicht erfoglreicher Mission</German>
         </Key>
         <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEREWARD">
             <English>Reward on mission success</English>
             <German>Belohnung bei erfoglreicher Mission</German>
         </Key>
-        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEPENALTY">
-            <English>Penalty on mission failure</English>
-            <German>Strafe bei nicht erfoglreicher Mission</German>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLESTART">
+            <English>Available missions</English>
+            <German>Verfügbare Missionen</German>
         </Key>
 
     </Package>
@@ -1205,6 +1205,10 @@
         <Key ID="STR_KPLIB_HINT_MISSIONRESOURCES">
             <English>There aren't enough resources to start the mission.</English>
             <German>Es sind nicht genügend Ressourcen vorhanden, um die Mission zu starten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONSTORAGE">
+            <English>There isn't enough storage capacity to abort the mission.</English>
+            <German>Es ist nicht genügend Lagerkapazität vorhanden um die Mission abzubrechen.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_MISSIONTIME">
             <English>The mission can't be started yet, you'll need to wait some more time.</English>
