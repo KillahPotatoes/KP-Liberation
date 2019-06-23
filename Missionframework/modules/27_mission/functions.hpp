@@ -23,6 +23,9 @@ class mission {
     // Displays the information for the given mission
     class mission_displayMission {};
 
+    // Deletes the mission from the running missions
+    class mission_endMission {};
+
     // Loads module specific data from the save
     class mission_loadData {};
 
