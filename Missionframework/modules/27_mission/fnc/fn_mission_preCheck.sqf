@@ -82,7 +82,6 @@ if !(_missionData select 0) then {
 
 // Disable the button if one of the condition isn't true
 if !(_conditionCheck && _resourceCheck && _timeCheck) then {
-    _ctrlMissionButton ctrlEnable false;
     if !(_conditionCheck) then {
         [
             ["a3\3den\data\controlsgroups\tutorial\close_ca.paa", 1, [1,0,0]],

@@ -1208,7 +1208,7 @@
         </Key>
         <Key ID="STR_KPLIB_HINT_MISSIONSTORAGE">
             <English>There isn't enough storage capacity to abort the mission.</English>
-            <German>Es ist nicht genügend Lagerkapazität vorhanden um die Mission abzubrechen.</German>
+            <German>Es ist nicht genügend Lagerkapazität vorhanden, um die Mission abzubrechen.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_MISSIONTIME">
             <English>The mission can't be started yet, you'll need to wait some more time.</English>

@@ -50,8 +50,17 @@ if (_string isEqualTo "") then {
     _string = _missionName;
 };
 private _descString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_DESCR"] joinString "");
+if (_descString isEqualTo "") then {
+    _descString = _missionName;
+};
 private _rewardString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_REWARD"] joinString "");
+if (_rewardString isEqualTo "") then {
+    _rewardString = _missionName;
+};
 private _penaltyString = localize (["STR_KPLIB_MISSION_", toUpper _missionName, "_PENALTY"] joinString "");
+if (_penaltyString isEqualTo "") then {
+    _penaltyString = _missionName;
+};
 
 // Set data in namespace
 private _data = [_eventMission, _missionStart, _missionAbort, _string, _descString, _rewardString, _penaltyString, _picture, _condition, _cost, _minTime, _randomTime];
