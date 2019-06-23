@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_example_preInit
+    KPLIB_fnc_cratefiller_preInit
 
-    File: fn_example_preInit.sqf
+    File: fn_cratefiller_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-05-04
+    Last Update: 2019-05-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -24,6 +24,9 @@ if (isServer) then {
 /*
     ----- Module Initialization -----
 */
+
+    // Register arsenal filled event handler
+    ["KPLIB_arsenal_newLists", {[] call KPLIB_fnc_cratefiller_presets;}] call CBA_fnc_addEventHandler;
 
     KPLIB_cratefiller_data = true call CBA_fnc_createNamespace;
     publicVariable "KPLIB_cratefiller_data";
