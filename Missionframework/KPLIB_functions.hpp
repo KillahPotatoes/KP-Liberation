@@ -4,7 +4,7 @@
     File: KPLIB_functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2019-04-22
+    Last Update: 2019-06-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -29,4 +29,6 @@ class KPLIB {
     #include "modules\23_logistic\functions.hpp"
     #include "modules\24_enemy\functions.hpp"
     #include "modules\26_cratefiller\functions.hpp"
+    #include "modules\27_mission\functions.hpp"
+    #include "modules\90_missions\functions.hpp"
 };

@@ -4,7 +4,7 @@
     File: KPLIB_cratefiller.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-05
-    Last Update: 2019-05-04
+    Last Update: 2019-06-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -23,31 +23,6 @@ class KPLIB_cratefiller {
         };
 
         class KPLIB_DialogArea: KPGUI_PRE_DialogBackgroundS {};
-
-        // Crates
-
-        class KPLIB_TransportTitle: KPGUI_PRE_InlineTitle {
-            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLETRANSPORT";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,2);
-            h = KP_GETH(KP_HEIGHT_VAL_S,16);
-        };
-
-        // Equipment
-
-        class KPLIB_EquipmentTitle: KPLIB_TransportTitle {
-            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
-        };
-
-        // Inventory
-
-        class KPLIB_InventoryTitle: KPLIB_TransportTitle {
-            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEINVENTORY";
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
-        };
 
         // Tools controlsGroup
 
@@ -127,29 +102,15 @@ class KPLIB_cratefiller {
             action = "[] call KPLIB_fnc_cratefiller_showOverview";
         };
 
-        // Crates
-
-        class KPLIB_ComboCargo: KPGUI_PRE_Combo {
-            idc = KPLIB_IDC_CRATEFILLER_COMBOCARGO;
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
-            h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT";
-            onLBSelChanged = "[] call KPLIB_fnc_cratefiller_showInventory";
-        };
-
-        class KPLIB_RefreshCargo: KPGUI_PRE_CloseCross {
-            text = "KPGUI\res\icon_refresh.paa";
-            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,23,24);
-            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
-            w = KP_GETW(KP_WIDTH_VAL_S,24);
-            h = KP_GETH(KP_HEIGHT_VAL_S,24);
-            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT";
-            action = "[] call KPLIB_fnc_cratefiller_getNearStorages";
-        };
-
         // Equipment
+
+        class KPLIB_EquipmentTitle: KPGUI_PRE_InlineTitle {
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT";
+            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,0,2);
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
+            w = KP_GETW(KP_WIDTH_VAL_S,2);
+            h = KP_GETH(KP_HEIGHT_VAL_S,16);
+        };
 
         class KPLIB_ComboEquipment: KPGUI_PRE_Combo {
             idc = KPLIB_IDC_CRATEFILLER_COMBOEQUIPMENT;
@@ -204,7 +165,40 @@ class KPLIB_cratefiller {
             idcRight = KPLIB_IDC_CRATEFILLER_RIGHTEQUIPMENTBUTTON;
         };
 
+        // Crates
+
+        class KPLIB_TransportTitle: KPLIB_EquipmentTitle {
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLETRANSPORT";
+            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,0,48);
+        };
+
+        class KPLIB_ComboCargo: KPGUI_PRE_Combo {
+            idc = KPLIB_IDC_CRATEFILLER_COMBOCARGO;
+            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,1,2);
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
+            w = KP_GETW(KP_WIDTH_VAL_S,(24/11));
+            h = KP_GETH(KP_HEIGHT_VAL_S,24);
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT";
+            onLBSelChanged = "[] call KPLIB_fnc_cratefiller_showInventory";
+        };
+
+        class KPLIB_RefreshCargo: KPGUI_PRE_CloseCross {
+            text = "KPGUI\res\icon_refresh.paa";
+            x = KP_GETCX(KP_X_VAL_S,KP_WIDTH_VAL_S,23,24);
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,3,48);
+            w = KP_GETW(KP_WIDTH_VAL_S,24);
+            h = KP_GETH(KP_HEIGHT_VAL_S,24);
+            tooltip = "$STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT";
+            action = "[] call KPLIB_fnc_cratefiller_getNearStorages";
+        };
+
         // Inventory
+
+        class KPLIB_InventoryTitle: KPLIB_TransportTitle {
+            text = "$STR_KPLIB_DIALOG_CRATEFILLER_TITLEINVENTORY";
+            y = KP_GETCY(KP_Y_VAL_S,KP_HEIGHT_VAL_S,5,48);
+        };
 
         class KPLIB_ExportName: KPLIB_SearchBar {
             idc = KPLIB_IDC_CRATEFILLER_EXPORTNAME;
