@@ -1,12 +1,13 @@
 waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "GRLIB_vehicle_to_military_base_links"};
 waitUntil {!isNil "blufor_sectors"};
 
 private _vehicle_unlock_markers = [];
 private _cfg = configFile >> "cfgVehicles";
 
 {
-    params ["_vehicle", "_base"];
-    private _marker = createMarkerLocal [format ["vehicleunlockmarker%1",_base], [(markerpos _base) select 0, ((markerpos _base) select 1) + 125]];
+    _x params ["_vehicle", "_base"];
+    private _marker = createMarkerLocal [format ["vehicleunlockmarker%1", _base], [(markerpos _base) select 0, ((markerpos _base) select 1) + 125]];
     _marker setMarkerTextLocal (getText (_cfg >> _vehicle >> "displayName"));
     _marker setMarkerColorLocal GRLIB_color_enemy;
     _marker setMarkerTypeLocal "mil_pickup";
@@ -27,8 +28,8 @@ while {true} do {
     {_x setMarkerColorLocal GRLIB_color_friendly;} forEach blufor_sectors;
 
     {
-        params ["_marker", "_base"]
-        _marker setMarkerColorLocal [GRLIB_color_enemy, GRLIB_color_friendly] select (_base in blufor_sectors);
+        _x params ["_marker", "_base"];
+        _marker setMarkerColorLocal ([GRLIB_color_enemy, GRLIB_color_friendly] select (_base in blufor_sectors));
     } forEach _vehicle_unlock_markers;
     _sector_count = count blufor_sectors;
 };

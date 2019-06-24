@@ -315,8 +315,8 @@ if (!isNil "greuh_liberation_savegame") then {
             _object setPosWorld _pos;
             _object setVectorDirAndUp [_vecDir, _vecUp];
 
-            // Add blufor crew, if it had crew
-            if (_hascrew) then {
+            // Add blufor crew, if it had crew or is a UAV
+            if ((unitIsUAV _object) || _hascrew) then {
                 [_object] call F_forceBluforCrew;
             };
 
@@ -430,7 +430,7 @@ if (!isNil "greuh_liberation_savegame") then {
     // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
     if (((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
         {
-            params ["_spawnPos", "_units"];
+            _x params ["_spawnPos", "_units"];
             private _grp = createGroup [GRLIB_side_friendly, true];
             {
                 _x createUnit [[_spawnPos, _grp] select (_forEachIndex > 0), _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}]'];
@@ -486,8 +486,8 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
     while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count sectors_military))} do {
-        _nextVehicle =  selectRandom (elite_vehicles - _assignedVehicles);
-        _nextBase =  selectRandom (sectors_military - _assignedBases);
+        _nextVehicle = selectRandom (elite_vehicles - _assignedVehicles);
+        _nextBase = selectRandom (sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         GRLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
@@ -544,7 +544,7 @@ while {true} do {
             {!(_x getVariable ["KP_liberation_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
             {!(_x getVariable ["KP_liberation_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
             {!((typeOf _x) in KP_liberation_crates)}                    // Exclude storage crates (those are handled separately)
-            };
+        };
 
         _allObjects = _allObjects + (_fobObjects select {!((typeOf _x) in KP_liberation_storage_buildings)});
         _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0});

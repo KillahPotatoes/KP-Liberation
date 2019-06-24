@@ -37,7 +37,7 @@ if (count _blufor_bigtowns == count sectors_bigtown) then {
 
     [publicstats] remoteExec ["remote_call_endgame"];
 
-    private _playtime_days = floor (stats_playtime / 86400); stats_playtime
+    private _playtime_days = floor (stats_playtime / 86400);
     private _playtime_hours = floor ((stats_playtime % 86400) / 3600);
     private _playtime_minutes = floor ((stats_playtime % 3600) / 60);
     private _playtime_seconds = stats_playtime % 60;

@@ -1,6 +1,6 @@
 params [
     ["_supply", 0, [0]],
-    ["_ammo", 0 [0]],
+    ["_ammo", 0, [0]],
     ["_fuel", 0, [0]],
     ["_storage", objNull, [objNull]],
     ["_delay", false, [false]]
@@ -18,7 +18,7 @@ private _pos = getPos _storage;
 
     while {_x > 0} do {
         _amount = 100;
-        if (_x / 100) < 1) then {
+        if ((_x / 100) < 1) then {
             _amount = _x;
         };
         _x = _x - _amount;
