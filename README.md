@@ -177,7 +177,10 @@ class Missions
 * Tweaked: Formatting/Comments in the preset files.
 * Tweaked: objectInit function and added comments to the array.
 * Tweaked: Some smaller code optimizations in the whole framework.
+* Tweaked: Changes in elite vehicles in presets are now also applied during a running campaign.
+* Tweaked: Player lead squads are now also saved near FOBs. (but still needs to be reassigned via zeus after load, of course)
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
+* Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.
