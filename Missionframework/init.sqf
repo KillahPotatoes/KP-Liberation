@@ -22,7 +22,9 @@ if (!isDedicated && !hasInterface && isMultiplayer) then {
 };
 
 if (!isDedicated && hasInterface) then {
-	waitUntil {alive player};
+    execVM "scripts\client\markers\sector_manager.sqf";
+    execVM "scripts\client\markers\fob_markers.sqf";
+    waitUntil {alive player};
 	if (debug_source != name player) then {debug_source = name player};
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
