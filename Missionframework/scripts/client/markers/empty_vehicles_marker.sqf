@@ -6,12 +6,14 @@ _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
 _support_to_skip = [
-	KP_liberation_supply_crate,
-	KP_liberation_ammo_crate,
-	KP_liberation_fuel_crate,
-	"B_Slingload_01_Repair_F",
-	"B_Slingload_01_Fuel_F",
-	"B_Slingload_01_Ammo_F"
+    KP_liberation_recycle_building,
+    KP_liberation_air_vehicle_building,
+    KP_liberation_supply_crate,
+    KP_liberation_ammo_crate,
+    KP_liberation_fuel_crate,
+    "B_Slingload_01_Repair_F",
+    "B_Slingload_01_Fuel_F",
+    "B_Slingload_01_Ammo_F"
 ];
 
 {
