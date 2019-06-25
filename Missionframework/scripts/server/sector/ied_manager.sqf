@@ -34,12 +34,7 @@ if (!(isnull _roadobj)) then {
 	_ied_obj = createMine [_ied_type, _roadpos getPos [_spread, random 360], [], 0];
 	_ied_obj setdir (random 360);
 
-	if (KP_liberation_asymmetric_debug > 0) then {
-        private _text = format ["[KP LIBERATION] [ASYMMETRIC] ied_manager.sqf -> IED %1 spawned at %2", _number, markerText _sector];_text remoteExec ["diag_log",2];
-        {
-            [_x, [[_ied_obj], true]] remoteExecCall ["addCuratorEditableObjects", 2];
-        } forEach allCurators;
-    };
+	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] ied_manager.sqf -> IED %1 spawned at %2", _number, markerText _sector];_text remoteExec ["diag_log",2];};
 
 	while {_sector in active_sectors && mineActive _ied_obj && !_goes_boom} do {
 		_nearinfantry = ((getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry]) select {side _x == GRLIB_side_friendly};
