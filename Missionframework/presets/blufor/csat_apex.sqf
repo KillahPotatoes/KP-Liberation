@@ -88,7 +88,7 @@ heavy_vehicles = [
     ["O_T_APC_Wheeled_02_rcws_v2_ghex_F",200,150,150],                  // Otokar
     ["O_T_APC_Tracked_02_cannon_ghex_F",200,200,150],                   // Stalker
     ["O_T_APC_Tracked_02_AA_ghex_F",300,250,175],                       // Tigris
-    ["O_T_MBT_02_cannon_ghex_F"500,400,250],                            // T-100
+    ["O_T_MBT_02_cannon_ghex_F",500,400,250],                           // T-100
     ["O_T_MBT_04_cannon_F",550,450,250],                                // T-14
     ["O_T_MBT_04_command_F",550,500,250],                               // T-14K
     ["O_T_MBT_02_arty_ghex_F",600,1250,300]                             // Sochor
