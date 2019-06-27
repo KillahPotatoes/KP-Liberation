@@ -28,6 +28,9 @@ params [
     ["_fuel", 0, [0]]
 ];
 
+// Can always pay if there is no price
+if ([_supplies, _ammo, _fuel] isEqualTo [0,0,0]) exitWith {true};
+
 // Exit if no location is given
 if (_location isEqualTo "") exitWith {false};
 

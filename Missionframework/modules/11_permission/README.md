@@ -1,11 +1,13 @@
 # KP Liberation Module Description
 
 ## Permission Module
-The permission module provides a permission framework with a dynamic dialog.
-There are functions to create and check the permissions.
+The permission module provides a dynamic permission framework with a permission overview dialog.
+It contains functions to check player permissions and add new permissions to the framework.
+Additionally it contains some pre defined permissions.
 
 ### Dependencies
 * Init
+* Common
 
 ### Consumed events
 **KPLIB_doLoad** (server side)
@@ -14,9 +16,18 @@ Calls KPLIB_fnc_permission_loadData to process saved module data
 **KPLIB_doSave** (server side)
 Calls KPLIB_fnc_permission_saveData to add the module data to the save array
 
+**KPLIB_permission_newPH** (server side)
+Calls KPLIB_fnc_permission_initDefault to add the permission to the default permissions
+
+**GetInMan** (client side)
+Calls KPLIB_fnc_permission_checkVehiclePermission and checks the player permission for the entered vehicle
+
+**SeatSwitchedMan** (client side)
+Calls KPLIB_fnc_permission_checkVehiclePermission and checks the player permission for the entered vehicle
+
 ### Emitted events
-**KPLIB_permission_newPH** (servere side)
-EMitted when a new permission handler is registered
+**KPLIB_permission_newPH** (server side)
+Emitted when a new permission handler is registered
 
 ### Functions
 * KPLIB_fnc_permission_addPermissionHandler
@@ -39,9 +50,17 @@ EMitted when a new permission handler is registered
 
   *Ejects the player and creates a hint.*
 
+* KPLIB_fnc_permission_export
+
+  *Export the permission list to profileNamespace.*
+
 * KPLIB_fnc_permission_getPermission
 
   *Checks the given permission and returns the result.*
+
+* KPLIB_fnc_permission_import
+
+  *Import the permission list from profileNamespace.*
 
 * KPLIB_fnc_permission_initDefault
 
@@ -75,31 +94,31 @@ EMitted when a new permission handler is registered
 
   *Fetches data which is bound to this module and send it to the global save data array.*
 
+* KPLIB_fnc_permission_settings
+
+  *CBA Settings initialization for this module.*
+
 * KPLIB_fnc_permission_setupPermissionControls
 
   *Reads the player permissions and applies them to the dialog controls.*
 
-* KPLIB_fnc_permission_setupplayerActions
+* KPLIB_fnc_permission_setupPlayerActions
 
   *Initialization of actions availible to players.*
-
-* KPLIB_fnc_permission_syncClients
-
-  *Receive client variables and send them to all clients.*
 
 ### Scripts
 No scripts will be started by this module
 
-### Example Permission Array
-KPLIB_permission_data getVariable ["permissionList", []]; = [
-    ["SteamID64", "PlayerName", [
-        ["AVehicle", true],
-        ["BVehicle", false],
-        ["CVehicle", false]
-    ]],
-    ["SteamID64", "PlayerName", [
-        ["AVehicle", true],
-        ["BVehicle", false],
-        ["CVehicle", false]
-    ]],
-];
+### Implemented permissions
+* Commander slot
+* Sub-Commander slot
+* Light vehicles
+* Transport vehicles
+* Heavy vehicles
+* Anti-Air vehicles
+* Artillery vehicles
+* Transport helicopter
+* Attack helicopter
+* Transport plane
+* Attack jets
+* Logistic vehicles

@@ -4,7 +4,7 @@
     File: fn_init_loadData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2019-04-22
+    Last Update: 2019-06-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -35,8 +35,8 @@ if (_moduleData isEqualTo []) then {
     private _nextVehicle = "";
     private _nextBase = "";
     while {((count _assignedVehicles) < (count KPLIB_preset_lockedVehPlF)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-        _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF select {!(_x in _assignedVehicles)});
-        _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
+        _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF - _assignedVehicles);
+        _nextBase =  selectRandom (KPLIB_sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];
@@ -75,8 +75,8 @@ if (_moduleData isEqualTo []) then {
         } forEach KPLIB_sectors_lockedVeh;
 
         while {((count _assignedVehicles) < (count KPLIB_preset_lockedVehPlF)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-            _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF select {!(_x in _assignedVehicles)});
-            _nextBase =  selectRandom (KPLIB_sectors_military select {!(_x in _assignedBases)});
+            _nextVehicle =  selectRandom (KPLIB_preset_lockedVehPlF - _assignedVehicles);
+            _nextBase =  selectRandom (KPLIB_sectors_military - _assignedBases);
             _assignedVehicles pushBack _nextVehicle;
             _assignedBases pushBack _nextBase;
             KPLIB_sectors_lockedVeh pushBack [_nextVehicle, _nextBase];

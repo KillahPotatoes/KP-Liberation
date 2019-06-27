@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-02-02
-    Last Update: 2019-02-24
+    Last Update: 2019-06-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -19,6 +19,11 @@ class enemy {
 
     // Add/Remove strength amount
     class enemy_addStrength {};
+
+    // Enemy commander FSM for decision making
+    class enemy_commanderLogic {
+        ext = ".fsm";
+    };
 
     // Get valid transport vehicle for given amount of soldiers
     class enemy_getTransportClasses {};
@@ -56,6 +61,9 @@ class enemy {
 
     // CBA Settings for this module
     class enemy_settings {};
+
+    // Spawns an enemy patrol
+    class enemy_spawnPatrol {};
 
     // Strength increase event function
     class enemy_strengthInc {};

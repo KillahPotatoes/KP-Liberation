@@ -28,7 +28,7 @@
 
         Localization contributors:
 
-            English | Updated: 2019-04-27
+            English | Updated: 2019-06-15
                 KP Liberation Dev Team - https://github.com/KillahPotatoes
 
             Chinese Simplified | Updated: pre 0.97
@@ -41,7 +41,7 @@
             French | Updated: pre 0.97
                 zbug - https://github.com/GreuhZbug
 
-            German | Updated: 2019-04-27
+            German | Updated: 2019-06-15
                 Dubjunk - https://github.com/Dubjunk
                 Wyqer - https://github.com/Wyqer
 
@@ -269,6 +269,10 @@
         <Key ID="STR_KPLIB_ACTION_LOGISTIC">
             <English>-- LOGISTIC --</English>
             <German>-- LOGISTIK --</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_MISSION">
+            <English>-- MISSIONS --</English>
+            <German>-- MISSIONEN --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_PERMISSION">
             <English>-- PERMISSIONS --</English>
@@ -1123,6 +1127,38 @@
             <German>Wähle eine Waffe um die passenden Magazine oder Zubehör zu finden.</German>
             <Polish>Wybierz broń do której mają być wyszukane magazynki oraz dodatki.</Polish>
         </Key>
+
+        <!-- MISSION DIALOG -->
+
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLE">
+            <English>KP Liberation Missions</English>
+            <German>KP Liberation Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONABORT">
+            <English>Abort mission</English>
+            <German>Mission abbrechen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_BUTTONSTART">
+            <English>Start mission</English>
+            <German>Mission starten</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEABORT">
+            <English>Running missions</English>
+            <German>Laufende Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEPENALTY">
+            <English>Penalty on mission failure</English>
+            <German>Strafe bei nicht erfoglreicher Mission</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLEREWARD">
+            <English>Reward on mission success</English>
+            <German>Belohnung bei erfoglreicher Mission</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_MISSION_TITLESTART">
+            <English>Available missions</English>
+            <German>Verfügbare Missionen</German>
+        </Key>
+
     </Package>
 
 
@@ -1161,6 +1197,22 @@
         <Key ID="STR_KPLIB_HINT_HELIMOVEBLOCKED">
             <English>Clear the aft deck and the helicopter first.</English>
             <German>Räume zuerst das Achterdeck und den Helikopter.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONCONDITION">
+            <English>The conditions for the mission start aren't met.</English>
+            <German>Die Bedingungen für den Missionsstart sind nicht erfüllt.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONRESOURCES">
+            <English>There aren't enough resources to start the mission.</English>
+            <German>Es sind nicht genügend Ressourcen vorhanden, um die Mission zu starten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONSTORAGE">
+            <English>There isn't enough storage capacity to abort the mission.</English>
+            <German>Es ist nicht genügend Lagerkapazität vorhanden, um die Mission abzubrechen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_MISSIONTIME">
+            <English>The mission can't be started yet, you'll need to wait some more time.</English>
+            <German>Die Mission kann noch nicht gestartet werden, du musst noch etwas warten.</German>
         </Key>
         <Key ID="STR_KPLIB_HINT_NAME">
             <English>Invalid name.</English>
@@ -1325,6 +1377,21 @@
             <English>ACE Arsenal</English>
             <Chinese>ACE 軍火庫</Chinese>
             <German>ACE Arsenal</German>
+        </Key>
+
+        <!-- ENEMY CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY">
+            <English>KPLIB - Enemy Commander</English>
+            <German>KPLIB - Feindlicher Kommandant</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY_DEBUG">
+            <English>Enable Debug Mode</English>
+            <Chinese>啟動除錯模式</Chinese>
+            <German>Debug Modus aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_ENEMY_DEBUG_TT">
+            <English>Enables/Disables debug mode for this module.</English>
+            <German>Aktiviert/Deaktiviert den Debug Modus dieses Moduls.</German>
         </Key>
 
         <!-- GENERAL CATEGORY -->
@@ -1816,10 +1883,23 @@
             <English>Enable cratefiller equipment overview</English>
             <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
         </Key>
-        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEROOLS_TT">
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW_TT">
             <English>Enables/Disables the Liberation cratefiller equipment overview.</English>
             <German>Aktiviert/Deaktiviert die Liberation Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
+
+        <!-- MISSION CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_MISSION">
+            <English>KPLIB - Missions</English>
+            <German>KPLIB - Missionen</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND">
+            <English>Mission abortion refund factor</English>
+            <German>Rückerstattungsfaktor bei Missionsabbruch</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND_TT">
+            <English>Defines the mission abortion refund in percentage.</English>
+            <German>Definiert die Rückerstattung in Prozent.</German>
     </Package>
 
 
@@ -2037,6 +2117,10 @@
             <English>Logistic Vehicle</English>
             <German>Logistik Fahrzeuge</German>
         </Key>
+        <Key ID="STR_KPLIB_PERMISSION_MISSION">
+            <English>Missions</English>
+            <German>Missionen</German>
+        </Key>
         <Key ID="STR_KPLIB_PERMISSION_RECYCLE">
             <English>Recycle</English>
             <German>Recyceln</German>
@@ -2061,5 +2145,30 @@
             <English>Transport Vehicle</English>
             <German>Transportfahrzeug</German>
         </Key>
+    </Package>
+
+    <!-- USER MISSIONS -->
+
+    <Package name="Missions">
+
+        <!-- EXAMPLE MISSION -->
+
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE">
+            <English>Example Mission</English>
+            <German>Beispiel Mission</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_DESCR">
+            <English>This mission serves as a test mission and template.\n\nThis box shows the mission description.</English>
+            <German>Diese Mission dient als Test Mission und Vorlage.\n\nDiese Box zeigt die Missionsbeschreibung.</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_REWARD">
+            <English>This box describes the reward of the completed mission.</English>
+            <German>Diese Box beschreibt die Belohnung bei erfolgreichem Missionsabschluss.</German>
+        </Key>
+        <Key ID="STR_KPLIB_MISSION_EXAMPLE_PENALTY">
+            <English>This box describes the penalty of the failed mission.</English>
+            <German>Diese Box beschreibt die Strafe bei nicht erfolgreichem Missionsabschluss.</German>
+        </Key>
+
     </Package>
 </Project>

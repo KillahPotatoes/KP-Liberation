@@ -4,7 +4,7 @@
     File: fn_virtual_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-18
-    Last Update: 2019-04-23
+    Last Update: 2019-06-15
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -17,7 +17,6 @@
     Returns:
         Function reached the end [BOOL]
 */
-
 
 /*
     ----- ZEUS SETTINGS -----

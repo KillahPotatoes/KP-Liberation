@@ -4,7 +4,7 @@
     File: KPLIB_permission.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-07
-    Last Update: 2019-05-03
+    Last Update: 2019-05-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -50,14 +50,14 @@ class KPLIB_permission {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,22,24);
             w = KP_GETW(KP_WIDTH_VAL_C,2);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-            tooltip = "$STR_KPLIB_DIALOG_PERMISSION_EXPORT_TT"
+            tooltip = "$STR_KPLIB_DIALOG_PERMISSION_EXPORT_TT";
             onButtonClick = "[] call KPLIB_fnc_permission_export";
         };
 
         class KPLIB_ButtonImport: KPLIB_ButtonExport {
             text = "$STR_KPLIB_DIALOG_PERMISSION_IMPORT";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,23,24);
-            tooltip = "$STR_KPLIB_DIALOG_PERMISSION_IMPORT_TT"
+            tooltip = "$STR_KPLIB_DIALOG_PERMISSION_IMPORT_TT";
             onButtonClick = "[] call KPLIB_fnc_permission_import";
         };
 

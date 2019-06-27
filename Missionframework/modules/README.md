@@ -16,12 +16,12 @@ The different categories are listed below.
 ### Core Modules
 Modules which are vital for the mission to run properly. All of these modules need to be loaded to ensure the general functionalities of the mission.
 ```
-00 init
-01 common
-02 core
-03 persistence
-04 respawn
-05 admin menu
+00 Init
+01 Common
+02 Core
+03 Persistence
+04 Respawn
+05 Admin menu
 ```
 ### Basic Modules
 These modules provide the basic CTI gameplay experience and should therefore also be loaded completely. The mission should be able to work without the modules (respecting possible dependencies) but would lack most of the essential content.
@@ -44,6 +44,7 @@ With these additions the intended complexity comes into the mission. It is highl
 24 Enemy Commander
 25 Friendly Commander Managing Dialog
 26 Cratefiller
+27 Mission handling
 ```
 ### TBA
 Mod specific compatibility modules

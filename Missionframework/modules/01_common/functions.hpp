@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-09-15
-    Last Update: 2019-04-22
+    Last Update: 2019-06-08
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -37,6 +37,9 @@ class common {
 
     // Creates a vehicle at given position with given direction
     class common_createVehicle {};
+
+    // Check current FPS or if they are higher or equal than given number
+    class common_fps {};
 
     // Generate positions in circle
     class common_getCirclePositions {};
