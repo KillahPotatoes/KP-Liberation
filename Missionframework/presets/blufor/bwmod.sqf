@@ -28,7 +28,7 @@ KP_liberation_truck_classname = "rhsusf_M977A4_BKIT_usarmy_wd";         // These
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
 KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";           // The building defined to unlock FOB recycling functionality.
-KP_liberation_air_vehicle_building = "Land_Radar_Small_F";              // The building defined to unlock FOB air vehicle functionality.
+KP_liberation_air_vehicle_building = "B_Radar_System_01_F";             // The building defined to unlock FOB air vehicle functionality.
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";              // The helipad used to increase the GLOBAL rotary-wing cap.
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";             // The hangar used to increase the GLOBAL fixed-wing cap.
 KP_liberation_supply_crate = "CargoNet_01_box_F";                       // This defines the supply crates, as in resources.
@@ -152,7 +152,8 @@ static_vehicles = [
     ["RHS_TOW_TriPod_WD",50,100,0],                                     // TOW (AT)
     ["RHS_Stinger_AA_pod_WD",50,100,0],                                 // Stinger (AA)
     ["RHS_M252_WD",80,150,0],                                           // Mk6 Mortar
-    ["RHS_M119_WD",100,200,0]                                           // M119A2
+    ["RHS_M119_WD",100,200,0],                                          // M119A2
+    ["B_SAM_System_03_F",250,500,0]                                     // MIM-145 Defender
 ];
 
 buildings = [

@@ -103,7 +103,7 @@ These mods are recommended by us, as they are likely to increase your gaming exp
 * [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
 * [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
-Also you should think about using these mods as serverside mods: 
+Also you should think about using these mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
 * [Advanced Sling Loading](http://steamcommunity.com/sharedfiles/filedetails/?id=615007497)
 * [Advanced Towing](http://steamcommunity.com/sharedfiles/filedetails/?id=639837898)
@@ -164,11 +164,24 @@ class Missions
 ### 0.96.5 (TBD due to Contacts Release)
 * Added: The Unsung Vietnam War Mod presets.
 * Added: The Unsung Vietnam War Mod transport configs.
+* Added: Statistic values for destroyed civilian buildings and vehicles
+* Added: Statistic values for total and friendly resistance kills.
+* Added: Statistic values for spent/produced resources.
+* Added: Statistics will be posted additionally in the server log after winning the campaign.
+* Added: Encore Anti Air static to sensible presets.
+* Removed: Vanilla player score saving.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
+* Tweaked: Changed default air building from small radar dome to encore static radar.
 * Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
 * Tweaked: Added elite vehicles to CSAT presets.
 * Tweaked: Formatting/Comments in the preset files.
+* Tweaked: objectInit function and added comments to the array.
+* Tweaked: Some smaller code optimizations in the whole framework.
+* Tweaked: Changes in elite vehicles in presets are now also applied during a running campaign.
+* Tweaked: Player lead squads are now also saved near FOBs. (but still needs to be reassigned via zeus after load, of course)
+* Tweaked: Weather is now only handled by the server.
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
+* Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 
 ### 0.96.4 (10th May 2019 due to Global Mobilization Release)
 * Added: East Germany arsenal preset.
@@ -241,7 +254,7 @@ class Missions
 * Fixed: Players couldn't ziptie the civilian informant, if playing with ACE.
 * Fixed: File name instead of mission name in mission selection screen.
 * Fixed: "Taking Command" spam from AI after players death.
-* Fixed: Fixed range for recycling and start of building instead of using FOB range. 
+* Fixed: Fixed range for recycling and start of building instead of using FOB range.
 * Fixed: Some vehicles with dynamic loadout support lost their weapons when rearmed by Liberation rearm module.
 
 ### 0.963 (05th January 2018)

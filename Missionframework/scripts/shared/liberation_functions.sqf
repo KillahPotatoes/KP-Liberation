@@ -46,6 +46,7 @@ F_getCorrectedSectorRange = compileFinal preprocessFileLineNumbers "scripts\shar
 F_getLocationName = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getLocationName.sqf";
 F_correctLaserBatteries = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_correctLaserBatteries.sqf";
 F_crateToStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_to_storage.sqf";
+F_fillStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_fillStorage.sqf";
 F_crateFromStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_from_storage.sqf";
 F_crateCheckValue = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_crate_checkValue.sqf";
 F_sortStorage = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_sort_storage.sqf";

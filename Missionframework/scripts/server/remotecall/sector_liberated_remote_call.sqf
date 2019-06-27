@@ -71,7 +71,7 @@ publicVariable "asymm_blocked_sectors";
 
 sleep 1;
 
-trigger_server_save = true;
+doSaveTrigger = true;
 
 sleep 45;
 

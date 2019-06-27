@@ -26,7 +26,7 @@ KP_liberation_truck_classname = "O_T_Truck_03_covered_ghex_F";          // These
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
 KP_liberation_recycle_building = "Land_RepairDepot_01_green_F";         // The building defined to unlock FOB recycling functionality.
-KP_liberation_air_vehicle_building = "Land_Radar_Small_F";              // The building defined to unlock FOB air vehicle functionality.
+KP_liberation_air_vehicle_building = "O_Radar_System_02_F";             // The building defined to unlock FOB air vehicle functionality.
 KP_liberation_heli_slot_building = "Land_HelipadSquare_F";              // The helipad used to increase the GLOBAL rotary-wing cap.
 KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";             // The hangar used to increase the GLOBAL fixed-wing cap.
 KP_liberation_supply_crate = "CargoNet_01_box_F";                       // This defines the supply crates, as in resources.
@@ -88,7 +88,7 @@ heavy_vehicles = [
     ["O_T_APC_Wheeled_02_rcws_v2_ghex_F",200,150,150],                  // Otokar
     ["O_T_APC_Tracked_02_cannon_ghex_F",200,200,150],                   // Stalker
     ["O_T_APC_Tracked_02_AA_ghex_F",300,250,175],                       // Tigris
-    ["O_T_MBT_02_cannon_ghex_F"500,400,250],                            // T-100
+    ["O_T_MBT_02_cannon_ghex_F",500,400,250],                           // T-100
     ["O_T_MBT_04_cannon_F",550,450,250],                                // T-14
     ["O_T_MBT_04_command_F",550,500,250],                               // T-14K
     ["O_T_MBT_02_arty_ghex_F",600,1250,300]                             // Sochor
@@ -122,8 +122,7 @@ static_vehicles = [
     ["O_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
     ["O_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["O_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
-    ["O_Radar_System_02_F",100,0,0],                                    // Air Radar
-    ["O_SAM_System_04_F",100,200,0]                                     // SAM Rhea
+    ["O_SAM_System_04_F",250,500,0]                                     // S-750 Rhea
 ];
 
 buildings = [

@@ -48,6 +48,7 @@ while {_units_near > 0} do {
 			[4, [(name _civ)]] remoteExec ["F_cr_globalMsg"];
 			[KP_liberation_cr_wounded_gain] call F_cr_changeCR;
 			_healed_civs pushBack _civ;
+            stats_civilians_healed = stats_civilians_healed +1;
 		}
 	} forEach _civs;
 	sleep 1;

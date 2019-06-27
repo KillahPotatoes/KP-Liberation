@@ -104,4 +104,4 @@ stats_secondary_objectives = stats_secondary_objectives + 1;
 
 GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";
 sleep 1;
-trigger_server_save = true;
+doSaveTrigger = true;

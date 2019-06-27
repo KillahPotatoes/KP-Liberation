@@ -99,7 +99,7 @@ opfor_battlegroup_vehicles = [
     "uns_Type55_RR57",                                                  // Type 55 APC (57mm Type36)
     "uns_Type55_RR57",                                                  // Type 55 APC (57mm Type36)
     "uns_nvatruck_open",                                                // Ural Truck (Open)
-    "uns_nvatruck_mg"                                                   // Ural Truck (MG)
+    "uns_nvatruck_mg",                                                  // Ural Truck (MG)
     "uns_Type63_mg",                                                    // Type63 APC (MG)
     "uns_Type63_mg",                                                    // Type63 APC (MG)
     "pook_ZSU57_NVA",                                                   // ZSU-57-2 (Sparka)
@@ -116,7 +116,7 @@ opfor_battlegroup_vehicles = [
 opfor_battlegroup_vehicles_low_intensity = [
     "uns_Type55_patrol",                                                // Type 55 APC (Patrol)
     "uns_Type55_patrol",                                                // Type 55 APC (Patrol)
-    "uns_nvatruck_mg"                                                   // Ural Truck (MG)
+    "uns_nvatruck_mg",                                                  // Ural Truck (MG)
     "uns_Type63_mg",                                                    // Type63 APC (MG)
     "uns_Type63_mg",                                                    // Type63 APC (MG)
     "pook_ZSU57_NVA",                                                   // ZSU-57-2 (Sparka)
@@ -128,7 +128,7 @@ If something in this array can't hold all 8 soldiers then buggy behaviours may o
 opfor_troup_transports = [
     "uns_nvatruck_open",                                                // Ural Truck (Open)
     "uns_nvatruck",                                                     // Ural Truck
-    "uns_nvatruck_mg"                                                   // Ural Truck (MG)
+    "uns_nvatruck_mg",                                                  // Ural Truck (MG)
     "uns_Type63_mg",                                                    // Type63 APC (MG)
     "uns_Mi8TV_VPAF_MG"                                                 // Mi-8TV Hip-C (Transport)
 ];

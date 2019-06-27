@@ -32,35 +32,4 @@ private _fuel = 0;
 
 sleep 0.5;
 
-while {_supply > 0} do {
-	private _amount = 100;
-	if ((_supply / 100) < 1) then {
-		_amount = _supply;
-	};
-	_supply = _supply - _amount;
-	private _crate = [KP_liberation_supply_crate, _amount, _pos] call F_createCrate;
-	sleep 0.1;
-	[_crate, _storage] call F_crateToStorage;
-};
-
-while {_ammo > 0} do {
-	private _amount = 100;
-	if ((_ammo / 100) < 1) then {
-		_amount = _ammo;
-	};
-	_ammo = _ammo - _amount;
-	private _crate = [KP_liberation_ammo_crate, _amount, _pos] call F_createCrate;
-	sleep 0.1;
-	[_crate, _storage] call F_crateToStorage;
-};
-
-while {_fuel > 0} do {
-	private _amount = 100;
-	if ((_fuel / 100) < 1) then {
-		_amount = _fuel;
-	};
-	_fuel = _fuel - _amount;
-	private _crate = [KP_liberation_fuel_crate, _amount, _pos] call F_createCrate;
-	sleep 0.1;
-	[_crate, _storage] call F_crateToStorage;
-};
+[_supply, _ammo, _fuel, _storage, true] spawn F_fillStorage;
