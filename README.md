@@ -170,6 +170,7 @@ class Missions
 * Added: Statistics will be posted additionally in the server log after winning the campaign.
 * Added: Encore Anti Air static to sensible presets.
 * Removed: Vanilla player score saving.
+* Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
 * Tweaked: Changed default air building from small radar dome to encore static radar.
 * Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
