@@ -51,7 +51,7 @@ _playerItems = _playerItems apply {toLower _x};
     _removedItems pushBack _x;
     player unassignItem _x;
     player removeItems _x;
-} forEach ((_playerItems arrayIntersect _playerItems) - KP_liberation_allowed_items);
+} forEach (((_playerItems arrayIntersect _playerItems) - KP_liberation_allowed_items) select { !(_x call F_isRadio) });
 
 private _playerMagazines = ((getMagazineCargo (uniformContainer player)) select 0);
 _playerMagazines append ((getMagazineCargo (vestContainer player)) select 0);

@@ -65,3 +65,13 @@ F_getSaveableParam = compileFinal preprocessFileLineNumbers "scripts\shared\func
 F_setLoadableViV = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_setLoadableViV.sqf";
 F_getNearestViVTransport = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getNearestViVTransport.sqf";
 F_addObjectInit = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_addObjectInit.sqf";
+
+if ((isClass (configFile >> "CfgPatches" >> "tfar_core")) || (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) then {
+    F_isRadio = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isTFARRadio.sqf";
+} else {
+    if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
+        F_isRadio = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isACRERadio.sqf";
+    } else {
+        F_isRadio = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isRadio.sqf";
+    };
+};
