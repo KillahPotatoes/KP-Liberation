@@ -110,7 +110,7 @@ heavy_vehicles = [
     ["RHS_M6_wd",300,250,175],                                          // M6A2
     ["rhsusf_m1a1aim_tuski_wd",400,350,225],                            // M1A1SA (Tusk I)
     ["rhsusf_m1a2sep1tuskiiwd_usarmy",500,400,250],                     // M1A2SEPv1 (Tusk II)
-    ["BWA3_Leopard2A6M_Fleck",500,400,250],                             // MBT Leopard 2A6M
+    ["BWA3_Leopard2_Fleck",500,400,250],                                // MBT Leopard 2A6M
     ["rhsusf_m109_usarmy",600,1250,300]                                 // M109A6
 ];
 
@@ -356,7 +356,7 @@ elite_vehicles = [
     "rhsusf_mkvsoc",                                                    // Mk.V SOCOM
     "rhsusf_m1a1aim_tuski_wd",                                          // M1A1SA (Tusk I)
     "rhsusf_m1a2sep1tuskiiwd_usarmy",                                   // M1A2SEPv1 (Tusk II)
-    "BWA3_Leopard2A6M_Fleck",                                           // MBT Leopard 2A6M
+    "BWA3_Leopard2_Fleck",                                              // MBT Leopard 2A6M
     "rhsusf_m109_usarmy",                                               // M109A6
     "RHS_AH64D_wd",                                                     // AH-64D (Multi-Role)
     "BWA3_Tiger_RMK_Universal",                                         // UH Tiger RMK (Universal)
