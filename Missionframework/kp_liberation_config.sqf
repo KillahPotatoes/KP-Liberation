@@ -7,6 +7,9 @@
 KP_liberation_medical_vehicles = [
     "B_Truck_01_medical_F",
     "B_T_Truck_01_medical_F",
+	"CUP_B_LR_Ambulance_GB_D",
+	"CUP_B_HMMWV_Ambulance_USA",
+	"CUP_B_HMMWV_Ambulance_USMC",
     "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
     "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
     "rhsusf_m113_usarmy_medical",
@@ -65,7 +68,11 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 12 = Germany East Winter (Global Mobilization)
 13 = CSAT Brown
 14 = CSAT Green
-15 = Unsung US */
+15 = Unsung US
+16 = CUP British Armed Forces (Desert)
+17 = CUP British Armed Forces (Woodland)
+18 = CUP US Marine Corps (Desert)
+19 = CUP US Marine Corps (Woodland) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -81,7 +88,9 @@ KP_liberation_preset_blufor = 0;
 9  = Germany West Winter (Global Mobilization)
 10 = Germany East (Global Mobilization)
 11 = Germany East Winter (Global Mobilization)
-12 = Unsung NVA */
+12 = Unsung NVA
+13 = CUP Sahrani Liberation Army
+14 = CUP Takistani Army */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -90,7 +99,8 @@ KP_liberation_preset_opfor = 0;
 2 = RHS GREF
 3 = Project OPFOR (Middle Eastern)
 4 = Project OPFOR (Sahrani)
-5 = Germany (Global Mobilization) */
+5 = Germany (Global Mobilization)
+6 = CUP Takistani Locals */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
@@ -99,7 +109,8 @@ KP_liberation_preset_resistance = 0;
 2 = Project OPFOR (Middle Eastern)
 3 = RDS Civilians
 4 = Germany (Global Mobilization)
-5 = Unsung */
+5 = Unsung
+6 = CUP Takistani Civilians */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -454,6 +465,14 @@ box_transport_config = [
     ["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
     ["O_T_Truck_03_covered_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
     ["greuh_eh101_gr", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
+	["CUP_B_MTVR_USMC", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
+	["CUP_B_MTVR_USA", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
+	["CUP_B_CH53E_USMC", -8, [0,7.566,-3], [0,5.749,-3], [0,3.847,-3], [0,2,-3], [0,0.338,-3]],
+	["CUP_B_CH47F_GB", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
+	["CUP_B_CH47F_USA", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
+	["CUP_B_Wolfhound_GMG_GB_D", -6.5, [0,-3.5,2.3]],
+	["CUP_B_Wolfhound_HMG_GB_D", -6.5, [0,-3.5,2.3]],
+	["CUP_B_Wolfhound_LMG_GB_D", -6.5, [0,-3.5,2.3]],
     ["CUP_B_Wolfhound_GMG_GB_W", -6.5, [0,-3.5,2.3]],
     ["CUP_B_Wolfhound_HMG_GB_W", -6.5, [0,-3.5,2.3]],
     ["CUP_B_Wolfhound_LMG_GB_W", -6.5, [0,-3.5,2.3]],
