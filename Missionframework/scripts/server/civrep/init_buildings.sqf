@@ -12,6 +12,7 @@ switch (worldName) do {
 	case "Tanoa": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\tanoa.sqf"};
 	case "WL_Rosche": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\wl_rosche.sqf"};
 	case "xcam_taunus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\xcam_taunus.sqf"};
+	case "panthera3": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\panthera3.sqf"};
 	default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
 };
 
