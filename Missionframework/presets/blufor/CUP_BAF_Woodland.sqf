@@ -1,15 +1,19 @@
 /*
-Needed Mods:
-- CUP Weapons
-- CUP Vehicles
-- CUP Units
+	Needed Mods:
+	- CUP Weapons
+	- CUP Vehicles
+	- CUP Units
 
-Optional Mods:
-- None
+	Optional Mods:
+	- None
 */
 
-/* - Support classnames.
-Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
+/*
+    --- Support classnames ---
+    Each of these should be unique.
+    The same classnames for different purposes may cause various unpredictable issues with player actions.
+    Or not, just don't try!
+*/
 FOB_typename = "Land_Cargo_HQ_V3_F";									// This is the main FOB HQ building. 																									Default is "Land_Cargo_HQ_V1_F".
 FOB_box_typename = "B_Slingload_01_Cargo_F";							// This is the FOB as a container. 																										Default is "B_Slingload_01_Cargo_F".
 FOB_truck_typename = "CUP_B_MTVR_Repair_USA";							// This is the FOB as a vehicle.																										Default is "B_Truck_01_box_F".
@@ -31,10 +35,14 @@ KP_liberation_supply_crate = "CargoNet_01_box_F";						// This defines the suppl
 KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";						// This defines the ammunition crates.																									Default is "B_CargoNet_01_ammo_F".
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fuel crates.																										Default is "CargoNet_01_barrels_F".
 
-/* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu. 
-Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
-The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
+/*
+    --- Friendly classnames ---
+    Each array below represents one of the 7 pages within the build menu.
+    Format: ["vehicle_classname",supplies,ammunition,fuel],
+    Example: ["B_APC_Tracked_01_AA_F",300,150,150],
+    The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
+    IMPORTANT: The last element inside each array must have no comma at the end!
+*/
 infantry_units = [
 	["CUP_B_BAF_Soldier_RiflemanLite_DPM",15,0,0],						//Rifleman (Light)
 	["CUP_B_BAF_Soldier_Rifleman_DPM",20,0,0],							//Rifleman
@@ -224,7 +232,12 @@ support_vehicles = [
 	["B_Slingload_01_Ammo_F",75,200,0]									//Huron Ammo
 ];
 
-// Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
+/*
+    --- Squads ---
+    Pre-made squads for the commander build menu.
+    These shouldn't exceed 10 members.
+*/
+
 // Light infantry squad.
 blufor_squad_inf_light = [
 	"CUP_B_BAF_Soldier_TeamLeader_DPM",
@@ -305,7 +318,11 @@ blufor_squad_para = [
 	"CUP_B_BAF_Soldier_Paratrooper_DPM"
 ];
 
-// Elite vehicles that should be unlocked through military base capture.
+/*
+    --- Elite vehicles ---
+    Classnames below have to be unlocked by capturing military bases.
+    Which base locks a vehicle is randomized on the first start of the campaign.
+*/
 elite_vehicles = [
 	"CUP_B_MCV80_GB_W_SLAT",													//MCV-80 Warrior (SLAT - Woodland)
 	"CUP_B_FV510_GB_W",															//FV510 Warrior (Woodland)

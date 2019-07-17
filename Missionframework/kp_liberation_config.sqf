@@ -72,7 +72,10 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 16 = CUP British Armed Forces (Desert)
 17 = CUP British Armed Forces (Woodland)
 18 = CUP US Marine Corps (Desert)
-19 = CUP US Marine Corps (Woodland) */
+19 = CUP US Marine Corps (Woodland)
+20 = CUP US Army (Desert)
+21 = CUP US Army (Woodland)
+22 = CUP Chernarus Defense Force */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
