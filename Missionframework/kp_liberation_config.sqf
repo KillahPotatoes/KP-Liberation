@@ -93,7 +93,9 @@ KP_liberation_preset_blufor = 0;
 11 = Germany East Winter (Global Mobilization)
 12 = Unsung NVA
 13 = CUP Sahrani Liberation Army
-14 = CUP Takistani Army */
+14 = CUP Takistani Army
+15 = CUP Chernarussian Movement of the Red Star
+16 = CUP Armed Forces of the Russian Federation (MSV - EMR) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:

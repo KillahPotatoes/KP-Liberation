@@ -39,6 +39,8 @@ switch (KP_liberation_preset_opfor) do {
     case 12: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\unsung.sqf";};
 	case 13: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_SLA.sqf";};
 	case 14: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_TakiArmy.sqf";};
+	case 15: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_ChDKZ.sqf";};
+	case 16: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_AFRF_MSV.sqf";};
     default {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
