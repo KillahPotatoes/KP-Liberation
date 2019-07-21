@@ -8,8 +8,10 @@ KP_liberation_medical_vehicles = [
     "B_Truck_01_medical_F",
     "B_T_Truck_01_medical_F",
 	"CUP_B_LR_Ambulance_GB_D",
+	"CUP_B_LR_Ambulance_GB_W",
 	"CUP_B_HMMWV_Ambulance_USA",
 	"CUP_B_HMMWV_Ambulance_USMC",
+	"CUP_B_BMP2_AMB_CDF",
     "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
     "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
     "rhsusf_m113_usarmy_medical",
@@ -95,7 +97,8 @@ KP_liberation_preset_blufor = 0;
 13 = CUP Sahrani Liberation Army
 14 = CUP Takistani Army
 15 = CUP Chernarussian Movement of the Red Star
-16 = CUP Armed Forces of the Russian Federation (MSV - EMR) */
+16 = CUP Armed Forces of the Russian Federation (MSV - EMR)
+17 = CUP Armed Forces of the Russian Federation (Modern MSV) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
