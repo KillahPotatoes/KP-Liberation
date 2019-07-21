@@ -79,14 +79,14 @@ light_vehicles = [
 	["CUP_B_LR_MG_GB_D",75,50,50],										//Land Rover 110 (M2)
 	["CUP_B_LR_Special_M2_GB_D",100,80,50],								//Land Rover 110 (M2 Special)
 	["CUP_B_LR_Special_GMG_GB_D",100,100,50],							//Land Rover 110 (GMG Special)
-	["CUP_B_BAF_Coyote_L2A1_D",100,40,50],								//Coyote L2A1
-	["CUP_B_BAF_Coyote_GMG_D",100,60,50],								//Coyote GMG
+	["CUP_B_BAF_Coyote_L2A1_D",200,40,50],								//Coyote L2A1
+	["CUP_B_BAF_Coyote_GMG_D",200,60,50],								//Coyote GMG
 	["CUP_B_Mastiff_LMG_GB_D",250,20,150],								//Mastiff PPV LMG
 	["CUP_B_Mastiff_HMG_GB_D",250,40,150],								//Mastiff PPV HMG
 	["CUP_B_Mastiff_GMG_GB_D",250,60,150],								//Mastiff PPV GMG
-	["CUP_B_Wolfhound_LMG_GB_D",175,20,150],							//Wolfhound TSV LMG
-	["CUP_B_Wolfhound_HMG_GB_D",175,40,150],							//Wolfhound TSV HMG
-	["CUP_B_Wolfhound_GMG_GB_D",175,60,150],							//Wolfhound TSV GMG
+	["CUP_B_Wolfhound_LMG_GB_D",275,20,150],							//Wolfhound TSV LMG
+	["CUP_B_Wolfhound_HMG_GB_D",275,40,150],							//Wolfhound TSV HMG
+	["CUP_B_Wolfhound_GMG_GB_D",275,60,150],							//Wolfhound TSV GMG
 	["CUP_B_MTVR_USA",125,0,75]											//MTVR Transport
 ];
 

@@ -79,14 +79,14 @@ light_vehicles = [
 	["CUP_B_LR_MG_GB_W",75,50,50],										//Land Rover 110 (M2) Woodland
 	["CUP_B_LR_Special_M2_GB_W",100,80,50],								//Land Rover 110 (M2 Special) Woodland
 	["CUP_B_LR_Special_GMG_GB_W",100,100,50],							//Land Rover 110 (GMG Special) Woodland
-	["CUP_B_BAF_Coyote_L2A1_W",100,40,50],								//Coyote L2A1 Woodland
-	["CUP_B_BAF_Coyote_GMG_W",100,60,50],								//Coyote GMG Woodland
+	["CUP_B_BAF_Coyote_L2A1_W",200,40,50],								//Coyote L2A1 Woodland
+	["CUP_B_BAF_Coyote_GMG_W",200,60,50],								//Coyote GMG Woodland
 	["CUP_B_Mastiff_LMG_GB_W",250,20,150],								//Mastiff PPV LMG Woodland
 	["CUP_B_Mastiff_HMG_GB_W",250,40,150],								//Mastiff PPV HMG Woodland
 	["CUP_B_Mastiff_GMG_GB_W",250,60,150],								//Mastiff PPV GMG Woodland
-	["CUP_B_Wolfhound_LMG_GB_W",175,20,150],							//Wolfhound TSV LMG Woodland
-	["CUP_B_Wolfhound_HMG_GB_W",175,40,150],							//Wolfhound TSV HMG Woodland
-	["CUP_B_Wolfhound_GMG_GB_W",175,60,150],							//Wolfhound TSV GMG Woodland
+	["CUP_B_Wolfhound_LMG_GB_W",275,20,150],							//Wolfhound TSV LMG Woodland
+	["CUP_B_Wolfhound_HMG_GB_W",275,40,150],							//Wolfhound TSV HMG Woodland
+	["CUP_B_Wolfhound_GMG_GB_W",275,60,150],							//Wolfhound TSV GMG Woodland
 	["CUP_B_MTVR_USMC",125,0,75]										//MTVR Transport
 ];
 
