@@ -105,7 +105,8 @@ KP_liberation_preset_opfor = 0;
 3 = Project OPFOR (Middle Eastern)
 4 = Project OPFOR (Sahrani)
 5 = Germany (Global Mobilization)
-6 = CUP Takistani Locals */
+6 = CUP Takistani Locals
+7 = CUP National Party of Chernarus */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
@@ -115,7 +116,8 @@ KP_liberation_preset_resistance = 0;
 3 = RDS Civilians
 4 = Germany (Global Mobilization)
 5 = Unsung
-6 = CUP Takistani Civilians */
+6 = CUP Takistani Civilians
+7 = CUP Chernarussian Civilians */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?

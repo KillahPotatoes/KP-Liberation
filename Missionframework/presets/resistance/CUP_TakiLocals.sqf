@@ -1,11 +1,11 @@
 /*
-Needed Mods:
-- CUP Weapons
-- CUP Vehicles
-- CUP Units
+	Needed Mods:
+	- CUP Weapons
+	- CUP Vehicles
+	- CUP Units
 
-Optional Mods:
-- Project Infinite AIO
+	Optional Mods:
+	- Project Infinite AIO
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation 

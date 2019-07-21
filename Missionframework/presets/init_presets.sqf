@@ -51,6 +51,7 @@ switch (KP_liberation_preset_resistance) do {
     case 4: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\RACS.sqf";};
     case 5: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\germany.sqf";};
 	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\CUP_TakiLocals.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\CUP_NAPA.sqf";};
     default {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
@@ -61,6 +62,7 @@ switch (KP_liberation_preset_civilians) do {
     case 4: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\germany.sqf";};
     case 5: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\unsung.sqf";};
 	case 6: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\CUP_TakiCivs.sqf";};
+	case 7: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\CUP_ChernoCivs.sqf";};
     default {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 

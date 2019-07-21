@@ -1,11 +1,11 @@
 /*
-Needed Mods:
-- CUP Weapons
-- CUP Vehicles
-- CUP Units
+	Needed Mods:
+	- CUP Weapons
+	- CUP Vehicles
+	- CUP Units
 
-Optional Mods:
-- None
+	Optional Mods:
+	- None
 */
 
 // Civilian classnames.
