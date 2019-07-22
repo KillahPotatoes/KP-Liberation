@@ -13,7 +13,7 @@
     Or not, just don't try!
 */
 FOB_typename = "LAND_sb_bunker_main";                                   // This is the main FOB HQ building.
-FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
+FOB_box_typename = "Land_scntr";                                        // This is the FOB as a container.
 FOB_truck_typename = "uns_M35A2_fuel";                                  // This is the FOB as a vehicle.
 Arsenal_typename = "uns_resupply_crate_US";                             // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "uns_M577_amb";                                // This is the mobile respawn (and medical) truck.
@@ -67,6 +67,7 @@ infantry_units = [
 
 light_vehicles = [
     ["uns_m274",50,0,25],                                               // M-274 Mule
+    ["uns_m274_m60",50,25,25],                                          // M-274 Mule (M60)
     ["uns_willys",75,0,50],                                             // M-151 MUTT
     ["uns_willysmg",75,30,50],                                          // M-151 MUTT (M60)
     ["uns_willysmg50",75,40,50],                                        // M-151 MUTT (M2)
@@ -133,40 +134,10 @@ air_vehicles = [
     ["UNS_AH1G_SUU11",400,400,200],                                     // AH-1D Cobra (SUU11)
     ["uns_AC47",600,50,400],                                            // AC-47
     ["uns_C130_H",600,0,400],                                           // C-130H
-    ["uns_A1J_AGM",400,400,350],                                        // A-1H Skyraider (AGM)
-    ["uns_A1J_BMB",400,400,350],                                        // A-1H Skyraider (BMB)
+    ["uns_KC130_H",600,0,500],                                          // KC-130H
     ["uns_A1J_CAS",400,400,350],                                        // A-1H Skyraider (CAS)
-    ["uns_A1J_CBU",400,400,350],                                        // A-1H Skyraider (CBU)
-    ["uns_A1J_CMU",400,400,350],                                        // A-1H Skyraider (CMU)
-    ["uns_A1J",400,400,350],                                            // A-1H Skyraider (CSAR)
-    ["uns_A1J_EHCAS",400,400,350],                                      // A-1H Skyraider (EHCAS)
-    ["uns_A1J_HBMB",400,400,350],                                       // A-1H Skyraider (HBMB)
-    ["uns_A1J_HCAS",400,400,350],                                       // A-1H Skyraider (HCAS)
-    ["uns_A1J_LBMB",400,400,350],                                       // A-1H Skyraider (LBMB)
-    ["uns_A1J_MR",400,400,350],                                         // A-1H Skyraider (MR)
-    ["uns_A7_AGM",750,600,400],                                         // A-7D Corsair II (AGM)
-    ["uns_A7_BMB",750,600,400],                                         // A-7D Corsair II (BMB)
-    ["uns_A7_CAP",750,600,400],                                         // A-7D Corsair II (CAP)
     ["uns_A7_CAS",750,600,400],                                         // A-7D Corsair II (CAS)
-    ["uns_A7_CBU",750,600,400],                                         // A-7D Corsair II (CBU)
-    ["uns_A7_HBMB",750,600,400],                                        // A-7D Corsair II (HBMB)
-    ["uns_A7_LBMB",750,600,400],                                        // A-7D Corsair II (LBMB)
-    ["uns_A7_LRBMB",750,600,400],                                       // A-7D Corsair II (LRBMB)
-    ["uns_A7_MBMB",750,600,400],                                        // A-7D Corsair II (MBMB)
-    ["uns_A7_MR",750,600,400],                                          // A-7D Corsair II (MR)
-    ["uns_A7_SEAD",750,600,400],                                        // A-7D Corsair II (SEAD)
-    ["uns_F4E_AGM",800,600,400],                                        // F-4E Phantom II (AGM)
-    ["uns_F4E_BMB",800,600,400],                                        // F-4E Phantom II (BMB)
-    ["uns_F4E_CAP",800,600,400],                                        // F-4E Phantom II (CAP)
-    ["uns_F4E_CAS",800,600,400],                                        // F-4E Phantom II (CAS)
-    ["uns_F4E_CBU",800,600,400],                                        // F-4E Phantom II (CBU)
-    ["uns_F4E_GBU",800,600,400],                                        // F-4E Phantom II (GBU)
-    ["uns_F4E_HBMB",800,600,400],                                       // F-4E Phantom II (HBMB)
-    ["uns_F4E_LBMB",800,600,400],                                       // F-4E Phantom II (LBMB)
-    ["uns_F4E_LRBMB",800,600,400],                                      // F-4E Phantom II (LRBMB)
-    ["uns_F4E_MBMB",800,600,400],                                       // F-4E Phantom II (MBMB)
-    ["uns_F4E_MR",800,600,400],                                         // F-4E Phantom II (MR)
-    ["uns_F4E_SEAD",800,600,400]                                        // F-4E Phantom II (SEAD)
+    ["uns_F4E_CAS",800,600,400]                                         // F-4E Phantom II (CAS)
 ];
 
 static_vehicles = [
@@ -411,11 +382,14 @@ blufor_squad_para = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 elite_vehicles = [
-    "uns_PBR_M10",                                                      // PBR Mk. II (M10 Flamethrower)
-    "uns_M67A",                                                         // M-67A Flamethrower Tank
-    "uns_m48a3",                                                        // M-48A3 Patton MBT
+    "uns_A1J_CAS",                                                      // A-1H Skyraider (CAS)
+    "uns_A7_CAS",                                                       // A-7D Corsair II (CAS)
+    "uns_F4E_CAS",                                                      // F-4E Phantom II (CAS)
+    "Uns_M102_artillery",                                               // M-102 105mm Howitzer
     "uns_m107sp",                                                       // M-107 Self-Propelled Gun
     "uns_m110sp",                                                       // M-110 Self-Propelled Gun
-    "Uns_M102_artillery",                                               // M-102 105mm Howitzer
-    "Uns_M114_artillery"                                                // M-114A1 155mm Howitzer
+    "Uns_M114_artillery",                                               // M-114A1 155mm Howitzer
+    "uns_m48a3",                                                        // M-48A3 Patton MBT
+    "uns_M67A",                                                         // M-67A Flamethrower Tank
+    "uns_PBR_M10"                                                       // PBR Mk. II (M10 Flamethrower)
 ];
