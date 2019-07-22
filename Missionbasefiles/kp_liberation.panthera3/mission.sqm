@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=116;
+		nextID=125;
 	};
 	class Camera
 	{
-		pos[]={5338.6963,89.617531,10223.239};
-		dir[]={0.57157886,-0.23255126,-0.78695208};
-		up[]={0.13667257,0.97257715,-0.18817261};
-		aside[]={-0.80913234,9.2230039e-008,-0.58769149};
+		pos[]={8213.4727,68.101074,8894.8818};
+		dir[]={-0.94919121,-0.3032892,0.084048145};
+		up[]={-0.30211169,0.95289367,0.026751451};
+		aside[]={0.088203773,-3.3242395e-007,0.9961077};
 	};
 };
 binarizationWanted=0;
@@ -9653,87 +9653,207 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2966.7144,65.598541,3167.2517};
-						angles[]={0,1.1233687,0};
+						position[]={2966.7141,65.598511,3167.252};
+						angles[]={0,1.1233637,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2012;
 					type="Land_Medevac_house_V1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2954.9348,65.471375,3161.1907};
-						angles[]={0,4.7885604,0};
+						position[]={2954.9351,65.471672,3161.1909};
+						angles[]={0,4.7885551,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2013;
 					type="Land_Medevac_house_V1_F";
-					atlOffset=-0.1072998;
+					atlOffset=-0.10700226;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2965.863,64.905609,3147.8853};
-						angles[]={0,1.908767,0};
+						position[]={2965.863,64.905602,3147.885};
+						angles[]={0,1.9087619,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2014;
 					type="Land_Medevac_house_V1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2967.4119,65.277054,3155.0386};
-						angles[]={0,1.6469676,0};
+						position[]={2967.4121,65.277092,3155.0391};
+						angles[]={0,1.6469624,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2015;
 					type="Land_Medevac_house_V1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2955.4319,65.848915,3147.9895};
-						angles[]={0,4.7885604,0};
+						position[]={2955.4319,65.84893,3147.99};
+						angles[]={0,4.7885551,0};
 					};
 					side="Empty";
 					flags=1;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2016;
 					type="Land_Medevac_house_V1_F";
-					atlOffset=0.333992;
+					atlOffset=0.33399963;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item9
 				{
@@ -9793,18 +9913,42 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2944.6929,68.904053,3150.188};
-						angles[]={0,4.7885604,0};
+						position[]={2944.6931,68.904297,3150.188};
+						angles[]={0,4.7885551,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2020;
 					type="Land_Medevac_HQ_V1_F";
-					atlOffset=-0.14624786;
+					atlOffset=-0.14600372;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item13
 				{
@@ -10143,18 +10287,42 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2944.3577,68.537132,3166.7017};
-						angles[]={0,1.6469676,0};
+						position[]={2944.3579,68.537399,3166.7019};
+						angles[]={0,1.6469624,0};
 					};
 					side="Empty";
 					flags=5;
 					class Attributes
 					{
 						skill=0.2;
+						init="call{this setVariable [""ace_medical_isMedicalFacility"", true, true];}";
 					};
 					id=2050;
 					type="Land_Medevac_HQ_V1_F";
-					atlOffset=-0.45428467;
+					atlOffset=-0.45400238;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_featureType";
+							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item33
 				{
@@ -17494,7 +17662,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5503.8022,27.505251,9911.1699};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17511,7 +17679,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5503.6597,27.505251,9913.1816};
-				angles[]={-0,3.7524579,0};
+				angles[]={0,3.7524579,0};
 			};
 			side="Empty";
 			flags=4;
