@@ -81,12 +81,6 @@ if(isServer) then {
 	publicVariable "KP_serverParamsFetched";
 
 	diag_log "[KP LIBERATION] [PARAM] Server finished parameters initialization.";
-
-} else {
-	waitUntil {sleep 0.5; !isNil "KP_serverParamsFetched"};
-	waitUntil {sleep 0.5; KP_serverParamsFetched};
-
-	private _text = format ["[KP LIBERATION] [PARAM] Client %1 received parameters from server.", name player]; _text remoteExec ["diag_log",2];
 };
 
 // Fix for not working float values in mission params
