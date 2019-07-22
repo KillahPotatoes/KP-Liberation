@@ -44,72 +44,74 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fue
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-	["CUP_B_CDF_Soldier_FST",20,0,0],									//Rifleman
-	["CUP_B_CDF_Soldier_RPG18_FST",30,0,0],								//Rifleman (RPG-18)
-	["CUP_B_CDF_Soldier_GL_FST",25,0,0],								//Grenadier
-	["CUP_B_CDF_Soldier_AR_FST",25,0,0],								//Automatic Rifleman
-	["CUP_B_CDF_Soldier_MG_FST",35,0,0],								//Machinegunner
-	["CUP_B_CDF_Soldier_AMG_FST",35,0,0],								//Asst. Machinegunner
-	["CUP_B_CDF_Soldier_Marksman_FST",30,0,0],							//Marksman
-	["CUP_B_CDF_Soldier_LAT_FST",50,25,0],								//AT Specialist
-	["CUP_B_CDF_Soldier_AAT_FST",50,10,0],								//Asst. AT Specialist
-	["CUP_B_CDF_Soldier_AA_FST",50,10,0],								//AA Specialist
-	["CUP_B_CDF_Medic_FST",30,0,0],										//Medic
-	["CUP_B_CDF_Engineer_FST",30,0,0],									//Engineer
-	["CUP_B_CDF_Soldier_MNT",20,0,0],                                   //Rifleman (TTsko Mountain)
-    ["CUP_B_CDF_Soldier_RPG18_MNT",30,0,0],                             //Rifleman (RPG-18 - TTsko Mountain)
-    ["CUP_B_CDF_Soldier_Marksman_MNT",30,0,0],                          //Marksman (TTsko Mountain)
-    ["CUP_B_CDF_Sniper_MNT",40,0,0],                                  	//Sniper (TTsko Mountain)
-    ["CUP_B_CDF_Medic_MNT",30,0,0],                                     //Medic (TTsko Mountain)
-    ["CUP_B_CDF_Engineer_MNT",30,0,0],                                  //Engineer (TTsko Mountain)
-	["CUP_B_CDF_Sniper_FST",70,5,0],									//Sniper
-	["CUP_B_CDF_Spotter_FST",20,0,0],									//Spotter
-	["CUP_B_CDF_Crew_FST",10,0,0],										//Crewman	
-	["CUP_B_CDF_Pilot_FST",10,0,0]										//Pilot
+	["CUP_B_CDF_Soldier_FST",20,0,0],									// Rifleman
+	["CUP_B_CDF_Soldier_RPG18_FST",30,0,0],								// Rifleman (RPG-18)
+	["CUP_B_CDF_Soldier_GL_FST",25,0,0],								// Grenadier
+	["CUP_B_CDF_Soldier_AR_FST",25,0,0],								// Automatic Rifleman
+	["CUP_B_CDF_Soldier_MG_FST",35,0,0],								// Machinegunner
+	["CUP_B_CDF_Soldier_AMG_FST",35,0,0],								// Asst. Machinegunner
+	["CUP_B_CDF_Soldier_Marksman_FST",30,0,0],							// Marksman
+	["CUP_B_CDF_Soldier_LAT_FST",50,25,0],								// AT Specialist
+	["CUP_B_CDF_Soldier_AAT_FST",50,10,0],								// Asst. AT Specialist
+	["CUP_B_CDF_Soldier_AA_FST",50,10,0],								// AA Specialist
+	["CUP_B_CDF_Medic_FST",30,0,0],										// Medic
+	["CUP_B_CDF_Engineer_FST",30,0,0],									// Engineer
+	["CUP_B_CDF_Soldier_MNT",20,0,0],                                   // Rifleman (TTsko Mountain)
+    ["CUP_B_CDF_Soldier_RPG18_MNT",30,0,0],                             // Rifleman (RPG-18 - TTsko Mountain)
+    ["CUP_B_CDF_Soldier_Marksman_MNT",30,0,0],                          // Marksman (TTsko Mountain)
+    ["CUP_B_CDF_Sniper_MNT",40,0,0],                                  	// Sniper (TTsko Mountain)
+    ["CUP_B_CDF_Medic_MNT",30,0,0],                                     // Medic (TTsko Mountain)
+    ["CUP_B_CDF_Engineer_MNT",30,0,0],                                  // Engineer (TTsko Mountain)
+	["CUP_B_CDF_Sniper_FST",70,5,0],									// Sniper
+	["CUP_B_CDF_Spotter_FST",20,0,0],									// Spotter
+	["CUP_B_CDF_Crew_FST",10,0,0],										// Crewman	
+	["CUP_B_CDF_Pilot_FST",10,0,0]										// Pilot
 ];
 
 light_vehicles = [
-	["CUP_B_Tractor_CDF",50,0,25],										//Towing Tractor
-	["CUP_B_UAZ_Unarmed_CDF",75,0,50],									//UAZ
-	["CUP_B_UAZ_MG_CDF",100,60,50],										//UAZ (DShKM)
-	["CUP_B_UAZ_AGS30_CDF",100,80,50],									//UAZ (AGS-30)
-	["CUP_B_UAZ_SPG9_CDF",100,100,50],									//UAZ (SPG-9)
-	["CUP_B_UAZ_METIS_CDF",100,120,50],									//UAZ (Metis-M)
-	["CUP_B_Ural_ZU23_CDF",150,300,100],								//Ural (ZU-23)
-	["CUP_B_BM21_CDF",225,500,100],										//BM-21
-	["CUP_B_Ural_Open_CDF",125,0,75],									//Ural (Open)
-	["CUP_B_Ural_CDF",125,0,75]											//Ural
+	["CUP_B_Tractor_CDF",50,0,25],										// Towing Tractor
+	["CUP_B_UAZ_Unarmed_CDF",75,0,50],									// UAZ
+	["CUP_B_UAZ_MG_CDF",100,60,50],										// UAZ (DShKM)
+	["CUP_B_UAZ_AGS30_CDF",100,80,50],									// UAZ (AGS-30)
+	["CUP_B_UAZ_SPG9_CDF",100,100,50],									// UAZ (SPG-9)
+	["CUP_B_UAZ_METIS_CDF",100,120,50],									// UAZ (Metis-M)
+	["CUP_B_Ural_ZU23_CDF",150,300,100],								// Ural (ZU-23)
+	["CUP_B_BM21_CDF",225,500,100],										// BM-21
+	["CUP_B_Kamaz_CDF",125,0,75],										// Kamaz 5350
+	["CUP_B_Kamaz_Open_CDF",125,0,75],									// Kamaz 5350 (Open)
+	["CUP_B_Ural_Open_CDF",125,0,75],									// Ural (Open)
+	["CUP_B_Ural_CDF",125,0,75]											// Ural
 ];
 
 heavy_vehicles = [
-	["CUP_B_BRDM2_CDF",200,200,125],									//BRDM-2
-	["CUP_B_BRDM2_ATGM_CDF",200,400,125],								//BRDM-2 (ATGM)
-	["CUP_B_BTR60_CDF",300,200,125],									//BTR-60PB
-	["CUP_B_MTLB_pk_CDF",150,50,100],									//MT-LB LV
-	["CUP_B_BMP2_CDF",400,300,200],										//BMP-2
-	["CUP_B_ZSU23_Afghan_CDF",350,350,200],								//ZSU-23-4 Afghanski
-	["CUP_B_ZSU23_CDF",450,350,200],									//ZSU-23-4
-	["CUP_B_T72_CDF",600,400,200]										//T-72
+	["CUP_B_BRDM2_CDF",200,200,125],									// BRDM-2
+	["CUP_B_BRDM2_ATGM_CDF",200,400,125],								// BRDM-2 (ATGM)
+	["CUP_B_BTR60_CDF",300,200,125],									// BTR-60PB
+	["CUP_B_MTLB_pk_CDF",150,50,100],									// MT-LB LV
+	["CUP_B_BMP2_CDF",400,300,200],										// BMP-2
+	["CUP_B_ZSU23_Afghan_CDF",350,350,200],								// ZSU-23-4 Afghanski
+	["CUP_B_ZSU23_CDF",450,350,200],									// ZSU-23-4
+	["CUP_B_T72_CDF",600,400,200]										// T-72
 ];
 
 air_vehicles = [
-	["CUP_B_Mi17_CDF",300,100,300],										//Mi-8MT
-	["CUP_B_Pchela1T_CDF",100,0,50],									//Pchela-1T
-	["CUP_B_Mi24_D_Dynamic_CDF",700,600,300],							//Mi-24D
-	["CUP_B_Su25_Dyn_CDF",1000,800,400],								//Su-25 Frogfoot
-	["CUP_B_SU34_CDF",1200,1000,500]									//Su-34
+	["CUP_B_Mi17_CDF",300,100,300],										// Mi-8MT
+	["CUP_B_Pchela1T_CDF",100,0,50],									// Pchela-1T
+	["CUP_B_Mi24_D_Dynamic_CDF",700,600,300],							// Mi-24D
+	["CUP_B_Su25_Dyn_CDF",1000,800,400],								// Su-25 Frogfoot
+	["CUP_B_SU34_CDF",1200,1000,500]									// Su-34
 ];
 
 static_vehicles = [
-	["CUP_B_DSHKM_CDF",25,40,0],										//DShKM
-	["CUP_B_DSHkM_MiniTripod_CDF",25,40,0],								//DShKM Minitripod
-	["CUP_B_AGS_CDF",25,60,0],											//AGS-30
-	["CUP_B_SPG9_CDF",50,100,0],										//SPG-9
-	["CUP_B_ZU23_CDF",100,300,0],										//ZU-23
-	["B_Mortar_01_F",80,150,0],											//Mk6 Mortar
-	["CUP_B_2b14_82mm_CDF",80,150,0],									//Podnos 2B14
-	["CUP_B_D30_AT_CDF",100,200,0],										//D-30 AT
-	["CUP_B_D30_CDF",200,250,0]											//D-30
+	["CUP_B_DSHKM_CDF",25,40,0],										// DShKM
+	["CUP_B_DSHkM_MiniTripod_CDF",25,40,0],								// DShKM Minitripod
+	["CUP_B_AGS_CDF",25,60,0],											// AGS-30
+	["CUP_B_SPG9_CDF",50,100,0],										// SPG-9
+	["CUP_B_ZU23_CDF",100,300,0],										// ZU-23
+	["B_Mortar_01_F",80,150,0],											// Mk6 Mortar
+	["CUP_B_2b14_82mm_CDF",80,150,0],									// Podnos 2B14
+	["CUP_B_D30_AT_CDF",100,200,0],										// D-30 AT
+	["CUP_B_D30_CDF",200,250,0]											// D-30
 ];
 
 buildings = [
@@ -133,8 +135,8 @@ buildings = [
 	["Land_LampHalogen_F",0,0,0],
 	["Land_LampStreet_small_F",0,0,0],
 	["Land_LampAirport_F",0,0,0],
-	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
-	["Land_HelipadRescue_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadCircle_F",0,0,0],										// Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadRescue_F",0,0,0],										// Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
 	["PortableHelipadLight_01_red_F",0,0,0],
@@ -208,14 +210,14 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
-	["CUP_B_Tractor_CDF",50,0,75],										//Towing Tractor
-	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
-	["CUP_B_Kamaz_Repair_CDF",425,0,75],								//Kamaz 5350 (Repair)
-	["CUP_B_Kamaz_Refuel_CDF",125,0,375],								//Kamaz 5350 (Fuel)
-	["CUP_B_Kamaz_Reammo_CDF",125,300,75],								//Kamaz 5350 (Ammo)
-	["B_Slingload_01_Repair_F",375,0,0],								//Huron Repair
-	["B_Slingload_01_Fuel_F",75,0,300],									//Huron Fuel
-	["B_Slingload_01_Ammo_F",75,300,0]									//Huron Ammo
+	["CUP_B_Tractor_CDF",50,0,75],										// Towing Tractor
+	["B_APC_Tracked_01_CRV_F",500,250,350],								// CRV-6e Bobcat
+	["CUP_B_Kamaz_Repair_CDF",425,0,75],								// Kamaz 5350 (Repair)
+	["CUP_B_Kamaz_Refuel_CDF",125,0,375],								// Kamaz 5350 (Fuel)
+	["CUP_B_Kamaz_Reammo_CDF",125,300,75],								// Kamaz 5350 (Ammo)
+	["B_Slingload_01_Repair_F",375,0,0],								// Huron Repair
+	["B_Slingload_01_Fuel_F",75,0,300],									// Huron Fuel
+	["B_Slingload_01_Ammo_F",75,300,0]									// Huron Ammo
 ];
 
 /*
@@ -226,82 +228,82 @@ support_vehicles = [
 
 // Light infantry squad.
 blufor_squad_inf_light = [
-	"CUP_B_CDF_Soldier_TL_FST",											//Team Leader
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_RPG18_FST",										//Rifleman (RPG-18)
-	"CUP_B_CDF_Soldier_GL_FST",											//Grenadier
-	"CUP_B_CDF_Soldier_AR_FST",											//Automatic Rifleman
-	"CUP_B_CDF_Soldier_AR_FST",											//Automatic Rifleman
-	"CUP_B_CDF_Soldier_Marksman_FST",									//Marksman
-	"CUP_B_CDF_Medic_FST",												//Medic
-	"CUP_B_CDF_Engineer_FST"											//Engineer
+	"CUP_B_CDF_Soldier_TL_FST",											// Team Leader
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_RPG18_FST",										// Rifleman (RPG-18)
+	"CUP_B_CDF_Soldier_GL_FST",											// Grenadier
+	"CUP_B_CDF_Soldier_AR_FST",											// Automatic Rifleman
+	"CUP_B_CDF_Soldier_AR_FST",											// Automatic Rifleman
+	"CUP_B_CDF_Soldier_Marksman_FST",									// Marksman
+	"CUP_B_CDF_Medic_FST",												// Medic
+	"CUP_B_CDF_Engineer_FST"											// Engineer
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
-	"CUP_B_CDF_Soldier_TL_FST",											//Team Leader
-	"CUP_B_CDF_Soldier_RPG18_FST",										//Rifleman (RPG-18)
-	"CUP_B_CDF_Soldier_RPG18_FST",										//Rifleman (RPG-18)
-	"CUP_B_CDF_Soldier_GL_FST",											//Grenadier
-	"CUP_B_CDF_Soldier_AR_FST",											//Automatic Rifleman
-	"CUP_B_CDF_Soldier_AR_FST",											//Automatic Rifleman
-	"CUP_B_CDF_Soldier_MG_FST",											//Machinegunner
-	"CUP_B_CDF_Soldier_Marksman_FST",									//Marksman
-	"CUP_B_CDF_Medic_FST",												//Medic
-	"CUP_B_CDF_Engineer_FST"											//Engineer
+	"CUP_B_CDF_Soldier_TL_FST",											// Team Leader
+	"CUP_B_CDF_Soldier_RPG18_FST",										// Rifleman (RPG-18)
+	"CUP_B_CDF_Soldier_RPG18_FST",										// Rifleman (RPG-18)
+	"CUP_B_CDF_Soldier_GL_FST",											// Grenadier
+	"CUP_B_CDF_Soldier_AR_FST",											// Automatic Rifleman
+	"CUP_B_CDF_Soldier_AR_FST",											// Automatic Rifleman
+	"CUP_B_CDF_Soldier_MG_FST",											// Machinegunner
+	"CUP_B_CDF_Soldier_Marksman_FST",									// Marksman
+	"CUP_B_CDF_Medic_FST",												// Medic
+	"CUP_B_CDF_Engineer_FST"											// Engineer
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
-	"CUP_B_CDF_Soldier_TL_FST",											//Team Leader
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_LAT_FST",										//AT Specialist
-	"CUP_B_CDF_Soldier_LAT_FST",										//AT Specialist
-	"CUP_B_CDF_Soldier_AAT_FST",										//Asst. AT Specialist
-	"CUP_B_CDF_Medic_FST",												//Medic
-	"CUP_B_CDF_Soldier_FST"												//Rifleman
+	"CUP_B_CDF_Soldier_TL_FST",											// Team Leader
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_LAT_FST",										// AT Specialist
+	"CUP_B_CDF_Soldier_LAT_FST",										// AT Specialist
+	"CUP_B_CDF_Soldier_AAT_FST",										// Asst. AT Specialist
+	"CUP_B_CDF_Medic_FST",												// Medic
+	"CUP_B_CDF_Soldier_FST"												// Rifleman
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
-	"CUP_B_CDF_Soldier_TL_FST",											//Team Leader
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_AA_FST",											//AA Specialist
-	"CUP_B_CDF_Soldier_AA_FST",											//AA Specialist
-	"CUP_B_CDF_Soldier_AA_FST",											//AA Specialist
-	"CUP_B_CDF_Medic_FST",												//Medic
-	"CUP_B_CDF_Soldier_FST"												//Rifleman
+	"CUP_B_CDF_Soldier_TL_FST",											// Team Leader
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_AA_FST",											// AA Specialist
+	"CUP_B_CDF_Soldier_AA_FST",											// AA Specialist
+	"CUP_B_CDF_Soldier_AA_FST",											// AA Specialist
+	"CUP_B_CDF_Medic_FST",												// Medic
+	"CUP_B_CDF_Soldier_FST"												// Rifleman
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
-	"CUP_B_CDF_Soldier_TL_MNT",											//Team Leader (TTsko Mountain)
-	"CUP_B_CDF_SOldier_MNT",											//Rifleman (TTsko Mountain)
-	"CUP_B_CDF_Soldier_GL_MNT",											//Grenadier (TTsko Mountain)
-	"CUP_B_CDF_Soldier_MG_MNT",											//Machinegunner (TTsko Mountain)
-	"CUP_B_CDF_Soldier_LAT_MNT",										//AT Specialist (TTsko Mountain)
-	"CUP_B_CDF_Soldier_RPG18_MNT",										//Rifleman (RPG-18 - TTsko Mountain)
-	"CUP_B_CDF_Soldier_MArksman_MNT",									//Marksman (TTsko Mountain)
-	"CUP_B_CDF_Sniper_MNT",												//Sniper (TTsko Mountain)
-	"CUP_B_CDF_Medic_MNT",												//Medic (TTsko Mountain)
-	"CUP_B_CDF_Engineer_MNT"											//Engineer (TTsko Mountain)
+	"CUP_B_CDF_Soldier_TL_MNT",											// Team Leader (TTsko Mountain)
+	"CUP_B_CDF_SOldier_MNT",											// Rifleman (TTsko Mountain)
+	"CUP_B_CDF_Soldier_GL_MNT",											// Grenadier (TTsko Mountain)
+	"CUP_B_CDF_Soldier_MG_MNT",											// Machinegunner (TTsko Mountain)
+	"CUP_B_CDF_Soldier_LAT_MNT",										// AT Specialist (TTsko Mountain)
+	"CUP_B_CDF_Soldier_RPG18_MNT",										// Rifleman (RPG-18 - TTsko Mountain)
+	"CUP_B_CDF_Soldier_MArksman_MNT",									// Marksman (TTsko Mountain)
+	"CUP_B_CDF_Sniper_MNT",												// Sniper (TTsko Mountain)
+	"CUP_B_CDF_Medic_MNT",												// Medic (TTsko Mountain)
+	"CUP_B_CDF_Engineer_MNT"											// Engineer (TTsko Mountain)
 ];
 
 // Paratroopers squad.
 blufor_squad_para = [
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST",											//Rifleman
-	"CUP_B_CDF_Soldier_FST"												//Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST",											// Rifleman
+	"CUP_B_CDF_Soldier_FST"												// Rifleman
 ];
 
 /*
@@ -310,14 +312,14 @@ blufor_squad_para = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 elite_vehicles = [
-	"CUP_B_BTR60_CDF",													//BTR-60 PB
-	"CUP_B_BM21_CDF",													//BM-21
-	"CUP_B_BMP2_CDF",													//BMP-2
-	"CUP_B_ZSU23_Afghan_CDF",											//ZSU-23-4 Afghanski
-	"CUP_B_ZSU23_CDF",													//ZSU-23-4
-	"CUP_B_T72_CDF",													//T-72
-	"CUP_B_Mi24_D_Dynamic_CDF",											//Mi-24D
-	"CUP_B_Su25_Dyn_CDF",												//Su-25 Frogfoot
-	"CUP_B_SU34_CDF",													//Su-34
-	"CUP_B_D30_CDF"														//D-30
+	"CUP_B_BTR60_CDF",													// BTR-60 PB
+	"CUP_B_BM21_CDF",													// BM-21
+	"CUP_B_BMP2_CDF",													// BMP-2
+	"CUP_B_ZSU23_Afghan_CDF",											// ZSU-23-4 Afghanski
+	"CUP_B_ZSU23_CDF",													// ZSU-23-4
+	"CUP_B_T72_CDF",													// T-72
+	"CUP_B_Mi24_D_Dynamic_CDF",											// Mi-24D
+	"CUP_B_Su25_Dyn_CDF",												// Su-25 Frogfoot
+	"CUP_B_SU34_CDF",													// Su-34
+	"CUP_B_D30_CDF"														// D-30
 ];
