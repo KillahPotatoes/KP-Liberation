@@ -164,6 +164,9 @@ class Missions
 ### 0.96.5 (TBD due to Contacts Release)
 * Added: The Unsung Vietnam War Mod presets.
 * Added: The Unsung Vietnam War Mod transport configs.
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) arsenal preset.
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Desert blufor preset.
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Woodland blufor preset.
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.

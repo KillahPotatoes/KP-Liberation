@@ -7,13 +7,13 @@
 KP_liberation_medical_vehicles = [
     "B_Truck_01_medical_F",
     "B_T_Truck_01_medical_F",
-	"CUP_B_LR_Ambulance_GB_D",
-	"CUP_B_LR_Ambulance_GB_W",
-	"CUP_B_LR_Ambulance_CZ_W",
-	"CUP_B_LR_Ambulance_CZ_D",
-	"CUP_B_HMMWV_Ambulance_USA",
-	"CUP_B_HMMWV_Ambulance_USMC",
-	"CUP_B_BMP2_AMB_CDF",
+	  "CUP_B_LR_Ambulance_GB_D",
+	  "CUP_B_LR_Ambulance_GB_W",
+	  "CUP_B_LR_Ambulance_CZ_W",
+	  "CUP_B_LR_Ambulance_CZ_D",
+	  "CUP_B_HMMWV_Ambulance_USA",
+	  "CUP_B_HMMWV_Ambulance_USMC",
+	  "CUP_B_BMP2_AMB_CDF",
     "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
     "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
     "rhsusf_m113_usarmy_medical",
@@ -82,6 +82,8 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 22 = CUP Chernarus Defense Force
 23 = CUP Army of the Czech Republic (Desert)
 24 = CUP Army of the Czech Republic (Woodland) */
+25 = SFP (Woodland)
+26 = SFP (Desert) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -137,7 +139,8 @@ KP_liberation_preset_civilians = 0;
 6 = 3cbBAF and RHS USAF arsenal preset.
 7 = GM West arsenal preset.
 8 = GM East arsenal preset.
-9 = CSAT arsenal preset. */
+9 = CSAT arsenal preset.
+10 = SFP arsenal preset. */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -671,6 +674,10 @@ boats_names = [
     "O_T_Boat_Transport_01_F",
     "O_T_Boat_Armed_01_hmg_F",
     "rhsusf_mkvsoc",
+    "sfp_gruppbat",
+    "sfp_strb90",
+    "sfp_strb90_rws",
+    "sfp_rbb_norrkoping"
     "UNS_Zodiac_W",
     "uns_pbr",
     "uns_pbr_mk18",

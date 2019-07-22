@@ -23,6 +23,8 @@ switch (KP_liberation_preset_blufor) do {
 	case 22: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_CDF.sqf";};
 	case 23: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_ACR_Desert.sqf";};
 	case 24: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_ACR_Woodland.sqf";};
+    case 25: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_wdl.sqf";};
+    case 26: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_des.sqf";};
     default {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
