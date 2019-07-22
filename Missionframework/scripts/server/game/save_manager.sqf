@@ -452,8 +452,6 @@ if (!isNil "greuh_liberation_savegame") then {
             } forEach _savedGroup;
         } forEach _aiGroups;
     };
-
-
     diag_log "[KP LIBERATION] [SAVE] Save loading finished";
 } else {
     diag_log "[KP LIBERATION] [SAVE] Save nil";

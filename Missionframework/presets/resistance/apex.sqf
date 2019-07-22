@@ -76,7 +76,6 @@ KP_liberation_guerilla_uniforms_1 = [
     "U_C_Man_casual_5_F",
     "U_C_Man_casual_6_F",
     "U_Marshal"
-
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
