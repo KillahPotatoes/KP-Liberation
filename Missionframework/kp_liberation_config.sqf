@@ -9,6 +9,8 @@ KP_liberation_medical_vehicles = [
     "B_T_Truck_01_medical_F",
 	"CUP_B_LR_Ambulance_GB_D",
 	"CUP_B_LR_Ambulance_GB_W",
+	"CUP_B_LR_Ambulance_CZ_W",
+	"CUP_B_LR_Ambulance_CZ_D",
 	"CUP_B_HMMWV_Ambulance_USA",
 	"CUP_B_HMMWV_Ambulance_USMC",
 	"CUP_B_BMP2_AMB_CDF",
@@ -77,7 +79,9 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 19 = CUP US Marine Corps (Woodland)
 20 = CUP US Army (Desert)
 21 = CUP US Army (Woodland)
-22 = CUP Chernarus Defense Force */
+22 = CUP Chernarus Defense Force
+23 = CUP Army of the Czech Republic (Desert)
+24 = CUP Army of the Czech Republic (Woodland) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
