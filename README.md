@@ -194,6 +194,7 @@ class Missions
 * Tweaked: Changes in elite vehicles in presets are now also applied during a running campaign.
 * Tweaked: Player lead squads are now also saved near FOBs. (but still needs to be reassigned via zeus after load, of course)
 * Tweaked: Weather is now only handled by the server.
+* Tweaked: Gear check after leaving the arsenal or load a loadout improved to not strip you completely. Thanks to [Zharf](https://github.com/zharf)
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 * Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 

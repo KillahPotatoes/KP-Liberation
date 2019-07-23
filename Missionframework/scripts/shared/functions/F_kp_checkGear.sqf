@@ -1,19 +1,19 @@
 /*
-	F_checkGear
+    F_checkGear
 
-	File: F_kp_checkGear.sqf
-	Author: Wyqer - https://github.com/Wyqer
-	Date: 2017-11-22
-	Last Update: 2017-11-22
+    File: F_kp_checkGear.sqf
+    Author: Wyqer - https://github.com/Wyqer
+    Date: 2017-11-22
+    Last Update: 2019-07-23
 
-	Description:
-	Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
+    Description:
+    Checks the players gear for blacklisted items and report these items. Also returns if the player check was fine (true) or if he had bad items (false).
 
-	Parameter(s):
-		0: STRING - Backpack classname of the players backpack as he entered the arsenal / load a loadout. (Default "")
+    Parameter(s):
+        0: STRING - Backpack classname of the players backpack as he entered the arsenal / load a loadout. (Default "")
 
-	Returns:
-	BOOL
+    Returns:
+    BOOL
 */
 
 params [["_backpack", ""]];
@@ -51,7 +51,7 @@ _playerItems = _playerItems apply {toLower _x};
     _removedItems pushBack _x;
     player unassignItem _x;
     player removeItems _x;
-} forEach (((_playerItems arrayIntersect _playerItems) - KP_liberation_allowed_items) select { !(_x call F_isRadio) });
+} forEach (((_playerItems arrayIntersect _playerItems) - KP_liberation_allowed_items) select {!([_x] call F_isRadio)});
 
 private _playerMagazines = ((getMagazineCargo (uniformContainer player)) select 0);
 _playerMagazines append ((getMagazineCargo (vestContainer player)) select 0);
@@ -99,10 +99,10 @@ _weaponItems = _weaponItems apply {toLower _x};
 
 _removedItems = (_removedItems arrayIntersect _removedItems) - [""];
 if !(_removedItems isEqualTo []) then {
-	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_removedItems), name player];
-	_text remoteExec ["diag_log",2];
-	hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
-	_return = false;
+    private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_removedItems), name player];
+    _text remoteExec ["diag_log",2];
+    hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
+    _return = false;
 };
 
 _return

@@ -1,29 +1,31 @@
 /*
-	F_isRadio
+    F_isRadio
 
-	File: F_kp_isRadio.sqf
-	Author: Zharf
-	Date: 2019-07-07
-	Last Update: 2019-07-07
+    File: F_kp_isRadio.sqf
+    Author: Zharf - https://github.com/zharf
+    Date: 2019-07-07
+    Last Update: 2019-07-23
 
-	Description:
-	Returns whether the provided item is a radio or not
+    Description:
+    Returns whether the provided item is a radio or not
 
-	Parameter(s):
-		0: STRING - a class name to check
+    Parameter(s):
+        0: STRING - Classname to check. (Default "")
 
-	Returns:
-	BOOL
+    Returns:
+    BOOL
 */
-params ["_item"];
 
-private _ret = false;
-if ((isClass (configFile >> "CfgPatches" >> "tfar_core")) || (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) then {
-    _ret = _item call TFAR_fnc_isRadio;
-} else {
-    if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
-        _ret = [_item] call acre_api_fnc_isRadio;
-    };
+params [
+    ["_item", "", [""]]
+];
+
+if ((isClass (configFile >> "CfgPatches" >> "tfar_core")) || (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) exitWith {
+    _item call TFAR_fnc_isRadio
 };
 
-_ret
+if (isClass (configFile >> "CfgPatches" >> "acre_api")) exitWith {
+    [_item] call acre_api_fnc_isRadio
+};
+
+false
