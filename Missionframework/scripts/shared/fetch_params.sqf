@@ -49,6 +49,7 @@ if(isServer) then {
     GET_PARAM(GRLIB_max_squad_size, "MaxSquadSize", 10);
     GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
+    GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
@@ -58,7 +59,6 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
-    GET_PARAM_BOOL(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
     GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
     GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
