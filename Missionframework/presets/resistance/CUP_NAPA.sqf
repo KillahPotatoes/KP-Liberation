@@ -1,8 +1,8 @@
 /*
     Needed Mods:
     - CUP Weapons
-	- CUP Vehicles
-	- CUP Units
+    - CUP Vehicles
+    - CUP Units
 
     Optional Mods:
     - None
@@ -24,16 +24,16 @@ KP_liberation_guerilla_units = [
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
     "CUP_I_Datsun_PK_Random",
-	"CUP_I_Datsun_PK_Random",
-	"CUP_I_Datsun_PK_Random",
-	"CUP_I_BMP2_NAPA",
-	"CUP_I_BRDM2_NAPA",
-	"CUP_I_BRDM2_NAPA",
-	"CUP_I_MTLB_pk_NAPA",
-	"CUP_I_MTLB_pk_NAPA",
-	"CUP_I_T34_NAPA",
-	"CUP_I_T34_NAPA",
-	"CUP_I_T55_NAPA",
+    "CUP_I_Datsun_PK_Random",
+    "CUP_I_Datsun_PK_Random",
+    "CUP_I_BMP2_NAPA",
+    "CUP_I_BRDM2_NAPA",
+    "CUP_I_BRDM2_NAPA",
+    "CUP_I_MTLB_pk_NAPA",
+    "CUP_I_MTLB_pk_NAPA",
+    "CUP_I_T34_NAPA",
+    "CUP_I_T34_NAPA",
+    "CUP_I_T55_NAPA",
     "CUP_I_T72_NAPA"
 ];
 
@@ -112,7 +112,7 @@ KP_liberation_guerilla_uniforms_3 = [
 // Vests
 KP_liberation_guerilla_vests_1 = [
     "CUP_V_I_Guerilla_Jacket",
-	"V_LegStrapBag_coyote_F",
+    "V_LegStrapBag_coyote_F",
     "V_LegStrapBag_olive_F",
     "V_LegStrapBag_black_F",
     "V_Pocketed_coyote_F",
@@ -128,7 +128,7 @@ KP_liberation_guerilla_vests_1 = [
 
 KP_liberation_guerilla_vests_2 = [
     "V_TacVestIR_blk",
-	"V_Chestrig_rgr",
+    "V_Chestrig_rgr",
     "V_Chestrig_khk",
     "V_Chestrig_oli",
     "V_Chestrig_blk",

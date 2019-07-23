@@ -81,7 +81,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 21 = CUP US Army (Woodland)
 22 = CUP Chernarus Defense Force
 23 = CUP Army of the Czech Republic (Desert)
-24 = CUP Army of the Czech Republic (Woodland) */
+24 = CUP Army of the Czech Republic (Woodland)
 25 = SFP (Woodland)
 26 = SFP (Desert) */
 KP_liberation_preset_blufor = 0;
