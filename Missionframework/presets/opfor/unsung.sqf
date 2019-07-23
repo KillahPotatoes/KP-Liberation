@@ -140,6 +140,7 @@ opfor_choppers = [
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
-    "uns_Mig21_CAS",                                                    // Mig-21 Fishbed F (CAS)
-    "uns_Mig21_CAP"                                                     // Mig-21 Fishbed F (CAP)
+    "uns_an2_cas",                                                      // An-2 Colt (CAS)
+    "uns_Mig21_CAP",                                                    // Mig-21 Fishbed F (CAP)
+    "uns_Mig21_CAS"                                                     // Mig-21 Fishbed F (CAS)
 ];
