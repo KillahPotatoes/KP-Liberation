@@ -6158,5 +6158,29 @@
             <German>ACE Arsenal</German>
             <Italian>ACE Arsenale</Italian>
         </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION">
+            <Original>Victory Condition</Original>
+            <German>Siegesbedingung</German>
+        </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION_0">
+            <Original>All capitals</Original>
+            <German>Alle Hauptstädte</German>
+        </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION_1">
+            <Original>All capitals and military bases</Original>
+            <German>Alle Hauptstädte und Militärbasen</German>
+        </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION_2">
+            <Original>All capitals and 60% of the sectors</Original>
+            <German>Alle Hauptstädte und 60% der Sektoren</German>
+        </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION_3">
+            <Original>All capitals and 80% of the sectors</Original>
+            <German>Alle Hauptstädte und 80% der Sektoren</German>
+        </Key>
+        <Key ID="STR_PARAMS_VICTORYCONDITION_4">
+            <Original>All sectors</Original>
+            <German>Alle Sektoren</German>
+        </Key>
     </Package>
 </Project>

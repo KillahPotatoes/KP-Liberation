@@ -169,6 +169,7 @@ class Missions
 * Added: Statistic values for spent/produced resources.
 * Added: Statistics will be posted additionally in the server log after winning the campaign.
 * Added: Encore Anti Air static to sensible presets.
+* Added: Additional victory conditions, selectable in the mission parameters.
 * Removed: Vanilla player score saving.
 * Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
