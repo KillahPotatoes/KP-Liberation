@@ -7,7 +7,7 @@ KPLIB_objectInits = [
     [["Flag_White_F"], {_this setFlagTexture "res\flag_kp_co.paa";}],
 
     // Add helipads to zeus, as they can't be recycled after built
-    [["Land_HelipadSquare_F", "Land_HelipadCircle_F", "Land_HelipadRescue_F", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"], {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;}],
+    [["Land_HelipadSquare_F", "Land_HelipadCircle_F", "Land_HelipadRescue_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"], {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;}],
 
     // Add ViV action to FOB box
     [[FOB_box_typename], {_this call F_setFobMass; [_this] remoteExecCall ["F_setLoadableViV", 0, _this];}],
