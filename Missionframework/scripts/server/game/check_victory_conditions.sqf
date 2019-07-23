@@ -1,6 +1,6 @@
 sleep 5;
 
-if ([] call KP_liberation_victoryCheck) then {
+if ([] call KP_liberation_victoryCheck && GRLIB_endgame != 1) then {
     GRLIB_endgame = 1;
     publicVariable "GRLIB_endgame";
     {_x allowDamage false; (vehicle _x) allowDamage false;} forEach allPlayers;
@@ -49,7 +49,7 @@ if ([] call KP_liberation_victoryCheck) then {
     publicstats pushback stats_vehicles_recycled;
     publicstats pushback _rabbits;
 
-    [publicstats] remoteExec ["remote_call_endgame"];
+    publicstats remoteExec ["remote_call_endgame"];
 
     private _playtime_days = floor (stats_playtime / 86400);
     private _playtime_hours = floor ((stats_playtime % 86400) / 3600);
