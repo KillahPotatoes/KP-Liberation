@@ -1,8 +1,8 @@
 /*
     Needed Mods:
     - CUP Weapons
-	- CUP Vehicles
-	- CUP Units
+    - CUP Vehicles
+    - CUP Units
 
     Optional Mods:
     - Qinetix's Titus
@@ -19,7 +19,7 @@ FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This 
 FOB_truck_typename = "CUP_B_T810_Repair_CZ_WDL";                        // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "CUP_B_LR_Ambulance_CZ_W";                     // This is the mobile respawn (and medical) truck.
-huron_typename = "CUP_B_Mi171Sh_Unarmed_ACR";                       	// This is Spartan 01, a multipurpose mobile respawn as a helicopter.
+huron_typename = "CUP_B_Mi171Sh_Unarmed_ACR";                           // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "CUP_B_CZ_Crew_WDL";                                // This defines the crew for vehicles.
 pilot_classname = "CUP_B_CZ_Pilot_WDL";                                 // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F";              // These are the little birds which spawn on the Freedom or at Chimera base.
@@ -59,7 +59,7 @@ infantry_units = [
     ["CUP_B_CZ_SpecOps_Scout_WDL",20,0,0],                              // SF Scout
     ["CUP_B_CZ_SpecOps_Exp_WDL",30,0,0],                                // SF Saboteur
     ["CUP_B_CZ_SpecOps_Recon_WDL",30,0,0],                              // SF Recon
-    ["CUP_B_CZ_SpecOps_WDL",40,0,0],                                  	// SF Rifleman
+    ["CUP_B_CZ_SpecOps_WDL",40,0,0],                                    // SF Rifleman
     ["CUP_B_CZ_SpecOps_MG_WDL",30,0,0],                                 // SF Machinegunner
     ["CUP_B_CZ_SpecOps_TL_WDL",30,0,0],                                 // SF Team Leader
     ["CUP_B_CZ_Sniper_WDL",70,5,0],                                     // Sniper
@@ -72,48 +72,48 @@ infantry_units = [
 light_vehicles = [
     ["CUP_B_TowingTractor_CZ",50,0,25],                                 // Towing Tractor
     ["CUP_B_UAZ_Unarmed_ACR",100,0,50],                                 // UAZ
-	["CUP_B_UAZ_Open_ACR",100,0,50],                                  	// UAZ (Open)
+    ["CUP_B_UAZ_Open_ACR",100,0,50],                                    // UAZ (Open)
     ["CUP_B_UAZ_MG_ACR",100,40,50],                                     // UAZ (DShKM)
     ["CUP_B_UAZ_AGS30_ACR",100,60,50],                                  // UAZ (AGS-30)
-	["CUP_B_UAZ_SPG9_ACR",100,80,50],                                   // UAZ (SPG-9)
-	["CUP_B_UAZ_METIS_ACR",100,100,50],                                 // UAZ (Metis-M)
+    ["CUP_B_UAZ_SPG9_ACR",100,80,50],                                   // UAZ (SPG-9)
+    ["CUP_B_UAZ_METIS_ACR",100,100,50],                                 // UAZ (Metis-M)
     ["CUP_B_LR_Transport_CZ_W",200,0,50],                               // Land Rover 110 (Transport) Woodland
     ["CUP_B_LR_MG_CZ_W",200,40,50],                                     // Land Rover 110 (M2) Woodland
     ["CUP_B_LR_Special_CZ_W",250,100,50],                               // Land Rover 110 (Special) Woodland
     ["CUP_B_Dingo_CZ_Wdl",250,40,100],                                  // Dingo 2 (MG) (Woodland)
     ["CUP_B_Dingo_GL_CZ_Wdl",250,60,100],                               // Dingo 2 (GL) (Woodland)
-	["QIN_Titus_WDL",350,0,50],											// Nexter Titus
-	["QIN_Titus_arx20_WDL",350,225,50],									// Nexter Titus ARX20
+    ["QIN_Titus_WDL",350,0,50],                                         // Nexter Titus
+    ["QIN_Titus_arx20_WDL",350,225,50],                                 // Nexter Titus ARX20
     ["CUP_B_T810_Unarmed_CZ_WDL",125,0,75],                             // Tatra T810 (Covered)
-    ["CUP_B_T810_Armed_CZ_WDL",125,60,75]                              	// Tatra T810 (MG/Covered)
+    ["CUP_B_T810_Armed_CZ_WDL",125,60,75]                               // Tatra T810 (MG/Covered)
 ];
 
 heavy_vehicles = [
-    ["CUP_B_BRDM2_CZ",200,200,200],                                   	// BRDM-2
-	["I_APC_Wheeled_03_cannon_F",500,400,300],                         	// Pandur II
-	["CUP_I_BMP1_TK_GUE",300,300,200],                                 	// BVP-1
-    ["CUP_B_BMP2_CZ",400,350,200],                                		// BVP-2
-	["B_APC_Tracked_01_AA_F",500,450,400],								// IFV-6a Cheetah
-	["CUP_O_T72_RU",600,500,400],                                   	// T72
-    ["CUP_B_T72_CZ",800,500,450]                                    	// T-72M4CZ
+    ["CUP_B_BRDM2_CZ",200,200,200],                                     // BRDM-2
+    ["I_APC_Wheeled_03_cannon_F",500,400,300],                          // Pandur II
+    ["CUP_I_BMP1_TK_GUE",300,300,200],                                  // BVP-1
+    ["CUP_B_BMP2_CZ",400,350,200],                                      // BVP-2
+    ["B_APC_Tracked_01_AA_F",500,450,400],                              // IFV-6a Cheetah
+    ["CUP_O_T72_RU",600,500,400],                                       // T72
+    ["CUP_B_T72_CZ",800,500,450]                                        // T-72M4CZ
 ];
 
 air_vehicles = [
-    ["CUP_B_Mi171Sh_ACR",700,600,500],                             		// Mi-171Sh (Rockets)
-    ["CUP_B_Mi35_Dynamic_CZ",850,1000,550],                            	// Mi-35
-    ["CUP_B_Mi35_Dynamic_CZ_Dark",850,1000,550],                       	// Mi-35 (Dark)
-    ["CUP_B_Mi35_Dynamic_CZ_Ram",850,1000,550],                        	// Mi-35 (Ram)
-    ["CUP_B_Mi35_Dynamic_CZ_Tiger",850,1000,550],                      	// Mi-35 (Tiger)
-    ["CUP_B_L39_CZ_GREY",1200,1250,650],                             	// L-39ZA (Grey)
-	["I_Plane_Fighter_03_dynamicLoadout_F",1200,1250,550],				// L-159 Alca
-    ["I_Plane_Fighter_04_F",1500,1400,800]								// JAS 39 Gripen
+    ["CUP_B_Mi171Sh_ACR",700,600,500],                                  // Mi-171Sh (Rockets)
+    ["CUP_B_Mi35_Dynamic_CZ",850,1000,550],                             // Mi-35
+    ["CUP_B_Mi35_Dynamic_CZ_Dark",850,1000,550],                        // Mi-35 (Dark)
+    ["CUP_B_Mi35_Dynamic_CZ_Ram",850,1000,550],                         // Mi-35 (Ram)
+    ["CUP_B_Mi35_Dynamic_CZ_Tiger",850,1000,550],                       // Mi-35 (Tiger)
+    ["CUP_B_L39_CZ_GREY",1200,1250,650],                                // L-39ZA (Grey)
+    ["I_Plane_Fighter_03_dynamicLoadout_F",1200,1250,550],              // L-159 Alca
+    ["I_Plane_Fighter_04_F",1500,1400,800]                              // JAS 39 Gripen
 ];
 
 static_vehicles = [
     ["CUP_B_DSHKM_ACR",25,40,0],                                        // DShKM
-    ["CUP_B_AGS_ACR",35,60,0],                                        	// AGS-30
+    ["CUP_B_AGS_ACR",35,60,0],                                          // AGS-30
     ["CUP_B_2b14_82mm_ACR",80,150,0],                                   // Podnos 2B14
-    ["CUP_B_RBS70_ACR",100,200,0]                                      	// RBS 70
+    ["CUP_B_RBS70_ACR",100,200,0]                                       // RBS 70
 ];
 
 buildings = [
@@ -230,67 +230,67 @@ support_vehicles = [
 // Light infantry squad.
 blufor_squad_inf_light = [
     "CUP_B_CZ_Soldier_SL_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"CUP_B_CZ_Soldier_RPG_WDL",
-	"CUP_B_CZ_Soldier_805_GL_WDL",
-	"CUP_B_CZ_Soldier_AR_WDL",
-	"CUP_B_CZ_Soldier_AR_WDL",
-	"CUP_B_CZ_Soldier_Marksman_WDL",
-	"CUP_B_CZ_Medic_WDL",
-	"CUP_B_CZ_Engineer_WDL"
+    "CUP_B_CZ_Soldier_WDL",
+    "CUP_B_CZ_Soldier_WDL",
+    "CUP_B_CZ_Soldier_RPG_WDL",
+    "CUP_B_CZ_Soldier_805_GL_WDL",
+    "CUP_B_CZ_Soldier_AR_WDL",
+    "CUP_B_CZ_Soldier_AR_WDL",
+    "CUP_B_CZ_Soldier_Marksman_WDL",
+    "CUP_B_CZ_Medic_WDL",
+    "CUP_B_CZ_Engineer_WDL"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
     "CUP_B_CZ_Soldier_SL_WDL",
-	"CUP_B_CZ_Soldier_RPG_WDL",
-	"CUP_B_CZ_Soldier_RPG_WDL",
-	"CUP_B_CZ_Soldier_805_GL_WDL",
-	"CUP_B_CZ_Soldier_AR_WDL",
-	"CUP_B_CZ_Soldier_AR_WDL",
-	"CUP_B_CZ_Soldier_MG_WDL",
-	"CUP_B_CZ_Soldier_Marksman_WDL",
-	"CUP_B_CZ_Medic_WDL",
-	"CUP_B_CZ_Engineer_WDL"
+    "CUP_B_CZ_Soldier_RPG_WDL",
+    "CUP_B_CZ_Soldier_RPG_WDL",
+    "CUP_B_CZ_Soldier_805_GL_WDL",
+    "CUP_B_CZ_Soldier_AR_WDL",
+    "CUP_B_CZ_Soldier_AR_WDL",
+    "CUP_B_CZ_Soldier_MG_WDL",
+    "CUP_B_CZ_Soldier_Marksman_WDL",
+    "CUP_B_CZ_Medic_WDL",
+    "CUP_B_CZ_Engineer_WDL"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
     "CUP_B_CZ_Soldier_SL_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"CUP_B_CZ_Soldier_AT_WDL",
-	"CUP_B_CZ_Soldier_AT_WDL",
-	"CUP_B_CZ_Soldier_AT_WDL",
-	"CUP_B_CZ_Medic_WDL",
-	"CUP_B_CZ_Engineer_WDL"
+    "CUP_B_CZ_Soldier_WDL",
+    "CUP_B_CZ_Soldier_WDL",
+    "CUP_B_CZ_Soldier_AT_WDL",
+    "CUP_B_CZ_Soldier_AT_WDL",
+    "CUP_B_CZ_Soldier_AT_WDL",
+    "CUP_B_CZ_Medic_WDL",
+    "CUP_B_CZ_Engineer_WDL"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
     "CUP_B_CZ_Soldier_SL_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"CUP_B_CZ_Soldier_WDL",
-	"B_soldier_AA_F",
-	"B_soldier_AA_F",
-	"B_soldier_AA_F",
-	"CUP_B_CZ_Medic_WDL",
-	"CUP_B_CZ_Engineer_WDL"
+    "CUP_B_CZ_Soldier_WDL",
+    "CUP_B_CZ_Soldier_WDL",
+    "B_soldier_AA_F",
+    "B_soldier_AA_F",
+    "B_soldier_AA_F",
+    "CUP_B_CZ_Medic_WDL",
+    "CUP_B_CZ_Engineer_WDL"
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
     "CUP_B_CZ_SpecOps_TL_WDL",
-	"CUP_B_CZ_SpecOps_Recon_WDL",
-	"CUP_B_CZ_SpecOps_Recon_WDL",
-	"CUP_B_CZ_Soldier_RPG_WDL",
-	"CUP_B_CZ_SpecOps_MG_WDL",
-	"CUP_B_CZ_SpecOps_MG_WDL",
-	"CUP_B_CZ_SpecOps_GL_WDL",
-	"CUP_B_CZ_SpecOps_GL_WDL",
-	"CUP_B_CZ_Medic_WDL",
-	"CUP_B_CZ_Engineer_WDL"
+    "CUP_B_CZ_SpecOps_Recon_WDL",
+    "CUP_B_CZ_SpecOps_Recon_WDL",
+    "CUP_B_CZ_Soldier_RPG_WDL",
+    "CUP_B_CZ_SpecOps_MG_WDL",
+    "CUP_B_CZ_SpecOps_MG_WDL",
+    "CUP_B_CZ_SpecOps_GL_WDL",
+    "CUP_B_CZ_SpecOps_GL_WDL",
+    "CUP_B_CZ_Medic_WDL",
+    "CUP_B_CZ_Engineer_WDL"
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
@@ -314,14 +314,14 @@ blufor_squad_para = [
 */
 elite_vehicles = [
     "CUP_B_Dingo_CZ_Wdl",                                               // Dingo 2 (MG) (Woodland)
-    "CUP_B_Dingo_GL_CZ_Wdl",                                         	// Dingo 2 (GL) (Woodland)
-    "QIN_Titus_WDL",                                                  	// Nexter Titus
-    "QIN_Titus_arx20_WDL",                                  			// Nexter Titus ARX20
+    "CUP_B_Dingo_GL_CZ_Wdl",                                            // Dingo 2 (GL) (Woodland)
+    "QIN_Titus_WDL",                                                    // Nexter Titus
+    "QIN_Titus_arx20_WDL",                                              // Nexter Titus ARX20
     "I_APC_Wheeled_03_cannon_F",                                        // Pandur II
-    "CUP_B_BMP2_CZ"                                                  	// BVP-2
+    "CUP_B_BMP2_CZ"                                                     // BVP-2
     "B_APC_Tracked_01_AA_F",                                            // IFV-6a Cheetah
-    "CUP_B_T72_CZ",                                                  	// T-72M4CZ
-    "CUP_B_L39_CZ_GREY",                               					// L-39ZA (Grey)
+    "CUP_B_T72_CZ",                                                     // T-72M4CZ
+    "CUP_B_L39_CZ_GREY",                                                // L-39ZA (Grey)
     "I_Plane_Fighter_03_dynamicLoadout_F",                              // L-159 Alca
-    "I_Plane_Fighter_04_F"                                        		// JAS 39 Gripen
+    "I_Plane_Fighter_04_F"                                              // JAS 39 Gripen
 ];
