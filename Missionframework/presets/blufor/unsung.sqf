@@ -25,10 +25,10 @@ KP_liberation_boat_classname = "UNS_Zodiac_W";                          // These
 KP_liberation_truck_classname = "uns_M35A2_Open";                       // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
-KP_liberation_recycle_building = "LAND_uns_motorpool1";                 // The building defined to unlock FOB recycling functionality.
+KP_liberation_recycle_building = "uns_motorpool1_repair";               // The building defined to unlock FOB recycling functionality.
 KP_liberation_air_vehicle_building = "LAND_uns_signaltower";            // The building defined to unlock FOB air vehicle functionality.
 KP_liberation_heli_slot_building = "LAND_uns_Heli_pad";                 // The helipad used to increase the GLOBAL rotary-wing cap.
-KP_liberation_plane_slot_building = "Land_ss_hangar";                   // The hangar used to increase the GLOBAL fixed-wing cap.
+KP_liberation_plane_slot_building = "UNS_Hanger_repair";                // The hangar used to increase the GLOBAL fixed-wing cap.
 KP_liberation_supply_crate = "CargoNet_01_box_F";                       // This defines the supply crates, as in resources.
 KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";                      // This defines the ammunition crates.
 KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This defines the fuel crates.
@@ -167,10 +167,13 @@ buildings = [
     ["Flag_White_F",0,0,0],
     ["uns_FlagCarrierMed",0,0,0],
     ["LAND_uns_army_med",0,0,0],
-    ["US_Tent_2",0,0,0],
-    ["LAND_uns_tent3mash",0,0,0],
+    ["uns_mash_main",0,0,0],
+    ["uns_mash",0,0,0],
+    ["US_Tent_MASH",0,0,0],
+    ["sign_HELI",0,0,0],
     ["Helipad",0,0,0],
     ["LAND_uns_evac_pad",0,0,0],
+    ["LAND_uns_Heli_H",0,0,0],
     ["Land_BarrelWater_F",0,0,0],
     ["Land_BarrelWater_grey_F",0,0,0],
     ["Land_camonet_east_ep1",0,0,0],

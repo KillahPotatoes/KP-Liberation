@@ -18,6 +18,8 @@ KP_liberation_medical_vehicles = [
     "gm_gc_army_ural375d_medic",
     "gm_ge_army_u1300l_medic_win_rc",
     "gm_ge_army_u1300l_medic",
+    "O_T_Truck_03_medical_ghex_F",
+    "O_Truck_03_medical_F",
     "RHS_UH60M_MEV_d",
     "RHS_UH60M_MEV",
     "RHS_UH60M_MEV2_d",
@@ -42,7 +44,10 @@ KP_liberation_medical_facilities = [
     "Land_Medevac_HQ_V1_F",
     "LAND_uns_army_med",
     "LAND_uns_tent3mash",
-    "US_Tent_2"
+    "uns_mash_main",
+    "uns_mash",
+    "US_Tent_2",
+    "US_Tent_MASH"
 ];
 
 // Classnames of ACE3 crates (which have to be in the unit preset as well).
@@ -587,6 +592,10 @@ ai_resupply_sources = [
     "gm_gc_army_ural4320_reammo",
     "gm_ge_army_kat1_451_reammo_win",
     "gm_ge_army_kat1_451_reammo",
+    "Land_Pod_Heli_Transport_04_ammo_F",
+    "O_Heli_Transport_04_ammo_F",
+    "O_T_Truck_03_ammo_ghex_F",
+    "O_Truck_03_ammo_F",
     "rhs_gaz66_ammo_msv",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
@@ -596,7 +605,8 @@ ai_resupply_sources = [
     "rhsusf_M977A4_AMMO_usarmy_d",
     "rhsusf_M977A4_AMMO_usarmy_wd",
     "uns_M113_ENG",
-    "uns_M35A2_ammo"
+    "uns_M35A2_ammo",
+    "uns_motorpool1_repair"
 ];
 
 // Everything that can resupply other vehicles.
@@ -617,6 +627,10 @@ vehicle_repair_sources = [
     "gm_gc_army_ural4320_repair",
     "gm_ge_army_u1300l_repair_win",
     "gm_ge_army_u1300l_repair",
+    "Land_Pod_Heli_Transport_04_repair_F",
+    "O_Heli_Transport_04_repair_F",
+    "O_T_Truck_03_repair_ghex_F",
+    "O_Truck_03_repair_F",
     "RHS_Ural_Repair_VDV_01",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
@@ -625,8 +639,10 @@ vehicle_repair_sources = [
     "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
     "rhsusf_M977A4_REPAIR_usarmy_d",
     "rhsusf_M977A4_REPAIR_usarmy_wd",
+    "UNS_Hanger_repair",
     "uns_M113_ENG",
-    "uns_M35A2_repair"
+    "uns_M35A2_repair",
+    "uns_motorpool1_repair"
 ];
 
 vehicle_rearm_sources = [
@@ -649,6 +665,10 @@ vehicle_rearm_sources = [
     "gm_gc_army_ural4320_reammo",
     "gm_ge_army_kat1_451_reammo_win",
     "gm_ge_army_kat1_451_reammo",
+    "Land_Pod_Heli_Transport_04_ammo_F",
+    "O_Heli_Transport_04_ammo_F",
+    "O_T_Truck_03_ammo_ghex_F",
+    "O_Truck_03_ammo_F",
     "rhs_gaz66_ammo_msv",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
@@ -683,6 +703,10 @@ vehicle_refuel_sources = [
     "gm_gc_army_ural375d_refuel",
     "gm_ge_army_kat1_451_refuel_win",
     "gm_ge_army_kat1_451_refuel",
+    "Land_Pod_Heli_Transport_04_fuel_F",
+    "O_Heli_Transport_04_fuel_F",
+    "O_T_Truck_03_fuel_ghex_F",
+    "O_Truck_03_fuel_F",
     "RHS_Ural_Fuel_VDV_01",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M978A4_BKIT_usarmy_d",
