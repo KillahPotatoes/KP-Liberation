@@ -167,6 +167,13 @@ class Missions
 * Added: The Unsung Vietnam War Mod resistance presets.
 * Added: The Unsung Vietnam War Mod civilian presets.
 * Added: The Unsung Vietnam War Mod transport configs.
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Desert blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Woodland blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: Several CUP blufor presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP opfor presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP resistance presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP civilian presets. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.

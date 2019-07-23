@@ -7,6 +7,13 @@
 KP_liberation_medical_vehicles = [
     "B_Truck_01_medical_F",
     "B_T_Truck_01_medical_F",
+    "CUP_B_LR_Ambulance_GB_D",
+    "CUP_B_LR_Ambulance_GB_W",
+    "CUP_B_LR_Ambulance_CZ_W",
+    "CUP_B_LR_Ambulance_CZ_D",
+    "CUP_B_HMMWV_Ambulance_USA",
+    "CUP_B_HMMWV_Ambulance_USMC",
+    "CUP_B_BMP2_AMB_CDF",
     "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
     "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
     "rhsusf_m113_usarmy_medical",
@@ -65,7 +72,18 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 12 = Germany East Winter (Global Mobilization)
 13 = CSAT Brown
 14 = CSAT Green
-15 = Unsung US */
+15 = Unsung US
+16 = CUP British Armed Forces (Desert)
+17 = CUP British Armed Forces (Woodland)
+18 = CUP US Marine Corps (Desert)
+19 = CUP US Marine Corps (Woodland)
+20 = CUP US Army (Desert)
+21 = CUP US Army (Woodland)
+22 = CUP Chernarus Defense Force
+23 = CUP Army of the Czech Republic (Desert)
+24 = CUP Army of the Czech Republic (Woodland)
+25 = SFP (Woodland)
+26 = SFP (Desert) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -81,7 +99,12 @@ KP_liberation_preset_blufor = 0;
 9  = Germany West Winter (Global Mobilization)
 10 = Germany East (Global Mobilization)
 11 = Germany East Winter (Global Mobilization)
-12 = Unsung NVA */
+12 = Unsung NVA
+13 = CUP Sahrani Liberation Army
+14 = CUP Takistani Army
+15 = CUP Chernarussian Movement of the Red Star
+16 = CUP Armed Forces of the Russian Federation (MSV - EMR)
+17 = CUP Armed Forces of the Russian Federation (Modern MSV) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -91,7 +114,9 @@ KP_liberation_preset_opfor = 0;
 3  = Project OPFOR (Middle Eastern)
 4  = Project OPFOR (Sahrani)
 5  = Germany (Global Mobilization)
-6  = Unsung */
+6  = Unsung
+7  = CUP Takistani Locals
+8  = CUP National Party of Chernarus */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
@@ -100,21 +125,24 @@ KP_liberation_preset_resistance = 0;
 2  = Project OPFOR (Middle Eastern)
 3  = RDS Civilians
 4  = Germany (Global Mobilization)
-5  = Unsung */
+5  = Unsung
+6  = CUP Takistani Civilians
+7  = CUP Chernarussian Civilians 
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
-0  = Use the default blacklist method (defined below).
-1  = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks).
-2  = Killah Potatoes Gaming Community arsenal preset.
-3  = RHS USAF arsenal preset.
-4  = RHS USAF arsenal preset with ACE.
-5  = RHS USAF arsenal preset with ACE and ACRE.
-6  = 3cbBAF and RHS USAF arsenal preset.
-7  = GM West arsenal preset.
-8  = GM East arsenal preset.
-9  = CSAT arsenal preset.
-10 = Unsung US arsenal preset. */
+0  = Use the default blacklist method (defined below)
+1  = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks)
+2  = Killah Potatoes Gaming Community arsenal preset
+3  = RHS USAF arsenal preset
+4  = RHS USAF arsenal preset with ACE
+5  = RHS USAF arsenal preset with ACE and ACRE
+6  = 3cbBAF and RHS USAF arsenal preset
+7  = GM West arsenal preset
+8  = GM East arsenal preset
+9  = CSAT arsenal preset
+10 = Unsung US arsenal preset
+11 = SFP arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -411,9 +439,6 @@ box_transport_config = [
     ["C_Truck_02_covered_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
     ["C_Truck_02_transport_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
     ["C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["CUP_B_Wolfhound_GMG_GB_W", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_HMG_GB_W", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_LMG_GB_W", -6.5, [0,-3.5,2.3]],
     ["gm_gc_army_ural4320_cargo_win", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
     ["gm_gc_army_ural4320_cargo", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
     ["gm_gc_bgs_ural4320_cargo", -5, [-0.0373535,-0.535156,-0.1], [-0.0344238,-1.76611,-0.1], [-0.0334473,-2.85547,-0.1]],
@@ -495,6 +520,43 @@ box_transport_config = [
     ["UK3CB_BAF_Merlin_HC4_18_GPMG_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC4_32_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC4_CSAR_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
+    ["CUP_B_MTVR_USMC", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
+    ["CUP_B_MTVR_USA", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
+    ["CUP_B_Ural_CDF", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_B_Ural_Open_CDF", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_C_Ural_Civ_03", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_C_Ural_Open_Civ_03", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_C_Ural_Civ_01", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_CHDKZ", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_Open_CHDKZ", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_SLA", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_Open_SLA", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Ural_Open_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_B_Kamaz_Open_CDF", -6.5, [0.12,0.4,0], [0.12,-1.8,0]],
+    ["CUP_O_Kamaz_Open_RU", -6.5, [0.12,0.4,0], [0.12,-1.8,0]],
+    ["CUP_B_Kamaz_CDF", -6.5, [0,-0.4,0], [0,-2.6,0]],
+    ["CUP_O_Kamaz_RU", -6.5, [0,-0.4,0], [0,-2.6,0]],
+    ["CUP_B_T810_Unarmed_CZ_WDL", -6.5, [0,0,0.2], [0,-2,0.2]],
+    ["CUP_B_T810_Unarmed_CZ_DES", -6.5, [0,0,0.2], [0,-2,0.2]],
+    ["CUP_B_T810_Armed_CZ_WDL", -6.5, [0,0,-0.5], [0,-2,-0.5]],
+    ["CUP_B_T810_Armed_CZ_DES", -6.5, [0,0,-0.5], [0,-2,-0.5]],
+    ["CUP_B_Mi17_CDF", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
+    ["CUP_B_Mi171Sh_Unarmed_ACR", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
+    ["CUP_B_Mi171Sh_ACR", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
+    ["CUP_B_CH53E_USMC", -8, [0,7.566,-3], [0,5.749,-3], [0,3.847,-3], [0,2,-3], [0,0.338,-3]],
+    ["CUP_B_MI6A_CDF", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
+    ["CUP_B_MV22_USMC", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
+    ["CUP_B_MV22_USMC_RAMPGUN", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
+    ["CUP_B_MV22_VIV_USMC", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
+    ["CUP_B_CH47F_GB", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
+    ["CUP_B_CH47F_USA", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
+    ["CUP_B_Wolfhound_GMG_GB_D", -6.5, [0,-3.5,2.3]],
+    ["CUP_B_Wolfhound_HMG_GB_D", -6.5, [0,-3.5,2.3]],
+    ["CUP_B_Wolfhound_LMG_GB_D", -6.5, [0,-3.5,2.3]],
+    ["CUP_B_Wolfhound_GMG_GB_W", -6.5, [0,-3.5,2.3]],
+    ["CUP_B_Wolfhound_HMG_GB_W", -6.5, [0,-3.5,2.3]],
+    ["CUP_B_Wolfhound_LMG_GB_W", -6.5, [0,-3.5,2.3]],
     ["uns_M35A2_Open", -5, [0,-0.6,0.1], [0,-2.3,0.1]],
     ["uns_M35A2", -5, [0,-0.6,0.1], [0,-2.3,0.1]],
     ["uns_m37b1", -5, [0,-0.2,0.45]],
@@ -511,6 +573,15 @@ ai_resupply_sources = [
     "B_Slingload_01_Ammo_F",
     "B_APC_Tracked_01_CRV_F",
     "B_T_APC_Tracked_01_CRV_F",
+    "CUP_B_T810_Reammo_CZ_DES",
+    "CUP_B_T810_Reammo_CZ_WDL",
+    "CUP_B_MTVR_Ammo_USA",
+    "CUP_B_MTVR_Ammo_USMC",
+    "CUP_B_Kamaz_Reammo_CDF",
+    "CUP_O_Kamaz_Reammo_RU",
+    "CUP_O_Ural_Reammo_CHDKZ",
+    "CUP_O_Ural_Reammo_SLA",
+    "CUP_O_Ural_Reammo_TKA"
     "BW_LKW15T_Ammo_F",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_AMMO_usarmy_d",
@@ -536,6 +607,11 @@ vehicle_repair_sources = [
     "B_Slingload_01_Repair_F",
     "B_APC_Tracked_01_CRV_F",
     "B_T_APC_Tracked_01_CRV_F",
+    "CUP_B_T810_Repair_CZ_DES",
+    "CUP_B_T810_Repair_CZ_WDL",
+    "CUP_B_MTVR_Repair_USA",
+    "CUP_B_MTVR_Repair_USMC",
+    "CUP_B_Kamaz_Repair_CDF",
     "BW_LKW15T_Repair_F",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_REPAIR_usarmy_d",
@@ -559,6 +635,15 @@ vehicle_rearm_sources = [
     "B_Slingload_01_Ammo_F",
     "B_APC_Tracked_01_CRV_F",
     "B_T_APC_Tracked_01_CRV_F",
+    "CUP_B_T810_Reammo_CZ_DES",
+    "CUP_B_T810_Reammo_CZ_WDL",
+    "CUP_B_MTVR_Ammo_USA",
+    "CUP_B_MTVR_Ammo_USMC",
+    "CUP_B_Kamaz_Reammo_CDF",
+    "CUP_O_Kamaz_Reammo_RU",
+    "CUP_O_Ural_Reammo_CHDKZ",
+    "CUP_O_Ural_Reammo_SLA",
+    "CUP_O_Ural_Reammo_TKA"
     "BW_LKW15T_Ammo_F",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M977A4_AMMO_usarmy_d",
@@ -584,6 +669,15 @@ vehicle_refuel_sources = [
     "B_Slingload_01_Fuel_F",
     "B_APC_Tracked_01_CRV_F",
     "B_T_APC_Tracked_01_CRV_F",
+    "CUP_B_T810_Refuel_CZ_DES",
+    "CUP_B_T810_Refuel_CZ_WDL",
+    "CUP_B_MTVR_Refuel_USA",
+    "CUP_B_MTVR_Refuel_USMC",
+    "CUP_B_Kamaz_Refuel_CDF",
+    "CUP_O_Kamaz_Refuel_RU",
+    "CUP_O_Ural_Refuel_CHDKZ",
+    "CUP_O_Ural_Refuel_SLA",
+    "CUP_O_Ural_Refuel_TKA",
     "BW_LKW15T_Fuel_F",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M978A4_usarmy_d",
@@ -612,6 +706,10 @@ boats_names = [
     "O_T_Boat_Transport_01_F",
     "O_T_Boat_Armed_01_hmg_F",
     "rhsusf_mkvsoc",
+    "sfp_gruppbat",
+    "sfp_strb90",
+    "sfp_strb90_rws",
+    "sfp_rbb_norrkoping"
     "UNS_Zodiac_W",
     "uns_pbr",
     "uns_pbr_mk18",
