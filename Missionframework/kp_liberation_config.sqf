@@ -660,7 +660,7 @@ vehicle_rearm_sources = [
     "CUP_O_Kamaz_Reammo_RU",
     "CUP_O_Ural_Reammo_CHDKZ",
     "CUP_O_Ural_Reammo_SLA",
-    "CUP_O_Ural_Reammo_TKA"
+    "CUP_O_Ural_Reammo_TKA",
     "gm_gc_army_ural4320_reammo_win",
     "gm_gc_army_ural4320_reammo",
     "gm_ge_army_kat1_451_reammo_win",

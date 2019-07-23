@@ -8361,7 +8361,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="this setFlagTexture ""res\kpflag.jpg"";";
+						init="this setFlagTexture ""res\flag_kp_co.paa"";";
 					};
 					id=881;
 					type="Flag_White_F";
