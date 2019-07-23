@@ -27478,7 +27478,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this setFlagTexture ""res\kpflag.jpg"";";
+				init="this setFlagTexture ""res\flag_kp_co.paa"";";
 			};
 			id=4562;
 			type="Flag_White_F";

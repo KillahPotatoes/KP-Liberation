@@ -119,7 +119,7 @@ stats_opfor_vehicles_killed = 0;
 stats_opfor_vehicles_killed_by_players = 0;
 stats_player_deaths = 0;
 stats_playtime = 0;
-stats_prisonners_captured = 0;
+stats_prisoners_captured = 0;
 stats_readiness_earned = 0;
 stats_reinforcements_called = 0;
 stats_resistance_killed = 0;
@@ -190,7 +190,7 @@ if (!isNil "greuh_liberation_savegame") then {
         stats_opfor_vehicles_killed_by_players      = _stats select 23;
         stats_player_deaths                         = _stats select 24;
         stats_playtime                              = _stats select 25;
-        stats_prisonners_captured                   = _stats select 26;
+        stats_prisoners_captured                    = _stats select 26;
         stats_readiness_earned                      = _stats select 27;
         stats_reinforcements_called                 = _stats select 28;
         stats_resistance_killed                     = _stats select 29;
@@ -246,7 +246,7 @@ if (!isNil "greuh_liberation_savegame") then {
         stats_hostile_battlegroups                  = _stats select 15;
         stats_ieds_detonated                        = _stats select 16;
         stats_reinforcements_called                 = _stats select 19;
-        stats_prisonners_captured                   = _stats select 20;
+        stats_prisoners_captured                    = _stats select 20;
         stats_blufor_teamkills                      = _stats select 21;
         stats_vehicles_recycled                     = _stats select 22;
         stats_ammo_spent                            = _stats select 23;
@@ -452,8 +452,6 @@ if (!isNil "greuh_liberation_savegame") then {
             } forEach _savedGroup;
         } forEach _aiGroups;
     };
-
-
     diag_log "[KP LIBERATION] [SAVE] Save loading finished";
 } else {
     diag_log "[KP LIBERATION] [SAVE] Save nil";
@@ -635,7 +633,7 @@ while {true} do {
         stats_opfor_vehicles_killed_by_players,
         stats_player_deaths,
         stats_playtime,
-        stats_prisonners_captured,
+        stats_prisoners_captured,
         stats_readiness_earned,
         stats_reinforcements_called,
         stats_resistance_killed,

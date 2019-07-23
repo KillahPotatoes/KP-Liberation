@@ -224,9 +224,9 @@ support_vehicles = [
     ["O_Heli_Transport_04_repair_F",500,0,150],                         // Taru Repair
     ["O_Heli_Transport_04_ammo_F",300,200,150],                         // Taru Ammo
     ["O_Heli_Transport_04_fuel_F",300,0,350],                           // Taru Fuel
-    ["Land_Pod_Heli_Transport_04_repair_F",275,0,0],                    // Taru Repair
-    ["Land_Pod_Heli_Transport_04_ammo_F",75,200,0],                     // Taru Ammo
-    ["Land_Pod_Heli_Transport_04_fuel_F",75,0,200]                      // Taru Fuel
+    ["Land_Pod_Heli_Transport_04_repair_F",275,0,0],                    // Taru Repaircontainer
+    ["Land_Pod_Heli_Transport_04_ammo_F",75,200,0],                     // Taru Ammocontainer
+    ["Land_Pod_Heli_Transport_04_fuel_F",75,0,200]                      // Taru Fuelcontainer
 ];
 
 /*

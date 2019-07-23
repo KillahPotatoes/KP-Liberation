@@ -31,7 +31,7 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 =[
+KP_liberation_guerilla_weapons_1 = [
     ["arifle_AKM_F","30Rnd_762x39_Mag_F",4,"",""],
     ["arifle_AKS_F","30Rnd_545x39_Mag_F",4,"",""],
     ["hgun_PDW2000_F","30Rnd_9x21_Mag",4,"",""],
@@ -40,7 +40,7 @@ KP_liberation_guerilla_weapons_1 =[
     ["SMG_05_F","30Rnd_9x21_Mag_SMG_02",4,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 =[
+KP_liberation_guerilla_weapons_2 = [
     ["arifle_Katiba_F","30Rnd_65x39_caseless_green",4,"optic_ACO_grn",""],
     ["arifle_Mk20_plain_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
     ["arifle_TRG21_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
@@ -49,7 +49,7 @@ KP_liberation_guerilla_weapons_2 =[
     ["srifle_DMR_06_olive_F","20Rnd_762x51_Mag",5,"optic_Hamr","bipod_01_F_blk"]
 ];
 
-KP_liberation_guerilla_weapons_3 =[
+KP_liberation_guerilla_weapons_3 = [
     ["arifle_CTAR_blk_F","30Rnd_580x42_Mag_F",4,"optic_MRCO",""],
     ["arifle_SPAR_01_blk_F","30Rnd_556x45_Stanag",4,"optic_MRCO",""],
     ["arifle_SPAR_03_blk_F","20Rnd_762x51_Mag",5,"optic_MRCO",""],
@@ -76,7 +76,6 @@ KP_liberation_guerilla_uniforms_1 = [
     "U_C_Man_casual_5_F",
     "U_C_Man_casual_6_F",
     "U_Marshal"
-
 ];
 
 KP_liberation_guerilla_uniforms_2 = [

@@ -9,7 +9,7 @@ if (isServer) then {
 		_yield = _milita_prisonner_intel_yield;
 	};
 	resources_intel = resources_intel + ( _yield + (round (random _yield)));
-	stats_prisonners_captured = stats_prisonners_captured + 1;
+	stats_prisoners_captured = stats_prisoners_captured + 1;
 
 	[0] remoteExec ["remote_call_intel"];
 };
