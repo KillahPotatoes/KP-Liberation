@@ -5933,7 +5933,7 @@
         </Key>
         <Key ID="STR_STATS_CIV_S_VEH">
             <Original>Civilian vehicles seized: %1</Original>
-            <German>Zivilie Fahrzeuge beschlagnahmt: %1</German>
+            <German>Zivile Fahrzeuge beschlagnahmt: %1</German>
         </Key>
         <Key ID="STR_STATS_CIV_K_BUILDINGS">
             <Original>Civilian buildings destroyed: %1</Original>
@@ -6050,7 +6050,7 @@
         <Key ID="STR_STATS_BATTLEGROUPS">
             <Original>Hostile battlegroups called: %1</Original>
             <French>Battlegroups hostiles appelés: %1</French>
-            <German>Gegnerische Truppen gerufen: %1</German>
+            <German>Feindliche Kampfgruppen ausgerückt: %1</German>
             <Spanish>Grupos hostiles de combate llamados: %1</Spanish>
             <Russian>Вражеских боевых групп вызвано: %1</Russian>
             <Italian>Battaglione ostile contattato: %1</Italian>
@@ -6062,7 +6062,7 @@
         <Key ID="STR_STATS_REINFORCEMENTS">
             <Original>Hostile reinforcements called: %1</Original>
             <French>Renforts hostiles appelés: %1</French>
-            <German>Gegnerischen Nachschub gerufen: %1</German>
+            <German>Feindliche Verstärkungen ausgerückt: %1</German>
             <Spanish>Refuerzos hostiles llamados: %1</Spanish>
             <Russian>Враждебных подкреплений вызвано %1:</Russian>
             <Italian>Chiamati rinforzi ostili: %1</Italian>
@@ -6074,7 +6074,7 @@
         <Key ID="STR_STATS_COMBATREADINESS">
             <Original>Total combat readiness raised: %1</Original>
             <French>Augmentation totale du niveau d'alerte: %1</French>
-            <German>Gesamte Kampfbereitschaft erhöht: %1</German>
+            <German>Gesamterhöhung der gegnerischen Kampfbereitschaft: %1</German>
             <Spanish>Disposición de combate total recaudada: %1</Spanish>
             <Russian>Всего войск поднято по тревоге: %1</Russian>
             <Italian>Disposizione al combattimento recuperata: %1</Italian>
@@ -6096,15 +6096,15 @@
             <Portuguese>IEDs detonadas: %1</Portuguese>
         </Key>
         <Key ID="STR_STATS_POTATO">
-            <Original>Number of Spartan 01 losses: %1</Original>
-            <French>Pertes de Spartan 01: %1</French>
-            <German>Höhe der Spartan-01 Verluste: %1</German>
-            <Spanish>Número de pérdidas de Spartan 01: %1</Spanish>
-            <Russian>Количество потерянных Spartan 01: %1</Russian>
-            <Italian>Numero di Spartan 01 persi: %1</Italian>
+            <Original>Number of Potato 01 losses: %1</Original>
+            <French>Pertes de Potato 01: %1</French>
+            <German>Verluste von Potato 01: %1</German>
+            <Spanish>Número de pérdidas de Potato 01: %1</Spanish>
+            <Russian>Количество потерянных Potato 01: %1</Russian>
+            <Italian>Numero di Potato 01 persi: %1</Italian>
             <Chinesesimp>损失的斯巴达01号： %1</Chinesesimp>
-            <Turkish>Spartan 01 kayıpları: %1</Turkish>
-            <Portuguese>Número de baixas de Spartan 01: %1</Portuguese>
+            <Turkish>Potato 01 kayıpları: %1</Turkish>
+            <Portuguese>Número de baixas de Potato 01: %1</Portuguese>
         </Key>
         <Key ID="STR_STATS_RABBITS">
             <Original>Rabbits killed: %1</Original>
@@ -6121,7 +6121,7 @@
         <Key ID="STR_STATS_END1">
             <Original>Many thanks for playing KP LIBERATION!</Original>
             <French>Merci beaucoup d'avoir joué à KP LIBERATION!</French>
-            <German>Vielen Dank fürs Spielen von KPLIBERATION!</German>
+            <German>Vielen Dank fürs Spielen von KP LIBERATION!</German>
             <Spanish>¡Muchas gracias por jugar KP LIBERATION!</Spanish>
             <Russian>Большое спасибо за то что играли в KP LIBERATION!</Russian>
             <Italian>Mille Grazie per aver giocato KP LIBERATION!:</Italian>
@@ -6133,7 +6133,7 @@
         <Key ID="STR_STATS_END2">
             <Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
             <French>Nous espérons que vous avez pris autant de plaisir à y jouer, que nous à la créer.</French>
-            <German>Wir hoffen du hattest so viel Spaß am Spielen, wie wir dabei, es zu entwickeln.</German>
+            <German>Wir hoffen, du hattest so viel Spaß am Spielen, wie wir dabei, es zu entwickeln.</German>
             <Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
             <Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
             <Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
@@ -6145,7 +6145,7 @@
         <Key ID="STR_STATS_END3">
             <Original>(Press ESC to exit)</Original>
             <French>(Appuyez sur Echap pour quitter)</French>
-            <German>(Drücke ESC zum beenden)</German>
+            <German>(Drücke ESC zum Beenden)</German>
             <Spanish>(Pulsa ESC para salir)</Spanish>
             <Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
             <Italian>(Premi ESC per uscire)</Italian>
