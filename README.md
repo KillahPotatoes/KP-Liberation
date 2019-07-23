@@ -162,7 +162,10 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
-* Added: The Unsung Vietnam War Mod presets.
+* Added: The Unsung Vietnam War Mod blufor presets.
+* Added: The Unsung Vietnam War Mod opfor presets.
+* Added: The Unsung Vietnam War Mod resistance presets.
+* Added: The Unsung Vietnam War Mod civilian presets.
 * Added: The Unsung Vietnam War Mod transport configs.
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
