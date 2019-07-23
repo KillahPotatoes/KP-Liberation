@@ -162,11 +162,11 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
-* Added: The Unsung Vietnam War Mod blufor presets.
-* Added: The Unsung Vietnam War Mod opfor presets.
-* Added: The Unsung Vietnam War Mod resistance presets.
-* Added: The Unsung Vietnam War Mod civilian presets.
-* Added: The Unsung Vietnam War Mod transport configs.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor presets.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) opfor presets.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) resistance presets.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) civilian presets.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) transport configs.
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Desert blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Woodland blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
@@ -174,6 +174,7 @@ class Missions
 * Added: Several CUP opfor presets. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Several CUP resistance presets. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Several CUP civilian presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP transport configs. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Statistic values for destroyed civilian buildings and vehicles
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
