@@ -1058,437 +1058,6 @@
             <Turkish>Düşmanlar %1 'e takviye kuvvet yolladılar.'</Turkish>
             <Portuguese>Forças hostis reforçando %1.</Portuguese>
         </Key>
-        <Key ID="STR_VICTORY_TITLE">
-            <Original>BLUFOR VICTORY</Original>
-            <French>VICTOIRE BLUFOR</French>
-            <German>BLUFOR SIEGREICH</German>
-            <Spanish>VICTORIA DE BLUFOR</Spanish>
-            <Russian>СИНИЕ ПОБЕДИЛИ</Russian>
-            <Italian>VITTORIA PER I BLUFOR</Italian>
-            <Chinesesimp>我军胜利</Chinesesimp>
-            <Chinese>我軍勝利</Chinese>
-            <Turkish>BLUFOR ZAFERİ</Turkish>
-            <Portuguese>VITÓRIA DAS FORÇAS DA COALIZÃO (BLUFOR)</Portuguese>
-        </Key>
-        <Key ID="STR_VICTORY_TEXT">
-            <Original>You have liberated the island from the OPFOR oppression.</Original>
-            <French>Vous avez libéré Altis de l'oppression de l'OPFOR.</French>
-            <German>Du hast Altis von der OPFOR Besatzung befreit.</German>
-            <Spanish>Has liberado a Altis de la opresión del OPFOR</Spanish>
-            <Russian>Вы освободили Алтис от оккупации OPFOR.</Russian>
-            <Italian>Siete riusciti a liberare l'isola dall'oppressione degli OPFOR</Italian>
-            <Chinesesimp>你已将本岛从敌人的压迫中解救了出来。</Chinesesimp>
-            <Chinese>你已將從敵人的統治之中解放了此區域。</Chinese>
-            <Turkish>Bu adayı OPFOR işgalinden kurtardınız.</Turkish>
-            <Portuguese>Você libertou o território da opressão das tropas inimigas.</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_DAY">
-            <Original>days</Original>
-            <French>jours</French>
-            <German>Tage</German>
-            <Spanish>días</Spanish>
-            <Russian>дней</Russian>
-            <Italian>Giorni</Italian>
-            <Chinesesimp>日</Chinesesimp>
-            <Chinese>日</Chinese>
-            <Turkish>günler</Turkish>
-            <Portuguese>dias</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_HOURS">
-            <Original>hours</Original>
-            <French>heures</French>
-            <German>Stunden</German>
-            <Spanish>horas</Spanish>
-            <Russian>часов</Russian>
-            <Italian>Ore</Italian>
-            <Chinesesimp>时</Chinesesimp>
-            <Chinese>時</Chinese>
-            <Turkish>saatler</Turkish>
-            <Portuguese>horas</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_MINUTES">
-            <Original>minutes</Original>
-            <French>minutes</French>
-            <German>Minuten</German>
-            <Spanish>minutos</Spanish>
-            <Russian>минут</Russian>
-            <Italian>Minuti</Italian>
-            <Chinesesimp>分</Chinesesimp>
-            <Chinese>分</Chinese>
-            <Turkish>dakikalar</Turkish>
-            <Portuguese>minutos</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_SECONDS">
-            <Original>seconds</Original>
-            <French>secondes</French>
-            <German>Sekunden</German>
-            <Spanish>segundos</Spanish>
-            <Russian>секунд</Russian>
-            <Italian>Secondi</Italian>
-            <Chinesesimp>秒</Chinesesimp>
-            <Chinese>秒</Chinese>
-            <Turkish>saniyeler</Turkish>
-            <Portuguese>segundos</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_PLAYTIME">
-            <Original>Playtime:</Original>
-            <French>Temps de jeu :</French>
-            <German>Spielzeit:</German>
-            <Spanish>Tiempo de juego:</Spanish>
-            <Russian>Игрового времени:</Russian>
-            <Italian>tempo di Gioco:</Italian>
-            <Chinesesimp>游戏时间：</Chinesesimp>
-            <Chinese>遊戲時間：</Chinese>
-            <Turkish>Oynama süresi:</Turkish>
-            <Portuguese>Tempo de jogo:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_1">
-            <Original>OPFOR infantry killed:</Original>
-            <French>Infanterie OPFOR tuée :</French>
-            <German>OPFOR Infanterie getötet:</German>
-            <Spanish>Infantería OPFOR eliminada:</Spanish>
-            <Russian>OPFOR пехоты убито:</Russian>
-            <Italian>Fanteria OPFOR ha ucciso:</Italian>
-            <Chinesesimp>被击杀的敌军步兵：</Chinesesimp>
-            <Chinese>被擊殺的敵方步兵：</Chinese>
-            <Turkish>Öldürülen OPFOR:</Turkish>
-            <Portuguese>Baixas inimigas em combate:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_2">
-            <Original>OPFOR infantry killed by players:</Original>
-            <French>Infanterie OPFOR tuée par les joueurs :</French>
-            <German>OPFOR Infanterie von Spielern getötet:</German>
-            <Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
-            <Russian>OPFOR пехоты убито игроками:</Russian>
-            <Italian>Fanteria OPFOR uccisa da:</Italian>
-            <Chinesesimp>被玩家击杀的敌军步兵：</Chinesesimp>
-            <Chinese>被玩家擊殺的敵方步兵：</Chinese>
-            <Turkish>Oyuncular tarafından öldürülen OPFOR sayısı:</Turkish>
-            <Portuguese>Infantaria inimiga eliminada por jogadores:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_3">
-            <Original>BLUFOR infantry killed:</Original>
-            <French>Infanterie BLUFOR tuée :</French>
-            <German>BLUFOR Infanterie getötet:</German>
-            <Spanish>Infantería BLUFOR eliminada:</Spanish>
-            <Russian>BLUFOR пехоты убито:</Russian>
-            <Italian>Fanteria BLUFOR ha ucciso:</Italian>
-            <Chinesesimp>被击杀的我军步兵：</Chinesesimp>
-            <Chinese>被擊殺的我方步兵：</Chinese>
-            <Turkish>BLUFOR kayıpları:</Turkish>
-            <Portuguese>Baixas aliadas em combate:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_4">
-            <Original>Civilians killed:</Original>
-            <French>Civils tués :</French>
-            <German>Zivilisten getötet:</German>
-            <Spanish>Civiles asesinados:</Spanish>
-            <Russian>Гражданских убито:</Russian>
-            <Italian>Civile ha ucciso:</Italian>
-            <Chinesesimp>被击杀的平民：</Chinesesimp>
-            <Chinese>被擊殺的平民：</Chinese>
-            <Turkish>Öldürülen siviller:</Turkish>
-            <Portuguese>Civis mortos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_5">
-            <Original>Civilians killed by players:</Original>
-            <French>Civils tués par les joueurs :</French>
-            <German>Zivilisten von Spielern getötet:</German>
-            <Spanish>Civiles asesinados por jugadores:</Spanish>
-            <Russian>Гражданских убито игроками:</Russian>
-            <Italian>Civile ucciso da:</Italian>
-            <Chinesesimp>被玩家击杀的平民：</Chinesesimp>
-            <Chinese>被玩家擊殺的平民：</Chinese>
-            <Turkish>Öldürülen siviller (oyuncular tarafından):</Turkish>
-            <Portuguese>Civis mortos por jogadores:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_6">
-            <Original>BLUFOR friendly fire incidents:</Original>
-            <French>Tirs fratricides BLUFOR :</French>
-            <German>BLUFOR Eigenbeschuss:</German>
-            <Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
-            <Russian>BLUFOR дружественный огонь:</Russian>
-            <Italian>Fuoco amico tra i BLUFOR:</Italian>
-            <Chinesesimp>我军友军误击事件：</Chinesesimp>
-            <Chinese>友軍誤擊事件：</Chinese>
-            <Turkish>BLUFOR dost ateşi:</Turkish>
-            <Portuguese>Incidentes de fogo amigo:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_7">
-            <Original>OPFOR vehicles destroyed:</Original>
-            <French>Vehicules OPFOR détruits :</French>
-            <German>OPFOR Fahrzeuge zerstört:</German>
-            <Spanish>Vehículos OPFOR destruídos:</Spanish>
-            <Russian>OPFOR техники уничтожено:</Russian>
-            <Italian>Veicolo OPFOR distrutto:</Italian>
-            <Chinesesimp>敌军被摧毁的载具：</Chinesesimp>
-            <Chinese>敵軍被摧毀的載具：</Chinese>
-            <Turkish>OPFOR yokedilen araçları:</Turkish>
-            <Portuguese>Veículos inimigos destruídos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_8">
-            <Original>OPFOR vehicles destroyed by players:</Original>
-            <French>Vehicules OPFOR détruits par les joueurs :</French>
-            <German>OPFOR Fahrzeuge von Spielern zerstört:</German>
-            <Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
-            <Russian>OPFOR техники уничтожено игроками:</Russian>
-            <Italian>Veicolo OPFOR distrutto da:</Italian>
-            <Chinesesimp>被玩家摧毁的敌军载具：</Chinesesimp>
-            <Chinese>被玩家摧毀的敵軍載具：</Chinese>
-            <Turkish>OPFOR yokedilen araçları (oyuncular tarafından):</Turkish>
-            <Portuguese>Veículos inimigos destruídos por jogadores:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_9">
-            <Original>BLUFOR vehicles destroyed:</Original>
-            <French>Vehicules BLUFOR détruits :</French>
-            <German>BLUFOR Fahrzeuge zerstört:</German>
-            <Spanish>Vehículos BLUFOR destruídos:</Spanish>
-            <Russian>BLUFOR техники уничтожено:</Russian>
-            <Italian>Veicolo BLUFOR distrutto:</Italian>
-            <Chinesesimp>被摧毁的我军载具：</Chinesesimp>
-            <Chinese>被摧毀的我方載具：</Chinese>
-            <Turkish>BLUFOR yokedilen araçları:</Turkish>
-            <Portuguese>Veículos aliados destruídos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_10">
-            <Original>BLUFOR vehicles built:</Original>
-            <French>Vehicules BLUFOR construits :</French>
-            <German>BLUFOR Fahrzeuge gebaut:</German>
-            <Spanish>Vehículos BLUFOR construidos:</Spanish>
-            <Russian>BLUFOR техники построено:</Russian>
-            <Italian>Veicolo BLUFOR creato:</Italian>
-            <Chinesesimp>我军建造的载具：</Chinesesimp>
-            <Chinese>我軍建造的載具：</Chinese>
-            <Turkish>BLUFOR yaratılan araçları:</Turkish>
-            <Portuguese>Veículos aliados construídos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_11">
-            <Original>Vehicles recycled:</Original>
-            <French>Vehicules recyclés :</French>
-            <German>Fahrzeuge wiederaufbereitet:</German>
-            <Spanish>Vehículos reciclados:</Spanish>
-            <Russian>Техники утилизировано:</Russian>
-            <Italian>Veicolo riciclato:</Italian>
-            <Chinesesimp>回收的载具：</Chinesesimp>
-            <Chinese>回收的載具：</Chinese>
-            <Turkish>Geri dönüşüm olan araçlar:</Turkish>
-            <Portuguese>Veículos reciclados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_12">
-            <Original>Ammunition units spent:</Original>
-            <French>Unités de munitions dépensées :</French>
-            <German>Munitionseinheiten verbraucht:</German>
-            <Spanish>Unidades de munición gastadas:</Spanish>
-            <Russian>Единиц боеприпасов потрачено:</Russian>
-            <Italian>Punti munizione spesi:</Italian>
-            <Chinesesimp>消耗的弹药量：</Chinesesimp>
-            <Chinese>消耗的彈藥量：</Chinese>
-            <Turkish>Mermi mühimmati kullanımı:</Turkish>
-            <Portuguese>Unidades de munição utilizadas:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_13">
-            <Original>Sectors liberated:</Original>
-            <French>Secteurs libérés, delivrés :</French>
-            <German>Sektoren befreit:</German>
-            <Spanish>Sectores liberados:</Spanish>
-            <Russian>Зон освобождено:</Russian>
-            <Italian>Settore liberato:</Italian>
-            <Chinesesimp>解放的战区：</Chinesesimp>
-            <Chinese>解放的戰區：</Chinese>
-            <Turkish>Ele geçirilen sektörler:</Turkish>
-            <Portuguese>Setores liberados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_14">
-            <Original>Sectors lost:</Original>
-            <French>Secteurs perdus :</French>
-            <German>Sektoren verloren:</German>
-            <Spanish>Sectores perdidos:</Spanish>
-            <Russian>Зон потеряно:</Russian>
-            <Italian>Settore perso:</Italian>
-            <Chinesesimp>丢失的战区：</Chinesesimp>
-            <Chinese>失去的戰區：</Chinese>
-            <Turkish>Kaybedilen sektörler:</Turkish>
-            <Portuguese>Setores perdidos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_15">
-            <Original>FOBs built:</Original>
-            <French>FOBs construites :</French>
-            <German>FOBs gebaut:</German>
-            <Spanish>FOBs construídas:</Spanish>
-            <Russian>FOB построено:</Russian>
-            <Italian>FOB costruita:</Italian>
-            <Chinesesimp>建造的前哨：</Chinesesimp>
-            <Chinese>建造的前線基地：</Chinese>
-            <Turkish>Kurulan FOB'ler:</Turkish>
-            <Portuguese>FOBs construídas:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_16">
-            <Original>FOBs lost:</Original>
-            <French>FOBs perdues :</French>
-            <German>FOBs verloren:</German>
-            <Spanish>FOB perdidas:</Spanish>
-            <Russian>FOB потеряно:</Russian>
-            <Italian>FOB persa:</Italian>
-            <Chinesesimp>损失的前哨：</Chinesesimp>
-            <Chinese>損失的前線基地：</Chinese>
-            <Turkish>Kaybedilen FOB'ler:</Turkish>
-            <Portuguese>FOBs perdidas:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_17">
-            <Original>Secondary objectives accomplished:</Original>
-            <French>Objectifs secondaires accomplis :</French>
-            <German>Sekundärziele erreicht:</German>
-            <Spanish>Objetivos secundarios conseguidos:</Spanish>
-            <Russian>Вторичных заданий выполнено:</Russian>
-            <Italian>Obiettivo secondario completato:</Italian>
-            <Chinesesimp>完成的次要目标：</Chinesesimp>
-            <Chinese>完成的次要目標</Chinese>
-            <Turkish>Bitirilen ikinci görevler:</Turkish>
-            <Portuguese>Objetivos secundários alcançados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_18">
-            <Original>Prisonners captured:</Original>
-            <French>Prisonniers capturés :</French>
-            <German>Gefangene gefasst:</German>
-            <Spanish>Prisioneros capturados:</Spanish>
-            <Russian>Пленных захвачено:</Russian>
-            <Italian>Prigionieri catturati:</Italian>
-            <Chinesesimp>俘虏的战俘：</Chinesesimp>
-            <Chinese>俘虜的戰俘：</Chinese>
-            <Turkish>Ele geçirilen esirler:</Turkish>
-            <Portuguese>Prisioneiros capturados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_19">
-            <Original>Hostile battlegroups called:</Original>
-            <French>Battlegroups hostiles appelés :</French>
-            <German>Gegnerische Truppen gerufen:</German>
-            <Spanish>Grupos hostiles de combate llamados:</Spanish>
-            <Russian>Вражеских боевых групп вызвано:</Russian>
-            <Italian>Battaglione ostile contattato:</Italian>
-            <Chinesesimp>敌军战斗组增援次数：</Chinesesimp>
-            <Chinese>敵方戰鬥群增援次數：</Chinese>
-            <Turkish>Düşman savaş grupları:</Turkish>
-            <Portuguese>Grupos de combate hostis chamados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_20">
-            <Original>Hostile reinforcements called:</Original>
-            <French>Renforts hostiles appelés :</French>
-            <German>Gegnerischen Nachschub gerufen:</German>
-            <Spanish>Refuerzos hostiles llamados:</Spanish>
-            <Russian>Враждебных подкреплений вызвано:</Russian>
-            <Italian>Chiamati rinforzi ostili:</Italian>
-            <Chinesesimp>敌军增援次数：</Chinesesimp>
-            <Chinese>敵方增援次數：</Chinese>
-            <Turkish>Düşman takviye kuvvetleri:</Turkish>
-            <Portuguese>Reforços hostis requisitados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_21">
-            <Original>Total combat readiness raised:</Original>
-            <French>Augmentation totale du niveau d'alerte :</French>
-            <German>Gesamte Kampfbereitschaft erhöht:</German>
-            <Spanish>Disposición de combate total recaudada:</Spanish>
-            <Russian>Всего войск поднято по тревоге:</Russian>
-            <Italian>Disposizione al combattimento recuperata:</Italian>
-            <Chinesesimp>总备战比例：</Chinesesimp>
-            <Chinese>威脅度比例：</Chinese>
-            <Turkish>Hazırda olan asker sayısı:</Turkish>
-            <Portuguese>Disposição total de combatentes em alerta:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_22">
-            <Original>IEDs detonated:</Original>
-            <French>Explosions d'IED :</French>
-            <German>IEDs zur Explosion gebracht:</German>
-            <Spanish>IEDs detonados:</Spanish>
-            <Russian>Фугасов взорвано:</Russian>
-            <Italian>IED detonato:</Italian>
-            <Chinesesimp>被引爆的IED：</Chinesesimp>
-            <Chinese>被引爆的IED：</Chinese>
-            <Turkish>Patlatılan mayınlar:</Turkish>
-            <Portuguese>IEDs detonadas:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_23">
-            <Original>Number of Spartan 01 losses:</Original>
-            <French>Pertes de Spartan 01 :</French>
-            <German>Höhe der Spartan-01 Verluste:</German>
-            <Spanish>Número de pérdidas de Spartan 01:</Spanish>
-            <Russian>Количество потерянных Spartan 01:</Russian>
-            <Italian>Numero di Spartan 01 persi :</Italian>
-            <Chinesesimp>损失的斯巴达01号：</Chinesesimp>
-            <Turkish>Spartan 01 kayıpları:</Turkish>
-            <Portuguese>Número de baixas de Spartan 01:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_24">
-            <Original>Player deaths:</Original>
-            <French>Joueurs morts :</French>
-            <German>Spielertode:</German>
-            <Spanish>Muertes del jugador:</Spanish>
-            <Russian>Смертей игрока:</Russian>
-            <Italian>Giocatori Deceduti:</Italian>
-            <Chinesesimp>玩家死亡数：</Chinesesimp>
-            <Chinese>玩家死亡數：</Chinese>
-            <Turkish>Ölen oyuncular:</Turkish>
-            <Portuguese>Morte de jogadores:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_25">
-            <Original>Rabbits killed:</Original>
-            <French>Lapins tués :</French>
-            <German>Hasen getötet:</German>
-            <Spanish>Conejos asesinados:</Spanish>
-            <Russian>Кроликов убито:</Russian>
-            <Italian>Conigli uccisi:</Italian>
-            <Chinesesimp>兔子屠杀数：</Chinesesimp>
-            <Chinese>兔子屠殺數：</Chinese>
-            <Turkish>Öldürülen tavşanlar:</Turkish>
-            <Portuguese>Coelhos mortos:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_26">
-            <Original>Many thanks for playing LIBERATION!</Original>
-            <French>Merci beaucoup d'avoir joué à LIBERATION!</French>
-            <German>Vielen Dank fürs Spielen von LIBERATION!</German>
-            <Spanish>¡Muchas gracias por jugar LIBERATION!</Spanish>
-            <Russian>Большое спасибо за то что играли в LIBERATION!</Russian>
-            <Italian>Mille Grazie per aver giocato LIBERATION!:</Italian>
-            <Chinesesimp>感谢您游玩Liberation！</Chinesesimp>
-            <Chinese>感謝您遊玩 Liberation！</Chinese>
-            <Turkish>LIBERATION oynadığınız için çok teşekkürler!</Turkish>
-            <Portuguese>Muito obrigado por jogar LIBERATION!</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_27">
-            <Original>BLUFOR soldiers recruited:</Original>
-            <French>Soldats BLUFOR recrutés :</French>
-            <German>BLUFOR Soldaten rekrutiert:</German>
-            <Spanish>Soldados BLUFOR reclutados:</Spanish>
-            <Russian>BLUFOR солдат призвано:</Russian>
-            <Italian>Soldato BLUFOR reclutato:</Italian>
-            <Chinesesimp>我军招募的士兵：</Chinesesimp>
-            <Chinese>我軍招募的士兵：</Chinese>
-            <Turkish>Çağrılan BLUFOR askerleri:</Turkish>
-            <Portuguese>Soldados aliados recrutados:</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_28">
-            <Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
-            <French>Nous espérons que vous avez pris autant de plaisir à y jouer, que nous à la créer.</French>
-            <German>Wir hoffen du hattest so viel Spaß am Spielen, wie wir dabei, es zu entwickeln.</German>
-            <Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
-            <Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
-            <Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
-            <Chinesesimp>一如我们如此热爱制作这个任务，也希望您能喜欢它。</Chinesesimp>
-            <Chinese>就像我們如此熱愛於製作這個任務，我們也希望你能喜歡它。</Chinese>
-            <Turkish>Umarım oynarken eğlenmişsinizdir, biz yaparken eğlendiğimiz kadar.</Turkish>
-            <Portuguese>Esperamos que tenham gostado de jogar, da mesma forma que gostamos de desenvolver esta missão.</Portuguese>
-        </Key>
-        <Key ID="STR_STATS_29">
-            <Original>(Press ESC to exit)</Original>
-            <French>(Appuyez sur Echap pour quitter)</French>
-            <German>(Drücke ESC zum Abbrechen)</German>
-            <Spanish>(Pulsa ESC para salir)</Spanish>
-            <Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
-            <Italian>(Premi ESC per uscire)</Italian>
-            <Chinesesimp>（按ESC退出）</Chinesesimp>
-            <Chinese>（按 ESC 退出）</Chinese>
-            <Turkish>(ESC'ye basıp çıkabilirsiniz.)</Turkish>
-            <Portuguese>(Aperte ESC para sair)</Portuguese>
-        </Key>
         <Key ID="STR_PARAMS_MISSIONOPTIONS">
             <Original>== MISSION OPTIONS ==</Original>
             <French>== OPTIONS DE MISSION ==</French>
@@ -6181,6 +5750,409 @@
         <Key ID="STR_PARAMS_VICTORYCONDITION_4">
             <Original>All sectors</Original>
             <German>Alle Sektoren</German>
+        </Key>
+        <Key ID="STR_VICTORY_TITLE">
+            <Original>CAMPAIGN COMPLETED</Original>
+            <German>KAMPAGNE ABGESCHLOSSEN</German>
+        </Key>
+        <Key ID="STR_VICTORY_TEXT">
+            <Original>You have liberated the area from the enemy oppression.</Original>
+            <German>Du hast das Gebiet von der feindlichen Unterdrückung befreit.</German>
+        </Key>
+        <Key ID="STR_STATS_PLAYTIME">
+            <Original>Playtime: %1 days, %2 hours, %3 minutes and %4 seconds</Original>
+            <German>Spielzeit: %1 Tage, %2 Stunden, %3 Minuten und %4 Sekunden</German>
+        </Key>
+        <Key ID="STR_STATS_OPFOR_K_INF">
+            <Original>OPFOR infantry killed: %1</Original>
+            <French>Infanterie OPFOR tuée: %1</French>
+            <German>OPFOR Infanterie getötet: %1</German>
+            <Spanish>Infantería OPFOR eliminada: %1</Spanish>
+            <Russian>OPFOR пехоты убито: %1</Russian>
+            <Italian>Fanteria OPFOR ha ucciso: %1</Italian>
+            <Chinesesimp>被击杀的敌军步兵： %1</Chinesesimp>
+            <Chinese>被擊殺的敵方步兵： %1</Chinese>
+            <Turkish>Öldürülen OPFOR: %1</Turkish>
+            <Portuguese>Baixas inimigas em combate: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_OPFOR_K_INF_PL">
+            <Original>OPFOR infantry killed by players: %1</Original>
+            <French>Infanterie OPFOR tuée par les joueurs: %1</French>
+            <German>OPFOR Infanterie von Spielern getötet: %1</German>
+            <Spanish>Infantería OPFOR eliminada por jugadores: %1</Spanish>
+            <Russian>OPFOR пехоты убито игроками: %1</Russian>
+            <Italian>Fanteria OPFOR uccisa da: %1</Italian>
+            <Chinesesimp>被玩家击杀的敌军步兵： %1</Chinesesimp>
+            <Chinese>被玩家擊殺的敵方步兵： %1</Chinese>
+            <Turkish>Oyuncular tarafından öldürülen OPFOR sayısı: %1</Turkish>
+            <Portuguese>Infantaria inimiga eliminada por jogadores: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_OPFOR_K_VEH">
+            <Original>OPFOR vehicles destroyed: %1</Original>
+            <French>Vehicules OPFOR détruits: %1</French>
+            <German>OPFOR Fahrzeuge zerstört: %1</German>
+            <Spanish>Vehículos OPFOR destruídos: %1</Spanish>
+            <Russian>OPFOR техники уничтожено: %1</Russian>
+            <Italian>Veicolo OPFOR distrutto: %1</Italian>
+            <Chinesesimp>敌军被摧毁的载具： %1</Chinesesimp>
+            <Chinese>敵軍被摧毀的載具： %1</Chinese>
+            <Turkish>OPFOR yokedilen araçları: %1</Turkish>
+            <Portuguese>Veículos inimigos destruídos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_OPFOR_K_VEH_PL">
+            <Original>OPFOR vehicles destroyed by players: %1</Original>
+            <French>Vehicules OPFOR détruits par les joueurs: %1</French>
+            <German>OPFOR Fahrzeuge von Spielern zerstört: %1</German>
+            <Spanish>Vehículos OPFOR destruídos por jugadores: %1</Spanish>
+            <Russian>OPFOR техники уничтожено игроками: %1</Russian>
+            <Italian>Veicolo OPFOR distrutto da: %1</Italian>
+            <Chinesesimp>被玩家摧毁的敌军载具： %1</Chinesesimp>
+            <Chinese>被玩家摧毀的敵軍載具： %1</Chinese>
+            <Turkish>OPFOR yokedilen araçları (oyuncular tarafından): %1</Turkish>
+            <Portuguese>Veículos inimigos destruídos por jogadores: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_B_INF">
+            <Original>BLUFOR soldiers recruited: %1</Original>
+            <French>Soldats BLUFOR recrutés: %1</French>
+            <German>BLUFOR Soldaten rekrutiert: %1</German>
+            <Spanish>Soldados BLUFOR reclutados: %1</Spanish>
+            <Russian>BLUFOR солдат призвано: %1</Russian>
+            <Italian>Soldato BLUFOR reclutato: %1</Italian>
+            <Chinesesimp>我军招募的士兵： %1</Chinesesimp>
+            <Chinese>我軍招募的士兵： %1</Chinese>
+            <Turkish>Çağrılan BLUFOR askerleri: %1</Turkish>
+            <Portuguese>Soldados aliados recrutados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_K_INF">
+            <Original>BLUFOR infantry killed: %1</Original>
+            <French>Infanterie BLUFOR tuée: %1</French>
+            <German>BLUFOR Infanterie getötet: %1</German>
+            <Spanish>Infantería BLUFOR eliminada: %1</Spanish>
+            <Russian>BLUFOR пехоты убито: %1</Russian>
+            <Italian>Fanteria BLUFOR ha ucciso: %1</Italian>
+            <Chinesesimp>被击杀的我军步兵： %1</Chinesesimp>
+            <Chinese>被擊殺的我方步兵： %1</Chinese>
+            <Turkish>BLUFOR kayıpları: %1</Turkish>
+            <Portuguese>Baixas aliadas em combate: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_B_VEH">
+            <Original>BLUFOR vehicles built: %1</Original>
+            <French>Vehicules BLUFOR construits: %1</French>
+            <German>BLUFOR Fahrzeuge gebaut: %1</German>
+            <Spanish>Vehículos BLUFOR construidos: %1</Spanish>
+            <Russian>BLUFOR техники построено: %1</Russian>
+            <Italian>Veicolo BLUFOR creato: %1</Italian>
+            <Chinesesimp>我军建造的载具： %1</Chinesesimp>
+            <Chinese>我軍建造的載具： %1</Chinese>
+            <Turkish>BLUFOR yaratılan araçları: %1</Turkish>
+            <Portuguese>Veículos aliados construídos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_K_VEH">
+            <Original>BLUFOR vehicles destroyed: %1</Original>
+            <French>Vehicules BLUFOR détruits: %1</French>
+            <German>BLUFOR Fahrzeuge zerstört: %1</German>
+            <Spanish>Vehículos BLUFOR destruídos: %1</Spanish>
+            <Russian>BLUFOR техники уничтожено: %1</Russian>
+            <Italian>Veicolo BLUFOR distrutto: %1</Italian>
+            <Chinesesimp>被摧毁的我军载具： %1</Chinesesimp>
+            <Chinese>被摧毀的我方載具： %1</Chinese>
+            <Turkish>BLUFOR yokedilen araçları: %1</Turkish>
+            <Portuguese>Veículos aliados destruídos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_K_PL">
+            <Original>Player deaths: %1</Original>
+            <French>Joueurs morts: %1</French>
+            <German>Spielertode: %1</German>
+            <Spanish>Muertes del jugador: %1</Spanish>
+            <Russian>Смертей игрока: %1</Russian>
+            <Italian>Giocatori Deceduti: %1</Italian>
+            <Chinesesimp>玩家死亡数： %1</Chinesesimp>
+            <Chinese>玩家死亡數： %1</Chinese>
+            <Turkish>Ölen oyuncular: %1</Turkish>
+            <Portuguese>Morte de jogadores: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BLUFOR_TK">
+            <Original>BLUFOR friendly fire incidents: %1</Original>
+            <French>Tirs fratricides BLUFOR: %1</French>
+            <German>BLUFOR Eigenbeschuss: %1</German>
+            <Spanish>Incidentes de fuego amigo en BLUFOR: %1</Spanish>
+            <Russian>BLUFOR дружественный огонь: %1</Russian>
+            <Italian>Fuoco amico tra i BLUFOR: %1</Italian>
+            <Chinesesimp>我军友军误击事件： %1</Chinesesimp>
+            <Chinese>友軍誤擊事件： %1</Chinese>
+            <Turkish>BLUFOR dost ateşi: %1</Turkish>
+            <Portuguese>Incidentes de fogo amigo: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_GUE_K_INF">
+            <Original>Resistance fighters killed: %1</Original>
+            <German>Widerstandskämpfer getötet: %1</German>
+        </Key>
+        <Key ID="STR_STATS_GUE_TK_INF">
+            <Original>Allied resistance fighters killed: %1</Original>
+            <German>Verbündete Widerstandskämpfer getötet: %1</German>
+        </Key>
+        <Key ID="STR_STATS_GUE_TK_INF_PL">
+            <Original>Allied resistance fighters killed by players: %1</Original>
+            <German>Verbündete Widerstandskämpfer von Spielern getötet: %1</German>
+        </Key>
+        <Key ID="STR_STATS_CIV_K_INF">
+            <Original>Civilians killed: %1</Original>
+            <French>Civils tués: %1</French>
+            <German>Zivilisten getötet: %1</German>
+            <Spanish>Civiles asesinados: %1</Spanish>
+            <Russian>Гражданских убито: %1</Russian>
+            <Italian>Civile ha ucciso: %1</Italian>
+            <Chinesesimp>被击杀的平民： %1</Chinesesimp>
+            <Chinese>被擊殺的平民： %1</Chinese>
+            <Turkish>Öldürülen siviller: %1</Turkish>
+            <Portuguese>Civis mortos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_CIV_K_INF_PL">
+            <Original>Civilians killed by players: %1</Original>
+            <French>Civils tués par les joueurs: %1</French>
+            <German>Zivilisten von Spielern getötet: %1</German>
+            <Spanish>Civiles asesinados por jugadores: %1</Spanish>
+            <Russian>Гражданских убито игроками: %1</Russian>
+            <Italian>Civile ucciso da: %1</Italian>
+            <Chinesesimp>被玩家击杀的平民： %1</Chinesesimp>
+            <Chinese>被玩家擊殺的平民： %1</Chinese>
+            <Turkish>Öldürülen siviller (oyuncular tarafından): %1</Turkish>
+            <Portuguese>Civis mortos por jogadores: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_CIV_B_INF">
+            <Original>Civilians healed: %1</Original>
+            <German>Zivilisten versorgt: %1</German>
+        </Key>
+        <Key ID="STR_STATS_CIV_K_VEH">
+            <Original>Civilian vehicles destroyed: %1</Original>
+            <German>Zivile Fahrzeuge zerstört: %1</German>
+        </Key>
+        <Key ID="STR_STATS_CIV_K_VEH_PL">
+            <Original>Civilian vehicles destroyed by players: %1</Original>
+            <German>Zivile Fahrzeuge von Spielern zerstört: %1</German>
+        </Key>
+        <Key ID="STR_STATS_CIV_S_VEH">
+            <Original>Civilian vehicles seized: %1</Original>
+            <German>Zivilie Fahrzeuge beschlagnahmt: %1</German>
+        </Key>
+        <Key ID="STR_STATS_CIV_K_BUILDINGS">
+            <Original>Civilian buildings destroyed: %1</Original>
+            <German>Zivile Gebäude zerstört: %1</German>
+        </Key>
+        <Key ID="STR_STATS_VEH_RECYCLED">
+            <Original>Vehicles recycled: %1</Original>
+            <French>Vehicules recyclés:</French>
+            <German>Fahrzeuge wiederverwertet: %1</German>
+            <Spanish>Vehículos reciclados: %1</Spanish>
+            <Russian>Техники утилизировано: %1</Russian>
+            <Italian>Veicolo riciclato: %1</Italian>
+            <Chinesesimp>回收的载具： %1</Chinesesimp>
+            <Chinese>回收的載具： %1</Chinese>
+            <Turkish>Geri dönüşüm olan araçlar: %1</Turkish>
+            <Portuguese>Veículos reciclados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_PROD_AMMO">
+            <Original>Ammunitiond produced: %1</Original>
+            <German>Munition hergestellt: %1</German>
+        </Key>
+        <Key ID="STR_STATS_SPENT_AMMO">
+            <Original>Ammunitiond spent: %1</Original>
+            <German>Munition verbraucht: %1</German>
+        </Key>
+        <Key ID="STR_STATS_PROD_FUEL">
+            <Original>Fuel produced: %1</Original>
+            <German>Kraftstoff hergestellt: %1</German>
+        </Key>
+        <Key ID="STR_STATS_SPENT_FUEL">
+            <Original>Fuel spent: %1</Original>
+            <German>Kraftstoff verbraucht: %1</German>
+        </Key>
+        <Key ID="STR_STATS_PROD_SUPPLY">
+            <Original>Supplies produced: %1</Original>
+            <German>Nachschub hergestellt: %1</German>
+        </Key>
+        <Key ID="STR_STATS_SPENT_SUPPLY">
+            <Original>Supllies spent: %1</Original>
+            <German>Nachschub verbraucht: %1</German>
+        </Key>
+        <Key ID="STR_STATS_SECTORS_CAPTURED">
+            <Original>Sectors liberated: %1</Original>
+            <French>Secteurs libérés, delivrés: %1</French>
+            <German>Sektoren befreit: %1</German>
+            <Spanish>Sectores liberados: %1</Spanish>
+            <Russian>Зон освобождено: %1</Russian>
+            <Italian>Settore liberato: %1</Italian>
+            <Chinesesimp>解放的战区： %1</Chinesesimp>
+            <Chinese>解放的戰區： %1</Chinese>
+            <Turkish>Ele geçirilen sektörler: %1</Turkish>
+            <Portuguese>Setores liberados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_SECTORS_LOST">
+            <Original>Sectors lost: %1</Original>
+            <French>Secteurs perdus: %1</French>
+            <German>Sektoren verloren: %1</German>
+            <Spanish>Sectores perdidos: %1</Spanish>
+            <Russian>Зон потеряно: %1</Russian>
+            <Italian>Settore perso: %1</Italian>
+            <Chinesesimp>丢失的战区： %1</Chinesesimp>
+            <Chinese>失去的戰區： %1</Chinese>
+            <Turkish>Kaybedilen sektörler: %1</Turkish>
+            <Portuguese>Setores perdidos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_FOBS_BUILT">
+            <Original>FOBs built: %1</Original>
+            <French>FOBs construites: %1</French>
+            <German>FOBs gebaut: %1</German>
+            <Spanish>FOBs construídas: %1</Spanish>
+            <Russian>FOB построено: %1</Russian>
+            <Italian>FOB costruita: %1</Italian>
+            <Chinesesimp>建造的前哨： %1</Chinesesimp>
+            <Chinese>建造的前線基地： %1</Chinese>
+            <Turkish>Kurulan FOB'ler: %1</Turkish>
+            <Portuguese>FOBs construídas: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_FOBS_LOST">
+            <Original>FOBs lost: %1</Original>
+            <French>FOBs perdues: %1</French>
+            <German>FOBs verloren: %1</German>
+            <Spanish>FOB perdidas: %1</Spanish>
+            <Russian>FOB потеряно: %1</Russian>
+            <Italian>FOB persa: %1</Italian>
+            <Chinesesimp>损失的前哨： %1</Chinesesimp>
+            <Chinese>損失的前線基地： %1</Chinese>
+            <Turkish>Kaybedilen FOB'ler: %1</Turkish>
+            <Portuguese>FOBs perdidas: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_SIDEMISSIONS">
+            <Original>Secondary objectives accomplished: %1</Original>
+            <French>Objectifs secondaires accomplis: %1</French>
+            <German>Sekundärziele erreicht: %1</German>
+            <Spanish>Objetivos secundarios conseguidos: %1</Spanish>
+            <Russian>Вторичных заданий выполнено: %1</Russian>
+            <Italian>Obiettivo secondario completato: %1</Italian>
+            <Chinesesimp>完成的次要目标： %1</Chinesesimp>
+            <Chinese>完成的次要目標： %1</Chinese>
+            <Turkish>Bitirilen ikinci görevler: %1</Turkish>
+            <Portuguese>Objetivos secundários alcançados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_PRISONERS">
+            <Original>Prisoners captured: %1</Original>
+            <French>Prisonniers capturés: %1</French>
+            <German>Gefangene gefasst: %1</German>
+            <Spanish>Prisioneros capturados: %1</Spanish>
+            <Russian>Пленных захвачено: %1</Russian>
+            <Italian>Prigionieri catturati: %1</Italian>
+            <Chinesesimp>俘虏的战俘： %1</Chinesesimp>
+            <Chinese>俘虜的戰俘： %1</Chinese>
+            <Turkish>Ele geçirilen esirler: %1</Turkish>
+            <Portuguese>Prisioneiros capturados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_BATTLEGROUPS">
+            <Original>Hostile battlegroups called: %1</Original>
+            <French>Battlegroups hostiles appelés: %1</French>
+            <German>Gegnerische Truppen gerufen: %1</German>
+            <Spanish>Grupos hostiles de combate llamados: %1</Spanish>
+            <Russian>Вражеских боевых групп вызвано: %1</Russian>
+            <Italian>Battaglione ostile contattato: %1</Italian>
+            <Chinesesimp>敌军战斗组增援次数： %1</Chinesesimp>
+            <Chinese>敵方戰鬥群增援次數： %1</Chinese>
+            <Turkish>Düşman savaş grupları: %1</Turkish>
+            <Portuguese>Grupos de combate hostis chamados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_REINFORCEMENTS">
+            <Original>Hostile reinforcements called: %1</Original>
+            <French>Renforts hostiles appelés: %1</French>
+            <German>Gegnerischen Nachschub gerufen: %1</German>
+            <Spanish>Refuerzos hostiles llamados: %1</Spanish>
+            <Russian>Враждебных подкреплений вызвано %1:</Russian>
+            <Italian>Chiamati rinforzi ostili: %1</Italian>
+            <Chinesesimp>敌军增援次数： %1</Chinesesimp>
+            <Chinese>敵方增援次數： %1</Chinese>
+            <Turkish>Düşman takviye kuvvetleri: %1</Turkish>
+            <Portuguese>Reforços hostis requisitados: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_COMBATREADINESS">
+            <Original>Total combat readiness raised: %1</Original>
+            <French>Augmentation totale du niveau d'alerte: %1</French>
+            <German>Gesamte Kampfbereitschaft erhöht: %1</German>
+            <Spanish>Disposición de combate total recaudada: %1</Spanish>
+            <Russian>Всего войск поднято по тревоге: %1</Russian>
+            <Italian>Disposizione al combattimento recuperata: %1</Italian>
+            <Chinesesimp>总备战比例： %1</Chinesesimp>
+            <Chinese>威脅度比例： %1</Chinese>
+            <Turkish>Hazırda olan asker sayısı: %1</Turkish>
+            <Portuguese>Disposição total de combatentes em alerta: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_IEDS">
+            <Original>IEDs detonated: %1</Original>
+            <French>Explosions d'IED: %1</French>
+            <German>IEDs ausgelöst: %1</German>
+            <Spanish>IEDs detonados: %1</Spanish>
+            <Russian>Фугасов взорвано: %1</Russian>
+            <Italian>IED detonato: %1</Italian>
+            <Chinesesimp>被引爆的IED： %1</Chinesesimp>
+            <Chinese>被引爆的IED： %1</Chinese>
+            <Turkish>Patlatılan mayınlar: %1</Turkish>
+            <Portuguese>IEDs detonadas: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_POTATO">
+            <Original>Number of Spartan 01 losses: %1</Original>
+            <French>Pertes de Spartan 01: %1</French>
+            <German>Höhe der Spartan-01 Verluste: %1</German>
+            <Spanish>Número de pérdidas de Spartan 01: %1</Spanish>
+            <Russian>Количество потерянных Spartan 01: %1</Russian>
+            <Italian>Numero di Spartan 01 persi: %1</Italian>
+            <Chinesesimp>损失的斯巴达01号： %1</Chinesesimp>
+            <Turkish>Spartan 01 kayıpları: %1</Turkish>
+            <Portuguese>Número de baixas de Spartan 01: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_RABBITS">
+            <Original>Rabbits killed: %1</Original>
+            <French>Lapins tués: %1</French>
+            <German>Hasen getötet: %1</German>
+            <Spanish>Conejos asesinados: %1</Spanish>
+            <Russian>Кроликов убито: %1</Russian>
+            <Italian>Conigli uccisi: %1</Italian>
+            <Chinesesimp>兔子屠杀数： %1</Chinesesimp>
+            <Chinese>兔子屠殺數： %1</Chinese>
+            <Turkish>Öldürülen tavşanlar: %1</Turkish>
+            <Portuguese>Coelhos mortos: %1</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_END1">
+            <Original>Many thanks for playing KP LIBERATION!</Original>
+            <French>Merci beaucoup d'avoir joué à KP LIBERATION!</French>
+            <German>Vielen Dank fürs Spielen von KPLIBERATION!</German>
+            <Spanish>¡Muchas gracias por jugar KP LIBERATION!</Spanish>
+            <Russian>Большое спасибо за то что играли в KP LIBERATION!</Russian>
+            <Italian>Mille Grazie per aver giocato KP LIBERATION!:</Italian>
+            <Chinesesimp>感谢您游玩 KP LIBERATION！</Chinesesimp>
+            <Chinese>感謝您遊玩 KP LIBERATION！</Chinese>
+            <Turkish>KP LIBERATION oynadığınız için çok teşekkürler!</Turkish>
+            <Portuguese>Muito obrigado por jogar KP LIBERATION!</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_END2">
+            <Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
+            <French>Nous espérons que vous avez pris autant de plaisir à y jouer, que nous à la créer.</French>
+            <German>Wir hoffen du hattest so viel Spaß am Spielen, wie wir dabei, es zu entwickeln.</German>
+            <Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
+            <Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
+            <Italian>Speriamo che ti sia divertito giocare, qunato noi a creare questa missione:</Italian>
+            <Chinesesimp>一如我们如此热爱制作这个任务，也希望您能喜欢它。</Chinesesimp>
+            <Chinese>就像我們如此熱愛於製作這個任務，我們也希望你能喜歡它。</Chinese>
+            <Turkish>Umarım oynarken eğlenmişsinizdir, biz yaparken eğlendiğimiz kadar.</Turkish>
+            <Portuguese>Esperamos que tenham gostado de jogar, da mesma forma que gostamos de desenvolver esta missão.</Portuguese>
+        </Key>
+        <Key ID="STR_STATS_END3">
+            <Original>(Press ESC to exit)</Original>
+            <French>(Appuyez sur Echap pour quitter)</French>
+            <German>(Drücke ESC zum beenden)</German>
+            <Spanish>(Pulsa ESC para salir)</Spanish>
+            <Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
+            <Italian>(Premi ESC per uscire)</Italian>
+            <Chinesesimp>（按ESC退出）</Chinesesimp>
+            <Chinese>（按 ESC 退出）</Chinese>
+            <Turkish>(ESC'ye basıp çıkabilirsiniz.)</Turkish>
+            <Portuguese>(Aperte ESC para sair)</Portuguese>
         </Key>
     </Package>
 </Project>
