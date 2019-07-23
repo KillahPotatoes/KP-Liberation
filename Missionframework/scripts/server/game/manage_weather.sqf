@@ -12,7 +12,7 @@ diag_log format ["[KP LIBERATION] [WEATHER] Set initial weather to: %1 - Param V
 
 while {GRLIB_endgame == 0} do {
     _newWeather = selectRandom _weathers;
-    3600 setOvercast _newWeather;
+    (3600 * timeMultiplier) setOvercast _newWeather;
     diag_log format ["[KP LIBERATION] [WEATHER] Set next weather transition to: %1 - Time: %2", _newWeather, diag_tickTime];
     sleep 3000; // Slighty less than weather transition time, as sleep duration is depending on FPS
 };
