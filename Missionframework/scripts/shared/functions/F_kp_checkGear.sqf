@@ -19,44 +19,89 @@
 params [["_backpack", ""]];
 
 private _return = true;
-private _playerItems = [];
-if ((headgear player) != "") then {_playerItems pushBack (headgear player);};
-if ((goggles player) != "") then {_playerItems pushBack (goggles player);};
-if ((uniform player) != "") then {_playerItems pushBack (uniform player);};
-if ((vest player) != "") then {_playerItems pushBack (vest player);};
-if (((backpack player) != "") && ((backpack player) != _backpack)) then {_playerItems pushBack (backpack player);};
-{_playerItems pushBackUnique _x;} forEach (assignedItems player);
-{_playerItems pushBackUnique _x;} forEach (uniformItems player);
-{_playerItems pushBackUnique _x;} forEach (vestItems player);
-{_playerItems pushBackUnique _x;} forEach (backpackItems player);
-{_playerItems pushBackUnique _x;} forEach (weapons player);
-{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (primaryWeaponItems player);
-{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (secondaryWeaponItems player);
-{if (_x != "") then {_playerItems pushBackUnique _x;}} forEach (handgunItems player);
+private _removedItems = [];
 
+if !(toLower (headgear player) in KP_liberation_allowed_items) then {
+    _removedItems pushBack (headgear player);
+    removeHeadgear player;
+};
+if !(toLower (goggles player) in KP_liberation_allowed_items) then {
+    _removedItems pushBack (goggles player);
+    removeGoggles player;
+};
+if !(toLower (uniform player) in KP_liberation_allowed_items) then {
+    _removedItems pushBack (uniform player);
+    removeUniform player;
+};
+if !(toLower (vest player) in KP_liberation_allowed_items) then {
+    _removedItems pushBack (vest player);
+    removeVest player;
+};
+if (!(toLower (backpack player) in KP_liberation_allowed_items) && ((backpack player) != _backpack)) then {
+    _removedItems pushBack (backpack player);
+    removeBackpack player;
+};
+
+private _playerItems = assignedItems player;
+_playerItems append ((getItemCargo (uniformContainer player)) select 0);
+_playerItems append ((getItemCargo (vestContainer player)) select 0);
+_playerItems append ((getItemCargo (backpackContainer player)) select 0);
 _playerItems = _playerItems apply {toLower _x};
+{
+    _removedItems pushBack _x;
+    player unassignItem _x;
+    player removeItems _x;
+} forEach (((_playerItems arrayIntersect _playerItems) - KP_liberation_allowed_items) select { !(_x call F_isRadio) });
 
-private _validItemsCount = {
-	(_x in KP_liberation_allowed_items)
-	|| ((_x find "acre") != -1)
-	|| ((_x find "tf_") != -1)
-	|| ((_x find "tfar_") != -1)
-} count _playerItems;
+private _playerMagazines = ((getMagazineCargo (uniformContainer player)) select 0);
+_playerMagazines append ((getMagazineCargo (vestContainer player)) select 0);
+_playerMagazines append ((getMagazineCargo (backpackContainer player)) select 0);
+_playerMagazines = _playerMagazines apply {toLower _x};
+{
+    _removedItems pushBack _x;
+    player removeMagazines _x;
+} forEach ((_playerMagazines arrayIntersect _playerMagazines) - KP_liberation_allowed_items);
 
-if (_validItemsCount != count _playerItems) then {
-	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_playerItems - KP_liberation_allowed_items), name player];
+_removedItems append ([uniformContainer player] call F_removeWeaponCargo);
+_removedItems append ([vestContainer player] call F_removeWeaponCargo);
+_removedItems append ([backpackContainer player] call F_removeWeaponCargo);
+
+private _weapons = weapons player;
+_weapons = _weapons apply {toLower _x};
+{
+    player removeWeapon _x;
+    _removedItems pushBack _x;
+} forEach (_weapons - KP_liberation_allowed_items);
+
+private _weaponItems = primaryWeaponItems player;
+_weaponItems append primaryWeaponMagazine player;
+_weaponItems = _weaponItems apply {toLower _x};
+{
+    player removePrimaryWeaponItem _x;
+    _removedItems pushBack _x;
+} forEach (_weaponItems - KP_liberation_allowed_items);
+
+_weaponItems = secondaryWeaponItems player;
+_weaponItems append secondaryWeaponMagazine player;
+_weaponItems = _weaponItems apply {toLower _x};
+{
+    player removeSecondaryWeaponItem _x;
+    _removedItems pushBack _x;
+} forEach (_weaponItems - KP_liberation_allowed_items);
+
+_weaponItems = handgunItems player;
+_weaponItems append handgunMagazine player;
+_weaponItems = _weaponItems apply {toLower _x};
+{
+    player removeHandgunItem _x;
+    _removedItems pushBack _x;
+} forEach (_weaponItems - KP_liberation_allowed_items);
+
+_removedItems = (_removedItems arrayIntersect _removedItems) - [""];
+if !(_removedItems isEqualTo []) then {
+	private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", (_removedItems), name player];
 	_text remoteExec ["diag_log",2];
-	private _badItems = "";
-	{if (((_x find "acre") == -1) && ((_x find "tf_") == -1) && ((_x find "tfar_") == -1)) then {_badItems = _badItems + _x + "\n";};} forEach (_playerItems - KP_liberation_allowed_items);
-	hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _badItems];
-	removeAllWeapons player;
-	removeAllItems player;
-	removeAllAssignedItems player;
-	removeUniform player;
-	removeVest player;
-	removeBackpack player;
-	removeHeadgear player;
-	removeGoggles player;
+	hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
 	_return = false;
 };
 
