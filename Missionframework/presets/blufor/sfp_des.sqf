@@ -12,7 +12,6 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!  */
 FOB_typename = "Land_Cargo_HQ_V1_F";                                    // This is the main FOB HQ building.
 FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 FOB_truck_typename = "sfp_tgb1112";                                     // This is the FOB as a vehicle.
@@ -114,7 +113,7 @@ static_vehicles = [
     ["sfp_fh77",100,200,0]                                              // FH 77
 ];
 
-  
+
 buildings = [
     ["Land_Cargo_House_V1_F",0,0,0],
     ["Land_Cargo_Patrol_V1_F",0,0,0],
@@ -126,7 +125,7 @@ buildings = [
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
     ["Land_Medevac_HQ_V1_F",0,0,0],
-    ["Flag_RedCrystal_F",0,0,0],  
+    ["Flag_RedCrystal_F",0,0,0],
     ["CamoNet_BLUFOR_F",0,0,0],
     ["CamoNet_BLUFOR_open_F",0,0,0],
     ["CamoNet_BLUFOR_big_F",0,0,0],
@@ -167,7 +166,7 @@ buildings = [
     ["Land_BagFence_Short_F",0,0,0],
     ["Land_BagFence_Long_F",0,0,0],
     ["Land_BagFence_Corner_F",0,0,0],
-    ["Land_BagFence_End_F",0,0,0],  
+    ["Land_BagFence_End_F",0,0,0],
     ["Land_BagBunker_Small_F",0,0,0],
     ["Land_BagBunker_Large_F",0,0,0],
     ["Land_BagBunker_Tower_F",0,0,0],
@@ -182,10 +181,10 @@ buildings = [
     ["Land_HBarrierTower_F",0,0,0],
     ["Land_CncBarrierMedium_F",0,0,0],
     ["Land_CncBarrierMedium4_F",0,0,0],
-    ["Land_Concrete_SmallWall_4m_F",0,0,0], 
+    ["Land_Concrete_SmallWall_4m_F",0,0,0],
     ["Land_Concrete_SmallWall_8m_F",0,0,0],
     ["Land_CncShelter_F",0,0,0],
-    ["Land_CncWall1_F",0,0,0],  
+    ["Land_CncWall1_F",0,0,0],
     ["Land_CncWall4_F",0,0,0],
     ["Land_Sign_WarningMilitaryArea_F",0,0,0],
     ["Land_Sign_WarningMilAreaSmall_F",0,0,0],
@@ -271,7 +270,7 @@ blufor_squad_recon = [
     "sfp_m90d_sog_teamleader",
     "sfp_m90d_sog_ksp90",
     "sfp_m90d_sog_medic"
-];  
+];
 
 // Paratroopers squad.
 blufor_squad_para = [

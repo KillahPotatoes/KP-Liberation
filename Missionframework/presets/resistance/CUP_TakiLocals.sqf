@@ -38,7 +38,7 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 =[
+KP_liberation_guerilla_weapons_1 = [
     ["bnae_mk1_virtual","10Rnd_303_Magazine",8,"",""],
     ["bnae_mk1_t_virtual","10Rnd_303_Magazine",8,"bnae_scope_v3_virtual",""],
     ["bnae_m97_virtual","6Rnd_Slug_Magazine",10,"",""],
@@ -49,7 +49,7 @@ KP_liberation_guerilla_weapons_1 =[
     ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 =[
+KP_liberation_guerilla_weapons_2 = [
     ["bnae_mk1_t_virtual","10Rnd_303_Magazine",8,"bnae_scope_v3_virtual",""],
     ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""],
     ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_kobra",""],
@@ -58,7 +58,7 @@ KP_liberation_guerilla_weapons_2 =[
     ["CUP_arifle_RPK74","CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",3,"",""]
 ];
 
-KP_liberation_guerilla_weapons_3 =[
+KP_liberation_guerilla_weapons_3 = [
     ["CUP_arifle_FNFAL","CUP_20Rnd_762x51_FNFAL_M",5,"",""],
     ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"",""],
     ["CUP_arifle_AK47","CUP_30Rnd_762x39_AK47_M",6,"cup_optic_kobra",""],
