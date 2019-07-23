@@ -12,12 +12,12 @@
 opfor_officer = "CUP_O_INS_Story_Lopotev";                              // Officer
 opfor_squad_leader = "CUP_O_INS_Commander";                             // Squad Leader
 opfor_team_leader = "CUP_O_INS_Officer";                                // Team Leader
-opfor_sentry = "CUP_O_INS_Soldier";                                     // Rifleman
-opfor_rifleman = "CUP_O_INS_Soldier_AK74";                              // Rifleman (AK-74)
-opfor_rpg = "CUP_O_INS_Soldier_Exp";                                    // Sapper
+opfor_sentry = "CUP_O_INS_Soldier";                                     // Rifleman (Lite)
+opfor_rifleman = "CUP_O_INS_Soldier_AK74";                              // Rifleman
+opfor_rpg = "CUP_O_INS_Soldier_Exp";                                    // Rifleman (LAT)
 opfor_grenadier = "CUP_O_INS_Soldier_GL";                               // Grenadier
-opfor_machinegunner = "CUP_O_INS_Soldier";                              // Automatic Rifleman
-opfor_heavygunner = "CUP_O_INS_Soldier_MG";                             // Machinegunner
+opfor_machinegunner = "CUP_O_INS_Soldier";                              // Autorifleman
+opfor_heavygunner = "CUP_O_INS_Soldier_MG";                             // Heavy Gunner
 opfor_marksman = "CUP_O_INS_Woodlander2";                               // Marksman
 opfor_sharpshooter = "CUP_O_INS_Villager3";                             // Sharpshooter
 opfor_sniper = "CUP_O_INS_Sniper";                                      // Sniper
@@ -25,7 +25,7 @@ opfor_at = "CUP_O_INS_Soldier_AT";                                      // AT Sp
 opfor_aa = "CUP_O_INS_Soldier_AA";                                      // AA Specialist
 opfor_medic = "CUP_O_INS_Medic";                                        // Medic
 opfor_engineer = "CUP_O_INS_Soldier_Engineer";                          // Engineer
-opfor_paratrooper = "CUP_O_INS_Saboteur";                               // Saboteur
+opfor_paratrooper = "CUP_O_INS_Saboteur";                               // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "CUP_O_UAZ_Unarmed_CHDKZ";                                 // UAZ

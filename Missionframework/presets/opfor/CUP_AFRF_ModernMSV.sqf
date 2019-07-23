@@ -9,23 +9,23 @@
 */
 
 // Enemy infantry classes
-opfor_officer = "CUP_O_RU_Officer_M_EMR";                                 // Officer
-opfor_squad_leader = "CUP_O_RU_Soldier_SL_M_EMR";                         // Squad Leader
-opfor_team_leader = "CUP_O_RU_Soldier_TL_M_EMR";                          // Team Leader
-opfor_sentry = "CUP_O_RU_Soldier_Saiga_M_EMR";                            // Rifleman (Saiga)
-opfor_rifleman = "CUP_O_RU_Soldier_M_EMR";                                // Rifleman
-opfor_rpg = "CUP_O_RU_Soldier_AT_M_EMR";                                  // Rifleman (RPG-7)
-opfor_grenadier = "CUP_O_RU_Soldier_GL_M_EMR";                            // Grenadier
-opfor_machinegunner = "CUP_O_RU_Soldier_AR_M_EMR";                        // Automatic Rifleman
-opfor_heavygunner = "CUP_O_RU_Soldier_MG_M_EMR";                          // Machinegunner
-opfor_marksman = "CUP_O_RU_Soldier_Marksman_M_EMR";                       // Marksman (SVD)
-opfor_sharpshooter = "CUP_O_RU_Sniper_M_EMR";                             // Sniper
-opfor_sniper = "CUP_O_RU_Sniper_KSVK_M_EMR";                              // Sniper (KSVK)
-opfor_at = "CUP_O_RU_Soldier_HAT_M_EMR";                                  // AT Specialist
-opfor_aa = "CUP_O_RU_Soldier_AA_M_EMR";                                   // AA Specialist
-opfor_medic = "CUP_O_RU_Medic_M_EMR";                                     // Medic
-opfor_engineer = "CUP_O_RU_Engineer_M_EMR";                               // Engineer
-opfor_paratrooper = "CUP_O_RU_Soldier_LAT_M_EMR";                         // Rifleman (RPG-18)
+opfor_officer = "CUP_O_RU_Officer_M_EMR";                               // Officer
+opfor_squad_leader = "CUP_O_RU_Soldier_SL_M_EMR";                       // Squad Leader
+opfor_team_leader = "CUP_O_RU_Soldier_TL_M_EMR";                        // Team Leader
+opfor_sentry = "CUP_O_RU_Soldier_Saiga_M_EMR";                          // Rifleman (Lite)
+opfor_rifleman = "CUP_O_RU_Soldier_M_EMR";                              // Rifleman
+opfor_rpg = "CUP_O_RU_Soldier_AT_M_EMR";                                // Rifleman (LAT)
+opfor_grenadier = "CUP_O_RU_Soldier_GL_M_EMR";                          // Grenadier
+opfor_machinegunner = "CUP_O_RU_Soldier_AR_M_EMR";                      // Autorifleman
+opfor_heavygunner = "CUP_O_RU_Soldier_MG_M_EMR";                        // Heavy Gunner
+opfor_marksman = "CUP_O_RU_Soldier_Marksman_M_EMR";                     // Marksman
+opfor_sharpshooter = "CUP_O_RU_Sniper_M_EMR";                           // Sharpshooter
+opfor_sniper = "CUP_O_RU_Sniper_KSVK_M_EMR";                            // Sniper
+opfor_at = "CUP_O_RU_Soldier_HAT_M_EMR";                                // AT Specialist
+opfor_aa = "CUP_O_RU_Soldier_AA_M_EMR";                                 // AA Specialist
+opfor_medic = "CUP_O_RU_Medic_M_EMR";                                   // Medic
+opfor_engineer = "CUP_O_RU_Engineer_M_EMR";                             // Engineer
+opfor_paratrooper = "CUP_O_RU_Soldier_LAT_M_EMR";                       // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "CUP_O_UAZ_Unarmed_RU";                                    // UAZ

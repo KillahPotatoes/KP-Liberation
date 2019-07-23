@@ -11,21 +11,21 @@
 // Enemy infantry classes
 opfor_officer = "CUP_O_TK_Officer";										// Officer
 opfor_squad_leader = "CUP_O_TK_Soldier_SL";								// Squad Leader
-opfor_team_leader = "CUP_O_TK_Soldier_SL";								// Squad Leader
-opfor_sentry = "CUP_O_TK_Soldier";										// Rifleman
-opfor_rifleman = "CUP_O_TK_Soldier_Backpack";							// Rifleman (backpack)
-opfor_rpg = "CUP_O_TK_Soldier_AT";										// Rifleman (RPG-7)
+opfor_team_leader = "CUP_O_TK_Soldier_SL";								// Team Leader
+opfor_sentry = "CUP_O_TK_Soldier";										// Rifleman (Lite)
+opfor_rifleman = "CUP_O_TK_Soldier_Backpack";							// Rifleman
+opfor_rpg = "CUP_O_TK_Soldier_AT";										// Rifleman (LAT)
 opfor_grenadier = "CUP_O_TK_Soldier_GL";								// Grenadier
 opfor_machinegunner = "CUP_O_TK_Soldier_AR";							// Autorifleman
 opfor_heavygunner = "CUP_O_TK_Soldier_MG";								// Heavy Gunner
-opfor_marksman = "CUP_O_TK_Sniper";										// Sniper
-opfor_sharpshooter = "CUP_O_TK_Sniper_SVD_Night";						// Sniper (night)
-opfor_sniper = "CUP_O_TK_Sniper_KSVK";									// Sniper (KSVK)
+opfor_marksman = "CUP_O_TK_Sniper";										// Marksman
+opfor_sharpshooter = "CUP_O_TK_Sniper_SVD_Night";						// Sharpshooter
+opfor_sniper = "CUP_O_TK_Sniper_KSVK";									// Sniper
 opfor_at = "CUP_O_TK_Soldier_HAT";										// AT Specialist
 opfor_aa = "CUP_O_TK_Soldier_AA";										// AA Specialist
 opfor_medic = "CUP_O_TK_Medic";											// Medic
 opfor_engineer = "CUP_O_TK_Engineer";									// Engineer
-opfor_paratrooper = "CUP_O_TK_Soldier_AKS_74_GOSHAWK";					// Soldier (TWS)
+opfor_paratrooper = "CUP_O_TK_Soldier_AKS_74_GOSHAWK";					// Paratrooper
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "CUP_O_LR_Transport_TKA";									// Land Rover 110 (Transport)
@@ -34,7 +34,7 @@ opfor_transport_helo = "CUP_O_UH1H_TKA";								// UH-1H
 opfor_transport_truck = "CUP_O_Ural_TKA";								// Ural
 opfor_ammobox_transport = "CUP_O_Ural_Open_TKA";						// Ural (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "CUP_O_Ural_Refuel_TKA";								// Ural (Refuel)
-opfor_ammo_truck = "CUP_O_Ural_Reammo_TKA	";							// Ural (Ammo)
+opfor_ammo_truck = "CUP_O_Ural_Reammo_TKA";							    // Ural (Ammo)
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";				// Taru Fuel Pod
 opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";				// Taru Ammo Pod
 opfor_flag = "FlagCarrierTakistan_EP1";									// Flag
@@ -112,7 +112,7 @@ opfor_battlegroup_vehicles = [
 	"CUP_O_BMP2_TKA",													// BMP-2
 	"CUP_O_BMP2_TKA",													// BMP-2
 	"CUP_O_ZSU23_Afghan_TK",											// ZSU-23-4 Afghanski
-	"CUP_O_ZSU23_TK",													// ZSU-23-4												
+	"CUP_O_ZSU23_TK",													// ZSU-23-4
 	"CUP_O_T55_TK",														// T-55
 	"CUP_O_T55_TK",														// T-55
 	"CUP_O_T72_TKA",													// T-72

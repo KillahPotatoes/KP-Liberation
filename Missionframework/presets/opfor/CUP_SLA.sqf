@@ -11,21 +11,21 @@
 // Enemy infantry classes
 opfor_officer = "CUP_O_sla_Officer"; 										// Officer
 opfor_squad_leader = "CUP_O_sla_Soldier_SL";								// Squad Leader
-opfor_team_leader = "CUP_O_sla_Soldier_SL";									// Squad Leader
-opfor_sentry = "CUP_O_sla_Soldier";											// Rifleman
-opfor_rifleman = "CUP_O_SLA_Soldier_Backpack";								// Rifleman (Backpack)
-opfor_rpg = "CUP_O_sla_Soldier_AT";											// Rifleman (RPG-7)
+opfor_team_leader = "CUP_O_sla_Soldier_SL";									// Team Leader
+opfor_sentry = "CUP_O_sla_Soldier";											// Rifleman (Lite)
+opfor_rifleman = "CUP_O_SLA_Soldier_Backpack";								// Rifleman
+opfor_rpg = "CUP_O_sla_Soldier_AT";											// Rifleman (LAT)
 opfor_grenadier = "CUP_O_sla_Soldier_GL";									// Grenadier
-opfor_machinegunner = "CUP_O_sla_Soldier_AR";								// Automatic Rifleman
-opfor_heavygunner = "CUP_O_sla_Soldier_MG";									// Machinegunner
-opfor_marksman = "CUP_O_sla_Sniper";										// Sniper
-opfor_sharpshooter = "CUP_O_SLA_Sniper_SVD_Night";							// Sniper (Night)
-opfor_sniper = "CUP_O_sla_Sniper_KSVK";										// Sniper (KSVK)
+opfor_machinegunner = "CUP_O_sla_Soldier_AR";								// Autorifleman
+opfor_heavygunner = "CUP_O_sla_Soldier_MG";									// Heavy Gunner
+opfor_marksman = "CUP_O_sla_Sniper";										// Marksman
+opfor_sharpshooter = "CUP_O_SLA_Sniper_SVD_Night";							// Sharpshooter
+opfor_sniper = "CUP_O_sla_Sniper_KSVK";										// Sniper
 opfor_at = "CUP_O_sla_Soldier_HAT";											// AT Specialist
 opfor_aa = "CUP_O_sla_Soldier_AA";											// AA Specialist
 opfor_medic = "CUP_O_sla_Medic";											// Medic
 opfor_engineer = "CUP_O_sla_Engineer";										// Engineer
-opfor_paratrooper = "CUP_O_sla_Soldier_LAT";								// Rifleman (RPG-18)
+opfor_paratrooper = "CUP_O_sla_Soldier_LAT";								// Paratrooper
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "CUP_O_UAZ_Unarmed_SLA";										// UAZ
@@ -112,7 +112,7 @@ opfor_battlegroup_vehicles = [
 opfor_battlegroup_vehicles_low_intensity = [
 	"CUP_O_UAZ_MG_SLA",														// UAZ (DShKM)
 	"CUP_O_UAZ_MG_SLA",														// UAZ (DShKM)
-	"CUP_O_BTR60_SLA",														// BTR-60PB 
+	"CUP_O_BTR60_SLA",														// BTR-60PB
 	"CUP_O_MTLB_pk_SLA",													// MT-LB LV
 	"CUP_O_Ural_ZU23_SLA",													// Ural (ZU-23)
 	"CUP_O_Mi8_SLA_1",														// Mi-8MT

@@ -44,86 +44,86 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";						// This defines the fue
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-	["CUP_B_BAF_Soldier_RiflemanLite_DDPM",15,0,0],						//Rifleman (Light)
-	["CUP_B_BAF_Soldier_Rifleman_DDPM",20,0,0],							//Rifleman
-	["CUP_B_BAF_Soldier_RiflemanAT_DDPM",30,0,0],						//Rifleman (AT)
-	["CUP_B_BAF_Soldier_Grenadier_DDPM",25,0,0],						//Grenadier
-	["CUP_B_BAF_Soldier_AutoRifleman_DDPM",25,0,0],						//Autorifleman
-	["CUP_B_BAF_Soldier_HeavyGunner_DDPM",35,0,0],						//Heavygunner
-	["CUP_B_BAF_Soldier_Marksman_DDPM",30,0,0],							//Marksman
-	["CUP_B_BAF_Soldier_SharpShooter_DDPM",40,0,0],						//Sharpshooter
-	["CUP_B_BAF_Soldier_AT_DDPM",50,10,0],								//AT Specialist
-	["CUP_B_BAF_Soldier_AA_DDPM",50,10,0],								//AA Specialist
-	["CUP_B_BAF_Soldier_Medic_DDPM",30,0,0],							//Combat Life Saver
-	["CUP_B_BAF_Soldier_Engineer_DDPM",30,0,0],							//Engineer
-	["CUP_B_BAF_Soldier_Explosive_DDPM",30,0,0],						//Explosives Specialist
-	["CUP_B_BAF_Soldier_Rifleman_MTP",20,0,0],							//Recon Scout
-	["CUP_B_BAF_Soldier_RiflemanAT_MTP",30,0,0],						//Recon Scout (AT)
-	["CUP_B_BAF_Soldier_Marksman_MTP",30,0,0],							//Recon Marksman
-	["CUP_B_BAF_Soldier_SharpShooter_MTP",40,0,0],						//Recon Sharpshooter
-	["CUP_B_BAF_Soldier_Medic_MTP",30,0,0],								//Recon Paramedic
-	["CUP_B_BAF_Soldier_Explosive_MTP",30,0,0],							//Recon Demolition Expert
-	["CUP_B_BAF_Sniper_AS50_TWS_DDPM",70,5,0],							//Sniper
-	["CUP_B_BAF_Sniper_AS50_DDPM",70,5,0],								//Sniper (Arid)
-	["CUP_B_BAF_Sniper_DDPM",70,5,0],									//Sniper (Lush)
-	["CUP_B_BAF_Spotter_DDPM",20,0,0],									//Spotter
-	["CUP_B_BAF_Soldier_Crew_DDPM",10,0,0],								//Crewman
-	["CUP_B_BAF_Soldier_Paratrooper_DDPM",20,0,0],						//Para Trooper
-	["CUP_B_BAF_Soldier_Helicrew_DDPM",10,0,0],							//Helicopter Crew
-	["CUP_B_BAF_Soldier_Helipilot_DDPM",10,0,0],						//Helicopter Pilot
-	["CUP_B_BAF_Soldier_Pilot_DDPM",10,0,0]								//Pilot
+	["CUP_B_BAF_Soldier_RiflemanLite_DDPM",15,0,0],						// Rifleman (Light)
+	["CUP_B_BAF_Soldier_Rifleman_DDPM",20,0,0],							// Rifleman
+	["CUP_B_BAF_Soldier_RiflemanAT_DDPM",30,0,0],						// Rifleman (AT)
+	["CUP_B_BAF_Soldier_Grenadier_DDPM",25,0,0],						// Grenadier
+	["CUP_B_BAF_Soldier_AutoRifleman_DDPM",25,0,0],						// Autorifleman
+	["CUP_B_BAF_Soldier_HeavyGunner_DDPM",35,0,0],						// Heavygunner
+	["CUP_B_BAF_Soldier_Marksman_DDPM",30,0,0],							// Marksman
+	["CUP_B_BAF_Soldier_SharpShooter_DDPM",40,0,0],						// Sharpshooter
+	["CUP_B_BAF_Soldier_AT_DDPM",50,10,0],								// AT Specialist
+	["CUP_B_BAF_Soldier_AA_DDPM",50,10,0],								// AA Specialist
+	["CUP_B_BAF_Soldier_Medic_DDPM",30,0,0],							// Combat Life Saver
+	["CUP_B_BAF_Soldier_Engineer_DDPM",30,0,0],							// Engineer
+	["CUP_B_BAF_Soldier_Explosive_DDPM",30,0,0],						// Explosives Specialist
+	["CUP_B_BAF_Soldier_Rifleman_MTP",20,0,0],							// Recon Scout
+	["CUP_B_BAF_Soldier_RiflemanAT_MTP",30,0,0],						// Recon Scout (AT)
+	["CUP_B_BAF_Soldier_Marksman_MTP",30,0,0],							// Recon Marksman
+	["CUP_B_BAF_Soldier_SharpShooter_MTP",40,0,0],						// Recon Sharpshooter
+	["CUP_B_BAF_Soldier_Medic_MTP",30,0,0],								// Recon Paramedic
+	["CUP_B_BAF_Soldier_Explosive_MTP",30,0,0],							// Recon Demolition Expert
+	["CUP_B_BAF_Sniper_AS50_TWS_DDPM",70,5,0],							// Sniper
+	["CUP_B_BAF_Sniper_AS50_DDPM",70,5,0],								// Sniper (Arid)
+	["CUP_B_BAF_Sniper_DDPM",70,5,0],									// Sniper (Lush)
+	["CUP_B_BAF_Spotter_DDPM",20,0,0],									// Spotter
+	["CUP_B_BAF_Soldier_Crew_DDPM",10,0,0],								// Crewman
+	["CUP_B_BAF_Soldier_Paratrooper_DDPM",20,0,0],						// Para Trooper
+	["CUP_B_BAF_Soldier_Helicrew_DDPM",10,0,0],							// Helicopter Crew
+	["CUP_B_BAF_Soldier_Helipilot_DDPM",10,0,0],						// Helicopter Pilot
+	["CUP_B_BAF_Soldier_Pilot_DDPM",10,0,0]								// Pilot
 ];
 
 light_vehicles = [
-	["CUP_B_LR_Transport_GB_D",75,0,50],								//Land Rover 110 Transport
-	["CUP_B_LR_MG_GB_D",75,50,50],										//Land Rover 110 (M2)
-	["CUP_B_LR_Special_M2_GB_D",100,80,50],								//Land Rover 110 (M2 Special)
-	["CUP_B_LR_Special_GMG_GB_D",100,100,50],							//Land Rover 110 (GMG Special)
-	["CUP_B_BAF_Coyote_L2A1_D",200,40,50],								//Coyote L2A1
-	["CUP_B_BAF_Coyote_GMG_D",200,60,50],								//Coyote GMG
-	["CUP_B_Mastiff_LMG_GB_D",250,20,150],								//Mastiff PPV LMG
-	["CUP_B_Mastiff_HMG_GB_D",250,40,150],								//Mastiff PPV HMG
-	["CUP_B_Mastiff_GMG_GB_D",250,60,150],								//Mastiff PPV GMG
-	["CUP_B_Wolfhound_LMG_GB_D",275,20,150],							//Wolfhound TSV LMG
-	["CUP_B_Wolfhound_HMG_GB_D",275,40,150],							//Wolfhound TSV HMG
-	["CUP_B_Wolfhound_GMG_GB_D",275,60,150],							//Wolfhound TSV GMG
-	["CUP_B_MTVR_USA",125,0,75]											//MTVR Transport
+	["CUP_B_LR_Transport_GB_D",75,0,50],								// Land Rover 110 Transport
+	["CUP_B_LR_MG_GB_D",75,50,50],										// Land Rover 110 (M2)
+	["CUP_B_LR_Special_M2_GB_D",100,80,50],								// Land Rover 110 (M2 Special)
+	["CUP_B_LR_Special_GMG_GB_D",100,100,50],							// Land Rover 110 (GMG Special)
+	["CUP_B_BAF_Coyote_L2A1_D",200,40,50],								// Coyote L2A1
+	["CUP_B_BAF_Coyote_GMG_D",200,60,50],								// Coyote GMG
+	["CUP_B_Mastiff_LMG_GB_D",250,20,150],								// Mastiff PPV LMG
+	["CUP_B_Mastiff_HMG_GB_D",250,40,150],								// Mastiff PPV HMG
+	["CUP_B_Mastiff_GMG_GB_D",250,60,150],								// Mastiff PPV GMG
+	["CUP_B_Wolfhound_LMG_GB_D",275,20,150],							// Wolfhound TSV LMG
+	["CUP_B_Wolfhound_HMG_GB_D",275,40,150],							// Wolfhound TSV HMG
+	["CUP_B_Wolfhound_GMG_GB_D",275,60,150],							// Wolfhound TSV GMG
+	["CUP_B_MTVR_USA",125,0,75]											// MTVR Transport
 ];
 
 heavy_vehicles = [
-	["CUP_B_FV432_Bulldog_GB_D",300,100,150],							//FV432 Bulldog M240
-	["CUP_B_FV432_Bulldog_GB_D_RWS",300,250,150],						//FV432 Bulldog M2 RWS
-	["CUP_B_MCV80_GB_D",300,450,275],									//MCV-80 Warrior
-	["CUP_B_MCV80_GB_D_SLAT",400,450,275],								//MCV-80 Warrior (SLAT)
-	["CUP_B_FV510_GB_D",350,550,275],									//FV510 Warrior
-	["CUP_B_FV510_GB_D_SLAT",450,550,275],								//FV510 Warrior (SLAT)
-	["CUP_B_Challenger2_Desert_BAF",500,800,450],						//FV4034 Challenger 2
-	["CUP_B_Challenger2_2CD_BAF",500,800,450]							//FV4034 Challenger 2 (Two-Color Desert)
+	["CUP_B_FV432_Bulldog_GB_D",300,100,150],							// FV432 Bulldog M240
+	["CUP_B_FV432_Bulldog_GB_D_RWS",300,250,150],						// FV432 Bulldog M2 RWS
+	["CUP_B_MCV80_GB_D",300,450,275],									// MCV-80 Warrior
+	["CUP_B_MCV80_GB_D_SLAT",400,450,275],								// MCV-80 Warrior (SLAT)
+	["CUP_B_FV510_GB_D",350,550,275],									// FV510 Warrior
+	["CUP_B_FV510_GB_D_SLAT",450,550,275],								// FV510 Warrior (SLAT)
+	["CUP_B_Challenger2_Desert_BAF",500,800,450],						// FV4034 Challenger 2
+	["CUP_B_Challenger2_2CD_BAF",500,800,450]							// FV4034 Challenger 2 (Two-Color Desert)
 ];
 
 air_vehicles = [
-	["CUP_B_AW159_Unarmed_RN_Blackcat",225,0,125],						//AW159 Wildcat (Black Cat, Unarmed)
-	["CUP_B_AW159_Unarmed_GB",225,0,125],								//AW159 Wildcat (Green, Unarmed)
-	["CUP_B_AW159_Unarmed_RN_Grey",225,0,125],							//AW159 Wildcat (Grey, Unarmed)
-	["CUP_B_AW159_RN_Blackcat",350,400,125],							//AW159 Wildcat (Black Cat)
-	["CUP_B_AW159_GB",350,400,125],										//AW159 Wildcat (Green)
-	["CUP_B_AW159_RN_Grey",350,400,125],								//AW159 Wildcat (Grey)
-	["CUP_B_AH1_DL_BAF",750,600,325],									//AH1
-	["CUP_B_GR9_DYN_GB",1000,1200,600],									//Harrier GR.9
-	["CUP_B_F35B_BAF",1500,1750,450],									//F-35B Lightning II
-	["CUP_B_F35B_Stealth_BAF",1500,1750,450]							//F-35B Lightning II (Stealth)
+	["CUP_B_AW159_Unarmed_RN_Blackcat",225,0,125],						// AW159 Wildcat (Black Cat, Unarmed)
+	["CUP_B_AW159_Unarmed_GB",225,0,125],								// AW159 Wildcat (Green, Unarmed)
+	["CUP_B_AW159_Unarmed_RN_Grey",225,0,125],							// AW159 Wildcat (Grey, Unarmed)
+	["CUP_B_AW159_RN_Blackcat",350,400,125],							// AW159 Wildcat (Black Cat)
+	["CUP_B_AW159_GB",350,400,125],										// AW159 Wildcat (Green)
+	["CUP_B_AW159_RN_Grey",350,400,125],								// AW159 Wildcat (Grey)
+	["CUP_B_AH1_DL_BAF",750,600,325],									// AH1
+	["CUP_B_GR9_DYN_GB",1000,1200,600],									// Harrier GR.9
+	["CUP_B_F35B_BAF",1500,1750,450],									// F-35B Lightning II
+	["CUP_B_F35B_Stealth_BAF",1500,1750,450]							// F-35B Lightning II (Stealth)
 ];
 
 static_vehicles = [
-	["CUP_B_L111A1_BAF_DDPM",25,40,0],									//L111A1 Machine Gun
-	["CUP_B_L111A1_MiniTripod_BAF_DDPM",25,40,0],						//L111A1 Minitripod
-	["B_static_AT_F",50,100,0],											//Static Titan Launcher (AT)
-	["B_static_AA_F",50,100,0],											//Static Titan Launcher (AA)
-	["CUP_WV_B_CRAM",500,500,0],										//C-RAM
-	["CUP_WV_B_SS_Launcher",750,500,0],									//Mk-29 GMLS
-	["CUP_WV_B_RAM_Launcher",750,750,0],								//Mk-49 GMLS
-	["B_Mortar_01_F",80,150,0],											//Mk6 Mortar
-	["CUP_B_L16A2_BAF_DDPM",80,150,0]									//L16A2 81mm Mortar
+	["CUP_B_L111A1_BAF_DDPM",25,40,0],									// L111A1 Machine Gun
+	["CUP_B_L111A1_MiniTripod_BAF_DDPM",25,40,0],						// L111A1 Minitripod
+	["B_static_AT_F",50,100,0],											// Static Titan Launcher (AT)
+	["B_static_AA_F",50,100,0],											// Static Titan Launcher (AA)
+	["CUP_WV_B_CRAM",500,500,0],										// C-RAM
+	["CUP_WV_B_SS_Launcher",750,500,0],									// Mk-29 GMLS
+	["CUP_WV_B_RAM_Launcher",750,750,0],								// Mk-49 GMLS
+	["B_Mortar_01_F",80,150,0],											// Mk6 Mortar
+	["CUP_B_L16A2_BAF_DDPM",80,150,0]									// L16A2 81mm Mortar
 ];
 
 buildings = [
@@ -137,7 +137,7 @@ buildings = [
 	["Flag_White_F",0,0,0],
 	["Land_Medevac_house_V1_F",0,0,0],
 	["Land_Medevac_HQ_V1_F",0,0,0],
-	["Flag_RedCrystal_F",0,0,0],	
+	["Flag_RedCrystal_F",0,0,0],
 	["CamoNet_BLUFOR_F",0,0,0],
 	["CamoNet_BLUFOR_open_F",0,0,0],
 	["CamoNet_BLUFOR_big_F",0,0,0],
@@ -147,8 +147,8 @@ buildings = [
 	["Land_LampHalogen_F",0,0,0],
 	["Land_LampStreet_small_F",0,0,0],
 	["Land_LampAirport_F",0,0,0],
-	["Land_HelipadCircle_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
-	["Land_HelipadRescue_F",0,0,0],										//Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadCircle_F",0,0,0],										// Strictly aesthetic - as in it does not increase helicopter cap!
+	["Land_HelipadRescue_F",0,0,0],										// Strictly aesthetic - as in it does not increase helicopter cap!
 	["PortableHelipadLight_01_blue_F",0,0,0],
 	["PortableHelipadLight_01_green_F",0,0,0],
 	["PortableHelipadLight_01_red_F",0,0,0],
@@ -178,7 +178,7 @@ buildings = [
 	["Land_BagFence_Short_F",0,0,0],
 	["Land_BagFence_Long_F",0,0,0],
 	["Land_BagFence_Corner_F",0,0,0],
-	["Land_BagFence_End_F",0,0,0],	
+	["Land_BagFence_End_F",0,0,0],
 	["Land_BagBunker_Small_F",0,0,0],
 	["Land_BagBunker_Large_F",0,0,0],
 	["Land_BagBunker_Tower_F",0,0,0],
@@ -193,10 +193,10 @@ buildings = [
 	["Land_HBarrierTower_F",0,0,0],
 	["Land_CncBarrierMedium_F",0,0,0],
 	["Land_CncBarrierMedium4_F",0,0,0],
-	["Land_Concrete_SmallWall_4m_F",0,0,0],	
+	["Land_Concrete_SmallWall_4m_F",0,0,0],
 	["Land_Concrete_SmallWall_8m_F",0,0,0],
 	["Land_CncShelter_F",0,0,0],
-	["Land_CncWall1_F",0,0,0],	
+	["Land_CncWall1_F",0,0,0],
 	["Land_CncWall4_F",0,0,0],
 	["Land_Sign_WarningMilitaryArea_F",0,0,0],
 	["Land_Sign_WarningMilAreaSmall_F",0,0,0],
@@ -222,14 +222,14 @@ support_vehicles = [
 	["ACE_Box_82mm_Mo_Illum",50,10,0],
 	["ACE_Wheel",10,0,0],
 	["ACE_Track",10,0,0],
-	["CUP_B_TowingTractor_GB",50,0,25],									//Towing Tractor
-	["B_APC_Tracked_01_CRV_F",500,250,350],								//CRV-6e Bobcat
-	["B_Truck_01_Repair_F",325,0,75],									//HEMTT Repair
-	["B_Truck_01_fuel_F",125,0,275],									//HEMTT Fuel
-	["B_Truck_01_ammo_F",125,200,75],									//HEMTT Ammo
-	["B_Slingload_01_Repair_F",275,0,0],								//Huron Repair
-	["B_Slingload_01_Fuel_F",75,0,200],									//Huron Fuel
-	["B_Slingload_01_Ammo_F",75,200,0]									//Huron Ammo
+	["CUP_B_TowingTractor_GB",50,0,25],									// Towing Tractor
+	["B_APC_Tracked_01_CRV_F",500,250,350],								// CRV-6e Bobcat
+    ["CUP_B_MTVR_Repair_USA",425,0,75],									// MTVR Repair
+    ["CUP_B_MTVR_Refuel_USA",125,0,375],								// MTVR Refuel
+    ["CUP_B_MTVR_Ammo_USA",125,300,75],									// MTVR Ammo
+	["B_Slingload_01_Repair_F",275,0,0],								// Huron Repair
+	["B_Slingload_01_Fuel_F",75,0,200],									// Huron Fuel
+	["B_Slingload_01_Ammo_F",75,200,0]									// Huron Ammo
 ];
 
 /*
@@ -304,7 +304,7 @@ blufor_squad_recon = [
 	"CUP_B_BAF_Soldier_Explosive_MTP"
 ];
 
-// Paratroopers squad.
+// Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
 	"CUP_B_BAF_Soldier_Paratrooper_DDPM",
 	"CUP_B_BAF_Soldier_Paratrooper_DDPM",
@@ -324,15 +324,15 @@ blufor_squad_para = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 elite_vehicles = [
-	"CUP_B_MCV80_GB_D_SLAT",													//MCV-80 Warrior (SLAT)
-	"CUP_B_FV510_GB_D",															//FV510 Warrior
-	"CUP_B_FV510_GB_D_SLAT",													//FV510 Warrior (SLAT)
-	"CUP_B_Challenger2_Desert_BAF",												//FV4034 Challenger 2
-	"CUP_B_Challenger2_2CD_BAF",												//FV4034 Challenger 2 (Two-Color Desert)
-	"CUP_B_AH1_DL_BAF",															//AH1
-	"CUP_B_F35B_BAF",															//F-35B Lightning II
-	"CUP_B_F35B_Stealth_BAF",													//F-35B Lightning II (Stealth)
-	"CUP_WV_B_CRAM",															//C-RAM
-	"CUP_WV_B_SS_Launcher",														//Mk-29 GMLS
-	"CUP_WV_B_RAM_Launcher"														//Mk-49 GMLS
+	"CUP_B_MCV80_GB_D_SLAT",											// MCV-80 Warrior (SLAT)
+	"CUP_B_FV510_GB_D",													// FV510 Warrior
+	"CUP_B_FV510_GB_D_SLAT",											// FV510 Warrior (SLAT)
+	"CUP_B_Challenger2_Desert_BAF",										// FV4034 Challenger 2
+	"CUP_B_Challenger2_2CD_BAF",									    // FV4034 Challenger 2 (Two-Color Desert)
+	"CUP_B_AH1_DL_BAF",													// AH1
+	"CUP_B_F35B_BAF",													// F-35B Lightning II
+	"CUP_B_F35B_Stealth_BAF",											// F-35B Lightning II (Stealth)
+	"CUP_WV_B_CRAM",													// C-RAM
+	"CUP_WV_B_SS_Launcher",												// Mk-29 GMLS
+	"CUP_WV_B_RAM_Launcher"												// Mk-49 GMLS
 ];
