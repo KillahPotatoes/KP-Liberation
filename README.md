@@ -162,10 +162,12 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
-* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor presets.
-* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) opfor presets.
-* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) resistance presets.
-* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) civilian presets.
+* Added: Contact DLC LDF preset.
+* Added: Contact DLC transport configs.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) opfor preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) resistance preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) civilian preset.
 * Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) transport configs.
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Desert blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
@@ -182,6 +184,7 @@ class Missions
 * Added: Encore Anti Air static to sensible presets.
 * Added: Additional victory conditions, selectable in the mission parameters.
 * Added: BI garbage collection via description.ext file.
+* Added: Transport configs for the civil transporters (which came with Laws of War).
 * Removed: Vanilla player score saving.
 * Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
