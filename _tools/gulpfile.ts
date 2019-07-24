@@ -1,6 +1,7 @@
 import * as gulp from "gulp";
 import * as gulpReplace from "gulp-replace";
 import * as gulpPbo from "gulp-armapbo";
+import * as gulpModify from "gulp-modify-file";
 import * as gulpZip from "gulp-zip";
 import * as vinylPaths from "vinyl-paths";
 import * as del from "del";
@@ -65,6 +66,23 @@ for (let preset of presets) {
             }
 
             return src.pipe(gulp.dest(mission.getOutputDir()));
+        },
+
+        /** Replace values in stringtable */
+        function stringTableReplace () {
+            // I know, replacing XML with regex... :|
+            // https://regex101.com/r/TSfish/2
+            const versionRegex = /<Key ID="STR_MISSION_VERSION">\s*<Original>(?<version>.+)<\/Original>/;
+            const nameRegex = /(<Key ID="STR_MISSION_TITLE">\s*<Original>)(?<name>.+)(<\/Original>)/;
+
+            return gulp.src(mission.getFrameworkPath().concat('/stringtable.xml'))
+                .pipe(gulpModify((content: string) => {
+                    const version: string = content.match(versionRegex)['groups']['version'];
+
+                    return content.replace(nameRegex, `$1CTI 34 KP Liberation ${preset.mapDisplay || preset.map} ${version}$3`);
+                }))
+                .pipe(gulp.dest(mission.getOutputDir(), { overwrite: true, }))
+            ;
         }
     ));
 
