@@ -29,6 +29,7 @@
         "sourceFolder": "kp_liberation.Chernarus_Winter",
         "missionName": "kp_liberation",
         "map": "Chernarus_Winter",
+        "mapDisplay": "Chernarus Winter",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 6,
@@ -42,6 +43,7 @@
         "sourceFolder": "kp_liberation.Enoch",
         "missionName": "kp_liberation",
         "map": "Enoch",
+        "mapDisplay": "Livonia",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 27,
@@ -55,6 +57,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
         "missionName": "kp_liberation",
         "map": "gm_weferlingen_summer",
+        "mapDisplay": "Weferlingen Summer",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 9,
@@ -68,6 +71,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_winter",
         "missionName": "kp_liberation",
         "map": "gm_weferlingen_winter",
+        "mapDisplay": "Weferlingen Winter",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 10,
@@ -81,6 +85,7 @@
         "sourceFolder": "kp_liberation.lythium",
         "missionName": "kp_liberation",
         "map": "lythium",
+        "mapDisplay": "Lythium",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 7,
@@ -107,6 +112,7 @@
         "sourceFolder": "kp_liberation.panthera3",
         "missionName": "kp_liberation",
         "map": "panthera3",
+        "mapDisplay": "Panthera",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 17,
@@ -120,6 +126,7 @@
         "sourceFolder": "kp_liberation.pja310",
         "missionName": "kp_liberation",
         "map": "pja310",
+        "mapDisplay": "Al Rayak",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 6,
@@ -133,6 +140,7 @@
         "sourceFolder": "kp_liberation.Sara",
         "missionName": "kp_liberation",
         "map": "Sara",
+        "mapDisplay": "Sahrani",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 6,
@@ -185,6 +193,7 @@
         "sourceFolder": "kp_liberation.xcam_taunus",
         "missionName": "kp_liberation",
         "map": "xcam_taunus",
+        "mapDisplay": "Taunus",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 4,
@@ -198,6 +207,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
         "missionName": "kp_liberation_east",
         "map": "gm_weferlingen_summer",
+        "mapDisplay": "Weferlingen Summer",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 11,
@@ -211,6 +221,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_winter",
         "missionName": "kp_liberation_east",
         "map": "gm_weferlingen_winter",
+        "mapDisplay": "Weferlingen Winter",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 12,
