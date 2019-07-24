@@ -177,7 +177,7 @@ class Missions
 * Added: Several CUP resistance presets. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Several CUP civilian presets. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Several CUP transport configs. Thanks to [Eogos](https://github.com/Eogos)
-* Added: Statistic values for destroyed civilian buildings and vehicles
+* Added: Statistic values for destroyed civilian buildings and vehicles.
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
 * Added: Statistics will be posted additionally in the server log after winning the campaign.
@@ -185,6 +185,8 @@ class Missions
 * Added: Additional victory conditions, selectable in the mission parameters.
 * Added: BI garbage collection via description.ext file.
 * Added: Transport configs for the civil transporters (which came with Laws of War).
+* Added: Livonia basefile.
+* Added: Livonia building ignore list.
 * Removed: Vanilla player score saving.
 * Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
