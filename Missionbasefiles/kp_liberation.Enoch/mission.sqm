@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2769.0247,45.084225,9693.7021};
-		dir[]={-0.46943593,-0.32206014,0.82214254};
-		up[]={-0.15969557,0.94671589,0.27968046};
-		aside[]={0.868411,1.0202348e-007,0.49585581};
+		pos[]={4143.4712,331.42166,123.41972};
+		dir[]={0.70480525,-0.32752052,0.62929893};
+		up[]={0.24431357,0.94483507,0.2181406};
+		aside[]={0.66603076,-1.9557774e-008,-0.74594253};
 	};
 };
 binarizationWanted=0;
@@ -3854,6 +3854,7 @@ class Mission
 			name="opfor_airspawn_2";
 			type="Empty";
 			id=185;
+			atlOffset=7.6293945e-006;
 		};
 		class Item129
 		{
@@ -5265,7 +5266,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4182.998,325.12271,167.353};
+				position[]={4185.9902,327.99353,169.11334};
 				angles[]={0,1.3962634,0};
 			};
 			side="Empty";
@@ -5275,7 +5276,6 @@ class Mission
 			};
 			id=289;
 			type="Windsock_01_F";
-			atlOffset=3.0517578e-005;
 		};
 		class Item220
 		{
@@ -5500,7 +5500,7 @@ class Mission
 			name="opfor_point_17";
 			type="Empty";
 			id=310;
-			atlOffset=-5.8465576;
+			atlOffset=-5.8465652;
 		};
 		class Item239
 		{
@@ -5527,7 +5527,7 @@ class Mission
 			name="opfor_point_20";
 			type="Empty";
 			id=313;
-			atlOffset=-5.8465576;
+			atlOffset=-5.84655;
 		};
 		class Item242
 		{
@@ -5691,7 +5691,7 @@ class Mission
 			name="opfor_point_32";
 			type="Empty";
 			id=326;
-			atlOffset=-5.8465576;
+			atlOffset=-5.8465652;
 		};
 		class Item255
 		{
@@ -5835,7 +5835,7 @@ class Mission
 			name="opfor_point_48";
 			type="Empty";
 			id=342;
-			atlOffset=-5.8465576;
+			atlOffset=-5.846611;
 		};
 		class Item271
 		{
@@ -6188,7 +6188,7 @@ class Mission
 			name="opfor_point_83";
 			type="Empty";
 			id=378;
-			atlOffset=-5.8465576;
+			atlOffset=-5.8465114;
 		};
 		class Item305
 		{
@@ -6359,7 +6359,7 @@ class Mission
 			name="opfor_point_100";
 			type="Empty";
 			id=397;
-			atlOffset=-5.8465576;
+			atlOffset=-5.8465652;
 		};
 		class Item324
 		{
@@ -6386,7 +6386,7 @@ class Mission
 			name="opfor_point_103";
 			type="Empty";
 			id=400;
-			atlOffset=-5.8465576;
+			atlOffset=-5.84655;
 		};
 		class Item327
 		{
