@@ -321,7 +321,7 @@ elite_vehicles = [
     "QIN_Titus_WDL",                                                    // Nexter Titus
     "QIN_Titus_arx20_WDL",                                              // Nexter Titus ARX20
     "I_APC_Wheeled_03_cannon_F",                                        // Pandur II
-    "CUP_B_BMP2_CZ_Des"                                                 // BVP-2
+    "CUP_B_BMP2_CZ_Des",                                                // BVP-2
     "B_APC_Tracked_01_AA_F",                                            // IFV-6a Cheetah
     "CUP_B_T72_CZ",                                                     // T-72M4CZ
     "CUP_B_L39_CZ_GREY",                                                // L-39ZA (Grey)

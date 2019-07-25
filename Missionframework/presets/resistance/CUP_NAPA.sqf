@@ -69,7 +69,7 @@ KP_liberation_guerilla_weapons_3 = [
     ["CUP_arifle_AK47_Early","CUP_30Rnd_762x39_AK47_M",4,"",""],
     ["CUP_lmg_Pecheneg","CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",2,"optic_MRCO",""],
     ["CUP_srifle_SVD","CUP_10Rnd_762x54_SVD_M",12,"cup_optic_pso_3_open",""],
-    ["CUP_srifle_SVD_wdl","CUP_10Rnd_762x54_SVD_M",12,"cup_optic_pso_3_open",""],
+    ["CUP_srifle_SVD_wdl","CUP_10Rnd_762x54_SVD_M",12,"cup_optic_pso_3_open",""]
 ];
 
 // Uniforms
