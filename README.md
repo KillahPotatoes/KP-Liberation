@@ -207,6 +207,7 @@ class Missions
 * Tweaked: Weather is now only handled by the server.
 * Tweaked: Gear check after leaving the arsenal or load a loadout improved to not strip you completely. Thanks to [Zharf](https://github.com/zharf)
 * Tweaked: Build tool now also adds the correct map name to the mission name, like in the release files.
+* Tweaked: Sector defenders waypoint creation.
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 * Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 
