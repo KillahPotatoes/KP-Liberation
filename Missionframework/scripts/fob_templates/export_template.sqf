@@ -1,5 +1,5 @@
 /*
-    USAGE
+    --- USAGE ---
 
     Place this file in the Eden mission folder where you want to build your FOB templates.
     After building your FOB in Eden, place down a center object in the middle of your FOB.
@@ -9,9 +9,9 @@
         _ = [this] execVM "export_template.sqf";
 
     The fetched information can be found in your client rpt (between the START and END line) for copy/paste.
+    Ref for finding your RPT file: https://community.bistudio.com/wiki/Crash_Files#Arma_3
 
-
-    RECOMMENDATIONS
+    --- RECOMMENDATIONS ---
 
     !IMPORTANT! Don't (!) exceed an area with a radius of 35m for the FOB. !IMPORTANT!
 
@@ -29,6 +29,7 @@ diag_log text "";
 diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- START ----------";
 
 // Fetch all objects
+diag_log text "";
 diag_log text "_objects_to_build = [";
 {
     diag_log text format [
@@ -42,11 +43,13 @@ diag_log text "_objects_to_build = [";
 } forEach ((nearestObjects [_center, ["All"], 50]) - ((nearestObjects [_center, ["Man","Animal"], 50]) + [_center]));
 diag_log text "];";
 
+diag_log text "";
 diag_log text "_objectives_to_build = [";
 diag_log text "// Move all things which should be destroyed to accomplish the mission from the above to this array";
 diag_log text "];";
 
 // Fetch all infantry/guards
+diag_log text "";
 diag_log text "_defenders_to_build = [";
 {
     diag_log text format [
@@ -60,6 +63,7 @@ diag_log text "_defenders_to_build = [";
 } forEach ((nearestObjects [_center, ["Man"], 50]) - ((nearestObjects [_center, [ "Animal" ], 50]) + [_center]));
 diag_log text "];";
 
+diag_log text "";
 diag_log text "_base_corners = [";
 diag_log text "[40, 40, 0],";
 diag_log text "[40, -40, 0],";
@@ -67,6 +71,7 @@ diag_log text "[-40, -40, 0],";
 diag_log text "[-40, 40, 0],";
 diag_log text "];";
 
+diag_log text "";
 diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- END ----------";
 diag_log text "";
 diag_log text "";
