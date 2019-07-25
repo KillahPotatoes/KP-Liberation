@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=612;
+		nextID=622;
 	};
 	class Camera
 	{
-		pos[]={1383.2605,39.98811,473.98035};
-		dir[]={0.78357953,-0.55554378,-0.27830854};
-		up[]={0.52369219,0.83133942,-0.18600342};
-		aside[]={-0.33470386,5.6548743e-008,-0.94236666};
+		pos[]={1376.1289,42.619949,462.09076};
+		dir[]={0.84057289,-0.52607501,-0.12968841};
+		up[]={0.52012807,0.85028219,-0.080248758};
+		aside[]={-0.1524905,3.8435246e-008,-0.9883796};
 	};
 };
 binarizationWanted=0;
@@ -32,13 +32,15 @@ addons[]=
 	"uns_ksobjects",
 	"UNS_Buildings2",
 	"uns_static_c",
-	"NAM_Objects"
+	"NAM_Objects",
+	"uns_flags",
+	"A3_Structures_F_Mil_Flags"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -110,6 +112,18 @@ class AddonsMetaData
 			className="NAM_Objects";
 			name="NAM_Objects";
 		};
+		class Item12
+		{
+			className="uns_flags";
+			name="uns_flags";
+		};
+		class Item13
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=6090825;
@@ -179,7 +193,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=346;
+		items=349;
 		class Item0
 		{
 			dataType="Logic";
@@ -1136,7 +1150,7 @@ class Mission
 		class Item18
 		{
 			dataType="Marker";
-			position[]={1517.9075,5.8043313,353.31512};
+			position[]={1415.0439,4.9873171,467.16461};
 			name="huronmarker";
 			text="Spartan 01";
 			type="b_air";
@@ -1306,7 +1320,7 @@ class Mission
 		class Item23
 		{
 			dataType="Marker";
-			position[]={1508.7368,4.4659681,387.87048};
+			position[]={1439.8281,5.0240693,457.0285};
 			name="startbase_marker";
 			text="Operation Base";
 			type="mil_start";
@@ -5809,7 +5823,7 @@ class Mission
 			};
 			id=559;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=0.066664219;
+			atlOffset=0.066663742;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6253,6 +6267,58 @@ class Mission
 			};
 			id=611;
 			type="LAND_t_sb_5";
+		};
+		class Item346
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1470.4077,8.6855965,431.82828};
+				angles[]={0,5.5850534,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=612;
+			type="uns_FlagCarrier25ID";
+			atlOffset=0.38875294;
+		};
+		class Item347
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1456.52,8.4167347,419.78799};
+				angles[]={0,5.5850534,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this setFlagTexture ""res\flag_kp_co.paa"";";
+			};
+			id=620;
+			type="Flag_White_F";
+			atlOffset=0.050000668;
+		};
+		class Item348
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1452.8313,9.0283566,471.11462};
+				angles[]={0,5.5850534,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=621;
+			type="uns_FlagCarrierMed";
+			atlOffset=0.041587353;
 		};
 	};
 	class Connections
