@@ -16,6 +16,9 @@ private _objects = nearestTerrainObjects [_centerPos, [], _radius, false, true];
     _x allowDamage false;
 } forEach _objects;
 
-if (_save) then {KP_liberation_clearances pushBackUnique [_centerPos, _radius];};
+if (_save) then {
+    KP_liberation_clearances pushBackUnique [_centerPos, _radius];
+    publicVariable "KP_liberation_clearances";
+};
 
 true

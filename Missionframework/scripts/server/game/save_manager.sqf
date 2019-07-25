@@ -471,6 +471,7 @@ publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
 publicVariable "GRLIB_all_fobs";
+publicVariable "KP_liberation_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
 GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
