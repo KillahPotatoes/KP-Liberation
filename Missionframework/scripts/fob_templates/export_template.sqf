@@ -8,6 +8,8 @@
     In the init field of the center object add:
         _ = [this] execVM "export_template.sqf";
 
+    Then preview the mission in eden to execute the script.
+
     The fetched information can be found in your client rpt (between the START and END line) for copy/paste.
     Ref for finding your RPT file: https://community.bistudio.com/wiki/Crash_Files#Arma_3
 
@@ -17,7 +19,7 @@
 
     You could create a trigger with that radius and use it as "build area helper".
     After exporting the template, you should replace possible placed vehicles or crates etc. with the Liberation variables.
-    Have a look at the other templates to get an idea about it.
+    Have a look at the other templates to get an idea of it.
 */
 
 params [
@@ -33,7 +35,7 @@ diag_log text "";
 diag_log text "_objects_to_build = [";
 {
     diag_log text format [
-        "[""%1"", [%2, %3, %4], %5],",
+        "    [""%1"", [%2, %3, %4], %5],",
         typeof _x,
         ((getpos _x select 0) - (getpos _center select 0)) toFixed 2,
         ((getpos _x select 1) - (getpos _center select 1)) toFixed 2,
@@ -45,7 +47,7 @@ diag_log text "];";
 
 diag_log text "";
 diag_log text "_objectives_to_build = [";
-diag_log text "// Move all things which should be destroyed to accomplish the mission from the above to this array";
+diag_log text "    // Move all things which should be destroyed to accomplish the mission from the above to this array";
 diag_log text "];";
 
 // Fetch all infantry/guards
@@ -53,7 +55,7 @@ diag_log text "";
 diag_log text "_defenders_to_build = [";
 {
     diag_log text format [
-        "[""%1"", [%2, %3, %4], %5],",
+        "    [""%1"", [%2, %3, %4], %5],",
         typeof _x,
         ((getpos _x select 0) - (getpos _center select 0)) toFixed 2,
         ((getpos _x select 1) - (getpos _center select 1)) toFixed 2,
@@ -65,10 +67,10 @@ diag_log text "];";
 
 diag_log text "";
 diag_log text "_base_corners = [";
-diag_log text "[40, 40, 0],";
-diag_log text "[40, -40, 0],";
-diag_log text "[-40, -40, 0],";
-diag_log text "[-40, 40, 0],";
+diag_log text "    [40, 40, 0],";
+diag_log text "    [40, -40, 0],";
+diag_log text "    [-40, -40, 0],";
+diag_log text "    [-40, 40, 0],";
 diag_log text "];";
 
 diag_log text "";
