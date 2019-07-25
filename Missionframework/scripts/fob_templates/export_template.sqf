@@ -1,15 +1,74 @@
-{ diag_log format [ "[ ""%1"", [%2, %3, %4], %5 ],", 
-typeof _x, 
-[ (getpos _x select 0) - (getpos player select 0), 2 ] call BIS_fnc_cutDecimals, 
-[ (getpos _x select 1) - (getpos player select 1), 2 ] call BIS_fnc_cutDecimals,
-[ (getposatl _x select 2), 2 ] call BIS_fnc_cutDecimals, 
-[ getdir _x , 2 ] call BIS_fnc_cutDecimals ] 
-} foreach ( (nearestObjects [player, [ "Man" ], 50]) - ((nearestObjects [player, [ "Animal" ], 50]) + [player]));
+/*
+    USAGE
 
-{ diag_log format [ "[ ""%1"", [%2, %3, %4], %5 ],", 
-typeof _x, 
-[ (getpos _x select 0) - (getpos player select 0), 2 ] call BIS_fnc_cutDecimals, 
-[ (getpos _x select 1) - (getpos player select 1), 2 ] call BIS_fnc_cutDecimals,
-[ (getposatl _x select 2), 2 ] call BIS_fnc_cutDecimals, 
-[ getdir _x , 2 ] call BIS_fnc_cutDecimals ] 
-} foreach ( (nearestObjects [player, [ "All" ], 50]) - ((nearestObjects [player, [ "Man","Animal" ], 50]) + [player]));
+    Place this file in the Eden mission folder where you want to build your FOB templates.
+    After building your FOB in Eden, place down a center object in the middle of your FOB.
+    I recommend a small cluttercutter object (Land_ClutterCutter_small_F) for this.
+
+    In the init field of the center object add:
+        _ = [this] execVM "export_template.sqf";
+
+    The fetched information can be found in your client rpt (between the START and END line) for copy/paste.
+
+
+    RECOMMENDATIONS
+
+    !IMPORTANT! Don't (!) exceed an area with a radius of 35m for the FOB. !IMPORTANT!
+
+    You could create a trigger with that radius and use it as "build area helper".
+    After exporting the template, you should replace possible placed vehicles or crates etc. with the Liberation variables.
+    Have a look at the other templates to get an idea about it.
+*/
+
+params [
+    ["_center", player, [objNull]]
+];
+
+diag_log text "";
+diag_log text "";
+diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- START ----------";
+
+// Fetch all objects
+diag_log text "_objects_to_build = [";
+{
+    diag_log text format [
+        "[""%1"", [%2, %3, %4], %5],",
+        typeof _x,
+        ((getpos _x select 0) - (getpos _center select 0)) toFixed 2,
+        ((getpos _x select 1) - (getpos _center select 1)) toFixed 2,
+        (getposatl _x select 2) toFixed 2,
+        (getdir _x) toFixed 2
+    ];
+} forEach ((nearestObjects [_center, ["All"], 50]) - ((nearestObjects [_center, ["Man","Animal"], 50]) + [_center]));
+diag_log text "];";
+
+diag_log text "_objectives_to_build = [";
+diag_log text "// Move all things which should be destroyed to accomplish the mission from the above to this array";
+diag_log text "];";
+
+// Fetch all infantry/guards
+diag_log text "_defenders_to_build = [";
+{
+    diag_log text format [
+        "[""%1"", [%2, %3, %4], %5],",
+        typeof _x,
+        ((getpos _x select 0) - (getpos _center select 0)) toFixed 2,
+        ((getpos _x select 1) - (getpos _center select 1)) toFixed 2,
+        (getposatl _x select 2) toFixed 2,
+        (getdir _x) toFixed 2
+    ];
+} forEach ((nearestObjects [_center, ["Man"], 50]) - ((nearestObjects [_center, [ "Animal" ], 50]) + [_center]));
+diag_log text "];";
+
+diag_log text "_base_corners = [";
+diag_log text "[40, 40, 0],";
+diag_log text "[40, -40, 0],";
+diag_log text "[-40, -40, 0],";
+diag_log text "[-40, 40, 0],";
+diag_log text "];";
+
+diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- END ----------";
+diag_log text "";
+diag_log text "";
+
+true
