@@ -63,37 +63,31 @@ KP_liberation_guerilla_uniforms_1 = [
     "U_C_Man_casual_4_F",
     "U_C_Man_casual_5_F",
     "U_C_Man_casual_6_F",
-    "U_C_Poloshirt_blue",
-    "U_C_Poloshirt_burgundy",
-    "U_C_Poloshirt_redwhite",
-    "U_C_Poloshirt_salmon",
-    "U_C_Poloshirt_stripped",
-    "U_C_Poloshirt_tricolour",
+    "U_I_C_Soldier_Bandit_5_F",
     "UNS_CIV_B",
     "UNS_CIV_U",
-    "UNS_VC_S"
+    "UNS_VC_B",
+    "UNS_VC_K",
+    "UNS_VC_S",
+    "UNS_VC_U"
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
     "U_BG_Guerilla2_1",
-    "U_BG_Guerilla2_2",
     "U_BG_Guerilla2_3",
     "U_BG_Guerilla3_1",
     "U_C_HunterBody_grn",
     "U_C_Mechanic_01_F",
     "U_I_C_Soldier_Bandit_1_F",
-    "U_I_C_Soldier_Bandit_2_F",
     "U_I_C_Soldier_Bandit_3_F",
     "U_I_C_Soldier_Bandit_4_F",
     "U_I_C_Soldier_Bandit_5_F",
-    "U_I_C_Soldier_Para_5_F",
-    "U_I_G_resistanceLeader_F"
+    "U_I_C_Soldier_Para_5_F"
 ];
 
 KP_liberation_guerilla_uniforms_3 = [
     "U_BG_Guerilla1_1",
     "U_BG_Guerilla1_2_F",
-    "U_BG_Guerrilla_6_1",
     "U_BG_leader",
     "U_I_C_Soldier_Camo_F",
     "U_I_C_Soldier_Para_1_F",
@@ -165,19 +159,7 @@ KP_liberation_guerilla_headgear_1 = [
     "",
     "",
     "",
-    "H_Cap_blk",
-    "H_Cap_blu",
-    "H_Cap_grn",
-    "H_Cap_oli",
-    "H_Cap_red",
-    "H_Cap_tan",
-    "H_Hat_brown",
-    "H_Hat_camo",
-    "H_Hat_checker",
-    "H_Hat_grey",
-    "H_Hat_Safari_olive_F",
-    "H_Hat_Safari_sand_F",
-    "H_Hat_tan",
+    "H_StrawHat_dark",
     "UNS_Boonie3_VC",
     "UNS_Conehat_VC"
 ];
@@ -219,8 +201,6 @@ KP_liberation_guerilla_facegear = [
     "",
     "",
     "",
-    "G_Bandanna_aviator",
-    "G_Bandanna_beast",
     "G_Bandanna_blk",
     "G_Bandanna_khk",
     "G_Bandanna_oli",
