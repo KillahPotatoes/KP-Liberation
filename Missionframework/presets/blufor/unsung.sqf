@@ -13,7 +13,7 @@
     Or not, just don't try!
 */
 FOB_typename = "LAND_sb_bunker_main";                                   // This is the main FOB HQ building.
-FOB_box_typename = "Land_scntr";                                        // This is the FOB as a container.
+FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 FOB_truck_typename = "uns_M35A2_fuel";                                  // This is the FOB as a vehicle.
 Arsenal_typename = "uns_resupply_crate_US";                             // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "uns_M577_amb";                                // This is the mobile respawn (and medical) truck.
@@ -235,6 +235,7 @@ buildings = [
     ["LAND_uns_showers",0,0,0],
     ["LAND_uns_tent2",0,0,0],
     ["LAND_uns_tent3",0,0,0],
+    ["LAND_uns_tentbarracks",0,0,0],
     ["LAND_uns_weapon_pit",0,0,0],
     ["LAND_uns_westbunker1",0,0,0],
     ["LAND_uns_westbunker2",0,0,0],

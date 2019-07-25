@@ -58,6 +58,8 @@ GRLIB_vehicle_to_military_base_links = [];
 infantry_weight = 33;
 // Civilian reputation value (-100 - +100)
 KP_liberation_civ_rep = 0;
+// Clearances
+KP_liberation_clearances = [];
 // Captured civilian vehicles
 KP_liberation_cr_vehicles = [];
 // Strength value of the resistance forces
@@ -70,6 +72,8 @@ KP_liberation_production = [];
 KP_liberation_production_markers = [];
 // Global Intel resource
 resources_intel = 0;
+// State if the save is fully loaded
+save_is_loaded = false;
 
 // Trigger to start a saving process
 doSaveTrigger = false;
@@ -158,11 +162,12 @@ if (!isNil "greuh_liberation_savegame") then {
         GRLIB_permissions                           = greuh_liberation_savegame select 10;
         GRLIB_vehicle_to_military_base_links        = greuh_liberation_savegame select 11;
         KP_liberation_civ_rep                       = greuh_liberation_savegame select 12;
-        KP_liberation_guerilla_strength             = greuh_liberation_savegame select 13;
-        KP_liberation_logistics                     = greuh_liberation_savegame select 14;
-        KP_liberation_production                    = greuh_liberation_savegame select 15;
-        KP_liberation_production_markers            = greuh_liberation_savegame select 16;
-        resources_intel                             = greuh_liberation_savegame select 17;
+        KP_liberation_clearances                    = greuh_liberation_savegame select 13;
+        KP_liberation_guerilla_strength             = greuh_liberation_savegame select 14;
+        KP_liberation_logistics                     = greuh_liberation_savegame select 15;
+        KP_liberation_production                    = greuh_liberation_savegame select 16;
+        KP_liberation_production_markers            = greuh_liberation_savegame select 17;
+        resources_intel                             = greuh_liberation_savegame select 18;
 
         stats_ammo_produced                         = _stats select  0;
         stats_ammo_spent                            = _stats select  1;
@@ -278,6 +283,11 @@ if (!isNil "greuh_liberation_savegame") then {
     } else {
         setDate [2045, 6, 6, _dateTime, 0]; // Compatibility for older save data
     };
+
+    // Create clearances
+    {
+        [_x select 0, _x select 1] call F_createClearance;
+    } forEach KP_liberation_clearances;
 
     // Collection array for all objects which are loaded
     private _spawnedObjects = [];
@@ -461,6 +471,7 @@ publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
 publicVariable "GRLIB_all_fobs";
+publicVariable "KP_liberation_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
 GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
@@ -670,6 +681,7 @@ while {true} do {
         GRLIB_permissions,
         GRLIB_vehicle_to_military_base_links,
         KP_liberation_civ_rep,
+        KP_liberation_clearances,
         KP_liberation_guerilla_strength,
         KP_liberation_logistics,
         KP_liberation_production,

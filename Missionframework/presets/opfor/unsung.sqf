@@ -33,8 +33,8 @@ opfor_transport_truck = "uns_nvatruck";                                 // Ural 
 opfor_ammobox_transport = "uns_nvatruck_open";                          // Ural Truck (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "uns_nvatruck_refuel";                               // Ural Truck (refuel)
 opfor_ammo_truck = "uns_nvatruck_reammo";                               // Ural Truck (ammo)
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
+opfor_fuel_container = "ABox_N_4";                                      // Ammo Box (Light/4x)
+opfor_ammo_container = "ABox_N_4";                                      // Ammo Box (Light/4x)
 opfor_flag = "uns_FlagCarrierNVA";                                      // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
@@ -55,10 +55,8 @@ militia_squad = [
     "uns_men_VC_local_SAP"                                              // Sapper (M3A1)
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
-militia_vehicles = [
-    "uns_nvatruck_mg"                                                   // Ural Truck (MG)
-];
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
+militia_vehicles = [];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [

@@ -54,7 +54,7 @@ militia_squad = [
     "O_engineer_U_F"                                                    // Engineer
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
     "O_LSV_02_armed_F"                                                  // Qilin (armed)
 ];

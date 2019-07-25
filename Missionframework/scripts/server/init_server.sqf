@@ -68,6 +68,19 @@ execVM "scripts\server\resources\unit_cap.sqf";
 execVM "scripts\server\sector\lose_sectors.sqf";
 execVM "scripts\server\sector\manage_sectors.sqf";
 
+// Select FOB templates
+switch (KP_liberation_preset_opfor) do {
+    default {
+        KPLIB_fob_templates = [
+            "scripts\fob_templates\default\template1.sqf",
+            "scripts\fob_templates\default\template2.sqf",
+            "scripts\fob_templates\default\template3.sqf",
+            "scripts\fob_templates\default\template4.sqf",
+            "scripts\fob_templates\default\template5.sqf"
+        ];
+    };
+};
+
 // Civil Reputation
 execVM "scripts\server\civrep\init_module.sqf";
 
@@ -81,12 +94,12 @@ execVM "scripts\server\asymmetric\init_module.sqf";
 execVM "scripts\server\offloading\group_diag.sqf";
 
 {
-	if ( (_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 ) ) then {
-		deleteVehicle _x;
-	};
+    if ((_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 )) then {
+        deleteVehicle _x;
+    };
 } foreach allUnits;
 
 // Server Restart Script from K4s0
 if (KP_liberation_restart > 0) then {
-	execVM "scripts\server\game\server_restart.sqf";
+    execVM "scripts\server\game\server_restart.sqf";
 };

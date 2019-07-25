@@ -2288,18 +2288,6 @@
             <Turkish>Bu FOB'yi yeniden paketlemek istediğinize emin misiniz?</Turkish>
             <Portuguese>Você tem certeza que quer mobilizar esta FOB?</Portuguese>
         </Key>
-        <Key ID="STR_FOB_REPACKAGE_HINT">
-            <Original>FOB repackaged.</Original>
-            <French>FOB repliée.</French>
-            <German>FOB eingepackt.</German>
-            <Spanish>FOB reempaquetada</Spanish>
-            <Russian>FOB свёрнута</Russian>
-            <Italian>FOB smontata.</Italian>
-            <Chinesesimp>前哨已收起。</Chinesesimp>
-            <Chinese>前線基地已收起。</Chinese>
-            <Turkish>FOB yeniden paketlendi.</Turkish>
-            <Portuguese>FOB mobilizada.</Portuguese>
-        </Key>
         <Key ID="STR_HALO_PARAM">
             <Original>HALO jump</Original>
             <French>Saut HALO</French>
@@ -6153,6 +6141,14 @@
             <Chinese>（按 ESC 退出）</Chinese>
             <Turkish>(ESC'ye basıp çıkabilirsiniz.)</Turkish>
             <Portuguese>(Aperte ESC para sair)</Portuguese>
+        </Key>
+        <Key ID="STR_CLEARANCE_ACTION">
+            <Original>-- Clear FOB area</Original>
+            <German>-- FOB Gebiet räumen</German>
+        </Key>
+        <Key ID="STR_FOB_REPACKAGE_HINT">
+            <Original>FOB repackaged.\nPossibly created clearance will be reverted upon server restart.</Original>
+            <German>FOB eingepackt.\nEventuelle Gebietsräumung wird zum Serverneustart rückgängig gemacht.</German>
         </Key>
     </Package>
 </Project>

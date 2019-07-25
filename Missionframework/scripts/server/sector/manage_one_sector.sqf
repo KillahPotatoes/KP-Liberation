@@ -162,6 +162,8 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		_building_ai_max = 0;
 	};
 
+    _vehtospawn = _vehtospawn select {_x isEqualType ""};
+
 	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
 
 	if (_building_ai_max > 0 && GRLIB_adaptive_opfor) then {

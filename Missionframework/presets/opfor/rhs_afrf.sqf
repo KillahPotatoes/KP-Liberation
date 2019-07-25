@@ -58,7 +58,7 @@ militia_vehicles = [
     "rhs_tigr_sts_msv"                                                  // GAZ-233014 (Armed)
 ];
 
-// All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 opfor_vehicles = [
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
