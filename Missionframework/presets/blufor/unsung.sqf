@@ -235,6 +235,7 @@ buildings = [
     ["LAND_uns_showers",0,0,0],
     ["LAND_uns_tent2",0,0,0],
     ["LAND_uns_tent3",0,0,0],
+    ["LAND_uns_tentbarracks",0,0,0],
     ["LAND_uns_weapon_pit",0,0,0],
     ["LAND_uns_westbunker1",0,0,0],
     ["LAND_uns_westbunker2",0,0,0],
