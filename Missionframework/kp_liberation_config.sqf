@@ -342,7 +342,19 @@ blacklisted_from_arsenal = [
     "UK3CB_BAF_L16_Tripod",
     "UK3CB_BAF_L16",
     "UK3CB_BAF_M6",
-    "UK3CB_BAF_Tripod"
+    "UK3CB_BAF_Tripod",
+    "uns_STABO_US_Bag",
+    "uns_Tripod_Bag",
+    "uns_MK18_low_US_Bag",
+    "uns_M1_81mm_mortar_US_Bag",
+    "uns_M1919_low_US_Bag",
+    "uns_M2_60mm_mortar_US_Bag",
+    "uns_m2_high_US_Bag",
+    "uns_M2_low_US_Bag",
+    "uns_M30_107mm_mortar_US_Bag",
+    "uns_M60_high_US_Bag",
+    "uns_M60_low_US_Bag",
+    "Uns_US_searchlight_Bag"
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
