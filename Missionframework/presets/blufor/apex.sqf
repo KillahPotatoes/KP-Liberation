@@ -24,7 +24,7 @@ huron_typename = "B_Heli_Transport_03_unarmed_F";                       // This 
 crewman_classname = "B_T_crew_F";                                       // This defines the crew for vehicles.
 pilot_classname = "B_T_Helipilot_F";                                    // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "B_Heli_Light_01_F";              // These are the little birds which spawn on the Freedom or at Chimera base.
-KP_liberation_boat_classname = "B_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
+KP_liberation_boat_classname = "B_T_Boat_Transport_01_F";               // These are the boats which spawn at the stern of the Freedom.
 KP_liberation_truck_classname = "B_T_Truck_01_transport_F";             // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
@@ -126,7 +126,7 @@ heavy_vehicles = [
     ["rhsusf_m1a1aim_tuski_wd",400,350,225],                            // M1A1SA (Tusk I)
     ["B_T_MBT_01_TUSK_F",500,350,225],                                  // M2A4 Slammer UP
     ["rhsusf_m1a2sep1tuskiiwd_usarmy",500,400,250],                     // M1A2SEPv1 (Tusk II)
-    ["BWA3_Leopard2A6M_Fleck",500,400,250],                             // MBT Leopard 2A6M
+    ["BWA3_Leopard2_Fleck",500,400,250],                                // MBT Leopard 2A6M
     ["B_T_AFV_Wheeled_01_cannon_F",500,500,250],                        // Rhino MGS
     ["B_T_AFV_Wheeled_01_up_cannon_F",550,550,250],                     // Rhino MGS UP
     ["B_T_MBT_01_arty_F",600,1250,300],                                 // M4 Scorcher
@@ -395,7 +395,7 @@ elite_vehicles = [
     "rhsusf_m1a1aim_tuski_wd",                                          // M1A1SA (Tusk I)
     "B_T_MBT_01_TUSK_F",                                                // M2A4 Slammer UP
     "rhsusf_m1a2sep1tuskiiwd_usarmy",                                   // M1A2SEPv1 (Tusk II)
-    "BWA3_Leopard2A6M_Fleck",                                           // MBT Leopard 2A6M
+    "BWA3_Leopard2_Fleck",                                              // MBT Leopard 2A6M
     "B_T_MBT_01_arty_F",                                                // M4 Scorcher
     "rhsusf_m109_usarmy",                                               // M109A6
     "B_T_MBT_01_mlrs_F",                                                // M5 Sandstorm MLRS

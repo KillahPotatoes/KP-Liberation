@@ -32,13 +32,13 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 =[
+KP_liberation_guerilla_weapons_1 = [
     ["rhs_weap_ak74","rhs_30rnd_545x39_AK",4,"",""],
     ["rhs_weap_aks74u","rhs_30rnd_545x39_AK",4,"",""],
     ["LOP_Weap_LeeEnfield","LOP_10rnd_77mm_mag",3,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 =[
+KP_liberation_guerilla_weapons_2 = [
     ["rhs_weap_ak74","rhs_30rnd_545x39_AK",4,"",""],
     ["rhs_weap_akm","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_akms","rhs_30rnd_762x39mm",4,"",""],
@@ -47,7 +47,7 @@ KP_liberation_guerilla_weapons_2 =[
     ["LOP_Weap_LeeEnfield_railed","LOP_10rnd_77mm_mag",3,"optic_ACO_grn",""]
 ];
 
-KP_liberation_guerilla_weapons_3 =[
+KP_liberation_guerilla_weapons_3 = [
     ["rhs_weap_ak103","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_ak104","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_ak105","rhs_30rnd_545x39_AK",4,"rhs_acc_ekp1",""],

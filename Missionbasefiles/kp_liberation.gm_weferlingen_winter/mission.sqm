@@ -3162,7 +3162,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="this setFlagTexture ""res\kpflag.jpg"";";
+				init="this setFlagTexture ""res\flag_kp_co.paa"";";
 			};
 			id=92;
 			type="Flag_White_F";

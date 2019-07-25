@@ -162,14 +162,33 @@ class Missions
 ## Changelog
 
 ### 0.96.5 (TBD due to Contacts Release)
-* Added: The Unsung Vietnam War Mod presets.
-* Added: The Unsung Vietnam War Mod transport configs.
-* Added: Statistic values for destroyed civilian buildings and vehicles
+* Added: Contact DLC LDF preset.
+* Added: Contact DLC transport configs.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) opfor preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) resistance preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) civilian preset.
+* Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) transport configs.
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Desert blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) Woodland blufor preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: Several CUP blufor presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP opfor presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP resistance presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP civilian presets. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Several CUP transport configs. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Statistic values for destroyed civilian buildings and vehicles.
 * Added: Statistic values for total and friendly resistance kills.
 * Added: Statistic values for spent/produced resources.
 * Added: Statistics will be posted additionally in the server log after winning the campaign.
 * Added: Encore Anti Air static to sensible presets.
+* Added: Additional victory conditions, selectable in the mission parameters.
+* Added: BI garbage collection via description.ext file.
+* Added: Transport configs for the civil transporters (which came with Laws of War).
+* Added: Livonia basefile.
+* Added: Livonia building ignore list.
 * Removed: Vanilla player score saving.
+* Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
 * Tweaked: Changed default air building from small radar dome to encore static radar.
 * Tweaked: Vehicle in Vehicle action on FOB box is not displaying directly anymore when approaching the box.
@@ -180,6 +199,7 @@ class Missions
 * Tweaked: Changes in elite vehicles in presets are now also applied during a running campaign.
 * Tweaked: Player lead squads are now also saved near FOBs. (but still needs to be reassigned via zeus after load, of course)
 * Tweaked: Weather is now only handled by the server.
+* Tweaked: Gear check after leaving the arsenal or load a loadout improved to not strip you completely. Thanks to [Zharf](https://github.com/zharf)
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 * Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 

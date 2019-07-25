@@ -139,7 +139,7 @@ heavy_vehicles = [
     ["rhsusf_m1a1aim_tuski_wd",400,350,225],                            // M1A1SA (Tusk I)
     ["B_MBT_01_TUSK_F",500,350,225],                                    // M2A4 Slammer UP
     ["rhsusf_m1a2sep1tuskiiwd_usarmy",500,400,250],                     // M1A2SEPv1 (Tusk II)
-    ["BWA3_Leopard2A6M_Fleck",500,400,250],                             // MBT Leopard 2A6M
+    ["BWA3_Leopard2_Fleck",500,400,250],                                // MBT Leopard 2A6M
     ["B_AFV_Wheeled_01_cannon_F",500,500,250],                          // Rhino MGS
     ["B_AFV_Wheeled_01_up_cannon_F",550,550,250],                       // Rhino MGS UP
     ["B_MBT_01_arty_F",600,1250,300],                                   // M4 Scorcher
@@ -408,7 +408,7 @@ elite_vehicles = [
     "rhsusf_m1a1aim_tuski_wd",                                          // M1A1SA (Tusk I)
     "B_MBT_01_TUSK_F",                                                  // M2A4 Slammer UP
     "rhsusf_m1a2sep1tuskiiwd_usarmy",                                   // M1A2SEPv1 (Tusk II)
-    "BWA3_Leopard2A6M_Fleck",                                           // MBT Leopard 2A6M
+    "BWA3_Leopard2_Fleck",                                              // MBT Leopard 2A6M
     "B_MBT_01_arty_F",                                                  // M4 Scorcher
     "rhsusf_m109_usarmy",                                               // M109A6
     "B_MBT_01_mlrs_F",                                                  // M5 Sandstorm MLRS
