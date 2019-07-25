@@ -7,6 +7,7 @@ switch (worldName) do {
     case "gm_weferlingen_winter": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\gm_weferlingen_winter.sqf"};
     case "lythium": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\lythium.sqf"};
     case "Malden": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\malden.sqf"};
+    case "panthera3": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\panthera3.sqf"};
     case "pja310": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\pja310.sqf"};
     case "Sara": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\sara.sqf"};
     case "song_bin_tanh": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\song_bin_tanh.sqf"};
