@@ -56,9 +56,7 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
-militia_vehicles = [
-    "uns_nvatruck_mg"                                                   // Ural Truck (MG)
-];
+militia_vehicles = [];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
