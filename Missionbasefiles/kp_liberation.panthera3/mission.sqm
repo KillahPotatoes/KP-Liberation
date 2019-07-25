@@ -230,54 +230,66 @@ randomSeed=14635892;
 class ScenarioData
 {
 	author="[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=5;
+	class Header
+	{
+		gameType="CTI";
+		minPlayers=1;
+		maxPlayers=37;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
 		briefingName="@STR_MISSION_TITLE";
+		overviewText="@STR_MISSION_DESCRIPTION";
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.40000001;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.38999999;
+		forecastWeather=0.40000001;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		wavesForced=1;
-		windForced=1;
-		year=2019;
-		month=8;
-		day=28;
-		hour=6;
-		minute=2;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
-		class CustomAttributes
-		{
-			name="Intel";
-			class Attribute0
-			{
-				property="Enh_disableGrass";
-				expression="if (((parseNumber _value) > 0) && !is3DEN && hasInterface) then {setTerrainGrid (parseNumber _value)}";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"STRING"
-							};
-						};
-						value="-1";
-					};
-				};
-			};
-			nAttributes=1;
-		};
+		year=2038;
+		month=6;
+		day=6;
+		hour=8;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
