@@ -17,6 +17,8 @@ _base_defenders = [];
     "_base_corners"
 ];
 
+[_base_position, 50] call F_createClearance;
+
 private _nextobject = objNull;
 
 {
@@ -59,7 +61,7 @@ sleep 1;
     _nextobject setdir _nextdir;
     _nextobject lock 2;
 
-    _base_objects pushBack _nextobject;
+    _base_objectives pushBack _nextobject;
 } forEach _objectives_to_build;
 
 sleep 1;

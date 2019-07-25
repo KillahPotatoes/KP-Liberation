@@ -6154,5 +6154,9 @@
             <Turkish>(ESC'ye basıp çıkabilirsiniz.)</Turkish>
             <Portuguese>(Aperte ESC para sair)</Portuguese>
         </Key>
+        <Key ID="STR_CLEARANCE_ACTION">
+            <Original>-- Clear FOB area</Original>
+            <German>-- FOB Gebiet räumen</German>
+        </Key>
     </Package>
 </Project>

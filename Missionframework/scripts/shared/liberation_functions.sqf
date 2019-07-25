@@ -67,3 +67,4 @@ F_setLoadableViV = compileFinal preprocessFileLineNumbers "scripts\shared\functi
 F_getNearestViVTransport = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_getNearestViVTransport.sqf";
 F_addObjectInit = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_addObjectInit.sqf";
 F_isRadio = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_isRadio.sqf";
+F_createClearance = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_kp_createClearance.sqf";

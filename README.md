@@ -190,6 +190,7 @@ class Missions
 * Added: Livonia building ignore list.
 * Added: [Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) basefile. Thanks to [Eogos](https://github.com/Eogos)
 * Added: [Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
+* Added: "Create Clearance" Action at FOB for Commander or logged in Admin. Clears all terrain objects (no built objects) in FOB radius.
 * Removed: Vanilla player score saving.
 * Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.
