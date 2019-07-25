@@ -343,9 +343,6 @@ blacklisted_from_arsenal = [
     "UK3CB_BAF_L16",
     "UK3CB_BAF_M6",
     "UK3CB_BAF_Tripod",
-    "uns_STABO_US_Bag",
-    "uns_Tripod_Bag",
-    "uns_MK18_low_US_Bag",
     "uns_M1_81mm_mortar_US_Bag",
     "uns_M1919_low_US_Bag",
     "uns_M2_60mm_mortar_US_Bag",
@@ -354,6 +351,9 @@ blacklisted_from_arsenal = [
     "uns_M30_107mm_mortar_US_Bag",
     "uns_M60_high_US_Bag",
     "uns_M60_low_US_Bag",
+    "uns_MK18_low_US_Bag",
+    "uns_STABO_US_Bag",
+    "uns_Tripod_Bag",
     "Uns_US_searchlight_Bag"
 ];
 

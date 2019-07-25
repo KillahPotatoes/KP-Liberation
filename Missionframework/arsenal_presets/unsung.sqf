@@ -1,7 +1,14 @@
-// The Unsung Vietnam War Mod - US Arsenal Preset
+/*
+    The Unsung Vietnam War Mod - US Arsenal Preset
 
-// Mods needed:
-// The Unsung Vietnam War Mod
+    Author: Bunnyhopps - https://github.com/Bunnyhopps147
+
+    Mods needed:
+    - The Unsung Vietnam War Mod
+
+    Mods optional:
+    - ACE
+*/
 
 GRLIB_arsenal_weapons = [
     // AK 47
@@ -1491,7 +1498,6 @@ GRLIB_arsenal_items = [
     "UNS_USMC_FLAK2_65",
     "UNS_USMC_LERDL",
 
-
     // Headgear
     "UNS_Band_H",
     "UNS_Band_L",
@@ -1533,7 +1539,6 @@ GRLIB_arsenal_items = [
     "UNS_Ear",
     "UNS_Field_Cap",
     "UNS_Finger",
-    "UNS_Goggles_NVA",
     "UNS_Headband_BK",
     "UNS_Headband_ED",
     "UNS_Headband_OD",
@@ -1700,10 +1705,6 @@ GRLIB_arsenal_items = [
 
     // Items
     "b_kar_m1884",
-    "Binocular",
-    "ItemCompass",
-    "ItemMap",
-    "ItemWatch",
     "uns_AC47_RC",
     "uns_ANPVS2",
     "uns_b_6H3",
@@ -1766,7 +1767,78 @@ GRLIB_arsenal_items = [
     "uns_s_PPK",
     "uns_s_Sten",
     "uns_s_UZI",
-    "UNS_TrapKit"
+    "UNS_TrapKit",
+
+    // ACE Items
+    "ACE_adenosine",
+    "ACE_atropine",
+    "ACE_bloodIV_250",
+    "ACE_bloodIV_500",
+    "ACE_bloodIV",
+    "ACE_bodyBag",
+    "ACE_CableTie",
+    "ACE_Clacker",
+    "ACE_DeadManSwitch",
+    "ACE_DefusalKit",
+    "ACE_EarPlugs",
+    "ACE_elasticBandage",
+    "ACE_EntrenchingTool",
+    "ACE_epinephrine",
+    "ACE_fieldDressing",
+    "ACE_Flashlight_MX991",
+    "ACE_Flashlight_XL50",
+    "ACE_M26_Clacker",
+    "ACE_MapTools",
+    "ACE_morphine",
+    "ACE_packingBandage",
+    "ACE_personalAidKit",
+    "ACE_plasmaIV_250",
+    "ACE_plasmaIV_500",
+    "ACE_plasmaIV",
+    "ACE_quikclot",
+    "ACE_RangeCard",
+    "ACE_RangeTable_82mm",
+    "ACE_rope12",
+    "ACE_rope15",
+    "ACE_rope18",
+    "ACE_rope27",
+    "ACE_rope36",
+    "ACE_salineIV_250",
+    "ACE_salineIV_500",
+    "ACE_salineIV",
+    "ACE_Sandbag_empty",
+    "ACE_SpraypaintBlack",
+    "ACE_SpraypaintBlue",
+    "ACE_SpraypaintGreen",
+    "ACE_SpraypaintRed",
+    "ACE_surgicalKit",
+    "ACE_tourniquet",
+    "ACE_Tripod",
+    "ACE_wirecutter",
+
+    // ACRE Items
+    "ACRE_PRC117F",
+    "ACRE_PRC148",
+    "ACRE_PRC152",
+    "ACRE_PRC343",
+    "ACRE_PRC77",
+    "ACRE_SEM52SL",
+    "ACRE_SEM70",
+    "ItemRadioAcreFlagged",
+
+    // TFAR Items (Unsung has own radios which work with TFAR)
+    "TFAR_microdagr",
+
+    // Vanilla Standard Items
+    "Binocular",
+    "FirstAidKit",
+    "ItemCompass",
+    "ItemMap",
+    "ItemRadio",
+    "ItemWatch",
+    "Medikit",
+    "MineDetector",
+    "ToolKit"
 ];
 
 GRLIB_arsenal_backpacks = [
