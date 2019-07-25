@@ -42,7 +42,7 @@ diag_log text "_objects_to_build = [";
         (getposatl _x select 2) toFixed 2,
         (getdir _x) toFixed 2
     ];
-} forEach ((nearestObjects [_center, ["All"], 50]) - ((nearestObjects [_center, ["Man","Animal"], 50]) + [_center]));
+} forEach ((nearestObjects [_center, ["All"], 40]) - ((nearestObjects [_center, ["Man","Animal"], 40]) + [_center]));
 diag_log text "];";
 
 diag_log text "";
@@ -62,7 +62,7 @@ diag_log text "_defenders_to_build = [";
         (getposatl _x select 2) toFixed 2,
         (getdir _x) toFixed 2
     ];
-} forEach ((nearestObjects [_center, ["Man"], 50]) - ((nearestObjects [_center, [ "Animal" ], 50]) + [_center]));
+} forEach ((nearestObjects [_center, ["Man"], 40]) - ((nearestObjects [_center, [ "Animal" ], 40]) + [_center]));
 diag_log text "];";
 
 diag_log text "";

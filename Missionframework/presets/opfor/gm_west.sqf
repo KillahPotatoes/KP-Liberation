@@ -54,7 +54,7 @@ militia_squad = [
     "gm_ge_army_engineer_g3a4_80_ols"                                   // Engineer
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
     "gm_ge_army_u1300l_cargo"                                           // Truck 2t Transport
 ];

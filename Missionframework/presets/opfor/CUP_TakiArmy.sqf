@@ -56,7 +56,7 @@ militia_squad = [
     "CUP_O_TK_INS_Mechanic"                                             // Militia Mechanic
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
