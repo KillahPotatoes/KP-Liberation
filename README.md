@@ -43,49 +43,66 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 These mods are needed if you want to use the prepackaged missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Altis
-	* None
+    * None
 * Chernarus
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* Recommended for more enterable buildings on Chernarus
-		* [DonkeyPunch.INFO Open Chernarus Project](http://steamcommunity.com/sharedfiles/filedetails/?id=786777307)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+* Chernarus Winter
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+* Livonia
+    * Contact DLC
 * Lythium
-	* [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
-	* [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
-	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [Jbad](http://steamcommunity.com/sharedfiles/filedetails/?id=520618345)
+    * [Lythium](http://steamcommunity.com/sharedfiles/filedetails/?id=909547724)
+    * [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Malden
-	* None
+    * None
+* Panthera
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Units](https://steamcommunity.com/sharedfiles/filedetails/?id=497661914)
+    * [CUP Vehicles](https://steamcommunity.com/sharedfiles/filedetails/?id=541888371)
+    * [CUP Weapons](https://steamcommunity.com/sharedfiles/filedetails/?id=497660133)
+    * [Island Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910)
 * Sahrani
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+* Song Bin Tanh
+    * [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311)
 * Takistan
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [Project OPFOR](http://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 * Tanoa
-	* None
+    * Apex DLC
 * Taunus (very resource-intensive map)
-	* [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
-	* [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-	* [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-	* [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
-	* [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-	* [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-	* [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
+    * [BWMod](http://steamcommunity.com/sharedfiles/filedetails/?id=1200127537)
+    * [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
+    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
+    * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
+    * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+    * [X-Cam-Taunus (Version 1.1)](http://steamcommunity.com/sharedfiles/filedetails/?id=836147398)
+* Weferlingen
+    * Global Mobilization CDLC
+* Weferlingen Winter
+    * Global Mobilization CDLC
 
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
@@ -113,32 +130,32 @@ I recommend using the following difficulty settings for this mission (User profi
 ```
 class CustomDifficulty
 {
-	class Options
-	{
-		groupIndicators=0;
-		friendlyTags=0;
-		enemyTags=0;
-		detectedMines=0;
-		commands=0;
-		waypoints=0;
-		weaponInfo=1;
-		stanceIndicator=1;
-		reducedDamage=0;
-		staminaBar=0;
-		weaponCrosshair=0;
-		visionAid=0;
-		thirdPersonView=0;
-		cameraShake=1;
-		scoreTable=0;
-		deathMessages=0;
-		vonID=1;
-		mapContent=0;
-		autoReport=0;
-		multipleSaves=0;
-		squadRadar=0;
-		tacticalPing=0;
-	};
-	aiLevelPreset=1;
+    class Options
+    {
+        groupIndicators=0;
+        friendlyTags=0;
+        enemyTags=0;
+        detectedMines=0;
+        commands=0;
+        waypoints=0;
+        weaponInfo=1;
+        stanceIndicator=1;
+        reducedDamage=0;
+        staminaBar=0;
+        weaponCrosshair=0;
+        visionAid=0;
+        thirdPersonView=0;
+        cameraShake=1;
+        scoreTable=0;
+        deathMessages=0;
+        vonID=1;
+        mapContent=0;
+        autoReport=0;
+        multipleSaves=0;
+        squadRadar=0;
+        tacticalPing=0;
+    };
+    aiLevelPreset=1;
 };
 ```
 
@@ -148,11 +165,11 @@ forcedDifficulty = "custom";
 
 class Missions
 {
-	class kp_liberation
-	{
-		template = "kp_liberation.Altis";
-		difficulty = "custom";
-	};
+    class kp_liberation
+    {
+        template = "kp_liberation.Altis";
+        difficulty = "custom";
+    };
 };
 ```
 
@@ -188,8 +205,8 @@ class Missions
 * Added: Transport configs for the civil transporters (which came with Laws of War).
 * Added: Livonia basefile.
 * Added: Livonia building ignore list.
-* Added: [Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) basefile. Thanks to [Eogos](https://github.com/Eogos)
-* Added: [Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
+* Added: [Island Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) basefile. Thanks to [Eogos](https://github.com/Eogos)
+* Added: [Island Panthera](https://steamcommunity.com/sharedfiles/filedetails/?id=708278910) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Song Bin Tanh basefile.
 * Added: Song Bin Tanh building ignore list.
 * Added: "Create Clearance" Action at FOB for Commander or logged in Admin. Clears all terrain objects (no built objects) in FOB radius.
@@ -336,30 +353,30 @@ class Missions
 
 ### 0.96 (12th October 2017)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
-	* Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
-	* Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
-	* Added: Players can request artillery support from players (generates task).
+    * Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
+    * Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
+    * Added: Players can request artillery support from players (generates task).
 * Added: Civil Reputation.
-	* Added: Config variables in `kp_liberation_config.sqf`.
-	* Added: Reputation penalty for killing civilians.
-	* Added: Reputation penalty for killing allied resistance fighters.
-	* Added: Reputation penalty for seizing civil vehicles.
-	* Added: Reputation penalty for destroyed/damaged civil buildings. (evaluated only on capture a sector event)
-	* Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
-	* Added: Reputation gain for liberated sectors.
-	* Added: After capturing a sector you might find wounded civilians. You can also gain reputation for offering medical support.
+    * Added: Config variables in `kp_liberation_config.sqf`.
+    * Added: Reputation penalty for killing civilians.
+    * Added: Reputation penalty for killing allied resistance fighters.
+    * Added: Reputation penalty for seizing civil vehicles.
+    * Added: Reputation penalty for destroyed/damaged civil buildings. (evaluated only on capture a sector event)
+    * Added: Mission parameter to choose building penalty for damaged or only destroyed buildings.
+    * Added: Reputation gain for liberated sectors.
+    * Added: After capturing a sector you might find wounded civilians. You can also gain reputation for offering medical support.
 * Added: Civil informant.
-	* Added: If you've a good reputation, a civil informant can rarely spawn at blufor sectors.
-	* Added: Intel increase, if you capture the informant and bring him back to a FOB.
-	* Added: There is a chance that an informant will reveal a time critical task to kill a HVT.
+    * Added: If you've a good reputation, a civil informant can rarely spawn at blufor sectors.
+    * Added: Intel increase, if you capture the informant and bring him back to a FOB.
+    * Added: There is a chance that an informant will reveal a time critical task to kill a HVT.
 * Added: Asymmetric Threats.
-	* Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
-	* Added: Own logistic convoys can be ambushed by guerilla forces.
-	* Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
-	* Added: Guerilla forces presets.
-	* Added: Dynamic guerilla forces equipment depending on their strength value.
-	* Added: Chance that guerilla forces will join the fight at a sector as friend or foe. (depends on reputation)
-	* Added: Possibility of a guerilla ambush in blufor sectors (additional to IEDs).
+    * Added: Possibility of IEDs in blufor sectors, if you have a bad civil reputation.
+    * Added: Own logistic convoys can be ambushed by guerilla forces.
+    * Added: Value for guerilla strength which will be affected by the events connected to guerilla forces.
+    * Added: Guerilla forces presets.
+    * Added: Dynamic guerilla forces equipment depending on their strength value.
+    * Added: Chance that guerilla forces will join the fight at a sector as friend or foe. (depends on reputation)
+    * Added: Possibility of a guerilla ambush in blufor sectors (additional to IEDs).
 * Added: Chinese Simplified localization. Thanks to [nercon](https://github.com/nercon)
 * Added: Automatic server restart script for dedicated servers. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Settings in the mission parameters for particular debug messages.
@@ -553,20 +570,20 @@ class Missions
 * Added: Custom made Chimera Base for X-Cam-Taunus. Thanks to [jus61](https://github.com/jus61) for building it
 * Added: Custom made Chimera Base for Chernarus. Thanks to [Enigma](http://steamcommunity.com/profiles/76561198052767508) for building it
 * Added: Arsenal whitelist preset system (change via `kp_liberation_config.sqf`)
-	* Use blacklist from unit preset (default)
-	* custom whitelist file
-	* KP Community Selection
-	* RHS USAF
-	* RHS USAF with ACE3
-	* RHS USAF with ACE3 and ACRE2
+    * Use blacklist from unit preset (default)
+    * custom whitelist file
+    * KP Community Selection
+    * RHS USAF
+    * RHS USAF with ACE3
+    * RHS USAF with ACE3 and ACRE2
 * Removed: Dependencies on Takistan missionfile
 * Removed: Apex dependencies on Chernarus missionfile (custom chimera base had two apex rocks)
 * Removed: Apex dependencies on Taunus missionfile
 * Replaced: Old hostile markers (exclamation marks) with a unit count sensitive area marking system
 * Tweaked: Presets
-	* custom.sqf is now default (vanilla is a kind of legacy now)
-	* Vehicle ammo prices are raised to make them more valuable
-	* Provided custom.sqf now adapt automaticly to installed mods
+    * custom.sqf is now default (vanilla is a kind of legacy now)
+    * Vehicle ammo prices are raised to make them more valuable
+    * Provided custom.sqf now adapt automaticly to installed mods
 * Fixed: Falling Little Birds on LHD
 * Fixed: Custom flag texture not applied after savegame load
 * Fixed: Mapmarker disable won't work
