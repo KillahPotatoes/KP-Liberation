@@ -128,34 +128,43 @@ Also you should think about using these mods as serverside mods:
 ## Recommended Difficulty Settings
 I recommend using the following difficulty settings for this mission (User profile of your server):
 ```
-class CustomDifficulty
+difficulty="Custom";
+class DifficultyPresets
 {
-    class Options
+    class CustomDifficulty
     {
-        groupIndicators=0;
-        friendlyTags=0;
-        enemyTags=0;
-        detectedMines=0;
-        commands=0;
-        waypoints=0;
-        weaponInfo=1;
-        stanceIndicator=1;
-        reducedDamage=0;
-        staminaBar=0;
-        weaponCrosshair=0;
-        visionAid=0;
-        thirdPersonView=0;
-        cameraShake=1;
-        scoreTable=0;
-        deathMessages=0;
-        vonID=1;
-        mapContent=0;
-        autoReport=0;
-        multipleSaves=0;
-        squadRadar=0;
-        tacticalPing=0;
+        class Options
+        {
+            groupIndicators=0;
+            friendlyTags=0;
+            enemyTags=0;
+            detectedMines=0;
+            commands=0;
+            waypoints=0;
+            weaponInfo=1;
+            stanceIndicator=1;
+            reducedDamage=0;
+            staminaBar=0;
+            weaponCrosshair=0;
+            visionAid=0;
+            thirdPersonView=0;
+            cameraShake=1;
+            scoreTable=0;
+            deathMessages=0;
+            vonID=1;
+            mapContent=0;
+            autoReport=0;
+            multipleSaves=0;
+            squadRadar=0;
+            tacticalPing=0;
+        };
+        aiLevelPreset=3;
     };
-    aiLevelPreset=1;
+    class CustomAILevel
+    {
+        skillAI=1.0;
+        precisionAI=0.15;
+    };
 };
 ```
 
