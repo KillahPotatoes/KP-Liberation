@@ -70,13 +70,36 @@ execVM "scripts\server\sector\manage_sectors.sqf";
 
 // Select FOB templates
 switch (KP_liberation_preset_opfor) do {
+    case 1: {
+        KPLIB_fob_templates = [
+            "scripts\fob_templates\apex\template1.sqf",
+            "scripts\fob_templates\apex\template2.sqf",
+            "scripts\fob_templates\apex\template3.sqf",
+            "scripts\fob_templates\apex\template4.sqf",
+            "scripts\fob_templates\apex\template5.sqf"
+        ];
+    };
+    case 12: {
+        KPLIB_fob_templates = [
+            "scripts\fob_templates\unsung\template1.sqf",
+            "scripts\fob_templates\unsung\template2.sqf",
+            "scripts\fob_templates\unsung\template3.sqf",
+            "scripts\fob_templates\unsung\template4.sqf",
+            "scripts\fob_templates\unsung\template5.sqf"
+        ];
+    };
     default {
         KPLIB_fob_templates = [
             "scripts\fob_templates\default\template1.sqf",
             "scripts\fob_templates\default\template2.sqf",
             "scripts\fob_templates\default\template3.sqf",
             "scripts\fob_templates\default\template4.sqf",
-            "scripts\fob_templates\default\template5.sqf"
+            "scripts\fob_templates\default\template5.sqf",
+            "scripts\fob_templates\default\template6.sqf",
+            "scripts\fob_templates\default\template7.sqf",
+            "scripts\fob_templates\default\template8.sqf",
+            "scripts\fob_templates\default\template9.sqf",
+            "scripts\fob_templates\default\template10.sqf"
         ];
     };
 };
