@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=622;
+		nextID=633;
 	};
 	class Camera
 	{
-		pos[]={1376.1289,42.619949,462.09076};
-		dir[]={0.84057289,-0.52607501,-0.12968841};
-		up[]={0.52012807,0.85028219,-0.080248758};
-		aside[]={-0.1524905,3.8435246e-008,-0.9883796};
+		pos[]={1372.8306,55.560783,465.82941};
+		dir[]={0.77747244,-0.60665154,-0.16650243};
+		up[]={0.59341282,0.79475814,-0.12708488};
+		aside[]={-0.20943744,-3.1790114e-007,-0.97794938};
 	};
 };
 binarizationWanted=0;
@@ -34,13 +34,15 @@ addons[]=
 	"uns_static_c",
 	"NAM_Objects",
 	"uns_flags",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"uc_c",
+	"A3_Structures_F_Civ_Lamps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -124,6 +126,11 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item14
+		{
+			className="uc_c";
+			name="uc_c";
+		};
 	};
 };
 randomSeed=6090825;
@@ -193,7 +200,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=349;
+		items=359;
 		class Item0
 		{
 			dataType="Logic";
@@ -6319,6 +6326,165 @@ class Mission
 			id=621;
 			type="uns_FlagCarrierMed";
 			atlOffset=0.041587353;
+		};
+		class Item349
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1446.8812,5.2406077,473.52402};
+				angles[]={6.2818484,4.0142574,0.009667513};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=622;
+			type="Land_Campfire_burning";
+		};
+		class Item350
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1454.046,4.8729167,422.953};
+				angles[]={6.2772689,2.4434609,6.2614384};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=623;
+			type="LAND_FireDrumLit";
+		};
+		class Item351
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1467.8561,4.6809344,434.70633};
+				angles[]={6.2748632,2.4434609,6.2654619};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=624;
+			type="LAND_FireDrumLit";
+		};
+		class Item352
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1454.491,8.1809597,415.72};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=626;
+			type="Land_LampShabby_F";
+		};
+		class Item353
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1474.3644,7.9266148,433.30997};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=627;
+			type="Land_LampShabby_F";
+		};
+		class Item354
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1414.0502,8.9942532,451.33453};
+				angles[]={0,0.87266463,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=628;
+			type="Land_LampShabby_F";
+		};
+		class Item355
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1416.6276,9.0872927,439.39029};
+				angles[]={0,2.4434609,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=629;
+			type="Land_LampShabby_F";
+		};
+		class Item356
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1433.8999,8.365922,409.23416};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=630;
+			type="Land_LampShabby_F";
+		};
+		class Item357
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1459.1201,8.6779881,464.05945};
+				angles[]={0,4.0142574,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=631;
+			type="Land_LampShabby_F";
+		};
+		class Item358
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1434.5172,8.6394253,482.44543};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=632;
+			type="Land_LampShabby_F";
 		};
 	};
 	class Connections
