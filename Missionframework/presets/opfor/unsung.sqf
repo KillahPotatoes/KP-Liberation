@@ -10,7 +10,7 @@
 opfor_officer = "uns_men_NVA_68_COM";                                   // Officer
 opfor_squad_leader = "uns_men_NVA_68_off";                              // Squad Leader
 opfor_team_leader = "uns_men_NVA_68_nco";                               // Team Leader
-opfor_sentry = "uns_men_NVA_68_SLT";                                    // Rifleman (Lite)
+opfor_sentry = "uns_men_NVA_68_RSAP";                                   // Rifleman (Lite)
 opfor_rifleman = "uns_men_NVA_68_AS5";                                  // Rifleman
 opfor_rpg = "uns_men_NVA_68_AT2";                                       // Rifleman (LAT)
 opfor_grenadier = "uns_men_NVA_68_AS1";                                 // Grenadier
@@ -33,8 +33,8 @@ opfor_transport_truck = "uns_nvatruck";                                 // Ural 
 opfor_ammobox_transport = "uns_nvatruck_open";                          // Ural Truck (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "uns_nvatruck_refuel";                               // Ural Truck (refuel)
 opfor_ammo_truck = "uns_nvatruck_reammo";                               // Ural Truck (ammo)
-opfor_fuel_container = "ABox_N_4";                                      // Ammo Box (Light/4x)
-opfor_ammo_container = "ABox_N_4";                                      // Ammo Box (Light/4x)
+opfor_fuel_container = "Box_EAF_AmmoVeh_F";                             // LDF Vehicle Ammo Box
+opfor_ammo_container = "Box_EAF_AmmoVeh_F";                             // LDF Vehicle Ammo Box
 opfor_flag = "uns_FlagCarrierNVA";                                      // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
