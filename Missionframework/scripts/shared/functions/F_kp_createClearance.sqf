@@ -8,13 +8,11 @@ params [
 
 if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo _centerPos}) != -1}) exitWith {false};
 
-private _objects = nearestTerrainObjects [_centerPos, [], _radius, false, true];
-
 {
     _x hideObjectGlobal true;
     _x enableSimulationGlobal false;
     _x allowDamage false;
-} forEach _objects;
+} forEach (nearestTerrainObjects [_centerPos, [], _radius, false, true]);
 
 if (_save) then {
     KP_liberation_clearances pushBackUnique [_centerPos, _radius];

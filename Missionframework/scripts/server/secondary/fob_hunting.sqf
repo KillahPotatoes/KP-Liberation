@@ -31,6 +31,7 @@ private _nextobject = objNull;
     _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), 0];
 
     _nextobject = _nextclass createVehicle _nextpos;
+    _nextobject allowDamage false;
     _nextobject setVectorUp [0, 0, 1];
     _nextobject setdir _nextdir;
     _nextobject setpos _nextpos;
@@ -50,9 +51,10 @@ sleep 1;
         "_nextdir"
     ];
 
-    _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), 0.5];
+    _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), 0];
 
-    _nextobject = _nextclass createVehicle [(_nextpos select 0) + (random 500), (_nextpos select 1) + (random 500), 0.5];
+    _nextobject = _nextclass createVehicle _nextpos;
+    _nextobject allowDamage false;
     _nextobject setVectorUp [0, 0, 1];
     _nextobject setpos _nextpos;
     _nextobject setdir _nextdir;
@@ -66,16 +68,13 @@ sleep 1;
 
 sleep 1;
 
-{_x setDamage 0;} foreach (_base_objectives + _base_objects);
+{_x setDamage 0; _x allowDamage true;} foreach (_base_objectives + _base_objects);
 
 _grpdefenders = createGroup [GRLIB_side_enemy, true];
 _idxselected = [];
 
 while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count _defenders_to_build)} do {
-    _idx = floor (random (count _defenders_to_build));
-    if (!(_idx in _idxselected)) then {
-        _idxselected pushBack _idx;
-    };
+    _idxselected pushBackUnique (floor (random (count _defenders_to_build)));
 };
 
 {
@@ -95,7 +94,7 @@ while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count
 private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (GRLIB_unitcap)));
 
 _grpsentry = createGroup [GRLIB_side_enemy, true];
-_base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1),0];
+_base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
 for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
     opfor_sentry createUnit [_base_sentry_pos, _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
 };
@@ -103,14 +102,14 @@ for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
 while {(count (waypoints _grpsentry)) != 0} do {deleteWaypoint ((waypoints _grpsentry) select 0);};
 private _waypoint = [];
 {
-    _waypoint = _grpsentry addWaypoint [[((_base_position select 0) + (_x select 0)), ((_base_position select 1) + (_x select 1)),0], 0];
+    _waypoint = _grpsentry addWaypoint [[((_base_position select 0) + (_x select 0)), ((_base_position select 1) + (_x select 1)), 0], -1];
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointSpeed "LIMITED";
     _waypoint setWaypointBehaviour "SAFE";
     _waypoint setWaypointCompletionRadius 5;
 } forEach _base_corners;
 
-_waypoint = _grpsentry addWaypoint [[(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0], 0];
+_waypoint = _grpsentry addWaypoint [[(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0], -1];
 _waypoint setWaypointType "CYCLE";
 
 _objectives_alive = true;
