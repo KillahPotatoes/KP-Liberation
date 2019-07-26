@@ -7,6 +7,8 @@
     - RHSUSAF
     - F-15C
     - F/A-18
+    - CUP Weapons
+    - CUP Vehicles
 */
 
 /*
@@ -72,9 +74,13 @@ infantry_units = [
 
 light_vehicles = [
     ["B_T_Quadbike_01_F",50,0,25],                                      // Quad Bike
+    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_T_LSV_01_unarmed_F",75,0,50],                                   // Prowler
     ["B_T_LSV_01_armed_F",75,40,50],                                    // Prowler (HMG)
     ["B_T_LSV_01_AT_F",75,60,50],                                       // Prowler (AT)
+    ["CUP_B_HMMWV_M2_NATO_T",75,40,50],                                 // HMMWV M2
+    ["CUP_B_HMMWV_MK19_NATO_T",75,60,50],                               // HMMWV MK19
+    ["CUP_B_HMMWV_Avenger_NATO_T",200,350,125],                         // HMMWV Avenger
     ["B_T_MRAP_01_F",100,0,50],                                         // Hunter
     ["B_T_MRAP_01_hmg_F",100,40,50],                                    // Hunter (HMG)
     ["B_T_MRAP_01_gmg_F",100,60,50],                                    // Hunter (GMG)
@@ -114,17 +120,22 @@ heavy_vehicles = [
     ["B_T_APC_Tracked_01_rcws_F",300,100,150],                          // IFV-6c Panther
     ["I_APC_tracked_03_cannon_F",300,150,150],                          // FV-720 Mora
     ["RHS_M2A2_BUSKI_WD",300,200,150],                                  // M2A2ODS (Busk I)
+    ["CUP_B_M2Bradley_NATO_T",300,200,150],                             // M2A2 Bradley IFV
     ["BWA3_Puma_Fleck",300,225,150],                                    // IFV Puma
     ["RHS_M2A3_BUSKIII_wd",300,250,175],                                // M2A3 (Busk III)
+    ["CUP_B_M2A3Bradley_NATO_T",300,250,175],                           // M2A3 ERA Bradley IFV
     ["B_T_APC_Tracked_01_AA_F",300,250,175],                            // IFV-6a Cheetah
+    ["CUP_B_M6LineBacker_NATO_T",300,250,175],                          // M6 Linebacker
     ["I_LT_01_AA_F",300,250,175],                                       // AWC 302 Nyx (AA)
     ["I_LT_01_AT_F",300,250,175],                                       // AWC 302 Nyx (AT)
     ["I_LT_01_cannon_F",300,250,175],                                   // AWC 302 Nyx (Cannon)
     ["RHS_M6_wd",300,250,175],                                          // M6A2
     ["B_T_MBT_01_cannon_F",400,300,200],                                // M2A1 Slammer
+    ["CUP_B_M1A1_NATO_T",400,300,200],                                  // M1A1 Abrams
     ["I_MBT_03_cannon_F",400,300,200],                                  // MBT-52 Kuma
     ["rhsusf_m1a1aim_tuski_wd",400,350,225],                            // M1A1SA (Tusk I)
     ["B_T_MBT_01_TUSK_F",500,350,225],                                  // M2A4 Slammer UP
+    ["CUP_B_M1A_TUSK_NATO_T",500,350,225],                              // M1A2 Abrams TUSK
     ["rhsusf_m1a2sep1tuskiiwd_usarmy",500,400,250],                     // M1A2SEPv1 (Tusk II)
     ["BWA3_Leopard2_Fleck",500,400,250],                                // MBT Leopard 2A6M
     ["B_T_AFV_Wheeled_01_cannon_F",500,500,250],                        // Rhino MGS
@@ -394,6 +405,7 @@ elite_vehicles = [
     "rhsusf_mkvsoc",                                                    // Mk.V SOCOM
     "rhsusf_m1a1aim_tuski_wd",                                          // M1A1SA (Tusk I)
     "B_T_MBT_01_TUSK_F",                                                // M2A4 Slammer UP
+    "CUP_B_M1A_TUSK_NATO_T",                                            // M1A2 Abrams TUSK
     "rhsusf_m1a2sep1tuskiiwd_usarmy",                                   // M1A2SEPv1 (Tusk II)
     "BWA3_Leopard2_Fleck",                                              // MBT Leopard 2A6M
     "B_T_MBT_01_arty_F",                                                // M4 Scorcher
