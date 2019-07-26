@@ -49,7 +49,6 @@ _objects_to_build = [
 ];
 
 _objectives_to_build = [
-    // Move all things which should be destroyed to accomplish the mission from the above to this array
     [opfor_ammo_container, [-20.65, -16.90, 0.00], 326.51],
     [opfor_ammo_container, [-13.62, -23.20, 0.00], 306.22],
     [opfor_ammo_truck, [-9.16, 16.70, 0.00], 0.00],
@@ -73,7 +72,7 @@ _defenders_to_build = [
     [opfor_sentry, [-25.60, 0.02, 0.00], 156.91],
     [opfor_marksman, [-17.47, 18.68, 4.35], 0.00],
     [opfor_marksman, [23.70, -9.01, 4.35], 74.26],
-    [opfor_grenadier, [14.67, -8.28, 0.00], 160.61],
+    [opfor_grenadier, [14.67, -8.28, 0.00], 160.61]
 ];
 
 _base_corners = [

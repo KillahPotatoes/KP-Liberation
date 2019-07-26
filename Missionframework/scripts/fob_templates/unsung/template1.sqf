@@ -26,7 +26,6 @@ _objects_to_build = [
 ];
 
 _objectives_to_build = [
-    // Move all things which should be destroyed to accomplish the mission from the above to this array
     [opfor_fuel_container, [13.71, -1.74, 0.00], 270.00],
     [opfor_ammo_container [13.61, 3.38, 0.00], 270.00]
 ];
