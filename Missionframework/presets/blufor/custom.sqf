@@ -7,6 +7,8 @@
     - RHSUSAF
     - F-15C
     - F/A-18
+    - CUP Weapons
+    - CUP Vehicles
 */
 
 /*
@@ -78,6 +80,7 @@ infantry_units = [
 
 light_vehicles = [
     ["B_Quadbike_01_F",50,0,25],                                        // Quad Bike
+    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_LSV_01_unarmed_F",75,0,50],                                     // Prowler
     ["B_LSV_01_armed_F",75,40,50],                                      // Prowler (HMG)
     ["B_LSV_01_AT_F",75,60,50],                                         // Prowler (AT)
@@ -135,6 +138,7 @@ heavy_vehicles = [
     ["I_LT_01_cannon_F",300,250,175],                                   // AWC 302 Nyx (Cannon)
     ["RHS_M6_wd",300,250,175],                                          // M6A2
     ["B_MBT_01_cannon_F",400,300,200],                                  // M2A1 Slammer
+    ["CUP_B_Challenger2_NATO",400,300,200],                             // FV4034 Challenger 2
     ["I_MBT_03_cannon_F",400,300,200],                                  // MBT-52 Kuma
     ["rhsusf_m1a1aim_tuski_wd",400,350,225],                            // M1A1SA (Tusk I)
     ["B_MBT_01_TUSK_F",500,350,225],                                    // M2A4 Slammer UP
