@@ -66,8 +66,9 @@ while { dialog && alive player && dostartsecondary == 0 } do {
 };
 
 if ( dostartsecondary == 1 ) then {
-	if !([2000,999999,false] call F_findOpforSpawnPoint isEqualTo "") then {
-		[lbCurSel 101] remoteExec ["start_secondary_remote_call", 2];
+	private _index = lbCurSel 101;
+    if !([2000,999999,false] call F_findOpforSpawnPoint isEqualTo "") then {
+		[_index] remoteExec ["start_secondary_remote_call", 2];
 	} else {
 		hint "There is not enough enemy territory left for secondary missions.";
 		uiSleep 2;

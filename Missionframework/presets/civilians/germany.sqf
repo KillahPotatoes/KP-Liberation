@@ -1,9 +1,9 @@
 /*
-Needed Mods:
-- Global Mobilization
+    Needed Mods:
+    - Global Mobilization
 
-Optional Mods:
-- None
+    Optional Mods:
+    - None
 */
 
 // Civilian classnames.

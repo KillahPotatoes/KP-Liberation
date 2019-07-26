@@ -224,10 +224,6 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		rainForced=1;
-		lightningsForced=1;
-		wavesForced=1;
-		windForced=1;
 		year=2038;
 		month=6;
 		day=6;
@@ -8365,7 +8361,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						init="this setFlagTexture ""res\kpflag.jpg"";";
+						init="this setFlagTexture ""res\flag_kp_co.paa"";";
 					};
 					id=881;
 					type="Flag_White_F";

@@ -1,26 +1,28 @@
 [] call compileFinal preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
 switch (KP_liberation_arsenal) do {
-	case 1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
-	case 2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\killahpotatoes.sqf";};
-	case 3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
-	case 4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
-	case 5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
-	case 6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
-	case 7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_west.sqf";};
-	case 8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_east.sqf";};
-	case 9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\csat.sqf";};
-	default {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
+    case  1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
+    case  2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\killahpotatoes.sqf";};
+    case  3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
+    case  4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
+    case  5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
+    case  6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
+    case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_west.sqf";};
+    case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_east.sqf";};
+    case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\csat.sqf";};
+    case 10: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
+    case 11: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
+    default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
-if ( typeOf player == "VirtualSpectator_F" ) exitWith {
-	execVM "scripts\client\markers\empty_vehicles_marker.sqf";
-	execVM "scripts\client\markers\fob_markers.sqf";
-	execVM "scripts\client\markers\group_icons.sqf";
-	execVM "scripts\client\markers\hostile_groups.sqf";
-	execVM "scripts\client\markers\sector_manager.sqf";
-	execVM "scripts\client\markers\spot_timer.sqf";
-	execVM "scripts\client\misc\synchronise_vars.sqf";
-	execVM "scripts\client\ui\ui_manager.sqf";
+if (typeOf player == "VirtualSpectator_F") exitWith {
+    execVM "scripts\client\markers\empty_vehicles_marker.sqf";
+    execVM "scripts\client\markers\fob_markers.sqf";
+    execVM "scripts\client\markers\group_icons.sqf";
+    execVM "scripts\client\markers\hostile_groups.sqf";
+    execVM "scripts\client\markers\sector_manager.sqf";
+    execVM "scripts\client\markers\spot_timer.sqf";
+    execVM "scripts\client\misc\synchronise_vars.sqf";
+    execVM "scripts\client\ui\ui_manager.sqf";
 };
 
 // This causes the script error with not defined variable _display in File A3\functions_f_bootcamp\Inventory\fn_arsenal.sqf [BIS_fnc_arsenal], line 2122
@@ -51,7 +53,7 @@ execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
 execVM "scripts\client\misc\disable_remote_sensors.sqf";
 execVM "scripts\client\misc\init_arsenal.sqf";
-execVM "scripts\client\misc\offload_diag.sqf";
+// execVM "scripts\client\misc\offload_diag.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
 if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
@@ -70,7 +72,7 @@ player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permission
 player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
 
 {
-	[_x] call BIS_fnc_drawCuratorLocations;
+    [_x] call BIS_fnc_drawCuratorLocations;
 } foreach allCurators;
 
 execVM "scripts\client\ui\intro.sqf";

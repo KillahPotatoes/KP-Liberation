@@ -1,9 +1,9 @@
 /*
-Needed Mods:
-- None
+    Needed Mods:
+    - None
 
-Optional Mods:
-- None
+    Optional Mods:
+    - None
 */
 
 // Enemy infantry classes
@@ -35,7 +35,7 @@ opfor_fuel_truck = "I_Truck_02_fuel_F";                                 // Kamaz
 opfor_ammo_truck = "I_Truck_02_ammo_F";                                 // Kamz Ammo
 opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Pod
 opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Pod
-opfor_flag = "Flag_AAF_F";                                              // NATO Flag
+opfor_flag = "Flag_AAF_F";                                              // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
@@ -43,18 +43,18 @@ Therefore, adding the same value twice or three times means they are more likely
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
-    "I_Soldier_lite_F",                                                // Rifleman (Lite)
-    "I_Soldier_lite_F",                                                // Rifleman (Lite)
-    "I_soldier_F",                                                     // Rifleman
-    "I_soldier_F",                                                     // Rifleman
-    "I_Soldier_LAT2_F",                                                // Rifleman (AT)
-    "I_Soldier_AR_F",                                                  // Autorifleman
-    "I_Soldier_M_F",                                                   // Marksman
-    "I_medic_F",                                                       // Medic
-    "I_engineer_F"                                                     // Engineer
+    "I_Soldier_lite_F",                                                 // Rifleman (Lite)
+    "I_Soldier_lite_F",                                                 // Rifleman (Lite)
+    "I_soldier_F",                                                      // Rifleman
+    "I_soldier_F",                                                      // Rifleman
+    "I_Soldier_LAT2_F",                                                 // Rifleman (AT)
+    "I_Soldier_AR_F",                                                   // Autorifleman
+    "I_Soldier_M_F",                                                    // Marksman
+    "I_medic_F",                                                        // Medic
+    "I_engineer_F"                                                      // Engineer
 ];
 
-// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
+// Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
     "B_LSV_01_armed_F",                                                 // Polaris DAGOR (XM312)
     "B_LSV_01_armed_F",                                                 // Polaris DAGOR (XM312)

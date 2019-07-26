@@ -1,70 +1,46 @@
-/* - Support classnames.
-Each of these should be unique, the same classnames for different purposes may cause various unpredictable issues with player actions. Or not, just don't try!	*/
+/*
+    Needed Mods:
+    - None
 
-// This is the main FOB HQ building.
-FOB_typename = "Land_Cargo_HQ_V3_F";                                    // Default is "Land_Cargo_HQ_V1_F"
+    Optional Mods:
+    - None
+*/
 
-// This is the FOB as a container.
-FOB_box_typename = "Land_Pod_Heli_Transport_04_box_F";                            // Default is "B_Slingload_01_Cargo_F"
+/*
+    --- Support classnames ---
+    Each of these should be unique.
+    The same classnames for different purposes may cause various unpredictable issues with player actions.
+    Or not, just don't try!
+*/
+FOB_typename = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
+FOB_box_typename = "Land_Pod_Heli_Transport_04_box_F";                  // This is the FOB as a container.
+FOB_truck_typename = "O_Truck_03_device_F";                             // This is the FOB as a vehicle.
+Arsenal_typename = "O_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
+Respawn_truck_typename = "O_Truck_03_medical_F";                        // This is the mobile respawn (and medical) truck.
+huron_typename = "O_Heli_Transport_04_F";                               // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
+crewman_classname = "O_crew_F";                                         // This defines the crew for vehicles.
+pilot_classname = "O_helipilot_F";                                      // This defines the pilot for helicopters.
+KP_liberation_little_bird_classname = "O_Heli_Light_02_unarmed_F";      // These are the little birds which spawn on the Freedom or at Chimera base.
+KP_liberation_boat_classname = "O_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
+KP_liberation_truck_classname = "O_Truck_03_transport_F";               // These are the trucks which are used in the logistic convoy system.
+KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
+KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
+KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";           // The building defined to unlock FOB recycling functionality.
+KP_liberation_air_vehicle_building = "O_Radar_System_02_F";             // The building defined to unlock FOB air vehicle functionality.
+KP_liberation_heli_slot_building = "Land_HelipadSquare_F";              // The helipad used to increase the GLOBAL rotary-wing cap.
+KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";             // The hangar used to increase the GLOBAL fixed-wing cap.
+KP_liberation_supply_crate = "CargoNet_01_box_F";                       // This defines the supply crates, as in resources.
+KP_liberation_ammo_crate = "O_CargoNet_01_ammo_F";                      // This defines the ammunition crates.
+KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This defines the fuel crates.
 
-// This is the FOB as a vehicle.
-FOB_truck_typename = "O_Truck_03_device_F";                                // Default is "B_Truck_01_box_F"
-
-// This is the virtual arsenal as portable supply crates.
-Arsenal_typename = "O_supplyCrate_F";                                   // Default is "B_supplyCrate_F"
-
-// This is the mobile respawn (and medical) truck.
-Respawn_truck_typename = "O_Truck_03_medical_F";                        // Default is "B_Truck_01_medical_F"
-
-// This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-huron_typename = "O_Heli_Transport_04_F";                       // Default is "B_Heli_Transport_03_unarmed_F"
-
-// This defines the crew for vehicles.
-crewman_classname = "O_crew_F";                                  // Default is "B_crew_F"
-
-// This defines the pilot for helicopters.
-pilot_classname = "O_helipilot_F";                                     // Default is "B_Helipilot_F"
-
-// These are the little birds which spawn on the Freedom or at Chimera base.
-KP_liberation_little_bird_classname = "O_Heli_Light_02_unarmed_F";              // Default is "B_Heli_Light_01_F"
-
-// These are the boats which spawn at the stern of the Freedom.
-KP_liberation_boat_classname = "O_Boat_Transport_01_F";                 // Default is "B_Boat_Transport_01_F"
-
-// These are the trucks which are used in the logistic convoy system.
-KP_liberation_truck_classname = "O_Truck_03_transport_F";               // Default is "B_Truck_01_transport_F"
-
-// A small storage area for resources.
-KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // Default is "ContainmentArea_02_sand_F"
-
-// A large storage area for resources.
-KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // Default is "ContainmentArea_01_sand_F"
-
-// The building defined to unlock FOB recycling functionality. And it provides the KP Cratefiller functions.
-KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";         // Default is "Land_CarService_F"
-
-// The building defined to unlock FOB air vehicle functionality.
-KP_liberation_air_vehicle_building = "Land_Radar_Small_F";              // Default is "Land_Radar_Small_F"
-
-// The helipad used to increase the GLOBAL rotary-wing cap.
-KP_liberation_heli_slot_building = "Land_HelipadSquare_F";              // Default is "Land_HelipadSquare_F"
-
-// The hangar used to increase the GLOBAL fixed-wing cap.
-KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";             // Default is "Land_TentHangar_V1_F"
-
-// This defines the supply crates, as in resources.
-KP_liberation_supply_crate = "CargoNet_01_box_F";                       // Default is "CargoNet_01_box_F"
-
-// This defines the ammunition crates.
-KP_liberation_ammo_crate = "O_CargoNet_01_ammo_F";                      // Default is "B_CargoNet_01_ammo_F"
-
-// This defines the fuel crates.
-KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // Default is "CargoNet_01_barrels_F"
-
-/* - Friendly classnames.
-Each array below represents one of the 7 pages within the build menu.
-Format: ["vehicle_classname",supplies,ammunition,fuel],	Example: ["B_APC_Tracked_01_AA_F",300,150,150],
-The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.	*/
+/*
+    --- Friendly classnames ---
+    Each array below represents one of the 7 pages within the build menu.
+    Format: ["vehicle_classname",supplies,ammunition,fuel],
+    Example: ["B_APC_Tracked_01_AA_F",300,150,150],
+    The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
+    IMPORTANT: The last element inside each array must have no comma at the end!
+*/
 infantry_units = [
     ["O_Soldier_lite_F",15,0,0],                                        // Rifleman (Light)
     ["O_Soldier_F",20,0,0],                                             // Rifleman
@@ -140,8 +116,7 @@ static_vehicles = [
     ["O_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
     ["O_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["O_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
-    ["O_Radar_System_02_F",100,0,0],                                    // Air Radar
-    ["O_SAM_System_04_F",100,200,0]                                     // SAM Rhea
+    ["O_SAM_System_04_F",250,500,0]                                     // S-750 Rhea
 ];
 
 buildings = [
@@ -163,8 +138,8 @@ buildings = [
     ["Land_LampHalogen_F",0,0,0],
     ["Land_LampStreet_small_F",0,0,0],
     ["Land_LampAirport_F",0,0,0],
-    ["Land_HelipadCircle_F",0,0,0], // Strictly aesthetic - as in it does not increase helicopter cap!
-    ["Land_HelipadRescue_F",0,0,0], // Strictly aesthetic - as in it does not increase helicopter cap!
+    ["Land_HelipadCircle_F",0,0,0],                                     // Strictly aesthetic - as in it does not increase helicopter cap!
+    ["Land_HelipadRescue_F",0,0,0],                                     // Strictly aesthetic - as in it does not increase helicopter cap!
     ["PortableHelipadLight_01_blue_F",0,0,0],
     ["PortableHelipadLight_01_green_F",0,0,0],
     ["PortableHelipadLight_01_red_F",0,0,0],
@@ -249,12 +224,17 @@ support_vehicles = [
     ["O_Heli_Transport_04_repair_F",500,0,150],                         // Taru Repair
     ["O_Heli_Transport_04_ammo_F",300,200,150],                         // Taru Ammo
     ["O_Heli_Transport_04_fuel_F",300,0,350],                           // Taru Fuel
-    ["Land_Pod_Heli_Transport_04_repair_F",275,0,0],                    // Taru Repair
-    ["Land_Pod_Heli_Transport_04_ammo_F",75,200,0],                     // Taru Ammo
-    ["Land_Pod_Heli_Transport_04_fuel_F",75,0,200]                      // Taru Fuel
+    ["Land_Pod_Heli_Transport_04_repair_F",275,0,0],                    // Taru Repaircontainer
+    ["Land_Pod_Heli_Transport_04_ammo_F",75,200,0],                     // Taru Ammocontainer
+    ["Land_Pod_Heli_Transport_04_fuel_F",75,0,200]                      // Taru Fuelcontainer
 ];
 
-// Pre-made squads for the commander build menu. These shouldn't exceed 10 members.
+/*
+    --- Squads ---
+    Pre-made squads for the commander build menu.
+    These shouldn't exceed 10 members.
+*/
+
 // Light infantry squad.
 blufor_squad_inf_light = [
     "O_Soldier_SL_F",
@@ -321,7 +301,7 @@ blufor_squad_recon = [
     "O_recon_exp_F"
 ];
 
-// Paratroopers squad.
+// Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
     "O_soldier_PG_F",
     "O_soldier_PG_F",
@@ -335,7 +315,20 @@ blufor_squad_para = [
     "O_soldier_PG_F"
 ];
 
-// Elite vehicles that should be unlocked through military base capture.
+/*
+    --- Elite vehicles ---
+    Classnames below have to be unlocked by capturing military bases.
+    Which base locks a vehicle is randomized on the first start of the campaign.
+*/
 elite_vehicles = [
-
+    "O_MBT_04_cannon_F",                                                // T-14
+    "O_MBT_04_command_F",                                               // T-14K
+    "O_MBT_02_arty_F",                                                  // Sochor
+    "O_Heli_Attack_02_dynamicLoadout_F",                                // Kajman
+    "O_UAV_02_dynamicLoadout_F",                                        // YABHON
+    "O_T_UAV_04_CAS_F",                                                 // Burraq
+    "O_Plane_CAS_02_dynamicLoadout_F",                                  // YAK-130
+    "O_Plane_Fighter_02_F",                                             // Shikra
+    "O_T_VTOL_02_infantry_dynamicLoadout_F",                            // Xian (Infantry)
+    "O_T_VTOL_02_vehicle_dynamicLoadout_F"                              // Xian (Vehicle)
 ];

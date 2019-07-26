@@ -326,7 +326,7 @@ while { true } do {
 					[ _vehicle ] call F_forceBluforCrew;
 				};
 
-                _vehicle call F_addObjectInit;
+                [_vehicle] call F_addObjectInit;
 
 				sleep 0.3;
 				_vehicle allowDamage true;

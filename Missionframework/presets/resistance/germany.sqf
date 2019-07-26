@@ -1,9 +1,9 @@
 /*
-Needed Mods:
-- Global Mobilization
+    Needed Mods:
+    - Global Mobilization
 
-Optional Mods:
-- None
+    Optional Mods:
+    - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
@@ -28,19 +28,19 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 =[
+KP_liberation_guerilla_weapons_1 = [
     ["gm_mp2a1_blk","gm_32Rnd_9x19mm_B_DM51_mp2_blk",4,"",""],
     ["gm_mp2a1_blk","gm_32Rnd_9x19mm_B_DM51_mp2_blk",4,"",""],
     ["gm_mpiaks74n_prp","gm_30Rnd_545x39mm_B_7N6_ak74_prp",4,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 =[
+KP_liberation_guerilla_weapons_2 = [
     ["gm_mpiaks74n_prp","gm_30Rnd_545x39mm_B_7N6_ak74_prp",4,"",""],
     ["gm_mpiak74n_prp","gm_30Rnd_545x39mm_B_7N6_ak74_prp",4,"",""],
     ["gm_mpiak74n_prp","gm_30Rnd_545x39mm_B_7N6_ak74_prp",4,"",""]
 ];
 
-KP_liberation_guerilla_weapons_3 =[
+KP_liberation_guerilla_weapons_3 = [
     ["gm_mpiak74n_prp","gm_30Rnd_545x39mm_B_7N6_ak74_prp",4,"",""],
     ["gm_g3a3_blk","gm_20Rnd_762x51mm_B_T_DM21_g3_blk",4,"",""],
     ["gm_g3a3_blk","gm_20Rnd_762x51mm_B_T_DM21_g3_blk",4,"",""],

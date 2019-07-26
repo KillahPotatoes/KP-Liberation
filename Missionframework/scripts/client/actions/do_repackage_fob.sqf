@@ -15,10 +15,12 @@ if ( dorepackage > 0 ) then {
 
 	_fob = [] call F_getNearestFob;
 
-	if ( count _fob > 0 ) then {
-		GRLIB_all_fobs = GRLIB_all_fobs - [ _fob ];
-		publicVariable "GRLIB_all_fobs";
-	};
+    if (count _fob > 0) then {
+        GRLIB_all_fobs = GRLIB_all_fobs - [_fob];
+        KP_liberation_clearances deleteAt (KP_liberation_clearances findIf {(_x select 0) isEqualTo _fob});
+        publicVariable "GRLIB_all_fobs";
+        publicVariable "KP_liberation_clearances";
+    };
 
 	{deleteVehicle _x} foreach (((getpos player) nearobjects [ FOB_typename, 250 ]) select {getObjectType _x >= 8});
 

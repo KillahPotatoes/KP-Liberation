@@ -41,9 +41,9 @@ while {GRLIB_endgame == 0} do {
 						if (((count (attachedObjects _storage)) < 12) && !((_x select 7) == 3)) then {
 							private _crateType = KP_liberation_supply_crate;
 							switch (_x select 7) do {
-								case 1: {_crateType = KP_liberation_ammo_crate;};
-								case 2: {_crateType = KP_liberation_fuel_crate;};
-								default {_crateType = KP_liberation_supply_crate;};
+								case 1: {_crateType = KP_liberation_ammo_crate; stats_ammo_produced = stats_ammo_produced + 100;};
+								case 2: {_crateType = KP_liberation_fuel_crate; stats_fuel_produced = stats_fuel_produced + 100;};
+								default {_crateType = KP_liberation_supply_crate; stats_supplies_produced = stats_supplies_produced + 100;};
 							};
 
 							private _crate = [_crateType, 100, getPosATL _storage] call F_createCrate;

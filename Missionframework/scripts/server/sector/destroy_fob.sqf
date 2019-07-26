@@ -16,4 +16,7 @@ _all_buildings_to_destroy = [];
 {
 	_x setdamage 1;
 	sleep (random 3);
-} foreach _all_buildings_to_destroy
+} foreach _all_buildings_to_destroy;
+
+KP_liberation_clearances deleteAt (KP_liberation_clearances findIf {(_x select 0) isEqualTo _fobposdestroy});
+publicVariable "KP_liberation_clearances";
