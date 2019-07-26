@@ -219,6 +219,8 @@ class Missions
 * Added: Song Bin Tanh basefile.
 * Added: Song Bin Tanh building ignore list.
 * Added: "Create Clearance" Action at FOB for Commander or logged in Admin. Clears all terrain objects (no built objects) in FOB radius.
+* Added: FOB templates (FOB hunting) are now choosen in accordance with the selected opfor preset. Currently Unsung, Apex and "everything else" are separated. Thanks to [Bunnyhopps](https://github.com/Bunnyhopps147)
+* Added: 15 new FOB templates for the FOB hunting side mission. Thanks to [Bunnyhopps](https://github.com/Bunnyhopps147)
 * Removed: Vanilla player score saving.
 * Removed: Old garbage collection script, as there are now engine solutions available.
 * Tweaked: Changed default recycle building from carservice building to tanks repair depot building.

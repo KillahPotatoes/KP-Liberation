@@ -1,10 +1,8 @@
-_objects_to_build = [
-    ["crate_timber_open", [-15.92, 14.49, 0.00], 107.30],
+private _objects_to_build = [
     ["csj_VCbunk01", [-17.58, -2.59, 0.00], 90.00],
     ["csj_VCshelter01", [-14.59, 14.24, 0.00], 332.83],
     ["csj_VCshelter01", [7.63, 12.90, 0.00], 20.24],
     ["Land_Campfire_burning", [-3.66, 1.91, -0.03], 0.00],
-    ["LAND_uns_crate6", [-14.80, 15.10, 0.49], 140.83],
     ["LAND_uns_crate6", [-14.81, 15.10, 0.00], 149.10],
     ["LAND_uns_eastbunker2", [15.23, -13.65, 0.00], 301.85],
     ["LAND_uns_eastbunker2", [16.35, 4.79, 0.00], 252.88],
@@ -35,14 +33,14 @@ _objects_to_build = [
     ["Vil_Fence", [5.31, -16.06, 0.00], 0.00]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_truck, [2.50, -6.89, 0.00], 90.00],
     [opfor_fuel_container, [-3.77, -11.61, 0.00], 0.00],
     [opfor_fuel_container, [1.46, -11.62, 0.00], 0.00],
     [opfor_fuel_container, [6.37, -11.54, 0.00], 0.00]
 ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_engineer, [-1.39, -7.99, 0.00], 320.58],
     [opfor_heavygunner, [-18.11, -3.26, 0.00], 253.65],
     [opfor_medic, [-12.55, 13.97, 0.00], 177.21],
@@ -62,9 +60,11 @@ _defenders_to_build = [
     [opfor_grenadier, [16.61, 5.00, 0.00], 71.25]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]

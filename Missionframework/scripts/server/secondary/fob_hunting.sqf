@@ -71,7 +71,7 @@ sleep 1;
 _grpdefenders = createGroup [GRLIB_side_enemy, true];
 _idxselected = [];
 
-while {count _idxselected < _defenders_amount} do {
+while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count _defenders_to_build)} do {
     _idx = floor (random (count _defenders_to_build));
     if (!(_idx in _idxselected)) then {
         _idxselected pushBack _idx;

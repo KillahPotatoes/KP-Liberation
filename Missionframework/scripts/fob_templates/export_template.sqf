@@ -32,7 +32,7 @@ diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- START ----------";
 
 // Fetch all objects
 diag_log text "";
-diag_log text "_objects_to_build = [";
+diag_log text "private _objects_to_build = [";
 {
     diag_log text format [
         "    [""%1"", [%2, %3, %4], %5],",
@@ -46,13 +46,13 @@ diag_log text "_objects_to_build = [";
 diag_log text "];";
 
 diag_log text "";
-diag_log text "_objectives_to_build = [";
+diag_log text "private _objectives_to_build = [";
 diag_log text "    // Move all things which should be destroyed to accomplish the mission from the above to this array";
 diag_log text "];";
 
 // Fetch all infantry/guards
 diag_log text "";
-diag_log text "_defenders_to_build = [";
+diag_log text "private _defenders_to_build = [";
 {
     diag_log text format [
         "    [""%1"", [%2, %3, %4], %5],",
@@ -66,12 +66,15 @@ diag_log text "_defenders_to_build = [";
 diag_log text "];";
 
 diag_log text "";
-diag_log text "_base_corners = [";
+diag_log text "private _base_corners = [";
 diag_log text "    [40, 40, 0],";
 diag_log text "    [40, -40, 0],";
 diag_log text "    [-40, -40, 0],";
 diag_log text "    [-40, 40, 0],";
 diag_log text "];";
+
+diag_log text "";
+diag_log text "[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]";
 
 diag_log text "";
 diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- END ----------";

@@ -1,4 +1,4 @@
-_objects_to_build = [
+private _objects_to_build = [
     ["Land_Cargo_House_V4_F", [-0.52, 23.34, 0.00], 0.00],
     ["Land_Cargo_Patrol_V4_F", [-21.19, 11.02, 0.00], 128.79],
     ["Land_Cargo_Patrol_V4_F", [-24.11, -12.44, 0.00], 53.88],
@@ -41,7 +41,7 @@ _objects_to_build = [
     [opfor_mrap, [10.41, -1.98, -0.00], 0.00]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_truck, [15.60, 18.85, 0.00], 136.21],
     [opfor_fuel_truck, [21.62, 8.37, 0.00], 167.18],
     [opfor_ammo_container, [-2.98, -19.06, 0.00], 0.00],
@@ -50,7 +50,7 @@ _objectives_to_build = [
     [opfor_fuel_container, [5.80, -19.12, 0.00], 0.00]
 ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_engineer, [19.58, 13.89, 0.00], 244.49],
     [opfor_heavygunner, [-14.31, 17.85, 0.00], 149.97],
     [opfor_medic, [-1.31, 25.09, 0.73], 135.61],
@@ -75,9 +75,11 @@ _defenders_to_build = [
     [opfor_grenadier, [17.35, -16.11, 4.35], 139.83]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]

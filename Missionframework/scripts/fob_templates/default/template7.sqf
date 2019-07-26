@@ -1,9 +1,8 @@
-_objects_to_build = [
+private _objects_to_build = [
     ["Land_HBarrier_Big_F", [-0.69, -3.60, 0.00], 270.00],
     ["Land_HBarrierWall4_F", [-4.80, 0.99, 0.00], 180.00],
     ["Land_HBarrier_5_F", [4.39, -1.64, 0.00], 0.00],
     ["Land_HBarrier_5_F", [4.55, -7.50, 0.00], 270.00],
-    [opfor_mrap_armed, [-5.69, -4.65, 0.00], 180.00],
     ["Land_HBarrier_Big_F", [-8.78, 2.77, 0.00], 270.00],
     ["Land_HBarrier_5_F", [10.12, -1.58, 0.00], 0.00],
     ["Land_Cargo_House_V3_F", [10.28, -6.52, 0.00], 0.00],
@@ -34,14 +33,14 @@ _objects_to_build = [
     ["Land_HBarrier_Big_F", [-25.42, -14.65, 0.00], 270.00]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_truck, [-13.14, 10.16, 0.00], 0.00],
     [opfor_fuel_container, [18.22, 5.43, 0.00], 270.00],
     [opfor_fuel_container, [17.86, 11.39, 0.00], 270.00],
     [opfor_fuel_truck, [-17.96, 9.56, 0.00], 0.00]
 ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_heavygunner, [-5.65, 0.87, 1.25], 196.97],
     [opfor_rifleman, [8.77, -4.14, 0.73], 133.49],
     [opfor_grenadier, [12.04, -4.37, 0.73], 205.94],
@@ -61,9 +60,11 @@ _defenders_to_build = [
     [opfor_marksman, [-21.28, -12.32, 4.35], 232.31]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]

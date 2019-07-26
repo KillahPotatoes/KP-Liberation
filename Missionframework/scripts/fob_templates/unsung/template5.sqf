@@ -1,4 +1,4 @@
-_objects_to_build = [
+private _objects_to_build = [
     ["csj_VCbunk01", [-2.92, -19.96, 0.00], 17.74],
     ["csj_VCbunk01", [18.36, -8.12, 0.00], 284.30],
     ["csj_VCshelter01", [-12.86, -11.05, 0.00], 238.31],
@@ -41,13 +41,13 @@ _objects_to_build = [
     ["Vil_Fence", [7.69, 18.17, 0.00], 218.47]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_container, [11.83, 7.85, 0.00], 244.41],
     [opfor_fuel_container, [14.17, 2.33, 0.00], 247.91],
     [opfor_fuel_container, [7.65, 12.72, 0.00], 223.11]
 ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_engineer, [-4.18, 13.73, 0.00], 176.93],
     [opfor_heavygunner, [-12.66, -10.52, 0.00], 0.00],
     [opfor_heavygunner, [-4.12, -20.00, 0.00], 249.04],
@@ -70,9 +70,11 @@ _defenders_to_build = [
     [opfor_grenadier, [18.02, -9.31, 0.00], 141.02]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]

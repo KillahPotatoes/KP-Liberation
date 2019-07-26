@@ -1,4 +1,4 @@
-_objects_to_build = [
+private _objects_to_build = [
     ["csj_VCbunk01", [2.11, 12.76, 0.00], 180.00],
     ["Land_Campfire_burning", [-9.11, 3.99, 0.00], 0.00],
     ["LAND_uns_eastbunker1", [-16.60, -12.28, 0.00], 60.70],
@@ -27,14 +27,14 @@ _objects_to_build = [
     ["Vil_Fence", [5.42, -16.54, 0.00], 0.00]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_container, [1.76, -8.89, 0.00], 270.00],
     [opfor_ammo_container, [1.85, -13.44, 0.00], 270.00],
     [opfor_fuel_container, [-6.11, -13.37, 0.00], 270.00],
     [opfor_fuel_container, [-6.15, -8.81, 0.00], 270.00]
     ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_engineer, [14.44, 1.66, 0.00], 124.27],
     [opfor_heavygunner, [3.22, 13.79, 0.00], 0.00],
     [opfor_medic, [2.37, 3.09, 0.00], 86.61],
@@ -54,9 +54,11 @@ _defenders_to_build = [
     [opfor_grenadier, [14.28, 12.52, 0.00], 0.00]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]

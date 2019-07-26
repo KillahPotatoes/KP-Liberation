@@ -1,4 +1,4 @@
-_objects_to_build = [
+private _objects_to_build = [
     ["Land_Campfire_burning", [-2.54, 0.11, -0.03], 0.00],
     ["LAND_uns_vcshelter1", [-3.90, 0.16, 0.00], 0.00],
     ["LAND_uns_vcshelter2", [5.75, 9.72, 0.00], 90.00],
@@ -28,7 +28,7 @@ _objects_to_build = [
     ["wx_chair", [-4.20, -0.30, 0.00], 283.18]
 ];
 
-_objectives_to_build = [
+private _objectives_to_build = [
     [opfor_ammo_truck, [9.96, -1.73, 0.00], 270.00],
     [opfor_fuel_truck, [10.24, 2.73, 0.00], 270.00],
     [opfor_ammo_container, [-10.12, -7.24, 0.00], 270.00],
@@ -37,7 +37,7 @@ _objectives_to_build = [
     [opfor_fuel_container, [-9.82, 6.30, 0.00], 270.00]
 ];
 
-_defenders_to_build = [
+private _defenders_to_build = [
     [opfor_engineer, [12.94, -4.11, 0.00], 93.06],
     [opfor_heavygunner, [-13.52, -13.88, 4.88], 186.59],
     [opfor_medic, [8.98, 11.77, 0.00], 210.35],
@@ -57,9 +57,11 @@ _defenders_to_build = [
     [opfor_grenadier, [1.15, -12.96, 0.00], 206.96]
 ];
 
-_base_corners = [
+private _base_corners = [
     [40, 40, 0],
     [40, -40, 0],
     [-40, -40, 0],
     [-40, 40, 0]
 ];
+
+[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]
