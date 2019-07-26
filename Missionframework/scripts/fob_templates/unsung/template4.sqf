@@ -7,7 +7,7 @@ private _objects_to_build = [
     ["LAND_uns_vctower1", [-14.13, -13.21, 0.00], 42.90],
     ["LAND_uns_vctower1", [12.95, -12.88, 0.00], 318.28],
     ["LAND_uns_vctower1", [13.68, 14.05, 0.00], 224.50],
-    [opfor_mrap, [9.04, -6.93, -0.00], 270.00],
+    [opfor_mrap, [9.04, -7.43, -0.00], 270.00],
     [opfor_flag, [-6.05, -13.43, 0.00], 0.00],
     [opfor_flag, [0.55, 14.33, 0.00], 0.00],
     ["Vil_Fence", [-14.66, 12.34, 0.00], 270.00],
@@ -29,7 +29,7 @@ private _objects_to_build = [
 ];
 
 private _objectives_to_build = [
-    [opfor_ammo_truck, [9.96, -1.73, 0.00], 270.00],
+    [opfor_ammo_truck, [9.96, -2.73, 0.00], 270.00],
     [opfor_fuel_truck, [10.24, 2.73, 0.00], 270.00],
     [opfor_ammo_container, [-10.12, -7.24, 0.00], 270.00],
     [opfor_ammo_container, [-9.74, -2.72, 0.00], 270.00],
