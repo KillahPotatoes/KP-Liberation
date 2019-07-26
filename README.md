@@ -187,7 +187,7 @@ class Missions
 
 ## Changelog
 
-### 0.96.5 (TBD due to Contacts Release)
+### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
 * Added: Contact DLC transport configs.
 * Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor preset.
