@@ -16,20 +16,24 @@ while {true} do {
             _owner = name ((allPlayers select {_groupOwner == (owner _x)}) select 0);
         };
 
-        if !(isGroupDeletedWhenEmpty _x) then {
-            if (local _x) then {
-                _x deleteGroupWhenEmpty true;
-            } else {
-                [_x, true] remoteExec ["deleteGroupWhenEmpty", groupOwner _x];
-            };
-            _markedgroups = _markedgroups + 1;
+        if !(isNil "_owner") then {
+            if !(isGroupDeletedWhenEmpty _x) then {
+                if (local _x) then {
+                    _x deleteGroupWhenEmpty true;
+                } else {
+                    [_x, true] remoteExec ["deleteGroupWhenEmpty", groupOwner _x];
+                };
+                _markedgroups = _markedgroups + 1;
 
-            diag_log format ["[KP LIBERATION] [GROUPCHECK] %1 - Owner: %2 - Units: %3 - Marked now: %4 - Side: %5",
-            groupId _x,
-            _owner,
-            count (units _x),
-            isGroupDeletedWhenEmpty _x,
-            side _x];
+                diag_log format [
+                    "[KP LIBERATION] [GROUPCHECK] %1 - Owner: %2 - Units: %3 - Marked now: %4 - Side: %5",
+                    groupId _x,
+                    _owner,
+                    count (units _x),
+                    isGroupDeletedWhenEmpty _x,
+                    side _x
+                ];
+            };
         };
     } forEach allGroups;
 
