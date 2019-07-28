@@ -57,7 +57,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
         "missionName": "kp_liberation",
         "map": "gm_weferlingen_summer",
-        "mapDisplay": "Weferlingen Summer",
+        "mapDisplay": "Weferlingen",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 9,
@@ -154,6 +154,7 @@
         "sourceFolder": "kp_liberation.song_bin_tanh",
         "missionName": "kp_liberation",
         "map": "song_bin_tanh",
+        "mapDisplay": "Song Bin Tanh",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 15,
@@ -207,7 +208,7 @@
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
         "missionName": "kp_liberation_east",
         "map": "gm_weferlingen_summer",
-        "mapDisplay": "Weferlingen Summer",
+        "mapDisplay": "Weferlingen",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 11,
