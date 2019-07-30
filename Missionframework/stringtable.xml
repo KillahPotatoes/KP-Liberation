@@ -5,7 +5,7 @@
         <!-- German localization made by Wyqer: https://github.com/Wyqer -->
         <!-- Italian localization made by k4s0: https://github.com/k4s0 -->
         <!-- Spanish localization made by regiregi22: https://github.com/regiregi22 -->
-        <!-- Russion localization made by _KOC_: Constantin.rogozin@ya.ru -->
+        <!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru and DjHaski: https://github.com/DjHaski -->
         <!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
         <!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
         <!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
@@ -82,7 +82,7 @@
             <French>CONSTRUCTION</French>
             <German>BAUMENÜ</German>
             <Spanish>MENU DE CONSTRUCCIÓN</Spanish>
-            <Russian>ОБЕСПЕЧЕНИЕ</Russian>
+            <Russian>СТРОИТЕЛЬСТВО</Russian>
             <Italian>MENU COSTRUZIONI</Italian>
             <Chinesesimp>建造菜单</Chinesesimp>
             <Chinese>建造選單</Chinese>
@@ -286,7 +286,7 @@
             <French>-- DECHARGER MUNITIONS</French>
             <German>-- KISTEN ABLADEN</German>
             <Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
-            <Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
+            <Russian>-- ВЫГРУЗИТЬ ЯЩИКИ</Russian>
             <Italian>-- SCARICA CASSA</Italian>
             <Chinesesimp>-- 卸载货箱</Chinesesimp>
             <Chinese>-- 卸載貨物</Chinese>
@@ -373,7 +373,7 @@
             <French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les zones capturables. La zone la plus proche est à %2 mètres d'ici.</French>
             <German>Kann hier keine FOB platzieren, du musst min. %1 Meter von allen Sektoren entfernt sein. Der nächste Sektor ist %2 Meter entfernt.</German>
             <Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
-            <Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшая зона в %2 метрах.</Russian>
+            <Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченного сектора. Ближайший сектор в %2 метрах.</Russian>
             <Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
             <Chinesesimp>无法在此部署前哨，前哨与战区之间的距离不得低于%1米。最近的战区在%2米开外。</Chinesesimp>
             <Chinese>無法在此佈署前線基地，前線基地與戰區之間的距離不得低於 %1 公尺，最近的戰區離此 %2 公尺。</Chinese>
@@ -385,7 +385,7 @@
             <French>Impossible de construire sur l'eau.</French>
             <German>Kann nicht auf Wasser gebaut werden.</German>
             <Spanish>Imposible construir sobre el agua.</Spanish>
-            <Russian>Нельзя построить в воде.</Russian>
+            <Russian>Нельзя построить на воде.</Russian>
             <Italian>Impossibile costruire sull'acqua.</Italian>
             <Chinesesimp>无法在水面上建造。</Chinesesimp>
             <Chinese>無法建造在水面上。</Chinese>
@@ -397,7 +397,7 @@
             <French>Impossible de construire à plus de %1 mètres de la FOB.</French>
             <German>Kann nicht weiter als %1 Meter von der FOB entfernt sein.</German>
             <Spanish>Imposible construir más lejos de %1 metros de la FOB</Spanish>
-            <Russian>Нельзя построить дальше чем в %1 метрах от FOB.</Russian>
+            <Russian>Нельзя строить дальше чем в %1 метрах от FOB.</Russian>
             <Italian>Impossibile costruire a più di %1 metri dalla FOB.</Italian>
             <Chinesesimp>无法在超出前哨%1米外的区域建造。</Chinesesimp>
             <Chinese>無法在距離前線基地 %1 公尺外的區域建造</Chinese>
@@ -409,7 +409,7 @@
             <French>Container FOB</French>
             <German>FOB Container</German>
             <Spanish>Contenedor de FOB</Spanish>
-            <Russian>FOB контейнер</Russian>
+            <Russian>FOB Контейнер</Russian>
             <Chinesesimp>前哨部署柜</Chinesesimp>
             <Chinese>前線基地貨櫃</Chinese>
             <Turkish>FOB Konternırı</Turkish>
@@ -420,7 +420,7 @@
             <French>Camion FOB</French>
             <German>FOB Lastwagen</German>
             <Spanish>Camión de FOB</Spanish>
-            <Russian>FOB грузовик</Russian>
+            <Russian>FOB Грузовик</Russian>
             <Italian>Camion FOB</Italian>
             <Chinesesimp>前哨部署车</Chinesesimp>
             <Chinese>前線基地車</Chinese>
@@ -720,7 +720,7 @@
             <French>Le recyclage de %1 rapportera :</French>
             <German>Die Wiederverwertung von %1 erbringt:</German>
             <Spanish>Reciclando este %1 obtienes:</Spanish>
-            <Russian>Утилизируя %1 вы получите</Russian>
+            <Russian>Утилизируя %1 вы получите:</Russian>
             <Italian>Riciclando questo %1 otterrai:</Italian>
             <Chinesesimp>回收%1将会获得：</Chinesesimp>
             <Chinese>回收%1將會獲得：</Chinese>
@@ -864,7 +864,7 @@
             <French>La FOB %1 est opérationnelle.</French>
             <German>FOB %1 nun funktionsfähig.</German>
             <Spanish>La FOB %1 es operacional</Spanish>
-            <Russian>FOB %1 сейчас действует.</Russian>
+            <Russian>FOB %1 теперь действует.</Russian>
             <Italian>La FOB %1 è operativa.</Italian>
             <Chinesesimp>%1前哨现已入役。</Chinesesimp>
             <Chinese>前線基地 %1 已啟用。</Chinese>
@@ -982,7 +982,7 @@
             <French>FOB hostile près de %1.</French>
             <German>Gegnerische FOB nahe %1.</German>
             <Spanish>FOB hostil cerca de %1</Spanish>
-            <Russian>Вражеская FOB рядом %1.</Russian>
+            <Russian>Вражеская FOB около %1.</Russian>
             <Italian>FOB ostile vicino %1.</Italian>
             <Chinesesimp>%1附近发现了敌军前哨。</Chinesesimp>
             <Chinese>%1 附近發現了敵方的前線基地。</Chinese>
@@ -994,7 +994,7 @@
             <French>Nous avons interroger un prisonnier.</French>
             <German>Wir haben einen Gefangenen verhört.</German>
             <Spanish>Hemos interrogado a un prisionero.</Spanish>
-            <Russian>Мы можем допросить пленного.</Russian>
+            <Russian>Мы допросили пленного.</Russian>
             <Italian>Abbiamo interrogato il prigioniero.</Italian>
             <Chinesesimp>我们审讯了一名战犯。</Chinesesimp>
             <Chinese>我們審問了一名俘虜。</Chinese>
@@ -1218,6 +1218,8 @@
         </Key>
         <Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
             <Original>Manage AI Skill</Original>
+            <Russian>
+            </Russian>
             <Chinesesimp>管理AI能力</Chinesesimp>
             <Chinese>管理 AI 能力</Chinese>
             <Italian>Livello Difficoltà AI</Italian>
@@ -1589,7 +1591,7 @@
             <French>Logistique</French>
             <German>Logistik</German>
             <Spanish>Logística</Spanish>
-            <Russian>Снабжение</Russian>
+            <Russian>Логистика</Russian>
             <Italian>Logistica</Italian>
             <Chinesesimp>后勤</Chinesesimp>
             <Chinese>後勤</Chinese>
@@ -1613,7 +1615,7 @@
             <French>Secteurs Actifs :</French>
             <German>Aktive Sektoren:</German>
             <Spanish>Sectores activos:</Spanish>
-            <Russian>Активные Зоны:</Russian>
+            <Russian>Активные Секторы:</Russian>
             <Italian>Settori Attivi:</Italian>
             <Chinesesimp>活动中的战区：</Chinesesimp>
             <Chinese>觸發中的戰區：</Chinese>
@@ -1625,7 +1627,7 @@
             <French>La limite d'unités actives a été dépassée et l'activation de nouveaux secteurs est temporairement stoppée. Vous pouvez maintenant voir la liste des sectors déjà actifs sur lesquels vous pouvez concentrer vos efforts.</French>
             <German>Maximale Anzahl KI-Einheiten erreicht. Es können keine weitere Zonen aktiviert werden. Du kannst nun die Liste der aktiven Gebiete sehen, auf die du deine Kraft fokussieren solltest.</German>
             <Spanish>El límite de unidades activas se ha excedido, por lo que la activación de sectores queda temporalmente paralizada. Ahora puedes ver la lista de sectores activos donde concentrar tus esfuerzos</Spanish>
-            <Russian>Превышено ограничение по количеству ботов в настройках миссии и активация зон временно приостановлена. Теперь вы можете увидеть список активных в данный момент зон, где вы должны сконцентрировать свои усилия.</Russian>
+            <Russian>Превышено ограничение по количеству ботов в настройках миссии и активация секторов временно приостановлена. Теперь вы можете увидеть список активных в данный момент секторов, где вы должны сконцентрировать свои усилия.</Russian>
             <Italian>L'impostazione unitcap è stata superata e l'attivazione di ulteriori settori è interrotta temporaneamente. Ora è possibile visualizzare l'elenco dei settori attualmente attivi in ​​cui si devono concentrare i vostri sforzi.</Italian>
             <Chinesesimp>已达到单位上限，暂停其他战区的激活。你可以通过活动中的战区列表查看并确立主攻地区。</Chinesesimp>
             <Chinese>敵人生成數量已達單位上限，系統將暫時停止其他戰區的敵軍觸發功能；你可以通過觸發中的戰區來查看並確定想主要進攻的戰區。</Chinese>
@@ -1901,7 +1903,7 @@
             <French>Le membre de l'escouade sélectionné a été réapprovisionné.</French>
             <German>Das ausgewählte Gruppenmitglied wurde versorgt.</German>
             <Spanish>El miembro seleccionado de la escuadra ha sido reamunicionado</Spanish>
-            <Russian>Выбранный член группы был переснаряжён</Russian>
+            <Russian>Выбранный член группы был переснаряжён.</Russian>
             <Italian>Il membro della squadra selezionato è stato rifornito</Italian>
             <Chinesesimp>所选班组成员已补给。</Chinesesimp>
             <Chinese>所選的班級成員以補給。</Chinese>
@@ -1913,7 +1915,7 @@
             <French>Le membre de l'escouade sélectionné n'est pas assez proche d'une FOB ou d'un spawn mobile.</French>
             <German>Das ausgewählte Gruppenmitglied ist nicht nahe genug an einer FOB oder an einem mobilen Spawn.</German>
             <Spanish>El miembro seleccionado de la escuadra no está suficientemente cerca de una FOB o spawn móvil.</Spanish>
-            <Russian>Выбранный член группы находится далеко от КШМ и FOB</Russian>
+            <Russian>Выбранный член группы находится далеко от КШМ или FOB</Russian>
             <Italian>Il membro della squadra non è sufficentemente vicino alla FOB o Respawn Mobile.</Italian>
             <Chinesesimp>所选班组成员距离前哨或机动复活点太远。</Chinesesimp>
             <Chinese>所選的班級成員距離前線基地或機動重生點太遠。</Chinese>
@@ -2425,7 +2427,7 @@
             <French>Déploiement en cours...</French>
             <German>Verlegung im Gange</German>
             <Spanish>Despliegue en curso...</Spanish>
-            <Russian>В процессе выполнения ...</Russian>
+            <Russian>В процессе выполнения...</Russian>
             <Italian>In attesa del lancio ...</Italian>
             <Chinesesimp>正在部署中...</Chinesesimp>
             <Chinese>正在佈署中...</Chinese>
@@ -2473,7 +2475,7 @@
             <French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
             <German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
             <Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
-            <Russian>Удаление брошенной техники вне FOB.</Russian>
+            <Russian>Удаление брошенной техники вне FOB</Russian>
             <Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
             <Chinesesimp>清理前哨外的废弃载具</Chinesesimp>
             <Chinese>清理前線基地外的廢棄載具</Chinese>
@@ -2485,7 +2487,7 @@
             <French>Activé - 1 heure de délai</French>
             <German>Aktiv - 1 Stunde Verzögerung</German>
             <Spanish>Activado- abandonados durante 1 hora</Spanish>
-            <Russian>Вкл - задержка 1 час</Russian>
+            <Russian>Вкл - Задержка 1 час</Russian>
             <Italian>Attivato - eliminazione ogni ora</Italian>
             <Chinesesimp>开启 - 1小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 1 小時</Chinese>
@@ -2497,7 +2499,7 @@
             <French>Activé - 2 heures de délai</French>
             <German>Aktiv - 2 Stunde Verzögerung</German>
             <Spanish>Activado - abandonados durante 2 horas</Spanish>
-            <Russian>Вкл - задержка 2 часа</Russian>
+            <Russian>Вкл - Задержка 2 часа</Russian>
             <Italian>Attivato - eliminazione ogni 2 ore</Italian>
             <Chinesesimp>开启 - 2小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 2 小時</Chinese>
@@ -2509,7 +2511,7 @@
             <French>Activé - 4 heures de délai</French>
             <German>Aktiv - 4 Stunden Verzögerung</German>
             <Spanish>Activado - abandonados durante 4 horas</Spanish>
-            <Russian>Вкл - задержка 4 часа</Russian>
+            <Russian>Вкл - Задержка 4 часа</Russian>
             <Italian>Attivato - eliminazione ogni 4 ore</Italian>
             <Chinesesimp>开启 - 4小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 4 小時</Chinese>
@@ -2557,7 +2559,7 @@
             <French>Votre equipement actuel sera restauré à chaque respawn.</French>
             <German>Deine Ausrüstung wird bei jedem Respwan wiederhergestellt.</German>
             <Spanish>Tu actual equipamiento seá mantenido en cada respawn.</Spanish>
-            <Russian>Ваше текущее снаряжение будет загружаться после каждого возрождения</Russian>
+            <Russian>Ваше текущее снаряжение будет загружаться после каждого возрождения.</Russian>
             <Italian>Il tuo equipaggiamneto sarà ricaricato ad ogni respawn</Italian>
             <Chinesesimp>你的装备将在重生时恢复到现有状态。</Chinesesimp>
             <Chinese>重生後，你的裝備將恢復到現有狀態。</Chinese>
@@ -2677,7 +2679,7 @@
             <French>Extreme</French>
             <German>Extrem</German>
             <Spanish>Extrema</Spanish>
-            <Russian>Очень сильно</Russian>
+            <Russian>Экстремально</Russian>
             <Italian>Estremo</Italian>
             <Chinesesimp>噩梦</Chinesesimp>
             <Chinese>惡夢</Chinese>
@@ -2785,7 +2787,7 @@
             <French>-- PRENDRE INTEL</French>
             <German>-- GEHEIMDIENSTINFORMATIONEN AUFNEHMEN</German>
             <Spanish>-- COGER INTELIGENCIA</Spanish>
-            <Russian>-- ПОЛУЧИТЬ РАЗВЕДДАННЫЕ</Russian>
+            <Russian>-- ВЗЯТЬ РАЗВЕДДАННЫЕ</Russian>
             <Italian>-- PREDI INTEL</Italian>
             <Chinesesimp>-- 拿取情报</Chinesesimp>
             <Chinese>-- 拿取情報</Chinese>
@@ -2845,7 +2847,7 @@
             <French>Points d'intel insuffisants</French>
             <German>Zu wenige Geheimdienstinformationen</German>
             <Spanish>Puntos de inteligencia insuficientes</Spanish>
-            <Russian>Недостаточно информации</Russian>
+            <Russian>Недостаточно разведданных</Russian>
             <Italian>Punti intel insufficenti</Italian>
             <Chinesesimp>情报点不足</Chinesesimp>
             <Chinese>情報點不足</Chinese>
@@ -2965,7 +2967,7 @@
             <French>Chasse à la FOB</French>
             <German>FOB Jagd</German>
             <Spanish>Caza de FOB</Spanish>
-            <Russian>Охота за вражескими FOB</Russian>
+            <Russian>Охота на FOB</Russian>
             <Italian>Caccia alla FOB</Italian>
             <Chinesesimp>狩猎前哨</Chinesesimp>
             <Chinese>獵殺前線基地</Chinese>
@@ -3034,13 +3036,13 @@
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
             </Spanish>
             <Russian>
-            &lt;t size='1.3' color='#ffa000'&gt;ОХОТА ЗА FOB&lt;/t&gt;
+            &lt;t size='1.3' color='#ffa000'&gt;ОХОТА НА FOB&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Силы OPFOR используют небольшие базы снабжения, расположенные за линией фронта. Уничтожение материальных средств этих баз значительно нарушит связи снабжения OPFOR и ухудшит их способность реагировать на ваши действия.&lt;/t&gt;&lt;br/&gt;	&lt;t size='1'&gt;
             Ваша миссия состоит в том, чтобы уничтожить на базах все средства снабжения (грузовики, контейнеры) любыми средствами, находящимися в вашем распоряжении. К сожалению, наша разведка не в состоянии предоставить вам точное положение этих баз, вам придется найти их самостоятельно. Ищите базы снабжения в районе красной зоны, отмеченной на вашей карте.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
-            &lt;t size='1.15' color='#00a0ff'&gt;Требуется: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+            &lt;t size='1.15' color='#00a0ff'&gt;Стоимость: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень тревоги OPFOR уменьшится на 40%&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень обеспокоенности OPFOR уменьшится на 40%&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
             </Russian>
@@ -3125,7 +3127,7 @@
             <French>Interception de convoi</French>
             <German>Konvoi Hinterhalt</German>
             <Spanish>Interceptar el Convoy</Spanish>
-            <Russian>Налёт на конвой врага</Russian>
+            <Russian>Перехват конвоя</Russian>
             <Italian>Intercetta il Convoglio</Italian>
             <Chinesesimp>劫掠车队</Chinesesimp>
             <Chinese>攔截車隊</Chinese>
@@ -3201,7 +3203,7 @@
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
             </Spanish>
-            <Russian>&lt;t size='1.3' color='#ffa000'&gt;НАЛЁТ НА КОНВОЙ&lt;/t&gt;
+            <Russian>&lt;t size='1.3' color='#ffa000'&gt;ПЕРЕХВАТ КОНВОЯ&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
             Силы OPFOR используют автоколонны для снабжения своих оборонительных позиций. Перехват одного из этих конвоев эффективно нарушил бы их связи снабжения, и мы могли бы использовать эту возможность для получения большого количество вооружения.&lt;/t&gt;
@@ -3211,9 +3213,9 @@
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1.15' color='#00a0ff'&gt;Стоимость: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень тревоги OPFOR уменьшится на 15%&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень обеспокоенности OPFOR уменьшится на 15%&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Вторичная награда: Всё вооружение, которое можно получить за утилизацию груза конвоя.&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Дополнительная награда: Всё вооружение, которое можно получить за утилизацию груза конвоя.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
             </Russian>
@@ -3370,7 +3372,7 @@
             <French>Recherche et Sauvetage</French>
             <German>Helikopterbergung</German>
             <Spanish>Búsqueda y rescate</Spanish>
-            <Russian>Поиск и спасение</Russian>
+            <Russian>Найти и спасти</Russian>
             <Italian>Cerca e Soccorri</Italian>
             <Chinesesimp>搜索与营救</Chinesesimp>
             <Chinese>搜索與營救</Chinese>
@@ -3439,17 +3441,17 @@
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
             </Spanish>
             <Russian>
-            &lt;t size='1.3' color='#ffa000'&gt;SEARCH AND RESCUE&lt;/t&gt;
+            &lt;t size='1.3' color='#ffa000'&gt;НАЙТИ И СПАСТИ&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
             Мы потеряли связь с вертолетом спецотряда, на задании в тылу врага. Мы считаем, что вертолет был сбит вражескими силами.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            Вертолет, возможно, упал где-то в большой зоне вокруг последнего известного положения. Ваша миссия состоит в том, чтобы спасти экипаж вертолета и их драгоценных Интел. Враги, возможно, нашли их первыми, поэтому вы должны быть быстрым, внимательным, и готовы к битве.&lt;/t&gt;
+            Вертолет, возможно, упал где-то в большой зоне вокруг последнего известного положения. Ваша миссия состоит в том, чтобы спасти экипаж вертолета и их драгоценные разведданные. Враги, возможно, нашли их первыми, поэтому вы должны быть быстрым, внимательным, и готовы к битве.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
-            &lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+            &lt;t size='1.15' color='#00a0ff'&gt;Стоимость: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 intel points (10 for each crew alive).&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Награда: 20 разведданных (10 за каждого живого экипажа вертолета)&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
             </Russian>
@@ -3548,7 +3550,7 @@
             <French>Helicopter crashé près de %1.</French>
             <German>Helikopterabsturz in der Nähe von %1</German>
             <Spanish>Helicóptero derribado cerca de %1</Spanish>
-            <Russian>Разбился вертолет рядом %1.</Russian>
+            <Russian>Вертолет разбился около %1.</Russian>
             <Italian>L'elicottero si è schiantato nei pressi di %1.</Italian>
             <Chinesesimp>直升机坠毁在%1附近</Chinesesimp>
             <Chinese>直升機墜落在 %1 附近</Chinese>
@@ -3560,7 +3562,7 @@
             <French>Mission SAR échouée, les deux équipages sont morts.</French>
             <German>SAR Mission fehlgeschlagen. Beide Crewmitglieder gefallen.</German>
             <Spanish>Misión de Búsqueda y Rescate fallida, ambos tripulantes están muertos</Spanish>
-            <Russian>Миссия спасение не удалась, экипаж погиб.</Russian>
+            <Russian>Миссия спасения не удалась, экипаж погиб.</Russian>
             <Italian>Missione Cerca e Soccorri FALLITA,l'equipaggio è stato ucciso</Italian>
             <Chinesesimp>营救任务失败，两名组员均已阵亡。</Chinesesimp>
             <Chinese>營救任務失敗，直升機機組員全員陣亡。</Chinese>
@@ -3572,7 +3574,7 @@
             <French>Mission SAR réussie.</French>
             <German>SAR Mission erfolgreich</German>
             <Spanish>Misión de Búsqueda y Rescate completada satisfactoriamente</Spanish>
-            <Russian>Миссия спасения выполнена</Russian>
+            <Russian>Миссия спасения выполнена.</Russian>
             <Italian>Missione Cerca e Soccorri completata con successo</Italian>
             <Chinesesimp>营救任务成功。</Chinesesimp>
             <Chinese>營救任務成功。</Chinese>
@@ -3661,7 +3663,7 @@
             <Original>Flight Control</Original>
             <German>Flugkontrolle</German>
             <Spanish>Torre de Control Aéreo</Spanish>
-            <Russian>Управление полетом</Russian>
+            <Russian>Управление полетами</Russian>
             <Italian>Torre di controllo Aerea</Italian>
             <Chinesesimp>空管塔台</Chinesesimp>
             <Chinese>空管塔台</Chinese>
@@ -3694,7 +3696,7 @@
             <Original>There is no free storage area nearby.</Original>
             <German>Keine freie Lagerfläche in der Nähe.</German>
             <Spanish>No hay sitio de almacenamiento cercano</Spanish>
-            <Russian>Рядом с вами нет свободного места</Russian>
+            <Russian>Рядом с вами нет свободного склада.</Russian>
             <Italian>Non c'è un area deposito nelle vicinanze</Italian>
             <Chinesesimp>这附近没有空闲的仓储区</Chinesesimp>
             <Chinese>這附近沒有具備足夠空間的倉儲區</Chinese>
@@ -3749,7 +3751,7 @@
             <Original>-- CHECK CONTENT</Original>
             <German>-- INHALT PRÜFEN</German>
             <Spanish>-- COMPROBAR CONTENIDO</Spanish>
-            <Russian>-- ПРОВЕРИТЬ СОДЕРЖАНИЕ</Russian>
+            <Russian>-- ПРОВЕРИТЬ СОДЕРЖИМОЕ</Russian>
             <Italian>-- CONTROLLA CARICO</Italian>
             <Chinesesimp>-- 检查存货</Chinesesimp>
             <Chinese>-- 檢查存貨</Chinese>
@@ -4032,7 +4034,7 @@
         <Key ID="STR_SECSTORAGEBUILD_ACTION">
             <Original>-- Build storage --</Original>
             <German>-- Lagerfläche bauen --</German>
-            <Russian>-- Создание хранилища --</Russian>
+            <Russian>-- Построить склад --</Russian>
             <Italian>-- Crea area di stoccaggio --</Italian>
             <Chinesesimp>-- 建造仓储库 --</Chinesesimp>
             <Chinese>-- 建造倉儲空間 --</Chinese>
@@ -4222,7 +4224,7 @@
         <Key ID="STR_LOGISTIC_DESTINATION">
             <Original>Next destination:</Original>
             <German>Nächster Zielort:</German>
-            <Russian>Следующий пункт:</Russian>
+            <Russian>След. пункт:</Russian>
             <Italian>Prossima destinazione:</Italian>
             <Chinesesimp>下个目的地：</Chinesesimp>
             <Chinese>下個目的地：</Chinese>
@@ -4242,7 +4244,7 @@
         <Key ID="STR_LOGISTIC_TRUCKCOUNT">
             <Original>Assigned Trucks</Original>
             <German>Zugeteilte LKWs</German>
-            <Russian>Назначенные грузовики</Russian>
+            <Russian>Грузовики</Russian>
             <Italian>Camion Assegnati</Italian>
             <Chinesesimp>已指派的卡车</Chinesesimp>
             <Chinese>已指派的卡車</Chinese>
@@ -4272,7 +4274,7 @@
         <Key ID="STR_LOGISTIC_TT_BUYTRUCK">
             <Original>Costs: 100 supplies and 100 fuel.</Original>
             <German>Kosten: 100 Nachschub und 100 Kraftstoff.</German>
-            <Russian>Затраты: 100 припасов и 100 единиц топлива.</Russian>
+            <Russian>Стоимость: 100 припасов и 100 единиц топлива.</Russian>
             <Italian>Costo: 100 approvvigionamenti e 100 carburante.</Italian>
             <Chinesesimp>花费：100补给和100燃料。</Chinesesimp>
             <Chinese>花費：100 補給和 100 油料。</Chinese>
@@ -4520,7 +4522,7 @@
             Dovrete trasportare quel container con lo Spartan-01 (o scegliere di iniziare con la prima FOB già costruita). Puoi costruire la FOB dove vuoi (finché sei a 1 km dalla posizione iniziale e 300 metri da qualsiasi settore), quindi stà a voi scegliere il posto giusto per iniziare l'offensiva della vostra campagna.&lt;br/&gt; &lt;br/&gt;
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
-            Вы начинаете кампанию либо на борту Авионосца, либо на базе Химеры, в безопасных зонах, которые враг не посмеет атаковать. Ваш первый выбор - выбрать, где вы хотите развернуться. Сначала вы можете развертывать только в начальной позиции, но по мере продвижения вперед будут доступны дополнительные опции, такие как Forward Operating Bases (FOB) и мобильные респавны.&lt;br/&gt; &lt;br/&gt;
+            Вы начинаете кампанию либо на борту Авионосца, либо на базе Химеры, в безопасных зонах, которые враг не посмеет атаковать. Ваш первый выбор - выбрать, где вы хотите развернуться. Сначала вы можете развертывать только в начальной позиции, но по мере продвижения вперед будут доступны дополнительные опции, такие как Forward Operating Bases (FOB) и мобильные КШМ.&lt;br/&gt; &lt;br/&gt;
             На стартовой позиции вы можете выбрать свое снаряжение из полного арсенала. Вы также найдете свой первый FOB, упакованный в контейнер, вертолет Spartan-01 и несколько других небольших транспортных вертолетов.&lt;br/&gt; &lt;br/&gt;
             Вам придется переправить этот контейнер с помощью Spartan-01 (или начать с первого уже построенного FOB). Вы можете развернуть этот первый FOB везде, где хотите (пока вы в 1 км от стартовой позиции и 300 м от любого сектора), поэтому вам решать, какое место выбрать для начала наступления в вашей кампании.&lt;br/&gt; &lt;br/&gt;
             </Russian>
@@ -4627,9 +4629,9 @@
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
             Секторы разбиты на 5 различных типов:&lt;br/&gt; &lt;br/&gt;
-            - Точки интереса (PoI): Вообще, от небольших до средних деревень / городов каждый контролируемый вами PoI может быть модернизирован (после создания зоны хранения), чтобы обеспечить один из трех типов ресурсов, которые вам понадобятся для продолжения производства вооруженных сил и вооружений.&lt;br/&gt; &lt;br/&gt;
-            - Заводы: Во всем регионе вы найдете гражданские заводы под контролем противника. Захватите их, поскольку они нуждаются только в области хранения, и затем могут производить один из трех ресурсов без обновления. Стратегически они являются первоочередной целью!&lt;br/&gt; &lt;br/&gt;
-            - Военные базы: Военные базы: полные персонала, базы будут приносить большое количество боеприпасов которые будут полезны для обновления огневой мощи. Однако эти сооружения в значительной степени защищены и потребуют больших и хорошо скоординированных усилий!&lt;br/&gt; &lt;br/&gt;
+            - Точки интереса (PoI): В основном, являются от маленьких до средних по размеру деревни\города. Хотя эти места стратегически не важны, они являются местом проживания граждан региона и имеют ключевое значение для завоевания их доверия.&lt;br/&gt; &lt;br/&gt;
+            - Заводы: Во всем регионе вы найдете гражданские заводы под контролем противника. Данные заводы специализированы на производстве одного из трех ресурсов (Припасы, Боеприпасы и Топливо), но могут быть улучшены для производства всех трех видов ресурсов. Поэтому они являются первой стратегической целью!&lt;br/&gt; &lt;br/&gt;
+            - Военные базы: Базы являются домом для большого количество хорошо экипированных вражеских войск. Данные сооружения очень сильно защищены и потребуют больших и хорошо скоординированных усилий, если вы хотите захватить их. Захват данных баз даст нам возможность мобилизовать более сильные войска в регионе, поэтому они важны для вашего успеха.&lt;br/&gt; &lt;br/&gt;
             - Радиовышки (RT): Когда под контролем противника, RT будет использоваться для вызова подкреплений, когда соседний сектор атакуют наши собственные силы. Время реакции будет зависеть от расстояния между башней и сектором. Когда под дружественным контролем, башни дадут разведданные о передвижениях войск в окрестностях, перехватив их радиосвязь.&lt;br/&gt; &lt;br/&gt;
             - Крупные города: В регионе есть несколько крупных городов. Когда все находятся под дружественным контролем, мы, наверняка, отбили врага до такой степени, что он не сможет восстановить контроль. Это ваша основная цель.&lt;br/&gt; &lt;br/&gt;
             </Russian>
@@ -4695,10 +4697,10 @@
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
             В этой кампании вы должны управлять, хранить и защищать три типа ресурсов:&lt;br/&gt; &lt;br/&gt;
-            &lt;t color='#00ff00'&gt;ПРИПАСЫ:&lt;/t&gt; Это самое важное. Без расходных материалов вы не сможете развернуть дополнительных солдат или реквизировать любую военную технику. Таким образом, HQ рекомендует расставить приоритеты первым!&lt;br/&gt; &lt;br/&gt;
+            &lt;t color='#00ff00'&gt;ПРИПАСЫ:&lt;/t&gt; Это самое важное. Без припасов вы не сможете развернуть дополнительных солдат или реквизировать любую военную технику. Таким образом, HQ рекомендует расставить приоритеты первым!&lt;br/&gt; &lt;br/&gt;
             &lt;t color='#ff0000'&gt;БОЕПРИПАСЫ:&lt;/t&gt; Используется для оснащения вооруженных автомобилей, а также элитных (и хорошо вооруженных) солдат.&lt;br/&gt; &lt;br/&gt;
             &lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; Каждому транспортному средству нужно топливо,некоторым требуется больше, чем другим.&lt;br/&gt; &lt;br/&gt;
-            Вы можете встретить все три ресурса в любом секторе, но для значительного и постоянного снабжения вы должны захватывать сектора PoI и Заводы! После захвата оба требуют области хранения (действие меню прокрутки), а затем PoI также потребует создания объекта (опять же, действие в меню прокрутки). Все три объекта могут быть построены в любом одном PoI, но вы должны заплатить первоначальную стоимость, чтобы настроить эти объекты! Это 50 конкретных ресурсов и 100 других двух.&lt;br/&gt; &lt;br/&gt;
+            Вы можете встретить все три ресурса в любом секторе, но для значительного и постоянного снабжения вы должны захватывать Заводы! После захвата, заводы требуют склада (действие меню прокрутки) и тогда они смогут приступить к производству ресурсов. Вы также можете улучшить заводы для производства двух остальных ресурсов.&lt;br/&gt; &lt;br/&gt;
             </Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;
             这个战役中你必须管理、囤积并保护三种资源：&lt;br/&gt; &lt;br/&gt;
@@ -4727,7 +4729,7 @@
             <French>6. Niveau d'alerte</French>
             <German>6. Alarmstatus</German>
             <Spanish>6. Nivel de alerta</Spanish>
-            <Russian>6. Уровень тревоги</Russian>
+            <Russian>6. Уровень обеспокоенности</Russian>
             <Italian>6. Livello di Allerta</Italian>
             <Chinesesimp>6. 警戒等级</Chinesesimp>
             <Chinese>6. 威脅度</Chinese>
@@ -4748,7 +4750,7 @@
             Per limitare la capacità offensiva dei nemici, dovrete compiere missioni secondarie che consistono nel distruggere le basi logistiche e raidare i loro convogli. Questo non è richiesto per vincere la campagna, ma se ignorate troppo il livello di allarta, sarate pronti a contrastare la risposta?.&lt;br/&gt; &lt;br/&gt;
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
-            OPFOR не будут сидеть сложа руки, пока вы будете освобождать все зоны, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt;
+            OPFOR не будут сидеть сложа руки, пока вы будете освобождать все сектора, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt;
             Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;
             </Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;
@@ -4795,7 +4797,7 @@
             <Russian>&lt;br/&gt;&lt;br/&gt;
             Чтобы помочь вам добиться успеха в ваших начинаниях, у вас есть возможность строительства на каждом FOB, что позволяет вам развертывать пехоту, транспортные средства, оборонительные сооружения, укрепления и т.д. В вашем конкретном месте.&lt;br/&gt; &lt;br/&gt;
             Хотя пехота, транспортные средства и средства защиты будут стоить ресурсов, тогда как укрепления, конструкции, мешки с песком и стены бесплатны.&lt;br/&gt; &lt;br/&gt;
-            Система строительства будет доступна, если вы находитесь дальше 100 метров от любого FOB.&lt;br/&gt; &lt;br/&gt;
+            Система строительства будет доступна, если вы находитесь не дальше чем 100 метров от любого FOB.&lt;br/&gt; &lt;br/&gt;
             </Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;
             为了帮助你走向成功，每个前哨都拥有能让你在限定范围内部署步兵、载具、防御、工事等军备的建造能力。&lt;br/&gt; &lt;br/&gt;
@@ -4841,7 +4843,7 @@
             Sarebbe semplicemente ridondante!&lt;br/&gt; &lt;br/&gt;
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
-            Чтобы построить совершенно новый FOB, перейдите в меню конструирования, а затем вкладку логистики и постройте контейнер FOB или грузовик FOB (то же самое, только с колесами). Затем вы можете разместить контейнер / грузовик FOB, где вы хотите развернуть свой новый новый FOB. Однако имейте в виду, что вы не можете построить FOB в пределах 1 км от начальной позиции, в пределах 300 м от любого сектора или в пределах 2 км от любого другого FOB.&lt;br/&gt; &lt;br/&gt;
+            Чтобы построить совершенно новый FOB, перейдите в меню постройки, а затем вкладку логистики и постройте контейнер FOB или грузовик FOB (то же самое, только с колесами). Затем вы можете разместить контейнер / грузовик FOB, где вы хотите развернуть свой новый новый FOB. Однако имейте в виду, что вы не можете построить FOB в пределах 1 км от начальной позиции, в пределах 300 м от любого сектора или в пределах 2 км от любого другого FOB.&lt;br/&gt; &lt;br/&gt;
             Это было бы просто излишним!&lt;br/&gt; &lt;br/&gt;
             </Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;
@@ -4886,7 +4888,7 @@
             Dopo essere andato lì dovrai trovare la posizione esatta del tuo bersaglio, quindi utilizzare qualsiasi mezzo a tua disposizione per completare il tuo obiettivo. Eseguire questo compito sarà premiato, riducendo così il livello di allarme e con essa l'efficienza di tutte le forze ostili.&lt;br/&gt; &lt;br/&gt;
             </Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;
-            Когда вы захватываете сектора, иногда несколько оставшихся сил противника будут сдаваться. Затем вы можете захватить этих пленных и отвезти их в соседний ФОБ для допроса.&lt;br/&gt; &lt;br/&gt;
+            Когда вы захватываете сектора, иногда несколько оставшихся сил противника будут сдаваться. Затем вы можете захватить этих пленных и отвезти их в соседний FOB для допроса.&lt;br/&gt; &lt;br/&gt;
             Этот допрос, выполненный в полном уважении Женевской конвенции, позволит вам получить точную информацию, которая может быть использована для выявления грубой позиции базы материально-технического обеспечения противника, конвоя противника или дружественного поиска и спасения.&lt;br/&gt; &lt;br/&gt;
             Побывав там, вам нужно будет найти точное положение вашей цели, а затем использовать любые имеющиеся в вашем распоряжении средства для достижения своей цели. Достижение этой цели будет вознаграждено, следовательно, будет уменьшаться уровень оповещения, а вместе с ним и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;
             </Russian>
@@ -4937,7 +4939,7 @@
             <Russian>&lt;br/&gt;&lt;br/&gt;
             Когда игрок использует роль Commander, он получает специальный доступ к интерфейсу Zeus, нажав соответствующую клавишу (по умолчанию Y). Этот интерфейс позволяет управлять дружественными силами в трехмерном режиме или в режиме карты. &lt;br/&gt; &lt;br/&gt;
             Кроме того, командир получает дополнительные варианты сборки, которые позволят ему создавать технику с экипажем или готовые отряды. &lt;br/&gt; &lt;br/&gt;
-            Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Factory создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;
+            Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Завод создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;
             </Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;
             当一名玩家扮演指挥官角色时，他将会得到按指定按键（默认为Y）打开宙斯（Zeus）界面的权限。该界面让玩家可以在3D或地图视角中指挥友军部队。&lt;br/&gt; &lt;br/&gt;
@@ -5048,6 +5050,7 @@
         <Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
             <Original>-- Extended Options --</Original>
             <German>-- Erweiterte Optionen --</German>
+            <Russian>-- Расширенные Опции --</Russian>
             <Italian>-- Opzioni Avanzate --</Italian>
             <Chinesesimp>-- 扩展选项 --</Chinesesimp>
             <Chinese>-- 擴增選項 --</Chinese>
@@ -5057,6 +5060,7 @@
         <Key ID="STR_GREUH_EXTENDED_OPTIONS">
             <Original>Extended Options</Original>
             <German>Erweiterte Optionen</German>
+            <Russian>Расширенные Опции</Russian>
             <Italian>Opzioni Avanzate</Italian>
             <Chinesesimp>扩展选项</Chinesesimp>
             <Chinese>擴增選項</Chinese>
@@ -5076,6 +5080,7 @@
         <Key ID="STR_GREUH_SQUAD_MANAGEMENT">
             <Original>Squad Management</Original>
             <German>Truppmanagement</German>
+            <Russian>Управление Отрядами</Russian>
             <Italian>Gestione Squadra</Italian>
             <Chinesesimp>班组管理</Chinesesimp>
             <Chinese>班級管理</Chinese>
@@ -5085,6 +5090,7 @@
         <Key ID="STR_GREUH_JOIN">
             <Original>Join</Original>
             <German>Beitreten</German>
+            <Russian>Войти</Russian>
             <Italian>Unisciti</Italian>
             <Chinesesimp>加入</Chinesesimp>
             <Chinese>加入</Chinese>
@@ -5094,6 +5100,7 @@
         <Key ID="STR_GREUH_CREATE">
             <Original>Create</Original>
             <German>Erstellen</German>
+            <Russian>Создать</Russian>
             <Italian>Crea</Italian>
             <Chinesesimp>创建</Chinesesimp>
             <Chinese>建立</Chinese>
@@ -5103,6 +5110,7 @@
         <Key ID="STR_GREUH_RENAME">
             <Original>Rename</Original>
             <German>Umbenennen</German>
+            <Russian>Переим.</Russian>
             <Italian>Rinomina</Italian>
             <Chinesesimp>重命名</Chinesesimp>
             <Chinese>重新命名</Chinese>
@@ -5112,6 +5120,7 @@
         <Key ID="STR_GREUH_LEADER">
             <Original>Leader</Original>
             <German>Anführer</German>
+            <Russian>Лидер</Russian>
             <Italian>Capo Squadra</Italian>
             <Chinesesimp>班长</Chinesesimp>
             <Chinese>班長</Chinese>
@@ -5121,6 +5130,7 @@
         <Key ID="STR_GREUH_CANCEL">
             <Original>Cancel</Original>
             <German>Abbrechen</German>
+            <Russian>Отмена</Russian>
             <Italian>Cancella</Italian>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
@@ -5130,6 +5140,7 @@
         <Key ID="STR_GREUH_CHOOSE">
             <Original>Choose</Original>
             <German>Wählen</German>
+            <Russian>Выбрать</Russian>
             <Italian>Scegli</Italian>
             <Chinesesimp>选择</Chinesesimp>
             <Chinese>選擇</Chinese>
@@ -5139,6 +5150,7 @@
         <Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
             <Original>Platoon and Squad Awareness</Original>
             <German>Sichthilfen und Kartenmarkierungen</German>
+            <Russian>Информирование о Взводах и Группах</Russian>
             <Italian>Indicatori di Mappa</Italian>
             <Chinesesimp>班排警戒</Chinesesimp>
             <Chinese>班排警戒</Chinese>
@@ -5148,6 +5160,7 @@
         <Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
             <Original>Show platoon overlay:</Original>
             <German>Platoon Overlay:</German>
+            <Russian>Показ. оверлей взводов:</Russian>
             <Italian>Indicatore Plotone:</Italian>
             <Chinesesimp>显示排界面：</Chinesesimp>
             <Chinese>顯示排介面：</Chinese>
@@ -5157,6 +5170,7 @@
         <Key ID="STR_GREUH_ACTIVE">
             <Original>active</Original>
             <German>aktiv</German>
+            <Russian>активно</Russian>
             <Italian>attivo</Italian>
             <Chinesesimp>启用</Chinesesimp>
             <Chinese>啟用</Chinese>
@@ -5166,6 +5180,7 @@
         <Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
             <Original>Show player nametags:</Original>
             <German>Spielernamen:</German>
+            <Russian>Показ. имена игроков:</Russian>
             <Italian>Indicatore Nomi:</Italian>
             <Chinesesimp>显示玩家铭牌：</Chinesesimp>
             <Chinese>顯示玩家名牌：</Chinese>
@@ -5175,6 +5190,7 @@
         <Key ID="STR_GREUH_YES">
             <Original>Yes</Original>
             <German>Ja</German>
+            <Russian>Да</Russian>
             <Italian>Si</Italian>
             <Chinesesimp>是</Chinesesimp>
             <Chinese>是</Chinese>
@@ -5184,6 +5200,7 @@
         <Key ID="STR_GREUH_NO">
             <Original>No</Original>
             <German>Nein</German>
+            <Russian>Нет</Russian>
             <Italian>No</Italian>
             <Chinesesimp>否</Chinesesimp>
             <Chinese>否</Chinese>
@@ -5193,6 +5210,7 @@
         <Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
             <Original>Adjust View Distance</Original>
             <German>Sichtweite ändern</German>
+            <Russian>Настройка Дистанции Прорисовки</Russian>
             <Italian>Aggiusta Distanza Visiva</Italian>
             <Chinesesimp>调整视距</Chinesesimp>
             <Chinese>調整視距</Chinese>
@@ -5202,6 +5220,7 @@
         <Key ID="STR_GREUH_VIEW_DISTANCE">
             <Original>View Distance</Original>
             <German>Sichtweite</German>
+            <Russian>Дистанции Прорисовки</Russian>
             <Italian>Distanza Visuale</Italian>
             <Chinesesimp>视野距离</Chinesesimp>
             <Chinese>視野距離</Chinese>
@@ -5211,6 +5230,7 @@
         <Key ID="STR_GREUH_INFANTRY">
             <Original>Infantry</Original>
             <German>Infanterie</German>
+            <Russian>Пехота</Russian>
             <Italian>Fanteria</Italian>
             <Chinesesimp>步兵</Chinesesimp>
             <Chinese>步兵</Chinese>
@@ -5220,6 +5240,7 @@
         <Key ID="STR_GREUH_VEHICLES">
             <Original>Vehicles</Original>
             <German>Fahrzeuge</German>
+            <Russian>Транспорт</Russian>
             <Italian>Veicoli</Italian>
             <Chinesesimp>载具</Chinesesimp>
             <Chinese>載具</Chinese>
@@ -5229,6 +5250,7 @@
         <Key ID="STR_GREUH_OBJECTS">
             <Original>Objects</Original>
             <German>Objekte</German>
+            <Russian>Объекты</Russian>
             <Italian>Oggetti</Italian>
             <Chinesesimp>物体</Chinesesimp>
             <Chinese>物件</Chinese>
@@ -5238,6 +5260,7 @@
         <Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
             <Original>Adjust view distance to keep FPS above</Original>
             <German>Automatische Sichtweite für FPS über</German>
+            <Russian>Настроить дист. прорисовки для FPS более</Russian>
             <Italian>Aggiusta distanza in base agli FPS</Italian>
             <Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
             <Chinese>自動調整視距並確保 FPS 高於</Chinese>
@@ -5247,6 +5270,7 @@
         <Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
             <Original>Adjust Terrain Details</Original>
             <German>Landschaftdetails</German>
+            <Russian>Настройка Детализации Земли</Russian>
             <Italian>Aggiusta Dettagli Terreno</Italian>
             <Chinesesimp>调整地形细节</Chinesesimp>
             <Chinese>調整地形細節</Chinese>
@@ -5256,6 +5280,7 @@
         <Key ID="STR_GREUH_VERY_LOW">
             <Original>Very Low</Original>
             <German>Sehr niedrig</German>
+            <Russian>Очень низко</Russian>
             <Italian>Molto Basso</Italian>
             <Chinesesimp>极低</Chinesesimp>
             <Chinese>極低</Chinese>
@@ -5265,6 +5290,7 @@
         <Key ID="STR_GREUH_LOW">
             <Original>Low</Original>
             <German>Niedrig</German>
+            <Russian>Низко</Russian>
             <Italian>Basso</Italian>
             <Chinesesimp>低</Chinesesimp>
             <Chinese>低</Chinese>
@@ -5274,6 +5300,7 @@
         <Key ID="STR_GREUH_NORMAL">
             <Original>Normal</Original>
             <German>Normal</German>
+            <Russian>Нормально</Russian>
             <Italian>Normale</Italian>
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
@@ -5283,6 +5310,7 @@
         <Key ID="STR_GREUH_HIGH">
             <Original>High</Original>
             <German>Hoch</German>
+            <Russian>Высоко</Russian>
             <Italian>Alto</Italian>
             <Chinesesimp>高</Chinesesimp>
             <Chinese>高</Chinese>
@@ -5292,6 +5320,7 @@
         <Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
             <Original>Show teammates on map:</Original>
             <German>Truppmitglieder auf Karte:</German>
+            <Russian>Отобр. напарников на карте:</Russian>
             <Italian>Mostra compagni in mappa:</Italian>
             <Chinesesimp>在地图上显示友军：</Chinesesimp>
             <Chinese>在地圖上顯示友軍單位：</Chinese>
@@ -5301,6 +5330,7 @@
         <Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
             <Original>In-Vehicle Sound Volume</Original>
             <German>Fahrzeug Innenlautstärke</German>
+            <Russian>Громкость звука в транспорте</Russian>
             <Italian>Suono veicolo a bordo</Italian>
             <Chinesesimp>载具内音量</Chinesesimp>
             <Chinese>載具內音量</Chinese>
@@ -5310,6 +5340,7 @@
         <Key ID="STR_GREUH_TEST">
             <Original>Test</Original>
             <German>Test</German>
+            <Russian>Тест</Russian>
             <Italian>Test</Italian>
             <Chinesesimp>测试</Chinesesimp>
             <Chinese>測試</Chinese>
@@ -5319,6 +5350,7 @@
         <Key ID="STR_GREUH_RESPAWN">
             <Original>Respawn</Original>
             <German>Respawn</German>
+            <Russian>Возродиться</Russian>
             <Italian>Riapparizione</Italian>
             <Chinesesimp>重生</Chinesesimp>
             <Chinese>重生</Chinese>
@@ -5328,6 +5360,7 @@
         <Key ID="STR_GREUH_REPLACE_NEAREST_AI">
             <Original>Replace nearest AI</Original>
             <German>Ersetze nächste KI</German>
+            <Russian>Заменить ближайшие ИИ</Russian>
             <Italian>Rimpiazza AI</Italian>
             <Chinesesimp>就近附身AI</Chinesesimp>
             <Chinese>就近附身 AI</Chinese>
@@ -5375,7 +5408,7 @@
         <Key ID="STR_PARAM_CR_BUILDING">
             <Original>Civil Reputation penalty for buildings if building is</Original>
             <German>Ziviles Ansehen sinkt, wenn Gebäude</German>
-            <Russian>Штраф к Репутации Гражданских для построек, если постройка</Russian>
+            <Russian>Штраф к Репутации Гражданских, если постройка</Russian>
             <Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
             <Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
             <Chinese>當建築物＿＿時，民間聲望會降低。</Chinese>
@@ -5425,7 +5458,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_FIVE">
             <Original>The server will restart in less than 5 minutes!</Original>
             <German>Server Restart in weniger als 5 Minuten!</German>
-            <Russian>Сервер перезапустится через 5 минут!</Russian>
+            <Russian>Сервер перезапустится меньше чем через 5 минут!</Russian>
             <Italian>Il server si riavvierà tra meno di 5 minuti!</Italian>
             <Turkish>SERVER 5 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
             <Chinesesimp>服务器将在5分钟内重启！</Chinesesimp>
@@ -5542,6 +5575,7 @@
         <Key ID="STR_PARAMS_DEBUG_LOGISTIC">
             <Original>Logistic</Original>
             <German>Logistik</German>
+            <Russian>Логистика</Russian>
             <Italian>Logistica</Italian>
             <Turkish>Lojistik</Turkish>
             <Chinesesimp>后勤</Chinesesimp>
@@ -5551,6 +5585,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
             <Original>Logistic Convoy Ambush</Original>
             <German>Logistikkonvoi Überfall</German>
+            <Russian>Засада на конвой</Russian>
             <Italian>Convoglio Sotto Attacco</Italian>
             <Turkish>Lojistik Konvoyu Baskını</Turkish>
             <Chinesesimp>后勤车队受袭</Chinesesimp>
@@ -5560,6 +5595,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
             <Original>Guerilla forces attacking our convoy near %1.</Original>
             <German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+            <Russian>Партизанские войска атакуют наш конвой около %1.</Russian>
             <Italian>Guerriglieri attaccano il nostro convoglio vicino %1</Italian>
             <Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
             <Chinesesimp>游击队正在%1附近攻击我们的车队</Chinesesimp>
@@ -5569,6 +5605,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
             <Original>The ambush was successfully repelled.</Original>
             <German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+            <Russian>Засада успешно отражена.</Russian>
             <Italian>L'attacco è stato neutralizzato.</Italian>
             <Turkish>Baskın başarıyla püskürtüldü.</Turkish>
             <Chinesesimp>成功击退了来犯者。</Chinesesimp>
@@ -5578,6 +5615,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
             <Original>The guerilla forces escaped with the convoy resources.</Original>
             <German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
+            <Russian>Партизанские войска сбежали с ресурсами конвоя.</Russian>
             <Italian>I Guerriglieri scappano con le risorse del nostro convoglio.</Italian>
             <Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
             <Chinesesimp>游击队抢走了车队物资。</Chinesesimp>
@@ -5603,6 +5641,7 @@
         <Key ID="STR_CR_ACE_ACTION">
             <Original>Treat the civilian (field dressing)</Original>
             <German>Zivilisten versorgen (einfache Bandage)</German>
+            <Russian>Перевязать гражданского (полевая перевязка)</Russian>
             <Italian>Soccorso Civili</Italian>
             <Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
             <Chinese>治療平民（基礎繃帶）</Chinese>
@@ -5611,6 +5650,7 @@
         <Key ID="STR_CR_ACE_ACTION_FAIL">
             <Original>You need a field dressing.</Original>
             <German>Du brauchst eine einfache Bandage.</German>
+            <Russian>Вам необходима полевая перевязка.</Russian>
             <Italian>Hai bisogno di un bendaggio semplice.</Italian>
             <Chinesesimp>你需要一个战地绷带。</Chinesesimp>
             <Chinese>你需要一個基礎繃帶。</Chinese>
@@ -5619,6 +5659,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_START">
             <Original>There is a high ranked officer near %1.</Original>
             <German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+            <Russian>Высокопоставленный офицер находится около %1.</Russian>
             <Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
             <Chinesesimp>%1附近有一名高级军官。</Chinesesimp>
             <Chinese>%1 附近有一名高級軍官。</Chinese>
@@ -5627,6 +5668,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
             <Original>The officer was successfully killed.</Original>
             <German>Der Offizier konnte erfolgreich getötet werden.</German>
+            <Russian>Офицер успешно убит.</Russian>
             <Italian>L'ufficiale è stato ucciso.</Italian>
             <Chinesesimp>成功刺杀了军官。</Chinesesimp>
             <Chinese>成功刺殺了軍官。</Chinese>
@@ -5635,6 +5677,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
             <Original>The officer has moved on.</Original>
             <German>Der Offizier ist weitergezogen.</German>
+            <Russian>Офицер ушел.</Russian>
             <Italian>L'ufficiale è scappato.</Italian>
             <Chinesesimp>军官逃离了。</Chinesesimp>
             <Chinese>軍官逃離了。</Chinese>
@@ -5652,7 +5695,7 @@
         <Key ID="STR_RESPAWN_COOLDOWN_HINT">
             <Original>%1 minutes mobile respawn cooldown left.</Original>
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
-            <Russian>%1 минут(-ы) задержки дислокации на КШМ осталось.</Russian>
+            <Russian>Осталось %1 минут(-ы) задержки дислокации на КШМ.</Russian>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
             <Chinese>機動重生點還需要 %1 分鐘冷卻。</Chinese>
@@ -5723,7 +5766,7 @@
         <Key ID="STR_NOTIFICATION_GUER_INC_TITLE">
             <Original>Guerilla forces on the way.</Original>
             <German>Widerstandskämpfer sind unterwegs.</German>
-            <Russian>Партизанские силы уже в пути.</Russian>
+            <Russian>Партизанские силы в пути.</Russian>
             <Italian>Guerriglieri in arrivo.</Italian>
         </Key>
         <Key ID="STR_NOTIFICATION_GUER_INC">
@@ -6219,7 +6262,7 @@
         <Key ID="STR_FOB_REPACKAGE_HINT">
             <Original>FOB repackaged.\nPossibly created clearance will be reverted upon server restart.</Original>
             <German>FOB eingepackt.\nEventuelle Gebietsräumung wird zum Serverneustart rückgängig gemacht.</German>
-            <Russian>FOB перепаковано.\nВозможно, созданное разрешение будет отменено после перезапуска сервера.</Russian>
+            <Russian>FOB свернуто.\nВозможно, созданное разрешение будет отменено после перезапуска сервера.</Russian>
         </Key>
     </Package>
 </Project>
