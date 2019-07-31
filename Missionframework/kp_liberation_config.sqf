@@ -511,7 +511,7 @@ blacklisted_from_arsenal = [
 	"CUP_B_Podnos_Bipod_Bag",
 	"CUP_B_SPG9_Gun_Bag",
 	"CUP_B_SPG9_Tripod_Bag",
-	"CUP_B_TOW_Gun_Bag",
+	"CUP_B_Tow_Gun_Bag",
 	"CUP_B_TOW_Tripod_Bag"
 ];
 
