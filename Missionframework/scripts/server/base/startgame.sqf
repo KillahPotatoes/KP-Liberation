@@ -31,6 +31,10 @@ if (count GRLIB_all_fobs == 0) then {
             _fobbox setposATL (getposATL base_boxspawn);
 
             _fobbox call F_setFobMass;
+            clearWeaponCargoGlobal _fobbox;
+            clearMagazineCargoGlobal _fobbox;
+            clearBackpackCargoGlobal _fobbox;
+            clearItemCargoGlobal _fobbox;
             // Add ViV actions to FOB Box
             [_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
 

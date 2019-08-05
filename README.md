@@ -189,6 +189,7 @@ class Missions
 
 ### Icebox content (will be moved into a possible next update)
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
+* Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Fixed: Potato 01 was created after server restart, even if there was one saved.
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
