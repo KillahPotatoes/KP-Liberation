@@ -93,11 +93,6 @@ if (isServer) then {
             if (side _killer == GRLIB_side_friendly) then {
                 stats_blufor_teamkills = stats_blufor_teamkills + 1;
             };
-
-            // Killed by a player
-            if (isplayer _killer) then {
-                stats_blufor_teamkills_by_players = stats_blufor_teamkills_by_players + 1;
-            };
         };
 
         // Resistance casualty
