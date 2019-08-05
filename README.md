@@ -187,6 +187,10 @@ class Missions
 
 ## Changelog
 
+### Icebox content (will be moved into a possible next update)
+* Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
+* Fixed: Potato 01 was created after server restart, even if there was one saved.
+
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
 * Added: Contact DLC transport configs.
