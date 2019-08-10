@@ -1,4 +1,5 @@
 waitUntil {!isNil "save_is_loaded"};
+waitUntil {save_is_loaded};
 
 KP_liberation_fob_resources = [];
 KP_liberation_supplies_global = 0;

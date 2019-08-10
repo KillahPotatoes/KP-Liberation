@@ -193,6 +193,7 @@ class Missions
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
 * Fixed: Potato 01 was created after server restart, even if there was one saved.
 * Fixed: Missing variable `stats_blufor_teamkills_by_players`. Also no separation between by players or not by players for teamkills anymore.
+* Fixed: Factory storages could disappear randomly on save load.
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
