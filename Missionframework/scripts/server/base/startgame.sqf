@@ -1,6 +1,7 @@
 waitUntil {time > 1};
 waitUntil {!isNil "GRLIB_all_fobs"};
 waitUntil {!isNil "save_is_loaded"};
+waitUntil {save_is_loaded};
 
 if (count GRLIB_all_fobs == 0) then {
 

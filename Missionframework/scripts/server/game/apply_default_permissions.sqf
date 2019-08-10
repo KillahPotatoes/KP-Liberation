@@ -2,6 +2,7 @@ if (!GRLIB_permissions_param) exitWith {};
 
 waitUntil {!isNil "GRLIB_permissions"};
 waitUntil {!isNil "save_is_loaded"};
+waitUntil {save_is_loaded};
 
 while {true} do {
 

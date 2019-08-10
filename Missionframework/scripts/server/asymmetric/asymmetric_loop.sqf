@@ -1,5 +1,6 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_civ_rep"};
+waitUntil {save_is_loaded};
 
 if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Loop spawned on: %1", debug_source];};
 

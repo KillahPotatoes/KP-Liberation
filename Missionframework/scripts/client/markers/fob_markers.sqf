@@ -1,5 +1,6 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "GRLIB_all_fobs"};
+waitUntil {save_is_loaded};
 
 uiSleep 3;
 

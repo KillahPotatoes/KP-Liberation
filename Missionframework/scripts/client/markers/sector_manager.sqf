@@ -1,6 +1,7 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "GRLIB_vehicle_to_military_base_links"};
 waitUntil {!isNil "blufor_sectors"};
+waitUntil {save_is_loaded};
 
 private _vehicle_unlock_markers = [];
 private _cfg = configFile >> "cfgVehicles";
