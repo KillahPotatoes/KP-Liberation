@@ -70,7 +70,6 @@ infantry_units = [
 ];
 
 light_vehicles = [
-    ["CUP_B_TowingTractor_CZ",50,0,25],                                 // Towing Tractor
     ["CUP_B_UAZ_Unarmed_ACR",100,0,50],                                 // UAZ
     ["CUP_B_UAZ_Open_ACR",100,0,50],                                    // UAZ (Open)
     ["CUP_B_UAZ_MG_ACR",100,40,50],                                     // UAZ (DShKM)
@@ -215,7 +214,7 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
-    ["B_APC_Tracked_01_CRV_F",500,250,350],                             // CRV-6e Bobcat
+    ["CUP_B_TowingTractor_CZ",50,0,25],                                 // Towing Tractor
     ["CUP_B_T810_Repair_CZ_DES",325,0,75],                              // Tatra T810 (Repair)
     ["CUP_B_T810_Refuel_CZ_DES",125,0,275],                             // Tatra T810 (Fuel)
     ["CUP_B_T810_Reammo_CZ_DES",125,200,75],                            // Tatra T810 (Ammo)
