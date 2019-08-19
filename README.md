@@ -194,6 +194,8 @@ class Missions
 * Fixed: Potato 01 was created after server restart, even if there was one saved.
 * Fixed: Missing variable `stats_blufor_teamkills_by_players`. Also no separation between by players or not by players for teamkills anymore.
 * Fixed: Factory storages could disappear randomly on save load.
+* Fixed: Some Presets had CUP Towing Tractor in the wrong place or duplicated. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: CUP Presets still had the Nemmera in the support vehicle section. Thanks to [Eogos](https://github.com/Eogos)
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.

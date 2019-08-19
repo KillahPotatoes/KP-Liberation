@@ -74,7 +74,6 @@ infantry_units = [
 
 light_vehicles = [
     ["B_T_Quadbike_01_F",50,0,25],                                      // Quad Bike
-    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_T_LSV_01_unarmed_F",75,0,50],                                   // Prowler
     ["B_T_LSV_01_armed_F",75,40,50],                                    // Prowler (HMG)
     ["B_T_LSV_01_AT_F",75,60,50],                                       // Prowler (AT)
@@ -298,6 +297,7 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_T_APC_Tracked_01_CRV_F",500,250,350],                           // CRV-6e Bobcat
     ["B_T_Truck_01_Repair_F",325,0,75],                                 // HEMTT Repair
     ["B_T_Truck_01_fuel_F",125,0,275],                                  // HEMTT Fuel
