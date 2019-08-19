@@ -223,7 +223,6 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["CUP_B_TowingTractor_GB",50,0,25],                                     // Towing Tractor
-    ["B_APC_Tracked_01_CRV_F",500,250,350],                                 // CRV-6e Bobcat
     ["CUP_B_MTVR_Repair_USA",425,0,75],                                     // MTVR Repair
     ["CUP_B_MTVR_Refuel_USA",125,0,375],                                    // MTVR Refuel
     ["CUP_B_MTVR_Ammo_USA",125,300,75],                                     // MTVR Ammo

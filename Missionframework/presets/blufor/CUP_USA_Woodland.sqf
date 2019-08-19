@@ -68,7 +68,6 @@ infantry_units = [
 ];
 
 light_vehicles = [
-    ["CUP_B_TowingTractor_USA",50,0,25],                                // Towing Tractor
     ["CUP_B_HMMWV_Unarmed_USA",75,0,50],                                // HMMWV (Unarmed)
     ["CUP_B_HMMWV_M2_USA",75,60,50],                                    // HMMWV M2
     ["CUP_B_HMMWV_MK19_USA",75,80,50],                                  // HMMWV MK19
@@ -222,7 +221,6 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["CUP_B_TowingTractor_USA",50,0,75],                                // Towing Tractor
-    ["B_APC_Tracked_01_CRV_F",500,250,350],                             // CRV-6e Bobcat
     ["CUP_B_MTVR_Repair_USMC",425,0,75],                                // MTVR Repair
     ["CUP_B_MTVR_Refuel_USMC",125,0,375],                               // MTVR Refuel
     ["CUP_B_MTVR_Ammo_USMC",125,300,75],                                // MTVR Ammo

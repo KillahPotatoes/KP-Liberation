@@ -69,7 +69,6 @@ infantry_units = [
 ];
 
 light_vehicles = [
-    ["CUP_B_Tractor_CDF",50,0,25],                                      // Towing Tractor
     ["CUP_B_UAZ_Unarmed_CDF",75,0,50],                                  // UAZ
     ["CUP_B_UAZ_MG_CDF",100,60,50],                                     // UAZ (DShKM)
     ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ (AGS-30)
@@ -211,7 +210,6 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["CUP_B_Tractor_CDF",50,0,75],                                      // Towing Tractor
-    ["B_APC_Tracked_01_CRV_F",500,250,350],                             // CRV-6e Bobcat
     ["CUP_B_Kamaz_Repair_CDF",425,0,75],                                // Kamaz 5350 (Repair)
     ["CUP_B_Kamaz_Refuel_CDF",125,0,375],                               // Kamaz 5350 (Fuel)
     ["CUP_B_Kamaz_Reammo_CDF",125,300,75],                              // Kamaz 5350 (Ammo)
