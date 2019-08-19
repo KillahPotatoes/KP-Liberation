@@ -187,7 +187,7 @@ class Missions
 
 ## Changelog
 
-### Icebox content (will be moved into a possible next update)
+### 0.96.6 (tbd)
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
