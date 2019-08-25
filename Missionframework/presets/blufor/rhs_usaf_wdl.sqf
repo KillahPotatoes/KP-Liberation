@@ -81,6 +81,8 @@ light_vehicles = [
     ["rhsusf_M1220_usarmy_wd",120,0,60],                                // M1220
     ["rhsusf_M1220_M2_usarmy_wd",120,40,60],                            // M1220 (M2)
     ["rhsusf_M1220_MK19_usarmy_wd",120,60,60],                          // M1220 (Mk19)
+    ["rhsusf_M1220_M153_M2_usarmy_wd",140,40,60],                       // M1220 (M2 CROWS)
+    ["rhsusf_M1220_M153_MK19_usarmy_wd",140,60,60],                     // M1220 (Mk19 CROWS)
     ["rhsusf_M1232_usarmy_wd",140,0,60],                                // M1232
     ["rhsusf_M1232_M2_usarmy_wd",140,40,60],                            // M1232 (M2)
     ["rhsusf_M1232_MK19_usarmy_wd",140,60,60],                          // M1232 (Mk19)
@@ -103,6 +105,7 @@ heavy_vehicles = [
     ["rhsusf_m113_usarmy",200,40,100],                                  // M113A3 (M2)
     ["rhsusf_m113_usarmy_MK19",200,60,100],                             // M113A3 (Mk19)
     ["rhsusf_m113_usarmy_medical",200,0,100],                           // M113A3 (Medical)
+    ["rhsusf_stryker_m1126_m2_wd",200,150,100],                         // M1126 Stryker (M2)
     ["RHS_M2A2_BUSKI_WD",300,200,150],                                  // M2A2ODS (Busk I)
     ["RHS_M2A3_BUSKIII_wd",300,250,175],                                // M2A3 (Busk III)
     ["RHS_M6_wd",300,250,175],                                          // M6A2
@@ -125,6 +128,7 @@ air_vehicles = [
     ["RHS_UH60M_MEV2",300,0,150],                                       // UH-60M MEV2
     ["RHS_CH_47F_10",275,80,175],                                       // CH-47 Chinook (Armed)
     ["rhsusf_CH53E_USMC",300,0,175],                                    // CH-53E Super Stallion
+    ["rhsusf_CH53E_USMC_GAU21",300,100,175],                            // CH-53E Super Stallion (GAU-21)
     ["B_UAV_02_dynamicLoadout_F",400,300,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
     ["B_UAV_05_F",500,500,200],                                         // UCAV Sentinel
