@@ -59,6 +59,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
 
     GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
     GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
@@ -253,6 +254,24 @@ if (!isDedicated && hasInterface) then {
         case 2: {_value = localize "STR_WEATHER_PARAM2";};
         case 3: {_value = localize "STR_WEATHER_PARAM3";};
         default {_value = localize "STR_WEATHER_PARAM1";};
+    };
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_FOG_PARAM";
+    _value = if (KP_liberation_fog_param) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_ARSENAL";
+    _value = if (KP_liberation_arsenal_type) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_VICTORYCONDITION";
+    switch (GRLIB_weather_param) do {
+        case 1: {_value = localize "STR_PARAMS_VICTORYCONDITION_1";};
+        case 2: {_value = localize "STR_PARAMS_VICTORYCONDITION_2";};
+        case 3: {_value = localize "STR_PARAMS_VICTORYCONDITION_3";};
+        case 4: {_value = localize "STR_PARAMS_VICTORYCONDITION_4";};
+        default {_value = localize "STR_PARAMS_VICTORYCONDITION_0";};
     };
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 

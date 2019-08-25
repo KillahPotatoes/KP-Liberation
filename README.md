@@ -189,6 +189,7 @@ class Missions
 
 ### 0.96.6 (tbd)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
@@ -198,6 +199,7 @@ class Missions
 * Fixed: Some Presets had CUP Towing Tractor in the wrong place or duplicated. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: CUP Presets still had the Nemmera in the support vehicle section. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: FOB resources weren't updated in build dialog, when building infantry units.
+* Fixed: Some missing parameter information in the map screens parameter overview.
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.

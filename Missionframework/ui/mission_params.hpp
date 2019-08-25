@@ -96,6 +96,12 @@ class Params
         texts[] = { $STR_WEATHER_PARAM1, $STR_WEATHER_PARAM2, $STR_WEATHER_PARAM3 };
         default = 3;
     };
+    class VanillaFog {
+        title = $STR_FOG_PARAM;
+        values[] = {1, 0};
+        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
+        default = 1;
+    };
     class ResourcesMultiplier {
         title = $STR_PARAMS_RESOURCESMULTIPLIER;
         values[] = { 0, 1, 2, 3, 4, 5, 6, 7 };

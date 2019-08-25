@@ -6264,5 +6264,9 @@
             <German>FOB eingepackt.\nEventuelle Gebietsräumung wird zum Serverneustart rückgängig gemacht.</German>
             <Russian>FOB свернуто.\nВозможно, созданное разрешение будет отменено после перезапуска сервера.</Russian>
         </Key>
+        <Key ID="STR_FOG_PARAM">
+            <Original>Dynamic fog (A3 Vanilla)</Original>
+            <German>Dynamischer Nebel (A3 Vanilla)</German>
+        </Key>
     </Package>
 </Project>
