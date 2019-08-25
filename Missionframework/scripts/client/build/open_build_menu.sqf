@@ -42,6 +42,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	if (_oldbuildtype != buildtype || synchro_done) then {
 		synchro_done = false;
 		_oldbuildtype = buildtype;
+        _actual_fob = KP_liberation_fob_resources select {((_x select 0) distance _nearfob) < GRLIB_fob_range};
 
 		lbClear 110;
 		{
