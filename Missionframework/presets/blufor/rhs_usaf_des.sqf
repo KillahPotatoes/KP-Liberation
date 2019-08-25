@@ -96,7 +96,10 @@ light_vehicles = [
     ["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",100,0,50],                // M1083A1P2
     ["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],                           // M977A4 BKIT
     ["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],                       // M977A4 BKIT (HMG)
-    ["rhsusf_M1117_D",150,50,50],                                       // M1117 ASV
+    ["rhsusf_M1239_socom_d",135,0,75],                                  // M1239 AUV
+    ["rhsusf_M1239_M2_socom_d",135,80,75],                              // M1239 AUV (M2 CROWS)
+    ["rhsusf_M1239_MK19_socom_d",135,160,75],                           // M1239 AUV (Mk19 CROWS)
+    ["rhsusf_M1117_D",150,100,50],                                      // M1117 ASV
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_Boat_Transport_01_F",100,0,25],                                 // Assault Boat
