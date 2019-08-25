@@ -197,6 +197,7 @@ class Missions
 * Fixed: Factory storages could disappear randomly on save load.
 * Fixed: Some Presets had CUP Towing Tractor in the wrong place or duplicated. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: CUP Presets still had the Nemmera in the support vehicle section. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: FOB resources weren't updated in build dialog, when building infantry units.
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
