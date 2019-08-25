@@ -619,6 +619,8 @@ box_transport_config = [
     ["rhsusf_M977A4_usarmy_wd", -6.5, [0,0.4,1.4], [0,-1.3,1.4], [0,-3,1.4]],
     ["rhsusf_m998_d_2dr_halftop", -4.5, [0,-0.9,-0.2]],
     ["rhsusf_m998_w_2dr_halftop", -4.5, [0,-0.9,-0.2]],
+    ["sfp_tgb30", -5, [0.2,-0.1,2], [0.2,-2.1,2]],
+    ["sfp_tgb40", -5, [0.1,-0.7,2], [0.1,-2.7,2]],
     ["UK3CB_BAF_Merlin_HC3_18_DPMT", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
     ["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
@@ -669,6 +671,7 @@ ai_resupply_sources = [
     "rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
     "rhsusf_M977A4_AMMO_usarmy_d",
     "rhsusf_M977A4_AMMO_usarmy_wd",
+    "sfp_tgb40_ammo",
     "uns_M113_ENG",
     "uns_M35A2_ammo",
     "uns_motorpool1_repair"
@@ -705,6 +708,7 @@ vehicle_repair_sources = [
     "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
     "rhsusf_M977A4_REPAIR_usarmy_d",
     "rhsusf_M977A4_REPAIR_usarmy_wd",
+    "sfp_tgb30_repair",
     "UNS_Hanger_repair",
     "uns_M113_ENG",
     "uns_M35A2_repair",
@@ -744,6 +748,7 @@ vehicle_rearm_sources = [
     "rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
     "rhsusf_M977A4_AMMO_usarmy_d",
     "rhsusf_M977A4_AMMO_usarmy_wd",
+    "sfp_tgb40_ammo",
     "uns_M113_ENG",
     "uns_M35A2_ammo"
 ];
@@ -781,6 +786,7 @@ vehicle_refuel_sources = [
     "rhsusf_M978A4_BKIT_usarmy_wd",
     "rhsusf_M978A4_usarmy_d",
     "rhsusf_M978A4_usarmy_wd",
+    "sfp_tgb40_fuel",
     "uns_M113_ENG",
     "uns_M35A2_fuel",
     "uns_M35A2_fueltanker"

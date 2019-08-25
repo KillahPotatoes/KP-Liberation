@@ -188,6 +188,7 @@ class Missions
 ## Changelog
 
 ### 0.96.6 (tbd)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
