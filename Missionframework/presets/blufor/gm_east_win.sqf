@@ -67,7 +67,14 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
-    ["len_mi8amt_nva",225,0,125]                                        // NVA Mi8AMT
+    ["len_mi8amt_nva",225,0,125],                                       // Mi8AMT
+    ["len_mi24d_CAS_nva",550,550,250],                                  // Mi-24D (CAS)
+    ["len_mi24d_AT_nva",550,550,250],                                   // Mi-24D (AT)
+    ["len_mi24d_FAB_nva",550,550,250],                                  // Mi-24D (FAB)
+    ["len_mi24p_CAS_nva",550,550,250],                                  // Mi-24P (CAS)
+    ["len_mi24p_AT_nva",550,550,250],                                   // Mi-24P (AT)
+    ["len_mi24p_FAB_nva",550,550,250],                                  // Mi-24P (FAB)
+    ["len_l39_nva",1200,1250,650]                                       // Aero L-39
 ];
 
 static_vehicles = [
@@ -272,5 +279,9 @@ blufor_squad_para = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 elite_vehicles = [
-    "gm_gc_army_t55a_win"                                               // T-55
+    "gm_gc_army_t55a_win",                                               // T-55,
+    "len_mi24d_AT_nva",                                                  // Mi-24D (AT)
+    "len_mi24p_AT_nva",                                                  // Mi-24P (AT)
+    "len_mi24d_FAB_nva",                                                 // Mi-24D (FAB)
+    "len_mi24p_FAB_nva"                                                  // Mi-24P (FAB)
 ];

@@ -167,6 +167,7 @@ air_vehicles = [
     ["RHS_CH_47F",275,80,175],                                          // CH-47 Chinook (Armed)
     ["I_Heli_Transport_02_F",275,0,175],                                // CH-49 Mohawk
     ["rhsusf_CH53E_USMC",300,0,175],                                    // CH-53E Super Stallion
+    ["rhsusf_CH53E_USMC_GAU21",300,100,175],                            // CH-53E Super Stallion (GAU-21)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
     ["B_UAV_02_dynamicLoadout_F",400,300,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon

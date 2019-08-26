@@ -82,6 +82,11 @@ light_vehicles = [
     ["rhsusf_M1220_usarmy_d",120,0,60],                                 // M1220
     ["rhsusf_M1220_M2_usarmy_d",120,40,60],                             // M1220 (M2)
     ["rhsusf_M1220_MK19_usarmy_d",120,60,60],                           // M1220 (Mk19)
+    ["rhsusf_M1220_M153_M2_usarmy_d",140,40,60],                        // M1220 (M2 CROWS)
+    ["rhsusf_M1220_M153_MK19_usarmy_d",140,60,60],                      // M1220 (Mk19 CROWS)
+    ["rhsusf_M1238A1_socom_d",130,0,60],                                // M1238
+    ["rhsusf_M1238A1_M2_socom_d",130,40,60],                            // M1238 (M2)
+    ["rhsusf_M1238A1_Mk19_socom_d",130,60,60],                          // M1238 (Mk19)
     ["rhsusf_M1232_usarmy_d",140,0,60],                                 // M1232
     ["rhsusf_M1232_M2_usarmy_d",140,40,60],                             // M1232 (M2)
     ["rhsusf_M1232_MK19_usarmy_d",140,60,60],                           // M1232 (Mk19)
@@ -91,7 +96,10 @@ light_vehicles = [
     ["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy",100,0,50],                // M1083A1P2
     ["rhsusf_M977A4_BKIT_usarmy_d",125,0,75],                           // M977A4 BKIT
     ["rhsusf_M977A4_BKIT_M2_usarmy_d",125,40,75],                       // M977A4 BKIT (HMG)
-    ["rhsusf_M1117_D",150,50,50],                                       // M1117 ASV
+    ["rhsusf_M1239_socom_d",135,0,75],                                  // M1239 AUV
+    ["rhsusf_M1239_M2_socom_d",135,80,75],                              // M1239 AUV (M2 CROWS)
+    ["rhsusf_M1239_MK19_socom_d",135,160,75],                           // M1239 AUV (Mk19 CROWS)
+    ["rhsusf_M1117_D",150,100,50],                                      // M1117 ASV
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_Boat_Transport_01_F",100,0,25],                                 // Assault Boat
@@ -104,6 +112,7 @@ heavy_vehicles = [
     ["rhsusf_m113d_usarmy",200,40,100],                                 // M113A3 (M2)
     ["rhsusf_m113d_usarmy_MK19",200,60,100],                            // M113A3 (Mk19)
     ["rhsusf_m113d_usarmy_medical",200,0,100],                          // M113A3 (Medical)
+    ["rhsusf_stryker_m1126_m2_d",200,150,100],                          // M1126 Stryker (M2)
     ["RHS_M2A2_BUSKI",300,200,150],                                     // M2A2ODS (Busk I)
     ["RHS_M2A3_BUSKIII",300,250,175],                                   // M2A3 (Busk III)
     ["RHS_M6",300,250,175],                                             // M6A2
@@ -126,6 +135,7 @@ air_vehicles = [
     ["RHS_UH60M_MEV2_d",300,0,150],                                     // UH-60M MEV2
     ["RHS_CH_47F_10",275,80,175],                                       // CH-47 Chinook (Armed)
     ["rhsusf_CH53E_USMC_D",300,0,175],                                  // CH-53E Super Stallion
+    ["rhsusf_CH53E_USMC_GAU21_D",300,100,175],                          // CH-53E Super Stallion (GAU-21)
     ["B_UAV_02_dynamicLoadout_F",400,300,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
     ["B_UAV_05_F",500,500,200],                                         // UCAV Sentinel
@@ -250,6 +260,8 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["B_APC_Tracked_01_CRV_F",500,250,350],                             // CRV-6e Bobcat
+    ["rhsusf_M1239_M2_Deploy_socom_d",450,200,300],                     // M1239 AUV (Deploy, M2)
+    ["rhsusf_M1239_MK19_Deploy_socom_d",450,250,300],                   // M1239 AUV (Deploy, Mk19)
     ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",400,200,300],                // M1078A1R SOV
     ["rhsusf_M977A4_REPAIR_usarmy_d",325,0,75],                         // M977A4 Repair
     ["rhsusf_M978A4_usarmy_d",125,0,275],                               // M978A4 Fuel
