@@ -258,6 +258,12 @@ class Params
         texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
         default = 1;
     };
+    class LimitedZeus {
+        title = $STR_PARAM_LIMITEDZEUS;
+        values[] = {1,0};
+        texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
+        default = 1;
+    };
     class Spacer3 {
         title = "";
         values[] = { "" };
