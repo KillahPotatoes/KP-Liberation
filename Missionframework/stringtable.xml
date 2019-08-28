@@ -2424,6 +2424,7 @@
         </Key>
         <Key ID="STR_PARAM_LIMITEDZEUS">
             <Original>Limited Zeus interface</Original>
+            <German>Eingeschränkte Zeus Funktionen</German>
         </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
