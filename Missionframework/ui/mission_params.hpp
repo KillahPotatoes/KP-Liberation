@@ -54,6 +54,12 @@ class Params
         texts[] = { $STR_YES, $STR_NO };
         default = 0;
     };
+    class FirstFobVehicle {
+        title = $STR_PARAMS_FIRSTFOBVEHICLE;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER, $STR_PARAMS_FIRSTFOBVEHICLE_TRUCK};
+        default = 0;
+    };
     class MaximumFobs {
         title = $STR_PARAM_FOBS_COUNT;
         values[] = {3,5,7,10,15,20,26};

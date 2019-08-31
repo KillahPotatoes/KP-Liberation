@@ -6268,5 +6268,17 @@
             <Original>Dynamic fog (A3 Vanilla)</Original>
             <German>Dynamischer Nebel (A3 Vanilla)</German>
         </Key>
+        <Key ID="STR_PARAMS_FIRSTFOBVEHICLE">
+            <Original>Start FOB provided as</Original>
+            <German>Start-FOB bereitgestellt als</German>
+        </Key>
+        <Key ID="STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER">
+            <Original>FOB Container</Original>
+            <German>FOB Container</German>
+        </Key>
+        <Key ID="STR_PARAMS_FIRSTFOBVEHICLE_TRUCK">
+            <Original>FOB Truck</Original>
+            <German>FOB LKW</German>
+        </Key>
     </Package>
 </Project>

@@ -60,6 +60,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
     GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
+    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
 
     GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
     GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
@@ -223,6 +224,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_FIRSTFOB";
     _value = if (GRLIB_build_first_fob) then {localize "STR_YES";} else {localize "STR_NO";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FIRSTFOBVEHICLE";
+    _value = if (KP_liberation_fob_vehicle) then {localize "STR_PARAMS_FIRSTFOBVEHICLE_TRUCK";} else {localize "STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_FOBS_COUNT";
