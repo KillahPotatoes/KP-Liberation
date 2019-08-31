@@ -27,17 +27,20 @@ if (count GRLIB_all_fobs == 0) then {
         private _fobbox = objNull;
 
         while {count GRLIB_all_fobs == 0} do {
-            _fobbox = FOB_box_typename createVehicle (getposATL base_boxspawn);
+            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KP_liberation_fob_vehicle) createVehicle (getposATL base_boxspawn);
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
 
-            _fobbox call F_setFobMass;
             clearWeaponCargoGlobal _fobbox;
             clearMagazineCargoGlobal _fobbox;
             clearBackpackCargoGlobal _fobbox;
             clearItemCargoGlobal _fobbox;
-            // Add ViV actions to FOB Box
-            [_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
+
+            if (!KP_liberation_fob_vehicle) then {
+                _fobbox call F_setFobMass;
+                // Add ViV actions to FOB Box
+                [_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
+            };
 
             sleep 3;
 
