@@ -2422,6 +2422,9 @@
             <Portuguese>Remover carga do veículo requisitado</Portuguese>
             <Chinese>移除載具上的物品</Chinese>
         </Key>
+        <Key ID="STR_PARAM_DELAY_DESPAWN_MAX">
+            <Original>Maximum sector deactivation delay (starts increasing after 5th activation minute)</Original>
+        </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
             <French>Déploiement en cours...</French>
