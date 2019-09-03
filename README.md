@@ -191,6 +191,7 @@ class Missions
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
 * Added: Parameter to decide to start the campaign with a FOB container (default, like before) or a FOB truck.
+* Added: Sector despawn scaling. The longer sector is activated the longer it de-activates. Configurable as parameter, 5min additional delay max by default.
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
