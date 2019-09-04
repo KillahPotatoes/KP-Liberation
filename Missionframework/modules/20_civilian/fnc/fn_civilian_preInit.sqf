@@ -39,6 +39,15 @@ if (isServer) then {
 
     // Register save event handler
     ["KPLIB_doSave", {[] call KPLIB_fnc_civilian_saveData;}] call CBA_fnc_addEventHandler;
+
+    // Register sector activation event handler
+    ["KPLIB_sector_activated", {[_this select 0] call KPLIB_fnc_civilian_spawn;}] call CBA_fnc_addEventHandler;
+
+    // Register sector captured event handler
+    // ["KPLIB_sector_captured", {[_this select 0] call KPLIB_fnc_civilian_changeOpinion;}] call CBA_fnc_addEventHandler;
+
+    // Register sector deactivation event handler
+    ["KPLIB_sector_deactivated", {[_this select 0] call KPLIB_fnc_civilian_despawn;}] call CBA_fnc_addEventHandler;
 };
 
 // HC section

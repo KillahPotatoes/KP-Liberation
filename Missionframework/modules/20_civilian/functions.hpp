@@ -32,4 +32,5 @@ class civilian {
 
     // CBA Settings for this module
     class civilian_settings {};
+    
 };
