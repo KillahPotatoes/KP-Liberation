@@ -25,7 +25,8 @@ params [
     ["_grp", grpNull, [grpNull]],
     ["_classname", "", [""]],
     ["_spawnPos", KPLIB_zeroPos, [[]], [3]],
-    ["_addition", "NONE", [""]]
+    ["_addition", "NONE", [""]],
+    ["_agent", false, [false]]
 ];
 
 if (_grp isEqualTo grpNull || _classname isEqualTo "") exitWith {objNull};
@@ -33,9 +34,14 @@ if (_grp isEqualTo grpNull || _classname isEqualTo "") exitWith {objNull};
 // Create temp group, as we need to let the unit join the "correct side group".
 // If we use the "correct side group" for the createUnit, the group would switch to the side of the unit written in the config.
 private _grpTemp = createGroup [civilian, true];
-
+private _unit = objNull;
 // Create unit in temp group
-private _unit = _grpTemp createUnit [_classname, _spawnPos, [], 10, _addition];
+if (_asAgent) then {
+
+} else {
+    _unit = _grpTemp createUnit [_classname, _spawnPos, [], 10, _addition];
+};
+
 
 // Let unit join the "correct side group"
 [_unit] joinSilent _grp;

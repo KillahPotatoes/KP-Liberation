@@ -23,7 +23,7 @@ params [
     ["_sector", "", [""]]
 ];
 
-if (isServer) then {[format ["Despawn for %1", _sector], "GARRISON", true] call KPLIB_fnc_common_log;};
+if (isServer) then {[format ["Despawn for %1", _sector], "CIVILIAN", true] call KPLIB_fnc_common_log;};
 
 // Initialize local variables
 
