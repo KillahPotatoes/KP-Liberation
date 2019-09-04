@@ -71,6 +71,9 @@ class common {
     // Logs given text to server rpt
     class common_log {};
 
+    // Checks if a sector is of a certain type.
+    class common_isSectorType {};
+
     // Initialize common module
     class common_preInit {
         preInit = 1;

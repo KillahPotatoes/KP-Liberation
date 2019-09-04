@@ -32,5 +32,20 @@ class civilian {
 
     // CBA Settings for this module
     class civilian_settings {};
-    
+
+    // Despawn civilians on sector deactivation
+    class civilian_despawn {};
+
+    // Spawn civilians on sector activation
+    class civliian_spawn {};
+
+    // Spawn a single civ agent on foot
+    class civilian_spawnCiv {};
+
+    // Spawn a civilian vehicle (empty, or manned)
+    class civilian_spawnVeh {};
+
+    // Spawn a crowd of civilians in intersection??
+    class civilian_spawnCrowd {};
+
 };
