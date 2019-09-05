@@ -2424,6 +2424,7 @@
         </Key>
         <Key ID="STR_PARAM_DELAY_DESPAWN_MAX">
             <Original>Maximum sector deactivation delay (starts increasing after 5th activation minute)</Original>
+            <German>Maximale Verzögerung zur Sektor Deaktivierung (Beginnt nach 5 Minuten seit Aktivierung)</German>
         </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
