@@ -196,6 +196,7 @@ class Missions
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
 * Tweaked: Transport config heights on M977 vehicles. Thanks to [FishAI](https://github.com/FishAI)
+* Tweaked: AI in building now has a dynamic radius to look for enemies until they start moving again depending on blufor/opfor ratio in sector.
 * Fixed: Potato 01 was created after server restart, even if there was one saved.
 * Fixed: Missing variable `stats_blufor_teamkills_by_players`. Also no separation between by players or not by players for teamkills anymore.
 * Fixed: Factory storages could disappear randomly on save load.
