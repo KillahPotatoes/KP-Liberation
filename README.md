@@ -204,6 +204,7 @@ class Missions
 * Fixed: CUP Presets still had the Nemmera in the support vehicle section. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: FOB resources weren't updated in build dialog, when building infantry units.
 * Fixed: Some missing parameter information in the map screens parameter overview.
+* Fixed: After creating a clearance at a FOB some light sources could remain.
 
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
