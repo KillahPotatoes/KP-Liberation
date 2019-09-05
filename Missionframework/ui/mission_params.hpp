@@ -266,8 +266,8 @@ class Params
     };
     class AllowEnemiesInImmobile {
         title = $STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE;
-        values[] = {0, 50, 100};
-        text[] = { $STR_PARAMS_DISABLED, "50%", "100%"};
+        values[] = {0, 25, 50, 75, 100};
+        text[] = { $STR_PARAMS_DISABLED, "25%", "50%", "75%", "100%"};
         defualt = 50;
     };
     class Spacer3 {

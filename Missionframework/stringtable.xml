@@ -2423,7 +2423,8 @@
             <Chinese>移除載具上的物品</Chinese>
         </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
-            <Original>Chance that enemies will stay in immobile/damaged vehicles.</Original>
+            <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
+            <German>Chance, dass Feinde in fahrunfähigen/beschädigten Fahrzeugen verbleiben</German>
         </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
