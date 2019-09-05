@@ -192,6 +192,7 @@ class Missions
 * Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
 * Added: Parameter to enable/disable limitations on Zeus functionalities. Default enabled to keep old behaviour.
 * Added: Parameter to decide to start the campaign with a FOB container (default, like before) or a FOB truck.
+* Added: Korean localization. Thanks to [PanzerKoLee](https://github.com/PanzerKoLee)
 * Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
 * Tweaked: Initial FOB box doesn't have equipment in the inventory anmore.
 * Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
