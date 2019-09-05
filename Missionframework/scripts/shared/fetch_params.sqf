@@ -50,11 +50,11 @@ if(isServer) then {
     GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
+    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
 
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
     GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
-    GET_PARAM_BOOL(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
