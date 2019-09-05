@@ -2422,6 +2422,9 @@
             <Portuguese>Remover carga do veículo requisitado</Portuguese>
             <Chinese>移除載具上的物品</Chinese>
         </Key>
+        <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
+            <Original>Chance that enemies will stay in immobile/damaged vehicles.</Original>
+        </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
             <French>Déploiement en cours...</French>
