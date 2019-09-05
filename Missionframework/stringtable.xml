@@ -2426,6 +2426,10 @@
             <Original>Maximum sector deactivation delay (starts increasing after 5th activation minute)</Original>
             <German>Maximale Verzögerung zur Sektor Deaktivierung (Beginnt nach 5 Minuten seit Aktivierung)</German>
         </Key>
+        <Key ID="STR_PARAM_LIMITEDZEUS">
+            <Original>Limited Zeus interface</Original>
+            <German>Eingeschränkte Zeus Funktionen</German>
+        </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
             <French>Déploiement en cours...</French>
