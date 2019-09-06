@@ -283,7 +283,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 				private _additionalTickets = (_runningMinutes * BASE_TICKETS);
 
 				// clamp from 0 to "_maximum_additional_tickets"
-				_additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets
+				_additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
 
 				_sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
 			};
