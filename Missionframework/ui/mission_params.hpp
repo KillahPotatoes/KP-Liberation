@@ -4,7 +4,7 @@ class Params
         title = $STR_PARAMS_LOADSAVEPARAMS;
         values[] = { 0, 1, 2 };
         texts[] = { $STR_PARAMS_LOADSAVEPARAMS_SAVE, $STR_PARAMS_LOADSAVEPARAMS_LOAD, $STR_PARAMS_LOADSAVEPARAMS_SELECTED };
-        default = 1;
+        default = 1; // If you want to set mission parameters via server.cfg or this file, then set this value to 2
     };
     class Spacer0 {
         title = "";
@@ -269,6 +269,18 @@ class Params
         values[] = {0, 25, 50, 75, 100};
         text[] = { $STR_PARAMS_DISABLED, "25%", "50%", "75%", "100%"};
         defualt = 50;
+    };
+    class DelayDespawnMax {
+        title = $STR_PARAM_DELAY_DESPAWN_MAX;
+        values[] = {0,5,10,15,20,25,30};
+        texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
+        default = 5;
+    };
+    class LimitedZeus {
+        title = $STR_PARAM_LIMITEDZEUS;
+        values[] = {1,0};
+        texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
+        default = 1;
     };
     class Spacer3 {
         title = "";
