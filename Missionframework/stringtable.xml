@@ -2622,6 +2622,10 @@
             <Chinese>移除載具上的物品</Chinese>
             <Korean>장비 배치(생산)시 화물칸 비우기.</Korean>
         </Key>
+        <Key ID="STR_PARAM_DELAY_DESPAWN_MAX">
+            <Original>Maximum sector deactivation delay (starts increasing after 5th activation minute)</Original>
+            <German>Maximale Verzögerung zur Sektor Deaktivierung (Beginnt nach 5 Minuten seit Aktivierung)</German>
+        </Key>
         <Key ID="STR_PARAM_LIMITEDZEUS">
             <Original>Limited Zeus interface</Original>
             <German>Eingeschränkte Zeus Funktionen</German>

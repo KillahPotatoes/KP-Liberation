@@ -1,3 +1,11 @@
+// base amount of sector lifetime tickets
+// if there are no enemies one ticket is removed every SECTOR_TICK_TIME seconds
+// 12 * 5 = 60s by default
+#define BASE_TICKETS				12
+#define SECTOR_TICK_TIME			5
+// delay in minutes from which addional time will be added
+#define ADDITIONAL_TICKETS_DELAY	5
+
 params ["_sector"];
 
 waitUntil {!isNil "combat_readiness"};
@@ -19,7 +27,8 @@ private _squad2 = [];
 private _squad3 = [];
 private _squad4 = [];
 private _minimum_building_positions = 5;
-private _sector_despawn_tickets = 12;
+private _sector_despawn_tickets = BASE_TICKETS;
+private _maximum_additional_tickets = (KP_liberation_delayDespawnMax * 60 / SECTOR_TICK_TIME);
 private _popfactor = 1;
 private _guerilla = false;
 
@@ -162,7 +171,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		_building_ai_max = 0;
 	};
 
-    _vehtospawn = _vehtospawn select {!(isNil "_x")};
+	_vehtospawn = _vehtospawn select {!(isNil "_x")};
 
 	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
 
@@ -235,7 +244,10 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 
 	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - populating done at %3", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
 
+	private _activationTime = time;
+	// sector lifetime loop
 	while {!_stopit} do {
+		// sector was captured
 		if (([_sectorpos, _local_capture_size] call F_sectorOwnership == GRLIB_side_friendly) && (GRLIB_endgame == 0)) then {
 			if (isServer) then {
 				[_sector] spawn sector_liberated_remote_call;
@@ -266,7 +278,14 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 			if (([_sectorpos, (([_opforcount] call F_getCorrectedSectorRange) + 300), GRLIB_side_friendly] call F_getUnitsCount) == 0) then {
 				_sector_despawn_tickets = _sector_despawn_tickets - 1;
 			} else {
-				_sector_despawn_tickets = 12;
+				// start counting running minutes after ADDITIONAL_TICKETS_DELAY
+				private _runningMinutes = (floor ((time - _activationTime) / 60)) - ADDITIONAL_TICKETS_DELAY;
+				private _additionalTickets = (_runningMinutes * BASE_TICKETS);
+
+				// clamp from 0 to "_maximum_additional_tickets"
+				_additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
+
+				_sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
 			};
 
 			if (_sector_despawn_tickets <= 0) then {
@@ -282,7 +301,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 				active_sectors = active_sectors - [_sector]; publicVariable "active_sectors";
 			};
 		};
-		sleep 5;
+		sleep SECTOR_TICK_TIME;
 	};
 } else {
 	sleep 40;
