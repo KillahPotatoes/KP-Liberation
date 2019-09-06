@@ -77,8 +77,10 @@ _spawnedGroups pushBack _grp;
 sleep 30;
 
 if (((random 100) <= 25) && !(KP_liberation_guerilla_vehicles isEqualTo [])) then {
-	_vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
-	_grp = [_startpos, 2] call F_spawnGuerillaGroup;
+	private _vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
+	_vehicle call F_allowCrewInImmobile;
+
+	private _grp = [_startpos, 2] call F_spawnGuerillaGroup;
 	((units _grp) select 0) moveInDriver _vehicle;
 	((units _grp) select 1) moveInGunner _vehicle;
 

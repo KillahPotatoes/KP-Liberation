@@ -50,6 +50,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
+    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
 
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
