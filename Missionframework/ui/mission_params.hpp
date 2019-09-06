@@ -268,7 +268,7 @@ class Params
         title = $STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE;
         values[] = {0, 25, 50, 75, 100};
         text[] = { $STR_PARAMS_DISABLED, "25%", "50%", "75%", "100%"};
-        defualt = 50;
+        default = 50;
     };
     class DelayDespawnMax {
         title = $STR_PARAM_DELAY_DESPAWN_MAX;
