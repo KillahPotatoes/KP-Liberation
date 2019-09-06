@@ -28,7 +28,7 @@ private _squad3 = [];
 private _squad4 = [];
 private _minimum_building_positions = 5;
 private _sector_despawn_tickets = BASE_TICKETS;
-private _maximum_additional_tickets = (KP_liberation_delayDespawnMax * 60 / SECTOR_TICK_TIME)
+private _maximum_additional_tickets = (KP_liberation_delayDespawnMax * 60 / SECTOR_TICK_TIME);
 private _popfactor = 1;
 private _guerilla = false;
 
