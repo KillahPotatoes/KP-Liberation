@@ -9,8 +9,8 @@ params [
 if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo _centerPos}) != -1}) exitWith {false};
 
 {
+    _x switchLight "OFF";
     _x hideObjectGlobal true;
-    _x enableSimulationGlobal false;
     _x allowDamage false;
 } forEach (nearestTerrainObjects [_centerPos, [], _radius, false, true]);
 
