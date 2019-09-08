@@ -419,7 +419,7 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_RESTART_PARAM";
-    _value = if (KP_liberation_restart == 0) then {localize "STR_PARAMS_ENABLED";} else {KP_liberation_restart;};
+    _value = if (KP_liberation_restart == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_restart;};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     player createDiaryRecord ["parameters",["Active", _text]];
