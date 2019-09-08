@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=633;
+		nextID=646;
 	};
 	class Camera
 	{
-		pos[]={1372.8306,55.560783,465.82941};
-		dir[]={0.77747244,-0.60665154,-0.16650243};
-		up[]={0.59341282,0.79475814,-0.12708488};
-		aside[]={-0.20943744,-3.1790114e-007,-0.97794938};
+		pos[]={1371.6664,24.004627,452.12912};
+		dir[]={0.93252647,-0.35703716,0.054267786};
+		up[]={0.35644579,0.9340843,0.020742955};
+		aside[]={0.058097087,6.3902917e-008,-0.99832481};
 	};
 };
 binarizationWanted=0;
@@ -200,7 +200,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=359;
+		items=372;
 		class Item0
 		{
 			dataType="Logic";
@@ -2268,13 +2268,12 @@ class Mission
 		class Item107
 		{
 			dataType="Marker";
-			position[]={11605.399,3.1619999,8136.6348};
+			position[]={11545.439,2.502887,8152.6802};
 			name="military_9";
 			text="Da Kao Base";
 			type="o_support";
 			colorName="ColorEAST";
 			id=267;
-			atlOffset=-0.00049901009;
 		};
 		class Item108
 		{
@@ -6342,6 +6341,7 @@ class Mission
 			};
 			id=622;
 			type="Land_Campfire_burning";
+			atlOffset=1.9073486e-006;
 		};
 		class Item350
 		{
@@ -6390,6 +6390,7 @@ class Mission
 			};
 			id=626;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 		};
 		class Item353
 		{
@@ -6406,6 +6407,7 @@ class Mission
 			};
 			id=627;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 		};
 		class Item354
 		{
@@ -6422,6 +6424,7 @@ class Mission
 			};
 			id=628;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 		};
 		class Item355
 		{
@@ -6469,6 +6472,7 @@ class Mission
 			};
 			id=631;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
 		};
 		class Item358
 		{
@@ -6485,6 +6489,150 @@ class Mission
 			};
 			id=632;
 			type="Land_LampShabby_F";
+			atlOffset=4.7683716e-007;
+		};
+		class Item359
+		{
+			dataType="Marker";
+			position[]={11692.29,6.388,7658.3418};
+			name="military_18";
+			text="Da Kao Radio Control";
+			type="o_support";
+			colorName="ColorEAST";
+			id=633;
+			atlOffset=-0.00013017654;
+		};
+		class Item360
+		{
+			dataType="Marker";
+			position[]={11412.36,1.406,12474.793};
+			name="capture_29";
+			text="Niha Sông Hau";
+			type="n_art";
+			colorName="ColorEAST";
+			id=634;
+			atlOffset=-2.6680861;
+		};
+		class Item361
+		{
+			dataType="Marker";
+			position[]={12541.085,-0.077,11392.884};
+			name="capture_30";
+			text="Timms Khue Cong";
+			type="n_art";
+			colorName="ColorEAST";
+			id=635;
+			atlOffset=-2.6681294;
+		};
+		class Item362
+		{
+			dataType="Marker";
+			position[]={7245.8242,2.99,8063.7139};
+			name="capture_31";
+			text="Khe Ban Tanh";
+			type="n_art";
+			colorName="ColorEAST";
+			id=636;
+			atlOffset=-2.668936;
+		};
+		class Item363
+		{
+			dataType="Marker";
+			position[]={4199,-0.73100001,8990.5234};
+			name="capture_32";
+			text="Goh Nui";
+			type="n_art";
+			colorName="ColorEAST";
+			id=637;
+			atlOffset=-3.9113262;
+		};
+		class Item364
+		{
+			dataType="Marker";
+			position[]={454.85999,3.6470001,12311.597};
+			name="capture_33";
+			text="Kho Nam Trang";
+			type="n_art";
+			colorName="ColorEAST";
+			id=638;
+			atlOffset=-2.6684711;
+		};
+		class Item365
+		{
+			dataType="Marker";
+			position[]={515.90802,15.893,14544.831};
+			name="capture_34";
+			text="Lha Un Garang";
+			type="n_art";
+			colorName="ColorEAST";
+			id=639;
+			atlOffset=-2.6681709;
+		};
+		class Item366
+		{
+			dataType="Marker";
+			position[]={2867.0759,11.111,14271.151};
+			name="military_19";
+			text="Vinh Long Food Depot";
+			type="o_support";
+			colorName="ColorEAST";
+			id=640;
+			atlOffset=-0.00059318542;
+		};
+		class Item367
+		{
+			dataType="Marker";
+			position[]={3661.073,2.2909999,13094.38};
+			name="factory_22";
+			text="Hong Ngu Ironworks";
+			type="loc_Fuelstation";
+			colorName="ColorEAST";
+			id=641;
+			atlOffset=0.00018334389;
+		};
+		class Item368
+		{
+			dataType="Marker";
+			position[]={5289.5908,-0.30899999,4465.9282};
+			name="capture_35";
+			text="Ghoram Tho";
+			type="n_art";
+			colorName="ColorEAST";
+			id=642;
+			atlOffset=-2.6685121;
+		};
+		class Item369
+		{
+			dataType="Marker";
+			position[]={14150.817,-0.085000001,1315.963};
+			name="capture_36";
+			text="Sho Lang Tho";
+			type="n_art";
+			colorName="ColorEAST";
+			id=643;
+			atlOffset=-2.6687562;
+		};
+		class Item370
+		{
+			dataType="Marker";
+			position[]={12913.526,6.131,6721.0879};
+			name="factory_23";
+			text="Lao Khea Ironworks";
+			type="loc_Fuelstation";
+			colorName="ColorEAST";
+			id=644;
+			atlOffset=-0.00055027008;
+		};
+		class Item371
+		{
+			dataType="Marker";
+			position[]={5577.8472,4.0949998,10980.842};
+			name="factory_24";
+			text="Ben Cat Plantation";
+			type="loc_Fuelstation";
+			colorName="ColorEAST";
+			id=645;
+			atlOffset=-0.00035524368;
 		};
 	};
 	class Connections

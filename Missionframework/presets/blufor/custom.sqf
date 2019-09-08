@@ -80,7 +80,6 @@ infantry_units = [
 
 light_vehicles = [
     ["B_Quadbike_01_F",50,0,25],                                        // Quad Bike
-    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_LSV_01_unarmed_F",75,0,50],                                     // Prowler
     ["B_LSV_01_armed_F",75,40,50],                                      // Prowler (HMG)
     ["B_LSV_01_AT_F",75,60,50],                                         // Prowler (AT)
@@ -174,6 +173,7 @@ air_vehicles = [
     ["RHS_CH_47F",275,80,175],                                          // CH-47 Chinook (Armed)
     ["I_Heli_Transport_02_F",275,0,175],                                // CH-49 Mohawk
     ["rhsusf_CH53E_USMC",300,0,175],                                    // CH-53E Super Stallion
+    ["rhsusf_CH53E_USMC_GAU21_D",300,100,175],                          // CH-53E Super Stallion (GAU-21)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
     ["B_UAV_02_dynamicLoadout_F",400,400,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
@@ -304,6 +304,7 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_B_TowingTractor_NATO",50,0,25],                               // Towing Tractor
     ["B_APC_Tracked_01_CRV_F",500,250,350],                             // CRV-6e Bobcat
     ["B_Truck_01_Repair_F",325,0,75],                                   // HEMTT Repair
     ["B_Truck_01_fuel_F",125,0,275],                                    // HEMTT Fuel

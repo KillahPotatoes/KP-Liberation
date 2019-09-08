@@ -3,7 +3,7 @@
     - Global Mobilization
 
     Optional Mods:
-    - LEN - Cold War Helicopters (due to lack fo air assets in GM for now) - https://steamcommunity.com/sharedfiles/filedetails/?id=1726445116
+    - LEN - Cold War Aircraft (due to lack fo air assets in GM for now) - https://steamcommunity.com/sharedfiles/filedetails/?id=1726445116
 */
 
 // Enemy infantry classes
@@ -118,8 +118,16 @@ opfor_troup_transports = [
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
-    "len_mi8amt_nva"                                                    // Mi8amt
+    "len_mi8amt_nva",                                                   // Mi8amt
+    "len_mi24d_AT_nva",                                                 // Mi-24D (AT)
+    "len_mi24d_CAS_nva",                                                // Mi-24D (CAS)
+    "len_mi24d_FAB_nva",                                                // Mi-24D (FAB)
+    "len_mi24p_AT_nva",                                                 // Mi-24P (AT)
+    "len_mi24p_CAS_nva",                                                // Mi-24P (CAS)
+    "len_mi24p_FAB_nva"                                                 // Mi-24P (FAB)
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [];
+opfor_air = [
+    "len_l39_nva"                                                       // Aero L-39
+];

@@ -15,7 +15,7 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
 */
 
 // Version of the KP Liberation framework
-private _version = [0, 96, 5];
+private _version = [0, 96, 6];
 // All AI squads
 private _aiGroups = [];
 // Classnames of blufor vehicles

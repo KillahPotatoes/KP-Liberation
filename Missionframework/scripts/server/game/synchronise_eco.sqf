@@ -4,6 +4,7 @@ waitUntil{!isNil "save_is_loaded"};
 waitUntil{!isNil "KP_liberation_production"};
 waitUntil{!isNil "KP_liberation_logistics"};
 waitUntil{!isNil "KP_liberation_production_markers"};
+waitUntil {save_is_loaded};
 
 if (KP_liberation_production_markers isEqualTo []) then {
 	{
@@ -23,7 +24,7 @@ while {true} do {
 	};
 	{
 		private _sector = _x;
-		{		
+		{
 			if ((_sector select 1) == (_x select 0)) exitWith {
 				_x set [1, (_sector select 4)];
 				_x set [2, (_sector select 5)];
@@ -34,7 +35,7 @@ while {true} do {
 	sleep 0.25;
 	sync_eco = [KP_liberation_production,KP_liberation_logistics,KP_liberation_production_markers];
 	publicVariable "sync_eco";
-	
+
 	_KP_liberation_production_old = +KP_liberation_production;
 	_KP_liberation_logistics_old = +KP_liberation_logistics;
 };

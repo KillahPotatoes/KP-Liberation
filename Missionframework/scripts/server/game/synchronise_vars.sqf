@@ -18,6 +18,7 @@ waitUntil{!isNil "KP_liberation_guerilla_strength"};
 waitUntil{!isNil "infantry_weight"};
 waitUntil{!isNil "armor_weight"};
 waitUntil{!isNil "air_weight"};
+waitUntil {save_is_loaded};
 
 private _KP_liberation_fob_resources_old = [];
 private _KP_liberation_supplies_global_old = -1;
@@ -57,7 +58,7 @@ while {true} do {
 		|| _armor_weight_old != armor_weight
 		|| _air_weight_old != air_weight
 	};
-	
+
 	if (KP_liberation_guerilla_strength < 0) then {KP_liberation_guerilla_strength = 0;};
 
 	sleep 0.25;
@@ -81,7 +82,7 @@ while {true} do {
 		air_weight
 	];
 	publicVariable "sync_vars";
-	
+
 	_KP_liberation_fob_resources_old = +KP_liberation_fob_resources;
 	_KP_liberation_supplies_global_old = KP_liberation_supplies_global;
 	_KP_liberation_ammo_global_old = KP_liberation_ammo_global;

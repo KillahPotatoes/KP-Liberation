@@ -1,5 +1,6 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
+waitUntil {save_is_loaded};
 
 if (KP_liberation_logistic_debug > 0) then {diag_log "[KP LIBERATION] [LOGISTIC] Logistic management started";};
 
@@ -10,7 +11,7 @@ while {GRLIB_endgame == 0} do {
 
 	if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KP_liberation_logistics) > 0)) then {
 		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval started: %1", time];};
-		
+
 		private _tempLogistics = +KP_liberation_logistics;
 
 		{
@@ -42,7 +43,7 @@ while {GRLIB_endgame == 0} do {
 							} forEach _storage_areas;
 
 							if (_spaceSum < _toProcess) exitWith {_x set [9,2];};
-							
+
 							_x set [8,((_x select 8) - 1)];
 							private _currentIndex = _forEachIndex;
 							private _processed = 0;
@@ -121,7 +122,7 @@ while {GRLIB_endgame == 0} do {
 							private _supplyValue = 0;
 							private _ammoValue = 0;
 							private _fuelValue = 0;
-							
+
 							{
 								{
 									switch ((typeOf _x)) do {
@@ -207,7 +208,7 @@ while {GRLIB_endgame == 0} do {
 									private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
 
 									switch ((typeOf _x)) do {
-										case KP_liberation_supply_crate: { 
+										case KP_liberation_supply_crate: {
 											if (_getSupply > 0) then {
 												if (_crateValue > _getSupply) then {
 													_crateValue = _crateValue - _getSupply;
@@ -249,7 +250,7 @@ while {GRLIB_endgame == 0} do {
 										default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 									};
 								} forEach _storedCrates;
-								
+
 								switch (typeOf _x) do {
 									case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
 									case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
@@ -272,7 +273,7 @@ while {GRLIB_endgame == 0} do {
 								} forEach attachedObjects (_x);
 
 								if ((_getSupply == 0) && (_getAmmo == 0) && (_getFuel == 0)) exitWith {};
-								
+
 							} forEach _storage_areas;
 
 							if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
@@ -298,7 +299,7 @@ while {GRLIB_endgame == 0} do {
 				case 2;
 				case 4: {
 					if ((_x select 8) > 1) then {
-						
+
 						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
 							private _dice = round (random 100);
 							private _chance = KP_liberation_convoy_ambush_chance + ([] call F_cr_getMulti);
@@ -322,7 +323,7 @@ while {GRLIB_endgame == 0} do {
 									KP_liberation_convoy_ambush_check = 0;
 								};
 							} else {
-								_x set [8,((_x select 8) - 1)];	
+								_x set [8,((_x select 8) - 1)];
 							};
 						} else {
 							_x set [8,((_x select 8) - 1)];
@@ -336,7 +337,7 @@ while {GRLIB_endgame == 0} do {
 						switch (_x select 7) do {
 							case 2: {
 								_nextState = 3;
-								_time = ceil (((ceil (((_x select 5) select 0) / 100)) + (ceil (((_x select 5) select 1) / 100)) + (ceil (((_x select 5) select 2) / 100))) / 3);	
+								_time = ceil (((ceil (((_x select 5) select 0) / 100)) + (ceil (((_x select 5) select 1) / 100)) + (ceil (((_x select 5) select 2) / 100))) / 3);
 							};
 							case 4: {
 								_nextState = 1;
@@ -376,7 +377,7 @@ while {GRLIB_endgame == 0} do {
 						} forEach _storage_areas;
 
 						if (_spaceSum < _toProcess) exitWith {_x set [9,2];};
-						
+
 						_x set [8,((_x select 8) - 1)];
 						private _currentIndex = _forEachIndex;
 						private _processed = 0;
@@ -459,7 +460,7 @@ while {GRLIB_endgame == 0} do {
 				};
 				default {};
 			};
-		} forEach _tempLogistics;	
+		} forEach _tempLogistics;
 
 		KP_liberation_logistics = +_tempLogistics;
 

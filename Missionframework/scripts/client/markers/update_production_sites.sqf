@@ -1,5 +1,6 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_production_markers"};
+waitUntil {save_is_loaded};
 
 private _KP_liberation_production_markers_old = [0];
 
@@ -7,7 +8,7 @@ while {GRLIB_endgame == 0} do {
 	waitUntil {sleep 5;
 		!(_KP_liberation_production_markers_old isEqualTo KP_liberation_production_markers)
 	};
-	
+
 	{
 		private _marker_text = (_x select 4) + " [";
 		if (_x select 1) then {_marker_text = _marker_text + "S";};

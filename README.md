@@ -187,6 +187,28 @@ class Missions
 
 ## Changelog
 
+### 0.96.6 (09th September 2019)
+* Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
+* Added: Parameter to enable/disable limitations on Zeus functionalities. Default enabled to keep old behaviour.
+* Added: Parameter to decide to start the campaign with a FOB container (default, like before) or a FOB truck.
+* Added: Parameter to allow enemies stay in immobile vehicles (default 50% chance).
+* Added: Sector despawn scaling. The longer sector is activated the longer it de-activates. Configurable as parameter, 5min additional delay max by default.
+* Added: Korean localization. Thanks to [PanzerKoLee](https://github.com/PanzerKoLee)
+* Updated: Russian localization. Thanks to [DjHaski](https://github.com/DjHaski)
+* Tweaked: Initial FOB box doesn't have equipment in the inventory anymore.
+* Tweaked: Height check for mobile respawn now relies on `isTouchingGround` instead of z value of position.
+* Tweaked: Transport config heights on M977 vehicles. Thanks to [FishAI](https://github.com/FishAI)
+* Tweaked: AI in building now has a dynamic radius to look for enemies until they start moving again depending on blufor/opfor ratio in sector.
+* Fixed: Potato 01 was created after server restart, even if there was one saved.
+* Fixed: Missing variable `stats_blufor_teamkills_by_players`. Also no separation between by players or not by players for teamkills anymore.
+* Fixed: Factory storages could disappear randomly on save load.
+* Fixed: Some Presets had CUP Towing Tractor in the wrong place or duplicated. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: CUP Presets still had the Nemmera in the support vehicle section. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: FOB resources weren't updated in build dialog, when building infantry units.
+* Fixed: Some missing parameter information in the map screens parameter overview.
+* Fixed: After creating a clearance at a FOB some light sources could remain.
+
 ### 0.96.5 (26th July 2019 due to Contacts Release)
 * Added: Contact DLC LDF preset.
 * Added: Contact DLC transport configs.

@@ -50,15 +50,20 @@ if(isServer) then {
     GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
+    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
+    GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
 
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
     GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
+    GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
+    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
 
     GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
     GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
@@ -224,6 +229,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (GRLIB_build_first_fob) then {localize "STR_YES";} else {localize "STR_NO";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_FIRSTFOBVEHICLE";
+    _value = if (KP_liberation_fob_vehicle) then {localize "STR_PARAMS_FIRSTFOBVEHICLE_TRUCK";} else {localize "STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAM_FOBS_COUNT";
     _value = str GRLIB_maximum_fobs;
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -256,8 +265,26 @@ if (!isDedicated && hasInterface) then {
     };
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_FOG_PARAM";
+    _value = if (KP_liberation_fog_param) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_RESOURCESMULTIPLIER";
     _value = format ["x%1", GRLIB_resources_multiplier];
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_ARSENAL";
+    _value = if (KP_liberation_arsenal_type) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_VICTORYCONDITION";
+    switch (KP_liberation_victoryCondition) do {
+        case 1: {_value = localize "STR_PARAMS_VICTORYCONDITION_1";};
+        case 2: {_value = localize "STR_PARAMS_VICTORYCONDITION_2";};
+        case 3: {_value = localize "STR_PARAMS_VICTORYCONDITION_3";};
+        case 4: {_value = localize "STR_PARAMS_VICTORYCONDITION_4";};
+        default {_value = localize "STR_PARAMS_VICTORYCONDITION_0";};
+    };
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_A3_ReviveMode";
@@ -354,6 +381,18 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_clear_cargo) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE";
+    _value = if (KP_liberation_allowEnemiesInImmobile == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_allowEnemiesInImmobile;};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_DELAY_DESPAWN_MAX";
+    _value = if (KP_liberation_delayDespawnMax == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_delayDespawnMax;};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_LIMITEDZEUS";
+    _value = if (KP_liberation_limited_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PERMISSIONS_PARAM";
     _value = if (GRLIB_permissions_param) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -380,15 +419,7 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_RESTART_PARAM";
-    _value = localize "STR_PARAMS_DISABLED";
-    switch (KP_liberation_restart) do {
-        case 1: {_value = "1";};
-        case 2: {_value = "2";};
-        case 3: {_value = "3";};
-        case 4: {_value = "4";};
-        case 5: {_value = "5";};
-        case 6: {_value = "6";};
-    };
+    _value = if (KP_liberation_restart == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_restart;};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     player createDiaryRecord ["parameters",["Active", _text]];

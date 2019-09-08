@@ -1838,6 +1838,9 @@ GRLIB_arsenal_items = [
     "ItemWatch",
     "Medikit",
     "MineDetector",
+    "NVGoggles",
+    "NVGoggles_INDEP",
+    "NVGoggles_OPFOR",
     "ToolKit"
 ];
 

@@ -4,7 +4,7 @@ class Params
         title = $STR_PARAMS_LOADSAVEPARAMS;
         values[] = { 0, 1, 2 };
         texts[] = { $STR_PARAMS_LOADSAVEPARAMS_SAVE, $STR_PARAMS_LOADSAVEPARAMS_LOAD, $STR_PARAMS_LOADSAVEPARAMS_SELECTED };
-        default = 1;
+        default = 1; // If you want to set mission parameters via server.cfg or this file, then set this value to 2
     };
     class Spacer0 {
         title = "";
@@ -54,6 +54,12 @@ class Params
         texts[] = { $STR_YES, $STR_NO };
         default = 0;
     };
+    class FirstFobVehicle {
+        title = $STR_PARAMS_FIRSTFOBVEHICLE;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER, $STR_PARAMS_FIRSTFOBVEHICLE_TRUCK};
+        default = 0;
+    };
     class MaximumFobs {
         title = $STR_PARAM_FOBS_COUNT;
         values[] = {3,5,7,10,15,20,26};
@@ -95,6 +101,12 @@ class Params
         values[] = { 1,2,3 };
         texts[] = { $STR_WEATHER_PARAM1, $STR_WEATHER_PARAM2, $STR_WEATHER_PARAM3 };
         default = 3;
+    };
+    class VanillaFog {
+        title = $STR_FOG_PARAM;
+        values[] = {1, 0};
+        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
+        default = 1;
     };
     class ResourcesMultiplier {
         title = $STR_PARAMS_RESOURCESMULTIPLIER;
@@ -248,6 +260,24 @@ class Params
     };
     class ClearCargo {
         title = $STR_PARAM_CLEAR_CARGO;
+        values[] = {1,0};
+        texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
+        default = 1;
+    };
+    class AllowEnemiesInImmobile {
+        title = $STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE;
+        values[] = {0, 25, 50, 75, 100};
+        text[] = { $STR_PARAMS_DISABLED, "25%", "50%", "75%", "100%"};
+        default = 50;
+    };
+    class DelayDespawnMax {
+        title = $STR_PARAM_DELAY_DESPAWN_MAX;
+        values[] = {0, 5, 10, 15, 20, 25, 30};
+        texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
+        default = 5;
+    };
+    class LimitedZeus {
+        title = $STR_PARAM_LIMITEDZEUS;
         values[] = {1,0};
         texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
         default = 1;

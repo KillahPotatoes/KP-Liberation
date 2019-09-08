@@ -24,6 +24,7 @@ if ( _classname in opfor_choppers ) then {
 	_newvehicle flyInHeight (100 + (random 200));
 } else {
 	_newvehicle = _classname createVehicle _spawnpos;
+	_newvehicle call F_allowCrewInImmobile;
 	_newvehicle setpos _spawnpos;
 };
 _newvehicle allowdamage false;

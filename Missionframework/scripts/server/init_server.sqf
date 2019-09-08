@@ -44,7 +44,7 @@ execVM "scripts\server\battlegroup\readiness_increase.sqf";
 execVM "scripts\server\game\apply_default_permissions.sqf";
 execVM "scripts\server\game\capture_vehicles.sqf";
 execVM "scripts\server\game\cleanup_vehicles.sqf";
-execVM "scripts\server\game\fucking_set_fog.sqf";
+if (!KP_liberation_fog_param) then {execVM "scripts\server\game\fucking_set_fog.sqf";};
 execVM "scripts\server\game\manage_time.sqf";
 execVM "scripts\server\game\manage_weather.sqf";
 execVM "scripts\server\game\periodic_save.sqf";
@@ -125,4 +125,27 @@ execVM "scripts\server\offloading\group_diag.sqf";
 // Server Restart Script from K4s0
 if (KP_liberation_restart > 0) then {
     execVM "scripts\server\game\server_restart.sqf";
+};
+
+if (KP_liberation_limited_zeus) then {
+    zm1 setVariable ["Addons", 0, true];
+    removeAllCuratorAddons zm1;
+
+    zm1 setCuratorCoef ["edit", -1e8];
+    zm1 setCuratorCoef ["place", -1e8];
+    zm1 setCuratorCoef ["synchronize", 0];
+    zm1 setCuratorCoef ["delete", 0];
+    zm1 setCuratorCoef ["destroy", -1e8];
+} else {
+    zm1 setVariable ["Addons", 3, true];
+    removeAllCuratorAddons zm1;
+
+    private _allAddons = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};
+    zm1 addCuratorAddons _allAddons;
+
+    zm1 setCuratorCoef ["edit", 0];
+    zm1 setCuratorCoef ["place", 0];
+    zm1 setCuratorCoef ["synchronize", 0];
+    zm1 setCuratorCoef ["delete", 0];
+    zm1 setCuratorCoef ["destroy", 0];
 };

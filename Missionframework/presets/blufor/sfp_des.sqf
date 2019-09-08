@@ -22,7 +22,7 @@ crewman_classname = "sfp_m90d_crew";                                    // This 
 pilot_classname = "sfp_m90w_pilot";                                     // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "sfp_hkp9";                       // These are the little birds which spawn on the Freedom or at Chimera base.
 KP_liberation_boat_classname = "sfp_strb90";                            // These are the boats which spawn at the stern of the Freedom.
-KP_liberation_truck_classname = "sfp_tgb20";                            // These are the trucks which are used in the logistic convoy system.
+KP_liberation_truck_classname = "sfp_tgb40";                            // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
 KP_liberation_recycle_building = "Land_CarService_F";                   // The building defined to unlock FOB recycling functionality.
@@ -72,7 +72,9 @@ light_vehicles = [
     ["B_Quadbike_01_F",50,0,25],                                        // Quad Bike
     ["sfp_tgb16_desert",100,0,50],                                      // Tgb 16
     ["sfp_tgb16_rws",100,40,50],                                        // Tgb 16 (RWS)
+    ["sfp_tgb30",125,0,50],                                             // Tgb 30
     ["sfp_tgb30_repair",100,0,50],                                      // Tgb 30 (Repair)
+    ["sfp_tgb40",125,0,50],                                             // Tgb 40
     ["sfp_tgb40_ammo",150,50,50],                                       // Tgb 40 (Ammo)
     ["sfp_tgb40_fuel",125,40,100],                                      // Tgb 40 (Fuel)
     ["sfp_strb90",100,0,25],                                            // Strb 90
