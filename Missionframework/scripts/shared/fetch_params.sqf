@@ -382,7 +382,7 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE";
-    _value = if (KP_liberation_allowEnemiesInImmobile == 0) then {localize "STR_PARAMS_ENABLED";} else {KP_liberation_allowEnemiesInImmobile;};
+    _value = if (KP_liberation_allowEnemiesInImmobile == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_allowEnemiesInImmobile;};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_DELAY_DESPAWN_MAX";
