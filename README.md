@@ -187,7 +187,7 @@ class Missions
 
 ## Changelog
 
-### 0.96.6 (tbd)
+### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
 * Added: Parameter to enable/disable limitations on Zeus functionalities. Default enabled to keep old behaviour.
