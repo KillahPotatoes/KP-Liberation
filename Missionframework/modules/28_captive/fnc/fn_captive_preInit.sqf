@@ -18,31 +18,15 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {["Module initializing...", "PRE] [CAPTIVE", true] call KPLIB_fnc_common_log;};
-
-/*
-    ----- Module Globals -----
-*/
-
+if (isServer) then {
+    ["Module initializing...", "PRE] [CAPTIVE", true] call KPLIB_fnc_common_log;
 
 /*
     ----- Module Initialization -----
 */
 
-
-
-// Server section (dedicated and player hosted)
-if (isServer) then {
-
-};
-
-// HC section
-if (!hasInterface && !isDedicated) then {
-
-};
-
-// Player section
-if (hasInterface) then {
+    // Set captives on sector capture
+    ["KPLIB_sector_captured", {[_this select 0] call KPLIB_fnc_captive_checkSector;}] call CBA_fnc_addEventHandler;
 
 };
 

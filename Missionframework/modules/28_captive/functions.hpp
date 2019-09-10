@@ -15,6 +15,9 @@
 class mission {
     file = "modules\28_captive\fnc";
 
+    // Checks the given sector for remaining enemys and sets them into captive mode
+    class captive_checkSector {};
+
     // Module post initialization
     class captive_postInit {
         postInit = 1;
