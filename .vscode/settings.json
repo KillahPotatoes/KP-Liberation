@@ -66,6 +66,7 @@
         "KPLIB_param_sectorActRange",
         "KPLIB_param_sectorCap",
         "KPLIB_param_sectorCapRange",
+        "KPLIB_param_sectorCapRatio",
         "KPLIB_param_stamina",
         "KPLIB_param_subCommanderZeusMode",
         "KPLIB_param_timeMulti",

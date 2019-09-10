@@ -1664,6 +1664,14 @@
             <Chinese>在戰區中心半徑公尺內的單位可進行佔領</Chinese>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRATIO">
+            <English>Sector Capture Unit Ratio</English>
+            <German>Einheitenverhältnis zur Sektoreroberung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRATIO_TT">
+            <English>Ratio from enemy to frindly units, which is needed to capture a sector.</English>
+            <German>Verhältnis von feindlichen und freundlichen kräften, welches benötigt wird um einen Sektor zu erobern.</German>
+        </Key>
 
         <!-- ZEUS CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_ZEUS">
