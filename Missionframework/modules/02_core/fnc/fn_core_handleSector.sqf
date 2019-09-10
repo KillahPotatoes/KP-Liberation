@@ -31,9 +31,14 @@ private _handler = [
         // If there are no enemy units in two times the capture range and friendly units are in capture range
         // capture the sector
         if (
-            ({side _x isEqualTo KPLIB_preset_sideF} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange])) >
-            ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange]))
-            * KPLIB_param_sectorCapRatio
+            (
+                ({side _x isEqualTo KPLIB_preset_sideF} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange])) >
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange * 2]))
+                * KPLIB_param_sectorCapRatio
+            ) && (
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["Tank", KPLIB_param_sectorCapRange * 2]))
+                isEqualTo 0
+            )
         ) then {
             [format ["Sector %1 (%2) captured", markerText _sector, _sector], "CORE", true] call KPLIB_fnc_common_log;
 
