@@ -31,7 +31,7 @@ private _sectorPos = getMarkerPos _sector;
 
 // Check the sector for remaining units
 {
-    [_x] call KPLIB_fnc_captive_setCaptive;
+    [_x] call KPLIB_fnc_captive_setSurrender;
 } forEach (_sectorPos nearEntities ["Man", KPLIB_param_sectorCapRange * 2]) select {side _x isEqualTo KPLIB_preset_sideE};
 
 true

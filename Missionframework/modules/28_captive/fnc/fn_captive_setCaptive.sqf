@@ -27,27 +27,7 @@ if (isNull _unit) exitWith {
     false
 };
 
-if !(vehicle _unit isEqualTo _unit) then {
-    moveOut _unit;
-};
-
 // Set variable on unit
 _unit setVariable ["KPLIB_captive", true];
-
-// Remove some equipment of the unit
-removeAllWeapons _unit;
-removeHeadgear _unit;
-removeBackpack _unit;
-_unit setUnitPos "UP";
-if (KPLIB_ace_enabled) then {
-    [_unit, true] call ACE_captives_fnc_setSurrendered;
-} else {
-    _unit disableAI "ANIM";
-    _unit disableAI "MOVE";
-    _unit playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-    _unit setCaptive true;
-};
-
-
 
 true

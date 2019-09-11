@@ -15,6 +15,9 @@
 class mission {
     file = "modules\28_captive\fnc";
 
+    // Adds all needed actions to a surrendered unit
+    class captive_addCaptiveActions {};
+
     // Checks the given sector for remaining enemys and sets them into captive mode
     class captive_checkSector {};
 
@@ -30,5 +33,8 @@ class mission {
 
     // Sets an unit into captive mode
     class captive_setCaptive {};
+
+    // Given unit surrenders
+    class captive_setSurrender {};
 
 };
