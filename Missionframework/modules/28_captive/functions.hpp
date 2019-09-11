@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-10
+    Last Update: 2019-09-11
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -27,5 +27,8 @@ class mission {
     class captive_preInit {
         preInit = 1;
     };
+
+    // Sets an unit into captive mode
+    class captive_setCaptive {};
 
 };
