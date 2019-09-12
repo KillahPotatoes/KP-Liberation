@@ -12,7 +12,7 @@
         Defines for all functions, which are brought by this module.
 */
 
-class mission {
+class captive {
     file = "modules\28_captive\fnc";
 
     // Adds all needed actions to a surrendered unit
