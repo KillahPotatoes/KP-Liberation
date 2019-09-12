@@ -25,6 +25,9 @@ if (isServer) then {
     ----- Module Initialization -----
 */
 
+    // Process CBA Settings
+    [] call KPLIB_fnc_captive_settings;
+
     // Units surrender on sector capture
     ["KPLIB_sector_captured", {[_this select 0] call KPLIB_fnc_captive_checkSector;}] call CBA_fnc_addEventHandler;
 

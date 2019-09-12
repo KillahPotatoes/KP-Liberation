@@ -4,7 +4,7 @@
     File: fn_captive_addCaptiveAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-11
+    Last Update: 2019-09-12
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -36,5 +36,11 @@ if !(KPLIB_ace_enabled) then {
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 };
 
+// Add interrogate action near FOB
+[
+    _unit,
+    "arrest",
+    [{[10] call KPLIB_fnc_resources_addIntel;}, true, -800, false, true, "", "count (_target nearEntities [KPLIB_preset_fobBuildingF, 25]) isEqualTo 1", 10]
+] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
 true
