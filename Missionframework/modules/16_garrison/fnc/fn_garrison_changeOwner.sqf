@@ -30,13 +30,6 @@ private _persistentGarrisonRef = [_sector] call KPLIB_fnc_garrison_getGarrison;
 // Switch owner
 private _newOwner = [2, 0] select ((_persistentGarrisonRef select 1) isEqualTo 2);
 
-// Clear the garrison units on sector change to BLUFOR, to ensure that captives won't be Deleted
-if (_newOwner isEqualTo 2) then {
-    _persistentGarrisonRef set [2, []];
-    _persistentGarrisonRef set [3, []];
-    _persistentGarrisonRef set [4, []];
-};
-
 // Update persistent garrison
 _persistentGarrisonRef set [1, _newOwner];
 

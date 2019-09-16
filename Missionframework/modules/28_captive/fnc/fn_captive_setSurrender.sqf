@@ -4,7 +4,7 @@
     File: fn_captive_setSurrender.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-11
+    Last Update: 2019-09-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -33,6 +33,7 @@ if !(vehicle _unit isEqualTo _unit) then {
 
 // Set variable on unit
 _unit setVariable ["KPLIB_surrender", true];
+_unit setVariable ["KPLIB_captured", true];
 
 // Remove some equipment of the unit
 removeAllWeapons _unit;
