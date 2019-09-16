@@ -4,7 +4,7 @@
     File: fn_garrison_changeOwner.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-23
-    Last Update: 2019-03-30
+    Last Update: 2019-09-16
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -29,6 +29,13 @@ private _persistentGarrisonRef = [_sector] call KPLIB_fnc_garrison_getGarrison;
 
 // Switch owner
 private _newOwner = [2, 0] select ((_persistentGarrisonRef select 1) isEqualTo 2);
+
+// Clear the garrison units on sector change to BLUFOR, to ensure that captives won't be Deleted
+if (_newOwner isEqualTo 2) then {
+    _persistentGarrisonRef set [2, []];
+    _persistentGarrisonRef set [3, []];
+    _persistentGarrisonRef set [4, []];
+};
 
 // Update persistent garrison
 _persistentGarrisonRef set [1, _newOwner];
