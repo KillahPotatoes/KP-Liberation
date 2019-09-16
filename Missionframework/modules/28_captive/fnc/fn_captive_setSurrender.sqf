@@ -32,8 +32,8 @@ if !(vehicle _unit isEqualTo _unit) then {
 };
 
 // Set variable on unit
-_unit setVariable ["KPLIB_surrender", true];
-_unit setVariable ["KPLIB_captured", true];
+_unit setVariable ["KPLIB_surrender", true, true];
+_unit setVariable ["KPLIB_captured", true, true];
 
 // Remove some equipment of the unit
 removeAllWeapons _unit;

@@ -203,6 +203,10 @@
             <Chinese>-- 管理員選單 --</Chinese>
             <German>-- Admin Menü --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ARREST">
+            <English>Arrest</English>
+            <German>Festnehmen</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_ARSENAL">
             <English>-- ARSENAL --</English>
             <Chinese>-- 軍火庫 --</Chinese>

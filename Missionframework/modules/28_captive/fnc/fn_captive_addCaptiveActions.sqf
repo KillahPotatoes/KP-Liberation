@@ -31,15 +31,15 @@ if !(KPLIB_ace_enabled) then {
     // Add arrest action
     [
         _unit,
-        "arrest",
-        [{[_this select 0] call KPLIB_fnc_captive_setCaptive;}, true, -800, false, true, "", "_target getVariable [KPLIB_surrender, false]", 10]
+        "STR_KPLIB_ACTION_ARREST",
+        [{[_this select 0] call KPLIB_fnc_captive_setCaptive;}, nil, -800, false, true, "", "_target getVariable [""KPLIB_surrender"", false]", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add escort action
     [
         _unit,
         "escort",
-        [{}, true, -800, false, true, "", "_target getVariable [KPLIB_captive, false]", 10]
+        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add stop escort action
@@ -47,14 +47,14 @@ if !(KPLIB_ace_enabled) then {
     [
         _unit,
         "drop captive",
-        [{}, true, -800, false, true, "", "_target getVariable [KPLIB_captive, false]", 10]
+        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add move in vehicle action
     [
         _unit,
         "move in cargo",
-        [{}, true, -800, false, true, "", "_target getVariable [KPLIB_captive, false]", 10]
+        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add move out vehicle action
@@ -62,7 +62,7 @@ if !(KPLIB_ace_enabled) then {
     [
         _unit,
         "move out cargo",
-        [{}, true, -800, false, true, "", "_target getVariable [KPLIB_captive, false]", 10]
+        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 };
 
@@ -70,7 +70,7 @@ if !(KPLIB_ace_enabled) then {
 [
     _unit,
     "interrogate captive",
-    [{[10] call KPLIB_fnc_resources_addIntel; deleteVehicle _unit;}, true, -800, false, true, "", "count (_target nearEntities [KPLIB_preset_fobBuildingF, 25]) isEqualTo 1", 10]
+    [{[10] call KPLIB_fnc_resources_addIntel; deleteVehicle _unit;}, nil, -800, false, true, "", "count (_target nearEntities [KPLIB_preset_fobBuildingF, 25]) isEqualTo 1", 10]
 ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
 true

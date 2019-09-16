@@ -40,7 +40,7 @@ private _heavyVeh = [];
         deleteVehicle _x;
         _infantry = _infantry + 1;
     };
-} forEach ((_activeGarrisonRef select 2) select {!(_x getVariable ["KPLIB_captured, false"])});
+} forEach ((_activeGarrisonRef select 2) select {!(_x getVariable ["KPLIB_captured", false])});
 
 /* !NOTE!
     With the current despawn checks for the vehicles, the vehicle won't be deleted if it's a wreck or the crew bailed out due to damage.
@@ -54,7 +54,7 @@ private _heavyVeh = [];
         if (!((crew _x) isEqualTo []) && !(_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
             _vehicle = _x;
             _lightVeh pushBack (typeOf _x);
-            {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured, false"])});
+            {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
         };
         deleteVehicle _x;
     };
@@ -65,7 +65,7 @@ private _heavyVeh = [];
     if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false])) then {
         _vehicle = _x;
         _heavyVeh pushBack (typeOf _x);
-        {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured, false"])});
+        {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
         deleteVehicle _vehicle;
     };
 } forEach (_activeGarrisonRef select 4);
@@ -76,7 +76,7 @@ private _heavyVeh = [];
         deleteVehicle _x;
         _infantry = _infantry + 1;
     };
-} forEach ((_activeGarrisonRef select 5) select {!(_x getVariable ["KPLIB_captured, false"])});
+} forEach ((_activeGarrisonRef select 5) select {!(_x getVariable ["KPLIB_captured", false])});
 
 // Update persistent garrison data
 if ((_activeGarrisonRef select 1) isEqualTo (_persistentGarrisonRef select 1)) then {
