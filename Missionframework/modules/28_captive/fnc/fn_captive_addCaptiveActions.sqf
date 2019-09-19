@@ -4,7 +4,7 @@
     File: fn_captive_addCaptiveAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-16
+    Last Update: 2019-09-19
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -32,7 +32,7 @@ if !(KPLIB_ace_enabled) then {
     [
         _unit,
         "STR_KPLIB_ACTION_ARREST",
-        [{[_this select 0] call KPLIB_fnc_captive_setCaptive;}, nil, -800, false, true, "", "_target getVariable [""KPLIB_surrender"", false]", 10]
+        [{[_this select 0] call KPLIB_fnc_captive_setCaptive;}, nil, -800, false, true, "", "(_target getVariable [""KPLIB_surrender"", false]) && !(_target getVariable [""KPLIB_captive"", false])", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add escort action
