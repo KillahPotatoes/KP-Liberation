@@ -31,7 +31,7 @@ if !(KPLIB_ace_enabled) then {
     // Add arrest action
     [
         _unit,
-        "STR_KPLIB_ACTION_ARREST",
+        ["STR_KPLIB_ACTION_ARREST", name _unit],
         [{[_this select 0] call KPLIB_fnc_captive_setCaptive;}, nil, -800, false, true, "", "(_target getVariable [""KPLIB_surrender"", false]) && !(_target getVariable [""KPLIB_captive"", false])", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 

@@ -204,8 +204,8 @@
             <German>-- Admin Menü --</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_ARREST">
-            <English>Arrest</English>
-            <German>Festnehmen</German>
+            <English>Arrest %1</English>
+            <German>%1 festnehmen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_ARSENAL">
             <English>-- ARSENAL --</English>
