@@ -4,7 +4,7 @@
     File: fn_captive_setSurrender.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-19
+    Last Update: 2019-09-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -12,7 +12,7 @@
         Given unit surrenders.
 
     Parameter(s):
-        _unit - Unit to set in captive mode [OBJECT, defaults to objNull]
+        _unit - Unit to set in surrender [OBJECT, defaults to objNull]
 
     Returns:
         Unit surrendered [BOOL]

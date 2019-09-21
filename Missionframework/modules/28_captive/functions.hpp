@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-12
+    Last Update: 2019-09-21
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -20,6 +20,9 @@ class captive {
 
     // Checks the given sector for remaining enemys and sets them into captive mode
     class captive_checkSector {};
+
+    // Attach a captive to the escorting player
+    class captive_escort {};
 
     // Module post initialization
     class captive_postInit {
@@ -39,5 +42,8 @@ class captive {
 
     // CBA Settings for this module
     class captive_settings {};
+
+    // Detach a captive from the escorting player
+    class captive_stopEscort {};
 
 };

@@ -251,6 +251,10 @@
             <English>-- RANDOM FOB DEPLOYMENT --</English>
             <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ESCORT">
+            <English>Escort %1</English>
+            <German>%1 eskortieren</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
             <English>-- GARRISON MANAGEMENT --</English>
             <German>-- GARNISONSVERWALTUNG --</German>
@@ -316,6 +320,10 @@
             <Italian>- IMPILA E ORDINA -</Italian>
             <Portuguese>- ORDENAR E CLASSIFICAR -</Portuguese>
             <Turkish>- SIRALA VE DÜZENLE -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_STOPESCORT">
+            <English>Park %1</English>
+            <German>%1 abstellen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_STORECRATE">
             <English>- STORE CRATE -</English>
