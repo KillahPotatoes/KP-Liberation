@@ -52,4 +52,7 @@ if (KPLIB_ace_enabled) then {
     [_unit] call KPLIB_fnc_captive_addCaptiveActions;
 };
 
+// Emit global event
+["KPLIB_captive_surrendered", [_unit]] call CBA_fnc_globalEvent;
+
 true
