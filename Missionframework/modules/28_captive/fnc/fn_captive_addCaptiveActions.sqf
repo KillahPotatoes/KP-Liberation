@@ -4,7 +4,7 @@
     File: fn_captive_addCaptiveAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-21
+    Last Update: 2019-09-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -39,31 +39,21 @@ if !(KPLIB_ace_enabled) then {
     [
         _unit,
         ["STR_KPLIB_ACTION_ESCORT", name _unit],
-        [{[_this select 0, _this select 1] call KPLIB_fnc_captive_escort;}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false] && !(_this getVariable [""KPLIB_isEscorting"", false])", 10]
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
-
-    // Add stop escort action
-    // This action will be moved to the escorting unit later
-    [
-        _unit,
-        "drop captive",
-        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
+        [{[_this select 0, _this select 1] call KPLIB_fnc_captive_escort;}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false] && !(_this getVariable [""KPLIB_captive_isEscorting"", false])", 10]
     ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
 
     // Add move in vehicle action
-    [
-        _unit,
-        "move in cargo",
-        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
+    [_unit, {
+        private _id = [
+            _this,
+            ["STR_KPLIB_ACTION_LOADCAPTIVE", name _this],
+            [{[_this select 0] call KPLIB_fnc_captive_loadCaptive;}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false] && ({(_x emptyPositions ""cargo"") > 0} count (_target nearEntities [[""LandVehicle"", ""Air""], 5])) > 0", 10]
+        ] call KPLIB_fnc_common_addAction;
 
-    // Add move out vehicle action
-    // This action will be moved to the vehicle later
-    [
-        _unit,
-        "move out cargo",
-        [{}, nil, -800, false, true, "", "_target getVariable [""KPLIB_captive"", false]", 10]
-    ] remoteExecCall ["KPLIB_fnc_common_addAction", 0, _unit];
+        // Store the load action to switch the locality when escorting
+        _this setVariable ["KPLIB_captive_loadID", _id];
+    }] remoteExecCall ["call", 0, _unit];
+
 };
 
 // Add interrogate action near FOB

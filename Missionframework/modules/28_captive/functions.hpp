@@ -4,7 +4,7 @@
     File: functions.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-21
+    Last Update: 2019-09-22
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -23,6 +23,9 @@ class captive {
 
     // Attach a captive to the escorting player
     class captive_escort {};
+
+    // Loads given unit into the nearest vehicle cargo seat
+    class captive_loadCaptive {};
 
     // Module post initialization
     class captive_postInit {
@@ -45,5 +48,8 @@ class captive {
 
     // Detach a captive from the escorting player
     class captive_stopEscort {};
+
+    // Unloads the give unit and removes the action from the vehicle
+    class captive_unloadCaptive {};
 
 };

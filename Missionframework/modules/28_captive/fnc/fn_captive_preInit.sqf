@@ -4,7 +4,7 @@
     File: fn_captive_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-12
+    Last Update: 2019-09-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -34,6 +34,61 @@ if (isServer) then {
     // Check for handcuffed enemys
     ["ace_captiveStatusChanged", {[_this select 0, _this select 1, _this select 2] call KPLIB_fnc_captive_setAceCaptive}] call CBA_fnc_addEventHandler;
 
+};
+
+// Add load captive EH
+["KPLIB_captive_load", {
+    params [
+        ["_unit", objNull, [objNull]],
+        ["_vehicle", objNull, [objNull]]
+    ];
+    // Move unit in vehicle cargo
+    _unit moveInCargo _vehicle;
+}] call CBA_fnc_addEventHandler;
+
+// Add unload captive EH
+["KPLIB_captive_unload", {
+    params [
+        ["_unit", objNull, [objNull]],
+        ["_vehicle", objNull, [objNull]]
+    ];
+    // Unload the unit
+    moveOut _unit;
+    _unit switchMove "AmovPercMstpSnonWnonDnon_EaseIn";
+}] call CBA_fnc_addEventHandler;
+
+// Player section
+if (hasInterface) then {
+
+    // Add EH for the captive unload action
+    ["KPLIB_captive_loaded", {
+        params [
+            ["_unit", objNull, [objNull]],
+            ["_vehicle", objNull, [objNull]]
+        ];
+        // Remove the stop escort action if available
+        player removeAction (player getVariable ["KPLIB_stopEscort_id", 9000]);
+
+        // Add the unload action to the vehicle
+        private _id = [
+            _vehicle,
+            ["STR_KPLIB_ACTION_UNLOADCAPTIVE", name _unit],
+            [{[_this select 3, _this select 0] call KPLIB_fnc_captive_unloadCaptive;}, _unit, -800, false, true, "", "", 10]
+        ] call KPLIB_fnc_common_addAction;
+
+        // Save id in unit
+        _unit setVariable ["KPLIB_captive_unloadID", _id]
+    }] call CBA_fnc_addEventHandler;
+
+    // Add EH to remove the unload action
+    ["KPLIB_captive_unloaded", {
+        params [
+            ["_unit", objNull, [objNull]],
+            ["_vehicle", objNull, [objNull]]
+        ];
+        // Remove the unload action from the vehicle
+        _vehicle removeAction (_unit getVariable ["KPLIB_captive_unloadID", 9000]);
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (isServer) then {["Module initialized", "PRE] [CAPTIVE", true] call KPLIB_fnc_common_log;};

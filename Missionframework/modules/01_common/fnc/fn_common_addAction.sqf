@@ -4,7 +4,7 @@
     File: fn_common_addAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-05
-    Last Update: 2019-09-19
+    Last Update: 2019-09-24
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -19,7 +19,7 @@
         _color  - Hex code of desired color e.g. #FF8000. Optional.                 [STRING, defaults to ""]
 
     Returns:
-        Action added [BOOL]
+        Action ID [NUMBER]
 */
 
 params [
@@ -51,6 +51,4 @@ private _actionArray = [_string];
 _actionArray append _args;
 
 // Add action to target
-_target addAction _actionArray;
-
-true
+_target addAction _actionArray

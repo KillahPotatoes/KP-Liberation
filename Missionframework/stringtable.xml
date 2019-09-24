@@ -263,6 +263,10 @@
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_LOADCAPTIVE">
+            <English>Load %1</English>
+            <German>%1 einladen</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_LOADCRATE">
             <English>- LOAD CRATE -</English>
             <Chinese>- 裝載貨物 -</Chinese>
@@ -335,6 +339,10 @@
             <Russian>- ХРАНЕНИЕ МАГАЗИНА -</Russian>
             <Spanish>- CAJA DE ALMACENAJE -</Spanish>
             <Turkish>- KUTUYU DEPOLA -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNLOADCAPTIVE">
+            <English>Unload %1</English>
+            <German>%1 ausladen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_UNLOADCRATE">
             <English>- UNLOAD CRATES -</English>
