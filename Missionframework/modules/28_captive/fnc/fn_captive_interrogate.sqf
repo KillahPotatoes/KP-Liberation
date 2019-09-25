@@ -39,4 +39,7 @@ if !(KPLIB_param_captiveIntelRandom isEqualTo 0) then {
 // Delete the unit
 deleteVehicle _unit;
 
+// Emit global event
+["KPLIB_captive_interrogated", [_unit]] call CBA_fnc_globalEvent;
+
 true
