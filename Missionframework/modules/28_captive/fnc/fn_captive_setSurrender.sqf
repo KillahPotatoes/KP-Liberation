@@ -4,7 +4,7 @@
     File: fn_captive_setSurrender.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-24
+    Last Update: 2019-09-25
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -52,6 +52,15 @@ if (KPLIB_ace_enabled) then {
     // Apply the actions on the unit
     [_unit] call KPLIB_fnc_captive_addCaptiveActions;
 };
+
+// Add a killed EH to the unit, to ensure that all actions will be removed
+_unit addEventHandler ["Killed", {
+    // Remove the unload action from the vehicle if the unit is in a vehicle
+    private _vehicle = objectParent _this select 0;
+    if !(isNull _vehicle) then {
+        _vehicle removeAction (_unit getVariable ["KPLIB_captive_unloadID", 9000]);
+    };
+}];
 
 // Emit global event
 ["KPLIB_captive_surrendered", [_unit]] call CBA_fnc_globalEvent;
