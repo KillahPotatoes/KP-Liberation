@@ -54,11 +54,14 @@ if (KPLIB_ace_enabled) then {
 };
 
 // Add a killed EH to the unit, to ensure that all actions will be removed
-_unit addEventHandler ["Killed", {
+_unit addMPEventHandler ["MPKilled", {
+    // Remove all actions of the unit
+    removeAllActions (_this select 0);
+
     // Remove the unload action from the vehicle if the unit is in a vehicle
-    private _vehicle = objectParent _this select 0;
+    private _vehicle = objectParent (_this select 0);
     if !(isNull _vehicle) then {
-        _vehicle removeAction (_unit getVariable ["KPLIB_captive_unloadID", 9000]);
+        _vehicle removeAction ((_this select 0) getVariable ["KPLIB_captive_unloadID", 9000]);
     };
 }];
 

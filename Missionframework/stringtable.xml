@@ -263,6 +263,10 @@
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_INTERROGATE">
+            <English>Interrogate %1</English>
+            <German>%1 verhören</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_LOADCAPTIVE">
             <English>Load %1</English>
             <German>%1 einladen</German>
@@ -1928,6 +1932,29 @@
         <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND_TT">
             <English>Defines the mission abortion refund in percentage.</English>
             <German>Definiert die Rückerstattung in Prozent.</German>
+        </Key>
+
+        <!-- CAPTIVE CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE">
+            <English>KPLIB - Captives</English>
+            <German>KPLIB - Gefangene</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE">
+            <English>Intel grant on interrogation</English>
+            <German>Informationszuwachs bei einer Verhörung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE_TT">
+            <English>Defines the amount of granted intel on Interrogation.</English>
+            <German>Definiert die Menge an Informationen, die bei einer Verhörung erhalten werden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM">
+            <English>Random Intel modifier on interrogation</English>
+            <German>Zufälliger Modifikator des Informationszuwachs bei einer Verhörung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM_TT">
+            <English>Defines the random intel modifier on Interrogation, a setting of 5 will gain 5 upto 15 (+-Value) intel with an intel value of 10.</English>
+            <German>Definiert den zufälligen Modifikator des Informationszuwachs bei einer Verhörung, bei einer EInstellung von 5, beträgt der Zuwachs 5 bis 15 bei einem standard Nachrichtenwert von 10.</German>
+        </Key>
     </Package>
 
 
