@@ -1,15 +1,15 @@
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_captive_setAceCaptive
 
     File: fn_captive_setAceCaptive.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-11
-    Last Update: 2019-09-25
+    Last Update: 2019-09-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
     Description:
-        Checks for handcuffed units.
+        Checks for ACE handcuffed units and rebinds them into the Liberation captive system.
 
     Parameter(s):
         _unit   - Unit to set in captive mode   [OBJECT, defaults to objNull]
