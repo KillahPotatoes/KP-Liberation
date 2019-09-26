@@ -4,7 +4,7 @@
     File: fn_captive_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-24
+    Last Update: 2019-09-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -30,6 +30,12 @@ if (isServer) then {
 
     // Units surrender on sector capture
     ["KPLIB_sector_captured", {[_this select 0] call KPLIB_fnc_captive_checkSector;}] call CBA_fnc_addEventHandler;
+
+    // Unit animation on arrest
+    ["KPLIB_captive_arrested", {
+        _this select 0 playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+        _this select 0 playMove "AmovPercMstpSnonWnonDnon_EaseIn";
+    }] call CBA_fnc_addEventHandler;
 
     // Check for handcuffed enemys
     ["ace_captiveStatusChanged", {[_this select 0, _this select 1, _this select 2] call KPLIB_fnc_captive_setAceCaptive}] call CBA_fnc_addEventHandler;
