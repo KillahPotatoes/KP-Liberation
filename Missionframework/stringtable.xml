@@ -330,8 +330,8 @@
             <Turkish>- SIRALA VE DÜZENLE -</Turkish>
         </Key>
         <Key ID="STR_KPLIB_ACTION_STOPESCORT">
-            <English>Park %1</English>
-            <German>%1 abstellen</German>
+            <English>Stop escorting %1</English>
+            <German>%1 loslassen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_STORECRATE">
             <English>- STORE CRATE -</English>
@@ -1693,8 +1693,8 @@
             <German>Einheitenverhältnis zur Sektoreroberung</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRATIO_TT">
-            <English>Ratio from enemy to frindly units, which is needed to capture a sector.</English>
-            <German>Verhältnis von feindlichen und freundlichen kräften, welches benötigt wird um einen Sektor zu erobern.</German>
+            <English>Ratio of friendly to enemy units, which is needed to capture a sector.</English>
+            <German>Verhältnis von freundlichen zu feindlichen Kräften, welches benötigt wird um einen Sektor zu erobern.</German>
         </Key>
 
         <!-- ZEUS CATEGORY -->
@@ -1940,20 +1940,20 @@
             <German>KPLIB - Gefangene</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE">
-            <English>Intel grant on interrogation</English>
-            <German>Informationszuwachs bei einer Verhörung</German>
+            <English>Intel gain through interrogation</English>
+            <German>Informationszuwachs bei einem Verhör</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE_TT">
-            <English>Defines the amount of granted intel on Interrogation.</English>
-            <German>Definiert die Menge an Informationen, die bei einer Verhörung erhalten werden.</German>
+            <English>Amount of intel gained through interrogation.</English>
+            <German>Menge an Informationen, die bei einem Verhör gewonnen werden.</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM">
-            <English>Random Intel modifier on interrogation</English>
-            <German>Zufälliger Modifikator des Informationszuwachs bei einer Verhörung</German>
+            <English>Intel randomization range</English>
+            <German>Zufallsbereich für den Informationszuwachs</German>
         </Key>
         <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM_TT">
-            <English>Defines the random intel modifier on Interrogation, a setting of 5 will gain 5 upto 15 (+-Value) intel with an intel value of 10.</English>
-            <German>Definiert den zufälligen Modifikator des Informationszuwachs bei einer Verhörung, bei einer EInstellung von 5, beträgt der Zuwachs 5 bis 15 bei einem standard Nachrichtenwert von 10.</German>
+            <English>Randomization range for intel gain through interrogation. E.g. a value of 5 will grant you 5 - 15 intel for a base value of 10.</English>
+            <German>Zufallsbereich für den Informationszuwachs bei einem Verhör. Mit einem Wert von 5 liegt der effektive Zuwachs, bei einem Ausgangswert von 10, zwischen 5 und 15.</German>
         </Key>
     </Package>
 

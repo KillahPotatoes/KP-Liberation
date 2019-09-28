@@ -1,10 +1,10 @@
 /*
-    KPLIB_fnc_
+    KPLIB_fnc_captive_stopEscort
 
     File: fn_captive_stopEscort.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-21
-    Last Update: 2019-09-24
+    Last Update: 2019-09-26
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 

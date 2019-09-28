@@ -4,7 +4,7 @@
     File: fn_common_addAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-12-05
-    Last Update: 2019-09-24
+    Last Update: 2019-09-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: Yes
 
@@ -30,15 +30,14 @@ params [
 ];
 
 // Leave if there are parameters missing
-if (isNull _target || _string isEqualTo "" || _args isEqualTo []) exitWith {false};
+if (isNull _target || _string isEqualTo "" || _args isEqualTo []) exitWith {-1};
 
 // Check if given string is string key or formatted text
 if (_string isEqualType "") then {
     // Localize local to clients language
     _string = localize _string;
 } else {
-    _string set [0, localize (_string select 0)];
-    _string = format _string;
+    _string = format [localize (_string select 0), _string select 1];
 };
 
 // Add color, if provided

@@ -4,7 +4,7 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2019-09-10
+    Last Update: 2019-09-28
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -33,10 +33,10 @@ private _handler = [
         if (
             (
                 ({side _x isEqualTo KPLIB_preset_sideF} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange])) >
-                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange * 2]))
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange * 1.5]))
                 * KPLIB_param_sectorCapRatio
             ) && (
-                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["Tank", KPLIB_param_sectorCapRange * 2]))
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["Tank", KPLIB_param_sectorCapRange * 1.5]))
                 isEqualTo 0
             )
         ) then {
