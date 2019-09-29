@@ -4,7 +4,7 @@
     File: fn_garrison_despawn.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-10-20
-    Last Update: 2019-09-16
+    Last Update: 2019-09-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -54,7 +54,10 @@ private _heavyVeh = [];
         if (!((crew _x) isEqualTo []) && !(_x in (KPLIB_preset_vehTransPlE + KPLIB_preset_vehLightUnarmedPlE))) then {
             _vehicle = _x;
             _lightVeh pushBack (typeOf _x);
-            {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
+            {
+                _handledCrew pushBack _x;
+                _vehicle deleteVehicleCrew _x;
+            } forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
         };
         deleteVehicle _x;
     };
@@ -65,7 +68,10 @@ private _heavyVeh = [];
     if ((alive _x) && !((crew _x) isEqualTo []) && !(_x getVariable ["KPLIB_captured", false])) then {
         _vehicle = _x;
         _heavyVeh pushBack (typeOf _x);
-        {_handledCrew pushBack _x; _vehicle deleteVehicleCrew _x;} forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
+        {
+            _handledCrew pushBack _x;
+            _vehicle deleteVehicleCrew _x;
+        } forEach ((crew _x) select {!(_x getVariable ["KPLIB_captured", false])});
         deleteVehicle _vehicle;
     };
 } forEach (_activeGarrisonRef select 4);

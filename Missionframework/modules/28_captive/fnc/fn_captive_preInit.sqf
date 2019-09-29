@@ -4,7 +4,7 @@
     File: fn_captive_preInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-09-10
-    Last Update: 2019-09-26
+    Last Update: 2019-09-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -63,6 +63,26 @@ if (isServer) then {
     _unit switchMove "AmovPercMstpSnonWnonDnon_EaseIn";
 }] call CBA_fnc_addEventHandler;
 
+// Emit lib captive event on ace event to ensure compatibilty
+["ace_captives_moveInCaptive", {
+    params [
+        ["_unit", objNull, [objNull]],
+        ["_vehicle", objNull, [objNull]]
+    ];
+    // Emit global event
+    ["KPLIB_captive_loaded", [_unit, _vehicle]] call CBA_fnc_globalEvent;
+}] call CBA_fnc_addEventHandler;
+
+// Emit lib captive event on ace event to ensure compatibilty
+["ace_captives_moveOutCaptive", {
+    params [
+        ["_unit", objNull, [objNull]]
+    ];
+    // Emit global event
+    ["KPLIB_captive_unloaded", [_unit]] call CBA_fnc_globalEvent;
+}] call CBA_fnc_addEventHandler;
+
+
 // Player section
 if (hasInterface) then {
 
@@ -72,6 +92,8 @@ if (hasInterface) then {
             ["_unit", objNull, [objNull]],
             ["_vehicle", objNull, [objNull]]
         ];
+        // Exit the function on missing vehicle, due to an emitted event through ace
+        if (isNull _vehicle) exitWith {};
         // Remove the stop escort action if available
         player removeAction (player getVariable ["KPLIB_stopEscort_id", 9000]);
 
