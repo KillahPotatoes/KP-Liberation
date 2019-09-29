@@ -4,7 +4,7 @@
     File: fn_core_handleSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-05-06
-    Last Update: 2019-04-22
+    Last Update: 2019-09-29
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -28,11 +28,18 @@ private _handler = [
         // Per Tick
         _this getVariable "params" params ["_sector", "_sectorPos"];
 
-        // If there are no enemy units in two times the capture range and friendly units are in capture range
+        // If the enemy units within capture range are outnumbered and there are no enemy tanks
         // capture the sector
+        // ToDo: optimize
         if (
-            !([_sectorPos, 2 * KPLIB_param_sectorCapRange, [KPLIB_preset_sideE]] call KPLIB_fnc_core_areUnitsNear)
-            && {[_sectorPos, KPLIB_param_sectorCapRange] call KPLIB_fnc_core_areUnitsNear}
+            (
+                ({side _x isEqualTo KPLIB_preset_sideF} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange])) >
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["AllVehicles", KPLIB_param_sectorCapRange * 1.5]))
+                * KPLIB_param_sectorCapRatio
+            ) && {
+                ({side _x isEqualTo KPLIB_preset_sideE} count (_sectorPos nearEntities ["Tank", KPLIB_param_sectorCapRange * 1.5]))
+                isEqualTo 0
+            }
         ) then {
             [format ["Sector %1 (%2) captured", markerText _sector, _sector], "CORE", true] call KPLIB_fnc_common_log;
 

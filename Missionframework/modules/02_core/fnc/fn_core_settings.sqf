@@ -4,7 +4,7 @@
     File: fn_core_settings.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-11-11
-    Last Update: 2019-06-15
+    Last Update: 2019-09-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -57,6 +57,19 @@
     [localize "STR_KPLIB_SETTINGS_SECTOR_SECRANGE", localize "STR_KPLIB_SETTINGS_SECTOR_SECRANGE_TT"],
     localize "STR_KPLIB_SETTINGS_SECTOR",
     [100, 200, 150, 0],
+    1,
+    {}
+] call CBA_Settings_fnc_init;
+
+// KPLIB_param_sectorCapRatio
+// Ratio of enemy units to friendly units, which is needed to capture a sector.
+// Default: 1.5
+[
+    "KPLIB_param_sectorCapRatio",
+    "SLIDER",
+    [localize "STR_KPLIB_SETTINGS_SECTOR_SECRATIO", localize "STR_KPLIB_SETTINGS_SECTOR_SECRATIO_TT"],
+    localize "STR_KPLIB_SETTINGS_SECTOR",
+    [1, 10, 1.5, 1],
     1,
     {}
 ] call CBA_Settings_fnc_init;

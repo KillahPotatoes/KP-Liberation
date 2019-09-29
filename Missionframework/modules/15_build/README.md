@@ -99,3 +99,6 @@ Furthermore it handles the saving/loading of all objects which are buildable/spa
 
 ### Scripts
 No scripts will be started by this module
+
+### Implemented permissions
+* Build menu

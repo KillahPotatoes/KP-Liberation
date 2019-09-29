@@ -116,3 +116,6 @@ Calls KPLIB_fnc_cratefiller_presets to process the new white- and blacklist
 
 ### Scripts
 No scripts will be started by this module
+
+### Implemented permissions
+* Cratefiller
