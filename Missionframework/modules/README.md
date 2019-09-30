@@ -45,6 +45,7 @@ With these additions the intended complexity comes into the mission. It is highl
 25 Friendly Commander Managing Dialog
 26 Cratefiller
 27 Mission handling
+28 Prisoners of war
 ```
 ### TBA
 Mod specific compatibility modules

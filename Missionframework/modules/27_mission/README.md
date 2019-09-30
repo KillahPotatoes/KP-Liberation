@@ -89,3 +89,6 @@ Processes a mission start or abort dependent on the passed arguments
 
 ### Scripts
 No scripts will be started by this module
+
+### Implemented permissions
+* Mission dialog

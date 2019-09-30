@@ -50,3 +50,6 @@ It'll also provide functions to change garrison data and a garrison management d
 
 ### Scripts
 No scripts will be started by this module
+
+### Implemented permissions
+* Garrison management

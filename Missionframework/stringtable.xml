@@ -203,6 +203,10 @@
             <Chinese>-- 管理員選單 --</Chinese>
             <German>-- Admin Menü --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ARREST">
+            <English>Arrest %1</English>
+            <German>%1 festnehmen</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_ARSENAL">
             <English>-- ARSENAL --</English>
             <Chinese>-- 軍火庫 --</Chinese>
@@ -247,6 +251,10 @@
             <English>-- RANDOM FOB DEPLOYMENT --</English>
             <German>-- ZUFÄLLIGE FOB PLATZIERUNG --</German>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_ESCORT">
+            <English>Escort %1</English>
+            <German>%1 eskortieren</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_GARRISON_MENU">
             <English>-- GARRISON MANAGEMENT --</English>
             <German>-- GARNISONSVERWALTUNG --</German>
@@ -254,6 +262,14 @@
         <Key ID="STR_KPLIB_ACTION_HELIMOVE">
             <English>Move to aft deck</English>
             <German>Zum Achterdeck bewegen</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_INTERROGATE">
+            <English>Interrogate %1</English>
+            <German>%1 verhören</German>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_LOADCAPTIVE">
+            <English>Load %1</English>
+            <German>%1 einladen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_LOADCRATE">
             <English>- LOAD CRATE -</English>
@@ -313,6 +329,10 @@
             <Portuguese>- ORDENAR E CLASSIFICAR -</Portuguese>
             <Turkish>- SIRALA VE DÜZENLE -</Turkish>
         </Key>
+        <Key ID="STR_KPLIB_ACTION_STOPESCORT">
+            <English>Stop escorting %1</English>
+            <German>%1 loslassen</German>
+        </Key>
         <Key ID="STR_KPLIB_ACTION_STORECRATE">
             <English>- STORE CRATE -</English>
             <Chinese>- 倉儲貨物 -</Chinese>
@@ -323,6 +343,10 @@
             <Russian>- ХРАНЕНИЕ МАГАЗИНА -</Russian>
             <Spanish>- CAJA DE ALMACENAJE -</Spanish>
             <Turkish>- KUTUYU DEPOLA -</Turkish>
+        </Key>
+        <Key ID="STR_KPLIB_ACTION_UNLOADCAPTIVE">
+            <English>Unload %1</English>
+            <German>%1 ausladen</German>
         </Key>
         <Key ID="STR_KPLIB_ACTION_UNLOADCRATE">
             <English>- UNLOAD CRATES -</English>
@@ -1664,6 +1688,14 @@
             <Chinese>在戰區中心半徑公尺內的單位可進行佔領</Chinese>
             <German>Radius in Metern vom Sektor aus, in dem sich eine Einheit befinden muss, um den Sektor zu erobern.</German>
         </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRATIO">
+            <English>Sector Capture Unit Ratio</English>
+            <German>Einheitenverhältnis zur Sektoreroberung</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_SECTOR_SECRATIO_TT">
+            <English>Ratio of friendly to enemy units, which is needed to capture a sector.</English>
+            <German>Verhältnis von freundlichen zu feindlichen Kräften, welches benötigt wird um einen Sektor zu erobern.</German>
+        </Key>
 
         <!-- ZEUS CATEGORY -->
         <Key ID="STR_KPLIB_SETTINGS_ZEUS">
@@ -1900,6 +1932,29 @@
         <Key ID="STR_KPLIB_SETTINGS_MISSION_REFUND_TT">
             <English>Defines the mission abortion refund in percentage.</English>
             <German>Definiert die Rückerstattung in Prozent.</German>
+        </Key>
+
+        <!-- CAPTIVE CATEGORY -->
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE">
+            <English>KPLIB - Captives</English>
+            <German>KPLIB - Gefangene</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE">
+            <English>Intel gain through interrogation</English>
+            <German>Informationszuwachs bei einem Verhör</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELVALUE_TT">
+            <English>Amount of intel gained through interrogation.</English>
+            <German>Menge an Informationen, die bei einem Verhör gewonnen werden.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM">
+            <English>Intel randomization range</English>
+            <German>Zufallsbereich für den Informationszuwachs</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CAPTIVE_INTELRANDOM_TT">
+            <English>Randomization range for intel gain through interrogation. E.g. a value of 5 will grant you 5 - 15 intel for a base value of 10.</English>
+            <German>Zufallsbereich für den Informationszuwachs bei einem Verhör. Mit einem Wert von 5 liegt der effektive Zuwachs, bei einem Ausgangswert von 10, zwischen 5 und 15.</German>
+        </Key>
     </Package>
 
 
