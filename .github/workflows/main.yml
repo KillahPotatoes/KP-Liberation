@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - 'v0.97'
+  pull_request: ~
+
+jobs:
+  test-sqflint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: arma-actions/sqflint@v1.0
+        name: Validate with SQFLint
+        with:
+          args: --exit '' --directory Missionframework
+
+  test-ace-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: docker://python:3.7-alpine
+        name: Setup Python
+
+      - run: |
+          python3 --version
+          python3 tools/sqf_validator.py
+        name: Validate with ACE SQF Validator
+
+      - run: |
+          python3 --version
+          python3 tools/config_style_checker.py
+        name: Validate with ACE Config Style Checker
+
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: docker://node:10-alpine
+        name: Setup Node
+
+      - name: Install dependencies
+        working-directory: tools/buildtool
+        run: npm install --loglevel=error
+
+      - name: Assemble and pack
+        working-directory: tools/buildtool
+        run: npx gulp
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: PBO-Files
+          path: _build/pbo
+
