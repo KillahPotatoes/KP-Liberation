@@ -1,7 +1,7 @@
 {
   "name": "kp_liberation",
   "engines": {
-    "node": ">=7"
+    "node": ">=10"
   },
   "dependencies": {
     "@types/del": "^3.0.1",
