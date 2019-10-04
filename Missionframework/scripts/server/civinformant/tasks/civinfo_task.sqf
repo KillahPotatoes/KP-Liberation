@@ -14,9 +14,10 @@ _veh setDir (getDir _roadObj);
 } forEach ((getAllHitPointsDamage _veh) select 0);
 
 private _grp = createGroup [GRLIB_side_enemy, true];
-private _hvt = _grp createUnit [opfor_officer, getPos _roadObj, [], 30, "NONE"];
+private _hvt = [opfor_officer, getPos _roadObj, _grp, "CAPTAIN", 30] call F_createManagedUnit;
+
 for "_i" from 1 to 4 do {
-	(selectRandom militia_squad) createUnit [_grp, _grp, "this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]"];
+    [selectRandom militia_squad, _grp, _grp] call F_createManagedUnit;
 	sleep 0.1;
 };
 
@@ -46,7 +47,7 @@ private _marker_pos = [((((getPos _roadObj) select 0) + 200) - random 400),((((g
 private _time_remaining = KP_liberation_civinfo_task_duration;
 
 while {(alive _hvt) && _time_remaining > 0} do {
-	uiSleep 1;			
+	uiSleep 1;
 	private _player_near = false;
 	{
 		if (((_x distance _veh) < 1000) && (alive _x)) exitWith {_player_near = true};
