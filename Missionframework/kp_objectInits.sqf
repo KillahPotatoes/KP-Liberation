@@ -1,6 +1,16 @@
-/* - Specific object init codes depending on classnames.
-Format = [Array of classnames as strings, Code to apply]
-_this is the reference to the object with the classname */
+/*
+    Specific object init codes depending on classnames.
+
+    Format = [Array of classnames as strings <ARRAY>, Code to apply <CODE>, Allow inheritance <BOOL>]
+        _this is the reference to the object with the classname
+
+    Example:
+        KPLIB_objectInits = [
+            [["O_soldierU_F"], {systemChat "CSAT urban soldier was spawned!"}],
+            [["CAManBase"], {systemChat format ["Some human named '%1' was spawned!", name _this]}, true]
+        ];
+];
+*/
 
 KPLIB_objectInits = [
     // Set KP logo on white flag

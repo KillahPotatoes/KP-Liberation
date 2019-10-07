@@ -18,7 +18,19 @@
 
 params [["_object", objNull, [objNull]]];
 
-private _elements = KPLIB_objectInits select {(toLower (typeOf _object)) in ((_x select 0) apply {toLower _x})};
+private _elements = KPLIB_objectInits select {
+    _x params ["_classes", "", ["_inheritance", false]];
+
+    if (_inheritance) then {
+        {
+            if (_object isKindOf _x) exitWith {true};
+            false
+        } forEach _classes // return
+    } else {
+        // return
+        (toLower (typeOf _object)) in (_classes apply {toLower _x})
+    };
+};
 
 if (_elements isEqualTo []) exitWith {
     false
