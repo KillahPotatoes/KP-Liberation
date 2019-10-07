@@ -9,7 +9,7 @@ if ( count crew _veh > 0 ) then {
 
 		_grp = createGroup [GRLIB_side_friendly, true];
 		while { count units _grp < 3 } do {
-			crewman_classname createUnit [ getPos _veh, _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}] '];
+			[crewman_classname, getPos _veh, _grp] call F_createManagedUnit;
 		};
 		((units _grp) select 0) moveInDriver _veh;
 		((units _grp) select 1) moveInGunner _veh;
