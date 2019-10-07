@@ -23,14 +23,14 @@
         OBJECT - Created unit
 */
 params [
-    ["_type", "", [""]]
+    ["_type", "", [""]],
     ["_spawnPos", [0,0,0], [[], objNull, grpNull], [2,3]],
     ["_group", grpNull, [grpNull]],
     ["_rank", "PRIVATE", [""]],
     ["_placement", 0, [0]]
 ];
 
-private _unit = _group createUnit [_type, _spawnPos, [], "FORM"];
+private _unit = _group createUnit [_type, _spawnPos, [], _placement, "FORM"];
 _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 _unit setRank _rank;
 
