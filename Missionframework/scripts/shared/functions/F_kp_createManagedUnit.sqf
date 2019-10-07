@@ -34,8 +34,6 @@ private _unit = _group createUnit [_type, _spawnPos, [], "FORM"];
 _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 _unit setRank _rank;
 
-_x createUnit [_start_pos, _troupgrp,"this ", _placement, "private"];
-
 // Process KP object init
 [_unit] call F_addObjectInit;
 
