@@ -586,7 +586,7 @@ while {true} do {
 
         // Save all mines around FOB
         private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 2, GRLIB_fob_range * 2];
-        _allMines pushBack (_fobMines apply {[
+        _allMines append (_fobMines apply {[
             getPosWorld _x,
             [vectorDirVisual _x, vectorUpVisual _x],
             typeOf _x
