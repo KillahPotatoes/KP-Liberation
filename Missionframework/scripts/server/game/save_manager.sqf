@@ -397,7 +397,7 @@ if (!isNil "greuh_liberation_savegame") then {
         if (_class in _classnamesToSave) then {
 
             // Create object without damage handling and simulation
-            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];;
+            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
             _object allowdamage false;
             _object enableSimulation false;
 
@@ -598,7 +598,7 @@ while {true} do {
         // Position data
         private _savedpos = getPosWorld _x;
         private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;;
+        private _savedvecup = vectorUpVisual _x;
         private _class = typeOf _x;
         private _hascrew = false;
 
@@ -618,9 +618,9 @@ while {true} do {
     // Save all storages and resources
     {
         // Position data
-        private _savedpos = getPosWorld _x;;
+        private _savedpos = getPosWorld _x;
         private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;;
+        private _savedvecup = vectorUpVisual _x;
         private _class = typeof _x;
 
         // Resource variables
