@@ -378,7 +378,7 @@ if (!isNil "greuh_liberation_savegame") then {
     {
         _x params ["_minePos", "_dirAndUp", "_class"];
 
-        private _mine = createMine [_class, _minePos, [], 0];
+        private _mine = createVehicle [_class, _minePos, [], 0];
         _mine setPosWorld _minePos;
         _mine setVectorDirAndUp _dirAndUp;
 
