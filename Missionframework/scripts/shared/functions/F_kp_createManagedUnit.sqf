@@ -40,7 +40,7 @@ isNil {
     _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
     _unit setRank _rank;
 
-    // Joint to target group to preserve Side
+    // Join to target group to preserve Side
     [_unit] joinSilent _group;
     deleteGroup _groupTemp;
 
