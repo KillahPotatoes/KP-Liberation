@@ -77,11 +77,11 @@ for (let preset of presets) {
 
             return gulp.src(mission.getFrameworkPath().concat('/stringtable.xml'))
                 .pipe(gulpModify((content: string) => {
-                    const version: string = content.match(versionRegex)['groups']['version'];
+                    let version: string = content.match(versionRegex)['groups']['version'];
 
                     // append commit hash to version in PRs
                     if ('pull_request' === process.env.GITHUB_EVENT_NAME) {
-                        version.concat(`-${process.env.GITHUB_SHA}`);
+                        version = version.concat(`-${process.env.GITHUB_SHA}`);
                     }
 
                     return content.replace(nameRegex, `$1CTI 34 KP Liberation ${preset.mapDisplay || preset.map} ${version}$3`);
