@@ -11,6 +11,10 @@ import { resolve } from "path";
 import { MissionPaths } from "./src";
 import { Preset, FolderStructureInfo } from "./src";
 
+// debug
+console.log('ENV DEBUG');
+console.log(process.env.GITHUB_EVENT_NAME, process.env.GITHUB_SHA);
+
 
 const presets: Preset[] = require('./_presets.json');
 
