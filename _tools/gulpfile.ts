@@ -79,6 +79,11 @@ for (let preset of presets) {
                 .pipe(gulpModify((content: string) => {
                     const version: string = content.match(versionRegex)['groups']['version'];
 
+                    // append commit hash to version in PRs
+                    if ('pull_request' === process.env.GITHUB_EVENT_NAME) {
+                        version.concat(`-${process.env.GITHUB_SHA}`);
+                    }
+
                     return content.replace(nameRegex, `$1CTI 34 KP Liberation ${preset.mapDisplay || preset.map} ${version}$3`);
                 }))
                 .pipe(gulp.dest(mission.getOutputDir(), { overwrite: true, }))
