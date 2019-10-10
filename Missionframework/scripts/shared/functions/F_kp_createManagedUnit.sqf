@@ -30,19 +30,22 @@ params [
     ["_placement", 0, [0]]
 ];
 
-// Create temp group, as we need to let the unit join the "correct side group".
-// If we use the "correct side group" for the createUnit, the group would switch to the side of the unit written in the config.
-private _groupTemp = createGroup [CIVILIAN, true];
+private "_unit";
+isNil {
+    // Create temp group, as we need to let the unit join the "correct side group".
+    // If we use the "correct side group" for the createUnit, the group would switch to the side of the unit written in the config.
+    private _groupTemp = createGroup [CIVILIAN, true];
 
-private _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
-_unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-_unit setRank _rank;
+    _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
+    _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    _unit setRank _rank;
 
-// Joint to target group to preserve Side
-[_unit] joinSilent _group;
-deleteGroup _groupTemp;
+    // Joint to target group to preserve Side
+    [_unit] joinSilent _group;
+    deleteGroup _groupTemp;
 
-// Process KP object init
-[_unit] call F_addObjectInit;
+    // Process KP object init
+    [_unit] call F_addObjectInit;
+};
 
 _unit // return
