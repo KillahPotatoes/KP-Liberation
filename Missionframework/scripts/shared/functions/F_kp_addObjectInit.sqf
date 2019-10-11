@@ -18,18 +18,25 @@
 
 params [["_object", objNull, [objNull]]];
 
-private _elements = KPLIB_objectInits select {
-    _x params ["_classes", "", ["_inheritance", false]];
+private _elements = KPLIB_objectInitsCache getVariable typeOf _object;
 
-    if (_inheritance) then {
-        {
-            if (_object isKindOf _x) exitWith {true};
-            false
-        } forEach _classes // return
-    } else {
-        // return
-        (toLower (typeOf _object)) in (_classes apply {toLower _x})
+// Find and cache matching objectInits
+if (isNil _elements) then {
+    _elements = KPLIB_objectInits select {
+        _x params ["_classes", "", ["_inheritance", false]];
+
+        if (_inheritance) then {
+            {
+                if (_object isKindOf _x) exitWith {true};
+                false
+            } forEach _classes // return
+        } else {
+            // return
+            (toLower (typeOf _object)) in (_classes apply {toLower _x})
+        };
     };
+
+    KPLIB_objectInitsCache setVariable [typeOf _object, _elements];
 };
 
 if (_elements isEqualTo []) exitWith {
