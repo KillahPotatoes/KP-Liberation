@@ -112,7 +112,31 @@ KPLIB_preset_arsenal_blacklist = [
     "UK3CB_BAF_M6",
     "UK3CB_BAF_L111A1",
     "UK3CB_BAF_L134A1",
-    "UK3CB_BAF_Tripod"
+    "UK3CB_BAF_Tripod",
+    "I_E_HMG_01_A_Weapon_F",
+    "I_E_GMG_01_A_Weapon_F",
+    "I_E_HMG_01_Weapon_F",
+    "I_E_GMG_01_Weapon_F",
+    "I_E_HMG_01_high_Weapon_F",
+    "I_E_GMG_01_high_Weapon_F",
+    "I_E_HMG_01_support_high_F",
+    "I_E_HMG_01_support_F",
+    "I_E_Mortar_01_support_F",
+    "I_E_Mortar_01_Weapon_F",
+    "I_E_AA_01_weapon_F",
+    "I_E_AT_01_weapon_F",
+    "I_E_UAV_06_backpack_F",
+    "I_E_UAV_06_medical_backpack_F",
+    "I_E_UAV_01_backpack_F",
+    "C_IDAP_UGV_02_Demining_backack_F",
+    "I_UGV_02_Demining_backpack_F",
+    "O_UGV_02_Demining_backpack_F",
+    "I_E_UGV_02_Demining_backpack_F",
+    "B_UGV_02_Demining_backpack_F",
+    "I_UGV_02_Science_backpack_F",
+    "O_UGV_02_Science_backpack_F",
+    "I_E_UGV_02_Science_backpack_F",
+    "B_UGV_02_Science_backpack_F"
 ];
 
 /*-------------------------------
