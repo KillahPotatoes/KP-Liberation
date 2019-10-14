@@ -321,5 +321,9 @@
                 "    Function reached the end [BOOL]"
             ]
         }
-    ]
+    ],
+    "todo-tree.general.statusBar": "tags",
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.tree.flat": true,
+    "todo-tree.tree.showInExplorer": false
 }
