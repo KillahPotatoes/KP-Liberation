@@ -322,8 +322,14 @@
             ]
         }
     ],
+    "todo-tree.highlights.defaultHighlight": {
+        "type": "tag",
+        "foreground": "yellow",
+        "background": "red",
+        "opacity": 50,
+        "iconColour": "green"
+    },
     "todo-tree.general.statusBar": "tags",
     "todo-tree.tree.showCountsInTree": true,
-    "todo-tree.tree.flat": true,
-    "todo-tree.tree.showInExplorer": false
+    "todo-tree.tree.flat": true
 }
