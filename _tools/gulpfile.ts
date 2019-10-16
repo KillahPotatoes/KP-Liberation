@@ -72,7 +72,7 @@ for (let preset of presets) {
         function stringTableReplace () {
             // I know, replacing XML with regex... :|
             // https://regex101.com/r/TSfish/2
-            const versionRegex = /<Key ID="STR_MISSION_VERSION">\s*<Original>(?<version>.+)<\/Original>/;
+            const versionRegex = /(<Key ID="STR_MISSION_VERSION">\s*<Original>)(?<version>.+)(<\/Original>)/;
             const nameRegex = /(<Key ID="STR_MISSION_TITLE">\s*<Original>)(?<name>.+)(<\/Original>)/;
 
             return gulp.src(mission.getFrameworkPath().concat('/stringtable.xml'))
@@ -81,7 +81,7 @@ for (let preset of presets) {
 
                     // append commit hash and mark as dev version in PRs
                     if ('pull_request' === process.env.GITHUB_EVENT_NAME) {
-                        content = content.replace(versionRegex, version.concat(`-${process.env.GITHUB_SHA}`));
+                        content = content.replace(versionRegex, `$1${version}-${process.env.GITHUB_SHA}$3`);
                         version = version.concat('-dev');
                     }
 
