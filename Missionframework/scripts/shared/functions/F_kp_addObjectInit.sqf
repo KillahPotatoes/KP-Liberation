@@ -21,7 +21,7 @@ params [["_object", objNull, [objNull]]];
 private _elements = KPLIB_objectInitsCache getVariable typeOf _object;
 
 // Find and cache matching objectInits
-if (isNil _elements) then {
+if (isNil "_elements") then {
     _elements = KPLIB_objectInits select {
         _x params ["_classes", "", ["_inheritance", false]];
 
