@@ -69,6 +69,7 @@ infantry_units = [
 ];
 
 light_vehicles = [
+    ["CUP_B_S1203_Ambulance_CDF",75,0,50],                              // Škoda S1203 (Ambulance)
     ["CUP_B_UAZ_Unarmed_CDF",75,0,50],                                  // UAZ
     ["CUP_B_UAZ_MG_CDF",100,60,50],                                     // UAZ (DShKM)
     ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ (AGS-30)
@@ -106,6 +107,7 @@ static_vehicles = [
     ["CUP_B_DSHkM_MiniTripod_CDF",25,40,0],                             // DShKM Minitripod
     ["CUP_B_AGS_CDF",25,60,0],                                          // AGS-30
     ["CUP_B_SPG9_CDF",50,100,0],                                        // SPG-9
+    ["CUP_B_Igla_AA_pod_CDF",100,150,0],                                // Igla AA Pod
     ["CUP_B_ZU23_CDF",100,300,0],                                       // ZU-23
     ["B_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
     ["CUP_B_2b14_82mm_CDF",80,150,0],                                   // Podnos 2B14
