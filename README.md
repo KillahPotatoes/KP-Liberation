@@ -188,6 +188,8 @@ class Missions
 ## Changelog
 
 ### 0.96.7 (TBD, Hotfix release)
+* Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
