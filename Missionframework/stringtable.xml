@@ -40,7 +40,7 @@
             <Italian>Schieramento in Corso ...</Italian>
             <Chinesesimp>正在部署中...</Chinesesimp>
             <Chinese>正在佈署中...</Chinese>
-            <Turkish>Atlama işlemi devam ediyor ...</Turkish>
+            <Turkish>Atlama süreci devam ediyor...</Turkish>
             <Portuguese>Mobilização em andamento...</Portuguese>
             <Korean>배치중입니다...</Korean>
         </Key>
@@ -66,7 +66,7 @@
             <Italian>SEI STATO UCCISO</Italian>
             <Chinesesimp>你受伤了</Chinesesimp>
             <Chinese>你受傷了</Chinese>
-            <Turkish>Ağır yaralandın!</Turkish>
+            <Turkish>AĞIR YARALANDIN!</Turkish>
             <Portuguese>VOCÊ ESTÁ FERIDO!</Portuguese>
             <Korean>부상당했습니다.</Korean>
         </Key>
@@ -79,7 +79,7 @@
             <Italian>-- COSTRUISCI --</Italian>
             <Chinesesimp>-- 建造 --</Chinesesimp>
             <Chinese>-- 建造 --</Chinese>
-            <Turkish>-- İnşa Et --</Turkish>
+            <Turkish>-- İNŞA ET --</Turkish>
             <Portuguese>-- CONSTRUIR --</Portuguese>
             <Korean>-- 건 설 --</Korean>
         </Key>
@@ -92,7 +92,7 @@
             <Italian>MENU COSTRUZIONI</Italian>
             <Chinesesimp>建造菜单</Chinesesimp>
             <Chinese>建造選單</Chinese>
-            <Turkish>İNŞA MENÜSÜ</Turkish>
+            <Turkish>İNŞAAT MENÜSÜ</Turkish>
             <Portuguese>MENU DE CONSTRUÇÃO</Portuguese>
             <Korean>건설메뉴</Korean>
         </Key>
@@ -118,7 +118,7 @@
             <Italian>Personale</Italian>
             <Chinesesimp>补给</Chinesesimp>
             <Chinese>補給</Chinese>
-            <Turkish>Kaynaklar</Turkish>
+            <Turkish>Erzaklar</Turkish>
             <Portuguese>Suprimentos</Portuguese>
             <Korean>보급품</Korean>
         </Key>
@@ -131,7 +131,7 @@
             <Italian>Munizioni</Italian>
             <Chinesesimp>弹药</Chinesesimp>
             <Chinese>彈藥</Chinese>
-            <Turkish>Muhimmatlar</Turkish>
+            <Turkish>Mühimmat</Turkish>
             <Portuguese>Munição</Portuguese>
             <Korean>탄약</Korean>
         </Key>
@@ -157,7 +157,7 @@
             <Italian>Morte per dissanguamento fra %1 secondi</Italian>
             <Chinesesimp>将于%1秒后失血阵亡</Chinesesimp>
             <Chinese>將於 %1 秒後失血致死</Chinese>
-            <Turkish>%1 saniyedir kanıyorsun</Turkish>
+            <Turkish>Kanamadan ölmeye %1 saniye</Turkish>
             <Portuguese>Morte por hemorragia em %1 segundos</Portuguese>
             <Korean>%1 초 후 의식을 잃거나 과다출혈로 사망합니다. </Korean>
         </Key>
@@ -170,7 +170,7 @@
             <Italian>Stabilizzato</Italian>
             <Chinesesimp>伤情稳定</Chinesesimp>
             <Chinese>傷勢穩定</Chinese>
-            <Turkish>Stabilize</Turkish>
+            <Turkish>Stabilize edildi</Turkish>
             <Portuguese>Hemorragia estancada</Portuguese>
             <Korean>출혈이 멈추어 안정되었습니다.</Korean>
         </Key>
@@ -183,7 +183,7 @@
             <Italian>-- Ruota</Italian>
             <Chinesesimp>-- 旋转</Chinesesimp>
             <Chinese>-- 旋轉</Chinese>
-            <Turkish>-- Döndür</Turkish>
+            <Turkish>-- Açı</Turkish>
             <Portuguese>-- Rotação</Portuguese>
             <Korean>-- 회전</Korean>
         </Key>
@@ -235,7 +235,7 @@
             <Italian>Costruzione cancellata.</Italian>
             <Chinesesimp>建造取消。</Chinesesimp>
             <Chinese>建造取消。</Chinese>
-            <Turkish>İnşa iptal edildi.</Turkish>
+            <Turkish>İnşaat iptal edildi.</Turkish>
             <Portuguese>Construção cancelada.</Portuguese>
             <Korean>건설(설치) 취소</Korean>
         </Key>
@@ -248,7 +248,7 @@
             <Italian>Costruzione confermata.</Italian>
             <Chinesesimp>建造完成。</Chinesesimp>
             <Chinese>建造成功。</Chinese>
-            <Turkish>İnşa kuruldu.</Turkish>
+            <Turkish>İnşaat kuruldu.</Turkish>
             <Portuguese>Construção confirmada.</Portuguese>
             <Korean>건설(설치) 완료</Korean>
         </Key>
@@ -261,7 +261,7 @@
             <Italian>impossibile piazzare qui: ci sono %1 oggetti vicini %2 metri dalla posizione dell'oggetto in costruzione</Italian>
             <Chinesesimp>无法安置在这里：当前位置%2米内有%1个物体阻挡。</Chinesesimp>
             <Chinese>無法在此建造：目前 %2 公尺內有 %1 個物件存在。</Chinese>
-            <Turkish>Buraya kurulamaz: %2 metre içinde %1 obje bulunuyor.</Turkish>
+            <Turkish>Buraya koyulamaz: %2 metre içinde %1 obje var.</Turkish>
             <Portuguese>Impossível inserir aqui: Há %1 objeto(s) dentro de %2 metros da posição deste item.</Portuguese>
             <Korean>건설(설치) 불가 : 설치하고자 하는 위치에 %1 개의 객체가  %2 미터 안에 있습니다.</Korean>
         </Key>
@@ -287,7 +287,7 @@
             <Italian>-- ARSENALE --</Italian>
             <Chinesesimp>-- 军火库 --</Chinesesimp>
             <Chinese>-- 軍火庫 --</Chinese>
-            <Turkish>-- CEPHANE --</Turkish>
+            <Turkish>-- ARSENAL --</Turkish>
             <Portuguese>-- ARSENAL --</Portuguese>
             <Korean>-- 무기고 --</Korean>
         </Key>
@@ -300,7 +300,7 @@
             <Italian>-- CARICA CASSA</Italian>
             <Chinesesimp>-- 装载货箱</Chinesesimp>
             <Chinese>-- 裝載貨物</Chinese>
-            <Turkish>-- KUTUYU YÜKLE</Turkish>
+            <Turkish>-- SANDIĞI YÜKLE</Turkish>
             <Portuguese>-- CARREGAR CAIXA NO TRANSPORTE</Portuguese>
             <Korean>-- 군수물자 적재</Korean>
         </Key>
@@ -313,7 +313,7 @@
             <Italian>-- SCARICA CASSA</Italian>
             <Chinesesimp>-- 卸载货箱</Chinesesimp>
             <Chinese>-- 卸載貨物</Chinese>
-            <Turkish>-- KUTUYU İNDİR</Turkish>
+            <Turkish>-- SANDIKLARI İNDİR</Turkish>
             <Portuguese>-- DESCARREGAR CAIXAS</Portuguese>
             <Korean>-- 군수물자 하역</Korean>
         </Key>
@@ -322,18 +322,21 @@
             <German>-- AUF FAHRZEUG LADEN</German>
             <Russian>-- ЗАГРУЗИТЬ В ТРАНСПОРТ</Russian>
             <Korean>-- 차량에 적재</Korean>
+            <Turkish>-- ARACA YÜKLE</Turkish>
         </Key>
         <Key ID="STR_ACTION_UNLOAD_VIV">
             <Original>-- UNLOAD FROM VEHICLE</Original>
             <German>-- VON FAHRZEUG ABLADEN</German>
             <Russian>-- ВЫГРУЗИТЬ ИЗ ТРАНСПОРТА</Russian>
             <Korean>-- 차량에서 하역</Korean>
+            <Turkish>-- ARAÇTAN İNDİR</Turkish>
         </Key>
         <Key ID="STR_ACTION_NOTRANSPORT_VIV">
             <Original>-- NO TRANSPORT VEHICLES NEARBY</Original>
             <German>-- KEIN TRANSPORTFAHRZEUG IN DER NÄHE</German>
             <Russian>-- НЕТ ТРАНСПОРТА ПОБЛИЗОСТИ</Russian>
             <Korean>-- 주변에 수송차량이 없습니다.</Korean>
+            <Turkish>-- YAKINLARDA NAKLİYE ARACI YOK</Turkish>
         </Key>
         <Key ID="STR_BOX_LOADED">
             <Original>Ammo box successfully loaded on the transport vehicle.</Original>
@@ -344,7 +347,7 @@
             <Italian>Cassa munizioni correttamente caricata sul camion da trasporto</Italian>
             <Chinesesimp>货箱已装载到运输载具中。</Chinesesimp>
             <Chinese>貨物已上至運輸載具中。</Chinese>
-            <Turkish>Mermi kutusu başarıyla taşıma aracına yüklendi.</Turkish>
+            <Turkish>Mühimmat sandığı başarıyla nakliye aracına yüklendi.</Turkish>
             <Portuguese>Caixa de munição carregada com sucesso no veículo de transporte.</Portuguese>
             <Korean>군수물자를 수송차량에 성공적으로 적재하였습니다.</Korean>
         </Key>
@@ -357,7 +360,7 @@
             <Italian>Cassa munizioni correttamente scaricata dal camion da trasporto</Italian>
             <Chinesesimp>货箱已从运输载具中卸载。</Chinesesimp>
             <Chinese>貨物已從運輸載具中卸下。</Chinese>
-            <Turkish>Mermi kutusu başarıyla taşıma aracından indirildi.</Turkish>
+            <Turkish>Mühimmat sandığı başarıyla nakliye aracından indirildi.</Turkish>
             <Portuguese>Caixa de munição descarregada com sucesso do veículo de transporte.</Portuguese>
             <Korean>군수물자를 수송차량에서 성공적으로 하역하였습니다.</Korean>
         </Key>
@@ -370,7 +373,7 @@
             <Italian>Non ci sono veicoli vicino alla cassa munizioni capaci di caricarla</Italian>
             <Chinesesimp>附近没有能够装载货箱的载具。</Chinesesimp>
             <Chinese>附近沒有具備足夠空間裝載貨物的載具。</Chinese>
-            <Turkish>Yakınlarda bu kutuyu taşıyabilecek araç yok.</Turkish>
+            <Turkish>Yakınlarda bu sandığı taşıyabilecek araç yok.</Turkish>
             <Portuguese>Não existe veículo nas proximidades capaz de carregar a caixa de munição.</Portuguese>
             <Korean>주변에 군수물자를 수송할 수 있는 차량이 없습니다.</Korean>
         </Key>
@@ -396,7 +399,7 @@
             <Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla FOB più vicina. La FOB più vicina si trova a %2 metri.</Italian>
             <Chinesesimp>无法在此部署前哨，前哨之间的距离不得低于%1米。最近的前哨在%2米开外。</Chinesesimp>
             <Chinese>無法在這裡佈署前線基地，前線基地之間的距離不得低於 %1 公尺，最近的前線基地離此 %2 公尺。</Chinese>
-            <Turkish>Buraya FOB koyamazsın. Diğer FOB'lerden %1 metre uzakta olmalısın. En yakındaki FOB %2 metre uzaklıkta.</Turkish>
+            <Turkish>Buraya FOB kurulamaz, diğer FOB'lerden en az %1 metre uzakta olmalısın. Şuan en yakındaki FOB %2 metre uzakta.</Turkish>
             <Portuguese>Não é possível instalar a FOB aqui, você precisa estar no mínimo a %1 metros de distância de outra FOB. A FOB mais próxima está a %2 metros.</Portuguese>
             <Korean>전초기지를 설치할 수 없습니다. 다른 전초기지로부터 %1 미터 떨어져 있어야 합니다. 현재 가장 가까운 전초기지와 %2 미터 떨어져 있습니다.</Korean>
         </Key>
@@ -409,7 +412,7 @@
             <Italian>Impossibile creare la nuova FOB qui, devi essere almeno %1 metri distante dalla Zona catturabile più vicina. La Zona Catturabile più vicina si trova a %2 metri.</Italian>
             <Chinesesimp>无法在此部署前哨，前哨与战区之间的距离不得低于%1米。最近的战区在%2米开外。</Chinesesimp>
             <Chinese>無法在此佈署前線基地，前線基地與戰區之間的距離不得低於 %1 公尺，最近的戰區離此 %2 公尺。</Chinese>
-            <Turkish>Buraya FOB açılamaz. Ele geçirilebilir bölgelerden en az %1 metre uzakta olmalısınız. En yakın bölge %2 metre uzakta.</Turkish>
+            <Turkish>Buraya FOB kurulamaz, düşman bölgelerinden en az %1 metre uzakta olmalısın. Şuan en yakın düşman bölgelesi %2 metre uzakta.</Turkish>
             <Portuguese>Não é possível instalar a FOB aqui, você precisa estar no mínimo a %1 metros de distância de qualquer setor capturável. O setor mais próima está a %2 metros.</Portuguese>
             <Korean>전초기지를 설치할 수 없습니다. 점령지에서 %1 미터 떨어져 있어야 합니다. 현재 가장 가까운 점령지는 %2 미터 떨어져 있습니다.</Korean>
         </Key>
@@ -422,7 +425,7 @@
             <Italian>Impossibile costruire sull'acqua.</Italian>
             <Chinesesimp>无法在水面上建造。</Chinesesimp>
             <Chinese>無法建造在水面上。</Chinese>
-            <Turkish>Su içine kurulamaz.</Turkish>
+            <Turkish>Su üstünde kurulamaz.</Turkish>
             <Portuguese>Não é possível construir na água.</Portuguese>
             <Korean>물에는 전초기지를 설치 할 수 없습니다.</Korean>
         </Key>
@@ -435,7 +438,7 @@
             <Italian>Impossibile costruire a più di %1 metri dalla FOB.</Italian>
             <Chinesesimp>无法在超出前哨%1米外的区域建造。</Chinesesimp>
             <Chinese>無法在距離前線基地 %1 公尺外的區域建造</Chinese>
-            <Turkish>Diğer FOB'den %1 metre uzakta olmalısınız.</Turkish>
+            <Turkish>FOB'den %1 metre uzakta inşaat yapılamaz.</Turkish>
             <Portuguese>Não é possível construir com mais de %1 metros de distância da FOB.</Portuguese>
             <Korean>전초기지에서 %1 미터 이상 떨어지면 건설(설치)할 수 없습니다. </Korean>
         </Key>
@@ -447,7 +450,7 @@
             <Russian>FOB Контейнер</Russian>
             <Chinesesimp>前哨部署柜</Chinesesimp>
             <Chinese>前線基地貨櫃</Chinese>
-            <Turkish>FOB Konternırı</Turkish>
+            <Turkish>FOB Konteynırı</Turkish>
             <Portuguese>FOB no Contêiner</Portuguese>
             <Korean>전초기지 설치박스</Korean>
         </Key>
@@ -460,7 +463,7 @@
             <Italian>Camion FOB</Italian>
             <Chinesesimp>前哨部署车</Chinesesimp>
             <Chinese>前線基地車</Chinese>
-            <Turkish>FOB Kamyoneti</Turkish>
+            <Turkish>FOB Kamyonu</Turkish>
             <Portuguese>FOB transportável</Portuguese>
             <Korean>전초기지 설치차량</Korean>
         </Key>
@@ -486,7 +489,7 @@
             <Italian>Cassa Arsenale</Italian>
             <Chinesesimp>军火箱</Chinesesimp>
             <Chinese>軍火箱</Chinese>
-            <Turkish>Arsenal Kutusu</Turkish>
+            <Turkish>Arsenal Sandığı</Turkish>
             <Portuguese>Caixa de Arsenal</Portuguese>
             <Korean>무기고</Korean>
         </Key>
@@ -538,7 +541,7 @@
             <Italian>Crea Equipaggio</Italian>
             <Chinesesimp>建造（含成员）</Chinesesimp>
             <Chinese>建造（包含成員）</Chinese>
-            <Turkish>Ekip Yarat</Turkish>
+            <Turkish>Ekip Oluştur</Turkish>
             <Portuguese>Construir (tripulado)</Portuguese>
             <Korean>배치(승무원포함)</Korean>
         </Key>
@@ -603,7 +606,7 @@
             <Italian>Squadra Ricognitori</Italian>
             <Chinesesimp>侦察班</Chinesesimp>
             <Chinese>偵查班</Chinese>
-            <Turkish>Gözcü Timi</Turkish>
+            <Turkish>Keşif Timi</Turkish>
             <Portuguese>Grupo de Combate de Reconhecimento</Portuguese>
             <Korean>정찰팀</Korean>
         </Key>
@@ -616,7 +619,7 @@
             <Italian>Squadra Paracadutisti</Italian>
             <Chinesesimp>空降班</Chinesesimp>
             <Chinese>傘兵班</Chinese>
-            <Turkish>Paraşütçü Asker Timi</Turkish>
+            <Turkish>Paraşütçü Timi</Turkish>
             <Portuguese>Grupo de Combate de Paraquedistas</Portuguese>
             <Korean>공수팀</Korean>
         </Key>
@@ -629,7 +632,7 @@
             <Italian>Limite delle Unità</Italian>
             <Chinesesimp>单位上限</Chinesesimp>
             <Chinese>單位上限</Chinese>
-            <Turkish>Ünit Limiti</Turkish>
+            <Turkish>Birim Limiti</Turkish>
             <Portuguese>Limite de unidades</Portuguese>
             <Korean>유닛 제한</Korean>
         </Key>
@@ -655,7 +658,7 @@
             <Italian>Confermare : Elimina Salvataggi</Italian>
             <Chinesesimp>确认 ： 清空存档</Chinesesimp>
             <Chinese>確認：刪除存檔</Chinese>
-            <Turkish>Onayla : Kayıtlı oyunu sil</Turkish>
+            <Turkish>Onayla: Kayıtlı oyunu sil</Turkish>
             <Portuguese>Confirmar: Apagar jogo salvo</Portuguese>
             <Korean>확인 : 저장된 게임 초기화</Korean>
         </Key>
@@ -694,7 +697,7 @@
             <Italian>-- RIADDRIZZA</Italian>
             <Chinesesimp>-- 复位</Chinesesimp>
             <Chinese>-- 翻正</Chinese>
-            <Turkish>-- TERS DÖNDÜR</Turkish>
+            <Turkish>-- DÖNDÜR</Turkish>
             <Portuguese>-- DESVIRAR</Portuguese>
             <Korean>-- 차량 바로잡기</Korean>
         </Key>
@@ -720,7 +723,7 @@
             <Italian>-- CATTURA</Italian>
             <Chinesesimp>-- 俘虏</Chinesesimp>
             <Chinese>-- 俘虜</Chinese>
-            <Turkish>-- YAKALA</Turkish>
+            <Turkish>-- ELE GEÇİR</Turkish>
             <Portuguese>-- CAPTURAR</Portuguese>
             <Korean>-- 생포/포획</Korean>
         </Key>
@@ -785,7 +788,7 @@
             <Italian>Riciclando questo %1 otterrai:</Italian>
             <Chinesesimp>回收%1将会获得：</Chinesesimp>
             <Chinese>回收%1將會獲得：</Chinese>
-            <Turkish>Geri dönüştürme %1 verecektir:</Turkish>
+            <Turkish>Bu %1 geri dönüştürülünce bunları verecektir:</Turkish>
             <Portuguese>Reciclando este %1, irá obter:</Portuguese>
             <Korean>재활용 할 경우 %1 의 보급품이 반환됨</Korean>
         </Key>
@@ -837,7 +840,7 @@
             <Italian>Le nostre unità hanno catturato %1</Italian>
             <Chinesesimp>我军部队已占领%1。</Chinesesimp>
             <Chinese>我軍已佔領 %1。</Chinese>
-            <Turkish>Birliklerimiz %1 'i almayı başardı</Turkish>
+            <Turkish>Birliklerimiz %1 sektörünü ele geçirdi</Turkish>
             <Portuguese>Nossas forças capturaram %1.</Portuguese>
             <Korean>아군이 거점 %1 을 점령중입니다.</Korean>
         </Key>
@@ -863,7 +866,7 @@
             <Italian>Forze ostili attaccano %1!</Italian>
             <Chinesesimp>敌军部队正在进攻%1！</Chinesesimp>
             <Chinese>敵軍正在進攻 %1！</Chinese>
-            <Turkish>Düşman birlikleri %1 'e saldırıyor'</Turkish>
+            <Turkish>Düşman birlikleri %1 sektörüne saldırıyor!</Turkish>
             <Portuguese>Forças hostis estão atacando %1!</Portuguese>
             <Korean>적군이 거점 %1 을 공격합니다!</Korean>
         </Key>
@@ -889,7 +892,7 @@
             <Italian>Abbiamo perso il controllo di %1!</Italian>
             <Chinesesimp>我们失去了%1的控制权！</Chinesesimp>
             <Chinese>我們失去了 %1 ！</Chinese>
-            <Turkish>%1 'deki hakimiyetimizi kaybettik!'</Turkish>
+            <Turkish>%1 sektöründeki hakimiyetimizi kaybettik!</Turkish>
             <Portuguese>Perdemos controle de %1!</Portuguese>
             <Korean>아군이 거점 %1 을 상실하였습니다!</Korean>
         </Key>
@@ -915,7 +918,7 @@
             <Italian>%1 non è più sotto attacco.</Italian>
             <Chinesesimp>%1脱离了危险。</Chinesesimp>
             <Chinese>%1 脫離了危險。</Chinese>
-            <Turkish>%1 tehlike altında değil.</Turkish>
+            <Turkish>%1 artık tehdit altında değil.</Turkish>
             <Portuguese>%1 não está mais sob ameaça.</Portuguese>
             <Korean>거점 %1 이 안정화 되었습니다.</Korean>
         </Key>
@@ -941,7 +944,7 @@
             <Italian>La FOB %1 è operativa.</Italian>
             <Chinesesimp>%1前哨现已入役。</Chinesesimp>
             <Chinese>前線基地 %1 已啟用。</Chinese>
-            <Turkish>FOB %1 şimdi yürürlükte.</Turkish>
+            <Turkish>FOB %1 artık hazır.</Turkish>
             <Portuguese>FOB %1 está operacional.</Portuguese>
             <Korean>전초기지 %1 를 설치 할 수 있습니다.</Korean>
         </Key>
@@ -967,7 +970,7 @@
             <Italian>La FOB %1 non è più in pericolo.</Italian>
             <Chinesesimp>%1前哨脱离了危险。</Chinesesimp>
             <Chinese>前線基地 %1 已脫離危險。</Chinese>
-            <Turkish>FOB %1 artık güvende.</Turkish>
+            <Turkish>FOB %1 artık tehdit altında değil.</Turkish>
             <Portuguese>FOB %1 não está mais sob ameaça.</Portuguese>
             <Korean>전초기지 %1 이 안정화 되었습니다.</Korean>
         </Key>
@@ -1017,7 +1020,7 @@
             <Russian>FOB %1 была уничтожена!</Russian>
             <Italian>La FOB %1 è stata distrutta!</Italian>
             <Chinesesimp>%1前哨被摧毁了！</Chinesesimp>
-            <Turkish>FOB %1 kaybedildi!</Turkish>
+            <Turkish>FOB %1 yok edildi!</Turkish>
             <Portuguese>FOB %1 foi destruída!</Portuguese>
             <Korean>전초기지 %1 이 파괴되었습니다!</Korean>
         </Key>
@@ -1030,7 +1033,7 @@
             <Italian>FORZE OSTILI IN ARRIVO</Italian>
             <Chinesesimp>敌军部队接近中</Chinesesimp>
             <Chinese>敵軍靠近中</Chinese>
-            <Turkish>DÜŞMAN BİRLİKLERİ GELİYOR</Turkish>
+            <Turkish>DÜŞMAN BİRLİKLERİ YOLDA</Turkish>
             <Portuguese>FORÇAS HOSTIS A CAMINHO</Portuguese>
             <Korean>적군 접근중</Korean>
         </Key>
@@ -1043,7 +1046,7 @@
             <Italian>Forze ostili avvistate vicino %1</Italian>
             <Chinesesimp>%1附近发现了敌军部队。</Chinesesimp>
             <Chinese>%1 附近發現了敵方的部隊</Chinese>
-            <Turkish>DÜŞMANLAR %1 yakınlarında göründü.</Turkish>
+            <Turkish>Düşman birlikleri %1 yakınlarında göründü.</Turkish>
             <Portuguese>Forças hostis identificadas nas proximidades de %1.</Portuguese>
             <Korean>%1 근처에 적군이 발견되었습니다!</Korean>
         </Key>
@@ -1069,7 +1072,7 @@
             <Italian>FOB ostile vicino %1.</Italian>
             <Chinesesimp>%1附近发现了敌军前哨。</Chinesesimp>
             <Chinese>%1 附近發現了敵方的前線基地。</Chinese>
-            <Turkish>Düşman FOB'si %1 taraflarında.</Turkish>
+            <Turkish>Düşman FOB'si %1 yakınlarında.</Turkish>
             <Portuguese>FOB hostil nas proximidades de %1.</Portuguese>
             <Korean>적군 전초기지 %1 가 근처에 있습니다!</Korean>
         </Key>
@@ -1082,7 +1085,7 @@
             <Italian>Abbiamo interrogato il prigioniero.</Italian>
             <Chinesesimp>我们审讯了一名战犯。</Chinesesimp>
             <Chinese>我們審問了一名俘虜。</Chinese>
-            <Turkish>Başarıyla bir tutsağı sorguladık.</Turkish>
+            <Turkish>Bir tutsağı başarıyla sorguladık.</Turkish>
             <Portuguese>Interrogamos um prisioneiro.</Portuguese>
             <Korean>포로를 심문하여 정보를 획득하였습니다.</Korean>
         </Key>
@@ -1095,7 +1098,7 @@
             <Italian>Abbiamo trovato dei documenti segreti.</Italian>
             <Chinesesimp>我们找到了机密文件。</Chinesesimp>
             <Chinese>我們找到了機密文件。</Chinese>
-            <Turkish>Gizli istihbahrat dosyası bulduk.</Turkish>
+            <Turkish>Gizli dosyalar bulduk.</Turkish>
             <Portuguese>Localizamos documentos secretos.</Portuguese>
             <Korean>적군 비밀문서를 획득하였습니다.</Korean>
         </Key>
@@ -1108,7 +1111,7 @@
             <Italian>OBIETTIVI SECONDARI</Italian>
             <Chinesesimp>次要目标</Chinesesimp>
             <Chinese>次要任務</Chinese>
-            <Turkish>İKİNCİ GÖREV</Turkish>
+            <Turkish>İKİNCİL GÖREV</Turkish>
             <Portuguese>OBJETIVO SECUNDÁRIO</Portuguese>
             <Korean>부차적인 임무</Korean>
         </Key>
@@ -1147,7 +1150,7 @@
             <Italian>Forze ostili rinforzano le truppe su %1</Italian>
             <Chinesesimp>敌军部队正在向%1增援。</Chinesesimp>
             <Chinese>敵軍正在向 %1 增援。</Chinese>
-            <Turkish>Düşmanlar %1 'e takviye kuvvet yolladılar.'</Turkish>
+            <Turkish>Düşmanlar %1 tarafına takviye kuvvet yolladılar.</Turkish>
             <Portuguese>Forças hostis reforçando %1.</Portuguese>
             <Korean>%1 로 적군의 지원병력이 이동중입니다!</Korean>
         </Key>
@@ -1160,7 +1163,7 @@
             <Italian>== OPZIONI MISSIONE ==</Italian>
             <Chinesesimp>== 任务选项 ==</Chinesesimp>
             <Chinese>== 任務選項 ==</Chinese>
-            <Turkish>== BÖLÜM AYARLARI ==</Turkish>
+            <Turkish>== GÖREV AYARLARI ==</Turkish>
             <Portuguese>== OPÇÕES DA MISSÃO ==</Portuguese>
             <Korean>== 미션 옵션 ==</Korean>
         </Key>
@@ -1172,7 +1175,7 @@
             <Italian>==OPZIONI DI GIOCO ==</Italian>
             <Chinesesimp>== 游戏选项 ==</Chinesesimp>
             <Chinese>== 遊戲選項 ==</Chinese>
-            <Turkish>== OYUN AYARLARI ==</Turkish>
+            <Turkish>== OYNANIŞ AYARLARI ==</Turkish>
             <Portuguese>== OPÇÕES DE JOGO ==</Portuguese>
             <Korean>== 게임플레이 옵션 ==</Korean>
         </Key>
@@ -1185,7 +1188,7 @@
             <Italian>==OPZIONI TECNICHE ==</Italian>
             <Chinesesimp>== 技术选项 ==</Chinesesimp>
             <Chinese>== 技術選項 ==</Chinese>
-            <Turkish>== TEKNIK AYARLAR ==</Turkish>
+            <Turkish>== TEKNİK AYARLAR ==</Turkish>
             <Portuguese>== OPÇÕES TÉCNICAS ==</Portuguese>
             <Korean>== 기술 옵션 ==</Korean>
         </Key>
@@ -1211,7 +1214,7 @@
             <Italian>Difficoltà:</Italian>
             <Chinesesimp>难度</Chinesesimp>
             <Chinese>困難度</Chinese>
-            <Turkish>Zorluk:</Turkish>
+            <Turkish>Zorluk</Turkish>
             <Portuguese>Dificuldade:</Portuguese>
             <Korean>난이도</Korean>
         </Key>
@@ -1289,7 +1292,7 @@
             <Italian>Estremo</Italian>
             <Chinesesimp>极难</Chinesesimp>
             <Chinese>極難</Chinese>
-            <Turkish>Extreme</Turkish>
+            <Turkish>Uçta</Turkish>
             <Portuguese>Extrema</Portuguese>
             <Korean>매우 우려움</Korean>
         </Key>
@@ -1302,7 +1305,7 @@
             <Italian>Ridicolo</Italian>
             <Chinesesimp>荒谬</Chinesesimp>
             <Chinese>荒謬</Chinese>
-            <Turkish>Çılgınca</Turkish>
+            <Turkish>Saçmalık</Turkish>
             <Portuguese>Absurda</Portuguese>
             <Korean>터무니없이어려움</Korean>
         </Key>
@@ -1315,18 +1318,16 @@
             <Italian>Oh dio, stiamo per morire!</Italian>
             <Chinesesimp>天啦噜作死啦</Chinesesimp>
             <Chinese>菩薩救救我！</Chinese>
-            <Turkish>Aman tanrım yok olacağız!</Turkish>
+            <Turkish>Hepimiz ölücez!</Turkish>
             <Portuguese>Ah meu Deus, vamos morrer!</Portuguese>
             <Korean>우리 모두가 죽게 될 운명</Korean>
         </Key>
         <Key ID="STR_PARAMS_AI_SKILL_MANAGEMENT">
             <Original>Manage AI Skill</Original>
-            <Russian>
-            </Russian>
             <Chinesesimp>管理AI能力</Chinesesimp>
             <Chinese>管理 AI 能力</Chinese>
             <Italian>Livello Difficoltà AI</Italian>
-            <Turkish>AI Yeteneklerii düzenle</Turkish>
+            <Turkish>AI Yeteneklerini düzenle</Turkish>
             <Portuguese>Gerir nível de habilidade da IA</Portuguese>
             <Korean>AI 능력치</Korean>
         </Key>
@@ -1339,7 +1340,7 @@
             <Italian>Moltiplicatore di risorse</Italian>
             <Chinesesimp>资源乘数</Chinesesimp>
             <Chinese>資源乘數</Chinese>
-            <Turkish>Kaynak Geliri Çarpanı</Turkish>
+            <Turkish>Kaynak arttırıcı çarpan</Turkish>
             <Portuguese>Multiplicador de recursos</Portuguese>
             <Korean>군수물자 생산 비율</Korean>
         </Key>
@@ -1378,7 +1379,7 @@
             <Italian>Filmato di Schieramento</Italian>
             <Chinesesimp>部署动画</Chinesesimp>
             <Chinese>佈署動畫</Chinese>
-            <Turkish>Doğma Sinematiği</Turkish>
+            <Turkish>Başlangıç sinematiği</Turkish>
             <Portuguese>Introdução cinemática de mobilização</Portuguese>
             <Korean>배포 영상</Korean>
         </Key>
@@ -1391,7 +1392,7 @@
             <Italian>Attivo</Italian>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
-            <Turkish>Aktif</Turkish>
+            <Turkish>Açık</Turkish>
             <Portuguese>Ativado</Portuguese>
             <Korean>활성화</Korean>
         </Key>
@@ -1417,7 +1418,7 @@
             <Italian>Comincia la campagna costruendo la prima FOB</Italian>
             <Chinesesimp>部署起始前哨</Chinesesimp>
             <Chinese>佈署起始前線基地</Chinese>
-            <Turkish>Oyuna ilk FOB kurulu olarak başla</Turkish>
+            <Turkish>Oyunu ilk FOB kurulu olarak başlatır</Turkish>
             <Portuguese>Iniciar a campanha com a primeira FOB já construída</Portuguese>
             <Korean>이미 설치된 전초기지에서 시작하기</Korean>
         </Key>
@@ -1482,7 +1483,7 @@
             <Italian>75% - Raccomandato per server dedicati</Italian>
             <Chinesesimp>75% - 适用于服务器</Chinesesimp>
             <Chinese>75% - 適合伺服器使用</Chinese>
-            <Turkish>75% - Yerel sunucu için uygun</Turkish>
+            <Turkish>75% - Dedicated sunucu için önerilen</Turkish>
             <Portuguese>75% - Recomendado para servidor dedicado</Portuguese>
             <Korean>75% - 전용서버에서 실행할때 권장</Korean>
         </Key>
@@ -1495,7 +1496,7 @@
             <Italian>100% - Raccomandato per server dedicati</Italian>
             <Chinesesimp>100% - 适用于服务器</Chinesesimp>
             <Chinese>100% - 適合伺服器使用</Chinese>
-            <Turkish>100% - Dedicated server için uygun</Turkish>
+            <Turkish>100% - Dedicated sunucu için önerilen</Turkish>
             <Portuguese>100% - Recomendado para servidor dedicado</Portuguese>
             <Korean>100% - 전용서버에서 실행할때 권장</Korean>
         </Key>
@@ -1508,7 +1509,7 @@
             <Italian>125% - Raccomandato per server dedicati con headless client</Italian>
             <Chinesesimp>125% - 适用于有Headless Client辅助的服务器</Chinesesimp>
             <Chinese>125% - 適合有無頭客戶端的伺服器使用</Chinese>
-            <Turkish>125% - Headless client'e sahip dedicated server için uygun</Turkish>
+            <Turkish>125% - Headless client'e sahip dedicated sunucu için önerilen</Turkish>
             <Portuguese>125% - Recomendado para servidor com headless client</Portuguese>
             <Korean>125% - 단일 CPU의 헤드리스서버(다른PC와 사용자에게 서비스를 제공하는 서버종류)에서 실행할때 권장</Korean>
         </Key>
@@ -1521,7 +1522,7 @@
             <Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
             <Chinesesimp>150% - 适用于有多个Headless Client辅助的服务器</Chinesesimp>
             <Chinese>150% - 適合有多個無頭客戶端的伺服器使用</Chinese>
-            <Turkish>150% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
+            <Turkish>150% - Birkaç headless client'e sahip dedicated sunucu için önerilen</Turkish>
             <Portuguese>150% - Recomendado para servidor com mútiplos headless clients</Portuguese>
             <Korean>150% - CPU 2개 이상, 또는 다중 헤드리스서버에서 실행할때 권장</Korean>
         </Key>
@@ -1534,7 +1535,7 @@
             <Italian>200% - Raccomandato per server dedicati con tanti headless client</Italian>
             <Chinesesimp>200% - 适用于有多个Headless Client辅助的服务器</Chinesesimp>
             <Chinese>200% - 適合有多個無頭客戶端的伺服器使用</Chinese>
-            <Turkish>200% - Çoklu headless client'e sahip dedicated server için uygun</Turkish>
+            <Turkish>200% - Birkaç headless client'e sahip dedicated sunucu için önerilen</Turkish>
             <Portuguese>200% - Recomendado para servidor com mútiplos headless clients</Portuguese>
             <Korean>200% - CPU 2개 이상, 또는 다중 헤드리스서버에서 실행할때 권장</Korean>
         </Key>
@@ -1651,7 +1652,7 @@
             <Italian>Unità di fanteria</Italian>
             <Chinesesimp>步兵单位</Chinesesimp>
             <Chinese>步兵單位</Chinese>
-            <Turkish>Birlik ünitleri</Turkish>
+            <Turkish>Yaya birimler</Turkish>
             <Portuguese>Unidades de infantaria</Portuguese>
             <Korean>보병 부대</Korean>
         </Key>
@@ -1690,7 +1691,7 @@
             <Italian>Veicoli Aerei</Italian>
             <Chinesesimp>空中载具</Chinesesimp>
             <Chinese>空中載具</Chinese>
-            <Turkish>Uçak ve helikopterler</Turkish>
+            <Turkish>Hava araçları</Turkish>
             <Portuguese>Veículos aéreos</Portuguese>
             <Korean>항공기</Korean>
         </Key>
@@ -1703,7 +1704,7 @@
             <Italian>Difese statiche</Italian>
             <Chinesesimp>固定防御</Chinesesimp>
             <Chinese>固定式防禦</Chinese>
-            <Turkish>Statik savunma aletleri</Turkish>
+            <Turkish>Statik savunmalar</Turkish>
             <Portuguese>Defesas estáticas</Portuguese>
             <Korean>방어 무기</Korean>
         </Key>
@@ -1729,7 +1730,7 @@
             <Italian>Logistica</Italian>
             <Chinesesimp>后勤</Chinesesimp>
             <Chinese>後勤</Chinese>
-            <Turkish>Lojistikler</Turkish>
+            <Turkish>Lojistik</Turkish>
             <Portuguese>Logística</Portuguese>
             <Korean>후방보급부대</Korean>
         </Key>
@@ -1742,7 +1743,7 @@
             <Italian>Squadra Fanteria</Italian>
             <Chinesesimp>步兵班</Chinesesimp>
             <Chinese>步兵班</Chinese>
-            <Turkish>Asker timleri</Turkish>
+            <Turkish>Piyade timleri</Turkish>
             <Portuguese>Grupos de combate de infantaria</Portuguese>
             <Korean>보병 분대</Korean>
         </Key>
@@ -1768,7 +1769,7 @@
             <Italian>L'impostazione unitcap è stata superata e l'attivazione di ulteriori settori è interrotta temporaneamente. Ora è possibile visualizzare l'elenco dei settori attualmente attivi in ​​cui si devono concentrare i vostri sforzi.</Italian>
             <Chinesesimp>已达到单位上限，暂停其他战区的激活。你可以通过活动中的战区列表查看并确立主攻地区。</Chinesesimp>
             <Chinese>敵人生成數量已達單位上限，系統將暫時停止其他戰區的敵軍觸發功能；你可以通過觸發中的戰區來查看並確定想主要進攻的戰區。</Chinese>
-            <Turkish>Unit sınırı aşıldır ve sektör aktivasyonu geçici olarak durduruldu. Şuan da ilgilenmeniz gereken aktif sektörler listesi görüntülenmekte.</Turkish>
+            <Turkish>Birim sınırı aşıldığı için sektör aktivasyonu geçici olarak durduruldu. Şuan, ilgilenmeniz gereken aktif sektörler listesini görebilirsiniz.</Turkish>
             <Portuguese>O limite de unidades foi excedido e a ativação de outros setores foi temporariamente pausada. Você pode ver a lista de setores ativos onde deverá concentrar seus esforços.</Portuguese>
             <Korean>아군 또는 적 유닛의 총량이 한계치에 도달했습니다. 이 제한이 풀릴 때까지 더 이상 거점 활성화는 중단됩니다. 플레이어들은 현재 활성화된 거점만 점령할 수 있고, 그 거점들에 집중해야 합니다</Korean>
         </Key>
@@ -1833,7 +1834,7 @@
             <Italian>Sostituisci</Italian>
             <Chinesesimp>附身</Chinesesimp>
             <Chinese>取代</Chinese>
-            <Turkish>Değiş</Turkish>
+            <Turkish>Değiştir</Turkish>
             <Portuguese>Substituir</Portuguese>.
             <Korean>분대원 교체</Korean>
         </Key>
@@ -1846,7 +1847,7 @@
             <Italian>Verrai schierato sul membro della squadra selezionata e lo rimpiazzerai mantenendo il loadout corrente.</Italian>
             <Chinesesimp>你将附身到所选班组成员身上并保留你当前的装备</Chinesesimp>
             <Chinese>你將使用你目前的身上裝備並取代選定的班級成員。</Chinese>
-            <Turkish>Seçilen şahış ile değişeceksin ve üstündeki herşey ona aktarılacak.</Turkish>
+            <Turkish>Şuanki ekipmanınız ile seçilen kişinin yerinde doğacaksınız.</Turkish>
             <Portuguese>Você irá reaparecer no membro selecionado e o substituir enquanto mantém seu equipamento atual.</Portuguese>
         </Key>
         <Key ID="STR_REMOVE_MEMBER">
@@ -1870,7 +1871,7 @@
             <Italian>Il soldato attualmente selezionato è stato rimosso</Italian>
             <Chinesesimp>所选班组成员将会被移除。</Chinesesimp>
             <Chinese>所選的班級成員將被移除</Chinese>
-            <Turkish>Bu tim üyesi silinecektir.</Turkish>
+            <Turkish>Seçilen tim üyesi silinecektir.</Turkish>
             <Portuguese>O membro selecionado será deletado</Portuguese>
         </Key>
         <Key ID="STR_RESUPPLY">
@@ -1882,7 +1883,7 @@
             <Italian>Riapprovvigionamento</Italian>
             <Chinesesimp>补给</Chinesesimp>
             <Chinese>補給</Chinese>
-            <Turkish>Tazele</Turkish>
+            <Turkish>Erzak Yenile</Turkish>
             <Portuguese>Reabastecer</Portuguese>
         </Key>
         <Key ID="STR_RESUPPLY_TOOLTIP">
@@ -1894,7 +1895,7 @@
             <Italian>Se il membro di una squadra è nei pressi di una FOB o Respwan Mobile potrà ricaricare il suo loadout.</Italian>
             <Chinesesimp>如果选择的班组成员距离补给点（机动复活点或前哨）够近时，他们将获得一套全新完整的装备。</Chinesesimp>
             <Chinese>如果選定的班級乘員距離補給點（機動重生點或前線基地）夠近時，他們將獲得一套全新的完整裝備。</Chinese>
-            <Turkish>Seçilen tim üyesi bir mühimmat tazeleme noktasına yakın ise (mobil respawn veya FOB) üstündeki herşey doldurulup, yenilenecektir.</Turkish>
+            <Turkish>Seçilen tim üyesi herhangi bir mühimmat tazeleme noktasına yakın ise (mobil respawn veya FOB) üstündeki herşey yenileyecektir.</Turkish>
             <Portuguese>Se o membro selecionado estiver próximo o suficiente de um ponto de reabastecimento (respawn móvel ou FOB), irá adquirir um novo loadout.</Portuguese>
             <Korean>선택한 분대원을 배치하고, 현재 분대를 유지하면서 교체할 수 있습니다.</Korean>
         </Key>
@@ -1998,7 +1999,7 @@
             <Italian>Artigliere</Italian>
             <Chinesesimp>炮手</Chinesesimp>
             <Chinese>砲手</Chinese>
-            <Turkish>Silahçı</Turkish>
+            <Turkish>Taretçi</Turkish>
             <Portuguese>Atirador</Portuguese>
             <Korean>포수</Korean>
         </Key>
@@ -2011,7 +2012,7 @@
             <Italian>Comandante</Italian>
             <Chinesesimp>车长</Chinesesimp>
             <Chinese>車長</Chinese>
-            <Turkish>Komutan</Turkish>
+            <Turkish>Kumandan</Turkish>
             <Portuguese>Comandante</Portuguese>
             <Korean>지휘관</Korean>
         </Key>
@@ -2063,7 +2064,7 @@
             <Italian>Il membro della squadra selezionato è stato rifornito</Italian>
             <Chinesesimp>所选班组成员已补给。</Chinesesimp>
             <Chinese>所選的班級成員以補給。</Chinese>
-            <Turkish>Seçilen tim üyesi mühimmatı tazelendi.</Turkish>
+            <Turkish>Seçilen tim üyesinin mühimmatı yenilendi.</Turkish>
             <Portuguese>O membro selecionado do grupo se remuniciou.</Portuguese>
             <Korean>선택된 분대원이 재정비 하었습니다.</Korean>
         </Key>
@@ -2076,7 +2077,7 @@
             <Italian>Il membro della squadra non è sufficentemente vicino alla FOB o Respawn Mobile.</Italian>
             <Chinesesimp>所选班组成员距离前哨或机动复活点太远。</Chinesesimp>
             <Chinese>所選的班級成員距離前線基地或機動重生點太遠。</Chinese>
-            <Turkish>Seçilen tim üyesi FOB veya mobil spawn noktasına yakın değil.</Turkish>
+            <Turkish>Seçilen tim üyesi bir FOB veya mobil spawn noktasına yakın değil.</Turkish>
             <Portuguese>O membro selecionado do grupo não está próximo o suficiente de uma FOB ou respawn móvel.</Portuguese>
             <Korean>선택된 분대원이 전초기지 또는 재투입차량에 가까이 있지 않습니다. </Korean>
         </Key>
@@ -2089,7 +2090,7 @@
             <Italian>GESTIONE PERMESSI</Italian>
             <Chinesesimp>权限管理</Chinesesimp>
             <Chinese>權限管理</Chinese>
-            <Turkish>YETKİLERİ YÖNET</Turkish>
+            <Turkish>YETKİ YÖNETİMİ</Turkish>
             <Portuguese>GESTÃO DE PERMISSÕES</Portuguese>
             <Korean>사용 권한 설정</Korean>
         </Key>
@@ -2167,7 +2168,7 @@
             <Italian>Altro</Italian>
             <Chinesesimp>其它</Chinesesimp>
             <Chinese>其他</Chinese>
-            <Turkish>Diğerleri</Turkish>
+            <Turkish>Diğer</Turkish>
             <Portuguese>Outros</Portuguese>
             <Korean>기타</Korean>
         </Key>
@@ -2206,7 +2207,7 @@
             <Italian>Permetti al giocatore di entrare nei veicoli leggeri come guidatore e artigliere</Italian>
             <Chinesesimp>允许玩家进入轻型载具的驾驶和炮手位。</Chinesesimp>
             <Chinese>允許玩家進入輕型載具的駕駛與砲手位置。</Chinese>
-            <Turkish>Oyuncunun hafif araçları sürücü veya silahçı olarak kullanmasını sağlar</Turkish>
+            <Turkish>Oyuncunun hafif araçları sürücü veya taretçi olarak kullanmasına olanak verir.</Turkish>
             <Portuguese>Permite ao jogador operar veículos leves como condutor e atirador.</Portuguese>
             <Korean>플레이어가 전투 차량을 사용할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2219,7 +2220,7 @@
             <Italian>Permetti al giocatore di entrare nei veicoli blindati come guidatore e artigliere e comandante</Italian>
             <Chinesesimp>允许玩家进入装甲载具的驾驶、炮手和车长位。</Chinesesimp>
             <Chinese>允許玩家進入裝甲載具的駕駛、砲手、車長位置。</Chinese>
-            <Turkish>Oyuncunun zırhlı araçları sürücü, komutan veya silahçı olarak kullanmasını sağlar</Turkish>
+            <Turkish>Oyuncunun zırhlı araçları sürücü, komutan veya  taretçi olarak kullanmasına olanak verir.</Turkish>
             <Portuguese>Permite ao jogador operar veículos blindados como condutor, atirador e comandante.</Portuguese>
             <Korean>플레이어가 장갑 차량을 사용할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2232,7 +2233,7 @@
             <Italian>Permetti al giocatore di entrare negli aerei come guidatore e artigliere</Italian>
             <Chinesesimp>允许玩家进入空中载具的驾驶和炮手位。</Chinesesimp>
             <Chinese>允許玩家進入空中載具的駕駛和砲手位置。</Chinese>
-            <Turkish>Oyuncunun bütün hava araçlarını sürücü veya silahçı olarak kullanmasını sağlar</Turkish>
+            <Turkish>Oyuncunun bütün hava araçlarını pilot veya taretçi olarak kullanmasına olanak verir.</Turkish>
             <Portuguese>Permite ao jogador operar veículos aéreos como piloto e atirador.</Portuguese>
             <Korean>플레이어가 항공기를 사용할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2245,7 +2246,7 @@
             <Italian>Permetti al giocatore di Costruire</Italian>
             <Chinesesimp>允许玩家使用建造菜单</Chinesesimp>
             <Chinese>允許玩家使用建造選單。</Chinese>
-            <Turkish>Oyuncunun İNŞA menüsünü kullanmasını sağlar</Turkish>
+            <Turkish>Oyuncunun İNŞAAT menüsünü kullanmasını sağlar</Turkish>
             <Portuguese>Permite ao jogador utilizar o menu de CONTRUÇÃO.</Portuguese>
             <Korean>플레이어가 전초기지에서 건설메뉴를 사용할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2258,7 +2259,7 @@
             <Italian>Permetti al giocatore di Riciclare</Italian>
             <Chinesesimp>允许玩家使用回收功能。</Chinesesimp>
             <Chinese>允許玩家使用回收功能。</Chinese>
-            <Turkish>Oyuncunun GERİ DÖNÜŞTÜR butonunu kullanmasını sağlar</Turkish>
+            <Turkish>Oyuncunun geri dönüşüm yapabilmesini sağlar</Turkish>
             <Portuguese>Permite ao jogador utilizar a ação "RECICLAR".</Portuguese>
             <Korean>플레이어가 필요없는 장비를 재활용할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2271,7 +2272,7 @@
             <Italian>Permetti al giocatore di usare le altre funzioni come , catturare prigionieri,raddrizzare veicoli ecc.</Italian>
             <Chinesesimp>允许玩家使用其他功能：翻正、货箱控制、俘虏战俘，等等。</Chinesesimp>
             <Chinese>允許玩家使用其他功能，如：翻正、貨物控制（裝載、卸載、倉儲等）、俘虜戰俘，等等。</Chinese>
-            <Turkish>Oyuncunun şunları yapmasını sağlar: ters döndürme, kutuların yönetimi, esir yakalama, vb.</Turkish>
+            <Turkish>Oyuncunun araçları ters döndürme, sandıkları yönetme, esir yakalama, vb. hareketleri yapabilmesini sağlar.</Turkish>
             <Portuguese>Permite ao jogador executar outras ações: Desvirar veículo, manipular caixas de recursos, captura de prisioneiros, etc.</Portuguese>
             <Korean>플레이어가 차량을 바로잡거나, 군수물자를 조작하거나 포로를 생포하거나 문서를 획득할 수 있는 권한를 허가 합니다.</Korean>
         </Key>
@@ -2284,7 +2285,7 @@
             <Italian>Permetti tutto al giocatore.</Italian>
             <Chinesesimp>给予玩家所有权限。</Chinesesimp>
             <Chinese>給予玩家所有權限。</Chinese>
-            <Turkish>Bütün yetkileri verir.</Turkish>
+            <Turkish>Oyuncuya bütün yetkileri verir.</Turkish>
             <Portuguese>Libera todas as permissões para o jogador.</Portuguese>
             <Korean>플레이어에게 모든 권한을 허가 합니다.</Korean>
         </Key>
@@ -2297,7 +2298,7 @@
             <Italian>Rimuovi tutti i permessi al giocatore.</Italian>
             <Chinesesimp>移除玩家所有权限。</Chinesesimp>
             <Chinese>移除玩家所有權限。</Chinese>
-            <Turkish>Hiçbir yetkisi olmaz.</Turkish>
+            <Turkish>Oyuncudan bütün yetkileri alır.</Turkish>
             <Portuguese>Remove todas as permissões do jogador.</Portuguese>
             <Korean>플레이어의 허가된 권한 사항을 모두 제거합니다.</Korean>
         </Key>
@@ -2323,7 +2324,7 @@
             <Italian>Salva Modifiche</Italian>
             <Chinesesimp>保存更改</Chinesesimp>
             <Chinese>儲存變更</Chinese>
-            <Turkish>Değişiklikleri kaydet</Turkish>
+            <Turkish>Değişiklikleri Kaydet</Turkish>
             <Portuguese>Salvar alterações</Portuguese>
             <Korean>변경사항저장</Korean>
         </Key>
@@ -2349,7 +2350,7 @@
             <Italian>Non hai il permesso di usare veicoli leggeri</Italian>
             <Chinesesimp>指挥官没有给你使用轻型载具的权限。</Chinesesimp>
             <Chinese>指揮官並沒有提供你輕型載具機組員權限。</Chinese>
-            <Turkish>Hafif araçları kullanmak için yetkiniz yok.</Turkish>
+            <Turkish>Hafif araçları kullanmak için komutadan yetkiniz eksik.</Turkish>
             <Portuguese>Você não tem permissão do comandante para utilizar veículos leves.</Portuguese>
             <Korean>당신은 전투 차량을 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
         </Key>
@@ -2362,7 +2363,7 @@
             <Italian>Non hai il permesso di usare veicoli pesanti</Italian>
             <Chinesesimp>指挥官没有给你使用装甲载具的权限。</Chinesesimp>
             <Chinese>指揮官並沒有提供你裝甲載具機組員權限。</Chinese>
-            <Turkish>Zırhlı araçları kullanmanız için yetkiniz yok.</Turkish>
+            <Turkish>Zırhlı araçları kullanmak için komutadan yetkiniz eksik.</Turkish>
             <Portuguese>Você não tem permissão do comandante para utilizar veículos blindados.</Portuguese>
             <Korean>당신은 장갑 차량을 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
         </Key>
@@ -2375,7 +2376,7 @@
             <Italian>Non hai il permesso di usare veivoli</Italian>
             <Chinesesimp>指挥官没有给你使用空中载具的权限。</Chinesesimp>
             <Chinese>指揮官並沒有提供你空中載具機組員權限。</Chinese>
-            <Turkish>Hava araçlarını kullanmanız için yetkiniz yok.</Turkish>
+            <Turkish>Hava araçlarını kullanmak için komutadan yetkiniz eksik.</Turkish>
             <Portuguese>Você não tem permissão do comandante para utilizar veículos aéreos.</Portuguese>
             <Korean>당신은 항공기를 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
         </Key>
@@ -2388,7 +2389,7 @@
             <Italian>I permessi non sono settati.Il comandante deve entrare nel menu e attribuire i permessi ai giocatori.</Italian>
             <Chinesesimp>没有设定任何权限。指挥官必须为玩家设定可用功能和载具。另外，权限系统可以在任务选项中关闭。</Chinesesimp>
             <Chinese>沒有設定任何權限。指揮官必須為玩家指定可使用的功能與載具類型。另外，權限系統可以在任務選項中關閉。</Chinese>
-            <Turkish>Yetkiler ayarlanmadı. Komutan oyuncuların yapabilecekleri yetkileri ayarlamalı. Alternatif olarak, yetki sistemi görev ayarlarından kapatılabilir.</Turkish>
+            <Turkish>Yetkiler ayarlanmadı. Koumandan oyuncuların kullanabilicekleri araçlar için yetkileri ayarlamalı. Bunun yerine, bütün yetki sistemi de görev ayarlarından kapatılabilir.</Turkish>
             <Portuguese>Nenhuma permissão foi liberada. O comandante precisa alterar as permissões para permitir que o jogador execute ações e utiliza veículos. Alternativamente, o sistema de permissão pode ser desabilitado no menu de opções da missão.</Portuguese>
             <Korean>사용 권한를 허가 받지 못하였습니다. 관리자는 플레이어들이 장비를 사용할 수 있는 권한을 설정해야 합니다. 사용 권한 설정 메뉴에서 권한을 허가 하거나 제거할 수 있습니다.</Korean>
         </Key>
@@ -2414,7 +2415,7 @@
             <Italian>Modifica Equipaggiamneto</Italian>
             <Chinesesimp>编辑装备</Chinesesimp>
             <Chinese>編輯裝備</Chinese>
-            <Turkish>Ekipmanı düzenle</Turkish>
+            <Turkish>Loadout'u düzenle</Turkish>
             <Portuguese>Modificar equipamento</Portuguese>
             <Korean>장비 편집</Korean>
         </Key>
@@ -2427,7 +2428,7 @@
             <Italian>Prendi Equipaggiamento</Italian>
             <Chinesesimp>拿取装备</Chinesesimp>
             <Chinese>領取裝備</Chinese>
-            <Turkish>Ekipman al</Turkish>
+            <Turkish>Loadout'u al</Turkish>
             <Portuguese>Aceitar equipamento</Portuguese>
             <Korean>장비 착용</Korean>
         </Key>
@@ -2453,7 +2454,7 @@
             <Italian>-- SMONTA FOB --</Italian>
             <Chinesesimp>-- 收起前哨 --</Chinesesimp>
             <Chinese>-- 收起前線基地 --</Chinese>
-            <Turkish>-- FOB YENIDEN PAKETLE --</Turkish>
+            <Turkish>-- FOB'Yİ TOPLA --</Turkish>
             <Portuguese>-- MOBILIZAR FOB --</Portuguese>
             <Korean>-- 전초기지 재배치 --</Korean>
         </Key>
@@ -2466,7 +2467,7 @@
             <Italian>SMONTA FOB</Italian>
             <Chinesesimp>收起前哨</Chinesesimp>
             <Chinese>收起前線基地</Chinese>
-            <Turkish>FOB YENIDEN PAKETLE</Turkish>
+            <Turkish>FOB'Yİ TOPLA</Turkish>
             <Portuguese>MOBILIZAR FOB</Portuguese>
             <Korean>전초기지 재배치</Korean>
         </Key>
@@ -2479,7 +2480,7 @@
             <Italian>Sei sicuro di voler smontare la FOB?</Italian>
             <Chinesesimp>你确定要收起这个前哨？</Chinesesimp>
             <Chinese>你確定要收起這個前線基地？</Chinese>
-            <Turkish>Bu FOB'yi yeniden paketlemek istediğinize emin misiniz?</Turkish>
+            <Turkish>Bu FOB'yi toplamak istediğinizden emin misiniz?</Turkish>
             <Portuguese>Você tem certeza que quer mobilizar esta FOB?</Portuguese>
             <Korean>이 전초기지를 재배치하시겠습니까?</Korean>
         </Key>
@@ -2583,7 +2584,7 @@
             <Italian>Non puoi paracadutarti, hai un attesa di %1 minuti.</Italian>
             <Chinesesimp>无法进行伞降，剩余冷却时间为%1分钟。</Chinesesimp>
             <Chinese>無法進行跳傘，還需要 %1 分鐘的冷卻時間。</Chinese>
-            <Turkish>HALO jump yapılamıyor, %1 dakika beklemelisiniz.</Turkish>
+            <Turkish>HALO jump yapılamıyor, %1 dakika daha beklemelisiniz.</Turkish>
             <Portuguese>Não é possível executar o salto em queda livre, o tempo de espera é de %1 minuto(s).</Portuguese>
             <Korean>지금은 공수 낙하를 할 수 없습니다. %1 분 후 가능합니다.</Korean>
         </Key>
@@ -2596,7 +2597,7 @@
             <Italian>-- PARACADUTARSI</Italian>
             <Chinesesimp>-- 伞降</Chinesesimp>
             <Chinese>-- 跳傘</Chinese>
-            <Turkish>-- HALO Atla</Turkish>
+            <Turkish>-- HALO ATLAYIŞI YAP</Turkish>
             <Portuguese>-- Salto em queda livre</Portuguese>
             <Korean>-- 공수 낙하</Korean>
         </Key>
@@ -2619,21 +2620,25 @@
             <Russian>Очистить созданный инвентарь транспорта</Russian>
             <Italian>Cancella il carico del veicolo creato</Italian>
             <Portuguese>Remover carga do veículo requisitado</Portuguese>
+            <Turkish>Varolan araçları temizle</Turkish>
             <Chinese>移除載具上的物品</Chinese>
             <Korean>장비 배치(생산)시 화물칸 비우기.</Korean>
         </Key>
         <Key ID="STR_PARAM_DELAY_DESPAWN_MAX">
             <Original>Maximum sector deactivation delay (starts increasing after 5th activation minute)</Original>
             <German>Maximale Verzögerung zur Sektor Deaktivierung (Beginnt nach 5 Minuten seit Aktivierung)</German>
+            <Turkish>Sektör kapanma üst limiti (Sektörün açılmasından 5 dakika sonra artmaya başlar)</Turkish>
         </Key>
         <Key ID="STR_PARAM_LIMITEDZEUS">
             <Original>Limited Zeus interface</Original>
             <German>Eingeschränkte Zeus Funktionen</German>
             <Korean>제한된 제우스 인터페이스</Korean>
+            <Turkish>Sınırlı Zeus Arayüzü</Turkish>
         </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
             <German>Chance, dass Feinde in fahrunfähigen/beschädigten Fahrzeugen verbleiben</German>
+            <Turkish>Düşmanların hasarlı araçların içinde kalma şansı</Turkish>
         </Key>
         <Key ID="STR_DEPLOY_IN_PROGRESS">
             <Original>Deployment in progress...</Original>
@@ -2645,7 +2650,7 @@
             <Italian>In attesa del lancio ...</Italian>
             <Chinesesimp>正在部署中...</Chinesesimp>
             <Chinese>正在佈署中...</Chinese>
-            <Turkish>Atlanılıyor...</Turkish>
+            <Turkish>Atlama süreci devam ediyor...</Turkish>
             <Portuguese>Mobilização em andamento...</Portuguese>
         </Key>
         <Key ID="STR_WHITELIST_PARAM">
@@ -2657,7 +2662,7 @@
             <Italian>Usa la whitelist del comandante</Italian>
             <Chinesesimp>使用指挥官白名单</Chinesesimp>
             <Chinese>使用指揮官白名單</Chinese>
-            <Turkish>Komutanlar için beyaz liste kullan</Turkish>
+            <Turkish>Kumandan beyaz listesini kullan</Turkish>
             <Portuguese>Use a lista de permissões de comandantes</Portuguese>
             <Korean>지휘관 허용 목록을 사용합니다.</Korean>
         </Key>
@@ -2670,7 +2675,7 @@
             <Italian>Attiva - Solo se hai modificato la tua whitelist.sqf!</Italian>
             <Chinesesimp>开启 - 只有在设立了whitelist.sqf时才能用这个选项！</Chinesesimp>
             <Chinese>開啟 - 只有在設立了whitelist.sqf時才能使用這個選項！</Chinese>
-            <Turkish>Aktif - whitelist.sqf dosyası ayarlanmış olmalı.</Turkish>
+            <Turkish>Aktif - Yalnıza whitelist.sqf dosyasını değiştirdiyseniz kullanın!</Turkish>
             <Portuguese>Ativado - Apenas use se tiver modificado o arquivo whitelist.sqf!</Portuguese>
             <Korean>활성화 - whitelist.sqf 에 등록되어 있어야 합니다.</Korean>
         </Key>
@@ -2683,7 +2688,7 @@
             <Italian>Impossibile costruire: forze ostili nelle vicinanze</Italian>
             <Chinesesimp>无法建造：附近有敌军部队。</Chinesesimp>
             <Chinese>目前無法建造：附近有敵軍部隊。</Chinese>
-            <Turkish>Kurulamaz: Düşmanlar yakında.</Turkish>
+            <Turkish>İnşaat edilemiyor: Yakında düşmanlar var.</Turkish>
             <Portuguese>Não é possível construir: Forças hostis na proximidade.</Portuguese>
             <Korean>근처에 방해물이 있어 건설(설치)할 수 없습니다.</Korean>
         </Key>
@@ -2696,7 +2701,7 @@
             <Italian>Eliminazione di veicoli abbandonati fuori le FOB</Italian>
             <Chinesesimp>清理前哨外的废弃载具</Chinesesimp>
             <Chinese>清理前線基地外的廢棄載具</Chinese>
-            <Turkish>FOB dışındaki araçların temizlenmesi</Turkish>
+            <Turkish>FOB dışında bırakılan araçları temizle</Turkish>
             <Portuguese>Remover veículos abandonados fora das FOBs</Portuguese>
             <Korean>전초기지 외부의 유기된 장비 정리</Korean>
         </Key>
@@ -2709,7 +2714,7 @@
             <Italian>Attivato - eliminazione ogni ora</Italian>
             <Chinesesimp>开启 - 1小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 1 小時</Chinese>
-            <Turkish>Açık - 1 saat gecikmeli</Turkish>
+            <Turkish>Açık - 1 saatde bir</Turkish>
             <Portuguese>Ativado - 1 hora para remoção</Portuguese>
             <Korean>활성화 - 1시간후 사라짐</Korean>
         </Key>
@@ -2722,7 +2727,7 @@
             <Italian>Attivato - eliminazione ogni 2 ore</Italian>
             <Chinesesimp>开启 - 2小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 2 小時</Chinese>
-            <Turkish>Açık - 2 saat gecikmeli</Turkish>
+            <Turkish>Açık - 2 saatde bir</Turkish>
             <Portuguese>Ativado - 2 horas para remoção</Portuguese>
             <Korean>활성화 - 2시간후 사라짐</Korean>
         </Key>
@@ -2735,7 +2740,7 @@
             <Italian>Attivato - eliminazione ogni 4 ore</Italian>
             <Chinesesimp>开启 - 4小时延迟</Chinesesimp>
             <Chinese>開啟 - 延遲 4 小時</Chinese>
-            <Turkish>Açık - 4 saat gecikmeli</Turkish>
+            <Turkish>Açık - 4 saatde bir</Turkish>
             <Portuguese>Ativado - 4 horas para remoção</Portuguese>
             <Korean>활성화 - 4시간후 사라짐</Korean>
         </Key>
@@ -2761,7 +2766,7 @@
             <Italian>Non sei autorizzato ad usare lo slot comandante in questo server.</Italian>
             <Chinesesimp>你没有使用这个服务器指挥官栏位的权限。</Chinesesimp>
             <Chinese>你並沒有使用這個伺服器指揮官欄位的權限。</Chinese>
-            <Turkish>Komutan slotunu kullanmak için seçilmemişsiniz.</Turkish>
+            <Turkish>Bu sunucuda kumandan slotunu kullanmak için izniniz yok.</Turkish>
             <Portuguese>Você não está autorizado a usar o slot de comandante neste servidor.</Portuguese>
             <Korean>사령관 슬롯을 사용할 권한이 없습니다.</Korean>
         </Key>
@@ -2774,7 +2779,7 @@
             <Italian>Salva Equipaggiamento</Italian>
             <Chinesesimp>保存重生装备</Chinesesimp>
             <Chinese>設定為重生裝備</Chinese>
-            <Turkish>Respawn ekipmanını kaydet.</Turkish>
+            <Turkish>Respawn ekipmanını kaydet</Turkish>
             <Portuguese>Salvar equipamento para respawn.</Portuguese>
             <Korean>재생시 기본 장비로 설정</Korean>
         </Key>
@@ -2787,7 +2792,7 @@
             <Italian>Il tuo equipaggiamneto sarà ricaricato ad ogni respawn</Italian>
             <Chinesesimp>你的装备将在重生时恢复到现有状态。</Chinesesimp>
             <Chinese>重生後，你的裝備將恢復到現有狀態。</Chinese>
-            <Turkish>Şuanki ekipmanınız her doğduğunuzda yeniden verilecek.</Turkish>
+            <Turkish>Şuanki ekipmanınız her doğduğunuzda yeniden verilecek</Turkish>
             <Portuguese>Seu equipamento atual será restaurado em cada respawn.</Portuguese>
             <Korean>현재 설정한 장비로 재생됨.</Korean>
         </Key>
@@ -2800,7 +2805,7 @@
             <Italian>Carica da giocatore</Italian>
             <Chinesesimp>读取其他玩家装备</Chinesesimp>
             <Chinese>複製其他玩家裝備</Chinese>
-            <Turkish>Diğer oyuncudan al</Turkish>
+            <Turkish>Başka bir oyuncudan al</Turkish>
             <Portuguese>Copiar do jogador</Portuguese>
             <Korean>다른 플레이어 장비 가져오기</Korean>
         </Key>
@@ -2813,7 +2818,7 @@
             <Italian>Equipaggiamento traferito correttamente da %1</Italian>
             <Chinesesimp>成功从%1读取了装备</Chinesesimp>
             <Chinese>成功複製了 %1 的裝備</Chinese>
-            <Turkish>%1 den ekipman alındı.</Turkish>
+            <Turkish>%1 oyuncusundan ekipman alındı.</Turkish>
             <Portuguese>Transferência de loadout de %1 realizada.</Portuguese>
             <Korean>%1 의 장비, 이전 성공.</Korean>
         </Key>
@@ -2865,7 +2870,7 @@
             <Italian>Anemico</Italian>
             <Chinesesimp>可悲</Chinesesimp>
             <Chinese>可悲</Chinese>
-            <Turkish>Pasif</Turkish>
+            <Turkish>Kansız</Turkish>
             <Portuguese>Anêmica</Portuguese>
             <Korean>거의 없음</Korean>
         </Key>
@@ -2917,7 +2922,7 @@
             <Italian>Estremo</Italian>
             <Chinesesimp>噩梦</Chinesesimp>
             <Chinese>惡夢</Chinese>
-            <Turkish>Extreme</Turkish>
+            <Turkish>Uçta</Turkish>
             <Portuguese>Extrema</Portuguese>
             <Korean>매우강함</Korean>
         </Key>
@@ -2956,7 +2961,7 @@
             <Italian>Casuale senza pioggia</Italian>
             <Chinesesimp>随机但无雨</Chinesesimp>
             <Chinese>隨機但無雨</Chinese>
-            <Turkish>Rasgele ama yağmursuz</Turkish>
+            <Turkish>Rastgele (yağmursuz)</Turkish>
             <Portuguese>Aleatório sem chuva</Portuguese>
             <Korean>무작위로 비가 내림</Korean>
         </Key>
@@ -2969,7 +2974,7 @@
             <Italian>Casuale</Italian>
             <Chinesesimp>随机</Chinesesimp>
             <Chinese>完全隨機</Chinese>
-            <Turkish>Rasgele</Turkish>
+            <Turkish>Rastgele</Turkish>
             <Portuguese>Aleatório</Portuguese>
             <Korean>모든 기상현상이 무작위로 나타남</Korean>
         </Key>
@@ -2995,7 +3000,7 @@
             <Italian>Riparazione</Italian>
             <Chinesesimp>修理中</Chinesesimp>
             <Chinese>修理中</Chinese>
-            <Turkish>Tamir</Turkish>
+            <Turkish>Tamir ediliyor</Turkish>
             <Portuguese>Reparando</Portuguese>
             <Korean>수리중</Korean>
         </Key>
@@ -3008,7 +3013,7 @@
             <Italian>Riarmando 1%</Italian>
             <Chinesesimp>%1后开始补充弹药</Chinesesimp>
             <Chinese>%1 秒後開始補充彈藥</Chinese>
-            <Turkish>%1 saniye içinde yeniden dolduruluyor</Turkish>
+            <Turkish>%1 saniyeye yeniden dolmuş olucak</Turkish>
             <Portuguese>Remuniciando em %1s</Portuguese>
             <Korean>탄약보급중입니다. %1 초 남음.</Korean>
         </Key>
@@ -3021,7 +3026,7 @@
             <Italian>Rifornendo</Italian>
             <Chinesesimp>加油中</Chinesesimp>
             <Chinese>加油中</Chinese>
-            <Turkish>Yakıt koyuluyor</Turkish>
+            <Turkish>Yakıt dolduruluyor</Turkish>
             <Portuguese>Reabastecendo</Portuguese>
             <Korean>재급유중</Korean>
         </Key>
@@ -3034,7 +3039,7 @@
             <Italian>-- PREDI INTEL</Italian>
             <Chinesesimp>-- 拿取情报</Chinesesimp>
             <Chinese>-- 拿取情報</Chinese>
-            <Turkish>-- İSTİHBAHRAT AL</Turkish>
+            <Turkish>-- İSTİHBARAT AL</Turkish>
             <Portuguese>-- PEGAR INTELIGÊNCIA</Portuguese>
             <Korean>-- 정보 입수</Korean>
         </Key>
@@ -3047,7 +3052,7 @@
             <Italian>-- OBIETTIVI SECONDARI</Italian>
             <Chinesesimp>-- 次要目标</Chinesesimp>
             <Chinese>-- 次要目標</Chinese>
-            <Turkish>-- İKİNCİ GÖREVLER</Turkish>
+            <Turkish>-- İKİNCİL GÖREVLER</Turkish>
             <Portuguese>-- OBJETIVOS SECUNDÁRIOS</Portuguese>
             <Korean>-- 부차적인 작전목표</Korean>
         </Key>
@@ -3060,7 +3065,7 @@
             <Italian>OBIETTIVI SECONDARI</Italian>
             <Chinesesimp>次要目标</Chinesesimp>
             <Chinese>次要目標</Chinese>
-            <Turkish>İKİNCİ GÖREVLER</Turkish>
+            <Turkish>İKİNCİL GÖREVLER</Turkish>
             <Portuguese>OBJETIVOS SECUNDÁRIOS</Portuguese>
             <Korean>부차적인 작전목표</Korean>
         </Key>
@@ -3086,7 +3091,7 @@
             <Italian>Intel Attuale: %1</Italian>
             <Chinesesimp>当前情报：%1</Chinesesimp>
             <Chinese>目前情報：%1</Chinese>
-            <Turkish>Şuanki istihbahrat: %1</Turkish>
+            <Turkish>Şuanki istihbarat: %1</Turkish>
             <Portuguese>Inteligência atual: %1</Portuguese>
             <Korean>현재 정보: %1</Korean>
         </Key>
@@ -3099,7 +3104,7 @@
             <Italian>Punti intel insufficenti</Italian>
             <Chinesesimp>情报点不足</Chinesesimp>
             <Chinese>情報點不足</Chinese>
-            <Turkish>Yetersiz istihbahrat</Turkish>
+            <Turkish>Yetersiz istihbarat puanı</Turkish>
             <Portuguese>Pontos de inteligencia insuficientes</Portuguese>
             <Korean>정보 포인트가 부족합니다.</Korean>
         </Key>
@@ -3112,7 +3117,7 @@
             <Italian>Missione secondaria attualmente in progresso</Italian>
             <Chinesesimp>次要任务正在进行中</Chinesesimp>
             <Chinese>次要目標正在進行中</Chinese>
-            <Turkish>Başka bir görev zaten çalışıyor.</Turkish>
+            <Turkish>Şuan zaten ikincil bir görev var.</Turkish>
             <Portuguese>A missão secundária já está em andamento</Portuguese>
             <Korean>이미 진행중인 부차적인 작전목표가 있습니다.</Korean>
         </Key>
@@ -3125,7 +3130,7 @@
             <Italian>Forze ostili sono in avvicinamento su %1.</Italian>
             <Chinesesimp>敌军部队正在前往%1</Chinesesimp>
             <Chinese>敵軍正在前往 %1</Chinese>
-            <Turkish>Düşmanlar %1 'e gidiyor.'</Turkish>
+            <Turkish>Düşmanlar %1 sektörüne doğru gidiyor.</Turkish>
             <Portuguese>Forças hostis estão a caminho de %1.</Portuguese>
             <Korean>적군이 %1 로 향하고 있습니다.</Korean>
         </Key>
@@ -3177,7 +3182,7 @@
             <Italian>Convoglio OPFOR vicino %1.</Italian>
             <Chinesesimp>敌军车队接近%1</Chinesesimp>
             <Chinese>敵方車隊接近 %1</Chinese>
-            <Turkish>OPFOR Konvoyu %1 tarafında.</Turkish>
+            <Turkish>%1 civarında OPFOR Konvoyu.</Turkish>
             <Portuguese>Comboio inimigo nas proximidades de %1.</Portuguese>
             <Korean>%1 근처에 적군차량행렬!</Korean>
         </Key>
@@ -3229,7 +3234,7 @@
             <Italian>Caccia alla FOB</Italian>
             <Chinesesimp>狩猎前哨</Chinesesimp>
             <Chinese>獵殺前線基地</Chinese>
-            <Turkish>FOB Avı</Turkish>
+            <Turkish>FOB Avlama</Turkish>
             <Portuguese>Caça à FOB</Portuguese>
             <Korean>병참기지 기습</Korean>
         </Key>
@@ -3351,21 +3356,21 @@
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
             </Chinese>
             <Turkish>
-            &lt;t size='1.3' color='#ffa000'&gt;FOB AVI&lt;/t&gt;
+            &lt;t size='1.3' color='#ffa000'&gt;FOB AVLAMA&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            OPFOR kuvvetleri küçük çaplı bir işlemler yönetiyor. Bunları yoketmek onlara zarar verirken bir yandanda bizim yararımıza olacak.&lt;/t&gt;
+            OPFOR kuvvetlerinin cephenin gerisinde birkaç küçük lojistik üsleri var. Bu üsleri yok etmek erzak tedariklerini zorlaştırıp, bizim hareketlerimize cevap verme kapasitelerini azaltıcaktır.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            Sizin göreviniz oradaki varlıkları ve eşyaları yoketmek olacak(kamyonet ve mühimmatlar). Malesef istihbaharatımız tam bölge yerini verememekte. Yakın alanlara gidip kendiniz bulmalısınız.&lt;/t&gt;
+            Göreviniz, elinizdeki imkanlarla bu üslerdeki bütün erzak sandıklarını ve araçları yok etmek. Ne yazıkki elimizdeki istihbarat bu üslerin tam konumlarını saptamaya yetmiyor, üssü haritanızdaki kırmızı bölgede sizin bulmanız lazım.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1.15' color='#00a0ff'&gt;Maliyet: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
             &lt;t size='1.15' color='#ffa000'&gt;Ödül: OPFOR uyarı seviyesi %40 a düşecek.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
-        </Turkish>
-        <Portuguese>
+            </Turkish>
+            <Portuguese>
             &lt;t size='1.3' color='#ffa000'&gt;CAÇA À FOB&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3379,8 +3384,8 @@
             &lt;t size='1.15' color='#ffa000'&gt;Recompensa: Alerta das forças de oposição reduzidos em 40%.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
-        </Portuguese>
-         <Korean>
+            </Portuguese>
+            <Korean>
             &lt;t size='1.3' color='#ffa000'&gt;병참기지 기습&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3394,7 +3399,7 @@
             &lt;t size='1.15' color='#ffa000'&gt;보상: 경고 수준이 40% 감소합니다.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
-        </Korean>
+            </Korean>
         </Key>
         <Key ID="STR_SECONDARY_MISSION1">
             <Original>Convoy Hijack</Original>
@@ -3405,7 +3410,7 @@
             <Italian>Intercetta il Convoglio</Italian>
             <Chinesesimp>劫掠车队</Chinesesimp>
             <Chinese>攔截車隊</Chinese>
-            <Turkish>Konvoy baskını</Turkish>
+            <Turkish>Konvoy Kaçırma</Turkish>
             <Portuguese>Interceptação de comboio</Portuguese>
             <Korean>수송부대 무력화</Korean>
         </Key>
@@ -3510,8 +3515,8 @@
             &lt;t size='1.15' color='#ffa000'&gt;Seconda ricompensa: è possibile recuperare tutte le munizioni.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-        </Italian>
-        <Chinesesimp>
+            </Italian>
+            <Chinesesimp>
             &lt;t size='1.3' color='#ffa000'&gt;劫掠车队&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3527,8 +3532,8 @@
             &lt;t size='1.15' color='#ffa000'&gt;次要奖励：你能截获的所有弹药。&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-        </Chinesesimp>
-        <Chinese>
+            </Chinesesimp>
+            <Chinese>
             &lt;t size='1.3' color='#ffa000'&gt;攔截車隊&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3544,25 +3549,25 @@
             &lt;t size='1.15' color='#ffa000'&gt;次要獎勵：所有你能從車隊上所繳獲的彈藥資源。&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-        </Chinese>
-        <Turkish>
-            &lt;t size='1.3' color='#ffa000'&gt;CONVOY BASKINI&lt;/t&gt;
+            </Chinese>
+            <Turkish>
+            &lt;t size='1.3' color='#ffa000'&gt;KONVOY KAÇIRMA&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            OPFOR kuvvetleri kendi bölgelerine konvoy ile mühimmat desteği yapıyor. Sizin göreviniz bu konvoyu durdurup kurtarabildiğiniz mühimmatı kendinize almaktır.&lt;/t&gt;
+            OPFOR kuvvetleri savundukları bölgelere konvoylar ile mühimmat sağlıyor. Bu konvoyları durdurmak, hem o bölgelere olan desteği azaltır, hemde kendinize mühimmat sağlamanıza yardımcı olur.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            Göreviniz bu konvoyu ne pahasına olursa olsun durdurmak. Patlatmadığınız mühimmatı kendi bölgenize taşıyabilirsiniz. Konvoy haritada işaretlenecektir.&lt;/t&gt;
+            Göreviniz, elinizdeki imkanlarla OPFOR konvoyunu durdumak. Konvoyun hepsini yok edebilirsizin. Eğer mühimmat ele geçirmek isterseniz ise araçları kaçırabilirsiniz. Hedef haritanızda işaretlenecektir.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
-            &lt;t size='1.15' color='#00a0ff'&gt;Maliyeti: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
+            &lt;t size='1.15' color='#00a0ff'&gt;Maliyet: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Ödül: OPFOR uyarı seviyesi %15 kadar düşecektir.&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Ödül: OPFOR uyarı seviyesi %15 azalıcaktır.&lt;/t&gt;
             &lt;br/&gt;
             &lt;t size='1.15' color='#ffa000'&gt;Yan ödül: Kurtardığınız mühimmatlar.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-        </Turkish>
-        <Portuguese>
+            </Turkish>
+            <Portuguese>
             &lt;t size='1.3' color='#ffa000'&gt;INTERCEPTAÇÃO DE COMBOIO&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3579,7 +3584,7 @@
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
             </Portuguese>
-        <Korean>
+            <Korean>
             &lt;t size='1.3' color='#ffa000'&gt;수송부대 무력화&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
@@ -3595,7 +3600,7 @@
             &lt;t size='1.15' color='#ffa000'&gt;추가 보상: 수송부대에서 노획할 수 있는 모든 군수물자.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
-        </Korean>
+            </Korean>
         </Key>
 
         <!-- Added in v0.922 -->
@@ -3805,11 +3810,11 @@
             Dost bir keşif helikopterini düşman sahasında kaybettik. Helikopterin düşman kuvvetleri tarafından vurulduğuna inanıyoruz.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1'&gt;
-            Helikopter son görülen yerde düştüğünü biliyoruz. Göreviniz helikopter personelini bulup ve taşıdığı önemli istihbahratı getirmenizdir. Düşman kuvvetler onu önceden bulabilirler dikkatli olun ve saldırıya açık olun.&lt;/t&gt;
+            Helikopter son görülen yerde düştüğünü biliyoruz. Göreviniz helikopter personelini bulup ve taşıdığı önemli istihbaratı getirmenizdir. Düşman kuvvetler onu önceden bulabilirler dikkatli olun ve saldırıya açık olun.&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;
             &lt;br/&gt;
-            &lt;t size='1.15' color='#ffa000'&gt;Ödül: 20 istihbahrat puanı (Her yaşayan kişi için 10).&lt;/t&gt;
+            &lt;t size='1.15' color='#ffa000'&gt;Ödül: 20 istihbarat puanı (Her yaşayan kişi için 10).&lt;/t&gt;
             &lt;br/&gt;&lt;br/&gt;
             &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
         </Turkish>
