@@ -119,8 +119,6 @@ air_vehicles = [
 static_vehicles = [
     ["CUP_B_L111A1_BAF_DPM",25,40,0],                                   // L111A1 Machine Gun
     ["CUP_B_L111A1_MiniTripod_BAF_DPM",25,40,0],                        // L111A1 Minitripod
-    ["B_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
-    ["B_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["CUP_WV_B_CRAM",500,500,0],                                        // C-RAM
     ["CUP_WV_B_SS_Launcher",750,500,0],                                 // Mk-29 GMLS
     ["CUP_WV_B_RAM_Launcher",750,750,0],                                // Mk-49 GMLS
