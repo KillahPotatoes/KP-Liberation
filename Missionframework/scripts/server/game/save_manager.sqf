@@ -376,14 +376,16 @@ if (!isNil "greuh_liberation_savegame") then {
     if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
 
     {
-        _x params ["_minePos", "_dirAndUp", "_class"];
+        _x params ["_minePos", "_dirAndUp", "_class", "_known"];
 
         private _mine = createVehicle [_class, _minePos, [], 0];
         _mine setPosWorld _minePos;
         _mine setVectorDirAndUp _dirAndUp;
 
-        // reveal mine to player side
-        GRLIB_side_friendly revealMine _mine;
+        // reveal mine to player side if it was detected
+        if (_known) then {
+            GRLIB_side_friendly revealMine _mine;
+        };
 
     } forEach _allMines;
 
@@ -589,7 +591,8 @@ while {true} do {
         _allMines append (_fobMines apply {[
             getPosWorld _x,
             [vectorDirVisual _x, vectorUpVisual _x],
-            typeOf _x
+            typeOf _x,
+            _x mineDetectedBy GRLIB_side_friendly
         ]});
     } forEach GRLIB_all_fobs;
 
