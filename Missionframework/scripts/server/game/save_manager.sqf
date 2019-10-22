@@ -34,6 +34,8 @@ private _resourceStorages = [];
 private _stats = [];
 // Collection array for the enemy weights
 private _weights = [];
+// All mines around FOBs
+private _allMines = [];
 
 /*
     --- Globals ---
@@ -168,6 +170,7 @@ if (!isNil "greuh_liberation_savegame") then {
         KP_liberation_production                    = greuh_liberation_savegame select 16;
         KP_liberation_production_markers            = greuh_liberation_savegame select 17;
         resources_intel                             = greuh_liberation_savegame select 18;
+        _allMines                                   = greuh_liberation_savegame param [19, []];
 
         stats_ammo_produced                         = _stats select  0;
         stats_ammo_spent                            = _stats select  1;
@@ -372,6 +375,22 @@ if (!isNil "greuh_liberation_savegame") then {
 
     if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
 
+    {
+        _x params ["_minePos", "_dirAndUp", "_class", "_known"];
+
+        private _mine = createVehicle [_class, _minePos, [], 0];
+        _mine setPosWorld _minePos;
+        _mine setVectorDirAndUp _dirAndUp;
+
+        // reveal mine to player side if it was detected
+        if (_known) then {
+            GRLIB_side_friendly revealMine _mine;
+        };
+
+    } forEach _allMines;
+
+    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved mines placed";};
+
     // Spawn saved resource storages and their content
     {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
@@ -380,7 +399,7 @@ if (!isNil "greuh_liberation_savegame") then {
         if (_class in _classnamesToSave) then {
 
             // Create object without damage handling and simulation
-            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];;
+            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
             _object allowdamage false;
             _object enableSimulation false;
 
@@ -532,6 +551,7 @@ while {true} do {
 
     private _allObjects = [];
     private _allStorages = [];
+    private _allMines = [];
 
     // Get all blufor groups
     private _allBlueGroups = allGroups select {
@@ -565,6 +585,15 @@ while {true} do {
             // Add to save array
             _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
         } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 2)});
+
+        // Save all mines around FOB
+        private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 2, GRLIB_fob_range * 2];
+        _allMines append (_fobMines apply {[
+            getPosWorld _x,
+            [vectorDirVisual _x, vectorUpVisual _x],
+            typeOf _x,
+            _x mineDetectedBy GRLIB_side_friendly
+        ]});
     } forEach GRLIB_all_fobs;
 
     // Save all fetched objects
@@ -572,7 +601,7 @@ while {true} do {
         // Position data
         private _savedpos = getPosWorld _x;
         private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;;
+        private _savedvecup = vectorUpVisual _x;
         private _class = typeOf _x;
         private _hascrew = false;
 
@@ -592,9 +621,9 @@ while {true} do {
     // Save all storages and resources
     {
         // Position data
-        private _savedpos = getPosWorld _x;;
+        private _savedpos = getPosWorld _x;
         private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;;
+        private _savedvecup = vectorUpVisual _x;
         private _class = typeof _x;
 
         // Resource variables
@@ -686,7 +715,8 @@ while {true} do {
         KP_liberation_logistics,
         KP_liberation_production,
         KP_liberation_production_markers,
-        resources_intel
+        resources_intel,
+        _allMines
     ];
 
     // Write data in the severs profileNamespace
