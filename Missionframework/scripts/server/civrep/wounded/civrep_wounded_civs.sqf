@@ -14,8 +14,7 @@ for "_i" from 1 to _count do {
 	while {(surfaceIsWater _pos) || ((count ([_pos, 30] call F_getNearbyPlayers)) > 0)} do {
 		_pos = (markerPos _sector) getPos [(50 + (random 200)), (random 360)];
 	};
-	private _civ = _grp createUnit [(selectRandom civilians), _pos, [], 0, "NONE"];
-	_civ addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+	private _civ = [selectRandom civilians, _pos, _grp] call F_createManagedUnit;
 	_civ setDir (random 360);
 	{_civ disableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
 	removeAllItems _civ;

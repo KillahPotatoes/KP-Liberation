@@ -76,7 +76,9 @@ _waypoint setWaypointType "CYCLE";
 _waypoint setWaypointCompletionRadius 50;
 
 private _troops_group = createGroup [GRLIB_side_enemy, true];
-{_x createUnit [_spawnpos, _troops_group,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];} foreach (["army"] call F_getAdaptiveSquadComp);
+{
+	[_x, _spawnpos, _troops_group, "PRIVATE", 0.5] call F_createManagedUnit;
+} foreach (["army"] call F_getAdaptiveSquadComp);
 {_x moveInCargo _troop_vehicle} foreach (units _troops_group);
 
 private _convoy_marker = createMarkerLocal [ format [ "convoymarker%1", round time], getpos _transport_vehicle ];

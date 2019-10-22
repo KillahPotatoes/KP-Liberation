@@ -13,7 +13,7 @@ private _grp = createGroup [GRLIB_side_enemy, true];
 
 {
 	if ((count (units _grp)) < _corrected_amount) then {
-		_x createUnit [_spawnpos, _grp, "this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]"];
+		[_x, _spawnpos, _grp] call F_createManagedUnit;
 	};
 	sleep 0.1;
 } forEach _squadies_to_spawn;

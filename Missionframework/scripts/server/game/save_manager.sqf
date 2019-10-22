@@ -443,7 +443,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _x params ["_spawnPos", "_units"];
             private _grp = createGroup [GRLIB_side_friendly, true];
             {
-                _x createUnit [[_spawnPos, _grp] select (_forEachIndex > 0), _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}]'];
+                [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call F_createManagedUnit;
             } forEach _units;
         } forEach _aiGroups;
     } else {
@@ -455,7 +455,7 @@ if (!isNil "greuh_liberation_savegame") then {
                 private _unit = _x;
                 private _pos = [(_unit select 1) select 0, (_unit select 1) select 1, ((_unit select 1) select 2) + 0.2];
                 private _dir = _unit select 2;
-                (_unit select 0) createUnit [ _pos, _grp, 'this addMPEventHandler ["MPKilled", {_this spawn kill_manager}]'];
+                [(_unit select 0), _pos, _grp] call F_createManagedUnit;
                 private _nextobj = ((units _grp) select ((count (units _grp)) - 1));
                 _nextobj setDir _dir;
                 _nextobj setPosATL _pos;

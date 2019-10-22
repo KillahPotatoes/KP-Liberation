@@ -14,7 +14,7 @@ if ((alive _troup_transport) && (alive (driver _troup_transport))) then {
 	while {(count (waypoints _troupgrp)) != 0} do {deleteWaypoint ((waypoints _troupgrp) select 0);};
 
 	{
-		_x createUnit [_start_pos, _troupgrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+		[_x, _start_pos, _troupgrp, "PRIVATE", 0.5] call F_createManagedUnit;
 	} foreach (["army"] call F_getAdaptiveSquadComp);
 
 	{ _x moveInCargo _troup_transport } foreach (units _troupgrp);

@@ -1,13 +1,23 @@
-/* - Specific object init codes depending on classnames.
-Format = [Array of classnames as strings, Code to apply]
-_this is the reference to the object with the classname */
+/*
+    Specific object init codes depending on classnames.
+
+    Format = [Array of classnames as strings <ARRAY>, Code to apply <CODE>, Allow inheritance <BOOL>]
+        _this is the reference to the object with the classname
+
+    Example:
+        KPLIB_objectInits = [
+            [["O_soldierU_F"], {systemChat "CSAT urban soldier was spawned!"}],
+            [["CAManBase"], {systemChat format ["Some human named '%1' was spawned!", name _this]}, true]
+        ];
+];
+*/
 
 KPLIB_objectInits = [
     // Set KP logo on white flag
     [["Flag_White_F"], {_this setFlagTexture "res\flag_kp_co.paa";}],
 
     // Add helipads to zeus, as they can't be recycled after built
-    [["Land_HelipadSquare_F", "Land_HelipadCircle_F", "Land_HelipadRescue_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"], {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;}],
+    [["Helipad_base_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"], {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;}, true],
 
     // Add ViV action to FOB box
     [[FOB_box_typename], {_this call F_setFobMass; [_this] remoteExecCall ["F_setLoadableViV", 0, _this];}],
