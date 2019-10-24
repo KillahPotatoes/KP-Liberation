@@ -26,8 +26,8 @@ private _vests = missionNamespace getVariable ("KP_liberation_guerilla_vests_" +
 private _headgear = missionNamespace getVariable ("KP_liberation_guerilla_headgear_" + str _tier);
 
 while {(count (units _grp) < _amount)} do {
-	private _unit = _grp createUnit [(selectRandom KP_liberation_guerilla_units), _pos, [], 5, "NONE"];
-	_unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+	private _unit = [selectRandom KP_liberation_guerilla_units, _pos, _grp, "PRIVATE", 5] call F_createManagedUnit;
+
 	private _weapon = selectRandom _weapons;
 
 	removeAllWeapons _unit;
