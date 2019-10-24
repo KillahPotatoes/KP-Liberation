@@ -99,6 +99,7 @@ heavy_vehicles = [
 
 air_vehicles = [
     ["CUP_B_AH6M_USA",200,100,100],                                     // AH-6M
+    ["CUP_B_UH60M_Unarmed_FFV_MEV_US",300,0,200],                       // UH-60M MEDVAC (Unarmed/FFV)
     ["CUP_B_UH60M_US",300,25,200],                                      // UH-60M
     ["CUP_B_UH60M_FFV_US",300,50,200],                                  // UH-60M (FFV)
     ["CUP_B_MH60L_DAP_2x_US",400,250,225],                              // MH-60L DAP (2 Stores)
@@ -202,7 +203,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],

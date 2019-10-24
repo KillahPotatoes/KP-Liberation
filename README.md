@@ -190,9 +190,11 @@ class Missions
 ### 0.96.7 (TBD, Hotfix release)
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
+* Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
 * Fixed: Objects will be recyclable after being towed with Advanced Towing.
-* Fixed: Flickering/disappearing of mobile respawn 
+* Fixed: Flickering/disappearing of mobile respawn
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)

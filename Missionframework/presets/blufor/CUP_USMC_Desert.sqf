@@ -23,7 +23,7 @@ huron_typename = "CUP_B_CH53E_USMC";                                    // This 
 crewman_classname = "CUP_B_USMC_Crewman_FROG_DES";                      // This defines the crew for vehicles.
 pilot_classname = "CUP_B_USMC_Pilot";                                   // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "CUP_B_UH1Y_UNA_USMC";            // These are the little birds which spawn on the Freedom or at Chimera base.
-KP_liberation_boat_classname = "CUP_B_RHIB2Turret_USMC";                // These are the boats which spawn at the stern of the Freedom.
+KP_liberation_boat_classname = "CUP_B_Zodiac_USMC";                     // These are the boats which spawn at the stern of the Freedom.
 KP_liberation_truck_classname = "CUP_B_MTVR_USA";                       // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
@@ -77,7 +77,9 @@ light_vehicles = [
     ["CUP_B_RG31_M2_OD_USA",100,50,50],                                 // RG-31 M2
     ["CUP_B_RG31E_M2_OD_USA",100,50,50],                                // RG-31 Mk5E M2
     ["CUP_B_RG31_Mk19_OD_USA",100,80,50],                               // RG-31 Mk.19
-    ["CUP_B_MTVR_USA",125,0,75]                                         // MTVR
+    ["CUP_B_MTVR_USA",125,0,75],                                        // MTVR
+    ["CUP_B_RHIB_USMC",150,100,100],                                    // RHIB
+    ["CUP_B_RHIB2Turret_USMC",250,200,100]                              // RHIB (Mk19)
 ];
 
 heavy_vehicles = [
@@ -94,6 +96,7 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
+    ["CUP_B_UH1Y_MEV_USMC",200,0,100],                                  // UH-1Y Venom (MEDVAC)
     ["CUP_B_UH1Y_Gunship_Dynamic_USMC",200,100,100],                    // UH-1Y Venom (Gunship)
     ["CUP_B_MH60S_FFV_USMC",250,25,200],                                // MH-60S Seahawk (FFV)
     ["CUP_B_UH60S_USN",250,50,200],                                     // MH-60S Seahawk (M3M)
@@ -200,7 +203,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
@@ -216,6 +219,7 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_B_LCU1600_USMC",250,0,175],                                   // LCU-1610
     ["CUP_B_TowingTractor_USMC",50,0,75],                               // Towing Tractor
     ["CUP_B_MTVR_Repair_USA",425,0,75],                                 // MTVR Repair
     ["CUP_B_MTVR_Refuel_USA",125,0,375],                                // MTVR Refuel

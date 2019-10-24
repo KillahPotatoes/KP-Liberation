@@ -18,7 +18,7 @@ FOB_typename = "Land_Cargo_HQ_V3_F";                                    // This 
 FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 FOB_truck_typename = "CUP_B_MTVR_Repair_USA";                           // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "CUP_B_LR_Ambulance_GB_W";                     // This is the mobile respawn (and medical) truck.
+Respawn_truck_typename = "CUP_B_FV432_GB_Ambulance";                    // This is the mobile respawn (and medical) truck.
 huron_typename = "CUP_B_CH47F_GB";                                      // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "CUP_B_BAF_Soldier_Crew_DPM";                       // This defines the crew for vehicles.
 pilot_classname = "CUP_B_BAF_Soldier_Helipilot_DPM";                    // This defines the pilot for helicopters.
@@ -76,6 +76,7 @@ infantry_units = [
 
 light_vehicles = [
     ["CUP_B_LR_Transport_GB_W",75,0,50],                                // Land Rover 110 (Transport) Woodland
+    ["CUP_B_LR_Ambulance_GB_W",75,0,50],                                // Land Rover 110 (Ambulance) Woodland
     ["CUP_B_LR_MG_GB_W",75,50,50],                                      // Land Rover 110 (M2) Woodland
     ["CUP_B_LR_Special_M2_GB_W",100,80,50],                             // Land Rover 110 (M2 Special) Woodland
     ["CUP_B_LR_Special_GMG_GB_W",100,100,50],                           // Land Rover 110 (GMG Special) Woodland
@@ -93,6 +94,7 @@ light_vehicles = [
 heavy_vehicles = [
     ["CUP_B_FV432_Bulldog_GB_W",300,100,150],                           // FV432 Bulldog M240 [Woodland]
     ["CUP_B_FV432_Bulldog_GB_W_RWS",300,250,150],                       // FV432 Bulldog M2 RWS [Woodland]
+    ["CUP_B_FV432_Mortar",350,500,150],                                 // FV432 Mortar
     ["CUP_B_MCV80_GB_W",300,450,275],                                   // MCV-80 Warrior (Woodland)
     ["CUP_B_MCV80_GB_W_SLAT",400,450,275],                              // MCV-80 Warrior (SLAT - Woodland)
     ["CUP_B_FV510_GB_W",350,550,275],                                   // FV510 Warrior (Woodland)
@@ -117,8 +119,6 @@ air_vehicles = [
 static_vehicles = [
     ["CUP_B_L111A1_BAF_DPM",25,40,0],                                   // L111A1 Machine Gun
     ["CUP_B_L111A1_MiniTripod_BAF_DPM",25,40,0],                        // L111A1 Minitripod
-    ["B_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
-    ["B_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["CUP_WV_B_CRAM",500,500,0],                                        // C-RAM
     ["CUP_WV_B_SS_Launcher",750,500,0],                                 // Mk-29 GMLS
     ["CUP_WV_B_RAM_Launcher",750,750,0],                                // Mk-49 GMLS
@@ -206,7 +206,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
@@ -222,6 +222,7 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_B_MK10_GB",100,0,50],                                         // LCU Mk.10
     ["CUP_B_TowingTractor_GB",50,0,25],                                 // Towing Tractor
     ["CUP_B_MTVR_Repair_USMC",425,0,75],                                // MTVR Repair
     ["CUP_B_MTVR_Refuel_USMC",125,0,375],                               // MTVR Refuel
@@ -324,6 +325,7 @@ blufor_squad_para = [
 */
 elite_vehicles = [
     "CUP_B_MCV80_GB_W_SLAT",                                            // MCV-80 Warrior (SLAT - Woodland)
+    "CUP_B_FV432_Mortar",                                               // FV432 Mortar
     "CUP_B_FV510_GB_W",                                                 // FV510 Warrior (Woodland)
     "CUP_B_FV510_GB_W_SLAT",                                            // FV510 Warrior (SLAT - Woodland)
     "CUP_B_Challenger2_Woodland_BAF",                                   // FV4034 Challenger 2 (Woodland)
