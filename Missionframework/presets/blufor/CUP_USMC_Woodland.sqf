@@ -5,7 +5,9 @@
     - CUP Units
 
     Optional Mods:
-    - None
+    - USAF Main Pack
+    - USAF Fighters Pack
+    - USAF Utility Pack
 */
 
 /*
@@ -101,10 +103,22 @@ air_vehicles = [
     ["CUP_B_UH1Y_Gunship_Dynamic_USMC",200,100,100],                    // UH-1Y Venom (Gunship)
     ["CUP_B_MH60S_FFV_USMC",250,25,200],                                // MH-60S Seahawk (FFV)
     ["CUP_B_UH60S_USN",250,50,200],                                     // MH-60S Seahawk (M3M)
+    ["USAF_C130J",200,0,250],                                           // C-130J Super Hercules
+    ["USAF_C130J_Cargo",200,0,250],                                     // C-130J Super Hercules (Cargo)
+    ["USAF_C17",500,0,400],                                             // C-17 Globemaster III
+    ["usaf_kc135",600,0,2500],                                          // KC-135 Stratotanker
     ["CUP_B_AH1Z_Dynamic_USMC",500,500,200],                            // AH-1Z
     ["CUP_B_MH60L_DAP_2x_USN",450,400,250],                             // MH-60S Knighthawk (ESSS x2)
+    ["USAF_RQ4A",500,0,200],                                            // RQ-4A Global Hawk
     ["CUP_B_USMC_DYN_MQ9",500,500,200],                                 // MQ-9 Reaper
     ["CUP_B_AV8B_DYN_USMC",1000,800,400],                               // AV-8B Harrier II
+    ["USAF_A10",1500,1000,400],                                         // A-10C Thunderbolt II
+    ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
+    ["USAF_F22_EWP_AA",1800,2000,500],                                  // F-22A Raptor (EWP-AA)
+    ["USAF_F22_EWP_AG",1800,2000,500],                                  // F-22A Raptor (EWP-AG)
+    ["USAF_F22_Heavy",1800,2000,500],                                   // F-22A Raptor (Heavy)
+    ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
+    ["USAF_F35A",2250,2000,750],                                        // F-35A Lightning II (Heavy)
     ["CUP_B_F35B_Stealth_USMC",1000,1200,400],                          // F-35B Lightning II (Stealth)
     ["CUP_B_F35B_USMC",1500,1750,450],                                  // F-35B Lightning II
     ["CUP_B_MV22_USMC_RAMPGUN",750,100,500],                            // MV-22B Osprey (Ramp Gun)
@@ -220,6 +234,19 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["USAF_missileCart_W_AGM114",50,150,0],                             // Missile Cart (AGM-114)
+    ["USAF_missileCart_AGMMix",50,150,0],                               // Missile Cart (AGM-65 Mix)
+    ["USAF_missileCart_AGM1",50,150,0],                                 // Missile Cart (AGM-65D)
+    ["USAF_missileCart_AGM2",50,150,0],                                 // Missile Cart (AGM-65E)
+    ["USAF_missileCart_AGM3",50,150,0],                                 // Missile Cart (AGM-65K)
+    ["USAF_missileCart_AA1",50,150,0],                                  // Missile Cart (AIM-9M/AIM-120)
+    ["USAF_missileCart_AA2",50,150,0],                                  // Missile Cart (AIM-9X/AIM-120)
+    ["USAF_missileCart_GBU12_green",50,150,0],                          // Missile Cart (GBU12 Green)
+    ["USAF_missileCart_GBU12_maritime",50,150,0],                       // Missile Cart (GBU12 Maritime)
+    ["USAF_missileCart_GBU12",50,150,0],                                // Missile Cart (GBU12)
+    ["USAF_missileCart_Gbu31",50,150,0],                                // Missile Cart (GBU31)
+    ["USAF_missileCart_GBU39",50,150,0],                                // Missile Cart (GBU39)
+    ["USAF_missileCart_Mk82",50,150,0],                                 // Missile Cart (Mk82)
     ["CUP_B_LCU1600_USMC",250,0,175],                                   // LCU-1610
     ["CUP_B_TowingTractor_USMC",50,0,75],                               // Towing Tractor
     ["CUP_B_MTVR_Repair_USMC",425,0,75],                                // MTVR Repair
@@ -328,6 +355,13 @@ elite_vehicles = [
     "CUP_WV_B_RAM_Launcher",                                            // Mk-49 GMLS
     "CUP_B_F35B_Stealth_USMC",                                          // F-35B Lightning II (Stealth)
     "CUP_B_AV8B_DYN_USMC",                                              // AV-8B Harrier II
+    "USAF_A10",                                                         // A-10C Thunderbolt II
+    "USAF_F22",                                                         // F-22A Raptor
+    "USAF_F22_EWP_AA",                                                  // F-22A Raptor (EWP-AA)
+    "USAF_F22_EWP_AG",                                                  // F-22A Raptor (EWP-AG)
+    "USAF_F22_Heavy",                                                   // F-22A Raptor (Heavy)
+    "USAF_F35A_STEALTH",                                                // F-35A Lightning II
+    "USAF_F35A",                                                        // F-35A Lightning II (Heavy)
     "CUP_B_AH1Z_Dynamic_USMC",                                          // AH-1Z
     "CUP_B_MH60L_DAP_2x_USN",                                           // MH-60S Knighthawk (ESSS x2)
     "CUP_B_M1A1_Woodland_USMC",                                         // M1A1 Abrams (Woodland)
