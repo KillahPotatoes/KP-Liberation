@@ -149,11 +149,11 @@ air_vehicles = [
     ["JS_JC_FA18E",1500,1750,450],                                      // F/A-18 E Super Hornet
     ["JS_JC_FA18F",1500,1750,450],                                      // F/A-18 F Super Hornet
     ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
-    ["USAF_F22_EWP_AA",1800,2000,500],                                  // F-22A Raptor (EWP-AA)
-    ["USAF_F22_EWP_AG",1800,2000,500],                                  // F-22A Raptor (EWP-AG)
-    ["USAF_F22_Heavy",1800,2000,500],                                   // F-22A Raptor (Heavy)
+    ["USAF_F22_EWP_AA",1800,2100,500],                                  // F-22A Raptor (EWP-AA)
+    ["USAF_F22_EWP_AG",1800,2100,500],                                  // F-22A Raptor (EWP-AG)
+    ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
     ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
-    ["USAF_F35A",2250,2000,750],                                        // F-35A Lightning II (Heavy)
+    ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
     ["B_Plane_Fighter_01_F",1500,1750,450],                             // F/A-181 Black Wasp II
     ["B_Plane_Fighter_01_Stealth_F",1500,1750,450],                     // F/A-181 Black Wasp II (Stealth)
     ["B_T_VTOL_01_armed_F",750,1500,500],                               // V-44 X Blackfish (Armed)

@@ -118,11 +118,11 @@ air_vehicles = [
     ["CUP_B_A10_DYN_USA",1000,800,400],                                 // A-10A Thunderbolt II
     ["USAF_A10",1500,1000,400],                                         // A-10C Thunderbolt II
     ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
-    ["USAF_F22_EWP_AA",1800,2000,500],                                  // F-22A Raptor (EWP-AA)
-    ["USAF_F22_EWP_AG",1800,2000,500],                                  // F-22A Raptor (EWP-AG)
-    ["USAF_F22_Heavy",1800,2000,500],                                   // F-22A Raptor (Heavy)
+    ["USAF_F22_EWP_AA",1800,2100,500],                                  // F-22A Raptor (EWP-AA)
+    ["USAF_F22_EWP_AG",1800,2100,500],                                  // F-22A Raptor (EWP-AG)
+    ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
     ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
-    ["USAF_F35A",2250,2000,750],                                        // F-35A Lightning II (Heavy)
+    ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
     ["CUP_B_AH6X_USA",300,0,100]                                        // AH-6X Littlebird ULB
 ];
 

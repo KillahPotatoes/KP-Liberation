@@ -114,13 +114,13 @@ air_vehicles = [
     ["CUP_B_AV8B_DYN_USMC",1000,800,400],                               // AV-8B Harrier II
     ["USAF_A10",1500,1000,400],                                         // A-10C Thunderbolt II
     ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
-    ["USAF_F22_EWP_AA",1800,2000,500],                                  // F-22A Raptor (EWP-AA)
-    ["USAF_F22_EWP_AG",1800,2000,500],                                  // F-22A Raptor (EWP-AG)
-    ["USAF_F22_Heavy",1800,2000,500],                                   // F-22A Raptor (Heavy)
+    ["USAF_F22_EWP_AA",1800,2100,500],                                  // F-22A Raptor (EWP-AA)
+    ["USAF_F22_EWP_AG",1800,2100,500],                                  // F-22A Raptor (EWP-AG)
+    ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
     ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
-    ["USAF_F35A",2250,2000,750],                                        // F-35A Lightning II (Heavy)
-    ["CUP_B_F35B_Stealth_USMC",1000,1200,400],                          // F-35B Lightning II (Stealth)
-    ["CUP_B_F35B_USMC",1500,1750,450],                                  // F-35B Lightning II
+    ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
+    ["CUP_B_F35B_Stealth_USMC",2500,2000,750],                          // F-35B Lightning II (Stealth)
+    ["CUP_B_F35B_USMC",2500,2250,750],                                  // F-35B Lightning II
     ["CUP_B_MV22_USMC_RAMPGUN",750,100,500],                            // MV-22B Osprey (Ramp Gun)
     ["CUP_B_MV22_USMC",750,0,500],                                      // MV-22B Osprey
     ["CUP_B_MV22_VIV_USMC",750,0,500]                                   // MV-22B Osprey (VIV)
