@@ -5901,6 +5901,10 @@
             <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
             <Korean>민간인 %가 사망하였다!</Korean>
         </Key>
+        <Key ID="STR_CR_KILLMSG_GAS">
+            <Original>WAR CRIME! A civilian named %1 was killed by poison gas!</Original>
+            <German>KRIEGSVERBRECHEN! Ein Zivilist mit Namen %1 wurde durch Giftgas getötet!</German>
+        </Key>
         <Key ID="STR_CR_VEHICLEMSG">
             <Original>A civilian's vehicle was seized!</Original>
             <German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
