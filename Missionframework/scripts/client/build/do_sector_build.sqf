@@ -7,7 +7,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 	build_confirmed = 1;
 	build_invalid = 0;
 	KP_vector = true;
-	
+
 	_sectorpos = getMarkerPos ([GRLIB_fob_range] call F_getNearestSector);
 
 	_idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3;},"",-725,false,true,"","build_confirmed == 1"];
@@ -36,7 +36,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 		if ((surfaceIsWater _truepos) || (surfaceIsWater getpos player) || ((_truepos distance _sectorpos) > GRLIB_fob_range)) then {
 			_building setpos _ghost_spot;
 			build_invalid = 1;
-			
+
 			if(((surfaceIsWater _truepos) || (surfaceIsWater getpos player))) then {
 				GRLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
 			};
@@ -54,12 +54,18 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 				_building setVectorUp surfaceNormal position _building;
 			};
 
+            if (build_invalid == 1) then {
+                GRLIB_ui_notif = "";
+            };
+
 			build_invalid = 0;
 		};
 
 		sleep 0.05;
 	};
-	
+
+    GRLIB_ui_notif = "";
+
 	if (!alive player || build_confirmed == 3) then {
 		deleteVehicle _building;
 	};
@@ -90,7 +96,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 	player removeAction _idactcancel;
 	player removeAction _idactplace;
 	player removeAction _idactvector;
-	
+
 	remoteExec ["check_sector_ress_remote_call",2];
 
 	build_confirmed = 0;

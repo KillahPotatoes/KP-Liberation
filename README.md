@@ -197,7 +197,8 @@ class Missions
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
 * Fixed: Objects will be recyclable after being towed with Advanced Towing.
-* Fixed: Flickering/disappearing of mobile respawn
+* Fixed: Flickering/disappearing of mobile respawn.
+* Fixed: Error message when trying to build a sector storage on water didn't vanished.
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
