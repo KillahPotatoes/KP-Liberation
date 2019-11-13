@@ -192,6 +192,7 @@ class Missions
 * Added: Inheritance support to object inits. (3rd array element, bool)
 * Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Save interval setting in config file.
+* Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)

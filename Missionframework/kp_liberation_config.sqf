@@ -239,6 +239,18 @@ KP_liberation_battlegroup_clearance = [
     "song_bin_tanh"
 ];
 
+/* Slot independent commander action access.
+The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
+even if they are not in the commander slot. */
+KP_liberation_commander_actions = [
+    /*
+    Example:
+    "1324678",
+    "5468711",
+    "2156347"
+    */
+];
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
