@@ -1,6 +1,4 @@
-_save_interval = 20;
-
-while { GRLIB_endgame == 0 } do {
-	sleep _save_interval;
-	doSaveTrigger = true;
+while {GRLIB_endgame == 0} do {
+    sleep KP_liberation_save_interval;
+    doSaveTrigger = true;
 };

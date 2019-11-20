@@ -173,6 +173,8 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
+KP_liberation_save_interval = 20;                                       // Interval in seconds for automatic save.
+
 GRLIB_side_friendly = WEST;                                             // Friendly side.
 GRLIB_side_enemy = EAST;                                                // Enemy side.
 GRLIB_side_resistance = RESISTANCE;                                     // Resistance side.
@@ -235,6 +237,18 @@ KP_liberation_resistance_ambush_chance = 25;                            // Chanc
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KP_liberation_battlegroup_clearance = [
     "song_bin_tanh"
+];
+
+/* Slot independent commander action access.
+The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
+even if they are not in the commander slot. */
+KP_liberation_commander_actions = [
+    /*
+    Example:
+    "1324678",
+    "5468711",
+    "2156347"
+    */
 ];
 
 /* - Default arsenal blacklist method.
