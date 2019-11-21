@@ -57,7 +57,7 @@ while{true} do
 		sleep 5;
 
 		private _myPass = call compile preprocessFileLineNumbers "\userconfig\restart\myPass.hpp";
-		private _shutdownSuccess = _myPass serverCommand (["#restart", "#restartserver"] select {(productVersion select 6) isEqualTo "Windows"});
+		private _shutdownSuccess = _myPass serverCommand (["#restart", "#restartserver"] select ((productVersion select 6) isEqualTo "Windows"));
 
 		if(_shutdownSuccess) then
 		{
