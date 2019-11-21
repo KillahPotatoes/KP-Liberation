@@ -187,13 +187,15 @@ class Missions
 
 ## Changelog
 
-### 0.96.7 (TBD, Hotfix release)
+### 0.96.7 (TBD)
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
 * Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Save interval setting in config file.
 * Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
+* Added: Applied mission parameters are logged in server rpt.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
+* Tweaked: Default blacklist now only holds the static and tent backpacks.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
