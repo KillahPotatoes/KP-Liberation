@@ -196,6 +196,7 @@ class Missions
 * Added: Applied mission parameters are logged in server rpt.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Tweaked: Default blacklist now only holds the static and tent backpacks.
+* Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
