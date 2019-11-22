@@ -8,7 +8,7 @@ sleep 1;
 private _transGrp = (group (driver _transVeh));
 private _start_pos = getpos _transVeh;
 private _objPos =  ([getpos _transVeh] call F_getNearestBluforObjective) select 0;
-private _unload_distance = 800;
+private _unload_distance = 500;
 private _crewcount = count crew _transVeh;
 
 waitUntil {
