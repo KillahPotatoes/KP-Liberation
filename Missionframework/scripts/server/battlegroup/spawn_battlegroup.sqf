@@ -44,8 +44,12 @@ if !(_spawn_marker isEqualTo "") then {
         [_nextgrp] spawn battlegroup_ai;
         _bg_groups pushback _nextgrp;
 
-        if ((_x in opfor_troup_transports) &&  ([] call F_opforCap < GRLIB_battlegroup_cap)) then {
-            [_vehicle] spawn troup_transport;
+        if ((_x in opfor_troup_transports) && ([] call F_opforCap < GRLIB_battlegroup_cap)) then {
+            if (_vehicle isKindOf "Air") then {
+                [_spawn_marker, _vehicle] spawn send_paratroopers;
+            } else {
+                [_vehicle] spawn troup_transport;
+            };
         };
 
         _battlegroup_size = _battlegroup_size + 1;
