@@ -46,7 +46,7 @@ if !(_spawn_marker isEqualTo "") then {
 
         if ((_x in opfor_troup_transports) && ([] call F_opforCap < GRLIB_battlegroup_cap)) then {
             if (_vehicle isKindOf "Air") then {
-                [_spawn_marker, _vehicle] spawn send_paratroopers;
+                [([markerPos _spawn_marker] call F_getNearestBluforObjective) select 0, _vehicle] spawn send_paratroopers;
             } else {
                 [_vehicle] spawn troup_transport;
             };
