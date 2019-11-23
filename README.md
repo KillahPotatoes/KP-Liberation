@@ -203,6 +203,7 @@ class Missions
 * Fixed: Objects will be recyclable after being towed with Advanced Towing.
 * Fixed: Flickering/disappearing of mobile respawn.
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
+* Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
