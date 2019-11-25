@@ -14,7 +14,7 @@ private _permissibleVehicles = [
 private _permissionIdx = _permissibleVehicles findIf {_vehicleClass in (_x select 0)};
 if (_permissionIdx isEqualTo -1) exitWith {};
 
-if !([player, _permissionIdx] call F_fetchPermission) exitWith {
+if !([_permissionIdx] call KPLIB_fnc_hasPermission) exitWith {
     moveOut player;
     hint localize (_permissibleVehicles select _permissionIdx select 1);
 };

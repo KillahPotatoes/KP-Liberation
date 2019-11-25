@@ -14,7 +14,7 @@ while {GRLIB_endgame == 0} do {
 
 		if (_opforcount < GRLIB_sector_cap) then {
 
-			if (([getmarkerpos _nextsector, [_opforcount] call F_getCorrectedSectorRange, GRLIB_side_friendly] call F_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
+			if (([getmarkerpos _nextsector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call F_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
 
 				_hc = [] call F_lessLoadedHC;
 
@@ -35,7 +35,7 @@ while {GRLIB_endgame == 0} do {
 		};
 		sleep 0.25;
 	} forEach (sectors_allSectors - blufor_sectors);
-	
+
 	if (KP_liberation_sectorspawn_debug > 0) then {
 		_timer = _timer + 1;
 		if ((_timer % 5) == 0) then {

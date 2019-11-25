@@ -5,9 +5,9 @@ params [
 if (GRLIB_endgame == 1) exitWith {};
 
 if !(_spawn_marker isEqualTo "") then {
-    _spawn_marker = [2000, 10000, false, _spawn_marker] call F_findOpforSpawnPoint;
+    _spawn_marker = [2000, 10000, false, _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
 } else {
-    _spawn_marker = [2000, 10000, false] call F_findOpforSpawnPoint;
+    _spawn_marker = [2000, 10000, false] call KPLIB_fnc_getOpforSpawnPoint;
 };
 
 if !(_spawn_marker isEqualTo "") then {
@@ -19,7 +19,7 @@ if !(_spawn_marker isEqualTo "") then {
     private _vehicle_pool = [opfor_battlegroup_vehicles, opfor_battlegroup_vehicles_low_intensity] select (combat_readiness < 50);
     private _selected_opfor_battlegroup = [];
 
-    private _target_size = GRLIB_battlegroup_size * ([] call F_adaptiveOpforFactor) * (sqrt GRLIB_csat_aggressivity);
+    private _target_size = GRLIB_battlegroup_size * ([] call KPLIB_fnc_getOpforFactor) * (sqrt GRLIB_csat_aggressivity);
     if (_target_size >= 16) then {_target_size = 16;};
     if (combat_readiness < 60) then {_target_size = round (_target_size * 0.65);};
 

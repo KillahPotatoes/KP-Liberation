@@ -330,7 +330,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
             // Add blufor crew, if it had crew or is a UAV
             if ((unitIsUAV _object) || _hascrew) then {
-                [_object] call F_forceBluforCrew;
+                [_object] call KPLIB_fnc_forceBluforCrew;
             };
 
             // Apply kill manager handling, if not excluded
@@ -340,7 +340,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
             // Set captured variable, if it's an OPFOR vehicle
             if (_class in all_hostile_classnames) then {
-                _object setVariable ["GRLIB_captured", 1, true];
+                _object setVariable ["GRLIB_captured", true, true];
             };
 
             // Prevent damage for the FOB building
@@ -496,7 +496,7 @@ publicVariable "KP_liberation_clearances";
 GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call F_checkClass};
+GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;

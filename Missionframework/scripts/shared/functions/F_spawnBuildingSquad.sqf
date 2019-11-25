@@ -6,7 +6,7 @@ private _infsquad_classnames = [];
 if (_infsquad == "militia") then {
 	_infsquad_classnames = militia_squad;
 } else {
-	_infsquad_classnames = (["army"] call F_getAdaptiveSquadComp);
+	_infsquad_classnames = ([] call KPLIB_fnc_getSquadComp);
 };
 
 if (_building_ai_max > floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)) then {_building_ai_max = floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)};

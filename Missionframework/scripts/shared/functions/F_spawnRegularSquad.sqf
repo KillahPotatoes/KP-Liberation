@@ -8,7 +8,7 @@ while {_spawnpos distance zeropos < 1000} do {
 	if (count _spawnpos == 0) then {_spawnpos = zeropos;};
 };
 
-private _corrected_amount = round ((count _squadies_to_spawn) * ([] call F_adaptiveOpforFactor));
+private _corrected_amount = round ((count _squadies_to_spawn) * ([] call KPLIB_fnc_getOpforFactor));
 private _grp = createGroup [GRLIB_side_enemy, true];
 
 {

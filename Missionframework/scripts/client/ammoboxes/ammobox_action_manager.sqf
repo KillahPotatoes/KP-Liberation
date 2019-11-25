@@ -12,7 +12,7 @@ _managed_areas = [];
 
 while {true} do {
 
-	if ([player, 5] call F_fetchPermission) then {
+	if ([5] call KPLIB_fnc_hasPermission) then {
 
 		_nearammoboxes = ((getpos player) nearEntities [KP_liberation_crates,10]);
 		_neartransporttrucks = ((getpos player) nearEntities [ammobox_transports_typenames,10]);
@@ -77,7 +77,7 @@ while {true} do {
 				_next_box removeAction (_next_box getVariable ["KP_crate_push_action", -1]);
 			}
 		} foreach _managed_boxes;
-		
+
 		_checked_areas = [];
 
 		{

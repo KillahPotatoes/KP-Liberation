@@ -1,7 +1,7 @@
 private _convoy_destinations_markers = [];
 private _load_box_fnc = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
 
-while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call F_findOpforSpawnPoint); };
+while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint); };
 
 private _couldnt_spawn = false;
 { if ( _x == "" ) exitWith { _couldnt_spawn = true; }; } foreach _convoy_destinations_markers;
@@ -78,7 +78,7 @@ _waypoint setWaypointCompletionRadius 50;
 private _troops_group = createGroup [GRLIB_side_enemy, true];
 {
 	[_x, _spawnpos, _troops_group, "PRIVATE", 0.5] call F_createManagedUnit;
-} foreach (["army"] call F_getAdaptiveSquadComp);
+} foreach ([] call KPLIB_fnc_getSquadComp);
 {_x moveInCargo _troop_vehicle} foreach (units _troops_group);
 
 private _convoy_marker = createMarkerLocal [ format [ "convoymarker%1", round time], getpos _transport_vehicle ];

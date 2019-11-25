@@ -108,7 +108,7 @@ waitUntil { !isNil "GRLIB_nametag_units" };
 			if ( _nextunit getVariable [ "FAR_isUnconscious", 0 ] == 1 ) then {
 				_drawicon = wounded_icon;
 			} else {
-				if ( _nextunit == [] call F_getCommander ) then {
+				if ( _nextunit == [] call KPLIB_fnc_getCommander ) then {
 					_drawicon = commander_icon;
 				} else {
 					if ( _nextunit == (leader group _nextunit) && (count (units group _nextunit) > 1 ) ) then {

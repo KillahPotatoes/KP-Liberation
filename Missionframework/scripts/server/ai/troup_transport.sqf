@@ -23,7 +23,7 @@ if ((alive _transVeh) && (alive (driver _transVeh))) then {
 
     {
         [_x, _start_pos, _infGrp, "PRIVATE", 0.5] call F_createManagedUnit;
-    } foreach (["army"] call F_getAdaptiveSquadComp);
+    } foreach ([] call KPLIB_fnc_getSquadComp);
 
     {_x moveInCargo _transVeh} forEach (units _infGrp);
 

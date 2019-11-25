@@ -8,7 +8,7 @@ sleep 1800;
 
 while { GRLIB_csat_aggressivity >= 0.9 && GRLIB_endgame == 0 } do {
 
-	_sleeptime = (1800 + (random 1800)) / (([] call  F_adaptiveOpforFactor) * GRLIB_csat_aggressivity);
+	_sleeptime = (1800 + (random 1800)) / (([] call KPLIB_fnc_getOpforFactor) * GRLIB_csat_aggressivity);
 
 	if ( combat_readiness >= 80 ) then { _sleeptime = _sleeptime * 0.75 };
 	if ( combat_readiness >= 90 ) then { _sleeptime = _sleeptime * 0.75 };

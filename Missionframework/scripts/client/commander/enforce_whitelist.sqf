@@ -7,7 +7,7 @@ private [ "_commanderobj", "_tagmatch", "_idmatch", "_namematch" ];
 waitUntil { alive player };
 sleep 1;
 
-_commanderobj = [] call F_getCommander;
+_commanderobj = [] call KPLIB_fnc_getCommander;
 if ( !isNull _commanderobj ) then {
 	if ( player == _commanderobj && !([] call F_isAdmin)) then {
 

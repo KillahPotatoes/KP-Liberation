@@ -1,5 +1,5 @@
 
-private _spawn_marker = [ 2000, 999999, false ] call F_findOpforSpawnPoint;
+private _spawn_marker = [ 2000, 999999, false ] call KPLIB_fnc_getOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
@@ -41,7 +41,7 @@ private _patrolcorners = [
 
 {
 	[_x, _patrolcorners select 0, _grppatrol, "PRIVATE", 0.5] call F_createManagedUnit;
-} foreach (["army"] call F_getAdaptiveSquadComp);
+} foreach ([] call KPLIB_fnc_getSquadComp);
 
 while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
 {

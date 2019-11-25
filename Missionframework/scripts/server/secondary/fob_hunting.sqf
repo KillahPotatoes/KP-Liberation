@@ -1,7 +1,7 @@
 
 _defenders_amount = (15 * (sqrt (GRLIB_unitcap))) min 15;
 
-_spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
+_spawn_marker = [2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint;
 if (_spawn_marker == "") exitWith {diag_log "[KP LIBERATION] [ERROR] Could not find position for fob hunting mission";};
 
 used_positions pushBack _spawn_marker;

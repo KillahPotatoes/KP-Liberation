@@ -2,7 +2,7 @@ params ["_sector", "_opforcount"];
 
 if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - Time: %3 - waiting to spawn sector...", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
 
-private _corrected_size = [_opforcount] call F_getCorrectedSectorRange;
+private _corrected_size = [_opforcount] call KPLIB_fnc_getSectorRange;
 sleep 0.1;
 private _unitscount = [getmarkerpos _sector, _corrected_size , GRLIB_side_friendly] call F_getUnitsCount;
 

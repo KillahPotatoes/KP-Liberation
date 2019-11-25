@@ -16,7 +16,7 @@ private _sectorpos = getmarkerpos _sector;
 private _stopit = false;
 private _spawncivs = false;
 private _building_ai_max = 0;
-private _infsquad = "militia";
+private _infsquad = "army";
 private _building_range = 50;
 private _local_capture_size = GRLIB_capture_size;
 private _iedcount = 0;
@@ -41,23 +41,23 @@ active_sectors pushback _sector; publicVariable "active_sectors";
 private _opforcount = [] call F_opforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
-if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] call F_getCorrectedSectorRange, GRLIB_side_friendly] call F_getUnitsCount) > 0)) then {
+if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call F_getUnitsCount) > 0)) then {
 
 	if (_sector in sectors_bigtown) then {
-		if (combat_readiness > 30) then {_infsquad = "army";};
+		if (combat_readiness < 30) then {_infsquad = "militia";};
 
-		_squad1 = ([_infsquad] call F_getAdaptiveSquadComp);
-		_squad2 = ([_infsquad] call F_getAdaptiveSquadComp);
-		if (GRLIB_unitcap >= 1) then {_squad3 = ([_infsquad] call F_getAdaptiveSquadComp);};
-		if (GRLIB_unitcap >= 1.5) then {_squad4 = ([_infsquad] call F_getAdaptiveSquadComp);};
+		_squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+		_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+		if (GRLIB_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+		if (GRLIB_unitcap >= 1.5) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
 		_vehtospawn = [(selectRandom militia_vehicles),(selectRandom militia_vehicles)];
 		if ((random 100) > (66 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 		if ((random 100) > (50 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 		if (_infsquad == "army") then {
-			_vehtospawn pushback ([] call F_getAdaptiveVehicle);
-			_vehtospawn pushback ([] call F_getAdaptiveVehicle);
-			if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call F_getAdaptiveVehicle);};
+			_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+			_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+			if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
 		};
 
 		_spawncivs = true;
@@ -79,18 +79,18 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 	};
 
 	if (_sector in sectors_capture) then {
-		if (combat_readiness > 50) then {_infsquad = "army";};
+		if (combat_readiness < 50) then {_infsquad = "militia";};
 
-		_squad1 = ([_infsquad] call F_getAdaptiveSquadComp);
-		if (GRLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call F_getAdaptiveSquadComp);};
+		_squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+		if (GRLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
 		if ((random 100) > (66 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 		if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 		if (_infsquad == "army") then {
 			_vehtospawn pushback (selectRandom militia_vehicles);
 			if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {
-				_vehtospawn pushback ([] call F_getAdaptiveVehicle);
-				_squad3 = ([_infsquad] call F_getAdaptiveSquadComp);
+				_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+				_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);
 			};
 		};
 
@@ -112,18 +112,16 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 	};
 
 	if (_sector in sectors_military) then {
-		_infsquad = "army";
+		_squad1 = ([] call KPLIB_fnc_getSquadComp);
+		_squad2 = ([] call KPLIB_fnc_getSquadComp);
+		if (GRLIB_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-		_squad1 = ([_infsquad] call F_getAdaptiveSquadComp);
-		_squad2 = ([_infsquad] call F_getAdaptiveSquadComp);
-		if (GRLIB_unitcap >= 1.5) then {_squad3 = ([_infsquad] call F_getAdaptiveSquadComp);};
-
-		_vehtospawn = [([] call F_getAdaptiveVehicle),([] call F_getAdaptiveVehicle)];
+		_vehtospawn = [([] call KPLIB_fnc_getAdaptiveVehicle),([] call KPLIB_fnc_getAdaptiveVehicle)];
 		if ((random 100) > (33 / GRLIB_difficulty_modifier)) then {
-			_vehtospawn pushback ([] call F_getAdaptiveVehicle);
-			_squad4 = ([_infsquad] call F_getAdaptiveSquadComp);
+			_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+			_squad4 = ([] call KPLIB_fnc_getSquadComp);
 		};
-		if ((random 100) > (66 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call F_getAdaptiveVehicle);};
+		if ((random 100) > (66 / GRLIB_difficulty_modifier)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
 
 		_spawncivs = false;
 
@@ -132,12 +130,12 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 	};
 
 	if (_sector in sectors_factory) then {
-		if (combat_readiness > 40) then {_infsquad = "army";};
+		if (combat_readiness < 40) then {_infsquad = "militia";};
 
-		_squad1 = ([_infsquad] call F_getAdaptiveSquadComp);
-		if (GRLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call F_getAdaptiveSquadComp);};
+		_squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+		if (GRLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
-		if ((random 100) > 66) then {_vehtospawn pushback ([] call F_getAdaptiveVehicle);};
+		if ((random 100) > 66) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
 		if ((random 100) > 33) then {_vehtospawn pushback (selectRandom militia_vehicles);};
 
 		_spawncivs = false;
@@ -158,13 +156,11 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 	};
 
 	if (_sector in sectors_tower) then {
-		_infsquad = "army";
+		_squad1 = ([] call KPLIB_fnc_getSquadComp);
+		if (combat_readiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
+		if (GRLIB_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-		_squad1 = ([_infsquad] call F_getAdaptiveSquadComp);
-		if (combat_readiness > 30) then {_squad2 = ([_infsquad] call F_getAdaptiveSquadComp);};
-		if (GRLIB_unitcap >= 1.5) then {_squad3 = ([_infsquad] call F_getAdaptiveSquadComp);};
-
-		if((random 100) > 95) then {_vehtospawn pushback ([] call F_getAdaptiveVehicle);};
+		if((random 100) > 95) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
 
 		_spawncivs = false;
 
@@ -176,7 +172,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
 
 	if (_building_ai_max > 0 && GRLIB_adaptive_opfor) then {
-		_building_ai_max = round (_building_ai_max * ([] call F_adaptiveOpforFactor));
+		_building_ai_max = round (_building_ai_max * ([] call KPLIB_fnc_getOpforFactor));
 	};
 
 	{
@@ -271,11 +267,11 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 						deleteVehicle _x;
 					};
 				} else {
-					[_x] call F_cleanOpforVehicle;
+					[_x] call KPLIB_fnc_cleanOpforVehicle;
 				};
 			} forEach _managed_units;
 		} else {
-			if (([_sectorpos, (([_opforcount] call F_getCorrectedSectorRange) + 300), GRLIB_side_friendly] call F_getUnitsCount) == 0) then {
+			if (([_sectorpos, (([_opforcount] call KPLIB_fnc_getSectorRange) + 300), GRLIB_side_friendly] call F_getUnitsCount) == 0) then {
 				_sector_despawn_tickets = _sector_despawn_tickets - 1;
 			} else {
 				// start counting running minutes after ADDITIONAL_TICKETS_DELAY
@@ -293,7 +289,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 					if (_x isKindOf "Man") then {
 						deleteVehicle _x;
 					} else {
-						[_x] call F_cleanOpforVehicle;
+						[_x] call KPLIB_fnc_cleanOpforVehicle;
 					};
 				} forEach _managed_units;
 
