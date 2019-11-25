@@ -92,7 +92,7 @@ while {true} do {
 
 		if (KP_liberation_mobilerespawn) then {
 			if (KP_liberation_respawn_time <= time) then {
-				private _respawn_trucks = call F_getMobileRespawns;
+				private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
 
 				for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
 					choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];

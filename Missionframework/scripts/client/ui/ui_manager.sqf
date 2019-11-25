@@ -101,7 +101,7 @@ while { true } do {
 			KP_liberation_ammo = KP_liberation_ammo_global;
 			KP_liberation_fuel = KP_liberation_fuel_global;
 		} else {
-			_resource_area = toUpper ([_nearfob] call F_getFobName);
+			_resource_area = toUpper ([_nearfob] call KPLIB_fnc_getFobName);
 			KP_liberation_supplies = ((_actual_fob select 0) select 1);
 			KP_liberation_ammo = ((_actual_fob select 0) select 2);
 			KP_liberation_fuel = ((_actual_fob select 0) select 3);
@@ -125,7 +125,7 @@ while { true } do {
 		if ((getmarkerpos "opfor_capture_marker") distance markers_reset > 100 ) then {
 
 			private [ "_attacked_string" ];
-			_attacked_string = [ markerpos "opfor_capture_marker" ] call F_getLocationName;
+			_attacked_string = [markerpos "opfor_capture_marker"] call KPLIB_fnc_getLocationName;
 
 			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (401)) ctrlShow true;
 			((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (402)) ctrlSetText _attacked_string;
@@ -216,7 +216,7 @@ while { true } do {
 				if ( [ markerpos _nearest_active_sector, _zone_size ] call F_sectorOwnership == GRLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
 				"zone_capture" setmarkercolorlocal _colorzone;
 
-				_ratio = [_nearest_active_sector] call F_getForceRatio;
+				_ratio = [_nearest_active_sector] call KPLIB_fnc_getForceRatio;
 				_barwidth = 0.084 * safezoneW * _ratio;
 				_bar = (uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (244);
 				_bar ctrlSetPosition [(ctrlPosition _bar) select 0,(ctrlPosition _bar) select 1,_barwidth,(ctrlPosition _bar) select 3];

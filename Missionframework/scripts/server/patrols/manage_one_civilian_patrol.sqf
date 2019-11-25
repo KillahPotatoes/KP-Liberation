@@ -13,7 +13,7 @@ while { GRLIB_endgame == 0 } do {
 	_spawnsector = "";
 	_usable_sectors = [];
 	{
-		if ( ( ( [ getmarkerpos _x , 1000 , GRLIB_side_friendly ] call F_getUnitsCount ) == 0 ) && ( count ( [ getmarkerpos _x , 3500 ] call F_getNearbyPlayers ) > 0 ) ) then {
+		if ((([getmarkerpos _x, 1000, GRLIB_side_friendly] call F_getUnitsCount) == 0) && (count ([getmarkerpos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
 			_usable_sectors pushback _x;
 		}
 
@@ -56,7 +56,7 @@ while { GRLIB_endgame == 0 } do {
 		_sectors_patrol = [];
 		_patrol_startpos = getpos (leader _grp);
 		{
-			if ( (_patrol_startpos distance (markerpos _x) < 5000 ) && ( count ( [ getmarkerpos _x , 4000 ] call F_getNearbyPlayers ) > 0 ) ) then {
+			if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([getmarkerpos _x, 4000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
 				_sectors_patrol pushback _x;
 			};
 		} foreach (sectors_bigtown + sectors_capture + sectors_factory);
@@ -99,11 +99,11 @@ while { GRLIB_endgame == 0 } do {
 
 		waitUntil {
 			sleep (30 + (random 30));
-			( ( ( { alive _x } count ( units _grp ) ) == 0 ) || ( count ( [ getpos leader _grp , 4000 ] call F_getNearbyPlayers ) == 0 ) )
+			((({alive _x} count (units _grp)) == 0) || (count ([getpos leader _grp, 4000] call KPLIB_fnc_getNearbyPlayers) == 0))
 		};
 
 		if ( count (units _grp) > 0 ) then {
-			if ( count ( [ getpos leader _grp , 4000 ] call F_getNearbyPlayers ) == 0 ) then {
+			if (count ([getpos leader _grp, 4000] call KPLIB_fnc_getNearbyPlayers) == 0) then {
 
 				if ( !(isNull _civveh) ) then {
 					 if ( { ( alive _x ) && (side group _x == GRLIB_side_friendly ) } count (crew _civveh) == 0 ) then {

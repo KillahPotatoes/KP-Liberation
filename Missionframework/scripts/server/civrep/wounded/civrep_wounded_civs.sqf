@@ -11,7 +11,7 @@ private _markers = [];
 
 for "_i" from 1 to _count do {
 	private _pos = (markerPos _sector) getPos [(50 + (random 150)), (random 360)];
-	while {(surfaceIsWater _pos) || ((count ([_pos, 30] call F_getNearbyPlayers)) > 0)} do {
+	while {(surfaceIsWater _pos) || ((count ([_pos, 30] call KPLIB_fnc_getNearbyPlayers)) > 0)} do {
 		_pos = (markerPos _sector) getPos [(50 + (random 200)), (random 360)];
 	};
 	private _civ = [selectRandom civilians, _pos, _grp] call F_createManagedUnit;

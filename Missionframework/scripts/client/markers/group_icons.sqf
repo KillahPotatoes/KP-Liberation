@@ -18,7 +18,7 @@ while { true } do {
 				(count units _x > 0) &&  (side _x == GRLIB_side_friendly && (((leader _x) distance (getmarkerpos GRLIB_respawn_marker) > 100) && ((leader _x) distance startbase > 500))))) then {
 				clearGroupIcons _x;
 				_localgroup = _x;
-				_grouptype = [_localgroup] call F_getGroupType;
+				_grouptype = [_localgroup] call KPLIB_fnc_getGroupType;
 				_groupicon = "";
 				switch (_grouptype) do {
 					case "infantry": { _groupicon = "b_inf" };

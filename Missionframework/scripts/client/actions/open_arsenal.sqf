@@ -95,7 +95,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 	};
 
 	if ( respawn_loadout > 0 ) then {
-		GRLIB_respawn_loadout = [ player, ["repetitive"] ] call F_getLoadout;
+		GRLIB_respawn_loadout = [ player, ["repetitive"] ] call KPLIB_fnc_getLoadout;
 		hint localize "STR_MAKE_RESPAWN_LOADOUT_HINT";
 		respawn_loadout = 0;
 	};
@@ -103,7 +103,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 	if ( load_from_player >= 0 ) then {
 		private _playerselected = ( _loadplayers select load_from_player ) select 1;
 		if ( alive _playerselected ) then {
-			[ player,  [ _playerselected, ["repetitive"] ] call F_getLoadout ] call F_setLoadout;
+			[player,  [_playerselected, ["repetitive"]] call KPLIB_fnc_getLoadout] call F_setLoadout;
 			hint format [ localize "STR_LOAD_PLAYER_LOADOUT_HINT", name _playerselected ];
 		};
 		load_from_player = -1;
