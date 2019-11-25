@@ -15,10 +15,4 @@
         Commander [OBJECT]
 */
 
-if (!isNil "commandant") then {
-    {
-        if (_x == commandant) exitWith {_x};
-    } forEach allPlayers;
-} else {
-    objNull
-};
+missionNamespace getVariable ["commandant", objNull]
