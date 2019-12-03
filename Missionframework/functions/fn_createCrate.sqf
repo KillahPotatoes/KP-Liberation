@@ -16,14 +16,20 @@
     Returns:
         Created crate [OBJECT]
 */
-// TODO
-params [["_resource", KP_liberation_supply_crate],["_amount", 100],["_pos", getPos player]];
 
+params [
+    ["_resource", KP_liberation_supply_crate, [""]],
+    ["_amount", 100, [0]],
+    ["_pos", getPos player, [[]], [2, 3]]
+];
+
+// Check if resource is valid
 if !(_resource in KP_liberation_crates) exitWith {
-	private _text = format ["[KP LIBERATION] [ERROR] F_kp_createCrate.sqf -> invalid _resource: %1", _resource];
-	_text remoteExec ["diag_log",2];
+    ["Invalid resource param given: %1", _resource] call BIS_fnc_error;
+    objNull
 };
 
+// Create crate
 private _crate = _resource createVehicle _pos;
 _crate setMass 500;
 _crate setVariable ["KP_liberation_crate_value", _amount, true];
@@ -32,7 +38,8 @@ clearMagazineCargoGlobal _crate;
 clearBackpackCargoGlobal _crate;
 clearItemCargoGlobal _crate;
 
-if(KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+// Add ACE carry functionality
+if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 
 // Process KP object init
 [_crate] call KPLIB_fnc_addObjectInit;
