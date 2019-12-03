@@ -6,7 +6,8 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        Checks content of given crate, checks if ropeAttach is enabled on the crate and if not set it to true.
+        Checks content of given crate and displays a hint about it.
+        Additionally it makes sure that ropeAttach is enabled on the crate.
 
     Parameter(s):
         _crate - Crate to check [OBJECT, defaults to objNull]
@@ -14,13 +15,19 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
+
 if (isDedicated) exitWith {};
 
-hint format [localize "STR_ACTION_CRATE_VALUE_HINT", (_this select 0) getVariable ["KP_liberation_crate_value",0]];
+params [
+    ["_crate", objNull, [objNull]]
+];
 
-if (!(ropeAttachEnabled (_this select 0))) then {
-    [(_this select 0), true] remoteExec ["enableRopeAttach"];
+if (isNull _crate) exitWith {["Null object given"] call BIS_fnc_error; false};
+
+hint format [localize "STR_ACTION_CRATE_VALUE_HINT", _crate getVariable ["KP_liberation_crate_value", 0]];
+
+if !(ropeAttachEnabled _crate) then {
+    [_crate, true] remoteExec ["enableRopeAttach"];
 };
 
 true
