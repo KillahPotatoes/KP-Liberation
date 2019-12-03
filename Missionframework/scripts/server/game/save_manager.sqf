@@ -1,4 +1,4 @@
-diag_log format ["[KP LIBERATION] [SAVE] save_manager.sqf started - time: %1", diag_tickTime];
+diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
 
 // Handle possible enabled "wipe save" mission parameters
 if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
@@ -15,7 +15,7 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
 */
 
 // Version of the KP Liberation framework
-private _version = [0, 96, 6];
+private _version = [0, 96, 7];
 // All AI squads
 private _aiGroups = [];
 // Classnames of blufor vehicles
@@ -527,7 +527,7 @@ publicVariable "GRLIB_permissions";
 publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-diag_log format ["[KP LIBERATION] [SAVE] save_manager.sqf done - time: %1", diag_tickTime];
+diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
 
 // Start the save loop
 while {true} do {

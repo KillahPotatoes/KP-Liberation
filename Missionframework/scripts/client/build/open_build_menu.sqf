@@ -1,6 +1,6 @@
 private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
-if (([ getpos player , 500 , GRLIB_side_enemy ] call F_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
+if (([ getpos player , 500 , GRLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
 
 if (isNil "buildtype") then {buildtype = 1};
 if (isNil "buildindex") then {buildindex = -1};
@@ -13,7 +13,7 @@ _dialog = createDialog "liberation_build";
 waitUntil { dialog };
 
 _iscommandant = false;
-if (player == [] call F_getCommander) then {
+if (player == [] call KPLIB_fnc_getCommander) then {
 	_iscommandant = true;
 };
 
@@ -151,7 +151,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	};
 
 	_affordable_crew = _affordable;
-	if ( unitcap >= ([] call F_localCap)) then {
+	if ( unitcap >= ([] call KPLIB_fnc_getLocalCap)) then {
 		_affordable_crew = false;
 		if (buildtype == 1 || buildtype == 8) then {
 			_affordable = false;
@@ -168,7 +168,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 	((findDisplay 5501) displayCtrl (134)) ctrlSetStructuredText formatText [
 		"%1/%2 %3 - %4/%5 %6 - %7/%8 %9",
 		unitcap,
-		([] call F_localCap),
+		([] call KPLIB_fnc_getLocalCap),
 		image "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa",
 		KP_liberation_heli_count,
 		KP_liberation_heli_slots,

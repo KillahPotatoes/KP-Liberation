@@ -17,6 +17,7 @@ class KPLIB
         class createManagedUnit         {};
         class crGetMulti                {};
         class crGlobalMsg               {};
+        class fillStorage               {};
         class forceBluforCrew           {};
         class getAdaptiveVehicle        {};
         class getCommander              {};
