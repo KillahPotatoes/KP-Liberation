@@ -9,7 +9,7 @@ sleep 1;
 
 _commanderobj = [] call KPLIB_fnc_getCommander;
 if ( !isNull _commanderobj ) then {
-	if ( player == _commanderobj && !([] call F_isAdmin)) then {
+	if ( player == _commanderobj && !([] call KPLIB_fnc_isAdmin)) then {
 
 		_tagmatch = false;
 		_idmatch = false;

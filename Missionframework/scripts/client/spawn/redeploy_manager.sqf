@@ -198,7 +198,7 @@ while {true} do {
 	};
 
 	if (KP_liberation_arsenalUsePreset) then {
-		[_backpack] call F_checkGear;
+		[_backpack] call KPLIB_fnc_checkGear;
 	};
 
 	if (KP_liberation_mobilerespawn && (KP_liberation_respawn_time > time)) then {

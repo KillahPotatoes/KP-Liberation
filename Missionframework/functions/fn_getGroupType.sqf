@@ -2,7 +2,7 @@
     File: fn_getGroupType.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2019-12-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -70,7 +70,7 @@ if ((_grouptype == 'infantry') && (_vehicletype != '')) then {
     };
 
     // Check if vehicle config says it's an UAV, if it is always set its _grouptype to 'uav'
-    if ( (_vehicletype call F_isClassUAV) ) then {
+    if ( (_vehicletype call KPLIB_fnc_isClassUAV) ) then {
         _grouptype = 'uav';
     };
 

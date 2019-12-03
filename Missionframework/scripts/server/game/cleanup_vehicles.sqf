@@ -12,7 +12,7 @@ while { GRLIB_cleanup_vehicles > 0 } do {
 	{
 		_reset_ticker = true;
 		_nextvehicle = _x;
-		_nearestfob = [ getpos _nextvehicle ] call F_getNearestFob;
+		_nearestfob = [ getpos _nextvehicle ] call KPLIB_fnc_getNearestFob;
 		if ( count _nearestfob == 3 ) then {
 			if ( ( _nextvehicle distance _nearestfob > ( 4 * GRLIB_fob_range ) ) && ( _nextvehicle distance startbase > ( 4 * GRLIB_fob_range ) ) ) then {
 				if ( typeof _nextvehicle in _cleanup_classnames ) then {

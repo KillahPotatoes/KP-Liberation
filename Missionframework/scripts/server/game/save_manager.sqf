@@ -289,7 +289,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
     // Create clearances
     {
-        [_x select 0, _x select 1] call F_createClearance;
+        [_x select 0, _x select 1] call KPLIB_fnc_createClearance;
     } forEach KP_liberation_clearances;
 
     // Collection array for all objects which are loaded
@@ -349,7 +349,7 @@ if (!isNil "greuh_liberation_savegame") then {
             };
 
             // Process KP object init
-            [_object] call F_addObjectInit;
+            [_object] call KPLIB_fnc_addObjectInit;
 
             // Determine if cargo should be cleared
             if (KP_liberation_clear_cargo || {!(_class in KP_liberation_ace_crates)} || {!(_class isKindOf "AllVehicles")}) then {
@@ -416,7 +416,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _object setVariable ["KP_liberation_storage_type", 0, true];
 
             // Fill storage with saved resources
-            [floor _supply, floor _ammo, floor _fuel, _object] call F_fillStorage;
+            [floor _supply, floor _ammo, floor _fuel, _object] call KPLIB_fnc_fillStorage;
         };
     } forEach _resourceStorages;
 
@@ -449,7 +449,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _object setVariable ["KP_liberation_storage_type", 1, true];
 
             // Fill storage
-            [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call F_fillStorage;
+            [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call KPLIB_fnc_fillStorage;
         };
     } forEach KP_liberation_production;
 
@@ -462,7 +462,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _x params ["_spawnPos", "_units"];
             private _grp = createGroup [GRLIB_side_friendly, true];
             {
-                [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call F_createManagedUnit;
+                [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
         } forEach _aiGroups;
     } else {
@@ -474,7 +474,7 @@ if (!isNil "greuh_liberation_savegame") then {
                 private _unit = _x;
                 private _pos = [(_unit select 1) select 0, (_unit select 1) select 1, ((_unit select 1) select 2) + 0.2];
                 private _dir = _unit select 2;
-                [(_unit select 0), _pos, _grp] call F_createManagedUnit;
+                [(_unit select 0), _pos, _grp] call KPLIB_fnc_createManagedUnit;
                 private _nextobj = ((units _grp) select ((count (units _grp)) - 1));
                 _nextobj setDir _dir;
                 _nextobj setPosATL _pos;

@@ -1,6 +1,6 @@
 if (KP_liberation_arsenalUsePreset) then {
 	private ["_virtualCargo", "_virtualWeapons", "_virtualMagazines", "_virtualItems", "_virtualBackpacks"];
-	_virtualCargo = [] call LARs_fnc_addAllVirtualCargo;
+	_virtualCargo = [] call KPLIB_fnc_getVirtualCargo;
 	_virtualWeapons = [];
 	_virtualMagazines = [];
 	_virtualItems = [];

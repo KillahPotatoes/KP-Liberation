@@ -30,13 +30,13 @@ if !(_spawn_marker isEqualTo "") then {
     [_spawn_marker] remoteExec ["remote_call_battlegroup"];
 
     if (worldName in KP_liberation_battlegroup_clearance) then {
-        [markerpos _spawn_marker, 15] call F_createClearance;
+        [markerpos _spawn_marker, 15] call KPLIB_fnc_createClearance;
     };
 
     private ["_nextgrp", "_vehicle"];
     {
         _nextgrp = createGroup [GRLIB_side_enemy, true];
-        _vehicle = [markerpos _spawn_marker, _x] call F_libSpawnVehicle;
+        _vehicle = [markerpos _spawn_marker, _x] call KPLIB_fnc_spawnVehicle;
 
         sleep 0.5;
 
@@ -44,9 +44,9 @@ if !(_spawn_marker isEqualTo "") then {
         [_nextgrp] spawn battlegroup_ai;
         _bg_groups pushback _nextgrp;
 
-        if ((_x in opfor_troup_transports) && ([] call F_opforCap < GRLIB_battlegroup_cap)) then {
+        if ((_x in opfor_troup_transports) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap)) then {
             if (_vehicle isKindOf "Air") then {
-                [([markerPos _spawn_marker] call F_getNearestBluforObjective) select 0, _vehicle] spawn send_paratroopers;
+                [([markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective) select 0, _vehicle] spawn send_paratroopers;
             } else {
                 [_vehicle] spawn troup_transport;
             };
@@ -56,7 +56,7 @@ if !(_spawn_marker isEqualTo "") then {
     } forEach _selected_opfor_battlegroup;
 
     if (GRLIB_csat_aggressivity > 0.9) then {
-        [([markerpos _spawn_marker] call F_getNearestBluforObjective) select 0] spawn spawn_air;
+        [([markerpos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective) select 0] spawn spawn_air;
     };
 
     sleep 5;
@@ -68,7 +68,7 @@ if !(_spawn_marker isEqualTo "") then {
 
     {
         if (local _x) then {
-            _headless_client = [] call F_lessLoadedHC;
+            _headless_client = [] call KPLIB_fnc_getLessLoadedHC;
             if (!isNull _headless_client) then {
                 _x setGroupOwner (owner _headless_client);
             };

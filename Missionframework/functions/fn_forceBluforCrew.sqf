@@ -2,7 +2,7 @@
     File: fn_forceBluforCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2019-12-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -29,7 +29,7 @@ if ((side _grp) != GRLIB_side_friendly) then {
 
     _grp = createGroup [GRLIB_side_friendly, true];
     while {count units _grp < 3} do {
-        [crewman_classname, getPos _veh, _grp] call F_createManagedUnit;
+        [crewman_classname, getPos _veh, _grp] call KPLIB_fnc_createManagedUnit;
     };
     ((units _grp) select 0) moveInDriver _veh;
     ((units _grp) select 1) moveInGunner _veh;

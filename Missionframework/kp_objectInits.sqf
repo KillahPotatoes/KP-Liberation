@@ -20,7 +20,7 @@ KPLIB_objectInits = [
     [["Helipad_base_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"], {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;}, true],
 
     // Add ViV action to FOB box
-    [[FOB_box_typename], {_this call F_setFobMass; [_this] remoteExecCall ["F_setLoadableViV", 0, _this];}],
+    [[FOB_box_typename], {[_this] call KPLIB_fnc_setFobMass; [_this] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _this];}],
 
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)
     [[KP_liberation_small_storage_building, KP_liberation_large_storage_building], {_this setVariable ["KP_liberation_storage_type", 0, true];}],

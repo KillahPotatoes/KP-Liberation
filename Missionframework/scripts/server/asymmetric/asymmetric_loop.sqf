@@ -21,7 +21,7 @@ while {GRLIB_endgame == 0} do {
 		{
 			private _sector = _x;
 			private _blocked = false;
-			private _units_at_sector = [getmarkerpos _sector, GRLIB_sector_size, GRLIB_side_friendly] call F_getUnitsCount;
+			private _units_at_sector = [getmarkerpos _sector, GRLIB_sector_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 
 			{
 				if ((_x select 0) == _sector) exitWith {
@@ -39,8 +39,8 @@ while {GRLIB_endgame == 0} do {
 				KP_liberation_asymmetric_sectors pushBack _sector;
 
 				if ((random 100) <= KP_liberation_resistance_ambush_chance) then {
-					private _hc = [] call F_lessLoadedHC;
-					private _ieds = round (([] call F_cr_getMulti) * GRLIB_difficulty_modifier);
+					private _hc = [] call KPLIB_fnc_getLessLoadedHC;
+					private _ieds = round (([] call KPLIB_fnc_crGetMulti) * GRLIB_difficulty_modifier);
 
 					if (isNull _hc) then {
 						[_sector, _ieds] spawn manage_asymIED;

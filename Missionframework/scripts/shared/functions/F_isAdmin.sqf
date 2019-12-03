@@ -1,1 +1,0 @@
-serverCommandAvailable "#kick"

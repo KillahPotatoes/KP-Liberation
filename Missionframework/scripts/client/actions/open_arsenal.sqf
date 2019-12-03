@@ -81,7 +81,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 		};
 
 		if (KP_liberation_arsenalUsePreset) then {
-			if ([_backpack] call F_checkGear) then {
+			if ([_backpack] call KPLIB_fnc_checkGear) then {
 				hint format [ localize "STR_HINT_LOADOUT_LOADED", _loaded_loadout param [0]];
 			};
 		} else {
@@ -103,7 +103,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 	if ( load_from_player >= 0 ) then {
 		private _playerselected = ( _loadplayers select load_from_player ) select 1;
 		if ( alive _playerselected ) then {
-			[player,  [_playerselected, ["repetitive"]] call KPLIB_fnc_getLoadout] call F_setLoadout;
+			[player,  [_playerselected, ["repetitive"]] call KPLIB_fnc_getLoadout] call KPLIB_fnc_setLoadout;
 			hint format [ localize "STR_LOAD_PLAYER_LOADOUT_HINT", name _playerselected ];
 		};
 		load_from_player = -1;
@@ -125,6 +125,6 @@ if ( edit_loadout > 0 ) then {
 		uiSleep 5;
 		private _arsenalDisplay = ["RSCDisplayArsenal", "ace_arsenal_display"] select (KP_liberation_ace && KP_liberation_arsenal_type);
 		waitUntil {sleep 1; isNull (uinamespace getvariable [_arsenalDisplay, displayNull])};
-		[_backpack] call F_checkGear;
+		[_backpack] call KPLIB_fnc_checkGear;
 	};
 };

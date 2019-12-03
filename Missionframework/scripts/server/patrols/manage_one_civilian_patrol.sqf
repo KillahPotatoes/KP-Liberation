@@ -13,7 +13,7 @@ while { GRLIB_endgame == 0 } do {
 	_spawnsector = "";
 	_usable_sectors = [];
 	{
-		if ((([getmarkerpos _x, 1000, GRLIB_side_friendly] call F_getUnitsCount) == 0) && (count ([getmarkerpos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+		if ((([getmarkerpos _x, 1000, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) && (count ([getmarkerpos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
 			_usable_sectors pushback _x;
 		}
 
@@ -26,7 +26,7 @@ while { GRLIB_endgame == 0 } do {
 		if ( random 100 < 33) then {
 			_civnumber = 1 + (floor (random 2));
 			while { count units _grp < _civnumber } do {
-				[selectRandom civilians, markerPos _spawnsector, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
+				[selectRandom civilians, markerPos _spawnsector, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 			};
 			_grpspeed = "LIMITED";
 		} else {
@@ -39,7 +39,7 @@ while { GRLIB_endgame == 0 } do {
 
 			_spawnpos = getpos _nearestroad;
 
-			[selectRandom civilians, _spawnpos, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
+			[selectRandom civilians, _spawnpos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 			_civveh = (selectRandom civilian_vehicles) createVehicle _spawnpos;
 			_civveh setpos _spawnpos;
 			_civveh addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
@@ -91,7 +91,7 @@ while { GRLIB_endgame == 0 } do {
 		_waypoint setWaypointType "CYCLE";
 
 		if ( local _grp ) then {
-			_headless_client = [] call F_lessLoadedHC;
+			_headless_client = [] call KPLIB_fnc_getLessLoadedHC;
 			if ( !isNull _headless_client ) then {
 				_grp setGroupOwner ( owner _headless_client );
 			};

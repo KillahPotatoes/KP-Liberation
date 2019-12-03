@@ -4,7 +4,7 @@ if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBER
 
 private _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 
-while {(([_startpos, 500, GRLIB_side_friendly] call F_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
+while {(([_startpos, 500, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
 	_startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 };
 
@@ -45,10 +45,10 @@ if (_incDir < 23) then {
 	};
 };
 
-[5, [(markerText _sector), _incString]] remoteExec ["F_cr_globalMsg"];
+[5, [(markerText _sector), _incString]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
 
 private _spawnedGroups = [];
-private _grp = [_startpos] call F_spawnGuerillaGroup;
+private _grp = [_startpos] call KPLIB_fnc_spawnGuerillaGroup;
 
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 {_x doFollow (leader _grp)} forEach (units _grp);
@@ -78,9 +78,9 @@ sleep 30;
 
 if (((random 100) <= 25) && !(KP_liberation_guerilla_vehicles isEqualTo [])) then {
 	private _vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
-	_vehicle call F_allowCrewInImmobile;
+	[_vehicle] call KPLIB_fnc_allowCrewInImmobile;
 
-	private _grp = [_startpos, 2] call F_spawnGuerillaGroup;
+	private _grp = [_startpos, 2] call KPLIB_fnc_spawnGuerillaGroup;
 	((units _grp) select 0) moveInDriver _vehicle;
 	((units _grp) select 1) moveInGunner _vehicle;
 

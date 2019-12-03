@@ -252,7 +252,7 @@ while { cinematic_camera_started } do {
 				if ( _position distance startbase < 300 ) then {
 					_nearest_sector = "BEGIN OF OPERATION";
 				} else {
-					_nearest_sector = [300, _position ] call F_getNearestSector;
+					_nearest_sector = [300, _position ] call KPLIB_fnc_getNearestSector;
 					if ( _nearest_sector != "" ) then {
 						_nearest_sector = markertext _nearest_sector;
 					} else {

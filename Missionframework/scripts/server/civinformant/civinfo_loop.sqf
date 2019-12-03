@@ -20,7 +20,7 @@ while {true} do {
 		private _house = (nearestObjects [[((getMarkerPos _sector select 0) - 100 + (random 200)), ((getMarkerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 
 		private _grp = createGroup [GRLIB_side_civilian, true];
-		private _informant = [selectRandom civilians, getMarkerPos _sector, _grp] call F_createManagedUnit;
+		private _informant = [selectRandom civilians, getMarkerPos _sector, _grp] call KPLIB_fnc_createManagedUnit;
 		private _waiting_time = KP_liberation_civinfo_duration;
 
 		_informant setPos (selectRandom (_house buildingPos -1));

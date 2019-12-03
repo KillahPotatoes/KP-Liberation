@@ -54,7 +54,7 @@ while {_supplies > 0} do {
 		_amount = _supplies;
 	};
 	_supplies = _supplies - _amount;
-	private _crate = [KP_liberation_supply_crate, _amount, getPos _roadObj] call F_createCrate;
+	private _crate = [KP_liberation_supply_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
 	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
@@ -65,7 +65,7 @@ while {_ammo > 0} do {
 		_amount = _ammo;
 	};
 	_ammo = _ammo - _amount;
-	private _crate = [KP_liberation_ammo_crate, _amount, getPos _roadObj] call F_createCrate;
+	private _crate = [KP_liberation_ammo_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
 	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
@@ -76,13 +76,13 @@ while {_fuel > 0} do {
 		_amount = _fuel;
 	};
 	_fuel = _fuel - _amount;
-	private _crate = [KP_liberation_fuel_crate, _amount, getPos _roadObj] call F_createCrate;
+	private _crate = [KP_liberation_fuel_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
 	_crate setPos (_crate getPos [random 60, random 360]);
 	_crateArray pushBack [_crate];
 };
 if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1 ambush: resource spawning done", (_convoy select 0)];};
 
-private _grp = [getPos _roadObj] call F_spawnGuerillaGroup;
+private _grp = [getPos _roadObj] call KPLIB_fnc_spawnGuerillaGroup;
 
 private _waypoint = _grp addWaypoint [getPos _roadObj, 150];
 _waypoint setWaypointType "SAD";
@@ -101,7 +101,7 @@ if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] 
 private _waitingTime = KP_liberation_convoy_ambush_duration;
 
 while {(({alive _x} count (units _grp)) > 0) && (_waitingTime > 0)} do {
-	uiSleep 1;			
+	uiSleep 1;
 	private _player_near = false;
 	{
 		if (((_x distance _roadObj) < 250) && (alive _x)) exitWith {_player_near = true};

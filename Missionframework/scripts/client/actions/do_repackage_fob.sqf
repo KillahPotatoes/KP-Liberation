@@ -13,7 +13,7 @@ if ( dorepackage > 0 ) then {
 	closeDialog 0;
 	waitUntil { !dialog };
 
-	_fob = [] call F_getNearestFob;
+	_fob = [] call KPLIB_fnc_getNearestFob;
 
     if (count _fob > 0) then {
         GRLIB_all_fobs = GRLIB_all_fobs - [_fob];
@@ -34,9 +34,9 @@ if ( dorepackage > 0 ) then {
 
 	if ( dorepackage == 1 ) then {
 		_fobbox = FOB_box_typename createVehicle _spawnpos;
-		_fobbox call F_setFobMass;
+		[_fobbox] call KPLIB_fnc_setFobMass;
 		// Add ViV actions to FOB Box
-		[_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
+		[_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
 	};
 
 	if ( dorepackage == 2 ) then {

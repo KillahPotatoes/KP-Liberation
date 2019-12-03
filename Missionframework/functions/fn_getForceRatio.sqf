@@ -2,7 +2,7 @@
     File: fn_getForceRatio.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2019-12-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,8 +23,8 @@ if ( _sector in sectors_bigtown ) then {
     _actual_capture_size = GRLIB_capture_size * 1.4;
 };
 
-_red_forces = [ (markerpos _sector), _actual_capture_size, GRLIB_side_enemy ] call F_getUnitsCount;
-_blue_forces = [ (markerpos _sector), _actual_capture_size, GRLIB_side_friendly ] call F_getUnitsCount;
+_red_forces = [ (markerpos _sector), _actual_capture_size, GRLIB_side_enemy ] call KPLIB_fnc_getUnitsCount;
+_blue_forces = [ (markerpos _sector), _actual_capture_size, GRLIB_side_friendly ] call KPLIB_fnc_getUnitsCount;
 _ratio = -1;
 
 if (_red_forces > 0) then {

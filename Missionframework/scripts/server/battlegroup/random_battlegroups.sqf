@@ -20,7 +20,7 @@ while {GRLIB_csat_aggressivity > 0.9 && GRLIB_endgame == 0} do {
 
     if (
         (count (allPlayers - entities "HeadlessClient_F") >= (10 / GRLIB_csat_aggressivity)) &&
-        ([] call F_opforCap < GRLIB_battlegroup_cap) &&
+        ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) &&
         (combat_readiness >= 70) &&
         (diag_fps > 15.0)
     )  then {

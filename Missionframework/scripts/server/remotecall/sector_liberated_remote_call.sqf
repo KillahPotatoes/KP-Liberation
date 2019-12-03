@@ -76,7 +76,7 @@ doSaveTrigger = true;
 sleep 45;
 
 if (GRLIB_endgame == 0) then {
-	if ((!(_liberated_sector in sectors_tower)) && (((random (200.0 / (GRLIB_difficulty_modifier * GRLIB_csat_aggressivity))) < (combat_readiness - 20)) || (_liberated_sector in sectors_bigtown)) && ([] call F_opforCap < GRLIB_battlegroup_cap)) then {
+	if ((!(_liberated_sector in sectors_tower)) && (((random (200.0 / (GRLIB_difficulty_modifier * GRLIB_csat_aggressivity))) < (combat_readiness - 20)) || (_liberated_sector in sectors_bigtown)) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap)) then {
 		[_liberated_sector] spawn spawn_battlegroup;
 	};
 };

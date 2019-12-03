@@ -67,8 +67,8 @@ while {GRLIB_endgame == 0} do {
 											(((_tempLogistics select _currentIndex) select 6) select 1),
 											(((_tempLogistics select _currentIndex) select 6) select 2)]
 										];
-										private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call F_createCrate;
-										[_crate, _x] call F_crateToStorage;
+										private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+										[_crate, _x] call KPLIB_fnc_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
@@ -84,8 +84,8 @@ while {GRLIB_endgame == 0} do {
 												(((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
 												(((_tempLogistics select _currentIndex) select 6) select 2)]
 											];
-										private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call F_createCrate;
-										[_crate, _x] call F_crateToStorage;
+										private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+										[_crate, _x] call KPLIB_fnc_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
@@ -101,8 +101,8 @@ while {GRLIB_endgame == 0} do {
 												(((_tempLogistics select _currentIndex) select 6) select 1),
 												(((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
 											];
-										private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call F_createCrate;
-										[_crate, _x] call F_crateToStorage;
+										private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+										[_crate, _x] call KPLIB_fnc_crateToStorage;
 										_processed = _processed + 1;
 										_space = _space - 1;
 									};
@@ -302,7 +302,7 @@ while {GRLIB_endgame == 0} do {
 
 						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
 							private _dice = round (random 100);
-							private _chance = KP_liberation_convoy_ambush_chance + ([] call F_cr_getMulti);
+							private _chance = KP_liberation_convoy_ambush_chance + ([] call KPLIB_fnc_crGetMulti);
 							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance];_text remoteExec ["diag_log",2];};
 							if (_dice <= _chance) then {
 								private _convoy = +_x;
@@ -401,8 +401,8 @@ while {GRLIB_endgame == 0} do {
 										(((_tempLogistics select _currentIndex) select 6) select 1),
 										(((_tempLogistics select _currentIndex) select 6) select 2)]
 									];
-									private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call F_createCrate;
-									[_crate, _x] call F_crateToStorage;
+									private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+									[_crate, _x] call KPLIB_fnc_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};
@@ -418,8 +418,8 @@ while {GRLIB_endgame == 0} do {
 											(((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
 											(((_tempLogistics select _currentIndex) select 6) select 2)]
 										];
-									private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call F_createCrate;
-									[_crate, _x] call F_crateToStorage;
+									private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+									[_crate, _x] call KPLIB_fnc_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};
@@ -435,8 +435,8 @@ while {GRLIB_endgame == 0} do {
 											(((_tempLogistics select _currentIndex) select 6) select 1),
 											(((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
 										];
-									private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call F_createCrate;
-									[_crate, _x] call F_crateToStorage;
+									private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+									[_crate, _x] call KPLIB_fnc_crateToStorage;
 									_processed = _processed + 1;
 									_space = _space - 1;
 								};

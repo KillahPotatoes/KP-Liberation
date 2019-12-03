@@ -33,17 +33,17 @@ waitUntil {!isNil "one_eco_done"};
 waitUntil {one_synchro_done};
 waitUntil {one_eco_done};
 
-private _nearfob = [] call F_getNearestFob;
+private _nearfob = [] call KPLIB_fnc_getNearestFob;
 private _fobdistance = 9999;
-private _nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
+private _nearest_sector = [GRLIB_fob_range] call KPLIB_fnc_getNearestSector;
 private _prod_sector = [];
-private _directAccess = (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {[] call F_isAdmin};
+private _directAccess = (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {[] call KPLIB_fnc_isAdmin};
 
 while {true} do {
 
-    _nearfob = [] call F_getNearestFob;
+    _nearfob = [] call KPLIB_fnc_getNearestFob;
     _fobdistance = 9999;
-    _nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
+    _nearest_sector = [GRLIB_fob_range] call KPLIB_fnc_getNearestSector;
     _prod_sector = [];
 
     {
@@ -295,7 +295,7 @@ while {true} do {
         if (_idact_clearance == -1) then {
             _idact_clearance = player addAction [
                 "<t color='#FFFF00'>" + localize "STR_CLEARANCE_ACTION" + "</t>",
-                {[_this select 3 select 0, _this select 3 select 1, true] remoteExecCall ["F_createClearance", 2];},
+                {[_this select 3 select 0, _this select 3 select 1, true] remoteExecCall ["KPLIB_fnc_createClearance", 2];},
                 [_nearFob, GRLIB_fob_range * 0.9], -1003, false, true, "", "build_confirmed == 0"
             ];
         };

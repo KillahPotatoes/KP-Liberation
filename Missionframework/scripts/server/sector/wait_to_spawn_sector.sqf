@@ -4,38 +4,38 @@ if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBE
 
 private _corrected_size = [_opforcount] call KPLIB_fnc_getSectorRange;
 sleep 0.1;
-private _unitscount = [getmarkerpos _sector, _corrected_size , GRLIB_side_friendly] call F_getUnitsCount;
+private _unitscount = [getmarkerpos _sector, _corrected_size , GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 
 if (_unitscount > 0 && _unitscount <= 10) then {
 	sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call F_getUnitsCount;
+_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 6) then {
 	sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call F_getUnitsCount;
+_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 4) then {
 	sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call F_getUnitsCount;
+_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 3) then {
 	sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call F_getUnitsCount;
+_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 2) then {
 	sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call F_getUnitsCount;
+_unitscount = [getmarkerpos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 if (_unitscount == 1) then {
 	sleep 5;
 };

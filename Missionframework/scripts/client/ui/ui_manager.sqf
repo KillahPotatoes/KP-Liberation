@@ -85,7 +85,7 @@ while { true } do {
 		_first_iteration = true;
 	};
 
-	_nearfob = [] call F_getNearestFob;
+	_nearfob = [] call KPLIB_fnc_getNearestFob;
 	_fobdistance = 9999;
 	_actual_fob = [];
 	if ( count _nearfob == 3 ) then {
@@ -149,7 +149,7 @@ while { true } do {
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758007)) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758010)) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758013)) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
-				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758016)) ctrlSetText format ["%1/%2", unitcap,([] call F_localCap)];
+				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758016)) ctrlSetText format ["%1/%2", unitcap,([] call KPLIB_fnc_getLocalCap)];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758019)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758022)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758025)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
@@ -181,7 +181,7 @@ while { true } do {
 
 		if ( _uiticks % 25 == 0 ) then {
 
-			if (!isNil "active_sectors" && ( [] call F_opforCap >= GRLIB_sector_cap)) then {
+			if (!isNil "active_sectors" && ( [] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
 
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (517)) ctrlShow true;
 
@@ -202,7 +202,7 @@ while { true } do {
 				((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (517)) ctrlShow false;
 			};
 
-			_nearest_active_sector = [ GRLIB_sector_size ] call F_getNearestSector;
+			_nearest_active_sector = [ GRLIB_sector_size ] call KPLIB_fnc_getNearestSector;
 			if ( _nearest_active_sector != "" ) then {
 				_zone_size = GRLIB_capture_size;
 				if ( _nearest_active_sector in sectors_bigtown ) then {
@@ -211,9 +211,9 @@ while { true } do {
 
 				"zone_capture" setmarkerposlocal (markerpos _nearest_active_sector);
 				_colorzone = "ColorGrey";
-				if ( [ markerpos _nearest_active_sector, _zone_size ] call F_sectorOwnership == GRLIB_side_friendly ) then { _colorzone = GRLIB_color_friendly };
-				if ( [ markerpos _nearest_active_sector, _zone_size ] call F_sectorOwnership == GRLIB_side_enemy ) then { _colorzone = GRLIB_color_enemy };
-				if ( [ markerpos _nearest_active_sector, _zone_size ] call F_sectorOwnership == GRLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
+				if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_friendly ) then { _colorzone = GRLIB_color_friendly };
+				if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_enemy ) then { _colorzone = GRLIB_color_enemy };
+				if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
 				"zone_capture" setmarkercolorlocal _colorzone;
 
 				_ratio = [_nearest_active_sector] call KPLIB_fnc_getForceRatio;

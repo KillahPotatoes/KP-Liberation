@@ -21,7 +21,7 @@ while {count _position_indexes < 10} do {
 	};
 };
 
-private _grp = [(markerPos _sector)] call F_spawnGuerillaGroup;
+private _grp = [(markerPos _sector)] call KPLIB_fnc_spawnGuerillaGroup;
 _grp setBehaviour "STEALTH";
 private _idxposit = 0;
 {

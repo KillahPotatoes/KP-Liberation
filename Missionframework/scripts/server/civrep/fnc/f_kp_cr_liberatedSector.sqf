@@ -14,7 +14,7 @@ if (_sector in sectors_bigtown || _sector in sectors_capture) then {
 	_penalty = _penalty * KP_liberation_cr_building_penalty;
 
 	if (_penalty > 0) then {
-		[1, [(_penalty / KP_liberation_cr_building_penalty)]] remoteExec ["F_cr_globalMsg"];
+		[1, [(_penalty / KP_liberation_cr_building_penalty)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
 	};
 
 	if (_sector in sectors_bigtown) then {

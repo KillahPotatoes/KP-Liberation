@@ -22,8 +22,8 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 				_amount = _price_s;
 			};
 			_price_s = _price_s - _amount;
-			private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call F_createCrate;
-			[_crate, _x] call F_crateToStorage;
+			private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+			[_crate, _x] call KPLIB_fnc_crateToStorage;
 			_space = _space - 1;
 		};
 
@@ -33,8 +33,8 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 				_amount = _price_a;
 			};
 			_price_a = _price_a - _amount;
-			private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call F_createCrate;
-			[_crate, _x] call F_crateToStorage;
+			private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+			[_crate, _x] call KPLIB_fnc_crateToStorage;
 			_space = _space - 1;
 		};
 
@@ -44,13 +44,13 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
 				_amount = _price_f;
 			};
 			_price_f = _price_f - _amount;
-			private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call F_createCrate;
-			[_crate, _x] call F_crateToStorage;
+			private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+			[_crate, _x] call KPLIB_fnc_crateToStorage;
 			_space = _space - 1;
 		};
 
 		if ((_price_s == 0) && (_price_a == 0) && (_price_f == 0)) exitWith {};
-	} forEach _storage_areas;	
+	} forEach _storage_areas;
 };
 please_recalculate = true;
 stats_vehicles_recycled = stats_vehicles_recycled + 1;

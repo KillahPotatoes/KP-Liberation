@@ -9,7 +9,7 @@ _detailControls = [
 	758019,758020,758021,758022,758023,758024,758025,758026,758027,758028,758029,758030,758031,
 	758032,758080,758081
 ];
-_nearfob = [] call F_getNearestFob;
+_nearfob = [] call KPLIB_fnc_getNearestFob;
 _logi_destinations = [];
 
 {
@@ -128,9 +128,9 @@ while {dialog && (alive player)} do {
 			ctrlEnable [758021, true];
 
 			if ((_selectedGroup select 1) <= 0) then {
-				ctrlEnable [75804, true];	
+				ctrlEnable [75804, true];
 			} else {
-				ctrlEnable [758022, true];				
+				ctrlEnable [758022, true];
 				ctrlEnable [758024, true];
 				ctrlEnable [758025, true];
 				ctrlEnable [758026, true];
@@ -163,7 +163,7 @@ while {dialog && (alive player)} do {
 				default {ctrlSetText[75809,(format [localize "STR_PRODUCTION_MINUTES",(_selectedGroup select 8)])];};
 			};
 		} else {
-				ctrlSetText[75809, "-"];		
+				ctrlSetText[75809, "-"];
 		};
 
 		ctrlSetText [758014, (str (_selectedGroup select 1))];
@@ -187,7 +187,7 @@ while {dialog && (alive player)} do {
 			} forEach _logi_destinations;
 		} else {
 			ctrlShow [758024,true];
-			ctrlShow [758033,false];	
+			ctrlShow [758033,false];
 		};
 
 		if (!((_selectedGroup select 3) isEqualTo [0,0,0])) then {
@@ -198,7 +198,7 @@ while {dialog && (alive player)} do {
 			} forEach _logi_destinations;
 		} else {
 			ctrlShow [758029,true];
-			ctrlShow [758034,false];	
+			ctrlShow [758034,false];
 		};
 
 		ctrlSetText [758025, (str ((_selectedGroup select 4) select 0))];

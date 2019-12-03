@@ -2,7 +2,7 @@
     File: fn_getOpforSpawnPoint.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2019-12-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -79,7 +79,7 @@ private ["_valid", "_current", "_distances"];
 
     // Make sure that there is no blufor unit inside min dist to spawn
     if (_valid) then {
-        if (([markerpos _current, _min, GRLIB_side_friendly] call F_getUnitsCount) > 0) then {
+        if (([markerpos _current, _min, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) then {
             _valid = false;
         };
     };

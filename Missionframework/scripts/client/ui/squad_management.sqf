@@ -33,7 +33,7 @@ while { dialog && alive player } do {
 		lbClear 101;
 		{
 			if ( alive _x ) then {
-				_unitname =  format ["%1. ", [ _x ] call F_getUnitPositionId];
+				_unitname =  format ["%1. ", [ _x ] call KPLIB_fnc_getUnitPositionId];
 				if(isPlayer _x) then {
 					if ( count (squadParams _x ) != 0) then {
 						_unitname = "[" + ((squadParams _x select 0) select 0) + "] ";
@@ -78,7 +78,7 @@ while { dialog && alive player } do {
 			};
 			_squad_camera camcommit 0;
 
-			_unitname = format ["%1. ", [ _selectedmember ] call F_getUnitPositionId];
+			_unitname = format ["%1. ", [ _selectedmember ] call KPLIB_fnc_getUnitPositionId];
 			if(isPlayer _selectedmember) then {
 				if ( count (squadParams _selectedmember ) != 0) then {
 					_unitname = "[" + ((squadParams _selectedmember select 0) select 0) + "] ";
@@ -176,7 +176,7 @@ while { dialog && alive player } do {
 
 		if ( GRLIB_squadaction == 1 ) then {
 
-			_nearfob = [ getpos _selectedmember ] call F_getNearestFob;
+			_nearfob = [ getpos _selectedmember ] call KPLIB_fnc_getNearestFob;
 			_fobdistance = 9999;
 			if ( count _nearfob == 3 ) then {
 				_fobdistance = _selectedmember distance _nearfob;
@@ -188,7 +188,7 @@ while { dialog && alive player } do {
 
 				_tempgmp = createGroup [GRLIB_side_friendly, true];
 				(typeof _selectedmember) createUnit [ markers_reset, _tempgmp,''];
-				[ (units _tempgmp) select 0, _selectedmember ] call F_swapInventory;
+				[ (units _tempgmp) select 0, _selectedmember ] call KPLIB_fnc_swapInventory;
 				deleteVehicle ((units _tempgmp) select 0);
 				_selectedmember setDamage 0;
 
@@ -210,7 +210,7 @@ while { dialog && alive player } do {
 			closeDialog 0;
 
 			if ( primaryWeapon player == "" && secondaryWeapon player == "" ) then {
-				[ _selectedmember, player ] call F_swapInventory;
+				[ _selectedmember, player ] call KPLIB_fnc_swapInventory;
 			};
 
 			_destpos = getposATL _selectedmember;
