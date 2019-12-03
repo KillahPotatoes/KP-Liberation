@@ -2,35 +2,23 @@
     File: fn_getFobName.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2019-11-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the FOB name in accordance to the military alphabet set in init presets.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _fob - Position of FOB to get the name from [POSITION, defaults to [0, 0, 0]]
 
     Returns:
-        Function reached the end [BOOL]
+        FOB name [STRING]
 */
-// TODO
-params [ "_fob" ];
-private [ "_fobindex", "_currentidx", "_fobname" ];
 
-_fobname = "";
-_fobindex = -1;
-_currentidx = 0;
-{
-    if ( _x distance _fob < 100 ) then {
-        _fobindex = _currentidx;
-    };
-    _currentidx = _currentidx + 1;
-} foreach GRLIB_all_fobs;
+params [
+    ["_fob", [0, 0, 0], [[]], [2, 3]]
+];
 
-_fobname = "";
-if ( _fobindex != -1 ) then {
-    _fobname = military_alphabet select _fobindex;
-};
+private _i = GRLIB_all_fobs findIf {(_x distance2d _fob) < 100};
 
-_fobname
+[military_alphabet select _i, ""] select (_i isEqualTo -1)
