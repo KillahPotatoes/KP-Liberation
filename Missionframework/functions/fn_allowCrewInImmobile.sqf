@@ -19,6 +19,8 @@ params [
     ["_vehicle", objNull, [objNull]]
 ];
 
+if (isNull _vehicle) exitWith {["Null object given"] call BIS_fnc_error; false};
+
 // KP_liberation_allowEnemiesInImmobile (0-50-100)
 _vehicle allowCrewInImmobile (random 100 < KP_liberation_allowEnemiesInImmobile);
 
