@@ -33,7 +33,7 @@ localize "STR_BUILD7",
 localize "STR_BUILD8"
 ];
 
-_nearfob = [] call F_getNearestFob;
+_nearfob = [] call KPLIB_fnc_getNearestFob;
 _actual_fob = KP_liberation_fob_resources select {((_x select 0) distance _nearfob) < GRLIB_fob_range};
 
 while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
@@ -127,7 +127,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 			((_build_item select 2 == 0 ) || ((_build_item select 2) <= ((_actual_fob select 0) select 2))) &&
 			((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
 		) then {
-			if (((_build_item select 0) in KP_liberation_friendly_air_classnames) && !([_build_item select 0] call F_isClassUAV)) then {
+			if (((_build_item select 0) in KP_liberation_friendly_air_classnames) && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
 				if (KP_liberation_air_vehicle_building_near &&
 					((((_build_item select 0) isKindOf "Helicopter") && (KP_liberation_heli_count < KP_liberation_heli_slots)) ||
 					(((_build_item select 0) isKindOf "Plane") && (KP_liberation_plane_count < KP_liberation_plane_slots)))
