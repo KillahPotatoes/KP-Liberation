@@ -63,7 +63,6 @@ class KPLIB
         class setFuel                   {};
         class setLoadableViV            {};
         class setLoadout                {};
-        class setMass                   {};
         class sortStorage               {};
         class spawnBuildingSquad        {};
         class spawnCivilians            {};
