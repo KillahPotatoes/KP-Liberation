@@ -10,7 +10,7 @@ private _range = 40;
 while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
 
     if !(_sector isEqualTo "") then {
-        _ratio = [_sector] call KPLIB_fnc_getForceRatio;
+        _ratio = [_sector] call KPLIB_fnc_getBluforRatio;
     };
 
     _range = floor (linearConversion [0, 1, _ratio, 0, GRLIB_capture_size / 3 * 2, true]);

@@ -216,7 +216,7 @@ while { true } do {
 				if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
 				"zone_capture" setmarkercolorlocal _colorzone;
 
-				_ratio = [_nearest_active_sector] call KPLIB_fnc_getForceRatio;
+				_ratio = [_nearest_active_sector] call KPLIB_fnc_getBluforRatio;
 				_barwidth = 0.084 * safezoneW * _ratio;
 				_bar = (uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (244);
 				_bar ctrlSetPosition [(ctrlPosition _bar) select 0,(ctrlPosition _bar) select 1,_barwidth,(ctrlPosition _bar) select 3];

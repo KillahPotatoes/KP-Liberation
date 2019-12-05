@@ -20,9 +20,9 @@ class KPLIB
         class fillStorage               {};
         class forceBluforCrew           {};
         class getAdaptiveVehicle        {};
+        class getBluforRatio            {};
         class getCommander              {};
         class getFobName                {};
-        class getForceRatio             {};
         class getGroupType              {};
         class getLessLoadedHC           {};
         class getLoadout                {};
