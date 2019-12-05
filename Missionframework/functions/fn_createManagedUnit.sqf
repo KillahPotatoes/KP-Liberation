@@ -2,7 +2,7 @@
     File: fn_createManagedUnit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-10-04
-    Last Update: 2019-12-03
+    Last Update: 2019-12-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -18,10 +18,10 @@
     Returns:
         Created unit [OBJECT]
 */
-// TODO
+
 params [
     ["_type", "", [""]],
-    ["_spawnPos", [0,0,0], [[], objNull, grpNull], [2,3]],
+    ["_spawnPos", [0, 0, 0], [[], objNull, grpNull], [2, 3]],
     ["_group", grpNull, [grpNull]],
     ["_rank", "PRIVATE", [""]],
     ["_placement", 0, [0]]

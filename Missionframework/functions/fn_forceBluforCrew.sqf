@@ -2,7 +2,7 @@
     File: fn_forceBluforCrew.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-03
+    Last Update: 2019-12-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -19,6 +19,8 @@
 params [
     ["_veh", objNull, [objNull]]
 ];
+
+if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 // Create regular config crew
 private _grp = createVehicleCrew _veh;
