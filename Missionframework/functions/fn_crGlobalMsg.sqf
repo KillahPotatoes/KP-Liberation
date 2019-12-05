@@ -2,20 +2,24 @@
     File: fn_crGlobalMsg.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
         No description added yet.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _msgType    - Type of message to display                    [NUMBER, defaults to -1]
+        _data       - Data which is needed in the selected msgType  [ARRAY, defaults to []]
 
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
-params ["_msgType",["_data",[]]];
+
+params [
+    ["_msgType", -1, [0]],
+    ["_data", [], []]
+];
 
 if (KP_liberation_civrep_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVREP] globalMsg called on: %1 - Parameters: [%2, %3]", debug_source, _msgType, _data];_text remoteExec ["diag_log",2];};
 
@@ -28,3 +32,5 @@ switch (_msgType) do {
     case 5: {["lib_asymm_guerilla_incoming", _data] call BIS_fnc_showNotification;};
     default {private _text = format ["[KP LIBERATION] [ERROR] [CIVREP] globalMsg without valid msgType"];_text remoteExec ["diag_log",2];};
 };
+
+true
