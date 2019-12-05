@@ -2,25 +2,27 @@
     File: fn_getNearestFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the nearest FOB position to given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos - Position to find the nearest FOB from [POSITION, defaults to getPos player]
 
     Returns:
-        Function reached the end [BOOL]
+        Nearest FOB position [POSITION]
 */
-// TODO
-params [["_source_position", (getpos player)]];
 
-private _retvalue = [];
+params [
+    ["_pos", getPos player, [[]], [2, 3]]
+];
 
-if (count GRLIB_all_fobs > 0) then {
-    _retvalue = ([ GRLIB_all_fobs, [], {_source_position distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0;
+if !(GRLIB_all_fobs isEqualTo []) then {
+    private _fobs = GRLIB_all_fobs apply {[_pos distance2d _x, _x]};
+    _fobs sort true;
+    (_fobs select 0) select 1
+} else {
+    []
 };
-
-_retvalue
