@@ -2,7 +2,7 @@
     File: fn_setFobMass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-02
-    Last Update: 2019-12-03
+    Last Update: 2019-12-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -16,14 +16,20 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
-params ["_box"];
+
+params [
+    ["_box", objNull, [objNull]]
+];
+
+if (isNull _object) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 private _boxMass = getNumber(configFile >> "CfgVehicles" >> huron_typename >> "slingLoadMaxCargoMass") - 100;
-if(_boxMass < 1000) then {
-    _boxMass = 1000;
+_boxMass = 1000 max (_boxMass min 3000);
+
+if (local _box) then {
+    _box setMass _boxMass;
 } else {
-    if(_boxMass > 3000) then {_boxMass = 3000;};
+    [_box, _boxMass] remoteExec ["setMass", _box];
 };
 
-[_box, _boxMass] remoteExec ["KPLIB_fnc_setMass",_box];
+true
