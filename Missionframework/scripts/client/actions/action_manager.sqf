@@ -37,7 +37,7 @@ private _nearfob = [] call KPLIB_fnc_getNearestFob;
 private _fobdistance = 9999;
 private _nearest_sector = [GRLIB_fob_range] call KPLIB_fnc_getNearestSector;
 private _prod_sector = [];
-private _directAccess = (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {[] call KPLIB_fnc_isAdmin};
+private _directAccess = (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"};
 
 while {true} do {
 

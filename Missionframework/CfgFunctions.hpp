@@ -50,7 +50,6 @@ class KPLIB
         class getVirtualCargo           {};
         class getWeaponComponents       {};
         class hasPermission             {};
-        class isAdmin                   {};
         class isBigtownActive           {};
         class isClassUAV                {};
         class isRadio                   {};

@@ -1,3 +1,4 @@
+// TODO
 [] call compileFinal preprocessFileLineNumbers "whitelist.sqf";
 
 if ( !GRLIB_use_whitelist ) exitWith {};
@@ -9,7 +10,7 @@ sleep 1;
 
 _commanderobj = [] call KPLIB_fnc_getCommander;
 if ( !isNull _commanderobj ) then {
-	if ( player == _commanderobj && !([] call KPLIB_fnc_isAdmin)) then {
+	if ( player == _commanderobj && !(serverCommandAvailable "#kick")) then {
 
 		_tagmatch = false;
 		_idmatch = false;
