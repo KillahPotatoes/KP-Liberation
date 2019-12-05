@@ -2,78 +2,49 @@
     File: fn_getGroupType.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-03
+    Last Update: 2019-12-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the type of a given group.
+        Can be infantry, light, heavy, air, support, static or UAV.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _grp - Group to get the type from [GROUP, defaults to grpNull]
 
     Returns:
-        Function reached the end [BOOL]
+        Group type [STRING]
 */
-// TODO
-params [ "_grp" ];
-private [ "_grouptype", "_vehicletype" ];
 
-_grouptype = 'infantry';
-_vehicletype = '';
+params [
+    ["_grp", grpNull, [grpNull]]
+];
+
+if (isNull _grp) exitWith {["Null group given"] call BIS_fnc_error; ""};
+
+private _grpType = "infantry";
+private _vehType = "";
+
+// Get vehicle type, if at least one group member is in a crew seat
+private _parent = objNull;
 {
-    if ( vehicle _x != _x && _vehicletype == '' ) then {
-        if ( ((gunner vehicle _x) == _x) || ((driver  vehicle _x) == _x) || ((commander vehicle _x) == _x) ) then {
-            _vehicletype = typeof vehicle _x;
-        };
+    _parent = objectParent _x;
+    if (!(isNull _parent) && {_x in [driver _parent, gunner _parent, commander _parent]}) exitWith {
+        _vehType = typeOf (objectParent _x);
     };
-} foreach units _grp;
+} forEach (units _grp);
 
-if ((_grouptype == 'infantry') && (_vehicletype != '')) then {
+// Exit with infantry, if not as crew in objectParent
+if (_vehType isEqualTo "") exitWith {_grpType};
 
-    {
-        if  ( _vehicletype == (_x select 0)) then {
-            _grouptype = 'heavy';
-        };
-    } foreach heavy_vehicles;
-
-    if ( _grouptype == 'infantry' ) then {
-        {
-            if  ( _vehicletype == (_x select 0)) then {
-                _grouptype = 'air';
-            };
-        } foreach air_vehicles;
-    };
-
-    if ( _grouptype == 'infantry' ) then {
-        {
-            if  ( _vehicletype == (_x select 0)) then {
-                _grouptype = 'light';
-            };
-        } foreach light_vehicles;
-    };
-
-
-    if ( _grouptype == 'infantry' ) then {
-        {
-            if  ( _vehicletype == (_x select 0)) then {
-                _grouptype = 'support';
-            };
-        } foreach support_vehicles;
-    };
-
-    if ( _grouptype == 'infantry' ) then {
-        {
-            if  ( _vehicletype == (_x select 0)) then {
-                _grouptype = 'static';
-            };
-        } foreach static_vehicles;
-    };
-
-    // Check if vehicle config says it's an UAV, if it is always set its _grouptype to 'uav'
-    if ( (_vehicletype call KPLIB_fnc_isClassUAV) ) then {
-        _grouptype = 'uav';
-    };
-
+// Otherwise continue to get the type of the vehicle
+[] call {
+    if (_vehType in (light_vehicles apply {_x select 0})) exitWith {_grpType = "light";};
+    if (_vehType in (air_vehicles apply {_x select 0})) exitWith {_grpType = "air";};
+    if (_vehType in (heavy_vehicles apply {_x select 0})) exitWith {_grpType = "heavy";};
+    if (_vehType in (support_vehicles apply {_x select 0})) exitWith {_grpType = "support";};
+    if (_vehType in (static_vehicles apply {_x select 0})) exitWith {_grpType = "static";};
+    if ([_vehType] call KPLIB_fnc_isClassUAV) exitWith {_grpType = "uav";};
 };
 
-_grouptype
+_grpType
