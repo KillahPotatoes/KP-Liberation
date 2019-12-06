@@ -2,24 +2,30 @@
     File: fn_getNearestSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the marker of the nearest sector from given position inside given radius.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _radius - Radius in which to look for the nearest sector    [NUMBER, defaults to 1000]
+        _pos    - Position to look from for the nearest sector      [POSITION, defaults to getPos player]
 
     Returns:
-        Function reached the end [BOOL]
+        Marker of nearest sector [STRING]
 */
-// TODO
-params ["_limit", ["_postosearch", getpos player]];
 
-private _sector_to_return = "";
-private _close_sectors = sectors_allSectors select {(markerPos _x) distance _postosearch < _limit};
-private _close_sectors_sorted = [_close_sectors, [_postosearch, _limit], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy;
-if (count _close_sectors_sorted > 0) then {_sector_to_return = _close_sectors_sorted select 0;};
+params [
+    ["_radius", 1000, [0]],
+    ["_pos", getPos player, [[]], [2, 3]]
+];
 
-_sector_to_return;
+private _sectors = sectors_allSectors select {((_markerPos _x) distance2d _pos) < _radius};
+
+if (_sectors isEqualTo []) exitWith {""};
+
+_sectors = _sectors apply {[(markerPos _x) distance2d _pos, _x]};
+_sectors sort true;
+
+(_sectors select 0) select 1
