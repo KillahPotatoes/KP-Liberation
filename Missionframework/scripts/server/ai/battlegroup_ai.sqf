@@ -7,7 +7,7 @@ if (isNil "reset_battlegroups_ai") then {reset_battlegroups_ai = false};
 
 sleep (5 + (random 5));
 
-private _objPos = ([getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective) select 0;
+private _objPos = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
 
 [_objPos] remoteExec ["remote_call_incoming"];
 

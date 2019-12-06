@@ -46,7 +46,7 @@ if !(_spawn_marker isEqualTo "") then {
 
         if ((_x in opfor_troup_transports) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap)) then {
             if (_vehicle isKindOf "Air") then {
-                [([markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective) select 0, _vehicle] spawn send_paratroopers;
+                [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective, _vehicle] spawn send_paratroopers;
             } else {
                 [_vehicle] spawn troup_transport;
             };
@@ -56,7 +56,7 @@ if !(_spawn_marker isEqualTo "") then {
     } forEach _selected_opfor_battlegroup;
 
     if (GRLIB_csat_aggressivity > 0.9) then {
-        [([markerpos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective) select 0] spawn spawn_air;
+        [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
     };
 
     sleep 5;
