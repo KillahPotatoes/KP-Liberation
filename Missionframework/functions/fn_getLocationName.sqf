@@ -2,27 +2,27 @@
     File: fn_getLocationName.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-03
+    Last Update: 2019-12-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the name of the nearest FOB/sector from given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos - Position to get the location name from [POSITION, defaults to [0, 0, 0]]
 
     Returns:
-        Function reached the end [BOOL]
+        Location name [STRING]
 */
-// TODO
-params [ "_attacked_position" ];
-private [ "_attacked_string" ];
 
-_attacked_string = [_attacked_position] call KPLIB_fnc_getFobName;
-if ( _attacked_string == "" ) then {
-    _attacked_string = markerText  ( [50, _attacked_position ] call KPLIB_fnc_getNearestSector );
+params [
+    ["_pos", [0, 0, 0], [[]], [2, 3]]
+];
+
+private _name = [_pos] call KPLIB_fnc_getFobName;
+
+if (_name isEqualTo "") then {
+    markerText ([50, _pos] call KPLIB_fnc_getNearestSector)
 } else {
-    _attacked_string = format [ "FOB %1", _attacked_string ];
+    ["FOB", _name] joinString " "
 };
-
-_attacked_string
