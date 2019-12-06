@@ -2,34 +2,29 @@
     File: fn_getNearestTower.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets nearest radio tower marker occupied by given side inside given radius from given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos    - Position from which to look for the nearest radio tower   [POSITION, defaults to [0, 0, 0]]
+        _side   - Side of owner for nearest radio tower                     [SIDE, defaults to GRLIB_side_enemy]
+        _radius - Radius in which to look for the nearest radio tower       [NUMBER, defaults to 1000]
 
     Returns:
-        Function reached the end [BOOL]
+        Marker of nearest radio tower [STRING]
 */
-// TODO
-params [ "_postosearch", "_side", "_limit" ];
-private [ "_sector_to_return", "_sectors_to_search", "_sectors_to_search_sorted"];
 
-_sector_to_return = '';
-_sectors_to_search = [];
-waitUntil {!isNil "blufor_sectors"};
-if ( _side == GRLIB_side_enemy ) then {
-    _sectors_to_search = (sectors_tower - blufor_sectors);
-} else {
-    _sectors_to_search = blufor_sectors select {_x in sectors_tower};
-};
+params [
+    ["_pos", [0, 0, 0], [[]], [2, 3]],
+    ["_side", GRLIB_side_enemy, [sideEmpty]],
+    ["_radius", 1000, [0]]
+];
 
-_sectors_to_search = _sectors_to_search select {(markerPos _x) distance _postosearch < _limit};
+private _towers = [sectors_tower select {_x in blufor_sectors}, sectors_tower - blufor_sectors] select (_side == GRLIB_side_enemy);
+_towers = (_towers apply {[(markerPos _x) distance2d _pos, _x]}) select {(_x select 0) <= _radius};
+_towers sort true;
 
-_sectors_to_search_sorted = [ _sectors_to_search , [_postosearch] , { (markerPos _x) distance _input0 } , 'ASCEND' ] call BIS_fnc_sortBy;
-if ( count _sectors_to_search_sorted > 0 ) then { _sector_to_return = _sectors_to_search_sorted select 0; } else { _sector_to_return = '' };
-
-_sector_to_return;
+(_towers select 0) select 1
