@@ -2,31 +2,36 @@
     File: fn_getMilitaryId.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-09-14
-    Last Update: 2019-12-03
+    Last Update: 2019-12-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
         Converts a number to an ID string.
 
     Parameter(s):
-        _count - ID number to convert [NUMBER, defaults to 0]
+        _number - ID number to convert (starts with 0 as first character) [NUMBER, defaults to -1]
 
     Returns:
         Military ID [STRING]
 */
-// TODO
-params ["_count"];
-private _level = 0;
-private _return = "";
 
-for [{_i = (count military_alphabet)}, {(_count + 1) > _i}, {_i = _i + (count military_alphabet)}] do {
-    _level = _level + 1;
+params [
+    ["_number", -1, [0]]
+];
+
+if (_number isEqualTo -1) exitWith {["No valid number given"] call BIS_fnc_error; ""};
+
+_number = _number + 1;
+private _return = [];
+private _alphabetCount = count military_alphabet;
+private _remain = 0;
+
+while {_number > 0} do {
+    _remain = _number % _alphabetCount;
+    _number = floor (_number / _alphabetCount);
+    _return append [_remain - 1];
 };
 
-if (_level == 0) then {
-    _return = military_alphabet select _count;
-} else {
-    _return = format ["%1 %2", [(_level - 1)] call KPLIB_fnc_getMilitaryId, [(_count - (_level * (count military_alphabet)))] call KPLIB_fnc_getMilitaryId];
-};
+reverse _return;
 
-_return
+(_return apply {military_alphabet select _x}) joinString " "
