@@ -2,50 +2,27 @@
     File: fn_getNearestBluforObjective.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the position of the nearest blufor sector/fob from given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos - Position to check for nearest blufor sector/fob [POSITION, defaults to [0, 0, 0]]
 
     Returns:
-        Function reached the end [BOOL]
+        Nearest blufor sector/fob position [POSITION]
 */
-// TODO
-params ["_startpos"];
 
-private _currentnearest = [];
-private _refdistance = 99999;
-private _tpositions = [];
+params [
+    ["_pos", [0, 0, 0], [[]], [2, 3]]
+];
 
-if (count GRLIB_all_fobs != 0 || count blufor_sectors != 0) then {
+if (GRLIB_all_fobs isEqualTo [] && blufor_sectors isEqualTo []) exitWith {[]}
 
-    {_tpositions pushback _x;} foreach GRLIB_all_fobs;
+private _objectives = GRLIB_all_fobs + (blufor_sectors apply {markerPos _x});
+_objectives = _objectives apply {[_x distance2d _pos, _x]};
+_objectives sort true;
 
-    {
-        if (_startpos distance _x < _refdistance) then {
-            _refdistance = (_startpos distance _x);
-            _currentnearest = [_x,_refdistance];
-        };
-    } forEach _tpositions;
-
-    if (_refdistance > 4000) then {
-        {
-            _tpositions pushback (markerpos _x);
-        } forEach blufor_sectors;
-
-        {
-            if (_startpos distance _x < _refdistance) then {
-                _refdistance = (_startpos distance _x);
-                _currentnearest = [_x,_refdistance];
-            };
-        } forEach _tpositions;
-    };
-} else {
-    _currentnearest = _startpos;
-};
-
-_currentnearest
+(_objectives select 0) select 1
