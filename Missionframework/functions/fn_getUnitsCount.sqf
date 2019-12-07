@@ -2,24 +2,30 @@
     File: fn_getUnitsCount.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Gets the amount of units of given side inside given radius of given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos - Description [POSITION, defaults to [0, 0, 0]
+        _radius - Description [NUMBER, defaults to 100]
+        _side - Description [SIDE, defaults to GRLIB_side_friendly]
 
     Returns:
-        Function reached the end [BOOL]
+        Amount of units [NUMBER]
 */
-// TODO
-params ["_position", "_distance", "_side"];
 
-private _infantrycount = _side countSide ((_position nearEntities ["Man", _distance]) select {!(captive _x) && ((getpos _x) select 2 < 100)});
-private _countedvehicles =  (_position nearEntities [["Car", "Tank", "Air"], _distance]) select {((getpos _x) select 2 < 750) && count (crew _x) > 0};
-private _vehiclecrewcount = 0;
-{_vehiclecrewcount = _vehiclecrewcount + (_side countSide (crew _x))} forEach _countedvehicles;
+params [
+    ["_pos", [0, 0, 0], [[]], [2, 3]],
+    ["_radius", 100, [0]],
+    ["_side", GRLIB_side_friendly, [sideEmpty]]
+];
 
-(_infantrycount + _vehiclecrewcount)
+private _amount = _side countSide ((_pos nearEntities ["Man", _radius]) select {!(captive _x) && ((getpos _x) select 2 < 100)});
+{
+    _amount = _amount + (_side countSide (crew _x));
+} forEach ((_pos nearEntities [["Car", "Tank", "Air"], _radius]) select {((getpos _x) select 2 < 750) && count (crew _x) > 0});
+
+_amount
