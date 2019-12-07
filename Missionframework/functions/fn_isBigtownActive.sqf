@@ -2,25 +2,17 @@
     File: fn_isBigtownActive.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2019-12-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Checks if a bigtown (capital) is currently activated.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        NONE
 
     Returns:
-        Function reached the end [BOOL]
+        Bigtown currently activated [BOOL]
 */
-// TODO
-private _is_bigtown_active = false;
 
-if (!isNil "active_sectors") then {
-    {
-        if (_x in sectors_bigtown) exitWith {_is_bigtown_active = true};
-    } forEach active_sectors;
-};
-
-_is_bigtown_active
+(activte_sectors findIf {_x in sectors_bigtown}) != -1
