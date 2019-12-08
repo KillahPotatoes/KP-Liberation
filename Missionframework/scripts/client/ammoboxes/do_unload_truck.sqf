@@ -22,13 +22,13 @@ if ( _truck_to_unload getVariable ["GRLIB_ammo_truck_load", 0] > 0 ) then {
 		_next_box setDamage 0;
 		_offset = _offset - 2.2;
 		sleep 0.5;
-		[_next_box, true] remoteExec ["KPLIB_fnc_protectObject"];
+		[_next_box] remoteExec ["KPLIB_fnc_protectObject"];
 		[_next_box, true] remoteExec ["enableRopeAttach"];
 	} foreach ( attachedObjects _truck_to_unload);
 
 	sleep 0.5;
 
-	[_truck_to_unload, true] remoteExec ["KPLIB_fnc_protectObject"];
+	[_truck_to_unload] remoteExec ["KPLIB_fnc_protectObject"];
 
 	hint localize "STR_BOX_UNLOADED";
 	uiSleep 2;
