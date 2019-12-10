@@ -55,11 +55,9 @@ class KPLIB
         class isRadio                   {};
         class potatoScan                {};
         class protectObject             {};
-        class rearmVehicle              {};
         class removeWeaponCargo         {};
         class secondsToTimer            {};
         class setFobMass                {};
-        class setFuel                   {};
         class setLoadableViV            {};
         class setLoadout                {};
         class sortStorage               {};
