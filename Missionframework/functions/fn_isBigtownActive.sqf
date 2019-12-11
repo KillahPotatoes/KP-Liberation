@@ -2,7 +2,7 @@
     File: fn_isBigtownActive.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-07
+    Last Update: 2019-12-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -15,4 +15,4 @@
         Bigtown currently activated [BOOL]
 */
 
-(activte_sectors findIf {_x in sectors_bigtown}) != -1
+(active_sectors findIf {_x in sectors_bigtown}) != -1
