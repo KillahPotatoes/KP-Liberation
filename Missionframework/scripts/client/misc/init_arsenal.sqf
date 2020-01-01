@@ -26,6 +26,24 @@ if (KP_liberation_arsenalUsePreset) then {
 		KP_liberation_allowed_items append GRLIB_arsenal_weapons;
 	};
 
+	// Support for CBA disposable launchers, https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
+	if (isClass (configFile >> "cfgPatches" >> "cba_disposable")) then {
+		private _disposableLaunchers = ["CBA_FakeLauncherMagazine"];
+		{
+			private _loadedLauncher = cba_disposable_LoadedLaunchers getVariable _x;
+			if (!isNil "_loadedLauncher") then {
+				_disposableLaunchers pushBack _loadedLauncher;
+			};
+
+			private _normalLauncher = cba_disposable_NormalLaunchers getVariable _x;
+			if (!isNil "_normalLauncher") then {
+				_normalLauncher params ["_loadedLauncher"];
+				_disposableLaunchers pushBack _loadedLauncher;
+			};
+		} forEach KP_liberation_allowed_items;
+		KP_liberation_allowed_items append _disposableLaunchers;
+	};
+
 	if ((count GRLIB_arsenal_magazines) == 0) then {
 		if ((count blacklisted_from_arsenal) == 0) then {
 			_virtualMagazines = _virtualCargo select 1;
