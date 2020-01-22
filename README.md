@@ -42,7 +42,7 @@ The area has fallen to the enemy, and it is up to you to take it back. Embark on
 ## Needed Mods
 These mods are needed if you want to use the prepackaged missionfiles from the release tab or Steam Workshop.
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
-* Al Rayak
+* Al Rayak (pja310)
     * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
     * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
     * [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
@@ -186,6 +186,29 @@ class Missions
 [![Gameplay](http://img.youtube.com/vi/ULSxjp8cIUM/0.jpg)](https://www.youtube.com/watch?v=ULSxjp8cIUM)
 
 ## Changelog
+
+### 0.96.7 (TBD)
+* Added: Mines and explosives will be saved around FOBs.
+* Added: Inheritance support to object inits. (3rd array element, bool)
+* Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Save interval setting in config file.
+* Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
+* Added: Applied mission parameters are logged in server rpt.
+* Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
+* Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
+* Tweaked: Default blacklist now only holds the static and tent backpacks.
+* Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
+* Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
+* Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
+* Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
+* Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
+* Fixed: Object inits will fire on units not only vehicles.
+* Fixed: Objects will be recyclable after being towed with Advanced Towing.
+* Fixed: Flickering/disappearing of mobile respawn.
+* Fixed: Error message when trying to build a sector storage on water didn't vanished.
+* Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
+* Fixed: Support for CBA disposable launchers. Thanks to [Dahlgren](https://github.com/Dahlgren)
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
