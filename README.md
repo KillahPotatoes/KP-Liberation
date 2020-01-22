@@ -194,6 +194,8 @@ class Missions
 * Added: Save interval setting in config file.
 * Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
 * Added: Applied mission parameters are logged in server rpt.
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) basefile. Thanks to [Eogos](https://github.com/Eogos)
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Tweaked: Default blacklist now only holds the static and tent backpacks.
