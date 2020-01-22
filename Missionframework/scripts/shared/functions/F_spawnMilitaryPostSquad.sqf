@@ -9,13 +9,14 @@ if (count _allposts > 0) then {
 	{
 		private _building_positions = [_x] call BIS_fnc_buildingPositions;
 		private _unitclasspost = opfor_marksman;
-		nextunit_post = objNull;
+
 		if (random 100 > 60) then {
 			_unitclasspost = opfor_machinegunner;
 		};
-		_unitclasspost createUnit [_squadpos, _grp, "nextunit_post = this; this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]"];
-		nextunit_post setdir (180 + (getdir _x));
-		nextunit_post setpos (_building_positions select 1);
+
+		private _nextunit_post = [_unitclasspost, _squadpos, _grp] call F_createManagedUnit;
+		_nextunit_post setdir (180 + (getdir _x));
+		_nextunit_post setpos (_building_positions select 1);
 
 	} forEach _allposts;
 

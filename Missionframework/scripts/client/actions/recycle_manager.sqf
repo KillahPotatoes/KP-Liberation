@@ -29,7 +29,12 @@ while {true} do {
             ((typeOf _x) in KP_liberation_upgrade_buildings) ||
             ((typeOf _x) in KP_liberation_ace_crates)) &&
             (alive _x) &&
-            ((count(attachedObjects _x) == 0) || ((typeOf _x) == "rhsusf_mkvsoc")) &&
+            (
+                // ignore null objects left by Advanced Towing
+                // see https://github.com/sethduda/AdvancedTowing/pull/46
+                (((attachedObjects _x) select {!isNull _X}) isEqualTo [])
+                || ((typeOf _x) == "rhsusf_mkvsoc")
+            ) &&
             (_x distance startbase > 1000) &&
             (_x distance ( [] call F_getNearestFob) < GRLIB_fob_range) &&
             (getObjectType _x >= 8)

@@ -33,12 +33,19 @@ waitUntil {!isNil "one_eco_done"};
 waitUntil {one_synchro_done};
 waitUntil {one_eco_done};
 
+private _nearfob = [] call F_getNearestFob;
+private _fobdistance = 9999;
+private _nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
+private _prod_sector = [];
+private _directAccess = (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call F_getCommander)} || {[] call F_isAdmin};
+
 while {true} do {
 
-    private _nearfob = [] call F_getNearestFob;
-    private _fobdistance = 9999;
-    private _nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
-    private _prod_sector = [];
+    _nearfob = [] call F_getNearestFob;
+    _fobdistance = 9999;
+    _nearest_sector = [GRLIB_fob_range] call F_getNearestSector;
+    _prod_sector = [];
+
     {
         if ((_x select 1) == _nearest_sector) exitWith {_prod_sector = _x};
     } forEach KP_liberation_production;
@@ -123,7 +130,7 @@ while {true} do {
         };
     };
 
-    if (_fobdistance < _distfob && alive player && vehicle player == player && (([ player, 3] call F_fetchPermission) || (player == ([] call F_getCommander) || [] call F_isAdmin))) then {
+    if (_fobdistance < _distfob && alive player && vehicle player == player && (([ player, 3] call F_fetchPermission) || _directAccess)) then {
         if (_idact_build == -1) then {
             _idact_build = player addAction ["<t color='#FFFF00'>" + localize "STR_BUILD_ACTION" + "</t> <img size='2' image='res\ui_build.paa'/>","scripts\client\build\open_build_menu.sqf","",-985,false,true,"","build_confirmed == 0"];
         };
@@ -134,7 +141,7 @@ while {true} do {
         };
     };
 
-    if ((count _nearfobbox != 0) && (alive player) && (vehicle player == player) && !(surfaceIsWater getpos player) && ((player distance startbase) > 1000) && (([player, 3] call F_fetchPermission) || (player == ([] call F_getCommander) || [] call F_isAdmin)) && !FOB_build_in_progress) then {
+    if ((count _nearfobbox != 0) && (alive player) && (vehicle player == player) && !(surfaceIsWater getpos player) && ((player distance startbase) > 1000) && (([player, 3] call F_fetchPermission) || _directAccess) && !FOB_build_in_progress) then {
         if (_idact_buildfob == -1) then {
             _idact_buildfob = player addAction ["<t color='#FFFF00'>" + localize "STR_FOB_ACTION" + "</t> <img size='2' image='res\ui_deployfob.paa'/>","scripts\client\build\do_build_fob.sqf","",-990,false,true,"","build_confirmed == 0"];
         };
@@ -145,7 +152,7 @@ while {true} do {
         };
     };
 
-    if (_fobdistance < _distredeploy && alive player && vehicle player == player && (player == ([] call F_getCommander) || [] call F_isAdmin)) then {
+    if (_fobdistance < _distredeploy && alive player && vehicle player == player && _directAccess) then {
         if (_idact_repackage == -1) then {
             _idact_repackage = player addAction ["<t color='#FFFF00'>" + localize "STR_FOB_REPACKAGE" + "</t> <img size='2' image='res\ui_deployfob.paa'/>","scripts\client\actions\do_repackage_fob.sqf","",-991,false,true,"","build_confirmed == 0"];
         };
@@ -156,7 +163,7 @@ while {true} do {
         };
     };
 
-    if ((count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || (player distance startbase) < 200) && alive player && vehicle player == player && (([player, 5] call F_fetchPermission) || (player == ([] call F_getCommander) || [] call F_isAdmin))) then {
+    if ((count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || (player distance startbase) < 200) && alive player && vehicle player == player && (([player, 5] call F_fetchPermission) || _directAccess)) then {
         if (_idact_secondary == -1) then {
             _idact_secondary = player addAction ["<t color='#FFFF00'>" + localize "STR_SECONDARY_OBJECTIVES" + "</t>","scripts\client\ui\secondary_ui.sqf","",-992,false,true,"","build_confirmed == 0"];
         };
@@ -168,7 +175,7 @@ while {true} do {
     };
 
     if ((count _prod_sector) == 12) then {
-        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 0)) then {
+        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission || _directAccess) && ((count (_prod_sector select 3)) == 0)) then {
             if (_idact_sectorstorage == -1) then {
                 _idact_sectorstorage = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSTORAGEBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",[KP_liberation_small_storage_building, _prod_sector],-993,false,true,"","build_confirmed == 0"];
             };
@@ -178,7 +185,7 @@ while {true} do {
                 _idact_sectorstorage = -1;
             };
         };
-        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 4)) then {
+        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission || _directAccess) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 4)) then {
             if (_idact_supplyfacility == -1) then {
                 _idact_supplyfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECSUPPLYBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["supply", _prod_sector],-994,false,true,"","build_confirmed == 0"];
             };
@@ -188,7 +195,7 @@ while {true} do {
                 _idact_supplyfacility = -1;
             };
         };
-        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 5)) then {
+        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission || _directAccess) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 5)) then {
             if (_idact_ammofacility == -1) then {
                 _idact_ammofacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECAMMOBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["ammo", _prod_sector],-995,false,true,"","build_confirmed == 0"];
             };
@@ -198,7 +205,7 @@ while {true} do {
                 _idact_ammofacility = -1;
             };
         };
-        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 6)) then {
+        if (alive player && vehicle player == player && ([player, 3] call F_fetchPermission || _directAccess) && ((count (_prod_sector select 3)) == 3) && !(_prod_sector select 6)) then {
             if (_idact_fuelfacility == -1) then {
                 _idact_fuelfacility = player addAction ["<t color='#FFFF00'>" + localize "STR_SECFUELBUILD_ACTION" + "</t>","scripts\client\build\do_sector_build.sqf",["fuel", _prod_sector],-996,false,true,"","build_confirmed == 0"];
             };
@@ -238,7 +245,7 @@ while {true} do {
         };
     };
 
-    if (((_fobdistance < _distfob) || ((count _prod_sector) == 12)) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
+    if (((_fobdistance < _distfob) || ((count _prod_sector) == 12)) && _directAccess && alive player && vehicle player == player && ((count KP_liberation_production) > 0)) then {
         if (_idact_production == -1) then {
             _idact_production = player addAction ["<t color='#FF8000'>" + localize "STR_PRODUCTION_ACTION" + "</t>","scripts\client\commander\open_production.sqf","",-998,false,true,"","build_confirmed == 0"];
         };
@@ -250,7 +257,7 @@ while {true} do {
     };
 
     if (KP_liberation_ailogistics) then {
-        if ((_fobdistance < _distfob) && (player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && (((count GRLIB_all_fobs) + (count KP_liberation_production)) > 1)) then {
+        if ((_fobdistance < _distfob) && _directAccess && alive player && vehicle player == player && (((count GRLIB_all_fobs) + (count KP_liberation_production)) > 1)) then {
             if (_idact_logistic == -1) then {
                 _idact_logistic = player addAction ["<t color='#FF8000'>" + localize "STR_LOGISTIC_ACTION" + "</t>","scripts\client\commander\open_logistic.sqf","",-999,false,true,"","build_confirmed == 0"];
             };
@@ -262,7 +269,7 @@ while {true} do {
         };
     };
 
-    if ((player == ([] call F_getCommander) || [] call F_isAdmin) && alive player && vehicle player == player && GRLIB_permissions_param) then {
+    if (_directAccess && alive player && vehicle player == player && GRLIB_permissions_param) then {
         if (_idact_commander == -1) then {
             _idact_commander = player addAction ["<t color='#FF8000'>" + localize "STR_COMMANDER_ACTION" + "</t> <img size='2' image='\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa'/>","scripts\client\commander\open_permissions.sqf","",-1001,false,true,"","build_confirmed == 0"];
         };
@@ -284,7 +291,7 @@ while {true} do {
         };
     };
 
-    if (_fobdistance < _distfob && alive player && vehicle player == player && (player == ([] call F_getCommander) || [] call F_isAdmin)) then {
+    if (_fobdistance < _distfob && alive player && vehicle player == player && _directAccess) then {
         if (_idact_clearance == -1) then {
             _idact_clearance = player addAction [
                 "<t color='#FFFF00'>" + localize "STR_CLEARANCE_ACTION" + "</t>",

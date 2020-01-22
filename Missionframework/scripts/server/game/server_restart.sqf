@@ -1,18 +1,17 @@
 if (!isDedicated) exitWith {};
 
-private ["_serverDuration","_timeStart","_timeSinceStart","_shutdownSuccess","_timeUntilRestart","_30minspassed","_15minspassed","_5minspassed","_60secondspassed"];
-
 _serverDuration = (KP_liberation_restart * 60 * 60);
 
 diag_log format ["[KP LIBERATION] [RESTART] Restart Timer Set To %1", _serverDuration];
 
-_30minspassed = false;
-_15minspassed = false;
-_5minspassed = false;
-_60secondspassed = false;
+private _30minspassed = false;
+private _15minspassed = false;
+private _5minspassed = false;
+private _60secondspassed = false;
 
-_timeStart = diag_tickTime;
+private _timeStart = diag_tickTime;
 
+private ["_timeSinceStart","_timeUntilRestart"];
 while{true} do
 {
 	_timeSinceStart = diag_tickTime - _timeStart;
@@ -57,8 +56,8 @@ while{true} do
 		diag_log "[KP LIBERATION] [RESTART] Restart timeout elapsed, attempting server shutdown.";
 		sleep 5;
 
-		_myPass = call compile preprocessFileLineNumbers "\userconfig\restart\myPass.hpp";
-		_shutdownSuccess = _myPass serverCommand "#restart";//you can change with #restartserver if you want to restart the server process(Windows Dedicated Only).
+		private _myPass = call compile preprocessFileLineNumbers "\userconfig\restart\myPass.hpp";
+		private _shutdownSuccess = _myPass serverCommand (["#restart", "#restartserver"] select ((productVersion select 6) isEqualTo "Windows"));
 
 		if(_shutdownSuccess) then
 		{

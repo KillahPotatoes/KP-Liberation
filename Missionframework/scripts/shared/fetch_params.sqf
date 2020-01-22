@@ -1,7 +1,7 @@
 #include "defines.hpp"
 
 // Check if ACE is running
-if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply and weather scripts from Liberation."} else {KP_liberation_ace = false};
+if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply script from Liberation."} else {KP_liberation_ace = false};
 
 /* Not saveable params */
 GRLIB_param_wipe_savegame_1 = ["WipeSave1",0] call bis_fnc_getParamValue;
@@ -19,11 +19,26 @@ KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 if(isServer) then {
     /* Saveable params */
+    diag_log format ["[KP LIBERATION] [PARAM] ----- Server starts parameter initialization - time: %1", diag_ticktime];
+    switch (KP_load_params) do {
+        case 0: {
+            diag_log "[KP LIBERATION] [PARAM] Save/Load is set to SAVE";
+        };
+        case 1: {
+            diag_log "[KP LIBERATION] [PARAM] Save/Load is set to LOAD";
+        };
+        case 2: {
+            diag_log "[KP LIBERATION] [PARAM] Save/Load is set to USE SELECTED";
+        };
+        default {
+            diag_log "[KP LIBERATION] [PARAM] Save/Load has no valid value";
+        };
+    };
 
     // Deactivate BI Revive when ACE Medical is running
     if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
-        diag_log "[KP LIBERATION] ACE Medical detected. Deactivating BI Revive System."
+        diag_log "[KP LIBERATION] [PARAM] ACE Medical detected. Deactivating BI Revive System."
     } else {
         GET_PARAM(bis_reviveParam_mode, "ReviveMode", 1);
     };
@@ -40,7 +55,7 @@ if(isServer) then {
     GET_PARAM(GRLIB_time_factor, "DayDuration", 12);
     GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
     GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
-    GET_PARAM(GRLIB_civilian_activity, "civilians", 1);
+    GET_PARAM(GRLIB_civilian_activity, "Civilians", 1);
     GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
     GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
     GET_PARAM(GRLIB_csat_aggressivity, "Aggressivity", 2);
@@ -86,7 +101,7 @@ if(isServer) then {
     KP_serverParamsFetched = true;
     publicVariable "KP_serverParamsFetched";
 
-    diag_log "[KP LIBERATION] [PARAM] Server finished parameters initialization.";
+    diag_log format ["[KP LIBERATION] [PARAM] ----- Server finished parameter initialization - time: %1", diag_ticktime];
 };
 
 // Fix for not working float values in mission params

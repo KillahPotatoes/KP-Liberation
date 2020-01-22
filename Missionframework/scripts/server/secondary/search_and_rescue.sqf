@@ -17,10 +17,13 @@ _helofire setpos (getpos _helowreck);
 
 private _pilotsGrp = createGroup [GRLIB_side_enemy, true];
 private _pilotsPos = (getpos _helowreck) getPos [25, random 360];
-pilot_classname createUnit [ _pilotsPos, _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+
+[pilot_classname, _pilotsPos, _pilotsGrp, "PRIVATE", 0.5] call F_createManagedUnit;
 sleep 0.2;
-pilot_classname createUnit [_pilotsPos getPos [1, random 360], _pilotsGrp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+
+[pilot_classname, _pilotsPos getPos [1, random 360], _pilotsGrp, "PRIVATE", 0.5] call F_createManagedUnit;
 sleep 2;
+
 private _pilotUnits = units _pilotsGrp;
 {
 	[ _x, true ] spawn prisonner_ai;
@@ -36,7 +39,9 @@ private _patrolcorners = [
 	[ (getpos _helowreck select 0) - 40, (getpos _helowreck select 1) + 40, 0 ]
 ];
 
-{ _x createUnit [ _patrolcorners select 0, _grppatrol,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"]; } foreach (["army"] call F_getAdaptiveSquadComp);
+{
+	[_x, _patrolcorners select 0, _grppatrol, "PRIVATE", 0.5] call F_createManagedUnit;
+} foreach (["army"] call F_getAdaptiveSquadComp);
 
 while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
 {
@@ -56,7 +61,7 @@ private _grpsentry = createGroup [GRLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
-	opfor_sentry createUnit [_pilotsPos getPos [1, random 360], _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+	[opfor_sentry, _pilotsPos getPos [1, random 360], _grpsentry, "PRIVATE", 0.5] call F_createManagedUnit;
 };
 
 (leader _grpsentry) setDir (random 360);

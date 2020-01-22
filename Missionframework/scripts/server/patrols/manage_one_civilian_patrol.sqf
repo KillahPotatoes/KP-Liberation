@@ -26,7 +26,7 @@ while { GRLIB_endgame == 0 } do {
 		if ( random 100 < 33) then {
 			_civnumber = 1 + (floor (random 2));
 			while { count units _grp < _civnumber } do {
-				(selectRandom civilians) createUnit [ markerpos _spawnsector, _grp, "this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+				[selectRandom civilians, markerPos _spawnsector, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
 			};
 			_grpspeed = "LIMITED";
 		} else {
@@ -39,7 +39,7 @@ while { GRLIB_endgame == 0 } do {
 
 			_spawnpos = getpos _nearestroad;
 
-			(selectRandom civilians) createUnit [_spawnpos, _grp, "this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+			[selectRandom civilians, _spawnpos, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
 			_civveh = (selectRandom civilian_vehicles) createVehicle _spawnpos;
 			_civveh setpos _spawnpos;
 			_civveh addMPEventHandler ['MPKilled', {_this spawn kill_manager}];

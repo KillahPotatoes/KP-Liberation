@@ -30,7 +30,7 @@ while { GRLIB_endgame == 0 } do {
 		_grp = createGroup [GRLIB_side_enemy, true];
 		_squad = ["army"] call F_getAdaptiveSquadComp;
 		{
-			_x createUnit [_sector_spawn_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+			[_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
 		} foreach _squad;
 	} else {
 
