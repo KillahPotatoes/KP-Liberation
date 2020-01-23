@@ -7,8 +7,8 @@ function promisifySpawn(command: string, args?: string[], options?: SpawnOptions
     return new Promise<number>((resolve, reject) => {
         const process = spawn(command, args, options);
 
-        process.stdout.on( 'data', data => console.log(`stdout: ${data}`));
-        process.stderr.on( 'data', data => console.log(`stderr: ${data}`));
+        process.stdout.on( 'data', data => console.log(`${data}`));
+        process.stderr.on( 'data', data => console.error(`${data}`));
 
         process.on('close', code => {
             console.log( `child process exited with code ${code}` );
@@ -23,9 +23,10 @@ function promisifySpawn(command: string, args?: string[], options?: SpawnOptions
 
 export function uploadLegacy(itemId: string, path: string): Promise<number> {
     return promisifySpawn(BINARY, [
-        `--app ${ARMA_APPID}`,
-        `--item ${itemId}`,
-        `--path "${path}"`,
-        '--legacy'
+        `upload`,
+        `--app=${ARMA_APPID}`,
+        `--item=${itemId}`,
+        `--path=\"${path}\"`,
+        `--legacy`,
     ]);
 }
