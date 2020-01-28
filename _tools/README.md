@@ -10,6 +10,9 @@ nodejs version >=7.
 # Install dependencies
 npm install
 
+# Install gulp globally to prevent reinstallation every time
+npm install -g gulp
+
 # Run mission build
 npm run build
 
@@ -27,6 +30,7 @@ gulp <task_name>
 | build       | assembles missionfolder and sets config values |
 | pbo         | packs missionfolders into PBOs                 |
 | zip         | creates release ZIPs                           |
+| workshop    | uploads built PBOs to Steam workshop           |
 | __default__ | runs _build_, _pbo_ and _zip_                  |
 
 Build files will be outputted to `build/` dir.
