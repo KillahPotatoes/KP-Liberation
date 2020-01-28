@@ -26,7 +26,7 @@ export function uploadLegacy(itemId: string, path: string): Promise<number> {
         `upload`,
         `--app=${ARMA_APPID}`,
         `--item=${itemId}`,
-        `--path=\"${path}\"`,
+        `--path=${path}`,
         `--legacy`,
     ]);
 }
