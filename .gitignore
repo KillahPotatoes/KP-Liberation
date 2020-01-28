@@ -49,3 +49,7 @@ Temporary Items
 # Build directory
 _build/
 node_modules/
+
+# KP-Steam
+steam_appid.txt
+kp_steam*.log
