@@ -5,6 +5,7 @@
         "map": "Altis",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-        }
+        },
+        "workshopId": "1578389037"
     }
 ]
