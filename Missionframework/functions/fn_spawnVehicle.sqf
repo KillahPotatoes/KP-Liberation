@@ -2,76 +2,91 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2020-03-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Spawns a vehicle with all needed Liberation connections/dependencies.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos        - Position to spawn the vehicle                                         [POSITION, defaults to [0, 0, 0]]
+        _classname  - Classname of the vehicle to spawn                                     [STRING, defaults to ""]
+        _precise    - Selector if the vehicle should spawned precisely on given position    [BOOL, defaults to false]
+        _rndDir     - Selector if the direction should be randomized                        [BOOL, defaults to true]
 
     Returns:
-        Function reached the end [BOOL]
+        Spawned vehicle [OBJECT]
 */
-// TODO
+
 params [
-    "_sectorpos",
-    "_classname",
-    [ "_precise_position", false ],
-    [ "_random_rotate", true ]
+    ["_pos", [0, 0, 0], [[]], [2, 3]],
+    ["_classname", "", [""]],
+    ["_precise", false, [false]],
+    ["_rndDir", true, [false]]
 ];
+
+if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; objNull};
+if (_classname isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; objNull};
+if (!canSuspend) exitWith {_this spawn KPLIB_fnc_spawnVehicle};
 
 private _newvehicle = objNull;
 private _spawnpos = zeropos;
-private _grp = grpNull;
 
-if ( _precise_position ) then {
-    _spawnpos = [] + _sectorpos;
+if (_precise) then {
+    // Directly use given pos, if precise placement is true
+    _spawnpos = _pos;
 } else {
-    while { _spawnpos distance zeropos < 1000 } do {
-        _spawnpos = (_sectorpos getPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
-        if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
+    // Otherwise find a suitable position for vehicle spawning near given pos
+    private _i = 0;
+    while {_spawnpos distance2d zeropos < 100} do {
+        _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
+        if (_spawnpos isEqualTo []) then {_spawnpos = zeropos; _i = _i + 1;};
+        if (_i == 10) exitWith {["No suitable spawn position found near given position."] call BIS_fnc_error; objNull};
     };
 };
 
-_newvehicle = objNull;
-if ( _classname in opfor_choppers ) then {
+// If it's a chopper, spawn it flying
+if (_classname in opfor_choppers) then {
     _newvehicle = createVehicle [_classname, _spawnpos, [], 0, 'FLY'];
-    _newvehicle flyInHeight (100 + (random 200));
+    _newvehicle flyInHeight (80 + (random 120));
+    _newvehicle allowDamage false;
 } else {
     _newvehicle = _classname createVehicle _spawnpos;
-    [_newvehicle] call KPLIB_fnc_allowCrewInImmobile;
-    _newvehicle setpos _spawnpos;
-};
-_newvehicle allowdamage false;
+    _newvehicle allowDamage false;
 
-if(KP_liberation_clear_cargo) then {
+    [_newvehicle] call KPLIB_fnc_allowCrewInImmobile;
+
+    // Randomize direction and reset position and vector
+    if (_rndDir) then {
+        _newvehicle setDir (random 360);
+    };
+    _newvehicle setPos _spawnpos;
+    _newvehicle setVectorUp surfaceNormal position _newvehicle;
+};
+
+// Clear cargo, if enabled
+if (KP_liberation_clear_cargo) then {
     clearWeaponCargoGlobal _newvehicle;
     clearMagazineCargoGlobal _newvehicle;
     clearItemCargoGlobal _newvehicle;
     clearBackpackCargoGlobal _newvehicle;
 };
 
-if ( _classname in militia_vehicles ) then {
-    [ _newvehicle ] call KPLIB_fnc_spawnMilitiaCrew;
+// Spawn crew of vehicle
+if (_classname in militia_vehicles) then {
+    [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
-    _grp = createGroup [GRLIB_side_enemy, true];
-    createVehicleCrew _newvehicle;
-    (crew _newvehicle) joinSilent _grp;
-
+    private _grp = createGroup [GRLIB_side_enemy, true];
+    private _crew = units (createVehicleCrew _newvehicle);
+    _crew joinSilent _grp;
     sleep 0.1;
-    { _x addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach (crew _newvehicle);
+    {_x addMPEventHandler ['MPKilled', {_this spawn kill_manager}];} forEach _crew;
 };
 
+// Add killed EH and enable damage again
 _newvehicle addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
-if ( _random_rotate ) then {
-    _newvehicle setdir (random 360);
-};
-_newvehicle setVectorUp surfaceNormal position _newvehicle;
-
 sleep 0.1;
-_newvehicle allowdamage true;
-_newvehicle setdamage 0;
+_newvehicle allowDamage true;
+_newvehicle setDamage 0;
 
 _newvehicle
