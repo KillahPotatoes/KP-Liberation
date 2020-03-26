@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2019-12-03
+    Last Update: 2020-03-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -58,13 +58,7 @@ reverse _stored_crates;
     if (_unloaded) exitWith {
         _i = 0;
         {
-            _height = 0.6;
-            switch (typeOf _x) do {
-                case KP_liberation_supply_crate: {_height = 0.4;};
-                case KP_liberation_ammo_crate: {_height = 0.6;};
-                case KP_liberation_fuel_crate: {_height = 0.3;};
-                default {_height = 0.6;};
-            };
+            _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
             detach _x;
             _x attachTo [_storage, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
             _i = _i + 1;

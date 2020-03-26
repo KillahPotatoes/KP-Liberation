@@ -78,13 +78,7 @@ switch (_fac) do {
 
             private _i = 0;
             {
-                private _height = 0.6;
-                switch (typeOf _x) do {
-                    case KP_liberation_supply_crate: {_height = 0.4;};
-                    case KP_liberation_ammo_crate: {_height = 0.6;};
-                    case KP_liberation_fuel_crate: {_height = 0.3;};
-                    default {_height = 0.6;};
-                };
+                private _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
                 detach _x;
                 _x attachTo [_storage, [(KP_liberation_small_storage_positions select _i) select 0, (KP_liberation_small_storage_positions select _i) select 1, _height]];
                 _i = _i + 1;

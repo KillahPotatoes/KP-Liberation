@@ -22,6 +22,7 @@ class KPLIB
         class getAdaptiveVehicle        {};
         class getBluforRatio            {};
         class getCommander              {};
+        class getCrateHeight            {};
         class getFobName                {};
         class getGroupType              {};
         class getLessLoadedHC           {};
