@@ -2,14 +2,14 @@
     File: fn_createCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-11
-    Last Update: 2019-12-03
+    Last Update: 2020-03-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
         Spawns a resource crate of given type and with given amount at given position.
 
     Parameter(s):
-        _resource   - Type of resource                  [STRING, defaults to ""]
+        _resource   - Type of resource                  [STRING, defaults to KP_liberation_supply_crate]
         _amount     - Resource amount                   [NUMBER, defaults to 100]
         _pos        - Position where to spawn the crate [POSITION, defaults to getPos player]
 
