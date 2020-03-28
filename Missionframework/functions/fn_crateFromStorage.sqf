@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-03-26
+    Last Update: 2020-03-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,11 +21,7 @@ params ["_cratetype", "_storage", ["_update",false]];
 
 private ["_storage_positions","_unload_distance","_unload_pos","_i","_unloaded","_stored_crates","_height"];
 
-switch (typeOf _storage) do {
-    case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions; _unload_distance = 4;};
-    case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions; _unload_distance = 6.5;};
-    default {_storage_positions = KP_liberation_large_storage_positions; _unload_distance = 6.5;};
-};
+([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions", "_unload_distance"];
 
 _i = 0;
 _unload_pos = _storage getPos [_unload_distance, (getDir _storage) - 180];

@@ -60,11 +60,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
             };
         } forEach _storedCrates;
 
-        switch (typeOf _x) do {
-            case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
-            case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
-            default {_storage_positions = KP_liberation_large_storage_positions;};
-        };
+        ([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
 
         private _area = _x;
         _i = 0;
