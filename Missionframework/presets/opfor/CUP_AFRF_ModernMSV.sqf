@@ -66,15 +66,24 @@ opfor_vehicles = [
     "CUP_O_GAZ_Vodnik_PK_RU",                                           // GAZ Vodnik (2x PKM)
     "CUP_O_GAZ_Vodnik_AGS_RU",                                          // GAZ Vodnik (AGS-30/PKM)
     "CUP_O_GAZ_Vodnik_BPPU_RU",                                         // GAZ Vodnik (BPPU)
+    "CUP_O_GAZ_Vodnik_BPPU_RU",                                         // GAZ Vodnik (BPPU)
+    "CUP_O_BTR80_CAMO_RU",                                              // BTR-80 (Camo)
+    "CUP_O_BTR80_GREEN_RU",                                             // BTR-80 (Green)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Camo)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Green)
     "CUP_O_BTR90_RU",                                                   // BTR-90
+    "CUP_O_BMP2_RU",                                                    // BMP-2
+    "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_BMP3_RU",                                                    // BMP-3
     "CUP_O_2S6_RU",                                                     // 2S6 Tunguska
     "CUP_O_2S6_RU",                                                     // 2S6 Tunguska
     "CUP_O_T72_RU",                                                     // T-72
     "CUP_O_T72_RU",                                                     // T-72
+    "CUP_O_T72_RU",                                                     // T-72
     "CUP_O_T90_RU",                                                     // T-90A
-    "CUP_O_T90_RU"                                                      // T-90A
+    "CUP_O_T90_RU",                                                     // T-90A
+    "CUP_O_T90_RU",                                                     // T-90A
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
@@ -86,6 +95,7 @@ opfor_vehicles_low_intensity = [
     "CUP_O_BRDM2_RU",                                                   // BRDM-2
     "CUP_O_Ural_ZU23_RU",                                               // Ural (ZU-23)
     "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
+    "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
     "CUP_O_BMP2_RU"                                                     // BMP-2
 ];
 
@@ -94,16 +104,26 @@ opfor_battlegroup_vehicles = [
     "CUP_O_GAZ_Vodnik_PK_RU",                                           // GAZ Vodnik (2x PKM)
     "CUP_O_GAZ_Vodnik_AGS_RU",                                          // GAZ Vodnik (AGS-30/PKM)
     "CUP_O_GAZ_Vodnik_BPPU_RU",                                         // GAZ Vodnik (BPPU)
+    "CUP_O_GAZ_Vodnik_BPPU_RU",                                         // GAZ Vodnik (BPPU)
+    "CUP_O_BTR80_CAMO_RU",                                              // BTR-80 (Camo)
+    "CUP_O_BTR80_GREEN_RU",                                             // BTR-80 (Green)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Camo)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Green)
     "CUP_O_BTR90_RU",                                                   // BTR-90
+    "CUP_O_BMP2_RU",                                                    // BMP-2
+    "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_BMP3_RU",                                                    // BMP-3
     "CUP_O_2S6_RU",                                                     // 2S6 Tunguska
     "CUP_O_2S6_RU",                                                     // 2S6 Tunguska
     "CUP_O_T72_RU",                                                     // T-72
     "CUP_O_T72_RU",                                                     // T-72
+    "CUP_O_T72_RU",                                                     // T-72
     "CUP_O_T90_RU",                                                     // T-90A
     "CUP_O_T90_RU",                                                     // T-90A
-    "CUP_O_Mi23_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_T90_RU",                                                     // T-90A
+    "CUP_O_Mi24_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_Mi24_P_Dynamic_RU",                                          // Mi-24P
     "CUP_O_Mi8_RU",                                                     // Mi-8MTV3
     "CUP_O_Ka52_RU",                                                    // Ka-52
     "CUP_O_Ka50_DL_RU"                                                  // Ka-50 Black Shark
@@ -118,6 +138,7 @@ opfor_battlegroup_vehicles_low_intensity = [
     "CUP_O_BRDM2_RU",                                                   // BRDM-2
     "CUP_O_Ural_ZU23_RU",                                               // Ural (ZU-23)
     "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
+    "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
     "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_Ka60_Grey_RU",                                               // Ka-60 Kasatka Grey (Rockets)
     "CUP_O_Mi8_RU"                                                      // Mi-8MTV3
@@ -128,7 +149,8 @@ If something in this array can't hold all 8 soldiers then buggy behaviours may o
 opfor_troup_transports = [
     "CUP_O_Ka60_Grey_RU",                                               // Ka-60 Kasatka Grey (Rockets)
     "CUP_O_Mi8_RU",                                                     // Mi-8MTV3
-    "CUP_O_Mi23_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_Mi24_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_Mi24_P_Dynamic_RU",                                          // Mi-24P
     "CUP_O_BMP2_RU",                                                    // BMP-2
     "CUP_O_BTR90_RU",                                                   // BTR-90
     "CUP_O_GAZ_Vodnik_PK_RU",                                           // GAZ Vodnik (2x PKM)
@@ -139,7 +161,8 @@ opfor_troup_transports = [
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
-    "CUP_O_Mi23_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_Mi24_V_Dynamic_RU",                                          // Mi-24V
+    "CUP_O_Mi24_P_Dynamic_RU",                                          // Mi-24P
     "CUP_O_Mi8_RU",                                                     // Mi-8MTV3
     "CUP_O_Ka60_Grey_RU",                                               // Ka-60 Kasatka Grey (Rockets)
     "CUP_O_Ka52_RU",                                                    // Ka-52

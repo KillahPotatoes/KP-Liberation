@@ -75,8 +75,9 @@ light_vehicles = [
     ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ (AGS-30)
     ["CUP_B_UAZ_SPG9_CDF",100,100,50],                                  // UAZ (SPG-9)
     ["CUP_B_UAZ_METIS_CDF",100,120,50],                                 // UAZ (Metis-M)
+    ["CUP_B_UAZ_AA_CDF",100,160,50],                                    // UAZ (AA)
     ["CUP_B_Ural_ZU23_CDF",150,300,100],                                // Ural (ZU-23)
-    ["CUP_B_BM21_CDF",225,500,100],                                     // BM-21
+    ["CUP_B_BM21_CDF",225,750,100],                                     // BM-21
     ["CUP_B_Kamaz_CDF",125,0,75],                                       // Kamaz 5350
     ["CUP_B_Kamaz_Open_CDF",125,0,75],                                  // Kamaz 5350 (Open)
     ["CUP_B_Ural_Open_CDF",125,0,75],                                   // Ural (Open)
@@ -87,11 +88,13 @@ heavy_vehicles = [
     ["CUP_B_BRDM2_CDF",200,200,125],                                    // BRDM-2
     ["CUP_B_BRDM2_ATGM_CDF",200,400,125],                               // BRDM-2 (ATGM)
     ["CUP_B_BTR60_CDF",300,200,125],                                    // BTR-60PB
+    ["CUP_B_BTR80_CDF",400,200,150],                                    // BTR-80
+    ["CUP_B_BTR80A_CDF",450,300,150],                                   // BTR-80A
     ["CUP_B_MTLB_pk_CDF",150,50,100],                                   // MT-LB LV
-    ["CUP_B_BMP2_CDF",400,300,200],                                     // BMP-2
+    ["CUP_B_BMP2_CDF",500,400,200],                                     // BMP-2
     ["CUP_B_ZSU23_Afghan_CDF",350,350,200],                             // ZSU-23-4 Afghanski
     ["CUP_B_ZSU23_CDF",450,350,200],                                    // ZSU-23-4
-    ["CUP_B_T72_CDF",600,400,200]                                       // T-72
+    ["CUP_B_T72_CDF",600,500,250]                                       // T-72
 ];
 
 air_vehicles = [

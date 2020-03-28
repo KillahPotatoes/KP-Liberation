@@ -77,9 +77,10 @@ light_vehicles = [
     ["CUP_B_HMMWV_SOV_M2_USA",100,80,50],                               // HMMWV SOV (M2)
     ["CUP_B_HMMWV_SOV_USA",100,100,50],                                 // HMMWV SOV (Mk19)
     ["CUP_B_HMMWV_Avenger_USA",200,350,125],                            // HMMWV Avenger
-    ["CUP_B_RG31_M2_OD_USA",150,50,50],                                 // RG-31 M2
-    ["CUP_B_RG31E_M2_OD_USA",175,50,50],                                // RG-31 Mk5E M2
-    ["CUP_B_RG31_Mk19_OD_USA",150,80,50],                               // RG-31 Mk.19
+    ["CUP_B_RG31_M2_USA",150,75,100],                                   // RG-31 Nyala M2
+    ["CUP_B_RG31_M2_GC_USA",225,75,100],                                // RG-31 Nyala M2 GC
+    ["CUP_B_RG31E_M2_USA",200,75,100],                                  // RG-31 Mk5E M2
+    ["CUP_B_RG31_Mk19_USA",150,100,100],                                // RG-31 Mk.19
     ["CUP_B_MTVR_USA",125,0,75]                                         // MTVR
 ];
 
