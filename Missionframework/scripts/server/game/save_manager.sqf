@@ -13,9 +13,6 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
     --- Locals ---
     Variables which are only used inside the save_manager.sqf
 */
-
-// Version of the KP Liberation framework
-private _version = [0, 96, 7];
 // All AI squads
 private _aiGroups = [];
 // Classnames of blufor vehicles
@@ -145,32 +142,32 @@ stats_vehicles_recycled = 0;
 } forEach (allMissionObjects "");
 
 // Get possible save data
-greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
+private _saveData = profileNamespace getVariable GRLIB_save_key;
 
 // Load save data, when retrieved
-if (!isNil "greuh_liberation_savegame") then {
-    if (((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
-        diag_log text format ["[KP LIBERATION] [SAVE] Save data from version: %1", (greuh_liberation_savegame select 0) joinstring "."];
+if (!isNil "_saveData") then {
+    if (true || ((_saveData select 0) select 0) isEqualType 0) then {
+        diag_log format ["[KP LIBERATION] [SAVE] Save data from version: %1", (_saveData select 0) joinstring "."];
 
-        _dateTime                                   = greuh_liberation_savegame select  1;
-        _objectsToSave                              = greuh_liberation_savegame select  2;
-        _resourceStorages                           = greuh_liberation_savegame select  3;
-        _stats                                      = greuh_liberation_savegame select  4;
-        _weights                                    = greuh_liberation_savegame select  5;
-        _aiGroups                                   = greuh_liberation_savegame select  6;
-        blufor_sectors                              = greuh_liberation_savegame select  7;
-        combat_readiness                            = greuh_liberation_savegame select  8;
-        GRLIB_all_fobs                              = greuh_liberation_savegame select  9;
-        GRLIB_permissions                           = greuh_liberation_savegame select 10;
-        GRLIB_vehicle_to_military_base_links        = greuh_liberation_savegame select 11;
-        KP_liberation_civ_rep                       = greuh_liberation_savegame select 12;
-        KP_liberation_clearances                    = greuh_liberation_savegame select 13;
-        KP_liberation_guerilla_strength             = greuh_liberation_savegame select 14;
-        KP_liberation_logistics                     = greuh_liberation_savegame select 15;
-        KP_liberation_production                    = greuh_liberation_savegame select 16;
-        KP_liberation_production_markers            = greuh_liberation_savegame select 17;
-        resources_intel                             = greuh_liberation_savegame select 18;
-        _allMines                                   = greuh_liberation_savegame param [19, []];
+        _dateTime                                   = _saveData select  1;
+        _objectsToSave                              = _saveData select  2;
+        _resourceStorages                           = _saveData select  3;
+        _stats                                      = _saveData select  4;
+        _weights                                    = _saveData select  5;
+        _aiGroups                                   = _saveData select  6;
+        blufor_sectors                              = _saveData select  7;
+        combat_readiness                            = _saveData select  8;
+        GRLIB_all_fobs                              = _saveData select  9;
+        GRLIB_permissions                           = _saveData select 10;
+        GRLIB_vehicle_to_military_base_links        = _saveData select 11;
+        KP_liberation_civ_rep                       = _saveData select 12;
+        KP_liberation_clearances                    = _saveData select 13;
+        KP_liberation_guerilla_strength             = _saveData select 14;
+        KP_liberation_logistics                     = _saveData select 15;
+        KP_liberation_production                    = _saveData select 16;
+        KP_liberation_production_markers            = _saveData select 17;
+        resources_intel                             = _saveData select 18;
+        _allMines                                   = _saveData param [19, []];
 
         stats_ammo_produced                         = _stats select  0;
         stats_ammo_spent                            = _stats select  1;
@@ -218,23 +215,23 @@ if (!isNil "greuh_liberation_savegame") then {
         */
         diag_log text "[KP LIBERATION] [SAVE] Save data from version: pre 0.96.5";
 
-        blufor_sectors                              = greuh_liberation_savegame select  0;
-        GRLIB_all_fobs                              = greuh_liberation_savegame select  1;
-        _objectsToSave                              = greuh_liberation_savegame select  2;
-        _dateTime                                   = greuh_liberation_savegame select  3;
-        combat_readiness                            = greuh_liberation_savegame select  4;
-        _resourceStorages                           = greuh_liberation_savegame select  5;
-        KP_liberation_production                    = greuh_liberation_savegame select  6;
-        KP_liberation_logistics                     = greuh_liberation_savegame select  7;
-        _stats                                      = greuh_liberation_savegame select  8;
-        _weights                                    = greuh_liberation_savegame select  9;
-        GRLIB_vehicle_to_military_base_links        = greuh_liberation_savegame select 10;
-        GRLIB_permissions                           = greuh_liberation_savegame select 11;
-        _aiGroups                                   = greuh_liberation_savegame select 12;
-        resources_intel                             = greuh_liberation_savegame select 13;
-        KP_liberation_civ_rep                       = greuh_liberation_savegame select 15;
-        KP_liberation_production_markers            = greuh_liberation_savegame select 16;
-        KP_liberation_guerilla_strength             = greuh_liberation_savegame select 17;
+        blufor_sectors                              = _saveData select  0;
+        GRLIB_all_fobs                              = _saveData select  1;
+        _objectsToSave                              = _saveData select  2;
+        _dateTime                                   = _saveData select  3;
+        combat_readiness                            = _saveData select  4;
+        _resourceStorages                           = _saveData select  5;
+        KP_liberation_production                    = _saveData select  6;
+        KP_liberation_logistics                     = _saveData select  7;
+        _stats                                      = _saveData select  8;
+        _weights                                    = _saveData select  9;
+        GRLIB_vehicle_to_military_base_links        = _saveData select 10;
+        GRLIB_permissions                           = _saveData select 11;
+        _aiGroups                                   = _saveData select 12;
+        resources_intel                             = _saveData select 13;
+        KP_liberation_civ_rep                       = _saveData select 15;
+        KP_liberation_production_markers            = _saveData select 16;
+        KP_liberation_guerilla_strength             = _saveData select 17;
 
         stats_opfor_soldiers_killed                 = _stats select  0;
         stats_opfor_killed_by_players               = _stats select  1;
@@ -301,7 +298,7 @@ if (!isNil "greuh_liberation_savegame") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", ["_hasCrew", false]];
 
         // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
-        if !(((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
+        if !(((_saveData select 0) select 0) isEqualType 0) then {
             // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
             if ((KP_liberation_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
                 _class = KP_liberation_recycle_building;
@@ -452,7 +449,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
     // Spawn BLUFOR AI groups
     // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
-    if (((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
+    if (((_saveData select 0) select 0) isEqualType 0) then {
         {
             _x params ["_spawnPos", "_units"];
             private _grp = createGroup [GRLIB_side_friendly, true];
@@ -540,182 +537,11 @@ while {true} do {
     };
 
     doSaveTrigger = false;
-    _objectsToSave = [];
-    _resourceStorages = [];
-    _aiGroups = [];
 
-    private _allObjects = [];
-    private _allStorages = [];
-    private _allMines = [];
-
-    // Get all blufor groups
-    private _allBlueGroups = allGroups select {
-        (side _x == GRLIB_side_friendly) &&                 // Only blufor groups
-        {isNull objectParent (leader _x)} &&                // Make sure it's an infantry group
-        {!(((units _x) select {alive _x}) isEqualTo [])}    // At least one unit has to be alive
-    };
-
-    // Fetch all objects and AI groups near each FOB
-    {
-        private _fobPos = _x;
-        private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 2)) select {
-            ((typeof _x) in _classnamesToSave) &&                       // Exclude classnames which are not in the presets
-            {alive _x} &&                                               // Exclude dead or broken objects
-            {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
-            {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
-            {isNull attachedTo _x} &&                                   // Exclude attachTo'd objects
-            {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
-            {!(_x getVariable ["KP_liberation_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
-            {!(_x getVariable ["KP_liberation_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
-            {!((typeOf _x) in KP_liberation_crates)}                    // Exclude storage crates (those are handled separately)
-        };
-
-        _allObjects = _allObjects + (_fobObjects select {!((typeOf _x) in KP_liberation_storage_buildings)});
-        _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0});
-
-        // Process all groups near this FOB
-        {
-            // Get only living AI units of the group
-            private _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
-            // Add to save array
-            _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
-        } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 2)});
-
-        // Save all mines around FOB
-        private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 2, GRLIB_fob_range * 2];
-        _allMines append (_fobMines apply {[
-            getPosWorld _x,
-            [vectorDirVisual _x, vectorUpVisual _x],
-            typeOf _x,
-            _x mineDetectedBy GRLIB_side_friendly
-        ]});
-    } forEach GRLIB_all_fobs;
-
-    // Save all fetched objects
-    {
-        // Position data
-        private _savedpos = getPosWorld _x;
-        private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;
-        private _class = typeOf _x;
-        private _hascrew = false;
-
-        // Determine if vehicle is crewed
-        if (_class in _bluforClassnames) then {
-            if (({!isPlayer _x} count (crew _x) ) > 0) then {
-                _hascrew = true;
-            };
-        };
-
-        // Add to saving when not a civilian vehicle or listed in the seized civilian vehicles array
-        if (!(_class in civilian_vehicles) || {_x in KP_liberation_cr_vehicles}) then {
-            _objectsToSave pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_hascrew];
-        };
-    } forEach _allObjects;
-
-    // Save all storages and resources
-    {
-        // Position data
-        private _savedpos = getPosWorld _x;
-        private _savedvecdir = vectorDirVisual _x;
-        private _savedvecup = vectorUpVisual _x;
-        private _class = typeof _x;
-
-        // Resource variables
-        private _supplyValue = 0;
-        private _ammoValue = 0;
-        private _fuelValue = 0;
-
-        // Sum all stored resources of current storage
-        {
-            switch ((typeOf _x)) do {
-                case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
-            };
-        } forEach (attachedObjects _x);
-
-        // Add to saving with corresponding resource values
-        _resourceStorages pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];
-    } forEach _allStorages;
-
-    // Pack all stats in one array
-    _stats = [
-        stats_ammo_produced,
-        stats_ammo_spent,
-        stats_blufor_soldiers_killed,
-        stats_blufor_soldiers_recruited,
-        stats_blufor_teamkills,
-        stats_blufor_vehicles_built,
-        stats_blufor_vehicles_killed,
-        stats_civilian_buildings_destroyed,
-        stats_civilian_vehicles_killed,
-        stats_civilian_vehicles_killed_by_players,
-        stats_civilian_vehicles_seized,
-        stats_civilians_healed,
-        stats_civilians_killed,
-        stats_civilians_killed_by_players,
-        stats_fobs_built,
-        stats_fobs_lost,
-        stats_fuel_produced,
-        stats_fuel_spent,
-        stats_hostile_battlegroups,
-        stats_ieds_detonated,
-        stats_opfor_killed_by_players,
-        stats_opfor_soldiers_killed,
-        stats_opfor_vehicles_killed,
-        stats_opfor_vehicles_killed_by_players,
-        stats_player_deaths,
-        stats_playtime,
-        stats_prisoners_captured,
-        stats_readiness_earned,
-        stats_reinforcements_called,
-        stats_resistance_killed,
-        stats_resistance_teamkills,
-        stats_resistance_teamkills_by_players,
-        stats_secondary_objectives,
-        stats_sectors_liberated,
-        stats_sectors_lost,
-        stats_spartan_respawns,
-        stats_supplies_produced,
-        stats_supplies_spent,
-        stats_vehicles_recycled
-    ];
-
-    // Pack the weights in one array
-    _weights = [
-        infantry_weight,
-        armor_weight,
-        air_weight
-    ];
-
-    // Pack the save data in the save array
-    greuh_liberation_savegame = [
-        _version,
-        date,
-        _objectsToSave,
-        _resourceStorages,
-        _stats,
-        _weights,
-        _aiGroups,
-        blufor_sectors,
-        combat_readiness,
-        GRLIB_all_fobs,
-        GRLIB_permissions,
-        GRLIB_vehicle_to_military_base_links,
-        KP_liberation_civ_rep,
-        KP_liberation_clearances,
-        KP_liberation_guerilla_strength,
-        KP_liberation_logistics,
-        KP_liberation_production,
-        KP_liberation_production_markers,
-        resources_intel,
-        _allMines
-    ];
+    private _saveData = [] call F_getSaveData;
 
     // Write data in the severs profileNamespace
-    profileNamespace setVariable [GRLIB_save_key, greuh_liberation_savegame];
+    profileNamespace setVariable [GRLIB_save_key, _saveData];
     saveProfileNamespace;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
