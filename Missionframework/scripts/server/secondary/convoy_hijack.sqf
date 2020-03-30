@@ -161,4 +161,4 @@ stats_secondary_objectives = stats_secondary_objectives + 1;
 [5] remoteExec ["remote_call_intel"];
 GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";
 sleep 1;
-doSaveTrigger = true;
+[] spawn F_doSave;

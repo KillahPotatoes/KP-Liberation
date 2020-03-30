@@ -47,7 +47,6 @@ execVM "scripts\server\game\cleanup_vehicles.sqf";
 if (!KP_liberation_fog_param) then {execVM "scripts\server\game\fucking_set_fog.sqf";};
 execVM "scripts\server\game\manage_time.sqf";
 execVM "scripts\server\game\manage_weather.sqf";
-execVM "scripts\server\game\periodic_save.sqf";
 execVM "scripts\server\game\playtime.sqf";
 execVM "scripts\server\game\save_manager.sqf";
 execVM "scripts\server\game\spawn_radio_towers.sqf";

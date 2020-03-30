@@ -74,9 +74,6 @@ resources_intel = 0;
 // State if the save is fully loaded
 save_is_loaded = false;
 
-// Trigger to start a saving process
-doSaveTrigger = false;
-
 // Add all buildings for saving and kill manager ignore
 {
     _noKillHandler pushBack (_x select 0);
@@ -523,9 +520,10 @@ diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time
 
 // Start the save loop
 while {true} do {
+    private _saveTime = time + KP_liberation_save_interval;
     waitUntil {
         sleep 0.5;
-        doSaveTrigger || GRLIB_endgame == 1;
+        (time > _saveTime) || {GRLIB_endgame == 1};
     };
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval started - time: %1", time];};
@@ -536,13 +534,7 @@ while {true} do {
         saveProfileNamespace;
     };
 
-    doSaveTrigger = false;
-
-    private _saveData = [] call F_getSaveData;
-
-    // Write data in the severs profileNamespace
-    profileNamespace setVariable [GRLIB_save_key, _saveData];
-    saveProfileNamespace;
+    [] call F_doSave;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
 };
