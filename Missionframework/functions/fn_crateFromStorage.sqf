@@ -16,52 +16,62 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
-params ["_cratetype", "_storage", ["_update",false]];
 
-private ["_storage_positions","_unload_distance","_unload_pos","_i","_unloaded","_stored_crates","_height"];
+params [
+    ["_cratetype", "", [""]],
+    ["_storage", objNull, [objNull]],
+    ["_update", false, [false]]
+];
 
-([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions", "_unload_distance"];
+// Validate parameters
+if !(_cratetype in KP_liberation_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
+if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-_i = 0;
-_unload_pos = _storage getPos [_unload_distance, (getDir _storage) - 180];
+// Ensure scheduled environment
+if (!canSuspend) exitWith {_this spawn KPLIB_fnc_crateFromStorage};
 
-while {!((nearestObjects [_unload_pos,KP_liberation_crates,1]) isEqualTo [])} do {
+// Get correct storage positions
+([_storage] call KPLIB_fnc_getStoragePositions) params ["_storagePositions", "_unloadDist"];
+
+// Check for next empty unload position
+private _i = 0;
+private _dir = (getDir _storage) - 180;
+private _unloadPos = _storage getPos [_unloadDist, _dir];
+while {!((nearestObjects [_unloadPos, KP_liberation_crates, 1]) isEqualTo [])} do {
     _i = _i + 1;
-    _unload_pos = _storage getPos [_unload_distance + _i * 1.8, (getDir _storage) - 180];
+    _unloadPos = _storage getPos [_unloadDist + _i * 1.8, _dir];
 };
 
 sleep 0.5;
 
-_unloaded = false;
-_stored_crates = attachedObjects _storage;
-reverse _stored_crates;
+// Fetch all stored crates
+private _storedCrates = attachedObjects _storage;
+reverse _storedCrates;
+private _crate = _storedCrates deleteAt (_storedCrates findIf {(typeOf _x) == _crateType});
 
+// Exit if desired crate isn't stored
+if (isNil "_crate") exitWith {false};
+
+// Unload crate
+detach _crate;
+[_crate, true] call KPLIB_fnc_clearCargo;
+_crate setPos _unloadPos;
+[_crate, true] remoteExec ["enableRopeAttach"];
+if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+
+// Fill the possible gap in the storage area
+reverse _storedCrates;
+_i = 0;
 {
-    if (typeOf _x == _cratetype) then {
-        detach _x;
+    detach (_x select 0);
+    (_x select 0) attachTo [_storage, [(_storagePositions select _i) select 0, (_storagePositions select _i) select 1, _x select 1]];
+    _i = _i + 1;
+} forEach (_storedCrates apply {[_x, [typeOf _x] call KPLIB_fnc_getCrateHeight]});
 
-        [_x, true] call KPLIB_fnc_clearCargo;
-
-        _x setPos _unload_pos;
-        [_x, true] remoteExec ["enableRopeAttach"];
-        if(KP_liberation_ace) then {[_x, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
-        _unloaded = true;
-    };
-    if (_unloaded) exitWith {
-        _i = 0;
-        {
-            _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
-            detach _x;
-            _x attachTo [_storage, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
-            _i = _i + 1;
-        } forEach attachedObjects _storage;
-    };
-} forEach _stored_crates;
-
+// Update sector resources
 if (_update) then {
-    if ((_storage getVariable ["KP_liberation_storage_type",-1]) == 1) then {
-        remoteExec ["check_sector_ress_remote_call",2];
+    if ((_storage getVariable ["KP_liberation_storage_type", -1]) == 1) then {
+        remoteExec ["check_sector_ress_remote_call", 2];
     };
 };
 
