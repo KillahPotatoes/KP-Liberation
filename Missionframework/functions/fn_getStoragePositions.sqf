@@ -2,7 +2,7 @@
     File: fn_getStoragePositions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-27
-    Last Update: 2020-03-27
+    Last Update: 2020-03-30
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -28,4 +28,4 @@ private _data = [
 
 if (_data isEqualTo []) exitWith {["No valid storage object given"] call BIS_fnc_error; [[], 0]};
 
-_data select 1
+(_data select 0) select 1
