@@ -60,6 +60,13 @@ militia_squad = [
 militia_vehicles = [
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
+    "CUP_O_Hilux_AGS30_TK_INS",                                         // Hilux (AGS-30)
+    "CUP_O_Hilux_DSHKM_TK_INS",                                         // Hilux (DShKM)
+    "CUP_O_Hilux_M2_TK_INS",                                            // Hilux (M2)
+    "CUP_O_Hilux_SPG9_TK_INS",                                          // Hilux (SPG-9)
+    "CUP_O_Hilux_armored_BMP1_TK_INS",                                  // Hilux Armored (BMP-1)
+    "CUP_O_Hilux_armored_BTR60_TK_INS",                                 // Hilux Armored (BTR-60)
+    "CUP_O_Hilux_armored_zu23_TK_INS",                                  // Hilux Armored (ZU-23-2)
     "CUP_O_BTR40_MG_TKM",                                               // BTR-40 (DSHKM)
     "CUP_O_MTLB_pk_TK_MILITIA"                                          // MT-LB LV
 ];
@@ -67,10 +74,9 @@ militia_vehicles = [
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
-    "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
-    "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
+    "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
     "CUP_O_BMP2_TKA",                                                   // BMP-2
@@ -107,6 +113,7 @@ opfor_battlegroup_vehicles = [
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
+    "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
     "CUP_O_BTR60_TK",                                                   // BTR-60PB
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
