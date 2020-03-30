@@ -301,12 +301,8 @@ while { true } do {
 					_vehicle setpos _truepos;
 				};
 
-				if (!(_classname in KP_liberation_ace_crates) && KP_liberation_clear_cargo) then {
-					clearWeaponCargoGlobal _vehicle;
-					clearMagazineCargoGlobal _vehicle;
-					clearItemCargoGlobal _vehicle;
-					clearBackpackCargoGlobal _vehicle;
-				};
+                [_vehicle] call KPLIB_fnc_clearCargo;
+
 				if (buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 					if (KP_vector) then {
 						_vehicle setVectorUp [0,0,1];

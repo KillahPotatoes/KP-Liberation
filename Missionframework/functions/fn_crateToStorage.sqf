@@ -2,7 +2,7 @@
     File: fn_crateToStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-03-28
+    Last Update: 2020-03-30
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,10 +24,7 @@ if (!isNil "_storage") then {
 
     private _height = [typeOf _crate] call KPLIB_fnc_getCrateHeight;
 
-    clearWeaponCargoGlobal _crate;
-    clearMagazineCargoGlobal _crate;
-    clearBackpackCargoGlobal _crate;
-    clearItemCargoGlobal _crate;
+    [_crate, true] call KPLIB_fnc_clearCargo;
 
     private _crates_count = count (attachedObjects _storage);
 

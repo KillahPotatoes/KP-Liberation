@@ -9,6 +9,7 @@ class KPLIB
         class checkCrateValue           {};
         class checkGear                 {};
         class cleanOpforVehicle         {};
+        class clearCargo                {};
         class crAddAceAction            {};
         class crateFromStorage          {};
         class crateToStorage            {};

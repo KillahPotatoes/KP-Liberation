@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-03-28
+    Last Update: 2020-03-30
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -41,10 +41,7 @@ reverse _stored_crates;
     if (typeOf _x == _cratetype) then {
         detach _x;
 
-        clearWeaponCargoGlobal _x;
-        clearMagazineCargoGlobal _x;
-        clearBackpackCargoGlobal _x;
-        clearItemCargoGlobal _x;
+        [_x, true] call KPLIB_fnc_clearCargo;
 
         _x setPos _unload_pos;
         [_x, true] remoteExec ["enableRopeAttach"];

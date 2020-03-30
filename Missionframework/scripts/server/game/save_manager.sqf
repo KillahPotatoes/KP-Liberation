@@ -352,12 +352,7 @@ if (!isNil "greuh_liberation_savegame") then {
             [_object] call KPLIB_fnc_addObjectInit;
 
             // Determine if cargo should be cleared
-            if (KP_liberation_clear_cargo || {!(_class in KP_liberation_ace_crates)} || {!(_class isKindOf "AllVehicles")}) then {
-                clearWeaponCargoGlobal _object;
-                clearMagazineCargoGlobal _object;
-                clearBackpackCargoGlobal _object;
-                clearItemCargoGlobal _object;
-            };
+            [_object] call KPLIB_fnc_clearCargo;
 
             // Mark civilian vehicle as "already seized"
             if (_class in civilian_vehicles) then {

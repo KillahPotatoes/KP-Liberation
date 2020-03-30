@@ -31,10 +31,7 @@ if (count GRLIB_all_fobs == 0) then {
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
 
-            clearWeaponCargoGlobal _fobbox;
-            clearMagazineCargoGlobal _fobbox;
-            clearBackpackCargoGlobal _fobbox;
-            clearItemCargoGlobal _fobbox;
+            [_fobbox, true] call KPLIB_fnc_clearCargo;
 
             if (!KP_liberation_fob_vehicle) then {
                 [_fobbox] call KPLIB_fnc_setFobMass;
@@ -67,10 +64,7 @@ if (count GRLIB_all_fobs == 0) then {
             80,
             "FLY"
         ];
-        clearWeaponCargoGlobal _crate;
-        clearMagazineCargoGlobal _crate;
-        clearItemCargoGlobal _crate;
-        clearBackpackCargoGlobal _crate;
+        [_crate, true] call KPLIB_fnc_clearCargo;
         _crate setVariable ["KP_liberation_crate_value", 100, true];
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
