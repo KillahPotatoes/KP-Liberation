@@ -27,9 +27,6 @@ params [
 if !(_cratetype in KP_liberation_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-// Ensure scheduled environment
-if (!canSuspend) exitWith {_this spawn KPLIB_fnc_crateFromStorage};
-
 // Get correct storage positions
 ([_storage] call KPLIB_fnc_getStoragePositions) params ["_storagePositions", "_unloadDist"];
 
@@ -41,8 +38,6 @@ while {!((nearestObjects [_unloadPos, KP_liberation_crates, 1]) isEqualTo [])} d
     _i = _i + 1;
     _unloadPos = _storage getPos [_unloadDist + _i * 1.8, _dir];
 };
-
-sleep 0.5;
 
 // Fetch all stored crates
 private _storedCrates = attachedObjects _storage;
