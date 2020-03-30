@@ -251,7 +251,7 @@ while {GRLIB_endgame == 0} do {
 									};
 								} forEach _storedCrates;
 
-								([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
+								([_x] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
 
 								private _area = _x;
 								_i = 0;

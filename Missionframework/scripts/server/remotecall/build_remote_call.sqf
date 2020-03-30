@@ -60,7 +60,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
             };
         } forEach _storedCrates;
 
-        ([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
+        ([_x] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
 
         private _area = _x;
         _i = 0;

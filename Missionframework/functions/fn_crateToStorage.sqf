@@ -20,7 +20,7 @@
 params ["_crate", ["_storage",nil], ["_update",false]];
 
 if (!isNil "_storage") then {
-    ([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions", "_unload_distance"];
+    ([_storage] call KPLIB_fnc_getStoragePositions) params ["_storage_positions", "_unload_distance"];
 
     private _height = [typeOf _crate] call KPLIB_fnc_getCrateHeight;
 

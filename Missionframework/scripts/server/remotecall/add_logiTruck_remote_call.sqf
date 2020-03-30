@@ -68,7 +68,7 @@ if ((_price_s > _supplies) || (_price_a > _ammo) || (_price_f > _fuel)) exitWith
 		};
 	} forEach _storedCrates;
 
-	([] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
+	([_x] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
 
 	private _area = _x;
 	_i = 0;
