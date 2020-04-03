@@ -91,7 +91,7 @@ while {true} do {
 					_next_area setVariable ["KP_ammo_unstore_action", _action_id2, false];
 					_action_id3 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_FUEL" + "</t>",{[KP_liberation_fuel_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-506,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
 					_next_area setVariable ["KP_fuel_unstore_action", _action_id3, false];
-					_action_id4 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_SORT_STORAGE" + "</t>",{[(_this select 0)] spawn KPLIB_fnc_sortStorage;},"",-507,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
+					_action_id4 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_SORT_STORAGE" + "</t>",{[(_this select 0)] call KPLIB_fnc_sortStorage;},"",-507,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
 					_next_area setVariable ["KP_storage_sort_action", _action_id4, false];
 					_managed_areas pushback _next_area;
 			};
