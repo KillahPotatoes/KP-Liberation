@@ -2,15 +2,20 @@
 
 # KP Liberation for ArmA 3
 
+![CI](https://github.com/KillahPotatoes/KP-Liberation/workflows/CI/badge.svg)
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/LICENSE.md)
 [![GitHub release](https://img.shields.io/github/release/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/releases)
-[![Github All Releases](https://img.shields.io/github/downloads/KillahPotatoes/KP-Liberation/total.svg)](https://github.com/KillahPotatoes/KP-Liberation)
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/issues?q=is%3Aissue+is%3Aclosed)
+[![Github All Releases](https://img.shields.io/github/downloads/KillahPotatoes/KP-Liberation/total.svg)](https://github.com/KillahPotatoes/KP-Liberation)
+[![GitHub stars](https://img.shields.io/github/stars/KillahPotatoes/KP-Liberation)](https://github.com/KillahPotatoes/KP-Liberation/stargazers)
+[![GitHub contributors](https://img.shields.io/github/contributors/KillahPotatoes/KP-Liberation)](https://github.com/KillahPotatoes/KP-Liberation/graphs/contributors)
+[![GitHub forks](https://img.shields.io/github/forks/KillahPotatoes/KP-Liberation)](https://github.com/KillahPotatoes/KP-Liberation/network)
+
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/pulls)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub issues](https://img.shields.io/github/issues-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/issues?q=is%3Aissue+is%3Aclosed)
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
