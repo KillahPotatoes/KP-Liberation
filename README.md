@@ -2,8 +2,8 @@
 
 # KP Liberation for ArmA 3
 
-![CI](https://github.com/KillahPotatoes/KP-Liberation/workflows/CI/badge.svg)
-[![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/LICENSE.md)
+[![CI](https://github.com/KillahPotatoes/KP-Liberation/workflows/CI/badge.svg)](https://github.com/KillahPotatoes/KP-Liberation/actions?query=workflow%3ACI)
+[![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
 [![GitHub release](https://img.shields.io/github/release/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/releases)
 
@@ -16,7 +16,6 @@
 [![GitHub forks](https://img.shields.io/github/forks/KillahPotatoes/KP-Liberation)](https://github.com/KillahPotatoes/KP-Liberation/network)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/pulls)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/pulls?q=is%3Apr+is%3Aclosed)
-
 
 [BI Forum Thread](https://forums.bistudio.com/topic/202711-mpcti-coop-liberation-continued/)
 
