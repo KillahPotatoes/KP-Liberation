@@ -8,6 +8,7 @@ class KPLIB
         class checkClass                {};
         class checkCrateValue           {};
         class checkGear                 {};
+        class checkWeaponCargo          {};
         class cleanOpforVehicle         {};
         class clearCargo                {};
         class crAddAceAction            {};
@@ -58,7 +59,6 @@ class KPLIB
         class isRadio                   {};
         class potatoScan                {};
         class protectObject             {};
-        class removeWeaponCargo         {};
         class secondsToTimer            {};
         class setFobMass                {};
         class setLoadableViV            {};

@@ -2,7 +2,7 @@
     File: fn_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-22
-    Last Update: 2019-12-03
+    Last Update: 2020-04-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -62,9 +62,9 @@ _playerMagazines = _playerMagazines apply {toLower _x};
     player removeMagazines _x;
 } forEach ((_playerMagazines arrayIntersect _playerMagazines) - KP_liberation_allowed_items);
 
-_removedItems append ([uniformContainer player] call KPLIB_fnc_removeWeaponCargo);
-_removedItems append ([vestContainer player] call KPLIB_fnc_removeWeaponCargo);
-_removedItems append ([backpackContainer player] call KPLIB_fnc_removeWeaponCargo);
+_removedItems append ([uniformContainer player] call KPLIB_fnc_checkWeaponCargo);
+_removedItems append ([vestContainer player] call KPLIB_fnc_checkWeaponCargo);
+_removedItems append ([backpackContainer player] call KPLIB_fnc_checkWeaponCargo);
 
 private _weapons = weapons player;
 _weapons = _weapons apply {toLower _x};

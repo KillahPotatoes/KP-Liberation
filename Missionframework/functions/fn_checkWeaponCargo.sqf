@@ -1,8 +1,8 @@
 /*
-    File: fn_removeWeaponCargo.sqf
+    File: fn_checkWeaponCargo.sqf
     Author: Zharf - https://github.com/zharf
     Date: 2019-06-21
-    Last Update: 2019-12-03
+    Last Update: 2020-04-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
