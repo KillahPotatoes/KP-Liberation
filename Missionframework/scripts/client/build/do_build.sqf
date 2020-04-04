@@ -313,11 +313,6 @@ while { true } do {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
 
-				// Arty Supp deactivated for now
-				/*if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
-					[_vehicle] remoteExec ["arty_monitor", 2];
-				};*/
-
 				if ( (unitIsUAV _vehicle) || manned ) then {
 					[ _vehicle ] call KPLIB_fnc_forceBluforCrew;
 				};
