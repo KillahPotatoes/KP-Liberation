@@ -34,6 +34,7 @@ if(isServer) then {
             diag_log "[KP LIBERATION] [PARAM] Save/Load has no valid value";
         };
     };
+    diag_log "[KP LIBERATION] [PARAM]";
 
     // Mission Options
     diag_log "[KP LIBERATION] [PARAM] --- Mission Options ---";
@@ -55,6 +56,7 @@ if(isServer) then {
     GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
+    diag_log "[KP LIBERATION] [PARAM]";
 
     // Deactivate BI Revive when ACE Medical is running
     if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
@@ -72,6 +74,7 @@ if(isServer) then {
         GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
         GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
     };
+    diag_log "[KP LIBERATION] [PARAM]";
 
     // Gameplay Options
     diag_log "[KP LIBERATION] [PARAM] --- Gameplay Options ---";
@@ -89,6 +92,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    diag_log "[KP LIBERATION] [PARAM]";
 
     // Technical Options
     diag_log "[KP LIBERATION] [PARAM] --- Technical Options ---";
