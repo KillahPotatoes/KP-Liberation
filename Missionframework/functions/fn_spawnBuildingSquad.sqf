@@ -2,62 +2,65 @@
     File: fn_spawnBuildingSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2020-04-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Spawns given amount of infantry in buildings of given sector at given building positions.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _type       - Type of infantry. Either "militia" or "army"  [STRING, defaults to "army"]
+        _amount     - Amount of infantry units to spawn             [NUMBER, defaults to 0]
+        _positions  - Array of building positions                   [ARRAY, defaults to []]
+        _sector     - Sector where to spawn the units               [STRING, defaults to ""]
 
     Returns:
-        Function reached the end [BOOL]
+        Spawned units [ARRAY]
 */
-// TODO
-params ["_infsquad", "_building_ai_max", "_buildingpositions", "_sectorpos", ["_sector", ""]];
 
-private _everythingspawned = [];
+params [
+    ["_type", "army", [""]],
+    ["_amount", 0, [0]],
+    ["_positions", [], [[]]],
+    ["_sector", "", [""]]
+];
 
-private _infsquad_classnames = [];
-if (_infsquad == "militia") then {
-    _infsquad_classnames = militia_squad;
-} else {
-    _infsquad_classnames = ([] call KPLIB_fnc_getSquadComp);
+if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; []};
+
+// Get classnames array
+private _classnames = [[] call KPLIB_fnc_getSquadComp, militia_squad] select (_type == "militia");
+
+// Adjust amount, if needed
+if (_amount > floor ((count _positions) * GRLIB_defended_buildingpos_part)) then {
+    _amount = floor ((count _positions) * GRLIB_defended_buildingpos_part)
 };
 
-if (_building_ai_max > floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)) then {_building_ai_max = floor ((count _buildingpositions) * GRLIB_defended_buildingpos_part)};
-private _squadtospawn = [];
-while {(count _squadtospawn) < _building_ai_max} do {_squadtospawn pushback (selectRandom _infsquad_classnames);};
+// Get a random composition of classnames
+private _toSpawn = [];
+for "_i" from 1 to _amount do {_toSpawn pushBack (selectRandom _classnames);};
 
-private _position_indexes = [];
-private _position_count = count _buildingpositions;
-while {count _position_indexes < count _squadtospawn} do {
-    private _nextposit = floor (random _position_count);
-    if !(_nextposit in _position_indexes) then {
-        _position_indexes pushback _nextposit;
-    };
+// Get random building positions
+private _posToSet = [];
+for "_i" from 1 to (count _toSpawn) do {
+    _posToSet pushBack (_positions deleteAt (random (floor (count _positions) - 1)));
 };
 
+// Spawn units
 private _grp = createGroup [GRLIB_side_enemy, true];
-private _idxposit = 0;
+private _pos = markerPos _sector;
+private _unit = objNull;
+private _units = [];
 {
-    private _nextunit = [_x, _sectorpos, _grp] call KPLIB_fnc_createManagedUnit;
-
-    _nextunit setdir (random 360);
-    _nextunit setpos (_buildingpositions select (_position_indexes select _idxposit));
-    [_nextunit, _sector] spawn building_defence_ai;
-
-    _idxposit = _idxposit + 1;
-
-    if (count units _grp > 10) then {
-        _everythingspawned = _everythingspawned + (units _grp);
+    // Create new group, if current group has 10 units
+    if (_forEachIndex > 9) then {
         _grp = createGroup [GRLIB_side_enemy, true];
     };
-} forEach _squadtospawn;
 
-if (!(isNull _grp)) then {
-    _everythingspawned = _everythingspawned + (units _grp);
-};
+    _unit = [_x, _pos, _grp] call KPLIB_fnc_createManagedUnit;
+    _unit setDir (random 360);
+    _unit setPos (_posToSet select _forEachIndex);
+    [_unit, _sector] spawn building_defence_ai;
+    _units pushBack _unit;
+} forEach _toSpawn;
 
-_everythingspawned
+_units
