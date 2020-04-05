@@ -207,6 +207,7 @@ class Missions
 * Fixed: Flickering/disappearing of mobile respawn.
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
 * Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
+* Fixed: ACE medical vehicle variable adjusted in `kp_objectInits` due to the recent ACE updates. [Reference](https://github.com/acemod/ACE3/commit/44050df98b00e579e5b5a79c0d76d4d1138b4baa#diff-31034297ef72d8a9855b601934510008)
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)

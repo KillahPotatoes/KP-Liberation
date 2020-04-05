@@ -49,7 +49,7 @@ KPLIB_objectInits = [
     ],
     [
         KP_liberation_medical_vehicles,
-        {_this setVariable ["ace_medical_medicClass", 1, true];}
+        {_this setVariable ["ace_medical_isMedicalVehicle", true, true];}
     ],
 
     // Hide Cover on big GM trucks
