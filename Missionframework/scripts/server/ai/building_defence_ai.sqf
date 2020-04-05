@@ -1,7 +1,7 @@
 params ["_unit", ["_sector", ""]];
 
 _unit setUnitPos "UP";
-_unit disableAI "MOVE";
+_unit disableAI "PATH";
 private _move_is_disabled = true;
 private _hostiles = 0;
 private _ratio = 0.4;
@@ -25,7 +25,7 @@ while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
         }
     ) then {
         _move_is_disabled = false;
-        _unit enableAI "MOVE";
+        _unit enableAI "PATH";
         _unit setUnitPos "AUTO";
     };
 
