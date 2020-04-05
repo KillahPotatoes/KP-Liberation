@@ -26,19 +26,20 @@ private _allPosts = (
     nearestObjects [_pos, ["Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Cargo_Patrol_V4_F"], GRLIB_capture_size, true]
 ) select {alive _x};
 
-// Spawn units if patrol towers were found
-if !(_allPosts isEqualTo []) then {
-    private _grp = createGroup [GRLIB_side_enemy, true];
-    private _unit = objNull;
-    private _units = [];
-    {
-        _unit = [[opfor_marksman, opfor_machinegunner] select (random 100 > 50), _pos, _grp] call KPLIB_fnc_createManagedUnit;
-        _unit setdir (180 + (getdir _x));
-        _unit setpos (([_x] call BIS_fnc_buildingPositions) select 1);
-        [_unit] spawn building_defence_ai;
-        _unit setUnitPos 'UP';
-        _units pushback _unit;
-    } forEach _allPosts;
-};
+// Exit if no patrol towers were found
+if (_allPosts isEqualTo []) exitWith {[]};
+
+// Spawn units
+private _grp = createGroup [GRLIB_side_enemy, true];
+private _unit = objNull;
+private _units = [];
+{
+    _unit = [[opfor_marksman, opfor_machinegunner] select (random 100 > 50), _pos, _grp] call KPLIB_fnc_createManagedUnit;
+    _unit setdir (180 + (getdir _x));
+    _unit setpos (([_x] call BIS_fnc_buildingPositions) select 1);
+    [_unit] spawn building_defence_ai;
+    _unit setUnitPos 'UP';
+    _units pushback _unit;
+} forEach _allPosts;
 
 _units
