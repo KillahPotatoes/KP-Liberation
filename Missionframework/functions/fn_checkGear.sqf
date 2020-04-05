@@ -113,7 +113,8 @@ _removedItems = (_removedItems arrayIntersect _removedItems) - [""];
 
 // Show hint and log list, if something was found
 if !(_removedItems isEqualTo []) exitWith {
-    [] spawn {
+    [_removedItems] spawn {
+        params ["_removedItems"];
         private _text = format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _removedItems, name player];
         _text remoteExec ["diag_log", 2];
         hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
