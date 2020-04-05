@@ -194,8 +194,12 @@ class Missions
 * Added: Save interval setting in config file.
 * Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
 * Added: Applied mission parameters are logged in server rpt.
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) basefile. Thanks to [Eogos](https://github.com/Eogos)
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Steam Workshop upload to build tools
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
+* Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
 * Tweaked: Default blacklist now only holds the static and tent backpacks.
 * Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
@@ -207,6 +211,7 @@ class Missions
 * Fixed: Flickering/disappearing of mobile respawn.
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
 * Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
+* Fixed: Support for CBA disposable launchers. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Fixed: ACE medical vehicle variable adjusted in `kp_objectInits` due to the recent ACE updates. [Reference](https://github.com/acemod/ACE3/commit/44050df98b00e579e5b5a79c0d76d4d1138b4baa#diff-31034297ef72d8a9855b601934510008)
 
 ### 0.96.6 (09th September 2019)
