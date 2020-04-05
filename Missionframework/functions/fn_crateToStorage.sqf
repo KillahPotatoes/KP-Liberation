@@ -2,7 +2,7 @@
     File: fn_crateToStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-04-03
+    Last Update: 2020-04-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -37,7 +37,7 @@ if (!isNull _storage) then {
 
     // Check for enough space in storage
     private _crates_count = count (attachedObjects _storage);
-    if (_crates_count >= (count _storage_positions)) exitWith {if (!isDedicated) then {hint localize "STR_BOX_CANTSTORE";};};
+    if (_crates_count >= (count _storage_positions)) exitWith {if (!isDedicated) then {[] spawn {hint localize "STR_BOX_CANTSTORE"; sleep 2; hintSilent "";};};};
 
     // Store crate
     _crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
