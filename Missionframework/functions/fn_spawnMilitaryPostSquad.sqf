@@ -2,62 +2,43 @@
     File: fn_spawnMilitaryPostSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-03
+    Last Update: 2020-04-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Spawns soldiers inside military cargo towers around given position.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _pos - Center position of the area to look for military cargo towers [ARRAY, defaults to [0, 0, 0]]
 
     Returns:
-        Function reached the end [BOOL]
+        Spawned units [ARRAY]
 */
-// TODO
-params ["_squadpos"];
 
-private _spawned_units_local = [];
+params [
+    ["_pos", [0, 0, 0], [[]]]
+];
 
-private _allposts = (nearestObjects [_squadpos, ["Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Cargo_Patrol_V4_F"], GRLIB_capture_size]) select {alive _x};
-if (count _allposts > 0) then {
+if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; []};
+
+// Get all military patrol towers near given position
+private _allPosts = (
+    nearestObjects [_pos, ["Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Cargo_Patrol_V4_F"], GRLIB_capture_size, true]
+) select {alive _x};
+
+// Spawn units if patrol towers were found
+if !(_allPosts isEqualTo []) then {
     private _grp = createGroup [GRLIB_side_enemy, true];
-
+    private _unit = objNull;
+    private _units = [];
     {
-        private _building_positions = [_x] call BIS_fnc_buildingPositions;
-        private _unitclasspost = opfor_marksman;
-
-        if (random 100 > 60) then {
-            _unitclasspost = opfor_machinegunner;
-        };
-
-        private _nextunit_post = [_unitclasspost, _squadpos, _grp] call KPLIB_fnc_createManagedUnit;
-        _nextunit_post setdir (180 + (getdir _x));
-        _nextunit_post setpos (_building_positions select 1);
-
-    } forEach _allposts;
-
-    private _totalx = 0;
-    private _totaly = 0;
-
-    {
-        [_x] spawn building_defence_ai;
-        _x setUnitPos 'UP';
-        _spawned_units_local pushback _x;
-        _totalx = _totalx + ((getpos _x) select 0);
-        _totaly = _totaly + ((getpos _x) select 1);
-    } forEach (units _grp);
-
-    private _avgx = _totalx / (count (units _grp));
-    private _avgy = _totaly / (count (units _grp));
-
-    {
-        private _vd = (getPosASL _x) vectorDiff [_avgx, _avgy, (getPosASL _x) select 2];
-        private _newdir = (_vd select 0) atan2 (_vd select 1);
-        if (_newdir < 0) then {_dir = 360 + _newdir};
-        _x setdir (_newdir);
-    } forEach (units _grp);
-
+        _unit = [[opfor_marksman, opfor_machinegunner] select (random 100 > 50), _pos, _grp] call KPLIB_fnc_createManagedUnit;
+        _unit setdir (180 + (getdir _x));
+        _unit setpos (([_x] call BIS_fnc_buildingPositions) select 1);
+        [_unit] spawn building_defence_ai;
+        _unit setUnitPos 'UP';
+        _units pushback _unit;
+    } forEach _allPosts;
 };
 
-_spawned_units_local
+_units
