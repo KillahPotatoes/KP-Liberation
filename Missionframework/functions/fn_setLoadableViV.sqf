@@ -2,7 +2,7 @@
     File: fn_setLoadableViV.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-08
-    Last Update: 2019-12-03
+    Last Update: 2020-04-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -14,8 +14,12 @@
     Returns:
         Function reached the end [BOOL]
 */
-// TODO
-params [["_object", objNull, [objNull]]];
+
+params [
+    ["_object", objNull, [objNull]]
+];
+
+if (isNull _object) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 private _loadFnc = {
     params ["_target"];
