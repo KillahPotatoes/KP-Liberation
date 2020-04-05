@@ -35,32 +35,22 @@ if (_amount > floor ((count _positions) * GRLIB_defended_buildingpos_part)) then
     _amount = floor ((count _positions) * GRLIB_defended_buildingpos_part)
 };
 
-// Get a random composition of classnames
-private _toSpawn = [];
-for "_i" from 1 to _amount do {_toSpawn pushBack (selectRandom _classnames);};
-
-// Get random building positions
-private _posToSet = [];
-for "_i" from 1 to (count _toSpawn) do {
-    _posToSet pushBack (_positions deleteAt (random (floor (count _positions) - 1)));
-};
-
 // Spawn units
 private _grp = createGroup [GRLIB_side_enemy, true];
 private _pos = markerPos _sector;
 private _unit = objNull;
 private _units = [];
-{
+for "_i" from 1 to _amount do {
     // Create new group, if current group has 10 units
-    if (_forEachIndex > 9) then {
+    if (count (units _grp) >= 10) then {
         _grp = createGroup [GRLIB_side_enemy, true];
     };
 
-    _unit = [_x, _pos, _grp] call KPLIB_fnc_createManagedUnit;
+    _unit = [selectRandom _classnames, _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _unit setDir (random 360);
-    _unit setPos (_posToSet select _forEachIndex);
+    _unit setPos (_positions deleteAt (random (floor (count _positions) - 1)));
     [_unit, _sector] spawn building_defence_ai;
     _units pushBack _unit;
-} forEach _toSpawn;
+};
 
 _units
