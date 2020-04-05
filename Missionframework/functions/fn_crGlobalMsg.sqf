@@ -30,7 +30,7 @@ switch (_msgType) do {
     case 3: {systemChat (format [localize "STR_CR_RESISTANCE_KILLMSG", (_data select 0)]);};
     case 4: {systemChat (format [localize "STR_CR_HEALMSG", (_data select 0)]);};
     case 5: {["lib_asymm_guerilla_incoming", _data] call BIS_fnc_showNotification;};
-    default {private _text = format ["[KP LIBERATION] [ERROR] [CIVREP] globalMsg without valid msgType"];_text remoteExec ["diag_log",2];};
+    default {[format ["[KP LIBERATION] [ERROR] [CIVREP] globalMsg without valid msgType - %1", _msgType]] remoteExec ["diag_log", 2];};
 };
 
 true

@@ -21,4 +21,4 @@ params [
 
 private _i = GRLIB_all_fobs findIf {(_x distance2d _fob) < 100};
 
-[military_alphabet select _i, ""] select (_i isEqualTo -1)
+military_alphabet param [_i, ""]
