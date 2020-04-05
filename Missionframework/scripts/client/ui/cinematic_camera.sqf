@@ -32,16 +32,16 @@ while { cinematic_camera_started } do {
 
 			if ( count active_sectors > 0 ) then {
 				for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-					_positions pushback (getmarkerpos (selectRandom active_sectors));
+					_positions pushback (markerPos (selectRandom active_sectors));
 				};
 			} else {
 				for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-					_positions pushback (getmarkerpos (selectRandom sectors_allSectors));
+					_positions pushback (markerPos (selectRandom sectors_allSectors));
 				};
 			};
 
 			if ( GRLIB_endgame == 0 ) then {
-                _activeplayers = (allPlayers select {alive _x && (_x distance (getmarkerpos GRLIB_respawn_marker)) > 100});
+                _activeplayers = (allPlayers select {alive _x && (_x distance (markerPos GRLIB_respawn_marker)) > 100});
                 if ( count _activeplayers > 0 ) then {
                     for [ {_idx=0},{_idx < 3},{_idx=_idx+1} ] do {
                         _positions pushback (getpos (selectRandom _activeplayers));

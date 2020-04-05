@@ -2,10 +2,10 @@ params ["_targetsector"];
 
 if (combat_readiness > 15) then {
 
-	private _init_units_count = (([getmarkerpos _targetsector, GRLIB_capture_size, GRLIB_side_enemy] call KPLIB_fnc_getUnitsCount));
+	private _init_units_count = (([markerPos _targetsector, GRLIB_capture_size, GRLIB_side_enemy] call KPLIB_fnc_getUnitsCount));
 
 	if !(_targetsector in sectors_bigtown) then {
-		while {(_init_units_count * 0.75) <= ([getmarkerpos _targetsector, GRLIB_capture_size, GRLIB_side_enemy] call KPLIB_fnc_getUnitsCount)} do {
+		while {(_init_units_count * 0.75) <= ([markerPos _targetsector, GRLIB_capture_size, GRLIB_side_enemy] call KPLIB_fnc_getUnitsCount)} do {
 			sleep 5;
 		};
 	};

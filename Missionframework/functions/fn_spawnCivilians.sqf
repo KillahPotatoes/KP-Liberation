@@ -22,7 +22,7 @@ params [
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; []};
 
 private _civs = [];
-private _sPos = getMarkerPos _sector;
+private _sPos = markerPos _sector;
 
 // Amount and spread depending if capital or city/factory
 private _amount = round ((3 + (floor (random 7))) * GRLIB_civilian_activity);

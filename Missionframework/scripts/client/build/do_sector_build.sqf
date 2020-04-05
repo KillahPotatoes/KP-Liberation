@@ -8,13 +8,13 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
 	build_invalid = 0;
 	KP_vector = true;
 
-	_sectorpos = getMarkerPos ([GRLIB_fob_range] call KPLIB_fnc_getNearestSector);
+	_sectorpos = markerPos ([GRLIB_fob_range] call KPLIB_fnc_getNearestSector);
 
 	_idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3;},"",-725,false,true,"","build_confirmed == 1"];
 	_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2;},"",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 	_idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
 
-	_ghost_spot = (getmarkerpos "ghost_spot") findEmptyPosition [0,100];
+	_ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
 
 	_building = ((_this select 3) select 0) createVehicleLocal _ghost_spot;
 	_building allowdamage false;

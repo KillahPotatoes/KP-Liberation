@@ -14,7 +14,7 @@ while {GRLIB_endgame == 0} do {
 
 		if (_opforcount < GRLIB_sector_cap) then {
 
-			if (([getmarkerpos _nextsector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
+			if (([markerPos _nextsector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
 
 				_hc = [] call KPLIB_fnc_getLessLoadedHC;
 

@@ -13,7 +13,7 @@ while { GRLIB_endgame == 0 } do {
 	_spawnsector = "";
 	_usable_sectors = [];
 	{
-		if ((([getmarkerpos _x, 1000, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) && (count ([getmarkerpos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+		if ((([markerPos _x, 1000, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) && (count ([markerPos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
 			_usable_sectors pushback _x;
 		}
 
@@ -33,7 +33,7 @@ while { GRLIB_endgame == 0 } do {
 
 			_nearestroad = objNull;
 			while { isNull _nearestroad } do {
-				_nearestroad = [(getmarkerpos (_spawnsector)) getPos [random (100), random (360)], 200, []] call BIS_fnc_nearestRoad;
+				_nearestroad = [(markerPos (_spawnsector)) getPos [random (100), random (360)], 200, []] call BIS_fnc_nearestRoad;
 				sleep 1;
 			};
 
@@ -56,7 +56,7 @@ while { GRLIB_endgame == 0 } do {
 		_sectors_patrol = [];
 		_patrol_startpos = getpos (leader _grp);
 		{
-			if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([getmarkerpos _x, 4000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+			if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([markerPos _x, 4000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
 				_sectors_patrol pushback _x;
 			};
 		} foreach (sectors_bigtown + sectors_capture + sectors_factory);
@@ -74,7 +74,7 @@ while { GRLIB_endgame == 0 } do {
 		{_x doFollow leader _grp} foreach units _grp;
 
 		{
-			_nearestroad = [(getmarkerpos _x) getPos [random(100), random(360)], 200, []] call BIS_fnc_nearestRoad;
+			_nearestroad = [(markerPos _x) getPos [random(100), random(360)], 200, []] call BIS_fnc_nearestRoad;
 			if ( isNull _nearestroad ) then {
 				_waypoint = _grp addWaypoint [ markerpos _x, 100 ];
 			} else {

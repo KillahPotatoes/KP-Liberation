@@ -21,7 +21,7 @@ while {GRLIB_endgame == 0} do {
 		{
 			private _sector = _x;
 			private _blocked = false;
-			private _units_at_sector = [getmarkerpos _sector, GRLIB_sector_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+			private _units_at_sector = [markerPos _sector, GRLIB_sector_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 
 			{
 				if ((_x select 0) == _sector) exitWith {

@@ -27,7 +27,7 @@ KP_liberation_respawn_mobile_done = false;
 while {true} do {
 	waitUntil {
 		sleep 0.2;
-		(GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
+		(GRLIB_force_redeploy || (player distance (markerPos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
 	private _backpack = backpack player;

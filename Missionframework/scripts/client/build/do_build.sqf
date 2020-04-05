@@ -96,7 +96,7 @@ while { true } do {
 			_idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>","scripts\client\build\build_lower.sqf","",-766,false,false,"","build_confirmed == 1"];
 			_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
-			_ghost_spot = (getmarkerpos "ghost_spot") findEmptyPosition [0,100];
+			_ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
 
 			_vehicle = _classname createVehicleLocal _ghost_spot;
 			_vehicle allowdamage false;

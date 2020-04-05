@@ -12,7 +12,7 @@ waitUntil {!isNil "combat_readiness"};
 
 if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector spawned on: %3 - time: %4", (markerText _sector), _sector, debug_source, time];_text remoteExec ["diag_log",2];};
 
-private _sectorpos = getmarkerpos _sector;
+private _sectorpos = markerPos _sector;
 private _stopit = false;
 private _spawncivs = false;
 private _building_ai_max = 0;
@@ -41,7 +41,7 @@ active_sectors pushback _sector; publicVariable "active_sectors";
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
-if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0)) then {
+if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
 	if (_sector in sectors_bigtown) then {
 		if (combat_readiness < 30) then {_infsquad = "militia";};
@@ -191,7 +191,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 		} forEach _allbuildings;
 		if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)];_text remoteExec ["diag_log",2];};
 		if (count _buildingpositions > _minimum_building_positions) then {
-			_managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sectorpos, _sector] call KPLIB_fnc_spawnBuildingSquad);
+			_managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sector] call KPLIB_fnc_spawnBuildingSquad);
 		};
 	};
 
@@ -253,7 +253,7 @@ if ((!(_sector in blufor_sectors)) && (([getmarkerpos _sector, [_opforcount] cal
 
 			_stopit = true;
 
-			{[_x] spawn prisonner_ai;} forEach ((getmarkerpos _sector) nearEntities [["Man"], _local_capture_size * 1.2]);
+			{[_x] spawn prisonner_ai;} forEach ((markerPos _sector) nearEntities [["Man"], _local_capture_size * 1.2]);
 
 			sleep 60;
 

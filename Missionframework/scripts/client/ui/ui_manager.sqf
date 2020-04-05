@@ -122,7 +122,7 @@ while { true } do {
 		((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
 		((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
 
-		if ((getmarkerpos "opfor_capture_marker") distance markers_reset > 100 ) then {
+		if ((markerPos "opfor_capture_marker") distance markers_reset > 100 ) then {
 
 			private [ "_attacked_string" ];
 			_attacked_string = [markerpos "opfor_capture_marker"] call KPLIB_fnc_getLocationName;

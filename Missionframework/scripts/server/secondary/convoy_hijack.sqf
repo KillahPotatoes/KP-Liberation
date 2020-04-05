@@ -8,7 +8,7 @@ private _couldnt_spawn = false;
 if ( _couldnt_spawn ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find enough map positions for convoy hijack mission"; };
 
 private _convoy_destinations = [];
-{ _convoy_destinations pushback (getMarkerPos _x); } foreach _convoy_destinations_markers;
+{ _convoy_destinations pushback (markerPos _x); } foreach _convoy_destinations_markers;
 
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];

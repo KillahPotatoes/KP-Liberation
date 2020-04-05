@@ -3,7 +3,7 @@ private _spawn_marker = [ 2000, 999999, false ] call KPLIB_fnc_getOpforSpawnPoin
 if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
-private _helopos = (getmarkerpos _spawn_marker) getPos [random 200, random 360];
+private _helopos = (markerPos _spawn_marker) getPos [random 200, random 360];
 private _helowreck = GRLIB_sar_wreck createVehicle _helopos;
 _helowreck allowDamage false;
 _helowreck setPos _helopos;

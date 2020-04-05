@@ -9,13 +9,13 @@ while { true } do {
 	{
 		if ((_x != group player) && ((side _x == GRLIB_side_friendly))) then {
 			if ( (_x in _iconed_groups) && (
-				(count units _x == 0) ||  (side _x == GRLIB_side_friendly && (((leader _x) distance (getmarkerpos GRLIB_respawn_marker) < 100) || ((leader _x) distance startbase < 500))))) then {
+				(count units _x == 0) ||  (side _x == GRLIB_side_friendly && (((leader _x) distance (markerPos GRLIB_respawn_marker) < 100) || ((leader _x) distance startbase < 500))))) then {
 				clearGroupIcons _x;
 				_iconed_groups = _iconed_groups - [_x];
 			};
 
 			if ( !(_x in _iconed_groups) && (
-				(count units _x > 0) &&  (side _x == GRLIB_side_friendly && (((leader _x) distance (getmarkerpos GRLIB_respawn_marker) > 100) && ((leader _x) distance startbase > 500))))) then {
+				(count units _x > 0) &&  (side _x == GRLIB_side_friendly && (((leader _x) distance (markerPos GRLIB_respawn_marker) > 100) && ((leader _x) distance startbase > 500))))) then {
 				clearGroupIcons _x;
 				_localgroup = _x;
 				_grouptype = [_localgroup] call KPLIB_fnc_getGroupType;
