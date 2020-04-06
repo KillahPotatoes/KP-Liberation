@@ -2,7 +2,7 @@
     File: fn_setFobMass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-02
-    Last Update: 2019-12-04
+    Last Update: 2020-04-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
     ["_box", objNull, [objNull]]
 ];
 
-if (isNull _object) exitWith {["Null object given"] call BIS_fnc_error; false};
+if (isNull _box) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 private _boxMass = getNumber(configFile >> "CfgVehicles" >> huron_typename >> "slingLoadMaxCargoMass") - 100;
 _boxMass = 1000 max (_boxMass min 3000);
