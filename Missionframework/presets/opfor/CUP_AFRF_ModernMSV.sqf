@@ -152,10 +152,14 @@ opfor_troup_transports = [
     "CUP_O_Mi24_V_Dynamic_RU",                                          // Mi-24V
     "CUP_O_Mi24_P_Dynamic_RU",                                          // Mi-24P
     "CUP_O_BMP2_RU",                                                    // BMP-2
+    "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
+    "CUP_O_BTR80_CAMO_RU",                                              // BTR-80 (Camo)
+    "CUP_O_BTR80_GREEN_RU",                                             // BTR-80 (Green)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Camo)
+    "CUP_O_BTR80A_CAMO_RU",                                             // BTR-80A (Green)
     "CUP_O_BTR90_RU",                                                   // BTR-90
     "CUP_O_GAZ_Vodnik_PK_RU",                                           // GAZ Vodnik (2x PKM)
     "CUP_O_GAZ_Vodnik_AGS_RU",                                          // GAZ Vodnik (AGS-30/PKM)
-    "CUP_O_BTR60_RU",                                                   // BTR-60PB (Camo)
     "CUP_O_MTLB_pk_WDL_RU"                                              // MT-LB LV (Camo)
 ];
 

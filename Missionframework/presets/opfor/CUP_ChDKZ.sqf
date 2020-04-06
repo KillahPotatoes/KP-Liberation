@@ -133,6 +133,8 @@ opfor_battlegroup_vehicles_low_intensity = [
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 opfor_troup_transports = [
     "CUP_O_BTR60_CHDKZ",                                                // BTR-60PB
+    "CUP_O_BTR80_CHDKZ",                                                // BTR-80
+    "CUP_O_BTR80A_CHDKZ",                                               // BTR-80A
     "CUP_O_MTLB_pk_ChDKZ",                                              // MT-LB LV
     "CUP_O_BMP2_CHDKZ",                                                 // BMP-2
     "CUP_O_Mi8_CHDKZ"                                                   // Mi-8MT

@@ -143,6 +143,8 @@ opfor_troup_transports = [
     "CUP_O_Mi24_D_Dynamic_SLA",                                             // Mi-24D
     "CUP_O_Mi8_SLA_2",                                                      // Mi-8MTV3
     "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR80_SLA",                                                      // BTR-80
+    "CUP_O_BTR80A_SLA",                                                     // BTR-80A
     "CUP_O_MTLB_pk_SLA",                                                    // MT-LB LV
     "CUP_O_Mi8_SLA_1",                                                      // Mi-8MT
     "CUP_O_UH1H_armed_SLA",                                                 // UH-1H (Armed)

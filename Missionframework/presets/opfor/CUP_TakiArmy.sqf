@@ -77,6 +77,8 @@ opfor_vehicles = [
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
     "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
     "CUP_O_BMP2_TKA",                                                   // BMP-2
@@ -115,6 +117,8 @@ opfor_battlegroup_vehicles = [
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
     "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
     "CUP_O_BTR60_TK",                                                   // BTR-60PB
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
     "CUP_O_BMP2_TKA",                                                   // BMP-2
@@ -160,6 +164,8 @@ opfor_troup_transports = [
     "CUP_O_UH1H_TKA",                                                   // UH-1H
     "CUP_O_UH1H_armed_TKA",                                             // UH-1H (Armed)
     "CUP_O_BTR60_TK",                                                   // BTR-60PB
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_Mi24_D_Dynamic_TK",                                          // Mi-24D
     "CUP_O_Mi17_TK",                                                    // Mi-8MT
     "CUP_O_T34_TKA",                                                    // T-34-85M
