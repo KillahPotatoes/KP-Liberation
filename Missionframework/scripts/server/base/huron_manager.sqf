@@ -33,7 +33,7 @@ while {true} do {
     sleep 0.5;
     huron enableSimulationGlobal true;
     huron setDamage 0;
-    huron setVariable ["ace_medical_medicClass", 1, true];
+    huron setVariable ["ace_medical_isMedicalVehicle", true, true];
     sleep 1.5;
 
     huron setDamage 0;
