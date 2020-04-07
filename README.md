@@ -188,6 +188,7 @@ class Missions
 ## Changelog
 
 ### 0.96.7 (TBD)
+* Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
 * Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
@@ -205,6 +206,7 @@ class Missions
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
 * Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
 * Tweaked: Start vehicle/Potato 01/start resources spawn at mission start optimized.
+* Tweaked: Explanation and formatting of `kp_objectInits.sqf`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
