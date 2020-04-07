@@ -204,6 +204,7 @@ class Missions
 * Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
 * Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
+* Tweaked: Start vehicle/Potato 01/start resources spawn at mission start optimized.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
