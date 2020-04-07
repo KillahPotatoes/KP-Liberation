@@ -106,9 +106,6 @@ if(isServer) then {
     GREUH_allow_mapmarkers = KP_liberation_mapmarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KP_liberation_mapmarkers; publicVariable "GREUH_allow_platoonview";
 
-    GRLIB_remote_sensors = 0;
-    publicVariable "GRLIB_remote_sensors";
-
     KP_serverParamsFetched = true;
     publicVariable "KP_serverParamsFetched";
 
