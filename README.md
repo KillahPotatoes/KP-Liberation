@@ -207,6 +207,7 @@ class Missions
 * Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
 * Tweaked: Start vehicle/Potato 01/start resources spawn at mission start optimized.
 * Tweaked: Explanation and formatting of `kp_objectInits.sqf`.
+* Tweaked: Integer to bool conversion in fetch param macro.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
