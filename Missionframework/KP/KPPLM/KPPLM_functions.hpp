@@ -13,7 +13,7 @@
 
 class KPPLM {
     class main {
-        file = "KPPLM\fnc";
+        file = "KP\KPPLM\fnc";
 
         // Apply and save settings
         class apply {};
