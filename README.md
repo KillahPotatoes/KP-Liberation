@@ -198,7 +198,7 @@ class Missions
 * Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) basefile. Thanks to [Eogos](https://github.com/Eogos)
 * Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Steam Workshop upload to build tools
-* Added: [KP Player Menu]() as optional (default enabled) replacement for the old GREUH extended options. GREUH still available via parameters or if no CBA loaded.
+* Added: [KP Player Menu](https://github.com/KillahPotatoes/KP-PLM) as optional (default enabled) replacement for the old GREUH extended options. GREUH still available via parameters or if no CBA loaded.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
