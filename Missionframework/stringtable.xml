@@ -6923,5 +6923,242 @@
             <Russian>FOB Грузовик</Russian>
             <Korean>전초기지 설치트럭</Korean>
         </Key>
+        <Key ID="STR_PARAMS_PLAYERMENU">
+            <Original>Client options variant</Original>
+            <German>Spielermenü Variante</German>
+        </Key>
+        <Key ID="STR_PARAMS_PLAYERMENU_GREUH">
+            <Original>GREUH Extended Options</Original>
+            <German>GREUH Erweiterte Optionen</German>
+        </Key>
+        <Key ID="STR_PARAMS_PLAYERMENU_KP">
+            <Original>KP Player Menu (requires CBA)</Original>
+            <German>KP Spielermenü (benötigt CBA)</German>
+        </Key>
+    </Package>
+
+    <Package name="KPPLM">
+        <!-- English and German localization by Wyqer: https://github.com/Wyqer | Updated: 2018-08-23 -->
+        <!-- Chinese Traditional localization by dustin902001: https://github.com/dustin902001 | Updated: 2018-12-05 -->
+        <!-- Portuguese localization by AngusDLX: https://github.com/AngusDLX | Updated: 2018-08-25 -->
+        <Key ID="STR_KPPLM_ACTIONOPEN">
+            <English>-- KP Player Menu --</English>
+            <Chinese>-- KP 玩家選單 --</Chinese>
+            <German>-- KP Spielermenü --</German>
+            <Portuguese>-- KP Menu do Jogador --</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TITLE">
+            <English>KP Player Menu</English>
+            <Chinese>KP 玩家選單</Chinese>
+            <German>KP Spielermenü</German>
+            <Portuguese>KP Menu do Jogador</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_LABELPLAYER">
+            <English>Player Information</English>
+            <Chinese>玩家資訊</Chinese>
+            <German>Spielerinformationen</German>
+            <Portuguese>Informação do Jogador</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_RANK">
+            <English>Rank:</English>
+            <Chinese>階級</Chinese>
+            <German>Dienstgrad:</German>
+            <Portuguese>Rank:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_SCORE">
+            <English>Score:</English>
+            <Chinese>得分</Chinese>
+            <German>Punkte:</German>
+            <Portuguese>Pontuação:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_PLAYTIME">
+            <English>Playtime:</English>
+            <Chinese>遊戲時間</Chinese>
+            <German>Spielzeit:</German>
+            <Portuguese>Tempo de jogo:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_NORANKS">
+            <English>KP Ranks mod not loaded</English>
+            <Chinese>KP Ranks 模組未裝載</Chinese>
+            <German>KP Ranks Mod nicht geladen</German>
+            <Portuguese>O mod KP Ranks não está carregado</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_LABELGROUPS">
+            <English>Group Management</English>
+            <Chinese>團隊管理</Chinese>
+            <German>Gruppenverwaltung</German>
+            <Portuguese>Gerenciar Grupo</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_CREATE">
+            <English>Create</English>
+            <German>Erstellen</German>
+            <Portuguese>Criar</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_JOIN">
+            <English>Join</English>
+            <Chinese>加入</Chinese>
+            <German>Beitreten</German>
+            <Portuguese>Juntar-se</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_RENAME">
+            <English>Rename</English>
+            <Chinese>重新命名</Chinese>
+            <German>Umbenennen</German>
+            <Portuguese>Renomear</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_LABELVIEW">
+            <English>View Distance Settings</English>
+            <Chinese>視距設定</Chinese>
+            <German>Sichtweiteneinstellungen</German>
+            <Portuguese>Distância de Visão</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_VIEWFOOT">
+            <English>m on foot</English>
+            <Chinese>m 步兵視野</Chinese>
+            <German>m zu Fuß</German>
+            <Portuguese>m A pé</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_VIEWVEHICLE">
+            <English>m in ground vehicles</English>
+            <Chinese>m 地面載具視野</Chinese>
+            <German>m in Bodenfahrzeugen</German>
+            <Portuguese>m em veículos terrestres</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_VIEWAIR">
+            <English>m in air vehicles</English>
+            <Chinese>m 空中載具視野</Chinese>
+            <German>m in Luftfahrzeugen</German>
+            <Portuguese>m em veículos aéreos</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_LABELMISC">
+            <English>Misc Settings</English>
+            <Chinese>細項設定</Chinese>
+            <German>Sonstige Einstellungen</German>
+            <Portuguese>Outras Configurações</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TEXTTERRAIN">
+            <English>Terrain detail:</English>
+            <Chinese>地形細節</Chinese>
+            <German>Terraindetail:</German>
+            <Portuguese>Detalhe do terreno:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TERRAINLOW">
+            <English>Low</English>
+            <Chinese>低</Chinese>
+            <German>Niedrig</German>
+            <Portuguese>Baixo</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TERRAINSTANDARD">
+            <English>Standard</English>
+            <Chinese>標準</Chinese>
+            <German>Standard</German>
+            <Portuguese>Padrão</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TERRAINHIGH">
+            <English>High</English>
+            <Chinese>高</Chinese>
+            <German>Hoch</German>
+            <Portuguese>Alto</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TERRAINVHIGH">
+            <English>Very High</English>
+            <Chinese>非常高</Chinese>
+            <German>Sehr Hoch</German>
+            <Portuguese>Muito Alto</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TERRAINULTRA">
+            <English>Ultra</English>
+            <Chinese>極高</Chinese>
+            <German>Ultra</German>
+            <Portuguese>Ultra</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TEXTTPV">
+            <English>Auto 3rd person view:</English>
+            <Chinese>自動第三人稱視角</Chinese>
+            <German>Auto 3rd-Person-Sicht:</German>
+            <Portuguese>Câmera auto em 3º pessoa:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TPDISABLED">
+            <English>Disabled</English>
+            <Chinese>關閉</Chinese>
+            <German>Deaktiviert</German>
+            <Portuguese>Desativado</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TPVAIR">
+            <English>Air vehicles</English>
+            <Chinese>空中載具</Chinese>
+            <German>Luftfahrzeuge</German>
+            <Portuguese>Veículos aéreos</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TPVLAND">
+            <English>Ground vehicles</English>
+            <Chinese>地面載具</Chinese>
+            <German>Bodenfahrzeuge</German>
+            <Portuguese>Veículos terrestres</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TPVALL">
+            <English>All vehicles</English>
+            <Chinese>所有載具</Chinese>
+            <German>Alle Fahrzeuge</German>
+            <Portuguese>Todos os veículos</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TEXTRADIO">
+            <English>Disable radio chatter:</English>
+            <Chinese>關閉文字聊天：</Chinese>
+            <German>KI Funk deaktivieren:</German>
+            <Portuguese>Desativar comm's de rádio:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_RADIONO">
+            <English>No</English>
+            <Chinese>否</Chinese>
+            <German>Nein</German>
+            <Portuguese>Não</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_RADIOVOICE">
+            <English>Voice</English>
+            <Chinese>只有語音通訊</Chinese>
+            <German>Stimme</German>
+            <Portuguese>Voz</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_RADIOALL">
+            <English>Voice + Chat</English>
+            <Chinese>語音+文字通訊</Chinese>
+            <German>Stimme + Chat</German>
+            <Portuguese>Voz + Chat</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TEXTSOUND">
+            <English>In vehicle volume:</English>
+            <Chinese>載具內音量：</Chinese>
+            <German>Lautstärke im Fahrzeug:</German>
+            <Portuguese>Volume dentro do veículo:</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_APPLY">
+            <English>Apply</English>
+            <Chinese>使用</Chinese>
+            <German>Anwenden</German>
+            <Portuguese>Aplicar</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_TTSOUND">
+            <English>The sound adjustment is overwritten by ACE, if you should use it.</English>
+            <Chinese>如果你有使用ACE模組，聲音設定將會被ACE的覆蓋</Chinese>
+            <German>Die Lautstärkeanpassung wird durch ACE überschrieben, wenn du es nutzen solltest.</German>
+            <Portuguese>O ajuste de som é sobrescrito pelo ACE se você usar ele.</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_NOTLEADER">
+            <English>You're not the leader of this group.</English>
+            <Chinese>你不是這個團隊的隊長</Chinese>
+            <German>Du bist nicht der Anführer dieser Gruppe.</German>
+            <Portuguese>Você não é o lider desse grupo.</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_NOLVLSYSTEM">
+            <English>Leveling system disabled</English>
+            <Chinese>陞階系統關閉</Chinese>
+            <German>Levelsystem deaktiviert</German>
+            <Portuguese>Sistema de níveis desativado</Portuguese>
+        </Key>
+        <Key ID="STR_KPPLM_VERSION">
+            <English>KP Player Menu v1.0.2\nby Wyqer</English>
+            <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
+        </Key>
     </Package>
 </Project>
