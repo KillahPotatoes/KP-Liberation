@@ -51,9 +51,7 @@ if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\huron_marker.
 execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
-execVM "scripts\client\misc\disable_remote_sensors.sqf";
 execVM "scripts\client\misc\init_arsenal.sqf";
-// execVM "scripts\client\misc\offload_diag.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
 if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";

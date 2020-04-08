@@ -10,13 +10,13 @@ private _timer = 0;
 while {GRLIB_endgame == 0} do {
 	{
 		private _nextsector = _x;
-		private _opforcount =  [] call F_opforCap;
+		private _opforcount =  [] call KPLIB_fnc_getOpforCap;
 
 		if (_opforcount < GRLIB_sector_cap) then {
 
-			if (([getmarkerpos _nextsector, [_opforcount] call F_getCorrectedSectorRange, GRLIB_side_friendly] call F_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
+			if (([markerPos _nextsector, [_opforcount] call KPLIB_fnc_getSectorRange, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount > 0) && !(_nextsector in active_sectors)) then {
 
-				_hc = [] call F_lessLoadedHC;
+				_hc = [] call KPLIB_fnc_getLessLoadedHC;
 
 				if (isNull _hc) then {
 					[_nextsector] spawn manage_one_sector;
@@ -35,7 +35,7 @@ while {GRLIB_endgame == 0} do {
 		};
 		sleep 0.25;
 	} forEach (sectors_allSectors - blufor_sectors);
-	
+
 	if (KP_liberation_sectorspawn_debug > 0) then {
 		_timer = _timer + 1;
 		if ((_timer % 5) == 0) then {

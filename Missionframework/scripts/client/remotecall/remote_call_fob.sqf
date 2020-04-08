@@ -5,7 +5,7 @@ if ( isNil "sector_timer" ) then { sector_timer = 0 };
 params [ "_fob", "_status" ];
 private [ "_fobname" ];
 
-_fobname = [ _fob ] call F_getFobName;
+_fobname = [_fob] call KPLIB_fnc_getFobName;
 
 if ( _status == 0 ) then {
 	[ "lib_fob_built", [ _fobname ] ] call BIS_fnc_showNotification;

@@ -12,5 +12,5 @@ if ( isNil "GRLIB_respawn_loadout" ) then {
 	player linkItem "ItemRadio";
 } else {
 	sleep 4;
-	[ player, GRLIB_respawn_loadout ] call F_setLoadout;
+	[ player, GRLIB_respawn_loadout ] call KPLIB_fnc_setLoadout;
 };

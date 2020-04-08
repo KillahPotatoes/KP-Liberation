@@ -18,7 +18,7 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
 
 		private _spawnclass = selectRandom KP_liberation_crates;
 
-		private _newbox = [selectRandom KP_liberation_crates, 100, _spawnpos] call F_createCrate;
+		private _newbox = [selectRandom KP_liberation_crates, 100, _spawnpos] call KPLIB_fnc_createCrate;
 		_newbox setdir (random 360);
 		_newbox setpos _spawnpos;
 	};

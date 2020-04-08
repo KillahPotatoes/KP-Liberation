@@ -1,46 +1,24 @@
+scriptName "[KPLIB] Enforce Whitelist";
+
 [] call compileFinal preprocessFileLineNumbers "whitelist.sqf";
 
-if ( !GRLIB_use_whitelist ) exitWith {};
+if (!GRLIB_use_whitelist) exitWith {};
 
-private [ "_commanderobj", "_tagmatch", "_idmatch", "_namematch" ];
-
-waitUntil { alive player };
+waitUntil {alive player};
 sleep 1;
 
-_commanderobj = [] call F_getCommander;
-if ( !isNull _commanderobj ) then {
-	if ( player == _commanderobj && !([] call F_isAdmin)) then {
+if (player isEqualTo ([] call KPLIB_fnc_getCommander) && !(serverCommandAvailable "#kick")) then {
 
-		_tagmatch = false;
-		_idmatch = false;
-		_namematch = false;
+    private _match = false;
 
-		if ( !isNil "GRLIB_whitelisted_tags" ) then {
-			if ( count (squadParams _commanderobj) != 0 ) then {
-				if ( ((squadParams _commanderobj select 0) select 0) in GRLIB_whitelisted_tags  ) then {
-					_tagmatch = true;
-				};
-			};
-		};
+    [] call {
+        if ((getPlayerUID player) in GRLIB_whitelisted_steamids) exitWith {_match = true;};
+        if ((name player) in GRLIB_whitelisted_names) exitWith {_match = true;};
+        if (!((squadParams player) isEqualTo []) && {(((squadParams player) select 0) select 0) in GRLIB_whitelisted_tags}) exitWith {_match = true;};
+    };
 
-		if ( !isNil "GRLIB_whitelisted_steamids" ) then {
-			if ( ( getPlayerUID _commanderobj ) in GRLIB_whitelisted_steamids ) then {
-				_idmatch = true;
-			};
-		};
-
-		if ( !isNil "GRLIB_whitelisted_names" ) then {
-			if ( ( name _commanderobj ) in GRLIB_whitelisted_names ) then {
-				_namematch = true;
-			};
-		};
-
-		if ( !( _tagmatch || _idmatch || _namematch ) ) then {
-
-			sleep 1;
-			if ( alive _commanderobj ) then {
-				endMission "END1";
-			};
-		};
-	};
+    if (!_match) then {
+        sleep 1;
+        endMission "END1";
+    };
 };

@@ -15,7 +15,7 @@ private _infantry_trigger = 1 + (ceil (random 2));
 private _vehicle_trigger = 1;
 private _ied_type = selectRandom ["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
 private _ied_obj = objNull;
-private _roadobj = [(getmarkerpos (_sector) getPos [random (200), random (360)]), 200, []] call BIS_fnc_nearestRoad;
+private _roadobj = [(markerPos (_sector) getPos [random (200), random (360)]), 200, []] call BIS_fnc_nearestRoad;
 private _goes_boom = false;
 private _ied_marker = "";
 

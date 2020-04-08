@@ -9,7 +9,7 @@ switch (_notiftype) do {
 		waitUntil {!isNil "secondary_objective_position_marker"};
 		waitUntil {count secondary_objective_position_marker > 0};
 		waitUntil {secondary_objective_position_marker distance zeropos > 1000};
-		["lib_intel_fob", [markertext ([10000, secondary_objective_position_marker] call F_getNearestSector)]] call BIS_fnc_showNotification;
+		["lib_intel_fob", [markertext ([10000, secondary_objective_position_marker] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
 		_secondary_marker = createMarkerLocal ["secondarymarker", secondary_objective_position_marker];
 		_secondary_marker setMarkerColorLocal GRLIB_color_enemy_bright;
 		_secondary_marker setMarkerTypeLocal "hd_unknown";
@@ -26,13 +26,13 @@ switch (_notiftype) do {
 		deleteMarkerLocal "secondarymarkerzone";
 		secondary_objective_position_marker = [];
 	};
-	case 4: {["lib_intel_convoy", [markertext ([10000, _obj_position] call F_getNearestSector)]] call BIS_fnc_showNotification;};
+	case 4: {["lib_intel_convoy", [markertext ([10000, _obj_position] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;};
 	case 5: {["lib_secondary_convoy_destroyed"] call BIS_fnc_showNotification;};
 	case 6: {
 		waitUntil {!isNil "secondary_objective_position_marker"};
 		waitUntil {count secondary_objective_position_marker > 0};
 		waitUntil {secondary_objective_position_marker distance zeropos > 1000};
-		["lib_intel_sar", [markertext ([10000, secondary_objective_position_marker] call F_getNearestSector)]] call BIS_fnc_showNotification;
+		["lib_intel_sar", [markertext ([10000, secondary_objective_position_marker] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
 		_secondary_marker = createMarkerLocal ["secondarymarker", secondary_objective_position_marker];
 		_secondary_marker setMarkerColorLocal GRLIB_color_enemy_bright;
 		_secondary_marker setMarkerTypeLocal "hd_unknown";

@@ -1,4 +1,4 @@
-diag_log format ["[KP LIBERATION] [SAVE] save_manager.sqf started - time: %1", diag_tickTime];
+diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
 
 // Handle possible enabled "wipe save" mission parameters
 if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
@@ -15,7 +15,7 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
 */
 
 // Version of the KP Liberation framework
-private _version = [0, 96, 6];
+private _version = [0, 96, 7];
 // All AI squads
 private _aiGroups = [];
 // Classnames of blufor vehicles
@@ -289,7 +289,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
     // Create clearances
     {
-        [_x select 0, _x select 1] call F_createClearance;
+        [_x select 0, _x select 1] call KPLIB_fnc_createClearance;
     } forEach KP_liberation_clearances;
 
     // Collection array for all objects which are loaded
@@ -330,7 +330,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
             // Add blufor crew, if it had crew or is a UAV
             if ((unitIsUAV _object) || _hascrew) then {
-                [_object] call F_forceBluforCrew;
+                [_object] call KPLIB_fnc_forceBluforCrew;
             };
 
             // Apply kill manager handling, if not excluded
@@ -340,7 +340,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
             // Set captured variable, if it's an OPFOR vehicle
             if (_class in all_hostile_classnames) then {
-                _object setVariable ["GRLIB_captured", 1, true];
+                _object setVariable ["GRLIB_captured", true, true];
             };
 
             // Prevent damage for the FOB building
@@ -349,15 +349,10 @@ if (!isNil "greuh_liberation_savegame") then {
             };
 
             // Process KP object init
-            [_object] call F_addObjectInit;
+            [_object] call KPLIB_fnc_addObjectInit;
 
             // Determine if cargo should be cleared
-            if (KP_liberation_clear_cargo || {!(_class in KP_liberation_ace_crates)} || {!(_class isKindOf "AllVehicles")}) then {
-                clearWeaponCargoGlobal _object;
-                clearMagazineCargoGlobal _object;
-                clearBackpackCargoGlobal _object;
-                clearItemCargoGlobal _object;
-            };
+            [_object] call KPLIB_fnc_clearCargo;
 
             // Mark civilian vehicle as "already seized"
             if (_class in civilian_vehicles) then {
@@ -416,7 +411,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _object setVariable ["KP_liberation_storage_type", 0, true];
 
             // Fill storage with saved resources
-            [floor _supply, floor _ammo, floor _fuel, _object] call F_fillStorage;
+            [floor _supply, floor _ammo, floor _fuel, _object] call KPLIB_fnc_fillStorage;
         };
     } forEach _resourceStorages;
 
@@ -449,7 +444,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _object setVariable ["KP_liberation_storage_type", 1, true];
 
             // Fill storage
-            [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call F_fillStorage;
+            [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call KPLIB_fnc_fillStorage;
         };
     } forEach KP_liberation_production;
 
@@ -462,7 +457,7 @@ if (!isNil "greuh_liberation_savegame") then {
             _x params ["_spawnPos", "_units"];
             private _grp = createGroup [GRLIB_side_friendly, true];
             {
-                [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call F_createManagedUnit;
+                [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
         } forEach _aiGroups;
     } else {
@@ -474,7 +469,7 @@ if (!isNil "greuh_liberation_savegame") then {
                 private _unit = _x;
                 private _pos = [(_unit select 1) select 0, (_unit select 1) select 1, ((_unit select 1) select 2) + 0.2];
                 private _dir = _unit select 2;
-                [(_unit select 0), _pos, _grp] call F_createManagedUnit;
+                [(_unit select 0), _pos, _grp] call KPLIB_fnc_createManagedUnit;
                 private _nextobj = ((units _grp) select ((count (units _grp)) - 1));
                 _nextobj setDir _dir;
                 _nextobj setPosATL _pos;
@@ -496,7 +491,7 @@ publicVariable "KP_liberation_clearances";
 GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call F_checkClass};
+GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;
@@ -527,7 +522,7 @@ publicVariable "GRLIB_permissions";
 publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-diag_log format ["[KP LIBERATION] [SAVE] save_manager.sqf done - time: %1", diag_tickTime];
+diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
 
 // Start the save loop
 while {true} do {

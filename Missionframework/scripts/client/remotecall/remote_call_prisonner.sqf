@@ -21,7 +21,7 @@ if ( typeof _unit == pilot_classname ) exitWith {};
 
 waitUntil { sleep 5;
 
-	_nearestfob = [ getpos _unit ] call F_getNearestFob;
+	_nearestfob = [ getpos _unit ] call KPLIB_fnc_getNearestFob;
 	if ( count _nearestfob == 3) then {
 		if ( ( _unit distance _nearestfob ) < 30 ) then {
 			_is_near_fob = true;

@@ -67,7 +67,7 @@ while { dialog && alive player && dostartsecondary == 0 } do {
 
 if ( dostartsecondary == 1 ) then {
 	private _index = lbCurSel 101;
-    if !([2000,999999,false] call F_findOpforSpawnPoint isEqualTo "") then {
+    if !(([2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint) isEqualTo "") then {
 		[_index] remoteExec ["start_secondary_remote_call", 2];
 	} else {
 		hint "There is not enough enemy territory left for secondary missions.";

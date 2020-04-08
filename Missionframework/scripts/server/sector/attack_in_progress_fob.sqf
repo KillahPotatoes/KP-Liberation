@@ -3,13 +3,13 @@ private [ "_attacktime", "_ownership", "_grp" ];
 
 sleep 5;
 
-_ownership = [ _thispos ] call F_sectorOwnership;
+_ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership != GRLIB_side_enemy ) exitWith {};
 
 if ( GRLIB_blufor_defenders ) then {
 	_grp = creategroup [GRLIB_side_friendly, true];
 	{
-		[_x, _thispos, _grp] call F_createManagedUnit;
+		[_x, _thispos, _grp] call KPLIB_fnc_createManagedUnit;
 	} foreach blufor_squad_inf;
 	sleep 3;
 	_grp setBehaviour "COMBAT";
@@ -17,7 +17,7 @@ if ( GRLIB_blufor_defenders ) then {
 
 sleep 60;
 
-_ownership = [ _thispos ] call F_sectorOwnership;
+_ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership == GRLIB_side_friendly ) exitWith {
 	if ( GRLIB_blufor_defenders ) then {
 		{
@@ -30,18 +30,18 @@ if ( _ownership == GRLIB_side_friendly ) exitWith {
 _attacktime = GRLIB_vulnerability_timer;
 
 while { _attacktime > 0 && ( _ownership == GRLIB_side_enemy || _ownership == GRLIB_side_resistance ) } do {
-	_ownership = [ _thispos ] call F_sectorOwnership;
+	_ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
 	_attacktime = _attacktime - 1;
 	sleep 1;
 };
 
 waitUntil {
 	sleep 1;
-	[ _thispos ] call F_sectorOwnership != GRLIB_side_resistance;
+	[ _thispos ] call KPLIB_fnc_getSectorOwnership != GRLIB_side_resistance;
 };
 
 if ( GRLIB_endgame == 0 ) then {
-	if ( _attacktime <= 1 && ( [ _thispos ] call F_sectorOwnership == GRLIB_side_enemy ) ) then {
+	if ( _attacktime <= 1 && ( [ _thispos ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_enemy ) ) then {
 		[_thispos, 2] remoteExec ["remote_call_fob"];
 		sleep 3;
 		GRLIB_all_fobs = GRLIB_all_fobs - [_thispos];

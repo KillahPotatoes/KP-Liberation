@@ -19,9 +19,9 @@ waitUntil {sleep 1; !isNil "GRLIB_all_fobs"};
 
 while {true} do {
 	waitUntil {sleep 1; count GRLIB_all_fobs > 0};
-	waitUntil {sleep 2; (player distance ([] call F_getNearestFob)) < GRLIB_fob_range};
+	waitUntil {sleep 2; (player distance ([] call KPLIB_fnc_getNearestFob)) < GRLIB_fob_range};
 
-	if ([player, 4] call F_fetchPermission) then {
+	if ([4] call KPLIB_fnc_hasPermission) then {
 		private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
             (((typeof _x in _recycleable_classnames ) && (({alive _x} count (crew _x)) == 0 || (unitIsUAV _x)) && ((locked _x == 0 || locked _x == 1))) ||
             ((typeOf _x) in _building_classnames) ||
@@ -36,7 +36,7 @@ while {true} do {
                 || ((typeOf _x) == "rhsusf_mkvsoc")
             ) &&
             (_x distance startbase > 1000) &&
-            (_x distance ( [] call F_getNearestFob) < GRLIB_fob_range) &&
+            (_x distance ( [] call KPLIB_fnc_getNearestFob) < GRLIB_fob_range) &&
             (getObjectType _x >= 8)
 		};
 

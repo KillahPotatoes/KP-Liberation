@@ -34,69 +34,77 @@ if(isServer) then {
             diag_log "[KP LIBERATION] [PARAM] Save/Load has no valid value";
         };
     };
+    diag_log "[KP LIBERATION] [PARAM]";
+
+    // Mission Options
+    diag_log "[KP LIBERATION] [PARAM] --- Mission Options ---";
+    GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
+    GET_PARAM(GRLIB_difficulty_modifier, "Difficulty", 2);
+    GET_PARAM(GRLIB_csat_aggressivity, "Aggressivity", 2);
+    GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
+    GET_PARAM(GRLIB_civilian_activity, "Civilians", 1);
+    GET_PARAM_BOOL(GRLIB_build_first_fob, "FirstFob", 0);
+    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
+    GET_PARAM(GRLIB_maximum_fobs, "MaximumFobs", 26);
+    GET_PARAM(GRLIB_max_squad_size, "MaxSquadSize", 10);
+    GET_PARAM_BOOL(GRLIB_blufor_defenders, "BluforDefenders", 1);
+    GET_PARAM_BOOL(GRLIB_autodanger, "Autodanger", 0);
+    GET_PARAM(GRLIB_time_factor, "DayDuration", 12);
+    GET_PARAM_BOOL(GRLIB_shorter_nights, "ShorterNights", 0);
+    GET_PARAM(GRLIB_weather_param, "Weather", 3);
+    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
+    GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
+    GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
+    diag_log "[KP LIBERATION] [PARAM]";
 
     // Deactivate BI Revive when ACE Medical is running
     if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
         diag_log "[KP LIBERATION] [PARAM] ACE Medical detected. Deactivating BI Revive System."
     } else {
+        // Revive Options
+        diag_log "[KP LIBERATION] [PARAM] --- Revive Options ---";
         GET_PARAM(bis_reviveParam_mode, "ReviveMode", 1);
+        GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
+        GET_PARAM(bis_reviveParam_requiredTrait, "ReviveRequiredTrait", 1);
+        GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);
+        GET_PARAM(bis_reviveParam_requiredItems, "ReviveRequiredItems", 1);
+        GET_PARAM(bis_reviveParam_unconsciousStateMode, "UnconsciousStateMode", 0);
+        GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
+        GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
     };
+    diag_log "[KP LIBERATION] [PARAM]";
 
-    GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
-    GET_PARAM(bis_reviveParam_requiredTrait, "ReviveRequiredTrait", 1);
-    GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);
-    GET_PARAM(bis_reviveParam_requiredItems, "ReviveRequiredItems", 1);
-    GET_PARAM(bis_reviveParam_unconsciousStateMode, "UnconsciousStateMode", 0);
-    GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
-    GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
-
-    GET_PARAM(GRLIB_difficulty_modifier, "Difficulty", 2);
-    GET_PARAM(GRLIB_time_factor, "DayDuration", 12);
-    GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
-    GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
-    GET_PARAM(GRLIB_civilian_activity, "Civilians", 1);
-    GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
-    GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
-    GET_PARAM(GRLIB_csat_aggressivity, "Aggressivity", 2);
-    GET_PARAM(GRLIB_weather_param, "Weather", 3);
-    GET_PARAM(GRLIB_maximum_fobs, "MaximumFobs", 26);
-    GET_PARAM(GRLIB_max_squad_size, "MaxSquadSize", 10);
-    GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
-    GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
-    GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
-    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
-    GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
-
-    GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
-    GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
-    GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
-    GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    // Gameplay Options
+    diag_log "[KP LIBERATION] [PARAM] --- Gameplay Options ---";
+    GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
+    GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
-    GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
-    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
-    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
-
-    GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
-    GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
-    GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
-    GET_PARAM_BOOL(GRLIB_introduction, "Introduction", 1);
+    GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
     GET_PARAM_BOOL(GRLIB_teamkill_penalty, "TeamkillPenalty", 0);
-    GET_PARAM_BOOL(GRLIB_build_first_fob, "FirstFob", 0);
+    GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
+    GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
+    GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
+    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
+    GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
+    GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    diag_log "[KP LIBERATION] [PARAM]";
+
+    // Technical Options
+    diag_log "[KP LIBERATION] [PARAM] --- Technical Options ---";
     GET_PARAM_BOOL(GRLIB_permissions_param, "Permissions", 1);
+    GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
+    GET_PARAM_BOOL(GRLIB_introduction, "Introduction", 1);
+    GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
     GET_PARAM_BOOL(GRLIB_use_whitelist, "Whitelist", 0);
-    GET_PARAM_BOOL(GRLIB_shorter_nights, "ShorterNights", 0);
-    GET_PARAM_BOOL(GRLIB_blufor_defenders, "BluforDefenders", 1);
-    GET_PARAM_BOOL(GRLIB_autodanger, "Autodanger", 0);
+    GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
 
     GREUH_allow_mapmarkers = KP_liberation_mapmarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KP_liberation_mapmarkers; publicVariable "GREUH_allow_platoonview";
-
-    GRLIB_remote_sensors = 0;
-    publicVariable "GRLIB_remote_sensors";
 
     KP_serverParamsFetched = true;
     publicVariable "KP_serverParamsFetched";

@@ -4,7 +4,7 @@ _actionned_intel_items = [];
 
 while { true } do {
 
-	if (  [ player, 5 ] call F_fetchPermission  ) then {
+	if ([5] call KPLIB_fnc_hasPermission) then {
 
 		_near_people = (getPosATL player) nearEntities [["Man"], 5];
 		_near_intel = (getPosATL player) nearEntities [[GRLIB_intel_laptop, GRLIB_intel_file], 5];

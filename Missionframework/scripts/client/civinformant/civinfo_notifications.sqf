@@ -6,7 +6,7 @@ if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATI
 
 switch (_notif_id) do {
 	case 0: {
-		["lib_civ_informant_start", [markertext ([10000, _pos] call F_getNearestSector)]] call BIS_fnc_showNotification;
+		["lib_civ_informant_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
 		private _informant_marker = createMarkerLocal ["informantmarker", _pos];
 		_informant_marker setMarkerColorLocal "ColorCIV";
 		_informant_marker setMarkerShape "ELLIPSE";
@@ -26,7 +26,7 @@ switch (_notif_id) do {
 		deleteMarkerLocal "informantmarker";
 	};
 	case 4: {
-		["lib_civ_hvt_start", [markertext ([10000, _pos] call F_getNearestSector)]] call BIS_fnc_showNotification;
+		["lib_civ_hvt_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
 		private _marker = createMarker ["HVT_marker", _pos];
 		_marker setMarkerColor GRLIB_color_enemy_bright;
 		_marker setMarkerType "hd_unknown";

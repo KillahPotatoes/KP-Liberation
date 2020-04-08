@@ -1,3 +1,9 @@
+if (isServer) then {
+    diag_log format ["[KP LIBERATION] [PRESETS] ----- Server starts preset initialization - time: %1", diag_ticktime];
+    diag_log "[KP LIBERATION] [PRESETS] Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.";
+    diag_log "[KP LIBERATION] [PRESETS] Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.";
+};
+
 switch (KP_liberation_preset_blufor) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
@@ -140,12 +146,12 @@ GRLIB_ignore_colisions_when_building = [
 
 /* !!! DO NOT EDIT BELOW !!! */
 // Preset arrays
-infantry_units = [infantry_units] call F_filterMods;
-light_vehicles = [light_vehicles] call F_filterMods;
-heavy_vehicles = [heavy_vehicles] call F_filterMods;
-air_vehicles = [air_vehicles] call F_filterMods;
-support_vehicles = [support_vehicles] call F_filterMods;
-static_vehicles = [static_vehicles] call F_filterMods;
+infantry_units = infantry_units select {[( _x select 0)] call KPLIB_fnc_checkClass};
+light_vehicles = light_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
+heavy_vehicles = heavy_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
+air_vehicles = air_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
+support_vehicles = support_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
+static_vehicles = static_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
 // Preset classes arrays
 light_vehicles_classes = light_vehicles apply {toLower (_x select 0)};
 heavy_vehicles_classes = heavy_vehicles apply {toLower (_x select 0)};
@@ -160,23 +166,23 @@ air_vehicles_classes = air_vehicles apply {toLower (_x select 0)};
     };
 } forEach support_vehicles + [huron_typename];
 
-buildings = [buildings] call F_filterMods;
+buildings = buildings select {[( _x select 0)] call KPLIB_fnc_checkClass};
 build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,static_vehicles,buildings,support_vehicles,squads];
 KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];
 KP_liberation_crates = [KP_liberation_supply_crate,KP_liberation_ammo_crate,KP_liberation_fuel_crate];
 KP_liberation_upgrade_buildings = [KP_liberation_recycle_building,KP_liberation_air_vehicle_building,KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
 KP_liberation_air_slots = [KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
-militia_squad = militia_squad select {[_x] call F_checkClass};
-militia_vehicles = militia_vehicles select {[_x] call F_checkClass};
-opfor_vehicles = opfor_vehicles select {[_x] call F_checkClass};
-opfor_vehicles_low_intensity = opfor_vehicles_low_intensity select {[_x] call F_checkClass};
-opfor_battlegroup_vehicles = opfor_battlegroup_vehicles select {[_x] call F_checkClass};
-opfor_battlegroup_vehicles_low_intensity = opfor_battlegroup_vehicles_low_intensity select {[_x] call F_checkClass};
-opfor_troup_transports = opfor_troup_transports select {[_x] call F_checkClass};
-opfor_choppers = opfor_choppers select {[_x] call F_checkClass};
-opfor_air = opfor_air select {[_x] call F_checkClass};
-civilians = civilians select {[_x] call F_checkClass};
-civilian_vehicles = civilian_vehicles select {[_x] call F_checkClass};
+militia_squad = militia_squad select {[_x] call KPLIB_fnc_checkClass};
+militia_vehicles = militia_vehicles select {[_x] call KPLIB_fnc_checkClass};
+opfor_vehicles = opfor_vehicles select {[_x] call KPLIB_fnc_checkClass};
+opfor_vehicles_low_intensity = opfor_vehicles_low_intensity select {[_x] call KPLIB_fnc_checkClass};
+opfor_battlegroup_vehicles = opfor_battlegroup_vehicles select {[_x] call KPLIB_fnc_checkClass};
+opfor_battlegroup_vehicles_low_intensity = opfor_battlegroup_vehicles_low_intensity select {[_x] call KPLIB_fnc_checkClass};
+opfor_troup_transports = opfor_troup_transports select {[_x] call KPLIB_fnc_checkClass};
+opfor_choppers = opfor_choppers select {[_x] call KPLIB_fnc_checkClass};
+opfor_air = opfor_air select {[_x] call KPLIB_fnc_checkClass};
+civilians = civilians select {[_x] call KPLIB_fnc_checkClass};
+civilian_vehicles = civilian_vehicles select {[_x] call KPLIB_fnc_checkClass};
 military_alphabet = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-Ray","Yankee","Zulu"];
 land_vehicles_classnames = (opfor_vehicles + militia_vehicles);
 opfor_squad_8_standard = [opfor_squad_leader,opfor_team_leader,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_marksman,opfor_grenadier,opfor_rpg];
@@ -191,7 +197,7 @@ all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers 
 air_vehicles_classnames = [] + opfor_choppers;
 KP_liberation_friendly_air_classnames = [];
 {air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
-KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames select {!(_x call F_isClassUAV)};
+KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames select {!(_x call KPLIB_fnc_isClassUAV)};
 KP_liberation_static_classnames = [];
 {KP_liberation_static_classnames pushback (_x select 0);} forEach static_vehicles;
 ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
@@ -200,10 +206,12 @@ zeropos = [0,0,0];
 squads_names = [localize "STR_LIGHT_RIFLE_SQUAD", localize "STR_RIFLE_SQUAD", localize "STR_AT_SQUAD", localize "STR_AA_SQUAD", localize "STR_RECON_SQUAD", localize "STR_PARA_SQUAD"];
 ammobox_transports_typenames = [];
 {ammobox_transports_typenames pushback (_x select 0)} foreach box_transport_config;
-ammobox_transports_typenames = ammobox_transports_typenames select {[_x] call F_checkClass};
-elite_vehicles = elite_vehicles select {[_x] call F_checkClass};
+ammobox_transports_typenames = ammobox_transports_typenames select {[_x] call KPLIB_fnc_checkClass};
+elite_vehicles = elite_vehicles select {[_x] call KPLIB_fnc_checkClass};
 opfor_infantry = [opfor_sentry,opfor_rifleman,opfor_grenadier,opfor_squad_leader,opfor_team_leader,opfor_marksman,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_rpg,opfor_at,opfor_aa,opfor_officer,opfor_sharpshooter,opfor_sniper,opfor_engineer];
 GRLIB_intel_file = "Land_File1_F";
 GRLIB_intel_laptop = "Land_Laptop_device_F";
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
+
+if (isServer) then {diag_log format ["[KP LIBERATION] [PRESETS] ----- Server finished preset initialization - time: %1", diag_ticktime];};

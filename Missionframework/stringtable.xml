@@ -13,10 +13,10 @@
         <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
         <!-- Korean localization made by Panzer: https://github.com/PanzerKoLee -->
         <Key ID="STR_MISSION_TITLE">
-            <Original>CTI 34 KP Liberation v0.96.6</Original>
+            <Original>CTI 34 KP Liberation v0.96.7</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.96.6</Original>
+            <Original>v0.96.7</Original>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>

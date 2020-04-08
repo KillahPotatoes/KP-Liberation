@@ -188,6 +188,7 @@ class Missions
 ## Changelog
 
 ### 0.96.7 (TBD)
+* Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
 * Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
@@ -204,6 +205,9 @@ class Missions
 * Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
 * Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
+* Tweaked: Start vehicle/Potato 01/start resources spawn at mission start optimized.
+* Tweaked: Explanation and formatting of `kp_objectInits.sqf`.
+* Tweaked: Integer to bool conversion in fetch param macro.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
@@ -212,6 +216,7 @@ class Missions
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
 * Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
 * Fixed: Support for CBA disposable launchers. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Fixed: ACE medical vehicle variable adjusted in `kp_objectInits` due to the recent ACE updates. [Reference](https://github.com/acemod/ACE3/commit/44050df98b00e579e5b5a79c0d76d4d1138b4baa#diff-31034297ef72d8a9855b601934510008)
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)

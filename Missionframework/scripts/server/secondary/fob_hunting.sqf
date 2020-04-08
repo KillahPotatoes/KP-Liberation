@@ -1,7 +1,7 @@
 
 _defenders_amount = (15 * (sqrt (GRLIB_unitcap))) min 15;
 
-_spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
+_spawn_marker = [2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint;
 if (_spawn_marker == "") exitWith {diag_log "[KP LIBERATION] [ERROR] Could not find position for fob hunting mission";};
 
 used_positions pushBack _spawn_marker;
@@ -17,7 +17,7 @@ _base_defenders = [];
     "_base_corners"
 ];
 
-[_base_position, 50] call F_createClearance;
+[_base_position, 50] call KPLIB_fnc_createClearance;
 
 private _nextobject = objNull;
 
@@ -85,7 +85,7 @@ while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count
     ];
 
     _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), (_nextpos select 2)];
-    private _nextDefender = [_nextclass, _nextpos, _grpdefenders, "PRIVATE", 0.5] call F_createManagedUnit;
+    private _nextDefender = [_nextclass, _nextpos, _grpdefenders, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
     _nextDefender setdir _nextdir;
     _nextDefender setpos _nextpos;
     [_nextDefender] spawn building_defence_ai;
@@ -96,7 +96,7 @@ private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (GRLIB_unitcap)));
 _grpsentry = createGroup [GRLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
 for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
-    [opfor_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call F_createManagedUnit;
+    [opfor_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 while {(count (waypoints _grpsentry)) != 0} do {deleteWaypoint ((waypoints _grpsentry) select 0);};

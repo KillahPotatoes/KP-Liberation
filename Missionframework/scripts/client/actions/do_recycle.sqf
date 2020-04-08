@@ -84,7 +84,7 @@ if (_vehtorecycle getVariable ["KP_liberation_preplaced", false]) exitWith {hint
 
 if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 
-	_nearfob = [] call F_getNearestFob;
+	_nearfob = [] call KPLIB_fnc_getNearestFob;
 
 	if (!(KP_liberation_recycle_building_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 

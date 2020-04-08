@@ -36,7 +36,7 @@ while { true } do {
 		_price_a = ((build_lists select buildtype) select buildindex) select 2;
 		_price_f = ((build_lists select buildtype) select buildindex) select 3;
 
-		_nearfob = [] call F_getNearestFob;
+		_nearfob = [] call KPLIB_fnc_getNearestFob;
 		_storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 		[_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
@@ -73,7 +73,7 @@ while { true } do {
 		} else {
 			_posfob = getpos player;
 			if (buildtype != 99) then {
-				_posfob = [] call F_getNearestFob;
+				_posfob = [] call KPLIB_fnc_getNearestFob;
 			};
 
 			_idactcancel = -1;
@@ -96,7 +96,7 @@ while { true } do {
 			_idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>","scripts\client\build\build_lower.sqf","",-766,false,false,"","build_confirmed == 1"];
 			_idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
-			_ghost_spot = (getmarkerpos "ghost_spot") findEmptyPosition [0,100];
+			_ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
 
 			_vehicle = _classname createVehicleLocal _ghost_spot;
 			_vehicle allowdamage false;
@@ -259,7 +259,7 @@ while { true } do {
 				_price_a = ((build_lists select buildtype) select buildindex) select 2;
 				_price_f = ((build_lists select buildtype) select buildindex) select 3;
 
-				_nearfob = [] call F_getNearestFob;
+				_nearfob = [] call KPLIB_fnc_getNearestFob;
 				_storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 				_supplyCrates = ceil (_price_s / 100);
@@ -301,12 +301,8 @@ while { true } do {
 					_vehicle setpos _truepos;
 				};
 
-				if (!(_classname in KP_liberation_ace_crates) && KP_liberation_clear_cargo) then {
-					clearWeaponCargoGlobal _vehicle;
-					clearMagazineCargoGlobal _vehicle;
-					clearItemCargoGlobal _vehicle;
-					clearBackpackCargoGlobal _vehicle;
-				};
+                [_vehicle] call KPLIB_fnc_clearCargo;
+
 				if (buildtype == 6 || buildtype == 99 || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
 					if (KP_vector) then {
 						_vehicle setVectorUp [0,0,1];
@@ -317,16 +313,11 @@ while { true } do {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
 
-				// Arty Supp deactivated for now
-				/*if ((KP_liberation_suppMod_enb > 0) && (_classname in KP_liberation_artySupp)) then {
-					[_vehicle] remoteExec ["arty_monitor", 2];
-				};*/
-
 				if ( (unitIsUAV _vehicle) || manned ) then {
-					[ _vehicle ] call F_forceBluforCrew;
+					[ _vehicle ] call KPLIB_fnc_forceBluforCrew;
 				};
 
-                [_vehicle] call F_addObjectInit;
+                [_vehicle] call KPLIB_fnc_addObjectInit;
 
 				sleep 0.3;
 				_vehicle allowDamage true;

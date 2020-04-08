@@ -1,9 +1,9 @@
 
-private _spawn_marker = [ 2000, 999999, false ] call F_findOpforSpawnPoint;
+private _spawn_marker = [ 2000, 999999, false ] call KPLIB_fnc_getOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find position for search and rescue mission"; };
 used_positions pushbackUnique _spawn_marker;
 
-private _helopos = (getmarkerpos _spawn_marker) getPos [random 200, random 360];
+private _helopos = (markerPos _spawn_marker) getPos [random 200, random 360];
 private _helowreck = GRLIB_sar_wreck createVehicle _helopos;
 _helowreck allowDamage false;
 _helowreck setPos _helopos;
@@ -18,10 +18,10 @@ _helofire setpos (getpos _helowreck);
 private _pilotsGrp = createGroup [GRLIB_side_enemy, true];
 private _pilotsPos = (getpos _helowreck) getPos [25, random 360];
 
-[pilot_classname, _pilotsPos, _pilotsGrp, "PRIVATE", 0.5] call F_createManagedUnit;
+[pilot_classname, _pilotsPos, _pilotsGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 sleep 0.2;
 
-[pilot_classname, _pilotsPos getPos [1, random 360], _pilotsGrp, "PRIVATE", 0.5] call F_createManagedUnit;
+[pilot_classname, _pilotsPos getPos [1, random 360], _pilotsGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 sleep 2;
 
 private _pilotUnits = units _pilotsGrp;
@@ -40,8 +40,8 @@ private _patrolcorners = [
 ];
 
 {
-	[_x, _patrolcorners select 0, _grppatrol, "PRIVATE", 0.5] call F_createManagedUnit;
-} foreach (["army"] call F_getAdaptiveSquadComp);
+	[_x, _patrolcorners select 0, _grppatrol, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+} foreach ([] call KPLIB_fnc_getSquadComp);
 
 while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
 {
@@ -61,7 +61,7 @@ private _grpsentry = createGroup [GRLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
-	[opfor_sentry, _pilotsPos getPos [1, random 360], _grpsentry, "PRIVATE", 0.5] call F_createManagedUnit;
+	[opfor_sentry, _pilotsPos getPos [1, random 360], _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 (leader _grpsentry) setDir (random 360);
@@ -76,7 +76,7 @@ if ( combat_readiness < 50 ) then {
 private _vehtospawn = [];
 private _spawnchances = [75,50,15];
 {if (random 100 < _x) then {_vehtospawn pushBack (selectRandom _vehicle_pool);};} foreach _spawnchances;
-{([(getpos _helowreck) getPos [30 + (random 30), random 360], _x, true] call F_libSpawnVehicle) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
+{([(getpos _helowreck) getPos [30 + (random 30), random 360], _x, true] call KPLIB_fnc_spawnVehicle) addMPEventHandler ['MPKilled', {_this spawn kill_manager}]; } foreach _vehtospawn;
 
 secondary_objective_position = getpos _helowreck;
 secondary_objective_position_marker = secondary_objective_position getPos [800, random 360];
@@ -87,7 +87,7 @@ GRLIB_secondary_in_progress = 2; publicVariable "GRLIB_secondary_in_progress";
 
 waitUntil {
 	sleep 5;
-	{ ( alive _x ) && ( _x distance ( [ getpos _x ] call F_getNearestFob ) > 50 ) } count _pilotUnits == 0
+	{ ( alive _x ) && ( _x distance ( [ getpos _x ] call KPLIB_fnc_getNearestFob ) > 50 ) } count _pilotUnits == 0
 };
 
 sleep 5;

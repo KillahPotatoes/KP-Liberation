@@ -54,7 +54,6 @@ execVM "scripts\server\game\spawn_radio_towers.sqf";
 execVM "scripts\server\game\synchronise_vars.sqf";
 execVM "scripts\server\game\synchronise_eco.sqf";
 execVM "scripts\server\game\zeus_synchro.sqf";
-execVM "scripts\server\offloading\offload_calculation.sqf";
 execVM "scripts\server\offloading\show_fps.sqf";
 execVM "scripts\server\patrols\civilian_patrols.sqf";
 execVM "scripts\server\patrols\manage_patrols.sqf";
@@ -117,7 +116,7 @@ execVM "scripts\server\asymmetric\init_module.sqf";
 execVM "scripts\server\offloading\group_diag.sqf";
 
 {
-    if ((_x != player) && (_x distance (getmarkerpos GRLIB_respawn_marker) < 200 )) then {
+    if ((_x != player) && (_x distance (markerPos GRLIB_respawn_marker) < 200 )) then {
         deleteVehicle _x;
     };
 } foreach allUnits;

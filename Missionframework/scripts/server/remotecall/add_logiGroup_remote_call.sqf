@@ -1,6 +1,6 @@
 if (!isServer) exitWith {};
 
-private _newID = [count KP_liberation_logistics] call F_getMilitaryID;
+private _newID = [count KP_liberation_logistics] call KPLIB_fnc_getMilitaryId;
 
 KP_liberation_logistics append [[
 	_newID, 													// ID

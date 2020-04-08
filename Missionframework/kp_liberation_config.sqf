@@ -920,4 +920,3 @@ GRLIB_blufor_cap = (GRLIB_blufor_cap * GRLIB_unitcap) min 100;
 GRLIB_sector_cap = GRLIB_sector_cap * GRLIB_unitcap;
 GRLIB_battlegroup_cap = GRLIB_battlegroup_cap * GRLIB_unitcap;
 GRLIB_patrol_cap = GRLIB_patrol_cap * GRLIB_unitcap;
-GRLIB_offload_diag = false;

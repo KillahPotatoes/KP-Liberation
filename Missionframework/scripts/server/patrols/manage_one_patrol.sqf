@@ -10,7 +10,7 @@ while { GRLIB_endgame == 0 } do {
 
 	sleep (random 30);
 
-	while {  [] call F_opforCap > GRLIB_patrol_cap } do {
+	while {  [] call KPLIB_fnc_getOpforCap > GRLIB_patrol_cap } do {
 			sleep (random 30);
 	};
 
@@ -18,7 +18,7 @@ while { GRLIB_endgame == 0 } do {
 
 	_spawn_marker = "";
 	while { _spawn_marker == "" } do {
-		_spawn_marker = [2000,5000,true] call F_findOpforSpawnPoint;
+		_spawn_marker = [2000,5000,true] call KPLIB_fnc_getOpforSpawnPoint;
 		if ( _spawn_marker == "" ) then {
 			sleep (150 + (random 150));
 		};
@@ -28,17 +28,17 @@ while { GRLIB_endgame == 0 } do {
 
 	if (_is_infantry) then {
 		_grp = createGroup [GRLIB_side_enemy, true];
-		_squad = ["army"] call F_getAdaptiveSquadComp;
+		_squad = [] call KPLIB_fnc_getSquadComp;
 		{
-			[_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] call F_createManagedUnit;
+			[_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 		} foreach _squad;
 	} else {
 
 		private [ "_vehicle_object" ];
 		if ( (combat_readiness > 75) && ((random 100) > 85) ) then {
-			_vehicle_object = [_sector_spawn_pos, selectRandom opfor_choppers] call F_libSpawnVehicle;
+			_vehicle_object = [_sector_spawn_pos, selectRandom opfor_choppers] call KPLIB_fnc_spawnVehicle;
 		} else {
-			_vehicle_object = [_sector_spawn_pos, [] call F_getAdaptiveVehicle] call F_libSpawnVehicle;
+			_vehicle_object = [_sector_spawn_pos, [] call KPLIB_fnc_getAdaptiveVehicle] call KPLIB_fnc_spawnVehicle;
 		};
 
 		sleep 0.5;
@@ -51,7 +51,7 @@ while { GRLIB_endgame == 0 } do {
 	_patrol_continue = true;
 
 	if ( local _grp ) then {
-		_headless_client = [] call F_lessLoadedHC;
+		_headless_client = [] call KPLIB_fnc_getLessLoadedHC;
 		if ( !isNull _headless_client ) then {
 			_grp setGroupOwner ( owner _headless_client );
 		};
@@ -63,11 +63,11 @@ while { GRLIB_endgame == 0 } do {
 			_patrol_continue = false;
 		} else {
 			if ( time - _started_time > 900 ) then {
-				if ( [ getpos (leader _grp) , 4000 , GRLIB_side_friendly ] call F_getUnitsCount == 0 ) then {
+				if ( [ getpos (leader _grp) , 4000 , GRLIB_side_friendly ] call KPLIB_fnc_getUnitsCount == 0 ) then {
 					_patrol_continue = false;
 					{
 						if ( vehicle _x != _x ) then {
-							[ (vehicle _x) ] call F_cleanOpforVehicle;
+							[(vehicle _x)] call KPLIB_fnc_cleanOpforVehicle;
 						};
 						deleteVehicle _x;
 					} foreach (units _grp);
@@ -76,7 +76,7 @@ while { GRLIB_endgame == 0 } do {
 		};
 	};
 
-	if ( !([] call F_isBigtownActive) ) then {
+	if ( !([] call KPLIB_fnc_isBigtownActive) ) then {
 		sleep (600.0 / GRLIB_difficulty_modifier);
 	};
 

@@ -1,21 +1,21 @@
 private _convoy_destinations_markers = [];
 private _load_box_fnc = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
 
-while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call F_findOpforSpawnPoint); };
+while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint); };
 
 private _couldnt_spawn = false;
 { if ( _x == "" ) exitWith { _couldnt_spawn = true; }; } foreach _convoy_destinations_markers;
 if ( _couldnt_spawn ) exitWith { diag_log "[KP LIBERATION] [ERROR] Could not find enough map positions for convoy hijack mission"; };
 
 private _convoy_destinations = [];
-{ _convoy_destinations pushback (getMarkerPos _x); } foreach _convoy_destinations_markers;
+{ _convoy_destinations pushback (markerPos _x); } foreach _convoy_destinations_markers;
 
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];
 
-private _scout_vehicle = [_spawnpos getPos [30, 0], opfor_mrap, true, false] call F_libSpawnVehicle;
-private _escort_vehicle = [_spawnpos getPos [10, 0], selectRandom opfor_vehicles_low_intensity, true, false] call F_libSpawnVehicle;
-private _transport_vehicle = [_spawnpos getPos [10, 180], opfor_ammobox_transport, true, false] call F_libSpawnVehicle;
+private _scout_vehicle = [_spawnpos getPos [30, 0], opfor_mrap, true, false] call KPLIB_fnc_spawnVehicle;
+private _escort_vehicle = [_spawnpos getPos [10, 0], selectRandom opfor_vehicles_low_intensity, true, false] call KPLIB_fnc_spawnVehicle;
+private _transport_vehicle = [_spawnpos getPos [10, 180], opfor_ammobox_transport, true, false] call KPLIB_fnc_spawnVehicle;
 
 private _boxes_amount = 0;
 {
@@ -31,14 +31,14 @@ private _boxes_loaded = 0;
 while { _boxes_loaded < _boxes_amount } do {
 	_boxes_loaded = _boxes_loaded + 1;
 	sleep 0.5;
-	private _next_box = [KP_liberation_ammo_crate, 100, _spawnpos getPos [15, 135]] call F_createCrate;
+	private _next_box = [KP_liberation_ammo_crate, 100, _spawnpos getPos [15, 135]] call KPLIB_fnc_createCrate;
 	sleep 0.5;
 	[_next_box, 50] call _load_box_fnc;
 };
 
 sleep 0.5;
 
-private _troop_vehicle = [_spawnpos getPos [30, 180], opfor_transport_truck, true, true, false ] call F_libSpawnVehicle;
+private _troop_vehicle = [_spawnpos getPos [30, 180], opfor_transport_truck, true, true, false ] call KPLIB_fnc_spawnVehicle;
 
 sleep 0.5;
 
@@ -77,8 +77,8 @@ _waypoint setWaypointCompletionRadius 50;
 
 private _troops_group = createGroup [GRLIB_side_enemy, true];
 {
-	[_x, _spawnpos, _troops_group, "PRIVATE", 0.5] call F_createManagedUnit;
-} foreach (["army"] call F_getAdaptiveSquadComp);
+	[_x, _spawnpos, _troops_group, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+} foreach ([] call KPLIB_fnc_getSquadComp);
 {_x moveInCargo _troop_vehicle} foreach (units _troops_group);
 
 private _convoy_marker = createMarkerLocal [ format [ "convoymarker%1", round time], getpos _transport_vehicle ];

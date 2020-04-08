@@ -126,8 +126,8 @@ while {dialog && (alive player)} do {
 	ctrlSetText [758012, (str (_selectedSector select 10)) + " (" + _ammoValue + ")"];
 	ctrlSetText [758013, (str (_selectedSector select 11)) + " (" + _fuelValue + ")"];
 
-	"spawn_marker" setMarkerPosLocal (getMarkerPos (_selectedSector select 1));
-	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(getMarkerPos (_selectedSector select 1))];
+	"spawn_marker" setMarkerPosLocal (markerPos (_selectedSector select 1));
+	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(markerPos (_selectedSector select 1))];
 	ctrlMapAnimCommit _mapdisplay;
 
 	waitUntil {!dialog || !(alive player) || (lbCurSel 75802) != _listselect || saveSectorSetting != 0};

@@ -47,8 +47,8 @@ while {GRLIB_endgame == 0} do {
 								default {_crateType = KP_liberation_supply_crate; stats_supplies_produced = stats_supplies_produced + 100;};
 							};
 
-							private _crate = [_crateType, 100, getPosATL _storage] call F_createCrate;
-							[_crate, _storage] call F_crateToStorage;
+							private _crate = [_crateType, 100, getPosATL _storage] call KPLIB_fnc_createCrate;
+							[_crate, _storage] call KPLIB_fnc_crateToStorage;
 						};
 					} else {
 						_time = _time - 1;

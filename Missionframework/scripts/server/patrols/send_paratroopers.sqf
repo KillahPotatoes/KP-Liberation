@@ -7,7 +7,7 @@ if (_targetsector isEqualTo "") exitWith {};
 
 private _targetpos = _targetsector;
 if (_targetpos isEqualType "") then {
-    _targetpos = getMarkerPos _targetsector;
+    _targetpos = markerPos _targetsector;
 };
 private _spawnsector = ([sectors_airspawn, [_targetpos], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _newvehicle = objNull;
@@ -36,7 +36,7 @@ if (isNull _chopper_type) then {
 private _para_group = createGroup [GRLIB_side_enemy, true];
 
 while {(count (units _para_group)) < 8} do {
-    [opfor_paratrooper, markerPos _spawnsector, _para_group] call F_createManagedUnit;
+    [opfor_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
 };
 
 {removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle;} forEach (units _para_group);

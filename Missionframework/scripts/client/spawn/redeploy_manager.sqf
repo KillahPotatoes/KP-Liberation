@@ -27,7 +27,7 @@ KP_liberation_respawn_mobile_done = false;
 while {true} do {
 	waitUntil {
 		sleep 0.2;
-		(GRLIB_force_redeploy || (player distance (getmarkerpos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
+		(GRLIB_force_redeploy || (player distance (markerPos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
 	};
 
 	private _backpack = backpack player;
@@ -92,7 +92,7 @@ while {true} do {
 
 		if (KP_liberation_mobilerespawn) then {
 			if (KP_liberation_respawn_time <= time) then {
-				private _respawn_trucks = call F_getMobileRespawns;
+				private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
 
 				for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
 					choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
@@ -198,7 +198,7 @@ while {true} do {
 	};
 
 	if (KP_liberation_arsenalUsePreset) then {
-		[_backpack] call F_checkGear;
+		[_backpack] call KPLIB_fnc_checkGear;
 	};
 
 	if (KP_liberation_mobilerespawn && (KP_liberation_respawn_time > time)) then {

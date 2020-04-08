@@ -4,7 +4,7 @@ respawnButton = 1;
 disabledAI = true;
 
 enableDebugConsole = 1;
-allowFunctionsLog = 0;
+allowFunctionsLog = 1;
 unsafeCVL = 1;
 
 briefingName = $STR_MISSION_TITLE;
@@ -32,13 +32,17 @@ minPlayerDistance = 1000;
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
 
+class CfgFunctions {
+    #include "CfgFunctions.hpp"
+};
+
 class CfgDebriefing
 {
-	class End1
-	{
-		title =	$STR_SORRY;
-		subtitle = "";
-		description = $STR_COMMANDER_NOT_AUTHORIZED;
-		pictureBackground = "";
-	};
+    class End1
+    {
+        title =	$STR_SORRY;
+        subtitle = "";
+        description = $STR_COMMANDER_NOT_AUTHORIZED;
+        pictureBackground = "";
+    };
 };
