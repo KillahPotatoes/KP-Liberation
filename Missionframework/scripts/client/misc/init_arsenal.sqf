@@ -27,7 +27,7 @@ if (KP_liberation_arsenalUsePreset) then {
     };
 
     // Support for CBA disposable launchers, https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
-    if (isClass (configFile >> "cfgPatches" >> "cba_disposable")) then {
+    if !(configProperties [configFile >> "CBA_DisposableLaunchers"] isEqualTo []) then {
         private _disposableLaunchers = ["CBA_FakeLauncherMagazine"];
         {
             private _loadedLauncher = cba_disposable_LoadedLaunchers getVariable _x;
