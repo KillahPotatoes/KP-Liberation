@@ -120,6 +120,12 @@ class Params
         texts[] = {$STR_PARAMS_ARSENAL_BI, $STR_PARAMS_ARSENAL_ACE};
         default = 0;
     };
+    class PlayerMenu {
+        title = $STR_PARAMS_PLAYERMENU;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_PLAYERMENU_GREUH, $STR_PARAMS_PLAYERMENU_KP};
+        default = 1;
+    };
     class VictoryCondition {
         title = $STR_PARAMS_VICTORYCONDITION;
         values[] = {0, 1, 2, 3, 4};

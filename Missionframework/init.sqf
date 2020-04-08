@@ -10,7 +10,12 @@ if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 KPLIB_objectInitsCache = createSimpleObject ["a3\weapons_f\empty.p3d", [-7580, -7580, 0], true];
 [] call compileFinal preprocessFileLineNumbers "kp_objectInits.sqf";
 
-[] execVM "GREUH\scripts\GREUH_activate.sqf";
+// Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
+if (KPPLM_CBA && KP_liberation_playermenu) then {
+    [] call KPPLM_fnc_postInit;
+} else {
+    [] execVM "GREUH\scripts\GREUH_activate.sqf";
+};
 
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
