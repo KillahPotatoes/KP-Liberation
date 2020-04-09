@@ -2,7 +2,7 @@
     File: fn_getOpforSpawnPoint.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-03
+    Last Update: 2020-04-09
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -96,7 +96,7 @@ if (_possibleSpawns isEqualTo []) exitWith {diag_log "[KP LIBERATION] [WARNING] 
 // Return nearest spawn point to a blufor sector/FOB, if selected via parameter
 if (_nearest) exitWith {
     _possibleSpawns sort true;
-    (_possibeSpawns select 0) select 1
+    (_possibleSpawns select 0) select 1
 };
 
 // Return nearest spawn point to given position, if provided
