@@ -43,6 +43,7 @@ private _veh = objNull;
         _veh setDamage 0;
         _veh allowDamage true;
         _veh setVariable ["KP_liberation_preplaced", true, true];
+        [_veh] call KPLIB_fnc_addObjectInit;
     };
 } forEach [
     ["littlebird_", KP_liberation_little_bird_classname],

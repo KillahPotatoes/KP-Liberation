@@ -4,6 +4,7 @@ class KPLIB
     {
         file = "functions";
         class addObjectInit             {};
+        class addRopeAttachEh           {};
         class allowCrewInImmobile       {};
         class checkClass                {};
         class checkCrateValue           {};
