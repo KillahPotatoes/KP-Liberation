@@ -2777,7 +2777,7 @@
         <Key ID="STR_MAKE_RESPAWN_LOADOUT">
             <Original>Save respawn loadout</Original>
             <French>Equipement de respawn</French>
-            <German>Ausrüstung bei Respawn festlegen</German>
+            <German>Setze Respawnausrüstung</German>
             <Spanish>Guardar el equipamiento para respawn</Spanish>
             <Russian>Сохранить снаряжение</Russian>
             <Italian>Salva Equipaggiamento</Italian>
