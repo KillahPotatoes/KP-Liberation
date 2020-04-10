@@ -1,12 +1,12 @@
-diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
+diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
 
 // Handle possible enabled "wipe save" mission parameters
 if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
     profileNamespace setVariable [GRLIB_save_key,nil];
     saveProfileNamespace;
-    diag_log "[KP LIBERATION] [SAVE] Save wiped via mission parameters";
+    diag_log text "[KP LIBERATION] [SAVE] Save wiped via mission parameters";
 } else {
-    diag_log "[KP LIBERATION] [SAVE] No save wipe";
+    diag_log text "[KP LIBERATION] [SAVE] No save wipe";
 };
 
 /*
@@ -150,7 +150,7 @@ greuh_liberation_savegame = profileNamespace getVariable GRLIB_save_key;
 // Load save data, when retrieved
 if (!isNil "greuh_liberation_savegame") then {
     if (((greuh_liberation_savegame select 0) select 0) isEqualType 0) then {
-        diag_log format ["[KP LIBERATION] [SAVE] Save data from version: %1", (greuh_liberation_savegame select 0) joinstring "."];
+        diag_log text format ["[KP LIBERATION] [SAVE] Save data from version: %1", (greuh_liberation_savegame select 0) joinstring "."];
 
         _dateTime                                   = greuh_liberation_savegame select  1;
         _objectsToSave                              = greuh_liberation_savegame select  2;
@@ -216,7 +216,7 @@ if (!isNil "greuh_liberation_savegame") then {
             --- Compatibility for older save data ---
             This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
         */
-        diag_log "[KP LIBERATION] [SAVE] Save data from version: pre 0.96.5";
+        diag_log text "[KP LIBERATION] [SAVE] Save data from version: pre 0.96.5";
 
         blufor_sectors                              = greuh_liberation_savegame select  0;
         GRLIB_all_fobs                              = greuh_liberation_savegame select  1;
@@ -278,7 +278,7 @@ if (!isNil "greuh_liberation_savegame") then {
     GRLIB_side_resistance setFriend [GRLIB_side_friendly, _resistanceFriendly];
     GRLIB_side_friendly setFriend [GRLIB_side_resistance, _resistanceFriendly];
 
-    if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] %1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)];};
+    if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] %1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)];};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -368,7 +368,7 @@ if (!isNil "greuh_liberation_savegame") then {
         _x allowdamage true;
     } forEach _spawnedObjects;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved buildings placed";};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved buildings placed";};
 
     {
         _x params ["_minePos", "_dirAndUp", "_class", "_known"];
@@ -384,7 +384,7 @@ if (!isNil "greuh_liberation_savegame") then {
 
     } forEach _allMines;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved mines placed";};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved mines placed";};
 
     // Spawn saved resource storages and their content
     {
@@ -415,7 +415,7 @@ if (!isNil "greuh_liberation_savegame") then {
         };
     } forEach _resourceStorages;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved storages placed"};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved storages placed"};
 
     // Spawn saved sector storages and their content
     {
@@ -448,7 +448,7 @@ if (!isNil "greuh_liberation_savegame") then {
         };
     } forEach KP_liberation_production;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [SAVE] Saved sector storages placed";};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved sector storages placed";};
 
     // Spawn BLUFOR AI groups
     // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
@@ -476,9 +476,9 @@ if (!isNil "greuh_liberation_savegame") then {
             } forEach _savedGroup;
         } forEach _aiGroups;
     };
-    diag_log "[KP LIBERATION] [SAVE] Save loading finished";
+    diag_log text "[KP LIBERATION] [SAVE] Save loading finished";
 } else {
-    diag_log "[KP LIBERATION] [SAVE] Save nil";
+    diag_log text "[KP LIBERATION] [SAVE] Save nil";
 };
 
 publicVariable "stats_civilian_vehicles_seized";
@@ -496,7 +496,7 @@ GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links sele
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;
 if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
-    diag_log "[KP LIBERATION] [SAVE] Additional military sectors or unlockable vehicles detected and assigned";
+    diag_log text "[KP LIBERATION] [SAVE] Additional military sectors or unlockable vehicles detected and assigned";
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -522,7 +522,7 @@ publicVariable "GRLIB_permissions";
 publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-diag_log format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
+diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
 
 // Start the save loop
 while {true} do {
@@ -531,7 +531,7 @@ while {true} do {
         doSaveTrigger || GRLIB_endgame == 1;
     };
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [SAVE] Save interval started - time: %1", time];};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval started - time: %1", time];};
 
     // Exit the while and wipe save, if campaign ended
     if (GRLIB_endgame == 1) exitWith {
@@ -632,7 +632,7 @@ while {true} do {
                 case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
                 case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
                 case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+                default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
             };
         } forEach (attachedObjects _x);
 
@@ -718,9 +718,9 @@ while {true} do {
     profileNamespace setVariable [GRLIB_save_key, greuh_liberation_savegame];
     saveProfileNamespace;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
+    if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
 };
 
-diag_log "[KP LIBERATION] [SAVE] Left saving loop in save_manager.sqf";
+diag_log text "[KP LIBERATION] [SAVE] Left saving loop in save_manager.sqf";
 
 true

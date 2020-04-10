@@ -1,7 +1,7 @@
 if (isServer) then {
-    diag_log format ["[KP LIBERATION] [PRESETS] ----- Server starts preset initialization - time: %1", diag_ticktime];
-    diag_log "[KP LIBERATION] [PRESETS] Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.";
-    diag_log "[KP LIBERATION] [PRESETS] Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.";
+    diag_log text format ["[KP LIBERATION] [PRESETS] ----- Server starts preset initialization - time: %1", diag_ticktime];
+    diag_log text "[KP LIBERATION] [PRESETS] Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.";
+    diag_log text "[KP LIBERATION] [PRESETS] Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.";
 };
 
 switch (KP_liberation_preset_blufor) do {
@@ -214,4 +214,4 @@ GRLIB_intel_laptop = "Land_Laptop_device_F";
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
 
-if (isServer) then {diag_log format ["[KP LIBERATION] [PRESETS] ----- Server finished preset initialization - time: %1", diag_ticktime];};
+if (isServer) then {diag_log text format ["[KP LIBERATION] [PRESETS] ----- Server finished preset initialization - time: %1", diag_ticktime];};

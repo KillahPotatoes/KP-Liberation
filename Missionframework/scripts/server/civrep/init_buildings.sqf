@@ -1,4 +1,4 @@
-if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] init_buildings.sqf initialising on: %1", debug_source];};
+if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] init_buildings.sqf initialising on: %1", debug_source];};
 
 switch (worldName) do {
     case "Chernarus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
@@ -32,8 +32,8 @@ KP_liberation_cr_sectorbuildings = [];
 sleep 1;
 
 if (KP_liberation_civrep_debug > 0) then {
-    diag_log format ["[KP LIBERATION] [CIVREP] init_buildings.sqf finished on: %1 - Listing sectors with buildings amount...", debug_source];
+    diag_log text format ["[KP LIBERATION] [CIVREP] init_buildings.sqf finished on: %1 - Listing sectors with buildings amount...", debug_source];
     {
-        diag_log format ["[KP LIBERATION] [CIVREP] %1: %2", markerText (_x select 0), (_x select 1)];
+        diag_log text format ["[KP LIBERATION] [CIVREP] %1: %2", markerText (_x select 0), (_x select 1)];
     } forEach KP_liberation_cr_sectorbuildings;
 };

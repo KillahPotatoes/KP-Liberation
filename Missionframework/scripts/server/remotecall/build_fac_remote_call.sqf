@@ -72,7 +72,7 @@ switch (_fac) do {
                             };
                         };
                     };
-                    default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+                    default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
                 };
             } forEach _storedCrates;
 

@@ -5,7 +5,7 @@ waitUntil {save_is_loaded};
 sectors_recalculating = false;
 sectors_timer = false;
 
-if (KP_liberation_production_debug > 0) then {diag_log "[KP LIBERATION] [PRODUCTION] Production management started";};
+if (KP_liberation_production_debug > 0) then {diag_log text "[KP LIBERATION] [PRODUCTION] Production management started";};
 
 while {GRLIB_endgame == 0} do {
 
@@ -18,7 +18,7 @@ while {GRLIB_endgame == 0} do {
 		private _time_update = false;
 		if (sectors_timer) then {_time_update = true; sectors_timer = false;};
 
-		if (KP_liberation_production_debug > 0) then {diag_log format ["[KP LIBERATION] [PRODUCTION] Production interval started: %1 - _time_update: %2", time, _time_update];};
+		if (KP_liberation_production_debug > 0) then {diag_log text format ["[KP LIBERATION] [PRODUCTION] Production interval started: %1 - _time_update: %2", time, _time_update];};
 
 		private _tempProduction = [];
 		{
@@ -60,7 +60,7 @@ while {GRLIB_endgame == 0} do {
 						case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
 						case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
 						case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-						default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+						default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 					};
 				} forEach (attachedObjects _storage);
 			};
@@ -79,7 +79,7 @@ while {GRLIB_endgame == 0} do {
 				_ammoValue,
 				_fuelValue
 			];
-			if (KP_liberation_production_debug > 0) then {diag_log format ["[KP LIBERATION] [PRODUCTION] Production Update: %1", _tempProduction select _forEachIndex];};
+			if (KP_liberation_production_debug > 0) then {diag_log text format ["[KP LIBERATION] [PRODUCTION] Production Update: %1", _tempProduction select _forEachIndex];};
 		} forEach KP_liberation_production;
 
 		_tempProduction sort true;
@@ -87,6 +87,6 @@ while {GRLIB_endgame == 0} do {
 		KP_liberation_production = +_tempProduction;
 		sectors_recalculating = false;
 	};
-	if (KP_liberation_production_debug > 0) then {diag_log format ["[KP LIBERATION] [PRODUCTION] Production interval finished: %1", time];};
+	if (KP_liberation_production_debug > 0) then {diag_log text format ["[KP LIBERATION] [PRODUCTION] Production interval finished: %1", time];};
 	waitUntil {sleep 1; recalculate_sectors};
 };

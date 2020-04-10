@@ -2,7 +2,7 @@
     File: fn_checkClass.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-03
+    Last Update: 2020-04-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,6 +24,6 @@ if (_classname isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error
 if (isClass (configFile >> "CfgVehicles" >> _classname)) then {
     true
 } else {
-    if (isServer) then {diag_log format ["[KP LIBERATION] [PRESETS] %1 not found in CfgVehicles", _classname];};
+    if (isServer) then {diag_log text format ["[KP LIBERATION] [PRESETS] %1 not found in CfgVehicles", _classname];};
     false
 };

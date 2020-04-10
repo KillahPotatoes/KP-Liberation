@@ -1,4 +1,4 @@
-if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Module initialising on: %1", debug_source];};
+if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] Module initialising on: %1", debug_source];};
 
 // Functions
 // Get buildings count for sector
@@ -17,4 +17,4 @@ civrep_wounded_civs = compileFinal preprocessFileLineNumbers "scripts\server\civ
 execVM "scripts\server\civrep\init_buildings.sqf";
 
 
-if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Module initialised on: %1", debug_source];};
+if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] Module initialised on: %1", debug_source];};

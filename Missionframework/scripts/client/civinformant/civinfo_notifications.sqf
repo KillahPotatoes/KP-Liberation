@@ -2,7 +2,7 @@ if (isDedicated) exitWith {};
 
 params ["_notif_id", ["_pos", getpos player]];
 
-if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] civinfo_notifications called on: %1 - Parameters: [%2, %3] ", debug_source, _notif_id, _pos];_text remoteExec ["diag_log",2];};
+if (KP_liberation_civinfo_debug > 0) then {private _text = text format ["[KP LIBERATION] [CIVINFO] civinfo_notifications called on: %1 - Parameters: [%2, %3] ", debug_source, _notif_id, _pos];_text remoteExec ["diag_log",2];};
 
 switch (_notif_id) do {
 	case 0: {
@@ -47,5 +47,5 @@ switch (_notif_id) do {
 		deleteMarkerLocal "HVT_marker";
 		deleteMarkerLocal "HVT_zone";
 	};
-	default {private _text = format ["[KP LIBERATION] [ERROR] civinfo_notifications.sqf -> no valid value for _notif_id: %1", _notif_id];_text remoteExec ["diag_log",2];};
+	default {private _text = text format ["[KP LIBERATION] [ERROR] civinfo_notifications.sqf -> no valid value for _notif_id: %1", _notif_id];_text remoteExec ["diag_log",2];};
 };

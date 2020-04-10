@@ -3,7 +3,7 @@ active_sectors = [];
 waitUntil {!isNil "blufor_sectors"};
 waitUntil {!isNil "sectors_allSectors"};
 
-if (KP_liberation_sectorspawn_debug > 0) then {diag_log format ["[KP LIBERATION] [SECTORSPAWN] Sector Manager started at %1", time];};
+if (KP_liberation_sectorspawn_debug > 0) then {diag_log text format ["[KP LIBERATION] [SECTORSPAWN] Sector Manager started at %1", time];};
 
 private _timer = 0;
 
@@ -43,7 +43,7 @@ while {GRLIB_endgame == 0} do {
 			{
 				_current_sectors pushBack (markerText _x);
 			} forEach active_sectors;
-			diag_log format ["[KP LIBERATION] [SECTORSPAWN] Overview at %1 - active sectors: %2", time, _current_sectors];
+			diag_log text format ["[KP LIBERATION] [SECTORSPAWN] Overview at %1 - active sectors: %2", time, _current_sectors];
 		};
 	};
 	sleep 1;

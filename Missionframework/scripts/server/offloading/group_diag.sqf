@@ -3,8 +3,8 @@ waitUntil {sleep 1; !isNil "active_sectors"};
 while {true} do {
     uiSleep 600;
 
-    diag_log format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck for %1 groups started at %2 -----", count allGroups, time];
-    diag_log "[KP LIBERATION] [GROUPCHECK] Groups which aren't marked for deletion when empty:";
+    diag_log text format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck for %1 groups started at %2 -----", count allGroups, time];
+    diag_log text "[KP LIBERATION] [GROUPCHECK] Groups which aren't marked for deletion when empty:";
 
     private _markedgroups = 0;
 
@@ -25,7 +25,7 @@ while {true} do {
                 };
                 _markedgroups = _markedgroups + 1;
 
-                diag_log format [
+                diag_log text format [
                     "[KP LIBERATION] [GROUPCHECK] %1 - Owner: %2 - Units: %3 - Marked now: %4 - Side: %5",
                     groupId _x,
                     _owner,
@@ -38,8 +38,8 @@ while {true} do {
     } forEach allGroups;
 
     if (_markedgroups == 0) then {
-        diag_log "[KP LIBERATION] [GROUPCHECK] No groups found.";
+        diag_log text "[KP LIBERATION] [GROUPCHECK] No groups found.";
     };
 
-    diag_log format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck finished at %1 - Groups marked: %2 -----", time, _markedgroups];
+    diag_log text format ["[KP LIBERATION] [GROUPCHECK] ----- Groupcheck finished at %1 - Groups marked: %2 -----", time, _markedgroups];
 };

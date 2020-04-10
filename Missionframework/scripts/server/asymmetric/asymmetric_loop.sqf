@@ -2,7 +2,7 @@ waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_civ_rep"};
 waitUntil {save_is_loaded};
 
-if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Loop spawned on: %1", debug_source];};
+if (KP_liberation_asymmetric_debug > 0) then {diag_log text format ["[KP LIBERATION] [ASYMMETRIC] Loop spawned on: %1", debug_source];};
 
 KP_liberation_asymmetric_sectors = [];
 
@@ -27,10 +27,10 @@ while {GRLIB_endgame == 0} do {
 				if ((_x select 0) == _sector) exitWith {
 					if ((((_x select 1) + 1800) < time) && (_units_at_sector == 0)) then {
 						asymm_blocked_sectors = asymm_blocked_sectors - [_x];
-						if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 removed from blocked sectors", markerText (_x select 0)];};
+						if (KP_liberation_asymmetric_debug > 0) then {diag_log text format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 removed from blocked sectors", markerText (_x select 0)];};
 					} else {
 						_blocked = true;
-						if (KP_liberation_asymmetric_debug > 0) then {diag_log format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 still blocked for ambush", markerText (_x select 0)];};
+						if (KP_liberation_asymmetric_debug > 0) then {diag_log text format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 still blocked for ambush", markerText (_x select 0)];};
 					};
 				};
 			} forEach asymm_blocked_sectors;
