@@ -141,6 +141,10 @@ stats_vehicles_recycled = 0;
 // Get possible save data
 private _saveData = profileNamespace getVariable GRLIB_save_key;
 
+if (_saveData isEqualType "") then {
+    _saveData = parseSimpleArray _saveData;
+};
+
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
     if (true || ((_saveData select 0) select 0) isEqualType 0) then {
