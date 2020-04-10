@@ -9,6 +9,21 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
     diag_log text "[KP LIBERATION] [SAVE] No save wipe";
 };
 
+// Auto save when last player exits
+if (hasInterface) then {
+    (findDisplay 46) displayAddEventHandler ["Unload", {
+        if (!isServer) exitWith {};
+        diag_log text "[KP LIBERATION] [SAVE] Player server exit. Saving mission data.";
+        [] call F_doSave;
+    }];
+} else {
+    addMissionEventHandler ["HandleDisconnect", {
+        if !(allPlayers isEqualTo []) exitWith {};
+        diag_log text "[KP LIBERATION] [SAVE] Last player disconnected. Saving mission data.";
+        [] call F_doSave;
+    }];
+};
+
 // All classnames of objects which should be saved
 KP_liberation_classnamesToSave = [FOB_typename, huron_typename];
 // Classnames of blufor vehicles
