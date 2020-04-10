@@ -239,6 +239,17 @@ while { true } do {
 				{ ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false; } foreach  _sectorcontrols;
 				"zone_capture" setmarkerposlocal markers_reset;
 			};
+
+            // Update state in Discord rich presence in accordance to current location
+            if (_fobdistance < _distfob) then {
+                [["FOB", [_nearfob] call KPLIB_fnc_getFobName] joinString " "] call KPLIB_fnc_setDiscordState;
+            } else {
+                if !(_nearest_active_sector isEqualTo "") then {
+                    [markerText _nearest_active_sector] call KPLIB_fnc_setDiscordState;
+                } else {
+                    ["In the field"] call KPLIB_fnc_setDiscordState;
+                };
+            };
 		};
 
 	};
