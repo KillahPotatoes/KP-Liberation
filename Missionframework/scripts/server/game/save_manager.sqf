@@ -9,18 +9,19 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
     diag_log text "[KP LIBERATION] [SAVE] No save wipe";
 };
 
+// All classnames of objects which should be saved
+KP_liberation_classnamesToSave = [FOB_typename, huron_typename];
+// Classnames of blufor vehicles
+KP_liberation_bluforClassnames = [];
+
 /*
     --- Locals ---
     Variables which are only used inside the save_manager.sqf
 */
 // All AI squads
 private _aiGroups = [];
-// Classnames of blufor vehicles
-private _bluforClassnames = [];
 // Current campaign date and time
 private _dateTime = [];
-// All classnames of objects which should be saved
-private _classnamesToSave = [FOB_typename, huron_typename];
 // Vehicles which shouldn't be handled in the kill manager
 private _noKillHandler = [FOB_typename, huron_typename];
 // All objects which should be loaded/saved
@@ -77,17 +78,17 @@ save_is_loaded = false;
 // Add all buildings for saving and kill manager ignore
 {
     _noKillHandler pushBack (_x select 0);
-    _classnamesToSave pushBack (_x select 0);
+    KP_liberation_classnamesToSave pushBack (_x select 0);
 } foreach buildings;
 
 // Fetch all blufor vehicle classnames
 {
-    _bluforClassnames pushBack (_x select 0);
-    _classnamesToSave pushBack (_x select 0);
+    KP_liberation_bluforClassnames pushBack (_x select 0);
+    KP_liberation_classnamesToSave pushBack (_x select 0);
 } foreach (static_vehicles + air_vehicles + heavy_vehicles + light_vehicles + support_vehicles);
 
 // Add opfor and civilian vehicles for saving
-_classnamesToSave = _classnamesToSave + all_hostile_classnames + civilian_vehicles;
+KP_liberation_classnamesToSave = KP_liberation_classnamesToSave + all_hostile_classnames + civilian_vehicles;
 
 /*
     --- Statistic Variables ---
@@ -312,7 +313,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if (_class in _classnamesToSave) then {
+        if (_class in KP_liberation_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -389,7 +390,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if (_class in _classnamesToSave) then {
+        if (_class in KP_liberation_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];

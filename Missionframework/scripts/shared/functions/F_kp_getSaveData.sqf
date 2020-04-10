@@ -2,7 +2,7 @@
     File: F_kp_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-03-29
+    Last Update: 2020-04-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,7 +34,7 @@ private _allBlueGroups = allGroups select {
 {
     private _fobPos = _x;
     private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 2)) select {
-        ((typeof _x) in _classnamesToSave) &&                       // Exclude classnames which are not in the presets
+        ((typeof _x) in KP_liberation_classnamesToSave) &&          // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
@@ -76,7 +76,7 @@ private _allBlueGroups = allGroups select {
     private _hascrew = false;
 
     // Determine if vehicle is crewed
-    if (_class in _bluforClassnames) then {
+    if (_class in KP_liberation_bluforClassnames) then {
         if (({!isPlayer _x} count (crew _x) ) > 0) then {
             _hascrew = true;
         };
