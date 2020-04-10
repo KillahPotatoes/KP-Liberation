@@ -199,6 +199,7 @@ class Missions
 * Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Steam Workshop upload to build tools
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
+* Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)

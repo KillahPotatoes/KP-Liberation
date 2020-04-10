@@ -46,3 +46,14 @@ class CfgDebriefing
         pictureBackground = "";
     };
 };
+
+class CfgDiscordRichPresence {
+    applicationID="698133766975258664";
+    defaultDetails="";
+    defaultState="Preparing...";
+    defaultLargeImageKey="liberation_logo";
+    defaultLargeImageText="KP Liberation";
+    defaultSmallImageKey="arma3_logo";
+    defaultSmallImageText="Arma 3";
+    useTimeElapsed=1;
+};
