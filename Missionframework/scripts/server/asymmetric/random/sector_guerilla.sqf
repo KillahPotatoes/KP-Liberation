@@ -1,6 +1,6 @@
 params ["_sector"];
 
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla spawned on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla spawned on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};
 
 private _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 
@@ -128,4 +128,4 @@ if (!isServer && _strengthChanged) then {
 	publicVariableServer "KP_liberation_guerilla_strength";
 };
 
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};

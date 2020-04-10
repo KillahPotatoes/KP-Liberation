@@ -2,7 +2,7 @@
     File: fn_sortStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-06-09
-    Last Update: 2020-04-03
+    Last Update: 2020-04-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,7 @@ private _fuel = 0;
         case KP_liberation_supply_crate: {_supply = _supply + (_x getVariable ["KP_liberation_crate_value",0]);};
         case KP_liberation_ammo_crate: {_ammo = _ammo + (_x getVariable ["KP_liberation_crate_value",0]);};
         case KP_liberation_fuel_crate: {_fuel = _fuel + (_x getVariable ["KP_liberation_crate_value",0]);};
-        default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+        default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
     };
     detach _x;
     deleteVehicle _x;

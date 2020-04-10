@@ -55,5 +55,5 @@ switch (_notiftype) do {
 		deleteMarkerLocal "secondarymarkerzone";
 		secondary_objective_position_marker = [];
 	};
-	default {private _text = format ["[KP LIBERATION] [ERROR] remote_call_intel.sqf -> no valid value for _notiftype: %1", _notiftype];_text remoteExec ["diag_log",2];};
+	default {private _text = text format ["[KP LIBERATION] [ERROR] remote_call_intel.sqf -> no valid value for _notiftype: %1", _notiftype];_text remoteExec ["diag_log",2];};
 };

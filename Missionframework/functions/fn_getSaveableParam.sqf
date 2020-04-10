@@ -2,7 +2,7 @@
     File: fn_getSaveableParam.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-01-27
-    Last Update: 2019-12-06
+    Last Update: 2020-04-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -41,18 +41,18 @@ switch (_action) do {
         private _savedParams = profileNamespace getVariable _saveKey;
 
         if(isNil "_savedParams") then {
-            if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [PARAM] Param save data is corrupted, creating new.";};
+            if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [PARAM] Param save data is corrupted, creating new.";};
             // Create new "associative" array
             _savedParams = [[_paramName, _value]];
 
         } else {
             private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
             if(isNil "_singleParam") then {
-                if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [PARAM] Saving value: %1 for param: %2,", _value, _paramName];};
+                if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [PARAM] Saving value: %1 for param: %2,", _value, _paramName];};
                 _savedParams pushBack [_paramName, _value];
 
             } else {
-                if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [PARAM] Overwriting value: %1 with: %2 for param: %3,", (_singleParam select 1), _value, _paramName];};
+                if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [PARAM] Overwriting value: %1 with: %2 for param: %3,", (_singleParam select 1), _value, _paramName];};
                 // _singleparam is an reference to array in _savedParams, we can use "set"
                 _singleParam set [1, _value];
             };
@@ -66,25 +66,25 @@ switch (_action) do {
     case 1: {
         private _savedParams = profileNamespace getVariable _saveKey;
         if(isNil "_savedParams") then {
-            if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [PARAM] Param save data is corrupted, can't load!";};
+            if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [PARAM] Param save data is corrupted, can't load!";};
             // Fix param save data
             profileNamespace setVariable [_saveKey, []];
-            if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [PARAM] No saved value for param: %1, fetching value.", _paramName];};
+            if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [PARAM] No saved value for param: %1, fetching value.", _paramName];};
             _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
         } else {
             private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
             if(isNil "_singleParam") then {
-                if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [PARAM] No saved value for param: %1, fetching value.", _paramName];};
+                if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [PARAM] No saved value for param: %1, fetching value.", _paramName];};
                 _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
             } else {
-                if (KP_liberation_savegame_debug > 0) then {diag_log format ["[KP LIBERATION] [PARAM] Found value: %1 for param: %2,", (_singleParam select 1), _paramName];};
+                if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [PARAM] Found value: %1 for param: %2,", (_singleParam select 1), _paramName];};
                 _value = _singleParam select 1;
             };
         };
     };
     // Get param
     default {
-        if (KP_liberation_savegame_debug > 0) then {diag_log "[KP LIBERATION] [PARAM] Fetch selected value for param";};
+        if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [PARAM] Fetch selected value for param";};
         _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
     };
 };

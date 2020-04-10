@@ -1,4 +1,4 @@
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Module initialising on: %1", debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Module initialising on: %1", debug_source];_text remoteExec ["diag_log",2];};
 
 // Scripts
 // Logistic convoy ambush
@@ -18,4 +18,4 @@ publicVariable "asymm_blocked_sectors";
 // Start module loop
 execVM "scripts\server\asymmetric\asymmetric_loop.sqf";
 
-if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Module initialised on: %1", debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Module initialised on: %1", debug_source];_text remoteExec ["diag_log",2];};

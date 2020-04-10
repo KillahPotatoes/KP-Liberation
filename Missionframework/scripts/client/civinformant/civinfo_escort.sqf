@@ -2,11 +2,11 @@ params ["_informant"];
 
 if (isDedicated) exitWith {};
 
-if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant];_text remoteExec ["diag_log",2];};
+if (KP_liberation_civinfo_debug > 0) then {private _text = text format ["[KP LIBERATION] [CIVINFO] civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant];_text remoteExec ["diag_log",2];};
 
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
-if !(alive _informant) exitWith {if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] civinfo_escort exited by: %1 - Informant isn't alive", debug_source];_text remoteExec ["diag_log",2];};};
+if !(alive _informant) exitWith {if (KP_liberation_civinfo_debug > 0) then {private _text = text format ["[KP LIBERATION] [CIVINFO] civinfo_escort exited by: %1 - Informant isn't alive", debug_source];_text remoteExec ["diag_log",2];};};
 
 private _is_near_fob = false;
 
@@ -39,9 +39,9 @@ if (alive _informant) then {
 		sleep 5;
 		[_informant, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExec ["remote_call_switchmove"];
 		[_informant] remoteExec ["civinfo_delivered",2];
-		if (KP_liberation_civinfo_debug > 0) then {private _text = "[KP LIBERATION] [CIVINFO] civinfo_escort -> Informant at FOB";_text remoteExec ["diag_log",2];};
+		if (KP_liberation_civinfo_debug > 0) then {private _text = text "[KP LIBERATION] [CIVINFO] civinfo_escort -> Informant at FOB";_text remoteExec ["diag_log",2];};
 		sleep 600;
 		deleteVehicle _informant;
-		if (KP_liberation_civinfo_debug > 0) then {private _text = format ["[KP LIBERATION] [CIVINFO] civinfo_escort finished by: %1", debug_source];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_civinfo_debug > 0) then {private _text = text format ["[KP LIBERATION] [CIVINFO] civinfo_escort finished by: %1", debug_source];_text remoteExec ["diag_log",2];};
 	};
 };
