@@ -67,5 +67,12 @@ KPLIB_objectInits = [
     [
         ["gm_ge_army_kat1_454_cargo", "gm_ge_army_kat1_454_cargo_win"],
         {_this animateSource ["cover_unhide", 0, true];}
+    ],
+
+    // Make sure a slingloaded object is local to the helicopter pilot (avoid desync and rope break)
+    [
+        ["Helicopter"],
+        {if (isServer) then {[_this] call KPLIB_fnc_addRopeAttachEh;} else {[_this] remoteExecCall ["KPLIB_fnc_addRopeAttachEh", 2];};},
+        true
     ]
 ];
