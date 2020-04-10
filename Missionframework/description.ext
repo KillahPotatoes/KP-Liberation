@@ -32,8 +32,12 @@ minPlayerDistance = 1000;
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
 
+#include "KP\KPGUI\KPGUI_defines.hpp"
+#include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+
 class CfgFunctions {
     #include "CfgFunctions.hpp"
+    #include "KP\KPPLM\KPPLM_functions.hpp"
 };
 
 class CfgDebriefing
