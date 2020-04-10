@@ -21,6 +21,6 @@ params [
 
 [
     ["UpdateState", _state]
-] call (missionNameSpace getVariable ["DiscordRichPresence_fnc_update",{}]);
+] call (missionNamespace getVariable ["DiscordRichPresence_fnc_update", {}]);
 
 true

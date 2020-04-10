@@ -26,7 +26,7 @@ if (!isDedicated && hasInterface) then {
     // Get mission version and readable world name for Discord rich presence
     [
         ["UpdateDetails", [localize "STR_MISSION_VERSION", "on", getText (configfile >> "CfgWorlds" >> worldName >> "description")] joinString " "]
-    ] call (missionNameSpace getVariable ["DiscordRichPresence_fnc_update",{}]);
+    ] call (missionNamespace getVariable ["DiscordRichPresence_fnc_update", {}]);
 
     waitUntil {alive player};
     if (debug_source != name player) then {debug_source = name player};
