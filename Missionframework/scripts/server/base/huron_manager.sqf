@@ -22,6 +22,7 @@ while {true} do {
         huron enableSimulationGlobal true;
         huron setDamage 0;
         huron allowdamage true;
+        [huron] call KPLIB_fnc_addObjectInit;
     };
     [huron] call KPLIB_fnc_clearCargo;
     huron setVariable ["ace_medical_isMedicalVehicle", true, true];
