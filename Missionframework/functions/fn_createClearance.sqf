@@ -2,7 +2,7 @@
     File: fn_createClearance.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-04
+    Last Update: 2020-04-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,6 +25,9 @@ params [
     ["_radius", 0, [0]],
     ["_save", false, [false]]
 ];
+
+if (_centerPos isEqualTo [0, 0, 0]) exitWith {["Zero position given"] call BIS_fnc_error; false};
+if (_radius isEqualTo 0) exitWith {["Zero radius given"] call BIS_fnc_error; false};
 
 if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo _centerPos}) != -1}) exitWith {false};
 

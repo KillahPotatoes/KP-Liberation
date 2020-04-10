@@ -295,7 +295,7 @@ while {true} do {
         if (_idact_clearance == -1) then {
             _idact_clearance = player addAction [
                 "<t color='#FFFF00'>" + localize "STR_CLEARANCE_ACTION" + "</t>",
-                {[_this select 3 select 0, _this select 3 select 1, true] remoteExecCall ["KPLIB_fnc_createClearance", 2];},
+                {[_this select 3 select 0, _this select 3 select 1, true] call KPLIB_fnc_createClearanceConfirm;},
                 [_nearFob, GRLIB_fob_range * 0.9], -1003, false, true, "", "build_confirmed == 0"
             ];
         };
