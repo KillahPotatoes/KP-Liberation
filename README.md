@@ -210,6 +210,7 @@ class Missions
 * Tweaked: Explanation and formatting of `kp_objectInits.sqf`.
 * Tweaked: Integer to bool conversion in fetch param macro.
 * Tweaked: ObjectInit is now also called on spawned start vehicles.
+* Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
