@@ -23,7 +23,7 @@ while {true} do {
 	};
 
 	if (isServer) then {
-		diag_log format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 - Active Sectors: %7 - Active Scripts: %8",
+		diag_log text format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 - Active Sectors: %7 - Active Scripts: %8",
 		_source,
 		((round (diag_fps * 100.0)) / 100.0),
 		{local _x} count allGroups,
@@ -33,7 +33,7 @@ while {true} do {
 		count active_sectors,
 		diag_activeScripts];
 	} else {
-		private _text = format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Active Scripts: %5",
+		private _text = text format ["[KP LIBERATION] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Active Scripts: %5",
 		_source,
 		((round (diag_fps * 100.0)) / 100.0),
 		{local _x} count allGroups,

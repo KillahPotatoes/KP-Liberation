@@ -2,7 +2,7 @@ waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KP_liberation_logistics"};
 waitUntil {save_is_loaded};
 
-if (KP_liberation_logistic_debug > 0) then {diag_log "[KP LIBERATION] [LOGISTIC] Logistic management started";};
+if (KP_liberation_logistic_debug > 0) then {diag_log text "[KP LIBERATION] [LOGISTIC] Logistic management started";};
 
 KP_liberation_convoy_ambush_inProgress = false;
 KP_liberation_convoy_ambush_check = 0;
@@ -10,7 +10,7 @@ KP_liberation_convoy_ambush_check = 0;
 while {GRLIB_endgame == 0} do {
 
 	if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KP_liberation_logistics) > 0)) then {
-		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval started: %1", time];};
+		if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic interval started: %1", time];};
 
 		private _tempLogistics = +KP_liberation_logistics;
 
@@ -110,7 +110,7 @@ while {GRLIB_endgame == 0} do {
 								} forEach _storage_areas;
 							};
 							please_recalculate = true;
-							if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+							if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 						} else {
 							_x set [9,1];
 						};
@@ -129,7 +129,7 @@ while {GRLIB_endgame == 0} do {
 										case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
 										case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
 										case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-										default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+										default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 									};
 								} forEach (attachedObjects _x);
 							} forEach _storage_areas;
@@ -247,7 +247,7 @@ while {GRLIB_endgame == 0} do {
 												};
 											};
 										};
-										default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+										default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
 									};
 								} forEach _storedCrates;
 
@@ -266,7 +266,7 @@ while {GRLIB_endgame == 0} do {
 
 							} forEach _storage_areas;
 
-							if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+							if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 						};
 					} else {
 						private _nextState = 0;
@@ -283,7 +283,7 @@ while {GRLIB_endgame == 0} do {
 						_x set [8,_time];
 						_x set [9,0];
 
-						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				case 2;
@@ -293,7 +293,7 @@ while {GRLIB_endgame == 0} do {
 						if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
 							private _dice = round (random 100);
 							private _chance = KP_liberation_convoy_ambush_chance + ([] call KPLIB_fnc_crGetMulti);
-							if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance];_text remoteExec ["diag_log",2];};
+							if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance];_text remoteExec ["diag_log",2];};
 							if (_dice <= _chance) then {
 								private _convoy = +_x;
 								sleep 0.1;
@@ -319,7 +319,7 @@ while {GRLIB_endgame == 0} do {
 							_x set [8,((_x select 8) - 1)];
 						};
 
-						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 
 					} else {
 						private _nextState = -1;
@@ -342,7 +342,7 @@ while {GRLIB_endgame == 0} do {
 						_x set [7,_nextState];
 						_x set [8,_time];
 
-						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				case 5;
@@ -435,7 +435,7 @@ while {GRLIB_endgame == 0} do {
 						};
 						please_recalculate = true;
 
-						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					} else {
 						_x set [2,[0,0,0]];
 						_x set [3,[0,0,0]];
@@ -445,7 +445,7 @@ while {GRLIB_endgame == 0} do {
 						_x set [7,0];
 						_x set [8,-1];
 
-						if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
+						if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic Group Update: %1", _x];};
 					};
 				};
 				default {};
@@ -454,7 +454,7 @@ while {GRLIB_endgame == 0} do {
 
 		KP_liberation_logistics = +_tempLogistics;
 
-		if (KP_liberation_logistic_debug > 0) then {diag_log format ["[KP LIBERATION] [LOGISTIC] Logistic interval finished: %1", time];};
+		if (KP_liberation_logistic_debug > 0) then {diag_log text format ["[KP LIBERATION] [LOGISTIC] Logistic interval finished: %1", time];};
 	};
 	uiSleep 60;
 };

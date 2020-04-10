@@ -1,7 +1,7 @@
 params ["_sector"];
 
 if (_sector in sectors_bigtown || _sector in sectors_capture) then {
-	if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] liberatedSector called at: %1 - Sector: %2", time, markerText _sector];};
+	if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] liberatedSector called at: %1 - Sector: %2", time, markerText _sector];};
 
 	private _penalty = 0;
 
@@ -23,5 +23,5 @@ if (_sector in sectors_bigtown || _sector in sectors_capture) then {
 		[(KP_liberation_cr_sector_gain - _penalty), false] spawn F_cr_changeCR;
 	};
 
-	if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] liberatedSector finished at: %1 - Penalty: %2", time, _penalty];};
+	if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] liberatedSector finished at: %1 - Penalty: %2", time, _penalty];};
 };

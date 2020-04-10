@@ -10,7 +10,7 @@ params ["_sector"];
 
 waitUntil {!isNil "combat_readiness"};
 
-if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector spawned on: %3 - time: %4", (markerText _sector), _sector, debug_source, time];_text remoteExec ["diag_log",2];};
+if (KP_liberation_sectorspawn_debug > 0) then {private _text = text format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector spawned on: %3 - time: %4", (markerText _sector), _sector, debug_source, time];_text remoteExec ["diag_log",2];};
 
 private _sectorpos = markerPos _sector;
 private _stopit = false;
@@ -169,7 +169,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
 	_vehtospawn = _vehtospawn select {!(isNil "_x")};
 
-	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_sectorspawn_debug > 0) then {private _text = text format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max];_text remoteExec ["diag_log",2];};
 
 	if (_building_ai_max > 0 && GRLIB_adaptive_opfor) then {
 		_building_ai_max = round (_building_ai_max * ([] call KPLIB_fnc_getOpforFactor));
@@ -189,7 +189,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 		{
 			_buildingpositions = _buildingpositions + ([_x] call BIS_fnc_buildingPositions);
 		} forEach _allbuildings;
-		if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)];_text remoteExec ["diag_log",2];};
+		if (KP_liberation_sectorspawn_debug > 0) then {private _text = text format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)];_text remoteExec ["diag_log",2];};
 		if (count _buildingpositions > _minimum_building_positions) then {
 			_managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sector] call KPLIB_fnc_spawnBuildingSquad);
 		};
@@ -225,7 +225,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 		_managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
 	};
 
-	if (KP_liberation_asymmetric_debug > 0) then {private _text = format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_asymmetric_debug > 0) then {private _text = text format ["[KP LIBERATION] [ASYMMETRIC] Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount];_text remoteExec ["diag_log",2];};
 	[_sector, _building_range, _iedcount] spawn ied_manager;
 
 	if (_guerilla) then {
@@ -238,7 +238,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 		[_sector] remoteExec ["reinforcements_remote_call",2];
 	};
 
-	if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - populating done at %3", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
+	if (KP_liberation_sectorspawn_debug > 0) then {private _text = text format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - populating done at %3", (markerText _sector), _sector, time];_text remoteExec ["diag_log",2];};
 
 	private _activationTime = time;
 	// sector lifetime loop
@@ -304,4 +304,4 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 	active_sectors = active_sectors - [_sector]; publicVariable "active_sectors";
 };
 
-if (KP_liberation_sectorspawn_debug > 0) then {private _text = format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};
+if (KP_liberation_sectorspawn_debug > 0) then {private _text = text format ["[KP LIBERATION] [SECTORSPAWN] Sector %1 (%2) - manage_one_sector dropped on: %3", (markerText _sector), _sector, debug_source];_text remoteExec ["diag_log",2];};
