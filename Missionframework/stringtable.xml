@@ -6941,7 +6941,7 @@
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TEXT">
             <Original>This will permanently remove a total of %1 terrain objects (houses, trees, fences, lamps, etc.) within a radius of %2m around %3.</Original>
-            <German>Dies wird insgesamt %1 Kartenobjekte (Häuser, Bäume, Zäune, Lampen, etc.) im Umkreis von %2 um %3 permanent entfernen.</German>
+            <German>Dies wird insgesamt %1 Kartenobjekte (Häuser, Bäume, Zäune, Lampen, etc.) im Umkreis von %2m um %3 herum permanent entfernen.</German>
         </Key>
     </Package>
 

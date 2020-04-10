@@ -31,8 +31,8 @@ if (!canSuspend) exitWith {_this spawn KPLIB_fnc_createClearanceConfirm};
 private _text = format [
     localize "STR_CONFIRM_CLEARANCE_TEXT",
     count (nearestTerrainObjects [_centerPos, [], _radius, false, true]),
-    _radius,
-    ["FOB", [_nearfob] call KPLIB_fnc_getFobName] joinString " "
+    floor _radius,
+    ["FOB", [_centerPos] call KPLIB_fnc_getFobName] joinString " "
 ];
 
 private _confirmed = [
