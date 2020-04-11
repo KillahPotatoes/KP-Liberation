@@ -35,29 +35,7 @@ if (!isDedicated && hasInterface) then {
 
     // Add EH for curator to add kill manager and object init recognition for zeus spawned units/vehicles
     {
-        _x addEventHandler ["CuratorObjectPlaced", {
-            params ["_curator", "_entity"];
-            if (_entity in allUnits) then {
-                _entity addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-                [_entity] call KPLIB_fnc_addObjectInit;
-            } else {
-                if (_entity in vehicles) then {
-                    _entity addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-                    [_entity] call KPLIB_fnc_clearCargo;
-                    [_entity] call KPLIB_fnc_addObjectInit;
-                    {
-                        _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-                        [_x] call KPLIB_fnc_addObjectInit;
-                    } forEach (crew _entity);
-                };
-            };
-            if ((typeOf _entity) in KP_liberation_crates) then {
-                _entity setMass 500;
-                _entity setVariable ["KP_liberation_crate_value", 100, true];
-                [_entity, true] call KPLIB_fnc_clearCargo;
-                if (KP_liberation_ace) then {[_entity, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
-            };
-        }];
+        _x addEventHandler ["CuratorObjectPlaced", {[_this select 1] call KPLIB_fnc_handlePlacedZeusObject;}];
     } forEach allCurators;
 
     waitUntil {alive player};

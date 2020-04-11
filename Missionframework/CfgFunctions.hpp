@@ -54,6 +54,7 @@ class KPLIB
         class getUnitsCount             {};
         class getVirtualCargo           {};
         class getWeaponComponents       {};
+        class handlePlacedZeusObject    {};
         class hasPermission             {};
         class isBigtownActive           {};
         class isClassUAV                {};
