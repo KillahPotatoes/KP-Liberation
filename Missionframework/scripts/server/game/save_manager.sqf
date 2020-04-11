@@ -11,11 +11,14 @@ if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
 
 // Auto save when last player exits
 if (hasInterface) then {
-    (findDisplay 46) displayAddEventHandler ["Unload", {
-        if (!isServer) exitWith {};
-        diag_log text "[KP LIBERATION] [SAVE] Player server exit. Saving mission data.";
-        [] call KPLIB_fnc_doSave;
-    }];
+    [] spawn {
+        waitUntil {!isNull findDisplay 46};
+        (findDisplay 46) displayAddEventHandler ["Unload", {
+            if (!isServer) exitWith {};
+            diag_log text "[KP LIBERATION] [SAVE] Player server exit. Saving mission data.";
+            [] call KPLIB_fnc_doSave;
+        }];
+    };
 } else {
     addMissionEventHandler ["HandleDisconnect", {
         if !(allPlayers isEqualTo []) exitWith {};
