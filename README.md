@@ -202,6 +202,7 @@ class Missions
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
 * Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
 * Added: Parameter (default deactivated) to enable editing of enemy units and vehicles in Zeus.
+* Added: Zeus placed objects are now recognized for kill manager, object init and placed resource crates are also filled with 100 resources.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
