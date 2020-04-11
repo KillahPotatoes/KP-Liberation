@@ -540,6 +540,8 @@ diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time
 
 // Start the save loop
 while {true} do {
+    scriptName "KPLIB_saveLoop";
+
     private _saveTime = time + KP_liberation_save_interval;
     waitUntil {
         sleep 0.5;
