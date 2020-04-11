@@ -16,6 +16,7 @@ class KPLIB
         class crateFromStorage          {};
         class crateToStorage            {};
         class createClearance           {};
+        class createClearanceConfirm    {};
         class createCrate               {};
         class createManagedUnit         {};
         class crGetMulti                {};
