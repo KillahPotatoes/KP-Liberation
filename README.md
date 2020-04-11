@@ -44,7 +44,6 @@ These mods are needed if you want to use the prepackaged missionfiles from the r
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak (pja310)
     * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
     * [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
     * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
     * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
@@ -106,19 +105,22 @@ You can play every map without any mods (only the maps themself) if you set the 
 
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
-* [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-* [ACE Compat - RHS Armed Forces of the Russian Federation](http://steamcommunity.com/workshop/filedetails/?id=773131200)
-* [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
-* [ACE3 - BWMOD Compatibility](http://steamcommunity.com/sharedfiles/filedetails/?id=870313336)
-* [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
-* [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
-* [Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
-* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
-* [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
-* [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
-* [JSRS SOUNDMOD - Additional](http://steamcommunity.com/sharedfiles/filedetails/?id=863393819)
-* [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
-* [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
+* [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+* [ACE Compat - RHS Armed Forces of the Russian Federation](https://steamcommunity.com/workshop/filedetails/?id=773131200)
+* [ACE Compat - RHS United States Armed Forces](https://steamcommunity.com/workshop/filedetails/?id=773125288)
+* [ACE3 - BWMOD Compatibility](https://steamcommunity.com/sharedfiles/filedetails/?id=1200145989)
+* [ACRE 2](https://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
+* [Advanced Urban Rappeling](https://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
+* [CBA_A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+* [Discord Rich Presence](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159)
+* [DUI - Squad Radar](https://steamcommunity.com/sharedfiles/filedetails/?id=1638341685)
+* [Enhanced Movement](https://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
+* [Immerse](https://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
+* [JSRS SOUNDMOD](https://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
+* [JSRS SOUNDMOD - RHS AFRF Mod Pack Sound Support](https://steamcommunity.com/sharedfiles/filedetails/?id=945476727)
+* [JSRS SOUNDMOD - RHS USAF Mod Pack Sound Support](https://steamcommunity.com/sharedfiles/filedetails/?id=1180533757)
+* [KP Ranks](https://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
+* [Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
 Also you should think about using these mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
@@ -201,6 +203,7 @@ class Missions
 * Added: [KP Player Menu](https://github.com/KillahPotatoes/KP-PLM) as optional (default enabled) replacement for the old GREUH extended options. GREUH still available via parameters or if no CBA loaded.
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
 * Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
+* Added: Confirmation dialog for the "Create Clearance" action at the FOB.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
