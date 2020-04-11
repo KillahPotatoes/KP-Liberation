@@ -4,6 +4,7 @@ waitUntil {!isNil "huron_typename"};
 private _vehicleClassnames = [huron_typename];
 _vehicleClassnames append KP_liberation_crates;
 _vehicleClassnames append ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles) apply {_x select 0});
+if (KP_liberation_enemies_zeus) then {_vehicleClassnames append all_hostile_classnames};
 
 private _valids = [];
 private _toRemove = [];
@@ -14,14 +15,17 @@ while {true} do {
 
     // Add units
     _valids = allUnits select {
-        (alive _x)                                          // Alive
-        && {side (group _x) isEqualTo GRLIB_side_friendly   // Player side
-    }};
+        (alive _x)                                                                              // Alive
+        && {
+            (KP_liberation_enemies_zeus && {!(side (group _x) isEqualTo GRLIB_side_civilian)})  // Not civilian side, if enemy adding is enabled
+            || {side (group _x) isEqualTo GRLIB_side_friendly}                                  // Player side if enemy adding is disabled
+        }
+    };
 
     // Add vehicles
     _valids append (vehicles select {
         (alive _x)                                                                              // Alive
-        && {((typeof _x) in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", false])}  // In built list or captured
+        && {((typeof _x) in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", false])}  // In valid classnames list or captured
         && {isNull (attachedTo _x)}                                                             // Not attached to something
     });
 

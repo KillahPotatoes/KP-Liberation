@@ -6935,6 +6935,10 @@
             <Original>KP Player Menu (requires CBA)</Original>
             <German>KP Spielermenü (benötigt CBA)</German>
         </Key>
+        <Key ID="STR_PARAM_ZEUSADDENEMIES">
+            <Original>Add enemies to Zeus editable objects</Original>
+            <German>Feindliche Einheiten für Zeus editierbar</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">

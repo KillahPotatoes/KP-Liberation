@@ -93,6 +93,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
     diag_log text "[KP LIBERATION] [PARAM]";
 
     // Technical Options
@@ -419,6 +420,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_LIMITEDZEUS";
     _value = if (KP_liberation_limited_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_ZEUSADDENEMIES";
+    _value = if (KP_liberation_enemies_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PERMISSIONS_PARAM";
