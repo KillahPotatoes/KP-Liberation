@@ -1,8 +1,8 @@
 /*
-    File: F_kp_doSave.sqf
+    File: fn_doSave.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-10
+    Last Update: 2020-04-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,7 +23,7 @@ if (missionNamespace getVariable ["kp_liberation_saving", false]) exitWith {
 
 kp_liberation_saving = true;
 
-private _saveData = [] call F_getSaveData;
+private _saveData = [] call KPLIB_fnc_getSaveData;
 
 // Write data in the server profileNamespace
 profileNamespace setVariable [GRLIB_save_key, str _saveData];

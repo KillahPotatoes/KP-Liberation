@@ -14,13 +14,13 @@ if (hasInterface) then {
     (findDisplay 46) displayAddEventHandler ["Unload", {
         if (!isServer) exitWith {};
         diag_log text "[KP LIBERATION] [SAVE] Player server exit. Saving mission data.";
-        [] call F_doSave;
+        [] call KPLIB_fnc_doSave;
     }];
 } else {
     addMissionEventHandler ["HandleDisconnect", {
         if !(allPlayers isEqualTo []) exitWith {};
         diag_log text "[KP LIBERATION] [SAVE] Last player disconnected. Saving mission data.";
-        [] call F_doSave;
+        [] call KPLIB_fnc_doSave;
     }];
 };
 
@@ -554,7 +554,7 @@ while {true} do {
         saveProfileNamespace;
     };
 
-    [] call F_doSave;
+    [] call KPLIB_fnc_doSave;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
 };

@@ -15,7 +15,7 @@ if ( _create_fob_building ) then {
 	sleep 1;
 };
 
-[] spawn F_doSave;
+[] spawn KPLIB_fnc_doSave;
 
 sleep 3;
 [_new_fob, 0] remoteExec ["remote_call_fob"];

@@ -1,8 +1,8 @@
 /*
-    File: F_kp_getSaveData.sqf
+    File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-10
+    Last Update: 2020-04-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:

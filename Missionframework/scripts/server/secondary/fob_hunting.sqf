@@ -130,7 +130,7 @@ waitUntil {
 combat_readiness = round (combat_readiness * GRLIB_secondary_objective_impact);
 stats_secondary_objectives = stats_secondary_objectives + 1;
 sleep 1;
-[] spawn F_doSave;
+[] spawn KPLIB_fnc_doSave;
 sleep 3;
 
 [3] remoteExec ["remote_call_intel"];

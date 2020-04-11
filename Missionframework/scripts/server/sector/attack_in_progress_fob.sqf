@@ -48,7 +48,7 @@ if ( GRLIB_endgame == 0 ) then {
 		publicVariable "GRLIB_all_fobs";
 		reset_battlegroups_ai = true;
 		[_thispos] call destroy_fob;
-		[] spawn F_doSave;
+		[] spawn KPLIB_fnc_doSave;
 		stats_fobs_lost = stats_fobs_lost + 1;
 	} else {
 		[_thispos, 3] remoteExec ["remote_call_fob"];
