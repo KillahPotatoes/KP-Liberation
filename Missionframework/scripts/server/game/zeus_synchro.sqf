@@ -1,46 +1,44 @@
-waitUntil { !isNil "huron_typename" };
+waitUntil {!isNil "huron_typename"};
 
-_vehicleClassnames = [huron_typename] + KP_liberation_crates;
+// Classnames of objects which should be added as editable for Zeus
+private _vehicleClassnames = [huron_typename];
+_vehicleClassnames append KP_liberation_crates;
+_vehicleClassnames append ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles) apply {_x select 0});
 
+private _valids = [];
+private _toRemove = [];
+private _toAdd = [];
 
-{
-	_vehicleClassnames = _vehicleClassnames + [_x select 0];
-} foreach (light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles) ;
+while {true} do {
+    waitUntil {sleep 1; !(allCurators isEqualTo [])};
 
-while { true } do {
+    // Add units
+    _valids = allUnits select {
+        (alive _x)                                          // Alive
+        && {side (group _x) isEqualTo GRLIB_side_friendly   // Player side
+    }};
 
-	waitUntil { sleep 0.3; count allCurators > 0 };
+    // Add vehicles
+    _valids append (vehicles select {
+        (alive _x)                                                                              // Alive
+        && {((typeof _x) in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", false])}  // In built list or captured
+        && {isNull (attachedTo _x)}                                                             // Not attached to something
+    });
 
-	_zeusunits = [];
-	{
-		if ((side group _x == GRLIB_side_friendly) && (_x distance startbase > 1000) && alive _x) then {
-			_zeusunits pushback _x;
-		};
-	} foreach allUnits;
+    // Add playable units
+    _valids append switchableUnits;
+    _valids append playableUnits;
 
-	{
-		if (((typeof _x in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", false])) && ((_x distance startbase > 1000) && (isNull attachedTo _x) || (typeof _x == huron_typename)) && alive _x ) then {
-			_zeusunits pushback _x;
-		};
-	} foreach vehicles;
+    {
+        // Remove death or attached units
+        _toRemove = ((curatorEditableObjects _x) select {!(alive _x) || !(isNull (attachedTo _x))});
 
-	_zeusunits = _zeusunits + switchableUnits;
-	_zeusunits = _zeusunits + playableUnits;
-	_zeusunits = _zeusunits - (curatorEditableObjects (allCurators select 0));
+        // Filter already added units of this curator
+        _toAdd = _valids - (curatorEditableObjects _x);
 
-	_units_to_remove = [];
-	{
-		if ( !(alive _x) || !(isNull attachedTo _x)) then {
-			_units_to_remove pushback _x;
-		};
-	} foreach (curatorEditableObjects (allCurators select 0));
-
-	{
-		_zgm = _x;
-		_zgm addCuratorEditableObjects [_zeusunits,true];
-		_zgm removeCuratorEditableObjects [_units_to_remove,true];
-
-	} foreach allCurators;
-
-	sleep 10;
+        // Add and remove units
+        _x addCuratorEditableObjects [_toAdd, true];
+        _x removeCuratorEditableObjects [_toRemove, true];
+    } forEach allCurators;
+    sleep 9;
 };

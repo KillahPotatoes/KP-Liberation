@@ -214,6 +214,7 @@ class Missions
 * Tweaked: ObjectInit is now also called on spawned start vehicles.
 * Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
 * Tweaked: Collection arrays fetching in `init_presets.sqf`.
+* Tweaked: Unit/vehicle collecting for adding to editable units in `zeus_synchro.sqf`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
