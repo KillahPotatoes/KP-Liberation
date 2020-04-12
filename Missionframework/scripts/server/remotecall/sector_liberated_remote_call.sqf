@@ -71,7 +71,7 @@ publicVariable "asymm_blocked_sectors";
 
 sleep 1;
 
-doSaveTrigger = true;
+[] spawn KPLIB_fnc_doSave;
 
 sleep 45;
 

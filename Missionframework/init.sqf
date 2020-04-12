@@ -1,3 +1,6 @@
+// Version of the KP Liberation framework
+KP_liberation_version = [0, 96, 7];
+
 enableSaving [ false, false ];
 
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
