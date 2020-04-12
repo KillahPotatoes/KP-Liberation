@@ -204,6 +204,8 @@ class Missions
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
 * Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
 * Added: Confirmation dialog for the "Create Clearance" action at the FOB.
+* Added: Parameter (default deactivated) to enable editing of enemy units and vehicles in Zeus.
+* Added: Zeus placed objects are now recognized for kill manager, object init and placed resource crates are also filled with 100 resources.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
@@ -216,6 +218,8 @@ class Missions
 * Tweaked: Integer to bool conversion in fetch param macro.
 * Tweaked: ObjectInit is now also called on spawned start vehicles.
 * Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
+* Tweaked: Collection arrays fetching in `init_presets.sqf`.
+* Tweaked: Unit/vehicle collecting for adding to editable units in `zeus_synchro.sqf`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
