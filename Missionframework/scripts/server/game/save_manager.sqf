@@ -107,6 +107,7 @@ save_is_loaded = false;
 
 // Add opfor and civilian vehicles for saving
 KP_liberation_classnamesToSave = KP_liberation_classnamesToSave + all_hostile_classnames + civilian_vehicles;
+KP_liberation_classnamesToSave  = KP_liberation_classnamesToSave  arrayIntersect KP_liberation_classnamesToSave;
 
 /*
     --- Statistic Variables ---
