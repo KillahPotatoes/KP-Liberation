@@ -166,8 +166,8 @@ if (_saveData isEqualType "") then {
 
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
-    if (true || ((_saveData select 0) select 0) isEqualType 0) then {
-        diag_log format ["[KP LIBERATION] [SAVE] Save data from version: %1", (_saveData select 0) joinstring "."];
+    if (((_saveData select 0) select 0) isEqualType 0) then {
+        diag_log text format ["[KP LIBERATION] [SAVE] Save data from version: %1", (_saveData select 0) joinstring "."];
 
         _dateTime                                   = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
