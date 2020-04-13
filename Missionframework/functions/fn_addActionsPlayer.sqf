@@ -111,7 +111,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSTORAGEBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    [KP_liberation_small_storage_building, (player getVariable ["KPLIB_sectorProd", []])],
+    [KP_liberation_small_storage_building],
     -770,
     false,
     true,
@@ -123,7 +123,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSUPPLYBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    ["supply", (player getVariable ["KPLIB_sectorProd", []])],
+    ["supply"],
     -780,
     false,
     true,
@@ -135,7 +135,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECAMMOBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    ["ammo", (player getVariable ["KPLIB_sectorProd", []])],
+    ["ammo"],
     -790,
     false,
     true,
@@ -147,7 +147,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECFUELBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    ["fuel", (player getVariable ["KPLIB_sectorProd", []])],
+    ["fuel"],
     -800,
     false,
     true,
@@ -220,7 +220,7 @@ if (player == ([] call KPLIB_fnc_getCommander)) then {
 // Create FOB clearance
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_CLEARANCE_ACTION", "</t>"] joinString "",
-    {[_this select 3 select 0, _this select 3 select 1, true] call KPLIB_fnc_createClearanceConfirm;},
+    {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], GRLIB_fob_range * 0.9, true] call KPLIB_fnc_createClearanceConfirm;},
     nil,
     -850,
     false,

@@ -35,7 +35,6 @@ kp_fuel_consumption = compileFinal preprocessFileLineNumbers "scripts\client\mis
 kp_cr_checkVehicle = compileFinal preprocessFileLineNumbers "scripts\client\civrep\kp_cr_checkVehicle.sqf";
 kp_vehicle_permissions = compileFinal preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 
-// execVM "scripts\client\actions\action_manager.sqf";
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
 execVM "scripts\client\actions\unflip_manager.sqf";

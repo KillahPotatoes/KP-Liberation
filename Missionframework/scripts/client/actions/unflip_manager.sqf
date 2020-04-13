@@ -1,3 +1,6 @@
+waitUntil {!isNil "GRLIB_permissions"};
+waitUntil {!(GRLIB_permissions isEqualTo [])};
+
 private [ "_unflippable_vehicles", "_detected_vehicles", "_next_vehicle", "_next_vehicle_already_in_list", "_idact_next" ];
 
 _unflippable_vehicles = [];
@@ -44,12 +47,12 @@ while { true } do {
 
 		} foreach _unflippable_vehicles;
 
-		sleep 3;
-
 	} else {
 		{
 			(_x select 0) removeAction (_x select 1);
 			_unflippable_vehicles = _unflippable_vehicles - [ _x ];
 		} foreach _unflippable_vehicles;
 	};
+
+    sleep 3;
 };
