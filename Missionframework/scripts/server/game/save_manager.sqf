@@ -361,11 +361,6 @@ if (!isNil "_saveData") then {
                 _object setVariable ["GRLIB_captured", true, true];
             };
 
-            // Prevent damage for the FOB building
-            if (_class == FOB_typename) then {
-                _object addEventHandler ["HandleDamage", {0}];
-            };
-
             // Process KP object init
             [_object] call KPLIB_fnc_addObjectInit;
 
