@@ -152,10 +152,14 @@ heavy_vehicles = heavy_vehicles select {[( _x select 0)] call KPLIB_fnc_checkCla
 air_vehicles = air_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
 support_vehicles = support_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
 static_vehicles = static_vehicles select {[( _x select 0)] call KPLIB_fnc_checkClass};
+buildings = buildings select {[( _x select 0)] call KPLIB_fnc_checkClass};
+elite_vehicles = elite_vehicles select {[_x] call KPLIB_fnc_checkClass};
+
 // Preset classes arrays
 light_vehicles_classes = light_vehicles apply {toLower (_x select 0)};
 heavy_vehicles_classes = heavy_vehicles apply {toLower (_x select 0)};
 air_vehicles_classes = air_vehicles apply {toLower (_x select 0)};
+
 // Detect type of Potato 01 and support vehicles
 {
     _x params ["_class"];
@@ -166,12 +170,12 @@ air_vehicles_classes = air_vehicles apply {toLower (_x select 0)};
     };
 } forEach support_vehicles + [huron_typename];
 
-buildings = buildings select {[( _x select 0)] call KPLIB_fnc_checkClass};
-build_lists = [[],infantry_units,light_vehicles,heavy_vehicles,air_vehicles,static_vehicles,buildings,support_vehicles,squads];
-KP_liberation_storage_buildings = [KP_liberation_small_storage_building,KP_liberation_large_storage_building];
-KP_liberation_crates = [KP_liberation_supply_crate,KP_liberation_ammo_crate,KP_liberation_fuel_crate];
-KP_liberation_upgrade_buildings = [KP_liberation_recycle_building,KP_liberation_air_vehicle_building,KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
-KP_liberation_air_slots = [KP_liberation_heli_slot_building,KP_liberation_plane_slot_building];
+build_lists = [[], infantry_units, light_vehicles, heavy_vehicles, air_vehicles, static_vehicles, buildings, support_vehicles, squads];
+KP_liberation_storage_buildings = [KP_liberation_small_storage_building, KP_liberation_large_storage_building];
+KP_liberation_crates = [KP_liberation_supply_crate, KP_liberation_ammo_crate, KP_liberation_fuel_crate];
+KP_liberation_upgrade_buildings = [KP_liberation_recycle_building, KP_liberation_air_vehicle_building, KP_liberation_heli_slot_building, KP_liberation_plane_slot_building];
+KP_liberation_air_slots = [KP_liberation_heli_slot_building, KP_liberation_plane_slot_building];
+
 militia_squad = militia_squad select {[_x] call KPLIB_fnc_checkClass};
 militia_vehicles = militia_vehicles select {[_x] call KPLIB_fnc_checkClass};
 opfor_vehicles = opfor_vehicles select {[_x] call KPLIB_fnc_checkClass};
@@ -181,37 +185,49 @@ opfor_battlegroup_vehicles_low_intensity = opfor_battlegroup_vehicles_low_intens
 opfor_troup_transports = opfor_troup_transports select {[_x] call KPLIB_fnc_checkClass};
 opfor_choppers = opfor_choppers select {[_x] call KPLIB_fnc_checkClass};
 opfor_air = opfor_air select {[_x] call KPLIB_fnc_checkClass};
+
 civilians = civilians select {[_x] call KPLIB_fnc_checkClass};
 civilian_vehicles = civilian_vehicles select {[_x] call KPLIB_fnc_checkClass};
-military_alphabet = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-Ray","Yankee","Zulu"];
-land_vehicles_classnames = (opfor_vehicles + militia_vehicles);
+
 opfor_squad_8_standard = [opfor_squad_leader,opfor_team_leader,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_marksman,opfor_grenadier,opfor_rpg];
 opfor_squad_8_infkillers = [opfor_squad_leader,opfor_machinegunner,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_marksman,opfor_sharpshooter,opfor_sniper];
 opfor_squad_8_tankkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,opfor_rpg,opfor_rpg,opfor_at,opfor_at,opfor_at];
 opfor_squad_8_airkillers = [opfor_squad_leader,opfor_medic,opfor_machinegunner,opfor_rpg,opfor_rpg,opfor_aa,opfor_aa,opfor_aa];
-friendly_infantry_classnames = [];
-{friendly_infantry_classnames pushBackUnique _x;} forEach (blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufor_squad_aa + blufor_squad_recon + blufor_squad_para);
-{friendly_infantry_classnames pushBackUnique (_x select 0);} forEach infantry_units;
-all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers + opfor_troup_transports + opfor_vehicles_low_intensity);
-{land_vehicles_classnames pushback (_x select 0);} foreach (heavy_vehicles + light_vehicles);
-air_vehicles_classnames = [] + opfor_choppers;
-KP_liberation_friendly_air_classnames = [];
-{air_vehicles_classnames pushback (_x select 0); KP_liberation_friendly_air_classnames pushback (_x select 0);} foreach air_vehicles;
+
+friendly_infantry_classnames = ((infantry_units apply {_x select 0}) + blufor_squad_inf_light + blufor_squad_inf + blufor_squad_at + blufor_squad_aa + blufor_squad_recon + blufor_squad_para);
+friendly_infantry_classnames = friendly_infantry_classnames arrayIntersect friendly_infantry_classnames;
+
+land_vehicles_classnames = (opfor_vehicles + opfor_vehicles_low_intensity + militia_vehicles);
+all_hostile_classnames = (land_vehicles_classnames + opfor_air + opfor_choppers + opfor_troup_transports);
+all_hostile_classnames = all_hostile_classnames arrayIntersect all_hostile_classnames;
+
+land_vehicles_classnames append (light_vehicles apply {_x select 0});
+land_vehicles_classnames append (heavy_vehicles apply {_x select 0});
+land_vehicles_classnames = land_vehicles_classnames arrayIntersect land_vehicles_classnames;
+
+air_vehicles_classnames = +opfor_choppers;
+KP_liberation_friendly_air_classnames = air_vehicles apply {_x select 0};
+air_vehicles_classnames append KP_liberation_friendly_air_classnames;
+
 KP_liberation_friendly_air_classnames = KP_liberation_friendly_air_classnames select {!(_x call KPLIB_fnc_isClassUAV)};
-KP_liberation_static_classnames = [];
-{KP_liberation_static_classnames pushback (_x select 0);} forEach static_vehicles;
-ai_resupply_sources = ai_resupply_sources + [Respawn_truck_typename, huron_typename, Arsenal_typename];
+
+KP_liberation_static_classnames = static_vehicles apply {_x select 0};
+
+ai_resupply_sources append [Respawn_truck_typename, huron_typename, Arsenal_typename];
+
 markers_reset = [99999,99999,0];
 zeropos = [0,0,0];
-squads_names = [localize "STR_LIGHT_RIFLE_SQUAD", localize "STR_RIFLE_SQUAD", localize "STR_AT_SQUAD", localize "STR_AA_SQUAD", localize "STR_RECON_SQUAD", localize "STR_PARA_SQUAD"];
-ammobox_transports_typenames = [];
-{ammobox_transports_typenames pushback (_x select 0)} foreach box_transport_config;
-ammobox_transports_typenames = ammobox_transports_typenames select {[_x] call KPLIB_fnc_checkClass};
-elite_vehicles = elite_vehicles select {[_x] call KPLIB_fnc_checkClass};
-opfor_infantry = [opfor_sentry,opfor_rifleman,opfor_grenadier,opfor_squad_leader,opfor_team_leader,opfor_marksman,opfor_machinegunner,opfor_heavygunner,opfor_medic,opfor_rpg,opfor_at,opfor_aa,opfor_officer,opfor_sharpshooter,opfor_sniper,opfor_engineer];
+
+box_transport_config = box_transport_config select {[_x select 0] call KPLIB_fnc_checkClass};
+ammobox_transports_typenames = box_transport_config apply {_x select 0};
+
+opfor_infantry = [opfor_sentry, opfor_rifleman, opfor_grenadier, opfor_squad_leader, opfor_team_leader, opfor_marksman, opfor_machinegunner, opfor_heavygunner, opfor_medic, opfor_rpg, opfor_at, opfor_aa, opfor_officer, opfor_sharpshooter, opfor_sniper,opfor_engineer];
+
 GRLIB_intel_file = "Land_File1_F";
 GRLIB_intel_laptop = "Land_Laptop_device_F";
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
+military_alphabet = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-Ray","Yankee","Zulu"];
+squads_names = [localize "STR_LIGHT_RIFLE_SQUAD", localize "STR_RIFLE_SQUAD", localize "STR_AT_SQUAD", localize "STR_AA_SQUAD", localize "STR_RECON_SQUAD", localize "STR_PARA_SQUAD"];
 
 if (isServer) then {diag_log text format ["[KP LIBERATION] [PRESETS] ----- Server finished preset initialization - time: %1", diag_ticktime];};

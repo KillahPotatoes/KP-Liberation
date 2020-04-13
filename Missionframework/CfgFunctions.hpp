@@ -23,6 +23,7 @@ class KPLIB
         class createManagedUnit         {};
         class crGetMulti                {};
         class crGlobalMsg               {};
+        class doSave                    {};
         class fillStorage               {};
         class forceBluforCrew           {};
         class getAdaptiveVehicle        {};
@@ -49,6 +50,7 @@ class KPLIB
         class getPlayerCount            {};
         class getResistanceTier         {};
         class getSaveableParam          {};
+        class getSaveData               {};
         class getSectorOwnership        {};
         class getSectorRange            {};
         class getSquadComp              {};
@@ -57,6 +59,7 @@ class KPLIB
         class getUnitsCount             {};
         class getVirtualCargo           {};
         class getWeaponComponents       {};
+        class handlePlacedZeusObject    {};
         class hasPermission             {};
         class isBigtownActive           {};
         class isClassUAV                {};

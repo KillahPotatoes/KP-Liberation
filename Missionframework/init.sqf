@@ -1,3 +1,6 @@
+// Version of the KP Liberation framework
+KP_liberation_version = [0, 96, 7];
+
 enableSaving [ false, false ];
 
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
@@ -32,6 +35,11 @@ if (!isDedicated && hasInterface) then {
     [
         ["UpdateDetails", [localize "STR_MISSION_VERSION", "on", getText (configfile >> "CfgWorlds" >> worldName >> "description")] joinString " "]
     ] call (missionNamespace getVariable ["DiscordRichPresence_fnc_update", {}]);
+
+    // Add EH for curator to add kill manager and object init recognition for zeus spawned units/vehicles
+    {
+        _x addEventHandler ["CuratorObjectPlaced", {[_this select 1] call KPLIB_fnc_handlePlacedZeusObject;}];
+    } forEach allCurators;
 
     waitUntil {alive player};
     if (debug_source != name player) then {debug_source = name player};

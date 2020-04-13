@@ -204,6 +204,9 @@ class Missions
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
 * Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
 * Added: Confirmation dialog for the "Create Clearance" action at the FOB.
+* Added: Parameter (default deactivated) to enable editing of enemy units and vehicles in Zeus.
+* Added: Zeus placed objects are now recognized for kill manager, object init and placed resource crates are also filled with 100 resources.
+* Added: Auto save of the game state on last player disconnect or local hosted host exit.
 * Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
@@ -218,6 +221,9 @@ class Missions
 * Tweaked: Integer to bool conversion in fetch param macro.
 * Tweaked: ObjectInit is now also called on spawned start vehicles.
 * Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
+* Tweaked: Collection arrays fetching in `init_presets.sqf`.
+* Tweaked: Unit/vehicle collecting for adding to editable units in `zeus_synchro.sqf`.
+* Tweaked: The save data is now stored as string which can result in ten times less space taken in vars file.
 * Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
 * Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
