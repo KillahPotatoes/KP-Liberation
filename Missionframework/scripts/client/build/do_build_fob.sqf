@@ -46,5 +46,6 @@ if (!_clearedtobuildfob) then {
 	} else {
 		buildtype = 99;
 		dobuild = 1;
+        deleteVehicle (_this select 0);
 	};
 };

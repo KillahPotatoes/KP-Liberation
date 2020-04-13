@@ -27,11 +27,14 @@ while {true} do {
         _fobPos = [] call KPLIB_fnc_getNearestFob;
         _fobDist = player distance2d _fobPos;
         _fobName = ["", ["FOB", [_fobPos] call KPLIB_fnc_getFobName] joinString " "] select (_fobDist < GRLIB_fob_range);
-
-        player setVariable ["KPLIB_fobDist", _fobDist];
-        player setVariable ["KPLIB_fobName", _fobName];
-        player setVariable ["KPLIB_fobPos", _fobPos];
+    } else {
+        _fobPos = [0, 0, 0];
+        _fobDist = 99999;
+        _fobName = "";
     };
+    player setVariable ["KPLIB_fobDist", _fobDist];
+    player setVariable ["KPLIB_fobName", _fobName];
+    player setVariable ["KPLIB_fobPos", _fobPos];
 
     // Direct acces due to config, commander or admin
     player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];

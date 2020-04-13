@@ -23,13 +23,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
             [_fobbox, true] call KPLIB_fnc_clearCargo;
-
-            // Adjust mass of box for slingloading
-            if (!KP_liberation_fob_vehicle) then {
-                [_fobbox] call KPLIB_fnc_setFobMass;
-                // Add ViV actions to FOB Box
-                [_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
-            };
+            [_fobbox] call KPLIB_fnc_addObjectInit;
 
             // If the FOB box has fallen into the sea or is destroyed, start again with spawning a new one
             waitUntil {

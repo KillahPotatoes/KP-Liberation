@@ -34,13 +34,12 @@ if ( dorepackage > 0 ) then {
 
 	if ( dorepackage == 1 ) then {
 		_fobbox = FOB_box_typename createVehicle _spawnpos;
-		[_fobbox] call KPLIB_fnc_setFobMass;
-		// Add ViV actions to FOB Box
-		[_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
+		[_fobbox] call KPLIB_fnc_addObjectInit;
 	};
 
 	if ( dorepackage == 2 ) then {
-		FOB_truck_typename createVehicle _spawnpos;
+		private _fobTruck = FOB_truck_typename createVehicle _spawnpos;
+        [_fobTruck] call KPLIB_fnc_addObjectInit;
 	};
 
 	hint localize "STR_FOB_REPACKAGE_HINT";

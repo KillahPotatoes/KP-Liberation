@@ -28,7 +28,6 @@ while { true } do {
 	build_invalid = 0;
 	_classname = "";
 	if ( buildtype == 99 ) then {
-		GRLIB_removefobboxes = true;
 		_classname = FOB_typename;
 	} else {
 		_classname = ((build_lists select buildtype) select buildindex) select 0;
@@ -322,10 +321,6 @@ while { true } do {
 				sleep 0.3;
 				_vehicle allowDamage true;
 				_vehicle setDamage 0;
-
-				if(buildtype == 99) then {
-					_vehicle addEventHandler ["HandleDamage", { 0 }];
-				};
 
 				if(buildtype != 6) then {
 					_vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
