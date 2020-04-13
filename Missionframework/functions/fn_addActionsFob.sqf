@@ -9,7 +9,7 @@
         Adds build action to FOB box and repackage action to FOB building.
 
     Parameter(s):
-        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+        _obj - FOB box/truck/building to add the deploy/repack action to [OBJECT, defaults to objNull]
 
     Returns:
         Function reached the end [BOOL]

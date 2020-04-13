@@ -204,6 +204,8 @@ class Missions
 * Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
 * Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
 * Added: Confirmation dialog for the "Create Clearance" action at the FOB.
+* Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
+* Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
@@ -216,6 +218,8 @@ class Missions
 * Tweaked: Integer to bool conversion in fetch param macro.
 * Tweaked: ObjectInit is now also called on spawned start vehicles.
 * Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
+* Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
+* Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
@@ -225,6 +229,8 @@ class Missions
 * Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
 * Fixed: Support for CBA disposable launchers. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Fixed: ACE medical vehicle variable adjusted in `kp_objectInits` due to the recent ACE updates. [Reference](https://github.com/acemod/ACE3/commit/44050df98b00e579e5b5a79c0d76d4d1138b4baa#diff-31034297ef72d8a9855b601934510008)
+* Fixed: Weapons could be shown as blacklisted, if a whitelisted weapon was combined with e.g. a whitelisted grip or other attachments.
+* Fixed: Rare error message in `recycle_manager.sqf`, if last FOB was repacked to a truck/box.
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
