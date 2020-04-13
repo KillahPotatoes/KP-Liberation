@@ -2,7 +2,7 @@
     File: fn_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-22
-    Last Update: 2020-04-10
+    Last Update: 2020-04-13
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -74,8 +74,7 @@ _items = _items apply {toLower _x};
 } forEach [uniformContainer player, vestcontainer player, backpackContainer player];
 
 // Check equipped weapons
-_items = weapons player;
-_items = _items apply {toLower _x};
+_items = (weapons player) apply {toLower ([_x] call BIS_fnc_baseWeapon)};
 {
     _removedItems pushBack _x;
     player removeWeapon _x;

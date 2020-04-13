@@ -2,7 +2,7 @@
     File: fn_removeWeaponCargo.sqf
     Author: Zharf - https://github.com/zharf
     Date: 2019-06-21
-    Last Update: 2020-04-05
+    Last Update: 2020-04-13
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -39,7 +39,7 @@ clearWeaponCargoGlobal _container;
         _weaponNonPreset = _weapon;
     };
 
-    if (toLower _weapon in KP_liberation_allowed_items) then {
+    if ((toLower ([_x] call BIS_fnc_baseWeapon)) in KP_liberation_allowed_items) then {
         _container addWeaponCargoGlobal [_weaponNonPreset, 1];
 
         // If weapon does not have a non-preset parent, only add attachments that were custom added
