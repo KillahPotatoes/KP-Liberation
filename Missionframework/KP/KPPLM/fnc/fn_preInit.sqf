@@ -4,7 +4,7 @@
     File: fn_preInit.sqf
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-10-18
-    Last Update: 2020-04-08
+    Last Update: 2020-04-14
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,7 +17,7 @@
         Module preInit finished [BOOL]
 */
 
-if (isServer) then {diag_log format ["[KP PLAYER MENU] [%1] [PRE] Initializing...", diag_tickTime];};
+if (isServer) then {diag_log text format ["[KP PLAYER MENU] [%1] [PRE] Initializing...", diag_tickTime];};
 
 // Check if CBA is running
 KPPLM_CBA = isClass (configFile >> "CfgPatches" >> "cba_main");
@@ -46,6 +46,6 @@ KPPLM_radio = 0;
 // Sound volume inside a vehicle
 KPPLM_soundVeh = soundVolume;
 
-if (isServer) then {diag_log format ["[KP PLAYER MENU] [%1] [PRE] Initialized", diag_tickTime];};
+if (isServer) then {diag_log text format ["[KP PLAYER MENU] [%1] [PRE] Initialized", diag_tickTime];};
 
 true
