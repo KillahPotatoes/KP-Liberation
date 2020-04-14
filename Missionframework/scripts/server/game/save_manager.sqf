@@ -24,6 +24,8 @@ if (hasInterface) then {
 } else {
     addMissionEventHandler ["HandleDisconnect", {
         if !(allPlayers isEqualTo []) exitWith {};
+        params ["_unit"];
+        deleteVehicle _unit;
         diag_log text "[KP LIBERATION] [SAVE] Last player disconnected. Saving mission data.";
         [] call KPLIB_fnc_doSave;
     }];
