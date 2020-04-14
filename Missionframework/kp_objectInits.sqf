@@ -41,19 +41,30 @@ KPLIB_objectInits = [
     [
         [FOB_box_typename, FOB_truck_typename],
         {
-            [_this] call KPLIB_fnc_setFobMass;
-            if ((typeOf _this) isEqualTo FOB_box_typename) then {
-                [_this] call KPLIB_fnc_setFobMass;
-                [_this] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _this];
+            [_this] spawn {
+                params ["_fobBox"];
+                waitUntil {sleep 0.1; time > 0};
+                [_fobBox] call KPLIB_fnc_setFobMass;
+                if ((typeOf _fobBox) isEqualTo FOB_box_typename) then {
+                    [_fobBox] call KPLIB_fnc_setFobMass;
+                    [_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
+                };
+                [_fobBox] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fobBox];
             };
-            [_this] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _this];
         }
     ],
 
     // Add FOB building damage handler override and repack action
     [
         [FOB_typename],
-        {_this addEventHandler ["HandleDamage", {0}]; [_this] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _this];}
+        {
+            _this addEventHandler ["HandleDamage", {0}];
+            [_this] spawn {
+                params ["_fob"];
+                waitUntil {sleep 0.1; time > 0};
+                [_fob] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fob];
+            };
+        }
     ],
 
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)
