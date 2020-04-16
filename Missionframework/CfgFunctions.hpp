@@ -64,6 +64,7 @@ class KPLIB
         class isBigtownActive           {};
         class isClassUAV                {};
         class isRadio                   {};
+        class log                       {};
         class potatoScan                {};
         class protectObject             {};
         class secondsToTimer            {};
