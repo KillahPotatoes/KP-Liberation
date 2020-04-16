@@ -35,7 +35,6 @@ kp_fuel_consumption = compileFinal preprocessFileLineNumbers "scripts\client\mis
 kp_cr_checkVehicle = compileFinal preprocessFileLineNumbers "scripts\client\civrep\kp_cr_checkVehicle.sqf";
 kp_vehicle_permissions = compileFinal preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 
-execVM "scripts\client\actions\action_manager.sqf";
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
 execVM "scripts\client\actions\unflip_manager.sqf";
@@ -58,6 +57,7 @@ execVM "scripts\client\misc\secondary_jip.sqf";
 execVM "scripts\client\misc\stop_renegade.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";
+execVM "scripts\client\misc\playerNamespace.sqf";
 execVM "scripts\client\spawn\redeploy_manager.sqf";
 execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
@@ -74,7 +74,5 @@ player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_per
 } foreach allCurators;
 
 execVM "scripts\client\ui\intro.sqf";
-
-[] execVM "onPlayerRespawn.sqf";
 
 [player] joinSilent (createGroup [GRLIB_side_friendly, true]);

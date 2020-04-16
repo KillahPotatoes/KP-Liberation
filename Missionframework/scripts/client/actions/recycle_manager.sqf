@@ -15,11 +15,8 @@ private _building_classnames = [];
 } foreach (buildings);
 _building_classnames = _building_classnames + ["B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F"];
 
-waitUntil {sleep 1; !isNil "GRLIB_all_fobs"};
-
 while {true} do {
-	waitUntil {sleep 1; count GRLIB_all_fobs > 0};
-	waitUntil {sleep 2; (player distance ([] call KPLIB_fnc_getNearestFob)) < GRLIB_fob_range};
+	waitUntil {sleep 2; player getVariable ['KPLIB_fobDist', 99999] < GRLIB_fob_range};
 
 	if ([4] call KPLIB_fnc_hasPermission) then {
 		private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {

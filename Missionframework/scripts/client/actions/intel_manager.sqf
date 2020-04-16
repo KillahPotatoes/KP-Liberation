@@ -1,3 +1,6 @@
+waitUntil {!isNil "GRLIB_permissions"};
+waitUntil {!(GRLIB_permissions isEqualTo [])};
+
 private [ "_actionned_captive_units", "_near_people",  "_near_intel", "_actionned_intel_items" ];
 _actionned_captive_units = [];
 _actionned_intel_items = [];

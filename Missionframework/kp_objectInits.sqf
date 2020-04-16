@@ -37,10 +37,34 @@ KPLIB_objectInits = [
         true
     ],
 
-    // Add ViV action to FOB box
+    // Add ViV and build action to FOB box/truck
     [
-        [FOB_box_typename],
-        {[_this] call KPLIB_fnc_setFobMass; [_this] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _this];}
+        [FOB_box_typename, FOB_truck_typename],
+        {
+            [_this] spawn {
+                params ["_fobBox"];
+                waitUntil {sleep 0.1; time > 0};
+                [_fobBox] call KPLIB_fnc_setFobMass;
+                if ((typeOf _fobBox) isEqualTo FOB_box_typename) then {
+                    [_fobBox] call KPLIB_fnc_setFobMass;
+                    [_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
+                };
+                [_fobBox] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fobBox];
+            };
+        }
+    ],
+
+    // Add FOB building damage handler override and repack action
+    [
+        [FOB_typename],
+        {
+            _this addEventHandler ["HandleDamage", {0}];
+            [_this] spawn {
+                params ["_fob"];
+                waitUntil {sleep 0.1; time > 0};
+                [_fob] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fob];
+            };
+        }
     ],
 
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)

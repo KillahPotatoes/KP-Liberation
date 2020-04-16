@@ -1,3 +1,5 @@
+scriptName "KPLIB_saveLoop";
+
 diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
 
 // Handle possible enabled "wipe save" mission parameters
@@ -21,7 +23,9 @@ if (hasInterface) then {
     };
 } else {
     addMissionEventHandler ["HandleDisconnect", {
-        if !(allPlayers isEqualTo []) exitWith {};
+        if !(allPlayers isEqualTo []) exitWith {false};
+        params ["_unit"];
+        deleteVehicle _unit;
         diag_log text "[KP LIBERATION] [SAVE] Last player disconnected. Saving mission data.";
         [] call KPLIB_fnc_doSave;
     }];
@@ -314,6 +318,7 @@ if (!isNil "_saveData") then {
     private _spawnedObjects = [];
 
     // Spawn all saved objects
+    private _object = objNull;
     {
         // Fetch data of saved object
         _x params ["_class", "_pos", "_vecDir", "_vecUp", ["_hasCrew", false]];
@@ -335,7 +340,7 @@ if (!isNil "_saveData") then {
         if (_class in KP_liberation_classnamesToSave) then {
 
             // Create object without damage handling and simulation
-            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
             _object allowdamage false;
             _object enableSimulation false;
 
@@ -361,11 +366,6 @@ if (!isNil "_saveData") then {
                 _object setVariable ["GRLIB_captured", true, true];
             };
 
-            // Prevent damage for the FOB building
-            if (_class == FOB_typename) then {
-                _object addEventHandler ["HandleDamage", {0}];
-            };
-
             // Process KP object init
             [_object] call KPLIB_fnc_addObjectInit;
 
@@ -388,10 +388,12 @@ if (!isNil "_saveData") then {
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved buildings placed";};
 
+    // Spawn all saved mines
+    private _mine = objNull;
     {
         _x params ["_minePos", "_dirAndUp", "_class", "_known"];
 
-        private _mine = createVehicle [_class, _minePos, [], 0];
+        _mine = createVehicle [_class, _minePos, [], 0];
         _mine setPosWorld _minePos;
         _mine setVectorDirAndUp _dirAndUp;
 
@@ -412,7 +414,7 @@ if (!isNil "_saveData") then {
         if (_class in KP_liberation_classnamesToSave) then {
 
             // Create object without damage handling and simulation
-            private _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
             _object allowdamage false;
             _object enableSimulation false;
 
@@ -436,15 +438,16 @@ if (!isNil "_saveData") then {
     if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved storages placed"};
 
     // Spawn saved sector storages and their content
+    private _storage = [];
     {
-        private _storage = _x select 3;
+        _storage = _x select 3;
 
         // Spawn storage, if sector has valid storage
         if ((count _storage) == 3) then {
             _storage params ["_pos", "_dir", "_vecUp"];
 
             // Create object without damage handling and simulation
-            private _object = createVehicle [KP_liberation_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [KP_liberation_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
             _object enableSimulationGlobal false;
             _object allowdamage false;
 
@@ -470,28 +473,29 @@ if (!isNil "_saveData") then {
 
     // Spawn BLUFOR AI groups
     // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
+    private _grp = grpNull;
     if (((_saveData select 0) select 0) isEqualType 0) then {
         {
             _x params ["_spawnPos", "_units"];
-            private _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [GRLIB_side_friendly, true];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
         } forEach _aiGroups;
     } else {
         // Pre 0.96.5 compatibility
+        private _pos = [];
+        private _dir = 0;
+        private _unit = objNull;
         {
-            private _savedGroup = _x;
-            private _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [GRLIB_side_friendly, true];
             {
-                private _unit = _x;
-                private _pos = [(_unit select 1) select 0, (_unit select 1) select 1, ((_unit select 1) select 2) + 0.2];
-                private _dir = _unit select 2;
-                [(_unit select 0), _pos, _grp] call KPLIB_fnc_createManagedUnit;
-                private _nextobj = ((units _grp) select ((count (units _grp)) - 1));
-                _nextobj setDir _dir;
-                _nextobj setPosATL _pos;
-            } forEach _savedGroup;
+                _pos = [(_x select 1) select 0, (_x select 1) select 1, ((_x select 1) select 2) + 0.2];
+                _dir = _x select 2;
+                _unit = [(_x select 0), _pos, _grp] call KPLIB_fnc_createManagedUnit;
+                _unit setDir _dir;
+                _unit setPosATL _pos;
+            } forEach _x;
         } forEach _aiGroups;
     };
     diag_log text "[KP LIBERATION] [SAVE] Save loading finished";
@@ -543,10 +547,8 @@ save_is_loaded = true; publicVariable "save_is_loaded";
 diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
 
 // Start the save loop
+private _saveTime = time + KP_liberation_save_interval;
 while {true} do {
-    scriptName "KPLIB_saveLoop";
-
-    private _saveTime = time + KP_liberation_save_interval;
     waitUntil {
         sleep 0.5;
         (time > _saveTime) || {GRLIB_endgame == 1};
@@ -563,6 +565,8 @@ while {true} do {
     [] call KPLIB_fnc_doSave;
 
     if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
+
+    _saveTime = time + KP_liberation_save_interval;
 };
 
 diag_log text "[KP LIBERATION] [SAVE] Left saving loop in save_manager.sqf";

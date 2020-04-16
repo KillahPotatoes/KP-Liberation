@@ -3,6 +3,8 @@ class KPLIB
     class functions
     {
         file = "functions";
+        class addActionsFob             {};
+        class addActionsPlayer          {};
         class addObjectInit             {};
         class addRopeAttachEh           {};
         class allowCrewInImmobile       {};
