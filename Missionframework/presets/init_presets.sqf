@@ -1,7 +1,8 @@
+private _start = diag_ticktime;
 if (isServer) then {
-    diag_log text format ["[KP LIBERATION] [PRESETS] ----- Server starts preset initialization - time: %1", diag_ticktime];
-    diag_log text "[KP LIBERATION] [PRESETS] Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.";
-    diag_log text "[KP LIBERATION] [PRESETS] Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.";
+    ["----- Server starts preset initialization -----", "PRESETS"] call KPLIB_fnc_log;
+    ["Not found vehicles listed below are not an issue in general. It just sorts out vehicles from not loaded mods.", "PRESETS"] call KPLIB_fnc_log;
+    ["Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.", "PRESETS"] call KPLIB_fnc_log;
 };
 
 switch (KP_liberation_preset_blufor) do {
@@ -230,4 +231,4 @@ GRLIB_sar_fire = "test_EmptyObjectForFireBig";
 military_alphabet = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-Ray","Yankee","Zulu"];
 squads_names = [localize "STR_LIGHT_RIFLE_SQUAD", localize "STR_RIFLE_SQUAD", localize "STR_AT_SQUAD", localize "STR_AA_SQUAD", localize "STR_RECON_SQUAD", localize "STR_PARA_SQUAD"];
 
-if (isServer) then {diag_log text format ["[KP LIBERATION] [PRESETS] ----- Server finished preset initialization - time: %1", diag_ticktime];};
+if (isServer) then {[format ["----- Preset initialization finished. Time needed: %1 seconds -----", diag_ticktime - _start], "PRESETS"] call KPLIB_fnc_log;};

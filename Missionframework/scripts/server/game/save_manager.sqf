@@ -1,14 +1,15 @@
 scriptName "KPLIB_saveLoop";
 
-diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf started - time: %1", diag_tickTime];
+private _start = diag_tickTime;
+["----- Loading save data", "SAVE"] call KPLIB_fnc_log;
 
 // Handle possible enabled "wipe save" mission parameters
 if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
     profileNamespace setVariable [GRLIB_save_key,nil];
     saveProfileNamespace;
-    diag_log text "[KP LIBERATION] [SAVE] Save wiped via mission parameters";
+    ["Save wiped via mission parameters", "SAVE"] call KPLIB_fnc_log;
 } else {
-    diag_log text "[KP LIBERATION] [SAVE] No save wipe";
+    ["No save wipe", "SAVE"] call KPLIB_fnc_log;
 };
 
 // Auto save when last player exits
@@ -17,7 +18,7 @@ if (hasInterface) then {
         waitUntil {!isNull findDisplay 46};
         (findDisplay 46) displayAddEventHandler ["Unload", {
             if (!isServer) exitWith {};
-            diag_log text "[KP LIBERATION] [SAVE] Player server exit. Saving mission data.";
+            ["Player server exit. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
             [] call KPLIB_fnc_doSave;
         }];
     };
@@ -26,7 +27,7 @@ if (hasInterface) then {
         if !(allPlayers isEqualTo []) exitWith {false};
         params ["_unit"];
         deleteVehicle _unit;
-        diag_log text "[KP LIBERATION] [SAVE] Last player disconnected. Saving mission data.";
+        ["Last player disconnected. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
         [] call KPLIB_fnc_doSave;
     }];
 };
@@ -172,7 +173,7 @@ if (_saveData isEqualType "") then {
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
     if (((_saveData select 0) select 0) isEqualType 0) then {
-        diag_log text format ["[KP LIBERATION] [SAVE] Save data from version: %1", (_saveData select 0) joinstring "."];
+        [format ["Save data from version: %1", (_saveData select 0) joinstring "."], "SAVE"] call KPLIB_fnc_log;
 
         _dateTime                                   = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
@@ -234,11 +235,8 @@ if (!isNil "_saveData") then {
         stats_supplies_spent                        = _stats select 37;
         stats_vehicles_recycled                     = _stats select 38;
     } else {
-        /*
-            --- Compatibility for older save data ---
-            This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
-        */
-        diag_log text "[KP LIBERATION] [SAVE] Save data from version: pre 0.96.5";
+        // --- Compatibility for older save data ---
+        ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
         blufor_sectors                              = _saveData select  0;
         GRLIB_all_fobs                              = _saveData select  1;
@@ -300,7 +298,7 @@ if (!isNil "_saveData") then {
     GRLIB_side_resistance setFriend [GRLIB_side_friendly, _resistanceFriendly];
     GRLIB_side_friendly setFriend [GRLIB_side_resistance, _resistanceFriendly];
 
-    if (KP_liberation_civrep_debug > 0) then {diag_log text format ["[KP LIBERATION] [CIVREP] %1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)];};
+    if (KP_liberation_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -385,8 +383,7 @@ if (!isNil "_saveData") then {
         _x setdamage 0;
         _x allowdamage true;
     } forEach _spawnedObjects;
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved buildings placed";};
+    ["Saved buildings and vehicles placed", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn all saved mines
     private _mine = objNull;
@@ -403,8 +400,7 @@ if (!isNil "_saveData") then {
         };
 
     } forEach _allMines;
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved mines placed";};
+    ["Saved mines placed", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn saved resource storages and their content
     {
@@ -434,8 +430,7 @@ if (!isNil "_saveData") then {
             [floor _supply, floor _ammo, floor _fuel, _object] call KPLIB_fnc_fillStorage;
         };
     } forEach _resourceStorages;
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved storages placed"};
+    ["Saved FOB storages placed and filled", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn saved sector storages and their content
     private _storage = [];
@@ -468,8 +463,7 @@ if (!isNil "_saveData") then {
             [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call KPLIB_fnc_fillStorage;
         };
     } forEach KP_liberation_production;
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log text "[KP LIBERATION] [SAVE] Saved sector storages placed";};
+    ["Saved sector storages placed and filled", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn BLUFOR AI groups
     // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
@@ -498,9 +492,9 @@ if (!isNil "_saveData") then {
             } forEach _x;
         } forEach _aiGroups;
     };
-    diag_log text "[KP LIBERATION] [SAVE] Save loading finished";
+    ["Saved AI units placed", "SAVE"] call KPLIB_fnc_log;
 } else {
-    diag_log text "[KP LIBERATION] [SAVE] Save nil";
+    ["Save nil", "SAVE"] call KPLIB_fnc_log;
 };
 
 publicVariable "stats_civilian_vehicles_seized";
@@ -518,7 +512,6 @@ GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links sele
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;
 if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
-    diag_log text "[KP LIBERATION] [SAVE] Additional military sectors or unlockable vehicles detected and assigned";
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -537,6 +530,7 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
         _assignedBases pushBack _nextBase;
         GRLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
     };
+    ["Additional military sectors or unlockable vehicles detected and assigned", "SAVE"] call KPLIB_fnc_log;
 };
 
 publicVariable "GRLIB_vehicle_to_military_base_links";
@@ -544,7 +538,7 @@ publicVariable "GRLIB_permissions";
 publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
-diag_log text format ["[KP LIBERATION] [SAVE] ----- save_manager.sqf done - time: %1", diag_tickTime];
+[format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
 
 // Start the save loop
 private _saveTime = time + KP_liberation_save_interval;
@@ -553,8 +547,7 @@ while {true} do {
         sleep 0.5;
         (time > _saveTime) || {GRLIB_endgame == 1};
     };
-
-    if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval started - time: %1", time];};
+    _start = diag_tickTime;
 
     // Exit the while and wipe save, if campaign ended
     if (GRLIB_endgame == 1) exitWith {
@@ -564,11 +557,11 @@ while {true} do {
 
     [] call KPLIB_fnc_doSave;
 
-    if (KP_liberation_savegame_debug > 0) then {diag_log text format ["[KP LIBERATION] [SAVE] Save interval finished - time: %1", time];};
+    if (KP_liberation_savegame_debug > 0) then {[format ["Campaign saved - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;};
 
     _saveTime = time + KP_liberation_save_interval;
 };
 
-diag_log text "[KP LIBERATION] [SAVE] Left saving loop in save_manager.sqf";
+["Left saving loop", "SAVE"] call KPLIB_fnc_log;
 
 true

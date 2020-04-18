@@ -2,7 +2,7 @@
     File: fn_doSave.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-14
+    Last Update: 2020-04-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -18,7 +18,7 @@
 if (!isServer) exitWith {};
 
 if (missionNamespace getVariable ["kp_liberation_saving", false]) exitWith {
-    diag_log text "[KP LIBERATION] [SAVE] Saving already in progress, skipping save!";
+    ["Saving already in progress, skipping save!", "PRESETS"] call KPLIB_fnc_log;
 };
 
 kp_liberation_saving = true;
