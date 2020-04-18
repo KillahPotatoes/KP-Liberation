@@ -226,6 +226,7 @@ class Missions
 * Tweaked: The save data is now stored as string which can result in ten times less space taken in vars file.
 * Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
 * Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
+* Tweaked: Added `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
