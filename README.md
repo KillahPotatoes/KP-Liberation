@@ -208,6 +208,7 @@ class Missions
 * Added: Zeus placed objects are now recognized for kill manager, object init and placed resource crates are also filled with 100 resources.
 * Added: Auto save of the game state on last player disconnect or local hosted host exit.
 * Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
+* Added: `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
@@ -226,7 +227,6 @@ class Missions
 * Tweaked: The save data is now stored as string which can result in ten times less space taken in vars file.
 * Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
 * Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
-* Tweaked: Added `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
