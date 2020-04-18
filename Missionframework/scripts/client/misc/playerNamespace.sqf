@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-04-13
+    Last Update: 2020-04-18
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -62,6 +62,9 @@ while {true} do {
 
     // Zeus module synced to player
     player setVariable ["KPLIB_ownedZeusModule", getAssignedCuratorLogic player];
+
+    // Update state in Discord rich presence
+    [] call KPLIB_fnc_setDiscordState;
 
     sleep 1;
 };
