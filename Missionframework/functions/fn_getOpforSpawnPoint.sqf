@@ -2,7 +2,7 @@
     File: fn_getOpforSpawnPoint.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-04-10
+    Last Update: 2020-04-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -91,7 +91,7 @@ private ["_valid", "_current", "_distances"];
 } forEach _spawnsToCheck;
 
 // Return empty string, if no possible spawn point was found
-if (_possibleSpawns isEqualTo []) exitWith {diag_log text "[KP LIBERATION] [WARNING] No opfor spawn point found"; ""};
+if (_possibleSpawns isEqualTo []) exitWith {["No opfor spawn point found", "WARNING"] call KPLIB_fnc_log; ""};
 
 // Return nearest spawn point to a blufor sector/FOB, if selected via parameter
 if (_nearest) exitWith {

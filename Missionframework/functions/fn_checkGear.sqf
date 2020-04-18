@@ -2,7 +2,7 @@
     File: fn_checkGear.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-11-22
-    Last Update: 2020-04-13
+    Last Update: 2020-04-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -114,8 +114,7 @@ _removedItems = (_removedItems arrayIntersect _removedItems) - [""];
 if !(_removedItems isEqualTo []) exitWith {
     [_removedItems] spawn {
         params ["_removedItems"];
-        private _text = text format ["[KP LIBERATION] [BLACKLIST] Found %1 at Player %2", _removedItems, name player];
-        _text remoteExec ["diag_log", 2];
+        [format ["Found %1 at player %2", _removedItems, name player], "BLACKLIST"] remoteExecCall ["KPLIB_fnc_log", 2];
         hint format [localize "STR_BLACKLISTED_ITEM_FOUND", _removedItems joinString "\n"];
         sleep 6;
         hintSilent "";

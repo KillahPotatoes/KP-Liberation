@@ -56,7 +56,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
                         };
                     };
                 };
-                default {diag_log text format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+                default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
             };
         } forEach _storedCrates;
 

@@ -4,7 +4,7 @@
     File: fn_postInit.sqf
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2017-08-31
-    Last Update: 2020-04-14
+    Last Update: 2020-04-17
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -17,8 +17,6 @@
     Returns:
         Module postInit finished [BOOL]
 */
-
-if (isServer) then {diag_log text format ["[KP PLAYER MENU] [%1] [POST] Initializing...", diag_tickTime];};
 
 if (!KPPLM_CBA) exitWith {["CBA not loaded. Aborting initialization!"] call BIS_fnc_error; false};
 
@@ -56,7 +54,5 @@ if (hasInterface) then {
     // Apply default/loaded values
     [] call KPPLM_fnc_apply;
 };
-
-if (isServer) then {diag_log text format ["[KP PLAYER MENU] [%1] [POST] Initialized", diag_tickTime];};
 
 true

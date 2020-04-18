@@ -2,7 +2,7 @@
     File: fn_crGlobalMsg.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-10
+    Last Update: 2020-04-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
     ["_data", [], []]
 ];
 
-if (KP_liberation_civrep_debug > 0) then {private _text = text format ["[KP LIBERATION] [CIVREP] globalMsg called on: %1 - Parameters: [%2, %3]", debug_source, _msgType, _data];_text remoteExec ["diag_log",2];};
+if (KP_liberation_civrep_debug > 0) then {[format ["globalMsg called on: %1 - Parameters: [%2, %3]", debug_source, _msgType, _data], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 switch (_msgType) do {
     case 0: {systemChat localize "STR_CR_VEHICLEMSG";};
@@ -30,7 +30,7 @@ switch (_msgType) do {
     case 3: {systemChat (format [localize "STR_CR_RESISTANCE_KILLMSG", (_data select 0)]);};
     case 4: {systemChat (format [localize "STR_CR_HEALMSG", (_data select 0)]);};
     case 5: {["lib_asymm_guerilla_incoming", _data] call BIS_fnc_showNotification;};
-    default {[text format ["[KP LIBERATION] [ERROR] [CIVREP] globalMsg without valid msgType - %1", _msgType]] remoteExec ["diag_log", 2];};
+    default {[format ["globalMsg without valid msgType - %1", _msgType], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
 
 true
