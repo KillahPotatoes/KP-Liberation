@@ -228,6 +228,7 @@ class Missions
 * Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
 * Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
 * Tweaked: Arsenal initialization on mission start improved.
+* Tweaked: `sector_manager.sqf` reworked as FSM.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
