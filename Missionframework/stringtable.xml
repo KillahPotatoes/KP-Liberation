@@ -6947,6 +6947,10 @@
             <Original>Add enemies to Zeus editable objects</Original>
             <German>Feindliche Einheiten für Zeus editierbar</German>
         </Key>
+        <Key ID="STR_PARAM_HIGHCOMMAND">
+            <Original>Arma 3 High Command for Commander</Original>
+            <German>Arma 3 Oberbefehl für Kommandanten</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">
