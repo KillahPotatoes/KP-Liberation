@@ -17,6 +17,7 @@ class KPLIB
         class crAddAceAction            {};
         class crateFromStorage          {};
         class crateToStorage            {};
+        class crawlAllItems             {};
         class createClearance           {};
         class createClearanceConfirm    {};
         class createCrate               {};
@@ -57,7 +58,6 @@ class KPLIB
         class getStoragePositions       {};
         class getUnitPositionId         {};
         class getUnitsCount             {};
-        class getVirtualCargo           {};
         class getWeaponComponents       {};
         class handlePlacedZeusObject    {};
         class hasPermission             {};
