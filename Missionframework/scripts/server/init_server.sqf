@@ -67,7 +67,7 @@ execVM "scripts\server\resources\recalculate_timer_sector.sqf";
 execVM "scripts\server\resources\unit_cap.sqf";
 execVM "scripts\server\sector\lose_sectors.sqf";
 
-[] call KPLIB_fnc_sectorMonitor;
+KPLIB_sectorMonitor = [] call KPLIB_fnc_sectorMonitor;
 
 // Select FOB templates
 switch (KP_liberation_preset_opfor) do {
