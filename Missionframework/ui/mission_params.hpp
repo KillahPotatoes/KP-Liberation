@@ -390,6 +390,12 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 0;
     };
+    class DebugHighCommand {
+        title = $STR_PARAM_DEBUG_HIGHCOMMAND;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 0;
+    };
     class DebugKill {
         title = $STR_PARAMS_DEBUG_KILL;
         values[] = {0, 1};

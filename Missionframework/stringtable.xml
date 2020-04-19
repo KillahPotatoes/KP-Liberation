@@ -6951,6 +6951,10 @@
             <Original>Arma 3 High Command for Commander</Original>
             <German>Arma 3 Oberbefehl für Kommandanten</German>
         </Key>
+        <Key ID="STR_PARAM_DEBUG_HIGHCOMMAND">
+            <Original>Arma 3 High Command</Original>
+            <German>Arma 3 Oberbefehl</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">
