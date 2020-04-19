@@ -35,6 +35,9 @@ manage_intel = compileFinal preprocessFileLineNumbers "scripts\server\sector\man
 manage_one_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
 wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
+// Globals
+active_sectors = []; publicVariable "active_sectors";
+
 execVM "scripts\server\base\startgame.sqf";
 execVM "scripts\server\base\huron_manager.sqf";
 execVM "scripts\server\base\startvehicle_spawn.sqf";
@@ -63,7 +66,8 @@ execVM "scripts\server\resources\recalculate_timer.sqf";
 execVM "scripts\server\resources\recalculate_timer_sector.sqf";
 execVM "scripts\server\resources\unit_cap.sqf";
 execVM "scripts\server\sector\lose_sectors.sqf";
-execVM "scripts\server\sector\manage_sectors.sqf";
+// execVM "scripts\server\sector\manage_sectors.sqf";
+[] call KPLIB_fnc_sectorMonitor;
 
 // Select FOB templates
 switch (KP_liberation_preset_opfor) do {
