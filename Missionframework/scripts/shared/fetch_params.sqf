@@ -4,16 +4,17 @@
 if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KP_liberation_ace = false};
 
 /* Not saveable params */
-GRLIB_param_wipe_savegame_1 = ["WipeSave1",0] call bis_fnc_getParamValue;
-GRLIB_param_wipe_savegame_2 = ["WipeSave2",0] call bis_fnc_getParamValue;
-KP_liberation_civinfo_debug = ["DebugCivInfo",0] call bis_fnc_getParamValue;
-KP_liberation_civrep_debug = ["DebugCivRep",0] call bis_fnc_getParamValue;
-KP_liberation_savegame_debug = ["DebugSave",0] call bis_fnc_getParamValue;
-KP_liberation_asymmetric_debug = ["DebugAsymmetric",0] call bis_fnc_getParamValue;
-KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
-KP_liberation_sectorspawn_debug = ["DebugSectorSpawn",0] call bis_fnc_getParamValue;
-KP_liberation_kill_debug = ["DebugKill",0] call bis_fnc_getParamValue;
-KP_liberation_production_debug = ["DebugProduction",0] call bis_fnc_getParamValue;
+GRLIB_param_wipe_savegame_1 = ["WipeSave1", 0] call bis_fnc_getParamValue;
+GRLIB_param_wipe_savegame_2 = ["WipeSave2", 0] call bis_fnc_getParamValue;
+KP_liberation_civinfo_debug = ["DebugCivInfo", 0] call bis_fnc_getParamValue;
+KP_liberation_civrep_debug = ["DebugCivRep", 0] call bis_fnc_getParamValue;
+KP_liberation_savegame_debug = ["DebugSave", 0] call bis_fnc_getParamValue;
+KP_liberation_asymmetric_debug = ["DebugAsymmetric", 0] call bis_fnc_getParamValue;
+KP_liberation_logistic_debug = ["DebugLogistic", 0] call bis_fnc_getParamValue;
+KP_liberation_sectorspawn_debug = ["DebugSectorSpawn", 0] call bis_fnc_getParamValue;
+KP_liberation_kill_debug = ["DebugKill", 0] call bis_fnc_getParamValue;
+KP_liberation_production_debug = ["DebugProduction", 0] call bis_fnc_getParamValue;
+KP_liberation_highcommand_debug = ["DebugHighCommand", 0] call bis_fnc_getParamValue;
 
 KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
@@ -92,6 +93,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
     GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
+    GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
 
     // Technical Options
     ["--- Technical Options ---", "PARAM"] call KPLIB_fnc_log;
@@ -421,6 +423,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_ZEUSADDENEMIES";
     _value = if (KP_liberation_enemies_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_HIGHCOMMAND";
+    _value = if (KP_liberation_high_command) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PERMISSIONS_PARAM";

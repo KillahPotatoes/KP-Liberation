@@ -67,7 +67,8 @@ execVM "scripts\server\resources\recalculate_timer_sector.sqf";
 execVM "scripts\server\resources\unit_cap.sqf";
 execVM "scripts\server\sector\lose_sectors.sqf";
 
-KPLIB_sectorMonitor = [] call KPLIB_fnc_sectorMonitor;
+KPLIB_fsm_sectorMonitor = [] call KPLIB_fnc_sectorMonitor;
+if (KP_liberation_high_command) then {KPLIB_fsm_highcommand = [] call KPLIB_fnc_highcommand;};
 
 // Select FOB templates
 switch (KP_liberation_preset_opfor) do {
@@ -121,7 +122,7 @@ execVM "scripts\server\offloading\group_diag.sqf";
     if ((_x != player) && (_x distance (markerPos GRLIB_respawn_marker) < 200 )) then {
         deleteVehicle _x;
     };
-} foreach allUnits;
+} forEach allUnits;
 
 // Server Restart Script from K4s0
 if (KP_liberation_restart > 0) then {

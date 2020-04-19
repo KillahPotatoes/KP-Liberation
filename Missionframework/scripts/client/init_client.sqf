@@ -44,7 +44,7 @@ execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
 if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
 execVM "scripts\client\markers\fob_markers.sqf";
-if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
+if (!KP_liberation_high_command) then {execVM "scripts\client\markers\group_icons.sqf";};
 execVM "scripts\client\markers\hostile_groups.sqf";
 if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
 execVM "scripts\client\markers\sector_manager.sqf";
@@ -71,7 +71,7 @@ player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_per
 
 {
     [_x] call BIS_fnc_drawCuratorLocations;
-} foreach allCurators;
+} forEach allCurators;
 
 execVM "scripts\client\ui\intro.sqf";
 
