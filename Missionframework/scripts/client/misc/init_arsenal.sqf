@@ -1,10 +1,9 @@
 if (KP_liberation_arsenalUsePreset) then {
-    private ["_virtualCargo", "_virtualWeapons", "_virtualMagazines", "_virtualItems", "_virtualBackpacks"];
-    _virtualCargo = [] call KPLIB_fnc_getVirtualCargo;
-    _virtualWeapons = [];
-    _virtualMagazines = [];
-    _virtualItems = [];
-    _virtualBackpacks = [];
+    private _crawled = [] call KPLIB_fnc_crawlAllItems;
+    private _weapons = [];
+    private _magazines = [];
+    private _items = [];
+    private _backpacks = [];
     KP_liberation_allowed_items = [];
 
     if (isNil "GRLIB_arsenal_weapons") then {GRLIB_arsenal_weapons = []};
@@ -15,12 +14,12 @@ if (KP_liberation_arsenalUsePreset) then {
 
     if ((count GRLIB_arsenal_weapons) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
-            _virtualWeapons = _virtualCargo select 0;
+            _weapons = _crawled select 0;
         } else {
-            {if (!(_x in blacklisted_from_arsenal)) then {_virtualWeapons pushBack _x};} forEach (_virtualCargo select 0);
+            {if (!(_x in blacklisted_from_arsenal)) then {_weapons pushBack _x};} forEach (_crawled select 0);
         };
-        [missionNamespace, _virtualWeapons] call BIS_fnc_addVirtualWeaponCargo;
-        KP_liberation_allowed_items append _virtualWeapons;
+        [missionNamespace, _weapons] call BIS_fnc_addVirtualWeaponCargo;
+        KP_liberation_allowed_items append _weapons;
     } else {
         [missionNamespace, GRLIB_arsenal_weapons] call BIS_fnc_addVirtualWeaponCargo;
         KP_liberation_allowed_items append GRLIB_arsenal_weapons;
@@ -46,12 +45,12 @@ if (KP_liberation_arsenalUsePreset) then {
 
     if ((count GRLIB_arsenal_magazines) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
-            _virtualMagazines = _virtualCargo select 1;
+            _magazines = _crawled select 1;
         } else {
-            {if (!(_x in blacklisted_from_arsenal)) then {_virtualMagazines pushBack _x};} forEach (_virtualCargo select 1);
+            {if (!(_x in blacklisted_from_arsenal)) then {_magazines pushBack _x};} forEach (_crawled select 1);
         };
-        [missionNamespace, _virtualMagazines] call BIS_fnc_addVirtualMagazineCargo;
-        KP_liberation_allowed_items append _virtualMagazines;
+        [missionNamespace, _magazines] call BIS_fnc_addVirtualMagazineCargo;
+        KP_liberation_allowed_items append _magazines;
     } else {
         [missionNamespace, GRLIB_arsenal_magazines] call BIS_fnc_addVirtualMagazineCargo;
         KP_liberation_allowed_items append GRLIB_arsenal_magazines;
@@ -59,12 +58,12 @@ if (KP_liberation_arsenalUsePreset) then {
 
     if ((count GRLIB_arsenal_items) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
-            _virtualItems = _virtualCargo select 2;
+            _items = _crawled select 2;
         } else {
-            {if (!(_x in blacklisted_from_arsenal)) then {_virtualItems pushBack _x};} forEach (_virtualCargo select 2);
+            {if (!(_x in blacklisted_from_arsenal)) then {_items pushBack _x};} forEach (_crawled select 2);
         };
-        [missionNamespace, _virtualItems] call BIS_fnc_addVirtualItemCargo;
-        KP_liberation_allowed_items append _virtualItems;
+        [missionNamespace, _items] call BIS_fnc_addVirtualItemCargo;
+        KP_liberation_allowed_items append _items;
     } else {
         [missionNamespace, GRLIB_arsenal_items] call BIS_fnc_addVirtualItemCargo;
         KP_liberation_allowed_items append GRLIB_arsenal_items;
@@ -72,12 +71,12 @@ if (KP_liberation_arsenalUsePreset) then {
 
     if ((count GRLIB_arsenal_backpacks) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
-            _virtualBackpacks = _virtualCargo select 3;
+            _backpacks = _crawled select 3;
         } else {
-            {if (!(_x in blacklisted_from_arsenal)) then {_virtualBackpacks pushBack _x};} forEach (_virtualCargo select 3);
+            {if (!(_x in blacklisted_from_arsenal)) then {_backpacks pushBack _x};} forEach (_crawled select 3);
         };
-        [missionNamespace, _virtualBackpacks] call BIS_fnc_addVirtualBackpackCargo;
-        KP_liberation_allowed_items append _virtualBackpacks;
+        [missionNamespace, _backpacks] call BIS_fnc_addVirtualBackpackCargo;
+        KP_liberation_allowed_items append _backpacks;
     } else {
         [missionNamespace, GRLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
         KP_liberation_allowed_items append GRLIB_arsenal_backpacks;
