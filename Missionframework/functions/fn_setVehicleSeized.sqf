@@ -37,7 +37,6 @@ if !(_veh getVariable ["KPLIB_seized", false]) then {
         format ["%1 seized a civilian %2 (%3)", name player, getText (configFile >> "CfgVehicles" >> _type >> "displayName"), _type],
         "CAPTURED"
     ] remoteExecCall ["KPLIB_fnc_log", 2];
-    true
 };
 
 true
