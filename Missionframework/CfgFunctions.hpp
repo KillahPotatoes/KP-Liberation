@@ -72,6 +72,8 @@ class KPLIB
         class setFobMass                {};
         class setLoadableViV            {};
         class setLoadout                {};
+        class setVehicleCaptured        {};
+        class setVehicleSeized          {};
         class sortStorage               {};
         class spawnBuildingSquad        {};
         class spawnCivilians            {};

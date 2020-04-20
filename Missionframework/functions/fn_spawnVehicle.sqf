@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-11
+    Last Update: 2020-04-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -80,7 +80,6 @@ if (_classname in militia_vehicles) then {
 
 // Add MPKilled and GetIn EHs and enable damage again
 _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-_newvehicle addEventHandler ["GetIn", {[_this select 0, _this select 2] call KPLIB_fnc_setVehicleCaptured;}];
 sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;

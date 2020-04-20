@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-17
+    Last Update: 2020-04-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -82,9 +82,12 @@ private _allBlueGroups = allGroups select {
         };
     };
 
-    // Add to saving when not a civilian vehicle or listed in the seized civilian vehicles array
-    if (!(_class in civilian_vehicles) || {_x in KP_liberation_cr_vehicles}) then {
-        _objectsToSave pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_hascrew];
+    // Only save player side, seized or captured objects
+    if (
+        (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
+        (!(_class in all_hostile_classnames) || {_x getVariable ["KPLIB_captured", false]})
+    ) then {
+        _objectsToSave pushBack [_class, _savedpos, _savedvecdir, _savedvecup, _hascrew];
     };
 } forEach _allObjects;
 

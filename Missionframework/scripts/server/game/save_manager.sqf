@@ -83,8 +83,6 @@ infantry_weight = 33;
 KP_liberation_civ_rep = 0;
 // Clearances
 KP_liberation_clearances = [];
-// Captured civilian vehicles
-KP_liberation_cr_vehicles = [];
 // Strength value of the resistance forces
 KP_liberation_guerilla_strength = 0;
 // Logistic handling data
@@ -359,9 +357,14 @@ if (!isNil "_saveData") then {
                 _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
             };
 
-            // Set captured variable, if it's an OPFOR vehicle
+            // Set enemy vehicle as captured
             if (_class in all_hostile_classnames) then {
-                _object setVariable ["GRLIB_captured", true, true];
+                _object setVariable ["KPLIB_captured", true, true];
+            };
+
+            // Set civilian vehicle as seized
+            if (_class in civilian_vehicles) then {
+                _object setVariable ["KPLIB_seized", true, true];
             };
 
             // Process KP object init
@@ -369,11 +372,6 @@ if (!isNil "_saveData") then {
 
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;
-
-            // Mark civilian vehicle as "already seized"
-            if (_class in civilian_vehicles) then {
-                KP_liberation_cr_vehicles pushBack _object;
-            };
         };
     } forEach _objectsToSave;
 
@@ -535,7 +533,6 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
 
 publicVariable "GRLIB_vehicle_to_military_base_links";
 publicVariable "GRLIB_permissions";
-publicVariable "KP_liberation_cr_vehicles";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
 [format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
