@@ -2,7 +2,7 @@
     File: fn_log.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-16
-    Last Update: 2020-04-16
+    Last Update: 2020-04-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 if (_text isEqualTo "" || _tag isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; false};
 
 private _msg = text ([
-    "[KP LIBERATION] [",
+    "[KPLIB] [",
     _tag,
     "] ",
     _text
