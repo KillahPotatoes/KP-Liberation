@@ -35,8 +35,8 @@ opfor_transport_truck = "CUP_O_Ural_SLA";                                   // U
 opfor_ammobox_transport = "CUP_O_Ural_Open_SLA";                            // Ural (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "CUP_O_Ural_Refuel_SLA";                                 // Ural (Refuel)
 opfor_ammo_truck = "CUP_O_Ural_Reammo_SLA";                                 // Ural (Ammo)
-opfor_fuel_container = "B_Slingload_01_Fuel_F";                             // Taru Fuel Pod
-opfor_ammo_container = "B_Slingload_01_Ammo_F";                             // Taru Ammo Pod
+opfor_fuel_container = "B_Slingload_01_Fuel_F";                             // Huron Fuel Container
+opfor_ammo_container = "B_Slingload_01_Ammo_F";                             // Huron Ammo Container
 opfor_flag = "FlagCarrierNorth";                                            // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.

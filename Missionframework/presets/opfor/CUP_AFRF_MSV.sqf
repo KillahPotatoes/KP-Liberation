@@ -35,8 +35,8 @@ opfor_transport_truck = "CUP_O_Kamaz_RU";                               // Kamaz
 opfor_ammobox_transport = "CUP_O_Kamaz_Open_RU";                        // Kamaz 5350 (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "CUP_O_Kamaz_Refuel_RU";                             // Kamaz 5350 (Fuel)
 opfor_ammo_truck = "CUP_O_Kamaz_Reammo_RU";                             // Kamaz 5350 (Ammo)
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
+opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Container
+opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Container
 opfor_flag = "FlagCarrierRU";                                           // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
