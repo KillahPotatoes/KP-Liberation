@@ -37,7 +37,7 @@ opfor_fuel_truck = "CUP_B_MTVR_Refuel_BAF_WOOD";                        // MTVR 
 opfor_ammo_truck = "CUP_B_MTVR_Ammo_BAF_WOOD";                          // MTVR (Ammo)
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
 opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
-opfor_flag = "FlagCarrierINS";                                          // Flag
+opfor_flag = "Flag_UK_F";                                               // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
