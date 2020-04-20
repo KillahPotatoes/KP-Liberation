@@ -2,7 +2,7 @@
     File: fn_cleanOpforVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-04-10
+    Last Update: 2020-04-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
 
 if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-if !(_veh getVariable ["GRLIB_captured", false]) then {
+if !(_veh getVariable ["KPLIB_captured", false]) then {
     deleteVehicle _veh;
 };
 
