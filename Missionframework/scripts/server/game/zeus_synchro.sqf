@@ -25,7 +25,11 @@ while {true} do {
     // Add vehicles
     _valids append (vehicles select {
         (alive _x)                                                                              // Alive
-        && {((typeof _x) in _vehicleClassnames) || (_x getVariable ["GRLIB_captured", false])}  // In valid classnames list or captured
+        && {
+            ((typeof _x) in _vehicleClassnames)                                                 // In valid classnames
+            || (_x getVariable ["KPLIB_captured", false])                                       // or captured
+            || (_x getVariable ["KPLIB_seized", false])                                         // or seized
+        }
         && {isNull (attachedTo _x)}                                                             // Not attached to something
     });
 
