@@ -2,7 +2,7 @@
     File: fn_createSuppModules.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-21
-    Last Update: 2020-04-21
+    Last Update: 2020-04-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -15,7 +15,7 @@
         Function reached the end [BOOL]
 */
 
-if (!isServer) exitWith {false};
+if (!isServer || KP_liberation_suppMod isEqualTo 0) exitWith {false};
 
 ["Creating modules", "SUPPORTMODULES"] call KPLIB_fnc_log;
 
