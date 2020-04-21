@@ -857,6 +857,28 @@ boats_names = [
     "UNS_Zodiac_W"
 ];
 
+// Classnames of artillery vehicles, which should be added to the support module
+// (Needed/Favorized as BIS_SUPP_eligible_Artillery from the support module isn't broadcasted over the network and may hold unwanted vehicles)
+KP_liberation_suppMod_artyVeh = [
+    "B_G_Mortar_01_F",
+    "B_MBT_01_arty_F",
+    "B_MBT_01_mlrs_F",
+    "B_Mortar_01_F",
+    "B_Ship_Gun_01_F",
+    "B_T_MBT_01_arty_F",
+    "B_T_MBT_01_mlrs_F",
+    "B_T_Mortar_01_F",
+    "I_E_Mortar_01_F",
+    "I_E_Truck_02_MRL_F",
+    "I_G_Mortar_01_F",
+    "I_Mortar_01_F",
+    "I_Truck_02_MRL_F",
+    "O_G_Mortar_01_F",
+    "O_MBT_02_arty_F",
+    "O_Mortar_01_F",
+    "O_T_MBT_02_arty_ghex_F"
+];
+
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
     [-5.59961,3.60938,0.6],
