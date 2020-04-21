@@ -325,8 +325,12 @@ while { true } do {
 				if(buildtype != 6) then {
 					_vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 					{ _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; } foreach (crew _vehicle);
-
 				};
+
+                // Add artillery to provider module, if support module is enabled
+                if (KP_liberation_suppMod > 0 && {_classname in KP_liberation_suppMod_artyVeh}) then {
+                    KPLIB_suppMod_arty synchronizeObjectsAdd [_vehicle];
+                };
 			};
 
 			if ( _idactcancel != -1 ) then {

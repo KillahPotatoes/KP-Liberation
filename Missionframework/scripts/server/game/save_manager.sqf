@@ -367,6 +367,11 @@ if (!isNil "_saveData") then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
+            // Add artillery to provider module, if support module is enabled
+            if (KP_liberation_suppMod > 0 && {_class in KP_liberation_suppMod_artyVeh}) then {
+                KPLIB_suppMod_arty synchronizeObjectsAdd [_object];
+            };
+
             // Process KP object init
             [_object] call KPLIB_fnc_addObjectInit;
 
