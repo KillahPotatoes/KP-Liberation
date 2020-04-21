@@ -52,7 +52,7 @@ link23[] = {20,21};
 link24[] = {21,15};
 link25[] = {22,23};
 globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-520.638245,654.284302,828.434875,-14.610138,1232,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
+window[] = {2,-1,-1,-1,-1,993,234,1674,234,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -106,7 +106,9 @@ class FSM
                          "private _sector = """";" \n
                          "private _opforCount = 0;" \n
                          "private _range = 0;" \n
-                         "private _hc = objNull;"/*%FSM</STATEINIT""">*/;
+                         "private _hc = objNull;" \n
+                         "private _logDelay = 120;" \n
+                         "private _logTime = diag_tickTime + _logDelay;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -312,17 +314,20 @@ class FSM
                 {
                         name = "Log_overview_of";
                         itemno = 18;
-                        init = /*%FSM<STATEINIT""">*/"[" \n
-                         "    format [" \n
-                         "        ""Active sectors: %1""," \n
-                         "        if (active_sectors isEqualTo []) then {" \n
-                         "            ""None""" \n
-                         "        } else {" \n
-                         "            active_sectors apply {markerText _x} joinString "", """ \n
-                         "        }" \n
-                         "    ]," \n
-                         "    ""SECTORMONITOR""" \n
-                         "] call KPLIB_fnc_log;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"if (diag_tickTime > _logTime) then {" \n
+                         "    [" \n
+                         "        format [" \n
+                         "            ""Active sectors: %1""," \n
+                         "            if (active_sectors isEqualTo []) then {" \n
+                         "                ""None""" \n
+                         "            } else {" \n
+                         "                active_sectors apply {markerText _x} joinString "", """ \n
+                         "            }" \n
+                         "        ]," \n
+                         "        ""SECTORMONITOR""" \n
+                         "    ] call KPLIB_fnc_log;" \n
+                         "    _logTime = diag_tickTime + _logDelay;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
