@@ -37,6 +37,7 @@ publicVariable "KPLIB_suppMod_arty";
 [] spawn {
     waitUntil {!isNil "save_is_loaded" && {save_is_loaded}};
     ["Init provider on server", "SUPPORTMODULES"] call KPLIB_fnc_log;
+    [KPLIB_suppMod_req] call BIS_fnc_moduleSupportsInitRequester;
     [KPLIB_suppMod_arty] call BIS_fnc_moduleSupportsInitProvider;
 };
 
