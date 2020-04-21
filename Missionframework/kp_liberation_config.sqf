@@ -251,6 +251,12 @@ KP_liberation_commander_actions = [
     */
 ];
 
+/* Whitelist for BI support framework access.
+Same format as for the commander actions. */
+KP_liberation_suppMod_whitelist = [
+
+];
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
