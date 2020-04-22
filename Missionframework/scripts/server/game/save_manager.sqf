@@ -164,12 +164,14 @@ stats_vehicles_recycled = 0;
 // Get possible save data
 private _saveData = profileNamespace getVariable GRLIB_save_key;
 
-if (_saveData isEqualType "") then {
-    _saveData = parseSimpleArray _saveData;
-};
-
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
+
+    // Convert from string to array
+    if (_saveData isEqualType "") then {
+        _saveData = parseSimpleArray _saveData;
+    };
+
     if (((_saveData select 0) select 0) isEqualType 0) then {
         [format ["Save data from version: %1", (_saveData select 0) joinstring "."], "SAVE"] call KPLIB_fnc_log;
 
