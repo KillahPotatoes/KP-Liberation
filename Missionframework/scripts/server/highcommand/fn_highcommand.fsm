@@ -2,34 +2,36 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Author__KPLIB_Dev",0,250,0.000000,0.000000,100.000000,50.000000,0.000000,"Author:" \n "KPLIB Dev Team"};
-item1[] = {"save_loaded_",4,218,0.000000,75.000000,100.000000,125.000000,0.000000,"save loaded?"};
-item2[] = {"Init",2,250,0.000000,150.000000,100.000000,200.000000,0.000000,"Init"};
+item1[] = {"save_and_cmdr_ready",4,218,0.000000,75.000000,100.000000,125.000000,0.000000,"save and" \n "cmdr ready?"};
+item2[] = {"Init_High_Command",2,250,0.000000,150.000000,100.000000,200.000000,0.000000,"Init" \n "High Command" \n "Module"};
 item3[] = {"not_server_",4,218,125.000000,0.000000,225.000000,50.000000,2.000000,"not server?"};
 item4[] = {"Exit",1,250,250.000000,0.000000,350.000000,50.000000,0.000000,"Exit"};
-item5[] = {"_",8,218,0.000000,225.000000,100.000000,275.000000,0.000000,""};
-item6[] = {"Wait_for_Command",2,250,0.000000,300.000000,100.000000,350.000000,0.000000,"Wait for" \n "Commander"};
-item7[] = {"Commander_available",4,218,0.000000,375.000000,100.000000,425.000000,0.000000,"Commander" \n "available?"};
-item8[] = {"Synchronize_Commander",2,250,0.000000,450.000000,100.000000,500.000000,0.000000,"Synchronize" \n "Commander to" \n "module"};
-item9[] = {"_",8,218,0.000000,525.000000,100.000000,575.000000,0.000000,""};
-item10[] = {"Start_High_Command",2,250,0.000000,600.000000,100.000000,650.000000,0.000000,"Start" \n "High Command" \n "sync"};
-item11[] = {"_",8,218,0.000000,675.000000,100.000000,725.000000,0.000000,""};
-item12[] = {"Remove_empty_gro",2,250,0.000000,750.000000,100.000000,800.000000,0.000000,"Remove empty" \n "groups"};
-item13[] = {"_",8,218,0.000000,825.000000,100.000000,875.000000,0.000000,""};
-item14[] = {"Add_new_groups",2,250,0.000000,900.000000,100.000000,950.000000,0.000000,"Add new groups"};
-item15[] = {"_",8,218,125.000000,600.000000,225.000000,650.000000,0.000000,""};
-item16[] = {"",7,210,171.000000,921.000000,179.000000,929.000000,0.000000,""};
-item17[] = {"Commander_died_",4,218,-125.000000,300.000000,-25.000000,350.000000,1.000000,"Commander" \n "died?"};
-item18[] = {"",7,210,-79.000008,921.000000,-70.999992,929.000000,0.000000,""};
-item19[] = {"",7,210,-79.000000,771.000000,-71.000000,779.000000,0.000000,""};
-item20[] = {"",7,210,-79.000008,621.000000,-70.999992,629.000000,0.000000,""};
-item21[] = {"",7,210,-79.000000,471.000000,-71.000000,479.000000,0.000000,""};
-item22[] = {"campaign_finished",4,218,250.000000,300.000000,350.000000,350.000000,1.000000,"campaign" \n "finished?"};
-item23[] = {"Exit_1",1,250,375.000000,300.000000,475.000000,350.000000,0.000000,"Exit"};
-item24[] = {"",7,210,296.000000,921.000000,304.000000,929.000000,0.000000,""};
+item5[] = {"_",8,218,0.000000,375.000000,100.000000,425.000000,0.000000,""};
+item6[] = {"Wait_for_Command",2,250,0.000000,450.000000,100.000000,500.000000,0.000000,"Wait for" \n "Commander"};
+item7[] = {"Commander_available",4,218,0.000000,525.000000,100.000000,575.000000,0.000000,"Commander" \n "available?"};
+item8[] = {"Synchronize_Commander",2,250,0.000000,600.000000,100.000000,650.000000,0.000000,"Synchronize" \n "Commander to" \n "module"};
+item9[] = {"_",8,218,0.000000,675.000000,100.000000,725.000000,0.000000,""};
+item10[] = {"Start_High_Command",2,250,0.000000,750.000000,100.000000,800.000000,0.000000,"Start" \n "High Command" \n "sync"};
+item11[] = {"_",8,218,0.000000,825.000000,100.000000,875.000000,0.000000,""};
+item12[] = {"Remove_empty_gro",2,250,0.000000,900.000000,100.000000,950.000000,0.000000,"Remove empty" \n "groups"};
+item13[] = {"_",8,218,0.000000,975.000000,100.000000,1025.000000,0.000000,""};
+item14[] = {"Add_new_groups",2,250,0.000000,1050.000000,100.000000,1100.000000,0.000000,"Add new groups"};
+item15[] = {"_",8,218,125.000000,750.000000,225.000000,800.000000,0.000000,""};
+item16[] = {"",7,210,171.000000,1071.000000,179.000000,1079.000000,0.000000,""};
+item17[] = {"Commander_died_",4,218,-125.000000,450.000000,-25.000000,500.000000,1.000000,"Commander" \n "died?"};
+item18[] = {"",7,210,-79.000008,1071.000000,-70.999992,1079.000000,0.000000,""};
+item19[] = {"",7,210,-79.000000,921.000000,-71.000000,929.000000,0.000000,""};
+item20[] = {"",7,210,-79.000008,771.000000,-70.999992,779.000000,0.000000,""};
+item21[] = {"",7,210,-79.000000,621.000000,-71.000000,629.000000,0.000000,""};
+item22[] = {"campaign_finished",4,218,250.000000,450.000000,350.000000,500.000000,1.000000,"campaign" \n "finished?"};
+item23[] = {"Exit_1",1,250,375.000000,450.000000,475.000000,500.000000,0.000000,"Exit"};
+item24[] = {"",7,210,296.000000,1071.000000,304.000000,1079.000000,0.000000,""};
+item25[] = {"MARTA_created_",4,218,0.000000,225.000000,100.000000,275.000000,0.000000,"MARTA" \n "created?"};
+item26[] = {"Init_MARTA",2,250,0.000000,300.000000,100.000000,350.000000,0.000000,"Init MARTA"};
 link0[] = {0,1};
 link1[] = {0,3};
 link2[] = {1,2};
-link3[] = {2,5};
+link3[] = {2,25};
 link4[] = {3,4};
 link5[] = {5,6};
 link6[] = {6,7};
@@ -56,8 +58,10 @@ link26[] = {20,21};
 link27[] = {21,17};
 link28[] = {22,23};
 link29[] = {24,22};
-globals[] = {0.000000,0,0,0,0,640,480,1,49,6316128,1,-506.100769,657.072205,1023.450928,188.835754,1232,884,1};
-window[] = {2,-1,-1,-32000,-32000,993,234,1674,234,3,1250};
+link30[] = {25,26};
+link31[] = {26,5};
+globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-643.390198,736.041016,945.267944,-44.518784,1232,884,1};
+window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -71,7 +75,13 @@ class FSM
                         itemno = 0;
                         init = /*%FSM<STATEINIT""">*/"// This FSM is part of KP Liberation" \n
                          "// https://github.com/KillahPotatoes/KP-Liberation" \n
-                         "// MIT License - http://www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
+                         "// MIT License - http://www.opensource.org/licenses/MIT" \n
+                         "" \n
+                         "// Local variables" \n
+                         "private _grp = createGroup sideLogic;" \n
+                         "private _cmdr = objNull;" \n
+                         "private _hcGrps = [];" \n
+                         "private _newGrps = [];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -86,44 +96,34 @@ class FSM
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "save_loaded_">*/
-                                class save_loaded_
+                                /*%FSM<LINK "save_and_cmdr_ready">*/
+                                class save_and_cmdr_ready
                                 {
                                         itemno = 1;
                                         priority = 0.000000;
-                                        to="Init";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded"" && {save_is_loaded}"/*%FSM</CONDITION""">*/;
+                                        to="Init_High_Command";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/"_cmdr = [] call KPLIB_fnc_getCommander;"/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded""" \n
+                                         "&& {save_is_loaded}" \n
+                                         "&& {time > 5}" \n
+                                         "&& {alive _cmdr}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "Init">*/
-                class Init
+                /*%FSM<STATE "Init_High_Command">*/
+                class Init_High_Command
                 {
-                        name = "Init";
+                        name = "Init_High_Command";
                         itemno = 2;
                         init = /*%FSM<STATEINIT""">*/"[""High Command started"", ""HIGHCOMMAND""] call KPLIB_fnc_log;" \n
                          "" \n
-                         "// Local variables" \n
-                         "private _grp = createGroup sideLogic;" \n
-                         "private _cmdr = objNull;" \n
-                         "private _hcGrps = [];" \n
-                         "private _newGrps = [];" \n
-                         "" \n
                          "// Spawn module" \n
-                         "private _module = _grp createUnit [" \n
-                         "    ""HighCommand"", [0, 0, 0], [], 0, ""NONE""" \n
-                         "];" \n
-                         "" \n
-                         "// Link a logic to avoid uncritical but" \n
-                         "// annoying ""undefined _leader"" script" \n
-                         "// error in A3 module script" \n
-                         "_module synchronizeObjectsAdd [" \n
-                         "    _grp createUnit [""Logic"", [0, 0, 0], [], 0, ""NONE""]" \n
-                         "];" \n
+                         "private _module = _grp createUnit [""HighCommand"", [0, 0, 0], [], 0, ""NONE""];" \n
+                         "publicVariable ""BIS_HC_mainscope"";" \n
+                         "_module synchronizeObjectsAdd [_cmdr];" \n
                          "" \n
                          "// Logging function for the FSM" \n
                          "private _logging = {" \n
@@ -134,14 +134,14 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "_">*/
-                                class _
+                                /*%FSM<LINK "MARTA_created_">*/
+                                class MARTA_created_
                                 {
-                                        itemno = 5;
+                                        itemno = 25;
                                         priority = 0.000000;
-                                        to="Wait_for_Command";
+                                        to="Init_MARTA";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""BIS_marta_mainscope"""/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -204,12 +204,17 @@ class FSM
                         itemno = 8;
                         init = /*%FSM<STATEINIT""">*/"[""Commander alive and gets synchronized""] call _logging;" \n
                          "" \n
-                         "{" \n
-                         "    _module synchronizeObjectsRemove [_x];" \n
-                         "} forEach (synchronizedObjects _module);" \n
+                         "if !(([] call KPLIB_fnc_getCommander) in (synchronizedObjects _module)) then {" \n
+                         "    {" \n
+                         "        _cmdr hcRemoveGroup _x;" \n
+                         "    } forEach (hcAllGroups _cmdr);" \n
+                         "    _module synchronizeObjectsRemove [_cmdr];" \n
                          "" \n
-                         "_cmdr = [] call KPLIB_fnc_getCommander;" \n
-                         "_module synchronizeObjectsAdd [_cmdr];"/*%FSM</STATEINIT""">*/;
+                         "    _cmdr = [] call KPLIB_fnc_getCommander;" \n
+                         "    _module synchronizeObjectsAdd [_cmdr];" \n
+                         "    _cmdr hcSetGroup [group _cmdr];" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -252,6 +257,7 @@ class FSM
                          "    (side _x) isEqualTo GRLIB_side_friendly" \n
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
+                         "    && {!(_cmdr in (units _x))}" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -373,6 +379,41 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Init_MARTA">*/
+                class Init_MARTA
+                {
+                        name = "Init_MARTA";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"// Set MARTA rules again, otherwise all groups are cyan on dedicated" \n
+                         "// This is caused by the fact that BIS_fnc_sidecolor returns always" \n
+                         "// [0,1,1,0.8] on dedicated server." \n
+                         "// e.g. [west] call BIS_fnc_sidecolor returns [0,1,1,0.8]" \n
+                         "// As this is used in modules_f\marta\data\scripts\main.sqf it causes" \n
+                         "// the issue on dedicated servers, if using that module." \n
+                         "BIS_marta_mainscope setvariable [""rules""," \n
+                         "[" \n
+                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_enemy isEqualTo west);]," \n
+                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_friendly isEqualTo west);]," \n
+                         "	[""n_"", [0, 0.5, 0, 1]]," \n
+                         "	[""n_"", [0.4, 0, 0.5, 1]]" \n
+                         "], true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Wait_for_Command";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/
