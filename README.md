@@ -210,6 +210,7 @@ class Missions
 * Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
 * Added: `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
 * Added: Arma 3 High Command for commander, toggleable via parameters.
+* Added: Arma 3 support module (artillery) functionality with parameter settings and vehicle/player whitelist.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
