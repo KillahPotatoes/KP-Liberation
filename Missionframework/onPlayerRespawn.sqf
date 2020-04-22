@@ -26,7 +26,7 @@ if ([
     (getPlayerUID player) in KP_liberation_suppMod_whitelist,
     true
 ] select KP_liberation_suppMod) then {
-    waitUntil {!isNil "KPLIB_suppMod_req" && !isNil "KPLIB_suppMod_arty"};
+    waitUntil {!isNil "KPLIB_suppMod_req" && !isNil "KPLIB_suppMod_arty" && time > 5};
 
     // Remove link to corpse, if respawned
     if (!isNull _oldUnit) then {
