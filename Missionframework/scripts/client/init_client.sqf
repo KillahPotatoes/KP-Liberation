@@ -1,16 +1,13 @@
 [] call compileFinal preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
 switch (KP_liberation_arsenal) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
-    case  2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\killahpotatoes.sqf";};
-    case  3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
-    case  4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace.sqf";};
-    case  5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf_ace_acre.sqf";};
-    case  6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
-    case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_west.sqf";};
-    case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_east.sqf";};
-    case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\csat.sqf";};
-    case 10: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
-    case 11: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
+    case  2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
+    case  3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
+    case  4: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_west.sqf";};
+    case  5: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\gm_east.sqf";};
+    case  6: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\csat.sqf";};
+    case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
+    case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
     default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 

@@ -149,16 +149,13 @@ KP_liberation_preset_civilians = 0;
 /* Which arsenal preset should be used?
 0  = Use the default blacklist method (defined below)
 1  = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks)
-2  = Killah Potatoes Gaming Community arsenal preset
-3  = RHS USAF arsenal preset
-4  = RHS USAF arsenal preset with ACE
-5  = RHS USAF arsenal preset with ACE and ACRE
-6  = 3cbBAF and RHS USAF arsenal preset
-7  = GM West arsenal preset
-8  = GM East arsenal preset
-9  = CSAT arsenal preset
-10 = Unsung US arsenal preset
-11 = SFP arsenal preset */
+2  = RHS USAF arsenal preset
+3  = 3cbBAF and RHS USAF arsenal preset
+4  = GM West arsenal preset
+5  = GM East arsenal preset
+6  = CSAT arsenal preset
+7  = Unsung US arsenal preset
+8  = SFP arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
