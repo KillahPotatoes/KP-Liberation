@@ -88,7 +88,7 @@ if ( dorecycle == 1 && !(isnull _vehtorecycle) && alive _vehtorecycle) then {
 
 	if (!(KP_liberation_recycle_building_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 
-	_storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+	_storage_areas = (_nearfob nearobjects GRLIB_fob_range) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
 	_supplyCrates = ceil (_price_s / 100);
 	_ammoCrates = ceil (_price_a / 100);
