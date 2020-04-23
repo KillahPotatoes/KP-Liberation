@@ -431,7 +431,7 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_SUPPMOD";
-    switch (KP_liberation_victoryCondition) do {
+    switch (KP_liberation_suppMod) do {
         case 1: {_value = localize "STR_PARAM_SUPPMOD_COMMANDER";};
         case 2: {_value = localize "STR_PARAM_SUPPMOD_CMDRANDWHITELIST";};
         case 3: {_value = localize "STR_PARAM_SUPPMOD_EVERYONE";};
