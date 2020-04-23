@@ -349,9 +349,9 @@ if (!isNil "_saveData") then {
             _object setPosWorld _pos;
             _object setVectorDirAndUp [_vecDir, _vecUp];
 
-            // Add blufor crew, if it had crew or is a UAV
-            if ((unitIsUAV _object) || _hascrew) then {
-                [_object] call KPLIB_fnc_forceBluforCrew;
+            // Add artillery to provider module, if support module is enabled
+            if (KP_liberation_suppMod > 0 && {_class in KP_liberation_suppMod_artyVeh}) then {
+                KPLIB_suppMod_arty synchronizeObjectsAdd [_object];
             };
 
             // Apply kill manager handling, if not excluded
@@ -369,16 +369,16 @@ if (!isNil "_saveData") then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
-            // Add artillery to provider module, if support module is enabled
-            if (KP_liberation_suppMod > 0 && {_class in KP_liberation_suppMod_artyVeh}) then {
-                KPLIB_suppMod_arty synchronizeObjectsAdd [_object];
-            };
-
             // Process KP object init
             [_object] call KPLIB_fnc_addObjectInit;
 
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;
+
+            // Add blufor crew, if it had crew or is a UAV
+            if ((unitIsUAV _object) || _hascrew) then {
+                [_object] call KPLIB_fnc_forceBluforCrew;
+            };
         };
     } forEach _objectsToSave;
 
