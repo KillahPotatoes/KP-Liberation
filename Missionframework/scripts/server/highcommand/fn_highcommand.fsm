@@ -296,7 +296,7 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"{" \n
                          "    _cmdr hcRemoveGroup _x;" \n
                          "} forEach (_hcGrps select {" \n
-                         "    ((units _x) select {alive _x}) isEqualTo []" \n
+                         "    ((units _x) findIf {alive _x}) == -1" \n
                          "    || _cmdr in (units _x)" \n
                          "    || (missionNamespace getVariable [""BIS_SUPP_HQ_WEST"", nil]) in (units _x)" \n
                          "});"/*%FSM</STATEINIT""">*/;
