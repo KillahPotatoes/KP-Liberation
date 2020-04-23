@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-04-18
+    Last Update: 2020-04-21
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -19,7 +19,6 @@ waitUntil {one_eco_done};
 private _fobPos = [0, 0, 0];
 private _fobDist = 99999;
 private _fobName = "";
-private _nearSector = "";
 
 while {true} do {
     // FOB distance, name and position
@@ -56,9 +55,8 @@ while {true} do {
     player setVariable ["KPLIB_isNearStart", (player distance2d startbase) < 200];
 
     // Nearest activated sector and possible production data
-    _nearSector = [GRLIB_sector_size] call KPLIB_fnc_getNearestSector;
-    player setVariable ["KPLIB_nearProd", KP_liberation_production param [KP_liberation_production findIf {(_x select 1) isEqualTo _nearSector}, []]];
-    player setVariable ["KPLIB_nearSector", _nearSector];
+    player setVariable ["KPLIB_nearProd", KP_liberation_production param [KP_liberation_production findIf {(_x select 1) isEqualTo ([100] call KPLIB_fnc_getNearestSector)}, []]];
+    player setVariable ["KPLIB_nearSector", [GRLIB_sector_size] call KPLIB_fnc_getNearestSector];
 
     // Zeus module synced to player
     player setVariable ["KPLIB_ownedZeusModule", getAssignedCuratorLogic player];

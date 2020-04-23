@@ -25,7 +25,7 @@ while {GRLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         switch (_x select 7) do {case 1: {_locPos = 2; _locRes = 4;}; case 3: {_locPos = 3; _locRes = 5;};};
                         switch (_x select 9) do {case 2: {_x set [9,0];}; case 3: {_x set [9,1];};};
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], 150];
 
                         if (((_x select 9) == 0) && !((_x select 6) isEqualTo [0,0,0])) then {
 
@@ -351,7 +351,7 @@ while {GRLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         _locPos = switch (_x select 7) do {case 5: {2}; case 6: {3};};
                         _x set [9,0];
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], GRLIB_fob_range];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], 150];
 
                         if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
 

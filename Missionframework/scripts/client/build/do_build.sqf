@@ -1,3 +1,5 @@
+// TODO This needs absolutely a code refactoring, flamethrower or nuke
+
 private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir", "_near_objects", "_near_objects_25", "_debug_colisions" ];
 
 build_confirmed = 0;
@@ -6,12 +8,14 @@ _truepos = [];
 _debug_colisions = false;
 KP_vector = true;
 
-GRLIB_preview_spheres = [];
-while { count GRLIB_preview_spheres < 36 } do {
-    GRLIB_preview_spheres pushback ( "Sign_Sphere100cm_F" createVehicleLocal [ 0, 0, 0 ] );
+private _object_spheres = [];
+private _fob_spheres = [];
+for "_i" from 1 to 36 do {
+    _object_spheres pushBack ("Sign_Sphere100cm_F" createVehicleLocal [0, 0, 0]);
+    _fob_spheres pushBack ("Sign_Sphere100cm_F" createVehicleLocal [0, 0, 0]);
 };
 
-{ _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach GRLIB_preview_spheres;
+{ _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach _object_spheres;
 
 if (isNil "manned") then { manned = false };
 if (isNil "gridmode" ) then { gridmode = 0 };
@@ -111,7 +115,7 @@ while { true } do {
                 _vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
             };
 
-            { _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach GRLIB_preview_spheres;
+            {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
 
             while { build_confirmed == 1 && alive player } do {
                 _truedir = 90 - (getdir player);
@@ -137,11 +141,15 @@ while { true } do {
                     if ( _actualdir <= 22.5 || _actualdir >= 337.5 ) then { _actualdir = 0 };
                 };
 
-                _sphere_idx = 0;
                 {
-                    _x setpos ( [ _truepos, _dist, _sphere_idx * 10 ] call BIS_fnc_relPos );
-                    _sphere_idx = _sphere_idx + 1;
-                } foreach GRLIB_preview_spheres;
+                    _x setPos (_truepos getPos [_dist, 10 * _forEachIndex]);
+                } foreach _object_spheres;
+
+                if !(buildtype isEqualTo 99) then {
+                    {
+                        _x setPos (_posfob getPos [GRLIB_fob_range, 10 * _forEachIndex])
+                    } forEach _fob_spheres;
+                };
 
                 _vehicle setdir _actualdir;
 
@@ -217,13 +225,14 @@ while { true } do {
                     };
                     if(build_invalid == 1) then {
                         GRLIB_ui_notif = "";
-                        { _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach GRLIB_preview_spheres;
+
+                        {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
                     };
                     build_invalid = 0;
 
                 } else {
                     if ( build_invalid == 0 ) then {
-                        { _x setObjectTexture [0, "#(rgb,8,8,3)color(1,0,0,1)"]; } foreach GRLIB_preview_spheres;
+                        {_x setObjectTexture [0, "#(rgb,8,8,3)color(1,0,0,1)"];} foreach _object_spheres;
                     };
                     _vehicle setpos _ghost_spot;
                     build_invalid = 1;
@@ -250,7 +259,7 @@ while { true } do {
 
             GRLIB_ui_notif = "";
 
-            { _x setpos [ 0,0,0 ] } foreach GRLIB_preview_spheres;
+            {_x setPos [0, 0, 0];} forEach (_object_spheres + _fob_spheres);
 
             if ( !alive player || build_confirmed == 3 ) then {
                 private ["_price_s", "_price_a", "_price_f", "_nearfob", "_storage_areas"];

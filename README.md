@@ -210,6 +210,7 @@ class Missions
 * Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
 * Added: `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
 * Added: Arma 3 High Command for commander, toggleable via parameters.
+* Added: Visual indicators of the FOB range while in build mode.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
@@ -231,6 +232,7 @@ class Missions
 * Tweaked: Arsenal initialization on mission start improved.
 * Tweaked: `sector_manager.sqf` reworked as FSM.
 * Tweaked: Improved handling of captured/seized vehicles. Should also fix the rare issue with vanishing of captured enemy vehicles.
+* Tweaked: Set factory sectors range concerning storage areas to fix 100m instead of scaling with FOB build range.
 * Tweaked: Civilians can now be treated with the elastic, basic, packing or QuickClot bandage instead of just the basic one.
 * Tweaked: Enabled HALO function by default with 5 minutes cooldown and lowered default mobile respawn cooldown from 15 to 10 minutes.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
