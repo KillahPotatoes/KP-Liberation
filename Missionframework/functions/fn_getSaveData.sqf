@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-20
+    Last Update: 2020-04-21
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -33,7 +33,7 @@ private _allBlueGroups = allGroups select {
 // Fetch all objects and AI groups near each FOB
 {
     private _fobPos = _x;
-    private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 2)) select {
+    private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 1.2)) select {
         ((typeof _x) in KP_liberation_classnamesToSave) &&          // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
@@ -54,10 +54,10 @@ private _allBlueGroups = allGroups select {
         private _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
         // Add to save array
         _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
-    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 2)});
+    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 1.2)});
 
     // Save all mines around FOB
-    private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 2, GRLIB_fob_range * 2];
+    private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 1.2, GRLIB_fob_range * 1.2];
     _allMines append (_fobMines apply {[
         getPosWorld _x,
         [vectorDirVisual _x, vectorUpVisual _x],

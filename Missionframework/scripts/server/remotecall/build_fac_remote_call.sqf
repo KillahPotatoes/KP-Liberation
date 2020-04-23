@@ -22,7 +22,7 @@ switch (_fac) do {
             stats_ammo_spent = stats_ammo_spent + _price_a;
             stats_fuel_spent = stats_fuel_spent + _price_f;
 
-            private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
+            private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], 100];
             _storage = _storage select {(_x getVariable ["KP_liberation_storage_type",-1]) == 1};
             if ((count _storage) == 0) exitWith {};
             _storage = (_storage select 0);

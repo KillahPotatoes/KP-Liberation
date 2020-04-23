@@ -26,7 +26,7 @@ while {true} do {
     private _local_infantry_cap = 50 * GRLIB_resources_multiplier;
 
     {
-        private _fob_buildings = _x nearobjects (GRLIB_fob_range * 2);
+        private _fob_buildings = _x nearobjects GRLIB_fob_range;
         private _storage_areas = _fob_buildings select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
         private _heliSlots = {(typeOf _x) == KP_liberation_heli_slot_building;} count _fob_buildings;
         private _planeSlots = {(typeOf _x) == KP_liberation_plane_slot_building;} count _fob_buildings;
