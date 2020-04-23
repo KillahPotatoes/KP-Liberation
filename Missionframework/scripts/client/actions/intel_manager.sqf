@@ -27,7 +27,7 @@ while {true} do {
 
         {
             if !(_x in _actionned_intel_items) then {
-                _x addAction ["<t color='#FFFF00'>" + localize "STR_INTEL" + "</t>","scripts\client\actions\do_take_intel.sqf","",-849,true,true,"","(vehicle player == player)"];
+                _x addAction ["<t color='#FFFF00'>" + localize "STR_INTEL" + "</t>",{[_this select 0] remoteExecCall ["intel_remote_call", 2];},"",-849,true,true,"","(vehicle player == player)"];
                 _actionned_intel_items pushback _x;
             };
         } forEach _near_intel;
