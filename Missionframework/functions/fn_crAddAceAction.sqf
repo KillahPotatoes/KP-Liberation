@@ -2,7 +2,7 @@
     File: fn_crAddAceAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-17
+    Last Update: 2020-04-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -26,11 +26,17 @@ if (KP_liberation_civrep_debug > 0) then {[format ["ace_action called on: %1", d
 _civ addAction [
     "<t color='#FF0000'>" + localize "STR_CR_ACE_ACTION" + "</t>",
     {
-        private _target = _this select 0;
-        private _caller = _this select 1;
+        params ["_target", "_caller"];
 
-        if ("ACE_fieldDressing" in (vestItems player + uniformItems player + backpackItems player)) then {
-            _caller removeItem "ACE_fieldDressing";
+        private _items = [
+            "ACE_elasticBandage",
+            "ACE_fieldDressing",
+            "ACE_packingBandage",
+            "ACE_quikclot"
+        ] arrayIntersect (vestItems _caller + uniformItems _caller + backpackItems _caller);
+
+        if !(_items isEqualTo []) then {
+            _caller removeItem (selectRandom _items);
             _target setDamage 0;
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";

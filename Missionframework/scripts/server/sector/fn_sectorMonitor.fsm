@@ -52,7 +52,7 @@ link23[] = {20,21};
 link24[] = {21,15};
 link25[] = {22,23};
 globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-520.638245,654.284302,828.434875,-14.610138,1232,884,1};
-window[] = {2,-1,-1,-1,-1,993,234,1674,234,3,1250};
+window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -107,7 +107,7 @@ class FSM
                          "private _opforCount = 0;" \n
                          "private _range = 0;" \n
                          "private _hc = objNull;" \n
-                         "private _logDelay = 120;" \n
+                         "private _logDelay = 300;" \n
                          "private _logTime = diag_tickTime + _logDelay;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links

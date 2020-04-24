@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-03-30
+    Last Update: 2020-04-23
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -66,7 +66,8 @@ _i = 0;
 // Update sector resources
 if (_update) then {
     if ((_storage getVariable ["KP_liberation_storage_type", -1]) == 1) then {
-        remoteExec ["check_sector_ress_remote_call", 2];
+        recalculate_sectors = true;
+        publicVariable "recalculate_sectors";
     };
 };
 

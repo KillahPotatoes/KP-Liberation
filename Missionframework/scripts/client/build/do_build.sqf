@@ -84,20 +84,20 @@ while { true } do {
             _idactplacebis = -1;
             _idactvector = -1;
             if (buildtype != 99 ) then {
-                _idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>","scripts\client\build\build_cancel.sqf","",-725,false,true,"","build_confirmed == 1"];
+                _idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3; GRLIB_ui_notif = ""; hint localize "STR_CANCEL_HINT";},"",-725,false,true,"","build_confirmed == 1"];
             };
             if (buildtype == 6 ) then {
-                _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place_bis.sqf","",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
+                _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
             };
             if (buildtype == 6 || buildtype == 99  || _classname in KP_liberation_storage_buildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
-                _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>","scripts\client\build\do_grid.sqf","",-735,false,false,"","build_confirmed == 1"];
+                _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>",{gridmode = gridmode + 1;},"",-735,false,false,"","build_confirmed == 1"];
                 _idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
             };
 
-            _idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>","scripts\client\build\build_rotate.sqf","",-750,false,false,"","build_confirmed == 1"];
-            _idactraise = player addAction ["<t color='#B0FF00'>" + localize "STR_RAISE" + "</t>","scripts\client\build\build_raise.sqf","",-765,false,false,"","build_confirmed == 1"];
-            _idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>","scripts\client\build\build_lower.sqf","",-766,false,false,"","build_confirmed == 1"];
-            _idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>","scripts\client\build\build_place.sqf","",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
+            _idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>",{build_rotation = build_rotation + 90;},"",-750,false,false,"","build_confirmed == 1"];
+            _idactraise = player addAction ["<t color='#B0FF00'>" + localize "STR_RAISE" + "</t>",{build_elevation = build_elevation + 0.2;},"",-765,false,false,"","build_confirmed == 1"];
+            _idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>",{build_elevation = build_elevation - 0.2;},"",-766,false,false,"","build_confirmed == 1"];
+            _idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; hint localize "STR_CONFIRM_HINT";},"",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
             _ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
 
@@ -115,7 +115,7 @@ while { true } do {
                 _vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
             };
 
-            { _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach _object_spheres;
+            {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
 
             while { build_confirmed == 1 && alive player } do {
                 _truedir = 90 - (getdir player);
@@ -225,13 +225,14 @@ while { true } do {
                     };
                     if(build_invalid == 1) then {
                         GRLIB_ui_notif = "";
-                        { _x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"]; } foreach _object_spheres;
+
+                        {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
                     };
                     build_invalid = 0;
 
                 } else {
                     if ( build_invalid == 0 ) then {
-                        { _x setObjectTexture [0, "#(rgb,8,8,3)color(1,0,0,1)"]; } foreach _object_spheres;
+                        {_x setObjectTexture [0, "#(rgb,8,8,3)color(1,0,0,1)"];} foreach _object_spheres;
                     };
                     _vehicle setpos _ghost_spot;
                     build_invalid = 1;
