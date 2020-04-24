@@ -1,7 +1,9 @@
-_grp = _this select 0;
-_flagpos = _this select 1;
-_basepos = getpos (leader _grp);
-_is_infantry = false;
+private _grp = _this select 0;
+private _flagpos = _this select 1;
+private _basepos = getpos (leader _grp);
+private _is_infantry = false;
+private _wpPositions = [];
+private _waypoint = [];
 if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
 
 sleep 5;
@@ -11,7 +13,7 @@ sleep 1;
 sleep 1;
 
 if (_is_infantry) then {
-    private _wpPositions = [
+    _wpPositions = [
         _flagpos getPos [random 150, random 360],
         _flagpos getPos [random 150, random 360],
         _flagpos getPos [random 150, random 360],
@@ -55,7 +57,7 @@ if ({alive _x} count (units _grp) > 0) then {
     sleep 1;
     {_x doFollow leader _grp} foreach units _grp;
     sleep 1;
-    private _wpPositions = [
+    _wpPositions = [
         _basepos getPos [random 150, random 360],
         _basepos getPos [random 150, random 360],
         _basepos getPos [random 150, random 360],

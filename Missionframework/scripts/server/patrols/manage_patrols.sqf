@@ -19,6 +19,6 @@ if (worldName != "song_bin_tanh") then {
 };
 
 {
-	[_x, true] spawn manage_one_patrol;
-	sleep 1;
+    [_x, true] spawn manage_one_patrol;
+    sleep 1;
 } foreach _combat_triggers_infantry;

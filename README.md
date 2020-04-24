@@ -233,6 +233,8 @@ class Missions
 * Tweaked: `sector_manager.sqf` reworked as FSM.
 * Tweaked: Improved handling of captured/seized vehicles. Should also fix the rare issue with vanishing of captured enemy vehicles.
 * Tweaked: Set factory sectors range concerning storage areas to fix 100m instead of scaling with FOB build range.
+* Tweaked: Civilians can now be treated with the elastic, basic, packing or QuickClot bandage instead of just the basic one.
+* Tweaked: Enabled HALO function by default with 5 minutes cooldown and lowered default mobile respawn cooldown from 15 to 10 minutes.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
