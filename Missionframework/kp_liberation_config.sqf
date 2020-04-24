@@ -499,7 +499,7 @@ KP_liberation_allowed_items_extension = [
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
-box_transport_config = [
+KPLIB_transportConfigs = [
     ["B_Heli_Transport_03_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_Heli_Transport_03_unarmed_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_T_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
@@ -669,7 +669,7 @@ box_transport_config = [
 
 /* Various other settings.
 Everything the AI troups should be able to resupply from. */
-ai_resupply_sources = [
+KPLIB_aiResupplySources = [
     "B_APC_Tracked_01_CRV_F",
     "B_Slingload_01_Ammo_F",
     "B_T_APC_Tracked_01_CRV_F",

@@ -14,9 +14,9 @@ while {true} do {
 
     if ([5] call KPLIB_fnc_hasPermission) then {
 
-        _nearammoboxes = ((getpos player) nearEntities [KP_liberation_crates,10]);
-        _neartransporttrucks = ((getpos player) nearEntities [ammobox_transports_typenames,10]);
-        _nearstorageareas = nearestObjects [player,KP_liberation_storage_buildings,10];
+        _nearammoboxes = ((getpos player) nearEntities [KPLIB_crates, 10]);
+        _neartransporttrucks = ((getpos player) nearEntities [KPLIB_transport_classes, 10]);
+        _nearstorageareas = nearestObjects [player, KPLIB_storageBuildings, 10];
 
         _checked_trucks = [];
 
@@ -54,7 +54,7 @@ while {true} do {
             _next_box = _x;
             if (!(_next_box in _managed_boxes) && ( isNull  attachedTo _next_box )) then {
                 _b_action_id1 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_LOAD_BOX" + "</t>",{[_this select 0] call do_load_box;},"",-501,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
-                _b_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KP_liberation_storage_buildings,20]) select 0,true] call KPLIB_fnc_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
+                _b_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KPLIB_storageBuildings,20]) select 0,true] call KPLIB_fnc_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{[_this select 0] call KPLIB_fnc_checkCrateValue;uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id4 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_PUSH" + "</t>",{(_this select 0) setPos ((_this select 0) getPos [1, (player getDir (_this select 0))]);},"",-504,true,false,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _next_box setVariable ["GRLIB_ammo_box_action", _b_action_id1, false];

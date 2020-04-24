@@ -4,16 +4,15 @@ veh_action_detect_distance = 20;
 veh_action_distance = 10;
 
 {
-    _recycleable_classnames pushBack ( _x select 0 );
-} foreach (light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles);
-
-_recycleable_classnames append all_hostile_classnames;
-
-private _building_classnames = [];
-{
-    _building_classnames pushBack ( _x select 0 );
-} foreach (buildings);
-_building_classnames = _building_classnames + ["B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F"];
+    _recycleable_classnames append _x;
+} forEach [
+    KPLIB_b_light_classes,
+    KPLIB_b_heavy_classes,
+    KPLIB_b_air_classes,
+    KPLIB_b_static_classes,
+    KPLIB_b_support_classes,
+    KPLIB_o_allVeh_classes
+];
 
 while {true} do {
     waitUntil {sleep 2; player getVariable ['KPLIB_fobDist', 99999] < GRLIB_fob_range};
@@ -21,9 +20,9 @@ while {true} do {
     if ([4] call KPLIB_fnc_hasPermission) then {
         private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
             (((typeof _x in _recycleable_classnames ) && (({alive _x} count (crew _x)) == 0 || (unitIsUAV _x)) && ((locked _x == 0 || locked _x == 1))) ||
-            ((typeOf _x) in _building_classnames) ||
-            (((typeOf _x) in KP_liberation_storage_buildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
-            ((typeOf _x) in KP_liberation_upgrade_buildings) ||
+            ((typeOf _x) in KPLIB_b_buildings_classes) ||
+            (((typeOf _x) in KPLIB_storageBuildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
+            ((typeOf _x) in KPLIB_upgradeBuildings) ||
             ((typeOf _x) in KP_liberation_ace_crates)) &&
             (alive _x) &&
             (

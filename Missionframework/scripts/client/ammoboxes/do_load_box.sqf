@@ -2,7 +2,7 @@ params [ "_ammobox", ["_max_transport_distance", 15] ];
 private [ "_neartransporttrucks", "_truck_to_load", "_truck_load", "_next_truck", "_maxload", "_i" ];
 
 _maxload = 3;
-_neartransporttrucks = ((getpos _ammobox) nearEntities [ ammobox_transports_typenames, _max_transport_distance]) select {alive _x && speed _x < 5 && ((getpos _x) select 2) < 5};
+_neartransporttrucks = ((getpos _ammobox) nearEntities [KPLIB_transport_classes, _max_transport_distance]) select {alive _x && speed _x < 5 && ((getpos _x) select 2) < 5};
 _truck_to_load = objNull;
 
 
@@ -15,7 +15,7 @@ _truck_to_load = objNull;
             _maxload = (count _x) - 2;
             for [ {_i=2}, {_i < (count _x) }, {_i=_i+1} ] do { _offsets pushback (_x select _i); };
         };
-    } foreach box_transport_config;
+    } foreach KPLIB_transportConfigs;
 
     if ( isNull _truck_to_load ) then {
         _truck_load = _next_truck getVariable ["GRLIB_ammo_truck_load", 0];

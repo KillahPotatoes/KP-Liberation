@@ -182,7 +182,7 @@ while { dialog && alive player } do {
                 _fobdistance = _selectedmember distance _nearfob;
             };
 
-            _nearsquad = ( (getpos _selectedmember) nearEntities [ ai_resupply_sources , 30 ] );
+            _nearsquad = (getPos _selectedmember) nearEntities [KPLIB_aiResupplySources, 30];
 
             if ( _fobdistance < 100 || count _nearsquad > 0 ) then {
 

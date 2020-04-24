@@ -12,9 +12,9 @@ private _ammoMulti = 0.5;
 private _fuelMulti = 0.5;
 
 if !(
-    (_type in (buildings apply {_x select 0})) ||
-    (_type in KP_liberation_storage_buildings) ||
-    (_type in KP_liberation_upgrade_buildings) ||
+    (_type in KPLIB_b_buildings_classes) ||
+    (_type in KPLIB_storageBuildings) ||
+    (_type in KPLIB_upgradeBuildings) ||
     (_type in KP_liberation_ace_crates) ||
     (_type == "B_Slingload_01_Repair_F") ||
     (_type == "B_Slingload_01_Fuel_F") ||
@@ -44,7 +44,7 @@ private _price_s = 0;
 private _price_a = 0;
 private _price_f = 0;
 
-if (_type in all_hostile_classnames) then {
+if (_type in KPLIB_o_allVeh_classes) then {
     if (_vehToRecycle isKindOf "Car") then {
         _price_s = round (60 * _suppMulti);
         _price_a = round (25 * _ammoMulti);

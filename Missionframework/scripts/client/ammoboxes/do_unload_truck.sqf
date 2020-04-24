@@ -5,7 +5,7 @@ _offset = 0;
 
 {
     if ( _x select 0 == typeof _truck_to_unload ) then { _offset = _x select 1; };
-} foreach box_transport_config;
+} foreach KPLIB_transportConfigs;
 
 if ( _truck_to_unload getVariable ["GRLIB_ammo_truck_load", 0] > 0 ) then {
     _truck_to_unload setVariable ["GRLIB_ammo_truck_load", 0, true];

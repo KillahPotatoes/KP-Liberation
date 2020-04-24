@@ -4,14 +4,14 @@ if ( _spawn_marker == "" ) exitWith {["Could not find position for search and re
 used_positions pushbackUnique _spawn_marker;
 
 private _helopos = (markerPos _spawn_marker) getPos [random 200, random 360];
-private _helowreck = GRLIB_sar_wreck createVehicle _helopos;
+private _helowreck = KPLIB_sarWreck createVehicle _helopos;
 _helowreck allowDamage false;
 _helowreck setPos _helopos;
 _helowreck setPos _helopos;
 private _helowreckDir = (random 360);
 _helowreck setDir _helowreckDir;
 
-private _helofire = GRLIB_sar_fire createVehicle (getpos _helowreck);
+private _helofire = KPLIB_sarFire createVehicle (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 
