@@ -1,4 +1,16 @@
-// Custom Arsenal Preset
+/*
+    CSAT Arsenal Preset
+    Last Update: 2020-04-24
+
+    Needed Mods:
+        - None
+
+    Optional Mods:
+        - ACE  - https://steamcommunity.com/sharedfiles/filedetails/?id=463939057
+        - ACRE - https://steamcommunity.com/sharedfiles/filedetails/?id=751965892
+        - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
+*/
+
 GRLIB_arsenal_weapons = [
     "arifle_AK12_arid_F",                               // AK-12 7.62 mm (Arid)
     "arifle_AK12_F",                                    // AK-12 7.62 mm
