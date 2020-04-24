@@ -50,7 +50,7 @@ if (!(_sector in KP_military_sectors_already_activated)) then {
 
                 _used_positions pushback _buildingposition;
 
-                _intelobject = (selectRandom [GRLIB_intel_file, GRLIB_intel_laptop]) createVehicle _buildingposition;
+                _intelobject = (selectRandom [KPLIB_intelFile, KPLIB_intelLaptop]) createVehicle _buildingposition;
                 _intelobject setPosATL [_buildingposition select 0, _buildingposition select 1, (_buildingposition select 2) - 0.15];
                 _intelobject enableSimulationGlobal false;
                 _intelobject allowDamage false;

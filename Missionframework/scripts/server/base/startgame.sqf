@@ -44,7 +44,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
     private _crate = objNull;
     for "_i" from 1 to 6 do {
         _crate = createVehicle [
-            (KP_liberation_crates select (_i % 3)),
+            (KPLIB_crates select (_i % 3)),
             [((GRLIB_all_fobs select 0) select 0), ((GRLIB_all_fobs select 0) select 1), 150],
             [],
             80,

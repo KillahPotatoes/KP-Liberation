@@ -33,9 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KP_liberation_classnamesToSave = [FOB_typename, huron_typename];
-// Classnames of blufor vehicles
-KP_liberation_bluforClassnames = [];
+KPLIB_classnamesToSave = [FOB_typename, huron_typename];
 
 /*
     --- Locals ---
@@ -97,20 +95,16 @@ resources_intel = 0;
 save_is_loaded = false;
 
 // Add all buildings for saving and kill manager ignore
-{
-    _noKillHandler pushBack (_x select 0);
-    KP_liberation_classnamesToSave pushBack (_x select 0);
-} foreach buildings;
-
-// Fetch all blufor vehicle classnames
-{
-    KP_liberation_bluforClassnames pushBack (_x select 0);
-    KP_liberation_classnamesToSave pushBack (_x select 0);
-} foreach (static_vehicles + air_vehicles + heavy_vehicles + light_vehicles + support_vehicles);
+_noKillHandler append KPLIB_b_buildings_classes;
+KPLIB_classnamesToSave append KPLIB_b_buildings_classes;
+KPLIB_classnamesToSave append KPLIB_b_allVeh_classes;
 
 // Add opfor and civilian vehicles for saving
-KP_liberation_classnamesToSave = KP_liberation_classnamesToSave + all_hostile_classnames + civilian_vehicles;
-KP_liberation_classnamesToSave  = KP_liberation_classnamesToSave  arrayIntersect KP_liberation_classnamesToSave;
+KPLIB_classnamesToSave append KPLIB_o_allVeh_classes
+KPLIB_classnamesToSave append civilian_vehicles;
+
+// Remove duplicates
+KPLIB_classnamesToSave = KPLIB_classnamesToSave arrayIntersect KPLIB_classnamesToSave;
 
 /*
     --- Statistic Variables ---
@@ -333,7 +327,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KP_liberation_classnamesToSave) then {
+        if (_class in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -358,7 +352,7 @@ if (!isNil "_saveData") then {
             };
 
             // Set enemy vehicle as captured
-            if (_class in all_hostile_classnames) then {
+            if (_class in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];
             };
 
@@ -405,7 +399,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KP_liberation_classnamesToSave) then {
+        if (_class in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
