@@ -16,7 +16,7 @@
 */
 FOB_typename = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
 FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-FOB_truck_typename = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
+FOB_truck_typename = "CUP_O_BMP_HQ_CHDKZ";                              // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "CUP_O_BMP2_AMB_CHDKZ";                        // This is the mobile respawn (and medical) truck.
 huron_typename = "CUP_O_MI6A_CHDKZ";                                    // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
@@ -106,7 +106,6 @@ static_vehicles = [
     ["CUP_O_SPG9_ChDKZ",50,100,0],                                      // SPG-9
     ["CUP_O_Igla_AA_pod_ChDKZ",100,200,0],                              // Igla AA Pod
     ["CUP_O_ZU23_ChDKZ",100,300,0],                                     // ZU-23
-    ["B_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
     ["CUP_O_2b14_82mm_ChDKZ",80,150,0],                                 // Podnos 2B14
     ["CUP_O_D30_AT_ChDKZ",100,200,0],                                   // D-30 AT
     ["CUP_O_D30_ChDKZ",200,250,0]                                       // D-30
