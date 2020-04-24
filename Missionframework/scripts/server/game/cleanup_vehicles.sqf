@@ -2,8 +2,8 @@ private [ "_nextvehicle", "_nearestfob", "_reset_ticker" ];
 
 _cleanup_classnames = [];
 {
-    _cleanup_classnames pushback (_x select 0);
-} foreach (air_vehicles + heavy_vehicles + light_vehicles);
+    _cleanup_classnames append _x;
+} forEach [KPLIB_b_light_classes, KPLIB_b_heavy_classes, KPLIB_b_air_classes];
 
 while { GRLIB_cleanup_vehicles > 0 } do {
 

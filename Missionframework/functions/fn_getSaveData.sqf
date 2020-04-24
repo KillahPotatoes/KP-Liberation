@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-21
+    Last Update: 2020-04-24
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,7 +34,7 @@ private _allBlueGroups = allGroups select {
 {
     private _fobPos = _x;
     private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 1.2)) select {
-        ((typeof _x) in KP_liberation_classnamesToSave) &&          // Exclude classnames which are not in the presets
+        ((typeof _x) in KPLIB_classnamesToSave) &&                  // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
@@ -42,10 +42,10 @@ private _allBlueGroups = allGroups select {
         {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
         {!(_x getVariable ["KP_liberation_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
         {!(_x getVariable ["KP_liberation_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
-        {!((typeOf _x) in KP_liberation_crates)}                    // Exclude storage crates (those are handled separately)
+        {!((typeOf _x) in KPLIB_crates)}                            // Exclude storage crates (those are handled separately)
     };
 
-    _allObjects = _allObjects + (_fobObjects select {!((typeOf _x) in KP_liberation_storage_buildings)});
+    _allObjects = _allObjects + (_fobObjects select {!((typeOf _x) in KPLIB_storageBuildings)});
     _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0});
 
     // Process all groups near this FOB
@@ -76,7 +76,7 @@ private _allBlueGroups = allGroups select {
     private _hascrew = false;
 
     // Determine if vehicle is crewed
-    if (_class in KP_liberation_bluforClassnames) then {
+    if (_class in KPLIB_b_allVeh_classes) then {
         if (({!isPlayer _x} count (crew _x) ) > 0) then {
             _hascrew = true;
         };
@@ -85,7 +85,7 @@ private _allBlueGroups = allGroups select {
     // Only save player side, seized or captured objects
     if (
         (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
-        (!(_class in all_hostile_classnames) || {_x getVariable ["KPLIB_captured", false]})
+        (!(_class in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
         _objectsToSave pushBack [_class, _savedpos, _savedvecdir, _savedvecup, _hascrew];
     };

@@ -16,9 +16,9 @@ if (!(_sector in KP_capture_sectors_already_activated)) then {
             if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
         };
 
-        private _spawnclass = selectRandom KP_liberation_crates;
+        private _spawnclass = selectRandom KPLIB_crates;
 
-        private _newbox = [selectRandom KP_liberation_crates, 100, _spawnpos] call KPLIB_fnc_createCrate;
+        private _newbox = [selectRandom KPLIB_crates, 100, _spawnpos] call KPLIB_fnc_createCrate;
         _newbox setdir (random 360);
         _newbox setpos _spawnpos;
     };
