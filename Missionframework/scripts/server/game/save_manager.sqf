@@ -100,7 +100,7 @@ KPLIB_classnamesToSave append KPLIB_b_buildings_classes;
 KPLIB_classnamesToSave append KPLIB_b_allVeh_classes;
 
 // Add opfor and civilian vehicles for saving
-KPLIB_classnamesToSave append KPLIB_o_allVeh_classes
+KPLIB_classnamesToSave append KPLIB_o_allVeh_classes;
 KPLIB_classnamesToSave append civilian_vehicles;
 
 // Remove duplicates
