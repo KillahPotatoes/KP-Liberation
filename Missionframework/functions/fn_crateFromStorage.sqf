@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-04-24
+    Last Update: 2020-04-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 ];
 
 // Validate parameters
-if !(_cratetype in KPLIB_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
+if !((toLower _cratetype) in KPLIB_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 // Get correct storage positions
