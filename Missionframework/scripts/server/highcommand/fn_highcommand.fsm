@@ -60,8 +60,8 @@ link28[] = {22,23};
 link29[] = {24,22};
 link30[] = {25,26};
 link31[] = {26,5};
-globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-643.390198,736.041016,945.267944,-44.518784,1232,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
+globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-591.886047,787.545105,1145.687378,155.900024,1232,884,1};
+window[] = {2,-1,-1,-1,-1,889,130,1570,130,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -258,6 +258,7 @@ class FSM
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
                          "    && {!(_cmdr in (units _x))}" \n
+                         "    && {(((units _x) apply {str _x}) findIf {_x find ""BIS_SUPP_HQ_"" != -1}) isEqualTo -1}" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -294,7 +295,11 @@ class FSM
                         itemno = 12;
                         init = /*%FSM<STATEINIT""">*/"{" \n
                          "    _cmdr hcRemoveGroup _x;" \n
-                         "} forEach (_hcGrps select {((units _x) select {alive _x}) isEqualTo []});"/*%FSM</STATEINIT""">*/;
+                         "} forEach (_hcGrps select {" \n
+                         "    ((units _x) findIf {alive _x}) == -1" \n
+                         "    || {_cmdr in (units _x)}" \n
+                         "    || {(((units _x) apply {str _x}) findIf {_x find ""BIS_SUPP_HQ_"" != -1}) != -1}" \n
+                         "});"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -395,8 +400,8 @@ class FSM
                          "// the issue on dedicated servers, if using that module." \n
                          "BIS_marta_mainscope setvariable [""rules""," \n
                          "[" \n
-                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_enemy isEqualTo west);]," \n
-                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_friendly isEqualTo west);]," \n
+                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_enemy isEqualTo west)]," \n
+                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_friendly isEqualTo west)]," \n
                          "	[""n_"", [0, 0.5, 0, 1]]," \n
                          "	[""n_"", [0.4, 0, 0.5, 1]]" \n
                          "], true];"/*%FSM</STATEINIT""">*/;

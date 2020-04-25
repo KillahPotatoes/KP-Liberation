@@ -251,6 +251,12 @@ KP_liberation_commander_actions = [
     */
 ];
 
+/* Whitelist for BI support framework access.
+Same format as for the commander actions. */
+KP_liberation_suppMod_whitelist = [
+
+];
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
@@ -849,6 +855,28 @@ boats_names = [
     "uns_pbr_mk18",
     "uns_pbr",
     "UNS_Zodiac_W"
+];
+
+// Classnames of artillery vehicles, which should be added to the support module
+// (Needed/Favorized as BIS_SUPP_eligible_Artillery from the support module isn't broadcasted over the network and may hold unwanted vehicles)
+KP_liberation_suppMod_artyVeh = [
+    "B_G_Mortar_01_F",
+    "B_MBT_01_arty_F",
+    "B_MBT_01_mlrs_F",
+    "B_Mortar_01_F",
+    "B_Ship_Gun_01_F",
+    "B_T_MBT_01_arty_F",
+    "B_T_MBT_01_mlrs_F",
+    "B_T_Mortar_01_F",
+    "I_E_Mortar_01_F",
+    "I_E_Truck_02_MRL_F",
+    "I_G_Mortar_01_F",
+    "I_Mortar_01_F",
+    "I_Truck_02_MRL_F",
+    "O_G_Mortar_01_F",
+    "O_MBT_02_arty_F",
+    "O_Mortar_01_F",
+    "O_T_MBT_02_arty_ghex_F"
 ];
 
 // Large storage area placement position offsets.

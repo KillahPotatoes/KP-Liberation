@@ -12,9 +12,9 @@ private _ammoMulti = 0.5;
 private _fuelMulti = 0.5;
 
 if !(
-    (_type in KPLIB_b_buildings_classes) ||
-    (_type in KPLIB_storageBuildings) ||
-    (_type in KPLIB_upgradeBuildings) ||
+    ((toLower _type) in KPLIB_b_buildings_classes) ||
+    ((toLower _type) in KPLIB_storageBuildings) ||
+    ((toLower _type) in KPLIB_upgradeBuildings) ||
     (_type in KP_liberation_ace_crates) ||
     (_type == "B_Slingload_01_Repair_F") ||
     (_type == "B_Slingload_01_Fuel_F") ||

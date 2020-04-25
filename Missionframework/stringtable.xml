@@ -6081,6 +6081,18 @@
             <Original>Arma 3 High Command</Original>
             <German>Arma 3 Oberbefehl</German>
         </Key>
+        <Key ID="STR_PARAM_SUPPMOD">
+            <Original>BI Support System access</Original>
+            <German>Zugriff auf BI Support System</German>
+        </Key>
+        <Key ID="STR_PARAM_SUPPMOD_CMDRANDWHITELIST">
+            <Original>Commander and Whitelist</Original>
+            <German>Kommandant und Whitelist</German>
+        </Key>
+        <Key ID="STR_PARAM_SUPPMOD_EVERYONE">
+            <Original>Everyone</Original>
+            <German>Jeder</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">
