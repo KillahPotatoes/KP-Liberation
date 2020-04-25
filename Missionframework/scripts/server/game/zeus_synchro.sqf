@@ -28,7 +28,7 @@ while {true} do {
             (KP_liberation_enemies_zeus && {!(side (group _x) isEqualTo GRLIB_side_civilian)})  // Not civilian side, if enemy adding is enabled
             || {side (group _x) isEqualTo GRLIB_side_friendly}                                  // Player side if enemy adding is disabled
         }
-        && {((str _x) find "BIS_SUPP_HQ_") isEqualTo -1}
+        && {((str _x) find "BIS_SUPP_HQ_") isEqualTo -1}                                        // Not a HQ entity from support module
     };
 
     // Add vehicles
