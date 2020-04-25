@@ -258,7 +258,7 @@ class FSM
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
                          "    && {!(_cmdr in (units _x))}" \n
-                         "    && {!((missionNamespace getVariable [""BIS_SUPP_HQ_WEST"", nil]) in (units _x))}" \n
+                         "    && {!((missionNamespace getVariable [""BIS_SUPP_HQ_WEST"", objNull]) in (units _x))}" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
