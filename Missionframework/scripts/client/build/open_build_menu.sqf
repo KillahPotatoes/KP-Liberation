@@ -127,7 +127,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ((_build_item select 2 == 0 ) || ((_build_item select 2) <= ((_actual_fob select 0) select 2))) &&
             ((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
         ) then {
-            if (((_build_item select 0) in KPLIB_b_air_classes) && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
+            if ((toLower (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
                 if (KP_liberation_air_vehicle_building_near &&
                     ((((_build_item select 0) isKindOf "Helicopter") && (KP_liberation_heli_count < KP_liberation_heli_slots)) ||
                     (((_build_item select 0) isKindOf "Plane") && (KP_liberation_plane_count < KP_liberation_plane_slots)))
@@ -135,7 +135,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                     _affordable = true;
                 };
             } else {
-                if (!((_build_item select 0) in KPLIB_airSlots) || (((_build_item select 0) in KPLIB_airSlots) && KP_liberation_air_vehicle_building_near)) then {
+                if (!((toLower (_build_item select 0)) in KPLIB_airSlots) || (((toLower (_build_item select 0)) in KPLIB_airSlots) && KP_liberation_air_vehicle_building_near)) then {
                     _affordable = true;
                 };
             };

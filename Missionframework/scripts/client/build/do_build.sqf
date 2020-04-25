@@ -89,7 +89,7 @@ while { true } do {
             if (buildtype == 6 ) then {
                 _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
             };
-            if (buildtype == 6 || buildtype == 99  || _classname in KPLIB_storageBuildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
+            if (buildtype == 6 || buildtype == 99  || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
                 _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>",{gridmode = gridmode + 1;},"",-735,false,false,"","build_confirmed == 1"];
                 _idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
             };
@@ -214,7 +214,7 @@ while { true } do {
                             _vehicle setpos _truepos;
                         };
                     };
-                    if (buildtype == 6 || buildtype == 99 || _classname in KPLIB_storageBuildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
+                    if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
                         if (KP_vector) then {
                             _vehicle setVectorUp [0,0,1];
                         } else {
@@ -313,7 +313,7 @@ while { true } do {
 
                 [_vehicle] call KPLIB_fnc_clearCargo;
 
-                if (buildtype == 6 || buildtype == 99 || _classname in KPLIB_storageBuildings || _classname == KP_liberation_recycle_building || _classname == KP_liberation_air_vehicle_building) then {
+                if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
                     if (KP_vector) then {
                         _vehicle setVectorUp [0,0,1];
                     } else {

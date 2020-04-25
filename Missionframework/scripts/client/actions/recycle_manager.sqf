@@ -19,21 +19,21 @@ while {true} do {
 
     if ([4] call KPLIB_fnc_hasPermission) then {
         private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
-            (((typeof _x in _recycleable_classnames ) && (({alive _x} count (crew _x)) == 0 || (unitIsUAV _x)) && ((locked _x == 0 || locked _x == 1))) ||
-            ((typeOf _x) in KPLIB_b_buildings_classes) ||
-            (((typeOf _x) in KPLIB_storageBuildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
-            ((typeOf _x) in KPLIB_upgradeBuildings) ||
-            ((typeOf _x) in KP_liberation_ace_crates)) &&
-            (alive _x) &&
+            (((toLower (typeof _x)) in _recycleable_classnames && (({alive _x} count (crew _x)) == 0 || unitIsUAV _x) && (locked _x == 0 || locked _x == 1)) ||
+            (toLower (typeOf _x)) in KPLIB_b_buildings_classes ||
+            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
+            (toLower (typeOf _x)) in KPLIB_upgradeBuildings ||
+            (typeOf _x) in KP_liberation_ace_crates) &&
+            alive _x &&
             (
                 // ignore null objects left by Advanced Towing
                 // see https://github.com/sethduda/AdvancedTowing/pull/46
                 (((attachedObjects _x) select {!isNull _X}) isEqualTo [])
                 || ((typeOf _x) == "rhsusf_mkvsoc")
             ) &&
-            (_x distance startbase > 1000) &&
-            (_x distance ( [] call KPLIB_fnc_getNearestFob) < GRLIB_fob_range) &&
-            (getObjectType _x >= 8)
+            _x distance2d startbase > 1000 &&
+            (_x distance2d ([] call KPLIB_fnc_getNearestFob)) < GRLIB_fob_range &&
+            (getObjectType _x) >= 8
         };
 
         {

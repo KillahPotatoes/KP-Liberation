@@ -1,7 +1,7 @@
 waitUntil {!isNil "huron_typename"};
 
 // Classnames of objects which should be added as editable for Zeus
-private _vehicleClassnames = [huron_typename];
+private _vehicleClassnames = [toLower huron_typename];
 {
     _vehicleClassnames append _x;
 } forEach [
@@ -35,7 +35,7 @@ while {true} do {
     _valids append (vehicles select {
         (alive _x)                                                                              // Alive
         && {
-            ((typeof _x) in _vehicleClassnames)                                                 // In valid classnames
+            ((toLower (typeOf _x)) in _vehicleClassnames)                                       // In valid classnames
             || (_x getVariable ["KPLIB_captured", false])                                       // or captured
             || (_x getVariable ["KPLIB_seized", false])                                         // or seized
         }
