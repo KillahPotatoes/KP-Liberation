@@ -24,7 +24,7 @@ crewman_classname = "CUP_O_TK_Crew";                                    // This 
 pilot_classname = "CUP_O_TK_Pilot";                                     // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "CUP_O_UH1H_slick_TKA";           // These are the little birds which spawn on the Freedom or at Chimera bas
 KP_liberation_boat_classname = "O_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
-KP_liberation_truck_classname = "CUP_O_V3S_Open_TKA";                   // These are the trucks which are used in the logistic convoy system.
+KP_liberation_truck_classname = "CUP_O_Ural_Open_TKA";                  // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
 KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";           // The building defined to unlock FOB recycling functionality.
@@ -86,8 +86,8 @@ light_vehicles = [
     ["CUP_O_LR_AA_TKA",200,160,50],                                     // Land Rover 110 (AA)
     ["CUP_O_Ural_ZU23_TKA",250,300,100],                                // Ural (ZU-23)
     ["CUP_O_BM21_TKA",300,750,100],                                     // BM-21
-    ["CUP_O_V3S_Open_TKA",150,0,75],                                    // Praga V3S
-    ["CUP_O_V3S_Covered_TKA",150,0,75]                                  // Praga V3S (Covered)
+    ["CUP_O_Ural_Open_TKA",150,0,75],                                   // Ural (Open)
+    ["CUP_O_Ural_TKA",150,0,75]                                         // Ural
 ];
 
 heavy_vehicles = [
@@ -229,9 +229,9 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["CUP_O_Tractor_Old_TKA",50,0,75],                                  // Towing Tractor
-    ["CUP_O_V3S_Repair_TKA",425,0,75],                                  // Praga V3S (Repair)
-    ["CUP_O_V3S_Refuel_TKA",125,0,375],                                 // Praga V3S (Refuel)
-    ["CUP_O_V3S_Rearm_TKA",125,300,75],                                 // Praga V3S (Rearm)
+    ["CUP_O_Ural_Repair_TKA",425,0,75],                                 // Ural (Repair)
+    ["CUP_O_Ural_Refuel_TKA",125,0,375],                                // Ural (Refuel)
+    ["CUP_O_Ural_Reammo_TKA",125,300,75],                               // Ural (Ammo)
     ["B_Slingload_01_Repair_F",375,0,0],                                // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,300],                                 // Huron Fuel
     ["B_Slingload_01_Ammo_F",75,300,0]                                  // Huron Ammo

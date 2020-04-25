@@ -210,6 +210,8 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_O_LCVP_SLA",100,100,50],                                      // LCVP
+    ["CUP_O_LCVP_VIV_SLA",100,100,50],                                  // LCVP (VIV)
     ["CUP_O_Tractor_SLA",50,0,75],                                      // Towing Tractor
     ["CUP_O_Ural_Repair_SLA",425,0,75],                                 // Ural (Repair)
     ["CUP_O_Ural_Refuel_SLA",125,0,375],                                // Ural (Refuel)

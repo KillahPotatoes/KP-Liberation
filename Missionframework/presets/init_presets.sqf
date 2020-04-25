@@ -23,9 +23,12 @@ switch (KP_liberation_preset_blufor) do {
     case 22: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_CDF.sqf";};
     case 23: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_ACR_Desert.sqf";};
     case 24: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_ACR_Woodland.sqf";};
-    case 25: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_wdl.sqf";};
-    case 26: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_des.sqf";};
-    case 27: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\enoch.sqf";};
+    case 25: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_ChDKZ.sqf";};
+    case 26: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_SLA.sqf";};
+    case 27: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\CUP_TakiArmy.sqf";};
+    case 28: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_wdl.sqf";};
+    case 29: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_des.sqf";};
+    case 30: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\enoch.sqf";};
     default  {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
@@ -47,6 +50,9 @@ switch (KP_liberation_preset_opfor) do {
     case 15: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_ChDKZ.sqf";};
     case 16: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_AFRF_MSV.sqf";};
     case 17: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_AFRF_ModernMSV.sqf";};
+    case 18: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_CDF.sqf";};
+    case 19: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_BAF_Desert.sqf";};
+    case 20: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\CUP_BAF_Woodland.sqf";};
     default  {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
