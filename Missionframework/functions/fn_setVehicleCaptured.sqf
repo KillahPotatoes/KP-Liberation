@@ -2,7 +2,7 @@
     File: fn_setVehicleCaptured.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-10
-    Last Update: 2020-04-24
+    Last Update: 2020-04-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 private _type = typeOf _veh:
 
-if !(_type in KPLIB_o_allVeh_classes) exitWith {false};
+if !((toLower _type) in KPLIB_o_allVeh_classes) exitWith {false};
 
 if !(_veh getVariable ["KPLIB_captured", false]) then {
     _veh setVariable ["KPLIB_captured", true, true];

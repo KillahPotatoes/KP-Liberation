@@ -85,7 +85,7 @@ private _allBlueGroups = allGroups select {
     // Only save player side, seized or captured objects
     if (
         (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
-        (!(_class in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
+        (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
         _objectsToSave pushBack [_class, _savedpos, _savedvecdir, _savedvecup, _hascrew];
     };

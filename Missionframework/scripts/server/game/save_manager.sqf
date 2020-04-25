@@ -352,7 +352,7 @@ if (!isNil "_saveData") then {
             };
 
             // Set enemy vehicle as captured
-            if (_class in KPLIB_o_allVeh_classes) then {
+            if ((toLower _class) in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];
             };
 

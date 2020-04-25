@@ -44,7 +44,7 @@ private _price_s = 0;
 private _price_a = 0;
 private _price_f = 0;
 
-if (_type in KPLIB_o_allVeh_classes) then {
+if ((toLower _type) in KPLIB_o_allVeh_classes) then {
     if (_vehToRecycle isKindOf "Car") then {
         _price_s = round (60 * _suppMulti);
         _price_a = round (25 * _ammoMulti);

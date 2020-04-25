@@ -1,14 +1,12 @@
 _fobposdestroy = _this select 0;
 
-classnames_to_destroy = [FOB_typename];
-{
-    classnames_to_destroy = classnames_to_destroy + [(_x select 0)];
-} foreach buildings;
+private _to_destroy = [toLower FOB_typename];
+_to_destroy append KPLIB_b_buildings_classes;
 
 _nextbuildingsdestroy = (_fobposdestroy nearobjects 150) select {getObjectType _x >= 8};
 _all_buildings_to_destroy = [];
 {
-    if ( (typeof _x) in classnames_to_destroy ) then {
+    if ((toLower (typeof _x)) in _to_destroy) then {
         _all_buildings_to_destroy = _all_buildings_to_destroy + [_x];
     };
 } foreach _nextbuildingsdestroy;

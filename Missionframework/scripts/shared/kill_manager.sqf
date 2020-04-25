@@ -42,12 +42,12 @@ if (isServer) then {
             armor_weight = armor_weight - 0.66;
             air_weight = air_weight - 0.66;
         } else {
-            if ((typeof (vehicle _killer)) in KPLIB_allLandVeh_classes) then  {
+            if ((toLower (typeOf (vehicle _killer))) in KPLIB_allLandVeh_classes) then  {
                 infantry_weight = infantry_weight - 0.66;
                 armor_weight = armor_weight + 1;
                 air_weight = air_weight - 0.66;
             };
-            if ((typeof (vehicle _killer)) in KPLIB_allAirVeh_classes) then  {
+            if ((toLower (typeOf (vehicle _killer))) in KPLIB_allAirVeh_classes) then  {
                 infantry_weight = infantry_weight - 0.66;
                 armor_weight = armor_weight - 0.66;
                 air_weight = air_weight + 1;
@@ -136,7 +136,7 @@ if (isServer) then {
         };
     } else {
         // Enemy vehicle casualty
-        if (typeof _unit in KPLIB_o_allVeh_classes) then {
+        if ((toLower (typeof _unit)) in KPLIB_o_allVeh_classes) then {
             stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 
             // Destroyed by player
