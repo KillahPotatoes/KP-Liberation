@@ -119,7 +119,7 @@ while { true } do {
 
             while { build_confirmed == 1 && alive player } do {
                 _truedir = 90 - (getdir player);
-                if ((typeOf _vehicle) in KPLIB_b_static_classes) then {
+                if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                     _truepos = [((getposATL player) select 0) + (_dist * (cos _truedir)), ((getposATL player) select 1) + (_dist * (sin _truedir)),((getposATL player) select 2)];
                 } else {
                     _truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
@@ -171,7 +171,7 @@ while { true } do {
                 private _remove_objects = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects pushback _x;
                     };
                 } foreach _near_objects;
@@ -179,7 +179,7 @@ while { true } do {
                 private _remove_objects_25 = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((typeOf _vehicle) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects_25 pushback _x;
                     };
                 } foreach _near_objects_25;
@@ -208,7 +208,7 @@ while { true } do {
                     if ( ((buildtype == 6) || (buildtype == 99)) && ((gridmode % 2) == 1) ) then {
                         _vehicle setpos [round (_truepos select 0),round (_truepos select 1), _truepos select 2];
                     } else {
-                        if ((typeOf _vehicle) in KPLIB_b_static_classes) then {
+                        if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                             _vehicle setPosATL _truepos;
                         } else {
                             _vehicle setpos _truepos;
@@ -303,11 +303,13 @@ while { true } do {
                 _vehicle = _classname createVehicle _truepos;
                 _vehicle allowDamage false;
                 _vehicle setdir _vehdir;
-                if ((typeOf _vehicle) in KPLIB_b_static_classes) then {
+                if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                     _vehicle setPosATL _truepos;
                 } else {
                     _vehicle setpos _truepos;
                 };
+
+                [_vehicle] call KPLIB_fnc_addObjectInit;
 
                 [_vehicle] call KPLIB_fnc_clearCargo;
 
@@ -320,13 +322,6 @@ while { true } do {
                 } else {
                     _vehicle setVectorUp surfaceNormal position _vehicle;
                 };
-                
-                // Add artillery to provider module, if support module is enabled
-                if (KP_liberation_suppMod > 0 && {_classname in KP_liberation_suppMod_artyVeh}) then {
-                    KPLIB_suppMod_arty synchronizeObjectsAdd [_vehicle];
-                };
-                
-                [_vehicle] call KPLIB_fnc_addObjectInit;
 
                 if ( (unitIsUAV _vehicle) || manned ) then {
                     [ _vehicle ] call KPLIB_fnc_forceBluforCrew;

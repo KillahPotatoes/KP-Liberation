@@ -33,7 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KPLIB_classnamesToSave = [FOB_typename, huron_typename];
+KPLIB_classnamesToSave = [toLower FOB_typename, toLower huron_typename];
 
 /*
     --- Locals ---
@@ -44,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [FOB_typename, huron_typename];
+private _noKillHandler = [toLower FOB_typename, toLower huron_typename];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -329,7 +329,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KPLIB_classnamesToSave) then {
+        if ((toLower _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -343,13 +343,11 @@ if (!isNil "_saveData") then {
             _object setPosWorld _pos;
             _object setVectorDirAndUp [_vecDir, _vecUp];
 
-            // Add artillery to provider module, if support module is enabled
-            if (KP_liberation_suppMod > 0 && {_class in KP_liberation_suppMod_artyVeh}) then {
-                KPLIB_suppMod_arty synchronizeObjectsAdd [_object];
-            };
+            // Process KP object init
+            [_object] call KPLIB_fnc_addObjectInit;
 
             // Apply kill manager handling, if not excluded
-            if !(_class in _noKillHandler) then {
+            if !((toLower _class) in _noKillHandler) then {
                 _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
             };
 
@@ -362,9 +360,6 @@ if (!isNil "_saveData") then {
             if (_class in civilian_vehicles) then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
-
-            // Process KP object init
-            [_object] call KPLIB_fnc_addObjectInit;
 
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;
@@ -406,7 +401,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KPLIB_classnamesToSave) then {
+        if ((toLower _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
