@@ -61,7 +61,7 @@ link29[] = {24,22};
 link30[] = {25,26};
 link31[] = {26,5};
 globals[] = {0.000000,0,0,0,0,640,480,1,51,6316128,1,-591.886047,787.545105,1145.687378,155.900024,1232,884,1};
-window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1250};
+window[] = {2,-1,-1,-1,-1,889,130,1570,130,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -258,7 +258,7 @@ class FSM
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
                          "    && {!(_cmdr in (units _x))}" \n
-                         "    && {!((missionNamespace getVariable [""BIS_SUPP_HQ_WEST"", objNull]) in (units _x))}" \n
+                         "    && {(((units _x) apply {str _x}) findIf {_x find ""BIS_SUPP_HQ_"" != -1}) isEqualTo -1}" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -297,8 +297,8 @@ class FSM
                          "    _cmdr hcRemoveGroup _x;" \n
                          "} forEach (_hcGrps select {" \n
                          "    ((units _x) findIf {alive _x}) == -1" \n
-                         "    || _cmdr in (units _x)" \n
-                         "    || (missionNamespace getVariable [""BIS_SUPP_HQ_WEST"", objNull]) in (units _x)" \n
+                         "    || {_cmdr in (units _x)}" \n
+                         "    || {(((units _x) apply {str _x}) findIf {_x find ""BIS_SUPP_HQ_"" != -1}) != -1}" \n
                          "});"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
