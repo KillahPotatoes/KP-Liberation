@@ -24,6 +24,6 @@ while {GRLIB_csat_aggressivity > 0.9 && GRLIB_endgame == 0} do {
         (combat_readiness >= 70) &&
         (diag_fps > 15.0)
     )  then {
-        [] spawn spawn_battlegroup;
+        ["", (random 100) < 45] spawn spawn_battlegroup;
     };
 };
