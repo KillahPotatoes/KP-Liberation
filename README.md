@@ -240,6 +240,7 @@ class Missions
 * Tweaked: Array names for classname collections etc. from `init_presets.sqf`.
 * Tweaked: `kp_objectInits.sqf` is now also applied to enemy vehicles.
 * Tweaked: Added a chance that battlegroups are now just contain infantry units which spawn closer to target.
+* Tweaked: Arrays for enemy rotary- or fixed-wings doesn't need to be filled anymore and can be set as empty `[]`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
