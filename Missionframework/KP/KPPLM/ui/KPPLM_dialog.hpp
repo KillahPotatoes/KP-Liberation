@@ -179,7 +179,7 @@ class KPPLM_dialog {
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,24);
             w = KP_GETW(KP_WIDTH_VAL_C,(4/3));
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
-        }
+        };
 
         class KP_ButtonRename: KP_ButtonCreate {
             text = "$STR_KPPLM_RENAME";
