@@ -6093,6 +6093,10 @@
             <Original>Everyone</Original>
             <German>Jeder</German>
         </Key>
+        <Key ID="STR_PARAM_WEAPSWAY">
+            <Original>Weapon sway</Original>
+            <German>Waffenschwanken (Weapon sway)</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">

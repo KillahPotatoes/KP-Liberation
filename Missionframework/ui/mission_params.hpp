@@ -210,6 +210,12 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
+    class WeaponSway {
+        title = $STR_PARAM_WEAPSWAY;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
     class ArsenalUsePreset {
         title = $STR_PARAMS_ARSENALUSEPRESET;
         values[] = {0, 1};

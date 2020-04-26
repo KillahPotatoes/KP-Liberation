@@ -212,6 +212,7 @@ class Missions
 * Added: Arma 3 High Command for commander, toggleable via parameters.
 * Added: Arma 3 support module (artillery) functionality with parameter settings and vehicle/player whitelist.
 * Added: Visual indicators of the FOB range while in build mode.
+* Added: Parameter to disable weapon sway.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)

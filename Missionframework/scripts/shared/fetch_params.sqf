@@ -79,6 +79,7 @@ if(isServer) then {
     // Gameplay Options
     ["--- Gameplay Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
+    GET_PARAM_BOOL(KPLIB_sway, "WeaponSway", 1);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
@@ -360,6 +361,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_FATIGUE";
     _value = if (GRLIB_fatigue) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_WEAPSWAY";
+    _value = if (KPLIB_sway) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_ARSENALUSEPRESET";

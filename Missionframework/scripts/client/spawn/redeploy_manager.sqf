@@ -37,10 +37,6 @@ while {true} do {
 
     GRLIB_force_redeploy = false;
 
-    if (!GRLIB_fatigue) then {
-        player enableStamina false;
-    };
-
     createDialog "liberation_deploy";
     deploy = 0;
     _oldsel = -999;
