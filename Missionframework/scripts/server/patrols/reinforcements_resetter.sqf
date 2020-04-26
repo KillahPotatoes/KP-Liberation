@@ -4,13 +4,13 @@ reinforcements_set = false;
 
 while { true } do {
 
-	waitUntil { sleep 0.3; reinforcements_set };
-	reinforcements_set = false;
+    waitUntil { sleep 0.3; reinforcements_set };
+    reinforcements_set = false;
 
-	_localtime = time;
+    _localtime = time;
 
-	waitUntil { sleep 0.3; ( time > ( _localtime + _reset_time ) ) || reinforcements_set };
+    waitUntil { sleep 0.3; ( time > ( _localtime + _reset_time ) ) || reinforcements_set };
 
-	if ( !reinforcements_set && !([] call F_isBigtownActive) ) then { reinforcements_sector_under_attack = ""; }
+    if ( !reinforcements_set && !([] call KPLIB_fnc_isBigtownActive) ) then { reinforcements_sector_under_attack = ""; }
 
 };

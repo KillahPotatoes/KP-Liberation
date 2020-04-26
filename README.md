@@ -44,7 +44,6 @@ These mods are needed if you want to use the prepackaged missionfiles from the r
 You can play every map without any mods (only the maps themself) if you set the preset to custom in the file `kp_liberation_config`.
 * Al Rayak (pja310)
     * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
-    * [CUP Terrains - Maps](http://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
     * [G.O.S Al Rayak](http://steamcommunity.com/sharedfiles/filedetails/?id=648172507)
     * [RHS: Armed Forces of the Russian Federation](http://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
     * [RHS: United States Forces](http://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
@@ -106,19 +105,22 @@ You can play every map without any mods (only the maps themself) if you set the 
 
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
-* [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-* [ACE Compat - RHS Armed Forces of the Russian Federation](http://steamcommunity.com/workshop/filedetails/?id=773131200)
-* [ACE Compat - RHS United States Armed Forces](http://steamcommunity.com/workshop/filedetails/?id=773125288)
-* [ACE3 - BWMOD Compatibility](http://steamcommunity.com/sharedfiles/filedetails/?id=870313336)
-* [ACRE 2](http://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
-* [Advanced Urban Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
-* [Enhanced Movement](http://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
-* [FA-18 Super Hornet](http://steamcommunity.com/sharedfiles/filedetails/?id=743099837)
-* [Immerse](http://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
-* [JSRS SOUNDMOD](http://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
-* [JSRS SOUNDMOD - Additional](http://steamcommunity.com/sharedfiles/filedetails/?id=863393819)
-* [KP Ranks](http://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
-* [LAxemann's Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
+* [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+* [ACE Compat - RHS Armed Forces of the Russian Federation](https://steamcommunity.com/workshop/filedetails/?id=773131200)
+* [ACE Compat - RHS United States Armed Forces](https://steamcommunity.com/workshop/filedetails/?id=773125288)
+* [ACE3 - BWMOD Compatibility](https://steamcommunity.com/sharedfiles/filedetails/?id=1200145989)
+* [ACRE 2](https://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
+* [Advanced Urban Rappeling](https://steamcommunity.com/sharedfiles/filedetails/?id=730310357)
+* [CBA_A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+* [Discord Rich Presence](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159)
+* [DUI - Squad Radar](https://steamcommunity.com/sharedfiles/filedetails/?id=1638341685)
+* [Enhanced Movement](https://steamcommunity.com/sharedfiles/filedetails/?id=333310405)
+* [Immerse](https://steamcommunity.com/sharedfiles/filedetails/?id=825172265)
+* [JSRS SOUNDMOD](https://steamcommunity.com/sharedfiles/filedetails/?id=861133494)
+* [JSRS SOUNDMOD - RHS AFRF Mod Pack Sound Support](https://steamcommunity.com/sharedfiles/filedetails/?id=945476727)
+* [JSRS SOUNDMOD - RHS USAF Mod Pack Sound Support](https://steamcommunity.com/sharedfiles/filedetails/?id=1180533757)
+* [KP Ranks](https://steamcommunity.com/sharedfiles/filedetails/?id=741621641)
+* [Suppress](https://steamcommunity.com/sharedfiles/filedetails/?id=825174634)
 
 Also you should think about using these mods as serverside mods:
 * [Advanced Rappeling](http://steamcommunity.com/sharedfiles/filedetails/?id=713709341)
@@ -188,18 +190,57 @@ class Missions
 ## Changelog
 
 ### 0.96.7 (TBD)
+* Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
 * Added: USAF mod support for all US based preset. Thanks to [Eogos](https://github.com/Eogos)
 * Added: Save interval setting in config file.
 * Added: Steam UID whitelist in config to grant access to commander actions even if not in that slot.
 * Added: Applied mission parameters are logged in server rpt.
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) basefile. Thanks to [Eogos](https://github.com/Eogos)
+* Added: [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1913961235) building ignore list. Thanks to [Eogos](https://github.com/Eogos)
+* Added: Steam Workshop upload to build tools
+* Added: [KP Player Menu](https://github.com/KillahPotatoes/KP-PLM) as optional (default enabled) replacement for the old GREUH extended options. GREUH still available via parameters or if no CBA loaded.
+* Added: Locality change of slingloaded cargo to heli pilot to avoid breaking ropes while e.g. slingloading the FOB box.
+* Added: Support and utilization of the [Discord Rich Presence Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1493485159) from [ConnorAU](https://github.com/ConnorAU).
+* Added: Confirmation dialog for the "Create Clearance" action at the FOB.
+* Added: Parameter (default deactivated) to enable editing of enemy units and vehicles in Zeus.
+* Added: Zeus placed objects are now recognized for kill manager, object init and placed resource crates are also filled with 100 resources.
+* Added: Auto save of the game state on last player disconnect or local hosted host exit.
+* Added: A kind of playerNamespace which sets some widely used variables to the player instead of running same checks in several scripts.
+* Added: `KPLIB_fnc_log` function to replace the usage of `diag_log` and apply prefix etc. at one place.
+* Added: Arma 3 High Command for commander, toggleable via parameters.
+* Added: Arma 3 support module (artillery) functionality with parameter settings and vehicle/player whitelist.
+* Added: Visual indicators of the FOB range while in build mode.
+* Added: Parameter to disable weapon sway.
+* Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
+* Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
 * Tweaked: Default blacklist now only holds the static and tent backpacks.
 * Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
 * Tweaked: Transport helicopters in battlegroups are now correctly dropping paratroopers.
+* Tweaked: Start vehicle/Potato 01/start resources spawn at mission start optimized.
+* Tweaked: Explanation and formatting of `kp_objectInits.sqf`.
+* Tweaked: Integer to bool conversion in fetch param macro.
+* Tweaked: ObjectInit is now also called on spawned start vehicles.
+* Tweaked: Usage of structured text for `diag_log`, so there are no quotes around the messages in the rpt.
+* Tweaked: Collection arrays fetching in `init_presets.sqf`.
+* Tweaked: Unit/vehicle collecting for adding to editable units in `zeus_synchro.sqf`.
+* Tweaked: The save data is now stored as string which can result in ten times less space taken in vars file.
+* Tweaked: Actions to deploy/repack a FOB are now bound to the box/truck/building.
+* Tweaked: FOB container/truck/building specific commands are now in objectInits instead of having the same in several scripts.
+* Tweaked: Arsenal initialization on mission start improved.
+* Tweaked: `sector_manager.sqf` reworked as FSM.
+* Tweaked: Improved handling of captured/seized vehicles. Should also fix the rare issue with vanishing of captured enemy vehicles.
+* Tweaked: Set factory sectors range concerning storage areas to fix 100m instead of scaling with FOB build range.
+* Tweaked: Civilians can now be treated with the elastic, basic, packing or QuickClot bandage instead of just the basic one.
+* Tweaked: Enabled HALO function by default with 5 minutes cooldown and lowered default mobile respawn cooldown from 15 to 10 minutes.
+* Tweaked: Array names for classname collections etc. from `init_presets.sqf`.
+* Tweaked: `kp_objectInits.sqf` is now also applied to enemy vehicles.
+* Tweaked: Added a chance that battlegroups are now just contain infantry units which spawn closer to target.
+* Tweaked: Arrays for enemy rotary- or fixed-wings doesn't need to be filled anymore and can be set as empty `[]`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
@@ -207,6 +248,11 @@ class Missions
 * Fixed: Flickering/disappearing of mobile respawn.
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
 * Fixed: RHS CH53 and RHS C130J transport configs after RHS 0.5.0 update. Thanks to [FatRefrigerator](https://github.com/FatRefrigerator)
+* Fixed: Support for CBA disposable launchers. Thanks to [Dahlgren](https://github.com/Dahlgren)
+* Fixed: ACE medical vehicle variable adjusted in `kp_objectInits` due to the recent ACE updates. [Reference](https://github.com/acemod/ACE3/commit/44050df98b00e579e5b5a79c0d76d4d1138b4baa#diff-31034297ef72d8a9855b601934510008)
+* Fixed: Weapons could be shown as blacklisted, if a whitelisted weapon was combined with e.g. a whitelisted grip or other attachments.
+* Fixed: Rare error message in `recycle_manager.sqf`, if last FOB was repacked to a truck/box.
+* Fixed: `Bad conversion: bool` rpt messages in client logs at the beginning of the mission.
 
 ### 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)

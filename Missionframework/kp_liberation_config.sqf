@@ -183,7 +183,7 @@ KP_liberation_fuel_max = 45;
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
 GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_save_interval = 20;                                       // Interval in seconds for automatic save.
+KP_liberation_save_interval = 60;                                       // Interval in seconds for automatic save.
 
 GRLIB_side_friendly = WEST;                                             // Friendly side.
 GRLIB_side_enemy = EAST;                                                // Enemy side.
@@ -259,6 +259,12 @@ KP_liberation_commander_actions = [
     "5468711",
     "2156347"
     */
+];
+
+/* Whitelist for BI support framework access.
+Same format as for the commander actions. */
+KP_liberation_suppMod_whitelist = [
+
 ];
 
 /* - Default arsenal blacklist method.
@@ -503,7 +509,7 @@ KP_liberation_allowed_items_extension = [
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
-box_transport_config = [
+KPLIB_transportConfigs = [
     ["B_Heli_Transport_03_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_Heli_Transport_03_unarmed_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
     ["B_T_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
@@ -677,7 +683,7 @@ box_transport_config = [
 
 /* Various other settings.
 Everything the AI troups should be able to resupply from. */
-ai_resupply_sources = [
+KPLIB_aiResupplySources = [
     "B_APC_Tracked_01_CRV_F",
     "B_Slingload_01_Ammo_F",
     "B_T_APC_Tracked_01_CRV_F",
@@ -874,6 +880,28 @@ boats_names = [
     "UNS_Zodiac_W"
 ];
 
+// Classnames of artillery vehicles, which should be added to the support module
+// (Needed/Favorized as BIS_SUPP_eligible_Artillery from the support module isn't broadcasted over the network and may hold unwanted vehicles)
+KP_liberation_suppMod_artyVeh = [
+    "B_G_Mortar_01_F",
+    "B_MBT_01_arty_F",
+    "B_MBT_01_mlrs_F",
+    "B_Mortar_01_F",
+    "B_Ship_Gun_01_F",
+    "B_T_MBT_01_arty_F",
+    "B_T_MBT_01_mlrs_F",
+    "B_T_Mortar_01_F",
+    "I_E_Mortar_01_F",
+    "I_E_Truck_02_MRL_F",
+    "I_G_Mortar_01_F",
+    "I_Mortar_01_F",
+    "I_Truck_02_MRL_F",
+    "O_G_Mortar_01_F",
+    "O_MBT_02_arty_F",
+    "O_Mortar_01_F",
+    "O_T_MBT_02_arty_ghex_F"
+];
+
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
     [-5.59961,3.60938,0.6],
@@ -943,4 +971,3 @@ GRLIB_blufor_cap = (GRLIB_blufor_cap * GRLIB_unitcap) min 100;
 GRLIB_sector_cap = GRLIB_sector_cap * GRLIB_unitcap;
 GRLIB_battlegroup_cap = GRLIB_battlegroup_cap * GRLIB_unitcap;
 GRLIB_patrol_cap = GRLIB_patrol_cap * GRLIB_unitcap;
-GRLIB_offload_diag = false;

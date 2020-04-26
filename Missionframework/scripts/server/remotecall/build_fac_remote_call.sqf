@@ -22,7 +22,7 @@ switch (_fac) do {
             stats_ammo_spent = stats_ammo_spent + _price_a;
             stats_fuel_spent = stats_fuel_spent + _price_f;
 
-            private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], GRLIB_fob_range];
+            private _storage = nearestObjects [(markerPos (_x select 1)), [KP_liberation_small_storage_building], 100];
             _storage = _storage select {(_x getVariable ["KP_liberation_storage_type",-1]) == 1};
             if ((count _storage) == 0) exitWith {};
             _storage = (_storage select 0);
@@ -72,19 +72,13 @@ switch (_fac) do {
                             };
                         };
                     };
-                    default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+                    default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
                 };
             } forEach _storedCrates;
 
             private _i = 0;
             {
-                private _height = 0.6;
-                switch (typeOf _x) do {
-                    case KP_liberation_supply_crate: {_height = 0.4;};
-                    case KP_liberation_ammo_crate: {_height = 0.6;};
-                    case KP_liberation_fuel_crate: {_height = 0.3;};
-                    default {_height = 0.6;};
-                };
+                private _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
                 detach _x;
                 _x attachTo [_storage, [(KP_liberation_small_storage_positions select _i) select 0, (KP_liberation_small_storage_positions select _i) select 1, _height]];
                 _i = _i + 1;
