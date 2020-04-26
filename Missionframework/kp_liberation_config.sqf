@@ -981,7 +981,26 @@ KP_liberation_suppMod_artyVeh = [
     "rhsusf_m109d_usarmy",
     "rhsusf_M142_usarmy_D",
     "rhsusf_M142_usarmy_WD",
-    "rhsusf_M142_usmc_WD"
+    "rhsusf_M142_usmc_WD",
+    "Uns_D20_artillery",
+    "Uns_D30_artillery",
+    "uns_M1_81mm_mortar_arty",
+    "uns_M1_81mm_mortar_pvp",
+    "uns_M1_81mm_mortar",
+    "Uns_M102_artillery",
+    "uns_m107sp",
+    "uns_m110sp",
+    "uns_M113_M30_HQ",
+    "uns_M113_M30",
+    "Uns_M114_artillery",
+    "uns_m1941_82mm_mortarNVA_arty",
+    "uns_m1941_82mm_mortarNVA_pvp",
+    "uns_m1941_82mm_mortarNVA",
+    "uns_m1941_82mm_mortarVC",
+    "uns_M2_60mm_mortar_pvp",
+    "uns_M2_60mm_mortar",
+    "uns_M30_107mm_mortar",
+    "uns_Type55_mortar"
 ];
 
 // Large storage area placement position offsets.
