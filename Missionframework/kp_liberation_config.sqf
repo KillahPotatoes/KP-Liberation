@@ -8,13 +8,17 @@ KP_liberation_medical_vehicles = [
     "B_T_Truck_01_medical_F",
     "B_Truck_01_medical_F",
     "C_Van_02_medevac_F",
+    "CUP_O_M113_Med_TKA",
     "CUP_B_BMP2_AMB_CDF",
+    "CUP_O_BMP2_AMB_CHDKZ",
+    "CUP_O_BMP2_AMB_sla",
     "CUP_B_HMMWV_Ambulance_USA",
     "CUP_B_HMMWV_Ambulance_USMC",
     "CUP_B_LR_Ambulance_CZ_D",
     "CUP_B_LR_Ambulance_CZ_W",
     "CUP_B_LR_Ambulance_GB_D",
     "CUP_B_LR_Ambulance_GB_W",
+    "CUP_O_LR_Ambulance_TKA",
     "CUP_B_FV432_GB_Ambulance",
     "CUP_B_S1203_Ambulance_CDF",
     "CUP_B_UH1Y_MEV_USMC",
@@ -97,9 +101,12 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 22 = CUP Chernarus Defense Force
 23 = CUP Army of the Czech Republic (Desert)
 24 = CUP Army of the Czech Republic (Woodland)
-25 = SFP (Woodland)
-26 = SFP (Desert)
-27 = LDF (Contact DLC) */
+25 = CUP Chernarussian Movement of the Red Star
+26 = CUP Sahrani Liberation Army
+27 = CUP Takistani Army
+28 = SFP (Woodland)
+29 = SFP (Desert)
+30 = LDF (Contact DLC) */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -120,7 +127,10 @@ KP_liberation_preset_blufor = 0;
 14 = CUP Takistani Army
 15 = CUP Chernarussian Movement of the Red Star
 16 = CUP Armed Forces of the Russian Federation (MSV - EMR)
-17 = CUP Armed Forces of the Russian Federation (Modern MSV) */
+17 = CUP Armed Forces of the Russian Federation (Modern MSV)
+18 = CUP Chernarus Defense Force
+19 = CUP British Armed Forces (Desert)
+20 = CUP British Armed Forces (Woodland) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -561,6 +571,10 @@ KPLIB_transportConfigs = [
     ["CUP_O_Ural_Open_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
     ["CUP_O_Ural_SLA", -6.5, [0,-0.5,0], [0,-2.5,0]],
     ["CUP_O_Ural_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
+    ["CUP_O_Mi8_SLA_1", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
+    ["CUP_O_MI6A_CHDKZ", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
+    ["CUP_O_MI6A_TKA", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
+    ["CUP_O_C130J_Cargo_TKA",-10,[0,0.6,-3.76],[0,-0.9,-3.76],[0,-2.5,-3.76],[0,-4.2,-3.76],[0,2.2,-3.76],[0,3.8,-3.76],[0,5.5,-3.76]],
     ["gm_gc_army_ural4320_cargo_win", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
     ["gm_gc_army_ural4320_cargo", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
     ["gm_gc_bgs_ural4320_cargo", -5, [-0.0373535,-0.535156,-0.1], [-0.0344238,-1.76611,-0.1], [-0.0334473,-2.85547,-0.1]],
@@ -685,6 +699,7 @@ KPLIB_aiResupplySources = [
     "CUP_O_Ural_Reammo_CHDKZ",
     "CUP_O_Ural_Reammo_SLA",
     "CUP_O_Ural_Reammo_TKA",
+    "CUP_O_V3S_Rearm_TKA",
     "gm_gc_army_ural4320_reammo_win",
     "gm_gc_army_ural4320_reammo",
     "gm_ge_army_kat1_451_reammo_win",
@@ -724,6 +739,9 @@ vehicle_repair_sources = [
     "CUP_B_MTVR_Repair_USMC",
     "CUP_B_T810_Repair_CZ_DES",
     "CUP_B_T810_Repair_CZ_WDL",
+    "CUP_O_V3S_Repair_TKA",
+    "CUP_O_Ural_Repair_SLA",
+    "CUP_O_Ural_Repair_CHDKZ",
     "gm_gc_army_ural4320_repair_win",
     "gm_gc_army_ural4320_repair",
     "gm_ge_army_u1300l_repair_win",
@@ -766,6 +784,7 @@ vehicle_rearm_sources = [
     "CUP_O_Ural_Reammo_CHDKZ",
     "CUP_O_Ural_Reammo_SLA",
     "CUP_O_Ural_Reammo_TKA",
+    "CUP_O_V3S_Rearm_TKA",
     "gm_gc_army_ural4320_reammo_win",
     "gm_gc_army_ural4320_reammo",
     "gm_ge_army_kat1_451_reammo_win",
@@ -808,6 +827,7 @@ vehicle_refuel_sources = [
     "CUP_O_Ural_Refuel_CHDKZ",
     "CUP_O_Ural_Refuel_SLA",
     "CUP_O_Ural_Refuel_TKA",
+    "CUP_O_V3S_Refuel_TKA",
     "gm_gc_army_ural375d_refuel_win",
     "gm_gc_army_ural375d_refuel",
     "gm_ge_army_kat1_451_refuel_win",
@@ -846,6 +866,9 @@ boats_names = [
     "CUP_B_RHIB_USMC",
     "CUP_B_RHIB2Turret_USMC",
     "CUP_B_LCU1600_USMC",
+    "CUP_O_LCVP_SLA",
+    "CUP_O_LCVP_VIV_SLA",
+    "CUP_O_PBX_SLA",
     "rhsusf_mkvsoc",
     "sfp_gruppbat",
     "sfp_rbb_norrkoping",

@@ -35,8 +35,8 @@ opfor_transport_truck = "CUP_O_Ural_TKA";                               // Ural
 opfor_ammobox_transport = "CUP_O_Ural_Open_TKA";                        // Ural (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "CUP_O_Ural_Refuel_TKA";                             // Ural (Refuel)
 opfor_ammo_truck = "CUP_O_Ural_Reammo_TKA";                             // Ural (Ammo)
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
+opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Container
+opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Container
 opfor_flag = "FlagCarrierTakistan_EP1";                                 // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
@@ -60,6 +60,13 @@ militia_squad = [
 militia_vehicles = [
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
+    "CUP_O_Hilux_AGS30_TK_INS",                                         // Hilux (AGS-30)
+    "CUP_O_Hilux_DSHKM_TK_INS",                                         // Hilux (DShKM)
+    "CUP_O_Hilux_M2_TK_INS",                                            // Hilux (M2)
+    "CUP_O_Hilux_SPG9_TK_INS",                                          // Hilux (SPG-9)
+    "CUP_O_Hilux_armored_BMP1_TK_INS",                                  // Hilux Armored (BMP-1)
+    "CUP_O_Hilux_armored_BTR60_TK_INS",                                 // Hilux Armored (BTR-60)
+    "CUP_O_Hilux_armored_zu23_TK_INS",                                  // Hilux Armored (ZU-23-2)
     "CUP_O_BTR40_MG_TKM",                                               // BTR-40 (DSHKM)
     "CUP_O_MTLB_pk_TK_MILITIA"                                          // MT-LB LV
 ];
@@ -67,10 +74,11 @@ militia_vehicles = [
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
-    "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
-    "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
+    "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
     "CUP_O_BMP2_TKA",                                                   // BMP-2
@@ -107,7 +115,10 @@ opfor_battlegroup_vehicles = [
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
+    "CUP_O_LR_AA_TKA",                                                  // Land Rover 110 (AA)
     "CUP_O_BTR60_TK",                                                   // BTR-60PB
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_BMP1P_TKA",                                                  // BMP-1P
     "CUP_O_BMP2_TKA",                                                   // BMP-2
     "CUP_O_BMP2_TKA",                                                   // BMP-2
@@ -153,6 +164,8 @@ opfor_troup_transports = [
     "CUP_O_UH1H_TKA",                                                   // UH-1H
     "CUP_O_UH1H_armed_TKA",                                             // UH-1H (Armed)
     "CUP_O_BTR60_TK",                                                   // BTR-60PB
+    "CUP_O_BTR80_TK",                                                   // BTR-80
+    "CUP_O_BTR80A_TK",                                                  // BTR-80A
     "CUP_O_Mi24_D_Dynamic_TK",                                          // Mi-24D
     "CUP_O_Mi17_TK",                                                    // Mi-8MT
     "CUP_O_T34_TKA",                                                    // T-34-85M
