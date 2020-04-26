@@ -15,6 +15,7 @@ for "_i" from 1 to _planes_number do {
     createVehicleCrew _newvehicle;
     _newvehicle flyInHeight (120 + (random 180));
     _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    [_newvehicle] call KPLIB_fnc_addObjectInit;
     {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _newvehicle);
 
     (crew _newvehicle) joinSilent _air_grp;
