@@ -69,6 +69,18 @@ player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleC
 player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
 
+// Disable stamina, if selected in parameter
+if (!GRLIB_fatigue) then {
+    player enableStamina false;
+    player addEventHandler ["Respawn", {player enableStamina false;}];
+};
+
+// Reduce aim precision coefficient, if selected in parameter
+if (!KPLIB_sway) then {
+    player setCustomAimCoef 0.1;
+    player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
+};
+
 {
     [_x] call BIS_fnc_drawCuratorLocations;
 } forEach allCurators;

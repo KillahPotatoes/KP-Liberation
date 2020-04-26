@@ -35,7 +35,7 @@ while { GRLIB_endgame == 0 } do {
     } else {
 
         private [ "_vehicle_object" ];
-        if ( (combat_readiness > 75) && ((random 100) > 85) ) then {
+        if ((combat_readiness > 75) && ((random 100) > 85) && !(opfor_choppers isEqualTo [])) then {
             _vehicle_object = [_sector_spawn_pos, selectRandom opfor_choppers] call KPLIB_fnc_spawnVehicle;
         } else {
             _vehicle_object = [_sector_spawn_pos, [] call KPLIB_fnc_getAdaptiveVehicle] call KPLIB_fnc_spawnVehicle;

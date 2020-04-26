@@ -212,6 +212,7 @@ class Missions
 * Added: Arma 3 High Command for commander, toggleable via parameters.
 * Added: Arma 3 support module (artillery) functionality with parameter settings and vehicle/player whitelist.
 * Added: Visual indicators of the FOB range while in build mode.
+* Added: Parameter to disable weapon sway.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
@@ -237,6 +238,9 @@ class Missions
 * Tweaked: Civilians can now be treated with the elastic, basic, packing or QuickClot bandage instead of just the basic one.
 * Tweaked: Enabled HALO function by default with 5 minutes cooldown and lowered default mobile respawn cooldown from 15 to 10 minutes.
 * Tweaked: Array names for classname collections etc. from `init_presets.sqf`.
+* Tweaked: `kp_objectInits.sqf` is now also applied to enemy vehicles.
+* Tweaked: Added a chance that battlegroups are now just contain infantry units which spawn closer to target.
+* Tweaked: Arrays for enemy rotary- or fixed-wings doesn't need to be filled anymore and can be set as empty `[]`.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.

@@ -2,7 +2,7 @@
     File: fn_setVehicleSeized.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-20
-    Last Update: 2020-04-20
+    Last Update: 2020-04-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -22,7 +22,7 @@ params [
 
 if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-private _type = typeOf _veh:
+private _type = typeOf _veh;
 
 if !(_type in civilian_vehicles) exitWith {false};
 

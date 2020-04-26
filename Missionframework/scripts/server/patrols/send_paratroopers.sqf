@@ -3,7 +3,7 @@ params [
     ["_chopper_type", objNull, [objNull]]
 ];
 
-if (_targetsector isEqualTo "") exitWith {};
+if (_targetsector isEqualTo "" || opfor_choppers isEqualTo []) exitWith {false};
 
 private _targetpos = _targetsector;
 if (_targetpos isEqualType "") then {

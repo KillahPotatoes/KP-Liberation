@@ -27,11 +27,11 @@ wreckRemovalMinTime = 1200;
 wreckRemovalMaxTime = 7200;
 minPlayerDistance = 1000;
 
-#include "GREUH\UI\GREUH_interface.hpp"
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
 
+#include "GREUH\UI\GREUH_interface.hpp"
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
