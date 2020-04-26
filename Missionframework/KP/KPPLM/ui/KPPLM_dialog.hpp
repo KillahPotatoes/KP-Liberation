@@ -158,19 +158,19 @@ class KPPLM_dialog {
             onLBSelChanged = "ctrlSetText [758039, groupId (KPPLM_groups select (lbCurSel 758038))]";
         };
 
-        class KP_ButtonCreate: KPGUI_PRE_InlineButton {
-            text = "$STR_KPPLM_CREATE";
+        class KP_ButtonJoin: KPGUI_PRE_InlineButton {
+            text = "$STR_KPPLM_JOIN";
             x = KP_GETCX(KP_X_VAL_C,KP_WIDTH_VAL_C,3,4);
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,4,16);
             w = KP_GETW(KP_WIDTH_VAL_C,4);
             h = KP_GETH(KP_HEIGHT_VAL_C,(48/5));
-            onButtonClick = "[] call KPPLM_fnc_create";
+            onButtonClick = "[] call KPPLM_fnc_join";
         };
 
-        class KP_ButtonJoin: KP_ButtonCreate {
-            text = "$STR_KPPLM_JOIN";
+        class KP_ButtonCreate: KP_ButtonJoin {
+            text = "$STR_KPPLM_CREATE";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,17,48);
-            onButtonClick = "[] call KPPLM_fnc_join";
+            onButtonClick = "[] call KPPLM_fnc_create";
         };
 
         class KP_RenameEdit: KPGUI_PRE_EditBox {
@@ -181,7 +181,7 @@ class KPPLM_dialog {
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
         };
 
-        class KP_ButtonRename: KP_ButtonCreate {
+        class KP_ButtonRename: KP_ButtonJoin {
             text = "$STR_KPPLM_RENAME";
             y = KP_GETCY(KP_Y_VAL_C,KP_HEIGHT_VAL_C,11,24);
             h = KP_GETH(KP_HEIGHT_VAL_C,24);
