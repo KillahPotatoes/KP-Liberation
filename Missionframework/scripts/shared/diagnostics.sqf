@@ -17,11 +17,14 @@ private _source = "";
 
 waitUntil {sleep 1; !isNil "active_sectors"};
 
+private _delay = 120;
+
 while {true} do {
     if (isDedicated) then {
         _source = "Server";
     } else {
         _source = name player;
+        _delay = 300;
     };
 
     if (isServer) then {
@@ -56,5 +59,5 @@ while {true} do {
             "STATS"
         ] remoteExecCall ["KPLIB_fnc_log", 2];
     };
-    sleep 60;
+    sleep _delay;
 };
