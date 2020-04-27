@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-04-16
+    Last Update: 2020-04-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -38,7 +38,7 @@ _player addAction [
 // HALO
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_HALO_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
-    "scripts\client\actions\do_halo.sqf",
+    "scripts\client\spawn\do_halo.sqf",
     nil,
     -710,
     false,
