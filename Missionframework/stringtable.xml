@@ -4503,6 +4503,7 @@
         <Key ID="STR_TUTO_TEXT4">
             <Original>&lt;br/&gt;&lt;br/&gt;Sectors are split into 5 different types:&lt;br/&gt; &lt;br/&gt;- Points of Interest (PoI): Generally small to medium sized villages/towns. While strategically unimportant, these places are where the citizens of the region live and as such are key in obtaining their trust and sympathy.&lt;br/&gt; &lt;br/&gt;- Factories: Across the region you will find civilian factories under enemy control. These factories are specialized at creating one of the three resources (Supplies, Ammo, and Fuel), but can later be upgraded to produce all 3. As such they are a very strategic first target!&lt;br/&gt; &lt;br/&gt;- Military Bases: Home to large amounts of highly equipped enemy forces, these installations are heavily defended and will require large and well co-ordinated assaults if you have any hope in capturing them! Capturing these bases will enable us to deploy stronger assets in the region and are critical to your success.&lt;br/&gt; &lt;br/&gt;- Radio Towers (RT): When under enemy control, RTs will be used to call in reinforcements when a nearby sector is attacked by our own forces. The reaction time of the reinforcements will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful map intel on hostile troop movements in the vicinity by intercepting their radio communications.&lt;br/&gt; &lt;br/&gt;- Major Cities: There are several major cities in the region. When all are under friendly control, we will most certainly have beaten back the enemy to a point where they cannot re-establish control. This is your primary objective.&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Sektoren sind in 5 unterschiedliche Typen eingeteilt:&lt;br/&gt; &lt;br/&gt;- Point of Interest (PoI): Für gewöhnlich kleine- bis mittelgroße Dörfer/Städte. Jeder PoI, den Sie kontrollieren kann aufgewertet werden (nach Bau einer Lagerfläche), um uns mit den drei Arten von Ressourcen zu versorgen, die gebraucht werden, um militärische Ausrüstung zu produzieren.&lt;br/&gt; &lt;br/&gt;- Fabriken: Verteilt über das Gebiet, sind zivile Fabriken unter der Kontrolle des Feindes. Nehmen Sie diese ein, da sie nur eine Lagerfläche brauchen, um dann jede der drei Arten von Ressourcen zu produzieren, ohne sie aufwerten zu müssen. Als solches sind Fabriken ein wertvolles, strategisches, erstes Ziel!&lt;br/&gt; &lt;br/&gt;- Militär Basen: Diese beherbergen eine große Anzahl von bestens ausgestatteten Feindkräften. Sie werden stark verteidigt und erfordern einen großen und gut koordinierten Angriff, falls sie überhaupt irgendwelche Hoffnungen haben, diese einnehmen zu können.&lt;br/&gt; &lt;br/&gt;- Funktürme (FT): Unter Feindkontrolle werden FT genutzt, um Verstärkungen anzufordern, wenn ein Sektor in der Nähe von unseren Kräften angegriffen wird. Die Zeit, bis die Verstärkung eintrifft, hängt von der Entfernung zwischen Turm und Sektor ab. Unter unserer Kontrolle geben FT Aufschluß über Feindbewegung in der Nähe, indem sie ihre Funksprüche abfangen.&lt;br/&gt; &lt;br/&gt;- Großstädte: Es gibt mehrere große Städte in dem Gebiet. Wenn alle unter unserer Kontrolle sind, haben wir den Feind soweit zu einem Punkt zurückgeschlagen, von dem aus er sich nicht wieder neu formieren und die Kontrolle zurückerlangen kann. Dies ist Ihr Hauptziel.&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;Los sectores se dividen en 5 tipos diferentes:&lt;br/&gt; &lt;br/&gt;- Puntos de Interes (PoI): Generalmente pequeñas a medianas aldeas/pueblos. Aunque estratégicamente poco importantes, estos lugares son donde viven los civiles de la región y son como tal, son calve para obtener su confianza y simpatía.&lt;br/&gt; &lt;br/&gt;- Industrias: A través de la región encontrarás industrias civiles bajo control enemigo. Éstas industrias se especializan en la creación de uno de tres recursos (Suministros, Municiones, Combustible), pero más adelante pueden ser mejoradas para producir los 3. Como tal, son un muy importante punto estratégico para empezar!&lt;br/&gt; &lt;br/&gt;- Bases Militares: Hogar de gran cantidad de enemigos altamente armados, éstas instalaciones se encuentran altamente defendidas y requerirán grandes y bien coordinados asaltos si tienes esperanza en capturarlos! Capturando estas bases nos permitirá desplegar elementos más fuertes en la región y por lo tanto son críticas para el éxito.&lt;br/&gt; &lt;br/&gt;- Torres de Radio (RT): Cuando se encuentran bajo control del enemigo, las RT serán usadas para llamar refuerzos ante el ataque de nuestras fuerzas a un sector cercano. El tiempo de reacción de los refuerzos dependerá de la distancia entre la torre y el sector. Cuando se encuentran bajo control amigo, las torres nos darán información valiosa en el mapa sobre el movimiento de tropas hostiles en las cercanías de la torre a través de interceptar sus comunicaciones por radio.&lt;br/&gt; &lt;br/&gt;- Ciudades Principales: Existe una gran cantidad de ciudades principales en la región. Cuando todas se encuentren bajo nuestor control, seguramente habremos vencido al enemigo hasta el punto donde no puedan re-establecer control. Ese es tu objetivo principal.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;I settori sono divisi in 5 tipi diversi:&lt;br/&gt; &lt;br/&gt;- Punti di interesse (PDI): generalmente piccoli e medi villaggi, ogni PDI che controlli può essere aggiornato (dopo la costruzione di una zona di stoccaggio) per fornire uno dei tre tipi di risorse necessari per continuare a produrre forze militari e armamenti.&lt;br/&gt; &lt;br/&gt;- Fabbriche: In tutta la regione troverete le fabbriche civili sotto il controllo nemico. Catturatele, in quanto hanno solo bisogno di una zona di archiviazione e possono quindi produrre una delle tre risorse, senza aggiornamento. In quanto Fabbriche sono un primo obiettivo strategico!&lt;br/&gt; &lt;br/&gt;- Basi Militari: Sono piene di grandi quantità di forze armate altamente equipaggiate, queste installazioni sono fortemente difese e richiedono assalti grandi e ben coordinati per avere qualche speranza di catturarle!&lt;br/&gt; &lt;br/&gt;- Torri Radio (TR): Quando sotto controllo nemico, le TR saranno utilizzate per chiamare i rinforzi quando un settore vicino viene attaccato dalle vostre forze. Il tempo di reazione dipenderà dalla distanza tra la torre e il settore. Se conquistate, le torri offriranno utili mappature su movimenti di truppe ostili nelle vicinanze intercettando le loro comunicazioni radio.&lt;br/&gt; &lt;br/&gt;- Città Principali: Ci sono diverse città principali nella regione. Quando sarannno tutte sotto controllo, certamente avremo battuto il nemico in maniera per la quale non riuscirà ristabilire il controllo. Questo è il tuo obiettivo primario.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;Секторы разбиты на 5 различных типов:&lt;br/&gt; &lt;br/&gt;- Точки интереса (PoI): В основном, являются от маленьких до средних по размеру деревни\города. Хотя эти места стратегически не важны, они являются местом проживания граждан региона и имеют ключевое значение для завоевания их доверия.&lt;br/&gt; &lt;br/&gt;- Заводы: Во всем регионе вы найдете гражданские заводы под контролем противника. Данные заводы специализированы на производстве одного из трех ресурсов (Припасы, Боеприпасы и Топливо), но могут быть улучшены для производства всех трех видов ресурсов. Поэтому они являются первой стратегической целью!&lt;br/&gt; &lt;br/&gt;- Военные базы: Базы являются домом для большого количество хорошо экипированных вражеских войск. Данные сооружения очень сильно защищены и потребуют больших и хорошо скоординированных усилий, если вы хотите захватить их. Захват данных баз даст нам возможность мобилизовать более сильные войска в регионе, поэтому они важны для вашего успеха.&lt;br/&gt; &lt;br/&gt;- Радиовышки (RT): Когда под контролем противника, RT будет использоваться для вызова подкреплений, когда соседний сектор атакуют наши собственные силы. Время реакции будет зависеть от расстояния между башней и сектором. Когда под дружественным контролем, башни дадут разведданные о передвижениях войск в окрестностях, перехватив их радиосвязь.&lt;br/&gt; &lt;br/&gt;- Крупные города: В регионе есть несколько крупных городов. Когда все находятся под дружественным контролем, мы, наверняка, отбили врага до такой степени, что он не сможет восстановить контроль. Это ваша основная цель.&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;战区分为5种不同类型：&lt;br/&gt; &lt;br/&gt;- 兴趣点（PoI）：一般都是小、中型村庄/小镇，你可以升级处于己方控制下的每个PoI（在建造完仓储区后），并从三种用于生产军需品和部队的资源类型中选择一项来生产&lt;br/&gt; &lt;br/&gt;- 工厂：敌军控制中的民用工厂散布在地区的各处。由于只需为这些工厂设立仓储区，即可从三种资源中任选其一进行生产， 由此带来战略地位令它们成为了必争之地！&lt;br/&gt; &lt;br/&gt;- 军事基地：有着大量高度武装的敌军力量驻扎地，这类设施防守严密，只有投入同样强大且配合良好的进攻才有可能攻陷它们！&lt;br/&gt; &lt;br/&gt;- 无线电塔（RT）：敌军控制下的RT将会为附近受到我军部队攻击的战区呼叫增援。敌军增援反应时间取决于无线电塔与战区间的距离。友军控制下的无线电塔能够通过通讯监听获取附近敌军部队的动向。&lt;br/&gt; &lt;br/&gt;- 主要城市：地区内有多个主要城市。当所有城市均处于友军控制下时，我们便可以确信敌军已被彻底击溃。这就是你的主要目标。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4526,6 +4527,7 @@
         <Key ID="STR_TUTO_TEXT5">
             <Original>&lt;br/&gt;&lt;br/&gt;In this campaign you have to manage, store and protect three types of resources:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;SUPPLIES:&lt;/t&gt; These are the most essential. Without supplies, you will be unable to deploy additional soldiers or requisition any military hardware. As such, HQ recommends prioritising these first!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;AMMUNITION:&lt;/t&gt; Used to stock armed vehicles such as APCs and MBTs as well as elite (and heavily armed) soldiers.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Every vehicle needs fuel, some being more thirsty than others.&lt;br/&gt; &lt;br/&gt;You may come across all three resources in any sector but for a considerable and constant supply, you must capture Factory sectors! Once captured, factories require a storage area (scroll menu action) and then they can immediately begin producing their intended resource. If you can afford it, any factory can be upgraded to produce the other two resources as well. &lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;In dieser Kampagne müssen Sie drei Arten von Ressourcen verwalten, einlagern und beschützen:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;NACHSCHUB:&lt;/t&gt; Diese sind von essenzieller Bedeutung. Ohne Nachschu können Sie weder Soldaten rekrutieren, noch militärisches Gerät anfordern. Daher empfiehlt HQ diese zu bevorzugen!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Werden für bewaffnete Fahrzeuge wie Spz und Kpz, sowie für Elite (schwerbewaffnete) Soldaten benötigt.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Jedes Fahrzeug benötigt Kraftstoff. Einige sind durstiger, als andere.&lt;br/&gt; &lt;br/&gt;In den Sektoren können Sie durchaus alle drei Arten von Ressourcen finden, aber für einen signifikanten und konstanten Nachschub, müssen Sie PoI und Fabriken einnehmen. Nach Übernahme benötigen beide Lagerflächen (Scroll-Menü) und der PoI benötigt zusätzlich noch ein Fabrikgebäude (wieder Scroll-Menü). Alle drei Arten von Fabriken können in ein und dem selben PoI gebaut werden, jedoch müssen Sie eine erste und einzige Abgabe dafür bereitstellen! Das sind 50 von der Ressource, die nachher von der Fabrik produziert werden soll und je 100 der anderen beiden Ressourcen.&lt;br/&gt;&lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;En esta campaña tendrás que administrar, almacenar y proteger tres tipos de recursos:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;SUMINISTROS:&lt;/t&gt; Estos son los más escenciales. Sin suministros, no podrás desplegar soldados adiciones ni solicitar mejoras militares. Como tal, HQ recomienda priorizar dichos recursos!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;MUNICION:&lt;/t&gt; Se usa para reabastecer vehículos como APCs y Tanques, así como soldados de élite (altamente armados).&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;COMBUSTIBLE:&lt;/t&gt; Cada vehículo necesita combustible, algunos requieren más que otros.&lt;br/&gt; &lt;br/&gt;Quizá te cruces con los 3 tipos de recursos en un sector pero, para tener un fuente considerable y constante de suministros, deberás capturar sectores industriales! Una vez capturadas, las industrias requieren una zona de almacenamiento (acción en el menú escroleable) y después, ellos pueden empezar a productir los recursos deseados inmediatamente. Si puedes costearlo, cualquier industria puede ser mejorada para porducir los otros dos recursos también.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;In questa campagna è necessario gestire, memorizzare e proteggere tre tipi di risorse:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;APPROVVIGIONAMENTI:&lt;/t&gt; Questi sono i più essenziali. Senza approvvigionamenti, non sarete in grado di distribuire soldati o richiedere qualsiasi hardware militare. In quanto tale, HQ raccomanda di dare priorità a queste risorse per prime!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;MUNIZIONI:&lt;/t&gt; Utilizzate per lo stoccaggio di veicoli armati come APC e MBT, nonché soldati di élite (e pesantemente armati).&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;CARBURANTE:&lt;/t&gt; Ogni veicolo ha bisogno di carburante, alcuni hanno più sete di altri.&lt;br/&gt; &lt;br/&gt;Puoi incontrare tutte e tre le risorse in qualsiasi settore, ma per una fornitura considerevole e costante, devi catturare i PDI e le Fabbriche! Una volta catturati, entrambi richiedono un'area di stoccaggio (menu rotellina) e poi un PDI richiederà anche la costruzione di strutture (nuovamente, menu rotellina). Tutte e tre le strutture possono essere costruite in qualsiasi PDI ma dovete fornire un costo iniziale per impostare queste strutture! Costo 50 della risorsa specifica e 100 delle altre due.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;В этой кампании вы должны управлять, хранить и защищать три типа ресурсов:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;ПРИПАСЫ:&lt;/t&gt; Это самое важное. Без припасов вы не сможете развернуть дополнительных солдат или реквизировать любую военную технику. Таким образом, HQ рекомендует расставить приоритеты первым!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;БОЕПРИПАСЫ:&lt;/t&gt; Используется для оснащения вооруженных автомобилей, а также элитных (и хорошо вооруженных) солдат.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; Каждому транспортному средству нужно топливо,некоторым требуется больше, чем другим.&lt;br/&gt; &lt;br/&gt;Вы можете встретить все три ресурса в любом секторе, но для значительного и постоянного снабжения вы должны захватывать Заводы! После захвата, заводы требуют склада (действие меню прокрутки) и тогда они смогут приступить к производству ресурсов. Вы также можете улучшить заводы для производства двух остальных ресурсов.&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;这个战役中你必须管理、囤积并保护三种资源：&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;补给：&lt;/t&gt;最关键的物资。没有补给，你将无法部署更多步兵或军事资源。因此，指挥部建议优先谋取此类资源！&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;弹药：&lt;/t&gt;用于采购步战车（APC）和主战坦克（MBT）等装甲载具，亦用于武装精英（且重装）士兵。&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;燃料：&lt;/t&gt;载具离不了燃料，更不用说胃口极大的那些。&lt;br/&gt; &lt;br/&gt;你能在任意战区中找到以上三种资源，但想要稳定而高效的补给就需要你去占领PoI和工厂战区了！两者在占领后都需要一个仓储区（用滚轮动作菜单建立），而PoI还需要建立额外资源生产设施（依旧是滚轮动作菜单）。一个PoI能够同时容纳全部三种设施，但你必须先行投资才能将这些设施建立起来！建造设施需要消耗50点指定资源以及100点另外两种资源。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4549,6 +4551,7 @@
         <Key ID="STR_TUTO_TEXT6">
             <Original>&lt;br/&gt;&lt;br/&gt;The enemy won't let you liberate all of its brand new territory without a reaction. When you begin the campaign, hostile forces will only be composed of the garrisons inside military bases. However as you become more threatening by liberating more and more sectors, they will start calling in more reinforcements and equipment to counter you.&lt;br/&gt; &lt;br/&gt;To limit the enemies operational capabilities, you will have to fulfill secondary objectives that will consist of destroying their logistical bases and raiding their convoys. This is not required to win the campaign but if you ignore the alert level for too long, you're in for quite a lot of resistance.&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Der Feind wird nicht untätig dabei zusehen, wie wir alles in seinem brandneuen Territorium nach und nach befreien. Zu Beginn der Kampagne setzen sich die Feindkräfte lediglich aus den Garnisonen innerhalb der Militär Basen zusammen. Wie auch immer, sobald wir für den Feind mehr und mehr zu einer Bedrohnung werden, während wir mehr und mehr Sektoren einnehmen, wird er anfangen, Unterstützung und Ausrüstung anzufordern, um uns zu bekämpfen.&lt;br/&gt; &lt;br/&gt;Um den Feind in seinem militärischen Handlungsspielraum einzuschränken, müssen Sie Sekundärziele erfüllen, die aus Suchen und Zerstören von Logistic Basen, Konvoiüberfällen und Suchen und Retten von Kriegsgefangenen bestehen. Dies ist zwar keine Bedingung für den Erfolg der Kampagne, aber wenn Sie das Bedrohungsniveau zu lange ignorieren, stoßen Sie bald auf recht viel Widerstand.&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;El enemigo no te dejará liberar todos sus territorios recién capturados sin una reacción. Cuando comiences la campaña, las fuerzas hostiles estarán conformadas solamente por tropas dentro de bases militares. Sin embargo, conforme te vuelves una amenaza mayor liberando más y más sectores, los enemigos comenzarán a llamar refuerzos y equipo para contraatacar.&lt;br/&gt; &lt;br/&gt;Para limitar la habilidad operacional de los enemigos, tendrás cumplir misiones secundarias que consisten en destruir sus bases logísticas y atacar sus convoys. Esto no es necesario para ganar la campaña pero si ignoras la alerta por mucho tiempo, espera una resistencia enemiga difícil de erradicar.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;Il nemico non ti permetterà di liberare tutto il suo nuovo territorio senza una reazione. Quando inizierai la campagna, le forze ostili saranno composte solo dalle guarnigioni all'interno delle basi militari. Tuttavia, quando diventerete più minacciosi , inizieranno a chiamare più rinforzi e attrezzature per contrastarvi.&lt;br/&gt; &lt;br/&gt;Per limitare la capacità offensiva dei nemici, dovrete compiere missioni secondarie che consistono nel distruggere le basi logistiche e raidare i loro convogli. Questo non è richiesto per vincere la campagna, ma se ignorate troppo il livello di allarta, sarate pronti a contrastare la risposta?.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;OPFOR не будут сидеть сложа руки, пока вы будете освобождать все сектора, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt;Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;敌人不可能拱手让出刚刚获得的新领地。战役刚开始时，敌军部队仅由本地军事基地驻扎部队构成，但战区解放的增多你产生的威胁也将逐渐加大，因此他们会开始增派更多、更好的增援和装备来对付你。&lt;br/&gt; &lt;br/&gt;要想遏制住敌人的作战能力，你必须完成摧毁对方后勤基地和劫掠对方补给车队的次要任务。这并非战役的胜利条件，但忽视警戒等级的提高将会大大增加敌人抵抗的强度。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4572,6 +4575,7 @@
         <Key ID="STR_TUTO_TEXT7">
             <Original>&lt;br/&gt;&lt;br/&gt;To help you succeed in your endeavors, you have a construction capability at every FOB that allows you to deploy infantry, vehicles, defenses, fortifications and so on to your specific location.&lt;br/&gt; &lt;br/&gt;Although infantry, vehicles and defenses will cost resources, fortifications such as structures, sandbags and walls will not.&lt;br/&gt; &lt;br/&gt;The construction system will be available when you are within 100 meters of any FOB.&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Hilfe zum Erfolg Ihrer Bemühungen bieten die Bauoptionen an den einzelnen FOBs, die es Ihnen ermöglichen, Infantrie, Fahrzeuge, Verteidigungsanlagen, Befestigungsanlagen und so weiter, an der jeweiligen Position zu bauen.&lt;br/&gt; &lt;br/&gt;Obgleich Infantrie, Fahrzeuge und Verteidigungsanlagen Ressourcen benötigen, braucht man zum Bau von Befestigungsanlagen wie Gebäuden, Sandsäcken und Wänden keine.&lt;br/&gt; &lt;br/&gt;Die Bauoptionen werden in einem Bereich vom 100 Metern um eine FOB herum verfügbar.&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;Para ayudarte a tener éxito en tu misión, tienes la capacidad de construcción en cada FOB el cual te permite desplegar infantería, vehículos, defensas y fortificaciones en ubicaciones específicas.&lt;br/&gt; &lt;br/&gt;Aunque la infantería, vehículos y defensas cuestan recursos, fortificaciones y estructuras, parapetos y muros no.&lt;br/&gt; &lt;br/&gt;El sistema de construcción estará disponible cuando estés dentro de los 100 metros de cualquier FOB.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;Per aiutarti a riuscire nella tua missione, ogni FOB ti permette di creare fanteria, veicoli, difese, fortificazioni e così via nella posizione specifica.&lt;br/&gt; &lt;br/&gt;Anche se la fanteria, i veicoli e le difese costano risorse, le fortificazioni come strutture, sandbags e muri non lo faranno.&lt;br/&gt; &lt;br/&gt;Il sistema di costruzione sarà disponibile quando si è a 100 metri da qualsiasi FOB.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;Чтобы помочь вам добиться успеха в ваших начинаниях, у вас есть возможность строительства на каждом FOB, что позволяет вам развертывать пехоту, транспортные средства, оборонительные сооружения, укрепления и т.д. В вашем конкретном месте.&lt;br/&gt; &lt;br/&gt;Хотя пехота, транспортные средства и средства защиты будут стоить ресурсов, тогда как укрепления, конструкции, мешки с песком и стены бесплатны.&lt;br/&gt; &lt;br/&gt;Система строительства будет доступна, если вы находитесь не дальше чем 100 метров от любого FOB.&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;为了帮助你走向成功，每个前哨都拥有能让你在限定范围内部署步兵、载具、防御、工事等军备的建造能力。&lt;br/&gt; &lt;br/&gt;步兵、载具和防御设备需要消耗资源，但建筑、沙袋、墙体等工事是完全免费的。&lt;br/&gt; &lt;br/&gt;你可以在前哨100米半径范围内启用建造系统。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4595,6 +4599,7 @@
         <Key ID="STR_TUTO_TEXT8">
             <Original>&lt;br/&gt;&lt;br/&gt;To build a brand new FOB, go to the construction menu and then the logistics tab and build a FOB container or a FOB truck (the same thing, only with wheels). Then you can position the FOB container/truck where you want to deploy your shiny new FOB. However, be aware that you can't build a FOB within 1km of your starting position, within 300m of any sector, or within 2km of any other FOB.&lt;br/&gt; &lt;br/&gt;That would simply be redundant!&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Um eine brandneue FOB zu bauen, öffnen Sie das Baumenü und unter dem Reiter Logistik bauen Sie einen FOB Container oder einen FOB Lastwagen (dasselbe, bloß mit Rädern). Dann können Sie den FOB Container/Lastwagen an die Position Ihrer Wahl bringen und Ihre niegelnagelneue FOB aufbauen. Beachten Sie, das Sie keine FOB innerhalb von 1km von der Startposition, von 300m von einem Sektor und von 2km von einer anderen FOB aufbauen können.&lt;br/&gt; &lt;br/&gt;Das wäre einfach unnötig!&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;Para construir un nuevo FOB, ve al menú de construcción y luego a la sección de logísitica, finalmente a "Construir FOB", "Contenedor de FOB" o "Camión de FOB" (lo mismo pero con ruedas). Despupes puedes posicionar el contenedor/camión de FOB en la posición donde quieras desplegar tu flamante FOB nuevo. Sin embargo, considera que no puedes construir un FOB dentro de 1km de tu posición inicial, ni dentro de 300m alrededor de cualquier sector o 2km alrededor de cualquier otro FOB.&lt;br/&gt; &lt;br/&gt;Eso sería simplemente redundante!&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;Per costruire una nuova FOB, vai nel menu di costruzione e poi alla scheda logistica e costruisci un contenitore FOB o un camion FOB (la stessa cosa, solo con ruote). Quindi è possibile posizionare il contenitore / camion FOB. Tuttavia, tenere presente che non è possibile costruire un FOB entro 1 km dalla posizione iniziale, ed entro 300 metri da qualsiasi settore, o entro 2 km da qualsiasi altra FOB.&lt;br/&gt; &lt;br/&gt;Sarebbe semplicemente ridondante!&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;Чтобы построить совершенно новый FOB, перейдите в меню постройки, а затем вкладку логистики и постройте контейнер FOB или грузовик FOB (то же самое, только с колесами). Затем вы можете разместить контейнер / грузовик FOB, где вы хотите развернуть свой новый новый FOB. Однако имейте в виду, что вы не можете построить FOB в пределах 1 км от начальной позиции, в пределах 300 м от любого сектора или в пределах 2 км от любого другого FOB.&lt;br/&gt; &lt;br/&gt;Это было бы просто излишним!&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;要建立一个新前哨，打开建造菜单的后勤面板并建造一个前哨部署柜或前哨部署车（一样的东西，只是多了轮子罢了）。然后你就可以将前哨部署柜/车安置到想部署的地方了。注意，你不能在距离出发点1公里内、战区300米内和其它前哨2公里内部署前哨。&lt;br/&gt; &lt;br/&gt;因为搞那么多前哨实在太多余了！&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4618,6 +4623,7 @@
         <Key ID="STR_TUTO_TEXT9">
             <Original>&lt;br/&gt;&lt;br/&gt;When you capture sectors, sometimes the few hostiles forces remaining will surrender. You can then capture those prisoners and take them back to a nearby FOB to be interrogated.&lt;br/&gt; &lt;br/&gt;That interrogation, executed in the utmost respect of the Geneva Convention, will allow you to obtain information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;After going there you will need to find the exact position of your target, then use any means at your disposal to complete your objective. Succeeding at this task will be rewarded, reducing the alert level consequently and with it the efficiency of all hostile forces.&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Nach Befreiung eines Sektors, werden sich manchmal ein paar der verbliebenen Feindkräfte ergeben. Sie können sie gefangen nehmen und zu einer nahegelegenen FOB bringen, um sie zu verhören.&lt;br/&gt; &lt;br/&gt;Dieses Verhör wird unter höchster Rücksichtnahme auf die Genfer Konventionen durchgeführt und bringt Ihnen präzise Informationen, die dazu genutzt werden können, um die ungefähre Lage einer feindlichen Logistik Basis zu bestimmen, feindliche Konvois aufzuspühren oder auch die ungefähre Position von Kriegsgefangenen zu ermitteln.&lt;br/&gt; &lt;br/&gt;Wenn sie dort angekommen sind, müssen Sie die exakte Position Ihres Ziels herausfinden, dann setzen Sie alle Ihnen zur Verfügung stehenden Mittel ein, um das Einsatzziel zu erreichen. Ein erfolgreicher Einsatz wird mit Verringerung des Bedrohungsniveaus und damit der Effektivität der feindlichen Streitkräfte belohnt.&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;Cuando capturas sectores, a veces las pocas fuerzas enemigas terminarán por rendirse. Entonces puedes capturar a dichos prisioneros y traerlos de vuelta al FOB más cercano para ser interrogados.&lt;br/&gt; &lt;br/&gt;Esa interrogación, ejecutada al pie de la Convención de Ginebra, te otorgará información que puede ser usada para revelar la posición aproximada de bases logísticas enemigas, convos enemigos o misiones de búsqueda y rescate.&lt;br/&gt; &lt;br/&gt;Luego de ir a la ubicación, deberás encontrar la posición exacta de tu objetivo y hacer uso de cualquier medio a tu disposición para cumplirlo. Si tienes éxito en la tarea la recompenza será la reducción del nivel de alerta en la región, consecuentemente la reducción de la eficiencia de las tropas enemigas.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;Quando catturi i settori, talvolta le forze ostili che restano si arrenderanno. Quindi puoi catturare quei prigionieri e riportarli in una FOB vicina per interrogarli.&lt;br/&gt; &lt;br/&gt;Questa interrogazione, eseguita nel più grande rispetto della Convenzione di Ginevra, ti permetterà di ottenere informazioni precise che possano essere utilizzate per rivelare la posizione rudimentale di una base logistica nemica, di un convoglio nemico o di un salvataggio.&lt;br/&gt; &lt;br/&gt;Dopo essere andato lì dovrai trovare la posizione esatta del tuo bersaglio, quindi utilizzare qualsiasi mezzo a tua disposizione per completare il tuo obiettivo. Eseguire questo compito sarà premiato, riducendo così il livello di allarme e con essa l'efficienza di tutte le forze ostili.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;Когда вы захватываете сектора, иногда несколько оставшихся сил противника будут сдаваться. Затем вы можете захватить этих пленных и отвезти их в соседний FOB для допроса.&lt;br/&gt; &lt;br/&gt;Этот допрос, выполненный в полном уважении Женевской конвенции, позволит вам получить точную информацию, которая может быть использована для выявления грубой позиции базы материально-технического обеспечения противника, конвоя противника или дружественного поиска и спасения.&lt;br/&gt; &lt;br/&gt;Побывав там, вам нужно будет найти точное положение вашей цели, а затем использовать любые имеющиеся в вашем распоряжении средства для достижения своей цели. Достижение этой цели будет вознаграждено, следовательно, будет уменьшаться уровень оповещения, а вместе с ним и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;有时候当你占领战区时，一些敌军残部会选择投降。你可以将他们抓到就近的前哨去审问。&lt;br/&gt; &lt;br/&gt;这种在完全遵照日内瓦公约的情况下进行的审问，能为你提供用于揭示敌军后勤基地大致位置、补给车队或友军搜索与营救任务的准确情报。&lt;br/&gt; &lt;br/&gt;之后你就需要找到目标的准确位置，并不惜一切代价完成目标。任务的成功带来的奖励将导致警戒等级下降，并进而削弱所有敌军部队的战斗力。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4641,6 +4647,7 @@
         <Key ID="STR_TUTO_TEXT10">
             <Original>&lt;br/&gt;&lt;br/&gt;When a player uses the Commander role, they get access to the Zeus interface by pressing the corresponding key (Y by default). This interface allows the commanding of friendly forces in 3D or map view.&lt;br/&gt; &lt;br/&gt;Moreover the commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads.&lt;br/&gt; &lt;br/&gt;This role is now mandatory, as it provides direct access to the management of production sectors and AI logistics. Given that you are positioned by a FOB, you will see the options "Production Settings" and "Logistic Overview".&lt;br/&gt; &lt;br/&gt; The first enables the ability to decide which Factory produces which specific resources, as well as a detailed current overview.&lt;br/&gt; &lt;br/&gt; The latter allows you to command an AI logitical convoy, where you may "Add" logistical groups, purchase any amount of trucks per group and command them to move specific amounts of resources across the region for you.&lt;br/&gt; &lt;br/&gt;</Original>
             <German>&lt;br/&gt;&lt;br/&gt;Wenn ein Spieler die Rolle des Commanders übernimmt, bekommt er spezifischen Zugang zum Zeus-Interface, wenn er die entsprechende Taste dafür drückt (default Z). Dieses Interface erlaubt das Kommandieren befreundeter Einheiten in der 3D- und Kartenansicht.&lt;br/&gt; &lt;br/&gt;Darüber hinaus hat der Commander erweiterte Bauoptionen, die es ihm ermöglichen, Fahrzeuge mit Besatzung oder auch komplette vorgefertigte Squads zu bauen.&lt;br/&gt; &lt;br/&gt;Die Rolle des Commanders ist nun zwingend erforderlich, da sie direkten Zugang zum Management von Produktionssektoren und KI-Logistik bietet. Dafür hat man an einer FOB die Optionen "Produktionseinstellungen" und "Logistikübersicht".&lt;br/&gt; &lt;br/&gt; Ersteres gewährt sowohl die Möglichkeit zu entscheiden, welcher PoI oder welche Fabrik welche Ressourcen produzieren soll, als auch einen detaillierten aktuellen Überblick.&lt;br/&gt; &lt;br/&gt; Letzteres erlaubt es, einen KI-Logistik-Konvoi zu befehligen, wobei man Logistik-Gruppen hinzufügen, eine beliebige Anzahl an Lkw pro Gruppe kaufen und diese dann befehligen kann, eine bestimmte Anzahl an Ressourcen quer über die Gesammte Region zu verfahren.&lt;br/&gt; &lt;br/&gt;</German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt;Cuando un jugador usa el rol de Comandante, obtienen acceso a la interface de Zeus presionando la tecla correspondiente (Y por defecto). Esta interface permite el control de tropas amigas en un entorno 3D o por medio del mapa.&lt;br/&gt; &lt;br/&gt;Además, el comandante obtiene opciones de construccion adicionales, las cuales le permiten obtener vehículos tripulados o escuadrones pre-fabricados.&lt;br/&gt; &lt;br/&gt;Este rol es mandatorio, ya que provee acceso directo al manejo de la producción en los secotres y lógistica de AI. Dado que estarás posicionado por un FOB, podrás ver opciones de "Opciones de producción" y "Resumen de logística".&lt;br/&gt; &lt;br/&gt; La primera opción permite que decidas que Indsutria produce que recurso(s), así como el detalle actual de la Industria.&lt;br/&gt; &lt;br/&gt; La segunda opción te permite comandar un convoy logísitico de AI, donde puedes "Agregar" grupos logísticos, comprar camiones por grupo y comandarlos a mover específicos recursos a través de la región.&lt;br/&gt; &lt;br/&gt;</Spanish>
             <Italian>&lt;br/&gt;&lt;br/&gt;Quando un giocatore usa il ruolo del comandante, ottierrà l'accesso all'interfaccia di Zeus premendo il tasto corrispondente (Y per impostazione predefinita). Questa interfaccia consente il comando di forze amiche in visualizzazione 3D o mappa.&lt;br/&gt; &lt;br/&gt;Inoltre il comandante ottiene ulteriori opzioni di costruzione che consentiranno loro di ottenere veicoli con equipaggio o intere squadre pre-fatte.&lt;br/&gt; &lt;br/&gt;Questo ruolo è ora obbligatorio in quanto fornisce accesso diretto alla gestione dei settori produttivi e alla logistica AI. Dato che sei posizionato da una FOB, vedrai le opzioni "Impostazioni di produzione" e "Panoramica logistica".&lt;br/&gt; &lt;br/&gt; Il primo consente di decidere quali PDI o Fabbriche producono  risorse specifiche, così come una panoramica corrente dettagliata.&lt;br/&gt; &lt;br/&gt; Quest'ultimo ti permette di comandare un convoglio logistico di AI, dove puoi "aggiungere" gruppi logistici, acquistare qualsiasi quantità di camion per gruppo e mandarli a spostare determinate risorse in tutta la regione per te.&lt;br/&gt; &lt;br/&gt;</Italian>
             <Russian>&lt;br/&gt;&lt;br/&gt;Когда игрок использует роль Commander, он получает специальный доступ к интерфейсу Zeus, нажав соответствующую клавишу (по умолчанию Y). Этот интерфейс позволяет управлять дружественными силами в трехмерном режиме или в режиме карты. &lt;br/&gt; &lt;br/&gt;Кроме того, командир получает дополнительные варианты сборки, которые позволят ему создавать технику с экипажем или готовые отряды. &lt;br/&gt; &lt;br/&gt;Эта роль в настоящее время является обязательной, поскольку она обеспечивает прямой доступ к управлению производственными секторами и логистикой ИИ. Учитывая, что вы позиционируетесь по FOB, вы увидите варианты «Настройки производства» и «Обзор логистики». &lt;br/&gt; &lt;br/&gt; Первое позволяет определить, какой PoI или Завод создает конкретные ресурсы, а также подробный текущий обзор.&lt;br/&gt; &lt;br/&gt; Последний позволяет вам управлять логическим конвоем AI, в котором вы можете «Добавить» логистические группы, приобрести любое количество грузовиков на группу и приказать им перемещать определенные объемы ресурсов в регионе для вас. &lt;br/&gt; &lt;br/&gt;</Russian>
             <Chinesesimp>&lt;br/&gt;&lt;br/&gt;当一名玩家扮演指挥官角色时，他将会得到按指定按键（默认为Y）打开宙斯（Zeus）界面的权限。该界面让玩家可以在3D或地图视角中指挥友军部队。&lt;br/&gt; &lt;br/&gt;除此以外，指挥官还有额外的建造选项，让他可以招募有乘员的载具或一整个预设的AI班组。&lt;br/&gt; &lt;br/&gt;现阶段由于该角色有着战区产出管理和AI后勤的直接权限，因此必须有玩家进行操作。当处于前哨范围内时，你将会看到“产出设置”和“后勤总览”两个选项。&lt;br/&gt; &lt;br/&gt;前者有着指定PoI和工厂资源产出类型，以及查看总览细目的功能。&lt;br/&gt; &lt;br/&gt;后者则让你能够指挥AI后勤车队，其中你可以“添加”后勤组、为后勤组购买任意数量的卡车，以及指挥他们在这个地区中往来运输指定资源。&lt;br/&gt; &lt;br/&gt;</Chinesesimp>
@@ -4651,6 +4658,7 @@
         <Key ID="STR_PARAMS_ARSENALUSEPRESET">
             <Original>Arsenal mode</Original>
             <German>Arsenalmodus</German>
+            <Spanish>Modo Arsenal</Spanish>
             <Russian>Режим арсенала</Russian>
             <Italian>Modalità Arsenale</Italian>
             <Chinesesimp>军火库模式</Chinesesimp>
@@ -4662,6 +4670,7 @@
         <Key ID="STR_PARAMS_NORESTRICTIONS">
             <Original>No restrictions</Original>
             <German>Keine Einschränkungen</German>
+            <Spanish>Sin restricciones</Spanish>
             <Russian>Без ограничений</Russian>
             <Italian>Senza Restrizioni</Italian>
             <Chinesesimp>无限制</Chinesesimp>
@@ -4673,6 +4682,7 @@
         <Key ID="STR_PARAMS_USEPRESET">
             <Original>Use preset from config</Original>
             <German>Benutze Preset aus Konfiguration</German>
+            <Spanish>Usar pre-definición desde configuracion</Spanish>
             <Russian>Использовать предустановки из конфигурации</Russian>
             <Italian>Usa il file config.sqf</Italian>
             <Chinesesimp>使用配置文件中的预设内容</Chinesesimp>
@@ -4684,6 +4694,7 @@
         <Key ID="STR_ACTION_CRATE_PUSH">
             <Original>-- PUSH CRATE</Original>
             <German>-- KISTE SCHIEBEN</German>
+            <Spanish>-- EMPUJAR CAJA</Spanish>
             <Russian>-- ТОЛКНУТЬ ЯЩИК</Russian>
             <Italian>-- SPINGI CASSA</Italian>
             <Chinesesimp>-- 推货箱</Chinesesimp>
@@ -4695,6 +4706,7 @@
         <Key ID="STR_ACTION_SORT_STORAGE">
             <Original>-- STACK AND SORT</Original>
             <German>-- STAPELN UND SORTIEREN</German>
+            <Spanish>-- APILAR Y ORDENAR</Spanish>
             <Russian>-- СОБРАТЬ И ОТСОРТИРОВАТЬ</Russian>
             <Italian>-- IMPILA E ORDINA</Italian>
             <Chinesesimp>-- 排列并分类</Chinesesimp>
@@ -4707,6 +4719,7 @@
         <Key ID="STR_PARAMS_SUPPMOD">
             <Original>BI Support Module System access</Original>
             <German>BI Support Module System Zugriff</German>
+            <Spanish>Acceso a módulo de Soporte de BI</Spanish>
             <Italian>Accesso Modulo Di Supporto BI</Italian>
             <Chinesesimp>BI支援模块系统权限</Chinesesimp>
             <Chinese>BI支援模塊系統權限</Chinese>
@@ -4716,6 +4729,7 @@
         <Key ID="STR_PARAMS_COMMANDER">
             <Original>Commander only</Original>
             <German>Nur Kommandant</German>
+            <Spanish>Solo comandante</Spanish>
             <Russian>Только командир</Russian>
             <Italian>Solo per il Comandante</Italian>
             <Chinesesimp>仅指挥官</Chinesesimp>
@@ -4727,6 +4741,7 @@
         <Key ID="STR_PARAMS_WHITELISTONLY">
             <Original>Whitelisted only</Original>
             <German>Nur Whitelist</German>
+            <Spanish>Solo permitidos en la lista de permisos</Spanish>
             <Russian>Только из Whitelist</Russian>
             <Italian>Con Whitelist</Italian>
             <Chinesesimp>仅白名单</Chinesesimp>
@@ -4738,6 +4753,7 @@
         <Key ID="STR_PARAMS_EVERYONE">
             <Original>Everyone</Original>
             <German>Jeder</German>
+            <Spanish>Todos</Spanish>
             <Russian>Все</Russian>
             <Italian>Tutti</Italian>
             <Chinesesimp>所有人</Chinesesimp>
@@ -4749,6 +4765,7 @@
         <Key ID="STR_GREUH_EXTENDED_OPTIONS_ACTIONMENU">
             <Original>-- Extended Options --</Original>
             <German>-- Erweiterte Optionen --</German>
+            <Spanish>-- Opciones extendidas --</Spanish>
             <Russian>-- Расширенные Опции --</Russian>
             <Italian>-- Opzioni Avanzate --</Italian>
             <Chinesesimp>-- 扩展选项 --</Chinesesimp>
@@ -4760,6 +4777,7 @@
         <Key ID="STR_GREUH_EXTENDED_OPTIONS">
             <Original>Extended Options</Original>
             <German>Erweiterte Optionen</German>
+            <Spanish>Opciones Extendidas</Spanish>
             <Russian>Расширенные Опции</Russian>
             <Italian>Opzioni Avanzate</Italian>
             <Chinesesimp>扩展选项</Chinesesimp>
@@ -4771,6 +4789,7 @@
         <Key ID="STR_GREUH_DISABLED">
             <Original>- disabled -</Original>
             <German>- deaktiviert -</German>
+            <Spanish>- desabilitado -</Spanish>
             <Russian>- выключен -</Russian>
             <Italian>- disabilitato -</Italian>
             <Chinesesimp>- 已禁用 -</Chinesesimp>
@@ -4782,6 +4801,7 @@
         <Key ID="STR_GREUH_SQUAD_MANAGEMENT">
             <Original>Squad Management</Original>
             <German>Truppmanagement</German>
+            <Spanish>Manejo de escuadras</Spanish>
             <Russian>Управление Отрядами</Russian>
             <Italian>Gestione Squadra</Italian>
             <Chinesesimp>班组管理</Chinesesimp>
@@ -4793,6 +4813,7 @@
         <Key ID="STR_GREUH_JOIN">
             <Original>Join</Original>
             <German>Beitreten</German>
+            <Spanish>Unirse</Spanish>
             <Russian>Войти</Russian>
             <Italian>Unisciti</Italian>
             <Chinesesimp>加入</Chinesesimp>
@@ -4804,6 +4825,7 @@
         <Key ID="STR_GREUH_CREATE">
             <Original>Create</Original>
             <German>Erstellen</German>
+            <Spanish>Crear</Spanish>
             <Russian>Создать</Russian>
             <Italian>Crea</Italian>
             <Chinesesimp>创建</Chinesesimp>
@@ -4815,6 +4837,7 @@
         <Key ID="STR_GREUH_RENAME">
             <Original>Rename</Original>
             <German>Umbenennen</German>
+            <Spanish>Renombrar</Spanish>
             <Russian>Переим.</Russian>
             <Italian>Rinomina</Italian>
             <Chinesesimp>重命名</Chinesesimp>
@@ -4826,6 +4849,7 @@
         <Key ID="STR_GREUH_LEADER">
             <Original>Leader</Original>
             <German>Anführer</German>
+            <Spanish>Lider</Spanish>
             <Russian>Лидер</Russian>
             <Italian>Capo Squadra</Italian>
             <Chinesesimp>班长</Chinesesimp>
@@ -4837,6 +4861,7 @@
         <Key ID="STR_GREUH_CANCEL">
             <Original>Cancel</Original>
             <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
             <Russian>Отмена</Russian>
             <Italian>Cancella</Italian>
             <Chinesesimp>取消</Chinesesimp>
@@ -4848,6 +4873,7 @@
         <Key ID="STR_GREUH_CHOOSE">
             <Original>Choose</Original>
             <German>Wählen</German>
+            <Spanish>Elegir</Spanish>
             <Russian>Выбрать</Russian>
             <Italian>Scegli</Italian>
             <Chinesesimp>选择</Chinesesimp>
@@ -4859,6 +4885,7 @@
         <Key ID="STR_GREUH_PLATOON_SQUAD_AWARENESS">
             <Original>Platoon and Squad Awareness</Original>
             <German>Sichthilfen und Kartenmarkierungen</German>
+            <Spanish>Mostrar ubicación de Pelotón y Escuadra en el mapa</Spanish>
             <Russian>Информирование о Взводах и Группах</Russian>
             <Italian>Indicatori di Mappa</Italian>
             <Chinesesimp>班排警戒</Chinesesimp>
@@ -4870,6 +4897,7 @@
         <Key ID="STR_GREUH_SHOW_PLATOON_OVERLAY">
             <Original>Show platoon overlay:</Original>
             <German>Platoon Overlay:</German>
+            <Spanish>Indicador de pelotón</Spanish>
             <Russian>Показ. оверлей взводов:</Russian>
             <Italian>Indicatore Plotone:</Italian>
             <Chinesesimp>显示排界面：</Chinesesimp>
@@ -4881,6 +4909,7 @@
         <Key ID="STR_GREUH_ACTIVE">
             <Original>active</Original>
             <German>aktiv</German>
+            <Spanish>activo</Spanish>
             <Russian>активно</Russian>
             <Italian>attivo</Italian>
             <Chinesesimp>启用</Chinesesimp>
@@ -4892,6 +4921,7 @@
         <Key ID="STR_GREUH_SHOW_PLAYER_NAMETAGS">
             <Original>Show player nametags:</Original>
             <German>Spielernamen:</German>
+            <Spanish>Mostrar nombres de jugadores</Spanish>
             <Russian>Показ. имена игроков:</Russian>
             <Italian>Indicatore Nomi:</Italian>
             <Chinesesimp>显示玩家铭牌：</Chinesesimp>
@@ -4903,6 +4933,7 @@
         <Key ID="STR_GREUH_YES">
             <Original>Yes</Original>
             <German>Ja</German>
+            <Spanish>Sí</Spanish>
             <Russian>Да</Russian>
             <Italian>Si</Italian>
             <Chinesesimp>是</Chinesesimp>
@@ -4914,6 +4945,7 @@
         <Key ID="STR_GREUH_NO">
             <Original>No</Original>
             <German>Nein</German>
+            <Spanish>No</Spanish>
             <Russian>Нет</Russian>
             <Italian>No</Italian>
             <Chinesesimp>否</Chinesesimp>
@@ -4925,6 +4957,7 @@
         <Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE">
             <Original>Adjust View Distance</Original>
             <German>Sichtweite ändern</German>
+            <Spanish>Ajustar distancia de visión</Spanish>
             <Russian>Настройка Дистанции Прорисовки</Russian>
             <Italian>Aggiusta Distanza Visiva</Italian>
             <Chinesesimp>调整视距</Chinesesimp>
@@ -4936,6 +4969,7 @@
         <Key ID="STR_GREUH_VIEW_DISTANCE">
             <Original>View Distance</Original>
             <German>Sichtweite</German>
+            <Spanish>Distancia de Visión</Spanish>
             <Russian>Дистанции Прорисовки</Russian>
             <Italian>Distanza Visuale</Italian>
             <Chinesesimp>视野距离</Chinesesimp>
@@ -4947,6 +4981,7 @@
         <Key ID="STR_GREUH_INFANTRY">
             <Original>Infantry</Original>
             <German>Infanterie</German>
+            <Spanish>Infantería</Spanish>
             <Russian>Пехота</Russian>
             <Italian>Fanteria</Italian>
             <Chinesesimp>步兵</Chinesesimp>
@@ -4958,6 +4993,7 @@
         <Key ID="STR_GREUH_VEHICLES">
             <Original>Vehicles</Original>
             <German>Fahrzeuge</German>
+            <Spanish>Vehículos</Spanish>
             <Russian>Транспорт</Russian>
             <Italian>Veicoli</Italian>
             <Chinesesimp>载具</Chinesesimp>
@@ -4969,6 +5005,7 @@
         <Key ID="STR_GREUH_OBJECTS">
             <Original>Objects</Original>
             <German>Objekte</German>
+            <Spanish>Objetos</Spanish>
             <Russian>Объекты</Russian>
             <Italian>Oggetti</Italian>
             <Chinesesimp>物体</Chinesesimp>
@@ -4980,6 +5017,7 @@
         <Key ID="STR_GREUH_ADJUST_VIEW_DISTANCE_TO_KEEP_FPS_ABOVE">
             <Original>Adjust view distance to keep FPS above</Original>
             <German>Automatische Sichtweite für FPS über</German>
+            <Spanish>Ajustar distancia de visión para mantener FPS arriba de</Spanish>
             <Russian>Настроить дист. прорисовки для FPS более</Russian>
             <Italian>Aggiusta distanza in base agli FPS</Italian>
             <Chinesesimp>动态调整视距令FPS高于</Chinesesimp>
@@ -4991,6 +5029,7 @@
         <Key ID="STR_GREUH_ADJUST_TERRAIN_DETAILS">
             <Original>Adjust Terrain Details</Original>
             <German>Landschaftdetails</German>
+            <Spanish>Ajustar detalle de terreno</Spanish>
             <Russian>Настройка Детализации Земли</Russian>
             <Italian>Aggiusta Dettagli Terreno</Italian>
             <Chinesesimp>调整地形细节</Chinesesimp>
@@ -5002,6 +5041,7 @@
         <Key ID="STR_GREUH_VERY_LOW">
             <Original>Very Low</Original>
             <German>Sehr niedrig</German>
+            <Spanish>Muy bajo</Spanish>
             <Russian>Очень низко</Russian>
             <Italian>Molto Basso</Italian>
             <Chinesesimp>极低</Chinesesimp>
@@ -5013,6 +5053,7 @@
         <Key ID="STR_GREUH_LOW">
             <Original>Low</Original>
             <German>Niedrig</German>
+            <Spanish>Bajo</Spanish>
             <Russian>Низко</Russian>
             <Italian>Basso</Italian>
             <Chinesesimp>低</Chinesesimp>
@@ -5024,6 +5065,7 @@
         <Key ID="STR_GREUH_NORMAL">
             <Original>Normal</Original>
             <German>Normal</German>
+            <Spanish>Normal</Spanish>
             <Russian>Нормально</Russian>
             <Italian>Normale</Italian>
             <Chinesesimp>正常</Chinesesimp>
@@ -5035,6 +5077,7 @@
         <Key ID="STR_GREUH_HIGH">
             <Original>High</Original>
             <German>Hoch</German>
+            <Spanish>Alto</Spanish>
             <Russian>Высоко</Russian>
             <Italian>Alto</Italian>
             <Chinesesimp>高</Chinesesimp>
@@ -5046,6 +5089,7 @@
         <Key ID="STR_GREUH_SHOW_TEAMMATES_ON_MAP">
             <Original>Show teammates on map:</Original>
             <German>Truppmitglieder auf Karte:</German>
+            <Spanish>Mostrar compañeros en el mapa:</Spanish>
             <Russian>Отобр. напарников на карте:</Russian>
             <Italian>Mostra compagni in mappa:</Italian>
             <Chinesesimp>在地图上显示友军：</Chinesesimp>
@@ -5057,6 +5101,7 @@
         <Key ID="STR_GREUH_INVEHICLE_SOUND_VOLUME">
             <Original>In-Vehicle Sound Volume</Original>
             <German>Fahrzeug Innenlautstärke</German>
+            <Spanish>Volumen del sonido dentro del vehículo</Spanish>
             <Russian>Громкость звука в транспорте</Russian>
             <Italian>Suono veicolo a bordo</Italian>
             <Chinesesimp>载具内音量</Chinesesimp>
@@ -5068,6 +5113,7 @@
         <Key ID="STR_GREUH_TEST">
             <Original>Test</Original>
             <German>Test</German>
+            <Spanish>Prueba</Spanish>
             <Russian>Тест</Russian>
             <Italian>Test</Italian>
             <Chinesesimp>测试</Chinesesimp>
@@ -5079,6 +5125,7 @@
         <Key ID="STR_GREUH_RESPAWN">
             <Original>Respawn</Original>
             <German>Respawn</German>
+            <Spanish>Reaparecer</Spanish>
             <Russian>Возродиться</Russian>
             <Italian>Riapparizione</Italian>
             <Chinesesimp>重生</Chinesesimp>
@@ -5090,6 +5137,7 @@
         <Key ID="STR_GREUH_REPLACE_NEAREST_AI">
             <Original>Replace nearest AI</Original>
             <German>Ersetze nächste KI</German>
+            <Spanish>Reemplazar IA más cercano</Spanish>
             <Russian>Заменить ближайшие ИИ</Russian>
             <Italian>Rimpiazza AI</Italian>
             <Chinesesimp>就近附身AI</Chinesesimp>
@@ -5101,6 +5149,7 @@
         <Key ID="STR_CR_KILLMSG">
             <Original>A civilian named %1 was killed!</Original>
             <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
             <Italian>Un civile di nome %1 è stato ucciso!</Italian>
             <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
@@ -5112,6 +5161,7 @@
         <Key ID="STR_CR_VEHICLEMSG">
             <Original>A civilian's vehicle was seized!</Original>
             <German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
+            <Spanish>Un vehículo civil fue tomado!</Spanish>
             <Russian>Транспорт гражданского был захвачен!</Russian>
             <Italian>Un veicolo civile è stato confiscato!</Italian>
             <Chinesesimp>一辆平民载具被强征了！</Chinesesimp>
@@ -5123,6 +5173,7 @@
         <Key ID="STR_CR_BUILDINGMSG">
             <Original>Civilians are complaining about %1 lost buildings.</Original>
             <German>Die Zivilisten beklagen sich über %1 verlorene Gebäude.</German>
+            <Spanish>Los civiles se quejan por %1 edificios destruidos.</Spanish>
             <Russian>Гражданские жалуются из-за %1 разрушенных зданий.</Russian>
             <Italian>Civili si lamentano della perdita di %1 edifici.</Italian>
             <Chinesesimp>平民们对%1建筑的损坏有所怨言。</Chinesesimp>
@@ -5134,6 +5185,7 @@
         <Key ID="STR_CR_HEALMSG">
             <Original>Civilian named %1 is thankful for your help.</Original>
             <German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
+            <Spanish>El civil %1 se siente agradecido por tu ayuda.</Spanish>
             <Russian>Гражданский %1 благодарен за вашу помощь.</Russian>
             <Italian>Il civile di nome %1 ti ringrazia per l'aiuto.</Italian>
             <Portuguese>Um civil chamado %1 agradeceu sua ajuda.</Portuguese>
@@ -5143,6 +5195,7 @@
         <Key ID="STR_PARAM_CR_BUILDING">
             <Original>Civil Reputation penalty for buildings if building is</Original>
             <German>Ziviles Ansehen sinkt, wenn Gebäude</German>
+            <Spanish>Consecuencia en reputación con civiles por destruir edificios si el edificio es</Spanish>
             <Russian>Штраф к Репутации Гражданских, если постройка</Russian>
             <Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
             <Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
@@ -5154,6 +5207,7 @@
         <Key ID="STR_PARAM_CR_DAMAGED">
             <Original>damaged</Original>
             <German>beschädigt</German>
+            <Spanish>dañado</Spanish>
             <Russian>повреждена</Russian>
             <Italian>danneggiato</Italian>
             <Chinesesimp>受损</Chinesesimp>
@@ -5165,6 +5219,7 @@
         <Key ID="STR_PARAM_CR_DESTROYED">
             <Original>fully destroyed</Original>
             <German>komplett zerstört</German>
+            <Spanish>completamente destruido</Spanish>
             <Russian>полностью уничтожена</Russian>
             <Italian>completamente distrutto</Italian>
             <Chinesesimp>完全损毁</Chinesesimp>
@@ -5176,6 +5231,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_TITLE">
             <Original>SERVER RESTART NOTIFICATION</Original>
             <German>SERVER RESTART HINWEIS</German>
+            <Spanish>NOTIFICACION DE REINICIO DE SERVIDOR</Spanish>
             <Russian>НАПОМИНАНИЕ О ПЕРЕЗАПУСКЕ СЕРВЕРА</Russian>
             <Italian>NOTIFICA RESTART SERVER</Italian>
             <Turkish>SERVER YENİDEN BAŞLATMA BİLDİRİMİ</Turkish>
@@ -5187,6 +5243,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_SECOND">
             <Original>The server will restart in less than 60 seconds!</Original>
             <German>Server Restart in weniger als 60 Sekunden!</German>
+            <Spanish>El servidor se reiniciará en 60 segundos!</Spanish>
             <Russian>Сервер перезапустится меньше чем через 60 секунд!</Russian>
             <Italian>Il server si riavvierà tra meno di 60 secodni!</Italian>
             <Turkish>SERVER 60 SANİYE İÇİNDE YENİDEN BAŞLATILACAK!</Turkish>
@@ -5198,6 +5255,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_FIVE">
             <Original>The server will restart in less than 5 minutes!</Original>
             <German>Server Restart in weniger als 5 Minuten!</German>
+            <Spanish>El servidor se reiniciará en 5 minutos!</Spanish>
             <Russian>Сервер перезапустится меньше чем через 5 минут!</Russian>
             <Italian>Il server si riavvierà tra meno di 5 minuti!</Italian>
             <Turkish>SERVER 5 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
@@ -5209,6 +5267,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_FIFTEEN">
             <Original>The server will restart in less than 15 minutes!</Original>
             <German>Server Restart in weniger als 15 Minuten!</German>
+            <Spanish>El servidor se reiniciará en 15 minutos!</Spanish>
             <Russian>Сервер перезапустится меньше чем через 15 минут!</Russian>
             <Italian>Il server si riavvierà tra meno di 15 minuti!</Italian>
             <Turkish>SERVER 15 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
@@ -5220,6 +5279,7 @@
         <Key ID="STR_NOTIFICATION_RESTART_THIRTY">
             <Original>The server will restart in less than 30 minutes!</Original>
             <German>Server Restart in weniger als 30 Minuten!</German>
+            <Spanish>El servidor se reiniciará en menos de 30 minutos!</Spanish>
             <Russian>Сервер перезапустится меньше чем через 30 минут!</Russian>
             <Italian>Il server si riavvierà tra meno di 30 minuti!</Italian>
             <Turkish>SERVER 30 DAKIKA İÇİNDE TEKRAR BAŞLATILACAK!</Turkish>
@@ -5231,6 +5291,7 @@
         <Key ID="STR_RESTART_PARAM">
             <Original>Automatic Server Restart after (hours)</Original>
             <German>Automatischer Server Restart nach (Stunden)</German>
+            <Spanish>Reinicio del servidor automáticamente despues de (horas)</Spanish>
             <Russian>Автоматический перезапуск сервера после (часов)</Russian>
             <Italian>Restart Automatico del Server ogni (ore)</Italian>
             <Turkish>Otomatik server yeniden başlat (saat)</Turkish>
@@ -5242,6 +5303,7 @@
         <Key ID="STR_PARAMS_DEBUGOPTIONS">
             <Original>== DEBUG MESSAGES ==</Original>
             <German>== DEBUG NACHRICHTEN ==</German>
+            <Spanish>== MNESJAES DE DEBUG ==</Spanish>
             <Russian>== ОТЛАДОЧНЫЕ СООБЩЕНИЯ ==</Russian>
             <Italian>== MESSAGGI DI DEBUG ==</Italian>
             <Turkish>== DEBUG MESAJLARI ==</Turkish>
@@ -5253,6 +5315,7 @@
         <Key ID="STR_PARAMS_DEBUG_CIVINFO">
             <Original>Civil Informant</Original>
             <German>Ziviler Informant</German>
+            <Spanish>Informante Civil</Spanish>
             <Italian>Informatore Civile</Italian>
             <Turkish>Sivil Bilgisi</Turkish>
             <Chinesesimp>民间线人</Chinesesimp>
@@ -5263,6 +5326,7 @@
         <Key ID="STR_PARAMS_DEBUG_CIVREP">
             <Original>Civil Reputation</Original>
             <German>Ziviles Ansehen</German>
+            <Spanish>Reputación Civil</Spanish>
             <Italian>Reputazione Civili</Italian>
             <Turkish>Sivil Repütasyonu</Turkish>
             <Chinesesimp>民间声望</Chinesesimp>
@@ -5273,6 +5337,7 @@
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_START">
             <Original>A civilian from %1 says he has some information for us.</Original>
             <German>Ein Zivilist aus %1 sagt, er hätte Informationen für uns.</German>
+            <Spanish>Un civil de %1 dice que tiene información para nosotros.</Spanish>
             <Russian>Гражданский из %1 говорит, что у него есть информация для нас.</Russian>
             <Italian>Un civile a %1 dice di avere informazioni per noi.</Italian>
             <Turkish>%1 adında ki bir sivil bize vereceği bir bilgisi olduğunu söylüyor.</Turkish>
@@ -5284,6 +5349,7 @@
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
             <Original>The civilian gave us some important information.</Original>
             <German>Der Zivilist gab uns wichtige Informationen.</German>
+            <Spanish>Un civil nos ha dado información importante.</Spanish>
             <Russian>Гражданский передал нам важную информацию.</Russian>
             <Italian>Il civile ha fornito informazioni importatnti.</Italian>
             <Turkish>Sivil bize çok önemli bilgiler verdi.</Turkish>
@@ -5295,6 +5361,7 @@
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
             <Original>The civilian has disappeared.</Original>
             <German>Der Zivilist ist wieder untergetaucht.</German>
+            <Spanish>El civil ha desaparecido.</Spanish>
             <Russian>Гражданский пропал.</Russian>
             <Italian>Il civile è scomparso.</Italian>
             <Turkish>Sivil ortadan kayboldu.</Turkish>
@@ -5306,6 +5373,7 @@
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
             <Original>The civilian died.</Original>
             <German>Der Zivilist wurde getötet.</German>
+            <Spanish>El civil ha muerto.</Spanish>
             <Russian>Гражданский умер.</Russian>
             <Italian>Il civile è morto.</Italian>
             <Turkish>Sivil öldü.</Turkish>
@@ -5317,6 +5385,7 @@
         <Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
             <Original>Asymmetric Threat</Original>
             <German>Asymmetrische Bedrohung</German>
+            <Spanish>Amenaza Asimétrica</Spanish>
             <Italian>Minaccia Asimmetrica</Italian>
             <Turkish>Asimetrik Tehdit</Turkish>
             <Chinesesimp>非对称威胁</Chinesesimp>
@@ -5327,6 +5396,7 @@
         <Key ID="STR_PARAMS_DEBUG_LOGISTIC">
             <Original>Logistic</Original>
             <German>Logistik</German>
+            <Spanish>Logística</Spanish>
             <Russian>Логистика</Russian>
             <Italian>Logistica</Italian>
             <Turkish>Lojistik</Turkish>
@@ -5338,6 +5408,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TITLE">
             <Original>Logistic Convoy Ambush</Original>
             <German>Logistikkonvoi Überfall</German>
+            <Spanish>Envoscada de Convoy de Logística</Spanish>
             <Russian>Засада на конвой</Russian>
             <Italian>Convoglio Sotto Attacco</Italian>
             <Turkish>Lojistik Konvoyu Baskını</Turkish>
@@ -5349,6 +5420,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_TEXT">
             <Original>Guerilla forces attacking our convoy near %1.</Original>
             <German>Guerillakräfte greifen unseren Konvoi nahe %1 an.</German>
+            <Spanish>Fuerzas de geurrilla atacando nuestro convoy cerca de %1.</Spanish>
             <Russian>Партизанские войска атакуют наш конвой около %1.</Russian>
             <Italian>Guerriglieri attaccano il nostro convoglio vicino %1</Italian>
             <Turkish>Gerilla kuvvetleri bizim konvoyumuza saldırıyor, %1 yakınında.</Turkish>
@@ -5360,6 +5432,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_SUCCESS">
             <Original>The ambush was successfully repelled.</Original>
             <German>Der Hinterhalt konnte erfolgreich zurückgeschlagen werden.</German>
+            <Spanish>La envoscada ha sido repelida satisfactoriamente.</Spanish>
             <Russian>Засада успешно отражена.</Russian>
             <Italian>L'attacco è stato neutralizzato.</Italian>
             <Turkish>Baskın başarıyla püskürtüldü.</Turkish>
@@ -5371,6 +5444,7 @@
         <Key ID="STR_NOTIFICATION_ASYMMCONVOYAMBUSH_FAIL">
             <Original>The guerilla forces escaped with the convoy resources.</Original>
             <German>Die Guerillakräfte konnten mit den Konvoiressourcen verschwinden.</German>
+            <Spanish>Las fuerzas de guerrilla han escapado con los recursos del convoy.</Spanish>
             <Russian>Партизанские войска сбежали с ресурсами конвоя.</Russian>
             <Italian>I Guerriglieri scappano con le risorse del nostro convoglio.</Italian>
             <Turkish>Gerilla kuvvetleri malzemelerimizle beraber kaçtılar.</Turkish>
@@ -5382,6 +5456,7 @@
         <Key ID="STR_PARAMS_DEBUG_SECTORSPAWN">
             <Original>Sectorspawn</Original>
             <German>Sektorspawn</German>
+            <Spanish>Spawn de sector</Spanish>
             <Italian>Spawn Settori</Italian>
             <Chinesesimp>战区刷新</Chinesesimp>
             <Chinese>戰區刷新</Chinese>
@@ -5391,6 +5466,7 @@
         <Key ID="STR_PARAMS_DEBUG_KILL">
             <Original>Killed units</Original>
             <German>Getötete Einheiten</German>
+            <Spanish>Unidades eliminadas</Spanish>
             <Italian>Unità Uccise</Italian>
             <Chinesesimp>击杀的单位</Chinesesimp>
             <Chinese>擊殺單位</Chinese>
@@ -5400,6 +5476,7 @@
         <Key ID="STR_CR_ACE_ACTION">
             <Original>Treat the civilian (field dressing)</Original>
             <German>Zivilisten versorgen (einfache Bandage)</German>
+            <Spanish>Asistir al civil (curar)</Spanish>
             <Russian>Перевязать гражданского (полевая перевязка)</Russian>
             <Italian>Soccorso Civili</Italian>
             <Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
@@ -5410,6 +5487,7 @@
         <Key ID="STR_CR_ACE_ACTION_FAIL">
             <Original>You need a field dressing.</Original>
             <German>Du brauchst eine einfache Bandage.</German>
+            <Spanish>Necesitas vendas.</Spanish>
             <Russian>Вам необходима полевая перевязка.</Russian>
             <Italian>Hai bisogno di un bendaggio semplice.</Italian>
             <Chinesesimp>你需要一个战地绷带。</Chinesesimp>
@@ -5420,6 +5498,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_START">
             <Original>There is a high ranked officer near %1.</Original>
             <German>Ein hochrangiger Offizier befindet sich in der Nähe von %1.</German>
+            <Spanish>Hay un oficial de alto mando cerca de %1.</Spanish>
             <Russian>Высокопоставленный офицер находится около %1.</Russian>
             <Italian>C'è un ufficiale di altro grado vicino %1.</Italian>
             <Chinesesimp>%1附近有一名高级军官。</Chinesesimp>
@@ -5430,6 +5509,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
             <Original>The officer was successfully killed.</Original>
             <German>Der Offizier konnte erfolgreich getötet werden.</German>
+            <Spanish>El oficial fue eliminado.</Spanish>
             <Russian>Офицер успешно убит.</Russian>
             <Italian>L'ufficiale è stato ucciso.</Italian>
             <Chinesesimp>成功刺杀了军官。</Chinesesimp>
@@ -5440,6 +5520,7 @@
         <Key ID="STR_NOTIFICATION_CIV_HVT_FAIL">
             <Original>The officer has moved on.</Original>
             <German>Der Offizier ist weitergezogen.</German>
+            <Spanish>El oficial se ha ido.</Spanish>
             <Russian>Офицер ушел.</Russian>
             <Italian>L'ufficiale è scappato.</Italian>
             <Chinesesimp>军官逃离了。</Chinesesimp>
@@ -5450,6 +5531,7 @@
         <Key ID="STR_PARAM_RESPAWN_COOLDOWN">
             <Original>Mobile Respawn Cooldown (minutes)</Original>
             <German>Mobiler Respawn Cooldown (Minuten)</German>
+            <Spanish>Tiempo de espera de Respawn Móvil (minutos)</Spanish>
             <Russian>Задержка дислокации на КШМ (минуты)</Russian>
             <Italian>Attesa Respawn Mobile (Minuti)</Italian>
             <Chinesesimp>机动复活点冷却时间（分钟）</Chinesesimp>
@@ -5460,6 +5542,7 @@
         <Key ID="STR_RESPAWN_COOLDOWN_HINT">
             <Original>%1 minutes mobile respawn cooldown left.</Original>
             <German>%1 Minuten Mobiler Respawn Cooldown übrig.</German>
+            <Spanish>%1 (minutos) tiempo de espera para uso del respawn móvil.</Spanish>
             <Russian>Осталось %1 минут(-ы) задержки дислокации на КШМ.</Russian>
             <Italian>Mancano ancora %1 minuti al respawn.</Italian>
             <Chinesesimp>机动复活点还需要%1分钟冷却。</Chinesesimp>
@@ -5470,6 +5553,7 @@
         <Key ID="STR_CR_RESISTANCE_KILLMSG">
             <Original>An allied resistance fighter named %1 was killed!</Original>
             <German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
+            <Spanish>Un aliado de la resistencia llamado %1 ha sido asesinado!</Spanish>
             <Russian>Союзный боец сопротивления %1 был убит!</Russian>
             <Italian>Un'alleato della resistenza di nome %1 è stato ucciso!</Italian>
             <Chinesesimp>一位名叫%1的友军抵抗军战士阵亡了！</Chinesesimp>
@@ -5480,6 +5564,7 @@
         <Key ID="STR_PARAMS_DEBUG_SAVE">
             <Original>Gamedata saving</Original>
             <German>Savegame Speicherung</German>
+            <Spanish>Guardando datos del juego</Spanish>
             <Italian>Salvataggio Dati di Gioco</Italian>
             <Chinesesimp>储存游戏数据中</Chinesesimp>
             <Chinese>儲存數據中</Chinese>
@@ -5489,6 +5574,7 @@
         <Key ID="STR_PARAMS_DEBUG_PRODUCTION">
             <Original>Production</Original>
             <German>Produktion</German>
+            <Spanish>Producción</Spanish>
             <Italian>Produzione</Italian>
             <Chinesesimp>生产</Chinesesimp>
             <Chinese>生產</Chinese>
@@ -5499,6 +5585,7 @@
         <Key ID="STR_PARAMS_LOADSAVEPARAMS">
             <Original>Load/Save Parameters</Original>
             <German>Laden/Speichern der Parameter</German>
+            <Spanish>Cargar/Guardar parámetros</Spanish>
             <Russian>Сохранить/Загрузить параметры</Russian>
             <Italian>Carica/Salva Parametri</Italian>
             <Korean>매개변수설정 저장/불러오기</Korean>
@@ -5506,6 +5593,7 @@
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
             <Original>SAVE selected parameters</Original>
             <German>SPEICHERN der momentanen Parameter</German>
+            <Spanish>GUARDAR parámetros seleccionados</Spanish>
             <Russian>Сохранить выбранные параметры</Russian>
             <Italian>SALVA i parametri</Italian>
             <Korean>매개변수설정 저장</Korean>
@@ -5513,6 +5601,7 @@
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
             <Original>LOAD parameters or use selected if no saved value found</Original>
             <German>LADEN der gespeicherten Parameter oder momentane nutzen, wenn keine gespeicherten vorhanden sind</German>
+            <Spanish>CARGAR parámetros o usar seleccionados si no hay parámetros guardados</Spanish>
             <Russian>Загрузить параметры или использовать выбранные, если не найдено сохраненного значения</Russian>
             <Italian>CARICA parametri o utilizza selezionati se non è stato trovato alcun valore salvato</Italian>
             <Korean>매개변수설정 불러오기/ 저장된 설정이 없는 경우 현재 선택된 설정 사용</Korean>
@@ -5520,6 +5609,7 @@
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
             <Original>Use selected parameters without saving</Original>
             <German>Momentane Parametereinstellung ohne Speicherung</German>
+            <Spanish>Usar parámetros seleccionados sin guardar</Spanish>
             <Russian>Использовать выбранные параметры без сохранения</Russian>
             <Italian>Usa i parametri selezionati senza salvare</Italian>
             <Korean>현재 설정을 저장하지 않고 선택한 설정을 사용</Korean>
@@ -5527,6 +5617,7 @@
         <Key ID="STR_RAISE">
             <Original>-- Raise</Original>
             <German>-- Höher</German>
+            <Spanish>-- Levantar</Spanish>
             <Russian>-- Поднять</Russian>
             <Italian>-- Aumenta</Italian>
             <Korean>-- 높이 올리기</Korean>
@@ -5534,6 +5625,7 @@
         <Key ID="STR_LOWER">
             <Original>-- Lower</Original>
             <German>-- Niedriger</German>
+            <Spanish>-- Bajar</Spanish>
             <Russian>-- Опустить</Russian>
             <Italian>-- Abbassa</Italian>
             <Korean>-- 높이 내리기</Korean>
@@ -5541,6 +5633,7 @@
         <Key ID="STR_NOTIFICATION_GUER_INC_TITLE">
             <Original>Guerilla forces on the way.</Original>
             <German>Widerstandskämpfer sind unterwegs.</German>
+            <Spanish>Fuerzas de guerrilla en camino.</Spanish>
             <Russian>Партизанские силы в пути.</Russian>
             <Italian>Guerriglieri in arrivo.</Italian>
             <Korean>도로에 적군 민병대 세력 발견!</Korean>
@@ -5548,6 +5641,7 @@
         <Key ID="STR_NOTIFICATION_GUER_INC">
             <Original>Guerilla forces are incoming to %1 from the %2.</Original>
             <German>Widerstandskämpfer nähern sich %1 aus %2.</German>
+            <Spanish>Fuerzas de guerrilla se aproximan a %1 desde el %2</Spanish>
             <Russian>Партизанские силы идут из %2 в %1.</Russian>
             <Italian>Guerriglieri in arrivo su %1 da %2.</Italian>
             <Korean>적군 민병대가 %2 에서 %1 로 이동중입니다.</Korean>
@@ -5567,6 +5661,7 @@
         <Key ID="STR_PARAMS_ARSENAL">
             <Original>Arsenal</Original>
             <German>Arsenal</German>
+            <Spanish>Arsenal</Spanish>
             <Russian>Арсенал</Russian>
             <Italian>Arsenale</Italian>
             <Korean>무기고</Korean>
@@ -5574,6 +5669,7 @@
         <Key ID="STR_PARAMS_ARSENAL_BI">
             <Original>BI arsenal</Original>
             <German>BI Arsenal</German>
+            <Spanish>Arsenal BI</Spanish>
             <Russian>Арсенал BI</Russian>
             <Italian>BI Arsenale</Italian>
             <Korean>BI 무기고</Korean>
@@ -5581,6 +5677,7 @@
         <Key ID="STR_PARAMS_ARSENAL_ACE">
             <Original>ACE arsenal</Original>
             <German>ACE Arsenal</German>
+            <Spanish>Arsenal ACE</Spanish>
             <Russian>Арсенал ACE</Russian>
             <Italian>ACE Arsenale</Italian>
             <Korean>ACE 무기고</Korean>
@@ -5588,54 +5685,63 @@
         <Key ID="STR_PARAMS_VICTORYCONDITION">
             <Original>Victory Condition</Original>
             <German>Siegesbedingung</German>
+            <Spanish>Condición de Victoria</Spanish>
             <Russian>Условие для победы</Russian>
             <Korean>승리 조건</Korean>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_0">
             <Original>All capitals</Original>
             <German>Alle Hauptstädte</German>
+            <Spanish>Todas las capitales</Spanish>
             <Russian>Все столицы</Russian>
             <Korean>모든 대도시</Korean>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_1">
             <Original>All capitals and military bases</Original>
             <German>Alle Hauptstädte und Militärbasen</German>
+            <Spanish>Todas las capitales y bases militares</Spanish>
             <Russian>Все столицы и военные базы</Russian>
             <Korean>모든 대도시 및 군사기지</Korean>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_2">
             <Original>All capitals and 60% of the sectors</Original>
             <German>Alle Hauptstädte und 60% der Sektoren</German>
+            <Spanish>Todas las capitales y 60% de los sectores</Spanish>
             <Russian>Все столицы и 60% секторов</Russian>
             <Korean>모든 대도시 및 60%의 거점</Korean>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_3">
             <Original>All capitals and 80% of the sectors</Original>
             <German>Alle Hauptstädte und 80% der Sektoren</German>
+            <Spanish>TOdas las capitales y 80% de los sectores</Spanish>
             <Russian>Все столицы и 80% секторов</Russian>
             <Korean>모든 대도시 및 80%의 거점</Korean>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_4">
             <Original>All sectors</Original>
             <German>Alle Sektoren</German>
+            <Spanish>Todos los sectores</Spanish>
             <Russian>Все секторы</Russian>
             <Korean>모든 거점</Korean>
         </Key>
         <Key ID="STR_VICTORY_TITLE">
             <Original>CAMPAIGN COMPLETED</Original>
             <German>KAMPAGNE ABGESCHLOSSEN</German>
+            <Spanish>CAMPAÑA COMPLETA</Spanish>
             <Russian>КАМПАНИЯ ВЫПОЛНЕНА</Russian>
             <Korean>군사작전 완료</Korean>
         </Key>
         <Key ID="STR_VICTORY_TEXT">
             <Original>You have liberated the area from the enemy oppression.</Original>
             <German>Du hast das Gebiet von der feindlichen Unterdrückung befreit.</German>
+            <Spanish>Haz liberado el área de la oposión enemiga.</Spanish>
             <Russian>Вы освободили территорию от угнетения врага.</Russian>
             <Korean>당신은 적의 억압으로부터 이 지역을 해방시켰다.</Korean>
         </Key>
         <Key ID="STR_STATS_PLAYTIME">
             <Original>Playtime: %1 days, %2 hours, %3 minutes and %4 seconds</Original>
             <German>Spielzeit: %1 Tage, %2 Stunden, %3 Minuten und %4 Sekunden</German>
+            <Spanish>Tiempo de juego: %1 días, %2 horas, %3 minutos y %4 segundos</Spanish>
             <Russian>Игровое время: %1 дней, %2 часов, %3 минут и %4 секунд</Russian>
             <Korean>걸린 시간: %1 일, %2 시간, %3 분 and %4 초</Korean>
         </Key>
@@ -5772,18 +5878,21 @@
         <Key ID="STR_STATS_GUE_K_INF">
             <Original>Resistance fighters killed: %1</Original>
             <German>Widerstandskämpfer getötet: %1</German>
+            <Spanish>Combatientes de la resistencia eliminados: %1</Spanish>
             <Russian>Убито бойцов сопротивления: %1</Russian>
             <Korean>적군 전투기 격추 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_GUE_TK_INF">
             <Original>Allied resistance fighters killed: %1</Original>
             <German>Verbündete Widerstandskämpfer getötet: %1</German>
+            <Spanish>Combatientes de la resistencia aliada eliminados: %1</Spanish>
             <Russian>Убито союзнических бойцов сопротивления: %1</Russian>
             <Korean>아군 전투기 격추 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_GUE_TK_INF_PL">
             <Original>Allied resistance fighters killed by players: %1</Original>
             <German>Verbündete Widerstandskämpfer von Spielern getötet: %1</German>
+            <Spanish>Combatientes de la resistencia aliada eliminados por jugadores: %1</Spanish>
             <Russian>Убито союзнических бойцов сопротивления игроками: %1</Russian>
             <Korean>플레이어에 의해 격추된 전투기 : %1</Korean>
         </Key>
@@ -5816,30 +5925,35 @@
         <Key ID="STR_STATS_CIV_B_INF">
             <Original>Civilians healed: %1</Original>
             <German>Zivilisten versorgt: %1</German>
+            <Spanish>Civiles curados: %1</Spanish>
             <Russian>Гражданских вылечено: %1</Russian>
             <Korean>민간인 치료 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_CIV_K_VEH">
             <Original>Civilian vehicles destroyed: %1</Original>
             <German>Zivile Fahrzeuge zerstört: %1</German>
+            <Spanish>Vehículos civiles destruidos: %1</Spanish>
             <Russian>Транспорта гражданских уничтожено: %1</Russian>
             <Korean>파괴된 민간인 차량 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_CIV_K_VEH_PL">
             <Original>Civilian vehicles destroyed by players: %1</Original>
             <German>Zivile Fahrzeuge von Spielern zerstört: %1</German>
+            <Spanish>Vehículos civiles destruidos por jugadores: %1</Spanish>
             <Russian>Транспорта гражданских уничтожено игроками: %1</Russian>
             <Korean>플레이어에 의해 파괴된 민간인 차량 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_CIV_S_VEH">
             <Original>Civilian vehicles seized: %1</Original>
             <German>Zivile Fahrzeuge beschlagnahmt: %1</German>
+            <Spanish>Vehículos civiles capturados: %1</Spanish>
             <Russian>Транспорта гражданских захвачено: %1</Russian>
             <Korean>민간인 차량 탈취 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_CIV_K_BUILDINGS">
             <Original>Civilian buildings destroyed: %1</Original>
             <German>Zivile Gebäude zerstört: %1</German>
+            <Spanish>Edificios civiles destruidos: %1</Spanish>
             <Russian>Построек гражданских уничтожено: %1</Russian>
             <Korean>파괴된 민간 건물 : %1</Korean>
         </Key>
@@ -5859,36 +5973,42 @@
         <Key ID="STR_STATS_PROD_AMMO">
             <Original>Ammunition produced: %1</Original>
             <German>Munition hergestellt: %1</German>
+            <Spanish>Municiones producidas: %1</Spanish>
             <Russian>Произведено боеприпасов: %1</Russian>
             <Korean>생산된 탄약 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_SPENT_AMMO">
             <Original>Ammunition spent: %1</Original>
             <German>Munition verbraucht: %1</German>
+            <Spanish>Municiones gastadas: %1</Spanish>
             <Russian>Боеприпасов потрачено: %1</Russian>
             <Korean>사용된 탄약 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_PROD_FUEL">
             <Original>Fuel produced: %1</Original>
             <German>Kraftstoff hergestellt: %1</German>
+            <Spanish>Combustible producido: %1</Spanish>
             <Russian>Произведено топлива: %1</Russian>
             <Korean>생산된 기름 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_SPENT_FUEL">
             <Original>Fuel spent: %1</Original>
             <German>Kraftstoff verbraucht: %1</German>
+            <Spanish>Combustible gastado: %1</Spanish>
             <Russian>Топлива потрачено: %1</Russian>
             <Korean>사용된 기름 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_PROD_SUPPLY">
             <Original>Supplies produced: %1</Original>
             <German>Nachschub hergestellt: %1</German>
+            <Spanish>Suministros producidos: %1</Spanish>
             <Russian>Произведено припасов: %1</Russian>
             <Korean>생산된 보급품 : %1</Korean>
         </Key>
         <Key ID="STR_STATS_SPENT_SUPPLY">
             <Original>Supplies spent: %1</Original>
             <German>Nachschub verbraucht: %1</German>
+            <Spanish>Suministros gastados: %1</Spanish>
             <Russian>Припасов потрачено: %1</Russian>
             <Korean>사용된 보급품 : %1</Korean>
         </Key>
@@ -6088,6 +6208,7 @@
         </Key>
         <Key ID="STR_CLEARANCE_ACTION">
             <Original>-- Clear FOB area</Original>
+            <Spanish>-- Limpiar área de FOB</Spanish>
             <Russian>-- Очистить зону FOB</Russian>
             <German>-- FOB Gebiet räumen</German>
             <Korean>-- 전초기지 주변 정리</Korean>
@@ -6095,64 +6216,77 @@
         <Key ID="STR_FOB_REPACKAGE_HINT">
             <Original>FOB repackaged.\nPossibly created clearance will be reverted upon server restart.</Original>
             <German>FOB eingepackt.\nEventuelle Gebietsräumung wird zum Serverneustart rückgängig gemacht.</German>
+            <Spanish>FOB empacado. \nProbablemente el permiso de creación será revertido después de reiniciar el servidor.</Spanish>
             <Russian>FOB свернуто.\nЕсли вы очищали место для FOB, оно будет восстановлено после перезапуска сервера.</Russian>
             <Korean>FOB가 재포장됩니다. 이 상태로 서버 재시작시 이 부근의 건물이나 장비들은 사라집니다.</Korean>
         </Key>
         <Key ID="STR_FOG_PARAM">
             <Original>Dynamic fog (A3 Vanilla)</Original>
             <German>Dynamischer Nebel (A3 Vanilla)</German>
+            <Spanish>Niebla dinámica (A3 Default)</Spanish>
             <Russian>Динамический туман (A3 Vanilla)</Russian>
             <Korean>동적인 안개 (A3 Vanilla)</Korean>
         </Key>
         <Key ID="STR_PARAMS_FIRSTFOBVEHICLE">
             <Original>Start FOB provided as</Original>
             <German>Start-FOB bereitgestellt als</German>
+            <Spanish>Empezar con FOB proveído como</Spanish>
             <Russian>Создать FOB в виде</Russian>
             <Korean>시작시 전초기지는 다음과 같이 제공됩니다.</Korean>
         </Key>
         <Key ID="STR_PARAMS_FIRSTFOBVEHICLE_CONTAINTER">
             <Original>FOB Container</Original>
             <German>FOB Container</German>
+            <Spanish>Contenedor FOB</Spanish>
             <Russian>FOB Контейнер</Russian>
             <Korean>전초기지 설치박스</Korean>
         </Key>
         <Key ID="STR_PARAMS_FIRSTFOBVEHICLE_TRUCK">
             <Original>FOB Truck</Original>
             <German>FOB LKW</German>
+            <Spanish>Camión FOB</Spanish>
             <Russian>FOB Грузовик</Russian>
             <Korean>전초기지 설치트럭</Korean>
         </Key>
         <Key ID="STR_PARAMS_PLAYERMENU">
             <Original>Client options variant</Original>
             <German>Spielermenü Variante</German>
+            <Spanish>Variantes de opciones de cliente</Spanish>
         </Key>
         <Key ID="STR_PARAMS_PLAYERMENU_GREUH">
             <Original>GREUH Extended Options</Original>
             <German>GREUH Erweiterte Optionen</German>
+            <Spanish>GREHU Opciones Extendidas</Spanish>
         </Key>
         <Key ID="STR_PARAMS_PLAYERMENU_KP">
             <Original>KP Player Menu (requires CBA)</Original>
             <German>KP Spielermenü (benötigt CBA)</German>
+            <Spanish>Menú de jugador KP (requiere CBA)</Spanish>
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TITLE">
             <Original>Are you sure?</Original>
             <German>Bist du sicher?</German>
+            <Spanish>¿Estás seguro?</Spanish>
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TEXT">
             <Original>This will permanently remove a total of %1 terrain objects (houses, trees, fences, lamps, etc.) within a radius of %2m around %3.</Original>
             <German>Dies wird insgesamt %1 Kartenobjekte (Häuser, Bäume, Zäune, Lampen, etc.) im Umkreis von %2m um %3 herum permanent entfernen.</German>
+            <Spanish>Esta acción removera permanentemente un total de %1 objetos de terreno (casas, árboles, bardas, lamparas, etc.) dentro de un radio de %2m alrededor de %3.</Spanish>
         </Key>
         <Key ID="STR_PARAM_ZEUSADDENEMIES">
             <Original>Add enemies to Zeus editable objects</Original>
             <German>Feindliche Einheiten für Zeus editierbar</German>
+            <Spanish>Agregar enemigos como objetos editables de Zeus</Spanish>
         </Key>
         <Key ID="STR_PARAM_HIGHCOMMAND">
             <Original>Arma 3 High Command for Commander</Original>
             <German>Arma 3 Oberbefehl für Kommandanten</German>
+            <Spanish>Arma 3 High Command para comandantes</Spanish>
         </Key>
         <Key ID="STR_PARAM_DEBUG_HIGHCOMMAND">
             <Original>Arma 3 High Command</Original>
             <German>Arma 3 Oberbefehl</German>
+            <Spanish>Arma 3 High Command</Spanish>
         </Key>
     </Package>
 
@@ -6163,221 +6297,258 @@
         <Key ID="STR_KPPLM_ACTIONOPEN">
             <English>-- KP Player Menu --</English>
             <Chinese>-- KP 玩家選單 --</Chinese>
+            <Spanish>-- Menú de Jugador KP --</Spanish>
             <German>-- KP Spielermenü --</German>
             <Portuguese>-- KP Menu do Jogador --</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TITLE">
             <English>KP Player Menu</English>
             <Chinese>KP 玩家選單</Chinese>
+            <Spanish>Menú de Jugador KP</Spanish>
             <German>KP Spielermenü</German>
             <Portuguese>KP Menu do Jogador</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_LABELPLAYER">
             <English>Player Information</English>
             <Chinese>玩家資訊</Chinese>
+            <Spanish>Información de Jugador</Spanish>
             <German>Spielerinformationen</German>
             <Portuguese>Informação do Jogador</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_RANK">
             <English>Rank:</English>
             <Chinese>階級</Chinese>
+            <Spanish>Rango:</Spanish>
             <German>Dienstgrad:</German>
             <Portuguese>Rank:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_SCORE">
             <English>Score:</English>
             <Chinese>得分</Chinese>
+            <Spanish>Puntaje:</Spanish>
             <German>Punkte:</German>
             <Portuguese>Pontuação:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_PLAYTIME">
             <English>Playtime:</English>
             <Chinese>遊戲時間</Chinese>
+            <Spanish>Tiempo de juego:</Spanish>
             <German>Spielzeit:</German>
             <Portuguese>Tempo de jogo:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_NORANKS">
             <English>KP Ranks mod not loaded</English>
             <Chinese>KP Ranks 模組未裝載</Chinese>
+            <Spanish>KP Ranks mod no ha sido cargado</Spanish>
             <German>KP Ranks Mod nicht geladen</German>
             <Portuguese>O mod KP Ranks não está carregado</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_LABELGROUPS">
             <English>Group Management</English>
             <Chinese>團隊管理</Chinese>
+            <Spanish>Administración de grupo</Spanish>
             <German>Gruppenverwaltung</German>
             <Portuguese>Gerenciar Grupo</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_CREATE">
             <English>Create</English>
             <German>Erstellen</German>
+            <Spanish>Crear</Spanish>
             <Portuguese>Criar</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_JOIN">
             <English>Join</English>
             <Chinese>加入</Chinese>
+            <Spanish>Unirse</Spanish>
             <German>Beitreten</German>
             <Portuguese>Juntar-se</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_RENAME">
             <English>Rename</English>
             <Chinese>重新命名</Chinese>
+            <Spanish>Renombrar</Spanish>
             <German>Umbenennen</German>
             <Portuguese>Renomear</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_LABELVIEW">
             <English>View Distance Settings</English>
             <Chinese>視距設定</Chinese>
+            <Spanish>Configuración de distancia de visión</Spanish>
             <German>Sichtweiteneinstellungen</German>
             <Portuguese>Distância de Visão</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_VIEWFOOT">
             <English>m on foot</English>
             <Chinese>m 步兵視野</Chinese>
+            <Spanish>m a pie</Spanish>
             <German>m zu Fuß</German>
             <Portuguese>m A pé</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_VIEWVEHICLE">
             <English>m in ground vehicles</English>
             <Chinese>m 地面載具視野</Chinese>
+            <Spanish>m en vehículos de tierra</Spanish>
             <German>m in Bodenfahrzeugen</German>
             <Portuguese>m em veículos terrestres</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_VIEWAIR">
             <English>m in air vehicles</English>
             <Chinese>m 空中載具視野</Chinese>
+            <Spanish>m en vehículos de aire</Spanish>
             <German>m in Luftfahrzeugen</German>
             <Portuguese>m em veículos aéreos</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_LABELMISC">
             <English>Misc Settings</English>
             <Chinese>細項設定</Chinese>
+            <Spanish>Configuración miscelanea</Spanish>
             <German>Sonstige Einstellungen</German>
             <Portuguese>Outras Configurações</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TEXTTERRAIN">
             <English>Terrain detail:</English>
             <Chinese>地形細節</Chinese>
+            <Spanish>Detalle de terreno:</Spanish>
             <German>Terraindetail:</German>
             <Portuguese>Detalhe do terreno:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TERRAINLOW">
             <English>Low</English>
             <Chinese>低</Chinese>
+            <Spanish>Bajo</Spanish>
             <German>Niedrig</German>
             <Portuguese>Baixo</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TERRAINSTANDARD">
             <English>Standard</English>
             <Chinese>標準</Chinese>
+            <Spanish>Estandard</Spanish>
             <German>Standard</German>
             <Portuguese>Padrão</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TERRAINHIGH">
             <English>High</English>
             <Chinese>高</Chinese>
+            <Spanish>Alto</Spanish>
             <German>Hoch</German>
             <Portuguese>Alto</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TERRAINVHIGH">
             <English>Very High</English>
             <Chinese>非常高</Chinese>
+            <Spanish>Muy alto</Spanish>
             <German>Sehr Hoch</German>
             <Portuguese>Muito Alto</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TERRAINULTRA">
             <English>Ultra</English>
             <Chinese>極高</Chinese>
+            <Spanish>Ultra</Spanish>
             <German>Ultra</German>
             <Portuguese>Ultra</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TEXTTPV">
             <English>Auto 3rd person view:</English>
             <Chinese>自動第三人稱視角</Chinese>
+            <Spanish>Cámara auto 3era persona:</Spanish>
             <German>Auto 3rd-Person-Sicht:</German>
             <Portuguese>Câmera auto em 3º pessoa:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TPDISABLED">
             <English>Disabled</English>
             <Chinese>關閉</Chinese>
+            <Spanish>Desabilitar</Spanish>
             <German>Deaktiviert</German>
             <Portuguese>Desativado</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TPVAIR">
             <English>Air vehicles</English>
             <Chinese>空中載具</Chinese>
+            <Spanish>Vehículos de aire</Spanish>
             <German>Luftfahrzeuge</German>
             <Portuguese>Veículos aéreos</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TPVLAND">
             <English>Ground vehicles</English>
             <Chinese>地面載具</Chinese>
+            <Spanish>Vehículos de tierra</Spanish>
             <German>Bodenfahrzeuge</German>
             <Portuguese>Veículos terrestres</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TPVALL">
             <English>All vehicles</English>
             <Chinese>所有載具</Chinese>
+            <Spanish>Todos los vehículos</Spanish>
             <German>Alle Fahrzeuge</German>
             <Portuguese>Todos os veículos</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TEXTRADIO">
             <English>Disable radio chatter:</English>
             <Chinese>關閉文字聊天：</Chinese>
+            <Spanish>Deshabilitar conversaciones de radio:</Spanish>
             <German>KI Funk deaktivieren:</German>
             <Portuguese>Desativar comm's de rádio:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_RADIONO">
             <English>No</English>
             <Chinese>否</Chinese>
+            <Spanish>No</Spanish>
             <German>Nein</German>
             <Portuguese>Não</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_RADIOVOICE">
             <English>Voice</English>
             <Chinese>只有語音通訊</Chinese>
+            <Spanish>Voz</Spanish>
             <German>Stimme</German>
             <Portuguese>Voz</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_RADIOALL">
             <English>Voice + Chat</English>
             <Chinese>語音+文字通訊</Chinese>
+            <Spanish>Voz + Chat</Spanish>
             <German>Stimme + Chat</German>
             <Portuguese>Voz + Chat</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TEXTSOUND">
             <English>In vehicle volume:</English>
             <Chinese>載具內音量：</Chinese>
+            <Spanish>Volumen en vehículo:</Spanish>
             <German>Lautstärke im Fahrzeug:</German>
             <Portuguese>Volume dentro do veículo:</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_APPLY">
             <English>Apply</English>
             <Chinese>使用</Chinese>
+            <Spanish>Aplicar</Spanish>
             <German>Anwenden</German>
             <Portuguese>Aplicar</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_TTSOUND">
             <English>The sound adjustment is overwritten by ACE, if you should use it.</English>
             <Chinese>如果你有使用ACE模組，聲音設定將會被ACE的覆蓋</Chinese>
+            <Spanish>Los ajustes de sonido han sido sobreescritos por ACE, si debieras usarlos.</Spanish>
             <German>Die Lautstärkeanpassung wird durch ACE überschrieben, wenn du es nutzen solltest.</German>
             <Portuguese>O ajuste de som é sobrescrito pelo ACE se você usar ele.</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_NOTLEADER">
             <English>You're not the leader of this group.</English>
             <Chinese>你不是這個團隊的隊長</Chinese>
+            <Spanish>No eres el líder en el grupo.</Spanish>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>
             <Portuguese>Você não é o lider desse grupo.</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_NOLVLSYSTEM">
             <English>Leveling system disabled</English>
             <Chinese>陞階系統關閉</Chinese>
+            <Spanish>Sistema de niveles desactivado</Spanish>
             <German>Levelsystem deaktiviert</German>
             <Portuguese>Sistema de níveis desativado</Portuguese>
         </Key>
         <Key ID="STR_KPPLM_VERSION">
             <English>KP Player Menu v1.0.2\nby Wyqer</English>
             <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
+            <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
         </Key>
     </Package>
 </Project>
