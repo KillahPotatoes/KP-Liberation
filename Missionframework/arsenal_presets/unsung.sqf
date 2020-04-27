@@ -1543,7 +1543,7 @@ GRLIB_arsenal_items = [
     "UNS_TC_2",                                         // Crew Helmet 2
     "UNS_USMC_Cover",                                   // USMC Cover
 
-    // Facegeat
+    // Facegear
     "UNS_Band_H",                                       // Bandage/Head
     "UNS_Band_L",                                       // Bandage/Leg
     "UNS_Bandana_A",                                    // Bandana OD
