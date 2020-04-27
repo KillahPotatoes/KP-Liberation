@@ -1,12 +1,12 @@
 /*
     3CB BAF Arsenal Preset
-    Last Update: 2020-04-24
+    Last Update: 2020-04-27
 
-    Needed Mods:
+    Needed:
         - 3CB BAF Weapons   - https://steamcommunity.com/sharedfiles/filedetails/?id=893339590
         - 3CB BAF Equipment - https://steamcommunity.com/sharedfiles/filedetails/?id=893328083
 
-    Optional Mods:
+    Optional:
         - ACE  - https://steamcommunity.com/sharedfiles/filedetails/?id=463939057
         - ACRE - https://steamcommunity.com/sharedfiles/filedetails/?id=751965892
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
