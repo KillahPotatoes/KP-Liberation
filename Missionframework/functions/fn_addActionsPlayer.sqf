@@ -32,7 +32,7 @@ _player addAction [
     false,
     true,
     "",
-    "alive _originalTarget && {player getVariable ['KPLIB_isNearStart', false]}"
+    "alive player && {player getVariable ['KPLIB_isNearStart', false]}"
 ];
 
 // HALO
@@ -44,19 +44,19 @@ _player addAction [
     false,
     true,
     "",
-    "GRLIB_halo_param > 0 && {_originalTarget isEqualTo _target} && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
+    "GRLIB_halo_param > 0 && {isNull (objectParent player)} && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Redeploy
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_DEPLOY_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
-    "scripts\client\actions\redeploy.sqf",
+    {GRLIB_force_redeploy = true;},
     nil,
     -720,
     false,
     true,
     "",
-    "_originalTarget isEqualTo _target && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearMobRespawn', false]} || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
+    "isNull (objectParent player) && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearMobRespawn', false]} || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Squad management
@@ -68,7 +68,7 @@ _player addAction [
     false,
     true,
     "",
-    "_originalTarget isEqualTo _target && {alive _originalTarget} && {!((units group player) isEqualTo [player])} && {(leader group player) isEqualTo player} && {build_confirmed isEqualTo 0}"
+    "isNull (objectParent player) && {alive player} && {!((units group player) isEqualTo [player])} && {(leader group player) isEqualTo player} && {build_confirmed isEqualTo 0}"
 ];
 
 // Arsenal
@@ -80,7 +80,7 @@ _player addAction [
     false,
     true,
     "",
-    "_originalTarget isEqualTo _target && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearArsenal', false]} || {player getVariable ['KPLIB_isNearMobRespawn', false]} || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
+    "isNull (objectParent player) && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearArsenal', false]} || {player getVariable ['KPLIB_isNearMobRespawn', false]} || {player getVariable ['KPLIB_isNearStart', false]}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Build
@@ -92,7 +92,7 @@ _player addAction [
     false,
     true,
     "",
-    "_originalTarget isEqualTo _target && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {build_confirmed isEqualTo 0}"
+    "isNull (objectParent player) && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Secondary missions
@@ -104,7 +104,7 @@ _player addAction [
     false,
     true,
     "",
-    "alive _originalTarget && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearStart', false]}} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[5] call KPLIB_fnc_hasPermission}} && {build_confirmed isEqualTo 0}"
+    "alive player && {player getVariable ['KPLIB_fobDist', 99999] < 20 || {player getVariable ['KPLIB_isNearStart', false]}} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[5] call KPLIB_fnc_hasPermission}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Build sector storage
@@ -116,7 +116,7 @@ _player addAction [
     false,
     true,
     "",
-    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {_originalTarget isEqualTo _target} && {alive _originalTarget} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {(player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo []} && {build_confirmed isEqualTo 0}"
+    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {isNull (objectParent player)} && {alive player} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {(player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo []} && {build_confirmed isEqualTo 0}"
 ];
 
 // Build supply facility
@@ -128,7 +128,7 @@ _player addAction [
     false,
     true,
     "",
-    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive _originalTarget} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 4)} && {build_confirmed isEqualTo 0}"
+    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive player} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 4)} && {build_confirmed isEqualTo 0}"
 ];
 
 // Build ammo facility
@@ -140,7 +140,7 @@ _player addAction [
     false,
     true,
     "",
-    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive _originalTarget} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 5)} && {build_confirmed isEqualTo 0}"
+    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive player} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 5)} && {build_confirmed isEqualTo 0}"
 ];
 
 // Build fuel facility
@@ -152,7 +152,7 @@ _player addAction [
     false,
     true,
     "",
-    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive _originalTarget} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 6)} && {build_confirmed isEqualTo 0}"
+    "!(player getVariable ['KPLIB_nearProd', []] isEqualTo []) && {alive player} && {player getVariable ['KPLIB_hasDirectAccess', false] || {[3] call KPLIB_fnc_hasPermission}} && {!((player getVariable ['KPLIB_nearProd', []] select 3) isEqualTo [])} && {!((player getVariable ['KPLIB_nearProd', []]) select 6)} && {build_confirmed isEqualTo 0}"
 ];
 
 // Switch global/local resources
@@ -164,7 +164,7 @@ _player addAction [
     false,
     true,
     "",
-    "alive _originalTarget && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {build_confirmed isEqualTo 0}"
+    "alive player && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {build_confirmed isEqualTo 0}"
 ];
 
 // Production
@@ -176,7 +176,7 @@ _player addAction [
     false,
     true,
     "",
-    "player getVariable ['KPLIB_hasDirectAccess', false] && {alive _originalTarget} && {!(KP_liberation_production isEqualTo [])} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8) || {!(player getVariable ['KPLIB_nearProd', []] isEqualTo [])}} && {build_confirmed isEqualTo 0}"
+    "player getVariable ['KPLIB_hasDirectAccess', false] && {alive player} && {!(KP_liberation_production isEqualTo [])} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8) || {!(player getVariable ['KPLIB_nearProd', []] isEqualTo [])}} && {build_confirmed isEqualTo 0}"
 ];
 
 // Logistic
@@ -188,7 +188,7 @@ _player addAction [
     false,
     true,
     "",
-    "KP_liberation_ailogistics && {player getVariable ['KPLIB_hasDirectAccess', false]} && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {!(GRLIB_all_fobs isEqualTo [] || KP_liberation_production isEqualTo [])} && {build_confirmed isEqualTo 0}"
+    "KP_liberation_ailogistics && {player getVariable ['KPLIB_hasDirectAccess', false]} && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {!(GRLIB_all_fobs isEqualTo [] || KP_liberation_production isEqualTo [])} && {build_confirmed isEqualTo 0}"
 ];
 
 // Permissions
@@ -200,7 +200,7 @@ _player addAction [
     false,
     true,
     "",
-    "GRLIB_permissions_param && {player getVariable ['KPLIB_hasDirectAccess', false]} && {alive _originalTarget} && {build_confirmed isEqualTo 0}"
+    "GRLIB_permissions_param && {player getVariable ['KPLIB_hasDirectAccess', false]} && {alive player} && {build_confirmed isEqualTo 0}"
 ];
 
 // Reassign Zeus
@@ -213,7 +213,7 @@ if (player == ([] call KPLIB_fnc_getCommander)) then {
         false,
         true,
         "",
-        "alive _originalTarget && {isNull (player getVariable ['KPLIB_ownedZeusModule', objNull])} && {build_confirmed isEqualTo 0}"
+        "alive player && {isNull (player getVariable ['KPLIB_ownedZeusModule', objNull])} && {build_confirmed isEqualTo 0}"
     ];
 };
 
@@ -226,7 +226,7 @@ _player addAction [
     false,
     true,
     "",
-    "player getVariable ['KPLIB_hasDirectAccess', false] && {alive _originalTarget} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {build_confirmed isEqualTo 0}"
+    "player getVariable ['KPLIB_hasDirectAccess', false] && {alive player} && {player getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)} && {build_confirmed isEqualTo 0}"
 ];
 
 true
