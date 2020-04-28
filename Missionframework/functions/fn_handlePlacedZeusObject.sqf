@@ -2,7 +2,7 @@
     File: fn_handlePlacedZeusObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-11
-    Last Update: 2020-04-11
+    Last Update: 2020-04-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
 // Identify kind of placed object once
 private _unit = _obj in allUnits;
 private _vehicle = _obj in vehicles;
-private _crate = (typeOf _obj) in KP_liberation_crates;
+private _crate = (toLower (typeOf _obj)) in KPLIB_crates;
 
 // Exit if building and no resource crate
 if !(_unit || _vehicle || _crate) exitWith {false};

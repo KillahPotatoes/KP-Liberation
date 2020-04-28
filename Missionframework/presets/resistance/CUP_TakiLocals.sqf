@@ -24,6 +24,14 @@ KP_liberation_guerilla_units = [
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
     "CUP_I_Datsun_PK_TK",
+    "CUP_I_Hilux_AGS30_TK",
+    "CUP_I_Hilux_DSHKM_TK",
+    "CUP_I_Hilux_M2_TK",
+    "CUP_I_Hilux_SPG9_TK",
+    "CUP_I_Hilux_armored_BMP1_TK",
+    "CUP_I_Hilux_armored_BTR60_TK",
+    "CUP_I_Hilux_armored_zu23_TK",
+    "CUP_I_BTR40_MG_TKG",
     "CUP_I_BTR40_MG_TKG",
     "CUP_I_BMP1_TK_GUE",
     "CUP_I_BRDM2_TK_GUE",

@@ -35,8 +35,8 @@ opfor_transport_truck = "CUP_O_Ural_SLA";                                   // U
 opfor_ammobox_transport = "CUP_O_Ural_Open_SLA";                            // Ural (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "CUP_O_Ural_Refuel_SLA";                                 // Ural (Refuel)
 opfor_ammo_truck = "CUP_O_Ural_Reammo_SLA";                                 // Ural (Ammo)
-opfor_fuel_container = "B_Slingload_01_Fuel_F";                             // Taru Fuel Pod
-opfor_ammo_container = "B_Slingload_01_Ammo_F";                             // Taru Ammo Pod
+opfor_fuel_container = "B_Slingload_01_Fuel_F";                             // Huron Fuel Container
+opfor_ammo_container = "B_Slingload_01_Ammo_F";                             // Huron Ammo Container
 opfor_flag = "FlagCarrierNorth";                                            // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
@@ -64,9 +64,16 @@ militia_vehicles = [
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
     "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
-    "CUP_O_UAZ_AGS30_SLA",                                                  // UAZ (AGS-30)
+    "CUP_O_UAZ_AA_SLA",                                                     // UAZ (AA)
     "CUP_O_UAZ_AGS30_SLA",                                                  // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_SLA",                                                   // UAZ (SPG-9)
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR80_SLA",                                                      // BTR-80
+    "CUP_O_BTR80A_SLA",                                                     // BTR-80A
+    "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_ZSU23_SLA",                                                      // ZSU-23-4
@@ -80,7 +87,7 @@ opfor_vehicles = [
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
     "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
-    "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
+    "CUP_O_UAZ_AA_SLA",                                                     // UAZ (AA)
     "CUP_O_UAZ_SPG9_SLA",                                                   // UAZ (SPG-9)
     "CUP_O_Ural_ZU23_SLA",                                                  // Ural (ZU-23)
     "CUP_O_BTR60_SLA",                                                      // BTR-60PB
@@ -90,9 +97,16 @@ opfor_vehicles_low_intensity = [
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
     "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
+    "CUP_O_UAZ_AA_SLA",                                                     // UAZ (AA)
     "CUP_O_UAZ_AGS30_SLA",                                                  // UAZ (AGS-30)
-    "CUP_O_UAZ_AGS30_SLA",                                                  // UAZ (AGS-30)
-    "CUP_O_UAZ_SPG9_SLA",                                                   // UAZ (AGS-30)
+    "CUP_O_UAZ_SPG9_SLA",                                                   // UAZ (SPG-9)
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR80_SLA",                                                      // BTR-80
+    "CUP_O_BTR80A_SLA",                                                     // BTR-80A
+    "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_BMP2_SLA",                                                       // BMP-2
     "CUP_O_ZSU23_SLA",                                                      // ZSU-23-4
@@ -111,10 +125,11 @@ opfor_battlegroup_vehicles = [
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
     "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
-    "CUP_O_UAZ_MG_SLA",                                                     // UAZ (DShKM)
+    "CUP_O_UAZ_AA_SLA",                                                     // UAZ (AA)
+    "CUP_O_UAZ_SPG9_SLA",                                                   // UAZ (SPG-9)
+    "CUP_O_Ural_ZU23_SLA",                                                  // Ural (ZU-23)
     "CUP_O_BTR60_SLA",                                                      // BTR-60PB
     "CUP_O_MTLB_pk_SLA",                                                    // MT-LB LV
-    "CUP_O_Ural_ZU23_SLA",                                                  // Ural (ZU-23)
     "CUP_O_Mi8_SLA_1",                                                      // Mi-8MT
     "CUP_O_UH1H_gunship_SLA",                                               // UH-1H (Gunship)
     "CUP_O_UH1H_armed_SLA",                                                 // UH-1H (Armed)
@@ -128,6 +143,8 @@ opfor_troup_transports = [
     "CUP_O_Mi24_D_Dynamic_SLA",                                             // Mi-24D
     "CUP_O_Mi8_SLA_2",                                                      // Mi-8MTV3
     "CUP_O_BTR60_SLA",                                                      // BTR-60PB
+    "CUP_O_BTR80_SLA",                                                      // BTR-80
+    "CUP_O_BTR80A_SLA",                                                     // BTR-80A
     "CUP_O_MTLB_pk_SLA",                                                    // MT-LB LV
     "CUP_O_Mi8_SLA_1",                                                      // Mi-8MT
     "CUP_O_UH1H_armed_SLA",                                                 // UH-1H (Armed)

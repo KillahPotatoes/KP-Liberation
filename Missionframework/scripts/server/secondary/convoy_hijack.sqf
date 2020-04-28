@@ -20,7 +20,7 @@ private _transport_vehicle = [_spawnpos getPos [10, 180], opfor_ammobox_transpor
 private _boxes_amount = 0;
 {
     if ( _x select 0 == opfor_ammobox_transport ) exitWith { _boxes_amount = (count _x) - 2 };
-} foreach box_transport_config;
+} foreach KPLIB_transportConfigs;
 
 if ( _boxes_amount == 0 ) exitWith {["Opfor ammobox truck classname doesn't allow for ammobox transport, correct your preset and/or transport config", "ERROR"] call KPLIB_fnc_log;};
 

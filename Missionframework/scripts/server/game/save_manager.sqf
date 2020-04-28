@@ -33,9 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KP_liberation_classnamesToSave = [FOB_typename, huron_typename];
-// Classnames of blufor vehicles
-KP_liberation_bluforClassnames = [];
+KPLIB_classnamesToSave = [toLower FOB_typename, toLower huron_typename];
 
 /*
     --- Locals ---
@@ -46,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [FOB_typename, huron_typename];
+private _noKillHandler = [toLower FOB_typename, toLower huron_typename];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -97,20 +95,16 @@ resources_intel = 0;
 save_is_loaded = false;
 
 // Add all buildings for saving and kill manager ignore
-{
-    _noKillHandler pushBack (_x select 0);
-    KP_liberation_classnamesToSave pushBack (_x select 0);
-} foreach buildings;
-
-// Fetch all blufor vehicle classnames
-{
-    KP_liberation_bluforClassnames pushBack (_x select 0);
-    KP_liberation_classnamesToSave pushBack (_x select 0);
-} foreach (static_vehicles + air_vehicles + heavy_vehicles + light_vehicles + support_vehicles);
+_noKillHandler append KPLIB_b_buildings_classes;
+KPLIB_classnamesToSave append KPLIB_b_buildings_classes;
+KPLIB_classnamesToSave append KPLIB_b_allVeh_classes;
 
 // Add opfor and civilian vehicles for saving
-KP_liberation_classnamesToSave = KP_liberation_classnamesToSave + all_hostile_classnames + civilian_vehicles;
-KP_liberation_classnamesToSave  = KP_liberation_classnamesToSave  arrayIntersect KP_liberation_classnamesToSave;
+KPLIB_classnamesToSave append KPLIB_o_allVeh_classes;
+KPLIB_classnamesToSave append civilian_vehicles;
+
+// Remove duplicates
+KPLIB_classnamesToSave = KPLIB_classnamesToSave arrayIntersect KPLIB_classnamesToSave;
 
 /*
     --- Statistic Variables ---
@@ -164,12 +158,14 @@ stats_vehicles_recycled = 0;
 // Get possible save data
 private _saveData = profileNamespace getVariable GRLIB_save_key;
 
-if (_saveData isEqualType "") then {
-    _saveData = parseSimpleArray _saveData;
-};
-
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
+
+    // Convert from string to array
+    if (_saveData isEqualType "") then {
+        _saveData = parseSimpleArray _saveData;
+    };
+
     if (((_saveData select 0) select 0) isEqualType 0) then {
         [format ["Save data from version: %1", (_saveData select 0) joinstring "."], "SAVE"] call KPLIB_fnc_log;
 
@@ -333,7 +329,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KP_liberation_classnamesToSave) then {
+        if ((toLower _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -347,18 +343,16 @@ if (!isNil "_saveData") then {
             _object setPosWorld _pos;
             _object setVectorDirAndUp [_vecDir, _vecUp];
 
-            // Add blufor crew, if it had crew or is a UAV
-            if ((unitIsUAV _object) || _hascrew) then {
-                [_object] call KPLIB_fnc_forceBluforCrew;
-            };
+            // Process KP object init
+            [_object] call KPLIB_fnc_addObjectInit;
 
             // Apply kill manager handling, if not excluded
-            if !(_class in _noKillHandler) then {
+            if !((toLower _class) in _noKillHandler) then {
                 _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
             };
 
             // Set enemy vehicle as captured
-            if (_class in all_hostile_classnames) then {
+            if ((toLower _class) in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];
             };
 
@@ -367,11 +361,13 @@ if (!isNil "_saveData") then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
-            // Process KP object init
-            [_object] call KPLIB_fnc_addObjectInit;
-
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;
+
+            // Add blufor crew, if it had crew or is a UAV
+            if ((unitIsUAV _object) || _hascrew) then {
+                [_object] call KPLIB_fnc_forceBluforCrew;
+            };
         };
     } forEach _objectsToSave;
 
@@ -405,7 +401,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if (_class in KP_liberation_classnamesToSave) then {
+        if ((toLower _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];

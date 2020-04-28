@@ -1,14 +1,14 @@
 params ["_vehicle"];
-private _vehicleClass = toLower typeOf _vehicle;
+private _vehicleClass = toLower (typeOf _vehicle);
 
 // Cargo is always allowed
 private _isCargo = (_vehicle getCargoIndex player) != -1;
 if (_isCargo || _vehicle isKindOf "ParachuteBase") exitWith {};
 
 private _permissibleVehicles = [
-    [light_vehicles_classes, "STR_PERMISSION_NO_LIGHT"],
-    [heavy_vehicles_classes, "STR_PERMISSION_NO_ARMOR"],
-    [air_vehicles_classes, "STR_PERMISSION_NO_AIR"]
+    [KPLIB_typeLightClasses, "STR_PERMISSION_NO_LIGHT"],
+    [KPLIB_typeHeavyClasses, "STR_PERMISSION_NO_ARMOR"],
+    [KPLIB_typeAirClasses, "STR_PERMISSION_NO_AIR"]
 ];
 
 private _permissionIdx = _permissibleVehicles findIf {_vehicleClass in (_x select 0)};

@@ -16,7 +16,7 @@ sleep 2;
 _informant enableAI "ANIM";
 _informant enableAI "MOVE";
 sleep 2;
-[_informant] remoteExec ["remote_call_switchmove"];
+[_informant, ""] remoteExecCall ["switchMove"];
 
 waitUntil {sleep 5;
     _nearestfob = [getpos _informant] call KPLIB_fnc_getNearestFob;
@@ -37,7 +37,7 @@ if (alive _informant) then {
         _informant disableAI "ANIM";
         _informant disableAI "MOVE";
         sleep 5;
-        [_informant, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExec ["remote_call_switchmove"];
+        [_informant, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExecCall ["switchMove"];
         [_informant] remoteExec ["civinfo_delivered",2];
         if (KP_liberation_civinfo_debug > 0) then {["civinfo_escort -> Informant at FOB", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         sleep 600;

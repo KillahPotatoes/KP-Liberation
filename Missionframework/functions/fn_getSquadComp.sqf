@@ -2,7 +2,7 @@
     File: fn_getSquadComp.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-11-25
+    Last Update: 2020-04-24
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,13 +24,13 @@ private _squadcomp = [];
 if (_type == "army") then {
     private _selected = false;
     private _randomchance = 0;
-    _squadcomp = opfor_squad_8_standard;
+    _squadcomp = KPLIB_o_squadStd;
 
     if (armor_weight > 40 && !_selected) then {
         _randomchance = (armor_weight - 35) * 1.4;
         if ((random 100) < _randomchance) then {
             _selected = true;
-            _squadcomp = opfor_squad_8_tankkillers;
+            _squadcomp = KPLIB_o_squadTank;
         };
     };
 
@@ -38,7 +38,7 @@ if (_type == "army") then {
         _randomchance = (air_weight - 35) * 1.4;
         if ((random 100) < _randomchance) then {
             _selected = true;
-            _squadcomp = opfor_squad_8_airkillers;
+            _squadcomp = KPLIB_o_squadAir;
         };
     };
 
@@ -46,7 +46,7 @@ if (_type == "army") then {
         _randomchance = (infantry_weight - 35) * 1.4;
         if ((random 100) < _randomchance) then {
             _selected = true;
-            _squadcomp = opfor_squad_8_infkillers;
+            _squadcomp = KPLIB_o_squadInf;
         };
     };
 } else {

@@ -2,7 +2,7 @@
     File: fn_crateFromStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-03-27
-    Last Update: 2020-03-30
+    Last Update: 2020-04-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 ];
 
 // Validate parameters
-if !(_cratetype in KP_liberation_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
+if !((toLower _cratetype) in KPLIB_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 // Get correct storage positions
@@ -34,7 +34,7 @@ if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 private _i = 0;
 private _dir = (getDir _storage) - 180;
 private _unloadPos = _storage getPos [_unloadDist, _dir];
-while {!((nearestObjects [_unloadPos, KP_liberation_crates, 1]) isEqualTo [])} do {
+while {!((nearestObjects [_unloadPos, KPLIB_crates, 1]) isEqualTo [])} do {
     _i = _i + 1;
     _unloadPos = _storage getPos [_unloadDist + _i * 1.8, _dir];
 };
@@ -66,7 +66,8 @@ _i = 0;
 // Update sector resources
 if (_update) then {
     if ((_storage getVariable ["KP_liberation_storage_type", -1]) == 1) then {
-        remoteExec ["check_sector_ress_remote_call", 2];
+        recalculate_sectors = true;
+        publicVariable "recalculate_sectors";
     };
 };
 
