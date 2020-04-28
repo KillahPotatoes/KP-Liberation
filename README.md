@@ -1,6 +1,6 @@
 ![KP Liberation](https://www.killahpotatoes.de/images/arma/liberation.png)
 
-# KP Liberation for ArmA 3
+# KP Liberation for Arma 3
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/LICENSE.md)
 [![GitHub release](https://img.shields.io/github/release/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/releases)
