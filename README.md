@@ -217,6 +217,7 @@ class Missions
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
 * Updated: Russian localization. Thanks to [Dj_Haski](https://github.com/DjHaski)
+* Updated: Spanish localization. Thanks to [amunoz20](https://github.com/amunoz20)
 * Tweaked: Default blacklist now only holds the static and tent backpacks.
 * Tweaked: Scripted server restart now automatically recognizes the OS of the server. More info in the [Wiki article](https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_FAQ#how-does-the-scripted-server-restart-work)
 * Tweaked: Infantry for battlegroup transport vehicles are now spawned closer to the objective.
