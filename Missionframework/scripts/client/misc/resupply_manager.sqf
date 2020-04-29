@@ -36,7 +36,7 @@ while { true } do {
                     _rearmed = true;
                     _rearm_ticker = _rearm_ticker + 1;
                     if ( _rearm_ticker >= _rearm_time ) then {
-                        [_veh, 1] remoteExecCall ["setVehicleAmmoDef", _veh];
+                        [_veh, 1] remoteExecCall ["setVehicleAmmo", _veh];
                     };
                 };
 
