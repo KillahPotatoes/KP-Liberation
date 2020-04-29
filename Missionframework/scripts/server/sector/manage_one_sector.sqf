@@ -266,7 +266,9 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
                         deleteVehicle _x;
                     };
                 } else {
-                    [_x] call KPLIB_fnc_cleanOpforVehicle;
+                    if (!isNull _x) then {
+                        [_x] call KPLIB_fnc_cleanOpforVehicle;
+                    };
                 };
             } forEach _managed_units;
         } else {
@@ -288,7 +290,9 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
                     if (_x isKindOf "Man") then {
                         deleteVehicle _x;
                     } else {
-                        [_x] call KPLIB_fnc_cleanOpforVehicle;
+                        if (!isNull _x) then {
+                            [_x] call KPLIB_fnc_cleanOpforVehicle;
+                        };
                     };
                 } forEach _managed_units;
 

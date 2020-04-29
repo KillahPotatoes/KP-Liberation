@@ -1,5 +1,5 @@
 waitUntil {!isNil "GRLIB_permissions"};
-waitUntil {!(GRLIB_permissions isEqualTo [])};
+waitUntil {!(GRLIB_permissions isEqualTo []) || !GRLIB_permissions_param};
 
 private [ "_unflippable_vehicles", "_detected_vehicles", "_next_vehicle", "_next_vehicle_already_in_list", "_idact_next" ];
 
