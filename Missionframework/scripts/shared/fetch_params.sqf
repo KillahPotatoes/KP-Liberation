@@ -390,10 +390,6 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_ailogistics) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
-    _param = localize "STR_PARAM_TEAMKILL_PENALTY";
-    _value = if (GRLIB_teamkill_penalty) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
-    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
-
     _param = localize "STR_PARAM_CR_BUILDING";
     _value = if (KP_liberation_cr_param_buildings) then {localize "STR_PARAM_CR_DAMAGED";} else {localize "STR_PARAM_CR_DESTROYED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
