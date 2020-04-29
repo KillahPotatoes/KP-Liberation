@@ -1,3 +1,20 @@
+/*
+    File: fn_initSectors.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2020-04-29
+    Last Update: 2020-04-29
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Sorts the placed sector markers to their category array.
+
+    Parameter(s):
+        NONE
+
+    Returns:
+        Function reached the end [BOOL]
+*/
+
 sectors_airspawn = [];
 sectors_allSectors = [];
 sectors_bigtown = [];
@@ -18,3 +35,5 @@ sectors_tower = [];
         case (_x find "tower" == 0): {sectors_tower pushBack _x; if (isServer) then {_x setMarkerText format ["%1 %2",markerText _x, mapGridPosition (markerPos _x)];}; sectors_allSectors pushBack _x;};
     };
 } forEach allMapMarkers;
+
+true

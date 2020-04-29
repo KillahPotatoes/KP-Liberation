@@ -5,7 +5,7 @@ enableSaving [ false, false ];
 
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
 
-[] call compileFinal preprocessFileLineNumbers "scripts\shared\init_sectors.sqf";
+[] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
