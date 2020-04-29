@@ -104,5 +104,17 @@ KPLIB_objectInits = [
     [
         KP_liberation_suppMod_artyVeh,
         {if (KP_liberation_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
+    ],
+
+    // Disable autocombat (if set in parameters) and fleeing
+    [
+        ["Man"],
+        {
+            if (!(GRLIB_autodanger) && {(side _this) isEqualTo GRLIB_side_friendly}) then {
+                _this disableAI "AUTOCOMBAT";
+            };
+            _this allowFleeing 0;
+        },
+        true
     ]
 ];

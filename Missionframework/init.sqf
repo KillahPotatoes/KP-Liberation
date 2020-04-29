@@ -5,12 +5,11 @@ enableSaving [ false, false ];
 
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
 
-[] call compileFinal preprocessFileLineNumbers "scripts\shared\init_sectors.sqf";
+[] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
 [] call compileFinal preprocessFileLineNumbers "presets\init_presets.sqf";
-KPLIB_objectInitsCache = createSimpleObject ["a3\weapons_f\empty.p3d", [-7580, -7580, 0], true];
 [] call compileFinal preprocessFileLineNumbers "kp_objectInits.sqf";
 
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH

@@ -86,7 +86,6 @@ if(isServer) then {
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
-    GET_PARAM_BOOL(GRLIB_teamkill_penalty, "TeamkillPenalty", 0);
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
     GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);

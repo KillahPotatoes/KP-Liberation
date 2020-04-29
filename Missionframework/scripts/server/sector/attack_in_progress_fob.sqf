@@ -47,7 +47,7 @@ if ( GRLIB_endgame == 0 ) then {
         GRLIB_all_fobs = GRLIB_all_fobs - [_thispos];
         publicVariable "GRLIB_all_fobs";
         reset_battlegroups_ai = true;
-        [_thispos] call destroy_fob;
+        [_thispos] call KPLIB_fnc_destroyFob;
         [] spawn KPLIB_fnc_doSave;
         stats_fobs_lost = stats_fobs_lost + 1;
     } else {

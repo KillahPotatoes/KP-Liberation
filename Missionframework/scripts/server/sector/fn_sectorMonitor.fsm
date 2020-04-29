@@ -51,7 +51,7 @@ link22[] = {19,6};
 link23[] = {20,21};
 link24[] = {21,15};
 link25[] = {22,23};
-globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-520.638245,654.284302,828.434875,-14.610138,1232,884,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-462.464111,712.458435,919.987671,76.941620,1232,884,1};
 window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
@@ -285,7 +285,7 @@ class FSM
                          "" \n
                          "// Spawn resource crates" \n
                          "if (_sector in sectors_factory || _sector in sectors_capture) then {" \n
-                         "    [_sector] call manage_captureboxes;" \n
+                         "    [_sector] call KPLIB_fnc_spawnSectorCrates;" \n
                          "};" \n
                          "" \n
                          "// Spawn intel items" \n
