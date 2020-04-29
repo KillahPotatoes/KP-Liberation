@@ -130,7 +130,7 @@ class Params
         title = $STR_PARAMS_VICTORYCONDITION;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_PARAMS_VICTORYCONDITION_0, $STR_PARAMS_VICTORYCONDITION_1, $STR_PARAMS_VICTORYCONDITION_2, $STR_PARAMS_VICTORYCONDITION_3, $STR_PARAMS_VICTORYCONDITION_4};
-        default = 0;
+        default = 1;
     };
     class Spacer1 {
         title = "";
@@ -251,12 +251,6 @@ class Params
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
-    };
-    class TeamkillPenalty {
-        title = $STR_PARAM_TEAMKILL_PENALTY;
-        values[] = {1, 0};
-        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
     };
     class CR_Building {
         title = $STR_PARAM_CR_BUILDING;

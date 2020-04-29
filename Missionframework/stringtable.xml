@@ -1622,19 +1622,6 @@
             <Portuguese>Atenção: Fogo amigo</Portuguese>
             <Korean>경고: 아군 공격</Korean>
         </Key>
-        <Key ID="STR_PARAM_TEAMKILL_PENALTY">
-            <Original>Teamkill penalty</Original>
-            <French>Pénalité pour tirs alliés</French>
-            <German>Strafe für das Töten von Verbündeten</German>
-            <Spanish>Penalización por fuego amigo</Spanish>
-            <Russian>Штраф за убийство своего</Russian>
-            <Italian>Penalità se si uccide un compagno di squadra</Italian>
-            <Chinesesimp>友军击杀惩罚</Chinesesimp>
-            <Chinese>友軍擊殺懲罰</Chinese>
-            <Turkish>Dost ateşi cezası</Turkish>
-            <Portuguese>Penalidade por fogo amigo</Portuguese>
-            <Korean>아군공격시 처벌</Korean>
-        </Key>
         <Key ID="STR_PARAM_ADAPT_TO_PLAYERCOUNT">
             <Original>Hostile presence adapts to player count</Original>
             <French>La présence hostile s'adapte au nombre de joueurs</French>
