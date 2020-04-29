@@ -2,7 +2,7 @@
     File: fn_destroyFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-28
-    Last Update: 2020-04-28
+    Last Update: 2020-04-29
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -26,7 +26,7 @@ _buildings append KPLIB_b_buildings_classes;
 {
     if ((toLower (typeOf _x)) in _buildings) then {
         _x spawn {
-            sleep ((random 4) + (random 4))
+            sleep ((random 4) + (random 4));
             _this setDamage 1;
         };
     };
