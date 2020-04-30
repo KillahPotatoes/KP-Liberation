@@ -24,7 +24,7 @@ while {((getPos (leader _grp)) distance _startpos) < 100} do {
     _waypoint = _grp addWaypoint [_objPos, 100];
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointSpeed "NORMAL";
-    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointBehaviour "AWARE";
     _waypoint setWaypointCombatMode "YELLOW";
     _waypoint setWaypointCompletionRadius 30;
 
