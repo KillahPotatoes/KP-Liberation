@@ -1,8 +1,8 @@
+scriptName "KPLIB_uiManager";
+
 disableSerialization;
 
-private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_first_iteration", "_distfob", "_nearfob", "_fobdistance", "_resources", "_notNearFOB", "_resource_area"];
-
-_overlayshown = false;
+private ["_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_distfob", "_nearfob", "_fobdistance", "_resources", "_notNearFOB", "_resource_area"];
 
 _sectorcontrols = [
     201,    // BG Picture Sector
@@ -47,7 +47,6 @@ _resourcescontrols = [
 ];
 
 _active_sectors_hint = false;
-_first_iteration = true;
 _distfob = (GRLIB_fob_range * 0.8);
 _notNearFOB = false;
 _resource_area = "";
@@ -66,24 +65,23 @@ waitUntil { synchro_done };
 if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false };
 if ( isNil "halojumping" ) then { halojumping = false };
 
+private _overlay = displayNull;
+private _overlayVisible = false;
+private _showHud = false;
+
 while { true } do {
+    _showHud = alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
 
-    if ( isNull ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758007)) && _overlayshown ) then {
-        _overlayshown = false;
-        _first_iteration = true;
-
-    };
-    if ( alive player && !dialog && !_overlayshown && !cinematic_camera_started && !halojumping ) then {
-        cutRsc["statusoverlay", "PLAIN", 1];
-        _overlayshown = true;
-        _first_iteration = true;
+    if (_showHud && {!_overlayVisible}) then {
+        "KPLIB_ui" cutRsc ["KPLIB_overlay", "PLAIN", 1];
         _uiticks = 0;
     };
-    if ( ( !alive player || dialog || cinematic_camera_started ) && _overlayshown) then {
-        cutRsc["blank", "PLAIN", 0];
-        _overlayshown = false;
-        _first_iteration = true;
+    if (!_showHud && {_overlayVisible}) then {
+        "KPLIB_ui" cutText ["", "PLAIN"];
     };
+
+    _overlay = uiNamespace getVariable ['KPLIB_overlay', displayNull];
+    _overlayVisible = !isNull _overlay;
 
     _nearfob = [] call KPLIB_fnc_getNearestFob;
     _fobdistance = 9999;
@@ -117,27 +115,27 @@ while { true } do {
         KP_liberation_recycle_building_near = false;
     };
 
-    if ( _overlayshown) then {
+    if ( _overlayVisible) then {
 
-        ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
-        ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
+        (_overlay displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
+        (_overlay displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
 
         if ((markerPos "opfor_capture_marker") distance markers_reset > 100 ) then {
 
             private [ "_attacked_string" ];
             _attacked_string = [markerpos "opfor_capture_marker"] call KPLIB_fnc_getLocationName;
 
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (401)) ctrlShow true;
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (402)) ctrlSetText _attacked_string;
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (403)) ctrlSetText (markerText "opfor_capture_marker");
+            (_overlay displayCtrl (401)) ctrlShow true;
+            (_overlay displayCtrl (402)) ctrlSetText _attacked_string;
+            (_overlay displayCtrl (403)) ctrlSetText (markerText "opfor_capture_marker");
         } else {
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (401)) ctrlShow false;
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (402)) ctrlSetText "";
-            ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (403)) ctrlSetText "";
+            (_overlay displayCtrl (401)) ctrlShow false;
+            (_overlay displayCtrl (402)) ctrlSetText "";
+            (_overlay displayCtrl (403)) ctrlSetText "";
         };
 
         if (_resources) then {
-            {((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
+            {(_overlay displayCtrl (_x)) ctrlShow true;} foreach  _resourcescontrols;
             // Fix for small script error that variables will be "any" for a second after an FOB has been build
             if (isNil "KP_liberation_supplies") then {KP_liberation_supplies = 0;};
             if (isNil "KP_liberation_ammo") then {KP_liberation_ammo = 0;};
@@ -145,16 +143,16 @@ while { true } do {
 
             if ((_uiticks % 5 == 0) || _notNearFOB) then {
 
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758004)) ctrlSetText format ["%1", _resource_area];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758007)) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758010)) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758013)) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758016)) ctrlSetText format ["%1/%2", unitcap,([] call KPLIB_fnc_getLocalCap)];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758019)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758022)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758025)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758028)) ctrlSetText format ["%1%2", KP_liberation_civ_rep,"%"];
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758031)) ctrlSetText format ["%1", round(resources_intel)];
+                (_overlay displayCtrl (758004)) ctrlSetText format ["%1", _resource_area];
+                (_overlay displayCtrl (758007)) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
+                (_overlay displayCtrl (758010)) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
+                (_overlay displayCtrl (758013)) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
+                (_overlay displayCtrl (758016)) ctrlSetText format ["%1/%2", unitcap,([] call KPLIB_fnc_getLocalCap)];
+                (_overlay displayCtrl (758019)) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
+                (_overlay displayCtrl (758022)) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
+                (_overlay displayCtrl (758025)) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
+                (_overlay displayCtrl (758028)) ctrlSetText format ["%1%2", KP_liberation_civ_rep,"%"];
+                (_overlay displayCtrl (758031)) ctrlSetText format ["%1", round(resources_intel)];
 
                 _color_readiness = [0.8,0.8,0.8,1];
                 if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
@@ -162,20 +160,20 @@ while { true } do {
                 if ( combat_readiness >= 75 ) then { _color_readiness = [0.8,0.3,0,1] };
                 if ( combat_readiness >= 100 ) then { _color_readiness = [0.8,0,0,1] };
 
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758023)) ctrlSetTextColor _color_readiness;
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758025)) ctrlSetTextColor _color_readiness;
+                (_overlay displayCtrl (758023)) ctrlSetTextColor _color_readiness;
+                (_overlay displayCtrl (758025)) ctrlSetTextColor _color_readiness;
 
                 private _color_reputation = [0.8,0.8,0.8,1];
                 if (KP_liberation_civ_rep >= 25) then {_color_reputation = [0,0.7,0,1]};
                 if (KP_liberation_civ_rep <= -25) then {_color_reputation = [0.7,0,0,1]};
 
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758026)) ctrlSetTextColor _color_reputation;
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (758028)) ctrlSetTextColor _color_reputation;
+                (_overlay displayCtrl (758026)) ctrlSetTextColor _color_reputation;
+                (_overlay displayCtrl (758028)) ctrlSetTextColor _color_reputation;
                 _notNearFOB = false;
 
             };
         } else {
-            {((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
+            {(_overlay displayCtrl (_x)) ctrlShow false;} foreach  _resourcescontrols;
             _notNearFOB = true;
         };
 
@@ -183,7 +181,7 @@ while { true } do {
 
             if (!isNil "active_sectors" && ( [] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
 
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (517)) ctrlShow true;
+                (_overlay displayCtrl (517)) ctrlShow true;
 
                 if ( !_active_sectors_hint ) then {
                     hint localize "STR_OVERLOAD_HINT";
@@ -195,11 +193,11 @@ while { true } do {
                     _active_sectors_string = _active_sectors_string + (markertext _x) + "<br/>";
                 } foreach active_sectors;
                 _active_sectors_string = _active_sectors_string + "</t>";
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (516)) ctrlSetStructuredText parseText _active_sectors_string;
+                (_overlay displayCtrl (516)) ctrlSetStructuredText parseText _active_sectors_string;
 
             } else {
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (516)) ctrlSetStructuredText parseText " ";
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (517)) ctrlShow false;
+                (_overlay displayCtrl (516)) ctrlSetStructuredText parseText " ";
+                (_overlay displayCtrl (517)) ctrlShow false;
             };
 
             _nearest_active_sector = [ GRLIB_sector_size ] call KPLIB_fnc_getNearestSector;
@@ -218,25 +216,21 @@ while { true } do {
 
                 _ratio = [_nearest_active_sector] call KPLIB_fnc_getBluforRatio;
                 _barwidth = 0.084 * safezoneW * _ratio;
-                _bar = (uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (244);
+                _bar = _overlay displayCtrl (244);
                 _bar ctrlSetPosition [(ctrlPosition _bar) select 0,(ctrlPosition _bar) select 1,_barwidth,(ctrlPosition _bar) select 3];
-                if ( _first_iteration ) then {
-                    _first_iteration = false;
-                    _bar ctrlCommit 0;
-                } else {
-                    _bar ctrlCommit 2;
-                };
-                ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (205)) ctrlSetText (markerText _nearest_active_sector);
-                { ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow true; } foreach  _sectorcontrols;
+                _bar ctrlCommit ([0, 2] select ctrlShown _bar);
+
+                (_overlay displayCtrl (205)) ctrlSetText (markerText _nearest_active_sector);
+                { (_overlay displayCtrl (_x)) ctrlShow true; } foreach  _sectorcontrols;
                 if ( _nearest_active_sector in blufor_sectors ) then {
-                    ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (205)) ctrlSetTextColor [0,0.3,1.0,1];
+                    (_overlay displayCtrl (205)) ctrlSetTextColor [0,0.3,1.0,1];
                 } else {
-                    ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (205)) ctrlSetTextColor [0.85,0,0,1];
+                    (_overlay displayCtrl (205)) ctrlSetTextColor [0.85,0,0,1];
                 };
 
                 "zone_capture" setMarkerSizeLocal [ _zone_size,_zone_size ];
             } else {
-                { ((uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x)) ctrlShow false; } foreach  _sectorcontrols;
+                { (_overlay displayCtrl (_x)) ctrlShow false; } foreach  _sectorcontrols;
                 "zone_capture" setmarkerposlocal markers_reset;
             };
         };
