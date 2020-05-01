@@ -1,6 +1,6 @@
 /*
     Swedish Forces Pack Arsenal Preset
-    Last Update: 2020-04-30
+    Last Update: 2020-05-01
 
     Needed:
         - SFP: Swedish Forces Pack - https://steamcommunity.com/sharedfiles/filedetails/?id=826911897
@@ -485,6 +485,9 @@ GRLIB_arsenal_backpacks = [
     "sfp_backpack_stridssack2000",                      // Combat Bag 2000
     "sfp_stridssele_backpack_grg",                      // Stridssele - Backpack (GRG)
     "sfp_stridssele_backpack",                          // Stridssele - Backpack
+
+    // Standard Vanilla Backpacks
+    "B_Parachute",                                      // Steerable Parachute
 
     // Backpack Radios (that work with TFAR)
     "sfp_lk35_ra145",                                   // Ra 145 LK 35
