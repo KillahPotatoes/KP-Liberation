@@ -1003,6 +1003,32 @@ KP_liberation_suppMod_artyVeh = [
     "uns_Type55_mortar"
 ];
 
+// Objects which are spawned as intel objects for pickup
+KPLIB_intelObjectClasses = [
+    "Land_File1_F",
+    "Land_Laptop_device_F"
+];
+
+// Classnames of buildings inside military sectors, which are valid to hold intel items
+KPLIB_intelBuildingClasses = [
+    "Land_Cargo_House_V1_F",
+    "Land_Cargo_House_V2_F",
+    "Land_Cargo_House_V3_F",
+    "Land_Cargo_HQ_V1_F",
+    "Land_Cargo_HQ_V2_F",
+    "Land_Cargo_HQ_V3_F",
+    "Land_i_Barracks_V1_dam_F",
+    "Land_i_Barracks_V1_F",
+    "Land_i_Barracks_V2_dam_F",
+    "Land_i_Barracks_V2_F",
+    "Land_Medevac_house_V1_F",
+    "Land_Medevac_HQ_V1_F",
+    "Land_MilOffices_V1_F",
+    "Land_Research_house_V1_F",
+    "Land_Research_HQ_F",
+    "Land_u_Barracks_V2_F"
+];
+
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
     [-5.59961,3.60938,0.6],

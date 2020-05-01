@@ -14,7 +14,7 @@ if (combat_readiness > 15) then {
 
         private _nearestower = [markerpos _targetsector, GRLIB_side_enemy, GRLIB_radiotower_size * 1.4] call KPLIB_fnc_getNearestTower;
 
-        if (_nearestower != "") then {
+        if !(isNil "_nearestower") then {
             private _reinforcements_time = (((((markerpos _nearestower) distance (markerpos _targetsector)) / 1000) ^ 1.66 ) * 120) / (GRLIB_difficulty_modifier * GRLIB_csat_aggressivity);
             if (_targetsector in sectors_bigtown) then {
                 _reinforcements_time = _reinforcements_time * 0.35;
