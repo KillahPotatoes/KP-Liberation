@@ -10,6 +10,7 @@ class server_sector
     class destroyFob                {};
     class sectorMonitor             {ext = ".fsm";};
     class spawnSectorCrates         {};
+    class spawnSectorIntel          {};
 };
 
 class server_support

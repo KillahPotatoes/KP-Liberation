@@ -290,7 +290,7 @@ class FSM
                          "" \n
                          "// Spawn intel items" \n
                          "if (_sector in sectors_military) then {" \n
-                         "    [_sector] call manage_intel;" \n
+                         "    [_sector] call KPLIB_fnc_spawnSectorIntel;" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
