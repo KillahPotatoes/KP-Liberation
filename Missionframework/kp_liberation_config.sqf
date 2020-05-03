@@ -155,7 +155,8 @@ KP_liberation_preset_civilians = 0;
 5  = GM East arsenal preset
 6  = CSAT arsenal preset
 7  = Unsung US arsenal preset
-8  = SFP arsenal preset */
+8  = SFP arsenal preset
+9  = BWMod arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
