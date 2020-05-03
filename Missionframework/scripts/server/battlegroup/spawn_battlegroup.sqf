@@ -1,7 +1,7 @@
 // TODO Refactor and create function
 params [
     ["_spawn_marker", "", [""]],
-    ["_infOnly", false], [false]
+    ["_infOnly", false, [false]]
 ];
 
 if (GRLIB_endgame == 1) exitWith {};
