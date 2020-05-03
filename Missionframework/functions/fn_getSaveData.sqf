@@ -22,6 +22,7 @@ private _aiGroups = [];
 private _allObjects = [];
 private _allStorages = [];
 private _allMines = [];
+private _allCrates = [];
 
 // Get all blufor groups
 private _allBlueGroups = allGroups select {
@@ -121,6 +122,15 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
     _resourceStorages pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _supplyValue, _ammoValue, _fuelValue];
 } forEach _allStorages;
 
+// Save crates at blufor sectors which spawn crates on activation
+{
+    _allCrates append (
+        ((nearestObjects [markerPos _x, KPLIB_crates, GRLIB_capture_size]) select {isNull attachedTo _x}) apply {
+            [typeOf _x, _x getVariable ["KP_liberation_crate_value", 0], getPosATL _x]
+        }
+    );
+} forEach (blufor_sectors select {_x in sectors_factory || _x in sectors_capture});
+
 // Pack all stats in one array
 private _stats = [
     stats_ammo_produced,
@@ -192,5 +202,6 @@ private _weights = [
     KP_liberation_production,
     KP_liberation_production_markers,
     resources_intel,
-    _allMines
+    _allMines,
+    _allCrates
 ] // return

@@ -55,6 +55,8 @@ private _stats = [];
 private _weights = [];
 // All mines around FOBs
 private _allMines = [];
+// All unclaimed crates from crate spawning sectors
+private _allCrates = [];
 
 /*
     --- Globals ---
@@ -188,6 +190,7 @@ if (!isNil "_saveData") then {
         KP_liberation_production_markers            = _saveData select 17;
         resources_intel                             = _saveData select 18;
         _allMines                                   = _saveData param [19, []];
+        _allCrates                                  = _saveData param [20, []];
 
         stats_ammo_produced                         = _stats select  0;
         stats_ammo_spent                            = _stats select  1;
@@ -487,6 +490,12 @@ if (!isNil "_saveData") then {
         } forEach _aiGroups;
     };
     ["Saved AI units placed", "SAVE"] call KPLIB_fnc_log;
+
+    // Spawn all saved sector crates
+    {
+        _x call KPLIB_fnc_createCrate;
+    } forEach _allCrates;
+    ["Saved crates placed", "SAVE"] call KPLIB_fnc_log;
 } else {
     ["Save nil", "SAVE"] call KPLIB_fnc_log;
 };
