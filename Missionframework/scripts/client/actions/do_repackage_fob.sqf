@@ -2,7 +2,7 @@ dorepackage = 0;
 
 createDialog "liberation_repackage_fob";
 waitUntil {sleep 0.1; dialog};
-waitUntil {sleep 0.1; !dialog || !alive player || dorepackage != 0}
+waitUntil {sleep 0.1; !dialog || !alive player || dorepackage != 0};
 
 if (dorepackage > 0) then {
     closeDialog 0;
