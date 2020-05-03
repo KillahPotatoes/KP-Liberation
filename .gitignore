@@ -47,7 +47,7 @@ Temporary Items
 .apdisk
 
 # Build directory
-build/
+/build/
 
 # KP-Steam
 steam_appid.txt

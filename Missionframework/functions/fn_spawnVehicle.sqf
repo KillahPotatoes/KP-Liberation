@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-20
+    Last Update: 2020-04-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -66,6 +66,9 @@ if (_classname in opfor_choppers) then {
 
 // Clear cargo, if enabled
 [_newvehicle] call KPLIB_fnc_clearCargo;
+
+// Process KP object init
+[_newvehicle] call KPLIB_fnc_addObjectInit;
 
 // Spawn crew of vehicle
 if (_classname in militia_vehicles) then {

@@ -98,5 +98,23 @@ KPLIB_objectInits = [
         ["Helicopter"],
         {if (isServer) then {[_this] call KPLIB_fnc_addRopeAttachEh;} else {[_this] remoteExecCall ["KPLIB_fnc_addRopeAttachEh", 2];};},
         true
+    ],
+
+    // Add valid vehicles to support module, if system is enabled
+    [
+        KP_liberation_suppMod_artyVeh,
+        {if (KP_liberation_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
+    ],
+
+    // Disable autocombat (if set in parameters) and fleeing
+    [
+        ["Man"],
+        {
+            if (!(GRLIB_autodanger) && {(side _this) isEqualTo GRLIB_side_friendly}) then {
+                _this disableAI "AUTOCOMBAT";
+            };
+            _this allowFleeing 0;
+        },
+        true
     ]
 ];

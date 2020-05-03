@@ -2,7 +2,7 @@
     File: fn_createCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-11
-    Last Update: 2020-03-30
+    Last Update: 2020-04-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 ];
 
 // Check if resource is valid
-if !(_resource in KP_liberation_crates) exitWith {
+if !((toLower _resource) in KPLIB_crates) exitWith {
     ["Invalid resource param given: %1", _resource] call BIS_fnc_error;
     objNull
 };

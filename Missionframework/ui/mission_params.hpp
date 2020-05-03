@@ -130,7 +130,7 @@ class Params
         title = $STR_PARAMS_VICTORYCONDITION;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_PARAMS_VICTORYCONDITION_0, $STR_PARAMS_VICTORYCONDITION_1, $STR_PARAMS_VICTORYCONDITION_2, $STR_PARAMS_VICTORYCONDITION_3, $STR_PARAMS_VICTORYCONDITION_4};
-        default = 0;
+        default = 1;
     };
     class Spacer1 {
         title = "";
@@ -210,6 +210,12 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
+    class WeaponSway {
+        title = $STR_PARAM_WEAPSWAY;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
     class ArsenalUsePreset {
         title = $STR_PARAMS_ARSENALUSEPRESET;
         values[] = {0, 1};
@@ -232,7 +238,7 @@ class Params
         title = $STR_PARAM_RESPAWN_COOLDOWN;
         values[] = {0, 300, 600, 900, 1200, 1800, 3600};
         texts[] = {$STR_PARAMS_DISABLED, 5, 10, 15, 20, 30, 60};
-        default = 900;
+        default = 600;
     };
     class MobileArsenal {
         title = $STR_PARAMS_MOBILEARSENAL;
@@ -246,12 +252,6 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
-    class TeamkillPenalty {
-        title = $STR_PARAM_TEAMKILL_PENALTY;
-        values[] = {1, 0};
-        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
-    };
     class CR_Building {
         title = $STR_PARAM_CR_BUILDING;
         values[] = {1, 0};
@@ -262,7 +262,7 @@ class Params
         title = $STR_HALO_PARAM;
         values[] = {1, 5, 10, 15, 20, 30, 0};
         texts[] = {$STR_HALO_PARAM1, $STR_HALO_PARAM2, $STR_HALO_PARAM3, $STR_HALO_PARAM4, $STR_HALO_PARAM5, $STR_HALO_PARAM6, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 5;
     };
     class ClearCargo {
         title = $STR_PARAM_CLEAR_CARGO;
@@ -298,6 +298,12 @@ class Params
         title = $STR_PARAM_HIGHCOMMAND;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
+        default = 1;
+    };
+    class SuppMod {
+        title = $STR_PARAM_SUPPMOD;
+        values[] = {0, 1, 2};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAM_SUPPMOD_CMDRANDWHITELIST, $STR_PARAM_SUPPMOD_EVERYONE};
         default = 1;
     };
     class Spacer3 {

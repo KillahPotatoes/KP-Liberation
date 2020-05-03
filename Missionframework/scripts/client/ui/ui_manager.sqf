@@ -5,11 +5,11 @@ private [ "_overlayshown", "_sectorcontrols", "_resourcescontrols", "_active_sec
 _overlayshown = false;
 
 _sectorcontrols = [
-    201,	// BG Picture Sector
-    202,	// Capture Frame
-    203,	// Capture Frame OPFOR
-    205,	// Label Point
-    244		// Capture Frame BLUFOR
+    201,    // BG Picture Sector
+    202,    // Capture Frame
+    203,    // Capture Frame OPFOR
+    205,    // Label Point
+    244     // Capture Frame BLUFOR
 ];
 
 _resourcescontrols = [

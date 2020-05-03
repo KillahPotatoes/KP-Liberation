@@ -2,7 +2,7 @@
     File: fn_addObjectInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-08
-    Last Update: 2019-12-04
+    Last Update: 2020-04-29
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -20,6 +20,9 @@ params [
 ];
 
 if (isNull _object) exitWith {["Null object given"] call BIS_fnc_error; false};
+
+// Create objectInitsCache object for this machine, if not present
+if (isNil "KPLIB_objectInitsCache") then {KPLIB_objectInitsCache = createSimpleObject ["a3\weapons_f\empty.p3d", [-7580, -7580, 0], true];};
 
 private _elements = KPLIB_objectInitsCache getVariable typeOf _object;
 

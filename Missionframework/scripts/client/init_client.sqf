@@ -51,7 +51,6 @@ execVM "scripts\client\misc\init_arsenal.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
 if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
-execVM "scripts\client\misc\stop_renegade.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";
 execVM "scripts\client\misc\playerNamespace.sqf";
@@ -66,6 +65,19 @@ player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicles
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleCaptured;}];
 player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_permissions;}];
+player addEventHandler ["HandleRating", {if ((_this select 1) < 0) then {0};}];
+
+// Disable stamina, if selected in parameter
+if (!GRLIB_fatigue) then {
+    player enableStamina false;
+    player addEventHandler ["Respawn", {player enableStamina false;}];
+};
+
+// Reduce aim precision coefficient, if selected in parameter
+if (!KPLIB_sway) then {
+    player setCustomAimCoef 0.1;
+    player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
+};
 
 {
     [_x] call BIS_fnc_drawCuratorLocations;

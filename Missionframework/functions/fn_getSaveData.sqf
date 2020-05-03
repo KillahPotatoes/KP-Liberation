@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-04-20
+    Last Update: 2020-05-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -22,6 +22,7 @@ private _aiGroups = [];
 private _allObjects = [];
 private _allStorages = [];
 private _allMines = [];
+private _allCrates = [];
 
 // Get all blufor groups
 private _allBlueGroups = allGroups select {
@@ -31,10 +32,11 @@ private _allBlueGroups = allGroups select {
 };
 
 // Fetch all objects and AI groups near each FOB
+private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 {
-    private _fobPos = _x;
-    private _fobObjects = (_fobPos nearobjects (GRLIB_fob_range * 2)) select {
-        ((typeof _x) in KP_liberation_classnamesToSave) &&          // Exclude classnames which are not in the presets
+    _fobPos = _x;
+    _fobObjects = (_fobPos nearObjects (GRLIB_fob_range * 1.2)) select {
+        ((toLower (typeof _x)) in KPLIB_classnamesToSave) &&        // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
@@ -42,22 +44,22 @@ private _allBlueGroups = allGroups select {
         {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
         {!(_x getVariable ["KP_liberation_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
         {!(_x getVariable ["KP_liberation_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
-        {!((typeOf _x) in KP_liberation_crates)}                    // Exclude storage crates (those are handled separately)
+        {!((toLower (typeOf _x)) in KPLIB_crates)}                  // Exclude storage crates (those are handled separately)
     };
 
-    _allObjects = _allObjects + (_fobObjects select {!((typeOf _x) in KP_liberation_storage_buildings)});
+    _allObjects = _allObjects + (_fobObjects select {!((toLower (typeOf _x)) in KPLIB_storageBuildings)});
     _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0});
 
     // Process all groups near this FOB
     {
         // Get only living AI units of the group
-        private _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
+        _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
         // Add to save array
         _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
-    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 2)});
+    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 1.2)});
 
     // Save all mines around FOB
-    private _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 2, GRLIB_fob_range * 2];
+    _fobMines = allMines inAreaArray [_fobPos, GRLIB_fob_range * 1.2, GRLIB_fob_range * 1.2];
     _allMines append (_fobMines apply {[
         getPosWorld _x,
         [vectorDirVisual _x, vectorUpVisual _x],
@@ -67,42 +69,44 @@ private _allBlueGroups = allGroups select {
 } forEach GRLIB_all_fobs;
 
 // Save all fetched objects
+private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
 {
     // Position data
-    private _savedpos = getPosWorld _x;
-    private _savedvecdir = vectorDirVisual _x;
-    private _savedvecup = vectorUpVisual _x;
-    private _class = typeOf _x;
-    private _hascrew = false;
+    _savedPos = getPosWorld _x;
+    _savedVecDir = vectorDirVisual _x;
+    _savedVecUp = vectorUpVisual _x;
+    _class = typeOf _x;
+    _hasCrew = false;
 
     // Determine if vehicle is crewed
-    if (_class in KP_liberation_bluforClassnames) then {
+    if ((toLower _class) in KPLIB_b_allVeh_classes) then {
         if (({!isPlayer _x} count (crew _x) ) > 0) then {
-            _hascrew = true;
+            _hasCrew = true;
         };
     };
 
     // Only save player side, seized or captured objects
     if (
         (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
-        (!(_class in all_hostile_classnames) || {_x getVariable ["KPLIB_captured", false]})
+        (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
-        _objectsToSave pushBack [_class, _savedpos, _savedvecdir, _savedvecup, _hascrew];
+        _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew];
     };
 } forEach _allObjects;
 
 // Save all storages and resources
+private ["_supplyValue", "_ammoValue", "_fuelValue"];
 {
     // Position data
-    private _savedpos = getPosWorld _x;
-    private _savedvecdir = vectorDirVisual _x;
-    private _savedvecup = vectorUpVisual _x;
-    private _class = typeof _x;
+    _savedPos = getPosWorld _x;
+    _savedVecDir = vectorDirVisual _x;
+    _savedVecUp = vectorUpVisual _x;
+    _class = typeOf _x;
 
     // Resource variables
-    private _supplyValue = 0;
-    private _ammoValue = 0;
-    private _fuelValue = 0;
+    _supplyValue = 0;
+    _ammoValue = 0;
+    _fuelValue = 0;
 
     // Sum all stored resources of current storage
     {
@@ -115,8 +119,17 @@ private _allBlueGroups = allGroups select {
     } forEach (attachedObjects _x);
 
     // Add to saving with corresponding resource values
-    _resourceStorages pushBack [_class,_savedpos,_savedvecdir,_savedvecup,_supplyValue,_ammoValue,_fuelValue];
+    _resourceStorages pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _supplyValue, _ammoValue, _fuelValue];
 } forEach _allStorages;
+
+// Save crates at blufor sectors which spawn crates on activation
+{
+    _allCrates append (
+        ((nearestObjects [markerPos _x, KPLIB_crates, GRLIB_capture_size]) select {isNull attachedTo _x}) apply {
+            [typeOf _x, _x getVariable ["KP_liberation_crate_value", 0], getPosATL _x]
+        }
+    );
+} forEach (blufor_sectors select {_x in sectors_factory || _x in sectors_capture});
 
 // Pack all stats in one array
 private _stats = [
@@ -189,5 +202,6 @@ private _weights = [
     KP_liberation_production,
     KP_liberation_production_markers,
     resources_intel,
-    _allMines
+    _allMines,
+    _allCrates
 ] // return

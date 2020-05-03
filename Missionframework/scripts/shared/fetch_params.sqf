@@ -79,13 +79,13 @@ if(isServer) then {
     // Gameplay Options
     ["--- Gameplay Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
+    GET_PARAM_BOOL(KPLIB_sway, "WeaponSway", 1);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
-    GET_PARAM_BOOL(GRLIB_teamkill_penalty, "TeamkillPenalty", 0);
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
     GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
@@ -94,6 +94,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
     GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
     GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
+    GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
 
     // Technical Options
     ["--- Technical Options ---", "PARAM"] call KPLIB_fnc_log;
@@ -361,6 +362,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (GRLIB_fatigue) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAM_WEAPSWAY";
+    _value = if (KPLIB_sway) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_ARSENALUSEPRESET";
     _value = if (KP_liberation_arsenalUsePreset) then {localize "STR_PARAMS_USEPRESET";} else {localize "STR_PARAMS_NORESTRICTIONS";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -383,10 +388,6 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_AILOGISTICS";
     _value = if (KP_liberation_ailogistics) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
-    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
-
-    _param = localize "STR_PARAM_TEAMKILL_PENALTY";
-    _value = if (GRLIB_teamkill_penalty) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_CR_BUILDING";
@@ -427,6 +428,14 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_HIGHCOMMAND";
     _value = if (KP_liberation_high_command) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_SUPPMOD";
+    switch (KP_liberation_suppMod) do {
+        case 1: {_value = localize "STR_PARAM_SUPPMOD_CMDRANDWHITELIST";};
+        case 2: {_value = localize "STR_PARAM_SUPPMOD_EVERYONE";};
+        default {_value = localize "STR_PARAMS_DISABLED";};
+    };
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PERMISSIONS_PARAM";

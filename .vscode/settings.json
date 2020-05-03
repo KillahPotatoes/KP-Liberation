@@ -2,7 +2,12 @@
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
     "files.associations": {
-        "*.hpp": "sqf"
+        "*.hpp": "ext",
+        "*.h":   "ext",
+        "*.inc": "ext",
+        "*.cpp": "ext",
+        "*.ext": "ext",
+        "*.fsm": "ext"
     },
     "sqflint.ignoredVariables": [
         "_input0",

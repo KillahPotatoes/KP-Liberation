@@ -1,10 +1,18 @@
 waitUntil {!isNil "huron_typename"};
 
 // Classnames of objects which should be added as editable for Zeus
-private _vehicleClassnames = [huron_typename];
-_vehicleClassnames append KP_liberation_crates;
-_vehicleClassnames append ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles) apply {_x select 0});
-if (KP_liberation_enemies_zeus) then {_vehicleClassnames append all_hostile_classnames};
+private _vehicleClassnames = [toLower huron_typename];
+{
+    _vehicleClassnames append _x;
+} forEach [
+    KPLIB_crates,
+    KPLIB_b_light_classes,
+    KPLIB_b_heavy_classes,
+    KPLIB_b_air_classes,
+    KPLIB_b_static_classes,
+    KPLIB_b_support_classes
+];
+if (KP_liberation_enemies_zeus) then {_vehicleClassnames append KPLIB_o_allVeh_classes;};
 
 private _valids = [];
 private _toRemove = [];
@@ -20,13 +28,14 @@ while {true} do {
             (KP_liberation_enemies_zeus && {!(side (group _x) isEqualTo GRLIB_side_civilian)})  // Not civilian side, if enemy adding is enabled
             || {side (group _x) isEqualTo GRLIB_side_friendly}                                  // Player side if enemy adding is disabled
         }
+        && {((str _x) find "BIS_SUPP_HQ_") isEqualTo -1}                                        // Not a HQ entity from support module
     };
 
     // Add vehicles
     _valids append (vehicles select {
         (alive _x)                                                                              // Alive
         && {
-            ((typeof _x) in _vehicleClassnames)                                                 // In valid classnames
+            ((toLower (typeOf _x)) in _vehicleClassnames)                                       // In valid classnames
             || (_x getVariable ["KPLIB_captured", false])                                       // or captured
             || (_x getVariable ["KPLIB_seized", false])                                         // or seized
         }

@@ -117,7 +117,7 @@ class KPGUI_PRE_VersionIcon: KPGUI_PRE_CloseCross {
     text = "\A3\Ui_f\data\Map\Markers\Military\unknown_CA.paa";
     tooltip = "";
     action = "";
-}
+};
 
 // General background for the dialog area
 class KPGUI_PRE_Background {
