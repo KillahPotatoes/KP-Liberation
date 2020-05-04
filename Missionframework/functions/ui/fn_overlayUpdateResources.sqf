@@ -23,12 +23,12 @@ params [
 ];
 
 if (isNull _overlay) exitWith {false};
-
-{
-    (_overlay displayCtrl _x) ctrlShow _show;
-} forEach OVERLAY_RSC_IDCS;
-
-if (!_show) exitWith {false};
+if (!_show) exitWith {
+    {
+        (_overlay displayCtrl _x) ctrlShow false;
+    } forEach OVERLAY_RSC_IDCS;
+    false
+};
 
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText format ["%1", _resource_area]; // todo, local fetched from parent scope
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
@@ -56,5 +56,9 @@ if (KP_liberation_civ_rep <= -25) then {_color_reputation = [0.7,0,0,1]};
 
 (_overlay displayCtrl IDC_OVERLAY_RSC_PIC_CIVREP) ctrlSetTextColor _color_reputation;
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_CIVREP) ctrlSetTextColor _color_reputation;
+
+{
+    (_overlay displayCtrl _x) ctrlShow true;
+} forEach OVERLAY_RSC_IDCS;
 
 true
