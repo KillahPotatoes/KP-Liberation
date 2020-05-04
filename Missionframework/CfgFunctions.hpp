@@ -85,6 +85,12 @@ class KPLIB
         class spawnVehicle              {};
         class swapInventory             {};
     };
+    class functions_ui
+    {
+        file = "functions\ui";
+
+        class overlayUpdateResources    {};
+    };
     #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"
 };
