@@ -88,3 +88,8 @@ if (!KPLIB_sway) then {
 execVM "scripts\client\ui\intro.sqf";
 
 [player] joinSilent (createGroup [GRLIB_side_friendly, true]);
+
+// Start Tutorial
+if (KP_liberation_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
+    [] call KPLIB_fnc_tutorial;
+};

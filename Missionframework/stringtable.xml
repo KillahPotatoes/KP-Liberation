@@ -6291,6 +6291,66 @@
             <Original>Weapon sway</Original>
             <German>Waffenschwanken (Weapon sway)</German>
         </Key>
+        <Key ID="STR_PARAM_TUTORIAL">
+            <Original>Ingame Tutorial</Original>
+            <German>Tutorial im Spiel</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_DIALOG_TITLE">
+            <Original>KP Liberation Tutorial</Original>
+            <German>KP Liberation Tutorial</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_DIALOG_TEXT_START">
+            <Original>Do you want to enable the tutorial?&lt;br/&gt;It'll guide you through the aspects of the mission.</Original>
+            <German>Möchtest du das Tutorial aktivieren?&lt;br/&gt;Es wird dich durch einzelnen Missionsaspekte führen.</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_DIALOG_TEXT_END">
+            <Original>You've completed all currently available tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.</Original>
+            <German>Du hast alle verfügbaren Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen sehr viel Spaß mit der Mission.</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_MAIN_TITLE">
+            <Original>KP Liberation Tutorial Tasks</Original>
+            <German>KP Liberation Tutorial Aufgaben</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_MAIN_DESC">
+            <Original>Tasks of the KP Liberation Tutorial.&lt;br/&gt;It'll create new tasks when the correct circumstances are reached.</Original>
+            <German>Aufgaben des KP Liberation Tutorials.&lt;br/&gt;Es werden automatisch neue Aufgaben erstellt, sobald die entsprechenden Umstände eintreten.</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB_TITLE">
+            <Original>First FOB deployment</Original>
+            <German>Erste FOB errichten</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB_DESC">
+            <Original>Placeholder</Original>
+            <German>Platzhalter</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB1A_TITLE">
+            <Original>Transport FOB Container</Original>
+            <German>FOB Container transportieren</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB1A_DESC">
+            <Original>Placeholder</Original>
+            <German>Platzhalter</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB1B_TITLE">
+            <Original>Drive FOB Truck</Original>
+            <German>FOB Truck fahren</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB1B_DESC">
+            <Original>Placeholder</Original>
+            <German>Platzhalter</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB2_TITLE">
+            <Original>Collect start resources</Original>
+            <German>Sammle Startressourcen</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB2_DESC">
+            <Original>Placeholder</Original>
+            <German>Platzhalter</German>
+        </Key>
+        <Key ID="STR_TUTORIALFSM_TASK_FOB2_CRATE">
+            <Original>Crate</Original>
+            <German>Kiste</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">
