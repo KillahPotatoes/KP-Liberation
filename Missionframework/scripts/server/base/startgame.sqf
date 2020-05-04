@@ -40,7 +40,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
     sleep 10;
 
     // Spawn start resource crates and attach them to parachutes
-    private _crateArray = [];
+    KPLIB_startCrates = [];
     private _crate = objNull;
     for "_i" from 1 to 6 do {
         _crate = createVehicle [
@@ -55,7 +55,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
         if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
-        _crateArray pushBack _crate;
+        KPLIB_startCrates pushBack _crate;
     };
 
     // Spawn green smoke on the crates short before they hit the ground
@@ -64,5 +64,5 @@ if (GRLIB_all_fobs isEqualTo []) then {
     {
         _smoke = "SmokeShellGreen" createVehicle (getPos _x);
         _smoke attachTo [_x];
-    } forEach _crateArray;
+    } forEach KPLIB_startCrates;
 };
