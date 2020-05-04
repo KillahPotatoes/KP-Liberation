@@ -2,7 +2,7 @@
     File: fn_fillStorage.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-04
+    Last Update: 2020-05-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -42,7 +42,7 @@ private _pos = getPos _storage;
         _x = _x - _amount;
 
         _crate = [
-            [KP_liberation_supply_crate, KP_liberation_ammo_crate, KP_liberation_fuel_crate] select _forEachIndex,
+            KPLIB_crates select _forEachIndex,
             _amount,
             _pos
         ] call KPLIB_fnc_createCrate;
