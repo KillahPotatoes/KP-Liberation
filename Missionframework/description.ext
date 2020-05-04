@@ -4,7 +4,7 @@ respawnButton = 1;
 disabledAI = true;
 
 enableDebugConsole = 1;
-allowFunctionsLog = 0;
+allowFunctionsLog = 1;
 unsafeCVL = 1;
 
 briefingName = $STR_MISSION_TITLE;
@@ -27,18 +27,37 @@ wreckRemovalMinTime = 1200;
 wreckRemovalMaxTime = 7200;
 minPlayerDistance = 1000;
 
-#include "GREUH\UI\GREUH_interface.hpp"
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
 
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "KP\KPGUI\KPGUI_defines.hpp"
+#include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+
+class CfgFunctions {
+    #include "CfgFunctions.hpp"
+    #include "KP\KPPLM\KPPLM_functions.hpp"
+};
+
 class CfgDebriefing
 {
-	class End1
-	{
-		title =	$STR_SORRY;
-		subtitle = "";
-		description = $STR_COMMANDER_NOT_AUTHORIZED;
-		pictureBackground = "";
-	};
+    class End1
+    {
+        title =	$STR_SORRY;
+        subtitle = "";
+        description = $STR_COMMANDER_NOT_AUTHORIZED;
+        pictureBackground = "";
+    };
+};
+
+class CfgDiscordRichPresence {
+    applicationID="698133766975258664";
+    defaultDetails="";
+    defaultState="Preparing...";
+    defaultLargeImageKey="liberation_logo";
+    defaultLargeImageText="KP Liberation";
+    defaultSmallImageKey="arma3_logo";
+    defaultSmallImageText="Arma 3";
+    useTimeElapsed=1;
 };

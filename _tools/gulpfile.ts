@@ -8,7 +8,7 @@ import * as del from "del";
 
 import { resolve } from "path";
 
-import { MissionPaths } from "./src";
+import { MissionPaths, uploadLegacy } from "./src";
 import { Preset, FolderStructureInfo } from "./src";
 
 
@@ -30,6 +30,7 @@ const paths: FolderStructureInfo = {
 let taskNames: string[] = [];
 let taskNamesPbo: string[] = [];
 let taskNamesZip: string[] = [];
+let taskNamesWorkshop: string[] = [];
 
 for (let preset of presets) {
     const mission = new MissionPaths(preset, paths);
@@ -139,6 +140,18 @@ for (let preset of presets) {
             .pipe(gulp.dest(mission.getWorkDir()))
     });
 
+    if (!!preset.workshopId) {
+
+        taskNamesWorkshop.push('workshop_' + taskName);
+
+        gulp.task('workshop_' + taskName, async () => {
+            const pboPath = resolve(mission.getWorkDir(), 'pbo', mission.getFullName() + '.pbo');
+            console.log(pboPath);
+
+            await uploadLegacy(preset.workshopId, pboPath);
+        });
+    }
+
 
 }
 
@@ -153,6 +166,8 @@ gulp.task('build', gulp.series(taskNames));
 gulp.task('pbo', gulp.series(taskNamesPbo));
 
 gulp.task('zip', gulp.series(taskNamesZip));
+
+gulp.task('workshop', gulp.series(taskNamesWorkshop));
 
 gulp.task('default',
     gulp.series(

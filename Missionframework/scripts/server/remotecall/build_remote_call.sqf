@@ -56,26 +56,16 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
                         };
                     };
                 };
-                default {diag_log format ["[KP LIBERATION] [ERROR] Invalid object (%1) at storage area", (typeOf _x)];};
+                default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
             };
         } forEach _storedCrates;
 
-        switch (typeOf _x) do {
-            case KP_liberation_small_storage_building: {_storage_positions = KP_liberation_small_storage_positions;};
-            case KP_liberation_large_storage_building: {_storage_positions = KP_liberation_large_storage_positions;};
-            default {_storage_positions = KP_liberation_large_storage_positions;};
-        };
+        ([_x] call KPLIB_fnc_getStoragePositions) params ["_storage_positions"];
 
         private _area = _x;
         _i = 0;
         {
-            _height = 0.6;
-            switch (typeOf _x) do {
-                case KP_liberation_supply_crate: {_height = 0.4;};
-                case KP_liberation_ammo_crate: {_height = 0.6;};
-                case KP_liberation_fuel_crate: {_height = 0.3;};
-                default {_height = 0.6;};
-            };
+            _height = [typeOf _x] call KPLIB_fnc_getCrateHeight;
             detach _x;
             _x attachTo [_area, [(_storage_positions select _i) select 0, (_storage_positions select _i) select 1, _height]];
             _i = _i + 1;

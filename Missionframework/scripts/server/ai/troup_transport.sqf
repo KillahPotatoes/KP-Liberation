@@ -7,7 +7,7 @@ sleep 1;
 
 private _transGrp = (group (driver _transVeh));
 private _start_pos = getpos _transVeh;
-private _objPos =  ([getpos _transVeh] call F_getNearestBluforObjective) select 0;
+private _objPos =  [getpos _transVeh] call KPLIB_fnc_getNearestBluforObjective;
 private _unload_distance = 500;
 private _crewcount = count crew _transVeh;
 
@@ -22,8 +22,8 @@ if ((alive _transVeh) && (alive (driver _transVeh))) then {
     _infGrp = createGroup [GRLIB_side_enemy, true];
 
     {
-        [_x, _start_pos, _infGrp, "PRIVATE", 0.5] call F_createManagedUnit;
-    } foreach (["army"] call F_getAdaptiveSquadComp);
+        [_x, _start_pos, _infGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+    } foreach ([] call KPLIB_fnc_getSquadComp);
 
     {_x moveInCargo _transVeh} forEach (units _infGrp);
 

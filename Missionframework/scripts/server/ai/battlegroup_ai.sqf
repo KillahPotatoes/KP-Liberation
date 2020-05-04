@@ -7,7 +7,7 @@ if (isNil "reset_battlegroups_ai") then {reset_battlegroups_ai = false};
 
 sleep (5 + (random 5));
 
-private _objPos = ([getPos (leader _grp)] call F_getNearestBluforObjective) select 0;
+private _objPos = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
 
 [_objPos] remoteExec ["remote_call_incoming"];
 
@@ -24,7 +24,7 @@ while {((getPos (leader _grp)) distance _startpos) < 100} do {
     _waypoint = _grp addWaypoint [_objPos, 100];
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointSpeed "NORMAL";
-    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointBehaviour "AWARE";
     _waypoint setWaypointCombatMode "YELLOW";
     _waypoint setWaypointCompletionRadius 30;
 

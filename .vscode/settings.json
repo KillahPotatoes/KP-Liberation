@@ -2,7 +2,12 @@
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
     "files.associations": {
-        "*.hpp": "sqf"
+        "*.hpp": "ext",
+        "*.h":   "ext",
+        "*.inc": "ext",
+        "*.cpp": "ext",
+        "*.ext": "ext",
+        "*.fsm": "ext"
     },
     "sqflint.ignoredVariables": [
         "_input0",
@@ -52,13 +57,6 @@
             ]
         }
     ],
-    "todo-tree.highlights.defaultHighlight": {
-        "type": "tag",
-        "foreground": "yellow",
-        "background": "red",
-        "opacity": 50,
-        "iconColour": "green"
-    },
     "todo-tree.general.statusBar": "tags",
     "todo-tree.tree.showCountsInTree": true,
     "todo-tree.tree.flat": true
