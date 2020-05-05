@@ -68,7 +68,7 @@
             "KP_liberation_preset_opfor": 10,
             "KP_liberation_preset_resistance": 5,
             "KP_liberation_preset_civilians": 4,
-            "KP_liberation_arsenal": 7
+            "KP_liberation_arsenal": 4
         },
         "workshopId": "1737367431"
     },
@@ -83,7 +83,7 @@
             "KP_liberation_preset_opfor": 11,
             "KP_liberation_preset_resistance": 5,
             "KP_liberation_preset_civilians": 4,
-            "KP_liberation_arsenal": 7
+            "KP_liberation_arsenal": 4
         },
         "workshopId": "1737368152"
     },
@@ -172,7 +172,7 @@
             "KP_liberation_preset_opfor": 12,
             "KP_liberation_preset_resistance": 6,
             "KP_liberation_preset_civilians": 5,
-            "KP_liberation_arsenal": 10
+            "KP_liberation_arsenal": 7
         },
         "workshopId": "1816042577"
     },
@@ -230,7 +230,7 @@
             "KP_liberation_preset_opfor": 8,
             "KP_liberation_preset_resistance": 5,
             "KP_liberation_preset_civilians": 4,
-            "KP_liberation_arsenal": 8
+            "KP_liberation_arsenal": 5
         },
         "workshopId": ""
     },
@@ -245,7 +245,7 @@
             "KP_liberation_preset_opfor": 9,
             "KP_liberation_preset_resistance": 5,
             "KP_liberation_preset_civilians": 4,
-            "KP_liberation_arsenal": 8
+            "KP_liberation_arsenal": 5
         },
         "workshopId": ""
     },
