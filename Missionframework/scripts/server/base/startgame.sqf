@@ -37,7 +37,12 @@ if (GRLIB_all_fobs isEqualTo []) then {
 
     // Wait a short time before paradropping the start resource crates
     waitUntil {sleep 1; !(GRLIB_all_fobs isEqualTo [])};
-    sleep 10;
+    if (KP_liberation_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
+        waitUntil {sleep 1; ["KPLIB_Tasks_Tutorial_Fob_02"] call BIS_fnc_taskCompleted};
+        sleep 3;
+    } else {
+        sleep 10;
+    };
 
     // Spawn start resource crates and attach them to parachutes
     KPLIB_startCrates = [];
