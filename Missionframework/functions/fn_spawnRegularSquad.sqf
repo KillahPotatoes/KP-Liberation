@@ -2,7 +2,7 @@
     File: fn_spawnRegularSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-05
+    Last Update: 2020-05-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,12 +25,18 @@ if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; g
 
 // Get spawn position for squad
 private _sectorPos = (markerPos _sector) getPos [random 100, random 360];
-private _spawnPos = zeropos;
+private _spawnPos = [];
 private _i = 0;
-while {_spawnPos distance2d zeropos < 100} do {
+while {_spawnPos isEqualTo []} do {
+    _i = _i + 1;
     _spawnPos = (_sectorPos getPos [random 50, random 360]) findEmptyPosition [5, 100, "B_Heli_Light_01_F"];
-    if (count _spawnPos == 0) then {_spawnPos = zeropos; _i = _i + 1;};
-    if (_i == 10) exitWith {["No suitable spawn position found."] call BIS_fnc_error; grpNull};
+    if (_i isEqualTo 10) exitWith {};
+};
+
+if (_spawnPos isEqualTo zeroPos) exitWith {
+    ["No suitable spawn position found."] call BIS_fnc_error;
+    [format ["Couldn't find infantry spawn position for sector %1", _sector], "WARNING"] call KPLIB_fnc_log;
+    grpNull
 };
 
 // Spawn units of squad
