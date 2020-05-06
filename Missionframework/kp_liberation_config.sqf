@@ -1003,8 +1003,8 @@ KP_liberation_suppMod_artyVeh = [
 
 // Objects which are spawned as intel objects for pickup
 KPLIB_intelObjectClasses = [
-    "Land_File1_F",
-    "Land_Laptop_device_F"
+    "Land_File_research_F",
+    "Land_Document_01_F"
 ];
 
 // Classnames of buildings inside military sectors, which are valid to hold intel items
