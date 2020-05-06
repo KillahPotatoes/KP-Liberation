@@ -1,6 +1,6 @@
 /*
     The Unsung Vietnam War Mod US Arsenal Preset
-    Last Update: 2020-05-03
+    Last Update: 2020-05-06
 
     Needed:
         - Unsung - https://steamcommunity.com/sharedfiles/filedetails/?id=943001311
@@ -1484,7 +1484,7 @@ GRLIB_arsenal_items = [
     "UNS_HP_Helmet_R33",                                            // Heli Pilot Helmet (R33)
     "UNS_HP_Helmet_R8",                                             // Heli Pilot Helmet (R8)
     "UNS_HP_Helmet_REBEL",                                          // Heli Pilot Helmet (USMC (Rebel Flag))
-    "UNS_HP_Helmet_TIGER"                                           // Heli Pilot Helmet (Tiger)
+    "UNS_HP_Helmet_TIGER",                                          // Heli Pilot Helmet (Tiger)
     "UNS_HP_Helmet_USA",                                            // Heli Pilot Helmet (U.S. Flag)
     "UNS_HP_Helmet",                                                // Heli Pilot Helmet
     "UNS_JP_Helmet_352TFS",                                         // Jet Pilot Helmet (USAF/352nd TFS)
