@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-26
+    Last Update: 2020-05-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,7 @@ if (_classname isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error
 if (!canSuspend) exitWith {_this spawn KPLIB_fnc_spawnVehicle};
 
 private _newvehicle = objNull;
-private _spawnpos = zeropos;
+private _spawnpos = [];
 
 if (_precise) then {
     // Directly use given pos, if precise placement is true
@@ -38,11 +38,17 @@ if (_precise) then {
 } else {
     // Otherwise find a suitable position for vehicle spawning near given pos
     private _i = 0;
-    while {_spawnpos distance2d zeropos < 100} do {
+    while {_spawnPos isEqualTo []} do {
+        _i = _i + 1;
         _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
-        if (_spawnpos isEqualTo []) then {_spawnpos = zeropos; _i = _i + 1;};
-        if (_i == 10) exitWith {["No suitable spawn position found near given position."] call BIS_fnc_error; objNull};
+        if (_i isEqualTo 10) exitWith {};
     };
+};
+
+if (_spawnPos isEqualTo zeroPos) exitWith {
+    ["No suitable spawn position found."] call BIS_fnc_error;
+    [format ["Couldn't find spawn position for %1 around position %2", _classname, _pos], "WARNING"] call KPLIB_fnc_log;
+    objNull
 };
 
 // If it's a chopper, spawn it flying
