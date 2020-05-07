@@ -40,7 +40,7 @@ if (_precise) then {
     private _i = 0;
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
-        _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, 'B_Heli_Transport_01_F'];
+        _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, _classname];
         if (_i isEqualTo 10) exitWith {};
     };
 };
