@@ -85,5 +85,6 @@ class KPLIB
         class spawnVehicle              {};
         class swapInventory             {};
     };
+    #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"
 };

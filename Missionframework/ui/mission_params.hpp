@@ -306,6 +306,12 @@ class Params
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAM_SUPPMOD_CMDRANDWHITELIST, $STR_PARAM_SUPPMOD_EVERYONE};
         default = 1;
     };
+    class Tutorial {
+        title = $STR_PARAM_TUTORIAL;
+        values[] = {1, 0};
+        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
+        default = 1;
+    };
     class Spacer3 {
         title = "";
         values[] = {""};

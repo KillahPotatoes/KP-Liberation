@@ -51,6 +51,10 @@ class CfgDebriefing
     };
 };
 
+class CfgTaskDescriptions {
+    #include "scripts\client\tutorial\CfgTaskDescriptions.hpp"
+};
+
 class CfgDiscordRichPresence {
     applicationID="698133766975258664";
     defaultDetails="";
