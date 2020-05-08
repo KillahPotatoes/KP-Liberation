@@ -640,7 +640,7 @@
             <Korean>유닛 제한</Korean>
         </Key>
         <Key ID="STR_WIPE_TITLE">
-            <Original>Wipe savegame</Original>
+            <Original>Wipe Save Data</Original>
             <French>Effacer la sauvegarde</French>
             <German>Spielstand löschen</German>
             <Spanish>Borrar partida guardada</Spanish>
@@ -653,7 +653,7 @@
             <Korean>저장된 게임 초기화</Korean>
         </Key>
         <Key ID="STR_WIPE_TITLE_2">
-            <Original>Confirm : wipe savegame</Original>
+            <Original>Confirm: Wipe Save Data</Original>
             <French>Confirmer : effacer la sauvegarde</French>
             <German>Bestätige: Spielstand löschen</German>
             <Spanish>Confirmar : Borrar partida guardada</Spanish>
@@ -1519,9 +1519,9 @@
             <Korean>125% - 단일 CPU의 헤드리스서버(다른PC와 사용자에게 서비스를 제공하는 서버종류)에서 실행할때 권장</Korean>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP5">
-            <Original>150% - Dedicated server with multiple headless clients recommended</Original>
+            <Original>150% - Dedicated server with headless client recommended</Original>
             <French>150% - Serveur dédié avec clients headless multiples recommandé</French>
-            <German>150 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+            <German>150 % - Dezidierter Server mit Headless Client empfohlen</German>
             <Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
             <Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
             <Italian>150% - Raccomandato per server dedicati con molti headless client</Italian>
@@ -2477,7 +2477,7 @@
             <Korean>이 전초기지를 재배치하시겠습니까?</Korean>
         </Key>
         <Key ID="STR_HALO_PARAM">
-            <Original>HALO jump</Original>
+            <Original>HALO Jump</Original>
             <French>Saut HALO</French>
             <German>HALO-Sprung</German>
             <Spanish>Salto HALO</Spanish>
@@ -3292,7 +3292,7 @@
             <Korean>적군 공격시 방어군 생성</Korean>
         </Key>
         <Key ID="STR_PARAM_AUTODANGER">
-            <Original>Auto-danger behaviour on BLUFOR forces</Original>
+            <Original>Auto-danger behavior on BLUFOR forces</Original>
             <French>Comportement 'danger' automatique sur les forces BLUFOR</French>
             <German>Automatisches Verhalten "Gefahr" bei BLUFOR Kräften</German>
             <Spanish>Comportamiento de Auto-Alerta en las fuerzas BLUFOR</Spanish>
@@ -3436,7 +3436,7 @@
             <Korean>플레이어 지도 표시기능 활성화</Korean>
         </Key>
         <Key ID="STR_PARAMS_MOBILERESPAWN">
-            <Original>Mobile respawn</Original>
+            <Original>Mobile Respawn</Original>
             <German>Mobiler Respawn</German>
             <Spanish>Respawn Móvil</Spanish>
             <Russian>Мобильный респаун</Russian>
@@ -3448,7 +3448,7 @@
             <Korean>재투입차량</Korean>
         </Key>
         <Key ID="STR_PARAMS_MOBILEARSENAL">
-            <Original>Mobile arsenal</Original>
+            <Original>Mobile Arsenal</Original>
             <German>Mobiles Arsenal</German>
             <Spanish>Arsenal Móvil</Spanish>
             <Russian>Мобильный арсенал</Russian>
@@ -6290,74 +6290,6 @@
         <Key ID="STR_PARAM_WEAPSWAY">
             <Original>Weapon sway</Original>
             <German>Waffenschwanken (Weapon sway)</German>
-        </Key>
-        <Key ID="STR_PARAM_TUTORIAL">
-            <Original>Ingame Tutorial</Original>
-            <German>Tutorial im Spiel</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_CRATE">
-            <Original>Crate</Original>
-            <German>Kiste</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_DIALOG_TITLE">
-            <Original>KP Liberation Tutorial</Original>
-            <German>KP Liberation Tutorial</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_DIALOG_TEXT_START">
-            <Original>Do you want to enable the interactive tutorial?&lt;br/&gt;It'll guide you through the aspects of the mission. Check your tasks area on the map for further information on each task.&lt;br/&gt;&lt;br/&gt;(This popup can be disabled in the mission parameters)</Original>
-            <German>Möchtest du das interaktive Tutorial aktivieren?&lt;br/&gt;Es wird dich durch einzelnen Missionsaspekte führen. Prüfe die Aufgaben im Kartenbildschirm für weitere Informationen zu den einzelnen Aufgaben.&lt;br/&gt;&lt;br/&gt;(Dieses Pop-Up kann in den Missionsparametern deaktiviert werden)</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_DIALOG_TEXT_END">
-            <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
-            <German>Du hast alle derzeit verfügbaren/implementierten Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen dir sehr viel Spaß mit dem Spielen der Mission.&lt;br/&gt;&lt;br/&gt;Solltest du Fragen haben oder die etwas über die tiefergehenden Mechaniken erfahren wollen, dann schaue als erstes in das &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Außerdem gibt es unseren &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt;, wo hunderte von KP Liberation Spielern zu finden sind.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_MAIN_TITLE">
-            <Original>KP Liberation Tutorial Tasks</Original>
-            <German>KP Liberation Tutorial Aufgaben</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_MAIN_DESC">
-            <Original>Tasks of the KP Liberation Tutorial.&lt;br/&gt;It'll create new tasks when the correct circumstances are reached and there are still tutorials available.</Original>
-            <German>Aufgaben des KP Liberation Tutorials.&lt;br/&gt;Es werden automatisch neue Aufgaben erstellt, sobald die entsprechenden Umstände eintreten und noch weitere Tutorials verfügbar sind.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_TITLE">
-            <Original>First FOB deployment</Original>
-            <German>Erste FOB errichten</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_DESC">
-            <Original>This tasks will guide you through the deployment of your first FOB and gathering the start resources.</Original>
-            <German>Diese Aufgaben werden dich durch die Bereitstellung deiner ersten FOB und dem Sammeln der Startressourcen führen.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_01A_TITLE">
-            <Original>Transport FOB Container</Original>
-            <German>FOB Container transportieren</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_01A_DESC">
-            <Original>This is your first FOB container, which allows you to deploy a FOB.&lt;br/&gt;You need to slingload it via the transport helicopter to a position at least 1km away from the operation base in order to deploy it.&lt;br/&gt;After you've transported the container to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
-            <German>Dies ist dein erster FOB Container mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du als Außenlast mit dem Transporthelikopter zu einer Position mit mindestens 1km Abstand zur Operationsbasis bringen, um die FOB aufzubauen.&lt;br/&gt;Nachdem du den Container zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_01B_TITLE">
-            <Original>Drive FOB Truck</Original>
-            <German>FOB Truck fahren</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_01B_DESC">
-            <Original>This is your first FOB truck, which allows you to deploy a FOB.&lt;br/&gt;You need to drive it to a position at least 1km away from the operation base in order to deploy it.&lt;br/&gt;After you've driven the truck to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
-            <German>Dies ist dein erster FOB LKW mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du zu einer Position mit mindestens 1km Abstand zur Operationsbasis fahren, um die FOB aufzubauen.&lt;br/&gt;Nachdem du den LKW zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_02_TITLE">
-            <Original>Build a storage area</Original>
-            <German>Baue einen Lagerbereich</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_02_DESC">
-            <Original>Now you've access to the build menu via the scroll wheel actions.&lt;br/&gt;Use this action to place a storage area. You can find it in the support tab of the build menu.&lt;br/&gt;This is needed to store the resource crates we'll send to you after this task.</Original>
-            <German>Nun hast du Zugriff zum Baumenü über die Mausrad-Aktionen.&lt;br/&gt;Benutze diese Aktion, um einen Lagerbereich zu errichten. Die Lagerbereich sind im Unterstützungs-Reiter des Baumenüs.&lt;br/&gt;Dieser ist notwendig, um die Startressourcen, die wir dir im Anschluss an diese Aufgabe zukommen lassen, einzulagern.</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_03_TITLE">
-            <Original>Collect start resources</Original>
-            <German>Sammle Startressourcen</German>
-        </Key>
-        <Key ID="STR_TUTORIAL_TASK_FOB_03_DESC">
-            <Original>We've send you some start resource crates via paradrop. Collect them and store them in your storage area to add them to the FOB resource pool.&lt;br/&gt;Resources have always to be stored in such areas to use them for building. It's not enough to have them near the FOB.</Original>
-            <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben.</German>
         </Key>
     </Package>
 
