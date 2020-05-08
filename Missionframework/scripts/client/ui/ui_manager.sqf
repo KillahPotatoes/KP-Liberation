@@ -74,13 +74,6 @@ while { true } do {
         };
         KP_liberation_air_vehicle_building_near = _hasAir;
         KP_liberation_recycle_building_near = _hasRecycling;
-
-        // Fix for small script error that variables will be "any" for a second after an FOB has been build
-        // TODO get rid off this
-        // probably will not happen anymore if we will use "playerNamespace"
-        if (isNil "KP_liberation_supplies") then {KP_liberation_supplies = 0;};
-        if (isNil "KP_liberation_ammo") then {KP_liberation_ammo = 0;};
-        if (isNil "KP_liberation_fuel") then {KP_liberation_fuel = 0;};
     } else {
         _showResources = false;
         KP_liberation_supplies = 0;
