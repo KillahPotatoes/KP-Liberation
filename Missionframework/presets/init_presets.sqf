@@ -1,3 +1,6 @@
+
+KPLIB_initPresets = false;
+
 private _start = diag_ticktime;
 if (isServer) then {
     ["----- Server starts preset initialization -----", "PRESETS"] call KPLIB_fnc_log;
@@ -317,5 +320,7 @@ markers_reset = [99999,99999,0];
 zeropos = [0,0,0];
 KPLIB_sarWreck = "Land_Wreck_Heli_Attack_01_F";
 KPLIB_sarFire = "test_EmptyObjectForFireBig";
+
+KPLIB_initPresets = true;
 
 if (isServer) then {[format ["----- Preset initialization finished. Time needed: %1 seconds -----", diag_ticktime - _start], "PRESETS"] call KPLIB_fnc_log;};
