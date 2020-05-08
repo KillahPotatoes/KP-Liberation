@@ -32,6 +32,7 @@ class KPLIB
         class getCommander              {};
         class getCrateHeight            {};
         class getFobName                {};
+        class getFobResources           {};
         class getGroupType              {};
         class getLessLoadedHC           {};
         class getLoadout                {};
