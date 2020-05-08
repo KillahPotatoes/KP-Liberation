@@ -72,6 +72,7 @@ while { true } do {
             KP_liberation_ammo = _ammo;
             KP_liberation_fuel = _fuel;
         };
+        // TODO this is used by build scripts, move to relevant places
         KP_liberation_air_vehicle_building_near = _hasAir;
         KP_liberation_recycle_building_near = _hasRecycling;
     } else {
