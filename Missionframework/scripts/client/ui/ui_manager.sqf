@@ -35,8 +35,10 @@ private _overlay = displayNull;
 private _overlayVisible = false;
 private _showHud = false;
 private _showResources = false;
+private _currentFob = "";
 
 while { true } do {
+    _currentFob = player getVariable ["KPLIB_fobName", ""];
     _showHud = alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
 
     if (_showHud && {!_overlayVisible}) then {
@@ -61,13 +63,12 @@ while { true } do {
         ([_nearfob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
         if (KP_liberation_resources_global) then {
-            _resource_area = localize "STR_RESOURCE_GLOBAL";
+            // Overwrite FOB name in global mode
+            _currentFob = localize "STR_RESOURCE_GLOBAL";
             KP_liberation_supplies = KP_liberation_supplies_global;
             KP_liberation_ammo = KP_liberation_ammo_global;
             KP_liberation_fuel = KP_liberation_fuel_global;
         } else {
-            _resource_area = toUpper ([_nearfob] call KPLIB_fnc_getFobName);
-
             KP_liberation_supplies = _supplies;
             KP_liberation_ammo = _ammo;
             KP_liberation_fuel = _fuel;
@@ -107,7 +108,8 @@ while { true } do {
         [
             _overlay,
             _showResources,
-            _uiticks % 5 == 0 // update values
+            _uiticks % 5 == 0,  // update values
+            _currentFob         // area title
         ] call KPLIB_fnc_overlayUpdateResources;
 
         if ( _uiticks % 25 == 0 ) then {

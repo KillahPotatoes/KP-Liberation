@@ -3,7 +3,7 @@
     File: fn_overlayUpdateResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-01
-    Last Update: 2020-05-05
+    Last Update: 2020-05-08
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -19,7 +19,8 @@
 params [
     ["_overlay", displayNull, [displayNull]],
     ["_show", true, [true]],
-    ["_updateValues", true, [true]]
+    ["_updateValues", true, [true]],
+    ["_resourceArea", "", [""]]
 ];
 
 if (isNull _overlay) exitWith {false};
@@ -30,7 +31,7 @@ if (!_show) exitWith {
     false
 };
 
-(_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText format ["%1", _resource_area]; // todo, local fetched from parent scope
+(_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText format ["%1", toUpper _resourceArea]; // todo, local fetched from parent scope
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_AMMO) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
 (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FUEL) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
