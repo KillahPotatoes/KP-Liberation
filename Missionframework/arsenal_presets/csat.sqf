@@ -1,6 +1,6 @@
 /*
     CSAT Arsenal Preset
-    Last Update: 2020-05-03
+    Last Update: 2020-05-08
 
     Needed:
         - None
@@ -129,7 +129,7 @@ GRLIB_arsenal_items = [
     //Uniforms
     "U_O_CombatUniform_ocamo",                                      // Fatigues (Hex) [CSAT]
     "U_O_CombatUniform_oucamo",                                     // Fatigues (Urban) [CSAT]
-    "U_O_FullGhillie_ard"                                           // Full Ghillie (Arid) [CSAT]
+    "U_O_FullGhillie_ard",                                          // Full Ghillie (Arid) [CSAT]
     "U_O_FullGhillie_lsh",                                          // Full Ghillie (Lush) [CSAT]
     "U_O_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [CSAT]
     "U_O_GhillieSuit",                                              // Ghillie Suit [CSAT]

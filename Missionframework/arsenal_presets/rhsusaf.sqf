@@ -1,6 +1,6 @@
 /*
     RHS United States Armed Forces Arsenal Preset
-    Last Update: 2020-05-03
+    Last Update: 2020-05-08
 
     Needed:
         - RHSUSAF - https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
@@ -354,6 +354,7 @@ GRLIB_arsenal_magazines = [
     "SatchelCharge_Remote_Mag",                                     // Explosive Satchel
     "SLAMDirectionalMine_Wire_Mag",                                 // M6 SLAM Mine
     "TrainingMine_Mag"                                              // Training Mine
+];
 
 GRLIB_arsenal_items = [
     // Uniforms

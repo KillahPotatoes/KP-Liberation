@@ -1,6 +1,6 @@
 /*
     3CB BAF Arsenal Preset
-    Last Update: 2020-05-03
+    Last Update: 2020-05-08
 
     Needed:
         - 3CB BAF Weapons   - https://steamcommunity.com/sharedfiles/filedetails/?id=893339590
@@ -344,7 +344,7 @@ GRLIB_arsenal_items = [
     "UK3CB_BAF_H_Mk7_Camo_C",                                       // Helmet Mk7 MTP (C) [BAF]
     "UK3CB_BAF_H_Mk7_Camo_CESS_A",                                  // Helmet Mk7 MTP {ESS} (A) [BAF]
     "UK3CB_BAF_H_Mk7_Camo_CESS_B",                                  // Helmet Mk7 MTP {ESS} (B) [BAF]
-    "UK3CB_BAF_H_Mk7_Camo_CESS_C";                                  // Helmet Mk7 MTP {ESS} (C) [BAF]
+    "UK3CB_BAF_H_Mk7_Camo_CESS_C",                                  // Helmet Mk7 MTP {ESS} (C) [BAF]
     "UK3CB_BAF_H_Mk7_Camo_CESS_D",                                  // Helmet Mk7 MTP {ESS} (D) [BAF]
     "UK3CB_BAF_H_Mk7_Camo_D",                                       // Helmet Mk7 MTP (D) [BAF]
     "UK3CB_BAF_H_Mk7_Camo_E",                                       // Helmet Mk7 MTP (E) [BAF]

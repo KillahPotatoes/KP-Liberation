@@ -1,6 +1,6 @@
 /*
     BWMod Arsenal Preset
-    Last Update: 2020-05-03
+    Last Update: 2020-05-08
 
     Needed:
         - BWMod - https://steamcommunity.com/sharedfiles/filedetails/?id=1200127537
@@ -74,7 +74,7 @@ GRLIB_arsenal_weapons = [
     "BWA3_P2A1",                                                    // P2A1
     "BWA3_P8",                                                      // P8
     "BWA3_PzF3",                                                    // Panzerfaust 3
-    "BWA3_RGW90",                                                   // RGW 90
+    "BWA3_RGW90"                                                    // RGW 90
 ];
 
 GRLIB_arsenal_magazines = [
