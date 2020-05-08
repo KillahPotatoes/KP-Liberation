@@ -67,6 +67,18 @@ KPLIB_objectInits = [
         }
     ],
 
+    // Add FOB building damage handler override and repack action
+    [
+        [Arsenal_typename],
+        {
+            [_this] spawn {
+                params ["_arsenal"];
+                waitUntil {sleep 0.1; time > 0};
+                [_arsenal] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _arsenal];
+            };
+        }
+    ],
+
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)
     [
         [KP_liberation_small_storage_building, KP_liberation_large_storage_building],
