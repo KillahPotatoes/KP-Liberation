@@ -69,6 +69,7 @@
 * Fixed: Weapons could be shown as blacklisted, if a whitelisted weapon was combined with e.g. a whitelisted grip or other attachments.
 * Fixed: Rare error message in `recycle_manager.sqf`, if last FOB was repacked to a truck/box.
 * Fixed: `Bad conversion: bool` rpt messages in client logs at the beginning of the mission.
+* Fixed: Boats weren't recognized for sector activation.
 
 ## 0.96.6 (09th September 2019)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
