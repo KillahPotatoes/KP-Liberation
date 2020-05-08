@@ -52,19 +52,17 @@ while { true } do {
     _overlay = uiNamespace getVariable ['KPLIB_overlay', displayNull];
     _overlayVisible = !isNull _overlay;
 
-    _nearfob = [] call KPLIB_fnc_getNearestFob;
-    _fobdistance = 9999;
-    if ( count _nearfob == 3 ) then {
-        _fobdistance = player distance _nearfob;
-    };
-
-    if (_fobdistance < _distfob) then {
+    // Player is at FOB
+    if (_currentFob != "") then {
         _showResources = true;
-        ([_nearfob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
+
+        private _nearestFob = player getVariable "KPLIB_fobPos";
+        ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
         if (KP_liberation_resources_global) then {
             // Overwrite FOB name in global mode
             _currentFob = localize "STR_RESOURCE_GLOBAL";
+
             KP_liberation_supplies = KP_liberation_supplies_global;
             KP_liberation_ammo = KP_liberation_ammo_global;
             KP_liberation_fuel = KP_liberation_fuel_global;
