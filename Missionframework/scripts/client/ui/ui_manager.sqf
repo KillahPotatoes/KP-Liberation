@@ -40,6 +40,7 @@ private _currentFob = "";
 while { true } do {
     _currentFob = player getVariable ["KPLIB_fobName", ""];
     _showHud = alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
+    _visibleMap = visibleMap;
 
     if (_showHud && {!_overlayVisible}) then {
         "KPLIB_ui" cutRsc ["KPLIB_overlay", "PLAIN", 1];
@@ -53,13 +54,13 @@ while { true } do {
     _overlayVisible = !isNull _overlay;
 
     // Player is at FOB
-    if (_currentFob != "") then {
+    if (_currentFob != "" || {_visibleMap}) then {
         _showResources = true;
 
         private _nearestFob = player getVariable "KPLIB_fobPos";
         ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
-        if (KP_liberation_resources_global) then {
+        if (KP_liberation_resources_global || {_visibleMap}) then {
             // Overwrite FOB name in global mode
             _currentFob = localize "STR_RESOURCE_GLOBAL";
 
@@ -168,6 +169,7 @@ while { true } do {
             };
         };
     };
+
     _uiticks = _uiticks + 1;
     if ( _uiticks > 1000 ) then { _uiticks = 0 };
     uiSleep 0.25;
