@@ -5,6 +5,9 @@ disabledAI = true;
 
 enableDebugConsole = 1;
 allowFunctionsLog = 1;
+// As a security measure, functions are by default protected against rewriting during mission.
+// This restriction does not apply in missions previewed from the editor.
+allowFunctionsRecompile = "[0, 1] select (is3DENMultiplayer || is3DEN)";
 unsafeCVL = 1;
 
 briefingName = $STR_MISSION_TITLE;
