@@ -97,7 +97,8 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
     player removeAction _idactplace;
     player removeAction _idactvector;
 
-    remoteExec ["check_sector_ress_remote_call",2];
+    recalculate_sectors = true;
+    publicVariable "recalculate_sectors";
 
     build_confirmed = 0;
 } else {

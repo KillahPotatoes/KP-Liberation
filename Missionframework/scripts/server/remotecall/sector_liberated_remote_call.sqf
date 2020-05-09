@@ -43,7 +43,7 @@ if (_liberated_sector in sectors_factory) then {
 
 [_liberated_sector] spawn F_cr_liberatedSector;
 
-if ((random 100) <= KP_liberation_cr_wounded_chance) then {
+if ((random 100) <= KP_liberation_cr_wounded_chance || (count blufor_sectors) == 1) then {
     [_liberated_sector] spawn civrep_wounded_civs;
 };
 
