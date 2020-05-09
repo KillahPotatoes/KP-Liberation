@@ -20,8 +20,8 @@ KP_liberation_recycle_building_near = false;
 waitUntil { !isNil "synchro_done" };
 waitUntil { synchro_done };
 
-if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false };
-if ( isNil "halojumping" ) then { halojumping = false };
+if (isNil "cinematic_camera_started") then {cinematic_camera_started = false;};
+if (isNil "halojumping") then {halojumping = false;};
 
 private _uiticks = 0;
 private _active_sectors_hint = false;
@@ -38,7 +38,7 @@ private _showHud = false;
 private _showResources = false;
 private _currentFob = "";
 
-while { true } do {
+while {true} do {
     _currentFob = player getVariable ["KPLIB_fobName", ""];
     _showHud = alive player && {!dialog && {isNull curatorCamera && {!cinematic_camera_started && !halojumping}}};
     _visibleMap = visibleMap;
@@ -51,7 +51,7 @@ while { true } do {
         "KPLIB_ui" cutText ["", "PLAIN"];
     };
 
-    _overlay = uiNamespace getVariable ['KPLIB_overlay', displayNull];
+    _overlay = uiNamespace getVariable ["KPLIB_overlay", displayNull];
     _overlayVisible = !isNull _overlay;
 
     // Player is at FOB
@@ -85,7 +85,7 @@ while { true } do {
         KP_liberation_recycle_building_near = false;
     };
 
-    if ( _overlayVisible) then {
+    if (_overlayVisible) then {
 
         (_overlay displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
         (_overlay displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
@@ -112,22 +112,22 @@ while { true } do {
             _currentFob         // area title
         ] call KPLIB_fnc_overlayUpdateResources;
 
-        if ( _uiticks % 25 == 0 ) then {
+        if (_uiticks % 25 == 0) then {
 
-            if (!isNil "active_sectors" && ( [] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
+            if (!isNil "active_sectors" && ([] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
 
                 (_overlay displayCtrl (517)) ctrlShow true;
 
-                if ( !_active_sectors_hint ) then {
+                if (!_active_sectors_hint) then {
                     hint localize "STR_OVERLOAD_HINT";
                     _active_sectors_hint = true;
                 };
 
                 _active_sectors_string = "<t align='right' color='#e0e000'>" + (localize "STR_ACTIVE_SECTORS") + "<br/>";
                 {
-                    _active_sectors_string = _active_sectors_string + (markertext _x) + "<br/>";
-                } foreach active_sectors;
-                _active_sectors_string = _active_sectors_string + "</t>";
+                    _active_sectors_string = [_active_sectors_string, markerText _x, "<br/>"] joinString "";
+                } forEach active_sectors;
+                _active_sectors_string = [_active_sectors_string, "</t>"] joinString "";
                 (_overlay displayCtrl (516)) ctrlSetStructuredText parseText _active_sectors_string;
 
             } else {
@@ -135,7 +135,7 @@ while { true } do {
                 (_overlay displayCtrl (517)) ctrlShow false;
             };
 
-            _nearest_active_sector = [ GRLIB_sector_size ] call KPLIB_fnc_getNearestSector;
+            _nearest_active_sector = [GRLIB_sector_size] call KPLIB_fnc_getNearestSector;
             if ( _nearest_active_sector != "" ) then {
                 _zone_size = GRLIB_capture_size;
                 if ( _nearest_active_sector in sectors_bigtown ) then {
@@ -156,8 +156,8 @@ while { true } do {
                 _bar ctrlCommit ([0, 2] select ctrlShown _bar);
 
                 (_overlay displayCtrl (205)) ctrlSetText (markerText _nearest_active_sector);
-                { (_overlay displayCtrl (_x)) ctrlShow true; } foreach  _sectorcontrols;
-                if ( _nearest_active_sector in blufor_sectors ) then {
+                {(_overlay displayCtrl (_x)) ctrlShow true;} forEach _sectorcontrols;
+                if (_nearest_active_sector in blufor_sectors) then {
                     (_overlay displayCtrl (205)) ctrlSetTextColor [0,0.3,1.0,1];
                 } else {
                     (_overlay displayCtrl (205)) ctrlSetTextColor [0.85,0,0,1];
@@ -165,13 +165,13 @@ while { true } do {
 
                 "zone_capture" setMarkerSizeLocal [ _zone_size,_zone_size ];
             } else {
-                { (_overlay displayCtrl (_x)) ctrlShow false; } foreach  _sectorcontrols;
+                {(_overlay displayCtrl (_x)) ctrlShow false;} forEach _sectorcontrols;
                 "zone_capture" setmarkerposlocal markers_reset;
             };
         };
     };
 
     _uiticks = _uiticks + 1;
-    if ( _uiticks > 1000 ) then { _uiticks = 0 };
+    if (_uiticks > 1000) then {_uiticks = 0;};
     uiSleep 0.25;
 };
