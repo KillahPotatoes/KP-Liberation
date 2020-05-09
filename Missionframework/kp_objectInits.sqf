@@ -67,7 +67,7 @@ KPLIB_objectInits = [
         }
     ],
 
-    // Add FOB building damage handler override and repack action
+    // Add ViV action to Arsenal crate
     [
         [Arsenal_typename],
         {
