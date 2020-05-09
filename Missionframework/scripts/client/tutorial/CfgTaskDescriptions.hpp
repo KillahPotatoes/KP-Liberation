@@ -38,3 +38,11 @@ class KPLIB_Tasks_Tutorial_Sector_03 {
     title = $STR_TUTORIAL_TASK_SECTOR_03_TITLE;
     description = $STR_TUTORIAL_TASK_SECTOR_03_DESC;
 };
+class KPLIB_Tasks_Tutorial_Sector_04 {
+    title = $STR_TUTORIAL_TASK_SECTOR_04_TITLE;
+    description = $STR_TUTORIAL_TASK_SECTOR_04_DESC;
+};
+class KPLIB_Tasks_Tutorial_Sector_05 {
+    title = $STR_TUTORIAL_TASK_SECTOR_05_TITLE;
+    description = $STR_TUTORIAL_TASK_SECTOR_05_DESC;
+};

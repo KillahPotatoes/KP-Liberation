@@ -44,7 +44,7 @@ item39[] = {"",7,210,296.000000,1971.000000,304.000000,1979.000000,0.000000,""};
 item40[] = {"built_",4,218,0.000000,1350.000000,100.000000,1400.000000,0.000000,"built?"};
 item41[] = {"Complete_task",2,250,0.000000,1425.000000,100.000000,1475.000000,0.000000,"Complete task"};
 item42[] = {"",7,210,46.000000,1971.000000,54.000000,1979.000000,0.000000,""};
-item43[] = {"Capture_first_se",4,218,-375.000000,750.000000,-275.000000,800.000000,0.000000,"Capture" \n "first" \n "sector"};
+item43[] = {"Capture_first_fa",4,218,-375.000000,750.000000,-275.000000,800.000000,0.000000,"Capture" \n "first" \n "factory"};
 item44[] = {"",7,210,-329.000000,696.000000,-321.000000,704.000000,0.000000,""};
 item45[] = {"Init_path_1",2,250,-375.000000,825.000000,-275.000000,875.000000,0.000000,"Init" \n "path"};
 item46[] = {"Sector_activated",4,218,-375.000000,1050.000000,-275.000000,1100.000000,0.000000,"Sector activated?"};
@@ -122,8 +122,8 @@ link58[] = {55,56};
 link59[] = {56,42};
 link60[] = {57,58};
 link61[] = {58,49};
-globals[] = {0.000000,0,0,0,0,640,480,1,86,6316128,1,-893.874146,335.199280,1850.593506,968.692627,1232,884,1};
-window[] = {2,-1,-1,-32000,-32000,993,234,1674,234,3,1250};
+globals[] = {0.000000,0,0,0,0,640,480,1,87,6316128,1,-872.324036,426.382813,2058.735596,1126.872803,1232,884,1};
+window[] = {2,-1,-1,-1,-1,941,182,1622,182,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -137,7 +137,7 @@ class FSM
                         itemno = 1;
                         init = /*%FSM<STATEINIT""">*/"// Create task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_01"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -162,7 +162,7 @@ class FSM
                          "// Create task markers for near factories" \n
                          "{" \n
                          "    [" \n
-                         "        GRLIB_side_friendly," \n
+                         "        allPlayers," \n
                          "        [" \n
                          "            [""KPLIB_Tasks_Tutorial_Sector_01_"", _forEachIndex] joinString """"," \n
                          "            ""KPLIB_Tasks_Tutorial_Sector_01""" \n
@@ -322,7 +322,7 @@ class FSM
                          "    {!(blufor_sectors isEqualTo [])}" \n
                          "};" \n
                          "private _sectorComplete = {" \n
-                         "    !(blufor_sectors isEqualTo [])" \n
+                         "    !((blufor_sectors arrayIntersect sectors_factory) isEqualTo [])" \n
                          "};" \n
                          "" \n
                          "private _allConditions = [" \n
@@ -381,7 +381,7 @@ class FSM
                         itemno = 12;
                         init = /*%FSM<STATEINIT""">*/"// Create tutorial parent task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    ""KPLIB_Tasks_Tutorial_Main""," \n
                          "    """"," \n
                          "    objNull," \n
@@ -446,8 +446,8 @@ class FSM
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "Capture_first_se">*/
-                                class Capture_first_se
+                                /*%FSM<LINK "Capture_first_fa">*/
+                                class Capture_first_fa
                                 {
                                         itemno = 43;
                                         priority = 0.000000;
@@ -471,7 +471,7 @@ class FSM
                         itemno = 17;
                         init = /*%FSM<STATEINIT""">*/"// Create tutorial path parent task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob"", ""KPLIB_Tasks_Tutorial_Main""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -516,7 +516,7 @@ class FSM
                         itemno = 19;
                         init = /*%FSM<STATEINIT""">*/"// Create task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01a"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
                          "    [(base_boxspawn nearObjects [FOB_box_typename, 10]) select 0, true]," \n
@@ -550,7 +550,7 @@ class FSM
                         itemno = 23;
                         init = /*%FSM<STATEINIT""">*/"// Create task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01b"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
                          "    [(base_boxspawn nearObjects [FOB_box_typename, 10]) select 0, true]," \n
@@ -620,7 +620,7 @@ class FSM
                          "" \n
                          "// Create task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_02"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -641,7 +641,7 @@ class FSM
                                         to="Complete_task";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    ((player nearObjects GRLIB_fob_range) select {" \n
+                                         "    (((GRLIB_all_fobs select 0) nearObjects GRLIB_fob_range) select {" \n
                                          "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 0" \n
                                          "    }) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;
@@ -656,9 +656,9 @@ class FSM
                 {
                         name = "Create_tasks_for";
                         itemno = 33;
-                        init = /*%FSM<STATEINIT""">*/"// Create task" \n
+                        init = /*%FSM<STATEINIT""">*/"// Create tasks" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_03"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -669,21 +669,12 @@ class FSM
                          "    true" \n
                          "] call BIS_fnc_taskCreate;" \n
                          "" \n
+                         "private _crateTasks = [];" \n
+                         "private _taskId = """";" \n
                          "{" \n
-                         "    [" \n
-                         "        GRLIB_side_friendly," \n
-                         "        [" \n
-                         "            [""KPLIB_Tasks_Tutorial_Fob_03_"", _forEachIndex] joinString """"," \n
-                         "            ""KPLIB_Tasks_Tutorial_Fob_03""" \n
-                         "        ]," \n
-                         "        ["""", localize ""STR_TUTORIAL_CRATE""]," \n
-                         "        [_x, true]," \n
-                         "        ""CREATED""," \n
-                         "        -1," \n
-                         "        false," \n
-                         "        ""default""," \n
-                         "        true" \n
-                         "    ] call BIS_fnc_taskCreate;" \n
+                         "    _taskId = [""KPLIB_Tasks_Tutorial_Fob_03_"", _forEachIndex] joinString """";" \n
+                         "    _crateTasks pushBack _taskId;" \n
+                         "    [_taskId, _x] call KPLIB_fnc_handleCrateStorageTask;" \n
                          "} forEach KPLIB_startCrates;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -696,9 +687,7 @@ class FSM
                                         to="Complete_tasks";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(" \n
-                                         "    (KPLIB_startCrates apply {" \n
-                                         "        (toLower (typeOf (attachedTo _x))) in KPLIB_storageBuildings" \n
-                                         "    }) arrayIntersect [false]" \n
+                                         "    (_crateTasks apply {[_x] call BIS_fnc_taskCompleted}) arrayIntersect [false]" \n
                                          ") isEqualTo []"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
@@ -711,14 +700,7 @@ class FSM
                 {
                         name = "Complete_tasks";
                         itemno = 35;
-                        init = /*%FSM<STATEINIT""">*/"{" \n
-                         "    [" \n
-                         "        [""KPLIB_Tasks_Tutorial_Fob_03_"", _forEachIndex] joinString """"," \n
-                         "        ""SUCCEEDED""," \n
-                         "        false" \n
-                         "    ] call BIS_fnc_taskSetState;" \n
-                         "} forEach KPLIB_startCrates;" \n
-                         "[""KPLIB_Tasks_Tutorial_Fob_03"", ""SUCCEEDED"", false] call BIS_fnc_taskSetState;" \n
+                        init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Fob_03"", ""SUCCEEDED"", false] call BIS_fnc_taskSetState;" \n
                          "[""KPLIB_Tasks_Tutorial_Fob"", ""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -769,7 +751,7 @@ class FSM
                         itemno = 45;
                         init = /*%FSM<STATEINIT""">*/"// Create tutorial path parent task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector"", ""KPLIB_Tasks_Tutorial_Main""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -813,7 +795,7 @@ class FSM
                          "// Create task" \n
                          "private _factory = (_sectors select {_x in active_sectors}) select 0;" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_02"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
                          "    """"," \n
                          "    markerPos _factory," \n
@@ -847,7 +829,7 @@ class FSM
                         itemno = 49;
                         init = /*%FSM<STATEINIT""">*/"// Create task" \n
                          "[" \n
-                         "    GRLIB_side_friendly," \n
+                         "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_03"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
                          "    """"," \n
                          "    objNull," \n
@@ -872,39 +854,19 @@ class FSM
                          "    );" \n
                          "} forEach _wounded_markers;" \n
                          "" \n
-                         "// Create task markers for near POWs and wounded civs" \n
+                         "// Create tasks for near POWs and wounded civs" \n
+                         "private _careTasks = [];" \n
+                         "private _taskId = """";" \n
                          "{" \n
-                         "    [" \n
-                         "        GRLIB_side_friendly," \n
-                         "        [" \n
-                         "            [""KPLIB_Tasks_Tutorial_Sector_03_pow_"", _forEachIndex] joinString """"," \n
-                         "            ""KPLIB_Tasks_Tutorial_Sector_03""" \n
-                         "        ]," \n
-                         "        ["""", localize ""STR_TUTORIAL_SOLDIER""]," \n
-                         "        [_x, true]," \n
-                         "        ""CREATED""," \n
-                         "        -1," \n
-                         "        false," \n
-                         "        ""danger""," \n
-                         "        true" \n
-                         "    ] call BIS_fnc_taskCreate;" \n
+                         "    _taskId = [""KPLIB_Tasks_Tutorial_Sector_03_pow_"", _forEachIndex] joinString """";" \n
+                         "    _careTasks pushBack _taskId;" \n
+                         "    [_taskId, _x] call KPLIB_fnc_handleTakePowTask;" \n
                          "} forEach _pows;" \n
                          "" \n
                          "{" \n
-                         "    [" \n
-                         "        GRLIB_side_friendly," \n
-                         "        [" \n
-                         "            [""KPLIB_Tasks_Tutorial_Sector_03_civ_"", _forEachIndex] joinString """"," \n
-                         "            ""KPLIB_Tasks_Tutorial_Sector_03""" \n
-                         "        ]," \n
-                         "        ["""", localize ""STR_TUTORIAL_CIVILIAN""]," \n
-                         "        [_x, true]," \n
-                         "        ""CREATED""," \n
-                         "        -1," \n
-                         "        false," \n
-                         "        ""heal""," \n
-                         "        true" \n
-                         "    ] call BIS_fnc_taskCreate;" \n
+                         "    _taskId = [""KPLIB_Tasks_Tutorial_Sector_03_civ_"", _forEachIndex] joinString """";" \n
+                         "    _careTasks pushBack _taskId;" \n
+                         "    [_taskId, _x] call KPLIB_fnc_handleHealCivTask;" \n
                          "} forEach _civs;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -916,9 +878,9 @@ class FSM
                                         priority = 0.000000;
                                         to="Build_storage";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_civs select {alive _x && (damage _x) > 0.4} isEqualTo []" \n
-                                         "&&" \n
-                                         "_pows select {alive _x && captive _x} isEqualTo []"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(" \n
+                                         "    (_careTasks apply {[_x] call BIS_fnc_taskCompleted}) arrayIntersect [false]" \n
+                                         ") isEqualTo []"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -930,21 +892,20 @@ class FSM
                 {
                         name = "Build_storage";
                         itemno = 51;
-                        init = /*%FSM<STATEINIT""">*/"{" \n
-                         "    [" \n
-                         "        [""KPLIB_Tasks_Tutorial_Sector_03_pow_"", _forEachIndex] joinString """"," \n
-                         "        ""SUCCEEDED""," \n
-                         "        false" \n
-                         "    ] call BIS_fnc_taskSetState;" \n
-                         "} forEach _pows;" \n
-                         "{" \n
-                         "    [" \n
-                         "        [""KPLIB_Tasks_Tutorial_Sector_03_civ_"", _forEachIndex] joinString """"," \n
-                         "        ""SUCCEEDED""," \n
-                         "        false" \n
-                         "    ] call BIS_fnc_taskSetState;" \n
-                         "} forEach _civs;" \n
-                         "[""KPLIB_Tasks_Tutorial_Sector_03"", ""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Sector_03"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "// Create task" \n
+                         "[" \n
+                         "    allPlayers," \n
+                         "    [""KPLIB_Tasks_Tutorial_Sector_04"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
+                         "    """"," \n
+                         "    markerPos _factory," \n
+                         "    ""ASSIGNED""," \n
+                         "    0," \n
+                         "    true," \n
+                         "    ""box""," \n
+                         "    true" \n
+                         "] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -955,7 +916,11 @@ class FSM
                                         priority = 0.000000;
                                         to="Start_production";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"false"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(" \n
+                                         "    (((markerPos _factory) nearObjects GRLIB_fob_range) select {" \n
+                                         "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 1" \n
+                                         "    }) isEqualTo []" \n
+                                         ")"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -967,7 +932,20 @@ class FSM
                 {
                         name = "Start_production";
                         itemno = 53;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Sector_04"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "// Create task" \n
+                         "[" \n
+                         "    allPlayers," \n
+                         "    [""KPLIB_Tasks_Tutorial_Sector_05"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
+                         "    """"," \n
+                         "    markerPos _factory," \n
+                         "    ""ASSIGNED""," \n
+                         "    0," \n
+                         "    true," \n
+                         "    ""use""," \n
+                         "    true" \n
+                         "] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -978,7 +956,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Complete_tasks_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(((KP_liberation_production select {(_x select 1) isEqualTo _factory}) select 0) select 7) < 3"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -990,7 +968,8 @@ class FSM
                 {
                         name = "Complete_tasks_1";
                         itemno = 55;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[""KPLIB_Tasks_Tutorial_Sector_05"", ""SUCCEEDED"", false] call BIS_fnc_taskSetState;" \n
+                         "[""KPLIB_Tasks_Tutorial_Sector"", ""SUCCEEDED""] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
