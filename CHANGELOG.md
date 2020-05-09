@@ -27,6 +27,7 @@
 * Added: Crates which are spawned upon sector activation are now saved near their sector, if the sector is taken by blufor. (Factories/Cities)
 * Added: BWMod arsenal preset.
 * Added: Interactive tutorial for the mission start. Deploying first FOB and conquering a factory with starting production.
+* Added Vehicle in Vehicle transport actions to Arsenal crate.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)

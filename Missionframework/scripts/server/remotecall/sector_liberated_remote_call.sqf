@@ -1,56 +1,39 @@
 params ["_liberated_sector"];
 
 private _combat_readiness_increase = 0;
-
-if (_liberated_sector in sectors_bigtown) then {
-    _combat_readiness_increase = (floor (random 10)) * GRLIB_difficulty_modifier;
-};
-
-if (_liberated_sector in sectors_capture) then {
-    _combat_readiness_increase = (floor (random 6)) * GRLIB_difficulty_modifier;
-};
-
-if (_liberated_sector in sectors_military) then {
-    _combat_readiness_increase = (5 + (floor (random 11))) * GRLIB_difficulty_modifier;
-};
-
-if (_liberated_sector in sectors_factory) then {
-    _combat_readiness_increase = (3 + (floor (random 7))) * GRLIB_difficulty_modifier;
-};
-
-if (_liberated_sector in sectors_tower) then {
-    _combat_readiness_increase = (floor (random 4));
+switch (true) do {
+    case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_capture):    {_combat_readiness_increase = floor (random 6) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_military):   {_combat_readiness_increase = 5 + (floor (random 11)) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_factory):    {_combat_readiness_increase = 3 + (floor (random 7)) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_tower):      {_combat_readiness_increase = floor (random 4);};
 };
 
 combat_readiness = combat_readiness + _combat_readiness_increase;
 if (combat_readiness > 100.0 && GRLIB_difficulty_modifier <= 2.0) then {combat_readiness = 100.0};
 stats_readiness_earned = stats_readiness_earned + _combat_readiness_increase;
-[_liberated_sector, 0] remoteExec ["remote_call_sector"];
 
-reset_battlegroups_ai = true; publicVariable "reset_battlegroups_ai";
-
+[_liberated_sector, 0] remoteExecCall ["remote_call_sector"];
 blufor_sectors pushback _liberated_sector; publicVariable "blufor_sectors";
 stats_sectors_liberated = stats_sectors_liberated + 1;
 
+reset_battlegroups_ai = true; publicVariable "reset_battlegroups_ai";
+
 if (_liberated_sector in sectors_factory) then {
-
-    private _sectorType = 1;
-    private _sectorFacilities = (KP_liberation_production_markers select {_liberated_sector == (_x select 0)}) select 0;
-    private _producing = 3;
-
     {
         if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
     } forEach KP_liberation_production;
 
+    private _sectorFacilities = (KP_liberation_production_markers select {_liberated_sector == (_x select 0)}) select 0;
     KP_liberation_production pushBack [
-        (markerText _liberated_sector),
+        markerText _liberated_sector,
         _liberated_sector,
-        _sectorType,
+        1,
         [],
         _sectorFacilities select 1,
         _sectorFacilities select 2,
         _sectorFacilities select 3,
-        _producing,
+        3,
         KP_liberation_production_interval,
         0,
         0,

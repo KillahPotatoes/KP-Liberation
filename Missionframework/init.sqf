@@ -1,3 +1,6 @@
+
+KPLIB_init = false;
+
 // Version of the KP Liberation framework
 KP_liberation_version = [0, 96, 7];
 
@@ -51,3 +54,5 @@ if (!isDedicated && hasInterface) then {
 if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(bis_reviveParam_mode == 0)) then {
     [] call bis_fnc_reviveInit;
 };
+
+KPLIB_init = true;
