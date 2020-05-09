@@ -22,6 +22,8 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
         _unit removeItem "NVGoggles_INDEP";
         _unit setUnitPos "UP";
         sleep 1;
+        private _grp = createGroup [GRLIB_side_civilian, true];
+        [_unit] joinSilent _grp;
         if (KP_liberation_ace) then {
             [_unit, true] call ACE_captives_fnc_setSurrendered;
         } else {
@@ -41,6 +43,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
             } else {
                 _unit enableAI "ANIM";
                 _unit enableAI "MOVE";
+                _unit setCaptive false;
             };
             sleep 1;
             [_unit] remoteExec ["remote_call_prisonner", _unit];

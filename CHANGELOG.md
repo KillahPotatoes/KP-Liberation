@@ -26,6 +26,7 @@
 * Added: Parameter to disable weapon sway.
 * Added: Crates which are spawned upon sector activation are now saved near their sector, if the sector is taken by blufor. (Factories/Cities)
 * Added: BWMod arsenal preset.
+* Added: Interactive tutorial for the mission start. Deploying first FOB and conquering a factory with starting production.
 * Added Vehicle in Vehicle transport actions to Arsenal crate.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
@@ -61,6 +62,7 @@
 * Tweaked: ui_manager script optimizations.
 * Tweaked: HUD Overlay will auto hide in zeus.
 * Tweaked: HUD Overlay with global resources will show on map.
+* Tweaked: Shoot surrendering enemies now cause civilian reputation penalty like killing a civilian.
 * Tweaked: Description.ext got much more comments and settings.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)

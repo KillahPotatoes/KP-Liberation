@@ -21,7 +21,7 @@
 
 [Steam Workshop](http://steamcommunity.com/id/wyqer/myworkshopfiles/?appid=107410)
 
-[Discord](https://discord.gg/bpPUU48)
+[Discord](https://discord.gg/Qk35Sw8)
 
 This mission is only a continued project based on the original, but most likely abandoned, mission from [GreuhZbug](https://github.com/GreuhZbug).
 
