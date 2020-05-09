@@ -59,6 +59,9 @@
 * Tweaked: Added a chance that battlegroups are now just contain infantry units which spawn closer to target.
 * Tweaked: Arrays for enemy rotary- or fixed-wings doesn't need to be filled anymore and can be set as empty `[]`.
 * Tweaked: Victory condition parameter by default set to "Capitals and military bases" instead of just capitals.
+* Tweaked: ui_manager script optimizations.
+* Tweaked: HUD Overlay will auto hide in zeus.
+* Tweaked: HUD Overlay with global resources will show on map.
 * Tweaked: Shoot surrendering enemies now cause civilian reputation penalty like killing a civilian.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)

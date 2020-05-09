@@ -32,6 +32,7 @@ class KPLIB
         class getCommander              {};
         class getCrateHeight            {};
         class getFobName                {};
+        class getFobResources           {};
         class getGroupType              {};
         class getLessLoadedHC           {};
         class getLoadout                {};
@@ -84,6 +85,12 @@ class KPLIB
         class spawnRegularSquad         {};
         class spawnVehicle              {};
         class swapInventory             {};
+    };
+    class functions_ui
+    {
+        file = "functions\ui";
+
+        class overlayUpdateResources    {};
     };
     #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"

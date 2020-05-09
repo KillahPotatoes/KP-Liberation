@@ -86,16 +86,6 @@ class RscTitles
 		};
 	};
 
-	class blank
-	{
-		name = "blank";
-		duration = 999999;
-		idd = 6666;
-		movingEnable = true;
-		onLoad = "";
-		controls[]={};
-	};
-
 	class fasttravel
 	{
 		name = "fasttravel";
@@ -133,13 +123,13 @@ class RscTitles
 		};
 	};
 
-	class statusoverlay
+	class KPLIB_overlay
 	{
-		name = "statusoverlay";
+		name = "KPLIB_overlay";
 		duration = 999999;
 		idd = 6666;
 		movingEnable = true;
-		onLoad = "uiNamespace setVariable ['GUI_OVERLAY', _this select 0];";
+		onLoad = "uiNamespace setVariable ['KPLIB_overlay', _this select 0];";
 		controls[]= {
 			BGPicture,
 			PictureFOBShadow, PictureFOB, LabelFOB,
@@ -157,7 +147,7 @@ class RscTitles
 			LabelPoint, CentralShadow, CentralLabel,
 			ActiveSectors, AlertBGPicture, AlertLabel, AlertTimer
 		};
-		
+
 		class BGPicture {
 			idc = 758001;
 			type =  CT_STATIC;
@@ -404,7 +394,7 @@ class RscTitles
 			y = (0.39 + ( ICONE_SPACY * 9 ) ) * safezoneH + safezoneY;
 			colorText[] = {0, 0.45, 0.95, 1};
 		};
-		
+
 		class CaptureFrameStandard {
 			idc = -1;
 			type =  CT_STATIC;
