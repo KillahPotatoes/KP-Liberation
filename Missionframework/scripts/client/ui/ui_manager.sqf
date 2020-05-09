@@ -2,9 +2,7 @@ scriptName "KPLIB_uiManager";
 
 disableSerialization;
 
-private ["_sectorcontrols", "_resourcescontrols", "_active_sectors_hint", "_uiticks", "_attacked_string", "_active_sectors_string", "_color_readiness", "_nearest_active_sector", "_zone_size", "_colorzone", "_bar", "_barwidth", "_distfob", "_nearfob", "_fobdistance", "_showResources", "_notNearFOB", "_resource_area"];
-
-_sectorcontrols = [
+private _sectorcontrols = [
     201,    // BG Picture Sector
     202,    // Capture Frame
     203,    // Capture Frame OPFOR
@@ -12,10 +10,6 @@ _sectorcontrols = [
     244     // Capture Frame BLUFOR
 ];
 
-_active_sectors_hint = false;
-_distfob = (GRLIB_fob_range * 0.8);
-_notNearFOB = false;
-_resource_area = "";
 GRLIB_ui_notif = "";
 KP_liberation_supplies = 0;
 KP_liberation_ammo = 0;
@@ -23,13 +17,20 @@ KP_liberation_fuel = 0;
 KP_liberation_air_vehicle_building_near = false;
 KP_liberation_recycle_building_near = false;
 
-_uiticks = 0;
-
 waitUntil { !isNil "synchro_done" };
 waitUntil { synchro_done };
 
 if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false };
 if ( isNil "halojumping" ) then { halojumping = false };
+
+private _uiticks = 0;
+private _active_sectors_hint = false;
+private _attacked_string = "";
+private _nearest_active_sector = "";
+private _zone_size = 0;
+private _colorzone = "ColorGrey";
+private _bar = controlNull;
+private _barwidth = 0;
 
 private _overlay = displayNull;
 private _overlayVisible = false;
