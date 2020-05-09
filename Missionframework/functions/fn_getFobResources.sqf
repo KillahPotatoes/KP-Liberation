@@ -9,7 +9,7 @@
         Gets the FOB resource data in format [<POSITION>, <SUPPLIES>, <AMMO>, <FUEL>, <HAS_AIR_BUILD>, <HAS_REC_WORKSHOP>].
 
     Parameter(s):
-        _fob - Position of FOB to resources of [POSITION, defaults to [0, 0, 0]]
+        _fob - Position of FOB to get resources of [POSITION, defaults to [0, 0, 0]]
 
     Returns:
         FOB resource data [ARRAY]
