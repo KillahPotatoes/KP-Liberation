@@ -10,10 +10,10 @@
         Update resources overlay.
 
     Parameter(s):
-        _overlay - Overlay display                                  [DISPLAY, defaults to displayNull]
-        _show - Should the resources controls be shown              [BOOL, defaults to true]
-        _updateValues - Should values controls be updated with data [BOOL, defaults to true]
-        _resourceArea - Name of resource area to be shown           [STRING, defaults ""]
+        _overlay        - Overlay display                               [DISPLAY, defaults to displayNull]
+        _show           - Should the resources controls be shown        [BOOL, defaults to true]
+        _updateValues   - Should values controls be updated with data   [BOOL, defaults to true]
+        _resourceArea   - Name of resource area to be shown             [STRING, defaults ""]
 
     Returns:
         Resources overlay visible [BOOL]
