@@ -6,7 +6,7 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        No description added yet.
+        Debriefing defines for KP Liberation.
 */
 
 class End1 {

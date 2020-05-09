@@ -24,11 +24,20 @@
             "prefix": "    ",
             "end": "*/",
             "forceToTop": true
+        },
+        {
+            "license": "Custom",
+            "language": "ext",
+            "rootDirFileName": "description.ext",
+            "begin": "/*",
+            "prefix": "    ",
+            "end": "*/",
+            "forceToTop": true
         }
     ],
     "psi-header.changes-tracking": {
         "isActive": true,
-        "include": ["sqf"],
+        "include": ["sqf", "ext"],
         "modDate": "Last Update:",
         "modDateFormat": "YYYY-MM-DD",
         "autoHeader": "manualSave"
@@ -54,6 +63,19 @@
                 "",
                 "Returns:",
                 "    Function reached the end [BOOL]"
+            ]
+        },
+        {
+            "language": "ext",
+            "template": [
+                "File: <<filename>>",
+                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Date: <<filecreated('YYYY-MM-DD')>>",
+                "Last Update:",
+                "License: MIT License - http://www.opensource.org/licenses/MIT",
+                "",
+                "Description:",
+                "    No description added yet."
             ]
         }
     ],
