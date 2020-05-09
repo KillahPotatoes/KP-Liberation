@@ -6368,36 +6368,52 @@
             <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben. Bist du in der Nähe einer Kiste, hast du unter anderem eine "Einlagern" und "Schieben" Mausrad-Aktion, welche dir helfen werden.</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_TITLE">
-            <Original>Capture first sector</Original>
-            <German>Erobere den ersten Sektor</German>
+            <Original>Capture your first factory</Original>
+            <German>Erobere deine erste Fabrik</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_DESC">
             <Original>This tasks will guide you through the process of capturing a factory sector, take possible POWs, help possible wounded civilians and start the resource production.</Original>
             <German>Diese Aufgaben werden dich durch die Eroberung eines Fabrik-Sektors, das Festnehmen möglicher Gefangener, der Betreuung möglicher verwundeter Zivilisten und den Start der Ressourcenproduktion führen.</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_TITLE">
-            <Original>Approach a factory sector</Original>
+            <Original>Approach a factory</Original>
             <German>Nähere dich einer Fabrik</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_DESC">
-            <Original>Bla bla</Original>
-            <German>Bla bla</German>
+            <Original>It's always a good decision to start your campaign with capturing a factory. That way you'll be able to produce more resources, which you'll need in order to build more vehicles and later air assets.&lt;br/&gt;We've marked up to three near factory sectors on the map for you. Decide by yourself, which one you want to approach.&lt;br/&gt;We'll continue, if you're near one of the marked factories.&lt;br/&gt;&lt;br/&gt;More information about the different sector types can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Original>
+            <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
-            <Original>Conquer the factory sector</Original>
+            <Original>Conquer the factory</Original>
             <German>Erobere die Fabrik</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_DESC">
-            <Original>Bla bla</Original>
-            <German>Bla bla</German>
+            <Original>The factory is now activated and will spawn enemy defenders. A full sector activation might take up to 20 seconds, depending on the amount of player side units near the sector. The more troops, the faster it'll spawn. This is to avoid random spawning by e.g. helicopter or jet fly-bys.&lt;br/&gt;&lt;br/&gt;Now you've to defeat the enemy garrison until they surrender.</Original>
+            <German>Die Fabrik ist nun aktiv und wird feindliche Verteidigungstruppen erzeugen. Eine vollständige Sektoraktivierung kann bis zu 20 Sekunden dauern, abhängig von der Menge an freundlichen Einheiten in der Nähe eine Sektors. Umso mehr Einheiten, umso schneller. Dies verhindert, dass zufällige Sektoren durch lediglich vorbeifliegende Helikopter oder Jets aktiviert werden.&lt;br/&gt;&lt;br/&gt;Nun musst du die feindliche Garnison, bis zur Aufgabe, bekämpfen.</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_TITLE">
             <Original>Capture and care</Original>
             <German>Gefangennahme und Versorgung</German>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_DESC">
-            <Original>Bla bla</Original>
-            <German>Bla bla</German>
+            <Original>After capturing a sector there is a chance that enemies surrendered or wounded civilians are in need of medical aid.&lt;br/&gt;We've marked these for you this time. Normally you need to search the buildings for surrendering enemies and have a look on the map for small violet circles which gives a hint for wounded civilians.&lt;br/&gt;&lt;br/&gt;Approach all of the markers to capture the enemies and provide medical assistance for the civilians.</Original>
+            <German>Nachdem ein Sektor erobert wurde, besteht die Chance, dass Feinde sich ergeben und verwundete Zivilisten medizinische Hilfe benötigen.&lt;br/&gt;Dieses mal haben wir diese für dich markiert. Normalerweise musst du die Gebäude nach sich ergebenen Feinden durchsuchen und auf der Karte nach kleinen violetten Markierungen schauen, welche dir einen Anhaltspunkt für verwundete Zivilisten gibt.&lt;br/&gt;&lt;br/&gt;Nähere dich allen Markierungen, um Feinde gefangen zu nehmen und den Zivilisten zu helfen.</German>
+        </Key>
+        <Key ID="STR_TUTORIAL_TASK_SECTOR_04_TITLE">
+            <Original>Build a storage area</Original>
+            <German>Baue einen Lagerbereich</German>
+        </Key>
+        <Key ID="STR_TUTORIAL_TASK_SECTOR_04_DESC">
+            <Original>You need to place down a storage area for each factory you conquer. Otherwise the factory won't be able to produce resources due to a lack of storage space.&lt;br/&gt;Use the scroll wheel action to place a storage area at the factory sector.</Original>
+            <German>Für jede eroberte Fabrik muss ein Lagerbereich errichtet werden. Andernfalls wird die Fabrik, aufgrund fehlendem Lagerplatz, keine Ressourcen produzieren können.&lt;br/&gt;Benutze die entsprechende Mausrad-Aktion, um einen Lagerbereich bei der Fabrik zu errichten.</German>
+        </Key>
+        <Key ID="STR_TUTORIAL_TASK_SECTOR_05_TITLE">
+            <Original>Start the production</Original>
+            <German>Starte die Produktion</German>
+        </Key>
+        <Key ID="STR_TUTORIAL_TASK_SECTOR_05_DESC">
+            <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
+            <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
         </Key>
     </Package>
 
