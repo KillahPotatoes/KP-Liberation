@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-04-21
+    Last Update: 2020-05-08
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -31,6 +31,7 @@ while {true} do {
         _fobDist = 99999;
         _fobName = "";
     };
+    // TODO more self explanatory names, KPLIB_nearestFobDist, KPLIB_currentFobName, KPLIB_nearestFobPos
     player setVariable ["KPLIB_fobDist", _fobDist];
     player setVariable ["KPLIB_fobName", _fobName];
     player setVariable ["KPLIB_fobPos", _fobPos];
