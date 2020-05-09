@@ -57,6 +57,7 @@
 * Tweaked: Added a chance that battlegroups are now just contain infantry units which spawn closer to target.
 * Tweaked: Arrays for enemy rotary- or fixed-wings doesn't need to be filled anymore and can be set as empty `[]`.
 * Tweaked: Victory condition parameter by default set to "Capitals and military bases" instead of just capitals.
+* Tweaked: Shoot surrendering enemies now cause civilian reputation penalty like killing a civilian.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
