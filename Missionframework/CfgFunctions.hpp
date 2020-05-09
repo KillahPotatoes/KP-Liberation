@@ -1,8 +1,7 @@
-class KPLIB
-{
-    class functions
-    {
+class KPLIB {
+    class functions {
         file = "functions";
+
         class addActionsFob             {};
         class addActionsPlayer          {};
         class addObjectInit             {};
@@ -86,8 +85,7 @@ class KPLIB
         class spawnVehicle              {};
         class swapInventory             {};
     };
-    class functions_ui
-    {
+    class functions_ui {
         file = "functions\ui";
 
         class overlayUpdateResources    {};
