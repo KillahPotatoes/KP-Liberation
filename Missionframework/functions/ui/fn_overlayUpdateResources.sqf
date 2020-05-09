@@ -3,14 +3,17 @@
     File: fn_overlayUpdateResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-01
-    Last Update: 2020-05-08
+    Last Update: 2020-05-09
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
         Update resources overlay.
 
     Parameter(s):
-        _localVariable - TODO Description [DATATYPE, defaults to DEFAULTVALUE]
+        _overlay - Overlay display [DISPLAY, defaults to displayNull]
+        _show - Should the resources controls be shown [BOOL, defaults to true]
+        _updateValues - Should values controls be updated with data [BOOL, defaults to true]
+        _resourceArea - Name of resource area to be shown [STRING, defaults ""]
 
     Returns:
         Resources overlay visible [BOOL]
