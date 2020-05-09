@@ -26,7 +26,10 @@ params [
     ["_resourceArea", "", [""]]
 ];
 
-if (isNull _overlay) exitWith {false};
+if (isNull _overlay) exitWith {
+    ["Null overlay given"] call BIS_fnc_error;
+    false
+};
 if (!_show) exitWith {
     {
         (_overlay displayCtrl _x) ctrlShow false;
