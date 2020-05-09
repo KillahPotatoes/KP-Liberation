@@ -96,7 +96,7 @@ respawnDialog = 0;
 // -1 - Dont respawn on start. Don't run respawn script on start.
 //  0 - Dont respawn on start. Run respawn script on start.
 //  1 - Respawn on start. Run respawn script on start.
-respawnOnStart = 1;
+respawnOnStart = 0;
 
 
 /*
@@ -216,6 +216,17 @@ class CfgDebriefing {
     #include "KPLIB_debriefs.hpp"
 };
 
+class CfgDiscordRichPresence {
+    applicationID="698133766975258664";
+    defaultDetails="";
+    defaultState="Preparing...";
+    defaultLargeImageKey="liberation_logo";
+    defaultLargeImageText="KP Liberation";
+    defaultSmallImageKey="arma3_logo";
+    defaultSmallImageText="Arma 3";
+    useTimeElapsed=1;
+};
+
 class CfgFunctions {
     #include "CfgFunctions.hpp"
     #include "KP\KPPLM\KPPLM_functions.hpp"
@@ -237,13 +248,3 @@ class CfgTaskDescriptions {
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
-class CfgDiscordRichPresence {
-    applicationID="698133766975258664";
-    defaultDetails="";
-    defaultState="Preparing...";
-    defaultLargeImageKey="liberation_logo";
-    defaultLargeImageText="KP Liberation";
-    defaultSmallImageKey="arma3_logo";
-    defaultSmallImageText="Arma 3";
-    useTimeElapsed=1;
-};

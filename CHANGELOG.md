@@ -61,6 +61,7 @@
 * Tweaked: ui_manager script optimizations.
 * Tweaked: HUD Overlay will auto hide in zeus.
 * Tweaked: HUD Overlay with global resources will show on map.
+* Tweaked: Description.ext got much more comments and settings.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Object inits will fire on units not only vehicles.
