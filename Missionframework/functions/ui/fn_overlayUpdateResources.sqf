@@ -39,16 +39,16 @@ if (!_show) exitWith {
 
 if (_updateValues) then {
 
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText format ["%1", toUpper _resourceArea];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText format ["%1", (floor KP_liberation_supplies)];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_AMMO) ctrlSetText format ["%1", (floor KP_liberation_ammo)];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FUEL) ctrlSetText format ["%1", (floor KP_liberation_fuel)];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_UNITCAP) ctrlSetText format ["%1/%2", unitcap,([] call KPLIB_fnc_getLocalCap)];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_HELIPAD) ctrlSetText format ["%1/%2", KP_liberation_heli_count, KP_liberation_heli_slots];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_PLANE) ctrlSetText format ["%1/%2", KP_liberation_plane_count, KP_liberation_plane_slots];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_ALERT) ctrlSetText format ["%1%2", round(combat_readiness),"%"];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_CIVREP) ctrlSetText format ["%1%2", KP_liberation_civ_rep,"%"];
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_INTEL) ctrlSetText format ["%1", round(resources_intel)];
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpper _resourceArea;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText str floor KP_liberation_supplies;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_AMMO) ctrlSetText str floor KP_liberation_ammo;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FUEL) ctrlSetText str floor KP_liberation_fuel;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_UNITCAP) ctrlSetText ([unitcap, "/", [] call KPLIB_fnc_getLocalCap] joinString "");
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_HELIPAD) ctrlSetText ([KP_liberation_heli_count, "/", KP_liberation_heli_slots] joinString "");
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_PLANE) ctrlSetText ([KP_liberation_plane_count, "/", KP_liberation_plane_slots] joinString "");
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_ALERT) ctrlSetText ([round combat_readiness, "%"] joinString "");
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_CIVREP) ctrlSetText ([KP_liberation_civ_rep,"%"] joinString "");
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_INTEL) ctrlSetText str round resources_intel;
 
     private _color_readiness = [0.8,0.8,0.8,1];
     if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
