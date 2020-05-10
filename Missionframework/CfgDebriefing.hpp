@@ -1,8 +1,8 @@
 /*
-    File: KPLIB_debriefs.hpp
+    File: CfgDebriefing.hpp
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-09
-    Last Update: 2020-05-09
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:

@@ -11,7 +11,8 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 [] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
-[] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
+[] call compileFinal preprocessFileLineNumbers "KPLIB_config.sqf";
+[] call compileFinal preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
 [] call compileFinal preprocessFileLineNumbers "presets\init_presets.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_objectInits.sqf";
 

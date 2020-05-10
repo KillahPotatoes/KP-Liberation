@@ -1,6 +1,12 @@
 /*
-    CONFIG FILE FOR KP LIBERATION
-    https://github.com/KillahPotatoes/KP-Liberation
+    File: KPLIB_config.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-16
+    Last Update: 2020-05-10
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Contains all settings which are meant to be adjustable by players.
 */
 
 // Vehicle classnames which also function as ACE medical vehicles.
@@ -72,140 +78,242 @@ KP_liberation_ace_crates = [
     "ACE_medicalSupplyCrate_advanced"
 ];
 
-/* - Custom unit and arsenal preset settings.
-If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
+/*
+------------------------------------------------------------
+    --- PRESET SETTINGS ---
+    If you want to change a preset, it's recommended to
+    set all four presets to 0 and edit the appropriate
+    custom.sqf files in the preset folders.
+------------------------------------------------------------
+*/
 
-/* BLUFOR preset:
-0  = Custom (default vanilla with many optional mods supported)
-1  = Apex Tanoa (apex vanilla with many optional mods supported)
-2  = 3cb BAF (MTP)
-3  = 3cb BAF (Desert)
-4  = BWMod Bundeswehr (Flecktarn)
-5  = BWMod Bundeswehr (Tropentarn)
-6  = RHS USAF (Woodland)
-7  = RHS USAF (Desert)
-8  = RHS AFRF (VDV/MSV)
-9  = Germany West (Global Mobilization)
-10 = Germany West Winter (Global Mobilization)
-11 = Germany East (Global Mobilization)
-12 = Germany East Winter (Global Mobilization)
-13 = CSAT Brown
-14 = CSAT Green
-15 = Unsung US
-16 = CUP British Armed Forces (Desert)
-17 = CUP British Armed Forces (Woodland)
-18 = CUP US Marine Corps (Desert)
-19 = CUP US Marine Corps (Woodland)
-20 = CUP US Army (Desert)
-21 = CUP US Army (Woodland)
-22 = CUP Chernarus Defense Force
-23 = CUP Army of the Czech Republic (Desert)
-24 = CUP Army of the Czech Republic (Woodland)
-25 = CUP Chernarussian Movement of the Red Star
-26 = CUP Sahrani Liberation Army
-27 = CUP Takistani Army
-28 = SFP (Woodland)
-29 = SFP (Desert)
-30 = LDF (Contact DLC) */
+/*
+    ----- Playerside preset -----
+    0  = Custom (default vanilla with many optional mods supported)
+    1  = Apex Tanoa (apex vanilla with many optional mods supported)
+    2  = 3cb BAF (MTP)
+    3  = 3cb BAF (Desert)
+    4  = BWMod Bundeswehr (Flecktarn)
+    5  = BWMod Bundeswehr (Tropentarn)
+    6  = RHS USAF (Woodland)
+    7  = RHS USAF (Desert)
+    8  = RHS AFRF (VDV/MSV)
+    9  = Germany West (Global Mobilization)
+    10 = Germany West Winter (Global Mobilization)
+    11 = Germany East (Global Mobilization)
+    12 = Germany East Winter (Global Mobilization)
+    13 = CSAT Brown
+    14 = CSAT Green
+    15 = Unsung US
+    16 = CUP British Armed Forces (Desert)
+    17 = CUP British Armed Forces (Woodland)
+    18 = CUP US Marine Corps (Desert)
+    19 = CUP US Marine Corps (Woodland)
+    20 = CUP US Army (Desert)
+    21 = CUP US Army (Woodland)
+    22 = CUP Chernarus Defense Force
+    23 = CUP Army of the Czech Republic (Desert)
+    24 = CUP Army of the Czech Republic (Woodland)
+    25 = CUP Chernarussian Movement of the Red Star
+    26 = CUP Sahrani Liberation Army
+    27 = CUP Takistani Army
+    28 = SFP (Woodland)
+    29 = SFP (Desert)
+    30 = LDF (Contact DLC)
+*/
 KP_liberation_preset_blufor = 0;
 
-/* OPFOR preset:
-0  = Custom (default vanilla CSAT)
-1  = Apex Tanoa (apex vanilla CSAT)
-2  = RHS AFRF (EMR/MSV)
-3  = Project OPFOR (Takistan)
-4  = Project OPFOR (Islamic State)
-5  = Project OPFOR (Sahrani)
-6  = AAF
-7  = NATO
-8  = Germany West (Global Mobilization)
-9  = Germany West Winter (Global Mobilization)
-10 = Germany East (Global Mobilization)
-11 = Germany East Winter (Global Mobilization)
-12 = Unsung NVA
-13 = CUP Sahrani Liberation Army
-14 = CUP Takistani Army
-15 = CUP Chernarussian Movement of the Red Star
-16 = CUP Armed Forces of the Russian Federation (MSV - EMR)
-17 = CUP Armed Forces of the Russian Federation (Modern MSV)
-18 = CUP Chernarus Defense Force
-19 = CUP British Armed Forces (Desert)
-20 = CUP British Armed Forces (Woodland) */
+/*
+    ----- Enemy preset -----
+    0  = Custom (default vanilla CSAT)
+    1  = Apex Tanoa (apex vanilla CSAT)
+    2  = RHS AFRF (EMR/MSV)
+    3  = Project OPFOR (Takistan)
+    4  = Project OPFOR (Islamic State)
+    5  = Project OPFOR (Sahrani)
+    6  = AAF
+    7  = NATO
+    8  = Germany West (Global Mobilization)
+    9  = Germany West Winter (Global Mobilization)
+    10 = Germany East (Global Mobilization)
+    11 = Germany East Winter (Global Mobilization)
+    12 = Unsung NVA
+    13 = CUP Sahrani Liberation Army
+    14 = CUP Takistani Army
+    15 = CUP Chernarussian Movement of the Red Star
+    16 = CUP Armed Forces of the Russian Federation (MSV - EMR)
+    17 = CUP Armed Forces of the Russian Federation (Modern MSV)
+    18 = CUP Chernarus Defense Force
+    19 = CUP British Armed Forces (Desert)
+    20 = CUP British Armed Forces (Woodland)
+*/
 KP_liberation_preset_opfor = 0;
 
-/* Resistance preset:
-0  = Custom (default vanilla FIA)
-1  = Apex Tanoa (apex vanilla Syndikat)
-2  = RHS GREF
-3  = Project OPFOR (Middle Eastern)
-4  = Project OPFOR (Sahrani)
-5  = Germany (Global Mobilization)
-6  = Unsung
-7  = CUP Takistani Locals
-8  = CUP National Party of Chernarus */
+/*
+    ----- Resistance preset -----
+    0  = Custom (default vanilla FIA)
+    1  = Apex Tanoa (apex vanilla Syndikat)
+    2  = RHS GREF
+    3  = Project OPFOR (Middle Eastern)
+    4  = Project OPFOR (Sahrani)
+    5  = Germany (Global Mobilization)
+    6  = Unsung
+    7  = CUP Takistani Locals
+    8  = CUP National Party of Chernarus
+*/
 KP_liberation_preset_resistance = 0;
 
-/* Civilians preset:
-0  = Custom (default vanilla)
-1  = Apex Tanoa (apex vanilla)
-2  = Project OPFOR (Middle Eastern)
-3  = RDS Civilians
-4  = Germany (Global Mobilization)
-5  = Unsung
-6  = CUP Takistani Civilians
-7  = CUP Chernarussian Civilians */
+/*
+    ----- Civilians preset -----
+    0  = Custom (default vanilla)
+    1  = Apex Tanoa (apex vanilla)
+    2  = Project OPFOR (Middle Eastern)
+    3  = RDS Civilians
+    4  = Germany (Global Mobilization)
+    5  = Unsung
+    6  = CUP Takistani Civilians
+    7  = CUP Chernarussian Civilians
+*/
 KP_liberation_preset_civilians = 0;
 
-/* Which arsenal preset should be used?
-0  = Use the default blacklist method (defined below)
-1  = Custom arsenal preset (edit the custom.sqf in the arsenal_presets\ folder to change things for your own versions and tweaks)
-2  = RHS USAF arsenal preset
-3  = 3cbBAF and RHS USAF arsenal preset
-4  = GM West arsenal preset
-5  = GM East arsenal preset
-6  = CSAT arsenal preset
-7  = Unsung US arsenal preset
-8  = SFP arsenal preset
-9  = BWMod arsenal preset */
+/*
+    ----- Arsenal preset -----
+    0  = Use the default blacklist method (defined below)
+    1  = Custom arsenal preset (custom.sqf in the arsenal_presets\ folder)
+    2  = RHS USAF arsenal preset
+    3  = 3cbBAF and RHS USAF arsenal preset
+    4  = GM West arsenal preset
+    5  = GM East arsenal preset
+    6  = CSAT arsenal preset
+    7  = Unsung US arsenal preset
+    8  = SFP arsenal preset
+    9  = BWMod arsenal preset
+*/
 KP_liberation_arsenal = 0;
 
-/* - Fuel consumption settings.
-Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
+
+/*
+------------------------------------------------------------
+    --- SIDE SETTINGS ---
+    Sides of each faction. In basically any cases this
+    doesn't need to be tweaked, even if using e.g. the
+    CSAT preset for the players.
+------------------------------------------------------------
+*/
+
+// Player side
+GRLIB_side_friendly = WEST;
+
+// Enemy side
+GRLIB_side_enemy = EAST;
+
+// Resistance side
+GRLIB_side_resistance = RESISTANCE;
+
+// Civilian side
+GRLIB_side_civilian = CIVILIAN;
+
+// Friendly sector marker color
+GRLIB_color_friendly = "ColorBLUFOR";
+
+// Enemy sector marker color
+GRLIB_color_enemy = "ColorOPFOR";
+
+// Enemy sector marker color (activated)
+GRLIB_color_enemy_bright = "ColorRED";
+
+
+/*
+------------------------------------------------------------
+    --- SAVE SETTINGS ---
+    Settings concerning the internal save system.
+------------------------------------------------------------
+*/
+
+// Name of the save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
+GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
+
+// Name of the parameter save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
+KPLIB_paramSaveKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
+
+// Interval in seconds for automatic save.
+KP_liberation_save_interval = 60;
+
+
+/*
+------------------------------------------------------------
+    --- RANGES AND HEIGHTS ---
+    All values in meters.
+------------------------------------------------------------
+*/
+
+// Build range around the main FOB building
+GRLIB_fob_range = 125;
+
+// Altitude in metres for the HALO jump
+GRLIB_halo_altitude = 2500;
+
+// Range to activate a sector
+GRLIB_sector_size = 1000;
+
+// Range to capture a sector
+GRLIB_capture_size = 175;
+
+// Radio Tower scanning range
+GRLIB_radiotower_size = 2500;
+
+
+/*
+------------------------------------------------------------
+    --- SECONDARY MISSION SETTINGS ---
+    Settings which are connected to the available
+    secondary missions which can be started by players
+    via the secondary mission dialog.
+------------------------------------------------------------
+*/
+
+// Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR]
+GRLIB_secondary_missions_costs = [15, 10, 8];
+
+// The percentage impact against enemy combat readiness for a successful FOB hunt
+GRLIB_secondary_objective_impact = 0.6;
+
+
+/*
+------------------------------------------------------------
+    --- FUEL CONSUMPTION SETTINGS ---
+    Values for the KP Fuel Consumption Script.
+------------------------------------------------------------
+*/
+
+// Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine.
 KP_liberation_fuel_neutral = 180;
+
 // Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
 KP_liberation_fuel_normal = 90;
+
 // Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
 KP_liberation_fuel_max = 45;
 
-/* - Gameplay constant settings.
-Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
-GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
-KP_liberation_save_interval = 60;                                       // Interval in seconds for automatic save.
 
-GRLIB_side_friendly = WEST;                                             // Friendly side.
-GRLIB_side_enemy = EAST;                                                // Enemy side.
-GRLIB_side_resistance = RESISTANCE;                                     // Resistance side.
-GRLIB_side_civilian = CIVILIAN;                                         // Civilian side.
+
+
+
 GRLIB_respawn_marker = "respawn";                                       // Respawn marker name.
 
-GRLIB_color_friendly = "ColorBLUFOR";                                   // Friendly sector marker color.
-GRLIB_color_enemy = "ColorOPFOR";                                       // Enemy sector marker color.
-GRLIB_color_enemy_bright = "ColorRED";                                  // Enemy sector marker color (activated).
 
-GRLIB_fob_range = 125;                                                  // Build range around the main FOB building.
-GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
-GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
-GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
+
+
+
 GRLIB_recycling_percentage = 0.5;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 30;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1000;                                               // Range to activate a sector.
-GRLIB_capture_size = 175;                                               // Range to capture a sector.
+
 GRLIB_defended_buildingpos_part = 0.4;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 6;                                             // Size of enemy battlegroups.
 GRLIB_vulnerability_timer = 1200;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
+
 GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 10;                                            // Civilian count multiplier.
@@ -505,179 +613,8 @@ KP_liberation_allowed_items_extension = [
     "UK3CB_BAF_Javelin_Launcher"
 ];
 
-/* - Configuration settings for crates transported by vehicles.
-Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
-KPLIB_transportConfigs = [
-    ["B_Heli_Transport_03_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
-    ["B_Heli_Transport_03_unarmed_F", -8, [0,2.2,-1], [0,0.5,-1], [0,-1.2,-1]],
-    ["B_T_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_T_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_T_Truck_01_flatbed_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_T_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_T_VTOL_01_infantry_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
-    ["B_T_VTOL_01_vehicle_F", -7.5,[0,4.7,-4.88],[0,3,-4.88],[0,1.3,-4.88],[0,-0.4,-4.88],[0,-2.1,-4.88]],
-    ["B_Truck_01_cargo_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_Truck_01_covered_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_Truck_01_flatbed_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["B_Truck_01_transport_F", -6.5, [0,-0.4,0.4], [0,-2.1,0.4], [0,-3.8,0.4]],
-    ["BW_AW101_Trans_Heer_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
-    ["BW_LKW7T_Trans_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-    ["C_IDAP_Van_02_transport_F", -5, [0,-1.75,0]],
-    ["C_IDAP_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["C_Offroad_01_F", -6.5, [0,-1.7,0.4]],
-    ["C_Truck_02_covered_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
-    ["C_Truck_02_transport_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
-    ["C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["C_Van_02_service_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["C_Van_02_transport_F", -5, [0,-1.75,0]],
-    ["C_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["CUP_B_C130J_Cargo_USMC",-10,[0,0.6,-3.76],[0,-0.9,-3.76],[0,-2.5,-3.76],[0,-4.2,-3.76],[0,2.2,-3.76],[0,3.8,-3.76],[0,5.5,-3.76]],
-    ["CUP_B_CH47F_GB", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
-    ["CUP_B_CH47F_USA", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
-    ["CUP_B_CH53E_USMC", -8, [0,7.566,-3], [0,5.749,-3], [0,3.847,-3], [0,2,-3], [0,0.338,-3]],
-    ["CUP_B_Kamaz_CDF", -6.5, [0,-0.4,0], [0,-2.6,0]],
-    ["CUP_B_Kamaz_Open_CDF", -6.5, [0.12,0.4,0], [0.12,-1.8,0]],
-    ["CUP_B_Mi17_CDF", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
-    ["CUP_B_Mi171Sh_ACR", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
-    ["CUP_B_Mi171Sh_Unarmed_ACR", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
-    ["CUP_B_MI6A_CDF", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
-    ["CUP_B_MTVR_USA", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
-    ["CUP_B_MTVR_USMC", -6.5, [-0.009,-0.647,0.112], [-0.054,-2.535,0.112]],
-    ["CUP_B_MV22_USMC_RAMPGUN", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
-    ["CUP_B_MV22_USMC", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
-    ["CUP_B_MV22_VIV_USMC", -8, [0,3.3,-1.6], [0,1,-1.6], [0,-1.3,-1.6]],
-    ["CUP_B_T810_Armed_CZ_DES", -6.5, [0,0,-0.5], [0,-2,-0.5]],
-    ["CUP_B_T810_Armed_CZ_WDL", -6.5, [0,0,-0.5], [0,-2,-0.5]],
-    ["CUP_B_T810_Unarmed_CZ_DES", -6.5, [0,0,0.2], [0,-2,0.2]],
-    ["CUP_B_T810_Unarmed_CZ_WDL", -6.5, [0,0,0.2], [0,-2,0.2]],
-    ["CUP_B_Ural_CDF", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_B_Ural_Open_CDF", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_B_Wolfhound_GMG_GB_D", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_GMG_GB_W", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_HMG_GB_D", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_HMG_GB_W", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_LMG_GB_D", -6.5, [0,-3.5,2.3]],
-    ["CUP_B_Wolfhound_LMG_GB_W", -6.5, [0,-3.5,2.3]],
-    ["CUP_C_Ural_Civ_01", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_C_Ural_Civ_03", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_C_Ural_Open_Civ_03", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Kamaz_Open_RU", -6.5, [0.12,0.4,0], [0.12,-1.8,0]],
-    ["CUP_O_Kamaz_RU", -6.5, [0,-0.4,0], [0,-2.6,0]],
-    ["CUP_O_Ural_CHDKZ", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Ural_Open_CHDKZ", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Ural_Open_SLA", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Ural_Open_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Ural_SLA", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Ural_TKA", -6.5, [0,-0.5,0], [0,-2.5,0]],
-    ["CUP_O_Mi8_SLA_1", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
-    ["CUP_O_MI6A_CHDKZ", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
-    ["CUP_O_MI6A_TKA", -8, [0,6,-0.6], [0,4.3,-0.6], [0,2.5,-0.6], [0,0.5,-0.6], [0,-1.2,-0.6], [0,-3.1,-0.6]],
-    ["CUP_O_C130J_Cargo_TKA",-10,[0,0.6,-3.76],[0,-0.9,-3.76],[0,-2.5,-3.76],[0,-4.2,-3.76],[0,2.2,-3.76],[0,3.8,-3.76],[0,5.5,-3.76]],
-    ["gm_gc_army_ural4320_cargo_win", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
-    ["gm_gc_army_ural4320_cargo", -5, [0.0722656,-0.539063,-0.1], [0.076416,-1.76904,-0.1], [0.0773926,-2.85742,-0.1]],
-    ["gm_gc_bgs_ural4320_cargo", -5, [-0.0373535,-0.535156,-0.1], [-0.0344238,-1.76611,-0.1], [-0.0334473,-2.85547,-0.1]],
-    ["gm_ge_army_kat1_451_container_win", -5, [-0.0280762,0.222656,-0.2], [-0.0202637,-1.31152,-0.2],[-0.0222168,-2.79834,-0.2]],
-    ["gm_ge_army_kat1_451_container", -5, [-0.0280762,0.222656,-0.2], [-0.0202637,-1.31152,-0.2], [-0.0222168,-2.79834,-0.2]],
-    ["gm_ge_army_kat1_454_cargo_win",-6.5, [-0.0217285,1.32764,0.35], [-0.00170898,-0.337891,0.35], [-0.0441895,-1.90332,0.35], [-0.0615234,-3.59033,0.35]],
-    ["gm_ge_army_kat1_454_cargo",-6.5, [-0.0217285,1.32764,0.35], [-0.00170898,-0.337891,0.35], [-0.0441895,-1.90332,0.35], [-0.0615234,-3.59033,0.35]],
-    ["gm_ge_army_u1300l_container_win", -5, [-0.0495605,-0.609863,-0.6], [0.147461,-2.06787,-0.6]],
-    ["gm_ge_army_u1300l_container", -5, [-0.0495605,-0.609863,-0.6], [0.147461,-2.06787,-0.6]],
-    ["greuh_eh101_gr", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
-    ["I_C_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["I_C_Van_02_transport_F", -5, [0,-1.75,0]],
-    ["I_C_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["I_E_Truck_02_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
-    ["I_E_Truck_02_transport_F", -6.5, [0,0.3,0.05], [0,-1.3,0.05], [0,-2.9,0.05]],
-    ["I_E_Van_02_transport_F", -5, [0,-1.75,0]],
-    ["I_E_Van_02_transport_MP_F", -5, [0,-1.75,0]],
-    ["I_E_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["I_G_Offroad_01_F", -6.5, [0,-1.7,0.4]],
-    ["I_G_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["I_G_Van_02_transport_F", -5, [0,-1.75,0]],
-    ["I_G_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
-    ["I_Heli_Transport_02_F", -6.5, [0,4.2,-1.45], [0,2.5,-1.45], [0,0.8,-1.45], [0,-0.9,-1.45]],
-    ["LOP_ISTS_OPF_Truck", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["LOP_SLA_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["LOP_TAK_Civ_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["LOP_TAK_Civ_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["LOP_TKA_Ural_open", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["LOP_TKA_Ural", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["O_G_Offroad_01_F", -6.5, [0,-1.7,0.4]],
-    ["O_G_Van_01_transport_F", -6.5, [0,-1.1,0.25], [0,-2.6,0.25]],
-    ["O_T_Truck_03_covered_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-    ["O_T_Truck_03_transport_ghex_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-    ["O_Truck_03_covered_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-    ["O_Truck_03_transport_F", -6.5, [0,-0.8,0.4], [0,-2.4,0.4], [0,-4.0,0.4]],
-    ["RHS_C130J", -9.5, [-0.8,8.0,-4.0], [0.8,8.0,-4.0], [-0.8,8.0,-2.8], [0.8,8.0,-2.8], [-0.8,6.5,-4.0], [0.8,6.5,-4.0], [-0.8,6.5,-2.8], [0.8,6.5,-2.8], [-0.8,5.0,-4.0], [0.8,5.0,-4.0], [-0.8,5.0,-2.8], [0.8,5.0,-2.8], [-0.8,3.5,-4.0], [0.8,3.5,-4.0], [-0.8,3.5,-2.8], [0.8,3.5,-2.8], [-0.8,2.0,-4.0], [0.8,2.0,-4.0], [-0.8,2.0,-2.8], [0.8,2.0,-2.8], [-0.8,0.5,-4.0], [0.8,0.5,-4.0], [-0.8,0.5,-2.8], [0.8,0.5,-2.8]],
-    ["RHS_CH_47F_10", -8, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
-    ["RHS_CH_47F_light", -8, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
-    ["RHS_CH_47F", -8, [0,2.2,-1.7], [0,0.5,-1.7], [0,-1.2,-1.7]],
-    ["rhs_kamaz5350_flatbed_cover_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
-    ["rhs_kamaz5350_flatbed_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
-    ["rhs_kamaz5350_open_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
-    ["rhs_kamaz5350_vdv", -4.5, [0,0.67,-0.4], [0,-0.88,-0.4], [0,-2.43,-0.4]],
-    ["RHS_Ural_Civ_03", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_MSV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_Open_Civ_03", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_Open_Flat_MSV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_Open_Flat_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_Open_MSV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_Open_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["RHS_Ural_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-    ["rhsusf_CH53E_USMC_D", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
-    ["rhsusf_CH53E_USMC", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
-    ["rhsusf_M1078A1P2_B_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_M2_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_B_WD_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1078A1P2_WD_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_M2_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_M2_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_B_WD_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M1083A1P2_WD_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
-    ["rhsusf_M977A4_BKIT_M2_usarmy_d", -6.5, [0,0.4,0.1], [0,-1.3,0.1], [0,-3,0.1]],
-    ["rhsusf_M977A4_BKIT_M2_usarmy_wd", -6.5, [0,0.4,0.1], [0,-1.3,0.1], [0,-3,0.1]],
-    ["rhsusf_M977A4_BKIT_usarmy_d", -6.5, [0,0.4,0.8], [0,-1.3,0.8], [0,-3,0.8]],
-    ["rhsusf_M977A4_BKIT_usarmy_wd", -6.5, [0,0.4,0.8], [0,-1.3,0.8], [0,-3,0.8]],
-    ["rhsusf_M977A4_usarmy_d", -6.5, [0,0.4,0.8], [0,-1.3,0.8], [0,-3,0.8]],
-    ["rhsusf_M977A4_usarmy_wd", -6.5, [0,0.4,0.8], [0,-1.3,0.8], [0,-3,0.8]],
-    ["rhsusf_m998_d_2dr_halftop", -4.5, [0,-0.9,-0.2]],
-    ["rhsusf_m998_w_2dr_halftop", -4.5, [0,-0.9,-0.2]],
-    ["rhsusf_M1239_socom_d", -5, [-0.125,-1.73,-0.66], [0,-3.28,-0.66]],
-    ["rhsusf_M1239_M2_socom_d", -5, [-0.125,-1.73,-0.66], [0,-3.28,-0.66]],
-    ["rhsusf_M1239_MK19_socom_d", -5, [-0.125,-1.73,-0.66], [0,-3.28,-0.66]],
-    ["sfp_tgb30", -5, [0.2,-0.1,2], [0.2,-2.1,2]],
-    ["sfp_tgb40", -5, [0.1,-0.7,2], [0.1,-2.7,2]],
-    ["UK3CB_BAF_Merlin_HC3_18_DPMT", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC3_32_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC3_CSAR_MTP", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC4_18_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC4_18_GPMG_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC4_32_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["UK3CB_BAF_Merlin_HC4_CSAR_Arctic", -7.5, [0.25,3.7,-1.5], [0.25,1.6,-1.5], [0.25,-0.4,-1.5]],
-    ["USAF_C17",-10,[-1.2,14.4,-0.43],[-1.2,12.8,-0.43],[-1.2,11.1,-0.43],[-1.2,9.5,-0.43],[-1.2,7.9,-0.43],[-1.2,6.3,-0.43],[-1.2,4.6,-0.43],[-1.2,3,-0.43],[-1.2,1.4,-0.43],[-1.2,-0.1,-0.43],[-1.2,-1.8,-0.43],[1.2,14.4,-0.43],[1.2,12.8,-0.43],[1.2,11.2,-0.43],[1.2,9.6,-0.43],[1.2,7.9,-0.43],[1.2,6.3,-0.43],[1.2,4.7,-0.43],[1.2,3.1,-0.43],[1.2,1.5,-0.43],[1.2,0,-0.43],[1.2,-1.7,-0.43],[-1.2,14.5,1.22],[-1.2,12.8,1.22],[-1.2,11.2,1.2],[-1.2,9.5,1.22],[-1.2,7.9,1.22],[-1.2,6.3,1.22],[-1.2,4.7,1.22],[-1.2,3,1.22],[-1.2,1.4,1.22],[-1.2,-0.1,1.22],[-1.2,-1.7,1.22],[1.2,14.5,1.22],[1.2,12.8,1.22],[1.2,11.2,1.22],[1.2,9.6,1.22],[1.2,8,1.22],[1.2,6.3,1.22],[1.2,4.7,1.22],[1.2,3.1,1.22],[1.2,1.5,1.22],[1.2,0,1.22],[1.2,-1.6,1.22]],
-    ["USAF_C130J",-10,[0,3.6,2.08],[0,2,2.08],[0,0.3,2.08],[0,-1.3,2.08]],
-    ["USAF_C130J_Cargo",-10,[0,3.6,2.08],[0,2,2.08],[0,0.3,2.08],[0,-1.3,2.08],[0,5.3,2.08],[0,7,2.08]],
-    ["uns_M35A2_Open", -5, [0,-0.6,0.1], [0,-2.3,0.1]],
-    ["uns_M35A2", -5, [0,-0.6,0.1], [0,-2.3,0.1]],
-    ["uns_m37b1", -5, [0,-1.8,0.15]],
-    ["uns_nvatruck_mg", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
-    ["uns_nvatruck_open", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
-    ["uns_nvatruck", -5, [0,-1.05,0.8], [0,-2.75,0.8]]
-];
+
+
 
 /* Various other settings.
 Everything the AI troups should be able to resupply from. */
