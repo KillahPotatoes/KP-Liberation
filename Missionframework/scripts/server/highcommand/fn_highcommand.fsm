@@ -179,7 +179,7 @@ class FSM
                                         priority = 1.000000;
                                         to="Exit_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"GRLIB_endgame > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"KPLIB_endgame > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -254,7 +254,7 @@ class FSM
                          "// Get all groups with at least one member alive" \n
                          "// and not already added to high command" \n
                          "_newGrps = allGroups select {" \n
-                         "    (side _x) isEqualTo GRLIB_side_friendly" \n
+                         "    (side _x) isEqualTo KPLIB_side_friendly" \n
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
                          "    && {!(_cmdr in (units _x))}" \n
@@ -357,7 +357,7 @@ class FSM
                                         priority = 1.000000;
                                         to="Exit_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"GRLIB_endgame > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"KPLIB_endgame > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -400,8 +400,8 @@ class FSM
                          "// the issue on dedicated servers, if using that module." \n
                          "BIS_marta_mainscope setvariable [""rules""," \n
                          "[" \n
-                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_enemy isEqualTo west)]," \n
-                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (GRLIB_side_friendly isEqualTo west)]," \n
+                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_enemy isEqualTo west)]," \n
+                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_friendly isEqualTo west)]," \n
                          "	[""n_"", [0, 0.5, 0, 1]]," \n
                          "	[""n_"", [0.4, 0, 0.5, 1]]" \n
                          "], true];"/*%FSM</STATEINIT""">*/;

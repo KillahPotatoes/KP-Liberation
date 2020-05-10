@@ -7,7 +7,7 @@ KP_liberation_ammo_global = 0;
 KP_liberation_fuel_global = 0;
 KP_liberation_heli_slots = 0;
 KP_liberation_plane_slots = 0;
-infantry_cap = 50 * GRLIB_resources_multiplier;
+infantry_cap = 50 * KPLIB_resources_multiplier;
 
 please_recalculate = true;
 
@@ -23,10 +23,10 @@ while {true} do {
     private _local_fuel_global = 0;
     private _local_heli_slots = 0;
     private _local_plane_slots = 0;
-    private _local_infantry_cap = 50 * GRLIB_resources_multiplier;
+    private _local_infantry_cap = 50 * KPLIB_resources_multiplier;
 
     {
-        private _fob_buildings = _x nearobjects GRLIB_fob_range;
+        private _fob_buildings = _x nearobjects KPLIB_fob_range;
         private _storage_areas = _fob_buildings select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
         private _heliSlots = {(typeOf _x) == KP_liberation_heli_slot_building;} count _fob_buildings;
         private _planeSlots = {(typeOf _x) == KP_liberation_plane_slot_building;} count _fob_buildings;
@@ -56,11 +56,11 @@ while {true} do {
         _local_fuel_global = _local_fuel_global + _fuelValue;
         _local_heli_slots = _local_heli_slots + _heliSlots;
         _local_plane_slots = _local_plane_slots + _planeSlots;
-    } forEach GRLIB_all_fobs;
+    } forEach KPLIB_all_fobs;
 
     {
         if ( _x in sectors_capture ) then {
-            _local_infantry_cap = _local_infantry_cap + (10 * GRLIB_resources_multiplier);
+            _local_infantry_cap = _local_infantry_cap + (10 * KPLIB_resources_multiplier);
         };
     } foreach blufor_sectors;
 

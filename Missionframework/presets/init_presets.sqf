@@ -110,7 +110,7 @@ squads_names = [
 ];
 
 // Classnames of objects which should be ignored when building
-GRLIB_ignore_colisions_when_building = [
+KPLIB_ignore_colisions_when_building = [
     "Land_HelipadSquare_F",
     "Land_TentHangar_V1_F",
     "Land_runway_edgelight",

@@ -1,6 +1,6 @@
 /*
     CSAT Arsenal Preset
-    Last Update: 2020-05-08
+    Last Update: 2020-05-10
 
     Needed:
         - None
@@ -11,7 +11,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenal_weapons = [
     "arifle_AK12_arid_F",                                           // AK-12 7.62 mm (Arid)
     "arifle_AK12_F",                                                // AK-12 7.62 mm
     "arifle_AK12_GL_arid_F",                                        // AK-12 7.62 mm (Arid)
@@ -100,11 +100,11 @@ GRLIB_arsenal_weapons = [
     "srifle_GM6_ghex_F"                                             // GM6 Lynx 12.7 mm (Green Hex)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenal_magazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenal_items = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -374,7 +374,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenal_backpacks = [
     "B_AssaultPack_blk",                                            // Assault Pack (Black)
     "B_AssaultPack_ocamo",                                          // Assault Pack (Hex)
     "B_AssaultPack_rgr",                                            // Assault Pack (Green)

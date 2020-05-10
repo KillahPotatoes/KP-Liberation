@@ -7,7 +7,7 @@ waitUntil {save_is_loaded};
 KP_liberation_convoy_ambush_inProgress = false;
 KP_liberation_convoy_ambush_check = 0;
 private _start = 0;
-while {GRLIB_endgame == 0} do {
+while {KPLIB_endgame == 0} do {
 
     if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KP_liberation_logistics) > 0)) then {
         _start = diag_tickTime;

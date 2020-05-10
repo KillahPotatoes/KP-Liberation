@@ -95,7 +95,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
     };
 
     if ( respawn_loadout > 0 ) then {
-        GRLIB_respawn_loadout = [ player, ["repetitive"] ] call KPLIB_fnc_getLoadout;
+        KPLIB_respawn_loadout = [ player, ["repetitive"] ] call KPLIB_fnc_getLoadout;
         hint localize "STR_MAKE_RESPAWN_LOADOUT_HINT";
         respawn_loadout = 0;
     };

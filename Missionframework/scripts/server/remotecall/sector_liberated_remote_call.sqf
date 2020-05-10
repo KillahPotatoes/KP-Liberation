@@ -2,15 +2,15 @@ params ["_liberated_sector"];
 
 private _combat_readiness_increase = 0;
 switch (true) do {
-    case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * GRLIB_difficulty_modifier;};
-    case (_liberated_sector in sectors_capture):    {_combat_readiness_increase = floor (random 6) * GRLIB_difficulty_modifier;};
-    case (_liberated_sector in sectors_military):   {_combat_readiness_increase = 5 + (floor (random 11)) * GRLIB_difficulty_modifier;};
-    case (_liberated_sector in sectors_factory):    {_combat_readiness_increase = 3 + (floor (random 7)) * GRLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * KPLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_capture):    {_combat_readiness_increase = floor (random 6) * KPLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_military):   {_combat_readiness_increase = 5 + (floor (random 11)) * KPLIB_difficulty_modifier;};
+    case (_liberated_sector in sectors_factory):    {_combat_readiness_increase = 3 + (floor (random 7)) * KPLIB_difficulty_modifier;};
     case (_liberated_sector in sectors_tower):      {_combat_readiness_increase = floor (random 4);};
 };
 
 combat_readiness = combat_readiness + _combat_readiness_increase;
-if (combat_readiness > 100.0 && GRLIB_difficulty_modifier <= 2.0) then {combat_readiness = 100.0};
+if (combat_readiness > 100.0 && KPLIB_difficulty_modifier <= 2.0) then {combat_readiness = 100.0};
 stats_readiness_earned = stats_readiness_earned + _combat_readiness_increase;
 
 [_liberated_sector, 0] remoteExecCall ["remote_call_sector"];
@@ -58,14 +58,14 @@ sleep 1;
 
 sleep 45;
 
-if (GRLIB_endgame == 0) then {
+if (KPLIB_endgame == 0) then {
     if (
         !(_liberated_sector in sectors_tower)
         && {
-            (random (150 / (GRLIB_difficulty_modifier * GRLIB_csat_aggressivity))) < (combat_readiness - 15)
+            (random (150 / (KPLIB_difficulty_modifier * KPLIB_csat_aggressivity))) < (combat_readiness - 15)
             || _liberated_sector in sectors_bigtown
         }
-        && {[] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap}
+        && {[] call KPLIB_fnc_getOpforCap < KPLIB_battlegroup_cap}
     ) then {
         [_liberated_sector, (random 100) < 45] spawn spawn_battlegroup;
     };

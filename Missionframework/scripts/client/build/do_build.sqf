@@ -3,7 +3,7 @@
 private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir", "_near_objects", "_near_objects_25", "_debug_colisions" ];
 
 build_confirmed = 0;
-_maxdist = GRLIB_fob_range;
+_maxdist = KPLIB_fob_range;
 _truepos = [];
 _debug_colisions = false;
 KP_vector = true;
@@ -40,7 +40,7 @@ while { true } do {
         _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
         _nearfob = [] call KPLIB_fnc_getNearestFob;
-        _storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+        _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
         [_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
     };
@@ -49,14 +49,14 @@ while { true } do {
         _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
         _grp = group player;
         if ( manned ) then {
-            _grp = createGroup GRLIB_side_friendly;
+            _grp = createGroup KPLIB_side_friendly;
         };
         _classname createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
         build_confirmed = 0;
     } else {
         if ( buildtype == 8 ) then {
             _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
-            _grp = createGroup GRLIB_side_friendly;
+            _grp = createGroup KPLIB_side_friendly;
             _grp setGroupId [format ["%1 %2",squads_names select buildindex, groupId _grp]];
             _idx = 0;
             {
@@ -84,7 +84,7 @@ while { true } do {
             _idactplacebis = -1;
             _idactvector = -1;
             if (buildtype != 99 ) then {
-                _idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3; GRLIB_ui_notif = ""; hint localize "STR_CANCEL_HINT";},"",-725,false,true,"","build_confirmed == 1"];
+                _idactcancel = player addAction ["<t color='#B0FF00'>" + localize "STR_CANCEL" + "</t> <img size='2' image='res\ui_cancel.paa'/>",{build_confirmed = 3; KPLIB_ui_notif = ""; hint localize "STR_CANCEL_HINT";},"",-725,false,true,"","build_confirmed == 1"];
             };
             if (buildtype == 6 ) then {
                 _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
@@ -147,7 +147,7 @@ while { true } do {
 
                 if !(buildtype isEqualTo 99) then {
                     {
-                        _x setPos (_posfob getPos [GRLIB_fob_range, 10 * _forEachIndex])
+                        _x setPos (_posfob getPos [KPLIB_fob_range, 10 * _forEachIndex])
                     } forEach _fob_spheres;
                 };
 
@@ -171,7 +171,7 @@ while { true } do {
                 private _remove_objects = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects pushback _x;
                     };
                 } foreach _near_objects;
@@ -179,7 +179,7 @@ while { true } do {
                 private _remove_objects_25 = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in GRLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_ignore_colisions_when_building) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects_25 pushback _x;
                     };
                 } foreach _near_objects_25;
@@ -198,9 +198,9 @@ while { true } do {
                 };
 
                 if ( count _near_objects != 0 ) then {
-                    GRLIB_conflicting_objects = _near_objects;
+                    KPLIB_conflicting_objects = _near_objects;
                 } else {
-                    GRLIB_conflicting_objects = [];
+                    KPLIB_conflicting_objects = [];
                 };
 
                 if (count _near_objects == 0 && ((_truepos distance _posfob) < _maxdist) && (  ((!surfaceIsWater _truepos) && (!surfaceIsWater getpos player)) || (_classname in boats_names) ) ) then {
@@ -224,7 +224,7 @@ while { true } do {
                         _vehicle setVectorUp surfaceNormal position _vehicle;
                     };
                     if(build_invalid == 1) then {
-                        GRLIB_ui_notif = "";
+                        KPLIB_ui_notif = "";
 
                         {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
                     };
@@ -237,7 +237,7 @@ while { true } do {
                     _vehicle setpos _ghost_spot;
                     build_invalid = 1;
                     if(count _near_objects > 0) then {
-                        GRLIB_ui_notif = format [localize "STR_PLACEMENT_IMPOSSIBLE",count _near_objects, round _dist];
+                        KPLIB_ui_notif = format [localize "STR_PLACEMENT_IMPOSSIBLE",count _near_objects, round _dist];
 
                         if (_debug_colisions) then {
                             private [ "_objs_classnames" ];
@@ -247,17 +247,17 @@ while { true } do {
                         };
                     };
                     if( ((surfaceIsWater _truepos) || (surfaceIsWater getpos player)) && !(_classname in boats_names)) then {
-                        GRLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
+                        KPLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
                     };
                     if((_truepos distance _posfob) > _maxdist) then {
-                        GRLIB_ui_notif = format [localize "STR_BUILD_ERROR_DISTANCE",_maxdist];
+                        KPLIB_ui_notif = format [localize "STR_BUILD_ERROR_DISTANCE",_maxdist];
                     };
 
                 };
                 sleep 0.05;
             };
 
-            GRLIB_ui_notif = "";
+            KPLIB_ui_notif = "";
 
             {_x setPos [0, 0, 0];} forEach (_object_spheres + _fob_spheres);
 
@@ -268,7 +268,7 @@ while { true } do {
                 _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
                 _nearfob = [] call KPLIB_fnc_getNearestFob;
-                _storage_areas = (_nearfob nearobjects (GRLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+                _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
 
                 _supplyCrates = ceil (_price_s / 100);
                 _ammoCrates = ceil (_price_a / 100);

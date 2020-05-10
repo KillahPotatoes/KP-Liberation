@@ -2,7 +2,7 @@
     File: fn_spawnGuerillaGroup.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-08
-    Last Update: 2020-04-05
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -31,7 +31,7 @@ private _vests = missionNamespace getVariable ("KP_liberation_guerilla_vests_" +
 private _headgear = missionNamespace getVariable ("KP_liberation_guerilla_headgear_" + str _tier);
 
 // Spawn guerilla units
-private _grp = createGroup [GRLIB_side_resistance, true];
+private _grp = createGroup [KPLIB_side_resistance, true];
 private _unit = objNull;
 private _weapon = [];
 for "_i" from 1 to _amount do {

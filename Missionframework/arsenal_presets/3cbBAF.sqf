@@ -1,6 +1,6 @@
 /*
     3CB BAF Arsenal Preset
-    Last Update: 2020-05-08
+    Last Update: 2020-05-10
 
     Needed:
         - 3CB BAF Weapons   - https://steamcommunity.com/sharedfiles/filedetails/?id=893339590
@@ -12,7 +12,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenal_weapons = [
     "UK3CB_BAF_AT4_CS_AP_Launcher",                                 // ILAW HEDP Launcher
     "UK3CB_BAF_AT4_CS_AT_Launcher",                                 // ILAW HP Launcher
     "UK3CB_BAF_L103A2",                                             // L130A2 DP
@@ -66,7 +66,7 @@ GRLIB_arsenal_weapons = [
     "UK3CB_BAF_NLAW_Launcher"                                       // NLAW Launcher
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenal_magazines = [
     "UK3CB_BAF_12G_Pellets",                                        // 12G 8rnd Buckshot
     "UK3CB_BAF_12G_Slugs",                                          // 12G 8rnd Slug
     "UK3CB_BAF_1Rnd_Blank_Grenade_Shell",                           // 40mm Practice Round (L123)
@@ -154,7 +154,7 @@ GRLIB_arsenal_magazines = [
     "TrainingMine_Mag"                                              // Training Mine
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenal_items = [
     // Uniforms
     "UK3CB_BAF_U_CombatUniform_Arctic_Ghillie_RM",                  // Combat Uniform Arctic Ghillie RM [BAF]
     "UK3CB_BAF_U_CombatUniform_DDPM_Ghillie_RM",                    // Combat Uniform DDPPM Ghillie RM [BAF]
@@ -658,7 +658,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenal_backpacks = [
     "UK3CB_BAF_B_Bergen_Arctic_JTAC_A",                             // Bergen Arctic JTAC/FAC [BAF]
     "UK3CB_BAF_B_Bergen_Arctic_JTAC_H_A",                           // Bergen Arctic JTAC/FAC H [BAF]
     "UK3CB_BAF_B_Bergen_Arctic_Rifleman_A",                         // Bergen Arctic Rifleman A [BAF]

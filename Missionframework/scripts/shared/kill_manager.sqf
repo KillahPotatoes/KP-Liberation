@@ -26,14 +26,14 @@ if (isServer) then {
     if (isNil "air_weight") then {air_weight = 33};
 
     // BLUFOR Killer handling
-    if ((side _killer) == GRLIB_side_friendly) then {
+    if ((side _killer) == KPLIB_side_friendly) then {
 
         // Increase combat readiness for kills near a capital.
         private _nearby_bigtown = sectors_bigtown select {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250)};
         if (count _nearby_bigtown > 0) then {
-            combat_readiness = combat_readiness + (0.5 * GRLIB_difficulty_modifier);
-            stats_readiness_earned = stats_readiness_earned + (0.5 * GRLIB_difficulty_modifier);
-            if (combat_readiness > 100.0 && GRLIB_difficulty_modifier < 2) then {combat_readiness = 100.0};
+            combat_readiness = combat_readiness + (0.5 * KPLIB_difficulty_modifier);
+            stats_readiness_earned = stats_readiness_earned + (0.5 * KPLIB_difficulty_modifier);
+            if (combat_readiness > 100.0 && KPLIB_difficulty_modifier < 2) then {combat_readiness = 100.0};
         };
 
         // Weights adjustments depending on what vehicle the BLUFOR killer used
@@ -73,9 +73,9 @@ if (isServer) then {
     if (_unit isKindOf "Man") then {
 
         // OPFOR casualty
-        if (side (group _unit) == GRLIB_side_enemy) then {
+        if (side (group _unit) == KPLIB_side_enemy) then {
             // Killed by BLUFOR
-            if (side _killer == GRLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_friendly) then {
                 stats_opfor_soldiers_killed = stats_opfor_soldiers_killed + 1;
             };
 
@@ -86,25 +86,25 @@ if (isServer) then {
         };
 
         // BLUFOR casualty
-        if (side (group _unit) == GRLIB_side_friendly) then {
+        if (side (group _unit) == KPLIB_side_friendly) then {
             stats_blufor_soldiers_killed = stats_blufor_soldiers_killed + 1;
 
             // Killed by BLUFOR
-            if (side _killer == GRLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_friendly) then {
                 stats_blufor_teamkills = stats_blufor_teamkills + 1;
             };
         };
 
         // Resistance casualty
-        if (side (group _unit) == GRLIB_side_resistance) then {
+        if (side (group _unit) == KPLIB_side_resistance) then {
             KP_liberation_guerilla_strength = KP_liberation_guerilla_strength - 1;
             stats_resistance_killed = stats_resistance_killed + 1;
 
             // Resistance is friendly to BLUFOR
-            if ((GRLIB_side_friendly getFriend GRLIB_side_resistance) >= 0.6) then {
+            if ((KPLIB_side_friendly getFriend KPLIB_side_resistance) >= 0.6) then {
 
                 // Killed by BLUFOR
-                if (side _killer == GRLIB_side_friendly) then {
+                if (side _killer == KPLIB_side_friendly) then {
                     if (KP_liberation_asymmetric_debug > 0) then {[format ["Guerilla unit killed by: %1", name _killer], "ASYMMETRIC"] call KPLIB_fnc_log;};
                     [3, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     stats_resistance_teamkills = stats_resistance_teamkills + 1;
@@ -119,11 +119,11 @@ if (isServer) then {
         };
 
         // Civilian casualty
-        if (side (group _unit) == GRLIB_side_civilian) then {
+        if (side (group _unit) == KPLIB_side_civilian) then {
             stats_civilians_killed = stats_civilians_killed + 1;
 
             // Killed by BLUFOR
-            if (side _killer == GRLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_friendly) then {
                 if (KP_liberation_civrep_debug > 0) then {[format ["Civilian killed by: %1", name _killer], "CIVREP"] call KPLIB_fnc_log;};
                 [2, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                 [KP_liberation_cr_kill_penalty, true] spawn F_cr_changeCR;

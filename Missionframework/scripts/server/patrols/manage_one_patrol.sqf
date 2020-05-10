@@ -4,13 +4,13 @@ private [ "_headless_client" ];
 waitUntil { !isNil "blufor_sectors" };
 waitUntil { !isNil "combat_readiness" };
 
-while { GRLIB_endgame == 0 } do {
+while { KPLIB_endgame == 0 } do {
     waitUntil { sleep 0.3; count blufor_sectors >= 3; };
-    waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / GRLIB_difficulty_modifier); };
+    waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / KPLIB_difficulty_modifier); };
 
     sleep (random 30);
 
-    while {  [] call KPLIB_fnc_getOpforCap > GRLIB_patrol_cap } do {
+    while {  [] call KPLIB_fnc_getOpforCap > KPLIB_patrol_cap } do {
             sleep (random 30);
     };
 
@@ -27,7 +27,7 @@ while { GRLIB_endgame == 0 } do {
     _sector_spawn_pos = [(((markerpos _spawn_marker) select 0) - 500) + (random 1000),(((markerpos _spawn_marker) select 1) - 500) + (random 1000),0];
 
     if (_is_infantry) then {
-        _grp = createGroup [GRLIB_side_enemy, true];
+        _grp = createGroup [KPLIB_side_enemy, true];
         _squad = [] call KPLIB_fnc_getSquadComp;
         {
             [_x, _sector_spawn_pos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
@@ -63,7 +63,7 @@ while { GRLIB_endgame == 0 } do {
             _patrol_continue = false;
         } else {
             if ( time - _started_time > 900 ) then {
-                if ( [ getpos (leader _grp) , 4000 , GRLIB_side_friendly ] call KPLIB_fnc_getUnitsCount == 0 ) then {
+                if ( [ getpos (leader _grp) , 4000 , KPLIB_side_friendly ] call KPLIB_fnc_getUnitsCount == 0 ) then {
                     _patrol_continue = false;
                     {
                         if ( vehicle _x != _x ) then {
@@ -77,7 +77,7 @@ while { GRLIB_endgame == 0 } do {
     };
 
     if ( !([] call KPLIB_fnc_isBigtownActive) ) then {
-        sleep (600.0 / GRLIB_difficulty_modifier);
+        sleep (600.0 / KPLIB_difficulty_modifier);
     };
 
 };

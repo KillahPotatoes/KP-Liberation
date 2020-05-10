@@ -10,7 +10,7 @@
     - None
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenal_weapons = [
     // G3A3 + G3A4
     "gm_g3a3_oli",
     "gm_g3a4_oli",
@@ -34,7 +34,7 @@ GRLIB_arsenal_weapons = [
     "gm_pzf84_oli"
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenal_magazines = [
     // G3A3 + G3A4
     "gm_20rnd_762x51mm_b_t_dm21_g3_blk",
     "gm_20rnd_762x51mm_b_t_dm21a1_g3_blk",
@@ -110,7 +110,7 @@ GRLIB_arsenal_magazines = [
     "gm_mine_at_dm21"
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenal_items = [
     // Uniforms
     "gm_ge_army_uniform_crew_80_oli",
     "gm_ge_army_uniform_soldier_80_oli",
@@ -170,7 +170,7 @@ GRLIB_arsenal_items = [
     "ItemRadio"
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenal_backpacks = [
     "gm_ge_army_backpack_80_oli",
     "gm_ge_backpack_satchel_80_blk",
     "gm_ge_backpack_satchel_80_san"

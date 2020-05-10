@@ -117,7 +117,7 @@ execVM "scripts\server\asymmetric\init_module.sqf";
 execVM "scripts\server\offloading\group_diag.sqf";
 
 {
-    if ((_x != player) && (_x distance (markerPos GRLIB_respawn_marker) < 200 )) then {
+    if ((_x != player) && (_x distance (markerPos KPLIB_respawn_marker) < 200 )) then {
         deleteVehicle _x;
     };
 } forEach allUnits;

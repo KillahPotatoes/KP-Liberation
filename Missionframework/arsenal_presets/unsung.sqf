@@ -1,6 +1,6 @@
 /*
     The Unsung Vietnam War Mod US Arsenal Preset
-    Last Update: 2020-05-06
+    Last Update: 2020-05-10
 
     Needed:
         - Unsung - https://steamcommunity.com/sharedfiles/filedetails/?id=943001311
@@ -11,7 +11,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenal_weapons = [
     "uns_357m",                                                     // Colt Lawman Mk.III (.357)
     "uns_38spec",                                                   // S/W Model 10 (.38 Spec)
     "uns_ak47_49",                                                  // AK-47/49
@@ -186,7 +186,7 @@ GRLIB_arsenal_weapons = [
     "uns_xm177e2"                                                   // XM-177E2
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenal_magazines = [
     "Mine",                                                         // Mine Type 59 (Anti Tank)
     "MineE",                                                        // Mine TM57 (Anti Vehicle)
     "PipeBomb",                                                     // Explosive Charge
@@ -479,7 +479,7 @@ GRLIB_arsenal_magazines = [
     "TrainingMine_Mag"                                              // Training Mine
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenal_items = [
     // Uniforms
     "UNS_ARMY_BDU_101stAB1stlt",                                    // ARMY BDU_101stAB 1stLT
     "UNS_ARMY_BDU_101stAB1stsgt",                                   // ARMY BDU_101stAB 1stSGT
@@ -1820,7 +1820,7 @@ GRLIB_arsenal_items = [
     "tf_microdagr"                                                  // MicroDAGR Radio Programmer
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenal_backpacks = [
     "UNS_Alice_1",                                                  // Alice Pack 1
     "UNS_Alice_2",                                                  // Alice Pack 2
     "UNS_Alice_3",                                                  // Alice Pack 3

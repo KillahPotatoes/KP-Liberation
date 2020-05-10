@@ -9,7 +9,7 @@ switch (KP_liberation_arsenal) do {
     case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
     case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
     case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\bwmod.sqf";};
-    default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
+    default  {KPLIB_arsenal_weapons = [];KPLIB_arsenal_magazines = [];KPLIB_arsenal_items = [];KPLIB_arsenal_backpacks = [];};
 };
 
 if (typeOf player == "VirtualSpectator_F") exitWith {
@@ -68,7 +68,7 @@ player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_per
 player addEventHandler ["HandleRating", {if ((_this select 1) < 0) then {0};}];
 
 // Disable stamina, if selected in parameter
-if (!GRLIB_fatigue) then {
+if (!KPLIB_fatigue) then {
     player enableStamina false;
     player addEventHandler ["Respawn", {player enableStamina false;}];
 };
@@ -85,7 +85,7 @@ if (!KPLIB_sway) then {
 
 execVM "scripts\client\ui\intro.sqf";
 
-[player] joinSilent (createGroup [GRLIB_side_friendly, true]);
+[player] joinSilent (createGroup [KPLIB_side_friendly, true]);
 
 // Start Tutorial
 if (KP_liberation_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {

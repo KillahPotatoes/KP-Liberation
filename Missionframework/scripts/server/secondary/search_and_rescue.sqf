@@ -15,7 +15,7 @@ private _helofire = KPLIB_sarFire createVehicle (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 
-private _pilotsGrp = createGroup [GRLIB_side_enemy, true];
+private _pilotsGrp = createGroup [KPLIB_side_enemy, true];
 private _pilotsPos = (getpos _helowreck) getPos [25, random 360];
 
 [pilot_classname, _pilotsPos, _pilotsGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
@@ -31,7 +31,7 @@ private _pilotUnits = units _pilotsGrp;
     sleep 0.5
 } foreach (_pilotUnits);
 
-private _grppatrol = createGroup [GRLIB_side_enemy, true];
+private _grppatrol = createGroup [KPLIB_side_enemy, true];
 private _patrolcorners = [
     [ (getpos _helowreck select 0) - 40, (getpos _helowreck select 1) - 40, 0 ],
     [ (getpos _helowreck select 0) + 40, (getpos _helowreck select 1) - 40, 0 ],
@@ -57,7 +57,7 @@ _waypoint = _grppatrol addWaypoint [(_patrolcorners select 0), 0];
 _waypoint setWaypointType "CYCLE";
 {_x doFollow (leader _grppatrol)} foreach units _grppatrol;
 
-private _grpsentry = createGroup [GRLIB_side_enemy, true];
+private _grpsentry = createGroup [KPLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
@@ -82,7 +82,7 @@ secondary_objective_position = getpos _helowreck;
 secondary_objective_position_marker = secondary_objective_position getPos [800, random 360];
 publicVariable "secondary_objective_position_marker";
 sleep 1;
-GRLIB_secondary_in_progress = 2; publicVariable "GRLIB_secondary_in_progress";
+KPLIB_secondary_in_progress = 2; publicVariable "KPLIB_secondary_in_progress";
 [6] remoteExec ["remote_call_intel"];
 
 waitUntil {
@@ -97,7 +97,7 @@ if ( _alive_crew_count == 0 ) then {
     [7] remoteExec ["remote_call_intel"];
 } else {
     [8] remoteExec ["remote_call_intel"];
-    private _grp = createGroup [GRLIB_side_friendly, true];
+    private _grp = createGroup [KPLIB_side_friendly, true];
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
     {_x doFollow (leader _grp)} foreach units _grp;
@@ -107,6 +107,6 @@ if ( _alive_crew_count == 0 ) then {
 resources_intel = resources_intel + (10 * _alive_crew_count);
 stats_secondary_objectives = stats_secondary_objectives + 1;
 
-GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";
+KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";
 sleep 1;
 doSaveTrigger = true;

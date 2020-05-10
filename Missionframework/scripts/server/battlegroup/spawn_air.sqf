@@ -10,7 +10,7 @@ private _class = selectRandom opfor_air;
 private _spawnPoint = ([sectors_airspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _spawnPos = [];
 private _plane = objNull;
-private _grp = createGroup [GRLIB_side_enemy, true];
+private _grp = createGroup [KPLIB_side_enemy, true];
 
 for "_i" from 1 to _planes_number do {
     _spawnPos = markerPos _spawnPoint;

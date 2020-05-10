@@ -1,6 +1,6 @@
 params ["_newUnit", "_oldUnit"];
 
-if (isNil "GRLIB_respawn_loadout") then {
+if (isNil "KPLIB_respawn_loadout") then {
     removeAllWeapons player;
     removeAllItems player;
     removeAllAssignedItems player;
@@ -14,7 +14,7 @@ if (isNil "GRLIB_respawn_loadout") then {
     player linkItem "ItemRadio";
 } else {
     sleep 4;
-    [player, GRLIB_respawn_loadout] call KPLIB_fnc_setLoadout;
+    [player, KPLIB_respawn_loadout] call KPLIB_fnc_setLoadout;
 };
 
 [] call KPLIB_fnc_addActionsPlayer;

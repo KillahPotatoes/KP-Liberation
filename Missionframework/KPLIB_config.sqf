@@ -134,25 +134,25 @@ KP_liberation_arsenal = 0;
 */
 
 // Player side.
-GRLIB_side_friendly = WEST;
+KPLIB_side_friendly = WEST;
 
 // Enemy side.
-GRLIB_side_enemy = EAST;
+KPLIB_side_enemy = EAST;
 
 // Resistance side.
-GRLIB_side_resistance = RESISTANCE;
+KPLIB_side_resistance = RESISTANCE;
 
 // Civilian side.
-GRLIB_side_civilian = CIVILIAN;
+KPLIB_side_civilian = CIVILIAN;
 
 // Friendly sector marker color.
-GRLIB_color_friendly = "ColorBLUFOR";
+KPLIB_color_friendly = "ColorBLUFOR";
 
 // Enemy sector marker color.
-GRLIB_color_enemy = "ColorOPFOR";
+KPLIB_color_enemy = "ColorOPFOR";
 
 // Enemy sector marker color. (activated)
-GRLIB_color_enemy_bright = "ColorRED";
+KPLIB_color_enemy_bright = "ColorRED";
 
 
 /*
@@ -163,7 +163,7 @@ GRLIB_color_enemy_bright = "ColorRED";
 */
 
 // Name of the save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-GRLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
+KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
 // Name of the parameter save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
 KPLIB_paramSaveKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
@@ -180,19 +180,19 @@ KP_liberation_save_interval = 60;
 */
 
 // Build range around the main FOB building.
-GRLIB_fob_range = 125;
+KPLIB_fob_range = 125;
 
 // Altitude in metres for the HALO jump.
-GRLIB_halo_altitude = 2500;
+KPLIB_halo_altitude = 2500;
 
 // Range to activate a sector.
-GRLIB_sector_size = 1000;
+KPLIB_sector_size = 1000;
 
 // Range to capture a sector.
-GRLIB_capture_size = 175;
+KPLIB_capture_size = 175;
 
 // Radio Tower scanning range.
-GRLIB_radiotower_size = 2500;
+KPLIB_radiotower_size = 2500;
 
 
 /*
@@ -203,22 +203,22 @@ GRLIB_radiotower_size = 2500;
 */
 
 // Cap for BLUFOR.
-GRLIB_blufor_cap = 100;
+KPLIB_blufor_cap = 100;
 
 // Cap for sector defenders.
-GRLIB_sector_cap = 180;
+KPLIB_sector_cap = 180;
 
 // Cap for enemy battlegroups.
-GRLIB_battlegroup_cap = 150;
+KPLIB_battlegroup_cap = 150;
 
 // Cap for enemy patrols.
-GRLIB_patrol_cap = 150;
+KPLIB_patrol_cap = 150;
 
 // Size of enemy battlegroups.
-GRLIB_battlegroup_size = 6;
+KPLIB_battlegroup_size = 6;
 
 // Cap for civilian vehicles traveling between sectors.
-GRLIB_civilians_amount = 10;
+KPLIB_civilians_amount = 10;
 
 
 /*
@@ -261,10 +261,10 @@ KP_liberation_cr_wounded_gain = 2;
 */
 
 // Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
-GRLIB_secondary_missions_costs = [15, 10, 8];
+KPLIB_secondary_missions_costs = [15, 10, 8];
 
 // Proportionate reduction of the actual (!) enemy combat readiness for a successful FOB hunt. (e.g. 0.4 -> reduction of 24 by an actual value of 60)
-GRLIB_secondary_objective_impact = 0.4;
+KPLIB_secondary_objective_impact = 0.4;
 
 // Minimum time until a civil Informant can spawn. (seconds)
 KP_liberation_civinfo_min = 5400;
@@ -345,16 +345,16 @@ KP_liberation_resistance_ambush_chance = 25;
 KP_liberation_production_interval = 30;
 
 // Percentage of resources you get back from recycling.
-GRLIB_recycling_percentage = 0.5;
+KPLIB_recycling_percentage = 0.5;
 
 // Multiplier for defenders in buildings.
-GRLIB_defended_buildingpos_part = 0.4;
+KPLIB_defended_buildingpos_part = 0.4;
 
 // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_vulnerability_timer = 1200;
+KPLIB_vulnerability_timer = 1200;
 
 // Chance that enemy infantry will surrender after heavy losses are encountered.
-GRLIB_surrender_chance = 80;
+KPLIB_surrender_chance = 80;
 
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KP_liberation_battlegroup_clearance = [
@@ -381,12 +381,12 @@ KP_liberation_suppMod_whitelist = [
 
 
 // Adjustments calculation depending on selected mission parameters (shouldn't be edited)
-GRLIB_endgame                       = 0;
-GRLIB_respawn_marker                = "respawn";
-KP_liberation_production_interval   = ceil (KP_liberation_production_interval / GRLIB_resources_multiplier);
-GRLIB_battlegroup_size              = GRLIB_battlegroup_size * (sqrt GRLIB_unitcap) * (sqrt GRLIB_csat_aggressivity);
-GRLIB_civilians_amount              = GRLIB_civilians_amount * GRLIB_civilian_activity;
-GRLIB_blufor_cap                    = (GRLIB_blufor_cap * GRLIB_unitcap) min 100;
-GRLIB_sector_cap                    = GRLIB_sector_cap * GRLIB_unitcap;
-GRLIB_battlegroup_cap               = GRLIB_battlegroup_cap * GRLIB_unitcap;
-GRLIB_patrol_cap                    = GRLIB_patrol_cap * GRLIB_unitcap;
+KPLIB_endgame                       = 0;
+KPLIB_respawn_marker                = "respawn";
+KP_liberation_production_interval   = ceil (KP_liberation_production_interval / KPLIB_resources_multiplier);
+KPLIB_battlegroup_size              = KPLIB_battlegroup_size * (sqrt KPLIB_unitcap) * (sqrt KPLIB_csat_aggressivity);
+KPLIB_civilians_amount              = KPLIB_civilians_amount * KPLIB_civilian_activity;
+KPLIB_blufor_cap                    = (KPLIB_blufor_cap * KPLIB_unitcap) min 100;
+KPLIB_sector_cap                    = KPLIB_sector_cap * KPLIB_unitcap;
+KPLIB_battlegroup_cap               = KPLIB_battlegroup_cap * KPLIB_unitcap;
+KPLIB_patrol_cap                    = KPLIB_patrol_cap * KPLIB_unitcap;

@@ -62,9 +62,9 @@ if ((toLower _type) in KPLIB_o_allVeh_classes) then {
     };
 } else {
     private _objectinfo = ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles + buildings) select {_type == (_x select 0)}) select 0;
-    _price_s = round ((_objectinfo select 1) * GRLIB_recycling_percentage * _suppMulti);
-    _price_a = round ((_objectinfo select 2) * GRLIB_recycling_percentage * _ammoMulti);
-    _price_f = round ((_objectinfo select 3) * GRLIB_recycling_percentage * _fuelMulti);
+    _price_s = round ((_objectinfo select 1) * KPLIB_recycling_percentage * _suppMulti);
+    _price_a = round ((_objectinfo select 2) * KPLIB_recycling_percentage * _ammoMulti);
+    _price_f = round ((_objectinfo select 3) * KPLIB_recycling_percentage * _fuelMulti);
 };
 
 createDialog "liberation_recycle";
@@ -82,7 +82,7 @@ if (dialog) then {closeDialog 0};
 if (dorecycle == 1 && !(isnull _vehToRecycle) && alive _vehToRecycle) then {
     if (!(KP_liberation_recycle_building_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 
-    private _storage_areas = (([] call KPLIB_fnc_getNearestFob) nearobjects (GRLIB_fob_range * 1.2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+    private _storage_areas = (([] call KPLIB_fnc_getNearestFob) nearobjects (KPLIB_fob_range * 1.2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
     private _crateSum = (ceil (_price_s / 100)) + (ceil (_price_a / 100)) + (ceil (_price_f / 100));
     private _spaceSum = 0;
 

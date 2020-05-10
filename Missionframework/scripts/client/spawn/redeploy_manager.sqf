@@ -5,9 +5,9 @@ private _oldsel = -999;
 private _standard_map_pos = [];
 private _frame_pos = [];
 
-GRLIB_force_redeploy = false;
+KPLIB_force_redeploy = false;
 
-waitUntil {!isNil "GRLIB_all_fobs"};
+waitUntil {!isNil "KPLIB_all_fobs"};
 waitUntil {!isNil "blufor_sectors"};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
@@ -27,7 +27,7 @@ KP_liberation_respawn_mobile_done = false;
 while {true} do {
     waitUntil {
         sleep 0.2;
-        (GRLIB_force_redeploy || (player distance (markerPos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
+        (KPLIB_force_redeploy || (player distance (markerPos KPLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
     };
 
     private _backpack = backpack player;
@@ -35,7 +35,7 @@ while {true} do {
     fullmap = 0;
     _old_fullmap = 0;
 
-    GRLIB_force_redeploy = false;
+    KPLIB_force_redeploy = false;
 
     createDialog "liberation_deploy";
     deploy = 0;
@@ -82,8 +82,8 @@ while {true} do {
     while {dialog && alive player && deploy == 0} do {
         choiceslist = [[_basenamestr, getposATL startbase]];
 
-        for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx)],GRLIB_all_fobs select _idx]];
+        for [{_idx=0},{_idx < count KPLIB_all_fobs},{_idx=_idx+1}] do {
+            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (KPLIB_all_fobs select _idx)],KPLIB_all_fobs select _idx]];
         };
 
         if (KP_liberation_mobilerespawn) then {

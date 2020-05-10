@@ -6,7 +6,7 @@ if (KP_liberation_asymmetric_debug > 0) then {[format ["Loop spawned on: %1", de
 
 KP_liberation_asymmetric_sectors = [];
 
-while {GRLIB_endgame == 0} do {
+while {KPLIB_endgame == 0} do {
     private _sectors_to_remove = [];
 
     {
@@ -21,7 +21,7 @@ while {GRLIB_endgame == 0} do {
         {
             private _sector = _x;
             private _blocked = false;
-            private _units_at_sector = [markerPos _sector, GRLIB_sector_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+            private _units_at_sector = [markerPos _sector, KPLIB_sector_size, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 
             {
                 if ((_x select 0) == _sector) exitWith {
@@ -40,7 +40,7 @@ while {GRLIB_endgame == 0} do {
 
                 if ((random 100) <= KP_liberation_resistance_ambush_chance) then {
                     private _hc = [] call KPLIB_fnc_getLessLoadedHC;
-                    private _ieds = round (([] call KPLIB_fnc_crGetMulti) * GRLIB_difficulty_modifier);
+                    private _ieds = round (([] call KPLIB_fnc_crGetMulti) * KPLIB_difficulty_modifier);
 
                     if (isNull _hc) then {
                         [_sector, _ieds] spawn manage_asymIED;

@@ -13,7 +13,7 @@ _veh setDir (getDir _roadObj);
     };
 } forEach ((getAllHitPointsDamage _veh) select 0);
 
-private _grp = createGroup [GRLIB_side_enemy, true];
+private _grp = createGroup [KPLIB_side_enemy, true];
 private _hvt = [opfor_officer, getPos _roadObj, _grp, "CAPTAIN", 30] call KPLIB_fnc_createManagedUnit;
 
 for "_i" from 1 to 4 do {

@@ -6,13 +6,13 @@ if (KP_liberation_arsenalUsePreset) then {
     private _backpacks = [];
     KP_liberation_allowed_items = [];
 
-    if (isNil "GRLIB_arsenal_weapons") then {GRLIB_arsenal_weapons = []};
-    if (isNil "GRLIB_arsenal_magazines") then {GRLIB_arsenal_magazines = []};
-    if (isNil "GRLIB_arsenal_items") then {GRLIB_arsenal_items = []};
-    if (isNil "GRLIB_arsenal_backpacks") then {GRLIB_arsenal_backpacks = []};
+    if (isNil "KPLIB_arsenal_weapons") then {KPLIB_arsenal_weapons = []};
+    if (isNil "KPLIB_arsenal_magazines") then {KPLIB_arsenal_magazines = []};
+    if (isNil "KPLIB_arsenal_items") then {KPLIB_arsenal_items = []};
+    if (isNil "KPLIB_arsenal_backpacks") then {KPLIB_arsenal_backpacks = []};
     if (isNil "blacklisted_from_arsenal") then {blacklisted_from_arsenal = []};
 
-    if ((count GRLIB_arsenal_weapons) == 0) then {
+    if ((count KPLIB_arsenal_weapons) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
             _weapons = _crawled select 0;
         } else {
@@ -21,8 +21,8 @@ if (KP_liberation_arsenalUsePreset) then {
         [missionNamespace, _weapons] call BIS_fnc_addVirtualWeaponCargo;
         KP_liberation_allowed_items append _weapons;
     } else {
-        [missionNamespace, GRLIB_arsenal_weapons] call BIS_fnc_addVirtualWeaponCargo;
-        KP_liberation_allowed_items append GRLIB_arsenal_weapons;
+        [missionNamespace, KPLIB_arsenal_weapons] call BIS_fnc_addVirtualWeaponCargo;
+        KP_liberation_allowed_items append KPLIB_arsenal_weapons;
     };
 
     // Support for CBA disposable launchers, https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
@@ -43,7 +43,7 @@ if (KP_liberation_arsenalUsePreset) then {
         KP_liberation_allowed_items append _disposableLaunchers;
     };
 
-    if ((count GRLIB_arsenal_magazines) == 0) then {
+    if ((count KPLIB_arsenal_magazines) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
             _magazines = _crawled select 1;
         } else {
@@ -52,11 +52,11 @@ if (KP_liberation_arsenalUsePreset) then {
         [missionNamespace, _magazines] call BIS_fnc_addVirtualMagazineCargo;
         KP_liberation_allowed_items append _magazines;
     } else {
-        [missionNamespace, GRLIB_arsenal_magazines] call BIS_fnc_addVirtualMagazineCargo;
-        KP_liberation_allowed_items append GRLIB_arsenal_magazines;
+        [missionNamespace, KPLIB_arsenal_magazines] call BIS_fnc_addVirtualMagazineCargo;
+        KP_liberation_allowed_items append KPLIB_arsenal_magazines;
     };
 
-    if ((count GRLIB_arsenal_items) == 0) then {
+    if ((count KPLIB_arsenal_items) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
             _items = _crawled select 2;
         } else {
@@ -65,11 +65,11 @@ if (KP_liberation_arsenalUsePreset) then {
         [missionNamespace, _items] call BIS_fnc_addVirtualItemCargo;
         KP_liberation_allowed_items append _items;
     } else {
-        [missionNamespace, GRLIB_arsenal_items] call BIS_fnc_addVirtualItemCargo;
-        KP_liberation_allowed_items append GRLIB_arsenal_items;
+        [missionNamespace, KPLIB_arsenal_items] call BIS_fnc_addVirtualItemCargo;
+        KP_liberation_allowed_items append KPLIB_arsenal_items;
     };
 
-    if ((count GRLIB_arsenal_backpacks) == 0) then {
+    if ((count KPLIB_arsenal_backpacks) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
             _backpacks = _crawled select 3;
         } else {
@@ -78,8 +78,8 @@ if (KP_liberation_arsenalUsePreset) then {
         [missionNamespace, _backpacks] call BIS_fnc_addVirtualBackpackCargo;
         KP_liberation_allowed_items append _backpacks;
     } else {
-        [missionNamespace, GRLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
-        KP_liberation_allowed_items append GRLIB_arsenal_backpacks;
+        [missionNamespace, KPLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
+        KP_liberation_allowed_items append KPLIB_arsenal_backpacks;
     };
 
     {

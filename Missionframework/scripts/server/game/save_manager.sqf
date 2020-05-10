@@ -4,8 +4,8 @@ private _start = diag_tickTime;
 ["----- Loading save data", "SAVE"] call KPLIB_fnc_log;
 
 // Handle possible enabled "wipe save" mission parameters
-if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
-    profileNamespace setVariable [GRLIB_save_key,nil];
+if (KPLIB_param_wipe_savegame_1 == 1 && KPLIB_param_wipe_savegame_2 == 1) then {
+    profileNamespace setVariable [KPLIB_save_key,nil];
     saveProfileNamespace;
     ["Save wiped via mission parameters", "SAVE"] call KPLIB_fnc_log;
 } else {
@@ -72,11 +72,11 @@ blufor_sectors = [];
 // Enemy combat readiness (0-100)
 combat_readiness = 0;
 // All FOBs
-GRLIB_all_fobs = [];
+KPLIB_all_fobs = [];
 // Player permissions data
-GRLIB_permissions = [];
+KPLIB_permissions = [];
 // Vehicle unlock links
-GRLIB_vehicle_to_military_base_links = [];
+KPLIB_vehicle_to_military_base_links = [];
 // Enemy weight for anti infantry
 infantry_weight = 33;
 // Civilian reputation value (-100 - +100)
@@ -158,7 +158,7 @@ stats_vehicles_recycled = 0;
 } forEach (allMissionObjects "");
 
 // Get possible save data
-private _saveData = profileNamespace getVariable GRLIB_save_key;
+private _saveData = profileNamespace getVariable KPLIB_save_key;
 
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
@@ -179,9 +179,9 @@ if (!isNil "_saveData") then {
         _aiGroups                                   = _saveData select  6;
         blufor_sectors                              = _saveData select  7;
         combat_readiness                            = _saveData select  8;
-        GRLIB_all_fobs                              = _saveData select  9;
-        GRLIB_permissions                           = _saveData select 10;
-        GRLIB_vehicle_to_military_base_links        = _saveData select 11;
+        KPLIB_all_fobs                              = _saveData select  9;
+        KPLIB_permissions                           = _saveData select 10;
+        KPLIB_vehicle_to_military_base_links        = _saveData select 11;
         KP_liberation_civ_rep                       = _saveData select 12;
         KP_liberation_clearances                    = _saveData select 13;
         KP_liberation_guerilla_strength             = _saveData select 14;
@@ -236,7 +236,7 @@ if (!isNil "_saveData") then {
         ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
         blufor_sectors                              = _saveData select  0;
-        GRLIB_all_fobs                              = _saveData select  1;
+        KPLIB_all_fobs                              = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
         combat_readiness                            = _saveData select  4;
@@ -245,8 +245,8 @@ if (!isNil "_saveData") then {
         KP_liberation_logistics                     = _saveData select  7;
         _stats                                      = _saveData select  8;
         _weights                                    = _saveData select  9;
-        GRLIB_vehicle_to_military_base_links        = _saveData select 10;
-        GRLIB_permissions                           = _saveData select 11;
+        KPLIB_vehicle_to_military_base_links        = _saveData select 10;
+        KPLIB_permissions                           = _saveData select 11;
         _aiGroups                                   = _saveData select 12;
         resources_intel                             = _saveData select 13;
         KP_liberation_civ_rep                       = _saveData select 15;
@@ -290,12 +290,12 @@ if (!isNil "_saveData") then {
     private _resistanceEnemy = [0, 1] select (KP_liberation_civ_rep < 25);
     private _resistanceFriendly = [0, 1] select (KP_liberation_civ_rep >= -25);
 
-    GRLIB_side_resistance setFriend [GRLIB_side_enemy, _resistanceEnemy];
-    GRLIB_side_enemy setFriend [GRLIB_side_resistance, _resistanceEnemy];
-    GRLIB_side_resistance setFriend [GRLIB_side_friendly, _resistanceFriendly];
-    GRLIB_side_friendly setFriend [GRLIB_side_resistance, _resistanceFriendly];
+    KPLIB_side_resistance setFriend [KPLIB_side_enemy, _resistanceEnemy];
+    KPLIB_side_enemy setFriend [KPLIB_side_resistance, _resistanceEnemy];
+    KPLIB_side_resistance setFriend [KPLIB_side_friendly, _resistanceFriendly];
+    KPLIB_side_friendly setFriend [KPLIB_side_resistance, _resistanceFriendly];
 
-    if (KP_liberation_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
+    if (KP_liberation_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_friendly, (KPLIB_side_resistance getFriend KPLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -393,7 +393,7 @@ if (!isNil "_saveData") then {
 
         // reveal mine to player side if it was detected
         if (_known) then {
-            GRLIB_side_friendly revealMine _mine;
+            KPLIB_side_friendly revealMine _mine;
         };
 
     } forEach _allMines;
@@ -468,7 +468,7 @@ if (!isNil "_saveData") then {
     if (((_saveData select 0) select 0) isEqualType 0) then {
         {
             _x params ["_spawnPos", "_units"];
-            _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_friendly, true];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
@@ -479,7 +479,7 @@ if (!isNil "_saveData") then {
         private _dir = 0;
         private _unit = objNull;
         {
-            _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_friendly, true];
             {
                 _pos = [(_x select 1) select 0, (_x select 1) select 1, ((_x select 1) select 2) + 0.2];
                 _dir = _x select 2;
@@ -503,17 +503,17 @@ if (!isNil "_saveData") then {
 publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
-publicVariable "GRLIB_all_fobs";
+publicVariable "KPLIB_all_fobs";
 publicVariable "KP_liberation_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
-private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;
+private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
 if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
     private _assignedVehicles = [];
     private _assignedBases = [];
@@ -523,7 +523,7 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
     {
         _assignedVehicles pushBack (_x select 0);
         _assignedBases pushBack (_x select 1);
-    } forEach GRLIB_vehicle_to_military_base_links;
+    } forEach KPLIB_vehicle_to_military_base_links;
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
     while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count sectors_military))} do {
@@ -531,13 +531,13 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
         _nextBase = selectRandom (sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
-        GRLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
+        KPLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
     };
     ["Additional military sectors or unlockable vehicles detected and assigned", "SAVE"] call KPLIB_fnc_log;
 };
 
-publicVariable "GRLIB_vehicle_to_military_base_links";
-publicVariable "GRLIB_permissions";
+publicVariable "KPLIB_vehicle_to_military_base_links";
+publicVariable "KPLIB_permissions";
 save_is_loaded = true; publicVariable "save_is_loaded";
 
 [format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
@@ -547,13 +547,13 @@ private _saveTime = time + KP_liberation_save_interval;
 while {true} do {
     waitUntil {
         sleep 0.5;
-        (time > _saveTime) || {GRLIB_endgame == 1};
+        (time > _saveTime) || {KPLIB_endgame == 1};
     };
     _start = diag_tickTime;
 
     // Exit the while and wipe save, if campaign ended
-    if (GRLIB_endgame == 1) exitWith {
-        profileNamespace setVariable [GRLIB_save_key, nil];
+    if (KPLIB_endgame == 1) exitWith {
+        profileNamespace setVariable [KPLIB_save_key, nil];
         saveProfileNamespace;
     };
 

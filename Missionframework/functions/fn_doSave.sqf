@@ -2,7 +2,7 @@
     File: fn_doSave.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-08
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -32,7 +32,7 @@ kp_liberation_saving = true;
 private _saveData = [] call KPLIB_fnc_getSaveData;
 
 // Write data in the server profileNamespace
-profileNamespace setVariable [GRLIB_save_key, str _saveData];
+profileNamespace setVariable [KPLIB_save_key, str _saveData];
 saveProfileNamespace;
 
 kp_liberation_saving = false;

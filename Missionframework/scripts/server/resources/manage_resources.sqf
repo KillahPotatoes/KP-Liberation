@@ -7,7 +7,7 @@ sectors_timer = false;
 
 ["Production management started", "PRODUCTION"] call KPLIB_fnc_log;
 private _start = 0;
-while {GRLIB_endgame == 0} do {
+while {KPLIB_endgame == 0} do {
 
     recalculate_sectors = false;
 

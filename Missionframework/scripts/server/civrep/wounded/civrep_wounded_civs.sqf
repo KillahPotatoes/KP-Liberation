@@ -5,7 +5,7 @@ if (!(_sector in sectors_bigtown) && !(_sector in sectors_capture) && !(_sector 
 if (KP_liberation_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned for %1 on: %2", markerText _sector, debug_source], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 private _count = 2 + (ceil (random 2));
-private _grp = creategroup [GRLIB_side_civilian, true];
+private _grp = creategroup [KPLIB_side_civilian, true];
 private _civs = [];
 private _markers = [];
 
@@ -32,11 +32,11 @@ for "_i" from 1 to _count do {
 
 if (KP_liberation_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned %1 wounded civilians at %2", _count, markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-private _units_near = [markerPos _sector, 300, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+private _units_near = [markerPos _sector, 300, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 private _healed_civs = [];
 
 while {_units_near > 0} do {
-    _units_near = [markerPos _sector, 300, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+    _units_near = [markerPos _sector, 300, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
     {
         if (((damage _x) < 0.5) && !(_x in _healed_civs)) then {
             (_markers select _forEachIndex) setMarkerAlpha 0;

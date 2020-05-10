@@ -8,7 +8,7 @@
     - None
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenal_weapons = [
     // AK-74
     "gm_mpiak74n_brn",
     "gm_mpiaks74nk_brn",
@@ -32,7 +32,7 @@ GRLIB_arsenal_weapons = [
     "gm_rpg7_prp_pgo7v"
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenal_magazines = [
 
     // LP1 26.5mm
     "gm_1Rnd_265mm_flare_single_grn_gc",
@@ -82,7 +82,7 @@ GRLIB_arsenal_magazines = [
     "gm_mine_at_tm46"
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenal_items = [
 
     // Uniforms
     "gm_gc_army_uniform_dress_80_gry",
@@ -121,7 +121,7 @@ GRLIB_arsenal_items = [
     "ItemRadio"
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenal_backpacks = [
     "gm_gc_army_backpack_80_at_str",
     "gm_gc_army_backpack_80_lmg_str",
     "gm_gc_army_backpack_80_mgk_str",

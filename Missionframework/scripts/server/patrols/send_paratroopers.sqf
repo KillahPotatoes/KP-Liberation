@@ -23,7 +23,7 @@ if (isNull _chopper_type) then {
     createVehicleCrew _newvehicle;
     sleep 0.1;
 
-    _pilot_group = createGroup [GRLIB_side_enemy, true];
+    _pilot_group = createGroup [KPLIB_side_enemy, true];
     (crew _newvehicle) joinSilent _pilot_group;
 
     _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
@@ -33,7 +33,7 @@ if (isNull _chopper_type) then {
     _pilot_group = group _newvehicle;
 };
 
-private _para_group = createGroup [GRLIB_side_enemy, true];
+private _para_group = createGroup [KPLIB_side_enemy, true];
 
 while {(count (units _para_group)) < 8} do {
     [opfor_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
