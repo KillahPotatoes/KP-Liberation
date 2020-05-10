@@ -13,6 +13,7 @@ if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "KPLIB_config.sqf";
 [] call compileFinal preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
+[] call compileFinal preprocessFileLineNumbers "KPLIB_classnameLists.sqf";
 [] call compileFinal preprocessFileLineNumbers "presets\init_presets.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_objectInits.sqf";
 
