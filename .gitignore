@@ -48,6 +48,8 @@ Temporary Items
 
 # Build directory
 /build/
+/_tools/build/
+/_tools/node_modules/
 
 # KP-Steam
 steam_appid.txt

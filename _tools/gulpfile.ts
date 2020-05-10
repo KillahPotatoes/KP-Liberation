@@ -124,7 +124,8 @@ for (let preset of presets) {
         return gulp.src([
             resolve('..', './userconfig/**/*'),
             resolve('..', 'LICENSE.md'),
-            resolve('..', 'README.md')
+            resolve('..', 'README.md'),
+            resolve('..', 'CHANGELOG.md')
         ], {
                 base: resolve('..') // Change base dir to have correct relative paths in ZIP
             })
