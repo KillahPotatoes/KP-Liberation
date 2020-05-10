@@ -24,7 +24,7 @@ crewman_classname = "CUP_B_BAF_Soldier_Crew_DDPM";                      // This 
 pilot_classname = "CUP_B_BAF_Soldier_Helipilot_DDPM";                   // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "CUP_B_SA330_Puma_HC2_BAF";       // These are the little birds which spawn on the Freedom or at Chimera base.
 KP_liberation_boat_classname = "B_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
-KP_liberation_truck_classname = "CUP_B_MTVR_USA";                       // These are the trucks which are used in the logistic convoy system.
+KP_liberation_truck_classname = "CUP_B_MTVR_BAF_DES";                   // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
 KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";           // The building defined to unlock FOB recycling functionality.
@@ -87,7 +87,7 @@ light_vehicles = [
     ["CUP_B_Wolfhound_LMG_GB_D",275,20,150],                            // Wolfhound TSV LMG
     ["CUP_B_Wolfhound_HMG_GB_D",275,40,150],                            // Wolfhound TSV HMG
     ["CUP_B_Wolfhound_GMG_GB_D",275,60,150],                            // Wolfhound TSV GMG
-    ["CUP_B_MTVR_USA",125,0,75]                                         // MTVR Transport
+    ["CUP_B_MTVR_BAF_DES",125,0,75]                                     // MTVR Transport
 ];
 
 heavy_vehicles = [
@@ -117,8 +117,6 @@ air_vehicles = [
 static_vehicles = [
     ["CUP_B_L111A1_BAF_DDPM",25,40,0],                                  // L111A1 Machine Gun
     ["CUP_B_L111A1_MiniTripod_BAF_DDPM",25,40,0],                       // L111A1 Minitripod
-    ["B_static_AT_F",50,100,0],                                         // Static Titan Launcher (AT)
-    ["B_static_AA_F",50,100,0],                                         // Static Titan Launcher (AA)
     ["CUP_WV_B_CRAM",500,500,0],                                        // C-RAM
     ["CUP_WV_B_SS_Launcher",750,500,0],                                 // Mk-29 GMLS
     ["CUP_WV_B_RAM_Launcher",750,750,0],                                // Mk-49 GMLS
@@ -131,8 +129,6 @@ buildings = [
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
-    ["Flag_US_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
     ["Flag_UK_F",0,0,0],
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
@@ -206,7 +202,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
@@ -223,9 +219,9 @@ support_vehicles = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["CUP_B_TowingTractor_GB",50,0,25],                                     // Towing Tractor
-    ["CUP_B_MTVR_Repair_USA",425,0,75],                                     // MTVR Repair
-    ["CUP_B_MTVR_Refuel_USA",125,0,375],                                    // MTVR Refuel
-    ["CUP_B_MTVR_Ammo_USA",125,300,75],                                     // MTVR Ammo
+    ["CUP_B_MTVR_Repair_BAF_DES",425,0,75],                                 // MTVR Repair
+    ["CUP_B_MTVR_Refuel_BAF_DES",125,0,375],                                // MTVR Refuel
+    ["CUP_B_MTVR_Ammo_BAF_DES",125,300,75],                                 // MTVR Ammo
     ["B_Slingload_01_Repair_F",275,0,0],                                    // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,200],                                     // Huron Fuel
     ["B_Slingload_01_Ammo_F",75,200,0]                                      // Huron Ammo

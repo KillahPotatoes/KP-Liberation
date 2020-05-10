@@ -33,6 +33,11 @@ export interface Preset {
      * @see {VariablesReplacements}
     */
     readonly variables: VariablesReplacements;
+
+    /**
+     * Steam Workshop Id
+     */
+    readonly workshopId: string;
 }
 
 export interface VariablesReplacements {

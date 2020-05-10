@@ -1,8 +1,8 @@
 
 _defenders_amount = (15 * (sqrt (GRLIB_unitcap))) min 15;
 
-_spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
-if (_spawn_marker == "") exitWith {diag_log "[KP LIBERATION] [ERROR] Could not find position for fob hunting mission";};
+_spawn_marker = [2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint;
+if (_spawn_marker == "") exitWith {["Could not find position for fob hunting mission", "ERROR"] call KPLIB_fnc_log;};
 
 used_positions pushBack _spawn_marker;
 _base_position = markerpos _spawn_marker;
@@ -17,7 +17,7 @@ _base_defenders = [];
     "_base_corners"
 ];
 
-[_base_position, 50] call F_createClearance;
+[_base_position, 50] call KPLIB_fnc_createClearance;
 
 private _nextobject = objNull;
 
@@ -85,10 +85,10 @@ while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count
     ];
 
     _nextpos = [((_base_position select 0) + (_nextpos select 0)), ((_base_position select 1) + (_nextpos select 1)), (_nextpos select 2)];
-    _nextclass createUnit [_nextpos, _grpdefenders, "nextdefender = this; this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
-    nextdefender setdir _nextdir;
-    nextdefender setpos _nextpos;
-    [nextdefender] spawn building_defence_ai;
+    private _nextDefender = [_nextclass, _nextpos, _grpdefenders, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+    _nextDefender setdir _nextdir;
+    _nextDefender setpos _nextpos;
+    [_nextDefender] spawn building_defence_ai;
 } forEach _idxselected;
 
 private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (GRLIB_unitcap)));
@@ -96,7 +96,7 @@ private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (GRLIB_unitcap)));
 _grpsentry = createGroup [GRLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
 for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
-    opfor_sentry createUnit [_base_sentry_pos, _grpsentry,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+    [opfor_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 while {(count (waypoints _grpsentry)) != 0} do {deleteWaypoint ((waypoints _grpsentry) select 0);};
@@ -130,7 +130,7 @@ waitUntil {
 combat_readiness = round (combat_readiness * GRLIB_secondary_objective_impact);
 stats_secondary_objectives = stats_secondary_objectives + 1;
 sleep 1;
-doSaveTrigger = true;
+[] spawn KPLIB_fnc_doSave;
 sleep 3;
 
 [3] remoteExec ["remote_call_intel"];

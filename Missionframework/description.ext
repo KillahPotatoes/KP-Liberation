@@ -1,44 +1,250 @@
-respawn = 3;
-respawndelay = 5;
-respawnButton = 1;
-disabledAI = true;
+/*
+    File: description.ext
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-16
+    Last Update: 2020-05-09
+    License: MIT License - http://www.opensource.org/licenses/MIT
 
-enableDebugConsole = 1;
-allowFunctionsLog = 0;
-unsafeCVL = 1;
+    Description:
+        Information about the author, mission name, respawn and more very general settings.
+        This overrides corresponding settings which are made in the sqm via eden editor.
 
+    Reference from where most descriptions are from:
+        https://community.bistudio.com/wiki/Description.ext
+*/
+
+/*
+    ----- General -----
+*/
+
+// Gametype and min/max players
+class Header {
+    gameType = "CTI";
+    minPlayers = 1;
+    maxPlayers = 34;
+};
+
+// Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
+author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
+
+
+/*
+    ----- Mission Selection Screen -----
+*/
+
+// Mission name displayed in the mission selection menu.
 briefingName = $STR_MISSION_TITLE;
-overviewText = "www.killahpotatoes.de";
+
+// Path to image which will be displayed when the mission is highlighted on the mission selection screen.
+// Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
 overviewPicture = "res\lib.paa";
-author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+
+// Text to be displayed below the overviewPicture on the mission selection screen
+overviewText = "www.killahpotatoes.de";
+
+
+/*
+    ----- Mission Loading Screen -----
+*/
+
+// String (usually mission name) shown during mission loading.
+// The string is shown in a slightly larger font above the loadScreen.
 onLoadName = $STR_MISSION_TITLE;
-onLoadMission = "www.killahpotatoes.de";
+
+// You can define a picture to be shown while the mission is loaded.
+// The path is relative to the mission folder.
 loadScreen = "res\lib.paa";
 
-joinUnassigned = 1;
+// Displays a message while the mission is loading below the loadScreen picture.
+onLoadMission = "www.killahpotatoes.de";
 
+
+/*
+    ----- Respawn -----
+*/
+
+// Enable or disable the respawn button in the menu for INSTANT and BASE respawn types.
+respawnButton = 1;
+
+// Templates are pre-defined scripts called when player dies and respawns. They are defined in an array and can be combined together.
+// List of pre-defined variants: https://community.bistudio.com/wiki/Arma_3_Respawn#Official_Templates
+respawnTemplates[] = {};
+
+// Additionally, you can define side specific templates. When a side has no unique templates, it will use general respawnTemplates instead.
+// respawnTemplatesWest[] = {"MenuInventory"};
+// respawnTemplatesEast[] = {"Counter"};
+// respawnTemplatesGuer[] = {"Tickets"};
+// respawnTemplatesCiv[] = {"Spectator"};
+// respawnTemplatesVirtual[] = {};
+
+// Type of Respawn (Default 0 in SP, 1 in MP)
+// 0    "NONE"      No respawn
+// 1    "BIRD"      Respawn as a seagull
+// 2    "INSTANT"   Respawn just where you died.
+// 3    "BASE"      Respawn in base. A respawn marker is needed.
+// 4    "GROUP"     Respawn in your group. If there is no remaining AI, you will become a seagull.
+// 5    "SIDE"      Introduced with Armed Assault version 1.08 Respawn into an AI unit on your side (if there's no AI left, you'll become a seagull).
+respawn = 3;
+
+// Set respawn delay in seconds.
+respawndelay = 5;
+
+// Show the scoreboard and respawn countdown timer for a player if he is killed with respawn type BASE.
+respawnDialog = 0;
+
+// Respawn player when he joins the game. Available only for INSTANT and BASE respawn types. (Default: 0)
+// -1 - Dont respawn on start. Don't run respawn script on start.
+//  0 - Dont respawn on start. Run respawn script on start.
+//  1 - Respawn on start. Run respawn script on start.
+respawnOnStart = 0;
+
+
+/*
+    ----- Corpse & Wreck Management -----
+*/
+
+// Sets the mode for corpse removal manager.
+// 0 = None                 - None of the units are managed by the manager
+// 1 = All                  - All units are managed by the manager
+// 2 = None_But_Respawned   - Only units that can respawn are managed by the manager
+// 3 = All_But_Respawned    - All units are managed by the manager with exception of respawned (opposite to mode 2)
 corpseManagerMode = 1;
+
+// Corpse limit before which (<=) corpseRemovalMaxTime applies and after which (>) corpseRemovalMinTime applies.
 corpseLimit = 50;
+
+// Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is reached.
 corpseRemovalMinTime = 600;
+
+// Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
 corpseRemovalMaxTime = 3600;
+
+// Sets the mode for wreck removal manager.
+// 0 = None                 - None of the vehicles are managed by the manager
+// 1 = All                  - All vehicles are managed by the manager
+// 2 = None_But_Respawned   - Only vehicles that can respawn are managed by the manager
+// 3 = All_But_Respawned    - All vehicles are managed by the manager with exception of respawned (opposite to mode 2)
 wreckManagerMode = 1;
+
+// Vehicle wreck limit before which (<=) wreckRemovalMaxTime applies and after which (>) wreckRemovalMinTime applies.
 wreckLimit = 20;
+
+// Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
 wreckRemovalMinTime = 1200;
+
+// Maximum time a wreck can remain on the ground if total number of wrecks is equal or under wreckLimit.
 wreckRemovalMaxTime = 7200;
+
+// The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
 minPlayerDistance = 1000;
 
-#include "GREUH\UI\GREUH_interface.hpp"
+
+/*
+    ----- Mission Settings -----
+*/
+
+// Allows functions to log to the RPT file.
+allowFunctionsLog = 1;
+
+// As a security measure, functions are by default protected against rewriting during mission.
+// This restriction does not apply in missions previewed from the editor.
+allowFunctionsRecompile = "[0, 1] select (is3DENMultiplayer || is3DEN)";
+
+// Disable specific channels for voice and text communication.
+// MOTD and admin say have exception and will show in global.
+// 0 Global, 1 Side, 2 Command, 3 Group, 4 Vehicle, 5 Direct, 6 System
+disableChannels[] = {0};
+
+// Multiplayer setting that removes all playable units which do not have a human player.
+// When AI is disabled, a player logging out will not have AI take control of his character.
+disabledAI = 1;
+
+// Disables randomization on certain objects, object types or object kinds in the mission.
+disableRandomization[] = {};
+
+// Allows access to the Debug Console outside of the editor during normal gameplay.
+// 0 - Default behavior, available only in editor
+// 1 - Available in SP and for hosts / logged in admins
+// 2 - Available for everyone
+enableDebugConsole = 1;
+
+// Force enable or disable RotorLib flight model.
+// 0 - based on player's options
+// 1 - enabled (advanced mode)
+// 2 - disabled (default flight mode)
+forceRotorLibSimulation = 0;
+
+// By default a new player is not auto assigned a free playable slot in the mission lobby in Multiplayer.
+// Disable this setting to make him auto assigned to the side with least players.
+joinUnassigned = 1;
+
+// When enabled, joining player will join the mission bypassing role selection screen.
+// The joinUnassigned param will be set to 1 automatically, so that player receives 1st available role from mission template.
+// When leaving such mission, player will go straight back to server browser.
+skipLobby = 0;
+
+// Defines if the map is shown after the mission starts.
+showMap = 1;
+
+// Enable or disable availability of createVehicleLocal
+unsafeCVL = 1;
+
+
+/*
+    ----- Task Settings -----
+*/
+
+// Use new 2D markers on the map.
+taskManagement_markers2D = 1;
+
+// Use new 3D markers outside of the map by holding default J key.
+taskManagement_markers3D = 1;
+
+// Propagate shared tasks to subordinates.
+taskManagement_propagate = 1;
+
+// 3D marker maximum draw distance in meters.
+// Within this range, unassigned tasks are drawn on screen.
+taskManagement_drawDist = 5000;
+
+
+/*
+    ----- Config Includes -----
+*/
+
+class CfgDebriefing {
+    #include "KPLIB_debriefs.hpp"
+};
+
+class CfgDiscordRichPresence {
+    applicationID="698133766975258664";
+    defaultDetails="";
+    defaultState="Preparing...";
+    defaultLargeImageKey="liberation_logo";
+    defaultLargeImageText="KP Liberation";
+    defaultSmallImageKey="arma3_logo";
+    defaultSmallImageText="Arma 3";
+    useTimeElapsed=1;
+};
+
+class CfgFunctions {
+    #include "CfgFunctions.hpp"
+    #include "KP\KPPLM\KPPLM_functions.hpp"
+};
+
+class CfgRespawnTemplates {
+
+};
+
+class CfgTaskDescriptions {
+    #include "scripts\client\tutorial\CfgTaskDescriptions.hpp"
+};
+
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
 
-class CfgDebriefing
-{
-	class End1
-	{
-		title =	$STR_SORRY;
-		subtitle = "";
-		description = $STR_COMMANDER_NOT_AUTHORIZED;
-		pictureBackground = "";
-	};
-};
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "KP\KPGUI\KPGUI_defines.hpp"
+#include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+

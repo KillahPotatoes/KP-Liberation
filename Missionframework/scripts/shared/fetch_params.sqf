@@ -1,92 +1,118 @@
 #include "defines.hpp"
 
 // Check if ACE is running
-if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; diag_log "[KP LIBERATION] ACE detected. Deactivating resupply and weather scripts from Liberation."} else {KP_liberation_ace = false};
+if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KP_liberation_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KP_liberation_ace = false};
 
 /* Not saveable params */
-GRLIB_param_wipe_savegame_1 = ["WipeSave1",0] call bis_fnc_getParamValue;
-GRLIB_param_wipe_savegame_2 = ["WipeSave2",0] call bis_fnc_getParamValue;
-KP_liberation_civinfo_debug = ["DebugCivInfo",0] call bis_fnc_getParamValue;
-KP_liberation_civrep_debug = ["DebugCivRep",0] call bis_fnc_getParamValue;
-KP_liberation_savegame_debug = ["DebugSave",0] call bis_fnc_getParamValue;
-KP_liberation_asymmetric_debug = ["DebugAsymmetric",0] call bis_fnc_getParamValue;
-KP_liberation_logistic_debug = ["DebugLogistic",0] call bis_fnc_getParamValue;
-KP_liberation_sectorspawn_debug = ["DebugSectorSpawn",0] call bis_fnc_getParamValue;
-KP_liberation_kill_debug = ["DebugKill",0] call bis_fnc_getParamValue;
-KP_liberation_production_debug = ["DebugProduction",0] call bis_fnc_getParamValue;
+GRLIB_param_wipe_savegame_1 = ["WipeSave1", 0] call bis_fnc_getParamValue;
+GRLIB_param_wipe_savegame_2 = ["WipeSave2", 0] call bis_fnc_getParamValue;
+KP_liberation_civinfo_debug = ["DebugCivInfo", 0] call bis_fnc_getParamValue;
+KP_liberation_civrep_debug = ["DebugCivRep", 0] call bis_fnc_getParamValue;
+KP_liberation_savegame_debug = ["DebugSave", 0] call bis_fnc_getParamValue;
+KP_liberation_asymmetric_debug = ["DebugAsymmetric", 0] call bis_fnc_getParamValue;
+KP_liberation_logistic_debug = ["DebugLogistic", 0] call bis_fnc_getParamValue;
+KP_liberation_sectorspawn_debug = ["DebugSectorSpawn", 0] call bis_fnc_getParamValue;
+KP_liberation_kill_debug = ["DebugKill", 0] call bis_fnc_getParamValue;
+KP_liberation_production_debug = ["DebugProduction", 0] call bis_fnc_getParamValue;
+KP_liberation_highcommand_debug = ["DebugHighCommand", 0] call bis_fnc_getParamValue;
 
 KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 if(isServer) then {
+    private _start = diag_tickTime;
     /* Saveable params */
+    ["----- Server starts parameter initialization", "PARAM"] call KPLIB_fnc_log;
+    switch (KP_load_params) do {
+        case 0: {
+            ["Save/Load is set to SAVE", "PARAM"] call KPLIB_fnc_log;
+        };
+        case 1: {
+            ["Save/Load is set to LOAD", "PARAM"] call KPLIB_fnc_log;
+        };
+        case 2: {
+            ["Save/Load is set to USE SELECTED", "PARAM"] call KPLIB_fnc_log;
+        };
+        default {
+            ["Save/Load has no valid value", "PARAM"] call KPLIB_fnc_log;
+        };
+    };
+
+    // Mission Options
+    ["--- Mission Options ---", "PARAM"] call KPLIB_fnc_log;
+    GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
+    GET_PARAM(GRLIB_difficulty_modifier, "Difficulty", 2);
+    GET_PARAM(GRLIB_csat_aggressivity, "Aggressivity", 2);
+    GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
+    GET_PARAM(GRLIB_civilian_activity, "Civilians", 1);
+    GET_PARAM_BOOL(GRLIB_build_first_fob, "FirstFob", 0);
+    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
+    GET_PARAM(GRLIB_maximum_fobs, "MaximumFobs", 26);
+    GET_PARAM(GRLIB_max_squad_size, "MaxSquadSize", 10);
+    GET_PARAM_BOOL(GRLIB_blufor_defenders, "BluforDefenders", 1);
+    GET_PARAM_BOOL(GRLIB_autodanger, "Autodanger", 0);
+    GET_PARAM(GRLIB_time_factor, "DayDuration", 12);
+    GET_PARAM_BOOL(GRLIB_shorter_nights, "ShorterNights", 0);
+    GET_PARAM(GRLIB_weather_param, "Weather", 3);
+    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
+    GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
+    GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM_BOOL(KP_liberation_playermenu, "PlayerMenu", 1);
+    GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
     // Deactivate BI Revive when ACE Medical is running
     if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
-        diag_log "[KP LIBERATION] ACE Medical detected. Deactivating BI Revive System."
+        ["ACE Medical detected. Deactivating BI Revive System.", "PARAM"] call KPLIB_fnc_log;
     } else {
+        // Revive Options
+        ["--- Revive Options ---", "PARAM"] call KPLIB_fnc_log;
         GET_PARAM(bis_reviveParam_mode, "ReviveMode", 1);
+        GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
+        GET_PARAM(bis_reviveParam_requiredTrait, "ReviveRequiredTrait", 1);
+        GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);
+        GET_PARAM(bis_reviveParam_requiredItems, "ReviveRequiredItems", 1);
+        GET_PARAM(bis_reviveParam_unconsciousStateMode, "UnconsciousStateMode", 0);
+        GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
+        GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
     };
 
-    GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
-    GET_PARAM(bis_reviveParam_requiredTrait, "ReviveRequiredTrait", 1);
-    GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);
-    GET_PARAM(bis_reviveParam_requiredItems, "ReviveRequiredItems", 1);
-    GET_PARAM(bis_reviveParam_unconsciousStateMode, "UnconsciousStateMode", 0);
-    GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
-    GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
-
-    GET_PARAM(GRLIB_difficulty_modifier, "Difficulty", 2);
-    GET_PARAM(GRLIB_time_factor, "DayDuration", 12);
-    GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
-    GET_PARAM(GRLIB_unitcap, "Unitcap", 2);
-    GET_PARAM(GRLIB_civilian_activity, "civilians", 1);
-    GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
-    GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
-    GET_PARAM(GRLIB_csat_aggressivity, "Aggressivity", 2);
-    GET_PARAM(GRLIB_weather_param, "Weather", 3);
-    GET_PARAM(GRLIB_maximum_fobs, "MaximumFobs", 26);
-    GET_PARAM(GRLIB_max_squad_size, "MaxSquadSize", 10);
-    GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
-    GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
-    GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
-    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
-    GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
-
-    GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
-    GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
-    GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
-    GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    // Gameplay Options
+    ["--- Gameplay Options ---", "PARAM"] call KPLIB_fnc_log;
+    GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
+    GET_PARAM_BOOL(KPLIB_sway, "WeaponSway", 1);
     GET_PARAM_BOOL(KP_liberation_arsenalUsePreset, "ArsenalUsePreset", 1);
     GET_PARAM_BOOL(KP_liberation_mapmarkers, "MapMarkers", 1);
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
+    GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
-    GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
-    GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
-    GET_PARAM_BOOL(KP_liberation_fob_vehicle, "FirstFobVehicle", 0);
+    GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
+    GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
+    GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
+    GET_PARAM_BOOL(KP_liberation_clear_cargo, "ClearCargo", 1);
+    GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
+    GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
+    GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
+    GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
+    GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
+    GET_PARAM_BOOL(KP_liberation_tutorial, "Tutorial", 1);
 
-    GET_PARAM_BOOL(GRLIB_adaptive_opfor, "AdaptToPlayercount", 1);
-    GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
-    GET_PARAM_BOOL(GRLIB_fatigue, "Fatigue", 1);
-    GET_PARAM_BOOL(GRLIB_introduction, "Introduction", 1);
-    GET_PARAM_BOOL(GRLIB_teamkill_penalty, "TeamkillPenalty", 0);
-    GET_PARAM_BOOL(GRLIB_build_first_fob, "FirstFob", 0);
+    // Technical Options
+    ["--- Technical Options ---", "PARAM"] call KPLIB_fnc_log;
     GET_PARAM_BOOL(GRLIB_permissions_param, "Permissions", 1);
+    GET_PARAM(GRLIB_cleanup_vehicles, "CleanupVehicles", 2);
+    GET_PARAM_BOOL(GRLIB_introduction, "Introduction", 1);
+    GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
     GET_PARAM_BOOL(GRLIB_use_whitelist, "Whitelist", 0);
-    GET_PARAM_BOOL(GRLIB_shorter_nights, "ShorterNights", 0);
-    GET_PARAM_BOOL(GRLIB_blufor_defenders, "BluforDefenders", 1);
-    GET_PARAM_BOOL(GRLIB_autodanger, "Autodanger", 0);
+    GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
 
     GREUH_allow_mapmarkers = KP_liberation_mapmarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KP_liberation_mapmarkers; publicVariable "GREUH_allow_platoonview";
 
-    GRLIB_remote_sensors = 0;
-    publicVariable "GRLIB_remote_sensors";
-
     KP_serverParamsFetched = true;
     publicVariable "KP_serverParamsFetched";
 
-    diag_log "[KP LIBERATION] [PARAM] Server finished parameters initialization.";
+    [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 // Fix for not working float values in mission params
@@ -277,6 +303,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_arsenal_type) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_PLAYERMENU";
+    _value = if (KP_liberation_playermenu) then {localize "STR_PARAMS_PLAYERMENU_KP";} else {localize "STR_PARAMS_PLAYERMENU_GREUH";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_VICTORYCONDITION";
     switch (KP_liberation_victoryCondition) do {
         case 1: {_value = localize "STR_PARAMS_VICTORYCONDITION_1";};
@@ -333,6 +363,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (GRLIB_fatigue) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAM_WEAPSWAY";
+    _value = if (KPLIB_sway) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_ARSENALUSEPRESET";
     _value = if (KP_liberation_arsenalUsePreset) then {localize "STR_PARAMS_USEPRESET";} else {localize "STR_PARAMS_NORESTRICTIONS";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -355,10 +389,6 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_AILOGISTICS";
     _value = if (KP_liberation_ailogistics) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
-    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
-
-    _param = localize "STR_PARAM_TEAMKILL_PENALTY";
-    _value = if (GRLIB_teamkill_penalty) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_CR_BUILDING";
@@ -393,6 +423,26 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_limited_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAM_ZEUSADDENEMIES";
+    _value = if (KP_liberation_enemies_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_HIGHCOMMAND";
+    _value = if (KP_liberation_high_command) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_SUPPMOD";
+    switch (KP_liberation_suppMod) do {
+        case 1: {_value = localize "STR_PARAM_SUPPMOD_CMDRANDWHITELIST";};
+        case 2: {_value = localize "STR_PARAM_SUPPMOD_EVERYONE";};
+        default {_value = localize "STR_PARAMS_DISABLED";};
+    };
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_TUTORIAL";
+    _value = if (KP_liberation_tutorial) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PERMISSIONS_PARAM";
     _value = if (GRLIB_permissions_param) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -422,5 +472,5 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_restart == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_restart;};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
-    player createDiaryRecord ["parameters",["Active", _text]];
+    player createDiaryRecord ["parameters", ["Active", _text]];
 };

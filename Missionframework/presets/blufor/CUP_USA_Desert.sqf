@@ -5,7 +5,9 @@
     - CUP Units
 
     Optional Mods:
-    - None
+    - USAF Main Pack
+    - USAF Fighters Pack
+    - USAF Utility Pack
 */
 
 /*
@@ -75,9 +77,10 @@ light_vehicles = [
     ["CUP_B_HMMWV_SOV_M2_USA",100,80,50],                               // HMMWV SOV (M2)
     ["CUP_B_HMMWV_SOV_USA",100,100,50],                                 // HMMWV SOV (Mk19)
     ["CUP_B_HMMWV_Avenger_USA",200,350,125],                            // HMMWV Avenger
-    ["CUP_B_RG31_M2_OD_USA",150,50,50],                                 // RG-31 M2
-    ["CUP_B_RG31E_M2_OD_USA",175,50,50],                                // RG-31 Mk5E M2
-    ["CUP_B_RG31_Mk19_OD_USA",150,80,50],                               // RG-31 Mk.19
+    ["CUP_B_RG31_M2_USA",150,75,100],                                   // RG-31 Nyala M2
+    ["CUP_B_RG31_M2_GC_USA",225,75,100],                                // RG-31 Nyala M2 GC
+    ["CUP_B_RG31E_M2_USA",200,75,100],                                  // RG-31 Mk5E M2
+    ["CUP_B_RG31_Mk19_USA",150,100,100],                                // RG-31 Mk.19
     ["CUP_B_MTVR_USA",125,0,75]                                         // MTVR
 ];
 
@@ -98,16 +101,30 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
-    ["CUP_B_AH6M_USA",200,100,100],                                     // AH-6M
+    ["CUP_B_UH60M_Unarmed_FFV_MEV_US",300,0,200],                       // UH-60M MEDVAC (Unarmed/FFV)
     ["CUP_B_UH60M_US",300,25,200],                                      // UH-60M
     ["CUP_B_UH60M_FFV_US",300,50,200],                                  // UH-60M (FFV)
+    ["USAF_C130J",200,0,250],                                           // C-130J Super Hercules
+    ["USAF_C130J_Cargo",200,0,250],                                     // C-130J Super Hercules (Cargo)
+    ["USAF_C17",500,0,400],                                             // C-17 Globemaster III
+    ["usaf_kc135",600,0,2500],                                          // KC-135 Stratotanker
+    ["CUP_B_AH6M_USA",200,100,100],                                     // AH-6M
     ["CUP_B_MH60L_DAP_2x_US",400,250,225],                              // MH-60L DAP (2 Stores)
     ["CUP_B_MH60L_DAP_4x_US",400,500,225],                              // MH-60L DAP (4 Stores)
     ["CUP_B_AH64_DL_USA",500,600,300],                                  // AH-64
     ["CUP_B_AH64D_DL_USA",700,600,200],                                 // AH-64D
     ["CUP_B_AH6X_USA",300,0,100],                                       // AH-6X Littlebird ULB
+    ["USAF_RQ4A",500,0,200],                                            // RQ-4A Global Hawk
+    ["USAF_MQ9",500,750,200],                                           // MQ-9 Reaper
     ["CUP_B_A10_DYN_USA",1000,800,400],                                 // A-10A Thunderbolt II
-    ["CUP_B_MH47E_USA",250,100,200]                                     // MH-47E
+    ["USAF_A10",1500,1000,400],                                         // A-10C Thunderbolt II
+    ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
+    ["USAF_F22_EWP_AA",1800,2100,500],                                  // F-22A Raptor (EWP-AA)
+    ["USAF_F22_EWP_AG",1800,2100,500],                                  // F-22A Raptor (EWP-AG)
+    ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
+    ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
+    ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
+    ["CUP_B_AH6X_USA",300,0,100]                                        // AH-6X Littlebird ULB
 ];
 
 static_vehicles = [
@@ -128,8 +145,7 @@ buildings = [
     ["Land_Cargo_Tower_V1_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
     ["Flag_US_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
-    ["Flag_UK_F",0,0,0],
+    ["FlagCarrierUSArmy_EP1",0,0,0],
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
     ["Land_Medevac_HQ_V1_F",0,0,0],
@@ -202,7 +218,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
@@ -218,6 +234,19 @@ support_vehicles = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["USAF_missileCart_W_AGM114",50,150,0],                             // Missile Cart (AGM-114)
+    ["USAF_missileCart_AGMMix",50,150,0],                               // Missile Cart (AGM-65 Mix)
+    ["USAF_missileCart_AGM1",50,150,0],                                 // Missile Cart (AGM-65D)
+    ["USAF_missileCart_AGM2",50,150,0],                                 // Missile Cart (AGM-65E)
+    ["USAF_missileCart_AGM3",50,150,0],                                 // Missile Cart (AGM-65K)
+    ["USAF_missileCart_AA1",50,150,0],                                  // Missile Cart (AIM-9M/AIM-120)
+    ["USAF_missileCart_AA2",50,150,0],                                  // Missile Cart (AIM-9X/AIM-120)
+    ["USAF_missileCart_GBU12_green",50,150,0],                          // Missile Cart (GBU12 Green)
+    ["USAF_missileCart_GBU12_maritime",50,150,0],                       // Missile Cart (GBU12 Maritime)
+    ["USAF_missileCart_GBU12",50,150,0],                                // Missile Cart (GBU12)
+    ["USAF_missileCart_Gbu31",50,150,0],                                // Missile Cart (GBU31)
+    ["USAF_missileCart_GBU39",50,150,0],                                // Missile Cart (GBU39)
+    ["USAF_missileCart_Mk82",50,150,0],                                 // Missile Cart (Mk82)
     ["CUP_B_TowingTractor_USA",50,0,75],                                // Towing Tractor
     ["CUP_B_MTVR_Repair_USA",425,0,75],                                 // MTVR Repair
     ["CUP_B_MTVR_Refuel_USA",125,0,375],                                // MTVR Refuel
@@ -323,6 +352,14 @@ elite_vehicles = [
     "CUP_WV_B_SS_Launcher",                                             // Mk-29 GMLS
     "CUP_WV_B_RAM_Launcher",                                            // Mk-49 GMLS
     "CUP_B_A10_DYN_USA",                                                // A-10A Thunderbolt II
+    "USAF_MQ9",                                                         // MQ-9 Reaper
+    "USAF_A10",                                                         // A-10C Thunderbolt II
+    "USAF_F22",                                                         // F-22A Raptor
+    "USAF_F22_EWP_AA",                                                  // F-22A Raptor (EWP-AA)
+    "USAF_F22_EWP_AG",                                                  // F-22A Raptor (EWP-AG)
+    "USAF_F22_Heavy",                                                   // F-22A Raptor (Heavy)
+    "USAF_F35A_STEALTH",                                                // F-35A Lightning II
+    "USAF_F35A",                                                        // F-35A Lightning II (Heavy)
     "CUP_B_AH64D_DL_USA",                                               // AH-64D
     "CUP_B_MH60L_DAP_2x_US",                                            // MH-60L DAP (2 Stores)
     "CUP_B_MH60L_DAP_4x_US",                                            // MH-60L DAP (4 Stores)

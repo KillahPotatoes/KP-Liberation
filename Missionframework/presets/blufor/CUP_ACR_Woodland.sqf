@@ -88,10 +88,13 @@ light_vehicles = [
 ];
 
 heavy_vehicles = [
+    ["CUP_B_BRDM2_HQ_CZ",200,25,200],                                   // BRDM-2 (HQ)
     ["CUP_B_BRDM2_CZ",200,200,200],                                     // BRDM-2
+    ["CUP_B_RM70_CZ",300,750,175],                                      // RM-70
     ["I_APC_Wheeled_03_cannon_F",500,400,300],                          // Pandur II
     ["CUP_I_BMP1_TK_GUE",300,300,200],                                  // BVP-1
     ["CUP_B_BMP2_CZ",400,350,200],                                      // BVP-2
+    ["CUP_B_BMP2_AMB_CZ",350,0,200],                                    // BVP-2 Ambulance
     ["B_APC_Tracked_01_AA_F",500,450,400],                              // IFV-6a Cheetah
     ["CUP_O_T72_RU",600,500,400],                                       // T72
     ["CUP_B_T72_CZ",800,500,450]                                        // T-72M4CZ
@@ -120,9 +123,7 @@ buildings = [
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
-    ["Flag_US_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
-    ["Flag_UK_F",0,0,0],
+    ["FlagCarrierCzechRepublic_EP1",0,0,0],
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
     ["Land_Medevac_HQ_V1_F",0,0,0],
@@ -316,6 +317,7 @@ elite_vehicles = [
     "CUP_B_Dingo_GL_CZ_Wdl",                                            // Dingo 2 (GL) (Woodland)
     "QIN_Titus_WDL",                                                    // Nexter Titus
     "QIN_Titus_arx20_WDL",                                              // Nexter Titus ARX20
+    "CUP_B_RM70_CZ",                                                    // RM-70
     "I_APC_Wheeled_03_cannon_F",                                        // Pandur II
     "CUP_B_BMP2_CZ",                                                    // BVP-2
     "B_APC_Tracked_01_AA_F",                                            // IFV-6a Cheetah

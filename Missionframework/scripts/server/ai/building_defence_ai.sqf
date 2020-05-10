@@ -1,7 +1,7 @@
 params ["_unit", ["_sector", ""]];
 
 _unit setUnitPos "UP";
-_unit disableAI "MOVE";
+_unit disableAI "PATH";
 private _move_is_disabled = true;
 private _hostiles = 0;
 private _ratio = 0.4;
@@ -10,7 +10,7 @@ private _range = 40;
 while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
 
     if !(_sector isEqualTo "") then {
-        _ratio = [_sector] call F_getForceRatio;
+        _ratio = [_sector] call KPLIB_fnc_getBluforRatio;
     };
 
     _range = floor (linearConversion [0, 1, _ratio, 0, GRLIB_capture_size / 3 * 2, true]);
@@ -25,7 +25,7 @@ while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
         }
     ) then {
         _move_is_disabled = false;
-        _unit enableAI "MOVE";
+        _unit enableAI "PATH";
         _unit setUnitPos "AUTO";
     };
 

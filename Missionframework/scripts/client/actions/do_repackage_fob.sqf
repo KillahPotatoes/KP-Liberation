@@ -1,48 +1,40 @@
-private [ "_dialog", "_fob", "_fobbox" ];
-
 dorepackage = 0;
 
-_dialog = createDialog "liberation_repackage_fob";
-waitUntil { dialog };
+createDialog "liberation_repackage_fob";
+waitUntil {sleep 0.1; dialog};
+waitUntil {sleep 0.1; !dialog || !alive player || dorepackage != 0};
 
-while { dialog && alive player && dorepackage == 0 } do {
-	sleep 0.1;
-};
+if (dorepackage > 0) then {
+    closeDialog 0;
+    waitUntil {sleep 0.1; !dialog};
 
-if ( dorepackage > 0 ) then {
-	closeDialog 0;
-	waitUntil { !dialog };
+    private _fob = [] call KPLIB_fnc_getNearestFob;
 
-	_fob = [] call F_getNearestFob;
-
-    if (count _fob > 0) then {
+    if !(_fob isEqualTo []) then {
         GRLIB_all_fobs = GRLIB_all_fobs - [_fob];
         KP_liberation_clearances deleteAt (KP_liberation_clearances findIf {(_x select 0) isEqualTo _fob});
         publicVariable "GRLIB_all_fobs";
         publicVariable "KP_liberation_clearances";
     };
 
-	{deleteVehicle _x} foreach (((getpos player) nearobjects [ FOB_typename, 250 ]) select {getObjectType _x >= 8});
+    {deleteVehicle _x} forEach (((getPos player) nearobjects [FOB_typename, 250]) select {getObjectType _x >= 8});
 
-	sleep 0.5;
+    sleep 0.5;
 
-	_spawnpos = zeropos;
-	while { _spawnpos distance zeropos < 1000 } do {
-		_spawnpos = ( getpos player ) findEmptyPosition [10, 250, 'B_Heli_Transport_01_F'];
-		if ( count _spawnpos == 0 ) then { _spawnpos = zeropos; };
-	};
+    private _spawnpos = zeropos;
+    while {_spawnpos distance2d zeropos < 1000} do {
+        _spawnpos = (getPos player) findEmptyPosition [10, 250, 'B_Heli_Transport_01_F'];
+        if (_spawnpos isEqualTo []) then {_spawnpos = zeropos;};
+    };
 
-	if ( dorepackage == 1 ) then {
-		_fobbox = FOB_box_typename createVehicle _spawnpos;
-		_fobbox call F_setFobMass;
-		// Add ViV actions to FOB Box
-		[_fobBox] remoteExecCall ["F_setLoadableViV", 0, _fobBox];
-	};
+    if (dorepackage == 1) then {
+        private _fobbox = FOB_box_typename createVehicle _spawnpos;
+        [_fobbox] call KPLIB_fnc_addObjectInit;
+    };
 
-	if ( dorepackage == 2 ) then {
-		FOB_truck_typename createVehicle _spawnpos;
-	};
-
-	hint localize "STR_FOB_REPACKAGE_HINT";
-
+    if (dorepackage == 2) then {
+        private _fobTruck = FOB_truck_typename createVehicle _spawnpos;
+        [_fobTruck] call KPLIB_fnc_addObjectInit;
+    };
+    hint localize "STR_FOB_REPACKAGE_HINT";
 };

@@ -79,6 +79,7 @@ light_vehicles = [
     ["CUP_B_LR_Transport_CZ_D",200,0,50],                               // Land Rover 110 (Transport) Desert
     ["CUP_B_LR_MG_CZ_D",200,40,50],                                     // Land Rover 110 (M2) Desert
     ["CUP_B_LR_Special_CZ_D",250,100,50],                               // Land Rover 110 (Special) Desert
+    ["CUP_B_HMMWV_Ambulance_ACR",225,0,50],                             // HMMWV (Ambulance)
     ["CUP_B_HMMWV_DSHKM_GPK_ACR",225,60,50],                            // HMMWV M1114 DSHKM
     ["CUP_B_HMMWV_M2_GPK_ACR",225,60,50],                               // HMMWV M1114 M2
     ["CUP_B_HMMWV_AGS_GPK_ACR",225,80,50],                              // HMMWV M1114 AGS
@@ -91,10 +92,12 @@ light_vehicles = [
 ];
 
 heavy_vehicles = [
+    ["CUP_B_BRDM2_HQ_CZ_Des",200,25,200],                               // BRDM-2 (HQ) (Desert)
     ["CUP_B_BRDM2_CZ_Des",200,200,200],                                 // BRDM-2 (Desert)
     ["I_APC_Wheeled_03_cannon_F",500,400,300],                          // Pandur II
     ["CUP_I_BMP1_TK_GUE",300,300,200],                                  // BVP-1
     ["CUP_B_BMP2_CZ_Des",400,350,200],                                  // BVP-2
+    ["CUP_B_BMP2_AMB_CZ_Des",350,0,200],                                // BVP-2 Ambulance
     ["B_APC_Tracked_01_AA_F",500,450,400],                              // IFV-6a Cheetah
     ["CUP_O_T72_RU",600,500,400],                                       // T-72
     ["CUP_B_T72_CZ",800,500,450]                                        // T-72M4CZ
@@ -123,9 +126,7 @@ buildings = [
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
-    ["Flag_US_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
-    ["Flag_UK_F",0,0,0],
+    ["FlagCarrierCzechRepublic_EP1",0,0,0],
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
     ["Land_Medevac_HQ_V1_F",0,0,0],

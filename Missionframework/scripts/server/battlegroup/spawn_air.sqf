@@ -1,68 +1,59 @@
 params ["_first_objective"];
+
+if (opfor_air isEqualTo []) exitWith {false};
+
 private _planes_number = ((floor linearConversion [40, 100, combat_readiness, 1, 3]) min 3) max 0;
 
 if (_planes_number < 1) exitWith {};
 
-private _plane_type = selectRandom opfor_air;
-private _air_spawnpoint = ([sectors_airspawn, [_first_objective], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
-private _air_grp = createGroup [GRLIB_side_enemy, true];
+private _class = selectRandom opfor_air;
+private _spawnPoint = ([sectors_airspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+private _spawnPos = [];
+private _plane = objNull;
+private _grp = createGroup [GRLIB_side_enemy, true];
 
 for "_i" from 1 to _planes_number do {
-    private _air_spawnpos = markerpos _air_spawnpoint;
-    _air_spawnpos = [(((_air_spawnpos select 0) + 500) - random 1000), (((_air_spawnpos select 1) + 500) - random 1000), 120];
-
-    private _newvehicle = createVehicle [_plane_type, _air_spawnpos, [], 0, "FLY"];
-    createVehicleCrew _newvehicle;
-    _newvehicle flyInHeight (120 + (random 180));
-    _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _newvehicle);
-
-    (crew _newvehicle) joinSilent _air_grp;
+    _spawnPos = markerPos _spawnPoint;
+    _spawnPos = [(((_spawnPos select 0) + 500) - random 1000), (((_spawnPos select 1) + 500) - random 1000), 200];
+    _plane = createVehicle [_class, _spawnPos, [], 0, "FLY"];
+    createVehicleCrew _plane;
+    _plane flyInHeight (120 + (random 180));
+    _plane addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    [_plane] call KPLIB_fnc_addObjectInit;
+    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _plane);
+    (crew _plane) joinSilent _grp;
+    sleep 1;
 };
 
-while {(count (waypoints _air_grp)) != 0} do {deleteWaypoint ((waypoints _air_grp) select 0);};
+while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
+sleep 1;
+{_x doFollow leader _grp} forEach (units _grp);
 sleep 1;
 
-{_x doFollow leader _air_grp} forEach (units _air_grp);
-sleep 1;
-
-private _waypoint = _air_grp addWaypoint [_first_objective, 500];
+private _waypoint = _grp addWaypoint [_first_objective, 500];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "RED";
 
-_waypoint = _air_grp addWaypoint [_first_objective, 500];
+_waypoint = _grp addWaypoint [_first_objective, 500];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "RED";
 
-_waypoint = _air_grp addWaypoint [_first_objective, 500];
+_waypoint = _grp addWaypoint [_first_objective, 500];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "RED";
 
-_waypoint = _air_grp addWaypoint [_first_objective, 500];
-_waypoint setWaypointType "SAD";
+for "_i" from 1 to 6 do {
+    _waypoint = _grp addWaypoint [_first_objective, 500];
+    _waypoint setWaypointType "SAD";
+};
 
-_waypoint = _air_grp addWaypoint [_first_objective, 1000];
-_waypoint setWaypointType "SAD";
-
-_waypoint = _air_grp addWaypoint [_first_objective, 2000];
-_waypoint setWaypointType "SAD";
-
-_waypoint = _air_grp addWaypoint [_first_objective, 3000];
-_waypoint setWaypointType "SAD";
-
-_waypoint = _air_grp addWaypoint [_first_objective, 4000];
-_waypoint setWaypointType "SAD";
-
-_waypoint = _air_grp addWaypoint [_first_objective, 5000];
-_waypoint setWaypointType "SAD";
-
-_waypoint = _air_grp addWaypoint [_first_objective, 500];
+_waypoint = _grp addWaypoint [_first_objective, 500];
 _waypoint setWaypointType "CYCLE";
 
-_air_grp setCurrentWaypoint [_air_grp, 2];
+_grp setCurrentWaypoint [_grp, 2];

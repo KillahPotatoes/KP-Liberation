@@ -1797,7 +1797,7 @@ class Mission
 			dataType="Marker";
 			position[]={3755.9561,-0.61900002,8564.8789};
 			name="capture_14";
-			text="Son Tetet Binh";
+			text="Son TeTeT Binh";
 			type="n_art";
 			colorName="ColorEAST";
 			id=222;

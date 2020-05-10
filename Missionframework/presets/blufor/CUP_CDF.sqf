@@ -69,13 +69,15 @@ infantry_units = [
 ];
 
 light_vehicles = [
+    ["CUP_B_S1203_Ambulance_CDF",75,0,50],                              // Škoda S1203 (Ambulance)
     ["CUP_B_UAZ_Unarmed_CDF",75,0,50],                                  // UAZ
     ["CUP_B_UAZ_MG_CDF",100,60,50],                                     // UAZ (DShKM)
     ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ (AGS-30)
     ["CUP_B_UAZ_SPG9_CDF",100,100,50],                                  // UAZ (SPG-9)
     ["CUP_B_UAZ_METIS_CDF",100,120,50],                                 // UAZ (Metis-M)
+    ["CUP_B_UAZ_AA_CDF",100,160,50],                                    // UAZ (AA)
     ["CUP_B_Ural_ZU23_CDF",150,300,100],                                // Ural (ZU-23)
-    ["CUP_B_BM21_CDF",225,500,100],                                     // BM-21
+    ["CUP_B_BM21_CDF",225,750,100],                                     // BM-21
     ["CUP_B_Kamaz_CDF",125,0,75],                                       // Kamaz 5350
     ["CUP_B_Kamaz_Open_CDF",125,0,75],                                  // Kamaz 5350 (Open)
     ["CUP_B_Ural_Open_CDF",125,0,75],                                   // Ural (Open)
@@ -86,11 +88,13 @@ heavy_vehicles = [
     ["CUP_B_BRDM2_CDF",200,200,125],                                    // BRDM-2
     ["CUP_B_BRDM2_ATGM_CDF",200,400,125],                               // BRDM-2 (ATGM)
     ["CUP_B_BTR60_CDF",300,200,125],                                    // BTR-60PB
+    ["CUP_B_BTR80_CDF",400,200,150],                                    // BTR-80
+    ["CUP_B_BTR80A_CDF",450,300,150],                                   // BTR-80A
     ["CUP_B_MTLB_pk_CDF",150,50,100],                                   // MT-LB LV
-    ["CUP_B_BMP2_CDF",400,300,200],                                     // BMP-2
+    ["CUP_B_BMP2_CDF",500,400,200],                                     // BMP-2
     ["CUP_B_ZSU23_Afghan_CDF",350,350,200],                             // ZSU-23-4 Afghanski
     ["CUP_B_ZSU23_CDF",450,350,200],                                    // ZSU-23-4
-    ["CUP_B_T72_CDF",600,400,200]                                       // T-72
+    ["CUP_B_T72_CDF",600,500,250]                                       // T-72
 ];
 
 air_vehicles = [
@@ -106,6 +110,7 @@ static_vehicles = [
     ["CUP_B_DSHkM_MiniTripod_CDF",25,40,0],                             // DShKM Minitripod
     ["CUP_B_AGS_CDF",25,60,0],                                          // AGS-30
     ["CUP_B_SPG9_CDF",50,100,0],                                        // SPG-9
+    ["CUP_B_Igla_AA_pod_CDF",100,200,0],                                // Igla AA Pod
     ["CUP_B_ZU23_CDF",100,300,0],                                       // ZU-23
     ["B_Mortar_01_F",80,150,0],                                         // Mk6 Mortar
     ["CUP_B_2b14_82mm_CDF",80,150,0],                                   // Podnos 2B14
@@ -118,9 +123,8 @@ buildings = [
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
-    ["Flag_US_F",0,0,0],
-    ["BWA3_Flag_Ger_F",0,0,0],
-    ["Flag_UK_F",0,0,0],
+    ["FlagCarrierCDFEnsign_EP1",0,0,0],
+    ["FlagCarrierCDF",0,0,0],
     ["Flag_White_F",0,0,0],
     ["Land_Medevac_house_V1_F",0,0,0],
     ["Land_Medevac_HQ_V1_F",0,0,0],
@@ -193,7 +197,7 @@ buildings = [
 ];
 
 support_vehicles = [
-    [Arsenal_typename,0,0,0],
+    [Arsenal_typename,100,200,0],
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],

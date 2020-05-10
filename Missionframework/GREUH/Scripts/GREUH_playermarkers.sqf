@@ -120,7 +120,7 @@ while { true } do {
 					_marker setMarkerColorLocal _color;
 				};
 
-				_marker setMarkerTextLocal format [ "%1", ( [ _nextai ] call F_getUnitPositionId )];
+				_marker setMarkerTextLocal format [ "%1", ( [ _nextai ] call KPLIB_fnc_getUnitPositionId )];
 			} foreach _marked_squadmates;
 
 			{
@@ -141,7 +141,7 @@ while { true } do {
 					if (isPlayer _x) then {
 						_vehiclename = _vehiclename + (name _x);
 					} else {
-						_vehiclename = _vehiclename + ( format [ "%1", [ _x ] call F_getUnitPositionId ] );
+						_vehiclename = _vehiclename + ( format [ "%1", [ _x ] call KPLIB_fnc_getUnitPositionId ] );
 					};
 
 					if( (_datcrew find _x) != ((count _datcrew) - 1) ) then {

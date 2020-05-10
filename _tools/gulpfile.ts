@@ -8,7 +8,7 @@ import * as del from "del";
 
 import { resolve } from "path";
 
-import { MissionPaths } from "./src";
+import { MissionPaths, uploadLegacy } from "./src";
 import { Preset, FolderStructureInfo } from "./src";
 
 
@@ -30,6 +30,7 @@ const paths: FolderStructureInfo = {
 let taskNames: string[] = [];
 let taskNamesPbo: string[] = [];
 let taskNamesZip: string[] = [];
+let taskNamesWorkshop: string[] = [];
 
 for (let preset of presets) {
     const mission = new MissionPaths(preset, paths);
@@ -72,13 +73,20 @@ for (let preset of presets) {
         function stringTableReplace () {
             // I know, replacing XML with regex... :|
             // https://regex101.com/r/TSfish/2
-            const versionRegex = /<Key ID="STR_MISSION_VERSION">\s*<Original>(?<version>.+)<\/Original>/;
+            const versionRegex = /(<Key ID="STR_MISSION_VERSION">\s*<Original>)(?<version>.+)(<\/Original>)/;
             const nameRegex = /(<Key ID="STR_MISSION_TITLE">\s*<Original>)(?<name>.+)(<\/Original>)/;
 
             return gulp.src(mission.getFrameworkPath().concat('/stringtable.xml'))
                 .pipe(gulpModify((content: string) => {
-                    const version: string = content.match(versionRegex)['groups']['version'];
+                    let version: string = content.match(versionRegex)['groups']['version'];
 
+                    // append commit hash and mark as dev version in PRs
+                    if ('pull_request' === process.env.GITHUB_EVENT_NAME) {
+                        content = content.replace(versionRegex, `$1${version}-${process.env.GITHUB_SHA}$3`);
+                        version = version.concat('-dev');
+                    }
+
+                    // add version number and map name to mission name
                     return content.replace(nameRegex, `$1CTI 34 KP Liberation ${preset.mapDisplay || preset.map} ${version}$3`);
                 }))
                 .pipe(gulp.dest(mission.getOutputDir(), { overwrite: true, }))
@@ -116,7 +124,8 @@ for (let preset of presets) {
         return gulp.src([
             resolve('..', './userconfig/**/*'),
             resolve('..', 'LICENSE.md'),
-            resolve('..', 'README.md')
+            resolve('..', 'README.md'),
+            resolve('..', 'CHANGELOG.md')
         ], {
                 base: resolve('..') // Change base dir to have correct relative paths in ZIP
             })
@@ -132,6 +141,18 @@ for (let preset of presets) {
             .pipe(gulp.dest(mission.getWorkDir()))
     });
 
+    if (!!preset.workshopId) {
+
+        taskNamesWorkshop.push('workshop_' + taskName);
+
+        gulp.task('workshop_' + taskName, async () => {
+            const pboPath = resolve(mission.getWorkDir(), 'pbo', mission.getFullName() + '.pbo');
+            console.log(pboPath);
+
+            await uploadLegacy(preset.workshopId, pboPath);
+        });
+    }
+
 
 }
 
@@ -146,6 +167,8 @@ gulp.task('build', gulp.series(taskNames));
 gulp.task('pbo', gulp.series(taskNamesPbo));
 
 gulp.task('zip', gulp.series(taskNamesZip));
+
+gulp.task('workshop', gulp.series(taskNamesWorkshop));
 
 gulp.task('default',
     gulp.series(

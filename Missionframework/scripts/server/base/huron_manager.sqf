@@ -1,62 +1,40 @@
-waitUntil {!isNil "GRLIB_all_fobs"};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
 
-firstloop = true;
 huron = objNull;
-_savedhuron = objNull;
+
+// Detect possible huron from loaded save data
+private _savedHuron = vehicles select {(toLower (typeOf _x)) isEqualTo (toLower huron_typename)};
+if !(_savedHuron isEqualTo []) then {
+    huron = _savedHuron select 0;
+};
 
 while {true} do {
-
-    {
-        if (typeof _x == huron_typename) then {
-            _savedhuron = _x;
-        };
-    } foreach vehicles;
-
-    if (firstloop && !isNull _savedhuron) then {
-        huron = _savedhuron;
-    } else {
+    // Spawn new huron if not loaded or destroyed
+    if !(alive huron) then {
         huron = huron_typename createVehicle [(getposATL huronspawn) select 0, (getposATL huronspawn) select 1, ((getposATL huronspawn) select 2) + 0.2];
         huron enableSimulationGlobal false;
         huron allowdamage false;
         huron setDir (getDir huronspawn);
         huron setPosATL (getposATL huronspawn);
+        huron setDamage 0;
+        sleep 0.5;
+        huron enableSimulationGlobal true;
+        huron setDamage 0;
+        huron allowdamage true;
+        [huron] call KPLIB_fnc_addObjectInit;
     };
-
-    firstloop = false;
-
-    huron AnimateDoor ["Door_rear_source", 1, true];
+    [huron] call KPLIB_fnc_clearCargo;
+    huron setVariable ["ace_medical_isMedicalVehicle", true, true];
     publicVariable "huron";
-    if(KP_liberation_clear_cargo) then {
-        clearWeaponCargoGlobal huron;
-        clearMagazineCargoGlobal huron;
-        clearItemCargoGlobal huron;
-        clearBackpackCargoGlobal huron;
-    };
-    huron setDamage 0;
-    sleep 0.5;
-    huron enableSimulationGlobal true;
-    huron setDamage 0;
-    huron setVariable ["ace_medical_medicClass", 1, true];
-    sleep 1.5;
 
-    huron setDamage 0;
-    huron allowdamage true;
+    // Wait until huron is destroyed to respawn it
+    waitUntil {sleep 5; !alive huron};
+    stats_spartan_respawns = stats_spartan_respawns + 1;
+    sleep 10;
 
-    if (alive huron) then {
-
-        waitUntil {
-            sleep 1;
-            !alive huron;
-        };
-        stats_spartan_respawns = stats_spartan_respawns + 1;
-        sleep 15;
-
-    };
-
+    // Delete wreck, if near startbase
     if (huron distance startbase < 500) then {
         deletevehicle huron;
     };
-    sleep 0.25;
 };

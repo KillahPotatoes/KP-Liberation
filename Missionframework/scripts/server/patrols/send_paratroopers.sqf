@@ -1,27 +1,42 @@
-params ["_targetsector"];
-private _targetpos = getMarkerPos _targetsector;
-private _spawnsector = ([sectors_airspawn, [_targetpos], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+params [
+    ["_targetsector", "", ["",[]]],
+    ["_chopper_type", objNull, [objNull]]
+];
 
-private _chopper_type = selectRandom opfor_choppers;
+if (_targetsector isEqualTo "" || opfor_choppers isEqualTo []) exitWith {false};
 
-while {!(_chopper_type in opfor_troup_transports)} do {
-	_chopper_type = selectRandom opfor_choppers;
+private _targetpos = _targetsector;
+if (_targetpos isEqualType "") then {
+    _targetpos = markerPos _targetsector;
 };
+private _spawnsector = ([sectors_airspawn, [_targetpos], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+private _newvehicle = objNull;
+private _pilot_group = grpNull;
+if (isNull _chopper_type) then {
+    _chopper_type = selectRandom opfor_choppers;
 
-private _newvehicle = createVehicle [_chopper_type, markerpos _spawnsector, [], 0, "FLY"];
-createVehicleCrew _newvehicle;
-sleep 0.1;
+    while {!(_chopper_type in opfor_troup_transports)} do {
+        _chopper_type = selectRandom opfor_choppers;
+    };
 
-private _pilot_group = createGroup [GRLIB_side_enemy, true];
-(crew _newvehicle) joinSilent _pilot_group;
+    _newvehicle = createVehicle [_chopper_type, markerpos _spawnsector, [], 0, "FLY"];
+    createVehicleCrew _newvehicle;
+    sleep 0.1;
+
+    _pilot_group = createGroup [GRLIB_side_enemy, true];
+    (crew _newvehicle) joinSilent _pilot_group;
+
+    _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _newvehicle);
+} else {
+    _newvehicle = _chopper_type;
+    _pilot_group = group _newvehicle;
+};
 
 private _para_group = createGroup [GRLIB_side_enemy, true];
 
-_newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-{_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _newvehicle);
-
 while {(count (units _para_group)) < 8} do {
-	opfor_paratrooper createUnit [getmarkerpos _spawnsector, _para_group, "this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]"];
+    [opfor_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
 };
 
 {removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle;} forEach (units _para_group);
@@ -72,15 +87,15 @@ _pilot_group setCurrentWaypoint [_para_group, 1];
 _newvehicle flyInHeight 100;
 
 waitUntil {sleep 1;
-	!(alive _newvehicle) || (damage _newvehicle > 0.2 ) || (_newvehicle distance _targetpos < 400 )
+    !(alive _newvehicle) || (damage _newvehicle > 0.2 ) || (_newvehicle distance _targetpos < 400)
 };
 
 _newvehicle flyInHeight 100;
 
 {
-	unassignVehicle _x;
-	moveout _x;
-	sleep 0.5;
+    unassignVehicle _x;
+    moveout _x;
+    sleep 0.5;
 } forEach (units _para_group);
 
 _newvehicle flyInHeight 100;
