@@ -186,7 +186,7 @@ KPLIB_transportConfigs = [
 ];
 
 // Large storage area placement position offsets.
-KP_liberation_large_storage_positions = [
+KPLIB_large_storage_positions = [
     [-5.59961,3.60938,0.6],
     [-3.99902,3.60938,0.6],
     [-2.39941,3.60938,0.6],
@@ -230,7 +230,7 @@ KP_liberation_large_storage_positions = [
 ];
 
 // Small storage area placement position offsets.
-KP_liberation_small_storage_positions = [
+KPLIB_small_storage_positions = [
     [-2.34961,1.80078,0.6],
     [-0.75,1.80078,0.6],
     [0.850586,1.80078,0.6],

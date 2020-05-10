@@ -53,7 +53,7 @@
     29 = SFP (Desert)
     30 = LDF (Contact DLC)
 */
-KP_liberation_preset_blufor = 0;
+KPLIB_preset_blufor = 0;
 
 /*
     ----- Enemy preset -----
@@ -79,7 +79,7 @@ KP_liberation_preset_blufor = 0;
     19 = CUP British Armed Forces (Desert)
     20 = CUP British Armed Forces (Woodland)
 */
-KP_liberation_preset_opfor = 0;
+KPLIB_preset_opfor = 0;
 
 /*
     ----- Resistance preset -----
@@ -93,7 +93,7 @@ KP_liberation_preset_opfor = 0;
     7  = CUP Takistani Locals
     8  = CUP National Party of Chernarus
 */
-KP_liberation_preset_resistance = 0;
+KPLIB_preset_resistance = 0;
 
 /*
     ----- Civilians preset -----
@@ -106,7 +106,7 @@ KP_liberation_preset_resistance = 0;
     6  = CUP Takistani Civilians
     7  = CUP Chernarussian Civilians
 */
-KP_liberation_preset_civilians = 0;
+KPLIB_preset_civilians = 0;
 
 /*
     ----- Arsenal preset -----
@@ -121,7 +121,7 @@ KP_liberation_preset_civilians = 0;
     8  = SFP arsenal preset
     9  = BWMod arsenal preset
 */
-KP_liberation_arsenal = 0;
+KPLIB_arsenal = 0;
 
 
 /*
@@ -169,7 +169,7 @@ KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 KPLIB_paramSaveKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
 
 // Interval in seconds for automatic save.
-KP_liberation_save_interval = 60;
+KPLIB_save_interval = 60;
 
 
 /*
@@ -229,25 +229,25 @@ KPLIB_civilians_amount = 10;
 */
 
 // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_kill_penalty = 5;
+KPLIB_cr_kill_penalty = 5;
 
 // Civil Reputation penalty for destroying/damaging a building.
-KP_liberation_cr_building_penalty = 3;
+KPLIB_cr_building_penalty = 3;
 
 // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_vehicle_penalty = 2;
+KPLIB_cr_vehicle_penalty = 2;
 
 // Civil Reputation penalty for killing a friendly resistance soldier.
-KP_liberation_cr_resistance_penalty = 3;
+KPLIB_cr_resistance_penalty = 3;
 
 // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_sector_gain = 5;
+KPLIB_cr_sector_gain = 5;
 
 // Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_chance = 35;
+KPLIB_cr_wounded_chance = 35;
 
 // Civil Reputation gain for providing medical assistance for wounded civilians.
-KP_liberation_cr_wounded_gain = 2;
+KPLIB_cr_wounded_gain = 2;
 
 
 /*
@@ -267,25 +267,25 @@ KPLIB_secondary_missions_costs = [15, 10, 8];
 KPLIB_secondary_objective_impact = 0.4;
 
 // Minimum time until a civil Informant can spawn. (seconds)
-KP_liberation_civinfo_min = 5400;
+KPLIB_civinfo_min = 5400;
 
 // Maximum time until a civil Informant spawns. (seconds)
-KP_liberation_civinfo_max = 10800;
+KPLIB_civinfo_max = 10800;
 
 // Civil Informant spawn chance. (0-100)
-KP_liberation_civinfo_chance = 75;
+KPLIB_civinfo_chance = 75;
 
 // Intel gain for talking to a civil informant.
-KP_liberation_civinfo_intel = 5;
+KPLIB_civinfo_intel = 5;
 
 // Time until a civil informant will despawn after spawning. (seconds)
-KP_liberation_civinfo_duration = 1200;
+KPLIB_civinfo_duration = 1200;
 
 // Chance (0-100) that the delivered informant will spawn a time critical task
-KP_liberation_civinfo_task_chance = 40;
+KPLIB_civinfo_task_chance = 40;
 
 // Time until the task will despawn if no player is near. (seconds)
-KP_liberation_civinfo_task_duration = 900;
+KPLIB_civinfo_task_duration = 900;
 
 
 /*
@@ -296,13 +296,13 @@ KP_liberation_civinfo_task_duration = 900;
 */
 
 // Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine.
-KP_liberation_fuel_neutral = 180;
+KPLIB_fuel_neutral = 180;
 
 // Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
-KP_liberation_fuel_normal = 90;
+KPLIB_fuel_normal = 90;
 
 // Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
-KP_liberation_fuel_max = 45;
+KPLIB_fuel_max = 45;
 
 
 /*
@@ -313,25 +313,25 @@ KP_liberation_fuel_max = 45;
 */
 
 // Chance (0-100) that a logistic convoy will be ambushed, when civil reputation is low. (Checked every minute)
-KP_liberation_convoy_ambush_chance = 2;
+KPLIB_convoy_ambush_chance = 2;
 
 // Duration of the convoy ambush event until nothing can be retrieved. (seconds)
-KP_liberation_convoy_ambush_duration = 1200;
+KPLIB_convoy_ambush_duration = 1200;
 
 // Resistance strength (0-100) needed for tier 2 equipment.
-KP_liberation_resistance_tier2 = 30;
+KPLIB_resistance_tier2 = 30;
 
 // Resistance strength (0-100) needed for tier 3 equipment.
-KP_liberation_resistance_tier3 = 70;
+KPLIB_resistance_tier3 = 70;
 
 // Chance (0-100) that a resistance unit has a RPG. (tier 2 and 3)
-KP_liberation_resistance_at_chance = 20;
+KPLIB_resistance_at_chance = 20;
 
 // Chance (0-100) that a resistance squad will join an ongoing sector attack.
-KP_liberation_resistance_sector_chance = 35;
+KPLIB_resistance_sector_chance = 35;
 
 // Chance that some resistance units will spawn in blufor sectors for an ambush, if reputation is low.
-KP_liberation_resistance_ambush_chance = 25;
+KPLIB_resistance_ambush_chance = 25;
 
 
 /*
@@ -342,7 +342,7 @@ KP_liberation_resistance_ambush_chance = 25;
 */
 
 // Time in minutes until a resource crate is produced, when resources multiplier is set to 1.
-KP_liberation_production_interval = 30;
+KPLIB_production_interval = 30;
 
 // Percentage of resources you get back from recycling.
 KPLIB_recycling_percentage = 0.5;
@@ -357,14 +357,14 @@ KPLIB_vulnerability_timer = 1200;
 KPLIB_surrender_chance = 80;
 
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
-KP_liberation_battlegroup_clearance = [
+KPLIB_battlegroup_clearance = [
     "song_bin_tanh"
 ];
 
 /* Slot independent commander action access.
 The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
 even if they are not in the commander slot. */
-KP_liberation_commander_actions = [
+KPLIB_commander_actions = [
     /*
     Example:
     "1324678",
@@ -375,7 +375,7 @@ KP_liberation_commander_actions = [
 
 /* Whitelist for BI support framework access.
 Same format as for the commander actions. */
-KP_liberation_suppMod_whitelist = [
+KPLIB_suppMod_whitelist = [
 
 ];
 
@@ -383,7 +383,7 @@ KP_liberation_suppMod_whitelist = [
 // Adjustments calculation depending on selected mission parameters (shouldn't be edited)
 KPLIB_endgame                       = 0;
 KPLIB_respawn_marker                = "respawn";
-KP_liberation_production_interval   = ceil (KP_liberation_production_interval / KPLIB_resources_multiplier);
+KPLIB_production_interval   = ceil (KPLIB_production_interval / KPLIB_resources_multiplier);
 KPLIB_battlegroup_size              = KPLIB_battlegroup_size * (sqrt KPLIB_unitcap) * (sqrt KPLIB_csat_aggressivity);
 KPLIB_civilians_amount              = KPLIB_civilians_amount * KPLIB_civilian_activity;
 KPLIB_blufor_cap                    = (KPLIB_blufor_cap * KPLIB_unitcap) min 100;

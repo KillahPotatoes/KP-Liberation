@@ -1,6 +1,6 @@
 if (!isDedicated) exitWith {};
 
-_serverDuration = (KP_liberation_restart * 60 * 60);
+_serverDuration = (KPLIB_restart * 60 * 60);
 
 [format ["Restart Timer Set To %1", _serverDuration], "RESTART"] call KPLIB_fnc_log;
 

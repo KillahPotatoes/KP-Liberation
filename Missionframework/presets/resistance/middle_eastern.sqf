@@ -10,7 +10,7 @@
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
-KP_liberation_guerilla_units = [
+KPLIB_guerilla_units = [
     "LOP_AM_Infantry_SL",
     "LOP_AM_Infantry_Rifleman",
     "LOP_AM_Infantry_Rifleman_2",
@@ -22,7 +22,7 @@ KP_liberation_guerilla_units = [
 ];
 
 // Armed vehicles
-KP_liberation_guerilla_vehicles = [
+KPLIB_guerilla_vehicles = [
     "LOP_AM_UAZ_DshKM"
 ];
 
@@ -32,13 +32,13 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 = [
+KPLIB_guerilla_weapons_1 = [
     ["rhs_weap_ak74","rhs_30rnd_545x39_AK",4,"",""],
     ["rhs_weap_aks74u","rhs_30rnd_545x39_AK",4,"",""],
     ["LOP_Weap_LeeEnfield","LOP_10rnd_77mm_mag",3,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 = [
+KPLIB_guerilla_weapons_2 = [
     ["rhs_weap_ak74","rhs_30rnd_545x39_AK",4,"",""],
     ["rhs_weap_akm","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_akms","rhs_30rnd_762x39mm",4,"",""],
@@ -47,7 +47,7 @@ KP_liberation_guerilla_weapons_2 = [
     ["LOP_Weap_LeeEnfield_railed","LOP_10rnd_77mm_mag",3,"optic_ACO_grn",""]
 ];
 
-KP_liberation_guerilla_weapons_3 = [
+KPLIB_guerilla_weapons_3 = [
     ["rhs_weap_ak103","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_ak104","rhs_30rnd_762x39mm",4,"",""],
     ["rhs_weap_ak105","rhs_30rnd_545x39_AK",4,"rhs_acc_ekp1",""],
@@ -57,7 +57,7 @@ KP_liberation_guerilla_weapons_3 = [
 ];
 
 // Uniforms
-KP_liberation_guerilla_uniforms_1 = [
+KPLIB_guerilla_uniforms_1 = [
     "LOP_U_TAK_Civ_Fatigue_01",
     "LOP_U_TAK_Civ_Fatigue_02",
     "LOP_U_TAK_Civ_Fatigue_04",
@@ -75,7 +75,7 @@ KP_liberation_guerilla_uniforms_1 = [
     "LOP_U_TAK_Civ_Fatigue_16"
 ];
 
-KP_liberation_guerilla_uniforms_2 = [
+KPLIB_guerilla_uniforms_2 = [
     "LOP_U_TAK_Civ_Fatigue_01",
     "LOP_U_TAK_Civ_Fatigue_02",
     "LOP_U_TAK_Civ_Fatigue_04",
@@ -93,7 +93,7 @@ KP_liberation_guerilla_uniforms_2 = [
     "LOP_U_TAK_Civ_Fatigue_16"
 ];
 
-KP_liberation_guerilla_uniforms_3 = [
+KPLIB_guerilla_uniforms_3 = [
     "LOP_U_TAK_Civ_Fatigue_01",
     "LOP_U_TAK_Civ_Fatigue_02",
     "LOP_U_TAK_Civ_Fatigue_04",
@@ -112,11 +112,11 @@ KP_liberation_guerilla_uniforms_3 = [
 ];
 
 // Vests
-KP_liberation_guerilla_vests_1 = [
+KPLIB_guerilla_vests_1 = [
     ""
 ];
 
-KP_liberation_guerilla_vests_2 = [
+KPLIB_guerilla_vests_2 = [
     "",
     "V_LegStrapBag_black_F",
     "V_LegStrapBag_coyote_F",
@@ -124,7 +124,7 @@ KP_liberation_guerilla_vests_2 = [
     "LOP_6sh46"
 ];
 
-KP_liberation_guerilla_vests_3 = [
+KPLIB_guerilla_vests_3 = [
     "",
     "V_LegStrapBag_black_F",
     "V_LegStrapBag_coyote_F",
@@ -136,7 +136,7 @@ KP_liberation_guerilla_vests_3 = [
 ];
 
 // Headgear
-KP_liberation_guerilla_headgear_1 = [
+KPLIB_guerilla_headgear_1 = [
     "",
     "",
     "H_HeadBandage_clean_F",
@@ -151,7 +151,7 @@ KP_liberation_guerilla_headgear_1 = [
     "H_Bandanna_camo"
 ];
 
-KP_liberation_guerilla_headgear_2 = [
+KPLIB_guerilla_headgear_2 = [
     "",
     "H_HeadBandage_clean_F",
     "H_HeadBandage_stained_F",
@@ -166,7 +166,7 @@ KP_liberation_guerilla_headgear_2 = [
     "LOP_H_Turban_mask"
 ];
 
-KP_liberation_guerilla_headgear_3 = [
+KPLIB_guerilla_headgear_3 = [
     "LOP_H_Turban",
     "LOP_H_Turban_mask",
     "H_Shemag_olive",
@@ -182,6 +182,6 @@ KP_liberation_guerilla_headgear_3 = [
 ];
 
 // Facegear. Applies for tier 2 and 3.
-KP_liberation_guerilla_facegear = [
+KPLIB_guerilla_facegear = [
     ""
 ];

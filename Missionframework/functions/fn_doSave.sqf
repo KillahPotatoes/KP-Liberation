@@ -22,12 +22,12 @@ if (!KPLIB_init) exitWith {
     false
 };
 
-if (missionNamespace getVariable ["kp_liberation_saving", false]) exitWith {
+if (missionNamespace getVariable ["KPLIB_saving", false]) exitWith {
     ["Saving already in progress, skipping save!", "SAVE"] call KPLIB_fnc_log;
     false
 };
 
-kp_liberation_saving = true;
+KPLIB_saving = true;
 
 private _saveData = [] call KPLIB_fnc_getSaveData;
 
@@ -35,6 +35,6 @@ private _saveData = [] call KPLIB_fnc_getSaveData;
 profileNamespace setVariable [KPLIB_save_key, str _saveData];
 saveProfileNamespace;
 
-kp_liberation_saving = false;
+KPLIB_saving = false;
 
 true

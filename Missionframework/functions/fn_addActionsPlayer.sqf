@@ -21,7 +21,7 @@ params [
 
 if !(isPlayer _player) exitWith {["No player given"] call BIS_fnc_error; false};
 
-if (isNil "KP_liberation_resources_global") then {KP_liberation_resources_global = false;};
+if (isNil "KPLIB_resources_global") then {KPLIB_resources_global = false;};
 
 // Tutorial
 _player addAction [
@@ -169,7 +169,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSTORAGEBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    [KP_liberation_small_storage_building],
+    [KPLIB_small_storage_building],
     -770,
     false,
     true,
@@ -259,7 +259,7 @@ _player addAction [
 // Switch global/local resources
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_RESOURCE_GLOBAL_ACTION", "</t>"] joinString "",
-    {KP_liberation_resources_global = !KP_liberation_resources_global},
+    {KPLIB_resources_global = !KPLIB_resources_global},
     nil,
     -810,
     false,
@@ -285,7 +285,7 @@ _player addAction [
         _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
-        && {!(KP_liberation_production isEqualTo [])}
+        && {!(KPLIB_production isEqualTo [])}
         && {
             _originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_fob_range * 0.8)
             || {!(_originalTarget getVariable ['KPLIB_nearProd', []] isEqualTo [])}
@@ -304,14 +304,14 @@ _player addAction [
     true,
     "",
     "
-        KP_liberation_ailogistics
+        KPLIB_ailogistics
         && {_originalTarget getVariable ['KPLIB_hasDirectAccess', false]}
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_fob_range * 0.8)}
         && {!(
             KPLIB_all_fobs isEqualTo []
-            || KP_liberation_production isEqualTo []
+            || KPLIB_production isEqualTo []
         )}
         && {build_confirmed isEqualTo 0}
     "

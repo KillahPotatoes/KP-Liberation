@@ -18,7 +18,7 @@ if !(_spawn_marker isEqualTo "") then {
 
     [_spawn_marker] remoteExec ["remote_call_battlegroup"];
 
-    if (worldName in KP_liberation_battlegroup_clearance) then {
+    if (worldName in KPLIB_battlegroup_clearance) then {
         [markerPos _spawn_marker, 15] call KPLIB_fnc_createClearance;
     };
 

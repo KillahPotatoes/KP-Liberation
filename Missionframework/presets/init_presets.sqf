@@ -8,7 +8,7 @@ if (isServer) then {
     ["Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.", "PRESETS"] call KPLIB_fnc_log;
 };
 
-switch (KP_liberation_preset_blufor) do {
+switch (KPLIB_preset_blufor) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_mtp.sqf";};
     case  3: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\3cbBAF_des.sqf";};
@@ -42,7 +42,7 @@ switch (KP_liberation_preset_blufor) do {
     default  {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
-switch (KP_liberation_preset_opfor) do {
+switch (KPLIB_preset_opfor) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf.sqf";};
     case  3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan.sqf";};
@@ -66,7 +66,7 @@ switch (KP_liberation_preset_opfor) do {
     default  {[] call compileFinal preprocessFileLineNumbers "presets\opfor\custom.sqf";};
 };
 
-switch (KP_liberation_preset_resistance) do {
+switch (KPLIB_preset_resistance) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\rhs_gref.sqf";};
     case  3: {[] call compileFinal preprocessFileLineNumbers "presets\resistance\middle_eastern.sqf";};
@@ -78,7 +78,7 @@ switch (KP_liberation_preset_resistance) do {
     default  {[] call compileFinal preprocessFileLineNumbers "presets\resistance\custom.sqf";};
 };
 
-switch (KP_liberation_preset_civilians) do {
+switch (KPLIB_preset_civilians) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\apex.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\middle_eastern.sqf";};
     case  3: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\RDSCiv.sqf";};
@@ -193,8 +193,8 @@ opfor_choppers                              = opfor_choppers                    
 opfor_air                                   = opfor_air                                 select {[_x] call KPLIB_fnc_checkClass};
 
 // Resistance
-KP_liberation_guerilla_units                = KP_liberation_guerilla_units              select {[_x] call KPLIB_fnc_checkClass};
-KP_liberation_guerilla_vehicles             = KP_liberation_guerilla_vehicles           select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_guerilla_units                = KPLIB_guerilla_units              select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_guerilla_vehicles             = KPLIB_guerilla_vehicles           select {[_x] call KPLIB_fnc_checkClass};
 
 // Civilians
 civilians                                   = civilians                                 select {[_x] call KPLIB_fnc_checkClass};
@@ -233,10 +233,10 @@ KPLIB_o_squadAir    = [opfor_squad_leader, opfor_medic, opfor_machinegunner, opf
     Liberation specific collections
 */
 KPLIB_buildList         = [[], infantry_units, light_vehicles, heavy_vehicles, air_vehicles, static_vehicles, buildings, support_vehicles, KPLIB_b_allSquads];
-KPLIB_crates            = [KP_liberation_supply_crate, KP_liberation_ammo_crate, KP_liberation_fuel_crate];
-KPLIB_airSlots          = [KP_liberation_heli_slot_building, KP_liberation_plane_slot_building];
-KPLIB_storageBuildings  = [KP_liberation_small_storage_building, KP_liberation_large_storage_building];
-KPLIB_upgradeBuildings  = [KP_liberation_recycle_building, KP_liberation_air_vehicle_building, KP_liberation_heli_slot_building, KP_liberation_plane_slot_building];
+KPLIB_crates            = [KPLIB_supply_crate, KPLIB_ammo_crate, KPLIB_fuel_crate];
+KPLIB_airSlots          = [KPLIB_heli_slot_building, KPLIB_plane_slot_building];
+KPLIB_storageBuildings  = [KPLIB_small_storage_building, KPLIB_large_storage_building];
+KPLIB_upgradeBuildings  = [KPLIB_recycle_building, KPLIB_air_vehicle_building, KPLIB_heli_slot_building, KPLIB_plane_slot_building];
 KPLIB_aiResupplySources append [Respawn_truck_typename, huron_typename, Arsenal_typename];
 
 KPLIB_crates            = KPLIB_crates              apply {toLower _x};

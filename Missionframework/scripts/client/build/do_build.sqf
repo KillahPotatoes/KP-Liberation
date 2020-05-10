@@ -40,7 +40,7 @@ while { true } do {
         _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
         _nearfob = [] call KPLIB_fnc_getNearestFob;
-        _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+        _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
 
         [_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
     };
@@ -89,7 +89,7 @@ while { true } do {
             if (buildtype == 6 ) then {
                 _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
             };
-            if (buildtype == 6 || buildtype == 99  || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
+            if (buildtype == 6 || buildtype == 99  || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_recycle_building || _classname isEqualTo KPLIB_air_vehicle_building) then {
                 _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>",{gridmode = gridmode + 1;},"",-735,false,false,"","build_confirmed == 1"];
                 _idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
             };
@@ -105,7 +105,7 @@ while { true } do {
             _vehicle allowdamage false;
             _vehicle setVehicleLock "LOCKED";
             _vehicle enableSimulationGlobal false;
-            _vehicle setVariable ["KP_liberation_preplaced", true, true];
+            _vehicle setVariable ["KPLIB_preplaced", true, true];
 
             _dist = 0.6 * (sizeOf _classname);
             if (_dist < 3.5) then { _dist = 3.5 };
@@ -214,7 +214,7 @@ while { true } do {
                             _vehicle setpos _truepos;
                         };
                     };
-                    if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
+                    if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_recycle_building || _classname isEqualTo KPLIB_air_vehicle_building) then {
                         if (KP_vector) then {
                             _vehicle setVectorUp [0,0,1];
                         } else {
@@ -268,7 +268,7 @@ while { true } do {
                 _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
                 _nearfob = [] call KPLIB_fnc_getNearestFob;
-                _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0};
+                _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
 
                 _supplyCrates = ceil (_price_s / 100);
                 _ammoCrates = ceil (_price_a / 100);
@@ -278,11 +278,11 @@ while { true } do {
                 _spaceSum = 0;
 
                 {
-                    if (typeOf _x == KP_liberation_large_storage_building) then {
-                        _spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+                    if (typeOf _x == KPLIB_large_storage_building) then {
+                        _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                     };
-                    if (typeOf _x == KP_liberation_small_storage_building) then {
-                        _spaceSum = _spaceSum + (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+                    if (typeOf _x == KPLIB_small_storage_building) then {
+                        _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                     };
                 } forEach _storage_areas;
 
@@ -313,7 +313,7 @@ while { true } do {
 
                 [_vehicle] call KPLIB_fnc_clearCargo;
 
-                if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KP_liberation_recycle_building || _classname isEqualTo KP_liberation_air_vehicle_building) then {
+                if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_recycle_building || _classname isEqualTo KPLIB_air_vehicle_building) then {
                     if (KP_vector) then {
                         _vehicle setVectorUp [0,0,1];
                     } else {

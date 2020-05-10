@@ -14,7 +14,7 @@
 ------------------------------------------------------------
     --- Default arsenal blacklist ---
     Useless if you're using anything other than
-    "kp_liberation_arsenal = 0;" in KPLIB_config.sqf.
+    "KPLIB_arsenal = 0;" in KPLIB_config.sqf.
     A whitelisted arsenal is always more performance
     friendly then a blacklisted arsenal.
 
@@ -153,7 +153,7 @@ blacklisted_from_arsenal = [
 ];
 
 // Classnames of items which are always added to each arsenal list (handy for generic classnames)
-KP_liberation_allowed_items_extension = [
+KPLIB_allowed_items_extension = [
     "ACE_Chemlight_Shield_Blue",
     "ACE_Chemlight_Shield_Green",
     "ACE_Chemlight_Shield_Orange",
@@ -263,7 +263,7 @@ KP_liberation_allowed_items_extension = [
 ];
 
 // Vehicle classnames which also function as ACE medical vehicles.
-KP_liberation_medical_vehicles = [
+KPLIB_medical_vehicles = [
     "B_T_Truck_01_medical_F",
     "B_Truck_01_medical_F",
     "C_Van_02_medevac_F",
@@ -312,7 +312,7 @@ KP_liberation_medical_vehicles = [
 ];
 
 // Building classnames which also function as ACE medical facilities.
-KP_liberation_medical_facilities = [
+KPLIB_medical_facilities = [
     "Land_Medevac_house_V1_F",
     "Land_Medevac_HQ_V1_F",
     "LAND_uns_army_med",
@@ -324,7 +324,7 @@ KP_liberation_medical_facilities = [
 ];
 
 // Classnames of ACE crates
-KP_liberation_ace_crates = [
+KPLIB_ace_crates = [
     "ACE_Box_82mm_Mo_HE",
     "ACE_Box_82mm_Mo_Illum",
     "ACE_Box_82mm_Mo_Smoke",
@@ -532,7 +532,7 @@ boats_names = [
 ];
 
 // Classnames of artillery vehicles, which should be added to the support module
-KP_liberation_suppMod_artyVeh = [
+KPLIB_suppMod_artyVeh = [
     "B_G_Mortar_01_F",
     "B_MBT_01_arty_F",
     "B_MBT_01_mlrs_F",

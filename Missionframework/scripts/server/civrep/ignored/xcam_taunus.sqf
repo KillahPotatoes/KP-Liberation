@@ -1,4 +1,4 @@
-KP_liberation_cr_ign_buildings = [
+KPLIB_cr_ign_buildings = [
 	"Land_A_Castle_Bastion",
 	"Land_A_Castle_Gate",
 	"Land_A_Castle_Stairs_A",

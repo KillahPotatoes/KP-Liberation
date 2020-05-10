@@ -85,11 +85,11 @@ while {true} do {
             _area_load = count (attachedObjects _x);
 
             if (!(_next_area in _managed_areas) && (_area_load > 0)) then {
-                    _action_id = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_SUPPLY" + "</t>",{[KP_liberation_supply_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-504,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
+                    _action_id = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_SUPPLY" + "</t>",{[KPLIB_supply_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-504,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
                     _next_area setVariable ["KP_supply_unstore_action", _action_id, false];
-                    _action_id2 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_AMMO" + "</t>",{[KP_liberation_ammo_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-505,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
+                    _action_id2 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_AMMO" + "</t>",{[KPLIB_ammo_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-505,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
                     _next_area setVariable ["KP_ammo_unstore_action", _action_id2, false];
-                    _action_id3 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_FUEL" + "</t>",{[KP_liberation_fuel_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-506,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
+                    _action_id3 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_UNSTORE_FUEL" + "</t>",{[KPLIB_fuel_crate, (_this select 0), true] call KPLIB_fnc_crateFromStorage;},"",-506,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
                     _next_area setVariable ["KP_fuel_unstore_action", _action_id3, false];
                     _action_id4 = _next_area addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_SORT_STORAGE" + "</t>",{[(_this select 0)] call KPLIB_fnc_sortStorage;},"",-507,true,true,"","build_confirmed == 0 && (_this distance _target < 12) && (vehicle player == player)"];
                     _next_area setVariable ["KP_storage_sort_action", _action_id4, false];

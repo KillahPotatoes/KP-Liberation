@@ -1,6 +1,6 @@
 private ["_vector", "_idactcancel", "_idactplace", "_idactvector", "_ghost_spot", "_truedir", "_dist", "_truepos", "_sectorpos", "_building"];
 
-if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
+if (((_this select 3) select 0) == KPLIB_small_storage_building) then {
 
     _truepos = [];
 
@@ -86,7 +86,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
             _building setVectorUp surfaceNormal position _building;
         };
 
-        _building setVariable ["KP_liberation_storage_type", 1, true];
+        _building setVariable ["KPLIB_storage_type", 1, true];
 
         sleep 0.3;
         _building allowDamage true;

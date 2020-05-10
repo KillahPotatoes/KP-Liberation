@@ -1,4 +1,4 @@
-KP_liberation_cr_ign_buildings = [
+KPLIB_cr_ign_buildings = [
     "Land_Bunker_02_double_F",
     "Land_Bunker_02_left_F",
     "Land_Bunker_02_light_double_F",

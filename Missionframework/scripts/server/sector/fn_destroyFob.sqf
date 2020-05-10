@@ -32,7 +32,7 @@ _buildings append KPLIB_b_buildings_classes;
     };
 } forEach ((_fobPos nearObjects (KPLIB_fob_range * 1.2)) select {getObjectType _x >= 8});
 
-KP_liberation_clearances deleteAt (KP_liberation_clearances findIf {(_x select 0) isEqualTo _fobPos});
-publicVariable "KP_liberation_clearances";
+KPLIB_clearances deleteAt (KPLIB_clearances findIf {(_x select 0) isEqualTo _fobPos});
+publicVariable "KPLIB_clearances";
 
 true

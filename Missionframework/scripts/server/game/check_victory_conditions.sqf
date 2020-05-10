@@ -1,6 +1,6 @@
 sleep 5;
 
-if ([] call KP_liberation_victoryCheck && KPLIB_endgame != 1) then {
+if ([] call KPLIB_victoryCheck && KPLIB_endgame != 1) then {
     KPLIB_endgame = 1;
     publicVariable "KPLIB_endgame";
     {_x allowDamage false; (vehicle _x) allowDamage false;} forEach allPlayers;

@@ -12,7 +12,7 @@ start_secondary_remote_call = compileFinal preprocessFileLineNumbers "scripts\se
 zeus_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\zeus_remote_call.sqf";
 change_prod_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\change_prod_remote_call.sqf";
 build_fac_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\build_fac_remote_call.sqf";
-if (KP_liberation_ailogistics) then {
+if (KPLIB_ailogistics) then {
     add_logiGroup_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\add_logiGroup_remote_call.sqf";
     del_logiGroup_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\del_logiGroup_remote_call.sqf";
     add_logiTruck_remote_call = compileFinal preprocessFileLineNumbers "scripts\server\remotecall\add_logiTruck_remote_call.sqf";

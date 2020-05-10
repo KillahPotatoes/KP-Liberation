@@ -28,7 +28,7 @@ private _squad3 = [];
 private _squad4 = [];
 private _minimum_building_positions = 5;
 private _sector_despawn_tickets = BASE_TICKETS;
-private _maximum_additional_tickets = (KP_liberation_delayDespawnMax * 60 / SECTOR_TICK_TIME);
+private _maximum_additional_tickets = (KPLIB_delayDespawnMax * 60 / SECTOR_TICK_TIME);
 private _popfactor = 1;
 private _guerilla = false;
 
@@ -61,7 +61,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
         _spawncivs = true;
 
-        if (((random 100) <= KP_liberation_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
+        if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
         };
 
@@ -69,8 +69,8 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         _building_range = 200;
         _local_capture_size = _local_capture_size * 1.4;
 
-        if (KP_liberation_civ_rep < 0) then {
-            _iedcount = round (2 + (ceil (random 4)) * (round ((KP_liberation_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
+        if (KPLIB_civ_rep < 0) then {
+            _iedcount = round (2 + (ceil (random 4)) * (round ((KPLIB_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
         } else {
             _iedcount = 0;
         };
@@ -95,15 +95,15 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
         _spawncivs = true;
 
-        if (((random 100) <= KP_liberation_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
+        if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
         };
 
         _building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
         _building_range = 120;
 
-        if (KP_liberation_civ_rep < 0) then {
-            _iedcount = round ((ceil (random 4)) * (round ((KP_liberation_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
+        if (KPLIB_civ_rep < 0) then {
+            _iedcount = round ((ceil (random 4)) * (round ((KPLIB_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
         } else {
             _iedcount = 0;
         };
@@ -139,15 +139,15 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
         _spawncivs = false;
 
-        if (((random 100) <= KP_liberation_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
+        if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
         };
 
         _building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
         _building_range = 120;
 
-        if (KP_liberation_civ_rep < 0) then {
-            _iedcount = round ((ceil (random 3)) * (round ((KP_liberation_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
+        if (KPLIB_civ_rep < 0) then {
+            _iedcount = round ((ceil (random 3)) * (round ((KPLIB_civ_rep * -1) / 33)) * KPLIB_difficulty_modifier);
         } else {
             _iedcount = 0;
         };
@@ -168,7 +168,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
     _vehtospawn = _vehtospawn select {!(isNil "_x")};
 
-    if (KP_liberation_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     if (_building_ai_max > 0 && KPLIB_adaptive_opfor) then {
         _building_ai_max = round (_building_ai_max * ([] call KPLIB_fnc_getOpforFactor));
@@ -188,7 +188,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         {
             _buildingpositions = _buildingpositions + ([_x] call BIS_fnc_buildingPositions);
         } forEach _allbuildings;
-        if (KP_liberation_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
+        if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
         if (count _buildingpositions > _minimum_building_positions) then {
             _managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sector] call KPLIB_fnc_spawnBuildingSquad);
         };
@@ -224,7 +224,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         _managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
     };
 
-    if (KP_liberation_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
     [_sector, _building_range, _iedcount] spawn ied_manager;
 
     if (_guerilla) then {
@@ -237,7 +237,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         [_sector] remoteExec ["reinforcements_remote_call",2];
     };
 
-    if (KP_liberation_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     private _activationTime = time;
     // sector lifetime loop

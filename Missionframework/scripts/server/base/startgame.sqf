@@ -19,7 +19,7 @@ if (KPLIB_all_fobs isEqualTo []) then {
         // Spawn FOB box and wait until the first FOB was built
         private _fobbox = objNull;
         while {KPLIB_all_fobs isEqualTo []} do {
-            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KP_liberation_fob_vehicle) createVehicle (getposATL base_boxspawn);
+            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KPLIB_fob_vehicle) createVehicle (getposATL base_boxspawn);
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
             [_fobbox, true] call KPLIB_fnc_clearCargo;
@@ -37,7 +37,7 @@ if (KPLIB_all_fobs isEqualTo []) then {
 
     // Wait a short time before paradropping the start resource crates
     waitUntil {sleep 1; !(KPLIB_all_fobs isEqualTo [])};
-    if (KP_liberation_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
+    if (KPLIB_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
         waitUntil {sleep 1; ["KPLIB_Tasks_Tutorial_Fob_02"] call BIS_fnc_taskCompleted};
         sleep 3;
     } else {
@@ -56,10 +56,10 @@ if (KPLIB_all_fobs isEqualTo []) then {
             "FLY"
         ];
         [_crate, true] call KPLIB_fnc_clearCargo;
-        _crate setVariable ["KP_liberation_crate_value", 100, true];
+        _crate setVariable ["KPLIB_crate_value", 100, true];
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
-        if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+        if (KPLIB_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
         KPLIB_startCrates pushBack _crate;
     };
 

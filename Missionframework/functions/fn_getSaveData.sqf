@@ -42,13 +42,13 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
         {isNull attachedTo _x} &&                                   // Exclude attachTo'd objects
         {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
-        {!(_x getVariable ["KP_liberation_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
-        {!(_x getVariable ["KP_liberation_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
+        {!(_x getVariable ["KPLIB_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
+        {!(_x getVariable ["KPLIB_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
         {!((toLower (typeOf _x)) in KPLIB_crates)}                  // Exclude storage crates (those are handled separately)
     };
 
     _allObjects = _allObjects + (_fobObjects select {!((toLower (typeOf _x)) in KPLIB_storageBuildings)});
-    _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KP_liberation_storage_type",-1]) == 0});
+    _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KPLIB_storage_type",-1]) == 0});
 
     // Process all groups near this FOB
     {
@@ -111,9 +111,9 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
     // Sum all stored resources of current storage
     {
         switch ((typeOf _x)) do {
-            case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-            case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-            case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
+            case KPLIB_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+            case KPLIB_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+            case KPLIB_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
             default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
         };
     } forEach (attachedObjects _x);
@@ -126,7 +126,7 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
 {
     _allCrates append (
         ((nearestObjects [markerPos _x, KPLIB_crates, KPLIB_capture_size]) select {isNull attachedTo _x}) apply {
-            [typeOf _x, _x getVariable ["KP_liberation_crate_value", 0], getPosATL _x]
+            [typeOf _x, _x getVariable ["KPLIB_crate_value", 0], getPosATL _x]
         }
     );
 } forEach (blufor_sectors select {_x in sectors_factory || _x in sectors_capture});
@@ -183,7 +183,7 @@ private _weights = [
 
 // Pack the save data in the save array
 [
-    kp_liberation_version,
+    KPLIB_version,
     date,
     _objectsToSave,
     _resourceStorages,
@@ -195,12 +195,12 @@ private _weights = [
     KPLIB_all_fobs,
     KPLIB_permissions,
     KPLIB_vehicle_to_military_base_links,
-    KP_liberation_civ_rep,
-    KP_liberation_clearances,
-    KP_liberation_guerilla_strength,
-    KP_liberation_logistics,
-    KP_liberation_production,
-    KP_liberation_production_markers,
+    KPLIB_civ_rep,
+    KPLIB_clearances,
+    KPLIB_guerilla_strength,
+    KPLIB_logistics,
+    KPLIB_production,
+    KPLIB_production_markers,
     resources_intel,
     _allMines,
     _allCrates

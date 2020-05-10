@@ -22,18 +22,18 @@ Respawn_truck_typename = "CUP_B_BMP2_AMB_CDF";                          // This 
 huron_typename = "CUP_B_MI6A_CDF";                                      // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "CUP_B_CDF_Crew_FST";                               // This defines the crew for vehicles.
 pilot_classname = "CUP_B_CDF_Pilot_FST";                                // This defines the pilot for helicopters.
-KP_liberation_little_bird_classname = "B_Heli_Light_01_F";              // These are the little birds which spawn on the Freedom or at Chimera bas
-KP_liberation_boat_classname = "B_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
-KP_liberation_truck_classname = "CUP_B_Ural_Open_CDF";                  // These are the trucks which are used in the logistic convoy system.
-KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
-KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
-KP_liberation_recycle_building = "Land_RepairDepot_01_tan_F";           // The building defined to unlock FOB recycling functionality.
-KP_liberation_air_vehicle_building = "B_Radar_System_01_F";             // The building defined to unlock FOB air vehicle functionality.
-KP_liberation_heli_slot_building = "Land_HelipadSquare_F";              // The helipad used to increase the GLOBAL rotary-wing cap.
-KP_liberation_plane_slot_building = "Land_TentHangar_V1_F";             // The hangar used to increase the GLOBAL fixed-wing cap.
-KP_liberation_supply_crate = "CargoNet_01_box_F";                       // This defines the supply crates, as in resources.
-KP_liberation_ammo_crate = "B_CargoNet_01_ammo_F";                      // This defines the ammunition crates.
-KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This defines the fuel crates.
+KPLIB_little_bird_classname = "B_Heli_Light_01_F";                      // These are the little birds which spawn on the Freedom or at Chimera bas
+KPLIB_boat_classname = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
+KPLIB_truck_classname = "CUP_B_Ural_Open_CDF";                          // These are the trucks which are used in the logistic convoy system.
+KPLIB_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
+KPLIB_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
+KPLIB_recycle_building = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
+KPLIB_air_vehicle_building = "B_Radar_System_01_F";                     // The building defined to unlock FOB air vehicle functionality.
+KPLIB_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
+KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
+KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -201,12 +201,12 @@ support_vehicles = [
     [Respawn_truck_typename,200,0,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
-    [KP_liberation_small_storage_building,0,0,0],
-    [KP_liberation_large_storage_building,0,0,0],
-    [KP_liberation_recycle_building,250,0,0],
-    [KP_liberation_air_vehicle_building,1000,0,0],
-    [KP_liberation_heli_slot_building,250,0,0],
-    [KP_liberation_plane_slot_building,500,0,0],
+    [KPLIB_small_storage_building,0,0,0],
+    [KPLIB_large_storage_building,0,0,0],
+    [KPLIB_recycle_building,250,0,0],
+    [KPLIB_air_vehicle_building,1000,0,0],
+    [KPLIB_heli_slot_building,250,0,0],
+    [KPLIB_plane_slot_building,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],

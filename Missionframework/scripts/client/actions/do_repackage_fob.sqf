@@ -12,9 +12,9 @@ if (dorepackage > 0) then {
 
     if !(_fob isEqualTo []) then {
         KPLIB_all_fobs = KPLIB_all_fobs - [_fob];
-        KP_liberation_clearances deleteAt (KP_liberation_clearances findIf {(_x select 0) isEqualTo _fob});
+        KPLIB_clearances deleteAt (KPLIB_clearances findIf {(_x select 0) isEqualTo _fob});
         publicVariable "KPLIB_all_fobs";
-        publicVariable "KP_liberation_clearances";
+        publicVariable "KPLIB_clearances";
     };
 
     {deleteVehicle _x} forEach (((getPos player) nearobjects [FOB_typename, 250]) select {getObjectType _x >= 8});

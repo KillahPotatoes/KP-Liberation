@@ -1,10 +1,10 @@
-if (KP_liberation_arsenalUsePreset) then {
+if (KPLIB_arsenalUsePreset) then {
     private _crawled = [] call KPLIB_fnc_crawlAllItems;
     private _weapons = [];
     private _magazines = [];
     private _items = [];
     private _backpacks = [];
-    KP_liberation_allowed_items = [];
+    KPLIB_allowed_items = [];
 
     if (isNil "KPLIB_arsenal_weapons") then {KPLIB_arsenal_weapons = []};
     if (isNil "KPLIB_arsenal_magazines") then {KPLIB_arsenal_magazines = []};
@@ -19,10 +19,10 @@ if (KP_liberation_arsenalUsePreset) then {
             {if (!(_x in blacklisted_from_arsenal)) then {_weapons pushBack _x};} forEach (_crawled select 0);
         };
         [missionNamespace, _weapons] call BIS_fnc_addVirtualWeaponCargo;
-        KP_liberation_allowed_items append _weapons;
+        KPLIB_allowed_items append _weapons;
     } else {
         [missionNamespace, KPLIB_arsenal_weapons] call BIS_fnc_addVirtualWeaponCargo;
-        KP_liberation_allowed_items append KPLIB_arsenal_weapons;
+        KPLIB_allowed_items append KPLIB_arsenal_weapons;
     };
 
     // Support for CBA disposable launchers, https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers
@@ -39,8 +39,8 @@ if (KP_liberation_arsenalUsePreset) then {
                 _normalLauncher params ["_loadedLauncher"];
                 _disposableLaunchers pushBack _loadedLauncher;
             };
-        } forEach KP_liberation_allowed_items;
-        KP_liberation_allowed_items append _disposableLaunchers;
+        } forEach KPLIB_allowed_items;
+        KPLIB_allowed_items append _disposableLaunchers;
     };
 
     if ((count KPLIB_arsenal_magazines) == 0) then {
@@ -50,10 +50,10 @@ if (KP_liberation_arsenalUsePreset) then {
             {if (!(_x in blacklisted_from_arsenal)) then {_magazines pushBack _x};} forEach (_crawled select 1);
         };
         [missionNamespace, _magazines] call BIS_fnc_addVirtualMagazineCargo;
-        KP_liberation_allowed_items append _magazines;
+        KPLIB_allowed_items append _magazines;
     } else {
         [missionNamespace, KPLIB_arsenal_magazines] call BIS_fnc_addVirtualMagazineCargo;
-        KP_liberation_allowed_items append KPLIB_arsenal_magazines;
+        KPLIB_allowed_items append KPLIB_arsenal_magazines;
     };
 
     if ((count KPLIB_arsenal_items) == 0) then {
@@ -63,10 +63,10 @@ if (KP_liberation_arsenalUsePreset) then {
             {if (!(_x in blacklisted_from_arsenal)) then {_items pushBack _x};} forEach (_crawled select 2);
         };
         [missionNamespace, _items] call BIS_fnc_addVirtualItemCargo;
-        KP_liberation_allowed_items append _items;
+        KPLIB_allowed_items append _items;
     } else {
         [missionNamespace, KPLIB_arsenal_items] call BIS_fnc_addVirtualItemCargo;
-        KP_liberation_allowed_items append KPLIB_arsenal_items;
+        KPLIB_allowed_items append KPLIB_arsenal_items;
     };
 
     if ((count KPLIB_arsenal_backpacks) == 0) then {
@@ -76,38 +76,38 @@ if (KP_liberation_arsenalUsePreset) then {
             {if (!(_x in blacklisted_from_arsenal)) then {_backpacks pushBack _x};} forEach (_crawled select 3);
         };
         [missionNamespace, _backpacks] call BIS_fnc_addVirtualBackpackCargo;
-        KP_liberation_allowed_items append _backpacks;
+        KPLIB_allowed_items append _backpacks;
     } else {
         [missionNamespace, KPLIB_arsenal_backpacks] call BIS_fnc_addVirtualBackpackCargo;
-        KP_liberation_allowed_items append KPLIB_arsenal_backpacks;
+        KPLIB_allowed_items append KPLIB_arsenal_backpacks;
     };
 
     {
         if ((_x find "rhs_acc") == 0) then {
-            KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+            KPLIB_allowed_items_extension append [_x + "_3d", _x + "_pip"];
         };
         if ((_x find "rhsusf_acc") == 0) then {
-            KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+            KPLIB_allowed_items_extension append [_x + "_3d", _x + "_pip"];
         };
-    } forEach KP_liberation_allowed_items;
+    } forEach KPLIB_allowed_items;
 
-    if ((count KP_liberation_allowed_items_extension) > 0) then {
-        KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
+    if ((count KPLIB_allowed_items_extension) > 0) then {
+        KPLIB_allowed_items append KPLIB_allowed_items_extension;
     };
 
-    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
-        [player, KP_liberation_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
+    if (KPLIB_ace && KPLIB_arsenal_type) then {
+        [player, KPLIB_allowed_items, false] call ace_arsenal_fnc_addVirtualItems;
     };
 
     // Lowercase all classnames
-    KP_liberation_allowed_items = KP_liberation_allowed_items apply {toLower _x};
+    KPLIB_allowed_items = KPLIB_allowed_items apply {toLower _x};
 } else {
     [missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
 
-    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_arsenal_type) then {
         [player, true, false] call ace_arsenal_fnc_addVirtualItems;
     };
 };

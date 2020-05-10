@@ -1,5 +1,5 @@
 [] call compileFinal preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
-switch (KP_liberation_arsenal) do {
+switch (KPLIB_arsenal) do {
     case  1: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\custom.sqf";};
     case  2: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\rhsusaf.sqf";};
     case  3: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\3cbBAF.sqf";};
@@ -39,17 +39,17 @@ execVM "scripts\client\ammoboxes\ammobox_action_manager.sqf";
 execVM "scripts\client\build\build_overlay.sqf";
 execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
-if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
+if (KPLIB_mapmarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
 execVM "scripts\client\markers\fob_markers.sqf";
-if (!KP_liberation_high_command && KP_liberation_mapmarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
+if (!KPLIB_high_command && KPLIB_mapmarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
 execVM "scripts\client\markers\hostile_groups.sqf";
-if (KP_liberation_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
+if (KPLIB_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
 execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
 execVM "scripts\client\misc\init_arsenal.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
-if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
+if (!KPLIB_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";
@@ -88,6 +88,6 @@ execVM "scripts\client\ui\intro.sqf";
 [player] joinSilent (createGroup [KPLIB_side_friendly, true]);
 
 // Start Tutorial
-if (KP_liberation_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
+if (KPLIB_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
     [] call KPLIB_fnc_tutorial;
 };

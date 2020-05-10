@@ -21,9 +21,9 @@ while {true} do {
         private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
             (((toLower (typeof _x)) in _recycleable_classnames && (({alive _x} count (crew _x)) == 0 || unitIsUAV _x) && (locked _x == 0 || locked _x == 1)) ||
             (toLower (typeOf _x)) in KPLIB_b_buildings_classes ||
-            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
+            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KPLIB_storage_type",-1]) == 0)) ||
             (toLower (typeOf _x)) in KPLIB_upgradeBuildings ||
-            (typeOf _x) in KP_liberation_ace_crates) &&
+            (typeOf _x) in KPLIB_ace_crates) &&
             alive _x &&
             (
                 // ignore null objects left by Advanced Towing

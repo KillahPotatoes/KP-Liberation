@@ -2,7 +2,7 @@ if (isDedicated) exitWith {};
 
 params ["_notif_id", ["_pos", getpos player]];
 
-if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_notifications called on: %1 - Parameters: [%2, %3]", debug_source, _notif_id, _pos], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_notifications called on: %1 - Parameters: [%2, %3]", debug_source, _notif_id, _pos], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 switch (_notif_id) do {
     case 0: {

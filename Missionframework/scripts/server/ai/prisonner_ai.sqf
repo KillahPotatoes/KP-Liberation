@@ -24,7 +24,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
         sleep 1;
         private _grp = createGroup [KPLIB_side_civilian, true];
         [_unit] joinSilent _grp;
-        if (KP_liberation_ace) then {
+        if (KPLIB_ace) then {
             [_unit, true] call ACE_captives_fnc_setSurrendered;
         } else {
             _unit disableAI "ANIM";
@@ -38,7 +38,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
         };
 
         if (alive _unit) then {
-            if (KP_liberation_ace) then {
+            if (KPLIB_ace) then {
                 [_unit, false] call ACE_captives_fnc_setSurrendered;
             } else {
                 _unit enableAI "ANIM";

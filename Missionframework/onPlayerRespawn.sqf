@@ -22,9 +22,9 @@ if (isNil "KPLIB_respawn_loadout") then {
 // Support Module handling
 if ([
     false,
-    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KP_liberation_suppMod_whitelist,
+    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_suppMod_whitelist,
     true
-] select KP_liberation_suppMod) then {
+] select KPLIB_suppMod) then {
     waitUntil {!isNil "KPLIB_suppMod_req" && !isNil "KPLIB_suppMod_arty" && time > 5};
 
     // Remove link to corpse, if respawned

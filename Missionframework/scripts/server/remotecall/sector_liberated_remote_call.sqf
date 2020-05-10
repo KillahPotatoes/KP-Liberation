@@ -21,11 +21,11 @@ reset_battlegroups_ai = true; publicVariable "reset_battlegroups_ai";
 
 if (_liberated_sector in sectors_factory) then {
     {
-        if (_liberated_sector in _x) exitWith {KP_liberation_production = KP_liberation_production - [_x];};
-    } forEach KP_liberation_production;
+        if (_liberated_sector in _x) exitWith {KPLIB_production = KPLIB_production - [_x];};
+    } forEach KPLIB_production;
 
-    private _sectorFacilities = (KP_liberation_production_markers select {_liberated_sector == (_x select 0)}) select 0;
-    KP_liberation_production pushBack [
+    private _sectorFacilities = (KPLIB_production_markers select {_liberated_sector == (_x select 0)}) select 0;
+    KPLIB_production pushBack [
         markerText _liberated_sector,
         _liberated_sector,
         1,
@@ -34,7 +34,7 @@ if (_liberated_sector in sectors_factory) then {
         _sectorFacilities select 2,
         _sectorFacilities select 3,
         3,
-        KP_liberation_production_interval,
+        KPLIB_production_interval,
         0,
         0,
         0
@@ -43,7 +43,7 @@ if (_liberated_sector in sectors_factory) then {
 
 [_liberated_sector] spawn F_cr_liberatedSector;
 
-if ((random 100) <= KP_liberation_cr_wounded_chance || (count blufor_sectors) == 1) then {
+if ((random 100) <= KPLIB_cr_wounded_chance || (count blufor_sectors) == 1) then {
     [_liberated_sector] spawn civrep_wounded_civs;
 };
 

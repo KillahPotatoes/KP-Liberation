@@ -80,17 +80,17 @@ KPLIB_vehicle_to_military_base_links = [];
 // Enemy weight for anti infantry
 infantry_weight = 33;
 // Civilian reputation value (-100 - +100)
-KP_liberation_civ_rep = 0;
+KPLIB_civ_rep = 0;
 // Clearances
-KP_liberation_clearances = [];
+KPLIB_clearances = [];
 // Strength value of the resistance forces
-KP_liberation_guerilla_strength = 0;
+KPLIB_guerilla_strength = 0;
 // Logistic handling data
-KP_liberation_logistics = [];
+KPLIB_logistics = [];
 // Production handling data
-KP_liberation_production = [];
+KPLIB_production = [];
 // Factory markers to display the current available facilities
-KP_liberation_production_markers = [];
+KPLIB_production_markers = [];
 // Global Intel resource
 resources_intel = 0;
 // State if the save is fully loaded
@@ -154,7 +154,7 @@ stats_vehicles_recycled = 0;
 
 // Prevent saving/duplication of objects placed in Eden
 {
-    _x setVariable ["KP_liberation_edenObject", true];
+    _x setVariable ["KPLIB_edenObject", true];
 } forEach (allMissionObjects "");
 
 // Get possible save data
@@ -182,12 +182,12 @@ if (!isNil "_saveData") then {
         KPLIB_all_fobs                              = _saveData select  9;
         KPLIB_permissions                           = _saveData select 10;
         KPLIB_vehicle_to_military_base_links        = _saveData select 11;
-        KP_liberation_civ_rep                       = _saveData select 12;
-        KP_liberation_clearances                    = _saveData select 13;
-        KP_liberation_guerilla_strength             = _saveData select 14;
-        KP_liberation_logistics                     = _saveData select 15;
-        KP_liberation_production                    = _saveData select 16;
-        KP_liberation_production_markers            = _saveData select 17;
+        KPLIB_civ_rep                       = _saveData select 12;
+        KPLIB_clearances                    = _saveData select 13;
+        KPLIB_guerilla_strength             = _saveData select 14;
+        KPLIB_logistics                     = _saveData select 15;
+        KPLIB_production                    = _saveData select 16;
+        KPLIB_production_markers            = _saveData select 17;
         resources_intel                             = _saveData select 18;
         _allMines                                   = _saveData param [19, []];
         _allCrates                                  = _saveData param [20, []];
@@ -241,17 +241,17 @@ if (!isNil "_saveData") then {
         _dateTime                                   = _saveData select  3;
         combat_readiness                            = _saveData select  4;
         _resourceStorages                           = _saveData select  5;
-        KP_liberation_production                    = _saveData select  6;
-        KP_liberation_logistics                     = _saveData select  7;
+        KPLIB_production                    = _saveData select  6;
+        KPLIB_logistics                     = _saveData select  7;
         _stats                                      = _saveData select  8;
         _weights                                    = _saveData select  9;
         KPLIB_vehicle_to_military_base_links        = _saveData select 10;
         KPLIB_permissions                           = _saveData select 11;
         _aiGroups                                   = _saveData select 12;
         resources_intel                             = _saveData select 13;
-        KP_liberation_civ_rep                       = _saveData select 15;
-        KP_liberation_production_markers            = _saveData select 16;
-        KP_liberation_guerilla_strength             = _saveData select 17;
+        KPLIB_civ_rep                       = _saveData select 15;
+        KPLIB_production_markers            = _saveData select 16;
+        KPLIB_guerilla_strength             = _saveData select 17;
 
         stats_opfor_soldiers_killed                 = _stats select  0;
         stats_opfor_killed_by_players               = _stats select  1;
@@ -287,15 +287,15 @@ if (!isNil "_saveData") then {
     air_weight = _weights select 2;
 
     // Set correct resistance standing
-    private _resistanceEnemy = [0, 1] select (KP_liberation_civ_rep < 25);
-    private _resistanceFriendly = [0, 1] select (KP_liberation_civ_rep >= -25);
+    private _resistanceEnemy = [0, 1] select (KPLIB_civ_rep < 25);
+    private _resistanceFriendly = [0, 1] select (KPLIB_civ_rep >= -25);
 
     KPLIB_side_resistance setFriend [KPLIB_side_enemy, _resistanceEnemy];
     KPLIB_side_enemy setFriend [KPLIB_side_resistance, _resistanceEnemy];
     KPLIB_side_resistance setFriend [KPLIB_side_friendly, _resistanceFriendly];
     KPLIB_side_friendly setFriend [KPLIB_side_resistance, _resistanceFriendly];
 
-    if (KP_liberation_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_friendly, (KPLIB_side_resistance getFriend KPLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
+    if (KPLIB_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_friendly, (KPLIB_side_resistance getFriend KPLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -307,7 +307,7 @@ if (!isNil "_saveData") then {
     // Create clearances
     {
         [_x select 0, _x select 1] call KPLIB_fnc_createClearance;
-    } forEach KP_liberation_clearances;
+    } forEach KPLIB_clearances;
 
     // Collection array for all objects which are loaded
     private _spawnedObjects = [];
@@ -321,13 +321,13 @@ if (!isNil "_saveData") then {
         // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
         if !(((_saveData select 0) select 0) isEqualType 0) then {
             // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
-            if ((KP_liberation_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
-                _class = KP_liberation_recycle_building;
+            if ((KPLIB_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
+                _class = KPLIB_recycle_building;
             };
 
             // Pre 0.96.5 compatibility with air building, as it was replaced by default with a different classname
-            if ((KP_liberation_air_vehicle_building != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
-                _class = KP_liberation_air_vehicle_building;
+            if ((KPLIB_air_vehicle_building != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
+                _class = KPLIB_air_vehicle_building;
             };
         };
 
@@ -421,7 +421,7 @@ if (!isNil "_saveData") then {
             _object allowdamage true;
 
             // Mark it as FOB storage
-            _object setVariable ["KP_liberation_storage_type", 0, true];
+            _object setVariable ["KPLIB_storage_type", 0, true];
 
             // Fill storage with saved resources
             [floor _supply, floor _ammo, floor _fuel, _object] call KPLIB_fnc_fillStorage;
@@ -439,7 +439,7 @@ if (!isNil "_saveData") then {
             _storage params ["_pos", "_dir", "_vecUp"];
 
             // Create object without damage handling and simulation
-            _object = createVehicle [KP_liberation_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [KPLIB_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
             _object enableSimulationGlobal false;
             _object allowdamage false;
 
@@ -454,12 +454,12 @@ if (!isNil "_saveData") then {
             _object allowdamage true;
 
             // Mark it as sector storage
-            _object setVariable ["KP_liberation_storage_type", 1, true];
+            _object setVariable ["KPLIB_storage_type", 1, true];
 
             // Fill storage
             [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call KPLIB_fnc_fillStorage;
         };
-    } forEach KP_liberation_production;
+    } forEach KPLIB_production;
     ["Saved sector storages placed and filled", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn BLUFOR AI groups
@@ -504,7 +504,7 @@ publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
 publicVariable "KPLIB_all_fobs";
-publicVariable "KP_liberation_clearances";
+publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
 KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
@@ -543,7 +543,7 @@ save_is_loaded = true; publicVariable "save_is_loaded";
 [format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
 
 // Start the save loop
-private _saveTime = time + KP_liberation_save_interval;
+private _saveTime = time + KPLIB_save_interval;
 while {true} do {
     waitUntil {
         sleep 0.5;
@@ -559,9 +559,9 @@ while {true} do {
 
     [] call KPLIB_fnc_doSave;
 
-    if (KP_liberation_savegame_debug > 0) then {[format ["Campaign saved - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;};
+    if (KPLIB_savegame_debug > 0) then {[format ["Campaign saved - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;};
 
-    _saveTime = time + KP_liberation_save_interval;
+    _saveTime = time + KPLIB_save_interval;
 };
 
 ["Left saving loop", "SAVE"] call KPLIB_fnc_log;

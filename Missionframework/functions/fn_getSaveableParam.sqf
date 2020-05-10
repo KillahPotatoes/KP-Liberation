@@ -40,18 +40,18 @@ switch (_action) do {
         private _savedParams = profileNamespace getVariable KPLIB_paramSaveKey;
 
         if(isNil "_savedParams") then {
-            if (KP_liberation_savegame_debug > 0) then {["Param save data is corrupted, creating new.", "PARAM"] call KPLIB_fnc_log;};
+            if (KPLIB_savegame_debug > 0) then {["Param save data is corrupted, creating new.", "PARAM"] call KPLIB_fnc_log;};
             // Create new "associative" array
             _savedParams = [[_paramName, _value]];
 
         } else {
             private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
             if(isNil "_singleParam") then {
-                if (KP_liberation_savegame_debug > 0) then {[format ["Saving value: %1 for param: %2", _value, _paramName], "PARAM"] call KPLIB_fnc_log;};
+                if (KPLIB_savegame_debug > 0) then {[format ["Saving value: %1 for param: %2", _value, _paramName], "PARAM"] call KPLIB_fnc_log;};
                 _savedParams pushBack [_paramName, _value];
 
             } else {
-                if (KP_liberation_savegame_debug > 0) then {[format ["Overwriting value: %1 with: %2 for param: %3", (_singleParam select 1), _value, _paramName], "PARAM"] call KPLIB_fnc_log;};
+                if (KPLIB_savegame_debug > 0) then {[format ["Overwriting value: %1 with: %2 for param: %3", (_singleParam select 1), _value, _paramName], "PARAM"] call KPLIB_fnc_log;};
                 // _singleparam is an reference to array in _savedParams, we can use "set"
                 _singleParam set [1, _value];
             };
@@ -65,25 +65,25 @@ switch (_action) do {
     case 1: {
         private _savedParams = profileNamespace getVariable KPLIB_paramSaveKey;
         if(isNil "_savedParams") then {
-            if (KP_liberation_savegame_debug > 0) then {["Param save data is corrupted, can't load!", "PARAM"] call KPLIB_fnc_log;};
+            if (KPLIB_savegame_debug > 0) then {["Param save data is corrupted, can't load!", "PARAM"] call KPLIB_fnc_log;};
             // Fix param save data
             profileNamespace setVariable [KPLIB_paramSaveKey, []];
-            if (KP_liberation_savegame_debug > 0) then {[format ["No saved value for param: %1, fetching value.", _paramName], "PARAM"] call KPLIB_fnc_log;};
+            if (KPLIB_savegame_debug > 0) then {[format ["No saved value for param: %1, fetching value.", _paramName], "PARAM"] call KPLIB_fnc_log;};
             _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
         } else {
             private _singleParam = (_savedParams select {(_x select 0) == _paramName}) select 0;
             if(isNil "_singleParam") then {
-                if (KP_liberation_savegame_debug > 0) then {[format ["No saved value for param: %1, fetching value.", _paramName], "PARAM"] call KPLIB_fnc_log;};
+                if (KPLIB_savegame_debug > 0) then {[format ["No saved value for param: %1, fetching value.", _paramName], "PARAM"] call KPLIB_fnc_log;};
                 _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
             } else {
-                if (KP_liberation_savegame_debug > 0) then {[format ["Found value: %1 for param: %2,", (_singleParam select 1), _paramName], "PARAM"] call KPLIB_fnc_log;};
+                if (KPLIB_savegame_debug > 0) then {[format ["Found value: %1 for param: %2,", (_singleParam select 1), _paramName], "PARAM"] call KPLIB_fnc_log;};
                 _value = _singleParam select 1;
             };
         };
     };
     // Get param
     default {
-        if (KP_liberation_savegame_debug > 0) then {[format ["Fetching selected value for param: %1", _paramName], "PARAM"] call KPLIB_fnc_log;};
+        if (KPLIB_savegame_debug > 0) then {[format ["Fetching selected value for param: %1", _paramName], "PARAM"] call KPLIB_fnc_log;};
         _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
     };
 };
