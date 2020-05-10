@@ -49,7 +49,7 @@
         "mapDisplay": "Livonia",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
-            "KP_liberation_preset_blufor": 27,
+            "KP_liberation_preset_blufor": 30,
             "KP_liberation_preset_opfor": 1,
             "KP_liberation_preset_resistance": 0,
             "KP_liberation_preset_civilians": 0,
@@ -215,7 +215,7 @@
             "KP_liberation_preset_opfor": 2,
             "KP_liberation_preset_resistance": 0,
             "KP_liberation_preset_civilians": 0,
-            "KP_liberation_arsenal": 0
+            "KP_liberation_arsenal": 9
         },
         "workshopId": "884705418"
     },
