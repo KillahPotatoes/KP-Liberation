@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2020-04-08
+    Last Update: 2020-05-09
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -35,8 +35,7 @@
 */
 
 // Scrollbar
-class KPGUI_PRE_ScrollBar
-{
+class KPGUI_PRE_ScrollBar {
     color[] = {1, 1, 1, 0.6};
     colorActive[] = {1, 1, 1, 1};
     colorDisabled[] = {1, 1, 1, 0.3};
@@ -296,14 +295,11 @@ class KPGUI_PRE_ControlsGroup {
 };
 
 // Controls group no scrollbars
-class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup
-{
-    class VScrollbar: VScrollbar
-    {
+class KPGUI_PRE_ControlsGroupNoScrollbars: KPGUI_PRE_ControlsGroup {
+    class VScrollbar: VScrollbar {
         width = 0;
     };
-    class HScrollbar: HScrollbar
-    {
+    class HScrollbar: HScrollbar {
         height = 0;
     };
 };

@@ -1,6 +1,6 @@
-class client_tutorial
-{
+class client_tutorial {
     file = "scripts\client\tutorial";
+
     class handleCrateStorageTask        {};
     class handleHealCivTask             {};
     class handleTakePowTask             {};

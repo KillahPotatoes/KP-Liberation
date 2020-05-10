@@ -1,5 +1,4 @@
-class Params
-{
+class Params {
     class LoadSaveParams {
         title = $STR_PARAMS_LOADSAVEPARAMS;
         values[] = {0, 1, 2};
