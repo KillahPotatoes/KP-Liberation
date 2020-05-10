@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
------
-
-In this project there could be files with a different license than the
-general project license. In this case the file header will state the
-license. Folders could also contain a separate LICENSE file. In this
-case all content in that folder and all subfolders are published under
-that license instead.
-
-* GNU General Public License v3.0 (\KP)
-
------
