@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.96.7 (TBD)
+## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.
 * Added: Inheritance support to object inits. (3rd array element, bool)
@@ -27,7 +27,7 @@
 * Added: Crates which are spawned upon sector activation are now saved near their sector, if the sector is taken by blufor. (Factories/Cities)
 * Added: BWMod arsenal preset.
 * Added: Interactive tutorial for the mission start. Deploying first FOB and conquering a factory with starting production.
-* Added Vehicle in Vehicle transport actions to Arsenal crate.
+* Added: Vehicle in Vehicle transport actions to Arsenal crate.
 * Removed: `action_manager.sqf` file was removed, due to new action handling.
 * Updated: Updated CUP presets to be inline with October 2019 stable build of CUP mods. Thanks to [Eogos](https://github.com/Eogos)
 * Updated: Turkish translation. Thanks to [654wak654](https://github.com/654wak654)
@@ -64,9 +64,9 @@
 * Tweaked: HUD Overlay with global resources will show on map.
 * Tweaked: Shoot surrendering enemies now cause civilian reputation penalty like killing a civilian.
 * Tweaked: Description.ext got much more comments and settings.
+* Tweaked: Object inits will fire on units not only vehicles.
 * Fixed: Some CUP presets had free buildable arsenals. Thanks to [Eogos](https://github.com/Eogos)
 * Fixed: Wrong boat in CUP USMC Woodland preset. Thanks to [Eogos](https://github.com/Eogos)
-* Fixed: Object inits will fire on units not only vehicles.
 * Fixed: Objects will be recyclable after being towed with Advanced Towing.
 * Fixed: Flickering/disappearing of mobile respawn.
 * Fixed: Error message when trying to build a sector storage on water didn't vanished.
@@ -78,7 +78,7 @@
 * Fixed: `Bad conversion: bool` rpt messages in client logs at the beginning of the mission.
 * Fixed: Boats weren't recognized for sector activation.
 
-## 0.96.6 (09th September 2019)
+## 0.96.6 (2019-09-09)
 * Added: [Swedish Forces Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=826911897) transport configs. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: Parameter to enable/disable the vanilla A3 dynamic fog behavior. Default enabled, so `fucking_set_fog.sqf` isn't running by default.
 * Added: Parameter to enable/disable limitations on Zeus functionalities. Default enabled to keep old behaviour.
@@ -100,7 +100,7 @@
 * Fixed: Some missing parameter information in the map screens parameter overview.
 * Fixed: After creating a clearance at a FOB some light sources could remain.
 
-## 0.96.5 (26th July 2019)
+## 0.96.5 (2019-07-26)
 * Added: Contact DLC LDF preset.
 * Added: Contact DLC transport configs.
 * Added: [The Unsung Vietnam War Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=943001311) blufor preset.
@@ -154,7 +154,7 @@
 * Fixed: Intel value could get corrupted if leaving the secondary dialog directly after starting a mission.
 * Fixed: "All is red" for first player after a server restart. (just a visual bug, doesn't affect gameplay)
 
-## 0.96.4 (10th May 2019)
+## 0.96.4 (2019-05-10)
 * Added: East Germany arsenal preset.
 * Added: West Germany arsenal preset. Thanks to [Dahlgren](https://github.com/Dahlgren)
 * Added: East Germany blufor and opfor preset.
@@ -195,7 +195,7 @@
 * Fixed: Blufor soldier losses weren't counted in statistics.
 * Fixed: Missing `itemRadio` in some arsenal presets.
 
-## 0.963a (10th April 2018)
+## 0.963a (2018-04-10)
 * Added: Action to raise/lower object while building. Thanks to [darrell-aevum](https://github.com/darrell-aevum)
 * Added: Some classnames to arsenal allowed extension list. Thanks to [madpat3](https://github.com/madpat3)
 * Added: Functionality to save/load mission parameters. Thanks to [veteran29](https://github.com/veteran29)
@@ -228,7 +228,7 @@
 * Fixed: Fixed range for recycling and start of building instead of using FOB range.
 * Fixed: Some vehicles with dynamic loadout support lost their weapons when rearmed by Liberation rearm module.
 
-## 0.963 (05th January 2018)
+## 0.963 (2018-01-05)
 * Added: Some missing RHS vehicles for the ACE medical system.
 * Removed: Provided ACE settings, as they are not used anymore since the last ACE update.
 * Tweaked: Arsenal blacklist for more compatibility with 3cbBAF. Thanks to [Applejakerie](https://github.com/Applejakerie)
@@ -238,7 +238,7 @@
 * Fixed: Lythium basefile was missing mission name and description in the lobby.
 * Fixed: Issue with building premade squads.
 
-## 0.962 (10th December 2017)
+## 0.962 (2017-12-10)
 * Added: ACE carry interaction for resource crates. Thanks to [veteran29](https://github.com/veteran29)
 * Added: Some additional debug outputs.
 * Added: RHS AFRF Preset for the player side. Thanks to [veteran29](https://github.com/veteran29)
@@ -266,7 +266,7 @@
 * Fixed: Guerilla could spawn as neutral combatants.
 * Fixed: Unloading crates from vehicles could let them sink into the ground since the last ArmA Update.
 
-## 0.961 (6th November 2017)
+## 0.961 (2017-11-06)
 * Added: ACE auto detection. (BI Revive still has to be disabled manually)
 * Added: Parameter to decide if vehicles should have cleared cargo or not. Thanks to [veteran29](https://github.com/veteran29)
 * Removed: ACE compatibility parameter.
@@ -277,7 +277,7 @@
 * Tweaked: Logistic convoy ambush chance balancing.
 * Fixed: SMAW optic placed in wrong array in RHS presets.
 
-### 0.96 (12th October 2017)
+### 0.96 (2017-10-12)
 * Added: BI Support System functionality. (Currently deactivated, as there are still issues in MP)
     * Added: Parameter for access to the Support System -> Disabled, Commander, Whitelist, Everyone.
     * Added: BI Artillery support for artillery vehicles and mortars (if built manned or AI ordered to get in as crew).
@@ -349,7 +349,7 @@
 * Fixed: Couldn't build under powerlines.
 * Fixed: Items in backpack weren't checked by arsenal blacklist crawler.
 
-## 0.955 (24th June 2017)
+## 0.955 (2017-06-24)
 * Added: Some small aesthetic things for the buildlist
 * Added: Exception for TFAR items from the 1.0 Beta (it's TFAR_ and not tf_ in the classnames there)
 * Added: Malden missionfile. Thanks to [Applejakerie](https://github.com/Applejakerie)
@@ -360,7 +360,7 @@
 * Fixed: Production and Logistic Overview wasn't usable in normal UI scale
 * Fixed: The RHS "Mk.V SOC" boat got no recycle action due to the mounted static weapons
 
-## 0.954 (19th June 2017)
+## 0.954 (2017-06-19)
 * Added: Some small aesthetic things for the buildlist
 * Added: Transport configs for the unarmed Blackfish variants (can hold 5 crates). Thanks to [Applejakerie](https://github.com/Applejakerie)
 * Tweaked: Production dialog list entries are now color coded depending on the actual production
@@ -371,7 +371,7 @@
 * Fixed: SDV was missing in the boats array to be able to place it on water
 * Fixed: H-Barrier classname changed from the protected to the public one
 
-## 0.953 (12th June 2017)
+## 0.953 (2017-06-12)
 * Added: Action to stack and sort resources in storage areas
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Updated: German localization. (umlauts)
@@ -383,7 +383,7 @@
 * Fixed: Error in production dialog due to wrong global variable
 * Fixed: Last two supply_vehicle elements weren't shown in the build menu
 
-## 0.952 (4th June 2017)
+## 0.952 (2017-06-04)
 * Added: Action to push resource crates
 * Added: More transport configs for various vehicles. Thanks to [ChiefOwens](https://github.com/ChiefOwens)
 * Added: Some more vehicles from RHS to the presets
@@ -399,7 +399,7 @@
 * Fixed: Start vehicles were spawning with items in the inventory
 * Fixed: Sometimes you couldn't slingload crates which were unloaded from a storage
 
-## 0.951 (28th May 2017)
+## 0.951 (2017-05-28)
 * Added: Boats at the stern of the Freedom for amphibious insertion
 * Added: Transport configs for guerilla offroad and van
 * Added: Mission parameter to choose between arsenal with no restrictions at all or using the defined preset from `kp_liberation_config.sqf` (no restriction not recommended)
@@ -430,7 +430,7 @@
 * Fixed: Exploit of build menu if UI was set to show global resources
 * Fixed: Build menu reloads constantly
 
-## 0.95 (22th May 2017)
+## 0.95 (2017-05-22)
 * Added: New resource system
 * Added: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Added: Action to change alignment (up or terrain aligned) during placement of buildings
@@ -489,7 +489,7 @@
 * Fixed: Slingloading while transport crates inside a helicopter causes the helicopter to slingload the loaded crates inside
 * Fixed: Some buildable paratroopers from some presets don't had a parachute
 
-## 0.94 (20th March 2017)
+## 0.94 (2017-03-20)
 * Added: Tanoa missionfile and vanilla apex preset
 * Added: Custom made Chimera Base for Tanoa. Thanks to [jus61](https://github.com/jus61) for building it
 * Added: X-Cam-Taunus missionfile
@@ -514,7 +514,7 @@
 * Fixed: Custom flag texture not applied after savegame load
 * Fixed: Mapmarker disable won't work
 
-## 0.931 (10th March 2017)
+## 0.931 (2017-03-10)
 * Added: Takistan Missionfile
 * Added: Chernarus Missionfile
 * Added: RHS Takistan Classnames Preset (desert camo)
@@ -523,7 +523,7 @@
 * Fixed: BI Revive Error
 * Fixed: Starting game with a prebuild FOB caused errors on Takistan
 
-## 0.93 (7th March 2017)
+## 0.93 (2017-03-07)
 * Added: `kp_liberation_config.sqf` with some additional config values
 * Added: ACE support
 * Added: Fuel consumption script
