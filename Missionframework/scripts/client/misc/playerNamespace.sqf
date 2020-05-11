@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-05-08
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -22,10 +22,10 @@ private _fobName = "";
 
 while {true} do {
     // FOB distance, name and position
-    if !(GRLIB_all_fobs isEqualTo []) then {
+    if !(KPLIB_all_fobs isEqualTo []) then {
         _fobPos = [] call KPLIB_fnc_getNearestFob;
         _fobDist = player distance2d _fobPos;
-        _fobName = ["", ["FOB", [_fobPos] call KPLIB_fnc_getFobName] joinString " "] select (_fobDist < GRLIB_fob_range);
+        _fobName = ["", ["FOB", [_fobPos] call KPLIB_fnc_getFobName] joinString " "] select (_fobDist < KPLIB_fob_range);
     } else {
         _fobPos = [0, 0, 0];
         _fobDist = 99999;
@@ -37,18 +37,18 @@ while {true} do {
     player setVariable ["KPLIB_fobPos", _fobPos];
 
     // Direct acces due to config, commander or admin
-    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KP_liberation_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];
+    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KPLIB_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];
 
     // Outside of startbase "safezone"
     player setVariable ["KPLIB_isAwayFromStart", (player distance2d startbase) > 1000];
 
     // Is near an arsenal object
-    if (KP_liberation_mobilearsenal) then {
+    if (KPLIB_mobilearsenal) then {
         player setVariable ["KPLIB_isNearArsenal", !(((player nearObjects [Arsenal_typename, 5]) select {getObjectType _x >= 8}) isEqualTo [])];
     };
 
     // Is near a mobile respawn
-    if (KP_liberation_mobilerespawn) then {
+    if (KPLIB_mobilerespawn) then {
         player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [[Respawn_truck_typename, huron_typename], 10]) isEqualTo [])];
     };
 
@@ -56,8 +56,8 @@ while {true} do {
     player setVariable ["KPLIB_isNearStart", (player distance2d startbase) < 200];
 
     // Nearest activated sector and possible production data
-    player setVariable ["KPLIB_nearProd", KP_liberation_production param [KP_liberation_production findIf {(_x select 1) isEqualTo ([100] call KPLIB_fnc_getNearestSector)}, []]];
-    player setVariable ["KPLIB_nearSector", [GRLIB_sector_size] call KPLIB_fnc_getNearestSector];
+    player setVariable ["KPLIB_nearProd", KPLIB_production param [KPLIB_production findIf {(_x select 1) isEqualTo ([100] call KPLIB_fnc_getNearestSector)}, []]];
+    player setVariable ["KPLIB_nearSector", [KPLIB_sector_size] call KPLIB_fnc_getNearestSector];
 
     // Zeus module synced to player
     player setVariable ["KPLIB_ownedZeusModule", getAssignedCuratorLogic player];

@@ -14,11 +14,11 @@ _logi_destinations = [];
 
 {
     _logi_destinations pushBack [(format ["FOB %1", military_alphabet select _forEachIndex]), (_x select 0), (_x select 1), (_x select 2), (_x select 3)];
-} forEach KP_liberation_fob_resources;
+} forEach KPLIB_fob_resources;
 
 {
     _logi_destinations pushBack [(_x select 0), (markerPos (_x select 1)), (_x select 9), (_x select 10), (_x select 11)];
-} forEach KP_liberation_production;
+} forEach KPLIB_production;
 
 _logi_destinations sort true;
 
@@ -61,35 +61,35 @@ while {dialog && (alive player)} do {
     if (addLogiGroup == 1) then {
         addLogiGroup = 0;
         [_selectedGroup] remoteExec ["add_logiGroup_remote_call",2];
-        waitUntil {sleep 0.5; _logi_count != (count KP_liberation_logistics)};
+        waitUntil {sleep 0.5; _logi_count != (count KPLIB_logistics)};
     };
 
     if (deleteLogiGroup == 1) then {
         deleteLogiGroup = 0;
         [_selectedGroup] remoteExec ["del_logiGroup_remote_call",2];
         lbSetCurSel [75802,-1];
-        waitUntil {sleep 0.5; _logi_count != (count KP_liberation_logistics)};
+        waitUntil {sleep 0.5; _logi_count != (count KPLIB_logistics)};
     };
 
     if (buyLogiTruck == 1) then {
         buyLogiTruck = 0;
         _tempvariable = _selectedGroup select 1;
-        [_listselect, _nearfob, clientOwner, KP_liberation_supplies, KP_liberation_ammo, KP_liberation_fuel] remoteExec ["add_logiTruck_remote_call",2];
-        waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
+        [_listselect, _nearfob, clientOwner, KPLIB_supplies, KPLIB_ammo, KPLIB_fuel] remoteExec ["add_logiTruck_remote_call",2];
+        waitUntil {sleep 0.5; (_tempvariable != ((KPLIB_logistics select _listselect) select 1)) || (logiError == 1)};
     };
 
     if (sellLogiTruck == 1) then {
         sellLogiTruck = 0;
         _tempvariable = _selectedGroup select 1;
         [_listselect, _nearfob, clientOwner] remoteExec ["del_logiTruck_remote_call",2];
-        waitUntil {sleep 0.5; (_tempvariable != ((KP_liberation_logistics select _listselect) select 1)) || (logiError == 1)};
+        waitUntil {sleep 0.5; (_tempvariable != ((KPLIB_logistics select _listselect) select 1)) || (logiError == 1)};
     };
 
     if (saveConvoySettings == 1) then {
         saveConvoySettings = 0;
         if (((lbCurSel 758024) != -1) && ((lbCurSel 758029) != -1)) then {
             [_listselect, ((_logi_destinations select lbCurSel 758024) select 1), [parseNumber ctrlText 758025,parseNumber ctrlText 758026,parseNumber ctrlText 758027], ((_logi_destinations select lbCurSel 758029) select 1), [parseNumber ctrlText 758030,parseNumber ctrlText 758031,parseNumber ctrlText 758032], clientOwner] remoteExec ["save_logi_remote_call",2];
-            waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
+            waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KPLIB_logistics select _listselect))) || (logiError == 1)};
         } else {
             hint localize "STR_LOGISTIC_SAVE_ERROR";
         };
@@ -98,19 +98,19 @@ while {dialog && (alive player)} do {
     if (convoyStandby == 1) then {
         convoyStandby = 0;
         [_listselect, clientOwner] remoteExec ["abort_logi_remote_call",2];
-        waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KP_liberation_logistics select _listselect))) || (logiError == 1)};
+        waitUntil {sleep 0.5; (!(_selectedGroup isEqualTo (KPLIB_logistics select _listselect))) || (logiError == 1)};
     };
 
     logiError = 0;
     _tempvariable = nil;
     ctrlEnable [75803, true];
 
-    if (_logi_count != (count KP_liberation_logistics)) then {
-        _logi_count = (count KP_liberation_logistics);
+    if (_logi_count != (count KPLIB_logistics)) then {
+        _logi_count = (count KPLIB_logistics);
         lbClear 75802;
         {
             lbAdd [75802, (_x select 0)];
-        } forEach KP_liberation_logistics;
+        } forEach KPLIB_logistics;
     };
 
     if ((_logi_count > 0) && (lbCurSel 75802 == -1)) then {
@@ -122,7 +122,7 @@ while {dialog && (alive player)} do {
     if ((_listselect != -1) && (_logi_count > 0)) then {
         {ctrlShow [_x, true]} forEach _detailControls;
 
-        _selectedGroup = +(KP_liberation_logistics select _listselect);
+        _selectedGroup = +(KPLIB_logistics select _listselect);
 
         if ((_selectedGroup select 7) == 0) then {
             ctrlEnable [758021, true];

@@ -182,7 +182,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Get_adjusted_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_opforCount < GRLIB_sector_cap"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_opforCount < KPLIB_sector_cap"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -205,7 +205,7 @@ class FSM
                                         priority = 1.000000;
                                         to="Activate_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"([markerPos _sector, _range, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([markerPos _sector, _range, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -239,7 +239,7 @@ class FSM
                                         priority = 2.000000;
                                         to="Exit_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"GRLIB_endgame > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"KPLIB_endgame > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

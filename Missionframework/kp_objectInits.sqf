@@ -81,21 +81,21 @@ KPLIB_objectInits = [
 
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)
     [
-        [KP_liberation_small_storage_building, KP_liberation_large_storage_building],
-        {_this setVariable ["KP_liberation_storage_type", 0, true];}
+        [KPLIB_small_storage_building, KPLIB_large_storage_building],
+        {_this setVariable ["KPLIB_storage_type", 0, true];}
     ],
 
     // Add ACE variables to corresponding building types
     [
-        [KP_liberation_recycle_building],
+        [KPLIB_recycle_building],
         {_this setVariable ["ace_isRepairFacility", 1, true];}
     ],
     [
-        KP_liberation_medical_facilities,
+        KPLIB_medical_facilities,
         {_this setVariable ["ace_medical_isMedicalFacility", true, true];}
     ],
     [
-        KP_liberation_medical_vehicles,
+        KPLIB_medical_vehicles,
         {_this setVariable ["ace_medical_isMedicalVehicle", true, true];}
     ],
 
@@ -114,15 +114,15 @@ KPLIB_objectInits = [
 
     // Add valid vehicles to support module, if system is enabled
     [
-        KP_liberation_suppMod_artyVeh,
-        {if (KP_liberation_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
+        KPLIB_suppMod_artyVeh,
+        {if (KPLIB_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
     ],
 
     // Disable autocombat (if set in parameters) and fleeing
     [
         ["Man"],
         {
-            if (!(GRLIB_autodanger) && {(side _this) isEqualTo GRLIB_side_friendly}) then {
+            if (!(KPLIB_autodanger) && {(side _this) isEqualTo KPLIB_side_friendly}) then {
                 _this disableAI "AUTOCOMBAT";
             };
             _this allowFleeing 0;

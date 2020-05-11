@@ -20,19 +20,19 @@ switch (worldName) do {
     default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
 };
 
-KP_liberation_cr_sectorbuildings = [];
+KPLIB_cr_sectorbuildings = [];
 
 {
-    KP_liberation_cr_sectorbuildings pushBack [_x, [_x] call F_cr_getBuildings];
+    KPLIB_cr_sectorbuildings pushBack [_x, [_x] call F_cr_getBuildings];
 } forEach sectors_capture;
 
 {
-    KP_liberation_cr_sectorbuildings pushBack [_x, [_x] call F_cr_getBuildings];
+    KPLIB_cr_sectorbuildings pushBack [_x, [_x] call F_cr_getBuildings];
 } forEach sectors_bigtown;
 
 if (isServer) then {[format ["init_buildings.sqf finished. Time needed: %1 seconds", diag_ticktime - _start], "CIVREP"] call KPLIB_fnc_log;};
-if (KP_liberation_civrep_debug > 0) then {
+if (KPLIB_civrep_debug > 0) then {
     {
         [format ["%1: %2", markerText (_x select 0), (_x select 1)], "CIVREP"] call KPLIB_fnc_log;
-    } forEach KP_liberation_cr_sectorbuildings;
+    } forEach KPLIB_cr_sectorbuildings;
 };

@@ -20,7 +20,7 @@ _mapdisplay = ((findDisplay 75801) displayCtrl 758016);
 lbClear 75802;
 {
     lbAdd [75802, (markerText (_x select 1))];
-} forEach KP_liberation_production;
+} forEach KPLIB_production;
 
 ctrlMapAnimClear _mapdisplay;
 
@@ -32,7 +32,7 @@ while {dialog && (alive player)} do {
     if (saveSectorSetting == 1) then {
         saveSectorSetting = 0;
         [(_selectedSector select 1), new_production] remoteExec ["change_prod_remote_call",2];
-        waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KP_liberation_production select _listselect)))};
+        waitUntil {sleep 0.5; (!(_selectedSector isEqualTo (KPLIB_production select _listselect)))};
     };
 
     _listselect = -1;
@@ -52,11 +52,11 @@ while {dialog && (alive player)} do {
         };
 
         lbSetColor [75802, _listselect, _listcolor];
-    } forEach KP_liberation_production;
+    } forEach KPLIB_production;
 
     _listselect = (lbCurSel 75802);
     waitUntil {_listselect == (lbCurSel 75802)};
-    _selectedSector = +(KP_liberation_production select _listselect);
+    _selectedSector = +(KPLIB_production select _listselect);
 
     ctrlSetText [75803,(_selectedSector select 0)];
 
@@ -64,9 +64,9 @@ while {dialog && (alive player)} do {
     ctrlSetText [75804, _sectorType];
 
     if ((count (_selectedSector select 3)) > 0) then {
-        _storage = ((nearestObjects [((_selectedSector select 3) select 0), [KP_liberation_small_storage_building], 25]) select 0);
+        _storage = ((nearestObjects [((_selectedSector select 3) select 0), [KPLIB_small_storage_building], 25]) select 0);
         _crateCount = count (attachedObjects _storage);
-        _crateMax = count (KP_liberation_small_storage_positions);
+        _crateMax = count (KPLIB_small_storage_positions);
 
         if (_crateCount >= _crateMax) then {
             _color_actual = _color_negative;

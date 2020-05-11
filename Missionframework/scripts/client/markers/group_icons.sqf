@@ -7,15 +7,15 @@ setGroupIconsVisible [true,false];
 
 while { true } do {
     {
-        if ((_x != group player) && ((side _x == GRLIB_side_friendly))) then {
+        if ((_x != group player) && ((side _x == KPLIB_side_friendly))) then {
             if ( (_x in _iconed_groups) && (
-                (count units _x == 0) ||  (side _x == GRLIB_side_friendly && (((leader _x) distance (markerPos GRLIB_respawn_marker) < 100) || ((leader _x) distance startbase < 500))))) then {
+                (count units _x == 0) ||  (side _x == KPLIB_side_friendly && (((leader _x) distance (markerPos KPLIB_respawn_marker) < 100) || ((leader _x) distance startbase < 500))))) then {
                 clearGroupIcons _x;
                 _iconed_groups = _iconed_groups - [_x];
             };
 
             if ( !(_x in _iconed_groups) && (
-                (count units _x > 0) &&  (side _x == GRLIB_side_friendly && (((leader _x) distance (markerPos GRLIB_respawn_marker) > 100) && ((leader _x) distance startbase > 500))))) then {
+                (count units _x > 0) &&  (side _x == KPLIB_side_friendly && (((leader _x) distance (markerPos KPLIB_respawn_marker) > 100) && ((leader _x) distance startbase > 500))))) then {
                 clearGroupIcons _x;
                 _localgroup = _x;
                 _grouptype = [_localgroup] call KPLIB_fnc_getGroupType;
@@ -33,7 +33,7 @@ while { true } do {
 
                 _localgroup addGroupIcon [ _groupicon, [ 0,0 ] ];
 
-                if ( side _localgroup == GRLIB_side_friendly ) then {
+                if ( side _localgroup == KPLIB_side_friendly ) then {
                     _groupiconsize = "group_0";
                     _groupsize = (count (units _localgroup));
                     if ( _groupsize >= 2 ) then { _groupiconsize = "group_1" };

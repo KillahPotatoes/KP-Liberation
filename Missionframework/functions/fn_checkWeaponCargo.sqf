@@ -2,11 +2,11 @@
     File: fn_removeWeaponCargo.sqf
     Author: Zharf - https://github.com/zharf
     Date: 2019-06-21
-    Last Update: 2020-04-13
+    Last Update: 2020-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        Removes weapons not found in KP_liberation_allowed_items from a cargo space.
+        Removes weapons not found in KPLIB_arsenalAllowed from a cargo space.
 
         Warning: All weapon attachments/magazines in container will become detached.
         Warning: Preset weapons without non-preset parents will get their attachments readded (engine limitation).
@@ -39,7 +39,7 @@ clearWeaponCargoGlobal _container;
         _weaponNonPreset = _weapon;
     };
 
-    if ((toLower ([_x] call BIS_fnc_baseWeapon)) in KP_liberation_allowed_items) then {
+    if ((toLower ([_x] call BIS_fnc_baseWeapon)) in KPLIB_arsenalAllowed) then {
         _container addWeaponCargoGlobal [_weaponNonPreset, 1];
 
         // If weapon does not have a non-preset parent, only add attachments that were custom added
@@ -51,7 +51,7 @@ clearWeaponCargoGlobal _container;
         };
 
         if !(toLower _muzzle in _presetAttachments) then {
-            if (toLower _muzzle in KP_liberation_allowed_items) then {
+            if (toLower _muzzle in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_muzzle, 1];
             } else {
                 _removed pushBack _muzzle;
@@ -59,7 +59,7 @@ clearWeaponCargoGlobal _container;
         };
 
         if !(toLower _pointer in _presetAttachments) then {
-            if (toLower _pointer in KP_liberation_allowed_items) then {
+            if (toLower _pointer in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_pointer, 1];
             } else {
                 _removed pushBack _pointer;
@@ -67,7 +67,7 @@ clearWeaponCargoGlobal _container;
         };
 
         if !(toLower _optic in _presetAttachments) then {
-            if (toLower _optic in KP_liberation_allowed_items) then {
+            if (toLower _optic in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_optic, 1];
             } else {
                 _removed pushBack _optic;
@@ -75,7 +75,7 @@ clearWeaponCargoGlobal _container;
         };
 
         if !(toLower _bipod in _presetAttachments) then {
-            if (toLower _bipod in KP_liberation_allowed_items) then {
+            if (toLower _bipod in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_bipod, 1];
             } else {
                 _removed pushBack _bipod;
@@ -84,7 +84,7 @@ clearWeaponCargoGlobal _container;
 
         _magazine params [["_magazineClass", ""], ["_magazineAmmoCount", 0]];
         if (_magazineClass != "") then {
-            if (toLower _magazineClass in KP_liberation_allowed_items) then {
+            if (toLower _magazineClass in KPLIB_arsenalAllowed) then {
                 _container addMagazineAmmoCargo [_magazineClass, 1, _magazineAmmoCount];
             } else {
                 _removed pushBack _magazineClass;
@@ -93,7 +93,7 @@ clearWeaponCargoGlobal _container;
 
         _magazineGL params [["_magazineGLClass", ""], ["_magazineGLAmmoCount", 0]];
         if (_magazineGLClass != "") then {
-            if (toLower _magazineGLClass in KP_liberation_allowed_items) then {
+            if (toLower _magazineGLClass in KPLIB_arsenalAllowed) then {
                 _container addMagazineAmmoCargo [_magazineGLClass, 1, _magazineGLAmmoCount];
             } else {
                 _removed pushBack _magazineGLClass;

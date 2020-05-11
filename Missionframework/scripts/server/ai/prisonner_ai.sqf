@@ -1,8 +1,8 @@
 params ["_unit", ["_force_surrender", false]];
 
-if ((!_force_surrender) && ((random 100) > GRLIB_surrender_chance)) exitWith {};
+if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance)) exitWith {};
 
-if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_enemy)) then {
+if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_enemy)) then {
 
     if (vehicle _unit != _unit) then {deleteVehicle _unit};
 
@@ -22,9 +22,9 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
         _unit removeItem "NVGoggles_INDEP";
         _unit setUnitPos "UP";
         sleep 1;
-        private _grp = createGroup [GRLIB_side_civilian, true];
+        private _grp = createGroup [KPLIB_side_civilian, true];
         [_unit] joinSilent _grp;
-        if (KP_liberation_ace) then {
+        if (KPLIB_ace) then {
             [_unit, true] call ACE_captives_fnc_setSurrendered;
         } else {
             _unit disableAI "ANIM";
@@ -34,11 +34,11 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
             _unit setCaptive true;
         };
         waitUntil {sleep 1;
-            !alive _unit || side group _unit == GRLIB_side_friendly
+            !alive _unit || side group _unit == KPLIB_side_friendly
         };
 
         if (alive _unit) then {
-            if (KP_liberation_ace) then {
+            if (KPLIB_ace) then {
                 [_unit, false] call ACE_captives_fnc_setSurrendered;
             } else {
                 _unit enableAI "ANIM";

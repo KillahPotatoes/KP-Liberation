@@ -10,7 +10,7 @@ while {true} do {
     {deleteMarkerLocal _x;} forEach _kp_markers_array;
     _kp_markers_array = [];
     {
-        if ((side _x == GRLIB_side_enemy) && (({!captive _x} count (units _x) ) > 0) && ([(getpos leader _x), GRLIB_side_friendly, GRLIB_radiotower_size] call KPLIB_fnc_getNearestTower != "")) then {
+        if ((side _x == KPLIB_side_enemy) && (({!captive _x} count (units _x) ) > 0) && ([(getpos leader _x), KPLIB_side_friendly, KPLIB_radiotower_size] call KPLIB_fnc_getNearestTower != "")) then {
             _kp_markers_pos = getPosATL leader _x;
             _kp_markers_posx = floor (_kp_markers_pos select 0);
             _kp_markers_posx = _kp_markers_posx - (_kp_markers_posx mod 500);

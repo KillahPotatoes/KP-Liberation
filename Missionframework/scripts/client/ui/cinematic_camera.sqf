@@ -1,5 +1,5 @@
 if ( isNil "active_sectors" ) then { active_sectors = [] };
-if ( isNil "GRLIB_all_fobs" ) then { GRLIB_all_fobs = [] };
+if ( isNil "KPLIB_all_fobs" ) then { KPLIB_all_fobs = [] };
 
 cinematic_camera_started = true;
 private _last_transition = -1;
@@ -24,9 +24,9 @@ while { cinematic_camera_started } do {
         private _positions = [ getpos startbase ];
         if ( !first_camera_round ) then {
 
-            if ( count GRLIB_all_fobs > 0 ) then {
+            if ( count KPLIB_all_fobs > 0 ) then {
                 for [ {_idx=0},{_idx < 2},{_idx=_idx+1} ] do {
-                    _positions pushback (selectRandom GRLIB_all_fobs);
+                    _positions pushback (selectRandom KPLIB_all_fobs);
                 };
             };
 
@@ -40,8 +40,8 @@ while { cinematic_camera_started } do {
                 };
             };
 
-            if ( GRLIB_endgame == 0 ) then {
-                _activeplayers = (allPlayers select {alive _x && (_x distance (markerPos GRLIB_respawn_marker)) > 100});
+            if ( KPLIB_endgame == 0 ) then {
+                _activeplayers = (allPlayers select {alive _x && (_x distance (markerPos KPLIB_respawn_marker)) > 100});
                 if ( count _activeplayers > 0 ) then {
                     for [ {_idx=0},{_idx < 3},{_idx=_idx+1} ] do {
                         _positions pushback (getpos (selectRandom _activeplayers));
@@ -256,9 +256,9 @@ while { cinematic_camera_started } do {
                     if ( _nearest_sector != "" ) then {
                         _nearest_sector = markertext _nearest_sector;
                     } else {
-                        _nearfobs = GRLIB_all_fobs select {_x distance _position < 300};
+                        _nearfobs = KPLIB_all_fobs select {_x distance _position < 300};
                         if ( count _nearfobs > 0 ) then {
-                            _nearest_sector = format [ "FOB %1", military_alphabet select ( GRLIB_all_fobs find ( _nearfobs select 0 ) ) ];
+                            _nearest_sector = format [ "FOB %1", military_alphabet select ( KPLIB_all_fobs find ( _nearfobs select 0 ) ) ];
                         };
                     };
                 };

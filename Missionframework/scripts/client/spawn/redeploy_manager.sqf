@@ -5,9 +5,9 @@ private _oldsel = -999;
 private _standard_map_pos = [];
 private _frame_pos = [];
 
-GRLIB_force_redeploy = false;
+KPLIB_force_redeploy = false;
 
-waitUntil {!isNil "GRLIB_all_fobs"};
+waitUntil {!isNil "KPLIB_all_fobs"};
 waitUntil {!isNil "blufor_sectors"};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
@@ -21,13 +21,13 @@ waitUntil {cinematic_camera_stop};
 
 private _basenamestr = "Operation Base";
 
-KP_liberation_respawn_time = time;
-KP_liberation_respawn_mobile_done = false;
+KPLIB_respawn_time = time;
+KPLIB_respawn_mobile_done = false;
 
 while {true} do {
     waitUntil {
         sleep 0.2;
-        (GRLIB_force_redeploy || (player distance (markerPos GRLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
+        (KPLIB_force_redeploy || (player distance (markerPos KPLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
     };
 
     private _backpack = backpack player;
@@ -35,7 +35,7 @@ while {true} do {
     fullmap = 0;
     _old_fullmap = 0;
 
-    GRLIB_force_redeploy = false;
+    KPLIB_force_redeploy = false;
 
     createDialog "liberation_deploy";
     deploy = 0;
@@ -59,7 +59,7 @@ while {true} do {
 
     // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
-    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_arsenal_type) then {
         _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
     } else {
         private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
@@ -82,12 +82,12 @@ while {true} do {
     while {dialog && alive player && deploy == 0} do {
         choiceslist = [[_basenamestr, getposATL startbase]];
 
-        for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx)],GRLIB_all_fobs select _idx]];
+        for [{_idx=0},{_idx < count KPLIB_all_fobs},{_idx=_idx+1}] do {
+            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (KPLIB_all_fobs select _idx)],KPLIB_all_fobs select _idx]];
         };
 
-        if (KP_liberation_mobilerespawn) then {
-            if (KP_liberation_respawn_time <= time) then {
+        if (KPLIB_mobilerespawn) then {
+            if (KPLIB_respawn_time <= time) then {
                 private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
 
                 for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
@@ -159,7 +159,7 @@ while {true} do {
         if (count (choiceslist select _idxchoice) == 3) then {
             private _truck = (choiceslist select _idxchoice) select 2;
             player setposATL (_truck getPos [5 + (random 3), random 360]);
-            KP_liberation_respawn_mobile_done = true;
+            KPLIB_respawn_mobile_done = true;
         } else {
             private _destpos = ((choiceslist select _idxchoice) select 1);
             player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
@@ -167,7 +167,7 @@ while {true} do {
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
-            if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+            if (KPLIB_ace && KPLIB_arsenal_type) then {
                 player setUnitLoadout (_selectedLoadout select 1);
             } else {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
@@ -187,18 +187,18 @@ while {true} do {
 
     if (alive player && deploy == 1) then {
         [_spawn_str] spawn spawn_camera;
-        if (KP_liberation_respawn_mobile_done) then {
-            KP_liberation_respawn_time = time + KP_liberation_respawn_cooldown;
-            KP_liberation_respawn_mobile_done = false;
+        if (KPLIB_respawn_mobile_done) then {
+            KPLIB_respawn_time = time + KPLIB_respawn_cooldown;
+            KPLIB_respawn_mobile_done = false;
         };
     };
 
-    if (KP_liberation_arsenalUsePreset) then {
+    if (KPLIB_arsenalUsePreset) then {
         [_backpack] call KPLIB_fnc_checkGear;
     };
 
-    if (KP_liberation_mobilerespawn && (KP_liberation_respawn_time > time)) then {
-        hint format [localize "STR_RESPAWN_COOLDOWN_HINT", ceil ((KP_liberation_respawn_time - time) / 60)];
+    if (KPLIB_mobilerespawn && (KPLIB_respawn_time > time)) then {
+        hint format [localize "STR_RESPAWN_COOLDOWN_HINT", ceil ((KPLIB_respawn_time - time) / 60)];
         uiSleep 12;
         hint "";
     };

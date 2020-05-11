@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-06
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -80,7 +80,7 @@ if (_classname in opfor_choppers) then {
 if (_classname in militia_vehicles) then {
     [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
-    private _grp = createGroup [GRLIB_side_enemy, true];
+    private _grp = createGroup [KPLIB_side_enemy, true];
     private _crew = units (createVehicleCrew _newvehicle);
     _crew joinSilent _grp;
     sleep 0.1;

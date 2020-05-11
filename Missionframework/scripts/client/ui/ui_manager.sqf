@@ -10,12 +10,12 @@ private _sectorcontrols = [
     244     // Capture Frame BLUFOR
 ];
 
-GRLIB_ui_notif = "";
-KP_liberation_supplies = 0;
-KP_liberation_ammo = 0;
-KP_liberation_fuel = 0;
-KP_liberation_air_vehicle_building_near = false;
-KP_liberation_recycle_building_near = false;
+KPLIB_ui_notif = "";
+KPLIB_supplies = 0;
+KPLIB_ammo = 0;
+KPLIB_fuel = 0;
+KPLIB_air_vehicle_building_near = false;
+KPLIB_recycle_building_near = false;
 
 waitUntil { !isNil "synchro_done" };
 waitUntil { synchro_done };
@@ -61,34 +61,34 @@ while {true} do {
         private _nearestFob = player getVariable "KPLIB_fobPos";
         ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
 
-        if (KP_liberation_resources_global || {_visibleMap}) then {
+        if (KPLIB_resources_global || {_visibleMap}) then {
             // Overwrite FOB name in global mode
             _currentFob = localize "STR_RESOURCE_GLOBAL";
 
-            KP_liberation_supplies = KP_liberation_supplies_global;
-            KP_liberation_ammo = KP_liberation_ammo_global;
-            KP_liberation_fuel = KP_liberation_fuel_global;
+            KPLIB_supplies = KPLIB_supplies_global;
+            KPLIB_ammo = KPLIB_ammo_global;
+            KPLIB_fuel = KPLIB_fuel_global;
         } else {
-            KP_liberation_supplies = _supplies;
-            KP_liberation_ammo = _ammo;
-            KP_liberation_fuel = _fuel;
+            KPLIB_supplies = _supplies;
+            KPLIB_ammo = _ammo;
+            KPLIB_fuel = _fuel;
         };
         // TODO this is used by build scripts, move to relevant places
-        KP_liberation_air_vehicle_building_near = _hasAir;
-        KP_liberation_recycle_building_near = _hasRecycling;
+        KPLIB_air_vehicle_building_near = _hasAir;
+        KPLIB_recycle_building_near = _hasRecycling;
     } else {
         _showResources = false;
-        KP_liberation_supplies = 0;
-        KP_liberation_ammo = 0;
-        KP_liberation_fuel = 0;
-        KP_liberation_air_vehicle_building_near = false;
-        KP_liberation_recycle_building_near = false;
+        KPLIB_supplies = 0;
+        KPLIB_ammo = 0;
+        KPLIB_fuel = 0;
+        KPLIB_air_vehicle_building_near = false;
+        KPLIB_recycle_building_near = false;
     };
 
     if (_overlayVisible) then {
 
-        (_overlay displayCtrl (266)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
-        (_overlay displayCtrl (267)) ctrlSetText format [ "%1", GRLIB_ui_notif ];
+        (_overlay displayCtrl (266)) ctrlSetText format [ "%1", KPLIB_ui_notif ];
+        (_overlay displayCtrl (267)) ctrlSetText format [ "%1", KPLIB_ui_notif ];
 
         if ((markerPos "opfor_capture_marker") distance markers_reset > 100 ) then {
 
@@ -114,7 +114,7 @@ while {true} do {
 
         if (_uiticks % 25 == 0) then {
 
-            if (!isNil "active_sectors" && ([] call KPLIB_fnc_getOpforCap >= GRLIB_sector_cap)) then {
+            if (!isNil "active_sectors" && ([] call KPLIB_fnc_getOpforCap >= KPLIB_sector_cap)) then {
 
                 (_overlay displayCtrl (517)) ctrlShow true;
 
@@ -135,18 +135,18 @@ while {true} do {
                 (_overlay displayCtrl (517)) ctrlShow false;
             };
 
-            _nearest_active_sector = [GRLIB_sector_size] call KPLIB_fnc_getNearestSector;
+            _nearest_active_sector = [KPLIB_sector_size] call KPLIB_fnc_getNearestSector;
             if ( _nearest_active_sector != "" ) then {
-                _zone_size = GRLIB_capture_size;
+                _zone_size = KPLIB_capture_size;
                 if ( _nearest_active_sector in sectors_bigtown ) then {
-                    _zone_size = GRLIB_capture_size * 1.4;
+                    _zone_size = KPLIB_capture_size * 1.4;
                 };
 
                 "zone_capture" setmarkerposlocal (markerpos _nearest_active_sector);
                 _colorzone = "ColorGrey";
-                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_friendly ) then { _colorzone = GRLIB_color_friendly };
-                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_enemy ) then { _colorzone = GRLIB_color_enemy };
-                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == GRLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
+                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == KPLIB_side_friendly ) then { _colorzone = KPLIB_color_friendly };
+                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == KPLIB_side_enemy ) then { _colorzone = KPLIB_color_enemy };
+                if ( [ markerpos _nearest_active_sector, _zone_size ] call KPLIB_fnc_getSectorOwnership == KPLIB_side_resistance ) then { _colorzone = "ColorCivilian" };
                 "zone_capture" setmarkercolorlocal _colorzone;
 
                 _ratio = [_nearest_active_sector] call KPLIB_fnc_getBluforRatio;

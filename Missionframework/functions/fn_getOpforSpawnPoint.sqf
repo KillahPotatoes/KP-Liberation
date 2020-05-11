@@ -2,7 +2,7 @@
     File: fn_getOpforSpawnPoint.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-04-17
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -53,7 +53,7 @@ private ["_valid", "_current", "_distances"];
 
     if (_valid) then {
         // Fetch distances to FOBs
-        _distances = (GRLIB_all_fobs apply {(markerPos _current) distance2d _x}) select {_x < _max};
+        _distances = (KPLIB_all_fobs apply {(markerPos _current) distance2d _x}) select {_x < _max};
 
         // Fetch distances to blufor sectors
         _distances append ((blufor_sectors apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});
@@ -79,7 +79,7 @@ private ["_valid", "_current", "_distances"];
 
     // Make sure that there is no blufor unit inside min dist to spawn
     if (_valid) then {
-        if (([markerpos _current, _min, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) then {
+        if (([markerpos _current, _min, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) then {
             _valid = false;
         };
     };
