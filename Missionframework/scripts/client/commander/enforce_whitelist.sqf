@@ -1,6 +1,6 @@
 scriptName "[KPLIB] Enforce Whitelist";
 
-[] call compileFinal preprocessFileLineNumbers "whitelist.sqf";
+[] call compile preprocessFileLineNumbers "whitelist.sqf";
 
 if (!KPLIB_use_whitelist) exitWith {};
 

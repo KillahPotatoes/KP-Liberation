@@ -1,6 +1,12 @@
 /*
-    CSAT Arsenal Preset
-    Last Update: 2020-05-10
+    File: csat.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-03
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CSAT arsenal preset.
 
     Needed:
         - None
@@ -11,7 +17,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "arifle_AK12_arid_F",                                           // AK-12 7.62 mm (Arid)
     "arifle_AK12_F",                                                // AK-12 7.62 mm
     "arifle_AK12_GL_arid_F",                                        // AK-12 7.62 mm (Arid)
@@ -100,11 +106,11 @@ KPLIB_arsenal_weapons = [
     "srifle_GM6_ghex_F"                                             // GM6 Lynx 12.7 mm (Green Hex)
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -374,7 +380,7 @@ KPLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_AssaultPack_blk",                                            // Assault Pack (Black)
     "B_AssaultPack_ocamo",                                          // Assault Pack (Hex)
     "B_AssaultPack_rgr",                                            // Assault Pack (Green)

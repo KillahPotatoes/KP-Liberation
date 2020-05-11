@@ -18,7 +18,7 @@ disableSerialization;
 waitUntil { dialog };
 
 
-permission_create_activetext = compileFinal '
+permission_create_activetext = compile '
 
     params ["_idx", "_column", "_permission", "_text", "_tooltip"];
 

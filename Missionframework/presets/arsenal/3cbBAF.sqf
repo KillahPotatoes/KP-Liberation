@@ -1,6 +1,12 @@
 /*
-    3CB BAF Arsenal Preset
-    Last Update: 2020-05-10
+    File: 3cbBAF.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-05-22
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        3cbBAF arsenal preset.
 
     Needed:
         - 3CB BAF Weapons   - https://steamcommunity.com/sharedfiles/filedetails/?id=893339590
@@ -12,7 +18,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "UK3CB_BAF_AT4_CS_AP_Launcher",                                 // ILAW HEDP Launcher
     "UK3CB_BAF_AT4_CS_AT_Launcher",                                 // ILAW HP Launcher
     "UK3CB_BAF_L103A2",                                             // L130A2 DP
@@ -66,7 +72,7 @@ KPLIB_arsenal_weapons = [
     "UK3CB_BAF_NLAW_Launcher"                                       // NLAW Launcher
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     "UK3CB_BAF_12G_Pellets",                                        // 12G 8rnd Buckshot
     "UK3CB_BAF_12G_Slugs",                                          // 12G 8rnd Slug
     "UK3CB_BAF_1Rnd_Blank_Grenade_Shell",                           // 40mm Practice Round (L123)
@@ -154,7 +160,7 @@ KPLIB_arsenal_magazines = [
     "TrainingMine_Mag"                                              // Training Mine
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "UK3CB_BAF_U_CombatUniform_Arctic_Ghillie_RM",                  // Combat Uniform Arctic Ghillie RM [BAF]
     "UK3CB_BAF_U_CombatUniform_DDPM_Ghillie_RM",                    // Combat Uniform DDPPM Ghillie RM [BAF]
@@ -658,7 +664,7 @@ KPLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "UK3CB_BAF_B_Bergen_Arctic_JTAC_A",                             // Bergen Arctic JTAC/FAC [BAF]
     "UK3CB_BAF_B_Bergen_Arctic_JTAC_H_A",                           // Bergen Arctic JTAC/FAC H [BAF]
     "UK3CB_BAF_B_Bergen_Arctic_Rifleman_A",                         // Bergen Arctic Rifleman A [BAF]

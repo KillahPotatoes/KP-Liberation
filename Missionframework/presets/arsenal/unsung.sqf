@@ -1,6 +1,12 @@
 /*
-    The Unsung Vietnam War Mod US Arsenal Preset
-    Last Update: 2020-05-10
+    File: unsung.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-07-24
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Unsung arsenal preset.
 
     Needed:
         - Unsung - https://steamcommunity.com/sharedfiles/filedetails/?id=943001311
@@ -11,7 +17,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "uns_357m",                                                     // Colt Lawman Mk.III (.357)
     "uns_38spec",                                                   // S/W Model 10 (.38 Spec)
     "uns_ak47_49",                                                  // AK-47/49
@@ -186,7 +192,7 @@ KPLIB_arsenal_weapons = [
     "uns_xm177e2"                                                   // XM-177E2
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     "Mine",                                                         // Mine Type 59 (Anti Tank)
     "MineE",                                                        // Mine TM57 (Anti Vehicle)
     "PipeBomb",                                                     // Explosive Charge
@@ -479,7 +485,7 @@ KPLIB_arsenal_magazines = [
     "TrainingMine_Mag"                                              // Training Mine
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "UNS_ARMY_BDU_101stAB1stlt",                                    // ARMY BDU_101stAB 1stLT
     "UNS_ARMY_BDU_101stAB1stsgt",                                   // ARMY BDU_101stAB 1stSGT
@@ -1820,7 +1826,7 @@ KPLIB_arsenal_items = [
     "tf_microdagr"                                                  // MicroDAGR Radio Programmer
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "UNS_Alice_1",                                                  // Alice Pack 1
     "UNS_Alice_2",                                                  // Alice Pack 2
     "UNS_Alice_3",                                                  // Alice Pack 3

@@ -1,6 +1,12 @@
 /*
-    BWMod Arsenal Preset
-    Last Update: 2020-05-10
+    File: bwmod.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2020-05-03
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        BWMod arsenal preset.
 
     Needed:
         - BWMod - https://steamcommunity.com/sharedfiles/filedetails/?id=1200127537
@@ -11,7 +17,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "BWA3_Bunkerfaust",                                             // Bunkerfaust
     "BWA3_CarlGustav",                                              // Leuchtbüchse 84 mm
     "BWA3_Fliegerfaust",                                            // Fliegerfaust 2 Stinger
@@ -77,7 +83,7 @@ KPLIB_arsenal_weapons = [
     "BWA3_RGW90"                                                    // RGW 90
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     "BWA3_10Rnd_127x99_G82_AP_Tracer",                              // G82 12.7x99mm 10Rnd Mag (AP Tracer)
     "BWA3_10Rnd_127x99_G82_AP",                                     // G82 12.7x99mm 10Rnd Mag (AP)
     "BWA3_10Rnd_127x99_G82_Raufoss_Tracer_Dim",                     // G82 12.7x99mm Mk211 10Rnd Mag (Raufoss IR-DIM)
@@ -170,7 +176,7 @@ KPLIB_arsenal_magazines = [
     "UGL_FlareYellow_F"                                             // Flare Round (Yellow)
     ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "BWA3_Uniform_Crew_Fleck",                                      // Boilersuit (Flecktart)
     "BWA3_Uniform_Crew_Multi",                                      // Boilersuit (Multitarn)
@@ -470,7 +476,7 @@ KPLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "BWA3_AssaultPack_Fleck_Medic",                                 // Assault Pack (Flecktarn, Medic)
     "BWA3_AssaultPack_Fleck",                                       // Assault Pack (Flecktarn)
     "BWA3_AssaultPack_Multi_Medic",                                 // Assault Pack (Multitarn, Medic)

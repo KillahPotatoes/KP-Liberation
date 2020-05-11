@@ -1,16 +1,21 @@
 /*
-    Global Mobilization West Germany Arsenal Preset
-
+    File: gm_west.sqf
     Author: Dahlgren - https://github.com/Dahlgren
+    Date: 2019-04-30
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Global Mobilization West Germany arsenal preset.
 
     Mods needed:
-    - Global Mobilization
+        - Global Mobilization
 
     Mods optional:
-    - None
+        - None
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // G3A3 + G3A4
     "gm_g3a3_oli",
     "gm_g3a4_oli",
@@ -34,7 +39,7 @@ KPLIB_arsenal_weapons = [
     "gm_pzf84_oli"
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     // G3A3 + G3A4
     "gm_20rnd_762x51mm_b_t_dm21_g3_blk",
     "gm_20rnd_762x51mm_b_t_dm21a1_g3_blk",
@@ -110,7 +115,7 @@ KPLIB_arsenal_magazines = [
     "gm_mine_at_dm21"
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "gm_ge_army_uniform_crew_80_oli",
     "gm_ge_army_uniform_soldier_80_oli",
@@ -170,7 +175,7 @@ KPLIB_arsenal_items = [
     "ItemRadio"
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "gm_ge_army_backpack_80_oli",
     "gm_ge_backpack_satchel_80_blk",
     "gm_ge_backpack_satchel_80_san"

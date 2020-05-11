@@ -1,14 +1,21 @@
 /*
-    Global Mobilization East Germany Arsenal Preset
+    File: gm_east.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-07
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Global Mobilization East Germany arsenal preset.
 
     Mods needed:
-    - Global Mobilization
+        - Global Mobilization
 
     Mods optional:
-    - None
+        - None
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // AK-74
     "gm_mpiak74n_brn",
     "gm_mpiaks74nk_brn",
@@ -32,7 +39,7 @@ KPLIB_arsenal_weapons = [
     "gm_rpg7_prp_pgo7v"
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
     // LP1 26.5mm
     "gm_1Rnd_265mm_flare_single_grn_gc",
@@ -82,7 +89,7 @@ KPLIB_arsenal_magazines = [
     "gm_mine_at_tm46"
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
 
     // Uniforms
     "gm_gc_army_uniform_dress_80_gry",
@@ -121,7 +128,7 @@ KPLIB_arsenal_items = [
     "ItemRadio"
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "gm_gc_army_backpack_80_at_str",
     "gm_gc_army_backpack_80_lmg_str",
     "gm_gc_army_backpack_80_mgk_str",

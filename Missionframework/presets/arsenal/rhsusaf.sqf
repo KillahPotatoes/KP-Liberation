@@ -1,6 +1,12 @@
 /*
-    RHS United States Armed Forces Arsenal Preset
-    Last Update: 2020-05-10
+    File: rhsusaf.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-03-16
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RHSUSAF arsenal preset.
 
     Needed:
         - RHSUSAF - https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
@@ -11,7 +17,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "rhs_weap_fgm148",                                              // FGM-148 Javelin
     "rhs_weap_fim92",                                               // FIM-92F
     "rhs_weap_hk416d10_LMT_d",                                      // HK416 D10 (SOPMOD Stock/Desert)
@@ -134,7 +140,7 @@ KPLIB_arsenal_weapons = [
     "rhsusf_weap_MP7A2"                                             // MP7A2
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     "rhs_fgm148_magazine_AT",                                       // Javelin AT
     "rhs_fgm172a_magazine_AT",                                      // FGM172A SRAW
     "rhs_fgm172b_magazine_MPV",                                     // FGM172B SRAW-MPV
@@ -356,7 +362,7 @@ KPLIB_arsenal_magazines = [
     "TrainingMine_Mag"                                              // Training Mine
 ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "rhs_uniform_abu",                                              // Airman Battle Uniform
     "rhs_uniform_acu_ocp",                                          // Army Combat Uniform (OCP)
@@ -947,7 +953,7 @@ KPLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_rhsusf_B_BACKPACK",                                          // Eagle A-III OCP (Raven)
     "rhsusf_assault_eagleaiii_coy",                                 // Eagle A-III Coyote
     "rhsusf_assault_eagleaiii_ocp",                                 // Eagle A-III OEF-CP

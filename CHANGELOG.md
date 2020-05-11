@@ -3,6 +3,9 @@
 ## 0.96.8 (TBD)
 * Tweaked: Splitted the config file in seperate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
+* Tweaked: Arsenal presets are now in the presets folder.
+* Tweaked: Blacklist and arsenal extension are now own files in presets/arsenal.
+* Tweaked: Renamed blufor/opfor to players/enemies, to possibly avoid further confusion with using an opfor faction for a player preset.
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
 
 ## 0.96.7 (2020-05-10)

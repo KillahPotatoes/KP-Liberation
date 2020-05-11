@@ -1,6 +1,12 @@
 /*
-    Swedish Forces Pack Arsenal Preset
-    Last Update: 2020-05-10
+    File: sfp.sqf
+    Author: Dahlgren - https://github.com/Dahlgren
+    Date: 2017-07-17
+    Last Update: 2020-05-11
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        SFP arsenal preset.
 
     Needed:
         - SFP: Swedish Forces Pack - https://steamcommunity.com/sharedfiles/filedetails/?id=826911897
@@ -11,7 +17,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-KPLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     "sfp_20Rnd_762x51_ak4",                                         // Ak 4C
     "sfp_ag90_base",                                                // Ag 90B
     "sfp_ak4_m203",                                                 // Ak 4 M203
@@ -60,7 +66,7 @@ KPLIB_arsenal_weapons = [
     "sfp_signpist50"                                                // Signalpistol 80 (Flare)
 ];
 
-KPLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
     "sfp_100Rnd_762x51_ksp58",                                      // 7.62mm 100Rnd
     "sfp_10Rnd_127x99_ag90",                                        // 12.7mm 10Rnd Ag90 Mag
     "sfp_12Gauge_8rd_Pellets",                                      // 12 Gauge 8 Rnd Buckshopt
@@ -165,7 +171,7 @@ KPLIB_arsenal_magazines = [
     "UGL_FlareYellow_F"                                             // Flare Round (Yellow)
     ];
 
-KPLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Uniforms
     "sfp_drysuit",                                                  // Dry Suit
     "sfp_ghillie_desert_uniform",                                   // Ghillie suit (Desert)
@@ -476,7 +482,7 @@ KPLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-KPLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "sfp_backpack_grg_loader",                                      // GRG Loader (Backpack)
     "sfp_backpack_lk35",                                            // LK 35
     "sfp_backpack_sjvv9",                                           // Medic Bag

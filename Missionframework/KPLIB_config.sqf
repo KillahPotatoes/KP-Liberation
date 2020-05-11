@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-10
+    Last Update: 2020-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -53,7 +53,7 @@
     29 = SFP (Desert)
     30 = LDF (Contact DLC)
 */
-KPLIB_preset_blufor = 0;
+KPLIB_presetPlayers = 0;
 
 /*
     ----- Enemy preset -----
@@ -79,7 +79,7 @@ KPLIB_preset_blufor = 0;
     19 = CUP British Armed Forces (Desert)
     20 = CUP British Armed Forces (Woodland)
 */
-KPLIB_preset_opfor = 0;
+KPLIB_presetEnemies = 0;
 
 /*
     ----- Resistance preset -----
@@ -93,7 +93,7 @@ KPLIB_preset_opfor = 0;
     7  = CUP Takistani Locals
     8  = CUP National Party of Chernarus
 */
-KPLIB_preset_resistance = 0;
+KPLIB_presetResistance = 0;
 
 /*
     ----- Civilians preset -----
@@ -106,12 +106,12 @@ KPLIB_preset_resistance = 0;
     6  = CUP Takistani Civilians
     7  = CUP Chernarussian Civilians
 */
-KPLIB_preset_civilians = 0;
+KPLIB_presetCivilians = 0;
 
 /*
     ----- Arsenal preset -----
     0  = Use the default blacklist method (defined below)
-    1  = Custom arsenal preset (custom.sqf in the arsenal_presets\ folder)
+    1  = Custom arsenal preset (custom.sqf in the presets\arsenal\ folder)
     2  = RHS USAF arsenal preset
     3  = 3cbBAF and RHS USAF arsenal preset
     4  = GM West arsenal preset
@@ -121,7 +121,7 @@ KPLIB_preset_civilians = 0;
     8  = SFP arsenal preset
     9  = BWMod arsenal preset
 */
-KPLIB_arsenal = 0;
+KPLIB_presetArsenal = 0;
 
 
 /*
@@ -383,7 +383,7 @@ KPLIB_suppMod_whitelist = [
 // Adjustments calculation depending on selected mission parameters (shouldn't be edited)
 KPLIB_endgame                       = 0;
 KPLIB_respawn_marker                = "respawn";
-KPLIB_production_interval   = ceil (KPLIB_production_interval / KPLIB_resources_multiplier);
+KPLIB_production_interval           = ceil (KPLIB_production_interval / KPLIB_resources_multiplier);
 KPLIB_battlegroup_size              = KPLIB_battlegroup_size * (sqrt KPLIB_unitcap) * (sqrt KPLIB_csat_aggressivity);
 KPLIB_civilians_amount              = KPLIB_civilians_amount * KPLIB_civilian_activity;
 KPLIB_blufor_cap                    = (KPLIB_blufor_cap * KPLIB_unitcap) min 100;
