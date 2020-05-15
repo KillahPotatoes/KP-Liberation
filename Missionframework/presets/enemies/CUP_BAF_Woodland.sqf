@@ -1,50 +1,59 @@
 /*
+    File: cup_baf_woodland.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2020-04-16
+    Last Update: 2020-05-15
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP BAF Woodland enemy preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Enemy infantry classes
-opfor_officer = "CUP_B_BAF_Soldier_Officer_DPM";                        // Officer
-opfor_squad_leader = "CUP_B_BAF_Soldier_SquadLeader_DPM";               // Squad Leader
-opfor_team_leader = "CUP_B_BAF_Soldier_TeamLeader_DPM";                 // Team Leader
-opfor_sentry = "CUP_B_BAF_Soldier_RiflemanLite_DPM";                    // Rifleman (Lite)
-opfor_rifleman = "CUP_B_BAF_Soldier_Rifleman_DPM";                      // Rifleman
-opfor_rpg = "CUP_B_BAF_Soldier_RiflemanLAT_DPM";                        // Rifleman (LAT)
-opfor_grenadier = "CUP_B_BAF_Soldier_Grenadier_DPM";                    // Grenadier
-opfor_machinegunner = "CUP_B_BAF_Soldier_AutoRifleman_DPM";             // Autorifleman
-opfor_heavygunner = "CUP_B_BAF_Soldier_HeavyGunner_DPM";                // Heavy Gunner
-opfor_marksman = "CUP_B_BAF_Soldier_Marksman_DPM";                      // Marksman
-opfor_sharpshooter = "CUP_B_BAF_Soldier_SharpShooter_DPM";              // Sharpshooter
-opfor_sniper = "CUP_B_BAF_Sniper_AS50_DPM";                             // Sniper
-opfor_at = "CUP_B_BAF_Soldier_AT_DPM";                                  // AT Specialist
-opfor_aa = "CUP_B_BAF_Soldier_AA_DPM";                                  // AA Specialist
-opfor_medic = "CUP_B_BAF_Soldier_Medic_DPM";                            // Medic
-opfor_engineer = "CUP_B_BAF_Soldier_Engineer_DPM";                      // Engineer
-opfor_paratrooper = "CUP_B_BAF_Soldier_Paratrooper_DPM";                // Paratrooper
+KPLIB_o_officer = "CUP_B_BAF_Soldier_Officer_DPM";                      // Officer
+KPLIB_o_squadLeader = "CUP_B_BAF_Soldier_SquadLeader_DPM";              // Squad Leader
+KPLIB_o_teamLeader = "CUP_B_BAF_Soldier_TeamLeader_DPM";                // Team Leader
+KPLIB_o_sentry = "CUP_B_BAF_Soldier_RiflemanLite_DPM";                  // Rifleman (Lite)
+KPLIB_o_rifleman = "CUP_B_BAF_Soldier_Rifleman_DPM";                    // Rifleman
+KPLIB_o_riflemanLAT = "CUP_B_BAF_Soldier_RiflemanLAT_DPM";              // Rifleman (LAT)
+KPLIB_o_grenadier = "CUP_B_BAF_Soldier_Grenadier_DPM";                  // Grenadier
+KPLIB_o_machinegunner = "CUP_B_BAF_Soldier_AutoRifleman_DPM";           // Autorifleman
+KPLIB_o_heavyGunner = "CUP_B_BAF_Soldier_HeavyGunner_DPM";              // Heavy Gunner
+KPLIB_o_marksman = "CUP_B_BAF_Soldier_Marksman_DPM";                    // Marksman
+KPLIB_o_sharpshooter = "CUP_B_BAF_Soldier_SharpShooter_DPM";            // Sharpshooter
+KPLIB_o_sniper = "CUP_B_BAF_Sniper_AS50_DPM";                           // Sniper
+KPLIB_o_atSpecialist = "CUP_B_BAF_Soldier_AT_DPM";                      // AT Specialist
+KPLIB_o_aaSpecialist = "CUP_B_BAF_Soldier_AA_DPM";                      // AA Specialist
+KPLIB_o_medic = "CUP_B_BAF_Soldier_Medic_DPM";                          // Medic
+KPLIB_o_engineer = "CUP_B_BAF_Soldier_Engineer_DPM";                    // Engineer
+KPLIB_o_paratrooper = "CUP_B_BAF_Soldier_Paratrooper_DPM";              // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "CUP_B_Ridgeback_LMG_GB_W";                                // Ridgeback PPV LMG Woodland
-opfor_mrap_armed = "CUP_B_Ridgeback_HMG_GB_W";                          // Ridgeback PPV HMG Woodland
-opfor_transport_helo = "CUP_B_CH47F_GB";                                // Chinook HC-4
-opfor_transport_truck = "CUP_B_MTVR_BAF_WOOD";                          // MTVR
-opfor_ammobox_transport = "CUP_B_MTVR_BAF_WOOD";                        // MTVR -> Has to be able to transport resource crates!
-opfor_fuel_truck = "CUP_B_MTVR_Refuel_BAF_WOOD";                        // MTVR (Refuel)
-opfor_ammo_truck = "CUP_B_MTVR_Ammo_BAF_WOOD";                          // MTVR (Ammo)
-opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Container
-opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Container
-opfor_flag = "Flag_UK_F";                                               // Flag
+KPLIB_o_mrap = "CUP_B_Ridgeback_LMG_GB_W";                              // Ridgeback PPV LMG Woodland
+KPLIB_o_mrapArmed = "CUP_B_Ridgeback_HMG_GB_W";                         // Ridgeback PPV HMG Woodland
+KPLIB_o_transportHeli = "CUP_B_CH47F_GB";                               // Chinook HC-4
+KPLIB_o_transportTruck = "CUP_B_MTVR_BAF_WOOD";                         // MTVR
+KPLIB_o_transportTruckAmmo = "CUP_B_MTVR_BAF_WOOD";                     // MTVR -> Has to be able to transport resource crates!
+KPLIB_o_fuelTruck = "CUP_B_MTVR_Refuel_BAF_WOOD";                       // MTVR (Refuel)
+KPLIB_o_ammoTruck = "CUP_B_MTVR_Ammo_BAF_WOOD";                         // MTVR (Ammo)
+KPLIB_o_fuelContainer = "B_Slingload_01_Fuel_F";                        // Huron Fuel Container
+KPLIB_o_ammoContainer = "B_Slingload_01_Ammo_F";                        // Huron Ammo Container
+KPLIB_o_flag = "Flag_UK_F";                                             // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
-militia_squad = [
+KPLIB_o_militiaInfantry = [
     "CUP_B_BAF_Soldier_TeamLeader_MTP",                                 // Team Leader
     "CUP_B_BAF_Soldier_Medic_MTP",                                      // Combat Life Saver
     "CUP_B_BAF_Soldier_RiflemanLAT_MTP",                                // Rifleman (Light AT)
@@ -54,12 +63,12 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-militia_vehicles = [
+KPLIB_o_militiaVehicles = [
     "CUP_B_LR_MG_GB_W"                                                  // Land Rover 110 (M2) Woodland
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
-opfor_vehicles = [
+KPLIB_o_armyVehicles = [
     "CUP_B_LR_Special_M2_GB_W",                                         // Land Rover 110 (M2 Special) Woodland
     "CUP_B_LR_Special_GMG_GB_W",                                        // Land Rover 110 (GMG Special) Woodland
     "CUP_B_BAF_Coyote_L2A1_W",                                          // Coyote L2A1 (Woodland)
@@ -81,7 +90,7 @@ opfor_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-opfor_vehicles_low_intensity = [
+KPLIB_o_armyVehiclesLight = [
     "CUP_B_LR_Special_M2_GB_W",                                         // Land Rover 110 (M2 Special) Woodland
     "CUP_B_LR_Special_GMG_GB_W",                                        // Land Rover 110 (GMG Special) Woodland
     "CUP_B_Jackal2_L2A1_GB_W",                                          // Jackal 2 L2A1 Woodland
@@ -94,7 +103,7 @@ opfor_vehicles_low_intensity = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles = [
+KPLIB_o_battleGrpVehicles = [
     "CUP_B_LR_Special_M2_GB_W",                                         // Land Rover 110 (M2 Special) Woodland
     "CUP_B_LR_Special_GMG_GB_W",                                        // Land Rover 110 (GMG Special) Woodland
     "CUP_B_BAF_Coyote_L2A1_W",                                          // Coyote L2A1 (Woodland)
@@ -122,7 +131,7 @@ opfor_battlegroup_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles_low_intensity = [
+KPLIB_o_battleGrpVehiclesLight = [
     "CUP_B_LR_Special_M2_GB_W",                                         // Land Rover 110 (M2 Special) Woodland
     "CUP_B_LR_Special_GMG_GB_W",                                        // Land Rover 110 (GMG Special) Woodland
     "CUP_B_Jackal2_L2A1_GB_W",                                          // Jackal 2 L2A1 Woodland
@@ -139,7 +148,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
-opfor_troup_transports = [
+KPLIB_o_troopTransports = [
     "CUP_B_BAF_Coyote_L2A1_W",                                          // Coyote L2A1 (Woodland)
     "CUP_B_BAF_Coyote_GMG_W",                                           // Coyote GMG (Woodland)
     "CUP_B_Mastiff_LMG_GB_W",                                           // Mastiff PPV LMG Woodland
@@ -154,7 +163,7 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
+KPLIB_o_helicopters = [
     "CUP_B_AH1_DL_BAF",                                                 // AH1
     "CUP_B_AW159_GB",                                                   // AW159 Wildcat (Green)
     "CUP_B_CH47F_GB",                                                   // Chinook HC-4
@@ -162,7 +171,7 @@ opfor_choppers = [
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [
+KPLIB_o_planes = [
     "CUP_B_F35B_BAF",                                                   // F-35B Lightning II
     "CUP_B_F35B_Stealth_BAF",                                           // F-35B Lightning II (Stealth)
     "CUP_B_GR9_DYN_GB"                                                  // Harrier GR.9

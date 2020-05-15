@@ -1,48 +1,60 @@
 /*
+    File: sla.sqf
+    Author: PSYKO-nz - https://github.com/PSYKO-nz
+    Date: 2018-02-19
+    Last Update: 2020-05-15
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Sahrani Liberation Army enemy preset.
+
     Needed Mods:
-    - Project OPFOR
+        - Project OPFOR
+        - RHS AFRF
+        - RHS GREF
+        - RHS USAF
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Enemy infantry classes
-opfor_officer = "LOP_SLA_Infantry_Officer";
-opfor_squad_leader = "LOP_SLA_Infantry_SL";
-opfor_team_leader = "LOP_SLA_Infantry_TL";
-opfor_sentry = "LOP_SLA_Infantry_Rifleman";
-opfor_rifleman = "LOP_SLA_Infantry_Rifleman_2";
-opfor_rpg = "LOP_SLA_Infantry_AT";
-opfor_grenadier = "LOP_SLA_Infantry_GL";
-opfor_machinegunner = "LOP_SLA_Infantry_MG";
-opfor_heavygunner = "LOP_SLA_Infantry_MG";
-opfor_marksman = "LOP_SLA_Infantry_Marksman";
-opfor_sharpshooter = "LOP_SLA_Infantry_Marksman";
-opfor_sniper = "LOP_SLA_Infantry_Marksman";
-opfor_at = "LOP_SLA_Infantry_AT";
-opfor_aa = "LOP_SLA_Infantry_AA";
-opfor_medic = "LOP_SLA_Infantry_Corpsman";
-opfor_engineer = "LOP_SLA_Infantry_Engineer";
-opfor_paratrooper = "LOP_SLA_Infantry_Rifleman";
+KPLIB_o_officer = "LOP_SLA_Infantry_Officer";
+KPLIB_o_squadLeader = "LOP_SLA_Infantry_SL";
+KPLIB_o_teamLeader = "LOP_SLA_Infantry_TL";
+KPLIB_o_sentry = "LOP_SLA_Infantry_Rifleman";
+KPLIB_o_rifleman = "LOP_SLA_Infantry_Rifleman_2";
+KPLIB_o_riflemanLAT = "LOP_SLA_Infantry_AT";
+KPLIB_o_grenadier = "LOP_SLA_Infantry_GL";
+KPLIB_o_machinegunner = "LOP_SLA_Infantry_MG";
+KPLIB_o_heavyGunner = "LOP_SLA_Infantry_MG";
+KPLIB_o_marksman = "LOP_SLA_Infantry_Marksman";
+KPLIB_o_sharpshooter = "LOP_SLA_Infantry_Marksman";
+KPLIB_o_sniper = "LOP_SLA_Infantry_Marksman";
+KPLIB_o_atSpecialist = "LOP_SLA_Infantry_AT";
+KPLIB_o_aaSpecialist = "LOP_SLA_Infantry_AA";
+KPLIB_o_medic = "LOP_SLA_Infantry_Corpsman";
+KPLIB_o_engineer = "LOP_SLA_Infantry_Engineer";
+KPLIB_o_paratrooper = "LOP_SLA_Infantry_Rifleman";
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "LOP_SLA_UAZ";
-opfor_mrap_armed = "LOP_SLA_UAZ_DshKM";
-opfor_transport_helo = "LOP_SLA_Mi8MT_Cargo";
-opfor_transport_truck = "LOP_SLA_Ural";
-opfor_ammobox_transport = "LOP_SLA_Ural_open";                          //-> Has to be able to transport resource crates!
-opfor_fuel_truck = "rhs_gaz66_ammo_vmf";
-opfor_ammo_truck = "rhs_gaz66_ammo_vmf";
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";
-opfor_flag = "lop_Flag_sla_F";
+KPLIB_o_mrap = "LOP_SLA_UAZ";
+KPLIB_o_mrapArmed = "LOP_SLA_UAZ_DshKM";
+KPLIB_o_transportHeli = "LOP_SLA_Mi8MT_Cargo";
+KPLIB_o_transportTruck = "LOP_SLA_Ural";
+KPLIB_o_transportTruckAmmo = "LOP_SLA_Ural_open";                          //-> Has to be able to transport resource crates!
+KPLIB_o_fuelTruck = "rhs_gaz66_ammo_vmf";
+KPLIB_o_ammoTruck = "rhs_gaz66_ammo_vmf";
+KPLIB_o_fuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";
+KPLIB_o_ammoContainer = "Land_Pod_Heli_Transport_04_ammo_F";
+KPLIB_o_flag = "lop_Flag_sla_F";
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
-militia_squad = [
+KPLIB_o_militiaInfantry = [
     "LOP_SLA_Infantry_Rifleman",
     "LOP_SLA_Infantry_Rifleman_2",
     "LOP_SLA_Infantry_GL",
@@ -57,7 +69,7 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-militia_vehicles = [
+KPLIB_o_militiaVehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
@@ -66,7 +78,7 @@ militia_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
-opfor_vehicles = [
+KPLIB_o_armyVehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
@@ -82,7 +94,7 @@ opfor_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-opfor_vehicles_low_intensity = [
+KPLIB_o_armyVehiclesLight = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
@@ -91,7 +103,7 @@ opfor_vehicles_low_intensity = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles = [
+KPLIB_o_battleGrpVehicles = [
     "LOP_SLA_UAZ_SPG",
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
@@ -108,7 +120,7 @@ opfor_battlegroup_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles_low_intensity = [
+KPLIB_o_battleGrpVehiclesLight = [
     "LOP_SLA_UAZ_DshKM",
     "LOP_SLA_UAZ_AGS",
     "LOP_SLA_Ural",
@@ -123,7 +135,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
-opfor_troup_transports = [
+KPLIB_o_troopTransports = [
     "LOP_SLA_Ural_open",
     "LOP_SLA_Ural",
     "LOP_SLA_Mi8MTV3_FAB",
@@ -132,11 +144,11 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
+KPLIB_o_helicopters = [
     "LOP_SLA_Mi8MTV3_FAB",
     "LOP_SLA_Mi8MT_Cargo",
     "LOP_SLA_Mi8MTV3_UPK23"
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [];
+KPLIB_o_planes = [];

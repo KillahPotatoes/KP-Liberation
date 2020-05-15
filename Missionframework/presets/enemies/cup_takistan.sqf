@@ -1,50 +1,59 @@
 /*
+    File: cup_takistan.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2019-07-15
+    Last Update: 2020-05-15
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP Takistan Army enemy preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Enemy infantry classes
-opfor_officer = "CUP_O_TK_Officer";                                     // Officer
-opfor_squad_leader = "CUP_O_TK_Soldier_SL";                             // Squad Leader
-opfor_team_leader = "CUP_O_TK_Soldier_SL";                              // Team Leader
-opfor_sentry = "CUP_O_TK_Soldier";                                      // Rifleman (Lite)
-opfor_rifleman = "CUP_O_TK_Soldier_Backpack";                           // Rifleman
-opfor_rpg = "CUP_O_TK_Soldier_AT";                                      // Rifleman (LAT)
-opfor_grenadier = "CUP_O_TK_Soldier_GL";                                // Grenadier
-opfor_machinegunner = "CUP_O_TK_Soldier_AR";                            // Autorifleman
-opfor_heavygunner = "CUP_O_TK_Soldier_MG";                              // Heavy Gunner
-opfor_marksman = "CUP_O_TK_Sniper";                                     // Marksman
-opfor_sharpshooter = "CUP_O_TK_Sniper_SVD_Night";                       // Sharpshooter
-opfor_sniper = "CUP_O_TK_Sniper_KSVK";                                  // Sniper
-opfor_at = "CUP_O_TK_Soldier_HAT";                                      // AT Specialist
-opfor_aa = "CUP_O_TK_Soldier_AA";                                       // AA Specialist
-opfor_medic = "CUP_O_TK_Medic";                                         // Medic
-opfor_engineer = "CUP_O_TK_Engineer";                                   // Engineer
-opfor_paratrooper = "CUP_O_TK_Soldier_AKS_74_GOSHAWK";                  // Paratrooper
+KPLIB_o_officer = "CUP_O_TK_Officer";                                   // Officer
+KPLIB_o_squadLeader = "CUP_O_TK_Soldier_SL";                            // Squad Leader
+KPLIB_o_teamLeader = "CUP_O_TK_Soldier_SL";                             // Team Leader
+KPLIB_o_sentry = "CUP_O_TK_Soldier";                                    // Rifleman (Lite)
+KPLIB_o_rifleman = "CUP_O_TK_Soldier_Backpack";                         // Rifleman
+KPLIB_o_riflemanLAT = "CUP_O_TK_Soldier_AT";                            // Rifleman (LAT)
+KPLIB_o_grenadier = "CUP_O_TK_Soldier_GL";                              // Grenadier
+KPLIB_o_machinegunner = "CUP_O_TK_Soldier_AR";                          // Autorifleman
+KPLIB_o_heavyGunner = "CUP_O_TK_Soldier_MG";                            // Heavy Gunner
+KPLIB_o_marksman = "CUP_O_TK_Sniper";                                   // Marksman
+KPLIB_o_sharpshooter = "CUP_O_TK_Sniper_SVD_Night";                     // Sharpshooter
+KPLIB_o_sniper = "CUP_O_TK_Sniper_KSVK";                                // Sniper
+KPLIB_o_atSpecialist = "CUP_O_TK_Soldier_HAT";                          // AT Specialist
+KPLIB_o_aaSpecialist = "CUP_O_TK_Soldier_AA";                           // AA Specialist
+KPLIB_o_medic = "CUP_O_TK_Medic";                                       // Medic
+KPLIB_o_engineer = "CUP_O_TK_Engineer";                                 // Engineer
+KPLIB_o_paratrooper = "CUP_O_TK_Soldier_AKS_74_GOSHAWK";                // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "CUP_O_LR_Transport_TKA";                                  // Land Rover 110 (Transport)
-opfor_mrap_armed = "CUP_O_LR_MG_TKA";                                   // Land Rover 110 (M2)
-opfor_transport_helo = "CUP_O_UH1H_TKA";                                // UH-1H
-opfor_transport_truck = "CUP_O_Ural_TKA";                               // Ural
-opfor_ammobox_transport = "CUP_O_Ural_Open_TKA";                        // Ural (Open) -> Has to be able to transport resource crates!
-opfor_fuel_truck = "CUP_O_Ural_Refuel_TKA";                             // Ural (Refuel)
-opfor_ammo_truck = "CUP_O_Ural_Reammo_TKA";                             // Ural (Ammo)
-opfor_fuel_container = "B_Slingload_01_Fuel_F";                         // Huron Fuel Container
-opfor_ammo_container = "B_Slingload_01_Ammo_F";                         // Huron Ammo Container
-opfor_flag = "FlagCarrierTakistan_EP1";                                 // Flag
+KPLIB_o_mrap = "CUP_O_LR_Transport_TKA";                                // Land Rover 110 (Transport)
+KPLIB_o_mrapArmed = "CUP_O_LR_MG_TKA";                                  // Land Rover 110 (M2)
+KPLIB_o_transportHeli = "CUP_O_UH1H_TKA";                               // UH-1H
+KPLIB_o_transportTruck = "CUP_O_Ural_TKA";                              // Ural
+KPLIB_o_transportTruckAmmo = "CUP_O_Ural_Open_TKA";                     // Ural (Open) -> Has to be able to transport resource crates!
+KPLIB_o_fuelTruck = "CUP_O_Ural_Refuel_TKA";                            // Ural (Refuel)
+KPLIB_o_ammoTruck = "CUP_O_Ural_Reammo_TKA";                            // Ural (Ammo)
+KPLIB_o_fuelContainer = "B_Slingload_01_Fuel_F";                        // Huron Fuel Container
+KPLIB_o_ammoContainer = "B_Slingload_01_Ammo_F";                        // Huron Ammo Container
+KPLIB_o_flag = "FlagCarrierTakistan_EP1";                               // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
-militia_squad = [
+KPLIB_o_militiaInfantry = [
     "CUP_O_TK_INS_Soldier_FNFAL",                                       // Militiaman (FN FAL)
     "CUP_O_TK_INS_Soldier",                                             // Militiaman (AK-74)
     "CUP_O_TK_INS_Soldier_GL",                                          // Militiaman (AK-74 GL)
@@ -57,7 +66,7 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-militia_vehicles = [
+KPLIB_o_militiaVehicles = [
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
     "CUP_O_LR_MG_TKM",                                                  // Land Rover 110 (M2)
     "CUP_O_Hilux_AGS30_TK_INS",                                         // Hilux (AGS-30)
@@ -72,7 +81,7 @@ militia_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
-opfor_vehicles = [
+KPLIB_o_armyVehicles = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_SPG9_TKA",                                               // UAZ (SPG-9)
@@ -92,7 +101,7 @@ opfor_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-opfor_vehicles_low_intensity = [
+KPLIB_o_armyVehiclesLight = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
@@ -110,7 +119,7 @@ opfor_vehicles_low_intensity = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles = [
+KPLIB_o_battleGrpVehicles = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
     "CUP_O_UAZ_AGS30_TKA",                                              // UAZ (AGS-30)
@@ -136,7 +145,7 @@ opfor_battlegroup_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles_low_intensity = [
+KPLIB_o_battleGrpVehiclesLight = [
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_UAZ_MG_TKA",                                                 // UAZ (DShKM)
     "CUP_O_MTLB_pk_TKA",                                                // MT-LB LV
@@ -157,7 +166,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.   */
-opfor_troup_transports = [
+KPLIB_o_troopTransports = [
     "CUP_O_BMP1_TKA",                                                   // BMP-1
     "CUP_O_M113_TKA",                                                   // M113A3
     "CUP_O_MTLB_pk_TKA",                                                // MT-LB LV
@@ -174,7 +183,7 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
+KPLIB_o_helicopters = [
     "CUP_O_UH1H_TKA",                                                   // UH-1H
     "CUP_O_UH1H_armed_TKA",                                             // UH-1H (Armed)
     "CUP_O_UH1H_gunship_SLA_TKA",                                       // UH-1H (Gunship)
@@ -183,7 +192,7 @@ opfor_choppers = [
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [
+KPLIB_o_planes = [
     "CUP_O_L39_TK",                                                     // L-39ZA
     "CUP_O_Su25_Dyn_TKA"                                                // Su-25 Frogfoot
 ];

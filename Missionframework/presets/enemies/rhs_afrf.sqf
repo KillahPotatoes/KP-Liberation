@@ -1,48 +1,57 @@
 /*
+    File: rhs_afrf.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-07
+    Last Update: 2020-05-15
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Armed Forces of the Russian Federation enemy preset.
+
     Needed Mods:
-    - RHS AFRF
+        - RHS AFRF
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Enemy infantry classes
-opfor_officer = "rhs_msv_emr_officer";                                  // Officer
-opfor_squad_leader = "rhs_msv_emr_sergeant";                            // Squad Leader
-opfor_team_leader = "rhs_msv_emr_efreitor";                             // Team Leader
-opfor_sentry = "rhs_msv_emr_rifleman";                                  // Rifleman (Lite)
-opfor_rifleman = "rhs_msv_emr_rifleman";                                // Rifleman
-opfor_rpg = "rhs_msv_emr_LAT";                                          // Rifleman (LAT)
-opfor_grenadier = "rhs_msv_emr_grenadier";                              // Grenadier
-opfor_machinegunner = "rhs_msv_emr_arifleman";                          // Autorifleman
-opfor_heavygunner = "rhs_msv_emr_machinegunner";                        // Heavy Gunner
-opfor_marksman = "rhs_msv_emr_marksman";                                // Marksman
-opfor_sharpshooter = "rhs_msv_emr_marksman";                            // Sharpshooter
-opfor_sniper = "rhs_msv_emr_marksman";                                  // Sniper
-opfor_at = "rhs_msv_emr_at";                                            // AT Specialist
-opfor_aa = "rhs_msv_emr_aa";                                            // AA Specialist
-opfor_medic = "rhs_msv_emr_medic";                                      // Combat Life Saver
-opfor_engineer = "rhs_msv_emr_engineer";                                // Engineer
-opfor_paratrooper = "rhs_msv_emr_RShG2";                                // Paratrooper
+KPLIB_o_officer = "rhs_msv_emr_officer";                                // Officer
+KPLIB_o_squadLeader = "rhs_msv_emr_sergeant";                           // Squad Leader
+KPLIB_o_teamLeader = "rhs_msv_emr_efreitor";                            // Team Leader
+KPLIB_o_sentry = "rhs_msv_emr_rifleman";                                // Rifleman (Lite)
+KPLIB_o_rifleman = "rhs_msv_emr_rifleman";                              // Rifleman
+KPLIB_o_riflemanLAT = "rhs_msv_emr_LAT";                                // Rifleman (LAT)
+KPLIB_o_grenadier = "rhs_msv_emr_grenadier";                            // Grenadier
+KPLIB_o_machinegunner = "rhs_msv_emr_arifleman";                        // Autorifleman
+KPLIB_o_heavyGunner = "rhs_msv_emr_machinegunner";                      // Heavy Gunner
+KPLIB_o_marksman = "rhs_msv_emr_marksman";                              // Marksman
+KPLIB_o_sharpshooter = "rhs_msv_emr_marksman";                          // Sharpshooter
+KPLIB_o_sniper = "rhs_msv_emr_marksman";                                // Sniper
+KPLIB_o_atSpecialist = "rhs_msv_emr_at";                                // AT Specialist
+KPLIB_o_aaSpecialist = "rhs_msv_emr_aa";                                // AA Specialist
+KPLIB_o_medic = "rhs_msv_emr_medic";                                    // Combat Life Saver
+KPLIB_o_engineer = "rhs_msv_emr_engineer";                              // Engineer
+KPLIB_o_paratrooper = "rhs_msv_emr_RShG2";                              // Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "rhs_tigr_msv";                                            // GAZ-233011
-opfor_mrap_armed = "rhs_tigr_sts_msv";                                  // GAZ-233014 (Armed)
-opfor_transport_helo = "RHS_Mi8mt_Cargo_vvsc";                          // Mi-8MT (Cargo)
-opfor_transport_truck = "RHS_Ural_MSV_01";                              // Ural-4320 Transport (Covered)
-opfor_ammobox_transport = "RHS_Ural_Open_MSV_01";                       // Ural-4320 Transport (Open) -> Has to be able to transport resource crates!
-opfor_fuel_truck = "RHS_Ural_Fuel_MSV_01";                              // Ural-4320 Fuel
-opfor_ammo_truck = "rhs_gaz66_ammo_msv";                                // GAZ-66 Ammo
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
-opfor_flag = "rhs_Flag_Russia_F";                                       // Flag
+KPLIB_o_mrap = "rhs_tigr_msv";                                          // GAZ-233011
+KPLIB_o_mrapArmed = "rhs_tigr_sts_msv";                                 // GAZ-233014 (Armed)
+KPLIB_o_transportHeli = "RHS_Mi8mt_Cargo_vvsc";                         // Mi-8MT (Cargo)
+KPLIB_o_transportTruck = "RHS_Ural_MSV_01";                             // Ural-4320 Transport (Covered)
+KPLIB_o_transportTruckAmmo = "RHS_Ural_Open_MSV_01";                    // Ural-4320 Transport (Open) -> Has to be able to transport resource crates!
+KPLIB_o_fuelTruck = "RHS_Ural_Fuel_MSV_01";                             // Ural-4320 Fuel
+KPLIB_o_ammoTruck = "rhs_gaz66_ammo_msv";                               // GAZ-66 Ammo
+KPLIB_o_fuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";            // Taru Fuel Pod
+KPLIB_o_ammoContainer = "Land_Pod_Heli_Transport_04_ammo_F";            // Taru Ammo Pod
+KPLIB_o_flag = "rhs_Flag_Russia_F";                                     // Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
-militia_squad = [
+KPLIB_o_militiaInfantry = [
     "rhs_msv_emr_rifleman",                                             // Rifleman
     "rhs_msv_emr_rifleman",                                             // Rifleman
     "rhs_msv_emr_rifleman",                                             // Rifleman
@@ -54,12 +63,12 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders.
-militia_vehicles = [
+KPLIB_o_militiaVehicles = [
     "rhs_tigr_sts_msv"                                                  // GAZ-233014 (Armed)
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-opfor_vehicles = [
+KPLIB_o_armyVehicles = [
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
@@ -76,7 +85,7 @@ opfor_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-opfor_vehicles_low_intensity = [
+KPLIB_o_armyVehiclesLight = [
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_btr80_msv",                                                    // BTR-80
@@ -84,7 +93,7 @@ opfor_vehicles_low_intensity = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles = [
+KPLIB_o_battleGrpVehicles = [
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
@@ -105,7 +114,7 @@ opfor_battlegroup_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles_low_intensity = [
+KPLIB_o_battleGrpVehiclesLight = [
     "rhs_tigr_msv",                                                     // GAZ-233011
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
     "rhs_tigr_sts_msv",                                                 // GAZ-233014 (Armed)
@@ -120,7 +129,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
-opfor_troup_transports = [
+KPLIB_o_troopTransports = [
     "RHS_Ural_Open_MSV_01",                                             // Ural-4320 Transport
     "RHS_Ural_MSV_01",                                                  // Ural-4320 Transport (Covered)
     "rhs_btr80_msv",                                                    // BTR-80
@@ -132,7 +141,7 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
+KPLIB_o_helicopters = [
     "RHS_Mi8mt_Cargo_vvsc",                                             // Mi-8MT (Cargo)
     "RHS_Mi24P_AT_vvsc",                                                // Mi-24P (AT)
     "RHS_Mi24V_AT_vvsc",                                                // Mi-24V (AT)
@@ -140,7 +149,7 @@ opfor_choppers = [
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [
+KPLIB_o_planes = [
     "RHS_Su25SM_vvsc",                                                  // Su-25
     "RHS_Su25SM_KH29_vvsc"                                              // Su-25 (KH29)
 ];
