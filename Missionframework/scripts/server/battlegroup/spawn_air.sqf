@@ -1,12 +1,12 @@
 params ["_first_objective"];
 
-if (opfor_air isEqualTo []) exitWith {false};
+if (KPLIB_o_planes isEqualTo []) exitWith {false};
 
 private _planes_number = ((floor linearConversion [40, 100, combat_readiness, 1, 3]) min 3) max 0;
 
 if (_planes_number < 1) exitWith {};
 
-private _class = selectRandom opfor_air;
+private _class = selectRandom KPLIB_o_planes;
 private _spawnPoint = ([sectors_airspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _spawnPos = [];
 private _plane = objNull;

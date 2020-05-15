@@ -24,7 +24,7 @@ if !(_spawn_marker isEqualTo "") then {
 
     if (_infOnly) then {
         // Infantry units to choose from
-        private _infClasses = [KPLIB_o_inf_classes, militia_squad] select (combat_readiness < 50);
+        private _infClasses = [KPLIB_o_inf_classes, KPLIB_o_militiaInfantry] select (combat_readiness < 50);
 
         // Adjust target size for infantry
         _target_size = 12 max (_target_size * 4);
@@ -41,7 +41,7 @@ if !(_spawn_marker isEqualTo "") then {
         [_grp] spawn battlegroup_ai;
         _bg_groups pushBack _grp;
     } else {
-        private _vehicle_pool = [opfor_battlegroup_vehicles, opfor_battlegroup_vehicles_low_intensity] select (combat_readiness < 50);
+        private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (combat_readiness < 50);
 
         while {count _selected_opfor_battlegroup < _target_size} do {
             _selected_opfor_battlegroup pushback (selectRandom _vehicle_pool);
@@ -58,7 +58,7 @@ if !(_spawn_marker isEqualTo "") then {
             [_nextgrp] spawn battlegroup_ai;
             _bg_groups pushback _nextgrp;
 
-            if ((_x in opfor_troup_transports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_battlegroup_cap)) then {
+            if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_battlegroup_cap)) then {
                 if (_vehicle isKindOf "Air") then {
                     [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective, _vehicle] spawn send_paratroopers;
                 } else {

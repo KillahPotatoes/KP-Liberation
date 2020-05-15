@@ -35,41 +35,41 @@ private _objects_to_build = [
     ["Land_Tank_rust_F",[-9,10,0],180],
     ["Land_Tank_rust_F",[-9,14,0],180],
     ["Land_Tank_rust_F",[-9,6,0],180],
-    [opfor_flag,[-14,-5,0],180],
-    [opfor_flag,[-14,5,0],180],
-    [opfor_flag,[14,-5,0],90],
+    [KPLIB_o_flag,[-14,-5,0],180],
+    [KPLIB_o_flag,[-14,5,0],180],
+    [KPLIB_o_flag,[14,-5,0],90],
     ["Land_BarGate_F",[20,0,0],90],
     ["Land_BarGate_F",[-13,0,0],270],
-    [opfor_mrap,[7,-7,0],60]
+    [KPLIB_o_mrap,[7,-7,0],60]
 ];
 
 private _objectives_to_build = [
-    [opfor_fuel_truck,[10,8,0],185],
-    [opfor_fuel_truck,[5,8.5,0],190],
-    [opfor_fuel_truck,[0,9,0],192],
-    [opfor_ammo_truck,[-9,-8,0],10],
-    [opfor_ammo_truck,[-3,-8,0],15]
+    [KPLIB_o_fuelTruck,[10,8,0],185],
+    [KPLIB_o_fuelTruck,[5,8.5,0],190],
+    [KPLIB_o_fuelTruck,[0,9,0],192],
+    [KPLIB_o_ammoTruck,[-9,-8,0],10],
+    [KPLIB_o_ammoTruck,[-3,-8,0],15]
 ];
 
 private _defenders_to_build = [
-    [opfor_marksman,[11,26.5,4.5],0],
-    [opfor_marksman,[-11,-26.5,4.5],180],
-    [opfor_heavygunner,[9,26.5,4.5],0],
-    [opfor_heavygunner,[-9,-26.5,4.5],180],
-    [opfor_rifleman,[12,23,4.5],90],
-    [opfor_rifleman,[-12,-23,4.5],270],
-    [opfor_sentry,[6,-20,1],0],
-    [opfor_sentry,[3,-23,1],90],
-    [opfor_rifleman,[3,-20,1],180],
-    [opfor_team_leader,[6,-23,1],270],
-    [opfor_team_leader,[3,-18,1],180],
-    [opfor_sentry,[6,-18,1],270],
-    [opfor_rifleman,[-9,25,1],180],
-    [opfor_sentry,[-11,25,1],180],
-    [opfor_rifleman,[-1,25,1],180],
-    [opfor_sentry,[-3,25,1],180],
-    [opfor_sentry,[0,-5,0],0],
-    [opfor_sentry,[2,5,0],180]
+    [KPLIB_o_marksman,[11,26.5,4.5],0],
+    [KPLIB_o_marksman,[-11,-26.5,4.5],180],
+    [KPLIB_o_heavyGunner,[9,26.5,4.5],0],
+    [KPLIB_o_heavyGunner,[-9,-26.5,4.5],180],
+    [KPLIB_o_rifleman,[12,23,4.5],90],
+    [KPLIB_o_rifleman,[-12,-23,4.5],270],
+    [KPLIB_o_sentry,[6,-20,1],0],
+    [KPLIB_o_sentry,[3,-23,1],90],
+    [KPLIB_o_rifleman,[3,-20,1],180],
+    [KPLIB_o_teamLeader,[6,-23,1],270],
+    [KPLIB_o_teamLeader,[3,-18,1],180],
+    [KPLIB_o_sentry,[6,-18,1],270],
+    [KPLIB_o_rifleman,[-9,25,1],180],
+    [KPLIB_o_sentry,[-11,25,1],180],
+    [KPLIB_o_rifleman,[-1,25,1],180],
+    [KPLIB_o_sentry,[-3,25,1],180],
+    [KPLIB_o_sentry,[0,-5,0],0],
+    [KPLIB_o_sentry,[2,5,0],180]
 ];
 
 private _base_corners = [

@@ -50,9 +50,9 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (KPLIB_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
         if (KPLIB_unitcap >= 1.5) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
-        _vehtospawn = [(selectRandom militia_vehicles),(selectRandom militia_vehicles)];
-        if ((random 100) > (66 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
-        if ((random 100) > (50 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
+        _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles)];
+        if ((random 100) > (66 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > (50 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if (_infsquad == "army") then {
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
@@ -83,10 +83,10 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
         if (KPLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
-        if ((random 100) > (66 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
-        if ((random 100) > (33 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom militia_vehicles);};
+        if ((random 100) > (66 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > (33 / KPLIB_difficulty_modifier)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if (_infsquad == "army") then {
-            _vehtospawn pushback (selectRandom militia_vehicles);
+            _vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);
             if ((random 100) > (33 / KPLIB_difficulty_modifier)) then {
                 _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
                 _squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);
@@ -135,7 +135,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (KPLIB_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
         if ((random 100) > 66) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
-        if ((random 100) > 33) then {_vehtospawn pushback (selectRandom militia_vehicles);};
+        if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
 
         _spawncivs = false;
 

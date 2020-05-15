@@ -61,16 +61,16 @@ private _grpsentry = createGroup [KPLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
 
 for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
-    [opfor_sentry, _pilotsPos getPos [1, random 360], _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+    [KPLIB_o_sentry, _pilotsPos getPos [1, random 360], _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 (leader _grpsentry) setDir (random 360);
 
-(opfor_transport_truck createVehicle ((getpos _helowreck) getPos [25, random 360])) setDir random 360;
+(KPLIB_o_transportTruck createVehicle ((getpos _helowreck) getPos [25, random 360])) setDir random 360;
 
-private _vehicle_pool = opfor_vehicles;
+private _vehicle_pool = KPLIB_o_armyVehicles;
 if ( combat_readiness < 50 ) then {
-    _vehicle_pool = opfor_vehicles_low_intensity;
+    _vehicle_pool = KPLIB_o_armyVehiclesLight;
 };
 
 private _vehtospawn = [];

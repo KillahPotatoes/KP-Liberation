@@ -96,7 +96,7 @@ private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (KPLIB_unitcap)));
 _grpsentry = createGroup [KPLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
 for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
-    [opfor_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+    [KPLIB_o_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 while {(count (waypoints _grpsentry)) != 0} do {deleteWaypoint ((waypoints _grpsentry) select 0);};

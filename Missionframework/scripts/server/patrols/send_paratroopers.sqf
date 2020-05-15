@@ -3,7 +3,7 @@ params [
     ["_chopper_type", objNull, [objNull]]
 ];
 
-if (_targetsector isEqualTo "" || opfor_choppers isEqualTo []) exitWith {false};
+if (_targetsector isEqualTo "" || KPLIB_o_helicopters isEqualTo []) exitWith {false};
 
 private _targetpos = _targetsector;
 if (_targetpos isEqualType "") then {
@@ -13,10 +13,10 @@ private _spawnsector = ([sectors_airspawn, [_targetpos], {(markerpos _x) distanc
 private _newvehicle = objNull;
 private _pilot_group = grpNull;
 if (isNull _chopper_type) then {
-    _chopper_type = selectRandom opfor_choppers;
+    _chopper_type = selectRandom KPLIB_o_helicopters;
 
-    while {!(_chopper_type in opfor_troup_transports)} do {
-        _chopper_type = selectRandom opfor_choppers;
+    while {!(_chopper_type in KPLIB_o_troopTransports)} do {
+        _chopper_type = selectRandom KPLIB_o_helicopters;
     };
 
     _newvehicle = createVehicle [_chopper_type, markerpos _spawnsector, [], 0, "FLY"];
@@ -36,7 +36,7 @@ if (isNull _chopper_type) then {
 private _para_group = createGroup [KPLIB_side_enemy, true];
 
 while {(count (units _para_group)) < 8} do {
-    [opfor_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
+    [KPLIB_o_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
 };
 
 {removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle;} forEach (units _para_group);

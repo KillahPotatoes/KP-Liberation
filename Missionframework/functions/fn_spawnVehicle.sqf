@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-10
+    Last Update: 2020-05-15
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -52,7 +52,7 @@ if (_spawnPos isEqualTo zeroPos) exitWith {
 };
 
 // If it's a chopper, spawn it flying
-if (_classname in opfor_choppers) then {
+if (_classname in KPLIB_o_helicopters) then {
     _newvehicle = createVehicle [_classname, _spawnpos, [], 0, 'FLY'];
     _newvehicle flyInHeight (80 + (random 120));
     _newvehicle allowDamage false;
@@ -77,7 +77,7 @@ if (_classname in opfor_choppers) then {
 [_newvehicle] call KPLIB_fnc_addObjectInit;
 
 // Spawn crew of vehicle
-if (_classname in militia_vehicles) then {
+if (_classname in KPLIB_o_militiaVehicles) then {
     [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
     private _grp = createGroup [KPLIB_side_enemy, true];

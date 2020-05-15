@@ -34,35 +34,35 @@ private _objects_to_build = [
 ];
 
 private _objectives_to_build = [
-    [opfor_ammo_container, [-17.69, 6.55, 0.00], 0.00],
-    [opfor_ammo_container, [-8.52, 6.50, 0.00], 0.00],
-    [opfor_fuel_container, [-12.98, 6.80, 0.00], 0.00],
-    [opfor_fuel_container, [-17.49, 15.73, 0.00], 0.00],
-    [opfor_fuel_truck, [14.76, -3.44, 0.00], 270.00],
-    [opfor_ammo_truck, [14.92, 1.33, 0.00], 270.00]
+    [KPLIB_o_ammoContainer, [-17.69, 6.55, 0.00], 0.00],
+    [KPLIB_o_ammoContainer, [-8.52, 6.50, 0.00], 0.00],
+    [KPLIB_o_fuelContainer, [-12.98, 6.80, 0.00], 0.00],
+    [KPLIB_o_fuelContainer, [-17.49, 15.73, 0.00], 0.00],
+    [KPLIB_o_fuelTruck, [14.76, -3.44, 0.00], 270.00],
+    [KPLIB_o_ammoTruck, [14.92, 1.33, 0.00], 270.00]
 ];
 
 private _defenders_to_build = [
-    [opfor_engineer, [15.07, -0.94, 0.00], 258.84],
-    [opfor_heavygunner, [-18.40, -1.96, 0.00], 134.25],
-    [opfor_heavygunner, [17.84, -17.31, 4.35], 162.32],
-    [opfor_medic, [-0.88, -22.03, 0.00], 170.13],
-    [opfor_medic, [-6.09, -18.08, 0.00], 106.59],
-    [opfor_medic, [18.34, 12.30, 0.00], 229.95],
-    [opfor_officer, [17.04, 14.01, 15.37], 228.55],
-    [opfor_sharpshooter, [18.24, 16.25, 17.89], 60.85],
-    [opfor_rifleman, [-10.67, 19.15, 0.00], 145.13],
-    [opfor_rifleman, [-15.09, -17.86, 4.35], 152.65],
-    [opfor_rifleman, [14.53, -17.52, 4.35], 183.66],
-    [opfor_rifleman, [17.84, 9.35, 17.89], 120.37],
-    [opfor_rifleman, [8.78, -18.50, 0.00], 38.44],
-    [opfor_rifleman, [9.42, 8.60, 12.77], 0.00],
-    [opfor_rpg, [10.13, 6.74, 17.79], 190.12],
-    [opfor_sentry, [-15.34, 11.18, 0.00], 43.12],
-    [opfor_sentry, [15.14, 9.85, 12.77], 0.00],
-    [opfor_marksman, [-17.65, -17.73, 4.35], 192.66],
-    [opfor_grenadier, [-7.66, -1.47, 0.00], 186.27],
-    [opfor_grenadier, [18.23, -6.30, 0.00], 235.17]
+    [KPLIB_o_engineer, [15.07, -0.94, 0.00], 258.84],
+    [KPLIB_o_heavyGunner, [-18.40, -1.96, 0.00], 134.25],
+    [KPLIB_o_heavyGunner, [17.84, -17.31, 4.35], 162.32],
+    [KPLIB_o_medic, [-0.88, -22.03, 0.00], 170.13],
+    [KPLIB_o_medic, [-6.09, -18.08, 0.00], 106.59],
+    [KPLIB_o_medic, [18.34, 12.30, 0.00], 229.95],
+    [KPLIB_o_officer, [17.04, 14.01, 15.37], 228.55],
+    [KPLIB_o_sharpshooter, [18.24, 16.25, 17.89], 60.85],
+    [KPLIB_o_rifleman, [-10.67, 19.15, 0.00], 145.13],
+    [KPLIB_o_rifleman, [-15.09, -17.86, 4.35], 152.65],
+    [KPLIB_o_rifleman, [14.53, -17.52, 4.35], 183.66],
+    [KPLIB_o_rifleman, [17.84, 9.35, 17.89], 120.37],
+    [KPLIB_o_rifleman, [8.78, -18.50, 0.00], 38.44],
+    [KPLIB_o_rifleman, [9.42, 8.60, 12.77], 0.00],
+    [KPLIB_o_riflemanLAT, [10.13, 6.74, 17.79], 190.12],
+    [KPLIB_o_sentry, [-15.34, 11.18, 0.00], 43.12],
+    [KPLIB_o_sentry, [15.14, 9.85, 12.77], 0.00],
+    [KPLIB_o_marksman, [-17.65, -17.73, 4.35], 192.66],
+    [KPLIB_o_grenadier, [-7.66, -1.47, 0.00], 186.27],
+    [KPLIB_o_grenadier, [18.23, -6.30, 0.00], 235.17]
 ];
 
 private _base_corners = [

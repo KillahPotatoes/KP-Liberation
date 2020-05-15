@@ -2,7 +2,7 @@
     File: fn_spawnBuildingSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-10
+    Last Update: 2020-05-15
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -28,7 +28,7 @@ params [
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; []};
 
 // Get classnames array
-private _classnames = [[] call KPLIB_fnc_getSquadComp, militia_squad] select (_type == "militia");
+private _classnames = [[] call KPLIB_fnc_getSquadComp, KPLIB_o_militiaInfantry] select (_type == "militia");
 
 // Adjust amount, if needed
 if (_amount > floor ((count _positions) * KPLIB_defended_buildingpos_part)) then {

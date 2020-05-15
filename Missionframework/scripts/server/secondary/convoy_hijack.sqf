@@ -13,13 +13,13 @@ private _convoy_destinations = [];
 private _spawnpos = _convoy_destinations select 0;
 [4, _spawnpos] remoteExec ["remote_call_intel"];
 
-private _scout_vehicle = [_spawnpos getPos [30, 0], opfor_mrap, true, false] call KPLIB_fnc_spawnVehicle;
-private _escort_vehicle = [_spawnpos getPos [10, 0], selectRandom opfor_vehicles_low_intensity, true, false] call KPLIB_fnc_spawnVehicle;
-private _transport_vehicle = [_spawnpos getPos [10, 180], opfor_ammobox_transport, true, false] call KPLIB_fnc_spawnVehicle;
+private _scout_vehicle = [_spawnpos getPos [30, 0], KPLIB_o_mrap, true, false] call KPLIB_fnc_spawnVehicle;
+private _escort_vehicle = [_spawnpos getPos [10, 0], selectRandom KPLIB_o_armyVehiclesLight, true, false] call KPLIB_fnc_spawnVehicle;
+private _transport_vehicle = [_spawnpos getPos [10, 180], KPLIB_o_transportTruckAmmo, true, false] call KPLIB_fnc_spawnVehicle;
 
 private _boxes_amount = 0;
 {
-    if ( _x select 0 == opfor_ammobox_transport ) exitWith { _boxes_amount = (count _x) - 2 };
+    if ( _x select 0 == KPLIB_o_transportTruckAmmo ) exitWith { _boxes_amount = (count _x) - 2 };
 } foreach KPLIB_transportConfigs;
 
 if ( _boxes_amount == 0 ) exitWith {["Opfor ammobox truck classname doesn't allow for ammobox transport, correct your preset and/or transport config", "ERROR"] call KPLIB_fnc_log;};
@@ -38,7 +38,7 @@ while { _boxes_loaded < _boxes_amount } do {
 
 sleep 0.5;
 
-private _troop_vehicle = [_spawnpos getPos [30, 180], opfor_transport_truck, true, true, false ] call KPLIB_fnc_spawnVehicle;
+private _troop_vehicle = [_spawnpos getPos [30, 180], KPLIB_o_transportTruck, true, true, false ] call KPLIB_fnc_spawnVehicle;
 
 sleep 0.5;
 

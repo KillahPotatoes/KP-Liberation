@@ -21,8 +21,8 @@ params [
     "_stats_ieds_detonated",
     "_stats_opfor_killed_by_players",
     "_stats_opfor_soldiers_killed",
-    "_stats_opfor_vehicles_killed",
-    "_stats_opfor_vehicles_killed_by_players",
+    "_stats_KPLIB_o_armyVehicles_killed",
+    "_stats_KPLIB_o_armyVehicles_killed_by_players",
     "_stats_player_deaths",
     "_stats_playtime",
     "_stats_prisoners_captured",
@@ -88,8 +88,8 @@ if (dialog) then {sleep 3};
 // First page
 [691, format [localize "STR_STATS_OPFOR_K_INF", _stats_opfor_soldiers_killed]] call _addReportLine;
 [692, format [localize "STR_STATS_OPFOR_K_INF_PL", _stats_opfor_killed_by_players]] call _addReportLine;
-[693, format [localize "STR_STATS_OPFOR_K_VEH", _stats_opfor_vehicles_killed]] call _addReportLine;
-[694, format [localize "STR_STATS_OPFOR_K_VEH_PL", _stats_opfor_vehicles_killed_by_players], true] call _addReportLine;
+[693, format [localize "STR_STATS_OPFOR_K_VEH", _stats_KPLIB_o_armyVehicles_killed]] call _addReportLine;
+[694, format [localize "STR_STATS_OPFOR_K_VEH_PL", _stats_KPLIB_o_armyVehicles_killed_by_players], true] call _addReportLine;
 [] call _cleanPage;
 
 // Second page

@@ -16,7 +16,7 @@ private _objects_to_build = [
     ["Land_HBarrier_Big_F", [2.53, -17.80, 0.00], 0.00],
     ["Land_HBarrier_Big_F", [11.20, -17.64, 0.00], 0.00],
     ["Land_HBarrierWall_corner_F", [-13.71, -15.85, 0.00], 90.00],
-    [opfor_flag, [13.91, -15.57, 0.00], 0.00],
+    [KPLIB_o_flag, [13.91, -15.57, 0.00], 0.00],
     ["Land_HBarrier_Big_F", [12.50, 17.11, 0.00], 0.00],
     ["Land_HBarrier_Big_F", [21.62, -1.75, 0.00], 0.00],
     ["Land_HBarrier_Big_F", [16.65, -14.10, 0.00], 270.00],
@@ -34,30 +34,30 @@ private _objects_to_build = [
 ];
 
 private _objectives_to_build = [
-    [opfor_ammo_truck, [-13.14, 10.16, 0.00], 0.00],
-    [opfor_fuel_container, [18.22, 5.43, 0.00], 270.00],
-    [opfor_fuel_container, [17.86, 11.39, 0.00], 270.00],
-    [opfor_fuel_truck, [-17.96, 9.56, 0.00], 0.00]
+    [KPLIB_o_ammoTruck, [-13.14, 10.16, 0.00], 0.00],
+    [KPLIB_o_fuelContainer, [18.22, 5.43, 0.00], 270.00],
+    [KPLIB_o_fuelContainer, [17.86, 11.39, 0.00], 270.00],
+    [KPLIB_o_fuelTruck, [-17.96, 9.56, 0.00], 0.00]
 ];
 
 private _defenders_to_build = [
-    [opfor_heavygunner, [-5.65, 0.87, 1.25], 196.97],
-    [opfor_rifleman, [8.77, -4.14, 0.73], 133.49],
-    [opfor_grenadier, [12.04, -4.37, 0.73], 205.94],
-    [opfor_heavygunner, [0.80, -16.01, 1.25], 224.40],
-    [opfor_rifleman, [-4.46, 5.64, 15.37], 0.00],
-    [opfor_rifleman, [1.55, 11.61, 12.77], 202.68],
-    [opfor_at, [1.20, 3.98, 17.89], 176.06],
-    [opfor_rifleman, [10.76, -15.11, 0.00], 291.66],
-    [opfor_sentry, [-16.09, 10.06, 0.00], 184.01],
-    [opfor_rifleman, [18.18, 8.32, 0.00], 264.25],
-    [opfor_marksman, [-5.72, 10.17, 17.89], 287.12],
-    [opfor_rifleman, [-14.59, -16.40, 1.24], 156.40],
-    [opfor_medic, [22.50, 1.32, 0.00], 275.86],
-    [opfor_rifleman, [-23.11, 1.83, 0.00], 77.87],
-    [opfor_rifleman, [-21.51, -9.11, 4.35], 279.37],
-    [opfor_sentry, [-23.58, -2.96, 0.00], 118.12],
-    [opfor_marksman, [-21.28, -12.32, 4.35], 232.31]
+    [KPLIB_o_heavyGunner, [-5.65, 0.87, 1.25], 196.97],
+    [KPLIB_o_rifleman, [8.77, -4.14, 0.73], 133.49],
+    [KPLIB_o_grenadier, [12.04, -4.37, 0.73], 205.94],
+    [KPLIB_o_heavyGunner, [0.80, -16.01, 1.25], 224.40],
+    [KPLIB_o_rifleman, [-4.46, 5.64, 15.37], 0.00],
+    [KPLIB_o_rifleman, [1.55, 11.61, 12.77], 202.68],
+    [KPLIB_o_atSpecialist, [1.20, 3.98, 17.89], 176.06],
+    [KPLIB_o_rifleman, [10.76, -15.11, 0.00], 291.66],
+    [KPLIB_o_sentry, [-16.09, 10.06, 0.00], 184.01],
+    [KPLIB_o_rifleman, [18.18, 8.32, 0.00], 264.25],
+    [KPLIB_o_marksman, [-5.72, 10.17, 17.89], 287.12],
+    [KPLIB_o_rifleman, [-14.59, -16.40, 1.24], 156.40],
+    [KPLIB_o_medic, [22.50, 1.32, 0.00], 275.86],
+    [KPLIB_o_rifleman, [-23.11, 1.83, 0.00], 77.87],
+    [KPLIB_o_rifleman, [-21.51, -9.11, 4.35], 279.37],
+    [KPLIB_o_sentry, [-23.58, -2.96, 0.00], 118.12],
+    [KPLIB_o_marksman, [-21.28, -12.32, 4.35], 232.31]
 ];
 
 private _base_corners = [

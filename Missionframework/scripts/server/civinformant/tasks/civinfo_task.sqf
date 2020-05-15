@@ -5,7 +5,7 @@ private _roadObj = [markerPos _spawn_marker, 400, []] call BIS_fnc_nearestRoad;
 
 if (isNull _roadObj) exitWith {if (KPLIB_civinfo_debug > 0) then {["civinfo_task.sqf -> no road found", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-private _veh = createVehicle [opfor_mrap, getPos _roadObj, [], 0, "NONE"];
+private _veh = createVehicle [KPLIB_o_mrap, getPos _roadObj, [], 0, "NONE"];
 _veh setDir (getDir _roadObj);
 {
     if ((_x find "FWheel") != -1) then {
@@ -14,10 +14,10 @@ _veh setDir (getDir _roadObj);
 } forEach ((getAllHitPointsDamage _veh) select 0);
 
 private _grp = createGroup [KPLIB_side_enemy, true];
-private _hvt = [opfor_officer, getPos _roadObj, _grp, "CAPTAIN", 30] call KPLIB_fnc_createManagedUnit;
+private _hvt = [KPLIB_o_officer, getPos _roadObj, _grp, "CAPTAIN", 30] call KPLIB_fnc_createManagedUnit;
 
 for "_i" from 1 to 4 do {
-    [selectRandom militia_squad, _grp, _grp] call KPLIB_fnc_createManagedUnit;
+    [selectRandom KPLIB_o_militiaInfantry, _grp, _grp] call KPLIB_fnc_createManagedUnit;
     sleep 0.1;
 };
 

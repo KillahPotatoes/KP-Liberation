@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-10
+    Last Update: 2020-05-15
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -155,8 +155,8 @@ private _stats = [
     stats_ieds_detonated,
     stats_opfor_killed_by_players,
     stats_opfor_soldiers_killed,
-    stats_opfor_vehicles_killed,
-    stats_opfor_vehicles_killed_by_players,
+    stats_KPLIB_o_armyVehicles_killed,
+    stats_KPLIB_o_armyVehicles_killed_by_players,
     stats_player_deaths,
     stats_playtime,
     stats_prisoners_captured,

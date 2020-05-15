@@ -30,27 +30,27 @@ private _objects_to_build = [
 ];
 
 private _objectives_to_build = [
-    [opfor_fuel_truck, [-13.32, -0.24, 0.00], 270.00],
-    [opfor_ammo_truck, [-13.24, 3.86, 0.00], 270.00],
-    [opfor_fuel_container, [6.71, 13.81, 0.00], 270.00],
-    [opfor_ammo_container, [7.09, 1.62, 0.00], 270.00],
-    [opfor_fuel_container, [6.87, 7.71, 0.00], 270.00]
+    [KPLIB_o_fuelTruck, [-13.32, -0.24, 0.00], 270.00],
+    [KPLIB_o_ammoTruck, [-13.24, 3.86, 0.00], 270.00],
+    [KPLIB_o_fuelContainer, [6.71, 13.81, 0.00], 270.00],
+    [KPLIB_o_ammoContainer, [7.09, 1.62, 0.00], 270.00],
+    [KPLIB_o_fuelContainer, [6.87, 7.71, 0.00], 270.00]
 ];
 
 private _defenders_to_build = [
-    [opfor_machinegunner, [3.87, -7.16, 0.00], 102.55],
-    [opfor_rpg, [4.48, 10.62, 0.00], 90.00],
-    [opfor_rpg, [-1.45, 14.18, 0.00], 199.35],
-    [opfor_sentry, [4.03, -13.81, 0.00], 45.23],
-    [opfor_engineer, [14.05, -8.39, 4.35], 58.33],
-    [opfor_grenadier, [-16.46, -5.86, 0.00], 90.00],
-    [opfor_machinegunner, [-16.45, 6.53, 0.00], 90.00],
-    [opfor_sentry, [-12.40, 12.03, 4.35], 0.00],
-    [opfor_rifleman, [14.11, -11.35, 4.35], 134.48],
-    [opfor_rifleman, [-15.71, 12.02, 4.35], 355.76],
-    [opfor_rifleman, [14.62, 15.10, 0.00], 180.00],
-    [opfor_rifleman, [-13.29, -17.54, 2.28], 163.03],
-    [opfor_heavygunner, [-14.64, -17.31, 2.28], 180.00]
+    [KPLIB_o_machinegunner, [3.87, -7.16, 0.00], 102.55],
+    [KPLIB_o_riflemanLAT, [4.48, 10.62, 0.00], 90.00],
+    [KPLIB_o_riflemanLAT, [-1.45, 14.18, 0.00], 199.35],
+    [KPLIB_o_sentry, [4.03, -13.81, 0.00], 45.23],
+    [KPLIB_o_engineer, [14.05, -8.39, 4.35], 58.33],
+    [KPLIB_o_grenadier, [-16.46, -5.86, 0.00], 90.00],
+    [KPLIB_o_machinegunner, [-16.45, 6.53, 0.00], 90.00],
+    [KPLIB_o_sentry, [-12.40, 12.03, 4.35], 0.00],
+    [KPLIB_o_rifleman, [14.11, -11.35, 4.35], 134.48],
+    [KPLIB_o_rifleman, [-15.71, 12.02, 4.35], 355.76],
+    [KPLIB_o_rifleman, [14.62, 15.10, 0.00], 180.00],
+    [KPLIB_o_rifleman, [-13.29, -17.54, 2.28], 163.03],
+    [KPLIB_o_heavyGunner, [-14.64, -17.31, 2.28], 180.00]
 ];
 
 private _base_corners = [
