@@ -6,7 +6,7 @@ _civveh = objNull;
 sleep (150 + (random 150));
 _spawnsector = "";
 
-if ( isNil "active_sectors" ) then { active_sectors = [] };
+if ( isNil "KPLIB_sectors_active" ) then { KPLIB_sectors_active = [] };
 
 while { KPLIB_endgame == 0 } do {
 
@@ -17,7 +17,7 @@ while { KPLIB_endgame == 0 } do {
             _usable_sectors pushback _x;
         }
 
-    } foreach ((sectors_bigtown + sectors_capture + sectors_factory) - (active_sectors));
+    } foreach ((KPLIB_sectors_capital + KPLIB_sectors_city + KPLIB_sectors_factory) - (KPLIB_sectors_active));
 
     if ( count _usable_sectors > 0 ) then {
         _spawnsector = selectRandom _usable_sectors;
@@ -59,7 +59,7 @@ while { KPLIB_endgame == 0 } do {
             if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([markerPos _x, 4000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
                 _sectors_patrol pushback _x;
             };
-        } foreach (sectors_bigtown + sectors_capture + sectors_factory);
+        } foreach (KPLIB_sectors_capital + KPLIB_sectors_city + KPLIB_sectors_factory);
 
         _sectors_patrol_random = [];
         _sectorcount = count _sectors_patrol;

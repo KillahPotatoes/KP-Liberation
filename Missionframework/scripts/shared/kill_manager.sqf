@@ -29,7 +29,7 @@ if (isServer) then {
     if ((side _killer) == KPLIB_side_friendly) then {
 
         // Increase combat readiness for kills near a capital.
-        private _nearby_bigtown = sectors_bigtown select {!(_x in blufor_sectors) && (_unit distance (markerpos _x) < 250)};
+        private _nearby_bigtown = KPLIB_sectors_capital select {!(_x in KPLIB_sectors_player) && (_unit distance (markerpos _x) < 250)};
         if (count _nearby_bigtown > 0) then {
             combat_readiness = combat_readiness + (0.5 * KPLIB_difficulty_modifier);
             stats_readiness_earned = stats_readiness_earned + (0.5 * KPLIB_difficulty_modifier);

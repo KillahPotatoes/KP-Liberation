@@ -1,6 +1,6 @@
 params ["_sector"];
 
-if (_sector in sectors_bigtown || _sector in sectors_capture) then {
+if (_sector in KPLIB_sectors_capital || _sector in KPLIB_sectors_city) then {
     private _penalty = 0;
 
     {
@@ -15,7 +15,7 @@ if (_sector in sectors_bigtown || _sector in sectors_capture) then {
         [1, [(_penalty / KPLIB_cr_building_penalty)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
     };
 
-    if (_sector in sectors_bigtown) then {
+    if (_sector in KPLIB_sectors_capital) then {
         [(2 * KPLIB_cr_sector_gain - _penalty), false] spawn F_cr_changeCR;
     } else {
         [(KPLIB_cr_sector_gain - _penalty), false] spawn F_cr_changeCR;

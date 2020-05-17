@@ -1,4 +1,4 @@
-if ( isNil "active_sectors" ) then { active_sectors = [] };
+if ( isNil "KPLIB_sectors_active" ) then { KPLIB_sectors_active = [] };
 if ( isNil "KPLIB_all_fobs" ) then { KPLIB_all_fobs = [] };
 
 cinematic_camera_started = true;
@@ -30,13 +30,13 @@ while { cinematic_camera_started } do {
                 };
             };
 
-            if ( count active_sectors > 0 ) then {
+            if ( count KPLIB_sectors_active > 0 ) then {
                 for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-                    _positions pushback (markerPos (selectRandom active_sectors));
+                    _positions pushback (markerPos (selectRandom KPLIB_sectors_active));
                 };
             } else {
                 for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-                    _positions pushback (markerPos (selectRandom sectors_allSectors));
+                    _positions pushback (markerPos (selectRandom KPLIB_sectors_all));
                 };
             };
 

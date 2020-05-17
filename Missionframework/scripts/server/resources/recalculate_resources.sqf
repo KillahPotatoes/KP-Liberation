@@ -59,10 +59,10 @@ while {true} do {
     } forEach KPLIB_all_fobs;
 
     {
-        if ( _x in sectors_capture ) then {
+        if ( _x in KPLIB_sectors_city ) then {
             _local_infantry_cap = _local_infantry_cap + (10 * KPLIB_resources_multiplier);
         };
-    } foreach blufor_sectors;
+    } foreach KPLIB_sectors_player;
 
     KPLIB_fob_resources = _local_fob_resources;
     KPLIB_supplies_global = _local_supplies_global;

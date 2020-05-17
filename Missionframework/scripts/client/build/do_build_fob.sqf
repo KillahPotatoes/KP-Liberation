@@ -25,10 +25,10 @@ while { (_idx < (count KPLIB_all_fobs)) && _clearedtobuildfob } do {
 
 _idx = 0;
 if(_clearedtobuildfob) then {
-    while { (_idx < (count sectors_allSectors)) && _clearedtobuildsector } do {
-        if ( player distance (markerPos (sectors_allSectors select _idx)) < _minsectordist ) then {
+    while { (_idx < (count KPLIB_sectors_all)) && _clearedtobuildsector } do {
+        if ( player distance (markerPos (KPLIB_sectors_all select _idx)) < _minsectordist ) then {
             _clearedtobuildsector = false;
-            _distsector = player distance (markerPos (sectors_allSectors select _idx));
+            _distsector = player distance (markerPos (KPLIB_sectors_all select _idx));
         };
         _idx = _idx + 1;
     };

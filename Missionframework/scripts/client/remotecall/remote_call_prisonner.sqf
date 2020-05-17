@@ -71,7 +71,7 @@ if (alive _unit) then {
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
         {_x doFollow leader _grp} foreach units _grp;
 
-        _possible_sectors = (sectors_allSectors - blufor_sectors);
+        _possible_sectors = (KPLIB_sectors_all - KPLIB_sectors_player);
         if ( count _possible_sectors > 0 ) then {
 
             _possible_sectors = [ _possible_sectors , [getpos _unit, 5000] , { (markerPos _x) distance _input0 } , 'ASCEND' ] call BIS_fnc_sortBy;

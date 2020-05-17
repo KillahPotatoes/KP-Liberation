@@ -170,39 +170,39 @@ switch (KPLIB_resources_multiplier) do {
 switch (KPLIB_victoryCondition) do {
     case 1: {
         KPLIB_victoryCheck = {
-            (count (blufor_sectors select {_x in sectors_bigtown})) == (count sectors_bigtown)
+            (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
             &&
             {
-                (count (blufor_sectors select {_x in sectors_military})) == (count sectors_military)
+                (count (KPLIB_sectors_player select {_x in KPLIB_sectors_military})) == (count KPLIB_sectors_military)
             }
         };
     };
     case 2: {
         KPLIB_victoryCheck = {
-            (count (blufor_sectors select {_x in sectors_bigtown})) == (count sectors_bigtown)
+            (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
             &&
             {
-                (count (blufor_sectors select {!(_x in sectors_bigtown)})) >= ((count (sectors_allSectors - sectors_bigtown)) * 0.6)
+                (count (KPLIB_sectors_player select {!(_x in KPLIB_sectors_capital)})) >= ((count (KPLIB_sectors_all - KPLIB_sectors_capital)) * 0.6)
             }
         };
     };
     case 3: {
         KPLIB_victoryCheck = {
-            (count (blufor_sectors select {_x in sectors_bigtown})) == (count sectors_bigtown)
+            (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
             &&
             {
-                (count (blufor_sectors select {!(_x in sectors_bigtown)})) >= ((count (sectors_allSectors - sectors_bigtown)) * 0.8)
+                (count (KPLIB_sectors_player select {!(_x in KPLIB_sectors_capital)})) >= ((count (KPLIB_sectors_all - KPLIB_sectors_capital)) * 0.8)
             }
         };
     };
     case 4: {
         KPLIB_victoryCheck = {
-            (count blufor_sectors) == (count sectors_allSectors)
+            (count KPLIB_sectors_player) == (count KPLIB_sectors_all)
         };
     };
     default {
         KPLIB_victoryCheck = {
-            (count (blufor_sectors select {_x in sectors_bigtown})) == (count sectors_bigtown)
+            (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
         };
     };
 };

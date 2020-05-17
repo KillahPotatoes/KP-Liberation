@@ -26,5 +26,5 @@ if ( _status == 3 ) then {
     sector_timer = 0;
 };
 
-{ _x setMarkerColorLocal KPLIB_color_enemy; } foreach (sectors_allSectors - blufor_sectors);
-{ _x setMarkerColorLocal KPLIB_color_friendly; } foreach blufor_sectors;
+{ _x setMarkerColorLocal KPLIB_color_enemy; } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
+{ _x setMarkerColorLocal KPLIB_color_friendly; } foreach KPLIB_sectors_player;

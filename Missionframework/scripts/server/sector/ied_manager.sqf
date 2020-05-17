@@ -36,7 +36,7 @@ if (!(isnull _roadobj)) then {
 
     if (KPLIB_asymmetric_debug > 0) then {[format ["ied_manager.sqf -> IED %1 spawned at %2", _number, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-    while {_sector in active_sectors && mineActive _ied_obj && !_goes_boom} do {
+    while {_sector in KPLIB_sectors_active && mineActive _ied_obj && !_goes_boom} do {
         _nearinfantry = ((getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry]) select {side _x == KPLIB_side_friendly};
         _nearvehicles = ((getpos _ied_obj) nearEntities [["Car", "Tank", "Air"], _activation_radius_vehicles]) select {side _x == KPLIB_side_friendly};
         if (count _nearinfantry >= _infantry_trigger || count _nearvehicles >= _vehicle_trigger) then {

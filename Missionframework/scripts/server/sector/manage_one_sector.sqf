@@ -34,15 +34,15 @@ private _guerilla = false;
 
 if (KPLIB_unitcap < 1) then {_popfactor = KPLIB_unitcap;};
 
-if (_sector in active_sectors) exitWith {};
-active_sectors pushback _sector; publicVariable "active_sectors";
+if (_sector in KPLIB_sectors_active) exitWith {};
+KPLIB_sectors_active pushback _sector; publicVariable "KPLIB_sectors_active";
 
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
-if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0)) then {
+if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
-    if (_sector in sectors_bigtown) then {
+    if (_sector in KPLIB_sectors_capital) then {
         if (combat_readiness < 30) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
@@ -77,7 +77,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (_iedcount > 16) then {_iedcount = 16};
     };
 
-    if (_sector in sectors_capture) then {
+    if (_sector in KPLIB_sectors_city) then {
         if (combat_readiness < 50) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
@@ -110,7 +110,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (_iedcount > 12) then {_iedcount = 12};
     };
 
-    if (_sector in sectors_military) then {
+    if (_sector in KPLIB_sectors_military) then {
         _squad1 = ([] call KPLIB_fnc_getSquadComp);
         _squad2 = ([] call KPLIB_fnc_getSquadComp);
         if (KPLIB_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
@@ -128,7 +128,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         _building_range = 120;
     };
 
-    if (_sector in sectors_factory) then {
+    if (_sector in KPLIB_sectors_factory) then {
         if (combat_readiness < 40) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
@@ -154,7 +154,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
         if (_iedcount > 8) then {_iedcount = 8};
     };
 
-    if (_sector in sectors_tower) then {
+    if (_sector in KPLIB_sectors_tower) then {
         _squad1 = ([] call KPLIB_fnc_getSquadComp);
         if (combat_readiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
         if (KPLIB_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
@@ -233,7 +233,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
     sleep 10;
 
-    if ((_sector in sectors_factory) || (_sector in sectors_capture) || (_sector in sectors_bigtown) || (_sector in sectors_military)) then {
+    if ((_sector in KPLIB_sectors_factory) || (_sector in KPLIB_sectors_city) || (_sector in KPLIB_sectors_capital) || (_sector in KPLIB_sectors_military)) then {
         [_sector] remoteExec ["reinforcements_remote_call",2];
     };
 
@@ -256,7 +256,7 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
 
             sleep 60;
 
-            active_sectors = active_sectors - [_sector]; publicVariable "active_sectors";
+            KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
 
             sleep 600;
 
@@ -297,14 +297,14 @@ if ((!(_sector in blufor_sectors)) && (([markerPos _sector, [_opforcount] call K
                 } forEach _managed_units;
 
                 _stopit = true;
-                active_sectors = active_sectors - [_sector]; publicVariable "active_sectors";
+                KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
             };
         };
         sleep SECTOR_TICK_TIME;
     };
 } else {
     sleep 40;
-    active_sectors = active_sectors - [_sector]; publicVariable "active_sectors";
+    KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
 };
 
 [format ["Sector %1 (%2) deactivated - Was managed on: %3", (markerText _sector), _sector, debug_source], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];

@@ -1,4 +1,4 @@
-waitUntil {sleep 10; ({_x in sectors_capture || _x in sectors_bigtown} count blufor_sectors) > 0};
+waitUntil {sleep 10; ({_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital} count KPLIB_sectors_player) > 0};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["Loop spawned on: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
@@ -9,14 +9,14 @@ while {true} do {
 
     waitUntil {
         sleep 10;
-        ({_x in sectors_capture || _x in sectors_bigtown} count blufor_sectors) > 0 &&
+        ({_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital} count KPLIB_sectors_player) > 0 &&
         KPLIB_civ_rep >= 25
     };
 
     if (KPLIB_civinfo_debug > 0) then {["Informant waitUntil passed", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     if ((KPLIB_civinfo_chance >= (random 100)) && KPLIB_endgame == 0) then {
-        private _sector = selectRandom (blufor_sectors select {_x in sectors_capture || _x in sectors_bigtown});
+        private _sector = selectRandom (KPLIB_sectors_player select {_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital});
         private _house = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
 
         private _grp = createGroup [KPLIB_side_civilian, true];

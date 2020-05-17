@@ -2,7 +2,7 @@
     File: fn_getOpforSpawnPoint.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-05-10
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,9 +34,9 @@ params [
 private _possibleSpawns = [];
 
 // Only check for opfor spawn points which aren't used already in the current session
-private _spawnsToCheck = sectors_opfor;
+private _spawnsToCheck = KPLIB_sectors_spawn;
 if (!isNil "used_positions") then {
-    _spawnsToCheck = sectors_opfor - used_positions;
+    _spawnsToCheck = KPLIB_sectors_spawn - used_positions;
 };
 
 private ["_valid", "_current", "_distances"];
@@ -56,7 +56,7 @@ private ["_valid", "_current", "_distances"];
         _distances = (KPLIB_all_fobs apply {(markerPos _current) distance2d _x}) select {_x < _max};
 
         // Fetch distances to blufor sectors
-        _distances append ((blufor_sectors apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});
+        _distances append ((KPLIB_sectors_player apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});
 
         // Invalid, if all sectors and FOBs are further away than given max distance
         if (_distances isEqualTo []) then {
@@ -72,7 +72,7 @@ private ["_valid", "_current", "_distances"];
 
     // Make sure that there is an opfor sector in sensible range to spawn
     if (_valid) then {
-        if ((sectors_allSectors - blufor_sectors) findIf {((markerPos _current) distance2D (markerPos _x)) < 2000} < 0) then {
+        if ((KPLIB_sectors_all - KPLIB_sectors_player) findIf {((markerPos _current) distance2D (markerPos _x)) < 2000} < 0) then {
             _valid = false;
         };
     };

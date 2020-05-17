@@ -10,7 +10,7 @@ while {KPLIB_endgame == 0} do {
     private _sectors_to_remove = [];
 
     {
-        if (!(_x in blufor_sectors) || (KPLIB_civ_rep > -25)) then {
+        if (!(_x in KPLIB_sectors_player) || (KPLIB_civ_rep > -25)) then {
             _sectors_to_remove pushBack _x;
         };
     } forEach KPLIB_asymmetric_sectors;
@@ -55,7 +55,7 @@ while {KPLIB_endgame == 0} do {
             if (!(_units_at_sector > 0) && (_sector in KPLIB_asymmetric_sectors)) then {
                 KPLIB_asymmetric_sectors = KPLIB_asymmetric_sectors - [_sector];
             };
-        } forEach ((sectors_capture + sectors_bigtown) select {_x in blufor_sectors});
+        } forEach ((KPLIB_sectors_city + KPLIB_sectors_capital) select {_x in KPLIB_sectors_player});
     };
     publicVariable "KPLIB_asymmetric_sectors";
     publicVariable "asymm_blocked_sectors";

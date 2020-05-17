@@ -9,7 +9,7 @@ private _targetpos = _targetsector;
 if (_targetpos isEqualType "") then {
     _targetpos = markerPos _targetsector;
 };
-private _spawnsector = ([sectors_airspawn, [_targetpos], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+private _spawnsector = ([KPLIB_sectors_airSpawn, [_targetpos], {(markerpos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _newvehicle = objNull;
 private _pilot_group = grpNull;
 if (isNull _chopper_type) then {

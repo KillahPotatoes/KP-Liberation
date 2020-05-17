@@ -19,7 +19,7 @@ while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
 
     if (_move_is_disabled &&
         {
-            (_sector in blufor_sectors) ||
+            (_sector in KPLIB_sectors_player) ||
             {!(_hostiles isEqualTo [])} ||
             {damage _unit > 0.25}
         }

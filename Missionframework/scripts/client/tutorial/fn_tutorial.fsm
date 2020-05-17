@@ -150,7 +150,7 @@ class FSM
                          "" \n
                          "// Get up to 3 nearest factory sectors" \n
                          "private _sectors = (" \n
-                         "    sectors_factory select {((markerPos _x) distance2d player) < 10000}" \n
+                         "    KPLIB_sectors_factory select {((markerPos _x) distance2d player) < 10000}" \n
                          ") apply {" \n
                          "    [(markerPos _x) distance2d player, _x]" \n
                          "};" \n
@@ -187,7 +187,7 @@ class FSM
                                         to="Capture_the_sect";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    (_sectors select {_x in active_sectors}) isEqualTo []" \n
+                                         "    (_sectors select {_x in KPLIB_sectors_active}) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
@@ -319,10 +319,10 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"private _fobComplete = {" \n
                          "    !(KPLIB_all_fobs isEqualTo [])" \n
                          "    ||" \n
-                         "    {!(blufor_sectors isEqualTo [])}" \n
+                         "    {!(KPLIB_sectors_player isEqualTo [])}" \n
                          "};" \n
                          "private _sectorComplete = {" \n
-                         "    !((blufor_sectors arrayIntersect sectors_factory) isEqualTo [])" \n
+                         "    !((KPLIB_sectors_player arrayIntersect KPLIB_sectors_factory) isEqualTo [])" \n
                          "};" \n
                          "" \n
                          "private _allConditions = [" \n
@@ -793,7 +793,7 @@ class FSM
                          "[""KPLIB_Tasks_Tutorial_Sector_01"", ""SUCCEEDED""] call BIS_fnc_taskSetState;" \n
                          "" \n
                          "// Create task" \n
-                         "private _factory = (_sectors select {_x in active_sectors}) select 0;" \n
+                         "private _factory = (_sectors select {_x in KPLIB_sectors_active}) select 0;" \n
                          "[" \n
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Sector_02"", ""KPLIB_Tasks_Tutorial_Sector""]," \n
@@ -815,7 +815,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Complete_task_and";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_factory in blufor_sectors"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_factory in KPLIB_sectors_player"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

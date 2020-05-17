@@ -10,7 +10,7 @@ if (KPLIB_production_markers isEqualTo []) then {
     {
         private _facility = selectRandom [[true,false,false], [false,true,false], [false,false,true]];
         KPLIB_production_markers pushBack [_x, _facility select 0, _facility select 1, _facility select 2, markerText _x];
-    } forEach sectors_factory;
+    } forEach KPLIB_sectors_factory;
 };
 
 private _KPLIB_production_old = [0];

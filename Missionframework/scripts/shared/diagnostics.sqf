@@ -15,7 +15,7 @@ private _source = "";
 [format ["KP Ranks: %1", KPPLM_KPR], "MISSIONSTART"] call KPLIB_fnc_log;
 ["------------------------------------", "MISSIONSTART"] call KPLIB_fnc_log;
 
-waitUntil {sleep 1; !isNil "active_sectors"};
+waitUntil {sleep 1; !isNil "KPLIB_sectors_active"};
 
 private _delay = 120;
 
@@ -35,7 +35,7 @@ while {true} do {
                 ((round (diag_fps * 100.0)) / 100.0),
                 {local _x} count allGroups,
                 {local _x} count allUnits,
-                count active_sectors,
+                count KPLIB_sectors_active,
                 diag_activeScripts select 0,
                 diag_activeScripts select 1,
                 diag_activeScripts select 2,

@@ -68,7 +68,7 @@ air_weight = 33;
 // Enemy weight for anti armor
 armor_weight = 33;
 // Blufor sectors
-blufor_sectors = [];
+KPLIB_sectors_player = [];
 // Enemy combat readiness (0-100)
 combat_readiness = 0;
 // All FOBs
@@ -177,7 +177,7 @@ if (!isNil "_saveData") then {
         _stats                                      = _saveData select  4;
         _weights                                    = _saveData select  5;
         _aiGroups                                   = _saveData select  6;
-        blufor_sectors                              = _saveData select  7;
+        KPLIB_sectors_player                              = _saveData select  7;
         combat_readiness                            = _saveData select  8;
         KPLIB_all_fobs                              = _saveData select  9;
         KPLIB_permissions                           = _saveData select 10;
@@ -235,7 +235,7 @@ if (!isNil "_saveData") then {
         // --- Compatibility for older save data ---
         ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
-        blufor_sectors                              = _saveData select  0;
+        KPLIB_sectors_player                              = _saveData select  0;
         KPLIB_all_fobs                              = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
@@ -502,19 +502,19 @@ if (!isNil "_saveData") then {
 
 publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
-publicVariable "blufor_sectors";
+publicVariable "KPLIB_sectors_player";
 publicVariable "KPLIB_all_fobs";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in KPLIB_sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
 KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
-if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
+if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -526,9 +526,9 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
     } forEach KPLIB_vehicle_to_military_base_links;
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
-    while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count sectors_military))} do {
+    while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
         _nextVehicle = selectRandom (elite_vehicles - _assignedVehicles);
-        _nextBase = selectRandom (sectors_military - _assignedBases);
+        _nextBase = selectRandom (KPLIB_sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
         KPLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];

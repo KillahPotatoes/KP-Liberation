@@ -8,8 +8,8 @@ if ( KPLIB_unitcap > 1.3 ) then { _combat_triggers_infantry = [10,20,35,55,70,80
 
 sleep 5;
 
-waitUntil { sleep 0.3; !isNil "blufor_sectors" };
-waitUntil { sleep 0.3; count blufor_sectors > 3 };
+waitUntil { sleep 0.3; !isNil "KPLIB_sectors_player" };
+waitUntil { sleep 0.3; count KPLIB_sectors_player > 3 };
 
 if (worldName != "song_bin_tanh") then {
     {

@@ -7,7 +7,7 @@ _ownership = [ markerpos _sector ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership != KPLIB_side_enemy ) exitWith {};
 
 _squad_type = blufor_squad_inf_light;
-if ( _sector in sectors_military ) then {
+if ( _sector in KPLIB_sectors_military ) then {
     _squad_type = blufor_squad_inf;
 };
 
@@ -47,8 +47,8 @@ waitUntil {
 
 if ( KPLIB_endgame == 0 ) then {
     if ( _attacktime <= 1 && ( [markerpos _sector] call KPLIB_fnc_getSectorOwnership == KPLIB_side_enemy ) ) then {
-        blufor_sectors = blufor_sectors - [ _sector ];
-        publicVariable "blufor_sectors";
+        KPLIB_sectors_player = KPLIB_sectors_player - [ _sector ];
+        publicVariable "KPLIB_sectors_player";
         [_sector, 2] remoteExec ["remote_call_sector"];
         reset_battlegroups_ai = true;
         [] spawn KPLIB_fnc_doSave;

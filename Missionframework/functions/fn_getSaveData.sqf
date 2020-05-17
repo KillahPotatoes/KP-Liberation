@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-15
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -129,7 +129,7 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
             [typeOf _x, _x getVariable ["KPLIB_crate_value", 0], getPosATL _x]
         }
     );
-} forEach (blufor_sectors select {_x in sectors_factory || _x in sectors_capture});
+} forEach (KPLIB_sectors_player select {_x in KPLIB_sectors_factory || _x in KPLIB_sectors_city});
 
 // Pack all stats in one array
 private _stats = [
@@ -190,7 +190,7 @@ private _weights = [
     _stats,
     _weights,
     _aiGroups,
-    blufor_sectors,
+    KPLIB_sectors_player,
     combat_readiness,
     KPLIB_all_fobs,
     KPLIB_permissions,

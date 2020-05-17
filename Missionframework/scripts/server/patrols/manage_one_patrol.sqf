@@ -1,11 +1,11 @@
 params [ "_minimum_readiness", "_is_infantry" ];
 private [ "_headless_client" ];
 
-waitUntil { !isNil "blufor_sectors" };
+waitUntil { !isNil "KPLIB_sectors_player" };
 waitUntil { !isNil "combat_readiness" };
 
 while { KPLIB_endgame == 0 } do {
-    waitUntil { sleep 0.3; count blufor_sectors >= 3; };
+    waitUntil { sleep 0.3; count KPLIB_sectors_player >= 3; };
     waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / KPLIB_difficulty_modifier); };
 
     sleep (random 30);
@@ -76,7 +76,7 @@ while { KPLIB_endgame == 0 } do {
         };
     };
 
-    if ( !([] call KPLIB_fnc_isBigtownActive) ) then {
+    if ( !([] call KPLIB_fnc_isCapitalActive) ) then {
         sleep (600.0 / KPLIB_difficulty_modifier);
     };
 

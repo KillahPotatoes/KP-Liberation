@@ -8,7 +8,7 @@ private _frame_pos = [];
 KPLIB_force_redeploy = false;
 
 waitUntil {!isNil "KPLIB_all_fobs"};
-waitUntil {!isNil "blufor_sectors"};
+waitUntil {!isNil "KPLIB_sectors_player"};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
 

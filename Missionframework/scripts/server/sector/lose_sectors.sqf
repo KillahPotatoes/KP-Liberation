@@ -1,5 +1,5 @@
 waitUntil { !isNil "KPLIB_all_fobs" };
-waitUntil { !isNil "blufor_sectors" };
+waitUntil { !isNil "KPLIB_sectors_player" };
 
 sleep 5;
 
@@ -13,7 +13,7 @@ while { KPLIB_endgame == 0 } do {
             [ _x ] call attack_in_progress_sector;
         };
         sleep 0.5;
-    } foreach blufor_sectors;
+    } foreach KPLIB_sectors_player;
 
     {
         _ownership = [ _x ] call KPLIB_fnc_getSectorOwnership;

@@ -2,7 +2,7 @@
     File: fn_getNearestTower.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-10
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,7 +23,7 @@ params [
     ["_radius", 1000, [0]]
 ];
 
-private _towers = [sectors_tower select {_x in blufor_sectors}, sectors_tower - blufor_sectors] select (_side == KPLIB_side_enemy);
+private _towers = [KPLIB_sectors_tower select {_x in KPLIB_sectors_player}, KPLIB_sectors_tower - KPLIB_sectors_player] select (_side == KPLIB_side_enemy);
 _towers = (_towers apply {[(markerPos _x) distance2d _pos, _x]}) select {(_x select 0) <= _radius};
 _towers sort true;
 

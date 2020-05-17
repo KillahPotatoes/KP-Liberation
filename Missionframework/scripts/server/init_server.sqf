@@ -33,7 +33,7 @@ manage_one_sector = compile preprocessFileLineNumbers "scripts\server\sector\man
 wait_to_spawn_sector = compile preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
 // Globals
-active_sectors = []; publicVariable "active_sectors";
+KPLIB_sectors_active = []; publicVariable "KPLIB_sectors_active";
 
 execVM "scripts\server\base\startgame.sqf";
 execVM "scripts\server\base\huron_manager.sqf";

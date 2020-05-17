@@ -1,4 +1,4 @@
-waitUntil {sleep 1; !isNil "active_sectors"};
+waitUntil {sleep 1; !isNil "KPLIB_sectors_active"};
 
 while {true} do {
     uiSleep 600;

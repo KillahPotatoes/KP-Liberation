@@ -106,7 +106,7 @@ if (((random 100) <= 25) && !(KPLIB_guerilla_vehicles isEqualTo [])) then {
     _spawnedGroups pushBack _grp;
 };
 
-waitUntil {sleep 60; !(_sector in active_sectors)};
+waitUntil {sleep 60; !(_sector in KPLIB_sectors_active)};
 
 sleep 60;
 

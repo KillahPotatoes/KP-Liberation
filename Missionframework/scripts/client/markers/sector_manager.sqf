@@ -1,6 +1,6 @@
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {!isNil "KPLIB_vehicle_to_military_base_links"};
-waitUntil {!isNil "blufor_sectors"};
+waitUntil {!isNil "KPLIB_sectors_player"};
 waitUntil {save_is_loaded};
 
 private _vehicle_unlock_markers = [];
@@ -22,15 +22,15 @@ uiSleep 1;
 while {true} do {
     waitUntil {
         uiSleep 1;
-        count blufor_sectors != _sector_count
+        count KPLIB_sectors_player != _sector_count
     };
 
-    {_x setMarkerColorLocal KPLIB_color_enemy;} forEach (sectors_allSectors - blufor_sectors);
-    {_x setMarkerColorLocal KPLIB_color_friendly;} forEach blufor_sectors;
+    {_x setMarkerColorLocal KPLIB_color_enemy;} forEach (KPLIB_sectors_all - KPLIB_sectors_player);
+    {_x setMarkerColorLocal KPLIB_color_friendly;} forEach KPLIB_sectors_player;
 
     {
         _x params ["_marker", "_base"];
-        _marker setMarkerColorLocal ([KPLIB_color_enemy, KPLIB_color_friendly] select (_base in blufor_sectors));
+        _marker setMarkerColorLocal ([KPLIB_color_enemy, KPLIB_color_friendly] select (_base in KPLIB_sectors_player));
     } forEach _vehicle_unlock_markers;
-    _sector_count = count blufor_sectors;
+    _sector_count = count KPLIB_sectors_player;
 };

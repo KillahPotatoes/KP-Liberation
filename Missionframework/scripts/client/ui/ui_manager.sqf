@@ -24,7 +24,7 @@ if (isNil "cinematic_camera_started") then {cinematic_camera_started = false;};
 if (isNil "halojumping") then {halojumping = false;};
 
 private _uiticks = 0;
-private _active_sectors_hint = false;
+private _KPLIB_sectors_active_hint = false;
 private _attacked_string = "";
 private _nearest_active_sector = "";
 private _zone_size = 0;
@@ -114,21 +114,21 @@ while {true} do {
 
         if (_uiticks % 25 == 0) then {
 
-            if (!isNil "active_sectors" && ([] call KPLIB_fnc_getOpforCap >= KPLIB_sector_cap)) then {
+            if (!isNil "KPLIB_sectors_active" && ([] call KPLIB_fnc_getOpforCap >= KPLIB_sector_cap)) then {
 
                 (_overlay displayCtrl (517)) ctrlShow true;
 
-                if (!_active_sectors_hint) then {
+                if (!_KPLIB_sectors_active_hint) then {
                     hint localize "STR_OVERLOAD_HINT";
-                    _active_sectors_hint = true;
+                    _KPLIB_sectors_active_hint = true;
                 };
 
-                _active_sectors_string = "<t align='right' color='#e0e000'>" + (localize "STR_ACTIVE_SECTORS") + "<br/>";
+                _KPLIB_sectors_active_string = "<t align='right' color='#e0e000'>" + (localize "STR_KPLIB_sectors_active") + "<br/>";
                 {
-                    _active_sectors_string = [_active_sectors_string, markerText _x, "<br/>"] joinString "";
-                } forEach active_sectors;
-                _active_sectors_string = [_active_sectors_string, "</t>"] joinString "";
-                (_overlay displayCtrl (516)) ctrlSetStructuredText parseText _active_sectors_string;
+                    _KPLIB_sectors_active_string = [_KPLIB_sectors_active_string, markerText _x, "<br/>"] joinString "";
+                } forEach KPLIB_sectors_active;
+                _KPLIB_sectors_active_string = [_KPLIB_sectors_active_string, "</t>"] joinString "";
+                (_overlay displayCtrl (516)) ctrlSetStructuredText parseText _KPLIB_sectors_active_string;
 
             } else {
                 (_overlay displayCtrl (516)) ctrlSetStructuredText parseText " ";
@@ -138,7 +138,7 @@ while {true} do {
             _nearest_active_sector = [KPLIB_sector_size] call KPLIB_fnc_getNearestSector;
             if ( _nearest_active_sector != "" ) then {
                 _zone_size = KPLIB_capture_size;
-                if ( _nearest_active_sector in sectors_bigtown ) then {
+                if ( _nearest_active_sector in KPLIB_sectors_capital ) then {
                     _zone_size = KPLIB_capture_size * 1.4;
                 };
 
@@ -157,7 +157,7 @@ while {true} do {
 
                 (_overlay displayCtrl (205)) ctrlSetText (markerText _nearest_active_sector);
                 {(_overlay displayCtrl (_x)) ctrlShow true;} forEach _sectorcontrols;
-                if (_nearest_active_sector in blufor_sectors) then {
+                if (_nearest_active_sector in KPLIB_sectors_player) then {
                     (_overlay displayCtrl (205)) ctrlSetTextColor [0,0.3,1.0,1];
                 } else {
                     (_overlay displayCtrl (205)) ctrlSetTextColor [0.85,0,0,1];

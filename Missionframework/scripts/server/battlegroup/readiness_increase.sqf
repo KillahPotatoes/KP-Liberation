@@ -1,14 +1,14 @@
 waitUntil {!isNil "save_is_loaded" && {save_is_loaded}};
 
 while {true} do {
-    if ((count blufor_sectors) >= ((count sectors_allSectors) * 0.9)) then {
+    if ((count KPLIB_sectors_player) >= ((count KPLIB_sectors_all) * 0.9)) then {
         if (combat_readiness > 0) then {
             combat_readiness = combat_readiness - 0.25;
         };
     } else {
         if (
-            (combat_readiness < ((count blufor_sectors) * 2) && combat_readiness < 35)
-            || (combat_readiness < ((count blufor_sectors) * 1.25) && combat_readiness < 60)
+            (combat_readiness < ((count KPLIB_sectors_player) * 2) && combat_readiness < 35)
+            || (combat_readiness < ((count KPLIB_sectors_player) * 1.25) && combat_readiness < 60)
         ) then {
             combat_readiness = combat_readiness + 0.25;
             stats_readiness_earned = stats_readiness_earned + 0.25;

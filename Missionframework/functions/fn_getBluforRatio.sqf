@@ -2,7 +2,7 @@
     File: fn_getBluforRatio.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-05-10
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,12 +21,12 @@ params [
 
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; -1};
 
-private _range = [KPLIB_capture_size, KPLIB_capture_size * 1.4] select (_sector in sectors_bigtown);
+private _range = [KPLIB_capture_size, KPLIB_capture_size * 1.4] select (_sector in KPLIB_sectors_capital);
 private _red = [(markerPos _sector), _range, KPLIB_side_enemy] call KPLIB_fnc_getUnitsCount;
 private _blue = [(markerPos _sector), _range, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
 
 if (_blue > 0 || _red > 0) then {
     _blue / (_blue + _red)
 } else {
-    [0, 1] select (_sector in blufor_sectors)
+    [0, 1] select (_sector in KPLIB_sectors_player)
 };

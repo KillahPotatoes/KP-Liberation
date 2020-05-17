@@ -1,6 +1,6 @@
 params ["_sector"];
 
-if (!(_sector in sectors_bigtown) && !(_sector in sectors_capture) && !(_sector in sectors_factory)) exitWith {};
+if (!(_sector in KPLIB_sectors_capital) && !(_sector in KPLIB_sectors_city) && !(_sector in KPLIB_sectors_factory)) exitWith {};
 
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned for %1 on: %2", markerText _sector, debug_source], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 

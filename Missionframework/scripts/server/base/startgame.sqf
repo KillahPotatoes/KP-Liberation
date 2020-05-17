@@ -8,9 +8,9 @@ if (KPLIB_all_fobs isEqualTo []) then {
     if (KPLIB_build_first_fob) then {
         // Only accept spawnpoints which are at least 800m away from any sector
         private _y = "";
-        private _validPlaces =  sectors_opfor select {
+        private _validPlaces =  KPLIB_sectors_spawn select {
             _y = _x;
-            (sectors_allSectors findIf {((markerPos _x) distance2d (markerPos _y)) < 800}) isEqualTo -1
+            (KPLIB_sectors_all findIf {((markerPos _x) distance2d (markerPos _y)) < 800}) isEqualTo -1
         };
 
         // Spawn first FOB on random valid spawnpoint
