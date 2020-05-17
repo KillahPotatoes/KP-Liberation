@@ -44,7 +44,6 @@ KPLIB_objectInits = [
             [_this] spawn {
                 params ["_fobBox"];
                 waitUntil {sleep 0.1; time > 0};
-                [_fobBox] call KPLIB_fnc_setFobMass;
                 if ((typeOf _fobBox) isEqualTo FOB_box_typename) then {
                     [_fobBox] call KPLIB_fnc_setFobMass;
                     [_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];

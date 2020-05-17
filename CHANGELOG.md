@@ -8,6 +8,7 @@
 * Tweaked: Renamed blufor/opfor to players/enemies, to possibly avoid further confusion with using an opfor faction for a player preset.
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
+* Fixed: FOB truck got mass set, but should've just apply to FOB boxes.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
