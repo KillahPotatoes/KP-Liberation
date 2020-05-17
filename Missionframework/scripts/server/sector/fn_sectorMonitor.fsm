@@ -170,8 +170,7 @@ class FSM
                 {
                         name = "Get_next_sector";
                         itemno = 8;
-                        init = /*%FSM<STATEINIT""">*/"_sector = _allSectors deleteAt (floor random (count _allSectors));" \n
-                         "_opforCount = [] call KPLIB_fnc_getOpforCap;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_sector = _allSectors deleteAt (floor random (count _allSectors));"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -182,7 +181,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Get_adjusted_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_opforCount < KPLIB_sector_cap"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([] call KPLIB_fnc_getOpforCap) < KPLIB_sector_cap"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
