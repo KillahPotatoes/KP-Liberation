@@ -1,5 +1,7 @@
 
 KPLIB_init = false;
+KPLIB_endgame = 0;
+KPLIB_respawn_marker = "respawn";
 
 // Version of the KP Liberation framework
 KPLIB_version = [0, 96, 7];
@@ -10,10 +12,10 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 
 [] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
-[] call compile preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_classnameLists.sqf";
+[] call compile preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compile preprocessFileLineNumbers "presets\init_presets.sqf";
 [] call compile preprocessFileLineNumbers "kp_objectInits.sqf";
 

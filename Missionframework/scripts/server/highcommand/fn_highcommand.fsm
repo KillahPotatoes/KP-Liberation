@@ -127,7 +127,7 @@ class FSM
                          "" \n
                          "// Logging function for the FSM" \n
                          "private _logging = {" \n
-                         "    if (KP_liberation_highcommand_debug > 0) then {" \n
+                         "    if (KPLIB_highcommand_debug > 0) then {" \n
                          "        [format _this, ""HIGHCOMMAND""] call KPLIB_fnc_log;" \n
                          "    };" \n
                          "};"/*%FSM</STATEINIT""">*/;

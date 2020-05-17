@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-11
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -378,15 +378,3 @@ Same format as for the commander actions. */
 KPLIB_suppMod_whitelist = [
 
 ];
-
-
-// Adjustments calculation depending on selected mission parameters (shouldn't be edited)
-KPLIB_endgame                       = 0;
-KPLIB_respawn_marker                = "respawn";
-KPLIB_production_interval           = ceil (KPLIB_production_interval / KPLIB_resources_multiplier);
-KPLIB_battlegroup_size              = KPLIB_battlegroup_size * (sqrt KPLIB_unitcap) * (sqrt KPLIB_csat_aggressivity);
-KPLIB_civilians_amount              = KPLIB_civilians_amount * KPLIB_civilian_activity;
-KPLIB_blufor_cap                    = (KPLIB_blufor_cap * KPLIB_unitcap) min 100;
-KPLIB_sector_cap                    = KPLIB_sector_cap * KPLIB_unitcap;
-KPLIB_battlegroup_cap               = KPLIB_battlegroup_cap * KPLIB_unitcap;
-KPLIB_patrol_cap                    = KPLIB_patrol_cap * KPLIB_unitcap;
