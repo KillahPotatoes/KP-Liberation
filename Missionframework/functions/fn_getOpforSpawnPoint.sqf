@@ -53,7 +53,7 @@ private ["_valid", "_current", "_distances"];
 
     if (_valid) then {
         // Fetch distances to FOBs
-        _distances = (KPLIB_all_fobs apply {(markerPos _current) distance2d _x}) select {_x < _max};
+        _distances = (KPLIB_sectors_fob apply {(markerPos _current) distance2d _x}) select {_x < _max};
 
         // Fetch distances to blufor sectors
         _distances append ((KPLIB_sectors_player apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});

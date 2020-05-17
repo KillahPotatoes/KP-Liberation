@@ -7,7 +7,7 @@ private _frame_pos = [];
 
 KPLIB_force_redeploy = false;
 
-waitUntil {!isNil "KPLIB_all_fobs"};
+waitUntil {!isNil "KPLIB_sectors_fob"};
 waitUntil {!isNil "KPLIB_sectors_player"};
 waitUntil {!isNil "save_is_loaded"};
 waitUntil {save_is_loaded};
@@ -82,8 +82,8 @@ while {true} do {
     while {dialog && alive player && deploy == 0} do {
         choiceslist = [[_basenamestr, getposATL startbase]];
 
-        for [{_idx=0},{_idx < count KPLIB_all_fobs},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (KPLIB_all_fobs select _idx)],KPLIB_all_fobs select _idx]];
+        for [{_idx=0},{_idx < count KPLIB_sectors_fob},{_idx=_idx+1}] do {
+            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (KPLIB_sectors_fob select _idx)],KPLIB_sectors_fob select _idx]];
         };
 
         if (KPLIB_mobilerespawn) then {

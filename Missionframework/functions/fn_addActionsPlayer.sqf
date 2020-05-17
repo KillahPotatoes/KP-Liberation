@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-05-10
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -310,7 +310,7 @@ _player addAction [
         && {alive _originalTarget}
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_fob_range * 0.8)}
         && {!(
-            KPLIB_all_fobs isEqualTo []
+            KPLIB_sectors_fob isEqualTo []
             || KPLIB_production isEqualTo []
         )}
         && {build_confirmed isEqualTo 0}

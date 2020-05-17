@@ -72,7 +72,7 @@ KPLIB_sectors_player = [];
 // Enemy combat readiness (0-100)
 combat_readiness = 0;
 // All FOBs
-KPLIB_all_fobs = [];
+KPLIB_sectors_fob = [];
 // Player permissions data
 KPLIB_permissions = [];
 // Vehicle unlock links
@@ -179,7 +179,7 @@ if (!isNil "_saveData") then {
         _aiGroups                                   = _saveData select  6;
         KPLIB_sectors_player                              = _saveData select  7;
         combat_readiness                            = _saveData select  8;
-        KPLIB_all_fobs                              = _saveData select  9;
+        KPLIB_sectors_fob                              = _saveData select  9;
         KPLIB_permissions                           = _saveData select 10;
         KPLIB_vehicle_to_military_base_links        = _saveData select 11;
         KPLIB_civ_rep                       = _saveData select 12;
@@ -236,7 +236,7 @@ if (!isNil "_saveData") then {
         ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
         KPLIB_sectors_player                              = _saveData select  0;
-        KPLIB_all_fobs                              = _saveData select  1;
+        KPLIB_sectors_fob                              = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
         combat_readiness                            = _saveData select  4;
@@ -503,7 +503,7 @@ if (!isNil "_saveData") then {
 publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "KPLIB_sectors_player";
-publicVariable "KPLIB_all_fobs";
+publicVariable "KPLIB_sectors_fob";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array

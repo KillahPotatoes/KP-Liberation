@@ -11,9 +11,9 @@ if (dorepackage > 0) then {
     private _fob = [] call KPLIB_fnc_getNearestFob;
 
     if !(_fob isEqualTo []) then {
-        KPLIB_all_fobs = KPLIB_all_fobs - [_fob];
+        KPLIB_sectors_fob = KPLIB_sectors_fob - [_fob];
         KPLIB_clearances deleteAt (KPLIB_clearances findIf {(_x select 0) isEqualTo _fob});
-        publicVariable "KPLIB_all_fobs";
+        publicVariable "KPLIB_sectors_fob";
         publicVariable "KPLIB_clearances";
     };
 

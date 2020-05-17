@@ -19,9 +19,9 @@ params [
     ["_pos", [0, 0, 0], [[]], [2, 3]]
 ];
 
-if (KPLIB_all_fobs isEqualTo [] && KPLIB_sectors_player isEqualTo []) exitWith {[]};
+if (KPLIB_sectors_fob isEqualTo [] && KPLIB_sectors_player isEqualTo []) exitWith {[]};
 
-private _objectives = KPLIB_all_fobs + (KPLIB_sectors_player apply {markerPos _x});
+private _objectives = KPLIB_sectors_fob + (KPLIB_sectors_player apply {markerPos _x});
 _objectives = _objectives apply {[_x distance2d _pos, _x]};
 _objectives sort true;
 

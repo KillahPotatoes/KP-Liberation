@@ -66,7 +66,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         typeOf _x,
         _x mineDetectedBy KPLIB_side_friendly
     ]});
-} forEach KPLIB_all_fobs;
+} forEach KPLIB_sectors_fob;
 
 // Save all fetched objects
 private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
@@ -192,7 +192,7 @@ private _weights = [
     _aiGroups,
     KPLIB_sectors_player,
     combat_readiness,
-    KPLIB_all_fobs,
+    KPLIB_sectors_fob,
     KPLIB_permissions,
     KPLIB_vehicle_to_military_base_links,
     KPLIB_civ_rep,

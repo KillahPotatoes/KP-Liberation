@@ -1,4 +1,4 @@
-waitUntil { !isNil "KPLIB_all_fobs" };
+waitUntil { !isNil "KPLIB_sectors_fob" };
 waitUntil { !isNil "KPLIB_sectors_player" };
 
 sleep 5;
@@ -21,7 +21,7 @@ while { KPLIB_endgame == 0 } do {
             [ _x ] call attack_in_progress_fob;
         };
         sleep 0.5;
-    } foreach KPLIB_all_fobs;
+    } foreach KPLIB_sectors_fob;
 
     sleep 1;
 
