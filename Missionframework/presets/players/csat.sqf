@@ -1,9 +1,18 @@
 /*
+    File: csat.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-03
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CSAT player preset.
+
     Needed Mods:
-    - None
+        - None
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

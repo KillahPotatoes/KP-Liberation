@@ -1,9 +1,18 @@
 /*
+    File: apex.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-07
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Tanoa civilian preset.
+
     Needed Mods:
-    - None
+        - None
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.

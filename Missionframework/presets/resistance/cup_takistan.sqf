@@ -1,11 +1,20 @@
 /*
+    File: cup_takistan.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2019-07-15
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP Takistan resistance preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - Project Infinite AIO
+        - Project Infinite AIO
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation

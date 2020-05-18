@@ -1,13 +1,22 @@
 /*
+    File: rhs_usaf_wdl.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-12-09
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RHS US Armed Forces Woodland player preset.
+
     Needed Mods:
-    - RHS USAF
+        - RHS USAF
 
     Optional Mods:
-    - F-15C
-    - F/A-18
-    - USAF Main Pack
-    - USAF Fighters Pack
-    - USAF Utility Pack
+        - F-15C
+        - F/A-18
+        - USAF Fighters Pack
+        - USAF Main Pack
+        - USAF Utility Pack
 */
 
 /*

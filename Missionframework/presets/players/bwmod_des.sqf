@@ -1,11 +1,20 @@
 /*
+    File: bwmod_des.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-12-10
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        German Bundeswehr Desert player preset.
+
     Needed Mods:
-    - BWMod
-    - RHS USAF
+        - BWMod
+        - RHS USAF
 
     Optional Mods:
-    - F-15C
-    - F/A-18
+        - F-15C
+        - F/A-18
 */
 
 /*

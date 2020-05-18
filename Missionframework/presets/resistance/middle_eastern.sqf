@@ -1,11 +1,20 @@
 /*
+    File: middle_eastern.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-12-09
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Middle Eastern resistance preset.
+
     Needed Mods:
-    - RHS USAF
-    - RHS AFRF
-    - Project OPFOR
+        - Project OPFOR
+        - RHS AFRF
+        - RHS USAF
 
     Optional Mods:
-    - None
+        - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation

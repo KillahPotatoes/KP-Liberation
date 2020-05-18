@@ -1,9 +1,18 @@
 /*
+    File: rhs_afrf.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-14
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RHS Armed Forces of the Russian Federation player preset.
+
     Needed Mods:
-    - RHS AFRF
+        - RHS AFRF
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

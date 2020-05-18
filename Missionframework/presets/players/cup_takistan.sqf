@@ -1,11 +1,20 @@
 /*
+    File: cup_takistan.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2020-04-25
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP Takistani Armed Forces player preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

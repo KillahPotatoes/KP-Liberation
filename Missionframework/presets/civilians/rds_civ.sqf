@@ -1,9 +1,18 @@
 /*
+    File: rds_civ.sqf
+    Author: PSYKO-nz - https://github.com/PSYKO-nz
+    Date: 2018-02-02
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RDS civilian preset.
+
     Needed Mods:
-    - RDS Civilian Pack
+        - RDS Civilian Pack
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.

@@ -1,9 +1,18 @@
 /*
+    File: germany.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-08
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Germany civilian preset.
+
     Needed Mods:
-    - Global Mobilization
+        - Global Mobilization
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.

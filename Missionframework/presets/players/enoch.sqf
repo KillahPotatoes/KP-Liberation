@@ -1,9 +1,18 @@
 /*
+    File: enoch.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-07-24
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Livonia Defence Force player preset.
+
     Needed Mods:
-    - Contact DLC
+        - Contact DLC
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

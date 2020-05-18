@@ -1,14 +1,23 @@
 /*
+    File: baf_mtp.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-12-09
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        3cb BAF MTP player preset.
+
     Needed Mods:
-    - 3CB BAF Equipment
-    - 3CB BAF Vehicle
-    - 3CB BAF Weapons
-    - 3CB BAF Units
-    - RHS USAF
+        - 3CB BAF Equipment
+        - 3CB BAF Units
+        - 3CB BAF Vehicle
+        - 3CB BAF Weapons
+        - RHS USAF
 
     Optional Mods:
-    - F-15C
-    - F/A-18
+        - F-15C
+        - F/A-18
 */
 
 /*

@@ -1,9 +1,18 @@
 /*
+    File: unsung.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-07-25
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Unsung resistance preset.
+
     Needed Mods:
-    - The Unsung Vietnam War Mod
+        - Unsung
 
     Optional Mods:
-    - None
+        - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation

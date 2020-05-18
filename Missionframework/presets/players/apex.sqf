@@ -1,17 +1,26 @@
 /*
+    File: apex.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-07
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        NATO pacific player preset.
+
     Needed Mods:
-    - None
+        - None
 
     Optional Mods:
-    - BWMod
-    - RHSUSAF
-    - F-15C
-    - F/A-18
-    - CUP Weapons
-    - CUP Vehicles
-    - USAF Main Pack
-    - USAF Fighters Pack
-    - USAF Utility Pack
+        - BWMod
+        - CUP Vehicles
+        - CUP Weapons
+        - F-15C
+        - F/A-18
+        - RHSUSAF
+        - USAF Fighters Pack
+        - USAF Main Pack
+        - USAF Utility Pack
 */
 
 /*

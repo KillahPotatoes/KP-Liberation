@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    File: stringtable.xml
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-03-06
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Localization contributors:
+        English | Updated: 0.96.8
+            KP Liberation Dev Team  - https://github.com/KillahPotatoes
+
+        Chinese Simplified | Updated: pre 0.96.8
+            Nercon                  - https://github.com/nercon
+
+        Chinese Traditional | Updated: pre 0.96.8
+            dustin902001            - https://github.com/dustin902001
+            John M. Rodriguez       - https://github.com/KOEI5113
+
+        French | Updated: pre 0.96.8
+            zbug                    - https://github.com/GreuhZbug
+
+        German | Updated: 0.96.8
+            Wyqer                   - https://github.com/Wyqer
+
+        Italian | Updated: pre 0.96.8
+            k4s0                    - https://github.com/k4s0
+
+        Portuguese | Updated: pre 0.96.8
+            NomadRomeo              - https://github.com/NomadRomeo
+
+        Russian | Updated: pre 0.96.8
+            _KOC_                   - Constantin.rogozin@ya.ru
+            Dj_Haski                - https://github.com/DjHaski
+
+        Spanish | Updated: pre 0.96.8
+            amunoz20                - https://github.com/amunoz20
+            regiregi22              - https://github.com/regiregi22
+
+        Turkish | Updated: pre 0.96.8
+            Carbneth                - https://github.com/Carbneth
+-->
 <Project name="Liberation">
     <Package name="Liberation">
-        <!-- French localization made by zbug: https://github.com/GreuhZbug -->
-        <!-- German localization made by Wyqer: https://github.com/Wyqer -->
-        <!-- Italian localization made by k4s0: https://github.com/k4s0 -->
-        <!-- Spanish localization made by regiregi22: https://github.com/regiregi22 and amunoz20: https://github.com/amunoz20 -->
-        <!-- Russian localization made by _KOC_: Constantin.rogozin@ya.ru and Dj_Haski: https://github.com/DjHaski -->
-        <!-- English corrections / proofreading by Applejakerie: https://github.com/Applejakerie -->
-        <!-- Chinese Simplified localization made by Nercon: https://github.com/nercon -->
-        <!-- Chinese Traditional localization made by John M. Rodriguez: https://github.com/KOEI5113 -->
-        <!-- (WIP) Turkish localization made by Carbneth: https://github.com/Carbneth -->
-        <!-- Portuguese localization made by NomadRomeo: https://github.com/NomadRomeo -->
-        <!-- Korean localization made by Panzer: https://github.com/PanzerKoLee -->
         <Key ID="STR_MISSION_TITLE">
             <Original>CTI 34 KP Liberation v0.96.8 dev</Original>
         </Key>
@@ -6418,9 +6447,6 @@
     </Package>
 
     <Package name="KPPLM">
-        <!-- English and German localization by Wyqer: https://github.com/Wyqer | Updated: 2018-08-23 -->
-        <!-- Chinese Traditional localization by dustin902001: https://github.com/dustin902001 | Updated: 2018-12-05 -->
-        <!-- Portuguese localization by AngusDLX: https://github.com/AngusDLX | Updated: 2018-08-25 -->
         <Key ID="STR_KPPLM_ACTIONOPEN">
             <English>-- KP Player Menu --</English>
             <Chinese>-- KP 玩家選單 --</Chinese>

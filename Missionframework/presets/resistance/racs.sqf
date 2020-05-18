@@ -1,9 +1,18 @@
 /*
+    File: racs.sqf
+    Author: PSYKO-nz - https://github.com/PSYKO-nz
+    Date: 2018-02-19
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RACS resistance preset.
+
     Needed Mods:
-    - Project OPFOR
+        - Project OPFOR
 
     Optional Mods:
-    - None
+        - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation

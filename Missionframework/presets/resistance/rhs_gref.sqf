@@ -1,10 +1,19 @@
 /*
+    File: rhs_gref.sqf
+    Author: FatRefrigerator - https://github.com/FatRefrigerator
+    Date: 2017-10-11
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        RHS Green Forces resistance preset.
+
     Needed Mods:
-    - RHS: AFRF
-    - RHS: GREF
+        - RHS AFRF
+        - RHS GREF
 
     Optional Mods:
-    - None
+        - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation

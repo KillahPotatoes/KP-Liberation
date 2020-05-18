@@ -1,9 +1,18 @@
 /*
+    File: gm_east.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-07
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        East Germany player preset.
+
     Needed Mods:
-    - Global Mobilization
+        - Global Mobilization
 
     Optional Mods:
-    - LEN - Cold War Helicopters (due to lack fo air assets in GM for now) - https://steamcommunity.com/sharedfiles/filedetails/?id=1726445116
+        - LEN - Cold War Aircraft
 */
 
 /*

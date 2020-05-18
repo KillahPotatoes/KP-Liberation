@@ -1,9 +1,18 @@
 /*
+    File: unsung.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-06-04
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Unsung US player preset.
+
     Needed Mods:
-    - The Unsung Vietnam War Mod
+        - Unsung
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

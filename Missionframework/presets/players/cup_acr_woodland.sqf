@@ -1,11 +1,20 @@
 /*
+    File: cup_acr_woodland.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2019-07-22
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP ACR Woodland player preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - Qinetix's Titus
+        - Qinetix's Titus
 */
 
 /*

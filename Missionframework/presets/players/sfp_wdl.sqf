@@ -1,9 +1,18 @@
 /*
+    File: sfp_des.sqf
+    Author: Dahlgren - https://github.com/Dahlgren
+    Date: 2017-07-24
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Swedish Armed Forces Woodland player preset.
+
     Needed Mods:
-    - SFP
+        - SFP
 
     Optional Mods:
-    - None
+        - None
 */
 
 /*

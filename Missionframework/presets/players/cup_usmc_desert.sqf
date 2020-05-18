@@ -1,13 +1,22 @@
 /*
+    File: cup_usmc_desert.sqf
+    Author: Eogos - https://github.com/Eogos
+    Date: 2019-07-15
+    Last Update: 2020-05-18
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        CUP USMC Desert player preset.
+
     Needed Mods:
-    - CUP Weapons
-    - CUP Vehicles
-    - CUP Units
+        - CUP Units
+        - CUP Vehicles
+        - CUP Weapons
 
     Optional Mods:
-    - USAF Main Pack
-    - USAF Fighters Pack
-    - USAF Utility Pack
+        - USAF Fighters Pack
+        - USAF Main Pack
+        - USAF Utility Pack
 */
 
 /*
