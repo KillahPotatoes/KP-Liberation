@@ -28,7 +28,7 @@ params [
 
 diag_log text "";
 diag_log text "";
-diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- START ----------";
+diag_log text "[KPLIB] [FOB EXPORT] ---------- START ----------";
 
 // Fetch all objects
 diag_log text "";
@@ -77,7 +77,7 @@ diag_log text "";
 diag_log text "[_objects_to_build, _objectives_to_build, _defenders_to_build, _base_corners]";
 
 diag_log text "";
-diag_log text "[KP LIBERATION] [FOB EXPORT] ---------- END ----------";
+diag_log text "[KPLIB] [FOB EXPORT] ---------- END ----------";
 diag_log text "";
 diag_log text "";
 
