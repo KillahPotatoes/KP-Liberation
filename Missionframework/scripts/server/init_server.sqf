@@ -44,7 +44,7 @@ execVM "scripts\server\battlegroup\random_battlegroups.sqf";
 execVM "scripts\server\battlegroup\readiness_increase.sqf";
 execVM "scripts\server\game\apply_default_permissions.sqf";
 execVM "scripts\server\game\cleanup_vehicles.sqf";
-if (!KPLIB_fog_param) then {execVM "scripts\server\game\fucking_set_fog.sqf";};
+if (!KPLIB_param_vanillaFog) then {execVM "scripts\server\game\fucking_set_fog.sqf";};
 execVM "scripts\server\game\manage_time.sqf";
 execVM "scripts\server\game\manage_weather.sqf";
 execVM "scripts\server\game\playtime.sqf";
@@ -57,7 +57,7 @@ execVM "scripts\server\offloading\show_fps.sqf";
 execVM "scripts\server\patrols\civilian_patrols.sqf";
 execVM "scripts\server\patrols\manage_patrols.sqf";
 execVM "scripts\server\patrols\reinforcements_resetter.sqf";
-if (KPLIB_ailogistics) then {execVM "scripts\server\resources\manage_logistics.sqf";};
+if (KPLIB_param_logistic) then {execVM "scripts\server\resources\manage_logistics.sqf";};
 execVM "scripts\server\resources\manage_resources.sqf";
 execVM "scripts\server\resources\recalculate_resources.sqf";
 execVM "scripts\server\resources\recalculate_timer.sqf";
@@ -66,10 +66,10 @@ execVM "scripts\server\resources\unit_cap.sqf";
 execVM "scripts\server\sector\lose_sectors.sqf";
 
 KPLIB_fsm_sectorMonitor = [] call KPLIB_fnc_sectorMonitor;
-if (KPLIB_high_command) then {KPLIB_fsm_highcommand = [] call KPLIB_fnc_highcommand;};
+if (KPLIB_param_highCommand) then {KPLIB_fsm_highcommand = [] call KPLIB_fnc_highcommand;};
 
 // Select FOB templates
-switch (KPLIB_presetEnemies) do {
+switch (KPLIB_presetEnemy) do {
     case 1: {
         KPLIB_fob_templates = [
             "fobhunt_templates\apex\template1.sqf",
@@ -123,11 +123,11 @@ execVM "scripts\server\offloading\group_diag.sqf";
 } forEach allUnits;
 
 // Server Restart Script from K4s0
-if (KPLIB_restart > 0) then {
+if (KPLIB_param_restart > 0) then {
     execVM "scripts\server\game\server_restart.sqf";
 };
 
-if (KPLIB_limited_zeus) then {
+if (KPLIB_param_zeusLimited) then {
     zm1 setVariable ["Addons", 0, true];
     removeAllCuratorAddons zm1;
 

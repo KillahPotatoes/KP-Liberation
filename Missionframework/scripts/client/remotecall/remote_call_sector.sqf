@@ -27,4 +27,4 @@ if ( _status == 3 ) then {
 };
 
 { _x setMarkerColorLocal KPLIB_color_enemy; } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
-{ _x setMarkerColorLocal KPLIB_color_friendly; } foreach KPLIB_sectors_player;
+{ _x setMarkerColorLocal KPLIB_color_player; } foreach KPLIB_sectors_player;

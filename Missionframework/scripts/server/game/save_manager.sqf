@@ -292,10 +292,10 @@ if (!isNil "_saveData") then {
 
     KPLIB_side_resistance setFriend [KPLIB_side_enemy, _resistanceEnemy];
     KPLIB_side_enemy setFriend [KPLIB_side_resistance, _resistanceEnemy];
-    KPLIB_side_resistance setFriend [KPLIB_side_friendly, _resistanceFriendly];
-    KPLIB_side_friendly setFriend [KPLIB_side_resistance, _resistanceFriendly];
+    KPLIB_side_resistance setFriend [KPLIB_side_player, _resistanceFriendly];
+    KPLIB_side_player setFriend [KPLIB_side_resistance, _resistanceFriendly];
 
-    if (KPLIB_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_friendly, (KPLIB_side_resistance getFriend KPLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
+    if (KPLIB_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_player, (KPLIB_side_resistance getFriend KPLIB_side_player)], "CIVREP"] call KPLIB_fnc_log;};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -393,7 +393,7 @@ if (!isNil "_saveData") then {
 
         // reveal mine to player side if it was detected
         if (_known) then {
-            KPLIB_side_friendly revealMine _mine;
+            KPLIB_side_player revealMine _mine;
         };
 
     } forEach _allMines;
@@ -468,7 +468,7 @@ if (!isNil "_saveData") then {
     if (((_saveData select 0) select 0) isEqualType 0) then {
         {
             _x params ["_spawnPos", "_units"];
-            _grp = createGroup [KPLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_player, true];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
@@ -479,7 +479,7 @@ if (!isNil "_saveData") then {
         private _dir = 0;
         private _unit = objNull;
         {
-            _grp = createGroup [KPLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_player, true];
             {
                 _pos = [(_x select 1) select 0, (_x select 1) select 1, ((_x select 1) select 2) + 0.2];
                 _dir = _x select 2;

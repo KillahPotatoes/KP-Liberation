@@ -34,7 +34,7 @@ localize "STR_BUILD8"
 ];
 
 _nearfob = [] call KPLIB_fnc_getNearestFob;
-_actual_fob = KPLIB_fob_resources select {((_x select 0) distance _nearfob) < KPLIB_fob_range};
+_actual_fob = KPLIB_fob_resources select {((_x select 0) distance _nearfob) < KPLIB_range_fob};
 
 while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
     _build_list = KPLIB_buildList select buildtype;
@@ -42,7 +42,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
     if (_oldbuildtype != buildtype || synchro_done) then {
         synchro_done = false;
         _oldbuildtype = buildtype;
-        _actual_fob = KPLIB_fob_resources select {((_x select 0) distance _nearfob) < KPLIB_fob_range};
+        _actual_fob = KPLIB_fob_resources select {((_x select 0) distance _nearfob) < KPLIB_range_fob};
 
         lbClear 110;
         {
@@ -53,8 +53,8 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
 
                 switch (_classnamevar) do {
                     case FOB_box_typename: {_entrytext = localize "STR_FOBBOX";};
-                    case Arsenal_typename: {if (KPLIB_mobilearsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
-                    case Respawn_truck_typename: {if (KPLIB_mobilerespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
+                    case Arsenal_typename: {if (KPLIB_param_mobileArsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
+                    case Respawn_truck_typename: {if (KPLIB_param_mobileRespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
                     case FOB_truck_typename: {_entrytext = localize "STR_FOBTRUCK";};
                     case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
                     case KPLIB_small_storage_building: {_entrytext = localize "STR_SMALL_STORAGE";};
@@ -114,7 +114,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
     _selected_item = lbCurSel 110;
     _affordable = false;
     _squad_full = false;
-    if ((buildtype == 1) && (count (units group player) >= KPLIB_max_squad_size)) then {
+    if ((buildtype == 1) && (count (units group player) >= KPLIB_param_maxSquadSize)) then {
         _squad_full = true;
     };
     _linked = false;

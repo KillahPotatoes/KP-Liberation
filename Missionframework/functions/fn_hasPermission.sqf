@@ -2,7 +2,7 @@
     File: fn_hasPermission.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-05-10
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -20,7 +20,7 @@ params [
 ];
 
 if (_permission isEqualTo -1) exitWith {["No permission number given"] call BIS_fnc_error; false};
-if (!KPLIB_permissions_param) exitWith {true};
+if (!KPLIB_param_permissions) exitWith {true};
 
 if (isNil "KPLIB_last_permission_check_time") then {KPLIB_last_permission_check_time = -1000;};
 

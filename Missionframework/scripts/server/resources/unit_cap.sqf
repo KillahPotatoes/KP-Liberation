@@ -7,7 +7,7 @@ while {true} do {
     private _local_heli_count = 0;
     private _local_plane_count = 0;
     {
-        if ((side group _x == KPLIB_side_friendly) && (alive _x) && ((_x distance startbase) > 250 || (isPlayer _x))) then {
+        if ((side group _x == KPLIB_side_player) && (alive _x) && ((_x distance startbase) > 250 || (isPlayer _x))) then {
             _local_unitcap = _local_unitcap + 1;
         };
     } forEach allUnits;

@@ -16,7 +16,7 @@ if ( time > KPLIB_last_incoming_notif_time + 60 ) then {
     private [ "_mrk" ];
     _mrk = createMarkerLocal [ "opfor_incoming_marker", _attack_destination];
     "opfor_incoming_marker" setMarkerTypeLocal "selector_selectedMission";
-    "opfor_incoming_marker" setMarkerColorLocal KPLIB_color_enemy_bright;
+    "opfor_incoming_marker" setMarkerColorLocal KPLIB_color_enemyActive;
 
     sleep 250;
     deleteMarkerLocal _mrk;

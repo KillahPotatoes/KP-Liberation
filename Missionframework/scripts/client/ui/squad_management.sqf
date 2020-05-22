@@ -186,7 +186,7 @@ while { dialog && alive player } do {
 
             if ( _fobdistance < 100 || count _nearsquad > 0 ) then {
 
-                _tempgmp = createGroup [KPLIB_side_friendly, true];
+                _tempgmp = createGroup [KPLIB_side_player, true];
                 (typeof _selectedmember) createUnit [ markers_reset, _tempgmp,''];
                 [ (units _tempgmp) select 0, _selectedmember ] call KPLIB_fnc_swapInventory;
                 deleteVehicle ((units _tempgmp) select 0);

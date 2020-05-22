@@ -14,6 +14,6 @@ while {true} do {
             stats_readiness_earned = stats_readiness_earned + 0.25;
         };
     };
-    if (combat_readiness > 100.0 && KPLIB_difficulty_modifier < 2) then {combat_readiness = 100.0};
+    if (combat_readiness > 100.0 && KPLIB_param_difficulty < 2) then {combat_readiness = 100.0};
     sleep (180 + random (180));
 };

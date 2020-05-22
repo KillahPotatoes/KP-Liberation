@@ -8,7 +8,7 @@ if (isServer) then {
     ["Only if you e.g. use a CUP preset and you get messages about missing CUP classes, then check your loaded mods.", "PRESETS"] call KPLIB_fnc_log;
 };
 
-switch (KPLIB_presetPlayers) do {
+switch (KPLIB_presetPlayer) do {
     case  1: {[] call compile preprocessFileLineNumbers "presets\players\apex.sqf";};
     case  2: {[] call compile preprocessFileLineNumbers "presets\players\baf_mtp.sqf";};
     case  3: {[] call compile preprocessFileLineNumbers "presets\players\baf_des.sqf";};
@@ -42,7 +42,7 @@ switch (KPLIB_presetPlayers) do {
     default  {[] call compile preprocessFileLineNumbers "presets\players\custom.sqf";};
 };
 
-switch (KPLIB_presetEnemies) do {
+switch (KPLIB_presetEnemy) do {
     case  1: {[] call compile preprocessFileLineNumbers "presets\enemies\apex.sqf";};
     case  2: {[] call compile preprocessFileLineNumbers "presets\enemies\rhs_afrf.sqf";};
     case  3: {[] call compile preprocessFileLineNumbers "presets\enemies\takistan.sqf";};

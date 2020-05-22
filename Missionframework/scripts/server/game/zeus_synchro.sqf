@@ -12,7 +12,7 @@ private _vehicleClassnames = [toLower huron_typename];
     KPLIB_b_static_classes,
     KPLIB_b_support_classes
 ];
-if (KPLIB_enemies_zeus) then {_vehicleClassnames append KPLIB_o_allVeh_classes;};
+if (KPLIB_param_zeusAddEnemies) then {_vehicleClassnames append KPLIB_o_allVeh_classes;};
 
 private _valids = [];
 private _toRemove = [];
@@ -25,8 +25,8 @@ while {true} do {
     _valids = allUnits select {
         (alive _x)                                                                              // Alive
         && {
-            (KPLIB_enemies_zeus && {!(side (group _x) isEqualTo KPLIB_side_civilian)})  // Not civilian side, if enemy adding is enabled
-            || {side (group _x) isEqualTo KPLIB_side_friendly}                                  // Player side if enemy adding is disabled
+            (KPLIB_param_zeusAddEnemies && {!(side (group _x) isEqualTo KPLIB_side_civilian)})  // Not civilian side, if enemy adding is enabled
+            || {side (group _x) isEqualTo KPLIB_side_player}                                  // Player side if enemy adding is disabled
         }
         && {((str _x) find "BIS_SUPP_HQ_") isEqualTo -1}                                        // Not a HQ entity from support module
     };

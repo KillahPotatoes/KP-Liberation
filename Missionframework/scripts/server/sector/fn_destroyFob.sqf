@@ -2,7 +2,7 @@
     File: fn_destroyFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-28
-    Last Update: 2020-05-10
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,7 @@ _buildings append KPLIB_b_buildings_classes;
             _this setDamage 1;
         };
     };
-} forEach ((_fobPos nearObjects (KPLIB_fob_range * 1.2)) select {getObjectType _x >= 8});
+} forEach ((_fobPos nearObjects (KPLIB_range_fob * 1.2)) select {getObjectType _x >= 8});
 
 KPLIB_clearances deleteAt (KPLIB_clearances findIf {(_x select 0) isEqualTo _fobPos});
 publicVariable "KPLIB_clearances";

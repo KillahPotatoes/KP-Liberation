@@ -32,11 +32,11 @@ for "_i" from 1 to _count do {
 
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned %1 wounded civilians at %2", _count, markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-private _units_near = [markerPos _sector, 300, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+private _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 private _healed_civs = [];
 
 while {_units_near > 0} do {
-    _units_near = [markerPos _sector, 300, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+    _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
     {
         if (((damage _x) < 0.5) && !(_x in _healed_civs)) then {
             (_markers select _forEachIndex) setMarkerAlpha 0;

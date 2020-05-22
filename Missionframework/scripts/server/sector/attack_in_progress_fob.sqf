@@ -6,8 +6,8 @@ sleep 5;
 _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership != KPLIB_side_enemy ) exitWith {};
 
-if ( KPLIB_blufor_defenders ) then {
-    _grp = creategroup [KPLIB_side_friendly, true];
+if ( KPLIB_param_bluforDefenders ) then {
+    _grp = creategroup [KPLIB_side_player, true];
     {
         [_x, _thispos, _grp] call KPLIB_fnc_createManagedUnit;
     } foreach blufor_squad_inf;
@@ -18,8 +18,8 @@ if ( KPLIB_blufor_defenders ) then {
 sleep 60;
 
 _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
-if ( _ownership == KPLIB_side_friendly ) exitWith {
-    if ( KPLIB_blufor_defenders ) then {
+if ( _ownership == KPLIB_side_player ) exitWith {
+    if ( KPLIB_param_bluforDefenders ) then {
         {
             if ( alive _x ) then { deleteVehicle _x };
         } foreach units _grp;
@@ -52,13 +52,13 @@ if ( KPLIB_endgame == 0 ) then {
         stats_fobs_lost = stats_fobs_lost + 1;
     } else {
         [_thispos, 3] remoteExec ["remote_call_fob"];
-        {[_x] spawn prisonner_ai;} foreach ((_thispos nearEntities ["Man", KPLIB_capture_size * 0.8]) select {side group _x == KPLIB_side_enemy});
+        {[_x] spawn prisonner_ai;} foreach ((_thispos nearEntities ["Man", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
     };
 };
 
 sleep 60;
 
-if ( KPLIB_blufor_defenders ) then {
+if ( KPLIB_param_bluforDefenders ) then {
     {
         if ( alive _x ) then { deleteVehicle _x };
     } foreach units _grp;

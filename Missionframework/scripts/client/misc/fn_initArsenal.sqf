@@ -2,7 +2,7 @@
     File: fn_initArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-11
-    Last Update: 2020-05-11
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -15,7 +15,7 @@
         Function reached the end [BOOL]
 */
 
-if (KPLIB_arsenalUsePreset) then {
+if (KPLIB_param_useArsenalPreset) then {
     KPLIB_arsenalWeapons = [];
     KPLIB_arsenalMagazines = [];
     KPLIB_arsenalItems = [];
@@ -75,7 +75,7 @@ if (KPLIB_arsenalUsePreset) then {
     };
 
     KPLIB_arsenalAllowed append KPLIB_arsenalAllowedExtension;
-    if (KPLIB_ace && KPLIB_arsenal_type) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
 
     // Lowering to avoid issues with incorrect capitalized classnames in KPLIB_fnc_checkGear
     KPLIB_arsenalAllowed = KPLIB_arsenalAllowed apply {toLower _x};
@@ -84,7 +84,7 @@ if (KPLIB_arsenalUsePreset) then {
     [missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
-    if (KPLIB_ace && KPLIB_arsenal_type) then {[player, true, false] call ace_arsenal_fnc_addVirtualItems;};
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, true, false] call ace_arsenal_fnc_addVirtualItems;};
 };
 
 true

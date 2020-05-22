@@ -4,7 +4,7 @@ waitUntil { !isNil "nametags_distance" };
 
 while { true } do {
 
-	_scanned_units = [ allUnits, { ( alive _x ) && ( side group _x == KPLIB_side_friendly ) } ] call BIS_fnc_conditionalSelect;
+	_scanned_units = [ allUnits, { ( alive _x ) && ( side group _x == KPLIB_side_player ) } ] call BIS_fnc_conditionalSelect;
 	_scanned_units = [ _scanned_units, { (_x == leader group player ) || (_x distance player < nametags_distance) } ] call BIS_fnc_conditionalSelect;
 	_scanned_units = [ _scanned_units, { (_x != player) && (( vehicle player ) != ( vehicle _x )) } ] call BIS_fnc_conditionalSelect;
 	KPLIB_nametag_units = [] + _scanned_units;

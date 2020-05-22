@@ -26,11 +26,11 @@ while {true} do {
     };
 
     {_x setMarkerColorLocal KPLIB_color_enemy;} forEach (KPLIB_sectors_all - KPLIB_sectors_player);
-    {_x setMarkerColorLocal KPLIB_color_friendly;} forEach KPLIB_sectors_player;
+    {_x setMarkerColorLocal KPLIB_color_player;} forEach KPLIB_sectors_player;
 
     {
         _x params ["_marker", "_base"];
-        _marker setMarkerColorLocal ([KPLIB_color_enemy, KPLIB_color_friendly] select (_base in KPLIB_sectors_player));
+        _marker setMarkerColorLocal ([KPLIB_color_enemy, KPLIB_color_player] select (_base in KPLIB_sectors_player));
     } forEach _vehicle_unlock_markers;
     _sector_count = count KPLIB_sectors_player;
 };

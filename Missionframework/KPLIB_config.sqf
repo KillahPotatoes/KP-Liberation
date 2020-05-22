@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-17
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -53,7 +53,7 @@
     29 = SFP (Desert)
     30 = LDF (Contact DLC)
 */
-KPLIB_presetPlayers = 0;
+KPLIB_presetPlayer = 0;
 
 /*
     ----- Enemy preset -----
@@ -79,7 +79,7 @@ KPLIB_presetPlayers = 0;
     19 = CUP British Armed Forces (Desert)
     20 = CUP British Armed Forces (Woodland)
 */
-KPLIB_presetEnemies = 0;
+KPLIB_presetEnemy = 0;
 
 /*
     ----- Resistance preset -----
@@ -134,7 +134,7 @@ KPLIB_presetArsenal = 0;
 */
 
 // Player side.
-KPLIB_side_friendly = WEST;
+KPLIB_side_player = WEST;
 
 // Enemy side.
 KPLIB_side_enemy = EAST;
@@ -145,14 +145,14 @@ KPLIB_side_resistance = RESISTANCE;
 // Civilian side.
 KPLIB_side_civilian = CIVILIAN;
 
-// Friendly sector marker color.
-KPLIB_color_friendly = "ColorBLUFOR";
+// Player owned sector marker color.
+KPLIB_color_player = "ColorBLUFOR";
 
 // Enemy sector marker color.
 KPLIB_color_enemy = "ColorOPFOR";
 
 // Enemy sector marker color. (activated)
-KPLIB_color_enemy_bright = "ColorRED";
+KPLIB_color_enemyActive = "ColorRED";
 
 
 /*
@@ -180,19 +180,19 @@ KPLIB_save_interval = 60;
 */
 
 // Build range around the main FOB building.
-KPLIB_fob_range = 125;
+KPLIB_range_fob = 125;
 
 // Altitude in metres for the HALO jump.
-KPLIB_halo_altitude = 2500;
+KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
-KPLIB_sector_size = 1000;
+KPLIB_range_sectorActivation = 1000;
 
 // Range to capture a sector.
-KPLIB_capture_size = 175;
+KPLIB_range_sectorCapture = 175;
 
 // Radio Tower scanning range.
-KPLIB_radiotower_size = 2500;
+KPLIB_range_radioTowerScan = 2500;
 
 
 /*
@@ -203,16 +203,16 @@ KPLIB_radiotower_size = 2500;
 */
 
 // Cap for BLUFOR.
-KPLIB_blufor_cap = 100;
+KPLIB_cap_playerSide = 100;
 
-// Cap for sector defenders.
-KPLIB_sector_cap = 180;
+// Cap for enemy units.
+KPLIB_cap_enemySide = 180;
 
 // Cap for enemy battlegroups.
-KPLIB_battlegroup_cap = 150;
+KPLIB_cap_battlegroup = 150;
 
 // Cap for enemy patrols.
-KPLIB_patrol_cap = 150;
+KPLIB_cap_patrol = 150;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
@@ -375,6 +375,6 @@ KPLIB_commander_actions = [
 
 /* Whitelist for BI support framework access.
 Same format as for the commander actions. */
-KPLIB_suppMod_whitelist = [
+KPLIB_supportModule_whitelist = [
 
 ];

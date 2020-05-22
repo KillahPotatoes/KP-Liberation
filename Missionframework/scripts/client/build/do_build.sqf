@@ -3,7 +3,7 @@
 private [ "_maxdist", "_truepos", "_built_object_remote", "_pos", "_grp", "_classname", "_idx", "_unitrank", "_posfob", "_ghost_spot", "_vehicle", "_dist", "_actualdir", "_near_objects", "_near_objects_25", "_debug_colisions" ];
 
 build_confirmed = 0;
-_maxdist = KPLIB_fob_range;
+_maxdist = KPLIB_range_fob;
 _truepos = [];
 _debug_colisions = false;
 KP_vector = true;
@@ -40,7 +40,7 @@ while { true } do {
         _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
         _nearfob = [] call KPLIB_fnc_getNearestFob;
-        _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
+        _storage_areas = (_nearfob nearobjects (KPLIB_range_fob * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
 
         [_price_s, _price_a, _price_f, _classname, buildtype, _storage_areas] remoteExec ["build_remote_call",2];
     };
@@ -49,14 +49,14 @@ while { true } do {
         _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
         _grp = group player;
         if ( manned ) then {
-            _grp = createGroup KPLIB_side_friendly;
+            _grp = createGroup KPLIB_side_player;
         };
         _classname createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
         build_confirmed = 0;
     } else {
         if ( buildtype == 8 ) then {
             _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
-            _grp = createGroup KPLIB_side_friendly;
+            _grp = createGroup KPLIB_side_player;
             _grp setGroupId [format ["%1 %2",squads_names select buildindex, groupId _grp]];
             _idx = 0;
             {
@@ -147,7 +147,7 @@ while { true } do {
 
                 if !(buildtype isEqualTo 99) then {
                     {
-                        _x setPos (_posfob getPos [KPLIB_fob_range, 10 * _forEachIndex])
+                        _x setPos (_posfob getPos [KPLIB_range_fob, 10 * _forEachIndex])
                     } forEach _fob_spheres;
                 };
 
@@ -268,7 +268,7 @@ while { true } do {
                 _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
 
                 _nearfob = [] call KPLIB_fnc_getNearestFob;
-                _storage_areas = (_nearfob nearobjects (KPLIB_fob_range * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
+                _storage_areas = (_nearfob nearobjects (KPLIB_range_fob * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
 
                 _supplyCrates = ceil (_price_s / 100);
                 _ammoCrates = ceil (_price_a / 100);

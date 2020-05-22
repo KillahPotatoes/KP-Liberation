@@ -6,11 +6,11 @@ waitUntil { !isNil "combat_readiness" };
 
 while { KPLIB_endgame == 0 } do {
     waitUntil { sleep 0.3; count KPLIB_sectors_player >= 3; };
-    waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / KPLIB_difficulty_modifier); };
+    waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / KPLIB_param_difficulty); };
 
     sleep (random 30);
 
-    while {  [] call KPLIB_fnc_getOpforCap > KPLIB_patrol_cap } do {
+    while {  [] call KPLIB_fnc_getOpforCap > KPLIB_cap_patrol } do {
             sleep (random 30);
     };
 
@@ -63,7 +63,7 @@ while { KPLIB_endgame == 0 } do {
             _patrol_continue = false;
         } else {
             if ( time - _started_time > 900 ) then {
-                if ( [ getpos (leader _grp) , 4000 , KPLIB_side_friendly ] call KPLIB_fnc_getUnitsCount == 0 ) then {
+                if ( [ getpos (leader _grp) , 4000 , KPLIB_side_player ] call KPLIB_fnc_getUnitsCount == 0 ) then {
                     _patrol_continue = false;
                     {
                         if ( vehicle _x != _x ) then {
@@ -77,7 +77,7 @@ while { KPLIB_endgame == 0 } do {
     };
 
     if ( !([] call KPLIB_fnc_isCapitalActive) ) then {
-        sleep (600.0 / KPLIB_difficulty_modifier);
+        sleep (600.0 / KPLIB_param_difficulty);
     };
 
 };

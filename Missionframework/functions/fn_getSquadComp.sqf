@@ -2,7 +2,7 @@
     File: fn_getSquadComp.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-05-15
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -51,7 +51,7 @@ if (_type == "army") then {
     };
 } else {
     private _multiplier = 1;
-    if (KPLIB_unitcap < 1) then {_multiplier = KPLIB_unitcap;};
+    if (KPLIB_param_unitcap < 1) then {_multiplier = KPLIB_param_unitcap;};
     while {count _squadcomp < (10 * _multiplier)} do {_squadcomp pushback (selectRandom KPLIB_o_militiaInfantry)};
 };
 

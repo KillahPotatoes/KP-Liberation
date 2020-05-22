@@ -13,7 +13,7 @@ if !(_spawn_marker isEqualTo "") then {
 
     private _bg_groups = [];
     private _selected_opfor_battlegroup = [];
-    private _target_size = (round (KPLIB_battlegroup_size * ([] call KPLIB_fnc_getOpforFactor) * (sqrt KPLIB_csat_aggressivity))) min 16;
+    private _target_size = (round (KPLIB_battlegroup_size * ([] call KPLIB_fnc_getOpforFactor) * (sqrt KPLIB_param_aggressivity))) min 16;
     if (combat_readiness < 60) then {_target_size = round (_target_size * 0.65);};
 
     [_spawn_marker] remoteExec ["remote_call_battlegroup"];
@@ -58,7 +58,7 @@ if !(_spawn_marker isEqualTo "") then {
             [_nextgrp] spawn battlegroup_ai;
             _bg_groups pushback _nextgrp;
 
-            if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_battlegroup_cap)) then {
+            if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup)) then {
                 if (_vehicle isKindOf "Air") then {
                     [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective, _vehicle] spawn send_paratroopers;
                 } else {
@@ -67,7 +67,7 @@ if !(_spawn_marker isEqualTo "") then {
             };
         } forEach _selected_opfor_battlegroup;
 
-        if (KPLIB_csat_aggressivity > 0.9) then {
+        if (KPLIB_param_aggressivity > 0.9) then {
             [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
         };
     };

@@ -113,15 +113,15 @@ KPLIB_objectInits = [
 
     // Add valid vehicles to support module, if system is enabled
     [
-        KPLIB_suppMod_artyVeh,
-        {if (KPLIB_suppMod > 0) then {KPLIB_suppMod_arty synchronizeObjectsAdd [_this];};}
+        KPLIB_param_supportModule_artyVeh,
+        {if (KPLIB_param_supportModule > 0) then {KPLIB_param_supportModule_arty synchronizeObjectsAdd [_this];};}
     ],
 
     // Disable autocombat (if set in parameters) and fleeing
     [
         ["Man"],
         {
-            if (!(KPLIB_autodanger) && {(side _this) isEqualTo KPLIB_side_friendly}) then {
+            if (!(KPLIB_param_autodanger) && {(side _this) isEqualTo KPLIB_side_player}) then {
                 _this disableAI "AUTOCOMBAT";
             };
             _this allowFleeing 0;

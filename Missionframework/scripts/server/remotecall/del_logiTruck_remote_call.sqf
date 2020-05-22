@@ -6,7 +6,7 @@ logiError = 0;
 
 if (((KPLIB_logistics select _index) select 1) <= 0) exitWith {logiError = 1; _clientID publicVariableClient "logiError";};
 
-private _storage_areas = (_nearfob nearobjects KPLIB_fob_range) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
+private _storage_areas = (_nearfob nearobjects KPLIB_range_fob) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
 
 if ((count _storage_areas) == 0) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExec ["hint",_clientID]; logiError = 1; _clientID publicVariableClient "logiError";};
 

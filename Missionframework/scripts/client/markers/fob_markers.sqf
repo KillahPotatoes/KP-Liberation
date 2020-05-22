@@ -23,7 +23,7 @@ while {true} do {
         };
     };
 
-    if (KPLIB_mobilerespawn) then {
+    if (KPLIB_param_mobileRespawn) then {
         private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
 
         if (count _markers_mobilespawns != count _respawn_trucks) then {

@@ -13,7 +13,7 @@ while { KPLIB_endgame == 0 } do {
     _spawnsector = "";
     _usable_sectors = [];
     {
-        if ((([markerPos _x, 1000, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) == 0) && (count ([markerPos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+        if ((([markerPos _x, 1000, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) && (count ([markerPos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
             _usable_sectors pushback _x;
         }
 
@@ -43,7 +43,7 @@ while { KPLIB_endgame == 0 } do {
             _civveh = (selectRandom civilian_vehicles) createVehicle _spawnpos;
             _civveh setpos _spawnpos;
             _civveh addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
-            _civveh addEventHandler ["HandleDamage", { private [ "_damage" ]; if (( side (_this select 3) != KPLIB_side_friendly ) && ( side (_this select 3) != KPLIB_side_enemy )) then { _damage = 0 } else { _damage = _this select 2 }; _damage } ];
+            _civveh addEventHandler ["HandleDamage", { private [ "_damage" ]; if (( side (_this select 3) != KPLIB_side_player ) && ( side (_this select 3) != KPLIB_side_enemy )) then { _damage = 0 } else { _damage = _this select 2 }; _damage } ];
             ((units _grp) select 0) moveInDriver _civveh;
             ((units _grp) select 0) disableAI "FSM";
             ((units _grp) select 0) disableAI "AUTOCOMBAT";
@@ -51,7 +51,7 @@ while { KPLIB_endgame == 0 } do {
 
         };
 
-        { _x addEventHandler ["HandleDamage", { private [ "_damage" ]; if (( side (_this select 3) != KPLIB_side_friendly ) && ( side (_this select 3) != KPLIB_side_enemy )) then { _damage = 0 } else { _damage = _this select 2 }; _damage } ]; } foreach units _grp;
+        { _x addEventHandler ["HandleDamage", { private [ "_damage" ]; if (( side (_this select 3) != KPLIB_side_player ) && ( side (_this select 3) != KPLIB_side_enemy )) then { _damage = 0 } else { _damage = _this select 2 }; _damage } ]; } foreach units _grp;
 
         _sectors_patrol = [];
         _patrol_startpos = getpos (leader _grp);
@@ -106,7 +106,7 @@ while { KPLIB_endgame == 0 } do {
             if (count ([getpos leader _grp, 4000] call KPLIB_fnc_getNearbyPlayers) == 0) then {
 
                 if ( !(isNull _civveh) ) then {
-                     if ( { ( alive _x ) && (side group _x == KPLIB_side_friendly ) } count (crew _civveh) == 0 ) then {
+                     if ( { ( alive _x ) && (side group _x == KPLIB_side_player ) } count (crew _civveh) == 0 ) then {
                         deleteVehicle _civveh
                     };
                 };

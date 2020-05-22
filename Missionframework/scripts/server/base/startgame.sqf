@@ -5,7 +5,7 @@ waitUntil {save_is_loaded};
 if (KPLIB_sectors_fob isEqualTo []) then {
 
     // Prebuild FOB (parameter setting) or spawn FOB box
-    if (KPLIB_build_first_fob) then {
+    if (KPLIB_param_firstFobBuilt) then {
         // Only accept spawnpoints which are at least 800m away from any sector
         private _y = "";
         private _validPlaces =  KPLIB_sectors_spawn select {
@@ -19,7 +19,7 @@ if (KPLIB_sectors_fob isEqualTo []) then {
         // Spawn FOB box and wait until the first FOB was built
         private _fobbox = objNull;
         while {KPLIB_sectors_fob isEqualTo []} do {
-            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KPLIB_fob_vehicle) createVehicle (getposATL base_boxspawn);
+            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KPLIB_param_fobVehicle) createVehicle (getposATL base_boxspawn);
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
             [_fobbox, true] call KPLIB_fnc_clearCargo;
@@ -37,7 +37,7 @@ if (KPLIB_sectors_fob isEqualTo []) then {
 
     // Wait a short time before paradropping the start resource crates
     waitUntil {sleep 1; !(KPLIB_sectors_fob isEqualTo [])};
-    if (KPLIB_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
+    if (KPLIB_param_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
         waitUntil {sleep 1; ["KPLIB_Tasks_Tutorial_Fob_02"] call BIS_fnc_taskCompleted};
         sleep 3;
     } else {
