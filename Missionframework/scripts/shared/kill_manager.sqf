@@ -137,11 +137,11 @@ if (isServer) then {
     } else {
         // Enemy vehicle casualty
         if ((toLower (typeof _unit)) in KPLIB_o_allVeh_classes) then {
-            stats_KPLIB_o_armyVehicles_killed = stats_KPLIB_o_armyVehicles_killed + 1;
+            stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 
             // Destroyed by player
             if (isplayer _killer) then {
-                stats_KPLIB_o_armyVehicles_killed_by_players = stats_KPLIB_o_armyVehicles_killed_by_players + 1;
+                stats_opfor_vehicles_killed_by_players = stats_opfor_vehicles_killed_by_players + 1;
             };
         } else {
             // Civilian vehicle casualty
