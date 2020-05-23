@@ -177,17 +177,17 @@ if (!isNil "_saveData") then {
         _stats                                      = _saveData select  4;
         _weights                                    = _saveData select  5;
         _aiGroups                                   = _saveData select  6;
-        KPLIB_sectors_player                              = _saveData select  7;
-        KPLIB_enemyReadiness                            = _saveData select  8;
-        KPLIB_sectors_fob                              = _saveData select  9;
+        KPLIB_sectors_player                        = _saveData select  7;
+        KPLIB_enemyReadiness                        = _saveData select  8;
+        KPLIB_sectors_fob                           = _saveData select  9;
         KPLIB_permissions                           = _saveData select 10;
         KPLIB_vehicle_to_military_base_links        = _saveData select 11;
-        KPLIB_civ_rep                       = _saveData select 12;
-        KPLIB_clearances                    = _saveData select 13;
-        KPLIB_guerilla_strength             = _saveData select 14;
-        KPLIB_logistics                     = _saveData select 15;
-        KPLIB_production                    = _saveData select 16;
-        KPLIB_production_markers            = _saveData select 17;
+        KPLIB_civ_rep                               = _saveData select 12;
+        KPLIB_clearances                            = _saveData select 13;
+        KPLIB_guerilla_strength                     = _saveData select 14;
+        KPLIB_logistics                             = _saveData select 15;
+        KPLIB_production                            = _saveData select 16;
+        KPLIB_production_markers                    = _saveData select 17;
         resources_intel                             = _saveData select 18;
         _allMines                                   = _saveData param [19, []];
         _allCrates                                  = _saveData param [20, []];
@@ -235,23 +235,23 @@ if (!isNil "_saveData") then {
         // --- Compatibility for older save data ---
         ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
-        KPLIB_sectors_player                              = _saveData select  0;
-        KPLIB_sectors_fob                              = _saveData select  1;
+        KPLIB_sectors_player                        = _saveData select  0;
+        KPLIB_sectors_fob                           = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
-        KPLIB_enemyReadiness                            = _saveData select  4;
+        KPLIB_enemyReadiness                        = _saveData select  4;
         _resourceStorages                           = _saveData select  5;
-        KPLIB_production                    = _saveData select  6;
-        KPLIB_logistics                     = _saveData select  7;
+        KPLIB_production                            = _saveData select  6;
+        KPLIB_logistics                             = _saveData select  7;
         _stats                                      = _saveData select  8;
         _weights                                    = _saveData select  9;
         KPLIB_vehicle_to_military_base_links        = _saveData select 10;
         KPLIB_permissions                           = _saveData select 11;
         _aiGroups                                   = _saveData select 12;
         resources_intel                             = _saveData select 13;
-        KPLIB_civ_rep                       = _saveData select 15;
-        KPLIB_production_markers            = _saveData select 16;
-        KPLIB_guerilla_strength             = _saveData select 17;
+        KPLIB_civ_rep                               = _saveData select 15;
+        KPLIB_production_markers                    = _saveData select 16;
+        KPLIB_guerilla_strength                     = _saveData select 17;
 
         stats_opfor_soldiers_killed                 = _stats select  0;
         stats_opfor_killed_by_players               = _stats select  1;
