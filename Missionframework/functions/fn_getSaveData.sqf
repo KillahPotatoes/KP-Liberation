@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-22
+    Last Update: 2020-05-23
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -191,7 +191,7 @@ private _weights = [
     _weights,
     _aiGroups,
     KPLIB_sectors_player,
-    combat_readiness,
+    KPLIB_enemyReadiness,
     KPLIB_sectors_fob,
     KPLIB_permissions,
     KPLIB_vehicle_to_military_base_links,

@@ -67,9 +67,9 @@ if (alive _hvt) then {
     [6] remoteExec ["civinfo_notifications"];
     if (KPLIB_civinfo_debug > 0) then {["civinfo_task.sqf -> Task despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 } else {
-    combat_readiness = round (combat_readiness * 0.6);
+    KPLIB_enemyReadiness = round (KPLIB_enemyReadiness * 0.6);
     if (!isServer) then {
-        publicVariableServer "combat_readiness";
+        publicVariableServer "KPLIB_enemyReadiness";
     };
     [5] remoteExec ["civinfo_notifications"];
     if (KPLIB_civinfo_debug > 0) then {["civinfo_task.sqf -> Task ended with success", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};

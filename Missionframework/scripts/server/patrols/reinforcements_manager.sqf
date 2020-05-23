@@ -1,6 +1,6 @@
 params ["_targetsector"];
 
-if (combat_readiness > 15) then {
+if (KPLIB_enemyReadiness > 15) then {
 
     private _init_units_count = (([markerPos _targetsector, KPLIB_range_sectorCapture, KPLIB_side_enemy] call KPLIB_fnc_getUnitsCount));
 
@@ -29,7 +29,7 @@ if (combat_readiness > 15) then {
                 reinforcements_sector_under_attack = _targetsector;
                 reinforcements_set = true;
                 ["lib_reinforcements",[markertext _targetsector]] remoteExec ["bis_fnc_shownotification"];
-                if ((random combat_readiness) > (20 + (30 / KPLIB_param_aggressivity))) then {
+                if ((random KPLIB_enemyReadiness) > (20 + (30 / KPLIB_param_aggressivity))) then {
                     [_targetsector] spawn send_paratroopers;
                 };
                 stats_reinforcements_called = stats_reinforcements_called + 1;

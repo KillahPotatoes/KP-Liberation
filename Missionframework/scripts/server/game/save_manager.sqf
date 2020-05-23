@@ -70,7 +70,7 @@ armor_weight = 33;
 // Blufor sectors
 KPLIB_sectors_player = [];
 // Enemy combat readiness (0-100)
-combat_readiness = 0;
+KPLIB_enemyReadiness = 0;
 // All FOBs
 KPLIB_sectors_fob = [];
 // Player permissions data
@@ -178,7 +178,7 @@ if (!isNil "_saveData") then {
         _weights                                    = _saveData select  5;
         _aiGroups                                   = _saveData select  6;
         KPLIB_sectors_player                              = _saveData select  7;
-        combat_readiness                            = _saveData select  8;
+        KPLIB_enemyReadiness                            = _saveData select  8;
         KPLIB_sectors_fob                              = _saveData select  9;
         KPLIB_permissions                           = _saveData select 10;
         KPLIB_vehicle_to_military_base_links        = _saveData select 11;
@@ -239,7 +239,7 @@ if (!isNil "_saveData") then {
         KPLIB_sectors_fob                              = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
-        combat_readiness                            = _saveData select  4;
+        KPLIB_enemyReadiness                            = _saveData select  4;
         _resourceStorages                           = _saveData select  5;
         KPLIB_production                    = _saveData select  6;
         KPLIB_logistics                     = _saveData select  7;

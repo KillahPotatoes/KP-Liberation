@@ -1,17 +1,17 @@
 params ["_liberated_sector"];
 
-private _combat_readiness_increase = 0;
+private _KPLIB_enemyReadiness_increase = 0;
 switch (true) do {
-    case (_liberated_sector in KPLIB_sectors_capital):    {_combat_readiness_increase = floor (random 10) * KPLIB_param_difficulty;};
-    case (_liberated_sector in KPLIB_sectors_city):    {_combat_readiness_increase = floor (random 6) * KPLIB_param_difficulty;};
-    case (_liberated_sector in KPLIB_sectors_military):   {_combat_readiness_increase = 5 + (floor (random 11)) * KPLIB_param_difficulty;};
-    case (_liberated_sector in KPLIB_sectors_factory):    {_combat_readiness_increase = 3 + (floor (random 7)) * KPLIB_param_difficulty;};
-    case (_liberated_sector in KPLIB_sectors_tower):      {_combat_readiness_increase = floor (random 4);};
+    case (_liberated_sector in KPLIB_sectors_capital):    {_KPLIB_enemyReadiness_increase = floor (random 10) * KPLIB_param_difficulty;};
+    case (_liberated_sector in KPLIB_sectors_city):    {_KPLIB_enemyReadiness_increase = floor (random 6) * KPLIB_param_difficulty;};
+    case (_liberated_sector in KPLIB_sectors_military):   {_KPLIB_enemyReadiness_increase = 5 + (floor (random 11)) * KPLIB_param_difficulty;};
+    case (_liberated_sector in KPLIB_sectors_factory):    {_KPLIB_enemyReadiness_increase = 3 + (floor (random 7)) * KPLIB_param_difficulty;};
+    case (_liberated_sector in KPLIB_sectors_tower):      {_KPLIB_enemyReadiness_increase = floor (random 4);};
 };
 
-combat_readiness = combat_readiness + _combat_readiness_increase;
-if (combat_readiness > 100.0 && KPLIB_param_difficulty <= 2.0) then {combat_readiness = 100.0};
-stats_readiness_earned = stats_readiness_earned + _combat_readiness_increase;
+KPLIB_enemyReadiness = KPLIB_enemyReadiness + _KPLIB_enemyReadiness_increase;
+if (KPLIB_enemyReadiness > 100.0 && KPLIB_param_difficulty <= 2.0) then {KPLIB_enemyReadiness = 100.0};
+stats_readiness_earned = stats_readiness_earned + _KPLIB_enemyReadiness_increase;
 
 [_liberated_sector, 0] remoteExecCall ["remote_call_sector"];
 KPLIB_sectors_player pushback _liberated_sector; publicVariable "KPLIB_sectors_player";
@@ -62,7 +62,7 @@ if (KPLIB_endgame == 0) then {
     if (
         !(_liberated_sector in KPLIB_sectors_tower)
         && {
-            (random (150 / (KPLIB_param_difficulty * KPLIB_param_aggressivity))) < (combat_readiness - 15)
+            (random (150 / (KPLIB_param_difficulty * KPLIB_param_aggressivity))) < (KPLIB_enemyReadiness - 15)
             || _liberated_sector in KPLIB_sectors_capital
         }
         && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}

@@ -3,9 +3,9 @@ private _sleeptime = 0;
 while {KPLIB_param_aggressivity > 0.9 && KPLIB_endgame == 0} do {
     _sleeptime =  (1800 + (random 1800)) / (([] call KPLIB_fnc_getOpforFactor) * KPLIB_param_aggressivity);
 
-    if (combat_readiness >= 80) then {_sleeptime = _sleeptime * 0.75;};
-    if (combat_readiness >= 90) then {_sleeptime = _sleeptime * 0.75;};
-    if (combat_readiness >= 95) then {_sleeptime = _sleeptime * 0.75;};
+    if (KPLIB_enemyReadiness >= 80) then {_sleeptime = _sleeptime * 0.75;};
+    if (KPLIB_enemyReadiness >= 90) then {_sleeptime = _sleeptime * 0.75;};
+    if (KPLIB_enemyReadiness >= 95) then {_sleeptime = _sleeptime * 0.75;};
 
     sleep _sleeptime;
 
@@ -18,7 +18,7 @@ while {KPLIB_param_aggressivity > 0.9 && KPLIB_endgame == 0} do {
 
     if (
         (count (allPlayers - entities "HeadlessClient_F") >= (6 / KPLIB_param_aggressivity))
-        && {combat_readiness >= (60 - (5 * KPLIB_param_aggressivity))}
+        && {KPLIB_enemyReadiness >= (60 - (5 * KPLIB_param_aggressivity))}
         && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}
         && {diag_fps > 15.0}
     ) then {

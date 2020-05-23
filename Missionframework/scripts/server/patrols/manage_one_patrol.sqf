@@ -2,11 +2,11 @@ params [ "_minimum_readiness", "_is_infantry" ];
 private [ "_headless_client" ];
 
 waitUntil { !isNil "KPLIB_sectors_player" };
-waitUntil { !isNil "combat_readiness" };
+waitUntil { !isNil "KPLIB_enemyReadiness" };
 
 while { KPLIB_endgame == 0 } do {
     waitUntil { sleep 0.3; count KPLIB_sectors_player >= 3; };
-    waitUntil { sleep 0.3; combat_readiness >= (_minimum_readiness / KPLIB_param_difficulty); };
+    waitUntil { sleep 0.3; KPLIB_enemyReadiness >= (_minimum_readiness / KPLIB_param_difficulty); };
 
     sleep (random 30);
 
@@ -35,7 +35,7 @@ while { KPLIB_endgame == 0 } do {
     } else {
 
         private [ "_vehicle_object" ];
-        if ((combat_readiness > 75) && ((random 100) > 85) && !(KPLIB_o_helicopters isEqualTo [])) then {
+        if ((KPLIB_enemyReadiness > 75) && ((random 100) > 85) && !(KPLIB_o_helicopters isEqualTo [])) then {
             _vehicle_object = [_sector_spawn_pos, selectRandom KPLIB_o_helicopters] call KPLIB_fnc_spawnVehicle;
         } else {
             _vehicle_object = [_sector_spawn_pos, [] call KPLIB_fnc_getAdaptiveVehicle] call KPLIB_fnc_spawnVehicle;

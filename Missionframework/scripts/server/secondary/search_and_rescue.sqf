@@ -69,7 +69,7 @@ for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
 (KPLIB_o_transportTruck createVehicle ((getpos _helowreck) getPos [25, random 360])) setDir random 360;
 
 private _vehicle_pool = KPLIB_o_armyVehicles;
-if ( combat_readiness < 50 ) then {
+if ( KPLIB_enemyReadiness < 50 ) then {
     _vehicle_pool = KPLIB_o_armyVehiclesLight;
 };
 

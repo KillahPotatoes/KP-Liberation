@@ -15,7 +15,7 @@ while {true} do {
     KPLIB_plane_count = sync_vars select 6;
     KPLIB_heli_slots = sync_vars select 7;
     KPLIB_plane_slots = sync_vars select 8;
-    combat_readiness = sync_vars select 9;
+    KPLIB_enemyReadiness = sync_vars select 9;
     resources_intel = sync_vars select 10;
     infantry_cap = sync_vars select 11;
     KPLIB_civ_rep = sync_vars select 12;
