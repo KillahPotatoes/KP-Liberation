@@ -2,7 +2,7 @@
     File: fn_createSuppModules.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-21
-    Last Update: 2020-05-22
+    Last Update: 2020-05-23
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -35,7 +35,7 @@ publicVariable "KPLIB_param_supportModule_arty";
 
 // Delay provider init until save is loaded, to catch synchronized units from loaded save
 [] spawn {
-    waitUntil {!isNil "save_is_loaded" && {save_is_loaded}};
+    waitUntil {!isNil "KPLIB_saveLoaded" && {KPLIB_saveLoaded}};
     ["Init provider on server", "SUPPORTMODULES"] call KPLIB_fnc_log;
     [KPLIB_param_supportModule_req] call BIS_fnc_moduleSupportsInitRequester;
     [KPLIB_param_supportModule_arty] call BIS_fnc_moduleSupportsInitProvider;

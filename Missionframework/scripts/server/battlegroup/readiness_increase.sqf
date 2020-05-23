@@ -1,4 +1,4 @@
-waitUntil {!isNil "save_is_loaded" && {save_is_loaded}};
+waitUntil {!isNil "KPLIB_saveLoaded" && {KPLIB_saveLoaded}};
 
 while {true} do {
     if ((count KPLIB_sectors_player) >= ((count KPLIB_sectors_all) * 0.9)) then {

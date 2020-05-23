@@ -1,5 +1,5 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 // Check if there is no FOB yet (new campaign)
 if (KPLIB_sectors_fob isEqualTo []) then {

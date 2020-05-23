@@ -1,6 +1,6 @@
-waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_sectors_fob"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 uiSleep 3;
 

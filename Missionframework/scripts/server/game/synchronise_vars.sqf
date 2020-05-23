@@ -1,6 +1,6 @@
 sync_vars = []; publicVariable "sync_vars";
 
-waitUntil{!isNil "save_is_loaded"};
+waitUntil{!isNil "KPLIB_saveLoaded"};
 waitUntil{!isNil "KPLIB_fob_resources"};
 waitUntil{!isNil "KPLIB_supplies_global"};
 waitUntil{!isNil "KPLIB_ammo_global"};
@@ -18,7 +18,7 @@ waitUntil{!isNil "KPLIB_guerilla_strength"};
 waitUntil{!isNil "infantry_weight"};
 waitUntil{!isNil "armor_weight"};
 waitUntil{!isNil "air_weight"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 private _KPLIB_fob_resources_old = [];
 private _KPLIB_supplies_global_old = -1;

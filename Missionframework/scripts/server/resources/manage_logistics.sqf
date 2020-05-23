@@ -1,6 +1,6 @@
-waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_logistics"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 ["Logistic management started", "LOGISTIC"] call KPLIB_fnc_log;
 

@@ -1,10 +1,10 @@
 sync_eco = []; publicVariable "sync_eco";
 
-waitUntil{!isNil "save_is_loaded"};
+waitUntil{!isNil "KPLIB_saveLoaded"};
 waitUntil{!isNil "KPLIB_production"};
 waitUntil{!isNil "KPLIB_logistics"};
 waitUntil{!isNil "KPLIB_production_markers"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 if (KPLIB_production_markers isEqualTo []) then {
     {

@@ -103,8 +103,8 @@ class FSM
                                         priority = 0.000000;
                                         to="Init_High_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/"_cmdr = [] call KPLIB_fnc_getCommander;"/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded""" \n
-                                         "&& {save_is_loaded}" \n
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""KPLIB_saveLoaded""" \n
+                                         "&& {KPLIB_saveLoaded}" \n
                                          "&& {time > 5}" \n
                                          "&& {alive _cmdr}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;

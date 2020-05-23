@@ -9,8 +9,8 @@ KPLIB_force_redeploy = false;
 
 waitUntil {!isNil "KPLIB_sectors_fob"};
 waitUntil {!isNil "KPLIB_sectors_player"};
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 private _spawn_str = "";
 

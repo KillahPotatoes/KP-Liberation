@@ -1,5 +1,5 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 KPLIB_fob_resources = [];
 KPLIB_supplies_global = 0;

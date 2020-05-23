@@ -1,7 +1,7 @@
-waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_vehicle_to_military_base_links"};
 waitUntil {!isNil "KPLIB_sectors_player"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 private _vehicle_unlock_markers = [];
 private _cfg = configFile >> "cfgVehicles";

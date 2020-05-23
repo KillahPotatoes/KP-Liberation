@@ -94,7 +94,7 @@ KPLIB_production_markers = [];
 // Global Intel resource
 resources_intel = 0;
 // State if the save is fully loaded
-save_is_loaded = false;
+KPLIB_saveLoaded = false;
 
 // Add all buildings for saving and kill manager ignore
 _noKillHandler append KPLIB_b_buildings_classes;
@@ -538,7 +538,7 @@ if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (co
 
 publicVariable "KPLIB_vehicle_to_military_base_links";
 publicVariable "KPLIB_permissions";
-save_is_loaded = true; publicVariable "save_is_loaded";
+KPLIB_saveLoaded = true; publicVariable "KPLIB_saveLoaded";
 
 [format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
 

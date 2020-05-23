@@ -20,8 +20,8 @@
     Refer to: https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_ImportantHints#commas-inside-an-array
 */
 
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 private _placeholder = objNull;
 private _spawnPos = [];
