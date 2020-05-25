@@ -2,7 +2,7 @@
     File: gm_west_win.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-09
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,26 +21,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-FOB_typename = "land_gm_tower_bt_6_fuest_80";                           // This is the main FOB HQ building.
-FOB_box_typename = "gm_ge_army_shelteraceI_command_win";                // This is the FOB as a container.
-FOB_truck_typename = "gm_ge_army_bpz2a0_win";                           // This is the FOB as a vehicle.
-Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "gm_ge_army_u1300l_medic_win_rc";              // This is the mobile respawn (and medical) truck.
-huron_typename = "gm_ge_army_m113a1g_command_win";                      // This is Spartan 01, a multipurpose mobile respawn as a command M113.
-crewman_classname = "gm_ge_army_crew_mp2a1_80_win";                     // This defines the crew for vehicles.
-pilot_classname = "gm_ge_army_crew_mp2a1_80_win";                       // This defines the pilot for helicopters.
-KPLIB_little_bird_classname = "gm_ge_army_u1300l_container_win";        // Little birds replaced with unimog for container transportation.
-KPLIB_boat_classname = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_truck_classname = "gm_ge_army_kat1_454_cargo_win";                // These are the trucks which are used in the logistic convoy system.
-KPLIB_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_recycle_building = "land_gm_euro_shed_03";                        // The building defined to unlock FOB recycling functionality.
-KPLIB_air_vehicle_building = "land_gm_radiotower_01";                   // The building defined to unlock FOB air vehicle functionality.
-KPLIB_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "land_gm_tower_bt_6_fuest_80";                           // This is the main FOB HQ building.
+KPLIB_b_fobBox = "gm_ge_army_shelteraceI_command_win";                // This is the FOB as a container.
+KPLIB_b_fobTruck = "gm_ge_army_bpz2a0_win";                           // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "gm_ge_army_u1300l_medic_win_rc";              // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "gm_ge_army_m113a1g_command_win";                      // This is Potato 01, a multipurpose mobile respawn as a command M113.
+KPLIB_b_crewUnit = "gm_ge_army_crew_mp2a1_80_win";                     // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "gm_ge_army_crew_mp2a1_80_win";                       // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "gm_ge_army_u1300l_container_win";        // Little birds replaced with unimog for container transportation.
+KPLIB_b_addBoat = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "gm_ge_army_kat1_454_cargo_win";                // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
+KPLIB_b_logiStation = "land_gm_euro_shed_03";                        // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "land_gm_radiotower_01";                   // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -50,7 +50,7 @@ KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This 
     The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
-infantry_units = [
+KPLIB_b_infantry = [
     ["gm_ge_army_rifleman_g3a3_parka_80_win",20,0,0],                   // Rifleman
     ["gm_ge_army_antitank_g3a3_pzf44_parka_80_win",30,0,0],             // Rifleman (AT)
     ["gm_ge_army_grenadier_g3a3_parka_80_win",25,0,0],                  // Grenadier
@@ -62,7 +62,7 @@ infantry_units = [
     ["gm_ge_army_crew_mp2a1_80_oli",10,0,0]                             // Crewman
 ];
 
-light_vehicles = [
+KPLIB_b_vehLight = [
     ["gm_ge_army_bicycle_01_oli",10,0,0],                               // Service Bicycle
     ["gm_ge_army_k125",50,0,25],                                        // K125 Bike
     ["gm_ge_army_iltis_cargo_win",100,0,50],                            // Truck 0.5t
@@ -73,7 +73,7 @@ light_vehicles = [
     ["B_Boat_Transport_01_F",100,0,25]                                  // Assault Boat
 ];
 
-heavy_vehicles = [
+KPLIB_b_vehHeavy = [
     ["gm_ge_army_m113a1g_apc_win",200,40,100],                          // M113A3 (MG3)
     ["gm_ge_army_m113a1g_apc_milan_win",200,60,100],                    // M113A3 (MILAN)
     ["gm_ge_army_m113a1g_medic",200,0,100],                             // M113A3 (Medical)
@@ -86,15 +86,15 @@ heavy_vehicles = [
     ["gm_ge_army_Leopard1a3a1_win",550,550,250]                         // Leopard 1A3A1
 ];
 
-air_vehicles = [
+KPLIB_b_vehAir = [
     ["len_uh1d_bw",225,0,125]                                           // BW UH-1D
 ];
 
-static_vehicles = [
+KPLIB_b_vehStatic = [
     ["gm_ge_army_milan_launcher_tripod",50,100,0]                       // Static MILAN
 ];
 
-buildings = [
+KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V4_F",0,0,0],
     ["Land_Cargo_Patrol_V4_F",0,0,0],
     ["Land_Cargo_Tower_V4_F",0,0,0],
@@ -174,17 +174,17 @@ buildings = [
     ["land_gm_sandbags_01_door_02",0,0,0]
 ];
 
-support_vehicles = [
-    [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,100],
-    [FOB_box_typename,200,500,0],
-    [FOB_truck_typename,300,500,100],
-    [KPLIB_small_storage_building,0,0,0],
-    [KPLIB_large_storage_building,0,0,0],
-    [KPLIB_recycle_building,250,0,0],
-    [KPLIB_air_vehicle_building,1000,0,0],
-    [KPLIB_heli_slot_building,250,0,0],
-    [KPLIB_plane_slot_building,500,0,0],
+KPLIB_b_vehSupport = [
+    [KPLIB_b_arsenal,100,200,0],
+    [KPLIB_b_mobileRespawn,200,0,100],
+    [KPLIB_b_fobBox,200,500,0],
+    [KPLIB_b_fobTruck,300,500,100],
+    [KPLIB_b_smallStorage,0,0,0],
+    [KPLIB_b_largeStorage,0,0,0],
+    [KPLIB_b_logiStation,250,0,0],
+    [KPLIB_b_airControl,1000,0,0],
+    [KPLIB_b_slotHeli,250,0,0],
+    [KPLIB_b_slotPlane,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
@@ -206,7 +206,7 @@ support_vehicles = [
 */
 
 // Light infantry squad.
-blufor_squad_inf_light = [
+KPLIB_b_squadLight = [
     "gm_ge_army_squadleader_g3a3_p2a1_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
@@ -220,7 +220,7 @@ blufor_squad_inf_light = [
 ];
 
 // Heavy infantry squad.
-blufor_squad_inf = [
+KPLIB_b_squadInf = [
     "gm_ge_army_squadleader_g3a3_p2a1_parka_80_win",
     "gm_ge_army_antitank_g3a3_pzf44_parka_80_win",
     "gm_ge_army_antitank_g3a3_pzf44_parka_80_win",
@@ -234,7 +234,7 @@ blufor_squad_inf = [
 ];
 
 // AT specialists squad.
-blufor_squad_at = [
+KPLIB_b_squadAT = [
     "gm_ge_army_squadleader_g3a3_p2a1_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
@@ -246,7 +246,7 @@ blufor_squad_at = [
 ];
 
 // AA specialists squad.
-blufor_squad_aa = [
+KPLIB_b_squadAA = [
     "gm_ge_army_squadleader_g3a3_p2a1_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
@@ -258,7 +258,7 @@ blufor_squad_aa = [
 ];
 
 // Force recon squad.
-blufor_squad_recon = [
+KPLIB_b_squadRecon = [
     "gm_ge_army_squadleader_g3a3_p2a1_parka_80_win",
     "gm_ge_army_antitank_g3a3_pzf44_parka_80_win",
     "gm_ge_army_antitank_g3a3_pzf44_parka_80_win",
@@ -273,7 +273,7 @@ blufor_squad_recon = [
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
-blufor_squad_para = [
+KPLIB_b_squadPara = [
     "gm_ge_army_rifleman_g3a3_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
     "gm_ge_army_rifleman_g3a3_parka_80_win",
@@ -287,11 +287,11 @@ blufor_squad_para = [
 ];
 
 /*
-    --- Elite vehicles ---
+    --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [
+KPLIB_b_vehToUnlock = [
     "gm_ge_army_Leopard1a1a2_win",                                      // Leopard 1A1A2
     "gm_ge_army_Leopard1a3a1_win"                                       // Leopard 1A3A1
 ];

@@ -6,9 +6,9 @@ sleep 5;
 _ownership = [ markerpos _sector ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership != KPLIB_side_enemy ) exitWith {};
 
-_squad_type = blufor_squad_inf_light;
+_squad_type = KPLIB_b_squadLight;
 if ( _sector in KPLIB_sectors_military ) then {
-    _squad_type = blufor_squad_inf;
+    _squad_type = KPLIB_b_squadInf;
 };
 
 if ( KPLIB_blufor_defenders ) then {
@@ -59,9 +59,9 @@ if ( KPLIB_endgame == 0 ) then {
                     {
                         detach _x;
                         deleteVehicle _x;
-                    } forEach (attachedObjects ((nearestObjects [((_x select 3) select 0), [KPLIB_small_storage_building], 10]) select 0));
+                    } forEach (attachedObjects ((nearestObjects [((_x select 3) select 0), [KPLIB_b_smallStorage], 10]) select 0));
 
-                    deleteVehicle ((nearestObjects [((_x select 3) select 0), [KPLIB_small_storage_building], 10]) select 0);
+                    deleteVehicle ((nearestObjects [((_x select 3) select 0), [KPLIB_b_smallStorage], 10]) select 0);
                 };
                 KPLIB_production = KPLIB_production - [_x];
             };

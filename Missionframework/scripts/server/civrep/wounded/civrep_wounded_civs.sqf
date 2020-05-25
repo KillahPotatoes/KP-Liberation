@@ -14,7 +14,7 @@ for "_i" from 1 to _count do {
     while {(surfaceIsWater _pos) || ((count ([_pos, 30] call KPLIB_fnc_getNearbyPlayers)) > 0)} do {
         _pos = (markerPos _sector) getPos [(50 + (random 200)), (random 360)];
     };
-    private _civ = [selectRandom civilians, _pos, _grp] call KPLIB_fnc_createManagedUnit;
+    private _civ = [selectRandom KPLIB_c_units, _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _civ setDir (random 360);
     {_civ disableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
     removeAllItems _civ;

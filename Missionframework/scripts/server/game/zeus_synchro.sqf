@@ -1,7 +1,7 @@
-waitUntil {!isNil "huron_typename"};
+waitUntil {!isNil "KPLIB_b_potato01"};
 
 // Classnames of objects which should be added as editable for Zeus
-private _vehicleClassnames = [toLower huron_typename];
+private _vehicleClassnames = [toLower KPLIB_b_potato01];
 {
     _vehicleClassnames append _x;
 } forEach [

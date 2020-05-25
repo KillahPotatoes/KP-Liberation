@@ -39,12 +39,12 @@ KPLIB_objectInits = [
 
     // Add ViV and build action to FOB box/truck
     [
-        [FOB_box_typename, FOB_truck_typename],
+        [KPLIB_b_fobBox, KPLIB_b_fobTruck],
         {
             [_this] spawn {
                 params ["_fobBox"];
                 waitUntil {sleep 0.1; time > 0};
-                if ((typeOf _fobBox) isEqualTo FOB_box_typename) then {
+                if ((typeOf _fobBox) isEqualTo KPLIB_b_fobBox) then {
                     [_fobBox] call KPLIB_fnc_setFobMass;
                     [_fobBox] remoteExecCall ["KPLIB_fnc_setLoadableViV", 0, _fobBox];
                 };
@@ -55,7 +55,7 @@ KPLIB_objectInits = [
 
     // Add FOB building damage handler override and repack action
     [
-        [FOB_typename],
+        [KPLIB_b_fobBuilding],
         {
             _this addEventHandler ["HandleDamage", {0}];
             [_this] spawn {
@@ -68,7 +68,7 @@ KPLIB_objectInits = [
 
     // Add ViV action to Arsenal crate
     [
-        [Arsenal_typename],
+        [KPLIB_b_arsenal],
         {
             [_this] spawn {
                 params ["_arsenal"];
@@ -80,13 +80,13 @@ KPLIB_objectInits = [
 
     // Add storage type variable to built storage areas (only for FOB built/loaded ones)
     [
-        [KPLIB_small_storage_building, KPLIB_large_storage_building],
+        [KPLIB_b_smallStorage, KPLIB_b_largeStorage],
         {_this setVariable ["KPLIB_storage_type", 0, true];}
     ],
 
     // Add ACE variables to corresponding building types
     [
-        [KPLIB_recycle_building],
+        [KPLIB_b_logiStation],
         {_this setVariable ["ace_isRepairFacility", 1, true];}
     ],
     [

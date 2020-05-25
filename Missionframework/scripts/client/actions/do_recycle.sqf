@@ -12,7 +12,7 @@ private _ammoMulti = 0.5;
 private _fuelMulti = 0.5;
 
 if !(
-    ((toLower _type) in KPLIB_b_buildings_classes) ||
+    ((toLower _type) in KPLIB_b_deco_classes) ||
     ((toLower _type) in KPLIB_storageBuildings) ||
     ((toLower _type) in KPLIB_upgradeBuildings) ||
     (_type in KPLIB_ace_crates) ||
@@ -61,7 +61,7 @@ if ((toLower _type) in KPLIB_o_allVeh_classes) then {
         _price_f = round (150 * _fuelMulti);
     };
 } else {
-    private _objectinfo = ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles + buildings) select {_type == (_x select 0)}) select 0;
+    private _objectinfo = ((KPLIB_b_vehLight + KPLIB_b_vehHeavy + KPLIB_b_vehAir + KPLIB_b_vehStatic + KPLIB_b_vehSupport + KPLIB_b_objectsDeco) select {_type == (_x select 0)}) select 0;
     _price_s = round ((_objectinfo select 1) * KPLIB_recycling_percentage * _suppMulti);
     _price_a = round ((_objectinfo select 2) * KPLIB_recycling_percentage * _ammoMulti);
     _price_f = round ((_objectinfo select 3) * KPLIB_recycling_percentage * _fuelMulti);
@@ -80,17 +80,17 @@ waitUntil {sleep 0.1; !dialog || !alive player || dorecycle != 0};
 if (dialog) then {closeDialog 0};
 
 if (dorecycle == 1 && !(isnull _vehToRecycle) && alive _vehToRecycle) then {
-    if (!(KPLIB_recycle_building_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
+    if (!(KPLIB_b_logiStation_near) && ((_price_s + _price_a + _price_f) > 0)) exitWith {hint localize "STR_NORECBUILDING_ERROR";};
 
     private _storage_areas = (([] call KPLIB_fnc_getNearestFob) nearobjects (KPLIB_fob_range * 1.2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
     private _crateSum = (ceil (_price_s / 100)) + (ceil (_price_a / 100)) + (ceil (_price_f / 100));
     private _spaceSum = 0;
 
     {
-        if (typeOf _x == KPLIB_large_storage_building) then {
+        if (typeOf _x == KPLIB_b_largeStorage) then {
             _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
         };
-        if (typeOf _x == KPLIB_small_storage_building) then {
+        if (typeOf _x == KPLIB_b_smallStorage) then {
             _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
         };
     } forEach _storage_areas;

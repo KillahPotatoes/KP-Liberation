@@ -22,7 +22,7 @@ switch (_fac) do {
             stats_ammo_spent = stats_ammo_spent + _price_a;
             stats_fuel_spent = stats_fuel_spent + _price_f;
 
-            private _storage = nearestObjects [(markerPos (_x select 1)), [KPLIB_small_storage_building], 100];
+            private _storage = nearestObjects [(markerPos (_x select 1)), [KPLIB_b_smallStorage], 100];
             _storage = _storage select {(_x getVariable ["KPLIB_storage_type",-1]) == 1};
             if ((count _storage) == 0) exitWith {};
             _storage = (_storage select 0);
@@ -33,7 +33,7 @@ switch (_fac) do {
                 private _crateValue = _x getVariable ["KPLIB_crate_value",0];
 
                 switch ((typeOf _x)) do {
-                    case KPLIB_supply_crate: {
+                    case KPLIB_b_crateSupply: {
                         if (_price_s > 0) then {
                             if (_crateValue > _price_s) then {
                                 _crateValue = _crateValue - _price_s;
@@ -46,7 +46,7 @@ switch (_fac) do {
                             };
                         };
                     };
-                    case KPLIB_ammo_crate: {
+                    case KPLIB_b_crateAmmo: {
                         if (_price_a > 0) then {
                             if (_crateValue > _price_a) then {
                                 _crateValue = _crateValue - _price_a;
@@ -59,7 +59,7 @@ switch (_fac) do {
                             };
                         };
                     };
-                    case KPLIB_fuel_crate: {
+                    case KPLIB_b_crateFuel: {
                         if (_price_f > 0) then {
                             if (_crateValue > _price_f) then {
                                 _crateValue = _crateValue - _price_f;

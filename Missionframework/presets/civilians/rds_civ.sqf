@@ -2,7 +2,7 @@
     File: rds_civ.sqf
     Author: PSYKO-nz - https://github.com/PSYKO-nz
     Date: 2018-02-02
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -16,7 +16,7 @@
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "RDS_Assistant",
     "RDS_Citizen_Random",
     "RDS_Citizen2",
@@ -58,7 +58,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "RDS_Van_01_fuel_F",
     "RDS_Gaz24_Civ_03",
     "RDS_Gaz24_Civ_01",

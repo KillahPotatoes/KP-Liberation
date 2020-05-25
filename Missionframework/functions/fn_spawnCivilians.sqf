@@ -2,7 +2,7 @@
     File: fn_spawnCivilians.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-17
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -40,7 +40,7 @@ for "_i" from 1 to _amount do {
 
     _civs pushBack (
         [
-            selectRandom civilians,
+            selectRandom KPLIB_c_units,
             [(((_sPos select 0) + (75 * _spread)) - (random (150 * _spread))), (((_sPos select 1) + (75 * _spread)) - (random (150 * _spread))), 0],
             _grp
         ] call KPLIB_fnc_createManagedUnit

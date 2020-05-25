@@ -2,7 +2,7 @@
     File: cup_usmc_desert.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-15
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,26 +25,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-FOB_typename = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-FOB_truck_typename = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
-Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "CUP_B_HMMWV_Ambulance_USA";                   // This is the mobile respawn (and medical) truck.
-huron_typename = "CUP_B_CH53E_USMC";                                    // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-crewman_classname = "CUP_B_USMC_Crewman_FROG_DES";                      // This defines the crew for vehicles.
-pilot_classname = "CUP_B_USMC_Pilot";                                   // This defines the pilot for helicopters.
-KPLIB_little_bird_classname = "CUP_B_UH1Y_UNA_USMC";                    // These are the little birds which spawn on the Freedom or at Chimera base.
-KPLIB_boat_classname = "CUP_B_Zodiac_USMC";                             // These are the boats which spawn at the stern of the Freedom.
-KPLIB_truck_classname = "CUP_B_MTVR_USA";                               // These are the trucks which are used in the logistic convoy system.
-KPLIB_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_recycle_building = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_air_vehicle_building = "B_Radar_System_01_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
+KPLIB_b_fobTruck = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_B_HMMWV_Ambulance_USA";                   // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_B_CH53E_USMC";                                    // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_B_USMC_Crewman_FROG_DES";                      // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_B_USMC_Pilot";                                   // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "CUP_B_UH1Y_UNA_USMC";                    // These are the additional helicopters which spawn on the Freedom or at Chimera base.
+KPLIB_b_addBoat = "CUP_B_Zodiac_USMC";                             // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_B_MTVR_USA";                               // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "B_Radar_System_01_F";                     // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -54,7 +54,7 @@ KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This 
     The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
-infantry_units = [
+KPLIB_b_infantry = [
     ["CUP_B_USMC_Soldier_FROG_DES",20,0,0],                             // Rifleman
     ["CUP_B_USMC_Soldier_LAT_FROG_DES",30,0,0],                         // Rifleman (M136)
     ["CUP_B_USMC_Soldier_GL_FROG_DES",25,0,0],                          // Grenadier
@@ -78,7 +78,7 @@ infantry_units = [
     ["CUP_B_USMC_Pilot",10,0,0]                                         // Pilot
 ];
 
-light_vehicles = [
+KPLIB_b_vehLight = [
     ["CUP_B_M1030_USMC",50,0,25],                                       // M1030
     ["CUP_B_HMMWV_Unarmed_USA",75,0,50],                                // HMMWV (Unarmed)
     ["CUP_B_HMMWV_M2_USA",75,60,50],                                    // HMMWV M2
@@ -93,7 +93,7 @@ light_vehicles = [
     ["CUP_B_RHIB2Turret_USMC",250,200,100]                              // RHIB (Mk19)
 ];
 
-heavy_vehicles = [
+KPLIB_b_vehHeavy = [
     ["CUP_B_LAV25_desert_USMC",200,175,125],                            // LAV-25A1 (Desert)
     ["CUP_B_LAV25M240_desert_USMC",200,200,125],                        // LAV-25A1 (M240) (Desert)
     ["CUP_B_LAV25_HQ_desert_USMC",200,50,125],                          // LAV-C2 (Desert)
@@ -106,7 +106,7 @@ heavy_vehicles = [
     ["CUP_B_M270_DPICM_USMC",800,1750,400]                              // M270 MLRS (DPICM)
 ];
 
-air_vehicles = [
+KPLIB_b_vehAir = [
     ["CUP_B_UH1Y_MEV_USMC",200,0,100],                                  // UH-1Y Venom (MEDVAC)
     ["CUP_B_UH1Y_Gunship_Dynamic_USMC",200,100,100],                    // UH-1Y Venom (Gunship)
     ["CUP_B_MH60S_FFV_USMC",250,25,200],                                // MH-60S Seahawk (FFV)
@@ -134,7 +134,7 @@ air_vehicles = [
     ["CUP_B_MV22_VIV_USMC",750,0,500]                                   // MV-22B Osprey (VIV)
 ];
 
-static_vehicles = [
+KPLIB_b_vehStatic = [
     ["CUP_B_M2StaticMG_USMC",25,40,0],                                  // M2 Machine Gun
     ["CUP_B_M2StaticMG_MiniTripod_USMC",25,40,0],                       // M2 Minitripod
     ["CUP_B_TOW_TriPod_USMC",50,100,0],                                 // TOW Tripod
@@ -146,7 +146,7 @@ static_vehicles = [
     ["CUP_B_M119_USMC",100,200,0]                                       // M119
 ];
 
-buildings = [
+KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V1_F",0,0,0],
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
@@ -223,17 +223,17 @@ buildings = [
     ["Land_ClutterCutter_large_F",0,0,0]
 ];
 
-support_vehicles = [
-    [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,100],
-    [FOB_box_typename,300,500,0],
-    [FOB_truck_typename,300,500,75],
-    [KPLIB_small_storage_building,0,0,0],
-    [KPLIB_large_storage_building,0,0,0],
-    [KPLIB_recycle_building,250,0,0],
-    [KPLIB_air_vehicle_building,1000,0,0],
-    [KPLIB_heli_slot_building,250,0,0],
-    [KPLIB_plane_slot_building,500,0,0],
+KPLIB_b_vehSupport = [
+    [KPLIB_b_arsenal,100,200,0],
+    [KPLIB_b_mobileRespawn,200,0,100],
+    [KPLIB_b_fobBox,300,500,0],
+    [KPLIB_b_fobTruck,300,500,75],
+    [KPLIB_b_smallStorage,0,0,0],
+    [KPLIB_b_largeStorage,0,0,0],
+    [KPLIB_b_logiStation,250,0,0],
+    [KPLIB_b_airControl,1000,0,0],
+    [KPLIB_b_slotHeli,250,0,0],
+    [KPLIB_b_slotPlane,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
@@ -270,7 +270,7 @@ support_vehicles = [
 */
 
 // Light infantry squad.
-blufor_squad_inf_light = [
+KPLIB_b_squadLight = [
     "CUP_B_USMC_Soldier_SL_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
@@ -284,7 +284,7 @@ blufor_squad_inf_light = [
 ];
 
 // Heavy infantry squad.
-blufor_squad_inf = [
+KPLIB_b_squadInf = [
     "CUP_B_USMC_Soldier_SL_FROG_DES",
     "CUP_B_USMC_Soldier_LAT_FROG_DES",
     "CUP_B_USMC_Soldier_LAT_FROG_DES",
@@ -298,7 +298,7 @@ blufor_squad_inf = [
 ];
 
 // AT specialists squad.
-blufor_squad_at = [
+KPLIB_b_squadAT = [
     "CUP_B_USMC_Soldier_SL_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
@@ -310,7 +310,7 @@ blufor_squad_at = [
 ];
 
 // AA specialists squad.
-blufor_squad_aa = [
+KPLIB_b_squadAA = [
     "CUP_B_USMC_Soldier_SL_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
@@ -322,7 +322,7 @@ blufor_squad_aa = [
 ];
 
 // Force recon squad.
-blufor_squad_recon = [
+KPLIB_b_squadRecon = [
     "CUP_B_FR_Soldier_TL_DES",
     "CUP_B_FR_Soldier_Assault_DES",
     "CUP_B_FR_Soldier_Assault_DES",
@@ -336,7 +336,7 @@ blufor_squad_recon = [
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
-blufor_squad_para = [
+KPLIB_b_squadPara = [
     "CUP_B_USMC_Soldier_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
     "CUP_B_USMC_Soldier_FROG_DES",
@@ -350,11 +350,11 @@ blufor_squad_para = [
 ];
 
 /*
-    --- Elite vehicles ---
+    --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [
+KPLIB_b_vehToUnlock = [
     "CUP_B_F35B_USMC",                                                  // F-35B Lightning II
     "CUP_WV_B_CRAM",                                                    // C-RAM
     "CUP_WV_B_SS_Launcher",                                             // Mk-29 GMLS

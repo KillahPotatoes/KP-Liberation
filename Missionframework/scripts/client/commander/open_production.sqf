@@ -64,7 +64,7 @@ while {dialog && (alive player)} do {
     ctrlSetText [75804, _sectorType];
 
     if ((count (_selectedSector select 3)) > 0) then {
-        _storage = ((nearestObjects [((_selectedSector select 3) select 0), [KPLIB_small_storage_building], 25]) select 0);
+        _storage = ((nearestObjects [((_selectedSector select 3) select 0), [KPLIB_b_smallStorage], 25]) select 0);
         _crateCount = count (attachedObjects _storage);
         _crateMax = count (KPLIB_small_storage_positions);
 

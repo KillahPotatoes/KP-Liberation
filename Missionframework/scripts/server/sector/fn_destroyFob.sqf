@@ -2,7 +2,7 @@
     File: fn_destroyFob.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-28
-    Last Update: 2020-05-10
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -20,8 +20,8 @@ params [
     ["_fobPos", [], [[]]]
 ];
 
-private _buildings = [toLower FOB_typename];
-_buildings append KPLIB_b_buildings_classes;
+private _buildings = [toLower KPLIB_b_fobBuilding];
+_buildings append KPLIB_b_deco_classes;
 
 {
     if ((toLower (typeOf _x)) in _buildings) then {

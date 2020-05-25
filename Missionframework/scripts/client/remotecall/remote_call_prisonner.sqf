@@ -17,7 +17,7 @@ _unit enableAI "MOVE";
 sleep 2;
 [_unit, ""] remoteExecCall ["switchMove"];
 
-if ( typeof _unit == pilot_classname ) exitWith {};
+if ( typeof _unit == KPLIB_b_heliPilotUnit ) exitWith {};
 
 waitUntil { sleep 5;
 

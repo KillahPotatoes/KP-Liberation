@@ -2,7 +2,7 @@
     File: cup_cherno.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-19
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -18,7 +18,7 @@
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "CUP_C_C_Assistant_01",
     "CUP_C_C_Citizen_02",
     "CUP_C_C_Citizen_01",
@@ -60,7 +60,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "CUP_C_Skoda_Blue_CIV",
     "CUP_C_Skoda_Green_CIV",
     "CUP_C_Skoda_Red_CIV",

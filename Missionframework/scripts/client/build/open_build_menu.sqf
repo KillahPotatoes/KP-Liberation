@@ -52,17 +52,17 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 _entrytext = getText (_cfg >> _classnamevar >> "displayName");
 
                 switch (_classnamevar) do {
-                    case FOB_box_typename: {_entrytext = localize "STR_FOBBOX";};
-                    case Arsenal_typename: {if (KPLIB_mobilearsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
-                    case Respawn_truck_typename: {if (KPLIB_mobilerespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
-                    case FOB_truck_typename: {_entrytext = localize "STR_FOBTRUCK";};
+                    case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
+                    case KPLIB_b_arsenal: {if (KPLIB_mobilearsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
+                    case KPLIB_b_mobileRespawn: {if (KPLIB_mobilerespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
+                    case KPLIB_b_fobTruck: {_entrytext = localize "STR_FOBTRUCK";};
                     case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
-                    case KPLIB_small_storage_building: {_entrytext = localize "STR_SMALL_STORAGE";};
-                    case KPLIB_large_storage_building: {_entrytext = localize "STR_LARGE_STORAGE";};
-                    case KPLIB_recycle_building: {_entrytext = localize "STR_RECYCLE_BUILDING";};
-                    case KPLIB_air_vehicle_building: {_entrytext = localize "STR_HELI_BUILDING";};
-                    case KPLIB_heli_slot_building: {_entrytext = localize "STR_HELI_SLOT";};
-                    case KPLIB_plane_slot_building: {_entrytext = localize "STR_PLANE_SLOT";};
+                    case KPLIB_b_smallStorage: {_entrytext = localize "STR_SMALL_STORAGE";};
+                    case KPLIB_b_largeStorage: {_entrytext = localize "STR_LARGE_STORAGE";};
+                    case KPLIB_b_logiStation: {_entrytext = localize "STR_RECYCLE_BUILDING";};
+                    case KPLIB_b_airControl: {_entrytext = localize "STR_HELI_BUILDING";};
+                    case KPLIB_b_slotHeli: {_entrytext = localize "STR_HELI_SLOT";};
+                    case KPLIB_b_slotPlane: {_entrytext = localize "STR_PLANE_SLOT";};
                     default {};
                 };
 
@@ -74,8 +74,8 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 };
                 lnbSetPicture  [110, [((lnbSize 110) select 0) - 1, 0],_icon];
             } else {
-                if ( ((lnbSize  110) select 0) <= count squads_names ) then {
-                    _squadname = squads_names select ((lnbSize  110) select 0);
+                if ( ((lnbSize  110) select 0) <= count KPLIB_b_squadNames ) then {
+                    _squadname = KPLIB_b_squadNames select ((lnbSize  110) select 0);
                 } else {
                     _squadname = "";
                 };
@@ -128,14 +128,14 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
         ) then {
             if ((toLower (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
-                if (KPLIB_air_vehicle_building_near &&
+                if (KPLIB_b_airControl_near &&
                     ((((_build_item select 0) isKindOf "Helicopter") && (KPLIB_heli_count < KPLIB_heli_slots)) ||
                     (((_build_item select 0) isKindOf "Plane") && (KPLIB_plane_count < KPLIB_plane_slots)))
                 ) then {
                     _affordable = true;
                 };
             } else {
-                if (!((toLower (_build_item select 0)) in KPLIB_airSlots) || (((toLower (_build_item select 0)) in KPLIB_airSlots) && KPLIB_air_vehicle_building_near)) then {
+                if (!((toLower (_build_item select 0)) in KPLIB_airSlots) || (((toLower (_build_item select 0)) in KPLIB_airSlots) && KPLIB_b_airControl_near)) then {
                     _affordable = true;
                 };
             };
