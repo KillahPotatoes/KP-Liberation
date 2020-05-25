@@ -2,7 +2,7 @@
     File: gm_east.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-06
-    Last Update: 2020-05-15
+    Last Update: 2020-05-23
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -65,7 +65,9 @@ KPLIB_o_militiaInfantry = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 KPLIB_o_militiaVehicles = [
-    "gm_gc_army_brdm2um"                                                // SPW40-P2UM
+    "gm_gc_army_brdm2um",                                               // SPW40-P2UM
+    "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2"                                                  // SPW-40P2
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
@@ -85,14 +87,16 @@ KPLIB_o_armyVehicles = [
 KPLIB_o_armyVehiclesLight = [
     "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2",                                                 // SPW-40P2
     "gm_gc_army_btr60pa",                                               // SPW-60PA
+    "gm_gc_army_btr60pa",                                               // SPW-60PA
+    "gm_gc_army_btr60pb"                                                // SPW-60PB
     "gm_gc_army_btr60pb"                                                // SPW-60PB
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 KPLIB_o_battleGrpVehicles = [
     "gm_gc_army_ural4320_cargo",                                        // Truck gel. 5 Transport
-    "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pb",                                               // SPW-60PB
