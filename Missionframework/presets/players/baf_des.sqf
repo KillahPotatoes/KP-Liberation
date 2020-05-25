@@ -2,7 +2,7 @@
     File: baf_des.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-12-09
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -26,26 +26,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-FOB_typename = "Land_Cargo_HQ_V1_F";                                        // This is the main FOB HQ building.
-FOB_box_typename = "B_Slingload_01_Cargo_F";                                // This is the FOB as a container.
-FOB_truck_typename = "B_Truck_01_box_F";                                    // This is the FOB as a vehicle.
-Arsenal_typename = "B_supplyCrate_F";                                       // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM";         // This is the mobile respawn (and medical) truck.
-huron_typename = "UK3CB_BAF_Merlin_HC3_18_DDPM";                            // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-crewman_classname = "UK3CB_BAF_Crewman_DDPM";                               // This defines the crew for vehicles.
-pilot_classname = "UK3CB_BAF_HeliPilot_Army_DDPM";                          // This defines the pilot for helicopters.
-KPLIB_little_bird_classname = "UK3CB_BAF_Wildcat_AH1_TRN_8A_DDPM";          // These are the little birds which spawn on the Freedom or at Chimera base.
-KPLIB_boat_classname = "B_Boat_Transport_01_F";                             // These are the boats which spawn at the stern of the Freedom.
-KPLIB_truck_classname = "rhsusf_M977A4_BKIT_usarmy_d";                      // These are the trucks which are used in the logistic convoy system.
-KPLIB_small_storage_building = "ContainmentArea_02_sand_F";                 // A small storage area for resources.
-KPLIB_large_storage_building = "ContainmentArea_01_sand_F";                 // A large storage area for resources.
-KPLIB_recycle_building = "Land_RepairDepot_01_tan_F";                       // The building defined to unlock FOB recycling functionality.
-KPLIB_air_vehicle_building = "B_Radar_System_01_F";                         // The building defined to unlock FOB air vehicle functionality.
-KPLIB_heli_slot_building = "Land_HelipadSquare_F";                          // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                         // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_supply_crate = "CargoNet_01_box_F";                                   // This defines the supply crates, as in resources.
-KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                                  // This defines the ammunition crates.
-KPLIB_fuel_crate = "CargoNet_01_barrels_F";                                 // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V1_F";                                        // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                                // This is the FOB as a container.
+KPLIB_b_fobTruck = "B_Truck_01_box_F";                                    // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                       // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "UK3CB_BAF_LandRover_Amb_FFR_Sand_A_DDPM";         // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "UK3CB_BAF_Merlin_HC3_18_DDPM";                            // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "UK3CB_BAF_Crewman_DDPM";                               // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "UK3CB_BAF_HeliPilot_Army_DDPM";                          // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "UK3CB_BAF_Wildcat_AH1_TRN_8A_DDPM";          // These are the additional helicopters which spawn on the Freedom or at Chimera base.
+KPLIB_b_addBoat = "B_Boat_Transport_01_F";                             // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "rhsusf_M977A4_BKIT_usarmy_d";                      // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                 // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                 // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                       // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "B_Radar_System_01_F";                         // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                          // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                         // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                                   // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                                  // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                                 // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -55,7 +55,7 @@ KPLIB_fuel_crate = "CargoNet_01_barrels_F";                                 // T
     The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
-infantry_units = [
+KPLIB_b_infantry = [
     ["UK3CB_BAF_Pointman_DDPM",15,0,0],                                     // Rifleman (Light)
     ["UK3CB_BAF_Rifleman_DDPM",20,0,0],                                     // Rifleman
     ["UK3CB_BAF_LAT_ILAW_DDPM",30,0,0],                                     // Rifleman (AT)
@@ -85,7 +85,7 @@ infantry_units = [
     ["UK3CB_BAF_Pilot_Army",10,0,0]                                         // Pilot
 ];
 
-light_vehicles = [
+KPLIB_b_vehLight = [
     ["B_Quadbike_01_F",50,0,25],                                            // Quad Bike
     ["B_LSV_01_unarmed_F",75,0,50],                                         // Prowler
     ["B_LSV_01_armed_F",75,40,50],                                          // Prowler (HMG)
@@ -114,7 +114,7 @@ light_vehicles = [
     ["B_SDV_01_F",150,0,50]                                                 // SDV
 ];
 
-heavy_vehicles = [
+KPLIB_b_vehHeavy = [
     ["RHS_M2A2_BUSKI",300,200,150],                                         // M2A2ODS (Busk I)
     ["RHS_M2A3_BUSKIII",300,250,175],                                       // M2A3 (Busk III)
     ["RHS_M6",300,250,175],                                                 // M6A2
@@ -123,7 +123,7 @@ heavy_vehicles = [
     ["rhsusf_m109d_usarmy",600,1250,300]                                    // M109A6
 ];
 
-air_vehicles = [
+KPLIB_b_vehAir = [
     ["B_UAV_01_F",75,0,25],                                                 // AR-2 Darter
     ["B_UAV_06_F",80,0,30],                                                 // AL-6 Pelican (Cargo)
     ["UK3CB_BAF_Wildcat_AH1_TRN_8A_DDPM",225,0,125],                        // Wildcat AH1 8 Transport (Unarmed)
@@ -154,7 +154,7 @@ air_vehicles = [
     ["B_T_VTOL_01_vehicle_F",750,0,500]                                     // V-44 X Blackfish (Vehicle)
 ];
 
-static_vehicles = [
+KPLIB_b_vehStatic = [
     ["UK3CB_BAF_Static_L7A2_Deployed_Low_DDPM",25,25,0],                    // L7A2 LMG (Low)
     ["UK3CB_BAF_Static_L7A2_Deployed_Mid_DDPM",25,25,0],                    // L7A2 LMG (Mid)
     ["UK3CB_BAF_Static_L7A2_Deployed_High_DDPM",25,25,0],                   // L7A2 LMG (High)
@@ -170,7 +170,7 @@ static_vehicles = [
     ["RHS_M119_D",100,200,0]                                                // M119A2
 ];
 
-buildings = [
+KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V3_F",0,0,0],
     ["Land_Cargo_Patrol_V3_F",0,0,0],
     ["Land_Cargo_Tower_V3_F",0,0,0],
@@ -249,17 +249,17 @@ buildings = [
     ["Land_ClutterCutter_large_F",0,0,0]
 ];
 
-support_vehicles = [
-    [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,75],
-    [FOB_box_typename,300,500,0],
-    [FOB_truck_typename,300,500,75],
-    [KPLIB_small_storage_building,0,0,0],
-    [KPLIB_large_storage_building,0,0,0],
-    [KPLIB_recycle_building,250,0,0],
-    [KPLIB_air_vehicle_building,1000,0,0],
-    [KPLIB_heli_slot_building,250,0,0],
-    [KPLIB_plane_slot_building,500,0,0],
+KPLIB_b_vehSupport = [
+    [KPLIB_b_arsenal,100,200,0],
+    [KPLIB_b_mobileRespawn,200,0,75],
+    [KPLIB_b_fobBox,300,500,0],
+    [KPLIB_b_fobTruck,300,500,75],
+    [KPLIB_b_smallStorage,0,0,0],
+    [KPLIB_b_largeStorage,0,0,0],
+    [KPLIB_b_logiStation,250,0,0],
+    [KPLIB_b_airControl,1000,0,0],
+    [KPLIB_b_slotHeli,250,0,0],
+    [KPLIB_b_slotPlane,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
@@ -285,7 +285,7 @@ support_vehicles = [
 */
 
 // Light infantry squad.
-blufor_squad_inf_light = [
+KPLIB_b_squadLight = [
     "UK3CB_BAF_FT_DDPM",
     "UK3CB_BAF_Pointman_DDPM",
     "UK3CB_BAF_Pointman_DDPM",
@@ -299,7 +299,7 @@ blufor_squad_inf_light = [
 ];
 
 // Heavy infantry squad.
-blufor_squad_inf = [
+KPLIB_b_squadInf = [
     "UK3CB_BAF_FT_DDPM",
     "UK3CB_BAF_LAT_ILAW_DDPM",
     "UK3CB_BAF_LAT_ILAW_DDPM",
@@ -313,7 +313,7 @@ blufor_squad_inf = [
 ];
 
 // AT specialists squad.
-blufor_squad_at = [
+KPLIB_b_squadAT = [
     "UK3CB_BAF_FT_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
@@ -325,7 +325,7 @@ blufor_squad_at = [
 ];
 
 // AA specialists squad.
-blufor_squad_aa = [
+KPLIB_b_squadAA = [
     "UK3CB_BAF_FT_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
@@ -337,7 +337,7 @@ blufor_squad_aa = [
 ];
 
 // Force recon squad.
-blufor_squad_recon = [
+KPLIB_b_squadRecon = [
     "UK3CB_BAF_SC_DDPM_REC",
     "UK3CB_BAF_Pointman_DDPM_REC",
     "UK3CB_BAF_Pointman_DDPM_REC",
@@ -351,7 +351,7 @@ blufor_squad_recon = [
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
-blufor_squad_para = [
+KPLIB_b_squadPara = [
     "UK3CB_BAF_Rifleman_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
     "UK3CB_BAF_Rifleman_DDPM",
@@ -365,11 +365,11 @@ blufor_squad_para = [
 ];
 
 /*
-    --- Elite vehicles ---
+    --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [
+KPLIB_b_vehToUnlock = [
     "rhsusf_mkvsoc",                                                        // Mk.V SOCOM
     "RHS_M2A3_BUSKIII",                                                     // M2A3 (Busk III)
     "RHS_M6",                                                               // M6A2

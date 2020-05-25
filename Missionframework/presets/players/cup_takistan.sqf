@@ -2,7 +2,7 @@
     File: cup_takistan.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2020-04-25
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,26 +23,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-FOB_typename = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-FOB_truck_typename = "CUP_O_BMP_HQ_TKA";                                // This is the FOB as a vehicle.
-Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "CUP_O_M113_Med_TKA";                          // This is the mobile respawn (and medical) truck.
-huron_typename = "CUP_O_MI6A_TKA";                                      // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-crewman_classname = "CUP_O_TK_Crew";                                    // This defines the crew for vehicles.
-pilot_classname = "CUP_O_TK_Pilot";                                     // This defines the pilot for helicopters.
-KPLIB_little_bird_classname = "CUP_O_UH1H_slick_TKA";                   // These are the little birds which spawn on the Freedom or at Chimera bas
-KPLIB_boat_classname = "O_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_truck_classname = "CUP_O_Ural_Open_TKA";                          // These are the trucks which are used in the logistic convoy system.
-KPLIB_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_recycle_building = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_air_vehicle_building = "O_Radar_System_02_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
+KPLIB_b_fobTruck = "CUP_O_BMP_HQ_TKA";                                // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_O_M113_Med_TKA";                          // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_O_MI6A_TKA";                                      // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_O_TK_Crew";                                    // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_O_TK_Pilot";                                     // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "CUP_O_UH1H_slick_TKA";                   // These are the additional helicopters which spawn on the Freedom or at Chimera bas
+KPLIB_b_addBoat = "O_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_O_Ural_Open_TKA";                          // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "O_Radar_System_02_F";                     // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -52,7 +52,7 @@ KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This 
     The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
-infantry_units = [
+KPLIB_b_infantry = [
     ["CUP_O_TK_Soldier",15,0,0],                                        // Rifleman
     ["CUP_O_TK_Soldier_Backpack",20,0,0],                               // Rifleman (backpack)
     ["CUP_O_TK_Soldier_AT",30,0,0],                                     // Rifleman (RPG-7)
@@ -75,7 +75,7 @@ infantry_units = [
     ["CUP_O_TK_Pilot",10,0,0]                                           // Pilot
 ];
 
-light_vehicles = [
+KPLIB_b_vehLight = [
     ["CUP_O_Hilux_unarmed_TK_INS",50,0,50],                             // Hilux
     ["CUP_O_Hilux_M2_TK_INS",50,60,50],                                 // Hilux (M2)
     ["CUP_O_Hilux_DSHKM_TK_INS",50,60,50],                              // Hilux (DShKM)
@@ -99,7 +99,7 @@ light_vehicles = [
     ["CUP_O_Ural_TKA",150,0,75]                                         // Ural
 ];
 
-heavy_vehicles = [
+KPLIB_b_vehHeavy = [
     ["CUP_O_Hilux_armored_zu23_TK_INS",100,150,75],                     // Hilux Armored (ZU-23-2)
     ["CUP_O_Hilux_armored_BTR60_TK_INS",100,200,75],                    // Hilux Armored (BTR-60)
     ["CUP_O_Hilux_armored_BMP1_TK_INS",100,350,75],                     // Hilux Armored (BMP-1)
@@ -122,7 +122,7 @@ heavy_vehicles = [
     ["CUP_O_T72_TKA",700,500,300]                                       // T-72
 ];
 
-air_vehicles = [
+KPLIB_b_vehAir = [
     ["CUP_O_UH1H_armed_TKA",400,250,250],                               // UH-1H (Armed)
     ["CUP_O_UH1H_gunship_TKA",500,350,250],                             // UH-1H (Gunship)
     ["CUP_O_Mi17_TK",500,350,300],                                      // Mi-8MT
@@ -133,7 +133,7 @@ air_vehicles = [
     ["CUP_O_Su25_Dyn_TKA",1000,850,400]                                 // Su-25 Frogfoot
 ];
 
-static_vehicles = [
+KPLIB_b_vehStatic = [
     ["CUP_O_KORD_high_TK",25,40,0],                                     // KORD
     ["CUP_O_KORD_TK",25,40,0],                                          // KORD Minitripod
     ["CUP_O_AGS_TK",25,60,0],                                           // AGS-30
@@ -144,7 +144,7 @@ static_vehicles = [
     ["CUP_O_D30_TK",200,250,0]                                          // D-30
 ];
 
-buildings = [
+KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V1_F",0,0,0],
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
@@ -220,17 +220,17 @@ buildings = [
     ["Land_ClutterCutter_large_F",0,0,0]
 ];
 
-support_vehicles = [
-    [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,100],
-    [FOB_box_typename,300,500,0],
-    [FOB_truck_typename,300,500,75],
-    [KPLIB_small_storage_building,0,0,0],
-    [KPLIB_large_storage_building,0,0,0],
-    [KPLIB_recycle_building,250,0,0],
-    [KPLIB_air_vehicle_building,1000,0,0],
-    [KPLIB_heli_slot_building,250,0,0],
-    [KPLIB_plane_slot_building,500,0,0],
+KPLIB_b_vehSupport = [
+    [KPLIB_b_arsenal,100,200,0],
+    [KPLIB_b_mobileRespawn,200,0,100],
+    [KPLIB_b_fobBox,300,500,0],
+    [KPLIB_b_fobTruck,300,500,75],
+    [KPLIB_b_smallStorage,0,0,0],
+    [KPLIB_b_largeStorage,0,0,0],
+    [KPLIB_b_logiStation,250,0,0],
+    [KPLIB_b_airControl,1000,0,0],
+    [KPLIB_b_slotHeli,250,0,0],
+    [KPLIB_b_slotPlane,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
@@ -253,7 +253,7 @@ support_vehicles = [
 */
 
 // Light infantry squad.
-blufor_squad_inf_light = [
+KPLIB_b_squadLight = [
     "CUP_O_TK_Soldier_SL",
     "CUP_O_TK_Soldier",
     "CUP_O_TK_Soldier",
@@ -267,7 +267,7 @@ blufor_squad_inf_light = [
 ];
 
 // Heavy infantry squad.
-blufor_squad_inf = [
+KPLIB_b_squadInf = [
     "CUP_O_TK_Soldier_SL",
     "CUP_O_TK_Soldier_LAT",
     "CUP_O_TK_Soldier_LAT",
@@ -281,7 +281,7 @@ blufor_squad_inf = [
 ];
 
 // AT specialists squad.
-blufor_squad_at = [
+KPLIB_b_squadAT = [
     "CUP_O_TK_Soldier_SL",
     "CUP_O_TK_Soldier_AAT",
     "CUP_O_TK_Soldier_AAT",
@@ -293,7 +293,7 @@ blufor_squad_at = [
 ];
 
 // AA specialists squad.
-blufor_squad_aa = [
+KPLIB_b_squadAA = [
     "CUP_O_TK_Soldier_SL",
     "CUP_O_TK_Soldier_Backpack",
     "CUP_O_TK_Soldier_Backpack",
@@ -305,7 +305,7 @@ blufor_squad_aa = [
 ];
 
 // Force recon squad.
-blufor_squad_recon = [
+KPLIB_b_squadRecon = [
     "CUP_O_TK_SpecOps_TL",
     "CUP_O_TK_SpecOps",
     "CUP_O_TK_SpecOps",
@@ -316,7 +316,7 @@ blufor_squad_recon = [
 ];
 
 // Paratroopers squad.
-blufor_squad_para = [
+KPLIB_b_squadPara = [
     "CUP_O_TK_Soldier_LAT",
     "CUP_O_TK_Soldier_LAT",
     "CUP_O_TK_Soldier_LAT",
@@ -330,11 +330,11 @@ blufor_squad_para = [
 ];
 
 /*
-    --- Elite vehicles ---
+    --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [
+KPLIB_b_vehToUnlock = [
     "CUP_O_BTR60_TKA",                                                  // BTR-60 PB
     "CUP_O_BM21_TKA",                                                   // BM-21
     "CUP_O_BMP2_TKA",                                                   // BMP-2
