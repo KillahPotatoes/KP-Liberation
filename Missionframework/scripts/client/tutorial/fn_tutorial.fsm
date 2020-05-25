@@ -519,7 +519,7 @@ class FSM
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01a"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
-                         "    [(base_boxspawn nearObjects [FOB_box_typename, 10]) select 0, true]," \n
+                         "    [(base_boxspawn nearObjects [KPLIB_b_fobBox, 10]) select 0, true]," \n
                          "    ""ASSIGNED""," \n
                          "    0," \n
                          "    true," \n
@@ -553,7 +553,7 @@ class FSM
                          "    allPlayers," \n
                          "    [""KPLIB_Tasks_Tutorial_Fob_01b"", ""KPLIB_Tasks_Tutorial_Fob""]," \n
                          "    """"," \n
-                         "    [(base_boxspawn nearObjects [FOB_box_typename, 10]) select 0, true]," \n
+                         "    [(base_boxspawn nearObjects [KPLIB_b_fobBox, 10]) select 0, true]," \n
                          "    ""ASSIGNED""," \n
                          "    0," \n
                          "    true," \n

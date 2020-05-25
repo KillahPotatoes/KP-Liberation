@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-17
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -87,7 +87,7 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
 
     // Only save player side, seized or captured objects
     if (
-        (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
+        (!(_class in KPLIB_c_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
         (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
         _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew];
@@ -111,9 +111,9 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
     // Sum all stored resources of current storage
     {
         switch ((typeOf _x)) do {
-            case KPLIB_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
-            case KPLIB_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
-            case KPLIB_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
+            case KPLIB_b_crateSupply: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+            case KPLIB_b_crateAmmo: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+            case KPLIB_b_crateFuel: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
             default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
         };
     } forEach (attachedObjects _x);
@@ -168,7 +168,7 @@ private _stats = [
     stats_secondary_objectives,
     stats_sectors_liberated,
     stats_sectors_lost,
-    stats_spartan_respawns,
+    stats_potato_respawns,
     stats_supplies_produced,
     stats_supplies_spent,
     stats_vehicles_recycled

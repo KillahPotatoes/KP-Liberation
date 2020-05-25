@@ -17,7 +17,7 @@ if (dorepackage > 0) then {
         publicVariable "KPLIB_clearances";
     };
 
-    {deleteVehicle _x} forEach (((getPos player) nearobjects [FOB_typename, 250]) select {getObjectType _x >= 8});
+    {deleteVehicle _x} forEach (((getPos player) nearobjects [KPLIB_b_fobBuilding, 250]) select {getObjectType _x >= 8});
 
     sleep 0.5;
 
@@ -28,12 +28,12 @@ if (dorepackage > 0) then {
     };
 
     if (dorepackage == 1) then {
-        private _fobbox = FOB_box_typename createVehicle _spawnpos;
+        private _fobbox = KPLIB_b_fobBox createVehicle _spawnpos;
         [_fobbox] call KPLIB_fnc_addObjectInit;
     };
 
     if (dorepackage == 2) then {
-        private _fobTruck = FOB_truck_typename createVehicle _spawnpos;
+        private _fobTruck = KPLIB_b_fobTruck createVehicle _spawnpos;
         [_fobTruck] call KPLIB_fnc_addObjectInit;
     };
     hint localize "STR_FOB_REPACKAGE_HINT";

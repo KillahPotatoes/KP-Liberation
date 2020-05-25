@@ -17,7 +17,7 @@ while {true} do {
             _marker setMarkerTypeLocal "b_hq";
             _marker setMarkerSizeLocal [1.5, 1.5];
             _marker setMarkerPosLocal (KPLIB_sectors_fob select _idx);
-            _marker setMarkerTextLocal format ["FOB %1",military_alphabet select _idx];
+            _marker setMarkerTextLocal format ["FOB %1",KPLIB_militaryAlphabet select _idx];
             _marker setMarkerColorLocal "ColorYellow";
             _markers pushback _marker;
         };

@@ -1,6 +1,6 @@
 private ["_vector", "_idactcancel", "_idactplace", "_idactvector", "_ghost_spot", "_truedir", "_dist", "_truepos", "_sectorpos", "_building"];
 
-if (((_this select 3) select 0) == KPLIB_small_storage_building) then {
+if (((_this select 3) select 0) == KPLIB_b_smallStorage) then {
 
     _truepos = [];
 

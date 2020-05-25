@@ -145,7 +145,7 @@ if (isServer) then {
             };
         } else {
             // Civilian vehicle casualty
-            if (typeOf _unit in civilian_vehicles) then {
+            if (typeOf _unit in KPLIB_c_vehicles) then {
                 stats_civilian_vehicles_killed = stats_civilian_vehicles_killed + 1;
 
                 // Destroyed by player

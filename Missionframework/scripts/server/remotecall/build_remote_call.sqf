@@ -17,7 +17,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
             _crateValue = _x getVariable ["KPLIB_crate_value",0];
 
             switch ((typeOf _x)) do {
-                case KPLIB_supply_crate: {
+                case KPLIB_b_crateSupply: {
                     if (_price_s > 0) then {
                         if (_crateValue > _price_s) then {
                             _crateValue = _crateValue - _price_s;
@@ -30,7 +30,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
                         };
                     };
                 };
-                case KPLIB_ammo_crate: {
+                case KPLIB_b_crateAmmo: {
                     if (_price_a > 0) then {
                         if (_crateValue > _price_a) then {
                             _crateValue = _crateValue - _price_a;
@@ -43,7 +43,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
                         };
                     };
                 };
-                case KPLIB_fuel_crate: {
+                case KPLIB_b_crateFuel: {
                     if (_price_f > 0) then {
                         if (_crateValue > _price_f) then {
                             _crateValue = _crateValue - _price_f;
