@@ -42,3 +42,8 @@ if ([
         [KPLIB_suppMod_arty] call BIS_fnc_moduleSupportsInitProvider;
     };
 };
+
+// Disconnect possible connected UAV
+if !(isNull (getConnectedUAV _oldUnit)) then {
+    _oldUnit connectTerminalToUAV objNull;
+};
