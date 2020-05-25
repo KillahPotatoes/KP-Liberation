@@ -2,7 +2,7 @@
     File: cup_takistan.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-15
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -18,7 +18,7 @@
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "CUP_C_TK_Man_04",
     "CUP_C_TK_Man_04_Jack",
     "CUP_C_TK_Man_04_Waist",
@@ -47,7 +47,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "CUP_C_TT650_TK_CIV",
     "CUP_C_S1203_CIV",
     "CUP_C_S1203_Ambulance_CIV",
