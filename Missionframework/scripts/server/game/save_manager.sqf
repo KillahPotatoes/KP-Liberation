@@ -33,7 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KPLIB_classnamesToSave = [toLower FOB_typename, toLower huron_typename];
+KPLIB_classnamesToSave = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
 
 /*
     --- Locals ---
@@ -44,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [toLower FOB_typename, toLower huron_typename];
+private _noKillHandler = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -97,13 +97,13 @@ resources_intel = 0;
 KPLIB_saveLoaded = false;
 
 // Add all buildings for saving and kill manager ignore
-_noKillHandler append KPLIB_b_buildings_classes;
-KPLIB_classnamesToSave append KPLIB_b_buildings_classes;
+_noKillHandler append KPLIB_b_deco_classes;
+KPLIB_classnamesToSave append KPLIB_b_deco_classes;
 KPLIB_classnamesToSave append KPLIB_b_allVeh_classes;
 
 // Add opfor and civilian vehicles for saving
 KPLIB_classnamesToSave append KPLIB_o_allVeh_classes;
-KPLIB_classnamesToSave append civilian_vehicles;
+KPLIB_classnamesToSave append KPLIB_c_vehicles;
 
 // Remove duplicates
 KPLIB_classnamesToSave = KPLIB_classnamesToSave arrayIntersect KPLIB_classnamesToSave;
@@ -147,7 +147,7 @@ stats_resistance_teamkills_by_players = 0;
 stats_secondary_objectives = 0;
 stats_sectors_liberated = 0;
 stats_sectors_lost = 0;
-stats_spartan_respawns = 0;
+stats_potato_respawns = 0;
 stats_supplies_produced = 0;
 stats_supplies_spent = 0;
 stats_vehicles_recycled = 0;
@@ -227,7 +227,7 @@ if (!isNil "_saveData") then {
         stats_secondary_objectives                  = _stats select 32;
         stats_sectors_liberated                     = _stats select 33;
         stats_sectors_lost                          = _stats select 34;
-        stats_spartan_respawns                      = _stats select 35;
+        stats_potato_respawns                      = _stats select 35;
         stats_supplies_produced                     = _stats select 36;
         stats_supplies_spent                        = _stats select 37;
         stats_vehicles_recycled                     = _stats select 38;
@@ -266,7 +266,7 @@ if (!isNil "_saveData") then {
         stats_civilians_killed_by_players           = _stats select 10;
         stats_sectors_liberated                     = _stats select 11;
         stats_playtime                              = _stats select 12;
-        stats_spartan_respawns                      = _stats select 13;
+        stats_potato_respawns                      = _stats select 13;
         stats_secondary_objectives                  = _stats select 14;
         stats_hostile_battlegroups                  = _stats select 15;
         stats_ieds_detonated                        = _stats select 16;
@@ -321,13 +321,13 @@ if (!isNil "_saveData") then {
         // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
         if !(((_saveData select 0) select 0) isEqualType 0) then {
             // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
-            if ((KPLIB_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
-                _class = KPLIB_recycle_building;
+            if ((KPLIB_b_logiStation != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
+                _class = KPLIB_b_logiStation;
             };
 
             // Pre 0.96.5 compatibility with air building, as it was replaced by default with a different classname
-            if ((KPLIB_air_vehicle_building != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
-                _class = KPLIB_air_vehicle_building;
+            if ((KPLIB_b_airControl != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
+                _class = KPLIB_b_airControl;
             };
         };
 
@@ -360,7 +360,7 @@ if (!isNil "_saveData") then {
             };
 
             // Set civilian vehicle as seized
-            if (_class in civilian_vehicles) then {
+            if (_class in KPLIB_c_vehicles) then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
@@ -439,7 +439,7 @@ if (!isNil "_saveData") then {
             _storage params ["_pos", "_dir", "_vecUp"];
 
             // Create object without damage handling and simulation
-            _object = createVehicle [KPLIB_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [KPLIB_b_smallStorage, _pos, [], 0, "CAN_COLLIDE"];
             _object enableSimulationGlobal false;
             _object allowdamage false;
 
@@ -507,14 +507,14 @@ publicVariable "KPLIB_sectors_fob";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in KPLIB_sectors_military)};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in KPLIB_b_vehToUnlock) && ((_x select 1) in KPLIB_sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
 KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
-if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
+if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_b_vehToUnlock))) then {
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -526,8 +526,8 @@ if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (co
     } forEach KPLIB_vehicle_to_military_base_links;
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
-    while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
-        _nextVehicle = selectRandom (elite_vehicles - _assignedVehicles);
+    while {((count _assignedVehicles) < (count KPLIB_b_vehToUnlock)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
+        _nextVehicle = selectRandom (KPLIB_b_vehToUnlock - _assignedVehicles);
         _nextBase = selectRandom (KPLIB_sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;

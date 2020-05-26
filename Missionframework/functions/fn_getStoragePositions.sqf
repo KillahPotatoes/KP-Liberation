@@ -2,7 +2,7 @@
     File: fn_getStoragePositions.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-27
-    Last Update: 2020-05-10
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -22,8 +22,8 @@ params [
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; [[], 0]};
 
 private _data = [
-    [KPLIB_small_storage_building, [KPLIB_small_storage_positions, 4]],
-    [KPLIB_large_storage_building, [KPLIB_large_storage_positions, 6.5]]
+    [KPLIB_b_smallStorage, [KPLIB_small_storage_positions, 4]],
+    [KPLIB_b_largeStorage, [KPLIB_large_storage_positions, 6.5]]
 ] select {(typeOf _storage) isEqualTo (_x select 0)};
 
 if (_data isEqualTo []) exitWith {["No valid storage object given"] call BIS_fnc_error; [[], 0]};

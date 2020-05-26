@@ -28,11 +28,11 @@ while {true} do {
     {
         private _fob_buildings = _x nearobjects KPLIB_range_fob;
         private _storage_areas = _fob_buildings select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
-        private _heliSlots = {(typeOf _x) == KPLIB_heli_slot_building;} count _fob_buildings;
-        private _planeSlots = {(typeOf _x) == KPLIB_plane_slot_building;} count _fob_buildings;
-        private _hasAirBuilding = {(typeOf _x) == KPLIB_air_vehicle_building;} count _fob_buildings;
+        private _heliSlots = {(typeOf _x) == KPLIB_b_slotHeli;} count _fob_buildings;
+        private _planeSlots = {(typeOf _x) == KPLIB_b_slotPlane;} count _fob_buildings;
+        private _hasAirBuilding = {(typeOf _x) == KPLIB_b_airControl;} count _fob_buildings;
         if (_hasAirBuilding > 0) then {_hasAirBuilding = true;} else {_hasAirBuilding = false;};
-        private _hasRecBuilding = {(typeOf _x) == KPLIB_recycle_building;} count _fob_buildings;
+        private _hasRecBuilding = {(typeOf _x) == KPLIB_b_logiStation;} count _fob_buildings;
         if (_hasRecBuilding > 0) then {_hasRecBuilding = true;} else {_hasRecBuilding = false;};
 
         private _supplyValue = 0;
@@ -42,9 +42,9 @@ while {true} do {
         {
             {
                 switch ((typeOf _x)) do {
-                    case KPLIB_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                    case KPLIB_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                    case KPLIB_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                    case KPLIB_b_crateSupply: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                    case KPLIB_b_crateAmmo: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                    case KPLIB_b_crateFuel: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
                     default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
                 };
             } forEach (attachedObjects _x);

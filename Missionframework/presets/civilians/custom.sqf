@@ -2,7 +2,7 @@
     File: custom.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-07
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -16,7 +16,7 @@
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "C_Man_Fisherman_01_F",
     "C_man_w_worker_F",
     "C_man_1_1_F",
@@ -43,7 +43,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "C_Quadbike_01_F",
     "C_Hatchback_01_F",
     "C_Hatchback_01_sport_F",

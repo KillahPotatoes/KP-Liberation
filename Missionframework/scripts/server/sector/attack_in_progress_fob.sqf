@@ -10,7 +10,7 @@ if ( KPLIB_param_bluforDefenders ) then {
     _grp = creategroup [KPLIB_side_player, true];
     {
         [_x, _thispos, _grp] call KPLIB_fnc_createManagedUnit;
-    } foreach blufor_squad_inf;
+    } foreach KPLIB_b_squadInf;
     sleep 3;
     _grp setBehaviour "COMBAT";
 };

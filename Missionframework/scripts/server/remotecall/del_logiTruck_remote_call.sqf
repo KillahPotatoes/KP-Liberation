@@ -19,10 +19,10 @@ private _crateSum = (ceil(_price_s / 100)) + (ceil(_price_a / 100)) + (ceil(_pri
 private _spaceSum = 0;
 
 {
-    if (typeOf _x == KPLIB_large_storage_building) then {
+    if (typeOf _x == KPLIB_b_largeStorage) then {
         _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
     };
-    if (typeOf _x == KPLIB_small_storage_building) then {
+    if (typeOf _x == KPLIB_b_smallStorage) then {
         _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
     };
 } forEach _storage_areas;
@@ -31,10 +31,10 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
 
 {
     private _space = 0;
-    if (typeOf _x == KPLIB_large_storage_building) then {
+    if (typeOf _x == KPLIB_b_largeStorage) then {
         _space = (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
     };
-    if (typeOf _x == KPLIB_small_storage_building) then {
+    if (typeOf _x == KPLIB_b_smallStorage) then {
         _space = (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
     };
 
@@ -44,7 +44,7 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
             _amount = _price_s;
         };
         _price_s = _price_s - _amount;
-        private _crate = [KPLIB_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+        private _crate = [KPLIB_b_crateSupply, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         _space = _space - 1;
     };
@@ -55,7 +55,7 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
             _amount = _price_a;
         };
         _price_a = _price_a - _amount;
-        private _crate = [KPLIB_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+        private _crate = [KPLIB_b_crateAmmo, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         _space = _space - 1;
     };
@@ -66,7 +66,7 @@ if (_spaceSum < _crateSum) exitWith {(localize "STR_LOGISTIC_NOSPACE") remoteExe
             _amount = _price_f;
         };
         _price_f = _price_f - _amount;
-        private _crate = [KPLIB_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+        private _crate = [KPLIB_b_crateFuel, _amount, getPos _x] call KPLIB_fnc_createCrate;
         [_crate, _x] call KPLIB_fnc_crateToStorage;
         _space = _space - 1;
     };

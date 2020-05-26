@@ -12,7 +12,7 @@
 
     E.g. the variables of the grasscutter placeholder objects for the
     little birds are named "littlebird_0", "littlebird_1", etc.
-    while the variable from the preset is KPLIB_little_bird_classname.
+    while the variable from the preset is KPLIB_b_addHeli.
     This leads to the entry below.
 
     You can also remove unwanted start vehicles by deleting the corresponding line
@@ -46,6 +46,6 @@ private _veh = objNull;
         [_veh] call KPLIB_fnc_addObjectInit;
     };
 } forEach [
-    ["littlebird_", KPLIB_little_bird_classname],
-    ["boat_", KPLIB_boat_classname]
+    ["littlebird_", KPLIB_b_addHeli],
+    ["boat_", KPLIB_b_addBoat]
 ];

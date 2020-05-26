@@ -14,8 +14,8 @@ KPLIB_ui_notif = "";
 KPLIB_supplies = 0;
 KPLIB_ammo = 0;
 KPLIB_fuel = 0;
-KPLIB_air_vehicle_building_near = false;
-KPLIB_recycle_building_near = false;
+KPLIB_b_airControl_near = false;
+KPLIB_b_logiStation_near = false;
 
 waitUntil { !isNil "synchro_done" };
 waitUntil { synchro_done };
@@ -74,15 +74,15 @@ while {true} do {
             KPLIB_fuel = _fuel;
         };
         // TODO this is used by build scripts, move to relevant places
-        KPLIB_air_vehicle_building_near = _hasAir;
-        KPLIB_recycle_building_near = _hasRecycling;
+        KPLIB_b_airControl_near = _hasAir;
+        KPLIB_b_logiStation_near = _hasRecycling;
     } else {
         _showResources = false;
         KPLIB_supplies = 0;
         KPLIB_ammo = 0;
         KPLIB_fuel = 0;
-        KPLIB_air_vehicle_building_near = false;
-        KPLIB_recycle_building_near = false;
+        KPLIB_b_airControl_near = false;
+        KPLIB_b_logiStation_near = false;
     };
 
     if (_overlayVisible) then {

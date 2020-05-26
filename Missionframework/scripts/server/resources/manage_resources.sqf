@@ -29,7 +29,7 @@ while {KPLIB_endgame == 0} do {
             private _fuelValue = 0;
             private _time = _x select 8;
 
-            private _storage = nearestObjects [(markerPos (_x select 1)), [KPLIB_small_storage_building], 100];
+            private _storage = nearestObjects [(markerPos (_x select 1)), [KPLIB_b_smallStorage], 100];
             _storage = _storage select {(_x getVariable ["KPLIB_storage_type",-1]) == 1};
             if ((count _storage) > 0) then {
                 _storage = (_storage select 0);
@@ -41,11 +41,11 @@ while {KPLIB_endgame == 0} do {
                         _time = KPLIB_production_interval;
 
                         if (((count (attachedObjects _storage)) < 12) && !((_x select 7) == 3)) then {
-                            private _crateType = KPLIB_supply_crate;
+                            private _crateType = KPLIB_b_crateSupply;
                             switch (_x select 7) do {
-                                case 1: {_crateType = KPLIB_ammo_crate; stats_ammo_produced = stats_ammo_produced + 100;};
-                                case 2: {_crateType = KPLIB_fuel_crate; stats_fuel_produced = stats_fuel_produced + 100;};
-                                default {_crateType = KPLIB_supply_crate; stats_supplies_produced = stats_supplies_produced + 100;};
+                                case 1: {_crateType = KPLIB_b_crateAmmo; stats_ammo_produced = stats_ammo_produced + 100;};
+                                case 2: {_crateType = KPLIB_b_crateFuel; stats_fuel_produced = stats_fuel_produced + 100;};
+                                default {_crateType = KPLIB_b_crateSupply; stats_supplies_produced = stats_supplies_produced + 100;};
                             };
 
                             private _crate = [_crateType, 100, getPosATL _storage] call KPLIB_fnc_createCrate;
@@ -58,9 +58,9 @@ while {KPLIB_endgame == 0} do {
 
                 {
                     switch ((typeOf _x)) do {
-                        case KPLIB_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                        case KPLIB_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                        case KPLIB_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                        case KPLIB_b_crateSupply: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                        case KPLIB_b_crateAmmo: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                        case KPLIB_b_crateFuel: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
                         default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
                     };
                 } forEach (attachedObjects _storage);

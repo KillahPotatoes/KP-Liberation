@@ -76,8 +76,8 @@ _spawnedGroups pushBack _grp;
 
 sleep 30;
 
-if (((random 100) <= 25) && !(KPLIB_guerilla_vehicles isEqualTo [])) then {
-    private _vehicle = (selectRandom KPLIB_guerilla_vehicles) createVehicle _startpos;
+if (((random 100) <= 25) && !(KPLIB_r_vehicles isEqualTo [])) then {
+    private _vehicle = (selectRandom KPLIB_r_vehicles) createVehicle _startpos;
     [_vehicle] call KPLIB_fnc_allowCrewInImmobile;
 
     private _grp = [_startpos, 2] call KPLIB_fnc_spawnGuerillaGroup;

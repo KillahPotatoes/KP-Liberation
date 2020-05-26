@@ -19,7 +19,7 @@ if (KPLIB_sectors_fob isEqualTo []) then {
         // Spawn FOB box and wait until the first FOB was built
         private _fobbox = objNull;
         while {KPLIB_sectors_fob isEqualTo []} do {
-            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KPLIB_param_fobVehicle) createVehicle (getposATL base_boxspawn);
+            _fobbox = ([KPLIB_b_fobBox, KPLIB_b_fobTruck] select KPLIB_param_fobVehicle) createVehicle (getposATL base_boxspawn);
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
             [_fobbox, true] call KPLIB_fnc_clearCargo;

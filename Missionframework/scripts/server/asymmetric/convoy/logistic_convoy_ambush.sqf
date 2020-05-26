@@ -24,7 +24,7 @@ KPLIB_convoy_ambush_inProgress = true;
 
 private _vehicleArray = [];
 for "_i" from 1 to (_convoy select 1) do {
-    private _veh = createVehicle [KPLIB_truck_classname, getPos _roadObj, [], 50, "NONE"];
+    private _veh = createVehicle [KPLIB_b_logiTruck, getPos _roadObj, [], 50, "NONE"];
     _veh setDir (getDir _roadObj);
     {
         private _damage = random 0.6;
@@ -38,7 +38,7 @@ for "_i" from 1 to (_convoy select 1) do {
     } forEach ((getAllHitPointsDamage _veh) select 0);
     _vehicleArray pushBack _veh;
 
-    private _driver = createVehicle [crewman_classname, getPos _veh, [], 12, "NONE"];
+    private _driver = createVehicle [KPLIB_b_crewUnit, getPos _veh, [], 12, "NONE"];
     _driver setDamage 1;
 };
 if (KPLIB_asymmetric_debug > 0) then {[format ["Logistic convoy %1 ambush: truck spawning done", (_convoy select 0)], "ASYMMETRIC"] call KPLIB_fnc_log;};
@@ -54,7 +54,7 @@ while {_supplies > 0} do {
         _amount = _supplies;
     };
     _supplies = _supplies - _amount;
-    private _crate = [KPLIB_supply_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
+    private _crate = [KPLIB_b_crateSupply, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
     _crate setPos (_crate getPos [random 60, random 360]);
     _crateArray pushBack [_crate];
 };
@@ -65,7 +65,7 @@ while {_ammo > 0} do {
         _amount = _ammo;
     };
     _ammo = _ammo - _amount;
-    private _crate = [KPLIB_ammo_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
+    private _crate = [KPLIB_b_crateAmmo, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
     _crate setPos (_crate getPos [random 60, random 360]);
     _crateArray pushBack [_crate];
 };
@@ -76,7 +76,7 @@ while {_fuel > 0} do {
         _amount = _fuel;
     };
     _fuel = _fuel - _amount;
-    private _crate = [KPLIB_fuel_crate, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
+    private _crate = [KPLIB_b_crateFuel, _amount, getPos _roadObj] call KPLIB_fnc_createCrate;
     _crate setPos (_crate getPos [random 60, random 360]);
     _crateArray pushBack [_crate];
 };
@@ -125,7 +125,7 @@ if ((_waitingTime <= 0) && (({alive _x} count (units _grp)) > 0)) then {
         };
     } forEach (units _grp);
     {
-        if ((typeOf (_x select 0)) == KPLIB_ammo_crate) then {
+        if ((typeOf (_x select 0)) == KPLIB_b_crateAmmo) then {
             _gain = _gain + 3;
         } else {
             _gain = _gain + 2;

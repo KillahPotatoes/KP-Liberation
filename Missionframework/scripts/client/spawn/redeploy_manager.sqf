@@ -83,7 +83,7 @@ while {true} do {
         choiceslist = [[_basenamestr, getposATL startbase]];
 
         for [{_idx=0},{_idx < count KPLIB_sectors_fob},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (KPLIB_sectors_fob select _idx)],KPLIB_sectors_fob select _idx]];
+            choiceslist = choiceslist + [[format ["FOB %1 - %2", (KPLIB_militaryAlphabet select _idx),mapGridPosition (KPLIB_sectors_fob select _idx)],KPLIB_sectors_fob select _idx]];
         };
 
         if (KPLIB_param_mobileRespawn) then {

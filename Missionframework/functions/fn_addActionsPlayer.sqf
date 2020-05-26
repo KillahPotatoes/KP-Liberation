@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-05-22
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -169,7 +169,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSTORAGEBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    [KPLIB_small_storage_building],
+    [KPLIB_b_smallStorage],
     -770,
     false,
     true,

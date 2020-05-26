@@ -11,7 +11,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
     if (alive _unit) then {
 
         removeAllWeapons _unit;
-        if (typeof _unit != pilot_classname) then {
+        if (typeof _unit != KPLIB_b_heliPilotUnit) then {
             removeHeadgear _unit;
         };
         removeBackpack _unit;

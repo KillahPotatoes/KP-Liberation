@@ -25,7 +25,7 @@ while {KPLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         switch (_x select 7) do {case 1: {_locPos = 2; _locRes = 4;}; case 3: {_locPos = 3; _locRes = 5;};};
                         switch (_x select 9) do {case 2: {_x set [9,0];}; case 3: {_x set [9,1];};};
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_small_storage_building, KPLIB_large_storage_building], 150];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_b_smallStorage, KPLIB_b_largeStorage], 150];
 
                         if (((_x select 9) == 0) && !((_x select 6) isEqualTo [0,0,0])) then {
 
@@ -35,10 +35,10 @@ while {KPLIB_endgame == 0} do {
                             if (_toProcess > 3) then {_toProcess = 3;};
                             private _spaceSum = 0;
                             {
-                                if (typeOf _x == KPLIB_large_storage_building) then {
+                                if (typeOf _x == KPLIB_b_largeStorage) then {
                                     _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                 };
-                                if (typeOf _x == KPLIB_small_storage_building) then {
+                                if (typeOf _x == KPLIB_b_smallStorage) then {
                                     _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                 };
                             } forEach _storage_areas;
@@ -51,10 +51,10 @@ while {KPLIB_endgame == 0} do {
                             while {_processed < _toProcess} do {
                                 {
                                     private _space = 0;
-                                    if (typeOf _x == KPLIB_large_storage_building) then {
+                                    if (typeOf _x == KPLIB_b_largeStorage) then {
                                         _space = (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                     };
-                                    if (typeOf _x == KPLIB_small_storage_building) then {
+                                    if (typeOf _x == KPLIB_b_smallStorage) then {
                                         _space = (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                     };
 
@@ -68,7 +68,7 @@ while {KPLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1),
                                             (((_tempLogistics select _currentIndex) select 6) select 2)]
                                         ];
-                                        private _crate = [KPLIB_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateSupply, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -85,7 +85,7 @@ while {KPLIB_endgame == 0} do {
                                                 (((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
                                                 (((_tempLogistics select _currentIndex) select 6) select 2)]
                                             ];
-                                        private _crate = [KPLIB_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateAmmo, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -102,7 +102,7 @@ while {KPLIB_endgame == 0} do {
                                                 (((_tempLogistics select _currentIndex) select 6) select 1),
                                                 (((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
                                             ];
-                                        private _crate = [KPLIB_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateFuel, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -127,9 +127,9 @@ while {KPLIB_endgame == 0} do {
                             {
                                 {
                                     switch ((typeOf _x)) do {
-                                        case KPLIB_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                                        case KPLIB_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
-                                        case KPLIB_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                                        case KPLIB_b_crateSupply: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                                        case KPLIB_b_crateAmmo: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                                        case KPLIB_b_crateFuel: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
                                         default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
                                     };
                                 } forEach (attachedObjects _x);
@@ -209,7 +209,7 @@ while {KPLIB_endgame == 0} do {
                                     private _crateValue = _x getVariable ["KPLIB_crate_value",0];
 
                                     switch ((typeOf _x)) do {
-                                        case KPLIB_supply_crate: {
+                                        case KPLIB_b_crateSupply: {
                                             if (_getSupply > 0) then {
                                                 if (_crateValue > _getSupply) then {
                                                     _crateValue = _crateValue - _getSupply;
@@ -222,7 +222,7 @@ while {KPLIB_endgame == 0} do {
                                                 };
                                             };
                                         };
-                                        case KPLIB_ammo_crate: {
+                                        case KPLIB_b_crateAmmo: {
                                             if (_getAmmo > 0) then {
                                                 if (_crateValue > _getAmmo) then {
                                                     _crateValue = _crateValue - _getAmmo;
@@ -235,7 +235,7 @@ while {KPLIB_endgame == 0} do {
                                                 };
                                             };
                                         };
-                                        case KPLIB_fuel_crate: {
+                                        case KPLIB_b_crateFuel: {
                                             if (_getFuel > 0) then {
                                                 if (_crateValue > _getFuel) then {
                                                     _crateValue = _crateValue - _getFuel;
@@ -351,7 +351,7 @@ while {KPLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         _locPos = switch (_x select 7) do {case 5: {2}; case 6: {3};};
                         _x set [9,0];
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_small_storage_building, KPLIB_large_storage_building], 150];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_b_smallStorage, KPLIB_b_largeStorage], 150];
 
                         if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
 
@@ -359,10 +359,10 @@ while {KPLIB_endgame == 0} do {
                         if (_toProcess > 3) then {_toProcess = 3;};
                         private _spaceSum = 0;
                         {
-                            if (typeOf _x == KPLIB_large_storage_building) then {
+                            if (typeOf _x == KPLIB_b_largeStorage) then {
                                 _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                             };
-                            if (typeOf _x == KPLIB_small_storage_building) then {
+                            if (typeOf _x == KPLIB_b_smallStorage) then {
                                 _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                             };
                         } forEach _storage_areas;
@@ -375,10 +375,10 @@ while {KPLIB_endgame == 0} do {
                         while {_processed < _toProcess} do {
                             {
                                 private _space = 0;
-                                if (typeOf _x == KPLIB_large_storage_building) then {
+                                if (typeOf _x == KPLIB_b_largeStorage) then {
                                     _space = (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                 };
-                                if (typeOf _x == KPLIB_small_storage_building) then {
+                                if (typeOf _x == KPLIB_b_smallStorage) then {
                                     _space = (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                 };
 
@@ -392,7 +392,7 @@ while {KPLIB_endgame == 0} do {
                                         (((_tempLogistics select _currentIndex) select 6) select 1),
                                         (((_tempLogistics select _currentIndex) select 6) select 2)]
                                     ];
-                                    private _crate = [KPLIB_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateSupply, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;
@@ -409,7 +409,7 @@ while {KPLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
                                             (((_tempLogistics select _currentIndex) select 6) select 2)]
                                         ];
-                                    private _crate = [KPLIB_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateAmmo, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;
@@ -426,7 +426,7 @@ while {KPLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1),
                                             (((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
                                         ];
-                                    private _crate = [KPLIB_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateFuel, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;

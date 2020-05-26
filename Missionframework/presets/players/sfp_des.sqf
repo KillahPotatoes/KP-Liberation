@@ -2,7 +2,7 @@
     File: sfp_des.sqf
     Author: Dahlgren - https://github.com/Dahlgren
     Date: 2017-07-24
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,26 +21,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-FOB_typename = "Land_Cargo_HQ_V1_F";                                    // This is the main FOB HQ building.
-FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-FOB_truck_typename = "sfp_tgb1112";                                     // This is the FOB as a vehicle.
-Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "sfp_patgb203_ambulance";                      // This is the mobile respawn (and medical) truck.
-huron_typename = "sfp_hkp4";                                            // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-crewman_classname = "sfp_m90d_crew";                                    // This defines the crew for vehicles.
-pilot_classname = "sfp_m90w_pilot";                                     // This defines the pilot for helicopters.
-KPLIB_little_bird_classname = "sfp_hkp9";                               // These are the little birds which spawn on the Freedom or at Chimera base.
-KPLIB_boat_classname = "sfp_strb90";                                    // These are the boats which spawn at the stern of the Freedom.
-KPLIB_truck_classname = "sfp_tgb40";                                    // These are the trucks which are used in the logistic convoy system.
-KPLIB_small_storage_building = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_large_storage_building = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_recycle_building = "Land_CarService_F";                           // The building defined to unlock FOB recycling functionality.
-KPLIB_air_vehicle_building = "Land_Radar_Small_F";                      // The building defined to unlock FOB air vehicle functionality.
-KPLIB_heli_slot_building = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_plane_slot_building = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_supply_crate = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_ammo_crate = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V1_F";                                    // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
+KPLIB_b_fobTruck = "sfp_tgb1112";                                     // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "sfp_patgb203_ambulance";                      // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "sfp_hkp4";                                            // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "sfp_m90d_crew";                                    // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "sfp_m90w_pilot";                                     // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "sfp_hkp9";                               // These are the additional helicopters which spawn on the Freedom or at Chimera base.
+KPLIB_b_addBoat = "sfp_strb90";                                    // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "sfp_tgb40";                                    // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
+KPLIB_b_logiStation = "Land_CarService_F";                           // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "Land_Radar_Small_F";                      // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -50,7 +50,7 @@ KPLIB_fuel_crate = "CargoNet_01_barrels_F";                             // This 
     The above example is the NATO IFV-6a Cheetah, it costs 300 supplies, 150 ammunition and 150 fuel to build.
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
-infantry_units = [
+KPLIB_b_infantry = [
     ["sfp_m90d_rifleman_tshirt",15,0,0],                                // Rifleman (Light)
     ["sfp_m90d_rifleman_ak5",20,0,0],                                   // Rifleman
     ["sfp_m90d_at_specialist_pskott86",30,0,0],                         // Rifleman (AT)
@@ -77,7 +77,7 @@ infantry_units = [
     ["sfp_m90w_pilot",10,0,0]                                           // Pilot
 ];
 
-light_vehicles = [
+KPLIB_b_vehLight = [
     ["B_Quadbike_01_F",50,0,25],                                        // Quad Bike
     ["sfp_tgb16_desert",100,0,50],                                      // Tgb 16
     ["sfp_tgb16_rws",100,40,50],                                        // Tgb 16 (RWS)
@@ -90,13 +90,13 @@ light_vehicles = [
     ["sfp_strb90_rws",200,80,75]                                        // Strb 90 (RWS)
 ];
 
-heavy_vehicles = [
+KPLIB_b_vehHeavy = [
     ["sfp_strf90c_desert",200,40,100],                                  // Strf 90
     ["sfp_lvkv90c_desert",200,60,100],                                  // Lvkv 90
     ["sfp_strv122",400,350,225]                                         // Strb 122
 ];
 
-air_vehicles = [
+KPLIB_b_vehAir = [
     ["sfp_uav01",80,0,30],                                              // UAV 01 Ugglan
     ["sfp_uav03",75,0,25],                                              // UAV 03 Örnen
     ["sfp_uav_skeldar",80,0,30],                                        // UAV Skeldar
@@ -112,7 +112,7 @@ air_vehicles = [
     ["sfp_jas39_rb15",1250,1500,450]                                    // JAS 39 (Rb15)
 ];
 
-static_vehicles = [
+KPLIB_b_vehStatic = [
     ["sfp_ksp88",25,40,0],                                              // Ksp 88
     ["sfp_grsp",25,60,0],                                               // Grsp
     ["sfp_rbs17",30,60,0],                                              // RBS 17
@@ -125,7 +125,7 @@ static_vehicles = [
 ];
 
 
-buildings = [
+KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V1_F",0,0,0],
     ["Land_Cargo_Patrol_V1_F",0,0,0],
     ["Land_Cargo_Tower_V1_F",0,0,0],
@@ -204,17 +204,17 @@ buildings = [
     ["Land_ClutterCutter_large_F",0,0,0]
 ];
 
-support_vehicles = [
-    [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,100],
-    [FOB_box_typename,300,500,0],
-    [FOB_truck_typename,300,500,75],
-    [KPLIB_small_storage_building,0,0,0],
-    [KPLIB_large_storage_building,0,0,0],
-    [KPLIB_recycle_building,250,0,0],
-    [KPLIB_air_vehicle_building,1000,0,0],
-    [KPLIB_heli_slot_building,250,0,0],
-    [KPLIB_plane_slot_building,500,0,0],
+KPLIB_b_vehSupport = [
+    [KPLIB_b_arsenal,100,200,0],
+    [KPLIB_b_mobileRespawn,200,0,100],
+    [KPLIB_b_fobBox,300,500,0],
+    [KPLIB_b_fobTruck,300,500,75],
+    [KPLIB_b_smallStorage,0,0,0],
+    [KPLIB_b_largeStorage,0,0,0],
+    [KPLIB_b_logiStation,250,0,0],
+    [KPLIB_b_airControl,1000,0,0],
+    [KPLIB_b_slotHeli,250,0,0],
+    [KPLIB_b_slotPlane,500,0,0],
     ["ACE_medicalSupplyCrate_advanced",50,0,0],
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
@@ -237,7 +237,7 @@ support_vehicles = [
 */
 
 // Light infantry squad.
-blufor_squad_inf_light = [
+KPLIB_b_squadLight = [
     "sfp_m90d_squadleader",
     "sfp_m90d_automaticrifleman_ksp90",
     "sfp_m90d_rifleman_ak5",
@@ -249,7 +249,7 @@ blufor_squad_inf_light = [
 ];
 
 // Heavy infantry squad.
-blufor_squad_inf = [
+KPLIB_b_squadInf = [
     "sfp_m90d_squadleader",
     "sfp_m90d_machinegunner_ksp58",
     "sfp_m90d_at_specialist_grg86",
@@ -261,7 +261,7 @@ blufor_squad_inf = [
 ];
 
 // AT specialists squad.
-blufor_squad_at = [
+KPLIB_b_squadAT = [
     "sfp_m90d_teamleader",
     "sfp_m90d_at_specialist_grg86",
     "sfp_m90d_at_loader_grg86",
@@ -269,12 +269,12 @@ blufor_squad_at = [
 ];
 
 // AA specialists squad.
-blufor_squad_aa = [
+KPLIB_b_squadAA = [
     // No man portable AA in SFP
 ];
 
 // Force recon squad.
-blufor_squad_recon = [
+KPLIB_b_squadRecon = [
     "sfp_m90d_sog_teamleader",
     "sfp_m90d_sog_ksp90",
     "sfp_m90d_sog_explosive_specialist",
@@ -284,7 +284,7 @@ blufor_squad_recon = [
 ];
 
 // Paratroopers squad.
-blufor_squad_para = [
+KPLIB_b_squadPara = [
     "sfp_m90d_sog_teamleader",
     "sfp_m90d_sog_ksp90",
     "sfp_m90d_sog_explosive_specialist",
@@ -294,11 +294,11 @@ blufor_squad_para = [
 ];
 
 /*
-    --- Elite vehicles ---
+    --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [
+KPLIB_b_vehToUnlock = [
     "sfp_strf90c_desert",                                               // Strf 90
     "sfp_lvkv90c_desert",                                               // Lvkv 90
     "sfp_strv122",                                                      // Strv 122

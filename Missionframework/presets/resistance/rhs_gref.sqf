@@ -2,7 +2,7 @@
     File: rhs_gref.sqf
     Author: FatRefrigerator - https://github.com/FatRefrigerator
     Date: 2017-10-11
-    Last Update: 2020-05-18
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -18,7 +18,7 @@
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
-KPLIB_guerilla_units = [
+KPLIB_r_units = [
     "I_G_Soldier_AR_F",
     "I_G_engineer_F",
     "I_G_officer_F",
@@ -30,7 +30,7 @@ KPLIB_guerilla_units = [
 ];
 
 // Armed vehicles
-KPLIB_guerilla_vehicles = [
+KPLIB_r_vehicles = [
     "rhsgref_ins_g_uaz_dshkm_chdkz"
 ];
 
@@ -40,7 +40,7 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KPLIB_guerilla_weapons_1 = [
+KPLIB_r_weapons_1 = [
     ["rhs_weap_Izh","rhsgref_1Rnd_00Buck",20,"",""],
     ["rhs_weap_m38","rhsgref_5rnd_762x54_m38",6,"",""],
     ["rhs_weap_m38_rail","rhsgref_5rnd_762x54_m38",6,"",""],
@@ -49,7 +49,7 @@ KPLIB_guerilla_weapons_1 = [
     ["rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S",5,"",""]
 ];
 
-KPLIB_guerilla_weapons_2 = [
+KPLIB_r_weapons_2 = [
     ["rhs_weap_ak74","rhs_30rnd_545x39_AK",3,"",""],
     ["rhs_weap_akm","rhs_30rnd_762x39mm",3,"",""],
     ["rhs_weap_akms","rhs_30rnd_762x39mm",3,"",""],
@@ -58,7 +58,7 @@ KPLIB_guerilla_weapons_2 = [
     ["rhs_weap_svds","rhs_10rnd_762x54mmR_7N1",3,"rhs_acc_pso1m2",""]
 ];
 
-KPLIB_guerilla_weapons_3 = [
+KPLIB_r_weapons_3 = [
     ["rhs_weap_ak103","rhs_30rnd_762x39mm",4,"rhs_acc_pkas",""],
     ["rhs_weap_ak104","rhs_30rnd_762x39mm",4,"rhs_acc_ekp8_02",""],
     ["rhs_weap_ak105","rhs_30rnd_545x39_AK",4,"rhs_acc_pkas",""],
@@ -70,7 +70,7 @@ KPLIB_guerilla_weapons_3 = [
 ];
 
 // Uniforms
-KPLIB_guerilla_uniforms_1 = [
+KPLIB_r_uniforms_1 = [
     "U_I_C_Soldier_Bandit_1_F",
     "U_I_C_Soldier_Bandit_2_F",
     "U_I_C_Soldier_Bandit_3_F",
@@ -83,7 +83,7 @@ KPLIB_guerilla_uniforms_1 = [
     "U_BG_Guerilla2_3"
 ];
 
-KPLIB_guerilla_uniforms_2 = [
+KPLIB_r_uniforms_2 = [
     "U_BG_Guerrilla_6_1",
     "U_BG_Guerilla1_1",
     "U_I_C_Soldier_Para_1_F",
@@ -97,7 +97,7 @@ KPLIB_guerilla_uniforms_2 = [
     "U_I_G_resistanceLeader_F"
 ];
 
-KPLIB_guerilla_uniforms_3 = [
+KPLIB_r_uniforms_3 = [
     "rhsgref_uniform_reed",
     "rhsgref_uniform_woodland_olive",
     "rhsgref_uniform_flecktarn",
@@ -106,7 +106,7 @@ KPLIB_guerilla_uniforms_3 = [
 ];
 
 // Vests
-KPLIB_guerilla_vests_1 = [
+KPLIB_r_vests_1 = [
     "V_LegStrapBag_coyote_F",
     "V_LegStrapBag_olive_F",
     "V_LegStrapBag_black_F",
@@ -125,7 +125,7 @@ KPLIB_guerilla_vests_1 = [
     "rhs_6sh46"
 ];
 
-KPLIB_guerilla_vests_2 = [
+KPLIB_r_vests_2 = [
     "V_Chestrig_rgr",
     "V_Chestrig_khk",
     "V_Chestrig_oli",
@@ -142,7 +142,7 @@ KPLIB_guerilla_vests_2 = [
     "V_TacChestrig_oli_F"
 ];
 
-KPLIB_guerilla_vests_3 = [
+KPLIB_r_vests_3 = [
     "V_TacVest_brn",
     "V_TacVest_khk",
     "V_TacVest_oli",
@@ -159,7 +159,7 @@ KPLIB_guerilla_vests_3 = [
 ];
 
 // Headgear
-KPLIB_guerilla_headgear_1 = [
+KPLIB_r_headgear_1 = [
     "",
     "",
     "",
@@ -180,7 +180,7 @@ KPLIB_guerilla_headgear_1 = [
     "H_Cap_blk"
 ];
 
-KPLIB_guerilla_headgear_2 = [
+KPLIB_r_headgear_2 = [
     "H_Bandanna_blu",
     "H_Bandanna_sand",
     "H_Bandanna_gry",
@@ -194,7 +194,7 @@ KPLIB_guerilla_headgear_2 = [
     "rhsgref_fieldcap_ttsko_urban"
 ];
 
-KPLIB_guerilla_headgear_3 = [
+KPLIB_r_headgear_3 = [
     "H_ShemagOpen_khk",
     "H_ShemagOpen_tan",
     "H_Shemag_olive",
@@ -211,7 +211,7 @@ KPLIB_guerilla_headgear_3 = [
 ];
 
 // Facegear. Applies for tier 2 and 3.
-KPLIB_guerilla_facegear = [
+KPLIB_r_facegear = [
     "",
     "",
     "",
