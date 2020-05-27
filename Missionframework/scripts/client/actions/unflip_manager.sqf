@@ -1,5 +1,5 @@
 waitUntil {!isNil "KPLIB_permissions"};
-waitUntil {!(KPLIB_permissions isEqualTo []) || !KPLIB_permissions_param};
+waitUntil {!(KPLIB_permissions isEqualTo []) || !KPLIB_param_permissions};
 
 private [ "_unflippable_vehicles", "_detected_vehicles", "_next_vehicle", "_next_vehicle_already_in_list", "_idact_next" ];
 

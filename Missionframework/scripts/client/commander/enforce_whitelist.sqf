@@ -2,7 +2,7 @@ scriptName "[KPLIB] Enforce Whitelist";
 
 [] call compile preprocessFileLineNumbers "whitelist.sqf";
 
-if (!KPLIB_use_whitelist) exitWith {};
+if (!KPLIB_param_cmdrWhitelist) exitWith {};
 
 waitUntil {alive player};
 sleep 1;

@@ -1,4 +1,4 @@
-if ( KPLIB_permissions_param ) then {
+if ( KPLIB_param_permissions ) then {
 
     waitUntil { !(isNil "KPLIB_permissions") };
 

@@ -31,7 +31,7 @@ waitUntil {sleep 5;
 if (alive _informant) then {
     if (_is_near_fob) then {
         sleep 5;
-        private _grp = createGroup [KPLIB_side_friendly, true];
+        private _grp = createGroup [KPLIB_side_player, true];
         [_informant] joinSilent _grp;
         _informant playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
         _informant disableAI "ANIM";

@@ -2,7 +2,7 @@
     File: KPLIB_lists.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-10
-    Last Update: 2020-05-15
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -280,7 +280,7 @@ boats_names = [
 ];
 
 // Classnames of artillery vehicles, which should be added to the support module
-KPLIB_suppMod_artyVeh = [
+KPLIB_param_supportModule_artyVeh = [
     "B_G_Mortar_01_F",
     "B_MBT_01_arty_F",
     "B_MBT_01_mlrs_F",

@@ -15,11 +15,11 @@ execVM "scripts\client\ammoboxes\ammobox_action_manager.sqf";
 execVM "scripts\client\build\build_overlay.sqf";
 execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
-if (KPLIB_mapmarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
+if (KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
 execVM "scripts\client\markers\fob_markers.sqf";
-if (!KPLIB_high_command && KPLIB_mapmarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
+if (!KPLIB_param_highCommand && KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
 execVM "scripts\client\markers\hostile_groups.sqf";
-if (KPLIB_mapmarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
+if (KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
 execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
@@ -43,13 +43,13 @@ player addEventHandler ["SeatSwitchedMan", {[_this select 2] call kp_vehicle_per
 player addEventHandler ["HandleRating", {if ((_this select 1) < 0) then {0};}];
 
 // Disable stamina, if selected in parameter
-if (!KPLIB_fatigue) then {
+if (!KPLIB_param_fatigue) then {
     player enableStamina false;
     player addEventHandler ["Respawn", {player enableStamina false;}];
 };
 
 // Reduce aim precision coefficient, if selected in parameter
-if (!KPLIB_sway) then {
+if (!KPLIB_param_weaponSway) then {
     player setCustomAimCoef 0.1;
     player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
 };
@@ -60,9 +60,9 @@ if (!KPLIB_sway) then {
 
 execVM "scripts\client\ui\intro.sqf";
 
-[player] joinSilent (createGroup [KPLIB_side_friendly, true]);
+[player] joinSilent (createGroup [KPLIB_side_player, true]);
 
 // Start Tutorial
-if (KPLIB_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
+if (KPLIB_param_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
     [] call KPLIB_fnc_tutorial;
 };

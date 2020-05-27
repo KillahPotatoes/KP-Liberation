@@ -1,11 +1,11 @@
 sync_vars = []; publicVariable "sync_vars";
 
-waitUntil{!isNil "save_is_loaded"};
+waitUntil{!isNil "KPLIB_saveLoaded"};
 waitUntil{!isNil "KPLIB_fob_resources"};
 waitUntil{!isNil "KPLIB_supplies_global"};
 waitUntil{!isNil "KPLIB_ammo_global"};
 waitUntil{!isNil "KPLIB_fuel_global"};
-waitUntil{!isNil "combat_readiness"};
+waitUntil{!isNil "KPLIB_enemyReadiness"};
 waitUntil{!isNil "unitcap"};
 waitUntil{!isNil "KPLIB_heli_count"};
 waitUntil{!isNil "KPLIB_plane_count"};
@@ -18,7 +18,7 @@ waitUntil{!isNil "KPLIB_guerilla_strength"};
 waitUntil{!isNil "infantry_weight"};
 waitUntil{!isNil "armor_weight"};
 waitUntil{!isNil "air_weight"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 private _KPLIB_fob_resources_old = [];
 private _KPLIB_supplies_global_old = -1;
@@ -29,7 +29,7 @@ private _KPLIB_heli_count_old = -1;
 private _KPLIB_plane_count_old = -1;
 private _KPLIB_heli_slots_old = -1;
 private _KPLIB_plane_slots_old = -1;
-private _combat_readiness_old = -1;
+private _KPLIB_enemyReadiness_old = -1;
 private _resources_intel_old = -999;
 private _infantry_cap_old = -999;
 private _KPLIB_civ_rep_old = -999;
@@ -49,7 +49,7 @@ while {true} do {
         || _KPLIB_plane_count_old != KPLIB_plane_count
         || _KPLIB_heli_slots_old != KPLIB_heli_slots
         || _KPLIB_plane_slots_old != KPLIB_plane_slots
-        || _combat_readiness_old != combat_readiness
+        || _KPLIB_enemyReadiness_old != KPLIB_enemyReadiness
         || _resources_intel_old != resources_intel
         || _infantry_cap_old != infantry_cap
         || _KPLIB_civ_rep_old != KPLIB_civ_rep
@@ -72,7 +72,7 @@ while {true} do {
         KPLIB_plane_count,
         KPLIB_heli_slots,
         KPLIB_plane_slots,
-        combat_readiness,
+        KPLIB_enemyReadiness,
         resources_intel,
         infantry_cap,
         KPLIB_civ_rep,
@@ -92,7 +92,7 @@ while {true} do {
     _KPLIB_plane_count_old = KPLIB_plane_count;
     _KPLIB_heli_slots_old = KPLIB_heli_slots;
     _KPLIB_plane_slots_old = KPLIB_plane_slots;
-    _combat_readiness_old = combat_readiness;
+    _KPLIB_enemyReadiness_old = KPLIB_enemyReadiness;
     _resources_intel_old = resources_intel;
     _infantry_cap_old = infantry_cap;
     _KPLIB_civ_rep_old = KPLIB_civ_rep;

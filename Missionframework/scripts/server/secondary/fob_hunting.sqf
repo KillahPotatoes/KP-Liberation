@@ -1,5 +1,5 @@
 
-_defenders_amount = (15 * (sqrt (KPLIB_unitcap))) min 15;
+_defenders_amount = (15 * (sqrt (KPLIB_param_unitcap))) min 15;
 
 _spawn_marker = [2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint;
 if (_spawn_marker == "") exitWith {["Could not find position for fob hunting mission", "ERROR"] call KPLIB_fnc_log;};
@@ -91,7 +91,7 @@ while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count
     [_nextDefender] spawn building_defence_ai;
 } forEach _idxselected;
 
-private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (KPLIB_unitcap)));
+private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (KPLIB_param_unitcap)));
 
 _grpsentry = createGroup [KPLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
@@ -127,7 +127,7 @@ waitUntil {
     (_base_objectives select {alive _x}) isEqualTo []
 };
 
-combat_readiness = round (combat_readiness * (1 - KPLIB_secondary_objective_impact));
+KPLIB_enemyReadiness = round (KPLIB_enemyReadiness * (1 - KPLIB_secondary_objective_impact));
 stats_secondary_objectives = stats_secondary_objectives + 1;
 sleep 1;
 [] spawn KPLIB_fnc_doSave;

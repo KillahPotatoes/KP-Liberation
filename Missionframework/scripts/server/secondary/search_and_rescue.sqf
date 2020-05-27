@@ -69,7 +69,7 @@ for [ {_idx=0},{_idx < _nbsentry},{_idx=_idx+1} ] do {
 (KPLIB_o_transportTruck createVehicle ((getpos _helowreck) getPos [25, random 360])) setDir random 360;
 
 private _vehicle_pool = KPLIB_o_armyVehicles;
-if ( combat_readiness < 50 ) then {
+if ( KPLIB_enemyReadiness < 50 ) then {
     _vehicle_pool = KPLIB_o_armyVehiclesLight;
 };
 
@@ -97,7 +97,7 @@ if ( _alive_crew_count == 0 ) then {
     [7] remoteExec ["remote_call_intel"];
 } else {
     [8] remoteExec ["remote_call_intel"];
-    private _grp = createGroup [KPLIB_side_friendly, true];
+    private _grp = createGroup [KPLIB_side_player, true];
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
     {_x doFollow (leader _grp)} foreach units _grp;

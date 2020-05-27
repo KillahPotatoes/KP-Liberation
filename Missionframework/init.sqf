@@ -4,9 +4,9 @@ KPLIB_endgame = 0;
 KPLIB_respawn_marker = "respawn";
 
 // Version of the KP Liberation framework
-KPLIB_version = [0, 96, 7];
+KPLIB_version = [0, 96, 8];
 
-enableSaving [ false, false ];
+enableSaving [false, false];
 
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
 
@@ -20,7 +20,7 @@ if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compile preprocessFileLineNumbers "kp_objectInits.sqf";
 
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
-if (KPPLM_CBA && KPLIB_playermenu) then {
+if (KPPLM_CBA && KPLIB_param_playerMenu) then {
     [] call KPPLM_fnc_postInit;
 } else {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";

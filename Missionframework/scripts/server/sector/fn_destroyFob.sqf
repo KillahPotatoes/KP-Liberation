@@ -30,7 +30,7 @@ _buildings append KPLIB_b_deco_classes;
             _this setDamage 1;
         };
     };
-} forEach ((_fobPos nearObjects (KPLIB_fob_range * 1.2)) select {getObjectType _x >= 8});
+} forEach ((_fobPos nearObjects (KPLIB_range_fob * 1.2)) select {getObjectType _x >= 8});
 
 KPLIB_clearances deleteAt (KPLIB_clearances findIf {(_x select 0) isEqualTo _fobPos});
 publicVariable "KPLIB_clearances";

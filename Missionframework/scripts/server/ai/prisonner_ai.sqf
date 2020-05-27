@@ -34,7 +34,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
             _unit setCaptive true;
         };
         waitUntil {sleep 1;
-            !alive _unit || side group _unit == KPLIB_side_friendly
+            !alive _unit || side group _unit == KPLIB_side_player
         };
 
         if (alive _unit) then {

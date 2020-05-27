@@ -26,14 +26,14 @@ if (isServer) then {
     if (isNil "air_weight") then {air_weight = 33};
 
     // BLUFOR Killer handling
-    if ((side _killer) == KPLIB_side_friendly) then {
+    if ((side _killer) == KPLIB_side_player) then {
 
         // Increase combat readiness for kills near a capital.
         private _nearby_bigtown = KPLIB_sectors_capital select {!(_x in KPLIB_sectors_player) && (_unit distance (markerpos _x) < 250)};
         if (count _nearby_bigtown > 0) then {
-            combat_readiness = combat_readiness + (0.5 * KPLIB_difficulty_modifier);
-            stats_readiness_earned = stats_readiness_earned + (0.5 * KPLIB_difficulty_modifier);
-            if (combat_readiness > 100.0 && KPLIB_difficulty_modifier < 2) then {combat_readiness = 100.0};
+            KPLIB_enemyReadiness = KPLIB_enemyReadiness + (0.5 * KPLIB_param_difficulty);
+            stats_readiness_earned = stats_readiness_earned + (0.5 * KPLIB_param_difficulty);
+            if (KPLIB_enemyReadiness > 100.0 && KPLIB_param_difficulty < 2) then {KPLIB_enemyReadiness = 100.0};
         };
 
         // Weights adjustments depending on what vehicle the BLUFOR killer used
@@ -75,7 +75,7 @@ if (isServer) then {
         // OPFOR casualty
         if (side (group _unit) == KPLIB_side_enemy) then {
             // Killed by BLUFOR
-            if (side _killer == KPLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_player) then {
                 stats_opfor_soldiers_killed = stats_opfor_soldiers_killed + 1;
             };
 
@@ -86,11 +86,11 @@ if (isServer) then {
         };
 
         // BLUFOR casualty
-        if (side (group _unit) == KPLIB_side_friendly) then {
+        if (side (group _unit) == KPLIB_side_player) then {
             stats_blufor_soldiers_killed = stats_blufor_soldiers_killed + 1;
 
             // Killed by BLUFOR
-            if (side _killer == KPLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_player) then {
                 stats_blufor_teamkills = stats_blufor_teamkills + 1;
             };
         };
@@ -101,10 +101,10 @@ if (isServer) then {
             stats_resistance_killed = stats_resistance_killed + 1;
 
             // Resistance is friendly to BLUFOR
-            if ((KPLIB_side_friendly getFriend KPLIB_side_resistance) >= 0.6) then {
+            if ((KPLIB_side_player getFriend KPLIB_side_resistance) >= 0.6) then {
 
                 // Killed by BLUFOR
-                if (side _killer == KPLIB_side_friendly) then {
+                if (side _killer == KPLIB_side_player) then {
                     if (KPLIB_asymmetric_debug > 0) then {[format ["Guerilla unit killed by: %1", name _killer], "ASYMMETRIC"] call KPLIB_fnc_log;};
                     [3, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     stats_resistance_teamkills = stats_resistance_teamkills + 1;
@@ -123,7 +123,7 @@ if (isServer) then {
             stats_civilians_killed = stats_civilians_killed + 1;
 
             // Killed by BLUFOR
-            if (side _killer == KPLIB_side_friendly) then {
+            if (side _killer == KPLIB_side_player) then {
                 if (KPLIB_civrep_debug > 0) then {[format ["Civilian killed by: %1", name _killer], "CIVREP"] call KPLIB_fnc_log;};
                 [2, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                 [KPLIB_cr_kill_penalty, true] spawn F_cr_changeCR;
@@ -137,11 +137,11 @@ if (isServer) then {
     } else {
         // Enemy vehicle casualty
         if ((toLower (typeof _unit)) in KPLIB_o_allVeh_classes) then {
-            stats_KPLIB_o_armyVehicles_killed = stats_KPLIB_o_armyVehicles_killed + 1;
+            stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 
             // Destroyed by player
             if (isplayer _killer) then {
-                stats_KPLIB_o_armyVehicles_killed_by_players = stats_KPLIB_o_armyVehicles_killed_by_players + 1;
+                stats_opfor_vehicles_killed_by_players = stats_opfor_vehicles_killed_by_players + 1;
             };
         } else {
             // Civilian vehicle casualty

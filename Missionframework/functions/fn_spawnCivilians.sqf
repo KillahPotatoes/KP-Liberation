@@ -25,13 +25,13 @@ private _civs = [];
 private _sPos = markerPos _sector;
 
 // Amount and spread depending if capital or city/factory
-private _amount = round ((3 + (floor (random 7))) * KPLIB_civilian_activity);
+private _amount = round ((3 + (floor (random 7))) * KPLIB_param_civActivity);
 private _spread = 1;
 if (_sector in KPLIB_sectors_capital) then {
     _amount = _amount + 10;
     _spread = 2.5;
 };
-_amount = _amount * (sqrt (KPLIB_unitcap));
+_amount = _amount * (sqrt (KPLIB_param_unitcap));
 
 // Spawn civilians
 private _grp = grpNull;

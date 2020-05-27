@@ -4,7 +4,7 @@ if (KPLIB_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - sector_guerilla
 
 private _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 
-while {(([_startpos, 500, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
+while {(([_startpos, 500, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
     _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 };
 

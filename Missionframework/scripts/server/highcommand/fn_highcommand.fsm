@@ -103,8 +103,8 @@ class FSM
                                         priority = 0.000000;
                                         to="Init_High_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/"_cmdr = [] call KPLIB_fnc_getCommander;"/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded""" \n
-                                         "&& {save_is_loaded}" \n
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""KPLIB_saveLoaded""" \n
+                                         "&& {KPLIB_saveLoaded}" \n
                                          "&& {time > 5}" \n
                                          "&& {alive _cmdr}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -254,7 +254,7 @@ class FSM
                          "// Get all groups with at least one member alive" \n
                          "// and not already added to high command" \n
                          "_newGrps = allGroups select {" \n
-                         "    (side _x) isEqualTo KPLIB_side_friendly" \n
+                         "    (side _x) isEqualTo KPLIB_side_player" \n
                          "    && {!(_x in _hcGrps)}" \n
                          "    && {!(((units _x) select {alive _x}) isEqualTo [])}" \n
                          "    && {!(_cmdr in (units _x))}" \n
@@ -401,7 +401,7 @@ class FSM
                          "BIS_marta_mainscope setvariable [""rules""," \n
                          "[" \n
                          "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_enemy isEqualTo west)]," \n
-                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_friendly isEqualTo west)]," \n
+                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_player isEqualTo west)]," \n
                          "	[""n_"", [0, 0.5, 0, 1]]," \n
                          "	[""n_"", [0.4, 0, 0.5, 1]]" \n
                          "], true];"/*%FSM</STATEINIT""">*/;

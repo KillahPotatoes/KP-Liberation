@@ -6,8 +6,8 @@ private _color = "";
 private _ticks = 0;
 private _cfg = configFile >> "cfgVehicles";
 
-if ( side player == KPLIB_side_friendly ) then {
-	_color = KPLIB_color_friendly;
+if ( side player == KPLIB_side_player ) then {
+	_color = KPLIB_color_player;
 } else {
 	_color = KPLIB_color_enemy;
 };

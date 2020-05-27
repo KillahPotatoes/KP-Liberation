@@ -1,8 +1,8 @@
-if (!KPLIB_permissions_param) exitWith {};
+if (!KPLIB_param_permissions) exitWith {};
 
 waitUntil {!isNil "KPLIB_permissions"};
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 while {true} do {
 

@@ -25,7 +25,7 @@ while {true} do {
     if !(KPLIB_sectors_fob isEqualTo []) then {
         _fobPos = [] call KPLIB_fnc_getNearestFob;
         _fobDist = player distance2d _fobPos;
-        _fobName = ["", ["FOB", [_fobPos] call KPLIB_fnc_getFobName] joinString " "] select (_fobDist < KPLIB_fob_range);
+        _fobName = ["", ["FOB", [_fobPos] call KPLIB_fnc_getFobName] joinString " "] select (_fobDist < KPLIB_range_fob);
     } else {
         _fobPos = [0, 0, 0];
         _fobDist = 99999;
@@ -43,12 +43,12 @@ while {true} do {
     player setVariable ["KPLIB_isAwayFromStart", (player distance2d startbase) > 1000];
 
     // Is near an arsenal object
-    if (KPLIB_mobilearsenal) then {
+    if (KPLIB_param_mobileArsenal) then {
         player setVariable ["KPLIB_isNearArsenal", !(((player nearObjects [KPLIB_b_arsenal, 5]) select {getObjectType _x >= 8}) isEqualTo [])];
     };
 
     // Is near a mobile respawn
-    if (KPLIB_mobilerespawn) then {
+    if (KPLIB_param_mobileRespawn) then {
         player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [[KPLIB_b_mobileRespawn, KPLIB_b_potato01], 10]) isEqualTo [])];
     };
 
@@ -57,7 +57,7 @@ while {true} do {
 
     // Nearest activated sector and possible production data
     player setVariable ["KPLIB_nearProd", KPLIB_production param [KPLIB_production findIf {(_x select 1) isEqualTo ([100] call KPLIB_fnc_getNearestSector)}, []]];
-    player setVariable ["KPLIB_nearSector", [KPLIB_sector_size] call KPLIB_fnc_getNearestSector];
+    player setVariable ["KPLIB_nearSector", [KPLIB_range_sectorActivation] call KPLIB_fnc_getNearestSector];
 
     // Zeus module synced to player
     player setVariable ["KPLIB_ownedZeusModule", getAssignedCuratorLogic player];

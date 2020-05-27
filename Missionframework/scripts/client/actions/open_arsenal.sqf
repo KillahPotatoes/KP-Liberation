@@ -9,7 +9,7 @@ private _backpack = backpack player;
 
 private ["_loadouts_data"];
 // Get loadouts either from ACE or BI arsenals
-if (KPLIB_ace && KPLIB_arsenal_type) then {
+if (KPLIB_ace && KPLIB_param_arsenalType) then {
     _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
 } else {
     private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
@@ -74,13 +74,13 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 
     if ( load_loadout > 0 ) then {
         private _loaded_loadout = _loadouts_data select (lbCurSel 201);
-        if (KPLIB_ace && KPLIB_arsenal_type) then {
+        if (KPLIB_ace && KPLIB_param_arsenalType) then {
             player setUnitLoadout (_loaded_loadout select 1);
         } else {
             [player, [profileNamespace, _loaded_loadout]] call BIS_fnc_loadInventory;
         };
 
-        if (KPLIB_arsenalUsePreset) then {
+        if (KPLIB_param_useArsenalPreset) then {
             if ([_backpack] call KPLIB_fnc_checkGear) then {
                 hint format [ localize "STR_HINT_LOADOUT_LOADED", _loaded_loadout param [0]];
             };
@@ -115,15 +115,15 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
 if ( edit_loadout > 0 ) then {
     closeDialog 0;
     waitUntil { !dialog };
-    if (KPLIB_ace && KPLIB_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {
         [player, player, false] call ace_arsenal_fnc_openBox;
     } else {
         [ "Open", false ] spawn BIS_fnc_arsenal;
     };
 
-    if (KPLIB_arsenalUsePreset) then {
+    if (KPLIB_param_useArsenalPreset) then {
         uiSleep 5;
-        private _arsenalDisplay = ["RSCDisplayArsenal", "ace_arsenal_display"] select (KPLIB_ace && KPLIB_arsenal_type);
+        private _arsenalDisplay = ["RSCDisplayArsenal", "ace_arsenal_display"] select (KPLIB_ace && KPLIB_param_arsenalType);
         waitUntil {sleep 1; isNull (uinamespace getvariable [_arsenalDisplay, displayNull])};
         [_backpack] call KPLIB_fnc_checkGear;
     };

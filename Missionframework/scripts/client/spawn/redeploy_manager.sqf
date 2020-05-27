@@ -9,8 +9,8 @@ KPLIB_force_redeploy = false;
 
 waitUntil {!isNil "KPLIB_sectors_fob"};
 waitUntil {!isNil "KPLIB_sectors_player"};
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 private _spawn_str = "";
 
@@ -59,7 +59,7 @@ while {true} do {
 
     // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
-    if (KPLIB_ace && KPLIB_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {
         _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
     } else {
         private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
@@ -86,7 +86,7 @@ while {true} do {
             choiceslist = choiceslist + [[format ["FOB %1 - %2", (KPLIB_militaryAlphabet select _idx),mapGridPosition (KPLIB_sectors_fob select _idx)],KPLIB_sectors_fob select _idx]];
         };
 
-        if (KPLIB_mobilerespawn) then {
+        if (KPLIB_param_mobileRespawn) then {
             if (KPLIB_respawn_time <= time) then {
                 private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
 
@@ -167,7 +167,7 @@ while {true} do {
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
-            if (KPLIB_ace && KPLIB_arsenal_type) then {
+            if (KPLIB_ace && KPLIB_param_arsenalType) then {
                 player setUnitLoadout (_selectedLoadout select 1);
             } else {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
@@ -188,16 +188,16 @@ while {true} do {
     if (alive player && deploy == 1) then {
         [_spawn_str] spawn spawn_camera;
         if (KPLIB_respawn_mobile_done) then {
-            KPLIB_respawn_time = time + KPLIB_respawn_cooldown;
+            KPLIB_respawn_time = time + KPLIB_param_mobileRespawnCooldown;
             KPLIB_respawn_mobile_done = false;
         };
     };
 
-    if (KPLIB_arsenalUsePreset) then {
+    if (KPLIB_param_useArsenalPreset) then {
         [_backpack] call KPLIB_fnc_checkGear;
     };
 
-    if (KPLIB_mobilerespawn && (KPLIB_respawn_time > time)) then {
+    if (KPLIB_param_mobileRespawn && (KPLIB_respawn_time > time)) then {
         hint format [localize "STR_RESPAWN_COOLDOWN_HINT", ceil ((KPLIB_respawn_time - time) / 60)];
         uiSleep 12;
         hint "";

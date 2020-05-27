@@ -1,5 +1,5 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 KPLIB_fob_resources = [];
 KPLIB_supplies_global = 0;
@@ -7,7 +7,7 @@ KPLIB_ammo_global = 0;
 KPLIB_fuel_global = 0;
 KPLIB_heli_slots = 0;
 KPLIB_plane_slots = 0;
-infantry_cap = 50 * KPLIB_resources_multiplier;
+infantry_cap = 50 * KPLIB_param_resourcesMulti;
 
 please_recalculate = true;
 
@@ -23,10 +23,10 @@ while {true} do {
     private _local_fuel_global = 0;
     private _local_heli_slots = 0;
     private _local_plane_slots = 0;
-    private _local_infantry_cap = 50 * KPLIB_resources_multiplier;
+    private _local_infantry_cap = 50 * KPLIB_param_resourcesMulti;
 
     {
-        private _fob_buildings = _x nearobjects KPLIB_fob_range;
+        private _fob_buildings = _x nearobjects KPLIB_range_fob;
         private _storage_areas = _fob_buildings select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
         private _heliSlots = {(typeOf _x) == KPLIB_b_slotHeli;} count _fob_buildings;
         private _planeSlots = {(typeOf _x) == KPLIB_b_slotPlane;} count _fob_buildings;
@@ -60,7 +60,7 @@ while {true} do {
 
     {
         if ( _x in KPLIB_sectors_city ) then {
-            _local_infantry_cap = _local_infantry_cap + (10 * KPLIB_resources_multiplier);
+            _local_infantry_cap = _local_infantry_cap + (10 * KPLIB_param_resourcesMulti);
         };
     } foreach KPLIB_sectors_player;
 

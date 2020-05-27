@@ -22,23 +22,23 @@ if (isNil "KPLIB_respawn_loadout") then {
 // Support Module handling
 if ([
     false,
-    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_suppMod_whitelist,
+    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_supportModule_whitelist,
     true
-] select KPLIB_suppMod) then {
-    waitUntil {!isNil "KPLIB_suppMod_req" && !isNil "KPLIB_suppMod_arty" && time > 5};
+] select KPLIB_param_supportModule) then {
+    waitUntil {!isNil "KPLIB_param_supportModule_req" && !isNil "KPLIB_param_supportModule_arty" && time > 5};
 
     // Remove link to corpse, if respawned
     if (!isNull _oldUnit) then {
-        KPLIB_suppMod_req synchronizeObjectsRemove [_oldUnit];
-        _oldUnit synchronizeObjectsRemove [KPLIB_suppMod_req];
+        KPLIB_param_supportModule_req synchronizeObjectsRemove [_oldUnit];
+        _oldUnit synchronizeObjectsRemove [KPLIB_param_supportModule_req];
     };
 
     // Link player to support modules
-    [player, KPLIB_suppMod_req, KPLIB_suppMod_arty] call BIS_fnc_addSupportLink;
+    [player, KPLIB_param_supportModule_req, KPLIB_param_supportModule_arty] call BIS_fnc_addSupportLink;
 
     // Init modules, if newly joined and not client host
     if (isNull _oldUnit && !isServer) then {
-        [KPLIB_suppMod_req] call BIS_fnc_moduleSupportsInitRequester;
-        [KPLIB_suppMod_arty] call BIS_fnc_moduleSupportsInitProvider;
+        [KPLIB_param_supportModule_req] call BIS_fnc_moduleSupportsInitRequester;
+        [KPLIB_param_supportModule_arty] call BIS_fnc_moduleSupportsInitProvider;
     };
 };

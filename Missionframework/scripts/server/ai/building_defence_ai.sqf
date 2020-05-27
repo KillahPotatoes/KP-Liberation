@@ -13,9 +13,9 @@ while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
         _ratio = [_sector] call KPLIB_fnc_getBluforRatio;
     };
 
-    _range = floor (linearConversion [0, 1, _ratio, 0, KPLIB_capture_size / 3 * 2, true]);
+    _range = floor (linearConversion [0, 1, _ratio, 0, KPLIB_range_sectorCapture / 3 * 2, true]);
 
-    _hostiles = ((getPos _unit) nearEntities [["Man"], _range]) select {side _x == KPLIB_side_friendly};
+    _hostiles = ((getPos _unit) nearEntities [["Man"], _range]) select {side _x == KPLIB_side_player};
 
     if (_move_is_disabled &&
         {

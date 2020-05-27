@@ -28,11 +28,11 @@ switch (_notif_id) do {
     case 4: {
         ["lib_civ_hvt_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
         private _marker = createMarker ["HVT_marker", _pos];
-        _marker setMarkerColor KPLIB_color_enemy_bright;
+        _marker setMarkerColor KPLIB_color_enemyActive;
         _marker setMarkerType "hd_unknown";
 
         private _marker_zone = createMarker ["HVT_zone", _pos];
-        _marker_zone setMarkerColor KPLIB_color_enemy_bright;
+        _marker_zone setMarkerColor KPLIB_color_enemyActive;
         _marker_zone setMarkerShape "ELLIPSE";
         _marker_zone setMarkerBrush "FDiagonal";
         _marker_zone setMarkerSize [500,500];

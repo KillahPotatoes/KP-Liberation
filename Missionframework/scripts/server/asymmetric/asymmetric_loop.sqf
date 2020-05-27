@@ -1,6 +1,6 @@
-waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_civ_rep"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 if (KPLIB_asymmetric_debug > 0) then {[format ["Loop spawned on: %1", debug_source], "ASYMMETRIC"] call KPLIB_fnc_log;};
 
@@ -21,7 +21,7 @@ while {KPLIB_endgame == 0} do {
         {
             private _sector = _x;
             private _blocked = false;
-            private _units_at_sector = [markerPos _sector, KPLIB_sector_size, KPLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+            private _units_at_sector = [markerPos _sector, KPLIB_range_sectorActivation, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 
             {
                 if ((_x select 0) == _sector) exitWith {
@@ -40,7 +40,7 @@ while {KPLIB_endgame == 0} do {
 
                 if ((random 100) <= KPLIB_resistance_ambush_chance) then {
                     private _hc = [] call KPLIB_fnc_getLessLoadedHC;
-                    private _ieds = round (([] call KPLIB_fnc_crGetMulti) * KPLIB_difficulty_modifier);
+                    private _ieds = round (([] call KPLIB_fnc_crGetMulti) * KPLIB_param_difficulty);
 
                     if (isNull _hc) then {
                         [_sector, _ieds] spawn manage_asymIED;

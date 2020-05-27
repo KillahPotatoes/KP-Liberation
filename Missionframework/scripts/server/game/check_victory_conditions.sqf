@@ -30,8 +30,8 @@ if ([] call KPLIB_victoryCheck && KPLIB_endgame != 1) then {
     publicstats pushback stats_ieds_detonated;
     publicstats pushback stats_opfor_killed_by_players;
     publicstats pushback stats_opfor_soldiers_killed;
-    publicstats pushback stats_KPLIB_o_armyVehicles_killed;
-    publicstats pushback stats_KPLIB_o_armyVehicles_killed_by_players;
+    publicstats pushback stats_opfor_vehicles_killed;
+    publicstats pushback stats_opfor_vehicles_killed_by_players;
     publicstats pushback stats_player_deaths;
     publicstats pushback stats_playtime;
     publicstats pushback stats_prisoners_captured;
@@ -60,8 +60,8 @@ if ([] call KPLIB_victoryCheck && KPLIB_endgame != 1) then {
     [format ["Playtime: %1 days, %2 hours, %3 minutes, %4 seconds", _playtime_days, _playtime_hours, _playtime_minutes, _playtime_seconds], "MISSION END"] call KPLIB_fnc_log;
     [format ["OPFOR infantry killed: %1", stats_opfor_soldiers_killed], "MISSION END"] call KPLIB_fnc_log;
     [format ["OPFOR infantry killed by players: %1", stats_opfor_killed_by_players], "MISSION END"] call KPLIB_fnc_log;
-    [format ["OPFOR vehicles destroyed: %1", stats_KPLIB_o_armyVehicles_killed], "MISSION END"] call KPLIB_fnc_log;
-    [format ["OPFOR vehicles destroyed by players: %1", stats_KPLIB_o_armyVehicles_killed_by_players], "MISSION END"] call KPLIB_fnc_log;
+    [format ["OPFOR vehicles destroyed: %1", stats_opfor_vehicles_killed], "MISSION END"] call KPLIB_fnc_log;
+    [format ["OPFOR vehicles destroyed by players: %1", stats_opfor_vehicles_killed_by_players], "MISSION END"] call KPLIB_fnc_log;
     [format ["BLUFOR infantry recruited: %1", stats_blufor_soldiers_recruited], "MISSION END"] call KPLIB_fnc_log;
     [format ["BLUFOR infantry killed: %1", stats_blufor_soldiers_killed], "MISSION END"] call KPLIB_fnc_log;
     [format ["BLUFOR vehicles built: %1", stats_blufor_vehicles_built], "MISSION END"] call KPLIB_fnc_log;

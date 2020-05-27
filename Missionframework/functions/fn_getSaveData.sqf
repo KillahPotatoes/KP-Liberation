@@ -26,7 +26,7 @@ private _allCrates = [];
 
 // Get all blufor groups
 private _allBlueGroups = allGroups select {
-    (side _x == KPLIB_side_friendly) &&                 // Only blufor groups
+    (side _x == KPLIB_side_player) &&                 // Only blufor groups
     {isNull objectParent (leader _x)} &&                // Make sure it's an infantry group
     {!(((units _x) select {alive _x}) isEqualTo [])}    // At least one unit has to be alive
 };
@@ -35,7 +35,7 @@ private _allBlueGroups = allGroups select {
 private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 {
     _fobPos = _x;
-    _fobObjects = (_fobPos nearObjects (KPLIB_fob_range * 1.2)) select {
+    _fobObjects = (_fobPos nearObjects (KPLIB_range_fob * 1.2)) select {
         ((toLower (typeof _x)) in KPLIB_classnamesToSave) &&        // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
@@ -56,15 +56,15 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
         // Add to save array
         _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
-    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (KPLIB_fob_range * 1.2)});
+    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (KPLIB_range_fob * 1.2)});
 
     // Save all mines around FOB
-    _fobMines = allMines inAreaArray [_fobPos, KPLIB_fob_range * 1.2, KPLIB_fob_range * 1.2];
+    _fobMines = allMines inAreaArray [_fobPos, KPLIB_range_fob * 1.2, KPLIB_range_fob * 1.2];
     _allMines append (_fobMines apply {[
         getPosWorld _x,
         [vectorDirVisual _x, vectorUpVisual _x],
         typeOf _x,
-        _x mineDetectedBy KPLIB_side_friendly
+        _x mineDetectedBy KPLIB_side_player
     ]});
 } forEach KPLIB_sectors_fob;
 
@@ -125,7 +125,7 @@ private ["_supplyValue", "_ammoValue", "_fuelValue"];
 // Save crates at blufor sectors which spawn crates on activation
 {
     _allCrates append (
-        ((nearestObjects [markerPos _x, KPLIB_crates, KPLIB_capture_size]) select {isNull attachedTo _x}) apply {
+        ((nearestObjects [markerPos _x, KPLIB_crates, KPLIB_range_sectorCapture]) select {isNull attachedTo _x}) apply {
             [typeOf _x, _x getVariable ["KPLIB_crate_value", 0], getPosATL _x]
         }
     );
@@ -155,8 +155,8 @@ private _stats = [
     stats_ieds_detonated,
     stats_opfor_killed_by_players,
     stats_opfor_soldiers_killed,
-    stats_KPLIB_o_armyVehicles_killed,
-    stats_KPLIB_o_armyVehicles_killed_by_players,
+    stats_opfor_vehicles_killed,
+    stats_opfor_vehicles_killed_by_players,
     stats_player_deaths,
     stats_playtime,
     stats_prisoners_captured,
@@ -191,7 +191,7 @@ private _weights = [
     _weights,
     _aiGroups,
     KPLIB_sectors_player,
-    combat_readiness,
+    KPLIB_enemyReadiness,
     KPLIB_sectors_fob,
     KPLIB_permissions,
     KPLIB_vehicle_to_military_base_links,

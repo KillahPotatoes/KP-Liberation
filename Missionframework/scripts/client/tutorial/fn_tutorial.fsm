@@ -226,13 +226,13 @@ class FSM
                                         priority = 0.000000;
                                         to="Set_all_completion";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded""" \n
-                                         "&& {save_is_loaded}" \n
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""KPLIB_saveLoaded""" \n
+                                         "&& {KPLIB_saveLoaded}" \n
                                          "&& {alive player}" \n
                                          "&& {" \n
                                          "    private _locations = [startbase];" \n
                                          "    _locations append KPLIB_sectors_fob;" \n
-                                         "    !((_locations select {(_x distance2d player) < KPLIB_fob_range}) isEqualTo [])" \n
+                                         "    !((_locations select {(_x distance2d player) < KPLIB_range_fob}) isEqualTo [])" \n
                                          "}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
@@ -330,7 +330,7 @@ class FSM
                          "    _sectorComplete" \n
                          "];" \n
                          "" \n
-                         "private _nextState = diag_tickTime + ([4, 10] select KPLIB_deployment_cinematic);"/*%FSM</STATEINIT""">*/;
+                         "private _nextState = diag_tickTime + ([4, 10] select KPLIB_param_deployCinematic);"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -439,7 +439,7 @@ class FSM
                                         to="Init_path";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    [""KPLIB_tutorialTask_Fob""] call BIS_fnc_taskCompleted" \n
+                                         "    [""KPLIB_param_tutorialTask_Fob""] call BIS_fnc_taskCompleted" \n
                                          "    ||" \n
                                          "    {[] call _fobComplete}" \n
                                          ")"/*%FSM</CONDITION""">*/;
@@ -454,7 +454,7 @@ class FSM
                                         to="Init_path_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    [""KPLIB_tutorialTask_Sector""] call BIS_fnc_taskCompleted" \n
+                                         "    [""KPLIB_param_tutorialTask_Sector""] call BIS_fnc_taskCompleted" \n
                                          "    ||" \n
                                          "    {[] call _sectorComplete}" \n
                                          ")"/*%FSM</CONDITION""">*/;
@@ -641,7 +641,7 @@ class FSM
                                         to="Complete_task";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    (((KPLIB_sectors_fob select 0) nearObjects KPLIB_fob_range) select {" \n
+                                         "    (((KPLIB_sectors_fob select 0) nearObjects KPLIB_range_fob) select {" \n
                                          "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 0" \n
                                          "    }) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;
@@ -917,7 +917,7 @@ class FSM
                                         to="Start_production";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
-                                         "    (((markerPos _factory) nearObjects KPLIB_fob_range) select {" \n
+                                         "    (((markerPos _factory) nearObjects KPLIB_range_fob) select {" \n
                                          "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 1" \n
                                          "    }) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;

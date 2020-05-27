@@ -1,6 +1,6 @@
-waitUntil {!isNil "save_is_loaded"};
+waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_production_markers"};
-waitUntil {save_is_loaded};
+waitUntil {KPLIB_saveLoaded};
 
 private _KPLIB_production_markers_old = [0];
 
