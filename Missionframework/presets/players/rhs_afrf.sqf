@@ -2,7 +2,7 @@
     File: rhs_afrf.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-14
-    Last Update: 2020-05-25
+    Last Update: 2020-06-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -111,7 +111,6 @@ KPLIB_b_vehHeavy = [
     ["rhs_t80ue1",400,350,250],                                         // T-80UE1
     ["rhs_t90a_tv",500,400,300],                                        // T-90A
     ["rhs_t90sab_tv",600,400,300],                                      // T-90SA (2016)
-    ["rhs_t14_tv",600,500,400],                                         // T-14
     ["rhs_2s1_tv",600,1000,300],                                        // 2S1
     ["rhs_2s3_tv",600,1250,300]                                         // 2S3M1
 ];
@@ -342,7 +341,6 @@ KPLIB_b_vehToUnlock = [
     "rhs_t80ue1",                                                       // T-80UE1
     "rhs_t90a_tv",                                                      // T-90A
     "rhs_t90sab_tv",                                                    // T-90SA (2016)
-    "rhs_t14_tv",                                                       // T-14
     "rhs_2s1_tv",                                                       // 2S1
     "rhs_2s3_tv",                                                       // 2S3M1
     "rhs_mi28n_vvsc",                                                   // Mi-28N

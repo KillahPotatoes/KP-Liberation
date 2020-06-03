@@ -2,7 +2,7 @@
     File: rhs_afrf.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-07
-    Last Update: 2020-05-15
+    Last Update: 2020-06-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -80,8 +80,7 @@ KPLIB_o_armyVehicles = [
     "rhs_t80",                                                          // T80
     "rhs_t80",                                                          // T80
     "rhs_t90a_tv",                                                      // T90A
-    "rhs_t90sab_tv",                                                    // T90SA (2016)
-    "rhs_t14_tv"                                                        // T-14
+    "rhs_t90sab_tv"                                                     // T90SA (2016)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
