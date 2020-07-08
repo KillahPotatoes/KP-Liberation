@@ -57,10 +57,14 @@ while {true} do {
                 _b_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KPLIB_storageBuildings,20]) select 0,true] call KPLIB_fnc_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{[_this select 0] call KPLIB_fnc_checkCrateValue;uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id4 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_PUSH" + "</t>",{(_this select 0) setPos ((_this select 0) getPos [1, (player getDir (_this select 0))]);},"",-504,true,false,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
+                _b_action_id5 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_CARRY" + "</t>",{(_this select 0) attachTo [(_this select 1), [0, 1, 0]];},"",-504,true,false,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player) && (isNull attachedTo _target)"];
+                _b_action_id6 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_DROP" + "</t>",{detach (_this select 0);},"",-504,true,false,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player) && (_this isEqualTo (attachedTo _target))"];
                 _next_box setVariable ["KPLIB_ammo_box_action", _b_action_id1, false];
                 _next_box setVariable ["KP_crate_store_action", _b_action_id2, false];
                 _next_box setVariable ["KP_crate_value_action", _b_action_id3, false];
                 _next_box setVariable ["KP_crate_push_action", _b_action_id4, false];
+                _next_box setVariable ["KP_crate_carry_action", _b_action_id5, false];
+                _next_box setVariable ["KP_crate_drop_action", _b_action_id6, false];
                 _managed_boxes pushback _next_box;
             };
 
@@ -75,6 +79,8 @@ while {true} do {
                 _next_box removeAction (_next_box getVariable ["KP_crate_store_action", -1]);
                 _next_box removeAction (_next_box getVariable ["KP_crate_value_action", -1]);
                 _next_box removeAction (_next_box getVariable ["KP_crate_push_action", -1]);
+                _next_box removeAction (_next_box getVariable ["KP_crate_carry_action", -1]);
+                _next_box removeAction (_next_box getVariable ["KP_crate_drop_action", -1]);
             }
         } foreach _managed_boxes;
 
