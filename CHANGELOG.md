@@ -2,6 +2,7 @@
 
 ## 0.96.8 (TBD)
 * Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: Ability to carry ressource crates.
 * Tweaked: Splitted the config file in seperate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
 * Tweaked: Arsenal presets are now in the presets folder.
