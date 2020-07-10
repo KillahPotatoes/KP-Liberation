@@ -7443,5 +7443,43 @@
             <English>Enables/Disables the KP cratefiller equipment overview.</English>
             <German>Aktiviert/Deaktiviert die KP Kistenfüller Ausrüstungsübersicht.</German>
         </Key>
+
+        <!-- HINTS -->
+
+        <Key ID="STR_KPLIB_HINT_ADDED">
+            <English>%1 was loaded %2 times.</English>
+            <German>%1 wurde %2 mal geladen.</German>
+            <Polish>%1 zostało załadowane %2 razy.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_FULL">
+            <English>The selected storage doesn't have sufficient space.</English>
+            <German>Der ausgewählte Laderaum hat keinen ausreichenden Platz.</German>
+            <Polish>Wybrany kontener nie ma dość wolnego miejsca.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGE">
+            <English>No storage selected.</English>
+            <German>Kein Laderaum ausgewählt.</German>
+            <Polish>Nie wybrano skrzyni.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RANGE">
+            <English>Selected transport medium is out of range.</English>
+            <German>Ausgewähltes Transportmedium ist außer Reichweite.</German>
+            <Polish>Wybrany środek transportu jest poza zasięgiem.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_SELECTION">
+            <English>Incomplete selection.</English>
+            <German>Unvollständige Auswahl.</German>
+            <Polish>Niepełny wybór.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_UNLOAD">
+            <English>%1 was unloaded %2 times.</English>
+            <German>%1 wurde %2 mal entladen.</German>
+            <Polish>%1 zostało wyładowane %2 razy.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_CRATEFILLER_ACTIONOPEN">
+            <English>-- KP Cratefiller --</English>
+            <German>-- KP Kistenfüller --</German>
+            <Polish>-- KP Cratefiller --</Polish>
+        </Key>
     </Package>
 </Project>

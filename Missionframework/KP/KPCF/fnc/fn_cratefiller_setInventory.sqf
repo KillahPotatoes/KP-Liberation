@@ -4,7 +4,7 @@
     File: fn_cratefiller_setInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-04-23
+    Last Update: 2020-07-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -23,10 +23,10 @@ params [
 ];
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = player getVariable ["KPLIB_fobName", ""];
 
 // Check if the storage is in range
-if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_param_fobRange) exitWith {
+if ((_storage distance2D (getMarkerPos _nearFOB)) > KPLIB_range_fob) exitWith {
     [localize "STR_KPLIB_HINT_RANGE"] call CBA_fnc_notify;
     [] remoteExecCall ["KPLIB_fnc_cratefiller_getNearStorages", (allPlayers - entities "HeadlessClient_F")];
 };

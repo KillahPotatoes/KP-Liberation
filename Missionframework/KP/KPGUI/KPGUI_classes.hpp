@@ -1206,7 +1206,7 @@ class KPGUI_PRE_DialogButtonSR: KPGUI_PRE_Button {
 */
 
 class KPGUI_PRE_LogoRightCorner: KPGUI_PRE_PictureRatio {
-    text = "KPGUI\res\kp512_ca.paa";
+    text = "KP\KPGUI\res\kp512_ca.paa";
     x = "safezoneX + safezoneW - 5.3 * (((safezoneW / safezoneH) min 1.2) / 40)";
     y = "safezoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
     w = "3.5 * (((safezoneW / safezoneH) min 1.2) / 40)";

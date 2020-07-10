@@ -5,7 +5,7 @@
     File: fn_cratefiller_getInventory.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2019-05-04
+    Last Update: 2020-07-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -24,7 +24,7 @@ private _dialog = findDisplay KPLIB_IDC_CRATEFILLER_DIALOG;
 
 // Get the storage object
 private _storage = [] call KPLIB_fnc_cratefiller_getStorage;
-private _nearFOB = [] call KPLIB_fnc_common_getPlayerFob;
+private _nearFOB = player getVariable ["KPLIB_fobName", ""];
 
 // Check for an active storage
 private _cargo = [];
