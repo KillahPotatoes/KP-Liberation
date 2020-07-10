@@ -2,7 +2,7 @@
     File: description.ext
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-11
+    Last Update: 2020-07-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -247,4 +247,5 @@ class CfgTaskDescriptions {
 #include "GREUH\UI\GREUH_interface.hpp"
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+#include "KP\KPCF\ui.hpp"
 

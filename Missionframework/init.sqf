@@ -26,6 +26,11 @@ if (KPPLM_CBA && KPLIB_param_playerMenu) then {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";
 };
 
+//Activate cratefiller on true param and active CBA
+if ((isClass (configFile >> "CfgPatches" >> "cba_main")) && KPLIB_param_cratefiller) then {
+    [] call KPLIB_fnc_cratefiller_postInit;
+};
+
 [] call compile preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
 if (isServer) then {
