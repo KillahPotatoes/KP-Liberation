@@ -1,9 +1,9 @@
 # Changelog
 
-## 0.96.71 (2020-08-05)
+## 0.96.7a (2020-08-05)
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
-* Fixed: Script errors in Civilian Informant side mission
-* Fixed: AI is not surrendering correctly when ACE is loaded
+* Fixed: Civilian Informant side mission didn't worked due to script error.
+* Fixed: AI didn't surrender correctly when ACE is loaded.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
