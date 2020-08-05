@@ -7,6 +7,7 @@
 * Fixed: Civilian Informant side mission didn't worked due to script error.
 * Fixed: AI didn't surrender correctly when ACE is loaded.
 * Fixed: The commander couldn't build squads via the build menu.
+* Fixed: Possible "Error: no unit" appearing in permission dialog.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
