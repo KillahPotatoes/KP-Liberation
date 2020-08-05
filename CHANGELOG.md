@@ -1,7 +1,6 @@
 # Changelog
 
 ## 0.96.8 (TBD)
-* Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
 * Tweaked: Splitted the config file in seperate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
 * Tweaked: Arsenal presets are now in the presets folder.
@@ -16,6 +15,7 @@
 
 ## 0.96.7a (2020-08-06)
 * Added: Contact DLC static weapon backpacks to default blacklist.
+* Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
 * Removed: T-14 from RHS AFRF preset.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
