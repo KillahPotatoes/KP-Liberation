@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.96.71 (2020-08-05)
+* Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
+* Fixed: Script errors in Civilian Informant side mission
+* Fixed: AI is not surrendering correctly when ACE is loaded
+
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.
