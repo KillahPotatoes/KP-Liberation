@@ -71,8 +71,7 @@ opfor_vehicles = [
     "rhs_t80",                                                          // T80
     "rhs_t80",                                                          // T80
     "rhs_t90a_tv",                                                      // T90A
-    "rhs_t90sab_tv",                                                    // T90SA (2016)
-    "rhs_t14_tv"                                                        // T-14
+    "rhs_t90sab_tv"                                                     // T90SA (2016)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
