@@ -25,7 +25,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
         private _grp = createGroup [GRLIB_side_civilian, true];
         [_unit] joinSilent _grp;
         if (KP_liberation_ace) then {
-            [_unit, true] call ACE_captives_fnc_setSurrendered;
+            ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
         } else {
             _unit disableAI "ANIM";
             _unit disableAI "MOVE";
@@ -39,7 +39,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
 
         if (alive _unit) then {
             if (KP_liberation_ace) then {
-                [_unit, false] call ACE_captives_fnc_setSurrendered;
+                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
             } else {
                 _unit enableAI "ANIM";
                 _unit enableAI "MOVE";
