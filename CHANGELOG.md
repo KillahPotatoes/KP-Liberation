@@ -14,6 +14,16 @@
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: FOB truck got mass set, but should've just apply to FOB boxes.
 
+## 0.96.7a (2020-08-06)
+* Added: Contact DLC static weapon backpacks to default blacklist.
+* Removed: T-14 from RHS AFRF preset.
+* Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
+* Fixed: Civilian Informant side mission didn't worked due to script error.
+* Fixed: AI didn't surrender correctly when ACE is loaded.
+* Fixed: The commander couldn't build squads via the build menu.
+* Fixed: Possible "Error: no unit" appearing in permission dialog.
+* Fixed: POWs could get saved when near FOB and still in player group.
+
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
 * Added: Mines and explosives will be saved around FOBs.

@@ -2,7 +2,7 @@
     File: blacklist.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-11
-    Last Update: 2020-05-11
+    Last Update: 2020-08-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -42,6 +42,10 @@ KPLIB_arsenalBlacklist = [
     "C_UAV_06_medical_backpack_F",
     "I_AA_01_weapon_F",
     "I_AT_01_weapon_F",
+    "I_C_HMG_02_high_weapon_F",
+    "I_C_HMG_02_support_F",
+    "I_C_HMG_02_support_high_F",
+    "I_C_HMG_02_weapon_F",
     "I_E_AA_01_weapon_F",
     "I_E_AT_01_weapon_F",
     "I_E_GMG_01_A_Weapon_F",
@@ -52,6 +56,10 @@ KPLIB_arsenalBlacklist = [
     "I_E_HMG_01_support_F",
     "I_E_HMG_01_support_high_F",
     "I_E_HMG_01_Weapon_F",
+    "I_E_HMG_02_high_weapon_F",
+    "I_E_HMG_02_support_F",
+    "I_E_HMG_02_support_high_F",
+    "I_E_HMG_02_weapon_F",
     "I_E_Mortar_01_support_F",
     "I_E_Mortar_01_Weapon_F",
     "I_E_UAV_01_backpack_F",
@@ -59,6 +67,10 @@ KPLIB_arsenalBlacklist = [
     "I_E_UAV_06_medical_backpack_F",
     "I_E_UGV_02_Demining_backpack_F",
     "I_E_UGV_02_Science_backpack_F",
+    "I_G_HMG_02_high_weapon_F",
+    "I_G_HMG_02_support_F",
+    "I_G_HMG_02_support_high_F",
+    "I_G_HMG_02_weapon_F",
     "I_GMG_01_A_weapon_F",
     "I_GMG_01_high_weapon_F",
     "I_GMG_01_weapon_F",
@@ -67,6 +79,10 @@ KPLIB_arsenalBlacklist = [
     "I_HMG_01_support_F",
     "I_HMG_01_support_high_F",
     "I_HMG_01_weapon_F",
+    "I_HMG_02_high_weapon_F",
+    "I_HMG_02_support_F",
+    "I_HMG_02_support_high_F",
+    "I_HMG_02_weapon_F",
     "I_Mortar_01_support_F",
     "I_Mortar_01_weapon_F",
     "I_UAV_01_backpack_F",
