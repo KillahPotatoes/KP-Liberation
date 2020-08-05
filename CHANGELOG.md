@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.96.7a (2020-08-05)
+* Added: Contact DLC static weapon backpacks to default blacklist.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
 * Fixed: AI didn't surrender correctly when ACE is loaded.
