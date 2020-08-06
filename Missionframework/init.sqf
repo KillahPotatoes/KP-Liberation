@@ -11,7 +11,7 @@ enableSaving [false, false];
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
 
 [] call KPLIB_fnc_initSectors;
-if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
+if (!isServer) then {waitUntil {!isNil "KPLIB_param_serverInitDone"};};
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_whitelists.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
