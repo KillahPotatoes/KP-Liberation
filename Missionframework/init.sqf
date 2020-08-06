@@ -13,11 +13,12 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 [] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_whitelists.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_classnameLists.sqf";
 [] call compile preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compile preprocessFileLineNumbers "presets\init_presets.sqf";
-[] call compile preprocessFileLineNumbers "kp_objectInits.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_objectInits.sqf";
 
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
 if (KPPLM_CBA && KPLIB_param_playerMenu) then {

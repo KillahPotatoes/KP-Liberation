@@ -22,7 +22,7 @@ if (isNil "KPLIB_respawn_loadout") then {
 // Support Module handling
 if ([
     false,
-    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_supportModule_whitelist,
+    player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_whitelist_supportModule,
     true
 ] select KPLIB_param_supportModule) then {
     waitUntil {!isNil "KPLIB_param_supportModule_req" && !isNil "KPLIB_param_supportModule_arty" && time > 5};
