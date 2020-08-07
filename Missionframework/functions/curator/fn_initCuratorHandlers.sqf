@@ -48,8 +48,6 @@ if (isServer) then {
         private _zeus = _group createUnit ["ModuleCurator_F", [-7580, -7580, 0], [], 0, "NONE"];
         missionNamespace setVariable [ZEUSVAR(_uid), _zeus];
 
-        _zeus setVariable ["owner", _uid, true];
-
         if (_limited) then {
             _zeus setVariable ["Addons", 0, true];
             _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
@@ -67,6 +65,8 @@ if (isServer) then {
         };
 
         _zeus setVariable ["KPLIB_limited", _limited];
+
+        _player assignCurator _zeus;
 
         [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
     }] call BIS_fnc_addScriptedEventHandler;
