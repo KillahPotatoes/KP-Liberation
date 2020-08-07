@@ -90,5 +90,8 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
         [] call KPLIB_fnc_tutorial;
     };
 
-    [] call KPLIB_fnc_requestZeus;
+    [] spawn {
+        sleep 5;
+        [] call KPLIB_fnc_requestZeus;
+    };
 };
