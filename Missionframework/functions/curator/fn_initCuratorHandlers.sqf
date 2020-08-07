@@ -88,8 +88,8 @@ if (hasInterface) then {
             ["_zeus", objNull, [objNull]]
         ];
 
-        if !(_zeus getVariable ["drawCuratorLocations", false]) then {
-            _zeus setVariable ["drawCuratorLocations", true];
+        if !(_zeus getVariable ["KPLIB_drawCuratorLocations", false]) then {
+            _zeus setVariable ["KPLIB_drawCuratorLocations", true];
             [_zeus] call BIS_fnc_drawCuratorLocations;
         };
     }] call BIS_fnc_addScriptedEventHandler;
