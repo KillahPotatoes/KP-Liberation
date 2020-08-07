@@ -36,14 +36,13 @@ if (isServer) then {
         unassignCurator _oldZeus;
         deleteVehicle _oldZeus;
 
-        private _uid = getPlayerUID _player;
-        private _group = createGroup sideLogic;
-        _group deleteGroupWhenEmpty true;
+        private _group = createGroup [sideLogic, true];
         private _zeus = _group createUnit ["ModuleCurator_F", [-7580, -7580, 0], [], 0, "NONE"];
         missionNamespace setVariable [ZEUSVAR(_uid), _zeus];
 
+        _zeus setVariable ["owner", _uid, true];
+
         if (_limited) then {
-            _zeus setVariable ["owner", _uid, true];
             _zeus setVariable ["Addons", 0, true];
             _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
 
