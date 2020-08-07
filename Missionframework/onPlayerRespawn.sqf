@@ -1,3 +1,5 @@
+waitUntil {!isNil "KPLIB_initServer"};
+
 params ["_newUnit", "_oldUnit"];
 
 if (isNil "GRLIB_respawn_loadout") then {
