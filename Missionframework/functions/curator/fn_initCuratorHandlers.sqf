@@ -24,7 +24,17 @@ if (isServer) then {
 
     // add curator assign EventHandler
     [true, "KPLIB_createZeus", {
-        params ["_player"];
+        params [
+            ["_player", objNull, [objNull]],
+            ["_limited", false, [true]]
+        ];
+
+        if (isNull _player) exitWith {};
+
+        // remove currently assigned curator
+        private _oldZeus = getAssignedCuratorLogic _player;
+        unassignCurator _oldZeus;
+        deleteVehicle _oldZeus;
 
         private _uid = getPlayerUID _player;
         private _group = createGroup sideLogic;
@@ -32,12 +42,24 @@ if (isServer) then {
         private _zeus = _group createUnit ["ModuleCurator_F", [-7580, -7580, 0], [], 0, "NONE"];
         missionNamespace setVariable [ZEUSVAR(_uid), _zeus];
 
-        _zeus setVariable ["owner", _uid, true];
-        _zeus setVariable ["Addons", 3, true];
-        _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
+        if (_limited) then {
+            _zeus setVariable ["owner", _uid, true];
+            _zeus setVariable ["Addons", 0, true];
+            _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
 
-        _zeus setCuratorCoef ["Place", 0];
-        _zeus setCuratorCoef ["Delete", 0];
+            _zeus setCuratorCoef ["Place", -1e8];
+            _zeus setCuratorCoef ["Edit", -1e8];
+            _zeus setCuratorCoef ["Destroy", -1e8];
+            _zeus setCuratorCoef ["Delete", 0];
+        } else {
+            _zeus setVariable ["owner", _uid, true];
+            _zeus setVariable ["Addons", 3, true];
+            _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
+
+            _zeus setCuratorCoef ["Place", 0];
+            _zeus setCuratorCoef ["Delete", 0];
+        };
+
         [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
     }] call BIS_fnc_addScriptedEventHandler;
 
