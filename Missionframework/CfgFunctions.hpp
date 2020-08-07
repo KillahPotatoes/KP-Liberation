@@ -91,6 +91,7 @@ class KPLIB {
         class initCuratorHandlers       {
             postInit = 1;
         };
+        class requestZeus               {};
     };
     class functions_ui {
         file = "functions\ui";
