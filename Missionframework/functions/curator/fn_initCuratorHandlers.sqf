@@ -2,7 +2,7 @@
     File: fn_initCuratorHandlers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-08-07
-    Last Update: 2020-08-07
+    Last Update: 2020-08-08
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -36,7 +36,7 @@ if (isServer) then {
         private _oldManagedZeus = missionNamespace getVariable [ZEUSVAR(_uid), objNull];
         if (!isNull _oldManagedZeus && {_limited isEqualTo (_oldManagedZeus getVariable ["KPLIB_limited", -1])}) exitWith {
             _player assignCurator _oldManagedZeus;
-            [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
+            [true, "KPLIB_zeusAssigned", [_oldManagedZeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
         };
 
         // remove currently assigned curator
