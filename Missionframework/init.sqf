@@ -9,7 +9,7 @@ enableSaving [ false, false ];
 if (isDedicated) then {debug_source = "Server";} else {debug_source = name player;};
 
 [] call KPLIB_fnc_initSectors;
-if (!isServer) then {waitUntil {!isNil "KP_serverParamsFetched"};};
+if (!isServer) then {waitUntil {!isNil "KPLIB_initServer"};};
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compileFinal preprocessFileLineNumbers "kp_liberation_config.sqf";
 [] call compileFinal preprocessFileLineNumbers "presets\init_presets.sqf";
@@ -56,3 +56,9 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 };
 
 KPLIB_init = true;
+
+// Notify clients that server is ready
+if (isServer) then {
+    KPLIB_initServer = true;
+    publicVariable "KPLIB_initServer";
+};
