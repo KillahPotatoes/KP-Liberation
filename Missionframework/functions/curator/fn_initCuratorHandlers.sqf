@@ -71,6 +71,15 @@ if (isServer) then {
         [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
     }] call BIS_fnc_addScriptedEventHandler;
 
+    [true, "KPLIB_activateZeusAddons", {
+        params [
+            ["_zeus", objNull, [objNull]],
+            ["_addons", [], [[]]]
+        ];
+
+        _zeus addCuratorAddons _addons;
+    }] call BIS_fnc_addScriptedEventHandler;
+
     // remove the assigned curator on player disconnect
     addMissionEventHandler ["HandleDisconnect", {
         params ["", "", "_uid"];
@@ -92,6 +101,9 @@ if (hasInterface) then {
             _zeus setVariable ["KPLIB_drawCuratorLocations", true];
             [_zeus] call BIS_fnc_drawCuratorLocations;
         };
+
+        private _allAddons = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};
+        [true, "KPLIB_activateZeusAddons", [_zeus, _allAddons]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", 2];
     }] call BIS_fnc_addScriptedEventHandler;
 };
 
