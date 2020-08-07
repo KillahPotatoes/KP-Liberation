@@ -34,6 +34,7 @@ if (isServer) then {
 
         _zeus setCuratorCoef ["Place", 0];
         _zeus setCuratorCoef ["Delete", 0];
+        [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
     }] call BIS_fnc_addScriptedEventHandler;
 
     // remove the assigned curator on player disconnect
@@ -45,6 +46,16 @@ if (isServer) then {
             missionNamespace setVariable [ZEUSVAR(_uid), nil];
         };
     }];
+};
+
+if (hasInterface) then {
+    [true, "KPLIB_zeusAssigned", {
+        params [
+            ["_zeus", objNull, [objNull]]
+        ];
+
+        [_zeus] call BIS_fnc_drawCuratorLocations;
+    }] call BIS_fnc_addScriptedEventHandler;
 };
 
 true

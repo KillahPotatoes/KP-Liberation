@@ -79,10 +79,6 @@ if (!KPLIB_sway) then {
     player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
 };
 
-{
-    [_x] call BIS_fnc_drawCuratorLocations;
-} forEach allCurators;
-
 execVM "scripts\client\ui\intro.sqf";
 
 [player] joinSilent (createGroup [GRLIB_side_friendly, true]);
