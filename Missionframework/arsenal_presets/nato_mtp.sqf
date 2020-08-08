@@ -114,7 +114,7 @@ GRLIB_arsenal_items = [
     "V_PlateCarrierSpec_mtp",
     "V_Chestrig_rgr",
     "V_Rangemaster_belt",
-    "V_RebreatherB"
+    "V_RebreatherB",
     "V_BandollierB_rgr",
     "V_TacVest_blk",
     "V_LegStrapBag_black_F",
