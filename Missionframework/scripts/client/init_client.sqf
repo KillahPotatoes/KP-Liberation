@@ -9,7 +9,7 @@ switch (KP_liberation_arsenal) do {
     case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
     case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
     case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\bwmod.sqf";};
-    case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\nato_mtp.sqf";};
+    case  10: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\nato_mtp.sqf";};
     default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
