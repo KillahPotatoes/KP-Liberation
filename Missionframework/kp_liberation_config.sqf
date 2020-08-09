@@ -166,7 +166,8 @@ KP_liberation_preset_civilians = 0;
 6  = CSAT arsenal preset
 7  = Unsung US arsenal preset
 8  = SFP arsenal preset
-9  = BWMod arsenal preset */
+9  = BWMod arsenal preset
+10 = NATO MTP arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
