@@ -10,24 +10,24 @@
 */
 
 GRLIB_arsenal_weapons = [
-    "arifle_MX_F",
-    "arifle_MX_GL_F",
-    "arifle_MX_SW_F",
-    "arifle_MXC_F",
-    "arifle_MXM_F",
-    "arifle_SDAR_F",
-	"srifle_LRR_camo_F",
-    "SMG_01_F",
-    "MMG_02_sand_F",
-	"srifle_DMR_02_sniper_F",
-    "srifle_DMR_03_tan_F",
-    "hgun_P07_F",
-    "hgun_Pistol_heavy_01_F",
-    "launch_B_Titan_F",
-    "launch_B_Titan_short_F",
-    "launch_NLAW_F",
-    "launch_MRAWS_sand_F",
-    "launch_MRAWS_sand_rail_F"
+    "arifle_MX_F",                                                  // MX 6.5 mm
+    "arifle_MX_GL_F",                                               // MX 3GL 6.5 mm
+    "arifle_MX_SW_F",                                               // MX SW 6.5 mm
+    "arifle_MXC_F",                                                 // MXC 6.5 mm
+    "arifle_MXM_F",                                                 // MXM 6.5 mm
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+	"srifle_LRR_camo_F",                                            // M320 LRR .408 (Camo)
+    "SMG_01_F",                                                     // Vermin SMG .45 ACP
+    "MMG_02_sand_F",                                                // SPMG .338 (Sand)
+	"srifle_DMR_02_sniper_F",                                       // MAR-10 .338 (Sand)
+    "srifle_DMR_03_tan_F",                                          // Mk-I EMR 7.62 mm (Sand)
+    "hgun_P07_F",                                                   // P07 9 mm
+    "hgun_Pistol_heavy_01_F",                                       // 4-five .45 ACP
+    "launch_B_Titan_F",                                             // Titan MPRL (Sand)
+    "launch_B_Titan_short_F",                                       // Titan MPRL Compact (Sand)
+    "launch_NLAW_F",                                                // PCML
+    "launch_MRAWS_sand_F",                                          // MAAWS Mk4 Mod 1 (Sand)
+    "launch_MRAWS_sand_rail_F"                                      // MAAWS Mk4 Mod 0 (Sand)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -48,117 +48,118 @@ GRLIB_arsenal_items = [
     "MineDetector",                                                 // Mine Detector
     "Rangefinder",                                                  // Rangefinder
     "ToolKit",                                                      // Toolkit
-    "B_UavTerminal",
-    "Laserdesignator",
-    "NVGoggles",
+    "B_UavTerminal",                                                // UAV Terminal [NATO]
+    "Laserdesignator",                                              // Laser Designator (Sand)
+    "NVGoggles",                                                    // NV Goggles (Brown)
 
     //Uniforms
-    "U_B_CombatUniform_mcam",
-    "U_B_CombatUniform_mcam_tshirt",
-    "U_B_CombatUniform_mcam_vest",
-    "U_B_HeliPilotCoveralls",
-    "U_B_PilotCoveralls",
-    "U_B_Wetsuit",
-    "U_B_GhillieSuit",
-    "U_B_FullGhillie_ard",
-    "U_B_FullGhillie_sard",
-	"U_B_CBRN_Suit_01_MTP_F",
+    "U_B_CombatUniform_mcam",                                       // Combat Fatigues (MTP)
+    "U_B_CombatUniform_mcam_tshirt",                                // Combat Fatigues (MTP) (Tee)
+    "U_B_CombatUniform_mcam_vest",                                  // Recon Fatigues (MTP)
+    "U_B_HeliPilotCoveralls",                                       // Heli Pilot Coveralls [NATO]
+    "U_B_PilotCoveralls",                                           // Pilot Coveralls [NATO]
+    "U_B_Wetsuit",                                                  // Wetsuit [NATO]
+    "U_B_GhillieSuit",                                              // Ghillie Suit [NATO]
+    "U_B_FullGhillie_ard",                                          // Full Ghillie (Arid) [NATO]
+    "U_B_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [NATO]
+    "U_B_FullGhillie_lsh",                                          // Full Ghillie (Lush) [NATO]
+	"U_B_CBRN_Suit_01_MTP_F",                                       // CBRN Suit (MTP) [NATO]
 
     // Headgear
-    "H_Watchcap_camo",
-    "H_Beret_02",
-    "H_Beret_Colonel",
-    "H_Booniehat_mcamo",
-    "H_Bandanna_mcamo",
-    "H_Cap_tan_specops_US",
-    "H_MilCap_mcamo",
-    "H_HelmetB",
-    "H_HelmetB_black",
-    "H_HelmetB_camo",
-    "H_HelmetB_grass",
-    "H_HelmetB_sand",
-    "H_HelmetB_desert",
-    "H_HelmetB_snakeskin",
-    "H_HelmetCrew_B",
-    "H_PilotHelmetFighter_B",
-    "H_CrewHelmetHeli_B",
-    "H_PilotHelmetHeli_B",
-    "H_HelmetB_light",
-    "H_HelmetB_light_black",
-    "H_HelmetB_light_desert",
-    "H_HelmetB_light_grass",
-    "H_HelmetB_light_sand",
-    "H_HelmetB_light_snakeskin",
-    "H_HelmetSpecB",
-    "H_HelmetSpecB_blk",
-    "H_HelmetSpecB_paint2",
-    "H_HelmetSpecB_paint1",
-    "H_HelmetSpecB_sand",
-    "H_HelmetSpecB_snakeskin",
+    "H_Watchcap_camo",                                              // Beanie (Green)
+    "H_Beret_02",                                                   // Beret [NATO]
+    "H_Beret_Colonel",                                              // Beret [NATO] (Colonel)
+    "H_Booniehat_mcamo",                                            // Booniehat (MTP)
+    "H_Bandanna_mcamo",                                             // Bandana (MTP)
+    "H_Cap_tan_specops_US",                                         // Cap (US MTP)
+    "H_MilCap_mcamo",                                               // Military Cap (MTP)
+    "H_HelmetB",                                                    // Combat Helmet
+    "H_HelmetB_black",                                              // Combat Helmet (Black)
+    "H_HelmetB_camo",                                               // Combat Helmet (Camo)
+    "H_HelmetB_grass",                                              // Combat Helmet (Grass)
+    "H_HelmetB_sand",                                               // Combat Helmet (Sand)
+    "H_HelmetB_desert",                                             // Combat Helmet (Desert)
+    "H_HelmetB_snakeskin",                                          // Combat Helmet (Snakeskin)
+    "H_HelmetCrew_B",                                               // Crew Helmet [NATO]
+    "H_PilotHelmetFighter_B",                                       // Pilot Helmet [NATO]
+    "H_CrewHelmetHeli_B",                                           // Heli Crew Helmet [NATO]
+    "H_PilotHelmetHeli_B",                                          // Heli Pilot Helmet [NATO]
+    "H_HelmetB_light",                                              // Light Combat Helmet
+    "H_HelmetB_light_black",                                        // Light Combat Helmet (Black)
+    "H_HelmetB_light_desert",                                       // Light Combat Helmet (Desert)
+    "H_HelmetB_light_grass",                                        // H_HelmetB_light_grass
+    "H_HelmetB_light_sand",                                         // H_HelmetB_light_sand
+    "H_HelmetB_light_snakeskin",                                    // H_HelmetB_light_snakeskin
+    "H_HelmetSpecB",                                                // Enhanced Combat Helmet
+    "H_HelmetSpecB_blk",                                            // Enhanced Combat Helmet (Black)
+    "H_HelmetSpecB_paint2",                                         // Enhanced Combat Helmet (Desert)
+    "H_HelmetSpecB_paint1",                                         // Enhanced Combat Helmet (Grass)
+    "H_HelmetSpecB_sand",                                           // Enhanced Combat Helmet (Sand)
+    "H_HelmetSpecB_snakeskin",                                      // Enhanced Combat Helmet (Snakeskin)
     
 
     // Facegear
-    "G_Aviator",
-    "G_Combat",
-    "G_B_Diving",
-    "G_Lowprofile",
-    "G_Shades_Black",
-    "G_Shades_Blue",
-    "G_Shades_Green",
-    "G_Shades_Red",
-    "G_Spectacles",
-    "G_Spectacles_Tinted",
-    "G_AirPurifyingRespirator_01_F",
-    "G_Squares_Tinted",
-    "G_Squares",
-    "G_Tactical_Clear",
-    "G_Tactical_Black",
+    "G_Aviator",                                                    // Aviator Glasses
+    "G_Combat",                                                     // Combat Goggles
+    "G_B_Diving",                                                   // Diving Goggles [NATO]
+    "G_Lowprofile",                                                 // Low Profile Goggles
+    "G_Shades_Black",                                               // Shades (Black)
+    "G_Shades_Blue",                                                // Shades (Blue)
+    "G_Shades_Green",                                               // Shades (Green)
+    "G_Shades_Red",                                                 // Shades (Red)
+    "G_Spectacles",                                                 // Spectacle Glasses
+    "G_Spectacles_Tinted",                                          // Tinted Spectacles
+    "G_AirPurifyingRespirator_01_F",                                // APR [NATO]
+    "G_Squares_Tinted",                                             // Square Shades
+    "G_Squares",                                                    // Square Spectacles
+    "G_Tactical_Clear",                                             // Tactical Glasses
+    "G_Tactical_Black",                                             // Tactical Shades
 
     // Vests
-    "V_PlateCarrierGL_rgr",
-    "V_PlateCarrierGL_mtp",
-    "V_PlateCarrier1_rgr",
-    "V_PlateCarrier2_rgr",
-    "V_PlateCarrierSpec_rgr",
-    "V_PlateCarrierSpec_mtp",
-    "V_Chestrig_rgr",
-    "V_Rangemaster_belt",
-    "V_RebreatherB",
-    "V_BandollierB_rgr",
-    "V_TacVest_blk",
-    "V_LegStrapBag_black_F",
-    "V_LegStrapBag_coyote_F",
-    "V_LegStrapBag_olive_F",
-    "V_Safety_orange_F",
-    "V_Safety_yellow_F",
-    "V_DeckCrew_yellow_F",
-
+    "V_PlateCarrierGL_rgr",                                         // Carrier GL Rig (Green)
+    "V_PlateCarrierGL_mtp",                                         // Carrier GL Rig (MTP)
+    "V_PlateCarrier1_rgr",                                          // Carrier Lite (Green)
+    "V_PlateCarrier2_rgr",                                          // Carrier Rig (Green)
+    "V_PlateCarrierSpec_rgr",                                       // Carrier Special Rig (Green)
+    "V_PlateCarrierSpec_mtp",                                       // Carrier Special Rig (MTP)
+    "V_Chestrig_rgr",                                               // Chest Rig (Green)
+    "V_Rangemaster_belt",                                           // Rangemaster Belt
+    "V_RebreatherB",                                                // Rebreather [NATO]
+    "V_BandollierB_rgr",                                            // Slash Bandolier (Green)
+    "V_TacVest_blk",                                                // Tactical Vest (Black)
+    "V_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
+    "V_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
+    "V_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
+    "V_Safety_orange_F",                                            // Safety Vest (Orange)
+    "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
+    "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
+    
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
-    "acc_flashlight_smg_01",
+    "acc_flashlight_smg_01",                                        // Flashlight
     "acc_flashlight_pistol",                                        // Pistol Flashlight
     "muzzle_snds_acp",                                              // Sound Suppressor (.45 ACP)
     "muzzle_snds_l",                                                // Sound Suppressor (9 mm)
-    "optic_mrd",
-    "optic_yorris",
-    "optic_DMS",
-    "optic_Aco",
-    "optic_Holosight",
-    "optic_Holosight_smg",
-    "optic_Hamr",
-    "optic_LRPS",
-    "optic_ams",
-    "optic_AMS_snd",
-    "bipod_01_f_blk",
-    "bipod_01_f_snd",
-    "bipod_01_f_mtp",
-    "muzzle_snds_H",
-    "muzzle_snds_h_snd_f",
-    "muzzle_snds_338_black",
-    "muzzle_snds_338_sand",
-    "muzzle_snds_b",
-    "muzzle_snds_b_snd_f",
+    "optic_mrd",                                                    // MRD
+    "optic_yorris",                                                 // Yorris J2
+    "optic_DMS",                                                    // DMS
+    "optic_Aco",                                                    // ACO (Red)
+    "optic_Holosight",                                              // Mk17 Holosight
+    "optic_Holosight_smg",                                          // Mk17 Holosight SMG
+    "optic_Hamr",                                                   // RCO
+    "optic_LRPS",                                                   // LRPS
+    "optic_AMS",                                                    // AMS (Black)
+    "optic_AMS_snd",                                                // AMS (Sand)
+    "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
+    "bipod_01_f_snd",                                               // Bipod (Sand) [NATO]
+    "bipod_01_f_mtp",                                               // Bipod (MTP) [NATO]
+    "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
+    "muzzle_snds_h_snd_f",                                          // Sound Suppressor (6.5 mm, Sand)
+    "muzzle_snds_338_black",                                        // Sound Suppressor (.338, Black)
+    "muzzle_snds_338_sand",                                         // Sound Suppressor (.338, Sand)
+    "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
+    "muzzle_snds_b_snd_f",                                          // Sound Suppressor (7.62 mm, Sand)
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
@@ -265,18 +266,18 @@ GRLIB_arsenal_items = [
 GRLIB_arsenal_backpacks = [
     "B_AssaultPack_blk",                                            // Assault Pack (Black)
     "B_AssaultPack_rgr",                                            // Assault Pack (Green)
-    "B_AssaultPack_mcamo",
-    "B_Carryall_mcamo",
-    "B_Kitbag_rgr",
-    "B_Kitbag_mcamo",
-    "B_Parachute",
-    "B_TacticalPack_blk",
-    "B_TacticalPack_mcamo",
+    "B_AssaultPack_mcamo",                                          // Assault Pack (MTP)
+    "B_Carryall_mcamo",                                             // Carryall Backpack (MTP)
+    "B_Kitbag_rgr",                                                 // Kitbag (Green)
+    "B_Kitbag_mcamo",                                               // Kitbag (MTP)
+    "B_Parachute",                                                  // Steerable Parachute
+    "B_TacticalPack_blk",                                           // Tactical Backpack (Black)
+    "B_TacticalPack_mcamo",                                         // Tactical Backpack (MTP)
     "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
     "B_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
     "B_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
-    "B_Bergen_mcamo_F",
-    "B_RadioBag_01_mtp_F",
+    "B_Bergen_mcamo_F",                                             // Bergen Backpack (MTP)
+    "B_RadioBag_01_mtp_F",                                          // Radio Pack (MTP) [NATO]
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
