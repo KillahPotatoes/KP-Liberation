@@ -69,6 +69,8 @@ GRLIB_arsenal_items = [
     "H_Beret_02",
     "H_Beret_Colonel",
     "H_Booniehat_mcamo",
+    "H_Bandanna_mcamo",
+    "H_Cap_tan_specops_US",
     "H_MilCap_mcamo",
     "H_HelmetB",
     "H_HelmetB_black",
@@ -87,6 +89,13 @@ GRLIB_arsenal_items = [
     "H_HelmetB_light_grass",
     "H_HelmetB_light_sand",
     "H_HelmetB_light_snakeskin",
+    "H_HelmetSpecB",
+    "H_HelmetSpecB_blk",
+    "H_HelmetSpecB_paint2",
+    "H_HelmetSpecB_paint1",
+    "H_HelmetSpecB_sand",
+    "H_HelmetSpecB_snakeskin",
+    
 
     // Facegear
     "G_Aviator",
