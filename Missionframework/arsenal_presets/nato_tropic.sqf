@@ -40,7 +40,7 @@ GRLIB_arsenal_weapons = [
     "launch_B_Titan_short_tna_F",
     "launch_NLAW_F",
     "launch_MRAWS_green_F",
-    "launch_MRAWS_green_rail_F",
+    "launch_MRAWS_green_rail_F"
 ];
 
 GRLIB_arsenal_magazines = [
@@ -64,7 +64,7 @@ GRLIB_arsenal_items = [
     
     // Faction Specific Items
     "B_UavTerminal",                                                // UAV Terminal [NATO]
-    "Laserdesignator_01_khk_F"
+    "Laserdesignator_01_khk_F",
     "NVGoggles_tna_F",
 
     // Uniforms
