@@ -32,7 +32,7 @@ GRLIB_arsenal_weapons = [
     "launch_B_Titan_short_tna_F",
     "launch_NLAW_F",
     "launch_MRAWS_green_F",
-    "launch_MRAWS_green_rail_F",
+    "launch_MRAWS_green_rail_F"
 ];
 
 GRLIB_arsenal_magazines = [
