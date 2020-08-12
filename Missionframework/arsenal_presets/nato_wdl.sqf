@@ -56,7 +56,7 @@ GRLIB_arsenal_items = [
     
     // Faction Specific Items
     "B_UavTerminal",                                                // UAV Terminal [NATO]
-    "Laserdesignator_01_khk_F"
+    "Laserdesignator_01_khk_F",
     "NVGoggles_INDEP",
 
     // Uniforms
