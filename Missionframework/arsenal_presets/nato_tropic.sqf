@@ -164,6 +164,8 @@ GRLIB_arsenal_items = [
     "muzzle_snds_338_green",
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
     "muzzle_snds_b_khk_f",
+    "muzzle_snds_m",
+    "muzzle_snds_m_khk_f",
  
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
