@@ -69,6 +69,7 @@ GRLIB_arsenal_items = [
     "U_B_GhillieSuit",                                              // Ghillie Suit [NATO]
     "U_B_FullGhillie_ard",                                          // Full Ghillie (Arid) [NATO]
     "U_B_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [NATO]
+    "U_B_FullGhillie_lsh",                                          // Full Ghillie (Lush) [NATO]
 	"U_B_CBRN_Suit_01_MTP_F",                                       // CBRN Suit (MTP) [NATO]
 
     // Headgear
