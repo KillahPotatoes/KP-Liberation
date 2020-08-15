@@ -129,9 +129,6 @@ GRLIB_arsenal_items = [
     "V_TacVest_oli",
     "V_BandollierB_rgr",                                            // Slash Bandolier (Green)
     "V_Rangemaster_belt",                                           // Rangemaster Belt
-    "V_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
-    "V_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
-    "V_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
