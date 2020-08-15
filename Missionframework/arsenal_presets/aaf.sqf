@@ -52,7 +52,7 @@ GRLIB_arsenal_items = [
     // Faction Specific Items
     "I_UavTerminal",
     "NVGoggles_INDEP",
-    "Laserdesignator_03"
+    "Laserdesignator_03",
 
     // Uniforms
     "U_I_CombatUniform",
@@ -70,7 +70,7 @@ GRLIB_arsenal_items = [
 
     // Headgear
     "H_HelmetIA",
-    "H_Beret_blk"
+    "H_Beret_blk",
     "H_Booniehat_dgtl",
     "H_Cap_blk_Raven",
     "H_MilCap_dgtl",
@@ -104,7 +104,7 @@ GRLIB_arsenal_items = [
     "V_TacVest_oli",
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
-    "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
+    "V_DeckCrew_red_F",                                             // Deck Crew Vest (Red)
     
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
