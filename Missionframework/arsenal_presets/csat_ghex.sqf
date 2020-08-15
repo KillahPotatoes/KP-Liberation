@@ -79,6 +79,7 @@ GRLIB_arsenal_items = [
     "H_MilCap_ghex_F",
     "H_HelmetO_ghex_F",
     "H_HelmetO_ViperSP_ghex_F",
+    "H_Tank_black_F",
 
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
