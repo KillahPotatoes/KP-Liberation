@@ -268,6 +268,7 @@ GRLIB_arsenal_backpacks = [
     "B_ViperHarness_hex_F",
     "B_ViperLightHarness_hex_F",
     "B_RadioBag_01_hex_F",
+    "B_RadioBag_01_oucamo_F",
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
