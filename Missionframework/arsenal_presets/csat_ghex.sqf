@@ -31,7 +31,7 @@ GRLIB_arsenal_weapons = [
     "launch_RPG32_ghex_F",                                          // RPG-42 Alamut (Green Hex)
     "launch_O_Titan_ghex_F",                                        // Titan MPRL (Green Hex)
     "launch_O_Titan_short_ghex_F",                                  // Titan MPRL Compact (Green Hex)
-    "launch_O_Vorona_green_F",                                      // 9M135 Vorona (Green)
+    "launch_O_Vorona_green_F"                                       // 9M135 Vorona (Green)
 ];
 
 GRLIB_arsenal_magazines = [
