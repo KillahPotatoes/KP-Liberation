@@ -1,6 +1,6 @@
 /*
     CSAT Hex Arsenal Preset
-    Last Update: 2020-08-15
+    Last Update: 2020-08-17
     Needed:
         - None
     Optional:
@@ -11,28 +11,28 @@
 
 GRLIB_arsenal_weapons = [
     // Primary
-    "srifle_GM6_camo_F",
-    "arifle_Katiba_F",
-    "arifle_Katiba_C_F",
-    "arifle_Katiba_GL_F",
-    "arifle_SDAR_F",
-    "LMG_Zafir_F",
-    "SMG_02_F",
-    "srifle_DMR_01_F",
-    "srifle_DMR_04_F",
-    "srifle_DMR_05_blk_F",
-    "MMG_01_hex_F",
-    "arifle_ARX_hex_F",
+    "arifle_Katiba_F",                                              // Katiba 6.5 mm
+    "arifle_Katiba_C_F",                                            // Katiba Carbine 6.5 mm
+    "arifle_Katiba_GL_F",                                           // Katiba GL 6.5 mm
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+    "LMG_Zafir_F",                                                  // Zafir 7.62 mm
+    "SMG_02_F",                                                     // Sting 9 mm
+    "srifle_GM6_camo_F",                                            // GM6 Lynx 12.7 mm (Camo)
+    "srifle_DMR_01_F",                                              // Rahim 7.62 mm
+    "srifle_DMR_04_F",                                              // ASP-1 Kir 12.7 mm (Black
+    "srifle_DMR_05_blk_F",                                          // Cyrus 9.3 mm (Black)
+    "MMG_01_hex_F",                                                 // Navid 9.3 mm (Hex)
+    "arifle_ARX_hex_F",                                             // Type 115 6.5 mm (Hex)
        
     // Handgun
-    "hgun_Rook40_F",
-    "hgun_Pistol_heavy_02_F",
+    "hgun_Rook40_F",                                                // Rook-40 9 mm
+    "hgun_Pistol_heavy_02_F",                                       // Zubr .45 ACP
     
     // Launcher
-    "launch_RPG32_F",
-    "launch_O_Titan_F",
-    "launch_O_Titan_short_F",
-    "launch_O_Vorona_brown_F"
+    "launch_RPG32_F",                                               // RPG-42 Alamut
+    "launch_O_Titan_F",                                             // Titan MPRL (Hex)
+    "launch_O_Titan_short_F",                                       // Titan MPRL Compact (Coyote)
+    "launch_O_Vorona_brown_F"                                       // 9M135 Vorona (Brown)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -55,78 +55,78 @@ GRLIB_arsenal_items = [
     "ToolKit",                                                      // Toolkit
     
     // Faction Specific Items
-    "O_UavTerminal",
-    "Laserdesignator_02",
-    "NVGoggles_OPFOR",
+    "O_UavTerminal",                                                // UAV Terminal [CSAT]
+    "Laserdesignator_02",                                           // Laser Designator (Hex)
+    "NVGoggles_OPFOR",                                              // NV Goggles (Black)
 
     // Uniforms
-    "U_O_CombatUniform_ocamo",
-    "U_O_CombatUniform_oucamo",
-    "U_O_OfficerUniform_ocamo",
-    "U_O_officer_noInsignia_hex_F",
-    "U_O_PilotCoveralls",
-    "U_O_V_Soldier_Viper_hex_F",
-    "U_O_Wetsuit",
-    "U_O_GhillieSuit",
-    "U_O_FullGhillie_ard",
-    "U_O_FullGhillie_sard",
-    "U_O_FullGhillie_lsh",
+    "U_O_CombatUniform_ocamo",                                      // Fatigues (Hex) [CSAT]
+    "U_O_CombatUniform_oucamo",                                     // Fatigues (Urban) [CSAT]
+    "U_O_OfficerUniform_ocamo",                                     // Officer Fatigues (Hex)
+    "U_O_officer_noInsignia_hex_F",                                 // Light Fatigues (Hex)
+    "U_O_PilotCoveralls",                                           // Pilot Coveralls [CSAT]
+    "U_O_V_Soldier_Viper_hex_F",                                    // Special Purpose Suit (Hex)
+    "U_O_Wetsuit",                                                  // Wetsuit [CSAT]
+    "U_O_GhillieSuit",                                              // Ghillie Suit [CSAT]
+    "U_O_FullGhillie_ard",                                          // Full Ghillie (Arid) [CSAT]
+    "U_O_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [CSAT]
+    "U_O_FullGhillie_lsh",                                          // Full Ghillie (Lush) [CSAT]
 
     // Headgear
-    "H_HelmetSpecO_blk",
-    "H_HelmetSpecO_ocamo",
-    "H_Beret_ocamo",
-    "H_Cap_brn_SPECOPS",
-    "H_HelmetCrew_O",
-    "H_HelmetLeaderO_ocamo",
-    "H_HelmetLeaderO_oucamo",
-    "H_CrewHelmetHeli_O",
-    "H_PilotHelmetHeli_O",
-    "H_MilCap_ocamo",
-    "H_PilotHelmetFighter_O",
-    "H_HelmetO_ocamo",
-    "H_HelmetO_oucamo",
-    "H_Beret_CSAT_01_F",
-    "H_HelmetO_ViperSP_hex_F",
-    "H_Tank_black_F",
+    "H_HelmetSpecO_blk",                                            // Assassin Helmet (Black)
+    "H_HelmetSpecO_ocamo",                                          // Assassin Helmet (Hex)
+    "H_Beret_ocamo",                                                // Beret [CSAT]
+    "H_Cap_brn_SPECOPS",                                            // Cap [OPFOR]
+    "H_HelmetCrew_O",                                               // Crew Helmet [CSAT]
+    "H_HelmetLeaderO_ocamo",                                        // Defender Helmet (Hex)
+    "H_HelmetLeaderO_oucamo",                                       // Defender Helmet (Urban)
+    "H_CrewHelmetHeli_O",                                           // Heli Crew Helmet [CSAT]
+    "H_PilotHelmetHeli_O",                                          // Heli Pilot Helmet [CSAT]
+    "H_MilCap_ocamo",                                               // Military Cap (Hex)
+    "H_PilotHelmetFighter_O",                                       // Pilot Helmet [CSAT]
+    "H_HelmetO_ocamo",                                              // Protector Helmet (Hex)
+    "H_HelmetO_oucamo",                                             // Protector Helmet (Urban)
+    "H_Beret_CSAT_01_F",                                            // Beret (Red) [CSAT]
+    "H_HelmetO_ViperSP_hex_F",                                      // Special Purpose Helmet (Hex)
+    "H_Tank_black_F",                                               // Crew Helmet (Soft) [CSAT]
 
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
-    "G_Balaclava_blk",
-    "G_Balaclava_oli",
-    "G_Bandanna_beast",
-    "G_Bandanna_blk",
-    "G_Bandanna_khk",
-    "G_Bandanna_tan",
-    "G_Bandanna_oli",
+    "G_Balaclava_blk",                                              // Balaclava (Black)
+    "G_Balaclava_oli",                                              // Balaclava (Olive)
+    "G_Bandanna_beast",                                             // Bandana (Beast)
+    "G_Bandanna_blk",                                               // Bandana (Black)
+    "G_Bandanna_khk",                                               // Bandana (Khaki)
+    "G_Bandanna_tan",                                               // Bandana (Tan)
+    "G_Bandanna_oli",                                               // Bandana (Olive)
     "G_O_Diving",                                                   // Diving Goggles [CSAT]
-    "G_Sport_Red",
-    "G_Sport_Blackyellow",
-    "G_Sport_BlackWhite",
-    "G_Sport_Checkered",
-    "G_Sport_Blackred",
-    "G_Sport_Greenblack",
+    "G_Sport_Red",                                                  // Sport Shades (Fire)
+    "G_Sport_Blackyellow",                                          // Sport Shades (Poison)
+    "G_Sport_BlackWhite",                                           // Sport Shades (Shadow)
+    "G_Sport_Checkered",                                            // Sport Shades (Style)
+    "G_Sport_Blackred",                                             // Sport Shades (Vulcan)
+    "G_Sport_Greenblack",                                           // Sport Shades (Yetti)
     "G_Shades_Black",                                               // Shades (Black)
     "G_Shades_Blue",                                                // Shades (Blue)
     "G_Shades_Green",                                               // Shades (Green)
     "G_Shades_Red",                                                 // Shades (Red)
-    "G_AirPurifyingRespirator_02_black_F",
-    "G_AirPurifyingRespirator_02_sand_F",
+    "G_AirPurifyingRespirator_02_black_F",                          // APR (Black) [CSAT]
+    "G_AirPurifyingRespirator_02_sand_F",                           // APR (Sand) [CSAT]
     
     // Vests
-    "V_Chestrig_khk",
-    "V_HarnessOGL_brn",
-    "V_HarnessOGL_gry",
-    "V_HarnessO_brn",
-    "V_HarnessO_gry",
-    "V_RebreatherIR",
-    "V_BandollierB_khk",
-    "V_TacVest_blk",
-    "V_TacVest_khk",
-    "V_TacVest_brn",
+    "V_Chestrig_khk",                                               // Chest Rig (Khaki)
+    "V_HarnessOGL_brn",                                             // LBV Grenadier Harness
+    "V_HarnessOGL_gry",                                             // LBV Grenadier Harness (Grey)
+    "V_HarnessO_brn",                                               // LBV Harness
+    "V_HarnessO_gry",                                               // LBV Harness (Grey)
+    "V_RebreatherIR",                                               // Rebreather [CSAT]
+    "V_BandollierB_khk",                                            // Slash Bandolier (Khaki)
+    "V_TacVest_blk",                                                // Tactical Vest (Black)
+    "V_TacVest_khk",                                                // Tactical Vest (Khaki)
+    "V_TacVest_brn",                                                // Tactical Vest (Brown)
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
-    "V_DeckCrew_green_F",                                          // Deck Crew Vest (Green)
+    "V_DeckCrew_green_F",                                           // Deck Crew Vest (Green)
     
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
@@ -135,22 +135,25 @@ GRLIB_arsenal_items = [
     "muzzle_snds_l",                                                // Sound Suppressor (9 mm)
     "optic_yorris",                                                 // Yorris J2
     "optic_DMS",                                                    // DMS
-    "optic_ACO_grn",
-    "optic_ACO_grn_smg",
-    "optic_Arco",
-    "optic_Arco_blk_F",
-    "optic_KHS_blk",
-    "optic_khs_hex",
-    "optic_LRPS",
-    "bipod_02_F_blk",
-    "bipod_02_F_hex",
-    "bipod_02_F_tan",
+    "optic_ACO_grn",                                                // ACO (Green)
+    "optic_ACO_grn_smg",                                            // ACO SMG (Green)
+    "optic_Arco",                                                   // ARCO
+    "optic_Arco_blk_F",                                             // ARCO (Black)
+    "optic_KHS_blk",                                                // Kahlia (Black)
+    "optic_KHS_hex",                                                // Kahlia (Hex)
+    "optic_LRPS",                                                   // LRPS
+    "bipod_02_F_blk",                                               // Bipod (Black) [CSAT]
+    "bipod_02_F_hex",                                               // Bipod (Hex) [CSAT]
+    "bipod_02_F_tan",                                               // Bipod (Tan) [CSAT]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
-    "muzzle_snds_93mmg",
-    "muzzle_snds_93mmg_tan",
-    "muzzle_snds_65_TI_blk_F",
-    "muzzle_snds_65_TI_hex_F",
+    "muzzle_snds_93mmg",                                            // Sound Suppressor (9.3mm, Black)
+    "muzzle_snds_93mmg_tan",                                        // Sound Suppressor (9.3mm, Tan)
+    "muzzle_snds_65_TI_blk_F",                                      // Stealth Sound Suppressor (6.5 mm, Black)
+    "muzzle_snds_65_TI_hex_F",                                      // Stealth Sound Suppressor (6.5 mm, Hex)
+    "optic_nvs",                                                    // NVS
+    "optic_tws",                                                    // TWS
+    "optic_tws_mg",                                                 // TWS MG
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
@@ -255,21 +258,23 @@ GRLIB_arsenal_items = [
 ];
 
 GRLIB_arsenal_backpacks = [
-    "B_Parachute",
-    "B_AssaultPack_ocamo",
-    "B_Carryall_cbr",
-    "B_Carryall_ocamo",
-    "B_Carryall_oucamo",
-    "B_FieldPack_blk",
-    "B_FieldPack_cbr",
-    "B_FieldPack_ocamo",
-    "B_FieldPack_oucamo",
-    "B_TacticalPack_ocamo",
-    "B_Bergen_hex_F",
-    "B_ViperHarness_hex_F",
-    "B_ViperLightHarness_hex_F",
-    "B_RadioBag_01_hex_F",
-    "B_RadioBag_01_oucamo_F",
+    "B_Parachute",                                                  // Steerable Parachute
+    "B_AssaultPack_ocamo",                                          // Assault Pack (Hex)
+    "B_Carryall_cbr",                                               // Carryall Backpack (Coyote)
+    "B_Carryall_ocamo",                                             // Carryall Backpack (Hex)
+    "B_Carryall_oucamo",                                            // Carryall Backpack (Urban)
+    "B_FieldPack_blk",                                              // Field Pack (Black)
+    "B_FieldPack_cbr",                                              // Field Pack (Coyote)
+    "B_FieldPack_ocamo",                                            // Field Pack (Hex)
+    "B_FieldPack_oucamo",                                           // Field Pack (Urban)
+    "B_TacticalPack_ocamo",                                         // Tactical Backpack (Hex)
+    "B_Bergen_hex_F",                                               // Bergen Backpack (Hex)
+    "B_ViperHarness_hex_F",                                         // Viper Harness (Hex)
+    "B_ViperLightHarness_hex_F",                                    // Viper Light Harness (Hex)
+    "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
+    "B_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
+    "B_RadioBag_01_hex_F",                                          // Radio Pack (Hex) [CSAT]
+    "B_RadioBag_01_oucamo_F",                                       // Radio Pack (Urban) [CSAT]
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
