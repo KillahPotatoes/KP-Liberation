@@ -1,6 +1,6 @@
 /*
     LDF Arsenal Preset
-    Last Update: 2020-08-15
+    Last Update: 2020-08-17
     Needed:
         - None
     Optional:
@@ -11,26 +11,26 @@
 
 GRLIB_arsenal_weapons = [
     // Primary
-    "SMG_03C_black",
-    "SMG_03C_TR_black",
-    "LMG_Mk200_black_F",
-    "arifle_MSBS65_F",
-    "arifle_MSBS65_black_F",
-    "arifle_MSBS65_GL_F",
-    "arifle_MSBS65_GL_black_F",
-    "arifle_MSBS65_Mark_F",
-    "arifle_MSBS65_Mark_black_F",
-    "arifle_MSBS65_UBS_F",
-    "arifle_MSBS65_UBS_black_F",
+    "SMG_03C_black",                                                // ADR-97C 5.7 mm (Black)
+    "SMG_03C_TR_black",                                             // ADR-97C TR 5.7 mm (Black)
+    "LMG_Mk200_black_F",                                            // Mk200 6.5 mm (Black)
+    "arifle_MSBS65_F",                                              // Promet 6.5 mm
+    "arifle_MSBS65_black_F",                                        // Promet 6.5 mm (Black)
+    "arifle_MSBS65_GL_F",                                           // Promet GL 6.5 mm
+    "arifle_MSBS65_GL_black_F",                                     // Promet GL 6.5 mm (Black)
+    "arifle_MSBS65_Mark_F",                                         // Promet MR 6.5 mm
+    "arifle_MSBS65_Mark_black_F",                                   // Promet MR 6.5 mm (Black)
+    "arifle_MSBS65_UBS_F",                                          // Promet SG 6.5 mm
+    "arifle_MSBS65_UBS_black_F",                                    // Promet SG 6.5 mm (Black)
     
     // Handgun
-    "hgun_Pistol_heavy_01_green_F",
+    "hgun_Pistol_heavy_01_green_F",                                 // 4-five .45 ACP (Green)
     
     // Launcher
-    "launch_NLAW_F",
-    "launch_I_Titan_eaf_F",
-    "launch_I_Titan_short_F",
-    "launch_MRAWS_green_F"
+    "launch_NLAW_F",                                                // PCML
+    "launch_I_Titan_eaf_F",                                         // Titan MPRL (Geometric)
+    "launch_I_Titan_short_F",                                       // Titan MPRL Compact (Olive)
+    "launch_MRAWS_green_F"                                          // MAAWS Mk4 Mod 1 (Green)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -53,34 +53,35 @@ GRLIB_arsenal_items = [
     "ToolKit",                                                      // Toolkit
     
     // Faction Specific Items
-    "I_E_UavTerminal",                                                // UAV Terminal [LDF]
-    "Laserdesignator_03",                                              // Laser Designator (Sand)
-    "NVGoggles_INDEP",
+    "I_E_UavTerminal",                                              // UAV Terminal [LDF]
+    "Laserdesignator_03",                                           // Laser Designator (Sand)
+    "NVGoggles_INDEP",                                              // NV Goggles (Green)
+    "NVGogglesB_grn_F",                                             // ENVG-II (Green)
     
     // Uniforms
-    "U_B_PilotCoveralls",
-    "U_C_CBRN_Suit_01_White_F",
-    "U_I_E_CBRN_Suit_01_EAF_F",
-    "U_I_E_Uniform_01_coveralls_F",
-    "U_I_E_Uniform_01_F",
-    "U_I_E_Uniform_01_officer_F",
-    "U_I_E_Uniform_01_shortsleeve_F",
-    "U_I_E_Uniform_01_sweater_F",
-    "U_I_E_Uniform_01_tanktop_F",
+    "U_B_PilotCoveralls",                                           // Pilot Coveralls [NATO]
+    "U_C_CBRN_Suit_01_White_F",                                     // CBRN Suit (White)
+    "U_I_E_CBRN_Suit_01_EAF_F",                                     // CBRN Suit [LDF]
+    "U_I_E_Uniform_01_coveralls_F",                                 // Heli Pilot Coveralls [LDF]
+    "U_I_E_Uniform_01_F",                                           // Combat Fatigues [LDF]
+    "U_I_E_Uniform_01_officer_F",                                   // Combat Fatigues (Officer) [LDF]
+    "U_I_E_Uniform_01_shortsleeve_F",                               // Combat Fatigues (Rolled-up) [LDF]
+    "U_I_E_Uniform_01_sweater_F",                                   // Combat Fatigues (Sweater) [LDF]
+    "U_I_E_Uniform_01_tanktop_F",                                   // Combat Fatigues (Tank Top) [LDF]
 
     // Headgear
-    "H_HelmetHBK_headset_F",
-    "H_HelmetHBK_chops_F",
-    "H_HelmetHBK_ear_F",
-    "H_HelmetHBK_F",
-    "H_Beret_EAF_01_F",
-    "H_Booniehat_eaf",
-    "H_Tank_eaf_F",
-    "H_HelmetCrew_I_E",
-    "H_CrewHelmetHeli_I_E",
-    "H_PilotHelmetHeli_I_E",
-    "H_MilCap_eaf",
-    "H_PilotHelmetFighter_I_E",
+    "H_HelmetHBK_headset_F",                                        // Advanced Modular Helmet
+    "H_HelmetHBK_chops_F",                                          // Advanced Modular Helmet (Chops)
+    "H_HelmetHBK_ear_F",                                            // Advanced Modular Helmet (Ear Protectors)
+    "H_HelmetHBK_F",                                                // Advanced Modular Helmet (Olive)
+    "H_Beret_EAF_01_F",                                             // Beret [LDF]
+    "H_Booniehat_eaf",                                              // Booniehat [LDF]
+    "H_Tank_eaf_F",                                                 // Crew Helmet (Soft) [LDF]
+    "H_HelmetCrew_I_E",                                             // Crew Helmet [LDF]
+    "H_CrewHelmetHeli_I_E",                                         // Heli Crew Helmet [LDF]
+    "H_PilotHelmetHeli_I_E",                                        // Heli Pilot Helmet [LDF]
+    "H_MilCap_eaf",                                                 // Military Cap [LDF]
+    "H_PilotHelmetFighter_I_E",                                     // Pilot Helmet [LDF]
     
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
@@ -98,22 +99,22 @@ GRLIB_arsenal_items = [
     "G_Squares",                                                    // Square Spectacles
     "G_Tactical_Clear",                                             // Tactical Glasses
     "G_Tactical_Black",                                             // Tactical Shades
-    "G_Sport_Red",
-    "G_Sport_Blackyellow",
-    "G_Sport_BlackWhite",
-    "G_Sport_Checkered",
-    "G_Sport_Blackred",
-    "G_Sport_Greenblack",
+    "G_Sport_Red",                                                  // Sport Shades (Fire)
+    "G_Sport_Blackyellow",                                          // Sport Shades (Poison)
+    "G_Sport_BlackWhite",                                           // Sport Shades (Shadow)
+    "G_Sport_Checkered",                                            // Sport Shades (Style)
+    "G_Sport_Blackred",                                             // Sport Shades (Vulcan)
+    "G_Sport_Greenblack",                                           // Sport Shades (Yetti)
 
     // Vests
-    "V_Chestrig_blk",
-    "V_BandollierB_oli",
-    "V_CarrierRigKBT_01_light_EAF_F",
-    "V_CarrierRigKBT_01_light_Olive_F",
-    "V_CarrierRigKBT_01_heavy_EAF_F",
-    "V_CarrierRigKBT_01_heavy_Olive_F",
-    "V_CarrierRigKBT_01_EAF_F",
-    "V_CarrierRigKBT_01_Olive_F",
+    "V_Chestrig_blk",                                               // Chest Rig (Black)
+    "V_BandollierB_oli",                                            // Slash Bandolier (Olive)
+    "V_CarrierRigKBT_01_light_EAF_F",                               // Modular Carrier Lite (Geometric)
+    "V_CarrierRigKBT_01_light_Olive_F",                             // Modular Carrier Lite (Olive)	
+    "V_CarrierRigKBT_01_heavy_EAF_F",                               // Modular Carrier GL Rig (Geometric)
+    "V_CarrierRigKBT_01_heavy_Olive_F",                             // Modular Carrier GL Rig (Olive)	
+    "V_CarrierRigKBT_01_EAF_F",                                     // Modular Carrier Vest (Geometric)
+    "V_CarrierRigKBT_01_Olive_F",                                   // Modular Carrier Vest (Olive)	
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
@@ -123,15 +124,19 @@ GRLIB_arsenal_items = [
     "acc_flashlight",                                               // Flashlight
     "acc_flashlight_pistol",                                        // Pistol Flashlight
     "muzzle_snds_acp",                                              // Sound Suppressor (.45 ACP)
-    "optic_mrd_black",                                                    // MRD (Black)
+    "optic_mrd_black",                                              // MRD (Black)
     "optic_Aco",                                                    // ACO (Red)
-    "optic_ico_01_f",
-    "optic_ico_01_black_f",
-    "optic_SOS",                                                        // MOS
+    "optic_ico_01_f",                                               // Promet Modular Sight
+    "optic_ico_01_black_f",                                         // Promet Modular Sight (Black)
+    "optic_SOS",                                                    // MOS
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
-    "muzzle_snds_65_TI_blk_F",
-    "muzzle_snds_h_mg_blk_f",
+    "muzzle_snds_65_TI_blk_F",                                      // Stealth Sound Suppressor (6.5 mm, Black)	
+    "muzzle_snds_h_mg_blk_f",                                       // Sound Suppressor LMG (6.5 mm, Black)
+    "muzzle_snds_570",                                              // Sound Suppressor (5.7 mm)
+    "optic_nvs",                                                    // NVS
+    "optic_tws",                                                    // TWS
+    "optic_tws_mg",                                                 // TWS MG
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
@@ -237,12 +242,12 @@ GRLIB_arsenal_items = [
 
 GRLIB_arsenal_backpacks = [
     "B_Parachute",                                                  // Steerable Parachute
-    "B_AssaultPack_eaf_F",
-    "B_Carryall_eaf_F",
-    "B_Fieldpack_green_F",
-    "B_RadioBag_01_eaf_F",
-    "B_CombinationUnitRespirator_01_F",                     // Combination Unit Respirator
-    "B_LegStrapBag_black_F",
+    "B_AssaultPack_eaf_F",                                          // Assault Pack (Geometric)
+    "B_Carryall_eaf_F",                                             // Carryall Backpack (Geometric)
+    "B_Fieldpack_green_F",                                          // Field Pack (Green)
+    "B_RadioBag_01_eaf_F",                                          // Radio Pack (Geometric) [LDF]
+    "B_CombinationUnitRespirator_01_F",                             // Combination Unit Respirator
+    "B_LegStrapBag_black_F",                                        // B_LegStrapBag_black_F
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
