@@ -277,7 +277,6 @@ GRLIB_arsenal_backpacks = [
     "B_Kitbag_rgr",                                                 // Kitbag (Green)
     "B_Kitbag_mcamo",                                               // Kitbag (MTP)
     "B_Parachute",                                                  // Steerable Parachute
-    "B_TacticalPack_blk",                                           // Tactical Backpack (Black)
     "B_TacticalPack_mcamo",                                         // Tactical Backpack (MTP)
     "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
     "B_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
