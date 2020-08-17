@@ -128,7 +128,6 @@ GRLIB_arsenal_items = [
     "V_PlateCarrierSpec_rgr",                                       // Carrier Special Rig (Green)
     "V_PlateCarrierSpec_mtp",                                       // Carrier Special Rig (MTP)
     "V_Chestrig_rgr",                                               // Chest Rig (Green)
-    "V_Rangemaster_belt",                                           // Rangemaster Belt
     "V_RebreatherB",                                                // Rebreather [NATO]
     "V_BandollierB_rgr",                                            // Slash Bandolier (Green)
     "V_TacVest_blk",                                                // Tactical Vest (Black)
