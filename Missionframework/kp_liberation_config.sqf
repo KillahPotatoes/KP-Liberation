@@ -167,7 +167,13 @@ KP_liberation_preset_civilians = 0;
 7  = Unsung US arsenal preset
 8  = SFP arsenal preset
 9  = BWMod arsenal preset
-10 = NATO MTP arsenal preset */
+10 = NATO MTP arsenal preset 
+11 = NATO Tropic arsenal preset
+12 = NATO Woodland arsenal preset
+13 = CSAT Hex arsenal preset
+14 = CSAT Green Hex arsenal preset
+15 = AAF arsenal preset
+16 = LDF arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
