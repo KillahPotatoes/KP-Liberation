@@ -248,8 +248,8 @@ GRLIB_arsenal_backpacks = [
     "B_FieldPack_blk",                                              // Field Pack (Black)
     "B_FieldPack_ghex_F",                                           // Field Pack (Green Hex)
     "B_Carryall_ghex_F",                                            // Carryall Backpack (Green Hex)
-    "B_ViperHarness_ghex_Exp_F",                                    // Viper Harness (Green Hex)
-    "B_ViperLightHarness_ghex_Exp_F",                               // Viper Light Harness (Green Hex)
+    "B_ViperHarness_ghex_F",                                        // Viper Harness (Green Hex)
+    "B_ViperLightHarness_ghex_F",                                   // Viper Light Harness (Green Hex)
     "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
     "B_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
     "B_RadioBag_01_ghex_F",                                         // Radio Pack (Green Hex) [CSAT]
