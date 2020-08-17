@@ -31,7 +31,7 @@ GRLIB_arsenal_weapons = [
     "launch_NLAW_F",                                                // PCML
     "launch_B_Titan_tna_F",                                         // Titan MPRL (Tropic)
     "launch_B_Titan_short_tna_F",                                   // Titan MPRL Compact (Tropic)
-    "launch_MRAWS_green_F",                                         // MAAWS Mk4 Mod 1 (Green)
+    "launch_MRAWS_green_F"                                          // MAAWS Mk4 Mod 1 (Green)
 ];
 
 GRLIB_arsenal_magazines = [
