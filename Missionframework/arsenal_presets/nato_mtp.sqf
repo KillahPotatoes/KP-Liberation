@@ -1,6 +1,6 @@
 /*
     NATO MTP Arsenal Preset
-    Last Update: 2020-08-12
+    Last Update: 2020-08-17
     Needed:
         - None
     Optional:
@@ -32,7 +32,6 @@ GRLIB_arsenal_weapons = [
     "launch_B_Titan_short_F",                                       // Titan MPRL Compact (Sand)
     "launch_NLAW_F",                                                // PCML
     "launch_MRAWS_sand_F",                                          // MAAWS Mk4 Mod 1 (Sand)
-    "launch_MRAWS_sand_rail_F"                                      // MAAWS Mk4 Mod 0 (Sand)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -151,7 +150,7 @@ GRLIB_arsenal_items = [
     "optic_Holosight",                                              // Mk17 Holosight
     "optic_Holosight_smg",                                          // Mk17 Holosight SMG
     "optic_Hamr",                                                   // RCO
-    "optic_sos",                                                        //MOS
+    "optic_sos",                                                    // MOS
     "optic_LRPS",                                                   // LRPS
     "optic_AMS",                                                    // AMS (Black)
     "optic_AMS_snd",                                                // AMS (Sand)
@@ -164,6 +163,9 @@ GRLIB_arsenal_items = [
     "muzzle_snds_338_sand",                                         // Sound Suppressor (.338, Sand)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
     "muzzle_snds_b_snd_f",                                          // Sound Suppressor (7.62 mm, Sand)
+    "optic_nvs",                                                    // NVS
+    "optic_tws",                                                    // TWS
+    "optic_tws_mg",                                                 // TWS MG
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
@@ -279,10 +281,9 @@ GRLIB_arsenal_backpacks = [
     "B_TacticalPack_mcamo",                                         // Tactical Backpack (MTP)
     "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
     "B_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
-    "B_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
     "B_Bergen_mcamo_F",                                             // Bergen Backpack (MTP)
     "B_RadioBag_01_mtp_F",                                          // Radio Pack (MTP) [NATO]
-    "B_CombinationUnitRespirator_01_F",                     // Combination Unit Respirator
+    "B_CombinationUnitRespirator_01_F",                             // Combination Unit Respirator
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
