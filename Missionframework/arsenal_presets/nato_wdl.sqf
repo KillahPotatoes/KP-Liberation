@@ -11,28 +11,27 @@
 
 GRLIB_arsenal_weapons = [
     // Primary
-    "arifle_MX_Black_F",
-    "arifle_MX_GL_Black_F",
-    "arifle_MX_SW_Black_F",
-    "arifle_MXC_Black_F",
-    "arifle_MXM_Black_F", 
-    "arifle_SDAR_F",
-    "srifle_LRR_F",
-    "SMG_01_F",
-    "MMG_02_black_F",
-    "srifle_DMR_02_F",
-    "srifle_DMR_03_F",
-       
+    "arifle_MX_Black_F",                                            // MX 6.5 mm (Black)
+    "arifle_MX_GL_Black_F",                                         // MX 3GL 6.5 mm (Black)
+    "arifle_MX_SW_Black_F",                                         // MX SW 6.5 mm (Black)
+    "arifle_MXC_Black_F",                                           // MXC 6.5 mm (Black)
+    "arifle_MXM_Black_F",                                           // MXM 6.5 mm (Black)
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+    "srifle_LRR_F",                                                 // M320 LRR .408
+    "SMG_01_F",                                                     // Vermin SMG .45 ACP
+    "MMG_02_black_F",                                               // SPMG .338 (Black)
+    "srifle_DMR_02_F",                                              // MAR-10 .338 (Black)
+    "srifle_DMR_03_F",                                              // Mk-I EMR 7.62 mm (Black)
+    
     // Handgun
-    "hgun_P07_khk_F",
-    "hgun_Pistol_heavy_01_F",
+    "hgun_P07_khk_F",                                               // P07 9 mm (Khaki)
+    "hgun_Pistol_heavy_01_F",                                       // 4-five .45 ACP
     
     // Launcher
-    "launch_B_Titan_tna_F",
-    "launch_B_Titan_short_tna_F",
-    "launch_NLAW_F",
-    "launch_MRAWS_green_F",
-    "launch_MRAWS_green_rail_F"
+    "launch_NLAW_F",                                                // PCML
+    "launch_B_Titan_tna_F",                                         // Titan MPRL (Tropic)
+    "launch_B_Titan_short_tna_F",                                   // Titan MPRL Compact (Tropic)
+    "launch_MRAWS_green_F",                                         // MAAWS Mk4 Mod 1 (Green)
 ];
 
 GRLIB_arsenal_magazines = [
@@ -56,18 +55,18 @@ GRLIB_arsenal_items = [
     
     // Faction Specific Items
     "B_UavTerminal",                                                // UAV Terminal [NATO]
-    "Laserdesignator_01_khk_F",
-    "NVGoggles_INDEP",
+    "Laserdesignator_01_khk_F",                                     // Laser Designator (Khaki)
+    "NVGoggles_INDEP",                                              // NV Goggles (Green)
 
     // Uniforms
-    "U_B_CombatUniform_mcam_wdl_f",
-    "U_B_CombatUniform_tshirt_mcam_wdL_f",
-    "U_B_CombatUniform_vest_mcam_wdl_f",
-    "U_B_HeliPilotCoveralls",
-    "U_B_PilotCoveralls",
-    "U_B_Wetsuit",
-    "U_B_FullGhillie_lsh",
-    "U_B_CBRN_Suit_01_Wdl_F",
+    "U_B_CombatUniform_mcam_wdl_f",                                 // Combat Fatigues (Woodland)
+    "U_B_CombatUniform_tshirt_mcam_wdL_f",                          // Combat Fatigues (Woodland, Tee)
+    "U_B_CombatUniform_vest_mcam_wdl_f",                            // Recon Fatigues (Woodland)
+    "U_B_HeliPilotCoveralls",                                       // Heli Pilot Coveralls [NATO]
+    "U_B_PilotCoveralls",                                           // Pilot Coveralls [NATO]
+    "U_B_Wetsuit",                                                  // Wetsuit [NATO]
+    "U_B_FullGhillie_lsh",                                          // Full Ghillie (Lush) [NATO]
+    "U_B_CBRN_Suit_01_Wdl_F",                                       // CBRN Suit (Woodland) [NATO]
 
     // Headgear
     "H_Watchcap_camo",                                              // Beanie (Green)
@@ -77,11 +76,11 @@ GRLIB_arsenal_items = [
     "H_PilotHelmetFighter_B",                                       // Pilot Helmet [NATO]
     "H_CrewHelmetHeli_B",                                           // Heli Crew Helmet [NATO]
     "H_PilotHelmetHeli_B",                                          // Heli Pilot Helmet [NATO]
-    "H_Booniehat_wdl",
-    "H_HelmetB_plain_wdl",
-    "H_HelmetSpecB_wdl",
-    "H_HelmetB_light_wdl",
-    "H_MilCap_wdl",
+    "H_Booniehat_wdl",                                              // Booniehat (Woodland)
+    "H_HelmetB_plain_wdl",                                          // Combat Helmet (Woodland)
+    "H_HelmetSpecB_wdl",                                            // Enhanced Combat Helmet (Woodland)
+    "H_HelmetB_light_wdl",                                          // Light Combat Helmet (Woodland)
+    "H_MilCap_wdl",                                                 // Military Cap (Woodland)
 
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
@@ -100,15 +99,14 @@ GRLIB_arsenal_items = [
     "G_Tactical_Black",                                             // Tactical Shades
     
     // Vests
-    "V_PlateCarrierGL_wdl",
-    "V_PlateCarrier1_wdl",
-    "V_PlateCarrier2_wdl",
-    "V_PlateCarrierSpec_wdl",
+    "V_PlateCarrierGL_wdl",                                         // Carrier GL Rig (Woodland)
+    "V_PlateCarrier1_wdl",                                          // Carrier Lite (Woodland)
+    "V_PlateCarrier2_wdl",                                          // Carrier Rig (Woodland)
+    "V_PlateCarrierSpec_wdl",                                       // Carrier Special Rig (Woodland)
     "V_Chestrig_rgr",                                               // Chest Rig (Green)
     "V_RebreatherB",                                                // Rebreather [NATO]
     "V_TacVest_blk",                                                // Tactical Vest (Black)
     "V_BandollierB_rgr",                                            // Slash Bandolier (Green)
-    "V_Rangemaster_belt",                                           // Rangemaster Belt
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
@@ -124,16 +122,19 @@ GRLIB_arsenal_items = [
     "optic_yorris",                                                 // Yorris J2
     "optic_DMS",                                                    // DMS
     "optic_Aco",                                                    // ACO (Red)
-    "optic_holosight_blk_f",
-    "optic_holosight_smg_blk_f",
-    "optic_Hamr",
-    "optic_SOS",
-    "optic_lrps",
+    "optic_holosight_blk_f",                                        // Mk17 Holosight (Black)
+    "optic_holosight_smg_blk_f",                                    // Mk17 Holosight SMG (Black)
+    "optic_Hamr",                                                   // RCO
+    "optic_SOS",                                                    // MOS
+    "optic_lrps",                                                   // LRPS
     "optic_AMS",                                                    // AMS (Black)
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
     "muzzle_snds_338_black",                                        // Sound Suppressor (.338, Black)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
+    "optic_nvs",                                                    // NVS
+    "optic_tws",                                                    // TWS
+    "optic_tws_mg",                                                 // TWS MG
     
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
@@ -240,14 +241,11 @@ GRLIB_arsenal_items = [
 GRLIB_arsenal_backpacks = [
     "B_AssaultPack_blk",                                            // Assault Pack (Black)
     "B_AssaultPack_rgr",                                            // Assault Pack (Green)
-    "B_AssaultPack_wdl_F",
-    "B_Carryall_wdl_F",
+    "B_AssaultPack_wdl_F",                                          // Assault Pack (Woodland)
+    "B_Carryall_wdl_F",                                             // Carryall Backpack (Woodland)
     "B_Kitbag_rgr",                                                 // Kitbag (Green)
     "B_Parachute",                                                  // Steerable Parachute
-    "B_TacticalPack_blk",                                           // Tactical Backpack (Black)
-    "B_TacticalPack_oli",
     "B_LegStrapBag_black_F",                                        // Leg Strap Bag (Black)
-    "B_LegStrapBag_coyote_F",                                       // Leg Strap Bag (Coyote)
     "B_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
     "B_RadioBag_01_wdl_F",                                          // Radio Pack (Woodland) [NATO]
     "B_CombinationUnitRespirator_01_F",                             // Combined Unit Respirator
