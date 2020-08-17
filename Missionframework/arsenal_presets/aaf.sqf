@@ -92,7 +92,7 @@ GRLIB_arsenal_items = [
     "G_Spectacles_Tinted",                                          // Tinted Spectacles
     "G_Squares_Tinted",                                             // Square Shades
     "G_Squares",                                                    // Square Spectacles
-    "G_AirPurifyingRespirator_02_black_F",
+    "G_AirPurifyingRespirator_01_F",                                // APR [NATO]
 
     // Vests
     "V_Chestrig_oli",                                               // Chest Rig (Olive)
