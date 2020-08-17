@@ -11,23 +11,23 @@
 
 GRLIB_arsenal_weapons = [
     // Primary
-    "hgun_PDW2000_F",
-    "arifle_Mk20_F",
-    "arifle_Mk20_GL_F",
-    "arifle_Mk20C_F",
-    "srifle_GM6_F",
-    "srifle_EBR_F",
-    "arifle_SDAR_F",
-    "LMG_Mk200_F",
+    "hgun_PDW2000_F",                                               // PDW2000 9 mm
+    "arifle_Mk20_F",                                                // Mk20 5.56 mm (Camo)
+    "arifle_Mk20_GL_F",                                             // Mk20 EGLM 5.56 mm (Camo)
+    "arifle_Mk20C_F",                                               // Mk20C 5.56 mm (Camo)
+    "srifle_GM6_F",                                                 // GM6 Lynx 12.7 mm
+    "srifle_EBR_F",                                                 // Mk18 ABR 7.62 mm
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+    "LMG_Mk200_F",                                                  // Mk200 6.5 mm
     
     // Handgun
-    "hgun_ACPC2_F",
+    "hgun_ACPC2_F",                                                 // ACP-C2 .45 ACP
     
     // Launcher
-    "launch_I_Titan_F",
-    "launch_I_Titan_short_F",
-    "launch_NLAW_F",
-    "launch_MRAWS_olive_rail_F"
+    "launch_I_Titan_F",                                             // Titan MPRL (Digital)
+    "launch_I_Titan_short_F",                                       // Titan MPRL Compact (Olive)
+    "launch_NLAW_F",                                                // PCML
+    "launch_MRAWS_olive_rail_F"                                     // MAAWS Mk4 Mod 0 (Olive)	
 ];
 
 GRLIB_arsenal_magazines = [
@@ -50,34 +50,34 @@ GRLIB_arsenal_items = [
     "ToolKit",                                                      // Toolkit
     
     // Faction Specific Items
-    "I_UavTerminal",
-    "NVGoggles_INDEP",
-    "Laserdesignator_03",
+    "I_UavTerminal",                                                // UAV Terminal [AAF]
+    "NVGoggles_INDEP",                                              // NV Goggles (Green)
+    "Laserdesignator_03",                                           // Laser Designator (Olive)	
 
     // Uniforms
-    "U_I_CombatUniform",
-    "U_I_CombatUniform_shortsleeve",
-    "U_I_OfficerUniform",
-    "U_I_HeliPilotCoveralls",
-    "U_I_pilotCoveralls",
-    "U_I_GhillieSuit",
-    "U_I_FullGhillie_ard",
-    "U_I_FullGhillie_sard",
-    "U_I_FullGhillie_lsh",
-    "U_I_Wetsuit",
-    "U_Tank_green_F",
-    "U_I_CBRN_Suit_01_AAF_F",
-
+    "U_I_CombatUniform",                                            // Combat Fatigues [AAF]
+    "U_I_CombatUniform_shortsleeve",                                // Combat Fatigues [AAF] (Rolled-up)
+    "U_I_OfficerUniform",                                           // Combat Fatigues [AAF] (Officer)
+    "U_I_HeliPilotCoveralls",                                       // Heli Pilot Coveralls [AAF]
+    "U_I_pilotCoveralls",                                           // Pilot Coveralls [AAF]
+    "U_I_GhillieSuit",                                              // Ghillie Suit [AAF]
+    "U_I_FullGhillie_ard",                                          // Full Ghillie (Arid) [AAF]
+    "U_I_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [AAF]
+    "U_I_FullGhillie_lsh",                                          // Full Ghillie (Lush) [AAF]
+    "U_I_Wetsuit",                                                  // Wetsuit [AAF]
+    "U_Tank_green_F",                                               // Tanker Coveralls [AAF]
+    "U_I_CBRN_Suit_01_AAF_F",                                       // CBRN Suit [AAF]
+    
     // Headgear
-    "H_HelmetIA",
-    "H_Beret_blk",
-    "H_Booniehat_dgtl",
-    "H_Cap_blk_Raven",
-    "H_MilCap_dgtl",
-    "H_HelmetCrew_I",
-    "H_PilotHelmetHeli_I",
-    "H_CrewHelmetHeli_I",
-    "H_PilotHelmetFighter_I",
+    "H_HelmetIA",                                                   // Modular Helmet
+    "H_Beret_blk",                                                  // Beret (Black)
+    "H_Booniehat_dgtl",                                             // Booniehat [AAF]
+    "H_Cap_blk_Raven",                                              // Cap [AAF]
+    "H_MilCap_dgtl",                                                // Military Cap [AAF]
+    "H_HelmetCrew_I",                                               // Crew Helmet [AAF]
+    "H_PilotHelmetHeli_I",                                          // Heli Pilot Helmet [AAF]
+    "H_CrewHelmetHeli_I",                                           // Heli Crew Helmet [AAF]
+    "H_PilotHelmetFighter_I",                                       // Pilot Helmet [AAF]
 
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
@@ -95,13 +95,13 @@ GRLIB_arsenal_items = [
     "G_AirPurifyingRespirator_02_black_F",
 
     // Vests
-    "V_Chestrig_oli",
-    "V_PlateCarrierIAGL_dgtl",
-    "V_PlateCarrierIA1_dgtl",
-    "V_PlateCarrierIA2_dgtl",
-    "V_RebreatherIA",
-    "V_BandollierB_oli",
-    "V_TacVest_oli",
+    "V_Chestrig_oli",                                               // Chest Rig (Olive)
+    "V_PlateCarrierIAGL_dgtl",                                      // GA Carrier GL Rig (Digital)
+    "V_PlateCarrierIA1_dgtl",                                       // GA Carrier Lite (Digital)
+    "V_PlateCarrierIA2_dgtl",                                       // GA Carrier Rig (Digital)
+    "V_RebreatherIA",                                               // Rebreather [AAF]
+    "V_BandollierB_oli",                                            // Slash Bandolier (Olive)
+    "V_TacVest_oli",                                                // Tactical Vest (Olive)
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_red_F",                                             // Deck Crew Vest (Red)
@@ -111,18 +111,21 @@ GRLIB_arsenal_items = [
     "acc_flashlight",                                               // Flashlight
     "acc_flashlight_pistol",                                        // Pistol Flashlight
     "muzzle_snds_acp",                                              // Sound Suppressor (.45 ACP)
-    "optic_ACO_grn",
+    "optic_ACO_grn",                                                // ACO (Green)
     "optic_Holosight_smg",                                          // Mk17 Holosight SMG
-    "optic_MRCO",
+    "optic_MRCO",                                                   // MRCO
     "optic_LRPS",                                                   // LRPS
-    "optic_sos",
-    "bipod_03_F_blk",
-    "bipod_03_F_oli",
-    "muzzle_snds_m",
-    "muzzle_snds_l",
+    "optic_sos",                                                    // MOS
+    "bipod_03_F_blk",                                               // Bipod (Black) [AAF]
+    "bipod_03_F_oli",                                               // Bipod (Olive) [AAF]
+    "muzzle_snds_m",                                                // Sound Suppressor (5.56 mm)
+    "muzzle_snds_l",                                                // Sound Suppressor (9 mm)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
-    "muzzle_snds_h_mg",
-
+    "muzzle_snds_h_mg",                                             // Sound Suppressor LMG (6.5 mm)
+    "optic_nvs",                                                    // NVS
+    "optic_tws",                                                    // TWS
+    "optic_tws_mg",                                                 // TWS MG
+    
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
     "ACE_adenosine",                                                // Adenosine autoinjector
@@ -226,16 +229,16 @@ GRLIB_arsenal_items = [
 ];
 
 GRLIB_arsenal_backpacks = [
-    "B_Parachute",
-    "B_AssaultPack_dgtl",
-    "B_FieldPack_blk",
-    "B_Carryall_oli",
-    "I_Fieldpack_oli",
-    "B_TacticalPack_oli",
-    "B_Bergen_dgtl_F",
-    "B_LegStrapBag_olive_F",
-    "B_RadioBag_01_digi_F",
-    "B_CombinationUnitRespirator_01_F",
+    "B_Parachute",                                                  // Steerable Parachute
+    "B_AssaultPack_dgtl",                                           // Assault Pack (Digital)
+    "B_FieldPack_blk",                                              // Field Pack (Black)
+    "B_Carryall_oli",                                               // Carryall Backpack (Olive)
+    "B_Fieldpack_oli",                                              // Field Pack (Olive)
+    "B_TacticalPack_oli",                                           // Tactical Backpack (Olive)
+    "B_Bergen_dgtl_F",                                              // Bergen Backpack (Digital)
+    "B_LegStrapBag_olive_F",                                        // Leg Strap Bag (Olive)
+    "B_RadioBag_01_digi_F",                                         // Radio Pack (Digital) [AAF]
+    "B_CombinationUnitRespirator_01_F",                             // Combination Unit Respirator
 
     // ACE Backpacks
     "ace_gunbag_Tan",                                               // Gunbag (Tan)
