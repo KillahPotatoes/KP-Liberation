@@ -12,6 +12,7 @@
 * Added: LDF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Added: Mission parameter for direct arsenal access without KPLIB Loadout Dialog.
 * Removed: T-14 from RHS AFRF preset.
+* Tweaked: "FOB " removed from resource overlay, so it's just e.g. "ALPHA" again.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
 * Fixed: AI didn't surrender correctly when ACE is loaded.

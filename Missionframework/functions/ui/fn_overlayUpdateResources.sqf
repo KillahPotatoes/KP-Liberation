@@ -3,7 +3,7 @@
     File: fn_overlayUpdateResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-01
-    Last Update: 2020-05-09
+    Last Update: 2020-08-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -39,7 +39,7 @@ if (!_show) exitWith {
 
 if (_updateValues) then {
 
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpper _resourceArea;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpper (_resourceArea select [4]);
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText str floor KP_liberation_supplies;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_AMMO) ctrlSetText str floor KP_liberation_ammo;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FUEL) ctrlSetText str floor KP_liberation_fuel;
@@ -51,10 +51,10 @@ if (_updateValues) then {
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_INTEL) ctrlSetText str round resources_intel;
 
     private _color_readiness = [0.8,0.8,0.8,1];
-    if ( combat_readiness >= 25 ) then { _color_readiness = [0.8,0.8,0,1] };
-    if ( combat_readiness >= 50 ) then { _color_readiness = [0.8,0.6,0,1] };
-    if ( combat_readiness >= 75 ) then { _color_readiness = [0.8,0.3,0,1] };
-    if ( combat_readiness >= 100 ) then { _color_readiness = [0.8,0,0,1] };
+    if (combat_readiness >= 25) then {_color_readiness = [0.8,0.8,0,1]};
+    if (combat_readiness >= 50) then {_color_readiness = [0.8,0.6,0,1]};
+    if (combat_readiness >= 75) then {_color_readiness = [0.8,0.3,0,1]};
+    if (combat_readiness >= 100) then {_color_readiness = [0.8,0,0,1]};
 
     (_overlay displayCtrl IDC_OVERLAY_RSC_PIC_ALERT) ctrlSetTextColor _color_readiness;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_ALERT) ctrlSetTextColor _color_readiness;
