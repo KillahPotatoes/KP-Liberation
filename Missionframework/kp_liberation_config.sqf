@@ -167,7 +167,7 @@ KP_liberation_preset_civilians = 0;
 7  = Unsung US arsenal preset
 8  = SFP arsenal preset
 9  = BWMod arsenal preset
-10 = NATO MTP arsenal preset 
+10 = NATO MTP arsenal preset
 11 = NATO Tropic arsenal preset
 12 = NATO Woodland arsenal preset
 13 = CSAT Hex arsenal preset
@@ -270,6 +270,12 @@ KP_liberation_commander_actions = [
 Same format as for the commander actions. */
 KP_liberation_suppMod_whitelist = [
 
+];
+
+/* Array of radio tower classnames to place at radio tower sectors.
+If more than one is added, it'll be selected random for each sector on campaign start. */
+KPLIB_radioTowerClassnames = [
+    "Land_Communication_F"
 ];
 
 /* - Default arsenal blacklist method.
