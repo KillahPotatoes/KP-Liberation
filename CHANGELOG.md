@@ -20,6 +20,7 @@
 * Fixed: Possible "Error: no unit" appearing in permission dialog.
 * Fixed: POWs could get saved when near FOB and still in player group.
 * Fixed: Civilian Reputation penalty got added to ambush chance, even if ambush chance was set to 0 in config.
+* Fixed: When starting with a FOB already built, the FOB actions appeared only after a server restart.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
