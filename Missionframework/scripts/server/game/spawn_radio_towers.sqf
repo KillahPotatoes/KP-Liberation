@@ -12,7 +12,7 @@ private _tower = objNull;
         _classname = selectRandom KPLIB_radioTowerClassnames;
         KPLIB_sectorTowers pushBack [_sector, _classname];
     } else {
-        _classname = _saved select 1;
+        _classname = (_saved select 0) select 1;
     };
     _tower = _classname createVehicle (markerpos _x);
     _tower setPos (markerpos _x);
