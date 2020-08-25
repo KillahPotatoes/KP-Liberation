@@ -119,6 +119,12 @@ class Params {
         texts[] = {$STR_PARAMS_ARSENAL_BI, $STR_PARAMS_ARSENAL_ACE};
         default = 0;
     };
+    class DirectArsenal {
+        title = $STR_PARAMS_DIRECTARSENAL;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 0;
+    };
     class PlayerMenu {
         title = $STR_PARAMS_PLAYERMENU;
         values[] = {0, 1};

@@ -56,6 +56,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
     GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM_BOOL(KPLIB_directArsenal, "DirectArsenal", 0);
     GET_PARAM_BOOL(KP_liberation_playermenu, "PlayerMenu", 1);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
@@ -301,6 +302,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_ARSENAL";
     _value = if (KP_liberation_arsenal_type) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_DIRECTARSENAL";
+    _value = if (KPLIB_directArsenal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_PLAYERMENU";

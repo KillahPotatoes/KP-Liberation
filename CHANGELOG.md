@@ -10,6 +10,7 @@
 * Added: CSAT Ghex arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Added: AAF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Added: LDF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: Mission parameter for direct arsenal access without KPLIB Loadout Dialog.
 * Removed: T-14 from RHS AFRF preset.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
