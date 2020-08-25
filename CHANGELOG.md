@@ -3,6 +3,13 @@
 ## 0.96.7a (2020-08-05)
 * Added: Contact DLC static weapon backpacks to default blacklist.
 * Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: NATO MTP arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: NATO Pacific arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: NATO Woodland arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: CSAT Hex arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: CSAT Ghex arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: AAF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: LDF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Removed: T-14 from RHS AFRF preset.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
@@ -10,6 +17,7 @@
 * Fixed: The commander couldn't build squads via the build menu.
 * Fixed: Possible "Error: no unit" appearing in permission dialog.
 * Fixed: POWs could get saved when near FOB and still in player group.
+* Fixed: Civilian Reputation penalty got added to ambush chance, even if ambush chance was set to 0 in config.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
