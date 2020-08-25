@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-04-28
+    Last Update: 2020-08-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -338,7 +338,7 @@ _player addAction [
 if (player == ([] call KPLIB_fnc_getCommander)) then {
     _player addAction [
         ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
-        {[] remoteExec ["zeus_remote_call", 2];},
+        {[] call KPLIB_fnc_requestZeus},
         nil,
         -870,
         false,

@@ -85,6 +85,14 @@ class KPLIB {
         class spawnVehicle              {};
         class swapInventory             {};
     };
+    class functions_curator {
+        file = "functions\curator";
+
+        class initCuratorHandlers       {
+            postInit = 1;
+        };
+        class requestZeus               {};
+    };
     class functions_ui {
         file = "functions\ui";
 
