@@ -93,6 +93,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    GET_PARAM_BOOL(KP_liberation_commander_zeus, "CommanderZeus", 1);
     GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
     GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
     GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
@@ -422,6 +423,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_DELAY_DESPAWN_MAX";
     _value = if (KP_liberation_delayDespawnMax == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_delayDespawnMax;};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_COMMANDERZEUS";
+    _value = if (KP_liberation_commander_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_LIMITEDZEUS";
