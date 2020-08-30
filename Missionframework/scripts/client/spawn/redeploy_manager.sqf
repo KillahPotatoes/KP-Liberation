@@ -1,4 +1,4 @@
-choiceslist = [];
+KPLIB_respawnPositionsList = [];
 fullmap = 0;
 private _old_fullmap = 0;
 private _oldsel = -999;
@@ -80,43 +80,51 @@ while {true} do {
     lbSetCurSel [203, 0];
 
     while {dialog && alive player && deploy == 0} do {
-        choiceslist = [[_basenamestr, getposATL startbase]];
+        // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
+        KPLIB_respawnPositionsList = [[_basenamestr, getposATL startbase]];
 
-        for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx)],GRLIB_all_fobs select _idx]];
-        };
+        {
+            KPLIB_respawnPositionsList pushBack [
+                format ["FOB %1 - %2", (military_alphabet select _forEachIndex), mapGridPosition _x],
+                _x
+            ];
+        } forEach GRLIB_all_fobs;
 
         if (KP_liberation_mobilerespawn) then {
             if (KP_liberation_respawn_time <= time) then {
-                private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
+                private _mobileRespawns = [] call KPLIB_fnc_getMobileRespawns;
 
-                for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
-                    choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
-                };
+                {
+                    KPLIB_respawnPositionsList pushBack [
+                        format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition getPosATL _x],
+                        getPosATL _x,
+                        _x
+                    ];
+                } forEach _mobileRespawns
             };
         };
 
         lbClear 201;
         {
             lbAdd [201, (_x select 0)];
-        } foreach choiceslist;
+        } foreach KPLIB_respawnPositionsList;
 
         if (lbCurSel 201 == -1) then {
-             lbSetCurSel [201,0];
+             lbSetCurSel [201, 0];
         };
 
         if (lbCurSel 201 != _oldsel) then {
             _oldsel = lbCurSel 201;
             private _objectpos = [0,0,0];
             if (dialog) then {
-                _objectpos = ((choiceslist select _oldsel) select 1);
+                _objectpos = ((KPLIB_respawnPositionsList select _oldsel) select 1);
             };
-            respawn_object setposATL ((choiceslist select _oldsel) select 1);
+            respawn_object setPosATL ((KPLIB_respawnPositionsList select _oldsel) select 1);
             private _startdist = 120;
             private _enddist = 120;
             private _alti = 35;
             if (dialog) then {
-                if (((choiceslist select (lbCurSel 201)) select 0) == _basenamestr) then {
+                if (((KPLIB_respawnPositionsList select (lbCurSel 201)) select 0) == _basenamestr) then {
                     _startdist = 200;
                     _enddist = 300;
                     _alti = 30;
@@ -154,14 +162,14 @@ while {true} do {
 
     if (dialog && deploy == 1) then {
         private _idxchoice = lbCurSel 201;
-        _spawn_str = (choiceslist select _idxchoice) select 0;
+        _spawn_str = (KPLIB_respawnPositionsList select _idxchoice) select 0;
 
-        if (count (choiceslist select _idxchoice) == 3) then {
-            private _truck = (choiceslist select _idxchoice) select 2;
+        if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
+            private _truck = (KPLIB_respawnPositionsList select _idxchoice) select 2;
             player setposATL (_truck getPos [5 + (random 3), random 360]);
             KP_liberation_respawn_mobile_done = true;
         } else {
-            private _destpos = ((choiceslist select _idxchoice) select 1);
+            private _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
             player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
         };
 
