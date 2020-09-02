@@ -704,6 +704,9 @@
             <Portuguese>-- DESVIRAR</Portuguese>
             <Korean>-- 차량 바로잡기</Korean>
         </Key>
+        <Key ID="STR_REPAIR_DRONE_AI">
+            <English>-- REPAIR DRONE AI</English>
+        </Key>
         <Key ID="STR_GRID">
             <Original>-- Grid mode</Original>
             <French>-- Mode grille</French>
