@@ -1,3 +1,7 @@
+#define DEPLOY_DISPLAY (findDisplay 5201)
+#define DEPLOY_LIST_IDC 201
+#define DEPLOY_BUTTON_IDC 202
+
 KPLIB_respawnPositionsList = [];
 fullmap = 0;
 private _old_fullmap = 0;
@@ -104,17 +108,17 @@ while {true} do {
             };
         };
 
-        lbClear 201;
+        lbClear DEPLOY_LIST_IDC;
         {
-            lbAdd [201, (_x select 0)];
+            lbAdd [DEPLOY_LIST_IDC, (_x select 0)];
         } foreach KPLIB_respawnPositionsList;
 
-        if (lbCurSel 201 == -1) then {
+        if (lbCurSel DEPLOY_LIST_IDC == -1) then {
              lbSetCurSel [201, 0];
         };
 
-        if (lbCurSel 201 != _oldsel) then {
-            _oldsel = lbCurSel 201;
+        if (lbCurSel DEPLOY_LIST_IDC != _oldsel) then {
+            _oldsel = lbCurSel DEPLOY_LIST_IDC;
             private _objectpos = [0,0,0];
             if (dialog) then {
                 _objectpos = ((KPLIB_respawnPositionsList select _oldsel) select 1);
@@ -124,7 +128,7 @@ while {true} do {
             private _enddist = 120;
             private _alti = 35;
             if (dialog) then {
-                if (((KPLIB_respawnPositionsList select (lbCurSel 201)) select 0) == _basenamestr) then {
+                if (((KPLIB_respawnPositionsList select (lbCurSel DEPLOY_LIST_IDC)) select 0) == _basenamestr) then {
                     _startdist = 200;
                     _enddist = 300;
                     _alti = 30;
@@ -132,14 +136,14 @@ while {true} do {
             };
 
             "spawn_marker" setMarkerPosLocal (getpos respawn_object);
-            ctrlMapAnimClear ((findDisplay 5201) displayCtrl 251);
+            ctrlMapAnimClear (DEPLOY_DISPLAY displayCtrl 251);
             private _transition_map_pos = getpos respawn_object;
             private _fullscreen_map_offset = 4000;
             if(fullmap % 2 == 1) then {
                 _transition_map_pos = [(_transition_map_pos select 0) - _fullscreen_map_offset,  (_transition_map_pos select 1) + (_fullscreen_map_offset * 0.75), 0];
             };
-            ((findDisplay 5201) displayCtrl 251) ctrlMapAnimAdd [0, 0.3,_transition_map_pos];
-            ctrlMapAnimCommit ((findDisplay 5201) displayCtrl 251);
+            (DEPLOY_DISPLAY displayCtrl 251) ctrlMapAnimAdd [0, 0.3,_transition_map_pos];
+            ctrlMapAnimCommit (DEPLOY_DISPLAY displayCtrl 251);
 
             respawn_camera camSetPos [(getpos respawn_object select 0) - 70, (getpos respawn_object select 1) + _startdist, (getpos respawn_object select 2) + _alti];
             respawn_camera camcommit 0;
@@ -150,18 +154,18 @@ while {true} do {
         if (_old_fullmap != fullmap) then {
             _old_fullmap = fullmap;
             if (fullmap % 2 == 1) then {
-                ((findDisplay 5201) displayCtrl 251) ctrlSetPosition [ (_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
+                (DEPLOY_DISPLAY displayCtrl 251) ctrlSetPosition [ (_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
             } else {
-                ((findDisplay 5201) displayCtrl 251) ctrlSetPosition _standard_map_pos;
+                (DEPLOY_DISPLAY displayCtrl 251) ctrlSetPosition _standard_map_pos;
             };
-            ((findDisplay 5201) displayCtrl 251) ctrlCommit 0.2;
+            (DEPLOY_DISPLAY displayCtrl 251) ctrlCommit 0.2;
             _oldsel = -1;
         };
         uiSleep 0.1;
     };
 
     if (dialog && deploy == 1) then {
-        private _idxchoice = lbCurSel 201;
+        private _idxchoice = lbCurSel DEPLOY_LIST_IDC;
         _spawn_str = (KPLIB_respawnPositionsList select _idxchoice) select 0;
 
         if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
