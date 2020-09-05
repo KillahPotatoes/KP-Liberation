@@ -2860,6 +2860,15 @@
             <Turkish>Sektör kapanma üst limiti (Sektörün açılmasından 5 dakika sonra artmaya başlar)</Turkish>
             <Czech>Maximální zpoždění deaktivace sektoru (začíná se zvyšovat po 5. aktivační minutě)</Czech>
         </Key>
+        <Key ID="STR_PARAM_LIMITEDZEUS">
+            <Original>Limited Zeus interface</Original>
+            <German>Eingeschränkte Zeus Funktionen</German>
+            <Spanish>Interface de Zeus limitada</Spanish>
+            <Russian>Ограниченный интерфейс Zeus</Russian>
+            <Korean>제한된 제우스 인터페이스</Korean>
+            <Turkish>Sınırlı Zeus Arayüzü</Turkish>
+            <Czech>Omezené rozhraní Zeus</Czech>
+        </Key>
         <Key ID="STR_PARAM_COMMANDERZEUS">
             <Original>Zeus for Commander</Original>
         </Key>
