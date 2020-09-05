@@ -59,7 +59,7 @@ if ( GRLIB_endgame == 0 ) then {
     };
 };
 
-KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - _thispos;
+KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - [_thispos];
 publicVariable "KPLIB_sectorsUnderAttack";
 
 sleep 60;
