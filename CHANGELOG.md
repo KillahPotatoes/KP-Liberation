@@ -13,6 +13,7 @@
 * Added: Mission parameter for direct arsenal access without KPLIB Loadout Dialog.
 * Added: Helicopters from GM Update to GM faction presets.
 * Added: ACE, TFAR and ACRE items to GM West and East arsenal presets.
+* Added: Config value for radio tower classnames.
 * Removed: T-14 from RHS AFRF preset.
 * Tweaked: "FOB " removed from resource overlay, so it's just e.g. "ALPHA" again.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.

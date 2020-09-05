@@ -274,6 +274,12 @@ KP_liberation_suppMod_whitelist = [
 
 ];
 
+/* Array of radio tower classnames to place at radio tower sectors.
+If more than one is added, it'll be selected random for each sector on campaign start. */
+KPLIB_radioTowerClassnames = [
+    "Land_Communication_F"
+];
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
