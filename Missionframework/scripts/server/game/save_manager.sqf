@@ -93,6 +93,8 @@ KP_liberation_production = [];
 KP_liberation_production_markers = [];
 // Radio tower classnames per radio tower sector
 KPLIB_sectorTowers = [];
+// Sectors under attack
+KPLIB_sectorsUnderAttack = [];
 // Global Intel resource
 resources_intel = 0;
 // State if the save is fully loaded
@@ -507,6 +509,7 @@ publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "blufor_sectors";
 publicVariable "GRLIB_all_fobs";
+publicVariable "KPLIB_sectorsUnderAttack";
 publicVariable "KP_liberation_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
