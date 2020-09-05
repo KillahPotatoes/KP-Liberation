@@ -17,7 +17,7 @@ FOB_box_typename = "gm_gc_army_brdm2um";                                // This 
 FOB_truck_typename = "gm_gc_army_btr60pu12";                            // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "gm_gc_army_ural375d_medic";                   // This is the mobile respawn (and medical) truck.
-huron_typename = "gm_gc_army_btr60pa";                                  // This is Spartan 01, a multipurpose mobile respawn as a command BTR60.
+huron_typename = "gm_gc_airforce_mi2t";                                 // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";                // This defines the crew for vehicles.
 pilot_classname = "gm_gc_army_crew_mpiaks74nk_80_blk";                  // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "gm_gc_bgs_p601";                 // Little birds replaced with unimog for container transportation.
@@ -67,6 +67,12 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
+    ["gm_gc_airforce_mi2p",300,0,175],                                  // Mi-2P
+    ["gm_gc_airforce_mi2sr",300,0,175],                                 // Mi-2SR
+    ["gm_gc_airforce_mi2us",300,100,175],                               // Mi-2US
+    ["gm_gc_airforce_mi2urn",300,120,175],                              // Mi-2URN
+    ["gm_gc_airforce_l410s_salon",350,0,200],                           // L-410S
+    ["gm_gc_airforce_l410t",350,0,200],                                 // L-410T
     ["len_mi8amt_nva",225,0,125],                                       // Mi8AMT
     ["len_mi24d_CAS_nva",550,550,250],                                  // Mi-24D (CAS)
     ["len_mi24d_AT_nva",550,550,250],                                   // Mi-24D (AT)

@@ -118,7 +118,76 @@ GRLIB_arsenal_items = [
     "gm_df7x40_grn", // Binocular
     "ItemMap",
     "ItemWatch",
-    "ItemRadio"
+    "ItemRadio",
+
+    // ACE Items
+    "ACE_adenosine",                                                // Adenosine autoinjector
+    "ACE_Altimeter",                                                // Altimeter Watch
+    "ACE_artilleryTable",                                           // Artillery Rangetable
+    "ACE_Banana",                                                   // Banana
+    "ACE_bloodIV_250",                                              // Blood IV (250 ml)
+    "ACE_bloodIV_500",                                              // Blood IV (500 ml)
+    "ACE_bloodIV",                                                  // Blood IV (1000 ml)
+    "ACE_bodyBag",                                                  // Bodybag
+    "ACE_CableTie",                                                 // Cable Tie
+    "ACE_Clacker",                                                  // M57 Firing Device
+    "ACE_DeadManSwitch",                                            // Dead Man's Switch
+    "ACE_DefusalKit",                                               // Defusal Kit
+    "ACE_EarPlugs",                                                 // Earplugs
+    "ACE_elasticBandage",                                           // Bandage (Elastic)
+    "ACE_EntrenchingTool",                                          // Entrenching Tool
+    "ACE_epinephrine",                                              // Epinephrine autoinjector
+    "ACE_fieldDressing",                                            // Bandage (Basic)
+    "ACE_Flashlight_KSF1",                                          // KSF-1
+    "ACE_Flashlight_Maglite_ML300L",                                // Maglite ML300L
+    "ACE_Flashlight_MX991",                                         // Fulton MX-991
+    "ACE_Flashlight_XL50",                                          // Maglite XL50
+    "ACE_M26_Clacker",                                              // M152 Firing Device
+    "ACE_MapTools",                                                 // Map Tools
+    "ACE_morphine",                                                 // Morphine autoinjector
+    "ACE_packingBandage",                                           // Bandage (Packing)
+    "ACE_personalAidKit",                                           // Personal Aid Kit
+    "ACE_plasmaIV_250",                                             // Plasma IV (250 ml)
+    "ACE_plasmaIV_500",                                             // Plasma IV (500 ml)
+    "ACE_plasmaIV",                                                 // Plasma IV (1000 ml)
+    "ACE_quikclot",                                                 // Bandage (QuickClot)
+    "ACE_RangeCard",                                                // Range Card
+    "ACE_RangeTable_82mm",                                          // 82 mm Rangetable
+    "ACE_rope12",                                                   // Rope 12.2 meters
+    "ACE_rope15",                                                   // Rope 15.2 meters
+    "ACE_rope18",                                                   // Rope 18.3 meters
+    "ACE_rope27",                                                   // Rope 27.4 meters
+    "ACE_rope36",                                                   // Rope 36.6 meters
+    "ACE_salineIV_250",                                             // Saline IV (250 ml)
+    "ACE_salineIV_500",                                             // Saline IV (500 ml)
+    "ACE_salineIV",                                                 // Saline IV (1000 ml)
+    "ACE_Sandbag_empty",                                            // Sandbag (empty)
+    "ACE_splint",                                                   // Splint
+    "ACE_surgicalKit",                                              // Surgical Kit
+    "ACE_tourniquet",                                               // Tourniquet (CAT)
+    "ACE_Tripod",                                                   // SSWT Kit
+    "ACE_wirecutter",                                               // Wirecutter
+
+    // ACRE Items
+    "ACRE_PRC117F",                                                 // AN/PRC-117F
+    "ACRE_PRC148",                                                  // AN/PRC-148
+    "ACRE_PRC152",                                                  // AN/PRC-152
+    "ACRE_PRC343",                                                  // AN/PRC-343
+    "ACRE_PRC77",                                                   // AN/PRC-77
+    "ACRE_SEM52SL",                                                 // SEM 52 SL
+    "ACRE_SEM70",                                                   // SEM 70
+    "ACRE_VHF30108",                                                // VHF30108 GSM
+    "ACRE_VHF30108MAST",                                            // VHF30108 Mast
+    "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
+
+    // TFAR Items
+    "tf_anprc148jem",                                               // AN/PRC-148 JEM
+    "tf_anprc152",                                                  // AN/PRC-152
+    "tf_anprc154_1",                                                // AN/PRC-154
+    "tf_fadak",                                                     // FADAK
+    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
+    "tf_pnr1000a_1",                                                // PNR-1000A
+    "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
 GRLIB_arsenal_backpacks = [

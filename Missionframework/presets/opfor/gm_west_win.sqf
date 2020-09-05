@@ -116,10 +116,14 @@ opfor_troup_transports = [
     "gm_ge_army_fuchsa0_reconnaissance_win",                            // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc_win",                                       // M113A3 (MG3)
     "gm_ge_army_m113a1g_apc_milan_win"                                  // M113A3 (MILAN)
+    "gm_ge_army_ch53g"                                                  // CH-53G
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
+    "gm_ge_army_bo105p_pah1",                                           // PAH 1
+    "gm_ge_army_bo105p_pah1a1",                                         // PAH 1A1
+    "gm_ge_army_ch53g",                                                 // CH-53G
     "len_uh1d_bw"                                                       // BW UH-1D
 ];
 
