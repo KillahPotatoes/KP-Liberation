@@ -56,10 +56,14 @@ while {true} do {
 
     waitUntil {dialog};
 
-    ((findDisplay 5201) displayCtrl 201) ctrlAddEventHandler ["mouseButtonDblClick", {deploy = 1;}];
+    (DEPLOY_DISPLAY displayCtrl DEPLOY_LIST_IDC) ctrlAddEventHandler ["mouseButtonDblClick", {
+        if (ctrlEnabled (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC)) then {
+            deploy = 1;
+        };
+    }];
 
-    _standard_map_pos = ctrlPosition ((findDisplay 5201) displayCtrl 251);
-    _frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 198);
+    _standard_map_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 251);
+    _frame_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 198);
 
     // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
@@ -132,6 +136,14 @@ while {true} do {
                     _startdist = 200;
                     _enddist = 300;
                     _alti = 30;
+                };
+                // Disable if sector is under attack
+                if (!KPLIB_respawnOnAttackedSectors && {_objectpos in KPLIB_sectorsUnderAttack}) then {
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText "UNDER ATTACK";
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable false;
+                } else {
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_BUTTON";
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable true;
                 };
             };
 

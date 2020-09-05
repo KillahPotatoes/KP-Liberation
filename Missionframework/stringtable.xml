@@ -3760,6 +3760,9 @@
             <Korean>재투입차량에 '무기고' 설치</Korean>
             <Czech>Mobilní arzenál</Czech>
         </Key>
+        <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
+            <Original>Respawn on attacked sectors</Original>
+        </Key>
 
         <!-- Added or changed in v0.95 -->
         <Key ID="STR_INDIV_FLAG">
