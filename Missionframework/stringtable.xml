@@ -3762,6 +3762,7 @@
         </Key>
         <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
             <Original>Respawn on attacked sectors</Original>
+            <German>Respawn bei unter Angriff stehenden Sektoren</German>
         </Key>
 
         <!-- Added or changed in v0.95 -->
