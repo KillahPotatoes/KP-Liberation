@@ -17,10 +17,10 @@ FOB_box_typename = "gm_ge_army_shelteraceI_command_win";                // This 
 FOB_truck_typename = "gm_ge_army_bpz2a0_win";                           // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "gm_ge_army_u1300l_medic_win_rc";              // This is the mobile respawn (and medical) truck.
-huron_typename = "gm_ge_army_m113a1g_command_win";                      // This is Spartan 01, a multipurpose mobile respawn as a command M113.
+huron_typename = "gm_ge_army_ch53gs";                                   // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "gm_ge_army_crew_mp2a1_80_win";                     // This defines the crew for vehicles.
 pilot_classname = "gm_ge_army_crew_mp2a1_80_win";                       // This defines the pilot for helicopters.
-KP_liberation_little_bird_classname = "gm_ge_army_u1300l_container_win";// Little birds replaced with unimog for container transportation.
+KP_liberation_little_bird_classname = "gm_ge_army_bo105p1m_vbh_swooper";// These are the little birds which spawn on the Freedom or at Chimera base.
 KP_liberation_boat_classname = "B_Boat_Transport_01_F";                 // These are the boats which spawn at the stern of the Freedom.
 KP_liberation_truck_classname = "gm_ge_army_kat1_454_cargo_win";        // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
@@ -78,7 +78,15 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
-    ["len_uh1d_bw",225,0,125]                                           // BW UH-1D
+    ["gm_ge_army_bo105m_vbh",200,0,100],                                // VBH 1
+    ["gm_ge_army_bo105p1m_vbh",200,0,100],                              // VBH 1A1
+    ["gm_ge_army_bo105p1m_vbh_swooper",200,0,100],                      // VBH 1A1 Swooper
+    ["gm_ge_army_bo105p_pah1",200,100,100],                             // PAH 1
+    ["gm_ge_army_bo105p_pah1a1",200,120,100],                           // PAH 1A1
+    ["len_uh1d_bw",225,0,125],                                          // BW UH-1D
+    ["gm_ge_army_ch53g",300,0,175],                                     // CH-53G
+    ["gm_ge_airforce_do28d2",350,0,200],                                // Do 28 D2
+    ["gm_ge_airforce_do28d2_medevac",350,0,200]                         // Do 28 D2 (Medevac)
 ];
 
 static_vehicles = [

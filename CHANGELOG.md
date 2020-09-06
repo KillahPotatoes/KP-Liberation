@@ -11,7 +11,10 @@
 * Added: AAF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Added: LDF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
 * Added: Mission parameter for direct arsenal access without KPLIB Loadout Dialog.
+* Added: Helicopters from GM Update to GM faction presets.
+* Added: ACE, TFAR and ACRE items to GM West and East arsenal presets.
 * Added: Config value for radio tower classnames.
+* Added: Parameter to disable Zeus for commander.
 * Added: Disable respawn on attacked FOBs (adjustable via parameter)
 * Removed: T-14 from RHS AFRF preset.
 * Tweaked: "FOB " removed from resource overlay, so it's just e.g. "ALPHA" again.

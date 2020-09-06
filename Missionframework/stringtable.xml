@@ -2869,6 +2869,10 @@
             <Turkish>Sınırlı Zeus Arayüzü</Turkish>
             <Czech>Omezené rozhraní Zeus</Czech>
         </Key>
+        <Key ID="STR_PARAM_COMMANDERZEUS">
+            <Original>Zeus for Commander</Original>
+            <German>Zeus für Kommandant</German>
+        </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
             <German>Chance, dass Feinde in fahrunfähigen/beschädigten Fahrzeugen verbleiben</German>

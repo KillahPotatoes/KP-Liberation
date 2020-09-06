@@ -113,11 +113,15 @@ opfor_troup_transports = [
     "gm_gc_army_ural4320_cargo_win",                                    // Truck gel. 5 Transport
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win",                                           // SPW-60PB
-    "gm_gc_army_bmp1sp2_win"                                            // BMP-1 SP-2
+    "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
+    "gm_gc_airforce_mi2p"                                               // Mi-2P
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
+    "gm_gc_airforce_mi2p",                                              // Mi-2P
+    "gm_gc_airforce_mi2us",                                             // Mi-2US
+    "gm_gc_airforce_mi2urn",                                            // Mi-2URN
     "len_mi8amt_nva",                                                   // Mi8amt
     "len_mi24d_AT_nva",                                                 // Mi-24D (AT)
     "len_mi24d_CAS_nva",                                                // Mi-24D (CAS)

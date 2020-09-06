@@ -2,7 +2,7 @@
     File: fn_initCuratorHandlers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-08-07
-    Last Update: 2020-08-08
+    Last Update: 2020-08-30
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -62,13 +62,15 @@ if (isServer) then {
 
             _zeus setCuratorCoef ["Place", 0];
             _zeus setCuratorCoef ["Delete", 0];
+
+            removeAllCuratorAddons _zeus;
         };
 
         _zeus setVariable ["KPLIB_limited", _limited];
 
         _player assignCurator _zeus;
 
-        [true, "KPLIB_zeusAssigned", [_zeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
+        [true, "KPLIB_zeusAssigned", [_zeus, _limited]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
     }] call BIS_fnc_addScriptedEventHandler;
 
     [true, "KPLIB_activateZeusAddons", {
@@ -94,7 +96,8 @@ if (isServer) then {
 if (hasInterface) then {
     [true, "KPLIB_zeusAssigned", {
         params [
-            ["_zeus", objNull, [objNull]]
+            ["_zeus", objNull, [objNull]],
+            ["_limited", false, [true]]
         ];
 
         if !(_zeus getVariable ["KPLIB_drawCuratorLocations", false]) then {
@@ -102,8 +105,10 @@ if (hasInterface) then {
             [_zeus] call BIS_fnc_drawCuratorLocations;
         };
 
-        private _allAddons = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};
-        [true, "KPLIB_activateZeusAddons", [_zeus, _allAddons]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", 2];
+        if (!_limited) then {
+            private _allAddons = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};
+            [true, "KPLIB_activateZeusAddons", [_zeus, _allAddons]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", 2];
+        };
     }] call BIS_fnc_addScriptedEventHandler;
 };
 
