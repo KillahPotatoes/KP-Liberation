@@ -16,6 +16,7 @@
 * Added: Config value for radio tower classnames.
 * Added: Parameter to disable Zeus for commander.
 * Added: Disable respawn on attacked FOBs (adjustable via parameter)
+* Added: Zeus initialization via BIS scripted events. This makes the Eden placed zeus module (zm1) obsolete.
 * Removed: T-14 from RHS AFRF preset.
 * Tweaked: "FOB " removed from resource overlay, so it's just e.g. "ALPHA" again.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
@@ -26,6 +27,7 @@
 * Fixed: POWs could get saved when near FOB and still in player group.
 * Fixed: Civilian Reputation penalty got added to ambush chance, even if ambush chance was set to 0 in config.
 * Fixed: When starting with a FOB already built, the FOB actions appeared only after a server restart.
+* Fixed: Zeus available mods initialization (when not limited) wasn't reliable enough.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.
