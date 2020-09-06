@@ -7013,6 +7013,10 @@
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
         </Key>
+        <Key ID="STR_DEPLOY_UNDERATTACK">
+            <Original>UNDER ATTACK</Original>
+            <German>WIRD ANGEGRIFFEN</German>
+        </Key>
     </Package>
 
     <Package name="KPPLM">

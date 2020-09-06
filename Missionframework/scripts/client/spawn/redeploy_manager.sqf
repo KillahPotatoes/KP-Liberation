@@ -139,7 +139,7 @@ while {true} do {
                 };
                 // Disable if sector is under attack
                 if (!KPLIB_respawnOnAttackedSectors && {_objectpos in KPLIB_sectorsUnderAttack}) then {
-                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText "UNDER ATTACK";
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_UNDERATTACK";
                     (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable false;
                 } else {
                     (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_BUTTON";
