@@ -3764,6 +3764,10 @@
             <Korean>재투입차량에 '무기고' 설치</Korean>
             <Czech>Mobilní arzenál</Czech>
         </Key>
+        <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
+            <Original>Respawn on attacked sectors</Original>
+            <German>Respawn bei unter Angriff stehenden Sektoren</German>
+        </Key>
 
         <!-- Added or changed in v0.95 -->
         <Key ID="STR_INDIV_FLAG">
@@ -7012,6 +7016,10 @@
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
+        </Key>
+        <Key ID="STR_DEPLOY_UNDERATTACK">
+            <Original>UNDER ATTACK</Original>
+            <German>WIRD ANGEGRIFFEN</German>
         </Key>
     </Package>
 

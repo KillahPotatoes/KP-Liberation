@@ -1,4 +1,8 @@
-choiceslist = [];
+#define DEPLOY_DISPLAY (findDisplay 5201)
+#define DEPLOY_LIST_IDC 201
+#define DEPLOY_BUTTON_IDC 202
+
+KPLIB_respawnPositionsList = [];
 fullmap = 0;
 private _old_fullmap = 0;
 private _oldsel = -999;
@@ -52,10 +56,14 @@ while {true} do {
 
     waitUntil {dialog};
 
-    ((findDisplay 5201) displayCtrl 201) ctrlAddEventHandler ["mouseButtonDblClick", {deploy = 1;}];
+    (DEPLOY_DISPLAY displayCtrl DEPLOY_LIST_IDC) ctrlAddEventHandler ["mouseButtonDblClick", {
+        if (ctrlEnabled (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC)) then {
+            deploy = 1;
+        };
+    }];
 
-    _standard_map_pos = ctrlPosition ((findDisplay 5201) displayCtrl 251);
-    _frame_pos = ctrlPosition ((findDisplay 5201) displayCtrl 198);
+    _standard_map_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 251);
+    _frame_pos = ctrlPosition (DEPLOY_DISPLAY displayCtrl 198);
 
     // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
@@ -80,58 +88,74 @@ while {true} do {
     lbSetCurSel [203, 0];
 
     while {dialog && alive player && deploy == 0} do {
-        choiceslist = [[_basenamestr, getposATL startbase]];
+        // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
+        KPLIB_respawnPositionsList = [[_basenamestr, getposATL startbase]];
 
-        for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
-            choiceslist = choiceslist + [[format ["FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx)],GRLIB_all_fobs select _idx]];
-        };
+        {
+            KPLIB_respawnPositionsList pushBack [
+                format ["FOB %1 - %2", (military_alphabet select _forEachIndex), mapGridPosition _x],
+                _x
+            ];
+        } forEach GRLIB_all_fobs;
 
         if (KP_liberation_mobilerespawn) then {
             if (KP_liberation_respawn_time <= time) then {
-                private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
+                private _mobileRespawns = [] call KPLIB_fnc_getMobileRespawns;
 
-                for [ {_idx=0},{_idx < count _respawn_trucks},{_idx=_idx+1} ] do {
-                    choiceslist = choiceslist + [[format ["%1 - %2", localize "STR_RESPAWN_TRUCK",mapGridPosition (getposATL (_respawn_trucks select _idx))],getposATL (_respawn_trucks select _idx),(_respawn_trucks select _idx)]];
-                };
+                {
+                    KPLIB_respawnPositionsList pushBack [
+                        format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition getPosATL _x],
+                        getPosATL _x,
+                        _x
+                    ];
+                } forEach _mobileRespawns
             };
         };
 
-        lbClear 201;
+        lbClear DEPLOY_LIST_IDC;
         {
-            lbAdd [201, (_x select 0)];
-        } foreach choiceslist;
+            lbAdd [DEPLOY_LIST_IDC, (_x select 0)];
+        } foreach KPLIB_respawnPositionsList;
 
-        if (lbCurSel 201 == -1) then {
-             lbSetCurSel [201,0];
+        if (lbCurSel DEPLOY_LIST_IDC == -1) then {
+             lbSetCurSel [201, 0];
         };
 
-        if (lbCurSel 201 != _oldsel) then {
-            _oldsel = lbCurSel 201;
+        if (lbCurSel DEPLOY_LIST_IDC != _oldsel) then {
+            _oldsel = lbCurSel DEPLOY_LIST_IDC;
             private _objectpos = [0,0,0];
             if (dialog) then {
-                _objectpos = ((choiceslist select _oldsel) select 1);
+                _objectpos = ((KPLIB_respawnPositionsList select _oldsel) select 1);
             };
-            respawn_object setposATL ((choiceslist select _oldsel) select 1);
+            respawn_object setPosATL ((KPLIB_respawnPositionsList select _oldsel) select 1);
             private _startdist = 120;
             private _enddist = 120;
             private _alti = 35;
             if (dialog) then {
-                if (((choiceslist select (lbCurSel 201)) select 0) == _basenamestr) then {
+                if (((KPLIB_respawnPositionsList select (lbCurSel DEPLOY_LIST_IDC)) select 0) == _basenamestr) then {
                     _startdist = 200;
                     _enddist = 300;
                     _alti = 30;
                 };
+                // Disable if sector is under attack
+                if (!KPLIB_respawnOnAttackedSectors && {_objectpos in KPLIB_sectorsUnderAttack}) then {
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_UNDERATTACK";
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable false;
+                } else {
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlSetText localize "STR_DEPLOY_BUTTON";
+                    (DEPLOY_DISPLAY displayCtrl DEPLOY_BUTTON_IDC) ctrlEnable true;
+                };
             };
 
             "spawn_marker" setMarkerPosLocal (getpos respawn_object);
-            ctrlMapAnimClear ((findDisplay 5201) displayCtrl 251);
+            ctrlMapAnimClear (DEPLOY_DISPLAY displayCtrl 251);
             private _transition_map_pos = getpos respawn_object;
             private _fullscreen_map_offset = 4000;
             if(fullmap % 2 == 1) then {
                 _transition_map_pos = [(_transition_map_pos select 0) - _fullscreen_map_offset,  (_transition_map_pos select 1) + (_fullscreen_map_offset * 0.75), 0];
             };
-            ((findDisplay 5201) displayCtrl 251) ctrlMapAnimAdd [0, 0.3,_transition_map_pos];
-            ctrlMapAnimCommit ((findDisplay 5201) displayCtrl 251);
+            (DEPLOY_DISPLAY displayCtrl 251) ctrlMapAnimAdd [0, 0.3,_transition_map_pos];
+            ctrlMapAnimCommit (DEPLOY_DISPLAY displayCtrl 251);
 
             respawn_camera camSetPos [(getpos respawn_object select 0) - 70, (getpos respawn_object select 1) + _startdist, (getpos respawn_object select 2) + _alti];
             respawn_camera camcommit 0;
@@ -142,26 +166,26 @@ while {true} do {
         if (_old_fullmap != fullmap) then {
             _old_fullmap = fullmap;
             if (fullmap % 2 == 1) then {
-                ((findDisplay 5201) displayCtrl 251) ctrlSetPosition [ (_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
+                (DEPLOY_DISPLAY displayCtrl 251) ctrlSetPosition [ (_frame_pos select 0) + (_frame_pos select 2), (_frame_pos select 1), (0.6 * safezoneW), (_frame_pos select 3)];
             } else {
-                ((findDisplay 5201) displayCtrl 251) ctrlSetPosition _standard_map_pos;
+                (DEPLOY_DISPLAY displayCtrl 251) ctrlSetPosition _standard_map_pos;
             };
-            ((findDisplay 5201) displayCtrl 251) ctrlCommit 0.2;
+            (DEPLOY_DISPLAY displayCtrl 251) ctrlCommit 0.2;
             _oldsel = -1;
         };
         uiSleep 0.1;
     };
 
     if (dialog && deploy == 1) then {
-        private _idxchoice = lbCurSel 201;
-        _spawn_str = (choiceslist select _idxchoice) select 0;
+        private _idxchoice = lbCurSel DEPLOY_LIST_IDC;
+        _spawn_str = (KPLIB_respawnPositionsList select _idxchoice) select 0;
 
-        if (count (choiceslist select _idxchoice) == 3) then {
-            private _truck = (choiceslist select _idxchoice) select 2;
+        if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
+            private _truck = (KPLIB_respawnPositionsList select _idxchoice) select 2;
             player setposATL (_truck getPos [5 + (random 3), random 360]);
             KP_liberation_respawn_mobile_done = true;
         } else {
-            private _destpos = ((choiceslist select _idxchoice) select 1);
+            private _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
             player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
         };
 

@@ -17,6 +17,9 @@ if ( GRLIB_blufor_defenders ) then {
 
 sleep 60;
 
+KPLIB_sectorsUnderAttack pushBack _thispos;
+publicVariable "KPLIB_sectorsUnderAttack";
+
 _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership == GRLIB_side_friendly ) exitWith {
     if ( GRLIB_blufor_defenders ) then {
@@ -55,6 +58,9 @@ if ( GRLIB_endgame == 0 ) then {
         {[_x] spawn prisonner_ai;} foreach ((_thispos nearEntities ["Man", GRLIB_capture_size * 0.8]) select {side group _x == GRLIB_side_enemy});
     };
 };
+
+KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - [_thispos];
+publicVariable "KPLIB_sectorsUnderAttack";
 
 sleep 60;
 
