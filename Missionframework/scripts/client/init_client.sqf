@@ -96,9 +96,11 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
     if (KP_liberation_tutorial) then {
         [] call KPLIB_fnc_tutorial;
     };
-
-    [] spawn {
-        sleep 5;
-        [] call KPLIB_fnc_requestZeus;
+    // Request Zeus if enabled
+    if (KP_liberation_commander_zeus) then {
+        [] spawn {
+            sleep 5;
+            [] call KPLIB_fnc_requestZeus;
+        };
     };
 };
