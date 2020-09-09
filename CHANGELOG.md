@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.96.7a (2020-08-05)
+## 0.96.7a (tbd)
 * Added: Contact DLC static weapon backpacks to default blacklist.
 * Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
 * Added: NATO MTP arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
