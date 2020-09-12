@@ -8,26 +8,28 @@ KP_liberation_medical_vehicles = [
     "B_T_Truck_01_medical_F",
     "B_Truck_01_medical_F",
     "C_Van_02_medevac_F",
-    "CUP_O_M113_Med_TKA",
     "CUP_B_BMP2_AMB_CDF",
-    "CUP_O_BMP2_AMB_CHDKZ",
-    "CUP_O_BMP2_AMB_sla",
+    "CUP_B_BMP2_AMB_CZ_Des",
+    "CUP_B_BMP2_AMB_CZ",
+    "CUP_B_FV432_GB_Ambulance",
+    "CUP_B_HMMWV_Ambulance_ACR",
     "CUP_B_HMMWV_Ambulance_USA",
     "CUP_B_HMMWV_Ambulance_USMC",
     "CUP_B_LR_Ambulance_CZ_D",
     "CUP_B_LR_Ambulance_CZ_W",
     "CUP_B_LR_Ambulance_GB_D",
     "CUP_B_LR_Ambulance_GB_W",
-    "CUP_O_LR_Ambulance_TKA",
-    "CUP_B_FV432_GB_Ambulance",
     "CUP_B_S1203_Ambulance_CDF",
     "CUP_B_UH1Y_MEV_USMC",
     "CUP_B_UH60M_Unarmed_FFV_MEV_US",
-    "CUP_B_BMP2_AMB_CZ",
-    "CUP_B_BMP2_AMB_CZ_Des",
-    "CUP_B_HMMWV_Ambulance_ACR",
+    "CUP_O_BMP2_AMB_CHDKZ",
+    "CUP_O_BMP2_AMB_sla",
+    "CUP_O_LR_Ambulance_TKA",
+    "CUP_O_M113_Med_TKA",
+    "gm_gc_airforce_mi2sr",
     "gm_gc_army_ural375d_medic_win",
     "gm_gc_army_ural375d_medic",
+    "gm_ge_airforce_do28d2_medevac",
     "gm_ge_army_u1300l_medic_win_rc",
     "gm_ge_army_u1300l_medic",
     "I_E_Truck_02_Medical_F",
@@ -166,7 +168,14 @@ KP_liberation_preset_civilians = 0;
 6  = CSAT arsenal preset
 7  = Unsung US arsenal preset
 8  = SFP arsenal preset
-9  = BWMod arsenal preset */
+9  = BWMod arsenal preset
+10 = NATO MTP arsenal preset
+11 = NATO Tropic arsenal preset
+12 = NATO Woodland arsenal preset
+13 = CSAT Hex arsenal preset
+14 = CSAT Green Hex arsenal preset
+15 = AAF arsenal preset
+16 = LDF arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -265,6 +274,12 @@ KP_liberation_suppMod_whitelist = [
 
 ];
 
+/* Array of radio tower classnames to place at radio tower sectors.
+If more than one is added, it'll be selected random for each sector on campaign start. */
+KPLIB_radioTowerClassnames = [
+    "Land_Communication_F"
+];
+
 /* - Default arsenal blacklist method.
 Useless if you're using anything other than "kp_liberation_arsenal = 0;" above. A whitelisted arsenal is always more performance friendly then a blacklisted arsenal.
 REMEMBER: All static turret and UAV bags should be defined here, to stop players from exploiting free resources via the virtual arsenal.    */
@@ -300,6 +315,10 @@ blacklisted_from_arsenal = [
     "C_UAV_06_medical_backpack_F",
     "I_AA_01_weapon_F",
     "I_AT_01_weapon_F",
+    "I_C_HMG_02_high_weapon_F",
+    "I_C_HMG_02_support_F",
+    "I_C_HMG_02_support_high_F",
+    "I_C_HMG_02_weapon_F",
     "I_E_AA_01_weapon_F",
     "I_E_AT_01_weapon_F",
     "I_E_GMG_01_A_Weapon_F",
@@ -310,6 +329,10 @@ blacklisted_from_arsenal = [
     "I_E_HMG_01_support_F",
     "I_E_HMG_01_support_high_F",
     "I_E_HMG_01_Weapon_F",
+    "I_E_HMG_02_high_weapon_F",
+    "I_E_HMG_02_support_F",
+    "I_E_HMG_02_support_high_F",
+    "I_E_HMG_02_weapon_F",
     "I_E_Mortar_01_support_F",
     "I_E_Mortar_01_Weapon_F",
     "I_E_UAV_01_backpack_F",
@@ -317,6 +340,10 @@ blacklisted_from_arsenal = [
     "I_E_UAV_06_medical_backpack_F",
     "I_E_UGV_02_Demining_backpack_F",
     "I_E_UGV_02_Science_backpack_F",
+    "I_G_HMG_02_high_weapon_F",
+    "I_G_HMG_02_support_F",
+    "I_G_HMG_02_support_high_F",
+    "I_G_HMG_02_weapon_F",
     "I_GMG_01_A_weapon_F",
     "I_GMG_01_high_weapon_F",
     "I_GMG_01_weapon_F",
@@ -325,6 +352,10 @@ blacklisted_from_arsenal = [
     "I_HMG_01_support_F",
     "I_HMG_01_support_high_F",
     "I_HMG_01_weapon_F",
+    "I_HMG_02_high_weapon_F",
+    "I_HMG_02_support_F",
+    "I_HMG_02_support_high_F",
+    "I_HMG_02_weapon_F",
     "I_Mortar_01_support_F",
     "I_Mortar_01_weapon_F",
     "I_UAV_01_backpack_F",

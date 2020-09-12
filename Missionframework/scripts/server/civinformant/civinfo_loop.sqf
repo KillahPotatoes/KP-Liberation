@@ -27,7 +27,7 @@ while {true} do {
         _informant setUnitPos "UP";
         sleep 1;
         if (KP_liberation_ace) then {
-            [_informant, true] call ACE_captives_fnc_setSurrendered;
+            ["ace_captives_setSurrendered", [_informant, true], _informant] call CBA_fnc_targetEvent;
         } else {
             _informant disableAI "ANIM";
             _informant disableAI "MOVE";
@@ -57,7 +57,7 @@ while {true} do {
         if (_waiting_time > 0) then {
             if (alive _informant) then {
                 if (KP_liberation_ace) then {
-                    [_informant, false] call ACE_captives_fnc_setSurrendered;
+                    ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
                 } else {
                     _informant enableAI "ANIM";
                     _informant enableAI "MOVE";

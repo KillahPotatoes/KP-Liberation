@@ -9,6 +9,13 @@ switch (KP_liberation_arsenal) do {
     case  7: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\unsung.sqf";};
     case  8: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\sfp.sqf";};
     case  9: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\bwmod.sqf";};
+    case  10: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_nato_mtp.sqf";};
+    case  11: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_nato_tropic.sqf";};
+    case  12: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_nato_wdl.sqf";};
+    case  13: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_csat_hex.sqf";};
+    case  14: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_csat_ghex.sqf";};
+    case  15: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_aaf.sqf";};
+    case  16: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_ldf.sqf";};
     default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
@@ -79,15 +86,21 @@ if (!KPLIB_sway) then {
     player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
 };
 
-{
-    [_x] call BIS_fnc_drawCuratorLocations;
-} forEach allCurators;
-
 execVM "scripts\client\ui\intro.sqf";
 
 [player] joinSilent (createGroup [GRLIB_side_friendly, true]);
 
-// Start Tutorial
-if (KP_liberation_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
-    [] call KPLIB_fnc_tutorial;
+// Commander init
+if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
+    // Start tutorial
+    if (KP_liberation_tutorial) then {
+        [] call KPLIB_fnc_tutorial;
+    };
+    // Request Zeus if enabled
+    if (KP_liberation_commander_zeus) then {
+        [] spawn {
+            sleep 5;
+            [] call KPLIB_fnc_requestZeus;
+        };
+    };
 };

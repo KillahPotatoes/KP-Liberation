@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-05-03
+    Last Update: 2020-08-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -52,8 +52,8 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 
     // Process all groups near this FOB
     {
-        // Get only living AI units of the group
-        _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x)};
+        // Get only living AI units of the group by excluding possible POWs currently in the player group
+        _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in militia_squad)};
         // Add to save array
         _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
     } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (GRLIB_fob_range * 1.2)});
@@ -203,5 +203,6 @@ private _weights = [
     KP_liberation_production_markers,
     resources_intel,
     _allMines,
-    _allCrates
+    _allCrates,
+    KPLIB_sectorTowers
 ] // return

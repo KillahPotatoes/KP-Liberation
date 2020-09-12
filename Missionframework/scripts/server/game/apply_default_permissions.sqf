@@ -15,12 +15,10 @@ while {true} do {
 
         private _old_count = count GRLIB_permissions;
         {
-            if (!((name _x) in ["HC1", "HC2", "HC3"])) then {
-                if (!((getPlayerUID _x) in _all_players_uids)) then {
-                    GRLIB_permissions pushback [(getPlayerUID _x), (name _x), _default_permissions];
-                };
+            if !(((getPlayerUID _x) in _all_players_uids) || ((getPlayerUID _x) isEqualTo "")) then {
+                GRLIB_permissions pushBack [getPlayerUID _x, name _x, _default_permissions];
             };
-        } foreach allPlayers;
+        } foreach (allPlayers - entities "HeadlessClient_F");
 
         if (_old_count != count GRLIB_permissions) then {
             publicVariable "GRLIB_permissions"

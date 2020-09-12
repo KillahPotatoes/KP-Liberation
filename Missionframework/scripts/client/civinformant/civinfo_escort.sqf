@@ -6,7 +6,7 @@ if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort called on: %
 
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
-if !(alive _informant) exitWith {if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if !(alive _informant) exitWith {if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};};
 
 private _is_near_fob = false;
 

@@ -12,6 +12,7 @@ if ( _create_fob_building ) then {
     _fob_building = FOB_typename createVehicle _fob_pos;
     _fob_building setpos _fob_pos;
     _fob_building setVectorUp [0,0,1];
+    [_fob_building] call KPLIB_fnc_addObjectInit;
     sleep 1;
 };
 

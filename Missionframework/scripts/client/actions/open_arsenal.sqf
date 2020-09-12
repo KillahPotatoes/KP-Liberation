@@ -1,3 +1,11 @@
+if (KPLIB_directArsenal) exitWith {
+    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+        [player, player, false] call ace_arsenal_fnc_openBox;
+    } else {
+        ["Open", false] spawn BIS_fnc_arsenal;
+    };
+};
+
 load_loadout = 0;
 edit_loadout = 0;
 respawn_loadout = 0;

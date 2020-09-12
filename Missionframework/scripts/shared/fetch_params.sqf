@@ -56,6 +56,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_fog_param, "VanillaFog", 1);
     GET_PARAM(GRLIB_resources_multiplier, "ResourcesMultiplier", 3);
     GET_PARAM_BOOL(KP_liberation_arsenal_type, "ArsenalType", 0);
+    GET_PARAM_BOOL(KPLIB_directArsenal, "DirectArsenal", 0);
     GET_PARAM_BOOL(KP_liberation_playermenu, "PlayerMenu", 1);
     GET_PARAM(KP_liberation_victoryCondition, "VictoryCondition", 0);
 
@@ -85,6 +86,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KP_liberation_mobilerespawn, "MobileRespawn", 1);
     GET_PARAM(KP_liberation_respawn_cooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KP_liberation_mobilearsenal, "MobileArsenal", 1);
+    GET_PARAM_BOOL(KPLIB_respawnOnAttackedSectors, "AttackedSectorRespawn", 0);
     GET_PARAM_BOOL(KP_liberation_ailogistics, "AiLogistics", 1);
     GET_PARAM_BOOL(KP_liberation_cr_param_buildings, "CR_Building", 0);
     GET_PARAM(GRLIB_halo_param, "HaloJump", 1);
@@ -92,6 +94,7 @@ if(isServer) then {
     GET_PARAM(KP_liberation_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KP_liberation_delayDespawnMax, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KP_liberation_limited_zeus, "LimitedZeus", 1);
+    GET_PARAM_BOOL(KP_liberation_commander_zeus, "CommanderZeus", 1);
     GET_PARAM_BOOL(KP_liberation_enemies_zeus, "ZeusAddEnemies", 1);
     GET_PARAM_BOOL(KP_liberation_high_command, "HighCommand", 1);
     GET_PARAM(KP_liberation_suppMod, "SuppMod", 1);
@@ -303,6 +306,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_arsenal_type) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_DIRECTARSENAL";
+    _value = if (KPLIB_directArsenal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_PLAYERMENU";
     _value = if (KP_liberation_playermenu) then {localize "STR_PARAMS_PLAYERMENU_KP";} else {localize "STR_PARAMS_PLAYERMENU_GREUH";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -387,6 +394,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (KP_liberation_mobilearsenal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_ATTACKEDSECTORRESPAWN";
+    _value = if (KPLIB_respawnOnAttackedSectors) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_AILOGISTICS";
     _value = if (KP_liberation_ailogistics) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -417,6 +428,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_DELAY_DESPAWN_MAX";
     _value = if (KP_liberation_delayDespawnMax == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_delayDespawnMax;};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_COMMANDERZEUS";
+    _value = if (KP_liberation_commander_zeus) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_LIMITEDZEUS";
