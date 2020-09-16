@@ -2,7 +2,7 @@
     File: gm_west.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-30
-    Last Update: 2020-05-25
+    Last Update: 2020-09-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,26 +21,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "land_gm_tower_bt_6_fuest_80";                           // This is the main FOB HQ building.
-KPLIB_b_fobBox = "gm_ge_army_shelteraceI_command";                    // This is the FOB as a container.
-KPLIB_b_fobTruck = "gm_ge_army_bpz2a0";                               // This is the FOB as a vehicle.
-KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "gm_ge_army_u1300l_medic";                     // This is the mobile respawn (and medical) truck.
-KPLIB_b_potato01 = "gm_ge_army_m113a1g_command";                          // This is Potato 01, a multipurpose mobile respawn as a command M113.
-KPLIB_b_crewUnit = "gm_ge_army_crew_mp2a1_80_oli";                     // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "gm_ge_army_crew_mp2a1_80_oli";                       // This defines the pilot for helicopters.
-KPLIB_b_addHeli = "gm_ge_army_u1300l_container";            // Little birds replaced with unimog for container transportation.
-KPLIB_b_addBoat = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_b_logiTruck = "gm_ge_army_kat1_454_cargo";                    // These are the trucks which are used in the logistic convoy system.
-KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_b_logiStation = "land_gm_euro_shed_03";                        // The building defined to unlock FOB recycling functionality.
-KPLIB_b_airControl = "land_gm_radiotower_01";                   // The building defined to unlock FOB air vehicle functionality.
-KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "land_gm_tower_bt_6_fuest_80";                    // This is the main FOB HQ building.
+KPLIB_b_fobBox = "gm_ge_army_shelteraceI_command";                      // This is the FOB as a container.
+KPLIB_b_fobTruck = "gm_ge_army_bpz2a0";                                 // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "gm_ge_army_u1300l_medic";                      // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "gm_ge_army_ch53gs";                                 // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "gm_ge_army_crew_mp2a1_80_oli";                      // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "gm_ge_army_crew_mp2a1_80_oli";                 // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "gm_ge_army_u1300l_container";                        // Little birds replaced with unimog for container transportation.
+KPLIB_b_addBoat = "B_Boat_Transport_01_F";                              // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "gm_ge_army_kat1_454_cargo";                        // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                     // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                     // A large storage area for resources.
+KPLIB_b_logiStation = "land_gm_euro_shed_03";                           // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "land_gm_radiotower_01";                           // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                              // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                             // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                              // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                             // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -87,7 +87,15 @@ KPLIB_b_vehHeavy = [
 ];
 
 KPLIB_b_vehAir = [
-    ["len_uh1d_bw",225,0,125]                                           // BW UH-1D
+    ["gm_ge_army_bo105m_vbh",200,0,100],                                // VBH 1
+    ["gm_ge_army_bo105p1m_vbh",200,0,100],                              // VBH 1A1
+    ["gm_ge_army_bo105p1m_vbh_swooper",200,0,100],                      // VBH 1A1 Swooper
+    ["gm_ge_army_bo105p_pah1",200,100,100],                             // PAH 1
+    ["gm_ge_army_bo105p_pah1a1",200,120,100],                           // PAH 1A1
+    ["len_uh1d_bw",225,0,125],                                          // BW UH-1D
+    ["gm_ge_army_ch53g",300,0,175],                                     // CH-53G
+    ["gm_ge_airforce_do28d2",350,0,200],                                // Do 28 D2
+    ["gm_ge_airforce_do28d2_medevac",350,0,200]                         // Do 28 D2 (Medevac)
 ];
 
 KPLIB_b_vehStatic = [

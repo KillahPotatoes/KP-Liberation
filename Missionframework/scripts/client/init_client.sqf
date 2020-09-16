@@ -54,15 +54,21 @@ if (!KPLIB_param_weaponSway) then {
     player addEventHandler ["Respawn", {player setCustomAimCoef 0.1;}];
 };
 
-{
-    [_x] call BIS_fnc_drawCuratorLocations;
-} forEach allCurators;
-
 execVM "scripts\client\ui\intro.sqf";
 
 [player] joinSilent (createGroup [KPLIB_side_player, true]);
 
-// Start Tutorial
-if (KPLIB_param_tutorial && {player isEqualTo ([] call KPLIB_fnc_getCommander)}) then {
-    [] call KPLIB_fnc_tutorial;
+// Commander init
+if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
+    // Start tutorial
+    if (KP_liberation_tutorial) then {
+        [] call KPLIB_fnc_tutorial;
+    };
+    // Request Zeus if enabled
+    if (KPLIB_param_zeusCommander) then {
+        [] spawn {
+            sleep 5;
+            [] call KPLIB_fnc_requestZeus;
+        };
+    };
 };

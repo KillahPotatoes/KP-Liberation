@@ -13,16 +13,34 @@
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: FOB truck got mass set, but should've just apply to FOB boxes.
 
-## 0.96.7a (2020-08-06)
+## 0.96.7a (2020-09-12)
 * Added: Contact DLC static weapon backpacks to default blacklist.
 * Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: NATO MTP arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: NATO Pacific arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: NATO Woodland arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: CSAT Hex arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: CSAT Ghex arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: AAF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: LDF arsenal preset. Thanks to [lkvk](https://github.com/lkvk)
+* Added: Mission parameter for direct arsenal access without KPLIB Loadout Dialog.
+* Added: Helicopters from GM Update to GM faction presets.
+* Added: ACE, TFAR and ACRE items to GM West and East arsenal presets.
+* Added: Config value for radio tower classnames.
+* Added: Parameter to disable Zeus for commander.
+* Added: Disable respawn on attacked FOBs (adjustable via parameter)
+* Added: Zeus initialization via BIS scripted events. This makes the Eden placed zeus module (zm1) obsolete.
 * Removed: T-14 from RHS AFRF preset.
+* Tweaked: "FOB " removed from resource overlay, so it's just e.g. "ALPHA" again.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: Civilian Informant side mission didn't worked due to script error.
 * Fixed: AI didn't surrender correctly when ACE is loaded.
 * Fixed: The commander couldn't build squads via the build menu.
 * Fixed: Possible "Error: no unit" appearing in permission dialog.
 * Fixed: POWs could get saved when near FOB and still in player group.
+* Fixed: Civilian Reputation penalty got added to ambush chance, even if ambush chance was set to 0 in config.
+* Fixed: When starting with a FOB already built, the FOB actions appeared only after a server restart.
+* Fixed: Zeus available mods initialization (when not limited) wasn't reliable enough.
 
 ## 0.96.7 (2020-05-10)
 * Added: CfgFunctions library created from `shared/functions` and all of these functions optimized.

@@ -9,37 +9,38 @@
         English | Updated: 0.96.8
             KP Liberation Dev Team  - https://github.com/KillahPotatoes
 
-        Chinese Simplified | Updated: pre 0.96.8
+        Chinese Simplified | Updated: pre 0.96.7a
             Nercon                  - https://github.com/nercon
 
-        Chinese Traditional | Updated: pre 0.96.8
+        Chinese Traditional | Updated: pre 0.96.7a
             dustin902001            - https://github.com/dustin902001
             John M. Rodriguez       - https://github.com/KOEI5113
 
-        French | Updated: pre 0.96.8
+        French | Updated: pre 0.96.7a
             zbug                    - https://github.com/GreuhZbug
 
         German | Updated: 0.96.8
             Wyqer                   - https://github.com/Wyqer
 
-        Italian | Updated: pre 0.96.8
+        Italian | Updated: pre 0.96.7a
             k4s0                    - https://github.com/k4s0
 
-        Portuguese | Updated: pre 0.96.8
+        Portuguese | Updated: pre 0.96.7a
             NomadRomeo              - https://github.com/NomadRomeo
+            AngusDLX                - https://github.com/AngusDLX
 
-        Russian | Updated: pre 0.96.8
+        Russian | Updated: pre 0.96.7a
             _KOC_                   - Constantin.rogozin@ya.ru
             Dj_Haski                - https://github.com/DjHaski
 
-        Spanish | Updated: pre 0.96.8
+        Spanish | Updated: pre 0.96.7a
             amunoz20                - https://github.com/amunoz20
             regiregi22              - https://github.com/regiregi22
 
-        Turkish | Updated: pre 0.96.8
+        Turkish | Updated: pre 0.96.7a
             Carbneth                - https://github.com/Carbneth
 
-        Czech | Updated: 0.96.8
+        Czech | Updated: 0.96.7a
             MJVEVERUSKA             - https://github.com/MJVEVERUSKA
 -->
 <Project name="Liberation">
@@ -2868,6 +2869,10 @@
             <Turkish>Sınırlı Zeus Arayüzü</Turkish>
             <Czech>Omezené rozhraní Zeus</Czech>
         </Key>
+        <Key ID="STR_PARAM_COMMANDERZEUS">
+            <Original>Zeus for Commander</Original>
+            <German>Zeus für Kommandant</German>
+        </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
             <German>Chance, dass Feinde in fahrunfähigen/beschädigten Fahrzeugen verbleiben</German>
@@ -3758,6 +3763,10 @@
             <Portuguese>Arsenal móvel</Portuguese>
             <Korean>재투입차량에 '무기고' 설치</Korean>
             <Czech>Mobilní arzenál</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
+            <Original>Respawn on attacked sectors</Original>
+            <German>Respawn bei unter Angriff stehenden Sektoren</German>
         </Key>
 
         <!-- Added or changed in v0.95 -->
@@ -7003,6 +7012,14 @@
             <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
             <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
             <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_DIRECTARSENAL">
+            <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
+            <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
+        </Key>
+        <Key ID="STR_DEPLOY_UNDERATTACK">
+            <Original>UNDER ATTACK</Original>
+            <German>WIRD ANGEGRIFFEN</German>
         </Key>
     </Package>
 

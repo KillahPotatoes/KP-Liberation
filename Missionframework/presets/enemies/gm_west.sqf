@@ -2,7 +2,7 @@
     File: gm_west.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-06
-    Last Update: 2020-05-15
+    Last Update: 2020-09-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -124,11 +124,15 @@ KPLIB_o_troopTransports = [
     "gm_ge_army_fuchsa0_engineer",                                      // Fuchs (Engineer)
     "gm_ge_army_fuchsa0_reconnaissance",                                // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc",                                           // M113A3 (MG3)
-    "gm_ge_army_m113a1g_apc_milan"                                      // M113A3 (MILAN)
+    "gm_ge_army_m113a1g_apc_milan",                                     // M113A3 (MILAN)
+    "gm_ge_army_ch53g"                                                  // CH-53G
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 KPLIB_o_helicopters = [
+    "gm_ge_army_bo105p_pah1",                                           // PAH 1
+    "gm_ge_army_bo105p_pah1a1",                                         // PAH 1A1
+    "gm_ge_army_ch53g",                                                 // CH-53G
     "len_uh1d_bw"                                                       // BW UH-1D
 ];
 

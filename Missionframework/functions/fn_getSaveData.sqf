@@ -2,7 +2,7 @@
     File: fn_getSaveData.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-29
-    Last Update: 2020-08-05
+    Last Update: 2020-08-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -203,5 +203,6 @@ private _weights = [
     KPLIB_production_markers,
     resources_intel,
     _allMines,
-    _allCrates
+    _allCrates,
+    KPLIB_sectorTowers
 ] // return

@@ -2,7 +2,7 @@
     File: KPLIB_lists.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-10
-    Last Update: 2020-05-22
+    Last Update: 2020-09-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -425,4 +425,9 @@ KPLIB_intelBuildingClasses = [
     "Land_Research_house_V1_F",
     "Land_Research_HQ_F",
     "Land_u_Barracks_V2_F"
+];
+
+// Array of radio tower classnames to place at radio tower sectors. If more than one is added, it'll be selected random for each sector on campaign start.
+KPLIB_radioTowerClassnames = [
+    "Land_Communication_F"
 ];
