@@ -1,6 +1,6 @@
 /*
     CSAT Hex Arsenal Preset
-    Last Update: 2020-08-17
+    Last Update: 2020-09-16
     Needed:
         - None
     Optional:
@@ -9,7 +9,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // Primary
     "arifle_Katiba_F",                                              // Katiba 6.5 mm
     "arifle_Katiba_C_F",                                            // Katiba Carbine 6.5 mm
@@ -23,11 +23,11 @@ GRLIB_arsenal_weapons = [
     "srifle_DMR_05_blk_F",                                          // Cyrus 9.3 mm (Black)
     "MMG_01_hex_F",                                                 // Navid 9.3 mm (Hex)
     "arifle_ARX_hex_F",                                             // Type 115 6.5 mm (Hex)
-       
+
     // Handgun
     "hgun_Rook40_F",                                                // Rook-40 9 mm
     "hgun_Pistol_heavy_02_F",                                       // Zubr .45 ACP
-    
+
     // Launcher
     "launch_RPG32_F",                                               // RPG-42 Alamut
     "launch_O_Titan_F",                                             // Titan MPRL (Hex)
@@ -35,11 +35,11 @@ GRLIB_arsenal_weapons = [
     "launch_O_Vorona_brown_F"                                       // 9M135 Vorona (Brown)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -53,7 +53,7 @@ GRLIB_arsenal_items = [
     "MineDetector",                                                 // Mine Detector
     "Rangefinder",                                                  // Rangefinder
     "ToolKit",                                                      // Toolkit
-    
+
     // Faction Specific Items
     "O_UavTerminal",                                                // UAV Terminal [CSAT]
     "Laserdesignator_02",                                           // Laser Designator (Hex)
@@ -112,7 +112,7 @@ GRLIB_arsenal_items = [
     "G_Shades_Red",                                                 // Shades (Red)
     "G_AirPurifyingRespirator_02_black_F",                          // APR (Black) [CSAT]
     "G_AirPurifyingRespirator_02_sand_F",                           // APR (Sand) [CSAT]
-    
+
     // Vests
     "V_Chestrig_khk",                                               // Chest Rig (Khaki)
     "V_HarnessOGL_brn",                                             // LBV Grenadier Harness
@@ -127,7 +127,7 @@ GRLIB_arsenal_items = [
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_green_F",                                           // Deck Crew Vest (Green)
-    
+
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
@@ -257,7 +257,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_Parachute",                                                  // Steerable Parachute
     "B_AssaultPack_ocamo",                                          // Assault Pack (Hex)
     "B_Carryall_cbr",                                               // Carryall Backpack (Coyote)

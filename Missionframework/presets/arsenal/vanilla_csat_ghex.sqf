@@ -1,6 +1,6 @@
 /*
     CSAT Green Hex Arsenal Preset
-    Last Update: 2020-08-17
+    Last Update: 2020-09-16
     Needed:
         - None
     Optional:
@@ -9,7 +9,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // Primary
     "SMG_02_F",                                                     // Sting 9 mm
     "arifle_SDAR_F",                                                // SDAR 5.56 mm
@@ -22,11 +22,11 @@ GRLIB_arsenal_weapons = [
     "arifle_CTAR_GL_blk_F",                                         // CAR-95 GL 5.8 mm (Black)
     "arifle_CTARS_blk_F",                                           // CAR-95-1 5.8mm (Black)
     "arifle_ARX_ghex_F",                                            // Type 115 6.5 mm (Green Hex)
-    
+
     // Handgun
     "hgun_Rook40_F",                                                // Rook-40 9 mm
     "hgun_Pistol_heavy_02_F",                                       // Zubr .45 ACP
-    
+
     // Launcher
     "launch_RPG32_ghex_F",                                          // RPG-42 Alamut (Green Hex)
     "launch_O_Titan_ghex_F",                                        // Titan MPRL (Green Hex)
@@ -34,11 +34,11 @@ GRLIB_arsenal_weapons = [
     "launch_O_Vorona_green_F"                                       // 9M135 Vorona (Green)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -52,7 +52,7 @@ GRLIB_arsenal_items = [
     "MineDetector",                                                 // Mine Detector
     "Rangefinder",                                                  // Rangefinder
     "ToolKit",                                                      // Toolkit
-    
+
     // Faction Specific Items
     "O_UavTerminal",                                                // UAV Terminal [CSAT]
     "Laserdesignator_02_ghex_F",                                    // Laser Designator (Green Hex)
@@ -66,7 +66,7 @@ GRLIB_arsenal_items = [
     "U_O_T_Sniper_F",                                               // Ghillie Suit (Green Hex) [CSAT]
     "U_O_T_FullGhillie_tna_F",                                      // Full Ghillie (Jungle) [CSAT]
     "U_O_V_Soldier_Viper_F",                                        // Special Purpose Suit (Green Hex)
-    
+
     // Headgear
     "H_Beret_ocamo",                                                // Beret [CSAT]
     "H_Beret_CSAT_01_F",                                            // Beret (Red) [CSAT]
@@ -103,7 +103,7 @@ GRLIB_arsenal_items = [
     "G_Shades_Red",                                                 // Shades (Red)
     "G_AirPurifyingRespirator_02_black_F",                          // APR (Black) [CSAT]
     "G_AirPurifyingRespirator_02_olive_F",                          // APR (Olive) [CSAT]
-    
+
     // Vests
     "V_TacVest_oli",                                                // Tactical Vest (Olive)
     "V_Chestrig_khk",                                               // Chest Rig (Khaki)
@@ -115,7 +115,7 @@ GRLIB_arsenal_items = [
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_green_F",                                           // Deck Crew Vest (Green)
-    
+
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
@@ -243,7 +243,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_Parachute",                                                  // Steerable Parachute
     "B_FieldPack_blk",                                              // Field Pack (Black)
     "B_FieldPack_ghex_F",                                           // Field Pack (Green Hex)

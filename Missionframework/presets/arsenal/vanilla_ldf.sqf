@@ -1,6 +1,6 @@
 /*
     LDF Arsenal Preset
-    Last Update: 2020-08-17
+    Last Update: 2020-09-16
     Needed:
         - None
     Optional:
@@ -9,7 +9,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // Primary
     "SMG_03C_black",                                                // ADR-97C 5.7 mm (Black)
     "SMG_03C_TR_black",                                             // ADR-97C TR 5.7 mm (Black)
@@ -22,10 +22,10 @@ GRLIB_arsenal_weapons = [
     "arifle_MSBS65_Mark_black_F",                                   // Promet MR 6.5 mm (Black)
     "arifle_MSBS65_UBS_F",                                          // Promet SG 6.5 mm
     "arifle_MSBS65_UBS_black_F",                                    // Promet SG 6.5 mm (Black)
-    
+
     // Handgun
     "hgun_Pistol_heavy_01_green_F",                                 // 4-five .45 ACP (Green)
-    
+
     // Launcher
     "launch_NLAW_F",                                                // PCML
     "launch_I_Titan_eaf_F",                                         // Titan MPRL (Geometric)
@@ -33,11 +33,11 @@ GRLIB_arsenal_weapons = [
     "launch_MRAWS_green_F"                                          // MAAWS Mk4 Mod 1 (Green)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -51,13 +51,13 @@ GRLIB_arsenal_items = [
     "MineDetector",                                                 // Mine Detector
     "Rangefinder",                                                  // Rangefinder
     "ToolKit",                                                      // Toolkit
-    
+
     // Faction Specific Items
     "I_E_UavTerminal",                                              // UAV Terminal [LDF]
     "Laserdesignator_03",                                           // Laser Designator (Sand)
     "NVGoggles_INDEP",                                              // NV Goggles (Green)
     "NVGogglesB_grn_F",                                             // ENVG-II (Green)
-    
+
     // Uniforms
     "U_B_PilotCoveralls",                                           // Pilot Coveralls [NATO]
     "U_C_CBRN_Suit_01_White_F",                                     // CBRN Suit (White)
@@ -82,7 +82,7 @@ GRLIB_arsenal_items = [
     "H_PilotHelmetHeli_I_E",                                        // Heli Pilot Helmet [LDF]
     "H_MilCap_eaf",                                                 // Military Cap [LDF]
     "H_PilotHelmetFighter_I_E",                                     // Pilot Helmet [LDF]
-    
+
     // Facegear
     "G_Aviator",                                                    // Aviator Glasses
     "G_Combat",                                                     // Combat Goggles
@@ -110,15 +110,15 @@ GRLIB_arsenal_items = [
     "V_Chestrig_blk",                                               // Chest Rig (Black)
     "V_BandollierB_oli",                                            // Slash Bandolier (Olive)
     "V_CarrierRigKBT_01_light_EAF_F",                               // Modular Carrier Lite (Geometric)
-    "V_CarrierRigKBT_01_light_Olive_F",                             // Modular Carrier Lite (Olive)	
+    "V_CarrierRigKBT_01_light_Olive_F",                             // Modular Carrier Lite (Olive)
     "V_CarrierRigKBT_01_heavy_EAF_F",                               // Modular Carrier GL Rig (Geometric)
-    "V_CarrierRigKBT_01_heavy_Olive_F",                             // Modular Carrier GL Rig (Olive)	
+    "V_CarrierRigKBT_01_heavy_Olive_F",                             // Modular Carrier GL Rig (Olive)
     "V_CarrierRigKBT_01_EAF_F",                                     // Modular Carrier Vest (Geometric)
-    "V_CarrierRigKBT_01_Olive_F",                                   // Modular Carrier Vest (Olive)	
+    "V_CarrierRigKBT_01_Olive_F",                                   // Modular Carrier Vest (Olive)
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
-    
+
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
@@ -131,7 +131,7 @@ GRLIB_arsenal_items = [
     "optic_SOS",                                                    // MOS
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
-    "muzzle_snds_65_TI_blk_F",                                      // Stealth Sound Suppressor (6.5 mm, Black)	
+    "muzzle_snds_65_TI_blk_F",                                      // Stealth Sound Suppressor (6.5 mm, Black)
     "muzzle_snds_h_mg_blk_f",                                       // Sound Suppressor LMG (6.5 mm, Black)
     "muzzle_snds_570",                                              // Sound Suppressor (5.7 mm)
     "optic_nvs",                                                    // NVS
@@ -240,7 +240,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_Parachute",                                                  // Steerable Parachute
     "B_AssaultPack_eaf_F",                                          // Assault Pack (Geometric)
     "B_Carryall_eaf_F",                                             // Carryall Backpack (Geometric)

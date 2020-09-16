@@ -1,6 +1,6 @@
 /*
     NATO Tropic Arsenal Preset
-    Last Update: 2020-08-12
+    Last Update: 2020-09-16
     Needed:
         - None
     Optional:
@@ -9,7 +9,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // Primary
     "arifle_MX_khk_F",                                              // MX 6.5 mm (Khaki)
     "arifle_MX_GL_khk_F",                                           // MX 3GL 6.5 mm (Khaki)
@@ -30,11 +30,11 @@ GRLIB_arsenal_weapons = [
     "arifle_SPAR_02_khk_F",                                         // SPAR-16S 5.56 mm (Khaki)
     "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
     "arifle_SPAR_03_khk_F",                                         // SPAR-17 7.62 mm (Khaki)
-       
+
     // Handgun
     "hgun_P07_khk_F",                                               // P07 9 mm (Khaki)
     "hgun_Pistol_heavy_01_F",                                       // 4-five .45 ACP
-    
+
     // Launcher
     "launch_NLAW_F",                                                // PCML
     "launch_B_Titan_tna_F",                                         // Titan MPRL (Tropic)
@@ -42,11 +42,11 @@ GRLIB_arsenal_weapons = [
     "launch_MRAWS_green_F"                                          // MAAWS Mk4 Mod 1 (Green)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -60,7 +60,7 @@ GRLIB_arsenal_items = [
     "MineDetector",                                                 // Mine Detector
     "Rangefinder",                                                  // Rangefinder
     "ToolKit",                                                      // Toolkit
-    
+
     // Faction Specific Items
     "B_UavTerminal",                                                // UAV Terminal [NATO]
     "Laserdesignator_01_khk_F",                                     // Laser Designator (Khaki)
@@ -114,7 +114,7 @@ GRLIB_arsenal_items = [
     "G_Combat_Goggles_tna_F",                                       // Combat Goggles (Green)
     "G_Balaclava_TI_tna_F",                                         // Stealth Balaclava (Green)
     "G_Balaclava_TI_G_tna_F",                                       // Stealth Balaclava (Green, Goggles)
-    
+
     // Vests
     "V_PlateCarrierGL_tna_F",                                       // Carrier GL Rig (Tropic)
     "V_PlateCarrier1_tna_F",                                        // Carrier Lite (Tropic)
@@ -131,7 +131,7 @@ GRLIB_arsenal_items = [
     "V_Safety_orange_F",                                            // Safety Vest (Orange)
     "V_Safety_yellow_F",                                            // Safety Vest (Yellow)
     "V_DeckCrew_yellow_F",                                          // Deck Crew Vest (Yellow)
-    
+
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
@@ -155,9 +155,9 @@ GRLIB_arsenal_items = [
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
     "bipod_01_F_khk",                                               // Bipod (Khaki) [NATO]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
-    "muzzle_snds_H_khk_F",                                          // Sound Suppressor (6.5 mm, Khaki)	
+    "muzzle_snds_H_khk_F",                                          // Sound Suppressor (6.5 mm, Khaki)
     "muzzle_snds_338_black",                                        // Sound Suppressor (.338, Black)
-    "muzzle_snds_338_green",                                        // Sound Suppressor (.338, Green)	
+    "muzzle_snds_338_green",                                        // Sound Suppressor (.338, Green)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
     "muzzle_snds_b_khk_f",                                          // Sound Suppressor (7.62 mm, Khaki)
     "muzzle_snds_m",                                                // Sound Suppressor (5.56 mm)
@@ -165,7 +165,7 @@ GRLIB_arsenal_items = [
     "optic_nvs",                                                    // NVS
     "optic_tws",                                                    // TWS
     "optic_tws_mg",                                                 // TWS MG
- 
+
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
     "ACE_adenosine",                                                // Adenosine autoinjector
@@ -268,7 +268,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_AssaultPack_blk",                                            // Assault Pack (Black)
     "B_AssaultPack_rgr",                                            // Assault Pack (Green)
     "B_AssaultPack_tna_F",                                          // Assault Pack (Tropic)

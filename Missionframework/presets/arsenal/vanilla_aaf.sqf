@@ -1,6 +1,6 @@
 /*
     AAF Arsenal Preset
-    Last Update: 2020-09-12
+    Last Update: 2020-09-16
     Needed:
         - None
     Optional:
@@ -9,7 +9,7 @@
         - TFAR - https://steamcommunity.com/sharedfiles/filedetails/?id=894678801
 */
 
-GRLIB_arsenal_weapons = [
+KPLIB_arsenalWeapons = [
     // Primary
     "hgun_PDW2000_F",                                               // PDW2000 9 mm
     "arifle_Mk20_F",                                                // Mk20 5.56 mm (Camo)
@@ -30,11 +30,11 @@ GRLIB_arsenal_weapons = [
     "launch_MRAWS_olive_rail_F"                                     // MAAWS Mk4 Mod 0 (Olive)
 ];
 
-GRLIB_arsenal_magazines = [
+KPLIB_arsenalMagazines = [
 
 ];
 
-GRLIB_arsenal_items = [
+KPLIB_arsenalItems = [
     // Vanilla Standard Items
     "Binocular",                                                    // Binoculars
     "DroneDetector",                                                // Drone Detector
@@ -228,7 +228,7 @@ GRLIB_arsenal_items = [
     "tf_rf7800str"                                                  // PF-7800S-TR
 ];
 
-GRLIB_arsenal_backpacks = [
+KPLIB_arsenalBackpacks = [
     "B_Parachute",                                                  // Steerable Parachute
     "B_AssaultPack_dgtl",                                           // Assault Pack (Digital)
     "B_FieldPack_blk",                                              // Field Pack (Black)
