@@ -171,7 +171,7 @@ while { true } do {
                 private _remove_objects = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_b_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects pushback _x;
                     };
                 } foreach _near_objects;
@@ -179,7 +179,7 @@ while { true } do {
                 private _remove_objects_25 = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_b_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects_25 pushback _x;
                     };
                 } foreach _near_objects_25;

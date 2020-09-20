@@ -52,7 +52,7 @@ link23[] = {20,21};
 link24[] = {21,15};
 link25[] = {22,23};
 globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-462.464111,712.458435,919.987671,76.941620,1232,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
+window[] = {2,-1,-1,-1,-1,915,156,1596,156,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -182,7 +182,7 @@ class FSM
                                         to="Get_adjusted_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_opforCount = [] call KPLIB_fnc_getOpforCap;" \n
-                                         "_opforCount < GRLIB_sector_cap"/*%FSM</CONDITION""">*/;
+                                         "_opforCount < KPLIB_cap_enemySide"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

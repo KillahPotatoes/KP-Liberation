@@ -86,6 +86,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KPLIB_param_mobileRespawn, "MobileRespawn", 1);
     GET_PARAM(KPLIB_param_mobileRespawnCooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KPLIB_param_mobileArsenal, "MobileArsenal", 1);
+    GET_PARAM_BOOL(KPLIB_param_attackedFobRespawn, "AttackedSectorRespawn", 0);
     GET_PARAM_BOOL(KPLIB_param_logistic, "AiLogistics", 1);
     GET_PARAM_BOOL(KPLIB_param_buildingDamaged, "CR_Building", 0);
     GET_PARAM(KPLIB_param_halo, "HaloJump", 1);
@@ -394,7 +395,7 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_ATTACKEDSECTORRESPAWN";
-    _value = if (KPLIB_respawnOnAttackedSectors) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _value = if (KPLIB_param_attackedFobRespawn) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_AILOGISTICS";
