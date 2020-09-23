@@ -4,7 +4,7 @@
     File: KPGUI_classes.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
-    Last Update: 2020-07-10
+    Last Update: 2020-09-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -1212,3 +1212,5 @@ class KPGUI_PRE_LogoRightCorner: KPGUI_PRE_PictureRatio {
     w = "3.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
     h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 };
+
+#include "KPGUI_classes.hpp"
