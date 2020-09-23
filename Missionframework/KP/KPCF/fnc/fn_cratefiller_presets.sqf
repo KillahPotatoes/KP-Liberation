@@ -5,7 +5,7 @@
     File: fn_cratefiller_presets.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2020-07-10
+    Last Update: 2020-09-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
     Public: No
 
@@ -25,9 +25,33 @@ private _grenades = [];
 private _explosives = [];
 private _items = [];
 private _backpacks = [];
-private _classNames = +KPLIB_arsenalAllowed;
+private _classNames = [];
 private _type = [];
 private _specialItems = [];
+
+// Check if all items are allowed or just an arsenal preset
+if !(isNull KPLIB_arsenalAllowed) then {
+    _classnames = +KPLIB_arsenalAllowed;
+} else {
+    // Fetch all needed config classes
+    private _type = [];
+    private _configClasses = [];
+    {
+        _configClasses append (
+            "
+                _type = (configName _x) call BIS_fnc_itemType;
+                (getNumber (_x >> 'scope') isEqualTo 2) &&
+                ((_type select 0) != '') &&
+                ((_type select 0) != 'VehicleWeapon')
+            " configClasses _x
+        );
+    } forEach [(configFile >> "CfgWeapons"), (configFile >> "CfgMagazines"), (configFile >> "CfgVehicles"), (configFile >> "CfgGlasses")];
+
+    // Fetch classnames
+    {
+        _classNames pushBack (configName _x);
+    } forEach _configClasses;
+};
 
 // Search for special items with wrong config entrys
 {
