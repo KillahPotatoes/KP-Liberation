@@ -91,6 +91,10 @@ KPLIB_logistics = [];
 KPLIB_production = [];
 // Factory markers to display the current available facilities
 KPLIB_production_markers = [];
+// Radio tower classnames per radio tower sector
+KPLIB_sectorTowers = [];
+// Sectors under attack
+KPLIB_sectorsUnderAttack = [];
 // Global Intel resource
 resources_intel = 0;
 // State if the save is fully loaded
@@ -191,6 +195,7 @@ if (!isNil "_saveData") then {
         resources_intel                             = _saveData select 18;
         _allMines                                   = _saveData param [19, []];
         _allCrates                                  = _saveData param [20, []];
+        KPLIB_sectorTowers                          = _saveData param [21, []];
 
         stats_ammo_produced                         = _stats select  0;
         stats_ammo_spent                            = _stats select  1;
@@ -504,6 +509,7 @@ publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
 publicVariable "KPLIB_sectors_player";
 publicVariable "KPLIB_sectors_fob";
+publicVariable "KPLIB_sectorsUnderAttack";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array

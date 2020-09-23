@@ -119,6 +119,12 @@ class Params {
         texts[] = {$STR_PARAMS_ARSENAL_BI, $STR_PARAMS_ARSENAL_ACE};
         default = 0;
     };
+    class DirectArsenal {
+        title = $STR_PARAMS_DIRECTARSENAL;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 0;
+    };
     class PlayerMenu {
         title = $STR_PARAMS_PLAYERMENU;
         values[] = {0, 1};
@@ -245,6 +251,12 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
+    class AttackedSectorRespawn {
+        title = $STR_PARAMS_ATTACKEDSECTORRESPAWN;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 0;
+    };
     class AiLogistics {
         title = $STR_PARAMS_AILOGISTICS;
         values[] = {0, 1};
@@ -280,6 +292,12 @@ class Params {
         values[] = {0, 5, 10, 15, 20, 25, 30};
         texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
         default = 5;
+    };
+    class CommanderZeus {
+        title = $STR_PARAM_COMMANDERZEUS;
+        values[] = {1, 0};
+        texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
+        default = 1;
     };
     class LimitedZeus {
         title = $STR_PARAM_LIMITEDZEUS;

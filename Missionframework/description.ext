@@ -205,7 +205,7 @@ taskManagement_propagate = 1;
 
 // 3D marker maximum draw distance in meters.
 // Within this range, unassigned tasks are drawn on screen.
-taskManagement_drawDist = 5000;
+taskManagement_drawDist = 10000;
 
 
 /*

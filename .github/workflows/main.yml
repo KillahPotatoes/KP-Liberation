@@ -7,15 +7,6 @@ on:
   pull_request: ~
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-
-      - uses: arma-actions/sqflint@v1.0
-        with:
-          args: --directory Missionframework
-
   artifacts:
     runs-on: ubuntu-latest
     steps:

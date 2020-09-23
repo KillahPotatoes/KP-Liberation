@@ -9,7 +9,6 @@ reinforcements_remote_call = compile preprocessFileLineNumbers "scripts\server\r
 sector_liberated_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\sector_liberated_remote_call.sqf";
 intel_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\intel_remote_call.sqf";
 start_secondary_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\start_secondary_remote_call.sqf";
-zeus_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\zeus_remote_call.sqf";
 change_prod_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\change_prod_remote_call.sqf";
 build_fac_remote_call = compile preprocessFileLineNumbers "scripts\server\remotecall\build_fac_remote_call.sqf";
 if (KPLIB_param_logistic) then {

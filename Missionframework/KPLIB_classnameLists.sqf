@@ -2,7 +2,7 @@
     File: KPLIB_lists.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-10
-    Last Update: 2020-05-22
+    Last Update: 2020-09-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -425,4 +425,62 @@ KPLIB_intelBuildingClasses = [
     "Land_Research_house_V1_F",
     "Land_Research_HQ_F",
     "Land_u_Barracks_V2_F"
+];
+
+// Array of radio tower classnames to place at radio tower sectors. If more than one is added, it'll be selected random for each sector on campaign start.
+KPLIB_radioTowerClassnames = [
+    "Land_Communication_F"
+];
+
+// Classnames of objects which should be ignored when building
+KPLIB_collisionIgnoreObjects = [
+    "Land_HelipadSquare_F",
+    "Land_TentHangar_V1_F",
+    "Land_runway_edgelight",
+    "Land_runway_edgelight_blue_F",
+    "Land_Flush_Light_green_F",
+    "Land_Flush_Light_red_F",
+    "Land_Flush_Light_yellow_F",
+    "TMR_Autorest_Georef",
+    "Flag_NATO_F",
+    "Flag_White_F",
+    "Flag_RedCrystal_F",
+    "CamoNet_BLUFOR_F",
+    "CamoNet_BLUFOR_open_F",
+    "CamoNet_BLUFOR_big_F",
+    "Land_PortableLight_single_F",
+    "Land_PortableLight_double_F",
+    "Land_HelipadCircle_F",
+    "Land_HelipadRescue_F",
+    "Helipad",
+    "LAND_uns_Heli_pad",
+    "LAND_uns_evac_pad",
+    "PortableHelipadLight_01_blue_F",
+    "PortableHelipadLight_01_green_F",
+    "PortableHelipadLight_01_red_F",
+    "Land_BagFence_Round_F",
+    "Land_BagFence_Short_F",
+    "Land_BagFence_Long_F",
+    "Land_BagFence_Corner_F",
+    "Land_BagFence_End_F",
+    "Land_Sign_WarningMilitaryArea_F",
+    "Land_Sign_WarningMilAreaSmall_F",
+    "Land_Sign_WarningMilitaryVehicles_F",
+    "Land_Razorwire_F",
+    "Sign_Sphere100cm_F",
+    "Land_ClutterCutter_large_F",
+    "Land_HighVoltageColumnWire_F",
+    "Land_PowerWireBig_left_F",
+    "B_HMG_01_F",                                                       // Mk30A HMG .50
+    "B_HMG_01_high_F",                                                  // Mk30 HMG .50 (Raised)
+    "B_HMG_01_A_F",                                                     // Mk30 HMG .50 (Autonomous)
+    "B_GMG_01_F",                                                       // Mk32A GMG 20mm
+    "B_GMG_01_high_F",                                                  // Mk32 GMG 20mm (Raised)
+    "B_GMG_01_A_F",                                                     // Mk32 GMG 20mm (Autonomous)
+    "B_static_AT_F",                                                    // Static Titan Launcher (AT)
+    "B_static_AA_F",                                                    // Static Titan Launcher (AA)
+    "B_Mortar_01_F",                                                    // Mk6 Mortar
+    "ACE_friesAnchorBar",                                               // ACE FRIES
+    "ACE_friesGantryReverse",                                           // ACE FRIES
+    "ACE_friesGantry"                                                   // ACE FRIES
 ];
