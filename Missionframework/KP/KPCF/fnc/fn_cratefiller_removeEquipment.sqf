@@ -8,7 +8,7 @@
     Date: 2019-04-06
     Last Update: 2020-07-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: No
+
 
     Description:
         Removes the given amount of the selected item from the storage.

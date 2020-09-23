@@ -8,7 +8,7 @@
     Date: 2019-04-27
     Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: No
+
 
     Description:
         Gets all players from the selected group and adds them to the listbox.

@@ -6,9 +6,9 @@
     File: fn_cratefiller_addEquipment.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2020-07-10
+    Last Update: 2020-09-23
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: No
+
 
     Description:
         Adds the given amount of the selected item to the inventory.

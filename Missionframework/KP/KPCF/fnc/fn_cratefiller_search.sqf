@@ -8,7 +8,7 @@
     Date: 2019-04-15
     Last Update: 2019-05-02
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
-    Public: No
+
 
     Description:
         Search for a weapon with the name entered in the search bar.
