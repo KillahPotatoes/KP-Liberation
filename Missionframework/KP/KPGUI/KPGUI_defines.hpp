@@ -4,7 +4,7 @@
     File: KPGUI_defines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2020-04-10
+    Last Update: 2020-07-10
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -126,6 +126,7 @@
 
 /*
     --- Left panel dialog components ---
+    (X from 0.0025 - 0.2025, Y from 0.0025 - 0.9975)
 */
 
 #define KP_X_VAL_LP                     0.0025
@@ -134,5 +135,35 @@
 #define KP_WIDTH_VAL_LP                 0.2
 #define KP_HEIGHT_VAL_LP                (1 - 2 * KP_Y_VAL_LP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
 
-// Classes include
-#include "KPGUI_classes.hpp"
+/*
+    --- Right panel dialog components ---
+    (X from 0.7975 - 0.9975, Y from 0.0025 - 0.9975)
+*/
+
+#define KP_X_VAL_RP                     0.7975
+#define KP_Y_VAL_RP                     0.0025
+
+#define KP_WIDTH_VAL_RP                 0.2
+#define KP_HEIGHT_VAL_RP                (1 - 2 * KP_Y_VAL_RP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+
+/*
+    --- Small dialog components ---
+    (X from 0.3 - 0.7, Y from 0.15 - 0.85)
+*/
+
+#define KP_X_VAL_S                      0.3
+#define KP_Y_VAL_S                      0.15
+
+#define KP_WIDTH_VAL_S                  0.4
+#define KP_HEIGHT_VAL_S                 (0.7 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+
+/*
+    --- Small right dialog components ---
+    (X from 0.80 - 0.95, Y from 0.15 - 0.85)
+*/
+
+#define KP_X_VAL_SR                      0.80
+#define KP_Y_VAL_SR                      0.15
+
+#define KP_WIDTH_VAL_SR                  0.15
+#define KP_HEIGHT_VAL_SR                 (0.7 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
