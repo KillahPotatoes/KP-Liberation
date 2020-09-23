@@ -12,6 +12,7 @@
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: FOB truck got mass set, but should've just apply to FOB boxes.
+* Fixed: Chernarus Winter (and summer) weren't recognized for ignored buildings list for civ rep loss.
 
 ## 0.96.7a (2020-09-12)
 * Added: Contact DLC static weapon backpacks to default blacklist.
