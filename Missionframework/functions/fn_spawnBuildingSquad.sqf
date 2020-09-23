@@ -2,7 +2,7 @@
     File: fn_spawnBuildingSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-05
+    Last Update: 2020-05-15
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -28,22 +28,22 @@ params [
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; []};
 
 // Get classnames array
-private _classnames = [[] call KPLIB_fnc_getSquadComp, militia_squad] select (_type == "militia");
+private _classnames = [[] call KPLIB_fnc_getSquadComp, KPLIB_o_militiaInfantry] select (_type == "militia");
 
 // Adjust amount, if needed
-if (_amount > floor ((count _positions) * GRLIB_defended_buildingpos_part)) then {
-    _amount = floor ((count _positions) * GRLIB_defended_buildingpos_part)
+if (_amount > floor ((count _positions) * KPLIB_defended_buildingpos_part)) then {
+    _amount = floor ((count _positions) * KPLIB_defended_buildingpos_part)
 };
 
 // Spawn units
-private _grp = createGroup [GRLIB_side_enemy, true];
+private _grp = createGroup [KPLIB_side_enemy, true];
 private _pos = markerPos _sector;
 private _unit = objNull;
 private _units = [];
 for "_i" from 1 to _amount do {
     // Create new group, if current group has 10 units
     if (count (units _grp) >= 10) then {
-        _grp = createGroup [GRLIB_side_enemy, true];
+        _grp = createGroup [KPLIB_side_enemy, true];
     };
 
     _unit = [selectRandom _classnames, _pos, _grp] call KPLIB_fnc_createManagedUnit;

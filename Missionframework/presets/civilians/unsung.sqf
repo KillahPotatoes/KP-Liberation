@@ -1,13 +1,22 @@
 /*
+    File: unsung.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-06-04
+    Last Update: 2020-05-25
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Unsung civilian preset.
+
     Needed Mods:
-    - The Unsung Vietnam War Mod
+        - Unsung
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "uns_civilian1",
     "uns_civilian1_b1",
     "uns_civilian2",
@@ -19,7 +28,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "C_Truck_02_fuel_F",
     "C_Truck_02_transport_F",
     "C_Truck_02_covered_F"

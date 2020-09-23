@@ -1,14 +1,23 @@
 /*
+    File: apex.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-10-08
+    Last Update: 2020-05-25
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Tanoa resistance preset.
+
     Needed Mods:
-    - None
+        - None
 
     Optional Mods:
-    - None
+        - None
 */
 
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
-KP_liberation_guerilla_units = [
+KPLIB_r_units = [
     "I_C_Soldier_Bandit_1_F",
     "I_C_Soldier_Bandit_2_F",
     "I_C_Soldier_Bandit_3_F",
@@ -20,7 +29,7 @@ KP_liberation_guerilla_units = [
 ];
 
 // Armed vehicles
-KP_liberation_guerilla_vehicles = [
+KPLIB_r_vehicles = [
     "I_C_Offroad_02_LMG_F",
     "I_C_Offroad_02_AT_F"
 ];
@@ -31,7 +40,7 @@ There are 3 tiers for every category. If the strength of the guerillas will incr
 /* Weapons - You've to add the weapons as array like
 ["Weaponclassname","Magazineclassname","magazine amount","optic","tripod"]
 You can leave optic and tripod empty with "" */
-KP_liberation_guerilla_weapons_1 = [
+KPLIB_r_weapons_1 = [
     ["arifle_AKM_F","30Rnd_762x39_Mag_F",4,"",""],
     ["arifle_AKS_F","30Rnd_545x39_Mag_F",4,"",""],
     ["hgun_PDW2000_F","30Rnd_9x21_Mag",4,"",""],
@@ -40,7 +49,7 @@ KP_liberation_guerilla_weapons_1 = [
     ["SMG_05_F","30Rnd_9x21_Mag_SMG_02",4,"",""]
 ];
 
-KP_liberation_guerilla_weapons_2 = [
+KPLIB_r_weapons_2 = [
     ["arifle_Katiba_F","30Rnd_65x39_caseless_green",4,"optic_ACO_grn",""],
     ["arifle_Mk20_plain_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
     ["arifle_TRG21_F","30Rnd_556x45_Stanag",4,"optic_ACO_grn",""],
@@ -49,7 +58,7 @@ KP_liberation_guerilla_weapons_2 = [
     ["srifle_DMR_06_olive_F","20Rnd_762x51_Mag",5,"optic_Hamr","bipod_01_F_blk"]
 ];
 
-KP_liberation_guerilla_weapons_3 = [
+KPLIB_r_weapons_3 = [
     ["arifle_CTAR_blk_F","30Rnd_580x42_Mag_F",4,"optic_MRCO",""],
     ["arifle_SPAR_01_blk_F","30Rnd_556x45_Stanag",4,"optic_MRCO",""],
     ["arifle_SPAR_03_blk_F","20Rnd_762x51_Mag",5,"optic_MRCO",""],
@@ -61,7 +70,7 @@ KP_liberation_guerilla_weapons_3 = [
 ];
 
 // Uniforms
-KP_liberation_guerilla_uniforms_1 = [
+KPLIB_r_uniforms_1 = [
     "U_C_Poloshirt_blue",
     "U_C_Poloshirt_burgundy",
     "U_C_Poloshirt_salmon",
@@ -78,7 +87,7 @@ KP_liberation_guerilla_uniforms_1 = [
     "U_Marshal"
 ];
 
-KP_liberation_guerilla_uniforms_2 = [
+KPLIB_r_uniforms_2 = [
     "U_I_C_Soldier_Bandit_1_F",
     "U_I_C_Soldier_Bandit_2_F",
     "U_I_C_Soldier_Bandit_3_F",
@@ -94,7 +103,7 @@ KP_liberation_guerilla_uniforms_2 = [
     "U_I_G_resistanceLeader_F"
 ];
 
-KP_liberation_guerilla_uniforms_3 = [
+KPLIB_r_uniforms_3 = [
     "U_BG_Guerilla1_1",
     "U_BG_Guerilla1_2_F",
     "U_BG_Guerrilla_6_1",
@@ -107,7 +116,7 @@ KP_liberation_guerilla_uniforms_3 = [
 ];
 
 // Vests
-KP_liberation_guerilla_vests_1 = [
+KPLIB_r_vests_1 = [
     "V_LegStrapBag_coyote_F",
     "V_LegStrapBag_olive_F",
     "V_LegStrapBag_black_F",
@@ -122,7 +131,7 @@ KP_liberation_guerilla_vests_1 = [
     "V_BandollierB_ghex_F"
 ];
 
-KP_liberation_guerilla_vests_2 = [
+KPLIB_r_vests_2 = [
     "V_Chestrig_rgr",
     "V_Chestrig_khk",
     "V_Chestrig_oli",
@@ -135,7 +144,7 @@ KP_liberation_guerilla_vests_2 = [
     "V_HarnessOGL_ghex_F"
 ];
 
-KP_liberation_guerilla_vests_3 = [
+KPLIB_r_vests_3 = [
     "V_TacVest_brn",
     "V_TacVest_khk",
     "V_TacVest_oli",
@@ -148,7 +157,7 @@ KP_liberation_guerilla_vests_3 = [
 ];
 
 // Headgear
-KP_liberation_guerilla_headgear_1 = [
+KPLIB_r_headgear_1 = [
     "",
     "",
     "",
@@ -173,7 +182,7 @@ KP_liberation_guerilla_headgear_1 = [
     "H_Cap_blk"
 ];
 
-KP_liberation_guerilla_headgear_2 = [
+KPLIB_r_headgear_2 = [
     "H_Bandanna_blu",
     "H_Bandanna_sand",
     "H_Bandanna_gry",
@@ -191,7 +200,7 @@ KP_liberation_guerilla_headgear_2 = [
     "H_MilCap_dgtl"
 ];
 
-KP_liberation_guerilla_headgear_3 = [
+KPLIB_r_headgear_3 = [
     "H_ShemagOpen_khk",
     "H_ShemagOpen_tan",
     "H_Shemag_olive",
@@ -205,7 +214,7 @@ KP_liberation_guerilla_headgear_3 = [
 ];
 
 // Facegear. Applies for tier 2 and 3.
-KP_liberation_guerilla_facegear = [
+KPLIB_r_facegear = [
     "",
     "",
     "",

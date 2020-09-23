@@ -35,7 +35,7 @@ while { count (units _grp) > 0 } do {
             if ( _patrol_startpos distance (markerpos _x) < 2500) then {
                 _sectors_patrol pushBack _x;
             };
-        } foreach (sectors_allSectors - blufor_sectors);
+        } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
 
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
         {_x doFollow leader _grp} foreach units _grp;

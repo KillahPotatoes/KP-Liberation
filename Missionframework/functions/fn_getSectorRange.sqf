@@ -2,7 +2,7 @@
     File: fn_getSectorRange.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2019-12-07
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -20,6 +20,6 @@ params [
 ];
 
 
-if (_unitCount < (GRLIB_sector_cap / 2)) exitWith {GRLIB_sector_size};
-if (_unitCount <= GRLIB_sector_cap) exitWith {GRLIB_sector_size - (GRLIB_sector_size * 0.5 * ((_unitCount / GRLIB_sector_cap) - 0.5))};
-GRLIB_sector_size * 0.75
+if (_unitCount < (KPLIB_cap_enemySide / 2)) exitWith {KPLIB_range_sectorActivation};
+if (_unitCount <= KPLIB_cap_enemySide) exitWith {KPLIB_range_sectorActivation - (KPLIB_range_sectorActivation * 0.5 * ((_unitCount / KPLIB_cap_enemySide) - 0.5))};
+KPLIB_range_sectorActivation * 0.75

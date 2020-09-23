@@ -56,13 +56,13 @@ Every `Preset` entry should have following structure:
 
     // Keys of <variables> object represent variables in <configFile>.
     // These variables values will be set to corresponding value in <variables>
-    "configFile": "kp_liberation_config.sqf",
+    "configFile": "KPLIB_config.sqf",
     "variables": {
-        "KP_liberation_preset_blufor": 0,
-        "KP_liberation_preset_opfor": 0,
-        "KP_liberation_preset_resistance": 0,
-        "KP_liberation_preset_civilians": 0,
-        "KP_liberation_arsenal": 0
+        "KPLIB_preset_blufor": 0,
+        "KPLIB_preset_opfor": 0,
+        "KPLIB_preset_resistance": 0,
+        "KPLIB_preset_civilians": 0,
+        "KPLIB_arsenal": 0
     }
 }
 ```

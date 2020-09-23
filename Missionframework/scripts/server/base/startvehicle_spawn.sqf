@@ -12,7 +12,7 @@
 
     E.g. the variables of the grasscutter placeholder objects for the
     little birds are named "littlebird_0", "littlebird_1", etc.
-    while the variable from the preset is KP_liberation_little_bird_classname.
+    while the variable from the preset is KPLIB_b_addHeli.
     This leads to the entry below.
 
     You can also remove unwanted start vehicles by deleting the corresponding line
@@ -20,8 +20,8 @@
     Refer to: https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_ImportantHints#commas-inside-an-array
 */
 
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 private _placeholder = objNull;
 private _spawnPos = [];
@@ -42,10 +42,10 @@ private _veh = objNull;
         _veh enableSimulationGlobal true;
         _veh setDamage 0;
         _veh allowDamage true;
-        _veh setVariable ["KP_liberation_preplaced", true, true];
+        _veh setVariable ["KPLIB_preplaced", true, true];
         [_veh] call KPLIB_fnc_addObjectInit;
     };
 } forEach [
-    ["littlebird_", KP_liberation_little_bird_classname],
-    ["boat_", KP_liberation_boat_classname]
+    ["littlebird_", KPLIB_b_addHeli],
+    ["boat_", KPLIB_b_addBoat]
 ];

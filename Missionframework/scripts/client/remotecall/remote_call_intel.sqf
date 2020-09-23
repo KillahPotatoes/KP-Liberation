@@ -11,11 +11,11 @@ switch (_notiftype) do {
         waitUntil {secondary_objective_position_marker distance zeropos > 1000};
         ["lib_intel_fob", [markertext ([10000, secondary_objective_position_marker] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
         _secondary_marker = createMarkerLocal ["secondarymarker", secondary_objective_position_marker];
-        _secondary_marker setMarkerColorLocal GRLIB_color_enemy_bright;
+        _secondary_marker setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker setMarkerTypeLocal "hd_unknown";
 
         _secondary_marker_zone = createMarkerLocal ["secondarymarkerzone", secondary_objective_position_marker];
-        _secondary_marker_zone setMarkerColorLocal GRLIB_color_enemy_bright;
+        _secondary_marker_zone setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
         _secondary_marker_zone setMarkerSizeLocal [1500,1500];
@@ -34,11 +34,11 @@ switch (_notiftype) do {
         waitUntil {secondary_objective_position_marker distance zeropos > 1000};
         ["lib_intel_sar", [markertext ([10000, secondary_objective_position_marker] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
         _secondary_marker = createMarkerLocal ["secondarymarker", secondary_objective_position_marker];
-        _secondary_marker setMarkerColorLocal GRLIB_color_enemy_bright;
+        _secondary_marker setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker setMarkerTypeLocal "hd_unknown";
 
         _secondary_marker_zone = createMarkerLocal ["secondarymarkerzone", secondary_objective_position_marker];
-        _secondary_marker_zone setMarkerColorLocal GRLIB_color_enemy_bright;
+        _secondary_marker_zone setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
         _secondary_marker_zone setMarkerSizeLocal [1500,1500];

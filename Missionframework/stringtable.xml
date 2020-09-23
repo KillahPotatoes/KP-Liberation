@@ -6,7 +6,7 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Localization contributors:
-        English | Updated: 0.96.7a
+        English | Updated: 0.96.8
             KP Liberation Dev Team  - https://github.com/KillahPotatoes
 
         Chinese Simplified | Updated: pre 0.96.7a
@@ -19,7 +19,7 @@
         French | Updated: pre 0.96.7a-
             zbug                    - https://github.com/GreuhZbug
 
-        German | Updated: 0.96.7a
+        German | Updated: 0.96.8
             Wyqer                   - https://github.com/Wyqer
 
         Italian | Updated: 0.96.7a
@@ -46,10 +46,10 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>CTI 34 KP Liberation v0.96.7a</Original>
+            <Original>CTI 34 KP Liberation v0.96.8 dev</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.96.7a</Original>
+            <Original>v0.96.8 dev</Original>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>

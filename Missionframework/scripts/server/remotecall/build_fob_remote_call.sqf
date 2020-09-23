@@ -3,13 +3,13 @@ if (!isServer) exitWith {};
 params [ "_new_fob", "_create_fob_building" ];
 private [ "_fob_building", "_fob_pos" ];
 
-GRLIB_all_fobs pushback _new_fob;
-publicVariable "GRLIB_all_fobs";
+KPLIB_sectors_fob pushback _new_fob;
+publicVariable "KPLIB_sectors_fob";
 
 if ( _create_fob_building ) then {
     _fob_pos = [ (_new_fob select 0) + 15, (_new_fob select 1) + 2, 0 ];
     [_fob_pos, 20, true] call KPLIB_fnc_createClearance;
-    _fob_building = FOB_typename createVehicle _fob_pos;
+    _fob_building = KPLIB_b_fobBuilding createVehicle _fob_pos;
     _fob_building setpos _fob_pos;
     _fob_building setVectorUp [0,0,1];
     [_fob_building] call KPLIB_fnc_addObjectInit;
