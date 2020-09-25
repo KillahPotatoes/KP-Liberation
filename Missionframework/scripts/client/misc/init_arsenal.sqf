@@ -91,6 +91,15 @@ if (KP_liberation_arsenalUsePreset) then {
         };
     } forEach KP_liberation_allowed_items;
 
+	{
+        if ((_x find "cup_optic") == 0) then {
+            KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+        };
+        if ((_x find "cup_optic") == 0) then {
+            KP_liberation_allowed_items_extension append [_x + "_3d", _x + "_pip"];
+        };
+    } forEach KP_liberation_allowed_items;
+
     if ((count KP_liberation_allowed_items_extension) > 0) then {
         KP_liberation_allowed_items append KP_liberation_allowed_items_extension;
     };
