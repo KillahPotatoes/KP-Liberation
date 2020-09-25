@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.96.8 (TBD)
+* Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Splitted the config file in seperate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
 * Tweaked: Arsenal presets are now in the presets folder.
