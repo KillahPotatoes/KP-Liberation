@@ -96,7 +96,7 @@ if (KPLIB_param_useArsenalPreset) then {
         };
 
         // Handle CBA (MRT) Accessories, https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions
-        private _itemCfg = configFile >> "CfgWeapons" >> "CUP_optic_ACOG_TA01B_OD_3D";
+        private _itemCfg = configFile >> "CfgWeapons" >> _x;
         if (!isNull _itemCfg) then {
             private _nextItem = getText (_cfg >> "MRT_SwitchItemPrevClass");
             if (_nextItem != "") then {
