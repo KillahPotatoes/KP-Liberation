@@ -294,7 +294,7 @@ while {KPLIB_endgame == 0} do {
                         if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KPLIB_convoy_ambush_inProgress && (KPLIB_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
                             private _dice = round (random 100);
                             private _chance = KPLIB_convoy_ambush_chance;
-                            if (chance > 0) then {
+                            if (_chance > 0) then {
                                 _chance = _chance + ([] call KPLIB_fnc_crGetMulti);
                             };
                             if (KPLIB_asymmetric_debug > 0) then {[format ["Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance], "ASYMMETRIC"] call KPLIB_fnc_log;};
