@@ -2,7 +2,7 @@
     File: cup_takistan.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2020-04-25
-    Last Update: 2020-05-25
+    Last Update: 2020-09-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,26 +23,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-KPLIB_b_fobTruck = "CUP_O_BMP_HQ_TKA";                                // This is the FOB as a vehicle.
-KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "CUP_O_M113_Med_TKA";                          // This is the mobile respawn (and medical) truck.
-KPLIB_b_potato01 = "CUP_O_MI6A_TKA";                                      // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit = "CUP_O_TK_Crew";                                    // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "CUP_O_TK_Pilot";                                     // This defines the pilot for helicopters.
-KPLIB_b_addHeli = "CUP_O_UH1H_slick_TKA";                   // These are the additional helicopters which spawn on the Freedom or at Chimera bas
-KPLIB_b_addBoat = "O_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_b_logiTruck = "CUP_O_Ural_Open_TKA";                          // These are the trucks which are used in the logistic convoy system.
-KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_b_airControl = "O_Radar_System_02_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
+KPLIB_b_fobTruck = "CUP_O_BMP_HQ_TKA";                                  // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_O_M113_Med_TKA";                           // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_O_MI6A_TKA";                                    // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_O_TK_Crew";                                     // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_O_TK_Pilot";                               // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "CUP_O_UH1H_slick_TKA";                               // These are the additional helicopters which spawn on the Freedom or at Chimera bas
+KPLIB_b_addBoat = "O_Boat_Transport_01_F";                              // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_O_Ural_Open_TKA";                              // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                     // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                     // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                      // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "O_Radar_System_02_F";                             // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                              // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                             // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                              // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                             // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -76,6 +76,7 @@ KPLIB_b_infantry = [
 ];
 
 KPLIB_b_vehLight = [
+    ["CUP_O_TT650_TKA",25,0,10],                                        // TT650
     ["CUP_O_Hilux_unarmed_TK_INS",50,0,50],                             // Hilux
     ["CUP_O_Hilux_M2_TK_INS",50,60,50],                                 // Hilux (M2)
     ["CUP_O_Hilux_DSHKM_TK_INS",50,60,50],                              // Hilux (DShKM)
@@ -87,11 +88,11 @@ KPLIB_b_vehLight = [
     ["CUP_O_LR_Transport_TKA",75,0,50],                                 // Land Rover 110 (Transport)
     ["CUP_O_LR_MG_TKA",100,50,50],                                      // Land Rover 110 (M2)
     ["CUP_O_LR_SPG9_TKA",100,90,50],                                    // Land Rover 110 (SPG-9)
-    ["CUP_O_UAZ_Unarmed_TKA",100,0,50],                                 // UAZ
-    ["CUP_O_UAZ_MG_TKA",125,60,50],                                     // UAZ (DShKM)
-    ["CUP_O_UAZ_AGS30_TKA",125,80,50],                                  // UAZ (AGS-30)
-    ["CUP_O_UAZ_SPG9_TKA",125,100,50],                                  // UAZ (SPG-9)
-    ["CUP_O_UAZ_METIS_TKA",150,120,50],                                 // UAZ (Metis-M)
+    ["CUP_O_UAZ_Unarmed_TKA",100,0,50],                                 // UAZ-469
+    ["CUP_O_UAZ_MG_TKA",125,60,50],                                     // UAZ-469 (DShKM)
+    ["CUP_O_UAZ_AGS30_TKA",125,80,50],                                  // UAZ-469 (AGS-30)
+    ["CUP_O_UAZ_SPG9_TKA",125,100,50],                                  // UAZ-469 (SPG-9)
+    ["CUP_O_UAZ_METIS_TKA",150,120,50],                                 // UAZ-469 (Metis-M)
     ["CUP_O_LR_AA_TKA",200,160,50],                                     // Land Rover 110 (AA)
     ["CUP_O_Ural_ZU23_TKA",250,300,100],                                // Ural (ZU-23)
     ["CUP_O_BM21_TKA",300,750,100],                                     // BM-21
@@ -127,6 +128,7 @@ KPLIB_b_vehAir = [
     ["CUP_O_UH1H_gunship_TKA",500,350,250],                             // UH-1H (Gunship)
     ["CUP_O_Mi17_TK",500,350,300],                                      // Mi-8MT
     ["CUP_O_Mi24_D_Dynamic_TK",600,650,300],                            // Mi-24D
+    ["CUP_O_AN2_TKA",100,0,150],                                        // Antonov An-2
     ["CUP_O_C130J_TKA",200,0,250],                                      // C-130J
     ["CUP_O_C130J_Cargo_TKA",200,0,250],                                // C-130J (VIV)
     ["CUP_O_L39_TK",800,750,350],                                       // L-39ZA
@@ -134,12 +136,14 @@ KPLIB_b_vehAir = [
 ];
 
 KPLIB_b_vehStatic = [
+    ["CUP_O_SearchLight_static_TK",10,0,0],                             // Search Light
     ["CUP_O_KORD_high_TK",25,40,0],                                     // KORD
     ["CUP_O_KORD_TK",25,40,0],                                          // KORD Minitripod
     ["CUP_O_AGS_TK",25,60,0],                                           // AGS-30
     ["CUP_O_Igla_AA_pod_TK",100,200,0],                                 // Igla AA Pod
     ["CUP_O_ZU23_TK",100,300,0],                                        // ZU-23
     ["CUP_O_2b14_82mm_TK",80,150,0],                                    // Podnos 2B14
+    ["CUP_O_Metis_TK",75,100,0],                                        // Metis AT-13
     ["CUP_O_D30_AT_TK",100,200,0],                                      // D-30 AT
     ["CUP_O_D30_TK",200,250,0]                                          // D-30
 ];

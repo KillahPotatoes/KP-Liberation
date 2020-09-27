@@ -2,7 +2,7 @@
     File: cup_usa_desert.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-17
-    Last Update: 2020-05-25
+    Last Update: 2020-09-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,26 +25,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-KPLIB_b_fobTruck = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
-KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "CUP_B_HMMWV_Ambulance_USA";                   // This is the mobile respawn (and medical) truck.
-KPLIB_b_potato01 = "CUP_B_CH47F_USA";                                     // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit = "CUP_B_US_Crew";                                    // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "CUP_B_US_Pilot";                                     // This defines the pilot for helicopters.
-KPLIB_b_addHeli = "CUP_B_MH6M_USA";                         // These are the additional helicopters which spawn on the Freedom or at Chimera base.
-KPLIB_b_addBoat = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_b_logiTruck = "CUP_B_MTVR_USA";                               // These are the trucks which are used in the logistic convoy system.
-KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_b_airControl = "B_Radar_System_01_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
+KPLIB_b_fobTruck = "B_Truck_01_box_F";                                  // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_B_HMMWV_Ambulance_USA";                    // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_B_CH47F_USA";                                   // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_B_US_Crew";                                     // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_B_US_Pilot";                               // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "CUP_B_MH6M_USA";                                     // These are the additional helicopters which spawn on the Freedom or at Chimera base.
+KPLIB_b_addBoat = "B_Boat_Transport_01_F";                              // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_B_MTVR_USA";                                   // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                     // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                     // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                      // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "B_Radar_System_01_F";                             // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                              // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                             // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                              // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                             // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
