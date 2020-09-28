@@ -486,6 +486,25 @@ if (!isDedicated && hasInterface) then {
     _param = localize "STR_RESTART_PARAM";
     _value = if (KP_liberation_restart == 0) then {localize "STR_PARAMS_DISABLED";} else {KP_liberation_restart;};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
-
+    
+    _param = localize "STR_SERVER_SAVE_INTERVAL_PARAM";
+    switch (KP_liberation_save_interval) do {
+        case 20: {_value = localize "STR_SAVE_PARAM1";};
+        case 60: {_value = localize "STR_SAVE_PARAM2";};
+		case 120: {_value = localize "STR_SAVE_PARAM3";};
+		case 180: {_value = localize "STR_SAVE_PARAM4";};
+		case 300: {_value = localize "STR_SAVE_PARAM5";};
+		case 420: {_value = localize "STR_SAVE_PARAM6";};
+		default {_value = localize "STR_SAVE_PARAM1";};
+    };
+    
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+	_param = localize "STR_VEHICLE_UNFLIP_METHOD_PARAM";
+    switch (KP_liberation_unflip_method) do {
+        case 0: {_value = localize "STR_UNFLIP_PARAM1";};
+		default {_value = localize "STR_UNFLIP_PARAM2";};
+    };
+    
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
     player createDiaryRecord ["parameters", ["Active", _text]];
 };
