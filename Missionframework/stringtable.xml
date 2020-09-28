@@ -7317,5 +7317,49 @@
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
         </Key>
+        <Key ID="STR_SERVER_SAVE_INTERVAL_PARAM">
+            <English>Server save interval - save server data every</English>
+            <German>Server Speicherinterwall - speichere Server Daten alle</German> 
+        </Key>
+		<Key ID="STR_SAVE_PARAM1">
+            <English>20 seconds</English>
+            <German>20 Sekunden</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM2">
+            <English>1 minute</English>
+            <German>1 Minute</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM3">
+            <English>2 minutes</English>
+            <German>2 Minuten</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM4">
+            <English>3 minutes</English>
+            <German>3 Minuten</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM5">
+            <English>5 minutes</English>
+            <German>5 Minuten</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM6">
+            <English>7 minutes</English>
+            <German>7 Minuten</German>
+        </Key>
+		<Key ID="STR_SAVE_PARAM7">
+            <English>10 minutes</English>
+            <German>10 Minuten</German>
+        </Key>
+		<Key ID="STR_VEHICLE_UNFLIP_METHOD_PARAM">
+            <English>Vehicle unflipping method</English>
+            <German>Fahrzeugrückaufstellungsmethode</German> 
+        </Key>
+		<Key ID="STR_UNFLIP_PARAM1">
+            <English>Original</English>
+            <German>Original</German>
+        </Key>
+		<Key ID="STR_UNFLIP_PARAM2">
+            <English>Vet's unflipping</English>
+            <German>Vets Methode</German>
+        </Key>
     </Package>
 </Project>
