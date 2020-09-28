@@ -377,6 +377,18 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, "1", "2", "3", "4", "5", "6"};
         default = 0;
     };
+    class ServerSaveInterval {
+        title = $STR_SERVER_SAVE_INTERVAL_PARAM;
+        values[] = {20, 60, 120, 180, 300, 420, 600};
+        texts[] = {$STR_SAVE_PARAM1, $STR_SAVE_PARAM2, $STR_SAVE_PARAM3, $STR_SAVE_PARAM4, $STR_SAVE_PARAM5, $STR_SAVE_PARAM6, $STR_SAVE_PARAM7};
+ 		default = 20;
+    };
+	class VehUnflipMethod {
+        title = $STR_VEHICLE_UNFLIP_METHOD_PARAM;
+        values[] = {0, 1};
+        texts[] = {$STR_UNFLIP_PARAM1, $STR_UNFLIP_PARAM2};
+        default = 0;
+    };
     class WipeSave1 {
         title = $STR_WIPE_TITLE;
         values[] = {0, 1};
