@@ -108,7 +108,9 @@ if(isServer) then {
     GET_PARAM_BOOL(GRLIB_deployment_cinematic, "DeploymentCinematic", 1);
     GET_PARAM_BOOL(GRLIB_use_whitelist, "Whitelist", 0);
     GET_PARAM(KP_liberation_restart, "ServerRestart", 0);
-
+    GET_PARAM(KP_liberation_save_interval, "ServerSaveInterval", 20);
+	GET_PARAM(KP_liberation_unflip_method, "VehUnflipMethod", 0);
+    
     GREUH_allow_mapmarkers = KP_liberation_mapmarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KP_liberation_mapmarkers; publicVariable "GREUH_allow_platoonview";
 
@@ -489,20 +491,20 @@ if (!isDedicated && hasInterface) then {
     
     _param = localize "STR_SERVER_SAVE_INTERVAL_PARAM";
     switch (KP_liberation_save_interval) do {
-        case 20: {_value = localize "STR_SAVE_PARAM1";};
         case 60: {_value = localize "STR_SAVE_PARAM2";};
 		case 120: {_value = localize "STR_SAVE_PARAM3";};
 		case 180: {_value = localize "STR_SAVE_PARAM4";};
 		case 300: {_value = localize "STR_SAVE_PARAM5";};
 		case 420: {_value = localize "STR_SAVE_PARAM6";};
+        case 600: {_value = localize "STR_SAVE_PARAM7";};
 		default {_value = localize "STR_SAVE_PARAM1";};
     };
     
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 	_param = localize "STR_VEHICLE_UNFLIP_METHOD_PARAM";
     switch (KP_liberation_unflip_method) do {
-        case 0: {_value = localize "STR_UNFLIP_PARAM1";};
-		default {_value = localize "STR_UNFLIP_PARAM2";};
+        case 1: {_value = localize "STR_UNFLIP_PARAM2";};
+		default {_value = localize "STR_UNFLIP_PARAM1";};
     };
     
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
