@@ -144,3 +144,10 @@ opfor_air = [
     "O_Plane_CAS_02_dynamicLoadout_F",                                  // To-199 Neophron (CAS)
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
+
+// Enemy AA turrets that will be spawned in the backland
+opfor_AA_Turrets = [
+	"B_SAM_System_01_F", 
+	"B_SAM_System_02_F", 
+	["O_SAM_System_04_F", "O_Radar_System_02_F"]
+];
