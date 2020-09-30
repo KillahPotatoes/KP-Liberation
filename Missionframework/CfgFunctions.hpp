@@ -45,11 +45,11 @@ class KPLIB {
         class getNearestSector          {};
         class getNearestTower           {};
         class getNearestViVTransport    {};
-        class getOpforCap               {};
+		class getOpforCap               {};
         class getOpforFactor            {};
-        class getOpforSpawnPoint        {};
-        class getOpforAASpawnPoint      {};
-        class getPlayerCount            {};
+		class getOpforSpawnPoint        {};
+        class getOpforSpawnPointAA		{};
+		class getPlayerCount            {};
         class getResistanceTier         {};
         class getSaveableParam          {};
         class getSaveData               {};

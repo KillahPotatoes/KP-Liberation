@@ -1,88 +1,106 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {!isNil "GRLIB_vehicle_to_military_base_links"};
-waitUntil {!isNil "blufor_sectors"};
-waitUntil {save_is_loaded};
+/*
+    File: AA_turret_manager.sqf
+    Author: Nicoman
+    Date: 2020-09-29
+    Last Update: 2020-09-29
+    License: MIT License - http://www.opensource.org/licenses/MIT
+    Description:
+        Spawns and manages AA turrets in the back country. Max number and spawn rate of AA turrets is influenced by various factors:
+        * KPLIB_param_difficulty	(game difficulty, ranges from 0.5 to 10)
+        * KPLIB_enemyReadiness		(enemy combat readiness, ranges from 0 to 200)
+        * KPLIB_param_aggressivity	(enemy aggressivity, ranges from 0.25 to 4)
+        * Player count, if "adapt to player count" mission param is enabled.
+    
+	Parameter(s):
+        NONE
+    
+	Returns:
+        Nothing
+*/
 
-if (GRLIB_difficulty_modifier == 0) exitWith {};											// no AA turrets on easiest difficulty level
-if (isNil "KPLIB_o_AA_Turrets") exitWith {};													// leave, if there are no AA turrets defined in currently played preset
-private _AA_Killed_Turrets = 0;																// counter of killed AA turrets
-if (isNil "AA_used_positions") then {AA_used_positions = []};								// define array containing all currently used positions
-if (isNil "AA_backland_turrets") then {AA_backland_turrets = []};							// define array containing all turrets corresponding to a used position
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {!isNil "KPLIB_sectors_player"};																	// we wait with our mighty AA units until those pesky players dare to conquer one of OUR nice sectors
+waitUntil {KPLIB_saveLoaded};
 
-while {GRLIB_endgame == 0} do {
-    private _sleeptime =  (1800 + (random 1800)) / (([] call KPLIB_fnc_getOpforFactor) * GRLIB_csat_aggressivity);
+if (isNil "KPLIB_o_turretsAA") exitWith {};																	// leave, if there are no AA turrets defined in currently played preset
+if (KPLIB_param_difficulty < 0.75) exitWith {};																// no AA turrets on easiest difficulty level (as of v0.96.8, KPLIB_param_difficulty values range from 0.5 to 10)
+if (isNil "KPLIB_usedPositionsAA") then {KPLIB_usedPositionsAA = []};										// define array containing all currently used positions
+if (isNil "KPLIB_backCountryTurretsAA") then {KPLIB_backCountryTurretsAA = []};								// define array containing all turrets corresponding to a used position
 
-    if (combat_readiness >= 80) then {_sleeptime = _sleeptime * 0.75};
-    if (combat_readiness >= 90) then {_sleeptime = _sleeptime * 0.75};
-    if (combat_readiness >= 95) then {_sleeptime = _sleeptime * 0.75};
-	sleep _sleeptime;
+private ["_group", "_i", "_killedTurretsAA", "_maxAAnumber", "_randomTurret", "_sleepTime", "_spawnMarker", "_turret", "_turretGroup"];
+_killedTurretsAA = 0;																						// counter of killed AA turrets
 
+while {KPLIB_endgame == 0} do {
+    _sleepTime =  (1800 + (random 1800)) / (([] call KPLIB_fnc_getOpforFactor) * KPLIB_param_aggressivity);	// sleep time is 30 to 60 minutes
+    if (KPLIB_enemyReadiness >= 80) then {_sleepTime = _sleepTime * 0.75};									// when enemy readiness gets above 80, reduce sleep time to 0.75
+    if (KPLIB_enemyReadiness >= 90) then {_sleepTime = _sleepTime * 0.75};									// when enemy readiness gets above 90, reduce sleep time to 0.5625 (0.75 * 0.75)
+    if (KPLIB_enemyReadiness >= 100) then {_sleepTime = _sleepTime * 0.75};									// when enemy readiness gets above 1000, reduce sleep time to 0.42 (0.75 * 0.75 * 0.75)	
+	sleep _sleepTime;	
+		
 	// Check and clear turret array for any destroyed or unmanned units
-	private _turret = objNull;
-	{		
-		if (typeName _x  == "ARRAY") then {			
-			_turret = _x select 0;															// in case turret is an array, choose first element of array as turret
-		} else {
-			_turret = _x;
+	{			
+		_turret = _x select 0;																				// in case turret is an array, choose first element of array as turret
+		if (!alive _turret || !alive gunner _turret || side _turret != KPLIB_side_enemy) then {
+			{
+				if (side _x == KPLIB_side_player) exitWith {};
+				if (alive _x) then {_x setDamage 1};
+			} forEach _x;
+			KPLIB_backCountryTurretsAA deleteAt _forEachIndex;												// delete any destroyed or unmanned AA turret from turret array
+			KPLIB_usedPositionsAA deleteAt _forEachIndex;													// delete corresponding position from used positions array
+			_killedTurretsAA = _killedTurretsAA + 1;														// raise kill counter
 		};
-		if (!alive _turret || !alive gunner _turret) then {
-			if (typeName _x  == "ARRAY") then {			
-				{
-					if (alive _x) then {_x setDamage 1};
-				} forEach _x;
-			};
-			AA_backland_turrets deleteAt _forEachIndex;										// delete any destroyed or unmanned AA turret from turret array
-			AA_used_positions deleteAt _forEachIndex;										// delete corresponding position from used positions array
-			_AA_Killed_Turrets = _AA_Killed_Turrets + 1;									// raise kill counter
-		};
-	} forEach AA_backland_turrets;
-
-	// If AA turrets were destroyed, add a 'punishment' time for the enemy. This extra time is ment to be a dampening of the production of AA turrets
-	if (_AA_Killed_Turrets > 0) then {
-		_sleeptime = _sleeptime * _AA_Killed_Turrets;
-		sleep _sleeptime;																	// killing AA turrets 'damps' placement of further turrets
-		_AA_Killed_Turrets = 0;																// reset kill counter after performing 'damp' sleep
+	} forEach KPLIB_backCountryTurretsAA;
+	
+	// If AA turrets were destroyed, add a 'punishment' time for the enemy. This extra time is meant to be a dampening of the production of AA turrets
+	if (_killedTurretsAA > 0) then {
+		sleep (_sleepTime * _killedTurretsAA);																// killing AA turrets 'damps' placement of further turrets
+		_killedTurretsAA = 0;																				// reset kill counter after performing 'damp' sleep
 	};
 
 	// Calculate maximum amount of AA turrets
-	private _maxAAnumber = round (GRLIB_difficulty_modifier * 2);
+	_maxAAnumber = round (KPLIB_param_difficulty * 2);
 	if (_maxAAnumber > 12) then {_maxAAnumber = 12};
-	if (combat_readiness > 0 && _maxAAnumber > 0) then {
-		_maxAAnumber = _maxAAnumber * round (combat_readiness / 30);		
+	if (KPLIB_enemyReadiness > 0 && _maxAAnumber > 0) then {
+		_maxAAnumber = _maxAAnumber + round (KPLIB_enemyReadiness / 30);		
 		if (_maxAAnumber > 20) then {_maxAAnumber = 20};
-		if (_maxAAnumber > (count sectors_allSectors - count blufor_sectors)) then {_maxAAnumber = count sectors_allSectors - count blufor_sectors};	// maximum amount of AA turrets should not exceed number of opfor sectors
+		if (_maxAAnumber > (count KPLIB_sectors_all - count KPLIB_sectors_player)) then {_maxAAnumber = count KPLIB_sectors_all - count KPLIB_sectors_player};	// maximum amount of AA turrets should not exceed number of opfor sectors
 	};
-
+	
 	// If maximum amount of AA turrets has not been reached yet, add one to the map
-	if (count AA_backland_turrets < _maxAAnumber) then {
-		private _spawn_marker = [] call KPLIB_fnc_getOpforAASpawnPoint;						// get a sector for spawning an AA turret
-		if (_spawn_marker == "") exitWith {diag_log formatText ["%1%2", time, "s  (AA_turret_manager) _spawn_marker: Could not find AA position"];};		
-		private _rndTurret = selectRandom KPLIB_o_AA_Turrets;									// choose an opfor turret to be spawned
+	if (count KPLIB_backCountryTurretsAA < _maxAAnumber) then {
+		_spawnMarker = [] call KPLIB_fnc_getOpforSpawnPointAA;												// get a sector for spawning an AA turret
+		if (_spawnMarker isEqualTo "") exitWith {};															// do not spawn, if no spawn marker was found		
+		_randomTurret = selectRandom KPLIB_o_turretsAA;														// choose an OpFor turret to be spawned
+		KPLIB_usedPositionsAA pushBack _spawnMarker;														// update AA used positions array with current sector 
 
 		// The lower the difficulty level is, the less it is likely to have 'heavy' AA defenses
-		if (GRLIB_difficulty_modifier < 4 && typeName _rndTurret == "ARRAY") then {
-			private _i = 4 - GRLIB_difficulty_modifier;
-			while {typeName _rndTurret == "ARRAY" && _i > 0} do { 
-				_rndTurret = selectRandom KPLIB_o_AA_Turrets;
+		if (KPLIB_param_difficulty < 4 && count _randomTurret > 1) then {
+			_i = 4 - (floor KPLIB_param_difficulty);
+			while {count _randomTurret > 1 && _i > 0} do { 
+				_randomTurret = selectRandom KPLIB_o_turretsAA;
 				_i = _i - 1; 
 			};
 		};
-
-		private _vehicle = objNull;
-		AA_used_positions pushBack _spawn_marker;		
-		if (typeName _rndTurret == "ARRAY") exitWith {
-			private _group = createGroup [GRLIB_side_enemy, true];
-			private _groupVehicles = [];
+		
+		// spawn and memory turret / turrets
+		_turretGroup = [];																					// create save array for currently spawned turret group
+		{
+			_turret = [markerpos _spawnMarker, _x] call KPLIB_fnc_spawnVehicle;							
+			_turretGroup pushBack _turret;																	// append spawned turret to save array			
+						
+		} forEach _randomTurret;																			// spawn turret / turrets
+		KPLIB_backCountryTurretsAA pushBack _turretGroup;													// update AA turrets array with current turret
+		
+		// if turret group has more than one unit, that means there is a radar vehicle involved; so link all units in turret group to that radar
+		if (count _turretGroup > 1) then {
+			_group = createGroup [KPLIB_side_enemy, true];
+			private ["_crew"];
 			{
-				_vehicle = [markerpos _spawn_marker, _x] call KPLIB_fnc_spawnVehicle;
-				_groupVehicles pushBack _vehicle;
-				[_vehicle] joinSilent _group;
-			} forEach _rndTurret;
-			AA_backland_turrets pushBack _groupVehicles;
-			_group setBehaviour "AWARE";
+				_crew = units (_x);
+				_crew joinSilent _group;
+				_x setVehicleRadar 1;																		// fucking turn on radar
+			} forEach _turretGroup;	
+			sleep 0.1; 
 		};
-		private _vehicle = [markerpos _spawn_marker, _rndTurret] call KPLIB_fnc_spawnVehicle;
-		AA_backland_turrets pushBack _vehicle;
-		_vehicle setBehaviour "AWARE";
 	};
 };

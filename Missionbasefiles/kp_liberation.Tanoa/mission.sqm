@@ -375,7 +375,7 @@ class Mission
 			position[]={1481.5693,3.5548186,763.98773};
 			class Attributes
 			{
-				condition="GRLIB_endgame == 1";
+				condition="KPLIB_endgame == 1";
 				timeout[]={17,17,17};
 				interuptable=1;
 				effectMusic="LeadTrack03_F";
