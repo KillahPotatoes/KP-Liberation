@@ -11,7 +11,7 @@ if !(_savedPotato isEqualTo []) then {
 
 while {true} do {
     // Spawn new huron if not loaded or destroyed
-    if !(alive huron) then {
+    if !(alive KPLIB_potato01) then {
         KPLIB_potato01 = KPLIB_b_potato01 createVehicle [(getposATL huronspawn) select 0, (getposATL huronspawn) select 1, ((getposATL huronspawn) select 2) + 0.2];
         KPLIB_potato01 enableSimulationGlobal false;
         KPLIB_potato01 allowdamage false;

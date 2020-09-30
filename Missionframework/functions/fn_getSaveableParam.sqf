@@ -2,7 +2,7 @@
     File: fn_getSaveableParam.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2018-01-27
-    Last Update: 2020-05-10
+    Last Update: 2020-08-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -37,7 +37,7 @@ switch (_action) do {
     // Save to profileNamespace
     case 0: {
         _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
-        private _savedParams = profileNamespace getVariable KPLIB_paramSaveKey;
+        private _savedParams = profileNamespace getVariable KPLIB_save_paramKey;
 
         if(isNil "_savedParams") then {
             if (KPLIB_savegame_debug > 0) then {["Param save data is corrupted, creating new.", "PARAM"] call KPLIB_fnc_log;};
@@ -58,16 +58,16 @@ switch (_action) do {
         };
 
         // Save params to profile namespace
-        profileNamespace setVariable [KPLIB_paramSaveKey, _savedParams];
+        profileNamespace setVariable [KPLIB_save_paramKey, _savedParams];
         saveProfileNamespace;
     };
     // Load from profileNamespace
     case 1: {
-        private _savedParams = profileNamespace getVariable KPLIB_paramSaveKey;
+        private _savedParams = profileNamespace getVariable KPLIB_save_paramKey;
         if(isNil "_savedParams") then {
             if (KPLIB_savegame_debug > 0) then {["Param save data is corrupted, can't load!", "PARAM"] call KPLIB_fnc_log;};
             // Fix param save data
-            profileNamespace setVariable [KPLIB_paramSaveKey, []];
+            profileNamespace setVariable [KPLIB_save_paramKey, []];
             if (KPLIB_savegame_debug > 0) then {[format ["No saved value for param: %1, fetching value.", _paramName], "PARAM"] call KPLIB_fnc_log;};
             _value = [_paramName, _defaultValue] call bis_fnc_getParamValue;
         } else {

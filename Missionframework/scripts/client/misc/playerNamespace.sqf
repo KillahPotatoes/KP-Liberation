@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-05-25
+    Last Update: 2020-07-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -37,7 +37,7 @@ while {true} do {
     player setVariable ["KPLIB_fobPos", _fobPos];
 
     // Direct acces due to config, commander or admin
-    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KPLIB_commander_actions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];
+    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KPLIB_whitelist_cmdrActions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];
 
     // Outside of startbase "safezone"
     player setVariable ["KPLIB_isAwayFromStart", (player distance2d startbase) > 1000];

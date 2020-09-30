@@ -180,8 +180,9 @@ class FSM
                                         itemno = 9;
                                         priority = 0.000000;
                                         to="Get_adjusted_sector";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/"_opforCount = [] call KPLIB_fnc_getOpforCap;"/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_opforCount < KPLIB_cap_enemySide"/*%FSM</CONDITION""">*/;
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_opforCount = [] call KPLIB_fnc_getOpforCap;" \n
+                                         "_opforCount < KPLIB_cap_enemySide"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

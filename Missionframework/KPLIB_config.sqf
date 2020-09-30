@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-22
+    Last Update: 2020-08-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -166,7 +166,7 @@ KPLIB_color_enemyActive = "ColorRED";
 KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
 
 // Name of the parameter save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-KPLIB_paramSaveKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
+KPLIB_save_paramKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
 
 // Interval in seconds for automatic save.
 KPLIB_save_interval = 60;
@@ -359,22 +359,4 @@ KPLIB_surrender_chance = 80;
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KPLIB_battlegroup_clearance = [
     "song_bin_tanh"
-];
-
-/* Slot independent commander action access.
-The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
-even if they are not in the commander slot. */
-KPLIB_commander_actions = [
-    /*
-    Example:
-    "1324678",
-    "5468711",
-    "2156347"
-    */
-];
-
-/* Whitelist for BI support framework access.
-Same format as for the commander actions. */
-KPLIB_supportModule_whitelist = [
-
 ];

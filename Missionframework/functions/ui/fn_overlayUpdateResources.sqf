@@ -3,7 +3,7 @@
     File: fn_overlayUpdateResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-01
-    Last Update: 2020-05-23
+    Last Update: 2020-09-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -38,6 +38,7 @@ if (!_show) exitWith {
 };
 
 if (_updateValues) then {
+    _resourceArea = [(_resourceArea select [4]), _resourceArea] select KPLIB_resources_global;
 
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpper _resourceArea;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText str floor KPLIB_supplies;

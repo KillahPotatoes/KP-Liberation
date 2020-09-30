@@ -338,7 +338,7 @@ _player addAction [
 if (player == ([] call KPLIB_fnc_getCommander)) then {
     _player addAction [
         ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
-        {[] remoteExec ["zeus_remote_call", 2];},
+        {[] call KPLIB_fnc_requestZeus},
         nil,
         -870,
         false,

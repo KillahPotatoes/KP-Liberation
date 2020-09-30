@@ -56,6 +56,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KPLIB_param_vanillaFog, "VanillaFog", 1);
     GET_PARAM(KPLIB_param_resourcesMulti, "ResourcesMultiplier", 3);
     GET_PARAM_BOOL(KPLIB_param_arsenalType, "ArsenalType", 0);
+    GET_PARAM_BOOL(KPLIB_param_directArsenal, "DirectArsenal", 0);
     GET_PARAM_BOOL(KPLIB_param_playerMenu, "PlayerMenu", 1);
     GET_PARAM(KPLIB_param_victoryCondition, "VictoryCondition", 0);
 
@@ -85,6 +86,7 @@ if(isServer) then {
     GET_PARAM_BOOL(KPLIB_param_mobileRespawn, "MobileRespawn", 1);
     GET_PARAM(KPLIB_param_mobileRespawnCooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KPLIB_param_mobileArsenal, "MobileArsenal", 1);
+    GET_PARAM_BOOL(KPLIB_param_attackedFobRespawn, "AttackedSectorRespawn", 0);
     GET_PARAM_BOOL(KPLIB_param_logistic, "AiLogistics", 1);
     GET_PARAM_BOOL(KPLIB_param_buildingDamaged, "CR_Building", 0);
     GET_PARAM(KPLIB_param_halo, "HaloJump", 1);
@@ -92,6 +94,7 @@ if(isServer) then {
     GET_PARAM(KPLIB_param_allowEnemiesInImmobile, "AllowEnemiesInImmobile", 50);
     GET_PARAM(KPLIB_param_maxDespawnDelay, "DelayDespawnMax", 5);
     GET_PARAM_BOOL(KPLIB_param_zeusLimited, "LimitedZeus", 1);
+    GET_PARAM_BOOL(KPLIB_param_zeusCommander, "CommanderZeus", 1);
     GET_PARAM_BOOL(KPLIB_param_zeusAddEnemies, "ZeusAddEnemies", 1);
     GET_PARAM_BOOL(KPLIB_param_highCommand, "HighCommand", 1);
     GET_PARAM(KPLIB_param_supportModule, "SuppMod", 1);
@@ -109,8 +112,8 @@ if(isServer) then {
     GREUH_allow_mapmarkers = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_platoonview";
 
-    KP_serverParamsFetched = true;
-    publicVariable "KP_serverParamsFetched";
+    KPLIB_param_serverInitDone = true;
+    publicVariable "KPLIB_param_serverInitDone";
 
     [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
@@ -303,6 +306,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (KPLIB_param_arsenalType) then {localize "STR_PARAMS_ARSENAL_ACE";} else {localize "STR_PARAMS_ARSENAL_BI";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_DIRECTARSENAL";
+    _value = if (KPLIB_param_directArsenal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_PLAYERMENU";
     _value = if (KPLIB_param_playerMenu) then {localize "STR_PARAMS_PLAYERMENU_KP";} else {localize "STR_PARAMS_PLAYERMENU_GREUH";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -387,6 +394,10 @@ if (!isDedicated && hasInterface) then {
     _value = if (KPLIB_param_mobileArsenal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
+    _param = localize "STR_PARAMS_ATTACKEDSECTORRESPAWN";
+    _value = if (KPLIB_param_attackedFobRespawn) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
     _param = localize "STR_PARAMS_AILOGISTICS";
     _value = if (KPLIB_param_logistic) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
@@ -417,6 +428,10 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAM_DELAY_DESPAWN_MAX";
     _value = if (KPLIB_param_maxDespawnDelay == 0) then {localize "STR_PARAMS_DISABLED";} else {KPLIB_param_maxDespawnDelay;};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAM_COMMANDERZEUS";
+    _value = if (KPLIB_param_zeusCommander) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAM_LIMITEDZEUS";

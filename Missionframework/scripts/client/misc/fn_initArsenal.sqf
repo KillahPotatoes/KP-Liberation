@@ -2,7 +2,7 @@
     File: fn_initArsenal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-11
-    Last Update: 2020-05-22
+    Last Update: 2020-09-16
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,6 +34,13 @@ if (KPLIB_param_useArsenalPreset) then {
         case  7: {[] call compile preprocessFileLineNumbers "presets\arsenal\unsung.sqf";};
         case  8: {[] call compile preprocessFileLineNumbers "presets\arsenal\sfp.sqf";};
         case  9: {[] call compile preprocessFileLineNumbers "presets\arsenal\bwmod.sqf";};
+        case  10: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_nato_mtp.sqf";};
+        case  11: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_nato_tropic.sqf";};
+        case  12: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_nato_wdl.sqf";};
+        case  13: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_csat_hex.sqf";};
+        case  14: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_csat_ghex.sqf";};
+        case  15: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_aaf.sqf";};
+        case  16: {[] call compile preprocessFileLineNumbers "presets\arsenal\vanilla_ldf.sqf";};
         default  {[] call compile preprocessFileLineNumbers "presets\arsenal\blacklist.sqf";};
     };
     [] call compile preprocessFileLineNumbers "presets\arsenal\allowedExtension.sqf";
