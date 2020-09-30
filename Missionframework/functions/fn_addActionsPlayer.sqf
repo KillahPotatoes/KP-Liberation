@@ -373,7 +373,7 @@ _player addAction [
 // Drop crate
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
-    {detach ((attachedObjects _originalTarget) select {(typeOf _x) in [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]})},
+    {detach (((attachedObjects player) select {(typeOf _x) in [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]}) select 0)},
     nil,
     -504,
     true,
