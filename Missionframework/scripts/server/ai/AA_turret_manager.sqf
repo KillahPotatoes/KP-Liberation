@@ -2,7 +2,7 @@
     File: AA_turret_manager.sqf
     Author: Nicoman
     Date: 2020-09-29
-    Last Update: 2020-09-29
+    Last Update: 2020-09-30
     License: MIT License - http://www.opensource.org/licenses/MIT
     Description:
         Spawns and manages AA turrets in the back country. Max number and spawn rate of AA turrets is influenced by various factors:
