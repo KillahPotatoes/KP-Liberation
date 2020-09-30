@@ -27,7 +27,7 @@ if (KPLIB_param_difficulty < 0.75) exitWith {};																// no AA turrets 
 if (isNil "KPLIB_usedPositionsAA") then {KPLIB_usedPositionsAA = []};										// define array containing all currently used positions
 if (isNil "KPLIB_backCountryTurretsAA") then {KPLIB_backCountryTurretsAA = []};								// define array containing all turrets corresponding to a used position
 
-private ["_group", "_i", "_killedTurretsAA", "_maxAAnumber", "_randomTurret", "_sleepTime", "_spawnMarker", "_turret", "_turretGroup"];
+private ["_crew", "_group", "_i", "_killedTurretsAA", "_maxAAnumber", "_randomTurret", "_sleepTime", "_spawnMarker", "_turret", "_turretGroup"];
 _killedTurretsAA = 0;																						// counter of killed AA turrets
 
 while {KPLIB_endgame == 0} do {
@@ -86,21 +86,18 @@ while {KPLIB_endgame == 0} do {
 		_turretGroup = [];																					// create save array for currently spawned turret group
 		{
 			_turret = [markerpos _spawnMarker, _x] call KPLIB_fnc_spawnVehicle;							
-			_turretGroup pushBack _turret;																	// append spawned turret to save array			
-						
+			_turretGroup pushBack _turret;																	// append spawned turret to save array					
 		} forEach _randomTurret;																			// spawn turret / turrets
 		KPLIB_backCountryTurretsAA pushBack _turretGroup;													// update AA turrets array with current turret
 		
 		// if turret group has more than one unit, that means there is a radar vehicle involved; so link all units in turret group to that radar
 		if (count _turretGroup > 1) then {
 			_group = createGroup [KPLIB_side_enemy, true];
-			private ["_crew"];
 			{
 				_crew = units (_x);
 				_crew joinSilent _group;
 				_x setVehicleRadar 1;																		// fucking turn on radar
 			} forEach _turretGroup;	
-			sleep 0.1; 
 		};
 	};
 };
