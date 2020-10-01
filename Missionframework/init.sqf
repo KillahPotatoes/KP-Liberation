@@ -27,11 +27,6 @@ if (KPPLM_CBA && KPLIB_param_playerMenu) then {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";
 };
 
-//Activate cratefiller on true param and active CBA
-if ((isClass (configFile >> "CfgPatches" >> "cba_main")) && KPLIB_param_cratefiller) then {
-    [] call KPLIB_fnc_cratefiller_postInit;
-};
-
 [] call compile preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
 if (isServer) then {
@@ -58,6 +53,11 @@ if (!isDedicated && hasInterface) then {
     [] call compile preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
     setViewDistance 1600;
+};
+
+//Activate cratefiller on true param and active CBA
+if ((isClass (configFile >> "CfgPatches" >> "cba_main")) && KPLIB_param_cratefiller) then {
+    [] call KPLIB_fnc_cratefiller_postInit;
 };
 
 // Execute fnc_reviveInit again (by default it executes in postInit)

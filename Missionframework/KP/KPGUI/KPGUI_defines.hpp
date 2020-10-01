@@ -4,7 +4,7 @@
     File: KPGUI_defines.hpp
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
-    Last Update: 2020-07-10
+    Last Update: 2020-10-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -167,3 +167,5 @@
 
 #define KP_WIDTH_VAL_SR                  0.15
 #define KP_HEIGHT_VAL_SR                 (0.7 - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
+
+#include "KPGUI_classes.hpp"

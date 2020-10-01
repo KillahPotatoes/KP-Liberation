@@ -6,7 +6,7 @@
     File: fn_cratefiller_createSubList.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-04-06
-    Last Update: 2020-09-23
+    Last Update: 2020-10-01
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
 
@@ -50,7 +50,6 @@ switch (_catIndex) do {
         private _glType = (getArray (configfile >> "CfgWeapons" >> _weaponType >> "muzzles")) select 1;
         private _magazines = [_weaponType] call CBA_fnc_compatibleMagazines;
         _magazines append ([configfile >> "CfgWeapons" >> _weaponType >> _glType] call CBA_fnc_compatibleMagazines);
-        _magazines = _magazines - KPLIB_preset_arsenal_blacklist;
         private _sortedMagazines = [_magazines] call KPLIB_fnc_cratefiller_sortList;
         CSVAR("magazines", _sortedMagazines);
 
@@ -66,7 +65,6 @@ switch (_catIndex) do {
     case 2 : {
         // Get compatible attachments
         private _attachments = [_weaponType] call BIS_fnc_compatibleItems;
-        _attachments = _attachments - KPLIB_preset_arsenal_blacklist;
         private _sortedAttachments = [_attachments] call KPLIB_fnc_cratefiller_sortList;
         CSVAR("attachments", _sortedAttachments);
 
