@@ -2,7 +2,7 @@
     File: cup_usmc_woodland.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-15
-    Last Update: 2020-09-27
+    Last Update: 2020-10-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,7 +25,7 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V1_F";                             // This is the main FOB HQ building.
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_Truck_01_box_F";                                  // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
@@ -86,9 +86,9 @@ KPLIB_b_vehLight = [
     ["CUP_B_HMMWV_TOW_USMC",75,100,50],                                 // HMMWV TOW
     ["CUP_B_HMMWV_MK19_USMC",75,80,50],                                 // HMMWV MK19
     ["CUP_B_HMMWV_Avenger_USMC",100,125,125],                           // HMMWV Avenger
-    ["CUP_B_RG31_M2_OD_USMC",100,50,50],                                // RG-31 M2
-    ["CUP_B_RG31E_M2_OD_USMC",100,50,50],                               // RG-31 Mk5E M2
-    ["CUP_B_RG31_Mk19_OD_USMC",100,80,50],                              // RG-31 Mk.19
+    ["CUP_B_RG31_M2_OD_GC_USMC",225,75,100],                            // RG-31 Nyala M2 GC
+    ["CUP_B_RG31E_M2_OD_USMC",200,75,100],                              // RG-31 Mk5E M2
+    ["CUP_B_RG31_Mk19_OD_USMC",150,100,100],                            // RG-31 Mk.19
     ["CUP_B_MTVR_USMC",125,0,75],                                       // MTVR
     ["CUP_B_RHIB_USMC",150,100,100],                                    // RHIB
     ["CUP_B_RHIB2Turret_USMC",250,200,100]                              // RHIB (Mk19)
@@ -377,8 +377,8 @@ KPLIB_b_vehToUnlock = [
     "CUP_B_M270_DPICM_USMC",                                            // M270 MLRS (DPICM)
     "CUP_B_LAV25M240_green",                                            // LAV-25A1 (M240) (Olive)
     "CUP_B_HMMWV_TOW_USMC",                                             // HMMWV TOW
-    "CUP_B_RG31_M2_USMC",                                               // RG-31 M2
-    "CUP_B_RG31E_M2_USMC",                                              // RG-31 Mk5E M2
-    "CUP_B_RG31_Mk19_USMC",                                             // RG-31 Mk.19
+    "CUP_B_RG31_M2_OD_GC_USMC",                                         // RG-31 Nyala M2 GC
+    "CUP_B_RG31E_M2_OD_USMC",                                           // RG-31 Mk5E M2
+    "CUP_B_RG31_Mk19_OD_USMC",                                          // RG-31 Mk.19
     "CUP_B_LAV25_green"                                                 // LAV-25A1 (Olive)
 ];

@@ -2,7 +2,7 @@
     File: cup_usmc_desert.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-15
-    Last Update: 2020-09-27
+    Last Update: 2020-10-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -32,7 +32,7 @@ KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This 
 KPLIB_b_mobileRespawn = "CUP_B_HMMWV_Ambulance_USA";                    // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "CUP_B_CH53E_USMC";                                  // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit = "CUP_B_USMC_Crewman_FROG_DES";                       // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "CUP_B_USMC_Pilot";                             // This defines the pilot for helicopters.
+KPLIB_b_heliPilotUnit = "CUP_B_USMC_Pilot_des";                         // This defines the pilot for helicopters.
 KPLIB_b_addHeli = "CUP_B_UH1Y_UNA_USMC";                                // These are the additional helicopters which spawn on the Freedom or at Chimera base.
 KPLIB_b_addBoat = "CUP_B_Zodiac_USMC";                                  // These are the boats which spawn at the stern of the Freedom.
 KPLIB_b_logiTruck = "CUP_B_MTVR_USA";                                   // These are the trucks which are used in the logistic convoy system.
@@ -75,7 +75,7 @@ KPLIB_b_infantry = [
     ["CUP_B_USMC_Soldier_M107",70,5,0],                                 // Sniper M107
     ["CUP_B_USMC_Spotter",20,0,0],                                      // Spotter
     ["CUP_B_USMC_Crewman_FROG_DES",10,0,0],                             // Crewman
-    ["CUP_B_USMC_Pilot",10,0,0]                                         // Pilot
+    ["CUP_B_USMC_Pilot_des",10,0,0]                                     // Pilot
 ];
 
 KPLIB_b_vehLight = [
@@ -85,9 +85,9 @@ KPLIB_b_vehLight = [
     ["CUP_B_HMMWV_TOW_USA",75,100,50],                                  // HMMWV TOW
     ["CUP_B_HMMWV_MK19_USA",75,80,50],                                  // HMMWV MK19
     ["CUP_B_HMMWV_Avenger_USA",100,125,125],                            // HMMWV Avenger
-    ["CUP_B_RG31_M2_OD_USA",100,50,50],                                 // RG-31 M2
-    ["CUP_B_RG31E_M2_OD_USA",100,50,50],                                // RG-31 Mk5E M2
-    ["CUP_B_RG31_Mk19_OD_USA",100,80,50],                               // RG-31 Mk.19
+    ["CUP_B_RG31_M2_GC_USMC",225,75,100],                               // RG-31 Nyala M2 GC
+    ["CUP_B_RG31E_M2_USMC",200,75,100],                                 // RG-31 Mk5E M2
+    ["CUP_B_RG31_Mk19_USMC",150,100,100,                                // RG-31 Mk.19
     ["CUP_B_MTVR_USA",125,0,75],                                        // MTVR
     ["CUP_B_RHIB_USMC",150,100,100],                                    // RHIB
     ["CUP_B_RHIB2Turret_USMC",250,200,100]                              // RHIB (Mk19)
@@ -376,8 +376,8 @@ KPLIB_b_vehToUnlock = [
     "CUP_B_M270_DPICM_USMC",                                            // M270 MLRS (DPICM)
     "CUP_B_LAV25M240_desert_USMC",                                      // LAV-25A1 (M240) (Desert)
     "CUP_B_HMMWV_TOW_USA",                                              // HMMWV TOW
-    "CUP_B_RG31_M2_USA",                                                // RG-31 M2
-    "CUP_B_RG31E_M2_USA",                                               // RG-31 Mk5E M2
-    "CUP_B_RG31_Mk19_USA",                                              // RG-31 Mk.19
+    "CUP_B_RG31_M2_GC_USMC",                                            // RG-31 Nyala M2 GC
+    "CUP_B_RG31E_M2_USMC",                                              // RG-31 Mk5E M2
+    "CUP_B_RG31_Mk19_USMC",                                             // RG-31 Mk.19
     "CUP_B_LAV25_desert_USMC"                                           // LAV-25A1 (Desert)
 ];
