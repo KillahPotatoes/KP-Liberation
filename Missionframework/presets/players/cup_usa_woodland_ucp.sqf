@@ -2,7 +2,7 @@
     File: cup_usa_woodland.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-17
-    Last Update: 2020-09-27
+    Last Update: 2020-10-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,13 +25,13 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V1_F";                             // This is the main FOB HQ building.
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_Truck_01_box_F";                                  // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
 KPLIB_b_mobileRespawn = "CUP_B_HMMWV_Ambulance_USA";                    // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "CUP_B_CH47F_USA";                                   // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit = "CUP_B_US_Crew";                                     // This defines the crew for vehicles.
+KPLIB_b_crewUnit = "CUP_B_US_Crew_UCP";                                 // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit = "CUP_B_US_Pilot";                               // This defines the pilot for helicopters.
 KPLIB_b_addHeli = "CUP_B_MH6M_USA";                                     // These are the additional helicopters which spawn on the Freedom or at Chimera base.
 KPLIB_b_addBoat = "B_Boat_Transport_01_F";                              // These are the boats which spawn at the stern of the Freedom.
@@ -55,26 +55,30 @@ KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 KPLIB_b_infantry = [
-    ["CUP_B_US_Soldier",20,0,0],                                        // Rifleman
-    ["CUP_B_US_Soldier_LAT",30,0,0],                                    // Rifleman (AT)
-    ["CUP_B_US_Soldier_GL",25,0,0],                                     // Grenadier
-    ["CUP_B_US_Soldier_AR",25,0,0],                                     // Automatic Rifleman
-    ["CUP_B_US_Soldier_MG",35,0,0],                                     // Machinegunner
-    ["CUP_B_US_Soldier_Marksman",30,0,0],                               // Marksman
-    ["CUP_B_US_Soldier_AT",50,25,0],                                    // AT Specialist
-    ["CUP_B_US_Soldier_HAT",50,10,0],                                   // AT Specialist (Javelin)
-    ["CUP_B_US_Soldier_AA",50,10,0],                                    // AA Specialist
-    ["CUP_B_US_Medic",30,0,0],                                          // Medic
-    ["CUP_B_US_Engineer",30,0,0],                                       // Engineer
+    ["CUP_B_US_Soldier_UCP",20,0,0],                                    // Rifleman
+    ["CUP_B_US_Soldier_LAT_UCP",30,0,0],                                // Rifleman (AT)
+    ["CUP_B_US_Soldier_GL_UCP",25,0,0],                                 // Grenadier
+    ["CUP_B_US_Soldier_AR_UCP",25,0,0],                                 // Autorifleman
+    ["CUP_B_US_Soldier_MG_UCP",35,0,0],                                 // Machine Gunner
+    ["CUP_B_US_Soldier_Marksman_UCP",30,0,0],                           // Marksman
+    ["CUP_B_US_Soldier_Marksman_EBR_UCP",30,0,0],                       // Marksman (Mk 14 EBR)
+    ["CUP_B_US_Soldier_AT_UCP",50,25,0],                                // AT Specialist
+    ["CUP_B_US_Soldier_HAT_UCP",50,10,0],                               // AT Specialist (Javelin)
+    ["CUP_B_US_Soldier_AA_UCP",50,10,0],                                // AA Specialist
+    ["CUP_B_US_Medic_UCP",30,0,0],                                      // Medic
+    ["CUP_B_US_Engineer_UCP",30,0,0],                                   // Engineer
+    ["CUP_B_US_Engineer_EOD_UCP",30,0,0],                               // EOD Engineer
     ["CUP_B_US_SpecOps_MG",30,0,0],                                     // Machinegunner
     ["CUP_B_US_SpecOps",20,0,0],                                        // Operator
+    ["CUP_B_US_SpecOps_Assault",20,0,0],                                // Operator (Assault)
+    ["CUP_B_US_SpecOps_JTAC",20,0,0],                                   // Forward Air Controller
     ["CUP_B_US_SpecOps_M",30,0,0],                                      // Marksman
     ["CUP_B_US_SpecOps_TL",40,0,0],                                     // Team Leader
     ["CUP_B_US_SpecOps_Medic",30,0,0],                                  // Medic
-    ["CUP_B_US_Sniper",70,5,0],                                         // Sniper
-    ["CUP_B_US_Sniper_M107",70,5,0],                                    // Sniper (M107)
-    ["CUP_B_US_Spotter",20,0,0],                                        // Spotter
-    ["CUP_B_US_Crew",10,0,0],                                           // Crewman
+    ["CUP_B_US_Sniper_UCP",70,5,0],                                     // Sniper
+    ["CUP_B_US_Sniper_M107_UCP",70,5,0],                                // Sniper (M107)
+    ["CUP_B_US_Spotter_UCP",20,0,0],                                    // Spotter
+    ["CUP_B_US_Crew_UCP",10,0,0],                                       // Crewman
     ["CUP_B_US_Pilot",10,0,0]                                           // Pilot
 ];
 
@@ -275,54 +279,54 @@ KPLIB_b_vehSupport = [
 
 // Light infantry squad.
 KPLIB_b_squadLight = [
-    "CUP_B_US_Soldier_SL",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier_LAT",
-    "CUP_B_US_Soldier_GL",
-    "CUP_B_US_Soldier_AR",
-    "CUP_B_US_Soldier_AR",
-    "CUP_B_US_Soldier_Marksman",
-    "CUP_B_US_Medic",
-    "CUP_B_US_Engineer"
+    "CUP_B_US_Soldier_SL_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_LAT_UCP",
+    "CUP_B_US_Soldier_GL_UCP",
+    "CUP_B_US_Soldier_AR_UCP",
+    "CUP_B_US_Soldier_AR_UCP",
+    "CUP_B_US_Soldier_Marksman_UCP",
+    "CUP_B_US_Medic_UCP",
+    "CUP_B_US_Engineer_UCP"
 ];
 
 // Heavy infantry squad.
 KPLIB_b_squadInf = [
-    "CUP_B_US_Soldier_SL",
-    "CUP_B_US_Soldier_LAT",
-    "CUP_B_US_Soldier_LAT",
-    "CUP_B_US_Soldier_GL",
-    "CUP_B_US_Soldier_AR",
-    "CUP_B_US_Soldier_AR",
-    "CUP_B_US_Soldier_MG",
-    "CUP_B_US_Soldier_Marksman",
-    "CUP_B_US_Medic",
-    "CUP_B_US_Engineer"
+    "CUP_B_US_Soldier_SL_UCP",
+    "CUP_B_US_Soldier_LAT_UCP",
+    "CUP_B_US_Soldier_LAT_UCP",
+    "CUP_B_US_Soldier_GL_UCP",
+    "CUP_B_US_Soldier_AR_UCP",
+    "CUP_B_US_Soldier_AR_UCP",
+    "CUP_B_US_Soldier_MG_UCP",
+    "CUP_B_US_Soldier_Marksman_UCP",
+    "CUP_B_US_Medic_UCP",
+    "CUP_B_US_Engineer_UCP"
 ];
 
 // AT specialists squad.
 KPLIB_b_squadAT = [
-    "CUP_B_US_Soldier_SL",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier_HAT",
-    "CUP_B_US_Soldier_AT",
-    "CUP_B_US_Soldier_AT",
-    "CUP_B_US_Medic",
-    "CUP_B_US_Soldier"
+    "CUP_B_US_Soldier_SL_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_HAT_UCP",
+    "CUP_B_US_Soldier_AT_UCP",
+    "CUP_B_US_Soldier_AT_UCP",
+    "CUP_B_US_Medic_UCP",
+    "CUP_B_US_Soldier_UCP"
 ];
 
 // AA specialists squad.
 KPLIB_b_squadAA = [
-    "CUP_B_US_Soldier_SL",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier_AA",
-    "CUP_B_US_Soldier_AA",
-    "CUP_B_US_Soldier_AA",
-    "CUP_B_US_Medic",
-    "CUP_B_US_Soldier"
+    "CUP_B_US_Soldier_SL_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_AA_UCP",
+    "CUP_B_US_Soldier_AA_UCP",
+    "CUP_B_US_Soldier_AA_UCP",
+    "CUP_B_US_Medic_UCP",
+    "CUP_B_US_Soldier_UCP"
 ];
 
 // Force recon squad.
@@ -341,16 +345,16 @@ KPLIB_b_squadRecon = [
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
 KPLIB_b_squadPara = [
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier",
-    "CUP_B_US_Soldier"
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP",
+    "CUP_B_US_Soldier_UCP"
 ];
 
 /*
