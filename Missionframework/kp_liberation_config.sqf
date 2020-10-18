@@ -108,7 +108,8 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 27 = CUP Takistani Army
 28 = SFP (Woodland)
 29 = SFP (Desert)
-30 = LDF (Contact DLC) */
+30 = LDF (Contact DLC)
+31 = BWMod + CUP */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -562,10 +563,12 @@ KPLIB_transportConfigs = [
     ["C_Van_02_service_F", -5, [0,0.5,0], [0,-1.75,0]],
     ["C_Van_02_transport_F", -5, [0,-1.75,0]],
     ["C_Van_02_vehicle_F", -5, [0,0.5,0], [0,-1.75,0]],
+    ["CUP_B_Boxer_Empty_GER_WDL", -6.5, [-0.17,-0.7,-0.05], [-0.17,-2.1,-0.05], [-0.17,-3.55,-0.05]],
     ["CUP_B_C130J_Cargo_USMC",-10,[0,0.6,-3.76],[0,-0.9,-3.76],[0,-2.5,-3.76],[0,-4.2,-3.76],[0,2.2,-3.76],[0,3.8,-3.76],[0,5.5,-3.76]],
     ["CUP_B_CH47F_GB", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
     ["CUP_B_CH47F_USA", -8, [0,-3.535,-1.9], [0,-1.819,-1.9], [0,0.98,-1.9], [0,3.037,-1.9]],
     ["CUP_B_CH53E_USMC", -8, [0,7.566,-3], [0,5.749,-3], [0,3.847,-3], [0,2,-3], [0,0.338,-3]],
+    ["CUP_B_CH53E_GER", -8, [0,7.566,-3], [0,5.749,-3], [0,3.847,-3], [0,2,-3], [0,0.338,-3]],
     ["CUP_B_Kamaz_CDF", -6.5, [0,-0.4,0], [0,-2.6,0]],
     ["CUP_B_Kamaz_Open_CDF", -6.5, [0.12,0.4,0], [0.12,-1.8,0]],
     ["CUP_B_Mi17_CDF", -6.5, [0,2.7,-1.5], [00,0.6,-1.5]],
@@ -719,6 +722,7 @@ KPLIB_aiResupplySources = [
     "B_T_Truck_01_ammo_F",
     "B_Truck_01_ammo_F",
     "BW_LKW15T_Ammo_F",
+    "BWA3_Box_Ammo",
     "CUP_B_Kamaz_Reammo_CDF",
     "CUP_B_MTVR_Ammo_USA",
     "CUP_B_MTVR_Ammo_USMC",
@@ -804,6 +808,7 @@ vehicle_rearm_sources = [
     "B_T_Truck_01_ammo_F",
     "B_Truck_01_ammo_F",
     "BW_LKW15T_Ammo_F",
+    "BWA3_Box_Ammo",
     "CUP_B_Kamaz_Reammo_CDF",
     "CUP_B_MTVR_Ammo_USA",
     "CUP_B_MTVR_Ammo_USMC",
