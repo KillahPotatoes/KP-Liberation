@@ -3827,7 +3827,7 @@ class Mission
 			dataType="Marker";
 			position[]={6960.8052,0,11203.651};
 			name="capture_45";
-			text="Applejakerie Village";
+			text="Ajak's Village";
 			type="n_art";
 			colorName="ColorEAST";
 			id=714;
