@@ -4,7 +4,7 @@ waitUntil { time > 0 };
 
 [] spawn cinematic_camera;
 
-if ( GRLIB_introduction ) then {
+if ( KPLIB_param_introCinematic ) then {
 
     sleep 1;
     cutRsc ["intro1","PLAIN",1,true];

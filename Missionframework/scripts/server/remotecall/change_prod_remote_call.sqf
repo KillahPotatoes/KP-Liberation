@@ -25,7 +25,7 @@ _tempProduction = [];
                 (_x select 5),
                 (_x select 6),
                 _new_production,
-                KP_liberation_production_interval,
+                KPLIB_production_interval,
                 (_x select 9),
                 (_x select 10),
                 (_x select 11)
@@ -37,6 +37,6 @@ _tempProduction = [];
     } else {
         _tempProduction pushBack _x;
     };
-} forEach KP_liberation_production;
+} forEach KPLIB_production;
 
-KP_liberation_production = _tempProduction;
+KPLIB_production = _tempProduction;

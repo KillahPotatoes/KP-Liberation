@@ -2,7 +2,7 @@
     File: fn_getNearestSector.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-11
+    Last Update: 2020-05-17
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
     ["_pos", getPos player, [[]], [2, 3]]
 ];
 
-private _sectors = sectors_allSectors select {((markerPos _x) distance2d _pos) < _radius};
+private _sectors = KPLIB_sectors_all select {((markerPos _x) distance2d _pos) < _radius};
 
 if (_sectors isEqualTo []) exitWith {""};
 

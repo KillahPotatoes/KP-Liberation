@@ -7,8 +7,8 @@ _offset = 0;
     if ( _x select 0 == typeof _truck_to_unload ) then { _offset = _x select 1; };
 } foreach KPLIB_transportConfigs;
 
-if ( _truck_to_unload getVariable ["GRLIB_ammo_truck_load", 0] > 0 ) then {
-    _truck_to_unload setVariable ["GRLIB_ammo_truck_load", 0, true];
+if ( _truck_to_unload getVariable ["KPLIB_ammo_truck_load", 0] > 0 ) then {
+    _truck_to_unload setVariable ["KPLIB_ammo_truck_load", 0, true];
     [_truck_to_unload, false] remoteExec ["KPLIB_fnc_protectObject"];
 
     {

@@ -2,7 +2,7 @@
     File: fn_checkCrateValue.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-05-26
-    Last Update: 2019-12-03
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 
 if (isNull _crate) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-hint format [localize "STR_ACTION_CRATE_VALUE_HINT", _crate getVariable ["KP_liberation_crate_value", 0]];
+hint format [localize "STR_ACTION_CRATE_VALUE_HINT", _crate getVariable ["KPLIB_crate_value", 0]];
 
 if !(ropeAttachEnabled _crate) then {
     [_crate, true] remoteExec ["enableRopeAttach"];

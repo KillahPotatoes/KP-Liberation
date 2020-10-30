@@ -2,7 +2,7 @@
     File: fn_clearCargo.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-30
-    Last Update: 2020-03-30
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,7 +24,7 @@ params [
 
 if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-if (_force || {!((typeOf _obj) in KP_liberation_ace_crates) && {KP_liberation_clear_cargo || {!((typeOf _obj) isKindOf "AllVehicles")}}}) then {
+if (_force || {!((typeOf _obj) in KPLIB_ace_crates) && {KPLIB_param_clearCargo || {!((typeOf _obj) isKindOf "AllVehicles")}}}) then {
     clearWeaponCargoGlobal _obj;
     clearMagazineCargoGlobal _obj;
     clearBackpackCargoGlobal _obj;

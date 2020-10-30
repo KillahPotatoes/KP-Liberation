@@ -1,10 +1,10 @@
 params ["_sector"];
 
-if (KP_liberation_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - sector_guerilla spawned on: %3", (markerText _sector), _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - sector_guerilla spawned on: %3", (markerText _sector), _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 private _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 
-while {(([_startpos, 500, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
+while {(([_startpos, 500, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0) || (surfaceIsWater _startpos)} do {
     _startpos = (markerPos _sector) getPos [(1200 + (round (random 400))), (random 360)];
 };
 
@@ -76,8 +76,8 @@ _spawnedGroups pushBack _grp;
 
 sleep 30;
 
-if (((random 100) <= 25) && !(KP_liberation_guerilla_vehicles isEqualTo [])) then {
-    private _vehicle = (selectRandom KP_liberation_guerilla_vehicles) createVehicle _startpos;
+if (((random 100) <= 25) && !(KPLIB_r_vehicles isEqualTo [])) then {
+    private _vehicle = (selectRandom KPLIB_r_vehicles) createVehicle _startpos;
     [_vehicle] call KPLIB_fnc_allowCrewInImmobile;
 
     private _grp = [_startpos, 2] call KPLIB_fnc_spawnGuerillaGroup;
@@ -106,7 +106,7 @@ if (((random 100) <= 25) && !(KP_liberation_guerilla_vehicles isEqualTo [])) the
     _spawnedGroups pushBack _grp;
 };
 
-waitUntil {sleep 60; !(_sector in active_sectors)};
+waitUntil {sleep 60; !(_sector in KPLIB_sectors_active)};
 
 sleep 60;
 
@@ -117,7 +117,7 @@ private _strengthChanged = false;
         {
             if (alive _x) then {
                 deleteVehicle _x;
-                KP_liberation_guerilla_strength = KP_liberation_guerilla_strength + 2;
+                KPLIB_guerilla_strength = KPLIB_guerilla_strength + 2;
                 _strengthChanged = true;
             };
         } forEach (units _x);
@@ -125,7 +125,7 @@ private _strengthChanged = false;
 } forEach _spawnedGroups;
 
 if (!isServer && _strengthChanged) then {
-    publicVariableServer "KP_liberation_guerilla_strength";
+    publicVariableServer "KPLIB_guerilla_strength";
 };
 
-if (KP_liberation_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - sector_guerilla dropped on: %3", (markerText _sector), _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};

@@ -2,7 +2,7 @@
     File: fn_getFobResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-08
-    Last Update: 2020-05-09
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,4 +21,4 @@ params [
     ["_fob", [0, 0, 0], [[]], [2, 3]]
 ];
 
-KP_liberation_fob_resources param [KP_liberation_fob_resources findIf {(_x select 0) isEqualTo _fob}, NO_RESULT] // return
+KPLIB_fob_resources param [KPLIB_fob_resources findIf {(_x select 0) isEqualTo _fob}, NO_RESULT] // return
