@@ -3775,6 +3775,7 @@
         <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
             <Original>Respawn on attacked sectors</Original>
             <German>Respawn bei unter Angriff stehenden Sektoren</German>
+			<Chinesesimp>重生受攻击的扇区</Chinesesimp>
         </Key>
 
         <!-- Added or changed in v0.95 -->
@@ -5635,6 +5636,7 @@
             <Russian>Гражданский %1 благодарен за вашу помощь.</Russian>
             <Italian>Il civile di nome %1 ti ringrazia per l'aiuto.</Italian>
             <Portuguese>Um civil chamado %1 agradeceu sua ajuda.</Portuguese>
+			<Chinesesimp>平民 %1 感谢你的帮助。</Chinesesimp>
             <Chinese>平民 %1 感謝你的幫助。</Chinese>
             <Korean>시민 %1 가 도와줘서 고맙다고 인사한다. </Korean>
             <Czech>Civilista jménem %1 ti děkuje za pomoc.</Czech>
@@ -5645,7 +5647,7 @@
             <Spanish>Consecuencia en reputación con civiles por destruir edificios si el edificio es</Spanish>
             <Russian>Штраф к Репутации Гражданских, если постройка</Russian>
             <Italian>Penalità nella reputazione coi civili , se l'edeficio è</Italian>
-            <Chinesesimp>当建筑_____时，民间声望会降低</Chinesesimp>
+            <Chinesesimp>当建筑损毁时，平民声望会降低</Chinesesimp>
             <Chinese>當建築物＿＿時，民間聲望會降低。</Chinese>
             <Turkish>Şu türdeki binalara ceza verilince, ceza uygulanır</Turkish>
             <Portuguese>Penalidade na reputação civil se a construção estiver</Portuguese>
@@ -5775,7 +5777,7 @@
             <Spanish>Informante Civil</Spanish>
             <Italian>Informatore Civile</Italian>
             <Turkish>Sivil Bilgisi</Turkish>
-            <Chinesesimp>民间线人</Chinesesimp>
+            <Chinesesimp>平民线人</Chinesesimp>
             <Chinese>民間線人</Chinese>
             <Portuguese>Informante Civil</Portuguese>
             <Korean>민간인 정보원</Korean>
