@@ -1,0 +1,371 @@
+/*%FSM<COMPILE "C:\Games\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, KPLIB Sector Monitor">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Author__KPLIB_Dev",0,250,0.000000,0.000000,100.000000,50.000000,0.000000,"Author:" \n "KPLIB Dev Team"};
+item1[] = {"save_loaded_",4,218,0.000000,75.000000,100.000000,125.000000,0.000000,"save loaded?"};
+item2[] = {"Init",2,250,0.000000,150.000000,100.000000,200.000000,0.000000,"Init"};
+item3[] = {"not_server_",4,218,125.000000,0.000000,225.000000,50.000000,1.000000,"not server?"};
+item4[] = {"Exit",1,250,250.000000,0.000000,350.000000,50.000000,0.000000,"Exit"};
+item5[] = {"_",8,218,0.000000,225.000000,100.000000,275.000000,0.000000,""};
+item6[] = {"Start_new_monitoring",2,250,0.000000,300.000000,100.000000,350.000000,0.000000,"Start new" \n "monitoring run"};
+item7[] = {"_",8,218,0.000000,375.000000,100.000000,425.000000,0.000000,""};
+item8[] = {"Get_next_sector",2,250,0.000000,450.000000,100.000000,500.000000,0.000000,"Get next sector" \n "to check"};
+item9[] = {"cap_not_reached",4,218,0.000000,525.000000,100.000000,575.000000,0.000000,"cap not" \n "reached?"};
+item10[] = {"Get_adjusted_sector",2,250,0.000000,600.000000,100.000000,650.000000,0.000000,"Get adjusted" \n "sector range"};
+item11[] = {"blufor_near_",4,218,0.000000,675.000000,100.000000,725.000000,1.000000,"blufor near?"};
+item12[] = {"_",8,218,125.000000,600.000000,225.000000,650.000000,0.000000,""};
+item13[] = {"Sector_checked",2,250,250.000000,450.000000,350.000000,500.000000,0.000000,"Sector" \n "checked"};
+item14[] = {"Activate_sector",2,250,0.000000,750.000000,100.000000,800.000000,0.000000,"Activate sector"};
+item15[] = {"",7,210,296.000000,621.000000,304.000000,629.000000,0.000000,""};
+item16[] = {"_",8,218,125.000000,450.000000,225.000000,500.000000,0.000000,""};
+item17[] = {"run_finished_",4,218,250.000000,375.000000,350.000000,425.000000,1.000000,"run finished?"};
+item18[] = {"Log_overview_of",2,250,250.000000,300.000000,350.000000,350.000000,0.000000,"Log overview" \n "of active" \n "sectors"};
+item19[] = {"_",8,218,125.000000,300.000000,225.000000,350.000000,0.000000,""};
+item20[] = {"_",8,218,125.000000,750.000000,225.000000,800.000000,0.000000,""};
+item21[] = {"",7,210,296.000000,771.000000,304.000000,779.000000,0.000000,""};
+item22[] = {"campaign_finished",4,218,375.000000,450.000000,475.000000,500.000000,2.000000,"campaign" \n "finished?"};
+item23[] = {"Exit_1",1,250,500.000000,450.000000,600.000000,500.000000,0.000000,"Exit"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {2,5};
+link4[] = {3,4};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {9,10};
+link10[] = {10,11};
+link11[] = {10,12};
+link12[] = {11,14};
+link13[] = {12,15};
+link14[] = {13,16};
+link15[] = {13,17};
+link16[] = {13,22};
+link17[] = {14,20};
+link18[] = {15,13};
+link19[] = {16,8};
+link20[] = {17,18};
+link21[] = {18,19};
+link22[] = {19,6};
+link23[] = {20,21};
+link24[] = {21,15};
+link25[] = {22,23};
+globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-462.464111,712.458435,919.987671,76.941620,1232,884,1};
+window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "KPLIB Sector Monitor";
+        class States
+        {
+                /*%FSM<STATE "Author__KPLIB_Dev">*/
+                class Author__KPLIB_Dev
+                {
+                        name = "Author__KPLIB_Dev";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"// This FSM is part of KP Liberation" \n
+                         "// https://github.com/KillahPotatoes/KP-Liberation" \n
+                         "// MIT License - http://www.opensource.org/licenses/MIT"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_server_">*/
+                                class not_server_
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "save_loaded_">*/
+                                class save_loaded_
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded"" && {save_is_loaded}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"[""Sector Monitor started"", ""SECTORMONITOR""] call KPLIB_fnc_log;" \n
+                         "" \n
+                         "private _allSectors = [];" \n
+                         "private _sector = """";" \n
+                         "private _opforCount = 0;" \n
+                         "private _range = 0;" \n
+                         "private _hc = objNull;" \n
+                         "private _logDelay = 300;" \n
+                         "private _logTime = diag_tickTime + _logDelay;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Start_new_monitoring";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Exit">*/
+                class Exit
+                {
+                        name = "Exit";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"[" \n
+                         "    format [""Sector Monitor was started on %1"", debug_source]," \n
+                         "    ""FSM ABORT""" \n
+                         "] remoteExecCall [""KPLIB_fnc_log"", 2];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Start_new_monitoring">*/
+                class Start_new_monitoring
+                {
+                        name = "Start_new_monitoring";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_allSectors = sectors_allSectors - blufor_sectors;" \n
+                         "_allSectors = _allSectors - active_sectors;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Get_next_sector";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_next_sector">*/
+                class Get_next_sector
+                {
+                        name = "Get_next_sector";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_sector = _allSectors deleteAt (floor random (count _allSectors));"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "cap_not_reached">*/
+                                class cap_not_reached
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Get_adjusted_sector";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_opforCount = [] call KPLIB_fnc_getOpforCap;" \n
+                                         "_opforCount < GRLIB_sector_cap"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_adjusted_sector">*/
+                class Get_adjusted_sector
+                {
+                        name = "Get_adjusted_sector";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_range = [_opforCount] call KPLIB_fnc_getSectorRange;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "blufor_near_">*/
+                                class blufor_near_
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="Activate_sector";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([markerPos _sector, _range, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Sector_checked";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Sector_checked">*/
+                class Sector_checked
+                {
+                        name = "Sector_checked";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "campaign_finished">*/
+                                class campaign_finished
+                                {
+                                        itemno = 22;
+                                        priority = 2.000000;
+                                        to="Exit_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"GRLIB_endgame > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "run_finished_">*/
+                                class run_finished_
+                                {
+                                        itemno = 17;
+                                        priority = 1.000000;
+                                        to="Log_overview_of";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_allSectors isEqualTo []"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Get_next_sector";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Activate_sector">*/
+                class Activate_sector
+                {
+                        name = "Activate_sector";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"// Get possible HC" \n
+                         "_hc = [] call KPLIB_fnc_getLessLoadedHC;" \n
+                         "" \n
+                         "// Start sector manager on HC or server" \n
+                         "if (isNull _hc) then {" \n
+                         "    [_sector] spawn manage_one_sector;" \n
+                         "} else {" \n
+                         "    [_sector] remoteExec [""manage_one_sector"", _hc];" \n
+                         "};" \n
+                         "" \n
+                         "// Spawn resource crates" \n
+                         "if (_sector in sectors_factory || _sector in sectors_capture) then {" \n
+                         "    [_sector] call KPLIB_fnc_spawnSectorCrates;" \n
+                         "};" \n
+                         "" \n
+                         "// Spawn intel items" \n
+                         "if (_sector in sectors_military) then {" \n
+                         "    [_sector] call KPLIB_fnc_spawnSectorIntel;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Sector_checked";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Log_overview_of">*/
+                class Log_overview_of
+                {
+                        name = "Log_overview_of";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"if (diag_tickTime > _logTime) then {" \n
+                         "    [" \n
+                         "        format [" \n
+                         "            ""Active sectors: %1""," \n
+                         "            if (active_sectors isEqualTo []) then {" \n
+                         "                ""None""" \n
+                         "            } else {" \n
+                         "                active_sectors apply {markerText _x} joinString "", """ \n
+                         "            }" \n
+                         "        ]," \n
+                         "        ""SECTORMONITOR""" \n
+                         "    ] call KPLIB_fnc_log;" \n
+                         "    _logTime = diag_tickTime + _logDelay;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Start_new_monitoring";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Exit_1">*/
+                class Exit_1
+                {
+                        name = "Exit_1";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"[" \n
+                         "    ""Sector Monitor exited due to finished campaign""," \n
+                         "    ""SECTORMONITOR""" \n
+                         "] call KPLIB_fnc_log;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Author__KPLIB_Dev";
+        finalStates[] =
+        {
+                "Exit",
+                "Exit_1",
+        };
+};
+/*%FSM</COMPILE>*/

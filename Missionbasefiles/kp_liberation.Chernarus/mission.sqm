@@ -179,53 +179,12 @@ class ScenarioData
 	{
 		gameType="CTI";
 		minPlayers=1;
-		maxPlayers=34;
+		maxPlayers=37;
 	};
 };
 class CustomAttributes
 {
 	class Category0
-	{
-		name="Multiplayer";
-		class Attribute0
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Counter";
-							};
-						};
-					};
-				};
-			};
-		};
-		nAttributes=1;
-	};
-	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -256,23 +215,22 @@ class Mission
 	{
 		briefingName="@STR_MISSION_TITLE";
 		overviewText="@STR_MISSION_DESCRIPTION";
-		resistanceWest=0;
 		resistanceEast=1;
-		timeOfChanges=28800;
-		startWeather=0.39999998;
-		startWind=0.099999994;
-		startWaves=0.099999994;
-		forecastWeather=0.39999998;
-		forecastWind=0.099999994;
-		forecastWaves=0.099999994;
-		forecastLightnings=0.099999994;
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
 		year=2038;
 		month=6;
 		day=6;
 		hour=8;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
@@ -27520,7 +27478,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this setFlagTexture ""res\kpflag.jpg"";";
+				init="this setFlagTexture ""res\flag_kp_co.paa"";";
 			};
 			id=4562;
 			type="Flag_White_F";

@@ -1,5 +1,3 @@
-if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Module initialising on: %1", debug_source];};
-
 // Functions
 // Get buildings count for sector
 F_cr_getBuildings = compileFinal preprocessFileLineNumbers "scripts\server\civrep\fnc\f_kp_cr_getBuildings.sqf";
@@ -15,6 +13,3 @@ F_cr_woundedAnim = compileFinal preprocessFileLineNumbers "scripts\server\civrep
 civrep_wounded_civs = compileFinal preprocessFileLineNumbers "scripts\server\civrep\wounded\civrep_wounded_civs.sqf";
 // Count initial buildings on each city and bigtown
 execVM "scripts\server\civrep\init_buildings.sqf";
-
-
-if (KP_liberation_civrep_debug > 0) then {diag_log format ["[KP LIBERATION] [CIVREP] Module initialised on: %1", debug_source];};

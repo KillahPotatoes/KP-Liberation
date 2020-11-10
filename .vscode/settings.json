@@ -1,0 +1,85 @@
+{
+    "sqf.enableCBA": true,
+    "sqf.enableACE3": true,
+    "files.associations": {
+        "*.hpp": "ext",
+        "*.h":   "ext",
+        "*.inc": "ext",
+        "*.cpp": "ext",
+        "*.ext": "ext",
+        "*.fsm": "ext"
+    },
+    "sqflint.ignoredVariables": [
+        "_input0",
+        "_thisArgs",
+        "_thisId",
+        "_thisType"
+    ],
+    "psi-header.lang-config": [
+        {
+            "license": "Custom",
+            "language": "sqf",
+            "rootDirFileName": "description.ext",
+            "begin": "/*",
+            "prefix": "    ",
+            "end": "*/",
+            "forceToTop": true
+        },
+        {
+            "license": "Custom",
+            "language": "ext",
+            "rootDirFileName": "description.ext",
+            "begin": "/*",
+            "prefix": "    ",
+            "end": "*/",
+            "forceToTop": true
+        }
+    ],
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "include": ["sqf", "ext"],
+        "modDate": "Last Update:",
+        "modDateFormat": "YYYY-MM-DD",
+        "autoHeader": "manualSave"
+    },
+    "psi-header.license-text": [
+        "MIT License - http://www.opensource.org/licenses/MIT"
+    ],
+    "psi-header.templates": [
+        {
+            "language": "sqf",
+            "template": [
+                "File: <<filename>>",
+                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Date: <<filecreated('YYYY-MM-DD')>>",
+                "Last Update:",
+                "License: MIT License - http://www.opensource.org/licenses/MIT",
+                "",
+                "Description:",
+                "    No description added yet.",
+                "",
+                "Parameter(s):",
+                "    _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]",
+                "",
+                "Returns:",
+                "    Function reached the end [BOOL]"
+            ]
+        },
+        {
+            "language": "ext",
+            "template": [
+                "File: <<filename>>",
+                "Author: KP Liberation Dev Team - https://github.com/KillahPotatoes",
+                "Date: <<filecreated('YYYY-MM-DD')>>",
+                "Last Update:",
+                "License: MIT License - http://www.opensource.org/licenses/MIT",
+                "",
+                "Description:",
+                "    No description added yet."
+            ]
+        }
+    ],
+    "todo-tree.general.statusBar": "tags",
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.tree.flat": true
+}

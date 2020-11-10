@@ -1,54 +1,53 @@
-_grp = _this select 0;
-_infantry = false;
+params [
+    ["_grp", grpNull, [grpNull]]
+];
 
-if ( count _this == 2 ) then {
-	_infantry = true;
+if (isNull _grp) exitWith {};
+if (isNil "reset_battlegroups_ai") then {reset_battlegroups_ai = false};
+
+sleep (5 + (random 5));
+
+private _objPos = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
+
+[_objPos] remoteExec ["remote_call_incoming"];
+
+private _startpos = getPos (leader _grp);
+
+private _waypoint = [];
+while {((getPos (leader _grp)) distance _startpos) < 100} do {
+
+    while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
+    {_x doFollow leader _grp} forEach units _grp;
+
+    _startpos = getPos (leader _grp);
+
+    _waypoint = _grp addWaypoint [_objPos, 100];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointSpeed "NORMAL";
+    _waypoint setWaypointBehaviour "AWARE";
+    _waypoint setWaypointCombatMode "YELLOW";
+    _waypoint setWaypointCompletionRadius 30;
+
+    _waypoint = _grp addWaypoint [_objPos, 100];
+    _waypoint setWaypointType "SAD";
+    _waypoint = _grp addWaypoint [_objPos, 100];
+    _waypoint setWaypointType "SAD";
+    _waypoint = _grp addWaypoint [_objPos, 100];
+    _waypoint setWaypointType "SAD";
+    _waypoint = _grp addWaypoint [_objPos, 100];
+    _waypoint setWaypointType "CYCLE";
+
+    sleep 90;
 };
 
-if (isNil "reset_battlegroups_ai" ) then { reset_battlegroups_ai = false };
+waitUntil {
+    sleep 5;
+    (((units _grp) select {alive _x}) isEqualTo []) || reset_battlegroups_ai
+};
 
-sleep (3 + (random 3));
+sleep (5 + (random 5));
+reset_battlegroups_ai = false;
 
-while { ( count units _grp != 0 ) && ( GRLIB_endgame == 0 ) } do {
-
-	sleep (5 + (random 5));
-
-	private _objectivepos = ([getpos (leader _grp)] call F_getNearestBluforObjective) select 0;
-
-	[_objectivepos] remoteExec ["remote_call_incoming"];
-
-	private _startpos = getpos (leader _grp);
-
-	while { ((getpos (leader _grp)) distance _startpos) < 100 } do {
-
-		while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-		{_x doFollow leader _grp} foreach units _grp;
-
-		_startpos = getpos (leader _grp);
-
-		private _waypoint = _grp addWaypoint [_objectivepos, 100];
-		_waypoint setWaypointType "MOVE";
-		_waypoint setWaypointSpeed "NORMAL";
-		_waypoint setWaypointBehaviour "SAFE";
-		_waypoint setWaypointCombatMode "YELLOW";
-		_waypoint setWaypointCompletionRadius 30;
-
-		_waypoint = _grp addWaypoint [_objectivepos, 100];
-		_waypoint setWaypointType "SAD";
-		_waypoint = _grp addWaypoint [_objectivepos, 100];
-		_waypoint setWaypointType "SAD";
-		_waypoint = _grp addWaypoint [_objectivepos, 100];
-		_waypoint setWaypointType "SAD";
-		_waypoint = _grp addWaypoint [_objectivepos, 100];
-		_waypoint setWaypointType "CYCLE";
-
-		sleep 180;
-	};
-
-	waitUntil {
-		sleep 5;
-		( { alive _x } count (units _grp) == 0) || reset_battlegroups_ai;
-	};
-	sleep (5 + (random 5));
-	reset_battlegroups_ai = false;
+if (!((units _grp) isEqualTo []) && (GRLIB_endgame == 0)) then {
+    [_grp] spawn battlegroup_ai;
 };
