@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.96.8 (TBD)
+* Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: Ability to carry ressource crates.
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Splitted the config file in seperate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
