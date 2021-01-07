@@ -112,7 +112,7 @@ You can play every map without any mods (only the maps themself) if you set the 
     * [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
     * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
 * Lingor
-    * [Lingor](https://steamcommunity.com/workshop/filedetails/?id=718649903)
+    * [Lingor/Dingor Island](https://steamcommunity.com/workshop/filedetails/?id=718649903)
     * [CBA A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
     * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184)
     * [Unsung](https://steamcommunity.com/workshop/filedetails/?id=943001311)
