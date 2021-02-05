@@ -23,6 +23,8 @@ KP_liberation_guerilla_units = [
 
 // Armed vehicles
 KP_liberation_guerilla_vehicles = [
+    "C_Van_02_transport_F",
+    "C_IDAP_Truck_02_transport_F",
     "CUP_I_Datsun_PK_Random",
     "CUP_I_Datsun_PK_Random",
     "CUP_I_Datsun_PK_Random",
