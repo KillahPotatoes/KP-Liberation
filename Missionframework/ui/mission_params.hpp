@@ -27,7 +27,7 @@ class Params {
         title = $STR_PARAMS_DIFFICULTY;
         values[] = {0, 1, 2, 3, 4, 5, 6, 7};
         texts[] = {$STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8};
-        default = 2;
+        default = 5;
     };
     class Aggressivity {
         title = $STR_AGGRESSIVITY_PARAM;
@@ -45,7 +45,7 @@ class Params {
         title = $STR_PARAMS_CIVILIANS;
         values[] = {0, 1, 2, 3};
         texts[] = {$STR_PARAMS_CIVILIANS1, $STR_PARAMS_CIVILIANS2, $STR_PARAMS_CIVILIANS3, $STR_PARAMS_CIVILIANS4};
-        default = 2;
+        default = 3;
     };
     class FirstFob {
         title = $STR_PARAMS_FIRSTFOB;
@@ -87,13 +87,13 @@ class Params {
         title = $STR_PARAMS_DAYDURATION;
         values[] = {8, 6, 4, 3, 2, 1};
         texts[] = {"3","4","6","8","12","24"};
-        default = 4;
+        default = 1;
     };
     class ShorterNights {
         title = $STR_SHORTER_NIGHTS_PARAM;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 1;
     };
     class Weather {
         title = $STR_WEATHER_PARAM;
@@ -111,7 +111,7 @@ class Params {
         title = $STR_PARAMS_RESOURCESMULTIPLIER;
         values[] = {0, 1, 2, 3, 4, 5, 6, 7};
         texts[] = {"x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3"};
-        default = 3;
+        default = 7;
     };
     class ArsenalType {
         title = $STR_PARAMS_ARSENAL;
@@ -165,7 +165,7 @@ class Params {
         title = $STR_A3_RequiredTrait;
         values[] = {0, 1};
         texts[] = {$STR_A3_None, $STR_A3_Medic};
-        default = 1;
+        default = 0;
     };
     class ReviveMedicSpeedMultiplier {
         title = $STR_A3_RequiredTrait_MedicSpeedMultiplier;
@@ -177,7 +177,7 @@ class Params {
         title = $STR_A3_RequiredItems;
         values[] = {0, 1, 2};
         texts[] = {$STR_A3_None, $STR_A3_Medikit, $STR_A3_FirstAidKitOrMedikit};
-        default = 1;
+        default = 0;
     };
     class UnconsciousStateMode {
         title = $STR_A3_IncapacitationMode;
@@ -243,7 +243,7 @@ class Params {
         title = $STR_PARAM_RESPAWN_COOLDOWN;
         values[] = {0, 300, 600, 900, 1200, 1800, 3600};
         texts[] = {$STR_PARAMS_DISABLED, 5, 10, 15, 20, 30, 60};
-        default = 600;
+        default = 0;
     };
     class MobileArsenal {
         title = $STR_PARAMS_MOBILEARSENAL;
@@ -273,7 +273,7 @@ class Params {
         title = $STR_HALO_PARAM;
         values[] = {1, 5, 10, 15, 20, 30, 0};
         texts[] = {$STR_HALO_PARAM1, $STR_HALO_PARAM2, $STR_HALO_PARAM3, $STR_HALO_PARAM4, $STR_HALO_PARAM5, $STR_HALO_PARAM6, $STR_PARAMS_DISABLED};
-        default = 5;
+        default = 1;
     };
     class ClearCargo {
         title = $STR_PARAM_CLEAR_CARGO;
@@ -285,7 +285,7 @@ class Params {
         title = $STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE;
         values[] = {0, 25, 50, 75, 100};
         text[] = {$STR_PARAMS_DISABLED, "25%", "50%", "75%", "100%"};
-        default = 50;
+        default = 0;
     };
     class DelayDespawnMax {
         title = $STR_PARAM_DELAY_DESPAWN_MAX;
@@ -309,7 +309,7 @@ class Params {
         title = $STR_PARAM_ZEUSADDENEMIES;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 0;
+        default = 1;
     };
     class HighCommand {
         title = $STR_PARAM_HIGHCOMMAND;
@@ -321,13 +321,13 @@ class Params {
         title = $STR_PARAM_SUPPMOD;
         values[] = {0, 1, 2};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAM_SUPPMOD_CMDRANDWHITELIST, $STR_PARAM_SUPPMOD_EVERYONE};
-        default = 1;
+        default = 2;
     };
     class Tutorial {
         title = $STR_PARAM_TUTORIAL;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class Spacer3 {
         title = "";
@@ -351,13 +351,13 @@ class Params {
         title = $STR_CLEANUP_PARAM;
         values[] = {0, 1, 2, 4};
         texts[] = {$STR_PARAMS_DISABLED, $STR_CLEANUP_PARAM1, $STR_CLEANUP_PARAM2, $STR_CLEANUP_PARAM3};
-        default = 2;
+        default = 1;
     };
     class Introduction {
         title = $STR_PARAMS_INTRO;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class DeploymentCinematic {
         title = $STR_PARAMS_DEPLOYMENTCAMERA;
@@ -375,7 +375,7 @@ class Params {
         title = $STR_RESTART_PARAM;
         values[] = {0, 1, 2, 3, 4, 5, 6};
         texts[] = {$STR_PARAMS_DISABLED, "1", "2", "3", "4", "5", "6"};
-        default = 0;
+        default = 6;
     };
     class WipeSave1 {
         title = $STR_WIPE_TITLE;
@@ -411,25 +411,25 @@ class Params {
         title = $STR_PARAMS_DEBUG_CIVINFO;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class DebugCivRep {
         title = $STR_PARAMS_DEBUG_CIVREP;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class DebugHighCommand {
         title = $STR_PARAM_DEBUG_HIGHCOMMAND;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class DebugKill {
         title = $STR_PARAMS_DEBUG_KILL;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class DebugLogistic {
         title = $STR_PARAMS_DEBUG_LOGISTIC;
@@ -447,7 +447,7 @@ class Params {
         title = $STR_PARAMS_DEBUG_SAVE;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class DebugSectorSpawn {
         title = $STR_PARAMS_DEBUG_SECTORSPAWN;

@@ -39,6 +39,8 @@ switch (KP_liberation_preset_blufor) do {
     case 28: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_wdl.sqf";};
     case 29: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\sfp_des.sqf";};
     case 30: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\enoch.sqf";};
+    case 31: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod_cup.sqf";};
+    case 32: {[] call compileFinal preprocessFileLineNumbers "presets\blufor\bwmod_cup_fir.sqf";}; 	
     default  {[] call compileFinal preprocessFileLineNumbers "presets\blufor\custom.sqf";};
 };
 
@@ -86,17 +88,18 @@ switch (KP_liberation_preset_civilians) do {
     case  5: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\unsung.sqf";};
     case  6: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\CUP_TakiCivs.sqf";};
     case  7: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\CUP_ChernoCivs.sqf";};
+    case  8: {[] call compileFinal preprocessFileLineNumbers "presets\civilians\cup_fir.sqf";};
     default  {[] call compileFinal preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
-    [blufor_squad_inf_light,200,0,0],
-    [blufor_squad_inf,300,0,0],
-    [blufor_squad_at,200,250,0],
-    [blufor_squad_aa,200,250,0],
-    [blufor_squad_recon,250,0,0],
-    [blufor_squad_para,200,0,0]
+    [blufor_squad_inf_light,500,500,0],
+    [blufor_squad_inf,600,600,0],
+    [blufor_squad_at,800,800,0],
+    [blufor_squad_aa,1000,1000,0],
+    [blufor_squad_recon,1250,200,0],
+    [blufor_squad_para,1250,100,0]
 ];
 
 // Squad names for build menu
