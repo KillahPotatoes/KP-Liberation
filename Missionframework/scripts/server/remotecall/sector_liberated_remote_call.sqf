@@ -1,5 +1,7 @@
 params ["_liberated_sector"];
 
+if (isServer) then { [] spawn gain_resources; };
+
 private _combat_readiness_increase = 0;
 switch (true) do {
     case (_liberated_sector in sectors_bigtown):    {_combat_readiness_increase = floor (random 10) * GRLIB_difficulty_modifier;};
