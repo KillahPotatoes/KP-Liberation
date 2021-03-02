@@ -92,7 +92,7 @@ class liberation_build {
     class BuildTransportVehicleImage: BuildTypeImage {
         idc = 1035;
         x = (0.427 * safezoneW + safezoneX);
-        text = "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa";
+        text = "\A3\ui_f\data\GUI\Cfg\Ranks\private_gs.paa";
     };
     class BuildTransportVehicleButton: BuildTypeButton{
         idc = 103;
@@ -103,7 +103,7 @@ class liberation_build {
     class BuildCombatVehicleImage: BuildTypeImage {
         idc = 1045;
         x = (0.452 * safezoneW + safezoneX);
-        text = "\A3\ui_f\data\map\vehicleicons\iconTank_ca.paa";
+        text = "\A3\ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa";
     };
     class BuildCombatVehicleButton: BuildTypeButton{
         idc = 104;
@@ -114,7 +114,7 @@ class liberation_build {
     class BuildAerialImage: BuildTypeImage {
         idc = 1055;
         x = (0.477 * safezoneW + safezoneX);
-        text = "\A3\ui_f\data\map\vehicleicons\iconHelicopter_ca.paa";
+        text = "\A3\ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
     };
     class BuildAerialButton: BuildTypeButton {
         idc = 105;
@@ -125,7 +125,7 @@ class liberation_build {
     class BuildDefenceImage: BuildTypeImage {
         idc = 11065;
         x = (0.502 * safezoneW + safezoneX);
-        text = "\A3\ui_f\data\map\vehicleicons\iconStaticCannon_ca.paa";
+        text = "\A3\ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
     };
     class BuildDefenceButton: BuildTypeButton{
         idc = 1106;
