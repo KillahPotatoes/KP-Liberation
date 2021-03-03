@@ -261,7 +261,7 @@ class Params {
         title = $STR_PARAMS_AILOGISTICS;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 0;
+        default = 1;
     };
     class CR_Building {
         title = $STR_PARAM_CR_BUILDING;
