@@ -1,6 +1,9 @@
 /*
     Needed Mods:
-    - None
+    - 3CB Factions
+	- RHS AFRF
+	- RHS GREF
+	- RHS USAF
 
     Optional Mods:
     - None
