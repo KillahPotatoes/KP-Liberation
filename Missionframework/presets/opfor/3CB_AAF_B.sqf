@@ -61,7 +61,7 @@ militia_squad = [
 militia_vehicles = [
     "UK3CB_AAF_B_LR_M2",                                                 // Land Rover M2
     "UK3CB_AAF_B_LR_M2",                                                 // Land Rover M2
-    "UK3CB_AAF_B_M1025_M2"                                              // M1025 HMMWV M2
+    "UK3CB_AAF_B_M1025_M2",                                              // M1025 HMMWV M2
     "UK3CB_AAF_B_M1025_M2"                                               // M1025 HMMWV M2
 ];
 
@@ -73,7 +73,7 @@ opfor_vehicles = [
     "UK3CB_AAF_B_LAV25",                                                // LAV-25
     "UK3CB_AAF_B_AAV",                                                  // AAV-7
     "UK3CB_AAF_B_MTVR_ZU23",                                            // MTVR ZU23
-    "UK3CB_AAF_B_M60A3"                                                // M60A3 Patton
+    "UK3CB_AAF_B_M60A3",                                                // M60A3 Patton
     "UK3CB_AAF_B_M1A1"                                                  // M1A1 Abrams
 ];
 
