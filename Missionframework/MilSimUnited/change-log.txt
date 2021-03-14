@@ -1,0 +1,10 @@
+
+
+
+14.03.2021
+\MilSimUnited\change-log.txt
+\MilSimUnited\MilSimUnited.txt: Datei zu Deusits Logistik-Anpassung ergänzt.
+\MilSimUnited\snippets.sqf: "ACE carryable" Funktionen und "Battelgroup Spawn zur Strafe" hierher gebackupt
+\init.sqf: boxes carryable auf Klasse; KI-Unit-Anpassungen entfernt(Hubers Test-Companions)
+\initPlayerServer.sqf: Aus KV13 Templates, damit der Zeus immer ordentlich assigned wird.
+\initServer.sqf: Verlust ganz minimal erhöht; Straf-Battlegroup bei Null Resourcen entfernt
