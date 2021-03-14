@@ -66,19 +66,25 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 	[_vehicle,3] call ace_cargo_fnc_setSpace;
 	["ACE_Wheel", _vehicle] call ace_cargo_fnc_addCargoItem;
 	["ACE_Track", _vehicle] call ace_cargo_fnc_addCargoItem;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable; 
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable; 
 	_vehicle setVariable ["ACE_isRepairFacility",1];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["B_CargoNet_01_ammo_F", "InitPost", {
     params ["_vehicle"];
 	[_vehicle,3] call ace_cargo_fnc_setSize;
-	[_vehicle, 1200] call ace_rearm_fnc_makeSource
+	[_vehicle, 1200] call ace_rearm_fnc_makeSource;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["CargoNet_01_barrels_F", "InitPost", {
     params ["_vehicle"];
 	[_vehicle,3] call ace_cargo_fnc_setSize;
     [_vehicle, 1200] call ace_refuel_fnc_makeSource;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable;
+	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["RHS_MELB_MH6M", "InitPost", {
@@ -190,114 +196,6 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 		_damage = _damage * 1.25;
 		_damage;
 	}];
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-
-["B_soldier_LAT_F", "InitPost", {
-	params ["_vehicle"];
-	_vehicle setSpeaker "NoVoice";
-	_vehicle setUnitTrait ["Medic",true];
-	_vehicle setUnitTrait ["Engineer",true];
-	_vehicle setUnitTrait ["explosiveSpecialist",true];
-	_vehicle setVariable ["ACE_medical_medicClass", 1];
-	_vehicle setVariable ["ACE_isEngineer", 1];
-	_vehicle setUnitAbility 2;
-	removeAllWeapons _vehicle;
-	removeAllItems _vehicle;
-	removeAllAssignedItems _vehicle;
-	removeUniform _vehicle;
-	removeVest _vehicle;
-	removeBackpack _vehicle;
-	removeHeadgear _vehicle;
-	removeGoggles _vehicle;
-	_vehicle forceAddUniform "U_O_R_Gorka_01_F";
-	_vehicle addVest "V_CarrierRigKBT_01_light_Olive_F";
-	_vehicle addBackpack "B_AssaultPack_rgr";
-	_vehicle addWeapon "rhs_weap_ak105_zenitco01_b33";
-	_vehicle addPrimaryWeaponItem "rhs_acc_dtk";
-	_vehicle addPrimaryWeaponItem "rhsusf_acc_su230";
-	_vehicle addPrimaryWeaponItem "30Rnd_545x39_Mag_Tracer_F";
-	_vehicle addWeapon "launch_NLAW_F";
-	for "_i" from 1 to 4 do {_vehicle addItemToUniform "ACE_tourniquet";};
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_splint";};
-	_vehicle addItemToUniform "ACE_morphine";
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_epinephrine";};
-	_vehicle addItemToUniform "ACE_MapTools";
-	_vehicle addItemToUniform "ACE_microDAGR";
-	_vehicle addItemToUniform "ACE_EarPlugs";
-	for "_i" from 1 to 16 do {_vehicle addItemToUniform "ACE_packingBandage";};
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_fieldDressing";};
-	_vehicle addItemToUniform "ACE_RangeCard";
-	for "_i" from 1 to 4 do {_vehicle addItemToUniform "ACE_elasticBandage";};
-	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 5 do {_vehicle addItemToVest "30Rnd_545x39_Mag_Tracer_F";};
-	for "_i" from 1 to 3 do {_vehicle addItemToBackpack "ACE_salineIV";};
-	_vehicle addItemToBackpack "ACE_surgicalKit";
-	_vehicle addItemToBackpack "ACE_Canteen";
-	_vehicle addItemToBackpack "ACE_MRE_ChickenTikkaMasala";
-	_vehicle addItemToBackpack "rhs_acc_dtk4short";
-	_vehicle addItemToBackpack "rhs_mag_m67";
-	for "_i" from 1 to 3 do {_vehicle addItemToBackpack "SmokeShellOrange";};
-	_vehicle addHeadgear "rhsusf_opscore_fg_pelt";
-	_vehicle addGoggles "dvk_tacg_o_shem_altcsat";
-	_vehicle linkItem "ItemMap";
-	_vehicle linkItem "ItemCompass";
-	_vehicle linkItem "TFAR_anprc152";
-	_vehicle linkItem "NVGoggles_OPFOR";
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-
-["B_soldier_AA_F", "InitPost", {
-    params ["_vehicle"];
-	_vehicle setSpeaker "NoVoice";
-	_vehicle setUnitTrait ["Medic",true];
-	_vehicle setUnitTrait ["Engineer",true];
-	_vehicle setUnitTrait ["explosiveSpecialist",true];
-	_vehicle setVariable ["ACE_medical_medicClass", 1];
-	_vehicle setVariable ["ACE_isEngineer", 1];
-	_vehicle setUnitAbility 2;
-	removeAllWeapons _vehicle;
-	removeAllItems _vehicle;
-	removeAllAssignedItems _vehicle;
-	removeUniform _vehicle;
-	removeVest _vehicle;
-	removeBackpack _vehicle;
-	removeHeadgear _vehicle;
-	removeGoggles _vehicle;
-	_vehicle forceAddUniform "U_O_R_Gorka_01_F";
-	_vehicle addVest "V_CarrierRigKBT_01_light_Olive_F";
-	_vehicle addBackpack "B_AssaultPack_rgr";
-	_vehicle addWeapon "rhs_weap_ak105_zenitco01_b33";
-	_vehicle addPrimaryWeaponItem "rhs_acc_dtk";
-	_vehicle addPrimaryWeaponItem "rhsusf_acc_su230";
-	_vehicle addPrimaryWeaponItem "30Rnd_545x39_Mag_Tracer_F";
-	_vehicle addWeapon "rhs_weap_fim92";
-	_vehicle addSecondaryWeaponItem "rhs_fim92_mag";
-	for "_i" from 1 to 4 do {_vehicle addItemToUniform "ACE_tourniquet";};
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_splint";};
-	_vehicle addItemToUniform "ACE_morphine";
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_epinephrine";};
-	_vehicle addItemToUniform "ACE_MapTools";
-	_vehicle addItemToUniform "ACE_microDAGR";
-	_vehicle addItemToUniform "ACE_EarPlugs";
-	for "_i" from 1 to 16 do {_vehicle addItemToUniform "ACE_packingBandage";};
-	for "_i" from 1 to 2 do {_vehicle addItemToUniform "ACE_fieldDressing";};
-	_vehicle addItemToUniform "ACE_RangeCard";
-	for "_i" from 1 to 4 do {_vehicle addItemToUniform "ACE_elasticBandage";};
-	for "_i" from 1 to 5 do {_vehicle addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 5 do {_vehicle addItemToVest "30Rnd_545x39_Mag_Tracer_F";};
-	for "_i" from 1 to 3 do {_vehicle addItemToBackpack "ACE_salineIV";};
-	_vehicle addItemToBackpack "ACE_surgicalKit";
-	_vehicle addItemToBackpack "ACE_Canteen";
-	_vehicle addItemToBackpack "ACE_MRE_ChickenTikkaMasala";
-	_vehicle addItemToBackpack "rhs_acc_dtk4short";
-	_vehicle addItemToBackpack "rhs_mag_m67";
-	for "_i" from 1 to 3 do {_vehicle addItemToBackpack "SmokeShellOrange";};
-	_vehicle addHeadgear "rhsusf_opscore_fg_pelt";
-	_vehicle addGoggles "dvk_tacg_o_shem_altcsat";
-	_vehicle linkItem "ItemMap";
-	_vehicle linkItem "ItemCompass";
-	_vehicle linkItem "TFAR_anprc152";
-	_vehicle linkItem "NVGoggles_OPFOR";
-
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["I_LT_01_cannon_F", "InitPost", {
