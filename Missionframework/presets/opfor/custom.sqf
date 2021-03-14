@@ -31,7 +31,7 @@ opfor_mrap_armed = "LOP_ISTS_OPF_Landrover_M2";                                 
 opfor_transport_helo = "LOP_SYR_KAMAZ_Repair";                   // Mi-290 Taru (Bench)
 opfor_transport_truck = "LOP_SYR_KAMAZ_Transport";                         // Tempest Transport (Covered)
 opfor_ammobox_transport = "LOP_TAK_Civ_Ural";                     // Tempest Transport (Open) -> Has to be able to transport resource crates!
-opfor_fuel_truck = LOP_SYR_KAMAZ_Fuel";                                 // Tempest Fuel
+opfor_fuel_truck = "LOP_SYR_KAMAZ_Fuel";                                 // Tempest Fuel
 opfor_ammo_truck = "LOP_SYR_KAMAZ_Ammo";                                 // Tempest Ammo
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             // Taru Fuel Pod
 opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             // Taru Ammo Pod
@@ -114,7 +114,7 @@ opfor_battlegroup_vehicles = [
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-     "LOP_ISTS_OPF_Landrover_M2",                                                  // Ifrit (HMG)
+    "LOP_ISTS_OPF_Landrover_M2",                                                  // Ifrit (HMG)
     "LOP_ISTS_OPF_Landrover_M2",                                                  // Ifrit (HMG)
     "LOP_ISTS_OPF_Landrover_SPG9",
     "LOP_TKA_Ural_open",                                            // Qilin (AT)
@@ -132,11 +132,7 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
-    
-];
+opfor_choppers = [];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [
-   
-];
+opfor_air = [];
