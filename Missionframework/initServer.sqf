@@ -9,9 +9,9 @@ hs_MPhint = { hint _this };
 
 lose_resources = compileFinal "
 	
-	_price_s = 20;
-	_price_a = 12;
-	_price_f = 20;
+	_price_s = 25;
+	_price_a = 13;
+	_price_f = 25;
 	
 	_nearfob = [] call KPLIB_fnc_getNearestFob;
 	
@@ -199,12 +199,18 @@ if (isServer) then {
 		
 		sleep 300;
 		
-		if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
-			['', false] spawn spawn_battlegroup;
-		};
-		
 	};
 };
+
+
+
+
+/* Battelgroup Spawn zur Strafe
+if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
+	['', false] spawn spawn_battlegroup;
+};
+*/
+
 
 
 
