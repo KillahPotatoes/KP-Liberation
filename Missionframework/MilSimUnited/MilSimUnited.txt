@@ -61,6 +61,10 @@ functions\curator\fn_initCuratorHandlers.sqf: Komplett auskommentieren
 
 
 
+scripts/server/remotecall/add_logiTruck_remote_call.sqf: Resourcen-Produktion dauert länger
+
+
+
 
 
 Regeln / Rules
