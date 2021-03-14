@@ -78,7 +78,6 @@ light_vehicles = [
     ["rhsusf_m113d_usarmy",500,100,500],
     ["I_LT_01_cannon_F",550,500,300],
     ["I_LT_01_AA_F",550,900,300]
-
 ];
 
 
