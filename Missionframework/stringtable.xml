@@ -46,7 +46,7 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>KP Liberation v0.96.7a MSU</Original>
+            <Original>CTI 34 KP Liberation v0.96.7a</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.7a</Original>
@@ -1809,60 +1809,60 @@
             <Czech>Pěchota</Czech>
         </Key>
         <Key ID="STR_BUILD2">
-            <Original>Tier 1</Original>
-            <French>Tier 1</French>
-            <German>Tier 1</German>
-            <Spanish>Tier 1</Spanish>
-            <Russian>Tier 1</Russian>
-            <Italian>Tier 1</Italian>
-            <Chinesesimp>Tier 1</Chinesesimp>
-            <Chinese>Tier 1</Chinese>
-            <Turkish>Tier 1</Turkish>
-            <Portuguese>Tier 1</Portuguese>
-            <Korean>Tier 1</Korean>
-            <Czech>Tier 1</Czech>
+            <Original>Light vehicles</Original>
+            <French>Véhicules légers</French>
+            <German>Leichte Fahrzeuge</German>
+            <Spanish>Vehículos ligeros</Spanish>
+            <Russian>Легкая техника</Russian>
+            <Italian>Veicoli Leggeri</Italian>
+            <Chinesesimp>轻型载具</Chinesesimp>
+            <Chinese>輕型載具</Chinese>
+            <Turkish>Hafif araçlar</Turkish>
+            <Portuguese>Veículos leves</Portuguese>
+            <Korean>전투 차량</Korean>
+            <Czech>Lehká vozidla</Czech>
         </Key>
         <Key ID="STR_BUILD3">
-            <Original>Tier 2</Original>
-            <French>Tier 2</French>
-            <German>Tier 2</German>
-            <Spanish>Tier 2</Spanish>
-            <Russian>Tier 2</Russian>
-            <Italian>Tier 2</Italian>
-            <Chinesesimp>Tier 2</Chinesesimp>
-            <Chinese>Tier 2</Chinese>
-            <Turkish>Tier 2</Turkish>
-            <Portuguese>Tier 2</Portuguese>
-            <Korean>Tier 2</Korean>
-            <Czech>Tier 2</Czech>
+            <Original>Armored vehicles</Original>
+            <French>Vehicules blindés</French>
+            <German>Gepanzerte Fahrzeuge</German>
+            <Spanish>Vehículos blindados</Spanish>
+            <Russian>Бронированная техника</Russian>
+            <Italian>Veicoli Blindati</Italian>
+            <Chinesesimp>装甲载具</Chinesesimp>
+            <Chinese>裝甲載具</Chinese>
+            <Turkish>Zırhlı araçlar</Turkish>
+            <Portuguese>Veículos blindados</Portuguese>
+            <Korean>장갑 차량</Korean>
+            <Czech>Obrněná vozidla</Czech>
         </Key>
         <Key ID="STR_BUILD4">
-            <Original>Tier 3</Original>
-            <French>Tier 3</French>
-            <German>Tier 3</German>
-            <Spanish>Tier 3</Spanish>
-            <Russian>Tier 3</Russian>
-            <Italian>Tier 3</Italian>
-            <Chinesesimp>Tier 3</Chinesesimp>
-            <Chinese>Tier 3</Chinese>
-            <Turkish>Tier 3</Turkish>
-            <Portuguese>Tier 3</Portuguese>
-            <Korean>Tier 3</Korean>
-            <Czech>Tier 3</Czech>
+            <Original>Air vehicles</Original>
+            <French>Véhicules aériens</French>
+            <German>Luftfahrzeuge</German>
+            <Spanish>Vehículos aéreos</Spanish>
+            <Russian>Авиационная техника</Russian>
+            <Italian>Veicoli Aerei</Italian>
+            <Chinesesimp>空中载具</Chinesesimp>
+            <Chinese>空中載具</Chinese>
+            <Turkish>Hava araçları</Turkish>
+            <Portuguese>Veículos aéreos</Portuguese>
+            <Korean>항공기</Korean>
+            <Czech>Letectvo</Czech>
         </Key>
         <Key ID="STR_BUILD5">
-            <Original>Tier 4</Original>
-            <French>Tier 4</French>
-            <German>Tier 4</German>
-            <Spanish>Tier 4</Spanish>
-            <Russian>Tier 4</Russian>
-            <Italian>Tier 4</Italian>
-            <Chinesesimp>Tier 4</Chinesesimp>
-            <Chinese>Tier 4</Chinese>
-            <Turkish>Tier 4</Turkish>
-            <Portuguese>Tier 4</Portuguese>
-            <Korean>Tier 4</Korean>
-            <Czech>Tier 4</Czech>
+            <Original>Static defenses</Original>
+            <French>Defenses statiques</French>
+            <German>Statische Verteidigung</German>
+            <Spanish>Defensas estáticas</Spanish>
+            <Russian>Стационары</Russian>
+            <Italian>Difese statiche</Italian>
+            <Chinesesimp>固定防御</Chinesesimp>
+            <Chinese>固定式防禦</Chinese>
+            <Turkish>Statik savunmalar</Turkish>
+            <Portuguese>Defesas estáticas</Portuguese>
+            <Korean>방어 무기</Korean>
+            <Czech>Statické zbraně</Czech>
         </Key>
         <Key ID="STR_BUILD6">
             <Original>Buildings</Original>
@@ -2281,46 +2281,46 @@
             <Czech>MANAŽER PRAVOMOCÍ</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_LIGHT">
-            <Original>Tier 1</Original>
-            <French>Tier 1</French>
-            <German>Tier 1</German>
-            <Spanish>Tier 1</Spanish>
-            <Russian>Tier 1</Russian>
-            <Italian>Tier 1</Italian>
-            <Chinesesimp>Tier 1</Chinesesimp>
-            <Chinese>Tier 1</Chinese>
-            <Turkish>Tier 1</Turkish>
-            <Portuguese>Tier 1</Portuguese>
-            <Korean>Tier 1</Korean>
-            <Czech>Tier 1</Czech>
+            <Original>Light vehicles</Original>
+            <French>Véhicules légers</French>
+            <German>Leichte Fahrzeuge</German>
+            <Spanish>Vehículos ligeros</Spanish>
+            <Russian>Лёгкая техника</Russian>
+            <Italian>Veicoli Leggeri</Italian>
+            <Chinesesimp>轻型载具</Chinesesimp>
+            <Chinese>輕型載具</Chinese>
+            <Turkish>Hafif araçlar</Turkish>
+            <Portuguese>Veículos leves</Portuguese>
+            <Korean>전투 차량</Korean>
+            <Czech>Lehká vozidla</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_ARMORED">
-            <Original>Tier 2</Original>
-            <French>Tier 2</French>
-            <German>Tier 2</German>
-            <Spanish>Tier 2</Spanish>
-            <Russian>Tier 2</Russian>
-            <Italian>Tier 2</Italian>
-            <Chinesesimp>Tier 2</Chinesesimp>
-            <Chinese>Tier 2</Chinese>
-            <Turkish>Tier 2</Turkish>
-            <Portuguese>Tier 2</Portuguese>
-            <Korean>Tier 2</Korean>
-            <Czech>Tier 2</Czech>
+            <Original>Armored vehicles</Original>
+            <French>Véhicules blindés</French>
+            <German>Gepanzerte Fahrzeuge</German>
+            <Spanish>Vehículos blindados</Spanish>
+            <Russian>Бронированная техника</Russian>
+            <Italian>veicoli Blindati</Italian>
+            <Chinesesimp>装甲载具</Chinesesimp>
+            <Chinese>裝甲載具</Chinese>
+            <Turkish>Zırhlı araçlar</Turkish>
+            <Portuguese>Veículos blindados</Portuguese>
+            <Korean>장갑 차량</Korean>
+            <Czech>Obrněná vozidla</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_AIR">
-            <Original>Tier 3</Original>
-            <French>Tier 3</French>
-            <German>Tier 3</German>
-            <Spanish>Tier 3</Spanish>
-            <Russian>Tier 3</Russian>
-            <Italian>Tier 3</Italian>
-            <Chinesesimp>Tier 3</Chinesesimp>
-            <Chinese>Tier 3</Chinese>
-            <Turkish>Tier 3</Turkish>
-            <Portuguese>Tier 3</Portuguese>
-            <Korean>Tier 3</Korean>
-            <Czech>Tier 3</Czech>
+            <Original>Air vehicles</Original>
+            <French>Véhicules aériens</French>
+            <German>Luftfahrzeuge</German>
+            <Spanish>Vehículos aéreos</Spanish>
+            <Russian>Авиация</Russian>
+            <Italian>Aerei</Italian>
+            <Chinesesimp>空中载具</Chinesesimp>
+            <Chinese>空中載具</Chinese>
+            <Turkish>Hava araçları</Turkish>
+            <Portuguese>Veículos aéreos</Portuguese>
+            <Korean>항공기</Korean>
+            <Czech>Letectvo</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_CONSTRUCTION">
             <Original>Construction</Original>
@@ -2393,46 +2393,46 @@
             <Czech>Nic</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_LIGHT">
-            <Original>Tier 1 whitelist</Original>
-            <French>Tier 1 whitelist</French>
-            <German>Tier 1 whitelist</German>
-            <Spanish>Tier 1 whitelist</Spanish>
-            <Russian>Tier 1 whitelist</Russian>
-            <Italian>Tier 1 whitelist</Italian>
-            <Chinesesimp>Tier 1 whitelist</Chinesesimp>
-            <Chinese>Tier 1 whitelist</Chinese>
-            <Turkish>Tier 1 whitelist</Turkish>
-            <Portuguese>Tier 1 whitelist</Portuguese>
-            <Korean>Tier 1 whitelist</Korean>
-            <Czech>Tier 1 whitelist</Czech>
+            <Original>Allows the player to operate light vehicles as driver and gunner.</Original>
+            <French>Autorise le joueur à utiliser les véhicules légers en tant que conducteur ou tireur.</French>
+            <German>Erlaubt es dem Spieler, leichte Fahrzeuge als Fahrer und Schütze zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos ligeros como conductor y artillero</Spanish>
+            <Russian>Позволяет игроку использовать легкую технику в качестве водителя или стрелка.</Russian>
+            <Italian>Permetti al giocatore di entrare nei veicoli leggeri come guidatore e artigliere</Italian>
+            <Chinesesimp>允许玩家进入轻型载具的驾驶和炮手位。</Chinesesimp>
+            <Chinese>允許玩家進入輕型載具的駕駛與砲手位置。</Chinese>
+            <Turkish>Oyuncunun hafif araçları sürücü veya taretçi olarak kullanmasına olanak verir.</Turkish>
+            <Portuguese>Permite ao jogador operar veículos leves como condutor e atirador.</Portuguese>
+            <Korean>플레이어가 전투 차량을 사용할 수 있는 권한를 허가 합니다.</Korean>
+            <Czech>Povolí hráči operovat s lehkými vozidly jako řidič nebo střelec.</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_ARMORED">
-            <Original>Tier 2 whitelist</Original>
-            <French>Tier 2 whitelist</French>
-            <German>Tier 2 whitelist</German>
-            <Spanish>Tier 2 whitelist</Spanish>
-            <Russian>Tier 2 whitelist</Russian>
-            <Italian>Tier 2 whitelist</Italian>
-            <Chinesesimp>Tier 2 whitelist</Chinesesimp>
-            <Chinese>Tier 2 whitelist</Chinese>
-            <Turkish>Tier 2 whitelist</Turkish>
-            <Portuguese>Tier 2 whitelist</Portuguese>
-            <Korean>Tier 2 whitelist</Korean>
-            <Czech>Tier 2 whitelist</Czech>
+            <Original>Allows the player to operate armored vehicles as driver, gunner and commander.</Original>
+            <French>Autorise le joueur à utiliser les véhicules blindés en tant que conducteur, tireur ou commandant.</French>
+            <German>Erlaubt es dem Spieler, gepanzerte Fahrzeuge als Fahrer, Schütze und Kommandant zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos blindados como conductor, artillero y comandante</Spanish>
+            <Russian>Позволяет игроку использовать бронированную технику в качестве водителя, стрелка или командира.</Russian>
+            <Italian>Permetti al giocatore di entrare nei veicoli blindati come guidatore e artigliere e comandante</Italian>
+            <Chinesesimp>允许玩家进入装甲载具的驾驶、炮手和车长位。</Chinesesimp>
+            <Chinese>允許玩家進入裝甲載具的駕駛、砲手、車長位置。</Chinese>
+            <Turkish>Oyuncunun zırhlı araçları sürücü, komutan veya  taretçi olarak kullanmasına olanak verir.</Turkish>
+            <Portuguese>Permite ao jogador operar veículos blindados como condutor, atirador e comandante.</Portuguese>
+            <Korean>플레이어가 장갑 차량을 사용할 수 있는 권한를 허가 합니다.</Korean>
+            <Czech>Povolí hráči operovat s obrněnými vozidly jako řidič, střelec a velitel.</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_AIR">
-            <Original>Tier 3 whitelist</Original>
-            <French>Tier 3 whitelist</French>
-            <German>Tier 3 whitelist</German>
-            <Spanish>Tier 3 whitelist</Spanish>
-            <Russian>Tier 3 whitelist</Russian>
-            <Italian>Tier 3 whitelist</Italian>
-            <Chinesesimp>Tier 3 whitelist</Chinesesimp>
-            <Chinese>Tier 3 whitelist</Chinese>
-            <Turkish>Tier 3 whitelist</Turkish>
-            <Portuguese>Tier 3 whitelist</Portuguese>
-            <Korean>Tier 3 whitelist</Korean>
-            <Czech>Tier 3 whitelist</Czech>
+            <Original>Allows the player to operate air vehicles as driver and gunner.</Original>
+            <French>Autorise le joueur à utiliser les véhicules aériens en tant que conducteur ou tireur.</French>
+            <German>Erlaubt es dem Spieler, Luftfahrzeuge als Pilot und Schütze zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos aéreos como conductor y artillero</Spanish>
+            <Russian>Позволяет игроку использовать авиацию в качестве пилота или стрелка.</Russian>
+            <Italian>Permetti al giocatore di entrare negli aerei come guidatore e artigliere</Italian>
+            <Chinesesimp>允许玩家进入空中载具的驾驶和炮手位。</Chinesesimp>
+            <Chinese>允許玩家進入空中載具的駕駛和砲手位置。</Chinese>
+            <Turkish>Oyuncunun bütün hava araçlarını pilot veya taretçi olarak kullanmasına olanak verir.</Turkish>
+            <Portuguese>Permite ao jogador operar veículos aéreos como piloto e atirador.</Portuguese>
+            <Korean>플레이어가 항공기를 사용할 수 있는 권한를 허가 합니다.</Korean>
+            <Czech>Povolí hráči operovat s letadly jako řidič a střelec.</Czech>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_CONSTRUCTION">
             <Original>Allows the player to use the BUILD menu.</Original>
@@ -2547,46 +2547,46 @@
             <Czech>Manažer pravomocí</Czech>
         </Key>
         <Key ID="STR_PERMISSION_NO_LIGHT">
-            <Original>Tier 1 whitelist required</Original>
-            <French>Tier 1 whitelist required</French>
-            <German>Tier 1 whitelist required</German>
-            <Spanish>Tier 1 whitelist required</Spanish>
-            <Russian>Tier 1 whitelist required</Russian>
-            <Italian>Tier 1 whitelist required</Italian>
-            <Chinesesimp>Tier 1 whitelist required</Chinesesimp>
-            <Chinese>Tier 1 whitelist required</Chinese>
-            <Turkish>Tier 1 whitelist required</Turkish>
-            <Portuguese>Tier 1 whitelist required</Portuguese>
-            <Korean>Tier 1 whitelist required</Korean>
-            <Czech>Tier 1 whitelist required</Czech>
+            <Original>You don't have permission from the commander to use light vehicles.</Original>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules légers.</French>
+            <German>Du hast keine Rechte zur Nutzung leichter Fahrzeuge.</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos ligeros</Spanish>
+            <Russian>У вас нет разрешения от командира использовать легкую технику.</Russian>
+            <Italian>Non hai il permesso di usare veicoli leggeri</Italian>
+            <Chinesesimp>指挥官没有给你使用轻型载具的权限。</Chinesesimp>
+            <Chinese>指揮官並沒有提供你輕型載具機組員權限。</Chinese>
+            <Turkish>Hafif araçları kullanmak için komutadan yetkiniz eksik.</Turkish>
+            <Portuguese>Você não tem permissão do comandante para utilizar veículos leves.</Portuguese>
+            <Korean>당신은 전투 차량을 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
+            <Czech>Nemáš pravomoc od Komandéra používat lehká vozidla.</Czech>
         </Key>
         <Key ID="STR_PERMISSION_NO_ARMOR">
-            <Original>Tier 2 whitelist required</Original>
-            <French>Tier 2 whitelist required</French>
-            <German>Tier 2 whitelist required</German>
-            <Spanish>Tier 2 whitelist required</Spanish>
-            <Russian>Tier 2 whitelist required</Russian>
-            <Italian>Tier 2 whitelist required</Italian>
-            <Chinesesimp>Tier 2 whitelist required</Chinesesimp>
-            <Chinese>Tier 2 whitelist required</Chinese>
-            <Turkish>Tier 2 whitelist required</Turkish>
-            <Portuguese>Tier 2 whitelist required</Portuguese>
-            <Korean>Tier 2 whitelist required</Korean>
-            <Czech>Tier 2 whitelist required</Czech>
+            <Original>You don't have permission from the commander to use armored vehicles.</Original>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules blindés.</French>
+            <German>Du hast keine Rechte zur Nutzung gepanzerter Fahrzeuge</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos blindados</Spanish>
+            <Russian>У вас нет разрешения от командира использовать бронированную технику.</Russian>
+            <Italian>Non hai il permesso di usare veicoli pesanti</Italian>
+            <Chinesesimp>指挥官没有给你使用装甲载具的权限。</Chinesesimp>
+            <Chinese>指揮官並沒有提供你裝甲載具機組員權限。</Chinese>
+            <Turkish>Zırhlı araçları kullanmak için komutadan yetkiniz eksik.</Turkish>
+            <Portuguese>Você não tem permissão do comandante para utilizar veículos blindados.</Portuguese>
+            <Korean>당신은 장갑 차량을 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
+            <Czech>Nemáš pravomoc od Komandéra používat obrněná vozidla.</Czech>
         </Key>
         <Key ID="STR_PERMISSION_NO_AIR">
-            <Original>Tier 3 whitelist required</Original>
-            <French>Tier 3 whitelist required</French>
-            <German>Tier 3 whitelist required</German>
-            <Spanish>Tier 3 whitelist required</Spanish>
-            <Russian>Tier 3 whitelist required</Russian>
-            <Italian>Tier 3 whitelist required</Italian>
-            <Chinesesimp>Tier 3 whitelist required</Chinesesimp>
-            <Chinese>Tier 3 whitelist required</Chinese>
-            <Turkish>Tier 3 whitelist required</Turkish>
-            <Portuguese>Tier 3 whitelist required</Portuguese>
-            <Korean>Tier 3 whitelist required</Korean>
-            <Czech>Tier 3 whitelist required</Czech>
+            <Original>You don't have permission from the commander to use air vehicles.</Original>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules aériens.</French>
+            <German>Du hast keine Rechte zur Nutzung von Luftfahrzeugen</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos aéreos</Spanish>
+            <Russian>У вас нет разрешения от командира использовать авиацию.</Russian>
+            <Italian>Non hai il permesso di usare veivoli</Italian>
+            <Chinesesimp>指挥官没有给你使用空中载具的权限。</Chinesesimp>
+            <Chinese>指揮官並沒有提供你空中載具機組員權限。</Chinese>
+            <Turkish>Hava araçlarını kullanmak için komutadan yetkiniz eksik.</Turkish>
+            <Portuguese>Você não tem permissão do comandante para utilizar veículos aéreos.</Portuguese>
+            <Korean>당신은 항공기를 사용할 수 있는 권한를 받지 못하였습니다.</Korean>
+            <Czech>Nemáš pravomoc od Komandéra používat letectvo.</Czech>
         </Key>
         <Key ID="STR_PERMISSION_WARNING">
             <Original>No permissions have been set. The commander must setup the permissions to allow player actions and vehicle usage. Alternatively, the permission system can be disabled from the mission options.</Original>
@@ -4774,18 +4774,18 @@
 
         <!-- English adaptations in v0.95, need translations. -->
         <Key ID="STR_MISSION_DESCRIPTION">
-            <Original>Open map, read rules!</Original>
-            <French>Ouvrez la carte, lisez les règles!</French>
-            <German>Karte öffnen, Regeln lesen!</German>
-            <Spanish>¡Abre el mapa, lee las reglas!</Spanish>
-            <Russian>Откройте карту, прочтите правила!</Russian>
-            <Italian>Apri mappa, leggi le regole!</Italian>
-            <Chinesesimp>打开地图，阅读规则！</Chinesesimp>
-            <Chinese>打開地圖，閱讀規則！</Chinese>
-            <Turkish>Haritayı açın, kuralları okuyun!</Turkish>
-            <Portuguese>Abra o mapa, leia as regras!</Portuguese>
-            <Korean>지도를 열고 규칙을 읽으십시오!</Korean>
-            <Czech>Otevřete mapu, přečtěte si pravidla!</Czech>
+            <Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
+            <French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
+            <German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+            <Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
+            <Russian>С помощью сил "свободы" и "демократии" вы должны освободить регион от угнетения OPFOR.</Russian>
+            <Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
+            <Chinesesimp>从敌人手中解放这个地区！战略是制胜关键！士兵们祝你们好运。</Chinesesimp>
+            <Chinese>從敵人手中解放此區域！戰略是致勝關鍵！士兵們，祝好運！</Chinese>
+            <Turkish>Bu bölgeyi düşman etkisinden kurtar! Strateji anahtardır! Bol şanslar askerler.</Turkish>
+            <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
+            <Korean>적의 수중에서 이 지역을 탈환하자! 전략이 승리의 관건이다! 병사들이여, 행운을 빈다.</Korean>
+            <Czech>Osvoboďte oblast od nepřátelského útisku. Strategie je klíčová! Hodně štěstí vojáci.</Czech>
         </Key>
         <Key ID="STR_TUTO_TITLE1">
             <Original>1. Introduction</Original>
