@@ -54,117 +54,98 @@ infantry_units = [
 ];
 
 light_vehicles = [
-["B_Boat_Transport_01_F",50,0,50],
-["I_C_Boat_Transport_02_F",100,0,100],
-["B_Boat_Armed_01_minigun_F",300,300,300],
-["rhsusf_mkvsoc",400,400,400],
-
-["rhsusf_m1151_usarmy_d",120,0,120],
-["BWA3_Eagle_Tropen",150,0,150],
-["rhs_tigr_3camo_msv",170,0,170],
-
-["rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy",100,0,100],
-["rhs_kamaz5350_open_msv",100,0,100],
-["RHS_Ural_MSV_01",100,0,100],
-["rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy",300,100,300],
-
-["rhsusf_M977A4_BKIT_M2_usarmy_d",400,100,800],
-
-["BWA3_Eagle_FLW100_Tropen",300,200,300],
-["rhsusf_m1151_m2_v2_usarmy_d",300,100,300],
-["rhs_tigr_sts_3camo_msv",300,100,300],
-["rhsusf_m1045_d",300,500,300],
-["rhsusf_M1230_M2_usarmy_d",400,150,400],
-["rhsusf_M1237_M2_usarmy_d",400,150,400],
-
-["BWA3_Dingo2_FLW100_MG3_Tropen",500,200,600],
-["BWA3_Dingo2_FLW200_GMW_Tropen",500,300,600],
-["BWA3_Dingo2_FLW200_M2_Tropen",500,300,600],
-
-["rhsusf_m113d_usarmy",500,100,500],
-
-["I_LT_01_cannon_F",550,500,300],
-["I_LT_01_AA_F",550,900,300]
+    ["B_Boat_Transport_01_F",50,0,50],
+    ["I_C_Boat_Transport_02_F",100,0,100],
+    ["B_Boat_Armed_01_minigun_F",300,300,300],
+    ["rhsusf_mkvsoc",400,400,400],
+    ["rhsusf_m1151_usarmy_d",120,0,120],
+    ["BWA3_Eagle_Tropen",150,0,150],
+    ["rhs_tigr_3camo_msv",170,0,170],
+    ["rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy",100,0,100],
+    ["rhs_kamaz5350_open_msv",100,0,100],
+    ["RHS_Ural_MSV_01",100,0,100],
+    ["rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy",300,100,300],
+    ["rhsusf_M977A4_BKIT_M2_usarmy_d",400,100,800],
+    ["BWA3_Eagle_FLW100_Tropen",300,200,300],
+    ["rhsusf_m1151_m2_v2_usarmy_d",300,100,300],
+    ["rhs_tigr_sts_3camo_msv",300,100,300],
+    ["rhsusf_m1045_d",300,500,300],
+    ["rhsusf_M1230_M2_usarmy_d",400,150,400],
+    ["rhsusf_M1237_M2_usarmy_d",400,150,400],
+    ["BWA3_Dingo2_FLW100_MG3_Tropen",500,200,600],
+    ["BWA3_Dingo2_FLW200_GMW_Tropen",500,300,600],
+    ["BWA3_Dingo2_FLW200_M2_Tropen",500,300,600],
+    ["rhsusf_m113d_usarmy",500,100,500],
+    ["I_LT_01_cannon_F",550,500,300],
+    ["I_LT_01_AA_F",550,900,300]
 
 ];
 
 
 heavy_vehicles = [
-["rhs_btr80a_msv",700,1000,800],
-["rhsusf_stryker_m1126_m2_wd",700,300,700],
-
-["BWA3_Puma_Tropen",1200,1500,1100],
-["RHS_M2A3",1200,1200,1100],
-[“rhs_bmp2d_msv”,1000,1500,1100],
-
-["rhs_zsu234_aa",1000,1100,1000],
-[“RHS_M6”,1200,1100,1100],
-
-["rhs_t90a_tv",2000,1800,1800],
-["BWA3_Leopard2_Tropen",2000,2000,2000],
-["rhsusf_m1a2sep1d_usarmy",2000,2000,2000],
-["rhs_t14_tv",2000,2100,2000],
-
-["RHS_M119_WD",4000,4000,2000],
-["rhs_D30_msv",4000,4500,2000]
-
+    ["rhs_btr80a_msv",700,1000,800],
+    ["rhsusf_stryker_m1126_m2_wd",700,300,700],
+    ["BWA3_Puma_Tropen",1200,1500,1100],
+    ["RHS_M2A3",1200,1200,1100],
+    [“rhs_bmp2d_msv”,1000,1500,1100],
+    ["rhs_zsu234_aa",1000,1100,1000],
+    [“RHS_M6”,1200,1100,1100],
+    ["rhs_t90a_tv",2000,1800,1800],
+    ["BWA3_Leopard2_Tropen",2000,2000,2000],
+    ["rhsusf_m1a2sep1d_usarmy",2000,2000,2000],
+    ["rhs_t14_tv",2000,2100,2000],
+    ["RHS_M119_WD",4000,4000,2000],
+    ["rhs_D30_msv",4000,4500,2000]
 ];
 
 
 air_vehicles = [
-["RHS_MELB_MH6M",500,0,600],
-["rhs_ka60_grey",500,0,600],
-["RHS_UH1Y_UNARMED",500,0,500],
-["RHS_UH60M",800,300,800],
-
-["RHS_Mi8AMT_vdv",1200,0,1800],
-["RHS_CH_47F",1400,300,1800],
-["rhsusf_CH53e_USMC_cargo",2000,0,2000],
-
-["RHS_MELB_AH6M",800,1000,800],
-
-["RHS_UH1Y_d",800,1000,800],
-["RHS_Mi8mt_vdv",1200,1000,1200],
-
-["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
-["RHS_AH1Z_wd",2000,2300,2000],
-["RHS_AH64D_wd",2000,2600,2000],
-["RHS_Mi24V_vdv",2400,2600,2000],
-
-["rhsusf_f22",3000,2500,2800],
-["rhs_mig29sm_vvsc",2800,2700,2800],
-
-["I_Plane_Fighter_03_dynamicLoadout_F",2800,3000,2800],
-
-["RHS_Su25SM_vvsc",3000,3600,3000],
-["B_Plane_CAS_01_dynamicLoadout_F",3000,4000,3000],
-["RHS_A10",3000,4000,3000]
+    ["RHS_MELB_MH6M",500,0,600],
+    ["rhs_ka60_grey",500,0,600],
+    ["RHS_UH1Y_UNARMED",500,0,500],
+    ["RHS_UH60M",800,300,800],
+    ["RHS_Mi8AMT_vdv",1200,0,1800],
+    ["RHS_CH_47F",1400,300,1800],
+    ["rhsusf_CH53e_USMC_cargo",2000,0,2000],
+    ["RHS_MELB_AH6M",800,1000,800],
+    ["RHS_UH1Y_d",800,1000,800],
+    ["RHS_Mi8mt_vdv",1200,1000,1200],
+    ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
+    ["RHS_AH1Z_wd",2000,2300,2000],
+    ["RHS_AH64D_wd",2000,2600,2000],
+    ["RHS_Mi24V_vdv",2400,2600,2000],
+    ["rhsusf_f22",3000,2500,2800],
+    ["rhs_mig29sm_vvsc",2800,2700,2800],
+    ["I_Plane_Fighter_03_dynamicLoadout_F",2800,3000,2800],
+    ["RHS_Su25SM_vvsc",3000,3600,3000],
+    ["B_Plane_CAS_01_dynamicLoadout_F",3000,4000,3000],
+    ["RHS_A10",3000,4000,3000]
 ];
 
 
 static_vehicles = [
-["BWA3_MRS120_Fleck",0,0,0]
+    ["BWA3_MRS120_Fleck",0,0,0]
 ];
 
 
 buildings = [
-["Flag_UNO_F",0,0,0],
-["rhs_Flag_Russia_F",0,0,0],
-["FlagCarrierGermany_EP1",0,0,0],
-["Flag_UK_F",0,0,0],
-["Flag_US_F",0,0,0],
-["Flag_NATO_F",0,0,0],
-["Land_PortableLight_single_F",0,0,0],
-["Land_Campfire_F",0,0,0],
-["Land_CampingChair_V1_F",0,0,0],
-["Land_CampingTable_F",0,0,0],
-["Land_HBarrier_01_wall_6_green_F",0,0,0],
-["Land_HBarrierWall6_F",0,0,0],
-["Land_HelipadCivil_F",0,0,0],  
-["PortableHelipadLight_01_blue_F",0,0,0],
-["PortableHelipadLight_01_green_F",0,0,0],
-["Land_ClutterCutter_large_F",0,0,0],
-["Land_MapBoard_Enoch_F",0,0,0]
+    ["Flag_UNO_F",0,0,0],
+    ["rhs_Flag_Russia_F",0,0,0],
+    ["FlagCarrierGermany_EP1",0,0,0],
+    ["Flag_UK_F",0,0,0],
+    ["Flag_US_F",0,0,0],
+    ["Flag_NATO_F",0,0,0],
+    ["Land_PortableLight_single_F",0,0,0],
+    ["Land_Campfire_F",0,0,0],
+    ["Land_CampingChair_V1_F",0,0,0],
+    ["Land_CampingTable_F",0,0,0],
+    ["Land_HBarrier_01_wall_6_green_F",0,0,0],
+    ["Land_HBarrierWall6_F",0,0,0],
+    ["Land_HelipadCivil_F",0,0,0],  
+    ["PortableHelipadLight_01_blue_F",0,0,0],
+    ["PortableHelipadLight_01_green_F",0,0,0],
+    ["Land_ClutterCutter_large_F",0,0,0],
+    ["Land_MapBoard_Enoch_F",0,0,0]
 ];
 
 
