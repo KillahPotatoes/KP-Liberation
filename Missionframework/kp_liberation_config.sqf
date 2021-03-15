@@ -207,15 +207,15 @@ GRLIB_halo_altitude = 5000;                                             // Altit
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.8;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 120;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 700;                                               // Range to activate a sector.
+GRLIB_sector_size = 1000;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.4;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 9;                                             // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 300;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
-GRLIB_surrender_chance = 95;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_vulnerability_timer = 600;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_radiotower_size = 3000;                                           // Radio Tower scanning range.
+GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 8;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
@@ -247,8 +247,8 @@ KP_liberation_convoy_ambush_duration = 1800;                            // Durat
 KP_liberation_resistance_tier2 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
 KP_liberation_resistance_at_chance = 40;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
-KP_liberation_resistance_sector_chance = 40;                            // Chance that a guerilla squad will join an ongoing sector attack.
-KP_liberation_resistance_ambush_chance = 40;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
+KP_liberation_resistance_sector_chance = 50;                            // Chance that a guerilla squad will join an ongoing sector attack.
+KP_liberation_resistance_ambush_chance = 50;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 // Array of worldName values.
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
@@ -869,7 +869,46 @@ blacklisted_from_arsenal = [
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
-KP_liberation_allowed_items_extension = [];
+KP_liberation_allowed_items_extension = [
+	"bwa3_optic_zo4x30",
+    "bwa3_optic_zo4x30_brown",
+    "bwa3_optic_zo4x30_microt2",
+    "bwa3_optic_zo4x30_microt2_brown",
+    "bwa3_optic_zo4x30_rsas_pip",
+    "bwa3_optic_zo4x30_rsas",
+    "bwa3_optic_zo4x30_rsas_brown",
+    "bwa3_optic_zo4x30i",
+    "bwa3_optic_zo4x30i_microt2",
+    "bwa3_optic_zo4x30i_microt2_sand",
+    "bwa3_optic_zo4x30i_rsas",
+    "bwa3_optic_zo4x30i_rsas_sand",
+    "bwa3_optic_eotech552",
+    "bwa3_optic_eotech552_green",
+    "bwa3_optic_eotech552_tan",
+    "bwa3_optic_eotech",
+    "bwa3_optic_eotech_sand",
+    "bwa3_optic_eotech_sand_mag_off",
+    "bwa3_optic_eotech_mag_off",
+    "bwa3_optic_pmii_shortdotcc",
+    "bwa3_optic_pmii_dmr",
+    "bwa3_optic_pmii_dmr_microt1_front",
+    "bwa3_optic_pmii_dmr_microt1_rear",
+    "bwa3_optic_m5xi_msr",
+    "bwa3_optic_m5xi_msr_microt2",
+    "bwa3_optic_m5xi_tremor3",
+    "bwa3_optic_m5xi_tremor3_microt2",
+    "bwa3_optic_hensoldt",
+    "bwa3_optic_compm2",
+    "bwa3_optic_compm2_green",
+    "bwa3_optic_compm2_tan",
+    "bwa3_optic_microt1",
+    "bwa3_optic_microt2",
+    "bwa3_optic_rsas",
+    "bwa3_optic_rsas_brown",
+    "bwa3_optic_rsas_green",
+    "bwa3_optic_rsas_sand",
+    "bwa3_optic_rsas_tan"
+];
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
@@ -1445,7 +1484,47 @@ KP_liberation_large_storage_positions = [
     [0.800781,-3.58984,0.6],
     [2.40039,-3.58984,0.6],
     [4.00098,-3.58984,0.6],
-    [5.60059,-3.58984,0.6]
+    [5.60059,-3.58984,0.6],
+    [-5.59961,3.60938,2.1],
+    [-3.99902,3.60938,2.1],
+    [-2.39941,3.60938,2.1],
+    [-0.799805,3.60938,2.1],
+    [0.800781,3.60938,2.1],
+    [2.40039,3.60938,2.1],
+    [4.00098,3.60938,2.1],
+    [5.60059,3.60938,2.1],
+    [-5.59961,1.80859,2.1],
+    [-3.99902,1.80859,2.1],
+    [-2.39941,1.80859,2.1],
+    [-0.799805,1.80859,2.1],
+    [0.800781,1.80859,2.1],
+    [2.40039,1.80859,2.1],
+    [4.00098,1.80859,2.1],
+    [5.60059,1.80859,2.1],
+    [-5.59961,0.00976563,2.1],
+    [-3.99902,0.00976563,2.1],
+    [-2.39941,0.00976563,2.1],
+    [-0.799805,0.00976563,2.1],
+    [0.800781,0.00976563,2.1],
+    [2.40039,0.00976563,2.1],
+    [4.00098,0.00976563,2.1],
+    [5.60059,0.00976563,2.1],
+    [-5.59961,-1.79102,2.1],
+    [-3.99902,-1.79102,2.1],
+    [-2.39941,-1.79102,2.1],
+    [-0.799805,-1.79102,2.1],
+    [0.800781,-1.79102,2.1],
+    [2.40039,-1.79102,2.1],
+    [4.00098,-1.79102,2.1],
+    [5.60059,-1.79102,2.1],
+    [-5.59961,-3.58984,2.1],
+    [-3.99902,-3.58984,2.1],
+    [-2.39941,-3.58984,2.1],
+    [-0.799805,-3.58984,2.1],
+    [0.800781,-3.58984,2.1],
+    [2.40039,-3.58984,2.1],
+    [4.00098,-3.58984,2.1],
+    [5.60059,-3.58984,2.1]
 ];
 
 // Small storage area placement position offsets.
