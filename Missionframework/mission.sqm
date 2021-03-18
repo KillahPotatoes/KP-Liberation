@@ -8,18 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3345;
+		nextID=3346;
 	};
 	class LayerIndexProvider
 	{
-		nextID=51;
+		nextID=55;
 	};
 	class Camera
 	{
-		pos[]={4072.8132,402.18155,847.01855};
-		dir[]={0.87767869,-0.47802588,-0.034910273};
-		up[]={0.47766051,0.87833828,-0.018999379};
-		aside[]={-0.039744381,2.3512257e-007,-0.99923152};
+		pos[]={4135.7236,379.99072,848.17975};
+		dir[]={0.92315108,-0.38437769,0.0097864866};
+		up[]={0.38447294,0.92311776,0.0040745786};
+		aside[]={0.010598525,-6.3675498e-007,-0.99996477};
 	};
 };
 binarizationWanted=0;
@@ -117,7 +117,8 @@ addons[]=
 	"tfar_handhelds",
 	"rhs_c_troops",
 	"A3_Structures_F_Orange_Humanitarian_Camps",
-	"A3_Structures_F_Mil_Helipads"
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Props_F_Enoch_Civilian_InfoBoards"
 };
 class AddonsMetaData
 {
@@ -27890,7 +27891,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2025;
+		items=2026;
 		class Item0
 		{
 			dataType="Object";
@@ -68126,7 +68127,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={4122.564,358.32355,820.44666};
-					angle=0.93701863;
+					angle=0.93701857;
 					class Attributes
 					{
 						condition="call{this}";
@@ -68504,8 +68505,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4155.0435,358.4964,816.62164};
-				angles[]={0.0089236954,0,0.0029092724};
+				position[]={4187.0342,358.59,848.66272};
+				angles[]={0,4.6851554,0};
 			};
 			side="Empty";
 			class Attributes
@@ -68520,8 +68521,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4166.0444,358.54016,816.63861};
-				angles[]={0.0089236954,0,0.0029092724};
+				position[]={4187.2788,358.59,859.48798};
+				angles[]={0,4.6632233,0};
 			};
 			side="Empty";
 			class Attributes
@@ -68536,8 +68537,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4144.02,358.42224,817.09509};
-				angles[]={0.0089236954,0,0.0029092724};
+				position[]={4187.2612,358.59,837.56378};
+				angles[]={0,4.6556339,0};
 			};
 			side="Empty";
 			class Attributes
@@ -68562,6 +68563,22 @@ class Mission
 			};
 			id=3329;
 			type="Land_HelipadEmpty_F";
+		};
+		class Item2025
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4133.6206,359.30093,815.47675};
+				angles[]={-0,3.8705647,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3345;
+			type="Land_MapBoard_Enoch_F";
 		};
 	};
 };
