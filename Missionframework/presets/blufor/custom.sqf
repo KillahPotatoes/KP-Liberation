@@ -130,8 +130,8 @@ static_vehicles = [
 buildings = [
     ["Flag_UNO_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
+	  ["BWA3_Flag_Germany",0,0,0],
     ["rhs_Flag_Russia_F",0,0,0],
-	["BWA3_Flag_Germany",0,0,0],
     ["Flag_UK_F",0,0,0],
     ["Flag_US_F",0,0,0],
     ["Land_PortableLight_single_F",0,0,0],
