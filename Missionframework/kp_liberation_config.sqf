@@ -225,13 +225,13 @@ GRLIB_sector_cap = 70;                                                 // Cap fo
 GRLIB_battlegroup_cap = 70;                                            // Cap for enemy battlegroups.
 GRLIB_patrol_cap = 70;                                                 // Cap for enemy patrols.
 
-KP_liberation_cr_kill_penalty = 0;                                      // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 0;                                  // Civil Reputation penalty for destroying/damaging a building.
-KP_liberation_cr_vehicle_penalty = 0;                                   // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_resistance_penalty = 0;                                // Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
+KP_liberation_cr_building_penalty = 5;                                  // Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
+KP_liberation_cr_resistance_penalty = 3;                                // Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 0;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 0;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
-KP_liberation_cr_wounded_gain = 0;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
+KP_liberation_cr_wounded_chance = 50;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_gain = 3;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
 KP_liberation_civinfo_max = 3600;                                       // Civil Informant maximum spawn time. (seconds)
