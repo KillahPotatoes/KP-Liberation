@@ -269,3 +269,4 @@ if (isServer) then {
 };
 
 
+[[], 'MilSimUnited\iedScript.sqf'] remoteExec ['BIS_fnc_execVM', 2];
