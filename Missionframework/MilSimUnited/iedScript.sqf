@@ -1,10 +1,10 @@
 while {true} do {	
 	_allIED = allMines;
-	_allmarker = allMissionObjects "Sign_Arrow_Large_Blue_F";
+	_allmarker = allMissionObjects "Land_HelipadEmpty_F";
 	
 	{
 		_playerActive = 0;
-		_list = _x nearEntities 1500;
+		_list = _x nearEntities 2500;
 		
 		{
 			if(side _X == west) then {
@@ -19,7 +19,7 @@ while {true} do {
 	
 	{
 		_playerActive = 0;
-		_list = _x nearEntities 1500;
+		_list = _x nearEntities 2500;
 		
 		{
 			if(side _X == west) then {
@@ -55,7 +55,7 @@ while {true} do {
 		if(side _x == west) then {
 			_countMines = count _allIED;	
 			if(_countMines < maxMines) then {
-				_nearestRoad = leader _x nearRoads 1500;
+				_nearestRoad = leader _x nearRoads 2500;
 				_count = count _nearestRoad;
 				
 				_rand = random _count;
@@ -64,14 +64,14 @@ while {true} do {
 				_streetObject = _nearestRoad select _rand;
 				_pos = getPos _streetObject;
 				
-				_randSpawnPos = _pos getPos [5 * sqrt random 1, random 360];
+				_randSpawnPos = _pos getPos [10 * sqrt random 1, random 360];
 				
 				_mineClassnames = ["ACE_IEDLandBig_Range","ACE_IEDUrbanBig_Range","ACE_IEDLandSmall_Range","ACE_IEDUrbanSmall_Range"];
 				_usedMine = selectRandom _mineClassnames;
 				
 				
 				_mine = createMine [_usedMine, _randSpawnPos, [], 0];
-				_veh = createVehicle ["Sign_Arrow_Large_Blue_F", _randSpawnPos, [], 0, "CAN_COLLIDE"];
+				_veh = createVehicle ["Land_HelipadEmpty_F", _randSpawnPos, [], 0, "CAN_COLLIDE"];
 				
 				{
 					_x addCuratorEditableObjects [[_veh], true];
@@ -79,5 +79,5 @@ while {true} do {
 			};
 		}
 	} foreach allGroups;
-	sleep 10;
+	sleep 60;
 }
