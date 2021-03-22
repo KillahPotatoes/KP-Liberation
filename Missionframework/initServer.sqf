@@ -169,8 +169,6 @@ KP_liberation_supplies_global = 1;
 KP_liberation_ammo_global = 1;
 KP_liberation_fuel_global = 1;
 
-[]execVM "MilSimUnited/iedScript.sqf.sqf";
-
 
 addMissionEventHandler ['EntityKilled',{
 	_unit = _this select 0;
@@ -190,7 +188,8 @@ addMissionEventHandler ['HandleDisconnect',{
 
 if (isServer) then {
 	while {true} do {
-		sleep 300;
+		[]execVM "MilSimUnited\ieds.sqf" ;
+		sleep 60;
 	};
 };
 
