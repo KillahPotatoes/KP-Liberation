@@ -1,5 +1,4 @@
 _allIED = allMines;
-_allMarkers = allMissionObjects "Land_HelipadEmpty_F";
 
 {
 	_playerActive = 0;
@@ -16,26 +15,10 @@ _allMarkers = allMissionObjects "Land_HelipadEmpty_F";
 	}
 } foreach _allIED;
 
-{
-	_playerActive = 0;
-	_list = _x nearEntities 3500;
-	
-	{
-		if(side _x == west) then {
-			_playerActive = 1;
-		}
-	} foreach _list;
-	
-	if(_playerActive == 0) then {
-		deleteVehicle _x;
-	}
-} foreach _allMarkers;
-
 maxMines = 4;
 _headlessClients = entities "HeadlessClient_F";
 _humanPlayers = allPlayers - _headlessClients;
 _humanPlayers call BIS_fnc_arrayShuffle;
-
 
 {
 	_allIED = allMines;
@@ -58,15 +41,7 @@ _humanPlayers call BIS_fnc_arrayShuffle;
 		
 		_mineClassnames = ["ACE_IEDLandBig_Range","ACE_IEDUrbanBig_Range","ACE_IEDLandSmall_Range","ACE_IEDUrbanSmall_Range"];
 		_usedMine = selectRandom _mineClassnames;
-		
-		_veh = createVehicle ["Land_HelipadEmpty_F", _randSpawnPos, [], 0, "CAN_COLLIDE"];				
+					
 		_mine = createMine [_usedMine, _randSpawnPos, [], 0];
-		
-
-		{
-			_x addCuratorEditableObjects [[_veh], true];
-		} foreach allCurators;
-
-		
 	}
 } foreach _humanPlayers;
