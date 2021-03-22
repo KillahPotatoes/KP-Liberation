@@ -95,8 +95,7 @@ while {true} do {
     _combat_readiness_old = combat_readiness;
     _resources_intel_old = resources_intel;
     _infantry_cap_old = infantry_cap;
-    if (KP_liberation_civ_rep <= -30) then {_KP_liberation_civ_rep_old = KP_liberation_civ_rep;}
-    else {_KP_liberation_civ_rep_old = -30;};
+    _KP_liberation_civ_rep_old = KP_liberation_civ_rep;
     _KP_liberation_guerilla_strength_old = KP_liberation_guerilla_strength;
     _infantry_weight_old = infantry_weight;
     _armor_weight_old = armor_weight;
