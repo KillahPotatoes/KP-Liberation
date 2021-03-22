@@ -94,7 +94,8 @@ heavy_vehicles = [
     ["rhsusf_m1a2sep1d_usarmy",2000,2000,2000],
     ["rhs_t14_tv",2000,2100,2000],
     ["RHS_M119_WD",4000,4000,2000],
-    ["rhs_D30_msv",4000,4500,2000]
+    ["rhs_D30_msv",4000,4500,2000],
+    ["B_Truck_01_transport_F",2000,0,2000]
 ];
 
 
