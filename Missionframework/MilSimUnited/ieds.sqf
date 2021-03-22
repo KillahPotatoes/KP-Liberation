@@ -2,7 +2,7 @@ _allIED = allMines;
 
 {
 	_playerActive = 0;
-	_list = _x nearEntities 3500;
+	_list = _x nearEntities 2000;
 	
 	{
 		if(side _x == west) then {
@@ -25,8 +25,8 @@ _humanPlayers call BIS_fnc_arrayShuffle;
 	_countMines = count _allIED;
 		
 	if(_countMines < maxMines && isTouchingGround _x) then {
-		_nearestRoad = leader _x nearRoads 3500;
-		_closeRoads = leader _x nearRoads 1500;
+		_nearestRoad = leader _x nearRoads 2000;
+		_closeRoads = leader _x nearRoads 1000;
 		_allowedRoads = _nearestRoad - _closeRoads;
 			
 		_count = count _allowedRoads;
