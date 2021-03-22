@@ -6,7 +6,7 @@ _allMarkers = allMissionObjects "Land_HelipadEmpty_F";
 	_list = _x nearEntities 3500;
 	
 	{
-		if(isPlayer _x) then {
+		if(side _x == west) then {
 			_playerActive = 1;
 		}
 	} foreach _list;
@@ -21,7 +21,7 @@ _allMarkers = allMissionObjects "Land_HelipadEmpty_F";
 	_list = _x nearEntities 3500;
 	
 	{
-		if(isPlayer _x) then {
+		if(side _x == west) then {
 			_playerActive = 1;
 		}
 	} foreach _list;
@@ -42,8 +42,8 @@ _humanPlayers call BIS_fnc_arrayShuffle;
 	_countMines = count _allIED;
 		
 	if(_countMines < maxMines && isTouchingGround _x) then {
-		_nearestRoad = _x nearRoads 3500;
-		_closeRoads = _x nearRoads 1500;
+		_nearestRoad = leader _x nearRoads 3500;
+		_closeRoads = leader _x nearRoads 1500;
 		_allowedRoads = _nearestRoad - _closeRoads;
 			
 		_count = count _allowedRoads;
