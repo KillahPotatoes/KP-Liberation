@@ -4603,17 +4603,17 @@
             <Czech>Prodat náklaďák</Czech>
         </Key>
         <Key ID="STR_LOGISTIC_TT_BUYTRUCK">
-            <Original>Costs: 100 supplies and 100 fuel.</Original>
-            <German>Kosten: 100 Nachschub und 100 Kraftstoff.</German>
-            <Spanish>Costo: 100 suministros y 100 combustible</Spanish>
-            <Russian>Стоимость: 100 припасов и 100 единиц топлива.</Russian>
-            <Italian>Costo: 100 approvvigionamenti e 100 carburante.</Italian>
-            <Chinesesimp>花费：100补给和100燃料。</Chinesesimp>
-            <Chinese>花費：100 補給和 100 油料。</Chinese>
-            <Turkish>Maliyeti : 100 ikmal ve 100 benzin</Turkish>
-            <Portuguese>Custa: 100 de suprimento e 100 de combustível.</Portuguese>
-            <Korean>비용: 100보급품(S), 100연료(F)</Korean>
-            <Czech>Cena: 100 zásob a 100 paliva</Czech>
+            <Original>Costs: 2000 supplies and 2000 fuel.</Original>
+            <German>Kosten: 2000 Nachschub und 2000 Kraftstoff.</German>
+            <Spanish>Costo: 2000 suministros y 2000 combustible</Spanish>
+            <Russian>Стоимость: 2000 припасов и 2000 единиц топлива.</Russian>
+            <Italian>Costo: 2000 approvvigionamenti e 2000 carburante.</Italian>
+            <Chinesesimp>花费：2000补给和2000燃料。</Chinesesimp>
+            <Chinese>花費：2000 補給和 2000 油料。</Chinese>
+            <Turkish>Maliyeti : 2000 ikmal ve 2000 benzin</Turkish>
+            <Portuguese>Custa: 2000 de suprimento e 2000 de combustível.</Portuguese>
+            <Korean>비용: 2000보급품(S), 2000연료(F)</Korean>
+            <Czech>Cena: 2000 zásob a 2000 paliva</Czech>
         </Key>
         <Key ID="STR_LOGISTIC_TT_SELLTRUCK">
             <Original>Gives: 50 supplies and 50 fuel.</Original>

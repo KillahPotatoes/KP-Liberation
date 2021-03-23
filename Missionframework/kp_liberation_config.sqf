@@ -133,7 +133,7 @@ KP_liberation_preset_blufor = 0;
 18 = CUP Chernarus Defense Force
 19 = CUP British Armed Forces (Desert)
 20 = CUP British Armed Forces (Woodland) */
-KP_liberation_preset_opfor = 1;
+KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
 0  = Custom (default vanilla FIA)
@@ -145,7 +145,7 @@ KP_liberation_preset_opfor = 1;
 6  = Unsung
 7  = CUP Takistani Locals
 8  = CUP National Party of Chernarus */
-KP_liberation_preset_resistance = 0;
+KP_liberation_preset_resistance = 3;
 
 /* Civilians preset:
 0  = Custom (default vanilla)
@@ -156,7 +156,7 @@ KP_liberation_preset_resistance = 0;
 5  = Unsung
 6  = CUP Takistani Civilians
 7  = CUP Chernarussian Civilians */
-KP_liberation_preset_civilians = 0;
+KP_liberation_preset_civilians = 2;
 
 /* Which arsenal preset should be used?
 0  = Use the default blacklist method (defined below)
@@ -180,11 +180,11 @@ KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
-KP_liberation_fuel_neutral = 60;
+KP_liberation_fuel_neutral = 80;
 // Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
-KP_liberation_fuel_normal = 45;
+KP_liberation_fuel_normal = 60;
 // Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
-KP_liberation_fuel_max = 30;
+KP_liberation_fuel_max = 45;
 
 /* - Gameplay constant settings.
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
@@ -207,15 +207,15 @@ GRLIB_halo_altitude = 5000;                                             // Altit
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.8;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
-KP_liberation_production_interval = 120;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
+KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 700;                                               // Range to activate a sector.
+GRLIB_sector_size = 1000;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
 GRLIB_defended_buildingpos_part = 0.4;                                  // Multiplier for defenders in buildings.
 GRLIB_battlegroup_size = 9;                                             // Size of enemy battlegroups.
-GRLIB_vulnerability_timer = 300;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 2500;                                           // Radio Tower scanning range.
-GRLIB_surrender_chance = 95;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
+GRLIB_vulnerability_timer = 600;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
+GRLIB_radiotower_size = 3000;                                           // Radio Tower scanning range.
+GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 8;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
@@ -226,20 +226,20 @@ GRLIB_battlegroup_cap = 70;                                            // Cap fo
 GRLIB_patrol_cap = 70;                                                 // Cap for enemy patrols.
 
 KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
-KP_liberation_cr_building_penalty = 3;                                  // Civil Reputation penalty for destroying/damaging a building.
+KP_liberation_cr_building_penalty = 5;                                  // Civil Reputation penalty for destroying/damaging a building.
 KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
 KP_liberation_cr_resistance_penalty = 3;                                // Civil Reputation penalty for killing a friendly resistance soldier.
-KP_liberation_cr_sector_gain = 5;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 75;                                   // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_sector_gain = 0;                                       // Civil Reputation gain for liberate a sector.
+KP_liberation_cr_wounded_chance = 50;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KP_liberation_cr_wounded_gain = 3;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
-KP_liberation_civinfo_max = 3600;                                      // Civil Informant maximum spawn time. (seconds)
+KP_liberation_civinfo_max = 3600;                                       // Civil Informant maximum spawn time. (seconds)
 KP_liberation_civinfo_chance = 80;                                      // Civil Informant spawn chance. (0-100)
 KP_liberation_civinfo_intel = 8;                                        // Civil Informant intel amount.
 KP_liberation_civinfo_duration = 3600;                                  // Civil Informant staytime until despawning. (seconds)
 KP_liberation_civinfo_task_chance = 25;                                 // Chance (0-100) that the delivered informant will spawn a time critical task.
-KP_liberation_civinfo_task_duration = 3600;                              // Duration until the task will despawn if no player is near. (seconds)
+KP_liberation_civinfo_task_duration = 3600;                             // Duration until the task will despawn if no player is near. (seconds)
 
 KP_liberation_convoy_ambush_chance = 7;                                 // Chance that a logistic convoy will be ambushed, when civil reputation is low.
 KP_liberation_convoy_ambush_duration = 1800;                            // Duration of the convoy ambush event. (seconds)
@@ -247,8 +247,8 @@ KP_liberation_convoy_ambush_duration = 1800;                            // Durat
 KP_liberation_resistance_tier2 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
 KP_liberation_resistance_tier3 = 70;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
 KP_liberation_resistance_at_chance = 40;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
-KP_liberation_resistance_sector_chance = 40;                            // Chance that a guerilla squad will join an ongoing sector attack.
-KP_liberation_resistance_ambush_chance = 40;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
+KP_liberation_resistance_sector_chance = 50;                            // Chance that a guerilla squad will join an ongoing sector attack.
+KP_liberation_resistance_ambush_chance = 50;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 // Array of worldName values.
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
@@ -648,11 +648,267 @@ blacklisted_from_arsenal = [
     "uns_MK18_low_US_Bag",
     "uns_STABO_US_Bag",
     "uns_Tripod_Bag",
+    "ACE_Can_RedGull",
+    "ACE_Can_Franta",
+    "ACE_Can_Spirit",
+    "ACE_Banana",
+    "ACE_Canteen",
+    "ACE_Canteen_Empty",
+    "ACE_Canteen_Half",
+    "ACE_Cellphone",
+    "ACE_Chemlight_Shield",
+    "ACE_Fortify",
+    "FirstAidKit",
+    "ACE_Flashlight_MX991",
+    "ACE_Humanitarian_Ration",
+    "ACE_Flashlight_KSF1",
+    "ACE_Flashlight_XL50",
+    "Medikit",
+    "ACE_MRE_BeefStew",
+    "ACE_MRE_ChickenTikkaMasala",
+    "ACE_MRE_ChickenHerbDumplings",
+    "ACE_MRE_CreamChickenSoup",
+    "ACE_MRE_CreamTomatoSoup",
+    "ACE_MRE_LambCurry",
+    "ACE_MRE_MeatballsPasta",
+    "ACE_MRE_SteakVegetables",
+    "ACE_rope12",
+    "ACE_rope15",
+    "ACE_rope18",
+    "ACE_rope27",
+    "ACE_rope36",
+    "ACE_WaterBottle",
+    "ACE_WaterBottle_Empty",
+    "ACE_WaterBottle_Half",
+    "hgun_esd_01_F",
+    "rhs_weap_panzerfaust60",
+    "rhs_xmas_antlers",
+    "H_Construction_basic_black_F",
+    "H_Construction_earprot_black_F",
+    "H_Construction_headset_black_F",
+    "H_Construction_basic_orange_F",
+    "H_Construction_basic_orange_F",
+    "H_Construction_headset_orange_F",
+    "H_Construction_basic_red_F",
+    "H_Construction_earprot_red_F",
+    "H_Construction_headset_red_F",
+    "H_Construction_basic_vrana_F",
+    "H_Construction_earprot_vrana_F",
+    "H_Construction_headset_vrana_F",
+    "H_Construction_basic_white_F",
+    "H_Construction_earprot_white_F",
+    "H_Construction_headset_white_F",
+    "H_Construction_basic_yellow_F",
+    "H_Construction_earprot_yellow_F",
+    "H_Construction_headset_yellow_F",
+    "H_RacingHelmet_1_black_F",
+    "H_RacingHelmet_1_blue_F",
+    "H_RacingHelmet_2_F",
+    "H_RacingHelmet_1_F",
+    "H_RacingHelmet_1_green_F",
+    "H_RacingHelmet_1_orange_F",
+    "H_RacingHelmet_1_red_F",
+    "H_RacingHelmet_3_F",
+    "H_RacingHelmet_4_F",
+    "H_RacingHelmet_1_white_F",
+    "H_RacingHelmet_1_yellow_F",
+    "LOP_U_TAK_Civ_Fatigue_01",
+    "LOP_U_TAK_Civ_Fatigue_02",
+    "LOP_U_TAK_Civ_Fatigue_03",
+    "LOP_U_TAK_Civ_Fatigue_04",
+    "LOP_U_TAK_Civ_Fatigue_05",
+    "LOP_U_TAK_Civ_Fatigue_06",
+    "LOP_U_TAK_Civ_Fatigue_07",
+    "LOP_U_TAK_Civ_Fatigue_08",
+    "LOP_U_TAK_Civ_Fatigue_09",
+    "LOP_U_TAK_Civ_Fatigue_10",
+    "LOP_U_TAK_Civ_Fatigue_11",
+    "LOP_U_TAK_Civ_Fatigue_12",
+    "LOP_U_TAK_Civ_Fatigue_13",
+    "LOP_U_TAK_Civ_Fatigue_14",
+    "LOP_U_TAK_Civ_Fatigue_15",
+    "LOP_U_TAK_Civ_Fatigue_16",
+    "LOP_U_CHR_Priest_01",
+    "LOP_U_CHR_Rocker_01",
+    "LOP_U_CHR_Rocker_02",
+    "LOP_U_CHR_Rocker_03",
+    "LOP_U_CHR_Rocker_04",
+    "LOP_U_CHR_SchoolTeacher_01",
+    "LOP_U_CHR_Worker_01",
+    "LOP_U_CHR_Worker_02",
+    "LOP_U_CHR_Worker_03",
+    "LOP_U_CHR_Worker_04",
+    "LOP_U_CHR_Worker_05",
+    "LOP_U_CHR_Worker_06",
+    "LOP_U_CHR_Worker_07",
+    "U_C_ConstructionCoverall_Black_F",
+    "U_C_ConstructionCoverall_Blue_F",
+    "U_C_ConstructionCoverall_Red_F",
+    "U_C_ConstructionCoverall_Vrana_F",
+    "U_C_Driver_1_black",
+    "U_C_Driver_1_blue",
+    "U_C_Driver_2",
+    "U_C_Driver_1",
+    "U_C_Driver_1_green",
+    "U_C_Driver_1_orange",
+    "U_C_Driver_1_red",
+    "U_C_Driver_3",
+    "U_C_Driver_4",
+    "U_C_Driver_1_white",
+    "U_C_Driver_1_yellow",
+    "U_C_FormalSuit_01_black_F",
+    "U_C_FormalSuit_01_blue_F",
+    "U_C_FormalSuit_01_gray_F",
+    "U_C_FormalSuit_01_khaki_F",
+    "U_C_FormalSuit_01_tshirt_black_F",
+    "U_C_FormalSuit_01_tshirt_gray_F",
+    "U_BG_Guerilla1_1",
+    "U_BG_Guerilla1_2_F",
+    "LOP_U_ISTS_Fatigue_01",
+    "LOP_U_ISTS_Fatigue_02",
+    "LOP_U_ISTS_Fatigue_03",
+    "LOP_U_ISTS_Fatigue_04",
+    "LOP_U_AM_Fatigue_01_4",
+    "LOP_U_AM_Fatigue_01_6",
+    "LOP_U_AM_Fatigue_01",
+    "LOP_U_AM_Fatigue_01_5",
+    "LOP_U_AM_Fatigue_01_2",
+    "LOP_U_AM_Fatigue_01_3",
+    "LOP_U_AM_Fatigue_02_3",
+    "LOP_U_AM_Fatigue_02_5",
+    "LOP_U_AM_Fatigue_02_6",
+    "LOP_U_AM_Fatigue_02_4",
+    "LOP_U_AM_Fatigue_02_2",
+    "LOP_U_AM_Fatigue_02",
+    "LOP_U_AM_Fatigue_03_3",
+    "LOP_U_AM_Fatigue_03_6",
+    "LOP_U_AM_Fatigue_03_4",
+    "LOP_U_AM_Fatigue_03_2",
+    "LOP_U_AM_Fatigue_03_5",
+    "LOP_U_AM_Fatigue_03",
+    "LOP_U_AM_Fatigue_04_6",
+    "LOP_U_AM_Fatigue_04_5",
+    "LOP_U_AM_Fatigue_04_4",
+    "LOP_U_AM_Fatigue_04_2",
+    "LOP_U_AM_Fatigue_04_3",
+    "LOP_U_AM_Fatigue_04",
+    "U_OrestesBody",
+    "U_C_Journalist",
+    "U_I_ParadeUniform_01_AAF_decorated_F",
+    "U_O_ParadeUniform_01_CSAT_decorated_F",
+    "U_I_E_ParadeUniform_01_LDF_decorated_F",
+    "U_B_ParadeUniform_01_US_decorated_F",
+    "U_I_ParadeUniform_01_AAF_F",
+    "U_O_ParadeUniform_01_CSAT_F",
+    "U_I_E_ParadeUniform_01_LDF_F",
+    "U_B_ParadeUniform_01_US_F",
+    "U_C_Paramedic_01_F",
+    "U_C_Uniform_Scientist_01_formal_F",
+    "U_C_Scientist",
+    "U_C_Uniform_Scientist_01_F",
+    "U_C_Uniform_Scientist_02_F",
+    "U_C_Uniform_Scientist_02_formal_F",
+    "V_DeckCrew_blue_F",
+    "V_DeckCrew_brown_F",
+    "V_DeckCrew_green_F",
+    "V_DeckCrew_red_F",
+    "V_DeckCrew_violet_F",
+    "V_DeckCrew_white_F",
+    "V_DeckCrew_yellow_F",
+    "V_Press_F",
+    "V_Plain_crystal_F",
+    "V_Plain_medical_F",
+    "V_Safety_blue_F",
+    "V_Safety_orange_F",
+    "V_Safety_yellow_F",
+    "TFAR_anarc164",
+    "TFAR_anarc210",
+    "TFAR_anprc155",
+    "TFAR_anprc155_coyote",
+    "TFAR_bussole",
+    "TFAR_mr3000",
+    "TFAR_mr3000_bwmod",
+    "TFAR_mr3000_bwmod_tropen",
+    "TFAR_mr3000_multicam",
+    "TFAR_mr3000_multicam",
+    "TFAR_anprc148jem",
+    "TFAR_fadak",
+    "TFAR_microdagr",
+    "B_RadioBag_01_black_F",
+    "B_RadioBag_01_digi_F",
+    "B_RadioBag_01_eaf_F",
+    "B_RadioBag_01_mtp_F",
+    "B_RadioBag_01_tropic_F",
+    "B_RadioBag_01_oucamo_F",
+    "B_RadioBag_01_wdl_F",
+    "O_Static_Designator_02_weapon_F",
+    "B_Static_Designator_01_weapon_F",
+    "B_W_Static_Designator_01_weapon_F",
+    "B_Patrol_Respawn_bag_F",
+    "B_CombinationUnitRespirator_01_F",
+    "B_Messenger_Black_F",
+    "B_Messenger_Coyote_F",
+    "B_Messenger_Gray_F",
+    "B_Messenger_Olive_F",
+    "B_Messenger_IDAP_F",
+    "B_CivilianBackpack_01_Everyday_Astra_F",
+    "B_CivilianBackpack_01_Everyday_Black_F",
+    "B_CivilianBackpack_01_Everyday_Vrana_F",
+    "B_CivilianBackpack_01_Everyday_IDAP_F",
+    "B_CivilianBackpack_01_Sport_Blue_F",
+    "B_CivilianBackpack_01_Sport_Green_F",
+    "B_CivilianBackpack_01_Sport_Red_F",
+    "B_SCBA_01_F",
+    "I_UavTerminal",
+    "C_UavTerminal",
+    "O_UavTerminal",
+    "I_E_UavTerminal",
+    "B_UavTerminal",
+    "ChemicalDetector_01_watch_F",
     "Uns_US_searchlight_Bag"
 ];
 
 // Items which should be added as allowed Items, when they get blacklisted, even if they are not in the blacklisted_from_arsenal array
-KP_liberation_allowed_items_extension = [];
+KP_liberation_allowed_items_extension = [
+	"bwa3_optic_zo4x30",
+    "bwa3_optic_zo4x30_brown",
+    "bwa3_optic_zo4x30_microt2",
+    "bwa3_optic_zo4x30_microt2_brown",
+    "bwa3_optic_zo4x30_rsas_pip",
+    "bwa3_optic_zo4x30_rsas",
+    "bwa3_optic_zo4x30_rsas_brown",
+    "bwa3_optic_zo4x30i",
+    "bwa3_optic_zo4x30i_microt2",
+    "bwa3_optic_zo4x30i_microt2_sand",
+    "bwa3_optic_zo4x30i_rsas",
+    "bwa3_optic_zo4x30i_rsas_sand",
+    "bwa3_optic_eotech552",
+    "bwa3_optic_eotech552_green",
+    "bwa3_optic_eotech552_tan",
+    "bwa3_optic_eotech",
+    "bwa3_optic_eotech_sand",
+    "bwa3_optic_eotech_sand_mag_off",
+    "bwa3_optic_eotech_mag_off",
+    "bwa3_optic_pmii_shortdotcc",
+    "bwa3_optic_pmii_dmr",
+    "bwa3_optic_pmii_dmr_microt1_front",
+    "bwa3_optic_pmii_dmr_microt1_rear",
+    "bwa3_optic_m5xi_msr",
+    "bwa3_optic_m5xi_msr_microt2",
+    "bwa3_optic_m5xi_tremor3",
+    "bwa3_optic_m5xi_tremor3_microt2",
+    "bwa3_optic_hensoldt",
+    "bwa3_optic_compm2",
+    "bwa3_optic_compm2_green",
+    "bwa3_optic_compm2_tan",
+    "bwa3_optic_microt1",
+    "bwa3_optic_microt2",
+    "bwa3_optic_rsas",
+    "bwa3_optic_rsas_brown",
+    "bwa3_optic_rsas_green",
+    "bwa3_optic_rsas_sand",
+    "bwa3_optic_rsas_tan"
+];
 
 /* - Configuration settings for crates transported by vehicles.
 Format = ["classname", distance behind vehicle to unload crate, attachTo positions for each box],    */
@@ -769,7 +1025,6 @@ KPLIB_transportConfigs = [
     ["RHS_Ural_Open_MSV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["RHS_Ural_Open_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
     ["RHS_Ural_VDV_01", -6.5, [0,-0.2,0.55], [0,-1.4,0.55], [0,-2.55,0.55]],
-	
     ["rhsusf_M1084A1P2_WD_fmtv_usarmy", -6.5, [-0.1,0.65,0.3], [-0.1,-0.85,0.3], [-0.1,-2.31,0.3]],
     ["rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy", -6.5, [-0.1,0.65,-0.3], [-0.1,-0.85,-0.3], [-0.1,-2.31,-0.3]],
     ["rhs_kamaz5350_open_msv", -6.5, [0.1,0.5,-0.4], [0.1,-1,-0.4], [0.1,-2.46,-0.4]],
@@ -777,7 +1032,6 @@ KPLIB_transportConfigs = [
     ["rhs_kamaz5350_flatbed_vdv", -6.5, [0.1,0.5,-0.4], [0.1,-1,-0.4], [0.1,-2.46,-0.4]],
     ["rhs_kamaz5350_open_vdv", -6.5, [0.1,0.5,-0.4], [0.1,-1,-0.4], [0.1,-2.46,-0.4]],
     ["rhs_kamaz5350_vdv", -6.5, [0.1,0.5,-0.4], [0.1,-1,-0.4], [0.1,-2.46,-0.4]],
-	
     ["rhsusf_CH53E_USMC_D", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
     ["rhsusf_CH53E_USMC", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
 	["rhsusf_CH53e_USMC_cargo", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
@@ -1189,46 +1443,86 @@ KPLIB_intelBuildingClasses = [
 
 // Large storage area placement position offsets.
 KP_liberation_large_storage_positions = [
-    [-5.59961,3.60938,0.6],
-    [-3.99902,3.60938,0.6],
-    [-2.39941,3.60938,0.6],
-    [-0.799805,3.60938,0.6],
-    [0.800781,3.60938,0.6],
-    [2.40039,3.60938,0.6],
-    [4.00098,3.60938,0.6],
-    [5.60059,3.60938,0.6],
-    [-5.59961,1.80859,0.6],
-    [-3.99902,1.80859,0.6],
-    [-2.39941,1.80859,0.6],
-    [-0.799805,1.80859,0.6],
-    [0.800781,1.80859,0.6],
-    [2.40039,1.80859,0.6],
-    [4.00098,1.80859,0.6],
-    [5.60059,1.80859,0.6],
-    [-5.59961,0.00976563,0.6],
-    [-3.99902,0.00976563,0.6],
-    [-2.39941,0.00976563,0.6],
-    [-0.799805,0.00976563,0.6],
-    [0.800781,0.00976563,0.6],
-    [2.40039,0.00976563,0.6],
-    [4.00098,0.00976563,0.6],
-    [5.60059,0.00976563,0.6],
-    [-5.59961,-1.79102,0.6],
-    [-3.99902,-1.79102,0.6],
-    [-2.39941,-1.79102,0.6],
-    [-0.799805,-1.79102,0.6],
-    [0.800781,-1.79102,0.6],
-    [2.40039,-1.79102,0.6],
-    [4.00098,-1.79102,0.6],
-    [5.60059,-1.79102,0.6],
-    [-5.59961,-3.58984,0.6],
-    [-3.99902,-3.58984,0.6],
-    [-2.39941,-3.58984,0.6],
-    [-0.799805,-3.58984,0.6],
-    [0.800781,-3.58984,0.6],
-    [2.40039,-3.58984,0.6],
-    [4.00098,-3.58984,0.6],
-    [5.60059,-3.58984,0.6]
+    [-5.59961,3.60938,0.1],
+    [-3.99902,3.60938,0.1],
+    [-2.39941,3.60938,0.1],
+    [-0.799805,3.60938,0.1],
+    [0.800781,3.60938,0.1],
+    [2.40039,3.60938,0.1],
+    [4.00098,3.60938,0.1],
+    [5.60059,3.60938,0.1],
+    [-5.59961,1.80859,0.1],
+    [-3.99902,1.80859,0.1],
+    [-2.39941,1.80859,0.1],
+    [-0.799805,1.80859,0.1],
+    [0.800781,1.80859,0.1],
+    [2.40039,1.80859,0.1],
+    [4.00098,1.80859,0.1],
+    [5.60059,1.80859,0.1],
+    [-5.59961,0.00976563,0.1],
+    [-3.99902,0.00976563,0.1],
+    [-2.39941,0.00976563,0.1],
+    [-0.799805,0.00976563,0.1],
+    [0.800781,0.00976563,0.1],
+    [2.40039,0.00976563,0.1],
+    [4.00098,0.00976563,0.1],
+    [5.60059,0.00976563,0.1],
+    [-5.59961,-1.79102,0.1],
+    [-3.99902,-1.79102,0.1],
+    [-2.39941,-1.79102,0.1],
+    [-0.799805,-1.79102,0.1],
+    [0.800781,-1.79102,0.1],
+    [2.40039,-1.79102,0.1],
+    [4.00098,-1.79102,0.1],
+    [5.60059,-1.79102,0.1],
+    [-5.59961,-3.58984,0.1],
+    [-3.99902,-3.58984,0.1],
+    [-2.39941,-3.58984,0.1],
+    [-0.799805,-3.58984,0.1],
+    [0.800781,-3.58984,0.1],
+    [2.40039,-3.58984,0.1],
+    [4.00098,-3.58984,0.1],
+    [5.60059,-3.58984,0.1],
+    [-5.59961,3.60938,1.6],
+    [-3.99902,3.60938,1.6],
+    [-2.39941,3.60938,1.6],
+    [-0.799805,3.60938,1.6],
+    [0.800781,3.60938,1.6],
+    [2.40039,3.60938,1.6],
+    [4.00098,3.60938,1.6],
+    [5.60059,3.60938,1.6],
+    [-5.59961,1.80859,1.6],
+    [-3.99902,1.80859,1.6],
+    [-2.39941,1.80859,1.6],
+    [-0.799805,1.80859,1.6],
+    [0.800781,1.80859,1.6],
+    [2.40039,1.80859,1.6],
+    [4.00098,1.80859,1.6],
+    [5.60059,1.80859,1.6],
+    [-5.59961,0.00976563,1.6],
+    [-3.99902,0.00976563,1.6],
+    [-2.39941,0.00976563,1.6],
+    [-0.799805,0.00976563,1.6],
+    [0.800781,0.00976563,1.6],
+    [2.40039,0.00976563,1.6],
+    [4.00098,0.00976563,1.6],
+    [5.60059,0.00976563,1.6],
+    [-5.59961,-1.79102,1.6],
+    [-3.99902,-1.79102,1.6],
+    [-2.39941,-1.79102,1.6],
+    [-0.799805,-1.79102,1.6],
+    [0.800781,-1.79102,1.6],
+    [2.40039,-1.79102,1.6],
+    [4.00098,-1.79102,1.6],
+    [5.60059,-1.79102,1.6],
+    [-5.59961,-3.58984,1.6],
+    [-3.99902,-3.58984,1.6],
+    [-2.39941,-3.58984,1.6],
+    [-0.799805,-3.58984,1.6],
+    [0.800781,-3.58984,1.6],
+    [2.40039,-3.58984,1.6],
+    [4.00098,-3.58984,1.6],
+    [5.60059,-3.58984,2.1]
 ];
 
 // Small storage area placement position offsets.

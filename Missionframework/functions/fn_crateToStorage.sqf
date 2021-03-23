@@ -40,7 +40,7 @@ if (!isNull _storage) then {
     if (_crates_count >= (count _storage_positions)) exitWith {if (!isDedicated) then {[] spawn {hint localize "STR_BOX_CANTSTORE"; sleep 2; hintSilent "";};};};
 
     // Store crate
-    _crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
+    _crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, ((_storage_positions select _crates_count) select 2) + _height]];
     [_crate, false] remoteExec ["enableRopeAttach"];
     if(KP_liberation_ace) then {[_crate, false, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 

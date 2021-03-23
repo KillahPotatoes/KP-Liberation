@@ -165,13 +165,9 @@ gain_resources = compileFinal "
 ";
 
 
-
-
 KP_liberation_supplies_global = 1;
 KP_liberation_ammo_global = 1;
 KP_liberation_fuel_global = 1;
-
-
 
 
 addMissionEventHandler ['EntityKilled',{
@@ -183,63 +179,11 @@ addMissionEventHandler ['EntityKilled',{
 }];
 
 
-
-
 addMissionEventHandler ['HandleDisconnect',{
 	_unit = _this select 0;
 	_hs_unconscious = _unit getVariable ['ACE_isUnconscious', false];
 	if (_hs_unconscious == true) then { _unit spawn lose_resources; };
 }];
-
-
-
-
-despawn_far_stuff = compileFinal "
-	
-	{
-		_y = _x;
-		
-		if ( (side _y == opfor) || (side _y == civilian) ) then {
-			_delete = true;
-			
-			{
-				if (_y distance _x < 3000) then {
-					_delete = false;
-				};
-			} forEach allPlayers;
-			
-			if (_delete) then {
-				deleteVehicle _y; sleep 1;
-			};
-			
-		};
-	} forEach vehicles; 
-	
-	
-	{
-		_y = _x;
-		
-		if ( (side _y == opfor) || (side _y == civilian) ) then {
-			_delete = true;
-			
-			{
-				if ((leader _y) distance _x < 3000) then {
-					_delete = false;
-				};
-			} forEach allPlayers;
-			
-			if (_delete) then {
-				{
-					deleteVehicle _x;
-				} forEach units _y;
-				deleteGroup _y; sleep 1;
-			};
-			
-		};
-	} forEach allGroups;
-	
-";
-
 
 
 
@@ -256,7 +200,7 @@ if (isServer) then {
 /*
 
 
-Wenn wieder ständig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
+Wenn wieder stï¿½ndig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
 [] spawn despawn_far_stuff;
 
 
