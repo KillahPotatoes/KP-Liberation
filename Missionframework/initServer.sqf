@@ -243,18 +243,20 @@ despawn_far_stuff = compileFinal "
 
 
 
-/* 
-
 if (isServer) then {
 	while {true} do {
-		
-		sleep 300;
-		
+		[]execVM "MilSimUnited\ieds.sqf" ;
+		sleep 60;
 	};
 };
 
 
-Wenn wieder ständig die Unitcap erreicht wird, wie auf Isala Abramia, dann in den Loop mit aufnehmen: 
+
+
+/*
+
+
+Wenn wieder ständig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
 [] spawn despawn_far_stuff;
 
 
@@ -262,7 +264,6 @@ Battelgroup Spawn zur Strafe
 if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
 	['', false] spawn spawn_battlegroup;
 };
-
 */
 
 
