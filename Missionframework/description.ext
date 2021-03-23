@@ -20,8 +20,8 @@
 // Gametype and min/max players
 class Header {
     gameType = "CTI";
-    minPlayers = 1;
-    maxPlayers = 34;
+    minPlayers = 0;
+    maxPlayers = 64;
 };
 
 // Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
@@ -37,10 +37,11 @@ briefingName = $STR_MISSION_TITLE;
 
 // Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
-overviewPicture = "res\lib.paa";
+overviewPicture = "res\MilSimUnited.paa";
 
 // Text to be displayed below the overviewPicture on the mission selection screen
-overviewText = "www.killahpotatoes.de";
+// overviewText = "www.killahpotatoes.de";
+overviewText = "MilSim United";
 
 
 /*
@@ -53,10 +54,11 @@ onLoadName = $STR_MISSION_TITLE;
 
 // You can define a picture to be shown while the mission is loaded.
 // The path is relative to the mission folder.
-loadScreen = "res\lib.paa";
+loadScreen = "res\MilSimUnited.paa";
 
 // Displays a message while the mission is loading below the loadScreen picture.
-onLoadMission = "www.killahpotatoes.de";
+// onLoadMission = "www.killahpotatoes.de";
+onLoadMission = "MilSim United";
 
 
 /*
@@ -111,7 +113,7 @@ respawnOnStart = 0;
 corpseManagerMode = 1;
 
 // Corpse limit before which (<=) corpseRemovalMaxTime applies and after which (>) corpseRemovalMinTime applies.
-corpseLimit = 50;
+corpseLimit = 25;
 
 // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is reached.
 corpseRemovalMinTime = 600;
@@ -127,16 +129,16 @@ corpseRemovalMaxTime = 3600;
 wreckManagerMode = 1;
 
 // Vehicle wreck limit before which (<=) wreckRemovalMaxTime applies and after which (>) wreckRemovalMinTime applies.
-wreckLimit = 20;
+wreckLimit = 16;
 
 // Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
 wreckRemovalMinTime = 1200;
 
 // Maximum time a wreck can remain on the ground if total number of wrecks is equal or under wreckLimit.
-wreckRemovalMaxTime = 7200;
+wreckRemovalMaxTime = 3600;
 
 // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
-minPlayerDistance = 1000;
+minPlayerDistance = 600;
 
 
 /*
