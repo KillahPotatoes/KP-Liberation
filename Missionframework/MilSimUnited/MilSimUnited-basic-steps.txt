@@ -1,0 +1,90 @@
+
+
+
+
+
+Anpassungen für eine neues Liberation
+------------------------------------------------------------------------------------------
+
+
+initServer.sqf: Resourcen-Funktionen
+
+
+scripts\server\remotecall\sector_liberated_remote_call.sqf
+if (isServer) then { [] spawn gain_resources; };
+
+
+init.sqf: 
+Klassen-Anpassungen für z.B. ACE-Cargo 
+Advanced Towing und Sling Loading Config
+
+
+kp_liberation_config.sqf
+
+
+ui\mission_params.hpp
+
+
+scripts\server\base\huron_manager.sqf: auskommentieren
+
+
+presets\blufor\custom.sqf
+
+
+scripts\client\actions\do_recycle.sqf
+isKindOf "Car" etc. Recycle-Werte
+
+
+stringtable.xml: "Tier 1- 4" als Fahrzeugbezeichnungen
+
+
+ui/liberation_build.hpp: austauschen für "Tier 1- 4" Fahrzeug-Icons
+
+
+scripts/client/build/do_build_fob.sqf:
+_minfobdist = 1;
+_minsectordist = 1;
+
+
+initPlayerLocal.sqf: Regeln und Situation
+
+
+Logo ersetzen: 
+Statt "res/lib.paa" und "res/splash_libe2.paa" muss "res/MilSimUnited.paa" aufgerufen werden
+	Dateiaufrufe ändern in:
+		\description.ext
+		ui\liberation_titles.hpp
+		ui\liberation_menu.hpp
+		
+		
+functions\curator\fn_initCuratorHandlers.sqf: Komplett auskommentieren
+
+
+
+
+
+
+Console
+------------------------------------------------------------------------------------------
+[] spawn gain_resources;
+[] spawn lose_resources;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
