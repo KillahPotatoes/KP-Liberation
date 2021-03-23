@@ -106,6 +106,7 @@ air_vehicles = [
     ["RHS_Mi8AMT_vdv",1200,0,1800],
     ["RHS_CH_47F",1400,300,1800],
     ["rhsusf_CH53e_USMC_cargo",2000,0,2000],
+    ["RHS_C130J",2000,0,2000],
     ["RHS_MELB_AH6M",800,1000,800],
     ["RHS_UH1Y_d",800,1000,800],
     ["RHS_Mi8mt_vdv",1200,1000,1200],
@@ -130,7 +131,7 @@ static_vehicles = [
 buildings = [
     ["Flag_UNO_F",0,0,0],
     ["Flag_NATO_F",0,0,0],
-	  ["BWA3_Flag_Germany",0,0,0],
+	["BWA3_Flag_Germany",0,0,0],
     ["rhs_Flag_Russia_F",0,0,0],
     ["Flag_UK_F",0,0,0],
     ["Flag_US_F",0,0,0],
@@ -170,8 +171,10 @@ support_vehicles = [
 	["Box_NATO_Equip_F",0,0,0],
     ["ACE_Wheel",0,0,0],
     ["ACE_Track",0,0,0],
-    ["B_Slingload_01_Fuel_F",250,0,1000],										// Huron Fuel
-    ["B_Slingload_01_Ammo_F",250,1000,0]									// Huron Ammo
+    ["B_Slingload_01_Fuel_F",250,0,1000],
+    ["B_Slingload_01_Ammo_F",250,1000,0],
+    ["rhsusf_M978A4_usarmy_d",150,0,300],
+    ["RHS_Ural_Fuel_MSV_01",150,0,300]
 ];
 
 /*
