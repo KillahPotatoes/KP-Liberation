@@ -55,7 +55,7 @@ class RscTitles {
             w = 0.35 * safezoneW;
             y = 0.2 * safezoneH + safezoneY;
             h = 0.6 * safezoneH;
-            text = "res\splash_libe2.paa";
+            text = "res\MilSimUnited.paa";
         };
         class VersionLabel {
             idc = -1;
