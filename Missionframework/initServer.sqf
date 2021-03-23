@@ -194,6 +194,57 @@ addMissionEventHandler ['HandleDisconnect',{
 
 
 
+despawn_far_stuff = compileFinal "
+	
+	{
+		_y = _x;
+		
+		if ( (side _y == opfor) || (side _y == civilian) ) then {
+			_delete = true;
+			
+			{
+				if (_y distance _x < 3000) then {
+					_delete = false;
+				};
+			} forEach allPlayers;
+			
+			if (_delete) then {
+				deleteVehicle _y; sleep 1;
+			};
+			
+		};
+	} forEach vehicles; 
+	
+	
+	{
+		_y = _x;
+		
+		if ( (side _y == opfor) || (side _y == civilian) ) then {
+			_delete = true;
+			
+			{
+				if ((leader _y) distance _x < 3000) then {
+					_delete = false;
+				};
+			} forEach allPlayers;
+			
+			if (_delete) then {
+				{
+					deleteVehicle _x;
+				} forEach units _y;
+				deleteGroup _y; sleep 1;
+			};
+			
+		};
+	} forEach allGroups;
+	
+";
+
+
+
+
+/* 
+
 if (isServer) then {
 	while {true} do {
 		
@@ -203,12 +254,15 @@ if (isServer) then {
 };
 
 
+Wenn wieder ständig die Unitcap erreicht wird, wie auf Isala Abramia, dann in den Loop mit aufnehmen: 
+[] spawn despawn_far_stuff;
 
 
-/* Battelgroup Spawn zur Strafe
+Battelgroup Spawn zur Strafe
 if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
 	['', false] spawn spawn_battlegroup;
 };
+
 */
 
 
