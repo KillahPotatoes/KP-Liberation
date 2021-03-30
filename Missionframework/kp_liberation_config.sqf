@@ -205,7 +205,7 @@ GRLIB_color_enemy_bright = "ColorRED";                                  // Enemy
 GRLIB_fob_range = 500;                                                  // Build range around the main FOB building.
 GRLIB_halo_altitude = 5000;                                             // Altitude in metres for the HALO jump.
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
-GRLIB_secondary_objective_impact = 0.8;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
+GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
@@ -220,8 +220,8 @@ GRLIB_surrender_chance = 80;                                            // Chanc
 GRLIB_civilians_amount = 8;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
 
-GRLIB_blufor_cap = 40;                                                 // Cap for BLUFOR.
-GRLIB_sector_cap = 70;                                                 // Cap for sector defenders.
+GRLIB_blufor_cap = 64;                                                 // Cap for BLUFOR.
+GRLIB_sector_cap = 140;                                                 // Cap for sector defenders.
 GRLIB_battlegroup_cap = 70;                                            // Cap for enemy battlegroups.
 GRLIB_patrol_cap = 70;                                                 // Cap for enemy patrols.
 
@@ -1036,7 +1036,7 @@ KPLIB_transportConfigs = [
     ["rhsusf_CH53E_USMC", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
 	["rhsusf_CH53e_USMC_cargo", -11.0, [0,7,-3.2], [0,7,-2.0], [0,5.5,-3.2], [0,5.5,-2.0], [0,4,-3.2], [0,4,-2.0], [0,2.5,-3.2], [0,2.5,-2.0], [0,1.0,-3.2], [0,1.0,-2.0], [0,-0.5,-3.2], [0,-0.5,-2.0]],
 	["RHS_Mi8AMT_vdv", -8, [0.4,3.5,-1.2], [0.4,1.8,-1.2], [-0.2,0.1,-1.2]],
-	["RHS_Mi8mt_vdv", -8, [0.4,3.5,-1.7], [0.4,1.8,-1.7], [-0.2,0.1,-1.7]],
+	["RHS_Mi8MTV3_heavy_vdv", -8, [0.4,3.5,-1.7], [0.4,1.8,-1.7], [-0.2,0.1,-1.7]],
 	["rhsusf_M1078A1P2_B_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
     ["rhsusf_M1078A1P2_B_D_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
     ["rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy", -5.0, [0,-0.2,0.45], [0,-1.9,0.45]],
