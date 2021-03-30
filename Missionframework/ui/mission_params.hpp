@@ -291,7 +291,7 @@ class Params {
         title = $STR_PARAM_DELAY_DESPAWN_MAX;
         values[] = {0, 5, 10, 15, 20, 25, 30};
         texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
-        default = 0;
+        default = 5;
     };
     class CommanderZeus {
         title = $STR_PARAM_COMMANDERZEUS;
