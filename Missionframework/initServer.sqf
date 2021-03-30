@@ -3,7 +3,10 @@
 
 
 hs_MPhint = { hint _this };
-
+/* USE:
+_hs_hint = format['_crate: %1', typeOf _crate];
+[_hs_hint, 'hs_MPhint'] call BIS_fnc_mp;
+*/
 
 
 
@@ -194,50 +197,53 @@ addMissionEventHandler ['HandleDisconnect',{
 
 
 
+GRLIB_secondary_in_progress = -1;
+
 despawn_far_stuff = compileFinal "
 	
-	{
-		_y = _x;
-		
-		if ( (side _y == opfor) || (side _y == civilian) ) then {
-			_delete = true;
+	if (GRLIB_secondary_in_progress == -1) then {
+		{
+			_y = _x;
 			
-			{
-				if (_y distance _x < 3000) then {
-					_delete = false;
-				};
-			} forEach allPlayers;
-			
-			if (_delete) then {
-				deleteVehicle _y; sleep 1;
-			};
-			
-		};
-	} forEach vehicles; 
-	
-	
-	{
-		_y = _x;
-		
-		if ( (side _y == opfor) || (side _y == civilian) ) then {
-			_delete = true;
-			
-			{
-				if ((leader _y) distance _x < 3000) then {
-					_delete = false;
-				};
-			} forEach allPlayers;
-			
-			if (_delete) then {
+			if ( (side _y == opfor) || (side _y == civilian) ) then {
+				_delete = true;
+				
 				{
-					deleteVehicle _x;
-				} forEach units _y;
-				deleteGroup _y; sleep 1;
+					if (_y distance _x < 3000) then {
+						_delete = false;
+					};
+				} forEach allPlayers;
+				
+				if (_delete) then {
+					deleteVehicle _y; sleep 1;
+				};
+				
 			};
+		} forEach vehicles; 
+		
+		
+		{
+			_y = _x;
 			
-		};
-	} forEach allGroups;
-	
+			if ( (side _y == opfor) || (side _y == civilian) ) then {
+				_delete = true;
+				
+				{
+					if ((leader _y) distance _x < 3000) then {
+						_delete = false;
+					};
+				} forEach allPlayers;
+				
+				if (_delete) then {
+					{
+						deleteVehicle _x;
+					} forEach units _y;
+					deleteGroup _y; sleep 1;
+				};
+				
+			};
+		} forEach allGroups;
+	};
 ";
 
 
@@ -245,8 +251,13 @@ despawn_far_stuff = compileFinal "
 
 if (isServer) then {
 	while {true} do {
+		
+		[] spawn despawn_far_stuff;
+		sleep 30;
+		
 		[]execVM "MilSimUnited\ieds.sqf" ;
-		sleep 60;
+		sleep 30;
+		
 	};
 };
 
