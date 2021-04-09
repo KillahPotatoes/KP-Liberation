@@ -252,11 +252,8 @@ despawn_far_stuff = compileFinal "
 if (isServer) then {
 	while {true} do {
 		
-		[] spawn despawn_far_stuff;
-		sleep 30;
-		
 		[]execVM "MilSimUnited\ieds.sqf" ;
-		sleep 30;
+		sleep 60;
 		
 	};
 };
@@ -267,7 +264,11 @@ if (isServer) then {
 /*
 
 
-Wenn wieder st‰ndig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
+[] spawn despawn_far_stuff;
+sleep 30;
+
+
+Wenn wieder st√§ndig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
 [] spawn despawn_far_stuff;
 
 
