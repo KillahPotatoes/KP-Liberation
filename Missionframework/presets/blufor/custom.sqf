@@ -94,7 +94,8 @@ heavy_vehicles = [
     ["rhsusf_m1a2sep1d_usarmy",2000,2000,2000],
     ["rhs_t14_tv",2000,2100,2000],
     ["RHS_M119_WD",4000,4000,2000],
-    ["rhs_D30_msv",4000,4500,2000]
+    ["rhs_D30_msv",4000,4500,2000],
+    ["B_Truck_01_transport_F",2000,0,2000]
 ];
 
 
@@ -109,7 +110,8 @@ air_vehicles = [
     ["RHS_C130J",2000,0,2000],
     ["RHS_MELB_AH6M",800,1000,800],
     ["RHS_UH1Y_d",800,1000,800],
-    ["RHS_Mi8mt_vdv",1200,1000,1200],
+    ["RHS_UH60M_ESSS",1600,2000,1600],
+    ["RHS_Mi8MTV3_heavy_vdv",1400,1600,1400],
     ["BWA3_Tiger_RMK_Heavy",2000,2000,2000],
     ["RHS_AH1Z_wd",2000,2300,2000],
     ["RHS_AH64D_wd",2000,2600,2000],

@@ -3,7 +3,10 @@
 
 
 hs_MPhint = { hint _this };
-
+/* USE:
+_hs_hint = format['_crate: %1', typeOf _crate];
+[_hs_hint, 'hs_MPhint'] call BIS_fnc_mp;
+*/
 
 
 
@@ -194,10 +197,63 @@ addMissionEventHandler ['HandleDisconnect',{
 
 
 
+GRLIB_secondary_in_progress = -1;
+
+despawn_far_stuff = compileFinal "
+	
+	if (GRLIB_secondary_in_progress == -1) then {
+		{
+			_y = _x;
+			
+			if ( (side _y == opfor) || (side _y == civilian) ) then {
+				_delete = true;
+				
+				{
+					if (_y distance _x < 3000) then {
+						_delete = false;
+					};
+				} forEach allPlayers;
+				
+				if (_delete) then {
+					deleteVehicle _y; sleep 1;
+				};
+				
+			};
+		} forEach vehicles; 
+		
+		
+		{
+			_y = _x;
+			
+			if ( (side _y == opfor) || (side _y == civilian) ) then {
+				_delete = true;
+				
+				{
+					if ((leader _y) distance _x < 3000) then {
+						_delete = false;
+					};
+				} forEach allPlayers;
+				
+				if (_delete) then {
+					{
+						deleteVehicle _x;
+					} forEach units _y;
+					deleteGroup _y; sleep 1;
+				};
+				
+			};
+		} forEach allGroups;
+	};
+";
+
+
+
+
 if (isServer) then {
 	while {true} do {
 		
-		sleep 300;
+		[]execVM "MilSimUnited\ieds.sqf" ;
+		sleep 60;
 		
 	};
 };
@@ -205,7 +261,18 @@ if (isServer) then {
 
 
 
-/* Battelgroup Spawn zur Strafe
+/*
+
+
+[] spawn despawn_far_stuff;
+sleep 30;
+
+
+Wenn wieder ständig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
+[] spawn despawn_far_stuff;
+
+
+Battelgroup Spawn zur Strafe
 if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
 	['', false] spawn spawn_battlegroup;
 };

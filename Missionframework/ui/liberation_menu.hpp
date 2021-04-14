@@ -16,7 +16,7 @@ class liberation_menu {
         w = 0.25 * safezoneW;
         y = 0.15 * safezoneH + safezoneY;
         h = 0.43 * safezoneH;
-        text = "res\splash_libe2.paa";
+        text = "res\MilSimUnited.paa";
     };
     class Start {
         idc = 321;
