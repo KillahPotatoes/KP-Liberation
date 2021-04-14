@@ -1,8 +1,4 @@
-
-
-
 waitUntil {!isNull player};
-
 
 _rules = '
 <br></br> 
@@ -35,31 +31,39 @@ An invite link can be found in the Teamspeak channel description.
 <br></br>
 ';
 
-
 _situation = '
 DE <br></br> 
 <br></br> 
-Ein neues Militärbündnis ehemaliger Schwellenländer (CSAT) versucht, sich den Zugang zu Ressourcen mit Gewalt zu sichern. <br></br> 
-Dadurch entstehen Konflikte mit den alten Machtblöcken Russland und NATO, die in diesem Fall kooperieren. <br></br> 
-In der nahen Zukunft verwenden kleinere Armeen zunehmend die Ausrüstung ihrer größeren Verbündeten, um sich Eigenentwicklungen zu sparen und einfacher zusammen arbeiten zu können. <br></br> 
-<br></br> 
+Unser Gegner ist eine gut ausgerüstete Miliz. Diese hat hier in Lythium Fuss gefasst und kämpft erbittert um die Kontrolle im Gebiet.</br> 
+Der Feind verfügt über umlackierte, russische Fahrzeuge und besitzt starke Luftabwehr. Allerdings verfügt sie über keine Luftwaffe, was uns einen entscheidenden Vorteil verschaffen könnte.</br></br>
+Achten Sie aber auf IEDs auf den Strassen, diese sind eine ständige Bedrohung!<br></br>
+
+Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurden von uns einige Änderungen vorgenommen, so dass das Gameplay mehr MilSim Charakter erhält. Wichtigste Punkte:</br>
+- Ziel ist es, die komplette Karte einzunehmen</br>
+- Für jeden eingenommenen Punkt, werden Resssourcen gutgeschrieben</br>
+- Die Ressourcen können von Admins und trusted Spielern für Fahrzeuge ausgegeben werden</br>
+- Jeder Respawn kostet Ressourcen (Wartet also wenn immer möglich auf Hilfe)
+</br></br>
 <br></br> 
 EN <br></br> 
 <br></br> 
-A new military alliance of emerging economies (CSAT) tries to secure access to resources by violence. <br></br> 
-This creates conflicts with the old power blocks Russia an NATO, who cooperate in this case. <br></br> 
-In the near future smaller armies increasingly use equipment of their bigger allies, to save on custom development and simplify cooperation. <br></br> 
+Our opponent is a well-equipped militia. This militia has gained a foothold here in Lythium and fights fiercely for control of the area.</br>
+The enemy has repainted Russian vehicles and has strong air defenses. However, it has no air force, which could give us a decisive advantage.</br>
+Watch out for IEDs on the roads though, they are a constant threat!</br></br>
+
+The "Liberation" mode from the Killah Potatoes serves as the basis. However, we have made some changes so that the gameplay has more MilSim character. Most important points:</br> 
+- The goal is to capture the entire map.</br> 
+- For each captured point, resources are credited.</br> 
+- Resources can be spent on vehicles by admins and trusted players.</br> 
+- Every respawn costs resources (so wait for help whenever possible)</br> 
+- There are standard loadouts in the arsenal, but they can be customised
+
 <br></br> 
 <br></br>
 ';
 
-
 player createDiaryRecord ['Diary', ['Regeln / Rules', _rules], taskNull, '', false];
-
 player createDiaryRecord ['Diary', ['Situation', _situation], taskNull, '', false];
-
-
-
 
 sleep 60;
 hint format['
@@ -75,30 +79,19 @@ Open map, read rules! \n
 TeamSpeak Server: kampfverband-13.de \n
 '];
 
-
-
-
-
 while {true} do{
-		
 	sleep 300;
-	
 	_hs_time = systemTime;
 	
-	if ( ((_hs_time select 3) >= 16) && ((_hs_time select 3) < 17) && ((_hs_time select 4) >= 30) ) then {
-		hint format['Server restart 17:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
-	}else{
-		if ( ((_hs_time select 3) >= 4) && ((_hs_time select 3) < 5) && ((_hs_time select 4) >= 30) ) then {
-			hint format['Server restart 05:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
-		}		
+	if ( ((_hs_time select 3) == 19) &&  ((_hs_time select 4) <= 30) ) then {
+		hint format['Server restart 19:30 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
 	};
-	
+	if ( ((_hs_time select 3) == 3) && ((_hs_time select 4) <= 30) ) then {
+		hint format['Server restart 03:30 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
+	};
+	if ( ((_hs_time select 3) == 11) && ((_hs_time select 4) <= 30) ) then {
+		hint format['Server restart 11:30 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
+	};
 };
 
 // hint format['%1:%2', (_hs_time select 3), (_hs_time select 4)];
-
-
-
-
-
-
