@@ -4,29 +4,31 @@ _rules = '
 <br></br> 
 DE<br></br> 
 <br></br> 
-Respawn oder Disconnect, während man bewusstlos ist, kostet Ressourcen. <br></br> 
-Wann immer möglich, auf Rettung warten und versuchen, andere zu retten. <br></br> 
-<br></br> 
-Jeder Spieler muss mittels TFAR auf Teamspeak erreichbar sein. <br></br> 
-Teamspeak-Server-Nickname: kampfverband-13.de <br></br> 
-Jede Gruppe muss auf der Frequenz 42 erreichbar sein. <br></br> 
-<br></br> 
-Um Fahrzeug- und Baurechte zu bekommen, muss man jemanden mit bestehenden Rechten bitten, eine Empfehlung über Discord zu schreiben. <br></br> 
-Der Einladungslink steht in der Teamspeak Channel-Beschreibung. 
-<br></br> 
+Natürlich gelten hier wie auch auf dem Server die üblichen (Verhaltens)Regeln. Wir verzichten darauf, diese hier alle aufzuführen.</br>
+Einige Punkte sind aber vor allem spielerisch hervorzuheben:</br>
+- Spielt zusammen und versucht stets, ein gemeinsames Spiel zu ermöglichen</br>
+- Respawn oder Disconnect, während man bewusstlos ist, kostet Ressourcen -> Wartet also nach Möglichkeit immer auf Rettung</br>
+- Jeder Spieler muss mittels TFAR auf dem KV13-Teamspeak erreichbar sein</br>
+- Die Gruppen sprechen sich gegenseitig ab und schreiben ihre Frequenz auf den Kartenrand (50 ist normalerweise Zugfunk)</br>
+- Fahrzeug- und Baurechte erhält ihr nur mit einer Empfehlung. Mehr dazu im #recommendations Channel</br>
+- Wer fliegen möchte, muss einem Admin kurz zeigen, dass er Abheben und Landen kann, bevor die Rechte gegeben werden</br>
+- Nur signierte Mods aus dem Workshop oder unserem Repository nutzen</br>
+- Spass haben und lieb sein zueinander
+
 <br></br> 
 <br></br> 
 EN<br></br> 
 <br></br> 
-Respawn or disconnect while being unconscious costs resources. <br></br> 
-Whenever possible, wait for rescue and try to rescue others. <br></br> 
-<br></br> 
-Each player has to be available via TFAR on Teamspeak. <br></br> 
-Teamspeak server nickname: kampfverband-13.de <br></br> 
-Each group has to be available on frequency 42. <br></br> 
-<br></br> 
-To get vehicle and building privileges, you have to ask somebody with existing privileges to write a recommendation via Discord.<br></br> 
-An invite link can be found in the Teamspeak channel description. 
+Of course, the usual (behavioural) rules apply here as well as on the server. We refrain from listing them all here.</br>
+However, some points should be emphasised, especially from a gameplay point of view:</br>
+- Play together as a group.</br>
+- Respawning or disconnecting while unconscious costs resources -> always wait for rescue if possible.</br>
+- Every player must be reachable via TFAR on the KV13 teamspeak.</br>
+- The groups talk to each other and write their frequency on the edge of the card (LR50 is usually the platoon-frequency)</br>
+- You can only get vehicle- and building rights with a recommendation. More about this in the #recommendations channel</br>
+- Anyone who wants to fly must briefly show an admin that they can take off and land before the rights are given</br>
+- Only use signed mods from the workshop or our repository</br>
+- Have fun and be nice to each other
 <br></br> 
 <br></br>
 ';
