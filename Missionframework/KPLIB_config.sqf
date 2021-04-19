@@ -78,6 +78,7 @@ KPLIB_presetPlayer = 0;
     18 = CUP Chernarus Defense Force
     19 = CUP British Armed Forces (Desert)
     20 = CUP British Armed Forces (Woodland)
+    21 = RHS USAF (WoodlandS)
 */
 KPLIB_presetEnemy = 0;
 
