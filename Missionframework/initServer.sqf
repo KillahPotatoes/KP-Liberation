@@ -13,7 +13,7 @@ _hs_hint = format['_crate: %1', typeOf _crate];
 lose_resources = compileFinal "
 	
 	_price_s = 25;
-	_price_a = 13;
+	_price_a = 25;
 	_price_f = 25;
 	
 	_nearfob = [] call KPLIB_fnc_getNearestFob;
@@ -132,7 +132,7 @@ gain_resources = compileFinal "
 			if ( (_box_a > 0) && (_count_crates < _max_storage) ) then {
 				_crate = KP_liberation_ammo_crate createVehicle _pos;
 				_crate setMass 500;
-				_crate setVariable ['KP_liberation_crate_value', 50, true];
+				_crate setVariable ['KP_liberation_crate_value', 100, true];
 				if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ['ace_dragging_fnc_setCarryable'];};
 				[_crate] call KPLIB_fnc_addObjectInit;
 				 _crate attachTo [_x, [0, 1.5, 0]];
@@ -197,52 +197,57 @@ addMissionEventHandler ['HandleDisconnect',{
 
 
 
-GRLIB_secondary_in_progress = -1;
+hs_spawn_init = '';
+hs_spawn_aa = 'this addBackpack "B_Carryall_cbr"; this addWeapon "rhs_weap_fim92"; this addSecondaryWeaponItem "rhs_fim92_mag"; for "_i" from 1 to 2 do {this addItemToBackpack "rhs_fim92_mag";};';
 
-despawn_far_stuff = compileFinal "
+hs_spawn = compileFinal "
+
+	_headlessClients = entities 'HeadlessClient_F';
+	_humanPlayers = allPlayers - _headlessClients;
+	_count_players = count _humanPlayers;
 	
-	if (GRLIB_secondary_in_progress == -1) then {
-		{
-			_y = _x;
-			
-			if ( (side _y == opfor) || (side _y == civilian) ) then {
-				_delete = true;
-				
-				{
-					if (_y distance _x < 3000) then {
-						_delete = false;
-					};
-				} forEach allPlayers;
-				
-				if (_delete) then {
-					deleteVehicle _y; sleep 1;
-				};
-				
-			};
-		} forEach vehicles; 
+	if(_count_players > 0) then {
 		
+		_hs_randomizer = floor(random 10);
 		
-		{
-			_y = _x;
+		if( (_hs_randomizer < 2) && ((opfor countSide allGroups) < 140) ) then {
+			_player = selectRandom _humanPlayers;
+			_too_close = false;
 			
-			if ( (side _y == opfor) || (side _y == civilian) ) then {
-				_delete = true;
-				
-				{
-					if ((leader _y) distance _x < 3000) then {
-						_delete = false;
-					};
-				} forEach allPlayers;
-				
-				if (_delete) then {
-					{
-						deleteVehicle _x;
-					} forEach units _y;
-					deleteGroup _y; sleep 1;
+			_spawn_position = [ [ [getPos _player, 750] ], ['water'] ] call BIS_fnc_randomPos;
+
+			{
+				if (_spawn_position distance _x < 500) then {
+					_too_close = true;
 				};
+			} forEach allPlayers;
+			
+			if (_too_close == false) then {
+				_group_spawn = createGroup opfor;
 				
+				'LOP_ISTS_OPF_Infantry_AT' createUnit [_spawn_position, _group_spawn, hs_spawn_init, 0.2, 'private']; sleep 1;
+				'LOP_ISTS_OPF_Infantry_Rifleman_9' createUnit [_spawn_position, _group_spawn, hs_spawn_init+hs_spawn_aa, 0.2, 'private']; sleep 1;
+				'LOP_ISTS_OPF_Infantry_Marksman' createUnit [_spawn_position, _group_spawn, hs_spawn_init, 0.2, 'private']; sleep 1;
+				'LOP_ISTS_OPF_Infantry_AR_2' createUnit [_spawn_position, _group_spawn, hs_spawn_init, 0.2, 'private']; sleep 1;
+
+				_wp1_spawn = _group_spawn addWaypoint [getPosWorld _player, 100];
+				_wp1_spawn setwaypointtype 'MOVE';
+				_wp1_spawn setWaypointBehaviour 'AWARE';
+				_wp1_spawn setWaypointSpeed 'FULL';
+
+				_wp2_spawn = _group_spawn addWaypoint [getPosWorld _player, 400];
+
+				_wp3_spawn = _group_spawn addWaypoint [getPosWorld _player, 400];
+
+				_wp4_spawn = _group_spawn addWaypoint [getPosWorld _player, 400];
+
+				_wp5_spawn = _group_spawn addWaypoint [getPosWorld _player, 400];
+
+				_wp6_spawn = _group_spawn addWaypoint [getPosWorld _player, 400];
+				_wp6_spawn setWaypointStatements ['true', '{deleteVehicle _x} forEach thisList;'];
 			};
-		} forEach allGroups;
+		};
+		
 	};
 ";
 
@@ -252,7 +257,10 @@ despawn_far_stuff = compileFinal "
 if (isServer) then {
 	while {true} do {
 		
-		[]execVM "MilSimUnited\ieds.sqf" ;
+		[]execVM "MilSimUnited\ieds.sqf";
+		sleep 60;
+		
+		[] spawn hs_spawn;
 		sleep 60;
 		
 	};
@@ -260,23 +268,6 @@ if (isServer) then {
 
 
 
-
-/*
-
-
-[] spawn despawn_far_stuff;
-sleep 30;
-
-
-Wenn wieder ständig die Unitcap erreicht wird, wie auf Isla Abramia, dann in den Loop mit aufnehmen: 
-[] spawn despawn_far_stuff;
-
-
-Battelgroup Spawn zur Strafe
-if( !(GRLIB_all_fobs isEqualTo []) && (KP_liberation_supplies_global <= 0) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap) && (KP_liberation_ammo_global <= 0) && (KP_liberation_fuel_global <= 0) ) then {
-	['', false] spawn spawn_battlegroup;
-};
-*/
 
 
 
