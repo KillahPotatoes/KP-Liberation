@@ -61,6 +61,7 @@ switch (KPLIB_presetEnemy) do {
     case 18: {[] call compile preprocessFileLineNumbers "presets\enemies\cup_cdf.sqf";};
     case 19: {[] call compile preprocessFileLineNumbers "presets\enemies\cup_baf_desert.sqf";};
     case 20: {[] call compile preprocessFileLineNumbers "presets\enemies\cup_baf_woodland.sqf";};
+    case 21: {[] call compile preprocessFileLineNumbers "presets\enemies\rhs_usaf_wdl.sqf"}
     default  {[] call compile preprocessFileLineNumbers "presets\enemies\custom.sqf";};
 };
 
