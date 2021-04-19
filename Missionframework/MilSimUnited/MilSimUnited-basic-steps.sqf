@@ -64,7 +64,7 @@ functions\curator\fn_initCuratorHandlers.sqf: Komplett auskommentieren
 
 
 
-Useful nippets and console commands:
+Useful snippets and console commands:
 ------------------------------------------------------------------------------------------
 [] spawn gain_resources;
 [] spawn lose_resources;
@@ -151,7 +151,7 @@ openMap [true, true];
 
 
 
-Serverseitige Nachricht:
+// Serverseitige Nachricht:
 
 _hs_hint = format['0: %1 | 1: %2 | 2: %3',_nearfob select 0, _nearfob select 1, _nearfob select 2];
 OR

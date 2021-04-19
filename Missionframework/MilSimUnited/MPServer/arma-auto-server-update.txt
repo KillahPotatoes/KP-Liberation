@@ -1,0 +1,104 @@
+Immer eine halbe Stunde vor Serverrestart, wird folgende SteamCMD batch per Powershell ausgeführt:
+
+@NoPromptForPassword 1
+login 13_kampfverband XXXXX
+// Temporärer ModOrdner
+force_install_dir C:\MilSimTemp\
+// Mods welche geladen werden soll
+workshop_download_item  107410 333310405 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 450814997 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 1397683809 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 463939057 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 520618345 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 590203575 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 654816931 validate
+logoff
+login 13_kampfverband XXXXX
+workshop_download_item  107410 708250744 validate
+logoff
+// USW für alle Mods im Verzeichnis
+
+
+
+
+Dann, bei Serverrestart, wird das Restart Powershell ausgeführt:
+
+Stop-Process -Name arma3server_x64_MilSim*
+echo "Server und HCs beendet"
+Start-Sleep -s 5
+copy-item "C:\Arma3\A3Public\publicServer\Users\KV13" -destination C:\Arma3\A3Public\publicServer\ProfileBackups\KV13-$(Get-Date -format "yyyy_MM_dd_HH_mm_ss") -Recurse
+Remove-Item "C:\Arma3\A3Public\arma3server_x64_MilSim.exe"
+echo "Backup erstellt und Server-Exe gelöscht"
+Start-Sleep -s 5
+
+# Defines the '30 days old' (today's date minus 30)
+$age = (Get-Date).AddDays(-7)
+
+# Get all the files in the folder and subfolders | foreach file
+Get-ChildItem C:\Arma3\A3Public\publicServer\ProfileBackups\ -Recurse -File | foreach{
+    # if creationtime is 'le' (less or equal) than 30 days
+    if ($_.CreationTime -le $age){
+        Write-Output "Older than 7 days - $($_.name)"
+        # remove the item
+        Remove-Item $_.fullname -Force -Verbose
+    }else{
+        Write-Output "Less than 7 days old - $($_.name)"
+        # Do nothing
+    }
+}
+echo "Backups älter als 7 Tage gelöscht"
+Start-Sleep -s 5
+copy-item "C:\Arma3\A3Public\arma3server_x64.exe" -destination "C:\Arma3\A3Public\arma3server_x64_MilSim.exe"
+echo "Server-Exe erstellt"
+Start-Sleep -s 1
+echo "Geupdatete Steam-Mods verschieben aus Temp-Ordner"
+Start-Sleep -s 3
+start-process "C:\Users\KV13\Desktop\MilSimRestarts\move.bat" -Wait -NoNewWindow
+Start-Sleep -s 1
+echo "Mod-Ordner aktuell. A3S Repo builden:"
+Start-Sleep -s 5
+Java -jar ArmA3Sync.jar -BUILD "[KV13] MilSimPublic"
+echo "A3S Repo Build finished"
+Start-Sleep -s 5
+start-process "C:\Users\KV13\Desktop\PublicServer_2502.bat"
+Start-Sleep -s 5
+start-process "C:\Users\KV13\Desktop\PublicServer_2502_HC.bat"
+echo "Server gestartet"
+Start-Sleep -s 5
+
+
+
+
+
+In diesem PS-Script wird noch die batch "move.bat" ausgeführt, welche so aussieht:
+
+@echo off
+:: Move Downloaded Folders into GameServerDirectory
+robocopy C:\MilSimTemp\steamapps\workshop\content\107410 C:\Arma3\A3Public\Mods\ /E /purge /MT:4
+:: Move Keys
+for /f "tokens=*" %%D in ('dir /b /s /a:d "C:\Arma3\A3Public\Mods\*"') do (for /f "delims=" %%A in ('dir /s /b "%%D\*.bikey"') do copy "%%A" C:\Arma3\A3Public\Keys\)
+
+
+
+
+
+Drehbuch ist also:
+1) WS-Mods per SteamCMD updaten in einen Temp Ordner
+2) Bei Serverrestart Arma beenden
+3) Backup vom Spielstand machen
+4) Die aktuellen Mods aus dem Temp Ordner in die "produktive Umgebung" kopieren
+5) Alle Keys aus den Mods auf den Server kopieren
+6) Automatisch das A3S Repo builden (Erscheint nur als geupdated im A3S, wenn auch wirklich was geändert hat)
+7) Restart vom Server
