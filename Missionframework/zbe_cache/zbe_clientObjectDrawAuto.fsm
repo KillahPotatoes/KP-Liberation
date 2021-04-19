@@ -1,0 +1,166 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, zbe_clientObjectDraw">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-40.348839,-141.860458,49.651161,-91.860458,0.000000,"init"};
+item1[] = {"ready_",4,218,-167.674408,-71.511627,-77.674408,-21.511627,0.000000,"ready?"};
+item2[] = {"lets_go",2,250,-173.621063,12.372364,-83.621048,62.372364,0.000000,"lets go"};
+item3[] = {"low_fps_",4,4314,-287.400940,67.013428,-197.400940,117.013428,0.000000,"low fps?"};
+item4[] = {"lower_objectDraw",2,250,-292.347900,146.164780,-202.347870,196.164780,0.000000,"lower" \n "objectDrawDist"};
+item5[] = {"higher_fps_",4,218,-173.620911,71.960388,-83.620911,121.960388,0.000000,"higher fps?"};
+item6[] = {"upper_objectDraw",2,250,-176.589066,151.111725,-86.589050,201.111725,0.000000,"upper" \n "objectDrawDist"};
+item7[] = {"higher_than_allowed",4,218,-271.057495,228.868118,-108.523643,298.068298,0.000000,"higher than allowed?"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,3};
+link5[] = {4,5};
+link6[] = {4,7};
+link7[] = {5,6};
+link8[] = {6,3};
+link9[] = {6,5};
+link10[] = {6,7};
+link11[] = {7,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,9,6316128,1,-442.873993,156.923859,387.660034,31.384771,1032,613,1};
+window[] = {0,-1,-1,-1,-1,811,52,1492,52,1,1050};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "zbe_clientObjectDraw";
+  class States
+  {
+    /*%FSM<STATE "init">*/
+    class init
+    {
+      name = "init";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "ready_">*/
+        class ready_
+        {
+          priority = 0.000000;
+          to="lets_go";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"typeName allUnits == ""ARRAY"" && typeName playableUnits == ""ARRAY"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "lets_go">*/
+    class lets_go
+    {
+      name = "lets_go";
+      init = /*%FSM<STATEINIT""">*/"setObjectViewDistance zbe_aiCacheDist;" \n
+       "zbe_objectView = (zbe_aiCacheDist);"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "low_fps_">*/
+        class low_fps_
+        {
+          priority = 0.000000;
+          to="lower_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_fps < 20) && (zbe_objectView >= 150)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "lower_objectDraw">*/
+    class lower_objectDraw
+    {
+      name = "lower_objectDraw";
+      init = /*%FSM<STATEINIT""">*/"zbe_objectView = zbe_objectView - 1;" \n
+       "setObjectViewDistance zbe_objectView;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "higher_fps_">*/
+        class higher_fps_
+        {
+          priority = 0.000000;
+          to="upper_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_fps > 40) && (zbe_objectView < zbe_aiCacheDist)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "higher_than_allowed">*/
+        class higher_than_allowed
+        {
+          priority = 0.000000;
+          to="lower_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(zbe_objectView > zbe_aiCacheDist)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "low_fps_">*/
+        class low_fps_
+        {
+          priority = 0.000000;
+          to="lower_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_fps < 20) && (zbe_objectView >= 150)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "upper_objectDraw">*/
+    class upper_objectDraw
+    {
+      name = "upper_objectDraw";
+      init = /*%FSM<STATEINIT""">*/"zbe_objectView = zbe_objectView + 5;" \n
+       "setObjectViewDistance zbe_objectView;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "higher_fps_">*/
+        class higher_fps_
+        {
+          priority = 0.000000;
+          to="upper_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_fps > 40) && (zbe_objectView < zbe_aiCacheDist)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "higher_than_allowed">*/
+        class higher_than_allowed
+        {
+          priority = 0.000000;
+          to="lower_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(zbe_objectView > zbe_aiCacheDist)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "low_fps_">*/
+        class low_fps_
+        {
+          priority = 0.000000;
+          to="lower_objectDraw";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_fps < 20) && (zbe_objectView >= 150)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="init";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/
