@@ -209,46 +209,46 @@ GRLIB_secondary_objective_impact = 0.6;                                 // The p
 GRLIB_recycling_percentage = 1.0;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 60;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
-GRLIB_sector_size = 1000;                                               // Range to activate a sector.
+GRLIB_sector_size = 600;                                               // Range to activate a sector.
 GRLIB_capture_size = 100;                                               // Range to capture a sector.
-GRLIB_defended_buildingpos_part = 0.4;                                  // Multiplier for defenders in buildings.
-GRLIB_battlegroup_size = 9;                                             // Size of enemy battlegroups.
+GRLIB_defended_buildingpos_part = 0.3;                                  // Multiplier for defenders in buildings.
+GRLIB_battlegroup_size = 6;                                             // Size of enemy battlegroups.
 GRLIB_vulnerability_timer = 600;                                       // Time in seconds how long a captured sector is vulnerable to enemy troops.
-GRLIB_radiotower_size = 3000;                                           // Radio Tower scanning range.
+GRLIB_radiotower_size = 1200;                                           // Radio Tower scanning range.
 GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
-GRLIB_civilians_amount = 8;                                            // Civilian count multiplier.
+GRLIB_civilians_amount = 6;                                            // Civilian count multiplier.
 GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
 
-GRLIB_blufor_cap = 64;                                                 // Cap for BLUFOR.
-GRLIB_sector_cap = 140;                                                 // Cap for sector defenders.
-GRLIB_battlegroup_cap = 70;                                            // Cap for enemy battlegroups.
-GRLIB_patrol_cap = 70;                                                 // Cap for enemy patrols.
+GRLIB_blufor_cap = 100;                                                 // Cap for BLUFOR.
+GRLIB_sector_cap = 150;                                                 // Cap for sector defenders.
+GRLIB_battlegroup_cap = 50;                                            // Cap for enemy battlegroups.
+GRLIB_patrol_cap = 50;                                                 // Cap for enemy patrols.
 
 KP_liberation_cr_kill_penalty = 5;                                      // Civil Reputation penalty for killing a civilian.
 KP_liberation_cr_building_penalty = 5;                                  // Civil Reputation penalty for destroying/damaging a building.
 KP_liberation_cr_vehicle_penalty = 2;                                   // Civil Reputation penalty for stealing a civilian vehicle.
-KP_liberation_cr_resistance_penalty = 3;                                // Civil Reputation penalty for killing a friendly resistance soldier.
+KP_liberation_cr_resistance_penalty = 5;                                // Civil Reputation penalty for killing a friendly resistance soldier.
 KP_liberation_cr_sector_gain = 0;                                       // Civil Reputation gain for liberate a sector.
-KP_liberation_cr_wounded_chance = 50;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
+KP_liberation_cr_wounded_chance = 80;                                    // Chance (0-100) that there are wounded civilians right after capturing a sector.
 KP_liberation_cr_wounded_gain = 3;                                      // Civil Reputation gain for providing medical assistance for wounded civilians.
 
 KP_liberation_civinfo_min = 1800;                                       // Civil Informant minimum spawn time. (seconds)
 KP_liberation_civinfo_max = 3600;                                       // Civil Informant maximum spawn time. (seconds)
 KP_liberation_civinfo_chance = 80;                                      // Civil Informant spawn chance. (0-100)
 KP_liberation_civinfo_intel = 8;                                        // Civil Informant intel amount.
-KP_liberation_civinfo_duration = 3600;                                  // Civil Informant staytime until despawning. (seconds)
-KP_liberation_civinfo_task_chance = 25;                                 // Chance (0-100) that the delivered informant will spawn a time critical task.
-KP_liberation_civinfo_task_duration = 3600;                             // Duration until the task will despawn if no player is near. (seconds)
+KP_liberation_civinfo_duration = 7200;                                  // Civil Informant staytime until despawning. (seconds)
+KP_liberation_civinfo_task_chance = 8;                                 // Chance (0-100) that the delivered informant will spawn a time critical task.
+KP_liberation_civinfo_task_duration = 7200;                             // Duration until the task will despawn if no player is near. (seconds)
 
-KP_liberation_convoy_ambush_chance = 7;                                 // Chance that a logistic convoy will be ambushed, when civil reputation is low.
-KP_liberation_convoy_ambush_duration = 1800;                            // Duration of the convoy ambush event. (seconds)
+KP_liberation_convoy_ambush_chance = 8;                                 // Chance that a logistic convoy will be ambushed, when civil reputation is low.
+KP_liberation_convoy_ambush_duration = 7200;                            // Duration of the convoy ambush event. (seconds)
 
-KP_liberation_resistance_tier2 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
-KP_liberation_resistance_tier3 = 70;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
-KP_liberation_resistance_at_chance = 40;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
+KP_liberation_resistance_tier2 = 20;                                    // At which strength (0-100) the guerilla forces will be at tier 2?
+KP_liberation_resistance_tier3 = 30;                                    // At which strength (0-100) the guerilla forces will be at tier 3?
+KP_liberation_resistance_at_chance = 100;                                // Chance that a guerilla unit has a RPG. (tier 2 and 3)
 KP_liberation_resistance_sector_chance = 50;                            // Chance that a guerilla squad will join an ongoing sector attack.
-KP_liberation_resistance_ambush_chance = 50;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
+KP_liberation_resistance_ambush_chance = 100;                            // Chance that some guerilla units will spawn in blufor sectors for an ambush, if reputation is low.
 
 // Array of worldName values.
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
@@ -260,7 +260,7 @@ KP_liberation_battlegroup_clearance = [
 The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
 even if they are not in the commander slot. */
 KP_liberation_commander_actions = [
-	"76561197993044168",
+	"76561197993044168", // Huber Sepp
 	"76561198004905141",
 	"76561198091902766",
 	"76561198046297709"
@@ -377,6 +377,15 @@ blacklisted_from_arsenal = [
 	"H_HelmetSpecO_ocamo",
 	"H_HelmetLeaderO_ocamo",
 	"H_HelmetLeaderO_oucamo",
+	"H_HelmetCrew_O",
+	"H_ParadeDressCap_01_CSAT_F",
+	"CSAT_helmet_blue",
+	"CSAT_helmet_EMR",
+	"CSAT_helmet_Green",
+	"CSAT_helmet_khaki",
+	"CSAT_helmet_mtp",
+	"CSAT_helmet_TigerJ",
+	"CSAT_helmet_Type07U",
 	"H_MilCap_ocamo",
 	"H_PilotHelmetFighter_O",
 	"H_HelmetO_ocamo",
@@ -446,6 +455,8 @@ blacklisted_from_arsenal = [
 	"launch_B_Titan_short_tna_F",
 	"launch_I_Titan_eaf_F",
 	"launch_B_Titan_olive_F",
+	"ace_csw_staticATCarry",
+	"ace_csw_staticAACarry",
 	"Titan_AA",
 	"Titan_AT",
 	"Titan_AP",
@@ -495,6 +506,9 @@ blacklisted_from_arsenal = [
 	"BWA3_MP7",
 	"BWA3_40Rnd_46x30_MP7",
 	"BWA3_40Rnd_46x30_MP7_SD",
+	"rhs_weap_savz61_folded",
+	"rhsgref_10rnd_765x17_vz61",
+	"rhsgref_20rnd_765x17_vz61",
 	"optic_Nightstalker",
 	"optic_tws",
 	"optic_tws_mg",
