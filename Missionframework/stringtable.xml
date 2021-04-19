@@ -46,7 +46,7 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>CTI 34 KP Liberation v0.96.7a</Original>
+            <Original>CTI 64 KP Liberation v0.96.7a</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.7a</Original>
@@ -4774,9 +4774,9 @@
 
         <!-- English adaptations in v0.95, need translations. -->
         <Key ID="STR_MISSION_DESCRIPTION">
-            <Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
+            <Original>YOU MUST be connected to TeamSpeak Server: kampfverband-13.de. Ressources are lost if you disconnect or respawn while unconscious.</Original>
             <French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Altis de l'oppression de l'OPFOR.</French>
-            <German>Befreie das Gebiet von der feindlichen Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+            <German>DU MUSST auf folgendem TeamSpeak Server sein: kampfverband-13.de. Ressourcen gehen verloren, wenn man bewusstlos disconnected oder respawnt.</German>
             <Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
             <Russian>С помощью сил "свободы" и "демократии" вы должны освободить регион от угнетения OPFOR.</Russian>
             <Italian>Libera la regione dall'oppressione nemica! La strategia è la chiave! Buona fortuna soldati.</Italian>
