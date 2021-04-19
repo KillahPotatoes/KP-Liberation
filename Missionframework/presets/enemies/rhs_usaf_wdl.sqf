@@ -1,48 +1,57 @@
 /*
+    File: rhs_usaf_wdl.sqf
+    Author: Dabako - https://github.com/dabako
+    Date: 2021-04-19
+    Last Update: 2021-04-19
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        United States Army Woodland enemy preset.
+
     Needed Mods:
-    - RHS USAF
+        - RHS USAF
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Enemy infantry classes
-opfor_officer = "rhsusf_army_ucp_officer";                                          // Officer
-opfor_squad_leader = "rhsusf_army_ucp_squadleader";                                 // Squad Leader
-opfor_team_leader = "rhsusf_army_ucp_teamleader";                                   // Team Leader
-opfor_sentry = "rhsusf_army_ucp_riflemanl";                                     	// Rifleman (Lite)
-opfor_rifleman = "rhsusf_army_ucp_rifleman_m4";                                     // Rifleman M4
-opfor_rpg = "rhsusf_army_ucp_maaws";                                          		// Rifleman (MAAWS)
-opfor_grenadier = "rhsusf_army_ucp_grenadier";                                     	// Grenadier
-opfor_machinegunner = "rhsusf_army_ucp_autorifleman";                               // Autorifleman
-opfor_heavygunner = "rhsusf_army_ucp_machinegunner";                                // Heavy Gunner
-opfor_marksman = "rhsusf_army_ucp_marksman";                                       	// Marksman
-opfor_sharpshooter = "rhsusf_army_ucp_m107";                                		// Sharpshooter
-opfor_sniper = "rhsusf_army_ucp_sniper";                                            // Sniper
-opfor_at = "rhsusf_army_ucp_javelin";                                            	// AT Specialist
-opfor_aa = "rhsusf_army_ucp_aa";                                            		// AA Specialist
-opfor_medic = "rhsusf_army_ucp_medic";                                              // Combat Life Saver
-opfor_engineer = "rhsusf_army_ucp_engineer";                                        // Engineer
-opfor_paratrooper = "O_soldier_PG_F";                                   			// Paratrooper
+KPLIB_o_officer = "rhsusf_army_ucp_officer";                                        // Officer
+KPLIB_o_squadLeader = "rhsusf_army_ucp_squadleader";                                // Squad Leader
+KPLIB_o_teamLeader = "rhsusf_army_ucp_teamleader";                                  // Team Leader
+KPLIB_o_sentry = "rhsusf_army_ucp_riflemanl";                                     	// Rifleman (Lite)
+KPLIB_o_rifleman = "rhsusf_army_ucp_rifleman_m4";                                   // Rifleman M4
+KPLIB_o_riflemanLAT = "rhsusf_army_ucp_maaws";                                      // Rifleman (MAAWS)
+KPLIB_o_grenadier = "rhsusf_army_ucp_grenadier";                                    // Grenadier
+KPLIB_o_machinegunner = "rhsusf_army_ucp_autorifleman";                             // Autorifleman
+KPLIB_o_heavyGunner = "rhsusf_army_ucp_machinegunner";                              // Heavy Gunner
+KPLIB_o_marksman = "rhsusf_army_ucp_marksman";                                      // Marksman
+KPLIB_o_sharpshooter = "rhsusf_army_ucp_m107";                                		// Sharpshooter
+KPLIB_o_sniper = "rhsusf_army_ucp_sniper";                                          // Sniper
+KPLIB_o_atSpecialist = "rhsusf_army_ucp_javelin";                                   // AT Specialist
+KPLIB_o_aaSpecialist = "rhsusf_army_ucp_aa";                                        // AA Specialist
+KPLIB_o_medic = "rhsusf_army_ucp_medic";                                            // Combat Life Saver
+KPLIB_o_engineer = "rhsusf_army_ucp_engineer";                                      // Engineer
+KPLIB_o_paratrooper = "O_soldier_PG_F";                                   			// Paratrooper
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "rhsusf_M1220_usarmy_wd";                                             	// M1220 MRAP
-opfor_mrap_armed = "thsusf_M1120_M2_usarmy_wd";                                     // HMMWV (M2)
-opfor_transport_helo = "RHS_UH60M";                   								// UH 60 M
-opfor_transport_truck = "rhsusf_M1083A1P2_WD_fmtv_usarmy";                         	// M1083A1P2 (Covered)
-opfor_ammobox_transport = "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy";                // M1083A1P2 (Open)
-opfor_fuel_truck = "rhsusf_M978A4_BKIT_usarmy_wd";                                	// M978A4 Fuel
-opfor_ammo_truck = "rhsusf_M977A4_AMMO_BKIT_usarmy_wd";                             // M977A4 Ammo
-opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";             			// Taru Fuel Pod
-opfor_ammo_container = "Land_Pod_Heli_Transport_04_ammo_F";             			// Taru Ammo Pod
-opfor_flag = "Flag_US_F";                                             				// Flag
+KPLIB_o_mrap = "rhsusf_M1220_usarmy_wd";                                            // M1220 MRAP
+KPLIB_o_mrapArmed = "thsusf_M1120_M2_usarmy_wd";                                    // HMMWV (M2)
+KPLIB_o_transportHeli = "RHS_UH60M";                   							    // UH 60 M
+KPLIB_o_transportTruck = "rhsusf_M1083A1P2_WD_fmtv_usarmy";                         // M1083A1P2 (Covered)
+KPLIB_o_transportTruckAmmo = "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy";             // M1083A1P2 (Open)
+KPLIB_o_fuelTruck = "rhsusf_M978A4_BKIT_usarmy_wd";                                 // M978A4 Fuel
+KPLIB_o_ammoTruck = "rhsusf_M977A4_AMMO_BKIT_usarmy_wd";                            // M977A4 Ammo
+KPLIB_o_fuelContainer = "Land_Pod_Heli_Transport_04_fuel_F";             			// Taru Fuel Pod
+KPLIB_o_ammoContainer = "Land_Pod_Heli_Transport_04_ammo_F";             			// Taru Ammo Pod
+KPLIB_o_flag = "Flag_US_F";                                             			// Flag
 
 /* Adding a value to these arrays below will add them to a one out of however many in the array, random pick chance.
 Therefore, adding the same value twice or three times means they are more likely to be chosen more often. */
 
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
-militia_squad = [
+KPLIB_o_militiaInfantry = [
     "rhsusf_army_ucp_riflemanl",                                                    // Rifleman (Lite)
     "rhsusf_army_ucp_riflemanl",                                                    // Rifleman (Lite)
     "rhsusf_army_ucp_rifleman",                                                     // Rifleman
@@ -55,12 +64,12 @@ militia_squad = [
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
-militia_vehicles = [
+KPLIB_o_militiaVehicles = [
     "rhsusf_m1025_w_m2"                                                             // HMMWV (M2)
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
-opfor_vehicles = [
+KPLIB_o_armyVehicles = [
 	"rhsusf_m1151_m2_v1_usarmy_wd",                                                 // HMMWV (M2)
     "rhsusf_m1151_m2crows_usarmy_wd",                                               // HMMWV (M2 Crows)
     "rhsusf_m1151_mk19_v2_usarmy_wd",                                               // HMMWV (MK19)
@@ -76,7 +85,7 @@ opfor_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
-opfor_vehicles_low_intensity = [
+KPLIB_o_armyVehiclesLight = [
     "rhsusf_m1025_w_m2",                                                            // HMMWV (HMG)
     "rhsusf_m1025_w_m2",                                                            // HMMWV (HMG)
     "rhsusf_m1045_w_s",                                                             // HMMWV (TOW)
@@ -85,7 +94,7 @@ opfor_vehicles_low_intensity = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles = [
+KPLIB_o_battleGrpVehicles = [
     "rhsusf_m1151_m2_v1_usarmy_wd",                                                  // HMMWV (M2)
     "rhsusf_m1025_w_m2",                                                             // HMMWV (M2)
     "rhsusf_m1025_w_mk19",                                                           // HMMWV (MK19)
@@ -107,7 +116,7 @@ opfor_battlegroup_vehicles = [
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
-opfor_battlegroup_vehicles_low_intensity = [
+KPLIB_o_battleGrpVehiclesLight = [
     "rhsusf_m1025_w_m2",                                                             // HMMWV (M2)
     "rhsusf_m1151_ma_v1_usarmy_wd",                                                  // HMMWV (M2)
     "rhsusf_M1232_M2_usarmy_wd",                                                     // M1232 Transport (M2)
@@ -120,7 +129,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
-opfor_troup_transports = [
+KPLIB_o_troopTransports = [
     "rhsusf_M1078A1P2_WD_fmtv_usarmy",                                              // M1078A1P2 Transport (Covered)
     "rhsusf_stryker_m1127_m2_wd",                                                   // Stryker
     "rhsusf_M1232_M2_usarmy_wd",                                                    // M1232 Transport (M2)
@@ -129,7 +138,7 @@ opfor_troup_transports = [
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
-opfor_choppers = [
+KPLIB_o_helicopters = [
     "RHS_UH60M_d",                                                                  // UH60M
     "RHS_UH1Y_d",                                                                   // UH1Y (Armed)
     "RHS_AH64D_wd",                                                                 // AH64D
@@ -137,7 +146,7 @@ opfor_choppers = [
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
-opfor_air = [
+KPLIB_o_planes = [
     "RHS_A10",                                                                      // A10
     "rhsuf_f22"                                                                     // F22
 ];
