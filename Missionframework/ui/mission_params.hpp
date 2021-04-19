@@ -21,19 +21,19 @@ class Params {
         title = $STR_PARAMS_UNITCAP;
         values[] = {0, 1, 2, 3, 4, 5};
         texts[] = {$STR_PARAMS_UNITCAP1, $STR_PARAMS_UNITCAP2, $STR_PARAMS_UNITCAP3, $STR_PARAMS_UNITCAP4, $STR_PARAMS_UNITCAP5, $STR_PARAMS_UNITCAP6};
-        default = 3;
+        default = 2;
     };
     class Difficulty {
         title = $STR_PARAMS_DIFFICULTY;
         values[] = {0, 1, 2, 3, 4, 5, 6, 7};
         texts[] = {$STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8};
-        default = 3;
+        default = 4;
     };
     class Aggressivity {
         title = $STR_AGGRESSIVITY_PARAM;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_AGGRESSIVITY_PARAM0, $STR_AGGRESSIVITY_PARAM1, $STR_AGGRESSIVITY_PARAM2, $STR_AGGRESSIVITY_PARAM3, $STR_AGGRESSIVITY_PARAM4};
-        default = 2;
+        default = 3;
     };
     class AdaptToPlayercount {
         title = $STR_PARAM_ADAPT_TO_PLAYERCOUNT;
@@ -81,7 +81,7 @@ class Params {
         title = $STR_PARAM_AUTODANGER;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class DayDuration {
         title = $STR_PARAMS_DAYDURATION;
@@ -99,7 +99,7 @@ class Params {
         title = $STR_WEATHER_PARAM;
         values[] = {1, 2, 3};
         texts[] = {$STR_WEATHER_PARAM1, $STR_WEATHER_PARAM2, $STR_WEATHER_PARAM3};
-        default = 1;
+        default = 2;
     };
     class VanillaFog {
         title = $STR_FOG_PARAM;
@@ -135,7 +135,7 @@ class Params {
         title = $STR_PARAMS_VICTORYCONDITION;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_PARAMS_VICTORYCONDITION_0, $STR_PARAMS_VICTORYCONDITION_1, $STR_PARAMS_VICTORYCONDITION_2, $STR_PARAMS_VICTORYCONDITION_3, $STR_PARAMS_VICTORYCONDITION_4};
-        default = 1;
+        default = 4;
     };
     class Spacer1 {
         title = "";
@@ -291,7 +291,7 @@ class Params {
         title = $STR_PARAM_DELAY_DESPAWN_MAX;
         values[] = {0, 5, 10, 15, 20, 25, 30};
         texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
-        default = 5;
+        default = 0;
     };
     class CommanderZeus {
         title = $STR_PARAM_COMMANDERZEUS;
