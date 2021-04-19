@@ -1,65 +1,60 @@
-
-
-
 waitUntil {!isNull player};
 
-
 _rules = '
-<br></br> 
-DE<br></br> 
-<br></br> 
-Respawn oder Disconnect, während man bewusstlos ist, kostet Ressourcen. <br></br> 
-Wann immer möglich, auf Rettung warten und versuchen, andere zu retten. <br></br> 
-<br></br> 
-Jeder Spieler muss mittels TFAR auf Teamspeak erreichbar sein. <br></br> 
-Teamspeak-Server-Nickname: kampfverband-13.de <br></br> 
-Jede Gruppe muss auf der Frequenz 42 erreichbar sein. <br></br> 
-<br></br> 
-Um Fahrzeug- und Baurechte zu bekommen, muss man jemanden mit bestehenden Rechten bitten, eine Empfehlung über Discord zu schreiben. <br></br> 
-Der Einladungslink steht in der Teamspeak Channel-Beschreibung. 
-<br></br> 
-<br></br> 
-<br></br> 
-EN<br></br> 
-<br></br> 
-Respawn or disconnect while being unconscious costs resources. <br></br> 
-Whenever possible, wait for rescue and try to rescue others. <br></br> 
-<br></br> 
-Each player has to be available via TFAR on Teamspeak. <br></br> 
-Teamspeak server nickname: kampfverband-13.de <br></br> 
-Each group has to be available on frequency 42. <br></br> 
-<br></br> 
-To get vehicle and building privileges, you have to ask somebody with existing privileges to write a recommendation via Discord.<br></br> 
-An invite link can be found in the Teamspeak channel description. 
-<br></br> 
-<br></br>
-';
+DE<br /><br />
+Natürlich gelten hier wie auch auf dem Server die üblichen (Verhaltens)Regeln. Wir verzichten darauf, diese hier alle aufzuführen. Einige Punkte sind aber vor allem spielerisch hervorzuheben:<br /><br />
+- Spielt zusammen und versucht stets, ein gemeinsames Spiel zu ermöglichen<br />
+- Respawn oder Disconnect, während man bewusstlos ist, kostet Ressourcen -> Wartet also nach Möglichkeit immer auf Rettung<br />
+- Jeder Spieler muss mittels TFAR auf dem KV13-Teamspeak erreichbar sein<br />
+- Die Gruppen sprechen sich gegenseitig ab und schreiben ihre Frequenz auf den Kartenrand (50 ist normalerweise Zugfunk)<br />
+- Fahrzeug- und Baurechte erhält ihr nur mit einer Empfehlung. Mehr dazu im #recommendations Channel<br />
+- Wer fliegen möchte, muss einem Admin kurz zeigen, dass er Abheben und Landen kann, bevor die Rechte gegeben werden<br />
+- Nur signierte Mods aus dem Workshop oder unserem Repository nutzen<br />
+- Spass haben und lieb sein zueinander
 
+<br /><br />
+EN<br /><br />
+Of course, the usual (behavioural) rules apply here as well as on the server. We refrain from listing them all here. However, some points should be emphasised, especially from a gameplay point of view:<br /><br />
+- Play together as a group.<br />
+- Respawning or disconnecting while unconscious costs resources -> always wait for rescue if possible.<br />
+- Every player must be reachable via TFAR on the KV13 teamspeak.<br />
+- The groups talk to each other and write their frequency on the edge of the card (LR50 is usually the platoon-frequency)<br />
+- You can only get vehicle- and building rights with a recommendation. More about this in the #recommendations channel<br />
+- Anyone who wants to fly must briefly show an admin that they can take off and land before the rights are given<br />
+- Only use signed mods from the workshop or our repository<br />
+- Have fun and be nice to each other
+<br /><br /> 
+<br /><br />
+';
 
 _situation = '
-DE <br></br> 
-<br></br> 
-Ein neues Militärbündnis ehemaliger Schwellenländer (CSAT) versucht, sich den Zugang zu Ressourcen mit Gewalt zu sichern. <br></br> 
-Dadurch entstehen Konflikte mit den alten Machtblöcken Russland und NATO, die in diesem Fall kooperieren. <br></br> 
-In der nahen Zukunft verwenden kleinere Armeen zunehmend die Ausrüstung ihrer größeren Verbündeten, um sich Eigenentwicklungen zu sparen und einfacher zusammen arbeiten zu können. <br></br> 
-<br></br> 
-<br></br> 
-EN <br></br> 
-<br></br> 
-A new military alliance of emerging economies (CSAT) tries to secure access to resources by violence. <br></br> 
-This creates conflicts with the old power blocks Russia an NATO, who cooperate in this case. <br></br> 
-In the near future smaller armies increasingly use equipment of their bigger allies, to save on custom development and simplify cooperation. <br></br> 
-<br></br> 
-<br></br>
+DE <br /><br />
+Unser Gegner ist eine gut ausgerüstete Miliz. Diese hat hier in Lythium Fuss gefasst und kämpft erbittert um die Kontrolle im Gebiet.<br /> 
+Der Feind verfügt über umlackierte, russische Fahrzeuge und besitzt starke Luftabwehr. Allerdings verfügt sie über keine Luftwaffe, was uns einen entscheidenden Vorteil verschaffen könnte.<br /><br />
+Achten Sie aber auf IEDs auf den Strassen, diese sind eine ständige Bedrohung!<br /><br />
+
+Als Basis dient der "Liberation" Modus von den Killah Potatoes. Allerdings wurden von uns einige Änderungen vorgenommen, so dass das Gameplay mehr MilSim Charakter erhält. Wichtigste Punkte:<br />
+- Ziel ist es, die komplette Karte einzunehmen<br />
+- Für jeden eingenommenen Punkt, werden Resssourcen gutgeschrieben<br />
+- Die Ressourcen können von Admins und trusted Spielern für Fahrzeuge ausgegeben werden<br />
+- Jeder Respawn kostet Ressourcen (Wartet also wenn immer möglich auf Hilfe)
+<br /><br />
+EN <br /><br />
+Our opponent is a well-equipped militia. This militia has gained a foothold here in Lythium and fights fiercely for control of the area.<br />
+The enemy has repainted Russian vehicles and has strong air defenses. However, it has no air force, which could give us a decisive advantage.<br />
+Watch out for IEDs on the roads though, they are a constant threat!<br /><br />
+
+The "Liberation" mode from the Killah Potatoes serves as the basis. However, we have made some changes so that the gameplay has more MilSim character. Most important points:<br /> 
+- The goal is to capture the entire map.<br /> 
+- For each captured point, resources are credited.<br /> 
+- Resources can be spent on vehicles by admins and trusted players.<br /> 
+- Every respawn costs resources (so wait for help whenever possible)<br /> 
+- There are standard loadouts in the arsenal, but they can be customised
+<br /><br />
 ';
 
-
 player createDiaryRecord ['Diary', ['Regeln / Rules', _rules], taskNull, '', false];
-
 player createDiaryRecord ['Diary', ['Situation', _situation], taskNull, '', false];
-
-
-
 
 sleep 60;
 hint format['
@@ -75,30 +70,19 @@ Open map, read rules! \n
 TeamSpeak Server: kampfverband-13.de \n
 '];
 
-
-
-
-
 while {true} do{
-		
 	sleep 300;
-	
 	_hs_time = systemTime;
 	
-	if ( ((_hs_time select 3) >= 16) && ((_hs_time select 3) < 17) && ((_hs_time select 4) >= 30) ) then {
-		hint format['Server restart 17:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
-	}else{
-		if ( ((_hs_time select 3) >= 4) && ((_hs_time select 3) < 5) && ((_hs_time select 4) >= 30) ) then {
-			hint format['Server restart 05:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
-		}		
+	if ( ((_hs_time select 3) == 18) &&  ((_hs_time select 4) >= 30) ) then {
+		hint format['Server restart 19:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
 	};
-	
+	if ( ((_hs_time select 3) == 2) && ((_hs_time select 4) >= 30) ) then {
+		hint format['Server restart 03:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
+	};
+	if ( ((_hs_time select 3) == 10) && ((_hs_time select 4) >= 30) ) then {
+		hint format['Server restart 11:00 \nFahrzeuge zurück zur FOB! \nReturn vehicles to FOB!'];
+	};
 };
 
 // hint format['%1:%2', (_hs_time select 3), (_hs_time select 4)];
-
-
-
-
-
-
