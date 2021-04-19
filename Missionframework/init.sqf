@@ -63,7 +63,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 ["CargoNet_01_box_F", "InitPost", {
     params ["_vehicle"];
 	[_vehicle,3] call ace_cargo_fnc_setSize;
-	[_vehicle,3] call ace_cargo_fnc_setSpace;
+	[_vehicle,2] call ace_cargo_fnc_setSpace;
 	["ACE_Wheel", _vehicle] call ace_cargo_fnc_addCargoItem;
 	["ACE_Track", _vehicle] call ace_cargo_fnc_addCargoItem;
 	[_vehicle, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setCarryable; 
@@ -167,7 +167,7 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
 
 ["rhs_kamaz5350_open_msv", "InitPost", {
     params ["_vehicle"];
-	[_vehicle,8] call ace_cargo_fnc_setSpace;
+	[_vehicle,10] call ace_cargo_fnc_setSpace;
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ["O_T_MBT_04_command_F", "InitPost", {
@@ -253,9 +253,16 @@ SA_TOW_RULES_OVERRIDE =[
 // ["Air", "CANT_TOW", "Air"]
 
 
+
+
+//[AiCacheDistance(players),TargetFPS(-1 for Auto),Debug,CarCacheDistance,AirCacheDistance,BoatCacheDistance]execvm "zbe_cache\main.sqf";
+
+if (isServer) then {[600,-1,false,100,100,100]execvm "zbe_cache\main.sqf"};
+
+
+
+
 // MilSimUnited ===========================================================================
-
-
 
 
 
@@ -267,6 +274,3 @@ if (isServer) then {
     KPLIB_initServer = true;
     publicVariable "KPLIB_initServer";
 };
-
-
-[[], 'MilSimUnited\iedScript.sqf'] remoteExec ['BIS_fnc_execVM', 2];
