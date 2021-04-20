@@ -46,19 +46,19 @@ private _price_f = 0;
 
 if ((toLower _type) in KPLIB_o_allVeh_classes) then {
     if (_vehToRecycle isKindOf "Car") then {
-        _price_s = round (150 * _suppMulti);
-        _price_a = round (150 * _ammoMulti);
-        _price_f = round (150 * _fuelMulti);
+        _price_s = round (60 * _suppMulti);
+        _price_a = round (25 * _ammoMulti);
+        _price_f = round (40 * _fuelMulti);
     };
     if (_vehToRecycle isKindOf "Tank") then {
-        _price_s = round (2000 * _suppMulti);
-        _price_a = round (2000 * _ammoMulti);
-        _price_f = round (2000 * _fuelMulti);
+        _price_s = round (150 * _suppMulti);
+        _price_a = round (120 * _ammoMulti);
+        _price_f = round (100 * _fuelMulti);
     };
     if (_vehToRecycle isKindOf "Air") then {
-        _price_s = round (4000 * _suppMulti);
-        _price_a = round (4000 * _ammoMulti);
-        _price_f = round (4000 * _fuelMulti);
+        _price_s = round (250 * _suppMulti);
+        _price_a = round (200 * _ammoMulti);
+        _price_f = round (150 * _fuelMulti);
     };
 } else {
     private _objectinfo = ((light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles + buildings) select {_type == (_x select 0)}) select 0;
