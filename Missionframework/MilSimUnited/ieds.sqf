@@ -68,6 +68,9 @@ _firstRound = 1;
 		_streetObject = _allowedRoads select _rand;
 		_pos = getPos _streetObject;
 		
+		_roadInfo = getRoadInfo _streetObject;
+		_roadWidth = _roadInfo select 1;
+		
 		_checkPlayers = _streetObject nearEntities 500;
 		_playerNear = 0;
 		{
@@ -77,9 +80,14 @@ _firstRound = 1;
 		} foreach _checkPlayers;
 		
 		if(_playerNear == 0) then {
-			_randSpawnPos = _pos getPos [6 * sqrt random 1, random 360];
+			_randSpawnPos = _pos getPos [_roadWidth * sqrt random 1, random 360];
 			_usedMine = selectRandom _mineClassnames;
 			_mine = createMine [_usedMine, _randSpawnPos, [], 0];
+			
+			_rand = random 2;
+			if(_rand == 1) then {
+				_spawnJunk = createVehicle ["Land_Garbage_square5_F", _randSpawnPos, [], 0, "CAN_COLLIDE"];
+			};
 		};
 	};
 } foreach _humanPlayers;
