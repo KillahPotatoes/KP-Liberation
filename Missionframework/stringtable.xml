@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     File: stringtable.xml
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -2001,7 +2001,9 @@
             <Chinese>取代</Chinese>
             <Turkish>Değiştir</Turkish>
             <Portuguese>Substituir</Portuguese>.
-            <Korean>분대원 교체</Korean><Czech>Nahradit</Czech></Key>
+            <Korean>분대원 교체</Korean>
+            <Czech>Nahradit</Czech>
+        </Key>
         <Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
             <Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
             <French>Vous allez vous déployer à la place du member d'escouade selectionné tout en conservant votre équipement actuel.</French>
@@ -3665,6 +3667,7 @@
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;수색 및 구출&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;적군 후방지역에서 정찰임무를 수행하던 아군 정찰기와 교신이 끊어졌습니다. 현 상황으로 판단할때 적군에게 격추당한 것 같습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 마지막 교신 위치를 중심으로 아군 정찰기의 흔적을 찾는 것입니다. 적군이 먼저 발견하기전에 아군 정찰기의 흔적을 찾아 승무원 구출 및 다른 정보들을 획득, 복귀해야 합니다. 교전이 벌어질 수 있습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소요되는 정보 점수: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 정보 점수가 20점 추가됩니다. 또한 구출한 인원 1명당 정보 점수가 10점 추가됩니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;ZÁCHRANNÁ MISE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Ztratili jsme kontakt s průzkumným vrtulníkem za nepřátelskými liniemi. Věříme že ji sestřelily nepřátelské jednotky.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Vrtulník mohl havarovat kdekoliv ve velké vzdálenosti od místa kde jsme s ní ztratily kontakt. Cílem mise je najít a zachránit přeživší posádku. Nepřátelské jednotky tam mohou být jako první, proto musíme jednat rychle, opatrně a být připraveni k boji.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: 20 zpravodajských bodů (10 za každého člena posádky).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
         </Key>
+
         <!-- Added in v0.924 -->
         <Key ID="STR_PARAM_SQUAD_SIZE">
             <Original>AI recruitment limit per squad</Original>
@@ -3766,6 +3769,7 @@
             <German>Respawn bei unter Angriff stehenden Sektoren</German>
             <Spanish>Reaparecer en sectores atacados</Spanish>
         </Key>
+
         <!-- Added or changed in v0.95 -->
         <Key ID="STR_INDIV_FLAG">
             <Original>Killah Potatoes flag</Original>
@@ -4768,6 +4772,7 @@
             <Korean>이 수송임무를 당장 중단 할 수 없습니다.</Korean>
             <Czech>Trasu nelze v tuto chvíli zrušit.</Czech>
         </Key>
+
         <!-- English adaptations in v0.95, need translations. -->
         <Key ID="STR_MISSION_DESCRIPTION">
             <Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
@@ -7055,6 +7060,7 @@
             <Spanish>BAJO ATAQUE</Spanish>
         </Key>
     </Package>
+
     <Package name="KPPLM">
         <Key ID="STR_KPPLM_ACTIONOPEN">
             <English>-- KP Player Menu --</English>
