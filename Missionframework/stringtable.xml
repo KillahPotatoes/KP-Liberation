@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
     File: stringtable.xml
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
@@ -2001,9 +2001,7 @@
             <Chinese>取代</Chinese>
             <Turkish>Değiştir</Turkish>
             <Portuguese>Substituir</Portuguese>.
-            <Korean>분대원 교체</Korean>
-            <Czech>Nahradit</Czech>
-        </Key>
+            <Korean>분대원 교체</Korean><Czech>Nahradit</Czech></Key>
         <Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
             <Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
             <French>Vous allez vous déployer à la place du member d'escouade selectionné tout en conservant votre équipement actuel.</French>
@@ -2872,6 +2870,7 @@
         <Key ID="STR_PARAM_COMMANDERZEUS">
             <Original>Zeus for Commander</Original>
             <German>Zeus für Kommandant</German>
+            <Spanish>Zeus para Comandante</Spanish>
         </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
@@ -3567,7 +3566,6 @@
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;수송부대 무력화&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;현재 적군은 수송부대를 동원하여 그들의 방어 거점에 군수물자를 수송하고 있습니다. 수송부대 중 하나를 공격하여 그들의 보급선을 끊고, 많은 양의 군수물자를 노획하십시요.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 수단과 방법을 가리지 않고 적 수송부대를 멈추게 하는 것입니다. 군수물자를 파괴할 것인지, 노획하여 아군의 군수물자로 확보할 것인지는 당신의 선택입니다. 당신의 지도에 위치가 표시될 것입니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소모되는 정보 점수: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 경고 수준이 15% 감소합니다.&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;추가 보상: 수송부대에서 노획할 수 있는 모든 군수물자.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;PŘEPADENÍ KONVOJE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Jednotky OPFOR používají konvoje k zásobení obraných pozic. Přerušením jediného konvoje můžete efektivně narušit zásobování, a také můžeme využít teto příležitosti k získání značného množství munice.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Cílem mise je zastavit konvoj libovolnými prostředky. Můžete je zničit nebo zajmout a získat tak munici. Pozice konvoje bude zaznačena do mapy.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: Bojová pohotovost OPFOR snížena o 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Vedlejší odměna: Veškerá munice kterou zvládnete odnést.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Czech>
         </Key>
-
         <!-- Added in v0.922 -->
         <Key ID="STR_PARAM_BLUFOR_DEFENDERS">
             <Original>BLUFOR defenders in owned sectors</Original>
@@ -3667,7 +3665,6 @@
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;수색 및 구출&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;적군 후방지역에서 정찰임무를 수행하던 아군 정찰기와 교신이 끊어졌습니다. 현 상황으로 판단할때 적군에게 격추당한 것 같습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 마지막 교신 위치를 중심으로 아군 정찰기의 흔적을 찾는 것입니다. 적군이 먼저 발견하기전에 아군 정찰기의 흔적을 찾아 승무원 구출 및 다른 정보들을 획득, 복귀해야 합니다. 교전이 벌어질 수 있습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소요되는 정보 점수: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 정보 점수가 20점 추가됩니다. 또한 구출한 인원 1명당 정보 점수가 10점 추가됩니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;ZÁCHRANNÁ MISE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Ztratili jsme kontakt s průzkumným vrtulníkem za nepřátelskými liniemi. Věříme že ji sestřelily nepřátelské jednotky.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Vrtulník mohl havarovat kdekoliv ve velké vzdálenosti od místa kde jsme s ní ztratily kontakt. Cílem mise je najít a zachránit přeživší posádku. Nepřátelské jednotky tam mohou být jako první, proto musíme jednat rychle, opatrně a být připraveni k boji.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: 20 zpravodajských bodů (10 za každého člena posádky).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
         </Key>
-
         <!-- Added in v0.924 -->
         <Key ID="STR_PARAM_SQUAD_SIZE">
             <Original>AI recruitment limit per squad</Original>
@@ -3767,8 +3764,8 @@
         <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
             <Original>Respawn on attacked sectors</Original>
             <German>Respawn bei unter Angriff stehenden Sektoren</German>
+            <Spanish>Reaparecer en sectores atacados</Spanish>
         </Key>
-
         <!-- Added or changed in v0.95 -->
         <Key ID="STR_INDIV_FLAG">
             <Original>Killah Potatoes flag</Original>
@@ -4771,7 +4768,6 @@
             <Korean>이 수송임무를 당장 중단 할 수 없습니다.</Korean>
             <Czech>Trasu nelze v tuto chvíli zrušit.</Czech>
         </Key>
-
         <!-- English adaptations in v0.95, need translations. -->
         <Key ID="STR_MISSION_DESCRIPTION">
             <Original>Liberate the region from the enemy oppression! Strategy will be key! Good luck soldiers.</Original>
@@ -6842,187 +6838,223 @@
             <Original>BI Support System access</Original>
             <German>Zugriff auf BI Support System</German>
             <Czech>BI Podpora přístupu do systému</Czech>
+            <Spanish>Acceso a Sistema de Soporte de BI</Spanish>
         </Key>
         <Key ID="STR_PARAM_SUPPMOD_CMDRANDWHITELIST">
             <Original>Commander and Whitelist</Original>
             <German>Kommandant und Whitelist</German>
             <Czech>Velitel a whitelist</Czech>
+            <Spanish>Comandante y Lista Blanca</Spanish>
         </Key>
         <Key ID="STR_PARAM_SUPPMOD_EVERYONE">
             <Original>Everyone</Original>
             <German>Jeder</German>
             <Czech>Každý</Czech>
+            <Spanish>Todos</Spanish>
         </Key>
         <Key ID="STR_PARAM_WEAPSWAY">
             <Original>Weapon sway</Original>
             <German>Waffenschwanken (Weapon sway)</German>
             <Czech>Zbraň houpat</Czech>
+            <Spanish>Movimiento de arma</Spanish>
         </Key>
         <Key ID="STR_PARAM_TUTORIAL">
             <Original>Ingame Tutorial</Original>
             <German>Tutorial im Spiel</German>
             <Czech>Výukový program Ingame</Czech>
+            <Spanish>Tutorial en partida</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_CRATE">
             <Original>Crate</Original>
             <German>Kiste</German>
             <Czech>Bedna</Czech>
+            <Spanish>Caja</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_SOLDIER">
             <Original>Surrendering Soldier</Original>
             <German>Kapitulierender Soldat</German>
             <Czech>Vzdávající se voják</Czech>
+            <Spanish>Soldado rindiéndose</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_CIVILIAN">
             <Original>Wounded Civilian</Original>
             <German>Verwundeter Zivilist</German>
             <Czech>Zraněný civilista</Czech>
+            <Spanish>Civil herido</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TITLE">
             <Original>KP Liberation Tutorial</Original>
             <German>KP Liberation Tutorial</German>
             <Czech>KP Liberation Tutorial</Czech>
+            <Spanish>Tutorial de KPLiberation</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_START">
             <Original>Do you want to enable the interactive tutorial?&lt;br/&gt;It'll guide you through the aspects of the mission. Check your tasks area on the map for further information on each task.&lt;br/&gt;&lt;br/&gt;(This popup can be disabled in the mission parameters)</Original>
             <German>Möchtest du das interaktive Tutorial aktivieren?&lt;br/&gt;Es wird dich durch einzelnen Missionsaspekte führen. Prüfe die Aufgaben im Kartenbildschirm für weitere Informationen zu den einzelnen Aufgaben.&lt;br/&gt;&lt;br/&gt;(Dieses Pop-Up kann in den Missionsparametern deaktiviert werden)</German>
             <Czech>Chcete povolit interaktivní výukový program?&lt;br/&gt;Provede vás aspekty mise. Další informace o jednotlivých úkolech naleznete v oblasti úkolů na mapě.&lt;br/&gt;&lt;br/&gt;(Toto okno lze v parametrech mise deaktivovat)</Czech>
+            <Spanish>¿Quieres habilitar el tutorial interactivo?&lt;br/&gt;Te servirá de guía sobre los diferentes aspectos de la misión. Comprueba el área de tareas en el mapa para obtener más información sobre cada tarea.&lt;br/&gt;&lt;br/&gt;(Este popup puede ser desabilitado en los parámetros de la misión)</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_END">
             <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
             <German>Du hast alle derzeit verfügbaren/implementierten Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen dir sehr viel Spaß mit dem Spielen der Mission.&lt;br/&gt;&lt;br/&gt;Solltest du Fragen haben oder die etwas über die tiefergehenden Mechaniken erfahren wollen, dann schaue als erstes in das &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Außerdem gibt es unseren &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt;, wo hunderte von KP Liberation Spielern zu finden sind.</German>
             <Czech>Dokončili jste všechny aktuálně dostupné/implementované výukové programy.&lt;br/&gt; Užij si spoustu zábavy při hraní této mise.&lt;br/&gt;&lt;br/&gt; Pokud máte dotazy nebo se chcete dozvědět hlubší mechaniku, ujistěte se, že navštívíte stránku &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt; KP Osvobození Wiki&lt;/a&gt;. &lt;br/&gt; Také jsme a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; kde jsou kolem stovky hráčů KP Libertion.</Czech>
+            <Spanish>Has completado todos los tutoriales disponibles/implementados&lt;br/&gt;Pásalo muy bien jugando esta misión.&lt;br/&gt;&lt;br/&gt;En caso de que tengas más preguntas o quieras aprender las mecánicas del juego en más profundidad, visita la &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt; Wiki KP Liberation&lt;/a&gt;.&lt;br/&gt;Tambien tenemos un &lt;a href="https://discord.gg/Qk35Sw8"&gt;Servidor de Discord&lt;/a&gt; donde se reunen cientos de jugadores de KP Liberation.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_TITLE">
             <Original>KP Liberation Tutorial Tasks</Original>
             <German>KP Liberation Tutorial Aufgaben</German>
             <Czech>KP osvobození Výuky</Czech>
+            <Spanish>Tareas del Tutorial de KP Liberation</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_DESC">
             <Original>Tasks of the KP Liberation Tutorial.&lt;br/&gt;It'll create new tasks when the correct circumstances are reached and there are still tutorials available.</Original>
             <German>Aufgaben des KP Liberation Tutorials.&lt;br/&gt;Es werden automatisch neue Aufgaben erstellt, sobald die entsprechenden Umstände eintreten und noch weitere Tutorials verfügbar sind.</German>
             <Czech>Úkoly KP Osvobození Tutorial.&lt;br/&gt;To bude vytvářet nové úkoly, když jsou dosaženy správné okolnosti a stále jsou k dispozici výukové programy.</Czech>
+            <Spanish>Tareas del Tutorial de KP Liberation.&lt;br/&gt;Crea nuevas tareas cuando se dan las circunstancias correctas y todavía quedan tutoriales disponibles.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_TITLE">
             <Original>First FOB deployment</Original>
             <German>Erste FOB errichten</German>
             <Czech>První nasazení FOB</Czech>
+            <Spanish>Despliegue de primera FOB</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_DESC">
             <Original>This tasks will guide you through the deployment of your first FOB and gathering the start resources.</Original>
             <German>Diese Aufgaben werden dich durch die Bereitstellung deiner ersten FOB und dem Sammeln der Startressourcen führen.</German>
             <Czech>Tyto úkoly vás provedou nasazením prvního fob a shromažďováním počátečních prostředků.</Czech>
+            <Spanish>Estas tareas te guiarán a través del despliegue de tu primera FOB y la recolección de los recursos del comienzo.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01A_TITLE">
             <Original>Transport FOB Container</Original>
             <German>FOB Container transportieren</German>
             <Czech>Přepravní FOB kontejner</Czech>
+            <Spanish>Transportar contenedor de FOB</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01A_DESC">
             <Original>This is your first FOB container, which allows you to deploy a FOB.&lt;br/&gt;You need to slingload it via the transport helicopter to a position at least 1km away from the operation base in order to deploy it. We recommend to build it in the vicinity of a factory.&lt;br/&gt;After you've transported the container to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
             <German>Dies ist dein erster FOB Container mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du als Außenlast mit dem Transporthelikopter zu einer Position mit mindestens 1km Abstand zur Operationsbasis bringen, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den Container zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
             <Czech>Jedná se o váš první FOB kontejner, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho naložit transportním vrtulníkem na pozici, která je vzdálena alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme jej postavit v blízkosti továrny.&lt;br/&gt; Po přepravě kontejneru do požadovaného místa zamiřte k němu a získáte akci rolovacího kolečka, která umístí FOB.&lt;br/&gt; Budeme pokračovat, až to provedete.</Czech>
+            <Spanish>Este es tu primer contenedor de FOB, el cual te permite desplegar una FOB.&lt;br/&gt;Necesitas cargarlo con eslingas para transportarlo por medio de helicóptero a una posición al menos 1km alejada de la base de operaciones para poder desplegarla. Recomendamos construitlo cerca de una fábrica.&lt;br/&gt;Tras haber transportado el contenedor a la posición deseada, acércate a él y tendrás la opción en la rueda del ratón para desplegar la FOB.&lt;br/&gt;Continuaremos una vez hayas desplegado tu primera FOB.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01B_TITLE">
             <Original>Drive FOB Truck</Original>
             <German>FOB Truck fahren</German>
             <Czech>Nákladní auto FOB</Czech>
+            <Spanish>Conducir camión de FOB</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01B_DESC">
             <Original>This is your first FOB truck, which allows you to deploy a FOB.&lt;br/&gt;You need to drive it to a position at least 1km away from the operation base in order to deploy it. We recommend to build it in the vicinity of a factory.&lt;br/&gt;After you've driven the truck to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
             <German>Dies ist dein erster FOB LKW mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du zu einer Position mit mindestens 1km Abstand zur Operationsbasis fahren, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den LKW zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
             <Czech>Jedná se o váš první FOB truck, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho dojet na pozici alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme ji postavit v blízkosti továrny.&lt;br/&gt; Poté, co jste řídili vůz do požadovaného místa, zamiřte blízko k němu a dostanete akci rolovacího kolečka pro umístění FOB.&lt;br/&gt; Budeme pokračovat, až rozmístíte svůj první FOB.</Czech>
+            <Spanish>Este es tu primer camión de FOB, el cual te permite desplegar una FOB.&lt;br/&gt;Necesitas conducirlo a una posición alejada al menos 1km de la base de operaciones para poder desplegarlo. Recomendamos construirlo en los alrededores de una fábrica.&lt;br/&gt;Tras haber conducido el camión a la posición deseada, dirígete cerca suyo y tendrás una acción con la rueda del ratón para desplegar la FOB.&lt;br/&gt;Continuaremos tras haber desplegado tu primera FOB.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_02_TITLE">
             <Original>Build a storage area</Original>
             <German>Baue einen Lagerbereich</German>
             <Czech>Vytvoření úložného prostoru</Czech>
+            <Spanish>Contruir un área de almacenamiento</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_02_DESC">
             <Original>Now you've access to the build menu via the scroll wheel actions.&lt;br/&gt;Use this action to place a storage area. You can find it in the support tab of the build menu.&lt;br/&gt;This is needed to store the resource crates we'll send to you after this task.</Original>
             <German>Nun hast du Zugriff zum Baumenü über die Mausrad-Aktionen.&lt;br/&gt;Benutze diese Aktion, um einen Lagerbereich zu errichten. Die Lagerbereich sind im Unterstützungs-Reiter des Baumenüs.&lt;br/&gt;Dieser ist notwendig, um die Startressourcen, die wir dir im Anschluss an diese Aufgabe zukommen lassen, einzulagern.</German>
             <Czech>Nyní máte přístup k nabídce sestavení prostřednictvím akcí rolovacího kolečka.&lt;br/&gt; Tato akce slouží k umístění skladovacího prostoru. Najdete ji na kartě budovy v nabídce stavení.&lt;br/&gt; To je nutné k uložení beden prostředků, které vám pošleme po tomto úkolu.</Czech>
+            <Spanish>Ya tienes acceso al menú de construcción a través de las acciones de la rueda de ratón.&lt;br/&gt;Utiliza esta acción para situar un área de almacenamiento. Puedes encontrarlo en la pestaña soporte del menú de construcción.&lt;br/&gt;Esto es necesario para almacenar las cajas de recursos que te enviaremos tras esta tarea.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_TITLE">
             <Original>Collect start resources</Original>
             <German>Sammle Startressourcen</German>
             <Czech>Shromáždit počáteční zdroje</Czech>
+            <Spanish>Recolectar recursos del comienzo</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_DESC">
             <Original>We've send you some start resource crates via paradrop. Collect them and store them in your storage area to add them to the FOB resource pool.&lt;br/&gt;Resources have always to be stored in such areas to use them for building. It's not enough to have them near the FOB. If you go near a crate you'll have a store and a push scroll wheel action, which will help you.</Original>
             <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben. Bist du in der Nähe einer Kiste, hast du unter anderem eine "Einlagern" und "Schieben" Mausrad-Aktion, welche dir helfen werden.</German>
             <Czech>Poslali jsme vám přes paradrop nějaké bedny se startem. Shromážděte je a uložte je do úložiště a přidejte je do fondu zdrojů FOB.&lt;br/&gt; Zdroje musí být vždy uloženy v těchto oblastech, aby je mohly používat pro stavbu. Nestačí je mít blízko FOB. Pokud se přiblížíte k bedně, budete mít možnost a akci push rolovacího kolečka, která vám pomůže.</Czech>
+            <Spanish>Te hemos enviado algunos recursos de comienzo a través de paracaidas. Recoléctalos y guárdalos en el área de almacenaje para añadirlos a los recursos conjuntos de la FOB.&lt;br/&gt;Los recursos siempre tienen que estar almacenados en estas áreas para ser usados en construcciones. No es suficiente con tenerlos cerca de la FOB. Si te acercas a una caja, tendrás un almacenamiento y una acción para empujarla usando la rueda de ratón, lo cual puede ser de utilidad.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_TITLE">
             <Original>Capture your first factory</Original>
             <German>Erobere deine erste Fabrik</German>
             <Czech>Zachyťte svou první továrnu</Czech>
+            <Spanish>Captura tu primera fábrica</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_DESC">
             <Original>This tasks will guide you through the process of capturing a factory sector, take possible POWs, help possible wounded civilians and start the resource production.</Original>
             <German>Diese Aufgaben werden dich durch die Eroberung eines Fabrik-Sektors, das Festnehmen möglicher Gefangener, der Betreuung möglicher verwundeter Zivilisten und den Start der Ressourcenproduktion führen.</German>
             <Czech>Tyto úkoly vás provedou procesem zachycení výrobního sektoru, vezmou možné válečné zajatce, pomohou zraněným civilistům a zahájí výrobu zdrojů.</Czech>
+            <Spanish>Estas tareas te guiarán a través del proceso de capturar un sector de fábrica, tomar posibles prisioneros de guerra, ayudar a posibles civiles heridos y comenzar con la producción de recursos.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_TITLE">
             <Original>Approach a factory</Original>
             <German>Nähere dich einer Fabrik</German>
             <Czech>Přistupte k továrně</Czech>
+            <Spanish>Acercarse a una fábrica</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_DESC">
             <Original>It's always a good decision to start your campaign with capturing a factory. That way you'll be able to produce more resources, which you'll need in order to build more vehicles and later air assets.&lt;br/&gt;We've marked up to three near factory sectors on the map for you. Decide by yourself, which one you want to approach.&lt;br/&gt;We'll continue, if you're near one of the marked factories.&lt;br/&gt;&lt;br/&gt;More information about the different sector types can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Original>
             <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
             <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
+            <Spanish>Siempre es una buena decisión comenzar la campaña capturando una fábrica. De esa manera serás capaz de producir más recursos, los cuales necesitarás para poder construir más vehículos y más adelante activos aéreos.&lt;br/&gt;Hemos marcado para tí hasta tres fábricas cercanas en el mapa. Decide tú mismo, a cuál quieres acercarte&lt;br/&gt;Continuaremos cuando estés cerca de una de las fábricas marcadas&lt;br/&gt;&lt;br/&gt;Puedes encontrar más información sobre los diferentes tipos de sectores en nuestra &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
             <Original>Conquer the factory</Original>
             <German>Erobere die Fabrik</German>
             <Czech>Dobýt továrnu</Czech>
+            <Spanish>Conquistar una fábrica</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_DESC">
             <Original>The factory is now activated and will spawn enemy defenders. A full sector activation might take up to 20 seconds, depending on the amount of player side units near the sector. The more troops, the faster it'll spawn. This is to avoid random spawning by e.g. helicopter or jet fly-bys.&lt;br/&gt;&lt;br/&gt;Now you've to defeat the enemy garrison until they surrender.</Original>
             <German>Die Fabrik ist nun aktiv und wird feindliche Verteidigungstruppen erzeugen. Eine vollständige Sektoraktivierung kann bis zu 20 Sekunden dauern, abhängig von der Menge an freundlichen Einheiten in der Nähe eine Sektors. Umso mehr Einheiten, umso schneller. Dies verhindert, dass zufällige Sektoren durch lediglich vorbeifliegende Helikopter oder Jets aktiviert werden.&lt;br/&gt;&lt;br/&gt;Nun musst du die feindliche Garnison, bis zur Aufgabe, bekämpfen.</German>
             <Czech>Továrna je nyní aktivována a bude plodit nepřátelské obránce. Úplná aktivace sektoru může trvat až 20 sekund, v závislosti na množství jednotek na straně hráče v blízkosti sektoru. Čím více vojáků, tím rychleji se vynoří. To má zabránit náhodnému tření např. vrtulník nebo tryskové přelety .&lt;br/&gt;&lt;br/&gt; Nyní musíte porazit nepřátelskou posádku, dokud se nevzdají.</Czech>
+            <Spanish>La fábrica está ahora activada y hará que aparezcan defensas enemigas. Una activación de sector completa puede llevar hasta 20 segundos, dependiendo de la cantidad de unidades del bando de jugadores cerca del sector.Cuantas más tropas, más rapidamente aparecerán. Esto es para evitar la aparición aleatoria por, por ejemplo, helicopteros o aviones pasando por la zona.&lt;br/&gt;&lt;br/&gt;Ahora debes derrotar al aguarnicionamiento enemigo hasta que se rindan.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_TITLE">
             <Original>Capture and care</Original>
             <German>Gefangennahme und Versorgung</German>
             <Czech>Zachyťte a pečujte</Czech>
+            <Spanish>Capturar y cuidar</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_DESC">
             <Original>After capturing a sector there is a chance that enemies surrendered or wounded civilians are in need of medical aid.&lt;br/&gt;We've marked these for you this time. Normally you need to search the buildings for surrendering enemies and have a look on the map for small violet circles which gives a hint for wounded civilians.&lt;br/&gt;&lt;br/&gt;Approach all of the markers to capture the enemies and provide medical assistance for the civilians.</Original>
             <German>Nachdem ein Sektor erobert wurde, besteht die Chance, dass Feinde sich ergeben und verwundete Zivilisten medizinische Hilfe benötigen.&lt;br/&gt;Dieses mal haben wir diese für dich markiert. Normalerweise musst du die Gebäude nach sich ergebenen Feinden durchsuchen und auf der Karte nach kleinen violetten Markierungen schauen, welche dir einen Anhaltspunkt für verwundete Zivilisten gibt.&lt;br/&gt;&lt;br/&gt;Nähere dich allen Markierungen, um Feinde gefangen zu nehmen und den Zivilisten zu helfen.</German>
             <Czech>Po obsazení sektoru je šance, že nepřátelé, kteří se vzdali nebo budou zraněni civilisté, potřebují lékařskou pomoc.&lt;br/&gt; Tentokrát jsme je označili. Za normálních okolností je třeba hledat budovy pro odevzdání nepřátel a podívat se na mapě pro malé fialové kruhy, které dává náznak pro zraněné civilisty.&lt;br/&gt;&lt;br/&gt; Přistupte ke všem značkám, abyste zachytili nepřátele a poskytli lékařskou pomoc civilistům.</Czech>
+            <Spanish>Despues de capturar un sector hay una probabilidad de que los enemigos rendidos o los civiles heridos necesiten ayuda médica.&lt;br/&gt;Los hemos marcado para tí por esta vez. Normalmente necesitas registrar los edificios para localizar a los enemigos rendidos y mirar el mapa para localizar los círculos pequeños violeta, los cuales te darán una pista sobre los civiles heridos.&lt;br/&gt;&lt;br/&gt;Acércate a todos los marcadores para capturar a los enemigos y proveer de asistencia médica a los civiles.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_04_TITLE">
             <Original>Build a storage area</Original>
             <German>Baue einen Lagerbereich</German>
             <Czech>Vybudujte skladovací prostor</Czech>
+            <Spanish>Construir un área de almacenamiento</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_04_DESC">
             <Original>You need to place down a storage area for each factory you conquer. Otherwise the factory won't be able to produce resources due to a lack of storage space.&lt;br/&gt;Use the scroll wheel action to place a storage area at the factory sector.</Original>
             <German>Für jede eroberte Fabrik muss ein Lagerbereich errichtet werden. Andernfalls wird die Fabrik, aufgrund fehlendem Lagerplatz, keine Ressourcen produzieren können.&lt;br/&gt;Benutze die entsprechende Mausrad-Aktion, um einen Lagerbereich bei der Fabrik zu errichten.</German>
             <Czech>musíte umístit úložný prostor pro každou továrnu, kterou dobýváte. V opačném případě nebude továrna schopna vyrábět zdroje z důvodu nedostatku úložného prostoru.&lt;br/&gt; Pomocí akce rolovacího kolečka umístěte úložný prostor do výrobního sektoru.</Czech>
+            <Spanish>Necesitas colocar un área de almacenamiento para cada fábrica que conquistes. Sino la fábrica no será capaz de producir recursos debido a la falta de espacio para almacenarlos.&lt;br/&gt;Utiliza la rueda de ratón para situar un área de almacenamiento en el sector de la fábrica.</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_TITLE">
             <Original>Start the production</Original>
             <German>Starte die Produktion</German>
             <Czech>Zahajte výrobu</Czech>
+            <Spanish>Comenzar la producción</Spanish>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_DESC">
             <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
             <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
             <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
+            <Spanish>La fábrica ya está preparada para comenzar a producir recursos. utiliza la rueda de ratón para abrir la interfaz de producción y comenzar la producción en la fábrica recien conquistada.&lt;br/&gt;Puedes encontrar información mas detallada sobre la interfaz en nuestra &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Spanish>
         </Key>
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
+            <Spanish>Acceso directo al arsenal sin el Diálogo de Loadout de KPLIB</Spanish>
         </Key>
         <Key ID="STR_DEPLOY_UNDERATTACK">
             <Original>UNDER ATTACK</Original>
             <German>WIRD ANGEGRIFFEN</German>
+            <Spanish>BAJO ATAQUE</Spanish>
         </Key>
     </Package>
-
     <Package name="KPPLM">
         <Key ID="STR_KPPLM_ACTIONOPEN">
             <English>-- KP Player Menu --</English>
