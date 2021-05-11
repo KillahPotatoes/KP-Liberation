@@ -51,7 +51,8 @@ KP_liberation_medical_vehicles = [
     "uns_ch47a_medevac",
     "uns_H13_medevac_CAV",
     "uns_M577_amb",
-    "uns_uh1D_med"
+    "uns_uh1D_med",
+    "vn_b_wheeled_m54_repair_airport"
 ];
 
 // Building classnames which also function as ACE medical facilities.
@@ -60,6 +61,15 @@ KP_liberation_medical_facilities = [
     "Land_Medevac_HQ_V1_F",
     "LAND_uns_army_med",
     "LAND_uns_tent3mash",
+    "Land_vn_tent_mash_01_01",
+    "Land_vn_tent_mash_01_02",
+    "Land_vn_tent_mash_01_03",
+    "Land_vn_tent_mash_01_04",
+    "Land_vn_tent_mash_01",
+    "Land_vn_tent_mash_02_01",
+    "Land_vn_tent_mash_02_02",
+    "Land_vn_tent_mash_02_03",
+    "Land_vn_tent_mash_02_04",
     "uns_mash_main",
     "uns_mash",
     "US_Tent_2",
