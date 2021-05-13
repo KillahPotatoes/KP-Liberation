@@ -1,6 +1,6 @@
 /*
     Needed Mods:
-    - VN
+    - S.O.G. Prairie Fire CDLC
 
     Optional Mods:
     - None
@@ -26,7 +26,7 @@ KP_liberation_truck_classname = "vn_b_wheeled_m54_01";                  // These
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources. (Land_vn_hootch_01_wall)
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources. (Land_vn_barracks_04_wall)
 KP_liberation_recycle_building = "Land_vn_hootch_01_03";                // The building defined to unlock FOB recycling functionality.
-KP_liberation_air_vehicle_building = "Land_vn_tropo_reflector_01";      // The building defined to unlock FOB air vehicle functionality.
+KP_liberation_air_vehicle_building = "Land_vn_radar_small_f";           // The building defined to unlock FOB air vehicle functionality.
 KP_liberation_heli_slot_building = "Land_vn_b_helipad_01";              // The helipad used to increase the GLOBAL rotary-wing cap.
 KP_liberation_plane_slot_building = "Land_vn_usaf_hangar_02";           // The hangar used to increase the GLOBAL fixed-wing cap.
 KP_liberation_supply_crate = "Land_FoodSacks_01_cargo_brown_F";         // This defines the supply crates, as in resources.
@@ -49,68 +49,62 @@ infantry_units = [
     ["vn_b_men_army_06",25,0,0],                                        // Autorifleman
     ["vn_b_men_army_10",30,0,0],                                        // Marksman
     ["vn_b_men_army_11",40,0,0],                                        // Sharpshooter
-    ["vn_b_men_army_12",50,10,0],                                       // AT Specialist (Is called grenadier 2 but has not grenadelauncher and a LAW
-    ["B_soldier_AA_F",50,10,0],                                         // AA Specialist (Won't be any for VN)
+    ["vn_b_men_army_12",50,10,0],                                       // AT Specialist
     ["vn_b_men_army_03",30,0,0],                                        // Combat Life Saver
     ["vn_b_men_army_04",30,0,0],                                        // Engineer
     ["vn_b_men_army_05",30,0,0],                                        // Explosives Specialist
     ["vn_b_men_sf_04",20,0,0],                                          // Recon Scout
-    ["vn_b_men_sf_13",30,0,0],                                          // Recon Scout (AT)
     ["vn_b_men_sf_21",30,0,0],                                          // Recon Marksman
     ["vn_b_men_sf_02",30,0,0],                                          // Recon Paramedic
     ["vn_b_men_sf_03",30,0,0],                                          // Recon Demolition Expert
     ["vn_b_men_army_13",10,0,0],                                        // Crewman
     ["vn_b_men_army_16",20,0,0],                                        // Para Trooper
     ["vn_b_men_aircrew_06",10,0,0],                                     // Helicopter Crew
-    ["vn_b_men_aircrew_01",10,0,0],                                     // Helicopter Pilot
+    ["vn_b_men_aircrew_05",10,0,0],                                     // Helicopter Pilot
     ["vn_b_men_jetpilot_01",10,0,0]                                     // Pilot
 ];
 
 light_vehicles = [
     ["vn_c_bicycle_01",10,0,0],                                         // Bicycle
     ["vn_b_wheeled_m151_01",75,0,50],                                   // M151A1 Transport
-    ["vn_i_wheeled_m151_mg_01",75,35,50],                               // M151A1 M1919
     ["vn_b_wheeled_m151_mg_02",75,40,50],                               // M151A1 M2
     ["vn_b_wheeled_m151_mg_03",75,50,50],                               // M151A1 Patrol
     ["vn_b_wheeled_m151_mg_04",95,30,60],                               // M151A1 Armoured
     ["vn_b_wheeled_m54_mg_01",100,60,50],                               // M54 Gun Truck (3x M2HB)
+    ["vn_b_wheeled_m151_02",75,0,50],                                   // M151A1 Transport (Covered)
     ["vn_b_wheeled_m54_mg_03",100,80,50],                               // M54 Gun Truck (Minigun)
     ["vn_b_wheeled_m54_mg_02",100,120,50],                              // M54 (M45 Quad)
     ["vn_b_wheeled_m54_01",125,0,75],                                   // M54 Transport
     ["vn_b_wheeled_m54_02",125,0,75],                                   // M54 Transport (Covered)
     ["vn_c_boat_01_00",25,0,25],                                        // Boat
     ["vn_c_boat_02_00",35,0,25],                                        // Long Boat
-    ["B_Boat_Transport_01_F",50,0,25],                                  // Assault Boat
     ["vn_b_boat_05_01",200,120,75]                                      // PTF Nasty (Mortar)
 ];
 
 heavy_vehicles = [
-// M42A1 Duster ["vn_b_armor_m42",300,100,150] not playable
+    ["vn_b_armor_m41_01_01",300,100,150]                                // M41A3 Walker Bulldog
 ];
 
 air_vehicles = [
     ["vn_b_air_oh6a_01",200,10,100],                                    // OH-6A Cayuse
-    ["vn_b_air_oh6a_02",200,50,100],                                    // OH-6A Cayuse (Scout MG)
-    ["vn_b_air_oh6a_03",200,100,100],                                   // OH-6A Cayuse (Scout GL)
     ["vn_b_air_oh6a_06",200,200,100],                                   // OH-6A Cayuse (Gunship/APERS)
     ["vn_b_air_oh6a_04",200,200,100],                                   // OH-6A Cayuse (Gunship/CAS)
-    ["vn_b_air_oh6a_05",200,200,100],                                   // OH-6A Cayuse (Gunship/AT)
-    ["vn_b_air_oh6a_07",200,200,100],                                   // OH-6A Cayuse (Gunship/FAC)
     ["vn_b_air_ch34_03_01",225,20,125],                                 // UH-34D Seahorse (M60 x2)
     ["vn_b_air_ch34_04_03",225,300,100],                                // UH-34 Stinger (APERS)
     ["vn_b_air_ch34_04_02",225,300,100],                                // UH-34 Stinger (CAS)
     ["vn_b_air_ch34_04_04",225,300,100],                                // UH-34 Stinger (FAC)
     ["vn_b_air_ch34_04_01",225,300,100],                                // UH-34 Stinger (FFAR)
-    ["vn_b_air_uh1d_02_01",260,0,150],                                  // UH-1C Iroquois (MedEvac)
-    ["vn_b_air_uh1c_03_01",500,400,200],                                // UH-1C Iroquois ()
-    ["vn_b_air_ah1g_02",500,400,200],                                     // AH-1G Cobra (APERS)
-    ["vn_b_air_ah1g_03",500,400,200],                                     // AH-1G Cobra (AT)
-    ["vn_b_air_ah1g_04",500,400,200],                                     // AH-1G Cobra (CAS)
-    ["vn_b_air_ah1g_05",500,400,200],                                     // AH-1G Cobra (FAC)
-    ["vn_b_air_ah1g_01",500,400,200]                                      // AH-1G Cobra (FFAR)
-    //["vn_b_air_uh1d_01_01",250,0,150],                                  // UH-1D Iroquois (Slick) not appearing in the list atm not sure if playable
-    //["B_Plane_CAS_01_dynamicLoadout_F",1000,800,400],                   // A-164 Wipeout (CAS)/ Too modern
-    //["B_Plane_Fighter_01_F",1500,1750,450]                              // F/A-181 Black Wasp II Too modern
+    ["vn_b_air_uh1d_02_01",200,60,150],                                 // UH-1C Iroquois Slick (Army)
+    ["vn_b_air_uh1c_01_01",500,400,200],                                // UH-1C Iroquois Hog (Army)
+    ["vn_b_air_ah1g_02",500,400,200],                                   // AH-1G Cobra (APERS)
+    ["vn_b_air_ah1g_03",500,400,200],                                   // AH-1G Cobra (AT)
+    ["vn_b_air_ah1g_04",500,400,200],                                   // AH-1G Cobra (CAS)
+    ["vn_b_air_ah1gd_05",500,400,200],                                  // AH-1G Cobra (FAC)
+    ["vn_b_air_ah1g_01",500,400,200],                                   // AH-1G Cobra (FFAR)
+    ["vn_b_air_uh1d_01_01",250,0,150],                                  // UH-1D Iroquois (Dust Off) MedEvac
+    ["vn_b_air_f4c_at",1250,1250,450],                                  // F-4C Phantom II (AT)
+    ["vn_b_air_f4c_cas",1250,1250,450],                                 // F-4C Phantom II (CAS)
+    ["vn_b_air_f4c_cap",1250,1250,450]                                  // F-4C Phantom II (CAP)
 ];
 
 static_vehicles = [
@@ -200,76 +194,36 @@ buildings = [
     ["Land_vn_bagbunker_01_small_green_f",0,0,0],
     ["Land_vn_bagbunker_large_f",0,0,0],
     ["Land_vn_bagbunker_small_f",0,0,0],
-    ["Land_vn_bar_01",0,0,0],
-    ["Land_vn_barracks_01_camo_f",0,0,0],
-    ["Land_vn_barracks_01_dilapidated_f",0,0,0],
-    ["Land_vn_barracks_01_grey_f",0,0,0],
-    ["Land_vn_barracks_01_wall",0,0,0],
     ["Land_vn_barracks_01",0,0,0],
     ["Land_vn_barracks_02_01",0,0,0],
-    ["Land_vn_barracks_02_f",0,0,0],
-    ["Land_vn_barracks_02_wall",0,0,0],
     ["Land_vn_barracks_02",0,0,0],
     ["Land_vn_barracks_03_01",0,0,0],
     ["Land_vn_barracks_03_02",0,0,0],
     ["Land_vn_barracks_03_03",0,0,0],
-    ["Land_vn_barracks_03_f",0,0,0],
-    ["Land_vn_barracks_03_wall",0,0,0],
     ["Land_vn_barracks_03",0,0,0],
     ["Land_vn_barracks_04_01",0,0,0],
-    ["Land_vn_barracks_04_f",0,0,0],
-    ["Land_vn_barracks_04_wall",0,0,0],
     ["Land_vn_barracks_04",0,0,0],
-    ["Land_vn_barracks_05_f",0,0,0],
-    ["Land_vn_barracks_06_f",0,0,0],
-    ["Land_vn_barricade_01_10m_f",0,0,0],
-    ["Land_vn_barricade_01_4m_f",0,0,0],
-    ["Land_vn_controltower_01_f",0,0,0],
-    ["Land_vn_guardbox_01_brown_f",0,0,0],
-    ["Land_vn_guardbox_01_green_f",0,0,0],
-    ["Land_vn_guardbox_01_smooth_f",0,0,0],
+    ["Land_vn_barracks_03",0,0,0],
+    ["Land_vn_barracks_03_04",0,0,0],
+    ["Land_vn_barracks_04_02",0,0,0],
     ["Land_vn_guardhouse_01",0,0,0],
-    ["Land_vn_guardhouse_02_f",0,0,0],
-    ["Land_vn_guardhouse_02_grey_f",0,0,0],
-    ["Land_vn_guardhouse_02",0,0,0],
-    ["Land_vn_guardhouse_03_f",0,0,0],
-    ["Land_vn_guardhouse_03",0,0,0],
     ["Land_vn_guardtower_01_f",0,0,0],
     ["Land_vn_helipadcircle_f",0,0,0],
-    ["Land_vn_helipadcivil_f",0,0,0],
-    ["Land_vn_helipadempty_f",0,0,0],
     ["Land_vn_helipadrescue_f",0,0,0],
     ["Land_vn_helipadsquare_f",0,0,0],
-    ["Land_vn_hlaska",0,0,0],
     ["Land_vn_hootch_01_01",0,0,0],
     ["Land_vn_hootch_01_02",0,0,0],
     ["Land_vn_hootch_01_11",0,0,0],
     ["Land_vn_hootch_01_12",0,0,0],
     ["Land_vn_hootch_01_13",0,0,0],
-    ["Land_vn_hootch_01_wall",0,0,0],
     ["Land_vn_hootch_01",0,0,0],
     ["Land_vn_hootch_02_01",0,0,0],
     ["Land_vn_hootch_02_02",0,0,0],
     ["Land_vn_hootch_02_11",0,0,0],
-    ["Land_vn_hootch_02_wall",0,0,0],
     ["Land_vn_hootch_02",0,0,0],
-    ["Land_vn_hut_old02",0,0,0],
-    ["Land_vn_i_barracks_v1_dam_f",0,0,0],
-    ["Land_vn_i_barracks_v1_f",0,0,0],
-    ["Land_vn_i_barracks_v2_dam_f",0,0,0],
-    ["Land_vn_i_barracks_v2_f",0,0,0],
-    ["Land_vn_jumptarget_f",0,0,0],
     ["Land_vn_latrine_01",0,0,0],
-    ["Land_vn_mil_barracks_i_ep1",0,0,0],
     ["Land_vn_mobileradar_01_generator_f",0,0,0],
     ["Land_vn_mobileradar_01_radar_f",0,0,0],
-    ["Land_vn_pillboxbunker_01_big_f",0,0,0],
-    ["Land_vn_pillboxbunker_01_hex_f",0,0,0],
-    ["Land_vn_pillboxbunker_01_rectangle_f",0,0,0],
-    ["Land_vn_pillboxbunker_02_hex_f",0,0,0],
-    ["Land_vn_quonset_01",0,0,0],
-    ["Land_vn_quonset_02_01",0,0,0],
-    ["Land_vn_quonset_02",0,0,0],
     ["Land_vn_sandbagbarricade_01_f",0,0,0],
     ["Land_vn_sandbagbarricade_01_half_f",0,0,0],
     ["Land_vn_sandbagbarricade_01_hole_f",0,0,0],
@@ -282,17 +236,6 @@ buildings = [
     ["Land_vn_tent_02_02",0,0,0],
     ["Land_vn_tent_02_03",0,0,0],
     ["Land_vn_tent_02_04",0,0,0],
-    ["Land_vn_tent_mash_01_01",0,0,0],
-    ["Land_vn_tent_mash_01_02",0,0,0],
-    ["Land_vn_tent_mash_01_03",0,0,0],
-    ["Land_vn_tent_mash_01_04",0,0,0],
-    ["Land_vn_tent_mash_01",0,0,0],
-    ["Land_vn_tent_mash_02_02",0,0,0],
-    ["Land_vn_tent_mash_02_03",0,0,0],
-    ["Land_vn_tent_mash_02_04",0,0,0],
-    ["Land_vn_tower_signal_01",0,0,0],
-    ["Land_vn_tropo_antenna_01",0,0,0],
-    ["Land_vn_u_barracks_v2_f",0,0,0],
     ["Land_vn_usaf_fueltank_75_01",0,0,0],
     ["Land_vn_usaf_hangar_01",0,0,0],
     ["Land_vn_usaf_revetment_helipad_01",0,0,0],
@@ -312,7 +255,6 @@ buildings = [
     ["vn_flag_usa",0,0,0],
     ["vn_flag_usarmy",0,0,0],
     ["vn_flag_usmc",0,0,0],
-    ["vn_roadbarrier_small_f",0,0,0],
     ["vn_steeldrum_bbq_02",0,0,0],
     ["vn_steeldrum_half_02",0,0,0],
     ["vn_steeldrum_trash_02",0,0,0]
@@ -346,81 +288,81 @@ support_vehicles = [
 // Light infantry squad.
 blufor_squad_inf_light = [
     "vn_b_men_army_02",
-    "vn_b_men_army_15",
-    "vn_b_men_army_15",
-    "vn_b_men_army_12",
-    "vn_b_men_army_07",
-    "vn_b_men_army_06",
-    "vn_b_men_army_06",
-    "vn_b_men_army_10",
-    "vn_b_men_army_03",
-    "vn_b_men_army_04"
+    "vn_b_men_army_15", // Rifleman
+    "vn_b_men_army_15", // Rifleman
+    "vn_b_men_army_12", // Rifleman (AT)
+    "vn_b_men_army_07", // Grenadier
+    "vn_b_men_army_06", // Autorifleman
+    "vn_b_men_army_06", // Autorifleman
+    "vn_b_men_army_10", // Marksman
+    "vn_b_men_army_03", // Combat Life Saver
+    "vn_b_men_army_04" // Engineer
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
     "vn_b_men_army_02",
-    "vn_b_men_army_12",
-    "vn_b_men_army_12",
-    "vn_b_men_army_07",
-    "vn_b_men_army_06",
-    "vn_b_men_army_06",
-    "vn_b_men_army_06",
-    "vn_b_men_army_11",
-    "vn_b_men_army_03",
-    "vn_b_men_army_04"
+    "vn_b_men_army_12", // Rifleman (AT)
+    "vn_b_men_army_12", // Rifleman (AT)
+    "vn_b_men_army_07", // Grenadier
+    "vn_b_men_army_06", // Autorifleman
+    "vn_b_men_army_06", // Autorifleman
+    "vn_b_men_army_06", // Autorifleman
+    "vn_b_men_army_11", // Sharpshooter
+    "vn_b_men_army_03", // Combat Life Saver
+    "vn_b_men_army_04"  // Engineer
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
     "vn_b_men_army_02",
-    "vn_b_men_army_15",
-    "vn_b_men_army_15",
-    "B_soldier_AT_F",
-    "B_soldier_AT_F",
-    "B_soldier_AT_F",
+    "vn_b_men_army_15", // Rifleman
+    "vn_b_men_army_15", // Rifleman
+    "vn_b_men_army_12", // Rifleman (AT)
+    "vn_b_men_army_12", // Rifleman (AT)
+    "vn_b_men_army_12", // Rifleman (AT)
     "vn_b_men_army_03",
-    "vn_b_men_army_15"
+    "vn_b_men_army_15" // Rifleman
 ];
 
-// AA specialists squad. Never gonna be available in VN
+// AA specialists squad. Never gonna be available in VN <--- stimme ich zu, könnte also ganz weg (weiß nicht, wie das dann gelöst wird)
 blufor_squad_aa = [
     "vn_b_men_army_02",
-    "vn_b_men_army_15",
-    "vn_b_men_army_15",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "B_soldier_AA_F",
-    "vn_b_men_army_03",
-    "vn_b_men_army_15"
+    "vn_b_men_army_15", // Rifleman
+    "vn_b_men_army_15", // Rifleman
+    "B_soldier_AA_F", // AA Specialist (Won't be any for VN)
+    "B_soldier_AA_F", // AA Specialist (Won't be any for VN)
+    "B_soldier_AA_F", // AA Specialist (Won't be any for VN)
+    "vn_b_men_army_03", // Combat Life Saver
+    "vn_b_men_army_15" // Rifleman
 ];
 
 // Force recon squad.
 blufor_squad_recon = [
     "vn_b_men_sf_01",
-    "vn_b_men_sf_04",
-    "vn_b_men_sf_04",
-    "vn_b_men_sf_13",
-    "vn_b_men_sf_21",
-    "vn_b_men_sf_21",
+    "vn_b_men_sf_04", // Recon Scout
+    "vn_b_men_sf_04", // Recon Scout
+    "vn_b_men_sf_13", // Recon Scout (AT)
+    "vn_b_men_sf_21", // Recon Marksman
+    "vn_b_men_sf_21", // Recon Marksman
     "vn_b_men_sf_14",
     "vn_b_men_sf_14",
-    "vn_b_men_sf_02",
-    "vn_b_men_sf_03"
+    "vn_b_men_sf_02", // Recon Paramedic
+    "vn_b_men_sf_03" // Recon Demolition Expert
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16",
-    "vn_b_men_army_16"
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16", // Para Trooper
+    "vn_b_men_army_16" // Para Trooper
 ];
 
 /*

@@ -52,6 +52,7 @@ KP_liberation_medical_vehicles = [
     "uns_H13_medevac_CAV",
     "uns_M577_amb",
     "uns_uh1D_med",
+    "vn_b_air_uh1d_01_01",
     "vn_b_wheeled_m54_repair_airport"
 ];
 
