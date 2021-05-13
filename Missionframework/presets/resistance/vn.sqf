@@ -1,6 +1,6 @@
 /*
     Needed Mods:
-    - None
+    - S.O.G. Prairie Fire CDLC
 
     Optional Mods:
     - None
@@ -9,14 +9,14 @@
 /* Classnames of the guerilla faction which is friendly or hostile, depending on the civil reputation
 Standard loadout of the units will be replaced with a scripted one, which depends on the guerilla strength, after spawn */
 KP_liberation_guerilla_units = [
-    "vn_i_men_army_21",
-    "vn_i_men_army_19",
-    "vn_i_men_army_15",
-    "vn_i_men_army_22",
-    "vn_i_men_army_04",
+    "vn_i_men_army_01",
     "vn_i_men_army_03",
+    "vn_i_men_army_04",
     "vn_i_men_army_08",
-    "vn_i_men_army_01"
+    "vn_i_men_army_15",
+    "vn_i_men_army_19",
+    "vn_i_men_army_21",
+    "vn_i_men_army_22"
 ];
 
 // Armed vehicles
@@ -50,8 +50,8 @@ KP_liberation_guerilla_weapons_2 = [
 ];
 
 KP_liberation_guerilla_weapons_3 = [
-    ["vn_m16","vn_m16_20_t_mag",6,"",""],
-    ["vn_m16","vn_m16_20_t_mag",6,"",""],
+    ["vn_m16","vn_m16_30_t_mag",6,"vn_o_4x_m16",""],
+    ["vn_m16","vn_m16_30_t_mag",6,"vn_o_4x_m16",""],
     ["vn_m14","vn_m14_t_mag",6,"",""],
     ["vn_m14","vn_m14_t_mag",6,"vn_o_9x_m14",""],
     ["vn_m60","vn_m60_100_mag",2,"",""],
@@ -60,75 +60,75 @@ KP_liberation_guerilla_weapons_3 = [
 
 // Uniforms
 KP_liberation_guerilla_uniforms_1 = [
-    "vn_b_uniform_macv_04_07"
+    "vn_o_uniform_vc_05_01",
+    "vn_o_uniform_vc_05_04",
+    "vn_o_uniform_vc_05_03",
+    "vn_o_uniform_vc_05_02"
 ];
 
 KP_liberation_guerilla_uniforms_2 = [
-    "vn_b_uniform_macv_04_07"
+    "vn_o_uniform_vc_01_02",
+    "vn_o_uniform_vc_01_07",
+    "vn_o_uniform_vc_01_03",
+    "vn_o_uniform_vc_reg_12_08",
+    "vn_o_uniform_vc_01_06",
+    "vn_o_uniform_vc_reg_12_09"
 ];
 
 KP_liberation_guerilla_uniforms_3 = [
-    "vn_b_uniform_macv_04_07"
+    "vn_o_uniform_vc_mf_04_07",
+    "vn_o_uniform_vc_mf_03_07",
+    "vn_o_uniform_vc_mf_02_07"
 ];
 
 // Vests
 KP_liberation_guerilla_vests_1 = [
-    "vn_b_vest_usarmy_01",
-    "vn_b_vest_usarmy_10"
+    "vn_o_vest_04",
+    "vn_o_vest_05"
 ];
 
 KP_liberation_guerilla_vests_2 = [
-    "vn_b_vest_usarmy_05",
-    "vn_b_vest_usarmy_08",
-    "vn_b_vest_usarmy_07",
-    "vn_b_vest_usarmy_06",
-    "vn_b_vest_usarmy_09",
-    "vn_b_vest_usarmy_02",
-    "vn_b_vest_usarmy_03",
-    "vn_b_vest_usarmy_04"
+    "vn_o_vest_04",
+    "vn_o_vest_05",
+    "vn_o_vest_vc_01",
+    "vn_o_vest_vc_03"
 ];
 
 KP_liberation_guerilla_vests_3 = [
-    "vn_b_vest_usarmy_05",
-    "vn_b_vest_usarmy_08",
-    "vn_b_vest_usarmy_07",
-    "vn_b_vest_usarmy_06",
-    "vn_b_vest_usarmy_09",
-    "vn_b_vest_usarmy_02",
-    "vn_b_vest_usarmy_03",
-    "vn_b_vest_usarmy_04"
-
+    "vn_o_vest_vc_01",
+    "vn_o_vest_vc_05",
+    "vn_o_vest_vc_04",
+    "vn_o_vest_vc_03",
+    "vn_o_vest_vc_02"
 ];
 
 // Headgear
 KP_liberation_guerilla_headgear_1 = [
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
+    "vn_c_conehat_02",
+    "vn_c_conehat_01",
+    "vn_c_headband_01",
+    "vn_c_headband_02",
+    "vn_c_headband_03",
+    "vn_b_headband_03",
     "vn_b_bandana_03",
-    "vn_b_bandana_01",
-    "vn_i_helmet_m1_01_02"
+    "vn_b_bandana_01"
 ];
 
 KP_liberation_guerilla_headgear_2 = [
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_b_bandana_03",
-    "vn_b_bandana_01",
-    "vn_i_helmet_m1_01_02"
+    "vn_b_boonie_03_03",
+    "vn_b_boonie_04_03",
+    "vn_b_boonie_04_01",
+    "vn_b_boonie_05_01",
+    "vn_o_boonie_vc_01_01",
+    "vn_o_boonie_vc_01_02"
 ];
 
 KP_liberation_guerilla_headgear_3 = [
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_i_helmet_m1_01_01",
-    "vn_b_bandana_03",
-    "vn_b_bandana_01",
-    "vn_i_helmet_m1_01_02"
+    "vn_b_helmet_m1_01_01",
+    "vn_b_helmet_m1_02_02",
+    "vn_o_helmet_vc_01",
+    "vn_o_helmet_vc_03",
+    "vn_b_helmet_sog_01"
 ];
 
 // Facegear. Applies for tier 2 and 3.
