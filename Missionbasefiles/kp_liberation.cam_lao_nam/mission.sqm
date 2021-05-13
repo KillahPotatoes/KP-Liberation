@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=189;
+		nextID=198;
 	};
 	class Camera
 	{
@@ -3428,7 +3428,7 @@ class Mission
 					name="opfor_point_159";
 					type="Empty";
 					id=480;
-					atlOffset=-7.6602707;
+					atlOffset=-7.6602716;
 				};
 				class Item160
 				{
@@ -5757,8 +5757,9 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1941.8735,2.1509736,3072.7161};
+				position[]={1941.874,2.1509681,3072.7161};
 			};
+			init="if (isClass (configfile >> ""CfgPatches"" >> ""ace_medical"")) then {" \n "    missionNamespace setVariable [""vn_advanced_revive_started"", true, true];" \n "};";
 			id=474;
 			type="vn_module_advanced_revive";
 			class CustomAttributes
@@ -5784,51 +5785,8 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
-							class value
-							{
-								items=5;
-								class Item0
-								{
-									class data
-									{
-										singleType="STRING";
-										value="FirstAidKit";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Medikit";
-									};
-								};
-								class Item2
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_o_item_firstaidkit";
-									};
-								};
-								class Item3
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_b_item_firstaidkit";
-									};
-								};
-								class Item4
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_b_item_medikit_01";
-									};
-								};
-							};
+							singleType="STRING";
+							value="[""FirstAidKit"",""Medikit"",""vn_o_item_firstaidkit"",""vn_b_item_firstaidkit"",""vn_b_item_medikit_01""]";
 						};
 					};
 				};
@@ -5879,51 +5837,8 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
-							class value
-							{
-								items=5;
-								class Item0
-								{
-									class data
-									{
-										singleType="STRING";
-										value="FirstAidKit";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_o_item_firstaidkit";
-									};
-								};
-								class Item2
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_b_item_firstaidkit";
-									};
-								};
-								class Item3
-								{
-									class data
-									{
-										singleType="STRING";
-										value="vn_b_item_medikit_01";
-									};
-								};
-								class Item4
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Medikit";
-									};
-								};
-							};
+							singleType="STRING";
+							value="[""FirstAidKit"",""vn_o_item_firstaidkit"",""vn_b_item_firstaidkit"",""vn_b_item_medikit_01"",""Medikit""]";
 						};
 					};
 				};
