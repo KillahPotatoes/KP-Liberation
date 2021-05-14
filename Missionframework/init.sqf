@@ -51,7 +51,11 @@ if (!isDedicated && hasInterface) then {
 };
 
 // Execute fnc_reviveInit again (by default it executes in postInit)
-if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(bis_reviveParam_mode == 0)) then {
+if (
+    (isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated)
+    && !(bis_reviveParam_mode == 0)
+    && !(missionNamespace getVariable ["vn_advanced_revive_started", false])
+) then {
     [] call bis_fnc_reviveInit;
 };
 

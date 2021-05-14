@@ -1,7 +1,7 @@
 /*
     Killah Potatoes GUI base classes
 
-    File: KPGUI_classes.hpp
+    File: KPGUI_classes.inc
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-09-13
     Last Update: 2020-05-09

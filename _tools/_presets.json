@@ -14,6 +14,21 @@
         "workshopId": "1578862234"
     },
     {
+        "sourceFolder": "kp_liberation.cam_lao_nam",
+        "missionName": "kp_liberation",
+        "map": "cam_lao_nam",
+        "mapDisplay": "Cam Lao Nam",
+        "configFile": "kp_liberation_config.sqf",
+        "variables": {
+            "KP_liberation_preset_blufor": 31,
+            "KP_liberation_preset_opfor": 21,
+            "KP_liberation_preset_resistance": 9,
+            "KP_liberation_preset_civilians": 8,
+            "KP_liberation_arsenal": 17
+        },
+        "workshopId": "2478668937"
+    },
+    {
         "sourceFolder": "kp_liberation.Chernarus",
         "missionName": "kp_liberation",
         "map": "Chernarus",

@@ -1,7 +1,7 @@
 /*
     Killah Potatoes GUI defines and functions
 
-    File: KPGUI_defines.hpp
+    File: KPGUI_defines.inc
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-07-10
     Last Update: 2020-04-10
@@ -135,4 +135,4 @@
 #define KP_HEIGHT_VAL_LP                (1 - 2 * KP_Y_VAL_LP - KP_HEIGTH_TITLE - KP_HEIGTH_BUTTON - 2 * KP_SPACING_Y)
 
 // Classes include
-#include "KPGUI_classes.hpp"
+#include "KPGUI_classes.inc"
