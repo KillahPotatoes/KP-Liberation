@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=492;
+		nextID=493;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=198;
+		nextID=207;
 	};
 	class Camera
 	{
-		pos[]={2456.186,124.03532,14278.885};
-		dir[]={0.92589855,-0.20482683,0.31745657};
-		up[]={0.19375691,0.97879863,0.066431999};
-		aside[]={0.32433319,1.5586556e-007,-0.94595486};
+		pos[]={2125.4722,29.942047,4086.0276};
+		dir[]={0.79833263,-0.43620101,0.41520318};
+		up[]={0.38699093,0.89984924,0.20126933};
+		aside[]={0.46141416,1.4901161e-008,-0.88718486};
 	};
 };
 binarizationWanted=0;
@@ -38,13 +38,14 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Characters_F",
 	"structures_f_vietnam_c",
-	"modules_f_vietnam"
+	"modules_f_vietnam",
+	"objects_f_vietnam_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -98,6 +99,13 @@ class AddonsMetaData
 		{
 			className="modules_f_vietnam";
 			name="modules_f_vietnam";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="objects_f_vietnam_c";
+			name="objects_f_vietnam_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
@@ -164,7 +172,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			dataType="Layer";
@@ -6002,6 +6010,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2126.9238,29.037062,4086.6843};
+				angles[]={0,1.2091243,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=492;
+			type="vn_b_prop_fmradio_01";
+			atlOffset=0.83037758;
 		};
 	};
 	class Connections
