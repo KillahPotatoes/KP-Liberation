@@ -502,6 +502,17 @@ GRLIB_arsenal_items = [
     "vn_m19_binocs_grey",
     "vn_m19_binocs_grn",
     "vn_mk21_binocs",
+    "vn_o_3x_m84",
+    "vn_o_3x_m9130",
+    "vn_o_4x_m16",
+    "vn_o_4x_m4956",
+    "vn_o_9x_m14",
+    "vn_o_9x_m16",
+    "vn_o_9x_m40a1_camo",
+    "vn_o_9x_m40a1",
+    "vn_o_anpvs2_m14",
+    "vn_o_anpvs2_m16",
+    "vn_o_anpvs2_m40a1",
     "vn_rocket_m128_launcher",
     "vn_s_m14",
     "vn_s_m16",
@@ -517,14 +528,106 @@ GRLIB_arsenal_items = [
     "vn_s_sten",
     "vn_type56_v_03",
 
+    // ACE Items
+    "ACE_acc_pointer_green",                                        // Laser Pointer (green)
+    "ACE_adenosine",                                                // Adenosine autoinjector
+    "ACE_Altimeter",                                                // Altimeter Watch
+    "ACE_artilleryTable",                                           // Artillery Rangetable
+    "ACE_ATragMX",                                                  // ATragMX
+    "ACE_Banana",                                                   // Banana
+    "ACE_bloodIV_250",                                              // Blood IV (250 ml)
+    "ACE_bloodIV_500",                                              // Blood IV (500 ml)
+    "ACE_bloodIV",                                                  // Blood IV (1000 ml)
+    "ACE_bodyBag",                                                  // Bodybag
+    "ACE_CableTie",                                                 // Cable Tie
+    "ACE_Cellphone",                                                // Cellphone
+    "ACE_Chemlight_Shield",                                         // Chemlight Shield (Empty)
+    "ACE_Clacker",                                                  // M57 Firing Device
+    "ACE_DAGR",                                                     // DAGR
+    "ACE_DeadManSwitch",                                            // Dead Man's Switch
+    "ACE_DefusalKit",                                               // Defusal Kit
+    "ace_dragon_sight",                                             // SU-36/P Daysight
+    "ACE_EarPlugs",                                                 // Earplugs
+    "ACE_elasticBandage",                                           // Bandage (Elastic)
+    "ACE_EntrenchingTool",                                          // Entrenching Tool
+    "ACE_epinephrine",                                              // Epinephrine autoinjector
+    "ACE_fieldDressing",                                            // Bandage (Basic)
+    "ACE_Flashlight_KSF1",                                          // KSF-1
+    "ACE_Flashlight_Maglite_ML300L",                                // Maglite ML300L
+    "ACE_Flashlight_MX991",                                         // Fulton MX-991
+    "ACE_Flashlight_XL50",                                          // Maglite XL50
+    "ACE_HuntIR_monitor",                                           // HuntIR monitor
+    "ACE_IR_Strobe_Item",                                           // IR Strobe
+    "ACE_Kestrel4500",                                              // Kestrel 4500NV
+    "ACE_M26_Clacker",                                              // M152 Firing Device
+    "ACE_MapTools",                                                 // Map Tools
+    "ACE_microDAGR",                                                // MicroDAGR GPS
+    "ACE_morphine",                                                 // Morphine autoinjector
+    "ACE_muzzle_mzls_338",                                          // Flash Suppressor (.338)
+    "ACE_muzzle_mzls_93mmg",                                        // Flash Suppressor (9.3 mm)
+    "ACE_muzzle_mzls_B",                                            // Flash Suppressor (7.62 mm)
+    "ACE_muzzle_mzls_H",                                            // Flash Suppressor (6.5 mm)
+    "ACE_muzzle_mzls_smg_01",                                       // FLash Suppressor (.45 ACP)
+    "ACE_muzzle_mzls_smg_02",                                       // Flash Suppressor (9 mm)
+    "ACE_MX2A",                                                     // MX-2A
+    "ACE_NVG_Gen1",                                                 // NV Goggles (Gen1)
+    "ACE_NVG_Gen2",                                                 // NV Goggles (Gen2)
+    "ACE_NVG_Gen4",                                                 // NV Goggles (Gen4)
+    "ACE_NVG_Wide",                                                 // NV Goggles (Wide)
+    "ACE_packingBandage",                                           // Bandage (Packing)
+    "ACE_personalAidKit",                                           // Personal Aid Kit
+    "ACE_plasmaIV_250",                                             // Plasma IV (250 ml)
+    "ACE_plasmaIV_500",                                             // Plasma IV (500 ml)
+    "ACE_plasmaIV",                                                 // Plasma IV (1000 ml)
+    "ACE_quikclot",                                                 // Bandage (QuickClot)
+    "ACE_RangeCard",                                                // Range Card
+    "ACE_RangeTable_82mm",                                          // 82 mm Rangetable
+    "ACE_rope12",                                                   // Rope 12.2 meters
+    "ACE_rope15",                                                   // Rope 15.2 meters
+    "ACE_rope18",                                                   // Rope 18.3 meters
+    "ACE_rope27",                                                   // Rope 27.4 meters
+    "ACE_rope36",                                                   // Rope 36.6 meters
+    "ACE_salineIV_250",                                             // Saline IV (250 ml)
+    "ACE_salineIV_500",                                             // Saline IV (500 ml)
+    "ACE_salineIV",                                                 // Saline IV (1000 ml)
+    "ACE_Sandbag_empty",                                            // Sandbag (empty)
+    "ACE_splint",                                                   // Splint
+    "ACE_SpottingScope",                                            // Spotting Scope
+    "ACE_SpraypaintBlack",                                          // Spray Paint (Black)
+    "ACE_SpraypaintBlue",                                           // Spray Paint (Blue)
+    "ACE_SpraypaintGreen",                                          // Spray Paint (Green)
+    "ACE_SpraypaintRed",                                            // Spray Paint (Red)
+    "ACE_surgicalKit",                                              // Surgical Kit
+    "ACE_tourniquet",                                               // Tourniquet (CAT)
+    "ACE_Tripod",                                                   // SSWT Kit
+    "ACE_UAVBattery",                                               // UAV Battery
+    "ACE_Vector",                                                   // Vector 21 Nite
+    "ACE_VectorDay",                                                // Vector 21
+    "ACE_VMH3",                                                     // VMH3
+    "ACE_VMM3",                                                     // VMM3
+    "ACE_wirecutter",                                               // Wirecutter
+    "ACE_Yardage450",                                               // Yardage 450
+
+    // ACRE Items
+    "ACRE_PRC117F",                                                 // AN/PRC-117F
+    "ACRE_PRC148",                                                  // AN/PRC-148
+    "ACRE_PRC152",                                                  // AN/PRC-152
+    "ACRE_PRC343",                                                  // AN/PRC-343
+    "ACRE_PRC77",                                                   // AN/PRC-77
+    "ACRE_SEM52SL",                                                 // SEM 52 SL
+    "ACRE_SEM70",                                                   // SEM 70
+    "ACRE_VHF30108",                                                // VHF30108 GSM
+    "ACRE_VHF30108MAST",                                            // VHF30108 Mast
+    "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
+
     //TFAR Items
-    "tf_anprc148jem",                                   // AN/PRC148 JEM
-    "tf_anprc152",                                      // AN/PRC152
-    "tf_anprc154_1",                                    // AN/PRC154
-    "tf_fadak",                                         // FADAK
-    "tf_microdagr",                                     // MicroDAGR Radio Programmer
-    "tf_pnr1000a_1",                                    // PNR1000A
-    "tf_rf7800str"                                      // PF7800STR
+    "tf_anprc148jem",                                               // AN/PRC148 JEM
+    "tf_anprc152",                                                  // AN/PRC152
+    "tf_anprc154_1",                                                // AN/PRC154
+    "tf_fadak",                                                     // FADAK
+    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
+    "tf_pnr1000a_1",                                                // PNR1000A
+    "tf_rf7800str"                                                  // PF7800STR
 ];
 
 GRLIB_arsenal_backpacks = [
@@ -559,18 +662,18 @@ GRLIB_arsenal_backpacks = [
     "vn_b_pack_trp_04",
 
     // TFAR Backpacks
-    "tf_anarc164",                                      // AN/ARC-164
-    "tf_anarc210",                                      // AN/ARC-210
-    "tf_anprc155_coyote",                               // AN/PRC 155 Coyote
-    "tf_anprc155",                                      // AN/PRC 155
-    "tf_bussole",                                       // Assault Pack Bussole
-    "tf_mr3000_multicam",                               // MR3000 Multicam
-    "tf_mr3000",                                        // MR3000
-    "tf_mr6000l",                                       // MR6000L
-    "tf_rt1523g_big",                                   // RT-1523G (ASIP) Big
-    "tf_rt1523g_black",                                 // RT-1523G (ASIP) Black
-    "tf_rt1523g_fabric",                                // RT-1523G (ASIP) Fabric
-    "tf_rt1523g_green",                                 // RT-1523G (ASIP) Green
-    "tf_rt1523g_sage",                                  // RT-1523G (ASIP) Sage
-    "tf_rt1523g"                                        // RT-1523G (ASIP)
+    "tf_anarc164",                                                  // AN/ARC-164
+    "tf_anarc210",                                                  // AN/ARC-210
+    "tf_anprc155_coyote",                                           // AN/PRC 155 Coyote
+    "tf_anprc155",                                                  // AN/PRC 155
+    "tf_bussole",                                                   // Assault Pack Bussole
+    "tf_mr3000_multicam",                                           // MR3000 Multicam
+    "tf_mr3000",                                                    // MR3000
+    "tf_mr6000l",                                                   // MR6000L
+    "tf_rt1523g_big",                                               // RT-1523G (ASIP) Big
+    "tf_rt1523g_black",                                             // RT-1523G (ASIP) Black
+    "tf_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
+    "tf_rt1523g_green",                                             // RT-1523G (ASIP) Green
+    "tf_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
+    "tf_rt1523g"                                                    // RT-1523G (ASIP)
 ];
