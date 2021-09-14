@@ -1,22 +1,10 @@
 /*
-	DONE Step 1: Get list of blufor towns and select one at random
-	DONE Step 2: Create a 50m radius marker at town
-	*** LATER Step 3: spawn a civilian leader near the center
-	DONE Step 4: Create while loop to check if 2 of proper crates have been brought to the point
-	DONE Step 5: Delete crates and raise civilian rep by the defined amount
-
-	TODO: 	- Spawn civilians near crate and delete later
-			DONE use KP civ rep manager script
-			DONE Add check to empty town array
-			DONE End secondary mission
-			DONE intel notification fixes
-			DONE ensure it won't proc with crates in vics
-			DONE UI implimentation
-			DONE configurable rep increase amount
-			DONE change colors
-			- fix diags
-			
-
+	Creates a secondary objective mission to allow players to bring 2x supply crates to a 
+	random friendly town in order to raise civilian rep.
+	
+	Configurable options (kp_liberation_config):
+	GRLIB_secondary_missions_costs select 3 = intel cost for mission (default 5)
+	KP_liberation_civ_supplies_impact = % increase in civilian rep (default 5)
 */
 
 _supplies_present = false;
