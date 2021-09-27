@@ -127,7 +127,7 @@ while { true } do {
                     _truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
                 };
 			*/
-				_truepos = player modelToWorld [0,10,0]; // Sets direction to 10 ft infront of player
+				_truepos = player modelToWorld [0,_dist + 10,0]; // Sets direction to 10 ft infront of player
 				
                 _actualdir = ((getdir player) + build_rotation);
                 if ( _classname == "Land_Cargo_Patrol_V1_F" || _classname == "Land_PortableLight_single_F" ) then { _actualdir = _actualdir + 180 };
