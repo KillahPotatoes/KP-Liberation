@@ -118,12 +118,17 @@ while { true } do {
             {_x setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];} foreach _object_spheres;
 
             while { build_confirmed == 1 && alive player } do {
+			
+			/*
                 _truedir = 90 - (getdir player);
                 if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                     _truepos = [((getposATL player) select 0) + (_dist * (cos _truedir)), ((getposATL player) select 1) + (_dist * (sin _truedir)),((getposATL player) select 2)];
                 } else {
                     _truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
                 };
+			*/
+				_truepos = player modelToWorld [0,10,0]; // Sets direction to 10 ft infront of player
+				
                 _actualdir = ((getdir player) + build_rotation);
                 if ( _classname == "Land_Cargo_Patrol_V1_F" || _classname == "Land_PortableLight_single_F" ) then { _actualdir = _actualdir + 180 };
                 if ( _classname == FOB_typename ) then { _actualdir = _actualdir + 270 };
@@ -140,7 +145,6 @@ while { true } do {
                     if ( _actualdir >= 292.5 && _actualdir <= 337.5 ) then { _actualdir = 315 };
                     if ( _actualdir <= 22.5 || _actualdir >= 337.5 ) then { _actualdir = 0 };
                 };
-
                 {
                     _x setPos (_truepos getPos [_dist, 10 * _forEachIndex]);
                 } foreach _object_spheres;
