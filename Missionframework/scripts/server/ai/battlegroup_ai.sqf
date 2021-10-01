@@ -18,6 +18,8 @@ while {((getPos (leader _grp)) distance _startpos) < 100} do {
 
     while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
     {_x doFollow leader _grp} forEach units _grp;
+	// Add HandleDamage Handler to fix kills not registering on scoreboard with ACE. HACK HACK HACK
+	{_x addEventHandler ["HandleDamage", {1}]} forEach units _grp;
 
     _startpos = getPos (leader _grp);
 

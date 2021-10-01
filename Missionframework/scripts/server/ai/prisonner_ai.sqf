@@ -9,7 +9,9 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == GRLIB_side_e
     sleep (random 5);
 
     if (alive _unit) then {
-
+	
+		// Add HandleDamage Handler to fix kills not registering on scoreboard with ACE. HACK HACK HACK
+		_unit addEventHandler ["HandleDamage", {1}];
         removeAllWeapons _unit;
         if (typeof _unit != pilot_classname) then {
             removeHeadgear _unit;

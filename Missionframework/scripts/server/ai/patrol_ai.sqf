@@ -8,7 +8,9 @@ while { count (units _grp) > 0 } do {
 
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
         {_x doFollow leader _grp} foreach units _grp;
-
+		// Add HandleDamage Handler to fix kills not registering on scoreboard with ACE. HACK HACK HACK
+		{_x addEventHandler ["HandleDamage", {1}]} forEach units _grp;
+		
         _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
         _waypoint setWaypointType "MOVE";
         _waypoint setWaypointSpeed "FULL";
