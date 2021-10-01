@@ -92,7 +92,5 @@ _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;
-// Add HandleDamage Handler to fix kills not registering on scoreboard with ACE. HACK HACK HACK
-_newvehicle addEventHandler ["HandleDamage", {1}];
 
 _newvehicle
