@@ -1,4 +1,7 @@
-// VN Arsenal Preset
+/*
+    Author: Discord OGTrout#5156
+    VN Arsenal Preset
+*/
 GRLIB_arsenal_weapons = [
 	"vn_m_wrench_01",
 	"vn_m_hammer",

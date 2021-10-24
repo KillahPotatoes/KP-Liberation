@@ -1,4 +1,6 @@
 /*
+    Author: Discord Jaserdoit#9385
+
     Needed Mods:
     - CUP Weapons
     - CUP Vehicles

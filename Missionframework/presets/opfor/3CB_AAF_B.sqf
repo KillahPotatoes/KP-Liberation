@@ -1,4 +1,6 @@
 /*
+    Author: Discord Karelia#5286
+    
     Needed Mods:
     - 3CB Factions
 	- RHS AFRF
