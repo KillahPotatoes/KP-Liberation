@@ -132,8 +132,7 @@ KP_liberation_preset_blufor = 0;
 17 = CUP Armed Forces of the Russian Federation (Modern MSV)
 18 = CUP Chernarus Defense Force
 19 = CUP British Armed Forces (Desert)
-20 = CUP British Armed Forces (Woodland)
-21 = RHS USAF (Woodland) */
+20 = CUP British Armed Forces (Woodland) */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -205,8 +204,9 @@ GRLIB_color_enemy_bright = "ColorRED";                                  // Enemy
 
 GRLIB_fob_range = 125;                                                  // Build range around the main FOB building.
 GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
-GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
+GRLIB_secondary_missions_costs = [15, 10, 8, 5];                        // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR, Humanitarian Aid].
 GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
+KP_liberation_civ_supplies_impact = 5;									// The percentage increase received when completing a Humanitarian Aid secondary objective
 GRLIB_recycling_percentage = 0.5;                                       // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 30;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 

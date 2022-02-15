@@ -1195,6 +1195,48 @@
             <Korean>적군 전초기지 %1 가 근처에 있습니다!</Korean>
             <Czech>Nepřátelské FOB poblíž %1.</Czech>
         </Key>
+        <Key ID="STR_NOTIFICATION_CIV_SUPPLIES_TEXT">
+            <Original>Civil authorities request supplies at %1.</Original>
+            <French>Les autorités civiles demandent des fournitures à %1.</French>
+            <German>Zivilbehörden fordern Lieferungen an bei %1.</German>
+            <Spanish>Las autoridades civiles solicitan suministros en %1</Spanish>
+            <Russian>Гражданские власти запрашивают поставки в %1.</Russian>
+            <Italian>Le autorità civili richiedono forniture a %1.</Italian>
+            <Chinesesimp>%1民政当局在。</Chinesesimp>
+            <Chinese>%1 民政當局在。</Chinese>
+            <Turkish>Sivil makamlar, %1 konumunda malzeme talep ediyor.</Turkish>
+            <Portuguese>Autoridades civis solicitam suprimentos em %1.</Portuguese>
+            <Korean>시민 당국은 %1에서 공급을 요청합니다.!</Korean>
+            <Czech>Civilní úřady požadují dodávky v %1.</Czech>
+        </Key>
+        <Key ID="STR_NOTIFICATION_CIV_SUPPLIES_COMPLETE_TEXT">
+            <Original>Supplies have been delivered. The civilians are thankful for your help!</Original>
+            <French>Les fournitures ont été livrées. Les civils sont reconnaissants pour votre aide!</French>
+            <German>Nachschub wurde geliefert. Die Zivilisten sind dankbar für Ihre Hilfe!</German>
+            <Spanish>Se han entregado los suministros. ¡Los civiles están agradecidos por su ayuda!</Spanish>
+            <Russian>Поставки доставлены. Гражданские благодарны за вашу помощь!</Russian>
+            <Italian>Le forniture sono state consegnate. I civili sono grati per il tuo aiuto!</Italian>
+            <Chinesesimp>物资已送达。平民感谢您的帮助！</Chinesesimp>
+            <Chinese>物資已送達。平民感謝您的幫助！</Chinese>
+            <Turkish>Malzemeler teslim edildi. Siviller yardımınız için minnettar!</Turkish>
+            <Portuguese>Os suprimentos foram entregues. Os civis agradecem a sua ajuda!</Portuguese>
+            <Korean>물품이 배송되었습니다. 시민 여러분의 도움에 감사드립니다!</Korean>
+            <Czech>Dodávky byly dodány. Civilisté jsou vděční za vaši pomoc!</Czech>
+        </Key>
+		    <Key ID="STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM">
+            <Original>Nno friendly towns in the area to deliver supplies to. Liberate one!</Original>
+            <French>Il n'y a pas de villes amies dans la région où livrer des fournitures. Libérez-en un avant de tenter cette mission.</French>
+            <German>Es gibt keine freundlichen Städte in der Umgebung, in die man Vorräte liefern könnte. Befreien Sie einen, bevor Sie diese Mission versuchen.</German>
+            <Spanish>No hay ciudades amigas en el área para entregar suministros. Libera a uno antes de intentar esta misión.</Spanish>
+            <Russian>В этом районе нет дружественных городов, в которые можно было бы доставлять припасы. Освободите одного перед выполнением этой миссии.</Russian>
+            <Italian>Non ci sono città amiche nella zona a cui consegnare rifornimenti. Liberane uno prima di tentare questa missione.</Italian>
+            <Chinesesimp>该地区没有友好城镇可以运送物资。在尝试此任务之前解放一个。</Chinesesimp>
+            <Chinese>該地區沒有友好城鎮可以運送物資。在嘗試此任務之前解放一個。</Chinese>
+            <Turkish>Bölgede erzak teslim edilecek dostane kasaba yok. Bu görevi denemeden önce birini serbest bırakın.</Turkish>
+            <Portuguese>Não há cidades amigáveis ​​na área para entregar suprimentos. Libere um antes de tentar esta missão.</Portuguese>
+            <Korean>이 지역에는 보급품을 배달할 우호적인 마을이 없습니다. 이 임무를 시도하기 전에 하나를 해방하십시오.</Korean>
+            <Czech>V této oblasti neexistují žádná spřátelená města, kam byste dodávali zásoby. Před pokusem o tuto misi jednoho osvobodte.</Czech>
+        </Key>
         <Key ID="STR_NOTIFICATION_PRISONER_TEXT">
             <Original>We have interrogated a prisoner.</Original>
             <French>Nous avons interroger un prisonnier.</French>
@@ -7316,6 +7358,35 @@
             <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
+        </Key>
+		
+		<Key ID="STR_SECONDARY_MISSION3">
+            <Original>Humanitarian Aid</Original>
+            <French>Recherche et Sauvetage</French>
+            <German>Helikopterbergung</German>
+            <Spanish>Búsqueda y rescate</Spanish>
+            <Russian>Найти и Спасти</Russian>
+            <Italian>Cerca e Soccorri</Italian>
+            <Chinesesimp>搜索与营救</Chinesesimp>
+            <Chinese>搜索與營救</Chinese>
+            <Turkish>Ara ve kurtar</Turkish>
+            <Portuguese>Busca e Resgate</Portuguese>
+            <Korean>수색 및 구출</Korean>
+            <Czech>Záchranná mise</Czech>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING3">
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;A nearby settlement has requested supplies, head out and deliver them to the highlighted settlement.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;This will help win hearts and minds in the local region and ultimately help limit any locals engaging us in open and guerilla combat.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: 5% increase in Civil Reputation.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg/&gt;&lt;/t&gt;</Original>
+            <French>&lt;t size='1.3' color='#ffa000'&gt;RECHERCHE ET SAUVETAGE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Nous avons perdu le contact avec un helicoptère de reconnaissance en mission derrière les lignes ennemies. Il a probablement été abattu par les forces hostiles.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;L'hélicopter a pu finir sa course dans une large zone autour de sa dernière position connue. Votre mission est de retrouver l'équipage et sa précieuse intel. Les forces hostiles les auront peut-être déjà retrouvés, votre action doit donc être rapide et décisive.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cout: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Récompense: 20 points d'intel (10 pour chaque équipage vivant).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</French>
+            <German>&lt;t size='1.3' color='#ffa000'&gt;SUCHEN UND ZERSTÖREN&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Wir haben den Kontakt mit einem Aufklärungshelikopter, der auf einer Mission hinter feindlichen Linien war, verloren. Wir vermuten, dass der Helikotper von feindlichen Kräften abgeschossen wurde.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Der Helikopter muss irgendwo in einem größeren Bereich um seine letzte bekannte Position notgelandet sein. Ihr Auftrag ist es, die Besatzung zu finden und deren Aufklärungsbericht zu beschaffen. Feindliche Kräfte könnten sie bereits gefunden haben, also müssen sie schnell, vorsichtig und auf alles vorbereitet sein.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: 20 intel points (10 for each crew alive).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</German>
+            <Spanish>&lt;t size='1.3' color='#ffa000'&gt;BÚSQUEDA Y RESCATE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Hemos perdido contacto con un helicóptero de reconocimiento durante una misión tras las líneas enemigas. Creemos que el helicóptero ha sido derribado por las fuerzas hostiles.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;El helicóptero habría aterrizado forzosamente en alguna parte alrededor de su última posición conocida. Tu misión consiste en traer de vuelta a su tripulación y a la preciada información de interligencia que allí se encuentra. Las fuerzas hostiles pueden haberlos encontrado antes, así que hay que ser rápidos, cuidadosos y estar preparados para enfrentarse.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Coste: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: 20 puntos de intel (10 por cada tripulante).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Spanish>
+            <Russian>&lt;t size='1.3' color='#ffa000'&gt;НАЙТИ И СПАСТИ&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Мы потеряли связь с вертолетом спецотряда, на задании в тылу врага. Мы считаем, что вертолет был сбит вражескими силами.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Вертолет, возможно, упал где-то в большой зоне вокруг последнего известного положения. Ваша миссия состоит в том, чтобы спасти экипаж вертолета и их драгоценные разведданные. Враги, возможно, нашли их первыми, поэтому вы должны быть быстрым, внимательным, и готовы к битве.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Стоимость: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Награда: 20 разведданных (10 за каждого живого экипажа вертолета)&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Russian>
+            <Italian>&lt;t size='1.3' color='#ffa000'&gt;CERCA E SOCCORRI&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Abbiamo perso il contatto con un elicottero da ricognizione in missione dietro le linee nemiche. Riteniamo che l'elicottero sia stato abbattuto da forze ostili.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;L'elicottero può essersi schiantato ovunque in una vasta zona attorno alla sua ultima posizione nota. La vostra missione è quella di recuperare l'equipaggio  e la loro preziosa Intel. Forze ostili possono averli trovati prima di voi, quindi è necessario essere rapidi, attenti e pronto a tutto.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;20 Punti Intel (10 per ogni membro in vita).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Italian>
+            <Chinesesimp>&lt;t size='1.3' color='#ffa000'&gt;搜索与营救&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我军一架侦察直升机在敌后执行任务时失联了。我们有理由相信是敌军打下了它。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;直升机有可能坠落在其最后已知位置的一大片地区中。你的任务是营救机组成员和他们宝贵的情报。敌军部队很有可能已经抓捕了他们，因此你必须尽快、谨慎的行动，并做好交战的准备。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;花费：8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;奖励：20情报点（每名幸存组员价值10点）。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Chinesesimp>
+            <Chinese>&lt;t size='1.3' color='#ffa000'&gt;搜索與營救&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我們的一架直升機在敵後進行任務時失去了聯繫，我们有理由相信是敵軍打下了它。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;戰情單位已經協助標示出直升機的最後已知地区，你的任務是前往進行搜索並營救出直升機機組員們與他們任務中取得的寶貴情報。敵軍部隊很有可能已經派出部隊前往搜捕他們，所有你們亦須盡快而謹慎的行動，時刻做好交戰的準備。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;花費：8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;獎勵：20 點情報點（每位倖存的機組員價值 10 點情報點）。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Chinese>
+            <Turkish>&lt;t size='1.3' color='#ffa000'&gt;ARA VE KURTAR&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Dost bir keşif helikopterini düşman sahasında kaybettik. Helikopterin düşman kuvvetleri tarafından vurulduğuna inanıyoruz.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Helikopter son görülen yerde düştüğünü biliyoruz. Göreviniz helikopter personelini bulup ve taşıdığı önemli istihbaratı getirmenizdir. Düşman kuvvetler onu önceden bulabilirler dikkatli olun ve saldırıya açık olun.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Ödül: 20 istihbarat puanı (Her yaşayan kişi için 10).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Turkish>
+            <Portuguese>&lt;t size='1.3' color='#ffa000'&gt;BUSCA E RESGATE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Perdemos contato com um helicóptero de reconhecimento presente em uma missão atrás das linhas inimigas. Acreditamos que o helicóptero foi abatido por forças hostis.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;O helicóptero pode ter feito um pouso forçado em local próximo de sua última posição conhecida. Sua missão é recuperar a tripulação do helicóptero e sua preciosa inteligência. Forças hostis podem tê-los localizado primeiro, portanto seja rápido, cuidadoso e esteja pronto para engajar o inimigo.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: 20 pontos de inteligência (10 para cada membro vivo da tripulação).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Portuguese>
+            <Korean>&lt;t size='1.3' color='#ffa000'&gt;수색 및 구출&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;적군 후방지역에서 정찰임무를 수행하던 아군 정찰기와 교신이 끊어졌습니다. 현 상황으로 판단할때 적군에게 격추당한 것 같습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 마지막 교신 위치를 중심으로 아군 정찰기의 흔적을 찾는 것입니다. 적군이 먼저 발견하기전에 아군 정찰기의 흔적을 찾아 승무원 구출 및 다른 정보들을 획득, 복귀해야 합니다. 교전이 벌어질 수 있습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소요되는 정보 점수: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 정보 점수가 20점 추가됩니다. 또한 구출한 인원 1명당 정보 점수가 10점 추가됩니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
+            <Czech>&lt;t size='1.3' color='#ffa000'&gt;ZÁCHRANNÁ MISE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Ztratili jsme kontakt s průzkumným vrtulníkem za nepřátelskými liniemi. Věříme že ji sestřelily nepřátelské jednotky.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Vrtulník mohl havarovat kdekoliv ve velké vzdálenosti od místa kde jsme s ní ztratily kontakt. Cílem mise je najít a zachránit přeživší posádku. Nepřátelské jednotky tam mohou být jako první, proto musíme jednat rychle, opatrně a být připraveni k boji.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: 20 zpravodajských bodů (10 za každého člena posádky).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
         </Key>
     </Package>
 </Project>
