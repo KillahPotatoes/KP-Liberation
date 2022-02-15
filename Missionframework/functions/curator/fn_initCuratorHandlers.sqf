@@ -63,7 +63,6 @@ if (isServer) then {
             _zeus setCuratorCoef ["Place", 0];
             _zeus setCuratorCoef ["Delete", 0];
 
-            removeAllCuratorAddons _zeus;
         };
 
         _zeus setVariable ["KPLIB_limited", _limited];
