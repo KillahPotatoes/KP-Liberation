@@ -15,6 +15,82 @@
         Save data [ARRAY]
 */
 
+fnc_cleanSerializedItemsOfContainers = {
+    private _containers = _this select 0;
+    private _containerCount = count _containers;
+    private _items = _this select 1;
+    private _itemCount = count (_items select 0);
+    
+    private _deletionIndexes = [];
+    
+    if (_containerCount > 0 && _itemCount > 0) then {
+        for "_i" from 0 to _containerCount - 1 do {
+            private _containerClass = _containers select _i select 0;
+            
+            for "_j" from 0 to _itemCount - 1 do {
+                private _itemClass = _items select 0 select _j;
+                
+                if (_itemClass == _containerClass) then {
+                    _deletionIndexes append [_j];
+                };
+            };
+        };
+    };
+    
+    private _deletionCount = count _deletionIndexes;
+    private _deletedCount = 0;
+    if (_deletionCount > 0) then {
+        for "_i" from 0 to _deletionCount - 1 do {
+            private _index = (_deletionIndexes select _i) - _deletedCount;
+            
+            (_items select 0) deleteAt _index;
+            (_items select 1) deleteAt _index;
+            _deletedCount = _deletedCount + 1;
+        };
+    };
+    
+    _items;
+};
+
+fnc_serializeContainerCargo = {
+    private _return = [];
+    
+    private _target = _this select 0;
+    private _containers = everyContainer _target;
+    private _containerCount = count _containers; 
+    
+    if (_containerCount > 0) then {
+        for "_i" from 0 to _containerCount - 1 do { 
+            private _container = _containers select _i;
+            private _containerClass = _container select 0;
+            private _containerRef = _container select 1;
+            
+            private _weaponCargo = weaponsItemsCargo _containerRef;
+            private _magazineCargo = getMagazineCargo _containerRef;
+            private _itemCargo = getItemCargo _containerRef;
+            
+            _return append [[_containerClass, _weaponCargo, _magazineCargo, _itemCargo]];
+        };
+    };
+    
+    _return;
+};
+
+fnc_serializeCargo = {
+    private _return = [];
+    private _target = _this select 0;
+    
+    private _weaponCargo = weaponsItemsCargo _target;
+    private _magazineCargo = getMagazineCargo _target;
+    private _itemCargo = getItemCargo _target;
+    private _containerCargo = [_target] call fnc_serializeContainerCargo;
+    
+    _itemCargo = [_containerCargo, _itemCargo] call fnc_cleanSerializedItemsOfContainers;
+    
+    _return = [_weaponCargo, _magazineCargo, _itemCargo, _containerCargo];
+    _return;
+};
+
 private _objectsToSave = [];
 private _resourceStorages = [];
 private _aiGroups = [];
@@ -69,7 +145,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 } forEach GRLIB_all_fobs;
 
 // Save all fetched objects
-private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
+private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew", "_inventory"];
 {
     // Position data
     _savedPos = getPosWorld _x;
@@ -77,6 +153,7 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
     _savedVecUp = vectorUpVisual _x;
     _class = typeOf _x;
     _hasCrew = false;
+    _inventory = [];
 
     // Determine if vehicle is crewed
     if ((toLower _class) in KPLIB_b_allVeh_classes) then {
@@ -90,7 +167,11 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
         (!(_class in civilian_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
         (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
-        _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew];
+        
+        // Serialize inventory
+        _inventory = [_x] call fnc_serializeCargo;
+        
+        _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew, _inventory];
     };
 } forEach _allObjects;
 
