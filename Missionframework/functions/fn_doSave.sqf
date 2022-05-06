@@ -17,26 +17,28 @@
 
 if (!isServer) exitWith {false};
 
-// Write data to FileXT storage
-// Param 0: (string) Filename
+// Write data to the FileXT storage, or failing that, the server profileNamespace
+// Param 0: (string) File/Variable name
 // Param 1: (string) Save data
-fnc_saveFileXT = {
-    private _file = _this select 0;
-    private _data = _this select 1;
-    [_file] call filext_fnc_open; 
-    [_file, "Data", _data] call filext_fnc_set;
-    [_file] call filext_fnc_write;
-    [_file] call filext_fnc_close;
-};
-
-// Write data in the server profileNamespace
-// Param 0: (string) Variable name
-// Param 1: (string) Save data
-fnc_saveProfileNamespace = {
-    private _variable = _this select 0;
-    private _data = _this select 1;
-    profileNamespace setVariable [_variable, _data];
-    saveProfileNamespace;
+fnc_saveData = {
+    params [
+        ["_name", "", [""]],
+        ["_data", nil, []]
+    ];
+    
+    // Check if FileXT is available
+    if (isClass(configFile >> "CfgPatches" >> "filext")) then {  
+        [format ["Saving '%1' to FileXT.", _name], "SAVE"] call KPLIB_fnc_log;
+        _file = format ["%1.savedata", _name];
+        [_file] call filext_fnc_open; 
+        [_file, "Data", _data] call filext_fnc_set;
+        [_file] call filext_fnc_write;
+        [_file] call filext_fnc_close;
+    } else {
+        [format ["Fallback - Saving '%1' to Profile Namespace.", _name], "SAVE"] call KPLIB_fnc_log;
+        profileNamespace setVariable [_name, _data];
+        saveProfileNamespace;
+    };
 };
 
 if (!KPLIB_init) exitWith {
@@ -53,12 +55,7 @@ kp_liberation_saving = true;
 
 private _saveData = [] call KPLIB_fnc_getSaveData;
 
-// Check if FileXT is available
-if (isClass(configFile >> "CfgPatches" >> "filext")) then {
-    [GRLIB_save_key + ".savedata", str _saveData] call fnc_saveFileXT;
-} else { 
-    [GRLIB_save_key, str _saveData] call fnc_saveProfileNamespace;
-};
+[GRLIB_save_key, str _saveData] call fnc_saveData;
 
 kp_liberation_saving = false;
 

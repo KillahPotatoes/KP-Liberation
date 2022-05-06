@@ -161,49 +161,37 @@ stats_vehicles_recycled = 0;
     _x setVariable ["KP_liberation_edenObject", true];
 } forEach (allMissionObjects "");
 
-// Read data from FileXT storage
-// Return: (string) Save data
-// Param 0: (string) Filename
-fnc_loadFileXT = {
-    private _file = _this select 0;
+// Read data from the FileXT storage, or failing that, the server profileNamespace
+// Return : (string) Save data
+// Param 0: (string) File/Variable name
+fnc_loadData = {
+    params [
+        ["_name", "", [""]]
+    ];
     private _data = nil;
     
-    [format ["Loading from FileXT."], "SAVE"] call KPLIB_fnc_log;
+    // Check if FileXT is available
+    if (isClass(configFile >> "CfgPatches" >> "filext")) then {
+        [format ["Loading '%1' from FileXT.", _name], "LOAD"] call KPLIB_fnc_log;
+        _file = format ["%1.savedata", _name];
+        [_file] call filext_fnc_open; 
+        [_file] call filext_fnc_read;
+        _data = [_file, "Data"] call filext_fnc_get;
+        [_file] call filext_fnc_close;
+    };
     
-    [_file] call filext_fnc_open; 
-    [_file] call filext_fnc_read;
-    _data = [_file, "Data"] call filext_fnc_get;
-    [_file] call filext_fnc_close;
+    // Fallback to namespace if necessary
+    if (isNil "_data") then {
+        [format ["Fallback - Loading '%1' from Profile Namespace.", _name], "LOAD"] call KPLIB_fnc_log;
+        _data = profileNamespace getVariable _name;
+    };
+    
     if (!isNil "_data") then {
         _data;
     };
 };
 
-// Write data in the server profileNamespace
-// Return: (string) Save data
-// Param 0: (string) Variable name
-fnc_loadProfileNamespace = {
-    private _variable = _this select 0;
-    private _data = nil;
-    
-    [format ["Fallback - Loading from Profile Namespace."], "SAVE"] call KPLIB_fnc_log;
-    
-    _data = profileNamespace getVariable GRLIB_save_key;
-    if (!isNil "_data") then {
-        _data;
-    };
-};
-
-// Check if FileXT is available
-private _saveData = nil;
-if (isClass(configFile >> "CfgPatches" >> "filext")) then {  
-    _saveData = [GRLIB_save_key + ".savedata"] call fnc_loadFileXT;
-};
-
-// Fallback/Default to profileNamespace if _saveData is nil
-if (isNil "_saveData") then {
-    _saveData = [GRLIB_save_key] call fnc_loadProfileNamespace;
-};
+_saveData = [GRLIB_save_key] call fnc_loadData;
 
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
