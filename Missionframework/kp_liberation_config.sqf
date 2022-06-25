@@ -132,13 +132,8 @@ KP_liberation_preset_blufor = 0;
 17 = CUP Armed Forces of the Russian Federation (Modern MSV)
 18 = CUP Chernarus Defense Force
 19 = CUP British Armed Forces (Desert)
-<<<<<<< HEAD
 20 = CUP British Armed Forces (Woodland) 
-21 = RHS USAF (Woodland)*/
-=======
-20 = CUP British Armed Forces (Woodland)
-21 = RHS USAF (Woodland) */
->>>>>>> parent of e5fee4b7 (added Humanitarian Aid)
+21 = RHS USAF (Woodland)
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
