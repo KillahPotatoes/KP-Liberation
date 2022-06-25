@@ -27,7 +27,7 @@ opfor_paratrooper = "O_soldier_PG_F";                                   			// Pa
 
 // Enemy vehicles used by secondary objectives.
 opfor_mrap = "rhsusf_M1220_usarmy_wd";                                             	// M1220 MRAP
-opfor_mrap_armed = "thsusf_M1120_M2_usarmy_wd";                                     // HMMWV (M2)
+KPLIB_o_mrapArmed = "rhsusf_M1120_M2_usarmy_wd";                                    // HMMWV (M2)
 opfor_transport_helo = "RHS_UH60M";                   								// UH 60 M
 opfor_transport_truck = "rhsusf_M1083A1P2_WD_fmtv_usarmy";                         	// M1083A1P2 (Covered)
 opfor_ammobox_transport = "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy";                // M1083A1P2 (Open)
