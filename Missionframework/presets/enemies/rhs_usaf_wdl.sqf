@@ -36,7 +36,7 @@ KPLIB_o_paratrooper = "O_soldier_PG_F";                                   			// 
 
 // Enemy vehicles used by secondary objectives.
 KPLIB_o_mrap = "rhsusf_M1220_usarmy_wd";                                            // M1220 MRAP
-KPLIB_o_mrapArmed = "thsusf_M1120_M2_usarmy_wd";                                    // HMMWV (M2)
+KPLIB_o_mrapArmed = "rhsusf_M1120_M2_usarmy_wd";                                    // HMMWV (M2)
 KPLIB_o_transportHeli = "RHS_UH60M";                   							    // UH 60 M
 KPLIB_o_transportTruck = "rhsusf_M1083A1P2_WD_fmtv_usarmy";                         // M1083A1P2 (Covered)
 KPLIB_o_transportTruckAmmo = "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy";             // M1083A1P2 (Open)
