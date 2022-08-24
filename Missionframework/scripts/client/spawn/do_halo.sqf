@@ -1,3 +1,5 @@
+params [ "_squad" ];
+
 private [ "_dialog", "_backpack", "_backpackcontents" ];
 
 if ( isNil "GRLIB_last_halo_jump" ) then { GRLIB_last_halo_jump = -6000; };
@@ -52,10 +54,12 @@ if ( dojump > 0 ) then {
     };
     
     [player,  halo_position] spawn paraDrop;
-    {
-        if ( round (_x distance2D _player_pos) <= 30 && lifestate _x != 'INCAPACITATED' && vehicle _x == _x && !(isPlayer _x) ) then {
-            [_x,  halo_position] spawn paraDrop;
-            sleep (1 + floor(random 3));
-        };
-    } forEach _UnitList;
+    if (!isNil "_squad") then {
+        {
+            if ( round (_x distance2D _player_pos) <= 30 && lifestate _x != 'INCAPACITATED' && vehicle _x == _x && !(isPlayer _x) ) then {
+                [_x,  halo_position] spawn paraDrop;
+                sleep (1 + floor(random 3));
+            };
+        } forEach _UnitList;
+    };
 };

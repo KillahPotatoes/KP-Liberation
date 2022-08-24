@@ -59,6 +59,27 @@ _player addAction [
     "
 ];
 
+// HALO with squad
+_player addAction [
+    ["<t color='#80FF80'>", localize "STR_HALO_SQUAD_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
+    "scripts\client\spawn\do_halo.sqf",
+    1,
+    -710,
+    false,
+    true,
+    "",
+    "
+        GRLIB_halo_param > 0
+        && {isNull (objectParent _originalTarget)}
+        && {alive _originalTarget}
+        && {
+            _originalTarget getVariable ['KPLIB_fobDist', 99999] < 20
+            || {_originalTarget getVariable ['KPLIB_isNearStart', false]}
+        }
+        && {build_confirmed isEqualTo 0}
+    "
+];
+
 // Redeploy
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_DEPLOY_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
