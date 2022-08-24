@@ -35,30 +35,27 @@ if ( dialog ) then {
 
 if ( dojump > 0 ) then {
     GRLIB_last_halo_jump = time;
-    halo_position = halo_position getPos [random 250, random 360];
-    halo_position = [ halo_position select 0, halo_position select 1, GRLIB_halo_altitude + (random 200) ];
+
     halojumping = true;
-    sleep 0.1;
     cutRsc ["fasttravel", "PLAIN", 1];
     playSound "parasound";
-    sleep 2;
-    _backpack = backpack player;
-    if ( _backpack != "" && _backpack != "B_Parachute" ) then {
-        _backpackcontents = backpackItems player;
-        removeBackpack player;
-        sleep 0.1;
-    };
-    player addBackpack "B_Parachute";
 
-    player setpos halo_position;
+    halo_position = halo_position getPos [random 250, random 360];
+    halo_position = [ halo_position select 0, halo_position select 1, GRLIB_halo_altitude + (random 200) ];
 
-    sleep 4;
-    halojumping = false;
-    waitUntil { !alive player || isTouchingGround player };
-    if ( _backpack != "" && _backpack != "B_Parachute" ) then {
-        sleep 2;
-        player addBackpack _backpack;
-        clearAllItemsFromBackpack player;
-        { player addItemToBackpack _x } foreach _backpackcontents;
+    _player_pos = getPos player;
+    _UnitList = units group player;
+    _my_squad = player getVariable ["my_squad", nil];
+
+    if (!isNil "_my_squad") then {
+        { _UnitList pushBack _x } forEach units _my_squad;
     };
+    
+    [player,  halo_position] spawn paraDrop;
+    {
+        if ( round (_x distance2D _player_pos) <= 30 && lifestate _x != 'INCAPACITATED' && vehicle _x == _x && !(isPlayer _x) ) then {
+            [_x,  halo_position] spawn paraDrop;
+            sleep (1 + floor(random 3));
+        };
+    } forEach _UnitList;
 };
