@@ -2,6 +2,7 @@
     CONFIG FILE FOR KP LIBERATION
     https://github.com/KillahPotatoes/KP-Liberation
 */
+KP_liberation_fill_mags = true;
 
 // Vehicle classnames which also function as ACE medical vehicles.
 KP_liberation_medical_vehicles = [
