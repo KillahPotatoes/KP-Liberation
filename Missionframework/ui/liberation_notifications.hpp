@@ -89,6 +89,16 @@ class CfgNotifications {
     class lib_intel_fob: lib_intel {
         description = $STR_NOTIFICATION_FOB_TEXT;
     };
+    class lib_intel_civ_supplies: lib_intel {
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_TEXT;
+    };
+    class lib_secondary_civ_supplies_complete: lib_default_notification {
+        title = $STR_NOTIFICATION_SECONDARY_TITLE;
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_COMPLETE_TEXT;
+        iconPicture = "res\notif\ui_notif_sob.paa";
+        color[] = { 0, 1, 0, 1 };
+        sound = "taskSucceeded";
+    };	
     class lib_intel_convoy: lib_intel {
         description = $STR_NOTIFICATION_CONVOY_SPOTTED_TEXT;
     };
@@ -102,6 +112,7 @@ class CfgNotifications {
     class lib_secondary_convoy_destroyed: lib_secondary_fob_destroyed {
         description = $STR_NOTIFICATION_CONVOY_DESTROYED_TEXT;
     };
+	
     class lib_reinforcements: lib_default_notification {
         title = $STR_NOTIFICATION_REINFORCEMENTS_TITLE;
         description = $STR_NOTIFICATION_REINFORCEMENTS_TEXT;
@@ -117,6 +128,11 @@ class CfgNotifications {
         color[] = { 1, 0, 0, 1 };
         sound = "taskFailed";
     };
+	class lib_secondary_civ_supplies_no_room: lib_secondary_fob_destroyed {
+		description = $STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM;
+        color[] = { 1, 0, 0, 1 };
+        sound = "taskFailed";
+	};
     class lib_intel_sar_succeeded: lib_secondary_fob_destroyed {
         description = $STR_NOTIFICATION_SAR_SUCCESS;
     };
