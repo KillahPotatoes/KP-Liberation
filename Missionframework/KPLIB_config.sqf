@@ -360,3 +360,6 @@ KPLIB_surrender_chance = 80;
 KPLIB_battlegroup_clearance = [
     "song_bin_tanh"
 ];
+
+// Automatic refill magazines on redeploy and load arsenal. true means fill.
+KPLIB_fill_mags = true;

@@ -83,7 +83,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
     if ( load_loadout > 0 ) then {
         private _loaded_loadout = _loadouts_data select (lbCurSel 201);
         if (KPLIB_ace && KPLIB_param_arsenalType) then {
-            player setUnitLoadout (_loaded_loadout select 1);
+            [player, _loaded_loadout select 1, KPLIB_fill_mags] call CBA_fnc_setLoadout;
         } else {
             [player, [profileNamespace, _loaded_loadout]] call BIS_fnc_loadInventory;
         };
