@@ -89,7 +89,7 @@ while { true } do {
             if (buildtype == 6 ) then {
                 _idactplacebis = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT_BIS" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; repeatbuild = true; hint localize "STR_CONFIRM_HINT";},"",-785,false,false,"","build_invalid == 0 && build_confirmed == 1"];
             };
-            if (buildtype == 6 || buildtype == 99  || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
+            if (buildtype == 6 || buildtype == 99  || (toLowerANSI _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
                 _idactsnap = player addAction ["<t color='#B0FF00'>" + localize "STR_GRID" + "</t>",{gridmode = gridmode + 1;},"",-735,false,false,"","build_confirmed == 1"];
                 _idactvector = player addAction ["<t color='#B0FF00'>" + localize "STR_VECACTION" + "</t>",{KP_vector = !KP_vector;},"",-800,false,false,"","build_confirmed == 1"];
             };
@@ -119,7 +119,7 @@ while { true } do {
 
             while { build_confirmed == 1 && alive player } do {
                 _truedir = 90 - (getdir player);
-                if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
+                if ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                     _truepos = [((getposATL player) select 0) + (_dist * (cos _truedir)), ((getposATL player) select 1) + (_dist * (sin _truedir)),((getposATL player) select 2)];
                 } else {
                     _truepos = [((getpos player) select 0) + (_dist * (cos _truedir)), ((getpos player) select 1) + (_dist * (sin _truedir)),0];
@@ -171,7 +171,7 @@ while { true } do {
                 private _remove_objects = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects pushback _x;
                     };
                 } foreach _near_objects;
@@ -179,7 +179,7 @@ while { true } do {
                 private _remove_objects_25 = [];
                 {
                     private _typeOfX = typeOf _x;
-                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
+                    if ((_x isKindOf "Animal") || (_typeOfX in KPLIB_collisionIgnoreObjects) || (_typeOfX isKindOf "CAManBase") || (isPlayer _x) || (_x == _vehicle) || ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes)) then {
                         _remove_objects_25 pushback _x;
                     };
                 } foreach _near_objects_25;
@@ -208,13 +208,13 @@ while { true } do {
                     if ( ((buildtype == 6) || (buildtype == 99)) && ((gridmode % 2) == 1) ) then {
                         _vehicle setpos [round (_truepos select 0),round (_truepos select 1), _truepos select 2];
                     } else {
-                        if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
+                        if ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                             _vehicle setPosATL _truepos;
                         } else {
                             _vehicle setpos _truepos;
                         };
                     };
-                    if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
+                    if (buildtype == 6 || buildtype == 99 || (toLowerANSI _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
                         if (KP_vector) then {
                             _vehicle setVectorUp [0,0,1];
                         } else {
@@ -303,7 +303,7 @@ while { true } do {
                 _vehicle = _classname createVehicle _truepos;
                 _vehicle allowDamage false;
                 _vehicle setdir _vehdir;
-                if ((toLower (typeOf _vehicle)) in KPLIB_b_static_classes) then {
+                if ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes) then {
                     _vehicle setPosATL _truepos;
                 } else {
                     _vehicle setpos _truepos;
@@ -313,7 +313,7 @@ while { true } do {
 
                 [_vehicle] call KPLIB_fnc_clearCargo;
 
-                if (buildtype == 6 || buildtype == 99 || (toLower _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
+                if (buildtype == 6 || buildtype == 99 || (toLowerANSI _classname) in KPLIB_storageBuildings || _classname isEqualTo KPLIB_b_logiStation || _classname isEqualTo KPLIB_b_airControl) then {
                     if (KP_vector) then {
                         _vehicle setVectorUp [0,0,1];
                     } else {

@@ -163,10 +163,10 @@ KPLIB_color_enemyActive = "ColorRED";
 */
 
 // Name of the save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
+KPLIB_save_key = "KP_LIBERATION_" + (toUpperANSI worldName) + "_SAVEGAME";
 
 // Name of the parameter save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-KPLIB_save_paramKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
+KPLIB_save_paramKey = "KP_LIBERATION_" + (toUpperANSI worldName) + "_SAVE_PARAMS";
 
 // Interval in seconds for automatic save.
 KPLIB_save_interval = 60;

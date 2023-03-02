@@ -132,7 +132,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
         ) then {
             if !((_build_item select 0) isEqualType []) then {
-                if ((toLower (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
+                if ((toLowerANSI (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
                     if (KPLIB_b_airControl_near &&
                         ((((_build_item select 0) isKindOf "Helicopter") && (KPLIB_heli_count < KPLIB_heli_slots)) ||
                         (((_build_item select 0) isKindOf "Plane") && (KPLIB_plane_count < KPLIB_plane_slots)))
@@ -140,7 +140,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                         _affordable = true;
                     };
                 } else {
-                    if (!((toLower (_build_item select 0)) in KPLIB_airSlots) || (((toLower (_build_item select 0)) in KPLIB_airSlots) && KPLIB_b_airControl_near)) then {
+                    if (!((toLowerANSI (_build_item select 0)) in KPLIB_airSlots) || (((toLowerANSI (_build_item select 0)) in KPLIB_airSlots) && KPLIB_b_airControl_near)) then {
                         _affordable = true;
                     };
                 };

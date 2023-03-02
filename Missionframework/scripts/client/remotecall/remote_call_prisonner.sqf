@@ -32,7 +32,7 @@ waitUntil { sleep 5;
     if ( !_is_near_blufor ) then {
         {
             if ((_x distance _unit) < 100) exitWith { _is_near_blufor = true };
-        } forEach (allUnits select {!((toLower (typeof _x)) in KPLIB_o_inf_classes || (typeof _x) in KPLIB_o_militiaInfantry)});
+        } forEach (allUnits select {!((toLowerANSI (typeof _x)) in KPLIB_o_inf_classes || (typeof _x) in KPLIB_o_militiaInfantry)});
     };
 
     !alive _unit || !(_is_near_blufor) || (_is_near_fob && (vehicle _unit == _unit))

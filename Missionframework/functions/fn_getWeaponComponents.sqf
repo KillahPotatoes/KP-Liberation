@@ -34,7 +34,7 @@ if (!isClass _config) exitWith {
 // get attachments
 private _attachments = [];
 {
-    _attachments pushBack toLower getText (_x >> "item");
+    _attachments pushBack toLowerANSI getText (_x >> "item");
 } forEach ("true" configClasses (_config >> "LinkedItems")); // inheritance is apparently disabled for these
 
 // get first parent without attachments
@@ -47,7 +47,7 @@ while {isClass _config && {getNumber (_config >> "scope") > 0}} do { // Some pre
     _config = inheritsFrom _config;
 };
 
-private _components = [toLower _baseWeapon];
+private _components = [toLowerANSI _baseWeapon];
 _components append _attachments;
 
 _components

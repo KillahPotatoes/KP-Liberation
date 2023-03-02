@@ -1,5 +1,5 @@
 params ["_vehicle"];
-private _vehicleClass = toLower (typeOf _vehicle);
+private _vehicleClass = toLowerANSI (typeOf _vehicle);
 
 // Cargo is always allowed
 private _isCargo = (_vehicle getCargoIndex player) != -1;

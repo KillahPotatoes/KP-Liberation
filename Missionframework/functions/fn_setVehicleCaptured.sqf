@@ -24,7 +24,7 @@ if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 private _type = typeOf _veh;
 
-if !((toLower _type) in KPLIB_o_allVeh_classes) exitWith {false};
+if !((toLowerANSI _type) in KPLIB_o_allVeh_classes) exitWith {false};
 
 if !(_veh getVariable ["KPLIB_captured", false]) then {
     _veh setVariable ["KPLIB_captured", true, true];

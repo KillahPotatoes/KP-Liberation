@@ -21,7 +21,7 @@ params [
 // Identify kind of placed object once
 private _unit = _obj in allUnits;
 private _vehicle = _obj in vehicles;
-private _crate = (toLower (typeOf _obj)) in KPLIB_crates;
+private _crate = (toLowerANSI (typeOf _obj)) in KPLIB_crates;
 
 // Exit if building and no resource crate
 if !(_unit || _vehicle || _crate) exitWith {false};

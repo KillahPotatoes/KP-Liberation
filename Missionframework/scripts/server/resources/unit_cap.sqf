@@ -12,7 +12,7 @@ while {true} do {
         };
     } forEach allUnits;
     {
-        if ((toLower (typeOf _x)) in KPLIB_b_air_classes && !([typeOf _x] call KPLIB_fnc_isClassUAV) && alive _x && !(_x getVariable ["KPLIB_preplaced", false])) then {
+        if ((toLowerANSI (typeOf _x)) in KPLIB_b_air_classes && !([typeOf _x] call KPLIB_fnc_isClassUAV) && alive _x && !(_x getVariable ["KPLIB_preplaced", false])) then {
             if (_x isKindOf "Helicopter") then {
                 _local_heli_count = _local_heli_count + 1;
             };

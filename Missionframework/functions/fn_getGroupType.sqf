@@ -39,11 +39,11 @@ if (_vehType isEqualTo "") exitWith {_grpType};
 
 // Otherwise continue to get the type of the vehicle
 [] call {
-    if ((toLower _vehType) in KPLIB_b_light_classes) exitWith {_grpType = "light";};
-    if ((toLower _vehType) in KPLIB_b_heavy_classes) exitWith {_grpType = "heavy";};
-    if ((toLower _vehType) in KPLIB_b_air_classes) exitWith {_grpType = "air";};
-    if ((toLower _vehType) in KPLIB_b_static_classes) exitWith {_grpType = "static";};
-    if ((toLower _vehType) in KPLIB_b_support_classes) exitWith {_grpType = "support";};
+    if ((toLowerANSI _vehType) in KPLIB_b_light_classes) exitWith {_grpType = "light";};
+    if ((toLowerANSI _vehType) in KPLIB_b_heavy_classes) exitWith {_grpType = "heavy";};
+    if ((toLowerANSI _vehType) in KPLIB_b_air_classes) exitWith {_grpType = "air";};
+    if ((toLowerANSI _vehType) in KPLIB_b_static_classes) exitWith {_grpType = "static";};
+    if ((toLowerANSI _vehType) in KPLIB_b_support_classes) exitWith {_grpType = "support";};
     if ([_vehType] call KPLIB_fnc_isClassUAV) exitWith {_grpType = "uav";};
 };
 

@@ -24,7 +24,7 @@ params [
 ];
 
 // Check if resource is valid
-if !((toLower _resource) in KPLIB_crates) exitWith {
+if !((toLowerANSI _resource) in KPLIB_crates) exitWith {
     ["Invalid resource param given: %1", _resource] call BIS_fnc_error;
     objNull
 };

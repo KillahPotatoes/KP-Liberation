@@ -38,7 +38,7 @@ if (isNil "_elements") then {
             } forEach _classes // return
         } else {
             // return
-            (toLower (typeOf _object)) in (_classes apply {toLower _x})
+            (toLowerANSI (typeOf _object)) in (_classes apply {toLowerANSI _x})
         };
     };
 

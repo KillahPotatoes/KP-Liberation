@@ -33,7 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KPLIB_classnamesToSave = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
+KPLIB_classnamesToSave = [toLowerANSI KPLIB_b_fobBuilding, toLowerANSI KPLIB_b_potato01];
 
 /*
     --- Locals ---
@@ -44,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
+private _noKillHandler = [toLowerANSI KPLIB_b_fobBuilding, toLowerANSI KPLIB_b_potato01];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -366,7 +366,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if ((toLower _class) in KPLIB_classnamesToSave) then {
+        if ((toLowerANSI _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -384,12 +384,12 @@ if (!isNil "_saveData") then {
             [_object] call KPLIB_fnc_addObjectInit;
 
             // Apply kill manager handling, if not excluded
-            if !((toLower _class) in _noKillHandler) then {
+            if !((toLowerANSI _class) in _noKillHandler) then {
                 _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
             };
 
             // Set enemy vehicle as captured
-            if ((toLower _class) in KPLIB_o_allVeh_classes) then {
+            if ((toLowerANSI _class) in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];
             };
 
@@ -438,7 +438,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if ((toLower _class) in KPLIB_classnamesToSave) then {
+        if ((toLowerANSI _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];

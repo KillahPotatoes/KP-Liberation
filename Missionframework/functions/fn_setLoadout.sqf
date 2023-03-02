@@ -170,7 +170,7 @@ _addWeapon = {
                 if(isArray(_muzzles)) then { // generate magazine for each muzzle
                     {
                         if (_x != "this") then {
-                            _magazines set [count _magazines, toLower(getArray(configFile>>"CfgWeapons">>_weapon>>_x>>"magazines") select 0)];
+                            _magazines set [count _magazines, toLowerANSI(getArray(configFile>>"CfgWeapons">>_weapon>>_x>>"magazines") select 0)];
                         };
                     } forEach getArray(_muzzles);
                 };
