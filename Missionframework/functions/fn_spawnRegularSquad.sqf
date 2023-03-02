@@ -33,7 +33,7 @@ while {_spawnPos isEqualTo []} do {
     if (_i isEqualTo 10) exitWith {};
 };
 
-if (_spawnPos isEqualTo zeroPos) exitWith {
+if (_spawnPos isEqualTo []) exitWith {
     ["No suitable spawn position found."] call BIS_fnc_error;
     [format ["Couldn't find infantry spawn position for sector %1", _sector], "WARNING"] call KPLIB_fnc_log;
     grpNull
