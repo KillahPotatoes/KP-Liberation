@@ -11,23 +11,23 @@ _supplies_present = false;
 
 //select random blufor owned town (capture)
 
-_blufor_towns = [];
+_player_towns = [];
 
-//check if blufor_sectors item is contained within sectors_capture and push into array
+//check if KPLIB_sectors_player item is contained within KPLIB_sectors_city and push into array
 {
-	if (_x in sectors_capture) then {
-		_blufor_towns pushBack _x;
+	if (_x in KPLIB_sectors_city) then {
+		_player_towns pushBack _x;
 	};
-} forEach blufor_sectors;
+} forEach KPLIB_sectors_player;
 
 // Check if town array is empty
-if(count _blufor_towns isEqualTo 0) exitWith {
+if(count _player_towns isEqualTo 0) exitWith {
 	//if empty, throw error in log and call proper intel notification
 	["There are no friendly towns to spawn supplies at!", "ERROR"] call KPLIB_fnc_log; 
 	[11] remoteExec ["remote_call_intel"];
 };
 
-_objective_town = selectRandom _blufor_towns;
+_objective_town = selectRandom _player_towns;
 
 
 //create 50m radius marker at town
