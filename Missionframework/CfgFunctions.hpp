@@ -48,6 +48,7 @@ class KPLIB {
         class getOpforCap               {};
         class getOpforFactor            {};
         class getOpforSpawnPoint        {};
+        class getOpforSpawnPointAA      {};
         class getPlayerCount            {};
         class getResistanceTier         {};
         class getSaveableParam          {};
