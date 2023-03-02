@@ -161,8 +161,37 @@ stats_vehicles_recycled = 0;
     _x setVariable ["KPLIB_edenObject", true];
 } forEach (allMissionObjects "");
 
-// Get possible save data
-private _saveData = profileNamespace getVariable KPLIB_save_key;
+// Read data from the FileXT storage, or failing that, the server profileNamespace
+// Return : (string) Save data
+// Param 0: (string) File/Variable name
+fnc_loadData = {
+    params [
+        ["_name", "", [""]]
+    ];
+    private _data = nil;
+
+    // Check if FileXT is available
+    if (isClass(configFile >> "CfgPatches" >> "filext")) then {
+        [format ["Loading '%1' from FileXT.", _name], "LOAD"] call KPLIB_fnc_log;
+        _file = format ["%1.savedata", _name];
+        [_file] call filext_fnc_open; 
+        [_file] call filext_fnc_read;
+        _data = [_file, "Data"] call filext_fnc_get;
+        [_file] call filext_fnc_close;
+    };
+
+    // Fallback to namespace if necessary
+    if (isNil "_data") then {
+        [format ["Fallback - Loading '%1' from Profile Namespace.", _name], "LOAD"] call KPLIB_fnc_log;
+        _data = profileNamespace getVariable _name;
+    };
+
+    if (!isNil "_data") then {
+        _data;
+    };
+};
+
+_saveData = [KPLIB_save_key] call fnc_loadData;
 
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
