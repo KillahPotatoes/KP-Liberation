@@ -2,7 +2,7 @@
     File: fn_spawnRegularSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-02-03
+    Last Update: 2023-03-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
