@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-08-06
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -260,8 +260,8 @@ KPLIB_cr_wounded_gain = 2;
 ------------------------------------------------------------
 */
 
-// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
-KPLIB_secondary_missions_costs = [15, 10, 8];
+// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR, CIV]
+KPLIB_secondary_missions_costs = [15, 10, 8, 5];
 
 // Proportionate reduction of the actual (!) enemy combat readiness for a successful FOB hunt. (e.g. 0.4 -> reduction of 24 by an actual value of 60)
 KPLIB_secondary_objective_impact = 0.4;
