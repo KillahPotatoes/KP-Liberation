@@ -22,7 +22,7 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
         _unit removeItem "NVGoggles_INDEP";
         _unit setUnitPos "UP";
         sleep 1;
-        private _grp = createGroup [KPLIB_side_civilian, true];
+        private _grp = createGroup [KPLIB_side_enemy, true];
         [_unit] joinSilent _grp;
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
