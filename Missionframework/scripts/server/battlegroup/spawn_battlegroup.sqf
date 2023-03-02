@@ -38,8 +38,10 @@ if !(_spawn_marker isEqualTo "") then {
             };
             [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
         };
-        [_grp] spawn battlegroup_ai;
         _bg_groups pushBack _grp;
+		{
+			[_x] spawn battlegroup_ai;
+		} forEach _bg_groups;
     } else {
         private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 50);
 
