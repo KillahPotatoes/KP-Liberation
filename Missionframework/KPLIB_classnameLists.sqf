@@ -73,6 +73,7 @@ KPLIB_medical_facilities = [
 
 // Classnames of ACE crates
 KPLIB_ace_crates = [
+    "ACE_Box_82mm_Mo_Combo",
     "ACE_Box_82mm_Mo_HE",
     "ACE_Box_82mm_Mo_Illum",
     "ACE_Box_82mm_Mo_Smoke",

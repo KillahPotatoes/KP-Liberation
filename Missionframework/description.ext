@@ -2,7 +2,7 @@
     File: description.ext
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-07-06
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -248,3 +248,18 @@ class CfgTaskDescriptions {
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
+class ACEX_Fortify_Presets {
+    class KPLIB_Fortify {
+        displayName = "KPLIB Fortify";
+        objects[] = {
+            {"Land_BagFence_Round_F", 5},
+            {"Land_BagFence_Short_F", 5},
+            {"Land_BagFence_Long_F", 10},
+            {"Land_Plank_01_4m_F", 10},
+            {"Land_BagBunker_Small_F", 25},
+            {"Land_Razorwire_F", 10},
+            {"RoadBarrier_F", 1},
+            {"RoadCone_F", 1}
+        };
+    };
+};

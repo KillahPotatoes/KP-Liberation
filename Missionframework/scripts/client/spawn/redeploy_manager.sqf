@@ -183,10 +183,12 @@ while {true} do {
         if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
             private _truck = (KPLIB_respawnPositionsList select _idxchoice) select 2;
             player setposATL (_truck getPos [5 + (random 3), random 360]);
+			player setDir (random 360);
             KPLIB_respawn_mobile_done = true;
         } else {
             private _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
             player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
+			player setDir (random 360);
         };
 
         if ((lbCurSel 203) > 0) then {
