@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-09-12
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -367,6 +367,22 @@ _player addAction [
         && {alive _originalTarget}
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {build_confirmed isEqualTo 0}
+    "
+];
+
+// Drop crate
+_player addAction [
+    ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
+    {detach (((attachedObjects player) select {(typeOf _x) in [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]}) select 0)},
+    nil,
+    -504,
+    true,
+    false,
+    "",
+    "
+        alive _originalTarget
+        && {build_confirmed isEqualTo 0}
+        && {!((((attachedObjects _originalTarget) apply {typeOf _x}) arrayIntersect [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]) isEqualTo [])}
     "
 ];
 
