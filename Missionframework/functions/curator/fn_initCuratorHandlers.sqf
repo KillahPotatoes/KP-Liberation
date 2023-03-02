@@ -2,7 +2,7 @@
     File: fn_initCuratorHandlers.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-08-07
-    Last Update: 2020-08-30
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -56,14 +56,14 @@ if (isServer) then {
             _zeus setCuratorCoef ["Edit", -1e8];
             _zeus setCuratorCoef ["Destroy", -1e8];
             _zeus setCuratorCoef ["Delete", 0];
+
+            removeAllCuratorAddons _zeus;
         } else {
             _zeus setVariable ["Addons", 3, true];
             _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
 
             _zeus setCuratorCoef ["Place", 0];
             _zeus setCuratorCoef ["Delete", 0];
-
-            removeAllCuratorAddons _zeus;
         };
 
         _zeus setVariable ["KPLIB_limited", _limited];
