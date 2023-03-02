@@ -81,6 +81,35 @@ if (KPLIB_param_useArsenalPreset) then {
         KPLIB_arsenalAllowed append _disposableLaunchers;
     };
 
+    {
+        // Handle CBA optics, https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics
+        if (missionNamespace getVariable ["CBA_optics", false]) then {
+            private _pipOptic = CBA_optics_PIPOptics getVariable _x;
+            if (!isNil "_pipOptic") then {
+                KPLIB_arsenalAllowedExtension pushBackUnique _pipOptic;
+            };
+
+            private _nonPipOptic = CBA_optics_NonPIPOptics getVariable _x;
+            if (!isNil "_nonPipOptic") then {
+                KPLIB_arsenalAllowedExtension pushBackUnique _nonPipOptic;
+            };
+        };
+
+        // Handle CBA (MRT) Accessories, https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions
+        private _itemCfg = configFile >> "CfgWeapons" >> _x;
+        if (!isNull _itemCfg) then {
+            private _nextItem = getText (_itemCfg >> "MRT_SwitchItemPrevClass");
+            if (_nextItem != "") then {
+                KPLIB_arsenalAllowedExtension pushBackUnique _nextItem;
+            };
+
+            private _prevItem = getText (_itemCfg >> "MRT_SwitchItemNextClass");
+            if (_prevItem != "") then {
+                KPLIB_arsenalAllowedExtension pushBackUnique _prevItem;
+            };
+        };
+    } forEach KPLIB_arsenalAllowed;
+
     KPLIB_arsenalAllowed append KPLIB_arsenalAllowedExtension;
     if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
 
