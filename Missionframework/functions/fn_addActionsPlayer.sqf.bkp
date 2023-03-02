@@ -130,8 +130,7 @@ _player addAction [
     true,
     "",
     "
-        ((getPlayerUID player) in KP_liberation_commander_actions)
-        && isNull (objectParent _originalTarget)
+        isNull (objectParent _originalTarget)
         && {alive _originalTarget}
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)}
         && {

@@ -10,9 +10,9 @@ _dialog = createDialog "liberation_halo";
 dojump = 0;
 halo_position = getpos player;
 //VN Edit
-//if ((count allPlayers) > 5) exitWith {
-//    hint "Halo jumping not allowed, call for transport!";
-//};
+if ((count allPlayers) > 5) exitWith {
+    hint "Halo jumping not allowed, call for transport!";
+};
 _backpackcontents = [];
 
 [ "halo_map_event", "onMapSingleClick", { halo_position = _pos } ] call BIS_fnc_addStackedEventHandler;

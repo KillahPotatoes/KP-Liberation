@@ -230,6 +230,7 @@ class CfgDiscordRichPresence {
 class CfgFunctions {
     #include "CfgFunctions.hpp"
     #include "KP\KPPLM\KPPLM_functions.hpp"
+	#include "scripts\GOM\functions\GOM_fnc_functions.hpp"
 };
 
 class CfgRespawnTemplates {
@@ -248,3 +249,31 @@ class CfgTaskDescriptions {
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
+
+// VN Edits
+zeusCompositionScriptLevel = 2;
+
+//Pylon Editor (action 13 to use)
+class CfgPylonManager
+{
+//Blacklisted Magazines
+//blacklistedMagazines[] = {"PylonMissile_Missile_AMRAAM_D_INT_x1","PylonRack_Bomb_SDB_x4"};
+
+//Nothing is rearm everywhere
+rearmObjects[] = {"B_Slingload_01_Ammo_F","B_Truck_01_ammo_F"};
+
+//Distance needed from rearmObjects[]
+rearmRange = 25;
+};
+
+//GOM_fnc_aircraftLoadout V1.35 made by Grumpy Old Man 17-5-2017
+
+class CfgCommunicationMenu
+{
+
+	#include "scripts\GOM\functions\GOM_fnc_aircraftLoadoutMenu.hpp"
+
+};
+
+#include "scripts\GOM\dialogs\GOM_dialog_parents.hpp"
+#include "scripts\GOM\dialogs\GOM_dialog_controls.hpp"

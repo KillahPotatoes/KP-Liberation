@@ -187,8 +187,8 @@ class Params {
     };
     class ReviveBleedOutDuration {
         title = $STR_A3_BleedOutDuration;
-        values[] = {10, 15, 20, 30, 45, 60, 90, 180,600};
-        texts[] = {10, 15, 20, 30, 45, 60, 90, 180,600};
+        values[] = {10, 15, 20, 30, 45, 60, 90, 180};
+        texts[] = {10, 15, 20, 30, 45, 60, 90, 180};
         default = 180;
     };
     class ReviveForceRespawnDuration {

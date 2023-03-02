@@ -73,7 +73,7 @@ if(isServer) then {
         GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);
         GET_PARAM(bis_reviveParam_requiredItems, "ReviveRequiredItems", 1);
         GET_PARAM(bis_reviveParam_unconsciousStateMode, "UnconsciousStateMode", 0);
-        GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 600);
+        GET_PARAM(bis_reviveParam_bleedOutDuration, "ReviveBleedOutDuration", 180);
         GET_PARAM(bis_reviveParam_forceRespawnDuration, "ReviveForceRespawnDuration", 10);
     };
 
