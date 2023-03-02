@@ -2,7 +2,7 @@
     File: fn_spawnSectorCrates.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-28
-    Last Update: 2020-05-25
+    Last Update: 2023-03-03
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,7 +34,7 @@ if !(_sector in KPLIB_sectorCratesSpawned) then {
     for "_i" from 1 to _amount do {
         while {_spawnPos isEqualTo []} do {
             _j = _j + 1;
-            _spawnPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [10, 40, KPLIB_b_crateAmmo];
+            _spawnPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [5, 45, KPLIB_b_crateAmmo];
             if (_j isEqualTo 10) exitWith {};
         };
         if !(_spawnPos isEqualTo []) then {
