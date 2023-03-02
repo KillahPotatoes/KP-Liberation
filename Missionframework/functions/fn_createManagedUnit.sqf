@@ -2,7 +2,7 @@
     File: fn_createManagedUnit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-10-04
-    Last Update: 2019-12-04
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -33,10 +33,17 @@ isNil {
     // If we use the "correct side group" for the createUnit, the group would switch to the side of the unit written in the config.
     private _groupTemp = createGroup [CIVILIAN, true];
 
-    _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
+    _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "NONE"];
     _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
     _unit setRank _rank;
-
+	
+    // Set unit traits here because they are not properly configured in all faction mods.
+    switch _type do {
+        case KPLIB_o_engineer: {_unit setUnitTrait ["Engineer", true]; _unit setUnitTrait ["explosiveSpecialist", true]};
+        case KPLIB_o_medic: {_unit setUnitTrait ["Medic", true]};
+        default {};
+    };
+	
     // Join to target group to preserve Side
     [_unit] joinSilent _group;
     deleteGroup _groupTemp;
