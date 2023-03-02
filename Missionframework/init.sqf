@@ -60,6 +60,46 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [] call bis_fnc_reviveInit;
 };
 
+///////////////////////////////////////////////
+// ----- Clean and give default equipment -----
+///////////////////////////////////////////////
+if ( isServer) then {
+    private _playableUnits = playableUnits + switchableUnits;
+
+    // Get the default uniform for the first unit type in the list of buildable infantry units
+    private _basic_uniform = KPLIB_b_basic_uniform;
+    {
+        [
+            [_x,_basic_uniform],
+            {
+                //  Some commands are Local Argument, so they have to be executed remotely
+                //  Because the unit controlled by the player belongs to the player's computer (Local Argument), it cannot be removed without remote
+                params ["_unit","_basic_uniform"];
+
+                // clear all equipment
+                removeHeadgear _unit;                      // Clear Headgear
+                removeGoggles _unit;                       // Clear face gear (glasses...etc)
+                removeAllAssignedItems _unit;              // Clear equipable items
+                removeAllWeapons _unit;                    // Clear primary weapons, secondary weapons, launchers
+                removeAllContainers _unit;                 // Clear Clothes, Vests, Backpacks
+
+                _unit addUniform _basic_uniform;     // given a specific uniform
+                _unit addWeapon "Rangefinder";    //  Binoculars/Night Vision Goggles are classified under Weapons...
+                {
+                    _unit linkItem _x;            //  Add and automatically equip special props
+                } foreach [
+                    "ItemCompass",
+                    "ItemGPS",
+                    "ItemMap",
+                    "ItemWatch"
+                ];
+            }
+        ] remoteExec ["call",owner _x];  // Directly specify the computer of the player who belongs to the unit to execute, avoiding unnecessary broadcast
+        //  TODO : Should AI units be filtered out so that they are not thrown into remoteExec to occupy resources?
+    } foreach _playableUnits;
+};
+////////////////////////////////
+
 KPLIB_init = true;
 
 // Notify clients that server is ready

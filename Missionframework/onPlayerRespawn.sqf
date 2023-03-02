@@ -2,6 +2,13 @@ waitUntil {!isNil "KPLIB_initServerDone"};
 
 params ["_newUnit", "_oldUnit"];
 
+if( (uniform _oldUnit) isEqualTo "" ) then {
+    _newUnit addUniform KPLIB_b_basic_uniform;
+} else {
+    removeUniform _newUnit;
+    _newUnit addUniform (uniform _oldUnit);
+};
+
 if (isNil "KPLIB_respawn_loadout") then {
     removeAllWeapons player;
     removeAllItems player;

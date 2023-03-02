@@ -111,6 +111,7 @@ KPLIB_b_squadNames = [
     Checking all preset arrays for missing mods and sort out not available classnames
 */
 // Blufor
+KPLIB_b_basic_uniform           = getText (configFile >> "CfgVehicles" >> (KPLIB_b_infantry#0)#0 >> "uniformClass");
 KPLIB_b_infantry                = KPLIB_b_infantry                  select {[( _x select 0)] call KPLIB_fnc_checkClass};
 KPLIB_b_vehLight                = KPLIB_b_vehLight                  select {[( _x select 0)] call KPLIB_fnc_checkClass};
 KPLIB_b_vehHeavy                = KPLIB_b_vehHeavy                  select {[( _x select 0)] call KPLIB_fnc_checkClass};
