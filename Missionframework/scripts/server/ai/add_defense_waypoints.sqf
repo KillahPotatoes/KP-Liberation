@@ -4,6 +4,9 @@ private _basepos = getpos (leader _grp);
 private _is_infantry = false;
 private _wpPositions = [];
 private _waypoint = [];
+
+if (isNull _grp) exitWith {};
+
 if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
 
 sleep 5;
@@ -52,7 +55,7 @@ waitUntil {
     ({alive _x} count (units _grp) == 0) || !(isNull ((leader _grp) findNearestEnemy (leader _grp)))
 };
 
-if ({alive _x} count (units _grp) > 0) then {
+if (((units _grp) findIf {alive _x}) != -1) then {
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0)};
     sleep 1;
     {_x doFollow leader _grp} foreach units _grp;
