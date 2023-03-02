@@ -49,8 +49,12 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ctrlSetText [151, _buildpages select ( buildtype - 1)];
             if (buildtype != 8) then {
                 _classnamevar = (_x select 0);
+                _customName = (_x select 4);
                 _entrytext = getText (_cfg >> _classnamevar >> "displayName");
-
+                if (!isNil { _customName }) then {
+                    _entrytext = _customName;
+                };
+				
                 switch (_classnamevar) do {
                     case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
                     case KPLIB_b_arsenal: {if (KPLIB_param_mobileArsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
