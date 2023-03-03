@@ -2,7 +2,6 @@ import * as gulp from "gulp";
 import * as gulpReplace from "gulp-replace";
 import * as gulpPbo from "gulp-armapbo";
 import * as gulpModify from "gulp-modify-file";
-import * as gulpZip from "gulp-zip";
 import * as vinylPaths from "vinyl-paths";
 import * as del from "del";
 
@@ -29,7 +28,6 @@ const paths: FolderStructureInfo = {
  */
 let taskNames: string[] = [];
 let taskNamesPbo: string[] = [];
-let taskNamesZip: string[] = [];
 
 for (let preset of presets) {
     const mission = new MissionPaths(preset, paths);
@@ -113,32 +111,6 @@ for (let preset of presets) {
             }))
             .pipe(gulp.dest(mission.getWorkDir() + '/pbo'));
     });
-
-    /**
-     * Create ZIP files
-     */
-    taskNamesZip.push('zip_' + taskName);
-
-    gulp.task('zip_' + taskName, () => {
-        return gulp.src([
-            resolve('..', './userconfig/**/*'),
-            resolve('..', 'LICENSE.md'),
-            resolve('..', 'README.md'),
-            resolve('..', 'CHANGELOG.md')
-        ], {
-                base: resolve('..') // Change base dir to have correct relative paths in ZIP
-            })
-            .pipe(
-                gulp.src(
-                    resolve(mission.getWorkDir(), 'pbo', mission.getFullName() + '.pbo'), {
-                        base: resolve(mission.getWorkDir(), 'pbo') // Change base dir to have correct relative paths in ZIP
-                    })
-            )
-            .pipe(gulpZip(
-                mission.getFullName() + '.zip'
-            ))
-            .pipe(gulp.dest(mission.getWorkDir()))
-    });
 }
 
 // Main tasks
@@ -151,12 +123,9 @@ gulp.task('build', gulp.series(taskNames));
 
 gulp.task('pbo', gulp.series(taskNamesPbo));
 
-gulp.task('zip', gulp.series(taskNamesZip));
-
 gulp.task('default',
     gulp.series(
         gulp.task('build'),
         gulp.task('pbo'),
-        gulp.task('zip'),
     )
 );
