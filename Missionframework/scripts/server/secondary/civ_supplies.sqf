@@ -1,19 +1,17 @@
 /*
-	Creates a secondary objective mission to allow players to bring 2x supply crates to a 
-	random friendly town in order to raise civilian rep.
+	Creates a secondary objective mission that allow and requires players to bring 200 value supply crate to a 
+	random friendly town in order to raise civilian reputation.
 	
-	Configurable options (kp_liberation_config):
+	Configurable options (KPLIB_config):
 	KPLIB_secondary_missions_costs select 3 = intel cost for mission (default 5)
-	KP_liberation_civ_supplies_impact = % increase in civilian rep (default 5)
+	KPLIB_secondary_objective_civ_supplies_impact = % increase in civilian rep (default 5)
 */
 
+// Initialize variables
 _supplies_present = false;
-
-//select random blufor owned town (capture)
-
 _player_towns = [];
 
-//check if KPLIB_sectors_player item is contained within KPLIB_sectors_city and push into array
+// Find a random friendly town owned by the player
 {
 	if (_x in KPLIB_sectors_city) then {
 		_player_towns pushBack _x;
@@ -22,78 +20,88 @@ _player_towns = [];
 
 // Check if town array is empty
 if(count _player_towns isEqualTo 0) exitWith {
-	//if empty, throw error in log and call proper intel notification
+	// If empty, throw error in log and call proper intel notification
 	["There are no friendly towns to spawn supplies at!", "ERROR"] call KPLIB_fnc_log; 
 	[11] remoteExec ["remote_call_intel"];
 };
 
+// Select a random town from the player-owned towns array for the supply drop-off
 _objective_town = selectRandom _player_towns;
 
 
-//create 50m radius marker at town
+// Create a 50m radius marker at the selected town
 secondary_objective_position = getMarkerPos _objective_town;
 secondary_objective_position_marker = secondary_objective_position;
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 
-//start secondary mission
+// Start the secondary mission
 KPLIB_secondary_in_progress = 3; publicVariable "KPLIB_secondary_in_progress";
 [9] remoteExec ["remote_call_intel"];
 
-//create note in log
-diag_log format ["Starting Humanitarian Aid objective in %1",_objective_town];
+// Add a note in the log
+[format ["Starting Humanitarian Aid objective in %1", _objective_town], "NOTIFICATION"] call KPLIB_fnc_log;
 
-//while loop to wait until 2x supply crates have been brought to within 50m of objective
+// While loop until 2x supply crates have been brought to within 50m of objective
 while {_supplies_present isEqualTo false} do {
 
 	_supplies_in_zone = [];
 	_objects_to_check = [];
 	
-	//get list of all objects in marker area
+	// Get list of all objects in marker area
 	_objects_to_check = vehicles inAreaArray [secondary_objective_position, 50, 50];
 	
 	
 	{		
-		//loop through all objects and check if they are the correct supply crates and not currently sitting inside vics
+		// Loop through all objects and check if they are the correct supply crates and not currently attached to a vehicle
 		if (typeOf _x isEqualTo KPLIB_b_crateSupply && isNull attachedTo _x) then {
 			
-			//if they are the right crate, add to the supplies array to be counted
+			// If they are the right crate, add to the supplies array to be counted
 			_supplies_in_zone pushBack _x;
 		};
 		
 	} forEach _objects_to_check;
 	
-	//if there are 2 or more of the correct crates, delete them and leave the mission while loop
-	if (count _supplies_in_zone > 1) then {
-		
+	// Initialize total value of supply crates to 0
+	_total_value = 0;
+	
+	// Loop through all supply crates in the zone and add up their values
+	{
+		_total_value = _total_value + (_x getVariable ["KPLIB_crate_value", 0]);
+	} forEach _supplies_in_zone;
+	
+	// If there are 2 or more of the correct crates, delete them and leave the mission while loop
+	if (_total_value > 200) then {
 		{
-			deleteVehicle _x;
-		} forEach _supplies_in_zone;
-		
-		_supplies_present = true;
-		
-	//if not, wait 5 seconds and check again	
+			if ((_total_value - (_x getVariable ["KPLIB_crate_value", 0])) < 200) then {
+				// If the crate would bring the total value below 200, leave it unconsumed
+				continue;
+			} else {
+				deleteVehicle _x;
+			};
+		} forEach _supplies_in_zone;		
+		_supplies_present = true;		
+	// If not, wait 5 seconds and check again	
 	} else {
 		sleep 5;
 	};
-
 };
 
-//add civ rep for a completed mission based on value in kp_liberation_config
-[KP_liberation_civ_supplies_impact] spawn F_cr_changeCR;
+// Add civilian rep for a completed mission based on value in KPLIB_config
+[KPLIB_secondary_objective_civ_supplies_impact] spawn F_cr_changeCR;
 
-//display end notificaiton
+// Display end notification
 [10] remoteExec ["remote_call_intel"];
 
-//add +1 completed secondary mission for the campaign end screen
+// Add +1 completed secondary mission for the campaign end screen
 stats_secondary_objectives = stats_secondary_objectives + 1;
 
-//declare secondary mission completed
+// declare secondary mission completed
 KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";
 
-//execute a save
+// execute a save
 sleep 1;
 [] spawn KPLIB_fnc_doSave;
 
 //create note in log
-diag_log format ["Humanitarian Aid secondary objective complete at %1. Increasing civ rep by %2",_objective_town, KP_liberation_civ_supplies_impact];
+[format ["Humanitarian Aid secondary objective complete at %1. Increasing civ rep by %2",_objective_town, KPLIB_secondary_objective_civ_supplies_impact], "NOTIFICATION"] call KPLIB_fnc_log;
