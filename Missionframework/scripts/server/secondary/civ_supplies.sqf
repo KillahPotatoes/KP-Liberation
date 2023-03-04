@@ -1,5 +1,5 @@
 /*
-	Creates a secondary objective mission that allow and requires players to bring 200 value supply crate to a 
+	Creates a secondary objective mission that allows and requires players to bring 200 value supply crates to a 
 	random friendly town in order to raise civilian reputation.
 	
 	Configurable options (KPLIB_config):
@@ -10,6 +10,7 @@
 // Initialize variables
 _supplies_present = false;
 _player_towns = [];
+_required_value = 200; //should move to be KPLIB_config?
 
 // Find a random friendly town owned by the player
 {
@@ -42,50 +43,74 @@ KPLIB_secondary_in_progress = 3; publicVariable "KPLIB_secondary_in_progress";
 // Add a note in the log
 [format ["Starting Humanitarian Aid objective in %1", _objective_town], "NOTIFICATION"] call KPLIB_fnc_log;
 
-// While loop until 2x supply crates have been brought to within 50m of objective
-while {_supplies_present isEqualTo false} do {
 
+// Loop until 2x supply crates have been brought to within 50m of objective
+while {!_supplies_present} do {
+
+	// Initialize total value of supply crates to 0
+	_total_value = 0;
+	// Initialize _supplies_in_zone is array
 	_supplies_in_zone = [];
-	_objects_to_check = [];
-	
-	// Get list of all objects in marker area
+
+	// Get list of all objects within the supply check radius of the marker
 	_objects_to_check = vehicles inAreaArray [secondary_objective_position, 50, 50];
 	
-	
-	{		
-		// Loop through all objects and check if they are the correct supply crates and not currently attached to a vehicle
+	// Loop through all objects and check if they are the correct supply crates and not currently attached to a vehicle
+	{
 		if (typeOf _x isEqualTo KPLIB_b_crateSupply && isNull attachedTo _x) then {
-			
 			// If they are the right crate, add to the supplies array to be counted
 			_supplies_in_zone pushBack _x;
 		};
-		
 	} forEach _objects_to_check;
-	
-	// Initialize total value of supply crates to 0
-	_total_value = 0;
-	
-	// Loop through all supply crates in the zone and add up their values
-	{
-		_total_value = _total_value + (_x getVariable ["KPLIB_crate_value", 0]);
-	} forEach _supplies_in_zone;
-	
-	// If there are 2 or more of the correct crates, delete them and leave the mission while loop
-	if (_total_value > 200) then {
-		{
-			if ((_total_value - (_x getVariable ["KPLIB_crate_value", 0])) < 200) then {
-				// If the crate would bring the total value below 200, leave it unconsumed
-				continue;
-			} else {
-				deleteVehicle _x;
-			};
-		} forEach _supplies_in_zone;		
-		_supplies_present = true;		
-	// If not, wait 5 seconds and check again	
-	} else {
+
+	// If there are no supplies, wait for a period of time and check again
+	if (count _supplies_in_zone isEqualTo 0) then {
+		hintSilent "";
 		sleep 5;
+	} else {
+	
+		// Loop through all supply crates in the zone and add up their values
+		{_total_value = _total_value + (_x getVariable ["KPLIB_crate_value", 0]);} forEach _supplies_in_zone;
+		
+		// If the total value is less than the required value, wait for a period of time and check again
+		if (_total_value < _required_value) then {
+		
+			// Notify players of current supply status in area
+			hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 5];
+			sleep 1;
+			hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 4];
+			sleep 1;
+			hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 3];
+			sleep 1;
+			hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 2];
+			sleep 1;
+			hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 1];
+			sleep 1;
+			hintSilent format ["Supplies in area: %1/%2\nChecking...", _total_value, _required_value];
+			sleep 1;
+			
+		} else {
+			
+			_consume_value = _required_value;
+			{
+				private _crate_value = _x getVariable ["KPLIB_crate_value",0];
+				if (_consume_value != 0) then {
+					if (_consume_value >= _crate_value) then {
+						_consume_value = _consume_value - _crate_value;
+						_total_value = _total_value - _crate_value;
+						deleteVehicle _x;
+					} else {
+						_x setVariable ["KPLIB_crate_value", _crate_value - _consume_value, true];
+						_consume_value = 0;
+					};
+				} else {
+				};
+			} forEach _supplies_in_zone;
+			if (_consume_value == 0) then {_supplies_present = true;};
+		};
 	};
 };
+hintSilent "Secondary Objective Completed!";
 
 // Add civilian rep for a completed mission based on value in KPLIB_config
 [KPLIB_secondary_objective_civ_supplies_impact] spawn F_cr_changeCR;
@@ -105,3 +130,5 @@ sleep 1;
 
 //create note in log
 [format ["Humanitarian Aid secondary objective complete at %1. Increasing civ rep by %2",_objective_town, KPLIB_secondary_objective_civ_supplies_impact], "NOTIFICATION"] call KPLIB_fnc_log;
+sleep 5;
+hintSilent "";
