@@ -2,6 +2,8 @@ params ["_unit", ["_force_surrender", false]];
 
 if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance)) exitWith {};
 
+private _markers = [];
+
 if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_enemy)) then {
 
     if (vehicle _unit != _unit) then {deleteVehicle _unit};
@@ -24,6 +26,14 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
         sleep 1;
         private _grp = createGroup [KPLIB_side_enemy, true];
         [_unit] joinSilent _grp;
+		
+        private _marker = createMarker ["prisonner_marker_" + str _i, [((_pos select 0) - 20 + (random 40)),((_pos select 1) - 20 + (random 40))]];
+        _marker setMarkerShape "ELLIPSE";
+        _marker setMarkerSize [5,5];
+        _marker setMarkerColor "ColorOrange";
+        _marker setMarkerAlpha 0.35;
+        _markers pushBack _marker;
+		
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
         } else {
@@ -51,5 +61,9 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
             sleep 1;
             [_unit] remoteExec ["remote_call_prisonner", _unit];
         };
+		sleep 30;
+		{
+            deleteMarker _x;
+        } forEach _markers;
     };
 };
