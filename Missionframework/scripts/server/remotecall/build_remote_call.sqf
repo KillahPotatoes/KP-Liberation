@@ -78,7 +78,7 @@ if ((_price_s > 0) || (_price_a > 0) || (_price_f > 0)) then {
     if ( _localtype == 8 ) then {
         stats_blufor_soldiers_recruited = stats_blufor_soldiers_recruited + 10;
     } else {
-        if ( _typename isKindOf "Man" ) then {
+        if ( _typename isKindOf "CAManBase" ) then {
             stats_blufor_soldiers_recruited = stats_blufor_soldiers_recruited + 1;
         } else {
             if ( ! ( _typename isKindOf "Building" ) ) then {

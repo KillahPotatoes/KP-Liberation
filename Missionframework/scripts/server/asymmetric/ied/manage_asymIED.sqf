@@ -31,8 +31,8 @@ if (!(isnull _roadobj)) then {
     if (KPLIB_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> IED %1 spawned at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     while {(_sector in KPLIB_asymmetric_sectors) && (mineActive _ied_obj) && !_goes_boom} do {
-        _nearinfantry = ((getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry]) select {side _x == KPLIB_side_player};
-        _nearvehicles = ((getpos _ied_obj) nearEntities [["Car", "Tank", "Air"], _activation_radius_vehicles]) select {side _x == KPLIB_side_player};
+        _nearinfantry = (_ied_obj nearEntities ["CAManBase", _activation_radius_infantry]) select {side _x == KPLIB_side_player};
+        _nearvehicles = (_ied_obj nearEntities [["Car", "Tank", "Air"], _activation_radius_vehicles]) select {side _x == KPLIB_side_player};
         if (count _nearinfantry >= _infantry_trigger || count _nearvehicles >= _vehicle_trigger) then {
             _ied_obj setDamage 1;
             stats_ieds_detonated = stats_ieds_detonated + 1; publicVariable "stats_ieds_detonated";

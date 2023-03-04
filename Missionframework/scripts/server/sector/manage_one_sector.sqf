@@ -252,8 +252,8 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
             _stopit = true;
 
-            {[_x] spawn prisonner_ai;} forEach ((markerPos _sector) nearEntities [["Man"], _local_capture_size * 1.2]);
-
+            {[_x] spawn prisonner_ai;} forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
+			
             sleep 60;
 
             KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
@@ -261,7 +261,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
             sleep 600;
 
             {
-                if (_x isKindOf "Man") then {
+                if (_x isKindOf "CAManBase") then {
                     if (side group _x != KPLIB_side_player) then {
                         deleteVehicle _x;
                     };
@@ -287,7 +287,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
             if (_sector_despawn_tickets <= 0) then {
                 {
-                    if (_x isKindOf "Man") then {
+                    if (_x isKindOf "CAManBase") then {
                         deleteVehicle _x;
                     } else {
                         if (!isNull _x) then {

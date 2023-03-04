@@ -9,8 +9,8 @@ private _actionned_intel_items = [];
 
 while {true} do {
     if ([5] call KPLIB_fnc_hasPermission) then {
-        _near_people = (getPosATL player) nearEntities [["Man"], 5];
-        _near_intel = (getPosATL player) nearEntities [KPLIB_intelObjectClasses, 5];
+        _near_people = player nearEntities [["CAManBase"], 5];
+        _near_intel = player nearEntities [KPLIB_intelObjectClasses, 5];
         {
             if ((captive _x) && !(_x in _actionned_captive_units) && !((side group _x) == KPLIB_side_player) && !(_x getVariable ["ACE_isUnconscious", false])) then {
                 _x addAction ["<t color='#FFFF00'>" + localize "STR_SECONDARY_CAPTURE" + "</t>",{[_this select 0] join (group player);},"",-850,true,true,"","(vehicle player == player) && (side group _target != KPLIB_side_player) && (captive _target)"];

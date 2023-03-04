@@ -119,7 +119,7 @@ KPLIB_objectInits = [
 
     // Disable autocombat (if set in parameters) and fleeing
     [
-        ["Man"],
+        ["CAManBase"],
         {
             if (!(KPLIB_param_autodanger) && {(side _this) isEqualTo KPLIB_side_player}) then {
                 _this disableAI "AUTOCOMBAT";

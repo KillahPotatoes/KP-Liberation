@@ -37,7 +37,7 @@ if (isServer) then {
         };
 
         // Weights adjustments depending on what vehicle the BLUFOR killer used
-        if (_killer isKindOf "Man") then {
+        if (_killer isKindOf "CAManBase") then {
             infantry_weight = infantry_weight + 1;
             armor_weight = armor_weight - 0.66;
             air_weight = air_weight - 0.66;
@@ -70,7 +70,7 @@ if (isServer) then {
     };
 
     // Check for Man or Vehicle
-    if (_unit isKindOf "Man") then {
+    if (_unit isKindOf "CAManBase") then {
 
         // OPFOR casualty
         if (side (group _unit) == KPLIB_side_enemy) then {

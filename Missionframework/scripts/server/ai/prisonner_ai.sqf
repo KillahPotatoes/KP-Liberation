@@ -4,7 +4,7 @@ if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance)) exitWith {};
 
 private _markers = [];
 
-if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_enemy)) then {
+if ((side group _unit == KPLIB_side_enemy) && {(_unit isKindOf "CAManBase") && (alive _unit)}) then {
 
     if (vehicle _unit != _unit) then {deleteVehicle _unit};
 

@@ -55,7 +55,7 @@ if ( KPLIB_endgame == 0 ) then {
         stats_fobs_lost = stats_fobs_lost + 1;
     } else {
         [_thispos, 3] remoteExec ["remote_call_fob"];
-        {[_x] spawn prisonner_ai;} foreach ((_thispos nearEntities ["Man", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
+        {[_x] spawn prisonner_ai;} foreach ((_thispos nearEntities ["CAManBase", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
     };
 };
 
