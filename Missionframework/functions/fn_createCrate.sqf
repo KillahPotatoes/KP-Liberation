@@ -2,7 +2,7 @@
     File: fn_createCrate.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-11
-    Last Update: 2020-05-25
+    Last Update: 2023-03-05
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,9 +34,13 @@ private _crate = _resource createVehicle _pos;
 _crate setMass 500;
 _crate setVariable ["KPLIB_crate_value", _amount, true];
 [_crate, true] call KPLIB_fnc_clearCargo;
+_crate lockInventory true;
 
-// Add ACE carry functionality
-if (KPLIB_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+// Add ACE carry functionality and disable cargo renaming
+if (KPLIB_ace) then {
+    [_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
+    _crate setVariable ["ace_cargo_noRename", true];
+};
 
 // Process KP object init
 [_crate] call KPLIB_fnc_addObjectInit;
