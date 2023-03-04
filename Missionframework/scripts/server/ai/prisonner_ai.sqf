@@ -41,9 +41,12 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
             if (KPLIB_ace) then {
                 ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
             } else {
+                _unit setCaptive false;
                 _unit enableAI "ANIM";
                 _unit enableAI "MOVE";
-                _unit setCaptive false;
+                sleep 1;
+                _unit playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+                sleep 2;
             };
             sleep 1;
             [_unit] remoteExec ["remote_call_prisonner", _unit];

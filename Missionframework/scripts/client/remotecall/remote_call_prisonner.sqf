@@ -9,11 +9,6 @@ waitUntil {
 _is_near_fob = false;
 _is_near_blufor = true;
 
-sleep 1;
-_unit playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-sleep 2;
-_unit enableAI "ANIM";
-_unit enableAI "MOVE";
 sleep 2;
 [_unit, ""] remoteExecCall ["switchMove"];
 
