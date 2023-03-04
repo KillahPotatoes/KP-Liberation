@@ -1,5 +1,7 @@
-uiSleep 3;
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
+uiSleep 3;
 private _sector = "";
 private _saved = [];
 private _classname = "";
