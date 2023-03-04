@@ -2,7 +2,7 @@
     File: fn_crAddAceAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-10
+    Last Update: 2023-03-04
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -37,7 +37,10 @@ _civ addAction [
 
         if !(_items isEqualTo []) then {
             _caller removeItem (selectRandom _items);
+			_caller playMove "AinvPknlMstpSnonWrflDnon_medic";
+			sleep 10;
             _target setDamage 0;
+			_caller playMove "AinvPknlMstpSnonWrflDnon_medicend";
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";
             sleep 3;
