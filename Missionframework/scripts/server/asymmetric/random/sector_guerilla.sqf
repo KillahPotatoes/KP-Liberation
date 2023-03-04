@@ -116,7 +116,7 @@ private _strengthChanged = false;
     if (!isNull _x) then {
         {
             if (alive _x) then {
-                deleteVehicle _x;
+                if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                 KPLIB_guerilla_strength = KPLIB_guerilla_strength + 2;
                 _strengthChanged = true;
             };

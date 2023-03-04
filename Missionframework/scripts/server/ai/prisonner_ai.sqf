@@ -6,7 +6,7 @@ private _markers = [];
 
 if ((side group _unit == KPLIB_side_enemy) && {(_unit isKindOf "CAManBase") && (alive _unit)}) then {
 
-    if (vehicle _unit != _unit) then {deleteVehicle _unit};
+	if (!isNull objectParent _unit) then {objectParent _unit deleteVehicleCrew _unit};
 
     sleep (random 5);
 

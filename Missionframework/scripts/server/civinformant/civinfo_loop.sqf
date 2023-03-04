@@ -69,7 +69,7 @@ while {true} do {
                 [3] remoteExec ["civinfo_notifications"];
             };
         } else {
-            deleteVehicle _informant;
+            if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
             if (KPLIB_civinfo_debug > 0) then {["Informant despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [2] remoteExec ["civinfo_notifications"];
         };

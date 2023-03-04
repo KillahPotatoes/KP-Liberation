@@ -263,7 +263,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
             {
                 if (_x isKindOf "CAManBase") then {
                     if (side group _x != KPLIB_side_player) then {
-                        deleteVehicle _x;
+                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                     };
                 } else {
                     if (!isNull _x) then {
@@ -288,7 +288,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
             if (_sector_despawn_tickets <= 0) then {
                 {
                     if (_x isKindOf "CAManBase") then {
-                        deleteVehicle _x;
+                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                     } else {
                         if (!isNull _x) then {
                             [_x] call KPLIB_fnc_cleanOpforVehicle;

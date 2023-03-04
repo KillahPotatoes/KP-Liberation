@@ -76,6 +76,6 @@ sleep 60;
 
 if ( KPLIB_param_bluforDefenders ) then {
     {
-        if ( alive _x ) then { deleteVehicle _x };
+        if ( alive _x ) then { if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x}; };
     } foreach units _grp;
 };

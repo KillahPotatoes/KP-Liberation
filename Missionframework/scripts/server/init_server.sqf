@@ -121,7 +121,7 @@ execVM "scripts\server\offloading\group_diag.sqf";
 
 {
     if ((_x != player) && (_x distance (markerPos KPLIB_respawn_marker) < 200 )) then {
-        deleteVehicle _x;
+        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
     };
 } forEach allUnits;
 

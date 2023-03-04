@@ -66,7 +66,7 @@ sleep 60;
 if (!isNull _grp) then {
     {
         if (alive _x) then {
-            deleteVehicle _x;
+            if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
         };
     } forEach (units _grp);
 };

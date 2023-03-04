@@ -101,7 +101,11 @@ if ( _alive_crew_count == 0 ) then {
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
     {_x doFollow (leader _grp)} foreach units _grp;
-    { [ _x ] spawn { sleep 600; deleteVehicle (_this select 0) } } foreach _pilotUnits;
+    { [ _x ] spawn {
+        sleep 600;
+        if (isNull objectParent (_this # 0)) then {deleteVehicle (_this # 0)} else {(objectParent (_this # 0)) deleteVehicleCrew (_this # 0)};
+        };
+    } foreach _pilotUnits;
 };
 
 resources_intel = resources_intel + (10 * _alive_crew_count);

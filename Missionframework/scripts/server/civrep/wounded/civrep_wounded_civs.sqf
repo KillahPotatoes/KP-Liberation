@@ -56,7 +56,7 @@ while {_units_near > 0} do {
 sleep 60;
 
 {
-    deleteVehicle _x;
+    if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
 } forEach _civs;
 
 {

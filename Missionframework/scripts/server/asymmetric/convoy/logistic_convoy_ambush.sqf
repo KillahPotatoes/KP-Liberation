@@ -120,7 +120,7 @@ if ((_waitingTime <= 0) && (({alive _x} count (units _grp)) > 0)) then {
     private _gain = 0;
     {
         if (alive _x) then {
-            deleteVehicle _x;
+            if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
             _gain = _gain + 2;
         };
     } forEach (units _grp);

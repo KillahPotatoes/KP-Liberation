@@ -47,7 +47,7 @@ if (alive _unit) then {
         [_unit, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExecCall ["switchMove"];
         [_unit] remoteExec ["prisonner_remote_call",2];
         sleep 600;
-        deleteVehicle _unit;
+        if (isNull objectParent _unit) then {deleteVehicle _unit} else {(objectParent _unit) deleteVehicleCrew _unit};
 
     } else {
 

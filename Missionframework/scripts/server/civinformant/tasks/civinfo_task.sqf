@@ -63,7 +63,9 @@ if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_task.sqf -> loop exited on:
 
 if (alive _hvt) then {
     deleteVehicle _veh;
-    {deleteVehicle _x} forEach (units _grp);
+    {
+        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
+    } forEach (units _grp);
     [6] remoteExec ["civinfo_notifications"];
     if (KPLIB_civinfo_debug > 0) then {["civinfo_task.sqf -> Task despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 } else {
