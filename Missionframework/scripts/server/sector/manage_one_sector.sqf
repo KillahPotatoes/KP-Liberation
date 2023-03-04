@@ -252,7 +252,13 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
             _stopit = true;
 
-            {[_x] spawn prisonner_ai;} forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
+            {
+				if (captive _x) then {
+					[_x, true] spawn prisonner_ai;
+				} else {
+					[_x] spawn prisonner_ai;
+				};
+			} forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
 			
             sleep 60;
 

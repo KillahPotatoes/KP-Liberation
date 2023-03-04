@@ -26,7 +26,7 @@ sleep 2;
 
 private _pilotUnits = units _pilotsGrp;
 {
-    [ _x, true ] spawn prisonner_ai;
+    [ _x, true] spawn prisonner_ai;
     _x setDir (random 360);
     sleep 0.5
 } foreach (_pilotUnits);
