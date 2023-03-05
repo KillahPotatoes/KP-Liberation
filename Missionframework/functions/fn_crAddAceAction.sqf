@@ -37,10 +37,9 @@ _civ addAction [
 
         if !(_items isEqualTo []) then {
             _caller removeItem (selectRandom _items);
-			_caller playMove "AinvPknlMstpSnonWrflDnon_medic";
-			sleep 10;
+			_caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
+			sleep 8;
             _target setDamage 0;
-			_caller playMove "AinvPknlMstpSnonWrflDnon_medicend";
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";
             sleep 3;
