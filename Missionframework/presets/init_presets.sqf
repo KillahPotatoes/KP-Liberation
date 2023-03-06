@@ -125,7 +125,7 @@ KPLIB_b_squadAT                 = KPLIB_b_squadAT                   select {[_x]
 KPLIB_b_squadAA                 = KPLIB_b_squadAA                   select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadRecon              = KPLIB_b_squadRecon                select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadPara               = KPLIB_b_squadPara                 select {[_x] call KPLIB_fnc_checkClass};
-KPLIB_b_vehToUnlock                  = KPLIB_b_vehToUnlock                    select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_b_vehToUnlock             = KPLIB_b_vehToUnlock               select {[_x] call KPLIB_fnc_checkClass};
 
 // Opfor
 KPLIB_o_militiaInfantry         = KPLIB_o_militiaInfantry           select {[_x] call KPLIB_fnc_checkClass};
