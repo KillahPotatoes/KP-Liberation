@@ -4292,7 +4292,7 @@
             <Portuguese>Caixa contém %1 recursos</Portuguese>
             <Korean>이 박스에는 %1 자원이 있습니다.</Korean>
             <Czech>Bedna obsahuje 1%</Czech>
-            <Japanese>貨物には %1資源が含まれています</Japanese>
+            <Japanese>貨物には資源が %1 単位含まれています</Japanese>
         </Key>
         <Key ID="STR_VECACTION">
             <Original>-- Change alignment</Original>

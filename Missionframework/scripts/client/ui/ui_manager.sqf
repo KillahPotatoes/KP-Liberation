@@ -123,7 +123,7 @@ while {true} do {
                     _KPLIB_sectors_active_hint = true;
                 };
 
-                _KPLIB_sectors_active_string = "<t align='right' color='#e0e000'>" + (localize "STR_KPLIB_sectors_active") + "<br/>";
+                _KPLIB_sectors_active_string = "<t align='right' color='#e0e000'>" + (localize "STR_ACTIVE_SECTORS") + "<br/>";
                 {
                     _KPLIB_sectors_active_string = [_KPLIB_sectors_active_string, markerText _x, "<br/>"] joinString "";
                 } forEach KPLIB_sectors_active;
