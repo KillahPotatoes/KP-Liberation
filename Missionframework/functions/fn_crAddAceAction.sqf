@@ -2,7 +2,7 @@
     File: fn_crAddAceAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-03-04
+    Last Update: 2023-03-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -36,6 +36,7 @@ _civ addAction [
         ] arrayIntersect (vestItems _caller + uniformItems _caller + backpackItems _caller);
 
         if !(_items isEqualTo []) then {
+            removeAllActions _civ;
             _caller removeItem (selectRandom _items);
 			_caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
 			sleep 8;

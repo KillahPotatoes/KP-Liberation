@@ -6441,20 +6441,20 @@
             <Japanese>殺害したユニット</Japanese>
         </Key>
         <Key ID="STR_CR_ACE_ACTION">
-            <Original>Treat the civilian (field dressing)</Original>
-            <German>Zivilisten versorgen (einfache Bandage)</German>
-            <Spanish>Asistir al civil (curar)</Spanish>
-            <Russian>Перевязать гражданского (полевая перевязка)</Russian>
+            <Original>Treat the civilian</Original>
+            <German>Zivilisten versorgen</German>
+            <Spanish>Asistir al civil</Spanish>
+            <Russian>Перевязать гражданского</Russian>
             <Italian>Soccorso Civili</Italian>
-            <Chinesesimp>治疗平民（战地绷带）</Chinesesimp>
-            <Chinese>治療平民（基礎繃帶）</Chinese>
-            <Portuguese>Preste socorro ao civil (curativo)</Portuguese>
+            <Chinesesimp>治疗平民）</Chinesesimp>
+            <Chinese>治療平民</Chinese>
+            <Portuguese>Preste socorro ao civil</Portuguese>
             <Korean>민간인 치료</Korean>
-            <Czech>Ošetřit civilistu(pomocí bandáže)</Czech>
-            <Japanese>市民を治療する(緊急包帯)</Japanese>
+            <Czech>Ošetřit civilistu</Czech>
+            <Japanese>市民を治療する</Japanese>
         </Key>
         <Key ID="STR_CR_ACE_ACTION_FAIL">
-            <Original>You need a field dressing.</Original>
+            <Original>You need a bandage.</Original>
             <German>Du brauchst eine einfache Bandage.</German>
             <Spanish>Necesitas vendas.</Spanish>
             <Russian>Вам необходима полевая перевязка.</Russian>
@@ -6464,7 +6464,7 @@
             <Portuguese>Você precisa de curativo.</Portuguese>
             <Korean>붕대가 필요하다.</Korean>
             <Czech>Potřebuješ ošetřit.</Czech>
-            <Japanese>緊急包帯が必要です。</Japanese>
+            <Japanese>包帯が最低一個必要です。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_HVT_START">
             <Original>There is a high ranked officer near %1.</Original>
@@ -6477,7 +6477,7 @@
             <Portuguese>Há um oficial de alta patente nas proximidades de %1.</Portuguese>
             <Korean>%1 근처에 적군의 고급 장교가 있는 것으로 파악되었다.</Korean>
             <Czech>Důstojník s vysokou hodností poblíž %1.</Czech>
-            <Japanese>敵の将校が %1 付近にいるぞ。</Japanese>
+            <Japanese>敵の将校が %1 付近にいるようだ。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_HVT_SUCCESS">
             <Original>The officer was successfully killed.</Original>
