@@ -2,7 +2,7 @@
     File: AA_turret_manager.sqf
     Author: Nicoman
     Date: 2020-09-29
-    Last Update: 2023-03-02
+    Last Update: 2023-03-07
     License: MIT License - http://www.opensource.org/licenses/MIT
     Description:
         Spawns and manages AA turrets in the back country. Max number and spawn rate of AA turrets is influenced by various factors:
@@ -37,24 +37,36 @@ while {KPLIB_endgame == 0} do {
     if (KPLIB_enemyReadiness >= 100) then {_sleepTime = _sleepTime * 0.75};									// when enemy readiness gets above 1000, reduce sleep time to 0.42 (0.75 * 0.75 * 0.75)	
 	sleep _sleepTime;	
 
-	// Check and clear turret array for any destroyed or unmanned units
-	{			
-		_turret = _x select 0;																				// in case turret is an array, choose first element of array as turret
-		if (!alive _turret || !alive gunner _turret || side _turret != KPLIB_side_enemy) then {
+	if (KPLIB_backCountryTurretsAA != []) then {
+		// Check and clear turret array for any destroyed or unmanned units
+		{
+			private _groupDestroyed = false;
+			private _groupVehicles = _x;
 			{
-				if (side _x == KPLIB_side_player) exitWith {};
-				if (alive _x) then {_x setDamage 1};
-			} forEach _x;
-			KPLIB_backCountryTurretsAA deleteAt _forEachIndex;												// delete any destroyed or unmanned AA turret from turret array
-			KPLIB_usedPositionsAA deleteAt _forEachIndex;													// delete corresponding position from used positions array
-			_killedTurretsAA = _killedTurretsAA + 1;														// raise kill counter
+				if (side _x == KPLIB_side_player) exitWith {};												// ignore player owned turrets
+				if (_groupDestroyed) exitWith {};															// skip if group already have destroyed vehicles
+				if (!alive _x || !alive gunner _x || side _x != KPLIB_side_enemy) then {
+					_groupDestroyed = true;
+				};
+			} forEach _groupVehicles;																		// in case turret is an array, choose each element of array as turret
+			if (_groupDestroyed) then {
+				{
+					private _vehicle = _x;
+					if (side _x == KPLIB_side_player) exitWith {};											// ignore player owned turrets
+					[_vehicle] call KPLIB_fnc_cleanOpforVehicle;
+				} forEach _groupVehicles;
+				KPLIB_backCountryTurretsAA deleteAt _forEachIndex;											// delete any destroyed or unmanned AA turret from turret array
+				KPLIB_usedPositionsAA deleteAt _forEachIndex;												// delete corresponding position from used positions array
+				_killedTurretsAA = _killedTurretsAA + 1;													// raise kill counter
+				if (isNil "KPLIB_backCountryTurretsAA") then {KPLIB_backCountryTurretsAA = []};				// avoid array is null
+				if (isNil "KPLIB_usedPositionsAA") then {KPLIB_usedPositionsAA = []};						// avoid array is null
+			};
+		} forEach KPLIB_backCountryTurretsAA;
+		// If AA turrets were destroyed, add a 'punishment' time for the enemy. This extra time is meant to be a dampening of the production of AA turrets
+		if (_killedTurretsAA > 0) then {
+			sleep (_sleepTime * _killedTurretsAA);															// killing AA turrets 'damps' placement of further turrets
+			_killedTurretsAA = 0;																			// reset kill counter after performing 'damp' sleep
 		};
-	} forEach KPLIB_backCountryTurretsAA;
-
-	// If AA turrets were destroyed, add a 'punishment' time for the enemy. This extra time is meant to be a dampening of the production of AA turrets
-	if (_killedTurretsAA > 0) then {
-		sleep (_sleepTime * _killedTurretsAA);																// killing AA turrets 'damps' placement of further turrets
-		_killedTurretsAA = 0;																				// reset kill counter after performing 'damp' sleep
 	};
 
 	// Calculate maximum amount of AA turrets
@@ -90,14 +102,12 @@ while {KPLIB_endgame == 0} do {
 		} forEach _randomTurret;																			// spawn turret / turrets
 		KPLIB_backCountryTurretsAA pushBack _turretGroup;													// update AA turrets array with current turret
 
-		// if turret group has more than one unit, that means there is a radar vehicle involved; so link all units in turret group to that radar
-		if (count _turretGroup > 1) then {
-			_group = createGroup [KPLIB_side_enemy, true];
-			{
-				_crew = units (_x);
-				_crew joinSilent _group;
-				_x setVehicleRadar 1;																		// fucking turn on radar
-			} forEach _turretGroup;	
-		};
+		// make sure turrets set enemy side and link all turrets because involved radar system.
+		_group = createGroup [KPLIB_side_enemy, true];
+		{
+			_crew = units (_x);
+			_crew joinSilent _group;
+			_x setVehicleRadar 1;																			// fucking turn on radar
+		} forEach _turretGroup;
 	};
 };
