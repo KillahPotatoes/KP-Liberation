@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2023-03-02
+    Last Update: 2023-03-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -335,21 +335,23 @@ _player addAction [
 ];
 
 // Reassign Zeus
-if (player == ([] call KPLIB_fnc_getCommander)) then {
-    _player addAction [
-        ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
-        {[] call KPLIB_fnc_requestZeus},
-        nil,
-        -870,
-        false,
-        true,
-        "",
-        "
-            alive _originalTarget
-            && {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
-            && {build_confirmed isEqualTo 0}
-        "
-    ];
+if (KPLIB_param_zeusCommander) then {
+	if (player == ([] call KPLIB_fnc_getCommander)) then {
+		_player addAction [
+			["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
+			{[] call KPLIB_fnc_requestZeus},
+			nil,
+			-870,
+			false,
+			true,
+			"",
+			"
+				alive _originalTarget
+				&& {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
+				&& {build_confirmed isEqualTo 0}
+			"
+		];
+	};
 };
 
 // Create FOB clearance
