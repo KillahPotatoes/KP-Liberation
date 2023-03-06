@@ -83,7 +83,16 @@ KPLIB_objectInits = [
         [KPLIB_b_smallStorage, KPLIB_b_largeStorage],
         {_this setVariable ["KPLIB_storage_type", 0, true];}
     ],
-
+    
+    // disable inventory action and ACE rename of resource crates
+    [
+        [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel],
+        {
+        _this lockInventory true;
+        _this setVariable ["ace_cargo_noRename", true];
+		}
+    ],
+    
     // Add ACE variables to corresponding building types
     [
         [KPLIB_b_logiStation],
