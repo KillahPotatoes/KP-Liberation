@@ -1,7 +1,7 @@
 params ["_unit", ["_force_surrender", false]];
 
-if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance)) exitWith {};
-
+// define who do not surrender
+if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance) && (side group _unit == KPLIB_side_civilian)) exitWith {};
 
 if ((_force_surrender) || ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (alive _unit))) then {
 
@@ -22,6 +22,7 @@ if ((_force_surrender) || ((side group _unit == KPLIB_side_enemy) && (_unit isKi
         sleep 1;
         private _grp = createGroup [KPLIB_side_enemy, true];
         [_unit] joinSilent _grp;
+		_unit setVariable ["KPLIB_prisonner_surrendered", true, true];
 
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
@@ -32,11 +33,18 @@ if ((_force_surrender) || ((side group _unit == KPLIB_side_enemy) && (_unit isKi
             sleep 2;
             _unit setCaptive true;
         };
-        waitUntil {sleep 1;
-            !alive _unit || side group _unit == KPLIB_side_player
+        waitUntil {
+			sleep 1;
+			private _isCaptured = _unit getVariable ["KPLIB_prisonner_captured", false];
+			private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", player];
+            !alive _unit || _isCaptured
         };
 
         if (alive _unit) then {
+            private _newgrp = createGroup [KPLIB_side_player, true];
+            [_unit] joinSilent _newgrp;
+            sleep 1;
+            [_unit] join (group _CapturedPlayer);
             if (KPLIB_ace) then {
                 ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
             } else {
