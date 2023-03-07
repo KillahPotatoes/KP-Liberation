@@ -15,7 +15,7 @@ private _helofire = KPLIB_sarFire createVehicle (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 _helofire setpos (getpos _helowreck);
 
-private _pilotsGrp = createGroup [KPLIB_side_civilian, true];
+private _pilotsGrp = createGroup [KPLIB_side_enemy, true];
 private _pilotsPos = (getpos _helowreck) getPos [25, random 360];
 
 [KPLIB_b_heliPilotUnit, _pilotsPos, _pilotsGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
