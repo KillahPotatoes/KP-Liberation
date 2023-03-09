@@ -1,4 +1,19 @@
 # Changelog
+## JTF-V 0.1 (2023-03-09)
+* Fixed Buttons in in-game menu with links
+* Removed fadeSound from KP
+* Disabled customSquads in GREUG_config
+
+## JTF-V 0.1 (2023-03-08)
+* Added: Briefing.sqf
+* Added: Buttons in in-game menu with links
+* Removed: Halo max player limit
+
+## JTF-V 0.1 (2023-03-02)
+* Added: Carry Weight display in inventory
+* Added: Bleedout timer display
+* Added: Halo max player limit
+* Added: GOM Aircraft Loadout
 
 ## 0.96.7a (2020-09-12)
 * Added: Contact DLC static weapon backpacks to default blacklist.

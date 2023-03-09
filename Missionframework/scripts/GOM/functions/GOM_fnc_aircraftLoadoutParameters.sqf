@@ -21,6 +21,6 @@ GOM_fnc_aircraftLoadoutRepairTime = 60;
 GOM_fnc_aircraftLoadoutRefuelRate = 1800;
 //(default: 1800) rate in liters per minute a vehicle will be refuelled at. Going from 0 to 100% fuel will take 60 seconds if the vehicle holds 1800l max fuel. wipeout has 1000l max fuel as a measurement
 
-GOM_fnc_removeFuelFromMapObjects = true;
+GOM_fnc_removeFuelFromMapObjects = false;
 //(default: true) will remove all fuel cargo from map objects like gas stations so players can't land on the roof of a gas station for a maintenance free refill, might affect other parts of your mission so choose carefully
 true

@@ -7,15 +7,14 @@ player addEventHandler ["InventoryClosed", {
 removeMissionEventHandler ["Draw3D", missionNamespace getVariable "WGP_UI_redraw"];
 }];
 _whileopen = addMissionEventHandler ["Draw3D", {
-_load = (str round (loadAbs player* (1 / 2.2046) * 10 ^ 2 / 10)); // Load converted to kg and rounded to two decimals. Change the "^2" to change the number of decimal places. Remove the "* (1 / 2.2046)" to have weight in lb.
-(findDisplay 602 displayCtrl 111) ctrlSetText (name player + " " + str(_load)+ "kg");
+_load = str round ((loadAbs player)/10); // Load rounded to whole number. Change the "^2" to change the number of decimal places.
+(findDisplay 602 displayCtrl 111) ctrlSetText (name player + " carrying:" + str(_load) + "kg/100kg of gear.");
 }];
 missionNamespace setVariable ["WGP_UI_redraw", _whileopen];
 };
 }];
 
 // Bleedout Timer
-
 player addEventHandler ["animChanged", {
   params ["_unit","_anim"];
   if ("uncons" in toLowerAnsi _anim) then {
@@ -23,11 +22,17 @@ player addEventHandler ["animChanged", {
       params ["_unit","_anim"];
       private _time = diag_tickTime -3;
       while {lifeState _unit == "incapacitated"} do {
-        hintSilent str round (bis_revive_bleedOutDuration - (diag_tickTime -_time));
-        uisleep 1
+	      _color = "#45f442"; //green
+	      if (_time < 180) then {_color = "#eef441";}; //yellow
+	      if (_time < 60) then {_color = "#ff0000";}; //red
+	      if (_time < 1) exitWith {
+		      hintSilent parseText format ["<t color='%1'>--- Time is up! ---</t>",_color];
+	      };
+	        hintSilent parseText format ["Time Left:<br/><t color='%1'>--- %2 ---</t>", _color, [(bis_revive_bleedOutDuration - (diag_tickTime - _time))/60,"HH:MM:SS"] call BIS_fnc_timetostring];
       };
+        uisleep 1
+    };
       hintSilent ""
-    }
   }
 }];
 
@@ -51,11 +56,7 @@ player addEventHandler ["Killed",
     };
 }];
 
-//GOM_fnc_aircraftLoadout V1.35 made by Grumpy Old Man 17-5-2017
-params ["_unit","_JIP"];
-
-if (_unit getvariable ["GOM_fnc_aircraftLoadoutAllowed",false]) then {
-
-	_unit spawn GOM_fnc_addAircraftLoadout;
-
-};
+// GOM Loadout Menu
+//player addAction ["Aircraft Loadouts",{_start = [] call GOM_fnc_aircraftLoadout}, [], 0, false, false, "", "(speed player < 1)"];
+//_add = [this] spawn GOM_fnc_addAircraftLoadout;
+player addAction ["Aircraft Loadouts",{[player] spawn GOM_fnc_aircraftLoadout}, [], 0, false, false, "", "(speed player < 1)"];

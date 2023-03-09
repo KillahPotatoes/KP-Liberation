@@ -1,5 +1,12 @@
 private [ "_dialog", "_backpack", "_backpackcontents" ];
 
+//JTF-V Edit
+
+//Halo limiter
+//if ((playersNumber west) > 5) exitWith {
+//   hint "Halo jumping not allowed, call for transport!";
+//};
+
 if ( isNil "GRLIB_last_halo_jump" ) then { GRLIB_last_halo_jump = -6000; };
 
 if ( GRLIB_halo_param > 1 && ( GRLIB_last_halo_jump + ( GRLIB_halo_param * 60 ) ) >= time ) exitWith {
@@ -9,10 +16,6 @@ if ( GRLIB_halo_param > 1 && ( GRLIB_last_halo_jump + ( GRLIB_halo_param * 60 ) 
 _dialog = createDialog "liberation_halo";
 dojump = 0;
 halo_position = getpos player;
-//VN Edit
-//if ((count allPlayers) > 5) exitWith {
-//    hint "Halo jumping not allowed, call for transport!";
-//};
 _backpackcontents = [];
 
 [ "halo_map_event", "onMapSingleClick", { halo_position = _pos } ] call BIS_fnc_addStackedEventHandler;

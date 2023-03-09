@@ -22,14 +22,12 @@
 if (isNull objectParent player) then {
     setViewDistance KPPLM_viewFoot;
     setObjectViewDistance KPPLM_viewFoot;
-    1 fadeSound 1;
 };
 
 // Player in boat or land vehicle
 if (vehicle player isKindOf "LandVehicle" || vehicle player isKindOf "Ship") then {
     setViewDistance KPPLM_viewVeh;
     setObjectViewDistance KPPLM_viewVeh;
-    1 fadeSound KPPLM_soundVeh;
     if (difficultyOption "thirdPersonView" == 1) then {
         if (KPPLM_tpv > 1) then {player switchCamera "EXTERNAL";};
     };
@@ -39,7 +37,6 @@ if (vehicle player isKindOf "LandVehicle" || vehicle player isKindOf "Ship") the
 if (vehicle player isKindOf "Air") then {
     setViewDistance KPPLM_viewAir;
     setObjectViewDistance KPPLM_viewAir;
-    1 fadeSound KPPLM_soundVeh;
     if (difficultyOption "thirdPersonView" == 1) then {
         if (KPPLM_tpv == 1 || KPPLM_tpv == 3) then {player switchCamera "EXTERNAL";};
     };

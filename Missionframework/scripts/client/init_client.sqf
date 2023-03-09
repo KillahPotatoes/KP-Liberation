@@ -65,8 +65,10 @@ execVM "scripts\client\spawn\redeploy_manager.sqf";
 execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
+
 // JTF-V Edit
 execVM "scripts\client\misc\jtf-v.sqf";
+execVM "briefing.sqf"; // Briefings
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
