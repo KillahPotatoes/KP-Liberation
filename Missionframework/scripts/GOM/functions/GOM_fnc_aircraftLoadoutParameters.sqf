@@ -3,16 +3,16 @@
 
 
 
-GOM_fnc_aircraftLoadout_NeedsFuelSource = true;
+GOM_fnc_aircraftLoadout_NeedsFuelSource = false;
 //(default: true) needs fuel supply within 50m of the aircraft or functions will be unavailable
 
-GOM_fnc_aircraftLoadout_NeedsAmmoSource = true;
+GOM_fnc_aircraftLoadout_NeedsAmmoSource = false;
 //(default: true) needs ammo supply within 50m of the aircraft or functions will be unavailable
 
-GOM_fnc_aircraftLoadout_NeedsRepairSource = true;
+GOM_fnc_aircraftLoadout_NeedsRepairSource = false;
 //(default: true) needs repair supply within 50m of the aircraft or functions will be unavailable
 
-GOM_fnc_allowAllPylons = false;
+GOM_fnc_allowAllPylons = true;
 //(default: false) removes check that only allows compatible pylons to be mounted
 
 GOM_fnc_aircraftLoadoutRepairTime = 60;
