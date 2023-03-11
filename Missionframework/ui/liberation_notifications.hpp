@@ -98,7 +98,27 @@ class CfgNotifications {
         iconPicture = "res\notif\ui_notif_sob.paa";
         color[] = { 0, 1, 0, 1 };
         sound = "taskSucceeded";
-    };	
+    };
+    class lib_intel_bingo_fuel: lib_intel {
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_TEXT;
+    };
+    class lib_secondary_bingo_fuel_complete: lib_default_notification {
+        title = $STR_NOTIFICATION_SECONDARY_TITLE;
+        description = $STR_NOTIFICATION_BINGO_FUEL_COMPLETE_TEXT;
+        iconPicture = "res\notif\ui_notif_sob.paa";
+        color[] = { 0, 1, 0, 1 };
+        sound = "taskSucceeded";
+    };
+    class lib_intel_rearm_outpost: lib_intel {
+        description = $STR_NOTIFICATION_REARM_OUTPOST_TEXT;
+    };
+    class lib_secondary_rearm_outpost_complete: lib_default_notification {
+        title = $STR_NOTIFICATION_SECONDARY_TITLE;
+        description = $STR_NOTIFICATION_REARM_OUTPOST_COMPLETE_TEXT;
+        iconPicture = "res\notif\ui_notif_sob.paa";
+        color[] = { 0, 1, 0, 1 };
+        sound = "taskSucceeded";
+    };
     class lib_intel_convoy: lib_intel {
         description = $STR_NOTIFICATION_CONVOY_SPOTTED_TEXT;
     };
@@ -132,6 +152,16 @@ class CfgNotifications {
     };
 	class lib_secondary_civ_supplies_no_room: lib_secondary_fob_destroyed {
 		description = $STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM;
+        color[] = { 1, 0, 0, 1 };
+        sound = "taskFailed";
+	};
+	class lib_secondary_bingo_fuel_no_room: lib_secondary_fob_destroyed {
+		description = $STR_NOTIFICATION_BINGO_FUEL_NO_ROOM;
+        color[] = { 1, 0, 0, 1 };
+        sound = "taskFailed";
+	};
+	class lib_secondary_rearm_outpost_no_room: lib_secondary_fob_destroyed {
+		description = $STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM;
         color[] = { 1, 0, 0, 1 };
         sound = "taskFailed";
 	};

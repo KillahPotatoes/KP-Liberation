@@ -367,7 +367,7 @@
             <Portuguese>-- ARSENAL --</Portuguese>
             <Korean>-- 무기고 --</Korean>
             <Czech>-- ARZENÁL --</Czech>
-            <Japanese>-- 弾薬庫 --</Japanese>
+            <Japanese>-- アーセナル --</Japanese>
         </Key>
         <Key ID="STR_ACTION_LOAD_BOX">
             <Original>-- LOAD CRATE</Original>
@@ -610,7 +610,7 @@
             <Portuguese>Caixa de Arsenal</Portuguese>
             <Korean>무기고</Korean>
             <Czech>Bedna se zbrojnicí</Czech>
-            <Japanese>弾薬庫箱</Japanese>
+            <Japanese>アーセナル箱</Japanese>
         </Key>
         <Key ID="STR_DEPLOY_TITLE">
             <Original>DEPLOYMENT</Original>
@@ -1283,7 +1283,7 @@
             <Portuguese>FOB hostil nas proximidades de %1.</Portuguese>
             <Korean>적군 전초기지 %1 가 근처에 있습니다!</Korean>
             <Czech>Nepřátelské FOB poblíž %1.</Czech>
-            <Japanese>敵前哨基地を %1 付近に発見。</Japanese>
+            <Japanese>敵前線基地を %1 付近に発見。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_SUPPLIES_TEXT">
             <Original>Civil authorities request supplies at %1.</Original>
@@ -1329,6 +1329,30 @@
             <Korean>이 지역에는 보급품을 배달할 우호적인 마을이 없습니다. 이 임무를 시도하기 전에 하나를 해방하십시오.</Korean>
             <Czech>V této oblasti neexistují žádná spřátelená města, kam byste dodávali zásoby. Před pokusem o tuto misi jednoho osvobodte.</Czech>
             <Japanese>この地域にはサプライを必要としている友好的な町がありません。解放する必要があります!</Japanese>
+        </Key>
+        <Key ID="STR_NOTIFICATION_BINGO_FUEL_TEXT">
+            <Japanese>%1 の工場は燃料を要求している。</Japanese>
+            <Original>Our factory request fuel at %1.</Original>
+        </Key>
+        <Key ID="STR_NOTIFICATION_BINGO_FUEL_COMPLETE_TEXT">
+            <Japanese>燃料の輸送に成功した。工場は感謝しいくつかの資源を生産しました!</Japanese>
+            <Original>Fuel have been delivered. The factory was thanked and produced several resources!</Original>
+        </Key>
+        <Key ID="STR_NOTIFICATION_BINGO_FUEL_NO_ROOM">
+            <Japanese>この地域には燃料を必要としている友好的な工場がありません。解放する必要があります!</Japanese>
+            <Original>No friendly factory in the area to deliver fuel to. Liberate one!</Original>
+        </Key>
+        <Key ID="STR_NOTIFICATION_REARM_OUTPOST_TEXT">
+            <Japanese>%1 の軍事基地は弾薬を要求している。</Japanese>
+            <Original>Our outpost request ammunition at %1.</Original>
+        </Key>
+        <Key ID="STR_NOTIFICATION_REARM_OUTPOST_COMPLETE_TEXT">
+            <Japanese>弾薬の輸送に成功した。軍事基地によって敵の警戒度は減少した!</Japanese>
+            <Original>Ammunition have been delivered. OPFOR alert level reduced by outpost!</Original>
+        </Key>
+        <Key ID="STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM">
+            <Japanese>この地域には弾薬を必要としている友軍の軍事基地がありません。解放する必要があります!</Japanese>
+            <Original>No friendly outpost in the area to deliver ammunition to. Liberate one!</Original>
         </Key>
         <Key ID="STR_NOTIFICATION_PRISONER_TEXT">
             <Original>We have interrogated a prisoner.</Original>
@@ -1388,7 +1412,7 @@
             <Portuguese>FOB hostil destruída</Portuguese>
             <Korean>적군 전초기지가 파괴됨</Korean>
             <Czech>Nepřátelské FOB zničeno.</Czech>
-            <Japanese>敵前哨基地の破壊完了。</Japanese>
+            <Japanese>敵前線基地の破壊完了。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REINFORCEMENTS_TITLE">
             <Original>HOSTILE REINFORCEMENTS</Original>
@@ -2848,7 +2872,7 @@
             <Portuguese>ARSENAL</Portuguese>
             <Korean>무기고</Korean>
             <Czech>ARZENÁL</Czech>
-            <Japanese>弾薬庫</Japanese>
+            <Japanese>アーセナル</Japanese>
         </Key>
         <Key ID="STR_EDIT_LOADOUT">
             <Original>Edit loadout</Original>
@@ -3828,7 +3852,7 @@
             <Portuguese>Caça à FOB</Portuguese>
             <Korean>병참기지 기습</Korean>
             <Czech>Hon na FOB</Czech>
-            <Japanese>前哨基地攻撃 (FOB Hunting)</Japanese>
+            <Japanese>前線基地攻撃 (FOB Hunting)</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING0">
             <Original>&lt;t size='1.3' color='#ffa000'&gt;FOB HUNTING&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;OPFOR forces use an array of small logistic bases situated behind the front lines. Destroying those assets would greatly disrupt the OPFOR supply lines and impair their capacity to react to our actions.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to destroy all supply assets (trucks, containers) at the objective by any means at your disposal. Unfortunately our intelligence is not able to provide you with a precise position for the base, you will have to locate the objective in the red zone on your map.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: OPFOR alert level reduced by 40%&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Original>
@@ -3843,7 +3867,7 @@
             <Portuguese>&lt;t size='1.3' color='#ffa000'&gt;CAÇA À FOB&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;As forças de oposição (FOROP) utilizam um conjunto de pequenas bases de logística situadas além do fronte de batalha. Destruindo tais recursos desestabilizaria consideravelmente suas linhas de suprimento e afetaria sua capacidade de reagir às nossas ações.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Sua missão é destruir todas as fontes de recurso (caminhões, contêineres) que estão no objetivo, a qualquer custo. Infelizmente, nossa inteligência não foi capaz de fornecer dados da localização precisa da base. Dessa forma, você deverá localizar o objetivo dentro da zona vermelha identificada em seu mapa.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: Alerta das forças de oposição reduzidos em 40%.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Portuguese>
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;병참기지 기습&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;현재 적군은 후방지역에 병참 기지를 운영하고 있습니다. 이 병참 기지를 파괴하면 전방 적군의 작전 수행능력을 저하시켜 아군의 작전 행동에 대응할 수 있는 역량이 약해질 것입니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 작전 목표는 모든 군수물자을 파괴하는 것입니다.(트럭, 컨테이너 등) 아쉽게도 아군 정찰팀이 해당지역을 정찰하였으나 찾지 못하여 정확한 위치를 제공할 수 없기 때문에 당신의 지도에 표기된 빨간 영역 안에 위치한 적군 병참 기지를 찾아야 합니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소모되는 정보 점수: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 경고 수준이 40% 감소합니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;HON NA FOB&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Jednotky OPFOR používají řadu menších logistických základen za hlavní linii. Zničení těchto prostředků výrazně naruší zásobováni OPFOR jednotek a naruší jejich schopnost reagovat na naše akce.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Cílem mise je zničit všechny zásobovací prostředky (náklaďáky, kontejnery) libovolnými prostředky. Bohužel naše rozvědka není schopna vám poskytnout přesnou polohou pro základny, budete ji muset najít v červené zóně na mapě.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: Snížení bojové pohotovosti OPFOR o 40%&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前哨基地攻撃&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は小規模な物流基地を後方に設置している。 これらの資源を破壊すれば敵補給船への打撃を与え、敵軍の警戒度を下げることが出来るはずだ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は目標に存在するすべての補給用品(トラックやコンテナ)の破壊だ。 残念ながら我々の情報網では敵基地の正確な位置を特定するには至らなかった。 諸君には赤い範囲内で目標を捜索し、破壊してほしい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が40%低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前線基地攻撃&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は小規模な物流基地を後方に設置している。 これらの資源を破壊すれば敵補給船への打撃を与え、敵軍の警戒度を下げることが出来るはずだ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は目標に存在するすべての補給用品(トラックやコンテナ)の破壊だ。 残念ながら我々の情報網では敵基地の正確な位置を特定するには至らなかった。 諸君には赤い範囲内で目標を捜索し、破壊してほしい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が40%低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_MISSION1">
             <Original>Convoy Hijack</Original>
@@ -3986,8 +4010,24 @@
             <Japanese>人道支援 (Humanitarian Aid)</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING3">
-            <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Local civilians in our occupied sector are requesting supplies as humanitarian aid. This is an opportunity for us to show compassion and empathy towards the people of this region. They may eventually act as guerrilla allies and support us in our attacks.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our supplies to the requested sector. Resources required are 200 supplies (2 crates). Load the supplies onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Supplies (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: increase in Civil Reputation by 5%.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。我々がこの地域の市民に対して友好的であることをを示すチャンスだ。彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。資源は200サプライ(最低2箱)必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ(最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が5%上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Local civilians in our occupied sector are requesting supplies as humanitarian aid. This is an opportunity for us to show compassion and empathy towards the people of this region. They may eventually act as guerrilla allies and support us in our attacks.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our supplies to the requested sector. Resources required are 200 supplies (2 crates). Load the supplies onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Supplies (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: increase in Civil Reputation by 5%.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。我々がこの地域の市民に対して友好的であることをを示すチャンスだ。彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。資源は200サプライ (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が5%上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+        </Key>
+        <Key ID="STR_SECONDARY_MISSION4">
+            <Japanese>燃料切れ (Bingo Fuel)</Japanese>
+            <Original>Bingo Fuel</Original>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING4">
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;燃料切れ&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領した友好的な工場が燃料を要請している。燃料があれば工場は我々の為に各種の資源をすぐさま生産してくれるだろう。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった工場に我々の燃料を輸送し、譲渡することだ。資源は200燃料 (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 燃料(最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: ランダムな資源最大6個。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;BINGO FUEL&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Our occupied friendly factories are requesting fuel. With fuel, the factories will quickly produce various resources for us.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our fuel to the requested sector. Resources required are 200 fuel (2 crates). Load the fuel onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Fuel (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: 6x Random resources.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
+        </Key>
+        <Key ID="STR_SECONDARY_MISSION5">
+            <Japanese>前哨基地補給 (Outpost Rearming)</Japanese>
+            <Original>Outpost Rearming</Original>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING5">
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前哨基地補給&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;友軍の軍事基地が弾薬を要請している。弾薬があれば敵軍の注意や戦力を分散し、敵の警戒度を減少させることが出来るかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった軍事基地に我々の弾薬を輸送し、譲渡することだ。資源は200弾薬 (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 弾薬(最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 10%低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;OUTPOST REARMING&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Friendly military outpost request ammunition. Ammunition may help to disperse the attention and forces of OPFOR and reduce the OPFOR alert level.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our ammunition to the requested sector. Resources required are 200 ammunition (2 crates). Load the ammunitions onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Ammunition (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: OPFOR alert level reduced by 10%&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
         </Key>
         <!-- Added in v0.924 -->
         <Key ID="STR_PARAM_SQUAD_SIZE">
@@ -4090,7 +4130,7 @@
             <Portuguese>Arsenal móvel</Portuguese>
             <Korean>재투입차량에 '무기고' 설치</Korean>
             <Czech>Mobilní arzenál</Czech>
-            <Japanese>モバイル弾薬庫</Japanese>
+            <Japanese>モバイルアーセナル</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
             <Original>Respawn on attacked sectors</Original>
@@ -5304,7 +5344,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Os setores estão divididos em 5 tipos distintos:&lt;br/&gt; &lt;br/&gt;- Pontos de interesse: Geralmente vilarejos/cidades de proporção pequena para média. Enquanto não tão importantes estratégicamente, esses locais são onde os cidadãos desta região vivem e dessa forma, é a chave para obter sua confiança e simpatia.&lt;br/&gt; &lt;br/&gt;- Fábricas: Em toda a região, você encontrará fábricas civis sob controle inimigo. Estas fábricas são especializadas no desenvolvimento de um dos três tipos de recursos (Suprimentos, Munição e Combustível), no entanto podem ser aprimorada para produzir todas as três classes de recursos, dessa forma, são alvos estratégicos e devem ser prioridade em seus esforços!&lt;br/&gt; &lt;br/&gt;- Bases Militares: Lar de uma vasta quantidade de forças inimigas bem equipadas, essas instalações são fortemente protegidas e requerem uma grande e bem coordenada força de assalto para de capturá-la. Ao capturar essas bases, será possível disponibilizar maiores recursos na região, que serão críticos para o seu sucesso.&lt;br/&gt; &lt;br/&gt;- Torres de Rádio: Quando sob domínio inimigo, as torres de rádio serão utilizadas para solicitar reforços quando um setor próximo estiver sendo atacado pela Coalizão. O tempo de reação dependerá da distância entre a torre e o setor. Quando estiver sob controle aliado, as torres fornecerão inteligência sobre a movimentação das tropas inimigas na proximidade. Isto será possível pois as torres interceptarão as frequências inimigas.&lt;br/&gt; &lt;br/&gt;- Grandes Cidades: Existem dezenas de grandes cidades na região. Quando estiverem sob controle da Coalizão, certamente não será possível ao inimigo retomar seu controle. Este é seu objetivo primário.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;- 거점의 종류는 전부 5가지이다. 첫번째로 대도시는 큰 네모안에 세모가 그려져 있다. 대도시에는 잘 정비된 적군이 방어중이다. 이 곳을 점령하기 위해선 많은 병력이 필요하다. 참고로 모든 대도시를 점령하면 적군은 이 지역에서 후퇴할 것이다.&lt;br/&gt; &lt;br/&gt;- 두번째는 적군 군사기지로 마름모에 아래쪽에 선이 그려져 있으며 적군 기갑부대가 주둔하고 있다. 지속적으로 기계화부대를 동반한 수색정찰병을 내보고 있으며 근처 적군 도시를 공격하면 지원병을 보내기도 한다.&lt;br/&gt; &lt;br/&gt;- 세번째는 네모안에 통신탑이 그려져 있는 곳으로 '라디오타워'라고 한다. 이 곳을 점령하면 주변지역의 적 거점을 공격할때 적군들이 지원부대을 못부르거나 오더라도 적은 숫자만 오게 된다.&lt;br/&gt; &lt;br/&gt;- 네번째는 네모인데 가운데에 검은 점이 찍혀있는 것으로 '도시'이라고 한다. 이 곳을 점령하면 이용가능한 AI의 숫자가 증가(최대100명)한다.&lt;br/&gt; &lt;br/&gt;- 마지막으로 주유기 표시로 된 '공장'이다. 이 지역의 경우 도시 이름 옆에 (S),(A),(F)가 표기되어 있는데 이는 생산 가능한 보급품의 종류를 나타낸다. 즉 보급품은 (S), 탄약은 (A), 연료는 (F)이다.&lt;br/&gt; &lt;br/&gt;이 지역은 아군이 점령하게 되면 왼쪽 상단 메뉴안에 --저장창고 건설-- 이라는 메뉴가 생성된다. 마을내 적당한 곳에 저장창고를 건설하면 이 곳에 이 도시에서 생산되는 군수물자가 저장된다.&lt;br/&gt; &lt;br/&gt;이 군수물자를 AI 수송부대를 이용하여 전초기지로 운반하면 장비를 생산하는데 필요한 군수물자로 사용할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Sektory jsou rozděleny na 5 různých typů:&lt;br/&gt; &lt;br/&gt;- Body zajmu: obvykle malá a střední města, strategicky nedůležitá místa, kde žijí místní civilisté v klidu a harmonii.&lt;br/&gt; &lt;br/&gt;- Vojenské základny: plné jednotek OPFOR, tyhle základny jsou dobře bráněny a vyžadují silný a koordinovaný útok. Zajmutí těchto základen nám dovolí nasadit do boje novou techniku, která je kritická k našemu vítězství.&lt;br/&gt; &lt;br/&gt;- Továrny: Napříč celou oblastí mužete najít civilní továrny pod nepřátelskou kontrolou. Tyto továrny se specializují na výrobu jedné ze tří surovin (Zásoby, Munice, Palivo), ale později je lze vylepšit aby produkovaly všechny tři suroviny najednou. Jako takové jsou strategicky našim první cílem.&lt;br/&gt; &lt;br/&gt;- Rádiové věže: pod kontrolou OPFOR jednotek, slouží k přivolání posil do blízkých sektorů pod útokem. Rychlost reakce posil je dána vzdáleností radiové věže od sektoru. Ale pod kontrolou NATO jednotek, poskytují věže informace o pohybu nepřátelských jednotek v okolí za pomoci rádiové komunikace.&lt;br/&gt; &lt;br/&gt;- Hlavní města: V oblasti je několik Hlavních Měst. Pokud jsou všechna pod kontrolou NATO, vyhráváte.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt; &lt;br/&gt;-セクターは5つの異なるタイプに分かれています: &lt;br/&gt; &lt;br/&gt;- 関心地点 (PoI): 一般的に小規模から中規模の村/町です。戦略的には重要ではありませんが、この地域の市民が住む場所であり、そのため彼らの信頼と同情を得るために重要です。&lt;br/&gt; &lt;br/&gt;- 工場：この地域全体に、敵の支配下にある民間工場があります。これらの工場は3種の資源 (サプライ、弾薬、燃料) のうち1種のみを生産することに特化していますが、後々3種すべてを生産可能にアップグレードすることができます。そのため、これらの工場は非常に戦略的な最初のターゲットです！&lt;br/&gt; &lt;br/&gt;- 軍事施設: 高度に装備された大量の敵軍隊が駐留する場所で、これらの施設は重く防御されており、大規模かつ協調した攻撃が必要です。これらの基地を占領することで、作戦の成功にとって重要で強力な兵器を展開することができます。&lt;br/&gt; &lt;br/&gt;- ラジオタワー (RT): 敵の支配下にある場合、RTは近くのセクターが我々によって攻撃された場合に、増援を呼び出すために使用されます。増援の反応時間は、タワーとセクターの距離によって異なります。自軍の支配下にある場合、タワーは彼らの無線通信を傍受することによって敵軍の動きに関する有用な地図情報を提供します。&lt;br/&gt; &lt;br/&gt;- 主要都市：この地域にはいくつかの主要都市があります。すべてが自軍の支配下にある場合、敵を撃退し、彼らが支配を再確立できない地点まで追いやることができるでしょう。これがあなたの主要目標です。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt; &lt;br/&gt;-セクターは5つの異なるタイプに分かれています: &lt;br/&gt; &lt;br/&gt;- 関心地点 (PoI): 一般的に小規模から中規模の村/町です。戦略的には重要ではありませんが、この地域の市民が住む場所であり、そのため彼らの信頼と同情を得るために重要です。&lt;br/&gt; &lt;br/&gt;- 工場：この地域全体に、敵の支配下にある民間工場があります。これらの工場は3種の資源 (サプライ、弾薬、燃料) のうち1種のみを生産することに特化していますが、後々3種すべてを生産可能にアップグレードすることができます。そのため、これらの工場は非常に戦略的な最初のターゲットです！&lt;br/&gt; &lt;br/&gt;- 軍事基地: 高度に装備された大量の敵軍隊が駐留する場所で、これらの施設は重く防御されており、大規模かつ協調した攻撃が必要です。これらの基地を占領することで、作戦の成功にとって重要で強力な兵器を展開することができます。&lt;br/&gt; &lt;br/&gt;- ラジオタワー (RT): 敵の支配下にある場合、RTは近くのセクターが我々によって攻撃された場合に、増援を呼び出すために使用されます。増援の反応時間は、タワーとセクターの距離によって異なります。自軍の支配下にある場合、タワーは彼らの無線通信を傍受することによって敵軍の動きに関する有用な地図情報を提供します。&lt;br/&gt; &lt;br/&gt;- 主要都市：この地域にはいくつかの主要都市があります。すべてが自軍の支配下にある場合、敵を撃退し、彼らが支配を再確立できない地点まで追いやることができるでしょう。これがあなたの主要目標です。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE5">
             <Original>5. Resources</Original>
@@ -5486,7 +5526,7 @@
             <Portuguese>Modo do Arsenal</Portuguese>
             <Korean>무기고 모델</Korean>
             <Czech>Nastavení Zbrojnice</Czech>
-            <Japanese>弾薬庫の仕様</Japanese>
+            <Japanese>アーセナルの仕様</Japanese>
         </Key>
         <Key ID="STR_PARAMS_NORESTRICTIONS">
             <Original>No restrictions</Original>
@@ -6671,7 +6711,7 @@
             <Italian>Arsenale</Italian>
             <Korean>무기고</Korean>
             <Czech>Arzenál</Czech>
-            <Japanese>弾薬庫</Japanese>
+            <Japanese>アーセナル</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ARSENAL_BI">
             <Original>BI arsenal</Original>
@@ -6681,7 +6721,7 @@
             <Italian>BI Arsenale</Italian>
             <Korean>BI 무기고</Korean>
             <Czech>BI arzenál</Czech>
-            <Japanese>BI 弾薬庫</Japanese>
+            <Japanese>BI アーセナル</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ARSENAL_ACE">
             <Original>ACE arsenal</Original>
@@ -6691,7 +6731,7 @@
             <Italian>ACE Arsenale</Italian>
             <Korean>ACE 무기고</Korean>
             <Czech>Arzenál ACE</Czech>
-            <Japanese>ACE 弾薬庫</Japanese>
+            <Japanese>ACE アーセナル</Japanese>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION">
             <Original>Victory Condition</Original>
@@ -6721,7 +6761,7 @@
             <Italian>Tutte le capitali e le basi militari</Italian>
             <Korean>모든 대도시 및 군사기지</Korean>
             <Czech>Všechna hlavní města a vojenské základny</Czech>
-            <Japanese>全大拠点(首都)と軍事施設</Japanese>
+            <Japanese>全大拠点(首都)と軍事基地</Japanese>
         </Key>
         <Key ID="STR_PARAMS_VICTORYCONDITION_2">
             <Original>All capitals and 60% of the sectors</Original>
@@ -7714,7 +7754,7 @@
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
             <Italian>Accesso diretto all'arsenale senza KPLIB Loadout Dialog</Italian>
-            <Japanese>KPLIB ロードアウトダイアログなしで直接弾薬庫を開く</Japanese>
+            <Japanese>KPLIB ロードアウトダイアログなしで直接アーセナルを開く</Japanese>
         </Key>
         <Key ID="STR_DEPLOY_UNDERATTACK">
             <Original>UNDER ATTACK</Original>
@@ -8089,7 +8129,7 @@
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
             <Original>KP Player Menu v1.0.2\nby Wyqer</Original>
-            <Japanese>KP プレイヤー メニュー v1.0.2\nby Wyqer </Japanese>
+            <Japanese>KP プレイヤー メニュー v1.0.2\nby Wyqer</Japanese>
         </Key>
     </Package>
 </Project>
