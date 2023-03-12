@@ -65,5 +65,11 @@ while {true} do {
     // Update state in Discord rich presence
     [] call KPLIB_fnc_setDiscordState;
 
+    // JTF Earplugs & GREUH fix
+    ['JTF_state_earplugs',FALSE,FALSE],
+    ['JTF_state_earplugs_GREUH_fix',soundVolume,FALSE],
+	['JTF_state_earplugs_out_volume',soundVolume,FALSE],
+    ['JTF_state_earplugs_in_volume',0.1,FALSE],
+
     sleep 1;
 };

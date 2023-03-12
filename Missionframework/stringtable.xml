@@ -7317,6 +7317,26 @@
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
         </Key>
+        <Key ID="STR_MISC_earplugsIn">
+            <Original>Earplugs in!</Original>
+            <Czech>Špunty do uší!</Czech>
+            <French>Bouchons d'oreille dedans!</French>
+            <Spanish>Tapones para los oídos!</Spanish>
+            <Italian>Tappi per le orecchie dentro!</Italian>
+            <German>Ohrstöpsel rein!</German>
+            <Portuguese>Tampões de ouvido!</Portuguese>
+            <Polish>Zatyczki do uszu!</Polish>
+        </Key>
+        <Key ID="STR_MISC_earplugsOut">
+            <Original>Earplugs out!</Original>
+            <Czech>Špunty do uší ven!</Czech>
+            <French>Dehors les bouchons d'oreilles!</French>
+            <Spanish>¡Fuera los tapones para los oídos!</Spanish>
+            <Italian>Fuori i tappi per le orecchie!</Italian>
+            <German>Ohrstöpsel raus!</German>
+            <Portuguese>Tampões de ouvido fora!</Portuguese>
+            <Polish>Zatyczki do uszu!</Polish>
+        </Key>
     </Package>
 </Project>
 

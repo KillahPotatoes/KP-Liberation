@@ -69,5 +69,5 @@ if (isServer) then {
 // Stop radio chatter
 enableSentences false;
 
-// Earplugs script
-[] execVM "GF_Earplugs\GF_Earplugs.sqf";
+waitUntil {!isNull findDisplay 46};
+(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call JTF_fnc_keyHandler"];
