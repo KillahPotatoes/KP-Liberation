@@ -5582,7 +5582,7 @@
             <Czech>Nahradit nejbližší AI</Czech>
         </Key>
         <Key ID="STR_CR_KILLMSG">
-            <Original>A civilian named %1 was killed!</Original>
+            <Original>A civilian named %1 was killed by %2!</Original>
             <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
