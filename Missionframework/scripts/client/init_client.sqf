@@ -67,7 +67,7 @@ execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
 
 // JTF-V Edit
-execVM "JTF\scripts\client\misc\jtf-v.sqf";
+execVM "JTF\scripts\jtf-v.sqf";
 execVM "briefing.sqf"; // Briefings
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
