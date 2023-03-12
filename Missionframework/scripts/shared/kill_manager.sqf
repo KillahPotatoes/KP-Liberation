@@ -125,7 +125,7 @@ if (isServer) then {
             // Killed by BLUFOR
             if (side _killer == GRLIB_side_friendly) then {
                 if (KP_liberation_civrep_debug > 0) then {[format ["Civilian killed by: %1", name _killer], "CIVREP"] call KPLIB_fnc_log;};
-                [2, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                [2, [(name _unit), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                 [KP_liberation_cr_kill_penalty, true] spawn F_cr_changeCR;
             };
 
