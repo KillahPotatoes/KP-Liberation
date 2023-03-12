@@ -57,8 +57,8 @@ Short Range = SR  PRC 152 (5km)<br/>
 <br/>
 <font size='16'>COMMAND FREQ :  LR - 70</font><br/>
 <br/>
-<font size='12'>1st PLATOON FREQ: LR - 80.0</font>br/>
-<font size='12'>AIRCRAFT FREQ: LR - 90</font>br/>
+<font size='12'>1st PLATOON FREQ: LR - 80.0</font><br/>
+<font size='12'>AIRCRAFT FREQ: LR - 90</font><br/>
 <br/>
 <font size='12'>INFANTRY FREQ:</font><br/>
 - Internal Team Comms<br/>
@@ -85,9 +85,9 @@ Short Range = SR  PRC 152 (5km)<br/>
 <br/>
 <font size='16'>COMMAND FREQ :  LR - 37.0</font><br/>
 <br/>
-<font size='12'>VEHICLE FREQ: LR - 38.0</font>br/>
+<font size='12'>VEHICLE FREQ: LR - 38.0</font><br/>
 <br/>
-<font size='12'>AIRCRAFT FREQ: LR - 39.0</font>br/>
+<font size='12'>AIRCRAFT FREQ: LR - 39.0</font><br/>
 <br/>
 <font size='12'>INFANTRY FREQ:</font><br/>
 - ALPHA 1-1 : SR - 210.0<br/>
