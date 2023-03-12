@@ -471,7 +471,13 @@ KPLIB_collisionIgnoreObjects = [
     "Sign_Sphere100cm_F",
     "Land_ClutterCutter_large_F",
     "Land_HighVoltageColumnWire_F",
-    "Land_PowerWireBig_left_F",
+	"Land_PowerLine_01_wire_50m_F",	
+	"Land_PowerLine_01_wire_50m_main_F",	
+	"Land_PowerLine_03_pole_F",	
+	"Land_PowerLine_02_pole_junction_A_F",
+	"Land_PowerLine_02_pole_small_F",
+	"Land_PowerWireBig_left_F",	
+	"Land_PowerWireBig_direct_F",
     "B_HMG_01_F",                                                       // Mk30A HMG .50
     "B_HMG_01_high_F",                                                  // Mk30 HMG .50 (Raised)
     "B_HMG_01_A_F",                                                     // Mk30 HMG .50 (Autonomous)
@@ -481,7 +487,38 @@ KPLIB_collisionIgnoreObjects = [
     "B_static_AT_F",                                                    // Static Titan Launcher (AT)
     "B_static_AA_F",                                                    // Static Titan Launcher (AA)
     "B_Mortar_01_F",                                                    // Mk6 Mortar
+	"TFAR_Land_Communication_F",
     "ACE_friesAnchorBar",                                               // ACE FRIES
     "ACE_friesGantryReverse",                                           // ACE FRIES
-    "ACE_friesGantry"                                                   // ACE FRIES
+    "ACE_friesGantry",                                                  // ACE FRIES
+	"ACE_LogicDummy",
+	"ACE_medicalSupplyCrate_advanced",
+	"ACE_Track",
+	"ACE_Wheel",
+	"Land_CanisterFuel_F",
+	"GroundWeaponHolder",
+	"Land_HelipadCivil_F",
+	"Land_HelipadEmpty_F",
+	"Land_JumpTarget_F",
+	"Land_ClutterCutter_large_F",
+	"Land_Can_V2_F",
+	"Sign_Arrow_Blue_F",
+	"Sign_Arrow_Cyan_F",
+	"Sign_Arrow_Direction_Blue_F",
+	"Sign_Arrow_Direction_Cyan_F",
+	"Sign_Arrow_Direction_F",
+	"Sign_Arrow_Direction_Green_F",
+	"Sign_Arrow_Direction_Pink_F",
+	"Sign_Arrow_Direction_Yellow_F",
+	"Sign_Arrow_F",
+	"Sign_Arrow_Green_F",
+	"Sign_Arrow_Large_Blue_F",
+	"Sign_Arrow_Large_Cyan_F",
+	"Sign_Arrow_Large_F",
+	"Sign_Arrow_Large_Green_F",
+	"Sign_Arrow_Large_Pink_F",
+	"Sign_Arrow_Large_Yellow_F",
+	"Sign_Arrow_Pink_F",
+	"Sign_Arrow_Yellow_F",
+	"Sign_Sphere100cm_F"
 ];
