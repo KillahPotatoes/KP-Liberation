@@ -1,5 +1,5 @@
 private _convoy_destinations_markers = [];
-private _load_box_fnc = compile preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
+private _load_box_fnc = compileScript ["scripts\client\ammoboxes\do_load_box.sqf", true];
 
 while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint); };
 

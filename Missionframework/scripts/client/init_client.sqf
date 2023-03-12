@@ -1,12 +1,12 @@
-[] call compile preprocessFileLineNumbers "scripts\client\misc\init_markers.sqf";
+[] call compileScript ["scripts\client\misc\init_markers.sqf", true];
 [] call KPLIB_fnc_initArsenal;
 
-spawn_camera = compile preprocessFileLineNumbers "scripts\client\spawn\spawn_camera.sqf";
-cinematic_camera = compile preprocessFileLineNumbers "scripts\client\ui\cinematic_camera.sqf";
-write_credit_line = compile preprocessFileLineNumbers "scripts\client\ui\write_credit_line.sqf";
-do_load_box = compile preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
-kp_fuel_consumption = compile preprocessFileLineNumbers "scripts\client\misc\kp_fuel_consumption.sqf";
-kp_vehicle_permissions = compile preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
+spawn_camera = compileScript ["scripts\client\spawn\spawn_camera.sqf", true];
+cinematic_camera = compileScript ["scripts\client\ui\cinematic_camera.sqf", true];
+write_credit_line = compileScript ["scripts\client\ui\write_credit_line.sqf", true];
+do_load_box = compileScript ["scripts\client\ammoboxes\do_load_box.sqf", true];
+kp_fuel_consumption = compileScript ["scripts\client\misc\kp_fuel_consumption.sqf", true];
+kp_vehicle_permissions = compileScript ["scripts\client\misc\vehicle_permissions.sqf", true];
 
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
