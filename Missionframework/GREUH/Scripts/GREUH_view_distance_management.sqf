@@ -38,7 +38,8 @@ while { true } do {
 		};
 		setViewDistance _desired_veh;
 
-		 1 fadeSound ( desired_vehvolume / 100.0 );
+		player setVariable ['JTF_state_earplugs_GREUH_fix',soundVolume];
+		1 fadeSound ( desired_vehvolume / 100.0 );
 	} else {
 
 		_desired_inf = (round desiredviewdistance_inf) * GREUH_view_distance_factor;
@@ -47,7 +48,8 @@ while { true } do {
 		};
 		setViewDistance _desired_inf;
 
-		 1 fadeSound 1;
+		if (player getVariable ['JTF_state_earplugs',FALSE]) exitWith { 1 fadeSound (player getVariable ['JTF_state_earplugs_in_volume',FALSE]); };
+    	1 fadeSound (player getVariable ['JTF_state_earplugs_GREUH_fix',soundVolume]);
 	};
 
 	_desired_obj = (((desiredviewdistance_obj / 100.0) * desiredviewdistance_inf) * GREUH_view_distance_factor);

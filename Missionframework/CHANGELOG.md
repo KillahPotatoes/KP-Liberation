@@ -1,4 +1,10 @@
 # Changelog
+
+## JTF-V 0.1 (2023-03-12)
+* Removed GF_Earplugs in favour of JTF Earplugs
+* JTF Earplugs now work with GREUH
+* Weapon holstering added & bound to Shift + H
+
 ## JTF-V 0.1 (2023-03-09)
 * Fixed Buttons in in-game menu with links
 * Removed fadeSound from KP

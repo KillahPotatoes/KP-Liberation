@@ -232,6 +232,7 @@ class CfgFunctions {
     #include "KP\KPPLM\KPPLM_functions.hpp"
 	#include "scripts\GOM\functions\GOM_fnc_functions.hpp" // Aircraft Loadout script
     #include "Txu_Info\CfgFunctions.hpp" // Briefing clickable buttons
+    #include "JTF\JTF_functions.hpp"
 };
 
 class CfgRespawnTemplates {
