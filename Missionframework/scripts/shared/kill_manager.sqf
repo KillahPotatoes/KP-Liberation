@@ -189,7 +189,3 @@ if (isServer && !isplayer _unit) then {
     sleep 10;
     deleteVehicle _unit;
 };
-
-// Use this to get distance and weapon for kill messages
-// private _distance = _killer distance2D _victim; //Distance
-// private _killweapon = getText(configFile >> "CfgWeapons" >> currentWeapon (vehicle _killer) >> "displayname"); //Weapon
