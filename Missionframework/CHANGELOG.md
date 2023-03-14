@@ -1,5 +1,12 @@
 # Changelog
 
+## JTF-V 0.1 (2023-03-13)
+* System Chat for following events:
+* Player kills civilian
+* Player destroys civilian vehicle
+* Player destroys enemy vehicle
+* Player dies
+
 ## JTF-V 0.1 (2023-03-12)
 * Removed GF_Earplugs in favour of JTF Earplugs
 * JTF Earplugs now work with GREUH

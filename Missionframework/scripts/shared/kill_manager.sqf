@@ -25,6 +25,10 @@ if (isServer) then {
     if (isNil "armor_weight") then {armor_weight = 33};
     if (isNil "air_weight") then {air_weight = 33};
 
+    // Distance & Weapon used
+    private _distance = _killer distance2D _unit; //Distance
+    private _killerWeapon = getText(configFile >> "CfgWeapons" >> currentWeapon (vehicle _killer) >> "displayname");
+
     // BLUFOR Killer handling
     if ((side _killer) == GRLIB_side_friendly) then {
 
@@ -63,6 +67,7 @@ if (isServer) then {
     // Player was killed
     if (isPlayer _unit) then {
         stats_player_deaths = stats_player_deaths + 1;
+        [6, [(name _unit), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
         // Disconnect UAV from player on death
         _unit connectTerminalToUAV objNull;
         // Eject Player from vehicle
@@ -82,6 +87,12 @@ if (isServer) then {
             // Killed by a player
             if (isplayer _killer) then {
                 stats_opfor_killed_by_players = stats_opfor_killed_by_players + 1;
+
+                // vehicle _unit == _unit ensures the player isn't in a vehicle
+                // if((round _distance) >= 1000 && (vehicle _unit == _unit)) then {
+                //     // Player killed an enemy over 1000m away
+                //     [9, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                // }
             };
         };
 
@@ -136,11 +147,14 @@ if (isServer) then {
         };
     } else {
         // Enemy vehicle casualty
+        private _vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _unit) >> "displayName");
+
         if ((toLower (typeof _unit)) in KPLIB_o_allVeh_classes) then {
             stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 
             // Destroyed by player
             if (isplayer _killer) then {
+                [7, [(_vehicleName), (name _killer), (round _distance), (_killerWeapon)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                 stats_opfor_vehicles_killed_by_players = stats_opfor_vehicles_killed_by_players + 1;
             };
         } else {
@@ -150,6 +164,7 @@ if (isServer) then {
 
                 // Destroyed by player
                 if (isplayer _killer) then {
+                    [8, [(name _unit), (_vehicleName), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     stats_civilian_vehicles_killed_by_players = stats_civilian_vehicles_killed_by_players + 1;
                 };
             } else {
