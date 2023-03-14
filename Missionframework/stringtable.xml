@@ -5582,7 +5582,7 @@
             <Czech>Nahradit nejbližší AI</Czech>
         </Key>
         <Key ID="STR_CR_KILLMSG">
-            <Original>A civilian named %1 was killed by %2!</Original>
+            <Original>%1 (Civilian) was killed by %2!</Original>
             <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
@@ -5595,7 +5595,20 @@
             <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech>
         </Key>
         <Key ID="STR_CR_DEATHMSG">
-            <Original>%1 was killed by %2!</Original>
+            <Original>%1 was killed by %2 (%3)!</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
+        </Key>
+        <Key ID="STR_CR_SUICIDEMSG">
+            <Original>%1 died!</Original>
             <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
@@ -5634,7 +5647,7 @@
             <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
         </Key>
         <Key ID="STR_CR_VEHCIVKILLMSG">
-            <Original>%1's (Civilian) %2 was destroyed by %3!</Original>
+            <Original>A civilian's %1 was destroyed by %2!</Original>
             <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
