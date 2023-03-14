@@ -12,13 +12,13 @@ if (isDedicated) then {debug_source = "Server";} else {debug_source = name playe
 
 [] call KPLIB_fnc_initSectors;
 if (!isServer) then {waitUntil {!isNil "KPLIB_initServerDone"};};
-[] call compileScript ["KPLIB_config.sqf", true];
-[] call compileScript ["KPLIB_whitelists.sqf", true];
-[] call compileScript ["KPLIB_transportConfigs.sqf", true];
-[] call compileScript ["KPLIB_classnameLists.sqf", true];
-[] call compileScript ["scripts\shared\fetch_params.sqf", true];
-[] call compileScript ["presets\init_presets.sqf", true];
-[] call compileScript ["KPLIB_objectInits.sqf", true];
+[] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_whitelists.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_classnameLists.sqf";
+[] call compile preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
+[] call compile preprocessFileLineNumbers "presets\init_presets.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_objectInits.sqf";
 
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
 if (KPPLM_CBA && KPLIB_param_playerMenu) then {
@@ -27,10 +27,10 @@ if (KPPLM_CBA && KPLIB_param_playerMenu) then {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";
 };
 
-[] call compileScript ["scripts\shared\init_shared.sqf", true];
+[] call compile preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
 if (isServer) then {
-    [] call compileScript ["scripts\server\init_server.sqf", true];
+    [] call compile preprocessFileLineNumbers "scripts\server\init_server.sqf";
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
@@ -50,7 +50,7 @@ if (!isDedicated && hasInterface) then {
 
     waitUntil {alive player};
     if (debug_source != name player) then {debug_source = name player};
-    [] call compileScript ["scripts\client\init_client.sqf", true];
+    [] call compile preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
     setViewDistance 1600;
 };

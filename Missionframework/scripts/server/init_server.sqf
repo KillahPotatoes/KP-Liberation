@@ -1,39 +1,39 @@
 // AI
-add_civ_waypoints = compileScript ["scripts\server\ai\add_civ_waypoints.sqf", true];
-add_defense_waypoints = compileScript ["scripts\server\ai\add_defense_waypoints.sqf", true];
-battlegroup_ai = compileScript ["scripts\server\ai\battlegroup_ai.sqf", true];
-building_defence_ai = compileScript ["scripts\server\ai\building_defence_ai.sqf", true];
-patrol_ai = compileScript ["scripts\server\ai\patrol_ai.sqf", true];
-prisonner_ai = compileScript ["scripts\server\ai\prisonner_ai.sqf", true];
-troup_transport = compileScript ["scripts\server\ai\troup_transport.sqf", true];
+add_civ_waypoints = compile preprocessFileLineNumbers "scripts\server\ai\add_civ_waypoints.sqf";
+add_defense_waypoints = compile preprocessFileLineNumbers "scripts\server\ai\add_defense_waypoints.sqf";
+battlegroup_ai = compile preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
+building_defence_ai = compile preprocessFileLineNumbers "scripts\server\ai\building_defence_ai.sqf";
+patrol_ai = compile preprocessFileLineNumbers "scripts\server\ai\patrol_ai.sqf";
+prisonner_ai = compile preprocessFileLineNumbers "scripts\server\ai\prisonner_ai.sqf";
+troup_transport = compile preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
 
 // Battlegroup
-spawn_air = compileScript ["scripts\server\battlegroup\spawn_air.sqf", true];
-spawn_battlegroup = compileScript ["scripts\server\battlegroup\spawn_battlegroup.sqf", true];
+spawn_air = compile preprocessFileLineNumbers "scripts\server\battlegroup\spawn_air.sqf";
+spawn_battlegroup = compile preprocessFileLineNumbers "scripts\server\battlegroup\spawn_battlegroup.sqf";
 
 // Game
-check_victory_conditions = compileScript ["scripts\server\game\check_victory_conditions.sqf", true];
+check_victory_conditions = compile preprocessFileLineNumbers "scripts\server\game\check_victory_conditions.sqf";
 
 // Patrol
-manage_one_civilian_patrol = compileScript ["scripts\server\patrols\manage_one_civilian_patrol.sqf", true];
-manage_one_patrol = compileScript ["scripts\server\patrols\manage_one_patrol.sqf", true];
-reinforcements_manager = compileScript ["scripts\server\patrols\reinforcements_manager.sqf", true];
-send_paratroopers = compileScript ["scripts\server\patrols\send_paratroopers.sqf", true];
+manage_one_civilian_patrol = compile preprocessFileLineNumbers "scripts\server\patrols\manage_one_civilian_patrol.sqf";
+manage_one_patrol = compile preprocessFileLineNumbers "scripts\server\patrols\manage_one_patrol.sqf";
+reinforcements_manager = compile preprocessFileLineNumbers "scripts\server\patrols\reinforcements_manager.sqf";
+send_paratroopers = compile preprocessFileLineNumbers "scripts\server\patrols\send_paratroopers.sqf";
 
 // Secondary objectives
-fob_hunting = compileScript ["scripts\server\secondary\fob_hunting.sqf", true];
-convoy_hijack = compileScript ["scripts\server\secondary\convoy_hijack.sqf", true];
-search_and_rescue = compileScript ["scripts\server\secondary\search_and_rescue.sqf", true];
-civ_supplies = compileScript ["scripts\server\secondary\civ_supplies.sqf", true];
-bingo_fuel = compileScript ["scripts\server\secondary\bingo_fuel.sqf", true];
-rearm_outpost = compileScript ["scripts\server\secondary\rearm_outpost.sqf", true];
+fob_hunting = compile preprocessFileLineNumbers "scripts\server\secondary\fob_hunting.sqf";
+convoy_hijack = compile preprocessFileLineNumbers "scripts\server\secondary\convoy_hijack.sqf";
+search_and_rescue = compile preprocessFileLineNumbers "scripts\server\secondary\search_and_rescue.sqf";
+civ_supplies = compile preprocessFileLineNumbers "scripts\server\secondary\civ_supplies.sqf";
+bingo_fuel = compile preprocessFileLineNumbers "scripts\server\secondary\bingo_fuel.sqf";
+rearm_outpost = compile preprocessFileLineNumbers "scripts\server\secondary\rearm_outpost.sqf";
 
 // Sector
-attack_in_progress_fob = compileScript ["scripts\server\sector\attack_in_progress_fob.sqf", true];
-attack_in_progress_sector = compileScript ["scripts\server\sector\attack_in_progress_sector.sqf", true];
-ied_manager = compileScript ["scripts\server\sector\ied_manager.sqf", true];
-manage_one_sector = compileScript ["scripts\server\sector\manage_one_sector.sqf", true];
-wait_to_spawn_sector = compileScript ["scripts\server\sector\wait_to_spawn_sector.sqf", true];
+attack_in_progress_fob = compile preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_fob.sqf";
+attack_in_progress_sector = compile preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_sector.sqf";
+ied_manager = compile preprocessFileLineNumbers "scripts\server\sector\ied_manager.sqf";
+manage_one_sector = compile preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";
+wait_to_spawn_sector = compile preprocessFileLineNumbers "scripts\server\sector\wait_to_spawn_sector.sqf";
 
 // Globals
 KPLIB_sectors_active = []; publicVariable "KPLIB_sectors_active";
