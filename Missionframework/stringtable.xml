@@ -5582,7 +5582,7 @@
             <Czech>Nahradit nejbližší AI</Czech>
         </Key>
         <Key ID="STR_CR_KILLMSG">
-            <Original>A civilian named %1 was killed by %2!</Original>
+            <Original>%1 (Civilian) was killed by %2!</Original>
             <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
@@ -5595,7 +5595,7 @@
             <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech>
         </Key>
         <Key ID="STR_CR_DEATHMSG">
-            <Original>%1 was killed by %2! (%3)</Original>
+            <Original>%1 was killed by %2 (%3)!</Original>
             <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
