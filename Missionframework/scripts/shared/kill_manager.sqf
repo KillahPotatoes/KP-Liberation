@@ -67,11 +67,17 @@ if (isServer) then {
     // Player was killed
     if (isPlayer _unit) then {
         stats_player_deaths = stats_player_deaths + 1;
-        [6, [(name _unit), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
         // Disconnect UAV from player on death
         _unit connectTerminalToUAV objNull;
         // Eject Player from vehicle
         if (vehicle _unit != _unit) then {moveOut _unit;};
+
+        // Kill message system chat
+        if (isNull _killer || _killer == _unit) exitWith { [9, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player has died!
+
+        private _killerType = "";
+        if (isPlayer _killer) then { _killerType = "Friendly-Fire"; } else { _killerType = "AI"; }; 
+        [6, [(name _unit), (name _killer), (_killerType)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; // Player was killed by Player or Player was killed by AI
     };
 
     // Check for Man or Vehicle
