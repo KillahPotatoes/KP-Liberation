@@ -5634,7 +5634,7 @@
             <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
         </Key>
         <Key ID="STR_CR_VEHCIVKILLMSG">
-            <Original>%1's (Civilian) %2 was destroyed by %3!</Original>
+            <Original>A civilian's %1 was destroyed by %2!</Original>
             <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>

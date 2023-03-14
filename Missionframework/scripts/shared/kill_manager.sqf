@@ -164,7 +164,7 @@ if (isServer) then {
 
                 // Destroyed by player
                 if (isplayer _killer) then {
-                    [8, [(name _unit), (_vehicleName), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                    [8, [(_vehicleName), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     stats_civilian_vehicles_killed_by_players = stats_civilian_vehicles_killed_by_players + 1;
                 };
             } else {
