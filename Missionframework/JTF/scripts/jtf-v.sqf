@@ -9,7 +9,7 @@ removeMissionEventHandler ["Draw3D", missionNamespace getVariable "WGP_UI_redraw
 _whileopen = addMissionEventHandler ["Draw3D", {
 _load = str round ((loadAbs player)/10); // Load rounded to whole number. Change the "^2" to change the number of decimal places.
 _playerHealth = str round ((1 - (damage player))*100); // Health rounded and multiplied to display as 100%
-(findDisplay 602 displayCtrl 111) ctrlSetText (name player + " carrying:" + str(_load) + "kg/100kg of gear.  " + str(_playerHealth) +"% health");
+(findDisplay 602 displayCtrl 111) ctrlSetText (name player + format [" Carrying: %1/100kg Health: %2", _load, _playerHealth] +"%" );
 }];
 missionNamespace setVariable ["WGP_UI_redraw", _whileopen];
 };
