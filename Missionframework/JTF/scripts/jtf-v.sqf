@@ -24,9 +24,9 @@ player addEventHandler ["animChanged", {
       private _time = diag_tickTime -3;
       while {lifeState _unit == "incapacitated"} do {
 	      _color = "#45f442"; //green
-	      if (_time < 180) then {_color = "#eef441";}; //yellow
-	      if (_time < 60) then {_color = "#ff0000";}; //red
-	      if (_time < 0) exitWith {
+	      if (diag_tickTime >= (_time + 480)) then {_color = "#eef441";}; //yellow
+	      if (diag_tickTime >= (_time + 540)) then {_color = "#ff0000";}; //red
+	      if (diag_tickTime >= (_time + 600)) exitWith {
 		      hintSilent parseText format ["<t color='%1'>--- Time is up! ---</t>",_color];
 	      };
 	        hintSilent parseText format ["Time Left:<br/><t color='%1'>--- %2 ---</t>", _color, [(bis_revive_bleedOutDuration - (diag_tickTime - _time))/60,"HH:MM:SS"] call BIS_fnc_timetostring];
