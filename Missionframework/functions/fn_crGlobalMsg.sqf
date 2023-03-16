@@ -35,6 +35,8 @@ switch (_msgType) do {
     case 8: {systemChat (format [localize "STR_CR_VEHCIVKILLMSG", (_data select 0), (_data select 1)]);};
     case 9: {systemChat (format [localize "STR_CR_SUICIDEMSG", (_data select 0)]);};
     case 10: {systemChat (format [localize "STR_CR_INCAPACITATEDMSG", (_data select 0)]);};
+    case 11: {systemChat (format [localize "STR_CR_BLEEDOUTMSG", (_data select 0)]);};
+    case 12: {systemChat (format [localize "STR_CR_RANGEDKILLMSG", (_data select 0), (_data select 1), (_data select 2)]);};
     // case 10: {systemChat (format [localize "STR_CR_KILLMSGRANGED", (_data select 0), (_data select 1), (_data select 2)]);};
     default {[format ["globalMsg without valid msgType - %1", _msgType], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
