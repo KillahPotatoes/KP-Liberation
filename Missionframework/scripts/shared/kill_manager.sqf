@@ -70,7 +70,7 @@ if (isServer) then {
         // ** Pre-death **
         private _time = diag_tickTime -3;
         if (lifeState _unit == "INCAPACITATED") then {
-            if ((bis_revive_bleedOutDuration - (diag_tickTime - _time))<0) exitWith { [11, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; 
+            if ((bis_revive_bleedOutDuration - (diag_tickTime - _time))<0) exitWith { [11, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"] }; 
             [10, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; 
         };
 
@@ -89,7 +89,8 @@ if (isServer) then {
         private _killerType = "";
         if (isPlayer _killer) then { _killerType = "Friendly-Fire"; } else { _killerType = "AI"; }; 
         [6, [(name _unit), (name _killer), (_killerType)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
-    };        
+    };
+
     // Check for Man or Vehicle
     if (_unit isKindOf "Man") then {
 
@@ -204,29 +205,3 @@ if (isServer && !isplayer _unit) then {
     sleep 10;
     deleteVehicle _unit;
 };
-
-};
-
-
-// Old code -- 
-// if (isPlayer _unit) then {
-//     stats_player_deaths = stats_player_deaths + 1;
-//     // Disconnect UAV from player on death
-//     _unit connectTerminalToUAV objNull;
-//     // Eject Player from vehicle
-//     if (vehicle _unit != _unit) then {moveOut _unit;};
-
-//     // Player died to fall damage, mines, exiting a moving vehicle, etc. No direct killer
-//     if (isNull _killer || _killer == _unit) exitWith { [9, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player has died!
-
-//     // Player has a direct killer. Determine if it is AI or another player
-//     private _killerType = "";
-//     if (isPlayer _killer) then { _killerType = "Friendly-Fire"; } else { _killerType = "AI"; }; 
-//     [6, [(name _unit), (name _killer), (_killerType)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; // Player was killed by Player or Player was killed by AI
-
-//     if (player == (lifeState _unit == "incapacitated")) then { [10, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player was incapacitated
-        
-//     private _time = diag_tickTime -3;
-//     if (player == (lifeState _unit == "incapacitated")) then {
-//     if ((bis_revive_bleedOutDuration - (diag_tickTime - _time))<0) then { [11, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player bled out
-// };
