@@ -21,6 +21,7 @@
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_sectors_player"};																	// we wait with our mighty AA units until those pesky players dare to conquer one of OUR nice sectors
 waitUntil {KPLIB_saveLoaded};
+waitUntil {KPLIB_param_serverInitDone};
 
 if (isNil "KPLIB_o_turretsAA") exitWith {};																	// leave, if there are no AA turrets defined in currently played preset
 if (KPLIB_param_difficulty < 0.75) exitWith {};																// no AA turrets on easiest difficulty level (as of v0.96.8, KPLIB_param_difficulty values range from 0.5 to 10)
