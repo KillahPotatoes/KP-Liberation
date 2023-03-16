@@ -5582,7 +5582,7 @@
             <Czech>Nahradit nejbližší AI</Czech>
         </Key>
         <Key ID="STR_CR_KILLMSG">
-            <Original>A civilian named %1 was killed!</Original>
+            <Original>%1 (Civilian) was killed by %2!</Original>
             <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
             <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
             <Russian>Гражданский %1 был убит!</Russian>
@@ -5593,6 +5593,45 @@
             <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
             <Korean>민간인 %가 사망하였다!</Korean>
             <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech>
+        </Key>
+        <Key ID="STR_CR_DEATHMSG">
+            <Original>%1 was killed by %2 (%3)!</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
+        </Key>
+        <Key ID="STR_CR_SUICIDEMSG">
+            <Original>%1 died!</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
+        </Key>
+        <Key ID="STR_CR_INCAPACITATEDMSG">
+            <Original>%1 was incapacitated!</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
         </Key>
         <Key ID="STR_CR_VEHICLEMSG">
             <Original>A civilian's vehicle was seized!</Original>
@@ -5606,6 +5645,32 @@
             <Portuguese>Um veículo de civil foi tomado!</Portuguese>
             <Korean>민간인의 차량이 탈취되었다!</Korean>
             <Czech>Civilní vozidlo bylo zajato jednotkami BLUFOR!</Czech>
+        </Key>
+        <Key ID="STR_CR_VEHKILLMSG">
+            <Original>An enemy %1 was destroyed by %2! (%3m - %4)</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
+        </Key>
+        <Key ID="STR_CR_VEHCIVKILLMSG">
+            <Original>A civilian's %1 was destroyed by %2!</Original>
+            <!-- <German>Ein Zivilist mit Namen %1 wurde getötet!</German>
+            <Spanish>Un civil llamado %1 fue asesinado!</Spanish>
+            <Russian>Гражданский %1 был убит!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso!</Italian>
+            <Chinesesimp>一个名叫%1的平民被击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被擊殺了！</Chinese>
+            <Turkish>%1 ismindeki sivil öldürüldü!</Turkish>
+            <Portuguese>Um civil de nome %1 foi morto!</Portuguese>
+            <Korean>민간인 %가 사망하였다!</Korean>
+            <Czech>Civilista jménem %1 byl zabit jednotkami BLUFOR!</Czech> -->
         </Key>
         <Key ID="STR_CR_BUILDINGMSG">
             <Original>Civilians are complaining about %1 lost buildings.</Original>
@@ -7316,6 +7381,26 @@
             <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
+        </Key>
+        <Key ID="STR_MISC_earplugsIn">
+            <Original>Earplugs in!</Original>
+            <Czech>Špunty do uší!</Czech>
+            <French>Bouchons d'oreille dedans!</French>
+            <Spanish>Tapones para los oídos!</Spanish>
+            <Italian>Tappi per le orecchie dentro!</Italian>
+            <German>Ohrstöpsel rein!</German>
+            <Portuguese>Tampões de ouvido!</Portuguese>
+            <Polish>Zatyczki do uszu!</Polish>
+        </Key>
+        <Key ID="STR_MISC_earplugsOut">
+            <Original>Earplugs out!</Original>
+            <Czech>Špunty do uší ven!</Czech>
+            <French>Dehors les bouchons d'oreilles!</French>
+            <Spanish>¡Fuera los tapones para los oídos!</Spanish>
+            <Italian>Fuori i tappi per le orecchie!</Italian>
+            <German>Ohrstöpsel raus!</German>
+            <Portuguese>Tampões de ouvido fora!</Portuguese>
+            <Polish>Zatyczki do uszu!</Polish>
         </Key>
     </Package>
 </Project>

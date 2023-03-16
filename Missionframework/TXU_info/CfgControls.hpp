@@ -107,7 +107,7 @@ class TXU_TS_INFOBUTTON2 : TXU_TS_INFOBUTTON1
 
 class TXU_TS_INFOBUTTON3 : TXU_TS_INFOBUTTON1
 {
-	text = "Support us on Patreon"
+	text = "Support us on Patreon";
 	url= "https://patreon.com/jtfv";
 };
 
