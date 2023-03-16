@@ -264,7 +264,8 @@ KP_liberation_commander_actions = [
     "76561198053474467",	// Lucia
     "76561198135123277",	// Bill
 	"76561198145911975",	// Muzza
-	"76561198402725591"		// Annie
+	"76561198402725591",	// Annie
+    "76561198015227540"     // Highlander
 ];
 
 /* Whitelist for BI support framework access.
