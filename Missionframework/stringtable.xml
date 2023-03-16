@@ -6112,7 +6112,7 @@
             <Czech>Zbývá %1 minut na mobilní respawn.</Czech>
         </Key>
         <Key ID="STR_CR_RESISTANCE_KILLMSG">
-            <Original>An allied resistance fighter named %1 was killed!</Original>
+            <Original>An allied resistance fighter named %1 was killed by %2!</Original>
             <German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde getötet!</German>
             <Spanish>Un aliado de la resistencia llamado %1 ha sido asesinado!</Spanish>
             <Russian>Союзный боец сопротивления %1 был убит!</Russian>
