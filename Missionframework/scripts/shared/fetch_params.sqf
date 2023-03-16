@@ -19,7 +19,6 @@ KPLIB_highcommand_debug = ["DebugHighCommand", 0] call bis_fnc_getParamValue;
 KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 if(isServer) then {
-    private _start = diag_tickTime;
     /* Saveable params */
     ["----- Server starts parameter initialization", "PARAM"] call KPLIB_fnc_log;
     switch (KP_load_params) do {
@@ -111,11 +110,6 @@ if(isServer) then {
 
     GREUH_allow_mapmarkers = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_platoonview";
-
-    KPLIB_param_serverInitDone = true;
-    publicVariable "KPLIB_param_serverInitDone";
-
-    [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 // Fix for not working float values in mission params
@@ -208,6 +202,13 @@ switch (KPLIB_param_victoryCondition) do {
             (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
         };
     };
+};
+
+if(isServer) then {
+    private _start = diag_tickTime;
+	KPLIB_param_serverInitDone = true;
+	publicVariable "KPLIB_param_serverInitDone";
+	[format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 if (!isDedicated && hasInterface) then {
