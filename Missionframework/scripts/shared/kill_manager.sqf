@@ -80,6 +80,10 @@ if (isServer) then {
         [6, [(name _unit), (name _killer), (_killerType)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; // Player was killed by Player or Player was killed by AI
     };
 
+    // Player was incapacitated
+    if (isPlayer _unit) then {
+        if (player == (incapacitatedState player)) exitWith { [10, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player was incapacitated
+
     // Check for Man or Vehicle
     if (_unit isKindOf "Man") then {
 
