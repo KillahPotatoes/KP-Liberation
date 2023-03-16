@@ -37,26 +37,6 @@ player addEventHandler ["animChanged", {
   }
 }];
 
-// Kill Messages
-player addEventHandler ["Killed",
-{
-    _unit = (_this select 0);
-    _unitName = name _unit;
-    _unitSide = side _unit;
-    _killer = (_this select 1);
-    _killerName = name _killer;
-    _killerSide = side _killer;
-    
-    if (_unitSide == _killerSide) then
-    {
-        systemchat format ["%1 killed %2 (friendly fire)", _unitName, _killerName]
-    }
-    else
-    {
-        systemchat format ["%1 was killed by %2 (AI)", _unitName, _killerName];
-    };
-}];
-
 // GOM Loadout Menu
 //player addAction ["Aircraft Loadouts",{_start = [] call GOM_fnc_aircraftLoadout}, [], 0, false, false, "", "(speed player < 1)"];
 //_add = [this] spawn GOM_fnc_addAircraftLoadout;
