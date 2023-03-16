@@ -60,8 +60,8 @@ execVM "scripts\server\offloading\show_fps.sqf";
 execVM "scripts\server\patrols\civilian_patrols.sqf";
 execVM "scripts\server\patrols\manage_patrols.sqf";
 execVM "scripts\server\patrols\reinforcements_resetter.sqf";
-// AA turret manager
-execVM "scripts\server\ai\AA_turret_manager.sqf";
+// SAM turret manager
+execVM "scripts\server\ai\SAM_turret_manager.sqf";
 if (KPLIB_param_logistic) then {execVM "scripts\server\resources\manage_logistics.sqf";};
 execVM "scripts\server\resources\manage_resources.sqf";
 execVM "scripts\server\resources\recalculate_resources.sqf";

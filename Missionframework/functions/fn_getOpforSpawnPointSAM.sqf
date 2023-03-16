@@ -1,5 +1,5 @@
 /*
-    File: fn_getOpforSpawnPointAA.sqf
+    File: fn_getOpforSpawnPointSAM.sqf
     Author: KP Liberation Dev Team
     Date: 2020-09-29
     Last Update: 2023-03-02
@@ -18,7 +18,7 @@
         _nearest    - Provide the nearest spawn point of valid points                   [BOOL, defaults to false]
         _pos        - Position if the nearest spawn point to this should be selected    [POSITION, defaults to [0, 0, 0]]
     Returns:
-        Opfor spawn point for AA turret[STRING]
+        Opfor spawn point for SAM turret[STRING]
 */
 
 params [
@@ -32,8 +32,8 @@ private _possibleSpawns = [];
 
 // Only check for opfor spawn points which aren't used already in the current session
 private _sectorsToCheck = KPLIB_sectors_spawn;
-if (!isNil "KPLIB_usedPositionsAA") then {
-    _sectorsToCheck = KPLIB_sectors_spawn - KPLIB_usedPositionsAA;
+if (!isNil "KPLIB_usedPositions_SAM") then {
+    _sectorsToCheck = KPLIB_sectors_spawn - KPLIB_usedPositions_SAM;
 };
 
 private ["_valid", "_current", "_distances"];
@@ -79,7 +79,7 @@ private ["_valid", "_current", "_distances"];
 } forEach _sectorsToCheck;
 
 // Return empty string, if no possible spawn point was found
-if (_possibleSpawns isEqualTo []) exitWith {["No opfor AA spawn point found", "WARNING"] call KPLIB_fnc_log; ""};
+if (_possibleSpawns isEqualTo []) exitWith {["No opfor SAM spawn point found", "WARNING"] call KPLIB_fnc_log; ""};
 
 // Return nearest spawn point to a blufor sector/FOB, if selected via parameter
 if (_nearest) exitWith {

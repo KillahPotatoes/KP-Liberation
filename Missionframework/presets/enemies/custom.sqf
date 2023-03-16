@@ -150,8 +150,8 @@ KPLIB_o_planes = [
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
 
-// Enemy AA turrets that will be spawned in the back country
-KPLIB_o_turretsAA = [
+// Enemy SAM turrets that will be spawned in the back country
+KPLIB_o_turrets_SAM = [
 	["B_SAM_System_01_F"], 
 	["B_SAM_System_02_F"], 
 	["O_SAM_System_04_F", "O_Radar_System_02_F"]
