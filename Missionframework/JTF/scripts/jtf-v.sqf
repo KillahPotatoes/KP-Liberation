@@ -36,8 +36,3 @@ player addEventHandler ["animChanged", {
       hintSilent ""
   }
 }];
-
-// GOM Loadout Menu
-//player addAction ["Aircraft Loadouts",{_start = [] call GOM_fnc_aircraftLoadout}, [], 0, false, false, "", "(speed player < 1)"];
-//_add = [this] spawn GOM_fnc_addAircraftLoadout;
-player addAction ["Aircraft Loadouts",{[player] spawn GOM_fnc_aircraftLoadout}, [], 0, false, false, "", "(speed player < 1)"];

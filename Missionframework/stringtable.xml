@@ -2812,6 +2812,20 @@
             <Korean>지금은 공수 낙하를 할 수 없습니다. %1 분 후 가능합니다.</Korean>
             <Czech>Nemůžete použít HALO skok, musíte počkat %1 minut</Czech>
         </Key>
+        <Key ID="STR_HALO_DENIED_PLAYERCOUNT">
+            <Original>Can't perform HALO jump, no available parachutes.</Original>
+            <!-- <French>Impossible d'effectuer un suat HALO, vous êtes en cooldown pour encore %1 minute(s).</French>
+            <German>HALO Sprung noch nicht möglich. Verbleibende Abklingzeit von %1 Minuten.</German>
+            <Spanish>No puedes saltar en HALO, te quedan %1 minuto(s) de espera.</Spanish>
+            <Russian>HALO прыжок недоступен, подождите %1 минут</Russian>
+            <Italian>Non puoi paracadutarti, hai un attesa di %1 minuti.</Italian>
+            <Chinesesimp>无法进行伞降，剩余冷却时间为%1分钟。</Chinesesimp>
+            <Chinese>無法進行跳傘，還需要 %1 分鐘的冷卻時間。</Chinese>
+            <Turkish>HALO jump yapılamıyor, %1 dakika daha beklemelisiniz.</Turkish>
+            <Portuguese>Não é possível executar o salto em queda livre, o tempo de espera é de %1 minuto(s).</Portuguese>
+            <Korean>지금은 공수 낙하를 할 수 없습니다. %1 분 후 가능합니다.</Korean>
+            <Czech>Nemůžete použít HALO skok, musíte počkat %1 minut</Czech> -->
+        </Key>
         <Key ID="STR_HALO_ACTION">
             <Original>-- HALO JUMP</Original>
             <French>-- SAUT HALO</French>

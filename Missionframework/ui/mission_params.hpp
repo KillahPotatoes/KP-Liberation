@@ -157,9 +157,9 @@ class Params {
     };
     class ReviveDuration {
         title = $STR_A3_ReviveDuration;
-        values[] = {6, 8, 10,12, 15, 20, 25, 30};
+        values[] = {6, 8, 10, 12, 15, 20, 25, 30};
         texts[] = {6, 8, 10, 12, 15, 20, 25, 30};
-        default = 8;
+        default = 12;
     };
     class ReviveRequiredTrait {
         title = $STR_A3_RequiredTrait;
@@ -213,7 +213,7 @@ class Params {
         title = $STR_PARAMS_FATIGUE;
         values[] = {0, 1};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
-        default = 1;
+        default = 0;
     };
     class WeaponSway {
         title = $STR_PARAM_WEAPSWAY;

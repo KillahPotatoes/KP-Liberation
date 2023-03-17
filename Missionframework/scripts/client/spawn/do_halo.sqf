@@ -1,16 +1,19 @@
-private [ "_dialog", "_backpack", "_backpackcontents" ];
+private [ "_dialog", "_backpack", "_backpackcontents"];
 
 //JTF-V Edit
+private _playerCount = count call BIS_fnc_listPlayers;
+private _haloLimiter = 10; 
 
-//Halo limiter
-//if ((playersNumber west) > 5) exitWith {
-//   hint "Halo jumping not allowed, call for transport!";
-//};
+if (_playerCount >= 1 && _playerCount <= 4) then { _haloLimiter = 5; };
+if (_playerCount >= 5 && _playerCount <= 8) then { _haloLimiter = 10; };
+if (_playerCount >= 9) then { _haloLimiter = 0; };
 
 if ( isNil "GRLIB_last_halo_jump" ) then { GRLIB_last_halo_jump = -6000; };
 
-if ( GRLIB_halo_param > 1 && ( GRLIB_last_halo_jump + ( GRLIB_halo_param * 60 ) ) >= time ) exitWith {
-    hint format [ localize "STR_HALO_DENIED_COOLDOWN", ceil ( ( ( GRLIB_last_halo_jump + ( GRLIB_halo_param * 60 ) ) - time ) / 60 ) ];
+if (_playerCount >= 9) exitWith { hint format [ localize "STR_HALO_DENIED_PLAYERCOUNT" ] };
+
+if ( _haloLimiter > 1 && ( GRLIB_last_halo_jump + ( _haloLimiter * 60 ) ) >= time ) exitWith {
+    hint format [ localize "STR_HALO_DENIED_COOLDOWN", ceil ( ( ( GRLIB_last_halo_jump + ( _haloLimiter * 60 ) ) - time ) / 60 ) ];
 };
 
 _dialog = createDialog "liberation_halo";
