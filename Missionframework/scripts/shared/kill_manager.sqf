@@ -67,12 +67,14 @@ if (isServer) then {
     // Player was incapacitated or killed
     if (isPlayer _unit) then {
 
+        /* DISABLED IN FAVOR OF DEFAULT DEATH MESSAGES
         // ** Pre-death **
         private _time = diag_tickTime -3;
         if (lifeState _unit == "INCAPACITATED") then {
             if ((bis_revive_bleedOutDuration - (diag_tickTime - _time))<0) exitWith { [11, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"] }; 
             [10, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; 
         };
+        */
 
         // -----------------
         // -----------------
@@ -82,6 +84,7 @@ if (isServer) then {
         _unit connectTerminalToUAV objNull;
         if (vehicle _unit != _unit) then {moveOut _unit;};
 
+        /* DISABLED IN FAVOR OF DEFAULT DEATH MESSAGES
         // Player died to fall damage, mines, exiting a moving vehicle, etc. No direct killer
         if (isNull _killer || _killer == _unit) exitWith { [9, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"]; }; // Player has died!
 
@@ -89,6 +92,7 @@ if (isServer) then {
         private _killerType = "";
         if (isPlayer _killer) then { _killerType = "Friendly-Fire"; } else { _killerType = "AI"; }; 
         [6, [(name _unit), (name _killer), (_killerType)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+        */
     };
 
     // Check for Man or Vehicle
