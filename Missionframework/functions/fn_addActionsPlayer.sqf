@@ -335,23 +335,22 @@ _player addAction [
 ];
 
 // Reassign Zeus
-if (KPLIB_param_zeusCommander) then {
-	if (player == ([] call KPLIB_fnc_getCommander)) then {
-		_player addAction [
-			["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
-			{[] call KPLIB_fnc_requestZeus},
-			nil,
-			-870,
-			false,
-			true,
-			"",
-			"
-				alive _originalTarget
-				&& {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
-				&& {build_confirmed isEqualTo 0}
-			"
-		];
-	};
+if (player == ([] call KPLIB_fnc_getCommander)) then {
+	_player addAction [
+		["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
+		{[] call KPLIB_fnc_requestZeus},
+		nil,
+		-870,
+		false,
+		true,
+		"",
+		"
+			KPLIB_param_zeusCommander
+			&& alive _originalTarget
+			&& {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
+			&& {build_confirmed isEqualTo 0}
+		"
+	];
 };
 
 // Create FOB clearance
@@ -383,8 +382,8 @@ _player addAction [
     "",
     "
         alive _originalTarget
-        && {build_confirmed isEqualTo 0}
         && {!((((attachedObjects _originalTarget) apply {typeOf _x}) arrayIntersect [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]) isEqualTo [])}
+        && {build_confirmed isEqualTo 0}
     "
 ];
 
