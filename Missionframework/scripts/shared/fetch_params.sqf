@@ -2,6 +2,8 @@
 
 // Check if ACE is running
 if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KPLIB_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
+// Check if ACE Medical is running
+if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KPLIB_ace_med = true; ["ACE Medical detected. switch some script for ACE Medical.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_med = false};
 
 /* Not saveable params */
 KPLIB_param_wipe_savegame_1 = ["WipeSave1", 0] call bis_fnc_getParamValue;
@@ -60,7 +62,7 @@ if(isServer) then {
     GET_PARAM(KPLIB_param_victoryCondition, "VictoryCondition", 0);
 
     // Deactivate BI Revive when ACE Medical is running
-    if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
+    if (KPLIB_ace_med) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
         ["ACE Medical detected. Deactivating BI Revive System.", "PARAM"] call KPLIB_fnc_log;
     } else {
