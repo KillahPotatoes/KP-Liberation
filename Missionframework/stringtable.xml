@@ -2,7 +2,7 @@
 <!--
     File: stringtable.xml
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
-    Date: 2023-03-02
+    Date: 2023-03-18
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Localization contributors:
@@ -476,6 +476,22 @@
             <Korean>주변에 군수물자를 수송할 수 있는 차량이 없습니다.</Korean>
             <Czech>V blízkosti není vozidlo schopné přepravovat bedny</Czech>
             <Japanese>貨物を搭載可能な車両が近くにありません。</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBFULLHEAL">
+            <Original>Allow Full Heal from Action menu in FOB</Original>
+            <Japanese>FOBのアクションメニューから完全治療を許可する</Japanese>
+        </Key>
+        <Key ID="STR_FULLHEAL_ACTION">
+            <Original>-- FULL HEAL --</Original>
+            <Japanese>-- 完全治療 --</Japanese>
+        </Key>
+        <Key ID="STR_FULLHEAL_DONE">
+            <Original>You have fully healed injuries</Original>
+            <Japanese>負傷が完全に治療されました</Japanese>
+        </Key>
+        <Key ID="STR_FULLHEAL_APPLY">
+            <Original>You have been fully healed\nby %1</Original>
+            <Japanese>%1 によって\n完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FOB_ACTION">
             <Original>-- DEPLOY FOB --</Original>

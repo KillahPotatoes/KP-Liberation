@@ -2,7 +2,7 @@
     File: fn_getFobResources.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-08
-    Last Update: 2020-05-10
+    Last Update: 2023-03-18
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -15,7 +15,7 @@
         FOB resource data [ARRAY]
 */
 
-#define NO_RESULT [[0, 0, 0], 0, 0, 0, false, false]
+#define NO_RESULT [[0, 0, 0], 0, 0, 0, false, false, false]
 
 params [
     ["_fob", [0, 0, 0], [[]], [2, 3]]

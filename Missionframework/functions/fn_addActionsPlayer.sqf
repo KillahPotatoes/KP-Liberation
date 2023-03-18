@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2023-03-07
+    Last Update: 2023-03-18
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -385,6 +385,25 @@ _player addAction [
         && {!((((attachedObjects _originalTarget) apply {typeOf _x}) arrayIntersect [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]) isEqualTo [])}
         && {build_confirmed isEqualTo 0}
     "
+];
+
+// Full Heal
+_player addAction [
+	["<t color='#80FF80'>", localize "STR_FULLHEAL_ACTION", "</t> <img size='2' image='res\ui_fullheal.paa'/>"] joinString "",
+	{[player getVariable ["KPLIB_fobPos", [0, 0, 0]], KPLIB_range_fob * 0.9, player] call KPLIB_fnc_fullheal;},
+	nil,
+	-690,
+	false,
+	true,
+	"",
+	"
+		KPLIB_param_fullHeal
+		&& KPLIB_medical_facilities_near
+		&& {isNull (objectParent _originalTarget)}
+		&& {alive _originalTarget}
+		&& {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
+		&& {build_confirmed isEqualTo 0}
+	"
 ];
 
 true

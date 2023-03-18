@@ -16,6 +16,7 @@ KPLIB_ammo = 0;
 KPLIB_fuel = 0;
 KPLIB_b_airControl_near = false;
 KPLIB_b_logiStation_near = false;
+KPLIB_medical_facilities_near = false;
 
 waitUntil { !isNil "synchro_done" };
 waitUntil { synchro_done };
@@ -59,7 +60,7 @@ while {true} do {
         _showResources = true;
 
         private _nearestFob = player getVariable "KPLIB_fobPos";
-        ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
+        ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling", "_hasMedical"];
 
         if (KPLIB_resources_global || {_visibleMap}) then {
             // Overwrite FOB name in global mode
@@ -76,6 +77,7 @@ while {true} do {
         // TODO this is used by build scripts, move to relevant places
         KPLIB_b_airControl_near = _hasAir;
         KPLIB_b_logiStation_near = _hasRecycling;
+        KPLIB_medical_facilities_near = _hasMedical;
     } else {
         _showResources = false;
         KPLIB_supplies = 0;
@@ -83,6 +85,7 @@ while {true} do {
         KPLIB_fuel = 0;
         KPLIB_b_airControl_near = false;
         KPLIB_b_logiStation_near = false;
+        KPLIB_medical_facilities_near = false;
     };
 
     if (_overlayVisible) then {
