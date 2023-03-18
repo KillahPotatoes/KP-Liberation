@@ -150,6 +150,33 @@ KPLIB_o_planes = [
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
 
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_HMG = [
+	"O_HMG_01_F",
+	"O_HMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_GMG = [
+	"O_GMG_01_F",
+	"O_GMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AT = [
+	"O_static_AT_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AA = [
+	"O_static_AA_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_MORTAR = [
+	"O_Mortar_01_F"
+];
+
 // Enemy SAM turrets that will be spawned in the back country
 KPLIB_o_turrets_SAM = [
 	["B_SAM_System_01_F"], 
