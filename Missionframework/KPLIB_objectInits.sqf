@@ -123,7 +123,15 @@ KPLIB_objectInits = [
     // Add valid vehicles to support module, if system is enabled
     [
         KPLIB_param_supportModule_artyVeh,
-        {if (KPLIB_param_supportModule > 0) then {KPLIB_param_supportModule_arty synchronizeObjectsAdd [_this];};}
+        {
+			if (KPLIB_param_supportModule > 0) then {
+				[_this] spawn {
+					params ["_arty"];
+					waitUntil {sleep 0.1; time > 0};
+					[_arty] remoteExecCall ["KPLIB_fnc_addArtyToSupport", 0, _arty];
+				};
+			};
+		}
     ],
 
     // Disable autocombat (if set in parameters) and fleeing
