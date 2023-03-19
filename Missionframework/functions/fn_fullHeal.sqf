@@ -34,22 +34,24 @@ _units = allUnits select {(side _x == KPLIB_side_player) and (alive _x) and (_x 
 
 // Loop through each unit and heal them
 {
-    private _unit = _x;
+    private _target = _x;
+    private _name = name _caller;
+    private _callermsg = localize "STR_FULLHEAL_DONE";
+    private _targetmsg = format [localize "STR_FULLHEAL_APPLY", _name];
 	
     // Use the ace fullHeal function if using ace.
     if (KPLIB_ace_med) then {
-        [_caller, _unit] call ace_medical_treatment_fnc_fullHeal;
+        [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
     } else {
-        _unit setDamage 0;
+        _target setDamage 0;
     };
 	
 	// Display a hint to show healed and who healed
-	
-    if ((isPlayer _unit) && (_caller == _unit)) then {
-        hint format [localize "STR_FULLHEAL_DONE"];
-    } else {
-        hint format [localize "STR_FULLHEAL_APPLY", name _caller];
-    };
+
+    [_callermsg] remoteExec [hint, _caller];
+    [_targetmsg] remoteExec [hint, _target];
+    sleep 3;
+    [""] remoteExec [hintSilent, _target];
 
 } forEach _units;
 
