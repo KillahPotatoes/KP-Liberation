@@ -41,6 +41,7 @@ while {_units_near > 0} do {
         if (((damage _x) < 0.5) && !(_x in _healed_civs)) then {
             (_markers select _forEachIndex) setMarkerAlpha 0;
             private _civ = _x;
+            if (!alive _civ) exitWith {_healed_civs pushBack _civ;};
             [_civ, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
             sleep 2;
             {_civ enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
