@@ -1,5 +1,8 @@
 params ["_unit", ["_sector", ""]];
 
+//Check LAMBS_Danger.fsm is running. if running, disable KPLIB build in troop garrisoning.
+if (isClass (configfile >> "CfgPatches" >> "lambs_main")) exitWith {};
+
 _unit setUnitPos "UP";
 _unit disableAI "PATH";
 private _move_is_disabled = true;
