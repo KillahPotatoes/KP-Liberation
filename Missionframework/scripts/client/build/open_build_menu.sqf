@@ -51,9 +51,11 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 _classnamevar = (_x select 0);
                 _customName = (_x select 4);
                 _entrytext = getText (_cfg >> _classnamevar >> "displayName");
-                if (!isNil { _customName }) then {
-                    _entrytext = _customName;
-                };
+				if (!isNil {_customName}) then {
+					if (_customName != "") then {
+						_entrytext = _customName;
+					};
+				};
 				
                 switch (_classnamevar) do {
                     case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
