@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2023-03-11
+    Last Update: 2023-03-24
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -193,6 +193,12 @@ KPLIB_range_sectorCapture = 175;
 
 // Radio Tower scanning range.
 KPLIB_range_radioTowerScan = 2500;
+
+// Minimum distance to next FOB.
+KPLIB_distance_fob = 1000;
+
+// Minimum distance to next sector.
+KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 
 
 /*
