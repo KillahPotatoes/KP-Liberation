@@ -48,10 +48,13 @@ _units = allUnits select {(side _x == KPLIB_side_player) and (alive _x) and (_x 
 	
 	// Display a hint to show healed and who healed
 
-    [_callermsg] remoteExec [hint, _caller];
-    [_targetmsg] remoteExec [hint, _target];
+	if (_caller isEqualTo _target) then {
+		[_callermsg] remoteExec ["hint", _caller];
+	} else {
+		[_targetmsg] remoteExec ["hint", _target];
+	};
     sleep 3;
-    [""] remoteExec [hintSilent, _target];
+    [""] remoteExec ["hintSilent", _target];
 
 } forEach _units;
 
