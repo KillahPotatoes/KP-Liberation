@@ -41,7 +41,7 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
 
         if (alive _unit) then {
 			private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", player];
-			[[_unit], _CapturedPlayer] remoteExecCall ["join"];
+			[[_unit], _CapturedPlayer] remoteExecCall ["joinSilent"];
             if (KPLIB_ace) then {
                 ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
             } else {
