@@ -31,12 +31,14 @@ private _sector_despawn_tickets = BASE_TICKETS;
 private _maximum_additional_tickets = (KPLIB_param_maxDespawnDelay * 60 / SECTOR_TICK_TIME);
 private _popfactor = 1;
 private _guerilla = false;
+private _lambsEnable = false;
 
 if (isNil "KPLIB_o_turrets_HMG") then {KPLIB_o_turrets_HMG = ["Turret_Array_Empty"];};
 if (isNil "KPLIB_o_turrets_GMG") then {KPLIB_o_turrets_GMG = ["Turret_Array_Empty"];};
 if (isNil "KPLIB_o_turrets_AT") then {KPLIB_o_turrets_AT = ["Turret_Array_Empty"];};
 if (isNil "KPLIB_o_turrets_AA") then {KPLIB_o_turrets_AA = ["Turret_Array_Empty"];};
 if (isNil "KPLIB_o_turrets_MORTAR") then {KPLIB_o_turrets_MORTAR = ["Turret_Array_Empty"];};
+if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) then {_lambsEnable = true;};
 
 if (KPLIB_param_unitcap < 1) then {_popfactor = KPLIB_param_unitcap;};
 
@@ -64,10 +66,10 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
         if (_infsquad == "army") then {
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
-            _vehtospawn pushback ([] call KPLIB_o_turrets_AT);
+            _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
-            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback ([] call KPLIB_o_turrets_AA);};
-            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback ([] call KPLIB_o_turrets_GMG);};
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_AA);};
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_GMG);};
         };
 
         _spawncivs = true;
@@ -202,6 +204,9 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
     {
         if (_x isEqualTo "Turret_Array_Empty") exitWith {};
         _vehicle = [_sectorpos, _x] call KPLIB_fnc_spawnVehicle;
+		if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
+			[group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+		};
         [group ((crew _vehicle) select 0),_sectorpos] spawn add_defense_waypoints;
         _managed_units pushback _vehicle;
         {_managed_units pushback _x;} foreach (crew _vehicle);
