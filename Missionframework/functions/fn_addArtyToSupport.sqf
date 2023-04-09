@@ -23,22 +23,27 @@ params [
 if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
 if (!canSuspend) exitWith {_this spawn KPLIB_fnc_addArtyToSupport};
 
-_module = KPLIB_param_supportModule_arty;
+private _module = KPLIB_param_supportModule_arty;
 
-while {true} do {
-	waitUntil {sleep 1; ((count (crew _obj) > 0) || !alive _obj)};
-	if (!alive _obj) exitWith {};
-	_NewCrew = crew _obj;
-	_OldCrew = _NewCrew;
-	if (!(player in _NewCrew) && side _obj == KPLIB_side_player) then {
-		_module synchronizeObjectsAdd _NewCrew;
-	};
-	while {true} do {
-	if ((_NewCrew isNotEqualTo _OldCrew) || !alive _obj) exitWith {_module synchronizeObjectsRemove _OldCrew;};
-		_NewCrew = crew _obj;
-		sleep 1;
-	};
-	sleep 1;
-};
+_obj addEventHandler ["GetIn", {
+    params ["_vehicle", "_role", "_unit", "_turret"];
+    if ((_unit isNotEqualTo player) && (side _unit == KPLIB_side_player)) then {
+        _module synchronizeObjectsAdd _unit;
+        _unit addEventHandler ["Killed", {
+            params ["_unitKilled", "_killer", "_instigator", "_useEffects"];
+            _module synchronizeObjectsRemove _unitKilled;
+        }];
+    };
+}];
+
+_obj addEventHandler ["GetOut", {
+    params ["_vehicle", "_role", "_unit", "_turret"];
+    _module synchronizeObjectsRemove _unit;
+}];
+
+_obj addEventHandler ["Killed", {
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+    _module synchronizeObjectsRemove _unit;
+}];
 
 true
