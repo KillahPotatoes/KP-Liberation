@@ -1,9 +1,7 @@
 params ["_unit", ["_sector", ""]];
 
 //Check LAMBS_Danger.fsm is running. if running, skip KPLIB built in troop garrisoning and call lambs wp garrisoning.
-if (isClass (configfile >> "CfgPatches" >> "lambs_main")) exitWith {
-	if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) exitWith {[_unit, _unit, 40] call lambs_wp_fnc_taskGarrison;};
-};
+if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) exitWith {[_unit, _unit, 40] call lambs_wp_fnc_taskGarrison;};
 
 _unit setUnitPos "UP";
 _unit disableAI "PATH";
