@@ -35,33 +35,34 @@ if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned %
 private _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 private _healed_civs = [];
 
-while {_units_near > 0} do {
+while {true} do {
     _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
+    if (_units_near > 0) exitWith {};    
     {
-        if (((damage _x) < 0.5) && !(_x in _healed_civs)) then {
-            (_markers select _forEachIndex) setMarkerAlpha 0;
-            private _civ = _x;
-            if (!alive _civ) exitWith {_healed_civs pushBack _civ;};
-            [_civ, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
-            sleep 2;
-            {_civ enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
-            [4, [(name _civ)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
-            [KPLIB_cr_wounded_gain] call F_cr_changeCR;
-            _healed_civs pushBack _civ;
-            stats_civilians_healed = stats_civilians_healed +1;
-        }
+        private _civx = _x;
+        private _civxdamage = damage _civx;
+        if !(_civx in _healed_civs) then {
+            if ((_civxdamage < 0.5) || !alive _civx) then {
+                (_markers select _forEachIndex) setMarkerAlpha 0;
+                _healed_civs pushBack _civx;
+                if (alive _civx) then {
+                    [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
+                    sleep 2;
+                    {_civx enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
+                    [4, [(name _civx)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                    [KPLIB_cr_wounded_gain] call F_cr_changeCR;
+                    stats_civilians_healed = stats_civilians_healed +1;
+                };
+            };
+        };
     } forEach _civs;
+    if ((count _healed_civs) isEqualTo (count _civs)) exitWith {};
     sleep 1;
 };
 
 sleep 60;
 
-{
-    if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
-} forEach _civs;
-
-{
-    deleteMarker _x;
-} forEach _markers;
+{deleteVehicle _x} forEach _civs;
+{deleteMarker _x} forEach _markers;
 
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> dropped at %1", markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
