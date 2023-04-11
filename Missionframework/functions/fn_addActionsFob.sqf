@@ -19,7 +19,7 @@ params [
     ["_obj", objNull, [objNull]]
 ];
 
-if (isNull _object) exitWith {["Null object given"] call BIS_fnc_error; false};
+if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 if (isNil "FOB_build_in_progress") then {FOB_build_in_progress = false;};
 
