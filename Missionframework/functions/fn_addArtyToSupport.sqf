@@ -2,7 +2,7 @@
     File: fn_addArtyToSupport.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2023-03-17
-    Last Update: 2023-03-17
+    Last Update: 2023-04-15
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,27 +23,39 @@ params [
 if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
 if (!canSuspend) exitWith {_this spawn KPLIB_fnc_addArtyToSupport};
 
-private _module = KPLIB_param_supportModule_arty;
+private _objcrew = crew _obj;
+
+if (!(player in _objcrew) && side _obj == KPLIB_side_player) then {
+    KPLIB_param_supportModule_arty synchronizeObjectsAdd [vehicle _obj];
+    {
+        _x addEventHandler ["Killed", {
+            params ["_unit", "_killer", "_instigator", "_useEffects"];
+            KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+        }];
+    } forEach _objcrew;
+};
 
 _obj addEventHandler ["GetIn", {
     params ["_vehicle", "_role", "_unit", "_turret"];
-    if ((_unit isNotEqualTo player) && (side _unit == KPLIB_side_player)) then {
-        _module synchronizeObjectsAdd _unit;
+    if ((side _unit == KPLIB_side_player) && (_unit != player)) then {
+        KPLIB_param_supportModule_arty synchronizeObjectsAdd [vehicle _vehicle];
         _unit addEventHandler ["Killed", {
-            params ["_unitKilled", "_killer", "_instigator", "_useEffects"];
-            _module synchronizeObjectsRemove _unitKilled;
+            params ["_unit", "_killer", "_instigator", "_useEffects"];
+                KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
         }];
     };
 }];
 
 _obj addEventHandler ["GetOut", {
     params ["_vehicle", "_role", "_unit", "_turret"];
-    _module synchronizeObjectsRemove _unit;
+    KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
 }];
 
 _obj addEventHandler ["Killed", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
-    _module synchronizeObjectsRemove _unit;
+    private _crews = crew _unit;
+    KPLIB_param_supportModule_arty synchronizeObjectsRemove _crews;
+    KPLIB_param_supportModule_arty synchronizeObjectsRemove [vehicle _unit];
 }];
 
 true
