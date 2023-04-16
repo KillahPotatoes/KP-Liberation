@@ -330,6 +330,7 @@ while { true } do {
                 sleep 0.3;
                 _vehicle allowDamage true;
                 _vehicle setDamage 0;
+                _vehicle setVariable ["KPLIB_seized", true, true];
 
                 if(buildtype != 6) then {
                     _vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
