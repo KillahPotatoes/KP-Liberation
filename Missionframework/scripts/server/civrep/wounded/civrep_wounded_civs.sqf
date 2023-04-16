@@ -39,9 +39,9 @@ private _healed_civs = [];
 while {true} do {
     _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
     if (_units_near isEqualTo 0) exitWith {
-		if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> no near blufor units. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
-		sleep 30;
-	};
+        if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> no near blufor units. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
+        sleep 30;
+    };
     {
         private _civx = _x;
         if !(_civx in _healed_civs) then {
@@ -60,9 +60,9 @@ while {true} do {
         };
     } forEach _civs;
     if ((count _healed_civs) isEqualTo (count _civs)) exitWith {
-		if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> all wounded units healed. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
-		sleep 60;
-	};
+        if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> all wounded units healed. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
+        sleep 60;
+    };
     sleep 1;
 };
 

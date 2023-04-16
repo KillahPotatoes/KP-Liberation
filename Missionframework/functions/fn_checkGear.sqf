@@ -1,13 +1,13 @@
 /*
     File: fn_checkGear.sqf
     Author: ThomasAngel (Original by KP Liberation Dev Team - https://github.com/KillahPotatoes)
-	Steam: https://steamcommunity.com/id/Thomasangel/
-	Github: https://github.com/rekterakathom
+    Steam: https://steamcommunity.com/id/Thomasangel/
+    Github: https://github.com/rekterakathom
     Date: 2021-12-27
     Last Update: 2023-03-02
     Description:
-		Completely rewritten version of the original checkGear by KillahPotatoes.
-		Identical functionality.
+        Completely rewritten version of the original checkGear by KillahPotatoes.
+        Identical functionality.
         Checks the players gear for blacklisted items.
         Found items are removed from the loadout.
         Furthermore a hint with the found items is displayed to the player
@@ -24,10 +24,10 @@ private _allowedItems = KPLIB_arsenalAllowed;
 
 // Loop through all units items and remove non-allowed items.
 {
-	private _currentElement = toLowerANSI _x;
-	if !(_currentElement in _allowedItems) then {
+    private _currentElement = toLowerANSI _x;
+    if !(_currentElement in _allowedItems) then {
         if (([_x] call KPLIB_fnc_isRadio)) exitWith {};
-		_removedItems pushBack _x;
+        _removedItems pushBack _x;
         switch _x do {
             case (headgear player): {removeHeadgear player};
             case (goggles player): {removeGoggles player};
@@ -36,7 +36,7 @@ private _allowedItems = KPLIB_arsenalAllowed;
             case (backpack player): {removeBackpack player};
             default {player removeItems _x}
         };
-	};
+    };
 } forEach _uniqueUnitItems;
 
 // Show hint and log list, if something was found

@@ -38,8 +38,8 @@ _civ addAction [
         if !(_items isEqualTo []) then {
             removeAllActions _target;
             _caller removeItem (selectRandom _items);
-			_caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
-			sleep 8;
+            _caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
+            sleep 8;
             _target setDamage 0;
             [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
         } else {

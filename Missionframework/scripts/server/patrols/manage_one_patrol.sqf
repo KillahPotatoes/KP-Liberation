@@ -42,12 +42,12 @@ while { KPLIB_endgame == 0 } do {
         };
 
         sleep 0.5;
-		private _crewmens = (crew _vehicle_object);
-		// wait leader and he is alive in vehicle
-		waitUntil {
-			sleep 1;
-			count _crewmens > 0
-		};
+        private _crewmens = (crew _vehicle_object);
+        // wait leader and he is alive in vehicle
+        waitUntil {
+            sleep 1;
+            count _crewmens > 0
+        };
         _grp = group (_crewmens select 0);
     };
 

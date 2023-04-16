@@ -130,7 +130,7 @@ KPLIB_o_battleGrpVehiclesLight = [
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
-If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
+If something in this array can't hold all 8 soldiers then buggy behaviours may occur. */
 KPLIB_o_troopTransports = [
     "O_T_Truck_03_transport_ghex_F",                                    // Tempest Transport
     "O_T_Truck_03_covered_ghex_F",                                      // Tempest Transport (Covered)
@@ -156,7 +156,7 @@ KPLIB_o_planes = [
 
 // Enemy SAM turrets that will be spawned in the back country
 KPLIB_o_turrets_SAM = [
-	["B_SAM_System_01_F"], 
-	["B_SAM_System_02_F"], 
-	["O_SAM_System_04_F", "O_Radar_System_02_F"]
+    ["B_SAM_System_01_F"], 
+    ["B_SAM_System_02_F"], 
+    ["O_SAM_System_04_F", "O_Radar_System_02_F"]
 ];

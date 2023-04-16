@@ -22,7 +22,7 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
         sleep 1;
         private _grp = createGroup [KPLIB_side_enemy, true];
         [_unit] joinSilent _grp;
-		_unit setVariable ["KPLIB_prisonner_surrendered", true, true];
+        _unit setVariable ["KPLIB_prisonner_surrendered", true, true];
 
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
@@ -34,14 +34,14 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
             _unit setCaptive true;
         };
         waitUntil {
-			sleep 1;
-			private _isCaptured = _unit getVariable ["KPLIB_prisonner_captured", false];
+            sleep 1;
+            private _isCaptured = _unit getVariable ["KPLIB_prisonner_captured", false];
             !alive _unit || _isCaptured
         };
 
         if (alive _unit) then {
-			private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", player];
-			[[_unit], _CapturedPlayer] remoteExecCall ["joinSilent"];
+            private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", player];
+            [[_unit], _CapturedPlayer] remoteExecCall ["joinSilent"];
             if (KPLIB_ace) then {
                 ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
             } else {

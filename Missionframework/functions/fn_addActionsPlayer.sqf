@@ -336,21 +336,21 @@ _player addAction [
 
 // Reassign Zeus
 if (player == ([] call KPLIB_fnc_getCommander)) then {
-	_player addAction [
-		["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
-		{[] call KPLIB_fnc_requestZeus},
-		nil,
-		-870,
-		false,
-		true,
-		"",
-		"
-			KPLIB_param_zeusCommander
-			&& alive _originalTarget
-			&& {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
-			&& {build_confirmed isEqualTo 0}
-		"
-	];
+    _player addAction [
+        ["<t color='#FF0000'>", localize "STR_REASSIGN_ZEUS", "</t>"] joinString "",
+        {[] call KPLIB_fnc_requestZeus},
+        nil,
+        -870,
+        false,
+        true,
+        "",
+        "
+            KPLIB_param_zeusCommander
+            && alive _originalTarget
+            && {isNull (_originalTarget getVariable ['KPLIB_ownedZeusModule', objNull])}
+            && {build_confirmed isEqualTo 0}
+        "
+    ];
 };
 
 // Create FOB clearance
@@ -389,21 +389,21 @@ _player addAction [
 
 // Full Heal
 _player addAction [
-	["<t color='#80FF80'>", localize "STR_FULLHEAL_ACTION", "</t> <img size='2' image='res\ui_fullheal.paa'/>"] joinString "",
-	{[player getVariable ["KPLIB_fobPos", [0, 0, 0]], KPLIB_range_fob * 0.9, player] call KPLIB_fnc_fullheal;},
-	nil,
-	-690,
-	false,
-	true,
-	"",
-	"
-		KPLIB_param_fullHeal
-		&& KPLIB_medical_facilities_near
-		&& {isNull (objectParent _originalTarget)}
-		&& {alive _originalTarget}
-		&& {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
-		&& {build_confirmed isEqualTo 0}
-	"
+    ["<t color='#80FF80'>", localize "STR_FULLHEAL_ACTION", "</t> <img size='2' image='res\ui_fullheal.paa'/>"] joinString "",
+    {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], KPLIB_range_fob * 0.9, player] call KPLIB_fnc_fullheal;},
+    nil,
+    -690,
+    false,
+    true,
+    "",
+    "
+        KPLIB_param_fullHeal
+        && KPLIB_medical_facilities_near
+        && {isNull (objectParent _originalTarget)}
+        && {alive _originalTarget}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
+        && {build_confirmed isEqualTo 0}
+    "
 ];
 
 true

@@ -163,7 +163,7 @@ while { true } do {
                 _near_objects_25 = _near_objects_25 + (_truepos nearobjects [KPLIB_b_fobBox, 50]);
                 _near_objects_25 = _near_objects_25 + (_truepos nearobjects [KPLIB_b_arsenal, 50]);
 
-                if(	buildtype != 6 ) then {
+                if( buildtype != 6 ) then {
                     _near_objects = _near_objects + (_truepos nearobjects ["Static", _dist]);
                     _near_objects_25 = _near_objects_25 + (_truepos nearobjects ["Static", 50]);
                 };

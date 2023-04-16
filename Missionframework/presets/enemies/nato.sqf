@@ -132,7 +132,7 @@ KPLIB_o_battleGrpVehiclesLight = [
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
-If something in this array can't hold all 8 soldiers then buggy behaviours may occur.	*/
+If something in this array can't hold all 8 soldiers then buggy behaviours may occur. */
 KPLIB_o_troopTransports = [
     "B_Truck_01_transport_F",                                           // HEMTT Transport
     "B_Truck_01_covered_F",                                             // HEMTT Transport (Covered)

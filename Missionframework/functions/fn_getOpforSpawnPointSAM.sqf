@@ -41,22 +41,22 @@ private ["_valid", "_current", "_distances"];
     _valid = true;
     _current = _x;
 
-	// Fetch distances to FOBs
-	_distances = (KPLIB_sectors_fob apply {(markerPos _current) distance2d _x}) select {_x < _max};
+    // Fetch distances to FOBs
+    _distances = (KPLIB_sectors_fob apply {(markerPos _current) distance2d _x}) select {_x < _max};
 
-	// Fetch distances to blufor sectors
-	_distances append ((KPLIB_sectors_player apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});
+    // Fetch distances to blufor sectors
+    _distances append ((KPLIB_sectors_player apply {(markerPos _current) distance2d (markerPos _x)}) select {_x < _max});
 
-	// Invalid, if all sectors and FOBs are further away than given max distance
-	if (_distances isEqualTo []) then {
-		_valid = false;
-	} else {
-		// Invalid, if one sector or FOB is closer than min distance
-		_distances sort true;
-		if ((_distances select 0) < _min) then {
-			_valid = false;
-		};
-	};
+    // Invalid, if all sectors and FOBs are further away than given max distance
+    if (_distances isEqualTo []) then {
+        _valid = false;
+    } else {
+        // Invalid, if one sector or FOB is closer than min distance
+        _distances sort true;
+        if ((_distances select 0) < _min) then {
+            _valid = false;
+        };
+    };
 
     // Make sure that there is an opfor sector in sensible range to spawn
     if (_valid) then {

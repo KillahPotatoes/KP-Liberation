@@ -70,19 +70,19 @@ switch (_notiftype) do {
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
         _secondary_marker_zone setMarkerSizeLocal [50,50];
-    };	
+    };
     case 10: {
         ["lib_secondary_civ_supplies_complete"] call BIS_fnc_showNotification;
         deleteMarkerLocal "secondarymarker";
         deleteMarkerLocal "secondarymarkerzone";
         secondary_objective_position_marker = [];
-    };	
-	case 11: {
-		//notify there are no friendly towns
-		["lib_secondary_civ_supplies_no_room"] call BIS_fnc_showNotification;
-		//return intel points used
-		resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 3);
-	};
+    };
+    case 11: {
+        //notify there are no friendly towns
+        ["lib_secondary_civ_supplies_no_room"] call BIS_fnc_showNotification;
+        //return intel points used
+        resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 3);
+    };
     // bingo-fuel mission
     case 12: {
         waitUntil {!isNil "secondary_objective_position_marker"};
@@ -98,19 +98,19 @@ switch (_notiftype) do {
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
         _secondary_marker_zone setMarkerSizeLocal [50,50];
-    };	
+    };
     case 13: {
         ["lib_secondary_bingo_fuel_complete"] call BIS_fnc_showNotification;
         deleteMarkerLocal "secondarymarker";
         deleteMarkerLocal "secondarymarkerzone";
         secondary_objective_position_marker = [];
-    };	
-	case 14: {
-		//notify there are no friendly factory
-		["lib_secondary_bingo_fuel_no_room"] call BIS_fnc_showNotification;
-		//return intel points used
-		resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 4);
-	};
+    };
+    case 14: {
+        //notify there are no friendly factory
+        ["lib_secondary_bingo_fuel_no_room"] call BIS_fnc_showNotification;
+        //return intel points used
+        resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 4);
+    };
     // rearm-outpost mission
     case 15: {
         waitUntil {!isNil "secondary_objective_position_marker"};
@@ -126,18 +126,18 @@ switch (_notiftype) do {
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
         _secondary_marker_zone setMarkerSizeLocal [50,50];
-    };	
+    };
     case 16: {
         ["lib_secondary_rearm_outpost_complete"] call BIS_fnc_showNotification;
         deleteMarkerLocal "secondarymarker";
         deleteMarkerLocal "secondarymarkerzone";
         secondary_objective_position_marker = [];
-    };	
-	case 17: {
-		//notify there are no friendly outpost
-		["lib_secondary_rearm_outpost_no_room"] call BIS_fnc_showNotification;
-		//return intel points used
-		resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 5);
-	};
+    };
+    case 17: {
+        //notify there are no friendly outpost
+        ["lib_secondary_rearm_outpost_no_room"] call BIS_fnc_showNotification;
+        //return intel points used
+        resources_intel = resources_intel + ( KPLIB_secondary_missions_costs select 5);
+    };
     default {[format ["remote_call_intel.sqf -> no valid value for _notiftype: %1", _notiftype], "ERROR"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };

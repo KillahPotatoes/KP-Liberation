@@ -90,7 +90,7 @@ KPLIB_objectInits = [
         {
         _this lockInventory true;
         _this setVariable ["ace_cargo_noRename", true];
-		}
+        }
     ],
     
     // Add ACE variables to corresponding building types
@@ -124,14 +124,14 @@ KPLIB_objectInits = [
     [
         KPLIB_param_supportModule_artyVeh,
         {
-			if (KPLIB_param_supportModule > 0) then {
-				[_this] spawn {
-					params ["_arty"];
-					waitUntil {sleep 0.1; time > 0};
-					[_arty] remoteExecCall ["KPLIB_fnc_addArtyToSupport", 0, _arty];
-				};
-			};
-		}
+            if (KPLIB_param_supportModule > 0) then {
+                [_this] spawn {
+                    params ["_arty"];
+                    waitUntil {sleep 0.1; time > 0};
+                    [_arty] remoteExecCall ["KPLIB_fnc_addArtyToSupport", 0, _arty];
+                };
+            };
+        }
     ],
 
     // Disable autocombat (if set in parameters) and fleeing

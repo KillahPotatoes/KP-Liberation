@@ -209,9 +209,9 @@ switch (KPLIB_param_victoryCondition) do {
 
 if(isServer) then {
     private _start = diag_tickTime;
-	KPLIB_param_serverInitDone = true;
-	publicVariable "KPLIB_param_serverInitDone";
-	[format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
+    KPLIB_param_serverInitDone = true;
+    publicVariable "KPLIB_param_serverInitDone";
+    [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 if (!isDedicated && hasInterface) then {

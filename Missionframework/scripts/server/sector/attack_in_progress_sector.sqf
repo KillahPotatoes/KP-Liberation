@@ -69,12 +69,12 @@ if ( KPLIB_endgame == 0 ) then {
     } else {
         [_sector, 3] remoteExec ["remote_call_sector"];
         {
-			if (captive _x) then {
-				[_x, true] spawn prisonner_ai;
-			} else {
-				[_x] spawn prisonner_ai;
-			};
-		} foreach (((markerpos _sector) nearEntities ["CAManBase", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
+            if (captive _x) then {
+                [_x, true] spawn prisonner_ai;
+            } else {
+                [_x] spawn prisonner_ai;
+            };
+        } foreach (((markerpos _sector) nearEntities ["CAManBase", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
     };
 };
 

@@ -36,14 +36,14 @@ isNil {
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "NONE"];
     _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
     _unit setRank _rank;
-	
+
     // Set unit traits here because they are not properly configured in all faction mods.
     switch _type do {
         case KPLIB_o_engineer: {_unit setUnitTrait ["Engineer", true]; _unit setUnitTrait ["explosiveSpecialist", true]};
         case KPLIB_o_medic: {_unit setUnitTrait ["Medic", true]};
         default {};
     };
-	
+
     // Join to target group to preserve Side
     [_unit] joinSilent _group;
     deleteGroup _groupTemp;
