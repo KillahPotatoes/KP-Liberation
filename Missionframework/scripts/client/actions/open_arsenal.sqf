@@ -1,5 +1,5 @@
 if (KPLIB_param_directArsenal) exitWith {
-    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {
         [player, player, false] call ace_arsenal_fnc_openBox;
     } else {
         ["Open", false] spawn BIS_fnc_arsenal;
