@@ -30,6 +30,7 @@ for "_i" from 1 to _count do {
     _markers pushBack _marker;
 };
 
+waitUntil {count _civs isEqualTo _count};
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned %1 wounded civilians at %2", _count, markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 private _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
@@ -37,12 +38,14 @@ private _healed_civs = [];
 
 while {true} do {
     _units_near = [markerPos _sector, 300, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
-    if (_units_near > 0) exitWith {};    
+    if (_units_near isEqualTo 0) exitWith {
+		if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> no near blufor units. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
+		sleep 30;
+	};
     {
         private _civx = _x;
-        private _civxdamage = damage _civx;
         if !(_civx in _healed_civs) then {
-            if ((_civxdamage < 0.5) || !alive _civx) then {
+            if ((damage _civx < 0.5) || !alive _civx) then {
                 (_markers select _forEachIndex) setMarkerAlpha 0;
                 _healed_civs pushBack _civx;
                 if (alive _civx) then {
@@ -56,11 +59,12 @@ while {true} do {
             };
         };
     } forEach _civs;
-    if ((count _healed_civs) isEqualTo (count _civs)) exitWith {};
+    if ((count _healed_civs) isEqualTo (count _civs)) exitWith {
+		if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> all wounded units healed. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
+		sleep 60;
+	};
     sleep 1;
 };
-
-sleep 60;
 
 {deleteVehicle _x} forEach _civs;
 {deleteMarker _x} forEach _markers;
