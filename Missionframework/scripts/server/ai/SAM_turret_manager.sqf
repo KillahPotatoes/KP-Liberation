@@ -2,7 +2,7 @@
     File: SAM_turret_manager.sqf
     Author: Nicoman
     Date: 2020-09-29
-    Last Update: 2023-03-07
+    Last Update: 2023-04-16
     License: MIT License - http://www.opensource.org/licenses/MIT
     Description:
         Spawns and manages SAM turrets in the back country. Max number and spawn rate of SAM turrets is influenced by various factors:
@@ -23,7 +23,7 @@ waitUntil {KPLIB_saveLoaded};
 waitUntil {!isNil "KPLIB_param_serverInitDone"};
 waitUntil {KPLIB_param_serverInitDone};
 
-// we wait with our mighty SAM units until those pesky players dare to conquer one of OUR nice sectors
+// Wait until the player forces control the first sector
 waitUntil {!isNil "KPLIB_sectors_player"};
 
 // leave, if there are no SAM turrets defined in currently played preset
@@ -92,13 +92,18 @@ while {KPLIB_endgame == 0} do {
 	};
 	
 	// Calculate maximum amount of SAM turrets
-	_maxSAMnumber = round (KPLIB_param_difficulty * 2);
-	if (_maxSAMnumber > 12) then {_maxSAMnumber = 12};
-	if (KPLIB_enemyReadiness > 0 && _maxSAMnumber > 0) then {
-		_maxSAMnumber = _maxSAMnumber + round (KPLIB_enemyReadiness / 30);		
-		if (_maxSAMnumber > 20) then {_maxSAMnumber = 20};
-		if (_maxSAMnumber > (count KPLIB_sectors_all - count KPLIB_sectors_player)) then {_maxSAMnumber = count KPLIB_sectors_all - count KPLIB_sectors_player};	// maximum amount of SAM turrets should not exceed number of opfor sectors
-	};
+	_maxSAMnumber = 0.5;
+	private _helislots = KPLIB_heli_slots;
+	private _planeslots = KPLIB_plane_slots * 1.5;
+	private _difficulty = KPLIB_param_difficulty;
+	if (KPLIB_param_difficulty isEqualTo 4) then {_difficulty = 3};
+	if (KPLIB_param_difficulty isEqualTo 10) then {_difficulty = 5};
+    _maxSAMnumber = _maxSAMnumber + _helislots + _planeslots;
+	_maxSAMnumber = _maxSAMnumber + (KPLIB_enemyReadiness / 30);
+	_maxSAMnumber = _maxSAMnumber * _difficulty;
+	_maxSAMnumber = round _maxSAMnumber;
+	if (_maxSAMnumber > 20) then {_maxSAMnumber = 20};
+	if (_maxSAMnumber > (count KPLIB_sectors_all - count KPLIB_sectors_player)) then {_maxSAMnumber = count KPLIB_sectors_all - count KPLIB_sectors_player};	// maximum amount of SAM turrets should not exceed number of opfor sectors
 
 	// If maximum amount of SAM turrets has not been reached yet, add one to the map
 	if (count KPLIB_backCountryTurrets_SAM < _maxSAMnumber) then {
@@ -107,15 +112,6 @@ while {KPLIB_endgame == 0} do {
 		_randomTurret = selectRandom KPLIB_o_turrets_SAM;													// choose an OpFor turret to be spawned
 		KPLIB_usedPositions_SAM pushBack _spawnMarker;														// update SAM used positions array with current sector 
 		publicVariable "KPLIB_usedPositions_SAM";
-
-		// The lower the difficulty level is, the less it is likely to have 'heavy' SAM defenses
-		if (KPLIB_param_difficulty < 4 && count _randomTurret > 1) then {
-			_i = 4 - (floor KPLIB_param_difficulty);
-			while {count _randomTurret > 1 && _i > 0} do { 
-				_randomTurret = selectRandom KPLIB_o_turrets_SAM;
-				_i = _i - 1; 
-			};
-		};
 
 		// spawn and memory turret / turrets
 		_turretGroup = [];																					// create save array for currently spawned turret group
