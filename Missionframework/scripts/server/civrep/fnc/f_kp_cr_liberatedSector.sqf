@@ -13,6 +13,8 @@ if (_sector in KPLIB_sectors_capital || _sector in KPLIB_sectors_city) then {
 
     if (_penalty > 0) then {
         [1, [(_penalty / KPLIB_cr_building_penalty)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+    } else {
+        _penalty = 0;
     };
 
     if (_sector in KPLIB_sectors_capital) then {

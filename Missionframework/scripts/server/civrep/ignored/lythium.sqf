@@ -1,4 +1,7 @@
 KPLIB_cr_ign_buildings = [
+    "Land_ClutterCutter_large_F",
+    "Land_ShellCrater_02_debris_F",
+    "Land_DirtPatch_03_F",
     "Land_Cargo_House_V1_F",
     "Land_Cargo_House_V2_F",
     "Land_Cargo_House_V3_F",
