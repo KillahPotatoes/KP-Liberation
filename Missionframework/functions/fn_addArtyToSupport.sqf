@@ -2,7 +2,7 @@
     File: fn_addArtyToSupport.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2023-03-17
-    Last Update: 2023-04-15
+    Last Update: 2023-04-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,9 @@ if (!(player in _objcrew) && side _obj == KPLIB_side_player) then {
     {
         _x addEventHandler ["Killed", {
             params ["_unit", "_killer", "_instigator", "_useEffects"];
-            KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+            if ((side _unit == KPLIB_side_player) && (_unit != player)) then {
+                KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+            };
         }];
     } forEach _objcrew;
 };
@@ -41,21 +43,27 @@ _obj addEventHandler ["GetIn", {
         KPLIB_param_supportModule_arty synchronizeObjectsAdd [vehicle _vehicle];
         _unit addEventHandler ["Killed", {
             params ["_unit", "_killer", "_instigator", "_useEffects"];
-                KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+                if ((side _unit == KPLIB_side_player) && (_unit != player)) then {
+                    KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+                };
         }];
     };
 }];
 
 _obj addEventHandler ["GetOut", {
     params ["_vehicle", "_role", "_unit", "_turret"];
-    KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+    if ((side _unit == KPLIB_side_player) && (_unit != player)) then {
+        KPLIB_param_supportModule_arty synchronizeObjectsRemove [_unit];
+    };
 }];
 
 _obj addEventHandler ["Killed", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
     private _crews = crew _unit;
-    KPLIB_param_supportModule_arty synchronizeObjectsRemove _crews;
     KPLIB_param_supportModule_arty synchronizeObjectsRemove [vehicle _unit];
+    if (!(player in _crews)) then {
+        KPLIB_param_supportModule_arty synchronizeObjectsRemove _crews;
+    };
 }];
 
 true
