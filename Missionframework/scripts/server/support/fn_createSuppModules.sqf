@@ -43,11 +43,11 @@ publicVariable "KPLIB_param_supportModule_arty";
     // Hide and move the three HQ entities created at zero pos to gamelogic position. BIS scripts only hides them local for the creator
     waitUntil {!isNil "BIS_SUPP_HQ_WEST" && !isNil "BIS_SUPP_HQ_EAST" && !isNil "BIS_SUPP_HQ_GUER"};
     {
-        hideObjectGlobal _x;
         _x setPosASL getPosASL gamelogic;   // avoid HQ entities are drown and dying
         _x setCaptive true;                 // hide HQ entities from radiotower detector and unitcap
-        removeAllWeapons _x;                // avoid HQ entities becoming killing machines
         _x setUnitCombatMode "BLUE";        // setes never engage
+        removeAllWeapons _x;                // avoid HQ entities becoming killing machines
+        hideObjectGlobal _x;
     } forEach [BIS_SUPP_HQ_WEST, BIS_SUPP_HQ_EAST, BIS_SUPP_HQ_GUER]
 };
 
