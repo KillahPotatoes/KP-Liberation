@@ -44,8 +44,10 @@ while {true} do {
     };
     {
         private _civx = _x;
+        private _isHealed = false;
         if !(_civx in _healed_civs) then {
-            if ((damage _civx < 0.5) || !alive _civx) then {
+            if (KPLIB_ace_med) then {_isHealed = _civx getVariable ["KPLIB_isHealed", false];} else {_isHealed = (damage _civx < 0.5);};
+            if (_isHealed || !alive _civx) then {
                 (_markers select _forEachIndex) setMarkerAlpha 0;
                 _healed_civs pushBack _civx;
                 if (alive _civx) then {
