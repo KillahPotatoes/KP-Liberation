@@ -400,10 +400,10 @@ class FSM
                          "// the issue on dedicated servers, if using that module." \n
                          "BIS_marta_mainscope setvariable [""rules""," \n
                          "[" \n
-                         "	[""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_enemy isEqualTo west)]," \n
-                         "	[""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_player isEqualTo west)]," \n
-                         "	[""n_"", [0, 0.5, 0, 1]]," \n
-                         "	[""n_"", [0.4, 0, 0.5, 1]]" \n
+                         "    [""o_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_enemy isEqualTo west)]," \n
+                         "    [""b_"", [[0.5, 0, 0, 1], [0, 0.3, 0.6, 1]] select (KPLIB_side_player isEqualTo west)]," \n
+                         "    [""n_"", [0, 0.5, 0, 1]]," \n
+                         "    [""n_"", [0.4, 0, 0.5, 1]]" \n
                          "], true];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links

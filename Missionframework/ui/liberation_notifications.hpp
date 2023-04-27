@@ -150,21 +150,21 @@ class CfgNotifications {
     class lib_intel_sar_succeeded: lib_secondary_fob_destroyed {
         description = $STR_NOTIFICATION_SAR_SUCCESS;
     };
-	class lib_secondary_civ_supplies_no_room: lib_secondary_fob_destroyed {
-		description = $STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM;
+    class lib_secondary_civ_supplies_no_room: lib_secondary_fob_destroyed {
+        description = $STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM;
         color[] = { 1, 0, 0, 1 };
         sound = "taskFailed";
-	};
-	class lib_secondary_bingo_fuel_no_room: lib_secondary_fob_destroyed {
-		description = $STR_NOTIFICATION_BINGO_FUEL_NO_ROOM;
+    };
+    class lib_secondary_bingo_fuel_no_room: lib_secondary_fob_destroyed {
+        description = $STR_NOTIFICATION_BINGO_FUEL_NO_ROOM;
         color[] = { 1, 0, 0, 1 };
         sound = "taskFailed";
-	};
-	class lib_secondary_rearm_outpost_no_room: lib_secondary_fob_destroyed {
-		description = $STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM;
+    };
+    class lib_secondary_rearm_outpost_no_room: lib_secondary_fob_destroyed {
+        description = $STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM;
         color[] = { 1, 0, 0, 1 };
         sound = "taskFailed";
-	};
+    };
     class lib_restart_60_s: lib_default_notification {
         title = $STR_NOTIFICATION_RESTART_TITLE;
         description = $STR_NOTIFICATION_RESTART_SECOND;

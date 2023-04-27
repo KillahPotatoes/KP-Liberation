@@ -103,10 +103,10 @@
 #define COLOR_BRIGHTGREEN { 0.2,1,0.2,1 }
 #define COLOR_BLUE {0.2,0.2,1,1}
 
-#define SHADOW_X  0.0008
+#define SHADOW_X 0.0008
 #define SHADOW_Y 0.0011
 #define ICONE_SPACY 0.025
 
-#define BORDERSIZE	0.01
+#define BORDERSIZE 0.01
 
 #define MAP_IDC 10023

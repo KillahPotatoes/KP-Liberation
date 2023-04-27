@@ -1,6 +1,6 @@
 class CfgSounds {
     sounds[] = {};
-    class parasound	{
+    class parasound    {
         name = "parasound";
         sound[] = {"res\c130.ogg", 1.0, 1};
         titles[] = {};
@@ -415,7 +415,7 @@ class RscTitles {
             h = 0.03 * safezoneH;
             colorText[] = {0.7, 0, 0, 1};
         };
-        class ActiveSectors	{
+        class ActiveSectors    {
             idc = 516;
             type = CT_STRUCTURED_TEXT;
             colorBackground[] = COLOR_NOALPHA;

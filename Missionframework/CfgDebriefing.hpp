@@ -10,7 +10,7 @@
 */
 
 class End1 {
-    title =	$STR_SORRY;
+    title = $STR_SORRY;
     subtitle = "";
     description = $STR_COMMANDER_NOT_AUTHORIZED;
     pictureBackground = "";
