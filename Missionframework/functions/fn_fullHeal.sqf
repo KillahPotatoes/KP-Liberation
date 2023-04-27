@@ -2,7 +2,7 @@
     File: fn_fullHeal.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2023-03-17
-    Last Update: 2023-04-10
+    Last Update: 2023-04-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -34,9 +34,10 @@ private _healedunits = [];
 
 {
     private _target = _x;
-    _target setDamage 0;
-    if (KPLIB_ace_med) then {[_caller, _target] call ace_medical_treatment_fnc_fullHeal;};
-    if (_target isNotEqualTo _caller) then {_healedunits pushBack _target;};
+    if (KPLIB_ace_med) then {[_caller, _target] call ace_medical_treatment_fnc_fullHeal;} else {_target setDamage 0;};
+    if (isPlayer _target) then {
+        if (_target isNotEqualTo _caller) then {_healedunits pushBack _target;};
+    };
 } forEach _targetunits;
 
 [localize "STR_FULLHEAL_DONE"] remoteExecCall ["hint", _caller];
