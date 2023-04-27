@@ -477,6 +477,10 @@
             <Czech>V blízkosti není vozidlo schopné přepravovat bedny</Czech>
             <Japanese>貨物を搭載可能な車両が近くにありません。</Japanese>
         </Key>
+        <Key ID="STR_PARAMS_FUELCONSUMPTION">
+            <Original>Enable KP Fuel Consumption System</Original>
+            <Japanese>KP 燃料消費量増加システムを有効化</Japanese>
+        </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL">
             <Original>Allow Full Heal from Action menu in FOB</Original>
             <Japanese>FOBのアクションメニューから完全治療を許可する</Japanese>

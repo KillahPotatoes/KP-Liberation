@@ -263,6 +263,12 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
+    class FuelConsumption {
+        title = $STR_PARAMS_FUELCONSUMPTION;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
     class AiLogistics {
         title = $STR_PARAMS_AILOGISTICS;
         values[] = {0, 1};

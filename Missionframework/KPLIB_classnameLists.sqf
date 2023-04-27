@@ -10,6 +10,11 @@
         Check the comments above each variable for details.
 */
 
+// Vehicle classnames which should be ignored on kp_fuel_consumption.
+kp_fuel_ignore_vehicles = [
+    "gm_ge_army_bicycle_01_oli"
+];
+
 // Vehicle classnames which also function as ACE medical vehicles.
 KPLIB_medical_vehicles = [
     "B_T_Truck_01_medical_F",
