@@ -43,7 +43,6 @@ _civ addAction [
             _target setDamage 0;
             [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
             _target setVariable ["KPLIB_isHealed", true, true];
-            removeAllActions _target;
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";
             sleep 3;
@@ -55,7 +54,7 @@ _civ addAction [
     true,
     true,
     "",
-    "alive _civ",
+    "alive _originalTarget",
     3
 ];
 

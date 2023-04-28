@@ -50,6 +50,7 @@ while {true} do {
             if (_isHealed || !alive _civx) then {
                 (_markers select _forEachIndex) setMarkerAlpha 0;
                 _healed_civs pushBack _civx;
+                removeAllActions _civx;
                 if (alive _civx) then {
                     [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
                     sleep 2;
