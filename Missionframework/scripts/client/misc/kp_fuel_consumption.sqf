@@ -3,7 +3,7 @@ kp_fuel_consumption.sqf
 Author: Wyqer
 Website: www.killahpotatoes.de
 Date: 2017-02-02
-Update: 2023-04-26
+Update: 2023-05-11
 
 Description:
 This script handles the fuel consumption of vehicles, so that refueling will be necessary more often.
@@ -42,10 +42,11 @@ if (isNil "kp_fuel_ignore_vehicles") then {
 if (_vehicle in kp_fuel_ignore_vehicles) exitWith {};
 if (!(_vehicle in kp_fuel_consumption_vehicles)) then {
     kp_fuel_consumption_vehicles pushBack _vehicle;
+    private _maxspeed = (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "maxSpeed") * 0.9);
     while {local _vehicle} do {
         if (isEngineOn _vehicle) then {
             if (speed _vehicle > 5) then {
-                if (speed _vehicle > (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "maxSpeed") * 0.9)) then {
+                if (speed _vehicle > _maxspeed) then {
                     _vehicle setFuel (fuel _vehicle - (1 / (_kp_max_consumption * 60)));
                 } else {
                     _vehicle setFuel (fuel _vehicle - (1 / (_kp_normal_consumption * 60)));
