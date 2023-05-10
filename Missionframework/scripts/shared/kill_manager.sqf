@@ -16,7 +16,6 @@ if (isServer) then {
             if (KPLIB_kill_debug > 0) then {["KPLIB_ace_killer received on server", "KILL"] call KPLIB_fnc_log;};
             _killer = KPLIB_ace_killer;
             KPLIB_ace_killer = objNull;
-            publicVariable "KPLIB_ace_killer";
         };
     };
 
@@ -163,6 +162,6 @@ if (isServer) then {
     if (KPLIB_ace_med && local _unit) then {
         if (KPLIB_kill_debug > 0) then {[format ["_unit is local to: %1", debug_source], "KILL"] remoteExecCall ["KPLIB_fnc_log", 2];};
         KPLIB_ace_killer = _unit getVariable ["ace_medical_lastDamageSource", _killer];
-        publicVariable "KPLIB_ace_killer";
+        publicVariableServer "KPLIB_ace_killer";
     };
 };
