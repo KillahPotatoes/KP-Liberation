@@ -23,8 +23,8 @@ if (dorepackage > 0) then {
 
     private _spawnpos = zeropos;
     while {_spawnpos distance2d zeropos < 1000} do {
-        _spawnpos = (getPos player) findEmptyPosition [10, 250, 'B_Heli_Transport_01_F'];
-        if (_spawnpos isEqualTo []) then {_spawnpos = zeropos;};
+        _spawnpos = (getPosASL player) findEmptyPosition [10, 250, 'B_Heli_Transport_01_F'];
+        if (_spawnpos isEqualTo []) then {_spawnpos = (getPosASL player) findEmptyPosition [0, 250, 'B_Heli_Transport_01_F'];};
     };
 
     if (dorepackage == 1) then {

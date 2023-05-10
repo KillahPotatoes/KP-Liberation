@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-03-03
+    Last Update: 2023-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -41,7 +41,7 @@ if (_precise) then {
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
         _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, _classname];
-        if (_i isEqualTo 10) exitWith {};
+        if (_i isEqualTo 10) exitWith {_spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [0, 100, _classname];};
     };
 };
 

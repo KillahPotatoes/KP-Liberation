@@ -2,7 +2,7 @@
     File: fn_spawnRegularSquad.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-03-03
+    Last Update: 2023-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -30,7 +30,7 @@ private _i = 0;
 while {_spawnPos isEqualTo []} do {
     _i = _i + 1;
     _spawnPos = (_sectorPos getPos [random 50, random 360]) findEmptyPosition [5, 100, "B_Heli_Light_01_F"];
-    if (_i isEqualTo 10) exitWith {};
+    if (_i isEqualTo 10) exitWith {_spawnPos = (_sectorPos getPos [random 50, random 360]) findEmptyPosition [0, 100, "B_Heli_Light_01_F"];};
 };
 
 if (_spawnPos isEqualTo []) exitWith {
