@@ -1,1 +1,1 @@
-"ServerCommandPassword"
+"ServerCommandPassword1"
