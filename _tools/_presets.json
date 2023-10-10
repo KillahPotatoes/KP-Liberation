@@ -264,7 +264,7 @@
         "workshopId": ""
     }
     {
-        "sourceFolder": "kp_liberation.cup_Chernarus_A3",
+        "sourceFolder": "kp_liberation.cup_chernarus_A3",
         "missionName": "kp_liberation",
         "map": "Chernarus2020",
         "configFile": "kp_liberation_config.sqf",
