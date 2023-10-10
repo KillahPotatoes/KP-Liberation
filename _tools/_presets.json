@@ -266,7 +266,7 @@
     {
         "sourceFolder": "kp_liberation.cup_chernarus_A3",
         "missionName": "kp_liberation",
-        "map": "Chernarus2020",
+        "map": "cup_chernarus_s",
         "configFile": "kp_liberation_config.sqf",
         "variables": {
             "KP_liberation_preset_blufor": 6,
