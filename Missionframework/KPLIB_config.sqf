@@ -367,7 +367,8 @@ KPLIB_surrender_chance = 80;
 
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KPLIB_battlegroup_clearance = [
-    "song_bin_tanh"
+    "song_bin_tanh",
+    "Cam_Lao_Nam"
 ];
 
 // Automatic refill magazines on redeploy and load arsenal. true means fill.
