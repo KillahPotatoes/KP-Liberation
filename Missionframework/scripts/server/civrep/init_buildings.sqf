@@ -2,6 +2,7 @@ private _start = diag_tickTime;
 if (isServer) then {["init_buildings.sqf initialising...", "CIVREP"] call KPLIB_fnc_log;};
 
 switch (worldName) do {
+    case "altis": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
     case "chernarus_summer": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
     case "Chernarus_Winter": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
     case "chernarus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\chernarus.sqf"};
@@ -19,7 +20,7 @@ switch (worldName) do {
     case "Tanoa": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\tanoa.sqf"};
     case "WL_Rosche": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\wl_rosche.sqf"};
     case "xcam_taunus": {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\xcam_taunus.sqf"};
-    default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\altis.sqf"};
+    default {call compile preprocessFileLineNumbers "scripts\server\civrep\ignored\allterrain.sqf"};
 };
 
 KPLIB_cr_sectorbuildings = [];
