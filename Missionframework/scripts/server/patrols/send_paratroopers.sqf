@@ -26,8 +26,16 @@ if (isNull _chopper_type) then {
     _pilot_group = createGroup [KPLIB_side_enemy, true];
     (crew _newvehicle) joinSilent _pilot_group;
 
-    _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _newvehicle);
+    _newvehicle addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];
+    {_x addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];} forEach (crew _newvehicle);
 } else {
     _newvehicle = _chopper_type;
     _pilot_group = group _newvehicle;

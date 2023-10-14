@@ -332,8 +332,16 @@ while { true } do {
                 _vehicle setDamage 0;
 
                 if(buildtype != 6) then {
-                    _vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-                    { _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; } foreach (crew _vehicle);
+                    _vehicle addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];
+                    { _x addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }]; } foreach (crew _vehicle);
                 };
             };
 

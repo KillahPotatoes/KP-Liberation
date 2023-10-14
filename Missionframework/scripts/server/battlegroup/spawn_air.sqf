@@ -18,9 +18,17 @@ for "_i" from 1 to _planes_number do {
     _plane = createVehicle [_class, _spawnPos, [], 0, "FLY"];
     createVehicleCrew _plane;
     _plane flyInHeight (120 + (random 180));
-    _plane addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    _plane addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];
     [_plane] call KPLIB_fnc_addObjectInit;
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _plane);
+    {_x addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+     
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];} forEach (crew _plane);
     (crew _plane) joinSilent _grp;
     sleep 1;
 };

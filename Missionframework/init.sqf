@@ -60,6 +60,15 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [] call bis_fnc_reviveInit;
 };
 
+["KPLib_manageKills",  
+{
+	params ["_unit","_killer"];
+	[_unit,_killer] call kill_manager;
+}
+] call CBA_fnc_addEventHandler;
+
+
+
 KPLIB_init = true;
 
 // Notify clients that server is ready
