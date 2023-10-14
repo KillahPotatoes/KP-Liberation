@@ -144,18 +144,14 @@ params ["_unit", "_killer"];
         };
     };
 
-    // Body/wreck cleanup 
+    // Body/wreck cleanup
 
-    if (!isplayer _unit) then {
-    [{
-        params ["_unit"];
-        hideBody _unit;
+    if (!isPlayer _unit) then {
         [{
             params ["_unit"];
+            if (_unit isKindOf "CAManBase") exitwith {
+                hideBody _unit;
+            }
             deleteVehicle _unit;
-        }, [_unit], 10] call CBA_fnc_waitAndExecute;
-        
-        
-    }, [_unit], GRLIB_cleanup_delay] call CBA_fnc_waitAndExecute;
+        }, [_unit], GRLIB_cleanup_delay] call CBA_fnc_waitAndExecute;
     };
-
