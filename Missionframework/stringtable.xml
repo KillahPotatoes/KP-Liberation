@@ -1351,28 +1351,28 @@
             <Japanese>この地域にはサプライを必要としている友好的な町がありません。解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_TEXT">
-            <Japanese>%1 の工場は燃料を要求している。</Japanese>
             <Original>Our factory request fuel at %1.</Original>
+            <Japanese>%1 の工場は燃料を要求している。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_COMPLETE_TEXT">
-            <Japanese>燃料の輸送に成功した。工場は感謝しいくつかの資源を生産しました!</Japanese>
             <Original>Fuel have been delivered. The factory was thanked and produced several resources!</Original>
+            <Japanese>燃料の輸送に成功した。工場は感謝しいくつかの資源を生産しました!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_NO_ROOM">
-            <Japanese>この地域には燃料を必要としている友好的な工場がありません。解放する必要があります!</Japanese>
             <Original>No friendly factory in the area to deliver fuel to. Liberate one!</Original>
+            <Japanese>この地域には燃料を必要としている友好的な工場がありません。解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_TEXT">
-            <Japanese>%1 の軍事基地は弾薬を要求している。</Japanese>
             <Original>Our outpost request ammunition at %1.</Original>
+            <Japanese>%1 の軍事基地は弾薬を要求している。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_COMPLETE_TEXT">
-            <Japanese>弾薬の輸送に成功した。軍事基地によって敵の警戒度は減少した!</Japanese>
             <Original>Ammunition have been delivered. OPFOR alert level reduced by outpost!</Original>
+            <Japanese>弾薬の輸送に成功した。軍事基地によって敵の警戒度は減少した!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM">
-            <Japanese>この地域には弾薬を必要としている友軍の軍事基地がありません。解放する必要があります!</Japanese>
             <Original>No friendly outpost in the area to deliver ammunition to. Liberate one!</Original>
+            <Japanese>この地域には弾薬を必要としている友軍の軍事基地がありません。解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_PRISONER_TEXT">
             <Original>We have interrogated a prisoner.</Original>
@@ -4229,32 +4229,32 @@
             <Japanese>フライトコントロール</Japanese>
         </Key>
         <Key ID="STR_HELI_SLOT">
-            <Original>Helipad</Original>
-            <German>Helikopterlandeplatz</German>
-            <Spanish>Helipuerto</Spanish>
-            <Russian>Вертолетная площадка</Russian>
-            <Italian>Eliporto</Italian>
-            <Chinesesimp>停机坪</Chinesesimp>
-            <Chinese>停機坪</Chinese>
-            <Turkish>Heliped</Turkish>
-            <Portuguese>Heliporto</Portuguese>
-            <Korean>헬기착륙장</Korean>
-            <Czech>Helipad</Czech>
-            <Japanese>ヘリパッド</Japanese>
+            <Original>Helicopter Slot</Original>
+            <German>Helikopter Produktionsplatz</German>
+            <Spanish>Ranura de Producción de Helicópteros</Spanish>
+            <Russian>Слот для производства вертолетов</Russian>
+            <Italian>Slot Produzione Elicotteri</Italian>
+            <Chinesesimp>直升机生产槽</Chinesesimp>
+            <Chinese>直升機生產槽</Chinese>
+            <Turkish>Helikopter Üretim Yuvası</Turkish>
+            <Portuguese>Fenda de Produção de Helicópteros</Portuguese>
+            <Korean>헬리콥터 제조 슬롯</Korean>
+            <Czech>Slot pro výrobu vrtulníků</Czech>
+            <Japanese>ヘリコプター製造スロット</Japanese>
         </Key>
         <Key ID="STR_PLANE_SLOT">
-            <Original>Tent Hangar</Original>
-            <German>Zelthangar</German>
-            <Spanish>Hangar de aviones</Spanish>
-            <Russian>Ангар</Russian>
-            <Italian>Hangar Aereo</Italian>
-            <Chinesesimp>机库</Chinesesimp>
-            <Chinese>機庫</Chinese>
-            <Turkish>Çadırdan hangar</Turkish>
-            <Portuguese>Hangar para aeronaves</Portuguese>
-            <Korean>항공기 격납고</Korean>
-            <Czech>Stanový Hangár</Czech>
-            <Japanese>固定翼機ハンガー</Japanese>
+            <Original>Plane Slot</Original>
+            <German>Flugzeug Produktionsplatz</German>
+            <Spanish>Ranura de Producción de Aviones</Spanish>
+            <Russian>Слот для производства самолетов</Russian>
+            <Italian>Slot Produzione Aerei</Italian>
+            <Chinesesimp>飞机生产槽</Chinesesimp>
+            <Chinese>飛機生產槽</Chinese>
+            <Turkish>Uçak Üretim Yuvası</Turkish>
+            <Portuguese>Fenda de Produção de Aviões</Portuguese>
+            <Korean>비행기 제조 슬롯</Korean>
+            <Czech>Slot pro výrobu letadel</Czech>
+            <Japanese>航空機製造スロット</Japanese>
         </Key>
         <Key ID="STR_BOX_CANTSTORE">
             <Original>There is no free storage area nearby.</Original>
