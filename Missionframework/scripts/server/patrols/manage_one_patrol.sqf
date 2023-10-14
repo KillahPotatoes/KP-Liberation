@@ -1,5 +1,5 @@
 params [ "_minimum_readiness", "_is_infantry" ];
-private [ "_headless_client" ];
+private [ "_headless_client", "_grp", "_squad"];
 
 waitUntil { !isNil "KPLIB_sectors_player" };
 waitUntil { !isNil "KPLIB_enemyReadiness" };
@@ -27,6 +27,16 @@ while { KPLIB_endgame == 0 } do {
     _sector_spawn_pos = [(((markerpos _spawn_marker) select 0) - 500) + (random 1000),(((markerpos _spawn_marker) select 1) - 500) + (random 1000),0];
 
     if (_is_infantry) then {
+
+        private _sectors_spawn = [];
+        {
+            if ( _sector_spawn_pos distance (markerpos _x) < 2500) then {
+                _sectors_spawn pushBack _x;
+            };
+        } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
+        private _sector_spawn = selectRandom _sectors_spawn;
+        if (!isNil "_sector_spawn") then {_sector_spawn_pos = markerPos _sector_spawn};
+
         _grp = createGroup [KPLIB_side_enemy, true];
         _squad = [] call KPLIB_fnc_getSquadComp;
         {
@@ -51,7 +61,7 @@ while { KPLIB_endgame == 0 } do {
         _grp = group (_crewmens select 0);
     };
 
-    [_grp] spawn patrol_ai;
+    [_grp] remoteExec ["patrol_ai", 2];
 
     _started_time = time;
     _patrol_continue = true;
