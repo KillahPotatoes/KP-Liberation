@@ -19,14 +19,14 @@ for "_i" from 1 to _planes_number do {
     createVehicleCrew _plane;
     _plane flyInHeight (120 + (random 180));
     _plane addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-     
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];
     [_plane] call KPLIB_fnc_addObjectInit;
     {_x addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-     
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];} forEach (crew _plane);
     (crew _plane) joinSilent _grp;

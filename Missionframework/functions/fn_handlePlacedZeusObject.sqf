@@ -33,8 +33,8 @@ if (_vehicle) then {
     // Add kill manager and object init to possible crew units
     {
         _x addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-     
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];
         [_x] call KPLIB_fnc_addObjectInit;
@@ -44,8 +44,8 @@ if (_vehicle) then {
 // Apply kill manager, if it's not a crate
 if !(_crate) then {
     _obj addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-     
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
+
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];
 } else {

@@ -35,8 +35,7 @@ isNil {
 
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
     _unit addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-     
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];
 
