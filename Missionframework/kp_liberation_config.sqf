@@ -109,7 +109,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 28 = SFP (Woodland)
 29 = SFP (Desert)
 30 = LDF (Contact DLC) */
-KP_liberation_preset_blufor = 0;
+KP_liberation_preset_blufor = 6;
 
 /* OPFOR preset:
 0  = Custom (default vanilla CSAT)
