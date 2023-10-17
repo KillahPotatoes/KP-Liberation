@@ -109,6 +109,8 @@ heavy_vehicles = [
     ["rhsusf_m113_usarmy_MK19",200,60,100],                             // M113A3 (Mk19)
     ["rhsusf_m113_usarmy_medical",200,0,100],                           // M113A3 (Medical)
     ["rhsusf_stryker_m1126_m2_wd",200,150,100],                         // M1126 Stryker (M2)
+    ["rhsusf_stryker_m1126_mk19_d",200,150,100],                        // M1126 Stryker (MK19)
+    ["rhsusf_stryker_m1134_d",200,150,100],                             // M1134 Stryker ATGM
     ["RHS_M2A2_BUSKI_WD",300,200,150],                                  // M2A2ODS (Busk I)
     ["RHS_M2A3_BUSKIII_wd",300,250,175],                                // M2A3 (Busk III)
     ["RHS_M6_wd",300,250,175],                                          // M6A2
@@ -116,7 +118,8 @@ heavy_vehicles = [
     ["rhsusf_m1a2sep1tuskiiwd_usarmy",500,400,250],                     // M1A2SEPv1 (Tusk II)
     ["rhsusf_m109_usarmy",600,1250,300],                                // M109A6
 	["BWA3_Panzerhaubitze2000_Fleck",750,0,500],						// Panzer 2000 Howitzer
-	["BWA3_Leopard2_Fleck",500,400,300]									//Leopard 2A6
+	["BWA3_Leopard2_Fleck",500,400,300],								//Leopard 2A6
+    ["rhs_t14_tv",500,400,250]                                          // T-14 (OP but Cam wants)
 ];
 
 air_vehicles = [
@@ -148,6 +151,7 @@ air_vehicles = [
     ["FIR_F15C",1250,1250,450],                                         // F-15C Eagle
     ["FIR_F15D",1250,1250,450],                                         // F-15D Eagle
     ["FIR_F15E",1250,1500,450],                                         // F-15E Strike Eagle
+    ["FIR_F15EX_Blank",1250,1500,450],                                  // F-15EX
     ["JS_JC_FA18E",1500,1750,450],                                      // F/A-18 E Super Hornet
     ["JS_JC_FA18F",1500,1750,450],                                      // F/A-18 F Super Hornet
     ["USAF_F22",1800,2000,500],                                         // F-22A Raptor
@@ -160,7 +164,8 @@ air_vehicles = [
     ["B_Plane_Fighter_01_Stealth_F",1500,1750,450],                     // F/A-181 Black Wasp II (Stealth)
     ["B_T_VTOL_01_armed_F",750,1500,500],                               // V-44 X Blackfish (Armed)
     ["B_T_VTOL_01_infantry_F",750,0,500],                               // V-44 X Blackfish (Infantry)
-    ["B_T_VTOL_01_vehicle_F",750,0,500]                                 // V-44 X Blackfish (Vehicle)
+    ["B_T_VTOL_01_vehicle_F",750,0,500],                                // V-44 X Blackfish (Vehicle)
+    ["USAF_AC130U",700,700,300]                                         // C-130U Spooky
 ];
 
 static_vehicles = [
