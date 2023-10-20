@@ -151,7 +151,7 @@ params ["_unit", "_killer"];
             params ["_unit"];
             if (_unit isKindOf "CAManBase") exitwith {
                 hideBody _unit;
-            }
+            };
             deleteVehicle _unit;
-        }, [_unit], GRLIB_cleanup_delay] call CBA_fnc_waitAndExecute;
+        }, [_unit], KPLIB_cleanup_delay] call CBA_fnc_waitAndExecute;
     };
