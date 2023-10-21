@@ -17,7 +17,7 @@ stats_readiness_earned = stats_readiness_earned + _KPLIB_enemyReadiness_increase
 KPLIB_sectors_player pushback _liberated_sector; publicVariable "KPLIB_sectors_player";
 stats_sectors_liberated = stats_sectors_liberated + 1;
 
-reset_battlegroups_ai = true; publicVariable "reset_battlegroups_ai";
+["KPLIB_ResetBattleGroups"] call CBA_fnc_serverEvent;
 
 if (_liberated_sector in KPLIB_sectors_factory) then {
     {

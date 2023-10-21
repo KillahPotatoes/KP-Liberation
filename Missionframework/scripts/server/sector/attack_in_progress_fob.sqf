@@ -49,7 +49,7 @@ if ( KPLIB_endgame == 0 ) then {
         sleep 3;
         KPLIB_sectors_fob = KPLIB_sectors_fob - [_thispos];
         publicVariable "KPLIB_sectors_fob";
-        reset_battlegroups_ai = true;
+        ["KPLIB_ResetBattleGroups"] call CBA_fnc_serverEvent;
         [_thispos] call KPLIB_fnc_destroyFob;
         [] spawn KPLIB_fnc_doSave;
         stats_fobs_lost = stats_fobs_lost + 1;
