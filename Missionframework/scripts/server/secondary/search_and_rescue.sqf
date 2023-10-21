@@ -55,7 +55,7 @@ while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grpp
 
 _waypoint = _grppatrol addWaypoint [(_patrolcorners select 0), 0];
 _waypoint setWaypointType "CYCLE";
-{_x doFollow (leader _grppatrol)} foreach units _grppatrol;
+{doStop _x; _x doFollow (leader _grppatrol)} foreach units _grppatrol;
 
 private _grpsentry = createGroup [KPLIB_side_enemy, true];
 private _nbsentry = 2 + (floor (random 3));
@@ -100,7 +100,7 @@ if ( _alive_crew_count == 0 ) then {
     private _grp = createGroup [KPLIB_side_player, true];
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-    {_x doFollow (leader _grp)} foreach units _grp;
+    {doStop _x; _x doFollow leader group _x} foreach units _grp;
     { [ _x ] spawn {
         sleep 600;
         if (isNull objectParent (_this # 0)) then {deleteVehicle (_this # 0)} else {(objectParent (_this # 0)) deleteVehicleCrew (_this # 0)};

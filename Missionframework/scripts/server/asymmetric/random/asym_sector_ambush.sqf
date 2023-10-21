@@ -43,7 +43,7 @@ while {(_sector in KPLIB_asymmetric_sectors) && (!isNull _grp)} do {
         {
             _x setUnitPos "AUTO";
         } forEach (units _grp);
-        (units _grp) doFollow (leader _grp);
+        {doStop _x; _x doFollow leader group _x} foreach units _grp;
         _grp setBehaviour "COMBAT";
         _grp setCombatMode "RED";
         private _waypoint = _grp addWaypoint [markerpos _sector, 20];

@@ -12,7 +12,7 @@ if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
 sleep 5;
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 sleep 1;
-{_x doFollow leader _grp} foreach units _grp;
+{doStop _x; _x doFollow leader group _x} foreach units _grp;
 sleep 1;
 
 if (_is_infantry) then {
@@ -63,7 +63,7 @@ waitUntil {
 if (((units _grp) findIf {alive _x}) != -1) then {
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0)};
     sleep 1;
-    {_x doFollow leader _grp} foreach units _grp;
+    {doStop _x; _x doFollow leader group _x} foreach units _grp;
     sleep 1;
     _wpPositions = [
         _basepos getPos [random [50, 100, 150], random [0, 36, 72]],
