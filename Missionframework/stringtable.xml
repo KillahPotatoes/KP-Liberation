@@ -54,6 +54,20 @@
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr</Original>
         </Key>
+        <Key ID="STR_STARTBASE">
+			<Original>OPERATION START POINT</Original>
+			<German>OPERATIONSBEGINN</German>
+			<Spanish>INICIO DE LA OPERACIÓN</Spanish>
+			<Russian>СТАРТ ОПЕРАЦИИ</Russian>
+			<Italian>INIZIO OPERAZIONE</Italian>
+			<Chinesesimp>作战起始点</Chinesesimp>
+			<Chinese>作战起始点</Chinese>
+			<Turkish>OPERASYON BAŞLANGICI</Turkish>
+			<Portuguese>INÍCIO DA OPERAÇÃO</Portuguese>
+			<Korean>작전 시작 지점</Korean>
+			<Czech>ZAČÁTEK OPERACE</Czech>
+			<Japanese>作戦開始地点</Japanese>
+        </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>
             <French>Déploiement</French>

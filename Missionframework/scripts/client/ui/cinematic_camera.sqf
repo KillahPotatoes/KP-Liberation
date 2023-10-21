@@ -250,7 +250,7 @@ while { cinematic_camera_started } do {
                 if ( isPlayer _camtarget ) then { _unitname = name _camtarget };
                 private _nearest_sector = "";
                 if ( _position distance startbase < 300 ) then {
-                    _nearest_sector = "BEGIN OF OPERATION";
+                    _nearest_sector = localize "STR_STARTBASE"
                 } else {
                     _nearest_sector = [300, _position ] call KPLIB_fnc_getNearestSector;
                     if ( _nearest_sector != "" ) then {
