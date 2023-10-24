@@ -91,7 +91,7 @@ if (_classname in KPLIB_o_militiaVehicles) then {
     }];} forEach _crew;
 };
 
-// Add MPKilled and GetIn EHs and enable damage again
+// Add Killed and GetIn EHs and enable damage again
 _newvehicle addEventHandler ["Killed", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
 
