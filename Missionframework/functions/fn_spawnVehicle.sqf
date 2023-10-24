@@ -27,7 +27,7 @@ params [
 
 if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; objNull};
 if (_classname isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; objNull};
-if (!canSuspend) exitWith {_this spawn KPLIB_fnc_spawnVehicle};
+
 
 private _newvehicle = objNull;
 private _spawnpos = [];
@@ -41,7 +41,7 @@ if (_precise) then {
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
         _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, _classname];
-        if (_i isEqualTo 10) exitWith {};
+        if (_i isEqualTo 10) exitWith {_spawnPos = zeroPos};
     };
 };
 
@@ -83,13 +83,11 @@ if (_classname in KPLIB_o_militiaVehicles) then {
     private _grp = createGroup [KPLIB_side_enemy, true];
     private _crew = units (createVehicleCrew _newvehicle);
     _crew joinSilent _grp;
-    sleep 0.1;
     {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach _crew;
 };
 
 // Add MPKilled and GetIn EHs and enable damage again
 _newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;
 
