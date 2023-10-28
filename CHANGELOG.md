@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.96.8 (TBD)
+* Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: Ability to carry ressource crates.
 * Added: Scripts/configs to setup and run development environment from VSCode tasks
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Splitted the config file in separate files, as it was getting quite big.

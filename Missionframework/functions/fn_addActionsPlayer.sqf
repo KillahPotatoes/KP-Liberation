@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-09-12
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -368,6 +368,35 @@ _player addAction [
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {build_confirmed isEqualTo 0}
     "
+];
+
+// Drop crate
+_player addAction [
+    ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
+    {
+        params ["_player"];
+        private _crate = _player getVariable ["KPLIB_carriedObject", objNull];
+
+        // prevent players from putting crates inside vehicles
+        private _crateSize = sizeOf typeOf _crate * 1.5;
+        private _nearObjects = (_crate nearEntities [["Man", "Air", "Car", "Tank"], _crateSize]) - [_crate, _player];
+        if (_nearObjects isNotEqualTo []) exitWith {
+            hint format [localize "STR_PLACEMENT_IMPOSSIBLE", count _nearObjects, _crateSize toFixed 0];
+        };
+
+        _player setVariable ["KPLIB_carriedObject", nil];
+        detach _crate;
+        _crate awake true;
+    },
+    nil,
+    -504,
+    true,
+    false,
+    "",
+    toString {
+        alive _originalTarget &&
+        build_confirmed == 0 && _this in _this && {!isNull (_this getVariable ["KPLIB_carriedObject", objNull])}
+    }
 ];
 
 true
