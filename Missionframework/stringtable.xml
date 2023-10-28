@@ -55,18 +55,18 @@
             <Original>v0.96.8apr</Original>
         </Key>
         <Key ID="STR_STARTBASE">
-			<Original>OPERATION START POINT</Original>
-			<German>OPERATIONSBEGINN</German>
-			<Spanish>INICIO DE LA OPERACIÓN</Spanish>
-			<Russian>СТАРТ ОПЕРАЦИИ</Russian>
-			<Italian>INIZIO OPERAZIONE</Italian>
-			<Chinesesimp>作战起始点</Chinesesimp>
-			<Chinese>作战起始点</Chinese>
-			<Turkish>OPERASYON BAŞLANGICI</Turkish>
-			<Portuguese>INÍCIO DA OPERAÇÃO</Portuguese>
-			<Korean>작전 시작 지점</Korean>
-			<Czech>ZAČÁTEK OPERACE</Czech>
-			<Japanese>作戦開始地点</Japanese>
+            <Original>OPERATION START POINT</Original>
+            <German>OPERATIONSBEGINN</German>
+            <Spanish>INICIO DE LA OPERACIÓN</Spanish>
+            <Russian>СТАРТ ОПЕРАЦИИ</Russian>
+            <Italian>INIZIO OPERAZIONE</Italian>
+            <Chinesesimp>作战起始点</Chinesesimp>
+            <Chinese>作战起始点</Chinese>
+            <Turkish>OPERASYON BAŞLANGICI</Turkish>
+            <Portuguese>INÍCIO DA OPERAÇÃO</Portuguese>
+            <Korean>작전 시작 지점</Korean>
+            <Czech>ZAČÁTEK OPERACE</Czech>
+            <Japanese>作戦開始地点</Japanese>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>
@@ -6132,18 +6132,18 @@
             <Japanese>近くのAIを置き換える</Japanese>
         </Key>
         <Key ID="STR_CR_KILLMSG">
-			<Original>A civilian named %1 was killed by %2!</Original>
-			<German>Ein Zivilist namens %1 wurde von %2 getötet!</German>
-			<Spanish>¡Un civil llamado %1 fue asesinado por %2!</Spanish>
-			<Russian>Гражданин по имени %1 был убит %2!</Russian>
-			<Italian>Un civile di nome %1 è stato ucciso da %2!</Italian>
-			<Chinesesimp>一个名叫 %1 的平民被 %2 击杀了！</Chinesesimp>
-			<Chinese>一個名叫 %1 的平民被 %2 擊殺了！</Chinese>
-			<Turkish>%1 adlı bir sivil, %2 tarafından öldürüldü!</Turkish>
-			<Portuguese>Um civil chamado %1 foi morto por %2!</Portuguese>
-			<Korean>%1라는 이름의 시민이 %2에 의해 살해되었습니다!</Korean>
-			<Czech>Občan jménem %1 byl zabit %2!</Czech>
-			<Japanese>民間人 %1 が %2 に殺害された!</Japanese>
+            <Original>A civilian named %1 was killed by %2!</Original>
+            <German>Ein Zivilist namens %1 wurde von %2 getötet!</German>
+            <Spanish>¡Un civil llamado %1 fue asesinado por %2!</Spanish>
+            <Russian>Гражданин по имени %1 был убит %2!</Russian>
+            <Italian>Un civile di nome %1 è stato ucciso da %2!</Italian>
+            <Chinesesimp>一个名叫 %1 的平民被 %2 击杀了！</Chinesesimp>
+            <Chinese>一個名叫 %1 的平民被 %2 擊殺了！</Chinese>
+            <Turkish>%1 adlı bir sivil, %2 tarafından öldürüldü!</Turkish>
+            <Portuguese>Um civil chamado %1 foi morto por %2!</Portuguese>
+            <Korean>%1라는 이름의 시민이 %2에 의해 살해되었습니다!</Korean>
+            <Czech>Občan jménem %1 byl zabit %2!</Czech>
+            <Japanese>民間人 %1 が %2 に殺害された!</Japanese>
         </Key>
         <Key ID="STR_CR_VEHICLEMSG">
             <Original>A civilian's vehicle was seized!</Original>
@@ -6606,17 +6606,17 @@
             <Japanese>モバイルリスポーンのクールダウンまで %1 分。</Japanese>
         </Key>
         <Key ID="STR_CR_RESISTANCE_KILLMSG">
-			<Original>An allied resistance fighter named %1 was killed by %2!</Original>
-			<German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde von %2 getötet!</German>
-			<Spanish>Un aliado de la resistencia llamado %1 ha sido asesinado por %2!</Spanish>
-			<Russian>Союзный боец сопротивления %1 был убит %2!</Russian>
-			<Italian>Un'alleato della resistenza di nome %1 è stato ucciso da %2!</Italian>
-			<Chinesesimp>一位名叫 %1 的友军抵抗军战士被 %2 杀害！</Chinesesimp>
-			<Chinese>一名叫做 %1 的友軍抵抗軍戰士被 %2 杀害！</Chinese>
-			<Portuguese>Um aliado das forças de resistência de nome %1 foi morto por %2!</Portuguese>
-			<Korean>%1라고 하는 아군에 협조한 민병대가 %2에 의해 전사하였습니다!</Korean>
-			<Czech>Spojenecký bojovník domobrany jménem %1 byl zabit %2!</Czech>
-			<Japanese>友好的なレジスタンス %1 が %2 によって殺害された!</Japanese>
+            <Original>An allied resistance fighter named %1 was killed by %2!</Original>
+            <German>Ein verbündeter Widerstandskämpfer mit Namen %1 wurde von %2 getötet!</German>
+            <Spanish>Un aliado de la resistencia llamado %1 ha sido asesinado por %2!</Spanish>
+            <Russian>Союзный боец сопротивления %1 был убит %2!</Russian>
+            <Italian>Un'alleato della resistenza di nome %1 è stato ucciso da %2!</Italian>
+            <Chinesesimp>一位名叫 %1 的友军抵抗军战士被 %2 杀害！</Chinesesimp>
+            <Chinese>一名叫做 %1 的友軍抵抗軍戰士被 %2 杀害！</Chinese>
+            <Portuguese>Um aliado das forças de resistência de nome %1 foi morto por %2!</Portuguese>
+            <Korean>%1라고 하는 아군에 협조한 민병대가 %2에 의해 전사하였습니다!</Korean>
+            <Czech>Spojenecký bojovník domobrany jménem %1 byl zabit %2!</Czech>
+            <Japanese>友好的なレジスタンス %1 が %2 によって殺害された!</Japanese>
         </Key>
         <Key ID="STR_PARAMS_DEBUG_SAVE">
             <Original>Gamedata saving</Original>
