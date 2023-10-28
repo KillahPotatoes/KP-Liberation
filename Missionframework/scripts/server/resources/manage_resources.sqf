@@ -1,3 +1,5 @@
+scriptName "manage_resources";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_production"};
 waitUntil {KPLIB_saveLoaded};

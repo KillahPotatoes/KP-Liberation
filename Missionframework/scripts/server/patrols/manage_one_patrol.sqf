@@ -1,3 +1,5 @@
+scriptName "manage_one_patrol";
+
 params [ "_minimum_readiness", "_is_infantry" ];
 private [ "_headless_client" ];
 

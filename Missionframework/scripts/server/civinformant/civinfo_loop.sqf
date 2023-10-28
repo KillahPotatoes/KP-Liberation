@@ -1,3 +1,5 @@
+scriptName "civinfo_loop";
+
 waitUntil {sleep 10; ({_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital} count KPLIB_sectors_player) > 0};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["Loop spawned on: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
