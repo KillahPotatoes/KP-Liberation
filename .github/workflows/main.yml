@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: docker://node:10-alpine
+      - uses: docker://node:20-alpine
         name: Setup Node
 
       - name: Install dependencies
@@ -26,5 +26,5 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: PBO-Files
-          path: _tools/build/pbo
+          path: build/pbo
 

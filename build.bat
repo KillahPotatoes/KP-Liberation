@@ -10,7 +10,7 @@ if ERRORLEVEL 1 (
 )
 
 rem CD into build tool directory
-cd %~dp0_tools
+cd %~dp0_tools/build-tool
 
 rem Install dependencies and build missions
 call npm install --loglevel=error
