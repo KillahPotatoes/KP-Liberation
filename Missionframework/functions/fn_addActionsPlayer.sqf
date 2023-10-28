@@ -376,6 +376,14 @@ _player addAction [
     {
         params ["_player"];
         private _crate = _player getVariable ["KPLIB_carriedObject", objNull];
+
+        // prevent players from putting crates inside vehicles
+        private _crateSize = sizeOf typeOf _crate * 1.5;
+        private _nearObjects = (_crate nearEntities [["Man", "Air", "Car", "Tank"], _crateSize]) - [_crate, _player];
+        if (_nearObjects isNotEqualTo []) exitWith {
+            hint format [localize "STR_PLACEMENT_IMPOSSIBLE", count _nearObjects, _crateSize toFixed 0];
+        };
+
         _player setVariable ["KPLIB_carriedObject", nil];
         detach _crate;
         _crate awake true;
