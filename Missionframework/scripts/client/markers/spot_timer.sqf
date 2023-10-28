@@ -1,3 +1,5 @@
+scriptName "spot_timer";
+
 createMarkerLocal ["opfor_bg_marker", markers_reset];
 "opfor_bg_marker" setMarkerTypeLocal "mil_unknown";
 "opfor_bg_marker" setMarkerColorLocal KPLIB_color_enemyActive;

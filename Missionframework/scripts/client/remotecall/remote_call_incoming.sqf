@@ -1,3 +1,5 @@
+scriptName "remote_call_incoming";
+
 if ( isDedicated ) exitWith {};
 
 params [ "_attack_destination" ];

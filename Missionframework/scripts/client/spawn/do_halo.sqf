@@ -1,3 +1,5 @@
+scriptName "do_halo";
+
 private [ "_dialog", "_backpack", "_backpackcontents" ];
 
 if ( isNil "KPLIB_last_halo_jump" ) then { KPLIB_last_halo_jump = -6000; };
