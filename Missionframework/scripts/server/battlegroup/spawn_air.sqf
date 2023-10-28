@@ -20,14 +20,14 @@ for "_i" from 1 to _planes_number do {
     _plane flyInHeight (120 + (random 180));
     [_plane] call KPLIB_fnc_addObjectInit;
 
-    _plane addEventHandler ["Killed", {
+    _plane addMPEventHandler ["MPKilled", {
         params ["_unit", "_killer"];
-        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
     }];
     {
-        _x addEventHandler ["Killed", {
+        _x addMPEventHandler ["MPKilled", {
             params ["_unit", "_killer"];
-            ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+            ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_localEvent;
         }];
     } forEach (crew _plane);
 

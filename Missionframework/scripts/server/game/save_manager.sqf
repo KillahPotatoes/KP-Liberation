@@ -356,9 +356,9 @@ if (!isNil "_saveData") then {
 
             // Apply kill manager handling, if not excluded
             if !((toLower _class) in _noKillHandler) then {
-                _object addEventHandler ["Killed", {
+                _object addMPEventHandler ["MPKilled", {
                     params ["_unit", "_killer"];
-                    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+                    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
                 }];
             };
 

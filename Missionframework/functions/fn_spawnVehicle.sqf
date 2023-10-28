@@ -85,17 +85,17 @@ if (_classname in KPLIB_o_militiaVehicles) then {
     _crew joinSilent _grp;
     sleep 0.1;
     {
-        _x addEventHandler ["Killed", {
+        _x addMPEventHandler ["MPKilled", {
             params ["_unit", "_killer"];
-            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
         }];
     } forEach _crew;
 };
 
 // Add Killed and GetIn EHs and enable damage again
-_newvehicle addEventHandler ["Killed", {
+_newvehicle addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];
-    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
 }];
 sleep 0.1;
 _newvehicle allowDamage true;

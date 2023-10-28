@@ -34,9 +34,9 @@ execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
 
-player addEventHandler ["Killed", {
+player addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];
-    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
 }];
 player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehiclesSeized;}];

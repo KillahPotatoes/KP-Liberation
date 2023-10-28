@@ -34,8 +34,8 @@ isNil {
     private _groupTemp = createGroup [CIVILIAN, true];
 
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
-    _unit addEventHandler ["Killed", {
-        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+    _unit addMPEventHandler ["MPKilled", {
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
     }];
 
     _unit setRank _rank;
