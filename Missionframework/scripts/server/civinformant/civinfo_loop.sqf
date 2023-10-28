@@ -28,12 +28,14 @@ while {true} do {
         sleep 1;
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_informant, true], _informant] call CBA_fnc_targetEvent;
+            _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
         } else {
             _informant disableAI "ANIM";
             _informant disableAI "MOVE";
             _informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
             sleep 2;
             _informant setCaptive true;
+            _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
         };
 
         if (KPLIB_civinfo_debug > 0) then {[format ["Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
