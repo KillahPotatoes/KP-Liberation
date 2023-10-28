@@ -60,7 +60,6 @@ if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(b
     [] call bis_fnc_reviveInit;
 };
 
-
 KPLIB_init = true;
 
 // Notify clients that server is ready

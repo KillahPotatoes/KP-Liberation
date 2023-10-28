@@ -145,11 +145,10 @@ params ["_unit", "_killer"];
     };
 
     // Body/wreck cleanup
-
     if (!isPlayer _unit) then {
         [{
             params ["_unit"];
-            if (_unit isKindOf "CAManBase") exitwith {
+            if (_unit isKindOf "CAManBase") exitWith {
                 hideBody _unit;
             };
             deleteVehicle _unit;

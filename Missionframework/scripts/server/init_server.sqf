@@ -117,12 +117,10 @@ execVM "scripts\server\asymmetric\init_module.sqf";
 execVM "scripts\server\offloading\group_diag.sqf";
 
 // Server event(s)
-["KPLib_manageKills",
-{
-	params ["_unit","_killer"];
-	[_unit,_killer] call kill_manager;
-}
-] call CBA_fnc_addEventHandler;
+["KPLib_manageKills", {
+    params ["_unit", "_killer"];
+    [_unit, _killer] call kill_manager;
+}] call CBA_fnc_addEventHandler;
 
 
 {

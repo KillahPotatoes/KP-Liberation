@@ -2,7 +2,7 @@
     File: fn_createManagedUnit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-10-04
-    Last Update: 2019-12-04
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -35,8 +35,7 @@ isNil {
 
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
     _unit addEventHandler ["Killed", {
-    params ["_unit", "_killer", "_instigator", "_useEffects"];
-     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
     }];
 
     _unit setRank _rank;

@@ -31,11 +31,12 @@ if (isNull _chopper_type) then {
 
      ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
     }];
-    {_x addEventHandler ["Killed", {
-    params ["_unit", "_killer", "_instigator", "_useEffects"];
-
-     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
-    }];} forEach (crew _newvehicle);
+    {
+        _x addEventHandler ["Killed", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_serverEvent;
+        }];
+    } forEach (crew _newvehicle);
 } else {
     _newvehicle = _chopper_type;
     _pilot_group = group _newvehicle;
