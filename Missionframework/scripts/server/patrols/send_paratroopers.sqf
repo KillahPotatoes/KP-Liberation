@@ -27,9 +27,8 @@ if (isNull _chopper_type) then {
     (crew _newvehicle) joinSilent _pilot_group;
 
     _newvehicle addMPEventHandler ["MPKilled", {
-    params ["_unit", "_killer", "_instigator", "_useEffects"];
-
-     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_localEvent;
+        params ["_unit", "_killer"];
+        ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_localEvent;
     }];
     {
         _x addMPEventHandler ["MPKilled", {

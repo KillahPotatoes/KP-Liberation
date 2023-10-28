@@ -51,7 +51,7 @@ while { true } do {
         if ( manned ) then {
             _grp = createGroup KPLIB_side_player;
         };
-        _classname createUnit [_pos, _grp,"this addMpEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
+        _classname createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
         build_confirmed = 0;
     } else {
         if ( buildtype == 8 ) then {
@@ -64,9 +64,9 @@ while { true } do {
                 if(_idx == 0) then { _unitrank = "sergeant"; };
                 if(_idx == 1) then { _unitrank = "corporal"; };
                 if (_classname isEqualTo KPLIB_b_squadPara) then {
-                    _x createUnit [_pos, _grp,"this addMpEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]; removeBackpackGlobal this; this addBackpackGlobal 'B_parachute'", 0.5, _unitrank];
+                    _x createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]; removeBackpackGlobal this; this addBackpackGlobal 'B_parachute'", 0.5, _unitrank];
                 } else {
-                    _x createUnit [_pos, _grp,"this addMpEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}];", 0.5, _unitrank];
+                    _x createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, _unitrank];
                 };
                 _idx = _idx + 1;
 
