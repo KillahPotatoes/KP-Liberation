@@ -374,7 +374,9 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
     {
-        private _crate = ((attachedObjects player) select {(typeOf _x) in [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]}) param [0, objNull];
+        params ["_player"];
+        private _crate = _player getVariable ["KPLIB_carriedObject", objNull];
+        _player setVariable ["KPLIB_carriedObject", nil];
         detach _crate;
         _crate awake true;
     },
@@ -383,11 +385,10 @@ _player addAction [
     true,
     false,
     "",
-    "
-        alive _originalTarget
-        && {build_confirmed isEqualTo 0}
-        && {!((((attachedObjects _originalTarget) apply {typeOf _x}) arrayIntersect [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]) isEqualTo [])}
-    "
+    toString {
+        alive _originalTarget &&
+        build_confirmed == 0 && _this in _this && {!isNull (_this getVariable ["KPLIB_carriedObject", objNull])}
+    }
 ];
 
 true
