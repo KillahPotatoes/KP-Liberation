@@ -1,3 +1,5 @@
+scriptName "do_build_fob";
+
 private [ "_minfobdist", "_minsectordist", "_distfob", "_clearedtobuildfob", "_distsector", "_clearedtobuildsector", "_idx" ];
 
 if ( count KPLIB_sectors_fob >= KPLIB_param_maxFobs ) exitWith {

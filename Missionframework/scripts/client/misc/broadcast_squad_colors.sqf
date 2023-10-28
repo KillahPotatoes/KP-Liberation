@@ -1,3 +1,5 @@
+scriptName "broadcast_squad_colors";
+
 while { true } do {
 
     if ( local group player ) then {

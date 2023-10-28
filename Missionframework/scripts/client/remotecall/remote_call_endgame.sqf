@@ -1,3 +1,5 @@
+scriptName "remote_call_endgame";
+
 player allowDamage false;
 (vehicle player) allowDamage false;
 KPLIB_endgame = 1;

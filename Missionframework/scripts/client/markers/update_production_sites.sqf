@@ -1,3 +1,5 @@
+scriptName "update_production_sites";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_production_markers"};
 waitUntil {KPLIB_saveLoaded};

@@ -1,3 +1,5 @@
+scriptName "random_battlegroups";
+
 sleep (900 / KPLIB_param_aggressivity);
 private _sleeptime = 0;
 while {KPLIB_param_aggressivity > 0.9 && KPLIB_endgame == 0} do {

@@ -1,3 +1,5 @@
+scriptName "open_build_menu";
+
 private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
 if (([ getpos player , 500 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};

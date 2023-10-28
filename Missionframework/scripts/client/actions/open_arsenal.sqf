@@ -1,3 +1,5 @@
+scriptName "open_arsenal";
+
 if (KPLIB_param_directArsenal) exitWith {
     if (KP_liberation_ace && KP_liberation_arsenal_type) then {
         [player, player, false] call ace_arsenal_fnc_openBox;

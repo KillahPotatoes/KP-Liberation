@@ -1,3 +1,7 @@
+scriptName "synchronize_eco";
+
+publicVariable "synchronise_eco";
+
 sync_eco = []; publicVariable "sync_eco";
 
 waitUntil{!isNil "KPLIB_saveLoaded"};

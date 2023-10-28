@@ -1,3 +1,5 @@
+scriptName "building_defence_ai";
+
 params ["_unit", ["_sector", ""]];
 
 _unit setUnitPos "UP";

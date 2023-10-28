@@ -1,3 +1,5 @@
+scriptName "unit_cap";
+
 unitcap = 0;
 KPLIB_heli_count = 0;
 KPLIB_plane_count = 0;

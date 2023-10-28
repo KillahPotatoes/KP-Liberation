@@ -1,3 +1,5 @@
+scriptName "ammobox_action_manager";
+
 waitUntil {!isNil "build_confirmed"};
 waitUntil {!isNil "one_synchro_done"};
 waitUntil {!isNil "one_eco_done"};
