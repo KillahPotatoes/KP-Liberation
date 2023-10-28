@@ -11,16 +11,16 @@ import { resolve } from "path";
 import { MissionPaths, uploadLegacy } from "./src";
 import { Preset, FolderStructureInfo } from "./src";
 
-
-const presets: Preset[] = require('./_presets.json');
+const repoRoot = resolve('..', '..');
+const presets: Preset[] = require('../_presets.json');
 
 /**
  * Mission folders configuration
 */
 const paths: FolderStructureInfo = {
-    frameworkFolder: resolve('..', 'Missionframework'),
-    missionsFolder: resolve('..', 'Missionbasefiles'),
-    workDir: resolve("./build")
+    frameworkFolder: resolve(repoRoot, 'Missionframework'),
+    missionsFolder: resolve(repoRoot, 'Missionbasefiles'),
+    workDir: resolve(repoRoot, "build")
 };
 
 
@@ -122,12 +122,12 @@ for (let preset of presets) {
 
     gulp.task('zip_' + taskName, () => {
         return gulp.src([
-            resolve('..', './userconfig/**/*'),
-            resolve('..', 'LICENSE.md'),
-            resolve('..', 'README.md'),
-            resolve('..', 'CHANGELOG.md')
+            resolve(repoRoot, './userconfig/**/*'),
+            resolve(repoRoot, 'LICENSE.md'),
+            resolve(repoRoot, 'README.md'),
+            resolve(repoRoot, 'CHANGELOG.md')
         ], {
-                base: resolve('..') // Change base dir to have correct relative paths in ZIP
+                base: resolve(repoRoot) // Change base dir to have correct relative paths in ZIP
             })
             .pipe(
                 gulp.src(
