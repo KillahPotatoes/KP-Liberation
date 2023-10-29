@@ -1,3 +1,5 @@
+scriptName "KPLIB_diagnostics";
+
 private _source = "";
 
 ["------------------------------------", "MISSIONSTART"] call KPLIB_fnc_log;

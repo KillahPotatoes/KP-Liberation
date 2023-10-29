@@ -1,3 +1,5 @@
+scriptName "open_build_menu";
+
 private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
 if (([ getpos player , 500 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
@@ -149,7 +151,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             { if ( ( _build_item select 0 ) == ( _x select 0 ) ) exitWith { _base_link = _x select 1; _linked = true; } } foreach KPLIB_vehicle_to_military_base_links;
 
             if ( _linked ) then {
-                if ( !(_base_link in blufor_sectors) ) then { _linked_unlocked = false };
+                if ( !(_base_link in KPLIB_sectors_player) ) then { _linked_unlocked = false };
             };
         };
     };

@@ -1,3 +1,5 @@
+scriptName "secondary_jip";
+
 waitUntil {
     time > 20;
 };

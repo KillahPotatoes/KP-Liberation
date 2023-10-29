@@ -1,3 +1,5 @@
+scriptName "manage_logistics";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_logistics"};
 waitUntil {KPLIB_saveLoaded};

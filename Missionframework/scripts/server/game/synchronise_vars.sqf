@@ -1,3 +1,5 @@
+scriptName "synchronise_vars";
+
 sync_vars = []; publicVariable "sync_vars";
 
 waitUntil{!isNil "KPLIB_saveLoaded"};

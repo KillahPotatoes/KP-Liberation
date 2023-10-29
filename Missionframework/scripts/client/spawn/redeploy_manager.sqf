@@ -1,3 +1,5 @@
+scriptName "redeploy_manager";
+
 #define DEPLOY_DISPLAY (findDisplay 5201)
 #define DEPLOY_LIST_IDC 201
 #define DEPLOY_BUTTON_IDC 202

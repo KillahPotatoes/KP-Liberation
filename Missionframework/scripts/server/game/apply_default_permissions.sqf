@@ -1,3 +1,5 @@
+scriptName "apply_default_permissions";
+
 if (!KPLIB_param_permissions) exitWith {};
 
 waitUntil {!isNil "KPLIB_permissions"};
