@@ -44,7 +44,10 @@ while { KPLIB_endgame == 0 } do {
             [selectRandom KPLIB_c_units, _spawnpos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
             _civveh = (selectRandom KPLIB_c_vehicles) createVehicle _spawnpos;
             _civveh setpos _spawnpos;
-            _civveh addMPEventHandler ['MPKilled', {_this spawn kill_manager}];
+            _civveh addMPEventHandler ["MPKilled", {
+                params ["_unit", "_killer"];
+                ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+            }];
             _civveh addEventHandler ["HandleDamage", { private [ "_damage" ]; if (( side (_this select 3) != KPLIB_side_player ) && ( side (_this select 3) != KPLIB_side_enemy )) then { _damage = 0 } else { _damage = _this select 2 }; _damage } ];
             ((units _grp) select 0) moveInDriver _civveh;
             ((units _grp) select 0) disableAI "FSM";

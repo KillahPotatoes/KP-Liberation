@@ -360,3 +360,6 @@ KPLIB_surrender_chance = 80;
 KPLIB_battlegroup_clearance = [
     "song_bin_tanh"
 ];
+
+// Delay after death for wrecks and corpses to be deleted
+KPLIB_cleanup_delay = 1200;
