@@ -2,7 +2,7 @@
     File: fn_crGlobalMsg.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-17
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
     ["_data", [], []]
 ];
 
-if (KP_liberation_civrep_debug > 0) then {[format ["globalMsg called on: %1 - Parameters: [%2, %3]", debug_source, _msgType, _data], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_civrep_debug > 0) then {[format ["globalMsg called on: %1 - Parameters: [%2, %3]", debug_source, _msgType, _data], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 switch (_msgType) do {
     case 0: {systemChat localize "STR_CR_VEHICLEMSG";};

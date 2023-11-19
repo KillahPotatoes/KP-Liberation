@@ -1,6 +1,8 @@
+scriptName "do_sector_build";
+
 private ["_vector", "_idactcancel", "_idactplace", "_idactvector", "_ghost_spot", "_truedir", "_dist", "_truepos", "_sectorpos", "_building"];
 
-if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
+if (((_this select 3) select 0) == KPLIB_b_smallStorage) then {
 
     _truepos = [];
 
@@ -38,11 +40,11 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
             build_invalid = 1;
 
             if(((surfaceIsWater _truepos) || (surfaceIsWater getpos player))) then {
-                GRLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
+                KPLIB_ui_notif = localize "STR_BUILD_ERROR_WATER";
             };
 
             if((_truepos distance _sectorpos) > 100) then {
-                GRLIB_ui_notif = format [localize "STR_BUILD_ERROR_DISTANCE",100];
+                KPLIB_ui_notif = format [localize "STR_BUILD_ERROR_DISTANCE",100];
             };
         } else {
             _building setdir (getDir player);
@@ -55,7 +57,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
             };
 
             if (build_invalid == 1) then {
-                GRLIB_ui_notif = "";
+                KPLIB_ui_notif = "";
             };
 
             build_invalid = 0;
@@ -64,7 +66,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
         sleep 0.05;
     };
 
-    GRLIB_ui_notif = "";
+    KPLIB_ui_notif = "";
 
     if (!alive player || build_confirmed == 3) then {
         deleteVehicle _building;
@@ -86,7 +88,7 @@ if (((_this select 3) select 0) == KP_liberation_small_storage_building) then {
             _building setVectorUp surfaceNormal position _building;
         };
 
-        _building setVariable ["KP_liberation_storage_type", 1, true];
+        _building setVariable ["KPLIB_storage_type", 1, true];
 
         sleep 0.3;
         _building allowDamage true;

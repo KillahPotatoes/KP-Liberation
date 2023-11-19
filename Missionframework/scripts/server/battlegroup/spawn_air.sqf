@@ -1,16 +1,16 @@
 params ["_first_objective"];
 
-if (opfor_air isEqualTo []) exitWith {false};
+if (KPLIB_o_planes isEqualTo []) exitWith {false};
 
-private _planes_number = ((floor linearConversion [40, 100, combat_readiness, 1, 3]) min 3) max 0;
+private _planes_number = ((floor linearConversion [40, 100, KPLIB_enemyReadiness, 1, 3]) min 3) max 0;
 
 if (_planes_number < 1) exitWith {};
 
-private _class = selectRandom opfor_air;
-private _spawnPoint = ([sectors_airspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+private _class = selectRandom KPLIB_o_planes;
+private _spawnPoint = ([KPLIB_sectors_airSpawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _spawnPos = [];
 private _plane = objNull;
-private _grp = createGroup [GRLIB_side_enemy, true];
+private _grp = createGroup [KPLIB_side_enemy, true];
 
 for "_i" from 1 to _planes_number do {
     _spawnPos = markerPos _spawnPoint;
@@ -18,9 +18,19 @@ for "_i" from 1 to _planes_number do {
     _plane = createVehicle [_class, _spawnPos, [], 0, "FLY"];
     createVehicleCrew _plane;
     _plane flyInHeight (120 + (random 180));
-    _plane addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
     [_plane] call KPLIB_fnc_addObjectInit;
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach (crew _plane);
+
+    _plane addMPEventHandler ["MPKilled", {
+        params ["_unit", "_killer"];
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+    }];
+    {
+        _x addMPEventHandler ["MPKilled", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_localEvent;
+        }];
+    } forEach (crew _plane);
+
     (crew _plane) joinSilent _grp;
     sleep 1;
 };

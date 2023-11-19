@@ -1,16 +1,16 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {save_is_loaded};
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {KPLIB_saveLoaded};
 
 // Check if there is no FOB yet (new campaign)
-if (GRLIB_all_fobs isEqualTo []) then {
+if (KPLIB_sectors_fob isEqualTo []) then {
 
     // Prebuild FOB (parameter setting) or spawn FOB box
-    if (GRLIB_build_first_fob) then {
+    if (KPLIB_param_firstFobBuilt) then {
         // Only accept spawnpoints which are at least 800m away from any sector
         private _y = "";
-        private _validPlaces =  sectors_opfor select {
+        private _validPlaces =  KPLIB_sectors_spawn select {
             _y = _x;
-            (sectors_allSectors findIf {((markerPos _x) distance2d (markerPos _y)) < 800}) isEqualTo -1
+            (KPLIB_sectors_all findIf {((markerPos _x) distance2d (markerPos _y)) < 800}) isEqualTo -1
         };
 
         // Spawn first FOB on random valid spawnpoint
@@ -18,8 +18,8 @@ if (GRLIB_all_fobs isEqualTo []) then {
     } else {
         // Spawn FOB box and wait until the first FOB was built
         private _fobbox = objNull;
-        while {GRLIB_all_fobs isEqualTo []} do {
-            _fobbox = ([FOB_box_typename, FOB_truck_typename] select KP_liberation_fob_vehicle) createVehicle (getposATL base_boxspawn);
+        while {KPLIB_sectors_fob isEqualTo []} do {
+            _fobbox = ([KPLIB_b_fobBox, KPLIB_b_fobTruck] select KPLIB_param_fobVehicle) createVehicle (getposATL base_boxspawn);
             _fobbox setdir getDir base_boxspawn;
             _fobbox setposATL (getposATL base_boxspawn);
             [_fobbox, true] call KPLIB_fnc_clearCargo;
@@ -28,7 +28,7 @@ if (GRLIB_all_fobs isEqualTo []) then {
             // If the FOB box has fallen into the sea or is destroyed, start again with spawning a new one
             waitUntil {
                 sleep 1;
-                !(alive _fobbox) || !(GRLIB_all_fobs isEqualTo []) || (((getPosASL _fobbox) select 2) < 0)
+                !(alive _fobbox) || !(KPLIB_sectors_fob isEqualTo []) || (((getPosASL _fobbox) select 2) < 0)
             };
             sleep 10;
         };
@@ -36,8 +36,8 @@ if (GRLIB_all_fobs isEqualTo []) then {
     };
 
     // Wait a short time before paradropping the start resource crates
-    waitUntil {sleep 1; !(GRLIB_all_fobs isEqualTo [])};
-    if (KP_liberation_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
+    waitUntil {sleep 1; !(KPLIB_sectors_fob isEqualTo [])};
+    if (KPLIB_param_tutorial && {["KPLIB_Tasks_Tutorial_Fob"] call BIS_fnc_taskExists}) then {
         waitUntil {sleep 1; ["KPLIB_Tasks_Tutorial_Fob_02"] call BIS_fnc_taskCompleted};
         sleep 3;
     } else {
@@ -50,16 +50,16 @@ if (GRLIB_all_fobs isEqualTo []) then {
     for "_i" from 1 to 6 do {
         _crate = createVehicle [
             (KPLIB_crates select (_i % 3)),
-            [((GRLIB_all_fobs select 0) select 0), ((GRLIB_all_fobs select 0) select 1), 150],
+            [((KPLIB_sectors_fob select 0) select 0), ((KPLIB_sectors_fob select 0) select 1), 150],
             [],
             80,
             "FLY"
         ];
         [_crate, true] call KPLIB_fnc_clearCargo;
-        _crate setVariable ["KP_liberation_crate_value", 100, true];
+        _crate setVariable ["KPLIB_crate_value", 100, true];
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
-        if (KP_liberation_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+        if (KPLIB_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
         KPLIB_startCrates pushBack _crate;
     };
 

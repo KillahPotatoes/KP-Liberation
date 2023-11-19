@@ -1,10 +1,10 @@
-if ( GRLIB_permissions_param ) then {
+if ( KPLIB_param_permissions ) then {
 
-    waitUntil { !(isNil "GRLIB_permissions") };
+    waitUntil { !(isNil "KPLIB_permissions") };
 
     sleep 5;
 
-    while { count GRLIB_permissions == 0 } do {
+    while { count KPLIB_permissions == 0 } do {
         hint localize "STR_PERMISSION_WARNING";
         sleep 5;
     };

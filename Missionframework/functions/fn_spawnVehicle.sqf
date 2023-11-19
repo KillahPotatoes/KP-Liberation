@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-06
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -52,7 +52,7 @@ if (_spawnPos isEqualTo zeroPos) exitWith {
 };
 
 // If it's a chopper, spawn it flying
-if (_classname in opfor_choppers) then {
+if (_classname in KPLIB_o_helicopters) then {
     _newvehicle = createVehicle [_classname, _spawnpos, [], 0, 'FLY'];
     _newvehicle flyInHeight (80 + (random 120));
     _newvehicle allowDamage false;
@@ -77,18 +77,26 @@ if (_classname in opfor_choppers) then {
 [_newvehicle] call KPLIB_fnc_addObjectInit;
 
 // Spawn crew of vehicle
-if (_classname in militia_vehicles) then {
+if (_classname in KPLIB_o_militiaVehicles) then {
     [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
-    private _grp = createGroup [GRLIB_side_enemy, true];
+    private _grp = createGroup [KPLIB_side_enemy, true];
     private _crew = units (createVehicleCrew _newvehicle);
     _crew joinSilent _grp;
     sleep 0.1;
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach _crew;
+    {
+        _x addMPEventHandler ["MPKilled", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+        }];
+    } forEach _crew;
 };
 
-// Add MPKilled and GetIn EHs and enable damage again
-_newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+// Add Killed and GetIn EHs and enable damage again
+_newvehicle addMPEventHandler ["MPKilled", {
+    params ["_unit", "_killer"];
+    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+}];
 sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;

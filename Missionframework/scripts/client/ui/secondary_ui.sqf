@@ -1,5 +1,7 @@
-if ( isNil "GRLIB_secondary_starting" ) then { GRLIB_secondary_starting = false; };
-if ( isNil "GRLIB_secondary_in_progress" ) then { GRLIB_secondary_in_progress = -1; };
+scriptName "KPLIB_secondary_ui";
+
+if ( isNil "KPLIB_secondary_starting" ) then { KPLIB_secondary_starting = false; };
+if ( isNil "KPLIB_secondary_in_progress" ) then { KPLIB_secondary_in_progress = -1; };
 
 _dialog = createDialog "liberation_secondary";
 dostartsecondary = 0;
@@ -39,9 +41,9 @@ while { dialog && alive player && dostartsecondary == 0 } do {
         ((findDisplay 6842) displayCtrl (102)) ctrlSetStructuredText parseText localize (_briefings select _oldchoice);
     };
 
-    _missioncost = GRLIB_secondary_missions_costs select _oldchoice;
+    _missioncost = KPLIB_secondary_missions_costs select _oldchoice;
 
-    if ( ( _missioncost <= resources_intel ) && ( !GRLIB_secondary_starting ) )  then {
+    if ( ( _missioncost <= resources_intel ) && ( !KPLIB_secondary_starting ) )  then {
         ctrlEnable [ 103, true ];
         ((findDisplay 6842) displayCtrl (103)) ctrlSetTooltip "";
     } else {
@@ -49,13 +51,13 @@ while { dialog && alive player && dostartsecondary == 0 } do {
         if ( _missioncost > resources_intel ) then {
             ((findDisplay 6842) displayCtrl (103)) ctrlSetTooltip (localize "STR_SECONDARY_NOT_ENOUGH_INTEL");
         };
-        if ( GRLIB_secondary_starting ) then {
+        if ( KPLIB_secondary_starting ) then {
             ((findDisplay 6842) displayCtrl (103)) ctrlSetTooltip (localize "STR_SECONDARY_IN_PROGRESS");
         };
     };
 
-    if ( GRLIB_secondary_in_progress >= 0 ) then {
-        lbSetCurSel [ 101, GRLIB_secondary_in_progress ];
+    if ( KPLIB_secondary_in_progress >= 0 ) then {
+        lbSetCurSel [ 101, KPLIB_secondary_in_progress ];
         ctrlEnable [ 101, false ];
     } else {
         ctrlEnable [ 101, true ];

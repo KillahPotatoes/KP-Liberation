@@ -2,11 +2,11 @@ params ["_sector", "_count"];
 
 if (_count <= 0) exitWith {};
 
-if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf for %1 spawned on: %2", markerText _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf for %1 spawned on: %2", markerText _sector, debug_source], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-waitUntil {sleep 1; _sector in KP_liberation_asymmetric_sectors};
+waitUntil {sleep 1; _sector in KPLIB_asymmetric_sectors};
 
-if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> spawning IED %1 at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> spawning IED %1 at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 private _activation_radius_infantry = 6.66;
 private _activation_radius_vehicles = 10;
@@ -28,11 +28,11 @@ if (!(isnull _roadobj)) then {
     _ied_obj = createMine [_ied_type, _roadpos getPos [_spread, random (360)], [], 0];
     _ied_obj setdir (random 360);
 
-    if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> IED %1 spawned at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> IED %1 spawned at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-    while {(_sector in KP_liberation_asymmetric_sectors) && (mineActive _ied_obj) && !_goes_boom} do {
-        _nearinfantry = ((getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry]) select {side _x == GRLIB_side_friendly};
-        _nearvehicles = ((getpos _ied_obj) nearEntities [["Car", "Tank", "Air"], _activation_radius_vehicles]) select {side _x == GRLIB_side_friendly};
+    while {(_sector in KPLIB_asymmetric_sectors) && (mineActive _ied_obj) && !_goes_boom} do {
+        _nearinfantry = ((getpos _ied_obj) nearEntities ["Man", _activation_radius_infantry]) select {side _x == KPLIB_side_player};
+        _nearvehicles = ((getpos _ied_obj) nearEntities [["Car", "Tank", "Air"], _activation_radius_vehicles]) select {side _x == KPLIB_side_player};
         if (count _nearinfantry >= _infantry_trigger || count _nearvehicles >= _vehicle_trigger) then {
             _ied_obj setDamage 1;
             stats_ieds_detonated = stats_ieds_detonated + 1; publicVariable "stats_ieds_detonated";
@@ -41,10 +41,10 @@ if (!(isnull _roadobj)) then {
         sleep 1;
     };
 } else {
-    if (KP_liberation_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> _roadobj is Null for IED %1 at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_asymmetric_debug > 0) then {[format ["manage_asymIED.sqf -> _roadobj is Null for IED %1 at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
 
-if ((KP_liberation_asymmetric_debug > 0) && !(isNull _roadobj)) then {[format ["manage_asymIED.sqf -> exit IED %1 loop at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if ((KPLIB_asymmetric_debug > 0) && !(isNull _roadobj)) then {[format ["manage_asymIED.sqf -> exit IED %1 loop at %2", _count, markerText _sector], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 sleep 60;
 

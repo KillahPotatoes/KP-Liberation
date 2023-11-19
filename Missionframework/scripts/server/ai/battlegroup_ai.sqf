@@ -48,6 +48,6 @@ waitUntil {
 sleep (5 + (random 5));
 reset_battlegroups_ai = false;
 
-if (!((units _grp) isEqualTo []) && (GRLIB_endgame == 0)) then {
+if (!((units _grp) isEqualTo []) && (KPLIB_endgame == 0)) then {
     [_grp] spawn battlegroup_ai;
 };

@@ -1,15 +1,22 @@
 /*
+    File: middle_eastern.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2017-12-09
+    Last Update: 2020-05-25
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Middle Eastern civilian preset.
+
     Needed Mods:
-    - RHS USAF
-    - RHS AFRF
-    - Project OPFOR
+        - Project OPFOR
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "LOP_Tak_Civ_Random",
     "LOP_Tak_Civ_Man_06",
     "LOP_Tak_Civ_Man_08",
@@ -29,7 +36,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "LOP_TAK_Civ_Hatchback",
     "LOP_TAK_Civ_Landrover",
     "LOP_TAK_Civ_Offroad",
