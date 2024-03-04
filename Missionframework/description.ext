@@ -21,11 +21,11 @@
 class Header {
     gameType = "CTI";
     minPlayers = 1;
-    maxPlayers = 34;
+    maxPlayers = 70;
 };
 
 // Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
-author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
+author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team, Digby WarRoom Server Ops";
 
 
 /*
