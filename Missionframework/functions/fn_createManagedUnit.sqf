@@ -34,7 +34,10 @@ isNil {
     private _groupTemp = createGroup [CIVILIAN, true];
 
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
-    _unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    _unit addMPEventHandler ["MPKilled", {
+        params ["_unit", "_killer"];
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+    }];
     _unit setRank _rank;
 
     // Join to target group to preserve Side

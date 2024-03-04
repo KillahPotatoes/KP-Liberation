@@ -84,11 +84,19 @@ if (_classname in militia_vehicles) then {
     private _crew = units (createVehicleCrew _newvehicle);
     _crew joinSilent _grp;
     sleep 0.1;
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach _crew;
+    {
+        _x addMPEventHandler ["MPKilled", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+        }];
+    } forEach _crew;
 };
 
-// Add MPKilled and GetIn EHs and enable damage again
-_newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+// Add Killed and GetIn EHs and enable damage again
+_newvehicle addMPEventHandler ["MPKilled", {
+    params ["_unit", "_killer"];
+    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+}];
 sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;

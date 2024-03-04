@@ -32,14 +32,20 @@ if (_vehicle) then {
 
     // Add kill manager and object init to possible crew units
     {
-        _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+        _x addMPEventHandler ["MPKilled", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+        }];
         [_x] call KPLIB_fnc_addObjectInit;
     } forEach (crew _obj);
 };
 
 // Apply kill manager, if it's not a crate
 if !(_crate) then {
-    _obj addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    _obj addMPEventHandler ["MPKilled", {
+        params ["_unit", "_killer"];
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+    }];
 } else {
     // Otherwise apply all needed values/functionalities
     _obj setMass 500;
