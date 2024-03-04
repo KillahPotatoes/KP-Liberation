@@ -43,6 +43,35 @@ if (KP_liberation_arsenalUsePreset) then {
         KP_liberation_allowed_items append _disposableLaunchers;
     };
 
+    {
+        // Handle CBA optics, https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics
+        if (missionNamespace getVariable ["CBA_optics", false]) then {
+            private _pipOptic = CBA_optics_PIPOptics getVariable _x;
+            if (!isNil "_pipOptic") then {
+                KP_liberation_allowed_items_extension pushBackUnique _pipOptic;
+            };
+
+            private _nonPipOptic = CBA_optics_NonPIPOptics getVariable _x;
+            if (!isNil "_nonPipOptic") then {
+                KP_liberation_allowed_items_extension pushBackUnique _nonPipOptic;
+            };
+        };
+
+        // Handle CBA (MRT) Accessories, https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions
+        private _itemCfg = configFile >> "CfgWeapons" >> _x;
+        if (!isNull _itemCfg) then {
+            private _nextItem = getText (_cfg >> "MRT_SwitchItemPrevClass");
+            if (_nextItem != "") then {
+                KP_liberation_allowed_items_extension pushBackUnique _nextItem;
+            };
+
+            private _prevItem = getText (_cfg >> "MRT_SwitchItemNextClass");
+            if (_prevItem != "") then {
+                KP_liberation_allowed_items_extension pushBackUnique _prevItem;
+            };
+        };
+    } forEach KP_liberation_allowed_items;
+
     if ((count GRLIB_arsenal_magazines) == 0) then {
         if ((count blacklisted_from_arsenal) == 0) then {
             _magazines = _crawled select 1;
