@@ -1,10 +1,9 @@
-name: CI
+name: Release
 
 on:
   push:
-    branches:
-      - master
-  pull_request: ~
+    tags: 
+      - '*'
   workflow_dispatch:
 
 permissions:
@@ -31,3 +30,8 @@ jobs:
         with:
           name: PBO-Files
           path: _tools/build/pbo
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: _tools/build/pbo/*
