@@ -54,3 +54,5 @@ Temporary Items
 # KP-Steam
 steam_appid.txt
 kp_steam*.log
+
+.vscode/sqfvm-lsp/
