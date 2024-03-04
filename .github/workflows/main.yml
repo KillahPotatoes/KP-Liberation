@@ -4,8 +4,10 @@ on:
   push:
     branches:
       - master
-    tags: ~
+    tags: 
+      - '*'
   pull_request: ~
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,7 +16,7 @@ jobs:
   artifacts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - uses: docker://node:10-alpine
         name: Setup Node
@@ -27,8 +29,12 @@ jobs:
         working-directory: _tools
         run: npx gulp
 
-      - uses: actions/upload-artifact@master
+      - uses: actions/upload-artifact@v4
         with:
           name: PBO-Files
           path: _tools/build/pbo
 
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: PBO-Files
