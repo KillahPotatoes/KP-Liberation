@@ -109,7 +109,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 28 = SFP (Woodland)
 29 = SFP (Desert)
 30 = LDF (Contact DLC) */
-KP_liberation_preset_blufor = 0;
+KP_liberation_preset_blufor = 2;
 
 /* OPFOR preset:
 0  = Custom (default vanilla CSAT)
@@ -133,7 +133,7 @@ KP_liberation_preset_blufor = 0;
 18 = CUP Chernarus Defense Force
 19 = CUP British Armed Forces (Desert)
 20 = CUP British Armed Forces (Woodland) */
-KP_liberation_preset_opfor = 0;
+KP_liberation_preset_opfor = 5;
 
 /* Resistance preset:
 0  = Custom (default vanilla FIA)
@@ -145,7 +145,7 @@ KP_liberation_preset_opfor = 0;
 6  = Unsung
 7  = CUP Takistani Locals
 8  = CUP National Party of Chernarus */
-KP_liberation_preset_resistance = 0;
+KP_liberation_preset_resistance = 3;
 
 /* Civilians preset:
 0  = Custom (default vanilla)
@@ -156,7 +156,7 @@ KP_liberation_preset_resistance = 0;
 5  = Unsung
 6  = CUP Takistani Civilians
 7  = CUP Chernarussian Civilians */
-KP_liberation_preset_civilians = 0;
+KP_liberation_preset_civilians = 2;
 
 /* Which arsenal preset should be used?
 0  = Use the default blacklist method (defined below)
@@ -176,7 +176,7 @@ KP_liberation_preset_civilians = 0;
 14 = CSAT Green Hex arsenal preset
 15 = AAF arsenal preset
 16 = LDF arsenal preset */
-KP_liberation_arsenal = 0;
+KP_liberation_arsenal = 3;
 
 /* - Fuel consumption settings.
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
@@ -206,7 +206,7 @@ GRLIB_fob_range = 125;                                                  // Build
 GRLIB_halo_altitude = 2500;                                             // Altitude in metres for the HALO jump.
 GRLIB_secondary_missions_costs = [15, 10, 8];                           // Intel price for the secondary missions [FOB hunting, Convoy ambush, SAR].
 GRLIB_secondary_objective_impact = 0.6;                                 // The percentage impact against enemy combat readiness for a successful FOB hunt.
-GRLIB_recycling_percentage = 0.5;                                       // Percentage of resources you get back from recycling.
+GRLIB_recycling_percentage = 1;                                         // Percentage of resources you get back from recycling.
 KP_liberation_production_interval = 30;                                 // Time in minutes until a production process is finished, when resources multiplier is set to 1.
 
 GRLIB_sector_size = 1000;                                               // Range to activate a sector.
@@ -218,7 +218,7 @@ GRLIB_radiotower_size = 2500;                                           // Radio
 GRLIB_surrender_chance = 80;                                            // Chance that enemy infantry will surrender after heavy losses are encountered.
 
 GRLIB_civilians_amount = 10;                                            // Civilian count multiplier.
-GRLIB_cleanup_delay = 1200;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
+GRLIB_cleanup_delay = 600;                                             // Time in seconds until bodies of dead soldiers are cleaned up.
 
 // Fill magazines on loading loadout?
 KP_liberation_fill_mags = true;
@@ -263,6 +263,11 @@ KP_liberation_battlegroup_clearance = [
 The Steam UIDs entered in this array will allow corresponding players to access the commander actions (rights, production, etc.),
 even if they are not in the commander slot. */
 KP_liberation_commander_actions = [
+    "76561197969600398", // Crow
+    "76561197961180006", // Wind
+    "76561198334493154", // AC
+    "76561197998210399", // Ed
+    "76561198111800326"  // Bolem
     /*
     Example:
     "1324678",
@@ -536,7 +541,12 @@ KP_liberation_allowed_items_extension = [
     "rhsusf_acc_g33_xps3_tan_flip",
     "sma_spitfire_03_rds_low_ard_red",
     "UK3CB_BAF_AT4_CS_AP_Mag",
-    "UK3CB_BAF_Javelin_Launcher"
+    "UK3CB_BAF_Javelin_Launcher",
+    "immersion_cigs_cigar0",
+    "murshun_cigs_cig0",
+    "immersion_pops_pop0",
+    "murshun_cigs_cigpack",
+    "murshun_cigs_lighter"
 ];
 
 /* - Configuration settings for crates transported by vehicles.

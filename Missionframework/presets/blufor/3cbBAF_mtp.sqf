@@ -47,6 +47,7 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                         // T
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
+/*
     ["UK3CB_BAF_Pointman_MTP",15,0,0],                                      // Rifleman (Light)
     ["UK3CB_BAF_Rifleman_MTP",20,0,0],                                      // Rifleman
     ["UK3CB_BAF_LAT_ILAW_MTP",30,0,0],                                      // Rifleman (AT)
@@ -74,6 +75,7 @@ infantry_units = [
     ["UK3CB_BAF_HeliMedic_MTP",20,0,0],                                     // Helicopter Crew
     ["UK3CB_BAF_HeliPilot_Army_MTP",10,0,0],                                // Helicopter Pilot
     ["UK3CB_BAF_Pilot_Army",10,0,0]                                         // Pilot
+	*/
 ];
 
 light_vehicles = [
@@ -106,6 +108,12 @@ light_vehicles = [
 ];
 
 heavy_vehicles = [
+    ["UK3CB_BAF_FV432_Mk3_GPMG_Green_MTP",100,100,100],                     // Bulldog GPMG
+    ["UK3CB_BAF_FV432_Mk3_RWS_Green_MTP",100,100,100],                      // Bulldog RWS
+    ["UK3CB_BAF_Warrior_A3_W_MTP",150,150,150],                             // Warrior
+    ["UK3CB_BAF_Warrior_A3_W_Cage_MTP",150,150,150],                        // Warrior Cage
+    ["B_AFV_Wheeled_01_cannon_F",150,150,150],                              // Rooikat
+    ["B_MBT_01_arty_F",150,150,150],                                        // Sholef
     ["RHS_M2A2_BUSKI_WD",300,200,150],                                      // M2A2ODS (Busk I)
     ["RHS_M2A3_BUSKIII_wd",300,250,175],                                    // M2A3 (Busk III)
     ["RHS_M6_wd",300,250,175],                                              // M6A2
@@ -131,6 +139,7 @@ air_vehicles = [
     ["UK3CB_BAF_Merlin_HC3_CSAR_MTP",300,80,175],                           // Merlin HC3 CSAR (Armed)
     ["B_UAV_02_dynamicLoadout_F",400,300,200],                              // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                            // MQ-12 Falcon
+    ["UK3CB_BAF_MQ9_Reaper_MTP",450,500,250],                               // RAF Reaper
     ["B_UAV_05_F",500,500,200],                                             // UCAV Sentinel
     ["RHS_A10",1000,1000,400],                                              // A-10A (CAS)
     ["FIR_F15C",1250,1250,450],                                             // F-15C Eagle
@@ -138,6 +147,7 @@ air_vehicles = [
     ["FIR_F15E",1250,1500,450],                                             // F-15E Strike Eagle
     ["JS_JC_FA18E",1500,1750,450],                                          // F/A-18 E Super Hornet
     ["JS_JC_FA18F",1500,1750,450],                                          // F/A-18 F Super Hornet
+    ["FIR_F35B_RAF02",1500,1750,450],                                       // F35-B
     ["B_Plane_Fighter_01_F",1500,1750,450],                                 // F/A-181 Black Wasp II
     ["B_Plane_Fighter_01_Stealth_F",1500,1750,450],                         // F/A-181 Black Wasp II (Stealth)
     ["B_T_VTOL_01_armed_F",750,1500,500],                                   // V-44 X Blackfish (Armed)
@@ -361,6 +371,13 @@ blufor_squad_para = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 elite_vehicles = [
+/*
+    "UK3CB_BAF_FV432_Mk3_GPMG_Green_MTP",                                   // Bulldog GPMG
+    "UK3CB_BAF_FV432_Mk3_RWS_Green_MTP",                                    // Bulldog RWS
+    "UK3CB_BAF_Warrior_A3_W_MTP",                                           // Warrior
+    "UK3CB_BAF_Warrior_A3_W_Cage_MTP",                                      // Warrior Cage
+    "B_AFV_Wheeled_01_cannon_F",                                            // Rooikat
+    "B_MBT_01_arty_F",                                                      // Sholef
     "rhsusf_mkvsoc",                                                        // Mk.V SOCOM
     "RHS_M2A3_BUSKIII_wd",                                                  // M2A3 (Busk III)
     "RHS_M6_wd",                                                            // M6A2
@@ -368,20 +385,11 @@ elite_vehicles = [
     "rhsusf_m1a2sep1tuskiiwd_usarmy",                                       // M1A2SEPv1 (Tusk II)
     "rhsusf_m109_usarmy",                                                   // M109A6
     "B_UAV_02_dynamicLoadout_F",                                            // MQ-4A Greyhawk
-    "B_T_UAV_03_dynamicLoadout_F",                                          // MQ-12 Falcon
+    "UK3CB_BAF_MQ9_Reaper_MTP",                                             // RAF Reaper
     "B_UAV_05_F",                                                           // UCAV Sentinel
     "UK3CB_BAF_Wildcat_AH1_CAS_6C_MTP",                                     // Wildcat AH1 6 (CAS/AT)
     "UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP",                                     // Wildcat AH1 8 (CAS/AT)
     "UK3CB_BAF_Apache_AH1_MTP",                                             // Apache AH 1 (Multi-Role)
-    "RHS_AH64D_wd",                                                         // AH-64D (Multi-Role)
-    "RHS_A10",                                                              // A-10A (CAS)
-    "FIR_F15C",                                                             // F-15C Eagle
-    "FIR_F15D",                                                             // F-15D Eagle
-    "FIR_F15E",                                                             // F-15E Strike Eagle
-    "JS_JC_FA18E",                                                          // F/A-18 E Super Hornet
-    "JS_JC_FA18F",                                                          // F/A-18 F Super Hornet
-    "B_Plane_Fighter_01_F",                                                 // F/A-181 Black Wasp II
-    "B_Plane_Fighter_01_Stealth_F",                                         // F/A-181 Black Wasp II (Stealth)
-    "B_T_VTOL_01_armed_F",                                                  // V-44 X Blackfish (Armed)
-    "RHS_M119_WD"                                                           // M119A2
+    "RHS_A10"                                                             	// A-10A (CAS)
+	*/  
 ];

@@ -63,7 +63,25 @@ GRLIB_arsenal_weapons = [
     "UK3CB_BAF_L92A1",                                              // L92A1 SMG
     "UK3CB_BAF_L98A2",                                              // L98A2 Cadet GP
     "UK3CB_BAF_L9A1",                                               // L9A1
-    "UK3CB_BAF_NLAW_Launcher"                                       // NLAW Launcher
+    "UK3CB_BAF_NLAW_Launcher",                                      // NLAW Launcher
+	
+	//Added by TheWarRoom-Wind
+	"rhs_weap_m320",									//M320 GLM (Secondary Slot)
+	"UK3CB_BAF_Javelin_Slung_Tube",						//3CB Javelin Tube
+	"UK3CB_BAF_L16_Tripod",								//3CB Mortar Bipod
+	"UK3CB_BAF_L111A1",									//3CB .50 Cal
+	"UK3CB_BAF_L134A1",									//3CB GMG
+	"UK3CB_BAF_L16", 									//3CB Medium Mortar
+	"UK3CB_BAF_M6",										//3CB Light Mortar
+	"UK3CB_BAF_Tripod",									//3CB Tripod
+	"launch_MRAWS_olive_rail_F",						//MAAWS No-Rangefinder
+	"launch_MRAWS_olive_F",								//MAAWS w/Rangefinder
+	"rhs_weap_fgm148", 									//RHS Javelin 
+	"rhs_weap_fim92",									//RHS Stinger
+	"rhs_weap_m136",									//RHS M136, in case we find 3CB ones lacking
+	"rhs_weap_m136_hedp",								//RHS M136, see above
+	"rhs_weap_m136_hp"									//RHS M136, see above
+	//Added by TheWarRoom-end
 ];
 
 GRLIB_arsenal_magazines = [
@@ -151,7 +169,59 @@ GRLIB_arsenal_magazines = [
     "MiniGrenade",                                                  // RGN Grenade
     "SatchelCharge_Remote_Mag",                                     // Explosive Satchel
     "SLAMDirectionalMine_Wire_Mag",                                 // M6 SLAM Mine
-    "TrainingMine_Mag"                                              // Training Mine
+    "TrainingMine_Mag",                                             // Training Mine
+	
+	//Added by TheWarRoom-Wind
+	//RHS Ammo Alternatives for 5.56
+	"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 		//RHS Tracer/EPR, may be better than BAF Tracer
+	"rhs_mag_30Rnd_556x45_Mk262_Stanag",					//RHS "Heavy" round, hits harder
+	"rhs_mag_30Rnd_556x45_Mk318_Stanag", 					//RHS Multipurpose Accurised round, AP/Soft
+
+	//Since BAF visual models don't show the different kind of mags, no point including more than one of each
+	"murshun_cigs_cigpack",									//Ciggies
+	"murshun_cigs_lighter",									//Zippo
+	"immersion_pops_poppack",								//Lollies
+	"murshun_cigs_matches",									//Matches
+
+	//UGL/Launcher Ammo
+	"rhs_mag_m576",										//Buckshot 40mm rounds for CQB
+	"rhs_mag_M397_HET",									//40mm Timed explosive for airburst
+	"ACE_HuntIR_M203",									//HuntIR for 40mm
+	"MRAWS_HE_F",										//HE for MAAWS
+	"MRAWS_HEAT55_F",									//HEAT55 for MAAWS
+	"MRAWS_HEAT_F",										//HEAT75 for MAAWS
+	"rhs_fgm148_magazine_AT",							//RHS Jav Missile
+	"rhs_fim92_mag",									//RHS Stinger Missile
+
+	//No Additional MAAWS Ammo so no Funny Rounds(tm)	
+	"UK3CB_BAF_1Rnd_81mm_Mo_AB_Shells",					//3CB Airburst
+	"UK3CB_BAF_1Rnd_81mm_Mo_Guided",					//3CB Guided
+	"UK3CB_BAF_1Rnd_81mm_Mo_Shells",					//3CB HE
+	"UK3CB_BAF_1Rnd_81mm_Mo_IRFlare_White",				//3CB IRFlare
+	"UK3CB_BAF_1Rnd_81mm_Mo_LG",						//3CB Laser
+	"UK3CB_BAF_1Rnd_81mm_Mo_Smoke_Red",					//3CB Red Smoke
+	"UK3CB_BAF_1Rnd_81mm_Mo_Flare_White",				//3CB Flare White
+	"UK3CB_BAF_1Rnd_81mm_Mo_WPSmoke_White",				//3CB Funny Smoke
+	"UK3CB_BAF_1Rnd_81mm_Mo_Smoke_White",				//3CB Regular Smoke
+	"UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",					//3CB Mini AB
+	"UK3CB_BAF_1Rnd_60mm_Mo_Shells",					//3CB Mini HE
+	"UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",				//3CB Mini Flare
+	"UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",				//3CB Mini Funny Smoke
+	"UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",				//3CB Mini Regular Smoke
+	
+	//Grenades, Throwables and Explosive
+	"rhs_charge_sb3kg_mag"	,							//RHS thrown demo charge
+	"rhs_mag_m67",										//RHS Frag Grenade, better than the base-game one
+	"ACE_M84",											//ACE Flashbang
+	"ACE_Chemlight_IR",									//ACE Chemlight(s)
+	"ACE_Chemlight_Hi-Blue",
+	"ACE_Chemlight_Hi-Green",
+	"ACE_Chemlight_Hi-Red",
+	"ACE_Chemlight_Hi-White",
+	"ACE_Chemlight_Hi-Yellow",
+	"rhsusf_m112x4_mag",								//ACE M112 Bundle
+	"rhsusf_m112_mag"									//ACE M112 Single 
+	//Added by TheWarRoom-end
 ];
 
 GRLIB_arsenal_items = [
@@ -379,6 +449,150 @@ GRLIB_arsenal_items = [
     "UK3CB_BAF_H_Mk7_Win_ESS_A",                                    // Helmet Mk7 Arctic ESS [BAF]
     "UK3CB_BAF_H_PilotHelmetHeli_A",                                // Heli Pilot Helmet (A) [BAF]
     "UK3CB_BAF_H_Wool_Hat",                                         // Wool Commando Hat [BAF]
+	
+	//Added by TheWarRoom-Wind
+	"H_Bandanna_gry",										//Black Bandana
+	"H_Bandanna_blu",										//Blue Bandana
+	"H_Bandanna_cbr",										//Coyote Bandana
+	"H_Bandanna_khk_hs",									//Khaki Bandana w/Headset
+	"H_Bandanna_khk",										//Khaki Bandana
+	"H_Bandanna_mcamo",										//MTP Bandana
+	"H_Bandanna_sgg",										//Sage Bandana
+	"H_Bandanna_sand",										//Sand Bandana
+	"H_Bandanna_surfer",									//Surfer (Blue) Bandana
+	"H_Bandanna_surfer_blk",								//Surfer (Black) Bandana
+	"H_Bandanna_surfer_grn",								//Surfer (Green) Bandana
+	"H_Bandanna_camo",										//Woodland Bandana
+	"H_Watchcap_blk",										//Black Beanie
+	"H_Watchcap_cbr",										//Coyote Beanie
+	"H_Watchcap_camo",										//Green Beanie
+	"H_Watchcap_khk", 										//Khaki Beanie
+	"H_Beret_blk",											//Black Beret
+	"H_Beret_02",											//NATO Beret
+	"H_Beret_Colonel",										//Colonel Beret
+	"H_Booniehat_khk_hs",									//Khaki Boonie (Headset)
+	"H_Booniehat_khk",										//Khaki Boonie
+	"H_Booniehat_mcamo",									//MTP Boonie
+	"H_Booniehat_oli",										//Olive Boonie
+	"H_Booniehat_tan",										//Sand Boonie
+	"H_Booniehat_dgtl",										//AAF Boonie
+	"H_Cap_grn_BI",											//Bohemia Cap
+	"H_Cap_blk",											//Black Cap
+	"H_Cap_blu",											//Blue Cap
+	"H_Cap_blk_CMMG",										//CMMG Cap
+	"H_Cap_grn",											//Green Cap
+	"H_Cap_blk_ION",										//Ion Cap
+	"H_Cap_Lyfe",											//LYFE Cap
+	"H_Cap_MaldenTours",									//Malden Tours Cap
+	"H_Cap_oli",											//Olive Cap
+	"H_Cap_oli_hs",											//Olive Cap (Headset)
+	"H_Cap_police",											//Cop Cap
+	"H_Cap_press",											//Press Cap
+	"H_Cap_red",											//Red Cap
+	"H_Cap_surfer",											//Surfer Cap
+	"H_Cap_tan",											//Tan Cap
+	"H_Cap_khaki_specops_UK",								//UK Cap
+	"H_Cap_usblack",										//US Cap
+	"H_Cap_specops_US",										//US MTP Cap
+	"H_Cap_blk_Raven",										//AAF Cap
+	"H_Cap_brn_SPECOPS",									//CSAT Cap
+	"H_Hat_blue",											//Blue Hat
+	"H_Hat_brown",											//Brown Hat
+	"H_Hat_camo",											//Tactical Hat
+	"H_Hat_checker",										//Ska Hat
+	"H_Hat_grey",											//Grey Hat
+	"H_Hat_tan",											//Tan Hat
+	"H_Cap_marshal",										//Marshal Cap
+	"H_MilCap_blue",										//Blue Military Cap
+	"H_MilCap_gry",											//Grey Military Cap
+	"H_MilCap_ocamo",										//CSAT Military Cap
+	"H_MilCap_mcamo",										//MTP Military Cap
+	"H_MilCap_dgtl",										//AAF Military Cap
+	"H_Cap_headphones",										//Rangemaster Cap
+	"H_Shemag_olive",										//Olive Shemag
+	"H_Shemag_olive_hs",									//Olive Shemag (Headset)
+	"H_ShemagOpen_tan",										//Tan Shemag
+	"H_ShemagOpen_khk",										//Khaki Shemag
+	"H_StrawHat",											//Straw Hat
+	"H_StrawHat_dark",										//Dark Straw Hat
+	"H_Beret_gen_F",										//Gendarmerie Beret
+	"H_Beret_CSAT_01_F",									//CSAT Beret
+	"H_Booniehat_tna_F",									//Tropic Boonie
+	"H_MilCap_gen_F",										//Gendarmerie Beret
+	"H_MilCap_ghex_F",										//CSAT MilCap Tropic
+	"H_MilCap_tna_F",										//Tropic MilCap
+	"H_ParadeDressCap_01_AAF_F",							//AAF Parade Cap
+	"H_ParadeDressCap_01_CSAT_F",							//CSAT Parade Cap
+	"H_ParadeDressCap_01_LDF_F",							//LDF Parade Cap
+	"H_ParadeDressCap_01_US_F",								//US Parade Cap
+	"H_Beret_EAF_01_F",										//LDF Beret
+	"H_Booniehat_mgrn",										//Green Boonie
+	"H_Booniehat_taiga",									//Taiga Boonie
+	"H_Booniehat_wdl",										//Woodland Boonie
+	"H_Booniehat_eaf",										//LDF Boonie
+	"H_MilCap_grn",											//Green MilCap
+	"H_MilCap_taiga",										//Taiga MilCap
+	"H_MilCap_wdl",											//Woodland MilCap
+	"H_Hat_Tinfoil_F",										//Tinfoil Hat
+	"H_Cap_Black_IDAP_F",									//IDAP Cap
+	"H_Cap_Orange_IDAP_F",									//IDAP Cap (Orange)
+	"H_Cap_White_IDAP_F",									//IDAP Cap (White)
+	"H_EarProtectors_black_F",								//Black EarPro
+	"H_EarProtectors_orange_F",								//Orange EarPro
+	"H_EarProtectors_red_F",								//Red EarPro
+	"H_EarProtectors_white_F",								//White EarPro
+	"H_EarProtectors_yellow_F",								//Yellow EarPro
+	"H_HeadBandage_clean_F",								//Clean Bandage
+	"H_HeadBandage_stained_F",								//Moderate Bandage
+	"H_HeadBandage_bloody_F",								//Bloody Bandage
+	"H_HeadSet_black_F",									//Black Headset
+	"H_HeadSet_orange_F",									//Orange Headset
+	"H_HeadSet_red_F",										//Red Headset
+	"H_HeadSet_white_F",									//White Headset
+	"H_HeadSet_yellow_F",									//Yellow Headset
+	"H_Hat_Safari_olive_F",									//Olive Safari Hat
+	"H_Hat_Safari_sand_F",									//Sand Safari Hat
+	"H_WirelessEarpiece_F",									//Wireless Earpiece (Headgear)
+	"LOP_H_Beanie_dpmw",									//DPM Beanie
+	"LOP_H_Beanie_flec",									//Flecktarn Beanie
+	"LOP_H_Beanie_m81",										//M81 Beanie
+	"LOP_H_Beanie_marpat",									//Marpat Beanie
+	"LOP_H_Beanie_digit",									//MM14 Beanie
+	"LOP_H_Beanie_mtp",										//MTP Beanie
+	"LOP_H_Beanie_multicam",								//Multicam Beanie
+	"LOP_H_Beanie_tan",										//Tan Beanie
+	"PO_H_bonnie_tub",										//Tubitak Boonie
+	"LOP_H_Booniehat_RACS",									//6CD Booniehat
+	"PO_H_cap_tub",											//Tubitak Cap
+	"LOP_H_Cowboy_hat",										//Cowboy Hat
+	"LOP_H_Shemag_BLK",										//Black Shemag
+	"LOP_H_Shemag_BLU",										//Blue Shemag
+	"LOP_H_Shemag_GRE",										//Grey Shemag
+	"LOP_H_Shemag_OLV",										//Olive Shemag
+	"LOP_H_Shemag_RED1",									//Red Shemag (1)
+	"LOP_H_Shemag_RED2",									//Red Shemag (2)
+	"LOP_H_Shemag_TAN",										//Tan Shemag
+	"rhs_beanie_green",										//Green Beanie 
+	"rhs_beanie",											//Flora Beanie
+	"rhs_headband",											//Headband
+	"rhsgref_un_beret",										//UN Beret
+	"rhsgref_Booniehat_alpen",								//Alpenflage
+	"rhs_Booniehat_m81",									//M81 Boonie
+	"rhs_booniehat2_marpatd",								//Desert Marpat Boonie
+	"rhs_booniehat2_marpatwd",								//Woodland Marpat Boonie
+	"RHS_Booniehat_ocp",									//OCP Boonie
+	"rhs_Booniehat_ucp",									//UCP Boonie
+	"rhsusf_Bowman",										//Bowman Elite Headset
+	"rhsusf_bowman_cap",									//Bowman w/Cap
+	"rhsusf_patrolcap_ocp",									//OCP Cap
+	"rhsusf_patrolcap_ucp",									//UCP Cap
+    "H_PilotHelmetFighter_I_E",                             //Generic Pilot Helmet
+    "FIR_JHMCS",                                            //FIR Compatible Helmet
+    "FIR_JHMCS_II",                                         //FIR Compatible Helmet
+    "FIR_JHMCS_Type2",                                      //FIR Compatible Helmet
+    "rhsusf_hgu56p_visor_mask",                             //Generic RHS Helmet to replace Pink One
+    "rhsusf_ihadss",                                        //RHS Apache Helmet
+	//Added by TheWarRoom-end
 
     // Facegear
     "UK3CB_BAF_G_Balaclava_Win",                                    // Balaclava Arctic
@@ -387,6 +601,108 @@ GRLIB_arsenal_items = [
     "UK3CB_BAF_G_Tactical_Grey",                                    // Tactical Glasses (Grey) [BAF]
     "UK3CB_BAF_G_Tactical_Orange",                                  // Tactical Glasses (Orange)[BAF]
     "UK3CB_BAF_G_Tactical_Yellow",                                  // Tactical Glasses (Yellow) [BAF]
+
+	//Added by TheWarRoom-Wind
+	"G_Aviator",										//Aviators
+	"G_Balaclava_blk",									//Balaclava
+	"G_Balaclava_BlueStrips",							//Blue-Stripe Balaclava
+	"G_Balaclava_combat",								//Balaclava Goggles
+	"G_Balaclava_Flecktarn", 							//Balaclava Flecktarn
+	"G_Balaclava_Halloween_01",							//Balaclava Pumpkin
+	"G_Balaclava_lowprofile",							//Balaclava Goggles2
+	"G_Balaclava_oli",									//Balaclava Olive
+	"G_Balaclava_Flames1",								//Balaclava Flames
+	"G_Balaclava_Scarecrow_01",							//Balaclava Scarecrow 
+	"G_Balaclava_Skull1",								//Balaclava Skull
+	"G_Balaclava_Tropentarn",							//Balaclava Tropentarn
+	"G_Bandanna_aviator",								//Aviator Bandana
+	"G_Bandanna_beast",									//Beast Bandana
+	"G_Bandanna_blk",									//Black Bandana
+	"G_Bandanna_BlueFlame1",							//BlueFlame Bandana
+	"G_Bandanna_BlueFlame2",							//BlueFlame Two Bandana
+	"G_Bandanna_CandySkull",							//CandySkull Bandana
+	"G_Bandanna_khk",									//Khaki Bandana
+	"G_Bandanna_oli",									//Olive Bandana
+	"G_Bandanna_OrangeFlame1",							//Orange Bandana
+	"G_Bandanna_RedFlame1",								//Red Bandana
+	"G_Bandanna_shades",								//Shades Bandana
+	"G_Bandanna_Skull1",								//Skull Bandana
+	"G_Bandanna__Syndikat1",							//Syndikat Bandana
+	"G_Bandanna_Skull2",								//Ornamental Skull
+	"G_Bandanna_sport",									//Sports Glasses Bandana
+	"G_Bandanna_tan",									//Tan Bandana (Tandana)
+	"G_Bandanna_Vampire_01",							//Vampire Bandana
+	"G_Bandanna__Syndikat2",							//Syndikat Bandana 2
+	"G_Combat",											//Combat Goggles
+	"G_Lowprofile",										//Low Profile Goggles
+	"G_Shades_Black",									//Black Shades
+	"G_Shades_Blue",									//Blue Shades
+	"G_Shades_Green",									//Green Shades
+	"G_Shades_Red",										//Red Shades
+	"G_Spectacles",										//Specs
+	"G_Sport_Red",										//Red Sports
+	"G_Sport_Blackyellow",								//"Poison" Sports
+	"G_Sport_BlackWhite",								//"Shadow" Sports
+	"G_Sport_Checkered",								//"Style" Sports
+	"G_Sport_Blackred",									//"Vulcan" Sports
+	"G_Sport_Greenblack",								//"Yetti" Sports
+	"G_Squares_Tinted",									//Square Shades
+	"G_Squares",										//Square Specs
+	"G_Tactical_Clear",									//Tactical Glasses
+	"G_Tactical_Black",									//Tactical Shades
+	"G_Spectacles_Tinted",								//Tinted Specs
+	"G_Goggles_VR",										//VR Goggles
+	"G_Combat_Goggles_tna_F",							//Green Combat Goggles
+	"G_Balaclava_TI_blk_F",								//Stealth Balaclava Black
+	"G_Balaclava_TI_G_blk_F",							//Stealth Balaclava Goggles
+	"G_Balaclava_TI_tna_F",								//Stealth Balaclava Tanoa
+	"G_Balaclava_TI_G_tna_F",							//Stealth Balaclava Goggles Tanoa
+	"G_AirPurifyingRespirator_02_black_F",				//CSAT APR (Black)
+	"G_AirPurifyingRespirator_02_olive_F",				//CSAT APR (Olive)
+	"G_AirPurifyingRespirator_02_sand_F",				//CSAT APR (Sand)
+	"G_AirPurifyingRespirator_01_F",					//NATO APR
+	"G_Blindfold_01_black_F",							//Black Blindfold
+	"G_Blindfold_01_white_F",							//White Blindfold
+	"G_RegulatorMask_F",								//Regulator Facepiece
+	"G_Respirator_blue_F",								//Blue Facemask
+	"G_Respirator_white_F",								//White Facemask
+	"G_Respirator_yellow_F",							//Yellow Facemask
+	"G_EyeProtectors_F",								//Safety Goggles
+	"G_EyeProtectors_Earpiece_F",						//Safety Goggles w/Earpiece
+	"G_WirelessEarpiece_F",								//Wireless Earpiece
+	"immersion_cigs_cigar0",							//Immersion Cigar
+	"murshun_cigs_cig0",								//Ciggie
+	"immersion_pops_pop0",								//Lolly
+	"rhs_facewear_6m2",									//6m2 Headphones
+	"rhs_facewear_6m2_1",								//6m2 w/Mouthpiece
+	"rhs_balaclava",									//Balaclava
+	"rhs_balaclava1_olive",								//Balaclava (Two Eyes)
+	"rhs_scarf",										//Scarf over mouth
+	"rhs_googles_black",								//Black Ballistic Goggles
+	"rhs_googles_clear",								//Clear Ballistic Goggles
+	"rhs_googles_orange",								//Orange Ballistic Goggles
+	"rhs_googles_yellow",								//Yellow Ballistic Goggles
+	"rhs_ess_black",									//Black ESS
+	"rhsusf_shemagh_grn",								//Green Shemagh
+	"rhsusf_shemagh2_grn",								//Green Shemagh (Alt)
+	"rhsusf_shemagh_od",								//OD Shemagh
+	"rhsusf_shemagh2_od",								//OD Shemagh (Alt)
+	"rhsusf_shemagh_tan",								//Tan Shemagh
+	"rhsusf_shemagh2_tan", 								//Tan Shemagh (Alt)
+	"rhsusf_shemagh_white",								//White Shemagh
+	"rhsusf_shemagh2_white",							//White Shemagh (Alt)
+	"rhsusf_shemagh_gogg_grn",							//Green Goggle Shemagh
+	"rhsusf_shemagh2_gogg_grn",							//Green Goggle Shemagh (Alt)
+	"rhsusf_shemagh_gogg_od",							//OD Goggle Shemagh
+	"rhsusf_shemagh2_gogg_od",							//OD Goggle Shemagh (Alt)
+	"rhsusf_shemagh_gogg_tan",							//Tan Goggle Shemagh
+	"rhsusf_shemagh2_gogg_tan",							//Tan Goggle Shemagh (Alt)
+	"rhsusf_shemagh_gogg_white",						//White Goggle Shemagh 
+	"rhsusf_shemagh2_gogg_white",						//White Goggle Shemagh (Alt)
+	"rhsusf_oakley_goggles_blk",						//Black Goggles
+	"rhsusf_oakley_goggles_clr",						//Clear Goggles
+	"rhsusf_oakley_goggles_ylw",						//Yellow Goggles
+	//Added by TheWarRoom-end
 
     // Vests
     "UK3CB_BAF_V_HiVis",                                            // Hi-Vis Jacket [BAF]
@@ -523,6 +839,46 @@ GRLIB_arsenal_items = [
     "UK3CB_underbarrel_acc_grippod_t",                              // Grip-pod (Tan)
     "UK3CB_underbarrel_acc_grippod_w",                              // Grip-pod (Winter)
     "UK3CB_underbarrel_acc_grippod",                                // Grip-pod (Black)
+	
+	//Added by TheWarRoom-Wind
+	//Bino Slot
+	"rhsusf_bino_lerca_1200_black",						//Rangefinder Black
+	"rhsusf_bino_lerca_1200_tan",						//Rangefinder Tan
+	"rhsusf_bino_leopold_mk4",							//Spotting Scope
+	"rhsusf_bino_m24",									//M24 Binoculars
+	"rhsusf_bino_m24_ARD",								//M24 Binos (Sunshade)
+	"rhsusf_bino_lrf_Vector21",							//Vector21 RHS
+
+	//NVG Slot
+	"ACE_NVG_Gen4_Black",								//Gen4 NVGs
+	"ACE_NVG_Gen4_Black_WP",							//Gen4 NVGs Phos
+	"ACE_NVG_Wide_Black",								//Wide NVGs
+	"ACE_NVG_Wide__Black_WP",							//Wide NVGs Phosphor
+	"O_NVGoggles_grn_F",								//Compact NVGs (Green)
+	"immersion_cigs_cigar0_nv",							//Immersion Cigar NVG
+	"murshun_cigs_cig0_nv",								//Immersion Ciggies NVG
+	"rhs_1PN138",										//Monocular NVG (Works with bettIR)
+	"rhsusf_ANPVS_14",									//US Monocular NVG
+
+	//Attachments
+	"rhsusf_acc_g33_xps3",								//EOTech with Magnifier
+	"rhsusf_acc_compm4",								//High CCO
+	"rhsusf_acc_su230_mrds",							//SU230 (556)
+	"rhsusf_acc_su230a_mrds",							//SU230A (762)
+	"rhsusf_acc_ACOG_MDO",								//6x ACOG
+	"rhsusf_acc_anpeq15side_bk",						//Laser that works with BettIR
+	"rhsusf_acc_M952V",									//Torch
+	//Additional Requests from Community Members - AC
+	"optic_Hamr",										//Base-game HAMR
+	"optic_ERCO_blk_F",									//APEX Optic
+	"optic_AMS",										//Marksman DLC 2-8x
+	"rhsusf_acc_ACOG_USMC",								//RHS ACOG
+	"rhsusf_acc_ELCAN",									//RHS Elcan
+	"rhsusf_acc_ACOG",									//RHS ACOG
+	"rhsusf_acc_eotech_552",							//RHS Holo
+	"rhsusf_acc_ACOG_RMR",								//RHS ACOG w-Red Dot
+	"rhsusf_acc_ACOG_MDO",								//RHS 6x 
+	//Added by TheWarRoom-end
 
     // Vanilla Standard Items
     "acc_flashlight",                                               // Flashlight
@@ -635,6 +991,9 @@ GRLIB_arsenal_items = [
     "ACE_VMM3",                                                     // VMM3
     "ACE_wirecutter",                                               // Wirecutter
     "ACE_Yardage450",                                               // Yardage 450
+    //update for latest ace items - Crowded 
+    "ACE_PlottingBoard",                                            // ACE plotting board
+    "acex_intelitems_notepad",                                      // ACE Notepad
 
     // ACRE Items
     "ACRE_PRC117F",                                                 // AN/PRC-117F
@@ -648,14 +1007,14 @@ GRLIB_arsenal_items = [
     "ACRE_VHF30108MAST",                                            // VHF30108 Mast
     "ACRE_VHF30108SPIKE",                                           // VHF30108 GS
 
-    //TFAR Items
-    "tf_anprc148jem",                                               // AN/PRC-148 JEM
-    "tf_anprc152",                                                  // AN/PRC-152
-    "tf_anprc154_1",                                                // AN/PRC-154
-    "tf_fadak",                                                     // FADAK
-    "tf_microdagr",                                                 // MicroDAGR Radio Programmer
-    "tf_pnr1000a_1",                                                // PNR-1000A
-    "tf_rf7800str"                                                  // PF-7800S-TR
+    //TFAR Items - Crowded fixed naming bug 
+    "TFAR_anprc148jem",                                               // AN/PRC-148 JEM
+    "TFAR_anprc152",                                                  // AN/PRC-152
+    "TFAR_anprc154",                                                // AN/PRC-154
+    "TFAR_fadak",                                                     // FADAK
+    "TFAR_microdagr",                                                 // MicroDAGR Radio Programmer
+    "TFAR_pnr1000a_1",                                                // PNR-1000A
+    "TFAR_rf7800str"                                                  // PF-7800S-TR
 ];
 
 GRLIB_arsenal_backpacks = [
@@ -740,18 +1099,21 @@ GRLIB_arsenal_backpacks = [
     "ACE_TacticalLadder_Pack",                                      // Telescopic Ladder
 
     // TFAR Backpacks
-    "tf_anarc164",                                                  // AN/ARC-164
-    "tf_anarc210",                                                  // AN/ARC-210
-    "tf_anprc155_coyote",                                           // AN/PRC 155 Coyote
-    "tf_anprc155",                                                  // AN/PRC 155
-    "tf_bussole",                                                   // Assault Pack Bussole
-    "tf_mr3000_multicam",                                           // MR3000 Multicam
-    "tf_mr3000",                                                    // MR3000
-    "tf_mr6000l",                                                   // MR6000L
-    "tf_rt1523g_big",                                               // RT-1523G (ASIP) Big
-    "tf_rt1523g_black",                                             // RT-1523G (ASIP) Black
-    "tf_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
-    "tf_rt1523g_green",                                             // RT-1523G (ASIP) Green
-    "tf_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
-    "tf_rt1523g"                                                    // RT-1523G (ASIP)
+    "TFAR_anarc164",                                                  // AN/ARC-164
+    "TFAR_anarc210",                                                  // AN/ARC-210
+    "TFAR_anprc155_coyote",                                           // AN/PRC 155 Coyote
+    "TFAR_anprc155",                                                  // AN/PRC 155
+    "TFAR_bussole",                                                   // Assault Pack Bussole
+    "TFAR_mr3000_multicam",                                           // MR3000 Multicam
+    "TFAR_mr3000",                                                    // MR3000
+    "TFAR_mr6000l",                                                   // MR6000L
+    "TFAR_rt1523g_big",                                               // RT-1523G (ASIP) Big
+    "TFAR_rt1523g_black",                                             // RT-1523G (ASIP) Black
+    "TFAR_rt1523g_fabric",                                            // RT-1523G (ASIP) Fabric
+    "TFAR_rt1523g_green",                                             // RT-1523G (ASIP) Green
+    "TFAR_rt1523g_sage",                                              // RT-1523G (ASIP) Sage
+    "TFAR_rt1523g",                                                   // RT-1523G (ASIP)
+	
+	//Added by DWR - AC 
+	"B_LegStrapBag_black_F"											  //Black leg bag, request from BA
 ];
