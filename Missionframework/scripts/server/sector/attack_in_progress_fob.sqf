@@ -49,7 +49,7 @@ if ( GRLIB_endgame == 0 ) then {
         sleep 3;
         GRLIB_all_fobs = GRLIB_all_fobs - [_thispos];
         publicVariable "GRLIB_all_fobs";
-        reset_battlegroups_ai = true;
+        ["KPLIB_ResetBattleGroups"] call CBA_fnc_serverEvent;
         [_thispos] call KPLIB_fnc_destroyFob;
         [] spawn KPLIB_fnc_doSave;
         stats_fobs_lost = stats_fobs_lost + 1;

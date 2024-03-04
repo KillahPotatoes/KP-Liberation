@@ -17,7 +17,7 @@ stats_readiness_earned = stats_readiness_earned + _combat_readiness_increase;
 blufor_sectors pushback _liberated_sector; publicVariable "blufor_sectors";
 stats_sectors_liberated = stats_sectors_liberated + 1;
 
-reset_battlegroups_ai = true; publicVariable "reset_battlegroups_ai";
+["KPLIB_ResetBattleGroups"] call CBA_fnc_serverEvent;
 
 if (_liberated_sector in sectors_factory) then {
     {
