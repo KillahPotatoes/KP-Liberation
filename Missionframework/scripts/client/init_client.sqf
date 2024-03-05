@@ -107,3 +107,8 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
         };
     };
 };
+
+// headless and server  
+if (!hasInterface) then {
+    ["KPLIB_battlegroupSpawn", KPLIB_fnc_spawnBattleGroupHC] call CBA_fnc_addEventHandler;
+}

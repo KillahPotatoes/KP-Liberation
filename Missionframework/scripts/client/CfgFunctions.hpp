@@ -6,3 +6,9 @@ class client_tutorial {
     class handleTakePowTask             {};
     class tutorial                      {ext = ".fsm";};
 };
+
+class headless {
+    file = "scripts\client\headless";
+
+    class spawnBattleGroupHC            {};
+}
