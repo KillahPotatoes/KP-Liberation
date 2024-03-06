@@ -6,13 +6,9 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=526;
-	mods[]=
-	{
-		"3denEnhanced"
-	};
 	class ItemIDProvider
 	{
-		nextID=5081;
+		nextID=5082;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1240;
+		nextID=1452;
 	};
 	class Camera
 	{
-		pos[]={5726.9849,32.352161,278.8277};
-		dir[]={0.83891505,-0.54373205,0.027501248};
-		up[]={0.54345864,0.83926797,0.017815229};
-		aside[]={0.032770656,-4.110625e-007,-0.99952859};
+		pos[]={20347.928,126.26719,264.88104};
+		dir[]={0.95707381,-0.28241679,-0.065196022};
+		up[]={0.28176379,0.95929176,-0.019193796};
+		aside[]={-0.067962654,-1.8626451e-09,-0.99768782};
 	};
 };
 binarizationWanted=0;
-sourceName="kp_liberation";
+sourceName="kp_liberation_warroom_2";
 addons[]=
 {
 	"A3_Ui_F",
@@ -48,6 +44,7 @@ addons[]=
 	"A3_Structures_F_Mil_Shelters",
 	"A3_Structures_F_Households_Stone_Shed",
 	"A3_Structures_F_Ind_Transmitter_Tower",
+	"emr_main",
 	"ace_logistics_wirecutter",
 	"ace_concertina_wire",
 	"A3_Structures_F_Civ_Accessories",
@@ -89,7 +86,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -155,125 +152,132 @@ class AddonsMetaData
 		};
 		class Item9
 		{
+			className="emr_main";
+			name="Enhanced Movement Rework";
+			author="Simplex Team";
+			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
+		};
+		class Item10
+		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item10
+		class Item11
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item11
+		class Item12
 		{
 			className="ace_sitting";
 			name="ACE3 - Sitting";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item12
+		class Item13
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="ace_field_rations";
 			name="ACE3 - Field Rations";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item17
+		class Item18
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item18
+		class Item19
 		{
 			className="FIR_F35B_Armaverse_F";
 			name="FIR_F35B_Armaverse_F";
 		};
-		class Item19
+		class Item20
 		{
 			className="FIR_AirWeaponSystem_US";
 			name="FIR_AirWeaponSystem_US";
 		};
-		class Item20
+		class Item21
 		{
 			className="UK3CB_BAF_Units_Temperate";
 			name="3CB BAF Units - Temperate";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item21
+		class Item22
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item24
 		{
 			className="FIR_PilotCrewPack_US";
 			name="FIR_PilotCrewPack_US";
 		};
-		class Item24
+		class Item25
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item26
 		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="ace_refuel";
 			name="ACE3 - Refuel";
@@ -377,7 +381,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=487;
+		items=488;
 		class Item0
 		{
 			dataType="Marker";
@@ -1262,7 +1266,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5815.291,9.5367432e-005,256.241};
+				position[]={5815.291,9.5367432e-05,256.241};
 				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
@@ -3906,7 +3910,7 @@ class Mission
 					};
 					id=961;
 					type="Land_HBarrier_3_F";
-					atlOffset=6.6757202e-005;
+					atlOffset=6.6757202e-05;
 				};
 				class Item3
 				{
@@ -4216,7 +4220,7 @@ class Mission
 					};
 					id=998;
 					type="Land_BagFence_Round_F";
-					atlOffset=3.361702e-005;
+					atlOffset=3.361702e-05;
 				};
 				class Item20
 				{
@@ -4234,7 +4238,7 @@ class Mission
 					};
 					id=999;
 					type="Land_BagFence_Long_F";
-					atlOffset=2.3841858e-005;
+					atlOffset=2.3841858e-05;
 				};
 				class Item21
 				{
@@ -4639,7 +4643,7 @@ class Mission
 					};
 					id=1036;
 					type="Land_BagFence_Short_F";
-					atlOffset=2.9563904e-005;
+					atlOffset=2.9563904e-05;
 				};
 				class Item15
 				{
@@ -4693,7 +4697,7 @@ class Mission
 					};
 					id=1039;
 					type="Land_BagFence_Corner_F";
-					atlOffset=2.9921532e-005;
+					atlOffset=2.9921532e-05;
 				};
 				class Item18
 				{
@@ -5014,7 +5018,7 @@ class Mission
 					};
 					id=1061;
 					type="Land_Razorwire_F";
-					atlOffset=1.1920929e-007;
+					atlOffset=1.1920929e-07;
 				};
 				class Item4
 				{
@@ -5033,7 +5037,7 @@ class Mission
 					};
 					id=1062;
 					type="Land_HBarrier_Big_F";
-					atlOffset=1.1920929e-007;
+					atlOffset=1.1920929e-07;
 				};
 				class Item5
 				{
@@ -5106,7 +5110,7 @@ class Mission
 					};
 					id=1066;
 					type="Land_BagFence_Round_F";
-					atlOffset=-5.9604645e-008;
+					atlOffset=-5.9604645e-08;
 				};
 				class Item9
 				{
@@ -5253,7 +5257,7 @@ class Mission
 					};
 					id=1074;
 					type="Land_HBarrierTower_F";
-					atlOffset=1.1920929e-007;
+					atlOffset=1.1920929e-07;
 				};
 				class Item17
 				{
@@ -5272,7 +5276,7 @@ class Mission
 					};
 					id=1075;
 					type="Land_Razorwire_F";
-					atlOffset=-1.1920929e-007;
+					atlOffset=-1.1920929e-07;
 				};
 			};
 			id=1076;
@@ -6539,7 +6543,7 @@ class Mission
 					};
 					id=1155;
 					type="Land_HBarrier_1_F";
-					atlOffset=6.5803528e-005;
+					atlOffset=6.5803528e-05;
 				};
 				class Item32
 				{
@@ -6557,7 +6561,7 @@ class Mission
 					};
 					id=1163;
 					type="Land_HBarrier_5_F";
-					atlOffset=4.9591064e-005;
+					atlOffset=4.9591064e-05;
 				};
 				class Item33
 				{
@@ -6611,7 +6615,7 @@ class Mission
 					};
 					id=1169;
 					type="Land_BagFence_Long_F";
-					atlOffset=3.7670135e-005;
+					atlOffset=3.7670135e-05;
 				};
 				class Item36
 				{
@@ -6629,7 +6633,7 @@ class Mission
 					};
 					id=1170;
 					type="Land_BagFence_Long_F";
-					atlOffset=3.6716461e-005;
+					atlOffset=3.6716461e-05;
 				};
 				class Item37
 				{
@@ -6647,7 +6651,7 @@ class Mission
 					};
 					id=1173;
 					type="Land_HBarrier_Big_F";
-					atlOffset=8.0108643e-005;
+					atlOffset=8.0108643e-05;
 				};
 				class Item38
 				{
@@ -6936,7 +6940,7 @@ class Mission
 					};
 					id=1205;
 					type="Land_HBarrier_Big_F";
-					atlOffset=9.2506409e-005;
+					atlOffset=9.2506409e-05;
 				};
 				class Item54
 				{
@@ -7119,7 +7123,7 @@ class Mission
 					};
 					id=1254;
 					type="CamoNet_OPFOR_big_F";
-					atlOffset=-2.3841858e-007;
+					atlOffset=-2.3841858e-07;
 				};
 				class Item1
 				{
@@ -7154,7 +7158,7 @@ class Mission
 					};
 					id=1256;
 					type="Land_TTowerSmall_1_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=4.7683716e-07;
 				};
 				class Item3
 				{
@@ -7428,7 +7432,7 @@ class Mission
 					};
 					id=1285;
 					type="CamoNet_OPFOR_big_F";
-					atlOffset=-2.3841858e-007;
+					atlOffset=-2.3841858e-07;
 				};
 				class Item4
 				{
@@ -7484,7 +7488,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_HBarrier_5_F";
-					atlOffset=5.531311e-005;
+					atlOffset=5.531311e-05;
 				};
 				class Item7
 				{
@@ -7520,7 +7524,7 @@ class Mission
 					};
 					id=1293;
 					type="Land_HBarrier_1_F";
-					atlOffset=1.2159348e-005;
+					atlOffset=1.2159348e-05;
 				};
 				class Item9
 				{
@@ -7538,7 +7542,7 @@ class Mission
 					};
 					id=1294;
 					type="Land_HBarrier_1_F";
-					atlOffset=6.9141388e-005;
+					atlOffset=6.9141388e-05;
 				};
 				class Item10
 				{
@@ -7556,7 +7560,7 @@ class Mission
 					};
 					id=1295;
 					type="Land_HBarrier_1_F";
-					atlOffset=2.5033951e-005;
+					atlOffset=2.5033951e-05;
 				};
 				class Item11
 				{
@@ -7574,7 +7578,7 @@ class Mission
 					};
 					id=1296;
 					type="Land_HBarrier_1_F";
-					atlOffset=6.8187714e-005;
+					atlOffset=6.8187714e-05;
 				};
 				class Item12
 				{
@@ -7592,7 +7596,7 @@ class Mission
 					};
 					id=1313;
 					type="Land_HBarrier_5_F";
-					atlOffset=9.7513199e-005;
+					atlOffset=9.7513199e-05;
 				};
 				class Item13
 				{
@@ -7610,7 +7614,7 @@ class Mission
 					};
 					id=1314;
 					type="Land_HBarrier_5_F";
-					atlOffset=7.7724457e-005;
+					atlOffset=7.7724457e-05;
 				};
 				class Item14
 				{
@@ -7646,7 +7650,7 @@ class Mission
 					};
 					id=1321;
 					type="Land_HBarrier_5_F";
-					atlOffset=8.4877014e-005;
+					atlOffset=8.4877014e-05;
 				};
 			};
 			id=1322;
@@ -7700,7 +7704,7 @@ class Mission
 					};
 					id=1371;
 					type="Land_LampShabby_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=4.7683716e-07;
 				};
 				class Item2
 				{
@@ -7976,7 +7980,7 @@ class Mission
 					};
 					id=1395;
 					type="Land_HBarrier_5_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item18
 				{
@@ -8706,7 +8710,7 @@ class Mission
 					};
 					id=1514;
 					type="Land_BagFence_Short_F";
-					atlOffset=4.8398972e-005;
+					atlOffset=4.8398972e-05;
 				};
 				class Item1
 				{
@@ -8725,7 +8729,7 @@ class Mission
 					};
 					id=1515;
 					type="Land_BagFence_Short_F";
-					atlOffset=4.6014786e-005;
+					atlOffset=4.6014786e-05;
 				};
 				class Item2
 				{
@@ -8744,7 +8748,7 @@ class Mission
 					};
 					id=1516;
 					type="Land_BagFence_Short_F";
-					atlOffset=4.1484833e-005;
+					atlOffset=4.1484833e-05;
 				};
 				class Item3
 				{
@@ -8763,7 +8767,7 @@ class Mission
 					};
 					id=1517;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.5047531e-005;
+					atlOffset=3.5047531e-05;
 				};
 				class Item4
 				{
@@ -8782,7 +8786,7 @@ class Mission
 					};
 					id=1518;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.5047531e-005;
+					atlOffset=3.5047531e-05;
 				};
 				class Item5
 				{
@@ -8801,7 +8805,7 @@ class Mission
 					};
 					id=1519;
 					type="Land_BagFence_End_F";
-					atlOffset=4.2676926e-005;
+					atlOffset=4.2676926e-05;
 				};
 				class Item6
 				{
@@ -8820,7 +8824,7 @@ class Mission
 					};
 					id=1520;
 					type="Land_BagFence_End_F";
-					atlOffset=3.1232834e-005;
+					atlOffset=3.1232834e-05;
 				};
 				class Item7
 				{
@@ -8838,7 +8842,7 @@ class Mission
 					};
 					id=1521;
 					type="Land_BagFence_End_F";
-					atlOffset=4.0769577e-005;
+					atlOffset=4.0769577e-05;
 				};
 				class Item8
 				{
@@ -8857,7 +8861,7 @@ class Mission
 					};
 					id=1523;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.3828278e-005;
+					atlOffset=1.3828278e-05;
 				};
 				class Item9
 				{
@@ -8894,7 +8898,7 @@ class Mission
 					};
 					id=1528;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.7881393e-005;
+					atlOffset=1.7881393e-05;
 				};
 				class Item11
 				{
@@ -8913,7 +8917,7 @@ class Mission
 					};
 					id=1529;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.7642975e-005;
+					atlOffset=1.7642975e-05;
 				};
 				class Item12
 				{
@@ -8932,7 +8936,7 @@ class Mission
 					};
 					id=1530;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.9073486e-005;
+					atlOffset=1.9073486e-05;
 				};
 				class Item13
 				{
@@ -8951,7 +8955,7 @@ class Mission
 					};
 					id=1531;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.027916e-005;
+					atlOffset=3.027916e-05;
 				};
 				class Item14
 				{
@@ -8970,7 +8974,7 @@ class Mission
 					};
 					id=1532;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.6450882e-005;
+					atlOffset=1.6450882e-05;
 				};
 				class Item15
 				{
@@ -8989,7 +8993,7 @@ class Mission
 					};
 					id=1533;
 					type="Land_BagFence_Short_F";
-					atlOffset=2.6702881e-005;
+					atlOffset=2.6702881e-05;
 				};
 				class Item16
 				{
@@ -9008,7 +9012,7 @@ class Mission
 					};
 					id=1534;
 					type="Land_BagFence_End_F";
-					atlOffset=6.1988831e-006;
+					atlOffset=6.1988831e-06;
 				};
 				class Item17
 				{
@@ -9027,7 +9031,7 @@ class Mission
 					};
 					id=1535;
 					type="Land_BagFence_End_F";
-					atlOffset=3.8146973e-005;
+					atlOffset=3.8146973e-05;
 				};
 				class Item18
 				{
@@ -9046,7 +9050,7 @@ class Mission
 					};
 					id=1539;
 					type="Land_BagFence_End_F";
-					atlOffset=1.6689301e-005;
+					atlOffset=1.6689301e-05;
 				};
 				class Item19
 				{
@@ -9065,7 +9069,7 @@ class Mission
 					};
 					id=1542;
 					type="Land_BagFence_Short_F";
-					atlOffset=5.6505203e-005;
+					atlOffset=5.6505203e-05;
 				};
 				class Item20
 				{
@@ -9084,7 +9088,7 @@ class Mission
 					};
 					id=1543;
 					type="Land_BagFence_Short_F";
-					atlOffset=5.5074692e-005;
+					atlOffset=5.5074692e-05;
 				};
 				class Item21
 				{
@@ -9103,7 +9107,7 @@ class Mission
 					};
 					id=1544;
 					type="Land_BagFence_Short_F";
-					atlOffset=6.1988831e-005;
+					atlOffset=6.1988831e-05;
 				};
 				class Item22
 				{
@@ -9122,7 +9126,7 @@ class Mission
 					};
 					id=1545;
 					type="Land_BagFence_Short_F";
-					atlOffset=4.1246414e-005;
+					atlOffset=4.1246414e-05;
 				};
 				class Item23
 				{
@@ -9141,7 +9145,7 @@ class Mission
 					};
 					id=1546;
 					type="Land_BagFence_Short_F";
-					atlOffset=5.1736832e-005;
+					atlOffset=5.1736832e-05;
 				};
 				class Item24
 				{
@@ -9160,7 +9164,7 @@ class Mission
 					};
 					id=1547;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.2186508e-005;
+					atlOffset=3.2186508e-05;
 				};
 				class Item25
 				{
@@ -9179,7 +9183,7 @@ class Mission
 					};
 					id=1549;
 					type="Land_BagFence_End_F";
-					atlOffset=4.6491623e-005;
+					atlOffset=4.6491623e-05;
 				};
 				class Item26
 				{
@@ -9198,7 +9202,7 @@ class Mission
 					};
 					id=1550;
 					type="Land_BagFence_End_F";
-					atlOffset=2.0265579e-005;
+					atlOffset=2.0265579e-05;
 				};
 				class Item27
 				{
@@ -9217,7 +9221,7 @@ class Mission
 					};
 					id=1552;
 					type="Land_BagFence_Short_F";
-					atlOffset=2.6702881e-005;
+					atlOffset=2.6702881e-05;
 				};
 				class Item28
 				{
@@ -9236,7 +9240,7 @@ class Mission
 					};
 					id=1553;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.9788742e-005;
+					atlOffset=1.9788742e-05;
 				};
 				class Item29
 				{
@@ -9255,7 +9259,7 @@ class Mission
 					};
 					id=1554;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.027916e-005;
+					atlOffset=3.027916e-05;
 				};
 				class Item30
 				{
@@ -9274,7 +9278,7 @@ class Mission
 					};
 					id=1555;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.6689301e-005;
+					atlOffset=1.6689301e-05;
 				};
 				class Item31
 				{
@@ -9293,7 +9297,7 @@ class Mission
 					};
 					id=1556;
 					type="Land_BagFence_Short_F";
-					atlOffset=3.2901764e-005;
+					atlOffset=3.2901764e-05;
 				};
 				class Item32
 				{
@@ -9312,7 +9316,7 @@ class Mission
 					};
 					id=1557;
 					type="Land_BagFence_End_F";
-					atlOffset=2.8371811e-005;
+					atlOffset=2.8371811e-05;
 				};
 				class Item33
 				{
@@ -9331,7 +9335,7 @@ class Mission
 					};
 					id=1558;
 					type="Land_BagFence_End_F";
-					atlOffset=2.4795532e-005;
+					atlOffset=2.4795532e-05;
 				};
 				class Item34
 				{
@@ -9350,7 +9354,7 @@ class Mission
 					};
 					id=1561;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.9073486e-005;
+					atlOffset=1.9073486e-05;
 				};
 			};
 			id=1562;
@@ -9397,7 +9401,7 @@ class Mission
 					};
 					id=1565;
 					type="Land_CampingChair_V1_F";
-					atlOffset=-2.3841858e-007;
+					atlOffset=-2.3841858e-07;
 				};
 				class Item2
 				{
@@ -9580,7 +9584,7 @@ class Mission
 					};
 					id=1580;
 					type="Land_CampingChair_V1_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item12
 				{
@@ -9616,7 +9620,7 @@ class Mission
 					};
 					id=1582;
 					type="Land_CampingChair_V1_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item14
 				{
@@ -9635,7 +9639,7 @@ class Mission
 					};
 					id=1583;
 					type="Land_CampingChair_V1_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item15
 				{
@@ -9756,7 +9760,7 @@ class Mission
 					};
 					id=1800;
 					type="Land_Razorwire_F";
-					atlOffset=-3.0040741e-005;
+					atlOffset=-3.0040741e-05;
 				};
 				class Item2
 				{
@@ -9775,7 +9779,7 @@ class Mission
 					};
 					id=1801;
 					type="Land_Razorwire_F";
-					atlOffset=7.3671341e-005;
+					atlOffset=7.3671341e-05;
 				};
 				class Item3
 				{
@@ -9794,7 +9798,7 @@ class Mission
 					};
 					id=1802;
 					type="Land_Razorwire_F";
-					atlOffset=3.027916e-005;
+					atlOffset=3.027916e-05;
 				};
 				class Item4
 				{
@@ -9813,7 +9817,7 @@ class Mission
 					};
 					id=1803;
 					type="Land_Razorwire_F";
-					atlOffset=6.2942505e-005;
+					atlOffset=6.2942505e-05;
 				};
 				class Item5
 				{
@@ -9980,7 +9984,7 @@ class Mission
 					};
 					id=1812;
 					type="Land_HBarrier_1_F";
-					atlOffset=8.893013e-005;
+					atlOffset=8.893013e-05;
 				};
 				class Item14
 				{
@@ -10053,7 +10057,7 @@ class Mission
 					};
 					id=1816;
 					type="Land_BagFence_Short_F";
-					atlOffset=9.7751617e-005;
+					atlOffset=9.7751617e-05;
 				};
 				class Item18
 				{
@@ -10092,7 +10096,7 @@ class Mission
 					};
 					id=1818;
 					type="CamoNet_OPFOR_F";
-					atlOffset=-2.3841858e-007;
+					atlOffset=-2.3841858e-07;
 				};
 				class Item20
 				{
@@ -10130,7 +10134,7 @@ class Mission
 					};
 					id=1821;
 					type="Land_HBarrier_3_F";
-					atlOffset=7.1763992e-005;
+					atlOffset=7.1763992e-05;
 				};
 				class Item22
 				{
@@ -10206,7 +10210,7 @@ class Mission
 					};
 					id=1825;
 					type="Land_HBarrier_3_F";
-					atlOffset=9.8466873e-005;
+					atlOffset=9.8466873e-05;
 				};
 				class Item26
 				{
@@ -10225,7 +10229,7 @@ class Mission
 					};
 					id=1826;
 					type="Land_HBarrier_3_F";
-					atlOffset=7.3194504e-005;
+					atlOffset=7.3194504e-05;
 				};
 				class Item27
 				{
@@ -10282,7 +10286,7 @@ class Mission
 					};
 					id=1829;
 					type="Land_HBarrier_3_F";
-					atlOffset=8.893013e-005;
+					atlOffset=8.893013e-05;
 				};
 				class Item30
 				{
@@ -10301,7 +10305,7 @@ class Mission
 					};
 					id=1830;
 					type="Land_HBarrier_3_F";
-					atlOffset=8.9406967e-005;
+					atlOffset=8.9406967e-05;
 				};
 				class Item31
 				{
@@ -10376,7 +10380,7 @@ class Mission
 					};
 					id=1836;
 					type="Land_BagFence_Round_F";
-					atlOffset=1.8358231e-005;
+					atlOffset=1.8358231e-05;
 				};
 				class Item35
 				{
@@ -10395,7 +10399,7 @@ class Mission
 					};
 					id=1837;
 					type="Land_BagFence_Round_F";
-					atlOffset=2.0265579e-005;
+					atlOffset=2.0265579e-05;
 				};
 				class Item36
 				{
@@ -10433,7 +10437,7 @@ class Mission
 					};
 					id=1844;
 					type="Land_WaterBarrel_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item38
 				{
@@ -10452,7 +10456,7 @@ class Mission
 					};
 					id=1845;
 					type="Land_BagFence_Short_F";
-					atlOffset=1.6450882e-005;
+					atlOffset=1.6450882e-05;
 				};
 				class Item39
 				{
@@ -10471,7 +10475,7 @@ class Mission
 					};
 					id=1846;
 					type="Land_BagFence_Short_F";
-					atlOffset=2.1934509e-005;
+					atlOffset=2.1934509e-05;
 				};
 				class Item40
 				{
@@ -10490,7 +10494,7 @@ class Mission
 					};
 					id=1847;
 					type="Land_BagFence_Short_F";
-					atlOffset=4.4107437e-005;
+					atlOffset=4.4107437e-05;
 				};
 				class Item41
 				{
@@ -10509,11 +10513,11 @@ class Mission
 					};
 					id=1855;
 					type="Land_BagFence_End_F";
-					atlOffset=3.8862228e-005;
+					atlOffset=3.8862228e-05;
 				};
 			};
 			id=1856;
-			atlOffset=-1.5974045e-005;
+			atlOffset=-1.5974045e-05;
 		};
 		class Item280
 		{
@@ -11020,7 +11024,7 @@ class Mission
 					};
 					id=2049;
 					type="Land_ToiletBox_F";
-					atlOffset=-7.4386597e-005;
+					atlOffset=-7.4386597e-05;
 				};
 				class Item1
 				{
@@ -11058,7 +11062,7 @@ class Mission
 					};
 					id=2051;
 					type="Land_ToiletBox_F";
-					atlOffset=-7.4386597e-005;
+					atlOffset=-7.4386597e-05;
 				};
 				class Item3
 				{
@@ -11150,7 +11154,7 @@ class Mission
 					};
 					id=2058;
 					type="Land_BagFence_Long_F";
-					atlOffset=-7.4386597e-005;
+					atlOffset=-7.4386597e-05;
 				};
 				class Item8
 				{
@@ -11169,7 +11173,7 @@ class Mission
 					};
 					id=2060;
 					type="Land_TTowerSmall_1_F";
-					atlOffset=-9.5367432e-007;
+					atlOffset=-9.5367432e-07;
 				};
 				class Item9
 				{
@@ -11439,7 +11443,7 @@ class Mission
 					};
 					id=2327;
 					type="Land_Cargo_Tower_V3_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=9.5367432e-07;
 				};
 				class Item5
 				{
@@ -11457,7 +11461,7 @@ class Mission
 					};
 					id=2329;
 					type="Land_MetalBarrel_F";
-					atlOffset=2.0980835e-005;
+					atlOffset=2.0980835e-05;
 				};
 				class Item6
 				{
@@ -11562,7 +11566,7 @@ class Mission
 					};
 					id=2335;
 					type="Land_HBarrier_3_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=-4.7683716e-07;
 				};
 				class Item12
 				{
@@ -11815,7 +11819,7 @@ class Mission
 					};
 					id=2364;
 					type="Land_HBarrier_Big_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=-4.7683716e-07;
 				};
 				class Item26
 				{
@@ -11853,7 +11857,7 @@ class Mission
 					};
 					id=2366;
 					type="Land_HBarrier_Big_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=4.7683716e-07;
 				};
 				class Item28
 				{
@@ -11909,7 +11913,7 @@ class Mission
 					};
 					id=2372;
 					type="Land_Cargo_Patrol_V3_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=4.7683716e-07;
 				};
 				class Item31
 				{
@@ -11946,7 +11950,7 @@ class Mission
 					};
 					id=2374;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.7642975e-005;
+					atlOffset=1.7642975e-05;
 				};
 				class Item33
 				{
@@ -13437,7 +13441,7 @@ class Mission
 					};
 					id=2473;
 					type="Land_HBarrierWall6_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 				};
 				class Item3
 				{
@@ -13531,7 +13535,7 @@ class Mission
 					};
 					id=2478;
 					type="Land_ReservoirTower_F";
-					atlOffset=3.0517578e-005;
+					atlOffset=3.0517578e-05;
 				};
 				class Item8
 				{
@@ -16253,7 +16257,7 @@ class Mission
 					};
 					id=2693;
 					type="Land_BagFence_Round_F";
-					atlOffset=8.893013e-005;
+					atlOffset=8.893013e-05;
 				};
 				class Item2
 				{
@@ -16272,7 +16276,7 @@ class Mission
 					};
 					id=2694;
 					type="Land_BagFence_Round_F";
-					atlOffset=3.1709671e-005;
+					atlOffset=3.1709671e-05;
 				};
 				class Item3
 				{
@@ -16329,7 +16333,7 @@ class Mission
 					};
 					id=2697;
 					type="Land_BagFence_Long_F";
-					atlOffset=9.0837479e-005;
+					atlOffset=9.0837479e-05;
 				};
 				class Item6
 				{
@@ -16441,7 +16445,7 @@ class Mission
 					};
 					id=2703;
 					type="Land_HBarrier_1_F";
-					atlOffset=1.9550323e-005;
+					atlOffset=1.9550323e-05;
 				};
 				class Item12
 				{
@@ -16478,7 +16482,7 @@ class Mission
 					};
 					id=2705;
 					type="Land_HBarrier_1_F";
-					atlOffset=3.7670135e-005;
+					atlOffset=3.7670135e-05;
 				};
 				class Item14
 				{
@@ -16513,7 +16517,7 @@ class Mission
 					};
 					id=2709;
 					type="Land_BagFence_End_F";
-					atlOffset=4.9114227e-005;
+					atlOffset=4.9114227e-05;
 				};
 				class Item16
 				{
@@ -16531,7 +16535,7 @@ class Mission
 					};
 					id=2710;
 					type="Land_HBarrier_5_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item17
 				{
@@ -16567,7 +16571,7 @@ class Mission
 					};
 					id=2713;
 					type="Land_BagFence_Round_F";
-					atlOffset=7.4386597e-005;
+					atlOffset=7.4386597e-05;
 				};
 				class Item19
 				{
@@ -16603,7 +16607,7 @@ class Mission
 					};
 					id=2715;
 					type="Land_BagFence_Round_F";
-					atlOffset=6.6757202e-005;
+					atlOffset=6.6757202e-05;
 				};
 				class Item21
 				{
@@ -16621,7 +16625,7 @@ class Mission
 					};
 					id=2716;
 					type="Land_BagFence_Round_F";
-					atlOffset=2.2888184e-005;
+					atlOffset=2.2888184e-05;
 				};
 				class Item22
 				{
@@ -16657,7 +16661,7 @@ class Mission
 					};
 					id=2721;
 					type="Land_BagFence_Long_F";
-					atlOffset=9.059906e-005;
+					atlOffset=9.059906e-05;
 				};
 				class Item24
 				{
@@ -16675,7 +16679,7 @@ class Mission
 					};
 					id=2722;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2874603e-005;
+					atlOffset=1.2874603e-05;
 				};
 				class Item25
 				{
@@ -16729,7 +16733,7 @@ class Mission
 					};
 					id=2731;
 					type="Land_HBarrier_3_F";
-					atlOffset=8.4877014e-005;
+					atlOffset=8.4877014e-05;
 				};
 				class Item28
 				{
@@ -16819,7 +16823,7 @@ class Mission
 					};
 					id=2736;
 					type="Land_HBarrier_1_F";
-					atlOffset=1.2874603e-005;
+					atlOffset=1.2874603e-05;
 				};
 				class Item33
 				{
@@ -16837,7 +16841,7 @@ class Mission
 					};
 					id=2741;
 					type="Land_HBarrier_5_F";
-					atlOffset=3.6239624e-005;
+					atlOffset=3.6239624e-05;
 				};
 				class Item34
 				{
@@ -16855,7 +16859,7 @@ class Mission
 					};
 					id=2749;
 					type="Land_BagFence_Long_F";
-					atlOffset=6.1988831e-006;
+					atlOffset=6.1988831e-06;
 				};
 				class Item35
 				{
@@ -16873,7 +16877,7 @@ class Mission
 					};
 					id=2750;
 					type="Land_BagFence_Long_F";
-					atlOffset=2.7179718e-005;
+					atlOffset=2.7179718e-05;
 				};
 				class Item36
 				{
@@ -16927,7 +16931,7 @@ class Mission
 					};
 					id=2753;
 					type="Land_HBarrier_Big_F";
-					atlOffset=5.7220459e-005;
+					atlOffset=5.7220459e-05;
 				};
 				class Item39
 				{
@@ -17108,7 +17112,7 @@ class Mission
 					};
 					id=2771;
 					type="Land_HBarrier_5_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=2.3841858e-07;
 				};
 				class Item49
 				{
@@ -17433,7 +17437,7 @@ class Mission
 					};
 					id=2815;
 					type="Land_Cargo_Patrol_V3_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=4.7683716e-07;
 				};
 				class Item67
 				{
@@ -17451,7 +17455,7 @@ class Mission
 					};
 					id=2816;
 					type="Land_HBarrier_1_F";
-					atlOffset=5.2452087e-005;
+					atlOffset=5.2452087e-05;
 				};
 				class Item68
 				{
@@ -17469,7 +17473,7 @@ class Mission
 					};
 					id=2818;
 					type="Land_BagFence_Round_F";
-					atlOffset=4.6491623e-005;
+					atlOffset=4.6491623e-05;
 				};
 				class Item69
 				{
@@ -17487,7 +17491,7 @@ class Mission
 					};
 					id=2819;
 					type="Land_BagFence_Long_F";
-					atlOffset=4.863739e-005;
+					atlOffset=4.863739e-05;
 				};
 				class Item70
 				{
@@ -17505,7 +17509,7 @@ class Mission
 					};
 					id=2820;
 					type="Land_BagFence_Long_F";
-					atlOffset=3.194809e-005;
+					atlOffset=3.194809e-05;
 				};
 				class Item71
 				{
@@ -17523,7 +17527,7 @@ class Mission
 					};
 					id=2821;
 					type="Land_BagFence_Long_F";
-					atlOffset=4.4345856e-005;
+					atlOffset=4.4345856e-05;
 				};
 				class Item72
 				{
@@ -17896,7 +17900,7 @@ class Mission
 					};
 					id=2843;
 					type="Land_CncBarrier_stripes_F";
-					atlOffset=-1.5258789e-005;
+					atlOffset=-1.5258789e-05;
 				};
 				class Item17
 				{
@@ -21571,19 +21575,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -21595,46 +21586,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -21647,20 +21599,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -21673,7 +21625,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item9
@@ -21709,19 +21687,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -21733,46 +21698,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -21785,20 +21711,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -21811,7 +21737,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 									};
@@ -22593,19 +22545,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -22617,46 +22556,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -22669,20 +22569,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -22695,7 +22595,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item9
@@ -22731,19 +22657,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -22755,46 +22668,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -22807,20 +22681,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -22833,7 +22707,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 									};
@@ -23254,7 +23154,7 @@ class Mission
 											};
 											id=5005;
 											type="B_Soldier_GL_F";
-											atlOffset=1.9073486e-006;
+											atlOffset=1.9073486e-06;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -23603,19 +23503,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -23627,46 +23514,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -23679,20 +23527,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -23705,7 +23553,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item9
@@ -23741,19 +23615,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -23765,46 +23626,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -23817,20 +23639,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=1;
+															singleType="SCALAR";
+															value=1.04;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -23843,7 +23665,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 									};
@@ -24206,19 +24054,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -24230,20 +24065,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="ENH_unitTrait_UAVHacker";
-													expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute3
+												class Attribute1
 												{
 													property="TFAR_freq_lr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
@@ -24256,7 +24078,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute2
 												{
 													property="ace_isEOD";
 													expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -24269,7 +24091,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute3
 												{
 													property="pitch";
 													expression="_this setpitch _value;";
@@ -24282,7 +24104,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute4
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -24295,7 +24117,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute7
+												class Attribute5
 												{
 													property="ace_isMedic";
 													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -24308,33 +24130,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute8
-												{
-													property="ENH_unitTraits_medic";
-													expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute9
-												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute10
+												class Attribute6
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -24347,7 +24143,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=11;
+												nAttributes=7;
 											};
 										};
 									};
@@ -24426,19 +24222,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -24450,46 +24233,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -24502,20 +24246,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="SCALAR";
+															value=0.95999998;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -24528,7 +24272,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item1
@@ -24749,19 +24519,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -24773,20 +24530,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="ENH_unitTrait_UAVHacker";
-													expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute3
+												class Attribute1
 												{
 													property="TFAR_freq_lr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
@@ -24799,7 +24543,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute2
 												{
 													property="ace_isEOD";
 													expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -24812,7 +24556,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute3
 												{
 													property="pitch";
 													expression="_this setpitch _value;";
@@ -24825,7 +24569,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute4
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -24838,7 +24582,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute7
+												class Attribute5
 												{
 													property="ace_isMedic";
 													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -24851,33 +24595,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute8
-												{
-													property="ENH_unitTraits_medic";
-													expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute9
-												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute10
+												class Attribute6
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -24890,7 +24608,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=11;
+												nAttributes=7;
 											};
 										};
 									};
@@ -24969,19 +24687,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -24993,46 +24698,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -25045,20 +24711,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="SCALAR";
+															value=0.95999998;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -25071,7 +24737,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item1
@@ -25292,19 +24984,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -25316,20 +24995,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="ENH_unitTrait_UAVHacker";
-													expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute3
+												class Attribute1
 												{
 													property="TFAR_freq_lr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
@@ -25342,7 +25008,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute2
 												{
 													property="ace_isEOD";
 													expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -25355,7 +25021,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute3
 												{
 													property="pitch";
 													expression="_this setpitch _value;";
@@ -25368,7 +25034,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute4
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -25381,7 +25047,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute7
+												class Attribute5
 												{
 													property="ace_isMedic";
 													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -25394,33 +25060,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute8
-												{
-													property="ENH_unitTraits_medic";
-													expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute9
-												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute10
+												class Attribute6
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -25433,7 +25073,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=11;
+												nAttributes=7;
 											};
 										};
 									};
@@ -25512,19 +25152,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -25536,46 +25163,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -25588,20 +25176,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="SCALAR";
+															value=0.95999998;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -25614,7 +25202,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item1
@@ -25878,19 +25492,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -25902,46 +25503,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -25954,20 +25516,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="SCALAR";
+															value=0.95999998;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -25980,7 +25542,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item1
@@ -26244,19 +25832,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="ENH_unitTraits_engineer";
-													expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ace_isEngineer";
 													expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 													class Value
@@ -26268,46 +25843,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
-												{
-													property="TFAR_freq_lr";
-													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="69";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="ace_isEOD";
-													expression="_this setVariable ['ACE_isEOD', _value, true]";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=0;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.95999998;
-														};
-													};
-												};
-												class Attribute5
+												class Attribute1
 												{
 													property="speaker";
 													expression="_this setspeaker _value;";
@@ -26320,20 +25856,20 @@ class Mission
 														};
 													};
 												};
-												class Attribute6
+												class Attribute2
 												{
-													property="ENH_unitTrait_explosiveSpecialist";
-													expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+													property="pitch";
+													expression="_this setpitch _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="SCALAR";
+															value=0.95999998;
 														};
 													};
 												};
-												class Attribute7
+												class Attribute3
 												{
 													property="TFAR_freq_sr";
 													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -26346,7 +25882,33 @@ class Mission
 														};
 													};
 												};
-												nAttributes=8;
+												class Attribute4
+												{
+													property="ace_isEOD";
+													expression="_this setVariable ['ACE_isEOD', _value, true]";
+													class Value
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+												class Attribute5
+												{
+													property="TFAR_freq_lr";
+													expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="69";
+														};
+													};
+												};
+												nAttributes=6;
 											};
 										};
 										class Item1
@@ -26829,7 +26391,8 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Specialist";
+						name="z4014";
+						description="UAV Operator (Mod & Admin ONLY)";
 						isPlayable=1;
 						class Inventory
 						{
@@ -26850,19 +26413,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isEngineer";
 							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
@@ -26874,46 +26424,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="TFAR_freq_lr";
-							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="69";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isEOD";
-							expression="_this setVariable ['ACE_isEOD', _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.97000003;
-								};
-							};
-						};
-						class Attribute5
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -26926,20 +26437,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute6
+						class Attribute2
 						{
-							property="ENH_unitTrait_explosiveSpecialist";
-							expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+							property="pitch";
+							expression="_this setpitch _value;";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="SCALAR";
+									value=0.97000003;
 								};
 							};
 						};
-						class Attribute7
+						class Attribute3
 						{
 							property="TFAR_freq_sr";
 							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -26952,7 +26463,33 @@ class Mission
 								};
 							};
 						};
-						nAttributes=8;
+						class Attribute4
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="TFAR_freq_lr";
+							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="69";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item4
@@ -26988,19 +26525,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isMedic";
 							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
@@ -27012,7 +26536,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -27025,7 +26549,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -27038,7 +26562,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="TFAR_freq_sr";
 							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -27051,7 +26575,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute4
 						{
 							property="TFAR_freq_lr";
 							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
@@ -27064,7 +26588,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=6;
+						nAttributes=5;
 					};
 				};
 			};
@@ -27131,13 +26655,13 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
+									singleType="SCALAR";
 									value=1;
 								};
 							};
@@ -27157,14 +26681,14 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="TFAR_freq_lr";
-							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="69";
+									value="Male09ENG";
 								};
 							};
 						};
@@ -27183,45 +26707,6 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute7
-						{
 							property="TFAR_freq_sr";
 							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
 							class Value
@@ -27233,7 +26718,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=8;
+						class Attribute5
+						{
+							property="TFAR_freq_lr";
+							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="69";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item1
@@ -27270,13 +26768,13 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_unitTraits_engineer";
-							expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
+									singleType="SCALAR";
 									value=1;
 								};
 							};
@@ -27296,14 +26794,14 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="TFAR_freq_lr";
-							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="69";
+									value="Male09ENG";
 								};
 							};
 						};
@@ -27322,45 +26820,6 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_unitTraits_medic";
-							expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute7
-						{
 							property="TFAR_freq_sr";
 							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
 							class Value
@@ -27372,7 +26831,20 @@ class Mission
 								};
 							};
 						};
-						nAttributes=8;
+						class Attribute5
+						{
+							property="TFAR_freq_lr";
+							expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="69";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 			};
@@ -28062,16 +27534,84 @@ class Mission
 				nAttributes=10;
 			};
 		};
+		class Item487
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={20180,5,266};
+			};
+			name="zeus4014";
+			id=5081;
+			type="ModuleCurator_F";
+			atlOffset=1.7267609;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="z4014";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=6;
+			nextID=7;
 		};
 		class Links
 		{
-			items=6;
+			items=7;
 			class Item0
 			{
 				linkID=0;
@@ -28127,6 +27667,16 @@ class Mission
 				linkID=5;
 				item0=5078;
 				item1=5079;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item6
+			{
+				linkID=6;
+				item0=5081;
+				item1=5015;
 				class CustomData
 				{
 					type="Sync";

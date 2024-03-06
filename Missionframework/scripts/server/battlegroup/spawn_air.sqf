@@ -1,8 +1,8 @@
-params ["_first_objective"];
+params ["_first_objective", "_combat_readiness"];
 
 if (opfor_air isEqualTo []) exitWith {false};
 
-private _planes_number = ((floor linearConversion [40, 100, combat_readiness, 1, 3]) min 3) max 0;
+private _planes_number = ((floor linearConversion [40, 100, _combat_readiness, 1, 3]) min 3) max 0;
 
 if (_planes_number < 1) exitWith {};
 

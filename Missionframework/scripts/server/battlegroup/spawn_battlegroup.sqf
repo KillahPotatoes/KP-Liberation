@@ -19,8 +19,9 @@ if !(_spawn_marker isEqualTo "") then {
     _headless_client = [] call KPLIB_fnc_getLessLoadedHC;
 
     if (!isNull _headless_client) then {
-        ["KPLIB_battlegroupSpawn", [_spawn_marker, _infOnly, _combat_readiness], _headless_client] call CBA_fnc_targetEvent;
+        ["KPLIB_battlegroupSpawn", [_spawn_marker, _infOnly, combat_readiness], _headless_client] call CBA_fnc_targetEvent;
     } else {
-        ["KPLIB_battlegroupSpawn", [_spawn_marker, _infOnly, _combat_readiness]] call CBA_fnc_localEvent;
+        // call it here on server
+        [_spawn_marker, _infOnly, combat_readiness] spawn KPLIB_fnc_spawnBattleGroupHC;
     }
 };

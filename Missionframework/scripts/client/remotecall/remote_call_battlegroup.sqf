@@ -1,4 +1,4 @@
-if ( isDedicated ) exitWith {};
+if ( !hasInterface ) exitWith {};
 
 params [ "_battlegroup_position" ];
 

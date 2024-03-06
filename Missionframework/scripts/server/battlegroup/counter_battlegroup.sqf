@@ -32,7 +32,7 @@ while {GRLIB_csat_aggressivity >= 0.9 && GRLIB_endgame == 0} do {
     if (!isNull _target_player) then {
         _target_pos = [99999, getPos _target_player] call KPLIB_fnc_getNearestSector;
         if !(_target_pos isEqualTo "") then {
-            [_target_pos] spawn spawn_air;
+            [_target_pos, combat_readiness] spawn spawn_air;
         };
     };
 };

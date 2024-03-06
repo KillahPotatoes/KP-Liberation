@@ -60,12 +60,12 @@ if (KP_liberation_arsenalUsePreset) then {
         // Handle CBA (MRT) Accessories, https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions
         private _itemCfg = configFile >> "CfgWeapons" >> _x;
         if (!isNull _itemCfg) then {
-            private _nextItem = getText (_cfg >> "MRT_SwitchItemPrevClass");
+            private _nextItem = getText (_itemCfg >> "MRT_SwitchItemPrevClass");
             if (_nextItem != "") then {
                 KP_liberation_allowed_items_extension pushBackUnique _nextItem;
             };
 
-            private _prevItem = getText (_cfg >> "MRT_SwitchItemNextClass");
+            private _prevItem = getText (_itemCfg >> "MRT_SwitchItemNextClass");
             if (_prevItem != "") then {
                 KP_liberation_allowed_items_extension pushBackUnique _prevItem;
             };
