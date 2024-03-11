@@ -133,3 +133,6 @@ execVM "scripts\server\offloading\group_diag.sqf";
 if (KPLIB_param_restart > 0) then {
     execVM "scripts\server\game\server_restart.sqf";
 };
+
+// AA turret manager
+execVM "scripts\server\ai\AA_turret_manager.sqf";
