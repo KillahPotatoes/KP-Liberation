@@ -2,7 +2,7 @@
 
 ## Requirements
 
-nodejs version >=7.
+nodejs version >=16.
 
 ## Usage
 

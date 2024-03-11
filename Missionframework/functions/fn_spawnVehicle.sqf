@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-15
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -83,11 +83,23 @@ if (_classname in KPLIB_o_militiaVehicles) then {
     private _grp = createGroup [KPLIB_side_enemy, true];
     private _crew = units (createVehicleCrew _newvehicle);
     _crew joinSilent _grp;
-    {_x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];} forEach _crew;
+    {
+    _x addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+
+     ["KPLIB_manageKills", [_unit,_killer]] call CBA_fnc_serverEvent;
+    }];
+    
+    } forEach _crew;
+};
 };
 
-// Add MPKilled and GetIn EHs and enable damage again
-_newvehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+// Add Killed and GetIn EHs and enable damage again
+_newvehicle addMPEventHandler ["MPKilled", {
+    params ["_unit", "_killer"];
+    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+}];
+sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;
 

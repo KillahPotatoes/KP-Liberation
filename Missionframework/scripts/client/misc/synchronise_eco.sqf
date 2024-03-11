@@ -1,3 +1,5 @@
+scriptName "synchronise_eco";
+
 one_eco_done = false;
 waitUntil {!isNil "sync_eco"};
 

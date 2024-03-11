@@ -1,3 +1,5 @@
+scriptName "open_logistic";
+
 private ["_dialog", "_logi_count", "_listselect", "_selectedGroup", "_detailControls", "_nearfob", "_logi_destinations", "_mapdisplay", "_tempvariable"];
 
 _dialog = createDialog "liberation_logistic";

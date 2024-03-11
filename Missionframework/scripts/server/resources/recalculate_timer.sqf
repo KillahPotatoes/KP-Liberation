@@ -1,3 +1,5 @@
+scriptName "recalculate_timer";
+
 waitUntil { !isNil "KPLIB_saveLoaded" };
 waitUntil {KPLIB_saveLoaded};
 

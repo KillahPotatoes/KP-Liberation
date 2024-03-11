@@ -1,3 +1,5 @@
+scriptName "fob_markers";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_sectors_fob"};
 waitUntil {KPLIB_saveLoaded};

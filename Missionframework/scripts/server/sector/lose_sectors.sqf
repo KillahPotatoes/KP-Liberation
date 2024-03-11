@@ -1,3 +1,5 @@
+scriptName "lose_sectors";
+
 waitUntil { !isNil "KPLIB_sectors_fob" };
 waitUntil { !isNil "KPLIB_sectors_player" };
 

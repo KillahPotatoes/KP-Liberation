@@ -1,3 +1,5 @@
+scriptName "huron_marker";
+
 private [ "_huronlocal" ];
 
 "huronmarker" setMarkerTextLocal "Potato 01";
