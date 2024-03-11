@@ -1,3 +1,4 @@
+scriptName "manage_one_sector";
 // base amount of sector lifetime tickets
 // if there are no enemies one ticket is removed every SECTOR_TICK_TIME seconds
 // 12 * 5 = 60s by default

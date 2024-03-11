@@ -1,3 +1,4 @@
+scriptName "kp_fuel_consumption";
 /*
 kp_fuel_consumption.sqf
 Author: Wyqer

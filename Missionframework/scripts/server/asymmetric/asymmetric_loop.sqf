@@ -1,3 +1,5 @@
+scriptName "asymmetric_loop";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_civ_rep"};
 waitUntil {KPLIB_saveLoaded};

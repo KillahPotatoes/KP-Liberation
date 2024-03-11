@@ -1,3 +1,5 @@
+scriptName "server_restart";
+
 if (!isDedicated) exitWith {};
 
 _serverDuration = (KPLIB_param_restart * 60 * 60);

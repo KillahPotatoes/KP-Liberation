@@ -1,3 +1,5 @@
+scriptName "unflip_manager";
+
 waitUntil {!isNil "KPLIB_permissions"};
 waitUntil {!(KPLIB_permissions isEqualTo []) || !KPLIB_param_permissions};
 

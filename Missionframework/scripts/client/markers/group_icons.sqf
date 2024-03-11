@@ -1,3 +1,5 @@
+scriptName "group_icons";
+
 private [ "_iconed_groups", "_ticks", "_localgroup", "_grouptype", "_groupicon" ];
 
 _iconed_groups = [];

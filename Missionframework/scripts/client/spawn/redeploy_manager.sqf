@@ -1,3 +1,5 @@
+scriptName "redeploy_manager";
+
 #define DEPLOY_DISPLAY (findDisplay 5201)
 #define DEPLOY_LIST_IDC 201
 #define DEPLOY_BUTTON_IDC 202
@@ -192,7 +194,7 @@ while {true} do {
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
             if (KPLIB_ace && KPLIB_param_arsenalType) then {
-                player setUnitLoadout (_selectedLoadout select 1);
+                [player, _selectedLoadout select 1, KP_liberation_fill_mags] call CBA_fnc_setLoadout;
             } else {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
             };

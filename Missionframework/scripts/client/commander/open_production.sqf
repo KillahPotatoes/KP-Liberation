@@ -1,3 +1,5 @@
+scriptName "open_production";
+
 private ["_dialog", "_color_positive", "_color_neutral", "_color_negative", "_color_actual", "_sectorType", "_storage", "_crateCount", "_crateMax", "_producing", "_storagespace", "_productiontime", "_saveChanges", "_listselect", "_listcolor", "_selectedSector", "_mapdisplay", "_supplyValue", "_ammoValue", "_fuelValue"];
 
 _dialog = createDialog "liberation_production";

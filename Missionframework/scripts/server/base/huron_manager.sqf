@@ -1,3 +1,5 @@
+scriptName "huron_manager";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {KPLIB_saveLoaded};
 
