@@ -1,3 +1,5 @@
+scriptName "remote_call_prisoner";
+
 params [ "_unit" ];
 private [ "_nearestfob", "_is_near_fob", "_is_near_blufor", "_grp", "_waypoint", "_nearblufor" ];
 

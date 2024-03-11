@@ -1,3 +1,5 @@
+scriptName "KPLIB_secondary_ui";
+
 if ( isNil "KPLIB_secondary_starting" ) then { KPLIB_secondary_starting = false; };
 if ( isNil "KPLIB_secondary_in_progress" ) then { KPLIB_secondary_in_progress = -1; };
 

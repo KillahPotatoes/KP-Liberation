@@ -1,3 +1,4 @@
+scriptName "asymm_notificatins";
 if (isDedicated) exitWith {};
 
 params ["_notif_id", ["_pos", getpos player]];

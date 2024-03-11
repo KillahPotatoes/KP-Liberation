@@ -1,3 +1,5 @@
+scriptName "resupply_manager";
+
 private [ "_resupply_dist", "_repair_increment", "_repair_speed", "_repair_altitude", "_veh", "_repaired", "_rearmed", "_refueled", "_average_damage", "_average_fuel", "_screenmsg", "_rearm_time", "_refuel_amount", "_rearm_ticker" ];
 
 _repair_amount = 0.01;

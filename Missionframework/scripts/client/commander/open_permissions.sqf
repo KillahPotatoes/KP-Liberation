@@ -1,3 +1,5 @@
+scriptName "open_permissions";
+
 waitUntil {!isNil "KPLIB_permissions"};
 
 private _players_array = [];

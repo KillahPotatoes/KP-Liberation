@@ -1,3 +1,5 @@
+scriptName "cinematic_camera";
+
 if ( isNil "KPLIB_sectors_active" ) then { KPLIB_sectors_active = [] };
 if ( isNil "KPLIB_sectors_fob" ) then { KPLIB_sectors_fob = [] };
 
