@@ -109,12 +109,13 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
 };
 
 // headless or server. Was only registered on server, so headless couldn't call it
-if (!hasInterface || isServer) then {
-    ["KPLIB_battlegroupSpawn", {_this spawn KPLIB_fnc_spawnBattleGroupHC}] call CBA_fnc_addEventHandler;
+// todo issue with this not firing on HCs, so adding it to all clients as we use targetEvent anyway to see if that works. 
+//if (!hasInterface || isServer) then {
+["KPLIB_battlegroupSpawn", {_this spawn KPLIB_fnc_spawnBattleGroupHC}] call CBA_fnc_addEventHandler;
 
-    // Battlegroup
-    spawn_air = compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\spawn_air.sqf";
-    send_paratroopers = compileFinal preprocessFileLineNumbers "scripts\server\patrols\send_paratroopers.sqf";
-    troup_transport = compileFinal preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
-    battlegroup_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
-};
+// Battlegroup
+spawn_air = compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\spawn_air.sqf";
+send_paratroopers = compileFinal preprocessFileLineNumbers "scripts\server\patrols\send_paratroopers.sqf";
+troup_transport = compileFinal preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
+battlegroup_ai = compileFinal preprocessFileLineNumbers "scripts\server\ai\battlegroup_ai.sqf";
+//};

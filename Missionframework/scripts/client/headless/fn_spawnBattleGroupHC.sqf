@@ -34,7 +34,7 @@ if !(_spawn_marker isEqualTo "") then {
         };
         [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
         [_grp] call battlegroup_ai;
-        _grp setVariable ["KPLIB_isBattleGroup",true];
+        _grp setVariable ["KPLIB_isBattleGroup",true, true];
         };
     } else {
         private _vehicle_pool = [opfor_battlegroup_vehicles, opfor_battlegroup_vehicles_low_intensity] select (_combat_readiness < 50);
@@ -52,7 +52,7 @@ if !(_spawn_marker isEqualTo "") then {
 
             (crew _vehicle) joinSilent _nextgrp;
             [_nextgrp] call battlegroup_ai;
-            _nextgrp setVariable ["KPLIB_isBattleGroup",true];
+            _nextgrp setVariable ["KPLIB_isBattleGroup",true, true];
 
             if ((_x in opfor_troup_transports) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap)) then {
                 if (_vehicle isKindOf "Air") then {
