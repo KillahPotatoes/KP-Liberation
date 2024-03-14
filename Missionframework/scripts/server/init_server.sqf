@@ -136,7 +136,7 @@ if (KPLIB_param_restart > 0) then {
 
 ["KPLIB_ResetBattleGroups", {
     {
-        if (_x getVariable ["KPLIB_isBattleGroup",false]) then {
+        if (_x getVariable ["KPLIB_isBattleGroup", false]) then {
             [_x] call battlegroup_ai;
         }
     } foreach allGroups;

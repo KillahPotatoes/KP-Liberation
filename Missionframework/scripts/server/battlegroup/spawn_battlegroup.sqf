@@ -32,13 +32,13 @@ if !(_spawn_marker isEqualTo "") then {
 
         for "_i" from 1 to _squadNumber do {
         // Create infantry groups with up to 8 units per squad
-        private _grp = createGroup [kplib_side_enemy, true];
+        private _grp = createGroup [KPLIB_side_enemy, true];
         for "_i" from 0 to 7 do {
             [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
         };
-        [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
-        [_grp] call battlegroup_ai;
-        _grp setVariable ["KPLIB_isBattleGroup",true];
+            [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
+            [_grp] call battlegroup_ai;
+            _grp setVariable ["KPLIB_isBattleGroup",true];
         };
     } else {
         private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 50);
@@ -56,7 +56,7 @@ if !(_spawn_marker isEqualTo "") then {
 
             (crew _vehicle) joinSilent _nextgrp;
             [_nextgrp] call battlegroup_ai;
-            _nextgrp setVariable ["KPLIB_isBattleGroup",true];
+            _nextgrp setVariable ["KPLIB_isBattleGroup", true];
 
             if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup)) then {
                 if (_vehicle isKindOf "Air") then {
