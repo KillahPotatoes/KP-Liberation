@@ -33,9 +33,9 @@ if !(_spawn_marker isEqualTo "") then {
         for "_i" from 1 to _squadNumber do {
         // Create infantry groups with up to 8 units per squad
         private _grp = createGroup [KPLIB_side_enemy, true];
-        for "_i" from 0 to 7 do {
-            [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
-        };
+            for "_i" from 0 to 7 do {
+                [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
+            };
             [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
             [_grp] call battlegroup_ai;
             _grp setVariable ["KPLIB_isBattleGroup",true];
