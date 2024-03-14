@@ -57,6 +57,7 @@ if !(_spawn_marker isEqualTo "") then {
             (crew _vehicle) joinSilent _nextgrp;
             [_nextgrp] call battlegroup_ai;
             _nextgrp setVariable ["KPLIB_isBattleGroup", true];
+_bg_groups pushback _nextgrp;
 
             if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup)) then {
                 if (_vehicle isKindOf "Air") then {
