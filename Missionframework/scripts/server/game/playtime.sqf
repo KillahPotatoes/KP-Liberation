@@ -1,5 +1,7 @@
-waitUntil { !isNil "save_is_loaded" };
-waitUntil { save_is_loaded };
+scriptName "KPLIB_playtime";
+
+waitUntil { !isNil "KPLIB_saveLoaded" };
+waitUntil { KPLIB_saveLoaded };
 
 while { true } do {
     sleep 1;

@@ -1,8 +1,9 @@
+scriptName "asymm_notificatins";
 if (isDedicated) exitWith {};
 
 params ["_notif_id", ["_pos", getpos player]];
 
-if (KP_liberation_asymmetric_debug > 0) then {[format ["asymm_notifications called on: %1 - Parameters: [%2, %3] ", debug_source, _notif_id, _pos], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_asymmetric_debug > 0) then {[format ["asymm_notifications called on: %1 - Parameters: [%2, %3] ", debug_source, _notif_id, _pos], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 switch (_notif_id) do {
     case 0: {

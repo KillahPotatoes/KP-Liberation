@@ -2,7 +2,7 @@
     File: fn_getCrateHeight.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-03-26
-    Last Update: 2020-03-26
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -24,9 +24,9 @@ if (_crateClass isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_erro
 private _height = 0;
 
 switch (_crateClass) do {
-    case KP_liberation_supply_crate: {_height = 0.4;};
-    case KP_liberation_ammo_crate: {_height = 0.6;};
-    case KP_liberation_fuel_crate: {_height = 0.3;};
+    case KPLIB_b_crateSupply: {_height = 0.4;};
+    case KPLIB_b_crateAmmo: {_height = 0.6;};
+    case KPLIB_b_crateFuel: {_height = 0.3;};
     default {_height = 0.6;};
 };
 

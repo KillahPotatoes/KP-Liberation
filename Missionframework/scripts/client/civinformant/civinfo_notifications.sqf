@@ -2,7 +2,7 @@ if (isDedicated) exitWith {};
 
 params ["_notif_id", ["_pos", getpos player]];
 
-if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_notifications called on: %1 - Parameters: [%2, %3]", debug_source, _notif_id, _pos], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_notifications called on: %1 - Parameters: [%2, %3]", debug_source, _notif_id, _pos], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 switch (_notif_id) do {
     case 0: {
@@ -28,11 +28,11 @@ switch (_notif_id) do {
     case 4: {
         ["lib_civ_hvt_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
         private _marker = createMarker ["HVT_marker", _pos];
-        _marker setMarkerColor GRLIB_color_enemy_bright;
+        _marker setMarkerColor KPLIB_color_enemyActive;
         _marker setMarkerType "hd_unknown";
 
         private _marker_zone = createMarker ["HVT_zone", _pos];
-        _marker_zone setMarkerColor GRLIB_color_enemy_bright;
+        _marker_zone setMarkerColor KPLIB_color_enemyActive;
         _marker_zone setMarkerShape "ELLIPSE";
         _marker_zone setMarkerBrush "FDiagonal";
         _marker_zone setMarkerSize [500,500];

@@ -1,10 +1,12 @@
+scriptName "KPLIB_intro";
+
 if ( isNil "cinematic_camera_started" ) then { cinematic_camera_started = false };
 sleep 0.5;
 waitUntil { time > 0 };
 
 [] spawn cinematic_camera;
 
-if ( GRLIB_introduction ) then {
+if ( KPLIB_param_introCinematic ) then {
 
     sleep 1;
     cutRsc ["intro1","PLAIN",1,true];

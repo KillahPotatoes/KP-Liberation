@@ -1,12 +1,14 @@
+scriptName "civinfo_escort";
+
 params ["_informant"];
 
 if (isDedicated) exitWith {};
 
-if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
-if !(alive _informant) exitWith {if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};};
+if !(alive _informant) exitWith {if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};};
 
 private _is_near_fob = false;
 
@@ -31,7 +33,7 @@ waitUntil {sleep 5;
 if (alive _informant) then {
     if (_is_near_fob) then {
         sleep 5;
-        private _grp = createGroup [GRLIB_side_friendly, true];
+        private _grp = createGroup [KPLIB_side_player, true];
         [_informant] joinSilent _grp;
         _informant playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
         _informant disableAI "ANIM";
@@ -39,9 +41,9 @@ if (alive _informant) then {
         sleep 5;
         [_informant, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExecCall ["switchMove"];
         [_informant] remoteExec ["civinfo_delivered",2];
-        if (KP_liberation_civinfo_debug > 0) then {["civinfo_escort -> Informant at FOB", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+        if (KPLIB_civinfo_debug > 0) then {["civinfo_escort -> Informant at FOB", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         sleep 600;
         deleteVehicle _informant;
-        if (KP_liberation_civinfo_debug > 0) then {[format ["civinfo_escort finished by: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+        if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort finished by: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
     };
 };

@@ -6,7 +6,7 @@
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Localization contributors:
-        English | Updated: 0.96.7a
+        English | Updated: 0.96.8
             KP Liberation Dev Team  - https://github.com/KillahPotatoes
 
         Chinese Simplified | Updated: pre 0.96.7a
@@ -19,10 +19,10 @@
         French | Updated: pre 0.96.7a
             zbug                    - https://github.com/GreuhZbug
 
-        German | Updated: 0.96.7a
+        German | Updated: 0.96.8
             Wyqer                   - https://github.com/Wyqer
 
-        Italian | Updated: pre 0.96.7a
+        Italian | Updated: 0.96.8
             k4s0                    - https://github.com/k4s0
 
         Portuguese | Updated: pre 0.96.7a
@@ -46,10 +46,10 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>CTI 34 KP Liberation v0.96.7a</Original>
+            <Original>CTI 34 KP Liberation v0.96.8 dev</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.96.7a</Original>
+            <Original>v0.96.8 dev</Original>
         </Key>
         <Key ID="STR_Deploy_OnPoint">
             <Original>Deploy</Original>
@@ -378,6 +378,7 @@
             <German>-- AUF FAHRZEUG LADEN</German>
             <Spanish>-- CARGAR AL VEHÍCULO</Spanish>
             <Russian>-- ЗАГРУЗИТЬ В ТРАНСПОРТ</Russian>
+            <Italian>-- CARICA SUL VEICOLO--</Italian>
             <Korean>-- 차량에 적재</Korean>
             <Turkish>-- ARACA YÜKLE</Turkish>
             <Czech>-- NALOŽIT DO VOZIDLA</Czech>
@@ -387,6 +388,7 @@
             <German>-- VON FAHRZEUG ABLADEN</German>
             <Spanish>-- DESCARGAR DEL VEHÍCULO</Spanish>
             <Russian>-- ВЫГРУЗИТЬ ИЗ ТРАНСПОРТА</Russian>
+            <Italian>-- SCARICA DAL VEICOLO --</Italian>
             <Korean>-- 차량에서 하역</Korean>
             <Turkish>-- ARAÇTAN İNDİR</Turkish>
             <Czech>-- VYLOŽENÍ Z VOZIDLA</Czech>
@@ -396,6 +398,7 @@
             <German>-- KEIN TRANSPORTFAHRZEUG IN DER NÄHE</German>
             <Spanish>-- NO HAY VEHÍCULOS DE TRANSPORTE CERCA</Spanish>
             <Russian>-- НЕТ ТРАНСПОРТА ПОБЛИЗОСТИ</Russian>
+            <Italian>-- NESSUN VEICOLO DA TRASPORTO NELLE VICINANZE --</Italian>
             <Korean>-- 주변에 수송차량이 없습니다.</Korean>
             <Turkish>-- YAKINLARDA NAKLİYE ARACI YOK</Turkish>
             <Czech>-- NELZE NALOŽIT</Czech>
@@ -518,6 +521,7 @@
             <German>FOB Container</German>
             <Spanish>Contenedor de FOB</Spanish>
             <Russian>FOB Контейнер</Russian>
+            <Italian>FOB Container</Italian>
             <Chinesesimp>前哨部署柜</Chinesesimp>
             <Chinese>前線基地貨櫃</Chinese>
             <Turkish>FOB Konteynırı</Turkish>
@@ -2857,6 +2861,7 @@
             <German>Maximale Verzögerung zur Sektor Deaktivierung (Beginnt nach 5 Minuten seit Aktivierung)</German>
             <Spanish>Máximo atraso de desactivación de sector (empieza a incrementar después del 5to minuto de activación)</Spanish>
             <Russian>Максимальное время деактивации сектора (начинает увелич. после 5-ти минут активации)</Russian>
+            <Italian>Massimo ritardo di attivazione del settore(dopo 5 minuti inizia ad incrementare)</Italian>
             <Turkish>Sektör kapanma üst limiti (Sektörün açılmasından 5 dakika sonra artmaya başlar)</Turkish>
             <Czech>Maximální zpoždění deaktivace sektoru (začíná se zvyšovat po 5. aktivační minutě)</Czech>
         </Key>
@@ -2865,6 +2870,7 @@
             <German>Eingeschränkte Zeus Funktionen</German>
             <Spanish>Interface de Zeus limitada</Spanish>
             <Russian>Ограниченный интерфейс Zeus</Russian>
+            <Italian>Limita interfaccia Zeus</Italian>
             <Korean>제한된 제우스 인터페이스</Korean>
             <Turkish>Sınırlı Zeus Arayüzü</Turkish>
             <Czech>Omezené rozhraní Zeus</Czech>
@@ -2872,12 +2878,14 @@
         <Key ID="STR_PARAM_COMMANDERZEUS">
             <Original>Zeus for Commander</Original>
             <German>Zeus für Kommandant</German>
+            <Italian>Zeus per Comandante</Italian>
         </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
             <German>Chance, dass Feinde in fahrunfähigen/beschädigten Fahrzeugen verbleiben</German>
             <Spanish>Probabilidad de que los enemigos se quedarán dentro de un vehículo inmovilziado/dañado</Spanish>
             <Russian>Шанс того, что враги будут оставаться в неподвижных/поврежденных автомобилях</Russian>
+            <Italian>Chance che un nemico rimanga su un veicolo immobile o danneggiato</Italian>
             <Turkish>Düşmanların hasarlı araçların içinde kalma şansı</Turkish>
             <Czech>Šance, že nepřátelé zůstanou v nepohyblivých / poškozených vozidlech</Czech>
         </Key>
@@ -5101,6 +5109,14 @@
             <Korean>-- 군수물품 밀기</Korean>
             <Czech>-- TLAČIT KRABICI</Czech>
         </Key>
+        <Key ID="STR_ACTION_CRATE_CARRY">
+            <Original>-- CARRY CRATE</Original>
+            <German>-- KISTE TRAGEN</German>
+        </Key>
+        <Key ID="STR_ACTION_CRATE_DROP">
+            <Original>-- DROP CRATE</Original>
+            <German>-- KISTE ABLEGEN</German>
+        </Key>
         <Key ID="STR_ACTION_SORT_STORAGE">
             <Original>-- STACK AND SORT</Original>
             <German>-- STAPELN UND SORTIEREN</German>
@@ -6172,6 +6188,7 @@
             <German>Siegesbedingung</German>
             <Spanish>Condición de Victoria</Spanish>
             <Russian>Условие для победы</Russian>
+            <Italian>Condizioni di vittoria</Italian>
             <Korean>승리 조건</Korean>
             <Czech>Vítězství</Czech>
         </Key>
@@ -6180,6 +6197,7 @@
             <German>Alle Hauptstädte</German>
             <Spanish>Todas las capitales</Spanish>
             <Russian>Все столицы</Russian>
+            <Italian>Tutte le capitali</Italian>
             <Korean>모든 대도시</Korean>
             <Czech>Všechna hlavní města</Czech>
         </Key>
@@ -6188,6 +6206,7 @@
             <German>Alle Hauptstädte und Militärbasen</German>
             <Spanish>Todas las capitales y bases militares</Spanish>
             <Russian>Все столицы и военные базы</Russian>
+            <Italian>Tutte le capitali e le basi militari</Italian>
             <Korean>모든 대도시 및 군사기지</Korean>
             <Czech>Všechna hlavní města a vojenské základny</Czech>
         </Key>
@@ -6196,6 +6215,7 @@
             <German>Alle Hauptstädte und 60% der Sektoren</German>
             <Spanish>Todas las capitales y 60% de los sectores</Spanish>
             <Russian>Все столицы и 60% секторов</Russian>
+            <Italian>Tutte le capitali e il 60% dei settori</Italian>
             <Korean>모든 대도시 및 60%의 거점</Korean>
             <Czech>Všechna hlavní města a 60% sektoru</Czech>
         </Key>
@@ -6204,6 +6224,7 @@
             <German>Alle Hauptstädte und 80% der Sektoren</German>
             <Spanish>TOdas las capitales y 80% de los sectores</Spanish>
             <Russian>Все столицы и 80% секторов</Russian>
+            <Italian>Tutte le capitali e l'80% dei settori</Italian>
             <Korean>모든 대도시 및 80%의 거점</Korean>
             <Czech>Všechna hlavní města a 80% sektoru</Czech>
         </Key>
@@ -6212,6 +6233,7 @@
             <German>Alle Sektoren</German>
             <Spanish>Todos los sectores</Spanish>
             <Russian>Все секторы</Russian>
+            <Italian>Tutti i settori</Italian>
             <Korean>모든 거점</Korean>
             <Czech>Všechny sektory</Czech>
         </Key>
@@ -6220,6 +6242,7 @@
             <German>KAMPAGNE ABGESCHLOSSEN</German>
             <Spanish>CAMPAÑA COMPLETA</Spanish>
             <Russian>КАМПАНИЯ ВЫПОЛНЕНА</Russian>
+            <Italian>CAMPAGNA COMPLETATA</Italian>
             <Korean>군사작전 완료</Korean>
             <Czech>CAMPAIGN KOMPLET</Czech>
         </Key>
@@ -6228,6 +6251,7 @@
             <German>Du hast das Gebiet von der feindlichen Unterdrückung befreit.</German>
             <Spanish>Haz liberado el área de la oposión enemiga.</Spanish>
             <Russian>Вы освободили территорию от угнетения врага.</Russian>
+            <Italian>Hai liberato tutta l'area dall'oppressione nemica</Italian>
             <Korean>당신은 적의 억압으로부터 이 지역을 해방시켰다.</Korean>
             <Czech>Osvobodili jste oblast od nepřátelského útlaku.</Czech>
         </Key>
@@ -6236,6 +6260,7 @@
             <German>Spielzeit: %1 Tage, %2 Stunden, %3 Minuten und %4 Sekunden</German>
             <Spanish>Tiempo de juego: %1 días, %2 horas, %3 minutos y %4 segundos</Spanish>
             <Russian>Игровое время: %1 дней, %2 часов, %3 минут и %4 секунд</Russian>
+            <Italian></Italian>
             <Korean>걸린 시간: %1 일, %2 시간, %3 분 and %4 초</Korean>
             <Czech>Doba hraní: % 1 dny, % 2 hodiny, % 3 minuty a % 4 sekund</Czech>
         </Key>
@@ -6384,6 +6409,7 @@
             <German>Widerstandskämpfer getötet: %1</German>
             <Spanish>Combatientes de la resistencia eliminados: %1</Spanish>
             <Russian>Убито бойцов сопротивления: %1</Russian>
+            <Italian>Combattente della resistenza ucciso: %1</Italian>
             <Korean>적군 전투기 격추 : %1</Korean>
             <Czech>Spojenci zabili: %1</Czech>
         </Key>
@@ -6392,6 +6418,7 @@
             <German>Verbündete Widerstandskämpfer getötet: %1</German>
             <Spanish>Combatientes de la resistencia aliada eliminados: %1</Spanish>
             <Russian>Убито союзнических бойцов сопротивления: %1</Russian>
+            <Italian>Combattente della resistenza alleato ucciso: %1</Italian>
             <Korean>아군 전투기 격추 : %1</Korean>
             <Czech>Spojenci zabití: %1</Czech>
         </Key>
@@ -6400,6 +6427,7 @@
             <German>Verbündete Widerstandskämpfer von Spielern getötet: %1</German>
             <Spanish>Combatientes de la resistencia aliada eliminados por jugadores: %1</Spanish>
             <Russian>Убито союзнических бойцов сопротивления игроками: %1</Russian>
+            <Italian>Combattente della resistenza alleato ucciso dal gicoatore: %1</Italian>
             <Korean>플레이어에 의해 격추된 전투기 : %1</Korean>
             <Czech>Spojenci zabití hráči: %1</Czech>
         </Key>
@@ -6436,6 +6464,7 @@
             <German>Zivilisten versorgt: %1</German>
             <Spanish>Civiles curados: %1</Spanish>
             <Russian>Гражданских вылечено: %1</Russian>
+            <Italian>Civile curato da: %1</Italian>
             <Korean>민간인 치료 : %1</Korean>
             <Czech>Uzdravení civilisté: %1</Czech>
         </Key>
@@ -6444,6 +6473,7 @@
             <German>Zivile Fahrzeuge zerstört: %1</German>
             <Spanish>Vehículos civiles destruidos: %1</Spanish>
             <Russian>Транспорта гражданских уничтожено: %1</Russian>
+            <Italian>Veicolo civile distrutto: %1</Italian>
             <Korean>파괴된 민간인 차량 : %1</Korean>
             <Czech>Civilní vozidla byla zničena: %1</Czech>
         </Key>
@@ -6452,6 +6482,7 @@
             <German>Zivile Fahrzeuge von Spielern zerstört: %1</German>
             <Spanish>Vehículos civiles destruidos por jugadores: %1</Spanish>
             <Russian>Транспорта гражданских уничтожено игроками: %1</Russian>
+            <Italian>Veicolo civile distrutto dal giocatore: %1</Italian>
             <Korean>플레이어에 의해 파괴된 민간인 차량 : %1</Korean>
             <Czech>Civilní vozidla zničená hráči: %1</Czech>
         </Key>
@@ -6460,6 +6491,7 @@
             <German>Zivile Fahrzeuge beschlagnahmt: %1</German>
             <Spanish>Vehículos civiles capturados: %1</Spanish>
             <Russian>Транспорта гражданских захвачено: %1</Russian>
+            <Italian>Veicolo civile sequestrato da: %1</Italian>
             <Korean>민간인 차량 탈취 : %1</Korean>
             <Czech>Krádež civilních vozidel: %1</Czech>
         </Key>
@@ -6468,6 +6500,7 @@
             <German>Zivile Gebäude zerstört: %1</German>
             <Spanish>Edificios civiles destruidos: %1</Spanish>
             <Russian>Построек гражданских уничтожено: %1</Russian>
+            <Italian>Edificio civile distrutto: %1</Italian>
             <Korean>파괴된 민간 건물 : %1</Korean>
             <Czech>Zničeno civilních budov: %1</Czech>
         </Key>
@@ -6490,6 +6523,7 @@
             <German>Munition hergestellt: %1</German>
             <Spanish>Municiones producidas: %1</Spanish>
             <Russian>Произведено боеприпасов: %1</Russian>
+            <Italian>Munizioni prodotte: %1</Italian>
             <Korean>생산된 탄약 : %1</Korean>
             <Czech>Výroba munice: %1</Czech>
         </Key>
@@ -6498,6 +6532,7 @@
             <German>Munition verbraucht: %1</German>
             <Spanish>Municiones gastadas: %1</Spanish>
             <Russian>Боеприпасов потрачено: %1</Russian>
+            <Italian>Munizioni spese: %1</Italian>
             <Korean>사용된 탄약 : %1</Korean>
             <Czech>Spotřeba munice: %1</Czech>
         </Key>
@@ -6506,6 +6541,7 @@
             <German>Kraftstoff hergestellt: %1</German>
             <Spanish>Combustible producido: %1</Spanish>
             <Russian>Произведено топлива: %1</Russian>
+            <Italian>Carburante prodotto: %1</Italian>
             <Korean>생산된 기름 : %1</Korean>
             <Czech>Výroba paliva: %1</Czech>
         </Key>
@@ -6514,6 +6550,7 @@
             <German>Kraftstoff verbraucht: %1</German>
             <Spanish>Combustible gastado: %1</Spanish>
             <Russian>Топлива потрачено: %1</Russian>
+            <Italian>Carburante speso: %1</Italian>
             <Korean>사용된 기름 : %1</Korean>
             <Czech>Spotřeba paliva: %1</Czech>
         </Key>
@@ -6522,6 +6559,7 @@
             <German>Nachschub hergestellt: %1</German>
             <Spanish>Suministros producidos: %1</Spanish>
             <Russian>Произведено припасов: %1</Russian>
+            <Italian>Rifornimenti creati: %1</Italian>
             <Korean>생산된 보급품 : %1</Korean>
             <Czech>Výroba surovin: %1</Czech>
         </Key>
@@ -6530,6 +6568,7 @@
             <German>Nachschub verbraucht: %1</German>
             <Spanish>Suministros gastados: %1</Spanish>
             <Russian>Припасов потрачено: %1</Russian>
+            <Italian>Rifornimenti spesi: %1</Italian>
             <Korean>사용된 보급품 : %1</Korean>
             <Czech>Spotřeba surovin: %1</Czech>
         </Key>
@@ -6746,6 +6785,7 @@
             <Original>-- Clear FOB area</Original>
             <Spanish>-- Limpiar área de FOB</Spanish>
             <Russian>-- Очистить зону FOB</Russian>
+            <Italian>-- Pulisci area FOB</Italian>
             <German>-- FOB Gebiet räumen</German>
             <Korean>-- 전초기지 주변 정리</Korean>
             <Czech>-- Vymazat zónu FOB</Czech>
@@ -6755,6 +6795,7 @@
             <German>FOB eingepackt.\nEventuelle Gebietsräumung wird zum Serverneustart rückgängig gemacht.</German>
             <Spanish>FOB empacado. \nProbablemente el permiso de creación será revertido después de reiniciar el servidor.</Spanish>
             <Russian>FOB свернуто.\nЕсли вы очищали место для FOB, оно будет восстановлено после перезапуска сервера.</Russian>
+            <Italian>FOB ripiegata.\nL'autorizzazione eventualmente creata verrà ripristinata al riavvio del server.</Italian>
             <Korean>FOB가 재포장됩니다. 이 상태로 서버 재시작시 이 부근의 건물이나 장비들은 사라집니다.</Korean>
             <Czech>FOB je zabalen.\Po restartování serveru bude pravděpodobně vytvořené oprávnění zrušeno.</Czech>
         </Key>
@@ -6763,6 +6804,7 @@
             <German>Dynamischer Nebel (A3 Vanilla)</German>
             <Spanish>Niebla dinámica (A3 Default)</Spanish>
             <Russian>Динамический туман (A3 Vanilla)</Russian>
+            <Italian>Nebbia dinamica (A3 Vanilla)</Italian>
             <Korean>동적인 안개 (A3 Vanilla)</Korean>
             <Czech>Dynamická mlha (A3 Vanilla)</Czech>
         </Key>
@@ -6771,6 +6813,7 @@
             <German>Start-FOB bereitgestellt als</German>
             <Spanish>Empezar con FOB proveído como</Spanish>
             <Russian>Создать FOB в виде</Russian>
+            <Italian>Partenza con FOB dispiegata a</Italian>
             <Korean>시작시 전초기지는 다음과 같이 제공됩니다.</Korean>
             <Czech>První FOB poskyzován jako</Czech>
         </Key>
@@ -6779,6 +6822,7 @@
             <German>FOB Container</German>
             <Spanish>Contenedor FOB</Spanish>
             <Russian>FOB Контейнер</Russian>
+            <Italian>FOB Container</Italian>
             <Korean>전초기지 설치박스</Korean>
             <Czech>FOB Kontejner</Czech>
         </Key>
@@ -6787,6 +6831,7 @@
             <German>FOB LKW</German>
             <Spanish>Camión FOB</Spanish>
             <Russian>FOB Грузовик</Russian>
+            <Italian>Camion FOB</Italian>
             <Korean>전초기지 설치트럭</Korean>
             <Czech>FOB Nákladní auto</Czech>
         </Key>
@@ -6794,232 +6839,277 @@
             <Original>Client options variant</Original>
             <German>Spielermenü Variante</German>
             <Spanish>Variantes de opciones de cliente</Spanish>
+            <Italian>Opzioni client</Italian>
             <Czech>Vybrat možnost klienta</Czech>
         </Key>
         <Key ID="STR_PARAMS_PLAYERMENU_GREUH">
             <Original>GREUH Extended Options</Original>
             <German>GREUH Erweiterte Optionen</German>
             <Spanish>GREHU Opciones Extendidas</Spanish>
+            <Italian>GREHU Opzioni Avanzate</Italian>
             <Czech>GREUH Rozšířené možnosti</Czech>
         </Key>
         <Key ID="STR_PARAMS_PLAYERMENU_KP">
             <Original>KP Player Menu (requires CBA)</Original>
             <German>KP Spielermenü (benötigt CBA)</German>
             <Spanish>Menú de jugador KP (requiere CBA)</Spanish>
+            <Italian>Menu di gioco KP (richiede CBA)</Italian>
             <Czech>KP Player Menu (vyžaduje CBA)</Czech>
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TITLE">
             <Original>Are you sure?</Original>
             <German>Bist du sicher?</German>
             <Spanish>¿Estás seguro?</Spanish>
+            <Italian>Sei sicuro?</Italian>
             <Czech>jsi si tím jistý?</Czech>
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TEXT">
             <Original>This will permanently remove a total of %1 terrain objects (houses, trees, fences, lamps, etc.) within a radius of %2m around %3.</Original>
             <German>Dies wird insgesamt %1 Kartenobjekte (Häuser, Bäume, Zäune, Lampen, etc.) im Umkreis von %2m um %3 herum permanent entfernen.</German>
             <Spanish>Esta acción removera permanentemente un total de %1 objetos de terreno (casas, árboles, bardas, lamparas, etc.) dentro de un radio de %2m alrededor de %3.</Spanish>
+            <Italian>Questo rimuoverà permanentemente un totale di %1 oggetti del terreno (case, alberi, recinzioni, lampade, ecc.) Entro un raggio di %2m intorno a %3.</Italian>
             <Czech>Tím se trvale odstraní celkem %1 terénních objektů (domy, stromy, ploty, lampy atd.) V okruhu %2m kolem %3.</Czech>
         </Key>
         <Key ID="STR_PARAM_ZEUSADDENEMIES">
             <Original>Add enemies to Zeus editable objects</Original>
             <German>Feindliche Einheiten für Zeus editierbar</German>
             <Spanish>Agregar enemigos como objetos editables de Zeus</Spanish>
+            <Italian>Aggiungi nemici come oggetti editabili da Zeus</Italian>
             <Czech>Přidejte nepřátele k upravitelným objektům Zeus</Czech>
         </Key>
         <Key ID="STR_PARAM_HIGHCOMMAND">
             <Original>Arma 3 High Command for Commander</Original>
             <German>Arma 3 Oberbefehl für Kommandanten</German>
             <Spanish>Arma 3 High Command para comandantes</Spanish>
+            <Italian>Arma 3 High Command per il comandante</Italian>
             <Czech>Arma 3 Vrchní velení velitele</Czech>
         </Key>
         <Key ID="STR_PARAM_DEBUG_HIGHCOMMAND">
             <Original>Arma 3 High Command</Original>
             <German>Arma 3 Oberbefehl</German>
             <Spanish>Arma 3 High Command</Spanish>
+            <Italian>Arma 4 High Command</Italian>
             <Czech>Arma 3 Vrchní velení velitele</Czech>
         </Key>
         <Key ID="STR_PARAM_SUPPMOD">
             <Original>BI Support System access</Original>
             <German>Zugriff auf BI Support System</German>
+            <Italian>BI Supporto di accesso al sistema</Italian>
             <Czech>BI Podpora přístupu do systému</Czech>
         </Key>
         <Key ID="STR_PARAM_SUPPMOD_CMDRANDWHITELIST">
             <Original>Commander and Whitelist</Original>
             <German>Kommandant und Whitelist</German>
             <Czech>Velitel a whitelist</Czech>
+            <Italian>Comandante e Whitelist</Italian>
         </Key>
         <Key ID="STR_PARAM_SUPPMOD_EVERYONE">
             <Original>Everyone</Original>
             <German>Jeder</German>
             <Czech>Každý</Czech>
+            <Italian>Tutti</Italian>
         </Key>
         <Key ID="STR_PARAM_WEAPSWAY">
             <Original>Weapon sway</Original>
             <German>Waffenschwanken (Weapon sway)</German>
             <Czech>Zbraň houpat</Czech>
+            <Italian>Ondeggiamento arma (Weapon sway)</Italian>
         </Key>
         <Key ID="STR_PARAM_TUTORIAL">
             <Original>Ingame Tutorial</Original>
             <German>Tutorial im Spiel</German>
             <Czech>Výukový program Ingame</Czech>
+            <Italian>Tutorial in gioco</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_CRATE">
             <Original>Crate</Original>
             <German>Kiste</German>
             <Czech>Bedna</Czech>
+            <Italian>Crea</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_SOLDIER">
             <Original>Surrendering Soldier</Original>
             <German>Kapitulierender Soldat</German>
             <Czech>Vzdávající se voják</Czech>
+            <Italian>Soldato arrendevole</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_CIVILIAN">
             <Original>Wounded Civilian</Original>
             <German>Verwundeter Zivilist</German>
             <Czech>Zraněný civilista</Czech>
+            <Italian>Civile ferito</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TITLE">
             <Original>KP Liberation Tutorial</Original>
             <German>KP Liberation Tutorial</German>
             <Czech>KP Liberation Tutorial</Czech>
+            <Italian>KP liberation Tutorial</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_START">
             <Original>Do you want to enable the interactive tutorial?&lt;br/&gt;It'll guide you through the aspects of the mission. Check your tasks area on the map for further information on each task.&lt;br/&gt;&lt;br/&gt;(This popup can be disabled in the mission parameters)</Original>
             <German>Möchtest du das interaktive Tutorial aktivieren?&lt;br/&gt;Es wird dich durch einzelnen Missionsaspekte führen. Prüfe die Aufgaben im Kartenbildschirm für weitere Informationen zu den einzelnen Aufgaben.&lt;br/&gt;&lt;br/&gt;(Dieses Pop-Up kann in den Missionsparametern deaktiviert werden)</German>
             <Czech>Chcete povolit interaktivní výukový program?&lt;br/&gt;Provede vás aspekty mise. Další informace o jednotlivých úkolech naleznete v oblasti úkolů na mapě.&lt;br/&gt;&lt;br/&gt;(Toto okno lze v parametrech mise deaktivovat)</Czech>
+            <Italian>Vuoi abilitare il tutorial interattivo?&lt;br/&gt;Ti guiderà attraverso gli aspetti della missione. Controlla la tua area delle attività sulla mappa per ulteriori informazioni su ciascuna attività&lt;br/&gt;&lt;br/&gt;(questo popup può essere disabilitato nei parametri della missione)</Italian>      
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_END">
             <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
             <German>Du hast alle derzeit verfügbaren/implementierten Tutorials abgeschlossen.&lt;br/&gt;Wir wünschen dir sehr viel Spaß mit dem Spielen der Mission.&lt;br/&gt;&lt;br/&gt;Solltest du Fragen haben oder die etwas über die tiefergehenden Mechaniken erfahren wollen, dann schaue als erstes in das &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Außerdem gibt es unseren &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt;, wo hunderte von KP Liberation Spielern zu finden sind.</German>
             <Czech>Dokončili jste všechny aktuálně dostupné/implementované výukové programy.&lt;br/&gt; Užij si spoustu zábavy při hraní této mise.&lt;br/&gt;&lt;br/&gt; Pokud máte dotazy nebo se chcete dozvědět hlubší mechaniku, ujistěte se, že navštívíte stránku &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt; KP Osvobození Wiki&lt;/a&gt;. &lt;br/&gt; Také jsme a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; kde jsou kolem stovky hráčů KP Libertion.</Czech>
+            <Italian>Hai completato tutti i tutorial attualmente disponibili / implementati.&lt;br/&gt;Divertiti molto giocando a questa missione.&lt;br/&gt;&lt;br/&gt;Se hai domande o vuoi imparare le meccaniche più approfondite, assicurati di visitare la &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;Noi abbiamo anche un &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; dove troverai centinaia di giocatori della KP Libertion.</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_TITLE">
             <Original>KP Liberation Tutorial Tasks</Original>
             <German>KP Liberation Tutorial Aufgaben</German>
             <Czech>KP osvobození Výuky</Czech>
+            <Italian>Missione KP Liberation Tutorial</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_DESC">
             <Original>Tasks of the KP Liberation Tutorial.&lt;br/&gt;It'll create new tasks when the correct circumstances are reached and there are still tutorials available.</Original>
             <German>Aufgaben des KP Liberation Tutorials.&lt;br/&gt;Es werden automatisch neue Aufgaben erstellt, sobald die entsprechenden Umstände eintreten und noch weitere Tutorials verfügbar sind.</German>
             <Czech>Úkoly KP Osvobození Tutorial.&lt;br/&gt;To bude vytvářet nové úkoly, když jsou dosaženy správné okolnosti a stále jsou k dispozici výukové programy.</Czech>
+            <Italian>Compiti del tutorial di KP Liberation.&lt;br/&gt; creerà nuovi compiti quando le circostanze corrette saranno raggiunte e ci saranno ancora tutorial disponibili.</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_TITLE">
             <Original>First FOB deployment</Original>
             <German>Erste FOB errichten</German>
+            <Italian>Primo dispiegamento della FOB</Italian>
             <Czech>První nasazení FOB</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_DESC">
             <Original>This tasks will guide you through the deployment of your first FOB and gathering the start resources.</Original>
             <German>Diese Aufgaben werden dich durch die Bereitstellung deiner ersten FOB und dem Sammeln der Startressourcen führen.</German>
+            <Italian>Questo primo impiego ti guida nella creazione della prima FOB e ti insegnera ad acquisire le risorse iniziali.</Italian>
             <Czech>Tyto úkoly vás provedou nasazením prvního fob a shromažďováním počátečních prostředků.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01A_TITLE">
             <Original>Transport FOB Container</Original>
             <German>FOB Container transportieren</German>
             <Czech>Přepravní FOB kontejner</Czech>
+            <Italian>Trasporta container FOB</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01A_DESC">
             <Original>This is your first FOB container, which allows you to deploy a FOB.&lt;br/&gt;You need to slingload it via the transport helicopter to a position at least 1km away from the operation base in order to deploy it. We recommend to build it in the vicinity of a factory.&lt;br/&gt;After you've transported the container to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
             <German>Dies ist dein erster FOB Container mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du als Außenlast mit dem Transporthelikopter zu einer Position mit mindestens 1km Abstand zur Operationsbasis bringen, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den Container zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
+            <Italian>Questo è il tuo primo container FOB, che ti permetterà di dispiegare una FOB.&lt;br/&gt;È necessario caricarlo tramite l'elicottero da trasporto in una posizione ad almeno 1 km di distanza dalla base operativa per dispiegarlo. Si consiglia di costruirlo nelle vicinanze di una fabbrica.&lt;br/&gt;Dopo aver trasportato il contenitore nella posizione desiderata, avvicinati ad esso e otterrai un'azione della rotella di scorrimento per posizionare il FOB.&lt;br/&gt;Continueremo dopo che avrai distribuito il tuo primo FOB.</Italian>
             <Czech>Jedná se o váš první FOB kontejner, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho naložit transportním vrtulníkem na pozici, která je vzdálena alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme jej postavit v blízkosti továrny.&lt;br/&gt; Po přepravě kontejneru do požadovaného místa zamiřte k němu a získáte akci rolovacího kolečka, která umístí FOB.&lt;br/&gt; Budeme pokračovat, až to provedete.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01B_TITLE">
             <Original>Drive FOB Truck</Original>
             <German>FOB Truck fahren</German>
             <Czech>Nákladní auto FOB</Czech>
+            <Italian>Guida il camion FOB</Italian>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01B_DESC">
             <Original>This is your first FOB truck, which allows you to deploy a FOB.&lt;br/&gt;You need to drive it to a position at least 1km away from the operation base in order to deploy it. We recommend to build it in the vicinity of a factory.&lt;br/&gt;After you've driven the truck to the desired position, head near to it and you'll get an scroll wheel action to place the FOB.&lt;br/&gt;We'll continue after you've deployed your first FOB.</Original>
             <German>Dies ist dein erster FOB LKW mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du zu einer Position mit mindestens 1km Abstand zur Operationsbasis fahren, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den LKW zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
+            <Italian>Questo è il tuo primo camion FOB, che ti consente di distribuire un FOB.&lt;br/&gt;È necessario guidarlo in una posizione ad almeno 1 km dalla base operativa per poterlo distribuire. Si consiglia di costruirlo nelle vicinanze di una fabbrica.&lt;br/&gt;Dopo aver guidato il camion nella posizione desiderata, avvicinati ad esso e otterrai un'azione della rotella di scorrimento per posizionare il FOB.&lt;br/&gt;Continueremo dopo che avrai distribuito il tuo primo FOB.</Italian>
             <Czech>Jedná se o váš první FOB truck, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho dojet na pozici alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme ji postavit v blízkosti továrny.&lt;br/&gt; Poté, co jste řídili vůz do požadovaného místa, zamiřte blízko k němu a dostanete akci rolovacího kolečka pro umístění FOB.&lt;br/&gt; Budeme pokračovat, až rozmístíte svůj první FOB.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_02_TITLE">
             <Original>Build a storage area</Original>
             <German>Baue einen Lagerbereich</German>
+            <Italian>Costruisci un'area di stoccaggio</Italian>
             <Czech>Vytvoření úložného prostoru</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_02_DESC">
             <Original>Now you've access to the build menu via the scroll wheel actions.&lt;br/&gt;Use this action to place a storage area. You can find it in the support tab of the build menu.&lt;br/&gt;This is needed to store the resource crates we'll send to you after this task.</Original>
             <German>Nun hast du Zugriff zum Baumenü über die Mausrad-Aktionen.&lt;br/&gt;Benutze diese Aktion, um einen Lagerbereich zu errichten. Die Lagerbereich sind im Unterstützungs-Reiter des Baumenüs.&lt;br/&gt;Dieser ist notwendig, um die Startressourcen, die wir dir im Anschluss an diese Aufgabe zukommen lassen, einzulagern.</German>
+            <Italian>Ora hai accesso al menu di costruzione tramite le azioni della rotella di scorrimento.&lt;br/&gt;Usa questa azione per posizionare un'area di stoccaggio. Puoi trovarlo nella scheda Supporto del menu di costruzione.&lt;br/&gt;Questo è necessario per memorizzare le casse di risorse che ti invieremo dopo questa attività.</Italian>
             <Czech>Nyní máte přístup k nabídce sestavení prostřednictvím akcí rolovacího kolečka.&lt;br/&gt; Tato akce slouží k umístění skladovacího prostoru. Najdete ji na kartě budovy v nabídce stavení.&lt;br/&gt; To je nutné k uložení beden prostředků, které vám pošleme po tomto úkolu.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_TITLE">
             <Original>Collect start resources</Original>
             <German>Sammle Startressourcen</German>
+            <Italian>Acquisisci risorse iniziali</Italian>
             <Czech>Shromáždit počáteční zdroje</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_DESC">
             <Original>We've send you some start resource crates via paradrop. Collect them and store them in your storage area to add them to the FOB resource pool.&lt;br/&gt;Resources have always to be stored in such areas to use them for building. It's not enough to have them near the FOB. If you go near a crate you'll have a store and a push scroll wheel action, which will help you.</Original>
             <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben. Bist du in der Nähe einer Kiste, hast du unter anderem eine "Einlagern" und "Schieben" Mausrad-Aktion, welche dir helfen werden.</German>
+            <Italian>Ti abbiamo inviato alcune casse di risorse iniziali tramite paradrop. Raccoglili e conservali nella tua area di stoccaggio per aggiungerli al pool di risorse FOB.&lt;br/&gt;Le risorse devono sempre essere immagazzinate in tali aree per usarle per la costruzione. Non basta averli vicino al FOB. Se ti avvicini a una cassa, avrai un negozio e una rotella di scorrimento, che ti aiuterà.</Italian>
             <Czech>Poslali jsme vám přes paradrop nějaké bedny se startem. Shromážděte je a uložte je do úložiště a přidejte je do fondu zdrojů FOB.&lt;br/&gt; Zdroje musí být vždy uloženy v těchto oblastech, aby je mohly používat pro stavbu. Nestačí je mít blízko FOB. Pokud se přiblížíte k bedně, budete mít možnost a akci push rolovacího kolečka, která vám pomůže.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_TITLE">
             <Original>Capture your first factory</Original>
             <German>Erobere deine erste Fabrik</German>
+            <Italian>Cattura la tua prima fabbrica</Italian>
             <Czech>Zachyťte svou první továrnu</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_DESC">
             <Original>This tasks will guide you through the process of capturing a factory sector, take possible POWs, help possible wounded civilians and start the resource production.</Original>
             <German>Diese Aufgaben werden dich durch die Eroberung eines Fabrik-Sektors, das Festnehmen möglicher Gefangener, der Betreuung möglicher verwundeter Zivilisten und den Start der Ressourcenproduktion führen.</German>
+            <Italian>Questi compiti ti guideranno attraverso il processo di cattura di un settore di fabbrica, prenderanno possibili prigionieri di guerra, aiuteranno possibili civili feriti e avvieranno la produzione di risorse.</Italian>
             <Czech>Tyto úkoly vás provedou procesem zachycení výrobního sektoru, vezmou možné válečné zajatce, pomohou zraněným civilistům a zahájí výrobu zdrojů.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_TITLE">
             <Original>Approach a factory</Original>
             <German>Nähere dich einer Fabrik</German>
+            <Italian>Avvicinamento ad una fabbrica</Italian>
             <Czech>Přistupte k továrně</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_DESC">
             <Original>It's always a good decision to start your campaign with capturing a factory. That way you'll be able to produce more resources, which you'll need in order to build more vehicles and later air assets.&lt;br/&gt;We've marked up to three near factory sectors on the map for you. Decide by yourself, which one you want to approach.&lt;br/&gt;We'll continue, if you're near one of the marked factories.&lt;br/&gt;&lt;br/&gt;More information about the different sector types can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Original>
             <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
+            <Italian>È sempre una buona decisione iniziare la tua campagna con l'acquisizione di una fabbrica. In questo modo sarai in grado di produrre più risorse, di cui avrai bisogno per costruire più veicoli e successivamente risorse aeree.&lt;br/&gt;Abbiamo contrassegnato per te fino a tre settori vicini alla fabbrica sulla mappa. Decidi da solo a quale ti vuoi avvicinare.&lt;br/&gt;Continueremo, se sei vicino a una delle fabbriche contrassegnate.&lt;br/&gt;&lt;br/&gt;Maggiori informazioni sui diversi tipi di settore possono essere trovate nel nostro &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Italian>
             <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
             <Original>Conquer the factory</Original>
             <German>Erobere die Fabrik</German>
+            <Italian>Conquistare una fabbrica</Italian>
             <Czech>Dobýt továrnu</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_DESC">
             <Original>The factory is now activated and will spawn enemy defenders. A full sector activation might take up to 20 seconds, depending on the amount of player side units near the sector. The more troops, the faster it'll spawn. This is to avoid random spawning by e.g. helicopter or jet fly-bys.&lt;br/&gt;&lt;br/&gt;Now you've to defeat the enemy garrison until they surrender.</Original>
             <German>Die Fabrik ist nun aktiv und wird feindliche Verteidigungstruppen erzeugen. Eine vollständige Sektoraktivierung kann bis zu 20 Sekunden dauern, abhängig von der Menge an freundlichen Einheiten in der Nähe eine Sektors. Umso mehr Einheiten, umso schneller. Dies verhindert, dass zufällige Sektoren durch lediglich vorbeifliegende Helikopter oder Jets aktiviert werden.&lt;br/&gt;&lt;br/&gt;Nun musst du die feindliche Garnison, bis zur Aufgabe, bekämpfen.</German>
+            <Italian>La fabbrica è ora attivata e genererà difensori nemici. Un'attivazione completa di un settore potrebbe richiedere fino a 20 secondi, a seconda della quantità di unità lato giocatore vicino al settore. Più truppe, più velocemente si genererà. Questo per evitare la deposizione delle uova casuale, ad es. voli in elicottero o jet.&lt;br/&gt;&lt;br/&gt;Ora devi sconfiggere la guarnigione nemica finché non si arrendono.</Italian>
             <Czech>Továrna je nyní aktivována a bude plodit nepřátelské obránce. Úplná aktivace sektoru může trvat až 20 sekund, v závislosti na množství jednotek na straně hráče v blízkosti sektoru. Čím více vojáků, tím rychleji se vynoří. To má zabránit náhodnému tření např. vrtulník nebo tryskové přelety .&lt;br/&gt;&lt;br/&gt; Nyní musíte porazit nepřátelskou posádku, dokud se nevzdají.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_TITLE">
             <Original>Capture and care</Original>
             <German>Gefangennahme und Versorgung</German>
+            <Italian>Cattura e utilizza</Italian>
             <Czech>Zachyťte a pečujte</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_DESC">
             <Original>After capturing a sector there is a chance that enemies surrendered or wounded civilians are in need of medical aid.&lt;br/&gt;We've marked these for you this time. Normally you need to search the buildings for surrendering enemies and have a look on the map for small violet circles which gives a hint for wounded civilians.&lt;br/&gt;&lt;br/&gt;Approach all of the markers to capture the enemies and provide medical assistance for the civilians.</Original>
             <German>Nachdem ein Sektor erobert wurde, besteht die Chance, dass Feinde sich ergeben und verwundete Zivilisten medizinische Hilfe benötigen.&lt;br/&gt;Dieses mal haben wir diese für dich markiert. Normalerweise musst du die Gebäude nach sich ergebenen Feinden durchsuchen und auf der Karte nach kleinen violetten Markierungen schauen, welche dir einen Anhaltspunkt für verwundete Zivilisten gibt.&lt;br/&gt;&lt;br/&gt;Nähere dich allen Markierungen, um Feinde gefangen zu nehmen und den Zivilisten zu helfen.</German>
+            <Italian>Dopo aver catturato un settore c'è la possibilità che i nemici si arrendano o i civili feriti abbiano bisogno di assistenza medica.&lt;br/&gt;We've marked these for you this time. Normally you need to search the buildings for surrendering enemies and have a look on the map for small violet circles which gives a hint for wounded civilians.&lt;br/&gt;&lt;br/&gt;Avvicinati a tutti i segnalini per catturare i nemici e fornire assistenza medica ai civili.</Italian>
             <Czech>Po obsazení sektoru je šance, že nepřátelé, kteří se vzdali nebo budou zraněni civilisté, potřebují lékařskou pomoc.&lt;br/&gt; Tentokrát jsme je označili. Za normálních okolností je třeba hledat budovy pro odevzdání nepřátel a podívat se na mapě pro malé fialové kruhy, které dává náznak pro zraněné civilisty.&lt;br/&gt;&lt;br/&gt; Přistupte ke všem značkám, abyste zachytili nepřátele a poskytli lékařskou pomoc civilistům.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_04_TITLE">
             <Original>Build a storage area</Original>
             <German>Baue einen Lagerbereich</German>
+            <Italian>Creare un'area di stoccaggio</Italian>
             <Czech>Vybudujte skladovací prostor</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_04_DESC">
             <Original>You need to place down a storage area for each factory you conquer. Otherwise the factory won't be able to produce resources due to a lack of storage space.&lt;br/&gt;Use the scroll wheel action to place a storage area at the factory sector.</Original>
             <German>Für jede eroberte Fabrik muss ein Lagerbereich errichtet werden. Andernfalls wird die Fabrik, aufgrund fehlendem Lagerplatz, keine Ressourcen produzieren können.&lt;br/&gt;Benutze die entsprechende Mausrad-Aktion, um einen Lagerbereich bei der Fabrik zu errichten.</German>
+            <Italian>Devi posizionare un'area di stoccaggio per ogni fabbrica che conquisti. In caso contrario, la fabbrica non sarà in grado di produrre risorse per mancanza di spazio di archiviazione.&lt;br/&gt;Utilizzare l'azione della rotella di scorrimento per posizionare un'area di stoccaggio nel settore della fabbrica.</Italian>
             <Czech>musíte umístit úložný prostor pro každou továrnu, kterou dobýváte. V opačném případě nebude továrna schopna vyrábět zdroje z důvodu nedostatku úložného prostoru.&lt;br/&gt; Pomocí akce rolovacího kolečka umístěte úložný prostor do výrobního sektoru.</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_TITLE">
             <Original>Start the production</Original>
             <German>Starte die Produktion</German>
+            <Italian>Avvia la produzione</Italian>
             <Czech>Zahajte výrobu</Czech>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_DESC">
             <Original>Now the factory is ready to start produce resources. Use the scroll-wheel action to open the production interface and start the production in the just conquered factory.&lt;br/&gt;More detailed information about the interface can be found in our &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Original>
             <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
+            <Italian>Ora la fabbrica è pronta per iniziare a produrre risorse. Usa l'azione della rotella di scorrimento per aprire l'interfaccia di produzione e avviare la produzione nella fabbrica appena conquistata.&lt;br/&gt;Informazioni più dettagliate sull'interfaccia possono essere trovate nel nostro &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Italian>
             <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
         </Key>
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
+            <Italian>Accesso diretto all'arsenale senza KPLIB Loadout Dialog</Italian>
         </Key>
         <Key ID="STR_DEPLOY_UNDERATTACK">
             <Original>UNDER ATTACK</Original>
             <German>WIRD ANGEGRIFFEN</German>
+            <Italian>SOTTO ATTACCO</Italian>
         </Key>
     </Package>
 
@@ -7029,6 +7119,7 @@
             <Chinese>-- KP 玩家選單 --</Chinese>
             <Spanish>-- Menú de Jugador KP --</Spanish>
             <German>-- KP Spielermenü --</German>
+            <Italian>-- KP Menu Giocatore --</Italian>
             <Portuguese>-- KP Menu do Jogador --</Portuguese>
             <Czech>-- KP Player Nabídka --</Czech>
         </Key>
@@ -7037,6 +7128,7 @@
             <Chinese>KP 玩家選單</Chinese>
             <Spanish>Menú de Jugador KP</Spanish>
             <German>KP Spielermenü</German>
+            <Italian>KP Menu Giocatore</Italian>
             <Portuguese>KP Menu do Jogador</Portuguese>
             <Czech>KP Player Nabídka</Czech>
         </Key>
@@ -7045,6 +7137,7 @@
             <Chinese>玩家資訊</Chinese>
             <Spanish>Información de Jugador</Spanish>
             <German>Spielerinformationen</German>
+            <Italian>Informazioni Giocatore</Italian>
             <Portuguese>Informação do Jogador</Portuguese>
             <Czech>Informace o hráči</Czech>
         </Key>
@@ -7053,6 +7146,7 @@
             <Chinese>階級</Chinese>
             <Spanish>Rango:</Spanish>
             <German>Dienstgrad:</German>
+            <Italian>Grado:</Italian>
             <Portuguese>Rank:</Portuguese>
             <Czech>Hodnost:</Czech>
         </Key>
@@ -7061,6 +7155,7 @@
             <Chinese>得分</Chinese>
             <Spanish>Puntaje:</Spanish>
             <German>Punkte:</German>
+            <Italian>Punteggio:</Italian>
             <Portuguese>Pontuação:</Portuguese>
             <Czech>Skóre:</Czech>
         </Key>
@@ -7069,6 +7164,7 @@
             <Chinese>遊戲時間</Chinese>
             <Spanish>Tiempo de juego:</Spanish>
             <German>Spielzeit:</German>
+            <Italian>Tempo di gioco:</Italian>
             <Portuguese>Tempo de jogo:</Portuguese>
             <Czech>Čas hraní:</Czech>
         </Key>
@@ -7077,6 +7173,7 @@
             <Chinese>KP Ranks 模組未裝載</Chinese>
             <Spanish>KP Ranks mod no ha sido cargado</Spanish>
             <German>KP Ranks Mod nicht geladen</German>
+            <Italian>KP Ranks Mod non caricata</Italian>
             <Portuguese>O mod KP Ranks não está carregado</Portuguese>
             <Czech>KP Ranks mod nebyl načten</Czech>
         </Key>
@@ -7085,12 +7182,14 @@
             <Chinese>團隊管理</Chinese>
             <Spanish>Administración de grupo</Spanish>
             <German>Gruppenverwaltung</German>
+            <Italian>Gestione Gruppo</Italian>
             <Portuguese>Gerenciar Grupo</Portuguese>
             <Czech>Správa skupiny</Czech>
         </Key>
         <Key ID="STR_KPPLM_CREATE">
             <English>Create</English>
             <German>Erstellen</German>
+            <Italian>Crea</Italian>
             <Spanish>Crear</Spanish>
             <Portuguese>Criar</Portuguese>
             <Czech>Vytvořit</Czech>
@@ -7100,6 +7199,7 @@
             <Chinese>加入</Chinese>
             <Spanish>Unirse</Spanish>
             <German>Beitreten</German>
+            <Italian>Entra</Italian>
             <Portuguese>Juntar-se</Portuguese>
             <Czech>Připojit se</Czech>
         </Key>
@@ -7108,6 +7208,7 @@
             <Chinese>重新命名</Chinese>
             <Spanish>Renombrar</Spanish>
             <German>Umbenennen</German>
+            <Italian>Rinomina</Italian>
             <Portuguese>Renomear</Portuguese>
             <Czech>Přejmenovat</Czech>
         </Key>
@@ -7116,6 +7217,7 @@
             <Chinese>視距設定</Chinese>
             <Spanish>Configuración de distancia de visión</Spanish>
             <German>Sichtweiteneinstellungen</German>
+            <Italian>Visualizza settaggi distanza</Italian>
             <Portuguese>Distância de Visão</Portuguese>
             <Czech>Nastavení vzdálenosti</Czech>
         </Key>
@@ -7124,6 +7226,7 @@
             <Chinese>m 步兵視野</Chinese>
             <Spanish>m a pie</Spanish>
             <German>m zu Fuß</German>
+            <Italian>m su piedi</Italian>
             <Portuguese>m A pé</Portuguese>
             <Czech>Pěšák</Czech>
         </Key>
@@ -7132,6 +7235,7 @@
             <Chinese>m 地面載具視野</Chinese>
             <Spanish>m en vehículos de tierra</Spanish>
             <German>m in Bodenfahrzeugen</German>
+            <Italian>m nei veicoli di terra</Italian>
             <Portuguese>m em veículos terrestres</Portuguese>
             <Czech>Vozidla</Czech>
         </Key>
@@ -7140,6 +7244,7 @@
             <Chinese>m 空中載具視野</Chinese>
             <Spanish>m en vehículos de aire</Spanish>
             <German>m in Luftfahrzeugen</German>
+            <Italian>m nei veivoli</Italian>
             <Portuguese>m em veículos aéreos</Portuguese>
             <Czech>Letectvo</Czech>
         </Key>
@@ -7148,6 +7253,7 @@
             <Chinese>細項設定</Chinese>
             <Spanish>Configuración miscelanea</Spanish>
             <German>Sonstige Einstellungen</German>
+            <Italian>Settaggi Vari</Italian>
             <Portuguese>Outras Configurações</Portuguese>
             <Czech>Různé nastavení</Czech>
         </Key>
@@ -7156,6 +7262,7 @@
             <Chinese>地形細節</Chinese>
             <Spanish>Detalle de terreno:</Spanish>
             <German>Terraindetail:</German>
+            <Italian>Dettaglio terreno:</Italian>
             <Portuguese>Detalhe do terreno:</Portuguese>
             <Czech>Detail terénu:</Czech>
         </Key>
@@ -7164,6 +7271,7 @@
             <Chinese>低</Chinese>
             <Spanish>Bajo</Spanish>
             <German>Niedrig</German>
+            <Italian>Basso</Italian>
             <Portuguese>Baixo</Portuguese>
             <Czech>Nízký</Czech>
         </Key>
@@ -7172,6 +7280,7 @@
             <Chinese>標準</Chinese>
             <Spanish>Estandard</Spanish>
             <German>Standard</German>
+            <Italian>Standard</Italian>
             <Portuguese>Padrão</Portuguese>
             <Czech>Normální</Czech>
         </Key>
@@ -7180,6 +7289,7 @@
             <Chinese>高</Chinese>
             <Spanish>Alto</Spanish>
             <German>Hoch</German>
+            <Italian>Alto</Italian>
             <Portuguese>Alto</Portuguese>
             <Czech>Vysoký</Czech>
         </Key>
@@ -7188,6 +7298,7 @@
             <Chinese>非常高</Chinese>
             <Spanish>Muy alto</Spanish>
             <German>Sehr Hoch</German>
+            <Italian>Molto Alto</Italian>
             <Portuguese>Muito Alto</Portuguese>
             <Czech>Velmi vysoký</Czech>
         </Key>
@@ -7196,6 +7307,7 @@
             <Chinese>極高</Chinese>
             <Spanish>Ultra</Spanish>
             <German>Ultra</German>
+            <Italian>Ultra</Italian>
             <Portuguese>Ultra</Portuguese>
             <Czech>Ultra</Czech>
         </Key>
@@ -7204,6 +7316,7 @@
             <Chinese>自動第三人稱視角</Chinese>
             <Spanish>Cámara auto 3era persona:</Spanish>
             <German>Auto 3rd-Person-Sicht:</German>
+            <Italian>Vista in 3° persona automatica</Italian>
             <Portuguese>Câmera auto em 3º pessoa:</Portuguese>
             <Czech>Pohled z třetí osoby:</Czech>
         </Key>
@@ -7212,6 +7325,7 @@
             <Chinese>關閉</Chinese>
             <Spanish>Desabilitar</Spanish>
             <German>Deaktiviert</German>
+            <Italian>Disattivo</Italian>
             <Portuguese>Desativado</Portuguese>
             <Czech>Zakázáno</Czech>
         </Key>
@@ -7220,6 +7334,7 @@
             <Chinese>空中載具</Chinese>
             <Spanish>Vehículos de aire</Spanish>
             <German>Luftfahrzeuge</German>
+            <Italian>Veivoli</Italian>
             <Portuguese>Veículos aéreos</Portuguese>
             <Czech>Letectvo</Czech>
         </Key>
@@ -7228,6 +7343,7 @@
             <Chinese>地面載具</Chinese>
             <Spanish>Vehículos de tierra</Spanish>
             <German>Bodenfahrzeuge</German>
+            <Italian>Veicoli di terra</Italian>
             <Portuguese>Veículos terrestres</Portuguese>
             <Czech>Pozemní vozidla</Czech>
         </Key>
@@ -7236,6 +7352,7 @@
             <Chinese>所有載具</Chinese>
             <Spanish>Todos los vehículos</Spanish>
             <German>Alle Fahrzeuge</German>
+            <Italian>Tutti i veicoli</Italian>
             <Portuguese>Todos os veículos</Portuguese>
             <Czech>Všechna vozidla</Czech>
         </Key>
@@ -7244,6 +7361,7 @@
             <Chinese>關閉文字聊天：</Chinese>
             <Spanish>Deshabilitar conversaciones de radio:</Spanish>
             <German>KI Funk deaktivieren:</German>
+            <Italian>Disattiva chat radio:</Italian>
             <Portuguese>Desativar comm's de rádio:</Portuguese>
             <Czech>Zakázat rádiový chat:</Czech>
         </Key>
@@ -7252,6 +7370,7 @@
             <Chinese>否</Chinese>
             <Spanish>No</Spanish>
             <German>Nein</German>
+            <Italian>No</Italian>
             <Portuguese>Não</Portuguese>
             <Czech>Ne</Czech>
         </Key>
@@ -7260,6 +7379,7 @@
             <Chinese>只有語音通訊</Chinese>
             <Spanish>Voz</Spanish>
             <German>Stimme</German>
+            <Italian>Voce</Italian>
             <Portuguese>Voz</Portuguese>
             <Czech>hlas</Czech>
         </Key>
@@ -7268,6 +7388,7 @@
             <Chinese>語音+文字通訊</Chinese>
             <Spanish>Voz + Chat</Spanish>
             <German>Stimme + Chat</German>
+            <Italian>Voce + Chat</Italian>
             <Portuguese>Voz + Chat</Portuguese>
             <Czech>Hlas + chat</Czech>
         </Key>
@@ -7276,6 +7397,7 @@
             <Chinese>載具內音量：</Chinese>
             <Spanish>Volumen en vehículo:</Spanish>
             <German>Lautstärke im Fahrzeug:</German>
+            <Italian>Suono dentro i veicoli:</Italian>
             <Portuguese>Volume dentro do veículo:</Portuguese>
             <Czech>Hlasitost ve vozidle:</Czech>
         </Key>
@@ -7284,6 +7406,7 @@
             <Chinese>使用</Chinese>
             <Spanish>Aplicar</Spanish>
             <German>Anwenden</German>
+            <Italian>Apllica</Italian>
             <Portuguese>Aplicar</Portuguese>
             <Czech>Potvrdit</Czech>
         </Key>
@@ -7292,6 +7415,7 @@
             <Chinese>如果你有使用ACE模組，聲音設定將會被ACE的覆蓋</Chinese>
             <Spanish>Los ajustes de sonido han sido sobreescritos por ACE, si debieras usarlos.</Spanish>
             <German>Die Lautstärkeanpassung wird durch ACE überschrieben, wenn du es nutzen solltest.</German>
+            <Italian>Le impostazioni audio sono sovrascritte dalla ACE, se decidi di utilizzarla</Italian>
             <Portuguese>O ajuste de som é sobrescrito pelo ACE se você usar ele.</Portuguese>
             <Czech>Úprava zvuku je přepsána ACE, pokud ji použijete.</Czech>
         </Key>
@@ -7300,6 +7424,7 @@
             <Chinese>你不是這個團隊的隊長</Chinese>
             <Spanish>No eres el líder en el grupo.</Spanish>
             <German>Du bist nicht der Anführer dieser Gruppe.</German>
+            <Italian>Non sei il leader di questo gruppo.</Italian>
             <Portuguese>Você não é o lider desse grupo.</Portuguese>
             <Czech>Nejste vůdce této skupiny.</Czech>
         </Key>
@@ -7308,12 +7433,14 @@
             <Chinese>陞階系統關閉</Chinese>
             <Spanish>Sistema de niveles desactivado</Spanish>
             <German>Levelsystem deaktiviert</German>
+            <Italian>sistema di livellamento disabilitato</Italian>
             <Portuguese>Sistema de níveis desativado</Portuguese>
             <Czech>Vyrovnávací systém zakázán</Czech>
         </Key>
         <Key ID="STR_KPPLM_VERSION">
             <English>KP Player Menu v1.0.2\nby Wyqer</English>
             <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
+            <Italian>KP Player Menu v1.0.2\nby Wyqer</Italian>
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
         </Key>

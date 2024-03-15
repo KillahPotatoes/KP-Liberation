@@ -1,6 +1,8 @@
+scriptName "hostile_groups";
+
 private ["_kp_markers_array","_kp_markers_start","_kp_markers_change","_kp_markers_pos","_kp_markers_posx","_kp_markers_posy","_kp_markers_name","_kp_markers_color"];
 
-waitUntil {sleep 0.1; !isNil "save_is_loaded" && {save_is_loaded}};
+waitUntil {sleep 0.1; !isNil "KPLIB_saveLoaded" && {KPLIB_saveLoaded}};
 
 _kp_markers_array = [];
 _kp_markers_start = 0.2;
@@ -10,7 +12,7 @@ while {true} do {
     {deleteMarkerLocal _x;} forEach _kp_markers_array;
     _kp_markers_array = [];
     {
-        if ((side _x == GRLIB_side_enemy) && (({!captive _x} count (units _x) ) > 0) && ([(getpos leader _x), GRLIB_side_friendly, GRLIB_radiotower_size] call KPLIB_fnc_getNearestTower != "")) then {
+        if ((side _x == KPLIB_side_enemy) && (({!captive _x} count (units _x) ) > 0) && ([(getpos leader _x), KPLIB_side_player, KPLIB_range_radioTowerScan] call KPLIB_fnc_getNearestTower != "")) then {
             _kp_markers_pos = getPosATL leader _x;
             _kp_markers_posx = floor (_kp_markers_pos select 0);
             _kp_markers_posx = _kp_markers_posx - (_kp_markers_posx mod 500);

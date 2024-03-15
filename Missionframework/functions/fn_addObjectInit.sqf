@@ -2,11 +2,11 @@
     File: fn_addObjectInit.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-05-08
-    Last Update: 2020-04-29
+    Last Update: 2020-07-06
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
-        Applies code from kp_objectInits.sqf to given object. Returns true if some code was applied, false if object has no KPLIB init code.
+        Applies code from KPLIB_objectInits.sqf to given object. Returns true if some code was applied, false if object has no KPLIB init code.
 
     Parameter(s):
         _object - Object which should get init code applied, if there is any defined [OBJECT, defaults to objNull]

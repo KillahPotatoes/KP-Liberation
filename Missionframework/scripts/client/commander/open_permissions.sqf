@@ -1,4 +1,6 @@
-waitUntil {!isNil "GRLIB_permissions"};
+scriptName "open_permissions";
+
+waitUntil {!isNil "KPLIB_permissions"};
 
 private _players_array = [];
 private _uids_array = ["Default"];
@@ -11,14 +13,14 @@ color_authorized = [0,0.9,0,1];
 color_denied = [0.9,0,0,1];
 fontsize = 0.017 * safezoneH;
 
-private _modify_permissions = +GRLIB_permissions;
+private _modify_permissions = +KPLIB_permissions;
 
 disableSerialization;
 
 waitUntil { dialog };
 
 
-permission_create_activetext = compileFinal '
+permission_create_activetext = compile '
 
     params ["_idx", "_column", "_permission", "_text", "_tooltip"];
 
@@ -193,8 +195,8 @@ while {dialog && alive player} do {
     } foreach _players_array;
 
     if (save_changes == 1) then {
-        GRLIB_permissions = +_modify_permissions;
-        publicVariable "GRLIB_permissions";
+        KPLIB_permissions = +_modify_permissions;
+        publicVariable "KPLIB_permissions";
         closeDialog 0;
     };
 

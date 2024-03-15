@@ -1,5 +1,7 @@
-if ( isNil "active_sectors" ) then { active_sectors = [] };
-if ( isNil "GRLIB_all_fobs" ) then { GRLIB_all_fobs = [] };
+scriptName "cinematic_camera";
+
+if ( isNil "KPLIB_sectors_active" ) then { KPLIB_sectors_active = [] };
+if ( isNil "KPLIB_sectors_fob" ) then { KPLIB_sectors_fob = [] };
 
 cinematic_camera_started = true;
 private _last_transition = -1;
@@ -24,24 +26,24 @@ while { cinematic_camera_started } do {
         private _positions = [ getpos startbase ];
         if ( !first_camera_round ) then {
 
-            if ( count GRLIB_all_fobs > 0 ) then {
+            if ( count KPLIB_sectors_fob > 0 ) then {
                 for [ {_idx=0},{_idx < 2},{_idx=_idx+1} ] do {
-                    _positions pushback (selectRandom GRLIB_all_fobs);
+                    _positions pushback (selectRandom KPLIB_sectors_fob);
                 };
             };
 
-            if ( count active_sectors > 0 ) then {
+            if ( count KPLIB_sectors_active > 0 ) then {
                 for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-                    _positions pushback (markerPos (selectRandom active_sectors));
+                    _positions pushback (markerPos (selectRandom KPLIB_sectors_active));
                 };
             } else {
                 for [ {_idx=0},{_idx < 5},{_idx=_idx+1} ] do {
-                    _positions pushback (markerPos (selectRandom sectors_allSectors));
+                    _positions pushback (markerPos (selectRandom KPLIB_sectors_all));
                 };
             };
 
-            if ( GRLIB_endgame == 0 ) then {
-                _activeplayers = (allPlayers select {alive _x && (_x distance (markerPos GRLIB_respawn_marker)) > 100});
+            if ( KPLIB_endgame == 0 ) then {
+                _activeplayers = (allPlayers select {alive _x && (_x distance (markerPos KPLIB_respawn_marker)) > 100});
                 if ( count _activeplayers > 0 ) then {
                     for [ {_idx=0},{_idx < 3},{_idx=_idx+1} ] do {
                         _positions pushback (getpos (selectRandom _activeplayers));
@@ -256,9 +258,9 @@ while { cinematic_camera_started } do {
                     if ( _nearest_sector != "" ) then {
                         _nearest_sector = markertext _nearest_sector;
                     } else {
-                        _nearfobs = GRLIB_all_fobs select {_x distance _position < 300};
+                        _nearfobs = KPLIB_sectors_fob select {_x distance _position < 300};
                         if ( count _nearfobs > 0 ) then {
-                            _nearest_sector = format [ "FOB %1", military_alphabet select ( GRLIB_all_fobs find ( _nearfobs select 0 ) ) ];
+                            _nearest_sector = format [ "FOB %1", KPLIB_militaryAlphabet select ( KPLIB_sectors_fob find ( _nearfobs select 0 ) ) ];
                         };
                     };
                 };

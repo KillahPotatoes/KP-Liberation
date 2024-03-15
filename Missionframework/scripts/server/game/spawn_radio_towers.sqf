@@ -18,4 +18,4 @@ private _tower = objNull;
     _tower setPos (markerpos _x);
     _tower setVectorUp [0, 0, 1];
     _tower addEventHandler ["HandleDamage", {0}];
-} forEach sectors_tower;
+} forEach KPLIB_sectors_tower;

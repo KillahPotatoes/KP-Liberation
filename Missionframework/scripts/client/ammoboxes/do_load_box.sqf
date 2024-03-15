@@ -18,12 +18,12 @@ _truck_to_load = objNull;
     } foreach KPLIB_transportConfigs;
 
     if ( isNull _truck_to_load ) then {
-        _truck_load = _next_truck getVariable ["GRLIB_ammo_truck_load", 0];
+        _truck_load = _next_truck getVariable ["KPLIB_ammo_truck_load", 0];
         if (  _truck_load < _maxload ) then {
             _truck_to_load = _next_truck;
             _ammobox attachTo [ _truck_to_load, _offsets select _truck_load ];
             [_ammobox, false] remoteExec ["enableRopeAttach"];
-            _truck_to_load setVariable ["GRLIB_ammo_truck_load", _truck_load + 1, true];
+            _truck_to_load setVariable ["KPLIB_ammo_truck_load", _truck_load + 1, true];
             if ( !isDedicated ) then {
                 hint localize "STR_BOX_LOADED";
             };

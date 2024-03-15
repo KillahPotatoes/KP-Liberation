@@ -6,10 +6,10 @@ private _color = "";
 private _ticks = 0;
 private _cfg = configFile >> "cfgVehicles";
 
-if ( side player == GRLIB_side_friendly ) then {
-	_color = GRLIB_color_friendly;
+if ( side player == KPLIB_side_player ) then {
+	_color = KPLIB_color_player;
 } else {
-	_color = GRLIB_color_enemy;
+	_color = KPLIB_color_enemy;
 };
 
 while { true } do {

@@ -1,27 +1,29 @@
-waitUntil { !isNil "GRLIB_all_fobs" };
-waitUntil { !isNil "blufor_sectors" };
+scriptName "lose_sectors";
+
+waitUntil { !isNil "KPLIB_sectors_fob" };
+waitUntil { !isNil "KPLIB_sectors_player" };
 
 sleep 5;
 
 attack_in_progress = false;
 
-while { GRLIB_endgame == 0 } do {
+while { KPLIB_endgame == 0 } do {
 
     {
         _ownership = [ markerpos _x ] call KPLIB_fnc_getSectorOwnership;
-        if ( _ownership == GRLIB_side_enemy ) then {
+        if ( _ownership == KPLIB_side_enemy ) then {
             [ _x ] call attack_in_progress_sector;
         };
         sleep 0.5;
-    } foreach blufor_sectors;
+    } foreach KPLIB_sectors_player;
 
     {
         _ownership = [ _x ] call KPLIB_fnc_getSectorOwnership;
-        if ( _ownership == GRLIB_side_enemy ) then {
+        if ( _ownership == KPLIB_side_enemy ) then {
             [ _x ] call attack_in_progress_fob;
         };
         sleep 0.5;
-    } foreach GRLIB_all_fobs;
+    } foreach KPLIB_sectors_fob;
 
     sleep 1;
 

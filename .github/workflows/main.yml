@@ -12,19 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: docker://node:10-alpine
+      - uses: docker://node:20-alpine
         name: Setup Node
 
       - name: Install dependencies
-        working-directory: _tools
+        working-directory: _tools/build-tool
         run: npm install
 
       - name: Assemble and pack
-        working-directory: _tools
+        working-directory: _tools/build-tool
         run: npx gulp
 
       - uses: actions/upload-artifact@master
         with:
           name: PBO-Files
-          path: _tools/build/pbo
+          path: build/pbo
 

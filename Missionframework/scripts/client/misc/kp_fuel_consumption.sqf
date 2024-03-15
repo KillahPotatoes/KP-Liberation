@@ -1,3 +1,4 @@
+scriptName "kp_fuel_consumption";
 /*
 kp_fuel_consumption.sqf
 Author: Wyqer
@@ -19,11 +20,11 @@ player addEventHandler ["GetInMan", {[ _this select 2] execVM "scripts\kp_fuel_c
 
 //CONFIG
 // Time in Minutes till a full tank depletes when the vehicle is standing with running engine
-private _kp_neutral_consumption = KP_liberation_fuel_neutral;
+private _kp_neutral_consumption = KPLIB_fuel_neutral;
 // Time in Minutes till a full tank depletes when the vehicle is driving
-private _kp_normal_consumption = KP_liberation_fuel_normal;
+private _kp_normal_consumption = KPLIB_fuel_normal;
 // Time in Minutes till a full tank depletes when the vehicle is driving at max speed
-private _kp_max_consumption = KP_liberation_fuel_max;
+private _kp_max_consumption = KPLIB_fuel_max;
 
 /*
 DO NOT EDIT BELOW
