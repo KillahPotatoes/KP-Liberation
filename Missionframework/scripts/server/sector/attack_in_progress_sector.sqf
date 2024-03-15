@@ -50,7 +50,7 @@ if ( KPLIB_endgame == 0 ) then {
         KPLIB_sectors_player = KPLIB_sectors_player - [ _sector ];
         publicVariable "KPLIB_sectors_player";
         [_sector, 2] remoteExec ["remote_call_sector"];
-        reset_battlegroups_ai = true;
+        ["KPLIB_ResetBattleGroups"] call CBA_fnc_serverEvent;
         [] spawn KPLIB_fnc_doSave;
         stats_sectors_lost = stats_sectors_lost + 1;
         {
