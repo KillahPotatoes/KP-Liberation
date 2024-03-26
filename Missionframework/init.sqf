@@ -55,6 +55,11 @@ if (!isDedicated && hasInterface) then {
     setViewDistance 1600;
 };
 
+//Activate cratefiller on true param and active CBA
+if ((isClass (configFile >> "CfgPatches" >> "cba_main")) && KPLIB_param_cratefiller) then {
+    [] call KPLIB_fnc_cratefiller_postInit;
+};
+
 // Execute fnc_reviveInit again (by default it executes in postInit)
 if ((isNil {player getVariable "bis_revive_ehHandleHeal"} || isDedicated) && !(bis_reviveParam_mode == 0)) then {
     [] call bis_fnc_reviveInit;
