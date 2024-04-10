@@ -1,14 +1,20 @@
 {
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+
+    "files.autoSave": "onFocusChange",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": false,
+
     "sqf.enableCBA": true,
     "sqf.enableACE3": true,
     "files.associations": {
-        "*.hpp": "ext",
-        "*.h":   "ext",
-        "*.inc": "ext",
-        "*.cpp": "ext",
-        "*.ext": "ext",
-        "*.fsm": "ext"
+        "*.hpp": "cpp"
     },
+
+    "C_Cpp.errorSquiggles": "disabled",
+
     "sqflint.ignoredVariables": [
         "_input0",
         "_thisArgs",
