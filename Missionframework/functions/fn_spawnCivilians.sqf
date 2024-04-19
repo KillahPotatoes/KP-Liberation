@@ -19,6 +19,8 @@ params [
     ["_sector", "", [""]]
 ];
 
+if ( true ) exitWith { true };
+
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; []};
 
 private _civs = [];
