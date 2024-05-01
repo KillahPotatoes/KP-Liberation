@@ -27,14 +27,14 @@ opfor_sniper = "BNA_KC_CIS_Unit_Droid_B1_Sniper";                       // Snipe
 opfor_at = "BNA_KC_CIS_Unit_Droid_B1_AT";                               // AT Specialist
 opfor_aa = "BNA_KC_CIS_Unit_Droid_B1_AA";                               // AA Specialist
 opfor_medic = "BNA_KC_CIS_Unit_Droid_B1";                               // Combat Life Saver
-opfor_engineer = "BNA_KC_CIS_Unit_Droid_B1";                            // Engineer
+opfor_engineer = "BNA_KC_CIS_Unit_Droid_B1_Engineer";                   // Engineer
 opfor_paratrooper = "BNA_KC_CIS_Unit_Droid_B1_Rocket";                  // Jetpack droid
 
 // Enemy vehicles used by secondary objectives.
-opfor_mrap = "3AS_SAC_Trade";                                           // Squad Assault Craft
-opfor_mrap_armed = "3AS_SAC_Trade";                                     // Squad Assault Craft
+opfor_mrap = "3AS_SAC_F";                                               // Squad Assault Craft
+opfor_mrap_armed = "3AS_SAC_F";                                         // Squad Assault Craft
 opfor_transport_helo = "3AS_HMP_Transport";                             // HMP Gunship
-opfor_transport_truck = "442_argon_covered_cis";                        // Argon Transport (Covered)
+opfor_transport_truck = "3AS_SAC_F";                                    // Squad Assault Craft
 opfor_ammobox_transport = "442_argon_transport_cis";                    // Argon Transport (Open) -> Has to be able to transport resource crates!
 opfor_fuel_truck = "442_argon_fuel_cis";                                // Argon Fuel
 opfor_ammo_truck = "442_argon_ammo_cis";                                // Argon Ammo
@@ -48,8 +48,8 @@ Therefore, adding the same value twice or three times means they are more likely
 /* Militia infantry. Lightweight soldier classnames the game will pick from randomly as sector defenders.
 Think of them like garrison or military police forces, which are more meant to control the local population instead of fighting enemy armies. */
 militia_squad = [
-    opfor_rifleman,                                                     // Rifleman (Lite)
-    opfor_rifleman,                                                     // Rifleman (Lite)
+    opfor_rifleman,                                                     // Rifleman
+    opfor_rifleman,                                                     // Rifleman
     opfor_rifleman,                                                     // Rifleman
     opfor_rifleman,                                                     // Rifleman
     opfor_rifleman,                                                     // Rifleman (AT)
@@ -61,86 +61,85 @@ militia_squad = [
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
-    "3AS_SAC_Trade"                                                     // Squad Assault Craft
+    "3AS_SAC_F",                                                        // Squad Assault Craft
+    "lsd_ground_agtRaptor"                                              // Raptor
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (GMG)
-    "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
-    "O_LSV_02_AT_F",                                                    // Qilin (AT)
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_04_cannon_F",                                                // T-140 Angara
-    "O_MBT_04_command_F"                                                // T-140K Angara
+    "3AS_PAC_F"                                                         // Platoon Assault Craft
+    "lsd_car_ast",                                                      // Scout tank
+    "lsd_car_ast",                                                      // Scout tank
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "3AS_GAT_Light",                                                    // GAT (Light)
+    "3AS_GAT_Light",                                                    // GAT (Light)
+    "3AS_GAT",                                                          // GAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT_Heavy"                                              // Heavy AAT
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_LSV_02_AT_F",                                                    // Qilin (AT)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_APC_Tracked_02_cannon_F"                                         // BTR-K Kamysh
+    "lsd_car_ast",                                                      // Scout tank
+    "lsd_car_ast",                                                      // Scout tank
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "BNA_KC_CIS_AAT"                                                    // AAT
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
-    "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
-    "O_LSV_02_AT_F",                                                    // Qilin (AT)
-    "O_Truck_03_transport_F",                                           // Tempest Transport
-    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_04_cannon_F",                                                // T-140 Angara
-    "O_MBT_04_command_F",                                               // T-140K Angara
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
-    "O_Heli_Attack_02_dynamicLoadout_F"                                 // Mi-48 Kajman
+    "3AS_PAC_F"                                                         // Platoon Assault Craft
+    "3AS_PAC_F"                                                         // Platoon Assault Craft
+    "lsd_car_ast",                                                      // Scout tank
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "lsd_ground_agtRaptor",                                             // Raptor
+    "3AS_N99",                                                          // N99 Snail Tank
+    "3AS_N99",                                                          // N99 Snail Tank
+    "3AS_GAT",                                                          // GAT
+    "3AS_GAT",                                                          // GAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT_Heavy",                                             // Heavy AAT
+    "BNA_KC_CIS_AAT_Heavy",                                             // Heavy AAT
+    "BNA_KC_CIS_AAT_King",                                              // King AAT
+    "3AS_CIS_Vulture_CAS_F",                                            // Vulture (CAS)
+    "3AS_CIS_Vulture_CAS_F",                                            // Vulture (CAS)
+    "3AS_HMP_Gunship"                                                   // HMP Gunship
 ];
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_Truck_03_transport_F",                                           // Tempest Transport
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F"                                       // Mi-290 Taru (Bench)
+    "3AS_SAC_F",                                                        // Squad Assault Craft
+    "3AS_SAC_F",                                                        // Squad Assault Craft
+    "3AS_PAC_F",                                                        // Platoon Assault Craft
+    "3AS_N99",                                                          // N99 Snail Tank
+    "3AS_N99",                                                          // N99 Snail Tank
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "BNA_KC_CIS_AAT",                                                   // AAT
+    "3AS_CIS_Vulture_CAS_F"                                             // Vulture (CAS)
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 opfor_troup_transports = [
-    "O_Truck_03_transport_F",                                           // Tempest Transport
-    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
-    "O_Heli_Light_02_dynamicLoadout_F"                                  // Po-30 Orca (Armed)
+    "3AS_SAC_F",                                                        // Squad Assault Craft
+    "3AS_PAC_F",                                                        // Platoon Assault Craft
+    "3AS_HMP_Gunship"                                                   // HMP Gunship
 ];
 
 // Enemy rotary-wings that will need to spawn in flight.
 opfor_choppers = [
     "3AS_HMP_Transport",                                                // HMP Transport
-    "3AS_HMP_Gunship",                                                  // HMP Gunship
+    "3AS_HMP_Gunship"                                                   // HMP Gunship
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 opfor_air = [
+    "3AS_CIS_Vulture_F",                                                // Vulture
     "3AS_CIS_Vulture_CAS_F",                                            // Vulture (CAS)
-    "3AS_CIS_Vulture_F"                                                 // Vulture
+    "3AS_CIS_Vulture_AA_F"                                              // Vulture (AA)
 ];
