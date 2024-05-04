@@ -67,7 +67,7 @@ militia_vehicles = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
-    "3AS_PAC_F"                                                         // Platoon Assault Craft
+    "3AS_PAC_F",                                                        // Platoon Assault Craft
     "lsd_car_ast",                                                      // Scout tank
     "lsd_car_ast",                                                      // Scout tank
     "lsd_ground_agtRaptor",                                             // Raptor
@@ -91,8 +91,8 @@ opfor_vehicles_low_intensity = [
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
-    "3AS_PAC_F"                                                         // Platoon Assault Craft
-    "3AS_PAC_F"                                                         // Platoon Assault Craft
+    "3AS_PAC_F",                                                        // Platoon Assault Craft
+    "3AS_PAC_F",                                                        // Platoon Assault Craft
     "lsd_car_ast",                                                      // Scout tank
     "lsd_ground_agtRaptor",                                             // Raptor
     "lsd_ground_agtRaptor",                                             // Raptor
