@@ -22,7 +22,7 @@ FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This 
 FOB_truck_typename = "BNA_KC_Gammoth_Device";                           // This is the FOB as a vehicle.
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "BNA_KC_Gammoth_Medical";                      // This is the mobile respawn (and medical) truck.
-huron_typename = "3AS_Nuclass";                                         // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
+huron_typename = "BNA_KC_Rho";                                          // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "BNA_KC_Unit_Phase2_Tanker_CT";                     // This defines the crew for vehicles.
 pilot_classname = "BNA_KC_Unit_Phase2_CXA";                             // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "BNA_KC_LAATi_MK2";               // These are the little birds which spawn on the Freedom or at Chimera base.
@@ -96,12 +96,12 @@ heavy_vehicles = [
     ["BNA_KC_Juggernaut",1500,750,600],                                 // HAVw A6 Juggernaut tank
     ["BNA_KC_Reek",650,600,300],                                        // Reek
     ["BNA_KC_Hydra",700,625,300],                                       // Hydra
-    ["BNA_KC_Blitz",800,675,350]                                  // Blitz Tank
+    ["BNA_KC_Blitz",800,675,350]                                        // Blitz Tank
 ];
 
 air_vehicles = [
     ["JLTS_UAV_prowler_gar",75,0,25],                                   // Recon Drone
-    ["3AS_Nuclass",300,100,175],                                        // NU Class Shuttle
+    ["BNA_KC_Rho",300,100,175],                                         // NU Class Shuttle
     ["BNA_KC_LAATi_MK1",400,200,250],                                   // LAAT/i MK-1 (Ball turrets)
     ["BNA_KC_LAATi_MK2",300,80,175],                                    // LAAT/i MK-2 (Doors)
     ["BNA_KC_LAATc",500,0,400],                                         // LAAT/c
