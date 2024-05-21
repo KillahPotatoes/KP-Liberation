@@ -2,7 +2,7 @@
     File: fn_getLocalCap.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2019-12-05
+    Last Update: 2020-05-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -15,4 +15,4 @@
         Blufor unit cap [NUMBER]
 */
 
-(round (infantry_cap / 2)) min GRLIB_blufor_cap
+(round (infantry_cap / 2)) min KPLIB_cap_playerSide

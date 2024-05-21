@@ -1,3 +1,5 @@
+scriptName "empty_vehicles_marker";
+
 private [ "_vehmarkers", "_markedveh", "_cfg", "_vehtomark", "_supporttomark", "_marker" ];
 
 _vehmarkers = [];
@@ -6,8 +8,8 @@ _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
 _support_to_skip = [
-    KP_liberation_recycle_building,
-    KP_liberation_air_vehicle_building,
+    KPLIB_b_logiStation,
+    KPLIB_b_airControl,
     "B_Slingload_01_Repair_F",
     "B_Slingload_01_Fuel_F",
     "B_Slingload_01_Ammo_F"

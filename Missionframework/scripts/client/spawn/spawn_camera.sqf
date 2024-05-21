@@ -1,3 +1,5 @@
+scriptName "spawn_camera";
+
 private [ "_nearest_sector", "_leadingzero_hour", "_leadingzero_minute", "_startpos0", "_startpos1", "_endpos1", "_startpos2", "_endpos2", "_startpos3", "_endpos3", "_spawn_camera", "_datestring" ];
 params [ "_spawn_str" ];
 
@@ -11,7 +13,7 @@ _datestring = format [ "%3/%2/%1 %4%5:%6%7", date select 0, date select 1, date 
 
 private [ "_spawn_camera", "_startpos0", "_startpos1", "_endpos1","_startpos2","_endpos2","_startpos3","_endpos3"];
 
-if ( GRLIB_deployment_cinematic ) then {
+if ( KPLIB_param_deployCinematic ) then {
 
     camUseNVG false;
     showCinemaBorder false;
@@ -39,7 +41,7 @@ if ( GRLIB_deployment_cinematic ) then {
 
 [ format [ "<t size='0.7' align='left'>%1<br/>%2<br/>%3<br/>%4</t>", name player, _spawn_str, _datestring, _nearest_sector ],1,0.8,8,1 ] spawn BIS_fnc_dynamictext;
 
-if ( GRLIB_deployment_cinematic ) then {
+if ( KPLIB_param_deployCinematic ) then {
 
     _spawn_camera camSetRelPos _endpos1;
     _spawn_camera camcommit 1.75;

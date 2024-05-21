@@ -1,3 +1,5 @@
+scriptName "recycle_manager";
+
 private _recycleable_vehicles = [];
 private _recycleable_classnames = [];
 veh_action_detect_distance = 20;
@@ -15,15 +17,15 @@ veh_action_distance = 10;
 ];
 
 while {true} do {
-    waitUntil {sleep 2; player getVariable ['KPLIB_fobDist', 99999] < GRLIB_fob_range};
+    waitUntil {sleep 2; player getVariable ['KPLIB_fobDist', 99999] < KPLIB_range_fob};
 
     if ([4] call KPLIB_fnc_hasPermission) then {
         private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
             (((toLower (typeof _x)) in _recycleable_classnames && (({alive _x} count (crew _x)) == 0 || unitIsUAV _x) && (locked _x == 0 || locked _x == 1)) ||
-            (toLower (typeOf _x)) in KPLIB_b_buildings_classes ||
-            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KP_liberation_storage_type",-1]) == 0)) ||
+            (toLower (typeOf _x)) in KPLIB_b_deco_classes ||
+            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KPLIB_storage_type",-1]) == 0)) ||
             (toLower (typeOf _x)) in KPLIB_upgradeBuildings ||
-            (typeOf _x) in KP_liberation_ace_crates) &&
+            (typeOf _x) in KPLIB_ace_crates) &&
             alive _x &&
             (
                 // ignore null objects left by Advanced Towing
@@ -32,7 +34,7 @@ while {true} do {
                 || ((typeOf _x) == "rhsusf_mkvsoc")
             ) &&
             _x distance2d startbase > 1000 &&
-            (_x distance2d ([] call KPLIB_fnc_getNearestFob)) < GRLIB_fob_range &&
+            (_x distance2d ([] call KPLIB_fnc_getNearestFob)) < KPLIB_range_fob &&
             (getObjectType _x) >= 8
         };
 

@@ -1,3 +1,5 @@
+scriptName "add_defense_waypoints";
+
 private _grp = _this select 0;
 private _flagpos = _this select 1;
 private _basepos = getpos (leader _grp);

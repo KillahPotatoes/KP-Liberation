@@ -4,8 +4,8 @@ private _start = diag_tickTime;
 ["----- Loading save data", "SAVE"] call KPLIB_fnc_log;
 
 // Handle possible enabled "wipe save" mission parameters
-if (GRLIB_param_wipe_savegame_1 == 1 && GRLIB_param_wipe_savegame_2 == 1) then {
-    profileNamespace setVariable [GRLIB_save_key,nil];
+if (KPLIB_param_wipe_savegame_1 == 1 && KPLIB_param_wipe_savegame_2 == 1) then {
+    profileNamespace setVariable [KPLIB_save_key,nil];
     saveProfileNamespace;
     ["Save wiped via mission parameters", "SAVE"] call KPLIB_fnc_log;
 } else {
@@ -33,7 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KPLIB_classnamesToSave = [toLower FOB_typename, toLower huron_typename];
+KPLIB_classnamesToSave = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
 
 /*
     --- Locals ---
@@ -44,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [toLower FOB_typename, toLower huron_typename];
+private _noKillHandler = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -68,29 +68,29 @@ air_weight = 33;
 // Enemy weight for anti armor
 armor_weight = 33;
 // Blufor sectors
-blufor_sectors = [];
+KPLIB_sectors_player = [];
 // Enemy combat readiness (0-100)
-combat_readiness = 0;
+KPLIB_enemyReadiness = 0;
 // All FOBs
-GRLIB_all_fobs = [];
+KPLIB_sectors_fob = [];
 // Player permissions data
-GRLIB_permissions = [];
+KPLIB_permissions = [];
 // Vehicle unlock links
-GRLIB_vehicle_to_military_base_links = [];
+KPLIB_vehicle_to_military_base_links = [];
 // Enemy weight for anti infantry
 infantry_weight = 33;
 // Civilian reputation value (-100 - +100)
-KP_liberation_civ_rep = 0;
+KPLIB_civ_rep = 0;
 // Clearances
-KP_liberation_clearances = [];
+KPLIB_clearances = [];
 // Strength value of the resistance forces
-KP_liberation_guerilla_strength = 0;
+KPLIB_guerilla_strength = 0;
 // Logistic handling data
-KP_liberation_logistics = [];
+KPLIB_logistics = [];
 // Production handling data
-KP_liberation_production = [];
+KPLIB_production = [];
 // Factory markers to display the current available facilities
-KP_liberation_production_markers = [];
+KPLIB_production_markers = [];
 // Radio tower classnames per radio tower sector
 KPLIB_sectorTowers = [];
 // Sectors under attack
@@ -98,16 +98,16 @@ KPLIB_sectorsUnderAttack = [];
 // Global Intel resource
 resources_intel = 0;
 // State if the save is fully loaded
-save_is_loaded = false;
+KPLIB_saveLoaded = false;
 
 // Add all buildings for saving and kill manager ignore
-_noKillHandler append KPLIB_b_buildings_classes;
-KPLIB_classnamesToSave append KPLIB_b_buildings_classes;
+_noKillHandler append KPLIB_b_deco_classes;
+KPLIB_classnamesToSave append KPLIB_b_deco_classes;
 KPLIB_classnamesToSave append KPLIB_b_allVeh_classes;
 
 // Add opfor and civilian vehicles for saving
 KPLIB_classnamesToSave append KPLIB_o_allVeh_classes;
-KPLIB_classnamesToSave append civilian_vehicles;
+KPLIB_classnamesToSave append KPLIB_c_vehicles;
 
 // Remove duplicates
 KPLIB_classnamesToSave = KPLIB_classnamesToSave arrayIntersect KPLIB_classnamesToSave;
@@ -151,18 +151,18 @@ stats_resistance_teamkills_by_players = 0;
 stats_secondary_objectives = 0;
 stats_sectors_liberated = 0;
 stats_sectors_lost = 0;
-stats_spartan_respawns = 0;
+stats_potato_respawns = 0;
 stats_supplies_produced = 0;
 stats_supplies_spent = 0;
 stats_vehicles_recycled = 0;
 
 // Prevent saving/duplication of objects placed in Eden
 {
-    _x setVariable ["KP_liberation_edenObject", true];
+    _x setVariable ["KPLIB_edenObject", true];
 } forEach (allMissionObjects "");
 
 // Get possible save data
-private _saveData = profileNamespace getVariable GRLIB_save_key;
+private _saveData = profileNamespace getVariable KPLIB_save_key;
 
 // Load save data, when retrieved
 if (!isNil "_saveData") then {
@@ -181,17 +181,17 @@ if (!isNil "_saveData") then {
         _stats                                      = _saveData select  4;
         _weights                                    = _saveData select  5;
         _aiGroups                                   = _saveData select  6;
-        blufor_sectors                              = _saveData select  7;
-        combat_readiness                            = _saveData select  8;
-        GRLIB_all_fobs                              = _saveData select  9;
-        GRLIB_permissions                           = _saveData select 10;
-        GRLIB_vehicle_to_military_base_links        = _saveData select 11;
-        KP_liberation_civ_rep                       = _saveData select 12;
-        KP_liberation_clearances                    = _saveData select 13;
-        KP_liberation_guerilla_strength             = _saveData select 14;
-        KP_liberation_logistics                     = _saveData select 15;
-        KP_liberation_production                    = _saveData select 16;
-        KP_liberation_production_markers            = _saveData select 17;
+        KPLIB_sectors_player                        = _saveData select  7;
+        KPLIB_enemyReadiness                        = _saveData select  8;
+        KPLIB_sectors_fob                           = _saveData select  9;
+        KPLIB_permissions                           = _saveData select 10;
+        KPLIB_vehicle_to_military_base_links        = _saveData select 11;
+        KPLIB_civ_rep                               = _saveData select 12;
+        KPLIB_clearances                            = _saveData select 13;
+        KPLIB_guerilla_strength                     = _saveData select 14;
+        KPLIB_logistics                             = _saveData select 15;
+        KPLIB_production                            = _saveData select 16;
+        KPLIB_production_markers                    = _saveData select 17;
         resources_intel                             = _saveData select 18;
         _allMines                                   = _saveData param [19, []];
         _allCrates                                  = _saveData param [20, []];
@@ -232,7 +232,7 @@ if (!isNil "_saveData") then {
         stats_secondary_objectives                  = _stats select 32;
         stats_sectors_liberated                     = _stats select 33;
         stats_sectors_lost                          = _stats select 34;
-        stats_spartan_respawns                      = _stats select 35;
+        stats_potato_respawns                      = _stats select 35;
         stats_supplies_produced                     = _stats select 36;
         stats_supplies_spent                        = _stats select 37;
         stats_vehicles_recycled                     = _stats select 38;
@@ -240,23 +240,23 @@ if (!isNil "_saveData") then {
         // --- Compatibility for older save data ---
         ["Save data from version: pre 0.96.5", "SAVE"] call KPLIB_fnc_log;
 
-        blufor_sectors                              = _saveData select  0;
-        GRLIB_all_fobs                              = _saveData select  1;
+        KPLIB_sectors_player                        = _saveData select  0;
+        KPLIB_sectors_fob                           = _saveData select  1;
         _objectsToSave                              = _saveData select  2;
         _dateTime                                   = _saveData select  3;
-        combat_readiness                            = _saveData select  4;
+        KPLIB_enemyReadiness                        = _saveData select  4;
         _resourceStorages                           = _saveData select  5;
-        KP_liberation_production                    = _saveData select  6;
-        KP_liberation_logistics                     = _saveData select  7;
+        KPLIB_production                            = _saveData select  6;
+        KPLIB_logistics                             = _saveData select  7;
         _stats                                      = _saveData select  8;
         _weights                                    = _saveData select  9;
-        GRLIB_vehicle_to_military_base_links        = _saveData select 10;
-        GRLIB_permissions                           = _saveData select 11;
+        KPLIB_vehicle_to_military_base_links        = _saveData select 10;
+        KPLIB_permissions                           = _saveData select 11;
         _aiGroups                                   = _saveData select 12;
         resources_intel                             = _saveData select 13;
-        KP_liberation_civ_rep                       = _saveData select 15;
-        KP_liberation_production_markers            = _saveData select 16;
-        KP_liberation_guerilla_strength             = _saveData select 17;
+        KPLIB_civ_rep                               = _saveData select 15;
+        KPLIB_production_markers                    = _saveData select 16;
+        KPLIB_guerilla_strength                     = _saveData select 17;
 
         stats_opfor_soldiers_killed                 = _stats select  0;
         stats_opfor_killed_by_players               = _stats select  1;
@@ -271,7 +271,7 @@ if (!isNil "_saveData") then {
         stats_civilians_killed_by_players           = _stats select 10;
         stats_sectors_liberated                     = _stats select 11;
         stats_playtime                              = _stats select 12;
-        stats_spartan_respawns                      = _stats select 13;
+        stats_potato_respawns                      = _stats select 13;
         stats_secondary_objectives                  = _stats select 14;
         stats_hostile_battlegroups                  = _stats select 15;
         stats_ieds_detonated                        = _stats select 16;
@@ -292,15 +292,15 @@ if (!isNil "_saveData") then {
     air_weight = _weights select 2;
 
     // Set correct resistance standing
-    private _resistanceEnemy = [0, 1] select (KP_liberation_civ_rep < 25);
-    private _resistanceFriendly = [0, 1] select (KP_liberation_civ_rep >= -25);
+    private _resistanceEnemy = [0, 1] select (KPLIB_civ_rep < 25);
+    private _resistanceFriendly = [0, 1] select (KPLIB_civ_rep >= -25);
 
-    GRLIB_side_resistance setFriend [GRLIB_side_enemy, _resistanceEnemy];
-    GRLIB_side_enemy setFriend [GRLIB_side_resistance, _resistanceEnemy];
-    GRLIB_side_resistance setFriend [GRLIB_side_friendly, _resistanceFriendly];
-    GRLIB_side_friendly setFriend [GRLIB_side_resistance, _resistanceFriendly];
+    KPLIB_side_resistance setFriend [KPLIB_side_enemy, _resistanceEnemy];
+    KPLIB_side_enemy setFriend [KPLIB_side_resistance, _resistanceEnemy];
+    KPLIB_side_resistance setFriend [KPLIB_side_player, _resistanceFriendly];
+    KPLIB_side_player setFriend [KPLIB_side_resistance, _resistanceFriendly];
 
-    if (KP_liberation_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", GRLIB_side_resistance, GRLIB_side_enemy, (GRLIB_side_resistance getFriend GRLIB_side_enemy), GRLIB_side_friendly, (GRLIB_side_resistance getFriend GRLIB_side_friendly)], "CIVREP"] call KPLIB_fnc_log;};
+    if (KPLIB_civrep_debug > 0) then {[format ["%1 getFriend %2: %3 - %1 getFriend %4: %5", KPLIB_side_resistance, KPLIB_side_enemy, (KPLIB_side_resistance getFriend KPLIB_side_enemy), KPLIB_side_player, (KPLIB_side_resistance getFriend KPLIB_side_player)], "CIVREP"] call KPLIB_fnc_log;};
 
     // Apply current date and time
     if (_dateTime isEqualType []) then {
@@ -312,7 +312,7 @@ if (!isNil "_saveData") then {
     // Create clearances
     {
         [_x select 0, _x select 1] call KPLIB_fnc_createClearance;
-    } forEach KP_liberation_clearances;
+    } forEach KPLIB_clearances;
 
     // Collection array for all objects which are loaded
     private _spawnedObjects = [];
@@ -326,13 +326,13 @@ if (!isNil "_saveData") then {
         // This will be removed if we reach a 0.96.7 due to more released Arma 3 DLCs until we finish 0.97.0
         if !(((_saveData select 0) select 0) isEqualType 0) then {
             // Pre 0.96.5 compatibility with repair building, as it was replaced by default with a different classname
-            if ((KP_liberation_recycle_building != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
-                _class = KP_liberation_recycle_building;
+            if ((KPLIB_b_logiStation != "Land_CarService_F") && (_class == "Land_CarService_F")) then {
+                _class = KPLIB_b_logiStation;
             };
 
             // Pre 0.96.5 compatibility with air building, as it was replaced by default with a different classname
-            if ((KP_liberation_air_vehicle_building != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
-                _class = KP_liberation_air_vehicle_building;
+            if ((KPLIB_b_airControl != "Land_Radar_Small_F") && (_class == "Land_Radar_Small_F")) then {
+                _class = KPLIB_b_airControl;
             };
         };
 
@@ -356,7 +356,10 @@ if (!isNil "_saveData") then {
 
             // Apply kill manager handling, if not excluded
             if !((toLower _class) in _noKillHandler) then {
-                _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+                _object addMPEventHandler ["MPKilled", {
+                    params ["_unit", "_killer"];
+                    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+                }];
             };
 
             // Set enemy vehicle as captured
@@ -365,7 +368,7 @@ if (!isNil "_saveData") then {
             };
 
             // Set civilian vehicle as seized
-            if (_class in civilian_vehicles) then {
+            if (_class in KPLIB_c_vehicles) then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
@@ -398,7 +401,7 @@ if (!isNil "_saveData") then {
 
         // reveal mine to player side if it was detected
         if (_known) then {
-            GRLIB_side_friendly revealMine _mine;
+            KPLIB_side_player revealMine _mine;
         };
 
     } forEach _allMines;
@@ -426,7 +429,7 @@ if (!isNil "_saveData") then {
             _object allowdamage true;
 
             // Mark it as FOB storage
-            _object setVariable ["KP_liberation_storage_type", 0, true];
+            _object setVariable ["KPLIB_storage_type", 0, true];
 
             // Fill storage with saved resources
             [floor _supply, floor _ammo, floor _fuel, _object] call KPLIB_fnc_fillStorage;
@@ -444,7 +447,7 @@ if (!isNil "_saveData") then {
             _storage params ["_pos", "_dir", "_vecUp"];
 
             // Create object without damage handling and simulation
-            _object = createVehicle [KP_liberation_small_storage_building, _pos, [], 0, "CAN_COLLIDE"];
+            _object = createVehicle [KPLIB_b_smallStorage, _pos, [], 0, "CAN_COLLIDE"];
             _object enableSimulationGlobal false;
             _object allowdamage false;
 
@@ -459,12 +462,12 @@ if (!isNil "_saveData") then {
             _object allowdamage true;
 
             // Mark it as sector storage
-            _object setVariable ["KP_liberation_storage_type", 1, true];
+            _object setVariable ["KPLIB_storage_type", 1, true];
 
             // Fill storage
             [floor (_x select 9), floor (_x select 10), floor (_x select 11), _object] call KPLIB_fnc_fillStorage;
         };
-    } forEach KP_liberation_production;
+    } forEach KPLIB_production;
     ["Saved sector storages placed and filled", "SAVE"] call KPLIB_fnc_log;
 
     // Spawn BLUFOR AI groups
@@ -473,7 +476,7 @@ if (!isNil "_saveData") then {
     if (((_saveData select 0) select 0) isEqualType 0) then {
         {
             _x params ["_spawnPos", "_units"];
-            _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_player, true];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
@@ -484,7 +487,7 @@ if (!isNil "_saveData") then {
         private _dir = 0;
         private _unit = objNull;
         {
-            _grp = createGroup [GRLIB_side_friendly, true];
+            _grp = createGroup [KPLIB_side_player, true];
             {
                 _pos = [(_x select 1) select 0, (_x select 1) select 1, ((_x select 1) select 2) + 0.2];
                 _dir = _x select 2;
@@ -507,20 +510,20 @@ if (!isNil "_saveData") then {
 
 publicVariable "stats_civilian_vehicles_seized";
 publicVariable "stats_ieds_detonated";
-publicVariable "blufor_sectors";
-publicVariable "GRLIB_all_fobs";
+publicVariable "KPLIB_sectors_player";
+publicVariable "KPLIB_sectors_fob";
 publicVariable "KPLIB_sectorsUnderAttack";
-publicVariable "KP_liberation_clearances";
+publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {((_x select 0) in elite_vehicles) && ((_x select 1) in sectors_military)};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in KPLIB_b_vehToUnlock) && ((_x select 1) in KPLIB_sectors_military)};
 
 // Remove links for vehicles of possibly removed mods
-GRLIB_vehicle_to_military_base_links = GRLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
 
 // Check for additions in the locked vehicles array
-private _lockedVehCount = count GRLIB_vehicle_to_military_base_links;
-if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count elite_vehicles))) then {
+private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
+if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_b_vehToUnlock))) then {
     private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
@@ -529,45 +532,45 @@ if ((_lockedVehCount < (count sectors_military)) && (_lockedVehCount < (count el
     {
         _assignedVehicles pushBack (_x select 0);
         _assignedBases pushBack (_x select 1);
-    } forEach GRLIB_vehicle_to_military_base_links;
+    } forEach KPLIB_vehicle_to_military_base_links;
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
-    while {((count _assignedVehicles) < (count elite_vehicles)) && ((count _assignedBases) < (count sectors_military))} do {
-        _nextVehicle = selectRandom (elite_vehicles - _assignedVehicles);
-        _nextBase = selectRandom (sectors_military - _assignedBases);
+    while {((count _assignedVehicles) < (count KPLIB_b_vehToUnlock)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {
+        _nextVehicle = selectRandom (KPLIB_b_vehToUnlock - _assignedVehicles);
+        _nextBase = selectRandom (KPLIB_sectors_military - _assignedBases);
         _assignedVehicles pushBack _nextVehicle;
         _assignedBases pushBack _nextBase;
-        GRLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
+        KPLIB_vehicle_to_military_base_links pushBack [_nextVehicle, _nextBase];
     };
     ["Additional military sectors or unlockable vehicles detected and assigned", "SAVE"] call KPLIB_fnc_log;
 };
 
-publicVariable "GRLIB_vehicle_to_military_base_links";
-publicVariable "GRLIB_permissions";
-save_is_loaded = true; publicVariable "save_is_loaded";
+publicVariable "KPLIB_vehicle_to_military_base_links";
+publicVariable "KPLIB_permissions";
+KPLIB_saveLoaded = true; publicVariable "KPLIB_saveLoaded";
 
 [format ["----- Saved data loaded - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;
 
 // Start the save loop
-private _saveTime = time + KP_liberation_save_interval;
+private _saveTime = time + KPLIB_save_interval;
 while {true} do {
     waitUntil {
         sleep 0.5;
-        (time > _saveTime) || {GRLIB_endgame == 1};
+        (time > _saveTime) || {KPLIB_endgame == 1};
     };
     _start = diag_tickTime;
 
     // Exit the while and wipe save, if campaign ended
-    if (GRLIB_endgame == 1) exitWith {
-        profileNamespace setVariable [GRLIB_save_key, nil];
+    if (KPLIB_endgame == 1) exitWith {
+        profileNamespace setVariable [KPLIB_save_key, nil];
         saveProfileNamespace;
     };
 
     [] call KPLIB_fnc_doSave;
 
-    if (KP_liberation_savegame_debug > 0) then {[format ["Campaign saved - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;};
+    if (KPLIB_savegame_debug > 0) then {[format ["Campaign saved - Time needed: %1 seconds", diag_tickTime - _start], "SAVE"] call KPLIB_fnc_log;};
 
-    _saveTime = time + KP_liberation_save_interval;
+    _saveTime = time + KPLIB_save_interval;
 };
 
 ["Left saving loop", "SAVE"] call KPLIB_fnc_log;

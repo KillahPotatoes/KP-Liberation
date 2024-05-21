@@ -1,3 +1,5 @@
+scriptName "wait_to_spawn_sector";
+
 params ["_sector", "_opforcount"];
 
 private _start = diag_tickTime;
@@ -5,38 +7,38 @@ private _start = diag_tickTime;
 
 private _corrected_size = [_opforcount] call KPLIB_fnc_getSectorRange;
 sleep 0.1;
-private _unitscount = [markerPos _sector, _corrected_size , GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+private _unitscount = [markerPos _sector, _corrected_size , KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 
 if (_unitscount > 0 && _unitscount <= 10) then {
     sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [markerPos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 6) then {
     sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [markerPos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 4) then {
     sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [markerPos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 3) then {
     sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [markerPos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 2) then {
     sleep 5;
 };
 sleep 0.1;
 
-_unitscount = [markerPos _sector, _corrected_size, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount;
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount == 1) then {
     sleep 5;
 };

@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2020-08-07
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
 
 if !(isPlayer _player) exitWith {["No player given"] call BIS_fnc_error; false};
 
-if (isNil "KP_liberation_resources_global") then {KP_liberation_resources_global = false;};
+if (isNil "KPLIB_resources_global") then {KPLIB_resources_global = false;};
 
 // Tutorial
 _player addAction [
@@ -48,7 +48,7 @@ _player addAction [
     true,
     "",
     "
-        GRLIB_halo_param > 0
+        KPLIB_param_halo > 0
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
         && {
@@ -62,7 +62,7 @@ _player addAction [
 // Redeploy
 _player addAction [
     ["<t color='#80FF80'>", localize "STR_DEPLOY_ACTION", "</t><img size='2' image='res\ui_redeploy.paa'/>"] joinString "",
-    {GRLIB_force_redeploy = true;},
+    {KPLIB_force_redeploy = true;},
     nil,
     -720,
     false,
@@ -132,7 +132,7 @@ _player addAction [
     "
         isNull (objectParent _originalTarget)
         && {alive _originalTarget}
-        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {
             _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
             || {[3] call KPLIB_fnc_hasPermission}
@@ -169,7 +169,7 @@ _player addAction [
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_SECSTORAGEBUILD_ACTION", "</t>"] joinString "",
     "scripts\client\build\do_sector_build.sqf",
-    [KP_liberation_small_storage_building],
+    [KPLIB_b_smallStorage],
     -770,
     false,
     true,
@@ -259,7 +259,7 @@ _player addAction [
 // Switch global/local resources
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_RESOURCE_GLOBAL_ACTION", "</t>"] joinString "",
-    {KP_liberation_resources_global = !KP_liberation_resources_global},
+    {KPLIB_resources_global = !KPLIB_resources_global},
     nil,
     -810,
     false,
@@ -267,7 +267,7 @@ _player addAction [
     "",
     "
         alive _originalTarget
-        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {build_confirmed isEqualTo 0}
     "
 ];
@@ -285,9 +285,9 @@ _player addAction [
         _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
-        && {!(KP_liberation_production isEqualTo [])}
+        && {!(KPLIB_production isEqualTo [])}
         && {
-            _originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)
+            _originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)
             || {!(_originalTarget getVariable ['KPLIB_nearProd', []] isEqualTo [])}
         }
         && {build_confirmed isEqualTo 0}
@@ -304,14 +304,14 @@ _player addAction [
     true,
     "",
     "
-        KP_liberation_ailogistics
+        KPLIB_param_logistic
         && {_originalTarget getVariable ['KPLIB_hasDirectAccess', false]}
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
-        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {!(
-            GRLIB_all_fobs isEqualTo []
-            || KP_liberation_production isEqualTo []
+            KPLIB_sectors_fob isEqualTo []
+            || KPLIB_production isEqualTo []
         )}
         && {build_confirmed isEqualTo 0}
     "
@@ -327,7 +327,7 @@ _player addAction [
     true,
     "",
     "
-        GRLIB_permissions_param
+        KPLIB_param_permissions
         && {_originalTarget getVariable ['KPLIB_hasDirectAccess', false]}
         && {alive _originalTarget}
         && {build_confirmed isEqualTo 0}
@@ -355,7 +355,7 @@ if (player == ([] call KPLIB_fnc_getCommander)) then {
 // Create FOB clearance
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_CLEARANCE_ACTION", "</t>"] joinString "",
-    {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], GRLIB_fob_range * 0.9, true] call KPLIB_fnc_createClearanceConfirm;},
+    {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], KPLIB_range_fob * 0.9, true] call KPLIB_fnc_createClearanceConfirm;},
     nil,
     -850,
     false,
@@ -365,9 +365,38 @@ _player addAction [
         _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
-        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (GRLIB_fob_range * 0.8)}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
         && {build_confirmed isEqualTo 0}
     "
+];
+
+// Drop crate
+_player addAction [
+    ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
+    {
+        params ["_player"];
+        private _crate = _player getVariable ["KPLIB_carriedObject", objNull];
+
+        // prevent players from putting crates inside vehicles
+        private _crateSize = sizeOf typeOf _crate * 1.5;
+        private _nearObjects = (_crate nearEntities [["Man", "Air", "Car", "Tank"], _crateSize]) - [_crate, _player];
+        if (_nearObjects isNotEqualTo []) exitWith {
+            hint format [localize "STR_PLACEMENT_IMPOSSIBLE", count _nearObjects, _crateSize toFixed 0];
+        };
+
+        _player setVariable ["KPLIB_carriedObject", nil];
+        detach _crate;
+        _crate awake true;
+    },
+    nil,
+    -504,
+    true,
+    false,
+    "",
+    toString {
+        alive _originalTarget &&
+        build_confirmed == 0 && _this in _this && {!isNull (_this getVariable ["KPLIB_carriedObject", objNull])}
+    }
 ];
 
 true

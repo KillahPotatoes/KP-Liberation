@@ -1,5 +1,5 @@
 
-_defenders_amount = (15 * (sqrt (GRLIB_unitcap))) min 15;
+_defenders_amount = (15 * (sqrt (KPLIB_param_unitcap))) min 15;
 
 _spawn_marker = [2000,999999,false] call KPLIB_fnc_getOpforSpawnPoint;
 if (_spawn_marker == "") exitWith {["Could not find position for fob hunting mission", "ERROR"] call KPLIB_fnc_log;};
@@ -70,7 +70,7 @@ sleep 1;
 
 {_x setDamage 0; _x allowDamage true;} foreach (_base_objectives + _base_objects);
 
-_grpdefenders = createGroup [GRLIB_side_enemy, true];
+_grpdefenders = createGroup [KPLIB_side_enemy, true];
 _idxselected = [];
 
 while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count _defenders_to_build)} do {
@@ -91,12 +91,12 @@ while {(count _idxselected) < _defenders_amount && (count _idxselected) < (count
     [_nextDefender] spawn building_defence_ai;
 } forEach _idxselected;
 
-private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (GRLIB_unitcap)));
+private _sentryMax = ceil ((3 + (floor (random 4))) * (sqrt (KPLIB_param_unitcap)));
 
-_grpsentry = createGroup [GRLIB_side_enemy, true];
+_grpsentry = createGroup [KPLIB_side_enemy, true];
 _base_sentry_pos = [(_base_position select 0) + ((_base_corners select 0) select 0), (_base_position select 1) + ((_base_corners select 0) select 1), 0];
 for [{_idx=0}, {_idx < _sentryMax}, {_idx=_idx+1}] do {
-    [opfor_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+    [KPLIB_o_sentry, _base_sentry_pos, _grpsentry, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 };
 
 while {(count (waypoints _grpsentry)) != 0} do {deleteWaypoint ((waypoints _grpsentry) select 0);};
@@ -119,7 +119,7 @@ secondary_objective_position_marker = [(((secondary_objective_position select 0)
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 
-GRLIB_secondary_in_progress = 0; publicVariable "GRLIB_secondary_in_progress";
+KPLIB_secondary_in_progress = 0; publicVariable "KPLIB_secondary_in_progress";
 [2] remoteExec ["remote_call_intel"];
 
 waitUntil {
@@ -127,7 +127,7 @@ waitUntil {
     (_base_objectives select {alive _x}) isEqualTo []
 };
 
-combat_readiness = round (combat_readiness * GRLIB_secondary_objective_impact);
+KPLIB_enemyReadiness = round (KPLIB_enemyReadiness * (1 - KPLIB_secondary_objective_impact));
 stats_secondary_objectives = stats_secondary_objectives + 1;
 sleep 1;
 [] spawn KPLIB_fnc_doSave;
@@ -135,4 +135,4 @@ sleep 3;
 
 [3] remoteExec ["remote_call_intel"];
 
-GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress";
+KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";

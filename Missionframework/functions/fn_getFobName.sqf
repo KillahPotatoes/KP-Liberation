@@ -2,7 +2,7 @@
     File: fn_getFobName.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-04-05
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -19,4 +19,4 @@ params [
     ["_fob", [0, 0, 0], [[]], [2, 3]]
 ];
 
-military_alphabet param [GRLIB_all_fobs findIf {(_x distance2d _fob) < 100}, ""]
+KPLIB_militaryAlphabet param [KPLIB_sectors_fob findIf {(_x distance2d _fob) < 100}, ""]

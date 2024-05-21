@@ -2,7 +2,7 @@
     File: fn_createClearance.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-10
+    Last Update: 2020-05-23
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -29,7 +29,7 @@ params [
 if (_centerPos isEqualTo [0, 0, 0]) exitWith {["Zero position given"] call BIS_fnc_error; false};
 if (_radius isEqualTo 0) exitWith {["Zero radius given"] call BIS_fnc_error; false};
 
-if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo _centerPos}) != -1}) exitWith {false};
+if (KPLIB_saveLoaded && {(KPLIB_clearances findIf {(_x select 0) isEqualTo _centerPos}) != -1}) exitWith {false};
 
 {
     _x switchLight "OFF";
@@ -38,8 +38,8 @@ if (save_is_loaded && {(KP_liberation_clearances findIf {(_x select 0) isEqualTo
 } forEach (nearestTerrainObjects [_centerPos, [], _radius, false, true]);
 
 if (_save) then {
-    KP_liberation_clearances pushBackUnique [_centerPos, _radius];
-    publicVariable "KP_liberation_clearances";
+    KPLIB_clearances pushBackUnique [_centerPos, _radius];
+    publicVariable "KPLIB_clearances";
 };
 
 true

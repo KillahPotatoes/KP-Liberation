@@ -2,7 +2,7 @@
     File: fn_handlePlacedZeusObject.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-11
-    Last Update: 2020-04-25
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -32,20 +32,26 @@ if (_vehicle) then {
 
     // Add kill manager and object init to possible crew units
     {
-        _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+        _x addMPEventHandler ["MPKilled", {
+            params ["_unit", "_killer"];
+            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+        }];
         [_x] call KPLIB_fnc_addObjectInit;
     } forEach (crew _obj);
 };
 
 // Apply kill manager, if it's not a crate
 if !(_crate) then {
-    _obj addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+    _obj addMPEventHandler ["MPKilled", {
+        params ["_unit", "_killer"];
+        ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+    }];
 } else {
     // Otherwise apply all needed values/functionalities
     _obj setMass 500;
-    _obj setVariable ["KP_liberation_crate_value", 100, true];
+    _obj setVariable ["KPLIB_crate_value", 100, true];
     [_obj, true] call KPLIB_fnc_clearCargo;
-    if (KP_liberation_ace) then {[_obj, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+    if (KPLIB_ace) then {[_obj, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 };
 
 // Add object init codes

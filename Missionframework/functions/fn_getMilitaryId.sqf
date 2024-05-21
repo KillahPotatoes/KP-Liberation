@@ -2,7 +2,7 @@
     File: fn_getMilitaryId.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-09-14
-    Last Update: 2019-12-06
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,7 +23,7 @@ if (_number isEqualTo -1) exitWith {["No valid number given"] call BIS_fnc_error
 
 _number = _number + 1;
 private _return = [];
-private _alphabetCount = count military_alphabet;
+private _alphabetCount = count KPLIB_militaryAlphabet;
 private _remain = 0;
 
 while {_number > 0} do {
@@ -34,4 +34,4 @@ while {_number > 0} do {
 
 reverse _return;
 
-(_return apply {military_alphabet select _x}) joinString " "
+(_return apply {KPLIB_militaryAlphabet select _x}) joinString " "

@@ -52,7 +52,7 @@ link23[] = {20,21};
 link24[] = {21,15};
 link25[] = {22,23};
 globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-462.464111,712.458435,919.987671,76.941620,1232,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1250};
+window[] = {2,-1,-1,-1,-1,915,156,1596,156,3,1250};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -88,7 +88,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Init";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!isNil ""save_is_loaded"" && {save_is_loaded}"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""KPLIB_saveLoaded"" && {KPLIB_saveLoaded}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -146,8 +146,8 @@ class FSM
                 {
                         name = "Start_new_monitoring";
                         itemno = 6;
-                        init = /*%FSM<STATEINIT""">*/"_allSectors = sectors_allSectors - blufor_sectors;" \n
-                         "_allSectors = _allSectors - active_sectors;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_allSectors = KPLIB_sectors_all - KPLIB_sectors_player;" \n
+                         "_allSectors = _allSectors - KPLIB_sectors_active;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -182,7 +182,7 @@ class FSM
                                         to="Get_adjusted_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_opforCount = [] call KPLIB_fnc_getOpforCap;" \n
-                                         "_opforCount < GRLIB_sector_cap"/*%FSM</CONDITION""">*/;
+                                         "_opforCount < KPLIB_cap_enemySide"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -205,7 +205,7 @@ class FSM
                                         priority = 1.000000;
                                         to="Activate_sector";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"([markerPos _sector, _range, GRLIB_side_friendly] call KPLIB_fnc_getUnitsCount) > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([markerPos _sector, _range, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -239,7 +239,7 @@ class FSM
                                         priority = 2.000000;
                                         to="Exit_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"GRLIB_endgame > 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"KPLIB_endgame > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -284,12 +284,12 @@ class FSM
                          "};" \n
                          "" \n
                          "// Spawn resource crates" \n
-                         "if (_sector in sectors_factory || _sector in sectors_capture) then {" \n
+                         "if (_sector in KPLIB_sectors_factory || _sector in KPLIB_sectors_city) then {" \n
                          "    [_sector] call KPLIB_fnc_spawnSectorCrates;" \n
                          "};" \n
                          "" \n
                          "// Spawn intel items" \n
-                         "if (_sector in sectors_military) then {" \n
+                         "if (_sector in KPLIB_sectors_military) then {" \n
                          "    [_sector] call KPLIB_fnc_spawnSectorIntel;" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -318,10 +318,10 @@ class FSM
                          "    [" \n
                          "        format [" \n
                          "            ""Active sectors: %1""," \n
-                         "            if (active_sectors isEqualTo []) then {" \n
+                         "            if (KPLIB_sectors_active isEqualTo []) then {" \n
                          "                ""None""" \n
                          "            } else {" \n
-                         "                active_sectors apply {markerText _x} joinString "", """ \n
+                         "                KPLIB_sectors_active apply {markerText _x} joinString "", """ \n
                          "            }" \n
                          "        ]," \n
                          "        ""SECTORMONITOR""" \n

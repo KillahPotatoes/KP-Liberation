@@ -1,3 +1,5 @@
+scriptName "tutorial_manager";
+
 private [ "_tutorial_titles", "_tutorial_pages", "_current_page", "_old_page", "_dialog" ];
 
 if ( isNil "howtoplay" ) then { howtoplay = 0; };
