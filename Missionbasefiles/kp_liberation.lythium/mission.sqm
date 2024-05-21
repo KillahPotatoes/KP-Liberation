@@ -25,13 +25,13 @@ class EditorData
 binarizationWanted=0;
 addons[]=
 {
-	"afghan_houses_old",
-	"Wall_L",
-	"Wall_k",
-	"afghan_houses",
-	"afghan_houses_c",
-	"mil",
-	"Misc_Ramps",
+	"Jbad_afghan_houses_old",
+	"Jbad_Wall_L",
+	"Jbad_Wall_k",
+	"Jbad_afghan_houses",
+	"Jbad_afghan_houses_c",
+	"Jbad_mil",
+	"Jbad_Misc_Ramps",
 	"Jbad_Misc_Construction",
 	"A3_Structures_F_System",
 	"A3_Modules_F_Curator_Curator",
@@ -64,10 +64,10 @@ addons[]=
 	"A3_Structures_F_Ind_Tank",
 	"A3_Structures_F_Ind_WindPowerPlant",
 	"A3_Structures_F_Households_Addons",
-	"Ind_Workshop01",
-	"Ind_Conveyer",
-	"Ind_Coltan_Mine",
-	"Cargo_Cont",
+	"Jbad_Ind_Workshop01",
+	"Jbad_Ind_Conveyer",
+	"Jbad_Ind_Coltan_Mine",
+	"Jbad_Cargo_Cont",
 	"ffaa_casas_af",
 	"A3_Rocks_F_Argo_Limestone",
 	"A3_Rocks_F_Sharp",
@@ -86,9 +86,9 @@ addons[]=
 	"gbr_Bush",
 	"gbr_Veg",
 	"Jbad_Ind_SawMill",
-	"Ind_Shed",
+	"Jbad_Ind_Shed",
 	"A3_Structures_F_Ind_ReservoirTank",
-	"Wall",
+	"Jbad_Wall",
 	"A3_Structures_F_Ind_DieselPowerPlant",
 	"A3_Structures_F_Argo_Walls_Military",
 	"A3_Structures_F_Mil_Flags",
@@ -112,38 +112,38 @@ class AddonsMetaData
 		items=43;
 		class Item0
 		{
-			className="afghan_houses_old";
-			name="afghan_houses_old";
+			className="Jbad_afghan_houses_old";
+			name="Jbad_afghan_houses_old";
 		};
 		class Item1
 		{
-			className="Wall_L";
-			name="Wall_L";
+			className="Jbad_Wall_L";
+			name="Jbad_Wall_L";
 		};
 		class Item2
 		{
-			className="Wall_k";
-			name="Wall_k";
+			className="Jbad_Wall_k";
+			name="Jbad_Wall_k";
 		};
 		class Item3
 		{
-			className="afghan_houses";
-			name="afghan_houses";
+			className="Jbad_afghan_houses";
+			name="Jbad_afghan_houses";
 		};
 		class Item4
 		{
-			className="afghan_houses_c";
-			name="afghan_houses_c";
+			className="Jbad_afghan_houses_c";
+			name="Jbad_afghan_houses_c";
 		};
 		class Item5
 		{
-			className="mil";
-			name="mil";
+			className="Jbad_mil";
+			name="Jbad_mil";
 		};
 		class Item6
 		{
-			className="Misc_Ramps";
-			name="Misc_Ramps";
+			className="Jbad_Misc_Ramps";
+			name="Jbad_Misc_Ramps";
 		};
 		class Item7
 		{
@@ -234,23 +234,23 @@ class AddonsMetaData
 		};
 		class Item20
 		{
-			className="Ind_Workshop01";
-			name="Ind_Workshop01";
+			className="Jbad_Ind_Workshop01";
+			name="Jbad_Ind_Workshop01";
 		};
 		class Item21
 		{
-			className="Ind_Conveyer";
-			name="Ind_Conveyer";
+			className="Jbad_Ind_Conveyer";
+			name="Jbad_Ind_Conveyer";
 		};
 		class Item22
 		{
-			className="Ind_Coltan_Mine";
-			name="Ind_Coltan_Mine";
+			className="Jbad_Ind_Coltan_Mine";
+			name="Jbad_Ind_Coltan_Mine";
 		};
 		class Item23
 		{
-			className="Cargo_Cont";
-			name="Cargo_Cont";
+			className="Jbad_Cargo_Cont";
+			name="Jbad_Cargo_Cont";
 		};
 		class Item24
 		{
