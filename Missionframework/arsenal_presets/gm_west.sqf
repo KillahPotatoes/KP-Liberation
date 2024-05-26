@@ -2,18 +2,25 @@
     Global Mobilization West Germany Arsenal Preset
 
     Author: Dahlgren - https://github.com/Dahlgren
+		  :	Amended and Expanded by Sturmalex.
 
     Mods needed:
     - Global Mobilization
 
     Mods optional:
-    - None
+    - RHSUSAF
 */
 
 GRLIB_arsenal_weapons = [
     // G3A3 + G3A4
     "gm_g3a3_oli",
     "gm_g3a4_oli",
+	
+	//MP5s
+    "gm_mp5a2_blk",
+    "gm_mp5a3_blk",
+    "gm_mp5sd2_blk",
+    "gm_mp5sd3_blk",
 
     // MG3 7.62x51 mm
     "gm_mg3_blk",
@@ -31,36 +38,58 @@ GRLIB_arsenal_weapons = [
     "gm_pzf44_2_oli",
 
     // PzF84
-    "gm_pzf84_oli"
+    "gm_pzf84_oli",
+	
+	//FIM-43
+	"gm_fim43_oli",
+	
+	//M72 LAW
+	"gm_m72a3_oli",
+	
+	//M1911 (P51)
+	"rhsusf_weap_m1911a1",
+	
+	//Granatpistole HK69
+	"gm_hk69a1_blk"
+	
 ];
 
 GRLIB_arsenal_magazines = [
     // G3A3 + G3A4
-    "gm_20rnd_762x51mm_b_t_dm21_g3_blk",
-    "gm_20rnd_762x51mm_b_t_dm21a1_g3_blk",
-    "gm_20rnd_762x51mm_b_t_dm21a2_g3_blk",
-    "gm_20rnd_762x51mm_b_dm111_g3_blk",
-    "gm_20rnd_762x51mm_b_dm41_g3_blk",
-    "gm_20rnd_762x51mm_ap_dm151_g3_blk",
-    "gm_20rnd_762x51mm_b_t_dm21_g3_des",
-    "gm_20rnd_762x51mm_b_t_dm21a1_g3_des",
-    "gm_20rnd_762x51mm_b_t_dm21a2_g3_des",
-    "gm_20rnd_762x51mm_b_dm111_g3_des",
-    "gm_20rnd_762x51mm_b_dm41_g3_des",
-    "gm_20rnd_762x51mm_ap_dm151_g3_des",
+    "gm_20Rnd_762x51mm_B_T_DM21_g3_blk",
+    "gm_20Rnd_762x51mm_B_T_DM21A1_g3_blk",
+    "gm_20Rnd_762x51mm_B_T_DM21A2_g3_blk",
+    "gm_20Rnd_762x51mm_B_DM111_g3_blk",
+    "gm_20Rnd_762x51mm_B_DM41_g3_blk",
+    "gm_20Rnd_762x51mm_AP_DM151_g3_blk",
+    "gm_20Rnd_762x51mm_B_T_DM21_g3_des",
+    "gm_20Rnd_762x51mm_B_T_DM21A1_g3_des",
+    "gm_20Rnd_762x51mm_B_T_DM21A2_g3_des",
+    "gm_20Rnd_762x51mm_B_DM111_g3_des",
+    "gm_20Rnd_762x51mm_B_DM41_g3_des",
+    "gm_20Rnd_762x51mm_AP_DM151_g3_des",
 
     "gm_1rnd_67mm_heat_dm22a1_g3",
 
     // MG3 7.62x51 mm
-    "gm_120rnd_762x51mm_b_t_dm21_mg3_grn",
-    "gm_120rnd_762x51mm_b_t_dm21a1_mg3_grn",
-    "gm_120rnd_762x51mm_b_t_dm21a2_mg3_grn",
+    "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn",
+    "gm_120Rnd_762x51mm_B_T_DM21A1_mg3_grn",
+    "gm_120Rnd_762x51mm_B_T_DM21A2_mg3_grn",
 
     // MP2A1 9x19 mm
-    "gm_32rnd_9x19mm_b_dm51_mp2_blk",
+    "gm_32Rnd_9x19mm_B_DM51_mp2_blk",
+    "gm_32Rnd_9x19mm_B_DM11_mp2_blk",
+	
+	// MP5 9x19 mm
+	"gm_30Rnd_9x19mm_AP_DM91_mp5a3_blk",
+	"gm_30Rnd_9x19mm_AP_DM91_mp5_blk",
+	"gm_30Rnd_9x19mm_B_DM11_mp5_blk",
+	"gm_30Rnd_9x19mm_B_DM51_mp5_blk",
+	"gm_30Rnd_9x19mm_B_DM11_mp5a3_blk",
+	"gm_30Rnd_9x19mm_B_DM51_mp5a3_blk",
 
     // P1 9x19 mm
-    "gm_8rnd_9x19mm_b_dm11_p1_blk",
+    "gm_8Rnd_9x19mm_B_DM11_p1_blk",
 
     // P2A1 26.5 mm
     "gm_1Rnd_265mm_flare_single_wht_gc",
@@ -83,16 +112,32 @@ GRLIB_arsenal_magazines = [
     "gm_1Rnd_265mm_smoke_single_org_DM22",
     "gm_1Rnd_265mm_smoke_single_vlt_DM24",
     "gm_1Rnd_265mm_flare_multi_nbc_DM47",
+	
+	// Granatpistole HK69
+	"UGL_FlareWhite_F",			//Flare Weiß
+	"UGL_FlareRed_F",			//Flare Rot
+	"UGL_FlareGreen_F",			//Flare Grün
+	"1Rnd_HE_Grenade_shell",	//HE-Geschoss
+	"rhs_mag_M433_HEDP",		//HE-Dual-Purpose-Geschoss
 
     // PzF44-2
-    "gm_1rnd_44x537mm_heat_dm32_pzf44_2",
+    "gm_1Rnd_44x537mm_heat_dm32_pzf44_2",
 
     // PzF84
-    "gm_1rnd_84x245mm_heat_t_dm12_carlgustaf",
-    "gm_1rnd_84x245mm_heat_t_dm12a1_carlgustaf",
-    "gm_1rnd_84x245mm_heat_t_dm22_carlgustaf",
-    "gm_1rnd_84x245mm_heat_t_dm32_carlgustaf",
-    "gm_1rnd_84x245mm_illum_dm16_carlgustaf",
+    "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf",
+    "gm_1Rnd_84x245mm_heat_t_DM12a1_carlgustaf",
+    "gm_1Rnd_84x245mm_heat_t_DM22_carlgustaf",
+    "gm_1Rnd_84x245mm_heat_t_DM32_carlgustaf",
+    "gm_1Rnd_84x245mm_ILLUM_DM16_carlgustaf",
+	
+	//FIM-43 Redeye
+	"gm_1Rnd_70mm_he_m585_fim43",
+	
+	// M72 LAW
+	"gm_1Rnd_66mm_heat_m72a3",
+	
+	//M1911(P50/P51)
+	"rhsusf_mag_7x45acp_MHP",
 
     // Grenades
     "gm_handgrenade_frag_dm51",
@@ -104,14 +149,21 @@ GRLIB_arsenal_magazines = [
     "gm_smokeshell_yel_dm26",
     "gm_smokeshell_org_dm32",
     "gm_smokeshell_wht_dm25",
+	
+	//MILAN ATGM
+	"gm_1Rnd_milan_heat_dm82",
+	"gm_1Rnd_milan_heat_dm92",
 
     // Explosives
     "gm_explosive_petn_charge",
-    "gm_mine_at_dm21"
+    "gm_mine_ap_dm31",				//Schützenabwehrverlegemine DM31
+    "gm_mine_at_dm21"				//Panzerabwehrmine DM21 AT 
 ];
 
 GRLIB_arsenal_items = [
     // Uniforms
+    "gm_ge_army_uniform_pilot_oli",
+    "gm_ge_army_uniform_pilot_rolled_oli",
     "gm_ge_army_uniform_crew_80_oli",
     "gm_ge_army_uniform_soldier_80_oli",
     "gm_ge_army_uniform_soldier_80_ols",
@@ -128,6 +180,8 @@ GRLIB_arsenal_items = [
     "gm_ge_army_vest_80_machinegunner",
     "gm_ge_army_vest_80_medic",
     "gm_ge_army_vest_80_officer",
+    "gm_ge_army_vest_pilot_oli",
+    "gm_ge_army_vest_pilot_pads_oli",
     "gm_ge_army_vest_80_rifleman",
     "gm_ge_bgs_vest_80_rifleman",
 
@@ -147,9 +201,60 @@ GRLIB_arsenal_items = [
     "gm_ge_headgear_m62",
     "gm_ge_headgear_m62_cover_blu",
     "gm_ge_headgear_m62_net",
+	
+	// Headgear - Berets with Coms
+    "gm_ge_headgear_beret_crew_red_supply",
+    "gm_ge_headgear_beret_crew_red_signals",
+    "gm_ge_headgear_beret_crew_blk_recon",
+    "gm_ge_headgear_beret_crew_bdx_paratrooper",
+    "gm_ge_headgear_beret_crew_red_opcom",
+    "gm_ge_headgear_beret_crew_red_nbc",
+    "gm_ge_headgear_beret_crew_red_militarypolice",
+    "gm_ge_headgear_beret_crew_grn_mechinf",
+    "gm_ge_headgear_beret_crew_red_maintenance",
+    "gm_ge_headgear_beret_crew_red_engineer",
+    "gm_ge_headgear_beret_crew_red_artillery",
+    "gm_ge_headgear_beret_crew_blk_armorrecon",
+    "gm_ge_headgear_beret_crew_blk_armor",
+    "gm_ge_headgear_beret_crew_blk_antitank",
+    "gm_ge_headgear_beret_crew_red_antiair",
+	
+	// Headgear - Beret without Coms
+    "gm_ge_headgear_beret_red_geoinfo",
+    "gm_ge_headgear_beret_red_supply",
+    "gm_ge_headgear_beret_bdx_specop",
+    "gm_ge_headgear_beret_red_signals",
+    "gm_ge_headgear_beret_blk_recon",
+    "gm_ge_headgear_beret_bdx_paratrooper",
+    "gm_ge_headgear_beret_red_opcom",
+    "gm_ge_headgear_beret_red_nbc",
+    "gm_ge_headgear_beret_grn_music",
+    "gm_ge_headgear_beret_red_militarypolice",
+    "gm_ge_headgear_beret_blu_medical",
+    "gm_ge_headgear_beret_grn_mechinf",
+    "gm_ge_headgear_beret_red_maintenance",
+    "gm_ge_headgear_beret_bdx_lrrp",
+    "gm_ge_headgear_beret_grn_infantry",
+    "gm_ge_headgear_beret_grn_guardbtl",
+    "gm_ge_headgear_beret_red_engineer",
+    "gm_ge_headgear_beret_red_artillery",
+    "gm_ge_headgear_beret_bdx_armyaviation",
+    "gm_ge_headgear_beret_blk_armorrecon",
+    "gm_ge_headgear_beret_blk_armor",
+    "gm_ge_headgear_beret_blk_antitank",
+    "gm_ge_headgear_beret_red_antiair",
 
     // Facewear
     "gm_ge_facewear_m65",
+    "gm_ge_facewear_dustglasses",
+    "gm_headgear_foliage_summer_forest_01",
+    "gm_headgear_foliage_summer_forest_02",
+    "gm_headgear_foliage_summer_forest_03",
+    "gm_headgear_foliage_summer_forest_04",
+    "gm_headgear_foliage_summer_grass_01",
+    "gm_headgear_foliage_summer_grass_02",
+    "gm_headgear_foliage_summer_grass_03",
+    "gm_headgear_foliage_summer_grass_04",
 
     // Attachments
     "gm_feroz24_blk",
@@ -242,5 +347,7 @@ GRLIB_arsenal_items = [
 GRLIB_arsenal_backpacks = [
     "gm_ge_army_backpack_80_oli",
     "gm_ge_backpack_satchel_80_blk",
-    "gm_ge_backpack_satchel_80_san"
+    "gm_ge_backpack_sem35_oli",
+    "gm_backpack_t10_parachute",
+    "gm_ge_backpack_satchel_80_san",
 ];
