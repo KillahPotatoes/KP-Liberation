@@ -107,6 +107,9 @@ You can play every map without any mods (only the maps themself) if you set the 
     * Global Mobilization CDLC
 * Weferlingen Winter
     * Global Mobilization CDLC
+* Yulakia
+    * [Yulakia Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2950257727)
+    * [CUP Terrains - Core](http://steamcommunity.com/sharedfiles/filedetails/?id=583496184) 
 
 ## Recommended Mods
 These mods are recommended by us, as they are likely to increase your gaming experience:
