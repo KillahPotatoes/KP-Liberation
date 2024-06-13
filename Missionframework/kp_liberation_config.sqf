@@ -51,7 +51,9 @@ KP_liberation_medical_vehicles = [
     "uns_ch47a_medevac",
     "uns_H13_medevac_CAV",
     "uns_M577_amb",
-    "uns_uh1D_med"
+    "uns_uh1D_med",
+    "vn_b_air_uh1d_01_01",
+    "vn_b_wheeled_m54_repair_airport"
 ];
 
 // Building classnames which also function as ACE medical facilities.
@@ -60,6 +62,15 @@ KP_liberation_medical_facilities = [
     "Land_Medevac_HQ_V1_F",
     "LAND_uns_army_med",
     "LAND_uns_tent3mash",
+    "Land_vn_tent_mash_01_01",
+    "Land_vn_tent_mash_01_02",
+    "Land_vn_tent_mash_01_03",
+    "Land_vn_tent_mash_01_04",
+    "Land_vn_tent_mash_01",
+    "Land_vn_tent_mash_02_01",
+    "Land_vn_tent_mash_02_02",
+    "Land_vn_tent_mash_02_03",
+    "Land_vn_tent_mash_02_04",
     "uns_mash_main",
     "uns_mash",
     "US_Tent_2",
@@ -108,7 +119,8 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 27 = CUP Takistani Army
 28 = SFP (Woodland)
 29 = SFP (Desert)
-30 = LDF (Contact DLC) */
+30 = LDF (Contact DLC)
+31 = SOGPF */
 KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
@@ -132,7 +144,8 @@ KP_liberation_preset_blufor = 0;
 17 = CUP Armed Forces of the Russian Federation (Modern MSV)
 18 = CUP Chernarus Defense Force
 19 = CUP British Armed Forces (Desert)
-20 = CUP British Armed Forces (Woodland) */
+20 = CUP British Armed Forces (Woodland)
+21 = SOGPF */
 KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
@@ -144,7 +157,8 @@ KP_liberation_preset_opfor = 0;
 5  = Germany (Global Mobilization)
 6  = Unsung
 7  = CUP Takistani Locals
-8  = CUP National Party of Chernarus */
+8  = CUP National Party of Chernarus
+9  = SOGPF */
 KP_liberation_preset_resistance = 0;
 
 /* Civilians preset:
@@ -155,7 +169,8 @@ KP_liberation_preset_resistance = 0;
 4  = Germany (Global Mobilization)
 5  = Unsung
 6  = CUP Takistani Civilians
-7  = CUP Chernarussian Civilians */
+7  = CUP Chernarussian Civilians
+8  = SOGPF */
 KP_liberation_preset_civilians = 0;
 
 /* Which arsenal preset should be used?
@@ -175,7 +190,8 @@ KP_liberation_preset_civilians = 0;
 13 = CSAT Hex arsenal preset
 14 = CSAT Green Hex arsenal preset
 15 = AAF arsenal preset
-16 = LDF arsenal preset */
+16 = LDF arsenal preset
+17 = SOGPF arsenal preset */
 KP_liberation_arsenal = 0;
 
 /* - Fuel consumption settings.
@@ -253,7 +269,8 @@ KP_liberation_resistance_ambush_chance = 25;                            // Chanc
 // Array of worldName values.
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KP_liberation_battlegroup_clearance = [
-    "song_bin_tanh"
+    "song_bin_tanh",
+    "Cam_Lao_Nam"
 ];
 
 /* Slot independent commander action access.
@@ -707,7 +724,10 @@ KPLIB_transportConfigs = [
     ["uns_m37b1", -5, [0,-1.8,0.15]],
     ["uns_nvatruck_mg", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
     ["uns_nvatruck_open", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
-    ["uns_nvatruck", -5, [0,-1.05,0.8], [0,-2.75,0.8]]
+    ["uns_nvatruck", -5, [0,-1.05,0.8], [0,-2.75,0.8]],
+    ["vn_b_wheeled_m54_01", -5, [0,-0.8,0.18], [0,-2.5,0.18]],
+    ["vn_b_wheeled_m54_02", -5, [0,-0.8,0.18], [0,-2.5,0.18]],
+    ["vn_o_wheeled_z157_01", -5.5, [0,-1.2,0.18], [0,-2.9,0.18]]
 ];
 
 /* Various other settings.
@@ -751,7 +771,8 @@ KPLIB_aiResupplySources = [
     "sfp_tgb40_ammo",
     "uns_M113_ENG",
     "uns_M35A2_ammo",
-    "uns_motorpool1_repair"
+    "uns_motorpool1_repair",
+    "vn_b_wheeled_m54_ammo"
 ];
 
 // Everything that can resupply other vehicles.
@@ -794,7 +815,8 @@ vehicle_repair_sources = [
     "UNS_Hanger_repair",
     "uns_M113_ENG",
     "uns_M35A2_repair",
-    "uns_motorpool1_repair"
+    "uns_motorpool1_repair",
+    "vn_b_wheeled_m54_repair"
 ];
 
 vehicle_rearm_sources = [
@@ -835,7 +857,8 @@ vehicle_rearm_sources = [
     "rhsusf_M977A4_AMMO_usarmy_wd",
     "sfp_tgb40_ammo",
     "uns_M113_ENG",
-    "uns_M35A2_ammo"
+    "uns_M35A2_ammo",
+    "vn_b_wheeled_m54_ammo"
 ];
 
 vehicle_refuel_sources = [
@@ -877,7 +900,8 @@ vehicle_refuel_sources = [
     "sfp_tgb40_fuel",
     "uns_M113_ENG",
     "uns_M35A2_fuel",
-    "uns_M35A2_fueltanker"
+    "uns_M35A2_fueltanker",
+    "vn_b_wheeled_m54_fuel"
 ];
 
 // Classnames of boats, so they can be built on water.
@@ -906,7 +930,8 @@ boats_names = [
     "uns_PBR_M10",
     "uns_pbr_mk18",
     "uns_pbr",
-    "UNS_Zodiac_W"
+    "UNS_Zodiac_W",
+    "vn_b_boat_05_01"
 ];
 
 // Classnames of artillery vehicles, which should be added to the support module
@@ -1029,7 +1054,9 @@ KP_liberation_suppMod_artyVeh = [
     "uns_M2_60mm_mortar_pvp",
     "uns_M2_60mm_mortar",
     "uns_M30_107mm_mortar",
-    "uns_Type55_mortar"
+    "uns_Type55_mortar",
+    "vn_b_army_static_mortar_m2",
+    "vn_b_army_static_mortar_m29"
 ];
 
 // Objects which are spawned as intel objects for pickup

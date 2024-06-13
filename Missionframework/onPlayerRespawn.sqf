@@ -10,10 +10,14 @@ if (isNil "GRLIB_respawn_loadout") then {
     removeBackpack player;
     removeHeadgear player;
     removeGoggles player;
-    player linkItem "ItemMap";
-    player linkItem "ItemCompass";
-    player linkItem "ItemWatch";
-    player linkItem "ItemRadio";
+    if (KP_liberation_arsenal == 17) then {
+        removeUniform player;
+        player addUniform "vn_b_uniform_macv_04_01";
+        player linkItem "vn_b_item_map";
+        player linkItem "vn_b_item_compass";
+        player linkItem "vn_b_item_watch";
+        player linkItem "vn_b_item_radio_urc10";
+    };
 } else {
     sleep 4;
     [player, GRLIB_respawn_loadout] call KPLIB_fnc_setLoadout;
@@ -43,4 +47,11 @@ if ([
         [KPLIB_suppMod_req] call BIS_fnc_moduleSupportsInitRequester;
         [KPLIB_suppMod_arty] call BIS_fnc_moduleSupportsInitProvider;
     };
+};
+
+// Cam Lao Nam SOGPF traits
+if (worldName == "Cam_Lao_Nam") then {
+    player setUnitTrait ["camouflageCoef", 0.6];
+    player setUnitTrait ["audibleCoef", 0.3];
+    player setUnitTrait ["loadCoef", 0.5];
 };
