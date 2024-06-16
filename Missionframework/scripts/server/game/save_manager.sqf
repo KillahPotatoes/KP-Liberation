@@ -513,23 +513,24 @@ publicVariable "KPLIB_sectorsUnderAttack";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in KPLIB_b_vehToUnlock) && ((_x select 1) in KPLIB_sectors_military)};
-
-// Remove links for vehicles of possibly removed mods
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {
+    _x params ["_class", "_marker"];
+    // EV which shall have already been validated, class checked, cross checked with build
+    _class in KPLIB_b_vehToUnlock
+        && {_marker in KPLIB_sectors_military};
+};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
 if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_b_vehToUnlock))) then {
-    private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
     private _nextBase = "";
 
-    {
-        _assignedVehicles pushBack (_x select 0);
+    private _assignedVehicles = KPLIB_vehicle_to_military_base_links apply {
         _assignedBases pushBack (_x select 1);
-    } forEach KPLIB_vehicle_to_military_base_links;
+        (_x select 0);
+    };
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
     while {((count _assignedVehicles) < (count KPLIB_b_vehToUnlock)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {

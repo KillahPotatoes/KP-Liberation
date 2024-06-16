@@ -125,7 +125,8 @@ KPLIB_b_squadAT                 = KPLIB_b_squadAT                   select {[_x]
 KPLIB_b_squadAA                 = KPLIB_b_squadAA                   select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadRecon              = KPLIB_b_squadRecon                select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadPara               = KPLIB_b_squadPara                 select {[_x] call KPLIB_fnc_checkClass};
-KPLIB_b_vehToUnlock             = KPLIB_b_vehToUnlock               select {[_x] call KPLIB_fnc_checkClass};
+private _elite_crosscheck = (KPLIB_b_vehLight + KPLIB_b_vehHeavy + KPLIB_b_vehAir + KPLIB_b_vehStatic + KPLIB_b_vehSupport) apply {(_x#0);};
+KPLIB_b_vehToUnlock             = KPLIB_b_vehToUnlock               arrayIntersect _elite_crosscheck;
 
 // Opfor
 KPLIB_o_militiaInfantry         = KPLIB_o_militiaInfantry           select {[_x] call KPLIB_fnc_checkClass};
