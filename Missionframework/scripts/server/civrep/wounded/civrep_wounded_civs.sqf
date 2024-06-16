@@ -20,7 +20,7 @@ for "_i" from 1 to _count do {
     removeAllItems _civ;
     _civ setDamage 0.5;
     _civ call F_cr_woundedAnim;
-    if (KPLIB_ace_med) then {[_civ] remoteExec ["KPLIB_fnc_crAddAceAction"];};
+    if (KPLIB_ace_med) then {[_civ] remoteExec ["KPLIB_fnc_crAddAceAction"]; _civ setVariable ["KPLIB_isHealed", false, true];};
     _civs pushBack _civ;
     private _marker = createMarker ["wounded_marker_" + str _i, [((_pos select 0) - 20 + (random 40)),((_pos select 1) - 20 + (random 40))]];
     _marker setMarkerShape "ELLIPSE";
@@ -50,7 +50,6 @@ while {true} do {
             if (_isHealed || !alive _civx) then {
                 (_markers select _forEachIndex) setMarkerAlpha 0;
                 _healed_civs pushBack _civx;
-                removeAllActions _civx;
                 if (alive _civx) then {
                     [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
                     sleep 2;

@@ -41,8 +41,9 @@ _civ addAction [
             _caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
             sleep 8;
             _target setDamage 0;
-            [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
             _target setVariable ["KPLIB_isHealed", true, true];
+            removeAllActions _target;
+            [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";
             sleep 3;
@@ -54,7 +55,7 @@ _civ addAction [
     true,
     true,
     "",
-    "alive _originalTarget",
+    "true",
     3
 ];
 
