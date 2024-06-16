@@ -27,7 +27,6 @@ if (KPLIB_enemyReadiness > 15) then {
 
             if ((_targetsector in KPLIB_sectors_active) && !(_targetsector in KPLIB_sectors_player) && !(_nearestower in KPLIB_sectors_player) && (!([] call KPLIB_fnc_isCapitalActive) || _targetsector in KPLIB_sectors_capital)) then {
                 reinforcements_sector_under_attack = _targetsector;
-                publicVariable "reinforcements_sector_under_attack";
                 reinforcements_set = true;
                 ["lib_reinforcements",[markertext _targetsector]] remoteExec ["bis_fnc_shownotification"];
                 if ((random KPLIB_enemyReadiness) > (20 + (30 / KPLIB_param_aggressivity))) then {

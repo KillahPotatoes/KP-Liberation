@@ -2,7 +2,7 @@ if (!isServer) exitWith {};
 
 private _grp = _this select 0;
 private _waypoint = [];
-if ( isNil "reinforcements_sector_under_attack" ) then { reinforcements_sector_under_attack = ""; publicVariable "reinforcements_sector_under_attack"; };
+if ( isNil "reinforcements_sector_under_attack" ) then { reinforcements_sector_under_attack = "" };
 
 while { count (units _grp) > 0 } do {
 
