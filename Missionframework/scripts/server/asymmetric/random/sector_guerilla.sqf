@@ -51,7 +51,7 @@ private _spawnedGroups = [];
 private _grp = [_startpos] call KPLIB_fnc_spawnGuerillaGroup;
 
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-{doStop _x; _x doFollow leader group _x} foreach units _grp;
+{doStop _x; _x doFollow leader _grp} foreach units _grp;
 
 private _waypoint = _grp addWaypoint [markerpos _sector, 100];
 _waypoint setWaypointType "MOVE";

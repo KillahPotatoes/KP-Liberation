@@ -17,7 +17,7 @@ private _waypoint = [];
 while {((getPos (leader _grp)) distance _startpos) < 100} do {
 
     while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
-    {doStop _x; _x doFollow leader group _x} foreach units _grp;
+    {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
     _startpos = getPos (leader _grp);
 

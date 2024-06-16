@@ -100,7 +100,7 @@ if ( _alive_crew_count == 0 ) then {
     private _grp = createGroup [KPLIB_side_player, true];
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
     while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-    {doStop _x; _x doFollow leader group _x} foreach units _grp;
+    {doStop _x; _x doFollow leader _grp} foreach units _grp;
     { [ _x ] spawn {
         sleep 600;
         if (isNull objectParent (_this # 0)) then {deleteVehicle (_this # 0)} else {(objectParent (_this # 0)) deleteVehicleCrew (_this # 0)};

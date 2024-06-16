@@ -9,7 +9,7 @@ while { count (units _grp) > 0 } do {
     if ( reinforcements_sector_under_attack != "" ) then {
 
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-        {doStop _x; _x doFollow leader group _x} foreach units _grp;
+        {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
         _waypoint setWaypointType "MOVE";
@@ -40,7 +40,7 @@ while { count (units _grp) > 0 } do {
         } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
 
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-        {doStop _x; _x doFollow leader group _x} foreach units _grp;
+        {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         {
             if ((leader _grp) isEqualTo (vehicle leader _grp) || (vehicle leader _grp) isKindOf "Helicopter") then {

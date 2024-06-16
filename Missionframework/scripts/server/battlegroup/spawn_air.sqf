@@ -27,7 +27,7 @@ for "_i" from 1 to _planes_number do {
 
 while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
 sleep 1;
-{doStop _x; _x doFollow leader group _x} forEach (units _grp);
+{_x doFollow leader _grp} forEach units _grp;
 sleep 1;
 
 private _waypoint = _grp addWaypoint [_first_objective, 500];

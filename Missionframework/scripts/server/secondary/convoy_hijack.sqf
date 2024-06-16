@@ -57,7 +57,7 @@ _convoy_group setCombatMode "GREEN";
 _convoy_group setSpeedMode "LIMITED";
 
 while {(count (waypoints _convoy_group)) != 0} do {deleteWaypoint ((waypoints _convoy_group) select 0);};
-{doStop _x; _x doFollow leader group _x} foreach units _convoy_group;
+{doStop _x; _x doFollow leader _convoy_group} foreach units _convoy_group;
 
 _waypoint = _convoy_group addWaypoint [_convoy_destinations select 1, 0];
 _waypoint setWaypointType "MOVE";
