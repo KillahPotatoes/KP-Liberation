@@ -6,8 +6,20 @@ if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Para
 
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
-private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", player];
-
+private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", objNull];
+if (_CapturedPlayer == objNull) then {
+	private _players = allPlayers;
+	private _nearestPlayer = objNull;
+	private _minDistance = 100;
+	{
+		private _distance = _informant distance _x;
+		if (_distance < _minDistance) then {
+			_minDistance = _distance;
+			_nearestPlayer = _x;
+		};
+	} forEach _players;
+	_CapturedPlayer = _nearestPlayer;
+};
 [[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
