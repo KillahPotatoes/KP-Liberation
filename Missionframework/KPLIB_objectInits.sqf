@@ -99,8 +99,6 @@ KPLIB_objectInits = [
     [
         [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel],
         {
-        _this lockInventory true;
-        _this setVariable ["ace_cargo_noRename", true];
             _this lockInventory true;
             _this setVariable ["ace_cargo_noRename", true];
         }
