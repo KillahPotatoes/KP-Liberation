@@ -419,7 +419,7 @@ _player addAction [
         && KPLIB_medical_facilities_near
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
-        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.5)}
         && {build_confirmed isEqualTo 0}
     "
 ];

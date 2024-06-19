@@ -503,6 +503,10 @@
             <Original>-- FULL HEAL --</Original>
             <Japanese>-- 完全治療 --</Japanese>
         </Key>
+        <Key ID="STR_HEAL_ENEMIES_NEARBY">
+            <Original>Cannot heal: hostile forces nearby.</Original>
+            <Japanese>治療不可: 敵軍が近くにいます。</Japanese>
+        </Key>
         <Key ID="STR_FULLHEAL_DONE">
             <Original>You have fully healed injuries</Original>
             <Japanese>負傷が完全に治療されました</Japanese>
@@ -510,6 +514,10 @@
         <Key ID="STR_FULLHEAL_APPLY">
             <Original>You have been fully healed\nby %1</Original>
             <Japanese>%1 によって\n完全に治療されました</Japanese>
+        </Key>
+        <Key ID="STR_FULLHEAL_COOLDOWN">
+            <Original>Full Heal still on cooldown</Original>
+            <Japanese>完全治療はクールタイム中です</Japanese>
         </Key>
         <Key ID="STR_FOB_ACTION">
             <Original>-- DEPLOY FOB --</Original>

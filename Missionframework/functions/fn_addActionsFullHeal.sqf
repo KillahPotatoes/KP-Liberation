@@ -26,7 +26,7 @@ _obj addAction [
     ["<t color='#80FF80'>", localize "STR_FULLHEAL_ACTION", "</t> <img size='2' image='res\ui_fullheal.paa'/>"] joinString "",
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-        [getpos _target, KPLIB_range_fob * 0.5, _caller] call KPLIB_fnc_fullheal;
+        [getpos _target, KPLIB_range_fob * 0.25, _caller] call KPLIB_fnc_fullheal;
     },
     nil,
     -690,
