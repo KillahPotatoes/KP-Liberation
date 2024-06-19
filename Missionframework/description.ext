@@ -264,6 +264,8 @@ class ACEX_Fortify_Presets {
             {"Land_Razorwire_F", 10},
             {"RoadBarrier_F", 1},
             {"RoadCone_F", 1}
+			{"Land_Campfire_F", 1},
+			{"CamoNet_wdl_open_F", 30},
         };
     };
 };
