@@ -12,9 +12,9 @@ if (isNil "_current_camo") exitWith {VAM_camo_check_complete = true;};
 
 //Check current applied camouflage
 {
-	if (_current_camo isEqualTo _x) then {
-		_list_camo lbSetCurSel _forEachIndex;
-	};
+    if (_current_camo isEqualTo _x) then {
+        _list_camo lbSetCurSel _forEachIndex;
+    };
 } forEach camo_class_names;
 
 VAM_camo_check_complete = true;

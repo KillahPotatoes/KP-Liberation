@@ -13,8 +13,8 @@ _comp_array set [_list_selection, _comp_change];
 
 private _comp_array_total = [];
 {
-	_comp_array_total pushBack (comp_class_names select _forEachIndex);
-	_comp_array_total pushBack (_comp_array select _forEachIndex);
+    _comp_array_total pushBack (comp_class_names select _forEachIndex);
+    _comp_array_total pushBack (_comp_array select _forEachIndex);
 } forEach comp_class_names;
 [VAM_targetvehicle,nil,_comp_array_total,nil] call BIS_fnc_initVehicle;
 

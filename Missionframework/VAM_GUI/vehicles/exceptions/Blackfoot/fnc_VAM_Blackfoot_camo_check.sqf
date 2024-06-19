@@ -8,9 +8,9 @@ private _check = getObjectTextures VAM_targetvehicle select 0;
 
 //Check current applied camouflage
 {
-	if (_check isEqualTo _x) then {
-		_list_camo lbSetCurSel _forEachIndex;
-	};
+    if (_check isEqualTo _x) then {
+        _list_camo lbSetCurSel _forEachIndex;
+    };
 } forEach camo_class_names;
 
 VAM_camo_check_complete = true;

@@ -16,10 +16,10 @@ _obj addAction [
         if !(daytime < 16 && daytime > 8) then {
             [9] remoteExecCall ["BIS_fnc_paramdaytime", 2];
             [240, 0] remoteExecCall ["setFog", 2];
-			["Good morning."] remoteExec ["hint",0];
+            ["Good morning."] remoteExec ["hint",0];
         } else {
             ["It's still too early to sleep, but the fog seems to improve."] remoteExec ["hint",0];
-			[240, 0] remoteExecCall ["setFog", 2];
+            [240, 0] remoteExecCall ["setFog", 2];
         }
     },
     nil,

@@ -14,14 +14,14 @@ VAM_repair_vehicle_list = [
 
 //Exception for bug fix and additional cosmetic change. Check out fnc_VAM_GUI_check.sqf.
 VAM_exceptions = [
-	"I_APC_Wheeled_03_cannon_F","B_APC_Wheeled_03_cannon_F",
-	"I_LT_01_AT_F","I_LT_01_scout_F","I_LT_01_AA_F","I_LT_01_cannon_F",
-	"O_APC_Wheeled_02_rcws_F","O_T_APC_Wheeled_02_rcws_ghex_F",
-	"O_APC_Wheeled_02_rcws_v2_F","O_T_APC_Wheeled_02_rcws_v2_ghex_F",
-	"B_Heli_Light_01_dynamicLoadout_F","B_Heli_Light_01_armed_F","B_Heli_Light_01_F",
-	"B_Heli_Attack_01_dynamicLoadout_F","B_Heli_Attack_01_F",
-	"O_Heli_Light_02_dynamicLoadout_F","O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F","O_Heli_Light_02_v2_F",
-	"B_UGV_01_rcws_F","B_T_UGV_01_rcws_olive_F","O_UGV_01_rcws_F","O_T_UGV_01_rcws_ghex_F","I_UGV_01_rcws_F"
+    "I_APC_Wheeled_03_cannon_F","B_APC_Wheeled_03_cannon_F",
+    "I_LT_01_AT_F","I_LT_01_scout_F","I_LT_01_AA_F","I_LT_01_cannon_F",
+    "O_APC_Wheeled_02_rcws_F","O_T_APC_Wheeled_02_rcws_ghex_F",
+    "O_APC_Wheeled_02_rcws_v2_F","O_T_APC_Wheeled_02_rcws_v2_ghex_F",
+    "B_Heli_Light_01_dynamicLoadout_F","B_Heli_Light_01_armed_F","B_Heli_Light_01_F",
+    "B_Heli_Attack_01_dynamicLoadout_F","B_Heli_Attack_01_F",
+    "O_Heli_Light_02_dynamicLoadout_F","O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F","O_Heli_Light_02_v2_F",
+    "B_UGV_01_rcws_F","B_T_UGV_01_rcws_olive_F","O_UGV_01_rcws_F","O_T_UGV_01_rcws_ghex_F","I_UGV_01_rcws_F"
 ];
 
 //Function preload

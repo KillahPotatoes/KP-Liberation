@@ -13,17 +13,17 @@ private _texture = "a3\air_f\heli_light_02\data\heli_light_02_ext_indp_co.paa";
 
 //Check current applied camouflage
 if (_check isEqualTo _texture) exitWith {
-	{
-		if (localize "STR_VAM_AAF_CAMO" isEqualTo _x) then {
-			_list_camo lbSetCurSel _forEachIndex;
-		};
-	} forEach camo_class_names;
-	VAM_camo_check_complete = true;
+    {
+        if (localize "STR_VAM_AAF_CAMO" isEqualTo _x) then {
+            _list_camo lbSetCurSel _forEachIndex;
+        };
+    } forEach camo_class_names;
+    VAM_camo_check_complete = true;
 };
 {
-	if (_current_camo isEqualTo _x) then {
-		_list_camo lbSetCurSel _forEachIndex;
-	};
+    if (_current_camo isEqualTo _x) then {
+        _list_camo lbSetCurSel _forEachIndex;
+    };
 } forEach camo_class_names;
 
 VAM_camo_check_complete = true;

@@ -13,20 +13,20 @@ private _camo_path = "true" configClasses (configfile >> "CfgVehicles" >> _vehic
 camo_class_names = [];
 camo_display_names = [];
 private _textures_names = [
-	"STR_VAM_GREEN_CAMO",
-	"STR_VAM_BLACK_CAMO",
-	"STR_VAM_AAF_CAMO"
+    "STR_VAM_GREEN_CAMO",
+    "STR_VAM_BLACK_CAMO",
+    "STR_VAM_AAF_CAMO"
 ];
 private _textures = [
-	"a3\air_f\heli_light_01\data\heli_light_01_ext_blufor_co.paa",
-	"a3\air_f\heli_light_01\data\heli_light_01_ext_ion_co.paa",
-	"a3\air_f\heli_light_01\data\heli_light_01_ext_indp_co.paa"
+    "a3\air_f\heli_light_01\data\heli_light_01_ext_blufor_co.paa",
+    "a3\air_f\heli_light_01\data\heli_light_01_ext_ion_co.paa",
+    "a3\air_f\heli_light_01\data\heli_light_01_ext_indp_co.paa"
 ];
 {
-	camo_class_names pushBack _x;
+    camo_class_names pushBack _x;
 } forEach _textures;
 {
-	camo_display_names pushBack (localize _x);
+    camo_display_names pushBack (localize _x);
 } forEach _textures_names;
 
 //Get all components(animations)
@@ -34,28 +34,28 @@ private _getvc = [VAM_targetvehicle] call BIS_fnc_getVehicleCustomization;
 private _check_comp = _getvc select 1;
 comp_class_names = [];
 {
-	if (_x isEqualType "STRING") then {
-		comp_class_names pushBack (_check_comp select _forEachIndex);
-	};
+    if (_x isEqualType "STRING") then {
+        comp_class_names pushBack (_check_comp select _forEachIndex);
+    };
 } forEach _check_comp;
 comp_display_names = [];
 {_name = getText (configfile >> "CfgVehicles" >> _vehicleclass >> "AnimationSources" >> _x >> "DisplayName"); comp_display_names pushBack _name;} forEach comp_class_names;
 {
-	if (_x isEqualTo "") then {
-		comp_display_names set [_forEachIndex, comp_class_names select _forEachIndex];
-	};
+    if (_x isEqualTo "") then {
+        comp_display_names set [_forEachIndex, comp_class_names select _forEachIndex];
+    };
 } forEach comp_display_names;
 
 //Put camouflages and components in list
 if (camo_class_names isEqualTo []) then {
-	_list_camo lbAdd localize "STR_VAM_NO_CAMOUFLAGE";
+    _list_camo lbAdd localize "STR_VAM_NO_CAMOUFLAGE";
 } else {
-	{_list_camo lbAdd _x} forEach camo_display_names;
+    {_list_camo lbAdd _x} forEach camo_display_names;
 };
 if (comp_class_names isEqualTo []) then {
-	_list_comp lbAdd localize "STR_VAM_NO_COMPONENT";
+    _list_comp lbAdd localize "STR_VAM_NO_COMPONENT";
 } else {
-	{_list_comp lbAdd _x} forEach comp_display_names;
+    {_list_comp lbAdd _x} forEach comp_display_names;
 };
 
 //Spawn check functions
@@ -64,21 +64,21 @@ VAM_comp_check_complete = true;
 VAM_check_fnc_delay = false;
 
 if !(camo_class_names isEqualTo []) then {
-	[] spawn fnc_VAM_HBPN_camo_check;
-	VAM_camo_check_complete = false;
+    [] spawn fnc_VAM_HBPN_camo_check;
+    VAM_camo_check_complete = false;
 };
 if !(comp_class_names isEqualTo []) then {
-	[] spawn fnc_VAM_common_comp_check;
-	VAM_comp_check_complete = false;
+    [] spawn fnc_VAM_common_comp_check;
+    VAM_comp_check_complete = false;
 };
 waitUntil {uisleep 0.1; VAM_camo_check_complete && VAM_comp_check_complete};
 
 //Add UIEH
 if !(camo_class_names isEqualTo []) then {
-	_list_camo ctrlAddEventHandler ["LBSelChanged", {[] spawn fnc_VAM_HBPN_camo;}];
+    _list_camo ctrlAddEventHandler ["LBSelChanged", {[] spawn fnc_VAM_HBPN_camo;}];
 };
 if !(comp_class_names isEqualTo []) then {
-	_list_comp ctrlAddEventHandler ["LBSelChanged", {[] spawn fnc_VAM_common_comp;}];
+    _list_comp ctrlAddEventHandler ["LBSelChanged", {[] spawn fnc_VAM_common_comp;}];
 };
 _reset ctrlAddEventHandler ["ButtonClick", {VAM_check_fnc_delay = true; [] spawn fnc_VAM_HBPN_camo_check; [] spawn fnc_VAM_common_comp_check;}];
 _confirm ctrlAddEventHandler ["ButtonClick", {[] spawn fnc_VAM_variable_cleaner;}];

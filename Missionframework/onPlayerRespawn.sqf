@@ -21,7 +21,7 @@ if (isNil "KPLIB_respawn_loadout") then {
     player linkItem "ItemCompass";
     player linkItem "ItemWatch";
     //player unlinkItem "ItemRadio";
-	//player unlinkItem "ItemGPS";
+    //player unlinkItem "ItemGPS";
 } else {
     sleep 4;
     [player, KPLIB_respawn_loadout] call KPLIB_fnc_setLoadout;
