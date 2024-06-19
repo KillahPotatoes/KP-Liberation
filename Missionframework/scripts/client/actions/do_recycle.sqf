@@ -7,9 +7,9 @@ dorecycle = 0;
 
 private _type = typeOf _vehToRecycle;
 private _cfg = configFile >> "cfgVehicles";
-private _suppMulti = 0.5;
-private _ammoMulti = 0.5;
-private _fuelMulti = 0.5;
+private _suppMulti = 0.75;
+private _ammoMulti = 0.75;
+private _fuelMulti = 0.75;
 
 if !(
     ((toLowerANSI _type) in KPLIB_b_deco_classes) ||

@@ -103,7 +103,7 @@ while {!_ammo_present} do {
 };
 hintSilent "Secondary Objective Completed!";
 
-KPLIB_enemyReadiness = round (KPLIB_enemyReadiness * 0.90);
+KPLIB_enemyReadiness = round (KPLIB_enemyReadiness - 8);
 [16] remoteExec ["remote_call_intel"];
 stats_secondary_objectives = stats_secondary_objectives + 1;
 KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";
