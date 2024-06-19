@@ -6,13 +6,10 @@ waitUntil {
     local _unit
 };
 
+if ( typeof _unit == KPLIB_b_heliPilotUnit ) exitWith {};
+
 _is_near_fob = false;
 _is_near_blufor = true;
-
-sleep 2;
-[_unit, ""] remoteExecCall ["switchMove"];
-
-if ( typeof _unit == KPLIB_b_heliPilotUnit ) exitWith {};
 
 waitUntil { sleep 5;
 
@@ -26,7 +23,7 @@ waitUntil { sleep 5;
     _is_near_blufor = false;
     if ( !_is_near_blufor ) then {
         {
-            if ((_x distance _unit) < 100) exitWith { _is_near_blufor = true };
+            if (((_x distance _unit) < 100) || (_unit getVariable ["ace_captives_isHandcuffed", false])) exitWith { _is_near_blufor = true };
         } forEach (allUnits select {!((toLowerANSI (typeof _x)) in KPLIB_o_inf_classes || (typeof _x) in KPLIB_o_militiaInfantry)});
     };
 
@@ -40,6 +37,15 @@ if (alive _unit) then {
         sleep 5;
         _grp = createGroup [KPLIB_side_civilian, true];
         [_unit] joinSilent _grp;
+        if (KPLIB_ace) then {
+            private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+            if (_isCuffed) then {
+                ["ace_captives_setHandcuffed", [_unit, false], _unit] call CBA_fnc_targetEvent;
+            } else {
+                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+            };
+            sleep 1;
+        };
         _unit playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
         _unit disableAI "ANIM";
         _unit disableAI "MOVE";
@@ -70,12 +76,12 @@ if (alive _unit) then {
         if ( count _possible_sectors > 0 ) then {
 
             _possible_sectors = [ _possible_sectors , [getpos _unit, 5000] , { (markerPos _x) distance _input0 } , 'ASCEND' ] call BIS_fnc_sortBy;
-            if ( count _possible_sectors > 0 ) then {
-                _target_sector = _possible_sectors select 0;
-                _waypoint = _grp addWaypoint [markerpos _target_sector, 300];
-                _waypoint setWaypointType "MOVE";
-                _waypoint setWaypointSpeed "FULL";
-            };
+            _target_sector = _possible_sectors select 0;
+            _waypoint = _grp addWaypoint [markerpos _target_sector, 300];
+        } else {
+            _waypoint = _grp addWaypoint [100000, 100000, 300];
         };
+        _waypoint setWaypointType "MOVE";
+        _waypoint setWaypointSpeed "FULL";
     };
 };
