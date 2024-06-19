@@ -13,7 +13,7 @@ while {true} do {
         _near_intel = player nearEntities [KPLIB_intelObjectClasses, 5];
         {
             if (!(_x in _actionned_captive_units) && !(_x getVariable ["ACE_isUnconscious", false]) && !(_x getVariable ["KPLIB_prisonner_captured", false]) && (_x getVariable ["KPLIB_prisonner_surrendered", false])) then {
-                _x addAction ["<t color='#FFFF00'>" + localize "STR_SECONDARY_CAPTURE" + "</t>",{(_this # 0) setVariable ["KPLIB_prisonner_captured", true, true];(_this # 0) setVariable ["KPLIB_prisonner_whois", _this # 1, true];},"",-850,true,true,"","!(_x getVariable ["ace_captives_isHandcuffed", false];) && !(_x getVariable ["KPLIB_prisonner_captured", false];) && (vehicle player == player) && (side group _target != KPLIB_side_player) && (captive _target)"];
+                _x addAction ["<t color='#FFFF00'>" + localize "STR_SECONDARY_CAPTURE" + "</t>",{(_this # 0) setVariable ["KPLIB_prisonner_captured", true, true];(_this # 0) setVariable ["KPLIB_prisonner_whois", _this # 1, true];},"",-850,true,true,"","!(_x getVariable ['ace_captives_isHandcuffed', false]) && !(_x getVariable ['KPLIB_prisonner_captured', false]) && (vehicle player == player) && (side group _target != KPLIB_side_player) && (captive _target)"];
                 _actionned_captive_units pushback _x;
             };
         } forEach _near_people;
