@@ -3,6 +3,7 @@ class KPLIB {
         file = "functions";
 
         class addActionsFob             {};
+        class addActionsFullHeal        {};
         class addActionsPlayer          {};
         class addArtyToSupport          {};
         class addObjectInit             {};

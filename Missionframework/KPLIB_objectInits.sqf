@@ -24,6 +24,17 @@
 */
 
 KPLIB_objectInits = [
+	// add fullheal action to huron medical container (mobile fullHeal)
+    [
+        ["B_Slingload_01_Medevac_F"],
+        {
+            [_this] spawn {
+                params ["_medvacbox"];
+                waitUntil {sleep 0.1; time > 0};
+                [_medvacbox] remoteExecCall ["KPLIB_fnc_addActionsFullHeal", 0, _medvacbox];
+            };
+        }
+    ],
     // Set KP logo on white flag
     [
         ["Flag_White_F"],
