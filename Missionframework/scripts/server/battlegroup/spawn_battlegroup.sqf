@@ -6,7 +6,7 @@ params [
 
 if (KPLIB_endgame == 1) exitWith {};
 
-_spawn_marker = [[2000, 1000] select _infOnly, 3000, false, markerPos _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
+_spawn_marker = [[1000, 800] select _infOnly, [2200, 1600] select _infOnly, false, markerPos _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
 
 if !(_spawn_marker isEqualTo "") then {
     KPLIB_last_battlegroup_time = diag_tickTime;
@@ -28,20 +28,18 @@ if !(_spawn_marker isEqualTo "") then {
 
         // Adjust target size for infantry
         _target_size = 12 max (_target_size * 4);
+        private _squadNumber = round (_target_size/8);
 
+        for "_i" from 1 to _squadNumber do {
         // Create infantry groups with up to 8 units per squad
-        private _grp = createGroup [KPLIB_side_enemy, true];
-        for "_i" from 0 to (_target_size - 1) do {
-            if (_i > 0 && {(_i % 8) isEqualTo 0}) then {
-                _bg_groups pushBack _grp;
-                _grp = createGroup [KPLIB_side_enemy, true];
-            };
+        private _grp = createGroup [kplib_side_enemy, true];
+        for "_i" from 0 to 7 do {
             [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
         };
-        _bg_groups pushBack _grp;
-        {
-            [_x] spawn battlegroup_ai;
-        } forEach _bg_groups;
+        [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
+        [_grp] call battlegroup_ai;
+        _grp setVariable ["KPLIB_isBattleGroup",true];
+        };
     } else {
         private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 50);
 
@@ -57,8 +55,8 @@ if !(_spawn_marker isEqualTo "") then {
             sleep 0.5;
 
             (crew _vehicle) joinSilent _nextgrp;
-            [_nextgrp] spawn battlegroup_ai;
-            _bg_groups pushback _nextgrp;
+            [_nextgrp] call battlegroup_ai;
+            _nextgrp setVariable ["KPLIB_isBattleGroup",true];
 
             if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup)) then {
                 if (_vehicle isKindOf "Air") then {
