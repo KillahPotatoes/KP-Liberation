@@ -8171,5 +8171,94 @@
             <Original>KP Player Menu v1.0.2\nby Wyqer</Original>
             <Japanese>KP プレイヤー メニュー v1.0.2\nby Wyqer</Japanese>
         </Key>
+<!-- VAM LINE START -->
+<!-- Function/기능부 -->
+			<Key ID="STR_VAM_INITIALIZED">
+				<Original>Vehicle Appearance Manager initialized</Original>
+				<Korean>차량 형상 관리자 불러오기 및 초기화 완료</Korean>
+				<Japanese>車両外観マネージャーが初期化されました</Japanese>
+			</Key>
+			<Key ID="STR_VAM_MAIN_MENU_NAME">
+				<Original>Vehicle Appearance Manager</Original>
+				<Korean>차량 형상 관리자</Korean>
+				<Japanese>車両外観マネージャー</Japanese>
+			</Key>
+			<Key ID="STR_VAM_RESET_VEHICLE">
+				<Original>Reset</Original>
+				<Korean>초기화</Korean>
+				<Japanese>リセット</Japanese>
+			</Key>
+			<Key ID="STR_VAM_CONFIRM_MENU">
+				<Original>Confirm</Original>
+				<Korean>확인</Korean>
+				<Japanese>確定</Japanese>
+			</Key>
+			<Key ID="STR_VAM_CURRENT_VEHICLE">
+				<Original>Current Vehicle :</Original>
+				<Korean>현  재    차  량 :</Korean>
+				<Japanese>現 在 の 車 両 :</Japanese>
+			</Key>
+			<Key ID="STR_VAM_FOB_CONDITION_CHECK_FAILED">
+				<Original>You should be in %1 m from FOB.</Original>
+				<Korean>FOB에서 %1m 안에 있어야 합니다.</Korean>
+				<Japanese>FOBから %1 m 以内にいる必要があります。</Japanese>
+			</Key>
+			<Key ID="STR_VAM_COMPLETE_RESET">
+				<Original>Reset complete</Original>
+				<Korean>초기화 완료</Korean>
+				<Japanese>リセット完了</Japanese>
+			</Key>
+			<Key ID="STR_VAM_CAMOUFLAGE">
+				<Original>Camoufluge</Original>
+				<Korean>위장</Korean>
+				<Japanese>迷彩</Japanese>
+			</Key>
+			<Key ID="STR_VAM_COMPONENT">
+				<Original>Component</Original>
+				<Korean>구성품</Korean>
+				<Japanese>部品</Japanese>
+			</Key>
+			<Key ID="STR_VAM_NO_CAMOUFLAGE">
+				<Original>There is no camouflage.</Original>
+				<Korean>위장이 없습니다.</Korean>
+				<Japanese>迷彩はありません。</Japanese>
+			</Key>
+			<Key ID="STR_VAM_NO_COMPONENT">
+				<Original>There is no component.</Original>
+				<Korean>구성품이 없습니다.</Korean>
+				<Japanese>部品はありません。</Japanese>
+			</Key>
+			<Key ID="STR_VAM_MARID_V1_NOTICE">
+				<Original>Your Marid is outdated one.\nVehicle component setup may not be loaded next time.\nPlease contact with your server admin.</Original>
+				<Korean>당신의 마리드는 오래된 것입니다.\n다음 번에 차량 구성품 설정을 불러올 수 없을 것입니다.\n해당 서버 관리자와 연락을 취해보십시오.</Korean>
+				<Japanese>あなたのMarid APCは古いものです。\n次回から車両コンポーネントのセットアップがロードされない可能性があります。\nサーバー管理者にお問い合わせください。</Japanese>
+			</Key>
+<!-- Camouflage/위장 -->
+			<Key ID="STR_VAM_BLUFOR_CAMO">
+				<Original>BLUFOR</Original>
+				<Korean>청군</Korean>
+				<Japanese>同盟軍</Japanese>
+			</Key>
+			<Key ID="STR_VAM_GREEN_CAMO">
+				<Original>Green</Original>
+				<Korean>녹색</Korean>
+				<Japanese>緑</Japanese>
+			</Key>
+			<Key ID="STR_VAM_BLACK_CAMO">
+				<Original>Black</Original>
+				<Korean>검정색</Korean>
+				<Japanese>黒</Japanese>
+			</Key>
+			<Key ID="STR_VAM_AAF_CAMO">
+				<Original>AAF</Original>
+				<Korean>AAF</Korean>
+				<Japanese>AAF</Japanese>
+			</Key>
+			<Key ID="STR_VAM_DARK_GREEN_CAMO">
+				<Original>Dark Green</Original>
+				<Korean>어두운 녹색</Korean>
+				<Japanese>深緑</Japanese>
+			</Key>
+<!-- VAM LINE END -->
     </Package>
 </Project>

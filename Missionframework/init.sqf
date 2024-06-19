@@ -107,3 +107,6 @@ if (isServer) then {
     KPLIB_initServerDone = true;
     publicVariable "KPLIB_initServerDone";
 };
+
+//VAM_GUI: For changing camo and vehicle appearence without Zeus:
+[] execVM "VAM_GUI\VAM_GUI_init.sqf";
