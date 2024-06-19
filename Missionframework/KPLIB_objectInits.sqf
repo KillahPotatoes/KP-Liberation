@@ -24,7 +24,7 @@
 */
 
 KPLIB_objectInits = [
-	// add fullheal action to huron medical container (mobile fullHeal)
+    // add fullheal action to huron medical container (mobile fullHeal)
     [
         ["B_Slingload_01_Medevac_F"],
         {
