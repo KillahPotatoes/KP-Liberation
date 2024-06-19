@@ -18,7 +18,7 @@ while { KPLIB_endgame == 0 } do {
 
     _spawn_marker = "";
     while { _spawn_marker == "" } do {
-        _spawn_marker = [2000,5000,true] call KPLIB_fnc_getOpforSpawnPoint;
+        _spawn_marker = [1500,4000,true] call KPLIB_fnc_getOpforSpawnPoint;
         if ( _spawn_marker == "" ) then {
             sleep (150 + (random 150));
         };
