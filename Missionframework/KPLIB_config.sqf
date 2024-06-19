@@ -375,6 +375,8 @@ KPLIB_surrender_chance = 80;
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KPLIB_battlegroup_clearance = [
     "song_bin_tanh",
+	"khe_sanh",
+	"lingor3",
     "Cam_Lao_Nam"
 ];
 
