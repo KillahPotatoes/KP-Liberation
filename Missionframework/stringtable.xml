@@ -7416,14 +7416,12 @@
             <Japanese>ESCキーを押して終了</Japanese>
         </Key>
         <Key ID="STR_CLEARANCE_ACTION">
-            <Original>-- Clear FOB area</Original>
-            <Spanish>-- Limpiar área de FOB</Spanish>
-            <Russian>-- Очистить зону FOB</Russian>
-            <Italian>-- Pulisci area FOB</Italian>
-            <German>-- FOB Gebiet räumen</German>
-            <Korean>-- 전초기지 주변 정리</Korean>
-            <Czech>-- Vymazat zónu FOB</Czech>
-            <Japanese>-- FOB周辺を一掃</Japanese>
+            <Original>-- Clear area around FOB (Small)</Original>
+            <Japanese>-- FOBの周辺を一掃 (小)</Japanese>
+        </Key>
+        <Key ID="STR_BIG_CLEARANCE_ACTION">
+            <Original>-- Clear area around FOB (Large)</Original>
+            <Japanese>-- FOBの周辺を一掃 (大)</Japanese>
         </Key>
         <Key ID="STR_FOB_REPACKAGE_HINT">
             <Original>FOB repackaged.\nPossibly created clearance will be reverted upon server restart.</Original>
@@ -7505,7 +7503,7 @@
             <Spanish>¿Estás seguro?</Spanish>
             <Italian>Sei sicuro?</Italian>
             <Czech>jsi si tím jistý?</Czech>
-            <Japanese>マジで?</Japanese>
+            <Japanese>よろしいですか?</Japanese>
         </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TEXT">
             <Original>This will permanently remove a total of %1 terrain objects (houses, trees, fences, lamps, etc.) within a radius of %2m around %3.</Original>
@@ -7513,7 +7511,7 @@
             <Spanish>Esta acción removera permanentemente un total de %1 objetos de terreno (casas, árboles, bardas, lamparas, etc.) dentro de un radio de %2m alrededor de %3.</Spanish>
             <Italian>Questo rimuoverà permanentemente un totale di %1 oggetti del terreno (case, alberi, recinzioni, lampade, ecc.) Entro un raggio di %2m intorno a %3.</Italian>
             <Czech>Tím se trvale odstraní celkem %1 terénních objektů (domy, stromy, ploty, lampy atd.) V okruhu %2m kolem %3.</Czech>
-            <Japanese>これにより%3周辺の%2m以内の %1 個所の地形オブジェクト(家、木、フェンス、街灯等)が削除されます。</Japanese>
+            <Japanese>これにより %3 周辺の %2 m 以内の %1 個所の地形オブジェクト(家、木、フェンス、街灯等)が永久的に削除されます。</Japanese>
         </Key>
         <Key ID="STR_PARAM_ZEUSADDENEMIES">
             <Original>Add enemies to Zeus editable objects</Original>
