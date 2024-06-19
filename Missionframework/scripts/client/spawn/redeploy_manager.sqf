@@ -104,7 +104,7 @@ while {true} do {
 
                 {
                     KPLIB_respawnPositionsList pushBack [
-                        format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition getPosATL _x],
+                       format ["%1 - %2", localize "STR_RESPAWN_TRUCK",  [_x] call KPLIB_fnc_getMobileRespawnName],
                         getPosATL _x,
                         _x
                     ];

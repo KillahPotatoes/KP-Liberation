@@ -60,7 +60,9 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 switch (_classnamevar) do {
                     case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
                     case KPLIB_b_arsenal: {if (KPLIB_param_mobileArsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
-                    case KPLIB_b_mobileRespawn: {if (KPLIB_param_mobileRespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
+                    case (KPLIB_b_mobileRespawn select 0): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 0) >> "displayName");};};
+                    case (KPLIB_b_mobileRespawn select 1): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 1) >> "displayName");};};
+                    case (KPLIB_b_mobileRespawn select 2): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 2) >> "displayName");};};
                     case KPLIB_b_fobTruck: {_entrytext = localize "STR_FOBTRUCK";};
                     case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
                     case KPLIB_b_smallStorage: {_entrytext = localize "STR_SMALL_STORAGE";};

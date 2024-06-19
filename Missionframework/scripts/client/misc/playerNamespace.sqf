@@ -49,7 +49,7 @@ while {true} do {
 
     // Is near a mobile respawn
     if (KPLIB_param_mobileRespawn) then {
-        player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [[KPLIB_b_mobileRespawn, KPLIB_b_potato01], 10]) isEqualTo [])];
+        player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [(KPLIB_b_mobileRespawn)+ [KPLIB_b_potato01], 10]) isEqualTo [])];
     };
 
     // Is near startbase
