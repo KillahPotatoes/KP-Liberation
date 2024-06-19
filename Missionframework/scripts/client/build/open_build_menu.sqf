@@ -108,6 +108,15 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [0.4,0.4,0.4,1]];
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [0.4,0.4,0.4,1]];
             };
+            if (buildtype != 8) then {
+                _classnamevar = (_x select 0);
+                if ( _classnamevar isEqualTo "Sign_Arrow_F") then {
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 0], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 1], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [1,1,0,1]];
+                };
+            };
 
         } foreach _build_list;
     };
