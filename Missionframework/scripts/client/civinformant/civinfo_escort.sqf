@@ -6,24 +6,31 @@ if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Para
 
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
-if !(alive _informant) exitWith {if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};};
+private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", player];
 
-private _is_near_fob = false;
+[[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
+if (KPLIB_ace) then {
+    private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+    if !(_isCuffed) then {
+        ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+    };
+} else {
+    _informant setCaptive false;
+    _informant enableAI "ANIM";
+    _informant enableAI "MOVE";
+    sleep 1;
+    _informant playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+    sleep 2;
+};
+doStop _informant;
+_informant doFollow _capturedPlayer;
 
-sleep 1;
-_informant playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-sleep 2;
-_informant enableAI "ANIM";
-_informant enableAI "MOVE";
-sleep 2;
-[_informant, ""] remoteExecCall ["switchMove"];
-
-waitUntil {sleep 5;
-    _nearestfob = [getpos _informant] call KPLIB_fnc_getNearestFob;
+waitUntil {
+    sleep 5;
+    private _nearestfob = [getPos _informant] call KPLIB_fnc_getNearestFob;
+    private _is_near_fob = false;
     if (count _nearestfob == 3) then {
-        if ((_informant distance _nearestfob) < 30) then {
-            _is_near_fob = true;
-        };
+        _is_near_fob = ((_informant distance _nearestfob) < 30);
     };
     !alive _informant || (_is_near_fob && (vehicle _informant == _informant))
 };
@@ -31,8 +38,17 @@ waitUntil {sleep 5;
 if (alive _informant) then {
     if (_is_near_fob) then {
         sleep 5;
-        private _grp = createGroup [KPLIB_side_player, true];
+        private _grp = createGroup [KPLIB_side_civilian, true];
         [_informant] joinSilent _grp;
+        if (KPLIB_ace) then {
+            private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+            if (_isCuffed) then {
+                ["ace_captives_setHandcuffed", [_unit, false], _unit] call CBA_fnc_targetEvent;
+            } else {
+                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+            };
+            sleep 1;
+        };
         _informant playmove "AmovPercMstpSnonWnonDnon_AmovPsitMstpSnonWnonDnon_ground";
         _informant disableAI "ANIM";
         _informant disableAI "MOVE";
@@ -44,4 +60,7 @@ if (alive _informant) then {
         if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
         if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort finished by: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
     };
+} else {
+    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    [3] remoteExec ["civinfo_notifications"];
 };
