@@ -126,7 +126,7 @@
             <Portuguese>VOCÊ ESTÁ FERIDO!</Portuguese>
             <Korean>부상당했습니다.</Korean>
             <Czech>JSI V BEZVĚDOMÍ</Czech>
-            <Japanese>あなたは負傷しました</Japanese>
+            <Japanese>あなたは負傷した</Japanese>
         </Key>
         <Key ID="STR_BUILD_ACTION">
             <Original>-- BUILD --</Original>
@@ -141,7 +141,7 @@
             <Portuguese>-- CONSTRUIR --</Portuguese>
             <Korean>-- 건 설 --</Korean>
             <Czech>-- STAVĚT --</Czech>
-            <Japanese>-- 建設 --</Japanese>
+            <Japanese>-- 建造 --</Japanese>
         </Key>
         <Key ID="STR_BUILD_TITLE">
             <Original>BUILD MENU</Original>
@@ -156,7 +156,7 @@
             <Portuguese>MENU DE CONSTRUÇÃO</Portuguese>
             <Korean>건설메뉴</Korean>
             <Czech>MENU STAVĚNÍ</Czech>
-            <Japanese>建設メニュー</Japanese>
+            <Japanese>建造メニュー</Japanese>
         </Key>
         <Key ID="STR_BUILD_BUTTON">
             <Original>Build</Original>
@@ -171,7 +171,7 @@
             <Portuguese>Construir</Portuguese>
             <Korean>건설/배치</Korean>
             <Czech>Postavit</Czech>
-            <Japanese>建設</Japanese>
+            <Japanese>建造</Japanese>
         </Key>
         <Key ID="STR_MANPOWER">
             <Original>Supplies</Original>
@@ -231,7 +231,7 @@
             <Portuguese>Morte por hemorragia em %1 segundos</Portuguese>
             <Korean>%1 초 후 의식을 잃거나 과다출혈로 사망합니다. </Korean>
             <Czech>Vykrvácíš za %1 vteřin</Czech>
-            <Japanese>%1 秒で失血します</Japanese>
+            <Japanese>のこり %1 秒で失血する</Japanese>
         </Key>
         <Key ID="STR_BLEEDOUT_STABILIZED">
             <Original>Stabilized</Original>
@@ -246,7 +246,7 @@
             <Portuguese>Hemorragia estancada</Portuguese>
             <Korean>출혈이 멈추어 안정되었습니다.</Korean>
             <Czech>Stabilizován</Czech>
-            <Japanese>容体は安定</Japanese>
+            <Japanese>容体は安定した</Japanese>
         </Key>
         <Key ID="STR_ROTATION">
             <Original>-- Rotation</Original>
@@ -276,7 +276,7 @@
             <Portuguese>-- Construir</Portuguese>
             <Korean>-- 건설(설치)</Korean>
             <Czech>-- Postavit</Czech>
-            <Japanese>-- 建設</Japanese>
+            <Japanese>-- 建造</Japanese>
         </Key>
         <Key ID="STR_PLACEMENT_BIS">
             <Original>-- Build and Repeat</Original>
@@ -291,7 +291,7 @@
             <Portuguese>-- Construir e repetir</Portuguese>
             <Korean>-- 반복 건설(설치)</Korean>
             <Czech>-- Postavit a Opakovat</Czech>
-            <Japanese>-- 連続して建設</Japanese>
+            <Japanese>-- 連続して建造</Japanese>
         </Key>
         <Key ID="STR_CANCEL">
             <Original>-- Cancel</Original>
@@ -306,7 +306,7 @@
             <Portuguese>-- Cancelar</Portuguese>
             <Korean>-- 취소</Korean>
             <Czech>-- Zrušit</Czech>
-            <Japanese>-- 取り消す</Japanese>
+            <Japanese>-- 取消</Japanese>
         </Key>
         <Key ID="STR_CANCEL_HINT">
             <Original>Building canceled.</Original>
@@ -321,7 +321,7 @@
             <Portuguese>Construção cancelada.</Portuguese>
             <Korean>건설(설치) 취소</Korean>
             <Czech>Stavění zrušeno</Czech>
-            <Japanese>建設を取り消しました</Japanese>
+            <Japanese>建造を取り消した。</Japanese>
         </Key>
         <Key ID="STR_CONFIRM_HINT">
             <Original>Building confirmed.</Original>
@@ -336,7 +336,7 @@
             <Portuguese>Construção confirmada.</Portuguese>
             <Korean>건설(설치) 완료</Korean>
             <Czech>Stavění potvrzeno</Czech>
-            <Japanese>建設を完了しました</Japanese>
+            <Japanese>建造を完了した。</Japanese>
         </Key>
         <Key ID="STR_PLACEMENT_IMPOSSIBLE">
             <Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -351,7 +351,7 @@
             <Portuguese>Impossível inserir aqui: Há %1 objeto(s) dentro de %2 metros da posição deste item.</Portuguese>
             <Korean>건설(설치) 불가 : 설치하고자 하는 위치에 %1 개의 객체가  %2 미터 안에 있습니다.</Korean>
             <Czech>Nelze stavět, poblíž je %1 objekt(ů) ve vzdálenosti %2 metrů od pozice objektu</Czech>
-            <Japanese>設置できません: %1 のオブジェクトが %2 メートル以内に存在します。</Japanese>
+            <Japanese>設置不可: %1 個のオブジェクトが %2 メートル以内に存在します。</Japanese>
         </Key>
         <Key ID="STR_PLACEMENT_POSSIBLE">
             <Original>This position is valid.</Original>
@@ -569,7 +569,7 @@
             <Portuguese>Não é possível construir na água.</Portuguese>
             <Korean>물에는 전초기지를 설치 할 수 없습니다.</Korean>
             <Czech>Nemůžeš stavět na vodě</Czech>
-            <Japanese>水上に建設することはできません。</Japanese>
+            <Japanese>水上に建造することはできません。</Japanese>
         </Key>
         <Key ID="STR_BUILD_ERROR_DISTANCE">
             <Original>Can't build further than %1 meters away from the FOB.</Original>
@@ -584,7 +584,7 @@
             <Portuguese>Não é possível construir com mais de %1 metros de distância da FOB.</Portuguese>
             <Korean>전초기지에서 %1 미터 이상 떨어지면 건설(설치)할 수 없습니다. </Korean>
             <Czech>Nemůžeš stavět dál než %1 metrů od FOB.</Czech>
-            <Japanese>%1 メートル以上離れて建設することはできません。</Japanese>
+            <Japanese>%1 メートル以上離れて建造することはできません。</Japanese>
         </Key>
         <Key ID="STR_FOBBOX">
             <Original>FOB Container</Original>
@@ -2118,7 +2118,7 @@
             <Portuguese>Construções</Portuguese>
             <Korean>건설 물품</Korean>
             <Czech>Budovy</Czech>
-            <Japanese>建造物</Japanese>
+            <Japanese>建築物</Japanese>
         </Key>
         <Key ID="STR_BUILD7">
             <Original>Logistics</Original>
@@ -2726,7 +2726,7 @@
             <Portuguese>Permite ao jogador utilizar o menu de CONTRUÇÃO.</Portuguese>
             <Korean>플레이어가 전초기지에서 건설메뉴를 사용할 수 있는 권한를 허가 합니다.</Korean>
             <Czech>Povolí hráči používat menu STAVĚNÍ.</Czech>
-            <Japanese>プレイヤーが建設メニューを使用することを許可します。</Japanese>
+            <Japanese>プレイヤーが建造メニューを使用することを許可します。</Japanese>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_RECYCLING">
             <Original>Allows the player to use the RECYCLE action.</Original>
@@ -3256,7 +3256,7 @@
             <Portuguese>Não é possível construir: Forças hostis na proximidade.</Portuguese>
             <Korean>근처에 방해물이 있어 건설(설치)할 수 없습니다.</Korean>
             <Czech>Nemůžeš stavět: nepřátelské jednotky poblíž.</Czech>
-            <Japanese>建設できません: 敵軍が近くにいます。</Japanese>
+            <Japanese>建造できません: 敵軍が近くにいます。</Japanese>
         </Key>
         <Key ID="STR_CLEANUP_PARAM">
             <Original>Cleanup abandoned vehicles outside FOBs</Original>
@@ -5406,7 +5406,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Nesta campanha você deverá gerir, estocar e proteger três tipos de recursos.:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;SUPRIMENTOS:&lt;/t&gt; Este é o recurso essencial. Sem suprimentos, será impossível mobilizar infantaria adicional ou requisitar equipamentos militares. Desse modo, o QG recomenda priorizar estes recursos!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;MUNIÇÃO:&lt;/t&gt; Utilizada para abastecer veículos blindados armados, bem como soldados de elite de equipamento bélico pesado.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;COMBUSTÍVEL:&lt;/t&gt; Todo veículo precisa de combustível, alguns consomem mais que outros.&lt;br/&gt; &lt;br/&gt;Você cruzará com todos os três tipos de recursos dispersos pelos setores, porém para adquirir uma quantidade considerável e abastecimento constante, você deverá capturar setores com fábricas/refinarias. Uma vez capturadas, as fábricas precisarão de um depósito (use o scroll do mouse) e então poderão imediatamente iniciar a produção do recurso pretendido. Se puder arcar com os custos, as fábricas poderão ser aprimoradas para produzir os demais recursos. &lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;군수물자는 총 3가지 종류가 있다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;보급품:&lt;/t&gt; 보급품(S)은 가장 중요한 군수물자로, 보급품이 없으면 AI 보병을 비롯하여 모든 장비를 배치(생산)할 수 없다.&lt;br/&gt; &lt;br/&gt;또한 장비를 배치(생산)할 때 가장 많이 소비되는 보급품이다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;탄약:&lt;/t&gt; 탄약(A)은 무장한 장비를 배치(생산)할 때 필요하다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;연료:&lt;/t&gt; 연료(F)는 장비을 움직이기 위해서 꼭 필요한 보급품이며, 대형 장비는 더 많은 연료를 소비한다.&lt;br/&gt; &lt;br/&gt;각 군수물자는 지도에서 주유기 표시로 된 '공장 '에서 생산된다. 이 지역의 경우 도시 이름 옆에 (S),(A),(F)가 표기되어 있는데 이는 생산 가능한 보급품의 종류를 나타낸다. 즉 보급품은 (S), 탄약은 (A), 연료는 (F)이다.&lt;br/&gt; &lt;br/&gt;이 지역을 아군이 점령하게 되면 왼쪽 상단 메뉴안에 --저장창고건설-- 이라는 메뉴가 생성된다. 도시내 적당한 곳에 저장창고를 건설하면 이 곳에 이 마을에서 생산된 군수물자가 저장된다. 이 군수물자를 AI수송부대를 이용하여 전초기지로 운반하면 장비를 생산하는데 사용할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;만약 이 '생산공장'에서 생산중인 물품을 변경하고자 한다면, 도시내에 설치한 저장창고로 공장건설에 필요한 군수물자(생산하고자 하는 군수물자 50, 나머지 두가지 군수물자 100)을 운반한 후 변경하고자 하는 군수물자의 생산공장을 건설하면 된다.&lt;br/&gt; &lt;br/&gt;생산품은 '생산 설정' 에서 변경할 수 있고, AI 수송부대는 물류 개요' 에서 편성할 수 있다.&lt;br/&gt; &lt;br/&gt;아군 AI 수송부대의 트럭은 1회에 1대당 최대 200개의 군수물자를 운반할 수 있다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;V této kampani musíte spravovat, ukládat a chránit tři typy zdrojů:&lt;br/&gt; &lt;br/&gt;&lt;t color ='#00ff00'&gt;SUROVINY:&lt;/t&gt; Toto jsou nejdůležitější. Bez spotřebního materiálu nebudete moci nasadit další vojáky ani zabavit vojenskou techniku. Velitelství jako takové doporučuje prioritu těchto prvních!&lt;br/&gt; &lt;br/&gt;&lt;t color ='#ff0000' &gt;MUNICE:&lt;/t&gt;Používá se k zásobě ozbrojených vozidel, jako jsou APC a MBT, stejně jako elity (a těžce vyzbrojení) vojáci.&lt;br/&gt; &lt;br/&gt;&lt;t color = '#ffff00'&gt;PALIVO:&lt;/t&gt;Každé vozidlo potřebuje palivo, některé jsou více žíznivé než ostatní.&lt;br/&gt; &lt;br/&gt;Možná narazíte na všechny tři zdroje v jakémkoli sektoru, ale pro značnou a stálou dodávku musíte zachytit tovární sektory! Jakmile jsou továrny zachyceny, vyžadují úložný prostor (akce nabídky posouvání) a poté mohou okamžitě začít vyrábět zamýšlený zdroj. Pokud si to můžete dovolit, může být každá továrna upgradována tak, aby vytvořila další dva zdroje. &lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;当作戦では、3種の資源を管理、保管、そして保護しなければなりません。&lt;br/&gt;&lt;br/&gt;&lt;t color='#00ff00'&gt;サプライ:&lt;/t&gt; これが最も重要です。サプライがないと、追加の兵士を配置したり、軍事装備を調達したりすることができません。そのため、指揮官はまずこれを優先することをお勧めします！&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;弾薬:&lt;/t&gt; 装甲車両やMBT、そして特殊な兵士(と重装兵)などに使用されます。&lt;br/&gt; &lt;br/&gt;&lt;t color = '#ffff00'&gt;燃料:&lt;/t&gt; すべての車両には燃料が必要であり、一部の車両は他のものよりも燃料を多く消費します。&lt;br/&gt; &lt;br/&gt;どのセクターでも、3種の資源を見つけることができますが、大量で安定した供給を確保するには、工場のセクターでを占領する必要があります！占領後、工場にはストレージエリアが必要です（マウススクロールのアクションメニュー）。その後、工場はすぐにその目的の資源の生産を開始できます。資源に余裕があれば、どの工場でも、他の2つの資源を生産するようにアップグレードすることができます。&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;当作戦では、3種の資源を管理、保管、そして保護しなければなりません。&lt;br/&gt;&lt;br/&gt;&lt;t color='#00ff00'&gt;サプライ:&lt;/t&gt; これが最も重要です。サプライがないと、追加の兵士を配置したり、軍事装備を調達したりすることができません。そのため、指揮官はまずこれを優先することをお勧めします！&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;弾薬:&lt;/t&gt; 装甲車両やMBT、そして特殊な兵士(と重装兵)などに使用されます。&lt;br/&gt; &lt;br/&gt;&lt;t color = '#ffff00'&gt;燃料:&lt;/t&gt; すべての車両には燃料が必要であり、一部の車両は他のものよりも燃料を多く消費します。&lt;br/&gt; &lt;br/&gt;どのセクターでも、3種の資源を見つけることができますが、大量で安定した供給を確保するには、工場のセクターでを占領する必要があります！占領後、工場には倉庫が必要です（マウススクロールのアクションメニュー）。その後、工場はすぐにその目的の資源の生産を開始できます。資源に余裕があれば、どの工場でも、他の2つの資源を生産するようにアップグレードすることができます。&lt;br/&gt;&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE6">
             <Original>6. Alert Level</Original>
@@ -5462,7 +5462,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Para auxiliar no sucesso de sua iniciativa, você terá a capacidade de construir em todas suas bases avançadas, que o permitirá mobilizar infantaria, veículos, defesas, fortificações e etc para sua localidade.&lt;br/&gt; &lt;br/&gt;Embora infantaria, veículos e defesas exijam recursos para seu desenvolvimento, fortificações como estruturas, sacos de areia e muros não terão custo.&lt;br/&gt; &lt;br/&gt;O sistema de construção estará disponível quando você estiver a 100 metros de qualquer FOB.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;전초기지나 장비 또는 AI 보병을 건설(배치)하기 위해선 우선 관리자로부터 권한을 획득해야 한다. 권한을 획득한 후 제한된 갯수의 전초기지를 건설 할 수 있고, 전초기지를 건설한 후 125m거리 이내에서 장비를 생산(배치) 할 수 있다.&lt;br/&gt; &lt;br/&gt;전초기지를 건설하게 되면 제일 먼저 소형 또는 대형 저장 창고부터 건설해야 한다. 이 창고로 AI 수송부대를 이용하여 각 거점에서 생산된 군수물자를 운반, 필요한 장비를 건설(배치)해야 한다. 각 전초기지에 보관중인 보급품은 공유할 수 없다.&lt;br/&gt; &lt;br/&gt;따라서 전선이 이동하게 되면, 후방의 전초기지에 저장중인 군수물자를 새로이 건설한 전방의 전초기지로 AI 수송부대를 이용하여 운반해야 한다.&lt;br/&gt; &lt;br/&gt;아군 AI 수송부대의 트럭은 1회에 1대당 최대 200개의 군수물자를 운반할 수 있다.&lt;br/&gt; &lt;br/&gt;주의! 지역 민간인들의 지지가 없다면 적 민병대가 출현하여 아군 AI 수송부대를 습격, 군수물자를 파괴하거나 도난 당할 수 있으니 작전시 민간인을 학살하거나 재산을 약탈하지 않는다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Abyste uspěly ve své snaze, máte možnost stavět jednotky, vozidla a opevnění. Samozřejmě v závislosti na zdrojích.&lt;br/&gt; &lt;br/&gt;Ačkoli pěchota, vozidla a obrana budou stát zdroje, opevnění, jako jsou budovy, pytle s pískem a zdi, nikoliv.&lt;br/&gt; &lt;br/&gt;Systém stavění je dostupný do 100 metrů od FOB. Tehdy se vám objeví možnost stavět v kontextové nabídce.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたが目的を達成するために、各FOBには建設能力があり、歩兵、車両、固定火器、構築物などを特定の場所に建設できます。&lt;br/&gt; &lt;br/&gt;歩兵、車両、固定火器はリソースが必要ですが、構築物（建物、土のう、壁など）は必要ありません。&lt;br/&gt; &lt;br/&gt;建設システムは、どのFOBでも100メートル以内にいる場合に利用可能です。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたが目的を達成するために、各FOBには建造能力があり、歩兵、車両、固定火器、構築物などを特定の場所に建造できます。&lt;br/&gt; &lt;br/&gt;歩兵、車両、固定火器は資源が必要ですが、構築物（建物、土のう、壁など）は必要ありません。&lt;br/&gt; &lt;br/&gt;建設システムは、どのFOBでも100メートル以内にいる場合に利用可能です。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE8">
             <Original>8. Deploying another FOB</Original>
@@ -5490,7 +5490,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Para construir uma nova FOB, acesse o menu de construção, selecione a aba de logística e então construir FOB no conteiner ou uma FOB transportável (é a mesma coisa, mas com rodas). Em seguida, poderá posicionar sua linda e nova FOB (transportável ou no conteiner) onde desejar. No entanto, esteja ciente de que não poderá construir a FOB dentro de 1km da sua posição inicial, dentro de 300 metros de qualquer setor ou dentro de 2km de outra FOB.&lt;br/&gt; &lt;br/&gt;Seria simplesmente redundante!&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;최초 작전 기지 또는 이미 건설된 전초기지의 건설(배치)메뉴에서 FOB container 또는 FOB truck을 찾을 수 있을 것이다. FOB truck을 선택하여 생산한 후 배치하고 싶은 지역으로 이동하여 건설(설치)하면 된다.&lt;br/&gt; &lt;br/&gt;단, 최초 작전기지로 부터 1Km, 거점으로부터 300m, 다른 전초기지로부터 2Km 이내에는 설치를 할 수 없다.&lt;br/&gt; &lt;br/&gt;7항 건설(배치)에서 설명하였듯이 전초기지를 건설하게 되면 제일 먼저 소형 또는 대형 저장 창고부터 건설해야 한다. 이 후 AI 수송부대를 이용하여 각 거점 또는 후방의 전초기지에 보관중인 군수물자를 운반, 필요한 장비를 건설(배치) 하면 된다.&lt;br/&gt; &lt;br/&gt;주의! 지역 민간인들의 지지가 없다면 적 민병대가 출현하여 아군 AI 수송부대를 습격, 군수물자를 파괴하거나 도난 당할 수 있으니 작전시 민간인을 학살하거나 재산을 약탈하지 않는다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;K postavení nového FOB, jděte do stavebního menu a pote do logistické záložky, poté postavte FOB kontejner nebo FOB náklaďák (to je to samé ale na kolech).&lt;br/&gt; &lt;br/&gt;Poté přesuňte kontejner na místo kde rozložíte z brusu nové FOB. Mějte se však na pozoru, FOB nelze postavit uvnitř obsazeného sektoru nebo ve vzdálenosti 2km od jiného FOB a 1km od startovní základny.&lt;br/&gt; &lt;br/&gt;To by bylo prostě zbytečné!&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;新しいFOBを建設するには、建設メニューに移動し、物流タブでFOBコンテナまたはFOBトラック（同じ性能、ただし自走可能）を建設します。次に、FOBコンテナ/トラックを展開したい場所に配置します。ただし、開始位置から1km以内、セクターから300m以内、他のFOBから2km以内にFOBを建設することはできないことに注意してください。&lt;br/&gt; &lt;br/&gt;それは予算が下りません！&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;新しいFOBを建設するには、建造メニューに移動し、物流タブでFOBコンテナまたはFOBトラック（同じ性能、ただし自走可能）を建造します。次に、FOBコンテナ/トラックを展開したい場所に配置します。ただし、開始位置から1km以内、セクターから300m以内、他のFOBから2km以内にFOBを建設することはできないことに注意してください。&lt;br/&gt; &lt;br/&gt;それは予算が下りません！&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE9">
             <Original>9. Secondary Objectives</Original>
@@ -5518,7 +5518,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Quando você capturar setores, em algumas situações as forças hostis remanescentes se renderão. Você poderá capturar os prisioneiros e levá-los para a FOB mais próxima para serem interrogados.&lt;br/&gt; &lt;br/&gt;O interrogatório, executado em observância à Convenção de Genebra, o permitirá a obtenção de informações que podem ser empregadas para revelar a posição aproximada da base de logística inimiga, comboio inimigo ou operações de busca e resgate de forças aliadas.&lt;br/&gt; &lt;br/&gt;Após chegar na área de operações, você precisará identificar a localização exata do seu alvo, e então fazer uso dos meios necessários à sua disposição para concluir seu objetivo. Ao lograr êxito em sua tarefa, serão recompensados, reduzindo o nível de alerta  reducing the alert level inimigo e consequentemente a eficiência de todas as forças hostis.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;적군의 거점들을 점령하다보면 간혹 포로를 잡을 수 있다. 이 포로를 아군 전초기지로 호송하여 심문하게 되면 정보점수가 올라간다.&lt;br/&gt; &lt;br/&gt;이 정보 점수를 사용하여 부차적인 임무 3가지를 반복해서 진행할 수 있는데, 임무를 성공하면, 적군의 작전 능력을 떨어트리거나, 더 많은 정보 점수, 또는 군수물자를 보상으로 받게 된다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Když obsadíte sektor, někdy se stane že některé nepřátelské jednotky zůstanou a vzdají se. Ty můžete zajmout a převést do nejbližší FOB kde budou vyslechnuti.&lt;br/&gt; &lt;br/&gt;Z výslechu, z úcty k Ženevským konvencím, můžete zjistit vice nebo méně přesné informace o nepřátelských logistických základnách, nepřátelských konvojích nebo o spojeneckých zajatcích.&lt;br/&gt; &lt;br/&gt;Poté, co tam půjdete, budete muset najít přesnou polohu vašeho cíle, a pak pomocí jakýchkoli prostředků, které máte k dispozici, dokončete svůj úkol. Úspěch v tomto úkolu bude odměněn, čímž se sníží úroveň pohotovosti a tím i účinnost všech nepřátelských sil.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;セクターを占領すると、時に残っているわずかな敵勢力が降伏することがあります。その後、これらの捕虜を捕らえ、近くのFOBに連れて行き、尋問することができます。&lt;br/&gt; &lt;br/&gt;ジュネーブ協定に最大限の敬意を払った尋問により、敵のロジスティクス拠点、敵の輸送船団、または友軍の捜索救助の概略位置を特定するための情報を入手することができます。&lt;br/&gt; &lt;br/&gt;そこに行った後、目標の正確な位置を見つけ、目的を達成するために手元にある手段を使います。このタスクに成功すると、警戒レベルが低下し、すべての敵対勢力の効率も低下するため、報酬が与えられます。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;セクターを占領すると、時に残っているわずかな敵勢力が降伏することがあります。その後、これらの捕虜を捕らえ、近くのFOBに連れて行き、尋問することができます。&lt;br/&gt; &lt;br/&gt;ジュネーブ協定に最大限の敬意を払った尋問により、敵のロジスティクス拠点、敵の輸送船団、または友軍の捜索救助の概略位置を特定するための情報を入手することができます。&lt;br/&gt; &lt;br/&gt;そこに行った後、目標の正確な位置を見つけ、目的を達成するために手元にある手段を使います。この任務に成功すると、警戒レベルが低下し、すべての敵対勢力の効率も低下するため、報酬が与えられます。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE10">
             <Original>10. Commanding</Original>
@@ -5546,7 +5546,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Quando um jogador assume a função de comandante, ele recebem acesso à interface Zeus ao pressionar a tecla correspondente (a tecla padrão é 'Y'). Essa interface permite o comando de forças aliadas na plataforma 3D ou através do mapa.&lt;br/&gt; &lt;br/&gt;Ademais, o comandante recebe opções adicionais de construção que o permitirão obter veículos tripulados ou grupos predeterminados.&lt;br/&gt; &lt;br/&gt;Tal função é agora obrigatória, pois possibilita acesso direto à gestão dos setores de produção e logísticas automatizadas. Quando estiver posicionado numa FOB, você poderá observar as opções "Configuração de Produção" e "Visão Geral de Logística".&lt;br/&gt; &lt;br/&gt; A primeira habilita a capacidade de decidir que fabrica/refinaria irá produzir qual recurso específico, bem como uma visão geral detalhada sobre o serviço.&lt;br/&gt; &lt;br/&gt; O último permite a você comandar o sistema automatizado de comboio logístico, onde você poderá "adicionar" grupos logísticos, adquirir quantos transportes desejar e os comandar para transportar quantidades específicas de recursos através do território.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;- 지휘 :&lt;br/&gt; &lt;br/&gt;지휘권한은 관리자가 허가한 자만이 획득할 수 있다. 지휘자는 각 거점에서 생산되고 있는 군수물자를 지정하거나 내역을 살펴 볼 수 있고, 각 군수물자를 AI수송부대를 이용하여 운반할 수 있다. 또한 제우스 기능을 사용할 수 있다.&lt;br/&gt; &lt;br/&gt;- 기타 정보 :&lt;br/&gt; &lt;br/&gt;항공기를 사용하기 위해서는 반드시 '비행 관제소'를 먼저 만들어야만 한다. 이후 '항공기 격납고'를 만들고 항공기를 배치한다. 항공기 격납고 수에 따라 운행할 수 있는 항공기 숫자가 결정된다.&lt;br/&gt; &lt;br/&gt;비행장은 평지라 할지라도 습기가 많은 지역은 항공기 이착률이 힘들기 때문에 적군 비행장을 점령하여 사용하기를 권한다.&lt;br/&gt; &lt;br/&gt;고급 장비는 특정한 군사기지를 점령해야만 전초기지에서 생산(배치)할 수 있다. 지도에 보면 군사기지 이름 옆에 원이 그려져 있고 체크가 된 곳이 있는데 이 곳을 점령하게되면 체크 옆에 표기되어 있는 장비를 생산(배치)할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;전투에 사용한 장비는 반드시 전초기지로 가지고 귀환해야 한다. 전초기지범위 밖에 있으면 사라지기 때문이다. 노획장비 또한 없어지지 않기 때문에 반드시 전초기지로 귀환해서 접속종료를 하기 바란다.&lt;br/&gt; &lt;br/&gt;AI은 1플레이어가 최대 12명까지 뽑아서 사용할 수있으나, 지휘하기엔 의무병과 공병을 포함하여 3~5명정도를 추천한다.&lt;br/&gt; &lt;br/&gt;함부로 민간인을 학살하거나 재산(특히 집)을 파괴하거나 약탈(차량같은 것)하지 말라. 민병대 출현하게 되면 머리 아프다.&lt;br/&gt; &lt;br/&gt;민간인들에게 환영받기 위해서는 부상당한 민간인(간혹 지도에 보라색이 생김)들을 도와줘라.&lt;br/&gt; &lt;br/&gt;끝으로 재미있는 게임 시간이 되길 바란다!&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Když hráč použije roli Velitele, získá přístup k rozhraní Zeus stisknutím odpovídající klávesy (ve výchozím nastavení Y). Toto rozhraní umožňuje velení přátelských sil v zobrazení 3D nebo mapy.&lt;br/&gt; &lt;br/&gt;Navíc komandér získá přístup postavit vozidla s posádkou nebo celé předvytvořené družstva.&lt;br/&gt; &lt;br/&gt;Tato role je důležitá, a jako taková dává přímý přístup k spravování produkce v sektorech a logistice AI. Pokud budete stát na FOB, dostanete možnosti "Nastavení produkce" a "Logistický přehled".&lt;br/&gt; &lt;br/&gt; První vám dá možnost nastavit která továrna bude produkovat kterou surovinu, jako také detailní přehled.&lt;br/&gt; &lt;br/&gt; Písmena vám dovolí rozkazovat AI logistickým konvojům, kde můžete "Přidat" logistické skupiny, koupit jakékoliv množství náklaďáků na skupinu a přikázat jim převážet specifické množství surovin napříč celou oblastí pro vás.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;プレイヤーが司令官役割を使用すると、対応するキー（デフォルトではY）を押すことでZeusインターフェースにアクセスできます。このインターフェースにより、3Dまたはマップビューで友好部隊を指揮することができます。&lt;br/&gt; &lt;br/&gt;さらに、司令官は、クルー付きの車両や完全に作成された分隊などの追加の建設オプションを取得できます。&lt;br/&gt; &lt;br/&gt;この役割は今では必須であり、生産セクターの管理とAIロジスティクスへの直接的なアクセスを提供するためです。あなたがFOBに配置されているということを考慮すると、「生産設定」と「物流概要」のオプションが表示されます。&lt;br/&gt; &lt;br/&gt;前者は、どの工場がどのリソースを生産するかを決定し、現在の詳細な概要を示す能力を提供します。&lt;br/&gt; &lt;br/&gt;後者は、AIロジスティクス輸送隊を指揮でき、輸送グループを「追加」し、グループごとにトラックの数量を購入し、特定の量のリソースを地域全体で移動させることができます。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;プレイヤーが司令官役割を使用すると、対応するキー（デフォルトではY）を押すことでZeusインターフェースにアクセスできます。このインターフェースにより、3Dまたはマップビューで友好部隊を指揮することができます。&lt;br/&gt; &lt;br/&gt;さらに、司令官は、クルー付きの車両や完全に作成された分隊などの追加の建造オプションを取得できます。&lt;br/&gt; &lt;br/&gt;この役割は今では必須であり、生産セクターの管理とAIロジスティクスへの直接的なアクセスを提供するためです。あなたがFOBに配置されているということを考慮すると、「生産設定」と「物流概要」のオプションが表示されます。&lt;br/&gt; &lt;br/&gt;前者は、どの工場がどの資源を生産するかを決定し、現在の詳細な概要を示す能力を提供します。&lt;br/&gt; &lt;br/&gt;後者は、AIロジスティクス輸送隊を指揮でき、輸送グループを「追加」し、グループごとにトラックの数量を購入し、特定の量の資源を地域全体で移動させることができます。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ARSENALUSEPRESET">
             <Original>Arsenal mode</Original>
@@ -6363,7 +6363,7 @@
             <Portuguese>Um civil de %1 disse que possui algumas informações para nos apresentar.</Portuguese>
             <Korean>%1 이름의 민간인이 우리에게 정보가 있다고 접근중이다.</Korean>
             <Czech>Civilista z %1, říká že má pro nás nějakou informaci.</Czech>
-            <Japanese>%1 の市民は、我々に情報を提供しようと試みている。</Japanese>
+            <Japanese>%1 の市民が我々に情報提供を試みている。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_SUCCESS">
             <Original>The civilian gave us some important information.</Original>
@@ -6377,7 +6377,7 @@
             <Portuguese>Um civil nos concedeu algumas informações importantes.</Portuguese>
             <Korean>민간인들이 우리에게 중요한 정보를 몇가지 알려 주었다.</Korean>
             <Czech>Civilista nám dal nějaké důležité informace.</Czech>
-            <Japanese>情報提供者は幾つかの情報を提供しました。</Japanese>
+            <Japanese>市民は重要情報を提供した。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
             <Original>The civilian has disappeared.</Original>
@@ -6391,7 +6391,7 @@
             <Portuguese>Um civil desapareceu.</Portuguese>
             <Korean>민간인이 행방불명되었다.</Korean>
             <Czech>Civilista odešel.</Czech>
-            <Japanese>情報提供者はどこかへいってしまいました。</Japanese>
+            <Japanese>情報提供者は姿を消してしまった。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
             <Original>The civilian died.</Original>
@@ -7607,7 +7607,7 @@
             <German>Möchtest du das interaktive Tutorial aktivieren?&lt;br/&gt;Es wird dich durch einzelnen Missionsaspekte führen. Prüfe die Aufgaben im Kartenbildschirm für weitere Informationen zu den einzelnen Aufgaben.&lt;br/&gt;&lt;br/&gt;(Dieses Pop-Up kann in den Missionsparametern deaktiviert werden)</German>
             <Czech>Chcete povolit interaktivní výukový program?&lt;br/&gt;Provede vás aspekty mise. Další informace o jednotlivých úkolech naleznete v oblasti úkolů na mapě.&lt;br/&gt;&lt;br/&gt;(Toto okno lze v parametrech mise deaktivovat)</Czech>
             <Italian>Vuoi abilitare il tutorial interattivo?&lt;br/&gt;Ti guiderà attraverso gli aspetti della missione. Controlla la tua area delle attività sulla mappa per ulteriori informazioni su ciascuna attività&lt;br/&gt;&lt;br/&gt;(questo popup può essere disabilitato nei parametri della missione)</Italian>
-            <Japanese>インタラクティブチュートリアルを有効にしますか？&lt;br/&gt;ミッションの様々な側面を案内します。各タスクに関する詳細情報は、マップ上のタスクエリアを確認してください。&lt;br/&gt;&lt;br/&gt;(このポップアップは、ミッションパラメータで無効にすることができます)</Japanese>
+            <Japanese>体験型チュートリアルを有効化しますか? &lt;br/&gt;これはミッションの様々な要素を案内します。各任務に関する詳細情報は、マップ上の任務エリアを確認してください。&lt;br/&gt;&lt;br/&gt;(このポップアップはミッションパラメータで無効化できます)</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_DIALOG_TEXT_END">
             <Original>You've completed all currently available/implemented tutorials.&lt;br/&gt;Have a lot of fun with playing this mission.&lt;br/&gt;&lt;br/&gt;Should you've questions or want to learn the more deeper mechanics, make sure you visit the &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki"&gt;KP Liberation Wiki&lt;/a&gt;.&lt;br/&gt;We've also a &lt;a href="https://discord.gg/Qk35Sw8"&gt;Discord Server&lt;/a&gt; where hundreds of KP Libertion players are around.</Original>
@@ -7621,28 +7621,28 @@
             <German>KP Liberation Tutorial Aufgaben</German>
             <Czech>KP osvobození Výuky</Czech>
             <Italian>Missione KP Liberation Tutorial</Italian>
-            <Japanese>KP Liberation チュートリアル タスク</Japanese>
+            <Japanese>KP Liberation チュートリアル任務</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_MAIN_DESC">
             <Original>Tasks of the KP Liberation Tutorial.&lt;br/&gt;It'll create new tasks when the correct circumstances are reached and there are still tutorials available.</Original>
             <German>Aufgaben des KP Liberation Tutorials.&lt;br/&gt;Es werden automatisch neue Aufgaben erstellt, sobald die entsprechenden Umstände eintreten und noch weitere Tutorials verfügbar sind.</German>
             <Czech>Úkoly KP Osvobození Tutorial.&lt;br/&gt;To bude vytvářet nové úkoly, když jsou dosaženy správné okolnosti a stále jsou k dispozici výukové programy.</Czech>
             <Italian>Compiti del tutorial di KP Liberation.&lt;br/&gt; creerà nuovi compiti quando le circostanze corrette saranno raggiunte e ci saranno ancora tutorial disponibili.</Italian>
-            <Japanese>KP Liberationチュートリアルのタスクです。&lt;br/&gt;正しい状況が達成され、まだチュートリアルが利用可能な場合、新しいタスクが作成されます。</Japanese>
+            <Japanese>KP Liberation チュートリアルの任務です。&lt;br/&gt;適切な状況に達し、まだチュートリアルが利用可能な場合、新しい任務が作成されます。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_TITLE">
             <Original>First FOB deployment</Original>
             <German>Erste FOB errichten</German>
             <Italian>Primo dispiegamento della FOB</Italian>
             <Czech>První nasazení FOB</Czech>
-            <Japanese>最初のFOBを配置</Japanese>
+            <Japanese>最初のFOBを設置</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_DESC">
             <Original>This tasks will guide you through the deployment of your first FOB and gathering the start resources.</Original>
             <German>Diese Aufgaben werden dich durch die Bereitstellung deiner ersten FOB und dem Sammeln der Startressourcen führen.</German>
             <Italian>Questo primo impiego ti guida nella creazione della prima FOB e ti insegnera ad acquisire le risorse iniziali.</Italian>
             <Czech>Tyto úkoly vás provedou nasazením prvního fob a shromažďováním počátečních prostředků.</Czech>
-            <Japanese>このタスクでは、最初のFOBの配置と初期資源の回収を通して、あなたを案内します。</Japanese>
+            <Japanese>この任務では、最初のFOBの設置と開始時用資源の回収について案内します。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01A_TITLE">
             <Original>Transport FOB Container</Original>
@@ -7656,7 +7656,7 @@
             <German>Dies ist dein erster FOB Container mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du als Außenlast mit dem Transporthelikopter zu einer Position mit mindestens 1km Abstand zur Operationsbasis bringen, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den Container zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
             <Italian>Questo è il tuo primo container FOB, che ti permetterà di dispiegare una FOB.&lt;br/&gt;È necessario caricarlo tramite l'elicottero da trasporto in una posizione ad almeno 1 km di distanza dalla base operativa per dispiegarlo. Si consiglia di costruirlo nelle vicinanze di una fabbrica.&lt;br/&gt;Dopo aver trasportato il contenitore nella posizione desiderata, avvicinati ad esso e otterrai un'azione della rotella di scorrimento per posizionare il FOB.&lt;br/&gt;Continueremo dopo che avrai distribuito il tuo primo FOB.</Italian>
             <Czech>Jedná se o váš první FOB kontejner, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho naložit transportním vrtulníkem na pozici, která je vzdálena alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme jej postavit v blízkosti továrny.&lt;br/&gt; Po přepravě kontejneru do požadovaného místa zamiřte k němu a získáte akci rolovacího kolečka, která umístí FOB.&lt;br/&gt; Budeme pokračovat, až to provedete.</Czech>
-            <Japanese>これは、FOBを展開するためのFOBコンテナです。&lt;br/&gt;FOBを展開するには、FOBコンテナを輸送ヘリコプターで懸吊し、初期地点から少なくとも1km離れた位置に展開する必要があります。工場の近くに建設することをお勧めします。&lt;br/&gt;コンテナを望む位置に輸送した後、近づいてホイールスクロールのアクションを行うことで、FOBを設置することができます。&lt;br/&gt;最初のFOBを展開した後、次のタスクに進みます。</Japanese>
+            <Japanese>これは、FOBを建設するためのFOBコンテナです。&lt;br/&gt;FOBを建設するには、FOBコンテナを輸送ヘリコプターで懸吊し、初期地点から少なくとも1km離れた位置に設置する必要があります。工場の近くに建設することをお勧めします。&lt;br/&gt;コンテナを望む位置に輸送した後、近づいてホイールスクロールのアクションを行うことで、FOBを建設することができます。&lt;br/&gt;最初のFOBを建設した後、次の任務に進みます。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_01B_TITLE">
             <Original>Drive FOB Truck</Original>
@@ -7670,7 +7670,7 @@
             <German>Dies ist dein erster FOB LKW mit dem du eine FOB bereitstellen kannst.&lt;br/&gt;Diesen musst du zu einer Position mit mindestens 1km Abstand zur Operationsbasis fahren, um die FOB aufzubauen. Wir empfehlen die erste FOB in der Nähe eines Fabrik-Sektors zu errichten.&lt;br/&gt;Nachdem du den LKW zur gewünschten Position gebracht hast, nähere dich ihm und du wirst eine Mausrad-Aktion erhalten, um die FOB aufzustellen.&lt;br/&gt;Wir fahren fort nachdem du deine erste FOB errichtet hast.</German>
             <Italian>Questo è il tuo primo camion FOB, che ti consente di distribuire un FOB.&lt;br/&gt;È necessario guidarlo in una posizione ad almeno 1 km dalla base operativa per poterlo distribuire. Si consiglia di costruirlo nelle vicinanze di una fabbrica.&lt;br/&gt;Dopo aver guidato il camion nella posizione desiderata, avvicinati ad esso e otterrai un'azione della rotella di scorrimento per posizionare il FOB.&lt;br/&gt;Continueremo dopo che avrai distribuito il tuo primo FOB.</Italian>
             <Czech>Jedná se o váš první FOB truck, který vám umožní nasadit FOB.&lt;br/&gt; Musíte ho dojet na pozici alespoň 1 km od operační základny, abyste ji mohli nasadit. Doporučujeme ji postavit v blízkosti továrny.&lt;br/&gt; Poté, co jste řídili vůz do požadovaného místa, zamiřte blízko k němu a dostanete akci rolovacího kolečka pro umístění FOB.&lt;br/&gt; Budeme pokračovat, až rozmístíte svůj první FOB.</Czech>
-            <Japanese>これは、FOBを展開するためのFOBトラックです。&lt;br/&gt;FOBを展開するには、トラックを運転して運び、初期地点から少なくとも1km離れた位置に展開する必要があります。工場の近くに建設することをお勧めします。&lt;br/&gt;トラックを望む位置まで運転した後、近づいてホイールスクロールのアクションを行うことで、FOBを設置することができます。&lt;br/&gt;最初のFOBを展開した後、次のタスクに進みます。</Japanese>
+            <Japanese>これは、FOBを建設するためのFOBトラックです。&lt;br/&gt;FOBを建設するには、トラックを運転して運び、初期地点から少なくとも1km離れた位置に設置する必要があります。工場の近くに建設することをお勧めします。&lt;br/&gt;トラックを望む位置まで運転した後、近づいてホイールスクロールのアクションを行うことで、FOBを建設することができます。&lt;br/&gt;最初のFOBを建設した後、次の任務に進みます。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_02_TITLE">
             <Original>Build a storage area</Original>
@@ -7684,21 +7684,21 @@
             <German>Nun hast du Zugriff zum Baumenü über die Mausrad-Aktionen.&lt;br/&gt;Benutze diese Aktion, um einen Lagerbereich zu errichten. Die Lagerbereich sind im Unterstützungs-Reiter des Baumenüs.&lt;br/&gt;Dieser ist notwendig, um die Startressourcen, die wir dir im Anschluss an diese Aufgabe zukommen lassen, einzulagern.</German>
             <Italian>Ora hai accesso al menu di costruzione tramite le azioni della rotella di scorrimento.&lt;br/&gt;Usa questa azione per posizionare un'area di stoccaggio. Puoi trovarlo nella scheda Supporto del menu di costruzione.&lt;br/&gt;Questo è necessario per memorizzare le casse di risorse che ti invieremo dopo questa attività.</Italian>
             <Czech>Nyní máte přístup k nabídce sestavení prostřednictvím akcí rolovacího kolečka.&lt;br/&gt; Tato akce slouží k umístění skladovacího prostoru. Najdete ji na kartě budovy v nabídce stavení.&lt;br/&gt; To je nutné k uložení beden prostředků, které vám pošleme po tomto úkolu.</Czech>
-            <Japanese>現在、スクロールホイールアクションを使用してビルドメニューにアクセスできるようになっています。&lt;br/&gt;このアクションを使用してストレージエリアを配置してください。ストレージエリアはビルドメニューのサポートタブにあります。&lt;br/&gt;このストレージエリアは、このタスクの後に送信するリソースクレートを保管するために必要です。</Japanese>
+            <Japanese>現在、アクションメニュー(マウスホイール)を使用して建造メニューにアクセスできるようになっています。&lt;br/&gt;このアクションを使用して倉庫を配置してください。倉庫はビルドメニューの物流タブにあります。&lt;br/&gt;この倉庫は、この任務の後に送られてくる資源箱を保管するために必要です。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_TITLE">
             <Original>Collect start resources</Original>
             <German>Sammle Startressourcen</German>
             <Italian>Acquisisci risorse iniziali</Italian>
             <Czech>Shromáždit počáteční zdroje</Czech>
-            <Japanese>初期資源を回収する</Japanese>
+            <Japanese>開始時用資源を回収する</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_DESC">
             <Original>We've send you some start resource crates via paradrop. Collect them and store them in your storage area to add them to the FOB resource pool.&lt;br/&gt;Resources have always to be stored in such areas to use them for building. It's not enough to have them near the FOB. If you go near a crate you'll have a store and a push scroll wheel action, which will help you.</Original>
             <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben. Bist du in der Nähe einer Kiste, hast du unter anderem eine "Einlagern" und "Schieben" Mausrad-Aktion, welche dir helfen werden.</German>
             <Italian>Ti abbiamo inviato alcune casse di risorse iniziali tramite paradrop. Raccoglili e conservali nella tua area di stoccaggio per aggiungerli al pool di risorse FOB.&lt;br/&gt;Le risorse devono sempre essere immagazzinate in tali aree per usarle per la costruzione. Non basta averli vicino al FOB. Se ti avvicini a una cassa, avrai un negozio e una rotella di scorrimento, che ti aiuterà.</Italian>
             <Czech>Poslali jsme vám přes paradrop nějaké bedny se startem. Shromážděte je a uložte je do úložiště a přidejte je do fondu zdrojů FOB.&lt;br/&gt; Zdroje musí být vždy uloženy v těchto oblastech, aby je mohly používat pro stavbu. Nestačí je mít blízko FOB. Pokud se přiblížíte k bedně, budete mít možnost a akci push rolovacího kolečka, která vám pomůže.</Czech>
-            <Japanese>私たちはあなたにいくつかのスタートリソースクレートをパラドロップで送信しました。それらを収集してストレージエリアに保管し、FOBリソースプールに追加してください。&lt;br/&gt;建築に使用するために、リソースは常にそのようなエリアに保管する必要があります。FOBの近くにあるだけでは十分ではありません。クレートの近くに移動すると、ストアとプッシュのスクロールホイールアクションが表示され、それらが役立ちます。</Japanese>
+            <Japanese>私たちは貴方に空中投下で開始時用資源箱を送りました。それらを収集して倉庫に収容し、FOBの資源プールに追加してください。&lt;br/&gt;建造に使用するために、資源は常にそのようなエリアに保管する必要があります。FOBの近くにあるだけでは十分ではありません。資源箱の近くに移動すると、貨物を押す、運ぶ、収納する等のアクション(マウスホイールで選択)が表示されます。それらを役立ててください。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_TITLE">
             <Original>Capture your first factory</Original>
@@ -7712,7 +7712,7 @@
             <German>Diese Aufgaben werden dich durch die Eroberung eines Fabrik-Sektors, das Festnehmen möglicher Gefangener, der Betreuung möglicher verwundeter Zivilisten und den Start der Ressourcenproduktion führen.</German>
             <Italian>Questi compiti ti guideranno attraverso il processo di cattura di un settore di fabbrica, prenderanno possibili prigionieri di guerra, aiuteranno possibili civili feriti e avvieranno la produzione di risorse.</Italian>
             <Czech>Tyto úkoly vás provedou procesem zachycení výrobního sektoru, vezmou možné válečné zajatce, pomohou zraněným civilistům a zahájí výrobu zdrojů.</Czech>
-            <Japanese>このタスクは、工場地帯の占拠プロセス、POWの確保、負傷した市民の救助、および資源生産の開始の手順を案内します。</Japanese>
+            <Japanese>この任務は、工場地帯の占拠プロセス、捕虜の確保、負傷した市民の救助、および資源生産の開始の手順を案内します。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_01_TITLE">
             <Original>Approach a factory</Original>
@@ -7726,7 +7726,7 @@
             <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
             <Italian>È sempre una buona decisione iniziare la tua campagna con l'acquisizione di una fabbrica. In questo modo sarai in grado di produrre più risorse, di cui avrai bisogno per costruire più veicoli e successivamente risorse aeree.&lt;br/&gt;Abbiamo contrassegnato per te fino a tre settori vicini alla fabbrica sulla mappa. Decidi da solo a quale ti vuoi avvicinare.&lt;br/&gt;Continueremo, se sei vicino a una delle fabbriche contrassegnate.&lt;br/&gt;&lt;br/&gt;Maggiori informazioni sui diversi tipi di settore possono essere trovate nel nostro &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Italian>
             <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
-            <Japanese>工場を占領して資源を生産することは、キャンペーンを開始するのに常に良い決断です。この方法で、より多くの資源を生産し、より多くの車両を建設し、後には空中資産を建設するために必要な資源を得ることができます。&lt;br/&gt;マップ上には、最大3つの近くの工場がマークされています。どの工場に接近するかは、自分で決定してください。&lt;br/&gt;マークされた工場の近くにいる場合、作業を続けます。&lt;br/&gt;&lt;br/&gt;異なるセクタータイプの詳細は、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;で確認できます。</Japanese>
+            <Japanese>工場を占領することからキャンペーンを始めるのは常に良い決断です。そうすれば、より多くの資源を生産できるようになり、より多くの資源が必要な車両や後には航空機を建造することが出来ます。&lt;br/&gt;私たちはあなたのために、マップ上に最大3つの工場付近のセクターをマークしました。どの工場に接近するかは、あなたが決めてください。&lt;br/&gt;マークされた工場の近くにいるのであれば、作業を続けましょう。&lt;br/&gt;&lt;br/&gt;異なるセクターの種類の詳細は、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;で確認できます。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
             <Original>Conquer the factory</Original>
@@ -7740,7 +7740,7 @@
             <German>Die Fabrik ist nun aktiv und wird feindliche Verteidigungstruppen erzeugen. Eine vollständige Sektoraktivierung kann bis zu 20 Sekunden dauern, abhängig von der Menge an freundlichen Einheiten in der Nähe eine Sektors. Umso mehr Einheiten, umso schneller. Dies verhindert, dass zufällige Sektoren durch lediglich vorbeifliegende Helikopter oder Jets aktiviert werden.&lt;br/&gt;&lt;br/&gt;Nun musst du die feindliche Garnison, bis zur Aufgabe, bekämpfen.</German>
             <Italian>La fabbrica è ora attivata e genererà difensori nemici. Un'attivazione completa di un settore potrebbe richiedere fino a 20 secondi, a seconda della quantità di unità lato giocatore vicino al settore. Più truppe, più velocemente si genererà. Questo per evitare la deposizione delle uova casuale, ad es. voli in elicottero o jet.&lt;br/&gt;&lt;br/&gt;Ora devi sconfiggere la guarnigione nemica finché non si arrendono.</Italian>
             <Czech>Továrna je nyní aktivována a bude plodit nepřátelské obránce. Úplná aktivace sektoru může trvat až 20 sekund, v závislosti na množství jednotek na straně hráče v blízkosti sektoru. Čím více vojáků, tím rychleji se vynoří. To má zabránit náhodnému tření např. vrtulník nebo tryskové přelety .&lt;br/&gt;&lt;br/&gt; Nyní musíte porazit nepřátelskou posádku, dokud se nevzdají.</Czech>
-            <Japanese>工場がアクティブになり、敵の防衛軍が出現するようになりました。プレイヤー側のユニットがセクターの近くにいる量によって、完全なセクターのアクティベーションには最大で20秒かかる場合があります。兵士が多ければ多いほど、出現が早くなります。これは、ヘリコプターやジェット機の飛行によるランダムな出現を防止するためです。&lt;br/&gt;&lt;br/&gt;今度は、敵の守備隊を降伏するまで倒さなければなりません。</Japanese>
+            <Japanese>工場が活性化し、敵の防衛部隊が出現しました。セクターの近くにいるプレイヤー側ユニットの数にもよりますが、セクターの活性化には最大20秒ほどかかる場合があります。プレイヤー側のユニットが多ければ多いほど、敵の出現が早くなります。これは航空機の上空通過による敏感な敵の出現を避けるためです。&lt;br/&gt;&lt;br/&gt;次は敵の防衛部隊が降伏するまで倒さなければなりません。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_03_TITLE">
             <Original>Capture and care</Original>
@@ -7754,7 +7754,7 @@
             <German>Nachdem ein Sektor erobert wurde, besteht die Chance, dass Feinde sich ergeben und verwundete Zivilisten medizinische Hilfe benötigen.&lt;br/&gt;Dieses mal haben wir diese für dich markiert. Normalerweise musst du die Gebäude nach sich ergebenen Feinden durchsuchen und auf der Karte nach kleinen violetten Markierungen schauen, welche dir einen Anhaltspunkt für verwundete Zivilisten gibt.&lt;br/&gt;&lt;br/&gt;Nähere dich allen Markierungen, um Feinde gefangen zu nehmen und den Zivilisten zu helfen.</German>
             <Italian>Dopo aver catturato un settore c'è la possibilità che i nemici si arrendano o i civili feriti abbiano bisogno di assistenza medica.&lt;br/&gt;We've marked these for you this time. Normally you need to search the buildings for surrendering enemies and have a look on the map for small violet circles which gives a hint for wounded civilians.&lt;br/&gt;&lt;br/&gt;Avvicinati a tutti i segnalini per catturare i nemici e fornire assistenza medica ai civili.</Italian>
             <Czech>Po obsazení sektoru je šance, že nepřátelé, kteří se vzdali nebo budou zraněni civilisté, potřebují lékařskou pomoc.&lt;br/&gt; Tentokrát jsme je označili. Za normálních okolností je třeba hledat budovy pro odevzdání nepřátel a podívat se na mapě pro malé fialové kruhy, které dává náznak pro zraněné civilisty.&lt;br/&gt;&lt;br/&gt; Přistupte ke všem značkám, abyste zachytili nepřátele a poskytli lékařskou pomoc civilistům.</Czech>
-            <Japanese>セクターを占領すると、降伏した敵や負傷した市民が医療援助を必要とする可能性があります。&lt;br/&gt;今回はこれらをあなたにマークしました。通常、降伏する敵を探すために建物を捜索し、負傷した市民を示す小さな紫色の円を地図で確認する必要があります。&lt;br/&gt;&lt;br/&gt;すべてのマーカーに近づき、敵を捕らえ、市民に医療援助を提供してください。</Japanese>
+            <Japanese>セクターを占領すると、敵が降伏したり、負傷した市民が医療援助を必要とする可能性があります。&lt;br/&gt;今回はこれらをあなたにマークしました。通常は降伏した敵を探すために建物を捜索したり、負傷した市民を示す小さな紫色の円を地図で確認して探す必要があります。&lt;br/&gt;&lt;br/&gt;すべてのマーカーに近づき、敵を捕らえ、市民に医療援助を提供してください。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_04_TITLE">
             <Original>Build a storage area</Original>
@@ -7768,7 +7768,7 @@
             <German>Für jede eroberte Fabrik muss ein Lagerbereich errichtet werden. Andernfalls wird die Fabrik, aufgrund fehlendem Lagerplatz, keine Ressourcen produzieren können.&lt;br/&gt;Benutze die entsprechende Mausrad-Aktion, um einen Lagerbereich bei der Fabrik zu errichten.</German>
             <Italian>Devi posizionare un'area di stoccaggio per ogni fabbrica che conquisti. In caso contrario, la fabbrica non sarà in grado di produrre risorse per mancanza di spazio di archiviazione.&lt;br/&gt;Utilizzare l'azione della rotella di scorrimento per posizionare un'area di stoccaggio nel settore della fabbrica.</Italian>
             <Czech>musíte umístit úložný prostor pro každou továrnu, kterou dobýváte. V opačném případě nebude továrna schopna vyrábět zdroje z důvodu nedostatku úložného prostoru.&lt;br/&gt; Pomocí akce rolovacího kolečka umístěte úložný prostor do výrobního sektoru.</Czech>
-            <Japanese>征服した工場ごとに、ストレージエリアを設置する必要があります。そうしないと、ストレージスペースの不足のため、工場は資源を生産できなくなります。&lt;br/&gt;スクロールホイールアクションを使用して、工場セクターにストレージエリアを配置してください。</Japanese>
+            <Japanese>征服した工場ごとに、倉庫を設置する必要があります。そうしないと、倉庫スペースの不足のため、工場は資源を生産できなくなります。&lt;br/&gt;アクションメニュー(マウスホイール)を使用して、工場セクターに倉庫を配置してください。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_05_TITLE">
             <Original>Start the production</Original>
@@ -7782,7 +7782,7 @@
             <German>Nun ist die Fabrik dafür bereit, um Ressourcen zu produzieren. Benutze die Mausrad-Aktion, um das Produktionsinterface zu öffnen und die Produktion in der eroberten Fabrik zu starten.&lt;br/&gt;Detailliertere Informationen über das Produktionsinterface findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</German>
             <Italian>Ora la fabbrica è pronta per iniziare a produrre risorse. Usa l'azione della rotella di scorrimento per aprire l'interfaccia di produzione e avviare la produzione nella fabbrica appena conquistata.&lt;br/&gt;Informazioni più dettagliate sull'interfaccia possono essere trovate nel nostro &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Italian>
             <Czech>Nyní je továrna připravena začít vyrábět zdroje. Pomocí akce rolovacího kolečka otevřete výrobní rozhraní a začněte vyrábět v právě dobyté továrně.&lt;br/&gt; Podrobnější informace o rozhraní naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;.</Czech>
-            <Japanese>これで工場が資源を生産する準備ができました。スクロールホイールアクションを使用して、生産インターフェイスを開き、占領したばかりの工場で生産を開始してください。&lt;br/&gt;インターフェースの詳細については、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;をご覧ください。</Japanese>
+            <Japanese>これで工場が資源を生産する準備ができました。アクションメニュー(マウスホイール)を使用して、生産インターフェイスを開き、占領したばかりの工場で生産を開始してください。&lt;br/&gt;インターフェースの詳細については、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Production"&gt;Wiki&lt;/a&gt;をご覧ください。</Japanese>
         </Key>
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
