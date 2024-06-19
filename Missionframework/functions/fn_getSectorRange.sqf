@@ -10,16 +10,29 @@
 
     Parameter(s):
         _unitCount - Number of units to take into account [NUMBER, defaults to 0]
+        _sector    - Sector from KPLIB_sectors_all
 
     Returns:
         Calculated sector size [NUMBER]
 */
 
 params [
-    ["_unitCount", 0, [0]]
+    ["_unitCount", 0, [0]],
+    "_sector"
 ];
 
+ private _activationRange = KPLIB_range_sectorActivation;;
 
-if (_unitCount < (KPLIB_cap_enemySide / 2)) exitWith {KPLIB_range_sectorActivation};
-if (_unitCount <= KPLIB_cap_enemySide) exitWith {KPLIB_range_sectorActivation - (KPLIB_range_sectorActivation * 0.5 * ((_unitCount / KPLIB_cap_enemySide) - 0.5))};
-KPLIB_range_sectorActivation * 0.75
+switch (true) do {
+    case (_sector in KPLIB_sectors_spawn):    { _activationRange = KPLIB_range_pointActivation; };
+    case (_sector in KPLIB_sectors_city):     { _activationRange = KPLIB_range_cityActivation; };
+    case (_sector in KPLIB_sectors_tower):    { _activationRange = KPLIB_range_towerActivation; };
+    case (_sector in KPLIB_sectors_factory):  { _activationRange = KPLIB_range_factoryActivation; };
+    case (_sector in KPLIB_sectors_military): { _activationRange = KPLIB_range_militaryActivation; };
+    case (_sector in KPLIB_sectors_capital):  { _activationRange = KPLIB_range_capitalActivation; };
+    case (_sector in KPLIB_sectors_airSpawn): { _activationRange = KPLIB_range_airSpawnActivation; };
+};
+
+if (_unitCount < (KPLIB_cap_enemySide / 2)) exitWith {_activationRange};
+if (_unitCount <= KPLIB_cap_enemySide) exitWith {_activationRange - (_activationRange * 0.5 * ((_unitCount / KPLIB_cap_enemySide) - 0.5))};
+_activationRange * 0.75

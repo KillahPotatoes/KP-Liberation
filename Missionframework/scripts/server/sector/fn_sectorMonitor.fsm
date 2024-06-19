@@ -194,7 +194,7 @@ class FSM
                 {
                         name = "Get_adjusted_sector";
                         itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"_range = [_opforCount] call KPLIB_fnc_getSectorRange;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_range = [_opforCount, _sector] call KPLIB_fnc_getSectorRange;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

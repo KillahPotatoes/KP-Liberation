@@ -84,12 +84,12 @@ if ( isServer) then {
                 removeAllContainers _unit;                 // Clear Clothes, Vests, Backpacks
 
                 _unit addUniform _basic_uniform;     // given a specific uniform
-                _unit addWeapon "Rangefinder";    //  Binoculars/Night Vision Goggles are classified under Weapons...
+                //_unit addWeapon "Rangefinder";    //  Binoculars/Night Vision Goggles are classified under Weapons...
                 {
                     _unit linkItem _x;            //  Add and automatically equip special props
                 } foreach [
                     "ItemCompass",
-                    "ItemGPS",
+                    //"ItemGPS",
                     "ItemMap",
                     "ItemWatch"
                 ];

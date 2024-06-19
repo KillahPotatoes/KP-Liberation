@@ -48,7 +48,7 @@ KPLIB_sectors_active pushback _sector; publicVariable "KPLIB_sectors_active";
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
-if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
+if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, _sector] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
     if (_sector in KPLIB_sectors_capital) then {
         if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
@@ -309,7 +309,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
                 };
             } forEach _managed_units;
         } else {
-            if (([_sectorpos, (([_opforcount] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
+          if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
                 _sector_despawn_tickets = _sector_despawn_tickets - 1;
             } else {
                 // start counting running minutes after ADDITIONAL_TICKETS_DELAY
