@@ -280,7 +280,7 @@ KPLIB_secondary_missions_costs = [15, 10, 8, 8, 8, 8];
 KPLIB_secondary_objective_impact = 0.4;
 
 // The percentage increase received when completing a Humanitarian Aid secondary objective
-KPLIB_secondary_objective_civ_supplies_impact = 5;
+KPLIB_secondary_objective_civ_supplies_impact = 10;
 
 // Minimum time until a civil Informant can spawn. (seconds)
 KPLIB_civinfo_min = 5400;
@@ -292,7 +292,7 @@ KPLIB_civinfo_max = 10800;
 KPLIB_civinfo_chance = 75;
 
 // Intel gain for talking to a civil informant.
-KPLIB_civinfo_intel = 5;
+KPLIB_civinfo_intel = 10;
 
 // Time until a civil informant will despawn after spawning. (seconds)
 KPLIB_civinfo_duration = 1200;
