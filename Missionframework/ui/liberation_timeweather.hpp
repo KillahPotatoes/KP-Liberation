@@ -2,7 +2,7 @@ class liberation_timeweather {
     idd = 5756;
     movingEnable = false;
     controlsBackground[] = { "OuterBG", "RecycleBG", "OuterBG_F", "InnerBG", "InnerBG_F" };
-    controls[] = { "Header", "ButtonClose", "Infotext", "SkipButton", "FogButton", "CancelButton"};
+    controls[] = { "Header", "ButtonClose", "Infotext_line1", "Infotext_line2", "Infotext_line3", "Infotext_line4", "SkipButton", "FogButton", "CancelButton"};
     objects[] = {};
 
     class RecycleBG: BgPicture {
@@ -47,7 +47,7 @@ class liberation_timeweather {
         text = "X";
         action = "closeDialog 0";
     };
-    class Infotext: StdText {
+    class Infotext_line1: StdText {
         idc = -1;
         style = ST_CENTER;
         x = (0.35 * safezoneW + safezoneX);
@@ -55,7 +55,37 @@ class liberation_timeweather {
         h = (0.03 * safezoneH);
         y = (0.45 * safezoneH + safezoneY);
         colorText[] = {0.9, 0.9, 0.9, 1};
-        text = $STR_FOB_TW_ACTION_INFO;
+        text = $STR_FOB_TW_ACTION_INFO_1;
+    };
+    class Infotext_line2: StdText {
+        idc = -1;
+        style = ST_CENTER;
+        x = (0.35 * safezoneW + safezoneX);
+        w = (0.3 * safezoneW);
+        h = (0.03 * safezoneH);
+        y = (0.47 * safezoneH + safezoneY);
+        colorText[] = {0.9, 0.9, 0.9, 1};
+        text = $STR_FOB_TW_ACTION_INFO_2;
+    };
+    class Infotext_line3: StdText {
+        idc = -1;
+        style = ST_CENTER;
+        x = (0.35 * safezoneW + safezoneX);
+        w = (0.3 * safezoneW);
+        h = (0.03 * safezoneH);
+        y = (0.49 * safezoneH + safezoneY);
+        colorText[] = {0.9, 0.9, 0.9, 1};
+        text = $STR_FOB_TW_ACTION_INFO_3;
+    };
+    class Infotext_line4: StdText {
+        idc = -1;
+        style = ST_CENTER;
+        x = (0.35 * safezoneW + safezoneX);
+        w = (0.3 * safezoneW);
+        h = (0.03 * safezoneH);
+        y = (0.51 * safezoneH + safezoneY);
+        colorText[] = {0.9, 0.9, 0.9, 1};
+        text = $STR_FOB_TW_ACTION_INFO_4;
     };
     class SkipButton: StdButton {
         idc = 120;

@@ -524,8 +524,8 @@
             <Japanese>%1 によって\n負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_COOLDOWN">
-            <Original>FULL HEAL was attempted but it's still on cooldown.\nAvailable in %1 minutes.</Original>
-            <Japanese>完全治療が試行されましたが、クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
+            <Original>FULL HEAL was attempted\nbut it's still on cooldown.\nAvailable in %1 minutes.</Original>
+            <Japanese>完全治療が試行されましたが、\n現在クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBTIMEWEATHER">
             <Original>Allow Time Skip and Clear Fog from Action menu in FOB</Original>
@@ -539,9 +539,21 @@
             <Original>Skip time to 9 AM/PM</Original>
             <Japanese>午前/午後9時まで時間をスキップ</Japanese>
         </Key>
-        <Key ID="STR_FOB_TW_ACTION_INFO">
-            <Original>Screen will black while transition!\nPlease ensure safety before.</Original>
-            <Japanese>スキップ時、画面が暗転します!\n安全を確保してください。</Japanese>
+        <Key ID="STR_FOB_TW_ACTION_INFO_1">
+            <Original>Screen will black while transition!</Original>
+            <Japanese>スキップ時、画面が暗転します!</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_2">
+            <Original>Please ensure safety before.</Original>
+            <Japanese>安全を確保してください。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_3">
+            <Original>After 4:00 PM (1600), time is skipped until 9:00 AM (0900).</Original>
+            <Japanese>午後4時以降は午前9時までスキップします。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_4">
+            <Original>After 8:00 AM (0800), time is skipped until 9:00 PM (2100).</Original>
+            <Japanese>午前8時以降は午後9時までスキップします。</Japanese>
         </Key>
         <Key ID="STR_FOB_TW_ACTION_TIMESKIP">
             <Original>Skip Time</Original>
@@ -551,9 +563,13 @@
             <Original>Clear Fog</Original>
             <Japanese>霧を晴らす</Japanese>
         </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP_COUNTDOWN">
+            <Original>Time skip will be performed\nafter %1 seconds.\nPlease stay in safe position!</Original>
+            <Japanese>%1 秒後に\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
+        </Key>
         <Key ID="STR_FOB_TW_ACTION_TIMESKIP_START">
-            <Original>Time skip will be performed after 10 seconds.\nPlease stay in safe position!</Original>
-            <Japanese>10秒後に時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
+            <Original>Time skip will be performed\nwill soon.\nPlease stay in safe position!</Original>
+            <Japanese>まもなく\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
         </Key>
         <Key ID="STR_FOB_TW_ACTION_TIMESKIP_DONE_MORNING">
             <Original>Good morning! It's now 9:00 AM.</Original>

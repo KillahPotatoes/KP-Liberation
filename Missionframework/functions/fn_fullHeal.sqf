@@ -50,14 +50,14 @@ if (isClass (configfile >> "CfgPatches" >> "ace_field_ration")) then {_acefr = t
         };
     } else {
         _cooldownunits pushBack _target;
-        private _cooldowntime = _cooltime - _localtime;
+        private _cooldowntime = (_cooltime - _localtime)/60;
         [format [localize "STR_FULLHEAL_COOLDOWN", round _cooldowntime]] remoteExecCall ["hint", _target];
     };
 } forEach _targetunits;
 
 if (!(_caller in _cooldownunits)) then {[localize "STR_FULLHEAL_DONE"] remoteExecCall ["hint", _caller];};
 [format [localize "STR_FULLHEAL_APPLY", name _caller]] remoteExecCall ["hint", _healedunits];
-sleep 3;
+sleep 5;
 [""] remoteExecCall ["hintSilent", _targetunits];
 
 true
