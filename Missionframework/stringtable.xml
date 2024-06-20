@@ -3405,19 +3405,19 @@
             <Japanese>あなたは指揮官スロットへ入ることをサーバーに許可されていません。</Japanese>
         </Key>
         <Key ID="STR_CBA_IS_REQUIRED">
-            <Original>CBA_A3 not loaded. KPLib_APR requires CBA to run properly.</Original>
-            <French>CBA_A3 non chargé. KPLib_APR nécessite CBA pour fonctionner correctement.</French>
-            <German>CBA_A3 nicht geladen. KPLib_APR erfordert CBA, um ordnungsgemäß zu funktionieren.</German>
-            <Spanish>CBA_A3 no cargado. KPLib_APR requiere CBA para funcionar correctamente.</Spanish>
-            <Russian>CBA_A3 не загружен. Для правильной работы KPLib_APR требуется CBA.</Russian>
-            <Italian>CBA_A3 non caricato. KPLib_APR richiede CBA per funzionare correttamente.</Italian>
-            <Chinesesimp>CBA_A3 未加载。KPLib_APR 需要 CBA 才能正常运行。</Chinesesimp>
-            <Chinese>CBA_A3 未加載。KPLib_APR 需要 CBA 才能正常運行。</Chinese>
-            <Turkish>CBA_A3 yüklenmedi. KPLib_APR düzgün çalışması için CBA gerektirir.</Turkish>
-            <Portuguese>CBA_A3 não carregado. KPLib_APR requer CBA para funcionar corretamente.</Portuguese>
-            <Korean>CBA_A3가 로드되지 않았습니다. KPLib_APR는 정상적으로 작동하기 위해 CBA가 필요합니다.</Korean>
-            <Czech>CBA_A3 není načteno. KPLib_APR vyžaduje pro správný chod CBA.</Czech>
-            <Japanese>CBA_A3が読み込まれていません。KPLib_APRの正常な動作にはCBAが必要です。</Japanese>
+            <Original>CBA_A3 not loaded. KP Liberation APR requires CBA to run properly.</Original>
+            <French>CBA_A3 non chargé. KP Liberation APR nécessite CBA pour fonctionner correctement.</French>
+            <German>CBA_A3 nicht geladen. KP Liberation APR erfordert CBA, um ordnungsgemäß zu funktionieren.</German>
+            <Spanish>CBA_A3 no cargado. KP Liberation APR requiere CBA para funcionar correctamente.</Spanish>
+            <Russian>CBA_A3 не загружен. Для правильной работы KP Liberation APR требуется CBA.</Russian>
+            <Italian>CBA_A3 non caricato. KP Liberation APR richiede CBA per funzionare correttamente.</Italian>
+            <Chinesesimp>CBA_A3 未加载。KP Liberation APR 需要 CBA 才能正常运行。</Chinesesimp>
+            <Chinese>CBA_A3 未加載。KP Liberation APR 需要 CBA 才能正常運行。</Chinese>
+            <Turkish>CBA_A3 yüklenmedi. KP Liberation APR düzgün çalışması için CBA gerektirir.</Turkish>
+            <Portuguese>CBA_A3 não carregado. KP Liberation APR requer CBA para funcionar corretamente.</Portuguese>
+            <Korean>CBA_A3 가 로드되지 않았습니다. KP Liberation APR 는 정상적으로 작동하기 위해 CBA 가 필요합니다.</Korean>
+            <Czech>CBA_A3 není načteno. KP Liberation APR vyžaduje pro správný chod CBA.</Czech>
+            <Japanese>CBA_A3 が読み込まれていません。 KP Liberation APR の正常な動作には CBA が必要です。</Japanese>
         </Key>
         <Key ID="STR_MAKE_RESPAWN_LOADOUT">
             <Original>Save respawn loadout</Original>
