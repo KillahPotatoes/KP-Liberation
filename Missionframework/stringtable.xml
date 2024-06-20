@@ -54,6 +54,9 @@
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr</Original>
         </Key>
+        <Key ID="STR_MISSION_PRESENT">
+            <Original>[GREUH] and the Killah Potatoes present</Original>
+        </Key>
         <Key ID="STR_MISSION_AUTHOR">
             <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois</Original>
         </Key>
