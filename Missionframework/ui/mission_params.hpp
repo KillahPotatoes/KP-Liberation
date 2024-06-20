@@ -275,6 +275,12 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
         default = 5;
     };
+    class FOBTimeWeather {
+        title = $STR_PARAMS_FOBTIMEWEATHER;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
     class FuelConsumption {
         title = $STR_PARAMS_FUELCONSUMPTION;
         values[] = {0, 1};

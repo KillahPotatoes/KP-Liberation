@@ -73,7 +73,6 @@ KPLIB_objectInits = [
                 params ["_fob"];
                 waitUntil {sleep 0.1; time > 0};
                 [_fob] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fob];
-                [_fob] remoteExecCall ["TWZ_fnc_addClearActions", 0, _fob];
             };
         }
     ],
