@@ -568,7 +568,7 @@
             <Japanese>%1 秒後に\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
         </Key>
         <Key ID="STR_FOB_TW_ACTION_TIMESKIP_START">
-            <Original>Time skip will be performed\nwill soon.\nPlease stay in safe position!</Original>
+            <Original>Time skip will be performed\nnow.\nPlease stay in safe position!</Original>
             <Japanese>まもなく\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
         </Key>
         <Key ID="STR_FOB_TW_ACTION_TIMESKIP_DONE_MORNING">
