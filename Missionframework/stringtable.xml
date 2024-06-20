@@ -63,6 +63,9 @@
         <Key ID="STR_MISSION_ONLOAD">
             <Original>github.com/Apricot-ale/KP-Liberation-APR</Original>
         </Key>
+        <Key ID="STR_HURON01_NAME">
+            <Original>Spartan 01</Original>
+        </Key>
         <Key ID="STR_STARTBASE">
             <Original>OPERATION START POINT</Original>
             <German>OPERATIONSBEGINN</German>
@@ -7442,18 +7445,18 @@
             <Japanese>IEDが爆発した回数: %1</Japanese>
         </Key>
         <Key ID="STR_STATS_POTATO">
-            <Original>Number of Potato 01 losses: %1</Original>
-            <French>Pertes de Potato 01: %1</French>
-            <German>Verluste von Potato 01: %1</German>
-            <Spanish>Número de pérdidas de Potato 01: %1</Spanish>
-            <Russian>Количество потерянных Potato 01: %1</Russian>
-            <Italian>Numero di Potato 01 persi: %1</Italian>
-            <Chinesesimp>损失的斯巴达01号： %1</Chinesesimp>
-            <Turkish>Potato 01 kayıpları: %1</Turkish>
-            <Portuguese>Número de baixas de Potato 01: %1</Portuguese>
-            <Korean> 파괴된 재투입차량 : %1</Korean>
-            <Czech>Počet ztracených Potato 01: %1</Czech>
-            <Japanese>モバイルリスポーンヘリが失われた数: %1</Japanese>
+            <Original>Number of %2 losses: %1</Original>
+            <French>Pertes de %2: %1</French>
+            <German>Verluste von %2: %1</German>
+            <Spanish>Número de pérdidas de %2: %1</Spanish>
+            <Russian>Количество потерянных %2: %1</Russian>
+            <Italian>Numero di %2 persi: %1</Italian>
+            <Chinesesimp>损失的 %2： %1</Chinesesimp>
+            <Turkish>%2 kayıpları: %1</Turkish>
+            <Portuguese>Número de baixas de %2: %1</Portuguese>
+            <Korean>파괴된 %2: %1</Korean>
+            <Czech>Počet ztracených %2: %1</Czech>
+            <Japanese>%2 が失われた数: %1</Japanese>
         </Key>
         <Key ID="STR_STATS_RABBITS">
             <Original>Rabbits killed: %1</Original>
