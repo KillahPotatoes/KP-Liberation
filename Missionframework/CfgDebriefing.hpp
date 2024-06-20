@@ -15,3 +15,9 @@ class End1 {
     description = $STR_COMMANDER_NOT_AUTHORIZED;
     pictureBackground = "";
 };
+class End2 {
+    title = $STR_SORRY;
+    subtitle = "";
+    description = $STR_CBA_IS_REQUIRED;
+    pictureBackground = "";
+};

@@ -20,12 +20,22 @@ if (!isServer) then {waitUntil {!isNil "KPLIB_initServerDone"};};
 [] call compile preprocessFileLineNumbers "presets\init_presets.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_objectInits.sqf";
 
+// Check if CBA is running
+if (!KPPLM_CBA) then {
+    ["CBA_A3 not loaded. Aborting Mission! KPLib_APR requires CBA!!!"] call BIS_fnc_error;
+    ["CBA_A3 not loaded. This mission requires CBA to run properly."] remoteExec ["hint", 0, true];
+	sleep 1;
+    endMission "END2";
+    false;
+};
+
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
 if (KPPLM_CBA && KPLIB_param_playerMenu) then {
     [] call KPPLM_fnc_postInit;
 } else {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";
 };
+
 // Temperature and humidity changes
 [{
     ace_weather_humidityShift = 25;
