@@ -54,6 +54,15 @@
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr</Original>
         </Key>
+        <Key ID="STR_MISSION_AUTHOR">
+            <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team / Apricot_ale / MoistBois</Original>
+        </Key>
+        <Key ID="STR_MISSION_OVERVIEW">
+            <Original>APR Tweaked KP Liberation!&lt;br/&gt;Check github.com/Apricot-ale/KP-Liberation-APR to more info.</Original>
+        </Key>
+        <Key ID="STR_MISSION_ONLOAD">
+            <Original>github.com/Apricot-ale/KP-Liberation-APR</Original>
+        </Key>
         <Key ID="STR_STARTBASE">
             <Original>OPERATION START POINT</Original>
             <German>OPERATIONSBEGINN</German>
