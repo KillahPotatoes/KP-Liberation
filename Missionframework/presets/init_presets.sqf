@@ -87,6 +87,12 @@ switch (KPLIB_presetCivilians) do {
     default  {[] call compile preprocessFileLineNumbers "presets\civilians\custom.sqf";};
 };
 
+if (typeName KPLIB_b_mobileRespawn == typeName "") then {
+    KPLIB_b_mobileRespawns = [KPLIB_b_mobileRespawn];
+} else {
+    KPLIB_b_mobileRespawns = KPLIB_b_mobileRespawn;
+};
+
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
     [KPLIB_b_squadLight,50,0,0],
@@ -184,7 +190,7 @@ KPLIB_crates            = [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crate
 KPLIB_airSlots          = [KPLIB_b_slotHeli, KPLIB_b_slotPlane];
 KPLIB_storageBuildings  = [KPLIB_b_smallStorage, KPLIB_b_largeStorage];
 KPLIB_upgradeBuildings  = [KPLIB_b_logiStation, KPLIB_b_airControl, KPLIB_b_slotHeli, KPLIB_b_slotPlane];
-KPLIB_aiResupplySources append KPLIB_b_mobileRespawn;
+KPLIB_aiResupplySources append KPLIB_b_mobileRespawns;
 KPLIB_aiResupplySources append [KPLIB_b_potato01, KPLIB_b_arsenal];
 
 KPLIB_crates            = KPLIB_crates              apply {toLowerANSI _x};
