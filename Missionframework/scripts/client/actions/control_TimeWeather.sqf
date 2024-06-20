@@ -9,7 +9,7 @@ if (KPLIB_control_TimeWeather > 0) then {
     waitUntil {sleep 0.1; !dialog};
 
     if (KPLIB_control_TimeWeather == 1) then {
-        [format [localize "STR_FOB_TW_ACTION_TIMESKIP_START"] remoteExec ["hint",2];
+        [localize "STR_FOB_TW_ACTION_TIMESKIP_START"] remoteExec ["hint",2];
 		sleep 10;
         if !(daytime < 16 && daytime > 8) then {
             private ["_currentHour", "_currentDate", "_newDate", "_nextDate", "_currentYear", "_currentDateNum", "_nextDateNum"];
@@ -28,7 +28,7 @@ if (KPLIB_control_TimeWeather > 0) then {
                 _newDate = [_nextDate select 0, _nextDate select 1, _nextDate select 2, 9, 0];
             };
             [_newDate, true, true] call BIS_fnc_setDate;
-            [format [localize "STR_FOB_TW_ACTION_TIMESKIP_DONE_MORNING"] remoteExec ["hint",0];
+            [localize "STR_FOB_TW_ACTION_TIMESKIP_DONE_MORNING"] remoteExec ["hint",0];
         } else {
             private ["_currentHour", "_currentDate", "_newDate", "_nextDate", "_currentYear", "_currentDateNum", "_nextDateNum"];
             _currentHour = daytime;
@@ -46,12 +46,12 @@ if (KPLIB_control_TimeWeather > 0) then {
                 _newDate = [_nextDate select 0, _nextDate select 1, _nextDate select 2, 21, 0];
             };
             [_newDate, true, true] call BIS_fnc_setDate;
-            [format [localize "STR_FOB_TW_ACTION_TIMESKIP_DONE_NIGHT"] remoteExec ["hint",0];
+            [localize "STR_FOB_TW_ACTION_TIMESKIP_DONE_NIGHT"] remoteExec ["hint",0];
         };
     };
 
     if (KPLIB_control_TimeWeather == 2) then {
         [240, 0] remoteExecCall ["setFog", 2];
-        [format [localize "STR_FOB_TW_ACTION_CLEARFOG_DONE"] remoteExec ["hint",0];
+        [localize "STR_FOB_TW_ACTION_CLEARFOG_DONE"] remoteExec ["hint",0];
     };
 };
