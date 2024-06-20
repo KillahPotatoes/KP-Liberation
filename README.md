@@ -1,7 +1,7 @@
 # KP Liberation APR 
 KP Liberation Apricot_ale's Fork
 
-This fork is a unique modified version of KP Liberation, incorporating several PRs that have already been submitted.
+This fork is a unique modified version of [KP Liberation](https://github.com/KillahPotatoes/KP-Liberation), incorporating several PRs that have already been submitted.
 
 ### Required Add-ons
 - [CBA_A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
