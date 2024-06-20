@@ -35,19 +35,6 @@ if ((typeOf _obj) isEqualTo KPLIB_b_fobBuilding) exitWith {
         "isNull (objectParent _this) && {player getVariable ['KPLIB_hasDirectAccess', false]}",
         20
     ];
-
-    _obj addAction [
-        ["<t color='#0080FF'>", localize "STR_FOB_TW_ACTION_OPEN", "</t>"] joinString "",
-        "scripts\client\actions\control_TimeWeather.sqf",
-        nil,
-        -705,
-        false,
-        true,
-        "",
-        "KPLIB_param_timeweather && isNull (objectParent _this) && {player getVariable ['KPLIB_hasDirectAccess', false]}",
-        20
-    ];
-
     true
 };
 

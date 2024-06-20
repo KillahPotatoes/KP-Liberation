@@ -29,7 +29,7 @@ _obj addAction [
         [getpos _target, KPLIB_range_fob * 0.25, _caller] call KPLIB_fnc_fullheal;
     },
     nil,
-    -690,
+    -705,
     false,
     true,
     "",

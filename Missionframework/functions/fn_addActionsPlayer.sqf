@@ -376,12 +376,31 @@ _player addAction [
     ["<t color='#FFFF00'>", localize "STR_BIG_CLEARANCE_ACTION", "</t>"] joinString "",
     {[player getVariable ["KPLIB_fobPos", [0, 0, 0]], KPLIB_range_fob * 0.8, true] call KPLIB_fnc_createClearanceConfirm;},
     nil,
-    -850,
+    -851,
     false,
     true,
     "",
     "
         _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
+        && {isNull (objectParent _originalTarget)}
+        && {alive _originalTarget}
+        && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
+        && {build_confirmed isEqualTo 0}
+    "
+];
+
+// Time Skip and Clear Fog
+_player addAction [
+    ["<t color='#0080FF'>", localize "STR_FOB_TW_ACTION_OPEN", "</t>"] joinString "",
+    "scripts\client\actions\control_TimeWeather.sqf",
+    nil,
+    -855,
+    false,
+    true,
+    "",
+    "
+        KPLIB_param_timeweather
+        && _originalTarget getVariable ['KPLIB_hasDirectAccess', false]
         && {isNull (objectParent _originalTarget)}
         && {alive _originalTarget}
         && {_originalTarget getVariable ['KPLIB_fobDist', 99999] < (KPLIB_range_fob * 0.8)}
