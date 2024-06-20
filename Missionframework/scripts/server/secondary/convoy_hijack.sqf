@@ -31,7 +31,7 @@ private _boxes_loaded = 0;
 while { _boxes_loaded < _boxes_amount } do {
     _boxes_loaded = _boxes_loaded + 1;
     sleep 0.5;
-    private _next_box = [KPLIB_b_crateAmmo, 100, _spawnpos getPos [15, 135]] call KPLIB_fnc_createCrate;
+    private _next_box = [selectRandom KPLIB_crates, 100, _spawnpos getPos [15, 135]] call KPLIB_fnc_createCrate;
     sleep 0.5;
     [_next_box, 50] call _load_box_fnc;
 };
