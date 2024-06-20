@@ -89,6 +89,8 @@ if(isServer) then {
     GET_PARAM_BOOL(KPLIB_param_mobileArsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KPLIB_param_attackedFobRespawn, "AttackedSectorRespawn", 0);
     GET_PARAM_BOOL(KPLIB_param_fullHeal, "FOBFullHeal", 1);
+    GET_PARAM_BOOL(KPLIB_param_fullHealCheckEnemies, "FOBFullHealCheckEnemies", 1);
+    GET_PARAM(KPLIB_param_fullHealCooldown, "FOBFullHealCooldown", 300);
     GET_PARAM_BOOL(KPLIB_param_fuelconsumption, "FuelConsumption", 1);
     GET_PARAM_BOOL(KPLIB_param_logistic, "AiLogistics", 1);
     GET_PARAM_BOOL(KPLIB_param_buildingDamaged, "CR_Building", 0);
@@ -405,6 +407,14 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_FOBFULLHEAL";
     _value = if (KPLIB_param_fullHeal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBFULLHEAL_CHECKENEMIES";
+    _value = if (KPLIB_param_fullHealCheckEnemies) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBFULLHEAL_COOLDOWN";
+    _value = if (KPLIB_param_fullHealCooldown == 0) then {localize "STR_PARAMS_DISABLED";} else {str (KPLIB_param_fullHealCooldown / 60);};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_FUELCONSUMPTION";

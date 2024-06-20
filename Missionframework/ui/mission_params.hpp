@@ -263,6 +263,18 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 1;
     };
+    class FOBFullHealCheckEnemies {
+        title = $STR_PARAMS_FOBFULLHEAL_CHECKENEMIES;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
+    class FOBFullHealCooldown {
+        title = $STR_PARAMS_FOBFULLHEAL_COOLDOWN;
+        values[] = {0, 5, 10, 15, 20, 25, 30};
+        texts[] = {$STR_PARAMS_DISABLED, "5", "10", "15", "20", "25", "30"};
+        default = 5;
+    };
     class FuelConsumption {
         title = $STR_PARAMS_FUELCONSUMPTION;
         values[] = {0, 1};

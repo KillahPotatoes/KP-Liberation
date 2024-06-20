@@ -496,28 +496,37 @@
             <Japanese>KP 燃料消費量増加システムを有効化</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL">
-            <Original>Allow Full Heal from Action menu in FOB</Original>
+            <Original>Allow FULL HEAL from Action menu in FOB</Original>
             <Japanese>FOBのアクションメニューから完全治療を許可する</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBFULLHEAL_CHECKENEMIES">
+            <Original>Prevents FULL HEAL if enemy is nearby</Original>
+            <Japanese>敵が近くにいる場合、完全治療を阻止する</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBFULLHEAL_COOLDOWN">
+            <Original>FULL HEAL Cooldown (minutes)</Original>
+            <Japanese>完全治療のクールダウン(分)</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_ACTION">
             <Original>-- FULL HEAL --</Original>
             <Japanese>-- 完全治療 --</Japanese>
         </Key>
-        <Key ID="STR_HEAL_ENEMIES_NEARBY">
+        <Key ID="STR_FULLHEAL_ENEMIES_NEARBY">
             <Original>Cannot heal: hostile forces nearby.</Original>
             <Japanese>治療不可: 敵軍が近くにいます。</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_DONE">
-            <Original>You have fully healed injuries</Original>
+            <Original>You have fully healed</Original>
             <Japanese>負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_APPLY">
             <Original>You have been fully healed\nby %1</Original>
-            <Japanese>%1 によって\n完全に治療されました</Japanese>
+            <Japanese>%1 によって\n負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_COOLDOWN">
-            <Original>Full Heal still on cooldown</Original>
-            <Japanese>完全治療はクールタイム中です</Japanese>
+            <Original>FULL HEAL was attempted but it's still on cooldown.\nAvailable in %1 minutes.</Original>
+            <Japanese>完全治療が試行されましたが、クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
+        </Key>
         </Key>
         <Key ID="STR_FOB_ACTION">
             <Original>-- DEPLOY FOB --</Original>
