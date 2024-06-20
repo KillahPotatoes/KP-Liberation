@@ -6789,6 +6789,10 @@
             <Czech>-- Zvýšit</Czech>
             <Japanese>-- 上げる</Japanese>
         </Key>
+        <Key ID="STR_RESET">
+            <Original>-- Reset</Original>
+            <Japanese>-- リセット</Japanese>
+        </Key>
         <Key ID="STR_LOWER">
             <Original>-- Lower</Original>
             <German>-- Niedriger</German>

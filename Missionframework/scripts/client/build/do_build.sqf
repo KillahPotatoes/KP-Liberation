@@ -96,7 +96,8 @@ while { true } do {
 
             _idactrotate = player addAction ["<t color='#B0FF00'>" + localize "STR_ROTATION" + "</t> <img size='2' image='res\ui_rotation.paa'/>",{build_rotation = build_rotation + 90;},"",-750,false,false,"","build_confirmed == 1"];
             _idactraise = player addAction ["<t color='#B0FF00'>" + localize "STR_RAISE" + "</t>",{build_elevation = build_elevation + 0.2;},"",-765,false,false,"","build_confirmed == 1"];
-            _idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>",{build_elevation = build_elevation - 0.2;},"",-766,false,false,"","build_confirmed == 1"];
+            _idactreset = player addAction ["<t color='#B0FF00'>" + localize "STR_RESET" + "</t>",{build_elevation = 0;},"",-766,false,false,"","build_confirmed == 1"];
+            _idactlower = player addAction ["<t color='#B0FF00'>" + localize "STR_LOWER" + "</t>",{build_elevation = build_elevation - 0.2;},"",-767,false,false,"","build_confirmed == 1"];
             _idactplace = player addAction ["<t color='#B0FF00'>" + localize "STR_PLACEMENT" + "</t> <img size='2' image='res\ui_confirm.paa'/>",{build_confirmed = 2; hint localize "STR_CONFIRM_HINT";},"",-775,false,true,"","build_invalid == 0 && build_confirmed == 1"];
 
             _ghost_spot = (markerPos "ghost_spot") findEmptyPosition [0,100];
@@ -358,6 +359,7 @@ while { true } do {
             player removeAction _idactrotate;
             player removeAction _idactplace;
             player removeAction _idactraise;
+            player removeAction _idactreset;
             player removeAction _idactlower;
 
             if(buildtype == 99) then {
