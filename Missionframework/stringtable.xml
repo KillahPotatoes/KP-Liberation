@@ -539,6 +539,10 @@
             <Japanese>%1 によって\n負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_COOLDOWN">
+            <Original>FULL HEAL was attempted\nby %2\nbut it's still on cooldown.\nAvailable in %1 minutes.</Original>
+            <Japanese>%1 によって\n完全治療が試行されましたが、\n現在クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
+        </Key>
+        <Key ID="STR_FULLHEAL_COOLDOWN_OWN">
             <Original>FULL HEAL was attempted\nbut it's still on cooldown.\nAvailable in %1 minutes.</Original>
             <Japanese>完全治療が試行されましたが、\n現在クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
         </Key>
