@@ -271,8 +271,8 @@ class Params {
     };
     class FOBFullHealCooldown {
         title = $STR_PARAMS_FOBFULLHEAL_COOLDOWN;
-        values[] = {0, 300, 600, 900, 1200, 1800, 3600};
-        texts[] = {$STR_PARAMS_DISABLED, 5, 10, 15, 20, 30, 60};
+        values[] = {0, 60, 180, 300, 420, 600, 900};
+        texts[] = {$STR_PARAMS_DISABLED, 1, 3, 5, 7, 10, 15};
         default = 300;
     };
     class FOBTimeWeather {
