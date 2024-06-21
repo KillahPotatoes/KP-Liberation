@@ -97,10 +97,13 @@ KPLIB_objectInits = [
     
     // disable inventory action and ACE rename of resource crates
     [
-        [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel],
+        KPLIB_crates,
         {
             _this lockInventory true;
-            _this setVariable ["ace_cargo_noRename", true];
+            if (KPLIB_ace) then {
+                [_this, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
+                _this setVariable ["ace_cargo_noRename", true];
+            };
         }
     ],
     

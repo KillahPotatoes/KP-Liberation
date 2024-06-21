@@ -52,8 +52,11 @@ detach _crate;
 [_crate, true] call KPLIB_fnc_clearCargo;
 _crate setPos _unloadPos;
 [_crate, true] remoteExec ["enableRopeAttach"];
-if (KPLIB_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
-
+_crate lockInventory true;
+if (KPLIB_ace) then {
+    [_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
+    _crate setVariable ["ace_cargo_noRename", true];
+};
 // Fill the possible gap in the storage area
 reverse _storedCrates;
 _i = 0;
