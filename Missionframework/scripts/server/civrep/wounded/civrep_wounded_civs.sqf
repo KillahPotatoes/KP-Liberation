@@ -16,7 +16,7 @@ for "_i" from 1 to _count do {
     };
     private _civ = [selectRandom KPLIB_c_units, _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _civ setDir (random 360);
-    {_civ disableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
+    _civ disableAI "ALL";
     removeAllItems _civ;
     _civ setDamage 0.5;
     _civ call F_cr_woundedAnim;
@@ -52,9 +52,10 @@ while {true} do {
                 _healed_civs pushBack _civx;
                 removeAllActions _civx;
                 if (alive _civx) then {
-                    [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExec ["switchMove"];
+                    [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExecCall ["switchMove"];
+                    [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExecCall ["playMoveNow"];
                     sleep 2;
-                    {_civx enableAI _x} forEach ["ANIM", "TARGET", "AUTOTARGET", "MOVE"];
+                    _civx enableAI "ALL";
                     [4, [(name _civx)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     [KPLIB_cr_wounded_gain] call F_cr_changeCR;
                     stats_civilians_healed = stats_civilians_healed +1;
