@@ -22,7 +22,7 @@ if (_CapturedPlayer == objNull) then {
     } forEach _players;
     _CapturedPlayer = _nearestPlayer;
 };
-[[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
+[[_informant], group _capturedPlayer] remoteExec ["joinSilent"];
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
     if !(_isCuffed) then {
