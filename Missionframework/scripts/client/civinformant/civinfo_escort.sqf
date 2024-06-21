@@ -23,6 +23,7 @@ if (_CapturedPlayer == objNull) then {
     _CapturedPlayer = _nearestPlayer;
 };
 [[_informant], group _capturedPlayer] remoteExec ["joinSilent"];
+
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
     if !(_isCuffed) then {
@@ -39,10 +40,11 @@ if (KPLIB_ace) then {
 doStop _informant;
 _informant doFollow _capturedPlayer;
 
+private _is_near_fob = false;
 waitUntil {
     sleep 5;
     private _nearestfob = [getPos _informant] call KPLIB_fnc_getNearestFob;
-    private _is_near_fob = false;
+    _is_near_fob = false;
     if (count _nearestfob == 3) then {
         _is_near_fob = ((_informant distance _nearestfob) < 30);
     };
