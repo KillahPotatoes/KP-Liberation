@@ -59,24 +59,12 @@ while {true} do {
                 _b_action_id2 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_STORE_CRATE" + "</t>",{[(_this select 0), (nearestObjects [player,KPLIB_storageBuildings,20]) select 0,true] call KPLIB_fnc_crateToStorage;},"",-502,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id3 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_VALUE" + "</t>",{[_this select 0] call KPLIB_fnc_checkCrateValue;uiSleep 3; hint "";},"",-503,true,true,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
                 _b_action_id4 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_PUSH" + "</t>",{(_this select 0) setPos ((_this select 0) getPos [1, (player getDir (_this select 0))]);},"",-504,true,false,"","build_confirmed == 0 && (_this distance _target < 5) && (vehicle player == player)"];
-                _b_action_id_carry = _next_box addAction [
-                    "<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_CARRY" + "</t>",
-                    {
-                        params ["_crate", "_player"];
-                        _crate attachTo [_player, [0, 2, 1]];
-                        _player setVariable ["KPLIB_carriedObject", _crate];
-                    },
-                    "", -504, true, false, "",
-                    toString {
-                        build_confirmed == 0 && _this in _this && {isNull (_this getVariable ["KPLIB_carriedObject", objNull])}
-                    },
-                    5 // radius
-                ];
+                _b_action_id5 = _next_box addAction ["<t color='#FFFF00'>" + localize "STR_ACTION_CRATE_CARRY" + "</t>",{params ["_crate", "_player"];_crate attachTo [_player, [0, 2, 1]];_player setVariable ["KPLIB_carriedObject", _crate];},"", -505, true, false, "",toString {build_confirmed == 0 && _this in _this && {isNull (_this getVariable ["KPLIB_carriedObject", objNull])}},5];
                 _next_box setVariable ["KPLIB_ammo_box_action", _b_action_id1, false];
                 _next_box setVariable ["KP_crate_store_action", _b_action_id2, false];
                 _next_box setVariable ["KP_crate_value_action", _b_action_id3, false];
                 _next_box setVariable ["KP_crate_push_action", _b_action_id4, false];
-                _next_box setVariable ["KP_crate_carry_action", _b_action_id_carry, false];
+                _next_box setVariable ["KP_crate_carry_action", _b_action_id5, false];
                 _managed_boxes pushback _next_box;
             };
 
