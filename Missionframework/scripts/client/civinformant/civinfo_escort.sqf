@@ -26,7 +26,7 @@ if (_CapturedPlayer == objNull) then {
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
     if !(_isCuffed) then {
-        ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+        ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
     };
 } else {
     _informant setCaptive false;
@@ -55,11 +55,11 @@ if (alive _informant) then {
         private _grp = createGroup [KPLIB_side_civilian, true];
         [_informant] joinSilent _grp;
         if (KPLIB_ace) then {
-            private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+            private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
-                ["ace_captives_setHandcuffed", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setHandcuffed", [_informant, false], _informant] call CBA_fnc_targetEvent;
             } else {
-                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
             };
             sleep 1;
         };
