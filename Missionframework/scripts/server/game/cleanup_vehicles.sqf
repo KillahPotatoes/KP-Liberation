@@ -1,3 +1,5 @@
+scriptName "cleanup_vehicles";
+
 private [ "_nextvehicle", "_nearestfob", "_reset_ticker" ];
 
 _cleanup_classnames = [];

@@ -15,8 +15,6 @@ private _waypoint = [];
 { deleteWaypoint _x } forEachReversed waypoints _grp;
 {_x doFollow leader _grp} forEach units _grp;
 
-_startpos = getPos (leader _grp);
-
 _waypoint = _grp addWaypoint [_objPos, 100];
 _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "NORMAL";

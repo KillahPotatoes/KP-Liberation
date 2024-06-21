@@ -5716,6 +5716,14 @@
             <German>-- KISTE ABLEGEN</German>
             <Japanese>-- 貨物を置く</Japanese>
         </Key>
+        <Key ID="STR_ACTION_CRATE_CARRY">
+            <Original>-- CARRY CRATE</Original>
+            <German>-- KISTE TRAGEN</German>
+        </Key>
+        <Key ID="STR_ACTION_CRATE_DROP">
+            <Original>-- DROP CRATE</Original>
+            <German>-- KISTE ABLEGEN</German>
+        </Key>
         <Key ID="STR_ACTION_SORT_STORAGE">
             <Original>-- STACK AND SORT</Original>
             <German>-- STAPELN UND SORTIEREN</German>

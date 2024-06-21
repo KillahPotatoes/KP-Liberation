@@ -1,3 +1,5 @@
+scriptName "reinforcements_resetter";
+
 _reset_time = 1800;
 
 reinforcements_set = false;

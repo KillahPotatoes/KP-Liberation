@@ -1,3 +1,5 @@
+scriptName "remote_call_intel";
+
 if (isDedicated) exitWith {};
 
 params ["_notiftype", ["_obj_position", getpos player]];

@@ -1,3 +1,5 @@
+scriptName "remote_call_sector";
+
 if ( isDedicated ) exitWith {};
 
 if ( isNil "sector_timer" ) then { sector_timer = 0 };

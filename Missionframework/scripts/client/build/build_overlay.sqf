@@ -1,3 +1,5 @@
+scriptName "build_overlay";
+
 KPLIB_conflicting_objects = [];
 KPLIB_buildoverlay_icon = "\A3\ui_f\data\map\markers\handdrawn\objective_CA.paa";
 KPLIB_buildoverlay_color = [ 1, 0, 0, 1 ];

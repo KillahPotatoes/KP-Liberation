@@ -1,3 +1,5 @@
+scriptName "building_defence_ai";
+
 params ["_unit", ["_sector", ""]];
 
 //Check LAMBS_Danger.fsm is running. if running, skip KPLIB built in troop garrisoning and call lambs wp garrisoning.

@@ -1,3 +1,5 @@
+scriptName "wait_to_spawn_sector";
+
 params ["_sector", "_opforcount"];
 
 private _start = diag_tickTime;

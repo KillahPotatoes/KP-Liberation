@@ -355,8 +355,11 @@ if (!isNil "_saveData") then {
             [_object] call KPLIB_fnc_addObjectInit;
 
             // Apply kill manager handling, if not excluded
-            if !((toLowerANSI _class) in _noKillHandler) then {
-                _object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+            if !((toLower _class) in _noKillHandler) then {
+                _object addMPEventHandler ["MPKilled", {
+                    params ["_unit", "_killer"];
+                    ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+                }];
             };
 
             // Set enemy vehicle as captured

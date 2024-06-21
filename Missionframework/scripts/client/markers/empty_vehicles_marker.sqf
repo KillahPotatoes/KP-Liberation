@@ -1,3 +1,5 @@
+scriptName "empty_vehicles_marker";
+
 private [ "_vehmarkers", "_markedveh", "_cfg", "_vehtomark", "_supporttomark", "_marker" ];
 
 _vehmarkers = [];

@@ -2,7 +2,7 @@
     File: fn_addActionsPlayer.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-13
-    Last Update: 2023-03-18
+    Last Update: 2023-10-28
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -411,17 +411,30 @@ _player addAction [
 // Drop crate
 _player addAction [
     ["<t color='#FFFF00'>", localize "STR_ACTION_CRATE_DROP", "</t>"] joinString "",
-    {detach (((attachedObjects player) select {(typeOf _x) in [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]}) select 0)},
+    {
+        params ["_player"];
+        private _crate = _player getVariable ["KPLIB_carriedObject", objNull];
+
+        // prevent players from putting crates inside vehicles
+        private _crateSize = sizeOf typeOf _crate * 1.5;
+        private _nearObjects = (_crate nearEntities [["Man", "Air", "Car", "Tank"], _crateSize]) - [_crate, _player];
+        if (_nearObjects isNotEqualTo []) exitWith {
+            hint format [localize "STR_PLACEMENT_IMPOSSIBLE", count _nearObjects, _crateSize toFixed 0];
+        };
+
+        _player setVariable ["KPLIB_carriedObject", nil];
+        detach _crate;
+        _crate awake true;
+    },
     nil,
     -504,
     true,
     false,
     "",
-    "
-        alive _originalTarget
-        && {!((((attachedObjects _originalTarget) apply {typeOf _x}) arrayIntersect [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel]) isEqualTo [])}
-        && {build_confirmed isEqualTo 0}
-    "
+    toString {
+        alive _originalTarget &&
+        build_confirmed == 0 && _this in _this && {!isNull (_this getVariable ["KPLIB_carriedObject", objNull])}
+    }
 ];
 
 // Full Heal

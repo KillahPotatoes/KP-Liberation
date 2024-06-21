@@ -1,3 +1,5 @@
+scriptName "spawn_camera";
+
 private [ "_nearest_sector", "_leadingzero_hour", "_leadingzero_minute", "_startpos0", "_startpos1", "_endpos1", "_startpos2", "_endpos2", "_startpos3", "_endpos3", "_spawn_camera", "_datestring" ];
 params [ "_spawn_str" ];
 

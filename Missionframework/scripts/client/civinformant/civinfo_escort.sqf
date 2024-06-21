@@ -1,3 +1,5 @@
+scriptName "civinfo_escort";
+
 params ["_informant"];
 
 if (isDedicated) exitWith {};

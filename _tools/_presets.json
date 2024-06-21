@@ -235,7 +235,7 @@
     },
     {
         "sourceFolder": "kp_liberation.gm_weferlingen_summer",
-        "missionName": "KPLIB_east",
+        "missionName": "kp_liberation_ger_east",
         "map": "gm_weferlingen_summer",
         "mapDisplay": "Weferlingen",
         "configFile": "KPLIB_config.sqf",
@@ -250,7 +250,7 @@
     },
     {
         "sourceFolder": "kp_liberation.gm_weferlingen_winter",
-        "missionName": "KPLIB_east",
+        "missionName": "kp_liberation_ger_east",
         "map": "gm_weferlingen_winter",
         "mapDisplay": "Weferlingen Winter",
         "configFile": "KPLIB_config.sqf",
@@ -265,7 +265,7 @@
     },
     {
         "sourceFolder": "kp_liberation.Takistan",
-        "missionName": "KPLIB_afrf",
+        "missionName": "kp_liberation_afrf",
         "map": "Takistan",
         "configFile": "KPLIB_config.sqf",
         "variables": {

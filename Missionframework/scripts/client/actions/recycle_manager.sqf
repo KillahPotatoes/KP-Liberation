@@ -1,3 +1,5 @@
+scriptName "recycle_manager";
+
 private _recycleable_vehicles = [];
 private _recycleable_classnames = [];
 veh_action_detect_distance = 20;

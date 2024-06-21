@@ -1,8 +1,11 @@
 # Changelog
 
 ## 0.96.8 (TBD)
+* Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
+* Added: Ability to carry ressource crates.
+* Added: Scripts/configs to setup and run development environment from VSCode tasks
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
-* Tweaked: Splitted the config file in seperate files, as it was getting quite big.
+* Tweaked: Splitted the config file in separate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.
 * Tweaked: Arsenal presets are now in the presets folder.
 * Tweaked: Blacklist and arsenal extension are now own files in presets/arsenal.
@@ -10,6 +13,7 @@
 * Tweaked: Parameter value variables are having a `param` prefix now.
 * Tweaked: Comments/structure of the config file. Also added some category prefix sorting to some config variables.
 * Tweaked: GM East enemy preset, lower the chance for unarmed BRDM.
+* Tweaked: Moved mission build tool into subdirectory
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: FOB truck got mass set, but should've just apply to FOB boxes.

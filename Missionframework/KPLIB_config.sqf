@@ -380,5 +380,8 @@ KPLIB_battlegroup_clearance = [
     "Cam_Lao_Nam"
 ];
 
+// Delay after death for wrecks and corpses to be deleted
+KPLIB_cleanup_delay = 1200;
+
 // Automatic refill magazines on redeploy and load arsenal. true means fill.
 KPLIB_fill_mags = true;

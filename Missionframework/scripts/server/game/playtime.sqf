@@ -1,3 +1,5 @@
+scriptName "KPLIB_playtime";
+
 waitUntil { !isNil "KPLIB_saveLoaded" };
 waitUntil { KPLIB_saveLoaded };
 

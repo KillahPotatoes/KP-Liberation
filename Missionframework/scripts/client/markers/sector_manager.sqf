@@ -1,3 +1,5 @@
+scriptName "sector_manager";
+
 waitUntil {!isNil "KPLIB_saveLoaded"};
 waitUntil {!isNil "KPLIB_vehicle_to_military_base_links"};
 waitUntil {!isNil "KPLIB_sectors_player"};

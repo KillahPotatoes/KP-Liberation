@@ -1,3 +1,5 @@
+scriptName "readiness_increase";
+
 waitUntil {!isNil "KPLIB_saveLoaded" && {KPLIB_saveLoaded}};
 
 while {true} do {

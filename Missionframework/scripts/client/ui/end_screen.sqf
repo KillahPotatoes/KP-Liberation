@@ -1,3 +1,5 @@
+scriptName "end_screen";
+
 params [
     "_stats_ammo_produced",
     "_stats_ammo_spent",

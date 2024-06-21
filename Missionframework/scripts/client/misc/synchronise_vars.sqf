@@ -1,3 +1,5 @@
+scriptName "synchronise_vars";
+
 one_synchro_done = false;
 synchro_done = false;
 

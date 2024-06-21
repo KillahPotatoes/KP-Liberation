@@ -1,3 +1,5 @@
+scriptName "show_fps";
+
 private _sourcestr = "Server";
 private _position = 0;
 

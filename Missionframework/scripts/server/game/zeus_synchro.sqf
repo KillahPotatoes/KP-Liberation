@@ -1,3 +1,5 @@
+scriptName "zeus_synchro";
+
 waitUntil {!isNil "KPLIB_b_potato01"};
 
 // Classnames of objects which should be added as editable for Zeus

@@ -1,3 +1,5 @@
+scriptName "huron_marker";
+
 private [ "_huronlocal" ];
 
 "huronmarker" setMarkerTextLocal localize "STR_HURON01_NAME";
