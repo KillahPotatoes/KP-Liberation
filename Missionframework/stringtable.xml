@@ -511,12 +511,12 @@
             <Japanese>KP 燃料消費量増加システムを有効化</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL">
-            <Original>Allow FULL HEAL from Action menu in FOB</Original>
-            <Japanese>FOBのアクションメニューから完全治療を許可する</Japanese>
+            <Original>FULL HEAL Action at FOB and Medical Facility and Huron Medical Container</Original>
+            <Japanese>完全治療をFOBや医療施設、Huron医療コンテナで行えるようにする</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL_CHECKENEMIES">
-            <Original>Prevents FULL HEAL if enemy is nearby</Original>
-            <Japanese>敵が近くにいる場合、完全治療を阻止する</Japanese>
+            <Original>FULL HEAL disabled by if enemy is nearby</Original>
+            <Japanese>完全治療を敵が近くにいる場合に無効化</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL_COOLDOWN">
             <Original>FULL HEAL Cooldown (minutes)</Original>
