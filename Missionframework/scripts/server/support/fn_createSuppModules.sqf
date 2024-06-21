@@ -2,7 +2,7 @@
     File: fn_createSuppModules.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-21
-    Last Update: 2020-05-23
+    Last Update: 2023-03-07
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -40,9 +40,13 @@ publicVariable "KPLIB_param_supportModule_arty";
     [KPLIB_param_supportModule_req] call BIS_fnc_moduleSupportsInitRequester;
     [KPLIB_param_supportModule_arty] call BIS_fnc_moduleSupportsInitProvider;
 
-    // Hide the three HQ entities created at zero pos. BIS scripts only hides them local for the creator
+    // Hide and move the three HQ entities created at zero pos to gamelogic position. BIS scripts only hides them local for the creator
     waitUntil {!isNil "BIS_SUPP_HQ_WEST" && !isNil "BIS_SUPP_HQ_EAST" && !isNil "BIS_SUPP_HQ_GUER"};
     {
+        _x setPosASL getPosASL gamelogic;   // avoid HQ entities are drown and dying
+        _x setCaptive true;                 // hide HQ entities from radiotower detector and unitcap
+        _x setUnitCombatMode "BLUE";        // setes never engage
+        removeAllWeapons _x;                // avoid HQ entities becoming killing machines
         hideObjectGlobal _x;
     } forEach [BIS_SUPP_HQ_WEST, BIS_SUPP_HQ_EAST, BIS_SUPP_HQ_GUER]
 };

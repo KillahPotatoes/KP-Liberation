@@ -43,7 +43,7 @@ while {true} do {
         if (count _respawn_trucks == count _markers_mobilespawns) then {
             for "_idx" from 0 to ((count _markers_mobilespawns) - 1) do {
                 (_markers_mobilespawns select _idx) setMarkerPosLocal getPos (_respawn_trucks select _idx);
-                (_markers_mobilespawns select _idx) setMarkerTextLocal format ["%1 %2", localize "STR_RESPAWN_TRUCK", mapGridPosition (_respawn_trucks select _idx)];
+                (_markers_mobilespawns select _idx) setMarkerTextLocal format ["%1 %2", localize "STR_RESPAWN_TRUCK", [_respawn_trucks select _idx] call KPLIB_fnc_getMobileRespawnName];
             };
         };
     };

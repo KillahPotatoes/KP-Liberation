@@ -143,7 +143,7 @@ if (dialog) then {sleep 3};
 [692, format [localize "STR_STATS_REINFORCEMENTS", _stats_reinforcements_called]] call _addReportLine;
 [693, format [localize "STR_STATS_COMBATREADINESS", round _stats_readiness_earned]] call _addReportLine;
 [694, format [localize "STR_STATS_IEDS", _stats_ieds_detonated]] call _addReportLine;
-[695, format [localize "STR_STATS_POTATO", _stats_potato_respawns]] call _addReportLine;
+[695, format [localize "STR_STATS_POTATO", _stats_potato_respawns, localize "STR_HURON01_NAME"]] call _addReportLine;
 [696, format [localize "STR_STATS_RABBITS", _stats_rabbits_killed], true] call _addReportLine;
 [] call _cleanPage;
 

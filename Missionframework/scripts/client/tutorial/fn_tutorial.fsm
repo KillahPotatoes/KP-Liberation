@@ -491,7 +491,7 @@ class FSM
                                         priority = 1.000000;
                                         to="Slingload_crate";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!KP_liberation_fob_vehicle"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!KPLIB_param_fobVehicle"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -502,7 +502,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Drive_the_truck";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"KP_liberation_fob_vehicle"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"KPLIB_param_fobVehicle"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -642,7 +642,7 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
                                          "    (((KPLIB_sectors_fob select 0) nearObjects KPLIB_range_fob) select {" \n
-                                         "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 0" \n
+                                         "        (_x getVariable [""KPLIB_storage_type"", -1]) == 0" \n
                                          "    }) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -850,7 +850,7 @@ class FSM
                          "private _wounded_markers = allMapMarkers select {_x find ""wounded_marker_"" == 0};" \n
                          "{" \n
                          "     _civs append (" \n
-                         "        ((markerPos _x) nearEntities [""Man"", 25]) select {(damage _x) > 0.4}" \n
+                         "        ((markerPos _x) nearEntities [""CAManBase"", 25]) select {(damage _x) > 0.4}" \n
                          "    );" \n
                          "} forEach _wounded_markers;" \n
                          "" \n
@@ -918,7 +918,7 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!(" \n
                                          "    (((markerPos _factory) nearObjects KPLIB_range_fob) select {" \n
-                                         "        (_x getVariable [""KP_liberation_storage_type"", -1]) == 1" \n
+                                         "        (_x getVariable [""KPLIB_storage_type"", -1]) == 1" \n
                                          "    }) isEqualTo []" \n
                                          ")"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -956,7 +956,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Complete_tasks_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(((KP_liberation_production select {(_x select 1) isEqualTo _factory}) select 0) select 7) < 3"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(((KPLIB_production select {(_x select 1) isEqualTo _factory}) select 0) select 7) < 3"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

@@ -10,6 +10,11 @@
         Check the comments above each variable for details.
 */
 
+// Vehicle classnames which should be ignored on kp_fuel_consumption.
+kp_fuel_ignore_vehicles = [
+    "gm_ge_army_bicycle_01_oli"
+];
+
 // Vehicle classnames which also function as ACE medical vehicles.
 KPLIB_medical_vehicles = [
     "B_T_Truck_01_medical_F",
@@ -73,6 +78,7 @@ KPLIB_medical_facilities = [
 
 // Classnames of ACE crates
 KPLIB_ace_crates = [
+    "ACE_Box_82mm_Mo_Combo",
     "ACE_Box_82mm_Mo_HE",
     "ACE_Box_82mm_Mo_Illum",
     "ACE_Box_82mm_Mo_Smoke",
@@ -409,22 +415,73 @@ KPLIB_intelObjectClasses = [
 
 // Classnames of buildings inside military sectors, which are valid to hold intel items
 KPLIB_intelBuildingClasses = [
+    "Land_A_Office01_EP1",
+    "Land_A_Stationhouse_ep1",
+    "Land_Airport_01_hangar_F",
+    "Land_Airport_02_controlTower_F",
+    "Land_Ammostore2",
+    "Land_Army_hut_int",
+    "Land_Army_hut2_int",
+    "Land_Army_hut3_long_int",
+    "Land_Barrack2",
+    "Land_Barracks_02_F",
+    "Land_Barracks_03_F",
+    "Land_Barracks_04_F",
+    "Land_Barracks_06_F",
+    "Land_Bunker_01_HQ_F",
+    "Land_Bunker_01_tall_F",
     "Land_Cargo_House_V1_F",
     "Land_Cargo_House_V2_F",
     "Land_Cargo_House_V3_F",
     "Land_Cargo_HQ_V1_F",
     "Land_Cargo_HQ_V2_F",
     "Land_Cargo_HQ_V3_F",
+    "Land_Cargo_Tower_V1_No1_F",
+    "Land_Cargo_Tower_V1_No2_F",
+    "Land_Cargo_Tower_V1_No3_F",
+    "Land_Cargo_Tower_V1_No4_F",
+    "Land_Cargo_Tower_V2_F",
+    "Land_ControlTower_01_F",
+    "Land_Garaz_bez_tanku",
+    "Land_Garaz_mala",
+    "Land_GuardHouse_01_F",
+    "Land_GuardHouse_02_F",
+    "Land_Hangar_2",
+    "Land_Hlidac_budka",
+    "Land_House_C_4_EP1",
+    "Land_House_C_5_V3_EP1",
+    "Land_HouseV2_02_Interier",
+    "Land_Hut01",
+    "Land_Hut02",
     "Land_i_Barracks_V1_dam_F",
     "Land_i_Barracks_V1_F",
     "Land_i_Barracks_V2_dam_F",
     "Land_i_Barracks_V2_F",
+    "Land_ibr_terminal",
+    "Land_Ind_Workshop01_01",
+    "Land_Ind_Workshop01_02",
+    "Land_Ind_Workshop01_03",
+    "Land_Ind_Workshop01_04",
+    "Land_Ind_Workshop01_L",
+    "Land_MBG_Police_Station",
     "Land_Medevac_house_V1_F",
     "Land_Medevac_HQ_V1_F",
+    "Land_Mil_Barracks",
+    "Land_Mil_Barracks_i",
+    "Land_Mil_ControlTower",
     "Land_MilOffices_V1_F",
+    "Land_Offices_01_V1_F",
+    "Land_PowerStation_01_F",
+    "Land_Radar_01_antenna_base_F",
+    "Land_Radar_01_HQ_F",
     "Land_Research_house_V1_F",
     "Land_Research_HQ_F",
-    "Land_u_Barracks_V2_F"
+    "Land_Shed_Ind02",
+    "Land_Ss_hangar",
+    "Land_tent_east",
+    "Land_TentHangar_V1_F",
+    "Land_u_Barracks_V2_F",
+    "Land_Warehouse_03_F"
 ];
 
 // Array of radio tower classnames to place at radio tower sectors. If more than one is added, it'll be selected random for each sector on campaign start.
@@ -470,7 +527,13 @@ KPLIB_collisionIgnoreObjects = [
     "Sign_Sphere100cm_F",
     "Land_ClutterCutter_large_F",
     "Land_HighVoltageColumnWire_F",
-    "Land_PowerWireBig_left_F",
+    "Land_PowerLine_01_wire_50m_F",    
+    "Land_PowerLine_01_wire_50m_main_F",    
+    "Land_PowerLine_03_pole_F",    
+    "Land_PowerLine_02_pole_junction_A_F",
+    "Land_PowerLine_02_pole_small_F",
+    "Land_PowerWireBig_left_F",    
+    "Land_PowerWireBig_direct_F",
     "B_HMG_01_F",                                                       // Mk30A HMG .50
     "B_HMG_01_high_F",                                                  // Mk30 HMG .50 (Raised)
     "B_HMG_01_A_F",                                                     // Mk30 HMG .50 (Autonomous)
@@ -480,7 +543,38 @@ KPLIB_collisionIgnoreObjects = [
     "B_static_AT_F",                                                    // Static Titan Launcher (AT)
     "B_static_AA_F",                                                    // Static Titan Launcher (AA)
     "B_Mortar_01_F",                                                    // Mk6 Mortar
+    "TFAR_Land_Communication_F",
     "ACE_friesAnchorBar",                                               // ACE FRIES
     "ACE_friesGantryReverse",                                           // ACE FRIES
-    "ACE_friesGantry"                                                   // ACE FRIES
+    "ACE_friesGantry",                                                  // ACE FRIES
+    "ACE_LogicDummy",
+    "ACE_medicalSupplyCrate_advanced",
+    "ACE_Track",
+    "ACE_Wheel",
+    "Land_CanisterFuel_F",
+    "GroundWeaponHolder",
+    "Land_HelipadCivil_F",
+    "Land_HelipadEmpty_F",
+    "Land_JumpTarget_F",
+    "Land_ClutterCutter_large_F",
+    "Land_Can_V2_F",
+    "Sign_Arrow_Blue_F",
+    "Sign_Arrow_Cyan_F",
+    "Sign_Arrow_Direction_Blue_F",
+    "Sign_Arrow_Direction_Cyan_F",
+    "Sign_Arrow_Direction_F",
+    "Sign_Arrow_Direction_Green_F",
+    "Sign_Arrow_Direction_Pink_F",
+    "Sign_Arrow_Direction_Yellow_F",
+    "Sign_Arrow_F",
+    "Sign_Arrow_Green_F",
+    "Sign_Arrow_Large_Blue_F",
+    "Sign_Arrow_Large_Cyan_F",
+    "Sign_Arrow_Large_F",
+    "Sign_Arrow_Large_Green_F",
+    "Sign_Arrow_Large_Pink_F",
+    "Sign_Arrow_Large_Yellow_F",
+    "Sign_Arrow_Pink_F",
+    "Sign_Arrow_Yellow_F",
+    "Sign_Sphere100cm_F"
 ];

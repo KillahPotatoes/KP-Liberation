@@ -24,7 +24,7 @@ params [
 ];
 
 // Validate parameters
-if !((toLower _cratetype) in KPLIB_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
+if !((toLowerANSI _cratetype) in KPLIB_crates) exitWith {["Invalid craty type given: %1", _cratetype] call BIS_fnc_error; false};
 if (isNull _storage) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 // Get correct storage positions

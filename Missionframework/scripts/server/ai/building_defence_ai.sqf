@@ -2,6 +2,9 @@ scriptName "building_defence_ai";
 
 params ["_unit", ["_sector", ""]];
 
+//Check LAMBS_Danger.fsm is running. if running, skip KPLIB built in troop garrisoning and call lambs wp garrisoning.
+if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) exitWith {[_unit, _unit, 40] call lambs_wp_fnc_taskGarrison;};
+
 _unit setUnitPos "UP";
 _unit disableAI "PATH";
 private _move_is_disabled = true;
@@ -17,7 +20,7 @@ while {_move_is_disabled && local _unit && alive _unit && !(captive _unit)} do {
 
     _range = floor (linearConversion [0, 1, _ratio, 0, KPLIB_range_sectorCapture / 3 * 2, true]);
 
-    _hostiles = ((getPos _unit) nearEntities [["Man"], _range]) select {side _x == KPLIB_side_player};
+    _hostiles = (_unit nearEntities [["CAManBase"], _range]) select {side _x == KPLIB_side_player};
 
     if (_move_is_disabled &&
         {

@@ -149,9 +149,9 @@ while {dialog && (alive player)} do {
 
         switch ((_selectedGroup select 7)) do {
             case 0: {ctrlSetText[758011, "-"]; ctrlSetText[75807, localize "STR_LOGISTIC_STANDBY"];};
-            case 1: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 2);	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 2)]; ctrlMapAnimCommit _mapdisplay;};
+            case 1: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 2); _mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 2)]; ctrlMapAnimCommit _mapdisplay;};
             case 2: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_TRAVEL"]; ctrlEnable [758081, true];};
-            case 3: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 3);	_mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 3)]; ctrlMapAnimCommit _mapdisplay;};
+            case 3: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_LOADING"]; ctrlEnable [758081, true]; "spawn_marker" setMarkerPosLocal (_selectedGroup select 3); _mapdisplay ctrlMapAnimAdd [0.5, 0.2,(_selectedGroup select 3)]; ctrlMapAnimCommit _mapdisplay;};
             case 4: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_TRAVEL"]; ctrlEnable [758081, true];};
             case 5: {ctrlSetText[758011, "A"]; ctrlSetText[75807, localize "STR_LOGISTIC_ABORT"];};
             case 6: {ctrlSetText[758011, "B"]; ctrlSetText[75807, localize "STR_LOGISTIC_ABORT"];};

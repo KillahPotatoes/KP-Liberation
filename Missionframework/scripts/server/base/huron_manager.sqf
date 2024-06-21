@@ -6,7 +6,7 @@ waitUntil {KPLIB_saveLoaded};
 KPLIB_potato01 = objNull;
 
 // Detect possible Potato 01 from loaded save data
-private _savedPotato = vehicles select {(toLower (typeOf _x)) isEqualTo (toLower KPLIB_b_potato01)};
+private _savedPotato = vehicles select {(toLowerANSI (typeOf _x)) isEqualTo (toLowerANSI KPLIB_b_potato01)};
 if !(_savedPotato isEqualTo []) then {
     KPLIB_potato01 = _savedPotato select 0;
 };

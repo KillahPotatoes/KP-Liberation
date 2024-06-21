@@ -27,7 +27,7 @@ private _grp = createVehicleCrew _veh;
 
 // If the config crew isn't the correct side, replace it with the crew classnames from the preset
 if ((side _grp) != KPLIB_side_player) then {
-    {deleteVehicle _x} forEach (units _grp);
+    deleteVehicleCrew _veh;
 
     _grp = createGroup [KPLIB_side_player, true];
     while {count units _grp < 3} do {

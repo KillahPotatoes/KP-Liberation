@@ -16,12 +16,10 @@
 */
 
 private _respawn_trucks = vehicles select {
-    (typeOf _x) in [KPLIB_b_mobileRespawn, KPLIB_b_potato01] &&
+    (typeOf _x) in (KPLIB_b_mobileRespawns + [KPLIB_b_potato01]) &&
     {alive _x} &&
     {_x distance2d startbase > 500} &&
-    {abs (speed _x) < 5} &&
-    {(isTouchingGround _x || {5 > ((getPos _x) select 2)})} &&
-    {!surfaceIsWater (getPos _x)}
+    {abs (speed _x) < 5}
 };
 
 [_respawn_trucks, [], {(getPos _x) select 0}, 'ASCEND'] call BIS_fnc_sortBy

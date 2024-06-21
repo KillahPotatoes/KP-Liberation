@@ -2,6 +2,8 @@
 
 // Check if ACE is running
 if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KPLIB_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
+// Check if ACE Medical is running
+if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KPLIB_ace_med = true; ["ACE Medical detected. switch some script for ACE Medical.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_med = false};
 
 /* Not saveable params */
 KPLIB_param_wipe_savegame_1 = ["WipeSave1", 0] call bis_fnc_getParamValue;
@@ -19,7 +21,6 @@ KPLIB_highcommand_debug = ["DebugHighCommand", 0] call bis_fnc_getParamValue;
 KP_load_params = ["LoadSaveParams", 1] call BIS_fnc_getParamValue;
 
 if(isServer) then {
-    private _start = diag_tickTime;
     /* Saveable params */
     ["----- Server starts parameter initialization", "PARAM"] call KPLIB_fnc_log;
     switch (KP_load_params) do {
@@ -61,7 +62,7 @@ if(isServer) then {
     GET_PARAM(KPLIB_param_victoryCondition, "VictoryCondition", 0);
 
     // Deactivate BI Revive when ACE Medical is running
-    if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {
+    if (KPLIB_ace_med) then {
         bis_reviveParam_mode = 0; publicVariable "bis_reviveParam_mode";
         ["ACE Medical detected. Deactivating BI Revive System.", "PARAM"] call KPLIB_fnc_log;
     } else {
@@ -87,6 +88,11 @@ if(isServer) then {
     GET_PARAM(KPLIB_param_mobileRespawnCooldown, "RespawnCooldown", 900);
     GET_PARAM_BOOL(KPLIB_param_mobileArsenal, "MobileArsenal", 1);
     GET_PARAM_BOOL(KPLIB_param_attackedFobRespawn, "AttackedSectorRespawn", 0);
+    GET_PARAM_BOOL(KPLIB_param_fullHeal, "FOBFullHeal", 1);
+    GET_PARAM_BOOL(KPLIB_param_fullHealCheckEnemies, "FOBFullHealCheckEnemies", 1);
+    GET_PARAM(KPLIB_param_fullHealCooldown, "FOBFullHealCooldown", 300);
+    GET_PARAM_BOOL(KPLIB_param_timeweather, "FOBTimeWeather", 1);
+    GET_PARAM_BOOL(KPLIB_param_fuelconsumption, "FuelConsumption", 1);
     GET_PARAM_BOOL(KPLIB_param_logistic, "AiLogistics", 1);
     GET_PARAM_BOOL(KPLIB_param_buildingDamaged, "CR_Building", 0);
     GET_PARAM(KPLIB_param_halo, "HaloJump", 1);
@@ -111,11 +117,6 @@ if(isServer) then {
 
     GREUH_allow_mapmarkers = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_mapmarkers";
     GREUH_allow_platoonview = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_platoonview";
-
-    KPLIB_param_serverInitDone = true;
-    publicVariable "KPLIB_param_serverInitDone";
-
-    [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 // Fix for not working float values in mission params
@@ -208,6 +209,13 @@ switch (KPLIB_param_victoryCondition) do {
             (count (KPLIB_sectors_player select {_x in KPLIB_sectors_capital})) == (count KPLIB_sectors_capital)
         };
     };
+};
+
+if(isServer) then {
+    private _start = diag_tickTime;
+    KPLIB_param_serverInitDone = true;
+    publicVariable "KPLIB_param_serverInitDone";
+    [format ["----- Server finished parameter initialization - Time needed: %1 seconds", diag_ticktime - _start], "PARAM"] call KPLIB_fnc_log;
 };
 
 if (!isDedicated && hasInterface) then {
@@ -396,6 +404,26 @@ if (!isDedicated && hasInterface) then {
 
     _param = localize "STR_PARAMS_ATTACKEDSECTORRESPAWN";
     _value = if (KPLIB_param_attackedFobRespawn) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBFULLHEAL";
+    _value = if (KPLIB_param_fullHeal) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBFULLHEAL_CHECKENEMIES";
+    _value = if (KPLIB_param_fullHealCheckEnemies) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBFULLHEAL_COOLDOWN";
+    _value = if (KPLIB_param_fullHealCooldown == 0) then {localize "STR_PARAMS_DISABLED";} else {str (KPLIB_param_fullHealCooldown / 60);};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FOBTIMEWEATHER";
+    _value = if (KPLIB_param_timeweather) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
+    _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
+
+    _param = localize "STR_PARAMS_FUELCONSUMPTION";
+    _value = if (KPLIB_param_fuelconsumption) then {localize "STR_PARAMS_ENABLED";} else {localize "STR_PARAMS_DISABLED";};
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_AILOGISTICS";

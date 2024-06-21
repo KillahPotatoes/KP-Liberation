@@ -25,7 +25,7 @@ while { true } do {
 
     _markedveh = [];
     {
-        if (alive _x && (toLower (typeof _x)) in _vehtomark && (count (crew _x)) == 0 && (_x distance2d startbase) > 500) then {
+        if (alive _x && (toLowerANSI (typeof _x)) in _vehtomark && (count (crew _x)) == 0 && (_x distance2d startbase) > 500) then {
             _markedveh pushback _x;
         };
     } foreach vehicles;

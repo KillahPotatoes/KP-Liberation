@@ -24,6 +24,9 @@ send_paratroopers = compile preprocessFileLineNumbers "scripts\server\patrols\se
 fob_hunting = compile preprocessFileLineNumbers "scripts\server\secondary\fob_hunting.sqf";
 convoy_hijack = compile preprocessFileLineNumbers "scripts\server\secondary\convoy_hijack.sqf";
 search_and_rescue = compile preprocessFileLineNumbers "scripts\server\secondary\search_and_rescue.sqf";
+civ_supplies = compile preprocessFileLineNumbers "scripts\server\secondary\civ_supplies.sqf";
+bingo_fuel = compile preprocessFileLineNumbers "scripts\server\secondary\bingo_fuel.sqf";
+rearm_outpost = compile preprocessFileLineNumbers "scripts\server\secondary\rearm_outpost.sqf";
 
 // Sector
 attack_in_progress_fob = compile preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_fob.sqf";
@@ -57,6 +60,8 @@ execVM "scripts\server\offloading\show_fps.sqf";
 execVM "scripts\server\patrols\civilian_patrols.sqf";
 execVM "scripts\server\patrols\manage_patrols.sqf";
 execVM "scripts\server\patrols\reinforcements_resetter.sqf";
+// SAM turret manager
+execVM "scripts\server\ai\SAM_turret_manager.sqf";
 if (KPLIB_param_logistic) then {execVM "scripts\server\resources\manage_logistics.sqf";};
 execVM "scripts\server\resources\manage_resources.sqf";
 execVM "scripts\server\resources\recalculate_resources.sqf";
@@ -125,7 +130,7 @@ execVM "scripts\server\offloading\group_diag.sqf";
 
 {
     if ((_x != player) && (_x distance (markerPos KPLIB_respawn_marker) < 200 )) then {
-        deleteVehicle _x;
+        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
     };
 } forEach allUnits;
 

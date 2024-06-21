@@ -13,7 +13,7 @@ sleep 5;
 waitUntil { sleep 0.3; !isNil "KPLIB_sectors_player" };
 waitUntil { sleep 0.3; count KPLIB_sectors_player > 3 };
 
-if (worldName != "song_bin_tanh") then {
+if !(worldName in KPLIB_battlegroup_clearance) then {
     {
         [_x, false] spawn manage_one_patrol;
         sleep 1;

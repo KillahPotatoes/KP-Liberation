@@ -106,7 +106,7 @@ while {true} do {
 
                 {
                     KPLIB_respawnPositionsList pushBack [
-                        format ["%1 - %2", localize "STR_RESPAWN_TRUCK", mapGridPosition getPosATL _x],
+                       format ["%1 - %2", localize "STR_RESPAWN_TRUCK",  [_x] call KPLIB_fnc_getMobileRespawnName],
                         getPosATL _x,
                         _x
                     ];
@@ -185,16 +185,18 @@ while {true} do {
         if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
             private _truck = (KPLIB_respawnPositionsList select _idxchoice) select 2;
             player setposATL (_truck getPos [5 + (random 3), random 360]);
+            player setDir (random 360);
             KPLIB_respawn_mobile_done = true;
         } else {
             private _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
             player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
+            player setDir (random 360);
         };
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
             if (KPLIB_ace && KPLIB_param_arsenalType) then {
-                [player, _selectedLoadout select 1, KP_liberation_fill_mags] call CBA_fnc_setLoadout;
+                [player, _selectedLoadout select 1, KPLIB_fill_mags] call CBA_fnc_setLoadout;
             } else {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
             };

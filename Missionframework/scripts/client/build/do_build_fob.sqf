@@ -6,8 +6,8 @@ if ( count KPLIB_sectors_fob >= KPLIB_param_maxFobs ) exitWith {
     hint format [ localize "STR_HINT_FOBS_EXCEEDED", KPLIB_param_maxFobs ];
 };
 
-_minfobdist = 1000;
-_minsectordist = KPLIB_range_sectorCapture + KPLIB_range_fob;
+_minfobdist = KPLIB_distance_fob;
+_minsectordist = KPLIB_distance_sector;
 _distfob = 1;
 _clearedtobuildfob = true;
 _distsector = 1;

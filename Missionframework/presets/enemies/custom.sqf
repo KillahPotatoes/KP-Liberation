@@ -128,7 +128,7 @@ KPLIB_o_battleGrpVehiclesLight = [
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
-If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
+If something in this array can't hold all 8 soldiers then buggy behaviours may occur. */
 KPLIB_o_troopTransports = [
     "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
@@ -148,4 +148,38 @@ KPLIB_o_helicopters = [
 KPLIB_o_planes = [
     "O_Plane_CAS_02_dynamicLoadout_F",                                  // To-199 Neophron (CAS)
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_HMG = [
+    "O_HMG_01_F",
+    "O_HMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_GMG = [
+    "O_GMG_01_F",
+    "O_GMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AT = [
+    "O_static_AT_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AA = [
+    "O_static_AA_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_MORTAR = [
+    "O_Mortar_01_F"
+];
+
+// Enemy SAM turrets that will be spawned in the back country
+KPLIB_o_turrets_SAM = [
+    ["B_SAM_System_01_F"], 
+    ["B_SAM_System_02_F"], 
+    ["O_SAM_System_04_F", "O_Radar_System_02_F"]
 ];

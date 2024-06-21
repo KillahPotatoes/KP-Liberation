@@ -2,7 +2,7 @@
     File: fn_getUnitsCount.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-22
+    Last Update: 2023-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,9 +23,9 @@ params [
     ["_side", KPLIB_side_player, [sideEmpty]]
 ];
 
-private _amount = _side countSide ((_pos nearEntities ["Man", _radius]) select {!(captive _x) && ((getpos _x) select 2 < 500)});
+private _amount = _side countSide ((_pos nearEntities ["CAManBase", _radius]) select {!(captive _x) && ((getpos _x) select 2 < 500) && lifeState _x != "INCAPACITATED"});
 {
     _amount = _amount + (_side countSide (crew _x));
-} forEach ((_pos nearEntities [["Car", "Tank", "Air", "Boat"], _radius]) select {((getpos _x) select 2 < 500) && count (crew _x) > 0});
+} forEach ((_pos nearEntities [["Car", "Tank", "Air", "Ship"], _radius]) select {((getpos _x) select 2 < 500) && count (crew _x) > 0});
 
 _amount

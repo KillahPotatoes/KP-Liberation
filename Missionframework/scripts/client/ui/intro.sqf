@@ -9,9 +9,9 @@ waitUntil { time > 0 };
 if ( KPLIB_param_introCinematic ) then {
 
     sleep 1;
-    cutRsc ["intro1","PLAIN",1,true];
+    "TAG_libintro1" cutRsc ["intro1","PLAIN",1,true];
     sleep 5.5;
-    cutRsc ["intro2","PLAIN",1,true];
+    "TAG_libintro1" cutRsc ["intro2","PLAIN",1,true];
     sleep 10;
 
 };

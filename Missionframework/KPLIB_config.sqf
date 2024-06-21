@@ -2,7 +2,7 @@
     File: KPLIB_config.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-08-06
+    Last Update: 2023-03-24
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -163,10 +163,10 @@ KPLIB_color_enemyActive = "ColorRED";
 */
 
 // Name of the save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-KPLIB_save_key = "KP_LIBERATION_" + (toUpper worldName) + "_SAVEGAME";
+KPLIB_save_key = "KP_LIBERATION_" + (toUpperANSI worldName) + "_SAVEGAME";
 
 // Name of the parameter save data variable inside of the [ServerProfileName].vars.Arma3Profile file.
-KPLIB_save_paramKey = "KP_LIBERATION_" + (toUpper worldName) + "_SAVE_PARAMS";
+KPLIB_save_paramKey = "KP_LIBERATION_" + (toUpperANSI worldName) + "_SAVE_PARAMS";
 
 // Interval in seconds for automatic save.
 KPLIB_save_interval = 60;
@@ -186,13 +186,26 @@ KPLIB_range_fob = 125;
 KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
-KPLIB_range_sectorActivation = 1000;
+KPLIB_range_sectorActivation   = 1000;
+KPLIB_range_capitalActivation  = 1000;
+KPLIB_range_cityActivation     = 500;
+KPLIB_range_factoryActivation  = 150;
+KPLIB_range_militaryActivation = 1200;
+KPLIB_range_towerActivation    = 250;
+KPLIB_range_airSpawnActivation = 500;
+KPLIB_range_pointActivation    = 300;
 
 // Range to capture a sector.
 KPLIB_range_sectorCapture = 175;
 
 // Radio Tower scanning range.
 KPLIB_range_radioTowerScan = 2500;
+
+// Minimum distance to next FOB.
+KPLIB_distance_fob = 1000;
+
+// Minimum distance to next sector.
+KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 
 
 /*
@@ -260,11 +273,14 @@ KPLIB_cr_wounded_gain = 2;
 ------------------------------------------------------------
 */
 
-// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR]
-KPLIB_secondary_missions_costs = [15, 10, 8];
+// Intel price for the secondary missions. [FOB hunting, Convoy ambush, SAR, CIV, FUEL, REARM]
+KPLIB_secondary_missions_costs = [15, 10, 8, 8, 8, 8];
 
 // Proportionate reduction of the actual (!) enemy combat readiness for a successful FOB hunt. (e.g. 0.4 -> reduction of 24 by an actual value of 60)
 KPLIB_secondary_objective_impact = 0.4;
+
+// The percentage increase received when completing a Humanitarian Aid secondary objective
+KPLIB_secondary_objective_civ_supplies_impact = 10;
 
 // Minimum time until a civil Informant can spawn. (seconds)
 KPLIB_civinfo_min = 5400;
@@ -276,7 +292,7 @@ KPLIB_civinfo_max = 10800;
 KPLIB_civinfo_chance = 75;
 
 // Intel gain for talking to a civil informant.
-KPLIB_civinfo_intel = 5;
+KPLIB_civinfo_intel = 10;
 
 // Time until a civil informant will despawn after spawning. (seconds)
 KPLIB_civinfo_duration = 1200;
@@ -358,11 +374,14 @@ KPLIB_surrender_chance = 80;
 
 // When playing on this map, it'll create a clearance (remove terrain objects) in a 15m radius around the battlegroup/reinforcements spawnpoint.
 KPLIB_battlegroup_clearance = [
-    "song_bin_tanh"
+    "song_bin_tanh",
+    "khe_sanh",
+    "lingor3",
+    "Cam_Lao_Nam"
 ];
 
 // Delay after death for wrecks and corpses to be deleted
 KPLIB_cleanup_delay = 1200;
 
-// Fill magazines on loading loadout?
-KP_liberation_fill_mags = true;
+// Automatic refill magazines on redeploy and load arsenal. true means fill.
+KPLIB_fill_mags = true;

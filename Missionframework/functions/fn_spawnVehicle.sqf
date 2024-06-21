@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-10-28
+    Last Update: 2023-11-14
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -28,7 +28,6 @@ params [
 if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; objNull};
 if (_classname isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; objNull};
 
-
 private _newvehicle = objNull;
 private _spawnpos = [];
 
@@ -45,7 +44,7 @@ if (_precise) then {
     };
 };
 
-if (_spawnPos isEqualTo zeroPos) exitWith {
+if (_spawnPos isEqualTo []) exitWith {
     ["No suitable spawn position found."] call BIS_fnc_error;
     [format ["Couldn't find spawn position for %1 around position %2", _classname, _pos], "WARNING"] call KPLIB_fnc_log;
     objNull
@@ -72,7 +71,7 @@ if (_classname in KPLIB_o_helicopters) then {
 
 // Clear cargo, if enabled
 [_newvehicle] call KPLIB_fnc_clearCargo;
-
+_newvehicle addItemCargoGlobal ["toolkit", 1];
 // Process KP object init
 [_newvehicle] call KPLIB_fnc_addObjectInit;
 

@@ -17,10 +17,10 @@ KPLIB_arsenalWeapons = [
     "arifle_MXC_F",                                                 // MXC 6.5 mm
     "arifle_MXM_F",                                                 // MXM 6.5 mm
     "arifle_SDAR_F",                                                // SDAR 5.56 mm
-	"srifle_LRR_camo_F",                                            // M320 LRR .408 (Camo)
+    "srifle_LRR_camo_F",                                            // M320 LRR .408 (Camo)
     "SMG_01_F",                                                     // Vermin SMG .45 ACP
     "MMG_02_sand_F",                                                // SPMG .338 (Sand)
-	"srifle_DMR_02_sniper_F",                                       // MAR-10 .338 (Sand)
+    "srifle_DMR_02_sniper_F",                                       // MAR-10 .338 (Sand)
     "srifle_DMR_03_tan_F",                                          // Mk-I EMR 7.62 mm (Sand)
 
     // Handgun
@@ -69,7 +69,7 @@ KPLIB_arsenalItems = [
     "U_B_FullGhillie_ard",                                          // Full Ghillie (Arid) [NATO]
     "U_B_FullGhillie_sard",                                         // Full Ghillie (Semi-Arid) [NATO]
     "U_B_FullGhillie_lsh",                                          // Full Ghillie (Lush) [NATO]
-	"U_B_CBRN_Suit_01_MTP_F",                                       // CBRN Suit (MTP) [NATO]
+    "U_B_CBRN_Suit_01_MTP_F",                                       // CBRN Suit (MTP) [NATO]
 
     // Headgear
     "H_Watchcap_camo",                                              // Beanie (Green)

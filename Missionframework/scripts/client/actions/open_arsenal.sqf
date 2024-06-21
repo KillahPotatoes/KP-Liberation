@@ -1,7 +1,7 @@
 scriptName "open_arsenal";
 
 if (KPLIB_param_directArsenal) exitWith {
-    if (KP_liberation_ace && KP_liberation_arsenal_type) then {
+    if (KPLIB_ace && KPLIB_param_arsenalType) then {
         [player, player, false] call ace_arsenal_fnc_openBox;
     } else {
         ["Open", false] spawn BIS_fnc_arsenal;
@@ -85,7 +85,7 @@ while { dialog && (alive player) && edit_loadout == 0 } do {
     if ( load_loadout > 0 ) then {
         private _loaded_loadout = _loadouts_data select (lbCurSel 201);
         if (KPLIB_ace && KPLIB_param_arsenalType) then {
-           [player, _loaded_loadout select 1, KP_liberation_fill_mags] call CBA_fnc_setLoadout;
+           [player, _loaded_loadout select 1, KPLIB_fill_mags] call CBA_fnc_setLoadout;
         } else {
             [player, [profileNamespace, _loaded_loadout]] call BIS_fnc_loadInventory;
         };

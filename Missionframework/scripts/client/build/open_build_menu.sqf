@@ -2,7 +2,7 @@ scriptName "open_build_menu";
 
 private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
-if (([ getpos player , 500 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
+if (([ getpos player , 300 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
 
 if (isNil "buildtype") then {buildtype = 1};
 if (isNil "buildindex") then {buildindex = -1};
@@ -51,12 +51,33 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ctrlSetText [151, _buildpages select ( buildtype - 1)];
             if (buildtype != 8) then {
                 _classnamevar = (_x select 0);
+                _customName = (_x select 4);
                 _entrytext = getText (_cfg >> _classnamevar >> "displayName");
-
+                if (!isNil {_customName}) then {
+                    if (_customName != "") then {
+                        _entrytext = _customName;
+                    };
+                };
+                
+                if (_classnamevar in KPLIB_b_mobileRespawns) then {
+                    if (KPLIB_param_mobileRespawn) then {
+                        if (typeName KPLIB_b_mobileRespawn == typeName "") then {
+                            if (_classnamevar == KPLIB_b_mobileRespawn) then {
+                                _entrytext = localize "STR_RESPAWN_TRUCK";
+                            };
+                        } else {
+                            {
+                                if (_classnamevar == _x) exitWith {
+                                    _entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> _x >> "displayName");
+                                };
+                            } forEach KPLIB_b_mobileRespawns;
+                        };
+                    };
+                };
+                
                 switch (_classnamevar) do {
                     case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
                     case KPLIB_b_arsenal: {if (KPLIB_param_mobileArsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
-                    case KPLIB_b_mobileRespawn: {if (KPLIB_param_mobileRespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
                     case KPLIB_b_fobTruck: {_entrytext = localize "STR_FOBTRUCK";};
                     case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
                     case KPLIB_b_smallStorage: {_entrytext = localize "STR_SMALL_STORAGE";};
@@ -104,6 +125,15 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [0.4,0.4,0.4,1]];
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [0.4,0.4,0.4,1]];
             };
+            if (buildtype != 8) then {
+                _classnamevar = (_x select 0);
+                if ( _classnamevar isEqualTo "Sign_Arrow_F") then {
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 0], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 1], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [1,1,0,1]];
+                };
+            };
 
         } foreach _build_list;
     };
@@ -130,7 +160,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
             ((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
         ) then {
             if !((_build_item select 0) isEqualType []) then {
-                if ((toLower (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
+                if ((toLowerANSI (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
                     if (KPLIB_b_airControl_near &&
                         ((((_build_item select 0) isKindOf "Helicopter") && (KPLIB_heli_count < KPLIB_heli_slots)) ||
                         (((_build_item select 0) isKindOf "Plane") && (KPLIB_plane_count < KPLIB_plane_slots)))
@@ -138,7 +168,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                         _affordable = true;
                     };
                 } else {
-                    if (!((toLower (_build_item select 0)) in KPLIB_airSlots) || (((toLower (_build_item select 0)) in KPLIB_airSlots) && KPLIB_b_airControl_near)) then {
+                    if (!((toLowerANSI (_build_item select 0)) in KPLIB_airSlots) || (((toLowerANSI (_build_item select 0)) in KPLIB_airSlots) && KPLIB_b_airControl_near)) then {
                         _affordable = true;
                     };
                 };

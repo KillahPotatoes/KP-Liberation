@@ -20,6 +20,22 @@ if (KPLIB_production_markers isEqualTo []) then {
 private _KPLIB_production_old = [0];
 private _KPLIB_logistics_old = [0];
 
+KPLIB_production_markers_default = [];
+{
+    KPLIB_production_markers_default pushBack [_x, markerText _x];
+} forEach KPLIB_sectors_factory;
+
+{
+    private _markerName = _x select 0; 
+    private _markerText = _x select 4; 
+    { 
+        if (_markerName == (_x select 0)) then { 
+            _markerText = _x select 1; 
+        }; 
+    } forEach KPLIB_production_markers_default; 
+    _x set [4, _markerText]; 
+} forEach KPLIB_production_markers;
+
 while {true} do {
 
     waitUntil {sleep 0.25;

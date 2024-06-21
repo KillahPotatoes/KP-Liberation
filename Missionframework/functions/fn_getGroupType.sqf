@@ -2,7 +2,7 @@
     File: fn_getGroupType.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-11-25
-    Last Update: 2020-04-25
+    Last Update: 2023-04-22
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -36,14 +36,14 @@ private _parent = objNull;
 
 // Exit with infantry, if not as crew in objectParent
 if (_vehType isEqualTo "") exitWith {_grpType};
-
+_vehType = toLowerANSI _vehType;
 // Otherwise continue to get the type of the vehicle
 [] call {
-    if ((toLower _vehType) in KPLIB_b_light_classes) exitWith {_grpType = "light";};
-    if ((toLower _vehType) in KPLIB_b_heavy_classes) exitWith {_grpType = "heavy";};
-    if ((toLower _vehType) in KPLIB_b_air_classes) exitWith {_grpType = "air";};
-    if ((toLower _vehType) in KPLIB_b_static_classes) exitWith {_grpType = "static";};
-    if ((toLower _vehType) in KPLIB_b_support_classes) exitWith {_grpType = "support";};
+    if (_vehType in KPLIB_b_light_classes) exitWith {_grpType = "light";};
+    if (_vehType in KPLIB_b_heavy_classes) exitWith {_grpType = "heavy";};
+    if (_vehType in KPLIB_b_air_classes) exitWith {_grpType = "air";};
+    if (_vehType in KPLIB_b_static_classes) exitWith {_grpType = "static";};
+    if (_vehType in KPLIB_b_support_classes) exitWith {_grpType = "support";};
     if ([_vehType] call KPLIB_fnc_isClassUAV) exitWith {_grpType = "uav";};
 };
 

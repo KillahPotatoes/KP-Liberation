@@ -59,9 +59,15 @@ if (KPLIB_sectors_fob isEqualTo []) then {
         _crate setVariable ["KPLIB_crate_value", 100, true];
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
-        if (KPLIB_ace) then {[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+        _crate lockInventory true;
+        if (KPLIB_ace) then {
+            [_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
+            _crate setVariable ["ace_cargo_noRename", true];
+        };
         KPLIB_startCrates pushBack _crate;
     };
+    
+    publicVariable "KPLIB_startCrates";
 
     // Spawn green smoke on the crates short before they hit the ground
     uiSleep 25;

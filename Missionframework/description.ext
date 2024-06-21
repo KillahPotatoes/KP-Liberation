@@ -2,7 +2,7 @@
     File: description.ext
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-07-06
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,7 +25,7 @@ class Header {
 };
 
 // Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
-author = "[GREUH] Zbug & McKeewa, KP Liberation Dev Team";
+author = $STR_MISSION_AUTHOR;
 
 
 /*
@@ -40,7 +40,7 @@ briefingName = $STR_MISSION_TITLE;
 overviewPicture = "res\lib.paa";
 
 // Text to be displayed below the overviewPicture on the mission selection screen
-overviewText = "github.com/KillahPotatoes";
+overviewText = $STR_MISSION_OVERVIEW;
 
 
 /*
@@ -56,7 +56,7 @@ onLoadName = $STR_MISSION_TITLE;
 loadScreen = "res\lib.paa";
 
 // Displays a message while the mission is loading below the loadScreen picture.
-onLoadMission = "github.com/KillahPotatoes";
+onLoadMission = $STR_MISSION_ONLOAD;
 
 
 /*
@@ -248,3 +248,24 @@ class CfgTaskDescriptions {
 #include "KP\KPGUI\KPGUI_defines.hpp"
 #include "KP\KPPLM\ui\KPPLM_dialog.hpp"
 
+#include "VAM_GUI\defines.hpp"
+#include "VAM_GUI\VAM_GUI_controls.hpp"
+#include "VAM_GUI\VAM_GUI_classes.hpp"
+
+class ACEX_Fortify_Presets {
+    class KPLIB_Fortify {
+        displayName = "KPLIB Fortify";
+        objects[] = {
+            {"Land_BagFence_Round_F", 5},
+            {"Land_BagFence_Short_F", 5},
+            {"Land_BagFence_Long_F", 10},
+            {"Land_Plank_01_4m_F", 10},
+            {"Land_BagBunker_Small_F", 25},
+            {"Land_Razorwire_F", 10},
+            {"RoadBarrier_F", 1},
+            {"RoadCone_F", 1},
+            {"Land_Campfire_F", 1},
+            {"CamoNet_wdl_open_F", 30}
+        };
+    };
+};

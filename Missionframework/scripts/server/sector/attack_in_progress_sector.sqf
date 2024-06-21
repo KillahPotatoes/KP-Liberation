@@ -68,7 +68,13 @@ if ( KPLIB_endgame == 0 ) then {
         } forEach KPLIB_production;
     } else {
         [_sector, 3] remoteExec ["remote_call_sector"];
-        {[_x] spawn prisonner_ai;} foreach (((markerpos _sector) nearEntities ["Man", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
+        {
+            if (captive _x) then {
+                [_x, true] spawn prisonner_ai;
+            } else {
+                [_x] spawn prisonner_ai;
+            };
+        } foreach (((markerpos _sector) nearEntities ["CAManBase", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
     };
 };
 
@@ -76,6 +82,6 @@ sleep 60;
 
 if ( KPLIB_param_bluforDefenders ) then {
     {
-        if ( alive _x ) then { deleteVehicle _x };
+        if ( alive _x ) then { if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x}; };
     } foreach units _grp;
 };

@@ -22,17 +22,17 @@ params ["_unit", "_killer"];
         };
 
         // Weights adjustments depending on what vehicle the BLUFOR killer used
-        if (_killer isKindOf "Man") then {
+        if (_killer isKindOf "CAManBase") then {
             infantry_weight = infantry_weight + 1;
             armor_weight = armor_weight - 0.66;
             air_weight = air_weight - 0.66;
         } else {
-            if ((toLower (typeOf (vehicle _killer))) in KPLIB_allLandVeh_classes) then  {
+            if ((toLowerANSI (typeOf (vehicle _killer))) in KPLIB_allLandVeh_classes) then  {
                 infantry_weight = infantry_weight - 0.66;
                 armor_weight = armor_weight + 1;
                 air_weight = air_weight - 0.66;
             };
-            if ((toLower (typeOf (vehicle _killer))) in KPLIB_allAirVeh_classes) then  {
+            if ((toLowerANSI (typeOf (vehicle _killer))) in KPLIB_allAirVeh_classes) then  {
                 infantry_weight = infantry_weight - 0.66;
                 armor_weight = armor_weight - 0.66;
                 air_weight = air_weight + 1;
@@ -55,7 +55,7 @@ params ["_unit", "_killer"];
     };
 
     // Check for Man or Vehicle
-    if (_unit isKindOf "Man") then {
+    if (_unit isKindOf "CAManBase") then {
 
         // OPFOR casualty
         if (side (group _unit) == KPLIB_side_enemy) then {
@@ -110,7 +110,7 @@ params ["_unit", "_killer"];
             // Killed by BLUFOR
             if (side _killer == KPLIB_side_player) then {
                 if (KPLIB_civrep_debug > 0) then {[format ["Civilian killed by: %1", name _killer], "CIVREP"] call KPLIB_fnc_log;};
-                [2, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                [2, [(name _unit), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                 [KPLIB_cr_kill_penalty, true] spawn F_cr_changeCR;
             };
 
@@ -121,7 +121,7 @@ params ["_unit", "_killer"];
         };
     } else {
         // Enemy vehicle casualty
-        if ((toLower (typeof _unit)) in KPLIB_o_allVeh_classes) then {
+        if ((toLowerANSI (typeof _unit)) in KPLIB_o_allVeh_classes) then {
             stats_opfor_vehicles_killed = stats_opfor_vehicles_killed + 1;
 
             // Destroyed by player

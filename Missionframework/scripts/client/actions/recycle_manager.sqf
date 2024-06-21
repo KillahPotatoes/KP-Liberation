@@ -21,10 +21,10 @@ while {true} do {
 
     if ([4] call KPLIB_fnc_hasPermission) then {
         private _detected_vehicles = (getPos player) nearObjects veh_action_detect_distance select {
-            (((toLower (typeof _x)) in _recycleable_classnames && (({alive _x} count (crew _x)) == 0 || unitIsUAV _x) && (locked _x == 0 || locked _x == 1)) ||
-            (toLower (typeOf _x)) in KPLIB_b_deco_classes ||
-            (((toLower (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KPLIB_storage_type",-1]) == 0)) ||
-            (toLower (typeOf _x)) in KPLIB_upgradeBuildings ||
+            (((toLowerANSI (typeof _x)) in _recycleable_classnames && (({alive _x} count (crew _x)) == 0 || unitIsUAV _x) && (locked _x == 0 || locked _x == 1)) ||
+            (toLowerANSI (typeOf _x)) in KPLIB_b_deco_classes ||
+            (((toLowerANSI (typeOf _x)) in KPLIB_storageBuildings) && ((_x getVariable ["KPLIB_storage_type",-1]) == 0)) ||
+            (toLowerANSI (typeOf _x)) in KPLIB_upgradeBuildings ||
             (typeOf _x) in KPLIB_ace_crates) &&
             alive _x &&
             (

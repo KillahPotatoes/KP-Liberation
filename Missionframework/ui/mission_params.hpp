@@ -257,6 +257,36 @@ class Params {
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
         default = 0;
     };
+    class FOBFullHeal {
+        title = $STR_PARAMS_FOBFULLHEAL;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
+    class FOBFullHealCheckEnemies {
+        title = $STR_PARAMS_FOBFULLHEAL_CHECKENEMIES;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
+    class FOBFullHealCooldown {
+        title = $STR_PARAMS_FOBFULLHEAL_COOLDOWN;
+        values[] = {0, 300, 600, 900, 1200, 1800, 3600};
+        texts[] = {$STR_PARAMS_DISABLED, 5, 10, 15, 20, 30, 60};
+        default = 300;
+    };
+    class FOBTimeWeather {
+        title = $STR_PARAMS_FOBTIMEWEATHER;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
+    class FuelConsumption {
+        title = $STR_PARAMS_FUELCONSUMPTION;
+        values[] = {0, 1};
+        texts[] = {$STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED};
+        default = 1;
+    };
     class AiLogistics {
         title = $STR_PARAMS_AILOGISTICS;
         values[] = {0, 1};

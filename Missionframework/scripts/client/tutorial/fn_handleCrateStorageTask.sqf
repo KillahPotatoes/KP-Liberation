@@ -36,7 +36,7 @@ if (!canSuspend) exitWith {_this spawn KPLIB_fnc_handleCrateStorageTask};
     true
 ] call BIS_fnc_taskCreate;
 
-waitUntil {sleep 0.1; (toLower (typeOf (attachedTo _obj))) in KPLIB_storageBuildings};
+waitUntil {sleep 0.1; (toLowerANSI (typeOf (attachedTo _obj))) in KPLIB_storageBuildings};
 
 [_taskId, "SUCCEEDED", false] call BIS_fnc_taskSetState;
 

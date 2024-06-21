@@ -36,7 +36,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 {
     _fobPos = _x;
     _fobObjects = (_fobPos nearObjects (KPLIB_range_fob * 1.2)) select {
-        ((toLower (typeof _x)) in KPLIB_classnamesToSave) &&        // Exclude classnames which are not in the presets
+        ((toLowerANSI (typeof _x)) in KPLIB_classnamesToSave) &&        // Exclude classnames which are not in the presets
         {alive _x} &&                                               // Exclude dead or broken objects
         {getObjectType _x >= 8} &&                                  // Exclude preplaced terrain objects
         {speed _x < 5} &&                                           // Exclude moving objects (like civilians driving through)
@@ -44,10 +44,10 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
         {!(_x getVariable ["KPLIB_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
         {!(_x getVariable ["KPLIB_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
-        {!((toLower (typeOf _x)) in KPLIB_crates)}                  // Exclude storage crates (those are handled separately)
+        {!((toLowerANSI (typeOf _x)) in KPLIB_crates)}                  // Exclude storage crates (those are handled separately)
     };
 
-    _allObjects = _allObjects + (_fobObjects select {!((toLower (typeOf _x)) in KPLIB_storageBuildings)});
+    _allObjects = _allObjects + (_fobObjects select {!((toLowerANSI (typeOf _x)) in KPLIB_storageBuildings)});
     _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KPLIB_storage_type",-1]) == 0});
 
     // Process all groups near this FOB
@@ -79,7 +79,7 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
     _hasCrew = false;
 
     // Determine if vehicle is crewed
-    if ((toLower _class) in KPLIB_b_allVeh_classes) then {
+    if ((toLowerANSI _class) in KPLIB_b_allVeh_classes) then {
         if (({!isPlayer _x} count (crew _x) ) > 0) then {
             _hasCrew = true;
         };
@@ -88,7 +88,7 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew"];
     // Only save player side, seized or captured objects
     if (
         (!(_class in KPLIB_c_vehicles) || {_x getVariable ["KPLIB_seized", false]}) &&
-        (!((toLower _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
+        (!((toLowerANSI _class) in KPLIB_o_allVeh_classes) || {_x getVariable ["KPLIB_captured", false]})
     ) then {
         _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew];
     };

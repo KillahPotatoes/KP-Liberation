@@ -7,14 +7,14 @@ dorecycle = 0;
 
 private _type = typeOf _vehToRecycle;
 private _cfg = configFile >> "cfgVehicles";
-private _suppMulti = 0.5;
-private _ammoMulti = 0.5;
-private _fuelMulti = 0.5;
+private _suppMulti = 0.75;
+private _ammoMulti = 0.75;
+private _fuelMulti = 0.75;
 
 if !(
-    ((toLower _type) in KPLIB_b_deco_classes) ||
-    ((toLower _type) in KPLIB_storageBuildings) ||
-    ((toLower _type) in KPLIB_upgradeBuildings) ||
+    ((toLowerANSI _type) in KPLIB_b_deco_classes) ||
+    ((toLowerANSI _type) in KPLIB_storageBuildings) ||
+    ((toLowerANSI _type) in KPLIB_upgradeBuildings) ||
     (_type in KPLIB_ace_crates) ||
     (_type == "B_Slingload_01_Repair_F") ||
     (_type == "B_Slingload_01_Fuel_F") ||
@@ -44,7 +44,7 @@ private _price_s = 0;
 private _price_a = 0;
 private _price_f = 0;
 
-if ((toLower _type) in KPLIB_o_allVeh_classes) then {
+if ((toLowerANSI _type) in KPLIB_o_allVeh_classes) then {
     if (_vehToRecycle isKindOf "Car") then {
         _price_s = round (60 * _suppMulti);
         _price_a = round (25 * _ammoMulti);

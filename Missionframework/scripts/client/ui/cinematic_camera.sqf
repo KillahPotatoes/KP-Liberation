@@ -55,7 +55,7 @@ while { cinematic_camera_started } do {
         _position = selectRandom (_positions - [_last_position]);
         _last_position = _position;
         _cinematic_pointer setpos [ _position select 0, _position select 1, (_position select 2) + 7 ];
-        private _nearentities = _position nearEntities [ "Man", 100 ];
+        private _nearentities = _position nearEntities [ "CAManBase", 100 ];
         private _camtarget = _cinematic_pointer;
         if ( first_camera_round ) then {
             _camtarget = startbase;
@@ -252,7 +252,7 @@ while { cinematic_camera_started } do {
                 if ( isPlayer _camtarget ) then { _unitname = name _camtarget };
                 private _nearest_sector = "";
                 if ( _position distance startbase < 300 ) then {
-                    _nearest_sector = "BEGIN OF OPERATION";
+                    _nearest_sector = localize "STR_STARTBASE"
                 } else {
                     _nearest_sector = [300, _position ] call KPLIB_fnc_getNearestSector;
                     if ( _nearest_sector != "" ) then {

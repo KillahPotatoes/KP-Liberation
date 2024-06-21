@@ -76,7 +76,7 @@ while { KPLIB_endgame == 0 } do {
         };
 
         while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-        {_x doFollow leader _grp} foreach units _grp;
+        {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         {
             _nearestroad = [(markerPos _x) getPos [random(100), random(360)], 200, []] call BIS_fnc_nearestRoad;

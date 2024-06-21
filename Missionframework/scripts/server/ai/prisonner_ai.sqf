@@ -1,10 +1,11 @@
 params ["_unit", ["_force_surrender", false]];
 
+// define who do not surrender
 if ((!_force_surrender) && ((random 100) > KPLIB_surrender_chance)) exitWith {};
 
-if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_enemy)) then {
+if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (alive _unit)) then {
 
-    if (vehicle _unit != _unit) then {deleteVehicle _unit};
+    if (!isNull objectParent _unit) then {objectParent _unit deleteVehicleCrew _unit};
 
     sleep (random 5);
 
@@ -16,14 +17,13 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
         };
         removeBackpack _unit;
         removeVest _unit;
-        _unit unassignItem "NVGoggles_OPFOR";
-        _unit removeItem "NVGoggles_OPFOR";
-        _unit unassignItem "NVGoggles_INDEP";
-        _unit removeItem "NVGoggles_INDEP";
+        _unit unlinkItem hmd _unit;
         _unit setUnitPos "UP";
         sleep 1;
-        private _grp = createGroup [KPLIB_side_civilian, true];
+        private _grp = createGroup [KPLIB_side_enemy, true];
         [_unit] joinSilent _grp;
+        _unit setVariable ["KPLIB_prisonner_surrendered", true, true];
+
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
         } else {
@@ -33,19 +33,48 @@ if ((_unit isKindOf "Man") && (alive _unit) && (side group _unit == KPLIB_side_e
             sleep 2;
             _unit setCaptive true;
         };
-        waitUntil {sleep 1;
-            !alive _unit || side group _unit == KPLIB_side_player
+        waitUntil {
+            sleep 1;
+            private _isCaptured = _unit getVariable ["KPLIB_prisonner_captured", false];
+            private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+            !alive _unit || _isCaptured || _isCuffed
         };
 
         if (alive _unit) then {
+            private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", objNull];
+            if (_CapturedPlayer == objNull) then {
+                private _players = allPlayers;
+                private _nearestPlayer = objNull;
+                private _minDistance = 100;
+                {
+                    private _distance = _unit distance _x;
+                    if (_distance < _minDistance) then {
+                        _minDistance = _distance;
+                        _nearestPlayer = _x;
+                    };
+                } forEach _players;
+                _CapturedPlayer = _nearestPlayer;
+            };
+            [[_unit], group _CapturedPlayer] remoteExecCall ["joinSilent"];
             if (KPLIB_ace) then {
-                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+                if (_isCuffed) then {
+                    _unit setVariable ["KPLIB_prisonner_captured", true, true];
+                } else {
+                    ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                };
             } else {
+                _unit setCaptive false;
                 _unit enableAI "ANIM";
                 _unit enableAI "MOVE";
-                _unit setCaptive false;
+                sleep 1;
+                _unit playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+                sleep 2;
+                [_unit, ""] remoteExecCall ["switchMove"];
             };
             sleep 1;
+            doStop _unit;
+            _unit doFollow _CapturedPlayer;
             [_unit] remoteExec ["remote_call_prisonner", _unit];
         };
     };

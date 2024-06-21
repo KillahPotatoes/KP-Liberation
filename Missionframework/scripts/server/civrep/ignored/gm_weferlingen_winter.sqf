@@ -1,4 +1,7 @@
 KPLIB_cr_ign_buildings = [
+    "Land_ClutterCutter_large_F",
+    "Land_ShellCrater_02_debris_F",
+    "Land_DirtPatch_03_F",
     "land_gm_euro_beersign_01",
     "land_gm_euro_beersign_02",
     "land_gm_euro_beersign_03",

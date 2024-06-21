@@ -114,7 +114,7 @@ if (KPLIB_param_useArsenalPreset) then {
     if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
 
     // Lowering to avoid issues with incorrect capitalized classnames in KPLIB_fnc_checkGear
-    KPLIB_arsenalAllowed = KPLIB_arsenalAllowed apply {toLower _x};
+    KPLIB_arsenalAllowed = KPLIB_arsenalAllowed apply {toLowerANSI _x};
 } else {
     [missionNamespace, true] call BIS_fnc_addVirtualWeaponCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;

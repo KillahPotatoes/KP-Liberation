@@ -39,7 +39,7 @@ clearWeaponCargoGlobal _container;
         _weaponNonPreset = _weapon;
     };
 
-    if ((toLower ([_x] call BIS_fnc_baseWeapon)) in KPLIB_arsenalAllowed) then {
+    if ((toLowerANSI ([_x] call BIS_fnc_baseWeapon)) in KPLIB_arsenalAllowed) then {
         _container addWeaponCargoGlobal [_weaponNonPreset, 1];
 
         // If weapon does not have a non-preset parent, only add attachments that were custom added
@@ -50,32 +50,32 @@ clearWeaponCargoGlobal _container;
             _presetAttachments = _components;
         };
 
-        if !(toLower _muzzle in _presetAttachments) then {
-            if (toLower _muzzle in KPLIB_arsenalAllowed) then {
+        if !(toLowerANSI _muzzle in _presetAttachments) then {
+            if (toLowerANSI _muzzle in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_muzzle, 1];
             } else {
                 _removed pushBack _muzzle;
             }
         };
 
-        if !(toLower _pointer in _presetAttachments) then {
-            if (toLower _pointer in KPLIB_arsenalAllowed) then {
+        if !(toLowerANSI _pointer in _presetAttachments) then {
+            if (toLowerANSI _pointer in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_pointer, 1];
             } else {
                 _removed pushBack _pointer;
             }
         };
 
-        if !(toLower _optic in _presetAttachments) then {
-            if (toLower _optic in KPLIB_arsenalAllowed) then {
+        if !(toLowerANSI _optic in _presetAttachments) then {
+            if (toLowerANSI _optic in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_optic, 1];
             } else {
                 _removed pushBack _optic;
             }
         };
 
-        if !(toLower _bipod in _presetAttachments) then {
-            if (toLower _bipod in KPLIB_arsenalAllowed) then {
+        if !(toLowerANSI _bipod in _presetAttachments) then {
+            if (toLowerANSI _bipod in KPLIB_arsenalAllowed) then {
                 _container addItemCargoGlobal [_bipod, 1];
             } else {
                 _removed pushBack _bipod;
@@ -84,7 +84,7 @@ clearWeaponCargoGlobal _container;
 
         _magazine params [["_magazineClass", ""], ["_magazineAmmoCount", 0]];
         if (_magazineClass != "") then {
-            if (toLower _magazineClass in KPLIB_arsenalAllowed) then {
+            if (toLowerANSI _magazineClass in KPLIB_arsenalAllowed) then {
                 _container addMagazineAmmoCargo [_magazineClass, 1, _magazineAmmoCount];
             } else {
                 _removed pushBack _magazineClass;
@@ -93,7 +93,7 @@ clearWeaponCargoGlobal _container;
 
         _magazineGL params [["_magazineGLClass", ""], ["_magazineGLAmmoCount", 0]];
         if (_magazineGLClass != "") then {
-            if (toLower _magazineGLClass in KPLIB_arsenalAllowed) then {
+            if (toLowerANSI _magazineGLClass in KPLIB_arsenalAllowed) then {
                 _container addMagazineAmmoCargo [_magazineGLClass, 1, _magazineGLAmmoCount];
             } else {
                 _removed pushBack _magazineGLClass;

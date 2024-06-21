@@ -33,7 +33,7 @@ if (hasInterface) then {
 };
 
 // All classnames of objects which should be saved
-KPLIB_classnamesToSave = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
+KPLIB_classnamesToSave = [toLowerANSI KPLIB_b_fobBuilding, toLowerANSI KPLIB_b_potato01];
 
 /*
     --- Locals ---
@@ -44,7 +44,7 @@ private _aiGroups = [];
 // Current campaign date and time
 private _dateTime = [];
 // Vehicles which shouldn't be handled in the kill manager
-private _noKillHandler = [toLower KPLIB_b_fobBuilding, toLower KPLIB_b_potato01];
+private _noKillHandler = [toLowerANSI KPLIB_b_fobBuilding, toLowerANSI KPLIB_b_potato01];
 // All objects which should be loaded/saved
 private _objectsToSave = [];
 // All storages which are handled for resource persistence
@@ -337,7 +337,7 @@ if (!isNil "_saveData") then {
         };
 
         // Only spawn, if the classname is still in the presets
-        if ((toLower _class) in KPLIB_classnamesToSave) then {
+        if ((toLowerANSI _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -363,7 +363,7 @@ if (!isNil "_saveData") then {
             };
 
             // Set enemy vehicle as captured
-            if ((toLower _class) in KPLIB_o_allVeh_classes) then {
+            if ((toLowerANSI _class) in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];
             };
 
@@ -412,7 +412,7 @@ if (!isNil "_saveData") then {
         _x params ["_class", "_pos", "_vecDir", "_vecUp", "_supply", "_ammo", "_fuel"];
 
         // Only spawn, if the classname is still in the presets
-        if ((toLower _class) in KPLIB_classnamesToSave) then {
+        if ((toLowerANSI _class) in KPLIB_classnamesToSave) then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
@@ -516,23 +516,24 @@ publicVariable "KPLIB_sectorsUnderAttack";
 publicVariable "KPLIB_clearances";
 
 // Check for deleted military sectors or deleted classnames in the locked vehicles array
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {((_x select 0) in KPLIB_b_vehToUnlock) && ((_x select 1) in KPLIB_sectors_military)};
-
-// Remove links for vehicles of possibly removed mods
-KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {[_x select 0] call KPLIB_fnc_checkClass};
+KPLIB_vehicle_to_military_base_links = KPLIB_vehicle_to_military_base_links select {
+    _x params ["_class", "_marker"];
+    // EV which shall have already been validated, class checked, cross checked with build
+    _class in KPLIB_b_vehToUnlock
+        && {_marker in KPLIB_sectors_military};
+};
 
 // Check for additions in the locked vehicles array
 private _lockedVehCount = count KPLIB_vehicle_to_military_base_links;
 if ((_lockedVehCount < (count KPLIB_sectors_military)) && (_lockedVehCount < (count KPLIB_b_vehToUnlock))) then {
-    private _assignedVehicles = [];
     private _assignedBases = [];
     private _nextVehicle = "";
     private _nextBase = "";
 
-    {
-        _assignedVehicles pushBack (_x select 0);
+    private _assignedVehicles = KPLIB_vehicle_to_military_base_links apply {
         _assignedBases pushBack (_x select 1);
-    } forEach KPLIB_vehicle_to_military_base_links;
+        (_x select 0);
+    };
 
     // Add new entries, when there are elite vehicles and military sectors are not yet assigned
     while {((count _assignedVehicles) < (count KPLIB_b_vehToUnlock)) && ((count _assignedBases) < (count KPLIB_sectors_military))} do {

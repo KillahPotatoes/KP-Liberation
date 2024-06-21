@@ -3,7 +3,7 @@ scriptName "zeus_synchro";
 waitUntil {!isNil "KPLIB_b_potato01"};
 
 // Classnames of objects which should be added as editable for Zeus
-private _vehicleClassnames = [toLower KPLIB_b_potato01];
+private _vehicleClassnames = [toLowerANSI KPLIB_b_potato01];
 {
     _vehicleClassnames append _x;
 } forEach [
@@ -37,7 +37,7 @@ while {true} do {
     _valids append (vehicles select {
         (alive _x)                                                                              // Alive
         && {
-            ((toLower (typeOf _x)) in _vehicleClassnames)                                       // In valid classnames
+            ((toLowerANSI (typeOf _x)) in _vehicleClassnames)                                       // In valid classnames
             || (_x getVariable ["KPLIB_captured", false])                                       // or captured
             || (_x getVariable ["KPLIB_seized", false])                                         // or seized
         }

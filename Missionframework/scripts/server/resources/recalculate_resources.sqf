@@ -36,6 +36,8 @@ while {true} do {
         if (_hasAirBuilding > 0) then {_hasAirBuilding = true;} else {_hasAirBuilding = false;};
         private _hasRecBuilding = {(typeOf _x) == KPLIB_b_logiStation;} count _fob_buildings;
         if (_hasRecBuilding > 0) then {_hasRecBuilding = true;} else {_hasRecBuilding = false;};
+        private _hasMedBuilding = {(typeOf _x) in KPLIB_medical_facilities;} count _fob_buildings;
+        if (_hasMedBuilding > 0) then {_hasMedBuilding = true;} else {_hasMedBuilding = false;};
 
         private _supplyValue = 0;
         private _ammoValue = 0;
@@ -52,7 +54,7 @@ while {true} do {
             } forEach (attachedObjects _x);
         } forEach _storage_areas;
 
-        _local_fob_resources pushBack [_x, _supplyValue, _ammoValue, _fuelValue, _hasAirBuilding, _hasRecBuilding];
+        _local_fob_resources pushBack [_x, _supplyValue, _ammoValue, _fuelValue, _hasAirBuilding, _hasRecBuilding, _hasMedBuilding];
         _local_supplies_global = _local_supplies_global + _supplyValue;
         _local_ammo_global = _local_ammo_global + _ammoValue;
         _local_fuel_global = _local_fuel_global + _fuelValue;

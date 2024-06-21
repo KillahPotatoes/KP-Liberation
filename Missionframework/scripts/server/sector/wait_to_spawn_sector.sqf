@@ -5,7 +5,7 @@ params ["_sector", "_opforcount"];
 private _start = diag_tickTime;
 [format ["Sector %1 (%2) - Waiting to spawn sector...", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];
 
-private _corrected_size = [_opforcount] call KPLIB_fnc_getSectorRange;
+private _corrected_size = [_opforcount, _sector] call KPLIB_fnc_getSectorRange;
 sleep 0.1;
 private _unitscount = [markerPos _sector, _corrected_size , KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 

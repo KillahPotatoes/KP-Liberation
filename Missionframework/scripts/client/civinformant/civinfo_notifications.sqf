@@ -47,5 +47,8 @@ switch (_notif_id) do {
         deleteMarkerLocal "HVT_marker";
         deleteMarkerLocal "HVT_zone";
     };
+    case 7: {
+        deleteMarkerLocal "informantmarker";
+    };
     default {[format ["civinfo_notifications.sqf -> no valid value for _notif_id: %1", _notif_id], "ERROR"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };

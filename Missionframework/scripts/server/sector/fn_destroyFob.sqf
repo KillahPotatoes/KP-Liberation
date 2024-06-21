@@ -20,11 +20,11 @@ params [
     ["_fobPos", [], [[]]]
 ];
 
-private _buildings = [toLower KPLIB_b_fobBuilding];
+private _buildings = [toLowerANSI KPLIB_b_fobBuilding];
 _buildings append KPLIB_b_deco_classes;
 
 {
-    if ((toLower (typeOf _x)) in _buildings) then {
+    if ((toLowerANSI (typeOf _x)) in _buildings) then {
         _x spawn {
             sleep ((random 4) + (random 4));
             _this setDamage 1;

@@ -2,7 +2,7 @@
     File: fn_crAddAceAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-05-10
+    Last Update: 2023-04-26
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -36,8 +36,13 @@ _civ addAction [
         ] arrayIntersect (vestItems _caller + uniformItems _caller + backpackItems _caller);
 
         if !(_items isEqualTo []) then {
+            removeAllActions _target;
             _caller removeItem (selectRandom _items);
+            _caller playMove "AinvPknlMstpSnonWnonDnon_medic4";
+            sleep 8;
             _target setDamage 0;
+            [_caller, _target] call ace_medical_treatment_fnc_fullHeal;
+            _target setVariable ["KPLIB_isHealed", true, true];
         } else {
             hint localize "STR_CR_ACE_ACTION_FAIL";
             sleep 3;
@@ -49,7 +54,7 @@ _civ addAction [
     true,
     true,
     "",
-    "(damage _target) >= 0.5",
+    "alive _originalTarget",
     3
 ];
 

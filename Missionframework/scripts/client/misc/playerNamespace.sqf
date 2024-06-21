@@ -2,7 +2,7 @@
     File: playerNamespace.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-12
-    Last Update: 2020-07-06
+    Last Update: 2023-03-02
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -36,8 +36,8 @@ while {true} do {
     player setVariable ["KPLIB_fobName", _fobName];
     player setVariable ["KPLIB_fobPos", _fobPos];
 
-    // Direct acces due to config, commander or admin
-    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KPLIB_whitelist_cmdrActions || {player == ([] call KPLIB_fnc_getCommander)} || {serverCommandAvailable "#kick"}];
+    // Direct acces due to config, commander or quartermaster or admin
+    player setVariable ["KPLIB_hasDirectAccess", (getPlayerUID player) in KPLIB_whitelist_cmdrActions || {player == ([] call KPLIB_fnc_getCommander)} || {player isEqualto (missionnamespace getVariable ['quartermaster',objNull])} || {serverCommandAvailable "#kick"}];
 
     // Outside of startbase "safezone"
     player setVariable ["KPLIB_isAwayFromStart", (player distance2d startbase) > 1000];
@@ -49,7 +49,7 @@ while {true} do {
 
     // Is near a mobile respawn
     if (KPLIB_param_mobileRespawn) then {
-        player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [[KPLIB_b_mobileRespawn, KPLIB_b_potato01], 10]) isEqualTo [])];
+        player setVariable ["KPLIB_isNearMobRespawn", !((player nearEntities [(KPLIB_b_mobileRespawns)+ [KPLIB_b_potato01], 10]) isEqualTo [])];
     };
 
     // Is near startbase

@@ -2,7 +2,7 @@ scriptName "huron_marker";
 
 private [ "_huronlocal" ];
 
-"huronmarker" setMarkerTextLocal "Potato 01";
+"huronmarker" setMarkerTextLocal localize "STR_HURON01_NAME";
 
 while { true } do {
     _huronlocal = [] call KPLIB_fnc_potatoScan;

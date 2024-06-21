@@ -32,6 +32,14 @@ private _sector_despawn_tickets = BASE_TICKETS;
 private _maximum_additional_tickets = (KPLIB_param_maxDespawnDelay * 60 / SECTOR_TICK_TIME);
 private _popfactor = 1;
 private _guerilla = false;
+private _lambsEnable = false;
+
+if (isNil "KPLIB_o_turrets_HMG") then {KPLIB_o_turrets_HMG = ["Turret_Array_Empty"];};
+if (isNil "KPLIB_o_turrets_GMG") then {KPLIB_o_turrets_GMG = ["Turret_Array_Empty"];};
+if (isNil "KPLIB_o_turrets_AT") then {KPLIB_o_turrets_AT = ["Turret_Array_Empty"];};
+if (isNil "KPLIB_o_turrets_AA") then {KPLIB_o_turrets_AA = ["Turret_Array_Empty"];};
+if (isNil "KPLIB_o_turrets_MORTAR") then {KPLIB_o_turrets_MORTAR = ["Turret_Array_Empty"];};
+if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) then {_lambsEnable = true;};
 
 if (KPLIB_param_unitcap < 1) then {_popfactor = KPLIB_param_unitcap;};
 
@@ -41,7 +49,7 @@ KPLIB_sectors_active pushback _sector; publicVariable "KPLIB_sectors_active";
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
-if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
+if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, _sector] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
     if (_sector in KPLIB_sectors_capital) then {
         if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
@@ -51,13 +59,18 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
         if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
         if (KPLIB_param_unitcap >= 1.5) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
-        _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles)];
+        _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_turrets_HMG)];
         if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if ((random 100) > (50 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+        if ((random 100) > (50 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);};
         if (_infsquad == "army") then {
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+            _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_AA);};
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_GMG);};
         };
 
         _spawncivs = true;
@@ -86,10 +99,14 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
         if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+        if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
         if (_infsquad == "army") then {
             _vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);
+            _vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {
                 _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+                _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
                 _squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             };
         };
@@ -116,12 +133,19 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
         _squad2 = ([] call KPLIB_fnc_getSquadComp);
         if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-        _vehtospawn = [([] call KPLIB_fnc_getAdaptiveVehicle),([] call KPLIB_fnc_getAdaptiveVehicle)];
+        _vehtospawn = [([] call KPLIB_fnc_getAdaptiveVehicle),([] call KPLIB_fnc_getAdaptiveVehicle),(selectRandom KPLIB_o_turrets_HMG),(selectRandom KPLIB_o_turrets_AT),(selectRandom KPLIB_o_turrets_MORTAR)];
         if ((random 100) > (33 / KPLIB_param_difficulty)) then {
             _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+            _vehtospawn pushback ((selectRandom KPLIB_o_turrets_HMG));
+            _vehtospawn pushback ((selectRandom KPLIB_o_turrets_MORTAR));
             _squad4 = ([] call KPLIB_fnc_getSquadComp);
         };
-        if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
+        if ((random 100) > (66 / KPLIB_param_difficulty)) then {
+            _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+            _vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);
+            _vehtospawn pushback ((selectRandom KPLIB_o_turrets_GMG));
+            _vehtospawn pushback ((selectRandom KPLIB_o_turrets_AA));
+        };
 
         _spawncivs = false;
 
@@ -137,6 +161,8 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
         if ((random 100) > 66) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
         if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+        if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
 
         _spawncivs = false;
 
@@ -161,6 +187,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
         if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
         if((random 100) > 95) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
+        if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
 
         _spawncivs = false;
 
@@ -176,7 +203,11 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
     };
 
     {
+        if (_x isEqualTo "Turret_Array_Empty") exitWith {};
         _vehicle = [_sectorpos, _x] call KPLIB_fnc_spawnVehicle;
+        if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
+            [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+        };
         [group ((crew _vehicle) select 0),_sectorpos] spawn add_defense_waypoints;
         _managed_units pushback _vehicle;
         {_managed_units pushback _x;} foreach (crew _vehicle);
@@ -253,8 +284,14 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
             _stopit = true;
 
-            {[_x] spawn prisonner_ai;} forEach ((markerPos _sector) nearEntities [["Man"], _local_capture_size * 1.2]);
-
+            {
+                if (captive _x) then {
+                    [_x, true] spawn prisonner_ai;
+                } else {
+                    [_x] spawn prisonner_ai;
+                };
+            } forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
+            
             sleep 60;
 
             KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
@@ -262,9 +299,9 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
             sleep 600;
 
             {
-                if (_x isKindOf "Man") then {
+                if (_x isKindOf "CAManBase") then {
                     if (side group _x != KPLIB_side_player) then {
-                        deleteVehicle _x;
+                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                     };
                 } else {
                     if (!isNull _x) then {
@@ -273,7 +310,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
                 };
             } forEach _managed_units;
         } else {
-            if (([_sectorpos, (([_opforcount] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
+          if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
                 _sector_despawn_tickets = _sector_despawn_tickets - 1;
             } else {
                 // start counting running minutes after ADDITIONAL_TICKETS_DELAY
@@ -288,8 +325,8 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] 
 
             if (_sector_despawn_tickets <= 0) then {
                 {
-                    if (_x isKindOf "Man") then {
-                        deleteVehicle _x;
+                    if (_x isKindOf "CAManBase") then {
+                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                     } else {
                         if (!isNull _x) then {
                             [_x] call KPLIB_fnc_cleanOpforVehicle;

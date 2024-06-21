@@ -26,8 +26,8 @@ if (KPLIB_civrep_debug > 0) then {[format ["globalMsg called on: %1 - Parameters
 switch (_msgType) do {
     case 0: {systemChat localize "STR_CR_VEHICLEMSG";};
     case 1: {systemChat (format [localize "STR_CR_BUILDINGMSG", (_data select 0)]);};
-    case 2: {systemChat (format [localize "STR_CR_KILLMSG", (_data select 0)]);};
-    case 3: {systemChat (format [localize "STR_CR_RESISTANCE_KILLMSG", (_data select 0)]);};
+    case 2: {systemChat (format [localize "STR_CR_KILLMSG", (_data select 0), (_data select 1)]);};
+    case 3: {systemChat (format [localize "STR_CR_RESISTANCE_KILLMSG", (_data select 0), (_data select 1)]);};
     case 4: {systemChat (format [localize "STR_CR_HEALMSG", (_data select 0)]);};
     case 5: {["lib_asymm_guerilla_incoming", _data] call BIS_fnc_showNotification;};
     default {[format ["globalMsg without valid msgType - %1", _msgType], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};

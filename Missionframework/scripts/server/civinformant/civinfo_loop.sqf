@@ -30,48 +30,58 @@ while {true} do {
         sleep 1;
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_informant, true], _informant] call CBA_fnc_targetEvent;
+            _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
         } else {
             _informant disableAI "ANIM";
             _informant disableAI "MOVE";
             _informant playmove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
             sleep 2;
             _informant setCaptive true;
+            _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
         };
 
         if (KPLIB_civinfo_debug > 0) then {[format ["Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
         [0, [((((getPos _informant) select 0) + 200) - random 400),((((getPos _informant) select 1) + 200) - random 400),0]] remoteExec ["civinfo_notifications"];
 
-        while {alive _informant && ((side (group _informant)) == KPLIB_side_civilian) && _waiting_time > 0} do {
+        // Time-based despawn
+        private _time_start = time;
+        private _player_near = false;
+        while {
+            alive _informant
+            &&
+            ((time - _time_start) < _waiting_time)
+            &&
+            !(_informant getVariable ["KPLIB_civinfo_under_control", false])
+        } do {
             uiSleep 1;
-            private _player_near = false;
+            _player_near = false;
             {
                 if (((_x distance _informant) < 150) && (alive _x)) exitWith {_player_near = true};
             } foreach allPlayers;
 
-            if !(_player_near) then {
+            if (_player_near) then {
+                private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+                private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+                if (_isCaptured || _isCuffed) then {
+                    _informant setVariable ["KPLIB_civinfo_under_control", true, true];
+                    [_informant] remoteExec ["civinfo_escort"];
+                    [7] remoteExec ["civinfo_notifications"];
+                };
+            } else {
                 _waiting_time = _waiting_time - 1;
             };
 
-            if ((KPLIB_civinfo_debug > 0) && ((_waiting_time % 60) == 0)) then {[format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-        };
-
-        if (_waiting_time > 0) then {
-            if (alive _informant) then {
-                if (KPLIB_ace) then {
-                    ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
-                } else {
-                    _informant enableAI "ANIM";
-                    _informant enableAI "MOVE";
-                };
-                sleep 1;
-                [_informant] remoteExec ["civinfo_escort"];
-            } else {
-                if (KPLIB_civinfo_debug > 0) then {["Informant is dead", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-                [3] remoteExec ["civinfo_notifications"];
+            if ((KPLIB_civinfo_debug > 0) && ((_waiting_time % 60) == 0)) then {
+                [format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];
             };
-        } else {
-            deleteVehicle _informant;
+        };
+        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && !alive _informant) then {
+            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop is reset by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+            [3] remoteExec ["civinfo_notifications"];
+        };
+        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && alive _informant) then {
+            if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
             if (KPLIB_civinfo_debug > 0) then {["Informant despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [2] remoteExec ["civinfo_notifications"];
         };

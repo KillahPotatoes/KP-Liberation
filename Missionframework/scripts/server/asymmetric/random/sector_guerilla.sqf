@@ -51,7 +51,7 @@ private _spawnedGroups = [];
 private _grp = [_startpos] call KPLIB_fnc_spawnGuerillaGroup;
 
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
-{_x doFollow (leader _grp)} forEach (units _grp);
+{doStop _x; _x doFollow leader _grp} foreach units _grp;
 
 private _waypoint = _grp addWaypoint [markerpos _sector, 100];
 _waypoint setWaypointType "MOVE";
@@ -116,7 +116,7 @@ private _strengthChanged = false;
     if (!isNull _x) then {
         {
             if (alive _x) then {
-                deleteVehicle _x;
+                if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                 KPLIB_guerilla_strength = KPLIB_guerilla_strength + 2;
                 _strengthChanged = true;
             };

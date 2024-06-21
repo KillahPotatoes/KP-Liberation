@@ -38,7 +38,9 @@ player addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];
     ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
 }];
-player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
+if (KPLIB_param_fuelconsumption) then {
+    player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
+};
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehiclesSeized;}];
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleCaptured;}];
 player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];

@@ -17,6 +17,9 @@ resources_intel = resources_intel - ( KPLIB_secondary_missions_costs select _mis
 if (_mission_index == 0) then {[] spawn fob_hunting;};
 if (_mission_index == 1) then {[] spawn convoy_hijack;};
 if (_mission_index == 2) then {[] spawn search_and_rescue;};
+if (_mission_index == 3) then {[] spawn civ_supplies;};
+if (_mission_index == 4) then {[] spawn bingo_fuel;};
+if (_mission_index == 5) then {[] spawn rearm_outpost;};
 
 KPLIB_secondary_starting = false; publicVariable "KPLIB_secondary_starting";
 

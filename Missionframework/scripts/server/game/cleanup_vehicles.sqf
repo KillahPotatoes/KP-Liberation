@@ -17,7 +17,7 @@ while { KPLIB_param_vehicleCleanup > 0 } do {
         _nearestfob = [ getpos _nextvehicle ] call KPLIB_fnc_getNearestFob;
         if ( count _nearestfob == 3 ) then {
             if ( ( _nextvehicle distance _nearestfob > ( 1.2 * KPLIB_range_fob ) ) && ( _nextvehicle distance startbase > ( 1.2 * KPLIB_range_fob ) ) ) then {
-                if ((toLower (typeof _nextvehicle)) in _cleanup_classnames) then {
+                if ((toLowerANSI (typeof _nextvehicle)) in _cleanup_classnames) then {
                     if ( count ( crew _nextvehicle ) == 0 ) then {
                         _nextvehicle setVariable [ "KPLIB_empty_vehicle_ticker", ( _nextvehicle getVariable [ "KPLIB_empty_vehicle_ticker", 0 ] ) + 1 ];
                         _reset_ticker = false;

@@ -40,7 +40,7 @@ if (!_show) exitWith {
 if (_updateValues) then {
     _resourceArea = [(_resourceArea select [4]), _resourceArea] select KPLIB_resources_global;
 
-    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpper _resourceArea;
+    (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FOB) ctrlSetText toUpperANSI _resourceArea;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_SUPPLIES) ctrlSetText str floor KPLIB_supplies;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_AMMO) ctrlSetText str floor KPLIB_ammo;
     (_overlay displayCtrl IDC_OVERLAY_RSC_LABEL_FUEL) ctrlSetText str floor KPLIB_fuel;
