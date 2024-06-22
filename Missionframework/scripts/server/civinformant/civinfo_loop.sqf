@@ -25,7 +25,7 @@ while {true} do {
         private _waiting_time = KPLIB_civinfo_duration;
         
         _houses = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]);
-        if (_houses == []) then {
+        if (isNil _houses) then {
             _randomPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [3, 40, KPLIB_b_crateAmmo];
             _informant setPos _randomPos;
         } else {
