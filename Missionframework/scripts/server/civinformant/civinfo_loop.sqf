@@ -56,8 +56,8 @@ while {true} do {
         private _time_start = time;
         private _player_not_near = true;
         private _notCaptured = true;
-		private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
-		private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+        private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+        private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
         while {
             (alive _informant && ((time - _time_start) < _waiting_time))
             ||
@@ -75,15 +75,15 @@ while {true} do {
                     [format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];
                 };
             };
-			
-			_isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
-			_isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
-			if (_isCaptured || _isCuffed) then {_notCaptured = false;};
+            
+            _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+            _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+            if (_isCaptured || _isCuffed) then {_notCaptured = false;};
         };
-		
+        
         private _timeover = false;
         if ((time - _time_start) < _waiting_time) then {_timeover = true;};
-		
+        
         if (_isCaptured || _isCuffed) then {
             [_informant] remoteExec ["civinfo_escort"];
             [7] remoteExec ["civinfo_notifications"];
