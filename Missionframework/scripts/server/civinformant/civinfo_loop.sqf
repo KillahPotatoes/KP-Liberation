@@ -19,15 +19,22 @@ while {true} do {
 
     if ((KPLIB_civinfo_chance >= (random 100)) && KPLIB_endgame == 0) then {
         private _sector = selectRandom (KPLIB_sectors_player select {_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital});
-        private _house = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]) select 0;
-
+        private _houses = [];
         private _grp = createGroup [KPLIB_side_civilian, true];
         private _informant = [selectRandom KPLIB_c_units, markerPos _sector, _grp] call KPLIB_fnc_createManagedUnit;
         private _waiting_time = KPLIB_civinfo_duration;
-
-        _informant setPos (selectRandom (_house buildingPos -1));
+        
+        _houses = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]);
+        if (_houses == []) then {
+            _randomPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [3, 40, KPLIB_b_crateAmmo];
+            _informant setPos _randomPos;
+        } else {
+            _house = selectRandom _houses;
+            _informant setPos (selectRandom (_house buildingPos -1));
+        };
         _informant setUnitPos "UP";
         sleep 1;
+        
         if (KPLIB_ace) then {
             ["ace_captives_setSurrendered", [_informant, true], _informant] call CBA_fnc_targetEvent;
             _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
@@ -42,45 +49,47 @@ while {true} do {
 
         if (KPLIB_civinfo_debug > 0) then {[format ["Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-        [0, [((((getPos _informant) select 0) + 200) - random 400),((((getPos _informant) select 1) + 200) - random 400),0]] remoteExec ["civinfo_notifications"];
+        [0, [((((getPos _informant) select 0) + 100) - random 200),((((getPos _informant) select 1) + 100) - random 200),0]] remoteExec ["civinfo_notifications"];
 
         // Time-based despawn
         private _time_start = time;
-        private _player_near = false;
+        private _player_not_near = true;
+        private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+        private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
         while {
-            alive _informant
-            &&
-            ((time - _time_start) < _waiting_time)
-            &&
-            !(_informant getVariable ["KPLIB_civinfo_under_control", false])
+            (alive _informant && ((time - _time_start) < _waiting_time))
+            ||
+            (_isCaptured || _isCuffed)
         } do {
             uiSleep 1;
-            _player_near = false;
+            _player_not_near = true;
             {
-                if (((_x distance _informant) < 150) && (alive _x)) exitWith {_player_near = true};
+                if (((_x distance _informant) < 150) && (alive _x)) exitWith {_player_not_near = false};
             } foreach allPlayers;
 
-            if (_player_near) then {
-                private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
-                private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
-                if (_isCaptured || _isCuffed) then {
-                    _informant setVariable ["KPLIB_civinfo_under_control", true, true];
-                    [_informant] remoteExec ["civinfo_escort"];
-                    [7] remoteExec ["civinfo_notifications"];
-                };
-            } else {
+            if (_player_not_near) then {
                 _waiting_time = _waiting_time - 1;
-            };
-
-            if ((KPLIB_civinfo_debug > 0) && ((_waiting_time % 60) == 0)) then {
-                [format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];
+                if ((KPLIB_civinfo_debug > 0) && ((_waiting_time % 60) == 0)) then {
+                    [format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];
+                };
             };
         };
+        private _timeover = false;
+        if ((time - _time_start) < _waiting_time) then {_timeover = true;};
+        
+        if (_isCaptured || _isCuffed) then {
+            [_informant] remoteExec ["civinfo_escort"];
+            [7] remoteExec ["civinfo_notifications"];
+            _informant setVariable ["KPLIB_civinfo_under_control", true, true];
+        };
+        
+        waitUntil {!alive _informant || _timeover || !(_informant getVariable ["KPLIB_civinfo_under_control", false])};
+        
         if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && !alive _informant) then {
             if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop is reset by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [3] remoteExec ["civinfo_notifications"];
         };
-        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && alive _informant) then {
+        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && _timeover) then {
             if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
             if (KPLIB_civinfo_debug > 0) then {["Informant despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [2] remoteExec ["civinfo_notifications"];
