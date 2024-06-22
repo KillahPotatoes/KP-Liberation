@@ -9,21 +9,28 @@ switch (_notif_id) do {
         ["lib_civ_informant_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
         private _informant_marker = createMarkerLocal ["informantmarker", _pos];
         _informant_marker setMarkerColorLocal "ColorCIV";
-        _informant_marker setMarkerShape "ELLIPSE";
-        _informant_marker setMarkerBrush "FDiagonal";
-        _informant_marker setMarkerSize [500,500];
+        _informant_marker setMarkerTypeLocal "hd_unknown";
+        
+        private _informant_zone = createMarkerLocal ["informantzone", _pos];
+        _informant_zone setMarkerColorLocal "ColorCIV";
+        _informant_zone setMarkerShape "ELLIPSE";
+        _informant_zone setMarkerBrush "FDiagonal";
+        _informant_zone setMarkerSize [125,125];
     };
     case 1: {
         ["lib_civ_informant_success"] call BIS_fnc_showNotification;
         deleteMarkerLocal "informantmarker";
+        deleteMarkerLocal "informantzone";
     };
     case 2: {
         ["lib_civ_informant_fail"] call BIS_fnc_showNotification;
         deleteMarkerLocal "informantmarker";
+        deleteMarkerLocal "informantzone";
     };
     case 3: {
         ["lib_civ_informant_death"] call BIS_fnc_showNotification;
         deleteMarkerLocal "informantmarker";
+        deleteMarkerLocal "informantzone";
     };
     case 4: {
         ["lib_civ_hvt_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
@@ -49,6 +56,7 @@ switch (_notif_id) do {
     };
     case 7: {
         deleteMarkerLocal "informantmarker";
+        deleteMarkerLocal "informantzone";
     };
     default {[format ["civinfo_notifications.sqf -> no valid value for _notif_id: %1", _notif_id], "ERROR"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
