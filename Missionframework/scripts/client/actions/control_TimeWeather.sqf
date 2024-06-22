@@ -9,6 +9,9 @@ if (KPLIB_control_TimeWeather > 0) then {
     waitUntil {sleep 0.1; !dialog};
 
     if (KPLIB_control_TimeWeather == 1) then {
+        if (isNil KPLIB_inProgress_TimeWeather) then {KPLIB_inProgress_TimeWeather = false;};
+        if (KPLIB_inProgress_TimeWeather) exitWith {};
+        KPLIB_inProgress_TimeWeather = true;
         private _countdown = 15;
         for "_i" from _countdown to 1 step -1 do {
             [format [localize "STR_FOB_TW_ACTION_TIMESKIP_COUNTDOWN", _countdown]] remoteExec ["hint",-2];
@@ -55,6 +58,7 @@ if (KPLIB_control_TimeWeather > 0) then {
             sleep 5;
             [localize "STR_FOB_TW_ACTION_TIMESKIP_DONE_NIGHT"] remoteExec ["hint",-2];
         };
+        KPLIB_inProgress_TimeWeather = false;
     };
 
     if (KPLIB_control_TimeWeather == 2) then {
