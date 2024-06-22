@@ -24,13 +24,6 @@
 */
 
 KPLIB_objectInits = [
-    [
-        {
-            [_this] spawn {
-                waitUntil {sleep 0.1; time > 0};
-            };
-        }
-    ],
     // Set logo on white flag
     [
         ["Flag_White_F"],
