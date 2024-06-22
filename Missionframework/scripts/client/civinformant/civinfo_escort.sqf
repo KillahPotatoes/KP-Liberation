@@ -6,6 +6,7 @@ if (isDedicated) exitWith {};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
+group _informant setGroupOwner owner player;
 waitUntil {sleep 0.5; local _informant || !alive _informant};
 
 private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", objNull];
@@ -22,7 +23,7 @@ if (_CapturedPlayer == objNull) then {
     } forEach _players;
     _CapturedPlayer = _nearestPlayer;
 };
-[[_informant], group _capturedPlayer] remoteExec ["joinSilent"];
+[[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
 
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
