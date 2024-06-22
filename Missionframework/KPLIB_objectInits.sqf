@@ -24,14 +24,10 @@
 */
 
 KPLIB_objectInits = [
-    // add fullheal action to huron medical container (mobile fullHeal)
     [
-        ["B_Slingload_01_Medevac_F"],
         {
             [_this] spawn {
-                params ["_medvacbox"];
                 waitUntil {sleep 0.1; time > 0};
-                [_medvacbox] remoteExecCall ["KPLIB_fnc_addActionsFullHeal", 0, _medvacbox];
             };
         }
     ],
@@ -147,8 +143,20 @@ KPLIB_objectInits = [
             };
         }
     ],
-    
-    // Add Workbench compat in case it doesn't work the other way
+
+    // add fullheal action to huron/taru medical container (mobile fullHeal)
+    [
+        ["B_Slingload_01_Medevac_F", "Land_Pod_Heli_Transport_04_medevac_F"],
+        {
+            [_this] spawn {
+                params ["_medvacbox"];
+                waitUntil {sleep 0.1; time > 0};
+                [_medvacbox] remoteExecCall ["KPLIB_fnc_addActionsFullHeal", 0, _medvacbox];
+            };
+        }
+    ],
+
+    // Add VAM Workbench repairFacility compat in case it doesn't work the other way
     [
         ["Land_Workbench_01_F"], 
         {
