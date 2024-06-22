@@ -50,17 +50,18 @@ while {true} do {
 
         if (KPLIB_civinfo_debug > 0) then {[format ["Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-        [0, [((((getPos _informant) select 0) + 100) - random 200),((((getPos _informant) select 1) + 100) - random 200),0]] remoteExec ["civinfo_notifications"];
+        [0, [((((getPos _informant) select 0) + 35) - random 70),((((getPos _informant) select 1) + 35) - random 70),0]] remoteExec ["civinfo_notifications"];
 
         // Time-based despawn
         private _time_start = time;
         private _player_not_near = true;
-        private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
-        private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+        private _notCaptured = true;
+		private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+		private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
         while {
             (alive _informant && ((time - _time_start) < _waiting_time))
             ||
-            (_isCaptured || _isCuffed)
+            (_notCaptured)
         } do {
             uiSleep 1;
             _player_not_near = true;
@@ -74,10 +75,15 @@ while {true} do {
                     [format ["Informant will despawn in %1 minutes", round (_waiting_time / 60)], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];
                 };
             };
+			
+			_isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
+			_isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
+			if (_isCaptured || _isCuffed) then {_notCaptured = false;};
         };
+		
         private _timeover = false;
         if ((time - _time_start) < _waiting_time) then {_timeover = true;};
-        
+		
         if (_isCaptured || _isCuffed) then {
             [_informant] remoteExec ["civinfo_escort"];
             [7] remoteExec ["civinfo_notifications"];

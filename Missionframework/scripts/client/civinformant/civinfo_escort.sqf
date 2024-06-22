@@ -6,9 +6,6 @@ if (isDedicated) exitWith {};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-waitUntil {sleep 0.5; || !alive _informant};
-if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort line 11"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-
 if (alive _informant) then {
     private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", objNull];
     if (_CapturedPlayer == objNull) then {
@@ -25,7 +22,7 @@ if (alive _informant) then {
         _CapturedPlayer = _nearestPlayer;
     };
     [[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
-    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort line 27"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort join ok"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     if (KPLIB_ace) then {
         private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
@@ -42,7 +39,7 @@ if (alive _informant) then {
     };
     doStop _informant;
     _informant doFollow _capturedPlayer;
-    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort line 43"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort follow ok"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 };
 
 private _is_near_fob = false;

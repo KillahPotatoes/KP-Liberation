@@ -15,7 +15,7 @@ switch (_notif_id) do {
         _informant_zone setMarkerColorLocal "ColorCIV";
         _informant_zone setMarkerShape "ELLIPSE";
         _informant_zone setMarkerBrush "FDiagonal";
-        _informant_zone setMarkerSize [125,125];
+        _informant_zone setMarkerSize [75,75];
     };
     case 1: {
         ["lib_civ_informant_success"] call BIS_fnc_showNotification;
