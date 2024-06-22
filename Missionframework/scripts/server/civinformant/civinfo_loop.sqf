@@ -26,7 +26,8 @@ while {true} do {
         
         _houses = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]);
         if (count _houses == 0) then {
-            _randomPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [3, 40, KPLIB_b_crateAmmo];
+            _randomPos = ((markerPos _sector) getPos [random 150, random 360]) findEmptyPosition [3, 150, KPLIB_b_crateAmmo];
+            if (count _randomPos == 0) then {_randomPos = [(markerPos _sector select 0),(markerPos _sector select 1),0];};
             _informant setPos _randomPos;
         } else {
             _house = selectRandom _houses;
