@@ -6486,7 +6486,7 @@
             <Japanese>市民は重要情報を提供した。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_FAIL">
-            <Original>The civilian has disappeared.</Original>
+            <Original>The informant has disappeared.</Original>
             <German>Der Zivilist ist wieder untergetaucht.</German>
             <Spanish>El civil ha desaparecido.</Spanish>
             <Russian>Гражданский пропал.</Russian>
@@ -6500,7 +6500,7 @@
             <Japanese>情報提供者は姿を消してしまった。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_INFORMANT_DEATH">
-            <Original>The civilian died.</Original>
+            <Original>The informant died.</Original>
             <German>Der Zivilist wurde getötet.</German>
             <Spanish>El civil ha muerto.</Spanish>
             <Russian>Гражданский умер.</Russian>
