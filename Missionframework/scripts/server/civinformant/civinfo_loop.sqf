@@ -15,7 +15,7 @@ while {true} do {
         KPLIB_civ_rep >= 25
     };
 
-    if (KPLIB_civinfo_debug > 0) then {["Informant waitUntil passed", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+    if (KPLIB_civinfo_debug > 0) then {["Informant waitUntil search city passed", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     if ((KPLIB_civinfo_chance >= (random 100)) && KPLIB_endgame == 0) then {
         private _sector = selectRandom (KPLIB_sectors_player select {_x in KPLIB_sectors_city || _x in KPLIB_sectors_capital});
@@ -82,12 +82,12 @@ while {true} do {
                 };
             };
         };
-        if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop loop exit"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+        if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop Countdown exit"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         
         private _timeover = false;
         if ((time - _time_start) > _waiting_time) then {
             _timeover = true;
-            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop TimeOver!"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop Countdown TimeOver!"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         };
         
         private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
@@ -106,7 +106,6 @@ while {true} do {
                 _informant playmove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
                 sleep 2;
             };
-            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop unsurrendered"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             
             private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", objNull];
             if (_CapturedPlayer == objNull) then {
@@ -123,7 +122,7 @@ while {true} do {
                 _CapturedPlayer = _nearestPlayer;
             };
             [[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
-            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop join ok"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop civilian joined to group: %1", name _capturedPlayer], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             doStop _informant;
             _informant doFollow _capturedPlayer;
 
@@ -132,7 +131,6 @@ while {true} do {
             _informant setVariable ["KPLIB_civinfo_under_control", true, true];
         };
         
-        if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop prisonner check end"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         waitUntil {!alive _informant || _timeover || !(_informant getVariable ["KPLIB_civinfo_under_control", false])};
         
         if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && _timeover) exitWith {
