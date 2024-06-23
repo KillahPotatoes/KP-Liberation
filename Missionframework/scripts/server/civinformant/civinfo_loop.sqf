@@ -135,14 +135,14 @@ while {true} do {
         if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop prisonner check end"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         waitUntil {!alive _informant || _timeover || !(_informant getVariable ["KPLIB_civinfo_under_control", false])};
         
-        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && !alive _informant) then {
-            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop is reset by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-            [3] remoteExec ["civinfo_notifications"];
-        };
-        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && _timeover) then {
+        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && _timeover) exitWith {
             if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
             if (KPLIB_civinfo_debug > 0) then {["Informant despawned", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [2] remoteExec ["civinfo_notifications"];
+        };
+        if (!(_informant getVariable ["KPLIB_civinfo_under_control", false]) && !alive _informant) exitWith {
+            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop is reset by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+            [3] remoteExec ["civinfo_notifications"];
         };
     } else {
         if (KPLIB_civinfo_debug > 0) then {["Informant spawn chance missed", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
