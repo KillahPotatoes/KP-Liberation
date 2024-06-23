@@ -6513,6 +6513,10 @@
             <Czech>Civilista umřel.</Czech>
             <Japanese>情報提供者は死んでしまった。</Japanese>
         </Key>
+        <Key ID="STR_NOTIFICATION_CIV_INFORMANT_ESCORT">
+            <Original>%1 began escorting the informant.</Original>
+            <Japanese>%1 が情報提供者の護送を開始した。</Japanese>
+        </Key>
         <Key ID="STR_PARAMS_DEBUG_ASYMMETRIC">
             <Original>Asymmetric Threat</Original>
             <German>Asymmetrische Bedrohung</German>

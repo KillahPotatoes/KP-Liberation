@@ -85,7 +85,10 @@ while {true} do {
         if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop loop exit"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
         
         private _timeover = false;
-        if ((time - _time_start) < _waiting_time) then {_timeover = true;};
+        if ((time - _time_start) > _waiting_time) then {
+            _timeover = true;
+            if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop TimeOver!"], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
+        };
         
         private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
         private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
@@ -125,7 +128,7 @@ while {true} do {
             _informant doFollow _capturedPlayer;
 
             [_informant] remoteExec ["civinfo_escort"];
-            [7] remoteExec ["civinfo_notifications"];
+            [7, [0,0,0], _capturedPlayer] remoteExec ["civinfo_notifications"];
             _informant setVariable ["KPLIB_civinfo_under_control", true, true];
         };
         
