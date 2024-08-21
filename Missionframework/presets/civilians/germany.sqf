@@ -1,13 +1,22 @@
 /*
+    File: germany.sqf
+    Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
+    Date: 2019-05-08
+    Last Update: 2020-05-25
+    License: MIT License - http://www.opensource.org/licenses/MIT
+
+    Description:
+        Germany civilian preset.
+
     Needed Mods:
-    - Global Mobilization
+        - Global Mobilization
 
     Optional Mods:
-    - None
+        - None
 */
 
 // Civilian classnames.
-civilians = [
+KPLIB_c_units = [
     "C_Man_casual_1_F_euro",
     "C_Man_casual_1_F_euro",
     "C_Man_casual_2_F_euro",
@@ -28,7 +37,7 @@ civilians = [
 ];
 
 // Civilian vehicle classnames.
-civilian_vehicles = [
+KPLIB_c_vehicles = [
     "C_Truck_02_covered_F",
     "C_Truck_02_covered_F",
     "C_Truck_02_fuel_F",

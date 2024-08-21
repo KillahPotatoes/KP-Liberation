@@ -1,10 +1,12 @@
+scriptName "spot_timer";
+
 createMarkerLocal ["opfor_bg_marker", markers_reset];
 "opfor_bg_marker" setMarkerTypeLocal "mil_unknown";
-"opfor_bg_marker" setMarkerColorLocal GRLIB_color_enemy_bright;
+"opfor_bg_marker" setMarkerColorLocal KPLIB_color_enemyActive;
 
 createMarkerLocal ["opfor_capture_marker", markers_reset];
 "opfor_capture_marker" setMarkerTypeLocal "mil_objective";
-"opfor_capture_marker" setMarkerColorLocal GRLIB_color_enemy_bright;
+"opfor_capture_marker" setMarkerColorLocal KPLIB_color_enemyActive;
 
 if ( isNil "sector_timer" ) then { sector_timer = 0 };
 

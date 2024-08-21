@@ -10,8 +10,8 @@ nametags_distance = 32.0;
 
 private [ "_groups", "_unitstocount", "_totalx", "_totaly", "_totalz", "_alpha", "_textalpha", "_size", "_screenpos", "_grouppos", "_distlabel", "_dist", "_nextunit", "_color", "_drawicon", "_displayname", "_iconpos" ];
 
-waitUntil { !isNil "GRLIB_overlay_groups" };
-waitUntil { !isNil "GRLIB_nametag_units" };
+waitUntil { !isNil "KPLIB_overlay_groups" };
+waitUntil { !isNil "KPLIB_nametag_units" };
 
 ["platoon_overlay", "onEachFrame", {
 
@@ -73,7 +73,7 @@ waitUntil { !isNil "GRLIB_nametag_units" };
 				drawIcon3D [platoon_icon1, _color, _grouppos, _size / 2, _size / 2,0, format ["%1 - %2%3",groupID _x, name (leader _x),_distlabel], 2, 0.03 * _textalpha, "puristaMedium"];
 				drawIcon3D [platoon_icon2, _color, _grouppos, _size, _size,0, "", 2, 0.04, "puristaMedium"];
 			};
-		} foreach GRLIB_overlay_groups;
+		} foreach KPLIB_overlay_groups;
 	};
 
 	if ( show_nametags ) then {
@@ -92,7 +92,7 @@ waitUntil { !isNil "GRLIB_nametag_units" };
 			_color = [];
 			if ( _nextunit in (units group player)) then {
 
-				switch ( _nextunit getVariable [ "GRLIB_squad_color", "MAIN" ] ) do {
+				switch ( _nextunit getVariable [ "KPLIB_squad_color", "MAIN" ] ) do {
 					case "BLUE" : { _color = [0.15,0.35,1.0,_alpha] };
 					case "RED" : { _color = [0.8,0,0,_alpha] };
 					case "YELLOW" : { _color = [0.85,0.85,0,_alpha] };
@@ -133,7 +133,7 @@ waitUntil { !isNil "GRLIB_nametag_units" };
 
 			drawIcon3D [ _drawicon, _color, _iconpos , 0.75, 0.75,0, format [ "%1", _displayname] , 2, 0.032, "puristaMedium"];
 
-		} foreach GRLIB_nametag_units;
+		} foreach KPLIB_nametag_units;
 	};
 
 }] call BIS_fnc_addStackedEventHandler;

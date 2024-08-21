@@ -1,3 +1,5 @@
+scriptName "reinforcements_resetter";
+
 _reset_time = 1800;
 
 reinforcements_set = false;
@@ -11,6 +13,6 @@ while { true } do {
 
     waitUntil { sleep 0.3; ( time > ( _localtime + _reset_time ) ) || reinforcements_set };
 
-    if ( !reinforcements_set && !([] call KPLIB_fnc_isBigtownActive) ) then { reinforcements_sector_under_attack = ""; }
+    if ( !reinforcements_set && !([] call KPLIB_fnc_isCapitalActive) ) then { reinforcements_sector_under_attack = ""; }
 
 };
