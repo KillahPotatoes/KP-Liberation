@@ -2872,6 +2872,7 @@
         <Key ID="STR_PARAM_COMMANDERZEUS">
             <Original>Zeus for Commander</Original>
             <German>Zeus für Kommandant</German>
+            <Czech>Zeus pro velitele</Czech>
         </Key>
         <Key ID="STR_PARAM_ALLOW_ENEMIES_IN_IMMOBILE">
             <Original>Chance that enemies will stay in immobile/damaged vehicles</Original>
@@ -3767,6 +3768,7 @@
         <Key ID="STR_PARAMS_ATTACKEDSECTORRESPAWN">
             <Original>Respawn on attacked sectors</Original>
             <German>Respawn bei unter Angriff stehenden Sektoren</German>
+            <Czech>Respawn na napadené sektory</Czech>
         </Key>
 
         <!-- Added or changed in v0.95 -->
@@ -4917,7 +4919,7 @@
             <Chinese>&lt;br/&gt;&lt;br/&gt;在這次作戰中你必須管理、囤積與保護三種資源：&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;補給：&lt;/t&gt;最關鍵的物資。一旦沒有補給，你將無法佈署更多士兵或其餘軍事資源，因此，指揮部建議優先謀取這項資源！&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;彈藥：&lt;/t&gt;用來採購步兵戰車（APC）和主戰坦克（MBT）等裝甲載具，同時也被用於招募武裝菁英的重裝士兵。&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;油料：&lt;/t&gt;載具的必需品，任何載具都需要油料，尤其是那些「大胃王」的大型載具們。&lt;br/&gt; &lt;br/&gt;在作戰過程中你或許能在任意戰區內搜刮到以上三種資源，但是為了解放這個區域，你勢必需要更穩定而有效的補給線，這時候你就需要去佔領興趣點(PoI)和工廠了！兩者都能在占領後建立一個倉儲區（用滾輪動作選單來建立），而興趣點還需要額外建立資源生產設施（依舊是滾輪動作選單)。一個PoI能夠同時建立三種生產設施，但你必須先投資才能全數建立起來！建造設施需要 50 點對應的資源與其餘兩個資源各 100 點。&lt;br/&gt; &lt;br/&gt;</Chinese>
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Nesta campanha você deverá gerir, estocar e proteger três tipos de recursos.:&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;SUPRIMENTOS:&lt;/t&gt; Este é o recurso essencial. Sem suprimentos, será impossível mobilizar infantaria adicional ou requisitar equipamentos militares. Desse modo, o QG recomenda priorizar estes recursos!&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;MUNIÇÃO:&lt;/t&gt; Utilizada para abastecer veículos blindados armados, bem como soldados de elite de equipamento bélico pesado.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;COMBUSTÍVEL:&lt;/t&gt; Todo veículo precisa de combustível, alguns consomem mais que outros.&lt;br/&gt; &lt;br/&gt;Você cruzará com todos os três tipos de recursos dispersos pelos setores, porém para adquirir uma quantidade considerável e abastecimento constante, você deverá capturar setores com fábricas/refinarias. Uma vez capturadas, as fábricas precisarão de um depósito (use o scroll do mouse) e então poderão imediatamente iniciar a produção do recurso pretendido. Se puder arcar com os custos, as fábricas poderão ser aprimoradas para produzir os demais recursos. &lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;군수물자는 총 3가지 종류가 있다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#00ff00'&gt;보급품:&lt;/t&gt; 보급품(S)은 가장 중요한 군수물자로, 보급품이 없으면 AI 보병을 비롯하여 모든 장비를 배치(생산)할 수 없다.&lt;br/&gt; &lt;br/&gt;또한 장비를 배치(생산)할 때 가장 많이 소비되는 보급품이다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ff0000'&gt;탄약:&lt;/t&gt; 탄약(A)은 무장한 장비를 배치(생산)할 때 필요하다.&lt;br/&gt; &lt;br/&gt;&lt;t color='#ffff00'&gt;연료:&lt;/t&gt; 연료(F)는 장비을 움직이기 위해서 꼭 필요한 보급품이며, 대형 장비는 더 많은 연료를 소비한다.&lt;br/&gt; &lt;br/&gt;각 군수물자는 지도에서 주유기 표시로 된 '공장 '에서 생산된다. 이 지역의 경우 도시 이름 옆에 (S),(A),(F)가 표기되어 있는데 이는 생산 가능한 보급품의 종류를 나타낸다. 즉 보급품은 (S), 탄약은 (A), 연료는 (F)이다.&lt;br/&gt; &lt;br/&gt;이 지역을 아군이 점령하게 되면 왼쪽 상단 메뉴안에 --저장창고건설-- 이라는 메뉴가 생성된다. 도시내 적당한 곳에 저장창고를 건설하면 이 곳에 이 마을에서 생산된 군수물자가 저장된다. 이 군수물자를 AI수송부대를 이용하여 전초기지로 운반하면 장비를 생산하는데 사용할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;만약 이 '생산공장'에서 생산중인 물품을 변경하고자 한다면, 도시내에 설치한 저장창고로 공장건설에 필요한 군수물자(생산하고자 하는 군수물자 50, 나머지 두가지 군수물자 100)을 운반한 후 변경하고자 하는 군수물자의 생산공장을 건설하면 된다.&lt;br/&gt; &lt;br/&gt;생산품은 '생산 설정' 에서 변경할 수 있고, AI 수송부대는 물류 개요' 에서 편성할 수 있다.&lt;br/&gt; &lt;br/&gt;아군 AI 수송부대의 트럭은 1회에 1대당 최대 200개의 군수물자를 운반할 수 있다.&lt;br/&gt; &lt;br/&gt;</Korean>
-            <Czech>&lt;br/&gt;&lt;br/&gt;V této kampani musíte spravovat, ukládat a chránit tři typy zdrojů:&lt;br/&gt; &lt;br/&gt;&lt;t color ='#00ff00'&gt;SUROVINY:&lt;/t&gt; Toto jsou nejdůležitější. Bez spotřebního materiálu nebudete moci nasadit další vojáky ani zabavit vojenskou techniku. Velitelství jako takové doporučuje prioritu těchto prvních!&lt;br/&gt; &lt;br/&gt;&lt;t color ='#ff0000' &gt;MUNICE:&lt;/t&gt;Používá se k zásobě ozbrojených vozidel, jako jsou APC a MBT, stejně jako elity (a těžce vyzbrojení) vojáci.&lt;br/&gt; &lt;br/&gt;&lt;t color = '#ffff00'&gt;PALIVO:&lt;/t&gt;Každé vozidlo potřebuje palivo, některé jsou více žíznivé než ostatní.&lt;br/&gt; &lt;br/&gt;Možná narazíte na všechny tři zdroje v jakémkoli sektoru, ale pro značnou a stálou dodávku musíte zachytit tovární sektory! Jakmile jsou továrny zachyceny, vyžadují úložný prostor (akce nabídky posouvání) a poté mohou okamžitě začít vyrábět zamýšlený zdroj. Pokud si to můžete dovolit, může být každá továrna upgradována tak, aby vytvořila další dva zdroje. &lt;br/&gt; &lt;br/&gt;</Czech>
+            <Czech>&lt;br/&gt;&lt;br/&gt;V této kampani musíte spravovat, ukládat a chránit tři typy zdrojů:&lt;br/&gt; &lt;br/&gt;&lt;t color ='#00ff00'&gt;SUROVINY:&lt;/t&gt; Toto jsou nejdůležitější. Bez spotřebního materiálu nebudete moci nasadit další vojáky ani zabavit vojenskou techniku. Velitelství jako takové doporučuje prioritu těchto prvních!&lt;br/&gt; &lt;br/&gt;&lt;t color ='#ff0000' &gt;MUNICE:&lt;/t&gt;Používá se k zásobě ozbrojených vozidel, jako jsou APC a MBT, stejně jako elity (a těžce vyzbrojení) vojáci.&lt;br/&gt; &lt;br/&gt;&lt;t color ='#ffff00'&gt;PALIVO:&lt;/t&gt;Každé vozidlo potřebuje palivo, některé jsou více žíznivé než ostatní.&lt;br/&gt; &lt;br/&gt;Možná narazíte na všechny tři zdroje v jakémkoli sektoru, ale pro značnou a stálou dodávku musíte zachytit tovární sektory! Jakmile jsou továrny zachyceny, vyžadují úložný prostor (akce nabídky posouvání) a poté mohou okamžitě začít vyrábět zamýšlený zdroj. Pokud si to můžete dovolit, může být každá továrna upgradována tak, aby vytvořila další dva zdroje. &lt;br/&gt; &lt;br/&gt;</Czech>
         </Key>
         <Key ID="STR_TUTO_TITLE6">
             <Original>6. Alert Level</Original>
@@ -5958,7 +5960,7 @@
             <Chinese>你需要一個基礎繃帶。</Chinese>
             <Portuguese>Você precisa de curativo.</Portuguese>
             <Korean>붕대가 필요하다.</Korean>
-            <Czech>Potřebuješ ošetřit.</Czech>
+            <Czech>Potřebuje ošetřit.</Czech>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_HVT_START">
             <Original>There is a high ranked officer near %1.</Original>
@@ -6237,7 +6239,7 @@
             <Spanish>Tiempo de juego: %1 días, %2 horas, %3 minutos y %4 segundos</Spanish>
             <Russian>Игровое время: %1 дней, %2 часов, %3 минут и %4 секунд</Russian>
             <Korean>걸린 시간: %1 일, %2 시간, %3 분 and %4 초</Korean>
-            <Czech>Doba hraní: % 1 dny, % 2 hodiny, % 3 minuty a % 4 sekund</Czech>
+            <Czech>Doba hraní: %1 dny, %2 hodiny, %3 minuty a %4 sekund</Czech>
         </Key>
         <Key ID="STR_STATS_OPFOR_K_INF">
             <Original>OPFOR infantry killed: %1</Original>
@@ -7016,10 +7018,12 @@
         <Key ID="STR_PARAMS_DIRECTARSENAL">
             <Original>Direct arsenal access without KPLIB Loadout Dialog</Original>
             <German>Direkter Arsenalzugang ohne KPLIB Loadout Dialog</German>
+            <Czech>Přímý přístup do arzenálu bez dialogu KPLB Loadout</Czech>
         </Key>
         <Key ID="STR_DEPLOY_UNDERATTACK">
             <Original>UNDER ATTACK</Original>
             <German>WIRD ANGEGRIFFEN</German>
+            <Czech>POD ÚTOKEM</Czech>
         </Key>
     </Package>
 
