@@ -80,15 +80,7 @@ if (_classname in KPLIB_o_helicopters) then {
 if (_classname in KPLIB_o_militiaVehicles) then {
     [_newvehicle] call KPLIB_fnc_spawnMilitiaCrew;
 } else {
-    private _grp = createGroup [KPLIB_side_enemy, true];
-    private _crew = units (createVehicleCrew _newvehicle);
-    _crew joinSilent _grp;
-    {
-        _x addMPEventHandler ["MPKilled", {
-            params ["_unit", "_killer"];
-            ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
-        }];
-    } forEach _crew;
+    [_newvehicle, KPLIB_side_enemy] call KPLIB_fnc_createCrew;
 };
 
 // Add Killed and GetIn EHs and enable damage again
