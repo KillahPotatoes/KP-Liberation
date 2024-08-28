@@ -33,6 +33,8 @@ KPLIB_o_aaSpecialist = "O_Soldier_AA_F";                                // AA Sp
 KPLIB_o_medic = "O_medic_F";                                            // Combat Life Saver
 KPLIB_o_engineer = "O_engineer_F";                                      // Engineer
 KPLIB_o_paratrooper = "O_soldier_PG_F";                                 // Paratrooper
+KPLIB_o_crewman = "O_crew_F";                                           // Crewman
+KPLIB_o_pilot = "O_helipilot_F";                                        // Pilot
 
 // Enemy vehicles used by secondary objectives.
 KPLIB_o_mrap = "O_MRAP_02_F";                                           // Ifrit
