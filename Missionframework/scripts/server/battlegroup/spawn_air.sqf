@@ -16,7 +16,7 @@ for "_i" from 1 to _planes_number do {
     _spawnPos = markerPos _spawnPoint;
     _spawnPos = [(((_spawnPos select 0) + 500) - random 1000), (((_spawnPos select 1) + 500) - random 1000), 200];
     _plane = createVehicle [_class, _spawnPos, [], 0, "FLY"];
-    createVehicleCrew _plane;
+    [_plane, KPLIB_side_enemy] call KPLIB_fnc_createCrew;
     _plane flyInHeight (120 + (random 180));
     [_plane] call KPLIB_fnc_addObjectInit;
 
