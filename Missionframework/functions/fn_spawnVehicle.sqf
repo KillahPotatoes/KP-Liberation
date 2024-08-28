@@ -2,7 +2,7 @@
     File: fn_spawnVehicle.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2023-10-28
+    Last Update: 2024-08-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
