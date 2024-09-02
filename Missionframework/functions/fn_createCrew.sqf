@@ -25,6 +25,18 @@ if (isNull _vehicle) exitWith {["No vehicle provided"] call BIS_fnc_error};
 
 private _typeCrew = "";
 
+// Placeholder types
+switch (_side) do {
+	case KPLIB_side_enemy : {
+		 _typeCrew = KPLIB_o_rifleman;
+	};
+    case KPLIB_side_player : {
+    	_typeCrew = KPLIB_b_crewUnit;
+    }
+};
+
+/*
+Save it for later changes
 switch (_side) do {
 	case KPLIB_side_enemy : {
 		if (_vehicle isKindOf "Air") then {
@@ -49,6 +61,7 @@ switch (_side) do {
 		}
 	}
 };
+*/
 
 // Get all available sets from the vehicle
 private _seats = fullCrew [_vehicle, "", true];
