@@ -2,7 +2,7 @@
     File: cup_sla.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2020-04-24
-    Last Update: 2020-05-25
+    Last Update: 2020-09-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,26 +23,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-KPLIB_b_fobTruck = "CUP_O_BMP_HQ_sla";                                // This is the FOB as a vehicle.
-KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "CUP_O_BMP2_AMB_sla";                          // This is the mobile respawn (and medical) truck.
-KPLIB_b_potato01 = "CUP_O_Mi8_SLA_1";                                     // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit = "CUP_O_sla_Crew";                                   // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "CUP_O_sla_Pilot";                                    // This defines the pilot for helicopters.
-KPLIB_b_addHeli = "CUP_O_UH1H_slick_SLA";                   // These are the additional helicopters which spawn on the Freedom or at Chimera bas
-KPLIB_b_addBoat = "CUP_O_PBX_SLA";                                 // These are the boats which spawn at the stern of the Freedom.
-KPLIB_b_logiTruck = "CUP_O_Ural_Open_SLA";                          // These are the trucks which are used in the logistic convoy system.
-KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_b_airControl = "O_Radar_System_02_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
+KPLIB_b_fobTruck = "CUP_O_BMP_HQ_sla";                                  // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_O_BMP2_AMB_sla";                           // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_O_Mi8_SLA_1";                                   // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_O_sla_Crew";                                    // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_O_sla_Pilot";                              // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "CUP_O_UH1H_slick_SLA";                               // These are the additional helicopters which spawn on the Freedom or at Chimera bas
+KPLIB_b_addBoat = "CUP_O_PBX_SLA";                                      // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_O_Ural_Open_SLA";                              // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                     // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                     // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                      // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "O_Radar_System_02_F";                             // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                              // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                             // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                              // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                             // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -78,12 +78,13 @@ KPLIB_b_infantry = [
 ];
 
 KPLIB_b_vehLight = [
-    ["CUP_O_UAZ_Unarmed_SLA",100,0,50],                                 // UAZ
-    ["CUP_O_UAZ_MG_SLA",125,60,50],                                     // UAZ (DShKM)
-    ["CUP_O_UAZ_AGS30_SLA",125,80,50],                                  // UAZ (AGS-30)
-    ["CUP_O_UAZ_SPG9_SLA",125,100,50],                                  // UAZ (SPG-9)
-    ["CUP_O_UAZ_METIS_SLA",150,120,50],                                 // UAZ (Metis-M)
-    ["CUP_O_UAZ_AA_SLA",200,160,50],                                    // UAZ (AA)
+    ["CUP_O_Volha_SLA",50,0,25],                                        // GAZ-24 "Volga" (Militia)
+    ["CUP_O_UAZ_Unarmed_SLA",100,0,50],                                 // UAZ-469
+    ["CUP_O_UAZ_MG_SLA",125,60,50],                                     // UAZ-469 (DShKM)
+    ["CUP_O_UAZ_AGS30_SLA",125,80,50],                                  // UAZ-469 (AGS-30)
+    ["CUP_O_UAZ_SPG9_SLA",125,100,50],                                  // UAZ-469 (SPG-9)
+    ["CUP_O_UAZ_METIS_SLA",150,120,50],                                 // UAZ-469 (Metis-M)
+    ["CUP_O_UAZ_AA_SLA",200,160,50],                                    // UAZ-469 (AA)
     ["CUP_O_Ural_ZU23_SLA",250,300,100],                                // Ural (ZU-23)
     ["CUP_O_BM21_SLA",300,750,100],                                     // BM-21
     ["CUP_O_Ural_Open_SLA",150,0,75],                                   // Ural (Open)
@@ -115,6 +116,7 @@ KPLIB_b_vehAir = [
 ];
 
 KPLIB_b_vehStatic = [
+    ["CUP_O_SearchLight_static_SLA",10,0,0],                            // Search Light
     ["CUP_O_DSHKM_SLA",25,40,0],                                        // DShKM
     ["CUP_O_DSHkM_MiniTripod_SLA",25,40,0],                             // DShKM Minitripod
     ["CUP_O_AGS_SLA",25,60,0],                                          // AGS-30
@@ -221,6 +223,7 @@ KPLIB_b_vehSupport = [
     ["ACE_Track",10,0,0],
     ["CUP_O_LCVP_SLA",100,100,50],                                      // LCVP
     ["CUP_O_LCVP_VIV_SLA",100,100,50],                                  // LCVP (VIV)
+    ["CUP_O_ZUBR_SLA",500,700,350],                                     // Zubr-Class LCAC
     ["CUP_O_Tractor_SLA",50,0,75],                                      // Towing Tractor
     ["CUP_O_Ural_Repair_SLA",425,0,75],                                 // Ural (Repair)
     ["CUP_O_Ural_Refuel_SLA",125,0,375],                                // Ural (Refuel)
