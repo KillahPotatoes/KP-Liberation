@@ -68,6 +68,10 @@ if !(_spawn_marker isEqualTo "") then {
             };
         } forEach _selected_opfor_battlegroup;
 
+        if (KPLIB_param_aggressivity > 0.5) then {
+            [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_boat;
+        };
+
         if (KPLIB_param_aggressivity > 0.9) then {
             [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
         };

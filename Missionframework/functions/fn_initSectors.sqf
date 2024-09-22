@@ -17,6 +17,7 @@
 
 KPLIB_sectors_airSpawn = [];
 KPLIB_sectors_all = [];
+KPLIB_sectors_boatspawn = [];
 KPLIB_sectors_capital = [];
 KPLIB_sectors_city = [];
 KPLIB_sectors_factory = [];
@@ -31,6 +32,7 @@ KPLIB_sectors_tower = [];
         case (_x find "factory" == 0): {KPLIB_sectors_factory pushBack _x; KPLIB_sectors_all pushBack _x;};
         case (_x find "military" == 0): {KPLIB_sectors_military pushBack _x; KPLIB_sectors_all pushBack _x;};
         case (_x find "opfor_airspawn" == 0): {KPLIB_sectors_airSpawn pushBack _x;};
+        case (_x find "opfor_boatspawn" == 0): {KPLIB_sectors_boatSpawn pushBack _x;};
         case (_x find "opfor_point" == 0): {KPLIB_sectors_spawn pushBack _x;};
         case (_x find "tower" == 0): {KPLIB_sectors_tower pushBack _x; if (isServer) then {_x setMarkerText format ["%1 %2",markerText _x, mapGridPosition (markerPos _x)];}; KPLIB_sectors_all pushBack _x;};
     };

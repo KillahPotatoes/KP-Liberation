@@ -9,6 +9,7 @@ troup_transport = compile preprocessFileLineNumbers "scripts\server\ai\troup_tra
 
 // Battlegroup
 spawn_air = compile preprocessFileLineNumbers "scripts\server\battlegroup\spawn_air.sqf";
+spawn_boat = compileFinal preprocessFileLineNumbers "scripts\server\battlegroup\spawn_boat.sqf";
 spawn_battlegroup = compile preprocessFileLineNumbers "scripts\server\battlegroup\spawn_battlegroup.sqf";
 
 // Game
