@@ -10,6 +10,8 @@ dobuild = 0;
 _oldbuildtype = -1;
 _cfg = configFile >> "cfgVehicles";
 _initindex = buildindex;
+fob_count = 1;
+if(KPLIB_param_ecoScale) then {fob_count = [] call KPLIB_fnc_getFobCount};
 
 _dialog = createDialog "liberation_build";
 waitUntil { dialog };
@@ -68,7 +70,7 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                     default {};
                 };
 
-                ((findDisplay 5501) displayCtrl (110)) lnbAddRow [ _entrytext, format [ "%1" ,_x select 1], format [ "%1" ,_x select 2], format [ "%1" ,_x select 3]];
+                ((findDisplay 5501) displayCtrl (110)) lnbAddRow [ _entrytext, format [ "%1" ,(_x select 1)* fob_count], format [ "%1" ,(_x select 2)* fob_count], format [ "%1" ,(_x select 3)* fob_count]];
 
                 _icon = getText ( _cfg >> (_x select 0) >> "icon");
                 if(isText  (configFile >> "CfgVehicleIcons" >> _icon)) then {
@@ -81,14 +83,14 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 } else {
                     _squadname = "";
                 };
-                ((findDisplay 5501) displayCtrl (110)) lnbAddRow  [_squadname, format [ "%1" ,_x select 1], format [ "%1" ,_x select 2], format [ "%1" ,_x select 3]];
+                ((findDisplay 5501) displayCtrl (110)) lnbAddRow  [_squadname, format [ "%1" ,(_x select 1)* fob_count], format [ "%1" ,(_x select 2)* fob_count], format [ "%1" ,(_x select 3)* fob_count]];
             };
 
             _affordable = true;
             if (
-                ((_x select 1 > 0) && ((_x select 1) > ((_actual_fob select 0) select 1))) ||
-                ((_x select 2 > 0) && ((_x select 2) > ((_actual_fob select 0) select 2))) ||
-                ((_x select 3 > 0) && ((_x select 3) > ((_actual_fob select 0) select 3)))
+                ((_x select 1 > 0) && ((_x select 1) * fob_count > ((_actual_fob select 0) select 1))) ||
+                ((_x select 2 > 0) && ((_x select 2) * fob_count > ((_actual_fob select 0) select 2))) ||
+                ((_x select 3 > 0) && ((_x select 3) * fob_count > ((_actual_fob select 0) select 3)))
             ) then {
                 _affordable = false;
             };
@@ -125,9 +127,9 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
     if (dobuild == 0 && _selected_item != -1 && (_selected_item < (count _build_list))) then {
         _build_item = _build_list select _selected_item;
         if (
-            ((_build_item select 1 == 0 ) || ((_build_item select 1) <= ((_actual_fob select 0) select 1))) &&
-            ((_build_item select 2 == 0 ) || ((_build_item select 2) <= ((_actual_fob select 0) select 2))) &&
-            ((_build_item select 3 == 0 ) || ((_build_item select 3) <= ((_actual_fob select 0) select 3)))
+            ((_build_item select 1 == 0 ) || (((_build_item select 1) * fob_count) <= ((_actual_fob select 0) select 1))) &&
+            ((_build_item select 2 == 0 ) || (((_build_item select 2) * fob_count) <= ((_actual_fob select 0) select 2))) &&
+            ((_build_item select 3 == 0 ) || (((_build_item select 3) * fob_count) <= ((_actual_fob select 0) select 3)))
         ) then {
             if !((_build_item select 0) isEqualType []) then {
                 if ((toLower (_build_item select 0)) in KPLIB_b_air_classes && !([_build_item select 0] call KPLIB_fnc_isClassUAV)) then {
