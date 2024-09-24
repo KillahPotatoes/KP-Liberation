@@ -1,4 +1,4 @@
-KP_liberation_cr_ign_buildings = [
+KPLIB_cr_ign_buildings = [
 	"Land_Barn_W_01_dam",
 	"Land_Barracks_01_grey_F",
 	"Land_BellTower_01_V1_F",
@@ -134,7 +134,7 @@ KP_liberation_cr_ign_buildings = [
 	"Land_TTowerBig_2_F",
 	"Land_u_Addon_01_V1_dam_F",
 	"Land_u_Addon_01_V1_F",
-	"Land_u_Shed_Ind_F",				 
+	"Land_u_Shed_Ind_F",
 	"Land_Walkover_01_F",
 	"Land_Wall_CBrk_5_D",
 	"Land_Wall_CGry_5_D",

@@ -19,7 +19,7 @@ waitUntil {
 };
 
 if ((alive _transVeh) && (alive (driver _transVeh))) then {
-    _infGrp = createGroup [GRLIB_side_enemy, true];
+    _infGrp = createGroup [KPLIB_side_enemy, true];
 
     {
         [_x, _start_pos, _infGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;

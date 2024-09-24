@@ -75,7 +75,7 @@ class liberation_squad {
         sizeEx = 0.025 * safezoneH;
         text = $STR_RESUPPLY;
         tooltip = $STR_RESUPPLY_TOOLTIP;
-        action = "GRLIB_squadaction = 1";
+        action = "KPLIB_squadaction = 1";
     };
     class RemoveButton: StdButton {
         idc = 211;
@@ -86,7 +86,7 @@ class liberation_squad {
         sizeEx = 0.025 * safezoneH;
         text = $STR_REMOVE_MEMBER;
         tooltip = $STR_REMOVE_MEMBER_TOOLTIP;
-        action = "GRLIB_squadaction = 2";
+        action = "KPLIB_squadaction = 2";
     };
     class ReplaceButton: StdButton {
         idc = 212;
@@ -97,7 +97,7 @@ class liberation_squad {
         sizeEx = 0.025 * safezoneH;
         text = $STR_DEPLOY_ON_MEMBER;
         tooltip = $STR_DEPLOY_ON_MEMBER_TOOLTIP;
-        action = "GRLIB_squadaction = 3";
+        action = "KPLIB_squadaction = 3";
     };
     class ConfirmButton: StdButton {
         idc = 213;
@@ -107,7 +107,7 @@ class liberation_squad {
         h = (0.04 * safezoneH);
         sizeEx = 0.025 * safezoneH;
         text = $STR_CONFIRM;
-        action = "GRLIB_squadconfirm = 1";
+        action = "KPLIB_squadconfirm = 1";
     };
     class CancelButton: StdButton {
         idc = 214;
@@ -117,7 +117,7 @@ class liberation_squad {
         h = (0.04 * safezoneH);
         sizeEx = 0.025 * safezoneH;
         text = $STR_RECYCLING_CANCEL;
-        action = "GRLIB_squadconfirm = 0";
+        action = "KPLIB_squadconfirm = 0";
     };
     class ButtonClose: StdButton {
         x = 0.785 * safezoneW + safezoneX;

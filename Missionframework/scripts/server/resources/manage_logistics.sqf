@@ -1,19 +1,21 @@
-waitUntil {!isNil "save_is_loaded"};
-waitUntil {!isNil "KP_liberation_logistics"};
-waitUntil {save_is_loaded};
+scriptName "manage_logistics";
+
+waitUntil {!isNil "KPLIB_saveLoaded"};
+waitUntil {!isNil "KPLIB_logistics"};
+waitUntil {KPLIB_saveLoaded};
 
 ["Logistic management started", "LOGISTIC"] call KPLIB_fnc_log;
 
-KP_liberation_convoy_ambush_inProgress = false;
-KP_liberation_convoy_ambush_check = 0;
+KPLIB_convoy_ambush_inProgress = false;
+KPLIB_convoy_ambush_check = 0;
 private _start = 0;
-while {GRLIB_endgame == 0} do {
+while {KPLIB_endgame == 0} do {
 
-    if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KP_liberation_logistics) > 0)) then {
+    if (((count (allPlayers - entities "HeadlessClient_F")) > 0) && ((count KPLIB_logistics) > 0)) then {
         _start = diag_tickTime;
-        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic interval started: %1", diag_tickTime], "LOGISTIC"] call KPLIB_fnc_log;};
+        if (KPLIB_logistic_debug > 0) then {[format ["Logistic interval started: %1", diag_tickTime], "LOGISTIC"] call KPLIB_fnc_log;};
 
-        private _tempLogistics = +KP_liberation_logistics;
+        private _tempLogistics = +KPLIB_logistics;
 
         {
             private _locPos = -1;
@@ -25,7 +27,7 @@ while {GRLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         switch (_x select 7) do {case 1: {_locPos = 2; _locRes = 4;}; case 3: {_locPos = 3; _locRes = 5;};};
                         switch (_x select 9) do {case 2: {_x set [9,0];}; case 3: {_x set [9,1];};};
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], 150];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_b_smallStorage, KPLIB_b_largeStorage], 150];
 
                         if (((_x select 9) == 0) && !((_x select 6) isEqualTo [0,0,0])) then {
 
@@ -35,11 +37,11 @@ while {GRLIB_endgame == 0} do {
                             if (_toProcess > 3) then {_toProcess = 3;};
                             private _spaceSum = 0;
                             {
-                                if (typeOf _x == KP_liberation_large_storage_building) then {
-                                    _spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+                                if (typeOf _x == KPLIB_b_largeStorage) then {
+                                    _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                 };
-                                if (typeOf _x == KP_liberation_small_storage_building) then {
-                                    _spaceSum = _spaceSum + (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+                                if (typeOf _x == KPLIB_b_smallStorage) then {
+                                    _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                 };
                             } forEach _storage_areas;
 
@@ -51,11 +53,11 @@ while {GRLIB_endgame == 0} do {
                             while {_processed < _toProcess} do {
                                 {
                                     private _space = 0;
-                                    if (typeOf _x == KP_liberation_large_storage_building) then {
-                                        _space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+                                    if (typeOf _x == KPLIB_b_largeStorage) then {
+                                        _space = (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                     };
-                                    if (typeOf _x == KP_liberation_small_storage_building) then {
-                                        _space = (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+                                    if (typeOf _x == KPLIB_b_smallStorage) then {
+                                        _space = (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                     };
 
                                     if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
@@ -68,7 +70,7 @@ while {GRLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1),
                                             (((_tempLogistics select _currentIndex) select 6) select 2)]
                                         ];
-                                        private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateSupply, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -85,7 +87,7 @@ while {GRLIB_endgame == 0} do {
                                                 (((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
                                                 (((_tempLogistics select _currentIndex) select 6) select 2)]
                                             ];
-                                        private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateAmmo, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -102,7 +104,7 @@ while {GRLIB_endgame == 0} do {
                                                 (((_tempLogistics select _currentIndex) select 6) select 1),
                                                 (((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
                                             ];
-                                        private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                        private _crate = [KPLIB_b_crateFuel, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                         [_crate, _x] call KPLIB_fnc_crateToStorage;
                                         _processed = _processed + 1;
                                         _space = _space - 1;
@@ -111,7 +113,7 @@ while {GRLIB_endgame == 0} do {
                                 } forEach _storage_areas;
                             };
                             please_recalculate = true;
-                            if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                            if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                         } else {
                             _x set [9,1];
                         };
@@ -127,9 +129,9 @@ while {GRLIB_endgame == 0} do {
                             {
                                 {
                                     switch ((typeOf _x)) do {
-                                        case KP_liberation_supply_crate: {_supplyValue = _supplyValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                                        case KP_liberation_ammo_crate: {_ammoValue = _ammoValue + (_x getVariable ["KP_liberation_crate_value",0]);};
-                                        case KP_liberation_fuel_crate: {_fuelValue = _fuelValue + (_x getVariable ["KP_liberation_crate_value",0]);};
+                                        case KPLIB_b_crateSupply: {_supplyValue = _supplyValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                                        case KPLIB_b_crateAmmo: {_ammoValue = _ammoValue + (_x getVariable ["KPLIB_crate_value",0]);};
+                                        case KPLIB_b_crateFuel: {_fuelValue = _fuelValue + (_x getVariable ["KPLIB_crate_value",0]);};
                                         default {[format ["Invalid object (%1) at storage area", (typeOf _x)], "ERROR"] call KPLIB_fnc_log;};
                                     };
                                 } forEach (attachedObjects _x);
@@ -206,14 +208,14 @@ while {GRLIB_endgame == 0} do {
                                 reverse _storedCrates;
 
                                 {
-                                    private _crateValue = _x getVariable ["KP_liberation_crate_value",0];
+                                    private _crateValue = _x getVariable ["KPLIB_crate_value",0];
 
                                     switch ((typeOf _x)) do {
-                                        case KP_liberation_supply_crate: {
+                                        case KPLIB_b_crateSupply: {
                                             if (_getSupply > 0) then {
                                                 if (_crateValue > _getSupply) then {
                                                     _crateValue = _crateValue - _getSupply;
-                                                    _x setVariable ["KP_liberation_crate_value", _crateValue, true];
+                                                    _x setVariable ["KPLIB_crate_value", _crateValue, true];
                                                     _getSupply = 0;
                                                 } else {
                                                     detach _x;
@@ -222,11 +224,11 @@ while {GRLIB_endgame == 0} do {
                                                 };
                                             };
                                         };
-                                        case KP_liberation_ammo_crate: {
+                                        case KPLIB_b_crateAmmo: {
                                             if (_getAmmo > 0) then {
                                                 if (_crateValue > _getAmmo) then {
                                                     _crateValue = _crateValue - _getAmmo;
-                                                    _x setVariable ["KP_liberation_crate_value", _crateValue, true];
+                                                    _x setVariable ["KPLIB_crate_value", _crateValue, true];
                                                     _getAmmo = 0;
                                                 } else {
                                                     detach _x;
@@ -235,11 +237,11 @@ while {GRLIB_endgame == 0} do {
                                                 };
                                             };
                                         };
-                                        case KP_liberation_fuel_crate: {
+                                        case KPLIB_b_crateFuel: {
                                             if (_getFuel > 0) then {
                                                 if (_crateValue > _getFuel) then {
                                                     _crateValue = _crateValue - _getFuel;
-                                                    _x setVariable ["KP_liberation_crate_value", _crateValue, true];
+                                                    _x setVariable ["KPLIB_crate_value", _crateValue, true];
                                                     _getFuel = 0;
                                                 } else {
                                                     detach _x;
@@ -267,7 +269,7 @@ while {GRLIB_endgame == 0} do {
 
                             } forEach _storage_areas;
 
-                            if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                            if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                         };
                     } else {
                         private _nextState = 0;
@@ -284,26 +286,26 @@ while {GRLIB_endgame == 0} do {
                         _x set [8,_time];
                         _x set [9,0];
 
-                        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                        if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                     };
                 };
                 case 2;
                 case 4: {
                     if ((_x select 8) > 1) then {
 
-                        if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KP_liberation_convoy_ambush_inProgress && (KP_liberation_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
+                        if (((_x select 8) <= ((ceil (((_x select 2) distance2D (_x select 3)) / 400)) - 3)) && ((_x select 8) >= 3) && !((_x select 6) isEqualTo [0,0,0]) && !KPLIB_convoy_ambush_inProgress && (KPLIB_civ_rep <= -25) && (((_x select 8) % 2) == 0)) then {
                             private _dice = round (random 100);
-                            private _chance = KP_liberation_convoy_ambush_chance;
-                            if (chance > 0) then {
+                            private _chance = KPLIB_convoy_ambush_chance;
+                            if (_chance > 0) then {
                                 _chance = _chance + ([] call KPLIB_fnc_crGetMulti);
                             };
-                            if (KP_liberation_asymmetric_debug > 0) then {[format ["Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance], "ASYMMETRIC"] call KPLIB_fnc_log;};
+                            if (KPLIB_asymmetric_debug > 0) then {[format ["Logistic convoy %1: ambush possible - current ETA: %2 - Dice: %3 - Chance: %4", (_x select 0), (_x select 8), _dice, _chance], "ASYMMETRIC"] call KPLIB_fnc_log;};
                             if (_dice <= _chance) then {
                                 private _convoy = +_x;
                                 sleep 0.1;
                                 [_convoy] spawn logistic_convoy_ambush;
-                                waitUntil {sleep 0.1; KP_liberation_convoy_ambush_check != 0};
-                                if (KP_liberation_convoy_ambush_check == 2) then {
+                                waitUntil {sleep 0.1; KPLIB_convoy_ambush_check != 0};
+                                if (KPLIB_convoy_ambush_check == 2) then {
                                     _x set [1,0];
                                     _x set [2,[0,0,0]];
                                     _x set [3,[0,0,0]];
@@ -314,7 +316,7 @@ while {GRLIB_endgame == 0} do {
                                     _x set [8,-1];
                                 } else {
                                     _x set [8,((_x select 8) - 1)];
-                                    KP_liberation_convoy_ambush_check = 0;
+                                    KPLIB_convoy_ambush_check = 0;
                                 };
                             } else {
                                 _x set [8,((_x select 8) - 1)];
@@ -323,7 +325,7 @@ while {GRLIB_endgame == 0} do {
                             _x set [8,((_x select 8) - 1)];
                         };
 
-                        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                        if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
 
                     } else {
                         private _nextState = -1;
@@ -346,7 +348,7 @@ while {GRLIB_endgame == 0} do {
                         _x set [7,_nextState];
                         _x set [8,_time];
 
-                        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                        if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                     };
                 };
                 case 5;
@@ -354,7 +356,7 @@ while {GRLIB_endgame == 0} do {
                     if ((_x select 8) > 1) then {
                         _locPos = switch (_x select 7) do {case 5: {2}; case 6: {3};};
                         _x set [9,0];
-                        private _storage_areas = nearestObjects [(_x select _locPos), [KP_liberation_small_storage_building, KP_liberation_large_storage_building], 150];
+                        private _storage_areas = nearestObjects [(_x select _locPos), [KPLIB_b_smallStorage, KPLIB_b_largeStorage], 150];
 
                         if ((count (_storage_areas)) == 0) exitWith {_x set [9,2];};
 
@@ -362,11 +364,11 @@ while {GRLIB_endgame == 0} do {
                         if (_toProcess > 3) then {_toProcess = 3;};
                         private _spaceSum = 0;
                         {
-                            if (typeOf _x == KP_liberation_large_storage_building) then {
-                                _spaceSum = _spaceSum + (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+                            if (typeOf _x == KPLIB_b_largeStorage) then {
+                                _spaceSum = _spaceSum + (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                             };
-                            if (typeOf _x == KP_liberation_small_storage_building) then {
-                                _spaceSum = _spaceSum + (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+                            if (typeOf _x == KPLIB_b_smallStorage) then {
+                                _spaceSum = _spaceSum + (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                             };
                         } forEach _storage_areas;
 
@@ -378,11 +380,11 @@ while {GRLIB_endgame == 0} do {
                         while {_processed < _toProcess} do {
                             {
                                 private _space = 0;
-                                if (typeOf _x == KP_liberation_large_storage_building) then {
-                                    _space = (count KP_liberation_large_storage_positions) - (count (attachedObjects _x));
+                                if (typeOf _x == KPLIB_b_largeStorage) then {
+                                    _space = (count KPLIB_large_storage_positions) - (count (attachedObjects _x));
                                 };
-                                if (typeOf _x == KP_liberation_small_storage_building) then {
-                                    _space = (count KP_liberation_small_storage_positions) - (count (attachedObjects _x));
+                                if (typeOf _x == KPLIB_b_smallStorage) then {
+                                    _space = (count KPLIB_small_storage_positions) - (count (attachedObjects _x));
                                 };
 
                                 if ((_space > 0) && ((((_tempLogistics select _currentIndex) select 6) select 0) > 0)) then {
@@ -395,7 +397,7 @@ while {GRLIB_endgame == 0} do {
                                         (((_tempLogistics select _currentIndex) select 6) select 1),
                                         (((_tempLogistics select _currentIndex) select 6) select 2)]
                                     ];
-                                    private _crate = [KP_liberation_supply_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateSupply, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;
@@ -412,7 +414,7 @@ while {GRLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1) - _amount,
                                             (((_tempLogistics select _currentIndex) select 6) select 2)]
                                         ];
-                                    private _crate = [KP_liberation_ammo_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateAmmo, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;
@@ -429,7 +431,7 @@ while {GRLIB_endgame == 0} do {
                                             (((_tempLogistics select _currentIndex) select 6) select 1),
                                             (((_tempLogistics select _currentIndex) select 6) select 2) - _amount]
                                         ];
-                                    private _crate = [KP_liberation_fuel_crate, _amount, getPos _x] call KPLIB_fnc_createCrate;
+                                    private _crate = [KPLIB_b_crateFuel, _amount, getPos _x] call KPLIB_fnc_createCrate;
                                     [_crate, _x] call KPLIB_fnc_crateToStorage;
                                     _processed = _processed + 1;
                                     _space = _space - 1;
@@ -439,7 +441,7 @@ while {GRLIB_endgame == 0} do {
                         };
                         please_recalculate = true;
 
-                        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                        if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                     } else {
                         _x set [2,[0,0,0]];
                         _x set [3,[0,0,0]];
@@ -449,16 +451,16 @@ while {GRLIB_endgame == 0} do {
                         _x set [7,0];
                         _x set [8,-1];
 
-                        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
+                        if (KPLIB_logistic_debug > 0) then {[format ["Logistic Group Update: %1", _x], "LOGISTIC"] call KPLIB_fnc_log;};
                     };
                 };
                 default {};
             };
         } forEach _tempLogistics;
 
-        KP_liberation_logistics = +_tempLogistics;
+        KPLIB_logistics = +_tempLogistics;
 
-        if (KP_liberation_logistic_debug > 0) then {[format ["Logistic interval finished - Time needed: %1 seconds", diag_tickTime - _start], "LOGISTIC"] call KPLIB_fnc_log;};
+        if (KPLIB_logistic_debug > 0) then {[format ["Logistic interval finished - Time needed: %1 seconds", diag_tickTime - _start], "LOGISTIC"] call KPLIB_fnc_log;};
     };
     uiSleep 60;
 };

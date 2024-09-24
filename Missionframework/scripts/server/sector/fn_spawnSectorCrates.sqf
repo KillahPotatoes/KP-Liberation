@@ -2,7 +2,7 @@
     File: fn_spawnSectorCrates.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-04-28
-    Last Update: 2020-05-07
+    Last Update: 2020-05-25
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -27,14 +27,14 @@ if (isNil "KPLIB_sectorCratesSpawned") then {KPLIB_sectorCratesSpawned = [];};
 if !(_sector in KPLIB_sectorCratesSpawned) then {
     KPLIB_sectorCratesSpawned pushBack _sector;
 
-    private _amount = (ceil (random 3)) * GRLIB_resources_multiplier;
+    private _amount = (ceil (random 3)) * KPLIB_param_resourcesMulti;
     private _spawnPos = [];
     private _j = 0;
 
     for "_i" from 1 to _amount do {
         while {_spawnPos isEqualTo []} do {
             _j = _j + 1;
-            _spawnPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [10, 40, KP_liberation_ammo_crate];
+            _spawnPos = ((markerPos _sector) getPos [random 50, random 360]) findEmptyPosition [10, 40, KPLIB_b_crateAmmo];
             if (_j isEqualTo 10) exitWith {};
         };
         if !(_spawnPos isEqualTo []) then {

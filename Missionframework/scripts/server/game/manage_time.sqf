@@ -1,8 +1,10 @@
+scriptName "manage_time";
+
 while {true} do {
-    if (GRLIB_shorter_nights && (daytime > 20 || daytime < 4)) then {
-        setTimeMultiplier (GRLIB_time_factor * 4);
+    if (KPLIB_param_shorterNights && (daytime > 20 || daytime < 4)) then {
+        setTimeMultiplier (KPLIB_param_timeMulti * 4);
     } else {
-        setTimeMultiplier GRLIB_time_factor;
+        setTimeMultiplier KPLIB_param_timeMulti;
     };
     sleep 10;
 };

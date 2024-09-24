@@ -1,11 +1,13 @@
+scriptName "do_build_fob";
+
 private [ "_minfobdist", "_minsectordist", "_distfob", "_clearedtobuildfob", "_distsector", "_clearedtobuildsector", "_idx" ];
 
-if ( count GRLIB_all_fobs >= GRLIB_maximum_fobs ) exitWith {
-    hint format [ localize "STR_HINT_FOBS_EXCEEDED", GRLIB_maximum_fobs ];
+if ( count KPLIB_sectors_fob >= KPLIB_param_maxFobs ) exitWith {
+    hint format [ localize "STR_HINT_FOBS_EXCEEDED", KPLIB_param_maxFobs ];
 };
 
 _minfobdist = 1000;
-_minsectordist = GRLIB_capture_size + GRLIB_fob_range;
+_minsectordist = KPLIB_range_sectorCapture + KPLIB_range_fob;
 _distfob = 1;
 _clearedtobuildfob = true;
 _distsector = 1;
@@ -15,20 +17,20 @@ FOB_build_in_progress = true;
 publicVariable "FOB_build_in_progress";
 
 _idx = 0;
-while { (_idx < (count GRLIB_all_fobs)) && _clearedtobuildfob } do {
-    if ( player distance (GRLIB_all_fobs select _idx) < _minfobdist ) then {
+while { (_idx < (count KPLIB_sectors_fob)) && _clearedtobuildfob } do {
+    if ( player distance (KPLIB_sectors_fob select _idx) < _minfobdist ) then {
         _clearedtobuildfob = false;
-        _distfob = player distance (GRLIB_all_fobs select _idx);
+        _distfob = player distance (KPLIB_sectors_fob select _idx);
     };
     _idx = _idx + 1;
 };
 
 _idx = 0;
 if(_clearedtobuildfob) then {
-    while { (_idx < (count sectors_allSectors)) && _clearedtobuildsector } do {
-        if ( player distance (markerPos (sectors_allSectors select _idx)) < _minsectordist ) then {
+    while { (_idx < (count KPLIB_sectors_all)) && _clearedtobuildsector } do {
+        if ( player distance (markerPos (KPLIB_sectors_all select _idx)) < _minsectordist ) then {
             _clearedtobuildsector = false;
-            _distsector = player distance (markerPos (sectors_allSectors select _idx));
+            _distsector = player distance (markerPos (KPLIB_sectors_all select _idx));
         };
         _idx = _idx + 1;
     };

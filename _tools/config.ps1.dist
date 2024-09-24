@@ -1,0 +1,10 @@
+$global:armaDir = "C:\Program Files (x86)\Steam\steamapps\common\Arma 3"
+$global:armaExe = "arma3_x64.exe"
+
+$global:armaProfile = "dev_kplib"
+$global:devMap = "altis"
+
+$global:modsArray = @(
+    "!Workshop\@Advanced Developer Tools",
+    "!Workshop\@CBA_A3"
+)

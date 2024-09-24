@@ -7,7 +7,6 @@
 #include "liberation_menu.hpp"
 #include "liberation_tutorial.hpp"
 #include "liberation_endscreen.hpp"
-#include "liberation_deathscreen.hpp"
 #include "liberation_squad.hpp"
 #include "liberation_permissions.hpp"
 #include "liberation_arsenal.hpp"

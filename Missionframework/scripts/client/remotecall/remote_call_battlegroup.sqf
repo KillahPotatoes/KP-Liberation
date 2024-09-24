@@ -1,3 +1,5 @@
+scriptName "remote_call_battlegroup";
+
 if ( isDedicated ) exitWith {};
 
 params [ "_battlegroup_position" ];

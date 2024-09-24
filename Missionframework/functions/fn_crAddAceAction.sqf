@@ -2,7 +2,7 @@
     File: fn_crAddAceAction.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2019-12-03
-    Last Update: 2020-04-22
+    Last Update: 2020-05-10
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@ params [
 
 if (isNull _civ) exitWith {["Null object given"] call BIS_fnc_error; false};
 
-if (KP_liberation_civrep_debug > 0) then {[format ["ace_action called on: %1", debug_source], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_civrep_debug > 0) then {[format ["ace_action called on: %1", debug_source], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 _civ addAction [
     "<t color='#FF0000'>" + localize "STR_CR_ACE_ACTION" + "</t>",

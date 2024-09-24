@@ -1,7 +1,9 @@
+scriptName "squad_management";
+
 private [ "_dialog", "_membercount", "_memberselection", "_unitname", "_selectedmember", "_cfgVehicles", "_cfgWeapons", "_primary_mags", "_secondary_mags", "_vehstring", "_nearfob", "_fobdistance", "_nearsquad", "_tempgmp", "_destpos", "_destdir", "_resupplied","_firstloop", "_squad_camera", "_targetobject", "_isvehicle" ];
 
-GRLIB_squadaction = -1;
-GRLIB_squadconfirm = -1;
+KPLIB_squadaction = -1;
+KPLIB_squadconfirm = -1;
 _membercount = -1;
 _resupplied = false;
 _memberselection = -1;
@@ -140,11 +142,11 @@ while { dialog && alive player } do {
         };
     } else {
         { ctrlSetText [ _x, "" ] } foreach [ 201, 202, 203, 204, 205, 206, 207, 208, 209 ];
-        GRLIB_squadconfirm = -1;
-        GRLIB_squadaction = -1;
+        KPLIB_squadconfirm = -1;
+        KPLIB_squadaction = -1;
     };
 
-    if ( GRLIB_squadaction == -1 ) then {
+    if ( KPLIB_squadaction == -1 ) then {
         ctrlEnable [ 213, false ];
         ctrlEnable [ 214, false ];
         if ( !(isPlayer _selectedmember) && (vehicle _selectedmember == _selectedmember) ) then {
@@ -166,15 +168,15 @@ while { dialog && alive player } do {
         ctrlEnable [ 214, true ];
     };
 
-    if( GRLIB_squadconfirm == 0 ) then {
-        GRLIB_squadconfirm = -1;
-        GRLIB_squadaction = -1;
+    if( KPLIB_squadconfirm == 0 ) then {
+        KPLIB_squadconfirm = -1;
+        KPLIB_squadaction = -1;
     };
 
-    if ( GRLIB_squadconfirm == 1 ) then {
-        GRLIB_squadconfirm = -1;
+    if ( KPLIB_squadconfirm == 1 ) then {
+        KPLIB_squadconfirm = -1;
 
-        if ( GRLIB_squadaction == 1 ) then {
+        if ( KPLIB_squadaction == 1 ) then {
 
             _nearfob = [ getpos _selectedmember ] call KPLIB_fnc_getNearestFob;
             _fobdistance = 9999;
@@ -186,7 +188,7 @@ while { dialog && alive player } do {
 
             if ( _fobdistance < 100 || count _nearsquad > 0 ) then {
 
-                _tempgmp = createGroup [GRLIB_side_friendly, true];
+                _tempgmp = createGroup [KPLIB_side_player, true];
                 (typeof _selectedmember) createUnit [ markers_reset, _tempgmp,''];
                 [ (units _tempgmp) select 0, _selectedmember ] call KPLIB_fnc_swapInventory;
                 deleteVehicle ((units _tempgmp) select 0);
@@ -199,13 +201,13 @@ while { dialog && alive player } do {
             };
         };
 
-        if (GRLIB_squadaction == 2) then {
+        if (KPLIB_squadaction == 2) then {
             deleteVehicle _selectedmember;
             _resupplied = true;
             hint localize 'STR_REMOVE_OK';
         };
 
-        if (GRLIB_squadaction == 3) then {
+        if (KPLIB_squadaction == 3) then {
 
             closeDialog 0;
 
@@ -236,7 +238,7 @@ while { dialog && alive player } do {
 
         };
 
-        GRLIB_squadaction = -1;
+        KPLIB_squadaction = -1;
 
     };
 
