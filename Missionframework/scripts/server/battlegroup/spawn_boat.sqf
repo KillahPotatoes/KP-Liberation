@@ -80,3 +80,15 @@ _waypoint = _grp addWaypoint [_boatWaypoint,1];
 _waypoint setWaypointType "CYCLE";
 
 _grp setCurrentWaypoint [_grp, 2];
+
+// wait and check if the boat has moved yet, and delete it if not (boats won't move if their waypoint can't be reached)
+// this is really only necessary on maps with sectors near lakes, which the script would interpret as good waypoints, but would be typically inaccessible
+// sleep 15 since with scheduled things spawning of boats can be a bit delayed and with lower timers they could be deleted before they have a chance to move
+// checks the first boat in the array since the lead boat will sit still if the waypoint is inaccesssible, but the follower boat will constantly drive around the leader
+sleep 15;
+
+if(abs(speed (_boats select 0)) < 5) exitWith{
+    {deleteVehicle _x} forEach units _grp;
+    {deleteVehicle _x} forEach _boats;
+    deleteGroup _grp;
+};
