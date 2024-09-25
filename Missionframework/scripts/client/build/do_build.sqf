@@ -8,6 +8,8 @@ _maxdist = KPLIB_range_fob;
 _truepos = [];
 _debug_colisions = false;
 KP_vector = true;
+fob_count = 1;
+if(KPLIB_param_ecoScale) then {fob_count = [] call KPLIB_fnc_getFobCount}; 
 
 private _object_spheres = [];
 private _fob_spheres = [];
@@ -36,9 +38,9 @@ while { true } do {
         _classname = KPLIB_b_fobBuilding;
     } else {
         _classname = ((KPLIB_buildList select buildtype) select buildindex) select 0;
-        _price_s = ((KPLIB_buildList select buildtype) select buildindex) select 1;
-        _price_a = ((KPLIB_buildList select buildtype) select buildindex) select 2;
-        _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
+        _price_s = (((KPLIB_buildList select buildtype) select buildindex) select 1) * fob_count;
+        _price_a = (((KPLIB_buildList select buildtype) select buildindex) select 2) * fob_count;
+        _price_f = (((KPLIB_buildList select buildtype) select buildindex) select 3) * fob_count;
 
         _nearfob = [] call KPLIB_fnc_getNearestFob;
         _storage_areas = (_nearfob nearobjects (KPLIB_range_fob * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
@@ -264,9 +266,9 @@ while { true } do {
 
             if ( !alive player || build_confirmed == 3 ) then {
                 private ["_price_s", "_price_a", "_price_f", "_nearfob", "_storage_areas"];
-                _price_s = ((KPLIB_buildList select buildtype) select buildindex) select 1;
-                _price_a = ((KPLIB_buildList select buildtype) select buildindex) select 2;
-                _price_f = ((KPLIB_buildList select buildtype) select buildindex) select 3;
+                _price_s = (((KPLIB_buildList select buildtype) select buildindex) select 1) * fob_count;
+                _price_a = (((KPLIB_buildList select buildtype) select buildindex) select 2) * fob_count;
+                _price_f = (((KPLIB_buildList select buildtype) select buildindex) select 3) * fob_count;
 
                 _nearfob = [] call KPLIB_fnc_getNearestFob;
                 _storage_areas = (_nearfob nearobjects (KPLIB_range_fob * 2)) select {(_x getVariable ["KPLIB_storage_type",-1]) == 0};
