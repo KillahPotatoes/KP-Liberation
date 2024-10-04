@@ -17,7 +17,7 @@
 
 KPLIB_sectors_airSpawn = [];
 KPLIB_sectors_all = [];
-KPLIB_sectors_boatspawn = [];
+KPLIB_sectors_boatSpawn = [];
 KPLIB_sectors_capital = [];
 KPLIB_sectors_city = [];
 KPLIB_sectors_factory = [];

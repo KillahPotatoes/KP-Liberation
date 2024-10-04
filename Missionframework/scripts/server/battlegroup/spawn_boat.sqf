@@ -8,7 +8,7 @@ private _boats_number = ((floor linearConversion [25, 100, KPLIB_enemyReadiness,
 if (_boats_number < 1) exitWith {};
 
 private _class = selectRandom KPLIB_o_boats;
-private _spawnPoint = ([KPLIB_sectors_boatspawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+private _spawnPoint = ([KPLIB_sectors_boatSpawn, [_first_objective], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
 private _spawnPos = [];
 private _boat = objNull;
 private _boats = [];
