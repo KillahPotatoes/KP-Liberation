@@ -136,6 +136,7 @@ KPLIB_o_battleGrpVehiclesLight  = KPLIB_o_battleGrpVehiclesLight    select {[_x]
 KPLIB_o_troopTransports         = KPLIB_o_troopTransports           select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_o_helicopters             = KPLIB_o_helicopters               select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_o_planes                  = KPLIB_o_planes                    select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_boats                   = KPLIB_o_boats                     select {[_x] call KPLIB_fnc_checkClass};
 
 // Resistance
 KPLIB_r_units                   = KPLIB_r_units                     select {[_x] call KPLIB_fnc_checkClass};
@@ -234,7 +235,8 @@ KPLIB_o_allVeh_classes  = [];
     KPLIB_o_battleGrpVehiclesLight,
     KPLIB_o_troopTransports,
     KPLIB_o_helicopters,
-    KPLIB_o_planes
+    KPLIB_o_planes,
+    KPLIB_o_boats
 ];
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes apply {toLower _x};
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes arrayIntersect KPLIB_o_allVeh_classes;
