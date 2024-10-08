@@ -34,7 +34,7 @@ if (KP_liberation_arsenalUsePreset) then {
                 _disposableLaunchers pushBack _loadedLauncher;
             };
 
-            private _normalLauncher = cba_disposable_NormalLaunchers getVariable _x;
+            private _normalLauncher = cba_disposable_NormalLaunchers get _x;
             if (!isNil "_normalLauncher") then {
                 _normalLauncher params ["_loadedLauncher"];
                 _disposableLaunchers pushBack _loadedLauncher;
