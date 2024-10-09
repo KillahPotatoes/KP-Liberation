@@ -18,7 +18,8 @@
 
 params[
 	["_vehicle", objNull, [objNull]],
-	["_side", KPLIB_side_enemy,[sideUnknown]]
+	["_side", KPLIB_side_enemy, [sideUnknown]]
+
 ];
 
 if (isNull _vehicle) exitWith {["No vehicle provided"] call BIS_fnc_error};
