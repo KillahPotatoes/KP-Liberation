@@ -20,7 +20,7 @@ if (isNull _chopper_type) then {
     };
 
     _newvehicle = createVehicle [_chopper_type, markerpos _spawnsector, [], 0, "FLY"];
-    createVehicleCrew _newvehicle;
+    [_newvehicle, KPLIB_side_enemy] call KPLIB_fnc_createCrew;
     sleep 0.1;
 
     _pilot_group = createGroup [KPLIB_side_enemy, true];

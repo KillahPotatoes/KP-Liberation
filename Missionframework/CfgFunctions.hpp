@@ -20,6 +20,7 @@ class KPLIB {
         class createClearance           {};
         class createClearanceConfirm    {};
         class createCrate               {};
+        class createCrew                {};
         class createManagedUnit         {};
         class crGetMulti                {};
         class crGlobalMsg               {};

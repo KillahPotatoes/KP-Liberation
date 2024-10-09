@@ -67,12 +67,12 @@ if (KPLIB_param_useArsenalPreset) then {
     if !(configProperties [configFile >> "CBA_DisposableLaunchers"] isEqualTo []) then {
         private _disposableLaunchers = ["CBA_FakeLauncherMagazine"];
         {
-            private _loadedLauncher = cba_disposable_LoadedLaunchers getVariable _x;
+            private _loadedLauncher = cba_disposable_LoadedLaunchers get _x;
             if (!isNil "_loadedLauncher") then {
                 _disposableLaunchers pushBack _loadedLauncher;
             };
 
-            private _normalLauncher = cba_disposable_NormalLaunchers getVariable _x;
+            private _normalLauncher = cba_disposable_NormalLaunchers get _x;
             if (!isNil "_normalLauncher") then {
                 _normalLauncher params ["_loadedLauncher"];
                 _disposableLaunchers pushBack _loadedLauncher;
