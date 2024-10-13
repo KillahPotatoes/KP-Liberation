@@ -1,4 +1,6 @@
 /*
+    Author: Discord Jaserdoit#9385
+
     Needed Mods:
     - CUP Weapons
     - CUP Vehicles
@@ -22,10 +24,10 @@ FOB_truck_typename = "B_Truck_01_box_F";                                // This 
 Arsenal_typename = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
 Respawn_truck_typename = "CUP_B_HMMWV_Ambulance_USMC";                  // This is the mobile respawn (and medical) truck.
 huron_typename = "CUP_B_CH53E_USMC";                                    // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
-crewman_classname = "CUP_B_USMC_Crewman_FROG_WDL";                      // This defines the crew for vehicles.
+crewman_classname = "CUP_B_USMC_Crew";                      // This defines the crew for vehicles.
 pilot_classname = "CUP_B_USMC_Pilot";                                   // This defines the pilot for helicopters.
 KP_liberation_little_bird_classname = "CUP_B_UH1Y_UNA_USMC";            // These are the little birds which spawn on the Freedom or at Chimera base.
-KP_liberation_boat_classname = "CUP_B_Zodiac_USMC";                // These are the boats which spawn at the stern of the Freedom.
+KP_liberation_boat_classname = "CUP_B_Zodiac_USMC";                     // These are the boats which spawn at the stern of the Freedom.
 KP_liberation_truck_classname = "CUP_B_MTVR_USMC";                      // These are the trucks which are used in the logistic convoy system.
 KP_liberation_small_storage_building = "ContainmentArea_02_sand_F";     // A small storage area for resources.
 KP_liberation_large_storage_building = "ContainmentArea_01_sand_F";     // A large storage area for resources.
@@ -46,31 +48,30 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-    ["CUP_B_USMC_Soldier_FROG_WDL",20,0,0],                             // Rifleman
-    ["CUP_B_USMC_Soldier_LAT_FROG_WDL",30,0,0],                         // Rifleman (M136)
-    ["CUP_B_USMC_Soldier_GL_FROG_WDL",25,0,0],                          // Grenadier
-    ["CUP_B_USMC_Soldier_AR_FROG_WDL",25,0,0],                          // Automatic Rifleman
-    ["CUP_B_USMC_Soldier_MG_FROG_WDL",35,0,0],                          // Machinegunner
-    ["CUP_B_USMC_Soldier_Marksman_FROG_WDL",30,0,0],                    // Designated Marksman
-    ["CUP_B_USMC_Soldier_HAT_FROG_WDL",50,25,0],                        // AT Specialist (Javelin)
-    ["CUP_B_USMC_Soldier_AT_FROG_WDL",50,10,0],                         // AT Specialist (SMAW)
-    ["CUP_B_USMC_Soldier_AA_FROG_WDL",50,10,0],                         // AA Specialist (Stinger)
-    ["CUP_B_USMC_Soldier_Medic_FROG_WDL",30,0,0],                       // Corpsman
-    ["CUP_B_USMC_Soldier_Engineer_FROG_WDL",30,0,0],                    // Engineer
-    ["CUP_B_FR_Soldier_Exp_WDL",30,0,0],                                // Force Recon Demolitions Specialist
-    ["CUP_B_FR_Soldier_Assault",20,0,0],                                // Force Recon Assault Rifleman
-    ["CUP_B_FR_Soldier_Marksman_WDL",30,0,0],                           // Force Recon Marksman
-    ["CUP_B_FR_Soldier_TL",40,0,0],                                     // Force Recon Team Leader
-    ["CUP_B_FR_Medic_WDL",30,0,0],                                      // Force Recon Corpsman
-    ["CUP_B_USMC_Soldier_M40A3",70,5,0],                                // Sniper M40A3
-    ["CUP_B_USMC_Soldier_M107",70,5,0],                                 // Sniper M107
-    ["CUP_B_USMC_Spotter",20,0,0],                                      // Spotter
-    ["CUP_B_USMC_Crewman_FROG_WDL",10,0,0],                             // Crewman
-    ["CUP_B_USMC_Pilot",10,0,0]                                         // Pilot
+    ["CUP_B_USMC_Soldier",20,0,0],                             // Rifleman
+    ["CUP_B_USMC_Soldier_LAT",30,0,0],                         // Rifleman (M136)
+    ["CUP_B_USMC_Soldier_GL",25,0,0],                          // Grenadier
+    ["CUP_B_USMC_Soldier_AR",25,0,0],                          // Automatic Rifleman
+    ["CUP_B_USMC_Soldier_MG",35,0,0],                          // Machinegunner
+    ["CUP_B_USMC_Soldier_Marksman",30,0,0],                    // Designated Marksman
+    ["CUP_B_USMC_Soldier_HAT",50,25,0],                        // AT Specialist (Javelin)
+    ["CUP_B_USMC_Soldier_AT",50,10,0],                         // AT Specialist (SMAW)
+    ["CUP_B_USMC_Soldier_AA",50,10,0],                         // AA Specialist (Stinger)
+    ["CUP_B_USMC_Medic",30,0,0],                               // Corpsman
+    ["CUP_B_USMC_Engineer",30,0,0],                            // Engineer
+    ["CUP_B_FR_Soldier_Exp",30,0,0],                           // Force Recon Demolitions Specialist
+    ["CUP_B_FR_Soldier_Assault",20,0,0],                       // Force Recon Assault Rifleman
+    ["CUP_B_FR_Soldier_Marksman_WDL",30,0,0],                  // Force Recon Marksman
+    ["CUP_B_FR_Soldier_TL",40,0,0],                            // Force Recon Team Leader
+    ["CUP_B_FR_Medic_WDL",30,0,0],                             // Force Recon Corpsman
+    ["CUP_B_USMC_Sniper_M40A3",70,5,0],                        // Sniper M40A3
+    ["CUP_B_USMC_Sniper_M107",70,5,0],                         // Sniper M107
+    ["CUP_B_USMC_Spotter",20,0,0],                             // Spotter
+    ["CUP_B_USMC_Crew",10,0,0],                                // Crewman
+    ["CUP_B_USMC_Pilot",10,0,0]                                // Pilot
 ];
 
 light_vehicles = [
-    ["CUP_B_M1030_USMC",50,0,25],                                       // M1030
     ["CUP_B_HMMWV_Unarmed_USMC",75,0,50],                               // HMMWV (Unarmed)
     ["CUP_B_HMMWV_M1114_USMC",75,30,50],                                // HMMWV M240
     ["CUP_B_HMMWV_M2_USMC",75,60,50],                                   // HMMWV M2
@@ -81,8 +82,8 @@ light_vehicles = [
     ["CUP_B_RG31E_M2_OD_USMC",100,50,50],                               // RG-31 Mk5E M2
     ["CUP_B_RG31_Mk19_OD_USMC",100,80,50],                              // RG-31 Mk.19
     ["CUP_B_MTVR_USMC",125,0,75],                                       // MTVR
-    ["CUP_B_RHIB_USMC",150,100,100],                                    // RHIB
-    ["CUP_B_RHIB2Turret_USMC",250,200,100]                              // RHIB (Mk19)
+    ["CUP_B_M1151_USMC",150,100,100],                                   // RHIB
+    ["CUP_B_M1151_M2_USMC",250,200,100]                                 // RHIB (Mk19)
 ];
 
 heavy_vehicles = [
@@ -101,12 +102,8 @@ heavy_vehicles = [
 air_vehicles = [
     ["CUP_B_UH1Y_MEV_USMC",200,0,100],                                  // UH-1Y Venom (MEDVAC)
     ["CUP_B_UH1Y_Gunship_Dynamic_USMC",200,100,100],                    // UH-1Y Venom (Gunship)
-    ["CUP_B_MH60S_FFV_USMC",250,25,200],                                // MH-60S Seahawk (FFV)
+    ["CUP_MH60S_Unarmed_FFV_USN",250,0,200],                            // MH-60S Seahawk (FFV)
     ["CUP_B_UH60S_USN",250,50,200],                                     // MH-60S Seahawk (M3M)
-    ["USAF_C130J",200,0,250],                                           // C-130J Super Hercules
-    ["USAF_C130J_Cargo",200,0,250],                                     // C-130J Super Hercules (Cargo)
-    ["USAF_C17",500,0,400],                                             // C-17 Globemaster III
-    ["usaf_kc135",600,0,2500],                                          // KC-135 Stratotanker
     ["CUP_B_AH1Z_Dynamic_USMC",500,500,200],                            // AH-1Z
     ["CUP_B_MH60L_DAP_2x_USN",450,400,250],                             // MH-60S Knighthawk (ESSS x2)
     ["USAF_RQ4A",500,0,200],                                            // RQ-4A Global Hawk
@@ -119,6 +116,10 @@ air_vehicles = [
     ["USAF_F22_Heavy",1800,2250,500],                                   // F-22A Raptor (Heavy)
     ["USAF_F35A_STEALTH",2250,2000,750],                                // F-35A Lightning II
     ["USAF_F35A",2250,2250,750],                                        // F-35A Lightning II (Heavy)
+    ["USAF_C130J",200,0,250],                                           // C-130J Super Hercules
+    ["USAF_C130J_Cargo",200,0,250],                                     // C-130J Super Hercules (Cargo)
+    ["USAF_C17",500,0,400],                                             // C-17 Globemaster III
+    ["USAF_kc135",600,0,2500],                                          // KC-135 Stratotanker
     ["CUP_B_F35B_Stealth_USMC",2500,2000,750],                          // F-35B Lightning II (Stealth)
     ["CUP_B_F35B_USMC",2500,2250,750],                                  // F-35B Lightning II
     ["CUP_B_MV22_USMC_RAMPGUN",750,100,500],                            // MV-22B Osprey (Ramp Gun)
@@ -264,53 +265,53 @@ support_vehicles = [
 // Light infantry squad.
 blufor_squad_inf_light = [
     "CUP_B_USMC_Soldier_SL_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_LAT_FROG_WDL",
-    "CUP_B_USMC_Soldier_GL_FROG_WDL",
-    "CUP_B_USMC_Soldier_AR_FROG_WDL",
-    "CUP_B_USMC_Soldier_AR_FROG_WDL",
-    "CUP_B_USMC_Soldier_Marksman_FROG_WDL",
-    "CUP_B_USMC_Medic_FROG_WDL",
-    "CUP_B_USMC_Engineer_FROG_WDL"
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier_LAT",
+    "CUP_B_USMC_Soldier_GL",
+    "CUP_B_USMC_Soldier_AR",
+    "CUP_B_USMC_Soldier_AR",
+    "CUP_B_USMC_Soldier_Marksman",
+    "CUP_B_USMC_Medic",
+    "CUP_B_USMC_Engineer"
 ];
 
 // Heavy infantry squad.
 blufor_squad_inf = [
     "CUP_B_USMC_Soldier_SL_FROG_WDL",
-    "CUP_B_USMC_Soldier_LAT_FROG_WDL",
-    "CUP_B_USMC_Soldier_LAT_FROG_WDL",
-    "CUP_B_USMC_Soldier_GL_FROG_WDL",
-    "CUP_B_USMC_Soldier_AR_FROG_WDL",
-    "CUP_B_USMC_Soldier_AR_FROG_WDL",
-    "CUP_B_USMC_Soldier_MG_FROG_WDL",
-    "CUP_B_USMC_Soldier_Marksman_FROG_WDL",
-    "CUP_B_USMC_Medic_FROG_WDL",
-    "CUP_B_USMC_Engineer_FROG_WDL"
+    "CUP_B_USMC_Soldier_LAT",
+    "CUP_B_USMC_Soldier_LAT",
+    "CUP_B_USMC_Soldier_GL",
+    "CUP_B_USMC_Soldier_AR",
+    "CUP_B_USMC_Soldier_AR",
+    "CUP_B_USMC_Soldier_MG",
+    "CUP_B_USMC_Soldier_Marksman",
+    "CUP_B_USMC_Medic",
+    "CUP_B_USMC_Engineer"
 ];
 
 // AT specialists squad.
 blufor_squad_at = [
     "CUP_B_USMC_Soldier_SL_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_HAT_FROG_WDL",
-    "CUP_B_USMC_Soldier_AT_FROG_WDL",
-    "CUP_B_USMC_Soldier_AT_FROG_WDL",
-    "CUP_B_USMC_Medic_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL"
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier_HAT",
+    "CUP_B_USMC_Soldier_AT",
+    "CUP_B_USMC_Soldier_AT",
+    "CUP_B_USMC_Medic",
+    "CUP_B_USMC_Soldier"
 ];
 
 // AA specialists squad.
 blufor_squad_aa = [
     "CUP_B_USMC_Soldier_SL_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_AA_FROG_WDL",
-    "CUP_B_USMC_Soldier_AA_FROG_WDL",
-    "CUP_B_USMC_Soldier_AA_FROG_WDL",
-    "CUP_B_USMC_Medic_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL"
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier_AA",
+    "CUP_B_USMC_Soldier_AA",
+    "CUP_B_USMC_Soldier_AA",
+    "CUP_B_USMC_Medic",
+    "CUP_B_USMC_Soldier"
 ];
 
 // Force recon squad.
@@ -324,21 +325,21 @@ blufor_squad_recon = [
     "CUP_B_FR_Soldier_Marksman_WDL",
     "CUP_B_FR_Soldier_Marksman_WDL",
     "CUP_B_FR_Medic_WDL",
-    "CUP_B_FR_Soldier_Exp_WDL"
+    "CUP_B_FR_Soldier_Exp"
 ];
 
 // Paratroopers squad (The units of this squad will automatically get parachutes on build)
 blufor_squad_para = [
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL",
-    "CUP_B_USMC_Soldier_FROG_WDL"
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier",
+    "CUP_B_USMC_Soldier"
 ];
 
 /*
