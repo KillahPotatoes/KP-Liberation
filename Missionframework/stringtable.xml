@@ -5049,45 +5049,6 @@
             <Korean>&lt;br/&gt;&lt;br/&gt;- 지휘 :&lt;br/&gt; &lt;br/&gt;지휘권한은 관리자가 허가한 자만이 획득할 수 있다. 지휘자는 각 거점에서 생산되고 있는 군수물자를 지정하거나 내역을 살펴 볼 수 있고, 각 군수물자를 AI수송부대를 이용하여 운반할 수 있다. 또한 제우스 기능을 사용할 수 있다.&lt;br/&gt; &lt;br/&gt;- 기타 정보 :&lt;br/&gt; &lt;br/&gt;항공기를 사용하기 위해서는 반드시 '비행 관제소'를 먼저 만들어야만 한다. 이후 '항공기 격납고'를 만들고 항공기를 배치한다. 항공기 격납고 수에 따라 운행할 수 있는 항공기 숫자가 결정된다.&lt;br/&gt; &lt;br/&gt;비행장은 평지라 할지라도 습기가 많은 지역은 항공기 이착률이 힘들기 때문에 적군 비행장을 점령하여 사용하기를 권한다.&lt;br/&gt; &lt;br/&gt;고급 장비는 특정한 군사기지를 점령해야만 전초기지에서 생산(배치)할 수 있다. 지도에 보면 군사기지 이름 옆에 원이 그려져 있고 체크가 된 곳이 있는데 이 곳을 점령하게되면 체크 옆에 표기되어 있는 장비를 생산(배치)할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;전투에 사용한 장비는 반드시 전초기지로 가지고 귀환해야 한다. 전초기지범위 밖에 있으면 사라지기 때문이다. 노획장비 또한 없어지지 않기 때문에 반드시 전초기지로 귀환해서 접속종료를 하기 바란다.&lt;br/&gt; &lt;br/&gt;AI은 1플레이어가 최대 12명까지 뽑아서 사용할 수있으나, 지휘하기엔 의무병과 공병을 포함하여 3~5명정도를 추천한다.&lt;br/&gt; &lt;br/&gt;함부로 민간인을 학살하거나 재산(특히 집)을 파괴하거나 약탈(차량같은 것)하지 말라. 민병대 출현하게 되면 머리 아프다.&lt;br/&gt; &lt;br/&gt;민간인들에게 환영받기 위해서는 부상당한 민간인(간혹 지도에 보라색이 생김)들을 도와줘라.&lt;br/&gt; &lt;br/&gt;끝으로 재미있는 게임 시간이 되길 바란다!&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Když hráč použije roli Velitele, získá přístup k rozhraní Zeus stisknutím odpovídající klávesy (ve výchozím nastavení Y). Toto rozhraní umožňuje velení přátelských sil v zobrazení 3D nebo mapy.&lt;br/&gt; &lt;br/&gt;Navíc komandér získá přístup postavit vozidla s posádkou nebo celé předvytvořené družstva.&lt;br/&gt; &lt;br/&gt;Tato role je důležitá, a jako taková dává přímý přístup k spravování produkce v sektorech a logistice AI. Pokud budete stát na FOB, dostanete možnosti "Nastavení produkce" a "Logistický přehled".&lt;br/&gt; &lt;br/&gt; První vám dá možnost nastavit která továrna bude produkovat kterou surovinu, jako také detailní přehled.&lt;br/&gt; &lt;br/&gt; Písmena vám dovolí rozkazovat AI logistickým konvojům, kde můžete "Přidat" logistické skupiny, koupit jakékoliv množství náklaďáků na skupinu a přikázat jim převážet specifické množství surovin napříč celou oblastí pro vás.&lt;br/&gt; &lt;br/&gt;</Czech>
         </Key>
-        <Key ID="STR_PARAMS_ARSENALUSEPRESET">
-            <Original>Arsenal mode</Original>
-            <German>Arsenalmodus</German>
-            <Spanish>Modo Arsenal</Spanish>
-            <Russian>Режим арсенала</Russian>
-            <Italian>Modalità Arsenale</Italian>
-            <Chinesesimp>军火库模式</Chinesesimp>
-            <Chinese>軍火庫模式</Chinese>
-            <Turkish>Ekipman(Arsenal) modu</Turkish>
-            <Portuguese>Modo do Arsenal</Portuguese>
-            <Korean>무기고 모델</Korean>
-            <Czech>Nastavení Zbrojnice</Czech>
-        </Key>
-        <Key ID="STR_PARAMS_NORESTRICTIONS">
-            <Original>No restrictions</Original>
-            <German>Keine Einschränkungen</German>
-            <Spanish>Sin restricciones</Spanish>
-            <Russian>Без ограничений</Russian>
-            <Italian>Senza Restrizioni</Italian>
-            <Chinesesimp>无限制</Chinesesimp>
-            <Chinese>無限制</Chinese>
-            <Turkish>Kısıtlama yok</Turkish>
-            <Portuguese>Sem restrições</Portuguese>
-            <Korean>제한 없음</Korean>
-            <Czech>Bez Omezení</Czech>
-        </Key>
-        <Key ID="STR_PARAMS_USEPRESET">
-            <Original>Use preset from config</Original>
-            <German>Benutze Preset aus Konfiguration</German>
-            <Spanish>Usar pre-definición desde configuracion</Spanish>
-            <Russian>Использовать предустановки из конфигурации</Russian>
-            <Italian>Usa il file config.sqf</Italian>
-            <Chinesesimp>使用配置文件中的预设内容</Chinesesimp>
-            <Chinese>使用設定文件中的預設內容</Chinese>
-            <Turkish>config.sqf kullan</Turkish>
-            <Portuguese>Usar predefinição de config.sqf</Portuguese>
-            <Korean>사용자 설정(기본임무설정)</Korean>
-            <Czech>Použít nastavení z configu</Czech>
-        </Key>
         <Key ID="STR_ACTION_CRATE_PUSH">
             <Original>-- PUSH CRATE</Original>
             <German>-- KISTE SCHIEBEN</German>
@@ -7316,6 +7277,336 @@
             <German>KP Spielermenü v1.0.2\nvon Wyqer</German>
             <Spanish>Menú de Jugador KP v1.0.2\npor Wyqer</Spanish>
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_PRESET_CUSTOMIZATION">
+            <English>== PRESET CUSTOMIZATION ==</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALUSEPRESET">
+            <Original>Arsenal mode</Original>
+            <German>Arsenalmodus</German>
+            <Spanish>Modo Arsenal</Spanish>
+            <Russian>Режим арсенала</Russian>
+            <Italian>Modalità Arsenale</Italian>
+            <Chinesesimp>军火库模式</Chinesesimp>
+            <Chinese>軍火庫模式</Chinese>
+            <Turkish>Ekipman(Arsenal) modu</Turkish>
+            <Portuguese>Modo do Arsenal</Portuguese>
+            <Korean>무기고 모델</Korean>
+            <Czech>Nastavení Zbrojnice</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_NORESTRICTIONS">
+            <Original>No restrictions</Original>
+            <German>Keine Einschränkungen</German>
+            <Spanish>Sin restricciones</Spanish>
+            <Russian>Без ограничений</Russian>
+            <Italian>Senza Restrizioni</Italian>
+            <Chinesesimp>无限制</Chinesesimp>
+            <Chinese>無限制</Chinese>
+            <Turkish>Kısıtlama yok</Turkish>
+            <Portuguese>Sem restrições</Portuguese>
+            <Korean>제한 없음</Korean>
+            <Czech>Bez Omezení</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_USEPRESET">
+            <Original>Use preset from config</Original>
+            <German>Benutze Preset aus Konfiguration</German>
+            <Spanish>Usar pre-definición desde configuracion</Spanish>
+            <Russian>Использовать предустановки из конфигурации</Russian>
+            <Italian>Usa il file config.sqf</Italian>
+            <Chinesesimp>使用配置文件中的预设内容</Chinesesimp>
+            <Chinese>使用設定文件中的預設內容</Chinese>
+            <Turkish>config.sqf kullan</Turkish>
+            <Portuguese>Usar predefinição de config.sqf</Portuguese>
+            <Korean>사용자 설정(기본임무설정)</Korean>
+            <Czech>Použít nastavení z configu</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET">
+            <English>BLUFOR Preset option</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET0">
+            <English>Mission-default - Recommended. Changing this value may result in unbalanced gameplay.</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET1">
+            <English>Custom (default vanilla with many optional mods supported)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET2">
+            <English>Apex Tanoa (apex vanilla with many optional mods supported)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET3">
+            <English>3cb BAF (MTP)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET4">
+            <English>3cb BAF (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET5">
+            <English>BWMod Bundeswehr (Flecktarn)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET6">
+            <English>BWMod Bundeswehr (Tropentarn)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET7">
+            <English>RHS USAF (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET8">
+            <English>RHS USAF (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET9">
+            <English>RHS AFRF (VDV/MSV)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET10">
+            <English>Germany West (Global Mobiliation)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET11">
+            <English>Germany West Winter (Global Moblilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET12">
+            <English>Germany East (Global Moblilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET13">
+            <English>Germany East Winter (Global Moblilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET14">
+            <English>CSAT Brown</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET15">
+            <English>CSAT Green</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET16">
+            <English>Unsung US</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET17">
+            <English>CUP British Armed Forces (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET18">
+            <English>CUP British Armed Forces (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET19">
+            <English>CUP US Marine Corps (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET20">
+            <English>CUP US Marine Corps (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET21">
+            <English>CUP US Army (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET22">
+            <English>CUP US Army (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET23">
+            <English>CUP Chernarus Defense Force</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET24">
+            <English>CUP Army of the Czech Republic (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET25">
+            <English>CUP Army of the Czech Republic (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET26">
+            <English>CUP Chernarussian Movement of the Red Star</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET27">
+            <English>CUP Sahrani Liberation Army</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET28">
+            <English>CUP Takistani Army</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET29">
+            <English>SFP (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET30">
+            <English>SFP (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_BLUFORPRESET31">
+            <English>LDF (Contact DLC)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET">
+            <English>OPFOR Preset option</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET0">
+            <English>Mission-default - Recommended. Changing this value may result in unbalanced gameplay.</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET1">
+            <English>Custom (default vanilla CSAT)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET2">
+            <English>Apex Tanoa (apex vanilla CSAT)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET3">
+            <English>RHS AFRF (EMR/MSV)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET4">
+            <English>Project OPFOR (Takistan)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET5">
+            <English>Project OPFOR (Islamic State)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET6">
+            <English>Project OPFOR (Sahrani)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET7">
+            <English>AAF</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET8">
+            <English>NATO</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET9">
+            <English>Germany West (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET10">
+            <English>Germany West Winter (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET11">
+            <English>Germany East (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET12">
+            <English>Germany East Winter (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET13">
+            <English>Unsung NVA</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET14">
+            <English>CUP Sahrani Liberation Army</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET15">
+            <English>CUP Takistani Army</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET16">
+            <English>CUP Chernarussian Movement of the Red Star</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET17">
+            <English>CUP Armed Forces of the Russian Federation (MSV - EMR)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET18">
+            <English>CUP Armed Forces of the Russian Federation (Modern MSV)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET19">
+            <English>CUP Chernarus Defense Force</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET20">
+            <English>CUP British Armed Forces (Desert)</English>
+        </Key>
+        <Key ID="STR_PARAMS_OPFORPRESET21">
+            <English>CUP British Armed Forces (Woodland)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET">
+            <English>Guerilla Preset option</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET0">
+            <English>Mission-default - Recommended. Changing this value may result in unbalanced gameplay.</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET1">
+            <English>Custom (default vanilla FIA)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET2">
+            <English>Apex Tanoa (apex vanilla Syndikat)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET3">
+            <English>RHS GREF</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET4">
+            <English>Project OPFOR (Middle Eastern)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET5">
+            <English>Project OPFOR (Sahrani)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET6">
+            <English>Germany (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET7">
+            <English>Unsung</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET8">
+            <English>CUP Takistani Locals</English>
+        </Key>
+        <Key ID="STR_PARAMS_GUERPRESET9">
+            <English>CUP National Party of Chernarus</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET">
+            <English>Civilian Preset option</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET0">
+            <English>Mission-default - Recommended. Changing this value may result in unbalanced gameplay.</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET1">
+            <English>Custom (default vanilla)</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET2">
+            <English>Apex Tanoa (apex vanilla)</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET3">
+            <English>Project OPFOR (Middle Eastern)</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET4">
+            <English>RDS Civilians</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET5">
+            <English>Germany (Global Mobilization)</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET6">
+            <English>Unsung</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET7">
+            <English>CUP Takistani Civilians</English>
+        </Key>
+        <Key ID="STR_PARAMS_CIVPRESET8">
+            <English>CUP Chernarussian Civilians</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET">
+            <English>Arsenal Preset option</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET0">
+            <English>Mission-default - Recommended. Changing this value may result in unbalanced gameplay.</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET1">
+            <English>Use the default blacklist method (defined below)</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET2">
+            <English>Custom arsenal preset (edit the custom.sqf in the arsenal_presests\ folder to change things for your own versions and tweaks)</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET3">
+            <English>RHS USAF arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET4">
+            <English>3cbBAF and RHS USAF arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET5">
+            <English>GM West arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET6">
+            <English>GM East arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET7">
+            <English>CSAT arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET8">
+            <English>Unsung US arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET9">
+            <English>SFP arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET10">
+            <English>BWMod arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET11">
+            <English>NATO MTP arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET12">
+            <English>NATO Tropic arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET13">
+            <English>NATO Woodland arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET14">
+            <English>CSAT Hex arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET15">
+            <English>CSAT Green Hex arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET16">
+            <English>AAF arsenal preset</English>
+        </Key>
+        <Key ID="STR_PARAMS_ARSENALPRESET17">
+            <English>LDF arsenal preset</English>
         </Key>
     </Package>
 </Project>
