@@ -14,6 +14,7 @@
 * Tweaked: Comments/structure of the config file. Also added some category prefix sorting to some config variables.
 * Tweaked: GM East enemy preset, lower the chance for unarmed BRDM.
 * Tweaked: Moved mission build tool into subdirectory
+* Tweaked: Loadouts now display alphabetically
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
 * Fixed: Sector monitor got stuck after sector cap was reached until restarting the server.
 * Fixed: FOB truck got mass set, but should've just apply to FOB boxes.
