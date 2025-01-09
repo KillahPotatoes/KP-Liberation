@@ -21,6 +21,7 @@ private ["_loadouts_data"];
 // Get loadouts either from ACE or BI arsenals
 if (KPLIB_ace && KPLIB_param_arsenalType) then {
     _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
+    _loadouts_data sort true;
 } else {
     private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
     _loadouts_data = [];
@@ -33,6 +34,7 @@ if (KPLIB_ace && KPLIB_param_arsenalType) then {
             _counter = _counter + 1;
         } forEach _saved_loadouts;
     };
+    _loadouts_data sort true;
 };
 
 waitUntil { dialog };
