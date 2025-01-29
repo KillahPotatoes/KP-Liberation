@@ -2,7 +2,7 @@
     File: description.ext
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-16
-    Last Update: 2020-05-09
+    Last Update: 2021-05-11
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -21,7 +21,7 @@
 class Header {
     gameType = "CTI";
     minPlayers = 1;
-    maxPlayers = 34;
+    maxPlayers = 37;
 };
 
 // Name of Mission author(s) and contributors. Obviously you can only add and not (!) remove someone.
@@ -213,7 +213,7 @@ taskManagement_drawDist = 5000;
 */
 
 class CfgDebriefing {
-    #include "KPLIB_debriefs.hpp"
+    #include "KPLIB_debriefs.inc"
 };
 
 class CfgDiscordRichPresence {
@@ -228,8 +228,8 @@ class CfgDiscordRichPresence {
 };
 
 class CfgFunctions {
-    #include "CfgFunctions.hpp"
-    #include "KP\KPPLM\KPPLM_functions.hpp"
+    #include "CfgFunctions.inc"
+    #include "KP\KPPLM\KPPLM_functions.inc"
 };
 
 class CfgRespawnTemplates {
@@ -237,14 +237,14 @@ class CfgRespawnTemplates {
 };
 
 class CfgTaskDescriptions {
-    #include "scripts\client\tutorial\CfgTaskDescriptions.hpp"
+    #include "scripts\client\tutorial\CfgTaskDescriptions.inc"
 };
 
-#include "ui\liberation_interface.hpp"
-#include "ui\liberation_notifications.hpp"
-#include "ui\mission_params.hpp"
+#include "ui\liberation_interface.inc"
+#include "ui\liberation_notifications.inc"
+#include "ui\mission_params.inc"
 
-#include "GREUH\UI\GREUH_interface.hpp"
-#include "KP\KPGUI\KPGUI_defines.hpp"
-#include "KP\KPPLM\ui\KPPLM_dialog.hpp"
+#include "GREUH\UI\GREUH_interface.inc"
+#include "KP\KPGUI\KPGUI_defines.inc"
+#include "KP\KPPLM\ui\KPPLM_dialog.inc"
 

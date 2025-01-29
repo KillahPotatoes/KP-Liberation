@@ -1,5 +1,5 @@
 /*
-    File: KPLIB_debriefs.hpp
+    File: KPLIB_debriefs.inc
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2020-05-09
     Last Update: 2020-05-09

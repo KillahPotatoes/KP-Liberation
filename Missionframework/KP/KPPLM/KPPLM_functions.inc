@@ -1,7 +1,7 @@
 /*
     KP PLAYER MENU FUNCTIONS
 
-    File: KPPLM_functions.hpp
+    File: KPPLM_functions.inc
     Author: Wyqer - https://github.com/KillahPotatoes
     Date: 2018-06-02
     Last Update: 2020-04-08
