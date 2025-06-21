@@ -124,7 +124,7 @@ KPLIB_o_troopTransports = [
     "gm_ge_army_fuchsa0_engineer_win",                                  // Fuchs (Engineer)
     "gm_ge_army_fuchsa0_reconnaissance_win",                            // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc_win",                                       // M113A3 (MG3)
-    "gm_ge_army_m113a1g_apc_milan_win"                                  // M113A3 (MILAN)
+    "gm_ge_army_m113a1g_apc_milan_win",                                 // M113A3 (MILAN)
     "gm_ge_army_ch53g"                                                  // CH-53G
 ];
 
