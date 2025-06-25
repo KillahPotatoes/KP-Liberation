@@ -93,7 +93,7 @@ KPLIB_o_armyVehiclesLight = [
     "gm_gc_army_brdm2_9p133",                                           // SF-9P133
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pa",                                               // SPW-60PA
-    "gm_gc_army_btr60pb"                                                // SPW-60PB
+    "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_btr60pb"                                                // SPW-60PB
 ];
 
