@@ -13,6 +13,7 @@
 * Tweaked: Parameter value variables are having a `param` prefix now.
 * Tweaked: Comments/structure of the config file. Also added some category prefix sorting to some config variables.
 * Tweaked: GM East enemy preset, lower the chance for unarmed BRDM.
+* Tweaked: GM West & East player & enemy presets, added GM 1.6 update vehicles
 * Tweaked: Moved mission build tool into subdirectory
 * Tweaked: Loadouts now display alphabetically
 * Fixed: Description.ext stated 34 players while there are also 3 additional HC slots, so 37 in total.
