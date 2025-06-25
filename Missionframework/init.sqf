@@ -15,6 +15,7 @@ if (!isServer) then {waitUntil {!isNil "KPLIB_initServerDone"};};
 [] call compile preprocessFileLineNumbers "KPLIB_config.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_whitelists.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_transportConfigs.sqf";
+[] call compile preprocessFileLineNumbers "KPLIB_staticsConfigs.sqf";
 [] call compile preprocessFileLineNumbers "KPLIB_classnameLists.sqf";
 [] call compile preprocessFileLineNumbers "scripts\shared\fetch_params.sqf";
 [] call compile preprocessFileLineNumbers "presets\init_presets.sqf";

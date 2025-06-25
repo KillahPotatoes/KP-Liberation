@@ -136,6 +136,12 @@ KPLIB_o_battleGrpVehiclesLight  = KPLIB_o_battleGrpVehiclesLight    select {[_x]
 KPLIB_o_troopTransports         = KPLIB_o_troopTransports           select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_o_helicopters             = KPLIB_o_helicopters               select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_o_planes                  = KPLIB_o_planes                    select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_raisedHMG       = KPLIB_o_statics_raisedHMG         select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_loweredHMG      = KPLIB_o_statics_loweredHMG        select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_raisedGMG       = KPLIB_o_statics_raisedGMG         select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_loweredGMG      = KPLIB_o_statics_loweredGMG        select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_AT              = KPLIB_o_statics_AT                select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_o_statics_AA              = KPLIB_o_statics_AA                select {[_x] call KPLIB_fnc_checkClass};
 
 // Resistance
 KPLIB_r_units                   = KPLIB_r_units                     select {[_x] call KPLIB_fnc_checkClass};
@@ -238,6 +244,19 @@ KPLIB_o_allVeh_classes  = [];
 ];
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes apply {toLower _x};
 KPLIB_o_allVeh_classes = KPLIB_o_allVeh_classes arrayIntersect KPLIB_o_allVeh_classes;
+
+// All opfor turrets classnames
+KPLIB_o_allTurrets_classes = [];
+{
+    KPLIB_o_allTurrets_classes append _x;
+}forEach [
+    KPLIB_o_statics_raisedHMG,
+    KPLIB_o_statics_loweredHMG,
+    KPLIB_o_statics_raisedGMG,
+    KPLIB_o_statics_loweredGMG,
+    KPLIB_o_statics_AT,
+    KPLIB_o_statics_AA
+];
 
 // All regular opfor soldier classnames
 KPLIB_o_inf_classes = [KPLIB_o_sentry, KPLIB_o_rifleman, KPLIB_o_grenadier, KPLIB_o_squadLeader, KPLIB_o_teamLeader, KPLIB_o_marksman, KPLIB_o_machinegunner, KPLIB_o_heavyGunner, KPLIB_o_medic, KPLIB_o_riflemanLAT, KPLIB_o_atSpecialist, KPLIB_o_aaSpecialist, KPLIB_o_officer, KPLIB_o_sharpshooter, KPLIB_o_sniper,KPLIB_o_engineer];

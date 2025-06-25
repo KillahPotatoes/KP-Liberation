@@ -21,6 +21,8 @@ class KPLIB {
         class createClearanceConfirm    {};
         class createCrate               {};
         class createManagedUnit         {};
+        class createSectorObjects       {};
+        class createStaticWeapons       {};
         class crGetMulti                {};
         class crGlobalMsg               {};
         class doSave                    {};
@@ -69,6 +71,7 @@ class KPLIB {
         class log                       {};
         class potatoScan                {};
         class protectObject             {};
+        class registerSectorObject      {};
         class secondsToTimer            {};
         class setDiscordState           {};
         class setFobMass                {};
@@ -83,6 +86,7 @@ class KPLIB {
         class spawnMilitaryPostSquad    {};
         class spawnMilitiaCrew          {};
         class spawnRegularSquad         {};
+        class spawnStaticWeapon         {};
         class spawnVehicle              {};
         class swapInventory             {};
     };

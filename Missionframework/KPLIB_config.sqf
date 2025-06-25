@@ -366,3 +366,6 @@ KPLIB_cleanup_delay = 1200;
 
 // Fill magazines on loading loadout?
 KP_liberation_fill_mags = true;
+
+// Max radius from an object to register to find the nearest sector
+KPLIB_objectsGrabber_radius = 250;

@@ -43,6 +43,24 @@ private _opforcount = [] call KPLIB_fnc_getOpforCap;
 
 if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
+    // Create objects
+    private _objects = [_sector] call KPLIB_fnc_createSectorObjects;
+    {_managed_units pushback _x}forEach _objects;
+
+    // Check for not deleted registered objects
+    private _initObjects = [];
+    if (_sector in KPLIB_sectorMapObject_hashMap) then {
+        _initObjects = KPLIB_sectorMapObject_hashMap get _sector;
+    };
+    _objects = _objects + _initObjects;
+
+    // Create static weapons
+    private _staticWeapons = [_sector, _objects] call KPLIB_fnc_createStaticWeapons;
+    {
+        _managed_units pushback _x; 
+        {_managed_units pushback _x}forEach (crew _x)
+    } foreach _staticWeapons;
+
     if (_sector in KPLIB_sectors_capital) then {
         if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
 
