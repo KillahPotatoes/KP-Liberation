@@ -151,3 +151,7 @@ KPLIB_o_planes = [
     "uns_Mig21_CAP",                                                    // Mig-21 Fishbed F (CAP)
     "uns_Mig21_CAS"                                                     // Mig-21 Fishbed F (CAS)
 ];
+
+KPLIB_o_boats = [
+
+];

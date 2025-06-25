@@ -158,3 +158,7 @@ KPLIB_o_helicopters = [
 KPLIB_o_planes = [
     "CUP_O_Su25_Dyn_RU"                                                 // Su-25T Frogfoot
 ];
+
+KPLIB_o_boats = [
+
+];

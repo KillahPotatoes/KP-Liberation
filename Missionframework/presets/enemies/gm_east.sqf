@@ -148,3 +148,7 @@ KPLIB_o_helicopters = [
 KPLIB_o_planes = [
     "len_l39_nva"                                                       // Aero L-39
 ];
+
+KPLIB_o_boats = [
+
+];

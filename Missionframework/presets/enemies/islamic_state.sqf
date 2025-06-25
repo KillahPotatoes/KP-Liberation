@@ -168,3 +168,7 @@ KPLIB_o_planes = [
     "RHS_Su25SM_vvsc",                                                  // Su-25
     "RHS_Su25SM_KH29_vvsc"                                              // Su-25 (KH29)
 ];
+
+KPLIB_o_boats = [
+
+];

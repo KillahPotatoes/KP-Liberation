@@ -153,3 +153,7 @@ KPLIB_o_planes = [
     "O_Plane_CAS_02_dynamicLoadout_F",                                  // To-199 Neophron (CAS)
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
+
+KPLIB_o_boats = [
+    "O_Boat_Armed_01_hmg_F"                                             // Speedboat HMG
+];

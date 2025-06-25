@@ -173,3 +173,7 @@ KPLIB_o_planes = [
     "I_Plane_Fighter_03_dynamicLoadout_F",                              // L-159
     "I_Plane_Fighter_04_F"                                              // Gripen
 ];
+
+KPLIB_o_boats = [
+
+];

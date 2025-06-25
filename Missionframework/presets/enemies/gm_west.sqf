@@ -138,3 +138,7 @@ KPLIB_o_helicopters = [
 
 // Enemy fixed-wings that will need to spawn in the air.
 KPLIB_o_planes = [];
+
+KPLIB_o_boats = [
+
+];

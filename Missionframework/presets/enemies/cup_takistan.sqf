@@ -196,3 +196,7 @@ KPLIB_o_planes = [
     "CUP_O_L39_TK",                                                     // L-39ZA
     "CUP_O_Su25_Dyn_TKA"                                                // Su-25 Frogfoot
 ];
+
+KPLIB_o_boats = [
+
+];

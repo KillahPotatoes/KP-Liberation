@@ -27,6 +27,7 @@ class KPLIB {
         class fillStorage               {};
         class forceBluforCrew           {};
         class getAdaptiveVehicle        {};
+        class getBoatWaypoints          {};
         class getBluforRatio            {};
         class getCommander              {};
         class getCrateHeight            {};
