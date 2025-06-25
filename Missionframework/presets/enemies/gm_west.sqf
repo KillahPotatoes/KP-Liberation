@@ -76,10 +76,13 @@ KPLIB_o_armyVehicles = [
     "gm_ge_army_fuchsa0_reconnaissance",                                // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc",                                           // M113A3 (MG3)
     "gm_ge_army_m113a1g_apc_milan",                                     // M113A3 (MILAN)
+    "gm_ge_army_rakjpz2",
     "gm_ge_army_gepard1a1",                                             // Gepard 1A1
     "gm_ge_army_Leopard1a1a1",                                          // Leopard 1A1A1
     "gm_ge_army_Leopard1a1a2",                                          // Leopard 1A1A2
-    "gm_ge_army_Leopard1a3a1"                                           // Leopard 1A3A1
+    "gm_ge_army_Leopard1a3a1",                                          // Leopard 1A3A1
+    "gm_ge_army_Leopard1a4",
+    "gm_ge_army_Leopard1a5"
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
@@ -98,10 +101,13 @@ KPLIB_o_battleGrpVehicles = [
     "gm_ge_army_fuchsa0_reconnaissance",                                // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc",                                           // M113A3 (MG3)
     "gm_ge_army_m113a1g_apc_milan",                                     // M113A3 (MILAN)
+    "gm_ge_army_rakjpz2",
     "gm_ge_army_gepard1a1",                                             // Gepard 1A1
     "gm_ge_army_Leopard1a1a1",                                          // Leopard 1A1A1
     "gm_ge_army_Leopard1a1a2",                                          // Leopard 1A1A2
-    "gm_ge_army_Leopard1a3a1",                                          // Leopard 1A3A1
+    "gm_ge_army_Leopard1a3a1",  
+    "gm_ge_army_Leopard1a4",
+    "gm_ge_army_Leopard1a5",                                        // Leopard 1A3A1
     "len_uh1d_bw"                                                       // BW UH-1D
 ];
 
@@ -113,6 +119,7 @@ KPLIB_o_battleGrpVehiclesLight = [
     "gm_ge_army_fuchsa0_reconnaissance",                                // Fuchs (Recon, MILAN)
     "gm_ge_army_m113a1g_apc",                                           // M113A3 (MG3)
     "gm_ge_army_m113a1g_apc_milan",                                     // M113A3 (MILAN)
+    "gm_ge_army_rakjpz2",
     "gm_ge_army_gepard1a1",                                             // Gepard 1A1
     "len_uh1d_bw"                                                       // BW UH-1D
 ];

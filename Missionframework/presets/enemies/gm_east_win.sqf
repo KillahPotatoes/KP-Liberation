@@ -72,6 +72,7 @@ KPLIB_o_militiaVehicles = [
 KPLIB_o_armyVehicles = [
     "gm_gc_army_brdm2um_win",                                           // SPW40-P2UM
     "gm_gc_army_brdm2_win",                                             // SPW-40P2
+    "gm_gc_army_brdm2_9p133_win",                                       // SF-9P133
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win",                                           // SPW-60PB
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
@@ -85,6 +86,7 @@ KPLIB_o_armyVehicles = [
 KPLIB_o_armyVehiclesLight = [
     "gm_gc_army_brdm2um_win",                                           // SPW40-P2UM
     "gm_gc_army_brdm2_win",                                             // SPW-40P2
+    "gm_gc_army_brdm2_9p133_win",                                       // SF-9P133
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win"                                            // SPW-60PB
 ];
@@ -94,10 +96,12 @@ KPLIB_o_battleGrpVehicles = [
     "gm_gc_army_ural4320_cargo_win",                                    // Truck gel. 5 Transport
     "gm_gc_army_brdm2um_win",                                           // SPW40-P2UM
     "gm_gc_army_brdm2_win",                                             // SPW-40P2
+    "gm_gc_army_brdm2_9p133_win",                                       // SF-9P133
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win",                                           // SPW-60PB
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
+    "gm_gc_army_bmp1p_win",                                             // BMP-1P
     "gm_gc_army_zsu234v1_win",                                          // ZSU-23-4V1
     "gm_gc_army_t55a_win",                                              // T55A
     "gm_gc_army_t55a_win",                                              // T55A
@@ -109,10 +113,12 @@ KPLIB_o_battleGrpVehiclesLight = [
     "gm_gc_army_ural4320_cargo_win",                                    // Truck gel. 5 Transport
     "gm_gc_army_brdm2um_win",                                           // SPW40-P2UM
     "gm_gc_army_brdm2_win",                                             // SPW-40P2
+    "gm_gc_army_brdm2_9p133_win",                                       // SF-9P133
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win",                                           // SPW-60PB
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
+    "gm_gc_army_bmp1p_win",                                             // BMP-1P
     "gm_gc_army_zsu234v1_win"                                           // ZSU-23-4V1
 ];
 
@@ -123,6 +129,7 @@ KPLIB_o_troopTransports = [
     "gm_gc_army_btr60pa_win",                                           // SPW-60PA
     "gm_gc_army_btr60pb_win",                                           // SPW-60PB
     "gm_gc_army_bmp1sp2_win",                                           // BMP-1 SP-2
+    "gm_gc_army_bmp1p_win",                                             // BMP-1P
     "gm_gc_airforce_mi2p"                                               // Mi-2P
 ];
 

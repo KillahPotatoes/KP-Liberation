@@ -69,9 +69,11 @@ KPLIB_b_vehLight = [
 
 KPLIB_b_vehHeavy = [
     ["gm_gc_army_brdm2_win",200,40,100],                                // BRDM2
+    ["gm_gc_army_brdm2_9p133_win",200,100,100],                         // SF-9P133
     ["gm_gc_army_btr60pb_win",200,150,125],                             // BTR-60PB
     ["gm_gc_army_zsu234v1_win",300,250,200],                            // Shilka
     ["gm_gc_army_bmp1sp2_win",300,300,175],                             // BMP-1
+    ["gm_gc_army_bmp1p_win",300,350,175],                               // BMP-1P
     ["gm_gc_army_t55a_win",450,550,250]                                 // T-55
 ];
 
@@ -93,13 +95,17 @@ KPLIB_b_vehAir = [
 ];
 
 KPLIB_b_vehStatic = [
-    ["gm_gc_army_fagot_launcher_tripod",50,100,0]                       // Static FAGOT
+    ["gm_gc_army_dshkm_aatripod",25,40,0],                              // DShKM - Tripod
+    ["gm_gc_army_spg9_tripod",50,75,0],                                 // SPG-9 - Tripod
+    ["gm_gc_army_fagot_launcher_tripod",50,100,0],                      // Static FAGOT
+    ["gm_gc_army_2b11",80,150,0]                                        // 2B11 Mortar
 ];
 
 KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V4_F",0,0,0],
     ["Land_Cargo_Patrol_V4_F",0,0,0],
     ["Land_Cargo_Tower_V4_F",0,0,0],
+    ["gm_gc_tent_5x5m",0,0,0],
     ["Flag_NATO_F",0,0,0],
     ["BWA3_Flag_Ger_F",0,0,0],
     ["Flag_White_F",0,0,0],
@@ -123,6 +129,8 @@ KPLIB_b_objectsDeco = [
     ["Land_CampingChair_V1_F",0,0,0],
     ["Land_CampingChair_V2_F",0,0,0],
     ["Land_CampingTable_F",0,0,0],
+    ["Land_Campfire_F",0,0,0],
+    ["Land_DryToilet_01_F",0,0,0],
     ["land_gm_euro_furniture_mapboard_01",0,0,0],
     ["Land_Pallet_MilBoxes_F",0,0,0],
     ["Land_PaperBox_open_empty_F",0,0,0],
@@ -294,6 +302,9 @@ KPLIB_b_squadPara = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 KPLIB_b_vehToUnlock = [
+    "gm_gc_army_brdm2_9p133_win",
+    "gm_gc_army_bmp1sp2_win",
+    "gm_gc_army_bmp1p_win",
     "gm_gc_army_t55a_win",                                               // T-55,
     "len_mi24d_AT_nva",                                                  // Mi-24D (AT)
     "len_mi24p_AT_nva",                                                  // Mi-24P (AT)
