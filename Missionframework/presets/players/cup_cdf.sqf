@@ -2,7 +2,7 @@
     File: cup_cdf.sqf
     Author: Eogos - https://github.com/Eogos
     Date: 2019-07-17
-    Last Update: 2020-05-25
+    Last Update: 2020-09-27
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -23,26 +23,26 @@
     The same classnames for different purposes may cause various unpredictable issues with player actions.
     Or not, just don't try!
 */
-KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                                    // This is the main FOB HQ building.
-KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
-KPLIB_b_fobTruck = "B_Truck_01_box_F";                                // This is the FOB as a vehicle.
-KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "CUP_B_BMP2_AMB_CDF";                          // This is the mobile respawn (and medical) truck.
-KPLIB_b_potato01 = "CUP_B_MI6A_CDF";                                      // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit = "CUP_B_CDF_Crew_FST";                               // This defines the crew for vehicles.
-KPLIB_b_heliPilotUnit = "CUP_B_CDF_Pilot_FST";                                // This defines the pilot for helicopters.
-KPLIB_b_addHeli = "B_Heli_Light_01_F";                      // These are the additional helicopters which spawn on the Freedom or at Chimera bas
-KPLIB_b_addBoat = "B_Boat_Transport_01_F";                         // These are the boats which spawn at the stern of the Freedom.
-KPLIB_b_logiTruck = "CUP_B_Ural_Open_CDF";                          // These are the trucks which are used in the logistic convoy system.
-KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";             // A small storage area for resources.
-KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";             // A large storage area for resources.
-KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                   // The building defined to unlock FOB recycling functionality.
-KPLIB_b_airControl = "B_Radar_System_01_F";                     // The building defined to unlock FOB air vehicle functionality.
-KPLIB_b_slotHeli = "Land_HelipadSquare_F";                      // The helipad used to increase the GLOBAL rotary-wing cap.
-KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                     // The hangar used to increase the GLOBAL fixed-wing cap.
-KPLIB_b_crateSupply = "CargoNet_01_box_F";                               // This defines the supply crates, as in resources.
-KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                              // This defines the ammunition crates.
-KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                             // This defines the fuel crates.
+KPLIB_b_fobBuilding = "Land_Cargo_HQ_V3_F";                             // This is the main FOB HQ building.
+KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                              // This is the FOB as a container.
+KPLIB_b_fobTruck = "B_Truck_01_box_F";                                  // This is the FOB as a vehicle.
+KPLIB_b_arsenal = "B_supplyCrate_F";                                    // This is the virtual arsenal as portable supply crates.
+KPLIB_b_mobileRespawn = "CUP_B_BMP2_AMB_CDF";                           // This is the mobile respawn (and medical) truck.
+KPLIB_b_potato01 = "CUP_B_MI6A_CDF";                                    // This is Potato 01, a multipurpose mobile respawn as a helicopter.
+KPLIB_b_crewUnit = "CUP_B_CDF_Crew_FST";                                // This defines the crew for vehicles.
+KPLIB_b_heliPilotUnit = "CUP_B_CDF_Pilot_FST";                          // This defines the pilot for helicopters.
+KPLIB_b_addHeli = "B_Heli_Light_01_F";                                  // These are the additional helicopters which spawn on the Freedom or at Chimera bas
+KPLIB_b_addBoat = "B_Boat_Transport_01_F";                              // These are the boats which spawn at the stern of the Freedom.
+KPLIB_b_logiTruck = "CUP_B_Ural_Open_CDF";                              // These are the trucks which are used in the logistic convoy system.
+KPLIB_b_smallStorage = "ContainmentArea_02_sand_F";                     // A small storage area for resources.
+KPLIB_b_largeStorage = "ContainmentArea_01_sand_F";                     // A large storage area for resources.
+KPLIB_b_logiStation = "Land_RepairDepot_01_tan_F";                      // The building defined to unlock FOB recycling functionality.
+KPLIB_b_airControl = "B_Radar_System_01_F";                             // The building defined to unlock FOB air vehicle functionality.
+KPLIB_b_slotHeli = "Land_HelipadSquare_F";                              // The helipad used to increase the GLOBAL rotary-wing cap.
+KPLIB_b_slotPlane = "Land_TentHangar_V1_F";                             // The hangar used to increase the GLOBAL fixed-wing cap.
+KPLIB_b_crateSupply = "CargoNet_01_box_F";                              // This defines the supply crates, as in resources.
+KPLIB_b_crateAmmo = "B_CargoNet_01_ammo_F";                             // This defines the ammunition crates.
+KPLIB_b_crateFuel = "CargoNet_01_barrels_F";                            // This defines the fuel crates.
 
 /*
     --- Friendly classnames ---
@@ -79,12 +79,12 @@ KPLIB_b_infantry = [
 
 KPLIB_b_vehLight = [
     ["CUP_B_S1203_Ambulance_CDF",75,0,50],                              // Škoda S1203 (Ambulance)
-    ["CUP_B_UAZ_Unarmed_CDF",75,0,50],                                  // UAZ
-    ["CUP_B_UAZ_MG_CDF",100,60,50],                                     // UAZ (DShKM)
-    ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ (AGS-30)
-    ["CUP_B_UAZ_SPG9_CDF",100,100,50],                                  // UAZ (SPG-9)
-    ["CUP_B_UAZ_METIS_CDF",100,120,50],                                 // UAZ (Metis-M)
-    ["CUP_B_UAZ_AA_CDF",100,160,50],                                    // UAZ (AA)
+    ["CUP_B_UAZ_Unarmed_CDF",75,0,50],                                  // UAZ-469
+    ["CUP_B_UAZ_MG_CDF",100,60,50],                                     // UAZ-469 (DShKM)
+    ["CUP_B_UAZ_AGS30_CDF",100,80,50],                                  // UAZ-469 (AGS-30)
+    ["CUP_B_UAZ_SPG9_CDF",100,100,50],                                  // UAZ-469 (SPG-9)
+    ["CUP_B_UAZ_METIS_CDF",100,120,50],                                 // UAZ-469 (Metis-M)
+    ["CUP_B_UAZ_AA_CDF",100,160,50],                                    // UAZ-469 (AA)
     ["CUP_B_Ural_ZU23_CDF",150,300,100],                                // Ural (ZU-23)
     ["CUP_B_BM21_CDF",225,750,100],                                     // BM-21
     ["CUP_B_Kamaz_CDF",125,0,75],                                       // Kamaz 5350
@@ -108,6 +108,7 @@ KPLIB_b_vehHeavy = [
 
 KPLIB_b_vehAir = [
     ["CUP_B_Mi17_CDF",300,100,300],                                     // Mi-8MT
+    ["CUP_B_Mi171Sh_CDF",400,350,300],                                  // Mi-171Sh (Rockets)
     ["CUP_B_Pchela1T_CDF",100,0,50],                                    // Pchela-1T
     ["CUP_B_Mi24_D_Dynamic_CDF",700,600,300],                           // Mi-24D
     ["CUP_B_Su25_Dyn_CDF",1000,800,400],                                // Su-25 Frogfoot
@@ -115,6 +116,7 @@ KPLIB_b_vehAir = [
 ];
 
 KPLIB_b_vehStatic = [
+    ["CUP_B_SearchLight_static_CDF",10,0,0],                            // Search Light
     ["CUP_B_DSHKM_CDF",25,40,0],                                        // DShKM
     ["CUP_B_DSHkM_MiniTripod_CDF",25,40,0],                             // DShKM Minitripod
     ["CUP_B_AGS_CDF",25,60,0],                                          // AGS-30
@@ -222,6 +224,7 @@ KPLIB_b_vehSupport = [
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["CUP_B_ZUBR_CDF",500,700,350],                                     // Zubr-Class LCAC
     ["CUP_B_Tractor_CDF",50,0,75],                                      // Towing Tractor
     ["CUP_B_Kamaz_Repair_CDF",425,0,75],                                // Kamaz 5350 (Repair)
     ["CUP_B_Kamaz_Refuel_CDF",125,0,375],                               // Kamaz 5350 (Fuel)
