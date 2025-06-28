@@ -101,4 +101,6 @@ class KPLIB {
     };
     #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"
+
+    #include "KP\KPCF\functions.hpp"
 };

@@ -7445,4 +7445,185 @@
             <Czech>KP Player Menu v1.0.2\nby Wyqer</Czech>
         </Key>
     </Package>
+
+    <Package name= "KPCF">
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLE">
+            <English>KP Cratefiller</English>
+            <German>KP Kistenfüller</German>
+            <Polish>KP Cratefiller</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEOVERVIEW">
+            <English>Equipment overview</English>
+            <German>Ausrüstungsübersicht</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CATEGORY_TT">
+            <English>Choose a category from which you want to stow items.</English>
+            <German>Wähle eine Kategorie aus, von der du Gegenstände verladen willst.</German>
+            <Polish>Wybierz kategorie z której chcesz pobrać przedmioty.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_CLEARSEARCH_TT">
+            <English>Clears the searchbox.</English>
+            <German>Suche zurücksetzen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_DELETE_TT">
+            <English>Deletes the selected preset.</English>
+            <German>Löscht das ausgewählte Ausrüstungsset.</German>
+            <Polish>Usuwa wybrany szablon.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_EXPORT_TT">
+            <English>Enter the name of the preset to be exported.</English>
+            <German>Trage den Namen für das zu exportierende Ausrüstungsset ein.</German>
+            <Polish>Wpisz nazwę szablonu do wyeksportowania.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_FILLLEVEL_TT">
+            <English>Shows the current cargo space.</English>
+            <German>Zeigt den aktuellen Laderaumstand.</German>
+            <Polish>Pokazuje aktualny stan załadunku.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_GROUPS_TT">
+            <English>Select a group, whose players should be shown.</English>
+            <German>Wähle eine Gruppe, deren Spieler angezeigt werden sollen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_INVENTORY_TT">
+            <English>Select an inventory that you want to edit.</English>
+            <German>Wähle einen Laderaum aus, den du bearbeiten möchtest.</German>
+            <Polish>Wybierz ekwipunek który chcesz edytować.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_IMPORT_TT">
+            <English>Select the preset to be imported.</English>
+            <German>Wähle das zu importierende Ausrüstungsset.</German>
+            <Polish>Wybierz szablon do zaimportowania.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTATTACHMENTS">
+            <English>Weapon attachments</English>
+            <German>Waffenzubehör</German>
+            <Polish>Akcesoria do broni</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTBACKPACKS">
+            <English>Backpacks</English>
+            <German>Rucksäcke</German>
+            <Polish>Plecaki</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTEXPLOSIVES">
+            <English>Explosives</English>
+            <German>Sprengstoffe</German>
+            <Polish>Ładunki wybuchowe</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTGRENADES">
+            <English>Grenades</English>
+            <German>Granaten</German>
+            <Polish>Granaty</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTMAGAZINES">
+            <English>Magazines</English>
+            <German>Magazine</German>
+            <Polish>Magazynki</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTVARIOUS">
+            <English>Others</English>
+            <German>Sonstiges</German>
+            <Polish>Inne</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_LISTWEAPONS">
+            <English>Weapons</English>
+            <German>Waffen</German>
+            <Polish>Bronie</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_OVERVIEW_TT">
+            <English>Toggle cratefiller equipment overview.</English>
+            <German>Kistenfüller Ausrüstungsübersicht umschalten.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_PLAYERS_TT">
+            <English>Select a player, whose weapons should be shown.</English>
+            <German>Wähle einen Spieler, dessen Waffen angezeigt werden sollen.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_REFRESH_TT">
+            <English>Search for new inventories.</English>
+            <German>Nach neuem Laderaum suchen.</German>
+            <Polish>Szukaj nowych ekwipunków.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_SEARCH_TT">
+            <English>Search for a specified weapon.</English>
+            <German>Suche nach einer bestimmten Waffe.</German>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEEQUIPMENT">
+            <English>Equipment</English>
+            <German>Ausrüstung</German>
+            <Polish>Ekwipunek</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLEINVENTORY">
+            <English>Inventory</English>
+            <German>Inventar</German>
+            <Polish>Ekwipunek</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_TITLETRANSPORT">
+            <English>Transport medium</English>
+            <German>Transportmedium</German>
+            <Polish>Środek transportu</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_DIALOG_CRATEFILLER_WEAPONSELECTION_TT">
+            <English>Choose a weapon to find the right magazines or attachments.</English>
+            <German>Wähle eine Waffe um die passenden Magazine oder Zubehör zu finden.</German>
+            <Polish>Wybierz broń do której mają być wyszukane magazynki oraz dodatki.</Polish>
+        </Key>
+
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER">
+            <English>KPLIB - Cratefiller</English>
+            <German>KPLIB - Kistenfüller</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE">
+            <English>Enable Cratefiller</English>
+            <German>Kistenfüller aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATE_TT">
+            <English>Enables/Disables the KP cratefiller.</English>
+            <German>Aktiviert/Deaktiviert den KP Kistenfüller.</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW">
+            <English>Enable cratefiller equipment overview</English>
+            <German>Kistenfüller Ausrüstungsübersicht aktivieren</German>
+        </Key>
+        <Key ID="STR_KPLIB_SETTINGS_CRATEFILLER_ACTIVATEOVERVIEW_TT">
+            <English>Enables/Disables the KP cratefiller equipment overview.</English>
+            <German>Aktiviert/Deaktiviert die KP Kistenfüller Ausrüstungsübersicht.</German>
+        </Key>
+
+        <!-- HINTS -->
+
+        <Key ID="STR_KPLIB_HINT_ADDED">
+            <English>%1 was loaded %2 times.</English>
+            <German>%1 wurde %2 mal geladen.</German>
+            <Polish>%1 zostało załadowane %2 razy.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_FULL">
+            <English>The selected storage doesn't have sufficient space.</English>
+            <German>Der ausgewählte Laderaum hat keinen ausreichenden Platz.</German>
+            <Polish>Wybrany kontener nie ma dość wolnego miejsca.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_NOSTORAGE">
+            <English>No storage selected.</English>
+            <German>Kein Laderaum ausgewählt.</German>
+            <Polish>Nie wybrano skrzyni.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_RANGE">
+            <English>Selected transport medium is out of range.</English>
+            <German>Ausgewähltes Transportmedium ist außer Reichweite.</German>
+            <Polish>Wybrany środek transportu jest poza zasięgiem.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_SELECTION">
+            <English>Incomplete selection.</English>
+            <German>Unvollständige Auswahl.</German>
+            <Polish>Niepełny wybór.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_HINT_UNLOAD">
+            <English>%1 was unloaded %2 times.</English>
+            <German>%1 wurde %2 mal entladen.</German>
+            <Polish>%1 zostało wyładowane %2 razy.</Polish>
+        </Key>
+        <Key ID="STR_KPLIB_CRATEFILLER_ACTIONOPEN">
+            <English>-- KP Cratefiller --</English>
+            <German>-- KP Kistenfüller --</German>
+            <Polish>-- KP Cratefiller --</Polish>
+        </Key>
+    </Package>
 </Project>
