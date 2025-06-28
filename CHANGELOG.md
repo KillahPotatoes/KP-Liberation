@@ -4,6 +4,7 @@
 * Added: Czech translation. Thanks to [MJVEVERUSKA](https://github.com/MJVEVERUSKA)
 * Added: Ability to carry ressource crates.
 * Added: Scripts/configs to setup and run development environment from VSCode tasks
+* Added: Optional parameter to enable a scaling economy penalty based on the number of FOBs built.
 * Updated: Italian localization. Thanks to [k4s0](https://github.com/k4s0)
 * Tweaked: Splitted the config file in separate files, as it was getting quite big.
 * Tweaked: Unified the prefix of all variables to `KPLIB_`.

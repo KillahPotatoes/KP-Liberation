@@ -113,6 +113,12 @@ class Params {
         texts[] = {"x0.25", "x0.5", "x0.75", "x1", "x1.25","x1.5","x2","x3"};
         default = 3;
     };
+    class EcoScale {
+        title = $STR_PARAMS_ECOSCALE;
+        values[] = {1, 0};
+        texts[] = {$STR_PARAMS_ECOSCALE_YES, $STR_PARAMS_DISABLED};
+        default = 1;
+    };
     class ArsenalType {
         title = $STR_PARAMS_ARSENAL;
         values[] = {0, 1};

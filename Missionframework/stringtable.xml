@@ -1490,6 +1490,34 @@
             <Korean>군수물자 생산 비율</Korean>
             <Czech>Násobitel zdrojů</Czech>
         </Key>
+        <Key ID="STR_PARAMS_ECOSCALE">
+            <Original>Scaling Economy Penalty</Original>
+            <French>Pénalité d'économie d'échelle</French>
+            <German>Skalierungswirtschaftliche Strafe</German>
+            <Spanish>Penalización por escalamiento económico</Spanish>
+            <Russian>Штраф за масштабирование экономики</Russian>
+            <Italian>Penalità per l'economia di scala</Italian>
+            <Chinesesimp>规模经济惩罚</Chinesesimp>
+            <Chinese>規模經濟懲罰</Chinese>
+            <Turkish>Ölçek ekonomisi cezası</Turkish>
+            <Portuguese>Escalando penalização de economia</Portuguese>
+            <Korean>확장 경제 페널티</Korean>
+            <Czech>Škálovací ekonomický trest</Czech>
+        </Key>
+        <Key ID="STR_PARAMS_ECOSCALE_YES">
+            <Original>Yes (resource costs will scale with the number of FOBs)</Original>
+            <French>Oui (les coûts des ressources évolueront en fonction du nombre de FOB)</French>
+            <German>Ja (Ressourcenkosten steigen mit der Anzahl der FOBs)</German>
+            <Spanish>Sí (los costos de los recursos se escalarán con el número de FOB)</Spanish>
+            <Russian>Да (затраты на ресурсы будут масштабироваться в зависимости от количества FOB)</Russian>
+            <Italian>Sì (i costi delle risorse aumenteranno con il numero di FOB)</Italian>
+            <Chinesesimp>是的（资源成本将随着 FOB 的数量而变化）</Chinesesimp>
+            <Chinese>是（資源成本將隨著 FOB 數量的增加而增加）</Chinese>
+            <Turkish>Evet (kaynak maliyetleri FOB sayısına göre ölçeklenecektir)</Turkish>
+            <Portuguese>Sim (os custos dos recursos aumentarão com o número de FOBs)</Portuguese>
+            <Korean>예(자원 비용은 FOB 수에 따라 조정됩니다)</Korean>
+            <Czech>Ano (náklady na zdroje se budou měnit podle počtu FOB)</Czech>
+        </Key>
         <Key ID="STR_PARAMS_FATIGUE">
             <Original>Stamina</Original>
             <French>Stamina</French>
