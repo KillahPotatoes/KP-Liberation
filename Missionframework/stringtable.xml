@@ -5096,6 +5096,10 @@
             <Korean>사용자 설정(기본임무설정)</Korean>
             <Czech>Použít nastavení z configu</Czech>
         </Key>
+        <Key ID="STR_PARAMS_ARSENAL_WHITELIST">
+            <Original>Arsenal whitelist by role</Original>
+            <Portuguese>Arsenal filtrado por função</Portuguese>
+        </Key>
         <Key ID="STR_ACTION_CRATE_PUSH">
             <Original>-- PUSH CRATE</Original>
             <German>-- KISTE SCHIEBEN</German>
