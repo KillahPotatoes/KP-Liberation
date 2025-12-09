@@ -1,0 +1,20 @@
+################################################################
+### This file contains a list of paths to ignore changes of. ###
+### The paths are relative to the workspace root.            ###
+### The paths are separated by newlines.                     ###
+### Note that this is not behaving like a .gitignore file,   ###
+### and you cannot invert some paths by prefixing them with  ###
+### a ! or use wildcards.                                    ###
+### Any subfolder of a path is also ignored.                 ###
+### Important: No leading or trailing whitespace is allowed  ###
+###            on any line.                                  ###
+### Changing anything in this file will have no effect until ###
+### the language server is restarted.                        ###
+### Keep in mind that already analyzed files will not be     ###
+### re-analyzed OR removed from the database.                ###
+################################################################
+.vscode\sqfvm-lsp
+.vscode
+.github
+.git
+.hemtt
