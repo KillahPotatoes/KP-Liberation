@@ -77,13 +77,17 @@ KPLIB_b_vehHeavy = [
     ["gm_ge_army_m113a1g_apc_win",200,40,100],                          // M113A3 (MG3)
     ["gm_ge_army_m113a1g_apc_milan_win",200,60,100],                    // M113A3 (MILAN)
     ["gm_ge_army_m113a1g_medic",200,0,100],                             // M113A3 (Medical)
+    ["gm_ge_army_m113a1g_mortar_win",200,150,100],                      // M113A1G (Mortar)
     ["gm_ge_army_fuchsa0_engineer_win",200,75,125],                     // Fuchs (Engineer)
     ["gm_ge_army_fuchsa0_reconnaissance_win",200,150,125],              // Fuchs (Recon, MILAN)
+    ["gm_ge_army_rakjpz2_win",250,200,175],                             // RakJPz 2
     ["gm_ge_army_gepard1a1_win",300,250,175],                           // Gepard 1A1
     ["gm_ge_army_Leopard1a1a1_win",400,300,200],                        // Leopard 1A1A1
     ["gm_ge_army_Leopard1a1a2_win",400,350,225],                        // Leopard 1A1A2
     ["gm_ge_army_Leopard1a3_win",500,500,250],                          // Leopard 1A3
-    ["gm_ge_army_Leopard1a3a1_win",550,550,250]                         // Leopard 1A3A1
+    ["gm_ge_army_Leopard1a3a1_win",550,550,250],                        // Leopard 1A3A1
+    ["gm_ge_army_Leopard1a4_win",500,500,250],                              // Leopard 1A4
+    ["gm_ge_army_Leopard1a5_win",550,550,250]                               // Leopard 1A5
 ];
 
 KPLIB_b_vehAir = [
@@ -99,13 +103,16 @@ KPLIB_b_vehAir = [
 ];
 
 KPLIB_b_vehStatic = [
-    ["gm_ge_army_milan_launcher_tripod",50,100,0]                       // Static MILAN
+    ["gm_ge_army_milan_launcher_tripod",50,100,0],                      // Static MILAN
+    ["gm_ge_army_mg3_aatripod",25,40,0],                                // Static MG3
+    ["gm_ge_army_m120",80,150,0]                                        // M120 Mortar
 ];
 
 KPLIB_b_objectsDeco = [
     ["Land_Cargo_House_V4_F",0,0,0],
     ["Land_Cargo_Patrol_V4_F",0,0,0],
     ["Land_Cargo_Tower_V4_F",0,0,0],
+    ["gm_gc_tent_5x5m",0,0,0],
     ["Flag_NATO_F",0,0,0],
     ["BWA3_Flag_Ger_F",0,0,0],
     ["Flag_White_F",0,0,0],
@@ -129,6 +136,8 @@ KPLIB_b_objectsDeco = [
     ["Land_CampingChair_V1_F",0,0,0],
     ["Land_CampingChair_V2_F",0,0,0],
     ["Land_CampingTable_F",0,0,0],
+    ["Land_Campfire_F",0,0,0],
+    ["Land_DryToilet_01_F",0,0,0],
     ["land_gm_euro_furniture_mapboard_01",0,0,0],
     ["Land_Pallet_MilBoxes_F",0,0,0],
     ["Land_PaperBox_open_empty_F",0,0,0],
@@ -300,6 +309,9 @@ KPLIB_b_squadPara = [
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
 KPLIB_b_vehToUnlock = [
+    "gm_ge_army_rakjpz2_win",
     "gm_ge_army_Leopard1a1a2_win",                                      // Leopard 1A1A2
-    "gm_ge_army_Leopard1a3a1_win"                                       // Leopard 1A3A1
+    "gm_ge_army_Leopard1a3a1_win",                                      // Leopard 1A3A1
+    "gm_ge_army_Leopard1a4_win",
+    "gm_ge_army_Leopard1a5_win"
 ];

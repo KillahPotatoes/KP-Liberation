@@ -67,13 +67,15 @@ KPLIB_o_militiaInfantry = [
 KPLIB_o_militiaVehicles = [
     "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
-    "gm_gc_army_brdm2"                                                  // SPW-40P2
+    "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2_9p133"                                            // SF-9P133
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 KPLIB_o_armyVehicles = [
     "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2_9p133",                                           // SF-9P133
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
@@ -88,9 +90,10 @@ KPLIB_o_armyVehiclesLight = [
     "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
     "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2_9p133",                                           // SF-9P133
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pa",                                               // SPW-60PA
-    "gm_gc_army_btr60pb"                                                // SPW-60PB
+    "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_btr60pb"                                                // SPW-60PB
 ];
 
@@ -98,10 +101,12 @@ KPLIB_o_armyVehiclesLight = [
 KPLIB_o_battleGrpVehicles = [
     "gm_gc_army_ural4320_cargo",                                        // Truck gel. 5 Transport
     "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2_9p133",                                           // SF-9P133
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
+    "gm_gc_army_bmp1p",                                                 // BMP-1P
     "gm_gc_army_zsu234v1",                                              // ZSU-23-4V1
     "gm_gc_army_t55a",                                                  // T55A
     "gm_gc_army_t55a",                                                  // T55A
@@ -113,10 +118,12 @@ KPLIB_o_battleGrpVehiclesLight = [
     "gm_gc_army_ural4320_cargo",                                        // Truck gel. 5 Transport
     "gm_gc_army_brdm2um",                                               // SPW40-P2UM
     "gm_gc_army_brdm2",                                                 // SPW-40P2
+    "gm_gc_army_brdm2_9p133",                                           // SF-9P133
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
+    "gm_gc_army_bmp1p",                                                 // BMP-1P
     "gm_gc_army_zsu234v1"                                               // ZSU-23-4V1
 ];
 
@@ -127,6 +134,7 @@ KPLIB_o_troopTransports = [
     "gm_gc_army_btr60pa",                                               // SPW-60PA
     "gm_gc_army_btr60pb",                                               // SPW-60PB
     "gm_gc_army_bmp1sp2",                                               // BMP-1 SP-2
+    "gm_gc_army_bmp1p",                                                 // BMP-1P
     "gm_gc_airforce_mi2p"                                               // Mi-2P
 ];
 
